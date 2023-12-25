@@ -46,7 +46,7 @@ function pathIcon(pathName: string) {
 const finalOutput: string[] = []
 
 for (const [id, event] of Object.entries(eventInfoJson)) {
-	if (!event.AeonOption || !event.EffectType) continue
+	if (!event.AeonOption || !event.RogueEffectType) continue
 	
 	const storyOutput: string[] = []
 

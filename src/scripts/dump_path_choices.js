@@ -30,7 +30,7 @@ function pathIcon(pathName) {
 }
 const finalOutput = [];
 for (const [id, event] of Object.entries(eventInfoJson)) {
-    if (!event.AeonOption || !event.EffectType)
+    if (!event.AeonOption || !event.RogueEffectType)
         continue;
     const storyOutput = [];
     let eventName = eventNamesJson[event.EventID]?.Name;
