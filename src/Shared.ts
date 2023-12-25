@@ -29,4 +29,5 @@ export const VERSION_COMMITS = {
 	'1.3': 'aa811519a5de772bf4055e8ea8b9254f90b7746c',
 	'1.4': '6acdba35cbf80adc100dbde528b1c271f50dcb9d',
 	'1.5': '59d64be43a1da285cf22ba9be5ed90ef2b23f857',
+	'1.6': '267db9b8cc44face0f376075f0828c5e1dd20bff',
 }
