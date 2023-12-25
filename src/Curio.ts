@@ -69,6 +69,18 @@ export class CurioGroup {
 			case 21004:
 				return `Curio<nowiki>:</nowiki> ${curio('Tonic of Efficacious Chaos')}`
 			
+			case 31004:
+				return `Curio<nowiki>:</nowiki> ${curio('Fruit of the Alien Tree')}`
+			
+			case 31005:
+				return `Curio<nowiki>:</nowiki> ${curio('Casket of Inaccuracy')}`
+			
+			case 31006:
+				return `Curio<nowiki>:</nowiki> ${curio('Ambergris Cheese')}`
+			
+			case 32030:
+				return `Curios<nowiki>:</nowiki> ${curio('Ambergris Cheese')}, ${curio('Casket of Inaccuracy')}, ${plural ? 'and' : 'or'} ${curio('Casket of Inaccuracy')}`
+			
 			case 20008:
 				return `Damageable Curio${s}`
 		}

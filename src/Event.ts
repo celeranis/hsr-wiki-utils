@@ -10,8 +10,8 @@ import { HashReference, TextMap } from './TextMap.js'
 export interface InternalEventSection {
 	EventID: number,
 	EventDisplayID?: number,
-	EffectType?: EffectType,
-	EffectParamList: number[]
+	RogueEffectType?: EffectType,
+	RogueEffectParamList: number[]
 	CostType?: CostType
 	CostParamList: number[]
 	DescValue?: number
@@ -71,6 +71,9 @@ export type EffectType =
 	| 'ChangeRogueMiracleToRogueMiracle' | 'ChangeRogueMiracleToRogueBuff' | 'DestroyRogueMiracle' | 'GetChessRogueRerollDice' 
 	| 'GetRogueBuffByMiracleCount'
 	| 'SetChessRogueNextStartCellAdventureRoomType' | 'FinishChessRogue'
+	// 1.6 //
+	| 'GetAllRogueBuffInGroupAndGetItem' | 'EnhanceRogueBuff' | 'TriggerRandomEventList' | 'ChangeNousValue'
+	| 'RepairRogueMiracle' | 'ChangeLineupData' | 'TriggerRogueMiracleRepair' | 'ReviveAvatar'
 
 export type CostType = 'CostItemValue' | 'CostHpCurrentPercent' | 'CostHpMaxPercent' | 'CostItemPercent' | 'CostHpSpToPercent'
 
@@ -85,12 +88,16 @@ const SIMPLE_EFFECTS: {[effectType: string]: (...args: number[]) => (string)} = 
 	GetRogueMiracle: (curioGroup, count) => `Obtain ${count || 1} random ${CurioGroup.nameForId(curioGroup, count > 1)}`,
 	FinishChessRogue: () => 'Immediately ends the current run.',
 	RecoverLineup: (hp, energy, tp) => `Immediately recovers ${hp}% Max HP, ${energy}% Energy, and ${tp} Technique Points`,
+	ChangeLineupData: (hp, energy, tp) => `Immediately recovers ${hp}% Max HP, ${energy}% Energy, and ${tp} Technique Points`,
 	TriggerRogueBuffSelect: (blessingGroup, optionCount, _unknown) => `Obtain a ${BlessingGroup.nameForId(blessingGroup, false)}`,
 	TriggerRogueMiracleSelect: (curioGroup, optionCount) => `Obtain a ${CurioGroup.nameForId(curioGroup, false)}`,
 	UpRogueBuffLevel: (blessingGroup, count) => `Enhance ${count} random ${BlessingGroup.nameForId(blessingGroup, count != 1)}`,
+	EnhanceRogueBuff: (blessingGroup, count) => `Enhance ${count} random ${BlessingGroup.nameForId(blessingGroup, count != 1)}`,
 	TriggerRogueBuffReforge: (discardGroup, discardOptionCount, replacementGroup, replacementOptionCount, _unknown) => 
 		`Discard a ${BlessingGroup.nameForId(discardGroup, false)} in exchange for a ${BlessingGroup.nameForId(replacementGroup, false)}`,
 	GetAllRogueBuffInGroup: (blessingGroup) => `Obtain all ${BlessingGroup.nameForId(blessingGroup, true)}`,
+	GetAllRogueBuffInGroupAndGetItem: (blessingGroup, itemId, amount, _unknown) =>
+		`Obtain all ${BlessingGroup.nameForId(blessingGroup, true)} and ${amount} ${ITEMS[itemId] ?? `[Unknown Item ${itemId}]`}`,
 	ReplaceRogueBuff: (discardGroup, discardCount, replacementGroup, replacementCount) =>
 		`Discard ${discardCount || 1} random ${BlessingGroup.nameForId(discardGroup, discardCount != 1)} in exchange for ${replacementCount || 1} ${BlessingGroup.nameForId(replacementGroup, replacementCount != 1)}`,
 	ChangeRogueMiracleToRogueCoin: (discardGroup, fragments, _unknown) => `Exchange all ${CurioGroup.nameForId(discardGroup)} for ${fragments} Cosmic Fragments each`,
@@ -98,6 +105,8 @@ const SIMPLE_EFFECTS: {[effectType: string]: (...args: number[]) => (string)} = 
 	GetItemByPercent: (itemId, percent) => `Obtain ${percent}% of currently possessed ${ITEMS[itemId] || `[Unknown Item ${itemId}]`}`,
 	RemoveRogueBuff: (blessingGroup, count) => `Discard ${count || 'all'} ${BlessingGroup.nameForId(blessingGroup, count != 1)}`,
 	RepairRogueMiracleByGroup: (curioGroup, count) => `Repair ${count || 'all'} ${CurioGroup.nameForId(curioGroup, count != 1)}`,
+	RepairRogueMiracle: (curioGroup, count) => `Repair ${count || 'all'} ${CurioGroup.nameForId(curioGroup, count != 1)}`,
+	TriggerRogueMiracleRepair: (curioGroup, _unknown, count) => `Select ${count || '?'} ${CurioGroup.nameForId(curioGroup, count != 1)} to repair`,
 	TriggerRogueBuffDrop: (blessingGroup, optionCount) => `Discard a ${BlessingGroup.nameForId(blessingGroup, false)}`,
 	ChangeRogueMiracleToRogueMiracle: (discardGroup, replaceGroup, count) => 
 		`Discard ${count || 'all'} ${CurioGroup.nameForId(discardGroup, count != 1)} in exchange for the same number of random ${CurioGroup.nameForId(replaceGroup, true)}`,
@@ -105,6 +114,9 @@ const SIMPLE_EFFECTS: {[effectType: string]: (...args: number[]) => (string)} = 
 		`Discard ${count || 'all'} ${CurioGroup.nameForId(discardGroup, count != 1)} in exchange for the same number of random ${BlessingGroup.nameForId(replaceGroup, true)}`,
 	DestroyRogueMiracle: (destroyGroup, count) => `Destroy ${count || 'all'} ${CurioGroup.nameForId(destroyGroup)}`,
 	GetChessRogueRerollDice: (count) => `Obtain ${count} reroll chance(s)`,
+	ChangeNousValue: (amount) => `${amount > 0 ? 'Increase' : 'Decrease'} Cognition Value by ${Math.abs(amount)}`,
+	ReviveAvatar: (charCount, hpAmount, energyAmount) =>
+		`Immediately revive ${charCount > 20 || charCount < 1 ? 'all' : charCount} characters and restore them to ${hpAmount}% Max HP`,
 	GetRogueBuffByMiracleCount: (blessingGroup) => `Obtain a random ${BlessingGroup.nameForId(blessingGroup, false)} for every Curio currently in possession`,
 	TriggerBattle: (stageId) => {
 		const stage = Stage.infoFor(stageId)
@@ -144,8 +156,8 @@ export class EventSection {
 	constructor(public parent: Event, public internal: InternalEventSection, public display?: InternalEventSectionDisplay, public customString?: string) {
 		this.id = internal.EventID
 		this.display_id = internal.EventDisplayID
-		this.effect_type = internal.EffectType
-		this.effect_params = internal.EffectParamList
+		this.effect_type = internal.RogueEffectType
+		this.effect_params = internal.RogueEffectParamList
 		this.cost_type = internal.CostType
 		this.cost_params = internal.CostParamList
 		this.path_choice = internal.AeonOption
@@ -208,7 +220,7 @@ export class EventSection {
 	
 	descTriggerCurioTrade(output: OutputList, isLoop: boolean) {
 		output.push(`;(Discard a ${CurioGroup.nameForId(this.effect_params[0], false)})`)
-		const section = this.parent.addSection(this.effect_params[2], isLoop)
+		const section = this.parent.addSection(this.effect_params[3], isLoop)
 		output.push(...section?.output(undefined, isLoop) || [])
 	}
 	
@@ -237,7 +249,7 @@ export class EventSection {
 				output2.push(`;(${SIMPLE_EFFECTS[this.effect_type](...this.effect_params)})`)
 			} else if (this.effect_type == 'TriggerRandomEvent') {
 				this.descTriggerRandomEvent(output2, isLoop)
-			} else if (this.effect_type == 'TriggerRandomResult') {
+			} else if (this.effect_type == 'TriggerRandomResult' || this.effect_type == 'TriggerRandomEventList') {
 				this.descTriggerRandomResult(output2, isLoop)
 			} else if (this.effect_type == 'TriggerRogueMiracleTrade') { // not sure why this isn't a cost
 				this.descTriggerCurioTrade(output2, isLoop)
@@ -368,14 +380,14 @@ export class Event {
 		const output: OutputList = []
 		for (const task of sequence.TaskList) {
 			switch (task.$type) {
-				case 'RPG.GameCore.PlayAndWaitSimpleTalk':
-				case 'RPG.GameCore.PlaySimpleTalk':
+				case 'RPG.GameCore.PlayAndWaitRogueSimpleTalk':
+				case 'RPG.GameCore.PlayRogueSimpleTalk':
 					for (const talk of task.SimpleTalkList) {
 						const sentence = this.text_map.getSentence(talk.TalkSentenceID)
 						output.push(':' + (sentence || '{{tx}}'))
 					}
 					break
-				case 'RPG.GameCore.PlayOptionTalk':
+				case 'RPG.GameCore.PlayRogueOptionTalk':
 					const isSimple = !task.OptionList[0].DialogueEventID
 					let allSame: string | undefined = undefined
 

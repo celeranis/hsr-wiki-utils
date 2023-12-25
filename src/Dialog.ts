@@ -11,12 +11,12 @@ export interface DialogSequence {
 }
 
 export interface TaskShowBg {
-	$type: "RPG.GameCore.ShowTalkBackground"
+	$type: "RPG.GameCore.ShowRogueTalkBg"
 	TalkBgID: number
 }
 
 export interface PlayAndWaitSimpleTalk {
-	$type: "RPG.GameCore.PlayAndWaitSimpleTalk" | "RPG.GameCore.PlaySimpleTalk"
+	$type: "RPG.GameCore.PlayAndWaitRogueSimpleTalk" | "RPG.GameCore.PlayRogueSimpleTalk"
 	SimpleTalkList: SimpleTalk[]
 }
 
@@ -32,7 +32,7 @@ export interface TriggerSound {
 }
 
 export interface PlayOptionTalk {
-	$type: "RPG.GameCore.PlayOptionTalk"
+	$type: "RPG.GameCore.PlayRogueOptionTalk"
 	OptionList: TalkOption[]
 }
 
@@ -45,7 +45,7 @@ export interface TalkOption {
 }
 
 export interface PlayOptionTalkSimple {
-	$type: "RPG.GameCore.PlayOptionTalk"
+	$type: "RPG.GameCore.PlayRogueOptionTalk"
 	OptionList: TalkOptionSimple[]
 }
 
