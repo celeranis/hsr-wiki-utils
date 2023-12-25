@@ -44,10 +44,10 @@ async function getEventsForVersion(version: string): Promise<[Map<string, string
 				if (!dialog.OnStartSequece) continue
 				for (const sequence of dialog.OnStartSequece) {
 					for (const task of sequence.TaskList) {
-						if (task.$type == 'RPG.GameCore.PlayAndWaitSimpleTalk') {
+						if (task.$type == 'RPG.GameCore.PlayAndWaitRogueSimpleTalk') {
 							textList.push(task.SimpleTalkList.map(talk => getSentence(talk.TalkSentenceID)))
 						}
-						if (task.$type == 'RPG.GameCore.PlayOptionTalk') {
+						if (task.$type == 'RPG.GameCore.PlayRogueOptionTalk') {
 							task.OptionList.forEach(talk => {
 								const event = eventInfoJson[talk.DialogueEventID]
 								if (!event) return

@@ -5,17 +5,18 @@ import { Event } from '../Event.js';
 BlessingGroup.loadAll();
 const skip = ['30', '31', '32'];
 const PAGE_FORMAT = `{{Simulated Universe Event Infobox
-|title        = <<NAME>>
-|image        = Random Event <<IMAGE>>.png
-|type         =
-|appearsIn    = <<APPEARS_IN_1>>
-|appearsIn2   = <<APPEARS_IN_2>>
-|appearsIn3   = <<APPEARS_IN_3>>
-|requirements =
-|prev         = <<PREV>>
-|next         = <<NEXT>>
-|indexRewards =
-|characters   =
+|title         = <<NAME>>
+|image         = Random Event <<IMAGE>>.png
+|type          =
+|domains_su    = <<DOMAINS_SU>>
+|domains_ext   = <<DOMAINS_EXT>>
+|domains_swarm = <<DOMAINS_SWARM>>
+|domains_gng   = <<DOMAINS_GNG>>
+|requirements  =
+|prev          = <<PREV>>
+|next          = <<NEXT>>
+|indexRewards  =
+|characters    =
 }}
 '''<<NAME>>''' is an [[Simulated Universe/Events|Event]] in the <<APPEARS_IN_1>>.
 

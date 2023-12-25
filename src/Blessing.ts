@@ -5,9 +5,9 @@ import { HashReference, TextMap } from './TextMap.js'
 
 export interface InternalBlessingGroup {
 	/** id */
-	HPODHLHDAJF: number
+	JHOKDPADHFM: number
 	/** included groups and blessings */
-	DDIPBDOOMLH: number[]
+	ADJICNNJFEM: number[]
 }
 
 export const PathMap: {[id: string]: AeonPath} = {
@@ -36,12 +36,12 @@ export class BlessingGroup {
 	static data: {[id: string]: InternalBlessingGroup} = JSON.parse(readFileSync(`./versions/${config.target_version}/RogueBuffGroup.json`).toString())
 	
 	constructor(public data: InternalBlessingGroup) {
-		this.id = data.HPODHLHDAJF
+		this.id = data.JHOKDPADHFM
 		BlessingGroup.map.set(this.id.toString(), this)
 	}
 	
 	resolveAllBlessings(): Blessing[] {
-		const blessings = this.data.DDIPBDOOMLH.map(id => BlessingGroup.forId(id)?.resolveAllBlessings() || []).flat(1024)
+		const blessings = this.data.ADJICNNJFEM.map(id => BlessingGroup.forId(id)?.resolveAllBlessings() || []).flat(1024)
 		
 		this.rarity_min = Math.min(...blessings.map(blessing => blessing.rarity).filter(v => v))
 		this.rarity_max = Math.max(...blessings.map(blessing => blessing.rarity).filter(v => v))
