@@ -71,7 +71,7 @@ for (const [ssid, substory] of Object.entries(substories)) {
 	
 	// console.log(dialog)
 	const startingSequence = dialog.OnStartSequece[0]
-	const npcId = findType('RPG.GameCore.ShowTalkBackground', startingSequence.TaskList)?.TalkBgID
+	const npcId = findType('RPG.GameCore.ShowRogueTalkBg', startingSequence.TaskList)?.TalkBgID
 	if (!npcId) {
 		console.trace(dialog)
 		continue
@@ -91,9 +91,9 @@ for (const [ssid, substory] of Object.entries(substories)) {
 	
 	function addText(tasks: DialogTask[], indent: number) {
 		for (const task of tasks) {
-			if (task.$type == 'RPG.GameCore.PlayAndWaitSimpleTalk') {
+			if (task.$type == 'RPG.GameCore.PlayAndWaitRogueSimpleTalk') {
 				storyOutput.push(...task.SimpleTalkList.map(talk => ':'.repeat(indent) + getSentence(talk.TalkSentenceID)))
-			} else if (task.$type == 'RPG.GameCore.PlayOptionTalk') {
+			} else if (task.$type == 'RPG.GameCore.PlayRogueOptionTalk') {
 				storyOutput.push(':'.repeat(indent) + '{{DIcon|Arrow}} Select')
 				let allSame: DialogTask[] | undefined = undefined
 				for (const option of task.OptionList) {
