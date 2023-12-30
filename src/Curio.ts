@@ -20,6 +20,7 @@ export class CurioGroup {
 			case 21012:
 			case 12000:
 			case 22000:
+			case 30010:
 				return `Normal Curio${s}`
 			
 			case 10003:
@@ -28,6 +29,8 @@ export class CurioGroup {
 			
 			case 10004:
 			case 20004:
+			case 30004:
+			case 30012:
 				return `Curio${s}`
 			
 			case 11042:
@@ -40,6 +43,7 @@ export class CurioGroup {
 			
 			case 11012:
 			case 21009:
+			case 32060:
 				return `Curio${s} of the Big Lotto series`
 			
 			case 11009:
@@ -79,10 +83,29 @@ export class CurioGroup {
 				return `Curio<nowiki>:</nowiki> ${curio('Ambergris Cheese')}`
 			
 			case 32030:
-				return `Curios<nowiki>:</nowiki> ${curio('Ambergris Cheese')}, ${curio('Casket of Inaccuracy')}, ${plural ? 'and' : 'or'} ${curio('Casket of Inaccuracy')}`
+				return `Curios<nowiki>:</nowiki> ${curio('Ambergris Cheese')}, ${curio('Casket of Inaccuracy')}, ${plural ? 'and' : 'or'} ${curio('Fruit of the Alien Tree')}`
+
+			case 31208:
+				return `Curio<nowiki>:</nowiki> ${curio('Mysterious Magnetism')}`
+			
+			case 31209:
+				return `Curio<nowiki>:</nowiki> ${curio('Organic Heart')}`
+			
+			case 31207:
+				return `Curio<nowiki>:</nowiki> ${curio('King of Sponges')}`
+
+			case 31205:
+				return `Curio<nowiki>:</nowiki> ${curio('Indecipherable Box')}`
+				
+			case 31206:
+				return `Curio<nowiki>:</nowiki> ${curio('Rotting Fruit of the Alien Tree')}`
 			
 			case 20008:
+			case 30008:
 				return `Damageable Curio${s}`
+			
+			case 32070:
+				return `Curios<nowiki>:</nowiki> ${curio('Gold Coin of Discord')} ${plural ? 'and' : 'or'} ${curio('Typical Genius Society Gossip')}`
 		}
 		
 		return `Curio${s}<nowiki>:</nowiki> {{tx}}<!--ID: ${id}-->`

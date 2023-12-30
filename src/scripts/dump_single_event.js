@@ -1,22 +1,23 @@
-import { readFileSync, writeFileSync } from 'fs';
+import { mkdirSync, readFileSync, writeFileSync } from 'fs';
 import config from '../../config.json' with { "type": "json" };
 import { BlessingGroup } from '../Blessing.js';
 import { Event } from '../Event.js';
 BlessingGroup.loadAll();
 const PAGE_FORMAT = `{{Simulated Universe Event Infobox
-|title        = <<NAME>>
-|image        = <<IMAGE>>.png
-|type         =
-|appearsIn    = <<APPEARS_IN_1>>
-|appearsIn2   = <<APPEARS_IN_2>>
-|appearsIn3   = <<APPEARS_IN_3>>
-|requirements =
-|prev         = <<PREV>>
-|next         = <<NEXT>>
-|indexRewards =
-|characters   =
+|title         = <<NAME>>
+|image         = Random Event <<IMAGE>>.png
+|type          =
+|domains_su    = <<DOMAINS_SU>>
+|domains_ext   = <<DOMAINS_EXT>>
+|domains_swarm = <<DOMAINS_SWARM>>
+|domains_gng   = <<DOMAINS_GNG>>
+|requirements  =
+|prev          = <<PREV>>
+|next          = <<NEXT>>
+|indexRewards  =
+|characters    =
 }}
-'''<<NAME>>''' is an [[Simulated Universe/Events|Event]] in the <<APPEARS_IN_1>>.
+'''<<NAME>>''' is an [[Simulated Universe/Events|Event]] in <<SOURCE>>.
 
 ==Possible Outcomes==
 {| class="article-table"
@@ -54,41 +55,26 @@ const PAGE_FORMAT = `{{Simulated Universe Event Infobox
 {{Change History|1.0}}
 `;
 const IMAGE_MAP = {
-    101: 'Random Event Normal',
-    102: 'Random Event Historian',
-    103: 'Random Event Pixel',
-    104: 'Random Event Toy',
-    105: 'Random Event Bond',
-    106: 'Random Event Bonus',
-    107: 'Random Event ThreePig',
-    108: 'Random Event Profiteer',
-    109: 'Random Event Twin',
-    110: 'Random Event Battle',
-    111: 'Random Event Trade',
-    112: 'Random Event 1',
-    113: 'Random Event 2',
-    114: 'Random Event 3',
-    115: 'Random Event 4',
-    116: 'Random Event 5',
-    117: 'Random Event 7',
-    201: 'Aeon Qlipoth',
-    202: 'Aeon Fuli',
-    203: 'Aeon IX',
-    204: 'Aeon Yaoshi',
-    205: 'Aeon Lan',
-    206: 'Aeon Nanook',
-    207: 'Aeon Aha',
-    208: 'Aeon Ena',
-    209: 'Aeon Xipe',
-    210: 'Aeon Oroboros',
-    211: 'Aeon Tayzzyronth',
-    301: 'Herta Simulated Universe',
-    401: 'Trailblaze Secret 1',
-    402: 'Trailblaze Secret 2',
-    403: 'Trailblaze Secret 3',
-    404: 'Trailblaze Secret 4',
-    405: 'Trailblaze Secret 5',
-    406: 'Trailblaze Secret 6',
+    101: 'Normal',
+    102: 'Historian',
+    103: 'Pixel',
+    104: 'Toy',
+    105: 'Bond',
+    106: 'Bonus',
+    107: 'ThreePig',
+    108: 'Profiteer',
+    109: 'Twin',
+    110: 'Battle',
+    111: 'Trade',
+    112: '1',
+    113: '2',
+    114: '3',
+    115: '4',
+    116: '5',
+    117: '7',
+    118: '8',
+    119: '9',
+    120: '10',
 };
 function readMap(name) {
     return JSON.parse(readFileSync(`./versions/${config.target_version}/TextMap${name}.json`).toString());
@@ -107,32 +93,50 @@ const OTHER_LANGUAGES = {
     ID: readMap('ID'),
     PT: readMap('PT')
 };
-const MOCK_HANDBOOK = {
-    EventID: -1,
-    EventTitle: { Hash: 1389708315 },
-    EventType: { Hash: 1339543455 },
-    DialoguePath: 'Config/Level/RogueDialogue/RogueNpcDialogEvent/Act/Act403050000.json',
-    EventReward: 0,
-    ImageID: 201,
-    Order: -1,
-    EventImage: '',
-    EventTypeList: [],
-    UnlockHintDesc: { Hash: 0 },
-    EventDesc: { Hash: 0 },
-};
-const event = new Event(MOCK_HANDBOOK);
-await event.loadSequences();
-const output = event.output();
-let finalOutput = PAGE_FORMAT
-    .replaceAll('<<NAME>>', event.name)
-    .replaceAll('<<IMAGE>>', IMAGE_MAP[event.image_id])
-    .replaceAll('<<PREV>>', event.name.includes('(') ? '{{tx}}' : '')
-    .replaceAll('<<NEXT>>', event.name.includes('(') ? '{{tx}}' : '')
-    .replaceAll('<<DIALOGUE>>', output);
-for (let i = 1; i < 4; i++) {
-    finalOutput = finalOutput.replaceAll(`<<APPEARS_IN_${i}>>`, event.type_list[i - 1] ? `[[${event.type_list[i - 1]}]]` : '');
+function sanitize(str) {
+    return str.replace(/[\/\<\>\:\"\\\|\?\*]/g, '');
 }
-for (const [replace, map] of Object.entries(OTHER_LANGUAGES)) {
-    finalOutput = finalOutput.replaceAll(`<<OL_${replace}>>`, map[event.name_hash]);
+const TARGET = ['Nildis (Robot)'];
+for (const npc of (Object.values(Event.NPC_DIALOG).map(v => Object.values(v)).flat())) {
+    const event = new Event(npc);
+    if (!TARGET.find(target => event.name.includes(target)))
+        continue;
+    await event.loadSequences();
+    const output = event.output();
+    let finalOutput = PAGE_FORMAT
+        .replaceAll('<<NAME>>', event.name)
+        .replaceAll('<<IMAGE>>', IMAGE_MAP[event.image_id])
+        .replaceAll('<<PREV>>', event.name.includes('(') ? '{{tx}}' : '')
+        .replaceAll('<<NEXT>>', event.name.includes('(') ? '{{tx}}' : '')
+        .replaceAll('<<DIALOGUE>>', output);
+    const IN_NORMAL_SU = event.type_list.includes('Simulated Universe');
+    const IN_SWARM_DISASTER = event.type_list.includes('Simulated Universe: Swarm Disaster');
+    const IN_GOLD_AND_GEARS = event.type_list.includes('Simulated Universe: Gold and Gears');
+    if (IN_NORMAL_SU) {
+        finalOutput = finalOutput.replaceAll('<<DOMAINS_SU>>', 'Occurrence');
+    }
+    if (IN_SWARM_DISASTER) {
+        if (IN_GOLD_AND_GEARS) {
+            finalOutput = finalOutput.replaceAll('<<DOMAINS_EXT>>', 'Occurrence')
+                .replaceAll('<<SOURCE>>', IN_NORMAL_SU ? 'the [[Simulated Universe]]' : '[[Simulated Universe]] Extensions');
+        }
+        else {
+            finalOutput = finalOutput.replaceAll('<<DOMAINS_SWARM>>', event.name.includes('Praetorian') ? 'Swarm' : 'Occurrence')
+                .replaceAll('<<SOURCE>>', '[[Simulated Universe: Swarm Disaster]]');
+        }
+    }
+    else if (IN_GOLD_AND_GEARS) {
+        finalOutput = finalOutput.replaceAll('<<DOMAINS_GNG>>', finalOutput.includes('Cognition Value') ? 'Abnormal' : 'Occurrence')
+            .replaceAll('<<SOURCE>>', '[[Simulated Universe: Gold and Gears]]');
+    }
+    else {
+        finalOutput = finalOutput.replaceAll('<<SOURCE>>', 'the [[Simulated Universe]]');
+    }
+    for (const [replace, map] of Object.entries(OTHER_LANGUAGES)) {
+        finalOutput = finalOutput.replaceAll(`<<OL_${replace}>>`, map[event.name_hash]);
+    }
+    finalOutput = finalOutput.replaceAll(/<<\w+>>/gi, '');
+    const dir = `./output/events/${sanitize(event.subname)}/${sanitize(event.series_name)}`;
+    mkdirSync(dir, { recursive: true });
+    writeFileSync(`${dir}/${event.npc_dialog.RogueNPCID}-${event.part_num} - ${sanitize(event.name)}.wikitext`, finalOutput);
 }
-writeFileSync(`./output/events/${event.name.replace(/[\/\<\>\:\"\\\|\?\*]/g, '')}.wikitext`, finalOutput);

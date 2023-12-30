@@ -1,15 +1,12 @@
 export type AeonPath =
 	'Remembrance' | 'Destruction' | 'Elation' | 'Nihility' | 'Preservation'
 	| 'Abundance' | 'TheHunt' | 'Propagation' | 'Erudition' | 'Trailblaze'
+	| 'Ruan Mei'
 
 export type AttackType = 'Physical' | 'Fire' | 'Wind' | 'Ice' | 'Thunder' | 'Quantum' | 'Imaginary'
 
 export function pathDisplayName(pathName: AeonPath) {
 	return pathName == 'TheHunt' ? 'The Hunt' : pathName
-}
-
-export function pathIcon(pathName: AeonPath) {
-	return `{{Icon/Dark|Path ${pathDisplayName(pathName)} Small.png|20}}`
 }
 
 export function pathListDisplay(pathNames: AeonPath[]) {
@@ -31,3 +28,5 @@ export const VERSION_COMMITS = {
 	'1.5': '59d64be43a1da285cf22ba9be5ed90ef2b23f857',
 	'1.6': '267db9b8cc44face0f376075f0828c5e1dd20bff',
 }
+
+export type Dictionary<V, K extends string | number | symbol = string> = { [key in K]: V }

@@ -3,7 +3,8 @@ import config from '../config.json' with { type: "json" }
 import { BlessingGroup } from './Blessing.js'
 import { CurioGroup } from './Curio.js'
 import { Act, DialogSequence } from './Dialog.js'
-import { AeonPath, VERSION_COMMITS, pathDisplayName, pathIcon } from './Shared.js'
+import { DynamicContent } from './DynamicContent.js'
+import { AeonPath, VERSION_COMMITS, pathDisplayName } from './Shared.js'
 import { Stage } from './Stage.js'
 import { HashReference, TextMap } from './TextMap.js'
 
@@ -15,8 +16,12 @@ export interface InternalEventSection {
 	CostType?: CostType
 	CostParamList: number[]
 	DescValue?: number
+	DescValue2?: number
+	DescValue3?: number
 	ConditionIDList: number[]
+	DynamicContentID?: number
 	AeonOption: AeonPath
+	PerformanceType?: number
 	
 	// legacy
 	EventTitle?: HashReference
@@ -61,6 +66,15 @@ export interface InternalHandbookEvent {
 	DialoguePath: string
 }
 
+export interface InternalNPCDialogue {
+	RogueNPCID: number
+	DialogueProgress: number
+	TexturePath: string
+	DialoguePath: string
+	HandbookEventID?: number
+	ImageID: number
+}
+
 export type EffectType =
 	'ReplaceRogueBuffKeepLevel' | 'GetItem' | 'TriggerDialogueEventList'
 	| 'GetRogueBuff' | 'GetChessRogueCheatDice' | 'GetRogueMiracle'
@@ -73,12 +87,26 @@ export type EffectType =
 	| 'SetChessRogueNextStartCellAdventureRoomType' | 'FinishChessRogue'
 	// 1.6 //
 	| 'GetAllRogueBuffInGroupAndGetItem' | 'EnhanceRogueBuff' | 'TriggerRandomEventList' | 'ChangeNousValue'
-	| 'RepairRogueMiracle' | 'ChangeLineupData' | 'TriggerRogueMiracleRepair' | 'ReviveAvatar'
+	| 'RepairRogueMiracle' | 'ChangeLineupData' | 'TriggerRogueMiracleRepair' | 'ReviveAvatar' | 'RepeatableGamble'
 
 export type CostType = 'CostItemValue' | 'CostHpCurrentPercent' | 'CostHpMaxPercent' | 'CostItemPercent' | 'CostHpSpToPercent'
 
 const ITEMS = {
 	31: 'Cosmic Fragments'
+}
+
+function describeWeight(weight: number) {
+	if (weight < 50) {
+		return 'Greatly decreases'
+	} else if (weight < 100) {
+		return 'Slightly decreases'
+	} else if (weight <= 150) {
+		return 'Slightly increases'
+	} else if (weight <= 300) {
+		return 'Significantly increases'
+	} else {
+		return 'Greatly increases'
+	}
 }
 
 const SIMPLE_EFFECTS: {[effectType: string]: (...args: number[]) => (string)} = {
@@ -92,8 +120,9 @@ const SIMPLE_EFFECTS: {[effectType: string]: (...args: number[]) => (string)} = 
 	TriggerRogueBuffSelect: (blessingGroup, optionCount, _unknown) => `Obtain a ${BlessingGroup.nameForId(blessingGroup, false)}`,
 	TriggerRogueMiracleSelect: (curioGroup, optionCount) => `Obtain a ${CurioGroup.nameForId(curioGroup, false)}`,
 	UpRogueBuffLevel: (blessingGroup, count) => `Enhance ${count} random ${BlessingGroup.nameForId(blessingGroup, count != 1)}`,
+	TriggerRogueBuffEnhance: (blessingGroup, _unknown, count) => `Enhance ${count} random ${BlessingGroup.nameForId(blessingGroup, count != 1)}`,
 	EnhanceRogueBuff: (blessingGroup, count) => `Enhance ${count} random ${BlessingGroup.nameForId(blessingGroup, count != 1)}`,
-	TriggerRogueBuffReforge: (discardGroup, discardOptionCount, replacementGroup, replacementOptionCount, _unknown) => 
+	TriggerRogueBuffReforge: (discardGroup, discardOptionCount, _unknown2, replacementGroup, replacementOptionCount, _unknown) => 
 		`Discard a ${BlessingGroup.nameForId(discardGroup, false)} in exchange for a ${BlessingGroup.nameForId(replacementGroup, false)}`,
 	GetAllRogueBuffInGroup: (blessingGroup) => `Obtain all ${BlessingGroup.nameForId(blessingGroup, true)}`,
 	GetAllRogueBuffInGroupAndGetItem: (blessingGroup, itemId, amount, _unknown) =>
@@ -118,14 +147,14 @@ const SIMPLE_EFFECTS: {[effectType: string]: (...args: number[]) => (string)} = 
 	ReviveAvatar: (charCount, hpAmount, energyAmount) =>
 		`Immediately revive ${charCount > 20 || charCount < 1 ? 'all' : charCount} characters and restore them to ${hpAmount}% Max HP`,
 	GetRogueBuffByMiracleCount: (blessingGroup) => `Obtain a random ${BlessingGroup.nameForId(blessingGroup, false)} for every Curio currently in possession`,
-	TriggerBattle: (stageId) => {
-		const stage = Stage.infoFor(stageId)
-		if (stage.elite) {
-			return `Enter a ${stage.waves.length}-wave battle against ${stage.elite_count} ${stage.type}-type Elite ${stage.elite_count > 1 ? 'Enemies' : 'Enemy'}`
-		} else {
-			return `Enter a ${stage.waves.length}-wave battle against Normal Enemies`
-		}
-	}
+	ChangeRogueNpcWeight: (npc_id, weight, _unknown) => `${describeWeight(weight)}<!--weight=${weight}--> the chance of encountering [[${TextMap.default.getText(Event.TALK_NAMES[npc_id]?.Name)}]]`,
+	GetCoinByLoseCoin: (loseAmnt, _unknown, gainAmnt, _unknown2) => `Lose ${loseAmnt}% of Cosmic Fragments, but immediately regain ${gainAmnt}% of the amount lost{{Verify}}`,
+	TriggerDestroyedRogueMiracleSelect: (curioGroup, _unknown, count) => `Select ${count} destroyed ${CurioGroup.nameForId(curioGroup, count != 1)}`,
+	GetDestroyedRogueMiracle: (curioGroup, count) => `Obtain ${count} random destroyed ${CurioGroup.nameForId(curioGroup, count != 1)}`,
+	ReplaceRogueBuffKeepLevel: (discardGroup, replaceGroup) => `Replace all ${BlessingGroup.nameForId(discardGroup)} with ${BlessingGroup.nameForId(replaceGroup)}, retaining the original Enhancement status`,
+	DestroyRogueMiracleThenGetRogueMiracle: (destroyGroup, replaceGroup) => `Destroy all ${CurioGroup.nameForId(destroyGroup)} and obtain 2 ${CurioGroup.nameForId(replaceGroup)} for every Curio destroyed`,
+	ChangeChessRogueActionPoint: (points) => `Increase the current Countdown amount by ${points} points`,
+	ChangeDestroyedRogueMiracleToRogueMiracle: (_unknown, replaceGroup, _unknown2, _unknown3) => `Replace all destroyed Curios with ${CurioGroup.nameForId(replaceGroup)}`
 }
 
 const SIMPLE_COSTS: {[costType: string]: (...args: number[]) => (string)} = {
@@ -138,6 +167,40 @@ const SIMPLE_COSTS: {[costType: string]: (...args: number[]) => (string)} = {
 
 export type OutputList = (string | OutputList)[]
 
+export const PERFORMANCE_MAP: {[key: number]: AeonPath} = {
+	1: 'Preservation',
+	2: 'Remembrance',
+	3: 'Nihility',
+	4: 'Abundance',
+	5: 'TheHunt',
+	6: 'Destruction',
+	7: 'Elation',
+	8: 'Propagation',
+	9: 'Erudition',
+	
+	101: 'Ruan Mei',
+}
+
+const GNG_CONDITION_MAP = {
+	801: -40,
+	802: -30,
+	803: -20,
+	804: -10,
+	805: 0,
+	806: 10,
+	807: 20,
+	808: 30,
+	
+	809: 40,
+	810: 30,
+	811: 20,
+	812: 10,
+	813: 0,
+	814: -10,
+	815: -20,
+	816: -30,
+}
+
 export class EventSection {
 	id: number
 	display_id?: number
@@ -146,6 +209,9 @@ export class EventSection {
 	cost_type?: CostType
 	cost_params: number[]
 	path_choice?: AeonPath
+	condition_ids: number[]
+	
+	dynamic_content?: DynamicContent
 	
 	title?: string
 	description?: string
@@ -160,11 +226,16 @@ export class EventSection {
 		this.effect_params = internal.RogueEffectParamList
 		this.cost_type = internal.CostType
 		this.cost_params = internal.CostParamList
-		this.path_choice = internal.AeonOption
+		this.path_choice = internal.AeonOption || PERFORMANCE_MAP[internal.PerformanceType || 0]
+		this.condition_ids = internal.ConditionIDList
 		
 		this.text_map = parent.text_map
 		
-		const params = ['[current path]', internal.DescValue]
+		if (internal.DynamicContentID) {
+			this.dynamic_content = new DynamicContent(internal.DynamicContentID)
+		}
+		
+		const params = [this.dynamic_content?.text_params?.join('/') || '[path]', internal.DescValue, undefined, undefined, internal.DescValue2, internal.DescValue3]
 		this.title = this.text_map.getText(internal.EventTitle || display?.EventTitle, params)
 		this.description_detail = this.text_map.getText(internal.EventDetailDesc || display?.EventDetailDesc, params)
 		this.description = this.text_map.getText(internal.EventDesc || display?.EventDesc, params) + (this.description_detail ? ` (${this.description_detail})` : '')
@@ -214,7 +285,7 @@ export class EventSection {
 			const percent = Math.round((this.effect_params[i + 1] / totalPercent) * 100)
 			output.push(`;(Outcome ${(i / 2) + 1}, ${percent}%)`)
 			const section = this.parent.addSection(this.effect_params[i], isLoop)
-			output.push(section?.output(undefined, isLoop) || [])
+			output.push(...section?.output(undefined, isLoop) || [])
 		}
 	}
 	
@@ -231,8 +302,14 @@ export class EventSection {
 		}
 	}
 	
+	descTriggerBattle(output: OutputList) {
+		const enemies = (this.dynamic_content || new Stage(this.effect_params[0])).generateEnemyList()
+		output.push(';(Enter battle)')
+		output.push([enemies])
+	}
+	
 	output(triggerCustomString: string | undefined = this.parent.sectionCustomStrings.get(this.id), isLoop = false): OutputList {
-		console.group(`Starting section output for ${this.id}`)
+		console.group(`Starting section output for ${this.id}${this.path_choice ? ` (${this.path_choice})` : ''}`)
 		const output2: OutputList = []
 		const output: OutputList = [output2]
 		
@@ -247,7 +324,7 @@ export class EventSection {
 		if (this.effect_type) {
 			if (SIMPLE_EFFECTS[this.effect_type]) {
 				output2.push(`;(${SIMPLE_EFFECTS[this.effect_type](...this.effect_params)})`)
-			} else if (this.effect_type == 'TriggerRandomEvent') {
+			} else if (this.effect_type == 'TriggerRandomEvent' || this.effect_type == 'RepeatableGamble') {
 				this.descTriggerRandomEvent(output2, isLoop)
 			} else if (this.effect_type == 'TriggerRandomResult' || this.effect_type == 'TriggerRandomEventList') {
 				this.descTriggerRandomResult(output2, isLoop)
@@ -255,15 +332,27 @@ export class EventSection {
 				this.descTriggerCurioTrade(output2, isLoop)
 			} else if (this.effect_type == 'TriggerDialogueEventList') {
 				this.descTriggerDialogEventList(output2, isLoop)
+			} else if (this.effect_type == 'TriggerBattle') {
+				this.descTriggerBattle(output2)
 			} else {
 				console.warn(`Unknown EffectType ${this.effect_type}. Params:`, this.effect_params)
 			}
 		}
 
 		if (this.title) {
-			output.unshift(`:${this.path_choice ? pathIcon(this.path_choice) : '{{DIcon|Star}}'} ${this.title} &mdash; ${this.description}`)
+			output.unshift(
+				this.path_choice ? 
+					`:{{SU Special Dialogue|${pathDisplayName(this.path_choice)}|${this.title}|${this.description}}}`
+					: `:{{DIcon|Star}} ${this.title} &mdash; ${this.description}`
+			)
 			if (this.path_choice) {
-				output.unshift(`;(If embarking on the Path of [[Simulated Universe/Paths#${pathDisplayName(this.path_choice)}|${pathDisplayName(this.path_choice) }]] in a Simulated Universe Expansion)`)
+				if (this.path_choice == 'Ruan Mei') {
+					output.unshift(`;(If [[Ruan Mei]] is in the active party){{Verify}}`)
+				} else if (this.path_choice == 'Erudition') {
+					output.unshift(`;(If Intra-Cognition is between ${this.condition_ids.map(id => GNG_CONDITION_MAP[id]).filter(v => v != null).sort().join(' and ')} in [[Simulated Universe: Gold and Gears]])`)
+				} else {
+					output.unshift(`;(If embarking on the Path of [[Simulated Universe/Paths#${pathDisplayName(this.path_choice)}|${pathDisplayName(this.path_choice)}]] in [[Simulated Universe: Swarm Disaster]])`)
+				}
 			}
 		}
 		
@@ -279,23 +368,26 @@ export class EventSection {
 
 export class Event {
 	readonly text_map: TextMap = TextMap.default
-	handbook_id: number
+	handbook_id?: number
 	name: string
+	series_name: string
+	subname: string
 	name_hash: number
 	type: string
 	description?: string
 	image: string
 	image_id: number
-	reward_id: number
-	handbook_order: number
+	reward_id?: number
+	handbook_order?: number
 	type_list: string[]
 	graph_path: string
+	part_num: number
 
 	sequences: DialogSequence[] = []
 	
 	static DIALOG_EVENT = JSON.parse(readFileSync(`./versions/${config.target_version}/DialogueEvent.json`).toString())
 	static DIALOG_EVENT_DISPLAY = JSON.parse(readFileSync(`./versions/${config.target_version}/DialogueEventDisplay.json`).toString())
-	static NPC_DIALOG = JSON.parse(readFileSync(`./versions/${config.target_version}/RogueNPCDialogue.json`).toString())
+	static NPC_DIALOG: {[key: string]: {[key: string]: InternalNPCDialogue}} = JSON.parse(readFileSync(`./versions/${config.target_version}/RogueNPCDialogue.json`).toString())
 	static TALK_NAMES = JSON.parse(readFileSync(`./versions/${config.target_version}/RogueTalkNameConfig.json`).toString())
 	static HANDBOOK = JSON.parse(readFileSync(`./versions/${config.target_version}/RogueHandBookEvent.json`).toString())
 	static HANDBOOK_TYPES = JSON.parse(readFileSync(`./versions/${config.target_version}/RogueHandBookEventType.json`).toString())
@@ -304,19 +396,23 @@ export class Event {
 	sectionCustomStrings = new Map<number, string>()
 	triggeredStrings = new Set<string>()
 	
-	constructor(handbook_id: number | InternalHandbookEvent) {
-		const handbookEntry: InternalHandbookEvent = typeof handbook_id == 'object' ? handbook_id : Event.HANDBOOK[handbook_id]
-		this.handbook_id = handbookEntry.EventID
-		this.name = this.text_map.getText(handbookEntry.EventTitle)
-		this.name_hash = handbookEntry.EventTitle.Hash
-		this.type = this.text_map.getText(handbookEntry.EventType)
-		this.description = this.text_map.getText(handbookEntry.EventDesc)
-		this.image = handbookEntry.EventImage
-		this.image_id = handbookEntry.ImageID
-		this.reward_id = handbookEntry.EventReward
-		this.handbook_order = handbookEntry.Order
-		this.type_list = handbookEntry.EventTypeList.map(id => this.text_map.getText(Event.HANDBOOK_TYPES[id].RogueEventTypeTitle)!)
-		this.graph_path = handbookEntry.DialoguePath
+	constructor(public npc_dialog: InternalNPCDialogue) {
+		this.handbook_id = npc_dialog.HandbookEventID
+		const handbookEntry: (InternalHandbookEvent | undefined) = this.handbook_id ? Event.HANDBOOK[this.handbook_id] : undefined
+		const talkName = Event.TALK_NAMES[npc_dialog.RogueNPCID]
+		this.name_hash = handbookEntry?.EventTitle.Hash ?? talkName?.Name?.Hash
+		this.name = this.text_map.getText(this.name_hash) || `Unknown Event ${npc_dialog.RogueNPCID}-${npc_dialog.DialogueProgress}`
+		this.series_name = this.text_map.getText(talkName?.Name) || this.name
+		this.type = this.text_map.getText(handbookEntry?.EventType ?? talkName?.SubName)
+		this.subname = this.text_map.getText(talkName?.SubName) || 'Unknown'
+		this.description = this.text_map.getText(handbookEntry?.EventDesc)
+		this.image = handbookEntry?.EventImage ?? talkName?.ImgPath
+		this.image_id = handbookEntry?.ImageID ?? talkName?.ImageID
+		this.reward_id = handbookEntry?.EventReward
+		this.handbook_order = handbookEntry?.Order
+		this.type_list = handbookEntry?.EventTypeList.map(id => this.text_map.getText(Event.HANDBOOK_TYPES[id].RogueEventTypeTitle)!) || []
+		this.graph_path = npc_dialog.DialoguePath ?? handbookEntry?.DialoguePath
+		this.part_num = npc_dialog.DialogueProgress
 	}
 	
 	addSection(id: number, isLoop?: boolean): EventSection | null
