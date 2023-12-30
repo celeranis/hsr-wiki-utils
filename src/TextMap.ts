@@ -37,8 +37,9 @@ export class TextMap {
 	
 	replaceParams(text: string, params: (string | number | undefined)[]) {
 		for (const [i, param] of params.entries()) {
-			text = text.replaceAll(`#${i + 1}`, param?.toString() || '??')
+			text = text.replaceAll(`#${i + 1}[i]%`, (param ? Math.round(Number(param) * 100).toString() : '??') + '%')
 				.replaceAll(`#${i + 1}[i]`, param?.toString() || '??')
+				.replaceAll(`#${i + 1}`, param?.toString() || '??')
 		}
 		return text
 	}
@@ -51,6 +52,8 @@ export class TextMap {
 			.replaceAll(/<color=#(\w+)>(.+?)<\/color>/gi, (substr, color, text) => {
 				if (color == 'dbc291ff') {
 					return `{{Color|Keyword|${text}}}`
+				} else if (color == 'f29e38ff') {
+					return `{{Color|h|${text}}}`
 				} else if (color == 'cdcdd8ff') {
 					return text
 				} else {

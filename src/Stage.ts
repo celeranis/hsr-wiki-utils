@@ -1,5 +1,6 @@
 import { readFileSync } from 'fs';
 import config from '../config.json' with { type: "json" };
+import type { OutputList } from './Event.js';
 import type { AttackType, Value } from './Shared.js';
 import { HashReference, TextMap } from './TextMap.js';
 
@@ -9,22 +10,12 @@ export interface Monster {
 	name: string
 	id: number
 	type: EnemyType
-	atk_mult?: number
-	def_mult?: number
-	hp_mult?: number
-	spd_mult?: number
-	stance_mult?: number
-}
-
-export interface StageInfo {
-	id: number
-	waves: Monster[][]
-	name: string
-	elite_group: number
-	type: 'Normal' | 'Bug' | 'Complete'
-	stage_abilities: string[]
-	elite: boolean
-	elite_count: number
+	atk_mult: number
+	def_mult: number
+	hp_mult: number
+	spd_mult: number
+	toughness_mult: number
+	toughness_add?: number
 }
 
 export interface InternalConfigEntry {
@@ -79,19 +70,43 @@ export interface InternalMonster {
 	HPModifyRatio: Value<number>
 	SpeedModifyRatio: Value<number>
 	StanceModifyRatio: Value<number>
+	StanceModifyValue?: Value<number>
+}
+
+function percentChange(num: number) {
+	return `${num > 1 ? '+' : ''}${Math.round((num - 1) * 100)}%`
 }
 
 export class Stage {
 	static stages: { [id: string]: InternalStage } = JSON.parse(readFileSync(`./versions/${config.target_version}/StageConfig.json`).toString())
 	static monsters: { [id: string]: InternalMonster } = JSON.parse(readFileSync(`./versions/${config.target_version}/MonsterConfig.json`).toString())
 	static monsterTemplates: { [id: string]: any } = JSON.parse(readFileSync(`./versions/${config.target_version}/MonsterTemplateConfig.json`).toString())
+
+	id: number
+	waves: Monster[][]
+	name: string
+	elite_group: number
+	type: 'Normal' | 'Bug' | 'Complete' = 'Normal'
+	stage_abilities: string[]
+	elite: boolean = false
+	elite_count: number = 0
 	
-	static infoFor(id: number | string): StageInfo {
+	static exists(id: number | string): InternalStage | undefined {
+		return Stage.stages[id]
+	}
+	
+	constructor(id: number | string) {
 		const stage = Stage.stages[id]
+		if (!stage) {
+			throw new Error(`No stage found for id ${id}`)
+		}
+
+		this.id = stage.StageID
+		this.name = TextMap.default.getText(stage.StageName)
+		this.elite_group = stage.EliteGroup
+		this.stage_abilities = stage.StageAbilityConfig
 		
-		let elite_count = 0
-		let type: 'Normal' | 'Bug' | 'Complete' = 'Normal'
-		const waves: Monster[][] = stage.MonsterList.map(wave => {
+		this.waves = stage.MonsterList.map(wave => {
 			return Object.values(wave).map(id => {
 				const monsterData = Stage.monsters[id]
 				const monsterTemplate = Stage.monsterTemplates[id]
@@ -99,11 +114,12 @@ export class Stage {
 				if (monsterTemplate.Rank == 'Elite' || monsterTemplate.Rank == 'LittleBoss' || monsterTemplate.Rank == 'BigBoss') {
 					const name = TextMap.default.getText(monsterData.MonsterName)
 					if (name.includes('(Bug)')) {
-						type = 'Bug'
+						this.type = 'Bug'
 					} else if (name.includes('(Complete)')) {
-						type = 'Complete'
+						this.type = 'Complete'
 					}
-					elite_count++
+					this.elite_count++
+					this.elite = true
 				}
 				
 				return {
@@ -114,20 +130,55 @@ export class Stage {
 					def_mult: monsterData.DefenceModifyRatio?.Value,
 					hp_mult: monsterData.HPModifyRatio?.Value,
 					spd_mult: monsterData.SpeedModifyRatio?.Value,
-					stance_mult: monsterData.StanceModifyRatio?.Value
+					toughness_mult: monsterData.StanceModifyRatio?.Value,
+					toughness_add: monsterData.StanceModifyValue?.Value,
 				} as Monster
 			})
 		})
-		
-		return {
-			id: stage.StageID,
-			name: TextMap.default.getText(stage.StageName),
-			waves,
-			elite_group: stage.EliteGroup,
-			stage_abilities: stage.StageAbilityConfig,
-			type,
-			elite: /*(stage.StageConfigData.find(dat => dat.CFNMGGCLFHN == '_IsEliteBattle')?.JCFBPDLNMLH == '1') || */elite_count > 0,
-			elite_count
+	}
+	
+	generateStatChanges(monster: Monster): string[] {
+		const statChanges: string[] = []
+		if (monster.atk_mult != 1) {
+			statChanges.push(`${percentChange(monster.atk_mult)} ATK`)
+		}
+		if (monster.def_mult != 1) {
+			statChanges.push(`${percentChange(monster.def_mult)} DEF`)
+		}
+		if (monster.hp_mult != 1) {
+			statChanges.push(`${percentChange(monster.hp_mult)} Max HP`)
+		}
+		if (monster.spd_mult != 1) {
+			statChanges.push(`${percentChange(monster.spd_mult)} SPD`)
+		}
+		if (monster.toughness_mult != 1) {
+			statChanges.push(`${percentChange(monster.toughness_mult)} Max Toughness`)
+		}
+		if (monster.toughness_add) {
+			statChanges.push(`${monster.toughness_add > 0 ? '+' : ''}${monster.toughness_add} Max Toughness`)
+		}
+		return statChanges
+	}
+	
+	generateMonsterListWave(wave: Monster[]): string {
+		const monsterList = new Map<string, number>()
+		for (const monster of wave) {
+			const statChanges = this.generateStatChanges(monster)
+			const key = `${monster.name}*<<NUM>>/${statChanges.join(', ')}`
+			monsterList.set(key, (monsterList.get(key) || 0) + 1)
+		}
+		return `{{Enemy List|${[...monsterList.entries()].map(([str, amnt]) => str.replaceAll('<<NUM>>', amnt.toString())).join(';')}}}`
+	}
+	
+	generateEnemyList(): OutputList | string {
+		if (this.waves.length == 1) {
+			return this.generateMonsterListWave(this.waves[0])
+		} else {
+			const list: string[] = []
+			for (const [i, wave] of this.waves.entries()) {
+				list.push(`Wave ${i + 1}: ${this.generateMonsterListWave(wave)}`)
+			}
+			return list
 		}
 	}
 }

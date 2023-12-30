@@ -1,9 +1,9 @@
-import { readFileSync, writeFileSync } from 'fs';
+import { mkdirSync, readFileSync, writeFileSync } from 'fs';
 import config from '../../config.json' with { "type": "json" };
 import { BlessingGroup } from '../Blessing.js';
 import { Event } from '../Event.js';
 BlessingGroup.loadAll();
-const skip = ['30', '31', '32'];
+const skip = [30, 31, 32];
 const PAGE_FORMAT = `{{Simulated Universe Event Infobox
 |title         = <<NAME>>
 |image         = Random Event <<IMAGE>>.png
@@ -16,9 +16,9 @@ const PAGE_FORMAT = `{{Simulated Universe Event Infobox
 |prev          = <<PREV>>
 |next          = <<NEXT>>
 |indexRewards  =
-|characters    =
+|characters    = <<CHARACTERS>>
 }}
-'''<<NAME>>''' is an [[Simulated Universe/Events|Event]] in the <<APPEARS_IN_1>>.
+'''<<NAME>>''' is an [[Simulated Universe/Events|Event]] in <<SOURCE>>.
 
 ==Possible Outcomes==
 {| class="article-table"
@@ -72,8 +72,20 @@ const IMAGE_MAP = {
     114: '3',
     115: '4',
     116: '5',
-    117: '7'
+    117: '7',
+    118: '8',
+    119: '9',
+    120: '10',
 };
+const LOOK_FOR_CHARACTERS = [
+    'Argenti', 'Arlan', 'Asta', 'Bailu', 'Blade', 'Bronya', 'Clara', 'Dan Heng', 'Dr. Ratio', 'Veritas Ratio', 'Fu Xuan', 'Gepard', 'Guinafen',
+    'Hanya', 'Herta', 'Himeko', 'Hook', 'Huohuo', 'Jing Yuan', 'Jingliu', 'Kafka', 'Luka', 'Luocha', 'Lynx', 'March 7th', 'Natasha', 'Pela', 'Qingque',
+    'Ruan Mei', 'Sampo', 'Seele', 'Serval', 'Silver Wolf', 'Sushang', 'Tingyun', 'Topaz', 'Topaz and Numby', 'Numby', 'Welt', 'Xueyi', 'Yanqing',
+    'Yukong', 'Xueyi',
+    'Aha', 'Akivili', 'Ena', 'Fuli', 'HooH', 'Idrila', 'Lan', 'Mythus', 'Nanook', 'Nous', 'Oroboros', 'Qlipoth', 'Tayzzyronth', 'Terminus', 'Xipe', 'Yaoshi',
+    'Screwllum', 'Yingxing', 'Baiheng', 'Elio', 'Findie', 'Oleg', 'Owlbert', 'Peppy', 'Phantylia', 'Pom-Pom', 'Sam', 'Sparkle', 'Acheron', 'Sunday',
+    'Firefly', 'Gallagher', 'Misha', 'Robin', 'Duke Inferno', 'Ifrit', 'Black Swan'
+];
 function readMap(name) {
     return JSON.parse(readFileSync(`./versions/${config.target_version}/TextMap${name}.json`).toString());
 }
@@ -91,23 +103,59 @@ const OTHER_LANGUAGES = {
     ID: readMap('ID'),
     PT: readMap('PT')
 };
-for (const id in Event.HANDBOOK) {
-    if (skip.includes(id))
+function sanitize(str) {
+    return str.replace(/[\/\<\>\:\"\\\|\?\*]/g, '');
+}
+const MERGE_FOLDERS = { Occurrence: true, Unknown: true, Encounter: true, Deal: true };
+for (const npc of (Object.values(Event.NPC_DIALOG).map(v => Object.values(v)).flat())) {
+    if (npc.HandbookEventID && skip.includes(npc.HandbookEventID))
         continue;
-    const event = new Event(Number.parseInt(id));
+    const event = new Event(npc);
     await event.loadSequences();
-    const output = event.output();
+    let output = event.output();
+    const chars = [];
+    for (const char of LOOK_FOR_CHARACTERS) {
+        const pattern = new RegExp(`(\\s|^)${char}(\\s|\\.|$|!|\\?|,|'|")`);
+        if (pattern.test(output)) {
+            chars.push(char);
+            output = output.replace(pattern, `$1[[${char}]]$2`);
+        }
+    }
     let finalOutput = PAGE_FORMAT
         .replaceAll('<<NAME>>', event.name)
-        .replaceAll('<<IMAGE>>', IMAGE_MAP[event.image_id])
+        .replaceAll('<<IMAGE>>', IMAGE_MAP[event.image_id] || event.image_id)
         .replaceAll('<<PREV>>', event.name.includes('(') ? '{{tx}}' : '')
         .replaceAll('<<NEXT>>', event.name.includes('(') ? '{{tx}}' : '')
-        .replaceAll('<<DIALOGUE>>', output);
-    for (let i = 1; i < 4; i++) {
-        finalOutput = finalOutput.replaceAll(`<<APPEARS_IN_${i}>>`, event.type_list[i - 1] ? `[[${event.type_list[i - 1]}]]` : '');
+        .replaceAll('<<DIALOGUE>>', output)
+        .replaceAll('<<CHARACTERS>>', chars.join(';'));
+    const IN_NORMAL_SU = event.type_list.includes('Simulated Universe');
+    const IN_SWARM_DISASTER = event.type_list.includes('Simulated Universe: Swarm Disaster');
+    const IN_GOLD_AND_GEARS = event.type_list.includes('Simulated Universe: Gold and Gears');
+    if (IN_NORMAL_SU) {
+        finalOutput = finalOutput.replaceAll('<<DOMAINS_SU>>', 'Occurrence');
+    }
+    if (IN_SWARM_DISASTER) {
+        if (IN_GOLD_AND_GEARS) {
+            finalOutput = finalOutput.replaceAll('<<DOMAINS_EXT>>', 'Occurrence')
+                .replaceAll('<<SOURCE>>', IN_NORMAL_SU ? 'the [[Simulated Universe]]' : '[[Simulated Universe]] Extensions');
+        }
+        else {
+            finalOutput = finalOutput.replaceAll('<<DOMAINS_SWARM>>', event.name.includes('Praetorian') ? 'Swarm' : 'Occurrence')
+                .replaceAll('<<SOURCE>>', '[[Simulated Universe: Swarm Disaster]]');
+        }
+    }
+    else if (IN_GOLD_AND_GEARS) {
+        finalOutput = finalOutput.replaceAll('<<DOMAINS_GNG>>', finalOutput.includes('Cognition Value') ? 'Abnormal' : 'Occurrence')
+            .replaceAll('<<SOURCE>>', '[[Simulated Universe: Gold and Gears]]');
+    }
+    else {
+        finalOutput = finalOutput.replaceAll('<<SOURCE>>', 'the [[Simulated Universe]]');
     }
     for (const [replace, map] of Object.entries(OTHER_LANGUAGES)) {
         finalOutput = finalOutput.replaceAll(`<<OL_${replace}>>`, map[event.name_hash]);
     }
-    writeFileSync(`./output/events/${event.name.replace(/[\/\<\>\:\"\\\|\?\*]/g, '')}.wikitext`, finalOutput);
+    finalOutput = finalOutput.replaceAll(/<<\w+>>/gi, '');
+    const dir = `./output/events/${sanitize(MERGE_FOLDERS[event.subname] ? 'Occurrence' : event.subname)}/${sanitize(event.series_name)}`;
+    mkdirSync(dir, { recursive: true });
+    writeFileSync(`${dir}/${event.npc_dialog.RogueNPCID}-${event.part_num} - ${sanitize(event.name)}.wikitext`, finalOutput);
 }
