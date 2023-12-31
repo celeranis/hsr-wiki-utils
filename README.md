@@ -1,0 +1,2 @@
+# Simulated Universe Utilities
+Utilities for filling out pages about the Simulated Universe on the [Honkai: Star Rail Fandom Wiki](https://honkai-star-rail.fandom.com/wiki/Simulated_Universe), namely Occurrences.
