@@ -2,6 +2,7 @@ import { mkdirSync, readFileSync, writeFileSync } from 'fs';
 import config from '../../config.json' with { "type": "json" };
 import { BlessingGroup } from '../Blessing.js';
 import { Event } from '../Event.js';
+import { TextMap } from '../TextMap.js';
 
 BlessingGroup.loadAll()
 
@@ -10,7 +11,7 @@ const skip = [30, 31, 32]
 const PAGE_FORMAT = 
 `{{Simulated Universe Event Infobox
 |title         = <<NAME>>
-|image         = Random Event <<IMAGE>>.png
+|image         = <<IMAGE>>.png
 |type          =
 |domains_su    = <<DOMAINS_SU>>
 |domains_ext   = <<DOMAINS_EXT>>
@@ -22,7 +23,7 @@ const PAGE_FORMAT =
 |indexRewards  =
 |characters    = <<CHARACTERS>>
 }}
-'''<<NAME>>''' is an [[Simulated Universe/Events|Event]] in <<SOURCE>>.
+'''<<NAME>>''' is an [[Simulated Universe/Occurrence|Occurrence]] in <<SOURCE>>.
 
 ==Possible Outcomes==
 {| class="article-table"
@@ -42,6 +43,7 @@ const PAGE_FORMAT =
 
 ==Other Languages==
 {{Other Languages
+|en    = <<OL_EN>>
 |zhs   = <<OL_ZHS>>
 |zht   = <<OL_ZHT>>
 |ja    = <<OL_JA>>
@@ -61,26 +63,60 @@ const PAGE_FORMAT =
 `
 
 const IMAGE_MAP = {
-	101: 'Normal',
-	102: 'Historian',
-	103: 'Pixel',
-	104: 'Toy',
-	105: 'Bond',
-	106: 'Bonus',
-	107: 'ThreePig',
-	108: 'Profiteer',
-	109: 'Twin',
-	110: 'Battle',
-	111: 'Trade',
-	112: '1',
-	113: '2',
-	114: '3',
-	115: '4',
-	116: '5',
-	117: '7',
-	118: '8',
-	119: '9',
-	120: '10',
+	101: 'Random Event Normal',
+	102: 'Random Event Historian',
+	103: 'Random Event Pixel',
+	104: 'Random Event Toy',
+	105: 'Random Event Bond',
+	106: 'Random Event Bonus',
+	107: 'Random Event ThreePig',
+	108: 'Random Event Profiteer',
+	109: 'Random Event Twin',
+	110: 'Random Event Battle',
+	111: 'Random Event Trade',
+	112: 'Random Event 1',
+	113: 'Random Event 2',
+	114: 'Random Event 3',
+	115: 'Random Event 4',
+	116: 'Random Event 5',
+	117: 'Random Event 7',
+	118: 'Random Event 8',
+	119: 'Random Event 9',
+	120: 'Random Event 10',
+
+	201: 'Aeon Qlipoth',
+	202: 'Aeon Fuli',
+	203: 'Aeon IX',
+	204: 'Aeon Yaoshi',
+	205: 'Aeon Lan',
+	206: 'Aeon Destruction',
+	207: 'Aeon Aha',
+	208: 'Aeon Ena',
+	209: 'Aeon Xipe',
+	210: 'Aeon Oroboros',
+	211: 'Aeon Tayzzyronth',
+	212: 'Aeon Nous',
+	213: 'Aeon HooH',
+	214: 'Aeon Mythus',
+
+	301: 'Herta Simulated Universe',
+	302: 'Ruan Mei Simulated Universe',
+	303: 'Screwllum Simulated Universe',
+	304: 'Screwllum Stephen Lloyd 1',
+	305: 'Screwllum Stephen Lloyd 2',
+
+	401: 'Trailblaze Secret 1',
+	402: 'Trailblaze Secret 2',
+	403: 'Traiblaze Secret 3',
+	404: 'Traiblaze Secret 5',
+	405: 'Trailblaze Secret 4', //sic
+	406: 'Trailblaze Secret 6',
+	407: 'Trailblaze Secret 7',
+	408: 'Trailblaze Secret 8',
+	409: 'Trailblaze Secret 9',
+	410: 'Trailblaze Secret 10',
+	411: 'Trailblaze Secret 11',
+	412: 'Trailblaze Secret 12',
 }
 
 const LOOK_FOR_CHARACTERS = [
@@ -100,6 +136,7 @@ function readMap(name: string) {
 }
 
 const OTHER_LANGUAGES = {
+	EN: readMap('EN'),
 	ZHS: readMap('CHS'),
 	ZHT: readMap('CHT'),
 	JA: readMap('JP'),
@@ -167,7 +204,7 @@ for (const npc of (Object.values(Event.NPC_DIALOG).map(v => Object.values(v)).fl
 	}
 	
 	for (const [replace, map] of Object.entries(OTHER_LANGUAGES)) {
-		finalOutput = finalOutput.replaceAll(`<<OL_${replace}>>`, map[event.name_hash])
+		finalOutput = finalOutput.replaceAll(`<<OL_${replace}>>`, TextMap.default.wikiFormatting(map[event.name_hash] || '???'))
 	}
 
 	finalOutput = finalOutput.replaceAll(/<<\w+>>/gi, '')

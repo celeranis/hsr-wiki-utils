@@ -551,11 +551,13 @@ export class Event {
 	customString(string: string, isLoop = false): OutputList {
 		console.group(`CustomString ${string} triggered`)
 		if (isLoop && this.triggeredStrings.has(string)) {
+			console.groupEnd()
 			return []
 		}
 		const sequence = this.sequences.find(seq => seq.TaskList.find(task => task.$type == 'RPG.GameCore.WaitCustomString' && task.CustomString.Value == string))
 		if (!sequence) {
 			console.error(`CustomString "${string}" not found`)
+			console.groupEnd()
 			return []
 		}
 		
