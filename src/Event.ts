@@ -2,7 +2,7 @@ import { readFileSync } from 'fs'
 import config from '../config.json' with { type: "json" }
 import { BlessingGroup } from './Blessing.js'
 import { CurioGroup } from './Curio.js'
-import { Act, DialogSequence } from './Dialog.js'
+import { Act, DialogSequence, DialogTask } from './Dialog.js'
 import { DynamicContent } from './DynamicContent.js'
 import { AeonPath, VERSION_COMMITS, pathDisplayName } from './Shared.js'
 import { Stage } from './Stage.js'
@@ -366,6 +366,13 @@ export class EventSection {
 	}
 }
 
+const VALID_DIALOGUE_TYPES = new Set<DialogTask['$type']>([
+	'RPG.GameCore.PlayAndWaitRogueSimpleTalk',
+	'RPG.GameCore.PlayRogueOptionTalk',
+	'RPG.GameCore.PlayRogueSimpleTalk',
+	'RPG.GameCore.TriggerCustomString'
+])
+
 export class Event {
 	readonly text_map: TextMap = TextMap.default
 	handbook_id?: number
@@ -455,6 +462,19 @@ export class Event {
 		return finalOutput.filter(v=>v.trim()).join('\n')
 	}
 	
+	findStartingSequence(): DialogSequence {
+		for (const seq of this.sequences) {
+			
+			const waits = seq.TaskList.find(task => task.$type == 'RPG.GameCore.WaitCustomString')
+			if (waits) continue
+			
+			const hasDialogue = seq.TaskList.find(task => VALID_DIALOGUE_TYPES.has(task.$type))
+			if (hasDialogue) return seq
+			
+		}
+		throw new Error(`No starting sequence found for ${this.name}`)
+	}
+	
 	output(): string {
 		console.group(`Starting output for ${this.name} (${this.graph_path})`)
 		const output: OutputList = []
@@ -463,7 +483,7 @@ export class Event {
 			throw new TypeError('Sequences not yet loaded')
 		}
 		
-		output.push(...this.runSequence(this.sequences[0]))
+		output.push(...this.runSequence(this.findStartingSequence()))
 		
 		const finalOutput = this.recurseOutput(output, 0)
 		
