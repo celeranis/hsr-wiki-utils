@@ -3,12 +3,9 @@ function curio(name: string) {
 }
 
 export class CurioGroup {
-	// name: string = ''
-
-	// static forId(id: number): CurioGroup {
-	// 	return this // TODO
-	// }
-
+	// I couldn't find any definitions for these IDs in the game files.
+	// If you find something, please let me know.
+	// Until then, everything is hardcoded...
 	static nameForId(id: number, plural?: boolean): string {
 		const s = plural ? 's' : plural === false ? '' : '(s)'
 		switch (id) {
@@ -25,6 +22,7 @@ export class CurioGroup {
 			
 			case 10003:
 			case 20003:
+			case 30003:
 				return `Negative Curio${s}`
 			
 			case 10004:
