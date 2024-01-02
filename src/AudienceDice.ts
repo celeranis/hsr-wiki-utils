@@ -136,7 +136,7 @@ export class AudienceDice {
 		this.initial_desc = TextMap.default.getText(data.EffectDescParam1, data.ParamValue1.map(v=>v.Value))
 		this.passive_desc = `${TextMap.default.getText(data.EffectDescParam2, data.ParamValue2.map(v=>v.Value))} (${TextMap.default.getText(data.EffectDescParam3, data.ParamValue3.map(v=>v.Value))})`
 		
-		this.default_surface_ids = data.SuggestiveSurfaceList
+		this.default_surface_ids = [data.DefaultUltraSurface, ...data.DefaultCommonSurfaceList]
 		this.recommended_surface_ids = data.RecommendSurfaceList
 		
 		AudienceDice.map.set(this.id, this)

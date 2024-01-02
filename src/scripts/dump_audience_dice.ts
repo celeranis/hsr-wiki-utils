@@ -22,7 +22,7 @@ for (const tag of Object.values(diceBranchTags)) {
 	branch.push(
 		`==={{Icon/Dark|Dice Category ${TextMap.default.getText(tag.BranchTagName).replace(/:.+/, '')}.png|32}} ${TextMap.default.getText(tag.BranchTagName)}===`,
 		
-		'{| class="article-table"',
+		'{| class="article-table tdc1"',
 		'!Name',
 		'!Effect',
 	)
@@ -36,7 +36,9 @@ for (const tag of Object.values(diceBranchTags)) {
 			`'''Passive Effect:'''<br />`,
 			`${dice.passive_desc}<br /><br />`,
 			`'''Default Combo:<br />'''`,
-			`{{Card List|${dice.default_surfaces.map(surface => surface.name).join(',')}|show_caption=1|type=Dice Face}}`
+			`{{Card List|${dice.default_surfaces.map(surface => surface.name).join(',')}|show_caption=1|type=Dice Face}}`,
+			`'''Recommended Faces:<br />'''`,
+			`{{Card List|${dice.recommended_surfaces.sort((s1, s2) => (s2.rarity - s1.rarity)).map(surface => surface.name).join(',')}|show_caption=1|type=Dice Face}}`
 		)
 	}
 	branch.push('|}')
