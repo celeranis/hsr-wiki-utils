@@ -153,7 +153,7 @@ const SIMPLE_EFFECTS: {[effectType: string]: (...args: number[]) => (string)} = 
 	GetDestroyedRogueMiracle: (curioGroup, count) => `Obtain ${count} random destroyed ${CurioGroup.nameForId(curioGroup, count != 1)}`,
 	ReplaceRogueBuffKeepLevel: (discardGroup, replaceGroup) => `Replace all ${BlessingGroup.nameForId(discardGroup)} with ${BlessingGroup.nameForId(replaceGroup)}, retaining the original Enhancement status`,
 	DestroyRogueMiracleThenGetRogueMiracle: (destroyGroup, replaceGroup) => `Destroy all ${CurioGroup.nameForId(destroyGroup)} and obtain 2 ${CurioGroup.nameForId(replaceGroup)} for every Curio destroyed`,
-	ChangeChessRogueActionPoint: (points) => `Increase the current Countdown amount by ${points} points`,
+	ChangeChessRogueActionPoint: (points) => `Obtain ${points} point${points == 1 ? '' : 's'} in the countdown`,
 	ChangeDestroyedRogueMiracleToRogueMiracle: (_unknown, replaceGroup, _unknown2, _unknown3) => `Replace all destroyed Curios with ${CurioGroup.nameForId(replaceGroup)}`
 }
 

@@ -11,12 +11,13 @@ export class CurioGroup {
 		switch (id) {
 			case 10001:
 			case 10002:
-			case 20002:
 			case 10010:
+			case 12000:
+			case 20002:
 			case 21011:
 			case 21012:
-			case 12000:
 			case 22000:
+			case 30002:
 			case 30010:
 				return `Normal Curio${s}`
 			
@@ -37,6 +38,7 @@ export class CurioGroup {
 			
 			case 10009:
 			case 20009:
+			case 30009:
 				return `Negative Curio${s} of the cuckoo clock series`
 			
 			case 11012:
