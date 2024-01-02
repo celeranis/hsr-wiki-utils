@@ -285,7 +285,7 @@ export class EventSection {
 			const percent = Math.round((this.effect_params[i + 1] / totalPercent) * 100)
 			output.push(`;(Outcome ${(i / 2) + 1}, ${percent}%)`)
 			const section = this.parent.addSection(this.effect_params[i], isLoop)
-			output.push(...section?.output(undefined, isLoop) || [])
+			output.push(section?.output(undefined, isLoop) || [])
 		}
 	}
 	
@@ -296,9 +296,20 @@ export class EventSection {
 	}
 	
 	descTriggerDialogEventList(output: OutputList, isLoop: boolean) {
-		for (const sectionId of this.effect_params) {
-			const section = this.parent.addSection(sectionId, isLoop)
-			output.push(...section?.output(undefined, isLoop) || [])
+		const firstEvent = this.effect_params[0]
+		const allSame = !this.effect_params.find(id => id != firstEvent)
+		
+		if (allSame) {
+			const section = this.parent.addSection(firstEvent, isLoop)
+			output.push(
+				`;(Repeat ${this.effect_params.length} times)`,
+				section?.output(undefined, isLoop) || []
+			)
+		} else {
+			for (const sectionId of this.effect_params) {
+				const section = this.parent.addSection(sectionId, isLoop)
+				output.push(...section?.output(undefined, isLoop) || [])
+			}
 		}
 	}
 	
@@ -311,7 +322,7 @@ export class EventSection {
 	output(triggerCustomString: string | undefined = this.parent.sectionCustomStrings.get(this.id), isLoop = false): OutputList {
 		console.group(`Starting section output for ${this.id}${this.path_choice ? ` (${this.path_choice})` : ''}`)
 		const output2: OutputList = []
-		const output: OutputList = [output2]
+		const output: OutputList = this.title ? [output2] : output2
 		
 		if (this.cost_type) {
 			if (SIMPLE_COSTS[this.cost_type]) {
