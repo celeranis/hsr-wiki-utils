@@ -48,6 +48,7 @@ export class CurioGroup {
 			
 			case 11009:
 			case 21002:
+			case 31060:
 				return `Curio<nowiki>:</nowiki> ${curio('Angel-type I.O.U. Dispenser')}`
 			
 			case 11010:
