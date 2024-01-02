@@ -53,22 +53,27 @@ export class CurioGroup {
 			
 			case 11010:
 			case 21003:
+			case 31059:
 				return `Negative Curio<nowiki>:</nowiki> ${curio('Insect Web')}`
 			
 			case 11013:
 			case 21010:
+			case 32021:
 				return `Curio<nowiki>:</nowiki> ${curio('Cavity System Model')}`
 			
 			case 11015:
 			case 21007:
+			case 31122:
 				return `Curio<nowiki>:</nowiki> ${curio('The Pinkest Collision')}`
 			
 			case 11014:
 			case 21006:
+			case 31121:
 				return `Curio<nowiki>:</nowiki> ${curio('Thalan Toxi-Flame')}`
 			
 			case 11016:
 			case 21008:
+			case 32050:
 				return `Curio${s}<nowiki>:</nowiki> ${curio('The Pinkest Collision')} ${plural ? 'and' : 'or'} ${curio('Thalan Toxi-Flame')}`
 			
 			case 21004:
