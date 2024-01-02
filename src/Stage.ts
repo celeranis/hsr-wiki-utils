@@ -1,7 +1,7 @@
 import { readFileSync } from 'fs';
 import config from '../config.json' with { type: "json" };
 import type { OutputList } from './Event.js';
-import type { AttackType, Value } from './Shared.js';
+import type { AttackType, Dictionary, Value } from './Shared.js';
 import { HashReference, TextMap } from './TextMap.js';
 
 export type EnemyType = 'MinionLv2' | 'Elite' | 'LittleBoss' | 'BigBoss' | 'Minion'
@@ -16,6 +16,15 @@ export interface Monster {
 	spd_mult: number
 	toughness_mult: number
 	toughness_add?: number
+}
+
+export interface InternalEliteGroup {
+	EliteGroup: number
+	AttackRatio: Value<number>
+	DefenceRatio: Value<number>
+	HPRatio: Value<number>
+	SpeedRatio: Value<number>
+	StanceRatio: Value<number>
 }
 
 export interface InternalConfigEntry {
@@ -81,11 +90,12 @@ export class Stage {
 	static stages: { [id: string]: InternalStage } = JSON.parse(readFileSync(`./versions/${config.target_version}/StageConfig.json`).toString())
 	static monsters: { [id: string]: InternalMonster } = JSON.parse(readFileSync(`./versions/${config.target_version}/MonsterConfig.json`).toString())
 	static monsterTemplates: { [id: string]: any } = JSON.parse(readFileSync(`./versions/${config.target_version}/MonsterTemplateConfig.json`).toString())
+	static eliteGroups: Dictionary<InternalEliteGroup> = JSON.parse(readFileSync(`./versions/${config.target_version}/EliteGroup.json`).toString())
 
 	id: number
 	waves: Monster[][]
 	name: string
-	elite_group: number
+	elite_group?: InternalEliteGroup
 	type: 'Normal' | 'Bug' | 'Complete' = 'Normal'
 	stage_abilities: string[]
 	elite: boolean = false
@@ -103,7 +113,7 @@ export class Stage {
 
 		this.id = stage.StageID
 		this.name = TextMap.default.getText(stage.StageName)
-		this.elite_group = stage.EliteGroup
+		this.elite_group = Stage.eliteGroups[stage.EliteGroup]
 		this.stage_abilities = stage.StageAbilityConfig
 		
 		this.waves = stage.MonsterList.map(wave => {
@@ -111,6 +121,7 @@ export class Stage {
 				const monsterData = Stage.monsters[id]
 				const monsterTemplate = Stage.monsterTemplates[id]
 				
+				const isElite = monsterTemplate.Rank == 'Elite' || monsterTemplate.Rank == 'LittleBoss' || monsterTemplate.Rank == 'BigBoss'
 				if (monsterTemplate.Rank == 'Elite' || monsterTemplate.Rank == 'LittleBoss' || monsterTemplate.Rank == 'BigBoss') {
 					const name = TextMap.default.getText(monsterData.MonsterName)
 					if (name.includes('(Bug)')) {
@@ -126,11 +137,11 @@ export class Stage {
 					id: monsterData.MonsterID,
 					name: TextMap.default.getText(monsterData.MonsterName),
 					type: monsterTemplate.Rank,
-					atk_mult: monsterData.AttackModifyRatio?.Value,
-					def_mult: monsterData.DefenceModifyRatio?.Value,
-					hp_mult: monsterData.HPModifyRatio?.Value,
-					spd_mult: monsterData.SpeedModifyRatio?.Value,
-					toughness_mult: monsterData.StanceModifyRatio?.Value,
+					atk_mult: monsterData.AttackModifyRatio?.Value * (isElite && this.elite_group?.AttackRatio?.Value || 1),
+					def_mult: monsterData.DefenceModifyRatio?.Value * (isElite && this.elite_group?.DefenceRatio?.Value || 1),
+					hp_mult: monsterData.HPModifyRatio?.Value * (isElite && this.elite_group?.HPRatio?.Value || 1),
+					spd_mult: monsterData.SpeedModifyRatio?.Value * (isElite && this.elite_group?.SpeedRatio?.Value || 1),
+					toughness_mult: monsterData.StanceModifyRatio?.Value * (isElite && this.elite_group?.StanceRatio?.Value || 1),
 					toughness_add: monsterData.StanceModifyValue?.Value,
 				} as Monster
 			})
