@@ -80,7 +80,7 @@ export class TextMap {
 		if (!sentence) return undefined
 		const name = this.getText(sentence.TextmapTalkSentenceName)
 		const text = this.getText(sentence.TalkSentenceText)
-		return this.wikiFormatting(!textOnly ? `'''${name}:''' ${text}` : text)
+		return this.wikiFormatting(!textOnly && name ? `'''${name}:''' ${text}` : text)
 	}
 	
 	static default = new TextMap(config.target_version)
