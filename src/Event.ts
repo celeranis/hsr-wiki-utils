@@ -219,7 +219,7 @@ export class EventSection {
 	
 	readonly text_map: TextMap
 	
-	constructor(public parent: Event, public internal: InternalEventSection, public display?: InternalEventSectionDisplay, public customString?: string) {
+	constructor(public parent: Event, public internal: InternalEventSection, public display?: InternalEventSectionDisplay, public customString?: string, overrideTitle?: HashReference) {
 		this.id = internal.EventID
 		this.display_id = internal.EventDisplayID
 		this.effect_type = internal.RogueEffectType
@@ -236,7 +236,7 @@ export class EventSection {
 		}
 		
 		const params = [this.dynamic_content?.text_params?.join('/') || '[path]', internal.DescValue, undefined, undefined, internal.DescValue2, internal.DescValue3]
-		this.title = this.text_map.getText(internal.EventTitle || display?.EventTitle, params)
+		this.title = this.text_map.getText(overrideTitle || internal.EventTitle || display?.EventTitle, params)
 		this.description_detail = this.text_map.getText(internal.EventDetailDesc || display?.EventDetailDesc, params)
 		this.description = this.text_map.getText(internal.EventDesc || display?.EventDesc, params) + (this.description_detail ? ` (${this.description_detail})` : '')
 		
@@ -422,9 +422,9 @@ export class Event {
 		this.part_num = npc_dialog.DialogueProgress
 	}
 	
-	addSection(id: number, isLoop?: boolean): EventSection | null
+	addSection(id: number, isLoop?: boolean, overrideTitle?: HashReference): EventSection | null
 	addSection(id: number): EventSection
-	addSection(id: number, isLoop = false): EventSection | null {
+	addSection(id: number, isLoop = false, overrideTitle?: HashReference): EventSection | null {
 		if (this.sections.has(id)) {
 			return isLoop ? null : this.sections.get(id)!
 		}
@@ -433,7 +433,7 @@ export class Event {
 		if (!eventData) {
 			throw new TypeError(`No event data found for ${id}`)
 		}
-		return new EventSection(this, eventData, Event.DIALOG_EVENT_DISPLAY[eventData.EventDisplayID])
+		return new EventSection(this, eventData, Event.DIALOG_EVENT_DISPLAY[eventData.EventDisplayID], undefined, overrideTitle)
 	}
 	
 	async loadSequences() {
@@ -521,7 +521,7 @@ export class Event {
 						// const choices: OutputList = []
 						const nonPath = [] // put path choices first
 						for (const option of task.OptionList) {
-							const section = this.addSection(option.DialogueEventID!, sequence.IsLoop);
+							const section = this.addSection(option.DialogueEventID!, sequence.IsLoop, option.OptionTextmapID);
 							(section?.path_choice ? output : nonPath).push(...section?.output(allSame ? undefined : option.TriggerCustomString, sequence.IsLoop) || [])
 						}
 						
