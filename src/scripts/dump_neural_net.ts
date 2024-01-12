@@ -3,7 +3,7 @@ import config from '../../config.json' with { "type": "json" };
 import type { Dictionary, Value } from '../Shared.js';
 import { HashReference, TextMap } from '../TextMap.js';
 
-const talentData: Dictionary<InternalTalentData> = JSON.parse(readFileSync(`./versions/${config.target_version}/RogueNousTalent.json`).toString())
+const talentData: Dictionary<InternalTalentData> = JSON.parse(readFileSync(`./versions/${config.target_version}/RogueTalent.json`).toString())
 
 export interface InternalTalentData {
 	TalentID: number
@@ -17,39 +17,36 @@ export interface InternalTalentData {
 	EffectDescParamList: Value<number>[]
 }
 
-const ICON_MAP = {
-	'SpriteOutput/Rogue/Talent/1004.png': 'Icon DMG Reduction.png',
-	'SpriteOutput/Rogue/Talent/1005.png': 'Icon Path Resonance Buff.png',
-	'SpriteOutput/Rogue/Talent/1006.png': 'Icon Additional Mechanism.png',
-	'SpriteOutput/BuffIcon/Inlevel/IconBuffAttackUp.png': 'Icon ATK.png',
-	'SpriteOutput/BuffIcon/Inlevel/IconBuffHPBoost.png': 'Icon HP.png',
-	'SpriteOutput/BuffIcon/Inlevel/IconBuffDefenceUp.png': 'Icon DEF.png',
-	'SpriteOutput/BuffIcon/Inlevel/IconBuffSpeedUp.png': 'Icon SPD.png',
-	'SpriteOutput/BuffIcon/Inlevel/IconBuffStatusProbability.png': 'Icon Effect Hit Rate.png',
-	'SpriteOutput/BuffIcon/Inlevel/IconBuffDamageResistance.png': 'Icon Effect RES.png',
-	'SpriteOutput/UI/Avatar/Icon/IconCriticalChance.png': 'Icon CRIT Rate.png',
-	'SpriteOutput/UI/Avatar/Icon/IconCriticalDamage.png': 'Icon CRIT DMG.png',
-	'SpriteOutput/BuffIcon/Inlevel/IconBuffAttackUpElement.png': 'Icon All DMG Boost.png',
+const layers: Map<number, InternalTalentData>[] = []
+
+function recurse(talent: InternalTalentData, depth: number) {
+	layers[depth] ??= new Map<number, InternalTalentData>()
+	layers[depth].set(talent.TalentID, talent)
+	talent.NextTalentIDList.forEach(id => recurse(talentData[id], depth + 1))
 }
+recurse(Object.values(talentData)[0], 0)
 
 const output: string[] = []
 let totalCost = 0
-for (const data of Object.values(talentData)) {
+for (let [i, layer] of Object.entries(layers)) {
+	i = (Number(i) + 1).toString()
+	const layerContent = [...layer.values()]
 	output.push(
-		'|-',
-		'|',
-		'{{SU Ability',
-		`|${TextMap.default.getText(data.EffectTitle)}`,
-		`|${TextMap.default.getText(data.EffectDesc, data.EffectDescParamList.map(v=>v.Value))}`,
-		`|icon      = ${ICON_MAP[data.Icon]}`,
-		`|icon_size = 50`,
-		`|item      = Neural Impulse`,
-		`|price     = ${data.Cost[0].ItemNum}`,
-		'}}'
+		`|${i}_price  = ${layerContent[0].Cost[0].ItemNum}`
 	)
-	totalCost += data.Cost[0].ItemNum
+	let n = 0
+	for (const talent of layerContent) {
+		n++
+		const p = layerContent.length == 1 ? i : `${i}_${n}`
+		output.push(
+			`|${p}_title  = ${TextMap.default.getText(talent.EffectTitle)}`,
+			`|${p}_effect = ${TextMap.default.getText(talent.EffectDesc, talent.EffectDescParamList.map(v => v.Value))}`,
+			''
+		)
+		totalCost += talent.Cost[0].ItemNum
+	}
 }
 
 output.push(`Total cost: ${totalCost}`)
 
-writeFileSync('./output/neural_net.wikitext', output.join('\n'))
+writeFileSync('./output/ability_tree.wikitext', output.join('\n'))
