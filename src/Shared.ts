@@ -9,6 +9,10 @@ export function pathDisplayName(pathName: AeonPath) {
 	return pathName == 'TheHunt' ? 'The Hunt' : pathName
 }
 
+export function typeDisplayName(type: AttackType) {
+	return type == 'Thunder' ? 'Lightning' : type
+}
+
 export function pathListDisplay(pathNames: AeonPath[]) {
 	if (pathNames.length == 1) return pathDisplayName(pathNames[0])
 	if (pathNames.length == 2) return `${pathDisplayName(pathNames[0])} or ${pathDisplayName(pathNames[1])}`
@@ -30,3 +34,8 @@ export const VERSION_COMMITS = {
 }
 
 export type Dictionary<V, K extends string | number | symbol = string> = { [key in K]: V }
+
+export interface ItemReference {
+	ItemID: number
+	ItemNum?: number
+}
