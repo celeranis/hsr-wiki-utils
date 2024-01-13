@@ -71,6 +71,7 @@ export class Table {
 		
 		for (const row of this.data) {
 			output.push(...row.map((cell, i) => `|${whitespace(`cell-${currentRow}-${i + 1}`)}=${multilineFormat(cell)}`))
+			currentRow++
 		}
 		
 		output.push('}}')
