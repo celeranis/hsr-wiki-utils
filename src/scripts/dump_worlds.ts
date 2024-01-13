@@ -3,7 +3,6 @@ import config from '../../config.json' with { "type": "json" }
 import { AttackType, Dictionary, ItemReference, RARITIES, typeDisplayName } from '../Shared.js'
 import { Stage } from '../Stage.js'
 import { HashReference, TextMap } from '../TextMap.js'
-import { Tabber } from '../util/Tabber.js'
 import { Table } from '../util/Table.js'
 
 const maps: InternalWorldMap = JSON.parse(readFileSync(`./versions/${config.target_version}/RogueMap.json`).toString())
@@ -44,19 +43,21 @@ for (const world of Object.values(worlds)) {
 
 for (const difficulties of worldSet.values()) {
 	const first = difficulties[0]
-	output.push(`===${textMap.getText(first.AreaNameID)}===`)
 
-	const tabber = new Tabber()
-	
+	// const tabber = new Tabber()
+
+	const table = new Table('wikitable', ['Difficulty', 'Details'])
 	for (const diff of difficulties) {
-		const table = new Table('article-table')
-		
+		let firstRow = ''
+		let rowCount = 1
 		if (diff.UnlockID) {
-			table.addRow(`'''Unlock Requirement'''`, textMap.getText(unlockInfo[diff.UnlockID].RogueUnlockDetail))
+			firstRow += '* ' + textMap.getText(unlockInfo[diff.UnlockID].RogueUnlockDetail).replace(/Trailblaze Mission "(.+?)"/g, `Trailblaze Mission ''[[$1]]''`)
 		}
 		
-		table.addRow(`'''Recommended Team Level'''`, diff.RecommendLevel)
-		table.addRow(`'''Recommended Types'''`, `{{Types|${diff.RecommendNature.map(type => typeDisplayName(type)).join(',')}}}`)
+		firstRow += `\n* '''Recommended Team Level''': ${diff.RecommendLevel}`
+		firstRow += `\n* '''Recommended Types''': {{Types|${diff.RecommendNature.map(type => typeDisplayName(type)).join(',')}}}`
+
+		const row = table.addRow(`! rowspan="<<ROWCOUNT>>" | ${NUMERALS[diff.Difficulty - 1]}`, firstRow.trim())
 		
 		const maxPts = Object.values(diff.ScoreMap).pop()
 		if (maxPts) {
@@ -66,16 +67,18 @@ for (const difficulties of worldSet.values()) {
 				pointsTable.addRow(domain, pts, Math.round(pts / 10))
 			}
 			
-			table.addRow(`'''Points'''`, [
-				`'''Maximum Points''': ${maxPts}`,
+			table.addRow([
+				`'''Maximum Points''': ${maxPts}<br />`,
 				`'''Maximum {{Item|Ability Point|20|text=Ability Points}}''': ${Math.round(maxPts / 10)}`,
 				`{{Collapsible`,
-				`|`,
-				pointsTable.wrapper(),
+				`|${Object.values(diff.ScoreMap).length == 13 ? `{{SU Partial Point Rewards|${maxPts}}}` : ''}`,
+				Object.values(diff.ScoreMap).length == 13 ? undefined : pointsTable.wrapper(),
 				`|Partial Rewards`,
 				'|collapsed=1',
 				`}}`
-			].join('\n'))
+			].filter(Boolean).join('\n'))
+			
+			rowCount++
 		}
 		
 		const map = maps[(diff.AreaProgress * 100) + diff.Difficulty]
@@ -86,32 +89,50 @@ for (const difficulties of worldSet.values()) {
 			continue
 		}
 		
-		function add(entry: InternalWorldMapEntry, num: number) {
-			layout.push(`{{SU Domain Card|${order[diff.AreaProgress == 1 ? 1 : 2][num]}|${entry.LevelList[0]}}}`)
-			if (entry.NextSiteIDList?.[0]) add(map[entry.NextSiteIDList[0]], num + 1)
+		const domains: string[] = []
+		function addDomain(entry: InternalWorldMapEntry, num: number) {
+			domains.push(`${order[diff.AreaProgress == 1 ? 1 : 2][num]}*${entry.LevelList[0]}`)
+			if (entry.NextSiteIDList?.[0]) addDomain(map[entry.NextSiteIDList[0]], num + 1)
 		}
-		add(Object.values(map).find(domain => domain.IsStart)!, 0)
+		addDomain(Object.values(map).find(domain => domain.IsStart)!, 0)
+		layout.push(`{{SU Domain Card|${domains.join(';')}}}`)
 		
-		table.addRow(`'''Layout'''`, layout.join(''))
+		table.addRow(`'''Layout'''<br />${layout.join('')}`)
 		
-		table.addRow(`'''Boss Enem${Object.values(diff.DisplayMonsterMap).length == 1 ? 'y' : 'ies'}'''`, enemyList(diff.DisplayMonsterMap))
+		table.addRow(`'''Boss Enem${Object.values(diff.DisplayMonsterMap).length == 1 ? 'y' : 'ies'}'''<br />${enemyList(diff.DisplayMonsterMap)}`)
 		
-		table.addRow(`'''May Encounter'''`, enemyList(diff.DisplayMonsterMap2))
+		table.addRow(`'''May Encounter'''<br />${enemyList(diff.DisplayMonsterMap2)}`)
+
+		rowCount += 3
 		
 		if (diff.FirstReward && rewards[diff.FirstReward]) {
-			table.addRow(`'''First-Time Clearance Reward'''`, reward(rewards[diff.FirstReward]))
+			table.addRow(`'''First-Time Clearance Reward'''<br />${reward(rewards[diff.FirstReward])}`)
+			rowCount++
 		}
 		
-		table.addRow(`'''Extra Drops'''`, itemList(diff.MonsterDisplayItemList))
+		table.addRow(`'''Extra Drops'''<br />${itemList(diff.MonsterDisplayItemList)}`)
+		rowCount++
 
 		if (diff.ChestDisplayItemList?.length) {
-			table.addRow(`'''Immersion Reward'''`, itemList(diff.ChestDisplayItemList, true))
+			table.addRow(`'''Immersion Reward'''<br/>${itemList(diff.ChestDisplayItemList, true)}`)
+			rowCount++
 		}
 		
-		tabber.addTab(`Difficulty ${NUMERALS[diff.Difficulty - 1]}`, table.wrapper())
+		row[0] = row[0].replace('<<ROWCOUNT>>', rowCount.toString())
 	}
 	
-	output.push(tabber.template(), '')
+	if (table.data.length > 1) {
+		output.push(`===${textMap.getText(first.AreaNameID)}===`)
+		output.push(table.wikitable())
+	}
+
+	// if (tabber.tabs.length > 1) {
+	// 	output.push(`===${textMap.getText(first.AreaNameID)}===`)
+	// 	output.push(tabber.template(), '')
+	// } else if (tabber.tabs.length == 1) {
+	// 	output.push(`===${textMap.getText(first.AreaNameID)}===`)
+	// 	output.push(tabber.tabs[0][1], '')
+	// }
 }
 
 writeFileSync('./output/worlds.wikitext', output.join('\n'))
@@ -137,7 +158,7 @@ export function itemList(itemList: ItemReference[], caption = false) {
 			else return textMap.getText(item.ItemName) 
 				+ (item.ItemNum ? `*${item.ItemNum}` : '') 
 				+ (item.ItemSubType == 'RelicSetShowOnly' ? `{ rarity = ${RARITIES[item.Rarity]} }` : '')
-		})}${caption ? '|show_caption=1' : ' '}}}`
+		}).join(';')}${caption ? '|show_caption=1' : ''}|delim=;}}`
 }
 
 export function reward(reward: InternalRewardData) {

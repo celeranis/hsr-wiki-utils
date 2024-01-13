@@ -6,7 +6,7 @@ export function multilineFormat(cell: string | number) {
 	if (typeof cell == 'string' && cell.includes('\n'))
 		return '\n' + cell
 	else
-		return ' ' + cell
+		return typeof cell == 'string' && cell.startsWith('!') ? cell : ' ' + cell
 }
 
 export class Table {
@@ -16,8 +16,10 @@ export class Table {
 		
 	}
 	
-	addRow(...args: (string | number)[]) {
-		this.data.push([...args])
+	addRow<T extends (string | number)[]>(...args: T) {
+		const row = [...args]
+		this.data.push(row)
+		return row
 	}
 	
 	addRows(...rows: (string | number)[][]) {
@@ -40,7 +42,7 @@ export class Table {
 			if (inlineRows && !row.find(cell => typeof cell == 'string' && cell.includes('\n'))) {
 				output.push(`| ${row.join(' || ')}`)
 			} else {
-				output.push(...row.map(cell => `|${multilineFormat(cell)}`))
+				output.push(...row.map(cell => `${cell.toString().startsWith('!') ? '' : '|'}${multilineFormat(cell)}`))
 			}
 		}
 		
@@ -77,5 +79,17 @@ export class Table {
 		output.push('}}')
 		
 		return output.join('\n')
+	}
+	
+	html() {
+		const output = ['<table class="article table">']
+		
+		if (this.header) {
+			output.push(
+				'\t<thead>',
+				...this.header.map(cell => `\t\t<th>${cell}</th>`),
+				'\t</thead>'
+			)
+		}
 	}
 }
