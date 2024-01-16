@@ -1,9 +1,10 @@
-import { readFileSync, writeFileSync } from 'fs';
-import config from '../../config.json' with { "type": "json" };
+import { writeFileSync } from 'fs';
+import { Dictionary } from '../Shared.js';
 import { HashReference, TextMap } from '../TextMap.js';
+import { getFile } from '../files/GameFile.js';
 
-const data: { [key: string]: InternalBossDecay } = JSON.parse(readFileSync(`./versions/${config.target_version}/RogueDLCBossDecay.json`).toString())
-const buffData: { [key: string]: { [key: string]: InternalMazeBuff } } = JSON.parse(readFileSync(`./versions/${config.target_version}/MazeBuff.json`).toString())
+const data: Dictionary<InternalBossDecay> = await getFile('ExcelOutput/RogueDLCBossDecay.json')
+const buffData: Dictionary<Dictionary<InternalMazeBuff>> = await getFile('ExcelOutput/MazeBuff.json')
 
 export interface InternalBossDecay {
 	BossDecayID: number
