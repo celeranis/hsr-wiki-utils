@@ -1,5 +1,6 @@
 import { readFileSync } from 'fs'
 import config from '../config.json' with { "type": "json" }
+import { Event } from './Event.js'
 import type { Dictionary, Value } from './Shared.js'
 import { HashReference, TextMap } from './TextMap.js'
 
@@ -51,6 +52,18 @@ export interface InternalDiceBranch {
 	RecommendSurfaceList: number[]
 }
 
+interface PartialSecret {
+	MainStoryName?: HashReference
+	TalkNameID: number
+	RogueNPCID: number
+	QuestID: number
+}
+
+interface PartialQuestData {
+	RewardID: number
+	FinishWayID: number
+}
+
 const OBTAIN_VIA_MAP = {
 	100: '[[Simulated Universe/Trailblaze Secret#Simulated_Universe:_Gold_and_Gears|Trailblaze Secrets]]',
 	101: 'Unlock [[#Trotter Extrapolation|Trotter Extrapolation]]',
@@ -67,8 +80,14 @@ const OBTAIN_VIA_MAP = {
 	403: 'Unlock [[#Data Inflation|Data Inflation]]'
 }
 
+const tbSecrets = JSON.parse(readFileSync(`./versions/${config.target_version}/RogueNousSubStory.json`).toString())
+const aeonSecrets = JSON.parse(readFileSync(`./versions/${config.target_version}/RogueNousMainStory.json`).toString())
+
 export class DiceSurface {
 	static data: Dictionary<InternalDiceSurface> = JSON.parse(readFileSync(`./versions/${config.target_version}/RogueNousDiceSurface.json`).toString())
+	static questData: Dictionary<PartialQuestData> = JSON.parse(readFileSync(`./versions/${config.target_version}/QuestData.json`).toString())
+	static rewardData: Dictionary<PartialQuestData> = JSON.parse(readFileSync(`./versions/${config.target_version}/RewardData.json`).toString())
+	static secrets: Dictionary<PartialSecret> = Object.assign(tbSecrets, aeonSecrets)
 	
 	name: string
 	description: string
@@ -76,6 +95,7 @@ export class DiceSurface {
 	rarity: number
 	icon: string
 	sort: number
+	item_id: number
 	obtained_via: string
 	
 	constructor(id: number) {
@@ -90,9 +110,22 @@ export class DiceSurface {
 		this.rarity = data.Rarity
 		this.icon = data.Icon
 		this.sort = data.Sort
-		this.obtained_via = OBTAIN_VIA_MAP[data.UnlockDisplayID]
+		this.item_id = data.ItemID
+		this.obtained_via = data.UnlockDisplayID == 100 ? this.findSourceSecret() : OBTAIN_VIA_MAP[data.UnlockDisplayID]
 		
 		DiceSurface.map.set(this.id, this)
+	}
+	
+	findSourceSecret() {
+		for (const secret of Object.values(DiceSurface.secrets)) {
+			const quest = DiceSurface.questData[secret.QuestID]
+			const reward = DiceSurface.rewardData[quest.RewardID]
+			if (Object.values(reward).includes(this.item_id)) {
+				const name = TextMap.default.getText(secret.MainStoryName ?? Event.TALK_NAMES[secret.TalkNameID].Name)
+				return `[[Simulated Universe/Secret#${name}|${name}]]`
+			}
+		}
+		return `Unknown [[Simulated Universe/Secret|Secret]]`
 	}
 	
 	static get(id: number) {
