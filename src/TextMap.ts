@@ -1,5 +1,7 @@
-import { readFileSync } from 'node:fs';
 import config from '../config.json' with { type: "json" };
+import { getFile } from './files/GameFile.js';
+import type { Dictionary, Version } from './Shared.js';
+import { whitespace } from './util/General.js';
 
 export interface HashReference {
 	Hash: number
@@ -11,13 +13,42 @@ export interface Sentence {
 	TalkSentenceText: HashReference
 }
 
+export type SupportedLanguage = 'CHS' | 'CHT' | 'DE' | 'EN' | 'ES' | 'FR' | 'ID' 
+	| 'JP' | 'KR' | 'PT' | 'RU' | 'TH' | 'VI'
+
+const sentenceJson: Dictionary<Sentence> = await getFile('ExcelOutput/TalkSentenceConfig.json')
+
+export const OTHER_LANGUAGES: Dictionary<SupportedLanguage> = {
+	en: 'EN',
+	zhs: 'CHS',
+	zht: 'CHT',
+	ja: 'JP',
+	ko: 'KR',
+	es: 'ES',
+	fr: 'FR',
+	ru: 'RU',
+	th: 'TH',
+	vi: 'VI',
+	de: 'DE',
+	id: 'ID',
+	pt: 'PT'
+}
+
 export class TextMap {
-	readonly json: {[mapKey: string]: string}
-	readonly sentence_json: {[mapKey: string]: Sentence}
+	static readonly cache = new Map<`${SupportedLanguage}${Version}`, TextMap>()
+	static readonly sentence_json: Dictionary<Sentence> = sentenceJson
 	
-	constructor(public version: string) {
-		this.json = JSON.parse(readFileSync(`./versions/${version}/TextMapEN.json`).toString())
-		this.sentence_json = JSON.parse(readFileSync(`./versions/${version}/TalkSentenceConfig.json`).toString())
+	private constructor(public version: Version, public lang: SupportedLanguage, public json: Dictionary<string>) {
+		TextMap.cache.set(`${this.lang}${this.version}`, this)
+	}
+	
+	static async load(version: Version = config.target_version as Version, lang: SupportedLanguage = 'EN'): Promise<TextMap> {
+		if (this.cache.has(`${lang}${version}`)) {
+			return this.cache.get(`${lang}${version}`)!
+		}
+		
+		const data: Dictionary<string> = await getFile(`TextMap/TextMap${lang}.json`, version)
+		return new this(version, lang, data)
 	}
 	
 	// via https://github.com/Dimbreath/StarRailData/issues/6#issuecomment-1639425428
@@ -78,12 +109,24 @@ export class TextMap {
 	}
 	
 	getSentence(sentence: Sentence | number | string, textOnly?: boolean) {
-		if (typeof sentence != 'object') sentence = this.sentence_json[sentence]
+		if (typeof sentence != 'object') sentence = TextMap.sentence_json[sentence]
 		if (!sentence) return undefined
 		const name = this.getText(sentence.TextmapTalkSentenceName)
 		const text = this.getText(sentence.TalkSentenceText)
 		return this.wikiFormatting(!textOnly && name ? `'''${name}:''' ${text}` : text)
 	}
 	
-	static default = new TextMap(config.target_version)
+	static async generateOL(key?: string | number | HashReference, params?: (string | number | undefined)[]): Promise<string> {
+		const output = ['{{Other Languages']
+		for (const [tkey, lang] of Object.entries(OTHER_LANGUAGES)) {
+			output.push(`|${whitespace(tkey, 6)}= ${(await this.load(undefined, lang)).getText(key, params)}`)
+		}
+		output.push('}}')
+		return output.join('\n')
+	}
+	
+	static default: TextMap
 }
+
+export const textMap = await TextMap.load(config.target_version as Version, config.output_lang as SupportedLanguage)
+TextMap.default = textMap

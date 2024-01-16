@@ -1,8 +1,8 @@
-import { readFileSync } from 'fs';
-import config from '../config.json' with { type: "json" };
 import type { OutputList } from './Event.js';
-import type { AttackType, Dictionary, Value } from './Shared.js';
-import { HashReference, TextMap } from './TextMap.js';
+import type { Dictionary } from './Shared.js';
+import { TextMap } from './TextMap.js';
+import { getFile } from './files/GameFile.js';
+import { InternalEliteGroup, InternalMonster, InternalStage } from './files/Stage.js';
 
 export type EnemyType = 'MinionLv2' | 'Elite' | 'LittleBoss' | 'BigBoss' | 'Minion'
 
@@ -18,79 +18,20 @@ export interface Monster {
 	toughness_add?: number
 }
 
-export interface InternalEliteGroup {
-	EliteGroup: number
-	AttackRatio: Value<number>
-	DefenceRatio: Value<number>
-	HPRatio: Value<number>
-	SpeedRatio: Value<number>
-	StanceRatio: Value<number>
-}
-
-export interface InternalConfigEntry {
-	/** Entry name */
-	CFNMGGCLFHN: string
-	/** Entry value */
-	JCFBPDLNMLH: string
-}
-
-export interface InternalMonsterWave {
-	[key: `Monster${number}`]: number
-}
-
-export interface InternalStage {
-	StageID: number
-	StageType: string
-	StageName: HashReference
-	HardLevelGroup: number
-	Level: number
-	EliteGroup: number
-	LevelGraphPath: string
-	StageAbilityConfig: string[]
-	SubLevelGraphs: unknown[]
-	StageConfigData: InternalConfigEntry[]
-	MonsterList: InternalMonsterWave[]
-	LevelLoseCondition: unknown[]
-	LevelWinCondition: unknown[]
-	ForbidExitBattle: boolean
-	TrialAvatarList: unknown[]
-}
-
-export interface InternalMonster {
-	MonsterID: number
-	MonsterTemplateID: number
-	MonsterName: HashReference
-	MonsterIntroduction: HashReference
-	MonsterBattleIntroduction: HashReference
-	HardLevelGroup: number
-	EliteGroup: number
-	SkillList: number[]
-	CustomValueTags: string[]
-	StanceWeakList: AttackType[]
-	DamageTypeResistance: {
-		DamageType: AttackType
-		Value: Value<number>
-	}
-	AbilityNameList: unknown[]
-	OverrideAIPath: string
-	
-	AttackModifyRatio: Value<number>
-	DefenceModifyRatio: Value<number>
-	HPModifyRatio: Value<number>
-	SpeedModifyRatio: Value<number>
-	StanceModifyRatio: Value<number>
-	StanceModifyValue?: Value<number>
-}
-
 function percentChange(num: number) {
 	return `${num > 1 ? '+' : ''}${Math.round((num - 1) * 100)}%`
 }
 
+const stages: Dictionary<InternalStage> = await getFile('ExcelOutput/StageConfig.json')
+const monsters: Dictionary<InternalMonster> = await getFile('ExcelOutput/MonsterConfig.json')
+const monsterTemplates: Dictionary<any> = await getFile('ExcelOutput/MonsterTemplateConfig.json')
+const eliteGroups: Dictionary<InternalEliteGroup> = await getFile('ExcelOutput/EliteGroup.json')
+
 export class Stage {
-	static stages: { [id: string]: InternalStage } = JSON.parse(readFileSync(`./versions/${config.target_version}/StageConfig.json`).toString())
-	static monsters: { [id: string]: InternalMonster } = JSON.parse(readFileSync(`./versions/${config.target_version}/MonsterConfig.json`).toString())
-	static monsterTemplates: { [id: string]: any } = JSON.parse(readFileSync(`./versions/${config.target_version}/MonsterTemplateConfig.json`).toString())
-	static eliteGroups: Dictionary<InternalEliteGroup> = JSON.parse(readFileSync(`./versions/${config.target_version}/EliteGroup.json`).toString())
+	static readonly stages = stages
+	static readonly monsters = monsters
+	static readonly monsterTemplates = monsterTemplates
+	static readonly eliteGroups = eliteGroups
 
 	id: number
 	waves: Monster[][]

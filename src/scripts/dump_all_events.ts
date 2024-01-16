@@ -1,9 +1,10 @@
-import { mkdirSync, readFileSync, writeFileSync } from 'fs';
-import config from '../../config.json' with { "type": "json" };
+import { mkdirSync, writeFileSync } from 'fs';
 import { BlessingGroup } from '../Blessing.js';
-import { Event, InternalNPCDialogue, InternalSecret, InternalSecretGroup } from '../Event.js';
+import { Event } from '../Event.js';
 import { Dictionary } from '../Shared.js';
 import { TextMap } from '../TextMap.js';
+import { getFile } from '../files/GameFile.js';
+import type { InternalNPCDialogue, InternalSecret, InternalSecretGroup } from '../files/Occurrence.js';
 
 BlessingGroup.loadAll()
 
@@ -43,21 +44,7 @@ const PAGE_FORMAT =
 {{Dialogue End}}
 
 ==Other Languages==
-{{Other Languages
-|en    = <<OL_EN>>
-|zhs   = <<OL_ZHS>>
-|zht   = <<OL_ZHT>>
-|ja    = <<OL_JA>>
-|ko    = <<OL_KO>>
-|es    = <<OL_ES>>
-|fr    = <<OL_FR>>
-|ru    = <<OL_RU>>
-|th    = <<OL_TH>>
-|vi    = <<OL_VI>>
-|de    = <<OL_DE>>
-|id    = <<OL_ID>>
-|pt    = <<OL_PT>>
-}}
+<<OL>>
 
 ==Change History==
 {{Change History|1.0}}
@@ -132,26 +119,6 @@ const LOOK_FOR_CHARACTERS = [
 	'Firefly', 'Gallagher', 'Misha', 'Robin', 'Duke Inferno', 'Ifrit', 'Black Swan'
 ]
 
-function readMap(name: string) {
-	return JSON.parse(readFileSync(`./versions/${config.target_version}/TextMap${name}.json`).toString())
-}
-
-const OTHER_LANGUAGES = {
-	EN: readMap('EN'),
-	ZHS: readMap('CHS'),
-	ZHT: readMap('CHT'),
-	JA: readMap('JP'),
-	KO: readMap('KR'),
-	ES: readMap('ES'),
-	FR: readMap('FR'),
-	RU: readMap('RU'),
-	TH: readMap('TH'),
-	VI: readMap('VI'),
-	DE: readMap('DE'),
-	ID: readMap('ID'),
-	PT: readMap('PT')
-}
-
 function sanitize(str: string) {
 	return str.replace(/[\/\<\>\:\"\\\|\?\*]/g, '')
 }
@@ -204,12 +171,10 @@ async function output(npc: InternalNPCDialogue) {
 		finalOutput = finalOutput.replaceAll('<<SOURCE>>', 'the [[Simulated Universe]]')
 	}
 
-	for (const [replace, map] of Object.entries(OTHER_LANGUAGES)) {
-		finalOutput = finalOutput.replaceAll(`<<OL_${replace}>>`, TextMap.default.wikiFormatting(map[event.name_hash] || '???'))
-	}
-
-	finalOutput = finalOutput.replaceAll(/<<\w+>>/gi, '')
-
+	finalOutput = finalOutput
+		.replaceAll('<<OL>>', await TextMap.generateOL(event.name_hash))
+		.replaceAll(/<<\w+>>/gi, '')
+	
 	const dir = `./output/events/${sanitize(MERGE_FOLDERS[event.subname] ? 'Occurrence' : event.subname)}/${sanitize(event.series_name)}`
 	mkdirSync(dir, { recursive: true })
 	writeFileSync(`${dir}/${event.npc_dialog.RogueNPCID}-${event.part_num} - ${sanitize(event.name)}.wikitext`, finalOutput)
@@ -219,8 +184,8 @@ for (const npc of (Object.values(Event.NPC_DIALOG).map(v => Object.values(v)).fl
 	await output(npc)
 }
 
-const secretGroups: Dictionary<InternalSecretGroup> = JSON.parse(readFileSync(`./versions/${config.target_version}/RogueDLCSubStoryGroup.json`).toString())
-const secrets: Dictionary<InternalSecret> = JSON.parse(readFileSync(`./versions/${config.target_version}/RogueDLCSubStory.json`).toString())
+const secretGroups: Dictionary<InternalSecretGroup> = await getFile('ExcelOutput/RogueDLCSubStoryGroup.json')
+const secrets: Dictionary<InternalSecret> = await getFile('ExcelOutput/RogueDLCSubStory.json')
 
 for (const secretGroup of Object.values(secretGroups)) {
 	for (const secret of secretGroup.SubStoryList.map(id => secrets[id])) {
