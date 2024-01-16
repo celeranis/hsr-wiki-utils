@@ -1,7 +1,8 @@
 import { mkdirSync, readFileSync, writeFileSync } from 'fs';
 import config from '../../config.json' with { "type": "json" };
 import { BlessingGroup } from '../Blessing.js';
-import { Event } from '../Event.js';
+import { Event, InternalNPCDialogue, InternalSecret, InternalSecretGroup } from '../Event.js';
+import { Dictionary } from '../Shared.js';
 import { TextMap } from '../TextMap.js';
 
 BlessingGroup.loadAll()
@@ -157,9 +158,9 @@ function sanitize(str: string) {
 
 const MERGE_FOLDERS = {Occurrence: true, Unknown: true, Encounter: true, Deal: true}
 
-for (const npc of (Object.values(Event.NPC_DIALOG).map(v => Object.values(v)).flat())) {
-	if (npc.HandbookEventID && skip.includes(npc.HandbookEventID)) continue
-	
+async function output(npc: InternalNPCDialogue) {
+	if (npc.HandbookEventID && skip.includes(npc.HandbookEventID)) return
+
 	const event = new Event(npc)
 	await event.loadSequences()
 	let output = event.output()
@@ -172,7 +173,7 @@ for (const npc of (Object.values(Event.NPC_DIALOG).map(v => Object.values(v)).fl
 			output = output.replace(pattern, `$1[[${char}]]$2`)
 		}
 	}
-	
+
 	let finalOutput = PAGE_FORMAT
 		.replaceAll('<<NAME>>', event.name)
 		.replaceAll('<<IMAGE>>', IMAGE_MAP[event.image_id] || event.image_id)
@@ -180,11 +181,11 @@ for (const npc of (Object.values(Event.NPC_DIALOG).map(v => Object.values(v)).fl
 		.replaceAll('<<NEXT>>', event.name.includes('(') ? '{{tx}}' : '')
 		.replaceAll('<<DIALOGUE>>', output)
 		.replaceAll('<<CHARACTERS>>', chars.join(';'))
-	
+
 	const IN_NORMAL_SU = event.type_list.includes('Simulated Universe')
 	const IN_SWARM_DISASTER = event.type_list.includes('Simulated Universe: Swarm Disaster')
 	const IN_GOLD_AND_GEARS = event.type_list.includes('Simulated Universe: Gold and Gears')
-	
+
 	if (IN_NORMAL_SU) {
 		finalOutput = finalOutput.replaceAll('<<DOMAINS_SU>>', 'Occurrence')
 	}
@@ -202,14 +203,43 @@ for (const npc of (Object.values(Event.NPC_DIALOG).map(v => Object.values(v)).fl
 	} else {
 		finalOutput = finalOutput.replaceAll('<<SOURCE>>', 'the [[Simulated Universe]]')
 	}
-	
+
 	for (const [replace, map] of Object.entries(OTHER_LANGUAGES)) {
 		finalOutput = finalOutput.replaceAll(`<<OL_${replace}>>`, TextMap.default.wikiFormatting(map[event.name_hash] || '???'))
 	}
 
 	finalOutput = finalOutput.replaceAll(/<<\w+>>/gi, '')
-	
+
 	const dir = `./output/events/${sanitize(MERGE_FOLDERS[event.subname] ? 'Occurrence' : event.subname)}/${sanitize(event.series_name)}`
 	mkdirSync(dir, { recursive: true })
 	writeFileSync(`${dir}/${event.npc_dialog.RogueNPCID}-${event.part_num} - ${sanitize(event.name)}.wikitext`, finalOutput)
+}
+
+for (const npc of (Object.values(Event.NPC_DIALOG).map(v => Object.values(v)).flat())) {
+	await output(npc)
+}
+
+const secretGroups: Dictionary<InternalSecretGroup> = JSON.parse(readFileSync(`./versions/${config.target_version}/RogueDLCSubStoryGroup.json`).toString())
+const secrets: Dictionary<InternalSecret> = JSON.parse(readFileSync(`./versions/${config.target_version}/RogueDLCSubStory.json`).toString())
+
+for (const secretGroup of Object.values(secretGroups)) {
+	for (const secret of secretGroup.SubStoryList.map(id => secrets[id])) {
+		const imageId = Number(secret.ImgPath.match(/RoguePicEventDLC_(\d+)\.png/i)?.[1])
+		await output({
+			DialoguePath: secret.LevelGraphPath,
+			DialogueProgress: secret.Layer,
+			ImageID: imageId,
+			RogueNPCID: -1,
+			TexturePath: secret.ImgPath,
+			_talk: {
+				Name: secretGroup.SubStoryGroupName,
+				SubName: { Hash: 1090572228 },
+				ImageID: imageId,
+				IconPath: secret.ImgPath,
+				ImgPath: secret.ImgPath,
+				TalkNameID: -1
+			},
+			_name: secret.SubStoryName
+		})
+	}
 }
