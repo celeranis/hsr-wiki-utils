@@ -61,7 +61,9 @@ export class TextMap {
 				}
 			})
 			.replaceAll(/{RUBY_B#(.+?)}(.+?){RUBY_E#}/gi, (_substr, topText, normalText) => `{{Rubi|${normalText}|${topText}}}`)
-			.replaceAll(/–|—/g, '&mdash;')
+			.replaceAll(/–/g, '&ndash;')
+			.replaceAll(/—/g, '&mdash;')
+			.replaceAll(/×/g, '&times;')
 		
 		if (params) {
 			replaced = this.replaceParams(replaced, params)

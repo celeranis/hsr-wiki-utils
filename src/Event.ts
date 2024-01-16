@@ -4,7 +4,7 @@ import { BlessingGroup } from './Blessing.js'
 import { CurioGroup } from './Curio.js'
 import { Act, DialogSequence, DialogTask } from './Dialog.js'
 import { DynamicContent } from './DynamicContent.js'
-import { AeonPath, VERSION_COMMITS, pathDisplayName } from './Shared.js'
+import { AeonPath, Dictionary, VERSION_COMMITS, pathDisplayName } from './Shared.js'
 import { Stage } from './Stage.js'
 import { HashReference, TextMap } from './TextMap.js'
 
@@ -52,6 +52,15 @@ export interface InternalTalkSentence {
 	VoiceID?: number
 }
 
+export interface InternalTalkName {
+	TalkNameID: number
+	Name: HashReference
+	SubName: HashReference
+	IconPath: string
+	ImgPath: string
+	ImageID: number
+}
+
 export interface InternalHandbookEvent {
 	EventID: number
 	EventTitle: HashReference
@@ -73,6 +82,8 @@ export interface InternalNPCDialogue {
 	DialoguePath: string
 	HandbookEventID?: number
 	ImageID: number
+	_talk?: InternalTalkName
+	_name?: HashReference
 }
 
 export type EffectType =
@@ -90,6 +101,22 @@ export type EffectType =
 	| 'RepairRogueMiracle' | 'ChangeLineupData' | 'TriggerRogueMiracleRepair' | 'ReviveAvatar' | 'RepeatableGamble'
 
 export type CostType = 'CostItemValue' | 'CostHpCurrentPercent' | 'CostHpMaxPercent' | 'CostItemPercent' | 'CostHpSpToPercent'
+
+export interface InternalSecretGroup {
+	SubStoryGroupID: number
+	ShowGroup: number
+	SubStoryList: number[]
+	UnlockID?: number
+	SubStoryGroupName: HashReference
+}
+
+export interface InternalSecret {
+	RogueDLCSubStoryID: number
+	Layer: number
+	LevelGraphPath: string
+	SubStoryName: HashReference
+	ImgPath: string
+}
 
 const ITEMS = {
 	31: 'Cosmic Fragments'
@@ -403,11 +430,11 @@ export class Event {
 
 	sequences: DialogSequence[] = []
 	
-	static DIALOG_EVENT = JSON.parse(readFileSync(`./versions/${config.target_version}/DialogueEvent.json`).toString())
-	static DIALOG_EVENT_DISPLAY = JSON.parse(readFileSync(`./versions/${config.target_version}/DialogueEventDisplay.json`).toString())
-	static NPC_DIALOG: {[key: string]: {[key: string]: InternalNPCDialogue}} = JSON.parse(readFileSync(`./versions/${config.target_version}/RogueNPCDialogue.json`).toString())
-	static TALK_NAMES = JSON.parse(readFileSync(`./versions/${config.target_version}/RogueTalkNameConfig.json`).toString())
-	static HANDBOOK = JSON.parse(readFileSync(`./versions/${config.target_version}/RogueHandBookEvent.json`).toString())
+	static DIALOG_EVENT: Dictionary<InternalEventSection> = JSON.parse(readFileSync(`./versions/${config.target_version}/DialogueEvent.json`).toString())
+	static DIALOG_EVENT_DISPLAY: Dictionary<InternalEventSectionDisplay> = JSON.parse(readFileSync(`./versions/${config.target_version}/DialogueEventDisplay.json`).toString())
+	static NPC_DIALOG: Dictionary<Dictionary<InternalNPCDialogue>> = JSON.parse(readFileSync(`./versions/${config.target_version}/RogueNPCDialogue.json`).toString())
+	static TALK_NAMES: Dictionary<InternalTalkName> = JSON.parse(readFileSync(`./versions/${config.target_version}/RogueTalkNameConfig.json`).toString())
+	static HANDBOOK: Dictionary<InternalHandbookEvent> = JSON.parse(readFileSync(`./versions/${config.target_version}/RogueHandBookEvent.json`).toString())
 	static HANDBOOK_TYPES = JSON.parse(readFileSync(`./versions/${config.target_version}/RogueHandBookEventType.json`).toString())
 	
 	sections = new Map<number, EventSection>()
@@ -417,8 +444,8 @@ export class Event {
 	constructor(public npc_dialog: InternalNPCDialogue) {
 		this.handbook_id = npc_dialog.HandbookEventID
 		const handbookEntry: (InternalHandbookEvent | undefined) = this.handbook_id ? Event.HANDBOOK[this.handbook_id] : undefined
-		const talkName = Event.TALK_NAMES[npc_dialog.RogueNPCID]
-		this.name_hash = handbookEntry?.EventTitle.Hash ?? talkName?.Name?.Hash
+		const talkName = npc_dialog._talk ?? Event.TALK_NAMES[npc_dialog.RogueNPCID]
+		this.name_hash = npc_dialog._name?.Hash ?? handbookEntry?.EventTitle.Hash ?? talkName?.Name?.Hash
 		this.name = this.text_map.getText(this.name_hash) || `Unknown Event ${npc_dialog.RogueNPCID}-${npc_dialog.DialogueProgress}`
 		this.series_name = this.text_map.getText(talkName?.Name) || this.name
 		this.type = this.text_map.getText(handbookEntry?.EventType ?? talkName?.SubName)
@@ -444,7 +471,7 @@ export class Event {
 		if (!eventData) {
 			throw new TypeError(`No event data found for ${id}`)
 		}
-		return new EventSection(this, eventData, Event.DIALOG_EVENT_DISPLAY[eventData.EventDisplayID], undefined, overrideTitle)
+		return new EventSection(this, eventData, Event.DIALOG_EVENT_DISPLAY[eventData.EventDisplayID!], undefined, overrideTitle)
 	}
 	
 	async loadSequences() {
