@@ -1,56 +1,9 @@
 import { readFileSync } from 'fs'
 import config from '../config.json' with { "type": "json" }
 import { Event } from './Event.js'
-import type { Dictionary, Value } from './Shared.js'
+import type { Dictionary } from './Shared.js'
 import { HashReference, TextMap } from './TextMap.js'
-
-export interface InternalDiceSurface {
-	SurfaceID: number
-	ItemID: number
-	DescParam: Value<number>[]
-	Icon: string
-	Rarity: 1 | 2 | 3
-	SlotList: number[]
-	DiceActiveStage: number
-	Sort: number
-	ExtraDesc: number[]
-	TagList: string[]
-	UnlockDisplayID: number
-	SurfaceName: HashReference
-	SurfaceDesc: HashReference
-	BranchLimitaion: number[]
-}
-
-export interface InternalDiceBranchValue {
-	BranchID: number
-	AeonID: number
-	BranchEffectDesc: HashReference
-	ParamList: Value<number>[]
-}
-
-export interface InternalDiceBranch {
-	BranchID: number
-	BranchTag: number
-	BranchName: HashReference
-	BranchIntroduction: HashReference
-	EffectDesc: HashReference
-	EffectExtraDesc: number[]
-	PassiveEffectDesc: HashReference
-	StartingEffectDescToast: HashReference
-	EffectDescParam1: HashReference
-	ParamValue1: Value<number>[]
-	EffectDescParam2: HashReference
-	ParamValue2: Value<number>[]
-	EffectDescParam3: HashReference
-	ParamValue3: Value<number>[]
-	DefaultUltraSurface: number
-	DefaultCommonSurfaceList: number[]
-	SuggestiveSurfaceList: number[]
-	BranchIcon: string
-	DiceIcon: string
-	DiceLightColor: string
-	RecommendSurfaceList: number[]
-}
+import type { InternalDiceBranch, InternalDiceSurface } from './files/AudienceDice.js'
 
 interface PartialSecret {
 	MainStoryName?: HashReference

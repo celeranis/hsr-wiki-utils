@@ -1,26 +1,16 @@
-import { readFileSync } from 'fs';
-import config from '../config.json' with { "type": "json" };
 import type { OutputList } from './Event.js';
+import type { Dictionary } from './Shared.js';
 import { Stage } from './Stage.js';
-import { HashReference, TextMap } from './TextMap.js';
+import { TextMap } from './TextMap.js';
+import type { DynamicParamType, InternalDynamicContent, InternalDynamicDisplay } from './files/DynamicContent.js';
+import { getFile } from './files/GameFile.js';
 
-export type DynamicParamType = 'Append' | 'ReplaceAll' | 'ReplaceOne'
-export interface InternalDynamicContent {
-	DynamicContentID: number
-	ArgID: number
-	DisplayID?: number
-	DynamicParamType: DynamicParamType
-	DynamicParamList: number[]
-}
-
-export interface InternalDynamicDisplay {
-	DisplayID: number
-	ContentText: HashReference
-}
+const internal_data: Dictionary<Dictionary<InternalDynamicContent>> = await getFile('ExcelOutput/DialogueDynamicContent.json')
+const display_data: Dictionary<InternalDynamicDisplay> = await getFile('ExcelOutput/DialogueDynamicDisplay.json')
 
 export class DynamicContent {
-	static internal_data: {[key: string]: {[key2: string]: InternalDynamicContent}} = JSON.parse(readFileSync(`./versions/${config.target_version}/DialogueDynamicContent.json`).toString())
-	static display_data: {[key: string]: InternalDynamicDisplay} = JSON.parse(readFileSync(`./versions/${config.target_version}/DialogueDynamicDisplay.json`).toString())
+	static internal_data = internal_data
+	static display_data = display_data
 	
 	text_params?: string[]
 	param_lists: number[][] = []

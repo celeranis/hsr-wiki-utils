@@ -1,14 +1,7 @@
-import { readFileSync } from 'node:fs'
-import config from '../config.json' with { type: "json" }
-import { AeonPath, pathListDisplay } from './Shared.js'
-import { HashReference, TextMap } from './TextMap.js'
-
-export interface InternalBlessingGroup {
-	/** id */
-	JHOKDPADHFM: number
-	/** included groups and blessings */
-	ADJICNNJFEM: number[]
-}
+import { AeonPath, Dictionary, pathListDisplay } from './Shared.js'
+import { TextMap } from './TextMap.js'
+import type { InternalBlessing, InternalBlessingBuff, InternalBlessingGroup, InternalLayerMap } from './files/Blessing.js'
+import { getFile } from './files/GameFile.js'
 
 export const PathMap: {[id: string]: AeonPath} = {
 	'120': 'Preservation',
@@ -24,6 +17,8 @@ export const PathMap: {[id: string]: AeonPath} = {
 
 export type EnhanceFilter = 'both' | 'none' | 'only'
 
+const group_data: Dictionary<InternalBlessingGroup> = await getFile('ExcelOutput/RogueBuffGroup.json')
+
 export class BlessingGroup {
 	name: string = 'Unknkown Blessing Group'
 	id: number
@@ -33,7 +28,7 @@ export class BlessingGroup {
 	enhanced?: EnhanceFilter
 	
 	static map = new Map<string, BlessingGroup>()
-	static data: {[id: string]: InternalBlessingGroup} = JSON.parse(readFileSync(`./versions/${config.target_version}/RogueBuffGroup.json`).toString())
+	static data = group_data
 	
 	constructor(public data: InternalBlessingGroup) {
 		this.id = data.JHOKDPADHFM
@@ -94,41 +89,8 @@ export class BlessingGroup {
 	}
 }
 
-export interface InternalBlessing {
-	MazeBuffID: number
-	MazeBuffLevel: number
-	RogueBuffType: number
-	RogueBuffRarity: number
-	RogueBuffTag: number
-	ExtraEffectIDList: number[]
-	AeonID?: number
-	RogueVersion: number
-	UnlockIDList: number[]
-	HandbookUnlockDesc: HashReference
-	AeonCrossIcon?: string
-	IsShow?: boolean
-}
-
-export type InternalLayerMap<T> = { [id: string]: { [level: string]: T } }
-
-export interface InternalBlessingBuff {
-	ID: number
-	BuffSeries: number
-	BuffRarity: number
-	Lv: number
-	LvMax: number
-	ModifierName: string
-	InBattleBindingType: string
-	InBattleBindingKey: string
-	ParamList: { Value: number }[],
-	BuffIcon: string
-	BuffName: HashReference
-	BuffDesc: HashReference
-	BuffSimpleDesc: HashReference
-	BuffDescBattle: HashReference
-	BuffEffect: string
-	MazeBuffType: string
-}
+const blessing_data: InternalLayerMap<InternalBlessing> = await getFile('ExcelOutput/RogueBuff.json')
+const buff_data: InternalLayerMap<InternalBlessingBuff> = await getFile('ExcelOutput/RogueMazeBuff.json')
 
 export class Blessing {
 	buff_id: number
@@ -140,8 +102,8 @@ export class Blessing {
 
 	static map = new Map<string, Blessing>()
 	
-	static data: InternalLayerMap<InternalBlessing> = JSON.parse(readFileSync(`./versions/${config.target_version}/RogueBuff.json`).toString())
-	static buff_data: InternalLayerMap<InternalBlessingBuff> = JSON.parse(readFileSync(`./versions/${config.target_version}/RogueMazeBuff.json`).toString())
+	static data = blessing_data
+	static buff_data = buff_data
 	
 	constructor(public data: InternalBlessing) {
 		this.id = data.RogueBuffTag

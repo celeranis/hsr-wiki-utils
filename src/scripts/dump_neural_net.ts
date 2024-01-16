@@ -1,9 +1,9 @@
-import { readFileSync, writeFileSync } from 'fs';
-import config from '../../config.json' with { "type": "json" };
+import { writeFileSync } from 'fs';
 import type { Dictionary, Value } from '../Shared.js';
 import { HashReference, TextMap } from '../TextMap.js';
+import { getFile } from '../files/GameFile.js';
 
-const talentData: Dictionary<InternalTalentData> = JSON.parse(readFileSync(`./versions/${config.target_version}/RogueTalent.json`).toString())
+const talentData: Dictionary<InternalTalentData> = await getFile('ExcelOutput/RogueTalent.json')
 
 export interface InternalTalentData {
 	TalentID: number
