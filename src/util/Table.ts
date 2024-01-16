@@ -1,6 +1,4 @@
-export function whitespace(string: string, targetWhitespace: number = 13) {
-	return string + ' '.repeat(targetWhitespace - string.length)
-}
+import { whitespace } from './General.js'
 
 export function multilineFormat(cell: string | number) {
 	if (typeof cell == 'string' && cell.includes('\n'))

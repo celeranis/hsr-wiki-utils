@@ -1,8 +1,8 @@
-import { readFileSync, writeFileSync } from 'fs';
-import config from '../../config.json' with { "type": "json" };
+import { writeFileSync } from 'fs';
 import { AudienceDice, DiceSurface } from '../AudienceDice.js';
 import { Dictionary } from '../Shared.js';
 import { HashReference, TextMap } from '../TextMap.js';
+import { getFile } from '../files/GameFile.js';
 
 interface BranchTag {
 	TagID: number
@@ -10,7 +10,7 @@ interface BranchTag {
 	BranchTagName: HashReference
 }
 
-const diceBranchTags: Dictionary<BranchTag> = JSON.parse(readFileSync(`./versions/${config.target_version}/RogueNousDiceBranchTag.json`).toString())
+const diceBranchTags: Dictionary<BranchTag> = await getFile('ExcelOutput/RogueNousDiceBranchTag.json')
 
 DiceSurface.loadAll()
 AudienceDice.loadAll()

@@ -1,95 +1,12 @@
-import { readFileSync } from 'fs'
-import config from '../config.json' with { type: "json" }
 import { BlessingGroup } from './Blessing.js'
 import { CurioGroup } from './Curio.js'
-import { Act, DialogSequence, DialogTask } from './Dialog.js'
 import { DynamicContent } from './DynamicContent.js'
-import { AeonPath, VERSION_COMMITS, pathDisplayName } from './Shared.js'
+import { AeonPath, Dictionary, pathDisplayName } from './Shared.js'
 import { Stage } from './Stage.js'
 import { HashReference, TextMap } from './TextMap.js'
-
-export interface InternalEventSection {
-	EventID: number,
-	EventDisplayID?: number,
-	RogueEffectType?: EffectType,
-	RogueEffectParamList: number[]
-	CostType?: CostType
-	CostParamList: number[]
-	DescValue?: number
-	DescValue2?: number
-	DescValue3?: number
-	ConditionIDList: number[]
-	DynamicContentID?: number
-	AeonOption: AeonPath
-	PerformanceType?: number
-	
-	// legacy
-	EventTitle?: HashReference
-	EventDesc?: HashReference
-	EventDetailDesc?: HashReference
-}
-
-export interface InternalEventSectionDisplay {
-	EventDisplayID: number
-	EventTitle: HashReference
-	EventDesc: HashReference
-	EventDetailDesc: HashReference
-}
-
-export interface InternalEventName {
-	TalkNameID: number
-	Name: HashReference
-	SubName: HashReference
-	IconPath: string
-	ImgPath: string
-	ImageID: number
-}
-
-export interface InternalTalkSentence {
-	TalkSentenceID: number
-	TextmapTalkSentenceName: HashReference
-	TalkSentenceText: HashReference
-	VoiceID?: number
-}
-
-export interface InternalHandbookEvent {
-	EventID: number
-	EventTitle: HashReference
-	EventType: HashReference
-	EventDesc: HashReference
-	EventImage: string
-	EventReward: number
-	Order: number
-	EventTypeList: number[]
-	UnlockHintDesc: HashReference
-	ImageID: number
-	DialoguePath: string
-}
-
-export interface InternalNPCDialogue {
-	RogueNPCID: number
-	DialogueProgress: number
-	TexturePath: string
-	DialoguePath: string
-	HandbookEventID?: number
-	ImageID: number
-}
-
-export type EffectType =
-	'ReplaceRogueBuffKeepLevel' | 'GetItem' | 'TriggerDialogueEventList'
-	| 'GetRogueBuff' | 'GetChessRogueCheatDice' | 'GetRogueMiracle'
-	| 'RecoverLineup' | 'TriggerRogueBuffSelect' | 'TriggerRogueMiracleSelect' | 'ChangeChessRogueActionPoint'
-	| 'TriggerRandomEvent' | 'UpRogueBuffLevel' | 'TriggerBattle' | 'TriggerRandomResult' | 'TriggerRogueBuffReforge'
-	| 'GetAllRogueBuffInGroup' | 'TriggerRogueMiracleTrade' | 'ReplaceRogueBuff' | 'ChangeRogueMiracleToRogueCoin'
-	| 'RemoveRogueMiracle' | 'GetItemByPercent' | 'RemoveRogueBuff' | 'RepairRogueMiracleByGroup' | 'TriggerRogueBuffDrop' 
-	| 'ChangeRogueMiracleToRogueMiracle' | 'ChangeRogueMiracleToRogueBuff' | 'DestroyRogueMiracle' | 'GetChessRogueRerollDice' 
-	| 'GetRogueBuffByMiracleCount'
-	| 'SetChessRogueNextStartCellAdventureRoomType' | 'FinishChessRogue'
-	// 1.6 //
-	| 'GetAllRogueBuffInGroupAndGetItem' | 'EnhanceRogueBuff' | 'TriggerRandomEventList' | 'ChangeNousValue'
-	| 'RepairRogueMiracle' | 'ChangeLineupData' | 'TriggerRogueMiracleRepair' | 'ReviveAvatar' | 'RepeatableGamble'
-
-export type CostType = 'CostItemValue' | 'CostHpCurrentPercent' | 'CostHpMaxPercent' | 'CostItemPercent' | 'CostHpSpToPercent'
+import { Act, DialogSequence, DialogTask } from './files/Dialog.js'
+import { getFile } from './files/GameFile.js'
+import { CostType, EffectType, InternalEventSection, InternalEventSectionDisplay, InternalHandbookEvent, InternalNPCDialogue } from './files/Occurrence.js'
 
 const ITEMS = {
 	31: 'Cosmic Fragments'
@@ -384,6 +301,13 @@ const VALID_DIALOGUE_TYPES = new Set<DialogTask['$type']>([
 	'RPG.GameCore.TriggerCustomString'
 ])
 
+const DIALOG_EVENT: Dictionary<InternalEventSection> = await getFile('ExcelOutput/DialogueEvent.json')
+const DIALOG_EVENT_DISPLAY: Dictionary<InternalEventSectionDisplay> = await getFile('ExcelOutput/DialogueEventDisplay.json')
+const NPC_DIALOG: Dictionary<Dictionary<InternalNPCDialogue>> = await getFile('ExcelOutput/RogueNPCDialogue.json')
+const TALK_NAMES: Dictionary<any> = await getFile('ExcelOutput/RogueTalkNameConfig.json')
+const HANDBOOK: Dictionary<InternalHandbookEvent> = await getFile('ExcelOutput/RogueHandBookEvent.json')
+const HANDBOOK_TYPES: Dictionary<any> = await getFile('ExcelOutput/RogueHandBookEventType.json')
+
 export class Event {
 	readonly text_map: TextMap = TextMap.default
 	handbook_id?: number
@@ -403,12 +327,12 @@ export class Event {
 
 	sequences: DialogSequence[] = []
 	
-	static DIALOG_EVENT = JSON.parse(readFileSync(`./versions/${config.target_version}/DialogueEvent.json`).toString())
-	static DIALOG_EVENT_DISPLAY = JSON.parse(readFileSync(`./versions/${config.target_version}/DialogueEventDisplay.json`).toString())
-	static NPC_DIALOG: {[key: string]: {[key: string]: InternalNPCDialogue}} = JSON.parse(readFileSync(`./versions/${config.target_version}/RogueNPCDialogue.json`).toString())
-	static TALK_NAMES = JSON.parse(readFileSync(`./versions/${config.target_version}/RogueTalkNameConfig.json`).toString())
-	static HANDBOOK = JSON.parse(readFileSync(`./versions/${config.target_version}/RogueHandBookEvent.json`).toString())
-	static HANDBOOK_TYPES = JSON.parse(readFileSync(`./versions/${config.target_version}/RogueHandBookEventType.json`).toString())
+	static DIALOG_EVENT = DIALOG_EVENT
+	static DIALOG_EVENT_DISPLAY = DIALOG_EVENT_DISPLAY
+	static NPC_DIALOG = NPC_DIALOG
+	static TALK_NAMES = TALK_NAMES
+	static HANDBOOK = HANDBOOK
+	static HANDBOOK_TYPES = HANDBOOK_TYPES
 	
 	sections = new Map<number, EventSection>()
 	sectionCustomStrings = new Map<number, string>()
@@ -444,11 +368,11 @@ export class Event {
 		if (!eventData) {
 			throw new TypeError(`No event data found for ${id}`)
 		}
-		return new EventSection(this, eventData, Event.DIALOG_EVENT_DISPLAY[eventData.EventDisplayID], undefined, overrideTitle)
+		return new EventSection(this, eventData, Event.DIALOG_EVENT_DISPLAY[eventData.EventDisplayID!], undefined, overrideTitle)
 	}
 	
 	async loadSequences() {
-		const act: Act = await fetch(`https://raw.githubusercontent.com/Dimbreath/StarRailData/${VERSION_COMMITS[config.target_version]}/${this.graph_path}`).then(res => res.json())
+		const act: Act = await getFile(this.graph_path)
 		this.sequences = act.OnStartSequece
 		for (const sequence of this.sequences) {
 			for (const task of sequence.TaskList) {

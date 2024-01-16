@@ -23,7 +23,9 @@ export interface Value<T> {
 	Value: T
 }
 
-export const VERSION_COMMITS = {
+export type Version = '1.0' | '1.1' | '1.2' | '1.3' | '1.4' | '1.5'| '1.6'
+
+export const VERSION_COMMITS: Dictionary<string, Version> = {
 	'1.0': '4a36e628f9f34e6221b167b6ae0235a2f3934330',
 	'1.1': '1ab86f99405026f6c9b1be98661a584e1a38a0df',
 	'1.2': '900fa36177ffd66e7d70d2c21276c5bc0662212d',

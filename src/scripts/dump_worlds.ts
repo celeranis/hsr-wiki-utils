@@ -1,16 +1,17 @@
-import { readFileSync, writeFileSync } from 'fs'
-import config from '../../config.json' with { "type": "json" }
-import { AttackType, Dictionary, ItemReference, RARITIES, typeDisplayName } from '../Shared.js'
+import { writeFileSync } from 'fs'
+import { Dictionary, ItemReference, RARITIES, typeDisplayName } from '../Shared.js'
 import { Stage } from '../Stage.js'
-import { HashReference, TextMap } from '../TextMap.js'
+import { TextMap } from '../TextMap.js'
+import { getFile } from '../files/GameFile.js'
+import type { InternalRewardData, InternalUnlockInfo, InternalWorldInfo, InternalWorldMap, InternalWorldMapEntry } from '../files/Worlds.js'
 import { Table } from '../util/Table.js'
 
-const maps: InternalWorldMap = JSON.parse(readFileSync(`./versions/${config.target_version}/RogueMap.json`).toString())
-const worlds: Dictionary<InternalWorldInfo> = JSON.parse(readFileSync(`./versions/${config.target_version}/RogueAreaConfig.json`).toString())
-const unlockInfo: Dictionary<InternalUnlockInfo> = JSON.parse(readFileSync(`./versions/${config.target_version}/RogueUnlockConfig.json`).toString())
-const items: Dictionary<any> = JSON.parse(readFileSync(`./versions/${config.target_version}/ItemConfig.json`).toString())
-const charItems: Dictionary<any> = JSON.parse(readFileSync(`./versions/${config.target_version}/ItemConfigAvatar.json`).toString())
-const rewards: Dictionary<InternalRewardData> = JSON.parse(readFileSync(`./versions/${config.target_version}/ItemConfigAvatar.json`).toString())
+const maps: InternalWorldMap = await getFile('ExcelOutput/RogueMap.json')
+const worlds: Dictionary<InternalWorldInfo> = await getFile('ExcelOutput/RogueAreaConfig.json')
+const unlockInfo: Dictionary<InternalUnlockInfo> = await getFile('ExcelOutput/RogueUnlockConfig.json')
+const items: Dictionary<any> = await getFile('ExcelOutput/ItemConfig.json')
+const charItems: Dictionary<any> = await getFile('ExcelOutput/ItemConfigAvatar.json')
+const rewards: Dictionary<InternalRewardData> = await getFile('ExcelOutput/RewardData.json')
 
 const NUMERALS = ['I', 'II', 'III', 'IV', 'V', "VI", 'VII', 'VIII', 'IX', 'X']
 
@@ -170,55 +171,4 @@ export function reward(reward: InternalRewardData) {
 		items.push({ItemID: reward[`ItemID_${i}`], ItemNum: reward[`Count_${i}`]})
 	}
 	return itemList(items)
-}
-
-export type InternalWorldMap = {[world: string]: {[entryNum: string]: InternalWorldMapEntry}}
-
-export interface InternalWorldMapEntry {
-	RogueMapID: number
-	SiteID: number
-	IsStart: boolean
-	PosX: number
-	PosY: number
-	NextSiteIDList: number[]
-	HardLevelGroupList: number[]
-	LevelList: number[]
-}
-
-export interface InternalWorldInfo {
-	RogueAreaID: number
-	/** World Number */
-	AreaProgress: number
-	Difficulty: number
-	AreaEnvironment: unknown[]
-	RecommendLevel: number
-	RecommendNature: AttackType[]
-	AreaNameID: HashReference
-	AreaIcon: string
-	AreaFigure: string
-	FirstReward?: number
-	/** Boss Enemy */
-	DisplayMonsterMap: Dictionary<number>
-	/** May Encounter */
-	DisplayMonsterMap2: Dictionary<number>
-	UnlockID: number
-	MapDisplayItemList: ItemReference[]
-	ChestDisplayItemList: ItemReference[]
-	MonsterDisplayItemList: ItemReference[]
-	ScoreMap: Dictionary<number>
-	RecommendSkillTreePoints: number
-	AreaTipsIcon: string
-}
-
-export interface InternalUnlockInfo {
-	RogueUnlockID: number
-	UnlockFinishWay: number
-	RogueUnlockDetail: HashReference
-}
-
-export interface InternalRewardData {
-	RewardID: number
-	Hcoin?: number
-	[k: `ItemID_${number}`]: number
-	[k: `Count_${number}`]: number
 }
