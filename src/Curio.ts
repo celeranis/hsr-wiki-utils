@@ -1,7 +1,9 @@
 import { Dictionary } from './Shared.js'
 import { textMap } from './TextMap.js'
+import { Unlock } from './Unlock.js'
 import { InternalCurio, InternalCurioDisplay, InternalIndexCurio } from './files/Curio.js'
 import { getFile } from './files/GameFile.js'
+import { Template } from './util/Template.js'
 
 function curio(name: string) {
 	return `{{Item|${name}|20|type=Curio|link=Simulated_Universe/Curio#${name.replace(/ /g, '_')}}}`
@@ -125,49 +127,73 @@ export class CurioGroup {
 
 const curioData: Dictionary<InternalCurio> = await getFile('ExcelOutput/RogueMiracle.json')
 const curioDisplay: Dictionary<InternalCurioDisplay> = await getFile('ExcelOutput/RogueMiracleDisplay.json')
-const curioIndex: Dictionary<InternalIndexCurio> = await getFile('ExcelOutput/RogueMiracleDisplay.json')
+const curioIndex: Dictionary<InternalIndexCurio> = await getFile('ExcelOutput/RogueHandbookMiracle.json')
 
-const iconsForType = {
-	100: '[[File:Icon Simulated Universe.png|30px|link=Simulated Universe/Worlds]]',
-	130: '[[File:Icon Simulated Universe Swarm Disaster.png|30px|link=Simulated Universe: Swarm Disaster]]',
-	160: '[[File:Icon Simulated Universe Gold and Gears.png|30px|link=Simulated Universe: Gold and Gears]]',
-	
+const TYPE_MAP = {
+	100: 'su',
+	130: 'swarm',
+	160: 'gng',
 }
 
 export class Curio {
+	static readonly data = curioData
+	static readonly displayData = curioDisplay
+	static readonly indexData = curioIndex
+	
 	name: string
 	effect: string
 	lore: string
-	obtainable_in: number[]
+	obtainable_in: string[]
 	order: number
+	is_indexable: boolean
+	unlock_list: Unlock[]
 	
 	constructor(public id: number) {
-		const curio = curioData[id]
-		const display = curioDisplay[curio.MiracleDisplayID]
-		const index = curioIndex[curio.UnlockHandbookMiracleID]
+		const curio = Curio.data[id]
+		const display = Curio.displayData[curio.MiracleDisplayID]
+		const index = Curio.indexData[curio.UnlockHandbookMiracleID]
 		
 		this.name = textMap.getText(display.MiracleName)
-		this.effect = textMap.getText(display.MiracleDesc)
+		console.group(this.name)
+		this.effect = textMap.getText(display.MiracleDesc, display.DescParamList)
 		this.lore = textMap.getText(display.MiracleBGDesc)
-		this.obtainable_in = index?.MiracleTypeList || []
+		this.obtainable_in = index?.MiracleTypeList?.map(id => TYPE_MAP[id]) || []
 		this.order = index?.Order ?? 1000
+		this.is_indexable = Boolean(curio.UnlockHandbookMiracleID)
+		this.unlock_list = curio.UnlockIDList.map(unlock => Unlock.fromUnlockId(unlock))
+		console.groupEnd()
+	}
+	
+	getNotes(): string[] {
+		const notes: string[] = []
+		if (!this.is_indexable) {
+			notes.push(`* This Curio is not included in the Simulated Universe Index.`)
+		}
+		for (const unlock of this.unlock_list) {
+			notes.push(`* This Curio is only obtainable ${unlock.desc.replace('Unlocked ', '')}`)
+		}
+		return notes
 	}
 	
 	entry(): string {
-		const output = [
-			`|- id="${this.name.replaceAll(/(?:<\/?i>)|"/g, '')}"`,
-			`|[[File:Curio ${this.name.replaceAll(/<\/?i>/g, '')}|50px]]`,
-			`|'''${this.name}'''`,
-			`|${this.effect}`,
-			`|${this.obtainable_in.map(id => `[[File:${iconsForType[id]}|30px]]`).join(' ') || '?'}`,
-			`|-`,
-			`|colspan="4" |`,
-			`{{Collapsible|`,
-			`:${this.lore.replaceAll('\n', '\n:')}`,
-			`|Story|collapsed=1}}`,
-			`{{Collapsible|`,
-			``
-		]
-		return output.join('\n')
+		const template = new Template('Curio Information')
+			.addParam('name', this.name.replaceAll(/<\s*\/?\s*\w+\s*>/gi, ''))
+			.addParam('price', '')
+			.addParam('effect', this.effect)
+			.addParam('story', ':' + this.lore)
+			.addParam('notes', this.getNotes().join('\n'))
+			.addParam('available', this.obtainable_in.join(','))
+		
+		if (template.getParam('name') != this.name) template.addParam('displayname', this.name)
+		
+		return template.block()
+	}
+	
+	static loadAll() {
+		const loaded: Curio[] = []
+		for (const data of Object.values(Curio.data)) {
+			loaded.push(new this(data.MiracleID))
+		}
+		return loaded
 	}
 }

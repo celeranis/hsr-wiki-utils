@@ -78,6 +78,7 @@ export type FinishType = 'AvatarLevelCnt' | 'EquipmentLevelCnt' | 'PropTypeInter
 	| 'SpaceZooUnlockSpecialCount' | 'SpaceZooOpCatteryCount' | 'SpaceZooExpPoint' | 'AetherDivideCollectSpiritId'
 	| 'FinishQuestListAndTakeReward' | 'HeliobusLevel' | 'HeliobusChallengeTargetFinish' | 'RaidTargetFinish'
 	| 'SceneTreasureChestOpenCnt' | 'PropState' | 'RogueFinishArea' | 'FinishRogueEndlessWithScore' | 'FarmElementFinish'
+	| 'RogueDLCSelectedAeonDimensionCnt'
 
 export type ParamType = 'GreaterEqual' | 'Equal' | 'ListContain' | 'NoPara' | 'LessEqual' | 'IntContainListContain'
 

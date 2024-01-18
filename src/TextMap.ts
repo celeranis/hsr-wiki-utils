@@ -1,6 +1,6 @@
 import config from '../config.json' with { type: "json" };
 import { getFile } from './files/GameFile.js';
-import type { Dictionary, Version } from './Shared.js';
+import type { Dictionary, Value, Version } from './Shared.js';
 import { whitespace } from './util/General.js';
 
 export interface HashReference {
@@ -34,6 +34,8 @@ export const OTHER_LANGUAGES: Dictionary<SupportedLanguage> = {
 	pt: 'PT'
 }
 
+export type TextParams = (string | number | undefined | Value<number>)[]
+
 export class TextMap {
 	static readonly cache = new Map<`${SupportedLanguage}${Version}`, TextMap>()
 	static readonly sentence_json: Dictionary<Sentence> = sentenceJson
@@ -66,8 +68,9 @@ export class TextMap {
 		return Number(BigInt.asIntN(32, (hash1 + (hash2 * 1566083941n)) | 0n));
     }
 	
-	replaceParams(text: string, params: (string | number | undefined)[]) {
-		for (const [i, param] of params.entries()) {
+	replaceParams(text: string, params: TextParams) {
+		for (let [i, param] of params.entries()) {
+			if (typeof param == 'object') param = param.Value
 			text = text.replaceAll(`#${i + 1}[i]%`, (param ? Math.round(Number(param) * 100).toString() : '??') + '%')
 				.replaceAll(`#${i + 1}[i]`, param?.toString() || '??')
 				.replaceAll(`#${i + 1}`, param?.toString() || '??')
@@ -75,7 +78,7 @@ export class TextMap {
 		return text
 	}
 	
-	wikiFormatting(text: string, params?: (string | number | undefined)[], allowNewline: boolean = true): string {
+	wikiFormatting(text: string, params?: TextParams, allowNewline: boolean = true): string {
 		let replaced = text
 			.replaceAll(/<\/?unbreak>/gi, '')
 			.replaceAll(/{NICKNAME}/gi, '(Trailblazer)')
@@ -106,7 +109,7 @@ export class TextMap {
 		return replaced
 	}
 	
-	getText(mapKey?: string | number | HashReference, params?: (string | number | undefined)[], allowNewline: boolean = true): string {
+	getText(mapKey?: string | number | HashReference, params?: TextParams, allowNewline: boolean = true): string {
 		if (!mapKey) return ''
 		return this.wikiFormatting(this.json[((mapKey instanceof Object) && mapKey.Hash?.toString()) || mapKey.toString()] ?? '', params, allowNewline)
 	}
@@ -119,7 +122,7 @@ export class TextMap {
 		return this.wikiFormatting(!textOnly && name ? `'''${name}:''' ${text}` : text)
 	}
 	
-	static async generateOL(key?: string | number | HashReference, params?: (string | number | undefined)[]): Promise<string> {
+	static async generateOL(key?: string | number | HashReference, params?: TextParams): Promise<string> {
 		const output = ['{{Other Languages']
 		for (const [tkey, lang] of Object.entries(OTHER_LANGUAGES)) {
 			output.push(`|${whitespace(tkey, 6)}= ${(await this.load(undefined, lang)).getText(key, params)}`)
