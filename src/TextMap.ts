@@ -75,10 +75,9 @@ export class TextMap {
 		return text
 	}
 	
-	wikiFormatting(text: string, params?: (string | number | undefined)[]): string {
+	wikiFormatting(text: string, params?: (string | number | undefined)[], allowNewline: boolean = true): string {
 		let replaced = text
 			.replaceAll(/<\/?unbreak>/gi, '')
-			.replaceAll(/\\n/gi, ' ')
 			.replaceAll(/{NICKNAME}/gi, '(Trailblazer)')
 			.replaceAll(/<color=#(\w+)>(.+?)<\/color>/gi, (substr, color, text) => {
 				if (color == 'dbc291ff') {
@@ -100,19 +99,23 @@ export class TextMap {
 			replaced = this.replaceParams(replaced, params)
 		}
 		
+		if (!allowNewline) {
+			replaced = replaced.replaceAll('\n', ' ')
+		}
+		
 		return replaced
 	}
 	
-	getText(mapKey?: string | number | HashReference, params?: (string | number | undefined)[]): string {
+	getText(mapKey?: string | number | HashReference, params?: (string | number | undefined)[], allowNewline: boolean = true): string {
 		if (!mapKey) return ''
-		return this.wikiFormatting(this.json[((mapKey instanceof Object) && mapKey.Hash?.toString()) || mapKey.toString()] ?? '', params)
+		return this.wikiFormatting(this.json[((mapKey instanceof Object) && mapKey.Hash?.toString()) || mapKey.toString()] ?? '', params, allowNewline)
 	}
 	
-	getSentence(sentence: Sentence | number | string, textOnly?: boolean) {
+	getSentence(sentence: Sentence | number | string, textOnly?: boolean, allowNewline: boolean = true) {
 		if (typeof sentence != 'object') sentence = TextMap.sentence_json[sentence]
 		if (!sentence) return undefined
-		const name = this.getText(sentence.TextmapTalkSentenceName)
-		const text = this.getText(sentence.TalkSentenceText)
+		const name = this.getText(sentence.TextmapTalkSentenceName, undefined, false)
+		const text = this.getText(sentence.TalkSentenceText, undefined, allowNewline)
 		return this.wikiFormatting(!textOnly && name ? `'''${name}:''' ${text}` : text)
 	}
 	

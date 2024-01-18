@@ -1,3 +1,8 @@
+import { Dictionary } from './Shared.js'
+import { textMap } from './TextMap.js'
+import { InternalCurio, InternalCurioDisplay, InternalIndexCurio } from './files/Curio.js'
+import { getFile } from './files/GameFile.js'
+
 function curio(name: string) {
 	return `{{Item|${name}|20|type=Curio|link=Simulated_Universe/Curio#${name.replace(/ /g, '_')}}}`
 }
@@ -115,5 +120,54 @@ export class CurioGroup {
 		}
 		
 		return `Curio${s}<nowiki>:</nowiki> {{tx}}<!--ID: ${id}-->`
+	}
+}
+
+const curioData: Dictionary<InternalCurio> = await getFile('ExcelOutput/RogueMiracle.json')
+const curioDisplay: Dictionary<InternalCurioDisplay> = await getFile('ExcelOutput/RogueMiracleDisplay.json')
+const curioIndex: Dictionary<InternalIndexCurio> = await getFile('ExcelOutput/RogueMiracleDisplay.json')
+
+const iconsForType = {
+	100: '[[File:Icon Simulated Universe.png|30px|link=Simulated Universe/Worlds]]',
+	130: '[[File:Icon Simulated Universe Swarm Disaster.png|30px|link=Simulated Universe: Swarm Disaster]]',
+	160: '[[File:Icon Simulated Universe Gold and Gears.png|30px|link=Simulated Universe: Gold and Gears]]',
+	
+}
+
+export class Curio {
+	name: string
+	effect: string
+	lore: string
+	obtainable_in: number[]
+	order: number
+	
+	constructor(public id: number) {
+		const curio = curioData[id]
+		const display = curioDisplay[curio.MiracleDisplayID]
+		const index = curioIndex[curio.UnlockHandbookMiracleID]
+		
+		this.name = textMap.getText(display.MiracleName)
+		this.effect = textMap.getText(display.MiracleDesc)
+		this.lore = textMap.getText(display.MiracleBGDesc)
+		this.obtainable_in = index?.MiracleTypeList || []
+		this.order = index?.Order ?? 1000
+	}
+	
+	entry(): string {
+		const output = [
+			`|- id="${this.name.replaceAll(/(?:<\/?i>)|"/g, '')}"`,
+			`|[[File:Curio ${this.name.replaceAll(/<\/?i>/g, '')}|50px]]`,
+			`|'''${this.name}'''`,
+			`|${this.effect}`,
+			`|${this.obtainable_in.map(id => `[[File:${iconsForType[id]}|30px]]`).join(' ') || '?'}`,
+			`|-`,
+			`|colspan="4" |`,
+			`{{Collapsible|`,
+			`:${this.lore.replaceAll('\n', '\n:')}`,
+			`|Story|collapsed=1}}`,
+			`{{Collapsible|`,
+			``
+		]
+		return output.join('\n')
 	}
 }
