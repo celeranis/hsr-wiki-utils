@@ -434,7 +434,7 @@ export class Event {
 				case 'RPG.GameCore.PlayAndWaitRogueSimpleTalk':
 				case 'RPG.GameCore.PlayRogueSimpleTalk':
 					for (const talk of task.SimpleTalkList) {
-						const sentence = this.text_map.getSentence(talk.TalkSentenceID)
+						const sentence = this.text_map.getSentence(talk.TalkSentenceID, false, true, true)
 						output.push(':' + (sentence || '{{tx}}'))
 					}
 					break
