@@ -82,6 +82,11 @@ export class TextMap {
 		let replaced = text
 			.replaceAll(/<\/?unbreak>/gi, '')
 			.replaceAll(/{NICKNAME}/gi, '(Trailblazer)')
+			.replaceAll('\\n', '\n')
+			.replaceAll(/{(F|M)#(.+?)}{(F|M)#(.+?)}/gi, 
+				(_str: string, gender1: string, text1: string, gender2: string, text2: string) => 
+					`{{MC|${gender1.toLowerCase()}=${text1}|${gender2.toLowerCase()}=${text2}}}`
+			)
 			.replaceAll(/<color=#(\w+)>(.+?)<\/color>/gi, (substr, color, text) => {
 				if (color == 'dbc291ff') {
 					return `{{Color|Keyword|${text}}}`
@@ -114,12 +119,13 @@ export class TextMap {
 		return this.wikiFormatting(this.json[((mapKey instanceof Object) && mapKey.Hash?.toString()) || mapKey.toString()] ?? '', params, allowNewline)
 	}
 	
-	getSentence(sentence: Sentence | number | string, textOnly?: boolean, allowNewline: boolean = true) {
+	getSentence(sentence: Sentence | number | string, textOnly: boolean = false, allowNewline: boolean = true, allowSpeakerColors: boolean = false) {
 		if (typeof sentence != 'object') sentence = TextMap.sentence_json[sentence]
 		if (!sentence) return undefined
 		const name = this.getText(sentence.TextmapTalkSentenceName, undefined, false)
-		const text = this.getText(sentence.TalkSentenceText, undefined, allowNewline)
-		return this.wikiFormatting(!textOnly && name ? `'''${name}:''' ${text}` : text)
+		const text = this.getText(sentence.TalkSentenceText, undefined, allowNewline).replaceAll('\n', '<br />')
+		
+		return this.wikiFormatting(!textOnly && name ? `'''${name}:''' ${text.includes('<br />') ? '<br />' : ''}${text}` : text)
 	}
 	
 	static async generateOL(key?: string | number | HashReference, params?: TextParams): Promise<string> {
