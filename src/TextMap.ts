@@ -102,6 +102,7 @@ export class TextMap {
 			.replaceAll(/–/g, '&ndash;')
 			.replaceAll(/—/g, '&mdash;')
 			.replaceAll(/×/g, '&times;')
+			.replaceAll(/<\s*\/?\s*i\s*>/gi, "''")
 		
 		if (params) {
 			replaced = this.replaceParams(replaced, params)
