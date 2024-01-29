@@ -23,6 +23,24 @@ export interface TemplateMap {
 		notext?: boolean
 		type: 'Item' | 'Curio' | 'Character' | 'Dice Face' | 'Readable'
 		newline?: boolean
+	},
+	'File': {
+		characters?: string
+		category: string
+		categories: string
+		sourcelink1?: string
+		sourcelabel1?: string
+		sourcelink2?: string
+		sourcelabel2?: string
+		sourcelink3?: string
+		sourcelabel3?: string
+		artistlink?: string
+		lang?: string
+		date?: string
+		caption?: string
+		description?: string
+		transcription?: string
+		alt?: string
 	}
 }
 
@@ -51,7 +69,7 @@ export class Template<N extends keyof TemplateMap, P extends Record<string, stri
 		const output = [
 			`{{${this.name}`,
 			...Object.entries(this.params).map(([key, value]) => 
-				`|${whitespace(key)}=${String(value).match(/\n|(?:^(?:\*|:|#))/) ? `\n${value}` : ` ${value}`}`
+				`|${whitespace(key, targetIndent)}=${String(value).match(/\n|(?:^(?:\*|:|#))/) ? `\n${value}` : ` ${value}`}`
 			),
 			'}}'
 		]
@@ -60,5 +78,19 @@ export class Template<N extends keyof TemplateMap, P extends Record<string, stri
 	
 	inline(): string {
 		return `{{${this.name}|${Object.entries(this.params).map(([key, value]) => Number(key) ? value : `${key}=${value}`).join('|')}}}`
+	}
+	
+	static addParamValue(input: string, name: string, value: string | number) {
+		const regex = new RegExp(`(\\|${name}\\s*=\\s*?)[\\d;]*\\s*?(\\r?\\n?(?:\\||}}))`)
+		if (regex.test(input)) {
+			return input.replace(regex, `$1${value}$2`)
+		} else {
+			return null
+		}
+	}
+	
+	static getParamValue(input: string, name: string) {
+		const regex = new RegExp(`\\|${name}\\s*=\\s*?(.*?)\\s*(?:\\||}})`)
+		return input.match(regex)?.[1]?.trim()
 	}
 }
