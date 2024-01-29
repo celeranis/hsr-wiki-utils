@@ -35,6 +35,8 @@ export const VERSION_COMMITS: Dictionary<string, Version> = {
 	'1.6': '267db9b8cc44face0f376075f0828c5e1dd20bff',
 }
 
+export const VERSION_LIST: Version[] = Object.keys(VERSION_COMMITS).sort() as Version[]
+
 export type Dictionary<V, K extends string | number | symbol = string> = { [key in K]: V }
 
 export interface ItemReference {

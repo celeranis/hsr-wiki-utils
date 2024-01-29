@@ -41,4 +41,14 @@ export class AWB {
 		}])
 		return response.confirmed
 	}
+	
+	static async presentOptions<T extends string>(message: string, choices: T[]): Promise<T> {
+		const response = await inquirer.prompt([{
+			name: 'choice',
+			type: 'list',
+			message,
+			choices
+		}])
+		return response.choice
+	}
 }
