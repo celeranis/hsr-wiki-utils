@@ -129,10 +129,16 @@ export class TextMap {
 		return this.wikiFormatting(!textOnly && name ? `'''${name}:''' ${text.includes('<br />') ? '<br />' : ''}${text}` : text)
 	}
 	
-	static async generateOL(key?: string | number | HashReference, params?: TextParams): Promise<string> {
+	static async generateOL(keys?: (string | number | HashReference) | (string | number | HashReference | undefined)[], params?: TextParams): Promise<string> {
 		const output = ['{{Other Languages']
-		for (const [tkey, lang] of Object.entries(OTHER_LANGUAGES)) {
-			output.push(`|${whitespace(tkey, 6)}= ${(await this.load(undefined, lang)).getText(key, params)}`)
+		if (!Array.isArray(keys)) keys = [keys]
+		const targetWsp = keys.length > 1 ? 9 : 6
+		for (const [i, key] of keys.entries()) {
+			if (i != 0) output.push('')
+			for (let [tkey, lang] of Object.entries(OTHER_LANGUAGES)) {
+				if (keys.length > 1) tkey = `${i}_${tkey}`
+				output.push(`|${whitespace(tkey, targetWsp)}= ${(await this.load(undefined, lang)).getText(key, params)}`)
+			}
 		}
 		output.push('}}')
 		return output.join('\n')
