@@ -1,9 +1,8 @@
-import { readFileSync } from 'fs'
-import config from '../config.json' with { "type": "json" }
 import { Event } from './Event.js'
 import type { Dictionary } from './Shared.js'
 import { HashReference, TextMap } from './TextMap.js'
 import type { InternalDiceBranch, InternalDiceSurface } from './files/AudienceDice.js'
+import { getFile } from './files/GameFile.js'
 
 interface PartialSecret {
 	MainStoryName?: HashReference
@@ -33,13 +32,17 @@ const OBTAIN_VIA_MAP = {
 	403: 'Unlock [[#Data Inflation|Data Inflation]]'
 }
 
-const tbSecrets = JSON.parse(readFileSync(`./versions/${config.target_version}/RogueNousSubStory.json`).toString())
-const aeonSecrets = JSON.parse(readFileSync(`./versions/${config.target_version}/RogueNousMainStory.json`).toString())
+const tbSecrets: Dictionary<PartialSecret> = await getFile('ExcelOutput/RogueNousSubStory.json')
+const aeonSecrets: Dictionary<PartialSecret> = await getFile('ExcelOutput/RogueNousMainStory.json')
+
+const surfaceData: Dictionary<InternalDiceSurface> = await getFile('ExcelOutput/RogueNousDiceSurface.json')
+const questData: Dictionary<PartialQuestData> = await getFile('ExcelOutput/QuestData.json')
+const rewardData: Dictionary<PartialQuestData> = await getFile('ExcelOutput/RewardData.json')
 
 export class DiceSurface {
-	static data: Dictionary<InternalDiceSurface> = JSON.parse(readFileSync(`./versions/${config.target_version}/RogueNousDiceSurface.json`).toString())
-	static questData: Dictionary<PartialQuestData> = JSON.parse(readFileSync(`./versions/${config.target_version}/QuestData.json`).toString())
-	static rewardData: Dictionary<PartialQuestData> = JSON.parse(readFileSync(`./versions/${config.target_version}/RewardData.json`).toString())
+	static data: Dictionary<InternalDiceSurface> = surfaceData
+	static questData: Dictionary<PartialQuestData> = questData
+	static rewardData: Dictionary<PartialQuestData> = rewardData
 	static secrets: Dictionary<PartialSecret> = Object.assign(tbSecrets, aeonSecrets)
 	
 	name: string
@@ -96,8 +99,10 @@ export class DiceSurface {
 	}
 }
 
+const diceData: Dictionary<InternalDiceBranch> = await getFile('ExcelOutput/RogueNousDiceBranch.json')
+
 export class AudienceDice {
-	static data: Dictionary<InternalDiceBranch> = JSON.parse(readFileSync(`./versions/${config.target_version}/RogueNousDiceBranch.json`).toString())
+	static data: Dictionary<InternalDiceBranch> = diceData
 	
 	name: string
 	initial_desc: string

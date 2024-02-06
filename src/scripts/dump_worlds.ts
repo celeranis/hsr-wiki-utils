@@ -11,6 +11,7 @@ const worlds: Dictionary<InternalWorldInfo> = await getFile('ExcelOutput/RogueAr
 const unlockInfo: Dictionary<InternalUnlockInfo> = await getFile('ExcelOutput/RogueUnlockConfig.json')
 const items: Dictionary<any> = await getFile('ExcelOutput/ItemConfig.json')
 const charItems: Dictionary<any> = await getFile('ExcelOutput/ItemConfigAvatar.json')
+const relicItems: Dictionary<any> = await getFile('ExcelOutput/ItemConfigRelic.json')
 const rewards: Dictionary<InternalRewardData> = await getFile('ExcelOutput/RewardData.json')
 
 const NUMERALS = ['I', 'II', 'III', 'IV', 'V', "VI", 'VII', 'VIII', 'IX', 'X']
@@ -44,6 +45,7 @@ for (const world of Object.values(worlds)) {
 
 for (const difficulties of worldSet.values()) {
 	const first = difficulties[0]
+	const highest = difficulties.reduce((highest, diff) => Math.max(highest, diff.Difficulty), 1)
 
 	// const tabber = new Tabber()
 
@@ -51,6 +53,9 @@ for (const difficulties of worldSet.values()) {
 	for (const diff of difficulties) {
 		let firstRow = ''
 		let rowCount = 1
+		
+		const attr = diff.Difficulty < highest ? `class="mw-collapsible mw-collapsed" id="mw-customcollapsible-lowerdiff${diff.AreaProgress}"` : undefined
+		
 		if (diff.UnlockID) {
 			firstRow += '* ' + textMap.getText(unlockInfo[diff.UnlockID].RogueUnlockDetail).replace(/Trailblaze Mission "(.+?)"/g, `Trailblaze Mission ''[[$1]]''`)
 		}
@@ -58,17 +63,17 @@ for (const difficulties of worldSet.values()) {
 		firstRow += `\n* '''Recommended Team Level''': ${diff.RecommendLevel}`
 		firstRow += `\n* '''Recommended Types''': {{Types|${diff.RecommendNature.map(type => typeDisplayName(type)).join(',')}}}`
 
-		const row = table.addRow(`! rowspan="<<ROWCOUNT>>" | ${NUMERALS[diff.Difficulty - 1]}`, firstRow.trim())
+		const row = table.addRowWithAttr(attr, [`! rowspan="<<ROWCOUNT>>" | ${NUMERALS[diff.Difficulty - 1]}`, firstRow.trim()])
 		
 		const maxPts = Object.values(diff.ScoreMap).pop()
 		if (maxPts) {
 			const pointsTable = new Table('article-table tdc1', ['Domain', 'Points', '{{Item|Ability Point|20|text=Ability Points}}'])
 			
 			for (const [domain, pts] of Object.entries(diff.ScoreMap)) {
-				pointsTable.addRow(domain, pts, Math.round(pts / 10))
+				pointsTable.addRow(domain, pts.toString(), Math.round(pts / 10).toString())
 			}
 			
-			table.addRow([
+			table.addRowWithAttr(attr, [
 				`'''Maximum Points''': ${maxPts}<br />`,
 				`'''Maximum {{Item|Ability Point|20|text=Ability Points}}''': ${Math.round(maxPts / 10)}`,
 				`{{Collapsible`,
@@ -98,32 +103,37 @@ for (const difficulties of worldSet.values()) {
 		addDomain(Object.values(map).find(domain => domain.IsStart)!, 0)
 		layout.push(`{{SU Domain Card|${domains.join(';')}}}`)
 		
-		table.addRow(`'''Layout'''<br />${layout.join('')}`)
+		table.addRowWithAttr(attr, `'''Layout'''<br />${layout.join('')}`)
 		
-		table.addRow(`'''Boss Enem${Object.values(diff.DisplayMonsterMap).length == 1 ? 'y' : 'ies'}'''<br />${enemyList(diff.DisplayMonsterMap)}`)
+		table.addRowWithAttr(attr, `'''Boss Enem${Object.values(diff.DisplayMonsterMap).length == 1 ? 'y' : 'ies'}'''<br />${enemyList(diff.DisplayMonsterMap)}`)
 		
-		table.addRow(`'''May Encounter'''<br />${enemyList(diff.DisplayMonsterMap2)}`)
+		table.addRowWithAttr(attr, `'''May Encounter'''<br />${enemyList(diff.DisplayMonsterMap2)}`)
 
 		rowCount += 3
 		
 		if (diff.FirstReward && rewards[diff.FirstReward]) {
-			table.addRow(`'''First-Time Clearance Reward'''<br />${reward(rewards[diff.FirstReward])}`)
+			table.addRowWithAttr(attr, `'''First-Time Clearance Reward'''<br />${reward(rewards[diff.FirstReward])}`)
 			rowCount++
 		}
 		
-		table.addRow(`'''Extra Drops'''<br />${itemList(diff.MonsterDisplayItemList)}`)
+		table.addRowWithAttr(attr, `'''Extra Drops'''<br />${itemList(diff.MonsterDisplayItemList)}`)
 		rowCount++
 
 		if (diff.ChestDisplayItemList?.length) {
-			table.addRow(`'''Immersion Reward'''<br/>${itemList(diff.ChestDisplayItemList, true)}`)
+			table.addRowWithAttr(attr, `'''Immersion Reward'''<br/>${itemList(diff.ChestDisplayItemList, true)}`)
 			rowCount++
 		}
 		
-		row[0] = row[0].replace('<<ROWCOUNT>>', rowCount.toString())
+		row.contents[0] = row.contents[0].replace('<<ROWCOUNT>>', rowCount.toString())
 	}
 	
 	if (table.data.length > 1) {
-		output.push(`===${textMap.getText(first.AreaNameID)}===`)
+		output.push('')
+		const worldName = textMap.getText(first.AreaNameID)
+		output.push(`===[[File:Simulated Universe ${worldName}.png|45px|link=]] ${worldName}===`)
+		if (difficulties.length > 1) {
+			output.push(`<div class="mw-customtoggle-lowerdiff${first.AreaProgress} wds-button" style="margin:3px 5px 3px 0px;">Toggle Lower Difficulties</div>`)
+		}
 		output.push(table.wikitable())
 	}
 
@@ -144,7 +154,7 @@ export function enemyList(monsterMap: Dictionary<number>) {
 
 export function itemList(itemList: ItemReference[], caption = false) {
 	return `{{Card List|1=${itemList.map(item => {
-			const itemData = items[item.ItemID] ?? charItems[item.ItemID]
+			const itemData = items[item.ItemID] ?? charItems[item.ItemID] ?? relicItems[item.ItemID]
 			itemData.ItemNum = item.ItemNum
 			if (item.ItemID == 2) {
 				itemData._sort = -100

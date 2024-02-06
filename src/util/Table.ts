@@ -7,21 +7,32 @@ export function multilineFormat(cell: string | number) {
 		return typeof cell == 'string' && cell.startsWith('!') ? cell : ' ' + cell
 }
 
+interface TableRow {
+	attr?: string
+	contents: string[]
+}
+
 export class Table {
-	data: (string | number)[][] = []
+	data: TableRow[] = []
 	
 	constructor(public customClass: string, public header?: string[]) {
 		
 	}
 	
-	addRow<T extends (string | number)[]>(...args: T) {
-		const row = [...args]
+	addRow(...args: string[]) {
+		const row = {contents: [...args]}
+		this.data.push(row)
+		return row
+	}
+
+	addRowWithAttr(attr: string | undefined, args: string[] | string) {
+		const row = { attr, contents: Array.isArray(args) ? args : [args] }
 		this.data.push(row)
 		return row
 	}
 	
-	addRows(...rows: (string | number)[][]) {
-		this.data.push(...rows)
+	addRows(...rows: string[][]) {
+		this.data.push(...rows.map(row => {return {contents: row}}))
 	}
 	
 	wikitable(inlineRows = true) {
@@ -36,11 +47,11 @@ export class Table {
 		}
 		
 		for (const row of this.data) {
-			output.push('|-')
-			if (inlineRows && !row.find(cell => typeof cell == 'string' && cell.includes('\n'))) {
-				output.push(`| ${row.join(' || ')}`)
+			output.push(row.attr ? `|- ${row.attr}` : '|-')
+			if (inlineRows && !row.contents.find(cell => typeof cell == 'string' && cell.includes('\n'))) {
+				output.push(`| ${row.contents.join(' || ')}`)
 			} else {
-				output.push(...row.map(cell => `${cell.toString().startsWith('!') ? '' : '|'}${multilineFormat(cell)}`))
+				output.push(...row.contents.map(cell => `${cell.toString().startsWith('!') ? '' : '|'}${multilineFormat(cell)}`))
 			}
 		}
 		
@@ -54,7 +65,7 @@ export class Table {
 	}
 
 	get col_count() {
-		return Math.max(...this.data.map(row => row.length))
+		return Math.max(...this.data.map(row => row.contents.length))
 	}
 	
 	wrapper() {
@@ -70,7 +81,7 @@ export class Table {
 		}
 		
 		for (const row of this.data) {
-			output.push(...row.map((cell, i) => `|${whitespace(`cell-${currentRow}-${i + 1}`)}=${multilineFormat(cell)}`))
+			output.push(...row.contents.map((cell, i) => `|${whitespace(`cell-${currentRow}-${i + 1}`)}=${multilineFormat(cell)}`))
 			currentRow++
 		}
 		
