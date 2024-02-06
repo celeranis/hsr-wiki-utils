@@ -12,9 +12,9 @@ export interface InternalEliteGroup {
 
 export interface InternalConfigEntry {
 	/** Entry name */
-	CFNMGGCLFHN: string
+	DJBGPLLGOEF: string
 	/** Entry value */
-	JCFBPDLNMLH: string
+	BOANKOCFAIM: string
 }
 
 export interface InternalMonsterWave {

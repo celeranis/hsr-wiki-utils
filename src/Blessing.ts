@@ -31,12 +31,12 @@ export class BlessingGroup {
 	static data = group_data
 	
 	constructor(public data: InternalBlessingGroup) {
-		this.id = data.JHOKDPADHFM
+		this.id = data.GJHLAKLLFDI
 		BlessingGroup.map.set(this.id.toString(), this)
 	}
 	
 	resolveAllBlessings(): Blessing[] {
-		const blessings = this.data.ADJICNNJFEM.map(id => BlessingGroup.forId(id)?.resolveAllBlessings() || []).flat(1024)
+		const blessings = this.data.DNKFBOAIDCE.map(id => BlessingGroup.forId(id)?.resolveAllBlessings() || []).flat(1024)
 		
 		this.rarity_min = Math.min(...blessings.map(blessing => blessing.rarity).filter(v => v))
 		this.rarity_max = Math.max(...blessings.map(blessing => blessing.rarity).filter(v => v))

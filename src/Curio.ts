@@ -186,7 +186,7 @@ export class Curio {
 		
 		if (template.getParam('name') != this.name) template.addParam('displayname', this.name)
 		
-		return template.block()
+		return template.block(12)
 	}
 	
 	static loadAll() {

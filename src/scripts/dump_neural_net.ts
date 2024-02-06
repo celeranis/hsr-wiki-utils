@@ -3,7 +3,7 @@ import type { Dictionary, Value } from '../Shared.js';
 import { HashReference, TextMap } from '../TextMap.js';
 import { getFile } from '../files/GameFile.js';
 
-const talentData: Dictionary<InternalTalentData> = await getFile('ExcelOutput/RogueTalent.json')
+const talentData: Dictionary<InternalTalentData> = await getFile('ExcelOutput/RogueNousTalent.json')
 
 export interface InternalTalentData {
 	TalentID: number
@@ -32,7 +32,7 @@ for (let [i, layer] of Object.entries(layers)) {
 	i = (Number(i) + 1).toString()
 	const layerContent = [...layer.values()]
 	output.push(
-		`|${i}_price  = ${layerContent[0].Cost[0].ItemNum}`
+		`|${i}_cost   = ${layerContent[0].Cost[0].ItemNum}`
 	)
 	let n = 0
 	for (const talent of layerContent) {
@@ -40,7 +40,7 @@ for (let [i, layer] of Object.entries(layers)) {
 		const p = layerContent.length == 1 ? i : `${i}_${n}`
 		output.push(
 			`|${p}_title  = ${TextMap.default.getText(talent.EffectTitle)}`,
-			`|${p}_effect = ${TextMap.default.getText(talent.EffectDesc, talent.EffectDescParamList.map(v => v.Value))}`,
+			`|${p}_effect = ${TextMap.default.getText(talent.EffectDesc, talent.EffectDescParamList.map(v => v.Value)).replaceAll('\n', '<br />')}`,
 			''
 		)
 		totalCost += talent.Cost[0].ItemNum
@@ -49,4 +49,4 @@ for (let [i, layer] of Object.entries(layers)) {
 
 output.push(`Total cost: ${totalCost}`)
 
-writeFileSync('./output/ability_tree.wikitext', output.join('\n'))
+writeFileSync('./output/neural_net.wikitext', output.join('\n'))
