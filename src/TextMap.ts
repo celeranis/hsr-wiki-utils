@@ -132,7 +132,7 @@ export class TextMap {
 	static async generateOL(keys?: (string | number | HashReference) | (string | number | HashReference | undefined)[], params?: TextParams): Promise<string> {
 		const output = ['{{Other Languages']
 		if (!Array.isArray(keys)) keys = [keys]
-		const targetWsp = keys.length > 1 ? 9 : 6
+		const targetWsp = keys.length > 1 ? 9 : 5
 		for (const [i, key] of keys.entries()) {
 			if (i != 0) output.push('')
 			for (let [tkey, lang] of Object.entries(OTHER_LANGUAGES)) {
