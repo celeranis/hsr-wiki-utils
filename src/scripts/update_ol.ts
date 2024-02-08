@@ -1,5 +1,6 @@
 import { TextMap } from '../TextMap.js';
 import { AWB } from '../util/AWB.js';
+import { Template } from '../util/Template.js';
 
 const fileContents = AWB.init()
 
@@ -35,10 +36,11 @@ async function getOL(target: string) {
 	return chosen
 }
 
-const ol = await getOL(AWB.page_name)
+const title = Template.getParamValue(AWB.file_contents, 'title') || AWB.page_name
+const ol = await getOL(title)
 
 if (ol) {
-	const newContents = fileContents.replace(/{{Other Languages.+?}}/is, ol)
+	const newContents = fileContents.replace(/{{Other Languages.+?\n}}/is, ol)
 	if (fileContents == newContents) {
 		await AWB.confirm('No changes. Skip?')
 	} else {
