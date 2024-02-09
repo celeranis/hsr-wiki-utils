@@ -19,6 +19,12 @@ export function pathListDisplay(pathNames: AeonPath[]) {
 	return [...pathNames.slice(0, -1).map(name => pathDisplayName(name)), 'or ' + pathDisplayName(pathNames[pathNames.length])].join(', ')
 }
 
+export function sanitizeString(str: string) {
+	return str
+		.replaceAll(/[\/\\=<>\|:]/g, '-')
+		.replaceAll(/[\*"]/g, '')
+}
+
 export interface Value<T> {
 	Value: T
 }
