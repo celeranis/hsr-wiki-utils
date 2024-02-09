@@ -29,3 +29,19 @@ export async function getFile<T extends object>(path: string, version: string = 
 			throw err
 		})
 }
+
+export class LazyData<T extends object> {
+	data?: T
+	public constructor(public path: string, public version?: string) {}
+
+	async get(): Promise<T> {
+		if (!this.isLoaded()) {
+			this.data = await getFile<T>(this.path, this.version)
+		}
+		return this.data as T
+	}
+
+	isLoaded(): this is { data: T } {
+		return Boolean(this.data)
+	}
+}
