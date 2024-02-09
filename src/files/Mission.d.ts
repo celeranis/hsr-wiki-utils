@@ -24,3 +24,8 @@ export interface InternalMainMission {
 	ChapterID: number
 	SubRewardList: number[]
 }
+
+export interface InternalFateAtlasEntry {
+	MissionID: number
+	MissionConclusion: HashReference
+}

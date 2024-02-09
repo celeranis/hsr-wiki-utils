@@ -81,7 +81,7 @@ export class Template<N extends keyof TemplateMap, P extends Record<string, stri
 	}
 	
 	static addParamValue(input: string, name: string, value: string | number) {
-		const regex = new RegExp(`(\\|${name}\\s*=\\s*?)[\\d;]*\\s*?(\\r?\\n?(?:\\||}}))`)
+		const regex = new RegExp(`(\\|${name}\\s*=\\ *)[^\|}]*?\\n*(\\r?\\n?(?:\\||}}))`)
 		if (regex.test(input)) {
 			return input.replace(regex, `$1${value}$2`)
 		} else {
