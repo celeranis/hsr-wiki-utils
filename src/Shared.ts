@@ -22,7 +22,7 @@ export function pathListDisplay(pathNames: AeonPath[]) {
 export function sanitizeString(str: string) {
 	return str
 		.replaceAll(/[\/\\=<>\|:]/g, '-')
-		.replaceAll(/[\*"]/g, '')
+		.replaceAll(/[\*"?:,]/g, '')
 }
 
 export interface Value<T> {
@@ -57,4 +57,15 @@ export const RARITIES = {
 	Rare: 3,
 	VeryRare: 4,
 	SuperRare: 5
+}
+
+export function titleCase(string: string) {
+	return string
+		.replaceAll(/([a-z0-9])([A-Z])/g, '$1 $2')
+		.replaceAll('_', ' ')
+		.replaceAll(/(?:\s|^)[a-z]/g, s => s.toUpperCase())
+}
+
+export function n(nextWord: string) {
+	return nextWord.match(/^[aeiou]/) ? 'n' : ''
 }
