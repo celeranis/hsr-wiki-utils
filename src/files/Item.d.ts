@@ -9,7 +9,7 @@ export type ItemSubType =
 	| 'Mission' | 'Book' | 'ChatBubble' | 'PhoneTheme' | 'MuseumExhibit' | 'MuseumStuff' 
 	| 'AetherSkill' | 'AetherSpirit' | 'ChessRogueDiceSurface' | 'GameplayCounter' 
 	| 'ForceOpitonalGift' | 'Food' | 'Formula' | 'AvatarCard' | 'HeadIcon' | 'Eidolon'
-	| 'MusicAlbum'
+	| 'MusicAlbum' | 'TravelBrochurePaster' | 'Equipment' | 'Relic'
 	
 export type ItemRarity = 
 	| 'SuperRare'	// 5 stars
@@ -46,4 +46,42 @@ export interface InternalItem {
 	ItemGroup?: number
 	SellType?: ItemSellType
 	IsShowRedDot?: boolean
+}
+
+export interface InternalItemComefrom {
+	ID: number
+	Comefromid: number
+	Sort: number
+	Desc: HashReference
+	GotoID: number
+	GotoParam: number[]
+	EnableMissionTrack?: boolean
+	NPCMonsterTrackID?: number
+}
+
+export interface InternalPassSticker {
+	ID: number
+	TravelBrochureID: number[]
+	IncreaseCompletion: number
+	DefaultUnlock?: boolean
+	Type: 'Image' | 'Text'
+	PasterTextmap?: HashReference
+	PasterUnlockDesc?: HashReference
+}
+
+export interface InternalItemPurpose {
+	ID: number
+	PurposeText: HashReference
+}
+
+export interface InternalPassPage {
+	ID: number
+	DiaryGroupID: number
+	Conditions: unknown[]
+	FinishQuestID: number
+	Type: 'Intro' | 'Main'
+	DirectoryName: HashReference
+	Sort: number
+	ShowInDirectory: boolean
+	ShowUnlockToast?: boolean
 }
