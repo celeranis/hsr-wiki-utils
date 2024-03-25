@@ -1,4 +1,3 @@
-import type { ItemReference } from '../Shared.ts'
 import type { HashReference } from '../TextMap.ts'
 
 export type ItemMainType = 'Virtual' | 'Material' | 'Usable' | 'Display' | 'Mission'
@@ -85,3 +84,10 @@ export interface InternalPassPage {
 	ShowInDirectory: boolean
 	ShowUnlockToast?: boolean
 }
+
+export interface ItemReference {
+	ItemID: number
+	ItemNum?: number
+}
+
+export type ItemConfig = Record<string, InternalItem>

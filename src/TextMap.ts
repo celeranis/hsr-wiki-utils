@@ -136,7 +136,7 @@ export class TextMap {
 		for (const [i, key] of keys.entries()) {
 			if (i != 0) output.push('')
 			for (let [tkey, lang] of Object.entries(OTHER_LANGUAGES)) {
-				if (keys.length > 1) tkey = `${i}_${tkey}`
+				if (keys.length > 1) tkey = `${i+1}_${tkey}`
 				output.push(`|${whitespace(tkey, targetWsp)}= ${(await this.load(undefined, lang)).getText(key, params)}`)
 			}
 		}

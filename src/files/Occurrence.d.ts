@@ -1,4 +1,4 @@
-import type { AeonPath } from '../Shared.ts'
+import type { AeonPath, Dictionary } from '../Shared.ts'
 import type { HashReference } from '../TextMap.ts'
 
 export interface InternalEventSection {
@@ -110,3 +110,5 @@ export type EffectType =
 	| 'RepairRogueMiracle' | 'ChangeLineupData' | 'TriggerRogueMiracleRepair' | 'ReviveAvatar' | 'RepeatableGamble'
 
 export type CostType = 'CostItemValue' | 'CostHpCurrentPercent' | 'CostHpMaxPercent' | 'CostItemPercent' | 'CostHpSpToPercent'
+
+export type RogueTalkNameConfig = Dictionary<InternalTalkName>

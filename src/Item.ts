@@ -45,6 +45,7 @@ export class Item {
 	rarity: number
 	visible: boolean
 	icon_path: string
+	icon_path_small: string
 	purpose_id?: number
 	inventory_tab?: InventoryTab
 	inventory_tab_tag?: number
@@ -64,6 +65,7 @@ export class Item {
 		
 		this.rarity = Item.rarityMap[data.Rarity] ?? 0
 		this.icon_path = data.ItemFigureIconPath
+		this.icon_path_small = data.ItemIconPath
 		this.purpose_id = data.PurposeType
 		this.visible = data.isVisible ?? false
 		this.inventory_tab_tag = data.InventoryDisplayTag
