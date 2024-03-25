@@ -6,6 +6,14 @@ const SUMMARY_HEADER = /==\s*?Summary\s*?==/gi
 
 const contents = AWB.init()
 
+const contentsLower = contents.toLowerCase()
+if (
+	contentsLower.includes('{{file') 
+	|| contentsLower.includes('#redirect') 
+	|| contentsLower.includes('{{delete') 
+	|| contentsLower.includes('{{map')
+) process.exit(0)
+
 const categories = [...contents.matchAll(CATEGORY_REGEXP)].map(match => match[1]).join(';')
 
 let output = contents

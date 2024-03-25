@@ -29,7 +29,7 @@ export interface Value<T> {
 	Value: T
 }
 
-export type Version = '1.0' | '1.1' | '1.2' | '1.3' | '1.4' | '1.5'| '1.6' | '2.0'
+export type Version = '1.0' | '1.1' | '1.2' | '1.3' | '1.4' | '1.5'| '1.6' | '2.0' | '2.1'
 
 export const VERSION_COMMITS: Dictionary<string, Version> = {
 	'1.0': '4a36e628f9f34e6221b167b6ae0235a2f3934330',
@@ -39,17 +39,13 @@ export const VERSION_COMMITS: Dictionary<string, Version> = {
 	'1.4': '6acdba35cbf80adc100dbde528b1c271f50dcb9d',
 	'1.5': '59d64be43a1da285cf22ba9be5ed90ef2b23f857',
 	'1.6': '267db9b8cc44face0f376075f0828c5e1dd20bff',
-	'2.0': 'f8f4700d0504f11f262e8001424ffab1cdba99e7'
+	'2.0': 'ca821fbec8c6d6ae37ed323ed76d1fc998bae84b',
+	'2.1': '' // TODO: Add when live
 }
 
 export const VERSION_LIST: Version[] = Object.keys(VERSION_COMMITS).sort() as Version[]
 
 export type Dictionary<V, K extends string | number | symbol = string> = { [key in K]: V }
-
-export interface ItemReference {
-	ItemID: number
-	ItemNum?: number
-}
 
 export const RARITIES = {
 	Normal: 1,
@@ -68,4 +64,21 @@ export function titleCase(string: string) {
 
 export function n(nextWord: string) {
 	return nextWord.match(/^[aeiou]/) ? 'n' : ''
+}
+
+export interface ObjectDiffResult<T> {
+	added: T[]
+	removed: T[]
+}
+
+export function objectDiff<T>(older: Dictionary<T>, newer: Dictionary<T>): ObjectDiffResult<T> {
+	const added: T[] = Object.entries(newer)
+		.filter(([key]) => !older[key])
+		.map(pair => pair[1])
+		
+	const removed: T[] = Object.entries(older)
+		.filter(([key]) => !newer[key])
+		.map(pair => pair[1])
+		
+	return { added, removed }
 }

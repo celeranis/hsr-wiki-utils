@@ -1,5 +1,6 @@
 import { mkdirSync, writeFileSync } from 'fs';
 import { BlessingGroup } from '../Blessing.js';
+import { ChangeHistory } from '../ChangeHistory.js';
 import { Event } from '../Event.js';
 import { Dictionary } from '../Shared.js';
 import { TextMap } from '../TextMap.js';
@@ -47,7 +48,7 @@ const PAGE_FORMAT =
 <<OL>>
 
 ==Change History==
-{{Change History|1.0}}
+{{Change History|<<VERSION>>}}
 `
 
 const IMAGE_MAP = {
@@ -173,6 +174,7 @@ async function output(npc: InternalNPCDialogue) {
 
 	finalOutput = finalOutput
 		.replaceAll('<<OL>>', await TextMap.generateOL(event.name_hash))
+		.replaceAll('<<VERSION>>', (await ChangeHistory.occurrences.findAdded(event.npc_dialog.RogueNPCID.toString()))[0] ?? '<!--unknown-->')
 		.replaceAll(/<<\w+>>/gi, '')
 	
 	const dir = `./output/events/${sanitize(MERGE_FOLDERS[event.subname] ? 'Occurrence' : event.subname)}/${sanitize(event.series_name)}`

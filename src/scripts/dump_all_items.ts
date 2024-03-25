@@ -1,4 +1,5 @@
 import { mkdirSync, writeFileSync } from 'fs';
+import { ChangeHistory } from '../ChangeHistory.js';
 import { Item } from '../Item.js';
 import { n, sanitizeString } from '../Shared.js';
 import { TextMap } from '../TextMap.js';
@@ -7,13 +8,13 @@ import { Template } from '../util/Template.js';
 
 await Item.loadAll()
 
-const SKIP_TYPES: ItemSubType[] = ['AetherSpirit', 'AvatarCard', 'Book', 'Formula', 'HeadIcon']
+const SKIP_TYPES: ItemSubType[] = ['AetherSpirit', 'AvatarCard', 'Book', 'Formula', 'HeadIcon', 'Food']
 const SHOP_KEYWORDS: string[] = [
 	'exchange', 'shop', 'store', 'stall', 'vend', 'stand', 
 	'parcel', 'truck', 'depot', 'diner', 'trolley', 'teahouse', 
 	'nutritreasures', 'anderson', 'sleepless earl'
 ]
-const sourceEntryLinkOverride = ['Omni-Synthesizer', 'Assignment']
+const sourceEntryLinkOverride = ['Omni-Synthesizer', 'Assignment', 'Simulated Universe']
 
 const typeLinkOverride = {
 	'Dreamscape Pass Sticker': '[[Dreamscape Pass]] Sticker'
@@ -125,7 +126,12 @@ for (const [source, data] of Object.entries(Item.itemData)) {
 		output.push(
 			'\n==Other Languages==',
 			await TextMap.generateOL(item.name_hash),
-			`\n==Change History==\n{{Change History|2.0}}`,
+		)
+		
+		const [releaseVersion] = await ChangeHistory.item[source as keyof typeof ChangeHistory.item].findAdded(item.id.toString())
+		output.push(
+			'\n==Change History==',
+			`{{Change History|${releaseVersion ?? `<!--unknown-->`}}}`
 		)
 
 		switch (item.inventory_tab) {

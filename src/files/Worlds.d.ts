@@ -1,5 +1,6 @@
-import type { AttackType, Dictionary, ItemReference } from '../Shared.ts'
+import type { AttackType, Dictionary } from '../Shared.ts'
 import type { HashReference } from '../TextMap.ts'
+import type { ItemReference } from './Item.js'
 
 export type InternalWorldMap = { [world: string]: { [entryNum: string]: InternalWorldMapEntry } }
 
