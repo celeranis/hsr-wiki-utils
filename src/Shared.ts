@@ -82,3 +82,22 @@ export function objectDiff<T>(older: Dictionary<T>, newer: Dictionary<T>): Objec
 		
 	return { added, removed }
 }
+
+export type AmbigType = 'item' | 'mission'
+const ambigTitles = {
+	'The Sound and the Fury': {
+		item: 'The Sound and the Fury (Item)',
+		mission: 'The Sound and the Fury'
+	}
+}
+
+export function wikiTitle(name: string, type?: AmbigType) {
+	if (type && ambigTitles[name]?.[type]) {
+		return ambigTitles[name][type]
+	}
+	
+	return name
+		.replaceAll('#', '')
+		.replaceAll(/<.+?>/g, '')
+		.replaceAll("''", '')
+}

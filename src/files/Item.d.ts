@@ -1,3 +1,4 @@
+import { Dictionary } from '../Shared.ts'
 import type { HashReference } from '../TextMap.ts'
 
 export type ItemMainType = 'Virtual' | 'Material' | 'Usable' | 'Display' | 'Mission'
@@ -91,3 +92,24 @@ export interface ItemReference {
 }
 
 export type ItemConfig = Record<string, InternalItem>
+
+export interface InternalRecipe {
+	ID: number
+	FormulaType: 'Normal' | 'SelectedRelic' | 'Sepcial'
+	RelicList?: unknown[]
+	SpecialMaterialCost?: unknown[]
+	ItemID: number
+	MaterialCost: ItemReference[]
+	CoinCost?: number
+	Type: number
+	Order: number
+	FormulaRequire: number
+	MaxCount: number
+	IsShowHoldNumber: boolean
+	ItemComposeTag: number[]
+	LimitType: 'NotLimit' | 'Weekly'
+	LimitValue?: number
+	FuncType: 'Replace' | 'Compose'
+}
+
+export type InternalRecipeConfig = Dictionary<InternalRecipe>

@@ -52,7 +52,27 @@ export interface TemplateMap {
 		rarity: number
 		effect: string
 		description: string
-	} & {[T in `type${number}`]: string} & {[T in `source${number}`]: string}
+	} & {[T in `type${number}`]: string} & {[T in `source${number}`]: string},
+	'Consumable Infobox': {
+		id: number
+		title?: string
+		image: string
+		type: string
+		rarity: number
+		effect: string
+		description: string
+		effectType: string
+		effectType2: string
+		effectType3: string
+		effectType4?: string
+		recipe: string
+	} & { [T in `source${number}`]: string },
+	'Recipe': {
+		type: string
+		group: string
+		[itemName: string]: string | number
+		sort: string
+	}
 }
 
 export class Template<N extends keyof TemplateMap, P extends Record<string, string | number | boolean> = TemplateMap[N]> {

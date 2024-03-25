@@ -1,9 +1,8 @@
 import { Dictionary, sanitizeString, titleCase } from './Shared.js';
 import { textMap } from './TextMap.js';
 import { LazyData } from './files/GameFile.js';
-import { InternalItemComefrom, InternalItemPurpose, InternalPassPage, InternalPassSticker, type InternalItem, type ItemMainType, type ItemRarity, type ItemSubType } from './files/Item.js';
+import { InternalItemComefrom, InternalItemPurpose, InternalPassPage, InternalPassSticker, InternalRecipeConfig, ItemConfig, type InternalItem, type ItemMainType, type ItemRarity, type ItemSubType } from './files/Item.js';
 
-type ItemData = Dictionary<InternalItem>
 type ItemSourceData = Dictionary<Dictionary<InternalItemComefrom>>
 
 export type InventoryTab = 'Upgrade Materials' | 'Light Cone' | 'Missions' 
@@ -11,20 +10,22 @@ export type InventoryTab = 'Upgrade Materials' | 'Light Cone' | 'Missions'
 
 export class Item {
 	static readonly itemData = {
-		main: new LazyData<ItemData>('ExcelOutput/ItemConfig.json'),
-		characters: new LazyData<ItemData>('ExcelOutput/ItemConfigAvatar.json'),
-		character_default_pfps: new LazyData<ItemData>('ExcelOutput/ItemConfigAvatarPlayerIcon.json'),
-		eidolons: new LazyData<ItemData>('ExcelOutput/ItemConfigAvatarRank.json'),
-		skins: new LazyData<ItemData>('ExcelOutput/ItemConfigAvatarSkin.json'),
-		readables: new LazyData<ItemData>('ExcelOutput/ItemConfigBook.json'),
-		disks: new LazyData<ItemData>('ExcelOutput/ItemConfigDisk.json'),
-		light_cones: new LazyData<ItemData>('ExcelOutput/ItemConfigEquipment.json'),
-		relics: new LazyData<ItemData>('ExcelOutput/ItemConfigRelic.json'),
+		main: new LazyData<ItemConfig>('ExcelOutput/ItemConfig.json'),
+		characters: new LazyData<ItemConfig>('ExcelOutput/ItemConfigAvatar.json'),
+		character_default_pfps: new LazyData<ItemConfig>('ExcelOutput/ItemConfigAvatarPlayerIcon.json'),
+		eidolons: new LazyData<ItemConfig>('ExcelOutput/ItemConfigAvatarRank.json'),
+		skins: new LazyData<ItemConfig>('ExcelOutput/ItemConfigAvatarSkin.json'),
+		readables: new LazyData<ItemConfig>('ExcelOutput/ItemConfigBook.json'),
+		disks: new LazyData<ItemConfig>('ExcelOutput/ItemConfigDisk.json'),
+		light_cones: new LazyData<ItemConfig>('ExcelOutput/ItemConfigEquipment.json'),
+		relics: new LazyData<ItemConfig>('ExcelOutput/ItemConfigRelic.json'),
+		profile_pics: new LazyData<ItemConfig>('ExcelOutput/ItemPlayerCard.json'),
 	}
 	static readonly itemSources = new LazyData<ItemSourceData>('ExcelOutput/ItemComefrom.json')
 	static readonly passStickerData = new LazyData<Dictionary<InternalPassSticker>>('ExcelOutput/PasterConfig.json')
 	static readonly itemPurpose = new LazyData<Dictionary<InternalItemPurpose>>('ExcelOutput/ItemPurpose.json')
 	static readonly passPages = new LazyData<Dictionary<InternalPassPage>>('ExcelOutput/TravelBrochureConfig.json')
+	static readonly recipeData: LazyData<InternalRecipeConfig> = new LazyData<InternalRecipeConfig>('ExcelOutput/ItemComposeConfig.json')
 	
 	static readonly rarityMap: Record<ItemRarity, number> = {
 		SuperRare: 	5,
@@ -49,6 +50,7 @@ export class Item {
 	purpose_id?: number
 	inventory_tab?: InventoryTab
 	inventory_tab_tag?: number
+	group_id?: number
 	
 	constructor(public data: InternalItem) {
 		this.name = textMap.getText(data.ItemName)
@@ -57,6 +59,7 @@ export class Item {
 		this.effect = textMap.getText(data.ItemDesc)
 		this.type = data.ItemMainType
 		this.subtype = data.ItemSubType
+		this.group_id = data.ItemGroup
 		
 		const bgDesc = textMap.getText(data.ItemBGDesc)
 		const descSplit = bgDesc.match(/(.+)\n\n(.+)/s)
@@ -208,4 +211,26 @@ export class Item {
 				return 'Relics'
 		}
 	}
+	
+	async getRecipe(): Promise<RecipeEntry[] | null> {
+		const recipeData = await Item.recipeData.get()
+		
+		for (const recipe of Object.values(recipeData)) {
+			if (recipe.ItemID == this.id) {
+				return recipe.MaterialCost.map(item => {
+					return {
+						item: Item.fromId(item.ItemID),
+						count: item.ItemNum
+					} as RecipeEntry
+				})
+			}
+		}
+		
+		return null
+	}
+}
+
+export interface RecipeEntry {
+	item: Item
+	count: number
 }
