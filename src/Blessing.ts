@@ -57,8 +57,8 @@ export class BlessingGroup {
 
 		const displayRarity = this.rarity_min == this.rarity_max ? `${this.rarity_min}-star` : `${this.rarity_min}-${this.rarity_max} star`
 		const pathName = this.paths.size > 6 || this.paths.size == 0 ? '' : 'of ' + pathListDisplay([...this.paths.values()])
-		const enhanced = this.enhanced == 'only' ? 'Enhanced ' : ''
-		this.name = `${enhanced} ${displayRarity} Blessing(s) ${pathName}`.trim()
+		const enhanced = this.enhanced == 'only' ? `Enhanced ` : ''
+		this.name = `${enhanced}${displayRarity} Blessing(s) ${pathName}`.trim()
 		
 		return blessings
 	}
