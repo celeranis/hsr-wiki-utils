@@ -1,14 +1,18 @@
 import { mkdirSync, writeFileSync } from 'fs';
 import { ChangeHistory } from '../ChangeHistory.js';
 import { Item } from '../Item.js';
-import { n, sanitizeString } from '../Shared.js';
+import { n, sanitizeString, wikiTitle } from '../Shared.js';
 import { TextMap } from '../TextMap.js';
-import { ItemSubType } from '../files/Item.js';
+import { ItemMainType, ItemSubType } from '../files/Item.js';
 import { Template } from '../util/Template.js';
 
 await Item.loadAll()
 
-const SKIP_TYPES: ItemSubType[] = ['AetherSpirit', 'AvatarCard', 'Book', 'Formula', 'HeadIcon', 'Food']
+const SKIP_TYPES: (ItemSubType | ItemMainType)[] = [
+	'AetherSpirit', 'AvatarCard', 'Book', 'Formula',
+	'Food', 'Relic', 'RelicRarityShowOnly', 'RelicSetShowOnly',
+	'Equipment'
+]
 const SHOP_KEYWORDS: string[] = [
 	'exchange', 'shop', 'store', 'stall', 'vend', 'stand', 
 	'parcel', 'truck', 'depot', 'diner', 'trolley', 'teahouse', 
@@ -20,9 +24,16 @@ const typeLinkOverride = {
 	'Dreamscape Pass Sticker': '[[Dreamscape Pass]] Sticker'
 }
 
+const SINGLE_TYPE = {
+	profile_pics: true,
+	eidolons: true,
+}
+
 for (const [source, data] of Object.entries(Item.itemData)) {
+	if (source == 'character_default_pfps') continue
+	
 	for (const itemData of Object.values(data.data!)) {
-		if (SKIP_TYPES.includes(itemData.ItemSubType)) continue
+		if (SKIP_TYPES.includes(itemData.ItemMainType) || SKIP_TYPES.includes(itemData.ItemSubType)) continue
 		
 		const item = new Item(itemData)
 		
@@ -30,10 +41,7 @@ for (const [source, data] of Object.entries(Item.itemData)) {
 		
 		const types = await item.getTypes()
 		
-		const pageTitle = item.name
-			.replaceAll('#', '')
-			.replaceAll(/<.+?>/g, '')
-			.replaceAll("''", '')
+		const pageTitle = wikiTitle(item.name) + (source == 'profile_pics' ? ' (Profile Picture)' : '')
 		
 		output.push(
 			'<%-- [PAGE_INFO]',
@@ -98,7 +106,7 @@ for (const [source, data] of Object.entries(Item.itemData)) {
 				break
 			
 			default:
-				const firstType = types[0] || 'Item'
+				const firstType = types[0] || source == 'profile_pics' ? 'Profile Picture' : 'Item'
 				output.push(`'''${item.name}''' is a${n(firstType)} ${typeLinkOverride[firstType] || `[[${firstType}]]`}.`)
 				break
 		}
@@ -148,7 +156,7 @@ for (const [source, data] of Object.entries(Item.itemData)) {
 				break
 		}
 
-		mkdirSync(`./output/items/${source}/${sanitizeString(types[0] || 'Unknown')}/`, { recursive: true })
-		writeFileSync(`./output/items/${source}/${sanitizeString(types[0] || 'Unknown')}/${sanitizeString(item.name)}-${item.id}.wikitext`, output.join('\n'))
+		mkdirSync(`./output/items/${source}/${sanitizeString(types[0] || (SINGLE_TYPE[source] ? '' : 'Unknown'))}/`, { recursive: true })
+		writeFileSync(`./output/items/${source}/${sanitizeString(types[0] || (SINGLE_TYPE[source] ? '' : 'Unknown'))}/${sanitizeString(item.name)}-${item.id}.wikitext`, output.join('\n'))
 	}
 }
