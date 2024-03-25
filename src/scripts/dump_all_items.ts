@@ -106,7 +106,7 @@ for (const [source, data] of Object.entries(Item.itemData)) {
 				break
 			
 			default:
-				const firstType = types[0] || source == 'profile_pics' ? 'Profile Picture' : 'Item'
+				const firstType = types[0] || (source == 'profile_pics' ? 'Profile Picture' : 'Item')
 				output.push(`'''${item.name}''' is a${n(firstType)} ${typeLinkOverride[firstType] || `[[${firstType}]]`}.`)
 				break
 		}
