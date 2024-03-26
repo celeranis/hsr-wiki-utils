@@ -72,7 +72,7 @@ for (const missionData of Object.values(Mission.missionData)) {
 		.replaceAll('<<TYPE>>', mission.type)
 		.replaceAll('<<TYPEDISPLAY>>', mission.displayType)
 		.replaceAll('<<CHAPTERTITLE>>', mission.getChapterName() || '')
-		.replaceAll('<<SUMMARY>>', mission.description || "<!--official mission summary from Fate's Atlas-->")
+		.replaceAll('<<SUMMARY>>', mission.description?.replaceAll('\n', '<br />') || "<!--official mission summary from Fate's Atlas-->")
 		.replaceAll('<<NEXT>>', mission.getNext().map(mission => wikiTitle(mission.name, 'mission')).join(';'))
 		.replaceAll('<<OL>>', await TextMap.generateOL(mission.name_hash))
 		.replaceAll('<<VERSION>>', (await ChangeHistory.missions.findAdded(mission.id.toString()))[0] || '<!--unknown-->')
