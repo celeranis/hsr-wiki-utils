@@ -1,7 +1,7 @@
-import { Dictionary, sanitizeString, titleCase } from './Shared.js';
+import { Dictionary, sanitizeString, titleCase, wikiTitle } from './Shared.js';
 import { textMap } from './TextMap.js';
-import { LazyData } from './files/GameFile.js';
-import { InternalItemComefrom, InternalItemPurpose, InternalPassPage, InternalPassSticker, InternalRecipeConfig, ItemConfig, type InternalItem, type ItemMainType, type ItemRarity, type ItemSubType } from './files/Item.js';
+import { LazyData, getFile } from './files/GameFile.js';
+import type { InternalItem, InternalItemComefrom, InternalItemPurpose, InternalPassPage, InternalPassSticker, InternalRecipeConfig, InternalRewardData, ItemConfig, ItemMainType, ItemRarity, ItemReference, ItemSubType } from './files/Item.js';
 
 type ItemSourceData = Dictionary<Dictionary<InternalItemComefrom>>
 
@@ -9,6 +9,17 @@ export type InventoryTab = 'Upgrade Materials' | 'Light Cone' | 'Missions'
 	| 'Consumables' | 'Valuables' | 'Relics' | 'Other Materials'
 
 const HAS_EFFECT: ItemSubType[] = ['Food']
+
+export const COMMON_ITEMS = {
+	STELLAR_JADE: 1,
+	CREDIT: 2,
+	EXP: 21,
+	TRAILBLAZE_EXP: 22,
+	COSMIC_FRAGMENT: 31,
+	STANDARD_PASS: 101,
+	SPECIAL_PASS: 102,
+	FUEL: 201
+}
 
 export class Item {
 	static readonly itemData = {
@@ -224,17 +235,12 @@ export class Item {
 		}
 	}
 	
-	async getRecipe(): Promise<RecipeEntry[] | null> {
+	async getRecipe(): Promise<ItemList | null> {
 		const recipeData = await Item.recipeData.get()
 		
 		for (const recipe of Object.values(recipeData)) {
 			if (recipe.ItemID == this.id) {
-				return recipe.MaterialCost.map(item => {
-					return {
-						item: Item.fromId(item.ItemID),
-						count: item.ItemNum
-					} as RecipeEntry
-				})
+				return new ItemList(recipe.MaterialCost)
 			}
 		}
 		
@@ -242,7 +248,80 @@ export class Item {
 	}
 }
 
-export interface RecipeEntry {
+export interface ItemListEntry {
 	item: Item
 	count: number
+}
+
+const MISSION_COMMON = [COMMON_ITEMS.STELLAR_JADE, COMMON_ITEMS.CREDIT, COMMON_ITEMS.TRAILBLAZE_EXP]
+const rewardData = await getFile<Dictionary<InternalRewardData>>('ExcelOutput/RewardData.json')
+
+export class ItemList {
+	data: ItemListEntry[] = []
+	trailblaze_exp: number = 0
+	stellar_jade: number = 0
+	credits: number = 0
+	
+	constructor(data?: (ItemReference | ItemListEntry)[]) {
+		if (data) {
+			for (const entry of data) {
+				this.add(entry)
+			}
+		}
+	}
+	
+	add(entry: ItemReference | ItemListEntry) {
+		const item = 'item' in entry ? entry.item : Item.fromId(entry.ItemID)
+		if (!item) {
+			console.warn('Got unknown item in list entry:', entry)
+			return
+		}
+		const count = 'count' in entry ? entry.count : entry.ItemNum ?? 1
+		this.data.push({ item, count })
+
+		switch (item.id) {
+			case COMMON_ITEMS.TRAILBLAZE_EXP:
+				this.trailblaze_exp += count
+				break
+
+			case COMMON_ITEMS.CREDIT:
+				this.credits += count
+				break
+
+			case COMMON_ITEMS.STELLAR_JADE:
+				this.stellar_jade += count
+				break
+		}
+	}
+	
+	asCardList(removeCommon?: boolean, mini?: boolean) {
+		let adding = this.data
+		if (removeCommon) adding = adding.filter(entry => !MISSION_COMMON.includes(entry.item.id))
+		
+		return `{{Card List|${adding.map(entry => `${wikiTitle(entry.item.name, 'item')}*${entry.count}`).join(';')}|delim=;${mini ? '|mini=1' : ''}}}`
+	}
+	
+	asItemList(removeCommon?: boolean, mode: 'bullet' | 'br' | 'sent' = 'sent') {
+		let adding = this.data
+		if (removeCommon) adding = adding.filter(entry => !MISSION_COMMON.includes(entry.item.id))
+
+		return `{{Item List|${adding.map(entry => `${wikiTitle(entry.item.name, 'item')}*${entry.count}`).join(';')}|mode=${mode}}}`
+	}
+	
+	static fromRewardId(id: string | number) {
+		const list = new this()
+		
+		if (!rewardData[id]) {
+			if (id) console.warn(`Could not find reward ID ${id}`)
+			return list
+		}
+		
+		const reward = rewardData[id]
+		
+		for (let i = 1; reward[`ItemID_${i}`]; i++) {
+			list.add({ ItemID: reward[`ItemID_${i}`], ItemNum: reward[`Count_${i}`] })
+		}
+		
+		return list
+	}
 }

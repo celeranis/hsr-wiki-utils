@@ -45,10 +45,3 @@ export interface InternalUnlockInfo {
 	UnlockFinishWay: number
 	RogueUnlockDetail: HashReference
 }
-
-export interface InternalRewardData {
-	RewardID: number
-	Hcoin?: number
-	[k: `ItemID_${number}`]: number
-	[k: `Count_${number}`]: number
-}

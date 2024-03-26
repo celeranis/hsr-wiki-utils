@@ -112,4 +112,11 @@ export interface InternalRecipe {
 	FuncType: 'Replace' | 'Compose'
 }
 
+export interface InternalRewardData {
+	RewardID: number
+	Hcoin?: number
+	[k: `ItemID_${number}`]: number
+	[k: `Count_${number}`]: number
+}
+
 export type InternalRecipeConfig = Dictionary<InternalRecipe>

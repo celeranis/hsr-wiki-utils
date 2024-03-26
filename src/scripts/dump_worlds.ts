@@ -3,8 +3,8 @@ import { Dictionary, RARITIES, typeDisplayName } from '../Shared.js'
 import { Stage } from '../Stage.js'
 import { TextMap } from '../TextMap.js'
 import { getFile } from '../files/GameFile.js'
-import type { ItemReference } from '../files/Item.js'
-import type { InternalRewardData, InternalUnlockInfo, InternalWorldInfo, InternalWorldMap, InternalWorldMapEntry } from '../files/Worlds.js'
+import type { InternalRewardData, ItemReference } from '../files/Item.js'
+import type { InternalUnlockInfo, InternalWorldInfo, InternalWorldMap, InternalWorldMapEntry } from '../files/Worlds.js'
 import { Table } from '../util/Table.js'
 
 const maps: InternalWorldMap = await getFile('ExcelOutput/RogueMap.json')

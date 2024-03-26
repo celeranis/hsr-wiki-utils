@@ -85,9 +85,9 @@ for (const itemData of Object.values(await Item.itemData.main.get())) {
 			.addParam('type', 'Synthesis')
 			.addParam('group', 'Consumable')
 		
-		recipe.forEach(({ item, count }) => recipeTemplate.addParam(wikiTitle(item.name, 'item'), count))
+		recipe.data.forEach(({ item, count }) => recipeTemplate.addParam(wikiTitle(item.name, 'item'), count))
 		
-		recipeTemplate.addParam('sort', recipe.map(entry => wikiTitle(entry.item.name, 'item')).join(';'))
+		recipeTemplate.addParam('sort', recipe.data.map(entry => wikiTitle(entry.item.name, 'item')).join(';'))
 		
 		output.push(
 			'\n==Recipe==',
