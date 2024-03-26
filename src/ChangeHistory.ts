@@ -1,6 +1,7 @@
-import { VERSION_LIST, Version } from './Shared.js';
+import { Dictionary, VERSION_LIST, Version } from './Shared.js';
 import { HttpError, getFile } from './files/GameFile.js';
 import type { ItemConfig } from './files/Item.js';
+import type { InternalMainMission } from './files/Mission.js';
 import type { RogueTalkNameConfig } from './files/Occurrence.js';
 
 const ITEM_ID_MATCH = (items: ItemConfig, itemId: string) => items[itemId]
@@ -70,5 +71,10 @@ export class ChangeHistory<FileContents extends object, SearchReturn, FindArg> {
 	static occurrences = new ChangeHistory(
 		'ExcelOutput/RogueTalkNameConfig.json',
 		(items: RogueTalkNameConfig, talkId: string) => items[talkId]
+	)
+
+	static missions = new ChangeHistory(
+		'ExcelOutput/MainMission.json',
+		(items: Dictionary<InternalMainMission>, missionId: string) => items[missionId]
 	)
 }

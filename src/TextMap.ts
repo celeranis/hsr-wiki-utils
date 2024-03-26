@@ -1,6 +1,6 @@
 import config from '../config.json' with { type: "json" };
-import { getFile } from './files/GameFile.js';
 import type { Dictionary, Value, Version } from './Shared.js';
+import { getFile } from './files/GameFile.js';
 import { whitespace } from './util/General.js';
 
 export interface HashReference {
@@ -54,7 +54,7 @@ export class TextMap {
 	}
 	
 	// via https://github.com/Dimbreath/StarRailData/issues/6#issuecomment-1639425428
-	getStableHash(str: string) {
+	static getStableHash(str: string) {
 		let hash1 = 5381n;
 		let hash2 = 5381n;
 
@@ -117,6 +117,9 @@ export class TextMap {
 	
 	getText(mapKey?: string | number | HashReference, params?: TextParams, allowNewline: boolean = true): string {
 		if (!mapKey) return ''
+		if (typeof mapKey == 'string' && !Number(mapKey)) {
+			mapKey = TextMap.getStableHash(mapKey.toString())
+		}
 		return this.wikiFormatting(this.json[((mapKey instanceof Object) && mapKey.Hash?.toString()) || mapKey.toString()] ?? '', params, allowNewline)
 	}
 	

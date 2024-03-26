@@ -55,6 +55,10 @@ export const RARITIES = {
 	SuperRare: 5
 }
 
+export type StringResolvable = string | number | {
+	[Symbol.toStringTag](): string
+}
+
 export function titleCase(string: string) {
 	return string
 		.replaceAll(/([a-z0-9])([A-Z])/g, '$1 $2')
@@ -101,4 +105,18 @@ export function wikiTitle(name: string, type?: AmbigType) {
 		.replaceAll(/<.+?>/g, '')
 		.replaceAll("''", '')
 		.replaceAll('&mdash;', '—')
+}
+
+export function wikiTitleLink(name: string, type?: AmbigType) {
+	const newName = wikiTitle(name, type)
+	if (newName != name) {
+		return `[[${newName}|${name}]]`
+	} else {
+		return `[[${newName}]]`
+	}
+}
+
+export function zeroPad(number: number, length: number) {
+	const stringNum = Math.abs(number).toString()
+	return (number < 0 ? '-' : '') + '0'.repeat(length - stringNum.length) + stringNum
 }
