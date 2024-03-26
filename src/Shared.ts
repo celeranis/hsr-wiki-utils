@@ -100,4 +100,5 @@ export function wikiTitle(name: string, type?: AmbigType) {
 		.replaceAll('#', '')
 		.replaceAll(/<.+?>/g, '')
 		.replaceAll("''", '')
+		.replaceAll('&mdash;', '—')
 }

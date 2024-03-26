@@ -8,6 +8,8 @@ type ItemSourceData = Dictionary<Dictionary<InternalItemComefrom>>
 export type InventoryTab = 'Upgrade Materials' | 'Light Cone' | 'Missions' 
 	| 'Consumables' | 'Valuables' | 'Relics' | 'Other Materials'
 
+const HAS_EFFECT: ItemSubType[] = ['Food']
+
 export class Item {
 	static readonly itemData = {
 		main: new LazyData<ItemConfig>('ExcelOutput/ItemConfig.json'),
@@ -56,15 +58,21 @@ export class Item {
 		this.name = textMap.getText(data.ItemName)
 		this.name_hash = data.ItemName.Hash
 		this.id = data.ID
-		this.effect = textMap.getText(data.ItemDesc)
+		this.effect = HAS_EFFECT.includes(data.ItemSubType) ? textMap.getText(data.ItemDesc) : ''
 		this.type = data.ItemMainType
 		this.subtype = data.ItemSubType
 		this.group_id = data.ItemGroup
 		
-		const bgDesc = textMap.getText(data.ItemBGDesc)
-		const descSplit = bgDesc.match(/(.+)\n\n(.+)/s)
-		this.desc = descSplit ? descSplit[1] : (this.subtype == 'TravelBrochurePaster' ? '' : bgDesc)
-		this.bg_desc = descSplit ? descSplit[2] : (this.subtype == 'TravelBrochurePaster' ? bgDesc : '')
+		const desc = textMap.getText(data.ItemDesc)
+		if (!HAS_EFFECT.includes(data.ItemSubType) && data.ItemSubType != 'HeadIcon' && desc) {
+			this.desc = desc.trim()
+			this.bg_desc = textMap.getText(data.ItemBGDesc).trim()
+		} else {
+			const bgDesc = textMap.getText(data.ItemBGDesc)
+			const descSplit = bgDesc.match(/(.+)\n\n(.+)/s)
+			this.desc = descSplit ? descSplit[1] : (this.subtype == 'TravelBrochurePaster' ? '' : bgDesc)
+			this.bg_desc = descSplit ? descSplit[2] : (this.subtype == 'TravelBrochurePaster' ? bgDesc : '')
+		}
 		
 		this.rarity = Item.rarityMap[data.Rarity] ?? 0
 		this.icon_path = data.ItemFigureIconPath
@@ -77,6 +85,10 @@ export class Item {
 	
 	async getSources(): Promise<string[]> {
 		let sources: string[] = []
+		
+		if (this.subtype == 'HeadIcon') {
+			return [textMap.getText(this.data.ItemDesc)]
+		}
 		
 		if (this.subtype == 'TravelBrochurePaster') {
 			const stickerData = (await Item.passStickerData.get())[this.id]
