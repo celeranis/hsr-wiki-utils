@@ -18,7 +18,11 @@ const SHOP_KEYWORDS: string[] = [
 	'parcel', 'truck', 'depot', 'diner', 'trolley', 'teahouse', 
 	'nutritreasures', 'anderson', 'sleepless earl'
 ]
-const sourceEntryLinkOverride = ['Omni-Synthesizer', 'Assignment', 'Simulated Universe']
+const sourceEntryLinkOverride = [
+	'Omni-Synthesizer', 'Assignment', 'Simulated Universe',
+	'Nameless Honor', 'Cosmodyssey', 'An Unexpected Turn of Events', 'Fable of the Stars',
+	'Golden Capsule Machine', 'Diting', 'When the Stars of Ingenuity Shine', 'Requiem Mass'
+]
 
 const typeLinkOverride = {
 	'Dreamscape Pass Sticker': '[[Dreamscape Pass]] Sticker'
