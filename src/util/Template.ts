@@ -72,8 +72,30 @@ export interface TemplateMap {
 		group: string
 		[itemName: string]: string | number
 		sort: string
+	},
+	'Domain Infobox': {
+		title: string
+		image: string
+		type: DomainType
+		type2?: DomainSubtype
+		mechanism: string
+		boss?: string
+		requiredEL: string | number
+		recLevel: string | number
+		recTypes: string
+		cost: number
+		drops: string
+		drops_delim?: string
+		rewards: string
 	}
 }
+
+export type DomainType = 
+	| 'Calyx (Golden)' | 'Calyx (Crimson)' | 'Cavern of Corrosion' | 'Stagnant Shadow' | 'Echo of War' 
+	| 'Trailblaze Mission' | 'Companion Mission' | 'Adventure Mission' | 'One-Time' | 'Event'
+	| 'Level' | 'Excursion' | 'Simulated Universe'
+
+export type DomainSubtype = 'World' | 'Warring' | 'Exploratory'
 
 export class Template<N extends keyof TemplateMap, P extends Record<string, string | number | boolean> = TemplateMap[N]> {
 	constructor(public name: N, public params: Partial<P> = {}) {}
