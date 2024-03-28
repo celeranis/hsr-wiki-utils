@@ -3,6 +3,7 @@ import { HttpError, getFile } from './files/GameFile.js';
 import type { ItemConfig } from './files/Item.js';
 import type { InternalMainMission } from './files/Mission.js';
 import type { RogueTalkNameConfig } from './files/Occurrence.js';
+import type { InternalWorldInfo } from './files/Worlds.js';
 
 const ITEM_ID_MATCH = (items: ItemConfig, itemId: string) => items[itemId]
 
@@ -76,5 +77,10 @@ export class ChangeHistory<FileContents extends object, SearchReturn, FindArg> {
 	static missions = new ChangeHistory(
 		'ExcelOutput/MainMission.json',
 		(items: Dictionary<InternalMainMission>, missionId: string) => items[missionId]
+	)
+	
+	static worlds = new ChangeHistory(
+		'ExcelOutput/RogueAreaConfig.json',
+		(worlds: Dictionary<InternalWorldInfo>, worldId: string | number) => worlds[worldId]
 	)
 }

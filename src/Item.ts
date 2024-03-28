@@ -1,4 +1,4 @@
-import { Dictionary, sanitizeString, titleCase, wikiTitle } from './Shared.js';
+import { Dictionary, sanitizeString, titleCase, wikiTitle, wikiTitleLink } from './Shared.js';
 import { textMap } from './TextMap.js';
 import { LazyData, getFile } from './files/GameFile.js';
 import type { InternalItem, InternalItemComefrom, InternalItemPurpose, InternalPassPage, InternalPassSticker, InternalRecipeConfig, InternalRewardData, ItemConfig, ItemMainType, ItemRarity, ItemReference, ItemSubType } from './files/Item.js';
@@ -257,6 +257,8 @@ const MISSION_COMMON = [COMMON_ITEMS.STELLAR_JADE, COMMON_ITEMS.CREDIT, COMMON_I
 const rewardData = await getFile<Dictionary<InternalRewardData>>('ExcelOutput/RewardData.json')
 
 export class ItemList {
+	static readonly rewardData = rewardData
+	
 	data: ItemListEntry[] = []
 	trailblaze_exp: number = 0
 	stellar_jade: number = 0
@@ -294,18 +296,30 @@ export class ItemList {
 		}
 	}
 	
+	sortRarityId(): ItemListEntry[] {
+		return this.data.toSorted((data, data2) => (data.item.id + (data.item.rarity * -10000000)) - (data2.item.id + (data2.item.rarity * -10000000)))
+	}
+	
 	asCardList(removeCommon?: boolean, mini?: boolean) {
-		let adding = this.data
+		let adding = this.sortRarityId()
 		if (removeCommon) adding = adding.filter(entry => !MISSION_COMMON.includes(entry.item.id))
 		
-		return `{{Card List|${adding.map(entry => `${wikiTitle(entry.item.name, 'item')}*${entry.count}`).join(';')}|delim=;${mini ? '|mini=1' : ''}}}`
+		const addList = adding.map(entry => `${wikiTitle(entry.item.name, 'item')}*${entry.count}` + (entry.item.subtype.includes('Relic') ? ` { rarity = ${entry.item.rarity} }` : '')).join('; ')
+		
+		return `{{Card List|${(addList.includes('=') ? '1=' : '') + addList}|delim=;${mini ? '|mini=1' : ''}}}`
 	}
 	
 	asItemList(removeCommon?: boolean, mode: 'bullet' | 'br' | 'sent' = 'sent') {
-		let adding = this.data
+		let adding = this.sortRarityId()
 		if (removeCommon) adding = adding.filter(entry => !MISSION_COMMON.includes(entry.item.id))
+		
+		const addList = adding.map(entry => `${wikiTitle(entry.item.name, 'item')}*${entry.count}`).join('; ')
 
-		return `{{Item List|${adding.map(entry => `${wikiTitle(entry.item.name, 'item')}*${entry.count}`).join(';')}|mode=${mode}}}`
+		return `{{Item List|${(addList.includes('=') ? '1=' : '') + addList}|mode=${mode}}}`
+	}
+	
+	asBasicList(delim: string = '; ', link?: boolean) {
+		return this.sortRarityId().map(entry => (link ? wikiTitleLink : wikiTitle)(entry.item.name, 'item')).join(delim)
 	}
 	
 	static fromRewardId(id: string | number) {

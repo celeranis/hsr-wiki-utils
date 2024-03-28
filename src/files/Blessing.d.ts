@@ -2,9 +2,9 @@ import type { HashReference } from '../TextMap.ts'
 
 export interface InternalBlessingGroup {
 	/** id */
-	GJHLAKLLFDI: number
+	EGDAIIJDDPA: number
 	/** included groups and blessings */
-	DNKFBOAIDCE: number[]
+	AMGHNOBDGLM: number[]
 }
 
 export interface InternalBlessing {

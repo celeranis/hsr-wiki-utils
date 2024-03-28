@@ -120,7 +120,7 @@ export class TextMap {
 		if (typeof mapKey == 'string' && !Number(mapKey)) {
 			mapKey = TextMap.getStableHash(mapKey.toString())
 		}
-		return this.wikiFormatting(this.json[((mapKey instanceof Object) && mapKey.Hash?.toString()) || mapKey.toString()] ?? '', params, allowNewline)
+		return this.wikiFormatting((this.json[((mapKey instanceof Object) && mapKey.Hash?.toString()) || mapKey.toString()] ?? '').replaceAll('|', '&vert;'), params, allowNewline)
 	}
 	
 	getSentence(sentence: Sentence | number | string, textOnly: boolean = false, allowNewline: boolean = true, allowSpeakerColors: boolean = false) {

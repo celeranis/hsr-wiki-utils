@@ -21,7 +21,8 @@ const SHOP_KEYWORDS: string[] = [
 const sourceEntryLinkOverride = [
 	'Omni-Synthesizer', 'Assignment', 'Simulated Universe',
 	'Nameless Honor', 'Cosmodyssey', 'An Unexpected Turn of Events', 'Fable of the Stars',
-	'Golden Capsule Machine', 'Diting', 'When the Stars of Ingenuity Shine', 'Requiem Mass'
+	'Golden Capsule Machine', 'Diting', 'When the Stars of Ingenuity Shine', 'Requiem Mass',
+	'Vignettes in a Cup'
 ]
 
 const typeLinkOverride = {
@@ -107,6 +108,10 @@ for (const [source, data] of Object.entries(Item.itemData)) {
 			
 			case 17:
 				output.push(`'''${item.name}''' is a Tier-${item.rarity} [[Synthesis Material]].`)
+				break
+			
+			case 20:
+				output.push(`'''${item.name}''' is a [[Phonograph]] Record that the player can use to unlock the corresponding soundtrack to play on the [[Astral Express]]. It contains the soundtrack [[${item.name.replaceAll("''", '').replaceAll(/^"|"$/g, '')}]].`)
 				break
 			
 			default:

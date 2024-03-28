@@ -30,7 +30,7 @@ PageTitle=#<<TITLE>>#
 |stellarJade   = <<JADES>>
 |other         = <<REWARDS>>
 }}
-'''<<NAME>>''' is <<TAN>> [[<<TYPEDISPLAY>>]]<<DETAILS>>.
+'''''<<NAME>>''''' is <<TAN>> [[<<TYPEDISPLAY>>]]<<DETAILS>>.
 
 ==Steps==
 <<STEPS>>
