@@ -48,3 +48,8 @@ export interface InternalDiceBranch {
 	DiceLightColor: string
 	RecommendSurfaceList: number[]
 }
+
+export interface InternalMiscDisplay {
+	DisplayID: number
+	DisplayContent: HashReference
+}

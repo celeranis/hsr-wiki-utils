@@ -1,3 +1,4 @@
+import { Value } from '../Shared.ts'
 import type { HashReference } from '../TextMap.js'
 
 export interface Act {
@@ -15,12 +16,12 @@ export interface TaskShowBg {
 	TalkBgID: number
 }
 
-export interface PlayAndWaitSimpleTalk {
+export interface RoguePlayAndWaitSimpleTalk {
 	$type: "RPG.GameCore.PlayAndWaitRogueSimpleTalk" | "RPG.GameCore.PlayRogueSimpleTalk"
-	SimpleTalkList: SimpleTalk[]
+	SimpleTalkList: RogueSimpleTalk[]
 }
 
-export interface SimpleTalk {
+export interface RogueSimpleTalk {
 	TalkSentenceID: number
 	ProtectTime?: number
 }
@@ -31,7 +32,7 @@ export interface TriggerSound {
 	EmitterType: string
 }
 
-export interface PlayOptionTalk {
+export interface RoguePlayOptionTalk {
 	$type: "RPG.GameCore.PlayRogueOptionTalk"
 	OptionList: TalkOption[]
 }
@@ -59,17 +60,38 @@ export interface TalkOptionSimple {
 
 export interface WaitCustomString {
 	$type: 'RPG.GameCore.WaitCustomString'
-	CustomString: {
-		Value: string
-	}
+	CustomString: ValueReference<string>
 }
 
 export interface TriggerCustomString {
 	$type: 'RPG.GameCore.TriggerCustomString'
-	CustomString: {
-		Value: string
-	}
+	CustomString: ValueReference<string>
 }
+
+export interface PlayAndWaitSimpleTalk {
+	$type: 'RPG.GameCore.PlayAndWaitSimpleTalk'
+	SimpleTalkList: SimpleTalk[]
+}
+
+export interface SimpleTalk {
+	TextSpeed: number
+	TalkSentenceID: number
+	ProtectTime: number
+}
+
+export interface PlayOptionTalk {
+	$type: 'RPG.GameCore.PlayOptionTalk'
+	TalkSentenceID: number
+	OptionIconType: string
+	TriggerCustomString: string
+}
+
+export interface CustomStringReference {
+	Custom: true
+	Key: string
+}
+
+export type ValueReference<T> = Value<T> | CustomStringReference
 
 export interface DialogEventMap {
 	DialogueEventID: number
@@ -82,4 +104,166 @@ export interface WaitDialogueEvent {
 	DialogueEventList: DialogEventMap[]
 }
 
-export type DialogTask = TaskShowBg | PlayAndWaitSimpleTalk | TriggerSound | PlayOptionTalk | WaitCustomString | TriggerCustomString | WaitDialogueEvent | PlayOptionTalkSimple
+export interface PropStateExecute {
+	TargetType: PropTaskTarget
+	State: string
+	Execute: DialogTask[]
+}
+
+export interface TargetFetchAdvPropNone {
+	$type: 'RPG.GameCore.TargetFetchAdvPropEx'
+	FetchType: undefined
+}
+
+export interface TargetFetchAdvancedProp {
+	$type: 'RPG.GameCore.TargetFetchAdvPropEx'
+	FetchType: 'SinglePropByPropID'
+	SinglePropID: SinglePropFetchID
+}
+
+export type PropTaskTarget = TargetFetchAdvancedProp | TargetFetchAdvPropNone
+
+export interface SinglePropFetchID {
+	GroupID: TaskParam<number>
+	ID: TaskParam<number>
+}
+
+export interface FixedTaskParam<T> {
+	IsDynamic: false
+	FixedValue: Value<T>
+}
+
+export interface DynamicTaskParam<T> {
+	IsDynamic: true
+	PostfixExpr: PostfixExpr<T>
+}
+
+export interface PostfixExpr<T> {
+	OpCodes: string
+	FixedValues: Value<T>[]
+	DynamicHashes: number[]
+}
+
+export interface ShowWaypointByProp {
+	$type: 'RPG.GameCore.ShowWaypointByProp'
+	GroupID: TaskParam<number>
+	InstanceID: TaskParam<number>
+	MaxRange: number
+	IconPath: string
+	OnNameBoard: boolean
+}
+
+export interface HideWaypointByProp {
+	$type: 'RPG.GameCore.HideWaypointByProp'
+	GroupID: TaskParam<number>
+	InstanceID: TaskParam<number>
+	OnNameBoard: boolean
+}
+
+export interface PropStateChangeListenerConfig {
+	$type: 'RPG.GameCore.PropStateChangeListenerConfig'
+	FromState: string
+	ToState: string
+	OnChange: DialogTask[]
+	TargetType: PropTaskTarget
+}
+
+export interface TriggerToastPage {
+	$type: 'RPG.GameCore.ToastPage'
+	MessageOne: HashReference
+	MessageTwo: HashReference
+}
+
+export interface SharedFloat {
+	$type: 'RPG.GameCore.SharedFloat'
+	Value?: boolean
+	Key: string
+}
+
+export interface SharedString {
+	$type: 'RPG.GameCore.SharedString'
+	Value?: string
+	Key: string
+}
+
+export interface WaitPredicateSuccess {
+	$type: 'RPG.GameCore.WaitPredicateSucc'
+	TaskEnabled: boolean
+}
+
+export interface StartDialogueEntityInteract {
+	$type: 'RPG.GameCore.StartDialogueEntityInteract'
+	LevelGraphData: string
+	UseOverrideData?: boolean
+	ValueSource: { Values: ValueSource[] }
+}
+
+export interface EndDialogueEntityInteract {
+	$type: 'RPG.GameCore.EndDialogueEntityInteract'
+	LevelGraphData: string
+}
+
+export interface OpenTreasureChallenge {
+	$type: 'RPG.GameCore.OpenTreasureChallenge'
+	RaidID: number
+	OnCancel: DialogTask[]
+}
+
+export interface ShowTutorialUI {
+	$type: 'RPG.GameCore.ShowTutorialUI'
+	AssociatedUIName: string
+	ForceShowDialog: boolean
+}
+
+export interface ShowGuideText {
+	$type: 'RPG.GameCore.ShowGuideText'
+	ID: number
+	GuideResID: number
+	Show?: boolean
+	TextPath: string
+	Text: string
+	ActionName?: string
+	CopyAnchorAndSale: boolean
+	PCGuide?: {
+		TextPath?: string
+		Text?: string
+	}
+}
+
+export interface WaitSecond {
+	$type: 'RPG.GameCore.WaitSecond'
+	WaitTime: TaskParam<number>
+}
+
+export interface SetupPropUITrigger {
+	$type: 'RPG.GameCore.PropSetupUITrigger'
+	ButtonText: HashReference
+	ButtonCallback: DialogTask[]
+	TargetType: PropTaskTarget
+}
+
+export interface PredicateTaskList {
+	$type: 'RPG.GameCore.PredicateTaskList'
+	Predicate: DialogPredicate
+	SuccessTaskList: DialogTask[]
+}
+
+export type CompareType = 'Equal'
+
+export interface CompareCustomString {
+	$type: 'RPG.GameCore.ByCompareCustomString'
+	LeftValue: ValueReference<string>
+	RightValue: ValueReference<string>
+	CompareType: CompareType
+}
+
+export type DialogPredicate = CompareCustomString
+
+export type ValueSource = SharedFloat | SharedString
+
+export type TaskParam<T> = FixedTaskParam<T> | DynamicTaskParam<T>
+
+export type DialogTask = 
+	| TaskShowBg | PlayAndWaitSimpleTalk | TriggerSound | PlayOptionTalk | WaitCustomString 
+	| TriggerCustomString | WaitDialogueEvent | PlayOptionTalkSimple | RoguePlayAndWaitSimpleTalk
+	| RoguePlayOptionTalk | WaitPredicateSuccess | TriggerToastPage | ShowWaypointByProp

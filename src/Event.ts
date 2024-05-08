@@ -231,7 +231,7 @@ export class EventSection {
 	}
 	
 	descTriggerBattle(output: OutputList) {
-		const enemies = (this.dynamic_content || new Stage(this.effect_params[0])).generateEnemyList()
+		const enemies = (this.dynamic_content || new Stage(this.effect_params[0])).asEnemyLists()
 		output.push(';(Enter battle)')
 		output.push([enemies])
 	}
@@ -475,8 +475,8 @@ export class Event {
 						output.push(...this.customString(allSame, sequence.IsLoop))
 					}
 					break
-				case 'RPG.GameCore.TriggerCustomString':
-					output.push(...this.customString(task.CustomString.Value, sequence.IsLoop))
+				case 'RPG.GameCore.TriggerCustomString':  // TODO: temporary any
+					output.push(...this.customString((task.CustomString as any).Value, sequence.IsLoop))
 					break
 			}
 		}
@@ -488,8 +488,8 @@ export class Event {
 		if (isLoop && this.triggeredStrings.has(string)) {
 			console.groupEnd()
 			return []
-		}
-		const sequence = this.sequences.find(seq => seq.TaskList.find(task => task.$type == 'RPG.GameCore.WaitCustomString' && task.CustomString.Value == string))
+		} // TODO: temporary any
+		const sequence = this.sequences.find(seq => seq.TaskList.find(task => task.$type == 'RPG.GameCore.WaitCustomString' && (task.CustomString as any).Value == string))
 		if (!sequence) {
 			console.error(`CustomString "${string}" not found`)
 			console.groupEnd()

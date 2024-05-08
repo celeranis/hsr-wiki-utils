@@ -119,4 +119,9 @@ export interface InternalRewardData {
 	[k: `Count_${number}`]: number
 }
 
+export interface ItemSortData {
+	ID: number
+	SortID: number
+}
+
 export type InternalRecipeConfig = Dictionary<InternalRecipe>

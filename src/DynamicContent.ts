@@ -31,14 +31,14 @@ export class DynamicContent {
 		}
 	}
 	
-	generateEnemyList(): OutputList {
+	asEnemyLists(): OutputList {
 		const list: OutputList = []
 		let variant = 1
 		for (const [ stage_id ] of this.param_lists) {
 			const stage = Stage.exists(stage_id) && new Stage(stage_id)
 			
 			if (stage) {
-				const enemyList = stage.generateEnemyList()
+				const enemyList = stage.asEnemyLists()
 				if (typeof enemyList == 'string') {
 					list.push(`'''Variant ${variant}:''' ${enemyList}`)
 				} else {

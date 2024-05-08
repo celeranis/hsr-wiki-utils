@@ -1,7 +1,7 @@
 import { Dictionary, sanitizeString, titleCase, wikiTitle, wikiTitleLink } from './Shared.js';
 import { textMap } from './TextMap.js';
 import { LazyData, getFile } from './files/GameFile.js';
-import type { InternalItem, InternalItemComefrom, InternalItemPurpose, InternalPassPage, InternalPassSticker, InternalRecipeConfig, InternalRewardData, ItemConfig, ItemMainType, ItemRarity, ItemReference, ItemSubType } from './files/Item.js';
+import type { InternalItem, InternalItemComefrom, InternalItemPurpose, InternalPassPage, InternalPassSticker, InternalRecipeConfig, InternalRewardData, ItemConfig, ItemMainType, ItemRarity, ItemReference, ItemSortData, ItemSubType } from './files/Item.js';
 
 type ItemSourceData = Dictionary<Dictionary<InternalItemComefrom>>
 
@@ -21,6 +21,32 @@ export const COMMON_ITEMS = {
 	FUEL: 201
 }
 
+export const enum ItemPurpose {
+	CHARACTER_EXP = 1,
+	ASCENSION_MATERIAL = 2,
+	PATH_MATERIAL = 3,
+	WEEKLY_DROP = 4,
+	LIGHT_CONE_EXP = 5,
+	RELIC_EXP = 6,
+	NORMAL_ENEMY_DROP = 7,
+	WARP_ITEM = 8,
+	LIMITED_WARP_ITEM = 9,
+	CONSUMABLE = 10,
+	COMMON_CURRENCY = 11,
+	RARE_CURRENCY = 12,
+	WORLD_CURRENCY = 13,
+	VALUABLE_OBJECT = 14,
+	RELIC_COFFRET = 15,
+	MISSION_ITEM = 16,
+	SYNTHESIS_MATERIAL = 17,
+	// READABLE = 18,
+	RECIPE = 19,
+	DISK = 20,
+	READABLE = 21
+}
+
+const sortData = await getFile<Dictionary<ItemSortData>>('ExcelOutput/ItemDisplaySort.json')
+
 export class Item {
 	static readonly itemData = {
 		main: new LazyData<ItemConfig>('ExcelOutput/ItemConfig.json'),
@@ -39,6 +65,7 @@ export class Item {
 	static readonly itemPurpose = new LazyData<Dictionary<InternalItemPurpose>>('ExcelOutput/ItemPurpose.json')
 	static readonly passPages = new LazyData<Dictionary<InternalPassPage>>('ExcelOutput/TravelBrochureConfig.json')
 	static readonly recipeData: LazyData<InternalRecipeConfig> = new LazyData<InternalRecipeConfig>('ExcelOutput/ItemComposeConfig.json')
+	static readonly sortData = sortData
 	
 	static readonly rarityMap: Record<ItemRarity, number> = {
 		SuperRare: 	5,
@@ -92,6 +119,10 @@ export class Item {
 		this.visible = data.isVisible ?? false
 		this.inventory_tab_tag = data.InventoryDisplayTag
 		this.inventory_tab = this.getInventoryTab()
+	}
+
+	get pagetitle(): string {
+		return wikiTitle(this.name, 'item', this.id)
 	}
 	
 	async getSources(): Promise<string[]> {
@@ -189,6 +220,15 @@ export class Item {
 		await this.loadFrom(...Object.keys(this.itemData) as (keyof typeof this.itemData)[])
 	}
 	
+	static listAllLoaded(): Item[] {
+		return Object.values(this.itemData)
+			.filter(data => data.isLoaded())
+			.map(data => 
+				Object.values(data.data!).map(itemData => new Item(itemData)
+			))
+			.flat()
+	}
+	
 	async getImage() {
 		if (this.subtype == 'TravelBrochurePaster') {
 			const stickerData = (await Item.passStickerData.get())[this.id]
@@ -255,6 +295,11 @@ export interface ItemListEntry {
 
 const MISSION_COMMON = [COMMON_ITEMS.STELLAR_JADE, COMMON_ITEMS.CREDIT, COMMON_ITEMS.TRAILBLAZE_EXP]
 const rewardData = await getFile<Dictionary<InternalRewardData>>('ExcelOutput/RewardData.json')
+const FULL_DISPLAY_TYPES: (ItemSubType | ItemMainType)[] = [
+	'HeadIcon', 'Book', 'ChatBubble', 'Equipment',
+	'AetherSkill', 'AetherSpirit', 'ChessRogueDiceSurface',
+	'Formula', 'PhoneTheme', 'MusicAlbum'
+]
 
 export class ItemList {
 	static readonly rewardData = rewardData
@@ -272,12 +317,17 @@ export class ItemList {
 		}
 	}
 	
+	get length() {
+		return this.data.length
+	}
+	
 	add(entry: ItemReference | ItemListEntry) {
 		const item = 'item' in entry ? entry.item : Item.fromId(entry.ItemID)
 		if (!item) {
 			console.warn('Got unknown item in list entry:', entry)
 			return
 		}
+		if (item.subtype == 'MuseumStuff' || item.subtype == 'MuseumExhibit') return
 		const count = 'count' in entry ? entry.count : entry.ItemNum ?? 1
 		this.data.push({ item, count })
 
@@ -297,29 +347,51 @@ export class ItemList {
 	}
 	
 	sortRarityId(): ItemListEntry[] {
-		return this.data.toSorted((data, data2) => (data.item.id + (data.item.rarity * -10000000)) - (data2.item.id + (data2.item.rarity * -10000000)))
+		const addBefore = this.data.filter(({item}) => sortData[item.id] && sortData[item.id]?.SortID <= this.data.length)
+			.sort(({item: item1}, {item: item2}) => sortData[item1.id].SortID - sortData[item2.id].SortID)
+			
+		const addAfter = this.data.filter(item => sortData[item.item.id] && sortData[item.item.id]?.SortID > this.data.length)
+			.sort(({item: item1}, {item: item2}) => sortData[item1.id].SortID - sortData[item2.id].SortID)
+		
+		const defaultSorted = this.data
+			.filter(({item}) => !sortData[item.id])
+			.sort((data, data2) => (data.item.id + (data.item.rarity * -10000000)) - (data2.item.id + (data2.item.rarity * -10000000)))
+		
+		return [...addBefore, ...defaultSorted, ...addAfter]
+	}
+	
+	asCardListParams(removeCommon?: boolean): string {
+		let adding = this.sortRarityId()
+		if (removeCommon) adding = adding.filter(entry => !MISSION_COMMON.includes(entry.item.id))
+
+		const delim = '; '//adding.some(entry => entry.item.name.includes(',')) ? ';' : ','
+		const addList = adding.map(entry => `${entry.item.pagetitle}*${entry.count.toLocaleString()}` + (
+			entry.item.subtype.includes('Relic') ? ` { rarity = ${entry.item.rarity} }`
+			: (FULL_DISPLAY_TYPES.includes(entry.item.type) || FULL_DISPLAY_TYPES.includes(entry.item.subtype)) ? ` { text = ${entry.item.name} }`
+			: ''
+		)
+		).join(delim)
+		
+		return addList
 	}
 	
 	asCardList(removeCommon?: boolean, mini?: boolean) {
-		let adding = this.sortRarityId()
-		if (removeCommon) adding = adding.filter(entry => !MISSION_COMMON.includes(entry.item.id))
+		const addList = this.asCardListParams(removeCommon)
 		
-		const addList = adding.map(entry => `${wikiTitle(entry.item.name, 'item')}*${entry.count}` + (entry.item.subtype.includes('Relic') ? ` { rarity = ${entry.item.rarity} }` : '')).join('; ')
-		
-		return `{{Card List|${(addList.includes('=') ? '1=' : '') + addList}|delim=;${mini ? '|mini=1' : ''}}}`
+		return `{{Card List|${(addList.includes('=') ? '1=' : '') + addList}${mini ? '|mini=1' : ''}}}`
 	}
 	
 	asItemList(removeCommon?: boolean, mode: 'bullet' | 'br' | 'sent' = 'sent') {
 		let adding = this.sortRarityId()
 		if (removeCommon) adding = adding.filter(entry => !MISSION_COMMON.includes(entry.item.id))
 		
-		const addList = adding.map(entry => `${wikiTitle(entry.item.name, 'item')}*${entry.count}`).join('; ')
+		const addList = adding.map(entry => `${entry.item.pagetitle}*${entry.count}`).join('; ')
 
 		return `{{Item List|${(addList.includes('=') ? '1=' : '') + addList}|mode=${mode}}}`
 	}
 	
 	asBasicList(delim: string = '; ', link?: boolean) {
-		return this.sortRarityId().map(entry => (link ? wikiTitleLink : wikiTitle)(entry.item.name, 'item')).join(delim)
+		return this.sortRarityId().map(entry => (link ? wikiTitleLink : wikiTitle)(entry.item.name, 'item', entry.item.id)).join(delim)
 	}
 	
 	static fromRewardId(id: string | number) {
@@ -331,6 +403,10 @@ export class ItemList {
 		}
 		
 		const reward = rewardData[id]
+		
+		if (reward.Hcoin) {
+			list.add({ ItemID: 1, ItemNum: reward.Hcoin })
+		}
 		
 		for (let i = 1; reward[`ItemID_${i}`]; i++) {
 			list.add({ ItemID: reward[`ItemID_${i}`], ItemNum: reward[`Count_${i}`] })

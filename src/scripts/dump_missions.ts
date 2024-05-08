@@ -3,31 +3,27 @@ import { ChangeHistory } from '../ChangeHistory.js'
 import { Item } from '../Item.js'
 import { Mission } from '../Mission.js'
 import { wikiTitle } from '../Shared.js'
-import { TextMap } from '../TextMap.js'
+import { TextMap, textMap } from '../TextMap.js'
 
 const PAGE_FORMAT =
 `<%-- [PAGE_INFO]
 PageTitle=#<<TITLE>>#
 [END_PAGE_INFO] --%>
-{{Stub|Dialogue, characters, and location(s)}}
+{{Stub|Dialogue.}}
 {{Mission Infobox
 |id            = <<ID>>
 |title         = <<NAME_PARAM>>
-|image         = Mission <<TITLE>>.png
+|image         = <!--Mission <<TITLE>>.png-->
 |type          = <<TYPE>>
 |event_name    = 
 |chapter       = <<CHAPTERTITLE>>
 |requirements  = <<REQUIREMENTS>>
 |summary       = <<SUMMARY>>
-|characters    = <!--characters that appear in this mission-->
-|startLocation = <!--location as it intially appears on the mission screen-->
-|world         = <!--i.e. Penacony-->
-|area          = <!--i.e. A Child's Dream-->
-|prev          = 
-|next          = <<NEXT>>
-|exp           = <<EXP>>
-|credits       = <<CREDITS>>
-|stellarJade   = <<JADES>>
+|characters    = <<CHARACTERS>>
+|startLocation = [[<<START_WORLD>>]] - [[<<START_AREA>>]]
+|world         = <<START_WORLD>>
+|area          = <<START_AREA>>
+|prev          = <<PREV>>
 |other         = <<REWARDS>>
 }}
 '''''<<NAME>>''''' is <<TAN>> [[<<TYPEDISPLAY>>]]<<DETAILS>>.
@@ -69,7 +65,7 @@ for (const missionData of Object.values(Mission.missionData)) {
 		.replaceAll('<<NAME_PARAM>>', mission.name != title ? mission.name : '')
 		.replaceAll('<<ID>>', mission.id.toString())
 		.replaceAll('<<TAN>>', mission.type == 'Adventure' ? 'an' : 'a')
-		.replaceAll('<<TYPE>>', mission.type)
+		.replaceAll('<<TYPE>>', mission.type == 'Continuance' ? 'Trailblaze Continuance' : mission.type)
 		.replaceAll('<<TYPEDISPLAY>>', mission.displayType)
 		.replaceAll('<<CHAPTERTITLE>>', mission.getChapterName() || '')
 		.replaceAll('<<SUMMARY>>', mission.description?.replaceAll('\n', '<br />') || "<!--official mission summary from Fate's Atlas-->")
@@ -83,31 +79,44 @@ for (const missionData of Object.values(Mission.missionData)) {
 	} else {
 		output = output.replaceAll('<<REQUIREMENTS>>', requirements[0] || '')
 	}
+	output = output.replaceAll('<<PREV>>', wikiTitle(mission.prev?.name || ''))
 	
-	const steps = mission.getSteps()
+	const steps = await mission.getSteps()
 	const dialogueSections: string[] = []
 	const stepList: string[] = []
 	let lastName: string | undefined = undefined
+	let lastDesc: string | undefined = undefined
 	
 	for (const [i, step] of steps.entries()) {
 		if (lastName == step.title || (!step.title && i > 0)) continue
 		if (step.title) stepList.push(`# ${step.title}`)
 		dialogueSections.push(
 			(step.title ? `===${step.title}===\n` : '') +
-			(step.description ? `{{Mission Description|type=${mission.type.toLowerCase()}|location=<!--to be added-->${i > 0 ? '|update' : ''}|${step.description.replaceAll('\n', '<br />')}}}\n` : '') +
+			((step.description && step.description != lastDesc) ? `{{Mission Description|type=${mission.type.toLowerCase()}|location=${step.location?.name || '<!--to be added-->'}${i > 0 ? '|update' : ''}|${step.description.replaceAll('\n', '<br />')}}}\n` : '') +
 			'{{Dialogue Start}}\n' +
 			':{{tx}}\n' +
 			'{{Dialogue End}}'
 		)
 		lastName = step.title
+		lastDesc = step.description || lastDesc
 	}
 	
 	let details = ''
+	
+	const firstWithLocation = steps.find(step => step.location)
+	const worldName = textMap.getText(firstWithLocation?.location?.world?.WorldName)
+	if (worldName && (mission.type == 'Adventure' || mission.type == 'Daily')) {
+		details += ` on [[${worldName}]]`
+	}
+
 	if (mission.data.ChapterID) {
 		details += ` in the chapter ${mission.getChapterLink()}`
 	}
-
+	
 	output = output
+		.replaceAll('<<CHARACTERS>>', mission.characters.sort().join('; '))
+		.replaceAll('<<START_AREA>>', firstWithLocation?.location?.name || '<!--starting area-->')
+		.replaceAll('<<START_WORLD>>', worldName || '<!--starting world-->')
 		.replaceAll('<<STEPS>>', stepList.join('\n'))
 		.replaceAll('<<DIALOGUE>>', dialogueSections.join('\n\n'))
 		.replaceAll('<<DETAILS>>', details || '<!--in [world]-->')

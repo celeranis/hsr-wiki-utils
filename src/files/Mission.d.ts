@@ -1,3 +1,4 @@
+import { Dictionary } from '../Shared.ts'
 import type { HashReference } from '../TextMap.ts'
 
 export interface AutoParam { Type: 'Auto' }
@@ -69,3 +70,19 @@ export interface InternalMissionChapter {
 	ChapterIconPath: string
 	ChapterFigureIconPath: string
 }
+
+export type BlackScreenMode = 'Full' | 'NoPrePost' | 'NoPre' | 'NoPost'
+export interface Performance {
+	PerformanceID: number
+	PerformancePath: string
+	IsSkip?: boolean
+	ChangePlayerType?: 'StoryLine'
+	PerformanceCharacter: string
+	StartBlack?: BlackScreenMode
+	EndBlack?: BlackScreenMode
+	EndWithCrack?: boolean
+	PlaneID: number
+	FloorID: number
+}
+
+export type PerformanceFile = Dictionary<Performance>

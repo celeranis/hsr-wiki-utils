@@ -30,6 +30,20 @@ export async function getFile<T extends object>(path: string, version: string = 
 		})
 }
 
+// Same as getFile, but returns null if the file was not found
+export function getFileSafe<T extends object>(...args: Parameters<typeof getFile>): Promise<T | null> {
+	return getFile<T>(...args)
+		.catch(err => {
+			if (
+				(err instanceof HttpError && err.status == 404) // file not found in remote repository
+				|| (err instanceof Error && 'code' in err && err.code == 'ENOENT') // file not found on local system
+			) {
+				return null;
+			}
+			throw err;
+		})
+}
+
 export class LazyData<T extends object> {
 	data?: T
 	public constructor(public path: string, public version?: string) {}
@@ -44,4 +58,8 @@ export class LazyData<T extends object> {
 	isLoaded(): this is { data: T } {
 		return Boolean(this.data)
 	}
+}
+
+export function getAsset(path: string, from: 'Texture2D' | 'SpriteOutput' = 'Texture2D'): Promise<Buffer> {
+	return readFile(`${config.asset_roots[from]}/${path}`)
 }

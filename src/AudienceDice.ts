@@ -1,7 +1,7 @@
 import { Event } from './Event.js'
 import type { Dictionary } from './Shared.js'
 import { HashReference, TextMap } from './TextMap.js'
-import type { InternalDiceBranch, InternalDiceSurface } from './files/AudienceDice.js'
+import type { InternalDiceBranch, InternalDiceSurface, InternalMiscDisplay } from './files/AudienceDice.js'
 import { getFile } from './files/GameFile.js'
 
 interface PartialSecret {
@@ -16,21 +16,7 @@ interface PartialQuestData {
 	FinishWayID: number
 }
 
-const OBTAIN_VIA_MAP = {
-	100: '[[Simulated Universe/Trailblaze Secret#Simulated_Universe:_Gold_and_Gears|Trailblaze Secrets]]',
-	101: 'Unlock [[#Trotter Extrapolation|Trotter Extrapolation]]',
-	102: 'Unlock [[#Walker Symbiosis|Walker Symbiosis]]',
-	103: 'Unlock [[#Ultra-Remote Beacon|Ultra-Remote Beacon]]',
-	201: 'Unlock [[#Occurrence Extrapolation|Occurrence Extrapolation]]',
-	202: 'Unlock [[#Combat Extrapolation|Combat Extrapolation]]',
-	203: 'Unlock [[#Pursuit|Pursuit]]',
-	301: 'Unlock [[#Countdown|Countdown]]',
-	302: 'Unlock [[#Amber Barrier|Amber Barrier]]',
-	303: 'Unlock [[#Investment Sale|Investment Sale]]',
-	401: 'Unlock [[#Company Time|Company Time]]',
-	402: 'Unlock [[#Curio Extrapolation|Curio Extrapolation]]',
-	403: 'Unlock [[#Data Inflation|Data Inflation]]'
-}
+const obtainViaMap: Dictionary<InternalMiscDisplay> = await getFile('ExcelOutput/RogueNousMiscDisplay.json')
 
 const tbSecrets: Dictionary<PartialSecret> = await getFile('ExcelOutput/RogueNousSubStory.json')
 const aeonSecrets: Dictionary<PartialSecret> = await getFile('ExcelOutput/RogueNousMainStory.json')
@@ -67,7 +53,7 @@ export class DiceSurface {
 		this.icon = data.Icon
 		this.sort = data.Sort
 		this.item_id = data.ItemID
-		this.obtained_via = data.UnlockDisplayID == 100 ? this.findSourceSecret() : OBTAIN_VIA_MAP[data.UnlockDisplayID]
+		this.obtained_via = data.UnlockDisplayID == 100 ? this.findSourceSecret() : TextMap.default.getText(obtainViaMap[data.UnlockDisplayID]?.DisplayContent)
 		
 		DiceSurface.map.set(this.id, this)
 	}

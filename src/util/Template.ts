@@ -80,6 +80,12 @@ export interface TemplateMap {
 		type2?: DomainSubtype
 		mechanism: string
 		boss?: string
+		description?: string
+		domain?: string
+		world?: string
+		region?: string
+		area?: string
+		subarea?: string
 		requiredEL: string | number
 		recLevel: string | number
 		recTypes: string
@@ -87,7 +93,28 @@ export interface TemplateMap {
 		drops: string
 		drops_delim?: string
 		rewards: string
-	}
+	},
+	'Mission Infobox': {
+		id: number,
+		title: string
+		image: string
+		caption: string
+		type: string
+		chapter: string
+		event_name: string
+		npc: string
+		description: string
+		requirements: string
+		summary: string
+		characters: string
+		startLocation: string
+		world: string
+		area: string
+		subarea: string
+		prev: string
+		next: string
+		rewards: string
+	} & { [T in `next${number}`]: string } & { [T in `prev${number}`]: string },
 }
 
 export type DomainType = 
@@ -145,5 +172,15 @@ export class Template<N extends keyof TemplateMap, P extends Record<string, stri
 	static getParamValue(input: string, name: string) {
 		const regex = new RegExp(`\\|${name}\\s*=\\s*?(.*?)\\s*(?:\\||}})`)
 		return input.match(regex)?.[1]?.trim()
+	}
+	
+	static pageData(title: string, contentModel: string = 'wikitext', contentFormat: string = 'text/x-wiki'): string {
+		return [
+			`<%-- [PAGE_INFO]`,
+			`    pageTitle = #${title}#`,
+			`    contentModel = #${contentModel}#`,
+			`    contentFormat = #${contentFormat}#`,
+			`[END_PAGE_INFO] --%>`
+		].join('\n')
 	}
 }

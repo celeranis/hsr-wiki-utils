@@ -1,18 +1,31 @@
 import { ItemList } from './Item.js';
 import { Dictionary, wikiTitle, wikiTitleLink } from './Shared.js';
 import { textMap } from './TextMap.js';
-import { getFile } from './files/GameFile.js';
-import type { InternalFateAtlasEntry, InternalMainMission, InternalMissionChapter, InternalMissionType, InternalSubMission } from './files/Mission.js';
+import { Act } from './files/Dialog.js';
+import { getFile, getFileSafe } from './files/GameFile.js';
+import { Performance, PerformanceFile, type InternalFateAtlasEntry, type InternalMainMission, type InternalMissionChapter, type InternalMissionType, type InternalSubMission } from './files/Mission.js';
+import { Area } from './maps/Area.js';
 
 const data: Dictionary<InternalMainMission> = await getFile('ExcelOutput/MainMission.json')
 const stepData: Dictionary<InternalSubMission> = await getFile('ExcelOutput/SubMission.json')
 const fatesAtlas: Dictionary<InternalFateAtlasEntry> = await getFile('ExcelOutput/ChronicleConclusion.json')
 const chapterData: Dictionary<InternalMissionChapter> = await getFile('ExcelOutput/MissionChapterConfig.json')
 
+export const performance = {
+	A: await getFile<PerformanceFile>('ExcelOutput/PerformanceA.json'),
+	C: await getFile<PerformanceFile>('ExcelOutput/PerformanceC.json'),
+	CG: await getFile<PerformanceFile>('ExcelOutput/PerformanceCG.json'),
+	D: await getFile<PerformanceFile>('ExcelOutput/PerformanceD.json'),
+	DS: await getFile<PerformanceFile>('ExcelOutput/PerformanceDS.json'),
+	E: await getFile<PerformanceFile>('ExcelOutput/PerformanceE.json'),
+}
+
 export interface MissionStep {
 	id: number
 	title: string
 	description: string
+	location?: Area
+	characters: string[]
 }
 
 export type MissionType = 'Trailblaze' | 'Adventure' | 'Companion' | 'Continuance' | 'Daily'
@@ -40,6 +53,19 @@ export class Mission {
 		this.type = missionTypeMap[data.Type] || data.Type
 		this.id = data.MainMissionID
 		this.description = textMap.getText(fatesAtlas[data.MainMissionID]?.MissionConclusion)
+	}
+	
+	private charset: Set<string> = new Set<string>(['Trailblazer'])
+	
+	get characters(): string[] {
+		return [...this.charset.values()]
+	}
+	
+	static findPerformance(id: string | number): Performance | null {
+		for (const file of Object.values(performance)) {
+			if (file[id]) return file[id]
+		}
+		return null
 	}
 	
 	get displayType(): string {
@@ -72,8 +98,14 @@ export class Mission {
 		}
 		return new Mission(this.missionData[missionId])
 	}
+
+	get pagetitle(): string {
+		return wikiTitle(this.name, 'mission', this.id)
+	}
 	
-	getSteps(): MissionStep[] {
+	prev?: Mission
+	
+	async getSteps(): Promise<MissionStep[]> {
 		const steps: MissionStep[] = []
 		let stepList = Object.values(stepData).filter(data => 
 			data.SubMissionID.toString().startsWith(this.id.toString()) 
@@ -85,10 +117,38 @@ export class Mission {
 		let index = 1
 		
 		for (const currentStep of stepList) {
+			const perfData = Mission.findPerformance(currentStep.SubMissionID)
+			
+			const characters = new Set<string>()
+			const addChars = (talk: { TalkSentenceID: number }) => {
+				const chr = textMap.getSentenceMeta(talk.TalkSentenceID)?.speaker
+				if (chr && chr != '(Trailblazer)') {
+					characters.add(chr)
+					this.charset.add(chr)
+				}
+			}
+			
+			if (perfData && perfData.PerformancePath) {
+				const act = await getFileSafe<Act>(perfData.PerformancePath)
+				for (const sequence of act?.OnStartSequece || []) {
+					for (const task of sequence.TaskList) {
+						switch (task.$type) {
+							case 'RPG.GameCore.PlayAndWaitRogueSimpleTalk':
+							case 'RPG.GameCore.PlayAndWaitSimpleTalk':
+							case 'RPG.GameCore.PlayRogueSimpleTalk':
+								task.SimpleTalkList.forEach(addChars)
+								break
+						}
+					}
+				}
+			}
+			
 			steps.push({
 				id: currentStep.SubMissionID,
 				title: textMap.getText(currentStep.TargetText),
-				description: textMap.getText(currentStep.DescrptionText)
+				description: textMap.getText(currentStep.DescrptionText),
+				location: perfData?.PlaneID ? await Area.fromId(perfData.PlaneID).catch(err => void console.error(err)) : undefined,
+				characters: [...characters.values()]
 			})
 			index++
 		}
@@ -97,7 +157,8 @@ export class Mission {
 	}
 	
 	getRewards() {
-		return ItemList.fromRewardId(this.data.RewardID)
+		const initRewards = ItemList.fromRewardId(this.data.RewardID)
+		return initRewards.length > 0 ? initRewards : ItemList.fromRewardId(this.data.DisplayRewardID)
 	}
 	
 	getRequirements(): string[] {
@@ -112,11 +173,17 @@ export class Mission {
 				case 'MultiSequence':
 					const mission = Mission.fromId(paramData.Value)
 					requirements.push(`${mission.plainLink()} completed`)
+					if (mission.type == this.type && mission.name != this.name) {
+						this.prev = mission
+					}
 					break
 				
 				case 'SequenceNextDay':
 					const gateMission = Mission.fromId(paramData.Value)
 					requirements.push(`Complete ${gateMission.plainLink()} and wait for the next Daily [[Reset]]`)
+					if (gateMission.type == this.type && gateMission.name != this.name) {
+						this.prev = gateMission
+					}
 					break
 				
 				case 'WorldLevel':
@@ -136,10 +203,29 @@ export class Mission {
 		return requirements
 	}
 	
+	static searchByName(name: string, type: MissionType, prioritizeRewards?: boolean): Mission | undefined {
+		const found: Mission[] = []
+		for (const mission of Object.values(this.missionData)) {
+			if (textMap.getText(mission.Name) == name && missionTypeMap[mission.Type] == type) {
+				found.push(new Mission(mission))
+			}
+		}
+		
+		if (!prioritizeRewards) {
+			const foundDesc = found.find(data => data.description)
+			if (foundDesc) return foundDesc
+		}
+		
+		return found.find(data => data.getRewards().length > 0) || (found.length == 1 && found[0] || undefined)
+	}
+	
 	getNext(): Mission[] {
 		const list = this.data.NextMainMissionList?.map(data => Mission.fromId(data)) || []
 		if (this.data.NextTrackMainMission) {
-			list.unshift(Mission.fromId(this.data.NextTrackMainMission))
+			let next = Mission.fromId(this.data.NextTrackMainMission)
+			if (next.id == this.id) return list
+			else if (next.name == this.name) next = next.getNext()[0]
+			list.unshift(next)
 		}
 		return list
 	}
@@ -147,7 +233,8 @@ export class Mission {
 	getChapterName(): string | undefined {
 		if (!this.data.ChapterID) return
 		
-		return wikiTitle(textMap.getText(chapterData[this.data.ChapterID].ChapterName)) + (this.type == 'Companion' ? ' (Companion Mission Chapter)' : '')
+		const name = textMap.getText(chapterData[this.data.ChapterID].ChapterName)
+		return wikiTitle(name + ((this.type == 'Companion' && name != 'Slices of Life Before the Furnace' && name != 'Age of Awakening' && name != 'Cosmic Splendor and Merited Praises') ? ' (Companion Mission Chapter)' : ''))
 	}
 	
 	getChapterLink(): string | undefined {
@@ -155,7 +242,7 @@ export class Mission {
 		
 		const name = wikiTitle(textMap.getText(chapterData[this.data.ChapterID].ChapterName))
 		
-		if (this.type == 'Companion') {
+		if (this.type == 'Companion' && name != 'Slices of Life Before the Furnace' && name != 'Age of Awakening' && name != 'Cosmic Splendor and Merited Praises') {
 			return `[[${wikiTitle(name, 'mission')} (Companion Mission Chapter)|${name}]]`
 		}
 		else {

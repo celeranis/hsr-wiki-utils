@@ -71,9 +71,9 @@ export class TextMap {
 	replaceParams(text: string, params: TextParams) {
 		for (let [i, param] of params.entries()) {
 			if (typeof param == 'object') param = param.Value
-			text = text.replaceAll(`#${i + 1}[i]%`, (param ? Math.round(Number(param) * 100).toString() : '??') + '%')
-				.replaceAll(`#${i + 1}[i]`, param?.toString() || '??')
-				.replaceAll(`#${i + 1}`, param?.toString() || '??')
+			text = text.replaceAll(`#${i + 1}[i]%`, (param ? Math.round(Number(param) * 100).toLocaleString() : '??') + '%')
+				.replaceAll(`#${i + 1}[i]`, param?.toLocaleString() || '??')
+				.replaceAll(`#${i + 1}`, param?.toLocaleString() || '??')
 		}
 		return text
 	}
@@ -101,8 +101,9 @@ export class TextMap {
 			.replaceAll(/{RUBY_B#(.+?)}(.+?){RUBY_E#}/gi, (_substr, topText, normalText) => `{{Rubi|${normalText}|${topText}}}`)
 			.replaceAll(/–/g, '&ndash;')
 			.replaceAll(/—/g, '&mdash;')
-			.replaceAll(/×/g, '&times;')
+			.replaceAll(/\u00d7/g, '&times;')
 			.replaceAll(/<\s*\/?\s*i\s*>/gi, "''")
+			.replaceAll(/\u00a0/g, this.lang == 'KR' ? ' ' : '&nbsp;')
 		
 		if (params) {
 			replaced = this.replaceParams(replaced, params)
@@ -130,6 +131,50 @@ export class TextMap {
 		const text = this.getText(sentence.TalkSentenceText, undefined, allowNewline).replaceAll('\n', '<br />')
 		
 		return this.wikiFormatting(!textOnly && name ? `'''${name}:''' ${text.includes('<br />') ? '<br />' : ''}${text}` : text)
+	}
+	
+	getSentenceMeta(sentenceId: number | string) {
+		const sentence = TextMap.sentence_json[sentenceId]
+		if (!sentence) return undefined
+		
+		return {
+			id: sentence.TalkSentenceID,
+			speaker: textMap.getText(sentence.TextmapTalkSentenceName),
+			content: textMap.getText(sentence.TalkSentenceText)
+		}
+	}
+	
+	/**
+	 * Utility function for printing the occurrences 
+	 * of a specific tag along with its usage.
+	 * 
+	 * Intended for command-line and sandbox usage.
+	 */
+	getTagUsage(tagName: string): void {
+		const usage: Record<string, string[]> = {}
+		const pattern = new RegExp(`<\\s*${tagName}.*?>`, 'gi')
+		
+		for (const [_hash, entry] of Object.entries(this.json)) {
+			for (const match of entry.matchAll(pattern)) {
+				usage[match[0]] ??= []
+				usage[match[0]].push(entry)
+			}
+		}
+		
+		console.group(`Usage of ${tagName}:`)
+		for (const [tag, occurrences] of Object.entries(usage)) {
+			console.group(`${occurrences.length} uses of ${tag}. First five:`)
+			let printedCount = 0
+			for (const text of occurrences) {
+				if (text.length < 250) {
+					console.log(text)
+					printedCount++
+				}
+				if (printedCount >= 5) break
+			}	
+			console.groupEnd()
+		}
+		console.groupEnd()
 	}
 	
 	static async generateOL(keys?: (string | number | HashReference) | (string | number | HashReference | undefined)[], params?: TextParams): Promise<string> {

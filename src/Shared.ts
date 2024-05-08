@@ -1,9 +1,14 @@
+import { wikiPageMap } from './util/wikipagemap.js'
+
 export type AeonPath =
 	'Remembrance' | 'Destruction' | 'Elation' | 'Nihility' | 'Preservation'
 	| 'Abundance' | 'TheHunt' | 'Propagation' | 'Erudition' | 'Trailblaze'
 	| 'Ruan Mei'
 
 export type AttackType = 'Physical' | 'Fire' | 'Wind' | 'Ice' | 'Thunder' | 'Quantum' | 'Imaginary'
+export type CustomAttackType = 'physical' | 'fire' | 'wind' | 'ice' | 'lightning' | 'quantum' | 'imaginary'
+
+export const DAMAGE_TYPES: AttackType[] = ['Physical', 'Fire', 'Ice', 'Thunder', 'Wind', 'Quantum', 'Imaginary']
 
 export function pathDisplayName(pathName: AeonPath) {
 	return pathName == 'TheHunt' ? 'The Hunt' : pathName
@@ -87,17 +92,38 @@ export function objectDiff<T>(older: Dictionary<T>, newer: Dictionary<T>): Objec
 	return { added, removed }
 }
 
-export type AmbigType = 'item' | 'mission'
+export type AmbigType = 'item' | 'mission' | 'location' | 'faction'
 const ambigTitles = {
 	'The Sound and the Fury': {
 		item: 'The Sound and the Fury (Item)',
 		mission: 'The Sound and the Fury'
+	},
+	'Alchemy Commission (Location)': {
+		location: 'Alchemy Commission (Location)',
+		faction: 'Alchemy Commission'
+	},
+	'Artisanship Commission': {
+		location: 'Artisanship Commission (Location)',
+		faction: 'Artisanship Commission'
+	},
+	'Divination Commission': {
+		location: 'Divination Commission (Location)',
+		faction: 'Divination Commission'
+	},
+	'A Foxian Tale of the Haunted': {
+		mission: 'A Foxian Tale of the Haunted (Continuance)',
+		event: 'A Foxian Tale of the Haunted'
 	}
 }
 
-export function wikiTitle(name: string, type?: AmbigType) {
+export function wikiTitle(name: string, type?: AmbigType, id?: number) {
 	if (type && ambigTitles[name]?.[type]) {
 		return ambigTitles[name][type]
+	}
+	
+	const mapData = (id && wikiPageMap[`${type}_${id}`]) || wikiPageMap[`${type}_${name}`]
+	if (mapData) {
+		name = mapData.pagename
 	}
 	
 	return name
@@ -119,4 +145,45 @@ export function wikiTitleLink(name: string, type?: AmbigType) {
 export function zeroPad(number: number, length: number) {
 	const stringNum = Math.abs(number).toString()
 	return (number < 0 ? '-' : '') + '0'.repeat(length - stringNum.length) + stringNum
+}
+
+export function diffn(num: number, plus: boolean = true) {
+	return ((plus && num > 0) ? '+' : '')
+}
+
+export function percent(num: number, decimals: number = 0, plus: boolean) {
+	return diffn(Math.round(num * (10 ^ (decimals + 2))) / (10 ^ decimals), plus) + '%'
+}
+
+export function tpercent(num: number, decimals: number = 0, plus: boolean = true, threshold: number = 0.001): string | undefined {
+	if (!Number.isFinite(num) || Math.abs(num) < threshold) return undefined
+	else return percent(num, decimals, plus)
+}
+
+export class Cache<T extends object> {
+	registry: FinalizationRegistry<string>
+	map = new Map<string, WeakRef<T>>()
+
+	constructor() {
+		this.registry = new FinalizationRegistry<string>(key => {
+			if (!this.map.get(key)?.deref()) {
+				this.map.delete(key);
+			}
+		})
+	}
+
+	get(key: string | number): T | undefined {
+		return this.map.get(key.toString())?.deref()
+	}
+
+	set(key: string | number, value: T) {
+		key = key.toString()
+		this.map.set(key, new WeakRef(value))
+		this.registry.register(value, key)
+		return value
+	}
+
+	delete(key: string) {
+		this.map.delete(key)
+	}
 }

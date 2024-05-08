@@ -1,31 +1,48 @@
 import type { OutputList } from './Event.js';
-import type { Dictionary } from './Shared.js';
-import { TextMap } from './TextMap.js';
-import { getFile } from './files/GameFile.js';
-import { InternalEliteGroup, InternalMonster, InternalStage } from './files/Stage.js';
-
-export type EnemyType = 'MinionLv2' | 'Elite' | 'LittleBoss' | 'BigBoss' | 'Minion'
-
-export interface Monster {
-	name: string
-	id: number
-	type: EnemyType
-	atk_mult: number
-	def_mult: number
-	hp_mult: number
-	spd_mult: number
-	toughness_mult: number
-	toughness_add?: number
-}
+import { diffn, tpercent, type AttackType, type Dictionary } from './Shared.js';
+import { Stat } from './Stats.js';
+import { TextMap, textMap } from './TextMap.js';
+import { LazyData, getFile } from './files/GameFile.js';
+import { EnemyType, HardLevelGroup, InternalEliteGroup, InternalMonster, InternalMonsterCamp, InternalMonsterTemplate, InternalStage, TypeResData } from './files/Stage.js';
 
 function percentChange(num: number) {
 	return `${num > 1 ? '+' : ''}${Math.round((num - 1) * 100)}%`
 }
 
+export interface EliteGroup {
+	id: number
+	atk_ratio: number
+	def_ratio: number
+	hp_ratio: number
+	spd_ratio: number
+	toughness_ratio: number
+}
+
+export interface ScalingEntry {
+	atk: number
+	def: number
+	hp: number
+	spd: number
+	toughness: number
+	ehr: number
+	effect_res: number
+}
+
 const stages: Dictionary<InternalStage> = await getFile('ExcelOutput/StageConfig.json')
 const monsters: Dictionary<InternalMonster> = await getFile('ExcelOutput/MonsterConfig.json')
-const monsterTemplates: Dictionary<any> = await getFile('ExcelOutput/MonsterTemplateConfig.json')
-const eliteGroups: Dictionary<InternalEliteGroup> = await getFile('ExcelOutput/EliteGroup.json')
+const monsterTemplates: Dictionary<InternalMonsterTemplate> = await getFile('ExcelOutput/MonsterTemplateConfig.json')
+
+const eliteGroups: Record<number, EliteGroup> = {}
+for (const rawGroup of Object.values(await getFile<Dictionary<InternalEliteGroup>>('ExcelOutput/EliteGroup.json'))) {
+	eliteGroups[rawGroup.EliteGroup] = {
+		id: rawGroup.EliteGroup,
+		atk_ratio: rawGroup.AttackRatio?.Value ?? 1,
+		def_ratio: rawGroup.DefenceRatio?.Value ?? 1,
+		hp_ratio: rawGroup.HPRatio?.Value ?? 1,
+		spd_ratio: rawGroup.SpeedRatio?.Value ?? 1,
+		toughness_ratio: rawGroup.StanceRatio?.Value ?? 1,
+	}
+}
 
 export class Stage {
 	static readonly stages = stages
@@ -34,16 +51,21 @@ export class Stage {
 	static readonly eliteGroups = eliteGroups
 
 	id: number
-	waves: Monster[][]
+	waves: EnemyInstance[][]
 	name: string
-	elite_group?: InternalEliteGroup
+	elite_group?: EliteGroup
 	type: 'Normal' | 'Bug' | 'Complete' = 'Normal'
 	stage_abilities: string[]
 	elite: boolean = false
+	level: number
 	elite_count: number = 0
 	
 	static exists(id: number | string): InternalStage | undefined {
 		return Stage.stages[id]
+	}
+	
+	[Symbol.for('nodejs.util.inspect.custom')]() {
+		return this.waves.map((wave, i) => `Wave ${i + 1}:\n\t${wave.map(monster => `${monster.name} (${monster.listStatChanges().join(', ')})`).join('\n\t')}`).join('\n')
 	}
 	
 	constructor(id: number | string) {
@@ -56,81 +78,401 @@ export class Stage {
 		this.name = TextMap.default.getText(stage.StageName)
 		this.elite_group = Stage.eliteGroups[stage.EliteGroup]
 		this.stage_abilities = stage.StageAbilityConfig
+		this.level = stage.Level
 		
 		this.waves = stage.MonsterList.map(wave => {
 			return Object.values(wave).map(id => {
-				const monsterData = Stage.monsters[id]
-				const monsterTemplate = Stage.monsterTemplates[id]
+				const enemy = EnemyInstance.fromIdLeveled(id, this.level)
 				
-				const isElite = monsterTemplate.Rank == 'Elite' || monsterTemplate.Rank == 'LittleBoss' || monsterTemplate.Rank == 'BigBoss'
-				if (monsterTemplate.Rank == 'Elite' || monsterTemplate.Rank == 'LittleBoss' || monsterTemplate.Rank == 'BigBoss') {
-					const name = TextMap.default.getText(monsterData.MonsterName)
-					if (name.includes('(Bug)')) {
+				if (enemy.isElite()) {
+					if (enemy.name.includes('(Bug)')) {
 						this.type = 'Bug'
-					} else if (name.includes('(Complete)')) {
+					} else if (enemy.name.includes('(Complete)')) {
 						this.type = 'Complete'
 					}
 					this.elite_count++
 					this.elite = true
 				}
 				
-				return {
-					id: monsterData.MonsterID,
-					name: TextMap.default.getText(monsterData.MonsterName),
-					type: monsterTemplate.Rank,
-					atk_mult: monsterData.AttackModifyRatio?.Value * (isElite && this.elite_group?.AttackRatio?.Value || 1),
-					def_mult: monsterData.DefenceModifyRatio?.Value * (isElite && this.elite_group?.DefenceRatio?.Value || 1),
-					hp_mult: monsterData.HPModifyRatio?.Value * (isElite && this.elite_group?.HPRatio?.Value || 1),
-					spd_mult: monsterData.SpeedModifyRatio?.Value * (isElite && this.elite_group?.SpeedRatio?.Value || 1),
-					toughness_mult: monsterData.StanceModifyRatio?.Value * (isElite && this.elite_group?.StanceRatio?.Value || 1),
-					toughness_add: monsterData.StanceModifyValue?.Value,
-				} as Monster
+				return enemy
 			})
 		})
 	}
 	
-	generateStatChanges(monster: Monster): string[] {
-		const statChanges: string[] = []
-		if (monster.atk_mult != 1) {
-			statChanges.push(`${percentChange(monster.atk_mult)} ATK`)
-		}
-		if (monster.def_mult != 1) {
-			statChanges.push(`${percentChange(monster.def_mult)} DEF`)
-		}
-		if (monster.hp_mult != 1) {
-			statChanges.push(`${percentChange(monster.hp_mult)} Max HP`)
-		}
-		if (monster.spd_mult != 1) {
-			statChanges.push(`${percentChange(monster.spd_mult)} SPD`)
-		}
-		if (monster.toughness_mult != 1) {
-			statChanges.push(`${percentChange(monster.toughness_mult)} Max Toughness`)
-		}
-		if (monster.toughness_add) {
-			statChanges.push(`${monster.toughness_add > 0 ? '+' : ''}${monster.toughness_add} Max Toughness`)
-		}
-		return statChanges
-	}
-	
-	generateMonsterListWave(wave: Monster[]): string {
+	getWaveEnemyList(wave: EnemyInstance[]): string {
 		const monsterList = new Map<string, number>()
-		for (const monster of wave) {
-			const statChanges = this.generateStatChanges(monster)
-			const key = `${monster.name}*<<NUM>>/${statChanges.join(', ')}`
+		for (const enemy of wave) {
+			const key = enemy.asEnemyListEntry('<<NUM>>')
 			monsterList.set(key, (monsterList.get(key) || 0) + 1)
 		}
 		return `{{Enemy List|${[...monsterList.entries()].map(([str, amnt]) => str.replaceAll('<<NUM>>', amnt.toString())).join(';')}}}`
 	}
 	
-	generateEnemyList(): OutputList | string {
+	asEnemyLists(): OutputList | string {
 		if (this.waves.length == 1) {
-			return this.generateMonsterListWave(this.waves[0])
+			return this.getWaveEnemyList(this.waves[0])
 		} else {
 			const list: string[] = []
 			for (const [i, wave] of this.waves.entries()) {
-				list.push(`Wave ${i + 1}: ${this.generateMonsterListWave(wave)}`)
+				list.push(`Wave ${i + 1}: ${this.getWaveEnemyList(wave)}`)
 			}
 			return list
 		}
+	}
+	
+	asCardList(noLevels?: boolean): string[] {
+		return this.waves.map(wave => `{{Card List|type=Enemy|show_caption=1|delim=;|${wave.map(enemy => enemy.asCardListEntry(noLevels)).join('; ')}}}`)
+	}
+}
+
+export const enum ENEMY_RANK {
+	NORMAL = 1,
+	ELITE = 2,
+	BOSS = 3,
+	ECHO_OF_WAR = 4,
+}
+
+const RANK_MAP: Record<EnemyType, ENEMY_RANK> = {
+	Minion: ENEMY_RANK.NORMAL,
+	MinionLv2: ENEMY_RANK.NORMAL,
+	Elite: ENEMY_RANK.ELITE,
+	LittleBoss: ENEMY_RANK.ELITE,
+	BigBoss: ENEMY_RANK.ECHO_OF_WAR
+}
+
+interface EnemyFaction {
+	data: InternalMonsterCamp
+	id: number
+	sortId: number
+	name: string
+	name_hash: number
+	icon: string
+}
+
+export class EnemyTemplate {
+	static readonly faction_data = new LazyData<Dictionary<InternalMonsterCamp>>('ExcelOutput/MonsterCamp.json')
+	
+	template_id: number
+	template_name: string
+	name: string
+	name_hash: number
+	data_bank_sort?: number
+	faction_id?: number
+	rank: ENEMY_RANK
+	config_path: string
+	
+	icon: string
+	image: string
+	
+	get base_atk(): number {
+		return this.template_data.AttackBase?.Value ?? 1
+	}
+	get base_def(): number {
+		return this.template_data.DefenceBase?.Value ?? 1
+	}
+	get base_hp(): number {
+		return this.template_data.HPBase?.Value ?? 1
+	}
+	get base_spd(): number {
+		return this.template_data.SpeedBase?.Value ?? 0
+	}
+	get base_toughness(): number {
+		return this.template_data.StanceBase?.Value ?? 0
+	}
+	get base_effect_res(): number {
+		return this.template_data.StatusResistanceBase?.Value ?? 0
+	}
+	get base_crit_dmg(): number {
+		return this.template_data.CriticalDamageBase?.Value ?? 0
+	}
+	get initial_delay(): number {
+		return this.template_data.InitialDelayRatio?.Value ?? 0
+	}
+	get ehr(): number {
+		return 0
+	}
+	toughness_count: number
+	
+	toughness_dmg_type?: AttackType
+	
+	ai_path?: string
+	skill_sequence?: unknown[]
+	npc_monster_ids?: number[]
+	
+	constructor(public template_data: InternalMonsterTemplate) {
+		this.template_id = template_data.MonsterTemplateID
+		this.template_name = textMap.getText(template_data.MonsterName)
+		this.name = this.template_name
+		this.name_hash = template_data.MonsterName?.Hash
+		this.data_bank_sort = template_data.AtlasSortID
+		this.faction_id = template_data.MonsterCampID
+		this.rank = RANK_MAP[template_data.Rank] || ENEMY_RANK.NORMAL
+		
+		this.config_path = template_data.JsonConfig
+		this.icon = template_data.IconPath
+		this.image = template_data.ImagePath
+		
+		this.toughness_count = template_data.StanceCount ?? 0
+		this.toughness_dmg_type = template_data.StanceType
+		
+		this.ai_path = template_data.AIPath
+		this.skill_sequence = template_data.AISkillSequence ?? []
+		this.npc_monster_ids = template_data.NPCMonsterList ?? []
+	}
+
+	static fromId(templateId: number | string) {
+		return new this(monsterTemplates[templateId])
+	}
+	
+	async getFaction(): Promise<EnemyFaction | undefined> {
+		if (!this.faction_id) return undefined
+		const data = (await EnemyTemplate.faction_data.get())[this.faction_id]
+		
+		return {
+			data,
+			id: data.ID,
+			sortId: data.SortID,
+			name: textMap.getText(data.Name),
+			name_hash: data.Name?.Hash,
+			icon: data.IconPath
+		}
+	}
+	
+	isElite(): boolean {
+		return this.rank >= ENEMY_RANK.ELITE
+	}
+	
+	asEnemyTemplate() {
+		return `{{Enemy|${this.template_name}${this.name != this.template_name ? `|text=${this.name}` : ''}}}`
+	}
+	
+	asCard() {
+		return `{{Card|type=Enemy|${this.template_name}${this.name != this.template_name ? `|text=${this.name}` : ''}|show_caption=1}}`
+	}
+
+	asCardListEntry() {
+		return this.template_name
+			+ (this.name != this.template_name ? `{ caption = ${this.name} }` : '')
+	}
+	
+	asEnemyListEntry(count: number | string) {
+		return `${this.template_name}*${count}`
+	}
+}
+
+const enemyScaling: Dictionary<ScalingEntry[]> = {}
+for (const [index, scaling] of Object.entries(await getFile<Dictionary<HardLevelGroup>>('ExcelOutput/HardLevelGroup.json'))) {
+	const stats = enemyScaling[index] = [] as ScalingEntry[]
+	for (const entry of Object.values(scaling)) {
+		stats[entry.Level] = {
+			atk: entry.AttackRatio?.Value ?? 1,
+			def: entry.DefenceRatio?.Value ?? 1,
+			hp: entry.HPRatio?.Value ?? 1,
+			spd: entry.SpeedRatio?.Value ?? 1,
+			toughness: entry.StanceRatio?.Value ?? 1,
+			ehr: entry.StatusProbability?.Value ?? 0,
+			effect_res: entry.StatusResistance?.Value ?? 0
+		}
+	}
+}
+
+export class Enemy extends EnemyTemplate {
+	name: string
+	id: number
+	intro: string
+	battle_intro: string
+	
+	scaling_type: number
+	elite_group_id: number
+	skill_list: number[]
+	value_tags: string[]
+	weakness_types: AttackType[]
+	
+	physical_res: number = 0
+	fire_res: number = 0
+	wind_res: number = 0
+	ice_res: number = 0
+	lightning_res: number = 0
+	quantum_res: number = 0
+	imaginary_res: number = 0
+	
+	atk_ratio: number
+	def_ratio: number
+	hp_ratio: number
+	spd_ratio: number
+	toughness_ratio: number
+	
+	spd_flat: number
+	toughness_flat: number
+	
+	constructor(public data: InternalMonster, templateData: InternalMonsterTemplate) {
+		super(templateData)
+		this.name = textMap.getText(data.MonsterName)
+		this.id = data.MonsterID
+		this.intro = textMap.getText(data.MonsterIntroduction)
+		this.battle_intro = textMap.getText(data.MonsterBattleIntroduction)
+		
+		this.scaling_type = data.HardLevelGroup
+		this.elite_group_id = data.EliteGroup ?? 1
+		this.skill_list = data.SkillList
+		this.value_tags = data.CustomValueTags
+		this.weakness_types = data.StanceWeakList
+		
+		data.DamageTypeResistance.forEach(res => this.addResEntry(res))
+		
+		this.atk_ratio = data.AttackModifyRatio?.Value ?? 1
+		this.def_ratio = data.DefenceModifyRatio?.Value ?? 1
+		this.hp_ratio = data.HPModifyRatio?.Value ?? 1
+		this.spd_ratio = data.SpeedModifyRatio?.Value ?? 1
+		this.toughness_ratio = data.StanceModifyRatio?.Value ?? 1
+		this.spd_flat = data.SpeedModifyValue?.Value ?? 0
+		this.toughness_flat = data.StanceModifyValue?.Value ?? 0
+	}
+
+	static fromId(enemyId: number | string) {
+		const monsterData = monsters[enemyId]
+		return new this(monsterData, monsterTemplates[monsterData.MonsterTemplateID])
+	}
+	
+	hasCustomName(): boolean {
+		return this.name != this.template_name
+	}
+	
+	addResEntry(data: TypeResData) {
+		switch (data.DamageType) {
+			case 'Thunder':
+				this.lightning_res += data.Value.Value
+				break
+			default:
+				this[`${data.DamageType.toLowerCase()}_res`] += data.Value.Value
+				break
+		}
+	}
+	
+	get scaling_map(): ScalingEntry[] {
+		return enemyScaling[this.scaling_type]
+	}
+	
+	listStatChanges(): string[] {
+		const changes: string[] = []
+		
+		const atk_diff = tpercent(this.atk / this.base_atk, 1)
+		if (atk_diff) {
+			changes.push(Stat.atk.diff(atk_diff))
+		}
+		
+		const def_diff = tpercent(this.def / this.base_def, 1)
+		if (def_diff) {
+			changes.push(Stat.def.diff(def_diff))
+		}
+		
+		const hp_diff = tpercent(this.hp / this.base_hp, 1)
+		if (hp_diff) {
+			changes.push(Stat.hp.diff(hp_diff))
+		}
+		
+		const spd_diff = tpercent((this.spd - this.spd_flat) / this.base_spd, 1)
+		if (spd_diff) {
+			changes.push(Stat.spd.diff(spd_diff))
+		}
+		
+		if (this.spd_flat) {
+			changes.push(Stat.spd.diff(diffn(this.spd_flat)))
+		}
+
+		const tough_diff = tpercent((this.toughness - this.toughness_flat) / this.base_toughness, 1)
+		if (tough_diff) {
+			changes.push(Stat.toughness.diff(tough_diff))
+		}
+		
+		if (this.toughness_flat) {
+			changes.push(Stat.toughness.diff(diffn(this.toughness_flat)))
+		}
+		
+		return changes
+	}
+	
+	get elite_group(): EliteGroup {
+		return eliteGroups[this.elite_group_id] ?? eliteGroups[1]
+	}
+	
+	get atk() {
+		return this.base_atk * this.atk_ratio * this.elite_group.atk_ratio
+	}
+	
+	get def() {
+		return this.base_def * this.def_ratio * this.elite_group.def_ratio
+	}
+	
+	get hp() {
+		return this.base_hp * this.hp_ratio * this.elite_group.hp_ratio
+	}
+	
+	get spd() {
+		return (this.base_spd * this.spd_ratio * this.elite_group.spd_ratio) + this.spd_flat
+	}
+	
+	get toughness() {
+		return (this.base_toughness * this.toughness_ratio * this.elite_group.toughness_ratio) + this.toughness_flat
+	}
+	
+	get effect_res() {
+		return this.base_effect_res
+	}
+
+	asEnemyListEntry(count: number | string) {
+		const statChanges = this.listStatChanges()
+		return `${this.template_name}*${count}`
+			+ (statChanges.length > 0 ? `/${statChanges.join(', ')}` : '')
+			+ (this.hasCustomName() ? `{ text = ${this.name} }` : '')
+	}
+}
+
+export class EnemyInstance extends Enemy {
+	constructor(public data: InternalMonster, templateData: InternalMonsterTemplate, public level: number) {
+		super(data, templateData)
+	}
+	
+	static fromIdLeveled(enemyId: number | string, level: number) {
+		const monsterData = monsters[enemyId]
+		return new this(monsterData, monsterTemplates[monsterData.MonsterTemplateID], level)
+	}
+	
+	get scaling() {
+		return this.scaling_map[this.level]
+	}
+	
+	get base_atk() {
+		return super.base_atk * this.scaling.atk
+	}
+	
+	get base_def() {
+		return super.base_def * this.scaling.def
+	}
+	
+	get base_hp() {
+		return super.base_hp * this.scaling.hp
+	}
+	
+	get base_spd() {
+		return super.base_spd * this.scaling.spd
+	}
+	
+	get ehr() {
+		return super.ehr + this.scaling.ehr
+	}
+	
+	get base_effect_res(): number {
+		return super.base_effect_res + this.scaling.effect_res
+	}
+	
+	get base_toughness(): number {
+		return super.base_toughness * this.scaling.toughness
+	}
+
+	asCardListEntry(noLevel?: boolean) {
+		return this.template_name
+			+ (!noLevel ? `*Lv. ${this.level}` : '')
+			+ (this.name != this.template_name ? `{ caption = ${this.name} }` : '')
 	}
 }

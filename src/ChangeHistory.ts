@@ -1,6 +1,9 @@
+import config from '../config.json' with { "type": "json" };
 import { Dictionary, VERSION_LIST, Version } from './Shared.js';
+import { HashReference, SupportedLanguage, TextMap } from './TextMap.js';
 import { HttpError, getFile } from './files/GameFile.js';
 import type { ItemConfig } from './files/Item.js';
+import { MazeFloor } from './files/MapData.js';
 import type { InternalMainMission } from './files/Mission.js';
 import type { RogueTalkNameConfig } from './files/Occurrence.js';
 import type { InternalWorldInfo } from './files/Worlds.js';
@@ -83,4 +86,43 @@ export class ChangeHistory<FileContents extends object, SearchReturn, FindArg> {
 		'ExcelOutput/RogueAreaConfig.json',
 		(worlds: Dictionary<InternalWorldInfo>, worldId: string | number) => worlds[worldId]
 	)
+	
+	static mazeFloors = new ChangeHistory(
+		'ExcelOutput/MazeFloor.json',
+		(floors: Dictionary<MazeFloor>, floorId: string | number) => floors[floorId]
+	)
+	
+	static async getRenameHistory(textMapHash: HashReference | number | string) {
+		let lastText: string | undefined = undefined
+		let results: string[] = []
+
+		for (const version of VERSION_LIST) {
+			const textMap = await TextMap.load(version, config.output_lang as SupportedLanguage)
+
+			const text = textMap.getText(textMapHash)
+			if (text && lastText != text) {
+				if (lastText) {
+					results.push(`Renamed to "${text}" in version ${version}`)
+				} else {
+					results.push(`Added in version ${version} as "${text}"`)
+				}
+				lastText = text
+			}
+		}
+
+		return results
+	}
+	
+	static async findText(text: string) {
+		for (const version of VERSION_LIST.toReversed()) {
+			const textMap = await TextMap.load(version, config.output_lang as SupportedLanguage)
+
+			const found = Object.entries(textMap.json).find(([, entry]) => entry == text)
+			if (found) {
+				return await this.getRenameHistory(found[0])
+			}
+		}
+
+		return []
+	}
 }

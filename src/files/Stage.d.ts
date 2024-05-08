@@ -1,4 +1,4 @@
-import type { AttackType, Value } from '../Shared.ts'
+import type { AttackType, Dictionary, Value } from '../Shared.ts'
 import type { HashReference } from '../TextMap.ts'
 
 export interface InternalEliteGroup {
@@ -39,6 +39,11 @@ export interface InternalStage {
 	TrialAvatarList: unknown[]
 }
 
+export interface TypeResData {
+	DamageType: AttackType
+	Value: Value<number>
+}
+
 export interface InternalMonster {
 	MonsterID: number
 	MonsterTemplateID: number
@@ -50,10 +55,7 @@ export interface InternalMonster {
 	SkillList: number[]
 	CustomValueTags: string[]
 	StanceWeakList: AttackType[]
-	DamageTypeResistance: {
-		DamageType: AttackType
-		Value: Value<number>
-	}
+	DamageTypeResistance: TypeResData[]
 	AbilityNameList: unknown[]
 	OverrideAIPath: string
 
@@ -61,6 +63,64 @@ export interface InternalMonster {
 	DefenceModifyRatio: Value<number>
 	HPModifyRatio: Value<number>
 	SpeedModifyRatio: Value<number>
+	SpeedModifyValue?: Value<number>
 	StanceModifyRatio: Value<number>
 	StanceModifyValue?: Value<number>
 }
+
+export type EnemyType = 'MinionLv2' | 'Elite' | 'LittleBoss' | 'BigBoss' | 'Minion'
+
+export interface InternalMonsterTemplate {
+	MonsterTemplateID: number
+	TemplateGroupID: number
+	AtlasSortID?: number
+	MonsterName: HashReference
+	MonsterCampID?: number
+	MonsterBaseType: string
+	Rank: EnemyType
+	JsonConfig: string
+	IconPath: string
+	RoundIconPath: string
+	ImagePath: string
+	PrefabPath: string
+	ManikinPrefabPath?: string
+	ManikinConfigPath?: string
+	ManikinImagePath: string
+	NatureID: number
+	AttackBase: Value<number>
+	DefenceBase: Value<number>
+	HPBase: Value<number>
+	SpeedBase: Value<number>
+	StanceBase?: Value<number>
+	CriticalDamageBase?: Value<number>
+	StatusResistanceBase?: Value<number>
+	MinimumFatigueRatio?: Value<number>
+	AIPath: string
+	StanceCount: number
+	StanceType?: AttackType
+	InitialDelayRatio: Value<number>
+	AISkillSequence: unknown[]
+	NPCMonsterList: number[]
+}
+
+export interface InternalMonsterCamp {
+	ID: number
+	SortID: number
+	Name: HashReference
+	IconPath: string
+	CampType: string
+}
+
+export interface HardLevelGroupEntry {
+	HardLevelGroup: number
+	Level: number
+	AttackRatio: Value<number>
+	DefenceRatio: Value<number>
+	HPRatio: Value<number>
+	SpeedRatio: Value<number>
+	StanceRatio: Value<number>
+	CombatPowerList: Value<number>[]
+	StatusProbability?: Value<number>
+	StatusResistance?: Value<number>
+}
+export type HardLevelGroup = Dictionary<HardLevelGroupEntry>
