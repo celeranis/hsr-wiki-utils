@@ -34,7 +34,7 @@ export interface Value<T> {
 	Value: T
 }
 
-export type Version = '1.0' | '1.1' | '1.2' | '1.3' | '1.4' | '1.5'| '1.6' | '2.0' | '2.1'
+export type Version = '1.0' | '1.1' | '1.2' | '1.3' | '1.4' | '1.5'| '1.6' | '2.0' | '2.1' | '2.2'
 
 export const VERSION_COMMITS: Dictionary<string, Version> = {
 	'1.0': '4a36e628f9f34e6221b167b6ae0235a2f3934330',
@@ -45,7 +45,8 @@ export const VERSION_COMMITS: Dictionary<string, Version> = {
 	'1.5': '59d64be43a1da285cf22ba9be5ed90ef2b23f857',
 	'1.6': '267db9b8cc44face0f376075f0828c5e1dd20bff',
 	'2.0': 'ca821fbec8c6d6ae37ed323ed76d1fc998bae84b',
-	'2.1': '' // TODO: Add when live
+	'2.1': '0ba49dbbd86b9be6f4be3fc5fa72eefaa65ad443',
+	'2.2': 'bc35ccf172429d6f12480c183d1ba8cc97bfd898'
 }
 
 export const VERSION_LIST: Version[] = Object.keys(VERSION_COMMITS).sort() as Version[]

@@ -24,7 +24,8 @@ PageTitle=#<<TITLE>>#
 |world         = <<START_WORLD>>
 |area          = <<START_AREA>>
 |prev          = <<PREV>>
-|other         = <<REWARDS>>
+|next          = <<NEXT>>
+|rewards       = <<REWARDS>>
 }}
 '''''<<NAME>>''''' is <<TAN>> [[<<TYPEDISPLAY>>]]<<DETAILS>>.
 
@@ -69,7 +70,7 @@ for (const missionData of Object.values(Mission.missionData)) {
 		.replaceAll('<<TYPEDISPLAY>>', mission.displayType)
 		.replaceAll('<<CHAPTERTITLE>>', mission.getChapterName() || '')
 		.replaceAll('<<SUMMARY>>', mission.description?.replaceAll('\n', '<br />') || "<!--official mission summary from Fate's Atlas-->")
-		.replaceAll('<<NEXT>>', mission.getNext().map(mission => wikiTitle(mission.name, 'mission')).join(';'))
+		.replaceAll('<<NEXT>>', mission.getNext().map(mission => wikiTitle(mission?.name || '???', 'mission')).join(';'))
 		.replaceAll('<<OL>>', await TextMap.generateOL(mission.name_hash))
 		.replaceAll('<<VERSION>>', (await ChangeHistory.missions.findAdded(mission.id.toString()))[0] || '<!--unknown-->')
 	
@@ -124,10 +125,7 @@ for (const missionData of Object.values(Mission.missionData)) {
 	const rewards = mission.getRewards()
 	
 	output = output
-		.replaceAll('<<EXP>>', (rewards.trailblaze_exp || '').toString())
-		.replaceAll('<<CREDITS>>', (rewards.credits || '').toString())
-		.replaceAll('<<JADES>>', (rewards.stellar_jade || '').toString())
-		.replaceAll('<<REWARDS>>', rewards.data.length > 0 ? rewards.asCardList(true) : '')
+		.replaceAll('<<REWARDS>>', rewards.asCardListParams())
 	
 	const path = `./output/missions/${mission.type}${mission.data.ChapterID ? `/${sanitize(mission.getChapterName()!)}` : ''}/`
 	mkdirSync(path, { recursive: true })
