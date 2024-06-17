@@ -2,16 +2,18 @@ import type { HashReference } from '../TextMap.ts'
 
 export interface InternalBlessingGroup {
 	/** id */
-	EGDAIIJDDPA: number
+	LIOICIOFLGL: number
 	/** included groups and blessings */
-	AMGHNOBDGLM: number[]
+	LEEMGFGKCMO: number[]
 }
+
+export type InternalBlessingCategory = 'Common' | 'Rare' | 'Legendary'
 
 export interface InternalBlessing {
 	MazeBuffID: number
 	MazeBuffLevel: number
 	RogueBuffType: number
-	RogueBuffRarity: number
+	RogueBuffCategory: InternalBlessingCategory
 	RogueBuffTag: number
 	ExtraEffectIDList: number[]
 	AeonID?: number

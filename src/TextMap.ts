@@ -1,5 +1,5 @@
 import config from '../config.json' with { type: "json" };
-import type { Dictionary, Value, Version } from './Shared.js';
+import { roundTo, type Dictionary, type Value, type Version } from './Shared.js';
 import { getFile } from './files/GameFile.js';
 import { whitespace } from './util/General.js';
 
@@ -34,7 +34,7 @@ export const OTHER_LANGUAGES: Dictionary<SupportedLanguage> = {
 	pt: 'PT'
 }
 
-export type TextParams = (string | number | undefined | Value<number>)[]
+export type TextParams = (string | number | undefined | Value<number> | [number, number])[]
 
 export class TextMap {
 	static readonly cache = new Map<`${SupportedLanguage}${Version}`, TextMap>()
@@ -69,49 +69,94 @@ export class TextMap {
     }
 	
 	replaceParams(text: string, params: TextParams) {
-		for (let [i, param] of params.entries()) {
-			if (typeof param == 'object') param = param.Value
-			text = text.replaceAll(`#${i + 1}[i]%`, (param ? Math.round(Number(param) * 100).toLocaleString() : '??') + '%')
-				.replaceAll(`#${i + 1}[i]`, param?.toLocaleString() || '??')
-				.replaceAll(`#${i + 1}`, param?.toLocaleString() || '??')
+		for (let [i, param] of [...params.entries()].toReversed()) {
+			if (typeof param == 'object' && !Array.isArray(param)) param = param.Value
+			if (text.includes('Heart of Eternity')) {
+				console.log(text, i, param)
+			}
+			if (!param) {
+				text = text.replaceAll(new RegExp(`{C\\d+#[^{}]*?<unbreak>#${i + 1}\\[?\\w+?\\]?%?</unbreak>[^{}]*?}`, 'gi'), '')
+			} else {
+				text = text.replaceAll(new RegExp(`{C\\d+#([^{}]*?<unbreak>#${i + 1}\\[?\\w+?\\]?%?<\\/unbreak>[^{}]*?)}`, 'gi'), '$1')
+			}
+			text = text.replaceAll(new RegExp(`<unbreak>#${i + 1}(?:\\[(\\w+)\\])?(%)?<\\/unbreak>`, 'g'), (_substr, mode: string, percent?: string) => {
+				let factor = mode?.startsWith('f') ? Number(mode.substring(1)) : 0
+				
+				let additionalMult = 1
+				if (percent) {
+					additionalMult = 100
+				} else {
+					percent = ''
+				}
+				
+				if (Array.isArray(param)) {
+					if (param[0] != param[1]) {
+						return ((param[0] ? roundTo(param[0] * additionalMult, factor).toLocaleString() : '??') + percent)
+							+ '–'
+							+ (param[1] ? roundTo(param[1] * additionalMult, factor).toLocaleString() : '??') + percent
+						}
+					else {
+						param = param[0]
+					}
+				}
+				
+				return (param ? roundTo(Number(param) * additionalMult, factor).toLocaleString() : '??') + percent
+			})
+				.replaceAll(`#${i + 1}`, (param ?? '??').toLocaleString())
+			
+			// text = text
+			// 	.replaceAll(`#${i + 1}[i]`, param?.toLocaleString() || '??')
+			// 	.replaceAll(`#${i + 1}`, param?.toLocaleString() || '??')
 		}
 		return text
 	}
 	
 	wikiFormatting(text: string, params?: TextParams, allowNewline: boolean = true): string {
 		let replaced = text
-			.replaceAll(/<\/?unbreak>/gi, '')
+		
+		replaced = replaced
 			.replaceAll(/{NICKNAME}/gi, '(Trailblazer)')
 			.replaceAll('\\n', '\n')
 			.replaceAll(/{(F|M)#(.+?)}{(F|M)#(.+?)}/gi, 
 				(_str: string, gender1: string, text1: string, gender2: string, text2: string) => 
-					`{{MC|${gender1.toLowerCase()}=${text1}|${gender2.toLowerCase()}=${text2}}}`
+					`⟨⟨MC|${gender1.toLowerCase()}=${text1}|${gender2.toLowerCase()}=${text2}⟩⟩`
 			)
 			.replaceAll(/<color=#(\w+)>(.+?)<\/color>/gi, (substr, color, text) => {
 				if (color == 'dbc291ff') {
-					return `{{Color|Keyword|${text}}}`
+					return `⟨⟨Color|Keyword|${text}⟩⟩`
 				} else if (color == 'f29e38ff') {
-					return `{{Color|h|${text}}}`
+					return `⟨⟨Color|h|${text}⟩⟩`
 				} else if (color == 'cdcdd8ff') {
 					return text
 				} else {
 					return `<span style="color:#${color}">${text}</span>`
 				}
 			})
-			.replaceAll(/{RUBY_B#(.+?)}(.+?){RUBY_E#}/gi, (_substr, topText, normalText) => `{{Rubi|${normalText}|${topText}}}`)
-			.replaceAll(/–/g, '&ndash;')
-			.replaceAll(/—/g, '&mdash;')
-			.replaceAll(/\u00d7/g, '&times;')
-			.replaceAll(/<\s*\/?\s*i\s*>/gi, "''")
-			.replaceAll(/\u00a0/g, this.lang == 'KR' ? ' ' : '&nbsp;')
-		
+			.replaceAll(/{RUBY_B#(.+?)}(.+?){RUBY_E#}/gi, (_substr, topText, normalText) => `⟨⟨Rubi|${normalText}|${topText}⟩⟩`)
+
 		if (params) {
 			replaced = this.replaceParams(replaced, params)
 		}
 		
+		replaced = replaced
+			// .replaceAll(/–/g, '&ndash;')
+			.replaceAll(/—/g, '&mdash;')
+			.replaceAll(/\u00d7/g, '&times;')
+			.replaceAll(/<\s*\/?\s*i\s*>/gi, "''")
+			.replaceAll(/\u00a0/g, this.lang == 'KR' ? ' ' : '&nbsp;')
+			.replaceAll(/⟨⟨Color\|(\w+?)\|(\s*)(.+?)(\s*)⟩⟩/gi, '$2⟨⟨Color|$1|$3⟩⟩$4')
+			.replaceAll(/⟨⟨Color\|\w+?\|⟩⟩/gi, '')
+			.replaceAll(/<\/?unbreak>/gi, '')
+		
 		if (!allowNewline) {
 			replaced = replaced.replaceAll('\n', ' ')
 		}
+		
+		// revert temporary {} escapes as they are used in both mediawiki and textmap syntax,
+		// creating awkward edge cases
+		replaced = replaced
+			.replaceAll('⟨', '{')
+			.replaceAll('⟩', '}')
 		
 		return replaced
 	}

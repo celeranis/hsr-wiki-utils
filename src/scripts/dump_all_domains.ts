@@ -27,6 +27,6 @@ for (const difficulties of await BaseDomain.getAll()) {
 		.addParam('region', '')
 		.addParam('area', area?.name ?? '')
 		.addParam('subarea', '')
-		.addParam('requiredEL', )
+		.addParam('requiredEL', '')
 		
 }

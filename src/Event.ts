@@ -275,7 +275,7 @@ export class EventSection {
 			)
 			if (this.path_choice) {
 				if (this.path_choice == 'Ruan Mei') {
-					output.unshift(`;(If [[Ruan Mei]] is in the active party){{Verify}}`)
+					output.unshift(`;(If [[Ruan Mei]] has been Downloaded for the current run)`)
 				} else if (this.path_choice == 'Erudition') {
 					output.unshift(`;(If Intra-Cognition is between ${this.condition_ids.map(id => GNG_CONDITION_MAP[id]).filter(v => v != null).sort().join(' and ')} in [[Simulated Universe: Gold and Gears]])`)
 				} else {

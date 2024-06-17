@@ -124,3 +124,22 @@ export interface HardLevelGroupEntry {
 	StatusResistance?: Value<number>
 }
 export type HardLevelGroup = Dictionary<HardLevelGroupEntry>
+
+export interface InternalMonsterSkill {
+	SkillID: number
+	SkillName: HashReference
+	IconPath: string
+	SkillDesc: HashReference
+	SkillTypeDesc: HashReference
+	SkillTag: HashReference
+	PhaseList: number[]
+	ExtraEffectIDList: number[]
+	DamageType: AttackType
+	SkillTriggerKey: string
+	SPHitBase: Value<number>
+	DelayRatio: Value<number>
+	ParamList: Value<number>[]
+	AttackType?: string
+	AI_CD?: number
+	AI_ICD?: number
+}

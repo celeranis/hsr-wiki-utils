@@ -3,7 +3,7 @@ import { diffn, tpercent, type AttackType, type Dictionary } from './Shared.js';
 import { Stat } from './Stats.js';
 import { TextMap, textMap } from './TextMap.js';
 import { LazyData, getFile } from './files/GameFile.js';
-import { EnemyType, HardLevelGroup, InternalEliteGroup, InternalMonster, InternalMonsterCamp, InternalMonsterTemplate, InternalStage, TypeResData } from './files/Stage.js';
+import { EnemyType, HardLevelGroup, InternalEliteGroup, InternalMonster, InternalMonsterCamp, InternalMonsterSkill, InternalMonsterTemplate, InternalStage, TypeResData } from './files/Stage.js';
 
 function percentChange(num: number) {
 	return `${num > 1 ? '+' : ''}${Math.round((num - 1) * 100)}%`
@@ -305,6 +305,8 @@ export class Enemy extends EnemyTemplate {
 	spd_flat: number
 	toughness_flat: number
 	
+	static skillData: LazyData<Dictionary<InternalMonsterSkill>> = new LazyData('ExcelOutput/MonsterSkillConfig.json')
+	
 	constructor(public data: InternalMonster, templateData: InternalMonsterTemplate) {
 		super(templateData)
 		this.name = textMap.getText(data.MonsterName)
@@ -425,6 +427,17 @@ export class Enemy extends EnemyTemplate {
 		return `${this.template_name}*${count}`
 			+ (statChanges.length > 0 ? `/${statChanges.join(', ')}` : '')
 			+ (this.hasCustomName() ? `{ text = ${this.name} }` : '')
+	}
+	
+	async getSkill(skillTag: string): Promise<InternalMonsterSkill | undefined> {
+		const skillData = await Enemy.skillData.get()
+		for (const skillId of this.skill_list) {
+			const skill = skillData[skillId]
+			if (skill.SkillTriggerKey == skillTag) {
+				return skill
+			}
+		}
+		return undefined
 	}
 }
 

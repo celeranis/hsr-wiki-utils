@@ -1,5 +1,7 @@
+import config from '../config.json' with { "type": "json" }
 import { AeonPath, Dictionary, pathListDisplay } from './Shared.js'
 import { TextMap } from './TextMap.js'
+import { WeirdKey } from './WeirdKey.js'
 import type { InternalBlessing, InternalBlessingBuff, InternalBlessingGroup, InternalLayerMap } from './files/Blessing.js'
 import { getFile } from './files/GameFile.js'
 
@@ -31,12 +33,12 @@ export class BlessingGroup {
 	static data = group_data
 	
 	constructor(public data: InternalBlessingGroup) {
-		this.id = data.EGDAIIJDDPA
+		this.id = data[WeirdKey.get('BlessingGroupID')]
 		BlessingGroup.map.set(this.id.toString(), this)
 	}
 	
 	resolveAllBlessings(): Blessing[] {
-		const blessings = this.data.AMGHNOBDGLM.map(id => BlessingGroup.forId(id)?.resolveAllBlessings() || []).flat(1024)
+		const blessings = this.data[WeirdKey.get('BlessingGroupMembers')].map((id: number) => BlessingGroup.forId(id)?.resolveAllBlessings() || []).flat(1024)
 		
 		this.rarity_min = Math.min(...blessings.map(blessing => blessing.rarity).filter(v => v))
 		this.rarity_max = Math.max(...blessings.map(blessing => blessing.rarity).filter(v => v))
@@ -108,7 +110,15 @@ export class Blessing {
 	constructor(public data: InternalBlessing) {
 		this.id = data.RogueBuffTag
 		this.buff_id = data.MazeBuffID
-		this.rarity = data.RogueBuffRarity
+		if (config.target_version < '2.3') {
+			this.rarity = (data as any).RogueBuffRarity
+		} else {
+			this.rarity = 
+				data.RogueBuffCategory == 'Common' ? 1 
+				: data.RogueBuffCategory == 'Rare' ? 2 
+				: data.RogueBuffCategory == 'Legendary' ? 3 
+				: 4
+		}
 		this.level = data.MazeBuffLevel
 		this.enhanced = this.level > 1
 		this.path = PathMap[data.RogueBuffType]

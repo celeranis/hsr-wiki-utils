@@ -1,10 +1,16 @@
 import { whitespace } from './General.js'
 
 export function multilineFormat(cell: string | number) {
-	if (typeof cell == 'string' && cell.includes('\n'))
-		return '\n' + cell
-	else
+	if (typeof cell == 'string' && cell.includes('\n')) {
+		if (cell.includes(' | ')) {
+			return cell.replace(' | ', ' |\n')
+		} else {
+			return '\n' + cell
+		}
+	}
+	else {
 		return typeof cell == 'string' && cell.startsWith('!') ? cell : ' ' + cell
+	}
 }
 
 interface TableRow {

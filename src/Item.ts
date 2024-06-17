@@ -94,7 +94,7 @@ export class Item {
 	
 	constructor(public data: InternalItem) {
 		this.name = textMap.getText(data.ItemName)
-		this.name_hash = data.ItemName.Hash
+		this.name_hash = data.ItemName?.Hash
 		this.id = data.ID
 		this.effect = HAS_EFFECT.includes(data.ItemSubType) ? textMap.getText(data.ItemDesc) : ''
 		this.type = data.ItemMainType
@@ -206,6 +206,31 @@ export class Item {
 		for (const data of Object.values(this.itemData)) {
 			if (data.data?.[id]) {
 				return new this(data.data?.[id])
+			}
+		}
+	}
+	
+	static findRaw(comparator: (item: InternalItem) => boolean): Item | undefined {
+		for (const data of Object.values(this.itemData)) {
+			if (data.data) {
+				for (const item of Object.values(data.data)) {
+					if (comparator(item)) {
+						return new this(item)
+					}
+				}
+			}
+		}
+	}
+
+	static find(comparator: (item: Item) => boolean): Item | undefined {
+		for (const data of Object.values(this.itemData)) {
+			if (data.data) {
+				for (const itemData of Object.values(data.data)) {
+					const item = new this(itemData)
+					if (comparator(item)) {
+						return item
+					}
+				}
 			}
 		}
 	}

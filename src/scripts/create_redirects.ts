@@ -3,13 +3,7 @@ import { client } from '../util/Bot.js';
 
 const REDIRECTS = [
 	{
-		sourceCategory: 'Readables',
-		readTemplate: 'Readable Infobox',
-		redirectName: (page: string, infobox) => `File:Item ${page}.png`,
-		redirectTarget: (page: string, infobox) => `File:${infobox.image}`
-	},
-	{
-		sourceCategory: 'Dreamscape Pass Stickers',
+		sourceCategory: 'Dreamscape Pass Sticker',
 		readTemplate: 'Item Infobox',
 		redirectName: (page: string, infobox) => `File:Item ${page}.png`,
 		redirectTarget: (page: string, infobox) => `File:${infobox.image}`
@@ -25,6 +19,12 @@ const REDIRECTS = [
 		readTemplate: 'Light Cone Infobox',
 		redirectName: (page: string, infobox) => `File:Item ${page}.png`,
 		redirectTarget: (page: string, infobox) => `File:Light Cone ${page} Icon.png`
+	},
+	{
+		sourceCategory: 'Readables',
+		readTemplate: 'Readable Infobox',
+		redirectName: (page: string, infobox) => `File:Item ${page}.png`,
+		redirectTarget: (page: string, infobox) => `File:${infobox.image}`
 	},
 	// {
 	// 	sourceCategory: 'Playable Characters',

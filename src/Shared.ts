@@ -7,6 +7,7 @@ export type AeonPath =
 
 export type AttackType = 'Physical' | 'Fire' | 'Wind' | 'Ice' | 'Thunder' | 'Quantum' | 'Imaginary'
 export type CustomAttackType = 'physical' | 'fire' | 'wind' | 'ice' | 'lightning' | 'quantum' | 'imaginary'
+export type RealAttackType = 'Physical' | 'Fire' | 'Wind' | 'Ice' | 'Lightning' | 'Quantum' | 'Imaginary'
 
 export const DAMAGE_TYPES: AttackType[] = ['Physical', 'Fire', 'Ice', 'Thunder', 'Wind', 'Quantum', 'Imaginary']
 
@@ -14,7 +15,7 @@ export function pathDisplayName(pathName: AeonPath) {
 	return pathName == 'TheHunt' ? 'The Hunt' : pathName
 }
 
-export function typeDisplayName(type: AttackType) {
+export function typeDisplayName(type: AttackType): RealAttackType {
 	return type == 'Thunder' ? 'Lightning' : type
 }
 
@@ -34,7 +35,7 @@ export interface Value<T> {
 	Value: T
 }
 
-export type Version = '1.0' | '1.1' | '1.2' | '1.3' | '1.4' | '1.5'| '1.6' | '2.0' | '2.1' | '2.2'
+export type Version = '1.0' | '1.1' | '1.2' | '1.3' | '1.4' | '1.5'| '1.6' | '2.0' | '2.1' | '2.2' | '2.3'
 
 export const VERSION_COMMITS: Dictionary<string, Version> = {
 	'1.0': '4a36e628f9f34e6221b167b6ae0235a2f3934330',
@@ -46,7 +47,8 @@ export const VERSION_COMMITS: Dictionary<string, Version> = {
 	'1.6': '267db9b8cc44face0f376075f0828c5e1dd20bff',
 	'2.0': 'ca821fbec8c6d6ae37ed323ed76d1fc998bae84b',
 	'2.1': '0ba49dbbd86b9be6f4be3fc5fa72eefaa65ad443',
-	'2.2': 'bc35ccf172429d6f12480c183d1ba8cc97bfd898'
+	'2.2': 'bc35ccf172429d6f12480c183d1ba8cc97bfd898',
+	'2.3': 'df89dd1138e751c8b1a62c92fc2bafac421dc18f',
 }
 
 export const VERSION_LIST: Version[] = Object.keys(VERSION_COMMITS).sort() as Version[]
@@ -145,7 +147,7 @@ export function wikiTitleLink(name: string, type?: AmbigType) {
 
 export function zeroPad(number: number, length: number) {
 	const stringNum = Math.abs(number).toString()
-	return (number < 0 ? '-' : '') + '0'.repeat(length - stringNum.length) + stringNum
+	return (number < 0 ? '-' : '') + '0'.repeat(Math.max(length - stringNum.length, 0)) + stringNum
 }
 
 export function diffn(num: number, plus: boolean = true) {
@@ -187,4 +189,8 @@ export class Cache<T extends object> {
 	delete(key: string) {
 		this.map.delete(key)
 	}
+}
+
+export function roundTo(num: number, factor: number) {
+	return Math.round(num * Math.pow(10, factor)) / Math.pow(10, factor)
 }
