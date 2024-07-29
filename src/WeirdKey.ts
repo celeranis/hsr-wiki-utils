@@ -16,6 +16,12 @@ export class WeirdKey {
 			'2.1': 'AMGHNOBDGLM',
 			'2.0': 'DNKFBOAIDCE',
 			'1.6': 'ADJICNNJFEM'
+		},
+		DescParamType: {
+			'2.3': 'IAGLGKPDLOE'
+		},
+		DescParamValue: {
+			'2.3': 'EPBOOFFCKPJ'
 		}
 	}
 	

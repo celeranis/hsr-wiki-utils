@@ -1,4 +1,4 @@
-import { mkdirSync, writeFileSync } from 'fs'
+import { mkdirSync, rmSync, writeFileSync } from 'fs'
 import { ChangeHistory } from '../ChangeHistory.js'
 import { Item } from '../Item.js'
 import { Mission } from '../Mission.js'
@@ -54,7 +54,8 @@ function sanitize(str: string) {
 	return str.replace(/[\/\<\>\:\"\\\|\?\*]/g, '')
 }
 
-await Item.loadFrom('main', 'characters', 'disks', 'light_cones', 'profile_pics', 'readables', 'relics')
+rmSync('./output/missions/', { recursive: true })
+await Item.loadAll()
 
 for (const missionData of Object.values(Mission.missionData)) {
 	const mission = new Mission(missionData)

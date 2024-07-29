@@ -1,9 +1,11 @@
-import { mkdirSync, writeFileSync } from 'fs';
+import { mkdirSync, rmSync, writeFileSync } from 'fs';
 import { ChangeHistory } from '../ChangeHistory.js';
 import { Item } from '../Item.js';
 import { sanitizeString, wikiTitle } from '../Shared.js';
 import { TextMap } from '../TextMap.js';
 import { Template } from '../util/Template.js';
+
+rmSync('./output/consumables/', { recursive: true })
 
 const SHOP_KEYWORDS: string[] = [
 	'exchange', 'shop', 'store', 'stall', 'vend', 'stand',

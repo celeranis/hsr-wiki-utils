@@ -6,7 +6,7 @@ import type { DynamicParamType, InternalDynamicContent, InternalDynamicDisplay }
 import { getFile } from './files/GameFile.js';
 
 const internal_data: Dictionary<Dictionary<InternalDynamicContent>> = await getFile('ExcelOutput/DialogueDynamicContent.json')
-const display_data: Dictionary<InternalDynamicDisplay> = await getFile('ExcelOutput/DialogueDynamicDisplay.json')
+const display_data: Dictionary<InternalDynamicDisplay> = await getFile('ExcelOutput/RogueDialogueDynamicDisplay.json')
 
 export class DynamicContent {
 	static internal_data = internal_data

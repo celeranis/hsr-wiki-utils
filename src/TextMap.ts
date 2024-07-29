@@ -13,10 +13,23 @@ export interface Sentence {
 	TalkSentenceText: HashReference
 }
 
+export interface TextJoinConfig {
+	TextJoinID: number
+	DefaultItem: number
+	TextJoinItemList: number[]
+}
+
+export interface TextJoinItem {
+	TextJoinItemID: number
+	TextJoinText: HashReference
+}
+
 export type SupportedLanguage = 'CHS' | 'CHT' | 'DE' | 'EN' | 'ES' | 'FR' | 'ID' 
 	| 'JP' | 'KR' | 'PT' | 'RU' | 'TH' | 'VI'
 
 const sentenceJson: Dictionary<Sentence> = await getFile('ExcelOutput/TalkSentenceConfig.json')
+const textJoinConfig: Dictionary<TextJoinConfig> = await getFile('ExcelOutput/TextJoinConfig.json')
+const textJoinItems: Dictionary<TextJoinItem> = await getFile('ExcelOutput/TextJoinItem.json')
 
 export const OTHER_LANGUAGES: Dictionary<SupportedLanguage> = {
 	en: 'EN',
@@ -32,6 +45,24 @@ export const OTHER_LANGUAGES: Dictionary<SupportedLanguage> = {
 	de: 'DE',
 	id: 'ID',
 	pt: 'PT'
+}
+
+export const COLOR_MAP = {
+	'f29e38': 'h',
+	'dd7a00': 'h',
+	'dbc291': 'keyword',
+	'42a8b9': 'fthuser',
+	'87e0ff': 'blue',
+	'77ede5': 'heliobus',
+	'eb4d3d': 'fire',
+	'ec505f': 'fire',
+	'ff3a3e': 'red',
+	'f3da75': 'imaginary',
+	'6f7cda': 'hblue',
+	'ad5e68': 'hred',
+	'ff4f53': 'humanoid',
+	'00f6ff': 'mechanical',
+	'ab88fe': 'aberrant'
 }
 
 export type TextParams = (string | number | undefined | Value<number> | [number, number])[]
@@ -121,18 +152,20 @@ export class TextMap {
 				(_str: string, gender1: string, text1: string, gender2: string, text2: string) => 
 					`⟨⟨MC|${gender1.toLowerCase()}=${text1}|${gender2.toLowerCase()}=${text2}⟩⟩`
 			)
-			.replaceAll(/<color=#(\w+)>(.+?)<\/color>/gi, (substr, color, text) => {
-				if (color == 'dbc291ff') {
-					return `⟨⟨Color|Keyword|${text}⟩⟩`
-				} else if (color == 'f29e38ff') {
-					return `⟨⟨Color|h|${text}⟩⟩`
-				} else if (color == 'cdcdd8ff') {
+			.replaceAll(/<color=#(\w{1,6})\w{2}?>(.*?)<\/color>/gi, (substr, color, text) => {
+				color = color.toLowerCase()
+				if (COLOR_MAP[color]) {
+					return `⟨⟨Color|${COLOR_MAP[color]}|${text}⟩⟩`
+				} else if (color == 'cdcdd8') {
 					return text
 				} else {
-					return `<span style="color:#${color}">${text}</span>`
+					return `⟨⟨Color|#${color}|${text}⟩⟩`
 				}
 			})
+			.replaceAll(/<size=([\-\+]?\d+)>(.*?)<\/size>/gi, '⟨⟨Size|$1|$2⟩⟩')
+			.replaceAll(/<align="?(\w+)"?>(.*?)<\/align>/gi, '<div align="$1">$2</div>')
 			.replaceAll(/{RUBY_B#(.+?)}(.+?){RUBY_E#}/gi, (_substr, topText, normalText) => `⟨⟨Rubi|${normalText}|${topText}⟩⟩`)
+			.replaceAll(/{TEXTJOIN#(\d+)}/gi, (_substr, id) => `(${Object.values(textJoinConfig).find(tj => tj.TextJoinID == id)?.TextJoinItemList.map(item => textMap.getText(Object.values(textJoinItems).find(tj => tj.TextJoinItemID == item)?.TextJoinText)).join('/')})`)
 
 		if (params) {
 			replaced = this.replaceParams(replaced, params)
@@ -143,6 +176,7 @@ export class TextMap {
 			.replaceAll(/—/g, '&mdash;')
 			.replaceAll(/\u00d7/g, '&times;')
 			.replaceAll(/<\s*\/?\s*i\s*>/gi, "''")
+			.replaceAll(/<\s*\/?\s*b\s*>/gi, "'''")
 			.replaceAll(/\u00a0/g, this.lang == 'KR' ? ' ' : '&nbsp;')
 			.replaceAll(/⟨⟨Color\|(\w+?)\|(\s*)(.+?)(\s*)⟩⟩/gi, '$2⟨⟨Color|$1|$3⟩⟩$4')
 			.replaceAll(/⟨⟨Color\|\w+?\|⟩⟩/gi, '')

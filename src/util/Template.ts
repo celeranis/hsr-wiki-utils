@@ -115,6 +115,14 @@ export interface TemplateMap {
 		next: string
 		rewards: string
 	} & { [T in `next${number}`]: string } & { [T in `prev${number}`]: string },
+	'Equation': {
+		name: string
+		rarity: '1' | '2' | '3' | 'boundary'
+		path1: string
+		path2: string
+		effect: string
+		story: string
+	}
 }
 
 export type DomainType = 

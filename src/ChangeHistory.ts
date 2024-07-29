@@ -8,7 +8,7 @@ import type { InternalMainMission } from './files/Mission.js';
 import type { RogueTalkNameConfig } from './files/Occurrence.js';
 import type { InternalWorldInfo } from './files/Worlds.js';
 
-const ITEM_ID_MATCH = (items: ItemConfig, itemId: string) => items[itemId]
+const ITEM_ID_MATCH = (items: ItemConfig, itemId: number | string) => Object.values(items).find(item => item.ID == itemId)
 
 /**
  * This is a somewhat abstract class used to figure out the change history of something.
@@ -124,5 +124,16 @@ export class ChangeHistory<FileContents extends object, SearchReturn, FindArg> {
 		}
 
 		return []
+	}
+	
+	static async findTerm(text: string) {
+		for (const version of VERSION_LIST.toReversed()) {
+			const textMap = await TextMap.load(version, config.output_lang as SupportedLanguage)
+
+			const found = Object.entries(textMap.json).filter(([, entry]) => entry.includes(text))
+			if (found.length) {
+				console.log(`Found ${found.length} occurrences in version ${version}:\n${found.map(f => f[0]).join(' ')}`)
+			}
+		}
 	}
 }

@@ -79,11 +79,30 @@ export interface SimpleTalk {
 	ProtectTime: number
 }
 
+export interface PerformanceTransition {
+	$type: 'RPG.GameCore.PerformanceTransition'
+	TextEnabled: boolean
+	TalkSentenceID?: number
+	CreateNpcList: number[]
+	CaptureNpcList: number[]
+	DestroyNpcList: number[]
+	CreateProp?: unknown
+	DestroyProp?: unknown
+	AdvCreateGroupEntity?: unknown
+	AdvDestroyGroupEntity?: unknown
+	ActiveVirtualCamera?: unknown
+	ActiveTemplateVirtualCamera?: unknown
+	SwitchCharacterAnchor?: unknown
+	AdvNpcFaceToPlayer?: unknown
+}
+
 export interface PlayOptionTalk {
 	$type: 'RPG.GameCore.PlayOptionTalk'
-	TalkSentenceID: number
-	OptionIconType: string
-	TriggerCustomString: string
+	OptionList: {
+		TalkSentenceID: number
+		OptionIconType: string
+		TriggerCustomString: string
+	}[]
 }
 
 export interface CustomStringReference {
@@ -246,6 +265,7 @@ export interface PredicateTaskList {
 	$type: 'RPG.GameCore.PredicateTaskList'
 	Predicate: DialogPredicate
 	SuccessTaskList: DialogTask[]
+	FailedTaskList?: DialogTask[]
 }
 
 export type CompareType = 'Equal'
@@ -267,3 +287,4 @@ export type DialogTask =
 	| TaskShowBg | PlayAndWaitSimpleTalk | TriggerSound | PlayOptionTalk | WaitCustomString 
 	| TriggerCustomString | WaitDialogueEvent | PlayOptionTalkSimple | RoguePlayAndWaitSimpleTalk
 	| RoguePlayOptionTalk | WaitPredicateSuccess | TriggerToastPage | ShowWaypointByProp
+	| PerformanceTransition | PredicateTaskList

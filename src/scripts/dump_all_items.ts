@@ -1,4 +1,4 @@
-import { mkdirSync, writeFileSync } from 'fs';
+import { mkdirSync, rmSync, writeFileSync } from 'fs';
 import { ChangeHistory } from '../ChangeHistory.js';
 import { Item } from '../Item.js';
 import { n, sanitizeString, wikiTitle } from '../Shared.js';
@@ -6,6 +6,7 @@ import { TextMap } from '../TextMap.js';
 import { ItemMainType, ItemSubType } from '../files/Item.js';
 import { Template } from '../util/Template.js';
 
+rmSync('./output/items/', { recursive: true })
 await Item.loadAll()
 
 const SKIP_TYPES: (ItemSubType | ItemMainType)[] = [
@@ -38,7 +39,7 @@ for (const [source, data] of Object.entries(Item.itemData)) {
 	if (source == 'character_default_pfps') continue
 	
 	for (const itemData of Object.values(data.data!)) {
-		if (SKIP_TYPES.includes(itemData.ItemMainType) || SKIP_TYPES.includes(itemData.ItemSubType)) continue
+		if (!itemData || SKIP_TYPES.includes(itemData.ItemMainType) || SKIP_TYPES.includes(itemData.ItemSubType)) continue
 		
 		const item = new Item(itemData)
 		

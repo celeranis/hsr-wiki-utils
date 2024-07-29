@@ -23,10 +23,10 @@ export interface InternalEventSection {
 }
 
 export interface InternalEventSectionDisplay {
-	EventDisplayID: number
-	EventTitle: HashReference
-	EventDesc: HashReference
-	EventDetailDesc: HashReference
+	OptionDisplayID: number
+	OptionTitle: HashReference
+	OptionDesc: HashReference
+	OptionDetailDesc: HashReference
 }
 
 export interface InternalEventName {
@@ -68,13 +68,14 @@ export interface InternalTalkName {
 	ImageID: number
 }
 
-export interface InternalNPCDialogue {
+export interface InternalNPC {
 	RogueNPCID: number
-	DialogueProgress: number
-	TexturePath: string
-	DialoguePath: string
-	HandbookEventID?: number
-	ImageID: number
+	NPCJsonPath: string
+	// DialogueProgress: number
+	// TexturePath: string
+	// DialoguePath: string
+	// HandbookEventID?: number
+	// ImageID: number
 	_name?: HashReference
 	_talk: InternalTalkName
 }

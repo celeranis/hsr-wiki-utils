@@ -1,4 +1,4 @@
-import { mkdirSync, writeFileSync } from 'fs';
+import { mkdirSync, rmSync, writeFileSync } from 'fs';
 import { BlessingGroup } from '../Blessing.js';
 import { ChangeHistory } from '../ChangeHistory.js';
 import { Event } from '../Event.js';
@@ -7,6 +7,7 @@ import { TextMap } from '../TextMap.js';
 import { getFile } from '../files/GameFile.js';
 import type { InternalNPCDialogue, InternalSecret, InternalSecretGroup } from '../files/Occurrence.js';
 
+rmSync('./output/events/', { recursive: true })
 BlessingGroup.loadAll()
 
 const skip = [30, 31, 32]

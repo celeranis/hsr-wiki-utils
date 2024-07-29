@@ -6,7 +6,7 @@ import { Stage } from './Stage.js'
 import { HashReference, TextMap } from './TextMap.js'
 import { Act, DialogSequence, DialogTask } from './files/Dialog.js'
 import { getFile } from './files/GameFile.js'
-import type { CostType, EffectType, InternalEventSection, InternalEventSectionDisplay, InternalHandbookEvent, InternalNPCDialogue, InternalTalkName } from './files/Occurrence.js'
+import type { CostType, EffectType, InternalEventSection, InternalEventSectionDisplay, InternalHandbookEvent, InternalNPC, InternalTalkName } from './files/Occurrence.js'
 
 const ITEMS = {
 	31: 'Cosmic Fragments'
@@ -153,9 +153,9 @@ export class EventSection {
 		}
 		
 		const params = [this.dynamic_content?.text_params?.join('/') || '[path]', internal.DescValue, undefined, undefined, internal.DescValue2, internal.DescValue3]
-		this.title = this.text_map.getText(overrideTitle || internal.EventTitle || display?.EventTitle, params)
-		this.description_detail = this.text_map.getText(internal.EventDetailDesc || display?.EventDetailDesc, params)
-		this.description = this.text_map.getText(internal.EventDesc || display?.EventDesc, params) + (this.description_detail ? ` (${this.description_detail})` : '')
+		this.title = this.text_map.getText(overrideTitle || internal.EventTitle || display?.OptionTitle, params)
+		this.description_detail = this.text_map.getText(internal.EventDetailDesc || display?.OptionDetailDesc, params)
+		this.description = this.text_map.getText(internal.EventDesc || display?.OptionDesc, params) + (this.description_detail ? ` (${this.description_detail})` : '')
 		
 		this.parent.sections.set(this.id, this)
 	}
@@ -302,8 +302,8 @@ const VALID_DIALOGUE_TYPES = new Set<DialogTask['$type']>([
 ])
 
 const DIALOG_EVENT: Dictionary<InternalEventSection> = await getFile('ExcelOutput/DialogueEvent.json')
-const DIALOG_EVENT_DISPLAY: Dictionary<InternalEventSectionDisplay> = await getFile('ExcelOutput/DialogueEventDisplay.json')
-const NPC_DIALOG: Dictionary<Dictionary<InternalNPCDialogue>> = await getFile('ExcelOutput/RogueNPCDialogue.json')
+const DIALOG_EVENT_DISPLAY: Dictionary<InternalEventSectionDisplay> = await getFile('ExcelOutput/RogueDialogueOptionDisplay.json')
+const NPC_DIALOG: Dictionary<Dictionary<InternalNPC>> = await getFile('ExcelOutput/RogueNPC.json')
 const TALK_NAMES: Dictionary<InternalTalkName> = await getFile('ExcelOutput/RogueTalkNameConfig.json')
 const HANDBOOK: Dictionary<InternalHandbookEvent> = await getFile('ExcelOutput/RogueHandBookEvent.json')
 const HANDBOOK_TYPES: Dictionary<any> = await getFile('ExcelOutput/RogueHandBookEventType.json')
@@ -329,7 +329,7 @@ export class Event {
 	
 	static DIALOG_EVENT = DIALOG_EVENT
 	static DIALOG_EVENT_DISPLAY = DIALOG_EVENT_DISPLAY
-	static NPC_DIALOG = NPC_DIALOG
+	// static NPC_DIALOG = NPC_DIALOG
 	static TALK_NAMES = TALK_NAMES
 	static HANDBOOK = HANDBOOK
 	static HANDBOOK_TYPES = HANDBOOK_TYPES
@@ -338,7 +338,7 @@ export class Event {
 	sectionCustomStrings = new Map<number, string>()
 	triggeredStrings = new Set<string>()
 	
-	constructor(public npc_dialog: InternalNPCDialogue) {
+	constructor(public npc_dialog: InternalNPC) {
 		this.handbook_id = npc_dialog.HandbookEventID
 		const handbookEntry: (InternalHandbookEvent | undefined) = this.handbook_id ? Event.HANDBOOK[this.handbook_id] : undefined
 		const talkName = npc_dialog._talk ?? Event.TALK_NAMES[npc_dialog.RogueNPCID]
@@ -368,6 +368,7 @@ export class Event {
 		if (!eventData) {
 			throw new TypeError(`No event data found for ${id}`)
 		}
+		console.log(overrideTitle, Event.DIALOG_EVENT_DISPLAY[eventData.EventDisplayID!])
 		return new EventSection(this, eventData, Event.DIALOG_EVENT_DISPLAY[eventData.EventDisplayID!], undefined, overrideTitle)
 	}
 	

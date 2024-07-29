@@ -1,6 +1,6 @@
 import config from '../config.json' with { "type": "json" }
-import { AeonPath, Dictionary, pathListDisplay } from './Shared.js'
-import { TextMap } from './TextMap.js'
+import { AeonPath, Dictionary, pathDisplayName, pathListDisplay } from './Shared.js'
+import { textMap } from './TextMap.js'
 import { WeirdKey } from './WeirdKey.js'
 import type { InternalBlessing, InternalBlessingBuff, InternalBlessingGroup, InternalLayerMap } from './files/Blessing.js'
 import { getFile } from './files/GameFile.js'
@@ -14,7 +14,7 @@ export const PathMap: {[id: string]: AeonPath} = {
 	'125': 'Destruction',
 	'126': 'Elation',
 	'127': 'Propagation',
-	'128': 'Erudition', // speculation
+	'128': 'Erudition',
 }
 
 export type EnhanceFilter = 'both' | 'none' | 'only'
@@ -91,8 +91,17 @@ export class BlessingGroup {
 	}
 }
 
-const blessing_data: InternalLayerMap<InternalBlessing> = await getFile('ExcelOutput/RogueBuff.json')
+const blessing_data: InternalLayerMap<InternalBlessing> = await getFile('ExcelOutput/RogueTournBuff.json')
 const buff_data: InternalLayerMap<InternalBlessingBuff> = await getFile('ExcelOutput/RogueMazeBuff.json')
+
+const iconVariants = [
+	'',
+	'Attack',
+	'Defense',
+	'Buff',
+	'Debuff',
+	'Support'
+]
 
 export class Blessing {
 	buff_id: number
@@ -101,6 +110,13 @@ export class Blessing {
 	path: AeonPath
 	enhanced: boolean
 	level: number
+	traits: number[]
+	
+	buff: InternalBlessingBuff
+	name: string
+	description: string
+	simple_description: string
+	icon_variant: string
 
 	static map = new Map<string, Blessing>()
 	
@@ -122,6 +138,13 @@ export class Blessing {
 		this.level = data.MazeBuffLevel
 		this.enhanced = this.level > 1
 		this.path = PathMap[data.RogueBuffType]
+		this.traits = data.ExtraEffectIDList
+		
+		this.buff = Blessing.buff_data[this.buff_id][this.level]
+		this.name = textMap.getText(this.buff.BuffName)
+		this.description = textMap.getText(this.buff.BuffDesc, this.buff.ParamList)
+		this.simple_description = textMap.getText(this.buff.BuffSimpleDesc, this.buff.ParamList)
+		this.icon_variant = iconVariants[Number(this.buff.BuffIcon.match(/(\d+)\.png/)?.[1]) ?? 0]
 		
 		Blessing.map.set(this.id.toString(), this)
 	}
@@ -131,19 +154,11 @@ export class Blessing {
 	}
 	
 	getBuff(): InternalBlessingBuff {
-		return Blessing.buff_data[this.buff_id][this.level]
+		return this.buff
 	}
 	
-	get name(): string {
-		return TextMap.default.getText(this.getBuff().BuffName)
-	}
-	
-	get simple_description(): string {
-		return TextMap.default.getText(this.getBuff().BuffSimpleDesc)
-	}
-	
-	get description(): string {
-		return TextMap.default.getText(this.getBuff().BuffDesc)
+	static getPath(id: number) {
+		return pathDisplayName(PathMap[id])
 	}
 	
 	resolveAllBlessings(): Blessing[] {
@@ -152,12 +167,13 @@ export class Blessing {
 	
 	static loaded = false
 	static loadAll() {
-		if (this.loaded) return
+		if (this.loaded) return this.map.values()
 		for (const levels of Object.values(this.data)) {
 			for (const data of Object.values(levels)) {
 				new Blessing(data)
 			}
 		}
 		this.loaded = true
+		return this.map.values()
 	}
 }

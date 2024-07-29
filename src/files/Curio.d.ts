@@ -6,7 +6,7 @@ export interface InternalCurio {
 	MiracleDisplayID: number
 	UnlockIDList: number[]
 	UseEffect: HashReference
-	UnlockHandbookMiracleID: number
+	HandbookMiracleID: number
 }
 
 export interface InternalCurioDisplay {
@@ -26,4 +26,5 @@ export interface InternalIndexCurio {
 	MiracleTypeList: number[]
 	MiracleDisplayID: number
 	Order: number
+	MiracleCategory: 'Common' | 'Rare' | 'Legendary' | 'Negative' | 'Hex'
 }

@@ -1,6 +1,5 @@
 import { Dictionary } from './Shared.js'
 import { textMap } from './TextMap.js'
-import { Unlock } from './Unlock.js'
 import { InternalCurio, InternalCurioDisplay, InternalIndexCurio } from './files/Curio.js'
 import { getFile } from './files/GameFile.js'
 import { Template } from './util/Template.js'
@@ -125,9 +124,9 @@ export class CurioGroup {
 	}
 }
 
-const curioData: Dictionary<InternalCurio> = await getFile('ExcelOutput/RogueMiracle.json')
-const curioDisplay: Dictionary<InternalCurioDisplay> = await getFile('ExcelOutput/RogueMiracleDisplay.json')
-const curioIndex: Dictionary<InternalIndexCurio> = await getFile('ExcelOutput/RogueHandbookMiracle.json')
+const curioData: Dictionary<InternalCurio> = await getFile('ExcelOutput/RogueTournMiracle.json')
+const curioDisplay: Dictionary<InternalCurioDisplay> = await getFile('ExcelOutput/RogueTournMiracleDisplay.json')
+const curioIndex: Dictionary<InternalIndexCurio> = await getFile('ExcelOutput/RogueTournHandbookMiracle.json')
 
 const TYPE_MAP = {
 	100: 'su',
@@ -146,12 +145,13 @@ export class Curio {
 	obtainable_in: string[]
 	order: number
 	is_indexable: boolean
-	unlock_list: Unlock[]
+	rarity?: string
+	// unlock_list: Unlock[]
 	
 	constructor(public id: number) {
 		const curio = Curio.data[id]
 		const display = Curio.displayData[curio.MiracleDisplayID]
-		const index = Curio.indexData[curio.UnlockHandbookMiracleID]
+		const index = Curio.indexData[curio.HandbookMiracleID]
 		
 		this.name = textMap.getText(display.MiracleName)
 		console.group(this.name)
@@ -159,8 +159,11 @@ export class Curio {
 		this.lore = textMap.getText(display.MiracleBGDesc)
 		this.obtainable_in = index?.MiracleTypeList?.map(id => TYPE_MAP[id]) || []
 		this.order = index?.Order ?? 1000
-		this.is_indexable = Boolean(curio.UnlockHandbookMiracleID)
-		this.unlock_list = curio.UnlockIDList.map(unlock => Unlock.fromUnlockId(unlock))
+		this.is_indexable = Boolean(curio.HandbookMiracleID)
+		if (index?.MiracleCategory) {
+			this.rarity = index.MiracleCategory == 'Common' ? '1' : index.MiracleCategory == 'Rare' ? '2' : index.MiracleCategory == 'Legendary' ? '3' : index.MiracleCategory == 'Hex' ? 'Weighted' : 'Negative'
+		}
+		// this.unlock_list = curio.UnlockIDList.map(unlock => Unlock.fromUnlockId(unlock))
 		console.groupEnd()
 	}
 	
@@ -169,9 +172,9 @@ export class Curio {
 		if (!this.is_indexable) {
 			notes.push(`* This Curio is not included in the Simulated Universe Index.`)
 		}
-		for (const unlock of this.unlock_list) {
-			notes.push(`* This Curio is only obtainable ${unlock.desc.replace('Unlocked ', '')}`)
-		}
+		// for (const unlock of this.unlock_list) {
+		// 	notes.push(`* This Curio is only obtainable ${unlock.desc.replace('Unlocked ', '')}`)
+		// }
 		return notes
 	}
 	

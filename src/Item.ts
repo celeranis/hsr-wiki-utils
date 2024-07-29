@@ -204,8 +204,9 @@ export class Item {
 	
 	static fromId(id: number | string): Item | undefined {
 		for (const data of Object.values(this.itemData)) {
-			if (data.data?.[id]) {
-				return new this(data.data?.[id])
+			const itemDat = Object.values(data.data ?? {})?.find(item => item.ID == id)
+			if (itemDat) {
+				return new this(itemDat)
 			}
 		}
 	}

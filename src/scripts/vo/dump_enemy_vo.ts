@@ -1,12 +1,13 @@
 import { execSync } from 'child_process';
 import { program } from 'commander';
 import { existsSync } from 'fs';
-import { mkdir, readdir, rm, writeFile } from 'fs/promises';
+import { mkdir, rm, writeFile } from 'fs/promises';
 import config from '../../../config.json' with { "type": "json" };
-import { Dictionary, sanitizeString, zeroPad } from '../../Shared.js';
+import { sanitizeString, zeroPad } from '../../Shared.js';
 import { Enemy } from '../../Stage.js';
 import { textMap } from '../../TextMap.js';
 import { getFile, getFileSafe } from '../../files/GameFile.js';
+import { files, langs } from './util.js';
 
 const loadFrom = config.asset_roots.TXTP
 // const VO_MAP: Record<string, SoundData[]> = JSON.parse((await readFile('./output/VO_Map.json')).toString())
@@ -46,6 +47,8 @@ const STATE_MAP = {
 	ChangePhaseEnd: 'Entered Phase 2',
 	ChangePhaseStart02: 'Entered Phase 3',
 	ChangePhaseEnd02: 'Entered Phase 3',
+	ChangePhase02: 'Entered Phase 3',
+	ChangePhase_End: 'Entered Phase 2',
 	Hit: 'Hit by Light Attack',
 	Hit_H: 'Hit by Heavy Attack',
 	Hit_H_Break: 'Weakness Broken',
@@ -55,12 +58,16 @@ const STATE_MAP = {
 	Revive: 'Entering Phase 2',
 	Revive02: 'Entering Phase 3',
 	SkillPerform01: 'Entering Battle',
-	Skill05: 'Team Building',
 	
 	// TEMPORARY //
 	// Skill05: 'Frigid Waterfall',
 	// Skill06: 'Tit for Tat',
 	// Skill12: 'Besiege'
+	// Skill05: 'Team Building',
+	// Skill08: 'Havoc'
+	// Skill09: 'Aethereal Dreamflux',
+	// Skill04: 'Mara-Summon'
+	Skill04: 'Rite of Subduing Prana'
 }
 
 // const AS_LIST = [
@@ -83,6 +90,12 @@ const SKIP: string[] = [
 	// 'Weakness Broken (Phase 3)',
 	// 'Hit by Light Attack (Phase 3)',
 	'Hit While Weakness Broken',
+	'Cascading Laceration',
+	'Rapturous Wind',
+	'Fleeting Gilded Spikes',
+	'Hit2',
+	// 'Thunder-Shock',
+	// 'Skill06',
 	// 'Skill08'
 	// 'Stagger',
 	// 'Stagger_P3_1',
@@ -91,36 +104,13 @@ const SKIP: string[] = [
 ]
 
 const monster = Enemy.fromId(opts.id)
-const fileChoice = opts.file ?? monster.config_path.replace(/.+\//, '').replace('_RLElite', '').replace('_RL', '').replace('_Config', '_Audio_AnimEvent')
+const fileChoice = opts.file ?? monster.config_path.replace(/.+\//, '').replace('_RLElite', '').replace('_RL', '').replace('_ConfigBoss', '_Audio_AnimEvent').replace('_Config', '_Audio_AnimEvent')
 
 const animEvents = (await getFile<SoundEventData>(`Config/ConfigAnimEvents/Monster/Audio/${fileChoice.endsWith('.json') ? fileChoice : (fileChoice + '.json')}`)).AnimatorStateEvents
 const animEvents2 = (await getFileSafe<SoundEventData>(`Config/ConfigAnimEvents/NPCMonster/Audio/${fileChoice.endsWith('.json') ? fileChoice : (fileChoice + '.json')}`))?.AnimatorStateEvents
 
 if (animEvents2) {
 	animEvents.unshift(...animEvents2)
-}
-
-interface LangData {
-	display: string
-	file: string
-}
-const langs: Dictionary<LangData> = {
-	en: {
-		display: 'English',
-		file: ''
-	},
-	'zh-cn': {
-		display: 'Chinese',
-		file: 'ZH '
-	},
-	ja: {
-		display: 'Japanese',
-		file: 'JA '
-	},
-	ko: {
-		display: 'Korean',
-		file: 'KO '
-	}
 }
 
 const folderName = sanitizeString(opts.name || monster.name)
@@ -134,10 +124,8 @@ let currentIndex = 1
 // const incs = {}
 const exported = new Set<string>()
 
-const files = await readdir(loadFrom)
-
 function getFilesByPrefix(prefix: string) {
-	return files.filter(file => file.startsWith(prefix)).map(file => {
+	return Object.entries(files).filter(file => file[0].startsWith(prefix)).map(([file, file_path]) => {
 		const lang = file.match(/{l=([\w\-]+)}/i)?.[1] ?? 'sfx'
 		const num = parseInt(file.match(/{r(\d)}/i)?.[1] ?? '') || 1
 		
@@ -146,8 +134,9 @@ function getFilesByPrefix(prefix: string) {
 		let speed_state: number | undefined = undefined
 		if (speed_state_hash == '54353430') speed_state = 2
 		else if (speed_state_hash == '3023464624') speed_state = 1
+		else if (speed_state_hash == '748895195') speed_state = 4
 		
-		return { lang, num, speed_state, file }
+		return { lang, num, speed_state, file, file_path }
 	})
 }
 
@@ -188,12 +177,19 @@ for (const animState of animEvents) {
 		for (const soundData of getFilesByPrefix(animEvent.SoundName)) {
 			if (exported.has(soundData.file) || soundData.lang == 'sfx') continue
 			// if (soundData.speed_state == 2) inc--
-			const outFileSuffix = `${stateName} ${soundData.num}${soundData.speed_state ? ` ${soundData.speed_state}x` : ''}`
+			let outFileSuffix = `${stateName} ${soundData.num}${soundData.speed_state ? ` ${soundData.speed_state}x` : ''}`
+
+			const lang = langs[soundData.lang]
+			
+			while (existsSync(`./output/file/vo/${folderName}/${lang.display}/VO ${lang.file}${folderName} - ${outFileSuffix}.ogg`)) {
+				soundData.num++
+				outFileSuffix = `${stateName} ${soundData.num}${soundData.speed_state ? ` ${soundData.speed_state}x` : ''}`
+			}
 			
 			const notes: string[] = []
 			
-			if (soundData.speed_state == 2) {
-				notes.push('2&times; speed')
+			if (soundData.speed_state && soundData.speed_state != 1) {
+				notes.push(`${soundData.speed_state}&times; speed`)
 				// continue
 			}
 			
@@ -214,18 +210,15 @@ for (const animState of animEvents) {
 					''
 				)
 			}
+			// console.log(soundData.lang, lang)
 			
-			const lang = langs[soundData.lang]
-			console.log(soundData.lang, lang)
+			var num = soundData.num
 			
 			const outDir = `./output/file/vo/${folderName}/${lang.display}`
 			let outFile = `VO ${lang.file}${folderName} - ${outFileSuffix}.ogg`
 			await mkdir(outDir, { recursive: true })
 			try {
-				if (existsSync(`./output/file/vo/${folderName}/${lang.display}/${outFile}`)) {
-					
-				}
-				execSync(`"${config.vgmstream_path}" -o "${outFile.replace(/\.ogg$/, '.wav')}" "${loadFrom}\\${soundData.file}"`, {
+				execSync(`"${config.vgmstream_path}" -o "${outFile.replace(/\.ogg$/, '.wav')}" "${loadFrom}\\${soundData.file_path}"`, {
 					cwd: `./output/file/vo/${folderName}/${lang.display}`
 				})
 				execSync(`ffmpeg -i "${outFile.replace(/\.ogg$/, '.wav')}" "${outFile}" -hide_banner -loglevel error`, {
