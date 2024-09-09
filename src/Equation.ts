@@ -38,7 +38,7 @@ export class Equation {
 	sortkey: number
 	
 	constructor(public id: number) {
-		const data = EquationData[id]
+		const data = Object.values(EquationData).find(dat => dat.FormulaID == id)!
 		this.mode = data.TournMode
 		this.rarity = data.FormulaCategory == 'PathEcho' ? 'boundary' : data.FormulaCategory == 'Rare' ? '1' : data.FormulaCategory == 'Epic' ? '2' : '3'
 		this.buff_id = data.MazeBuffID
@@ -55,11 +55,11 @@ export class Equation {
 			this.path2count = data.SubBuffNum
 		}
 		
-		const displayData = EquationDisplayData[data.FormulaDisplayID]
+		const displayData = Object.values(EquationDisplayData).find(dat => dat.FormulaDisplayID == data.FormulaDisplayID)!
 		this.story = textMap.getText(displayData.FormulaStory)
 		this.traits = displayData.ExtraEffect
 		
-		const buffData = Blessing.buff_data[this.buff_id]['1']
+		const buffData = Object.values(Blessing.buff_data).find(buff => buff.ID == this.buff_id)!
 		this.name = textMap.getText(buffData.BuffName)
 		this.description = textMap.getText(buffData.BuffDesc, buffData.ParamList)
 			.replaceAll(/<u>(.+?)<\/u>/gi, (_, trait) => override[trait] ? `{{Trait|${override[trait]}|${trait}}}` : `{{Trait|${trait}}}`)
@@ -69,11 +69,11 @@ export class Equation {
 	}
 	
 	static getExtraEffect(id: number) {
-		return ExtraEffectData[id]
+		return Object.values(ExtraEffectData).find(eff => eff.ExtraEffectID == id)
 	}
 	
 	static loadAll() {
-		return Object.keys(EquationData).map(id => new this(Number(id)))
+		return Object.values(EquationData).map(id => new this(Number(id.FormulaID)))
 			.sort((a, b) => (a.sortkey - b.sortkey))
 	}
 	

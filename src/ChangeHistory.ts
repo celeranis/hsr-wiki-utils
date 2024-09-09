@@ -6,6 +6,8 @@ import type { ItemConfig } from './files/Item.js';
 import { MazeFloor } from './files/MapData.js';
 import type { InternalMainMission } from './files/Mission.js';
 import type { RogueTalkNameConfig } from './files/Occurrence.js';
+import { InternalBookSeries } from './files/Readable.js';
+import { InternalShop } from './files/Shop.js';
 import type { InternalWorldInfo } from './files/Worlds.js';
 
 const ITEM_ID_MATCH = (items: ItemConfig, itemId: number | string) => Object.values(items).find(item => item.ID == itemId)
@@ -74,22 +76,37 @@ export class ChangeHistory<FileContents extends object, SearchReturn, FindArg> {
 	
 	static occurrences = new ChangeHistory(
 		'ExcelOutput/RogueTalkNameConfig.json',
-		(items: RogueTalkNameConfig, talkId: string) => items[talkId]
+		(items: RogueTalkNameConfig, talkId: string | number) => Object.values(items).find(item => item.TalkNameID == talkId)
 	)
 
 	static missions = new ChangeHistory(
 		'ExcelOutput/MainMission.json',
-		(items: Dictionary<InternalMainMission>, missionId: string) => items[missionId]
+		(items: Dictionary<InternalMainMission>, missionId: string | number) => Object.values(items).find(item => item.MainMissionID == missionId)
 	)
 	
 	static worlds = new ChangeHistory(
 		'ExcelOutput/RogueAreaConfig.json',
-		(worlds: Dictionary<InternalWorldInfo>, worldId: string | number) => worlds[worldId]
+		(worlds: Dictionary<InternalWorldInfo>, worldId: string | number) => Object.values(worlds).find(item => item.RogueAreaID == worldId)
 	)
 	
 	static mazeFloors = new ChangeHistory(
 		'ExcelOutput/MazeFloor.json',
-		(floors: Dictionary<MazeFloor>, floorId: string | number) => floors[floorId]
+		(floors: Dictionary<MazeFloor>, floorId: string | number) => Object.values(floors).find(item => item.FloorID == floorId)
+	)
+	
+	static weeklyChallenge = new ChangeHistory(
+		'ExcelOutput/RogueTournWeeklyChallenge.json',
+		(challenges: Dictionary<any>, challengeId: number) => Object.values(challenges).find(challenge => challenge.ChallengeID == challengeId)
+	)
+	
+	static shops = new ChangeHistory(
+		'ExcelOutput/ShopConfig.json',
+		(shops: Dictionary<InternalShop>, shopId: number) => Object.values(shops).find(shop => shop.ShopID == shopId)
+	)
+	
+	static readableSeries = new ChangeHistory(
+		'ExcelOutput/BookSeriesConfig.json',
+		(readables: Dictionary<InternalBookSeries>, seriesId: number) => Object.values(readables).find(readable => readable.BookSeriesID == seriesId)
 	)
 	
 	static async getRenameHistory(textMapHash: HashReference | number | string) {

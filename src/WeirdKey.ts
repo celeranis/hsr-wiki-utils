@@ -4,6 +4,7 @@ import { Version } from './Shared.js';
 export class WeirdKey {
 	static data = {
 		BlessingGroupID: {
+			'2.4': 'MNNPAFJEGJC',
 			'2.3': 'LIOICIOFLGL',
 			'2.2': 'GKOGJPDANCE',
 			'2.1': 'EGDAIIJDDPA',
@@ -11,6 +12,7 @@ export class WeirdKey {
 			'1.6': 'JHOKDPADHFM',
 		},
 		BlessingGroupMembers: {
+			'2.4': 'KCFPNHGBGIA',
 			'2.3': 'LEEMGFGKCMO',
 			'2.2': 'NFPAICKGMBC',
 			'2.1': 'AMGHNOBDGLM',
@@ -18,10 +20,12 @@ export class WeirdKey {
 			'1.6': 'ADJICNNJFEM'
 		},
 		DescParamType: {
-			'2.3': 'IAGLGKPDLOE'
+			'2.4': 'EEOLCCFMJFF',
+			'2.3': 'IAGLGKPDLOE',
 		},
 		DescParamValue: {
-			'2.3': 'EPBOOFFCKPJ'
+			'2.4': 'DIBKEHHCPAP',
+			'2.3': 'EPBOOFFCKPJ',
 		}
 	}
 	

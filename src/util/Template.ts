@@ -122,7 +122,40 @@ export interface TemplateMap {
 		path2: string
 		effect: string
 		story: string
-	}
+	},
+	'Location Infobox': {
+		name?: string
+		title: string,
+		image: string,
+		type: 
+			| 'World' | 'Region' | 'Area' | 'Bulletin Board' | 'Shop' 
+			| 'Space Anchor' | 'Game System' | 'Subarea' 
+			| 'Point of Interest' | 'World Shop' | 'Store' | 'Galaxy'
+			| 'Star System' | 'Civilization',
+		world: string,
+		region: string,
+		area: string,
+		subarea: string
+	},
+	'Readable Infobox': {
+		id: string
+		partIds: string
+		title: string
+		image: string
+		world: string
+		parts: number
+		author: string
+		description: string
+		characters: string
+		factions: string
+	} & { [T in `part${number}`]: string } & { [T in `source${number}`]: string },
+	'Tutorial': {
+		sort: number
+		title: string
+		subtitle: string
+		type: string
+		about: string
+	} & { [T in `image${number}`]: string } & { [T in `text${number}`]: string }
 }
 
 export type DomainType = 
@@ -132,7 +165,7 @@ export type DomainType =
 
 export type DomainSubtype = 'World' | 'Warring' | 'Exploratory'
 
-export class Template<N extends keyof TemplateMap, P extends Record<string, string | number | boolean> = TemplateMap[N]> {
+export class Template<N extends keyof TemplateMap, P extends Record<string, string | number | boolean> & TemplateMap[N]> {
 	constructor(public name: N, public params: Partial<P> = {}) {}
 	
 	addParam<K extends keyof P>(key: K, value: P[K]) {

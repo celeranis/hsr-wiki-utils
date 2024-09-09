@@ -37,7 +37,7 @@ function addBlessingPath(path: AeonPath) {
 	for (const blessing of blessings) {
 		if (blessing.path != path || blessing.enhanced) continue
 		const enhanced = blessings.find(eblessing => eblessing.buff_id == blessing.buff_id && eblessing.enhanced)
-		table.addRowWithAttr(`id="${blessing.name.replaceAll('"', '&quot;')}"`, [
+		table.addRowWithAttr(`id="${blessing.name.replaceAll('"', '&quot;').replaceAll("''", '')}"`, [
 			`{{SU Blessing Card|${pathDisplayName(blessing.path)}|${blessing.icon_variant}|${blessing.rarity}}}`,
 			blessing.name,
 			blessing.description
@@ -72,8 +72,8 @@ addBlessingPath('Erudition')
 output.push('==Glossary==')
 output2.push('==Glossary==')
 const traits = [...glossary.values()].map(id => Equation.getExtraEffect(id)).sort((a, b) => {
-	const name1 = textMap.getText(a.ExtraEffectName)
-	const name2 = textMap.getText(b.ExtraEffectName)
+	const name1 = textMap.getText(a?.ExtraEffectName)
+	const name2 = textMap.getText(b?.ExtraEffectName)
 	
 	if (name1 > name2) {
 		return 1
@@ -82,8 +82,8 @@ const traits = [...glossary.values()].map(id => Equation.getExtraEffect(id)).sor
 	} else return 0
 })
 const traits2 = [...glossary2.values()].map(id => Equation.getExtraEffect(id)).sort((a, b) => {
-	const name1 = textMap.getText(a.ExtraEffectName)
-	const name2 = textMap.getText(b.ExtraEffectName)
+	const name1 = textMap.getText(a?.ExtraEffectName)
+	const name2 = textMap.getText(b?.ExtraEffectName)
 
 	if (name1 > name2) {
 		return 1
@@ -93,15 +93,15 @@ const traits2 = [...glossary2.values()].map(id => Equation.getExtraEffect(id)).s
 })
 for (const trait of traits) {
 	output.push(
-		`===${textMap.getText(trait.ExtraEffectName)}===`,
-		`${textMap.getText(trait.ExtraEffectDesc, trait.DescParamList).replaceAll('\n', '<br />')}`,
+		`===${textMap.getText(trait?.ExtraEffectName)}===`,
+		`${textMap.getText(trait?.ExtraEffectDesc, trait?.DescParamList).replaceAll('\n', '<br />')}`,
 		''
 	)
 }
 for (const trait of traits2) {
 	output2.push(
-		`===${textMap.getText(trait.ExtraEffectName)}===`,
-		`${textMap.getText(trait.ExtraEffectDesc, trait.DescParamList).replaceAll('\n', '<br />')}`,
+		`===${textMap.getText(trait?.ExtraEffectName)}===`,
+		`${textMap.getText(trait?.ExtraEffectDesc, trait?.DescParamList).replaceAll('\n', '<br />')}`,
 		''
 	)
 }

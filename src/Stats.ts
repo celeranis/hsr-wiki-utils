@@ -143,7 +143,7 @@ export class Stat {
 		for (const [custom_key, submaps] of Object.entries(this.customKeyToInternal)) {
 			for (let [subtype, hashOrData] of Object.entries(submaps)) {
 				if (typeof hashOrData == 'string') {
-					hashOrData = statData[hashOrData]
+					hashOrData = Object.values(statData).find(stat => stat.PropertyType == hashOrData)
 				}
 				this.fromStatData(hashOrData as AvatarProperty, custom_key as CustomStatName, subtype as StatSubType)
 			}

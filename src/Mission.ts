@@ -52,7 +52,7 @@ export class Mission {
 		this.name = textMap.getText(data.Name)
 		this.type = missionTypeMap[data.Type] || data.Type
 		this.id = data.MainMissionID
-		this.description = textMap.getText(fatesAtlas[data.MainMissionID]?.MissionConclusion)
+		this.description = textMap.getText(Object.values(fatesAtlas).find(atlas => atlas.MissionID == data.MainMissionID)?.MissionConclusion)
 	}
 	
 	private charset: Set<string> = new Set<string>(['Trailblazer'])
@@ -63,7 +63,8 @@ export class Mission {
 	
 	static findPerformance(id: string | number): Performance | null {
 		for (const file of Object.values(performance)) {
-			if (file[id]) return file[id]
+			const found = Object.values(file).find(perf => perf.PerformanceID == id)
+			if (found) return found
 		}
 		return null
 	}
@@ -93,10 +94,11 @@ export class Mission {
 	}
 	
 	static fromId(missionId: string | number): Mission {
-		if (!this.missionData[missionId]) {
+		const dat = Object.values(this.missionData).find(dat => dat.MainMissionID == missionId)
+		if (!dat) {
 			throw new TypeError(`Unknown mission ID ${missionId}`)
 		}
-		return new Mission(this.missionData[missionId])
+		return new Mission(dat)
 	}
 
 	get pagetitle(): string {
@@ -152,6 +154,8 @@ export class Mission {
 			})
 			index++
 		}
+		
+		steps.sort((step1, step2) => step1.id - step2.id)
 		
 		return steps
 	}
@@ -233,14 +237,14 @@ export class Mission {
 	getChapterName(): string | undefined {
 		if (!this.data.ChapterID) return
 		
-		const name = textMap.getText(chapterData[this.data.ChapterID].ChapterName)
+		const name = textMap.getText(Object.values(chapterData).find(chap => chap.ID == this.data.ChapterID)?.ChapterName)
 		return wikiTitle(name + ((this.type == 'Companion' && name != 'Slices of Life Before the Furnace' && name != 'Age of Awakening' && name != 'Cosmic Splendor and Merited Praises') ? ' (Companion Mission Chapter)' : ''))
 	}
 	
 	getChapterLink(): string | undefined {
 		if (!this.data.ChapterID) return
 		
-		const name = wikiTitle(textMap.getText(chapterData[this.data.ChapterID].ChapterName))
+		const name = wikiTitle(textMap.getText(Object.values(chapterData).find(chap => chap.ID == this.data.ChapterID)?.ChapterName))
 		
 		if (this.type == 'Companion' && name != 'Slices of Life Before the Furnace' && name != 'Age of Awakening' && name != 'Cosmic Splendor and Merited Praises') {
 			return `[[${wikiTitle(name, 'mission')} (Companion Mission Chapter)|${name}]]`

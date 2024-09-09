@@ -1,12 +1,31 @@
 import c from 'chalk';
+import { setTimeout } from 'timers/promises';
 import { client } from '../util/Bot.js';
 
 const REDIRECTS = [
+	// {
+	// 	sourceCategory: 'Dreamscape Pass Sticker',
+	// 	readTemplate: 'Item Infobox',
+	// 	redirectName: (page: string, infobox) => `File:Item ${page}.png`,
+	// 	redirectTarget: (page: string, infobox) => `File:${infobox.image}`
+	// },
 	{
-		sourceCategory: 'Dreamscape Pass Sticker',
-		readTemplate: 'Item Infobox',
-		redirectName: (page: string, infobox) => `File:Item ${page}.png`,
-		redirectTarget: (page: string, infobox) => `File:${infobox.image}`
+		sourceCategory: 'Bonus Abilities',
+		readTemplate: 'Ability Infobox',
+		redirectName: (page: string, infobox) => infobox.sortkey ? undefined : `${infobox.character} A${infobox.reqAsc}`,
+		redirectTarget: (page: string, infobox) => page
+	},
+	{
+		sourceCategory: 'Eidolons',
+		readTemplate: 'Eidolon Infobox',
+		redirectName: (page: string, infobox) => [`${infobox.character} E${infobox.level}`, `${infobox.character} Eidolon ${infobox.level}`],
+		redirectTarget: (page: string, infobox) => page
+	},
+	{
+		sourceCategory: 'Character Abilities',
+		readTemplate: 'Ability Infobox',
+		redirectName: (page: string, infobox) => infobox.sortkey ? undefined : `${infobox.character} ${infobox.type}`,
+		redirectTarget: (page: string, infobox) => page
 	},
 	{
 		sourceCategory: 'Disk',
@@ -57,16 +76,34 @@ for (const data of REDIRECTS) {
 			continue
 		}
 		
-		const redirectName = data.redirectName(pageTitle, infoboxParams)
+		let redirectNames = data.redirectName(pageTitle, infoboxParams)
 		
-		const existingRedirect = await client.read(redirectName)
-		if (!existingRedirect.missing) {
-			console.log(c.grey(`Redirect for ${redirectName} already created, skipping...`))
-			continue
+		if (!redirectNames) continue
+		
+		if (!Array.isArray(redirectNames)) {
+			redirectNames = [redirectNames]
 		}
-		// await AWB.viewDiff(existingRedirect.revisions?.[0]?.content ?? '', REDIRECT_FORMAT(targetData.title))
 		
-		await client.create(redirectName, REDIRECT_FORMAT(targetData.title))
-		console.log(`Redirected page ${redirectName} to ${targetData.title}`)
+		for (const redirectName of redirectNames) {
+			const existingRedirect = await client.read(redirectName)
+			if (!existingRedirect.missing) {
+				console.log(c.grey(`Redirect for ${redirectName} already created, skipping...`))
+				continue
+			}
+			// await AWB.viewDiff(existingRedirect.revisions?.[0]?.content ?? '', REDIRECT_FORMAT(targetData.title))
+
+			let success = false
+			while (!success) {
+				try {
+					await client.create(redirectName, REDIRECT_FORMAT(targetData.title))
+					success = true
+				} catch (err) {
+					console.warn(`Failed to redirect ${redirectName} to ${targetData.title}. Retrying in 60 seconds...`)
+					console.log(err)
+					await setTimeout(60 * 1000)
+				}
+			}
+			console.log(`Redirected page ${redirectName} to ${targetData.title}`)
+		}
 	}
 }

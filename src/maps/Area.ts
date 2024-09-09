@@ -25,7 +25,7 @@ export class Area {
 		this.type = data.PlaneType
 		this.floor_ids = data.FloorIDList
 		this.start_floor_id = data.StartFloorID
-		this.world = world_data[data.WorldID]
+		this.world = Object.values(world_data).find(world => world.ID == data.WorldID)!
 		
 		Area.cache[data.PlaneID] = this
 	}
@@ -33,7 +33,7 @@ export class Area {
 	async getFloors(): Promise<MazeFloor[]> {
 		if (this.floors) return this.floors
 		const floorData = await Area.floor_data.get()
-		return this.floors = this.floor_ids.map(id => floorData[id])
+		return this.floors = this.floor_ids.map(id => Object.values(floorData).find(floor => floor.FloorID == id)!)
 	}
 
 	async getMaps(): Promise<AreaMap[]> {
@@ -49,7 +49,7 @@ export class Area {
 	static async fromId(id: string | number): Promise<Area> {
 		if (this.cache[id]) return this.cache[id]
 		
-		const data = (await this.plane_data.get())[id]
+		const data = Object.values(await this.plane_data.get()).find(plane => plane.PlaneID == id)
 		if (!data) {
 			throw new TypeError(`Unknown MazePlane ${id}`)
 		}

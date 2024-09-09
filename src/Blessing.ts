@@ -2,7 +2,7 @@ import config from '../config.json' with { "type": "json" }
 import { AeonPath, Dictionary, pathDisplayName, pathListDisplay } from './Shared.js'
 import { textMap } from './TextMap.js'
 import { WeirdKey } from './WeirdKey.js'
-import type { InternalBlessing, InternalBlessingBuff, InternalBlessingGroup, InternalLayerMap } from './files/Blessing.js'
+import type { InternalBlessing, InternalBlessingBuff, InternalBlessingGroup } from './files/Blessing.js'
 import { getFile } from './files/GameFile.js'
 
 export const PathMap: {[id: string]: AeonPath} = {
@@ -91,8 +91,8 @@ export class BlessingGroup {
 	}
 }
 
-const blessing_data: InternalLayerMap<InternalBlessing> = await getFile('ExcelOutput/RogueTournBuff.json')
-const buff_data: InternalLayerMap<InternalBlessingBuff> = await getFile('ExcelOutput/RogueMazeBuff.json')
+const blessing_data: Dictionary<InternalBlessing> = await getFile('ExcelOutput/RogueTournBuff.json')
+const buff_data: Dictionary<InternalBlessingBuff> = await getFile('ExcelOutput/RogueMazeBuff.json')
 
 const iconVariants = [
 	'',
@@ -140,7 +140,7 @@ export class Blessing {
 		this.path = PathMap[data.RogueBuffType]
 		this.traits = data.ExtraEffectIDList
 		
-		this.buff = Blessing.buff_data[this.buff_id][this.level]
+		this.buff = Object.values(Blessing.buff_data).find(buff => buff.ID == this.buff_id && buff.Lv == this.level)!
 		this.name = textMap.getText(this.buff.BuffName)
 		this.description = textMap.getText(this.buff.BuffDesc, this.buff.ParamList)
 		this.simple_description = textMap.getText(this.buff.BuffSimpleDesc, this.buff.ParamList)
@@ -169,9 +169,9 @@ export class Blessing {
 	static loadAll() {
 		if (this.loaded) return this.map.values()
 		for (const levels of Object.values(this.data)) {
-			for (const data of Object.values(levels)) {
-				new Blessing(data)
-			}
+			// for (const data of Object.values(levels)) {
+				new Blessing(levels)
+			// }
 		}
 		this.loaded = true
 		return this.map.values()

@@ -8,8 +8,8 @@ import { getFile } from '../files/GameFile.js';
 import { InternalTalkSentence } from '../files/Occurrence.js';
 import type { VoiceData } from './vo/dump_vo_names.js';
 
-const TalkSentences = await getFile<Dictionary<InternalTalkSentence>>('ExcelOutput/TalkSentenceConfig.json')
-const VoiceData = await getFile<Dictionary<VoiceData>>('ExcelOutput/VoiceConfig.json')
+const TalkSentences = await getFile<InternalTalkSentence[]>('ExcelOutput/TalkSentenceConfig.json')
+const VoiceData = await getFile<VoiceData[]>('ExcelOutput/VoiceConfig.json')
 
 const output: string[] = []
 const outputVoices: string[] = []
@@ -102,8 +102,8 @@ for (const sentence of Object.values(TalkSentences)/*.sort((a, b) => (a.TalkSent
 	if (!content) continue
 	
 	let voice = ''
-	if (sentence.VoiceID && VoiceData[sentence.VoiceID]) {
-		const voiceDat = VoiceData[sentence.VoiceID]
+	const voiceDat = sentence.VoiceID && Object.values(VoiceData).find(voice => voice.VoiceID == sentence.VoiceID)
+	if (voiceDat) {
 		let vp = voiceDat.VoicePath.replaceAll('_', ' ')
 		if (!vp.startsWith('vo')) {
 			vp = `VO ` + vp

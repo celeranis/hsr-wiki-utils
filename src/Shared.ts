@@ -96,7 +96,7 @@ export function objectDiff<T>(older: Dictionary<T>, newer: Dictionary<T>): Objec
 	return { added, removed }
 }
 
-export type AmbigType = 'item' | 'mission' | 'location' | 'faction'
+export type AmbigType = 'item' | 'mission' | 'location' | 'faction' | 'readableseries' | 'tutorial'
 const ambigTitles = {
 	'The Sound and the Fury': {
 		item: 'The Sound and the Fury (Item)',
@@ -130,11 +130,17 @@ export function wikiTitle(name: string, type?: AmbigType, id?: number) {
 		name = mapData.pagename
 	}
 	
+	if (type == 'tutorial' && !name.startsWith('Tutorial/')) {
+		name = 'Tutorial/' + name
+	}
+	
 	return name
 		.replaceAll('#', '')
 		.replaceAll(/<.+?>/g, '')
 		.replaceAll("''", '')
 		.replaceAll('&mdash;', '—')
+		.replaceAll('&ast;', "'")
+		.replaceAll('&times;', '×')
 }
 
 export function wikiTitleLink(name: string, type?: AmbigType) {
