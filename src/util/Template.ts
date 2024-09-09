@@ -190,7 +190,7 @@ export class Template<N extends keyof TemplateMap, P extends Record<string, stri
 		const output = [
 			`{{${this.name}`,
 			...Object.entries(this.params).map(([key, value]) => 
-				`|${whitespace(key, targetIndent)}=${String(value).match(/\n|(?:^(?:\*|:|#))/) ? `\n${value}` : ` ${value}`}`
+				`|${whitespace(key, targetIndent)}=${String(value).match(/\n|(?:^(?:\*|:|#|<gallery))/) ? `\n${value}` : ` ${value}`}`
 			),
 			'}}'
 		]

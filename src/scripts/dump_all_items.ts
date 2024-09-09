@@ -1,9 +1,10 @@
 import { mkdirSync, rmSync, writeFileSync } from 'fs';
 import { ChangeHistory } from '../ChangeHistory.js';
 import { Item } from '../Item.js';
-import { n, sanitizeString, wikiTitle } from '../Shared.js';
+import { n, sanitizeString } from '../Shared.js';
 import { TextMap } from '../TextMap.js';
 import { ItemMainType, ItemSubType } from '../files/Item.js';
+import { uploadPrompt } from '../util/General.js';
 import { Template } from '../util/Template.js';
 
 rmSync('./output/items/', { recursive: true })
@@ -47,11 +48,9 @@ for (const [source, data] of Object.entries(Item.itemData)) {
 		
 		const types = await item.getTypes()
 		
-		const pageTitle = wikiTitle(item.name) + (source == 'profile_pics' ? ' (Profile Picture)' : '')
-		
 		output.push(
 			'<%-- [PAGE_INFO]',
-			`PageTitle=#${pageTitle}#`,
+			`PageTitle=#${item.pagetitle}#`,
 			'[END_PAGE_INFO] --%>'
 		)
 		
@@ -61,13 +60,15 @@ for (const [source, data] of Object.entries(Item.itemData)) {
 		
 		const infobox = new Template('Item Infobox')
 		
-		if (item.name != pageTitle) {
+		if (item.name != item.pagetitle) {
 			infobox.addParam('title', item.name)
 		}
 		
+		const img = await item.getImage()
+		
 		infobox
 			.addParam('id', item.id)
-			.addParam('image', await item.getImage())
+			.addParam('image', img + uploadPrompt(item.icon_path, img, 'Item Icons'))
 			.addParam('type', types[0] || '')
 		
 		for (const [i, type] of types.entries()) {

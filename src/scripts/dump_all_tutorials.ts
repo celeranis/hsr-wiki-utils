@@ -22,7 +22,7 @@ for (const tutorial of Tutorial.loadAll()) {
 	
 	for (const [i, page] of tutorial.getPages().entries()) {
 		const fileName = `Tutorial ${fileTitle} ${i + 1}.png`
-		template.addParam(`image${i + 1}`, `${fileName}${uploadPrompt(page.image, fileName)}`)
+		template.addParam(`image${i + 1}`, `${fileName}${uploadPrompt(page.image, fileName, 'Tutorial Files')}`)
 		template.addParam(`text${i+1}`, page.text)
 	}
 	

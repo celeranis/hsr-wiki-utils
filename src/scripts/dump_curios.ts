@@ -1,5 +1,6 @@
 import { writeFileSync } from 'fs';
 import { Curio } from '../Curio.js';
+import { uploadPrompt } from '../util/General.js';
 
 const rarities = ['1', '2', '3', 'Negative', 'Weighted', undefined]
 
@@ -13,7 +14,7 @@ for (const rarity of rarities) {
 		'{{Curio Information/Header}}'
 	)
 	
-	output.push(...curios.filter(curio => curio.rarity == rarity).map(curio => curio.entry()))
+	output.push(...curios.filter(curio => curio.rarity == rarity).map(curio => curio.entry() + uploadPrompt(curio.icon_path, `Curio ${curio.name.replaceAll(/<\s*\/?\s*\w+\s*>/gi, '') }.png`, 'Curio Icons')))
 
 	output.push('{{Curio Information/Footer}}','')
 }

@@ -146,6 +146,7 @@ export class Curio {
 	order: number
 	is_indexable: boolean
 	rarity?: string
+	icon_path: string
 	// unlock_list: Unlock[]
 	
 	constructor(public id: number) {
@@ -160,6 +161,7 @@ export class Curio {
 		this.obtainable_in = index?.MiracleTypeList?.map(id => TYPE_MAP[id]) || []
 		this.order = index?.Order ?? 1000
 		this.is_indexable = Boolean(curio.HandbookMiracleID)
+		this.icon_path = display.MiracleFigureIconPath
 		if (index?.MiracleCategory) {
 			this.rarity = index.MiracleCategory == 'Common' ? '1' : index.MiracleCategory == 'Rare' ? '2' : index.MiracleCategory == 'Legendary' ? '3' : index.MiracleCategory == 'Hex' ? 'Weighted' : 'Negative'
 		}

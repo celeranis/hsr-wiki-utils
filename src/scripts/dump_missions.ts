@@ -4,6 +4,7 @@ import { Item } from '../Item.js'
 import { Mission } from '../Mission.js'
 import { wikiTitle } from '../Shared.js'
 import { TextMap, textMap } from '../TextMap.js'
+import { uploadPrompt } from '../util/General.js'
 
 const PAGE_FORMAT =
 `<%-- [PAGE_INFO]
@@ -13,7 +14,7 @@ PageTitle=#<<TITLE>>#
 {{Mission Infobox
 |id            = <<ID>>
 |title         = <<NAME_PARAM>>
-|image         = <!--Mission <<TITLE>>.png-->
+|image         = <<IMAGE>>
 |type          = <<TYPE>>
 |event_name    = 
 |chapter       = <<CHAPTERTITLE>>
@@ -59,7 +60,7 @@ await Item.loadAll()
 
 for (const missionData of Object.values(Mission.missionData)) {
 	const mission = new Mission(missionData)
-	const title = wikiTitle(mission.name, 'mission')
+	const title = wikiTitle(mission.name, 'mission', mission.id)
 	
 	let output = PAGE_FORMAT
 		.replaceAll('<<TITLE>>', title)
@@ -74,6 +75,22 @@ for (const missionData of Object.values(Mission.missionData)) {
 		.replaceAll('<<NEXT>>', mission.getNext().map(mission => wikiTitle(mission?.name || '???', 'mission')).join(';'))
 		.replaceAll('<<OL>>', await TextMap.generateOL(mission.name_hash))
 		.replaceAll('<<VERSION>>', (await ChangeHistory.missions.findAdded(mission.id.toString()))[0] || '<!--unknown-->')
+	
+	const image = await mission.getImage()
+	const imageName = `Mission ${title}.png`
+	if (typeof(image) == 'string') {
+		output = output.replaceAll('<<IMAGE>>', imageName + uploadPrompt(image, imageName, "Fate's Atlas Images"))
+	} else if (!image) {
+		output = output.replaceAll('<<IMAGE>>', `<!--${imageName}-->`)
+	} else {
+		const stelleName = `Mission ${title} Stelle.png`
+		const caelusName = `Mission ${title} Caelus.png`
+		output = output.replaceAll('<<IMAGE>>', 
+			uploadPrompt(image.stelle, stelleName, "Fate's Atlas Images") 
+			+ uploadPrompt(image.caelus, caelusName, "Fate's Atlas Images")
+			+ `\n<gallery>\n${stelleName}|Stelle\n${caelusName}|Caelus\n</gallery>`
+		)
+	}
 	
 	const requirements = mission.getRequirements()
 	if (requirements.length > 1) {

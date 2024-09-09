@@ -14,6 +14,14 @@ export function pageInfoHeader(title: string) {
 	return `<%-- [PAGE_INFO]\nPageTitle=#${title}#\n[END_PAGE_INFO] --%>`
 }
 
-export function uploadPrompt(filePath: string, destinationName: string) {
-	return `{{subst:void|<!--$UPLOAD:<<${filePath}>-<${destinationName}>>}}`
+export function uploadPrompt(filePath: string, destinationName: string, categories: string) {
+	if (!filePath) return ''
+	if (!destinationName) {
+		throw new TypeError(`Failed to generate upload prompt: destination name is empty or missing!`)
+	}
+	if (!categories) {
+		throw new TypeError(`Failed to generate upload prompt: categories are empty or missing!`)
+	}
+	
+	return `{{subst:void|<!--$UPLOAD:<<${filePath}>-<${destinationName}>-<${categories}>>-->}}`
 }

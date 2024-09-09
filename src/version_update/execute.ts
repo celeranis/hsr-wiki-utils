@@ -1,37 +1,29 @@
 import { program } from 'commander'
 import { existsSync } from 'fs'
-import { readFile, readdir } from 'fs/promises'
+import { readFile, readdir, writeFile } from 'fs/promises'
+import { MwnError } from 'mwn/build/error.js'
+import config from '../../config.json' with { "type": 'json' }
+import { COMMON_ICON_MAP } from '../Item.js'
 import { AWB } from '../util/AWB.js'
 import { client } from '../util/Bot.js'
 
-const REASON = 'bot fail'
+const REASON = '2.5'
 
 const MOVE: Record<string, string> = {
-	// items
-	'Acheron (Dreamscape Pass Sticker)': 'Acheron (The Reverie Sticker)',
-	'Argenti (Dreamscape Pass Sticker)': 'Argenti (The Reverie Sticker)',
-	'Aventurine (Dreamscape Pass Sticker)': 'Aventurine (The Reverie Sticker)',
-	'Black Swan (Dreamscape Pass Sticker)': 'Black Swan (The Reverie Sticker)',
-	'Boothill (Dreamscape Pass Sticker)': 'Boothill (The Reverie Sticker)',
-	'Dr. Ratio (Dreamscape Pass Sticker)': 'Dr. Ratio (The Reverie Sticker)',
-	'Firefly (Dreamscape Pass Sticker)': 'Firefly (The Reverie Sticker)',
-	'Gallagher (Dreamscape Pass Sticker)': 'Gallagher (The Reverie Sticker)',
-	'Misha (Dreamscape Pass Sticker)': 'Misha (The Reverie Sticker)',
-	'Sparkle (Dreamscape Pass Sticker)': 'Sparkle (The Reverie Sticker)',
-	'Stellaron Hunter: Sam (Dreamscape Pass Sticker)': 'Stellaron Hunter: Sam (The Reverie Sticker)',
-	'Sunday (Dreamscape Pass Sticker)': 'Sunday (The Reverie Sticker)',
-	'Backscratcher': 'Self-Sufficer',
-	'File:Item Backscratcher.png': 'File:Item Self-Sufficer.png',
-	'Stranger in a Strange Land': 'Stranger in a Strange Land (Achievement)'
+	
 }
 
 const REDIRECT: Record<string, string> = {
-	// fate's ensemble
-	'Topaz: The Aviator': "Fate's Ensemble#Topaz: The Aviator",
-	'Jade: Poison and Sweet Dew': "Fate's Ensemble#Jade: Poison and Sweet Dew",
-	"Firefly: Soldier's Pay": "Fate's Ensemble#Firefly: Soldier's Pay",
-	"File:Icon Fate's Ensemble Jade.png": "File:Icon Fate's Ensemble Topaz.png",
-	"File:Item Firefly's Eidolon.png": 'Item Eidolon (5-star).png',
+	
+}
+
+let fileRedirectMap: Record<string, string> = 
+	existsSync('./src/version_update/FileRedirectMap.json')
+		? JSON.parse((await readFile('./src/version_update/FileRedirectMap.json')).toString())
+		: {}
+
+for (const [key, val] of Object.entries(COMMON_ICON_MAP)) {
+	fileRedirectMap[config.asset_roots.Texture2D + '/' + key] = val
 }
 
 async function checkPages(pages: string[], shouldExist: boolean = false) {
@@ -70,6 +62,12 @@ async function getFile(file: string): Promise<[string, string]> {
 	return [page, content]
 }
 
+async function processUploadPrompts(content: string): Promise<void> {
+	for (const [, path, filename, categories] of content.matchAll(/\$UPLOAD:<<(.+?)>-<(.+?)>-<(.+?)>>/g)) {
+		await upload(config.asset_roots.Texture2D + '/' + path, filename, categories)
+	}
+}
+
 async function move(from: string, to: string, summary: string = REASON) {
 	if (!CHECK) {
 		await client.move(from, to, summary)
@@ -85,12 +83,13 @@ async function create(file: string, summary: string = REASON) {
 	const [page, content] = await getFile(file)
 	
 	if (!CHECK) {
-		await client.save(page, content, summary)
+		await client.create(page, content, summary)
 			.catch(console.error)
 		console.log(`Created "${page}"`)
 	} else {
 		CHECK_NOEXIST.push(page)
 	}
+	await processUploadPrompts(content)
 }
 
 async function edit(file: string, summary: string = REASON) {
@@ -103,12 +102,16 @@ async function edit(file: string, summary: string = REASON) {
 	} else {
 		CHECK_EXIST.push(page)
 	}
+	await processUploadPrompts(content)
 }
 
 async function redirect(from: string, to: string, summary: string = REASON) {
 	if (!CHECK) {
-		await client.create(from, `#REDIRECT [[${to}]]\n\n[[Category:Redirect Pages]]`, `${summary} — Redirecting page to [[${to}]]`)
-			.catch(console.error)
+		const err = await client.create(from, `#REDIRECT [[${to}]]\n\n[[Category:Redirect Pages]]`, `${summary} — Redirecting page to [[${to}]]`)
+			.catch(err => err)
+		if (err && err instanceof Error && !(err instanceof MwnError && err.code == 'articleexists')) {
+			console.error(err)
+		}
 		console.log(`Redirected "${from}" to "${to}"`)
 	} else {
 		CHECK_NOEXIST.push(from)
@@ -141,28 +144,48 @@ const CATEGORIES = {
 	curios: 'Curio Icons',
 }
 
-async function upload(file: string, fileName: string, summary: string = REASON) {
+async function upload(file: string, fileName: string, categories?: string, reason: string = REASON) {
+	if (fileRedirectMap[file] == fileName) {
+		return
+	} else if (fileRedirectMap[file]) {
+		await redirect('File:' + fileName, 'File:' + fileRedirectMap[file], reason)
+	}
+	
 	let pageContentFile = file.replace(/\.png$/, '.wikitext')
 	
-	let foundCat = 'undefined'
-	for (const [folder, cat] of Object.entries(CATEGORIES)) {
-		if (file.replaceAll('\\', '/').includes(`/${folder}/`)) {
-			foundCat = cat
+	if (!categories) {
+		for (const [folder, cat] of Object.entries(CATEGORIES)) {
+			if (file.replaceAll('\\', '/').includes(`/${folder}/`)) {
+				categories = cat
+			}
 		}
 	}
 	
-	let pageContent = `==Summary==\n{{File\n|categories = ${foundCat}\n}}\n\n==Licensing==\n{{Fairuse}}`
+	let pageContent = `==Summary==\n{{File\n|categories = ${categories}\n}}\n\n==Licensing==\n{{Fairuse}}`
 	if (existsSync(pageContentFile)) {
 		pageContent = (await readFile(pageContentFile)).toString()
 	} else {
-		if (foundCat == 'undefined') {
+		if (!categories) {
 			console.warn(`No category found for ${file}, skipping...`)
 			return
 		}
 	}
 	
-	if (!CHECK && !fileName.startsWith('Mission') && !fileName.startsWith('Profile Picture') && !fileName.startsWith('Dreamscape')) {
-		await client.save('File:' + fileName, pageContent, REASON)
+	if (!CHECK) {
+		const result = await client.upload(file, 'File:' + fileName, pageContent, {
+			comment: reason,
+			ignorewarnings: false
+		})
+		if (result.result == 'Warning') {
+			const dupe_of = result.warnings?.duplicate?.replaceAll('_', ' ')
+			if (dupe_of) {
+				fileRedirectMap[file] = dupe_of
+				await redirect('File:' + fileName, 'File:' + dupe_of, reason)
+				return
+			}
+		} else if (result.filename) {
+			fileRedirectMap[file] = result.filename.replaceAll('_', ' ')
+		}
 		console.log(`Uploaded "${fileName}"`)
 	} else {
 		CHECK_NOEXIST.push(fileName)
@@ -174,39 +197,41 @@ if (!CHECK) {
 	if (!confirmed) process.exit()
 }
 
-// for (const [from, to] of Object.entries(MOVE)) {
-// 	await move(from, to)
-// }
+for (const [from, to] of Object.entries(MOVE)) {
+	await move(from, to)
+}
 
-// for (const file of await readdir('./src/version_update/create', { withFileTypes: true, recursive: true })) {
-// 	if (file.isFile() && file.name.endsWith('.wikitext')) {
-// 		await create(file.path + '/' + file.name)
-// 	}
-// }
-
-// for (const file of await readdir('./src/version_update/edit', { withFileTypes: true, recursive: true })) {
-// 	if (file.isFile() && file.name.endsWith('.wikitext')) {
-// 		await edit(file.path + '/' + file.name)
-// 	}
-// }
-
-for (const file of await readdir('./src/version_update/upload', { withFileTypes: true, recursive: true })) {
-	if (file.isFile() && !file.name.endsWith('.wikitext')) {
-		await upload(file.path + '/' + file.name, file.name)
+for (const file of await readdir('./src/version_update/create', { withFileTypes: true, recursive: true })) {
+	if (file.isFile() && file.name.endsWith('.wikitext')) {
+		await create(file.path + '/' + file.name)
 	}
 }
 
-// for (const [from, to] of Object.entries(REDIRECT)) {
-// 	await redirect(from, to)
-// }
+for (const file of await readdir('./src/version_update/edit', { withFileTypes: true, recursive: true })) {
+	if (file.isFile() && file.name.endsWith('.wikitext')) {
+		await edit(file.path + '/' + file.name)
+	}
+}
 
-// for (const file of await readdir('./src/version_update/ol_edit', { withFileTypes: true, recursive: true })) {
-// 	if (file.isFile() && file.name.endsWith('.wikitext')) {
-// 		await updateOL(file.path + '/' + file.name)
-// 	}
-// }
+for (const file of await readdir('./src/version_update/upload', { withFileTypes: true, recursive: true })) {
+	if (file.isFile() && !file.name.endsWith('.wikitext')) {
+		await upload(file.path + '/' + file.name, file.name, )
+	}
+}
+
+for (const [from, to] of Object.entries(REDIRECT)) {
+	await redirect(from, to)
+}
+
+for (const file of await readdir('./src/version_update/ol_edit', { withFileTypes: true, recursive: true })) {
+	if (file.isFile() && file.name.endsWith('.wikitext')) {
+		await updateOL(file.path + '/' + file.name)
+	}
+}
 
 if (CHECK) {
 	await checkPages(CHECK_EXIST, true)
 	await checkPages(CHECK_NOEXIST)
 }
+
+await writeFile('./src/version_update/FileRedirectMap.json', JSON.stringify(fileRedirectMap, null, '\t'))

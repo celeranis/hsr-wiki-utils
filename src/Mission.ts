@@ -1,14 +1,16 @@
+import { existsSync } from 'fs';
+import config from '../config.json' with { 'type': 'json' };
 import { ItemList } from './Item.js';
 import { Dictionary, wikiTitle, wikiTitleLink } from './Shared.js';
 import { textMap } from './TextMap.js';
 import { Act } from './files/Dialog.js';
-import { getFile, getFileSafe } from './files/GameFile.js';
+import { getExcelFile, getFile, getFileSafe } from './files/GameFile.js';
 import { Performance, PerformanceFile, type InternalFateAtlasEntry, type InternalMainMission, type InternalMissionChapter, type InternalMissionType, type InternalSubMission } from './files/Mission.js';
 import { Area } from './maps/Area.js';
 
 const data: Dictionary<InternalMainMission> = await getFile('ExcelOutput/MainMission.json')
 const stepData: Dictionary<InternalSubMission> = await getFile('ExcelOutput/SubMission.json')
-const fatesAtlas: Dictionary<InternalFateAtlasEntry> = await getFile('ExcelOutput/ChronicleConclusion.json')
+const fatesAtlas = await getExcelFile<InternalFateAtlasEntry>('ExcelOutput/ChronicleConclusion.json')
 const chapterData: Dictionary<InternalMissionChapter> = await getFile('ExcelOutput/MissionChapterConfig.json')
 
 export const performance = {
@@ -52,7 +54,7 @@ export class Mission {
 		this.name = textMap.getText(data.Name)
 		this.type = missionTypeMap[data.Type] || data.Type
 		this.id = data.MainMissionID
-		this.description = textMap.getText(Object.values(fatesAtlas).find(atlas => atlas.MissionID == data.MainMissionID)?.MissionConclusion)
+		this.description = textMap.getText(fatesAtlas[data.MainMissionID]?.MissionConclusion)
 	}
 	
 	private charset: Set<string> = new Set<string>(['Trailblazer'])
@@ -251,6 +253,23 @@ export class Mission {
 		}
 		else {
 			return wikiTitleLink(name, 'mission')
+		}
+	}
+	
+	async getImage() {
+		if (!this.description) {
+			return undefined
+		}
+		
+		if (existsSync(config.asset_roots.Texture2D + `/SpriteOutput/Chronicle/${this.id}_m.png`)) { // "Chronicle" configs are out of date since 2.2
+			return {
+				stelle: `SpriteOutput/Chronicle/${this.id}_f.png`,
+				caelus: `SpriteOutput/Chronicle/${this.id}_m.png`,
+			}
+		} else if (existsSync(config.asset_roots.Texture2D + `/SpriteOutput/Chronicle/${this.id}.png`)) {
+			return `SpriteOutput/Chronicle/${this.id}.png`
+		} else {
+			return undefined
 		}
 	}
 }

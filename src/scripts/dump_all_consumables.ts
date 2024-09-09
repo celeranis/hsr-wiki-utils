@@ -3,6 +3,7 @@ import { ChangeHistory } from '../ChangeHistory.js';
 import { Item } from '../Item.js';
 import { sanitizeString, wikiTitle } from '../Shared.js';
 import { TextMap } from '../TextMap.js';
+import { uploadPrompt } from '../util/General.js';
 import { Template } from '../util/Template.js';
 
 rmSync('./output/consumables/', { recursive: true })
@@ -31,25 +32,24 @@ for (const itemData of Object.values(await Item.itemData.main.get())) {
 
 	// const types = await item.getTypes()
 
-	const pageTitle = wikiTitle(item.name)
-
 	output.push(
 		'<%-- [PAGE_INFO]',
-		`PageTitle=#${pageTitle}#`,
+		`PageTitle=#${item.pagetitle}#`,
 		'[END_PAGE_INFO] --%>'
 	)
 
 	const infobox = new Template('Consumable Infobox')
 
-	if (item.name != pageTitle) {
+	if (item.name != item.pagetitle) {
 		infobox.addParam('title', item.name)
 	}
 
 	const recipe = await item.getRecipe()
+	const img = await item.getImage()
 
 	infobox
 		.addParam('id', item.id)
-		.addParam('image', await item.getImage())
+		.addParam('image', img + uploadPrompt(item.icon_path, img, 'Consumable Icons'))
 		.addParam('type', groupMap[item.group_id!])
 		.addParam('rarity', item.rarity)
 		.addParam('effect', item.effect.replaceAll('\n', '<br />'))

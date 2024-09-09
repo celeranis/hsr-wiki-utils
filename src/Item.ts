@@ -45,7 +45,7 @@ export const enum ItemPurpose {
 	READABLE = 21
 }
 
-const READABLE_ICON_MAP = {
+export const COMMON_ICON_MAP = {
 	'SpriteOutput/ItemFigures/140236.png': 'Item The Xianzhou Luofu Readable 6.png',
 	'SpriteOutput/ItemFigures/190001.png': 'Item Jarilo-VI Readable 2.png',
 	'SpriteOutput/ItemFigures/190002.png': 'Item Jarilo-VI Readable.png',
@@ -142,7 +142,7 @@ export class Item {
 	}
 
 	get pagetitle(): string {
-		return wikiTitle(this.name, 'item', this.id)
+		return wikiTitle(this.name + (this.subtype == 'HeadIcon' ? ' (Profile Picture)' : ''), 'item', this.id)
 	}
 	
 	async getSources(): Promise<string[]> {
@@ -281,13 +281,13 @@ export class Item {
 			if (stickerData?.Type == 'Text') {
 				return 'Dreamscape Pass Sticker Text.png'
 			} else {
-				return `Dreamscape Pass Sticker ${sanitizeString(this.name)}.png`
+				return `Dreamscape Pass Sticker ${sanitizeString(this.pagetitle.replaceAll(' (Dreamscape Pass Sticker)', ''))}.png`
 			}
-		} else if (this.subtype == 'Book') {
-			return READABLE_ICON_MAP[this.icon_path] ?? `Item ${sanitizeString(this.name)}.png`
+		} else if (this.subtype == 'HeadIcon') {
+			return `Profile Picture ${this.name.replace(': ', ' - ')}.png`
 		}
-		
-		return `Item ${sanitizeString(this.name)}.png`
+
+		return COMMON_ICON_MAP[this.icon_path] ?? `Item ${sanitizeString(this.pagetitle)}.png`
 	}
 	
 	getInventoryTab(): InventoryTab | undefined {
