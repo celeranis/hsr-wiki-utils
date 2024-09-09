@@ -24,7 +24,7 @@ export interface InternalBlessing {
 	IsShow?: boolean
 }
 
-export type InternalLayerMap<T> = { [id: string]: { [level: string]: T } }
+// export type InternalLayerMap<T> = { [id: string]: { [level: string]: T } }
 
 export interface InternalBlessingBuff {
 	ID: number

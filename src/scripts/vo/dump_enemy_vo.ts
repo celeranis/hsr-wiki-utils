@@ -67,7 +67,7 @@ const STATE_MAP = {
 	// Skill08: 'Havoc'
 	// Skill09: 'Aethereal Dreamflux',
 	// Skill04: 'Mara-Summon'
-	Skill04: 'Rite of Subduing Prana'
+	// Skill04: 'Rite of Subduing Prana'
 }
 
 // const AS_LIST = [
@@ -82,18 +82,18 @@ const STATE_MAP = {
 // ]
 
 const SKIP: string[] = [
-	'Hit by Light Attack',
-	'Hit by Heavy Attack',
-	'Weakness Broken',
-	'Disciplined',
+	// 'Hit by Light Attack',
+	// 'Hit by Heavy Attack',
+	// 'Weakness Broken',
+	// 'Disciplined',
 	// 'Grazioso',
 	// 'Weakness Broken (Phase 3)',
 	// 'Hit by Light Attack (Phase 3)',
-	'Hit While Weakness Broken',
-	'Cascading Laceration',
-	'Rapturous Wind',
-	'Fleeting Gilded Spikes',
-	'Hit2',
+	// 'Hit While Weakness Broken',
+	// 'Cascading Laceration',
+	// 'Rapturous Wind',
+	// 'Fleeting Gilded Spikes',
+	// 'Hit2',
 	// 'Thunder-Shock',
 	// 'Skill06',
 	// 'Skill08'
@@ -132,9 +132,9 @@ function getFilesByPrefix(prefix: string) {
 		const speed_state_hash = file.match(/\(State_Battle_Speed=(\d+)\)/)?.[1]
 		
 		let speed_state: number | undefined = undefined
-		if (speed_state_hash == '54353430') speed_state = 2
-		else if (speed_state_hash == '3023464624') speed_state = 1
-		else if (speed_state_hash == '748895195') speed_state = 4
+		if (speed_state_hash == 'Double_Speed') speed_state = 2
+		else if (speed_state_hash == 'Normal_Speed') speed_state = 1
+		else if (speed_state_hash == 'State_Battle_Auto') speed_state = 4
 		
 		return { lang, num, speed_state, file, file_path }
 	})
@@ -177,7 +177,7 @@ for (const animState of animEvents) {
 		for (const soundData of getFilesByPrefix(animEvent.SoundName)) {
 			if (exported.has(soundData.file) || soundData.lang == 'sfx') continue
 			// if (soundData.speed_state == 2) inc--
-			let outFileSuffix = `${stateName} ${soundData.num}${soundData.speed_state ? ` ${soundData.speed_state}x` : ''}`
+			let outFileSuffix = `${stateName} ${soundData.num}${soundData.speed_state ? ` ${soundData.speed_state}x` : ''} (1.5)`
 
 			const lang = langs[soundData.lang]
 			
@@ -218,7 +218,7 @@ for (const animState of animEvents) {
 			let outFile = `VO ${lang.file}${folderName} - ${outFileSuffix}.ogg`
 			await mkdir(outDir, { recursive: true })
 			try {
-				execSync(`"${config.vgmstream_path}" -o "${outFile.replace(/\.ogg$/, '.wav')}" "${loadFrom}\\${soundData.file_path}"`, {
+				execSync(`"${config.vgmstream_path}" -o "${outFile.replace(/\.ogg$/, '.wav')}" "${soundData.file_path}"`, {
 					cwd: `./output/file/vo/${folderName}/${lang.display}`
 				})
 				execSync(`ffmpeg -i "${outFile.replace(/\.ogg$/, '.wav')}" "${outFile}" -hide_banner -loglevel error`, {
@@ -250,4 +250,4 @@ for (const animState of animEvents) {
 VO_TABLE.push('}}')
 
 await writeFile(`./output/file/vo/${folderName}/vo_table.wikitext`, VO_TABLE.join('\n'))
-await writeFile(`./output/file/vo/${folderName}/wikiup.txt`, `==Summary==\n{{File\n|category = ${opts.name || monster.name} <%-2> Voice-Overs\n}}\n\n==Licensing==\n{{Fairuse}}`)
+await writeFile(`./output/file/vo/${folderName}/wikiup.txt`, `==Summary==\n{{File\n|categories = ${opts.name || monster.name} <%-2> Voice-Overs\n}}\n\n==Licensing==\n{{Fairuse}}`)

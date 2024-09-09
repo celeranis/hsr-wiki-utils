@@ -1,4 +1,5 @@
 import { writeFile } from 'fs/promises';
+import { ChangeHistory } from '../ChangeHistory.js';
 import { Curio } from '../Curio.js';
 import { Equation } from '../Equation.js';
 import { Item, ItemList } from '../Item.js';
@@ -51,9 +52,9 @@ function displayDate(date: Date) {
 }
 
 export function getEnemyList(groupId: number) {
-	return Object.keys(rogueMonsterGroups[groupId].RogueMonsterListAndWeight)
-		.map(monster => rogueMonsters[monster])
-		.map(rmonster => monsterNpcs[rmonster.NpcMonsterID])
+	return Object.keys(Object.values(rogueMonsterGroups).find(grp => grp.RogueMonsterGroupID == groupId)!.RogueMonsterListAndWeight)
+		.map(monster => Object.values(rogueMonsters).find(m => m.RogueMonsterID == monster))
+		.map(rmonster => Object.values(monsterNpcs).find(npc => npc.ID == rmonster.NpcMonsterID))
 		.map(npcmonter => textMap.getText(npcmonter.NPCName))
 }
 
@@ -65,7 +66,7 @@ for (const data of Object.values(weeklyData)) {
 	const equations: Equation[] = []
 	
 	for (const displayId of data.WeeklyContentList) {
-		const display = weeklyDisplay[displayId]
+		const display = Object.values(weeklyDisplay).find(display => display.WeeklyDisplayID == displayId)!
 		for (const entry of display.DescParams) {
 			if (entry[WeirdKey.get('DescParamType')] == 'Formula') {
 				equations.push(new Equation(Number(entry[WeirdKey.get('DescParamValue')])))
@@ -75,6 +76,7 @@ for (const data of Object.values(weeklyData)) {
 		}
 	}
 	
+	const [version] = await ChangeHistory.weeklyChallenge.findAdded(data.ChallengeID)
 	const output = [
 		`<%-- [PAGE_INFO]`,
 		`PageTitle=#Divergent Universe/Extrapolation/${periodStart.getUTCFullYear()}-${zeroPad(periodStart.getUTCMonth()+1, 2)}-${zeroPad(periodStart.getUTCDate(), 2)}#`,
@@ -83,6 +85,7 @@ for (const data of Object.values(weeklyData)) {
 		`|name              = ${textMap.getText(data.WeeklyName)}`,
 		`|image             = Event ${textMap.getText(data.WeeklyName).replaceAll(':', '')}.png`,
 		`|type              = Cyclical Extrapolation`,
+		`|time_known        = yes`,
 		`|time_start        = ${displayDate(periodStart)}`,
 		`|time_end          = ${displayDate(periodEnd)}`,
 		'}}',
@@ -90,19 +93,21 @@ for (const data of Object.values(weeklyData)) {
 		`{{Cyclical Extrapolation`,
 		`|curios     = ${curios.map(curio => curio.name).join('; ')}`,
 		`|equations  = ${equations.map(equation => `${equation.name}//${equation.path1}//${equation.path2}//${equation.rarity}`).join(';; ')}`,
+		`|trailblaze = `,
 		`|rewards    = ${ItemList.fromRewardId(data.RewardID).asCardListParams()}`,
 		`|boss_1_1   = ${getEnemyList(data.DisplayMonsterGroups1[0]).join('; ')}`,
 		`|boss_1_2   = ${getEnemyList(data.DisplayMonsterGroups1[3]).join('; ')}`,
 		`|boss_2_1   = ${getEnemyList(data.DisplayMonsterGroups2[0]).join('; ')}`,
 		`|boss_2_2   = ${getEnemyList(data.DisplayMonsterGroups2[3]).join('; ')}`,
 		`|boss_3     = ${getEnemyList(data.DisplayMonsterGroups3[0]).join('; ')}`,
+		`|rules      = ${data.WeeklyContentDetailList.map(id => textMap.getText(Object.values(weeklyDisplay).find(d => d.WeeklyDisplayID == id)?.WeeklyDisplayContent)).join('; ')}`,
 		`}}`,
 		'',
 		`==Other Languages==`,
 		`${await TextMap.generateOL(data.WeeklyName)}`,
 		'',
 		'==Change History==',
-		`{{Change History|2.3}}`
+		`{{Change History|${version}}}`
 	]
 	
 	await writeFile(`./output/du_weekly/${data.ChallengeID}.wikitext`, output.join('\n'))

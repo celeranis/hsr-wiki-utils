@@ -1,25 +1,45 @@
 import { readFileSync, writeFileSync } from 'fs';
 import { readdir } from 'fs/promises';
 import config from '../../../config.json' with { "type": "json" };
+import { getFile } from '../../files/GameFile.js';
+import { AvatarVOEntry } from './util.js';
 
 const root = config.local_roots[config.target_version]
 
 const results = new Set<string>()
 
-function addKey(key: string) {
-	if (key.startsWith('Ev_')) {
-		results.add(key)
+const characters = (await getFile<AvatarVOEntry[]>('ExcelOutput/AvatarVO.json')).map(entry => entry.VOTag)
+
+for (let i = 0; i < 20; i++) {
+	characters.push(i.toString())
+}
+
+function addKey(key: string, addAll?: boolean) {
+	if (key.startsWith('Ev_') || addAll) {
+		if (key.includes('{0}')) {
+			characters.forEach(char => {
+				let skey = key.replaceAll(`{0}`, char)
+				if (skey.includes(`{1}`)) {
+					characters.forEach(char => results.add(skey.replaceAll(`{1}`, char)))
+				} else {
+					results.add(skey)
+				}
+			})
+		} else {
+			results.add(key)
+		}
 	}
 }
 
-function addObjects(obj: object) {
+function addObjects(obj: object, addAll?: boolean) {
+	if (obj == null) return
 	for (const value of Object.values(obj)) {
 		switch (typeof value) {
 			case 'string':
-				addKey(value)
+				addKey(value, addAll)
 				break
 			case 'object':
-				addObjects(value)
+				addObjects(value, addAll)
 				break
 		}
 	}
@@ -32,4 +52,6 @@ for (const file of await readdir(root, { recursive: true, withFileTypes: true })
 	}
 }
 
-writeFileSync(`./output/SoundEvents.json`, [...results.values()].join('\n'))
+addObjects(await getFile('Config/AudioConfig.json'), true)
+
+writeFileSync(`./output/SoundEvents.txt`, [...results.values()].join('\n'))

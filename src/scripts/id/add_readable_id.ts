@@ -1,12 +1,12 @@
 import { Dictionary } from '../../Shared.js';
 import { textMap } from '../../TextMap.js';
 import { getFile } from '../../files/GameFile.js';
-import { Book, BookSeries } from '../../files/Readable.js';
+import { InternalBook, InternalBookSeries } from '../../files/Readable.js';
 import { AWB } from '../../util/AWB.js';
 import { Template } from '../../util/Template.js';
 
-const seriesData = await getFile<Dictionary<BookSeries>>('ExcelOutput/BookSeriesConfig.json')
-const bookData = await getFile<Dictionary<Book>>('ExcelOutput/LocalbookConfig.json')
+const seriesData = await getFile<Dictionary<InternalBookSeries>>('ExcelOutput/BookSeriesConfig.json')
+const bookData = await getFile<Dictionary<InternalBook>>('ExcelOutput/LocalbookConfig.json')
 
 AWB.init()
 

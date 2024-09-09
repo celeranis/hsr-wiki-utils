@@ -332,8 +332,8 @@ export class Enemy extends EnemyTemplate {
 	}
 
 	static fromId(enemyId: number | string) {
-		const monsterData = monsters[enemyId]
-		return new this(monsterData, monsterTemplates[monsterData.MonsterTemplateID])
+		const monsterData = Object.values(monsters).find(enemy => enemy.MonsterID == enemyId)!
+		return new this(monsterData, Object.values(monsterTemplates).find(temp => temp.MonsterTemplateID == monsterData.MonsterTemplateID)!)
 	}
 	
 	hasCustomName(): boolean {
@@ -432,7 +432,7 @@ export class Enemy extends EnemyTemplate {
 	async getSkill(skillTag: string): Promise<InternalMonsterSkill | undefined> {
 		const skillData = await Enemy.skillData.get()
 		for (const skillId of this.skill_list) {
-			const skill = skillData[skillId]
+			const skill = Object.values(skillData).find(skill => skill.SkillID == skillId)!
 			if (skill.SkillTriggerKey == skillTag) {
 				return skill
 			}

@@ -1,6 +1,6 @@
 import { readFile } from 'fs/promises';
 import config from '../../config.json' with { "type": "json" };
-import { VERSION_COMMITS } from '../Shared.js';
+import { Dictionary, VERSION_COMMITS } from '../Shared.js';
 
 export class HttpError extends Error {
 	constructor(public path: string, public status: number, public statusText: string, public body: string) {
@@ -28,6 +28,17 @@ export async function getFile<T extends object>(path: string, version: string = 
 			console.error(`Error while parsing JSON from ${path}`)
 			throw err
 		})
+}
+
+// for use with single-layer excel stuff only
+// multi-layer excels (i.e. MazeBuff) will break
+export async function getExcelFile<T extends object>(path: string, version: string = config.target_version): Promise<Dictionary<T>> {
+	const file = await getFile<Dictionary<T> | T[]>(path.startsWith('ExcelOutput/') ? path : `ExcelOutput/${path}`, version)
+	if (!Array.isArray(file)) {
+		return file
+	}
+	
+	return Object.fromEntries(Object.values(file).map(value => [Object.values(value)[0], value]))
 }
 
 // Same as getFile, but returns null if the file was not found

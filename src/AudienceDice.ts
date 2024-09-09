@@ -41,7 +41,7 @@ export class DiceSurface {
 	obtained_via: string
 	
 	constructor(id: number) {
-		const data = DiceSurface.data[id]
+		const data = Object.values(DiceSurface.data).find(surf => surf.SurfaceID == id)
 		if (!data) {
 			throw new TypeError(`Unknown DiceSurface ID ${id}`)
 		}
@@ -53,15 +53,15 @@ export class DiceSurface {
 		this.icon = data.Icon
 		this.sort = data.Sort
 		this.item_id = data.ItemID
-		this.obtained_via = data.UnlockDisplayID == 100 ? this.findSourceSecret() : TextMap.default.getText(obtainViaMap[data.UnlockDisplayID]?.DisplayContent)
+		this.obtained_via = data.UnlockDisplayID == 100 ? this.findSourceSecret() : TextMap.default.getText(Object.values(obtainViaMap).find(via => via.DisplayID == data.UnlockDisplayID)?.DisplayContent)
 		
 		DiceSurface.map.set(this.id, this)
 	}
 	
 	findSourceSecret() {
 		for (const secret of Object.values(DiceSurface.secrets)) {
-			const quest = DiceSurface.questData[secret.QuestID]
-			const reward = DiceSurface.rewardData[quest.RewardID]
+			const quest = Object.values(DiceSurface.questData).find(quest => quest.FinishWayID == secret.QuestID)!
+			const reward = Object.values(DiceSurface.rewardData).find(reward => reward.RewardID == quest.RewardID)!
 			if (Object.values(reward).includes(this.item_id)) {
 				const name = TextMap.default.getText(secret.MainStoryName ?? Event.TALK_NAMES[secret.TalkNameID].Name)
 				return `[[Simulated Universe/Secret#${name}|${name}]]`
@@ -102,7 +102,7 @@ export class AudienceDice {
 	recommended_surface_ids: number[]
 	
 	constructor(id: number) {
-		const data = AudienceDice.data[id]
+		const data = Object.values(AudienceDice.data).find(dice => dice.BranchID == id)!
 		
 		this.id = data.BranchID
 		this.name = TextMap.default.getText(data.BranchName)

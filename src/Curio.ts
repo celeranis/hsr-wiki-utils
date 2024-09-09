@@ -149,9 +149,9 @@ export class Curio {
 	// unlock_list: Unlock[]
 	
 	constructor(public id: number) {
-		const curio = Curio.data[id]
-		const display = Curio.displayData[curio.MiracleDisplayID]
-		const index = Curio.indexData[curio.HandbookMiracleID]
+		const curio = Object.values(Curio.data).find(curio => curio.MiracleID == id)!
+		const display = Object.values(Curio.displayData).find(d => d.MiracleDisplayID == curio.MiracleDisplayID)!
+		const index = Object.values(Curio.indexData).find(index => index.MiracleHandbookID == curio.HandbookMiracleID)!
 		
 		this.name = textMap.getText(display.MiracleName)
 		console.group(this.name)

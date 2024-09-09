@@ -3,7 +3,7 @@ import { textMap } from './TextMap.js';
 import { LazyData, getFile } from './files/GameFile.js';
 import type { InternalItem, InternalItemComefrom, InternalItemPurpose, InternalPassPage, InternalPassSticker, InternalRecipeConfig, InternalRewardData, ItemConfig, ItemMainType, ItemRarity, ItemReference, ItemSortData, ItemSubType } from './files/Item.js';
 
-type ItemSourceData = Dictionary<Dictionary<InternalItemComefrom>>
+type ItemSourceData = Dictionary<InternalItemComefrom>
 
 export type InventoryTab = 'Upgrade Materials' | 'Light Cone' | 'Missions' 
 	| 'Consumables' | 'Valuables' | 'Relics' | 'Other Materials'
@@ -45,7 +45,27 @@ export const enum ItemPurpose {
 	READABLE = 21
 }
 
-const sortData = await getFile<Dictionary<ItemSortData>>('ExcelOutput/ItemDisplaySort.json')
+const READABLE_ICON_MAP = {
+	'SpriteOutput/ItemFigures/140236.png': 'Item The Xianzhou Luofu Readable 6.png',
+	'SpriteOutput/ItemFigures/190001.png': 'Item Jarilo-VI Readable 2.png',
+	'SpriteOutput/ItemFigures/190002.png': 'Item Jarilo-VI Readable.png',
+	'SpriteOutput/ItemFigures/190003.png': 'Item Sealed Letter.png',
+	'SpriteOutput/ItemFigures/190004.png': 'Item Journal.png',
+	'SpriteOutput/ItemFigures/190005.png': 'Item Journal Page.png',
+	'SpriteOutput/ItemFigures/190006.png': 'Item Electronic Notice.png',
+	'SpriteOutput/ItemFigures/190007.png': 'Item Xianzhou Parchment.png',
+	'SpriteOutput/ItemFigures/190008.png': 'Item The Xianzhou Luofu Readable.png',
+	'SpriteOutput/ItemFigures/190009.png': 'Item The Xianzhou Luofu Readable 3.png',
+	'SpriteOutput/ItemFigures/190010.png': 'Item The Xianzhou Luofu Readable 4.png',
+	'SpriteOutput/ItemFigures/190011.png': 'Item The Xianzhou Luofu Readable 2.png',
+	'SpriteOutput/ItemFigures/190012.png': 'Item The Xianzhou Luofu Readable 5.png',
+	'SpriteOutput/ItemFigures/190013.png': 'Item Penacony Readable 4.png',
+	'SpriteOutput/ItemFigures/190014.png': 'Item Penacony Readable 3.png',
+	'SpriteOutput/ItemFigures/190015.png': 'Item Penacony Readable 2.png',
+	'SpriteOutput/ItemFigures/190016.png': 'Item Penacony Readable 1.png',
+}
+
+const sortData = Object.fromEntries((await getFile<ItemSortData[]>('ExcelOutput/ItemDisplaySort.json')).map(sort => [sort.ID, sort]))
 
 export class Item {
 	static readonly itemData = {
@@ -133,13 +153,13 @@ export class Item {
 		}
 		
 		if (this.subtype == 'TravelBrochurePaster') {
-			const stickerData = (await Item.passStickerData.get())[this.id]
+			const stickerData = Object.values(await Item.passStickerData.get()).find(item => item.ID == this.id)
 			if (stickerData) {
 				sources.push(textMap.getText(stickerData.PasterUnlockDesc).trim())
 			}
 		}
 		
-		const comeFrom = (await Item.itemSources.get())[this.id]
+		const comeFrom = Object.values(await Item.itemSources.get()).filter(src => src.ID == this.id)
 		if (comeFrom) {
 			const cfList = Object.values(comeFrom).sort((entry0, entry1) => entry0.Sort - entry1.Sort)
 			sources.push(...cfList.map(from => textMap.getText(from.Desc)))
@@ -178,7 +198,7 @@ export class Item {
 			types.push(displayST)
 		}
 		
-		const purpose = this.purpose_id && (await Item.itemPurpose.get())[this.purpose_id]
+		const purpose = this.purpose_id && Object.values(await Item.itemPurpose.get()).find(purpose => purpose.ID == this.purpose_id)
 		if (purpose) {
 			types.push(
 				...textMap.getText(purpose.PurposeText)
@@ -188,9 +208,9 @@ export class Item {
 		}
 		
 		if (this.subtype == 'TravelBrochurePaster') {
-			const stickerData = (await Item.passStickerData.get())[this.id]
+			const stickerData = Object.values(await Item.passStickerData.get()).find(sticker => sticker.ID == this.id)
 			if (stickerData) {
-				const brochure = (await Item.passPages.get())[stickerData.TravelBrochureID[0]]
+				const brochure = Object.values(await Item.passPages.get()).find(page => page.ID == stickerData.TravelBrochureID[0])
 				if (brochure) {
 					types.push(`${textMap.getText(brochure.DirectoryName)} Stickers`)
 				}
@@ -204,7 +224,7 @@ export class Item {
 	
 	static fromId(id: number | string): Item | undefined {
 		for (const data of Object.values(this.itemData)) {
-			const itemDat = Object.values(data.data ?? {})?.find(item => item.ID == id)
+			const itemDat = Object.values(data.data ?? {})?.find(item => item && item.ID == id)
 			if (itemDat) {
 				return new this(itemDat)
 			}
@@ -257,12 +277,14 @@ export class Item {
 	
 	async getImage() {
 		if (this.subtype == 'TravelBrochurePaster') {
-			const stickerData = (await Item.passStickerData.get())[this.id]
+			const stickerData = Object.values(await Item.passStickerData.get()).find(sticker => sticker.ID == this.id)
 			if (stickerData?.Type == 'Text') {
 				return 'Dreamscape Pass Sticker Text.png'
 			} else {
 				return `Dreamscape Pass Sticker ${sanitizeString(this.name)}.png`
 			}
+		} else if (this.subtype == 'Book') {
+			return READABLE_ICON_MAP[this.icon_path] ?? `Item ${sanitizeString(this.name)}.png`
 		}
 		
 		return `Item ${sanitizeString(this.name)}.png`
@@ -311,6 +333,35 @@ export class Item {
 		}
 		
 		return null
+	}
+	
+	asItemTemplate(size: number = 25, args: Dictionary<string | number> = {}) {
+		if (this.pagetitle != this.name) {
+			args.text ??= this.name.replaceAll('&mdash;', '—')
+		}
+		
+		const argsString = Object.entries(args).map(([key, val]) => (val != undefined) ? `|${key}=${val}` : '').join('')
+		
+		return `{{Item|${this.name}|${size}${argsString}}}`
+	}
+	
+	asItemListEntry(args: Dictionary<string | number> = {}) {
+		const x = args.x
+		delete args.x
+		
+		const note = args.note
+		delete args.note
+		
+		if (this.pagetitle != this.name) {
+			args.text ??= this.name
+		}
+
+		const argsEntries = Object.entries(args)
+		const argsString = argsEntries.length > 0 
+			? `${x ? `*${x}` : ''}${note ? `/${note}` : ''} { ${argsEntries.map(([key, val]) => `${key} = ${val}`).join(' $ ')} }`
+			: ''
+		
+		return this.pagetitle + argsString
 	}
 }
 
@@ -422,13 +473,12 @@ export class ItemList {
 	
 	static fromRewardId(id: string | number) {
 		const list = new this()
-		
-		if (!rewardData[id]) {
+
+		const reward = Object.values(rewardData).find(reward => reward.RewardID == id)!
+		if (!reward) {
 			if (id) console.warn(`Could not find reward ID ${id}`)
 			return list
 		}
-		
-		const reward = rewardData[id]
 		
 		if (reward.Hcoin) {
 			list.add({ ItemID: 1, ItemNum: reward.Hcoin })

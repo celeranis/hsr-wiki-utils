@@ -54,6 +54,14 @@ export class MappingInfo {
 		this.farm_type = data.FarmType
 	}
 	
+	static fromId(id: string | number) {
+		return new this(Object.values(mappingData).find(data => data.ID == id)!)
+	}
+	
+	static loadAll() {
+		return Object.values(mappingData).map(data => new this(data))
+	}
+	
 	async getArea(): Promise<Area | undefined> {
 		return this.plane_id ? await Area.fromId(this.plane_id) : undefined
 	}

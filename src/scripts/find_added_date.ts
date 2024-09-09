@@ -4,12 +4,12 @@ import { Dictionary, VERSION_LIST, Version } from '../Shared.js';
 import { TextMap } from '../TextMap.js';
 import { getFile } from '../files/GameFile.js';
 import type { InternalItem } from '../files/Item.js';
-import type { BookSeries } from '../files/Readable.js';
+import type { InternalBookSeries } from '../files/Readable.js';
 import { AWB } from '../util/AWB.js';
 
 type PerVersion<T> = [Version, Dictionary<T>][]
 
-const readablesPerVersion: PerVersion<BookSeries> = []
+const readablesPerVersion: PerVersion<InternalBookSeries> = []
 const itemsPerVersion: PerVersion<InternalItem> = []
 
 const modeMap: Dictionary<PerVersion<unknown>> = {

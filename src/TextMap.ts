@@ -9,6 +9,7 @@ export interface HashReference {
 
 export interface Sentence {
 	TalkSentenceID: number
+	VoiceID?: number
 	TextmapTalkSentenceName: HashReference
 	TalkSentenceText: HashReference
 }
@@ -27,9 +28,9 @@ export interface TextJoinItem {
 export type SupportedLanguage = 'CHS' | 'CHT' | 'DE' | 'EN' | 'ES' | 'FR' | 'ID' 
 	| 'JP' | 'KR' | 'PT' | 'RU' | 'TH' | 'VI'
 
-const sentenceJson: Dictionary<Sentence> = await getFile('ExcelOutput/TalkSentenceConfig.json')
-const textJoinConfig: Dictionary<TextJoinConfig> = await getFile('ExcelOutput/TextJoinConfig.json')
-const textJoinItems: Dictionary<TextJoinItem> = await getFile('ExcelOutput/TextJoinItem.json')
+const sentenceJson: Sentence[] = await getFile('ExcelOutput/TalkSentenceConfig.json')
+const textJoinConfig: TextJoinConfig[] = await getFile('ExcelOutput/TextJoinConfig.json')
+const textJoinItems: TextJoinItem[] = await getFile('ExcelOutput/TextJoinItem.json')
 
 export const OTHER_LANGUAGES: Dictionary<SupportedLanguage> = {
 	en: 'EN',
@@ -69,7 +70,7 @@ export type TextParams = (string | number | undefined | Value<number> | [number,
 
 export class TextMap {
 	static readonly cache = new Map<`${SupportedLanguage}${Version}`, TextMap>()
-	static readonly sentence_json: Dictionary<Sentence> = sentenceJson
+	static readonly sentence_json: Sentence[] = sentenceJson
 	
 	private constructor(public version: Version, public lang: SupportedLanguage, public json: Dictionary<string>) {
 		TextMap.cache.set(`${this.lang}${this.version}`, this)
@@ -152,7 +153,7 @@ export class TextMap {
 				(_str: string, gender1: string, text1: string, gender2: string, text2: string) => 
 					`⟨⟨MC|${gender1.toLowerCase()}=${text1}|${gender2.toLowerCase()}=${text2}⟩⟩`
 			)
-			.replaceAll(/<color=#(\w{1,6})\w{2}?>(.*?)<\/color>/gi, (substr, color, text) => {
+			.replaceAll(/<color=#(\w{1,6})\w{2}?>(.*?)<\/color>/gis, (substr, color, text) => {
 				color = color.toLowerCase()
 				if (COLOR_MAP[color]) {
 					return `⟨⟨Color|${COLOR_MAP[color]}|${text}⟩⟩`
@@ -162,10 +163,20 @@ export class TextMap {
 					return `⟨⟨Color|#${color}|${text}⟩⟩`
 				}
 			})
-			.replaceAll(/<size=([\-\+]?\d+)>(.*?)<\/size>/gi, '⟨⟨Size|$1|$2⟩⟩')
-			.replaceAll(/<align="?(\w+)"?>(.*?)<\/align>/gi, '<div align="$1">$2</div>')
-			.replaceAll(/{RUBY_B#(.+?)}(.+?){RUBY_E#}/gi, (_substr, topText, normalText) => `⟨⟨Rubi|${normalText}|${topText}⟩⟩`)
+			.replaceAll(/<size=([\-\+]?\d+)>(.*?)<\/size>/gis, '⟨⟨Size|$1|$2⟩⟩')
+			.replaceAll(/<align="?(\w+)"?>(.*?)<\/align>/gis, '<div align="$1">$2</div>')
+			.replaceAll(/{RUBY_B#(.+?)}(.+?){RUBY_E#}/gis, (_substr, topText, normalText) => `⟨⟨Rubi|${normalText}|${topText}⟩⟩`)
 			.replaceAll(/{TEXTJOIN#(\d+)}/gi, (_substr, id) => `(${Object.values(textJoinConfig).find(tj => tj.TextJoinID == id)?.TextJoinItemList.map(item => textMap.getText(Object.values(textJoinItems).find(tj => tj.TextJoinItemID == item)?.TextJoinText)).join('/')})`)
+			.replaceAll(/\{LAYOUT_(\w+)#([^}]+?)\}(?:\{LAYOUT_(\w+)#([^}]+?)\})?(?:\{LAYOUT_(\w+)#([^}]+?)\})?/gi, (_substr, method1, text1, method2, text2, method3, text3) => {
+				const output = [`{{tt|${text1}|on ${method1.toLowerCase()}}}`]
+				if (method2) {
+					output.push(`{{tt|${text2}|on ${method2.toLowerCase()}}}`)
+				}
+				if (method3) {
+					output.push(`{{tt|${text3}|on ${method3.toLowerCase()}}}`)
+				}
+				return `(${output.join('/')})`
+			})
 
 		if (params) {
 			replaced = this.replaceParams(replaced, params)
@@ -175,11 +186,13 @@ export class TextMap {
 			// .replaceAll(/–/g, '&ndash;')
 			.replaceAll(/—/g, '&mdash;')
 			.replaceAll(/\u00d7/g, '&times;')
+			.replaceAll(/'(<\s*\/?\s*(?:i|b)\s*>)/gi, '&ast;$1')
+			.replaceAll(/(<\s*\/?\s*(?:i|b)\s*>)'/gi, '&ast;$1')
 			.replaceAll(/<\s*\/?\s*i\s*>/gi, "''")
 			.replaceAll(/<\s*\/?\s*b\s*>/gi, "'''")
 			.replaceAll(/\u00a0/g, this.lang == 'KR' ? ' ' : '&nbsp;')
-			.replaceAll(/⟨⟨Color\|(\w+?)\|(\s*)(.+?)(\s*)⟩⟩/gi, '$2⟨⟨Color|$1|$3⟩⟩$4')
-			.replaceAll(/⟨⟨Color\|\w+?\|⟩⟩/gi, '')
+			.replaceAll(/⟨⟨Color\|(\w+?)\|(\s*)(.+?)(\s*)⟩⟩/gis, '$2⟨⟨Color|$1|$3⟩⟩$4')
+			.replaceAll(/⟨⟨Color\|\w+?\|⟩⟩/gis, '')
 			.replaceAll(/<\/?unbreak>/gi, '')
 		
 		if (!allowNewline) {
@@ -204,7 +217,7 @@ export class TextMap {
 	}
 	
 	getSentence(sentence: Sentence | number | string, textOnly: boolean = false, allowNewline: boolean = true, allowSpeakerColors: boolean = false) {
-		if (typeof sentence != 'object') sentence = TextMap.sentence_json[sentence]
+		if (typeof sentence != 'object') sentence = Object.values(TextMap.sentence_json).find(sent => sent.TalkSentenceID == sentence)!
 		if (!sentence) return undefined
 		const name = this.getText(sentence.TextmapTalkSentenceName, undefined, false)
 		const text = this.getText(sentence.TalkSentenceText, undefined, allowNewline).replaceAll('\n', '<br />')
@@ -213,7 +226,7 @@ export class TextMap {
 	}
 	
 	getSentenceMeta(sentenceId: number | string) {
-		const sentence = TextMap.sentence_json[sentenceId]
+		const sentence = Object.values(TextMap.sentence_json).find(sent => sent.TalkSentenceID == sentenceId)
 		if (!sentence) return undefined
 		
 		return {
