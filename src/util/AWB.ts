@@ -3,6 +3,7 @@ import { program } from 'commander';
 import { readFileSync, writeFileSync } from 'fs';
 import { writeFile } from 'fs/promises';
 import inquirer from 'inquirer';
+import { setTimeout } from 'timers/promises';
 
 export function tagRegex(tagName: string) {
 	return new RegExp(`<\\s*/?\\s*${tagName}\\s*/?\\s*>`, 'gi')
@@ -76,12 +77,15 @@ export class AWB {
 	}
 	
 	static async confirm(message: string = 'Confirm?'): Promise<boolean> {
-		const response = await inquirer.prompt([{
-			name: 'confirmed',
-			type: 'confirm',
-			message,
-		}])
-		return response.confirmed
+		// const response = await inquirer.prompt([{
+		// 	name: 'confirmed',
+		// 	type: 'confirm',
+		// 	message,
+		// }])
+		console.warn(message)
+		console.log('Since inquirer is broken, automatically confirming in 5 seconds...')
+		await setTimeout(1000 * 5)
+		return true//response.confirmed
 	}
 	
 	static async presentOptions<T extends string>(message: string, choices: T[]): Promise<T> {

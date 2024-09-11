@@ -152,10 +152,9 @@ export class Curio {
 	constructor(public id: number) {
 		const curio = Object.values(Curio.data).find(curio => curio.MiracleID == id)!
 		const display = Object.values(Curio.displayData).find(d => d.MiracleDisplayID == curio.MiracleDisplayID)!
-		const index = Object.values(Curio.indexData).find(index => index.MiracleHandbookID == curio.HandbookMiracleID)!
+		const index = Object.values(Curio.indexData).find(index => index.HandbookMiracleID == curio.HandbookMiracleID)!
 		
 		this.name = textMap.getText(display.MiracleName)
-		console.group(this.name)
 		this.effect = textMap.getText(display.MiracleDesc, display.DescParamList)
 		this.lore = textMap.getText(display.MiracleBGDesc)
 		this.obtainable_in = index?.MiracleTypeList?.map(id => TYPE_MAP[id]) || []

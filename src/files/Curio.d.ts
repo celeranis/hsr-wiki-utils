@@ -21,7 +21,7 @@ export interface InternalCurioDisplay {
 }
 
 export interface InternalIndexCurio {
-	MiracleHandbookID: number
+	HandbookMiracleID: number
 	MiracleReward: number
 	MiracleTypeList: number[]
 	MiracleDisplayID: number

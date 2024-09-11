@@ -77,14 +77,14 @@ for (const missionData of Object.values(Mission.missionData)) {
 		.replaceAll('<<VERSION>>', (await ChangeHistory.missions.findAdded(mission.id.toString()))[0] || '<!--unknown-->')
 	
 	const image = await mission.getImage()
-	const imageName = `Mission ${title}.png`
+	const imageName = `Mission ${title.replaceAll(':', '')}.png`
 	if (typeof(image) == 'string') {
 		output = output.replaceAll('<<IMAGE>>', imageName + uploadPrompt(image, imageName, "Fate's Atlas Images"))
 	} else if (!image) {
 		output = output.replaceAll('<<IMAGE>>', `<!--${imageName}-->`)
 	} else {
-		const stelleName = `Mission ${title} Stelle.png`
-		const caelusName = `Mission ${title} Caelus.png`
+		const stelleName = `Mission ${title.replaceAll(':', '') } Stelle.png`
+		const caelusName = `Mission ${title.replaceAll(':', '') } Caelus.png`
 		output = output.replaceAll('<<IMAGE>>', 
 			uploadPrompt(image.stelle, stelleName, "Fate's Atlas Images") 
 			+ uploadPrompt(image.caelus, caelusName, "Fate's Atlas Images")
@@ -145,7 +145,7 @@ for (const missionData of Object.values(Mission.missionData)) {
 	output = output
 		.replaceAll('<<REWARDS>>', rewards.asCardListParams())
 	
-	const path = `./output/missions/${mission.type}${mission.data.ChapterID ? `/${sanitize(mission.getChapterName()!)}` : ''}/`
+	const path = `./output/missions/${mission.type}${mission.data.ChapterID ? `/${sanitize(mission.getChapterName()!.replace(/\.$/, '_'))}` : ''}/`
 	mkdirSync(path, { recursive: true })
 	writeFileSync(`${path}/${sanitize(mission.name)}-${mission.id}.wikitext`, output)
 }

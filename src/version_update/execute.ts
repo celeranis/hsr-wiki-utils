@@ -27,7 +27,10 @@ for (const [key, val] of Object.entries(COMMON_ICON_MAP)) {
 }
 
 async function checkPages(pages: string[], shouldExist: boolean = false) {
-	const foundPages = await client.read(pages)
+	let foundPages = await client.read(pages)
+	if (!Array.isArray(foundPages)) {
+		foundPages = [foundPages]
+	}
 	for (const page of foundPages) {
 		if (page.invalid) {
 			console.error(`"${page.title}" is invalid!`)
@@ -57,7 +60,7 @@ async function getFile(file: string): Promise<[string, string]> {
 
 	content = content.replace(/<%\-\-\s+\[PAGE_INFO\].+\[END_PAGE_INFO\]\s+\-\-%>/is, '').trimStart()
 	
-	console.log(content)
+	// console.log(content)
 	
 	return [page, content]
 }
@@ -121,7 +124,7 @@ async function redirect(from: string, to: string, summary: string = REASON) {
 async function updateOL(file: string, summary: string = REASON) {
 	const [page, content] = await getFile(file)
 	
-	console.log(page)
+	// console.log(page)
 	const pageData = await client.read(page)
 	let pageContent = pageData.revisions![0]?.content
 	pageContent = pageContent?.replace(/{{Other Languages.+?\n}}/is, content.match(/{{Other Languages.+?\n}}/is)?.[0]!)
@@ -142,6 +145,7 @@ const CATEGORIES = {
 	pfp: 'Profile Pictures',
 	fatesatlas: "Fate's Atlas Images",
 	curios: 'Curio Icons',
+	equations: 'Equation Icons'
 }
 
 async function upload(file: string, fileName: string, categories?: string, reason: string = REASON) {
@@ -172,16 +176,29 @@ async function upload(file: string, fileName: string, categories?: string, reaso
 	}
 	
 	if (!CHECK) {
-		const result = await client.upload(file, 'File:' + fileName, pageContent, {
+		const result = await client.upload(file, fileName, pageContent, {
 			comment: reason,
 			ignorewarnings: false
 		})
 		if (result.result == 'Warning') {
-			const dupe_of = result.warnings?.duplicate?.replaceAll('_', ' ')
+			const dupe_of = result.warnings?.duplicate?.toString()?.replaceAll('_', ' ')
 			if (dupe_of) {
 				fileRedirectMap[file] = dupe_of
 				await redirect('File:' + fileName, 'File:' + dupe_of, reason)
 				return
+			}
+			
+			if (result.warnings?.exists) {
+				const currentContent = (await client.read('File:' + fileName)).revisions?.[0]?.content
+				if (!currentContent || currentContent.includes('{{Placeholder Image')) {
+					// if this is placeholder image, we can safely replace it
+					await client.upload(file, fileName, pageContent, {
+						comment: reason,
+						ignorewarnings: true
+					})
+					// and remove the placeholder template
+					await client.save('File:' + fileName, pageContent, reason)
+				}
 			}
 		} else if (result.filename) {
 			fileRedirectMap[file] = result.filename.replaceAll('_', ' ')
@@ -189,6 +206,9 @@ async function upload(file: string, fileName: string, categories?: string, reaso
 		console.log(`Uploaded "${fileName}"`)
 	} else {
 		CHECK_NOEXIST.push(fileName)
+		if (!existsSync(file)) {
+			console.error(`File "${file}" (to be uploaded to "${fileName}") does not exist!`)
+		}
 	}
 }
 

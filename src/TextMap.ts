@@ -194,6 +194,7 @@ export class TextMap {
 			.replaceAll(/⟨⟨Color\|(\w+?)\|(\s*)(.+?)(\s*)⟩⟩/gis, '$2⟨⟨Color|$1|$3⟩⟩$4')
 			.replaceAll(/⟨⟨Color\|\w+?\|⟩⟩/gis, '')
 			.replaceAll(/<\/?unbreak>/gi, '')
+			.replaceAll('{SPACE}', ' ')
 		
 		if (!allowNewline) {
 			replaced = replaced.replaceAll('\n', ' ')

@@ -92,7 +92,7 @@ for (const data of Object.values(weeklyData)) {
 		'',
 		`{{Cyclical Extrapolation`,
 		`|curios     = ${curios.map(curio => curio.name).join('; ')}`,
-		`|equations  = ${equations.map(equation => `${equation.name}//${equation.path1}//${equation.path2}//${equation.rarity}`).join(';; ')}`,
+		`|equations  = ${equations.map(equation => equation.name).join(';; ')}`,
 		`|trailblaze = `,
 		`|rewards    = ${ItemList.fromRewardId(data.RewardID).asCardListParams()}`,
 		`|boss_1_1   = ${getEnemyList(data.DisplayMonsterGroups1[0]).join('; ')}`,
