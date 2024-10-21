@@ -1,14 +1,17 @@
 import { readFileSync, writeFileSync } from 'fs';
 import { readdir } from 'fs/promises';
 import config from '../../config.json' with { "type": "json" };
+import { getAudioHash } from '../Shared.js';
 import { TextMap } from '../TextMap.js';
 
 const root = config.local_roots[config.target_version]
 
 const results: Record<string, string> = {}
+const audioResults: Record<string, string> = {}
 
 function addKey(key: string) {
 	results[TextMap.getStableHash(key)] = key
+	audioResults[getAudioHash(key)] = key
 	if (!key.match(/^(?:ADF_|MDF|_)/i)) {
 		results[TextMap.getStableHash(`ADF_${key}`)] = `ADF_${key}`
 		results[TextMap.getStableHash(`MDF_${key}`)] = `MDF_${key}`
@@ -24,7 +27,11 @@ function addObjects(obj: object) {
 			case 'string':
 				addKey(value)
 				break
+			case 'number':
+				audioResults[getAudioHash(String(value))] = String(value)
+				break
 			case 'object':
+				if (value == null) break;
 				addObjects(value)
 				break
 		}
@@ -42,3 +49,4 @@ for (const file of await readdir(root, { recursive: true, withFileTypes: true })
 }
 
 writeFileSync(`./output/ValueHashMap.json`, JSON.stringify(results, null, '\t'))
+writeFileSync(`./output/AudioHashMap.json`, JSON.stringify(audioResults, null, '\t'))

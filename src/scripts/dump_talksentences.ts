@@ -1,9 +1,9 @@
 import { writeFileSync } from 'fs';
 import { readFile, readdir } from 'fs/promises';
 import config from '../../config.json' with { "type": "json" };
-import { Dictionary } from '../Shared.js';
+import { DICON_MAP, Dictionary } from '../Shared.js';
 import { textMap } from '../TextMap.js';
-import { Act, DialogTask } from '../files/Dialog.js';
+import { Act, InternalDialogTask } from '../files/Dialog.js';
 import { getFile } from '../files/GameFile.js';
 import { InternalTalkSentence } from '../files/Occurrence.js';
 import type { VoiceData } from './vo/dump_vo_names.js';
@@ -15,7 +15,7 @@ const output: string[] = []
 const outputVoices: string[] = []
 const diconMap: Dictionary<string> = {}
 
-function process(task: DialogTask) {
+function process(task: InternalDialogTask) {
 	if (task.$type == 'RPG.GameCore.PlayOptionTalk') {
 		for (const option of task.OptionList) {
 			if (!option.OptionIconType) continue
@@ -62,41 +62,6 @@ for (const file of await readdir(config.local_roots[config.target_version], { re
 	}
 }
 
-const ICON_MAP = {
-	ChatMissionIcon: '!',
-	ChatLoopIcon: 'Talk',
-	ChatContinueIcon: 'Arrow',
-	ChatBackIcon: 'Return',
-	ChatOutIcon: 'Exit',
-	ShopIcon: 'Shop',
-	BoxIcon: 'Box',
-	CheckIcon: 'Loupe',
-	HealHPIcon: 'Heal',
-	LevelIcon: 'Star',
-	ChatIcon: 'Talk',
-	SpecialChatIcon: 'Special',
-	Synthesis: 'Synthesis',
-	TriggerProp: 'Gear',
-	CommonSign: 'Sign',
-	FightActivity: 'Fight Club',
-	RogueHeita: 'Herta',
-	SecretMissionIcon: '?',
-	MonsterReasearchIcon: 'Research',
-	GeneralActivityIcon: 'Travel Log',
-	StandupIcon: 'Stand',
-	HideIcon: 'Hide',
-	ChallengeStoryIcon: 'Pure Fiction',
-	AbyssIcon: 'Forgotten Hall',
-	DreamlandIcon: 'Clockwork',
-	OrigamiBirdIcon: 'Origami Bird',
-	PickUpIcon: 'Hand',
-	HeartDialRaid: 'Absorb Emotions',
-	TokenIcon: 'Token',
-	ClockBoyShopIcon: 'Clockie',
-	HeartDialTracer: 'Clockie Tie',
-	ChallengeBossIcon: 'Apocalyptic Shadow'
-}
-
 for (const sentence of Object.values(TalkSentences)/*.sort((a, b) => (a.TalkSentenceID - b.TalkSentenceID))*/) {
 	const content = textMap.getText(sentence.TalkSentenceText).replaceAll('\n', '<br />').replaceAll(/{{Color\|(.+?)\|/gi, '{{Color|$1|nobold=1|')
 	if (!content) continue
@@ -123,8 +88,8 @@ for (const sentence of Object.values(TalkSentences)/*.sort((a, b) => (a.TalkSent
 				outputVoices.push(`:${voice}{{Black Screen|${content}}}`)
 				break
 			default:
-				output.push(`:{{DIcon|${ICON_MAP[diconMap[sentence.TalkSentenceID]]}}} ${content}`)
-				outputVoices.push(`:{{DIcon|${ICON_MAP[diconMap[sentence.TalkSentenceID]]}}} ${voice}${content}`)
+				output.push(`:{{DIcon|${DICON_MAP[diconMap[sentence.TalkSentenceID]]}}} ${content}`)
+				outputVoices.push(`:{{DIcon|${DICON_MAP[diconMap[sentence.TalkSentenceID]]}}} ${voice}${content}`)
 				break
 		}
 	} else if (textMap.getText(sentence.TextmapTalkSentenceName)) {

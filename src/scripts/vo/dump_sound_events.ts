@@ -39,11 +39,20 @@ function addObjects(obj: object, addAll?: boolean) {
 				addKey(value, addAll)
 				break
 			case 'object':
+				if (value && '$type' in value) {
+					const type = value.$type
+					if (typeof(type) == 'string' && type.includes('Audio')) {
+						addObjects(value, true)
+						break
+					}
+				}
 				addObjects(value, addAll)
 				break
 		}
 	}
 }
+
+addObjects(await getFile('Config/AudioConfig.json'), true)
 
 for (const file of await readdir(root, { recursive: true, withFileTypes: true })) {
 	if (file.isFile() && !file.path.includes('TextMap') && file.name.endsWith('.json')) {
@@ -51,7 +60,5 @@ for (const file of await readdir(root, { recursive: true, withFileTypes: true })
 		addObjects(contents)
 	}
 }
-
-addObjects(await getFile('Config/AudioConfig.json'), true)
 
 writeFileSync(`./output/SoundEvents.txt`, [...results.values()].join('\n'))

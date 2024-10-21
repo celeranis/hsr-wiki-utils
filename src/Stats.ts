@@ -196,7 +196,7 @@ export class Stat {
 	}
 
 	diff(diff: string) {
-		return `${this.name} ${diff}`
+		return `${diff} ${this.name}`
 	}
 }
 

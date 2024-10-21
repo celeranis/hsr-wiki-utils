@@ -92,16 +92,3 @@ export async function dumpFile(outDir: string, outFile: string, sourceName: stri
 		await rm(`${outDir}/${outFile.replace(/\.ogg$/, '.wav')}`)
 	}
 }
-
-export function getAudioHash(str: string) {
-	str = str.toLowerCase()
-	let hash = 2166136261
-
-	for (let i = 0; i < str.length; i++) {
-		hash = hash * 16777619 //FNV prime
-		hash = hash ^ str.charCodeAt(i)! //FNV xor
-		hash = hash & 0xFFFFFFFF //python clamp
-	}
-	
-	return hash
-}

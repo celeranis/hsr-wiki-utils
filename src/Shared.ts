@@ -28,7 +28,7 @@ export function pathListDisplay(pathNames: AeonPath[]) {
 export function sanitizeString(str: string) {
 	return str
 		.replaceAll(/[\/\\=<>\|:]/g, '-')
-		.replaceAll(/[\*"?:,]/g, '')
+		.replaceAll(/[\*"?:]/g, '')
 }
 
 export interface Value<T> {
@@ -159,11 +159,11 @@ export function zeroPad(number: number, length: number) {
 }
 
 export function diffn(num: number, plus: boolean = true) {
-	return ((plus && num > 0) ? '+' : '')
+	return ((plus && num > 0) ? '+' : '') + num
 }
 
 export function percent(num: number, decimals: number = 0, plus: boolean) {
-	return diffn(Math.round(num * (10 ^ (decimals + 2))) / (10 ^ decimals), plus) + '%'
+	return diffn(Math.round(num * Math.pow(10, decimals + 2)) / Math.pow(10, decimals), plus) + '%'
 }
 
 export function tpercent(num: number, decimals: number = 0, plus: boolean = true, threshold: number = 0.001): string | undefined {
@@ -201,4 +201,54 @@ export class Cache<T extends object> {
 
 export function roundTo(num: number, factor: number) {
 	return Math.round(num * Math.pow(10, factor)) / Math.pow(10, factor)
+}
+
+export function getAudioHash(str: string): number {
+	str = str.toLowerCase()
+	let hash = 2166136261n
+
+	for (let i = 0; i < str.length; i++) {
+		hash = hash * 16777619n //FNV prime
+		hash = hash ^ BigInt(str.charCodeAt(i)) //FNV xor
+		hash = hash & 0xFFFFFFFFn //python clamp
+	}
+
+	return Number(hash)
+}
+
+export type OutputList = (string | OutputList)[]
+
+export const DICON_MAP = {
+	ChatMissionIcon: '!',
+	ChatLoopIcon: 'Talk',
+	ChatContinueIcon: 'Arrow',
+	ChatBackIcon: 'Return',
+	ChatOutIcon: 'Exit',
+	ShopIcon: 'Shop',
+	BoxIcon: 'Box',
+	CheckIcon: 'Loupe',
+	HealHPIcon: 'Heal',
+	LevelIcon: 'Star',
+	ChatIcon: 'Talk',
+	SpecialChatIcon: 'Special',
+	Synthesis: 'Synthesis',
+	TriggerProp: 'Gear',
+	CommonSign: 'Sign',
+	FightActivity: 'Fight Club',
+	RogueHeita: 'Herta',
+	SecretMissionIcon: '?',
+	MonsterReasearchIcon: 'Research',
+	GeneralActivityIcon: 'Travel Log',
+	StandupIcon: 'Stand',
+	HideIcon: 'Hide',
+	ChallengeStoryIcon: 'Pure Fiction',
+	AbyssIcon: 'Forgotten Hall',
+	DreamlandIcon: 'Clockwork',
+	OrigamiBirdIcon: 'Origami Bird',
+	PickUpIcon: 'Hand',
+	HeartDialRaid: 'Absorb Emotions',
+	TokenIcon: 'Token',
+	ClockBoyShopIcon: 'Clockie',
+	HeartDialTracer: 'Clockie Tie',
+	ChallengeBossIcon: 'Apocalyptic Shadow'
 }

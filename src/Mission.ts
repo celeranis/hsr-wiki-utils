@@ -1,34 +1,23 @@
 import { existsSync } from 'fs';
 import config from '../config.json' with { 'type': 'json' };
-import { ItemList } from './Item.js';
-import { Dictionary, wikiTitle, wikiTitleLink } from './Shared.js';
+import { Item, ItemList } from './Item.js';
+import { wikiTitle, wikiTitleLink } from './Shared.js';
 import { textMap } from './TextMap.js';
+import { ActDialogueTree, DialogueTaskEntry } from './dialogue/Dialogue.js';
+import { BaseDialogueTask } from './dialogue/DialogueBase.js';
+import { FinishPerformanceTask } from './dialogue/tasks/Performance.js';
 import { Act } from './files/Dialog.js';
-import { getExcelFile, getFile, getFileSafe } from './files/GameFile.js';
-import { Performance, PerformanceFile, type InternalFateAtlasEntry, type InternalMainMission, type InternalMissionChapter, type InternalMissionType, type InternalSubMission } from './files/Mission.js';
-import { Area } from './maps/Area.js';
+import { getExcelFile, getFile } from './files/GameFile.js';
+import { ItemReference } from './files/Item.js';
+import { FinishAction, InternalMissionInfo, InternalSubMissionInfo, type InternalFateAtlasEntry, type InternalMainMission, type InternalMissionChapter, type InternalMissionType, type InternalSubMission } from './files/Mission.js';
+import { Area, AreaFloor } from './maps/Area.js';
+import type { NPCDialogue, NPCDialogueTree } from './maps/NPCDialogue.js';
+import { DialogueNode } from './util/AbstractDialogueTree.js';
 
-const data: Dictionary<InternalMainMission> = await getFile('ExcelOutput/MainMission.json')
-const stepData: Dictionary<InternalSubMission> = await getFile('ExcelOutput/SubMission.json')
-const fatesAtlas = await getExcelFile<InternalFateAtlasEntry>('ExcelOutput/ChronicleConclusion.json')
-const chapterData: Dictionary<InternalMissionChapter> = await getFile('ExcelOutput/MissionChapterConfig.json')
-
-export const performance = {
-	A: await getFile<PerformanceFile>('ExcelOutput/PerformanceA.json'),
-	C: await getFile<PerformanceFile>('ExcelOutput/PerformanceC.json'),
-	CG: await getFile<PerformanceFile>('ExcelOutput/PerformanceCG.json'),
-	D: await getFile<PerformanceFile>('ExcelOutput/PerformanceD.json'),
-	DS: await getFile<PerformanceFile>('ExcelOutput/PerformanceDS.json'),
-	E: await getFile<PerformanceFile>('ExcelOutput/PerformanceE.json'),
-}
-
-export interface MissionStep {
-	id: number
-	title: string
-	description: string
-	location?: Area
-	characters: string[]
-}
+const data = await getExcelFile<InternalMainMission>('ExcelOutput/MainMission.json', 'MainMissionID')
+const stepData = await getExcelFile<InternalSubMission>('ExcelOutput/SubMission.json', 'SubMissionID')
+const fatesAtlas = await getExcelFile<InternalFateAtlasEntry>('ExcelOutput/ChronicleConclusion.json', 'MissionID')
+const chapterData = await getExcelFile<InternalMissionChapter>('ExcelOutput/MissionChapterConfig.json', 'ID')
 
 export type MissionType = 'Trailblaze' | 'Adventure' | 'Companion' | 'Continuance' | 'Daily'
 const missionTypeMap: Record<InternalMissionType, MissionType> = {
@@ -63,12 +52,11 @@ export class Mission {
 		return [...this.charset.values()]
 	}
 	
-	static findPerformance(id: string | number): Performance | null {
-		for (const file of Object.values(performance)) {
-			const found = Object.values(file).find(perf => perf.PerformanceID == id)
-			if (found) return found
-		}
-		return null
+	mission_info?: InternalMissionInfo
+	
+	async getMissionInfo() {
+		return this.mission_info = await getFile<InternalMissionInfo>(`Config/Level/Mission/${this.id}/MissionInfo_${this.id}.json`)
+			.catch(err => { console.warn(`No MissionInfo found for ${this.id} "${this.name}" - ${err}`); return undefined })
 	}
 	
 	get displayType(): string {
@@ -109,57 +97,71 @@ export class Mission {
 	
 	prev?: Mission
 	
-	async getSteps(): Promise<MissionStep[]> {
-		const steps: MissionStep[] = []
-		let stepList = Object.values(stepData).filter(data => 
-			data.SubMissionID.toString().startsWith(this.id.toString()) 
-			&& data.SubMissionID.toString().length - this.id.toString().length <= 2
-		)
-		if (!stepList.length) {
-			console.warn(`Could not find any SubMissions for Mission "${this.name}" (${this.id})`)
-		}
-		let index = 1
-		
-		for (const currentStep of stepList) {
-			const perfData = Mission.findPerformance(currentStep.SubMissionID)
+	async getSteps(sortedWithDialogue: boolean): Promise<MissionStep[]> {
+		const missionInfo = await this.getMissionInfo()
+		if (missionInfo) {
+			// preferred method
+			const unsortedSteps: MissionStep[] = missionInfo.SubMissionList.map(info => new MissionStep(stepData[info.ID], info))
 			
-			const characters = new Set<string>()
-			const addChars = (talk: { TalkSentenceID: number }) => {
-				const chr = textMap.getSentenceMeta(talk.TalkSentenceID)?.speaker
-				if (chr && chr != '(Trailblazer)') {
-					characters.add(chr)
-					this.charset.add(chr)
+			if (!sortedWithDialogue) return unsortedSteps
+			
+			const dialogue: (MissionDialogueTree | NPCDialogueTree)[] = []
+			for (const step of unsortedSteps) {
+				const thisDialogue = (await step.loadDialogue())?.optimize()
+				if (thisDialogue) {
+					dialogue.push(thisDialogue)
 				}
+				// for (const npcDialogue of await step.getMapDialogue()) {
+				// 	dialogue.push((await npcDialogue.loadDialogue()).optimize())
+				// }
 			}
+			await ActDialogueTree.crossResolveStrings(dialogue)
 			
-			if (perfData && perfData.PerformancePath) {
-				const act = await getFileSafe<Act>(perfData.PerformancePath)
-				for (const sequence of act?.OnStartSequece || []) {
-					for (const task of sequence.TaskList) {
-						switch (task.$type) {
-							case 'RPG.GameCore.PlayAndWaitRogueSimpleTalk':
-							case 'RPG.GameCore.PlayAndWaitSimpleTalk':
-							case 'RPG.GameCore.PlayRogueSimpleTalk':
-								task.SimpleTalkList.forEach(addChars)
-								break
-						}
+			const sortedSteps: MissionStep[] = []
+			const addSteps = (steps: MissionStep[]) => {
+				for (const step of steps) {
+					if (step && !sortedSteps.includes(step)) {
+						sortedSteps.push(step)
 					}
 				}
+				for (const step of steps) {
+					addSteps(unsortedSteps.filter(ustep => ustep.start_condition?.type == 'AnySequence' && ustep.start_condition.param_list_int!.includes(step.id) && !sortedSteps.includes(step)))
+				}
 			}
 			
-			steps.push({
-				id: currentStep.SubMissionID,
-				title: textMap.getText(currentStep.TargetText),
-				description: textMap.getText(currentStep.DescrptionText),
-				location: perfData?.PlaneID ? await Area.fromId(perfData.PlaneID).catch(err => void console.error(err)) : undefined,
-				characters: [...characters.values()]
-			})
-			index++
+			addSteps(missionInfo.StartSubMissionList.map(id => unsortedSteps.find(step => step.id == id)).filter(s => s != undefined))
+			addSteps(unsortedSteps.filter(step => step.start_condition!.type == 'Auto'))
+
+			for (const step of unsortedSteps.toSorted((s0, s1) => (s0.progress ?? 0) - (s1.progress ?? 0))) {
+				if (!missionInfo.FinishSubMissionList.includes(step.id)) {
+					addSteps([step])
+				}
+			}
+
+			addSteps(missionInfo.FinishSubMissionList.map(id => unsortedSteps.find(step => step.id == id)).filter(s => s != undefined))
+			
+			return sortedSteps
+		} else {
+			const steps: MissionStep[] = []
+			// dumber method when MissionInfo is unavailabile
+			let stepList = Object.values(stepData).filter(data =>
+				data.SubMissionID.toString().startsWith(this.id.toString())
+				&& data.SubMissionID.toString().length - this.id.toString().length <= 2
+			)
+			if (!stepList.length) {
+				console.warn(`Could not find any SubMissions for Mission "${this.name}" (${this.id})`)
+			}
+			let index = 1
+
+			for (const currentStep of stepList) {
+				steps.push(new MissionStep(currentStep))
+				index++
+			}
+
+			steps.sort((step1, step2) => step1.id - step2.id)
+			
+			return steps
 		}
-		
-		steps.sort((step1, step2) => step1.id - step2.id)
-		
-		return steps
 	}
 	
 	getRewards() {
@@ -203,6 +205,12 @@ export class Mission {
 				case 'MuseumPhaseRenewPointReach':
 					requirements.push(`Reach phase ${paramData.Value} in [[Everwinter City Museum Ledger of Curiosities]]`)
 					break
+				
+				case 'Auto':
+					break
+				
+				default:
+					requirements.push(`{{subst:void|<!--Unknown: ${JSON.stringify(paramData)}-->}}`)
 			}
 		}
 		
@@ -271,5 +279,155 @@ export class Mission {
 		} else {
 			return undefined
 		}
+	}
+}
+
+export interface StepCondition {
+	type: InternalSubMissionInfo['TakeType'] | InternalSubMissionInfo['FinishType']
+	param_type?: InternalSubMissionInfo['ParamType']
+	params_int: number[]
+	params_str: string[]
+	param_list_int?: number[]
+	param_list_str?: string[]
+	param_items?: ItemReference[]
+}
+
+export class MissionStep {
+	id: number
+	name: string
+	description: string
+	
+	json_path?: string
+	progress?: number
+	
+	floor_id?: number
+	plane_id?: number
+	
+	start_condition?: StepCondition
+	finish_condition?: StepCondition
+	
+	dialogue?: MissionDialogueTree
+	finish_actions?: FinishAction[]
+	
+	async getArea() {
+		return this.plane_id ? await Area.fromId(this.plane_id) : undefined
+	}
+	
+	async getFloor() {
+		return this.floor_id && this.plane_id ? await AreaFloor.fromId(this.plane_id, this.floor_id) : undefined
+	}
+	
+	async getGroups() {
+		return (await this.getFloor())?.loadSubMissionGroups(this.id) ?? []
+	}
+	
+	constructor(data?: InternalSubMission, info?: InternalSubMissionInfo) {
+		this.id = data?.SubMissionID ?? info?.ID!
+		this.name = textMap.getText(data?.TargetText)
+		this.description = textMap.getText(data?.DescrptionText)
+		
+		if (info) {
+			this.progress = info.Progress
+			
+			this.floor_id = info.LevelFloorID
+			this.plane_id = info.LevelPlaneID
+			
+			this.start_condition = MissionStep.getCondition(info, info.TakeType, 'Take')
+			this.finish_condition = MissionStep.getCondition(info, info.FinishType, '')
+			
+			this.json_path = info.MissionJsonPath
+			this.finish_actions = info.FinishActionList
+		}
+	}
+	
+	async loadDialogue() {
+		if (!this.json_path || this.id == 202040105 || this.id == 404011001) return
+		return this.dialogue ??= await MissionDialogueTree.fromStep(this)
+	}
+	
+	async getMapDialogue() {
+		const dialogue: NPCDialogue[] = []
+		const groups = await this.getGroups()
+		for (const group of groups) {
+			const npcDialogueList = await group.getDialogueForMission(this.id)
+			for (const npcDialogue of npcDialogueList) {
+				dialogue.push(npcDialogue)
+			}
+		}
+		return dialogue
+	}
+	
+	static getCondition(data: any, type: StepCondition['type'], prefix: string) {
+		const conditionData: StepCondition = {
+			type,
+			params_int: [],
+			params_str: [],
+			param_items: data[prefix + 'ParamItemList'],
+			param_list_int: data[prefix + 'ParamIntList'],
+			param_list_str: data[prefix + 'ParamStrList']
+		}
+		
+		let i = 1
+		while (data[prefix + 'ParamStr' + i] != undefined) {
+			conditionData.params_str.push(data[prefix + 'ParamStr' + i])
+			i += 1
+		}
+		
+		i = 1
+		while (data[prefix + 'ParamInt' + i] != undefined) {
+			conditionData.params_int.push(data[prefix + 'ParamInt' + i])
+			i += 1
+		}
+		
+		return conditionData
+	}
+}
+
+export class MissionDialogueTree extends ActDialogueTree {
+	type: 'mission' = 'mission'
+	
+	finish_keys: string[] = []
+	
+	protected constructor(public act: Act, public step: MissionStep) {
+		super(act, `submission_${step.id}`)
+	}
+
+	getCharacters() {
+		const participants = new Set<string>()
+		for (const task of this.list()) {
+			if (task && 'character' in task && typeof task.character == 'string' && task.character && task.character != '???') {
+				participants.add(task.character)
+			}
+		}
+		return [...participants]
+	}
+	
+	static async fromStep(step: MissionStep) {
+		const actData = await getFile<Act>(step.json_path!)
+		const tree = new this(actData, step)
+		tree.root = await tree.processAct(actData)
+		return tree
+	}
+	
+	nodeAdded(node: DialogueNode<BaseDialogueTask | DialogueTaskEntry>) {
+		if (node instanceof FinishPerformanceTask) {
+			this.finish_keys.push(node.key)
+		}
+	}
+	
+	async wikitext(): Promise<string> {
+		const output: string[] = [await super.wikitext()]
+		if (this.step.finish_actions) {
+			for (const action of this.step.finish_actions) {
+				if (action.FinishActionType == 'addMissionItem' || action.FinishActionType == 'addRecoverMissionItem') {
+					output.push(`;(Obtain ${Item.fromId(action.FinishActionPara[0])?.asItemTemplate(20, { x: action.FinishActionPara[1] }) || `[Unknown Item ${action.FinishActionPara[0]} ×${action.FinishActionPara[1]}]`})`)
+				} else if (action.FinishActionType == 'delMissionItem') {
+					output.push(`;(Lose ${Item.fromId(action.FinishActionPara[0])?.asItemTemplate(20, { x: action.FinishActionPara[1] }) || `[Unknown Item ${action.FinishActionPara[0]} ×${action.FinishActionPara[1]}]`})`)
+				} else if (action.FinishActionType == 'Recover') {
+					output.push(`;(Fully recovers all allies' HP)`)
+				}
+			}
+		}
+		return output.join('\n')
 	}
 }

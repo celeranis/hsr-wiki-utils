@@ -143,3 +143,14 @@ export interface InternalMonsterSkill {
 	AI_CD?: number
 	AI_ICD?: number
 }
+
+export interface StageInfiniteGroupEntry {
+	WaveGroupID: number
+	WaveIDList: number[]
+}
+
+export interface StageInfiniteMonsterGroupEntry {
+	InfiniteMonsterGroupID: number
+	EliteGroup?: number
+	MonsterList: number[]
+}

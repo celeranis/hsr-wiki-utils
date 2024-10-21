@@ -155,7 +155,80 @@ export interface TemplateMap {
 		subtitle: string
 		type: string
 		about: string
-	} & { [T in `image${number}`]: string } & { [T in `text${number}`]: string }
+	} & { [T in `image${number}`]: string } & { [T in `text${number}`]: string },
+	'Relic Set Infobox': {
+		id: number
+		image1: string
+		type: 'Planar Ornament' | 'Cavern Relic'
+		'2pcBonus': string
+		'4pcBonus'?: string
+		head?: string
+		hand?: string
+		body?: string
+		feet?: string
+		planarsphere?: string
+		linkrope?: string
+		rarity: string
+		utility1: string
+		utility2: string
+		utility3: string
+	} & { [T in `source${number}.${number}`]: string },
+	'Relic Infobox': {
+		id: number
+		image: string
+		set: string
+		piece: 'Head' | 'Hand' | 'Body' | 'Feet' | 'Planar Sphere' | 'Link Rope'
+		mentions: string
+	},
+	'Possible Outcomes': 
+		& { [T in `choice${string}`]: string }
+		& { [T in `result${string}`]: string }
+		& { [T in `chance${string}`]: string }
+		& { [T in `path${string}`]: string }
+		& { [T in `modes${string}`]: string },
+	'Soundtrack Infobox': {
+		title: string
+		image: string
+		album: string
+		disc: string
+		number: number
+		youtube_id: string
+		spotify_id: string
+		during: string
+		previous: string
+		next: string
+	},
+	'Messages Infobox': {
+		id: number
+		name?: string
+		image: string
+		type: string
+		sender?: string
+		participants?: string
+		signature?: string
+		faction?: string
+	},
+	'Simulated Universe Event Infobox': {
+		id: string
+		title: string
+		image: string
+		sound?: string
+		event_name?: string
+		domains_su: string
+		domains_ext: string
+		domains_swarm: string
+		domains_gng: string
+		domains_du: string
+		domains_und: string
+		requirements: string
+		prev: string
+		next: string
+		indexRewards?: string
+		characters: string
+		factions: string
+		order: string
+		order_du: string
+	}
 }
 
 export type DomainType = 
@@ -165,7 +238,7 @@ export type DomainType =
 
 export type DomainSubtype = 'World' | 'Warring' | 'Exploratory'
 
-export class Template<N extends keyof TemplateMap, P extends Record<string, string | number | boolean> & TemplateMap[N]> {
+export class Template<N extends keyof TemplateMap, P extends TemplateMap[N]> {
 	constructor(public name: N, public params: Partial<P> = {}) {}
 	
 	addParam<K extends keyof P>(key: K, value: P[K]) {

@@ -1,7 +1,9 @@
 import { Dictionary, sanitizeString, titleCase, wikiTitle, wikiTitleLink } from './Shared.js';
 import { textMap } from './TextMap.js';
-import { LazyData, getFile } from './files/GameFile.js';
+import { LazyData, LazyExcelData, getFile } from './files/GameFile.js';
 import type { InternalItem, InternalItemComefrom, InternalItemPurpose, InternalPassPage, InternalPassSticker, InternalRecipeConfig, InternalRewardData, ItemConfig, ItemMainType, ItemRarity, ItemReference, ItemSortData, ItemSubType } from './files/Item.js';
+import { GotoData } from './files/MapData.js';
+import { MappingInfo } from './maps/MapingInfo.js';
 
 type ItemSourceData = Dictionary<InternalItemComefrom>
 
@@ -85,6 +87,7 @@ export class Item {
 	static readonly itemPurpose = new LazyData<Dictionary<InternalItemPurpose>>('ExcelOutput/ItemPurpose.json')
 	static readonly passPages = new LazyData<Dictionary<InternalPassPage>>('ExcelOutput/TravelBrochureConfig.json')
 	static readonly recipeData: LazyData<InternalRecipeConfig> = new LazyData<InternalRecipeConfig>('ExcelOutput/ItemComposeConfig.json')
+	static readonly gotoConfig: LazyExcelData<GotoData> = new LazyExcelData<GotoData>('ExcelOutput/GotoConfig.json', 'ID')
 	static readonly sortData = sortData
 	
 	static readonly rarityMap: Record<ItemRarity, number> = {
@@ -161,8 +164,29 @@ export class Item {
 		
 		const comeFrom = Object.values(await Item.itemSources.get()).filter(src => src.ID == this.id)
 		if (comeFrom) {
-			const cfList = Object.values(comeFrom).sort((entry0, entry1) => entry0.Sort - entry1.Sort)
-			sources.push(...cfList.map(from => textMap.getText(from.Desc)))
+			const goto = await Item.gotoConfig.get()
+			const cfList = await Promise.all(Object.values(comeFrom)
+				.sort((entry0, entry1) => entry0.Sort - entry1.Sort)
+				.map(async cf => {
+					if (cf.GotoID) {
+						const gotoData = goto[cf.GotoID]
+						const mappingId = gotoData.GotoType == 2 ? gotoData.ParamIntList[1]
+							: (gotoData.GotoType == 56 || gotoData.GotoType == 57) ? cf.GotoParam[0]
+							: undefined
+						if (mappingId) {
+							const mapping = MappingInfo.fromId(mappingId)
+							if (mapping.farm_type == 'COCOON') {
+								const area = await mapping.getArea()
+								return `${mapping.name} (${area?.name})`
+							}
+							if (mapping.name && mapping.type != 'ACTIVITY_ENTRANCE' && mapping.type != 'ROGUE_ENTRANCE') {
+								return mapping.name
+							}
+						}
+					}
+					return textMap.getText(cf.Desc)
+				}))
+			sources.push(...cfList)
 		}
 
 		sources = sources.filter((v, i, a) => !a.includes(v, i + 1))

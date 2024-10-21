@@ -1,12 +1,11 @@
-import type { OutputList } from './Event.js';
 import type { Dictionary } from './Shared.js';
 import { Stage } from './Stage.js';
 import { TextMap } from './TextMap.js';
 import type { DynamicParamType, InternalDynamicContent, InternalDynamicDisplay } from './files/DynamicContent.js';
-import { getFile } from './files/GameFile.js';
+import { getExcelFile, getFile } from './files/GameFile.js';
 
 const internal_data: Dictionary<Dictionary<InternalDynamicContent>> = await getFile('ExcelOutput/DialogueDynamicContent.json')
-const display_data: Dictionary<InternalDynamicDisplay> = await getFile('ExcelOutput/RogueDialogueDynamicDisplay.json')
+const display_data = await getExcelFile<InternalDynamicDisplay>('RogueDialogueDynamicDisplay.json', 'DisplayID')
 
 export class DynamicContent {
 	static internal_data = internal_data
@@ -31,19 +30,19 @@ export class DynamicContent {
 		}
 	}
 	
-	asEnemyLists(): OutputList {
-		const list: OutputList = []
+	asEnemyLists(): string[] {
+		const list: string[] = []
 		let variant = 1
 		for (const [ stage_id ] of this.param_lists) {
-			const stage = Stage.exists(stage_id) && new Stage(stage_id)
+			const stage = Stage.fromPlaneEvent(stage_id)
 			
 			if (stage) {
 				const enemyList = stage.asEnemyLists()
-				if (typeof enemyList == 'string') {
-					list.push(`'''Variant ${variant}:''' ${enemyList}`)
+				if (enemyList.length == 1) {
+					list.push(`'''Variant ${variant}:''' ${enemyList[0]}`)
 				} else {
 					list.push(`'''Variant ${variant}:'''`)
-					list.push(enemyList)
+					list.push(...enemyList.map(line => ':' + line))
 				}
 			} else {
 				list.push(

@@ -1,6 +1,7 @@
-import { mkdirSync, rmSync, writeFileSync } from 'fs'
+import { existsSync, mkdirSync, writeFileSync } from 'fs'
 import { ChangeHistory } from '../ChangeHistory.js'
 import { Item } from '../Item.js'
+import { Area } from '../maps/Area.js'
 import { Mission } from '../Mission.js'
 import { wikiTitle } from '../Shared.js'
 import { TextMap, textMap } from '../TextMap.js'
@@ -55,10 +56,14 @@ function sanitize(str: string) {
 	return str.replace(/[\/\<\>\:\"\\\|\?\*]/g, '')
 }
 
-rmSync('./output/missions/', { recursive: true })
+if (existsSync('./output/missions/')) {
+	// rmSync('./output/missions/', { recursive: true })
+}
 await Item.loadAll()
 
 for (const missionData of Object.values(Mission.missionData)) {
+	// if (missionData.MainMissionID != 1010601 && missionData.MainMissionID != 1010602) continue
+	
 	const mission = new Mission(missionData)
 	const title = wikiTitle(mission.name, 'mission', mission.id)
 	
@@ -100,32 +105,78 @@ for (const missionData of Object.values(Mission.missionData)) {
 	}
 	output = output.replaceAll('<<PREV>>', wikiTitle(mission.prev?.name || ''))
 	
-	const steps = await mission.getSteps()
+	const steps = await mission.getSteps(true)
 	const dialogueSections: string[] = []
 	const stepList: string[] = []
 	let lastName: string | undefined = undefined
 	let lastDesc: string | undefined = undefined
 	
 	for (const [i, step] of steps.entries()) {
-		if (lastName == step.title || (!step.title && i > 0)) continue
-		if (step.title) stepList.push(`# ${step.title}`)
-		dialogueSections.push(
-			(step.title ? `===${step.title}===\n` : '') +
-			((step.description && step.description != lastDesc) ? `{{Mission Description|type=${mission.type.toLowerCase()}|location=${step.location?.name || '<!--to be added-->'}${i > 0 ? '|update' : ''}|${step.description.replaceAll('\n', '<br />')}}}\n` : '') +
-			'{{Dialogue Start}}\n' +
-			':{{tx}}\n' +
-			'{{Dialogue End}}'
-		)
-		lastName = step.title
+		if (step.name && step.name != lastName) stepList.push(`# ${step.name}`)
+		// const stepDialogue = await step.loadDialogue()
+	
+		const dialogueEntry: (string | undefined)[] = []
+		
+		if (step.name && step.name != lastName) {
+			dialogueEntry.push(
+				i > 0 ? '{{Dialogue End}}\n' : undefined,
+				`===${step.name}===`
+			)
+		} else {
+			// dialogueEntry.push(`{{subst:void|<!--${step.id}-->}}`)
+		}
+		
+		if (step.description && step.description != lastDesc) {
+			dialogueEntry.push(`{{Mission Description|type=${mission.type.toLowerCase()}|location=${(await step.getFloor() ?? await step.getArea())?.name || '<!--to be added-->'}${i > 0 ? '|update' : ''}|${step.description.replaceAll('\n', '<br />')}}}`)
+		}
+		
+		if (step.name && step.name != lastName) {
+			dialogueEntry.push('{{Dialogue Start}}', ':{{tx}}')
+		}
+		
+		// dialogueEntry.push(await stepDialogue?.wikitext())
+		
+		// const npcDialogueList = await step.getMapDialogue()
+		// for (const npcDialogue of npcDialogueList) {
+		// 	const npcTree = await npcDialogue.loadDialogue()
+		// 	dialogueEntry.push(
+		// 		`;(Talk to ${npcDialogue.source.name || npcDialogue.prompt})`,
+		// 		await npcTree.wikitext()
+		// 	)
+		// 	const unusedNpc = await npcTree.unusedWikitext()
+		// 	if (unusedNpc?.length) {
+		// 		dialogueEntry.push(unusedNpc.join('\n\n'))
+		// 	}
+		// }
+		
+		// const unused = await stepDialogue?.unusedWikitext()
+		// if (unused?.length) {
+		// 	dialogueEntry.push(unused.join('\n\n'))
+		// }
+		
+		const result = dialogueEntry/*.filter(v => v != unused)*/.join('\n')
+		if (result.trim() != '') {
+			dialogueSections.push(result)
+		}
+		
+		lastName = step.name || lastName
 		lastDesc = step.description || lastDesc
 	}
 	
 	let details = ''
 	
-	const firstWithLocation = steps.find(step => step.location)
-	const worldName = textMap.getText(firstWithLocation?.location?.world?.WorldName)
-	if (worldName && (mission.type == 'Adventure' || mission.type == 'Daily')) {
-		details += ` on [[${worldName}]]`
+	let firstLocation: string | undefined = undefined
+	let firstWorld: string | undefined = undefined
+	for (const step of steps) {
+		const area = await step.getFloor() || await step.getArea()
+		if (area && area.name) {
+			firstLocation = area.name
+			firstWorld = textMap.getText(area instanceof Area ? area.world.WorldName : (await area.getArea()).world.WorldName)
+			break
+		}
+	}
+	if (firstWorld && (mission.type == 'Adventure' || mission.type == 'Daily')) {
+		details += ` on [[${firstWorld}]]`
 	}
 
 	if (mission.data.ChapterID) {
@@ -134,10 +185,10 @@ for (const missionData of Object.values(Mission.missionData)) {
 	
 	output = output
 		.replaceAll('<<CHARACTERS>>', mission.characters.sort().join('; '))
-		.replaceAll('<<START_AREA>>', firstWithLocation?.location?.name || '<!--starting area-->')
-		.replaceAll('<<START_WORLD>>', worldName || '<!--starting world-->')
+		.replaceAll('<<START_AREA>>', firstLocation || '<!--starting area-->')
+		.replaceAll('<<START_WORLD>>', firstWorld || '<!--starting world-->')
 		.replaceAll('<<STEPS>>', stepList.join('\n'))
-		.replaceAll('<<DIALOGUE>>', dialogueSections.join('\n\n'))
+		.replaceAll('<<DIALOGUE>>', dialogueSections.join('\n') + '\n{{Dialogue End}}')
 		.replaceAll('<<DETAILS>>', details || '<!--in [world]-->')
 	
 	const rewards = mission.getRewards()

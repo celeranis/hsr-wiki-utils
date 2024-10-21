@@ -1,4 +1,5 @@
-import { Dictionary } from '../Shared.ts'
+import type { performance } from '../dialogue/tasks/Performance.ts'
+import type { DICON_MAP, Dictionary } from '../Shared.ts'
 import { HashReference } from '../TextMap.ts'
 import { ItemReference } from './Item.js'
 
@@ -81,19 +82,25 @@ export type LevelGroupSaveType = 'Reset'
 
 export interface LevelFloor {
 	FloorID: number
-	FloorName?: string
-	StartGroupID: number
 	StartAnchorID: number
-	GroupList: LevelGroupReference[]
-	DefaultEnviroProfile: string
 	StageData: string
-	MinimapVolumeData: MinimapVolumeData
-	TimeOfDayEnviroProfileMap?: unknown
+	CameraType?: string
 	LayerToAreaMask: number[]
-	BattleAreaList?: unknown[]
+	NavmapConfigPath: string
+	SavedValues?: LevelSavedValue[]
+	GroupInstanceList: LevelGroupReference[]
 	DimensionList?: unknown[]
-	EnableGroupStreaming: boolean
-	EnableGroupSpaceConflict: boolean
+	GroupInstanceCommonMap: Dictionary<unknown>
+	EnableGroupStreaming?: boolean
+	EnableGroupSpaceConflict?: boolean
+	EnableGroupRegionStreaming?: boolean
+}
+
+export interface LevelSavedValue {
+	ID: number
+	Name: string
+	AllowedValues?: number[]
+	MaxValue?: number
 }
 
 export interface MinimapVolumeData {
@@ -122,25 +129,25 @@ export interface MinimapSection {
 }
 
 export interface LevelGroupReference {
-	GroupGUID: string
+	// GroupGUID: string
 	GroupPath: string
-	DimensionFilter?: { List?: unknown[] }
+	// DimensionFilter?: { List?: unknown[] }
 	Name?: string
 	ID: number
 	IsDelete?: boolean
 }
 
-export interface LevelGroup {
+export interface LevelGroupData {
 	GroupGUID: string
 	GroupName: string
 	Category: LevelGroupCategory
 	ConfigPrefabPath: string
 	AreaAnchorName: string
 	SaveType: LevelGroupSaveType
-	LoadCondition: LoadConditionList
-	UnloadCondition: LoadConditionList
+	LoadCondition?: LoadConditionList
+	UnloadCondition?: LoadConditionList
 	OwnerMainMissionID: number
-	ConflictIDList: unknown[]
+	ConflictIDList: number[]
 	AnchorList: MapAnchor[]
 	MonsterList?: MapMonster[]
 	PropList?: MapProp[]
@@ -190,6 +197,7 @@ export interface MapNPC extends MapObject {
 	DefaultIdleStateName?: string
 	DefaultLookAtMode: string
 	BoardShowList: number[]
+	TalkChosenType?: 'loop'
 	OverrideNPCName?: HashReference
 	OverrideNPCTitle?: HashReference
 	FirstDialogueGroupID?: number
@@ -219,14 +227,14 @@ export interface MapProp extends MapObject {
 	IsOverrideInitLevelGraph: boolean
 	Trigger: MapTriggerData
 	CampID: number
-	CustomTriggerMap?: unknown
-	CustomTriggerMapV2?: unknown
+	CustomTriggerMap?: Dictionary<MapTriggerData>
+	CustomTriggerMapV2?: Dictionary<MapTriggerData>
 	BridgeStateRotations?: unknown[]
 	AnchorGroupID?: number
 	AnchorID?: number
 	MappingInfoID?: number
-	DialogueGroups?: unknown[]
-	TalkDialogGroupIDList?: unknown[]
+	DialogueGroups?: number[]
+	TalkDialogGroupIDList?: number[]
 	ServerInteractVerificationIDList?: unknown[]
 	CameraCenterEntityList?: unknown[]
 }
@@ -331,11 +339,12 @@ export interface MapEntrance {
 	FinishSubMissionList: number[]
 }
 
-export interface PlaneEvent {
+export interface InternalPlaneEvent {
 	EventID: number
 	WorldLevel: number
 	DropList: number[]
 	Reward: number
+	StageID: number
 	DisplayItemList: number[]
 }
 
@@ -366,21 +375,29 @@ export interface InternalMappingInfo {
 	EntranceId?: number
 }
 
-export type PropType = 'PROP_PLATFORM' | 'PROP_ORDINARY'
+export type PropType = 'PROP_ORDINARY' | 'PROP_SPRING' | 'PROP_COCOON' | 'PROP_MAZE_DECAL'
+	| 'PROP_MAZE_PUZZLE' | 'PROP_ELEMENT' | 'PROP_RELIC' | 'PROP_LIGHT' | 'PROP_ROGUE_DOOR'
+	| 'PROP_ROGUE_OBJECT' | 'PROP_ROGUE_REWARD_OBJECT' | 'PROP_TREASURE_CHEST'
+	| 'PROP_ROGUE_CHEST' | 'PROP_ELEVATOR' | 'PROP_PERSPECTIVE_WALL' | 'PROP_PLATFORM'
+	| 'PROP_DESTRUCT' | 'PROP_NO_REWARD_DESTRUCT' | 'PROP_BOXMAN_BINDED'
+	| 'PROP_MAP_ROTATION_CHARGER' | 'PROP_MAP_ROTATION_VOLUME' | 'PROP_MAZE_JIGSAW'
+	| 'PROP_MAP_ROTATION_SWITCHER'
 
-export interface MazeProp {
+export interface InternalMazeProp {
 	ID: number
 	PropType: PropType
+	IsMapContent?: boolean
 	PropName: HashReference
 	PropTitle: HashReference
 	PropIconPath: string
 	BoardShowList: number[]
 	ConfigEntityPath: string
 	DamageTypeList: unknown[]
+	MiniMapIconType?: number
 	MiniMapStateIcons: MinimapStateIcon[]
 	JsonPath: string
 	PropStateList: string[]
-	PerformanceType: string
+	PerformanceType: keyof typeof performance
 	HasRendererComponent: boolean
 	LodPriority: number
 }
@@ -416,7 +433,7 @@ export interface MazeChest {
 
 export type NPCSubType = 'Avatar' | 'Special' | 'Monster'
 
-export interface NPCData {
+export interface InternalNPCData {
 	ID: number
 	DefaultNPCName: HashReference
 	ConfigEntityPath: string
@@ -424,6 +441,25 @@ export interface NPCData {
 	JsonPath: string
 	SubType?: NPCSubType
 	SeriesID?: number
+}
+
+export type DialogueNPCType = 'Simple'
+
+export interface InternalDialogueNPC {
+	GroupID: number
+	GroupType: DialogueNPCType
+	InteractTitle?: string
+	ConditionIDs: number[]
+	Priority?: number
+	IconType: keyof typeof DICON_MAP
+	ActPath: string
+}
+
+export interface InternalDialogueCondition {
+	ID: number
+	Type: 'submission_state_equal' | 'eventmission_state_equal'
+	Param1: number
+	Param2: number
 }
 
 export interface WorldData {
@@ -443,3 +479,13 @@ export interface WorldData {
 	CameraHeight: number
 	SmallWorldIconPath: string
 }
+
+export interface GotoData {
+	ID: number
+	GotoType: number
+	ParamIntList: number[]
+	ParamStringList: string[]
+	UnlockID?: number
+}
+
+export type GotoConfig = Dictionary<GotoData>

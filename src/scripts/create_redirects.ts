@@ -1,4 +1,4 @@
-import c from 'chalk';
+// import c from 'chalk';
 import { setTimeout } from 'timers/promises';
 import { client } from '../util/Bot.js';
 
@@ -63,7 +63,7 @@ for (const data of REDIRECTS) {
 		const infobox = pageContent.parseTemplates({ namePredicate: (name) => name.replaceAll('_', ' ') == data.readTemplate })[0]
 		
 		if (!infobox) {
-			console.warn(c.yellow(`${data.readTemplate} not found on page ${pageTitle}, skipping...`))
+			console.warn(`${data.readTemplate} not found on page ${pageTitle}, skipping...`)
 			continue
 		}
 		
@@ -72,7 +72,7 @@ for (const data of REDIRECTS) {
 		const redirctTarget = data.redirectTarget(pageTitle, infoboxParams)
 		const targetData = await client.read(redirctTarget)
 		if (targetData.invalid || targetData.missing) {
-			console.error(c.red(`Invalid redirect target ${redirctTarget} on ${pageTitle}, skipping...`))
+			console.error(`Invalid redirect target ${redirctTarget} on ${pageTitle}, skipping...`)
 			continue
 		}
 		
@@ -87,7 +87,7 @@ for (const data of REDIRECTS) {
 		for (const redirectName of redirectNames) {
 			const existingRedirect = await client.read(redirectName)
 			if (!existingRedirect.missing) {
-				console.log(c.grey(`Redirect for ${redirectName} already created, skipping...`))
+				console.debug(`Redirect for ${redirectName} already created, skipping...`)
 				continue
 			}
 			// await AWB.viewDiff(existingRedirect.revisions?.[0]?.content ?? '', REDIRECT_FORMAT(targetData.title))

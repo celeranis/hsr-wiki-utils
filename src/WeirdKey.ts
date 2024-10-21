@@ -30,6 +30,18 @@ export class WeirdKey {
 			'2.5': 'NLABNDMDIKM',
 			'2.4': 'DIBKEHHCPAP',
 			'2.3': 'EPBOOFFCKPJ',
+		},
+		UnlockProgress: {
+			'2.5': 'EEMMLHDLGKP'
+		},
+		UnlockNPCID: {
+			'2.5': 'GFKCKEKCGIB'
+		},
+		StageConfigKey: {
+			'2.5': 'PFMLCKGCKOB'
+		},
+		StageConfigValue: {
+			'2.5': 'NLABNDMDIKM'
 		}
 	}
 	

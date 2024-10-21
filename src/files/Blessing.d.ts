@@ -7,6 +7,12 @@ export interface InternalBlessingGroup {
 	LEEMGFGKCMO: number[]
 }
 
+export interface InternalDUBlessingGroup {
+	RogueBuffDrop: number[]
+	TournMode: 'Permanent' | 'Tourn1'
+	RogueBuffGroupID: number
+}
+
 export type InternalBlessingCategory = 'Common' | 'Rare' | 'Legendary'
 
 export interface InternalBlessing {

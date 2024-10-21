@@ -1,13 +1,10 @@
-import type { OutputList } from './Event.js';
 import { diffn, tpercent, type AttackType, type Dictionary } from './Shared.js';
 import { Stat } from './Stats.js';
 import { TextMap, textMap } from './TextMap.js';
-import { LazyData, getFile } from './files/GameFile.js';
-import { EnemyType, HardLevelGroup, InternalEliteGroup, InternalMonster, InternalMonsterCamp, InternalMonsterSkill, InternalMonsterTemplate, InternalStage, TypeResData } from './files/Stage.js';
-
-function percentChange(num: number) {
-	return `${num > 1 ? '+' : ''}${Math.round((num - 1) * 100)}%`
-}
+import { WeirdKey } from './WeirdKey.js';
+import { LazyData, getExcelFile, getFile } from './files/GameFile.js';
+import type { InternalPlaneEvent } from './files/MapData.js';
+import { EnemyType, HardLevelGroupEntry, InternalEliteGroup, InternalMonster, InternalMonsterCamp, InternalMonsterSkill, InternalMonsterTemplate, InternalStage, StageInfiniteGroupEntry, StageInfiniteMonsterGroupEntry, TypeResData } from './files/Stage.js';
 
 export interface EliteGroup {
 	id: number
@@ -28,12 +25,15 @@ export interface ScalingEntry {
 	effect_res: number
 }
 
-const stages: Dictionary<InternalStage> = await getFile('ExcelOutput/StageConfig.json')
-const monsters: Dictionary<InternalMonster> = await getFile('ExcelOutput/MonsterConfig.json')
-const monsterTemplates: Dictionary<InternalMonsterTemplate> = await getFile('ExcelOutput/MonsterTemplateConfig.json')
+export const StageConfig = await getExcelFile<InternalStage>('ExcelOutput/StageConfig.json', 'StageID')
+export const MonsterConfig = await getExcelFile<InternalMonster>('ExcelOutput/MonsterConfig.json', 'MonsterID')
+export const MonsterTemplateConfig = await getExcelFile<InternalMonsterTemplate>('ExcelOutput/MonsterTemplateConfig.json', 'MonsterTemplateID')
+export const PlaneEvent = await getExcelFile<InternalPlaneEvent>('PlaneEvent.json', 'EventID')
+export const StageInfiniteGroup = await getExcelFile<StageInfiniteGroupEntry>('StageInfiniteGroup.json', 'WaveGroupID')
+export const StageInfiniteMonsterGroup = await getExcelFile<StageInfiniteMonsterGroupEntry>('StageInfiniteMonsterGroup.json', 'InfiniteMonsterGroupID')
 
-const eliteGroups: Record<number, EliteGroup> = {}
-for (const rawGroup of Object.values(await getFile<Dictionary<InternalEliteGroup>>('ExcelOutput/EliteGroup.json'))) {
+export const eliteGroups: Record<number, EliteGroup> = {}
+for (const rawGroup of Object.values(await getExcelFile<InternalEliteGroup>('EliteGroup.json', 'EliteGroup'))) {
 	eliteGroups[rawGroup.EliteGroup] = {
 		id: rawGroup.EliteGroup,
 		atk_ratio: rawGroup.AttackRatio?.Value ?? 1,
@@ -44,24 +44,38 @@ for (const rawGroup of Object.values(await getFile<Dictionary<InternalEliteGroup
 	}
 }
 
-export class Stage {
-	static readonly stages = stages
-	static readonly monsters = monsters
-	static readonly monsterTemplates = monsterTemplates
-	static readonly eliteGroups = eliteGroups
+export interface StageParams {
+	_Wave?: string
+	_IsEliteBattle?: '0' | '1'
+	_StageInfiniteGroup?: string
+	_CreateBattleEvent?: string
+	_CreateBattleActionEvent?: string
+	_BattleTarget?: string
+	_BindingMazeBuff?: string
+	_BGM?: string
+	_EnsureTeamAliveKey?: string
+}
 
+export class Stage {
 	id: number
 	waves: EnemyInstance[][]
 	name: string
 	elite_group?: EliteGroup
+	stage_type: string
 	type: 'Normal' | 'Bug' | 'Complete' = 'Normal'
 	stage_abilities: string[]
 	elite: boolean = false
 	level: number
+	params: StageParams
 	elite_count: number = 0
 	
 	static exists(id: number | string): InternalStage | undefined {
-		return Stage.stages[id]
+		return StageConfig[id]
+	}
+	
+	static fromPlaneEvent(id: number | string) {
+		if (!PlaneEvent[id]) return undefined
+		return new this(PlaneEvent[id].StageID)
 	}
 	
 	[Symbol.for('nodejs.util.inspect.custom')]() {
@@ -69,34 +83,56 @@ export class Stage {
 	}
 	
 	constructor(id: number | string) {
-		const stage = Stage.stages[id]
+		const stage = StageConfig[id]
 		if (!stage) {
 			throw new Error(`No stage found for id ${id}`)
 		}
 
 		this.id = stage.StageID
+		this.stage_type = stage.StageType
 		this.name = TextMap.default.getText(stage.StageName)
-		this.elite_group = Stage.eliteGroups[stage.EliteGroup]
+		this.elite_group = eliteGroups[stage.EliteGroup]
 		this.stage_abilities = stage.StageAbilityConfig
 		this.level = stage.Level
+		this.params = Object.fromEntries(stage.StageConfigData.map(entry => [entry[WeirdKey.get('StageConfigKey')], entry[WeirdKey.get('StageConfigValue')]]))
 		
-		this.waves = stage.MonsterList.map(wave => {
-			return Object.values(wave).map(id => {
-				const enemy = EnemyInstance.fromIdLeveled(id, this.level)
-				
-				if (enemy.isElite()) {
-					if (enemy.name.includes('(Bug)')) {
-						this.type = 'Bug'
-					} else if (enemy.name.includes('(Complete)')) {
-						this.type = 'Complete'
+		if (this.params._StageInfiniteGroup) {
+			this.waves = StageInfiniteGroup[this.params._StageInfiniteGroup].WaveIDList.map(waveId => {
+				const wave = StageInfiniteMonsterGroup[waveId]
+				return wave.MonsterList.filter(id => id).map(enemyId => {
+					const enemy = EnemyInstance.fromIdLeveled(enemyId, this.level)
+					if (this.elite_group) {
+						enemy.stage_elite_group_ids.push(this.elite_group.id)
 					}
-					this.elite_count++
-					this.elite = true
-				}
-				
-				return enemy
+					if (wave.EliteGroup && this.elite_group?.id != wave.EliteGroup) {
+						enemy.stage_elite_group_ids.push(wave.EliteGroup)
+					}
+					
+					return enemy
+				})
 			})
-		})
+		} else {
+			this.waves = stage.MonsterList.map(wave => {
+				return Object.values(wave).filter(id => id).map(id => {
+					const enemy = EnemyInstance.fromIdLeveled(id, this.level)
+					if (this.elite_group) {
+						enemy.stage_elite_group_ids.push(this.elite_group.id)
+					}
+
+					if (enemy.isElite()) {
+						if (enemy.name.includes('(Bug)')) {
+							this.type = 'Bug'
+						} else if (enemy.name.includes('(Complete)')) {
+							this.type = 'Complete'
+						}
+						this.elite_count++
+						this.elite = true
+					}
+
+					return enemy
+				})
+			})
+		}
 	}
 	
 	getWaveEnemyList(wave: EnemyInstance[]): string {
@@ -105,12 +141,12 @@ export class Stage {
 			const key = enemy.asEnemyListEntry('<<NUM>>')
 			monsterList.set(key, (monsterList.get(key) || 0) + 1)
 		}
-		return `{{Enemy List|${[...monsterList.entries()].map(([str, amnt]) => str.replaceAll('<<NUM>>', amnt.toString())).join(';')}}}`
+		return `{{Enemy List|${[...monsterList.entries()].map(([str, amnt]) => str.replaceAll('<<NUM>>', amnt.toString())).join('; ')}}}`
 	}
 	
-	asEnemyLists(): OutputList | string {
+	asEnemyLists(): string[] {
 		if (this.waves.length == 1) {
-			return this.getWaveEnemyList(this.waves[0])
+			return [this.getWaveEnemyList(this.waves[0])]
 		} else {
 			const list: string[] = []
 			for (const [i, wave] of this.waves.entries()) {
@@ -196,8 +232,8 @@ export class EnemyTemplate {
 	toughness_dmg_type?: AttackType
 	
 	ai_path?: string
-	skill_sequence?: unknown[]
-	npc_monster_ids?: number[]
+	skill_sequence: unknown[]
+	npc_monster_ids: number[]
 	
 	constructor(public template_data: InternalMonsterTemplate) {
 		this.template_id = template_data.MonsterTemplateID
@@ -221,7 +257,7 @@ export class EnemyTemplate {
 	}
 
 	static fromId(templateId: number | string) {
-		return new this(monsterTemplates[templateId])
+		return new this(MonsterTemplateConfig[templateId])
 	}
 	
 	async getFaction(): Promise<EnemyFaction | undefined> {
@@ -261,18 +297,16 @@ export class EnemyTemplate {
 }
 
 const enemyScaling: Dictionary<ScalingEntry[]> = {}
-for (const [index, scaling] of Object.entries(await getFile<Dictionary<HardLevelGroup>>('ExcelOutput/HardLevelGroup.json'))) {
-	const stats = enemyScaling[index] = [] as ScalingEntry[]
-	for (const entry of Object.values(scaling)) {
-		stats[entry.Level] = {
-			atk: entry.AttackRatio?.Value ?? 1,
-			def: entry.DefenceRatio?.Value ?? 1,
-			hp: entry.HPRatio?.Value ?? 1,
-			spd: entry.SpeedRatio?.Value ?? 1,
-			toughness: entry.StanceRatio?.Value ?? 1,
-			ehr: entry.StatusProbability?.Value ?? 0,
-			effect_res: entry.StatusResistance?.Value ?? 0
-		}
+for (const entry of Object.values(await getFile<HardLevelGroupEntry[]>('ExcelOutput/HardLevelGroup.json'))) {
+	const stats = enemyScaling[entry.HardLevelGroup] ??= [] as ScalingEntry[]
+	stats[entry.Level] = {
+		atk: entry.AttackRatio?.Value ?? 1,
+		def: entry.DefenceRatio?.Value ?? 1,
+		hp: entry.HPRatio?.Value ?? 1,
+		spd: entry.SpeedRatio?.Value ?? 1,
+		toughness: entry.StanceRatio?.Value ?? 1,
+		ehr: entry.StatusProbability?.Value ?? 0,
+		effect_res: entry.StatusResistance?.Value ?? 0
 	}
 }
 
@@ -332,8 +366,8 @@ export class Enemy extends EnemyTemplate {
 	}
 
 	static fromId(enemyId: number | string) {
-		const monsterData = Object.values(monsters).find(enemy => enemy.MonsterID == enemyId)!
-		return new this(monsterData, Object.values(monsterTemplates).find(temp => temp.MonsterTemplateID == monsterData.MonsterTemplateID)!)
+		const monsterData = Object.values(MonsterConfig).find(enemy => enemy.MonsterID == enemyId)!
+		return new this(monsterData, Object.values(MonsterTemplateConfig).find(temp => temp.MonsterTemplateID == monsterData.MonsterTemplateID)!)
 	}
 	
 	hasCustomName(): boolean {
@@ -358,22 +392,22 @@ export class Enemy extends EnemyTemplate {
 	listStatChanges(): string[] {
 		const changes: string[] = []
 		
-		const atk_diff = tpercent(this.atk / this.base_atk, 1)
+		const atk_diff = tpercent((this.atk / this.base_atk) - 1, 1)
 		if (atk_diff) {
 			changes.push(Stat.atk.diff(atk_diff))
 		}
 		
-		const def_diff = tpercent(this.def / this.base_def, 1)
+		const def_diff = tpercent((this.def / this.base_def) - 1, 1)
 		if (def_diff) {
 			changes.push(Stat.def.diff(def_diff))
 		}
 		
-		const hp_diff = tpercent(this.hp / this.base_hp, 1)
+		const hp_diff = tpercent((this.hp / this.base_hp) - 1, 1)
 		if (hp_diff) {
 			changes.push(Stat.hp.diff(hp_diff))
 		}
 		
-		const spd_diff = tpercent((this.spd - this.spd_flat) / this.base_spd, 1)
+		const spd_diff = tpercent(((this.spd - this.spd_flat) / this.base_spd) - 1, 1)
 		if (spd_diff) {
 			changes.push(Stat.spd.diff(spd_diff))
 		}
@@ -382,7 +416,7 @@ export class Enemy extends EnemyTemplate {
 			changes.push(Stat.spd.diff(diffn(this.spd_flat)))
 		}
 
-		const tough_diff = tpercent((this.toughness - this.toughness_flat) / this.base_toughness, 1)
+		const tough_diff = tpercent(((this.toughness - this.toughness_flat) / this.base_toughness) - 1, 1)
 		if (tough_diff) {
 			changes.push(Stat.toughness.diff(tough_diff))
 		}
@@ -442,13 +476,39 @@ export class Enemy extends EnemyTemplate {
 }
 
 export class EnemyInstance extends Enemy {
+	stage_elite_group_ids: number[] = []
+	
 	constructor(public data: InternalMonster, templateData: InternalMonsterTemplate, public level: number) {
 		super(data, templateData)
 	}
 	
 	static fromIdLeveled(enemyId: number | string, level: number) {
-		const monsterData = monsters[enemyId]
-		return new this(monsterData, monsterTemplates[monsterData.MonsterTemplateID], level)
+		const monsterData = MonsterConfig[enemyId]
+		return new this(monsterData, MonsterTemplateConfig[monsterData.MonsterTemplateID], level)
+	}
+	
+	get stage_elite_groups() {
+		return this.stage_elite_group_ids.map(id => eliteGroups[id])
+	}
+	
+	get combined_elite_group() {
+		return this.stage_elite_groups.reduce((group, currentCombined) => {
+			return {
+				id: -1,
+				atk_ratio: currentCombined.atk_ratio * group.atk_ratio,
+				def_ratio: currentCombined.def_ratio * group.def_ratio,
+				hp_ratio: currentCombined.hp_ratio * group.hp_ratio,
+				spd_ratio: currentCombined.spd_ratio * group.spd_ratio,
+				toughness_ratio: currentCombined.toughness_ratio * group.toughness_ratio
+			}
+		}, {
+			id: -1,
+			atk_ratio: 1,
+			def_ratio: 1,
+			hp_ratio: 1,
+			spd_ratio: 1,
+			toughness_ratio: 1
+		})
 	}
 	
 	get scaling() {
@@ -481,6 +541,26 @@ export class EnemyInstance extends Enemy {
 	
 	get base_toughness(): number {
 		return super.base_toughness * this.scaling.toughness
+	}
+
+	get atk() {
+		return super.atk * this.combined_elite_group.atk_ratio
+	}
+
+	get def() {
+		return super.def * this.combined_elite_group.def_ratio
+	}
+
+	get hp() {
+		return super.hp * this.combined_elite_group.hp_ratio
+	}
+
+	get spd() {
+		return ((super.spd - this.spd_flat) * this.combined_elite_group.spd_ratio) + this.spd_flat
+	}
+
+	get toughness() {
+		return ((super.toughness - this.toughness_flat) * this.combined_elite_group.toughness_ratio) + this.toughness_flat
 	}
 
 	asCardListEntry(noLevel?: boolean) {

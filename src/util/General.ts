@@ -25,3 +25,6 @@ export function uploadPrompt(filePath: string, destinationName: string, categori
 	
 	return `{{subst:void|<!--$UPLOAD:<<${filePath}>-<${destinationName}>-<${categories}>>-->}}`
 }
+
+export const PAGENAME = '{{subst:#titleparts:{{subst:PAGENAME}}}}'
+export const BASEPAGENAME = '{{subst:#titleparts:{{subst:BASEPAGENAME}}}}'

@@ -1,6 +1,6 @@
 import config from '../config.json' with { type: "json" };
 import { roundTo, type Dictionary, type Value, type Version } from './Shared.js';
-import { getFile } from './files/GameFile.js';
+import { getExcelFile, getFile } from './files/GameFile.js';
 import { whitespace } from './util/General.js';
 
 export interface HashReference {
@@ -25,16 +25,30 @@ export interface TextJoinItem {
 	TextJoinText: HashReference
 }
 
-export type SupportedLanguage = 'CHS' | 'CHT' | 'DE' | 'EN' | 'ES' | 'FR' | 'ID' 
+export interface VoiceConfig {
+	VoiceID: number
+	VoicePath: string
+	IsPlayerInvolved?: boolean
+	VoiceType: 'Story' | 'Cutscene' | 'StoryNew' | 'NPC_Normal' | 'NPC_Far' | 'Archive'
+}
+
+export interface MultiVoice {
+	TalkSentenceID: number
+	VoiceIDList: number[]
+}
+
+export type SupportedLanguage = 'CN' | 'CHS' | 'CHT' | 'DE' | 'EN' | 'ES' | 'FR' | 'ID' 
 	| 'JP' | 'KR' | 'PT' | 'RU' | 'TH' | 'VI'
 
-const sentenceJson: Sentence[] = await getFile('ExcelOutput/TalkSentenceConfig.json')
-const textJoinConfig: TextJoinConfig[] = await getFile('ExcelOutput/TextJoinConfig.json')
-const textJoinItems: TextJoinItem[] = await getFile('ExcelOutput/TextJoinItem.json')
+export const TalkSentenceConfig = await getFile<Sentence[]>('ExcelOutput/TalkSentenceConfig.json')
+export const TextJoinConfig = await getFile<TextJoinConfig[]>('ExcelOutput/TextJoinConfig.json')
+export const TextJoinItem = await getFile<TextJoinItem[]>('ExcelOutput/TextJoinItem.json')
+export const VoiceConfig = await getExcelFile<VoiceConfig>('ExcelOutput/VoiceConfig.json', 'VoiceID')
+export const TalkSentenceMultiVoice = await getExcelFile<MultiVoice>('ExcelOutput/TalkSentenceMultiVoice.json', 'TalkSentenceID')
 
 export const OTHER_LANGUAGES: Dictionary<SupportedLanguage> = {
 	en: 'EN',
-	zhs: 'CHS',
+	zhs: 'CN',
 	zht: 'CHT',
 	ja: 'JP',
 	ko: 'KR',
@@ -70,13 +84,19 @@ export type TextParams = (string | number | undefined | Value<number> | [number,
 
 export class TextMap {
 	static readonly cache = new Map<`${SupportedLanguage}${Version}`, TextMap>()
-	static readonly sentence_json: Sentence[] = sentenceJson
+	static readonly sentence_json: Sentence[] = TalkSentenceConfig
 	
 	private constructor(public version: Version, public lang: SupportedLanguage, public json: Dictionary<string>) {
 		TextMap.cache.set(`${this.lang}${this.version}`, this)
 	}
 	
 	static async load(version: Version = config.target_version as Version, lang: SupportedLanguage = 'EN'): Promise<TextMap> {
+		if (lang == 'CN' && config.using_dim_data) {
+			lang = 'CHS'
+		} else if (lang == 'CHS' && !config.using_dim_data) {
+			lang = 'CN'
+		}
+		
 		if (this.cache.has(`${lang}${version}`)) {
 			return this.cache.get(`${lang}${version}`)!
 		}
@@ -166,7 +186,7 @@ export class TextMap {
 			.replaceAll(/<size=([\-\+]?\d+)>(.*?)<\/size>/gis, '⟨⟨Size|$1|$2⟩⟩')
 			.replaceAll(/<align="?(\w+)"?>(.*?)<\/align>/gis, '<div align="$1">$2</div>')
 			.replaceAll(/{RUBY_B#(.+?)}(.+?){RUBY_E#}/gis, (_substr, topText, normalText) => `⟨⟨Rubi|${normalText}|${topText}⟩⟩`)
-			.replaceAll(/{TEXTJOIN#(\d+)}/gi, (_substr, id) => `(${Object.values(textJoinConfig).find(tj => tj.TextJoinID == id)?.TextJoinItemList.map(item => textMap.getText(Object.values(textJoinItems).find(tj => tj.TextJoinItemID == item)?.TextJoinText)).join('/')})`)
+			.replaceAll(/{TEXTJOIN#(\d+)}/gi, (_substr, id) => `(${Object.values(TextJoinConfig).find(tj => tj.TextJoinID == id)?.TextJoinItemList.map(item => textMap.getText(Object.values(TextJoinItem).find(tj => tj.TextJoinItemID == item)?.TextJoinText)).join('/')})`)
 			.replaceAll(/\{LAYOUT_(\w+)#([^}]+?)\}(?:\{LAYOUT_(\w+)#([^}]+?)\})?(?:\{LAYOUT_(\w+)#([^}]+?)\})?/gi, (_substr, method1, text1, method2, text2, method3, text3) => {
 				const output = [`{{tt|${text1}|on ${method1.toLowerCase()}}}`]
 				if (method2) {
@@ -217,13 +237,32 @@ export class TextMap {
 		return this.wikiFormatting((this.json[((mapKey instanceof Object) && mapKey.Hash?.toString()) || mapKey.toString()] ?? '').replaceAll('|', '&vert;'), params, allowNewline)
 	}
 	
-	getSentence(sentence: Sentence | number | string, textOnly: boolean = false, allowNewline: boolean = true, allowSpeakerColors: boolean = false) {
+	getSentence(sentence: Sentence | number | string, textOnly: boolean = false, allowNewline: boolean = true, allowVO: boolean = true) {
 		if (typeof sentence != 'object') sentence = Object.values(TextMap.sentence_json).find(sent => sent.TalkSentenceID == sentence)!
 		if (!sentence) return undefined
 		const name = this.getText(sentence.TextmapTalkSentenceName, undefined, false)
 		const text = this.getText(sentence.TalkSentenceText, undefined, allowNewline).replaceAll('\n', '<br />')
 		
-		return this.wikiFormatting(!textOnly && name ? `'''${name}:''' ${text.includes('<br />') ? '<br />' : ''}${text}` : text)
+		let voiceIds: number[] | undefined = undefined
+		if (allowVO) {
+			if (TalkSentenceMultiVoice[sentence.TalkSentenceID]) {
+				voiceIds = TalkSentenceMultiVoice[sentence.TalkSentenceID].VoiceIDList
+			} else if (sentence.VoiceID) {
+				voiceIds = [sentence.VoiceID]
+			}
+		}
+		
+		const vo = (allowVO && voiceIds) ? voiceIds.filter(id => VoiceConfig[id]).map(id => {
+			const voice = VoiceConfig[id]
+			const voicePath = voice.VoicePath.replaceAll('_', ' ')
+			if (voice.IsPlayerInvolved) {
+				return `{{A|VO ${voicePath} m.ogg}} {{A|VO ${voicePath} f.ogg}} `
+			} else {
+				return `{{A|VO ${voicePath}.ogg}} `
+			}
+		}).join('') : ''
+		
+		return vo + this.wikiFormatting(!textOnly && name ? `'''${name}:''' ${text.includes('<br />') ? '<br />' : ''}${text}` : text)
 	}
 	
 	getSentenceMeta(sentenceId: number | string) {

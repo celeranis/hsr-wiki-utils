@@ -4,10 +4,12 @@ import { HashReference, SupportedLanguage, TextMap } from './TextMap.js';
 import { HttpError, getFile } from './files/GameFile.js';
 import type { ItemConfig } from './files/Item.js';
 import { MazeFloor } from './files/MapData.js';
+import { InternalMessagesContact } from './files/Messages.js';
 import type { InternalMainMission } from './files/Mission.js';
 import type { RogueTalkNameConfig } from './files/Occurrence.js';
 import { InternalBookSeries } from './files/Readable.js';
 import { InternalShop } from './files/Shop.js';
+import { InternalStage } from './files/Stage.js';
 import type { InternalWorldInfo } from './files/Worlds.js';
 
 const ITEM_ID_MATCH = (items: ItemConfig, itemId: number | string) => Object.values(items).find(item => item.ID == itemId)
@@ -107,6 +109,16 @@ export class ChangeHistory<FileContents extends object, SearchReturn, FindArg> {
 	static readableSeries = new ChangeHistory(
 		'ExcelOutput/BookSeriesConfig.json',
 		(readables: Dictionary<InternalBookSeries>, seriesId: number) => Object.values(readables).find(readable => readable.BookSeriesID == seriesId)
+	)
+	
+	static messageContact = new ChangeHistory(
+		'ExcelOutput/MessageContactsConfig.json',
+		(contacts: Dictionary<InternalMessagesContact>, contactId: number) => Object.values(contacts).find(contact => contact.ID == contactId)
+	)
+	
+	static stage = new ChangeHistory(
+		'ExcelOutput/StageConfig.json',
+		(stages: InternalStage[], stageId: number) => Object.values(stages).find(stage => stage.StageID == stageId)
 	)
 	
 	static async getRenameHistory(textMapHash: HashReference | number | string) {

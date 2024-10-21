@@ -1,4 +1,4 @@
-import { Blessing } from './Blessing.js'
+import { Blessing, RogueMazeBuff } from './Blessing.js'
 import { Dictionary } from './Shared.js'
 import { textMap } from './TextMap.js'
 import { InternalEquationData, InternalEquationDisplay, InternalExtraEffect } from './files/Equation.js'
@@ -59,7 +59,7 @@ export class Equation {
 		this.story = textMap.getText(displayData.FormulaStory)
 		this.traits = displayData.ExtraEffect
 		
-		const buffData = Object.values(Blessing.buff_data).find(buff => buff.ID == this.buff_id)!
+		const buffData = Object.values(RogueMazeBuff).find(buff => buff.ID == this.buff_id)!
 		this.name = textMap.getText(buffData.BuffName)
 		this.description = textMap.getText(buffData.BuffDesc, buffData.ParamList)
 			.replaceAll(/<u>(.+?)<\/u>/gi, (_, trait) => override[trait] ? `{{Trait|${override[trait]}|${trait}}}` : `{{Trait|${trait}}}`)

@@ -4,6 +4,7 @@ import type { HashReference } from '../TextMap.js'
 export interface Act {
 	OnInitSequece: unknown[]
 	OnStartSequece: DialogSequence[]
+	Type?: 'Mission'
 }
 
 export interface DialogSequence {
@@ -42,7 +43,7 @@ export interface TalkOption {
 	OptionTextmapID: HashReference
 	OptionIconType: string
 	TriggerCustomString?: string
-	DialogueEventID: number
+	RogueOptionID: number
 }
 
 export interface PlayOptionTalkSimple {
@@ -55,7 +56,7 @@ export interface TalkOptionSimple {
 	TalkSentenceID: number
 	OptionIconType: string
 	TriggerCustomString: string
-	DialogueEventID?: undefined
+	RogueOptionID?: undefined
 }
 
 export interface WaitCustomString {
@@ -69,7 +70,7 @@ export interface TriggerCustomString {
 }
 
 export interface PlayAndWaitSimpleTalk {
-	$type: 'RPG.GameCore.PlayAndWaitSimpleTalk'
+	$type: 'RPG.GameCore.PlayAndWaitSimpleTalk' | 'RPG.GameCore.PlaySimpleTalk' | 'RPG.GameCore.PlayMissionTalk'
 	SimpleTalkList: SimpleTalk[]
 }
 
@@ -79,6 +80,7 @@ export interface SimpleTalk {
 	ProtectTime: number
 }
 
+// we only really care about the text for this
 export interface PerformanceTransition {
 	$type: 'RPG.GameCore.PerformanceTransition'
 	TextEnabled: boolean
@@ -110,7 +112,7 @@ export interface CustomStringReference {
 	Key: string
 }
 
-export type ValueReference<T> = Value<T> | CustomStringReference
+export type ValueReference<T> = Value<T>// | CustomStringReference
 
 export interface DialogEventMap {
 	DialogueEventID: number
@@ -149,7 +151,8 @@ export interface SinglePropFetchID {
 
 export interface FixedTaskParam<T> {
 	IsDynamic: false
-	FixedValue: Value<T>
+	FixedValue?: Value<T>
+	fixedValue?: Value<T>
 }
 
 export interface DynamicTaskParam<T> {
@@ -277,14 +280,70 @@ export interface CompareCustomString {
 	CompareType: CompareType
 }
 
+export interface NoContentTask<T extends string> {
+	$type: T
+}
+
+export interface InternalTriggerPerformance {
+	$type: 'RPG.GameCore.TriggerPerformance'
+	PerformanceType: 'A' | 'C' | 'CG' | 'D' | 'DS' | 'E'
+	PerformanceID: number
+}
+
+export interface FinishPerformanceMission {
+	$type: 'RPG.GameCore.FinishPerformanceMission'
+	Key: string
+}
+
+export interface PlayTimeline {
+	$type: 'RPG.GameCore.PlayTimeline'
+	TimelineName: string
+	Type: string
+	Parameters?: unknown[]
+}
+
+export interface PlayVideo {
+	$type: 'RPG.GameCore.PlayVideo'
+	VideoID: number
+}
+
+export interface WaitSecond {
+	$type: 'RPG.GameCore.WaitSecond'
+	WaitTime: TaskParam<T>
+}
+
+export type EntityType = 'NPC' | 'LocalPlayer' | 'NPCMonster'
+
+export interface PropSetupTrigger {
+	$type: 'RPG.GameCore.PropSetupTrigger'
+	TargetType: TargetFetchAdvancedProp
+	TargetEntityType: EntityType
+	TargetID: TaskParam<number>
+	TargetTypes: EntityType[]
+	DestroyAfterTriggered?: boolean
+	OnTriggerEnter?: InternalDialogTask[]
+}
+
+export interface PlayScreenTransfer {
+	$type: 'RPG.GameCore.PlayScreenTransfer'
+	Type?: 'Black'
+	Mode?: 'SwitchOut'
+	CustomTime?: number
+}
+
+export type InternalFinishLevelGraph = NoContentTask<'RPG.GameCore.FinishLevelGraph'>
+export type InternalEndPerformance = NoContentTask<'RPG.GameCore.EndPerformance'>
+
 export type DialogPredicate = CompareCustomString
 
 export type ValueSource = SharedFloat | SharedString
 
 export type TaskParam<T> = FixedTaskParam<T> | DynamicTaskParam<T>
 
-export type DialogTask = 
+export type InternalDialogTask = 
 	| TaskShowBg | PlayAndWaitSimpleTalk | TriggerSound | PlayOptionTalk | WaitCustomString 
 	| TriggerCustomString | WaitDialogueEvent | PlayOptionTalkSimple | RoguePlayAndWaitSimpleTalk
 	| RoguePlayOptionTalk | WaitPredicateSuccess | TriggerToastPage | ShowWaypointByProp
-	| PerformanceTransition | PredicateTaskList
+	| PerformanceTransition | PredicateTaskList | InternalFinishLevelGraph | InternalTriggerPerformance
+	| InternalEndPerformance | FinishPerformanceMission | PlayTimeline | PlayVideo | WaitSecond
+	| PropSetupTrigger | PlayScreenTransfer

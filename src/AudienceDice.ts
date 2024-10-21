@@ -1,6 +1,6 @@
-import { Event } from './Event.js'
 import type { Dictionary } from './Shared.js'
 import { HashReference, TextMap } from './TextMap.js'
+import { RogueTalkNameConfig } from './dialogue/tasks/Occurrence.js'
 import type { InternalDiceBranch, InternalDiceSurface, InternalMiscDisplay } from './files/AudienceDice.js'
 import { getFile } from './files/GameFile.js'
 
@@ -63,7 +63,7 @@ export class DiceSurface {
 			const quest = Object.values(DiceSurface.questData).find(quest => quest.FinishWayID == secret.QuestID)!
 			const reward = Object.values(DiceSurface.rewardData).find(reward => reward.RewardID == quest.RewardID)!
 			if (Object.values(reward).includes(this.item_id)) {
-				const name = TextMap.default.getText(secret.MainStoryName ?? Event.TALK_NAMES[secret.TalkNameID].Name)
+				const name = TextMap.default.getText(secret.MainStoryName ?? RogueTalkNameConfig[secret.TalkNameID].Name)
 				return `[[Simulated Universe/Secret#${name}|${name}]]`
 			}
 		}

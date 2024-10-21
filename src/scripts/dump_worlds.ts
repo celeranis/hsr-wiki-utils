@@ -2,7 +2,7 @@ import { mkdirSync, writeFileSync } from 'fs'
 import { ChangeHistory } from '../ChangeHistory.js'
 import { Item, ItemList } from '../Item.js'
 import { Dictionary, sanitizeString, typeDisplayName, wikiTitle } from '../Shared.js'
-import { Stage } from '../Stage.js'
+import { MonsterConfig } from '../Stage.js'
 import { TextMap } from '../TextMap.js'
 import { getFile } from '../files/GameFile.js'
 import type { InternalUnlockInfo, InternalWorldInfo, InternalWorldMap } from '../files/Worlds.js'
@@ -62,7 +62,7 @@ for (const difficulties of worldSet.values()) {
 		.addParam('type', 'Simulated Universe')
 		.addParam('type2', 'World')
 		.addParam('mechanism', '')
-		.addParam('boss', Object.keys(first.DisplayMonsterMap).map(id => textMap.getText(Stage.monsters[id].MonsterName)).join('; '))
+		.addParam('boss', Object.keys(first.DisplayMonsterMap).map(id => textMap.getText(MonsterConfig[id].MonsterName)).join('; '))
 	
 	const requiredELs: string[] = []
 	const recLevels: number[] = []
@@ -134,7 +134,7 @@ for (const difficulties of worldSet.values()) {
 				// if (secondElite) enemies = Object.entries(diff.DisplayMonsterMap2)
 					
 				enemies = enemies
-					.map(([id]) => textMap.getText(Stage.monsters[id].MonsterName))
+					.map(([id]) => textMap.getText(MonsterConfig[id].MonsterName))
 					.map(name => (secondElite && !name.endsWith('(Bug)')) ? `${name} (Bug)` : name)
 					.join(';')
 				
@@ -145,7 +145,7 @@ for (const difficulties of worldSet.values()) {
 			
 			else if (currentDomains == 'Boss') {
 				const enemies = Object.entries(diff.DisplayMonsterMap)
-					.map(([id]) => textMap.getText(Stage.monsters[id].MonsterName))
+					.map(([id]) => textMap.getText(MonsterConfig[id].MonsterName))
 					.join(';')
 
 				domainTable.addRow((i + 1).toString(), card, `{{Card List|${enemies}|amount=Lv. ${areaData.LevelList[0]}|type=Enemy|show_caption=1|delim=;}}`)

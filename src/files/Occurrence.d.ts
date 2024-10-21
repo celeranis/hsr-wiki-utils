@@ -113,3 +113,48 @@ export type EffectType =
 export type CostType = 'CostItemValue' | 'CostHpCurrentPercent' | 'CostHpMaxPercent' | 'CostItemPercent' | 'CostHpSpToPercent'
 
 export type RogueTalkNameConfig = Dictionary<InternalTalkName>
+
+export interface DynamicMapEntry {
+	DisplayID: number
+}
+
+export interface DynamicDisplay {
+	DisplayID: number
+	ContentText: HashReference
+}
+
+export interface OptReference {
+	OptionID: number
+	DisplayID: number
+	DynamicMap?: Dictionary<DynamicMapEntry>
+	SpecialOptionID?: number
+	DescValue?: number
+	DescValue2?: number
+	DescValue3?: number
+	DescValue4?: number
+}
+
+export interface OptData {
+	OptionList: OptReference[]
+}
+
+export interface RogueNPCDialogue {
+	DialogueProgress?: number
+	TalkNameID: number
+	DialoguePath: string
+	OptionPath: string
+}
+
+export interface RogueNPCData {
+	DialogueType: 'Event'
+	DialogueList: RogueNPCDialogue[]
+}
+
+export interface InternalRogueImage {
+	ImageID: number
+	ImageType: 'RandomEvt' | 'Aeon' | 'Other'
+	ImagePath: string
+	ParamStr1: string
+	ParamStr2: string
+	TexturePath: string
+}

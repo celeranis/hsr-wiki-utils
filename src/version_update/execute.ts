@@ -1,13 +1,12 @@
 import { program } from 'commander'
-import { existsSync } from 'fs'
+import { Dirent, existsSync } from 'fs'
 import { readFile, readdir, writeFile } from 'fs/promises'
 import { MwnError } from 'mwn/build/error.js'
 import config from '../../config.json' with { "type": 'json' }
 import { COMMON_ICON_MAP } from '../Item.js'
+import { zeroPad } from '../Shared.js'
 import { AWB } from '../util/AWB.js'
 import { client } from '../util/Bot.js'
-
-const REASON = '2.5'
 
 const MOVE: Record<string, string> = {
 	
@@ -39,14 +38,27 @@ async function checkPages(pages: string[], shouldExist: boolean = false) {
 			console.error(`"${page.title}" should exist, but does not!`)
 		} else if (!shouldExist && !page.missing) {
 			console.error(`"${page.title}" shouldn't exist, but does!`)
+		} else {
+			console.debug(`${page.title} is ready!`)
 		}
 	}
 }
 
-program.option('--check')
+program
+	.option('--reason <reason>', 'The reason to include with this action', config.target_version)
+	.option('--check')
+	.option('--midpatch <midpatch>', 'The subfolder of "midpatch" to use')
+	.parse()
 
-program.parse()
-const CHECK = program.opts().check
+const args = program.opts()
+
+const asiaTime = new Date(Date.now() + (1000 * 60 * 60 * 8))
+const midpatch = args.midpatch == 'today' ? `${asiaTime.getUTCFullYear()}-${zeroPad(asiaTime.getUTCMonth()+1, 2)}-${zeroPad(asiaTime.getUTCDate(), 2)}`
+	: args.midpatch
+
+const REASON = args.reason
+const CHECK = args.check
+const ROOT = midpatch ? `./src/version_update/midpatch/${midpatch}` : './src/version_update'
 
 const CHECK_NOEXIST: string[] = []
 const CHECK_EXIST: string[] = []
@@ -145,7 +157,8 @@ const CATEGORIES = {
 	pfp: 'Profile Pictures',
 	fatesatlas: "Fate's Atlas Images",
 	curios: 'Curio Icons',
-	equations: 'Equation Icons'
+	equations: 'Equation Icons',
+	event: 'Event Banners'
 }
 
 async function upload(file: string, fileName: string, categories?: string, reason: string = REASON) {
@@ -212,7 +225,14 @@ async function upload(file: string, fileName: string, categories?: string, reaso
 	}
 }
 
-if (!CHECK) {
+async function readDir(folder: string): Promise<Dirent[]> {
+	if (!existsSync(folder)) {
+		return []
+	}
+	return readdir(folder, { withFileTypes: true, recursive: true })
+}
+
+if (!CHECK && !midpatch) {
 	const confirmed = await AWB.confirm('CHECK NOT ENABLED. Start?')
 	if (!confirmed) process.exit()
 }
@@ -221,19 +241,19 @@ for (const [from, to] of Object.entries(MOVE)) {
 	await move(from, to)
 }
 
-for (const file of await readdir('./src/version_update/create', { withFileTypes: true, recursive: true })) {
+for (const file of await readDir(`${ROOT}/create`)) {
 	if (file.isFile() && file.name.endsWith('.wikitext')) {
 		await create(file.path + '/' + file.name)
 	}
 }
 
-for (const file of await readdir('./src/version_update/edit', { withFileTypes: true, recursive: true })) {
+for (const file of await readDir(`${ROOT}/edit`)) {
 	if (file.isFile() && file.name.endsWith('.wikitext')) {
 		await edit(file.path + '/' + file.name)
 	}
 }
 
-for (const file of await readdir('./src/version_update/upload', { withFileTypes: true, recursive: true })) {
+for (const file of await readDir(`${ROOT}/upload`)) {
 	if (file.isFile() && !file.name.endsWith('.wikitext')) {
 		await upload(file.path + '/' + file.name, file.name, )
 	}
@@ -243,7 +263,7 @@ for (const [from, to] of Object.entries(REDIRECT)) {
 	await redirect(from, to)
 }
 
-for (const file of await readdir('./src/version_update/ol_edit', { withFileTypes: true, recursive: true })) {
+for (const file of await readDir(`${ROOT}/ol_edit`)) {
 	if (file.isFile() && file.name.endsWith('.wikitext')) {
 		await updateOL(file.path + '/' + file.name)
 	}

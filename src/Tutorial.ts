@@ -3,9 +3,9 @@ import { InternalTutorialData, InternalTutorialGroup, InternalTutorialType } fro
 import { wikiTitle } from './Shared.js';
 import { textMap } from './TextMap.js';
 
-const TutorialGuideData = await getExcelFile<InternalTutorialData>('TutorialGuideData.json')
+const TutorialGuideData = await getExcelFile<InternalTutorialData>('TutorialGuideData.json', 'ID')
 const TutorialGuideGroup = Object.values(await getFile<InternalTutorialGroup[]>('ExcelOutput/TutorialGuideGroup.json'))
-const TutorialGuideGroupType = await getExcelFile<InternalTutorialType>('TutorialGuideGroupType.json')
+const TutorialGuideGroupType = await getExcelFile<InternalTutorialType>('TutorialGuideGroupType.json', 'TutorialType')
 
 export interface TutorialPage {
 	id: number

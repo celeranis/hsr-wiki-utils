@@ -5,7 +5,7 @@ import { getFile } from './files/GameFile.js'
 import { Template } from './util/Template.js'
 
 function curio(name: string) {
-	return `{{Item|${name}|20|type=Curio|link=Simulated_Universe/Curio#${name.replace(/ /g, '_')}}}`
+	return `{{Item|${name}|20|type=Curio}}`
 }
 
 export class CurioGroup {
@@ -55,72 +55,72 @@ export class CurioGroup {
 			case 11009:
 			case 21002:
 			case 31060:
-				return `Curio<nowiki>:</nowiki> ${curio('Angel-type I.O.U. Dispenser')}`
+				return `Curio&colon; ${curio('Angel-type I.O.U. Dispenser')}`
 			
 			case 11010:
 			case 21003:
 			case 31059:
-				return `Negative Curio<nowiki>:</nowiki> ${curio('Insect Web')}`
+				return `Negative Curio&colon; ${curio('Insect Web')}`
 			
 			case 11013:
 			case 21010:
 			case 32021:
-				return `Curio<nowiki>:</nowiki> ${curio('Cavity System Model')}`
+				return `Curio&colon; ${curio('Cavity System Model')}`
 			
 			case 11015:
 			case 21007:
 			case 31122:
-				return `Curio<nowiki>:</nowiki> ${curio('The Pinkest Collision')}`
+				return `Curio&colon; ${curio('The Pinkest Collision')}`
 			
 			case 11014:
 			case 21006:
 			case 31121:
-				return `Curio<nowiki>:</nowiki> ${curio('Thalan Toxi-Flame')}`
+				return `Curio&colon; ${curio('Thalan Toxi-Flame')}`
 			
 			case 11016:
 			case 21008:
 			case 32050:
-				return `Curio${s}<nowiki>:</nowiki> ${curio('The Pinkest Collision')} ${plural ? 'and' : 'or'} ${curio('Thalan Toxi-Flame')}`
+				return `Curio${s}&colon; ${curio('The Pinkest Collision')} ${plural ? 'and' : 'or'} ${curio('Thalan Toxi-Flame')}`
 			
 			case 21004:
-				return `Curio<nowiki>:</nowiki> ${curio('Tonic of Efficacious Chaos')}`
+				return `Curio&colon; ${curio('Tonic of Efficacious Chaos')}`
 			
 			case 31004:
-				return `Curio<nowiki>:</nowiki> ${curio('Fruit of the Alien Tree')}`
+				return `Curio&colon; ${curio('Fruit of the Alien Tree')}`
 			
 			case 31005:
-				return `Curio<nowiki>:</nowiki> ${curio('Casket of Inaccuracy')}`
+				return `Curio&colon; ${curio('Casket of Inaccuracy')}`
 			
 			case 31006:
-				return `Curio<nowiki>:</nowiki> ${curio('Ambergris Cheese')}`
+				return `Curio&colon; ${curio('Ambergris Cheese')}`
 			
 			case 32030:
-				return `Curios<nowiki>:</nowiki> ${curio('Ambergris Cheese')}, ${curio('Casket of Inaccuracy')}, ${plural ? 'and' : 'or'} ${curio('Fruit of the Alien Tree')}`
+				return `Curios&colon; ${curio('Ambergris Cheese')}, ${curio('Casket of Inaccuracy')}, ${plural ? 'and' : 'or'} ${curio('Fruit of the Alien Tree')}`
 
 			case 31208:
-				return `Curio<nowiki>:</nowiki> ${curio('Mysterious Magnetism')}`
+				return `Curio&colon; ${curio('Mysterious Magnetism')}`
 			
 			case 31209:
-				return `Curio<nowiki>:</nowiki> ${curio('Organic Heart')}`
+				return `Curio&colon; ${curio('"Organic Heart"')}`
 			
 			case 31207:
-				return `Curio<nowiki>:</nowiki> ${curio('King of Sponges')}`
+				return `Curio&colon; ${curio('King of Sponges')}`
 
 			case 31205:
-				return `Curio<nowiki>:</nowiki> ${curio('Indecipherable Box')}`
+				return `Curio&colon; ${curio('Indecipherable Box')}`
 				
 			case 31206:
-				return `Curio<nowiki>:</nowiki> ${curio('Rotting Fruit of the Alien Tree')}`
+				return `Curio&colon; ${curio('Rotting Fruit of the Alien Tree')}`
 			
 			case 20008:
 			case 30008:
 				return `Damageable Curio${s}`
 			
 			case 32070:
-				return `Curios<nowiki>:</nowiki> ${curio('Gold Coin of Discord')} ${plural ? 'and' : 'or'} ${curio('Typical Genius Society Gossip')}`
+				return `Curios&colon; ${curio('Gold Coin of Discord')} ${plural ? 'and' : 'or'} ${curio('Typical Genius Society Gossip')}`
 		}
 		
-		return `Curio${s}<nowiki>:</nowiki> {{tx}}<!--ID: ${id}-->`
+		return `Curio${s}&colon; {{tx}}<!--ID: ${id}-->`
 	}
 }
 

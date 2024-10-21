@@ -1,9 +1,10 @@
 import config from '../config.json' with { "type": "json" }
-import { AeonPath, Dictionary, pathDisplayName, pathListDisplay } from './Shared.js'
+import { AeonPath, pathDisplayName, pathListDisplay } from './Shared.js'
 import { textMap } from './TextMap.js'
 import { WeirdKey } from './WeirdKey.js'
-import type { InternalBlessing, InternalBlessingBuff, InternalBlessingGroup } from './files/Blessing.js'
-import { getFile } from './files/GameFile.js'
+import type { InternalBlessing, InternalBlessingGroup, InternalDUBlessingGroup } from './files/Blessing.js'
+import { getExcelFile, getFile } from './files/GameFile.js'
+import { InternalMazeBuff } from './scripts/dump_boss_decay.js'
 
 export const PathMap: {[id: string]: AeonPath} = {
 	'120': 'Preservation',
@@ -19,7 +20,8 @@ export const PathMap: {[id: string]: AeonPath} = {
 
 export type EnhanceFilter = 'both' | 'none' | 'only'
 
-const group_data: Dictionary<InternalBlessingGroup> = await getFile('ExcelOutput/RogueBuffGroup.json')
+const RogueBuffGroup = await getExcelFile<InternalBlessingGroup>('RogueBuffGroup.json', WeirdKey.get('BlessingGroupID') as any)
+const RogueTournBuffGroup = await getExcelFile<InternalDUBlessingGroup>('RogueTournBuffGroup.json', 'RogueBuffGroupID')
 
 export class BlessingGroup {
 	name: string = 'Unknkown Blessing Group'
@@ -29,16 +31,22 @@ export class BlessingGroup {
 	paths = new Set<AeonPath>()
 	enhanced?: EnhanceFilter
 	
-	static map = new Map<string, BlessingGroup>()
-	static data = group_data
+	static map_du = new Map<string, BlessingGroup>()
+	static map_su = new Map<string, BlessingGroup>()
 	
-	constructor(public data: InternalBlessingGroup) {
-		this.id = data[WeirdKey.get('BlessingGroupID')]
-		BlessingGroup.map.set(this.id.toString(), this)
+	constructor(public data: InternalBlessingGroup | InternalDUBlessingGroup, public is_du: boolean) {
+		if (is_du) {
+			this.id = (data as InternalDUBlessingGroup).RogueBuffGroupID
+			BlessingGroup.map_du.set(this.id.toString(), this)
+		} else {
+			this.id = data[WeirdKey.get('BlessingGroupID')]
+			BlessingGroup.map_su.set(this.id.toString(), this)
+		}
 	}
 	
 	resolveAllBlessings(): Blessing[] {
-		const blessings = this.data[WeirdKey.get('BlessingGroupMembers')].map((id: number) => BlessingGroup.forId(id)?.resolveAllBlessings() || []).flat(1024)
+		const ids = this.is_du ? (this.data as InternalDUBlessingGroup).RogueBuffDrop : (this.data as InternalBlessingGroup)[WeirdKey.get('BlessingGroupMembers')]
+		const blessings = ids.map((id: number) => BlessingGroup.forId(id, this.is_du)?.resolveAllBlessings() || []).flat(1024)
 		
 		this.rarity_min = Math.min(...blessings.map(blessing => blessing.rarity).filter(v => v))
 		this.rarity_max = Math.max(...blessings.map(blessing => blessing.rarity).filter(v => v))
@@ -65,12 +73,12 @@ export class BlessingGroup {
 		return blessings
 	}
 	
-	static forId(id: number | string): BlessingGroup | Blessing | undefined {
-		return this.map.get(id.toString()) ?? Blessing.map.get(id.toString())
+	static forId(id: number | string, du: boolean): BlessingGroup | Blessing | undefined {
+		return (du ? this.map_du : this.map_su).get(id.toString()) ?? (du ? Blessing.map_du : Blessing.map_su).get(id.toString())
 	}
 	
-	static nameForId(id: number, plural?: boolean): string {
-		let name = this.forId(id)?.name ?? `Blessing(s) [${id}]`
+	static nameForId(id: number, is_du: boolean, plural?: boolean): string {
+		let name = this.forId(id, is_du)?.name ?? `Blessing(s) [${id}]`
 		if (plural != undefined) {
 			name = name.replace(/\(s\)/gi, plural ? 's' : '')
 		}
@@ -78,21 +86,30 @@ export class BlessingGroup {
 	}
 	
 	static loaded = false
-	static loadAll() {
+	static loadAll(du?: boolean) {
 		if (this.loaded) return
-		Blessing.loadAll()
-		for (const data of Object.values(this.data)) {
-			new BlessingGroup(data)
+
+		if (du == undefined) {
+			this.loadAll(false)
+			this.loadAll(true)
+			return
 		}
-		for (const blessing of this.map.values()) {
+		
+		Blessing.loadAll(du)
+		for (const data of Object.values(du ? RogueTournBuffGroup : RogueBuffGroup)) {
+			new BlessingGroup(data, du)
+		}
+		for (const blessing of (du ? this.map_du : this.map_su).values()) {
 			blessing.resolveAllBlessings()
 		}
 		this.loaded = true
 	}
 }
 
-const blessing_data: Dictionary<InternalBlessing> = await getFile('ExcelOutput/RogueTournBuff.json')
-const buff_data: Dictionary<InternalBlessingBuff> = await getFile('ExcelOutput/RogueMazeBuff.json')
+export const RogueBuff = await getExcelFile<InternalBlessing>('ExcelOutput/RogueBuff.json', 'RogueBuffTag')
+export const RogueTournBuff = await getExcelFile<InternalBlessing>('ExcelOutput/RogueTournBuff.json', 'RogueBuffTag')
+export const RogueMazeBuff = await getFile<InternalMazeBuff[]>('ExcelOutput/RogueMazeBuff.json')
+export const MazeBuff = await getFile<InternalMazeBuff[]>('ExcelOutput/MazeBuff.json')
 
 const iconVariants = [
 	'',
@@ -112,18 +129,16 @@ export class Blessing {
 	level: number
 	traits: number[]
 	
-	buff: InternalBlessingBuff
+	buff: InternalMazeBuff
 	name: string
 	description: string
 	simple_description: string
 	icon_variant: string
 
-	static map = new Map<string, Blessing>()
+	static map_su = new Map<string, Blessing>()
+	static map_du = new Map<string, Blessing>()
 	
-	static data = blessing_data
-	static buff_data = buff_data
-	
-	constructor(public data: InternalBlessing) {
+	constructor(public data: InternalBlessing, is_du: boolean) {
 		this.id = data.RogueBuffTag
 		this.buff_id = data.MazeBuffID
 		if (config.target_version < '2.3') {
@@ -140,20 +155,20 @@ export class Blessing {
 		this.path = PathMap[data.RogueBuffType]
 		this.traits = data.ExtraEffectIDList
 		
-		this.buff = Object.values(Blessing.buff_data).find(buff => buff.ID == this.buff_id && buff.Lv == this.level)!
+		this.buff = [...RogueMazeBuff, ...MazeBuff].find(buff => buff.ID == this.buff_id && buff.Lv == this.level)!
 		this.name = textMap.getText(this.buff.BuffName)
 		this.description = textMap.getText(this.buff.BuffDesc, this.buff.ParamList)
 		this.simple_description = textMap.getText(this.buff.BuffSimpleDesc, this.buff.ParamList)
 		this.icon_variant = iconVariants[Number(this.buff.BuffIcon.match(/(\d+)\.png/)?.[1]) ?? 0]
 		
-		Blessing.map.set(this.id.toString(), this)
+		;(is_du ? Blessing.map_du : Blessing.map_su).set(this.id.toString(), this)
 	}
 	
-	static forId(id: number | string): Blessing | undefined {
-		return this.map.get(id.toString())
+	static forId(id: number | string, is_du: boolean): Blessing | undefined {
+		return (is_du ? this.map_du : this.map_su).get(id.toString())
 	}
 	
-	getBuff(): InternalBlessingBuff {
+	getBuff(): InternalMazeBuff {
 		return this.buff
 	}
 	
@@ -166,14 +181,16 @@ export class Blessing {
 	}
 	
 	static loaded = false
-	static loadAll() {
-		if (this.loaded) return this.map.values()
-		for (const levels of Object.values(this.data)) {
+	static loadAll(du?: boolean): Iterable<Blessing> {
+		if (du == undefined) return [...this.loadAll(false), ...this.loadAll(true)]
+		
+		if (this.loaded) return (du ? this.map_du : this.map_su).values()
+		for (const levels of Object.values(du ? RogueTournBuff : RogueBuff)) {
 			// for (const data of Object.values(levels)) {
-				new Blessing(levels)
-			// }
+				new Blessing(levels, du)
+			//
 		}
 		this.loaded = true
-		return this.map.values()
+		return (du ? this.map_du : this.map_su).values()
 	}
 }
