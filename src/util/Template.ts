@@ -229,6 +229,27 @@ export interface TemplateMap {
 		order: string
 		order_du: string
 	}
+	'Scepter Information': {
+		name: string
+		displayname?: string
+		image?: string
+		type: string
+		unlock: string
+		effect: string
+		story: string
+		notes: string
+		mentions: string
+	}
+	'Component Information': {
+		name: string
+		displayname?: string
+		image?: string
+		alignment: string
+		unlock: string
+		effect: string
+		notes: string
+	}
+	'SU Ability': any
 }
 
 export type DomainType = 

@@ -35,7 +35,7 @@ export interface Value<T> {
 	Value: T
 }
 
-export type Version = '1.0' | '1.1' | '1.2' | '1.3' | '1.4' | '1.5'| '1.6' | '2.0' | '2.1' | '2.2' | '2.3' | '2.4' | '2.5'
+export type Version = '1.0' | '1.1' | '1.2' | '1.3' | '1.4' | '1.5'| '1.6' | '2.0' | '2.1' | '2.2' | '2.3' | '2.4' | '2.5' | '2.6'
 
 export const VERSION_COMMITS: Dictionary<string, Version> = {
 	'1.0': '4a36e628f9f34e6221b167b6ae0235a2f3934330',
@@ -51,6 +51,7 @@ export const VERSION_COMMITS: Dictionary<string, Version> = {
 	'2.3': 'df89dd1138e751c8b1a62c92fc2bafac421dc18f',
 	'2.4': '16f0941630f628645d75cb54a2545ad9b7328ebc',
 	'2.5': 'e948a9018d5e5c9a541cce50b3af1466b4644cec',
+	'2.6': '5e3c0bf598e3062f1d493feb896959b7525c15f7',
 }
 
 export const VERSION_LIST: Version[] = Object.keys(VERSION_COMMITS).sort() as Version[]
@@ -251,4 +252,17 @@ export const DICON_MAP = {
 	ClockBoyShopIcon: 'Clockie',
 	HeartDialTracer: 'Clockie Tie',
 	ChallengeBossIcon: 'Apocalyptic Shadow'
+}
+
+export function allEqual<T extends (string | number | boolean | undefined | null)>(vals: T[]) {
+	let lastVal: T | undefined = undefined
+	
+	for (const [i, val] of vals.entries()) {
+		if (i > 0 && lastVal != val) {
+			return false
+		}
+		lastVal = val
+	}
+	
+	return true
 }

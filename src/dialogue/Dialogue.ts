@@ -387,6 +387,7 @@ export abstract class ActDialogueTree extends AbstractDialogueTree<DialogueTask 
 			case 'RPG.GameCore.SetNpcStatus' as any:
 			case 'RPG.GameCore.AdvEntityFaceTo' as any:
 			case 'RPG.GameCore.CharacterHeadLookAt' as any:
+			case 'RPG.GameCore.SetAsRogueDialogue' as any:
 				return undefined
 			default:
 				return new UnknownTask(itask)

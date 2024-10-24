@@ -32,7 +32,7 @@ function addEquationRarity(id: string, display: string) {
 
 function addBlessingPath(path: AeonPath) {
 	output2.push(`===${pathDisplayName(path)}===`)
-	const blessings = [...Blessing.loadAll()].sort((a, b) => ((a.id - (a.rarity * 1000000000)) - (b.id - (b.rarity * 1000000000))))
+	const blessings = [...Blessing.loadAll(true)].sort((a, b) => ((a.id - (a.rarity * 1000000000)) - (b.id - (b.rarity * 1000000000))))
 	const table = new Table('sortable mw-collapsible article-table', ['Icon', 'Name', 'Effect', 'Enhanced Effect'])
 	for (const blessing of blessings) {
 		if (blessing.path != path || blessing.enhanced) continue

@@ -10,6 +10,7 @@ import { WeirdKey } from './WeirdKey.js'
 
 export const RogueNPC = await getExcelFile<InternalNPC>('RogueNPC.json', 'RogueNPCID')
 export const RogueTournNPC = await getExcelFile<InternalNPC>('RogueTournNPC.json', 'RogueNPCID')
+export const RogueMagicNPC = await getExcelFile<InternalNPC>('RogueMagicNPC.json', 'RogueNPCID')
 export const RogueDialogueOptionDisplay = await getExcelFile<InternalEventSectionDisplay>('RogueDialogueOptionDisplay.json', 'OptionDisplayID')
 export const RogueDialogueDynamicDisplay = await getExcelFile<DynamicDisplay>('RogueDialogueDynamicDisplay.json', 'DisplayID')
 export const RogueImage = await getExcelFile<InternalRogueImage>('RogueImage.json', 'ImageID')
@@ -60,7 +61,9 @@ export class OccurrenceSeries {
 		this.story_id = data.RogueNPCID % 1e5
 		this.path = data.NPCJsonPath
 		
-		if (this.id > 4e5) {
+		if (this.id > 5e5) {
+			this.mode = 'und' // unknowable domain ids: 50001-59999
+		} else if (this.id > 4e5) {
 			this.mode = 'du' // divergent universe ids: 40001-49999
 		} else if (this.id >= 3e5) {
 			this.mode = 'gng' // gold and gears ids: 30001-39999
@@ -87,7 +90,7 @@ export class OccurrenceSeries {
 	}
 	
 	static loadAll(): OccurrenceSeries[] {
-		return [...Object.values(RogueNPC), ...Object.values(RogueTournNPC)]
+		return [...Object.values(RogueNPC), ...Object.values(RogueTournNPC), ...Object.values(RogueMagicNPC)]
 			.map(data => new this(data))
 	}
 	
@@ -128,20 +131,20 @@ export class Occurrence {
 		this.progress = dialogueInfo.DialogueProgress ?? 0
 		
 		const talkName = RogueTalkNameConfig[dialogueInfo.TalkNameID]
-		this.name = textMap.getText(talkName.Name)
-		this.name_hash = talkName.Name
+		this.name = textMap.getText(talkName?.Name) ?? ''
+		this.name_hash = talkName?.Name ?? 0
 		
-		this.image_id = talkName.ImageID
+		this.image_id = talkName?.ImageID
 		const image = RogueImage[this.image_id]
-		this.image_path = image.ImagePath
-		this.sfx_name = image.ParamStr1
+		this.image_path = image?.ImagePath
+		this.sfx_name = image?.ParamStr1
 		
-		const suIndexEvent = RogueHandBookEvent.find(hev => hev.UnlockNPCProgressIDList.find(criteria => criteria[WeirdKey.get('UnlockNPCID')] == this.series.id && criteria[WeirdKey.get('UnlockProgress')] == this.progress))
+		const suIndexEvent = RogueHandBookEvent.find(hev => hev.UnlockNPCProgressIDList.find(criteria => criteria[WeirdKey.get('UnlockNPCID')] == this.series.id && (criteria[WeirdKey.get('UnlockProgress')] == this.progress || (!criteria[WeirdKey.get('UnlockProgress')] && !this.progress))))
 		if (suIndexEvent) {
 			this.order = suIndexEvent.Order
 		}
 
-		const duIndexEvent = RogueTournHandBookEvent.find(hev => hev.UnlockNPCProgressIDList.find(criteria => (criteria[WeirdKey.get('UnlockNPCID')] % 1e5 == this.series.id % 1e5) && criteria[WeirdKey.get('UnlockProgress')] == this.progress))
+		const duIndexEvent = RogueTournHandBookEvent.find(hev => hev.UnlockNPCProgressIDList.find(criteria => (criteria[WeirdKey.get('UnlockNPCID')] % 1e5 == this.series.id % 1e5) && (criteria[WeirdKey.get('UnlockProgress')] == this.progress || (!criteria[WeirdKey.get('UnlockProgress')] && !this.progress))))
 		if (duIndexEvent) {
 			this.order_du = duIndexEvent.Priority
 		}

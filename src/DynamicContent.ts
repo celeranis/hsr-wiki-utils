@@ -4,7 +4,7 @@ import { TextMap } from './TextMap.js';
 import type { DynamicParamType, InternalDynamicContent, InternalDynamicDisplay } from './files/DynamicContent.js';
 import { getExcelFile, getFile } from './files/GameFile.js';
 
-const internal_data: Dictionary<Dictionary<InternalDynamicContent>> = await getFile('ExcelOutput/DialogueDynamicContent.json')
+const internal_data: Dictionary<Dictionary<InternalDynamicContent>> = await getFile('ExcelOutput/DialogueDynamicContent.json', '1.6')
 const display_data = await getExcelFile<InternalDynamicDisplay>('RogueDialogueDynamicDisplay.json', 'DisplayID')
 
 export class DynamicContent {

@@ -62,10 +62,10 @@ const MESSAGE_IMAGE_NAMES = {
 }
 
 const STICKER_OVERRIDES = {
-	'7-2': 'File:Sticker PPG 07 Pom-Pom 03.png',
-	'7-3': 'File:Sticker PPG 07 Pom-Pom 04.png',
-	'7-4': 'File:Sticker PPG 07 Pom-Pom 05.png',
-	'7-5': 'File:Sticker PPG 07 Pom-Pom 02.png'
+	'sticker_7_2': 'File:Sticker PPG 07 Pom-Pom 03.png',
+	'sticker_7_3': 'File:Sticker PPG 07 Pom-Pom 04.png',
+	'sticker_7_4': 'File:Sticker PPG 07 Pom-Pom 05.png',
+	'sticker_7_5': 'File:Sticker PPG 07 Pom-Pom 02.png',
 }
 
 export class MessagesContact {
@@ -318,7 +318,16 @@ export class MessageItem {
 
 function sticker(stickerData: InternalEmoji, caption?: string) {
 	caption = caption?.replaceAll('[', '&lbrack;')?.replaceAll(']', '&rbrack;')
-	return `[[${STICKER_OVERRIDES[`${stickerData.EmojiGroupID - 100}-${stickerData.SameGroupOrder}`] ?? wikiPageMap[`sticker_${stickerData.EmojiGroupID - 100}_${stickerData.SameGroupOrder}`]?.pagename}|80px${caption ? `|${caption}` : ''}]]`
+	if (stickerData.EmojiGroupID == undefined) {
+		stickerData = Object.values(EmojiConfig).find(emoji => emoji.EmojiPath == stickerData.EmojiPath && emoji.EmojiGroupID) ?? stickerData
+	}
+	const stickerKey = `sticker_${stickerData.EmojiGroupID - 100}_${stickerData.SameGroupOrder}`
+	const stickerTitle = STICKER_OVERRIDES[stickerKey] ?? wikiPageMap[stickerKey]?.pagename
+	if (stickerTitle) {
+		return `[[${stickerTitle}|80px${caption ? `|${caption}` : ''}]]`
+	} else {
+		return `{{tx|Missing sticker${caption ? `: ${caption}` : ''}}}{{subst:void|<!--${stickerData.EmojiPath}-->}}`
+	}
 }
 
 export class MessageTree extends AbstractDialogueTree<MessageItem> {

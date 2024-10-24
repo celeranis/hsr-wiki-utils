@@ -6,7 +6,10 @@ export interface InternalCurio {
 	MiracleDisplayID: number
 	UnlockIDList: number[]
 	UseEffect: HashReference
-	HandbookMiracleID: number
+	HandbookMiracleID?: number
+	UnlockHandbookMiracleID?: number
+	MiracleDesc?: HashReference
+	DescParamList?: Value<number>[]
 }
 
 export interface InternalCurioDisplay {
@@ -21,10 +24,20 @@ export interface InternalCurioDisplay {
 }
 
 export interface InternalIndexCurio {
-	HandbookMiracleID: number
+	MiracleHandbookID?: number
+	HandbookMiracleID?: number
 	MiracleReward: number
 	MiracleTypeList: number[]
 	MiracleDisplayID: number
 	Order: number
 	MiracleCategory: 'Common' | 'Rare' | 'Legendary' | 'Negative' | 'Hex'
+}
+
+export interface InternalUNDCurio {
+	MiracleID: number
+	MiracleDisplayID: number
+	UnlockHandbookMiracleID: number
+	MiracleDesc: HashReference
+	DescParamList: Value<number>[]
+	ExtraEffect: number[]
 }

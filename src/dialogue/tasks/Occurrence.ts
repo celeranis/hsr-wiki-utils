@@ -15,7 +15,7 @@ import { BaseDialogueTask, BaseDialogueTaskEntry, BaseNonTextDialogueTask, TalkS
 import { CustomStringListen } from './CustomString.js'
 
 export const RogueTalkNameConfig = await getExcelFile<InternalTalkName>('RogueTalkNameConfig.json', 'TalkNameID')
-export const DialogueEvent = await getExcelFile<InternalEventSection>('DialogueEvent.json', 'EventID')
+export const DialogueEvent = await getExcelFile<InternalEventSection>('DialogueEvent.json', 'EventID', '1.6')
 
 export class RogueOptionTalkTask extends BaseDialogueTask {
 	declare $type: 'RPG.GameCore.PlayRogueOptionTalk'

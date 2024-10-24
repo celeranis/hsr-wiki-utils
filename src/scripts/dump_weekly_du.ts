@@ -71,7 +71,7 @@ for (const data of Object.values(weeklyData)) {
 			if (entry[WeirdKey.get('DescParamType')] == 'Formula') {
 				equations.push(new Equation(Number(entry[WeirdKey.get('DescParamValue')])))
 			} else if (entry[WeirdKey.get('DescParamType')] == 'Miracle') {
-				curios.push(new Curio(Number(entry[WeirdKey.get('DescParamValue')])))
+				curios.push(new Curio(Number(entry[WeirdKey.get('DescParamValue')]), true))
 			}
 		}
 	}
@@ -100,7 +100,7 @@ for (const data of Object.values(weeklyData)) {
 		`|boss_2_1   = ${getEnemyList(data.DisplayMonsterGroups2[0]).join('; ')}`,
 		`|boss_2_2   = ${getEnemyList(data.DisplayMonsterGroups2[3]).join('; ')}`,
 		`|boss_3     = ${getEnemyList(data.DisplayMonsterGroups3[0]).join('; ')}`,
-		`|rules      = ${data.WeeklyContentDetailList.map(id => textMap.getText(Object.values(weeklyDisplay).find(d => d.WeeklyDisplayID == id)?.WeeklyDisplayContent)).join('; ')}`,
+		`|rules      = ${data.WeeklyContentDetailList.map(id => textMap.getText(Object.values(weeklyDisplay).find(d => d.WeeklyDisplayID == id)?.WeeklyDisplayContent)?.replace(/^● /, '')).join('; ')}`,
 		`}}`,
 		'',
 		`==Other Languages==`,

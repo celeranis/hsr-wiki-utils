@@ -11,6 +11,8 @@ export class HttpError extends Error {
 const ALT_PATTERNS = [
 	'Config/Level/Rogue/RogueDialogue/',
 	'Config/Level/Mission/',
+	'Story/Mission/',
+	'Config/Level/Rogue/RogueNPC/RogueNPC_260/',
 ]
 
 export async function getFile<T extends object>(path: string, version: string = config.target_version): Promise<T> {

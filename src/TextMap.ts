@@ -123,9 +123,6 @@ export class TextMap {
 	replaceParams(text: string, params: TextParams) {
 		for (let [i, param] of [...params.entries()].toReversed()) {
 			if (typeof param == 'object' && !Array.isArray(param)) param = param.Value
-			if (text.includes('Heart of Eternity')) {
-				console.log(text, i, param)
-			}
 			if (!param) {
 				text = text.replaceAll(new RegExp(`{C\\d+#[^{}]*?<unbreak>#${i + 1}\\[?\\w+?\\]?%?</unbreak>[^{}]*?}`, 'gi'), '')
 			} else {

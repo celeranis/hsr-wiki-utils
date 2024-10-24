@@ -4,7 +4,7 @@ import { readFile, readdir, writeFile } from 'fs/promises'
 import { MwnError } from 'mwn/build/error.js'
 import config from '../../config.json' with { "type": 'json' }
 import { COMMON_ICON_MAP } from '../Item.js'
-import { zeroPad } from '../Shared.js'
+import { sanitizeString, zeroPad } from '../Shared.js'
 import { AWB } from '../util/AWB.js'
 import { client } from '../util/Bot.js'
 
@@ -78,8 +78,16 @@ async function getFile(file: string): Promise<[string, string]> {
 }
 
 async function processUploadPrompts(content: string): Promise<void> {
+	const alreadyUploaded = new Set<string>()
 	for (const [, path, filename, categories] of content.matchAll(/\$UPLOAD:<<(.+?)>-<(.+?)>-<(.+?)>>/g)) {
-		await upload(config.asset_roots.Texture2D + '/' + path, filename, categories)
+		if (alreadyUploaded.has(filename)) continue
+		alreadyUploaded.add(filename)
+		
+		const sanitizedName = sanitizeString(filename)
+		await upload(config.asset_roots.Texture2D + '/' + path, sanitizedName, categories)
+		if (filename != sanitizedName) {
+			await redirect('File:' + filename, 'File:' + sanitizedName)
+		}
 	}
 }
 

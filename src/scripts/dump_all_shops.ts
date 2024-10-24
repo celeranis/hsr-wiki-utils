@@ -157,6 +157,16 @@ for (const shop of await Shop.loadAll()) {
 						const preItem = items.find(item => item.goods_id == args[0])
 						notes.push(`after purchasing all limited ${preItem?.item?.name ?? item.item!.name} stock`)
 						break
+					case 'ItemNum':
+						if (args[0]) {
+							notes.push(`if not yet owned`)
+						} else {
+							notes.push(`if less than ${args[0]} owned`)
+						}
+						break
+					case 'EquipmentRankUpNum':
+						notes.push(`if the associated Light Cone has not reached Superimposition V`)
+						break
 					default:
 						notes.push(`{{cx}}<!--${type}, ${args}-->`)
 						break

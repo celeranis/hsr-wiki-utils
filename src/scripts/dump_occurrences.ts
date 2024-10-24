@@ -2,7 +2,7 @@ import { mkdir, writeFile } from 'fs/promises';
 import { BlessingGroup } from '../Blessing.js';
 import { ChangeHistory } from '../ChangeHistory.js';
 import { Item } from '../Item.js';
-import { displaySUMode, OccurrenceSeries } from '../Occurrence.js';
+import { displaySUMode, OccurrenceSeries, RogueImage } from '../Occurrence.js';
 import { sanitizeString, wikiTitle, zeroPad } from '../Shared.js';
 import { TextMap } from '../TextMap.js';
 import { pageInfoHeader } from '../util/General.js';
@@ -55,13 +55,13 @@ for (const occurrence of Object.values(await OccurrenceSeries.loadAllAbstract())
 	const infobox = new Template('Simulated Universe Event Infobox')
 		.addParam('id', occurrence.id)
 		.addParam('title', firstOccurrence.name != wikiTitle(firstOccurrence.name) ? firstOccurrence.name : '')
-		.addParam('image', IMAGE_ID_MAP[firstOccurrence.image_id] ?? '<!--TBA-->')
+		.addParam('image', IMAGE_ID_MAP[firstOccurrence.image_id] ?? `<!--TBA: ${RogueImage[firstOccurrence.image_id]?.ImagePath}-->`)
 		.addParam('domains_su', occurrence.modes.includes('su') ? 'Unknown' : '')
-		.addParam('domains_ext', '')
+		// .addParam('domains_ext', '')
 		.addParam('domains_swarm', occurrence.modes.includes('swarm') ? 'Unknown' : '')
 		.addParam('domains_gng', occurrence.modes.includes('gng') ? 'Unknown' : '')
 		.addParam('domains_du', occurrence.modes.includes('du') ? 'Unknown' : '')
-		// .addParam('domains_und', occurrence.modes.includes('und') ? 'Unknown' : '')
+		.addParam('domains_und', occurrence.modes.includes('und') ? 'Unknown' : '')
 		.addParam('requirements', '')
 		.addParam('prev', '')
 		.addParam('next', '')
