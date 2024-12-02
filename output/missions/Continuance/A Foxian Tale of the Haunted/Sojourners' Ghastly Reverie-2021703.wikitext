@@ -11,7 +11,7 @@ PageTitle=#Sojourners' Ghastly Reverie#
 |chapter       = A Foxian Tale of the Haunted
 |requirements  = [[Trailblaze Continuance]] ''[[Sojourners' Ghastly Reverie]]'' completed
 |summary       = <!--official mission summary from Fate's Atlas-->
-|characters    = Trailblazer
+|characters    = Cirrus; Huohuo; Tail; Trailblazer; Xueyi
 |startLocation = [[The Xianzhou Luofu]] - [[Fyxestroll Garden]]
 |world         = The Xianzhou Luofu
 |area          = Fyxestroll Garden
@@ -34,10 +34,77 @@ PageTitle=#Sojourners' Ghastly Reverie#
 ==Dialogue==
 {{Stub Dialogue}}
 
-===Chat with Xueyi and learn the truth about Fyxestroll Garden===
+===Chat with Xueyi and learn the truth about Fyxestroll Garden{{subst:void|<!--202170301-->}}===
 {{Mission Description|type=continuance|location=Fyxestroll Garden|Being dragged into a mirror and then spat out again makes a perfect beginning and end for a supernatural story. Unfortunately, as soon as you leave the illusory maze, you realize that the real Fyxestroll Garden has fallen under the control of the heliobi, and the Judges are doing their best to prolong the impending utter rout.}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Xueyi)
+:{{A|VO side2 hh xueyi 153.ogg}} '''Xueyi:''' Have you made up your mind?
+:{{DIcon|Arrow}} Let's listen to Cirrus's plan.
+::{{A|VO side2 hh xueyi 154.ogg}} '''Xueyi:''' Let's go.
+:<pre>{
+	"$type": "RPG.GameCore.OpenTreasureChallenge",
+	"RaidID": 43211,
+	"OnCancel": [
+		{
+			"$type": "RPG.GameCore.EndDialogueEntityInteract"
+		}
+	]
+}</pre>
+:{{DIcon|Exit}} Wait, let me think about it.
+::{{A|VO side2 hh xueyi 155.ogg}} '''Xueyi:''' I understand. Take your time.
+
+;(Talk to Huohuo)
+:{{A|VO side2 hh huohuo 229.ogg}} '''Huohuo:''' Cirrus already helped us in the illusion maze. Maybe... we can trust them for now?
+:{{DIcon|Arrow}} Cirrus may have ulterior motives.
+::{{A|VO side2 hh fuyan 187.ogg}} '''Cirrus:''' You can believe whatever you like. I just want to get out of here. That's all I want.
+:{{DIcon|Arrow}} Both you and Madam Xueyi are here. They can't escape.
+::{{A|VO side2 hh fuyan 188.ogg}} '''Cirrus:''' Yes, yes, you're right. I can't escape. Do you trust me now?
+:{{A|VO side2 hh huohuo 230.ogg}} '''Huohuo:''' I&mdash;I guess we can go with Cirrus's plan. It's not like we have any of our own...
+----
+:{{A|VO side2 hh huohuo 224.ogg}} '''Huohuo:''' Are we... back in Fyxestroll Garden?
+:{{A|VO side2 hh xueyi 141.ogg}} '''Xueyi:''' You have returned safely. It seems the Ten-Lords Commission is not down on our luck today.
+:{{A|VO side2 hh huohuo 225.ogg}} '''Huohuo:''' Madam Xueyi, I'm so happy to see you're alright!
+:{{A|VO side2 hh xueyi 142.ogg}} '''Xueyi:''' Did you encounter anything strange on your way here?
+:{{DIcon|Arrow}} The game's up, Cirrus.
+:{{DIcon|Arrow}} Cirrus, get out of my body. Now.
+:{{DIcon|Arrow}} I got possessed! Help me!
+:{{A|VO side2 hh fuyan 184.ogg}} '''Cirrus:''' Hehehe, no wonder she's a judge. Very perceptive...
+:{{Black Screen|Huohuo informs Xueyi of what you have experienced so far...}}
+:{{A|VO side2 hh xueyi 143.ogg}} '''Xueyi:''' I understand. This isn't the time to deal with Cirrus. Fyxestroll Garden has been dragged into a powerful illusion by an even mightier heliobus, and the spiritfarers who went to suppress it have lost contact with me.
+:{{A|VO side2 hh xueyi 144.ogg}} '''Xueyi:''' Huohuo, if both Hanya and I are unable to suppress that demon, then you will have to defeat it.
+:{{A|VO side2 hh huohuo 226.ogg}} '''Huohuo:''' Huh? I&mdash;I won't be able to do it! I'm not as powerful as you two... I always run and hide before a battle...
+:{{A|VO side2 hh xueyi 145.ogg}} '''Xueyi:''' Do not underestimate yourself. A heliobus cannot possess a body that is already possessed by another heliobus &mdash; such is your absolute advantage as a judge.
+:{{DIcon|Arrow}} I'm possessed too &mdash; do I also get an advantage?
+::{{A|VO side2 hh xueyi 146.ogg}} '''Xueyi:''' Correct. However, Huohuo has had many more years of training and is more experienced in fighting heliobi than you.
+::{{A|VO side2 hh xueyi 147.ogg}} '''Xueyi:''' That is why the Ten-Lords Commission is not down on our luck today. We're lucky that you have all returned at this opportune time.
+::{{A|VO side2 hh tail 154.ogg}} '''Tail:''' You hear that, scaredy-cat? You're the ace of the Ten-Lords Commission.
+:{{DIcon|Arrow}} Indeed. Even the weakest person has their strengths.
+::{{A|VO side2 hh huohuo 227 m.ogg}} {{A|VO side2 hh huohuo 227 f.ogg}} '''Huohuo:''' I know you're trying to comfort me... but that sounded a little weird.
+::{{A|VO side2 hh tail 155.ogg}} '''Tail:''' You need to start filtering out the stuff you don't wanna hear. That's what I do.
+:{{A|VO side2 hh xueyi 148.ogg}} '''Xueyi:''' The heliobi are aggressive beings, but they cannot shake their desire for a flesh and blood body. And yet, during the 38 years you have worked for the Ten Lords, you have been constantly able to suppress the monster within your tail and maintain your personality. You are already a fitting judge. Be confident.
+:{{A|VO side2 hh xueyi 149.ogg}} '''Xueyi:''' On that point, none of the other judges can surpass you.
+:{{A|VO side2 hh huohuo 228.ogg}} '''Huohuo:''' Suppress the monster... B&mdash;But I don't think I've ever had to suppress Tail! I guess we're more like... friends?
+:{{A|VO side2 hh tail 156.ogg}} '''Tail:''' Friends!? Bah! I don't make friends with food.
+:{{A|VO side2 hh fuyan 185.ogg}} '''Cirrus:''' Hehe, "Mr. Tail," puny fragments like us were deprived of Ignamar's power long ago... If a little girl can subdue us, then perhaps it's time for some humility.
+:{{A|VO side2 hh tail 157.ogg}} '''Tail:''' Shut your trap!
+:{{A|VO side2 hh xueyi 150.ogg}} '''Xueyi:''' Though Furynox is powerful, we have a chance of suppressing them if we can break them into multiple fragments.
+:{{A|VO side2 hh fuyan 186.ogg}} '''Cirrus:''' You have a sound plan, Your Honor... and since the stage is set, allow me to offer my assistance. Let's find somewhere more open first... like Swallowsong Pavilion, over there.
+:{{DIcon|Arrow}} Let's listen to Cirrus's plan.
+::{{A|VO side2 hh xueyi 151.ogg}} '''Xueyi:''' Let's go.
+::----
+:<pre>{
+	"$type": "RPG.GameCore.OpenTreasureChallenge",
+	"RaidID": 43211,
+	"OnCancel": [
+		{
+			"$type": "RPG.GameCore.EndDialogueEntityInteract"
+		}
+	]
+}</pre>
+:{{DIcon|Exit}} Wait, let me think about it.
+::{{A|VO side2 hh xueyi 152.ogg}} '''Xueyi:''' I understand. Take your time.
+::{{Black Screen|Huohuo informs Xueyi of what you have experienced so far...}}
 {{Dialogue End}}
 
 ==Other Languages==

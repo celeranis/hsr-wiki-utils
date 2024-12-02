@@ -11,7 +11,7 @@ PageTitle=#Outsourcer#
 |chapter       = 
 |requirements  = [[Trailblaze Mission]] ''[[A Walk Among the Tombstones]]'' completed
 |summary       = <!--official mission summary from Fate's Atlas-->
-|characters    = Trailblazer
+|characters    = Burton; Trailblazer
 |startLocation = [[Penacony]] - [[Clock Studios Theme Park]]
 |world         = Penacony
 |area          = Clock Studios Theme Park
@@ -23,15 +23,17 @@ PageTitle=#Outsourcer#
 
 ==Steps==
 # Attend the interview at Dewlight Pavilion
+# Search for the files that The Family needs
+# Enter the dangerous office
 # Leave the dangerous office
 # Check the results with Burton
+# Search for the files that The Family needs
+# Return to the disorderly room
 # Leave the disorderly room
 # Check the results with Burton
-# Leave the disorderly room
-# Enter the dangerous office
-# Return to the disorderly room
-# Search for the files that The Family needs
 # Look for the other half of the report
+# Return to the disorderly room
+# Leave the disorderly room
 # Piece together the report with Burton
 
 <!--
@@ -45,72 +47,202 @@ PageTitle=#Outsourcer#
 {{Stub Dialogue}}
 {{Dialogue End}}
 
-===Attend the interview at Dewlight Pavilion===
+===Attend the interview at Dewlight Pavilion{{subst:void|<!--802140202-->}}===
 {{Mission Description|type=adventure|location=Dewlight Pavilion|update|The Family is hiring provisional detectives at Dewlight Pavilion. Go to the interview grounds and see what's up.}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Burton)
+:'''Burton:''' You finally made it here! If you didn't show up, they would've had my head.
+:'''Burton:''' Someone messed up the Pavilion and triggered the security system we installed during construction. The office is a complete mess now.
+:'''Burton:''' It'll take a while to fix the system, but the documents inside are urgently needed and must be salvaged quickly.
+:{{DIcon|Arrow}} What about the interview?
+:'''Burton:''' You're the only one here. Let's just get started.
+:'''Burton:''' Before I could even finish my words, those cowards just ran away as soon as they heard they might run into memes.
+:'''Burton:''' Their eyes lit up like lasers when they heard about money, and they ran faster than a Trotter when they heard about danger. Now I'm counting on you, hero.
+:'''Burton:''' Now, for the reward... Brace yourself because this good news might shock you! It's 5,000 Alfalfa credits! Enough to redeem the same amount of IPC credits! Incredible, right?
+:{{DIcon|Arrow}} Who do you think I am, a beggar?
+:{{DIcon|Arrow}} To be honest, you'll have to pay more.
+:'''Burton:''' That's a decent price. Other agents pay even less! You'll get 5,000 credits because we're in this Pavilion, and if it were someone else, they'd take another 2,000 credits from you! A 50/50 split like this is good enough.
+:'''Burton:''' Alright then, when everything's settled, I'll take 30%, and you take 70%. Deal?
+:'''Burton:''' Clock's ticking, and the higher-ups want some progress. See that door behind me? Set off whenever you're ready.
 {{Dialogue End}}
 
-===Leave the dangerous office===
-{{Mission Description|type=adventure|location=Dewlight Pavilion|update|Staying too long in this place isn't great for your health. Better leave first.}}
-{{Dialogue Start}}
-:{{tx}}
-{{Dialogue End}}
-
-===Check the results with Burton===
-{{Mission Description|type=adventure|location=Dewlight Pavilion|update|Let's see what files there are before turning them in.}}
-{{Dialogue Start}}
-:{{tx}}
-{{Dialogue End}}
-
-===Leave the disorderly room===
-{{Mission Description|type=adventure|location=Dewlight Pavilion|update|Nothing new will pop up even if you stay longer. Let's leave first.}}
-{{Dialogue Start}}
-:{{tx}}
-{{Dialogue End}}
-
-===Check the results with Burton===
-{{Mission Description|type=adventure|location=Dewlight Pavilion|update|Let's see what files there are before turning them in.}}
-{{Dialogue Start}}
-:{{tx}}
-{{Dialogue End}}
-
-===Leave the disorderly room===
-{{Mission Description|type=adventure|location=Dewlight Pavilion|update|Finally done with work. It's time to bid this room farewell.}}
-{{Dialogue Start}}
-:{{tx}}
-{{Dialogue End}}
-
-===Enter the dangerous office===
-{{Mission Description|type=adventure|location=Dewlight Pavilion|update|The security system has turned this office into a maze. It won't be easy to find those files.}}
-{{Dialogue Start}}
-:{{tx}}
-{{Dialogue End}}
-
-===Return to the disorderly room===
-{{Mission Description|type=adventure|location=Dewlight Pavilion|update|To think that stuff can still be stashed in this office. What a headache! But you have a vague feeling that this won't be the last time.}}
-{{Dialogue Start}}
-:{{tx}}
-{{Mission Description|type=adventure|location=Dewlight Pavilion|update|Who exactly was it who thought of splitting this report into two? In any case, better return to the office.}}
-{{Dialogue End}}
-
-===Search for the files that The Family needs===
+===Search for the files that The Family needs{{subst:void|<!--802140203-->}}===
 {{Mission Description|type=adventure|location=Dewlight Pavilion|update|Files and a chest filled with files: Which one's more valuable?}}
 {{Dialogue Start}}
-:{{tx}}
-{{Mission Description|type=adventure|location=Dewlight Pavilion|update|Could this chest full of files have been dispatched from the factory?}}
+
+;(Talk to Burton)
+:'''Burton:''' Clock's ticking, and the higher-ups want some progress. See that door behind me? Set off whenever you're ready.
 {{Dialogue End}}
 
-===Look for the other half of the report===
+===Enter the dangerous office{{subst:void|<!--802140225-->}}===
+{{Mission Description|type=adventure|location=Dewlight Pavilion|update|The security system has turned this office into a maze. It won't be easy to find those files.}}
+{{Dialogue Start}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:'''Burton:''' Geez, the actual situation is way worse than what I heard. If that's the case, why is the pay so paltry?
+:'''Burton:''' Did the Bloodhounds miscalculate? Looks like they're really understaffed.
+:'''Burton:''' What's this? An interstellar travel reimbursement? Now some poor soul has to foot the bill.
+:'''Burton:''' Let's dig deeper.
+{{Dialogue End}}
+
+===Leave the dangerous office{{subst:void|<!--802140209-->}}===
+{{Mission Description|type=adventure|location=Dewlight Pavilion|update|Staying too long in this place isn't great for your health. Better leave first.}}
+{{Dialogue Start}}
+:'''Burton:''' I think we're almost done. If we have to keep digging, then I guess we'll have to tear down the walls.
+:'''Burton:''' Let's just get out of here. We'll lose money if we end up puking in the office.
+<pre>{
+	"$type": "RPG.GameCore.TeleportToRotatableRegion",
+	"TargetRegionIndex": {
+		"fixedValue": {
+			"Value": -1
+		}
+	},
+	"TargetAnchorGroupID": {
+		"fixedValue": {
+			"Value": 301
+		}
+	},
+	"TargetAnchorInstanceID": {
+		"fixedValue": {
+			"Value": 1
+		}
+	}
+}</pre>
+
+;(Talk to Burton)
+:'''Burton:''' We've been working our butts off, hero. Aren't you curious about what's written on these papers?
+:'''Burton:''' Let's just sneak a peek, and then we could either sell them to someone interested or use the content to blackmail those higher-ups.
+:{{DIcon|Arrow}} Are the Bloodhounds into this, too?
+:'''Burton:''' Hey, I never said I was a Bloodhound. I'm just an ordinary employee trying to make ends meet.
+:'''Burton:''' The Bloodhounds get these tasks from the top brass and then assign them to their agents. The agents then outsource the work to us, and then we help recruit people like you to handle it, so it's only fair that we take a little "tip" for ourselves.
+:'''Burton:''' Huh? These documents... seriously? ''Postpartum Care for Sweet Dreams Troupe'', and ''A Hundred Ways to Drink SoulGlad''...? What the heck are they reading in their leisure time?
+:'''Burton:''' Maybe we should go in again, hero? Just outsourcing work, nothing big deal.
+{{Dialogue End}}
+
+===Check the results with Burton{{subst:void|<!--802140210-->}}===
+{{Mission Description|type=adventure|location=Dewlight Pavilion|update|Let's see what files there are before turning them in.}}
+{{Dialogue Start}}
+{{Dialogue End}}
+
+===Search for the files that The Family needs{{subst:void|<!--802140211-->}}===
+{{Mission Description|type=adventure|location=Dewlight Pavilion|update|Could this chest full of files have been dispatched from the factory?}}
+{{Dialogue Start}}
+
+;(Talk to Burton)
+:'''Burton:''' Maybe we should go in again, hero? Just outsourcing work, nothing big deal.
+{{Dialogue End}}
+
+===Return to the disorderly room{{subst:void|<!--802140226-->}}===
+{{Mission Description|type=adventure|location=Dewlight Pavilion|update|To think that stuff can still be stashed in this office. What a headache! But you have a vague feeling that this won't be the last time.}}
+{{Dialogue Start}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:'''Burton:''' Hold on, the terrain even changes? What were the Dreamweavers thinking when they designed this security system?
+:'''Burton:''' So complicated. They thought they could defend against the IPC or Antimatter Legion, but instead, they just ended up trapping their own people inside.
+:'''Burton:''' Let's see what we've got this time... ''List of Anomalies in Penacony''. Doesn't sound cheap.
+:'''Burton:''' Heck! Can't believe it's just a novel! What a letdown!
+{{Dialogue End}}
+
+===Leave the disorderly room{{subst:void|<!--802140217-->}}===
+{{Mission Description|type=adventure|location=Dewlight Pavilion|update|Nothing new will pop up even if you stay longer. Let's leave first.}}
+{{Dialogue Start}}
+:'''Burton:''' Phew, this is a bit too much. Getting such paltry pay for the toughest job.
+:'''Burton:''' But hey, you must be way more exhausted, hero. Go ahead.
+<pre>{
+	"$type": "RPG.GameCore.TeleportToRotatableRegion",
+	"TargetRegionIndex": {
+		"fixedValue": {
+			"Value": -1
+		}
+	},
+	"TargetAnchorGroupID": {
+		"fixedValue": {
+			"Value": 301
+		}
+	},
+	"TargetAnchorInstanceID": {
+		"fixedValue": {
+			"Value": 1
+		}
+	}
+}</pre>
+
+;(Talk to Burton)
+:'''Burton:''' ''Proposal on Increasing Funding for Dream Construction Project'', and ''Draft on Equipment Renewal in Reverie Hotel''... all about asking for money. Looks like even the higher-ups are strapped for cash.
+:'''Burton:''' But this time, there isn't... Wait, why does this funding statement look like a jigsaw puzzle? It's only half of it...
+:{{DIcon|Arrow}} Some kind of anti-theft system?
+:'''Burton:''' Noticed something funny? These methods never prevent those who really intend to steal information. They only make us ordinary workers go in circles.
+:'''Burton:''' If a seat belt is only fastened and sturdy when it needs to be unbuckled, is it a seat belt or a stupid belt?
+:'''Burton:''' Well, forget it. We can't just go back with half of the document. We'll go back one last time, I promise.
+{{Dialogue End}}
+
+===Check the results with Burton{{subst:void|<!--802140218-->}}===
+{{Mission Description|type=adventure|location=Dewlight Pavilion|update|Let's see what files there are before turning them in.}}
+{{Dialogue Start}}
+{{Dialogue End}}
+
+===Look for the other half of the report{{subst:void|<!--802140219-->}}===
 {{Mission Description|type=adventure|location=Dewlight Pavilion|update|It's not just an incomplete expenditure report, it's also a very meaningful expenditure report.}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Burton)
+:'''Burton:''' Well, forget it. We can't just go back with half of the document. We'll go back one last time, I promise.
 {{Dialogue End}}
 
-===Piece together the report with Burton===
+===Return to the disorderly room{{subst:void|<!--802140227-->}}===
+{{Mission Description|type=adventure|location=Dewlight Pavilion|update|Who exactly was it who thought of splitting this report into two? In any case, better return to the office.}}
+{{Dialogue Start}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:'''Burton:''' This job is simply overwhelming for me. No wonder there were no competitors when I took it on.
+:'''Burton:''' You know what's the most annoying part? We outsourced laborers aren't even covered by insurance. And if we get injured, we won't receive any compensation.
+{{Dialogue End}}
+
+===Leave the disorderly room{{subst:void|<!--802140223-->}}===
+{{Mission Description|type=adventure|location=Dewlight Pavilion|update|Finally done with work. It's time to bid this room farewell.}}
+{{Dialogue Start}}
+:'''Burton:''' Finally, I almost got myself killed for the other half of the document.
+:'''Burton:''' Let's get out of here and put the two parts together, hero.
+<pre>{
+	"$type": "RPG.GameCore.TeleportToRotatableRegion",
+	"TargetRegionIndex": {
+		"fixedValue": {
+			"Value": -1
+		}
+	},
+	"TargetAnchorGroupID": {
+		"fixedValue": {
+			"Value": 301
+		}
+	},
+	"TargetAnchorInstanceID": {
+		"fixedValue": {
+			"Value": 1
+		}
+	}
+}</pre>
+
+;(Talk to Burton)
+:Burton carefully pieces the two parts of the statement together, and the numbers on the paper rapidly flash.
+:'''Burton:''' This stuff updates in real time? As I'd expect from the Pavilion.
+:'''Burton:''' Since there's no one around, let's take a peek at this document and see why the higher-ups are so desperate for it, hero.
+:{{DIcon|Arrow}} Are we really doing this?
+:{{DIcon|Arrow}} Let me see!
+:{{DIcon|Arrow}} I'm not interested.
+:'''Burton:''' Look at this, the document reveals the reward amount for those who retrieve it... Wait, WHAT!? 200,000 credits!?
+:'''Burton:''' The Bloodhounds took a chunk, and the agents chipped away some more. In the end, my boss said the reward was only 30,000 credits.
+:'''Burton:''' Tsk! No wonder this task is so tough! They've taken all the money and left us with a measly payout! And here I thought they were strapped for cash and I was trying to help them save money!
+:'''Burton:''' Here's your payment, not a penny less. And if it's more than the amount we agreed on, consider it as compensation for your hard work.
+:'''Burton:''' As for my boss, heh, seems like he's got a big appetite. I'm going to have a "little chat" with him today.
+{{Dialogue End}}
+
+===Piece together the report with Burton{{subst:void|<!--802140224-->}}===
 {{Mission Description|type=adventure|location=Dewlight Pavilion|update|It's not just Burton. You're curious too... What exactly is on this expenditure report?}}
 {{Dialogue Start}}
-:{{tx}}
 {{Dialogue End}}
 
 ==Other Languages==

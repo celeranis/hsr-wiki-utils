@@ -11,7 +11,7 @@ PageTitle=#Hide-and-Seek#
 |chapter       = In the Withering Wintry Night
 |requirements  = [[Trailblaze Mission]] ''[[You Can Run, But You Can't Hide]]'' completed
 |summary       = Dizziness set in, and you awakened to find yourself separated from your companions, lying on a bed. Through a thrilling game of hide-and-seek, you reunited with March 7th and embarked on a quest to locate Dan Heng.
-|characters    = Trailblazer
+|characters    = Trailblazer; Voice of the Stellaron; Young Cocolia
 |startLocation = [[Jarilo-VI]] - [[Backwater Pass]]
 |world         = Jarilo-VI
 |area          = Backwater Pass
@@ -34,10 +34,47 @@ PageTitle=#Hide-and-Seek#
 ==Dialogue==
 {{Stub Dialogue}}
 
-===Talk to the unfamiliar woman and find out about what's happening===
+===Talk to the unfamiliar woman and find out about what's happening{{subst:void|<!--101040101-->}}===
 {{Mission Description|type=trailblaze|location=Backwater Pass|As the daughter of the Supreme Guardian, Bronya has always been quick and decisive &mdash; this pursuit operation targeted at you was no exception.<br />Good thing your "good pal" Sampo arrived just in time to rescue you. It's just that... it would've been better if he didn't knock you out with the smoke bomb made from questionable ingredients.<br />In your daze, you realize that you aren't tied up but placed on a bed somewhere &mdash; to a degree, this tells you that you're not in immediate danger. You'll have to ask the unfamiliar woman in front of you for more details.}}
 {{Dialogue Start}}
+----
+<pre>{
+	"$type": "RPG.GameCore.SetAudioEmotionState",
+	"StateName": "State_Bgm_E1",
+	"SubMissionID": 101040114
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.TriggerSound",
+	"SoundName": {
+		"Value": "Ev_global_set_sfx_cg_bus_mute"
+	},
+	"EmitterType": "DefaultEmitter"
+}</pre>
+;(Screen fades to black)
+:{{A|VO chapter1 CG2 cocolia 201.ogg}} '''Young Cocolia:''' ...They will suffer, sacrifice, and die because of my order.
+:{{A|VO chapter1 CG2 stellaron 201.ogg}} '''Voice of the Stellaron:''' It is not death which greets them... They will be swept into the infancy of a new world.
+:{{A|VO chapter1 CG2 cocolia 202.ogg}} '''Young Cocolia:''' What about the Underworlders? They will lose the protection of the Architects. They will see me... as a tyrant.
+:{{A|VO chapter1 CG2 stellaron 202.ogg}} '''Voice of the Stellaron:''' You have witnessed... the world we have promised.
+:{{A|VO chapter1 CG2 stellaron 203.ogg}} '''Voice of the Stellaron:''' A temporary misunderstanding... for an eternity of prosperity.
+:{{A|VO chapter1 CG2 stellaron 204.ogg}} '''Voice of the Stellaron:''' We will honor... your decision.
+;(Screen fades to black)
+:{{A|VO chapter1 CG2 cocolia 203.ogg}} '''Young Cocolia:''' ...
+:{{A|VO chapter1 CG2 cocolia 204.ogg}} '''Young Cocolia:''' I understand.
+----
+<pre>{
+	"$type": "RPG.GameCore.TriggerSound",
+	"SoundName": {
+		"Value": "Ev_global_set_sfx_cg_bus_unmute"
+	},
+	"EmitterType": "DefaultEmitter"
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.SetAudioEmotionState",
+	"StateName": "State_Joyful",
+	"SubMissionID": 101040114
+}</pre>
 :{{tx}}
+;(Fully recovers all allies' HP)
 {{Dialogue End}}
 
 ==Other Languages==

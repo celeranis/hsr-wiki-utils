@@ -7,11 +7,11 @@ PageTitle=#Fyxestroll Gathering (IV)#
 |title         = 
 |image         = <!--Mission Fyxestroll Gathering (IV).png-->
 |type          = Trailblaze Continuance
-|event_name    = 
+|event_name    = A Foxian Tale of the Haunted
 |chapter       = A Foxian Tale of the Haunted
 |requirements  = Reach phase 4 in [[A Foxian Tale of the Haunted]]
 |summary       = Summoned by the Ten-Lords Commission, you have established the "Ten-Lords Commission Special Operations Team for the Heliobi Containment Breach Incident."<br />Now, you need to collect clues about the escaped heliobi from the Ghostly Grove.
-|characters    = Trailblazer
+|characters    = Guinaifen; Trailblazer
 |startLocation = [[The Xianzhou Luofu]] - [[Fyxestroll Garden]]
 |world         = The Xianzhou Luofu
 |area          = Fyxestroll Garden
@@ -19,7 +19,7 @@ PageTitle=#Fyxestroll Gathering (IV)#
 |next          = Foxian Dream
 |rewards       = 
 }}
-'''''Fyxestroll Gathering (IV)''''' is a [[Trailblaze Continuance]] in the chapter [[A Foxian Tale of the Haunted (Continuance)|A Foxian Tale of the Haunted]].
+'''''Fyxestroll Gathering (IV)''''' is an Event [[Trailblaze Continuance]] from the [[A Foxian Tale of the Haunted]] event.
 
 ==Steps==
 # Meet up with your teammates in Fyxestroll Garden
@@ -35,16 +35,34 @@ PageTitle=#Fyxestroll Gathering (IV)#
 ==Dialogue==
 {{Stub Dialogue}}
 
-===Meet up with your teammates in Fyxestroll Garden===
+===Meet up with your teammates in Fyxestroll Garden{{subst:void|<!--801519401-->}}===
 {{Mission Description|type=continuance|location=Fyxestroll Garden|Once again, you reunite with your fellow ghost hunters at Fyxestroll Garden. Scanning through the posts on Ghostly Grove and conducting investigations have become routine tasks for you.}}
 {{Dialogue Start}}
-:{{tx}}
+<pre>{
+	"$type": "RPG.GameCore.WaitUIControllerClose",
+	"UIControllerName": "HeliobusActionDayResultPerformanceDialog"
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.WaitUIControllerClose",
+	"UIControllerName": "HeliobusActionDayResultPage"
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.PlayMessage",
+	"MessageSectionID": 1218200,
+	"ShowNotice": true
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.SaveMessage",
+	"MessageSectionID": 1218200
+}</pre>
 {{Dialogue End}}
 
-===Talk to Guinaifen and check the post asking for help===
+===Talk to Guinaifen and check the post asking for help{{subst:void|<!--801519402-->}}===
 {{Mission Description|type=continuance|location=Fyxestroll Garden|update|Having completed your adventure, you and your fellow ghost hunters are expected to reunite at Fyxestroll Garden as always, just like checking into work... However, Huohuo is missing this time!<br />Guinaifen has posted a message seeking information about Huohuo's whereabouts. Talk to her and see if she has discovered anything.}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Guinaifen)
+:{{A|VO side2 hzzy guinaifen 237.ogg}} '''Guinaifen:''' I'm looking at the reply &mdash; see, here. Miss Hanya said she's on her way.
 {{Dialogue End}}
 
 ==Other Languages==

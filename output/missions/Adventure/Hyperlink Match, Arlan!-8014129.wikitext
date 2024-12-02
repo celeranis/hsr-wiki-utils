@@ -7,7 +7,7 @@ PageTitle=#Hyperlink Match, Arlan!#
 |title         = 
 |image         = <!--Mission Hyperlink Match, Arlan!.png-->
 |type          = Adventure
-|event_name    = 
+|event_name    = Aetherium Wars
 |chapter       = 
 |requirements  = 
 * [[Adventure Mission]] ''[[Hyperlink Match, Natasha!]]'' completed
@@ -15,7 +15,7 @@ PageTitle=#Hyperlink Match, Arlan!#
 * [[Adventure Mission]] ''[[Hyperlink Match, Gepard!]]'' completed
 * [[Adventure Mission]] ''[[Hyperlink Match, Lynx!]]'' completed
 |summary       = <!--official mission summary from Fate's Atlas-->
-|characters    = Trailblazer
+|characters    = Arlan; Trailblazer
 |startLocation = [[Herta Space Station]] - [[Storage Zone]]
 |world         = Herta Space Station
 |area          = Storage Zone
@@ -23,7 +23,7 @@ PageTitle=#Hyperlink Match, Arlan!#
 |next          = 
 |rewards       = 
 }}
-'''''Hyperlink Match, Arlan!''''' is an [[Adventure Mission]] on [[Herta Space Station]].
+'''''Hyperlink Match, Arlan!''''' is an Event [[Adventure Mission]] from the [[Aetherium Wars]] event.
 
 ==Steps==
 # Have a Hyperlink Match with Arlan
@@ -37,11 +37,25 @@ PageTitle=#Hyperlink Match, Arlan!#
 -->
 ==Dialogue==
 {{Stub Dialogue}}
-
-===Have a Hyperlink Match with Arlan===
+===Have a Hyperlink Match with Arlan{{subst:void|<!--801412901-->}}===
 {{Mission Description|type=adventure|location=Storage Zone|The core gameplay loop behind Aetherium Wars is "dueling." Challenge different players and show your true strength!}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Arlan)
+:'''Arlan:''' I can't play anymore, I have to go on patrol...
+<pre>{
+	"$type": "RPG.GameCore.ShowMenu",
+	"DisplaySingleMenuItem": true
+}</pre>
+:'''Arlan:''' Thank you, now I can focus wholly on my work.
+<pre>{
+	"$type": "RPG.GameCore.ShowUI",
+	"Name": "Ui.AetherDivide.AetherDivideEntryPage",
+	"Param": {
+		"Value": "2"
+	},
+	"OnUIEnter": []
+}</pre>
 {{Dialogue End}}
 
 ==Other Languages==

@@ -7,11 +7,11 @@ PageTitle=#Operation Snapshot: Day 2#
 |title         = 
 |image         = <!--Mission Operation Snapshot Day 2.png-->
 |type          = Adventure
-|event_name    = 
+|event_name    = Operation Memoria Snapshot
 |chapter       = 
 |requirements  = [[Adventure Mission]] ''[[Operation Snapshot: Day 1]]'' completed
 |summary       = <!--official mission summary from Fate's Atlas-->
-|characters    = Trailblazer
+|characters    = Randolph; Trailblazer
 |startLocation = [[The Xianzhou Luofu]] - [[Central Starskiff Haven]]
 |world         = The Xianzhou Luofu
 |area          = Central Starskiff Haven
@@ -19,7 +19,7 @@ PageTitle=#Operation Snapshot: Day 2#
 |next          = Operation Snapshot: Day 3
 |rewards       = Credit*1,000
 }}
-'''''Operation Snapshot: Day 2''''' is an [[Adventure Mission]] on [[The Xianzhou Luofu]].
+'''''Operation Snapshot: Day 2''''' is an Event [[Adventure Mission]] from the [[Operation Memoria Snapshot]] event.
 
 ==Steps==
 # Talk to Randolph about today's filming
@@ -34,17 +34,52 @@ PageTitle=#Operation Snapshot: Day 2#
 -->
 ==Dialogue==
 {{Stub Dialogue}}
-
-===Talk to Randolph about today's filming===
+===Talk to Randolph about today's filming{{subst:void|<!--802430201-->}}===
 {{Mission Description|type=adventure|location=Central Starskiff Haven|Trainee Healer Randolph has prepared the retrieval plan for the scattered memoria today. Help him film the location of the target.}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Randolph)
+:'''Randolph:''' (Trailblazer), you came! Do you want to help me photograph some "memoria" today? As before, send their location to me once you get a picture and leave the containment work to me.
+:'''Randolph:''' I have to say, finishing my research in time for my deadline is no longer a crazy pipe dream now that I have you to help me! My stomach was starting to hurt from the stress!
+:{{DIcon|Travel Log}} Let's begin today's shoot.
+:<pre>{
+	"$type": "RPG.GameCore.SetPerformanceResult",
+	"Value": 1
+}</pre>
+:{{DIcon|Exit}} I've got something else to do.
+::'''Randolph:''' Alright. If you need to retake any pictures, you can come back anytime.
+
+;(Unused &mdash; G253_OpenUI)
+<pre>{
+	"$type": "RPG.GameCore.ShowUI",
+	"Name": "Ui.Activity.ActivityTrackPhoto.Entrance.ActivityTrackPhotoEntrancePage"
+}</pre>
 {{Dialogue End}}
 
-===Assist Randolph in filming the scattered memoria===
+===Assist Randolph in filming the scattered memoria{{subst:void|<!--802430202-->}}===
 {{Mission Description|type=adventure|location=Central Starskiff Haven|update|Help Trainee Healer Randolph with the filming so that he can capture these scattered memoria.}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Randolph)
+:'''Randolph:''' My beloved assistant, (Trailblazer)! If you want to retake any pictures, you can come and find me any time.
+:{{DIcon|Travel Log}} Let's begin today's shoot.
+:<pre>{
+	"$type": "RPG.GameCore.SetPerformanceResult",
+	"Value": 1
+}</pre>
+:{{DIcon|Exit}} I've got something else to do.
+::'''Randolph:''' Alright. If you need to retake any pictures, you can come back anytime.
+<pre>{
+	"$type": "RPG.GameCore.WaitFrame",
+	"WaitFrameCount": 1
+}</pre>
+:'''Randolph:''' Thank you so much, (Trailblazer). These pictures will make collecting and containing the memoria much easier.
+:{{DIcon|Arrow}} What is scattered memoria?
+:'''Randolph:''' How should I explain this... I'm sure you must have tried SoulGlad before, right? It's Penacony's signature soda. I'll try and use that as a comparison.
+:'''Randolph:''' No matter how tightly a soda bottle is sealed, some gas will leak out after the bottle has been lying around for too long. Similarly, human thoughts produce tiny amounts of "memoria," but they are so diluted that they are almost completely negligible.
+:'''Randolph:''' Penaconian therapists have long preferred going deep into the Dreamscape to research concentrated memoria. However, I don't believe in this practice. The trash that people cast aside still has value &mdash; people just don't know how to make use of it.
+:'''Randolph:''' I plan to begin by studying the scattered memoria of long-life species to broaden the study of psychological therapy. Perhaps there will come a day when I will be able to unveil the secret behind what the Xianzhou people call the "mara-struck."
+:'''Randolph:''' Either way, (Trailblazer). If you have time in the future, remember to come back and see me again.
 {{Dialogue End}}
 
 ==Other Languages==

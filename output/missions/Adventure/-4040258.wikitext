@@ -33,7 +33,50 @@ PageTitle=##
 -->
 ==Dialogue==
 {{Stub Dialogue}}
-
+<pre>{
+	"$type": "RPG.GameCore.BindSwitchPhotoGraphFuncBtn",
+	"MissionID": {
+		"IsDynamic": false,
+		"FixedValue": {
+			"Value": 4040258
+		}
+	},
+	"RangeTriggerProp": {
+		"FetchType": "SinglePropByPropID",
+		"SinglePropID": {
+			"GroupID": {
+				"IsDynamic": false,
+				"FixedValue": {
+					"Value": 137
+				}
+			},
+			"ID": {
+				"IsDynamic": false,
+				"FixedValue": {
+					"Value": 300002
+				}
+			}
+		}
+	},
+	"ColliderRelativePathList": [],
+	"AimTargetContainerConfig": [
+		{
+			"AimTargetType": {
+				"$type": "RPG.GameCore.GroupFetchLocalTarget",
+				"TargetType": "Prop",
+				"Targets": [
+					300001
+				]
+			},
+			"ContainerFlagName": "4040261_Scan",
+			"IsTopContainer": true,
+			"IsSimpleConfig": true,
+			"IsAutoIdentifyMode": true,
+			"IsAimTargetType": true
+		}
+	],
+	"NotStartPhotoInTriggerRangeMode": true
+}</pre>
 {{Dialogue End}}
 
 ==Other Languages==

@@ -11,7 +11,7 @@ PageTitle=#Sojourners' Ghastly Reverie#
 |chapter       = A Foxian Tale of the Haunted
 |requirements  = [[Trailblaze Mission]] ''[[Obsequies Performed, A Long Road Ahead]]'' completed
 |summary       = The heliobi escaped from the shattered Creation Furnace to Fyxestroll Garden to challenge a certain general on the Luofu.<br />Cirrus aimed to merge its companions for increased power, but you have thwarted its plan.
-|characters    = Trailblazer
+|characters    = Guinaifen; Hanya; Huohuo; Tail; Trailblazer; Wraith Warden; Xueyi
 |startLocation = [[The Xianzhou Luofu]] - [[Aurum Alley]]
 |world         = The Xianzhou Luofu
 |area          = Aurum Alley
@@ -25,10 +25,10 @@ PageTitle=#Sojourners' Ghastly Reverie#
 # Meet up with Guinaifen, who claims to have encountered a paranormal event
 # Chat with Guinaifen at Aurum Alley
 # Go to Fyxestroll Garden with Guinaifen
-# Explore Fyxestroll Garden! Bring it on, shades!
-# Chat with Huohuo, and get her to guide you out
 # Meet up with Guinaifen, who claims to have encountered a paranormal event
 # Explore Fyxestroll Garden! Bring it on, schmucks! Huh!
+# Explore Fyxestroll Garden! Bring it on, shades!
+# Chat with Huohuo, and get her to guide you out
 # Find Guinaifen in Locufox Forest
 
 <!--
@@ -40,52 +40,564 @@ PageTitle=#Sojourners' Ghastly Reverie#
 -->
 ==Dialogue==
 {{Stub Dialogue}}
-
-===Meet up with Guinaifen, who claims to have encountered a paranormal event===
+===Meet up with Guinaifen, who claims to have encountered a paranormal event{{subst:void|<!--202170110-->}}===
 {{Mission Description|type=continuance|location=Aurum Alley|No matter what kind of science-, magic-, faith-, or whatever-based upbringing you've had, when a third-tier influencer sends you a spam message claiming to have encountered supernatural entities in a deserted garden, your reaction would be: 1. "Sweet lol, I can meet up with this hot babe!" 2. "A new online scam? Blocked." 3. "Whatever. Let's check this out."<br />Naturally, no matter which one you choose, you would have steeled your mind to not give even 50 credits for this trip no matter what she says! No matter what! Besides, it's not like you have any disposable income.}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Guinaifen)
+:----
+::{{A|VO side2 hh guinaifen 101.ogg}} '''Guinaifen:''' Yo, it's you! You're interested in the supernatural, right?
+::{{A|VO side2 hh guinaifen 102.ogg}} '''Guinaifen:''' Lucky for you, I just finished editing my stream &mdash; it's all the proof you need...
+::{{A|VO side2 hh guinaifen 103.ogg}} '''Guinaifen:''' But before you watch it, I gotta ask you a question... do you believe in ghosts?
+::{{DIcon|Arrow}} I believe!
+::<pre>{
+	"$type": "RPG.GameCore.TriggerPermanentEmotion",
+	"TargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvNpcEx",
+		"FetchType": "SingleNpcByNpcID",
+		"SingleNpcID": {
+			"GroupID": {
+				"fixedValue": {
+					"Value": 193
+				}
+			},
+			"GroupNpcID": {
+				"fixedValue": {
+					"Value": 400001
+				}
+			}
+		}
+	},
+	"EmotionName": "Proud01",
+	"TransitTime": 0.2
+}</pre>
+:::{{A|VO side2 hh guinaifen 104.ogg}} '''Guinaifen:''' I knew it! Curious cats like us usually have a better sixth sense &mdash; it's easier for us to perceive the unseen...
+::{{DIcon|Arrow}} Vids or it didn't happen... and no clickbait.
+::<pre>{
+	"$type": "RPG.GameCore.TriggerPermanentEmotion",
+	"TargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvNpcEx",
+		"FetchType": "SingleNpcByNpcID",
+		"SingleNpcID": {
+			"GroupID": {
+				"fixedValue": {
+					"Value": 193
+				}
+			},
+			"GroupNpcID": {
+				"fixedValue": {
+					"Value": 400001
+				}
+			}
+		}
+	},
+	"EmotionName": "Proud01",
+	"TransitTime": 0.2
+}</pre>
+:::{{A|VO side2 hh guinaifen 105.ogg}} '''Guinaifen:''' Hehe, I think you're in for a surprise...
+:::{{A|VO side2 hh guinaifen 106.ogg}} '''Guinaifen:''' This video is gonna prove that the Xianzhou is full of supernatural phenomena.
+::{{DIcon|Arrow}} My beliefs aside, your messages...
+::<pre>{
+	"$type": "RPG.GameCore.TriggerPermanentEmotion",
+	"TargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvNpcEx",
+		"FetchType": "SingleNpcByNpcID",
+		"SingleNpcID": {
+			"GroupID": {
+				"fixedValue": {
+					"Value": 193
+				}
+			},
+			"GroupNpcID": {
+				"fixedValue": {
+					"Value": 400001
+				}
+			}
+		}
+	},
+	"EmotionName": "Trouble01",
+	"TransitTime": 0.2
+}</pre>
+:::{{A|VO side2 hh guinaifen 107.ogg}} '''Guinaifen:''' Uhh, that was me copying video titles from the hottest streamers on the Luofu... I heard they help attract more viewers.
+::<pre>{
+	"$type": "RPG.GameCore.StopPermanentEmotion",
+	"TargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvNpcEx",
+		"FetchType": "SingleNpcByNpcID",
+		"SingleNpcID": {
+			"GroupID": {
+				"fixedValue": {
+					"Value": 193
+				}
+			},
+			"GroupNpcID": {
+				"fixedValue": {
+					"Value": 400001
+				}
+			}
+		}
+	},
+	"TransitTime": 0.2
+}</pre>
+::{{A|VO side2 hh guinaifen 108.ogg}} '''Guinaifen:''' Enough chit-chat &mdash; look! This is the weird stuff that happened yesterday when I was streaming in Fyxestroll Garden!
+:{{A|VO side2 hh guinaifen 128 m.ogg}} {{A|VO side2 hh guinaifen 128 f.ogg}} '''Guinaifen:''' Yo, how's that super strong sixth sense of yours?
+::{{A|VO side2 hh guinaifen 129.ogg}} '''Guinaifen:''' Wanna explore Fyxestroll Garden with me? I KNOW we're gonna get to the truth this time.
+::{{DIcon|Arrow}} Let's face the ghosts together!
+:::{{A|VO side2 hh guinaifen 130.ogg}} '''Guinaifen:''' Hee-hee, I knew it! This is what people like us live for. Let's go!
+::<pre>{
+	"$type": "RPG.GameCore.SetMissionCustomValue",
+	"SubmissionID": 202170101,
+	"MissionCustomValue": {
+		"isLocal": true,
+		"ValidValueParamList": [
+			0,
+			1
+		]
+	},
+	"CustomValue": 1
+}</pre>
+::{{DIcon|Exit}} I'm a little scared. Let me think it over...
+:::{{A|VO side2 hh guinaifen 131.ogg}} '''Guinaifen:''' What? What's there to think about? I get it. I'll be waiting for you here when you're ready!
+::----
 {{Dialogue End}}
 
-===Chat with Guinaifen at Aurum Alley===
+===Chat with Guinaifen at Aurum Alley{{subst:void|<!--202170101-->}}===
 {{Dialogue Start}}
-:{{tx}}
 {{Dialogue End}}
 
-===Go to Fyxestroll Garden with Guinaifen===
+===Go to Fyxestroll Garden with Guinaifen{{subst:void|<!--202170102-->}}===
 {{Mission Description|type=continuance|location=Fyxestroll Garden|update|You see Guinaifen, and she's as beautiful in person as she is online... Ahem, we've digressed. The girl is trying very hard to convince you that she just experienced a spooky encounter, even shoving a video of it in your face.<br />Even video content can't be trusted these days, but her flustered tone and unbridled expressions do hint at some kind of terror surrounding that Fyxestroll Garden place... Heh, the Nameless shall uncover the secret behind all this! Let's go ghostbusting at Fyxestroll Garden!<br />Right now, you won't get it &mdash; but curiosity forms the basis for the start of all good horror movies...}}
 {{Dialogue Start}}
+:{{A|VO side2 hh guinaifen 101.ogg}} '''Guinaifen:''' Yo, it's you! You're interested in the supernatural, right?
+:{{A|VO side2 hh guinaifen 102.ogg}} '''Guinaifen:''' Lucky for you, I just finished editing my stream &mdash; it's all the proof you need...
+:{{A|VO side2 hh guinaifen 103.ogg}} '''Guinaifen:''' But before you watch it, I gotta ask you a question... do you believe in ghosts?
+:I believe!
+:{{A|VO side2 hh guinaifen 104.ogg}} '''Guinaifen:''' I knew it! Curious cats like us usually have a better sixth sense &mdash; it's easier for us to perceive the unseen...
+:Vids or it didn't happen... and no clickbait.
+:{{A|VO side2 hh guinaifen 105.ogg}} '''Guinaifen:''' Hehe, I think you're in for a surprise...
+:{{A|VO side2 hh guinaifen 106.ogg}} '''Guinaifen:''' This video is gonna prove that the Xianzhou is full of supernatural phenomena.
+:My beliefs aside, your messages...
+:{{A|VO side2 hh guinaifen 107.ogg}} '''Guinaifen:''' Uhh, that was me copying video titles from the hottest streamers on the Luofu... I heard they help attract more viewers.
+:{{A|VO side2 hh guinaifen 108.ogg}} '''Guinaifen:''' Enough chit-chat &mdash; look! This is the weird stuff that happened yesterday when I was streaming in Fyxestroll Garden!
+:{{A|VO side2 hh guinaifen 109.ogg}} '''Guinaifen:''' Me and my bestie got kicked out of the garden straight after... but did you see the key moment?
+:The "ghosts" were cheap special effects?
+:{{A|VO side2 hh guinaifen 110.ogg}} '''Guinaifen:''' What!? No! There was a freezing chill, not to mention the way they drifted through the air... They were legit ghosts! Anyway, the key point was...
+:Why is it in third-person perspective at the end?
+:{{A|VO side2 hh guinaifen 111.ogg}} '''Guinaifen:''' Ugh, it's called editing? I edited it! That way I can show what happened before and after. Anyway, the key moment was...
+:The comments all look like bots wrote them...
+:{{A|VO side2 hh guinaifen 112.ogg}} '''Guinaifen:''' Why are you so focused on all the wrong things?
+:{{A|VO side2 hh guinaifen 113.ogg}} '''Guinaifen:''' It wasn't the Realm-Keeping Commission or the Cloud Knights that came to deal with it. It was the judges from the Ten-Lords Commission!
+:Judges from the Ten-Lords Commission? That's crazy!
+:{{A|VO side2 hh guinaifen 114.ogg}} '''Guinaifen:''' That's what I'm saying! At first, Sushang didn't believe that Fyxestroll Garden was haunted. But after the judges showed up...
+:What's... the Ten-Lords Commission?
+:{{A|VO side2 hh guinaifen 115.ogg}} '''Guinaifen:''' You've been on the Xianzhou for this long and you've never heard of the Ten-Lords Commission?
+:{{A|VO side2 hh guinaifen 116.ogg}} '''Guinaifen:''' They're the most mysterious organization on the Xianzhou! Their investigators always pop up out of nowhere, then disappear without a trace. If they show up, you know something serious is going down!
+:{{A|VO side2 hh guinaifen 117.ogg}} '''Guinaifen:''' In other words, something BIG must have happened in Fyxestroll Garden for them to show up.
+:They went to Fyxestroll Garden to catch ghosts...
+:{{A|VO side2 hh guinaifen 118.ogg}} '''Guinaifen:''' Exactly! Now do you believe that my content isn't clickbait?
+:Maybe it was just a false alarm?
+:{{A|VO side2 hh guinaifen 119.ogg}} '''Guinaifen:''' Possibly... but the judges kicked me and Sushang out of there straight away. It looked like they were setting something up in the garden before we left.
+:{{A|VO side2 hh guinaifen 120.ogg}} '''Guinaifen:''' There has to be a conspiracy... Uh, I mean &mdash; ghosts!
+:{{A|VO side2 hh guinaifen 121 m.ogg}} {{A|VO side2 hh guinaifen 121 f.ogg}} '''Guinaifen:''' Actually, do you have some free time? Do you wanna explore Fyxestroll Garden together, just the two of us? I guarantee you we're gonna reveal the truth this time.
+:Let's face the ghosts together!
+:{{A|VO side2 hh guinaifen 122.ogg}} '''Guinaifen:''' Hee-hee, I knew it! This is what people like us live for. Let's go!
+:You're going despite the risk?
+:{{A|VO side2 hh guinaifen 123.ogg}} '''Guinaifen:''' High risk, high reward, high view count. As we grow up, our curiosity for the unknown gradually fades... I'm not gonna let myself become a boring grown-up.
+:{{A|VO side2 hh guinaifen 124.ogg}} '''Guinaifen:''' Why are the ghosts haunting the garden? A lingering grudge, perhaps... or maybe they're an omen of some impending disaster? Aren't you curious?
+:...Sure.
+:{{A|VO side2 hh guinaifen 125.ogg}} '''Guinaifen:''' Don't be scared. When the time comes, just hide behind me.
+:No.
+:{{A|VO side2 hh guinaifen 126.ogg}} '''Guinaifen:''' I get it &mdash; you're scared. I'm scared too. I'm sure you'll find your courage sooner or later. I'll be here waiting for you when you do!
+:I'm a little scared. Let me think it over...
+:{{A|VO side2 hh guinaifen 127.ogg}} '''Guinaifen:''' I understand &mdash; I'm scared too! I'm sure you'll find your courage sooner or later. I'll be here waiting for you when you do!
+:{{A|VO side2 hh guinaifen 128 m.ogg}} {{A|VO side2 hh guinaifen 128 f.ogg}} '''Guinaifen:''' Yo, how's that super strong sixth sense of yours?
+:{{A|VO side2 hh guinaifen 129.ogg}} '''Guinaifen:''' Wanna explore Fyxestroll Garden with me? I KNOW we're gonna get to the truth this time.
+:Let's face the ghosts together!
+:{{A|VO side2 hh guinaifen 130.ogg}} '''Guinaifen:''' Hee-hee, I knew it! This is what people like us live for. Let's go!
+:I'm a little scared. Let me think it over...
+:{{A|VO side2 hh guinaifen 131.ogg}} '''Guinaifen:''' What? What's there to think about? I get it. I'll be waiting for you here when you're ready!
+:{{A|VO side2 hh guinaifen 132.ogg}} '''Guinaifen:''' It's so dark in here... It feels like we're being watched...
+:{{A|VO side2 hh guinaifen 133.ogg}} '''Guinaifen:''' Did anyone ever tell you the scary stories about Fyxestroll Garden?
+:{{DIcon|Arrow}} Don't think so...
+::{{A|VO side2 hh guinaifen 134.ogg}} '''Guinaifen:''' Then allow me! As a streamer, I've done my fair share of research. Let me find my script...
+::{{A|VO side2 hh guinaifen 135.ogg}} '''Guinaifen:''' "Wandering Fox Spirits and Ghostly Tails..." Fyxestroll Garden was originally a garden delve constructed by a foxian craftmaster. It was a place for their kin to rest, write poems, and feast... et cetera et cetera.
+::{{A|VO side2 hh guinaifen 136.ogg}} '''Guinaifen:''' It's said the elite pilots of the foxians were almost wiped out in the Denizens of Abundance Wars thirty years ago. People went to the Foxsomn Tomb in Fyxestroll Garden to grieve for the departed... Because of this, Fyxestroll Garden rarely saw visitors and was bereft of joy.
+::{{A|VO side2 hh guinaifen 137.ogg}} '''Guinaifen:''' Over time, Fyxestroll Garden became full of flickering ghostly flames, and weeping lamentations echoed through the air. The rumor that the garden was haunted spread like wildfire among Xianzhou Luofu residents.
+::{{DIcon|Arrow}} Sounds like the hauntings in Fyxestroll Garden could be true after all?
+:::{{A|VO side2 hh guinaifen 138.ogg}} '''Guinaifen:''' I know, right? I did a lot of research before I decided to film here...
+::{{DIcon|Arrow}} ...Aaaand who wrote that for you?
+:::{{A|VO side2 hh guinaifen 139.ogg}} '''Guinaifen:''' Ugh, man, is it that obvious? I paid Mr. Xiyan to write it up for me. Sounded a little too professional, huh?
+:{{DIcon|Arrow}} Could you make it quick?
+::{{A|VO side2 hh guinaifen 140.ogg}} '''Guinaifen:''' Sure, I guess now's not really a good time for stories... Don't worry &mdash; I can sum it up in a single sentence.
+::{{A|VO side2 hh guinaifen 141.ogg}} '''Guinaifen:''' Fyxestroll Garden used to be a garden delve, but people started coming here to mourn fallen foxian fighters at the Foxsomn Tomb, and rumors spread that the garden was haunted.
+:{{A|VO side2 hh guinaifen 142.ogg}} '''Guinaifen:''' I know it's easy to cast doubt, but the Ten-Lords Commission actually showed up this time.
 :{{tx}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+;(If {{cx}}{{subst:void|<!--{"$type":"RPG.GameCore.AdvByEntityExist","TargetType":{"$type":"RPG.GameCore.GroupFetchLocalTarget","TargetType":"Monster","Targets":[200001]}}-->}})
+<pre>{
+	"$type": "RPG.GameCore.AdvTriggerAIPlaySmartObject",
+	"InstanceID": {
+		"IsDynamic": false,
+		"FixedValue": {
+			"Value": 200001
+		}
+	},
+	"SmartObjectID": {
+		"IsDynamic": false,
+		"FixedValue": {
+			"Value": 1
+		}
+	}
+}</pre>
+
+;(Upon reaching the destination)
+;(If {{cx}}{{subst:void|<!--{"$type":"RPG.GameCore.AdvByEntityExist","TargetType":{"$type":"RPG.GameCore.GroupFetchLocalTarget","TargetType":"Monster","Targets":[200003]}}-->}})
+<pre>{
+	"$type": "RPG.GameCore.AdvTriggerAIPlaySmartObject",
+	"InstanceID": {
+		"IsDynamic": false,
+		"FixedValue": {
+			"Value": 200003
+		}
+	},
+	"SmartObjectID": {
+		"IsDynamic": false,
+		"FixedValue": {
+			"Value": 2
+		}
+	}
+}</pre>
 {{Dialogue End}}
 
-===Explore Fyxestroll Garden! Bring it on, shades!===
-{{Mission Description|type=continuance|location=Fyxestroll Garden|update|You two &mdash; yes, only you two &mdash; arrive at the long-abandoned Fyxestroll Garden. The protagonists in most horror movies always like to brashly break into derelict buildings that are rumored to be haunted, completely disregarding all safety concerns and bringing in only a small party. If only they stopped to think things over, then none of the stories that follow would ever have happened.<br />On the way over, Guinaifen diligently recounts for you how Fyxestroll Garden ended up getting abandoned... all the while shooting plenty of spooky footage along the way. You can't help but feel it's actually quite hard for internet influencers to make a living, especially if they have to keep taking photos while resisting the urge to run away from such an ominous place, like a reporter at a homicide scene. This place really does feel as though it's haunted... Where, then, are the ghosts?}}
-{{Dialogue Start}}
-:{{tx}}
-{{Dialogue End}}
-
-===Chat with Huohuo, and get her to guide you out===
-{{Mission Description|type=continuance|location=Fyxestroll Garden|update|You don't see a ghost, but rather something even more horrifying: A Judge of the Ten-Lords Commission! Despite reason telling you these three Judges are all human beings, each one of them seems more terrifying than the next: The emaciated little girl housing a spirit within her, the burly giantess with the white curtain bangs and faint voice, and the only one you've met before, Xueyi, is a mechanical puppet. A ghost is nothing compared to that.<br />The Judges patiently explain it in layman's terms to convince you and Guinaifen to return: There are no ghosts aboard the Xianzhou, just some extraterrestrial parasites that have escaped millennia of imprisonment. Don't wander around here for no reason, as it hinders us from carrying out our official duties.<br />Good news &mdash; There are no ghosts running around Fyxestroll Garden! Bad news &mdash; There's an alien parasite running around Fyxestroll Garden... Isn't that even scarier!}}
-{{Dialogue Start}}
-:{{tx}}
-{{Dialogue End}}
-
-===Meet up with Guinaifen, who claims to have encountered a paranormal event===
+===Meet up with Guinaifen, who claims to have encountered a paranormal event{{subst:void|<!--202170111-->}}===
 {{Mission Description|type=continuance|location=Fyxestroll Garden|update|No matter what kind of science-, magic-, faith-, or whatever-based upbringing you've had, when a third-tier influencer sends you a spam message claiming to have encountered supernatural entities in a deserted garden, your reaction would be: 1. "Sweet lol, I can meet up with this hot babe!" 2. "A new online scam? Blocked." 3. "Whatever. Let's check this out."<br />Naturally, no matter which one you choose, you would have steeled your mind to not give even 50 credits for this trip no matter what she says! No matter what! Besides, it's not like you have any disposable income.}}
 {{Dialogue Start}}
-:{{tx}}
 {{Dialogue End}}
 
-===Explore Fyxestroll Garden! Bring it on, schmucks! Huh!===
+===Explore Fyxestroll Garden! Bring it on, schmucks! Huh!{{subst:void|<!--202170112-->}}===
 {{Mission Description|type=continuance|location=Fyxestroll Garden|update|You two &mdash; yes, only you two &mdash; arrive at the long-abandoned Fyxestroll Garden. The protagonists in most horror movies always like to brashly break into derelict buildings that are rumored to be haunted, completely disregarding all safety concerns and bringing in only a small party. If only they stopped to think things over, then none of the stories that follow would ever have happened.<br />On the way over, Guinaifen diligently recounts for you how Fyxestroll Garden ended up getting abandoned... all the while shooting plenty of spooky footage along the way. You can't help but feel it's actually quite hard for internet influencers to make a living, especially if they have to keep taking photos while resisting the urge to run away from such an ominous place, like a reporter at a homicide scene. This place really does feel as though it's haunted... Where, then, are the ghosts?}}
 {{Dialogue Start}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{A|VO side2 hh guinaifen 145.ogg}} '''Guinaifen:''' Wait, wait, wait &mdash; stop.
+:{{A|VO side2 hh guinaifen 146.ogg}} '''Guinaifen:''' ...There are Ten-Lords Commission spiritfarers on patrol. Let's go the other way &mdash; we'll head to the Foxsomn Tomb first, then cut through the Locufox Forest.
+----
+
+;(Upon reaching the destination)
+:{{A|VO side2 hh guinaifen 145.ogg}} '''Guinaifen:''' Wait, wait, wait &mdash; stop.
+:{{A|VO side2 hh guinaifen 146.ogg}} '''Guinaifen:''' ...There are Ten-Lords Commission spiritfarers on patrol. Let's go the other way &mdash; we'll head to the Foxsomn Tomb first, then cut through the Locufox Forest.
+----
+
+;(Upon reaching the destination)
+----
+<pre>{
+	"$type": "RPG.GameCore.SetAudioEmotionState",
+	"StateName": "State_Tense",
+	"SubMissionID": 202170103
+}</pre>
+:{{A|VO side2 hh crowdG 101.ogg}} '''Wraith Warden:''' Halt!
+<pre>{
+	"$type": "RPG.GameCore.ActiveVirtualCamera",
+	"AreaName": "LevelArea_P20223_F20223001_G14",
+	"AnchorName": "Anchor4",
+	"IsActive": true,
+	"VCameraDitherMaxDistance": 1,
+	"CenterPosX": -1,
+	"CenterPosY": -1,
+	"DynamicParams": {}
+}</pre>
+:{{A|VO side2 hh guinaifen 156.ogg}} '''Guinaifen:''' ...Wh&mdash;What's up guys, hear me out!
+:{{A|VO side2 hh crowdG 102.ogg}} '''Wraith Warden:''' State your name and your business! Arrest them immediately!
+;(Enter battle)
+::Wave 1: {{Enemy List|Wraith Warden*3}}
+::Wave 2: {{Enemy List|Wraith Warden*2; Aurumaton Spectral Envoy*1}}
+
+;(Upon reaching the destination)
+:{{A|VO side2 hh guinaifen 149.ogg}} '''Guinaifen:''' Shh, follow me. Keep quiet and tread lightly...
+
+;(Upon reaching the destination)
+:{{A|VO side2 hh guinaifen 148.ogg}} '''Guinaifen:''' I wonder if this thumbnail would be approved...
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{A|VO side2 hh guinaifen 147.ogg}} '''Guinaifen:''' Whoa, this place feels pure evil... Hee-hee, time to get some footage.
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{A|VO side2 hh guinaifen 150.ogg}} '''Guinaifen:''' Hey, hey, it looks like there's someone up ahead. Let's go around.
+{{Dialogue End}}
+
+===Explore Fyxestroll Garden! Bring it on, shades!{{subst:void|<!--202170103-->}}===
+{{Dialogue Start}}
+:{{A|VO side2 hh guinaifen 151 m.ogg}} {{A|VO side2 hh guinaifen 151 f.ogg}} '''Guinaifen:''' Wow, I didn't know you were so strong, bro! But these are Luofu officials... if we're interrogated, we need to get our story straight...
+:{{A|VO side2 hh guinaifen 101.ogg}} '''Guinaifen:''' Yo, it's you! You're interested in the supernatural, right?
+:{{A|VO side2 hh guinaifen 102.ogg}} '''Guinaifen:''' Lucky for you, I just finished editing my stream &mdash; it's all the proof you need...
+:{{A|VO side2 hh guinaifen 103.ogg}} '''Guinaifen:''' But before you watch it, I gotta ask you a question... do you believe in ghosts?
+:I believe!
+:{{A|VO side2 hh guinaifen 104.ogg}} '''Guinaifen:''' I knew it! Curious cats like us usually have a better sixth sense &mdash; it's easier for us to perceive the unseen...
+:Vids or it didn't happen... and no clickbait.
+:{{A|VO side2 hh guinaifen 105.ogg}} '''Guinaifen:''' Hehe, I think you're in for a surprise...
+:{{A|VO side2 hh guinaifen 106.ogg}} '''Guinaifen:''' This video is gonna prove that the Xianzhou is full of supernatural phenomena.
+:My beliefs aside, your messages...
+:{{A|VO side2 hh guinaifen 107.ogg}} '''Guinaifen:''' Uhh, that was me copying video titles from the hottest streamers on the Luofu... I heard they help attract more viewers.
+:{{A|VO side2 hh guinaifen 108.ogg}} '''Guinaifen:''' Enough chit-chat &mdash; look! This is the weird stuff that happened yesterday when I was streaming in Fyxestroll Garden!
+:{{A|VO side2 hh guinaifen 109.ogg}} '''Guinaifen:''' Me and my bestie got kicked out of the garden straight after... but did you see the key moment?
+:The "ghosts" were cheap special effects?
+:{{A|VO side2 hh guinaifen 110.ogg}} '''Guinaifen:''' What!? No! There was a freezing chill, not to mention the way they drifted through the air... They were legit ghosts! Anyway, the key point was...
+:Why is it in third-person perspective at the end?
+:{{A|VO side2 hh guinaifen 111.ogg}} '''Guinaifen:''' Ugh, it's called editing? I edited it! That way I can show what happened before and after. Anyway, the key moment was...
+:The comments all look like bots wrote them...
+:{{A|VO side2 hh guinaifen 112.ogg}} '''Guinaifen:''' Why are you so focused on all the wrong things?
+:{{A|VO side2 hh guinaifen 113.ogg}} '''Guinaifen:''' It wasn't the Realm-Keeping Commission or the Cloud Knights that came to deal with it. It was the judges from the Ten-Lords Commission!
+:Judges from the Ten-Lords Commission? That's crazy!
+:{{A|VO side2 hh guinaifen 114.ogg}} '''Guinaifen:''' That's what I'm saying! At first, Sushang didn't believe that Fyxestroll Garden was haunted. But after the judges showed up...
+:What's... the Ten-Lords Commission?
+:{{A|VO side2 hh guinaifen 115.ogg}} '''Guinaifen:''' You've been on the Xianzhou for this long and you've never heard of the Ten-Lords Commission?
+:{{A|VO side2 hh guinaifen 116.ogg}} '''Guinaifen:''' They're the most mysterious organization on the Xianzhou! Their investigators always pop up out of nowhere, then disappear without a trace. If they show up, you know something serious is going down!
+:{{A|VO side2 hh guinaifen 117.ogg}} '''Guinaifen:''' In other words, something BIG must have happened in Fyxestroll Garden for them to show up.
+:They went to Fyxestroll Garden to catch ghosts...
+:{{A|VO side2 hh guinaifen 118.ogg}} '''Guinaifen:''' Exactly! Now do you believe that my content isn't clickbait?
+:Maybe it was just a false alarm?
+:{{A|VO side2 hh guinaifen 119.ogg}} '''Guinaifen:''' Possibly... but the judges kicked me and Sushang out of there straight away. It looked like they were setting something up in the garden before we left.
+:{{A|VO side2 hh guinaifen 120.ogg}} '''Guinaifen:''' There has to be a conspiracy... Uh, I mean &mdash; ghosts!
+:{{A|VO side2 hh guinaifen 121 m.ogg}} {{A|VO side2 hh guinaifen 121 f.ogg}} '''Guinaifen:''' Actually, do you have some free time? Do you wanna explore Fyxestroll Garden together, just the two of us? I guarantee you we're gonna reveal the truth this time.
+:Let's face the ghosts together!
+:{{A|VO side2 hh guinaifen 122.ogg}} '''Guinaifen:''' Hee-hee, I knew it! This is what people like us live for. Let's go!
+:You're going despite the risk?
+:{{A|VO side2 hh guinaifen 123.ogg}} '''Guinaifen:''' High risk, high reward, high view count. As we grow up, our curiosity for the unknown gradually fades... I'm not gonna let myself become a boring grown-up.
+:{{A|VO side2 hh guinaifen 124.ogg}} '''Guinaifen:''' Why are the ghosts haunting the garden? A lingering grudge, perhaps... or maybe they're an omen of some impending disaster? Aren't you curious?
+:...Sure.
+:{{A|VO side2 hh guinaifen 125.ogg}} '''Guinaifen:''' Don't be scared. When the time comes, just hide behind me.
+:No.
+:{{A|VO side2 hh guinaifen 126.ogg}} '''Guinaifen:''' I get it &mdash; you're scared. I'm scared too. I'm sure you'll find your courage sooner or later. I'll be here waiting for you when you do!
+:I'm a little scared. Let me think it over...
+:{{A|VO side2 hh guinaifen 127.ogg}} '''Guinaifen:''' I understand &mdash; I'm scared too! I'm sure you'll find your courage sooner or later. I'll be here waiting for you when you do!
+:{{A|VO side2 hh guinaifen 128 m.ogg}} {{A|VO side2 hh guinaifen 128 f.ogg}} '''Guinaifen:''' Yo, how's that super strong sixth sense of yours?
+:{{A|VO side2 hh guinaifen 129.ogg}} '''Guinaifen:''' Wanna explore Fyxestroll Garden with me? I KNOW we're gonna get to the truth this time.
+:Let's face the ghosts together!
+:{{A|VO side2 hh guinaifen 130.ogg}} '''Guinaifen:''' Hee-hee, I knew it! This is what people like us live for. Let's go!
+:I'm a little scared. Let me think it over...
+:{{A|VO side2 hh guinaifen 131.ogg}} '''Guinaifen:''' What? What's there to think about? I get it. I'll be waiting for you here when you're ready!
+:{{A|VO side2 hh guinaifen 132.ogg}} '''Guinaifen:''' It's so dark in here... It feels like we're being watched...
+:{{A|VO side2 hh guinaifen 133.ogg}} '''Guinaifen:''' Did anyone ever tell you the scary stories about Fyxestroll Garden?
+:Don't think so...
+:{{A|VO side2 hh guinaifen 134.ogg}} '''Guinaifen:''' Then allow me! As a streamer, I've done my fair share of research. Let me find my script...
+:{{A|VO side2 hh guinaifen 135.ogg}} '''Guinaifen:''' "Wandering Fox Spirits and Ghostly Tails..." Fyxestroll Garden was originally a garden delve constructed by a foxian craftmaster. It was a place for their kin to rest, write poems, and feast... et cetera et cetera.
+:{{A|VO side2 hh guinaifen 136.ogg}} '''Guinaifen:''' It's said the elite pilots of the foxians were almost wiped out in the Denizens of Abundance Wars thirty years ago. People went to the Foxsomn Tomb in Fyxestroll Garden to grieve for the departed... Because of this, Fyxestroll Garden rarely saw visitors and was bereft of joy.
+:{{A|VO side2 hh guinaifen 137.ogg}} '''Guinaifen:''' Over time, Fyxestroll Garden became full of flickering ghostly flames, and weeping lamentations echoed through the air. The rumor that the garden was haunted spread like wildfire among Xianzhou Luofu residents.
+:Sounds like the hauntings in Fyxestroll Garden could be true after all?
+:{{A|VO side2 hh guinaifen 138.ogg}} '''Guinaifen:''' I know, right? I did a lot of research before I decided to film here...
+:...Aaaand who wrote that for you?
+:{{A|VO side2 hh guinaifen 139.ogg}} '''Guinaifen:''' Ugh, man, is it that obvious? I paid Mr. Xiyan to write it up for me. Sounded a little too professional, huh?
+:Could you make it quick?
+:{{A|VO side2 hh guinaifen 140.ogg}} '''Guinaifen:''' Sure, I guess now's not really a good time for stories... Don't worry &mdash; I can sum it up in a single sentence.
+:{{A|VO side2 hh guinaifen 141.ogg}} '''Guinaifen:''' Fyxestroll Garden used to be a garden delve, but people started coming here to mourn fallen foxian fighters at the Foxsomn Tomb, and rumors spread that the garden was haunted.
+:{{A|VO side2 hh guinaifen 142.ogg}} '''Guinaifen:''' I know it's easy to cast doubt, but the Ten-Lords Commission actually showed up this time.
+:{{A|VO side2 hh guinaifen 143.ogg}} '''Guinaifen:''' Speaking of which, we have to avoid running into the judges. If we get kicked out, it'll all be for nothing.
+:{{A|VO side2 hh guinaifen 144.ogg}} '''Guinaifen:''' Anyway, that's the background. Let's keep moving, and watch your step...
+:{{A|VO side2 hh guinaifen 145.ogg}} '''Guinaifen:''' Wait, wait, wait &mdash; stop.
+:{{A|VO side2 hh guinaifen 146.ogg}} '''Guinaifen:''' ...There are Ten-Lords Commission spiritfarers on patrol. Let's go the other way &mdash; we'll head to the Foxsomn Tomb first, then cut through the Locufox Forest.
+:{{A|VO side2 hh guinaifen 151 m.ogg}} {{A|VO side2 hh guinaifen 151 f.ogg}} '''Guinaifen:''' Wow, I didn't know you were so strong, bro! But these are Luofu officials... if we're interrogated, we need to get our story straight...
+:We could say evil spirits possessed the spiritfarers...
+:{{A|VO side2 hh guinaifen 152.ogg}} '''Guinaifen:''' Perfect! Let's just say it was self-defense. We had no choice.
+:We could say that evil spirits possessed us...
+:{{A|VO side2 hh guinaifen 153.ogg}} '''Guinaifen:''' Makes sense. We went crazy and couldn't control ourselves... I like the way you think.
+:Perhaps we were never here?
+:{{A|VO side2 hh guinaifen 154.ogg}} '''Guinaifen:''' Whoa! Nice! There were no witnesses, so this never happened, alright?
+:{{A|VO side2 hh guinaifen 155.ogg}} '''Guinaifen:''' ...Let's keep going.
+:{{A|VO side2 hh crowdG 101.ogg}} '''Wraith Warden:''' Halt!
+:{{A|VO side2 hh crowdG 102.ogg}} '''Wraith Warden:''' State your name and your business! Arrest them immediately!
+:{{A|VO side2 hh guinaifen 156.ogg}} '''Guinaifen:''' ...Wh&mdash;What's up guys, hear me out!
+:{{A|VO side2 hh guinaifen 158 m.ogg}} {{A|VO side2 hh guinaifen 158 f.ogg}} '''Guinaifen:''' (Trailblazer), look how pale she is! And it seems like her eyes aren't even focusing... Is she a ghost?
+:{{A|VO side2 hh hanya 102.ogg}} '''Hanya:''' As a member of the Ten-Lords Commission, you may as well consider me a member of the dead. I am a judge, alias "Hanya." Of the four duties of detention, incarceration, interrogation, and punishment, I'm responsible for interrogation. Therefore, I know a thing or two about you.
+:{{A|VO side2 hh hanya 103.ogg}} '''Hanya:''' Guinaifen, an Outworlder, unemployed... You entered Fyxestroll Garden with Sushang, a Cloud Knight, the day before yesterday.
+:{{A|VO side2 hh guinaifen 159.ogg}} '''Guinaifen:''' Huh? Unemployed? I'm a {{Rubi|street performer|juggler}} and a streamer who reports on current events! A streamer! It's a legit operation!
+:{{A|VO side2 hh hanya 104.ogg}} '''Hanya:''' As for this one here...
+:{{DIcon|Arrow}} I'm (Trailblazer). Nice to meet you.
+::{{A|VO side2 hh xueyi 101.ogg}} '''Xueyi:''' ...A passenger on the Astral Express and a guest of the Seat of Divine Foresight. You assisted the Cloud Knights in resolving the Ambrosial Arbor calamity and are a friend of the Alliance.
+::{{A|VO side2 hh huohuo 101.ogg}} '''Huohuo:''' H&mdash;Hello... I'm a Judge of the Ten-Lords Commission. My name is Huohuo.
+::{{A|VO side2 hh xueyi 102.ogg}} '''Xueyi:''' As a Judge of the Ten-Lords Commission, you should speak with more confidence, Huohuo.
+::{{A|VO side2 hh huohuo 102.ogg}} '''Huohuo:''' ...O&mdash;Okay.
+:{{DIcon|Arrow}} Your Honor, it was all Guinaifen's idea!
+::{{A|VO side2 hh guinaifen 160 m.ogg}} {{A|VO side2 hh guinaifen 160 f.ogg}} '''Guinaifen:''' A&mdash;Are you really selling me out that fast? Whatever, I'll take the hit... It's true, I persuaded {{MC|m=him|f=her}} to come along.
+::{{A|VO side2 hh hanya 105.ogg}} '''Hanya:''' Regardless whose idea it was... This place has been designated as a restricted area. No one is allowed to enter.
+:{{DIcon|Arrow}} You must have heard of... the Galactic Baseballer.
+::{{A|VO side2 hh xueyi 103 m.ogg}} {{A|VO side2 hh xueyi 103 f.ogg}} '''Xueyi:''' You are a passenger on the Astral Express and a guest of the Seat of Divine Foresight. You assisted the Cloud Knights in resolving the Ambrosial Arbor calamity and are a friend of the Alliance.
+::{{A|VO side2 hh huohuo 103 m.ogg}} {{A|VO side2 hh huohuo 103 f.ogg}} '''Huohuo:''' ...{{MC|m=He's|f=She's}} the Nameless? From the train?
+:{{A|VO side2 hh hanya 106.ogg}} '''Hanya:''' Tell me, Guinaifen. Why did you return here?
 :{{tx}}
 {{Dialogue End}}
 
-===Find Guinaifen in Locufox Forest===
+===Chat with Huohuo, and get her to guide you out{{subst:void|<!--202170105-->}}===
+{{Mission Description|type=continuance|location=Fyxestroll Garden|update|You don't see a ghost, but rather something even more horrifying: A Judge of the Ten-Lords Commission! Despite reason telling you these three Judges are all human beings, each one of them seems more terrifying than the next: The emaciated little girl housing a spirit within her, the burly giantess with the white curtain bangs and faint voice, and the only one you've met before, Xueyi, is a mechanical puppet. A ghost is nothing compared to that.<br />The Judges patiently explain it in layman's terms to convince you and Guinaifen to return: There are no ghosts aboard the Xianzhou, just some extraterrestrial parasites that have escaped millennia of imprisonment. Don't wander around here for no reason, as it hinders us from carrying out our official duties.<br />Good news &mdash; There are no ghosts running around Fyxestroll Garden! Bad news &mdash; There's an alien parasite running around Fyxestroll Garden... Isn't that even scarier!}}
+{{Dialogue Start}}
+
+;(Talk to Xueyi)
+:{{A|VO side2 hh xueyi 107.ogg}} '''Xueyi:''' This place is dangerous. You should leave at once.
+
+;(Talk to Hanya)
+:{{A|VO side2 hh hanya 121.ogg}} '''Hanya:''' Fyxestroll Garden is full of abnormalities &mdash; even the Ten-Lords Commission cannot guarantee your safety. I suggest you leave immediately.
+
+;(Talk to Guinaifen)
+:----
+::{{A|VO side2 hh guinaifen 172.ogg}} '''Guinaifen:''' Ghosts? Heliobi? Possession...? That was a big info dump, my brain is still loading...
+::{{A|VO side2 hh guinaifen 173.ogg}} '''Guinaifen:''' ...It all sounds more like an urban myth than a ghost story. "Energy parasite" sounds more cool than scary... don't you think?
+::{{DIcon|Arrow}} Myths are born out of ignorance.
+:::{{A|VO side2 hh guinaifen 174.ogg}} '''Guinaifen:''' Yeah, I guess so... I still feel like my audience will see them as ghosts, to be honest.
+::{{DIcon|Arrow}} Ghosts can't exist without mystery.
+:::{{A|VO side2 hh guinaifen 175.ogg}} '''Guinaifen:''' ...Mm, I never thought about it like that. Nice take!
+:::{{A|VO side2 hh guinaifen 176.ogg}} '''Guinaifen:''' My audience likes getting to the bottom of mysteries, secrets, and conspiracies... We streamers have to cater to that, you know?
+::{{A|VO side2 hh guinaifen 177.ogg}} '''Guinaifen:''' *sigh* I've got loads more questions, but my curiosity is satisfied for now. We better leave before the judges decide to arrest us.
+::{{A|VO side2 hh guinaifen 178.ogg}} '''Guinaifen:''' ...I'm gonna see if I can get a video of Mr. Tail on the way back &mdash; I've already got the title: "Demonic Fire Suddenly Appears in Fyxestroll Garden! Innocent Foxian Girl Possessed!" What do you think? That'd get so many views...
+::{{A|VO side2 hh guinaifen 179.ogg}} '''Guinaifen:''' ...Can you give me a hand?
+::{{DIcon|Arrow}} What are we gonna do with you...
+:::{{A|VO side2 hh guinaifen 180.ogg}} '''Guinaifen:''' Wow! That's a yes, right...?
+::{{DIcon|Arrow}} Nope.
+:::{{A|VO side2 hh guinaifen 181.ogg}} '''Guinaifen:''' Okay, fine! No need to be so blunt about it.
+::{{DIcon|Arrow}} You'll be handed a few centuries of jail time if you irritate the judges.
+:::{{A|VO side2 hh guinaifen 182.ogg}} '''Guinaifen:''' Mm, true, but I'd probably only do a few decades, hehe.
+::{{A|VO side2 hh guinaifen 183.ogg}} '''Guinaifen:''' Let's go.
+::----
+:{{A|VO side2 hh guinaifen 184.ogg}} '''Guinaifen:''' Yo, remember, I'll need your help. Let's go.
+
+;(Talk to Huohuo)
+:----
+::{{A|VO side2 hh huohuo 111.ogg}} '''Huohuo:''' ...Excuse me, can we go now?
+::{{DIcon|Arrow}} Is Tail coming too?
+:::{{A|VO side2 hh huohuo 112.ogg}} '''Huohuo:''' Yes... he's trapped in my tail, so...
+:::{{A|VO side2 hh tail 107.ogg}} '''Tail:''' Bah &mdash; trapped for now... Sooner or later I'll find a way to make you break the seal...
+:::{{A|VO side2 hh huohuo 113.ogg}} '''Huohuo:''' You think I like spending time with you?
+::{{DIcon|Arrow}} You look nervous...
+:::{{A|VO side2 hh huohuo 114.ogg}} '''Huohuo:''' I&mdash;I'm just a bit scared about the heliobi reports... b&mdash;but I'll carry out my duties and escort you out of the garden. I should be able to do that, at least...
+:::{{A|VO side2 hh tail 108.ogg}} '''Tail:''' Tsk... If you can't then you better give up the day job and start peddling desserts...
+:::{{A|VO side2 hh huohuo 115.ogg}} '''Huohuo:''' Hmph, i&mdash;if it weren't for you, I would've opened a dessert stall ages ago!
+::{{A|VO side2 hh huohuo 116.ogg}} '''Huohuo:''' Shall we go?
+::{{DIcon|Arrow}} Yes. Please lead the way.
+:::{{A|VO side2 hh huohuo 117.ogg}} '''Huohuo:''' Let's go.
+:::----
+::<pre>{
+	"$type": "RPG.GameCore.AdvSetAILeadWay",
+	"EntityInstanceID": {
+		"IsDynamic": false,
+		"FixedValue": {
+			"Value": 400004
+		}
+	},
+	"PathwayGroupID": 25,
+	"PathwayID": 1,
+	"MotionFlag": "Walk",
+	"WaitForPlayer": true,
+	"OnReach": []
+}</pre>
+::{{DIcon|Exit}} I still have something to do.
+:::----
+:----
+::{{A|VO side2 hh huohuo 118.ogg}} '''Huohuo:''' Shall we go?
+::{{DIcon|Arrow}} Yes, thank you.
+:::{{A|VO side2 hh huohuo 119.ogg}} '''Huohuo:''' Let's go.
+:::----
+::<pre>{
+	"$type": "RPG.GameCore.AdvSetAILeadWay",
+	"EntityInstanceID": {
+		"IsDynamic": false,
+		"FixedValue": {
+			"Value": 400004
+		}
+	},
+	"PathwayGroupID": 25,
+	"PathwayID": 1,
+	"MotionFlag": "Walk",
+	"WaitForPlayer": true,
+	"OnReach": []
+}</pre>
+::{{DIcon|Exit}} I still have something to do.
+:::----
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{A|VO side2 hh huohuo 120.ogg}} '''Huohuo:''' Let's go this way. It's quicker...
+:{{A|VO side2 hh guinaifen 185.ogg}} '''Guinaifen:''' Miss Huohuo, can we have Mr. Tail come out for a photo?
+:{{A|VO side2 hh huohuo 122.ogg}} '''Huohuo:''' Miss Guinaifen, I'm on official duty right now...
+
+;(Upon reaching the destination)
+:{{A|VO side2 hh huohuo 123.ogg}} '''Huohuo:''' It's so quiet... It's getting scarier and scarier...
+<pre>{
+	"$type": "RPG.GameCore.WaitMissionTalkFinish"
+}</pre>
+:{{A|VO side2 hh huohuo 124.ogg}} '''Huohuo:''' Please stay close to me...
+
+;(Upon reaching the destination)
+<pre>{
+	"$type": "RPG.GameCore.TriggerSound",
+	"SoundName": {
+		"Value": "Ev_sfx_xianzhou_ghostlaugh"
+	},
+	"EmitterType": "LocalPlayer"
+}</pre>
+
+;(Upon reaching the destination)
+;(If {{cx}}<!--during performance 202170130-->)
+:The Wraith Wardens who guard the Locufox Forest entrance wanted to prevent you from leaving, but they held themselves back.
+:They must have realized that you and the bat in your hands have never feared any ghosts or spirits. Any form of hindrance would be a waste of time. No one can stop you &mdash; you have access to the Space Anchor, after all.
+:However, {{Rubi|your new friend|partner in crime}} Guinaifen is still waiting for you. You should listen to Xueyi and let Huohuo take you two out of here.
+
+;(Upon reaching the destination)
+;(If {{cx}}<!--during performance 202170130-->)
+:The Wraith Wardens who guard the Locufox Forest entrance wanted to prevent you from leaving, but they held themselves back.
+:They must have realized that you and the bat in your hands have never feared any ghosts or spirits. Any form of hindrance would be a waste of time. No one can stop you &mdash; you have access to the Space Anchor, after all.
+:However, {{Rubi|your new friend|partner in crime}} Guinaifen is still waiting for you. You should listen to Xueyi and let Huohuo take you two out of here.
+{{Dialogue End}}
+
+===Find Guinaifen in Locufox Forest{{subst:void|<!--202170106-->}}===
 {{Mission Description|type=continuance|location=Fyxestroll Garden|update|Huohuo escorted you both all the way out of Fyxestroll Garden. However, a sudden eerie wind blew, and thick fog enveloped the surroundings. When you looked back, Guinaifen had vanished... Huohuo, with her legs trembling, begs you to find Guinaifen &mdash; just who is the official personnel here? She's quite a handful!}}
 {{Dialogue Start}}
+
+;(Talk to Huohuo)
+:{{A|VO side2 hh huohuo 132.ogg}} '''Huohuo:''' Oh no... W&mdash;We have to find Miss Guinaifen...
+:{{A|VO side2 hh tail 110.ogg}} '''Tail:''' You should consider your own safety, first...
+:{{A|VO side2 hh huohuo 133.ogg}} '''Huohuo:''' Is it me or is this place starting to feel weirder and weirder...? I'm scared... Can you stay close to me? I don't want to lose you, too...
+<pre>{
+	"$type": "RPG.GameCore.AdvCreateGroupEntity",
+	"InstanceIDList": [
+		400001,
+		300001,
+		300002,
+		300003,
+		300004
+	]
+}</pre>
+
+;(Upon reaching the destination)
 :{{tx}}
+----
+;([[#Gallery|Cutscene]] plays)
+::Hi
+;(Cutscene ends)
+----
+----
+<pre>{
+	"$type": "RPG.GameCore.OpenTreasureChallenge",
+	"RaidID": 43210
+}</pre>
+
+;(Upon reaching the destination)
+:{{A|VO side2 hh huohuo 134.ogg}} '''Huohuo:''' We need to find Miss Guinaifen, first... Stay close to me &mdash; please...!
+----
+
+;(Upon reaching the destination)
+:{{A|VO side2 hh huohuo 134.ogg}} '''Huohuo:''' We need to find Miss Guinaifen, first... Stay close to me &mdash; please...!
+----
+
+;(Upon reaching the destination)
+:{{A|VO side2 hh huohuo 135.ogg}} '''Huohuo:''' I thought I'd lost you, too. I'm so scared... Please don't leave me here all on my own...
+----
+
+;(Upon reaching the destination)
+:{{A|VO side2 hh huohuo 135.ogg}} '''Huohuo:''' I thought I'd lost you, too. I'm so scared... Please don't leave me here all on my own...
+----
 {{Dialogue End}}
 
 ==Other Languages==

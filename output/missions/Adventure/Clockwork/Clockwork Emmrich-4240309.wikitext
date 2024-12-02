@@ -11,7 +11,7 @@ PageTitle=#Clockwork: Emmrich#
 |chapter       = Clockwork
 |requirements  = [[Trailblaze Mission]] ''[[Gentleness, the Name of Nocturne]]'' completed
 |summary       = <!--official mission summary from Fate's Atlas-->
-|characters    = Trailblazer
+|characters    = Alarmed Bloodhound; Confused Car Owner; Diamond Doll Salesman; Floatdisc Burger Saleswoman; Patent Operative Omnifier; Trailblazer; Troubled Bloodhound; Zappy Gun Salesman
 |startLocation = [[Penacony]] - [[Golden Hour]]
 |world         = Penacony
 |area          = Golden Hour
@@ -39,42 +39,144 @@ PageTitle=#Clockwork: Emmrich#
 -->
 ==Dialogue==
 {{Stub Dialogue}}
+
+;(Obtain {{Item|Indefinite Patent Operative Omnifier|20|x=1}})
 {{Dialogue End}}
 
-===Stick the Patent Omnifier onto the luxury speedster.===
+===Stick the Patent Omnifier onto the luxury speedster.{{subst:void|<!--424030903-->}}===
 {{Mission Description|type=adventure|location=Golden Hour|update|Tick... tock! Quick, Adjust the hands... Tick, tock!<br />People's minds await your exploration. Help them regain their true selves!}}
 {{Dialogue Start}}
-:{{tx}}
+
+
+;(Unused &mdash; showtoast)
+<pre>{
+	"$type": "RPG.GameCore.ShowHeartDialToast",
+	"StepType": "Normal",
+	"TargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvNpcEx",
+		"FetchType": "SingleNpcByNpcID",
+		"SingleNpcID": {
+			"GroupID": {
+				"IsDynamic": false,
+				"FixedValue": {
+					"Value": 409
+				}
+			},
+			"GroupNpcID": {
+				"IsDynamic": false,
+				"FixedValue": {
+					"Value": 400001
+				}
+			}
+		}
+	}
+}</pre>
+
 {{Dialogue End}}
 
-===(Optional) Stay in place and observe the owner's reaction.===
+===(Optional) Stay in place and observe the owner's reaction.{{subst:void|<!--424030904-->}}===
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Confused Car Owner)
+:'''Confused Car Owner:''' What the...? I just pressed the button on my remote control, but why is my car not responding at all?
+:'''Confused Car Owner:''' Hold on, what's this? Indefinite Patent Operative Omnifier... What kind of nonsense is this?
+:'''Patent Operative Omnifier:''' *Beep*... Greetings, vehicle owner. The accessories in your "Steinway Falcon" luxury speedster might be infringing on some patents.
+:'''Patent Operative Omnifier:''' *Beep*... To protect the rights of patent creators, a mandatory lock has been put on your "Steinway Falcon" luxury speedster. Please don't worry. The lock will be automatically unlocked once the infringement risk is resolved!
+:'''Confused Car Owner:''' Wh&mdash;What!? No way! This is my speedster! I paid a fortune for it!
+:'''Confused Car Owner:''' You're just a useless piece of paper! I'll just rip you...
+:'''Confused Car Owner:''' Wh&mdash;What? I can't rip it up!? What kind of sorcery is this?
+:'''Confused Car Owner:''' No! Y&mdash;You can't do this to me! I promised Catherine that I'd take her for a ride in the Golden Hour today! You... you are... you... Aaarrrggghhh!
 {{Dialogue End}}
 
-===Stick the Patent Omnifier onto the telescope.===
+===Stick the Patent Omnifier onto the telescope.{{subst:void|<!--424030905-->}}===
 {{Dialogue Start}}
-:{{tx}}
+
+
 {{Dialogue End}}
 
-===(Optional) Stay in place and observe the Bloodhound's reaction.===
+===(Optional) Stay in place and observe the Bloodhound's reaction.{{subst:void|<!--424030906-->}}===
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Alarmed Bloodhound)
+:'''Alarmed Bloodhound:''' So, is this the telescope that went haywire?
+:'''Troubled Bloodhound:''' Obviously. Didn't you see the note taped to it? Indefinite Patent Operative Omnifier?... What kind of new trickery is this?
+:'''Troubled Bloodhound:''' Those Dreamchasers just won't stop causing trouble... Can't they just peacefully enjoy their life in this dream?
+:'''Alarmed Bloodhound:''' I'll... rip it off...
+:'''Alarmed Bloodhound:''' ...Hmm, I can't rip it off. It doesn't seem to be an ordinary note. Maybe we should report it?
+:'''Troubled Bloodhound:''' ...You want to disturb the family head over such a small matter? Think again...
+:'''Alarmed Bloodhound:''' What will happen if these notes start appearing everywhere like a bad rash? It's better safe than sorry...
 {{Dialogue End}}
 
-===Stick the Patent Omnifier onto the billboard.===
+===Stick the Patent Omnifier onto the billboard.{{subst:void|<!--424030907-->}}===
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Zappy Gun Salesman)
+:'''Zappy Gun Salesman:''' Zap away discomfort! Instant relief! The best of the best: Zappy Gun!
+:'''Zappy Gun Salesman:''' Order now and you might win the Zappy Zap-Up Bundle!
+:You have no idea what this "Zappy Gun" is supposed to do... although it does sound a bit questionable.
+:But anyway, you're not planning on buying these weird toys anyway. Just finish Emmrich's task.
+<pre>{
+	"$type": "RPG.GameCore.SelectMissionItem",
+	"OnlyPerformance": true,
+	"ItemIDList": [
+		140468
+	],
+	"ItemHiddenIDList": [],
+	"ItemInvisibleIDList": [],
+	"ItemSelect": [
+		{
+			"Item1": 140468,
+			"TriggerCustomString": "1404681"
+		}
+	],
+	"SlotNum": 1,
+	"InfoText": {
+		"Hash": 524940953
+	},
+	"SimpleTalk": {
+		"TextSpeed": 20,
+		"ProtectTime": 0.8
+	},
+	"OnSubmitSucceed": [],
+	"OnSubmitCancel": [
+		{
+			"$type": "RPG.GameCore.EndPerformance"
+		}
+	]
+}</pre>
+;(Unused &mdash; 1404681)
+:{{Black Screen|With a "slap," you stick the Indefinite Patent Operative Omnifier onto the sales billboard. The billboard topples over, but you swear you didn't exert much force.}}
+:<pre>{
+	"$type": "RPG.GameCore.TriggerSound",
+	"SoundName": {
+		"Value": "Ev_sfx_storyd_paper"
+	},
+	"EmitterType": "LocalPlayer"
+}</pre>
+::'''Patent Operative Omnifier:''' *Beep*... Initiating infringement risk analysis...
+::'''Patent Operative Omnifier:''' *Beep*... Analysis complete! Object identified: A sales billboard.
+::'''Patent Operative Omnifier:''' *Beep*... Conclusion: The analyses regarding the raw materials, supply chain, and related technologies show no risk of infringement.
+::'''Patent Operative Omnifier:''' *Beep*... Current risk: The billboard is advertising Mr. Emmrich's invention, and he's currently in a dispute with his distributor over the sales share.
+::'''Patent Operative Omnifier:''' *Beep*... To ensure Mr. Emmrich's rights as the inventor, a mandatory lock will now be put on the sales billboard. The lock will be automatically unlocked once the infringement risk is resolved!
+::The billboard is not making sounds anymore, and it's making you feel bad. You can't believe you went to such lengths for that selfish inventor.
+::You feel a mix of emotions. Maybe you should stay for a while to witness others' reactions... or just walk away.
+::----
 {{Dialogue End}}
 
-===(Optional) Stay in place and observe the reactions of other billboards.===
+===(Optional) Stay in place and observe the reactions of other billboards.{{subst:void|<!--424030908-->}}===
 {{Dialogue Start}}
-:{{tx}}
+
+
+;(Talk to Diamond Doll Salesman)
+:'''Floatdisc Burger Saleswoman:''' Oh! {{Rubi|Great One|Harmony}}! How did our poor brother end up like this!
+:'''Diamond Doll Salesman:''' Wonderful! Now that the Zappy Gun billboard is done for, everyone will flock to buy the Diamond Doll!
+:'''Floatdisc Burger Saleswoman:''' Seriously, mate? Have a little empathy! How can you be so heartless when our brother is lying dead on the street?
+:'''Diamond Doll Salesman:''' We're billboards, man! We don't have "empathy"!
+:'''Diamond Doll Salesman:''' And besides, that billboard was not promoting your competitor's product or messing with your business! Of course you can just play the good guy!
 {{Dialogue End}}
 
-===Report to Emmrich===
+===Report to Emmrich{{subst:void|<!--424030909-->}}===
 {{Dialogue Start}}
-:{{tx}}
 {{Dialogue End}}
 
 ==Other Languages==

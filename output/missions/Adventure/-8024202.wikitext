@@ -7,11 +7,11 @@ PageTitle=##
 |title         = 
 |image         = <!--Mission .png-->
 |type          = Adventure
-|event_name    = 
+|event_name    = Trailblaze: Friendship Is Magic!
 |chapter       = 
 |requirements  = [[Adventure Mission]] ''[[Old Friends, New Friends?]]'' completed
 |summary       = <!--official mission summary from Fate's Atlas-->
-|characters    = Trailblazer
+|characters    = Litter Pony; Trailblazer
 |startLocation = [[Jarilo-VI]] - [[Administrative District]]
 |world         = Jarilo-VI
 |area          = Administrative District
@@ -19,7 +19,7 @@ PageTitle=##
 |next          = 
 |rewards       = 
 }}
-'''''''''' is an [[Adventure Mission]] on [[Jarilo-VI]].
+'''''''''' is an Event [[Adventure Mission]] from the [[Trailblaze: Friendship Is Magic!]] event.
 
 ==Steps==
 
@@ -34,6 +34,51 @@ PageTitle=##
 ==Dialogue==
 {{Stub Dialogue}}
 
+;(Unused &mdash; EnterDistrict_G245)
+:The agreement was that you would borrow the Magic of Friendship from your Belobogian friends, but your "friends" are nowhere to be seen...
+::'''Litter Pony:''' Alright, let's get started!
+::{{DIcon|Arrow}} What about my friends?
+::'''Litter Pony:''' Ta-da! Your friend is me!
+::'''Litter Pony:''' Look at the trashcans next to you... I am a consciousness born in the "Betweenwhere" after this trashcan was distorted.
+::'''Litter Pony:''' No one ever paid me any mind. I was curled up in a corner as a can, silently at the mercy of the city's exhaust fumes.
+::'''Litter Pony:''' Only you were willing to open me up and get familiar with my insides. My black plastic sack, my fish bones, my apple cores, every part of me...
+::'''Litter Pony:''' You know my insides better than anyone. Surely you are not going to stand here and pretend we are no more than strangers, are you? You... {{MC|f=heartbreaker|m=jerk}}!
+::{{DIcon|Arrow}} I will take responsibility!
+:::'''Litter Pony:''' You know how to sweet talk when you need to. You must have broken many hearts in your time!
+:::'''Litter Pony:''' Ah, guess I have no choice but to let it slide and make do.
+::{{DIcon|Arrow}} I didn't! It wasn't me! Don't come any closer!
+:::'''Litter Pony:''' Quit trying to make excuses! I've seen your charming form as you dived into a trashcan up close and personal!
+::'''Litter Pony:''' Let's show our Proof of Friendship! There's no time to explain. Open up the lid on my head and unleash that trashcan-diving vigor of yours...
+::{{DIcon|Arrow}} (Comply)
+::{{DIcon|Arrow}} (Refuse)
+::'''Litter Pony:''' The Magic of Friendship never lies. I knew we are best friends.
+::'''Litter Pony:''' Now, my friend, let us battle side-by-side! Let us purify these terrible "Betweenwhere creatures"!
+::{{DIcon|Arrow}} (Enter Battle)
+:<pre>{
+	"$type": "RPG.GameCore.PerformanceExtendEndBlack",
+	"ExtendTime": 1
+}</pre>
+
+
+:{{DIcon|Travel Log}} Manifest "Magic of Friendship"
+<pre>{
+	"$type": "RPG.GameCore.ShowUI",
+	"Name": "Ui.ActivitySummon.Entrance.ActivitySummonEntrancePage",
+	"WaitForExit": true,
+	"Param": {
+		"Value": "1"
+	},
+	"OnUIEnter": [],
+	"OnUIExitImmediately": [
+		{
+			"$type": "RPG.GameCore.EndDialogueEntityInteract"
+		},
+		{
+			"$type": "RPG.GameCore.SetMunicipalEnable",
+			"Visible": true
+		}
+	]
+}</pre>
 {{Dialogue End}}
 
 ==Other Languages==

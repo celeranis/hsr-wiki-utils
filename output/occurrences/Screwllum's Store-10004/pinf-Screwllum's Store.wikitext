@@ -1,0 +1,20 @@
+{{Dialogue Start}}
+:'''Screwllum:''' Much to your surprise, you stumble upon Screwllum at the store entrance &mdash; he is utterly engrossed in studying a series of equations.
+:'''Screwllum:''' "{{MC|f=Ms.|m=Mr.}} (Trailblazer), I am studying the origins of the equivalent exchange." Screwllum gracefully bows to you and says, "Analysis: Curios can be traded in equal amounts with Blessings via 'Data Exchange.'"
+:{{DIcon|Star}} Claim an equal amount of "Data Exchange." &mdash; A total of {{cx|??}} Curio(s) obtained, {{cx|??}} Blessing(s) will be awarded.
+:;(Obtain a random 1-3 star Blessing for every Curio currently in possession)
+:{{DIcon|Star}} Leave &mdash; Leave this place.
+
+;(Unused &mdash; Go_Buff)
+<pre>{
+	"$type": "RPG.GameCore.ShowUI",
+	"Name": "Ui.Rogue.Buff.RogueEnhanceBuffPage",
+	"WaitForExit": true,
+	"OnUICustomEvent": [],
+	"OnUIExitImmediately": [
+		{
+			"$type": "RPG.GameCore.FinishLevelGraph"
+		}
+	]
+}</pre>
+{{Dialogue End}}

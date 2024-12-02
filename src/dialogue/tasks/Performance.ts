@@ -1,5 +1,5 @@
-import { FinishPerformanceMission, InternalTriggerPerformance, PerformanceTransition, PlayScreenTransfer } from '../../files/Dialog.js';
 import { getExcelFile } from '../../files/GameFile.js';
+import { FinishPerformanceMission, InternalTriggerPerformance, PerformanceTransition, PlayScreenTransfer } from '../../files/graph/Dialog.js';
 import { Performance } from '../../files/Mission.js';
 import { textMap } from '../../TextMap.js';
 import { TranscriptionNote } from '../../util/AbstractDialogueTree.js';
@@ -22,21 +22,31 @@ export class TriggerPerformance extends BaseDialogueTask {
 	trigger_act: string
 	plane_id?: number
 	floor_id?: number
+	black_screen?: boolean
 	
 	constructor(data: InternalTriggerPerformance) {
 		super(data)
 		this.performance_type = data.PerformanceType
 		this.performance_id = data.PerformanceID
 		
-		const performanceData = performance[this.performance_type][this.performance_id]
+		let performanceData = performance[this.performance_type][this.performance_id]
+		
+		if (!performanceData && this.performance_type == 'D') {
+			performanceData = performance.DS[this.performance_id]
+		}
 		
 		this.trigger_act = performanceData?.PerformancePath
 		
 		this.plane_id = performanceData?.PlaneID
 		this.floor_id = performanceData?.FloorID
+		
+		this.black_screen = data.MaskConfig?.StartBlack != undefined
 	}
 
 	wikitext(): string | undefined {
+		if (this.black_screen) {
+			return `----`
+		}
 		if (process.argv.includes('--add-triggers')) {
 			return `:<!--Trigger Performance${this.performance_type} ${this.performance_id}: ${this.trigger_act}-->`
 		}

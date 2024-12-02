@@ -7,11 +7,11 @@ PageTitle=#Exhibition Match, Topaz!#
 |title         = 
 |image         = <!--Mission Exhibition Match, Topaz!.png-->
 |type          = Adventure
-|event_name    = 
+|event_name    = Aetherium Wars
 |chapter       = 
 |requirements  = {{subst:void|<!--Unknown: {"Type":"Manual"}-->}}
 |summary       = <!--official mission summary from Fate's Atlas-->
-|characters    = Trailblazer
+|characters    = Topaz; Trailblazer
 |startLocation = [[Jarilo-VI]] - [[Old Weapon Testing Ground]]
 |world         = Jarilo-VI
 |area          = Old Weapon Testing Ground
@@ -19,7 +19,7 @@ PageTitle=#Exhibition Match, Topaz!#
 |next          = 
 |rewards       = 
 }}
-'''''Exhibition Match, Topaz!''''' is an [[Adventure Mission]] on [[Jarilo-VI]].
+'''''Exhibition Match, Topaz!''''' is an Event [[Adventure Mission]] from the [[Aetherium Wars]] event.
 
 ==Steps==
 # Have a duel with Topaz
@@ -33,11 +33,23 @@ PageTitle=#Exhibition Match, Topaz!#
 -->
 ==Dialogue==
 {{Stub Dialogue}}
-
-===Have a duel with Topaz===
+===Have a duel with Topaz{{subst:void|<!--801414801-->}}===
 {{Mission Description|type=adventure|location=Old Weapon Testing Ground|The core gameplay loop behind Aetherium Wars is "dueling." Challenge different players and show your true strength!}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Topaz)
+:'''Topaz:''' We meet again! I see you really are an Aetherium Wars super fan!
+:'''Topaz:''' As you are so passionate, I will make sure to use all my power as a fellow "Champion"!
+<pre>{
+	"$type": "RPG.GameCore.ShowUI",
+	"Name": "Ui.AetherDivide.AetherChallenge.AetherChallengePage",
+	"WaitForExit": true,
+	"Param": {
+		"Value": "208"
+	},
+	"OnUIEnter": []
+}</pre>
+:'''Topaz:''' Wh&mdash;What!? I can't believe I lost... But, you'll challenge me again, right? I won't lose next time!
 {{Dialogue End}}
 
 ==Other Languages==

@@ -11,7 +11,7 @@ PageTitle=#Battles Without Ninja and Humanity#
 |chapter       = Banana Outrage: Battles Without Ninja and Humanity
 |requirements  = [[Trailblaze Continuance]] ''[[Asdanian Rhapsody]]'' completed
 |summary       = Bringing colored ink made from Rappa's memories, you arrive in the Moment of Slumbernana, a Dreamscape created by Profnana, and awaken everyone who has been transformed into monkeys. Together with Rappa, you defeat Profnana, the mastermind who has been exploiting all monkeys' desires. Although Profnana's true form escapes from Asdana, tranquility is restored to the Dreamscape and Paperfold University's anniversary festival can finally kick off again. While the crisis of the atavistic experiment may seem to be thwarted, it only marks the prelude to the Galaxy Rangers' next hunt...
-|characters    = Trailblazer
+|characters    = "Assistant Director"; "Profnana"; Boothill; Confounded Resident; Dan Heng; March 7th; Mr. Reca; Perplexed Classmate; Rappa; Rappa & Boothill; Trailblazer
 |startLocation = [[Penacony]] - [[Penacony Paperfold University College]]
 |world         = Penacony
 |area          = Penacony Paperfold University College
@@ -25,9 +25,9 @@ PageTitle=#Battles Without Ninja and Humanity#
 # Interact with the camera and enter the Moment of Slumbernana
 # The hunt has concluded, and all ninjas have assembled
 # Return to Paperfold University
-# Talk to Welt and Himeko
-# Head to the plaza to attend the opening ceremony of the school festival
 # (Optional) Check on the status of your classmates
+# Head to the plaza to attend the opening ceremony of the school festival
+# Talk to Welt and Himeko
 # The Ninja Hero lingers in the shadows of the Dreamlands, heralding a new upcoming hunt...
 
 <!--
@@ -39,45 +39,216 @@ PageTitle=#Battles Without Ninja and Humanity#
 -->
 ==Dialogue==
 {{Stub Dialogue}}
+----
+:{{tx}}
 {{Dialogue End}}
 
-===Interact with the camera and enter the Moment of Slumbernana===
+===Interact with the camera and enter the Moment of Slumbernana{{subst:void|<!--103421002-->}}===
 {{Mission Description|type=continuance|location=Penacony Paperfold University College|update|The final stage is prepared, and the main actors need to soon take the spotlight. The camera is ready to go any time &mdash; and will definitely not stop.<br />Three trials for BananAdvisors, two pasts for the Ninja Hero, and one party hosted by the cowboy &mdash; all in readiness for the ultimate hunt. Are you ready?}}
 {{Dialogue Start}}
+
+:{{DIcon|undefined}} Investigate
+:An ordinary camera. Had it not been made by a Memokeeper, it'd be hard to imagine that this thing could send you to another dreamscape.
+:You peer through the viewfinder and spot what seems like the eye of an amphibian staring back at you. A familiar voice echoes in your ears&mdash;
+:{{A|VO chapter3 39 fudaoyan 101.ogg}} ...
+:{{A|VO chapter3 39 mrreca 101.ogg}} '''Mr. Reca:''' Actors, are you ready for the final act?
+:{{DIcon|Arrow}} Action! Let's go, bana!
+::{{A|VO chapter3 39 rappa 109.ogg}} '''Rappa:''' Charge with me, ninjas! Let the hunt begin!
+:{{DIcon|Exit}} Cut! Hold on a sec, bana.
+::You halted the upcoming shoot &mdash; but to avoid turning your ninja hero role into a monkey, you need to get camera-ready fast.
 :{{tx}}
+<pre>{
+	"$type": "RPG.GameCore.SetPerformanceResult",
+	"Value": 1
+}</pre>
+
+
+;(Talk to Rappa)
+:{{A|VO chapter3 39 rappa 105 m.ogg}} {{A|VO chapter3 39 rappa 105 f.ogg}} '''Rappa:''' Ninja (Trailblazer), is there anything else the matter? This is no time to be dawdling.
+:{{DIcon|Talk}} Bana, about your memories...
+::{{A|VO chapter3 39 rappa 106.ogg}} '''Rappa:''' That's a story for another time. Nothing's more important than ensuring the safety of the countless people on this land of dreams.
+:;(Return to previous option selection)
+:{{DIcon|Talk}} Bana, about the Super Ninja Scroll...
+::{{A|VO chapter3 39 rappa 107.ogg}} '''Rappa:''' I have infused all the memories that Ninja Gama extracted into Dazzling Ninjutsu's colors. Spread this all over the evil realm, and it shall break the Evil Ninja's matrix. This is the ninja tech I previously studied.
+:;(Return to previous option selection)
+:{{DIcon|Arrow}} It's nothing, bana.
+::{{A|VO chapter3 39 rappa 108 m.ogg}} {{A|VO chapter3 39 rappa 108 f.ogg}} '''Rappa:''' Ninja (Trailblazer), we should get moving now. The nether fire that ravages the land of dreams can only be extinguished by ninjas like us.
+
+;(Talk to Dan Heng)
+:{{A|VO chapter3 39 danheng 104 m.ogg}} {{A|VO chapter3 39 danheng 104 f.ogg}} '''Dan Heng:''' (Trailblazer), the people in Paperfold University and Dreamflux Reef are still in grave danger. Let's set off... bana.
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:You faintly hear the playful '''Banagibberish''' of monkeys outside the door, and the happy, cheerful, carefree tones make you feel a twinge of *banana* envy.
+:{{A|VO chapter3 39 danheng 105 m.ogg}} {{A|VO chapter3 39 danheng 105 f.ogg}} '''Dan Heng:''' (Trailblazer), where are you going, bana?
+:Yeah, you came here to enjoy campus life, so why are you getting caught up in this mess? What do these *banana* troubles have to do with you anyway?
+:Your journey always seems like this: forced to take risks, forced to strive, forced to solve problems, with no freedom at all. Can't you ever truly choose to "give the *banana* up"?
+:{{A|VO chapter3 37 mrreca 127.ogg}} '''Mr. Reca:''' Hey. You have more memetic viruses on you than the number of trashy Penaconian films released this month. If you wander outside and provoke those monkeys again, you're really going to be done for!
+:Don't listen to him. Make a truly free choice and embrace the *banana* freedom of a monkey's life!
+:{{DIcon|Arrow}} Let's go, nana!
+:{{DIcon|Exit}} Hold on, bana!
+::Phew! At the last possible moment, you conquered the inner '''Banagibberish'''.
+::{{tx}}
+<pre>{
+	"$type": "RPG.GameCore.SetPerformanceResult",
+	"Value": 1
+}</pre>
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:When you enter this door, the Dreamscape's space begins to twist, and you once again return to Mr. Reca's set.
+<pre>{
+	"$type": "RPG.GameCore.PerformanceEndSeq",
+	"BeforeCases": [
+		{
+			"$type": "RPG.GameCore.TeleportToRotatableRegion",
+			"TargetRegionIndex": {
+				"IsDynamic": false,
+				"FixedValue": {
+					"Value": 6
+				}
+			},
+			"TargetAnchorGroupID": {
+				"IsDynamic": false,
+				"FixedValue": {
+					"Value": 150
+				}
+			},
+			"TargetAnchorInstanceID": {
+				"IsDynamic": false,
+				"FixedValue": {
+					"Value": 1
+				}
+			}
+		}
+	]
+}</pre>
+;(Unused &mdash; TalkSentence_103448610)
+:{{A|VO chapter3 37 rappa 119.ogg}} '''Rappa:''' Ninjas only strike when the opportunity presents itself. Waiting might be the right course of action to take for now.
 {{Dialogue End}}
 
-===The hunt has concluded, and all ninjas have assembled===
+===The hunt has concluded, and all ninjas have assembled{{subst:void|<!--103421003-->}}===
 {{Mission Description|type=continuance|location=Dreamflux Reef|update|The ultimate hunt is over, with the ninjas overcoming all the villains. The inhabitants of the Dreamlands can now enjoy a peaceful night's sleep, while for the Ninja Hero, this signals the beginning of a new adventure...}}
 {{Dialogue Start}}
+----
+:{{A|VO chapter3 39 student1 101.ogg}} '''Perplexed Classmate:''' What is this place... Wasn't I just in class?
+:{{A|VO chapter3 39 jumin3 101.ogg}} '''Confounded Resident:''' Where have the... bananas and forest gone...
+:{{A|VO chapter3 39 mar7th 101 m.ogg}} {{A|VO chapter3 39 mar7th 101 f.ogg}} '''March 7th:''' (Trailblazer), Dan Heng! And... Miss Rappa?
+:{{A|VO chapter3 39 rappa 143.ogg}} '''Rappa:''' Yo, Ninja Ruri! Yo, Silvergun Shura!
+:{{A|VO chapter3 39 boothill 101.ogg}} '''Boothill:''' Forkin' hell, they are making more of a scene than we are.
+:{{A|VO chapter3 39 jiaoshou 127.ogg}} '''"Profnana":''' How can it be... How could such mighty aspirations be brought down by a bunch of failed kindling...
+:{{A|VO chapter3 39 rappa 144.ogg}} '''Rappa:''' Fiendling Chief, stop insulting others with your filthy language. The way of the ninja does not discriminate between classes...
+:{{A|VO chapter3 39 rappa 145.ogg}} '''Rappa:''' One who seeks the way of the ninja is a Ninja Initiate. One who upholds the way of the ninja is a Ninja. And one who lives by the way of the ninja... is a Ninja Hero!
+:{{A|VO chapter3 39 jiaoshou 128.ogg}} '''"Profnana":''' ...I don't understand, bana.
+:{{A|VO chapter3 39 boothill 102.ogg}} '''Boothill:''' Me neither... Wait, no more nonsense. There's no point in continuing the conversation with a monkey brought up by Dr. Primitive.
+:{{A|VO chapter3 39 danheng 118.ogg}} '''Dan Heng:''' Have you decided on what to do with this guy?
+:{{A|VO chapter3 39 boothill 103.ogg}} '''Boothill:''' Torture is definitely on the menu. Hah, whip him with a belt soaked in saltwater and serve him everything that the IPC once used on me.
+:{{A|VO chapter3 39 rappa 146.ogg}} '''Rappa:''' The Fiendling Chief is guilty of multiple sins and deserves punishment. However, repentance is not what we seek, instead...
+:{{A|VO chapter3 39 rappa 147.ogg}} '''Rappa & Boothill:''' Make him tell us where Evil Ninja Osaru is. / Make him tell us where Dr. Primitive is.
+:'''"Profnana":''' ...
+:{{A|VO chapter3 39 boothill 105.ogg}} '''Boothill:''' Yo, you enjoy playing dead? Let's see if you can still play dead in the face of a banana covered with thorns!
+:{{A|VO chapter3 39 mrreca 102.ogg}} '''Mr. Reca:''' Alright, cowboy actor, you don't have to continue acting with that puppet.
+:{{A|VO chapter3 39 boothill 106.ogg}} '''Boothill:''' A puppet? You lil' fudgehead, even your toad looks more like a puppet than he does.
+:{{A|VO chapter3 39 fudaoyan 102.ogg}} '''"Assistant Director":''' ...
+:{{A|VO chapter3 39 mrreca 103.ogg}} '''Mr. Reca:''' You've hurt the feelings of the assistant director. You really should work on changing your crude way of delivering lines.
+:{{A|VO chapter3 39 mrreca 104.ogg}} '''Mr. Reca:''' Go ahead if you really want to torture a prop. But a certain gorilla who has just awakened at the border of Asdana is probably about to depart.
+:'''"Profnana":''' ...
+:{{A|VO chapter3 39 rappa 148.ogg}} '''Rappa:''' Silvergun Shura, even with my super hearing, I'm no longer able to detect the sounds of the fiendling. Perhaps Ninja Gama is right.
+:{{DIcon|Arrow}} He escaped?
+:{{DIcon|Arrow}} A truly despicable fiendling!
+:{{A|VO chapter3 39 boothill 107.ogg}} '''Boothill:''' Forkin' hell! That muddle-fudger still got away even after all our effort?
 :{{tx}}
+<pre>{
+	"$type": "RPG.GameCore.PerformanceEndSeq",
+	"BeforeCases": [
+		{
+			"$type": "RPG.GameCore.SwitchCharacterAnchorV2",
+			"SwitchCharacterAnchorConfig": {
+				"IsLocalPlayer": true,
+				"CharacterUniqueName": "LocalPlayer",
+				"AreaName": {
+					"Value": "LevelArea_P10304_F10304001_G180"
+				},
+				"AnchorName": {
+					"Value": "Anchor1"
+				}
+			}
+		}
+	]
+}</pre>
+----
+:{{tx}}
+<pre>{
+	"$type": "RPG.GameCore.ShowPerformanceRollingSubtitles",
+	"PostDuration": 0.5,
+	"IsGoNextImmediately": true,
+	"JsonConfig": "Config/Performance/PerformanceRollingSubtitles2_6_2.json"
+}</pre>
+:{{tx}}
+----
+;([[#Gallery|Cutscene]] plays)
+<pre>{
+	"$type": "RPG.GameCore.SetLoadingStratageType",
+	"StratageType": "Plain"
+}</pre>
 {{Dialogue End}}
 
-===Return to Paperfold University===
+===Return to Paperfold University{{subst:void|<!--103421004-->}}===
 {{Mission Description|type=continuance|location=Penacony Paperfold University College|update|The story of ninjas and monkeys comes to a temporary close. As you all know, no matter what happens, academic life must continue, and the interrupted school festival must resume.<br />Join the truly joyous festival &mdash; Although your contributions may remain unrecognized to all, a ninja embodies the spirit of a mysterious hero who works in the shadows, seeking not fame but peace for all.}}
 {{Dialogue Start}}
+----
+:{{A|VO chapter3 39 mar7th 102.ogg}} '''March 7th:''' You guys actually experienced something so exciting... Seriously, bring me along on such adventures next time!
+:{{A|VO chapter3 39 danheng 119.ogg}} '''Dan Heng:''' It was clearly you who went off on your own.
+:{{A|VO chapter3 39 mar7th 103.ogg}} '''March 7th:''' Forget it. Anyway, I was also able to showcase my capabilities while you guys weren't present. I definitely played a big part in your being able to resolve the situation so successfully.
+:{{DIcon|Arrow}} Really?
+::{{A|VO chapter3 39 mar7th 104.ogg}} '''March 7th:''' O&mdash;Of course!
+:{{DIcon|Arrow}} Wow, you're the best.
+::{{A|VO chapter3 39 mar7th 105.ogg}} '''March 7th:''' Hey, why do you sound so snarky...
+:{{DIcon|Arrow}} As expected of Ninja Ruri!
+::{{A|VO chapter3 39 mar7th 106 m.ogg}} {{A|VO chapter3 39 mar7th 106 f.ogg}} '''March 7th:''' You're too kind, Ninja (Trailblazer).
+:{{A|VO chapter3 39 danheng 120.ogg}} '''Dan Heng:''' The academic conference has concluded, and the actual acting dean and teachers are back.
 :{{tx}}
 {{Dialogue End}}
 
-===Talk to Welt and Himeko===
+===(Optional) Check on the status of your classmates{{subst:void|<!--103421005-->}}===
 {{Dialogue Start}}
+
+;(Talk to Montana)
 :{{tx}}
+
+;(Talk to Chaletka)
+:{{tx}}
+
+;(Talk to Richie)
+:{{tx}}
+
+;(Talk to Nanabloom-chan)
+:{{tx}}
+:{{A|VO chapter3 39 mar7th 109.ogg}} '''March 7th:''' Isn't that Montana and the other classmates? They're back!
 {{Dialogue End}}
 
-===Head to the plaza to attend the opening ceremony of the school festival===
+===Head to the plaza to attend the opening ceremony of the school festival{{subst:void|<!--103421015-->}}===
 {{Dialogue Start}}
-:{{tx}}
+
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{A|VO chapter3 39 mar7th 116.ogg}} '''March 7th:''' Look! It's Himeko and Mr. Yang!
 {{Dialogue End}}
 
-===(Optional) Check on the status of your classmates===
+===Talk to Welt and Himeko{{subst:void|<!--103421013-->}}===
 {{Dialogue Start}}
-:{{tx}}
 {{Dialogue End}}
 
-===The Ninja Hero lingers in the shadows of the Dreamlands, heralding a new upcoming hunt...===
+===The Ninja Hero lingers in the shadows of the Dreamlands, heralding a new upcoming hunt...{{subst:void|<!--103421006-->}}===
 {{Mission Description|type=continuance|location=Dream's Edge|update|While the war has ended, new adversaries will inevitably arise in realms devoid of justice. In a cosmos lacking laws, everyone must rely on their own abilities... Or forge their own way of the ninja.}}
 {{Dialogue Start}}
+----
 :{{tx}}
+<pre>{
+	"$type": "RPG.GameCore.SetLoadingStratageType",
+	"StratageType": "Plain"
+}</pre>
 {{Dialogue End}}
 
 ==Other Languages==

@@ -48,7 +48,7 @@ const IMAGE_ID_MAP = {
 }
 
 for (const occurrence of Object.values(await OccurrenceSeries.loadAllAbstract())) {
-	const firstOccurrence = occurrence.occurrences[0]
+	const firstOccurrence = occurrence.occurrences.find(occ => occ.mode != 'du') ?? occurrence.occurrences[0]
 	
 	let duOccurrence = occurrence.occurrences.find(occ => occ.mode == 'du')
 	

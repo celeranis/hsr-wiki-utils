@@ -11,7 +11,7 @@ PageTitle=#Hiring Guides: Seele#
 |chapter       = Everwinter City Museum Ledger of Curiosities
 |requirements  = {{subst:void|<!--Unknown: {"Type":"Manual"}-->}}
 |summary       = The Belobog History and Culture Museum is about to open, but there is a shortage of guides. Out of some ulterior motive, Seele, a Wildfire cadre and the bodyguard of the Supreme Guardian, submits her resume to the museum, and the interview proceeds smoothly and concludes in a friendly atmosphere.
-|characters    = Trailblazer
+|characters    = Bronya; Eris; Seele; Trailblazer
 |startLocation = [[Jarilo-VI]] - [[Great Mine]]
 |world         = Jarilo-VI
 |area          = Great Mine
@@ -37,20 +37,245 @@ PageTitle=#Hiring Guides: Seele#
 {{Stub Dialogue}}
 {{Dialogue End}}
 
-===Head to the Great Mine to find Seele===
+===Head to the Great Mine to find Seele{{subst:void|<!--800125501-->}}===
 {{Mission Description|type=adventure|location=Great Mine|update|The Belobog History and Culture Museum is about to open, but there is a great lack of guides. To rapidly fill up these positions and improve the visitor experience, Pela and Eris are inviting all Belobog citizens to apply for these positions.<br />This time they have their eye on Seele, senior member of Wildfire. Head to the Great Mine in their stead, and see whether Seele is interested in the position.}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Seele)
+----
+:'''Seele:''' Eh, (Trailblazer)? What brings you here?
+:{{DIcon|Arrow}} Are you interested in volunteering at the museum?
+:'''Seele:''' Museum? Bronya seems to have mentioned that before... Did she send you here?
+:{{DIcon|Arrow}} I sent myself here.
+::'''Seele:''' Okay, I'll cut to the chase.
+:{{DIcon|Arrow}} Pela sent me here.
+::'''Seele:''' Pela... Oh, I remember her. She's the Intelligence Officer of the Silvermane Guard.
+::'''Seele:''' Forget it. It doesn't matter who has sent you here. I'll cut to the chase.
+:{{DIcon|Arrow}} Yeah, sure, Bronya sent me here. Totally.
+::'''Seele:''' *sigh* This woman is always so stubborn when it comes to odd things like this...
+::'''Seele:''' But let me just be straight with you &mdash; about why I don't wanna become a volunteer guide.
+:'''Seele:''' I mean, just think about the name "Belobog History and Culture Museum." Do you really think I would fit anywhere near the "History" and the "Culture"?
+:'''Seele:''' It's not that I'm not willing to help, but I'm not suitable for the role. I'm sorry for making this a fruitless trip for you.
+:{{DIcon|Talk}} Come on, I'm sure you're more than cultured enough to be a volunteer guide.
+::'''Seele:''' Well, the truth is, I'm simply not cut out for this line of work. Nat used to press my head down, forcing me to read when I was little. It was so suffocating.
+::'''Seele:''' Would you really want someone like me to introduce the exhibits to visitors? Let's just nip this idea in the bud. It won't end well for any of us.
+:;(Return to previous option selection)
+:{{DIcon|Talk}} Don't worry. I, too, know nothing about Belobogian culture.
+::'''Seele:''' But you're different. Even though you're not a local, you still seem well-educated to me. So, being a guide must be easy-peasy for you.
+::'''Seele:''' As for me, everyone in the Underworld has seen me as a little rascal for as long as I can recall.
+::'''Seele:''' If they see me working there as a guide, I'm afraid the reputation of the museum will be tarnished.
+:;(Return to previous option selection)
+:{{DIcon|Arrow}} But Bronya will be so sad about this.
+::'''Seele:''' ...
+::'''Seele:''' ...
+::{{DIcon|Arrow}} Can you reconsider... for Bronya's sake?
+::{{DIcon|Arrow}} Um... Why the silence?
+:::'''Seele:''' I'm thinking!
+::'''Seele:''' *sigh*... Fine, I'll do it. Just hand me the application form...
+::'''Seele:''' Never mind, you keep the form for me and write down what I say verbatim.
+::{{DIcon|Arrow}} I'm happy to help!
+:::'''Seele:''' As you should.
+::{{DIcon|Arrow}} Huh, you are so easy to read.
+:::'''Seele:''' Tsk! Watch it! Don't push your luck...
+:::'''Seele:''' ...Aah! Fine! I just can't take it when she cries! Are you happy now?
+::{{DIcon|Arrow}} Why don't you write it yourself?
+:::'''Seele:''' ...My handwriting is awful. Do you have a problem with that?
+::'''Seele:''' Okay, let's get down to business. Listen to me carefully.
+::{{DIcon|Arrow}} The first question: What is your name?
+::'''Seele:''' Seele, no last name.
+::{{DIcon|Arrow}} Then, Seele it is.
+:::'''Seele:''' Are you done? Let's move on to the next question when you're ready.
+::{{DIcon|Arrow}} Sure, Seele No-Last-Name.
+:::'''Seele:''' Don't test me. You wanna mess around and find out?
+:<pre>{
+	"$type": "RPG.GameCore.SetTextJoinValue",
+	"TextJoinID": 34,
+	"Value": "1"
+}</pre>
+::{{DIcon|Arrow}} The next question: What is your personal experience?
+::'''Seele:''' Ugh, I knew it. This is a tough one...
+::'''Seele:''' ...Forget it. Just say that I have no experience. I can't really disclose any of the jobs I have done for the Wildfire.
+::{{DIcon|Arrow}} Fine. No experience it is.
+:::'''Seele:''' Okay. Next one, please.
+::{{DIcon|Arrow}} Okay, I'll write down "no comment" here.
+:::'''Seele:''' I can tell you're enjoying teasing me like this, don't you?
+:<pre>{
+	"$type": "RPG.GameCore.SetTextJoinValue",
+	"TextJoinID": 35,
+	"Value": "1"
+}</pre>
+::{{DIcon|Arrow}} The last question: What are your skills and expertise?
+::'''Seele:''' Why are the questions getting trickier? Let me think...
+::'''Seele:''' ...Hmm, just go ahead and put down "dispute resolution" &mdash; which won't sound too intimidating, I hope.
+::{{DIcon|Arrow}} Fine, "dispute resolution" it is.
+:::'''Seele:''' Thanks a lot.
+::{{DIcon|Arrow}} Okay, I'll just put down "too scary to specify."
+:::'''Seele:''' ...Is it too late to back out now?
+:<pre>{
+	"$type": "RPG.GameCore.SetTextJoinValue",
+	"TextJoinID": 36,
+	"Value": "1"
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.ShowReading",
+	"BookID": {
+		"fixedValue": {
+			"Value": 190456
+		}
+	},
+	"WaitForExit": true
+}</pre>
+::'''Seele:''' I suppose it's done. Can I take a look?
+::{{DIcon|Arrow}} Better to keep it a surprise.
+::'''Seele:''' ...
+::'''Seele:''' ...I hope this surprise is gonna be a pleasant one.
+::'''Seele:''' Well. Let's head to the Overworld and submit this thing.
+::'''Seele:''' ...Though I reckon it will still be unlikely for me to pass the background check...
+::----
 {{Dialogue End}}
 
-===Head to the Belobog History and Culture Museum to find Eris===
+===Head to the Belobog History and Culture Museum to find Eris{{subst:void|<!--800125502-->}}===
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Eris)
+;(If {{cx}}{{subst:void|<!--{"$type":"RPG.GameCore.ByIfGroupIsOccupied","GroupID":44,"Inverse":true}-->}})
+::----
+::'''Seele:''' Tsk, this museum looks so posh... It reminds me of that orphanage in Rivet Town.
+::'''Seele:''' Are you... Miss Eris? I'm here to submit my volunteer guide application form. Should I give it to you?
+::'''Eris:''' Yes. Please give it to me! I'll pass your resume on to Miss Pela right away!
+::'''Seele:''' This seems serious... Let's take a break here, (Trailblazer).
+::----
+::'''Bronya:''' Eh, Seele? What are you doing here?
+::<!--0.5-second delay-->
+::'''Seele:''' Um...
+::'''Bronya:''' Did (Trailblazer) bring you here?
+::{{DIcon|Arrow}} Yep, that's me!
+:::'''Bronya:''' I see. I've been trying to make you come for so long, but to no avail. Seems like (Trailblazer) is the only one who can convince you.
+::{{DIcon|Arrow}} She came of her own volition.
+:::'''Bronya:''' I see. I'm surprised you have finally made up your mind... Thank you, Seele.
+::'''Seele:''' Ahem... I guess it's my turn to ask questions now?
+::'''Seele:''' My application didn't pass the review, right? Can I just go now?
+::'''Bronya:''' No. Pela was impressed by your ability, so she wanted me to have an interview with you.
+::{{DIcon|Arrow}} No way for you to escape now, Seele!
+:::'''Seele:''' Darn it...
+::{{DIcon|Arrow}} How come Pela has the gall to boss the Supreme Guardian around?
+:::'''Bronya:''' It's not like that. A Supreme Guardian should never be put on a pedestal. Since Pela is in charge of the museum revitalization plan, I have no problem following her instructions.
+:::'''Bronya:''' Still, she was quite nervous when she discussed this matter with me...
+::'''Bronya:''' Anyway, let's head to the Rest Area, Seele and (Trailblazer). The interview will be held there.
+::'''Seele:''' Fine. I'll play along, but it's only because I'm not busy today.
+::'''Bronya:''' Thank you, Seele. As for (Trailblazer), the assistant assessor, you may get on with your things first. We'll start the interview when you are ready.
+::----
+;(Otherwise)
+:<pre>{
+	"$type": "RPG.GameCore.PlayMultiVoiceTalk",
+	"TalkSentenceID": 501190301,
+	"KeepDisplay": true
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.ShowMenu"
+}</pre>
+
+;(Talk to Bronya)
+----
+:'''Bronya:''' (Trailblazer), are you ready?
+:{{DIcon|Arrow}} Let's begin.
+::'''Bronya:''' Please get ready, Seele. The interview will begin now.
+::'''Seele:''' For some reason, I feel a bit nervous...
+::----
+::'''Bronya:''' ...
+::'''Seele:''' ...
+::'''Bronya:''' ...
+::{{DIcon|Arrow}} Are you two communicating telepathically?
+:::'''Seele:''' Pfft, no way, telepathy ain't real!
+:::'''Seele:''' ...Wait a minute, you are not actually trying to read my mind, are you, Lady Bronya?
+::{{DIcon|Arrow}} ...
+:::'''Seele:''' ...How come you aren't saying anything as well?
+:::'''Seele:''' And you, Lady Bronya. Why don't you say something?
+::{{DIcon|Arrow}} Oh I see, so we're playing a quiet game, huh?
+:::'''Seele:''' Pfft, no way, what are you even talking about!
+:::'''Seele:''' Lady Bronya, why don't you say something?
+::'''Bronya:''' This... This is my first time speaking to you in this position, and I don't know what to say...
+::'''Seele:''' Um, should we end the interview here? It's good for both of us. Let's not take up any more of (Trailblazer)'s time.
+::'''Bronya:''' ...No way! We have to go through the entire process no matter what.
+::'''Bronya:''' (Trailblazer), how do you think I should ask the questions as an interviewer?
+::{{DIcon|Arrow}} Just ask questions based on the resume.
+:::'''Bronya:''' I see... I'll ask the questions based on the resume then. This is also a great chance for me to get to know Seele better.
+::{{DIcon|Arrow}} You gotta loosen up, people! Just talk to each other like friends would.
+:::'''Bronya:''' I see... I'll ask some random questions based on the resume then. This is also a great chance for me to get to know Seele better.
+::'''Seele:''' Don't we know each other well enough already...
+:;(If {{cx}}{{subst:void|<!--{"$type":"RPG.GameCore.ByCompareTextJoinValue","TextJoinID":34,"Value":1,"TaskEnabled":true,"IsClientOnly":true}-->}})
+:::'''Bronya:''' First of all, the name is "Seele," which is indeed your name.
+:;(If {{cx}}{{subst:void|<!--{"$type":"RPG.GameCore.ByCompareTextJoinValue","TextJoinID":34,"Value":1,"TaskEnabled":true,"IsClientOnly":true}-->}})
+:::'''Bronya:''' First of all, the name is "Seele No-Last-Name"? Is "No-Last-Name" an actual family name in Belobog?
+:::'''Seele:''' Ahem... (Trailblazer)?
+:::{{DIcon|Arrow}} Sorry about that. It's just a prank, sis.
+:::{{DIcon|Arrow}} Seems like you don't know Belobog well enough...
+::::'''Bronya:''' Eh? I really haven't heard of such a weird surname...
+::::'''Bronya:''' Ah, I meant to say "uncommon surname"! Sorry, Seele. I hope you aren't offended...
+::::'''Seele:''' This is clearly a prank pulled by (Trailblazer)! What are you even apologizing for?
+::'''Bronya:''' Pfft... I see. Speaking of your name, there's something I've always been curious about...
+::'''Bronya:''' In fact, "Seele" itself is not a common name in Belobog... Does it have a special meaning?
+::'''Seele:''' Well... Oleg gave me the name. He said that it meant "soul" in ancient Belobogian.
+::'''Seele:''' I'm not sure what he tried to convey through that name... But to all those thugs and gangsters in the Underworld, I'm like a specter always haunting them.
+::'''Bronya:''' Wow, I'm surprised by its profound meaning. How fascinating! Now, the next question &mdash;
+:;(If {{cx}}{{subst:void|<!--{"$type":"RPG.GameCore.ByCompareTextJoinValue","TextJoinID":35,"Value":1,"TaskEnabled":true,"IsClientOnly":true}-->}})
+:::'''Bronya:''' You have... no personal experience? You went through a lot, didn't you?
+:::'''Seele:''' Indeed, but none of them is decent... I don't think it's necessary to include them.
+:::'''Bronya:''' I understand, so I'm not going to probe. Let's see what's next...
+:;(If {{cx}}{{subst:void|<!--{"$type":"RPG.GameCore.ByCompareTextJoinValue","TextJoinID":35,"Value":1,"TaskEnabled":true,"IsClientOnly":true}-->}})
+:::'''Bronya:''' "No Comment" on your personal experience? I do get what it means, but why?
+:::'''Seele:''' (Trailblazer), is there anything you want to say?
+:::{{DIcon|Arrow}} Sorry. It's another prank of mine.
+:::{{DIcon|Arrow}} Seele said it could make her look more mysterious...
+::::'''Seele:''' Don't pin the blame on me!
+::::'''Bronya:''' Pfft... Okay. I've got it. I'm not going to probe. Let's see what's next...
+:;(If {{cx}}{{subst:void|<!--{"$type":"RPG.GameCore.ByCompareTextJoinValue","TextJoinID":36,"Value":1,"TaskEnabled":true,"IsClientOnly":true}-->}})
+:::'''Bronya:''' For skills and expertise, you wrote "dispute resolution"...
+:::'''Seele:''' That's one way to describe it. I'm sure you know very well what I do in the Underworld.
+:::'''Bronya:''' I understand. However, there won't be such kind of dispute at the museum for you to deal with.
+:;(If {{cx}}{{subst:void|<!--{"$type":"RPG.GameCore.ByCompareTextJoinValue","TextJoinID":36,"Value":1,"TaskEnabled":true,"IsClientOnly":true}-->}})
+:::'''Bronya:''' For skills and expertise, you wrote "too scary to specify." And that means...
+:::'''Seele:''' (Trailblazer)... Do you have a wise answer to the Supreme Guardian's question?
+:::{{DIcon|Arrow}} Sorry. It's yet another prank of mine.
+:::{{DIcon|Arrow}} Seele forced me to write that!
+::::'''Seele:''' Nobody forced you to do that!
+::::'''Bronya:''' Haha, I'm surprised at how close you two are. In fact, I can more or less get what Seele is trying to say.
+::::'''Bronya:''' Don't worry. I don't think your "skills and expertise" will be put to use here.
+::'''Seele:''' Even if there were such a dispute, I could handle it.
+::'''Bronya:''' No. If there were such a dispute, you should need to summon the Silvermane Guards.
+::'''Bronya:''' Don't forget that protecting me is now one of your duties. You can't just gratuitously get yourself hurt.
+::'''Seele:''' Okay okay... I got it.
+::----
+::'''Bronya:''' Well, let's call it a day. I'll announce the result now.
+::'''Seele:''' I'm sure I've failed...
+::'''Bronya:''' You've passed. Welcome to the Belobog History and Culture Museum, Seele!
+::'''Seele:''' ...
+::'''Seele:''' I am... not sure how to respond to this.
+::{{DIcon|Arrow}} Congrats, Seele!
+:::'''Seele:''' Even you are doing this to me. Tsk, looks like I'm gonna be stuck here...
+::{{DIcon|Arrow}} The plot thickens!
+:::'''Seele:''' Tsk... I'm sure you're just waiting to see me suffer.
+::{{DIcon|Arrow}} You've made Bronya happy!
+:::'''Seele:''' ...Hmph, you're not wrong about that.
+::'''Seele:''' Anyway... Everything's fine as long as she's happy.
+::'''Bronya:''' Eh? Are you two having a secret talk?
+::'''Seele:''' ...Ahem! Nothing...
+::'''Seele:''' Hey Bronya, what should I do next? Hurry up and assign some jobs to me.
+::'''Bronya:''' Follow me later. We have to go through some formalities.
+::'''Bronya:''' (Trailblazer), thank you for your help in the interview. Thanks to you, I've had the chance to get to know Seele better.
+::'''Bronya:''' Please excuse me now, as I have to take Seele to complete the procedure. Remember to visit the museum often and check on Seele.
+::'''Seele:''' Do you really have so little trust in me...
+::----
+:{{DIcon|Exit}} Please give me a moment.
+::'''Bronya:''' No problem. We'll wait for you.
+::----
 {{Dialogue End}}
 
-===Start the interviews in the museum's rest area===
+===Start the interviews in the museum's rest area{{subst:void|<!--800125503-->}}===
 {{Dialogue Start}}
-:{{tx}}
+----
+:'''Eris:''' Hello, (Trailblazer)! Pela and I have been screening prospective volunteer guides for the museum recently, and we've finally found the right candidate...
+:'''Eris:''' Could you help us contact the cadre of the Wildfire, {{Color|keyword|nobold=1|Seele}} &mdash; thanks, (Trailblazer)!
 {{Dialogue End}}
 
 ==Other Languages==

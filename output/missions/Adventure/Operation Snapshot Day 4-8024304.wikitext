@@ -7,11 +7,11 @@ PageTitle=#Operation Snapshot: Day 4#
 |title         = 
 |image         = <!--Mission Operation Snapshot Day 4.png-->
 |type          = Adventure
-|event_name    = 
+|event_name    = Operation Memoria Snapshot
 |chapter       = 
 |requirements  = [[Adventure Mission]] ''[[Operation Snapshot: Day 3]]'' completed
 |summary       = <!--official mission summary from Fate's Atlas-->
-|characters    = Trailblazer
+|characters    = Randolph; Trailblazer
 |startLocation = [[The Xianzhou Luofu]] - [[Central Starskiff Haven]]
 |world         = The Xianzhou Luofu
 |area          = Central Starskiff Haven
@@ -19,7 +19,7 @@ PageTitle=#Operation Snapshot: Day 4#
 |next          = Operation Snapshot: Day 5
 |rewards       = Credit*1,000
 }}
-'''''Operation Snapshot: Day 4''''' is an [[Adventure Mission]] on [[The Xianzhou Luofu]].
+'''''Operation Snapshot: Day 4''''' is an Event [[Adventure Mission]] from the [[Operation Memoria Snapshot]] event.
 
 ==Steps==
 # Talk to Randolph about today's filming
@@ -34,17 +34,54 @@ PageTitle=#Operation Snapshot: Day 4#
 -->
 ==Dialogue==
 {{Stub Dialogue}}
-
-===Talk to Randolph about today's filming===
+===Talk to Randolph about today's filming{{subst:void|<!--802430401-->}}===
 {{Mission Description|type=adventure|location=Central Starskiff Haven|Trainee Healer Randolph has prepared the retrieval plan for the scattered memoria today. Help him film the location of the target.}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Randolph)
+:'''Randolph:''' (Trailblazer), you're just in time. I sent the recorded data to Dr. Edward. "This looks pretty good." Those were his own words.
+:'''Randolph:''' This is great news! That means I managed to get the budget I spent back!
+:'''Randolph:''' Anyway, I'm counting on you for data collection again today!
+:{{DIcon|Travel Log}} Let's begin today's shoot.
+:<pre>{
+	"$type": "RPG.GameCore.SetPerformanceResult",
+	"Value": 1
+}</pre>
+:{{DIcon|Exit}} I've got something else to do.
+::'''Randolph:''' Alright. If you need to retake any pictures, you can come back anytime.
+
+;(Unused &mdash; G253_OpenUI)
+<pre>{
+	"$type": "RPG.GameCore.ShowUI",
+	"Name": "Ui.Activity.ActivityTrackPhoto.Entrance.ActivityTrackPhotoEntrancePage"
+}</pre>
 {{Dialogue End}}
 
-===Assist Randolph in filming the scattered memoria===
+===Assist Randolph in filming the scattered memoria{{subst:void|<!--802430402-->}}===
 {{Mission Description|type=adventure|location=Central Starskiff Haven|update|Help Trainee Healer Randolph with the filming so that he can capture these scattered memoria.}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Randolph)
+:'''Randolph:''' My beloved assistant, (Trailblazer)! If you want to retake any pictures, you can come and find me any time.
+:{{DIcon|Travel Log}} Let's begin today's shoot.
+:<pre>{
+	"$type": "RPG.GameCore.SetPerformanceResult",
+	"Value": 1
+}</pre>
+:{{DIcon|Exit}} I've got something else to do.
+::'''Randolph:''' Alright. If you need to retake any pictures, you can come back anytime.
+<pre>{
+	"$type": "RPG.GameCore.WaitFrame",
+	"WaitFrameCount": 1
+}</pre>
+:'''Randolph:''' Thank you so much, (Trailblazer). These pictures will make collecting and containing the memoria much easier.
+:{{DIcon|Arrow}} Why are you collecting all this scattered memoria?
+:'''Randolph:''' For research, of course! I want to use my research on scattered memoria to find a treatment method for {{Rubi|de-humanization|being mara-struck}}.
+:'''Randolph:''' I found records on being mara-struck when I was searching for materials in the library and grew curious.
+:'''Randolph:''' I've been working on this research topic for the past few years and according to the materials I have so far, it is not just the unique physiology of the Xianzhou people that plays a decisive role in the development of mara, but their memories and emotions as well.
+:'''Randolph:''' If I can find a cause for this illness in the psychological trash, then there is hope for the development of a cure.
+:'''Randolph:''' I bet Dr. Edward never would have imagined that I got this inspiration while trashcan diving!
+:'''Randolph:''' Either way, (Trailblazer). If you have time, remember to come back and see me again.
 {{Dialogue End}}
 
 ==Other Languages==

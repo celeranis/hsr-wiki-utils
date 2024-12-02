@@ -9,7 +9,7 @@ PageTitle=##
 |type          = Adventure
 |event_name    = 
 |chapter       = 
-|requirements  = {{cx}}<!--Hidden Exploration Objective ID 4340111--> completed
+|requirements  = {{cx}}<!--Hidden Mission ID 4340111--> completed
 |summary       = <!--official mission summary from Fate's Atlas-->
 |characters    = Trailblazer
 |startLocation = [[Penacony]] - [[Clock Studios Theme Park]]
@@ -34,6 +34,16 @@ PageTitle=##
 ==Dialogue==
 {{Stub Dialogue}}
 
+;(If {{F|MissionCV-4340111-undefined}} is not equal to 2)
+<pre>{
+	"$type": "RPG.GameCore.AdvDestroyGroupEntity",
+	"InstanceIDList": [
+		400001
+	]
+}</pre>
+;(If {{F|MissionCV-4340111-undefined}} is equal to 1)
+;(If {{F|MissionCV-4340111-undefined}} is not equal to 1)
+:;(Return to previous option selection)
 {{Dialogue End}}
 
 ==Other Languages==

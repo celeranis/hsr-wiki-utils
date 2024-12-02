@@ -1,8 +1,8 @@
 import { Dictionary } from '../Shared.js'
 import { textMap } from '../TextMap.js'
 import { LazyExcelData, getFile, getFileSafe } from '../files/GameFile.js'
-import { LevelFloor, LevelGroupData, LevelGroupReference, MazeFloor, MazePlane, PlaneType, WorldData } from '../files/MapData.js'
-import { LevelGroup } from './LevelGroup.js'
+import { LevelFloor, LevelGroupData, LevelGroupReference, MazeFloor, MazePlane, PlaneType, WorldData } from '../files/graph/MapData.js'
+import type { LevelGroup } from './LevelGroup.js'
 // import { AreaMap } from './AreaMap.js'
 
 const world_data = await getFile<Dictionary<WorldData>>('ExcelOutput/WorldDataConfig.json')
@@ -111,8 +111,10 @@ export class AreaFloor {
 		
 		const groupData = await getFileSafe<LevelGroupData>(group.GroupPath)
 		if (!groupData) return undefined
+
+		const { LevelGroup } = await import('./LevelGroup.js')
 		
-		return this.loaded_groups[group_id] = new LevelGroup(groupData, Number(group_id))
+		return this.loaded_groups[group_id] = new LevelGroup(groupData, Number(group_id), this.floor_id)
 	}
 	
 	async loadAllGroups() {
@@ -122,8 +124,8 @@ export class AreaFloor {
 		return Object.values(this.loaded_groups)
 	}
 
-	async loadSubMissionGroups(mission_id: number) {
+	async loadSubMissionGroups(mission_id: number, referenced?: number[]) {
 		return (await this.loadAllGroups())
-			.filter(group => group.load_conditions.find(cond => cond.Type == 'SubMission' && cond.ID == mission_id))
+			.filter(group => referenced?.includes(group.id) || group.load_conditions.find(cond => cond.Type == 'SubMission' && cond.ID == mission_id))
 	}
 }

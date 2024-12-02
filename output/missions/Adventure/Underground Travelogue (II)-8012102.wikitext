@@ -7,11 +7,11 @@ PageTitle=#Underground Travelogue (Part 2)#
 |title         = Underground Travelogue (II)
 |image         = <!--Mission Underground Travelogue (Part 2).png-->
 |type          = Adventure
-|event_name    = 
+|event_name    = Underground Treasure Hunt
 |chapter       = 
 |requirements  = [[Adventure Mission]] ''[[Underground Travelogue (I)]]'' completed
 |summary       = <!--official mission summary from Fate's Atlas-->
-|characters    = Trailblazer
+|characters    = Aksay; Trailblazer
 |startLocation = [[Jarilo-VI]] - [[Great Mine]]
 |world         = Jarilo-VI
 |area          = Great Mine
@@ -19,7 +19,7 @@ PageTitle=#Underground Travelogue (Part 2)#
 |next          = Underground Travelogue (III)
 |rewards       = Credit*10,000
 }}
-'''''Underground Travelogue (II)''''' is an [[Adventure Mission]] on [[Jarilo-VI]].
+'''''Underground Travelogue (II)''''' is an Event [[Adventure Mission]] from the [[Underground Treasure Hunt]] event.
 
 ==Steps==
 # Clear ruin 2 in Underground Treasure Hunt
@@ -33,11 +33,38 @@ PageTitle=#Underground Travelogue (Part 2)#
 -->
 ==Dialogue==
 {{Stub Dialogue}}
-
-===Clear ruin 2 in Underground Treasure Hunt===
+===Clear ruin 2 in Underground Treasure Hunt{{subst:void|<!--801210201-->}}===
 {{Mission Description|type=adventure|location=Great Mine|Aksay has excavated a new ancient ruin. Continue your treasure hunting journey!}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Aksay)
+:'''Aksay:''' Ah, it's you again. Ready to go treasure hunting down in the ancient ruins?
+<pre>{
+	"$type": "RPG.GameCore.ShowMenu"
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.WaitUIControllerClose",
+	"UIControllerName": "TreasureDungeonResultDialog"
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.ClosePage",
+	"PageNames": [
+		"TreasureDungeonEntrancePage"
+	],
+	"PageRootNames": [],
+	"IsSilentExit": true
+}</pre>
+:<!--0.5-second delay-->
+----
+:'''Aksay:''' Haha, so I was right after all. Together, our relic-hunting journey is gonna take on the world!
+:'''Aksay:''' Oh yeah &mdash; you can continue to explore the ruin depths at any ruins that you've already been through, but things will become even more dangerous... It's all up to how brave you are.
+----
+
+;(Talk to Aksay)
+:'''Aksay:''' Ah, it's you again. Ready to go treasure hunting down in the ancient ruins?
+<pre>{
+	"$type": "RPG.GameCore.ShowMenu"
+}</pre>
 {{Dialogue End}}
 
 ==Other Languages==

@@ -11,7 +11,7 @@ PageTitle=#The Barren Land Birthed a Brave Soul#
 |chapter       = Luminary Wardance
 |requirements  = {{subst:void|<!--Unknown: {"Type":"Manual"}-->}}
 |summary       = <!--official mission summary from Fate's Atlas-->
-|characters    = Trailblazer
+|characters    = Luka's Demon; Trailblazer
 |startLocation = [[Jarilo-VI]] - [[Luka's Inner World]]
 |world         = Jarilo-VI
 |area          = Luka's Inner World
@@ -33,11 +33,86 @@ PageTitle=#The Barren Land Birthed a Brave Soul#
 -->
 ==Dialogue==
 {{Stub Dialogue}}
-
-===Help Luka out of the shadow of defeat and regain his motivation===
+===Help Luka out of the shadow of defeat and regain his motivation{{subst:void|<!--802510701-->}}===
 {{Mission Description|type=adventure|location=Luka's Inner World|"Should I still participate in a tournament till the end when I know I'll definitely lose?"<br />"Then let me ask you: Will you stop living if you know you'll life is doomed to fail?"<br />"But why should I see the end of this story when it's fated to be a tragedy that I can't change?"<br />"Because you're a fighter, idiot."}}
 {{Dialogue Start}}
+----
 :{{tx}}
+
+;(Unused &mdash; EnterDistrict_G5)
+:{{tx}}
+<pre>{
+	"$type": "RPG.GameCore.SwitchCharacterAnchorV2",
+	"SwitchCharacterAnchorConfig": {
+		"IsLocalPlayer": true,
+		"CharacterUniqueName": "LocalPlayer",
+		"AreaName": {
+			"Value": "LevelArea_P40103_F40103001_G15"
+		},
+		"AnchorName": {
+			"Value": "Anchor1"
+		},
+		"ResetAnimation": true,
+		"ResetCamera": true
+	}
+}</pre>
+:{{tx}}
+<pre>{
+	"$type": "RPG.GameCore.ResetMissionAudioState",
+	"ResetBGMEmotionState": true
+}</pre>
+:{{tx}}
+<pre>{
+	"$type": "RPG.GameCore.PerformanceEndSeq",
+	"BeforeCases": [
+		{
+			"$type": "RPG.GameCore.SwitchCharacterAnchorV2",
+			"SwitchCharacterAnchorConfig": {
+				"IsLocalPlayer": true,
+				"CharacterUniqueName": "LocalPlayer",
+				"AreaName": {
+					"Value": "LevelArea_P40103_F40103001_G18"
+				},
+				"AnchorName": {
+					"Value": "Anchor1"
+				}
+			}
+		}
+	]
+}</pre>
+
+;(Talk to Luka)
+
+
+;(Unused &mdash; EnterDistrict_G8)
+:{{tx}}
+:{{tx}}
+<pre>{
+	"$type": "RPG.GameCore.PerformanceEndSeq",
+	"BeforeCases": [
+		{
+			"$type": "RPG.GameCore.SwitchCharacterAnchorV2",
+			"SwitchCharacterAnchorConfig": {
+				"IsLocalPlayer": true,
+				"CharacterUniqueName": "LocalPlayer",
+				"AreaName": {
+					"Value": "LevelArea_P40103_F40103001_G18"
+				},
+				"AnchorName": {
+					"Value": "Anchor2"
+				}
+			}
+		}
+	]
+}</pre>
+
+;(Unused &mdash; EnterDistrict_G10)
+:{{tx}}
+:;(Enter battle)
+:::{{tx|Enemy list missing}}
+
+;(Unused &mdash; EnterDistrict_G13)
+:{{A|VO side2 yanwu lukadark 105.ogg}} '''Luka's Demon:''' Run, run! Run, you fool! You can't win! You'll die!
 {{Dialogue End}}
 
 ==Other Languages==

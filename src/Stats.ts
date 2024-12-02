@@ -9,8 +9,8 @@ export type CustomDmgStats = `${CustomAttackType}_dmg`
 
 export type CustomStatName =
 	| 'atk' | 'def' | 'hp' | 'spd' | 'toughness'
-	| 'ehr' | 'effect_res'
-	| CustomResStats
+	| 'ehr' | 'effect_res' | 'crit_rate' | 'crit_dmg'
+	| 'aggro' | 'break_effect' | CustomResStats
 
 export type CustomPlayerStatName = CustomStatName
 	| 'energy_regen' | CustomDmgStats | 'dmg_boost'
@@ -74,6 +74,8 @@ export class Stat {
 		hp: { default: 'MaxHP', base: 'BaseHP', flat: 'HPDelta', ratio: 'HPAddedRatio', value: mockAvatarProperty('HPValue', 35820337) },
 		ehr: { default: 'StatusProbability', base: 'StatusProbabilityBase' },
 		effect_res: { default: 'StatusResistance', base: 'StatusResistanceBase' },
+		crit_rate: { default: 'CriticalChance', base: 'CriticalChanceBase' },
+		crit_dmg: { default: 'CriticalDamage', base: 'CriticalDamageBase' },
 		break_effect: { default: 'BreakDamageAddedRatio', base: "BreakDamageAddedRatioBase" },
 		dmg_boost: { default: mockAvatarProperty('DMGBoost', 109177041) },
 		energy_regen: { default: 'SPRatio', base: 'SPRatioBase' },
@@ -92,7 +94,8 @@ export class Stat {
 		lightning_res: { default: 'ThunderResistance', ratio: 'ThunderResistanceDelta' },
 		imaginary_res: { default: 'ImaginaryResistance', ratio: 'ImaginaryResistanceDelta' },
 		quantum_res: { default: 'QuantumResistance', ratio: 'QuantumResistanceDelta' },
-		toughness: { default: mockAvatarProperty('Toughness', -1438801497) }
+		toughness: { default: mockAvatarProperty('Toughness', -1438801497) },
+		aggro: { default: mockAvatarProperty('BaseAggro', 68772577) },
 	}
 
 	static internalKeyMap: Record<AvatarPropertyType, Stat> = {} as any

@@ -7,11 +7,11 @@ PageTitle=#Knockout Match: Tri-Dis of Zhuming#
 |title         = 
 |image         = <!--Mission Knockout Match Tri-Dis of Zhuming.png-->
 |type          = Adventure
-|event_name    = 
+|event_name    = Luminary Wardance
 |chapter       = Luminary Wardance
 |requirements  = {{subst:void|<!--Unknown: {"Type":"Manual"}-->}}
 |summary       = <!--official mission summary from Fate's Atlas-->
-|characters    = Trailblazer
+|characters    = Carmella; Luka; Trailblazer
 |startLocation = [[The Xianzhou Luofu]] - [[Skysplitter]]
 |world         = The Xianzhou Luofu
 |area          = Skysplitter
@@ -19,7 +19,7 @@ PageTitle=#Knockout Match: Tri-Dis of Zhuming#
 |next          = Even When Cheers Fade: Chapter 2
 |rewards       = Wardance Sword Badge*5
 }}
-'''''Knockout Match: Tri-Dis of Zhuming''''' is an [[Adventure Mission]] on [[The Xianzhou Luofu]] in the chapter [[Luminary Wardance]].
+'''''Knockout Match: Tri-Dis of Zhuming''''' is an Event [[Adventure Mission]] from the [[Luminary Wardance]] event.
 
 ==Steps==
 # Step into the ring and get those points!
@@ -33,11 +33,232 @@ PageTitle=#Knockout Match: Tri-Dis of Zhuming#
 -->
 ==Dialogue==
 {{Stub Dialogue}}
-
-===Step into the ring and get those points!===
+===Step into the ring and get those points!{{subst:void|<!--802513601-->}}===
 {{Mission Description|type=adventure|location=Skysplitter|The rules of the Knockout Matches are easy &mdash; Just defeat opponents and win points<br />Contestant Luka just needs to do three things: Win, win, and keep winning!}}
 {{Dialogue Start}}
+
+;(Talk to Luka)
+:'''Luka:''' The Tri-Dis of Zhuming... After some appreciation, this name sounds quite impressive. It's time to go meet them in the arena!
+:{{DIcon|Arrow}} Begin competition.
+:<pre>{
+	"$type": "RPG.GameCore.SetPerformanceResult",
+	"Value": 1
+}</pre>
+:{{DIcon|Exit}} Make some preparations.
+
+;(Unused &mdash; G154_StartBattle)
+<pre>{
+	"$type": "RPG.GameCore.TriggerFightFestLineupInMission",
+	"RaceID": 2006,
+	"ScoreRaceSpecialInviteEventID": 419106,
+	"OnConfirm": [
+		{
+			"$type": "RPG.GameCore.AddStreamingSource",
+			"StreamingSource": {
+				"CenterName": "Mission_FightFestBattlePerformance",
+				"AreaName": "LevelArea_P20242_F20242001_G19",
+				"AnchorName": "Anchor7"
+			}
+		},
+		{
+			"$type": "RPG.GameCore.SetFloorCustomFloat",
+			"Name": {
+				"Value": "FCV_2.5_Arena"
+			},
+			"Value": {
+				"IsDynamic": false,
+				"FixedValue": {
+					"Value": 1
+				}
+			}
+		},
+		{
+			"$type": "RPG.GameCore.SetFloorCustomFloat",
+			"Name": {
+				"Value": "FCV_2.5_Throng"
+			},
+			"Value": {
+				"IsDynamic": false,
+				"FixedValue": {
+					"Value": 1
+				}
+			}
+		},
+		{
+			"$type": "RPG.GameCore.TriggerPerformance",
+			"ValueSource": {},
+			"PerformanceType": "D",
+			"PerformanceID": 802513216,
+			"MaskConfig": {}
+		},
+		{
+			"$type": "RPG.GameCore.TriggerFightFestBattleInMission"
+		},
+		{
+			"$type": "RPG.GameCore.RemoveStreamingSource",
+			"StreamingSource": "Mission_FightFestBattlePerformance"
+		},
+		{
+			"$type": "RPG.GameCore.SetFloorCustomFloat",
+			"Name": {
+				"Value": "FCV_2.5_Arena"
+			},
+			"Value": {
+				"IsDynamic": false,
+				"FixedValue": {
+					"Value": 0
+				}
+			}
+		}
+	]
+}</pre>
+:'''Luka:''' The name of the next opponent is... the Tri-Dis of Zhuming. Just from the name, it seems like a nickname of some big shots. Do you guys know anything about the opponent?
+:'''Carmella:''' I heard through the grapevine that the Tri-Dis of Zhuming comprise a trio of civilian martial artists from the Zhuming. Although these three might not be top-tier masters, do not underestimate them.
+:{{DIcon|Arrow}} Can they beat me?
+::'''Carmella:''' Probably not? You're kind of overpowered.
+:{{DIcon|Arrow}} Can they beat you?
+::'''Carmella:''' My mechanical parts can't take too much of a beating!
+:{{DIcon|Arrow}} Can they beat Luka?
+::'''Luka:''' Haha, we'll find out in a bit!
+:'''Luka:''' The Tri-Dis of Zhuming... After some appreciation, this name sounds quite impressive. It's time to go meet them in the arena!
+:{{DIcon|Arrow}} Begin competition.
+:<pre>{
+	"$type": "RPG.GameCore.SetPerformanceResult",
+	"Value": 1
+}</pre>
+:{{DIcon|Exit}} Make some preparations.
+;(Unused &mdash; BringUpPage_8025136)
+<pre>{
+	"$type": "RPG.GameCore.TriggerFightFestLineupInMission",
+	"RaceID": 2006,
+	"ScoreRaceSpecialInviteEventID": 419106,
+	"OnConfirm": [
+		{
+			"$type": "RPG.GameCore.AddStreamingSource",
+			"StreamingSource": {
+				"CenterName": "Mission_FightFestBattlePerformance",
+				"AreaName": "LevelArea_P20242_F20242001_G19",
+				"AnchorName": "Anchor7"
+			}
+		},
+		{
+			"$type": "RPG.GameCore.SetFloorCustomFloat",
+			"Name": {
+				"Value": "FCV_2.5_Arena"
+			},
+			"Value": {
+				"IsDynamic": false,
+				"FixedValue": {
+					"Value": 1
+				}
+			}
+		},
+		{
+			"$type": "RPG.GameCore.SetFloorCustomFloat",
+			"Name": {
+				"Value": "FCV_2.5_Throng"
+			},
+			"Value": {
+				"IsDynamic": false,
+				"FixedValue": {
+					"Value": 1
+				}
+			}
+		},
+		{
+			"$type": "RPG.GameCore.TriggerPerformance",
+			"ValueSource": {},
+			"PerformanceType": "D",
+			"PerformanceID": 802513216
+		},
+		{
+			"$type": "RPG.GameCore.TriggerFightFestBattleInMission"
+		},
+		{
+			"$type": "RPG.GameCore.RemoveStreamingSource",
+			"StreamingSource": "Mission_FightFestBattlePerformance"
+		},
+		{
+			"$type": "RPG.GameCore.SetFloorCustomFloat",
+			"Name": {
+				"Value": "FCV_2.5_Arena"
+			},
+			"Value": {
+				"IsDynamic": false,
+				"FixedValue": {
+					"Value": 0
+				}
+			}
+		}
+	]
+}</pre>
+
+;(Talk to Luka)
+:'''Luka:''' All right! I'm gonna get ready to step into the arena! We need to teach them a good lesson &mdash; identity theft is not a joke!
+:{{DIcon|Arrow}} Begin competition.
+:<pre>{
+	"$type": "RPG.GameCore.SetPerformanceResult",
+	"Value": 1
+}</pre>
+:{{DIcon|Exit}} Make some preparations.
+
+<pre>{
+	"$type": "RPG.GameCore.SetFloorCustomFloat",
+	"Name": {
+		"Value": "FCV_2.5_Arena"
+	},
+	"Value": {
+		"IsDynamic": false,
+		"FixedValue": {
+			"Value": 1
+		}
+	}
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.SetFloorCustomFloat",
+	"Name": {
+		"Value": "FCV_2.5_Throng"
+	},
+	"Value": {
+		"IsDynamic": false,
+		"FixedValue": {
+			"Value": 1
+		}
+	}
+}</pre>
+----
 :{{tx}}
+<pre>{
+	"$type": "RPG.GameCore.SetFloorCustomFloat",
+	"Name": {
+		"Value": "FCV_2.5_Throng"
+	},
+	"Value": {
+		"IsDynamic": false,
+		"FixedValue": {
+			"Value": 2
+		}
+	}
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.SetFloorCustomFloat",
+	"Name": {
+		"Value": "FCV_2.5_Arena"
+	},
+	"Value": {
+		"IsDynamic": false,
+		"FixedValue": {
+			"Value": 0
+		}
+	}
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.ShowUI",
+	"Name": "Ui.FightFest.ScoreMatch.FightFestScoreMatchResultDialog",
+	"Param": {
+		"Value": "2006"
+	}
+}</pre>
 {{Dialogue End}}
 
 ==Other Languages==

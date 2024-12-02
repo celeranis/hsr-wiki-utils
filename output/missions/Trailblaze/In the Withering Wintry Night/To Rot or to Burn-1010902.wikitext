@@ -11,7 +11,7 @@ PageTitle=#To Rot or to Burn#
 |chapter       = In the Withering Wintry Night
 |requirements  = [[Trailblaze Mission]] ''[[To Rot or to Burn]]'' completed
 |summary       = <!--official mission summary from Fate's Atlas-->
-|characters    = Trailblazer
+|characters    = Bronya; Certification Robot; Clara; Dan Heng; Devoted Vagrant; Earnest Vagrant; Experienced Vagrant; Grouchy Robot; Guardian's Bodyguard; Irritable Robot; Malfunctioning Robot; March 7th; Natasha; Old Guardian; Old Researcher; Perkins; Repairs-Duty Vagrant; Reticent Vagrant; Sampo; Seele; Suspicious Vagrant; Svarog; Trailblazer; Vagrant Newcomer; Vagrant Rapper; Voice of Guardian; Voice of Researcher; Wandering Robot; Young Guardian; Young Researcher
 |startLocation = [[Jarilo-VI]] - [[Robot Settlement]]
 |world         = Jarilo-VI
 |area          = Robot Settlement
@@ -25,6 +25,7 @@ PageTitle=#To Rot or to Burn#
 # Open the gate to Svarog's base
 # Collect Level 1 Certification
 # Collect Level 2 Certification
+# Catch up with Clara
 # Collect Level 3 Certification
 # Open the gate to Svarog's base
 # Open the second gate to Svarog's base
@@ -32,16 +33,10 @@ PageTitle=#To Rot or to Burn#
 # Go to the Tempering Workshop and find Clara
 # Catch up with Clara
 # Find Clara in the area
+# Help Clara fix the energy supply device
+# Enter Svarog's base with Clara's help
 # Face Svarog
 # Learn about the truth
-# Catch up with Clara
-# Collect Level 2 Certification
-# Collect Level 3 Certification
-# Go to the storage room and find Clara
-# Enter Svarog's base with Clara's help
-# Help Clara fix the energy supply device
-# Enter Svarog's base with Clara's help
-# Help Clara fix the energy supply device
 # Talk to Natasha
 
 <!--
@@ -54,132 +49,1571 @@ PageTitle=#To Rot or to Burn#
 ==Dialogue==
 {{Stub Dialogue}}
 
-===Open the gate to Svarog's base===
+===Open the gate to Svarog's base{{subst:void|<!--101090201-->}}===
 {{Mission Description|type=trailblaze|location=Robot Settlement|Unfortunately, the old friend with the dark blue hair is still your guide this time...<br />To be honest, you would feel more at ease if Pitch-Dark Hook the Great was your guide...<br />But you don't have a choice now... Looks like you'll just have to go with it and follow Sampo to Svarog's base.}}
 {{Dialogue Start}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+<pre>{
+	"$type": "RPG.GameCore.CaptureLocalPlayer",
+	"CharacterUniqueName": "LocalPlayer"
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.CharacterTriggerAnimState",
+	"CharacterUniqueName": {
+		"Value": "LocalPlayer"
+	},
+	"ForceStart": true,
+	"AnimStateName": "RunStop_R",
+	"NormalizedTimeStart": 0.25,
+	"NormalizedTransitionDuration": 0.1,
+	"NormalizedTimeWait": 0.1
+}</pre>
+:{{A|VO chapter1 5 mar7th 211.ogg}} '''March 7th:''' This is Svarog's lair? I thought it'd be cold and lifeless, turns out it's pretty busy!
+:{{A|VO chapter1 5 seele 215.ogg}} '''Seele:''' Many vagrants are staying here temporarily. Their homes were overrun by monsters.
+:{{A|VO chapter1 5 mar7th 212.ogg}} '''March 7th:''' Isn't it dangerous for them to make camp right under Svarog's metal nose?
+:{{A|VO chapter1 5 seele 216.ogg}} '''Seele:''' No. Svarog may be ruthless, but he never attacks without reason. For those with no home, this is actually a safe place to be.
+:{{A|VO chapter1 5 seele 217.ogg}} '''Seele:''' Hm... If I hadn't moved away when I did, I'd probably be where they are right now.
+
+;(Upon reaching the destination)
+:{{A|VO chapter1 5 mar7th 211.ogg}} '''March 7th:''' This is Svarog's lair? I thought it'd be cold and lifeless, turns out it's pretty busy!
+:{{A|VO chapter1 5 seele 215.ogg}} '''Seele:''' Many vagrants are staying here temporarily. Their homes were overrun by monsters.
+:{{A|VO chapter1 5 mar7th 212.ogg}} '''March 7th:''' Isn't it dangerous for them to make camp right under Svarog's metal nose?
+:{{A|VO chapter1 5 seele 216.ogg}} '''Seele:''' No. Svarog may be ruthless, but he never attacks without reason. For those with no home, this is actually a safe place to be.
+:{{A|VO chapter1 5 seele 217.ogg}} '''Seele:''' Hm... If I hadn't moved away when I did, I'd probably be where they are right now.
+:{{A|VO chapter1 5 sampo 211.ogg}} '''Sampo:''' Alas, this place is a bit of a mixed bag &mdash; plenty of... "characters." Keep your wits about you, friends. Don't let anyone deceive you.
+:{{A|VO chapter1 5 mar7th 213.ogg}} '''March 7th:''' It's all good. We've had you for practice.
+:{{A|VO chapter1 5 sampo 212.ogg}} '''Sampo:''' Y'know missy, you sure know how to bear a grudge.
+:{{A|VO chapter1 5 mar7th 214.ogg}} '''March 7th:''' What a heavy gate... Okay, watch this!
+:{{A|VO chapter1 5 mar7th 215.ogg}} '''March 7th:''' Opennnn sesame~!
+:{{A|VO chapter1 5 bronya 205.ogg}} '''Bronya:''' Is that a secret code or something?
+:{{A|VO chapter1 5 danheng 207.ogg}} '''Dan Heng:''' It's an imaginary password that children like to use... and I don't think it's going to be of much use.
+:{{DIcon|Arrow}} What about these clues of yours?
+::{{A|VO chapter1 5 sampo 213.ogg}} '''Sampo:''' I was just about to get into those, before Miss March's colorful attempt.
+:{{DIcon|Arrow}} Help us pry the gate open.
+::{{A|VO chapter1 5 sampo 214.ogg}} '''Sampo:''' Whoa, whoa! Pry it open? In front of all these vagrants and robots? They have eyes, you know.
+:{{A|VO chapter1 5 sampo 215.ogg}} '''Sampo:''' Luckily for us, I've already figured out the mechanism for this gate. They don't just let any Joe Shmoe in and out of Boss Svarog's territory. I mean, if you wanna see the big cheese himself, you need "certification."
+:{{A|VO chapter1 5 seele 218.ogg}} '''Seele:''' Certification?
+:{{A|VO chapter1 5 sampo 216.ogg}} '''Sampo:''' Correct, only {{Rubi|prospectors|Svarog's Scavengers}} with the right certification can get in or out. These prospectors collect mechanical remnants from all over the underground, and then bring them to Svarog for him to repair.
+:{{A|VO chapter1 5 sampo 217.ogg}} '''Sampo:''' Honestly, it's a very profitable little venture. If only I'd beaten him to it... Hehe, they'd be calling me Sampo "Boss-ki" by now...
+:{{A|VO chapter1 5 seele 219.ogg}} '''Seele:''' ...Time out. Where do we get this "certification"?
+:{{A|VO chapter1 5 sampo 218.ogg}} '''Sampo:''' That's simple. You see the robots over by the vagrants? They're all Svarog's scouts &mdash; every one of them is commanded to maintain order here.
+:{{A|VO chapter1 5 sampo 219.ogg}} '''Sampo:''' Apart from them keeping a watchful eye on these hooligans, another one of their duties is "processing." Anyone who wants to become a {{Rubi|prospector|Svarog's Scavengers}} has to pass a test from these walkin' stoplights first.
+:{{DIcon|Arrow}} What's the test?
+:{{DIcon|Arrow}} Spelling test or combat test?
+:{{DIcon|Arrow}} Do they give you a gachapon for the test?
+:What's the test?
 :{{tx}}
+
+:{{DIcon|Talk}} Listen
+:{{A|VO chapter1 5 vagrantF 201.ogg}} '''Vagrant Rapper:''' Yo, yo, listen up. This one's for all you pretend rappers...
+:{{A|VO chapter1 5 vagrantF 202.ogg}} '''Vagrant Rapper:''' Internal Combustion Engine champion &mdash; 88 Degrees Bedrock &mdash; reppin' the dawn of the Underworld rap. Here's something to wake up your soul, check it...
+:{{A|VO chapter1 5 vagrantF 203.ogg}} '''Vagrant Rapper:''' (The vagrant is spitting fire rhymes...)
+:{{A|VO chapter1 5 sampo 211.ogg}} '''Sampo:''' Alas, this place is a bit of a mixed bag &mdash; plenty of... "characters." Keep your wits about you, friends. Don't let anyone deceive you.
+:{{A|VO chapter1 5 mar7th 213.ogg}} '''March 7th:''' It's all good. We've had you for practice.
+:{{A|VO chapter1 5 sampo 212.ogg}} '''Sampo:''' Y'know missy, you sure know how to bear a grudge.
+
+:{{DIcon|Talk}} Listen
+:{{A|VO chapter1 5 vagrantG 201.ogg}} '''Earnest Vagrant:''' No, no, no! You can't insert the microcrystalline unit into the heat sink substrate like that.
+:{{A|VO chapter1 5 vagrantH 201.ogg}} '''Suspicious Vagrant:''' How do you know? Balaway from Miner's Lamp said that you need to pay attention to the interfaces when assembling relics.
+:{{A|VO chapter1 5 vagrantH 202.ogg}} '''Suspicious Vagrant:''' To make this thing move again, we need to connect the microcrystalline unit to the operating brake module. Otherwise, it's just a pile of scrap metal.
+:{{A|VO chapter1 5 vagrantG 202.ogg}} '''Earnest Vagrant:''' If you believe a word that senile idiot Balaway says, you're done for. The last time he acted on his own advice, he electrocuted himself.
+:{{A|VO chapter1 5 vagrantG 203.ogg}} '''Earnest Vagrant:''' You should be asking people with real smarts. No one is better at fixing machines than Marev.
+:{{A|VO chapter1 5 vagrantG 204.ogg}} '''Earnest Vagrant:''' I saw him connecting a microcrystalline conductor unit to a logic control hub to get a vibrating drill to work.
+:{{A|VO chapter1 5 vagrantH 203.ogg}} '''Suspicious Vagrant:''' Haha, Marev!? Him and his brother wouldn't know a real relic if it hit 'em in the face. Last I heard, he got scammed by someone selling counterfeit junk.
+:{{A|VO chapter1 5 vagrantG 205.ogg}} '''Earnest Vagrant:''' Ahh, you're just salty, my friend!
+:{{A|VO chapter1 5 sampo 211.ogg}} '''Sampo:''' Alas, this place is a bit of a mixed bag &mdash; plenty of... "characters." Keep your wits about you, friends. Don't let anyone deceive you.
+:{{A|VO chapter1 5 mar7th 213.ogg}} '''March 7th:''' It's all good. We've had you for practice.
+:{{A|VO chapter1 5 sampo 212.ogg}} '''Sampo:''' Y'know missy, you sure know how to bear a grudge.
+
+:{{DIcon|Talk}} Listen
+:{{A|VO chapter1 5 vagrantI 201.ogg}} '''Devoted Vagrant:''' Did you hear? Those idiots got into a fight in the mine, haha! It only got settled after Boss Svarog showed up.
+:{{A|VO chapter1 5 vagrantI 202.ogg}} '''Devoted Vagrant:''' I've said it before &mdash; only Boss Svarog can protect us down here. Everyone should follow his lead.
+:{{A|VO chapter1 5 vagrantI 203.ogg}} '''Devoted Vagrant:''' Well, what do you think? Cat got your tongue?
+:{{A|VO chapter1 5 vagrantJ 201.ogg}} '''Reticent Vagrant:''' ...Do you ever talk about anything else? I'm so tired of hearing about Svarog.
+:{{A|VO chapter1 5 vagrantI 204.ogg}} '''Devoted Vagrant:''' B&mdash;But it's true. What else is there to say? Take a look at all these good-for-nothings... They'd starve to death without him.
+:{{A|VO chapter1 5 sampo 211.ogg}} '''Sampo:''' Alas, this place is a bit of a mixed bag &mdash; plenty of... "characters." Keep your wits about you, friends. Don't let anyone deceive you.
+:{{A|VO chapter1 5 mar7th 213.ogg}} '''March 7th:''' It's all good. We've had you for practice.
+:{{A|VO chapter1 5 sampo 212.ogg}} '''Sampo:''' Y'know missy, you sure know how to bear a grudge.
+
+:{{DIcon|Talk}} Listen
+:{{A|VO chapter1 5 vagrantK 201.ogg}} '''Vagrant Newcomer:''' Did you see those extra boxes of medical supplies at the depot? Who brought those over?
+:{{A|VO chapter1 5 vagrantL 201.ogg}} '''Experienced Vagrant:''' Clara, I assume? I can't think of anyone else that'd do something that generous.
+:{{A|VO chapter1 5 vagrantK 202.ogg}} '''Vagrant Newcomer:''' Who's Clara? Is she one of us?
+:{{A|VO chapter1 5 vagrantL 202.ogg}} '''Experienced Vagrant:''' Not even close! She's Svarog's trusted family.
+:{{A|VO chapter1 5 vagrantK 203.ogg}} '''Vagrant Newcomer:''' Family... of a robot?
+:{{A|VO chapter1 5 vagrantL 203.ogg}} '''Experienced Vagrant:''' Well, you'll understand when you've been here a while longer.
+:{{A|VO chapter1 5 sampo 211.ogg}} '''Sampo:''' Alas, this place is a bit of a mixed bag &mdash; plenty of... "characters." Keep your wits about you, friends. Don't let anyone deceive you.
+:{{A|VO chapter1 5 mar7th 213.ogg}} '''March 7th:''' It's all good. We've had you for practice.
+:{{A|VO chapter1 5 sampo 212.ogg}} '''Sampo:''' Y'know missy, you sure know how to bear a grudge.
+
+:{{DIcon|Talk}} Listen
+:{{A|VO chapter1 5 vagrantM 201.ogg}} '''Repairs-Duty Vagrant:''' Hold still. You're nearly fixed.
+:{{A|VO chapter1 5 robotE 201.ogg}} '''Grouchy Robot:''' My design has been superceded by newer models. My components are no longer valuable.
+:{{A|VO chapter1 5 vagrantM 202.ogg}} '''Repairs-Duty Vagrant:''' Hey! What are you talking about? I'm not interested in selling your components.
+:{{A|VO chapter1 5 sampo 211.ogg}} '''Sampo:''' Alas, this place is a bit of a mixed bag &mdash; plenty of... "characters." Keep your wits about you, friends. Don't let anyone deceive you.
+:{{A|VO chapter1 5 mar7th 213.ogg}} '''March 7th:''' It's all good. We've had you for practice.
+:{{A|VO chapter1 5 sampo 212.ogg}} '''Sampo:''' Y'know missy, you sure know how to bear a grudge.
+:{{A|VO chapter1 5 mar7th 292.ogg}} '''March 7th:''' Sampo... Are we there yet?
+:{{A|VO chapter1 5 sampo 243.ogg}} '''Sampo:''' Do you have to ask every other minute, missy? Two more steps, just two more steps and you're there.
 {{Dialogue End}}
 
-===Collect Level 1 Certification===
+===Collect Level 1 Certification{{subst:void|<!--101090204-->}}===
 {{Mission Description|type=trailblaze|location=Robot Settlement|update|As promised, Sampo leads you to the gate of Svarog's base. He then leaves you with a cliffhanger: In order to open this gate, you'll have to collect certifications from the certification robot.<br />If he could just tell you everything at once, you wouldn't have to waste time running in circles &mdash; this is the reason why you dread working with Sampo... One of the reasons at least.<br />But there's no choice now... Looks like you'll just have to go with it and follow Sampo to collect the certifications.}}
 {{Dialogue Start}}
-:{{tx}}
+;(If {{cx}}<!--SubMission not Finish: 101090202-->)
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+<pre>{
+	"$type": "RPG.GameCore.AdvEnablePropDialogMode",
+	"Enable": true,
+	"PlayerFaceToProp": true,
+	"RotateSpeed": 180,
+	"EnablePropCamera": true,
+	"TargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvPropEx",
+		"FetchType": "SinglePropByPropID",
+		"SinglePropID": {
+			"GroupID": {
+				"fixedValue": {
+					"Value": 9
+				}
+			},
+			"ID": {
+				"fixedValue": {
+					"Value": 300004
+				}
+			}
+		}
+	}
+}</pre>
+:{{A|VO chapter1 5 seele 221.ogg}} '''Seele:''' This has to be one of them, right?
+:{{A|VO chapter1 5 mar7th 216.ogg}} '''March 7th:''' It looks so... lame.
+:{{A|VO chapter1 5 seele 222.ogg}} '''Seele:''' Is it even awake in there? Maybe it's broken down.
+:'''Certification Robot:''' Beep... Boop...
+:{{A|VO chapter1 5 seele 223.ogg}} '''Seele:''' Ah! That scared me.
+:{{A|VO chapter1 5 robotA 202.ogg}} '''Certification Robot:''' Protocol initiating... Scanning... Verifying.
+:{{A|VO chapter1 5 robotA 203.ogg}} '''Certification Robot:''' Certification failure... Subject has yet to obtain access permissions. Launching processing.
+:{{A|VO chapter1 5 mar7th 217.ogg}} '''March 7th:''' Huh? Are we starting now!?
+:{{A|VO chapter1 5 robotA 204.ogg}} '''Certification Robot:''' Launching stage one processing. Please listen to the following question...
+:{{A|VO chapter1 5 robotA 205.ogg}} '''Certification Robot:''' Who is the reigning champion of the Internal Combustion Engine Rap Tournament?
+:{{A|VO chapter1 5 mar7th 218.ogg}} '''March 7th:''' Infernal construction what now? How would we know anything about that!
+:{{A|VO chapter1 5 danheng 208.ogg}} '''Dan Heng:''' Sampo, do you know the answer?
+:{{A|VO chapter1 5 sampo 221.ogg}} '''Sampo:''' Sampo Koski always knows the... Wait, what did it say again?
+:{{A|VO chapter1 5 mar7th 219.ogg}} '''March 7th:''' Ugh, aren't you supposed to be dependable?
+:{{A|VO chapter1 5 sampo 222.ogg}} '''Sampo:''' Well, I don't know everything. *sigh* Sometimes you've gotta ask around if you wanna know the answer. Don't panic... Let's listen in to what these vagrants are talking about, we might just hit the jackpot.
+:{{A|VO chapter1 5 robotA 206.ogg}} '''Certification Robot:''' Please answer the following question: Who is the reigning champion of the Internal Combustion Engine Rap Tournament?
+:{{DIcon|Arrow}} Dr. Dig
+::{{A|VO chapter1 5 robotA 207.ogg}} '''Certification Robot:''' Incorrect answer. Certification result: Failure.
+::{{A|VO chapter1 5 sampo 223.ogg}} '''Sampo:''' ...Uh, y'know friends, if you don't know the answer, you don't have to pretend you do. No one's gonna laugh at you.
+::{{A|VO chapter1 5 robotA 208.ogg}} '''Certification Robot:''' Reassessing... Subject threat index: High. Initializing combat module. Threat elimination activated.
+::{{A|VO chapter1 5 mar7th 220.ogg}} '''March 7th:''' Combat module? This thing's faulty, right...?
+::{{A|VO chapter1 5 seele 224.ogg}} '''Seele:''' Wishful thinking, it's about to attack!
+:<pre>{
+	"$type": "RPG.GameCore.AdvEnablePropDialogMode",
+	"RotateSpeed": 180,
+	"TargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvPropEx",
+		"FetchType": "SinglePropByPropID",
+		"SinglePropID": {
+			"GroupID": {
+				"fixedValue": {
+					"Value": 9
+				}
+			},
+			"ID": {
+				"fixedValue": {
+					"Value": 300004
+				}
+			}
+		}
+	}
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.PlayScreenCrack",
+	"EffectPath": "Effects/Eff_Prefab/Eff_Common/Eff_ScreenCrack.prefab",
+	"UniqueEffectName": "ScreenCrack",
+	"ExecuteOnSkip": true
+}</pre>
+:;(Enter battle)
+::{{Enemy List|Automaton Beetle*2}}
+:{{DIcon|Arrow}} 88 Degrees Bedrock
+::{{A|VO chapter1 5 robotA 209.ogg}} '''Certification Robot:''' Correct answer.
+::{{A|VO chapter1 5 mar7th 221.ogg}} '''March 7th:''' Whoa! Was that a lucky guess? *gasp* Did you go to a music festival without us?
+::{{A|VO chapter1 5 robotA 210.ogg}} '''Certification Robot:''' Certification result: Success. Requisite certifications remaining: Two.
+::{{A|VO chapter1 5 robotA 211.ogg}} '''Certification Robot:''' Please extend your right hand.
+::<!--2.6-second delay-->
+:<pre>{
+	"$type": "RPG.GameCore.TriggerSound",
+	"SoundName": {
+		"Value": "Ev_sfx_belobog_robot_stamp"
+	},
+	"EmitterType": "LocalPlayer"
+}</pre>
+::{{A|VO chapter1 5 mar7th 222.ogg}} '''March 7th:''' My right hand? Here you go. Why is this part of the&mdash; Hey, hey! Ow, ow, ow!
+::{{A|VO chapter1 5 mar7th 223.ogg}} '''March 7th:''' ...So this is the certification mark?
+::{{A|VO chapter1 5 sampo 224.ogg}} '''Sampo:''' Great, only two more steps to go. Let's move.
+:<pre>{
+	"$type": "RPG.GameCore.AdvEnablePropDialogMode",
+	"RotateSpeed": 180,
+	"TargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvPropEx",
+		"FetchType": "SinglePropByPropID",
+		"SinglePropID": {
+			"GroupID": {
+				"fixedValue": {
+					"Value": 9
+				}
+			},
+			"ID": {
+				"fixedValue": {
+					"Value": 300004
+				}
+			}
+		}
+	}
+}</pre>
+:{{DIcon|Arrow}} Relic Gang
+::{{A|VO chapter1 5 robotA 207.ogg}} '''Certification Robot:''' Incorrect answer. Certification result: Failure.
+::{{A|VO chapter1 5 sampo 223.ogg}} '''Sampo:''' ...Uh, y'know friends, if you don't know the answer, you don't have to pretend you do. No one's gonna laugh at you.
+::{{A|VO chapter1 5 robotA 208.ogg}} '''Certification Robot:''' Reassessing... Subject threat index: High. Initializing combat module. Threat elimination activated.
+::{{A|VO chapter1 5 mar7th 220.ogg}} '''March 7th:''' Combat module? This thing's faulty, right...?
+::{{A|VO chapter1 5 seele 224.ogg}} '''Seele:''' Wishful thinking, it's about to attack!
+:<pre>{
+	"$type": "RPG.GameCore.AdvEnablePropDialogMode",
+	"RotateSpeed": 180,
+	"TargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvPropEx",
+		"FetchType": "SinglePropByPropID",
+		"SinglePropID": {
+			"GroupID": {
+				"fixedValue": {
+					"Value": 9
+				}
+			},
+			"ID": {
+				"fixedValue": {
+					"Value": 300004
+				}
+			}
+		}
+	}
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.PlayScreenCrack",
+	"EffectPath": "Effects/Eff_Prefab/Eff_Common/Eff_ScreenCrack.prefab",
+	"UniqueEffectName": "ScreenCrack",
+	"ExecuteOnSkip": true
+}</pre>
+:;(Enter battle)
+::{{Enemy List|Automaton Beetle*2}}
+:{{DIcon|Exit}} Let's listen in on some conversations...
+:<pre>{
+	"$type": "RPG.GameCore.AdvEnablePropDialogMode",
+	"RotateSpeed": 180,
+	"TargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvPropEx",
+		"FetchType": "SinglePropByPropID",
+		"SinglePropID": {
+			"GroupID": {
+				"fixedValue": {
+					"Value": 9
+				}
+			},
+			"ID": {
+				"fixedValue": {
+					"Value": 300004
+				}
+			}
+		}
+	}
+}</pre>
+;(Obtain {{Item|Robot Settlement Level 1 Certification|20|x=1}})
+
+:{{DIcon|Talk}} Certification Robot
+<pre>{
+	"$type": "RPG.GameCore.AdvEnablePropDialogMode",
+	"Enable": true,
+	"PlayerFaceToProp": true,
+	"RotateSpeed": 180,
+	"EnablePropCamera": true,
+	"TargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvPropEx",
+		"FetchType": "SinglePropByPropID",
+		"SinglePropID": {
+			"GroupID": {
+				"fixedValue": {
+					"Value": 9
+				}
+			},
+			"ID": {
+				"fixedValue": {
+					"Value": 300004
+				}
+			}
+		}
+	}
+}</pre>
+:{{A|VO chapter1 5 robotA 204.ogg}} '''Certification Robot:''' Launching stage one processing. Please listen to the following question...
+:{{A|VO chapter1 5 robotA 205.ogg}} '''Certification Robot:''' Who is the reigning champion of the Internal Combustion Engine Rap Tournament?
+:{{DIcon|Arrow}} Dr. Dig
+::{{A|VO chapter1 5 robotA 207.ogg}} '''Certification Robot:''' Incorrect answer. Certification result: Failure.
+::{{A|VO chapter1 5 sampo 223.ogg}} '''Sampo:''' ...Uh, y'know friends, if you don't know the answer, you don't have to pretend you do. No one's gonna laugh at you.
+::{{A|VO chapter1 5 robotA 208.ogg}} '''Certification Robot:''' Reassessing... Subject threat index: High. Initializing combat module. Threat elimination activated.
+::{{A|VO chapter1 5 mar7th 220.ogg}} '''March 7th:''' Combat module? This thing's faulty, right...?
+::{{A|VO chapter1 5 seele 224.ogg}} '''Seele:''' Wishful thinking, it's about to attack!
+:<pre>{
+	"$type": "RPG.GameCore.AdvEnablePropDialogMode",
+	"RotateSpeed": 180,
+	"TargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvPropEx",
+		"FetchType": "SinglePropByPropID",
+		"SinglePropID": {
+			"GroupID": {
+				"fixedValue": {
+					"Value": 9
+				}
+			},
+			"ID": {
+				"fixedValue": {
+					"Value": 300004
+				}
+			}
+		}
+	}
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.PlayScreenCrack",
+	"EffectPath": "Effects/Eff_Prefab/Eff_Common/Eff_ScreenCrack.prefab",
+	"UniqueEffectName": "ScreenCrack",
+	"ExecuteOnSkip": true
+}</pre>
+:;(Enter battle)
+::{{Enemy List|Automaton Beetle*2}}
+:{{DIcon|Arrow}} 88 Degrees Bedrock
+::{{A|VO chapter1 5 robotA 209.ogg}} '''Certification Robot:''' Correct answer.
+::{{A|VO chapter1 5 robotA 210.ogg}} '''Certification Robot:''' Certification result: Success. Requisite certifications remaining: Two.
+::{{A|VO chapter1 5 robotA 211.ogg}} '''Certification Robot:''' Please extend your right hand.
+::{{A|VO chapter1 5 mar7th 222.ogg}} '''March 7th:''' My right hand? Here you go. Why is this part of the&mdash; Hey, hey! Ow, ow, ow!
+::{{A|VO chapter1 5 mar7th 223.ogg}} '''March 7th:''' ...So this is the certification mark?
+::{{A|VO chapter1 5 sampo 224.ogg}} '''Sampo:''' Great, only two more steps to go. Let's move.
+:<pre>{
+	"$type": "RPG.GameCore.AdvEnablePropDialogMode",
+	"RotateSpeed": 180,
+	"TargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvPropEx",
+		"FetchType": "SinglePropByPropID",
+		"SinglePropID": {
+			"GroupID": {
+				"fixedValue": {
+					"Value": 9
+				}
+			},
+			"ID": {
+				"fixedValue": {
+					"Value": 300004
+				}
+			}
+		}
+	}
+}</pre>
+:{{DIcon|Arrow}} Relic Gang
+::{{A|VO chapter1 5 robotA 207.ogg}} '''Certification Robot:''' Incorrect answer. Certification result: Failure.
+::{{A|VO chapter1 5 sampo 223.ogg}} '''Sampo:''' ...Uh, y'know friends, if you don't know the answer, you don't have to pretend you do. No one's gonna laugh at you.
+::{{A|VO chapter1 5 robotA 208.ogg}} '''Certification Robot:''' Reassessing... Subject threat index: High. Initializing combat module. Threat elimination activated.
+::{{A|VO chapter1 5 mar7th 220.ogg}} '''March 7th:''' Combat module? This thing's faulty, right...?
+::{{A|VO chapter1 5 seele 224.ogg}} '''Seele:''' Wishful thinking, it's about to attack!
+:<pre>{
+	"$type": "RPG.GameCore.AdvEnablePropDialogMode",
+	"RotateSpeed": 180,
+	"TargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvPropEx",
+		"FetchType": "SinglePropByPropID",
+		"SinglePropID": {
+			"GroupID": {
+				"fixedValue": {
+					"Value": 9
+				}
+			},
+			"ID": {
+				"fixedValue": {
+					"Value": 300004
+				}
+			}
+		}
+	}
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.PlayScreenCrack",
+	"EffectPath": "Effects/Eff_Prefab/Eff_Common/Eff_ScreenCrack.prefab",
+	"UniqueEffectName": "ScreenCrack",
+	"ExecuteOnSkip": true
+}</pre>
+:;(Enter battle)
+::{{Enemy List|Automaton Beetle*2}}
+:{{DIcon|Exit}} Let's listen in on some conversations...
+:<pre>{
+	"$type": "RPG.GameCore.AdvEnablePropDialogMode",
+	"RotateSpeed": 180,
+	"TargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvPropEx",
+		"FetchType": "SinglePropByPropID",
+		"SinglePropID": {
+			"GroupID": {
+				"fixedValue": {
+					"Value": 9
+				}
+			},
+			"ID": {
+				"fixedValue": {
+					"Value": 300004
+				}
+			}
+		}
+	}
+}</pre>
+:{{A|VO chapter1 5 bronya 206.ogg}} '''Bronya:''' It feels like the people here are all under the supervision of robots...
+:{{A|VO chapter1 5 bronya 207.ogg}} '''Bronya:''' This would be unthinkable on the surface. Robots are merely tools in the Overworld.
+:{{A|VO chapter1 5 seele 220.ogg}} '''Seele:''' Don't take Svarog as an ordinary robot. He's, uh... special.
 {{Dialogue End}}
 
-===Collect Level 2 Certification===
-{{Mission Description|type=trailblaze|location=Robot Settlement|update|As promised, Sampo leads you to the gate of Svarog's base. He then leaves you with a cliffhanger: In order to open this gate, you'll have to collect certifications from the certification robot.<br />If he could just tell you everything at once, you wouldn't have to waste time running in circles &mdash; this is the reason why you dread working with Sampo... One of the reasons at least.<br />You've collected the Level-1 Certification. Hurry and collect the next level of certifications.}}
-{{Dialogue Start}}
-:{{tx}}
-{{Dialogue End}}
-
-===Collect Level 3 Certification===
-{{Mission Description|type=trailblaze|location=Robot Settlement|update|As promised, Sampo leads you to the gate of Svarog's base. He then leaves you with a cliffhanger: In order to open this gate, you'll have to collect certifications from the certification robot.<br />If he could just tell you everything at once, you wouldn't have to waste time running in circles &mdash; this is the reason why you dread working with Sampo... One of the reasons at least.<br />You've collected the Level-2 Certification, just one more level until the gate opens. Keep it up!}}
-{{Dialogue Start}}
-:{{tx}}
-{{Dialogue End}}
-
-===Open the gate to Svarog's base===
-{{Mission Description|type=trailblaze|location=Robot Settlement|update|As promised, Sampo leads you to the gate of Svarog's base. He then leaves you with a cliffhanger: In order to open this gate, you'll have to collect certifications from the certification robot.<br />If he could just tell you everything at once, you wouldn't have to waste time running in circles &mdash; this is the reason why you dread working with Sampo... One of the reasons at least.<br />You've collected all three levels of certifications. It's time to open the gate and meet Svarog.}}
-{{Dialogue Start}}
-:{{tx}}
-{{Dialogue End}}
-
-===Open the second gate to Svarog's base===
-{{Mission Description|type=trailblaze|location=Robot Settlement|update|After tedious labor, you've finally completed the certifications the gate requires. But little did you know, there are even more gates after the one you just opened. This infuriated you. The thought of directly climbing over the gate crossed your mind...<br />However, a Nameless can't just jump without discretion, it'd be inelegant of you.<br />Looks like you'll have to see if the elevator over there is still working or ask what the robot by the door thinks of this.}}
-{{Dialogue Start}}
-:{{tx}}
-{{Dialogue End}}
-
-===Go to the storage room and find Clara===
-{{Mission Description|type=trailblaze|location=Rivet Town|update|Only Clara, who has returned to Rivet Town to collect materials, has the authorization to open the second gate.<br />Being there not long ago, you are well aware of how vicious of a place Rivet Town is. You wouldn't allow such a little girl to be exploring Rivet Town alone, even if she has a robot guardian by her side...<br />It's time to prove that you're truly a member of Clara's family &mdash; head to Rivet Town!}}
-{{Dialogue Start}}
-:{{tx}}
-{{Dialogue End}}
-
-===Go to the Tempering Workshop and find Clara===
-{{Mission Description|type=trailblaze|location=Rivet Town|update|Only Clara, who has returned to Rivet Town to collect materials, has the authorization to open the second gate.<br />Being there not long ago, you are well aware of how vicious of a place Rivet Town is. Here, you already discovered Clara's robot guardian to be heavily damaged and learned that Clara is trapped in the Tempering Workshop all by herself...<br />Clara is in danger &mdash; hurry over to the workshop and protect Clara!}}
-{{Dialogue Start}}
-:{{tx}}
-{{Dialogue End}}
-
-===Catch up with Clara===
-{{Mission Description|type=trailblaze|location=Robot Settlement|update|You and your companions defeated the Fragmentum organisms and secured Clara's safety. You wanted to take the opportunity to persuade Clara into bringing you to Svarog, but she has a firmer and clearer conviction than March 7th... Your persuasion ended in failure.<br />However, all is not lost. You've noticed a breakthrough that could make her and Svarog talk &mdash; all you have to do now is to find Clara and revisit the conversation.}}
-{{Dialogue Start}}
-:{{tx}}
-{{Mission Description|type=trailblaze|location=Robot Settlement|update|You and your companions defeated the Fragmentum organisms and secured Clara's safety. You wanted to take the opportunity to persuade Clara into bringing you to Svarog, but she has a firmer and clearer conviction than March 7th... Your persuasion ended in failure.<br />However, all is not lost. You've noticed a breakthrough that could make her and Svarog talk &mdash; all you have to do now is to find Clara and revisit the conversation.<br />She seems to have taken the elevator and headed below the Furnace Core. You can still make it in time if you leave now.}}
-{{Mission Description|type=trailblaze|location=Robot Settlement|update|You and your companions defeated the Fragmentum organisms and secured Clara's safety. You wanted to take the opportunity to persuade Clara into bringing you to Svarog, but she has a firmer and clearer conviction than March 7th... Your persuasion ended in failure.<br />However, all is not lost. You've noticed a breakthrough that could make her and Svarog talk &mdash; all you have to do now is to find Clara and revisit the conversation.<br />You catch a glimpse of her while in the elevator &mdash; it's time for a rabbit hunt. Go after her!}}
-{{Dialogue End}}
-
-===Find Clara in the area===
-{{Mission Description|type=trailblaze|location=Robot Settlement|update|You and your companions defeated the Fragmentum organisms and secured Clara's safety. You wanted to take the opportunity to persuade Clara into bringing you to Svarog, but she has a firmer and clearer conviction than March 7th... Your persuasion ended in failure.<br />However, all is not lost. You've noticed a breakthrough that could make her and Svarog talk &mdash; all you have to do now is to find Clara and revisit the conversation.<br />Clara should be close by. Search carefully for her.}}
-{{Dialogue Start}}
-:{{tx}}
-{{Dialogue End}}
-
-===Face Svarog===
-{{Mission Description|type=trailblaze|location=Robot Settlement|update|The locked gates are now all opened. This is a path that must be traveled in order to change the destiny of the world.<br />Svarog is here guarding the truth of this world...<br />Go and face him.}}
-{{Dialogue Start}}
-:{{tx}}
-{{Dialogue End}}
-
-===Learn about the truth===
-{{Mission Description|type=trailblaze|location=Robot Settlement|update|Svarog recognizes your value as a variant. You've been incorporated into the ice-cold logic of the humanoid weapon, changing the outcome of his calculations entirely.<br />Now, it has decided to pass on the truth of the planet to you.<br />It is completely up to you to decide how this precious information is used.}}
-{{Dialogue Start}}
-:{{tx}}
-{{Dialogue End}}
-
-===Catch up with Clara===
-{{Mission Description|type=trailblaze|location=Robot Settlement|update|You and your companions defeated the Fragmentum organisms and secured Clara's safety. You wanted to take the opportunity to persuade Clara into bringing you to Svarog, but she has a firmer and clearer conviction than March 7th... Your persuasion ended in failure.<br />However, all is not lost. You've noticed a breakthrough that could make her and Svarog talk &mdash; all you have to do now is to find Clara and revisit the conversation.<br />She seems to have taken the elevator and headed below the Furnace Core. You can still make it in time if you leave now.}}
-{{Dialogue Start}}
-:{{tx}}
-{{Dialogue End}}
-
-===Collect Level 2 Certification===
+===Collect Level 2 Certification{{subst:void|<!--101090224-->}}===
 {{Mission Description|type=trailblaze|location=Robot Settlement|update|As promised, Sampo leads you to the gate of Svarog's base. He then leaves you with a cliffhanger: In order to open this gate, you'll have to collect certifications from the certification robot.<br />If he could just tell you everything at once, you wouldn't have to waste time running in circles &mdash; this is the reason why you dread working with Sampo... One of the reasons at least.<br />You've collected the Level 1 Certification. Hurry and collect the next level of certifications.}}
 {{Dialogue Start}}
-:{{tx}}
+
+:{{DIcon|Talk}} Certification Robot
+<pre>{
+	"$type": "RPG.GameCore.AdvEnablePropDialogMode",
+	"Enable": true,
+	"PlayerFaceToProp": true,
+	"RotateSpeed": 180,
+	"EnablePropCamera": true,
+	"TargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvPropEx",
+		"FetchType": "SinglePropByPropID",
+		"SinglePropID": {
+			"GroupID": {
+				"fixedValue": {
+					"Value": 9
+				}
+			},
+			"ID": {
+				"fixedValue": {
+					"Value": 300002
+				}
+			}
+		}
+	}
+}</pre>
+:'''Irritable Robot:''' Beep... Boop...
+:{{A|VO chapter1 5 robotB 202.ogg}} '''Irritable Robot:''' Protocol... initiating. Scanning... Ugh. I'm so sick of repeating this.
+:{{A|VO chapter1 5 seele 226.ogg}} '''Seele:''' Ha? What did this bucket of bolts just say?
+:{{A|VO chapter1 5 mar7th 228.ogg}} '''March 7th:''' Seems like this one's got a temper...
+:{{A|VO chapter1 5 robotB 203.ogg}} '''Irritable Robot:''' Ugh, let's get this over with. Did you get your first certification? If not then you're wasting your time.
+:{{A|VO chapter1 5 mar7th 229.ogg}} '''March 7th:''' You mean this? Here, look.
+<pre>{
+	"$type": "RPG.GameCore.AdvEnablePropDialogMode",
+	"RotateSpeed": 180,
+	"TargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvPropEx",
+		"FetchType": "SinglePropByPropID",
+		"SinglePropID": {
+			"GroupID": {
+				"fixedValue": {
+					"Value": 9
+				}
+			},
+			"ID": {
+				"fixedValue": {
+					"Value": 300002
+				}
+			}
+		}
+	}
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.ConsumeMissionItem",
+	"SubMissionID": 101090224,
+	"Desc": {
+		"Hash": 897702871
+	}
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.AdvEnablePropDialogMode",
+	"Enable": true,
+	"PlayerFaceToProp": true,
+	"RotateSpeed": 180,
+	"EnablePropCamera": true,
+	"TargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvPropEx",
+		"FetchType": "SinglePropByPropID",
+		"SinglePropID": {
+			"GroupID": {
+				"fixedValue": {
+					"Value": 9
+				}
+			},
+			"ID": {
+				"fixedValue": {
+					"Value": 300004
+				}
+			}
+		}
+	}
+}</pre>
+:{{A|VO chapter1 5 mar7th 225.ogg}} '''March 7th:''' Phew...That was scary, it just suddenly attacked!
+:{{A|VO chapter1 5 danheng 209.ogg}} '''Dan Heng:''' This button says "system reset." Let's give it a try.
+:{{A|VO chapter1 5 robotA 214.ogg}} '''Certification Robot:''' ...System reset... successful. Certification sequence... online.
+:{{A|VO chapter1 5 robotA 211.ogg}} '''Certification Robot:''' Please extend your right hand.
+:{{A|VO chapter1 5 mar7th 222.ogg}} '''March 7th:''' My right hand? Here you go. Why is this part of the&mdash; Hey, hey! Ow, ow, ow!
+:{{A|VO chapter1 5 mar7th 223.ogg}} '''March 7th:''' ...So this is the certification mark?
+:{{A|VO chapter1 5 sampo 224.ogg}} '''Sampo:''' Great, only two more steps to go. Let's move.
+<pre>{
+	"$type": "RPG.GameCore.AdvEnablePropDialogMode",
+	"RotateSpeed": 180,
+	"TargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvPropEx",
+		"FetchType": "SinglePropByPropID",
+		"SinglePropID": {
+			"GroupID": {
+				"fixedValue": {
+					"Value": 9
+				}
+			},
+			"ID": {
+				"fixedValue": {
+					"Value": 300004
+				}
+			}
+		}
+	}
+}</pre>
+{{Mission Description|type=trailblaze|location=Robot Settlement|update|As promised, Sampo leads you to the gate of Svarog's base. He then leaves you with a cliffhanger: In order to open this gate, you'll have to collect certifications from the certification robot.<br />If he could just tell you everything at once, you wouldn't have to waste time running in circles &mdash; this is the reason why you dread working with Sampo... One of the reasons at least.<br />You've collected the Level-1 Certification. Hurry and collect the next level of certifications.}}
+
+;(Obtain {{Item|Robot Settlement Level 2 Certification|20|x=1}})
+
+:{{DIcon|Talk}} Certification Robot
+<pre>{
+	"$type": "RPG.GameCore.AdvEnablePropDialogMode",
+	"Enable": true,
+	"PlayerFaceToProp": true,
+	"RotateSpeed": 180,
+	"EnablePropCamera": true,
+	"TargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvPropEx",
+		"FetchType": "SinglePropByPropID",
+		"SinglePropID": {
+			"GroupID": {
+				"fixedValue": {
+					"Value": 9
+				}
+			},
+			"ID": {
+				"fixedValue": {
+					"Value": 300002
+				}
+			}
+		}
+	}
+}</pre>
+:{{A|VO chapter1 5 robotB 204.ogg}} '''Irritable Robot:''' Yeah, yeah, whatever... Here comes your question, listen up.
+:{{A|VO chapter1 5 robotB 205.ogg}} '''Irritable Robot:''' Riddle me this: A microcrystalline unit should be connected to which component?
+:{{DIcon|Arrow}} Heat sink substrate.
+::{{A|VO chapter1 5 robotB 206.ogg}} '''Irritable Robot:''' Wrong! Congratulations.
+::{{A|VO chapter1 5 robotB 207.ogg}} '''Irritable Robot:''' Simple question, terrible answer. It's back to school for you!
+::{{A|VO chapter1 5 mar7th 231 m.ogg}} {{A|VO chapter1 5 mar7th 231 f.ogg}} '''March 7th:''' ...(Trailblazer), can I smash this can opener already!?
+::{{A|VO chapter1 5 robotB 208.ogg}} '''Irritable Robot:''' Huh!? You wanna go? You caught me in a bad mood, let's do this!
+::{{A|VO chapter1 5 seele 227.ogg}} '''Seele:''' If we turn you into scrap metal, we still get our certification, right? Suits me!
+:<pre>{
+	"$type": "RPG.GameCore.PlayScreenCrack",
+	"EffectPath": "Effects/Eff_Prefab/Eff_Common/Eff_ScreenCrack.prefab",
+	"UniqueEffectName": "ScreenCrack",
+	"ExecuteOnSkip": true
+}</pre>
+:;(Enter battle)
+::{{Enemy List|Automaton Beetle*2; Automaton Spider*1}}
+:{{DIcon|Arrow}} Operating brake module.
+::{{A|VO chapter1 5 robotB 206.ogg}} '''Irritable Robot:''' Wrong! Congratulations.
+::{{A|VO chapter1 5 robotB 207.ogg}} '''Irritable Robot:''' Simple question, terrible answer. It's back to school for you!
+::{{A|VO chapter1 5 mar7th 231 m.ogg}} {{A|VO chapter1 5 mar7th 231 f.ogg}} '''March 7th:''' ...(Trailblazer), can I smash this can opener already!?
+::{{A|VO chapter1 5 robotB 208.ogg}} '''Irritable Robot:''' Huh!? You wanna go? You caught me in a bad mood, let's do this!
+::{{A|VO chapter1 5 seele 227.ogg}} '''Seele:''' If we turn you into scrap metal, we still get our certification, right? Suits me!
+:<pre>{
+	"$type": "RPG.GameCore.PlayScreenCrack",
+	"EffectPath": "Effects/Eff_Prefab/Eff_Common/Eff_ScreenCrack.prefab",
+	"UniqueEffectName": "ScreenCrack",
+	"ExecuteOnSkip": true
+}</pre>
+:;(Enter battle)
+::{{Enemy List|Automaton Beetle*2; Automaton Spider*1}}
+:{{DIcon|Arrow}} Logic control hub.
+::{{A|VO chapter1 5 robotB 212.ogg}} '''Irritable Robot:''' Huh? Lucky guess.
+::{{A|VO chapter1 5 robotB 213.ogg}} '''Irritable Robot:''' Ugh! Now I have to do this again. Put your hand out.
+::{{DIcon|Arrow}} (Put hand out)
+:::{{A|VO chapter1 5 robotB 214.ogg}} '''Irritable Robot:''' What are you doing? I meant her, give me your hand!
+::{{DIcon|Arrow}} March, put your hand out.
+::{{A|VO chapter1 5 mar7th 232.ogg}} '''March 7th:''' Huh? Me again? It hurts, y'know!
+:<pre>{
+	"$type": "RPG.GameCore.TriggerSound",
+	"SoundName": {
+		"Value": "Ev_sfx_belobog_robot_stamp"
+	},
+	"EmitterType": "LocalPlayer"
+}</pre>
+::{{A|VO chapter1 5 mar7th 234.ogg}} '''March 7th:''' ...Ah! Owwww...
+::{{A|VO chapter1 5 robotB 215.ogg}} '''Irritable Robot:''' There, one step left. Now get outta here and leave me in peace...
+:<pre>{
+	"$type": "RPG.GameCore.AdvEnablePropDialogMode",
+	"RotateSpeed": 180,
+	"TargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvPropEx",
+		"FetchType": "SinglePropByPropID",
+		"SinglePropID": {
+			"GroupID": {
+				"fixedValue": {
+					"Value": 9
+				}
+			},
+			"ID": {
+				"fixedValue": {
+					"Value": 300002
+				}
+			}
+		}
+	}
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.CreateProp",
+	"GroupID": {
+		"fixedValue": {
+			"Value": 9
+		}
+	},
+	"GroupPropID": {
+		"fixedValue": {
+			"Value": 300006
+		}
+	}
+}</pre>
+:{{DIcon|Exit}} Let's listen in on some conversations...
+::{{A|VO chapter1 5 robotB 216.ogg}} '''Irritable Robot:''' You don't know the answer? That's lame. It's back to school for you!
+:<pre>{
+	"$type": "RPG.GameCore.AdvEnablePropDialogMode",
+	"RotateSpeed": 180,
+	"TargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvPropEx",
+		"FetchType": "SinglePropByPropID",
+		"SinglePropID": {
+			"GroupID": {
+				"fixedValue": {
+					"Value": 9
+				}
+			},
+			"ID": {
+				"fixedValue": {
+					"Value": 300002
+				}
+			}
+		}
+	}
+}</pre>
 {{Dialogue End}}
 
-===Collect Level 3 Certification===
+===Catch up with Clara{{subst:void|<!--101090216-->}}===
+{{Mission Description|type=trailblaze|location=Robot Settlement|update|You and your companions defeated the Fragmentum organisms and secured Clara's safety. You wanted to take the opportunity to persuade Clara into bringing you to Svarog, but she has a firmer and clearer conviction than March 7th... Your persuasion ended in failure.<br />However, all is not lost. You've noticed a breakthrough that could make her and Svarog talk &mdash; all you have to do now is to find Clara and revisit the conversation.<br />She seems to have taken the elevator and headed below the Furnace Core. You can still make it in time if you leave now.}}
+{{Dialogue Start}}
+<pre>{
+	"$type": "RPG.GameCore.AdvEnablePropDialogMode",
+	"Enable": true,
+	"PlayerFaceToProp": true,
+	"RotateSpeed": 180,
+	"EnablePropCamera": true,
+	"TargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvPropEx",
+		"FetchType": "SinglePropByPropID",
+		"SinglePropID": {
+			"GroupID": {
+				"fixedValue": {
+					"Value": 9
+				}
+			},
+			"ID": {
+				"fixedValue": {
+					"Value": 300002
+				}
+			}
+		}
+	}
+}</pre>
+:{{A|VO chapter1 5 robotB 204.ogg}} '''Irritable Robot:''' Yeah, yeah, whatever... Here comes your question, listen up.
+:{{A|VO chapter1 5 robotB 205.ogg}} '''Irritable Robot:''' Riddle me this: A microcrystalline unit should be connected to which component?
+:{{DIcon|Arrow}} Heat sink substrate.
+::{{A|VO chapter1 5 robotB 206.ogg}} '''Irritable Robot:''' Wrong! Congratulations.
+::{{A|VO chapter1 5 robotB 207.ogg}} '''Irritable Robot:''' Simple question, terrible answer. It's back to school for you!
+::{{A|VO chapter1 5 mar7th 231 m.ogg}} {{A|VO chapter1 5 mar7th 231 f.ogg}} '''March 7th:''' ...(Trailblazer), can I smash this can opener already!?
+::{{A|VO chapter1 5 robotB 208.ogg}} '''Irritable Robot:''' Huh!? You wanna go? You caught me in a bad mood, let's do this!
+::{{A|VO chapter1 5 seele 227.ogg}} '''Seele:''' If we turn you into scrap metal, we still get our certification, right? Suits me!
+:<pre>{
+	"$type": "RPG.GameCore.PlayScreenCrack",
+	"EffectPath": "Effects/Eff_Prefab/Eff_Common/Eff_ScreenCrack.prefab",
+	"UniqueEffectName": "ScreenCrack",
+	"ExecuteOnSkip": true
+}</pre>
+:;(Enter battle)
+::{{Enemy List|Automaton Beetle*2; Automaton Spider*1}}
+:{{DIcon|Arrow}} Operating brake module.
+::{{A|VO chapter1 5 robotB 206.ogg}} '''Irritable Robot:''' Wrong! Congratulations.
+::{{A|VO chapter1 5 robotB 207.ogg}} '''Irritable Robot:''' Simple question, terrible answer. It's back to school for you!
+::{{A|VO chapter1 5 mar7th 231 m.ogg}} {{A|VO chapter1 5 mar7th 231 f.ogg}} '''March 7th:''' ...(Trailblazer), can I smash this can opener already!?
+::{{A|VO chapter1 5 robotB 208.ogg}} '''Irritable Robot:''' Huh!? You wanna go? You caught me in a bad mood, let's do this!
+::{{A|VO chapter1 5 seele 227.ogg}} '''Seele:''' If we turn you into scrap metal, we still get our certification, right? Suits me!
+:<pre>{
+	"$type": "RPG.GameCore.PlayScreenCrack",
+	"EffectPath": "Effects/Eff_Prefab/Eff_Common/Eff_ScreenCrack.prefab",
+	"UniqueEffectName": "ScreenCrack",
+	"ExecuteOnSkip": true
+}</pre>
+:;(Enter battle)
+::{{Enemy List|Automaton Beetle*2; Automaton Spider*1}}
+:{{DIcon|Arrow}} Logic control hub.
+::{{A|VO chapter1 5 robotB 212.ogg}} '''Irritable Robot:''' Huh? Lucky guess.
+::{{A|VO chapter1 5 robotB 213.ogg}} '''Irritable Robot:''' Ugh! Now I have to do this again. Put your hand out.
+::{{DIcon|Arrow}} (Put hand out)
+:::{{A|VO chapter1 5 robotB 214.ogg}} '''Irritable Robot:''' What are you doing? I meant her, give me your hand!
+::{{DIcon|Arrow}} March, put your hand out.
+::{{A|VO chapter1 5 mar7th 232.ogg}} '''March 7th:''' Huh? Me again? It hurts, y'know!
+:<pre>{
+	"$type": "RPG.GameCore.TriggerSound",
+	"SoundName": {
+		"Value": "Ev_sfx_belobog_robot_stamp"
+	},
+	"EmitterType": "LocalPlayer"
+}</pre>
+::{{A|VO chapter1 5 mar7th 234.ogg}} '''March 7th:''' ...Ah! Owwww...
+::{{A|VO chapter1 5 robotB 215.ogg}} '''Irritable Robot:''' There, one step left. Now get outta here and leave me in peace...
+:<pre>{
+	"$type": "RPG.GameCore.AdvEnablePropDialogMode",
+	"RotateSpeed": 180,
+	"TargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvPropEx",
+		"FetchType": "SinglePropByPropID",
+		"SinglePropID": {
+			"GroupID": {
+				"fixedValue": {
+					"Value": 9
+				}
+			},
+			"ID": {
+				"fixedValue": {
+					"Value": 300002
+				}
+			}
+		}
+	}
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.CreateProp",
+	"GroupID": {
+		"fixedValue": {
+			"Value": 9
+		}
+	},
+	"GroupPropID": {
+		"fixedValue": {
+			"Value": 300006
+		}
+	}
+}</pre>
+:{{DIcon|Exit}} Let's listen in on some conversations...
+::{{A|VO chapter1 5 robotB 216.ogg}} '''Irritable Robot:''' You don't know the answer? That's lame. It's back to school for you!
+:<pre>{
+	"$type": "RPG.GameCore.AdvEnablePropDialogMode",
+	"RotateSpeed": 180,
+	"TargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvPropEx",
+		"FetchType": "SinglePropByPropID",
+		"SinglePropID": {
+			"GroupID": {
+				"fixedValue": {
+					"Value": 9
+				}
+			},
+			"ID": {
+				"fixedValue": {
+					"Value": 300002
+				}
+			}
+		}
+	}
+}</pre>
+{{Dialogue End}}
+
+===Collect Level 3 Certification{{subst:void|<!--101090225-->}}===
 {{Mission Description|type=trailblaze|location=Robot Settlement|update|As promised, Sampo leads you to the gate of Svarog's base. He then leaves you with a cliffhanger: In order to open this gate, you'll have to collect certifications from the certification robot.<br />If he could just tell you everything at once, you wouldn't have to waste time running in circles &mdash; this is the reason why you dread working with Sampo... One of the reasons at least.<br />You've collected the Level 2 Certification, just one more level until the gate opens. Keep it up!}}
 {{Dialogue Start}}
+
+:{{DIcon|Talk}} Certification Robot
+<pre>{
+	"$type": "RPG.GameCore.AdvEnablePropDialogMode",
+	"Enable": true,
+	"PlayerFaceToProp": true,
+	"RotateSpeed": 180,
+	"EnablePropCamera": true,
+	"TargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvPropEx",
+		"FetchType": "SinglePropByPropID",
+		"SinglePropID": {
+			"GroupID": {
+				"fixedValue": {
+					"Value": 9
+				}
+			},
+			"ID": {
+				"fixedValue": {
+					"Value": 300003
+				}
+			}
+		}
+	}
+}</pre>
+:'''Malfunctioning Robot:''' Beep... Boop...
+:{{A|VO chapter1 5 danheng 210.ogg}} '''Dan Heng:''' Whatever the case, we'll need it to identify our certifications.
+:{{A|VO chapter1 5 seele 229.ogg}} '''Seele:''' There's something wrong with this one...
+<pre>{
+	"$type": "RPG.GameCore.AdvEnablePropDialogMode",
+	"RotateSpeed": 180,
+	"TargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvPropEx",
+		"FetchType": "SinglePropByPropID",
+		"SinglePropID": {
+			"GroupID": {
+				"fixedValue": {
+					"Value": 9
+				}
+			},
+			"ID": {
+				"fixedValue": {
+					"Value": 300003
+				}
+			}
+		}
+	}
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.ConsumeMissionItem",
+	"SubMissionID": 101090225,
+	"Desc": {
+		"Hash": -1831180484
+	}
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.AdvEnablePropDialogMode",
+	"Enable": true,
+	"PlayerFaceToProp": true,
+	"RotateSpeed": 180,
+	"EnablePropCamera": true,
+	"TargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvPropEx",
+		"FetchType": "SinglePropByPropID",
+		"SinglePropID": {
+			"GroupID": {
+				"fixedValue": {
+					"Value": 9
+				}
+			},
+			"ID": {
+				"fixedValue": {
+					"Value": 300002
+				}
+			}
+		}
+	}
+}</pre>
+:{{A|VO chapter1 5 robotB 217.ogg}} '''Irritable Robot:''' ...Wait, have mercy! I'm sorry! One certification, coming right up!
+:{{A|VO chapter1 5 mar7th 235.ogg}} '''March 7th:''' Hehe, now we're talkin'!
+:{{A|VO chapter1 5 robotB 218.ogg}} '''Irritable Robot:''' Okay, please extend your right hand...
+:{{DIcon|Arrow}} (Put hand out)
+::{{A|VO chapter1 5 robotB 219.ogg}} '''Irritable Robot:''' Not you, the girl over there!
+:{{DIcon|Arrow}} March, put your hand out.
+:{{A|VO chapter1 5 mar7th 232.ogg}} '''March 7th:''' Huh? Me again? It hurts, y'know!
+:{{A|VO chapter1 5 mar7th 238.ogg}} '''March 7th:''' ...Ah! Owwww!
+:{{A|VO chapter1 5 robotB 220.ogg}} '''Irritable Robot:''' There you are, only one more to go. Now, please leave me in peace...
+<pre>{
+	"$type": "RPG.GameCore.AdvEnablePropDialogMode",
+	"RotateSpeed": 180,
+	"TargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvPropEx",
+		"FetchType": "SinglePropByPropID",
+		"SinglePropID": {
+			"GroupID": {
+				"fixedValue": {
+					"Value": 9
+				}
+			},
+			"ID": {
+				"fixedValue": {
+					"Value": 300002
+				}
+			}
+		}
+	}
+}</pre>
+{{Mission Description|type=trailblaze|location=Robot Settlement|update|As promised, Sampo leads you to the gate of Svarog's base. He then leaves you with a cliffhanger: In order to open this gate, you'll have to collect certifications from the certification robot.<br />If he could just tell you everything at once, you wouldn't have to waste time running in circles &mdash; this is the reason why you dread working with Sampo... One of the reasons at least.<br />You've collected the Level-2 Certification, just one more level until the gate opens. Keep it up!}}
+
+:{{DIcon|Talk}} Certification Robot
+<pre>{
+	"$type": "RPG.GameCore.AdvEnablePropDialogMode",
+	"Enable": true,
+	"PlayerFaceToProp": true,
+	"RotateSpeed": 180,
+	"EnablePropCamera": true,
+	"TargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvPropEx",
+		"FetchType": "SinglePropByPropID",
+		"SinglePropID": {
+			"GroupID": {
+				"fixedValue": {
+					"Value": 9
+				}
+			},
+			"ID": {
+				"fixedValue": {
+					"Value": 300003
+				}
+			}
+		}
+	}
+}</pre>
+:{{A|VO chapter1 5 robotC 202.ogg}} '''Malfunctioning Robot:''' Protocol... Inish-nish-nish-nish-nish...
+:{{A|VO chapter1 5 robotC 203.ogg}} '''Malfunctioning Robot:''' Initialization failure. Attempting system restorashhhh...
+:{{A|VO chapter1 5 bronya 208.ogg}} '''Bronya:''' Not encouraging...
+:{{A|VO chapter1 5 robotC 204.ogg}} '''Malfunctioning Robot:''' System restoration failure. Core module damaged. External threat detected.
+:{{A|VO chapter1 5 robotC 205.ogg}} '''Malfunctioning Robot:''' Threat elimination activated. Initializing combat module.
+:{{A|VO chapter1 5 seele 230.ogg}} '''Seele:''' Ha! Finally, no more racking our brains. This rust bucket's about to meet its maker!
+<pre>{
+	"$type": "RPG.GameCore.AdvEnablePropDialogMode",
+	"RotateSpeed": 180,
+	"TargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvPropEx",
+		"FetchType": "SinglePropByPropID",
+		"SinglePropID": {
+			"GroupID": {
+				"fixedValue": {
+					"Value": 9
+				}
+			},
+			"ID": {
+				"fixedValue": {
+					"Value": 300003
+				}
+			}
+		}
+	}
+}</pre>
+;(Enter battle)
+:{{Enemy List|Automaton Beetle*2; Automaton Hound*1}}
+<pre>{
+	"$type": "RPG.GameCore.AdvEnablePropDialogMode",
+	"Enable": true,
+	"PlayerFaceToProp": true,
+	"RotateSpeed": 180,
+	"EnablePropCamera": true,
+	"TargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvPropEx",
+		"FetchType": "SinglePropByPropID",
+		"SinglePropID": {
+			"GroupID": {
+				"fixedValue": {
+					"Value": 9
+				}
+			},
+			"ID": {
+				"fixedValue": {
+					"Value": 300003
+				}
+			}
+		}
+	}
+}</pre>
+:{{A|VO chapter1 5 robotC 202.ogg}} '''Malfunctioning Robot:''' Protocol... Inish-nish-nish-nish-nish...
+:{{A|VO chapter1 5 robotC 203.ogg}} '''Malfunctioning Robot:''' Initialization failure. Attempting system restorashhhh...
+:{{A|VO chapter1 5 bronya 208.ogg}} '''Bronya:''' Not encouraging...
+:{{A|VO chapter1 5 robotC 204.ogg}} '''Malfunctioning Robot:''' System restoration failure. Core module damaged. External threat detected.
+:{{A|VO chapter1 5 robotC 205.ogg}} '''Malfunctioning Robot:''' Threat elimination activated. Initializing combat module.
+:{{A|VO chapter1 5 seele 230.ogg}} '''Seele:''' Ha! Finally, no more racking our brains. This rust bucket's about to meet its maker!
+<pre>{
+	"$type": "RPG.GameCore.AdvEnablePropDialogMode",
+	"RotateSpeed": 180,
+	"TargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvPropEx",
+		"FetchType": "SinglePropByPropID",
+		"SinglePropID": {
+			"GroupID": {
+				"fixedValue": {
+					"Value": 9
+				}
+			},
+			"ID": {
+				"fixedValue": {
+					"Value": 300003
+				}
+			}
+		}
+	}
+}</pre>
+;(Enter battle)
+:{{Enemy List|Automaton Beetle*2; Automaton Hound*1}}
+<pre>{
+	"$type": "RPG.GameCore.AdvEnablePropDialogMode",
+	"Enable": true,
+	"PlayerFaceToProp": true,
+	"RotateSpeed": 180,
+	"EnablePropCamera": true,
+	"TargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvPropEx",
+		"FetchType": "SinglePropByPropID",
+		"SinglePropID": {
+			"GroupID": {
+				"fixedValue": {
+					"Value": 9
+				}
+			},
+			"ID": {
+				"fixedValue": {
+					"Value": 300003
+				}
+			}
+		}
+	}
+}</pre>
+:{{A|VO chapter1 5 seele 231.ogg}} '''Seele:''' Ha! Learned how to behave now?
+:{{A|VO chapter1 5 danheng 211.ogg}} '''Dan Heng:''' Let me try and reset its system...
+:{{A|VO chapter1 5 robotC 206.ogg}} '''Malfunctioning Robot:''' ...Certification system online. Please extend your right hand.
+:{{A|VO chapter1 5 mar7th 239.ogg}} '''March 7th:''' *sigh* ...Why is it always me...
+<pre>{
+	"$type": "RPG.GameCore.TriggerSound",
+	"SoundName": {
+		"Value": "Ev_sfx_belobog_robot_stamp"
+	},
+	"EmitterType": "LocalPlayer"
+}</pre>
+:{{A|VO chapter1 5 mar7th 240.ogg}} '''March 7th:''' Aaaah!!! How come it hurt even more than the other two!? Hmph, at least that's the final step...
+:{{A|VO chapter1 5 mar7th 241.ogg}} '''March 7th:''' We can get in now, right? Hehe, Svarog's certification system is no match for us!
+:{{A|VO chapter1 5 seele 232.ogg}} '''Seele:''' This better work. Let's get back to the gate and give it a go.
+<pre>{
+	"$type": "RPG.GameCore.AdvEnablePropDialogMode",
+	"RotateSpeed": 180,
+	"TargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvPropEx",
+		"FetchType": "SinglePropByPropID",
+		"SinglePropID": {
+			"GroupID": {
+				"fixedValue": {
+					"Value": 9
+				}
+			},
+			"ID": {
+				"fixedValue": {
+					"Value": 300003
+				}
+			}
+		}
+	}
+}</pre>
+;(Obtain {{Item|Robot Settlement Level 3 Certification|20|x=1}})
+{{Dialogue End}}
+
+===Open the gate to Svarog's base{{subst:void|<!--101090208-->}}===
+{{Mission Description|type=trailblaze|location=Robot Settlement|update|As promised, Sampo leads you to the gate of Svarog's base. He then leaves you with a cliffhanger: In order to open this gate, you'll have to collect certifications from the certification robot.<br />If he could just tell you everything at once, you wouldn't have to waste time running in circles &mdash; this is the reason why you dread working with Sampo... One of the reasons at least.<br />You've collected all three levels of certifications. It's time to open the gate and meet Svarog.}}
+{{Dialogue Start}}
+:<!--2-second delay-->
+:{{A|VO chapter1 5 mar7th 215.ogg}} '''March 7th:''' Opennnn sesame~!
+:{{A|VO chapter1 5 sampo 227.ogg}} '''Sampo:''' See? Not so bad having Sampo on the team after all, right? Chief Oleg knew all along that I&mdash;
+:{{A|VO chapter1 5 mar7th 243.ogg}} '''March 7th:''' Yeah, yeah, thank you very much.
+:{{A|VO chapter1 5 seele 233.ogg}} '''Seele:''' I'll commend you to the chief. No need to waste your time.
+:{{A|VO chapter1 5 sampo 228.ogg}} '''Sampo:''' Alright, well let me issue a warning now: Everything from here on out is uncharted territory &mdash; we must proceed with the utmost caution...
+:{{A|VO chapter1 5 mar7th 244.ogg}} '''March 7th:''' Now to set the record straight with Svarog. Let's get in there!
+:{{A|VO chapter1 5 sampo 229.ogg}} '''Sampo:''' ...Ugh! Did anyone hear what I just said?
+{{Dialogue End}}
+
+===Open the second gate to Svarog's base{{subst:void|<!--101090210-->}}===
+{{Mission Description|type=trailblaze|location=Robot Settlement|update|After tedious labor, you've finally completed the certifications the gate requires. But little did you know, there are even more gates after the one you just opened. This infuriated you. The thought of directly climbing over the gate crossed your mind...<br />However, a Nameless can't just jump without discretion, it'd be inelegant of you.<br />Looks like you'll have to see if the elevator over there is still working or ask what the robot by the door thinks of this.}}
+{{Dialogue Start}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{A|VO chapter1 5 seele 234.ogg}} '''Seele:''' A gate...
+:{{A|VO chapter1 5 seele 235.ogg}} '''Seele:''' Ugh... Why is there another gate here!?
+
+;(Upon reaching the destination)
+:{{A|VO chapter1 5 bronya 209.ogg}} '''Bronya:''' It looks like this gate has a more complicated structure than the last one...
+:{{A|VO chapter1 5 seele 236.ogg}} '''Seele:''' Sampo, what is this?
+:{{A|VO chapter1 5 seele 237.ogg}} '''Seele:''' ...Sampo? Where is he?
+:{{A|VO chapter1 5 mar7th 247.ogg}} '''March 7th:''' Ugh! Where did he run off to &mdash; he was just here a second ago!
+:{{A|VO chapter1 5 danheng 212.ogg}} '''Dan Heng:''' ...This isn't the first time.
+:{{A|VO chapter1 5 seele 238.ogg}} '''Seele:''' It's that same type of robot again! Please don't tell me there's another round of "processing."
+:{{A|VO chapter1 5 robotD 201.ogg}} '''Wandering Robot:''' Visitors for Svarog detected.
+:{{A|VO chapter1 5 robotD 202.ogg}} '''Wandering Robot:''' Protocol initiating... Scanning... Verifying.
+:{{DIcon|Arrow}} Who's a good boy? Here's our certification, we just wanna see your master.
+::{{A|VO chapter1 5 mar7th 248.ogg}} '''March 7th:''' Ooh, good plan! Treat the robots like guard dogs!
+::{{A|VO chapter1 5 mar7th 249.ogg}} '''March 7th:''' ...How is that gonna improve our chances?
+:{{DIcon|Arrow}} Careful, this one might have a few tricks up its sleeve.
+::{{A|VO chapter1 5 seele 239.ogg}} '''Seele:''' Are we gonna smash this one too? Count me in.
+:{{A|VO chapter1 5 robotD 203.ogg}} '''Wandering Robot:''' Certification failure... Subject has yet to obtain access permissions.
+:{{A|VO chapter1 5 robotD 204.ogg}} '''Wandering Robot:''' Request rejected. Visitors must acquire access permissions from Miss Clara.
+:{{A|VO chapter1 5 mar7th 250.ogg}} '''March 7th:''' Clara? Oh, the girl we saw in the Great Mine?
+:{{A|VO chapter1 5 mar7th 251.ogg}} '''March 7th:''' We need to get permissions from her? What's she got to do with this?
+:{{DIcon|Arrow}} She's Svarog's family.
+:{{DIcon|Arrow}} She's Svarog's owner.
+:{{DIcon|Arrow}} That town has danger lurking in every corner.
+::{{A|VO chapter1 5 bronya 211.ogg}} '''Bronya:''' Indeed. And that little girl heading into the Fragmentum all by herself... It doesn't bear thinking about.
+:{{DIcon|Arrow}} We should go and find Clara.
+::{{A|VO chapter1 5 bronya 212.ogg}} '''Bronya:''' That little girl heading into the Fragmentum all by herself... It doesn't bear thinking about.
+:{{A|VO chapter1 5 bronya 213.ogg}} '''Bronya:''' Her strength belies her appearance, but even so...
 :{{tx}}
 {{Dialogue End}}
 
-===Go to the storage room and find Clara===
+===Go to the storage room and find Clara{{subst:void|<!--101090226-->}}===
 {{Mission Description|type=trailblaze|location=Robot Settlement|update|Only Clara, who has returned to Rivet Town to collect materials, has the authorization to open the second gate.<br />Being there not long ago, you are well aware of how vicious of a place Rivet Town is. You wouldn't allow such a little girl to be exploring Rivet Town alone, even if she has a robot guardian by her side...<br />It's time to prove that you're truly a member of Clara's family &mdash; head to Rivet Town!}}
 {{Dialogue Start}}
-:{{tx}}
+:{{A|VO chapter1 5 mar7th 254.ogg}} '''March 7th:''' This is a big town. Where should we start?
+:{{A|VO chapter1 5 seele 243.ogg}} '''Seele:''' Clara said she was going to find components, right? Let's start with Nat's storage room.
 {{Dialogue End}}
 
-===Enter Svarog's base with Clara's help===
-{{Mission Description|type=trailblaze|location=Robot Settlement|update|"The members of the crew are the new variants. Our existence will topple Svarog's calculations." And with that, you've completely convinced Clara and earned her trust, as well as awakened her courage and conviction to protect the world.<br />And so Clara makes the promise to bring you to Svarog.<br />Follow Clara back to the Robot Settlement and open the gate that leads to Svarog's base.}}
+===Go to the Tempering Workshop and find Clara{{subst:void|<!--101090212-->}}===
+{{Mission Description|type=trailblaze|location=Rivet Town|update|Only Clara, who has returned to Rivet Town to collect materials, has the authorization to open the second gate.<br />Being there not long ago, you are well aware of how vicious of a place Rivet Town is. Here, you already discovered Clara's robot guardian to be heavily damaged and learned that Clara is trapped in the Tempering Workshop all by herself...<br />Clara is in danger &mdash; hurry over to the workshop and protect Clara!}}
 {{Dialogue Start}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+----
+<pre>{
+	"$type": "RPG.GameCore.CaptureLocalPlayer",
+	"CharacterUniqueName": "LocalPlayer"
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.CharacterTriggerAnimState",
+	"CharacterUniqueName": {
+		"Value": "LocalPlayer"
+	},
+	"ForceStart": true,
+	"AnimStateName": "RunStop_R",
+	"NormalizedTimeStart": 0.25,
+	"NormalizedTransitionDuration": 0.1,
+	"NormalizedTimeWait": 0.1
+}</pre>
+:{{A|VO chapter1 5 seele 247.ogg}} '''Seele:''' Just as we feared, there's something big over there! And there's Clara &mdash; we have to save her!
+:{{A|VO chapter1 5 bronya 217.ogg}} '''Bronya:''' Let's go. No need to fear. We have the numerical advantage.
+;(Enter battle)
+:{{Enemy List|Blaze Out of Space*1/-60 Toughness}}
+:{{A|VO chapter1 5 seele 248.ogg}} '''Seele:''' Are you okay, Clara? Are you hurt?
+:{{A|VO chapter1 5 clara 203.ogg}} '''Clara:''' Th&mdash;Thanks, everyone. I'm fine. Just a few scratches.
+:{{A|VO chapter1 5 seele 249.ogg}} '''Seele:''' You shouldn't be running around by yourself. It's too dangerous. What are you looking for here?
+:{{A|VO chapter1 5 clara 204.ogg}} '''Clara:''' There's a fault with one of the energy supply units at the base. If I don't repair it soon, everyone at the settlement will be affected.
+:{{A|VO chapter1 5 clara 205.ogg}} '''Clara:''' I knew there was a workshop in this town, so I wanted to try my luck here. I found all the components I need, but then I ran into a monster...
+:{{A|VO chapter1 5 clara 206.ogg}} '''Clara:''' You guys saved me &mdash; I'll tell Mr. Svarog about it.
+:{{DIcon|Arrow}} Speaking of Svarog...
+::{{A|VO chapter1 5 seele 250.ogg}} '''Seele:''' ...We were planning on paying him a visit.
+:{{DIcon|Arrow}} We were just about to pay him a visit.
+:{{A|VO chapter1 5 clara 207.ogg}} '''Clara:''' ...Huh? What do you need to see him for? I can pass him a message...
+:{{A|VO chapter1 5 seele 251.ogg}} '''Seele:''' No, this time we need to set things straight with him face to face. Can you take us to meet him?
+:{{A|VO chapter1 5 clara 208.ogg}} '''Clara:''' But... Mr. Svarog doesn't like talking to others, especially Wildfire...
+:{{A|VO chapter1 5 seele 252.ogg}} '''Seele:''' Don't I know it. But he's evaded communication with us for too long &mdash; this time we have to see him.
+:{{A|VO chapter1 5 clara 209.ogg}} '''Clara:''' Um... I know you're working hard for the people down here, but Mr. Svarog doesn't trust human emotions. He only trusts his calculation results.
+:{{A|VO chapter1 5 clara 210.ogg}} '''Clara:''' So, I can't take you to see him... If Mr. Svarog and you had a fight, someone would get hurt for sure. Maybe even bystanders...
+:{{A|VO chapter1 5 seele 253.ogg}} '''Seele:''' Listen kid, you&mdash;
+:{{A|VO chapter1 5 bronya 218.ogg}} '''Bronya:''' Clara, you said it yourself before, right? Svarog's duty is to protect the Underworld and preserve the civilization here. We have the same wish. Why would he refuse to cooperate with us?
+:{{A|VO chapter1 5 clara 211.ogg}} '''Clara:''' I know Mr. Svarog. He isn't affected by other people's wishes. He only follows logical judgments.
+:{{A|VO chapter1 5 clara 212.ogg}} '''Clara:''' Terrible things are happening on this world... Mr. Svarog thinks that the Overworld will end soon.
+:{{A|VO chapter1 5 bronya 219.ogg}} '''Bronya:''' ...
+:{{A|VO chapter1 5 clara 213.ogg}} '''Clara:''' According to his calculation results, the strength of the Underworlders won't be enough to prevent the disaster.
+:{{A|VO chapter1 5 clara 214.ogg}} '''Clara:''' His plan is to keep the Underworlders away from the source of the disaster, so they can survive for longer...
+:{{A|VO chapter1 5 seele 254.ogg}} '''Seele:''' ...Isn't that just putting us in a cage? It's ridiculous &mdash; what difference does it make if our death gets postponed a couple of days? How is that better than putting up a fight?
+:{{DIcon|Arrow}} See it as returning the favor, Clara.
+::{{A|VO chapter1 5 clara 215.ogg}} '''Clara:''' I'll definitely return the favor! But not like this...
+:{{DIcon|Arrow}} We have to see him, whatever the cost.
+::{{A|VO chapter1 5 clara 216.ogg}} '''Clara:''' I'm sorry... I really can't help you with this.
+:{{DIcon|Arrow}} Why don't we think of another way?
+::{{A|VO chapter1 5 clara 217.ogg}} '''Clara:''' I'm always trying to convince Mr. Svarog. Please give me more time...
+:{{A|VO chapter1 5 clara 218.ogg}} '''Clara:''' Um, if you don't mind... I still have important things to do. I'll go back now.
 :{{tx}}
 {{Dialogue End}}
 
-===Help Clara fix the energy supply device===
+===Catch up with Clara{{subst:void|<!--101090215-->}}===
+{{Mission Description|type=trailblaze|location=Robot Settlement|update|You and your companions defeated the Fragmentum organisms and secured Clara's safety. You wanted to take the opportunity to persuade Clara into bringing you to Svarog, but she has a firmer and clearer conviction than March 7th... Your persuasion ended in failure.<br />However, all is not lost. You've noticed a breakthrough that could make her and Svarog talk &mdash; all you have to do now is to find Clara and revisit the conversation.}}
+{{Dialogue Start}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+<pre>{
+	"$type": "RPG.GameCore.PropSetVisibility",
+	"SpecifiedRelativePaths": [],
+	"TargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvPropEx",
+		"FetchType": "SinglePropByPropID",
+		"SinglePropID": {
+			"GroupID": {
+				"fixedValue": {
+					"Value": 68
+				}
+			},
+			"ID": {
+				"fixedValue": {
+					"Value": 300002
+				}
+			}
+		}
+	}
+}</pre>
+:<!--0.7-second delay-->
+:{{A|VO chapter1 5 mar7th 262.ogg}} '''March 7th:''' She turned that way, quick!
+<pre>{
+	"$type": "RPG.GameCore.ActiveVirtualCamera",
+	"AreaName": "1010902_temp",
+	"AnchorName": "Camera_101090216_01",
+	"BlendConfig": {
+		"ExportToJson": true,
+		"BlendType": "Cut",
+		"UseDefaultBlendCurve": true,
+		"BlendTime": 1,
+		"FOVSmoothDampTime": -1,
+		"FrameBlendWeightStart": 1,
+		"FrameBlendDuration": 1
+	},
+	"VCameraDitherMaxDistance": 1,
+	"CenterPosX": -1,
+	"CenterPosY": -1
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.DestroyNPC",
+	"GroupID": 5,
+	"GroupNpcID": 400005
+}</pre>
+{{Mission Description|type=trailblaze|location=Robot Settlement|update|You and your companions defeated the Fragmentum organisms and secured Clara's safety. You wanted to take the opportunity to persuade Clara into bringing you to Svarog, but she has a firmer and clearer conviction than March 7th... Your persuasion ended in failure.<br />However, all is not lost. You've noticed a breakthrough that could make her and Svarog talk &mdash; all you have to do now is to find Clara and revisit the conversation.<br />She seems to have taken the elevator and headed below the Furnace Core. You can still make it in time if you leave now.}}
+{{Mission Description|type=trailblaze|location=Robot Settlement|update|You and your companions defeated the Fragmentum organisms and secured Clara's safety. You wanted to take the opportunity to persuade Clara into bringing you to Svarog, but she has a firmer and clearer conviction than March 7th... Your persuasion ended in failure.<br />However, all is not lost. You've noticed a breakthrough that could make her and Svarog talk &mdash; all you have to do now is to find Clara and revisit the conversation.<br />You catch a glimpse of her while in the elevator &mdash; it's time for a rabbit hunt. Go after her!}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{A|VO chapter1 5 mar7th 263.ogg}} '''March 7th:''' Huh? Where'd she go? We just saw her go this way.
+:{{A|VO chapter1 5 mar7th 264.ogg}} '''March 7th:''' *sigh* We'll just have to head straight and keep looking.
+{{Dialogue End}}
+
+===Find Clara in the area{{subst:void|<!--101090218-->}}===
+{{Mission Description|type=trailblaze|location=Robot Settlement|update|You and your companions defeated the Fragmentum organisms and secured Clara's safety. You wanted to take the opportunity to persuade Clara into bringing you to Svarog, but she has a firmer and clearer conviction than March 7th... Your persuasion ended in failure.<br />However, all is not lost. You've noticed a breakthrough that could make her and Svarog talk &mdash; all you have to do now is to find Clara and revisit the conversation.<br />Clara should be close by. Search carefully for her.}}
+{{Dialogue Start}}
+
+;(Talk to Clara)
+----
+:{{A|VO chapter1 5 clara 219.ogg}} '''Clara:''' Hmm... why won't it...
+:{{A|VO chapter1 5 clara 220.ogg}} '''Clara:''' Argh... I can't figure it out...
+:{{A|VO chapter1 5 clara 221.ogg}} '''Clara:''' ...Oh, it's you. You came with me after all.
+:{{DIcon|Arrow}} We couldn't give up that easily.
+:{{DIcon|Arrow}} You're the underground's only hope.
+:{{A|VO chapter1 5 clara 222.ogg}} '''Clara:''' You keep saying that, but...
+:{{A|VO chapter1 5 danheng 224.ogg}} '''Dan Heng:''' Are you repairing this installation, Clara? Hit a snag?
+:{{A|VO chapter1 5 clara 223.ogg}} '''Clara:''' Huh? How did you know?
+:{{A|VO chapter1 5 danheng 225.ogg}} '''Dan Heng:''' The dimensions and wear of these two roller components look very different from the rest of the unit. You must have only just replaced them.
+:{{A|VO chapter1 5 danheng 226.ogg}} '''Dan Heng:''' You replaced the damaged components, but the unit isn't starting up as normal. That's what you're trying to figure out, right?
+:{{A|VO chapter1 5 clara 224.ogg}} '''Clara:''' ...Yeah. I've fixed a lot of things before, but I never had to repair one as complicated as this.
+:{{A|VO chapter1 5 mar7th 265.ogg}} '''March 7th:''' Why isn't Svarog helping you?
+:{{A|VO chapter1 5 clara 225.ogg}} '''Clara:''' I don't want to disturb him. This installation was... accidentally damaged by two of the vagrants. If Mr. Svarog finds out, they'll get in big trouble...
+:{{DIcon|Arrow}} Was it really an accident...?
+:{{DIcon|Arrow}} You give a lot of thought to others.
+:{{A|VO chapter1 5 seele 256.ogg}} '''Seele:''' ...Y'know Clara, if you're too kind, people can take advantage of you.
+:{{A|VO chapter1 5 danheng 227.ogg}} '''Dan Heng:''' ...
+:{{A|VO chapter1 5 danheng 228.ogg}} '''Dan Heng:''' I think I found the source of the problem. You replaced the rollers, but the bearing is causing a jam &mdash; there's a misalignment.
+:{{A|VO chapter1 5 danheng 229 m.ogg}} {{A|VO chapter1 5 danheng 229 f.ogg}} '''Dan Heng:''' (Trailblazer), March, give me a hand. We should be able to fix it between us.
+:{{A|VO chapter1 5 mar7th 266.ogg}} '''March 7th:''' More fixing? I'm getting good at this!
+----
+{{Dialogue End}}
+
+===Help Clara fix the energy supply device{{subst:void|<!--101090239-->}}===
 {{Mission Description|type=trailblaze|location=Robot Settlement|update|You find Clara sitting in front of a damaged energy supply device troubled with its repairs.<br />As a member of Clara's family, this is the time to give her a helping hand and use it as leverage... No, to use it as a chance for an opportunity to convince Clara.<br />Coincidentally, you find the energy supply device to have a similar structure to the various machines you've fixed before &mdash; it's time to display your true abilities!}}
 {{Dialogue Start}}
+
+:{{A|VO chapter1 5 clara 226.ogg}} '''Clara:''' Can we really fix this?
+:{{A|VO chapter1 5 mar7th 267.ogg}} '''March 7th:''' Relax, we got this. Right, Dan Heng?
+:{{A|VO chapter1 5 danheng 230.ogg}} '''Dan Heng:''' ...Less asking, more helping.
+:{{A|VO chapter1 5 clara 227.ogg}} '''Clara:''' Whoa! It lit up! Thanks guys!
+:{{A|VO chapter1 5 danheng 231.ogg}} '''Dan Heng:''' So, the settlement's energy supply problem is solved for the time being?
+:{{A|VO chapter1 5 clara 228.ogg}} '''Clara:''' Yes. The people on the outskirts don't need to worry about heat or light now.
+:{{A|VO chapter1 5 clara 229.ogg}} '''Clara:''' Umm...
+:{{DIcon|Arrow}} We're not trying to win you over.
+::{{A|VO chapter1 5 clara 230.ogg}} '''Clara:''' I understand. You helped a lot of injured people in the mine, and you risked going into the town for supplies. You're good people.
+:{{DIcon|Arrow}} On the issue of Svarog...
+::{{A|VO chapter1 5 clara 231.ogg}} '''Clara:''' I know that you're good people. You helped a lot of the injured in the mine, and you risked going into the town for supplies.
+:{{A|VO chapter1 5 clara 232.ogg}} '''Clara:''' If there's any other way I can help you, I'll do my best! But this...
+:{{A|VO chapter1 5 mar7th 268.ogg}} '''March 7th:''' *sigh* How are we gonna convince her?
+:{{DIcon|Arrow}} Remind her of the "present situation."
+::{{A|VO chapter1 5 mar7th 269.ogg}} '''March 7th:''' The present situation is... we're here! This planet isn't doomed after all...
+:{{DIcon|Arrow}} Point out the "variable."
+::{{A|VO chapter1 5 mar7th 270.ogg}} '''March 7th:''' The variable is... our arrival! No outsider's set foot in the underground for over a decade...
+:{{DIcon|Arrow}} Make something up.
+::{{A|VO chapter1 5 mar7th 271 m.ogg}} {{A|VO chapter1 5 mar7th 271 f.ogg}} '''March 7th:''' ...You might be putting a little too much faith in me, (Trailblazer).
+:{{A|VO chapter1 5 mar7th 272.ogg}} '''March 7th:''' Clara, you're observant, right? Take a look at us. Do we look like Underworlders?
+:{{A|VO chapter1 5 clara 233.ogg}} '''Clara:''' Well, uhh... you do look very different from other people.
+:{{A|VO chapter1 5 mar7th 273.ogg}} '''March 7th:''' Right! That's because we're not from here. We've never been a factor in Svarog's calculations. And if those calculations are based solely on "the strength of the Underworlders," then the results don't apply to the present situation.
+:{{A|VO chapter1 5 danheng 232.ogg}} '''Dan Heng:''' When did Svarog start doing his calculations, Clara?
+:{{A|VO chapter1 5 clara 234.ogg}} '''Clara:''' It was... a long time ago. The same time the Underworld was sealed off, I think...
+:{{A|VO chapter1 5 mar7th 274.ogg}} '''March 7th:''' Circumstances have changed since then &mdash; there's a Silvermane Guard down here now! Is that part of Svarog's calculation? Not to mention, we're&mdash;
+:{{DIcon|Arrow}} Not even from this planet!
+:{{DIcon|Arrow}} Completely separate variables!
+:{{DIcon|Arrow}} Three people more than when we started!
+:{{DIcon|Arrow}} They're not made-up.
+:{{DIcon|Arrow}} In other worlds, people have already conquered the heavens.
+:{{DIcon|Arrow}} But you ARE a child...
+:{{DIcon|Arrow}} You've already seen our ability.
+:{{DIcon|Arrow}} We will bring change to this world.
+:{{DIcon|Arrow}} Come onnnn, what have we got to lose?
+:You've already seen our ability.
 :{{tx}}
 {{Dialogue End}}
 
-===Enter Svarog's base with Clara's help===
+===Enter Svarog's base with Clara's help{{subst:void|<!--101090227-->}}===
 {{Mission Description|type=trailblaze|location=Robot Settlement|update|"The members of the crew are the new variants. Our existence will topple Svarog's calculations." And with that, you've completely convinced Clara and earned her trust, as well as awakened her courage and conviction to protect the world.<br />And so Clara makes the promise to bring you to Svarog.<br />Follow Clara back to the Robot Settlement and open the gate that leads to Svarog's base.}}
 {{Dialogue Start}}
-:{{tx}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+----
+:{{A|VO chapter1 5 clara 245.ogg}} '''Clara:''' ...I'm back, Timmy.
+:{{A|VO chapter1 5 robotD 207.ogg}} '''Wandering Robot:''' Welcome back, Miss Clara.
+:{{A|VO chapter1 5 clara 246.ogg}} '''Clara:''' Timmy, open the gate please. I want to see Mr. Svarog.
+:{{A|VO chapter1 5 robotD 208.ogg}} '''Wandering Robot:''' Outsiders detected. Do you wish to permit access?
+:{{A|VO chapter1 5 clara 247.ogg}} '''Clara:''' It's okay. They're all my guests.
+:{{A|VO chapter1 5 robotD 209.ogg}} '''Wandering Robot:''' Command received. Access restriction terminal unlocked.
+:{{A|VO chapter1 5 robotD 210.ogg}} '''Wandering Robot:''' Welcome back, Miss Clara and guests.
+----
+:{{A|VO chapter1 5 seele 257.ogg}} '''Seele:''' Bronya! I didn't know you'd stick up for us like that back there &mdash; well said!
+:{{A|VO chapter1 5 bronya 226.ogg}} '''Bronya:''' It was nothing. I just... said what I truly felt.
 {{Dialogue End}}
 
-===Help Clara fix the energy supply device===
-{{Mission Description|type=trailblaze|location=Robot Settlement|update|You find Clara sitting in front of a damaged energy supply device troubled with its repairs.<br />As a member of Clara's family, this is the time to give her a helping hand and use it as leverage... No, to use it as a chance for an opportunity to convince Clara.<br />Coincidentally, you find the energy supply device to have a similar structure to the various machines you've fixed before &mdash; it's time to display your true abilities!}}
+===Face Svarog{{subst:void|<!--101090219-->}}===
+{{Mission Description|type=trailblaze|location=Robot Settlement|update|The locked gates are now all opened. This is a path that must be traveled in order to change the destiny of the world.<br />Svarog is here guarding the truth of this world...<br />Go and face him.}}
 {{Dialogue Start}}
+;(If {{cx}}{{subst:void|<!--{"$type":"RPG.GameCore.ByCompareMissionBattleWin","EventID":20123009,"TaskEnabled":true,"IsClientOnly":true}-->}})
+::{{tx}}
+:;(Enter battle)
+::{{Enemy List|Svarog*1/+11.1% ATK}}
+;(If {{cx}}{{subst:void|<!--{"$type":"RPG.GameCore.ByCompareMissionBattleWin","EventID":20123009,"TaskEnabled":true,"IsClientOnly":true}-->}})
+:;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{A|VO chapter1 5 clara 249.ogg}} '''Clara:''' I'm back, Mr. Svarog.
+:{{A|VO chapter1 5 svarog 201.ogg}} '''Svarog:''' I see that the energy supply system is back online. Thank you, Clara.
+:{{A|VO chapter1 5 svarog 202.ogg}} '''Svarog:''' But... why have you brought them?
+:{{A|VO chapter1 5 clara 250.ogg}} '''Clara:''' Mr. Svarog... they want to talk to you about going to the surface.
+:{{A|VO chapter1 5 svarog 203.ogg}} '''Svarog:''' Analyzing... Analysis result: Target does not belong to Wildfire. Background: Unknown. Classification: Unknown.
+:{{A|VO chapter1 5 svarog 204.ogg}} '''Svarog:''' You have arrived on Clara's recommendation. I will give you an opportunity to speak.
+:{{A|VO chapter1 5 mar7th 280 m.ogg}} {{A|VO chapter1 5 mar7th 280 f.ogg}} '''March 7th:''' Hey, sounds like he's willing to communicate! Quick, (Trailblazer), time to smooth-talk him!
+:{{DIcon|Arrow}} We're not interested in stoking conflict.
+::{{A|VO chapter1 5 svarog 205.ogg}} '''Svarog:''' You seek peace, understood. Nevertheless, your statement is unilateral.
+::{{A|VO chapter1 5 svarog 206.ogg}} '''Svarog:''' My position will be determined after assessing the result of our negotiation.
+:{{DIcon|Arrow}} We're here about the future of the underground.
+::{{A|VO chapter1 5 svarog 207.ogg}} '''Svarog:''' An inadequate pretext. You are not from the underground. You have no right to represent Underworld humanity.
+:{{DIcon|Arrow}} To be, or not to be, that is the question!
+::{{A|VO chapter1 5 svarog 208.ogg}} '''Svarog:''' Said question lacks the necessary context to be answered.
+:{{A|VO chapter1 5 svarog 209.ogg}} '''Svarog:''' Proceed with your central point. Do not waste this world's valuable time.
+:{{A|VO chapter1 5 mar7th 281.ogg}} '''March 7th:''' He cut you off completely! This guy...
+:{{A|VO chapter1 5 danheng 234.ogg}} '''Dan Heng:''' Stay focused. Remember, we have to make him see that we're a variable in the calculation.
+:{{DIcon|Arrow}} We're here about the Stellaron.
+:{{DIcon|Arrow}} Do you know what a Stellaron is?
+:{{DIcon|Arrow}} W&mdash;We're a variable!
+::{{DIcon|Arrow}} We're here about the Stellaron.
+::{{DIcon|Arrow}} Do you know what a Stellaron is?
+:{{DIcon|Arrow}} We must find the Stellaron, and then...
+:{{DIcon|Arrow}} We want to bring this world's disasters to a close.
+:{{DIcon|Arrow}} Wait, we're not like those others!
+::{{A|VO chapter1 5 svarog 217.ogg}} '''Svarog:''' There is no evidence to suggest you are an exception. Calculation result remains unchanged.
+:{{DIcon|Arrow}} Your powers of calculation suck.
+::{{A|VO chapter1 5 svarog 218.ogg}} '''Svarog:''' Target hostility significantly exceeds base index. Calculation result remains unchanged.
+:{{A|VO chapter1 5 svarog 219.ogg}} '''Svarog:''' Peacekeeping protocol temporarily disengaged... Requesting extermination protocol launch.
 :{{tx}}
+:{{tx}}
+:{{A|VO chapter1 5 natasha 213.ogg}} '''Natasha:''' C&mdash;Clara? ...You...
+:{{A|VO chapter1 5 clara 252.ogg}} '''Clara:''' Mr. Svarog can't fight anymore! Please... Please don't hurt him!
+:{{A|VO chapter1 5 svarog 225.ogg}} '''Svarog:''' Cla...ra...
+:{{A|VO chapter1 5 clara 253.ogg}} '''Clara:''' Mr. Svarog... Don't push yourself any further. Can you tell them what you know?
+:'''Svarog:''' ...
+:{{A|VO chapter1 5 clara 254.ogg}} '''Clara:''' Mr. Svarog, you said you were willing to make all my wishes come true, right? My biggest wish right now is for everyone to work together. Like... like family.
+:{{A|VO chapter1 5 clara 255.ogg}} '''Clara:''' Recently, I learned something new... Calculation results can't always bring people happiness.
+:{{A|VO chapter1 5 clara 256.ogg}} '''Clara:''' Even if the world outside the cage isn't beautiful... people still want to know what it's like.
+:'''Svarog:''' ...
+:{{A|VO chapter1 5 svarog 228.ogg}} '''Svarog:''' Assessment system reset... successful. Processing variables...
+:{{A|VO chapter1 5 svarog 229.ogg}} '''Svarog:''' Variable 1: Clara's request... Variable 2: Outsiders' intentions.
+:{{A|VO chapter1 5 svarog 230.ogg}} '''Svarog:''' ...Updated assessment result: Transference of decision-making authority to outsiders. Outsiders are granted access to Stellaron intelligence.
+:{{A|VO chapter1 5 mar7th 285.ogg}} '''March 7th:''' So... So we did it?
+:{{DIcon|Arrow}} The cost was too great.
+::{{A|VO chapter1 5 danheng 237.ogg}} '''Dan Heng:''' Clara seems like the only one who can break through Svarog's cold logic. It's a good thing she was here.
+:{{DIcon|Arrow}} Thanks to Clara...
+::{{A|VO chapter1 5 mar7th 286.ogg}} '''March 7th:''' Yeah! Without her, even if we'd defeated Svarog, there's no way he'd have given us access to the intel, right?
+:{{DIcon|Arrow}} Our strength has been recognized.
+::{{A|VO chapter1 5 mar7th 287.ogg}} '''March 7th:''' Although, if Clara hadn't been here... Svarog would never have granted us access to the intel, right? Even up until the end.
+:{{A|VO chapter1 5 danheng 238.ogg}} '''Dan Heng:''' I hope his memory bank really does contain data on the Stellaron.
+:{{A|VO chapter1 5 seele 263.ogg}} '''Seele:''' Is this it, Nat? Us, Wildfire, the Underworld... Did... did we win?
+:{{A|VO chapter1 5 natasha 214.ogg}} '''Natasha:''' No, Seele.
+:{{A|VO chapter1 5 natasha 215.ogg}} '''Natasha:''' Our battle... their battle... it's just beginning.
+:{{A|VO chapter1 5 bronya 229.ogg}} '''Bronya:''' Finally... We finally made it to this point.
+:{{A|VO chapter1 5 seele 264.ogg}} '''Seele:''' ...What's up, nervous?
+:{{A|VO chapter1 5 bronya 230.ogg}} '''Bronya:''' No, but... I do have an aching feeling in my chest.
+:{{DIcon|Arrow}} The truth can be heartbreaking.
+:{{DIcon|Arrow}} It's up to you to make your own judgment about who's lying now.
+:The truth can be heartbreaking.
+:{{tx}}
+
+;(Talk to Sampo)
+:{{A|VO chapter1 5 sampo 231.ogg}} '''Sampo:''' How's it going, partner? Is that feeling in your chest the thrill of victory or just the joy of making it out alive?
+:{{A|VO chapter1 5 sampo 232.ogg}} '''Sampo:''' I know, your heart is bursting with gratitude... but there's no need to thank me. We have what I'd like to call a "fiscal friendship." If the money's right, not a problem in sight!
+;(If {{cx}}<!--SubMission Finish: 101090233-->)
+::{{DIcon|Talk}} When did you call in for reinforcements?
+:::{{A|VO chapter1 5 sampo 233.ogg}} '''Sampo:''' Ha, I knew that you'd get yourselves into trouble eventually, so I got Oleg to send relief in advance. Pretty sensible, right?
+:::{{DIcon|Arrow}} I'm asking why you went behind our backs.
+::::{{A|VO chapter1 5 sampo 234.ogg}} '''Sampo:''' My assignment was simply to take you to Svarog's lair. I got the payment and delivered the goods &mdash; I wasn't obligated to tell you about my dinner plans!
+::::{{A|VO chapter1 5 sampo 235.ogg}} '''Sampo:''' But I threw in something extra regardless. I only did that because we're friends, or I would've charged extra.
+::::{{A|VO chapter1 5 sampo 237.ogg}} '''Sampo:''' Here's a slice of life experience for you: Resourceful businessmen never get into risky trading without a plan b... and a plan b for their plan b. Plan c, we call that.
+:::;(Return to previous option selection)
+:::{{DIcon|Arrow}} Nice work, you saved us.
+::::{{A|VO chapter1 5 sampo 236.ogg}} '''Sampo:''' My pleasure! Friends should look out for each other. Good for business.
+::::{{A|VO chapter1 5 sampo 237.ogg}} '''Sampo:''' Here's a slice of life experience for you: Resourceful businessmen never get into risky trading without a plan b... and a plan b for their plan b. Plan c, we call that.
+:::;(Return to previous option selection)
+::{{DIcon|Talk}} You knew Natasha belonged to Wildfire...
+:::{{A|VO chapter1 5 sampo 238.ogg}} '''Sampo:''' ...The chief? Of course I knew. Wildfire are mostly made up of torch and pitchfork types. How could they function without her?
+:::{{A|VO chapter1 5 sampo 239.ogg}} '''Sampo:''' Not that I'm criticizing old Oleg! He's good at the heavy lifting. It's just that Wildfire needs a meticulous thinker lurking in the sha&mdash; Ahem! ...Working in the background, hehe.
+::;(Return to previous option selection)
+::{{DIcon|Talk}} You seem to enjoy muddying the waters.
+:::{{A|VO chapter1 5 sampo 240.ogg}} '''Sampo:''' Hey now, you've got me all wrong! I just enjoy watching people fight, that's all. Fierce words, fists flying... what's not to like?
+::;(Return to previous option selection)
+::{{DIcon|Arrow}} Thank you, Sampo.
+:::{{A|VO chapter1 5 sampo 241.ogg}} '''Sampo:''' Easy there, don't get mushy on me now. We professional types don't have time for "thank yous." It's business! Feelings don't come into it.
+:::{{A|VO chapter1 5 sampo 242.ogg}} '''Sampo:''' Hahaha~ you see? Gotcha! Hah, seriously though &mdash; Sampo will always be happy to assist you.
+;(If {{cx}}<!--SubMission not Finish: 101090233-->)
+::{{DIcon|Talk}} When did you call in for reinforcements?
+:::{{A|VO chapter1 5 sampo 233.ogg}} '''Sampo:''' Ha, I knew that you'd get yourselves into trouble eventually, so I got Oleg to send relief in advance. Pretty sensible, right?
+:::{{DIcon|Arrow}} I'm asking why you went behind our backs.
+::::{{A|VO chapter1 5 sampo 234.ogg}} '''Sampo:''' My assignment was simply to take you to Svarog's lair. I got the payment and delivered the goods &mdash; I wasn't obligated to tell you about my dinner plans!
+::::{{A|VO chapter1 5 sampo 235.ogg}} '''Sampo:''' But I threw in something extra regardless. I only did that because we're friends, or I would've charged extra.
+::::{{A|VO chapter1 5 sampo 237.ogg}} '''Sampo:''' Here's a slice of life experience for you: Resourceful businessmen never get into risky trading without a plan b... and a plan b for their plan b. Plan c, we call that.
+:::;(Return to previous option selection)
+:::{{DIcon|Arrow}} Nice work, you saved us.
+::::{{A|VO chapter1 5 sampo 236.ogg}} '''Sampo:''' My pleasure! Friends should look out for each other. Good for business.
+::::{{A|VO chapter1 5 sampo 237.ogg}} '''Sampo:''' Here's a slice of life experience for you: Resourceful businessmen never get into risky trading without a plan b... and a plan b for their plan b. Plan c, we call that.
+:::;(Return to previous option selection)
+::{{DIcon|Talk}} You seem to enjoy muddying the waters.
+:::{{A|VO chapter1 5 sampo 240.ogg}} '''Sampo:''' Hey now, you've got me all wrong! I just enjoy watching people fight, that's all. Fierce words, fists flying... what's not to like?
+::;(Return to previous option selection)
+::{{DIcon|Arrow}} Thank you, Sampo.
+:::{{A|VO chapter1 5 sampo 241.ogg}} '''Sampo:''' Easy there, don't get mushy on me now. We professional types don't have time for "thank yous." It's business! Feelings don't come into it.
+:::{{A|VO chapter1 5 sampo 242.ogg}} '''Sampo:''' Hahaha~ you see? Gotcha! Hah, seriously though &mdash; Sampo will always be happy to assist you.
+
+:{{DIcon|Talk}} Listen
+:{{A|VO chapter1 5 bronya 237.ogg}} '''Bronya:''' At daybreak, the guardian shall be a glittering star, illuminating the people's path.
+:{{A|VO chapter1 5 bronya 238.ogg}} '''Bronya:''' At nightfall, the guardian shall be a flickering flame, comforting the people's soul.
+:{{A|VO chapter1 5 bronya 239.ogg}} '''Bronya:''' So many years... Have I been following lies this whole time?
+:{{A|VO chapter1 5 seele 266.ogg}} '''Seele:''' Hey... maybe you should find someone to talk to...
+:{{A|VO chapter1 5 bronya 240.ogg}} '''Bronya:''' ...
+:{{A|VO chapter1 5 seele 267.ogg}} '''Seele:''' Don't let it get you down &mdash; you can share your feelings with others y'know? Do you think keeping it all to yourself is doing you any good?
+:{{A|VO chapter1 5 seele 268.ogg}} '''Seele:''' You let that status of yours go to your head, huh? Afraid to show weakness? That's why you're keeping so much bottled up inside, right?
+:{{A|VO chapter1 5 seele 269.ogg}} '''Seele:''' This isn't the Overworld. We don't do envy and etiquette down here. Whatever's on your mind, you can say it.
+:{{A|VO chapter1 5 bronya 241.ogg}} '''Bronya:''' ...I just want to be clear in myself, first. These fragments of history, the teachings I studied... It's all muddled together in my mind... I just... I don't know what I should believe.
+:{{A|VO chapter1 5 seele 270.ogg}} '''Seele:''' ...No, you just have to be clear on what you should do.
+:{{A|VO chapter1 5 seele 271.ogg}} '''Seele:''' You've spent long enough living in lies, Bronya. This is your chance to break out of the cage.
+:{{A|VO chapter1 5 bronya 242.ogg}} '''Bronya:''' ...
+
+:{{DIcon|Talk}} Listen
+:{{A|VO chapter1 5 clara 257.ogg}} '''Clara:''' Mr. Svarog, are you okay? Let me repair your language module first...
+:'''Svarog:''' ...
+:{{A|VO chapter1 5 svarog 238.ogg}} '''Svarog:''' Assessing... Language module operating as normal. Thank you, Clara.
+:{{A|VO chapter1 5 clara 258.ogg}} '''Clara:''' Did your memory module get damaged? Maybe I can fix that too.
+:{{A|VO chapter1 5 svarog 239.ogg}} '''Svarog:''' Retrieving memory module...
+:{{A|VO chapter1 5 svarog 240.ogg}} '''Svarog:''' Architect machine era records: Intact. War of Defense combat data: Intact. Geomarrow Development Group era records: Intact...
+:{{A|VO chapter1 5 svarog 241.ogg}} '''Svarog:''' Record of Clara's crafting of miniature magnetic drill rigs: Intact. Record of Clara's explanation of human "sleeping in" behavior: Intact...
+:{{A|VO chapter1 5 clara 259.ogg}} '''Clara:''' S&mdash;So, your memory module is okay?
+:{{A|VO chapter1 5 svarog 242.ogg}} '''Svarog:''' I have made a backup of all records pertaining to you, Clara. Do not worry.
+:{{A|VO chapter1 5 clara 260.ogg}} '''Clara:''' ...Even the one about sleeping in?
+:{{A|VO chapter1 5 svarog 243.ogg}} '''Svarog:''' There are multiple backups. I can recover them at any time.
+:{{A|VO chapter1 5 clara 261.ogg}} '''Clara:''' Mr. Svarog, can I delete some of them...?
+:{{A|VO chapter1 5 svarog 244.ogg}} '''Svarog:''' I cannot grant this request. Records pertaining to you constitute important data, Clara. They must remain intact.
+:{{A|VO chapter1 5 svarog 245.ogg}} '''Svarog:''' They are memories of family.
+:{{A|VO chapter1 5 clara 262.ogg}} '''Clara:''' ...I understand.
+:{{A|VO chapter1 5 clara 263.ogg}} '''Clara:''' Mr. Svarog, I still want to help you check a few other modules... Turn around a little.
 {{Dialogue End}}
 
-===Talk to Natasha===
+===Learn about the truth{{subst:void|<!--101090221-->}}===
+{{Mission Description|type=trailblaze|location=Robot Settlement|update|Svarog recognizes your value as a variant. You've been incorporated into the ice-cold logic of the humanoid weapon, changing the outcome of his calculations entirely.<br />Now, it has decided to pass on the truth of the planet to you.<br />It is completely up to you to decide how this precious information is used.}}
+{{Dialogue Start}}
+
+{{Dialogue End}}
+
+===Talk to Natasha{{subst:void|<!--101090233-->}}===
 {{Mission Description|type=trailblaze|location=Robot Settlement|update|You learn the truths of the world from Svarog.<br />The Guardians tasked with Preservation chose to purposely hide information regarding the Stellaron from the people of Belobog. The brutal truth is a shock to all.<br />But whatever the case, the motives of the crew have been cleared &mdash; it's time to ask Natasha about Wildfire's next moves...}}
 {{Dialogue Start}}
-:{{tx}}
+<pre>{
+	"$type": "RPG.GameCore.CreateProp",
+	"GroupID": {
+		"fixedValue": {
+			"Value": 50
+		}
+	},
+	"GroupPropID": {
+		"fixedValue": {
+			"Value": 300001
+		}
+	}
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.CreateProp",
+	"GroupID": {
+		"fixedValue": {
+			"Value": 50
+		}
+	},
+	"GroupPropID": {
+		"fixedValue": {
+			"Value": 300002
+		}
+	}
+}</pre>
+:<!--0.3-second delay-->
+----
+
+;(Talk to Natasha)
+:{{A|VO chapter1 5 natasha 217.ogg}} '''Natasha:''' The Furnace Core... The path to the surface is close at hand now.
+:{{A|VO chapter1 5 natasha 218 m.ogg}} {{A|VO chapter1 5 natasha 218 f.ogg}} '''Natasha:''' Thank you, (Trailblazer). What you've done has brought new hope to the Underworld. Now we have to wait and see... But maybe this will lead to a new lease on life.
+:{{DIcon|Arrow}} Your support came at the right moment. Thank you.
+::{{A|VO chapter1 5 natasha 219.ogg}} '''Natasha:''' Well, you should really be thanking Sampo. If it weren't for his intel, we wouldn't have made it in time.
+:{{DIcon|Arrow}} When did doctors start carrying weapons around?
+::{{A|VO chapter1 5 natasha 220.ogg}} '''Natasha:''' ...I, um... I haven't been truthful with you...
+:{{A|VO chapter1 5 natasha 221.ogg}} '''Natasha:''' As Wildfire's leader, I couldn't simply look on while you fought on our behalf. We had to come help.
+:{{A|VO chapter1 5 mar7th 290.ogg}} '''March 7th:''' Huh...? Huh!? So, you're the real chief? Wh&mdash;What about Oleg?
+:{{A|VO chapter1 5 natasha 222.ogg}} '''Natasha:''' Oleg has always acted on my behalf &mdash; he helps me deal with all manner of problems in the Underworld.
+:{{A|VO chapter1 5 natasha 223.ogg}} '''Natasha:''' Thanks to him, I'm able to make time for the people. I do my best to make sure that they have everything they need... At the same time, I was formulating a plan to deal with Svarog.
+:{{A|VO chapter1 5 natasha 224.ogg}} '''Natasha:''' Your arrival unraveled that carefully crafted yet rudimentary plan, hehe... and for that, you have my utmost thanks.
+:{{DIcon|Arrow}} You're welcome, all in a day's work for a hero.
+::{{A|VO chapter1 5 natasha 225.ogg}} '''Natasha:''' When the Underworld recovers its freedom, the people will indeed extol you as heroes.
+:{{DIcon|Arrow}} We did it for us, it wasn't as selfless as you made out.
+::{{A|VO chapter1 5 natasha 226.ogg}} '''Natasha:''' A person is defined by their actions alone... I think that's how the saying goes? If the Underworld recovers its freedom, the people will see you as heroes.
+:{{DIcon|Arrow}} Any chance of a more... tangible show of thanks?
+::{{A|VO chapter1 5 natasha 227.ogg}} '''Natasha:''' You have Wildfire's full support.
+:{{A|VO chapter1 5 natasha 228.ogg}} '''Natasha:''' However, even though Svarog is no longer sealing off the Furnace Core, there's no way that we undergrounders could go pouring onto the surface.
+:{{A|VO chapter1 5 natasha 229.ogg}} '''Natasha:''' That cold-blooded supreme guardian has used lies and tricks to keep the surface separated from the underground. If she detects any change in the Underworld, I don't know what she might resort to...
+:{{A|VO chapter1 5 natasha 230.ogg}} '''Natasha:''' As for Wildfire, we need more time to build up our strength.
+:{{DIcon|Arrow}} With things as they are, you want to take a back seat?
+::{{A|VO chapter1 5 natasha 231.ogg}} '''Natasha:''' No, but we need to wait for the opportune moment. In the meantime, I'm sending someone I trust to go with you.
+:{{DIcon|Arrow}} It will be difficult for us to defeat the guardian alone.
+::{{A|VO chapter1 5 natasha 232.ogg}} '''Natasha:''' Of course, there's no doubt about that. So, I'll be sending someone I trust to go with you.
+:{{A|VO chapter1 5 mar7th 291.ogg}} '''March 7th:''' Seele...
+:{{A|VO chapter1 5 natasha 233.ogg}} '''Natasha:''' Didn't she tell you? In private, she insisted on accompanying you.
+:{{A|VO chapter1 5 natasha 234.ogg}} '''Natasha:''' Don't let her carefree nature fool you &mdash; she's actually very discerning, and can read a situation like no one else.
+:{{A|VO chapter1 5 natasha 235.ogg}} '''Natasha:''' Seele is a talented scout and a quick thinker &mdash; she takes decisive action. She'll definitely be able to help you. Not to mention... you also have Bronya now.
+:{{DIcon|Arrow}} Will she stand with us...?
+::{{A|VO chapter1 5 natasha 236.ogg}} '''Natasha:''' It seems like the intel we got from Svarog caused her a significant shock... but with Seele by her side, I know she'll recover.
+:{{DIcon|Arrow}} She got a big shock.
+::{{A|VO chapter1 5 natasha 237.ogg}} '''Natasha:''' You're right, but with Seele by her side, I know she'll recover.
+:{{A|VO chapter1 5 natasha 238 m.ogg}} {{A|VO chapter1 5 natasha 238 f.ogg}} '''Natasha:''' (Trailblazer), when's the last time you got some rest? I heard that you've been on your feet looking for Svarog since Rivet Town.
+:{{A|VO chapter1 5 natasha 239.ogg}} '''Natasha:''' Health is everything &mdash; you won't be much use if you neglect yours. Let Wildfire take care of the Furnace Core for now. You head back and recuperate.
+:{{A|VO chapter1 5 natasha 240.ogg}} '''Natasha:''' If you're lucky... perhaps tomorrow you can return to the Overworld.
 {{Dialogue End}}
 
 ==Other Languages==

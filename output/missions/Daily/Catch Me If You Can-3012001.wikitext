@@ -11,7 +11,7 @@ PageTitle=#Catch Me If You Can#
 |chapter       = 
 |requirements  = {{subst:void|<!--Unknown: {"Type":"Manual"}-->}}
 |summary       = <!--official mission summary from Fate's Atlas-->
-|characters    = Trailblazer
+|characters    = A More Cunning Child; Children; Cunning Child; Hook; Natasha; Not-Very-Cunning Child; Trailblazer
 |startLocation = [[Jarilo-VI]] - [[Boulder Town]]
 |world         = Jarilo-VI
 |area          = Boulder Town
@@ -35,16 +35,281 @@ PageTitle=#Catch Me If You Can#
 ==Dialogue==
 {{Stub Dialogue}}
 
-===Talk with the girl waiting for her friends===
+===Talk with the girl waiting for her friends{{subst:void|<!--301200101-->}}===
 {{Mission Description|type=daily|location=Boulder Town|The Moles' game of hide-and-seek is about to start. Talk with the girl waiting for her friends and join this exciting and exhilarating game!}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Moles Sidekick)
+:'''Cunning Child:''' It's almost time for everyone to meet up...
+:'''Cunning Child:''' Why aren't they here yet?
+:A kid is mumbling something. She looks like she's waiting for someone.
+:You aren't quite sure if you have seen this kid before, but she does seem very familiar. You are certain that, at some point in your life, you've also met a kid with a similarly sly expression written all over her face.
+:{{DIcon|Arrow}} Are you waiting for someone?
+::'''Cunning Child:''' Huh? You're the honorary member, aren't you, {{MC|m=Mister|f=Miss}} (Trailblazer)? What are you doing here?
+::'''Cunning Child:''' Oh... I know! You are the person Boss Hook called to play hide-and-seek with us! Am I right?
+::'''Cunning Child:''' Let's wait together here for the others to arrive!
+::----
+::'''Hook:''' Oh, it looks like everyone's here!
+::'''Hook:''' We'll decide who's it by rock-paper-scissors.
+::'''Children:''' {{Size|36|Rock! Paper! Scissors!}}
+::'''Hook:''' Hehe... I didn't expect that I would be it!
+::'''Cunning Child:''' Boss Hook is so scary...
+::'''A More Cunning Child:''' Looks like it's time to go into serious mode...
+::'''Not-Very-Cunning Child:''' Boohoo... The game's basically over already...
+::'''Hook:''' Run as fast you can! Find somewhere to hide!
+::'''Hook:''' ...But that's all pointless! For I, Pitch-Dark Hook the Great, will find every last one of you! Hahaha!
+::'''Hook:''' I'll say it again. The play area starts from this intersection all the way to the plaza! Hiding anywhere else is against the rules!
+::'''(Trailblazer):''' (Find a good spot to hide in this area.)
+::----
+:{{DIcon|Exit}} Don't bother her.
+::'''(Trailblazer):''' (Don't bother her...)
 {{Dialogue End}}
 
-===Find a place to hide===
+===Find a place to hide{{subst:void|<!--301200102-->}}===
 {{Mission Description|type=daily|location=Boulder Town|update|The hide-and-seek competition is on. Find a suitable place to hide!}}
 {{Dialogue Start}}
-:{{tx}}
+:'''Hook:''' One hundred and eighty, one hundred and seventy-nine, one hundred and seventy-eight...
+
+:{{DIcon|undefined}} Investigate
+<pre>{
+	"$type": "RPG.GameCore.PropSetVisibility",
+	"SpecifiedRelativePaths": [],
+	"TargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvPropEx",
+		"FetchType": "SinglePropByPropID",
+		"SinglePropID": {
+			"GroupID": {
+				"IsDynamic": false,
+				"FixedValue": {
+					"Value": 160
+				}
+			},
+			"ID": {
+				"IsDynamic": false,
+				"FixedValue": {
+					"Value": 300001
+				}
+			}
+		},
+		"PropGroup": {
+			"IsDynamic": false,
+			"FixedValue": {
+				"Value": 140
+			}
+		}
+	}
+}</pre>
+:You fix your eyes on this narrow alley. To be honest, you've been wanting to explore it for a while now, but the sense of justice in your heart forbids you from stepping into this place.
+:Perhaps now would be an opportunity to check it out for the purpose of hide-and-seek. You aren't sure if this is against the rules or not...
+:...But it really is quite a hidden location. It's a small alley, the kind that has been blocked off. Naturally, anyone would want to go explore what's in there.
+:{{DIcon|Arrow}} I'll hide here!
+::You make the decision quickly. The way you see it, there's absolutely no way you would find a more secluded hiding spot in all of Boulder Town.
+::{{Black Screen|With this thought in mind, you hop over the rusted fence, and make your way into the pitch-black alley.}}
+::You had assumed that something incredible was going on here. Maybe there would be a tall, thin bandit with wiry limbs and wearing a white, skin-tight suit, wandering around on stilts while committing crimes...
+::Or perhaps the alley would contain a burly figure wearing black from head to toe, with a mask and a solid black cape. Their voice would be deep, as if it was smoked by hot Geomarrow mines, and they would dispense justice in the dark streets of Boulder Town as a vigilante...
+::...Unfortunately, you find none of that. You feel disappointed and instead squat on a pile of crates in a corner, waiting for Boss Hook to catch you.
+::'''Hook:''' Three... two... one...
+::'''Hook:''' Ready or not, here I come!
+::{{Black Screen|With this thought in mind, you hop over the rusted fence, and make your way into the pitch-black alley.}}
+:<pre>{
+	"$type": "RPG.GameCore.CharacterNavigateTo",
+	"CharacterUniqueName": "Hook_Run_4040122",
+	"AreaName": "LevelArea_P10102_F10102001_G159",
+	"AnchorName": "Anchor3",
+	"MotionFlag": "Run",
+	"WaitUntilFinish": true,
+	"Duration": -1,
+	"AvoidOthers": true,
+	"TurnInPlace": true
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.CharacterNavigateTo",
+	"CharacterUniqueName": "Hook_Run_4040122",
+	"AreaName": "LevelArea_P10102_F10102001_G159",
+	"AnchorName": "Anchor4",
+	"MotionFlag": "Run",
+	"WaitUntilFinish": true,
+	"Duration": -1,
+	"AvoidOthers": true,
+	"TurnInPlace": true
+}</pre>
+::'''Hook:''' Hehe... The only one left is (Trailblazer). Where are you hiding? I'm going to find you!
+::{{Black Screen|One hour later.}}
+:<pre>{
+	"$type": "RPG.GameCore.CharacterNavigateTo",
+	"CharacterUniqueName": "Hook_Run_4040122",
+	"AreaName": "LevelArea_P10102_F10102001_G159",
+	"AnchorName": "Anchor3",
+	"MotionFlag": "Run",
+	"WaitUntilFinish": true,
+	"Duration": -1,
+	"AvoidOthers": true,
+	"TurnInPlace": true
+}</pre>
+::'''Hook:''' Honorary member... You've hidden yourself too well, but I'm not going to give up so easily!
+::{{Black Screen|Two hours later.}}
+:<pre>{
+	"$type": "RPG.GameCore.CharacterNavigateTo",
+	"CharacterUniqueName": "Hook_Run_4040122",
+	"AreaName": "LevelArea_P10102_F10102001_G159",
+	"AnchorName": "Anchor2",
+	"MotionFlag": "Run",
+	"WaitUntilFinish": true,
+	"Duration": -1,
+	"AvoidOthers": true,
+	"TurnInPlace": true
+}</pre>
+::'''Hook:''' ...Did {{MC|m=he|f=she}} go home already?
+::{{Black Screen|Three hours later.}}
+::'''Hook:''' ...Whatever! We're stopping the game here...
+::'''Hook:''' Moles dismissed! Sleep well and see you tomorrow!
+::'''Children:''' Hey, time to go home!
+::Looks like the children are already set to go home, even though they haven't found you yet.
+::Of course, this could just be a ploy to lure you out... kids who manage to get recognition from Boss Hook and join The Moles are definitely anything but ordinary.
+::So, what are you going to do? Will you go home with the children and go to bed, or will you prove to them that you won't take the bait?
+::{{DIcon|Arrow}} I give up, Boss Hook!
+:::Just amuse the kids. You tell yourself there's no need to turn a game into a battle of wills.
+:::With that, you raise your hands and walk out of the shadowy alley and into the lit street...
+:::{{Black Screen|Three hours later.}}
+::<pre>{
+	"$type": "RPG.GameCore.PropSetVisibility",
+	"SpecifiedRelativePaths": [],
+	"TargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvPropEx",
+		"FetchType": "SinglePropByPropID",
+		"SinglePropID": {
+			"GroupID": {
+				"fixedValue": {
+					"Value": 160
+				}
+			},
+			"ID": {
+				"fixedValue": {
+					"Value": 300002
+				}
+			}
+		},
+		"MultiPropID": []
+	}
+}</pre>
+:::'''Hook:''' Hey, (Trailblazer)! We can't find you. We're getting ready to leave! You've hidden yourself too well!
+:::'''Children:''' {{Size|36|You've hidden yourself too well!}}
+:::'''Hook:''' I can't find you! Where in the world were you hiding?
+:::'''Children:''' {{Size|36|Where in the world were you hiding?}}
+:::{{DIcon|Arrow}} I was hiding in the alley.
+::::'''Hook:''' The alley?
+::::'''Children:''' ...
+::::'''Children:''' {{Size|36|You cheated!!!}}
+::::'''Hook:''' Geez... Whatever! I, Pitch-Dark Hook the Great, did not explain the rules clearly... Anyway, honorary member...
+::::'''Hook:''' I, Hook, have decided that you win! Here is your prize. Take it!
+:::{{DIcon|Arrow}} That's a secret...
+::::'''Hook:''' A secret? OK...
+::::'''Hook:''' ...
+::::'''Hook:''' I'm really curious though...
+::::'''Hook:''' Geez... Whatever! I won't force you to tell! Anyway, you win! Here's your prize. Take it!
+:::'''Hook:''' Alright. Today's game of hide-and-seek is officially over! Everyone, go home and get some sleep!
+:::'''Children:''' {{Size|36|Go home and get some sleep!}}
+:::{{Black Screen|Three hours later.}}
+::{{DIcon|Arrow}} Why play if you don't intend to win? Stay hidden!
+:::You play to win. That's the basic code of conduct for any professional player. Hide-and-seek is no exception!
+:::And so, you remain silent, having decided to remain hidden in the darkness of the alley.
+:::----
+:{{DIcon|Exit}} Find another spot.
+::'''(Trailblazer):''' (Maybe I should look for a better hiding spot...)
+:{{Black Screen|Three hours later.}}
+:'''Natasha:''' Oh? You're finally awake, sleepyhead.
+:{{DIcon|Arrow}} Have you said something like that before...
+::'''Natasha:''' ...Have I? Maybe. Anyway, we need to talk about why you are here...
+:{{DIcon|Arrow}} How did I get here...?
+::'''Natasha:''' Umm... It's a long story.
+:{{Black Screen|Natasha brings you up to speed.}}
+:'''Natasha:''' ...The point is, when Sampo brought you to the clinic, you were already on death's door. I thought he was up to no good again...
+:'''Natasha:''' Luckily, it was just because you hadn't eaten for three days. It looks like you've pretty much bounced back. Congratulations.
+:{{DIcon|Arrow}} JUST because I haven't eaten for three days?
+::'''Natasha:''' If someone passes out in a dark alley... that's about the least concerning thing that could happen.
+:{{DIcon|Arrow}} Thanks for saving me, doctor.
+::'''Natasha:''' That's my job. If you want to thank someone, you should thank Sampo.
+:'''Natasha:''' Just remember, when you play with Hook and the others next time, you don't need to play like it's a battle of wills...
+:'''Natasha:''' You need to take care of yourself. Don't forget.
+----
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+<pre>{
+	"$type": "RPG.GameCore.PropSetVisibility",
+	"SpecifiedRelativePaths": [],
+	"TargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvPropEx",
+		"FetchType": "SinglePropByPropID",
+		"SinglePropID": {
+			"GroupID": {
+				"fixedValue": {
+					"Value": 161
+				}
+			},
+			"ID": {
+				"fixedValue": {
+					"Value": 300001
+				}
+			}
+		},
+		"MultiPropID": []
+	}
+}</pre>
+:'''Hook:''' Three... two... one...
+:You can hear Hook's excited voice from afar off, but you haven't chosen a suitable place to hide yet!
+:You feel afraid. You are frozen in place. What's going to happen now? You can't help but think about it. Sweat runs down your back as you get excited... This exhilaration must be the joy of hide-and-seek.
+:'''Hook:''' Ready or not, here I come!
+:{{Black Screen|With this thought in mind, you hop over the rusted fence, and make your way into the pitch-black alley.}}
+<pre>{
+	"$type": "RPG.GameCore.CharacterNavigateTo",
+	"CharacterUniqueName": "Hook_Run_4040122",
+	"AreaName": "LevelArea_P10102_F10102001_G159",
+	"AnchorName": "Anchor3",
+	"MotionFlag": "Run",
+	"WaitUntilFinish": true,
+	"Duration": -1,
+	"AvoidOthers": true,
+	"TurnInPlace": true
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.CharacterNavigateTo",
+	"CharacterUniqueName": "Hook_Run_4040122",
+	"AreaName": "LevelArea_P10102_F10102001_G159",
+	"AnchorName": "Anchor4",
+	"MotionFlag": "Run",
+	"WaitUntilFinish": true,
+	"Duration": -1,
+	"AvoidOthers": true,
+	"TurnInPlace": true
+}</pre>
+:{{Black Screen|Three hours later.}}
+:'''Hook:''' ...
+:'''Children:''' {{Size|36|...}}
+:{{DIcon|Arrow}} (Remain silent)
+::'''Hook:''' ...Honorary member.
+::'''Hook:''' Umm... Are you pretending to be a Rock Crab?
+::{{DIcon|Arrow}} I am a Rock Crab...
+::{{DIcon|Arrow}} So you can see me?
+::'''Hook:''' ...I'm too shocked to talk!
+::'''Children:''' {{Size|36|Too shocked to talk!}}
+:{{DIcon|Arrow}} Why aren't any of you saying anything?
+::'''Hook:''' ...I'm too shocked to talk!
+::'''Children:''' {{Size|36|Too shocked to talk!}}
+:{{DIcon|Arrow}} (Scare Hook)
+::'''Hook:''' {{Size|36|Ah!}}
+::'''Hook:''' What are you doing, honorary member? You've scared me to death!
+::'''Children:''' {{Size|36|You've scared us to death!}}
+::{{DIcon|Arrow}} Sorry, Pitch-Dark Hook the Great...
+:::'''Hook:''' If sorry does anything, why would I need Diggertron?
+::{{DIcon|Arrow}} I won!
+:::'''Hook:''' What are you even talking about? You lost!
+:'''Hook:''' Honorary member, if you don't know how to play hide-and-seek, just ask me! I won't laugh at you for it.
+:'''Hook:''' But how you're acting now has me worried about your gameplay experience!
+:'''Hook:''' Remember, the next time we play, ask me about the rules! I'll let you slide this time!
+:'''Hook:''' Time to call it a day. Let's play again next time! The Moles, dismissed! Go home and get some sleep!
+:'''Children:''' {{Size|36|Go home and get some sleep!}}
+:{{Black Screen|Three hours later.}}
 {{Dialogue End}}
 
 ==Other Languages==

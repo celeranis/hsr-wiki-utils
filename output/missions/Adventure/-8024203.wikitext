@@ -7,11 +7,11 @@ PageTitle=##
 |title         = 
 |image         = <!--Mission .png-->
 |type          = Adventure
-|event_name    = 
+|event_name    = Trailblaze: Friendship Is Magic!
 |chapter       = 
 |requirements  = [[Adventure Mission]] ''[[Old Friends, New Friends?]]'' completed
 |summary       = <!--official mission summary from Fate's Atlas-->
-|characters    = Trailblazer
+|characters    = Litter Pony; March 7th; Trailblazer
 |startLocation = [[Jarilo-VI]] - [[Outlying Snow Plains]]
 |world         = Jarilo-VI
 |area          = Outlying Snow Plains
@@ -19,7 +19,7 @@ PageTitle=##
 |next          = 
 |rewards       = 
 }}
-'''''''''' is an [[Adventure Mission]] on [[Jarilo-VI]].
+'''''''''' is an Event [[Adventure Mission]] from the [[Trailblaze: Friendship Is Magic!]] event.
 
 ==Steps==
 
@@ -34,6 +34,93 @@ PageTitle=##
 ==Dialogue==
 {{Stub Dialogue}}
 
+;(Unused &mdash; EnterDistrict_G88)
+:You catch sight of that familiar pink silhouette...
+::'''March 7th:''' (Trailblazer), quick quick, come and help me check something out!
+::'''March 7th:''' Can you see this... talking trashcan next to me? They call themselves Pody or something and they keep talking about looking for some Magic of Friendship from me. You don't think my childlike heart is making me imagine some cartoon character, do you?
+::'''Litter Pony:''' My name is Litter Pony, not Pody! You missed out half of my name, Miss April 8th!
+::'''March 7th:''' Argh, this one... I'll tell you one more time, my name is March 7th!
+::{{DIcon|Arrow}} I'm sorry about her, Mr. Pony.
+:::'''March 7th:''' Oh, so you two actually know each other?
+::{{DIcon|Arrow}} Alright, May 9th.
+:::'''March 7th:''' So you can hear him talking, too? Wait. Hey! What do you mean "May 9th"?
+::'''Litter Pony:''' (Trailblazer), you two seem to get along really well?
+::'''March 7th:''' Of course! We've been through everything together. This Proof of Friendship or whatever is no issue for us! Well, what is it that you want me to do?
+::'''Litter Pony:''' Phew... Just a moment... I can sense... It began with a great journey. That was the key to your Proof of Friendship.
+::'''March 7th:''' Oh, that! (Trailblazer), tell him about&mdash;
+::{{DIcon|Arrow}} This was how our adventures began.
+::{{DIcon|Arrow}} This is the story of how I was reborn as The Echoer.
+::'''March 7th:''' Wh&mdash;Why do I look so aggressive and angry?
+::'''Litter Pony:''' Your Magic of Friendship has been activated. My can will show the true image that your friend holds of you in their heart.
+::'''Litter Pony:''' ...Kidding! Let's see what your true power is like, Miss June 10th.
+::'''March 7th:''' Eurgh... You're still running with that joke, huh?
+::{{DIcon|Arrow}} (Enter Battle)
+:<pre>{
+	"$type": "RPG.GameCore.PerformanceExtendEndBlack",
+	"ExtendTime": 1
+}</pre>
+
+
+;(Unused &mdash; EnterDistrict_G88)
+:You catch sight of that familiar pink silhouette...
+::'''March 7th:''' (Trailblazer), quick quick, come and help me check something out!
+::'''March 7th:''' Can you see this... talking trashcan next to me? They call themselves Pody or something and they keep talking about looking for some Magic of Friendship from me. You don't think my childlike heart is making me imagine some cartoon character, do you?
+::'''Litter Pony:''' My name is Litter Pony, not Pody! You missed out half of my name, Miss April 8th!
+::'''March 7th:''' Argh, this one... I'll tell you one more time, my name is March 7th!
+::{{DIcon|Arrow}} I'm sorry about her, Mr. Pony.
+:::'''March 7th:''' Oh, so you two actually know each other?
+::{{DIcon|Arrow}} Alright, May 9th.
+:::'''March 7th:''' So you can hear him talking, too? Wait. Hey! What do you mean "May 9th"?
+::'''Litter Pony:''' (Trailblazer), you two seem to get along really well?
+::'''March 7th:''' Of course! We've been through everything together. This Proof of Friendship or whatever is no issue for us! Well, what is it that you want me to do?
+::'''Litter Pony:''' Phew... Just a moment... I can sense... It began with a great journey. That was the key to your Proof of Friendship.
+::'''March 7th:''' Oh, that! (Trailblazer), tell him about&mdash;
+::{{DIcon|Arrow}} This was how our adventures began.
+::{{DIcon|Arrow}} This is the story of how I was reborn as The Echoer.
+::'''March 7th:''' Wh&mdash;Why do I look so aggressive and angry?
+::'''Litter Pony:''' Your Magic of Friendship has been activated. My can will show the true image that your friend holds of you in their heart.
+::'''Litter Pony:''' ...Kidding! Let's see what your true power is like, Miss June 10th.
+::'''March 7th:''' Eurgh... You're still running with that joke, huh?
+::{{DIcon|Arrow}} (Enter Battle)
+:<pre>{
+	"$type": "RPG.GameCore.PerformanceExtendEndBlack",
+	"ExtendTime": 1
+}</pre>
+
+:{{DIcon|Travel Log}} Manifest "Magic of Friendship"
+<pre>{
+	"$type": "RPG.GameCore.ShowUI",
+	"Name": "Ui.ActivitySummon.Entrance.ActivitySummonEntrancePage",
+	"WaitForExit": true,
+	"Param": {
+		"Value": "2"
+	},
+	"OnUIEnter": [],
+	"OnUIExitImmediately": [
+		{
+			"$type": "RPG.GameCore.EndDialogueEntityInteract"
+		}
+	]
+}</pre>
+
+;(Talk to March 7th)
+:'''March 7th:''' Hurry up, I can't wait anymore! You're not... scared, are you?
+
+;(Talk to Litter Pony)
+<pre>{
+	"$type": "RPG.GameCore.ShowUI",
+	"Name": "Ui.ActivitySummon.Main.ActivitySummonMainPage",
+	"OnUIEnter": [
+		{
+			"$type": "RPG.GameCore.FinishLevelGraph"
+		}
+	]
+}</pre>
+
+;(Talk to March 7th)
+:'''March 7th:''' Did you see that? Our Magic of Friendship wiped out those monsters in seconds!
+:'''March 7th:''' Next time there's something fun like this going on, you have to let me know!
+:March 7th seems very satisfied with how the battle went.
 {{Dialogue End}}
 
 ==Other Languages==

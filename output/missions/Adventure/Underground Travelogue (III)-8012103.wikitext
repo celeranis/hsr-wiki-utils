@@ -7,11 +7,11 @@ PageTitle=#Underground Travelogue (Part 3)#
 |title         = Underground Travelogue (III)
 |image         = <!--Mission Underground Travelogue (Part 3).png-->
 |type          = Adventure
-|event_name    = 
+|event_name    = Underground Treasure Hunt
 |chapter       = 
 |requirements  = [[Adventure Mission]] ''[[Underground Travelogue (II)]]'' completed
 |summary       = <!--official mission summary from Fate's Atlas-->
-|characters    = Trailblazer
+|characters    = Aksay; Trailblazer
 |startLocation = [[Jarilo-VI]] - [[Great Mine]]
 |world         = Jarilo-VI
 |area          = Great Mine
@@ -19,7 +19,7 @@ PageTitle=#Underground Travelogue (Part 3)#
 |next          = Underground Travelogue (IV)
 |rewards       = Credit*10,000
 }}
-'''''Underground Travelogue (III)''''' is an [[Adventure Mission]] on [[Jarilo-VI]].
+'''''Underground Travelogue (III)''''' is an Event [[Adventure Mission]] from the [[Underground Treasure Hunt]] event.
 
 ==Steps==
 # Clear ruin 3 in Underground Treasure Hunt
@@ -33,11 +33,38 @@ PageTitle=#Underground Travelogue (Part 3)#
 -->
 ==Dialogue==
 {{Stub Dialogue}}
-
-===Clear ruin 3 in Underground Treasure Hunt===
+===Clear ruin 3 in Underground Treasure Hunt{{subst:void|<!--801210301-->}}===
 {{Mission Description|type=adventure|location=Great Mine|Aksay has excavated a new ancient ruin. Continue your treasure hunting journey!}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Aksay)
+:'''Aksay:''' Ah, it's you again. Ready to go treasure hunting down in the ancient ruins?
+<pre>{
+	"$type": "RPG.GameCore.ShowMenu"
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.WaitUIControllerClose",
+	"UIControllerName": "TreasureDungeonResultDialog"
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.ClosePage",
+	"PageNames": [
+		"TreasureDungeonEntrancePage"
+	],
+	"PageRootNames": [],
+	"IsSilentExit": true
+}</pre>
+:<!--0.5-second delay-->
+----
+:'''Aksay:''' It's getting more and more dangerous the deeper we go... Lucky you're here, otherwise these relics would end up being our graves...
+:'''Aksay:''' As predicted, we're seeing more valuable relics the deeper we go. Now's no time to give up. Let's drill on down to the depths!
+----
+
+;(Talk to Aksay)
+:'''Aksay:''' Ah, it's you again. Ready to go treasure hunting down in the ancient ruins?
+<pre>{
+	"$type": "RPG.GameCore.ShowMenu"
+}</pre>
 {{Dialogue End}}
 
 ==Other Languages==

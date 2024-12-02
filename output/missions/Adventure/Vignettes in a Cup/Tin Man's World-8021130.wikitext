@@ -11,7 +11,7 @@ PageTitle=#Tin Man's World#
 |chapter       = Vignettes in a Cup
 |requirements  = {{subst:void|<!--Unknown: {"Type":"Manual"}-->}}
 |summary       = <!--official mission summary from Fate's Atlas-->
-|characters    = Trailblazer
+|characters    = Lady; Melancholy; Siobhan; Spade; Tin Man; Trailblazer
 |startLocation = [[Penacony]] - [[Tin Man's Emoscape]]
 |world         = Penacony
 |area          = Tin Man's Emoscape
@@ -37,28 +37,124 @@ PageTitle=#Tin Man's World#
 ==Dialogue==
 {{Stub Dialogue}}
 
-===Come to the Dreamjolt Hostelry===
+===Come to the Dreamjolt Hostelry{{subst:void|<!--802113001-->}}===
 {{Mission Description|type=adventure|location=Tin Man's Emoscape|Tin Man wants to show you its dream lounge. Go and take a look at the lounge.<br />You meet up with Spade and Mr. Bigwig. However, they seem a little different from usual...}}
 {{Dialogue Start}}
+:'''Tin Man:''' Watch and learn, new blood. This is what a good lounge should be like.
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+<pre>{
+	"$type": "RPG.GameCore.AdvDestroyGroupEntity",
+	"InstanceIDList": [
+		300002
+	]
+}</pre>
+:'''Spade:''' Welcome back, Your Excellency, the esteemed and illustrious Lord Tick-Tock.
+:'''Spade:''' It is my utmost fortune to have encountered your presence. How shall I extol the sun? Your radiance surpasses the splendor of syrup, and the humble lounge gleams with your arrival. In my heart, you are akin to the...
+:'''Spade:''' SoulGlad's bottle cap! Without you, the entire bottle of SoulGlad... No, all joy would lose its meaning.
+:{{DIcon|Arrow}} ...What's up with this guy?
+:{{DIcon|Arrow}} Wait, that's not how he usually talks, right?
+:'''Tin Man:''' Well said, my loyal servant! Now, I find myself at a crossroads. Show me the answer through your dance steps that portend the future: Which beverage befits this extraordinary journey?
 :{{tx}}
+:{{Black Screen|Before the sentence was finished, Mr. Bigwig suddenly ran over from a distance, shouting in alarm.}}
+:{{tx}}
+;(Unused &mdash; G13_DogRun)
+<pre>{
+	"$type": "RPG.GameCore.AdvSetAIMoveTo",
+	"EntityInstanceID": {
+		"IsDynamic": false,
+		"FixedValue": {
+			"Value": 400002
+		}
+	},
+	"GroupId": 13,
+	"PointID": 1,
+	"MotionFlag": "Run",
+	"SkipStartTurn": true
+}</pre>
+
+;(Unused &mdash; G13_DestroyDog)
+:<!--0.2-second delay-->
+:<pre>{
+	"$type": "RPG.GameCore.AdvDestroyGroupEntity",
+	"InstanceIDList": [
+		400002
+	]
+}</pre>
 {{Dialogue End}}
 
-===Talk to Lady===
+===Talk to Lady{{subst:void|<!--802113002-->}}===
 {{Mission Description|type=adventure|location=Tin Man's Emoscape|update|Tin Man wants to show you its dream lounge. Go and take a look at the lounge.<br />How did Lady turn into a Tin Lady? You have no idea what happened. Go and ask about the situation.}}
 {{Dialogue Start}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
 :{{tx}}
+:{{tx}}
+----
+:'''Lady:''' I beg your pardon. I did not intend to keep it concealed from you, I merely wished to... bring you a surprise.
+:'''Lady:''' I have heard of a skilled drinksmith at the lounge, and I desired to pay homage to your greatness. Hence, I came here intending to learn how to craft delicious beverages. Please, I implore you, do not be angered with me.
+:'''Lady:''' During your expedition, I gathered numerous accounts detailing your magnificent achievements.
+:'''Lady:''' "...Behold! Which great hero led the Sweet Dreams Troupe to triumph against the Trashcan Kingdom?"
+:'''Lady:''' "...Which hero trampled the presumptuous Tatalov beneath their feet and raised the banner of freedom and equality?"
+:'''Lady:''' "We inquire, who is it? The soda bottles reply: It's His Excellency, Marshal Tick-Tock!"
+:'''Lady:''' "We inquire, who is it? The billboards reply: It's His Excellency, Marshal Tick-Tock!"
+:'''Lady:''' "We inquire, who is it? Replies the entire Dreamscape: It's His Excellency, Marshal Tick-Tock!"
+:'''Melancholy:''' Me, too! Me too! I just wrote a poem for you. Please enjoy it!
+:'''Melancholy:''' Behold, the renowned General Tick-Tock! In battle invincible, wisdom profound! Valiant and skilled, a warrior's might! Conquering his foe Tatalov, with his valorous light!...
+:'''Tin Man:''' Hahahahahahaha. Such adulation! I was unaware that my renown had spread so far and wide, yet it is only befitting!
+:'''Tin Man:''' However, let me enlighten you: That drinksmith is unsuitable. She is but an orphan I took in. She may tend to the tables, yet her ability to create anything of interest is doubtful.
+:'''Tin Man:''' If you doubt my words, you...
+:'''Siobhan:''' ...G&mdash;Good evening, Mr. Tick-Tock.
+:'''Tin Man:''' Looks like you've failed to take heed of the lessons I taught you. When you speak, bow your head, extend your hands, and look up to me!
+:'''Tin Man:''' How often have I instructed you to display courtesy to the guests!? But have you ever complied?
+:'''Siobhan:''' I... I beg your pardon for my transgression. I've newly arrived at the lounge, and I'm unfamiliar with the rules here. I implore your pardon.
+:{{DIcon|Arrow}} Hey! Something is definitely wrong with her!
+:{{DIcon|Arrow}} ...Just how much are you afraid of Siobhan?
+:'''Tin Man:''' Alas, debating with such an ill-bred servant is a waste of time. Well, bring me beverages and showcase the extraordinary talents of the personal drinksmith in the esteemed service of Sir Tick-Tock, the Illustrious One!
+:{{tx}}
+<pre>{
+	"$type": "RPG.GameCore.SwitchCharacterAnchorV2",
+	"SwitchCharacterAnchorConfig": {
+		"IsLocalPlayer": true,
+		"CharacterUniqueName": "LocalPlayer",
+		"AreaName": {
+			"Value": "LevelArea_P44303_F44303001_G14"
+		},
+		"AnchorName": {
+			"Value": "Anchor1"
+		}
+	}
+}</pre>
 {{Dialogue End}}
 
-===Go to the lounge counter and get Siobhan's special drink===
+===Go to the lounge counter and get Siobhan's special drink{{subst:void|<!--802113003-->}}===
 {{Mission Description|type=adventure|location=Tin Man's Emoscape|update|Tin Man wants to show you its dream lounge. Go and take a look at the lounge.<br />It turns out that Siobhan and the group of monsters were pretending to obey Tin Man. It seems like you'll need to put on a convincing performance to resolve this situation as well.}}
 {{Dialogue Start}}
-:{{tx}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+<pre>{
+	"$type": "RPG.GameCore.PlayMessage",
+	"MessageSectionID": 1305800,
+	"ShowNotice": true
+}</pre>
 {{Dialogue End}}
 
-===Serve the Tin Man its special drink===
+===Serve the Tin Man its special drink{{subst:void|<!--802113005-->}}===
 {{Mission Description|type=adventure|location=Tin Man's Emoscape|update|Tin Man wants to show you its dream lounge. Go and take a look at the lounge.<br />Siobhan had added special ingredients to that beverage. It will definitely teach Tin Man a good lesson this time!}}
 {{Dialogue Start}}
-:{{tx}}
+
+
+<pre>{
+	"$type": "RPG.GameCore.ShowUI",
+	"Name": "Ui.DrinkMaker.WorkBook.DrinkMakerWorkBookPage",
+	"WaitForExit": true,
+	"Param": {
+		"Value": "4"
+	}
+}</pre>
 {{Dialogue End}}
 
 ==Other Languages==

@@ -25,6 +25,7 @@ PageTitle=#Birth of the Dreamjolt Hostelry#
 # Watch Siobhan's memories
 # Search for the abandoned Sweet Dreams Troupe
 # Return to the lounge
+# Complete Dream Jigsaw
 # Search for the abandoned Sweet Dreams Troupe
 # Return to the lounge
 # Watch Siobhan's memories
@@ -43,73 +44,184 @@ PageTitle=#Birth of the Dreamjolt Hostelry#
 -->
 ==Dialogue==
 {{Stub Dialogue}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{tx}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{tx}}
 {{Dialogue End}}
 
-===Watch Siobhan's memories===
+===Watch Siobhan's memories{{subst:void|<!--802113201-->}}===
 {{Mission Description|type=adventure|location=Siobhan's Emoscape|update|To regain the monsters' trust, Siobhan invites you into her Emoscape.<br />The lounge in the past is indeed quite different from the present. It's best to follow Siobhan's memories for now.}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Obtain {{Item|Mr. Bigwig's Jigsaw Fragment|20|x=1}})
 {{Dialogue End}}
 
-===Search for the abandoned Sweet Dreams Troupe===
+===Search for the abandoned Sweet Dreams Troupe{{subst:void|<!--802113202-->}}===
 {{Mission Description|type=adventure|location=Siobhan's Emoscape|update|To regain the monsters' trust, Siobhan invites you into her Emoscape.<br />Siobhan decides to continue her search for the abandoned Sweet Dreams Troupe. Explore deeper into the hotel in the Dreamscape.}}
 {{Dialogue Start}}
+:'''(Trailblazer):''' (Did I just witness... a scene in Siobhan's memory? There was only Mr. Bigwig in the lounge at this time.)
+:'''(Trailblazer):''' (Got a jigsaw piece. It probably will come in handy later.)
+:'''(Trailblazer):''' (From what I've just heard, Siobhan is planning to explore deeper into the hotel in the Dreamscape to search for the rest of the Sweet Dreams Troupe. Let's follow her.)
+
+;(Talk to ???)
+:{{tx}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:'''(Trailblazer):''' (Think I hear Spade's voice...)
+
+;(Upon reaching the destination)
 :{{tx}}
 {{Dialogue End}}
 
-===Return to the lounge===
+===Return to the lounge{{subst:void|<!--802113203-->}}===
 {{Mission Description|type=adventure|location=Siobhan's Emoscape|update|To regain the monsters' trust, Siobhan invites you into her Emoscape.<br />You found Spade in the hotel in the Dreamscape. Take it back to the lounge.}}
 {{Dialogue Start}}
+:'''(Trailblazer):''' (Is Siobhan bringing Spade back to the lounge? Let's follow them and see.)
+;(Obtain {{Item|Spade's Jigsaw Fragment|20|x=1}})
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
 :{{tx}}
 {{Dialogue End}}
 
-===Search for the abandoned Sweet Dreams Troupe===
+===Complete Dream Jigsaw{{subst:void|<!--802113216-->}}===
+{{Mission Description|type=adventure|location=Siobhan's Emoscape|update|To regain the monsters' trust, Siobhan invites you into her Emoscape.<br />The piece you've just found seems to fit the missing space of the jigsaw right in front of you...}}
+{{Dialogue Start}}
+:'''(Trailblazer):''' (Found the second jigsaw piece... Maybe I can attempt to finish the jigsaw.)
+<pre>{
+	"$type": "RPG.GameCore.WaitEntityServerEvent"
+}</pre>
+;(If {{cx}}{{subst:void|<!--{"$type":"RPG.GameCore.ByComparePropState","TargetType":{"$type":"RPG.GameCore.GroupFetchLocalTarget","TargetType":"Prop","Targets":[300002]}}-->}}, {{cx}}{{subst:void|<!--{"$type":"RPG.GameCore.ByComparePropState","TargetType":{"$type":"RPG.GameCore.GroupFetchLocalTarget","TargetType":"Prop","Targets":[300003]}}-->}}, {{cx}}{{subst:void|<!--{"$type":"RPG.GameCore.ByComparePropState","TargetType":{"$type":"RPG.GameCore.GroupFetchLocalTarget","TargetType":"Prop","Targets":[300004]}}-->}}, and {{cx}}{{subst:void|<!--{"$type":"RPG.GameCore.ByComparePropState","TargetType":{"$type":"RPG.GameCore.GroupFetchLocalTarget","TargetType":"Prop","Targets":[300001]},"State":"Open"}-->}})
+<pre>{
+	"$type": "RPG.GameCore.ChangePropState"
+}</pre>
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:<!--0.7-second delay-->
+:{{tx}}
+----
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{tx}}
+{{Dialogue End}}
+
+===Search for the abandoned Sweet Dreams Troupe{{subst:void|<!--802113206-->}}===
 {{Mission Description|type=adventure|location=Siobhan's Emoscape|update|To regain the monsters' trust, Siobhan invites you into her Emoscape.<br />Siobhan decides to continue her search for the abandoned Sweet Dreams Troupe. Explore deeper into the hotel in the Dreamscape.}}
 {{Dialogue Start}}
+
+;(Obtain {{Item|Melancholy's Jigsaw Fragment|20|x=1}})
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
 :{{tx}}
 {{Dialogue End}}
 
-===Return to the lounge===
+===Return to the lounge{{subst:void|<!--802113207-->}}===
 {{Mission Description|type=adventure|location=Siobhan's Emoscape|update|To regain the monsters' trust, Siobhan invites you into her Emoscape.<br />You found Melancholy in the hotel in the Dreamscape. Take it back to the lounge.}}
 {{Dialogue Start}}
+:'''(Trailblazer):''' (Found another jigsaw piece... Let's keep it first. It's about time Siobhan brings Melancholy back to the lounge.)
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+<pre>{
+	"$type": "RPG.GameCore.AdvDestroyGroupEntity",
+	"InstanceIDList": [
+		300002
+	]
+}</pre>
 :{{tx}}
 {{Dialogue End}}
 
-===Watch Siobhan's memories===
+===Watch Siobhan's memories{{subst:void|<!--802113208-->}}===
 {{Mission Description|type=adventure|location=Siobhan's Emoscape|update|To regain the monsters' trust, Siobhan invites you into her Emoscape.<br />Siobhan is going to name the monsters she just found. Go and listen to what they are chatting about.}}
 {{Dialogue Start}}
+
+;(Obtain {{Item|Starlet's Jigsaw Fragment|20|x=1}})
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
 :{{tx}}
 {{Dialogue End}}
 
-===Complete Dream Jigsaw===
+===Complete Dream Jigsaw{{subst:void|<!--802113209-->}}===
 {{Mission Description|type=adventure|location=Siobhan's Emoscape|update|To regain the monsters' trust, Siobhan invites you into her Emoscape.<br />The piece you've just found seems to fit the missing space of the jigsaw right in front of you...}}
 {{Dialogue Start}}
+:'''(Trailblazer):''' (Found all the jigsaw pieces. It's time to complete the jigsaw. Wonder what will be the complete image?)
+<pre>{
+	"$type": "RPG.GameCore.WaitEntityServerEvent"
+}</pre>
+;(If {{cx}}{{subst:void|<!--{"$type":"RPG.GameCore.ByComparePropState","TargetType":{"$type":"RPG.GameCore.GroupFetchLocalTarget","TargetType":"Prop","Targets":[300002]}}-->}}, {{cx}}{{subst:void|<!--{"$type":"RPG.GameCore.ByComparePropState","TargetType":{"$type":"RPG.GameCore.GroupFetchLocalTarget","TargetType":"Prop","Targets":[300003]}}-->}}, {{cx}}{{subst:void|<!--{"$type":"RPG.GameCore.ByComparePropState","TargetType":{"$type":"RPG.GameCore.GroupFetchLocalTarget","TargetType":"Prop","Targets":[300004]}}-->}}, and {{cx}}{{subst:void|<!--{"$type":"RPG.GameCore.ByComparePropState","TargetType":{"$type":"RPG.GameCore.GroupFetchLocalTarget","TargetType":"Prop","Targets":[300001]},"State":"Open"}-->}})
+<pre>{
+	"$type": "RPG.GameCore.ChangePropState"
+}</pre>
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:<!--0.7-second delay-->
+:{{tx}}
 :{{tx}}
 {{Dialogue End}}
 
-===Search for the abandoned Sweet Dreams Troupe===
+===Search for the abandoned Sweet Dreams Troupe{{subst:void|<!--802113211-->}}===
 {{Mission Description|type=adventure|location=Siobhan's Emoscape|update|To regain the monsters' trust, Siobhan invites you into her Emoscape.<br />Siobhan decides to continue her search for the abandoned Sweet Dreams Troupe. Explore deeper into the hotel in the Dreamscape.}}
 {{Dialogue Start}}
+
+;(Obtain {{Item|Lady's Jigsaw Fragment|20|x=1}})
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
 :{{tx}}
 {{Dialogue End}}
 
-===Return to the lounge===
+===Return to the lounge{{subst:void|<!--802113212-->}}===
 {{Mission Description|type=adventure|location=Siobhan's Emoscape|update|To regain the monsters' trust, Siobhan invites you into her Emoscape.<br />You found Lady in the hotel in the Dreamscape. Take it back to the lounge.}}
 {{Dialogue Start}}
+
+;(Obtain {{Item|Tin Man's Jigsaw Fragment|20|x=1}})
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{tx}}
 :{{tx}}
 {{Dialogue End}}
 
-===Watch Siobhan's memories===
+===Watch Siobhan's memories{{subst:void|<!--802113213-->}}===
 {{Mission Description|type=adventure|location=Siobhan's Emoscape|update|To regain the monsters' trust, Siobhan invites you into her Emoscape.<br />The monsters are all gathered here. Take a look and listen to what they are discussing.}}
 {{Dialogue Start}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
 :{{tx}}
+<pre>{
+	"$type": "RPG.GameCore.WaitEntityServerEvent"
+}</pre>
+;(If {{cx}}{{subst:void|<!--{"$type":"RPG.GameCore.ByComparePropState","TargetType":{"$type":"RPG.GameCore.GroupFetchLocalTarget","TargetType":"Prop","Targets":[300002]}}-->}}, {{cx}}{{subst:void|<!--{"$type":"RPG.GameCore.ByComparePropState","TargetType":{"$type":"RPG.GameCore.GroupFetchLocalTarget","TargetType":"Prop","Targets":[300003]}}-->}}, {{cx}}{{subst:void|<!--{"$type":"RPG.GameCore.ByComparePropState","TargetType":{"$type":"RPG.GameCore.GroupFetchLocalTarget","TargetType":"Prop","Targets":[300004]}}-->}}, and {{cx}}{{subst:void|<!--{"$type":"RPG.GameCore.ByComparePropState","TargetType":{"$type":"RPG.GameCore.GroupFetchLocalTarget","TargetType":"Prop","Targets":[300001]},"State":"Open"}-->}})
+<pre>{
+	"$type": "RPG.GameCore.ChangePropState"
+}</pre>
 {{Dialogue End}}
 
-===Complete Dream Jigsaw===
+===Complete Dream Jigsaw{{subst:void|<!--802113214-->}}===
 {{Mission Description|type=adventure|location=Siobhan's Emoscape|update|To regain the monsters' trust, Siobhan invites you into her Emoscape.<br />Complete the final jigsaw.}}
 {{Dialogue Start}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:<!--1-second delay-->
+----
 :{{tx}}
-{{Mission Description|type=adventure|location=Siobhan's Emoscape|update|To regain the monsters' trust, Siobhan invites you into her Emoscape.<br />The piece you've just found seems to fit the missing space of the jigsaw right in front of you...}}
+<pre>{
+	"$type": "RPG.GameCore.PerformanceExtendEndBlack",
+	"ExtendTime": 1
+}</pre>
 {{Dialogue End}}
 
 ==Other Languages==

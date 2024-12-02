@@ -1,4 +1,4 @@
-import { WaitSecond } from '../../files/Dialog.js';
+import { WaitSecond } from '../../files/graph/Dialog.js';
 import { roundTo } from '../../Shared.js';
 import { TranscriptionNote } from '../../util/AbstractDialogueTree.js';
 import { BaseDialogueTask, BaseDialogueTaskEntry } from '../DialogueBase.js';
@@ -9,7 +9,11 @@ export class WaitTask extends BaseDialogueTask {
 	
 	constructor(data: WaitSecond) {
 		super(data)
-		this.wait_time = !data.WaitTime.IsDynamic ? data.WaitTime.FixedValue?.Value ?? data.WaitTime.fixedValue?.Value : undefined
+		if (data.WaitTime) {
+			this.wait_time = !data.WaitTime.IsDynamic ? data.WaitTime.FixedValue?.Value ?? data.WaitTime.fixedValue?.Value : undefined
+		} else {
+			this.wait_time = 1
+		}
 	}
 	
 	wikitext(): string | undefined {

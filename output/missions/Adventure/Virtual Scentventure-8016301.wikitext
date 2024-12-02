@@ -7,11 +7,11 @@ PageTitle=#Virtual Scentventure (Adventure Mission)#
 |title         = Virtual Scentventure
 |image         = <!--Mission Virtual Scentventure (Adventure Mission).png-->
 |type          = Adventure
-|event_name    = 
+|event_name    = Virtual Scentventure
 |chapter       = 
 |requirements  = [[Trailblaze Mission]] ''[[Silent Galaxy]]'' completed
 |summary       = <!--official mission summary from Fate's Atlas-->
-|characters    = Trailblazer
+|characters    = Arlan; Cloudbot; Trailblazer
 |startLocation = [[Herta Space Station]] - [[Master Control Zone]]
 |world         = Herta Space Station
 |area          = Master Control Zone
@@ -19,7 +19,7 @@ PageTitle=#Virtual Scentventure (Adventure Mission)#
 |next          = ???
 |rewards       = Credit*5,000
 }}
-'''''Virtual Scentventure''''' is an [[Adventure Mission]] on [[Herta Space Station]].
+'''''Virtual Scentventure''''' is an Event [[Adventure Mission]] from the [[Virtual Scentventure]] event.
 
 ==Steps==
 # Talk with Arlan
@@ -37,22 +37,99 @@ PageTitle=#Virtual Scentventure (Adventure Mission)#
 {{Stub Dialogue}}
 {{Dialogue End}}
 
-===Talk with Arlan===
+===Talk with Arlan{{subst:void|<!--801630102-->}}===
 {{Mission Description|type=adventure|location=Supply Zone|update|There seems to be trouble again in the space station. Arlan is asking for your help. But this time, the "culprit" looks really suspicious. Could such a cute little thing really do any harm? You are a little confused, but since Arlan asked politely, guess it's best to help out...}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Arlan)
+<pre>{
+	"$type": "RPG.GameCore.PlayMultiVoiceTalk",
+	"TalkSentenceID": 500012021,
+	"KeepDisplay": true
+}</pre>
+:'''Arlan:''' Ask me anything. I'll do my best to help as per Lady Asta's request.
+:{{DIcon}} It's me. What happened?
+:'''Arlan:''' Fantastic. What a relief to see you on the space station, (Trailblazer).
+:'''Arlan:''' I'm sorry. As head of the Security Department, this should be my responsibility, but I have to trouble you...
+:{{DIcon|Arrow}} Don't blame yourself, Brother Arlan!
+::'''Arlan:''' Uh... that nickname... The guys in my department use it to make fun of me. Please don't say it around outsiders.
+:{{DIcon|Arrow}} We're all friends around here. No need to be so polite.
+::'''Arlan:''' Sorry, I'll cut to the chase, then.
+:'''Arlan:''' There's been quite a bit of mayhem recently &mdash; three of the geniuses were meeting up at the space station, and while Asta hosted them, some of the researchers discovered several little critters running amok throughout the station.
+:'''Arlan:''' They're pretty cute &mdash; kinda like Peppy? But they have these cake-shaped shells, smell delicious, and look completely harmless.
+:'''Arlan:''' Asta sent over some researchers from the Department of Ecology to observe their behaviors, only to discover that these cute critters were nowhere near as simple as they seemed...
+:{{DIcon|Arrow}} I feel like they're totally harmless...
+::'''Arlan:''' Yeah, they're pretty cute and get along with other intelligent beings without any hostility at all.
+:{{DIcon|Arrow}} ...Do they have hidden sides, too?
+::'''Arlan:''' Er, well their organs...? They have never really been covered up before, so there's nothing really hidden about it.
+:'''Arlan:''' Our researchers discovered some glands on their face and foot soles that trigger olfactory signals.
+:'''Arlan:''' The chemicals released from these glands combine with olfactory cells in the nose to potentially stimulate a reaction from the brain...
+:'''Arlan:''' ...Basically, the "food flavors" they radiate can affect human perception. For example...
+:'''Arlan:''' Some researchers came into contact with them before. Those who smelled red bean felt depressed when they got back to their cryosleep pods. Meanwhile, those who could smell cheese grew extremely excited.
+:'''Arlan:''' So the researchers put together a special test for these critters' glands to calculate all of the potential risks.
+:{{DIcon|Arrow}} Can you get to the point?
+::'''Arlan:''' Sorry, I got carried away just now and kept beating around the bush. Okay, here's the thing: I would like you to take this special gland test.
+:{{DIcon|Arrow}} So how do you want me to help?
+::'''Arlan:''' Easy: I'd like you to take the special gland test.
+:'''Arlan:''' In a nutshell, this test uploads and synchronizes our thoughts to the cloud...
+:'''Arlan:''' Our researchers then gather as much of these smell secretions from the critters, and then simulate each of these smells in the cloud by manipulating specific molecules.
+:'''Arlan:''' Activating different scent plug-ins will change the test subject's perceptions, activating the memory domains of the brain and causing various thrilling hallucinations to be experienced...
+:'''Arlan:''' Er, the main format is actually a simulated battle. The maintenance team said that a machine with these specs could only support content of that size.
+:'''Arlan:''' Unfortunately, my knowledge is limited and people haven't been happy with the test results. The maintenance team said I hadn't reached the risk threshold for testing until I had smoke pluming out of the machine.
+:'''Arlan:''' I think as a Nameless, (Trailblazer), you've seen a lot, and you're pretty skilled too... Come give it a try and see if maybe you can reach these limits that they're after...
+:{{DIcon|Arrow}} If there's smoke coming out of the machine, will my brain also...
+::'''Arlan:''' Are you worried about getting injured? Fear not, it's a remote connection, so there's no physical contact.
+:{{DIcon|Arrow}} Go find another Nameless.
+::'''Arlan:''' Sorry, (Trailblazer). I know you're busy, but another Nameless... Everything happened so quickly that I just called you as soon as I could.
+:'''Arlan:''' Don't worry. The test is loaded onto a little robot and everything you see is an artificial simulation.
+:'''Arlan:''' If there's any surprise, the Cloudbot will shut down power and force exit without causing any strain on your body.
+:'''Arlan:''' The robot's over in the clinic. I'll take you over. If you have any questions about the test, just ask away.
+:'''Arlan:''' Alright then, I'll leave the test to you then, (Trailblazer)...
 {{Dialogue End}}
 
-===Talk with Cloudbot===
+===Talk with Cloudbot{{subst:void|<!--801630103-->}}===
 {{Mission Description|type=adventure|location=Base Zone|update|The Cloudbot is responsible for synchronizing the tester's thoughts to the cloud. You agree to participate in the Department of Ecology's special test.}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Cloudbot)
+:'''Cloudbot:''' Verifying identity... Authenticating. Authentication successful.
+:'''Cloudbot:''' Cryosleep pod status test complete. Cloud synchronization successful.
+:'''Cloudbot:''' Dear Special Test Candidate: Welcome to our Unknown Lifeform Smell-Induced Perceptions and Hallucinations Special Test. Please note, this test data has been provided exclusively by the Department of Ecology and may not be shared externally.
+:'''Cloudbot:''' Cryosleep pod connected...
+:'''Cloudbot:''' To start the test, please lie down face up in the cryosleep pod next to you and maintain a calm mental state.
 {{Dialogue End}}
 
-===Interact with cryosleep pod===
+===Interact with cryosleep pod{{subst:void|<!--801630104-->}}===
 {{Mission Description|type=adventure|location=Base Zone|update|The Cloudbot guides you to lie down in the cryosleep pod. You are a little nervous, not knowing what you will face next... By the way, where is the eject button?}}
 {{Dialogue Start}}
-:{{tx}}
+;(Unused &mdash; OpenPanel)
+<pre>{
+	"$type": "RPG.GameCore.ShowUI",
+	"Name": "Ui.Activity.ActivityStrongChallenge.StrongChallengeMainPage",
+	"WaitForExit": true,
+	"OnUIEnter": [
+		{
+			"$type": "RPG.GameCore.TriggerGroupEvent",
+			"EventName": {
+				"Value": "FinishMissions"
+			}
+		}
+	],
+	"OnUIExitImmediately": [
+		{
+			"$type": "RPG.GameCore.TriggerGroupEvent",
+			"EventName": {
+				"Value": "FinishToast"
+			}
+		}
+	]
+}</pre>
+
+;(Unused &mdash; FinishMissions)
+
+
+;(Unused &mdash; FinishToast)
+
 {{Dialogue End}}
 
 ==Other Languages==

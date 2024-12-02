@@ -11,7 +11,7 @@ PageTitle=#Exhibit Collection: Cannon#
 |chapter       = Everwinter City Museum Ledger of Curiosities
 |requirements  = {{subst:void|<!--Unknown: {"Type":"Manual"}-->}}
 |summary       = Belobog's History and Culture Museum will be opening soon. Uldan is collecting appropriate exhibits to ensure a successful opening.<br />You have found the cannon, adding another valuable piece to the museum's collection.
-|characters    = Trailblazer
+|characters    = Trailblazer; Uldan
 |startLocation = [[Jarilo-VI]] - [[History and Culture Museum]]
 |world         = Jarilo-VI
 |area          = History and Culture Museum
@@ -37,25 +37,212 @@ PageTitle=#Exhibit Collection: Cannon#
 ==Dialogue==
 {{Stub Dialogue}}
 
-===Find out more about the situation from Uldan===
+===Find out more about the situation from Uldan{{subst:void|<!--800120601-->}}===
 {{Mission Description|type=adventure|location=History and Culture Museum|Belobog's History and Culture Museum will be opening soon. Uldan is collecting appropriate exhibits to ensure a successful opening.<br />This time, Uldan wishes you to find an exhibit based on a treasure map.}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Obtain {{Item|Treasure Map: Cannon|20|x=1}})
+
+;(Talk to Uldan)
+:'''Uldan:''' Just in the nick of time, (Trailblazer). I've just gone over all the exhibits in the storage room, and stumbled across this treasure map.
+::'''Uldan:''' These would all be great for the General Hall, but they're scattered all over Belobog now &mdash; and I'm afraid there's no way an old-timer like me can get to them all...
+::'''Uldan:''' It would be great if you could fetch for me from {{Color|keyword|nobold=1|Backwater Pass}} this {{Color|keyword|nobold=1|cannon}}.
+::'''Uldan:''' I've written its approximate location on the back of the treasure map. I have to trouble you with another trip, (Trailblazer).
+:<pre>{
+	"$type": "RPG.GameCore.PlayMultiVoiceTalk",
+	"TalkSentenceID": 501190111,
+	"KeepDisplay": true
+}</pre>
+:::{{DIcon|?}} About the portrait of Cyrille the Fool...
+::::'''Uldan:''' (Trailblazer)... Did you say that the description of {{Color|keyword|nobold=1|Cyrille the Fool's}} portrait deviated from the truth?
+::::'''Uldan:''' But... how's that possible? The description is taken from the history textbooks of the Belobog Academy. Everything is in black and white.
+::::{{DIcon|Talk}} I met Cyrille before.
+:::::'''Uldan:''' Well... Stop pulling my leg.
+:::::'''Uldan:''' Still, I can tell you have at least heard of Cyrille from your tone.
+::::;(Return to previous option selection)
+::::{{DIcon|Arrow}} I have evidence that supports Cyrille.
+:::::'''Uldan:''' Since you sound so sure of yourself, I'll take a look at your evidence.
+::::<pre>{
+	"$type": "RPG.GameCore.ConsumeMissionItemPerformance",
+	"SubMissionID": 800122503,
+	"Desc": {
+		"Hash": 278713946
+	},
+	"OnSubmitConfirm": [
+		{
+			"$type": "RPG.GameCore.PlayAndWaitSimpleTalk",
+			"KeepDisplay": true,
+			"SimpleTalkList": [
+				{
+					"TextSpeed": 20,
+					"TalkSentenceID": 800122739,
+					"ProtectTime": 0.8
+				},
+				{
+					"TextSpeed": 20,
+					"TalkSentenceID": 800122740,
+					"ProtectTime": 0.8
+				},
+				{
+					"TextSpeed": 20,
+					"TalkSentenceID": 800122741,
+					"ProtectTime": 0.8
+				},
+				{
+					"TextSpeed": 20,
+					"TalkSentenceID": 800122742,
+					"ProtectTime": 0.8
+				}
+			]
+		},
+		{
+			"$type": "RPG.GameCore.TriggerCustomString",
+			"CustomString": {
+				"Value": "Talk_800122502"
+			}
+		},
+		{
+			"$type": "RPG.GameCore.TriggerCustomString",
+			"CustomString": {
+				"Value": "TalkSentence_501190151"
+			}
+		}
+	],
+	"OnSubmitCancel": [
+		{
+			"$type": "RPG.GameCore.TriggerCustomString",
+			"CustomString": {
+				"Value": "TalkSentence_501190151"
+			}
+		}
+	],
+	"SimpleTalk": {
+		"TextSpeed": 20,
+		"ProtectTime": 0.8
+	}
+}</pre>
+:::{{DIcon|Exit}} I'll go ahead and tour now.
+:<pre>{
+	"$type": "RPG.GameCore.PlayMultiVoiceTalk",
+	"TalkSentenceID": 501190111,
+	"KeepDisplay": true
+}</pre>
 {{Dialogue End}}
 
-===Find the item following the treasure map===
+===Find the item following the treasure map{{subst:void|<!--800120602-->}}===
 {{Dialogue Start}}
-:{{tx}}
+
 {{Dialogue End}}
 
-===Report to Uldan===
+===Report to Uldan{{subst:void|<!--800120605-->}}===
 {{Dialogue Start}}
-:{{tx}}
+
+
+;(Talk to Uldan)
+;(If {{cx}}<!--during performance 501190101-->)
+::'''Uldan:''' Welcome to the Belobog History and Culture Museum, {{MC|f=young miss|m=young man}}. Is there anything an old man like me can help you with?
+::{{DIcon|Arrow}} I'm just here to visit the museum.
+:::'''Uldan:''' Oh hoho, you're at the wrong place. This is the museum's warehouse. Head out then turn right, the exhibition hall is past the reception counter.
+::{{DIcon|Arrow}} I'm here solely to talk with older people.
+:::'''Uldan:''' Hah, what a unique hobby. However, this is a museum after all. Since you're here, might as well have a tour. Head out then turn right, the exhibition hall is past the reception counter.
+::'''Uldan:''' If you have any questions along your tour, or if you have any feedback or opinions, welcome to come talk to me...
+::'''Uldan:''' ...I am Uldan, former dean of the Belobog College of Art, and now the curator of this museum. Pleased to meet you.
+;(If {{cx}}<!--not during performance 501190101-->)
+::<pre>{
+	"$type": "RPG.GameCore.PlayMultiVoiceTalk",
+	"TalkSentenceID": 501190111,
+	"KeepDisplay": true
+}</pre>
+::::{{DIcon|?}} About the portrait of Cyrille the Fool...
+:::::'''Uldan:''' (Trailblazer)... Did you say that the description of {{Color|keyword|nobold=1|Cyrille the Fool's}} portrait deviated from the truth?
+:::::'''Uldan:''' But... how's that possible? The description is taken from the history textbooks of the Belobog Academy. Everything is in black and white.
+:::::{{DIcon|Talk}} I met Cyrille before.
+::::::'''Uldan:''' Well... Stop pulling my leg.
+::::::'''Uldan:''' Still, I can tell you have at least heard of Cyrille from your tone.
+:::::;(Return to previous option selection)
+:::::{{DIcon|Arrow}} I have evidence that supports Cyrille.
+::::::'''Uldan:''' Since you sound so sure of yourself, I'll take a look at your evidence.
+:::::<pre>{
+	"$type": "RPG.GameCore.ConsumeMissionItemPerformance",
+	"SubMissionID": 800122503,
+	"Desc": {
+		"Hash": 278713946
+	},
+	"OnSubmitConfirm": [
+		{
+			"$type": "RPG.GameCore.PlayAndWaitSimpleTalk",
+			"KeepDisplay": true,
+			"SimpleTalkList": [
+				{
+					"TextSpeed": 20,
+					"TalkSentenceID": 800122739,
+					"ProtectTime": 0.8
+				},
+				{
+					"TextSpeed": 20,
+					"TalkSentenceID": 800122740,
+					"ProtectTime": 0.8
+				},
+				{
+					"TextSpeed": 20,
+					"TalkSentenceID": 800122741,
+					"ProtectTime": 0.8
+				},
+				{
+					"TextSpeed": 20,
+					"TalkSentenceID": 800122742,
+					"ProtectTime": 0.8
+				}
+			]
+		},
+		{
+			"$type": "RPG.GameCore.TriggerCustomString",
+			"CustomString": {
+				"Value": "Talk_800122502"
+			}
+		},
+		{
+			"$type": "RPG.GameCore.TriggerCustomString",
+			"CustomString": {
+				"Value": "TalkSentence_501190151"
+			}
+		}
+	],
+	"OnSubmitCancel": [
+		{
+			"$type": "RPG.GameCore.TriggerCustomString",
+			"CustomString": {
+				"Value": "TalkSentence_501190151"
+			}
+		}
+	],
+	"SimpleTalk": {
+		"TextSpeed": 20,
+		"ProtectTime": 0.8
+	}
+}</pre>
+::::{{DIcon|Exit}} I'll go ahead and tour now.
+::<pre>{
+	"$type": "RPG.GameCore.PlayMultiVoiceTalk",
+	"TalkSentenceID": 501190111,
+	"KeepDisplay": true
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.PlayMultiVoiceTalk",
+	"TalkSentenceID": 501190111,
+	"KeepDisplay": true
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.ShowMenu"
+}</pre>
 {{Dialogue End}}
 
-===Place the exhibit at the specified spot===
+===Place the exhibit at the specified spot{{subst:void|<!--800120604-->}}===
 {{Dialogue Start}}
-:{{tx}}
+
+:{{DIcon|Loupe}} Investigate
+:An oil painting depicting the Administrative District in its full majesty.
+:The Administrative District depicted in the painting is much larger than you remember. Maybe it's because there are many places off-limits to you.
 {{Dialogue End}}
 
 ==Other Languages==

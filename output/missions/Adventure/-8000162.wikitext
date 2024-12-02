@@ -7,9 +7,9 @@ PageTitle=##
 |title         = 
 |image         = <!--Mission .png-->
 |type          = Adventure
-|event_name    = 
+|event_name    = Starhunt Game
 |chapter       = 
-|requirements  = {{cx}}<!--Hidden Exploration Objective ID 2000706--> completed
+|requirements  = {{cx}}<!--Hidden Mission ID 2000706--> completed
 |summary       = <!--official mission summary from Fate's Atlas-->
 |characters    = Trailblazer
 |startLocation = [[Herta Space Station]] - [[Herta's Office]]
@@ -19,7 +19,7 @@ PageTitle=##
 |next          = 
 |rewards       = 
 }}
-'''''''''' is an [[Adventure Mission]] on [[Herta Space Station]].
+'''''''''' is an Event [[Adventure Mission]] from the [[Starhunt Game]] event.
 
 ==Steps==
 
@@ -33,7 +33,16 @@ PageTitle=##
 -->
 ==Dialogue==
 {{Stub Dialogue}}
-
+<pre>{
+	"$type": "RPG.GameCore.WaitNewDecalDialogExit",
+	"WaitDecalList": [
+		9
+	]
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.ShowUI",
+	"Name": "Ui.Activity.ActivitySilverWolf.ActivityCompanion.SilverWolfCompanionPage"
+}</pre>
 {{Dialogue End}}
 
 ==Other Languages==

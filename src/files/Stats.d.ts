@@ -1,4 +1,4 @@
-import { AttackType } from '../Shared.ts'
+import { AttackType, Value } from '../Shared.ts'
 import { HashReference } from '../TextMap.ts'
 
 export type AvatarPropertyType = 
@@ -10,7 +10,7 @@ export type AvatarPropertyType =
 	| `${AttackType}AddedRatio` | `${AttackType}Resistance` | `${AttackType}ResistanceDelta`
 	| 'BaseHP' | 'HPDelta' | 'HPAddedRatio' | 'BaseAttack' | 'AttackDelta'
 	| 'AttackAddedRatio' | 'BaseDefence' | 'DefenceDelta' | 'DefenceAddedRatio'
-	| 'BaseSpeed' | 'HealTakenRatio' | 'SpeedDelta'
+	| 'BaseSpeed' | 'HealTakenRatio' | 'SpeedDelta' | 'BaseAggro'
 	
 	| 'Toughness' | 'DMGBoost' | 'HPValue'
 
@@ -29,6 +29,11 @@ export interface AvatarProperty {
 	Order: number
 	IconPath: string
 	custom?: boolean
+}
+
+export interface InternalStatModifier {
+	PropertyType: AvatarPropertyType
+	Value: Value<number>
 }
 
 export type AvatarPropertyConfig = Record<AvatarPropertyType, AvatarProperty>

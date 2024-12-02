@@ -1,7 +1,7 @@
 import { ActDialogueTree, DialogueTask, DialogueTaskEntry } from './dialogue/Dialogue.js'
 import { DialogueEvent, DialogueEventTask, RogueTalkNameConfig } from './dialogue/tasks/Occurrence.js'
-import type { Act } from './files/Dialog.js'
 import { getExcelFile, getFile } from './files/GameFile.js'
+import type { Act } from './files/graph/Dialog.js'
 import { DynamicDisplay, InternalEventSectionDisplay, InternalNPC, InternalRogueImage, OptData, RogueNPCData, RogueNPCDialogue } from './files/Occurrence.js'
 import { Dictionary } from './Shared.js'
 import { HashReference, textMap } from './TextMap.js'
@@ -80,9 +80,10 @@ export class OccurrenceSeries {
 		const npcData = await getFile<RogueNPCData>(this.path)
 		const occurrences: Occurrence[] = []
 		
-		if (npcData.DialogueType != 'Event') return occurrences
+		// if (npcData.DialogueType != 'Event') return occurrences
 		
 		for (const dialogueInfo of npcData.DialogueList) {
+			if (!dialogueInfo.OptionPath) continue
 			occurrences.push(await Occurrence.fromNpcDialogue(this, dialogueInfo))
 		}
 		

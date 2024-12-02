@@ -11,7 +11,7 @@ PageTitle=#When the Sacred Ginmill Closes#
 |chapter       = Cat Among Pigeons
 |requirements  = [[Trailblaze Mission]] ''[[When the Sacred Ginmill Closes]]'' completed
 |summary       = <!--official mission summary from Fate's Atlas-->
-|characters    = Trailblazer
+|characters    = Acheron; Firefly; Trailblazer; Welt
 |startLocation = [[Penacony]] - [[Golden Hour]]
 |world         = Penacony
 |area          = Golden Hour
@@ -35,15 +35,82 @@ PageTitle=#When the Sacred Ginmill Closes#
 ==Dialogue==
 {{Stub Dialogue}}
 
-===Speak with Acheron===
+===Speak with Acheron{{subst:void|<!--103130101-->}}===
 {{Mission Description|type=trailblaze|location=Golden Hour|Once again, the focus shifts. Sometimes, you feel as though you're living in a movie &mdash; nothing else can explain the constant switch of the point-of-view.}}
 {{Dialogue Start}}
 :{{tx}}
+:{{DIcon|Talk}} Regarding the Moment of Daybreak...
+::{{tx}}
+:;(Return to previous option selection)
+:{{DIcon|Talk}} Regarding the Gilded Hour...
+::{{tx}}
+:;(Return to previous option selection)
+:{{DIcon|Talk}} About the Blue Hour...
+::{{tx}}
+:;(Return to previous option selection)
+:{{DIcon|Talk}} About the Moment of Dusk...
+::{{tx}}
+:;(Return to previous option selection)
+:{{DIcon|Arrow}} That's everything.
+::{{tx}}
+:{{tx}}
+
+:{{DIcon|undefined}} 
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{A|VO chapter3 3 player 103 m.ogg}} {{A|VO chapter3 3 player 103 f.ogg}} '''(Trailblazer):''' (Her secret stronghold is... a cafe?)
+<pre>{
+	"$type": "RPG.GameCore.WaitMissionTalkFinish"
+}</pre>
+:{{A|VO chapter3 3 firefly 154.ogg}} '''Firefly:''' Here...
+<pre>{
+	"$type": "RPG.GameCore.WaitMissionTalkFinish"
+}</pre>
 {{Dialogue End}}
 
-===Recall the memories on Acheron===
+===Recall the memories on Acheron{{subst:void|<!--103130105-->}}===
 {{Dialogue Start}}
 :{{tx}}
+
+;(Talk to Jno)
+<pre>{
+	"$type": "RPG.GameCore.PlayMultiVoiceTalk",
+	"TalkSentenceID": 503030801,
+	"KeepDisplay": true
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.ShowMenu"
+}</pre>
+:{{tx}}
+:{{DIcon|Talk}} Regarding the Moment of Daybreak...
+::{{A|VO chapter3 11 welt 110.ogg}} '''Welt:''' The Moment of Daybreak &mdash; I've heard that's where the "Dawn Factory," which processes the foundation of the Dreamscape, is located.
+::{{tx}}
+:;(Return to previous option selection)
+:{{DIcon|Talk}} Regarding the Gilded Hour...
+::{{A|VO chapter3 11 welt 111.ogg}} '''Welt:''' Gilded Hour... It's said to be Penacony's Currency Center.
+::{{tx}}
+:;(Return to previous option selection)
+:{{DIcon|Talk}} About the Blue Hour...
+::{{A|VO chapter3 11 welt 112.ogg}} '''Welt:''' I hear the Blue Hour is very romantic. Do you have any tales to share?
+::{{tx}}
+:;(Return to previous option selection)
+:{{DIcon|Talk}} About the Moment of Dusk...
+::{{A|VO chapter3 11 welt 113.ogg}} '''Welt:''' The Dreamscape of chic, luxury and consumerism &mdash; the Moment of Dusk &mdash; my companions have been there too.
+::{{tx}}
+:;(Return to previous option selection)
+:{{DIcon|Arrow}} That's everything.
+::{{A|VO chapter3 11 acheron 128.ogg}} '''Acheron:''' This is what I've seen and heard along the way...
+::{{tx}}
+:{{tx}}
+;(If {{F|FSV_DoorC}} is equal to 0)
+:<pre>{
+	"$type": "RPG.GameCore.TriggerEntityServerEvent"
+}</pre>
+;(If {{F|FSV_DoorC}} is not equal to 0)
+:;(Return to previous option selection)
+;(Unused &mdash; G53_Trigger)
+
 {{Dialogue End}}
 
 ==Other Languages==

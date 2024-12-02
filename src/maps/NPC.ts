@@ -1,8 +1,9 @@
 import { getExcelFile } from '../files/GameFile.js'
-import { InternalNPCData, MapNPC, NPCSubType, Vector3 } from '../files/MapData.js'
+import { InternalNPCData, MapNPC, NPCSubType, Vector3 } from '../files/graph/MapData.js'
 import { HashReference, textMap } from '../TextMap.js'
 import { BaseMapObject } from './BaseMapObject.js'
-import { DialogueNPC, NPCDialogue } from './NPCDialogue.js'
+import type { LevelGroup } from './LevelGroup.js'
+import { BaseMapDialogue, DefaultPropDialogue, DialogueNPC, NPCDialogue } from './NPCDialogue.js'
 
 export const NPCData = await getExcelFile<InternalNPCData>('NPCData.json', 'ID')
 
@@ -38,6 +39,8 @@ export class BaseNPC {
 }
 
 export class NPCInstance extends BaseNPC implements BaseMapObject {
+	type: 'npc' = 'npc'
+	
 	object_id: number
 	initial_load?: boolean
 	
@@ -47,9 +50,9 @@ export class NPCInstance extends BaseNPC implements BaseMapObject {
 	internal_name?: string
 	
 	dialogue_ids: number[]
-	dialogue: NPCDialogue[]
+	dialogue: BaseMapDialogue[]
 	
-	constructor(data: MapNPC) {
+	constructor(data: MapNPC, public group: LevelGroup) {
 		super(data.NPCID)
 		this.object_id = data.ID
 		this.position = { X: data.PosX ?? 0, Y: data.PosY ?? 0, Z: data.PosZ ?? 0 }
@@ -69,6 +72,10 @@ export class NPCInstance extends BaseNPC implements BaseMapObject {
 			.map(id => new NPCDialogue(id, this))
 			.sort((d0, d1) => d1.priority - d0.priority)
 		this.initial_load = data.LoadOnInitial ?? true
+		
+		if (data.Dialog) {
+			this.dialogue.push(new DefaultPropDialogue(data, this))
+		}
 	}
 }
 

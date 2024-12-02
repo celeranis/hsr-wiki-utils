@@ -261,7 +261,8 @@ export type DomainSubtype = 'World' | 'Warring' | 'Exploratory'
 
 export class Template<N extends keyof TemplateMap, P extends TemplateMap[N]> {
 	constructor(public name: N, public params: Partial<P> = {}) {}
-	
+	newlinesAfter: string[] = []
+
 	addParam<K extends keyof P>(key: K, value: P[K]) {
 		if (typeof value == 'boolean') {
 			value = (value ? '1' : '') as P[K]
@@ -269,32 +270,38 @@ export class Template<N extends keyof TemplateMap, P extends TemplateMap[N]> {
 		this.params[key] = value
 		return this
 	}
-	
+
 	removeParam(key: keyof P) {
 		delete this.params[key]
 		return this
 	}
-	
+
 	getParam<K extends keyof P>(key: K): P[K] | undefined {
 		return this.params[key]
 	}
-	
+
+	addNewlineAfter(param: string) {
+		this.newlinesAfter.push(param)
+		return this
+	}
+
 	block(minTargetIndent: number = 0): string {
 		const targetIndent = Math.max(minTargetIndent, ...Object.keys(this.params).map(key => key.length)) + 1
 		const output = [
 			`{{${this.name}`,
-			...Object.entries(this.params).map(([key, value]) => 
-				`|${whitespace(key, targetIndent)}=${String(value).match(/\n|(?:^(?:\*|:|#|<gallery))/) ? `\n${value}` : ` ${value}`}`
+			...Object.entries(this.params).filter(([key, value]) => value !== undefined).map(([key, value]) =>
+				(`|${whitespace(key, targetIndent)}=${String(value).match(/\n|(?:^(?:\*|:|#))/) ? `\n${value}` : ` ${value}`}`)
+				+ (this.newlinesAfter.includes(key) ? '\n' : '')
 			),
 			'}}'
 		]
 		return output.join('\n')
 	}
-	
+
 	inline(): string {
 		return `{{${this.name}|${Object.entries(this.params).map(([key, value]) => Number(key) ? value : `${key}=${value}`).join('|')}}}`
 	}
-	
+
 	static addParamValue(input: string, name: string, value: string | number) {
 		const regex = new RegExp(`(\\|${name}\\s*=\\ *)[^\|}]*?\\n*(\\r?\\n?(?:\\||}}))`)
 		if (regex.test(input)) {
@@ -303,12 +310,12 @@ export class Template<N extends keyof TemplateMap, P extends TemplateMap[N]> {
 			return null
 		}
 	}
-	
+
 	static getParamValue(input: string, name: string) {
 		const regex = new RegExp(`\\|${name}\\s*=\\s*?(.*?)\\s*(?:\\||}})`)
 		return input.match(regex)?.[1]?.trim()
 	}
-	
+
 	static pageData(title: string, contentModel: string = 'wikitext', contentFormat: string = 'text/x-wiki'): string {
 		return [
 			`<%-- [PAGE_INFO]`,

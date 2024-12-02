@@ -1,7 +1,7 @@
 import { writeFile } from 'fs/promises';
 import { ActDialogueTree } from '../dialogue/Dialogue.js';
-import type { Act } from '../files/Dialog.js';
 import { getFile } from '../files/GameFile.js';
+import type { Act } from '../files/graph/Dialog.js';
 import { HashReference, textMap } from '../TextMap.js';
 import { pageInfoHeader, uploadPrompt } from '../util/General.js';
 
@@ -15,7 +15,13 @@ export interface InternalRogueMagicStory {
 	UnLockDisplay: number
 }
 
+export interface InternalRogueCommonDialogue {
+	DialoguePath: string
+	DialogueID: number
+}
+
 export const RogueMagicStory = await getFile<InternalRogueMagicStory[]>('ExcelOutput/RogueMagicStory.json')
+export const RogueCommonDialogue = await getFile<InternalRogueCommonDialogue[]>('ExcelOutput/RogueCommonDialogue.json')
 
 const output: string[] = [
 	pageInfoHeader('Simulated Universe: Unknowable Domain/Secrets'),
@@ -32,6 +38,13 @@ export class SecretDialogueTree extends ActDialogueTree {
 
 	static async fromStory(story: InternalRogueMagicStory) {
 		const act = await getFile<Act>(story.LevelGraphPath)
+		const tree = new this(act)
+		tree.root = await tree.processAct(act)
+		return tree
+	}
+	
+	static async fromCommon(common: InternalRogueCommonDialogue) {
+		const act = await getFile<Act>(common.DialoguePath)
 		const tree = new this(act)
 		tree.root = await tree.processAct(act)
 		return tree
@@ -65,3 +78,9 @@ await addCategory('MagicWar')
 await addCategory('Final')
 
 await writeFile('./output/und-secrets.wikitext', output.join('\n'))
+
+for (const common of RogueCommonDialogue) {
+	const tree = await SecretDialogueTree.fromCommon(common)
+	tree.optimize()
+	writeFile(`./output/roguecommon/${common.DialogueID}.wikitext`, await tree.wikitext())
+}

@@ -11,7 +11,7 @@ PageTitle=#The Voyage Continues#
 |chapter       = Today Is Yesterday's Tomorrow
 |requirements  = [[Trailblaze Mission]] ''[[The Voyage Continues]]'' completed
 |summary       = <!--official mission summary from Fate's Atlas-->
-|characters    = Trailblazer
+|characters    = Pom-Pom; Trailblazer
 |startLocation = [[Astral Express]] - [[Passenger Cabin]]
 |world         = Astral Express
 |area          = Passenger Cabin
@@ -38,30 +38,84 @@ PageTitle=#The Voyage Continues#
 ==Dialogue==
 {{Stub Dialogue}}
 
-===Return to the Parlor Car===
+===Return to the Parlor Car{{subst:void|<!--100050301-->}}===
 {{Mission Description|type=trailblaze|location=Passenger Cabin|You boarded the amazing Astral Express. From now on, this will be your home.<br />A new adventure is about to start. Prepare to warp jump to a new world!}}
 {{Dialogue Start}}
-:{{tx}}
+:<!--1-second delay-->
+:{{A|VO chapter0 7 pompom 145.ogg}} '''Pom-Pom:''' Ahem, hi, hello~ Attention all passengers. Attention all passengers.
+:{{A|VO chapter0 7 pompom 146.ogg}} '''Pom-Pom:''' The Express is about to conduct a warp jump. All passengers, please gather at the main hall.
+:{{A|VO chapter0 7 pompom 147.ogg}} '''Pom-Pom:''' I repeat. The Express is about to conduct a warp jump. All passengers, please gather at the main hall.
 {{Dialogue End}}
 
-===(Optional) Look around before the warp jump===
+===(Optional) Look around before the warp jump{{subst:void|<!--100050306-->}}===
 {{Dialogue Start}}
-:{{tx}}
 {{Dialogue End}}
 
-===Return to the Parlor Car===
+===Return to the Parlor Car{{subst:void|<!--100050302-->}}===
 {{Dialogue Start}}
-:{{tx}}
 {{Dialogue End}}
 
-===Listen to the conductor's instructions===
+===Listen to the conductor's instructions{{subst:void|<!--100050303-->}}===
 {{Dialogue Start}}
-:{{tx}}
+
+
+;(Talk to Pom-Pom)
+<pre>{
+	"$type": "RPG.GameCore.ShowTalkUI",
+	"ShowDialogControlUI": true
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.ShowUI",
+	"Name": "Ui.LevelReward.LevelRewardPage",
+	"WaitForExit": true,
+	"OnUIExitImmediately": [
+		{
+			"$type": "RPG.GameCore.EndDialogueEntityInteract"
+		},
+		{
+			"$type": "RPG.GameCore.EndPerformance"
+		}
+	]
+}</pre>
 {{Dialogue End}}
 
-===Wait for the jump===
+===Wait for the jump{{subst:void|<!--100050304-->}}===
 {{Dialogue Start}}
-:{{tx}}
+:<!--0.5-second delay-->
+<pre>{
+	"$type": "RPG.GameCore.PropSetupUITrigger",
+	"ButtonIcon": "SpriteOutput/TalkIcon/ChatIcon.png",
+	"IconType": "ChatLoopIcon",
+	"ButtonText": {
+		"Hash": 278713942
+	},
+	"ButtonCallback": [
+		{
+			"$type": "RPG.GameCore.TriggerCustomString",
+			"CustomString": {
+				"Value": "Mission_100050304_Prop_4_300003_BtnClick"
+			}
+		}
+	],
+	"InteractAngleRange": 180,
+	"SkipFakeAvatar": true,
+	"TargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvPropEx",
+		"FetchType": "SinglePropByPropID",
+		"SinglePropID": {
+			"GroupID": {
+				"fixedValue": {
+					"Value": 4
+				}
+			},
+			"ID": {
+				"fixedValue": {
+					"Value": 300003
+				}
+			}
+		}
+	}
+}</pre>
 {{Dialogue End}}
 
 ==Other Languages==

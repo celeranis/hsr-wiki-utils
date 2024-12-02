@@ -7,11 +7,11 @@ PageTitle=#One, Two, Three... Billboards!#
 |title         = 
 |image         = <!--Mission One, Two, Three... Billboards!.png-->
 |type          = Adventure
-|event_name    = 
+|event_name    = Sound Hunt Ninjutsu Inscription
 |chapter       = Sound Hunt Ninjutsu Inscription
 |requirements  = {{subst:void|<!--Unknown: {"Type":"Manual"}-->}}
 |summary       = <!--official mission summary from Fate's Atlas-->
-|characters    = Trailblazer
+|characters    = Intellitron Merchant; Trailblazer
 |startLocation = [[Penacony]] - [[Golden Hour]]
 |world         = Penacony
 |area          = Golden Hour
@@ -19,7 +19,7 @@ PageTitle=#One, Two, Three... Billboards!#
 |next          = 
 |rewards       = Credit*5,000
 }}
-'''''One, Two, Three... Billboards!''''' is an [[Adventure Mission]] on [[Penacony]] in the chapter [[Sound Hunt Ninjutsu Inscription]].
+'''''One, Two, Three... Billboards!''''' is an Event [[Adventure Mission]] from the [[Sound Hunt Ninjutsu Inscription]] event.
 
 ==Steps==
 # Collect inspiration for composing a song by wandering around the Golden Hour
@@ -34,17 +34,119 @@ PageTitle=#One, Two, Three... Billboards!#
 -->
 ==Dialogue==
 {{Stub Dialogue}}
-
-===Collect inspiration for composing a song by wandering around the Golden Hour===
+===Collect inspiration for composing a song by wandering around the Golden Hour{{subst:void|<!--802611801-->}}===
 {{Mission Description|type=adventure|location=Golden Hour|You've become the manager of the music party's performing band, and now your band needs to complete 3 performances on the stage in the middle of the campus.<br />Wander around the Golden Hour to help Rappa collect inspiration for composing.}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Unused &mdash; EnterDistrict_G558)
+:'''Intellitron Merchant:''' ...First beta for a new game. Don't miss out.
+::'''Intellitron Merchant:''' Give it a spin. Immerse yourself in a perfect game experience at no cost. It's guaranteed high-octane, 100% assured fun!
+::{{DIcon|Arrow}} Feels like so many games have gone into beta testing recently.
+::'''Intellitron Merchant:''' *sigh* Paperfold University is holding a school celebration that has attracted many visitors &mdash; the perfect opportunity to launch my game and make some bank. The revenue generated for this title I developed will definitely be enough for the top spots in the ranking.
+::{{tx}}
+::{{DIcon|Talk}} Why can't I find it on the ranking?
+:::'''Intellitron Merchant:''' Can't find it? Look... under the rhythm game category in the free games ranking, then choose recent new titles in the anime theme, sort by launch time, and there it is.
+:::{{tx}}
+::;(Return to previous option selection)
+::{{DIcon|Talk}} Actually, there is a game with a similar theme...
+:::You tell him about the Pepeshi merchant, and remember to lavish praise on just how fun his game was.
+:::{{tx}}
+::;(Return to previous option selection)
+::{{DIcon|Arrow}} Let me play it first.
+:::'''Intellitron Merchant:''' Okay, I'll leave the machine here. You can turn it on if you want to play. Don't forget to fill out the feedback form if you've got any suggestions.
+:::{{tx}}
+:<pre>{
+	"$type": "RPG.GameCore.ShowUI",
+	"Name": "Ui.MusicRhythm.MusicRhythmChooseLevelPage",
+	"WaitForExit": true,
+	"Param": {
+		"Value": "9"
+	},
+	"OnUICustomEvent": [],
+	"OnUIExitImmediately": [
+		{
+			"$type": "RPG.GameCore.EndDialogueEntityInteract"
+		}
+	]
+}</pre>
+
+;(Talk to Intellitron Merchant)
+:'''Intellitron Merchant:''' It won't cost anything to playtest this new game. Immerse yourself in a perfect game experience at no cost. It's guaranteed high-octane, 100% assured fun!
+:{{DIcon|Travel Log}} Let me play it.
+:<pre>{
+	"$type": "RPG.GameCore.ShowUI",
+	"Name": "Ui.MusicRhythm.MusicRhythmChooseLevelPage",
+	"WaitForExit": true,
+	"Param": {
+		"Value": "9"
+	},
+	"OnUIExitImmediately": [
+		{
+			"$type": "RPG.GameCore.EndDialogueEntityInteract"
+		}
+	]
+}</pre>
+:{{DIcon|Exit}} I've got something else to do.
+
 {{Dialogue End}}
 
-===Play the new arcade game developed by the Intellitron merchant===
+===Play the new arcade game developed by the Intellitron merchant{{subst:void|<!--802611804-->}}===
 {{Mission Description|type=adventure|location=Golden Hour|update|You've become the manager of the music party's performing band, and now your band needs to complete 3 performances on the stage in the middle of the campus.<br />Obtain a record of the billboard's beats. Help Rappa collect inspiration to help with composing.}}
 {{Dialogue Start}}
 :{{tx}}
+:'''Intellitron Merchant:''' Not bad, eh? Innovative gameplay, excellent graphics &mdash; there aren't many high-quality games like this out there anymore. It's really impressive for my first title.
+:{{DIcon|Arrow}} Flawless. 10 points.
+:{{DIcon|Arrow}} Eh. So-so.
+:{{DIcon|Arrow}} Can't compare to ''Hanu's Adventure''.
+:'''Intellitron Merchant:''' Haha, I didn't specialize in making games before. I was a band keyboardist. I never wrote code, but my composition skills were top-notch.
+:'''Intellitron Merchant:''' Back then, I thought having a dream was a blessing. Dropping out of school with friends, forming a band, going on the road playing at various venues... all to seek a chance to step on the grand stage.
+:'''Intellitron Merchant:''' ...Heh, I was really dumb back then.
+:{{DIcon|Arrow}} Why did you give up music?
+:{{DIcon|Arrow}} So you changed professions and made games instead?
+:'''Intellitron Merchant:''' It's too tough to try to make a living with music. I was really happy playing shows, but life had to go on. It was really cool to have dreams as a kid, but as time moved on, it seemed really stupid to cling to nothing else but dreams.
+:'''Intellitron Merchant:''' The band was racking up losses, and life's pressures just became greater. My friends and I finally had a huge row, and I quit the band. I later heard that they couldn't carry on anyway, and disbanded. I wonder what they're all doing now.
+:'''Intellitron Merchant:''' ...They're all just pointless stories. You c an listen with a pinch of salt.
+:{{DIcon|Arrow}} Do you regret it?
+:'''(Trailblazer):''' So... do you regret it? Giving up on your original dream for a better life?
+:{{tx}}
+:{{tx}}
+
+;(Talk to Intellitron Merchant)
+:'''Intellitron Merchant:''' It won't cost anything to playtest this new game. Immerse yourself in a perfect game experience at no cost. It's guaranteed high-octane, 100% assured fun!
+:{{DIcon|Travel Log}} Let me play it.
+:<pre>{
+	"$type": "RPG.GameCore.ShowUI",
+	"Name": "Ui.MusicRhythm.MusicRhythmChooseLevelPage",
+	"WaitForExit": true,
+	"Param": {
+		"Value": "9"
+	},
+	"OnUIExitImmediately": [
+		{
+			"$type": "RPG.GameCore.EndDialogueEntityInteract"
+		}
+	]
+}</pre>
+:{{DIcon|Exit}} I've got something else to do.
+
+;(Unused &mdash; MusicRhythm_ShowUI)
+<pre>{
+	"$type": "RPG.GameCore.WaitFrame"
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.ShowUI",
+	"Name": "Ui.MusicRhythm.MusicRhythmChooseLevelPage",
+	"WaitForExit": true,
+	"Param": {
+		"Value": "9"
+	},
+	"OnUICustomEvent": [],
+	"OnUIExitImmediately": [
+		{
+			"$type": "RPG.GameCore.EndDialogueEntityInteract"
+		}
+	]
+}</pre>
 {{Dialogue End}}
 
 ==Other Languages==

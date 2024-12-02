@@ -35,14 +35,107 @@ PageTitle=#Exorcismal Chronicle#
 ==Dialogue==
 {{Stub Dialogue}}
 
-===Talk to Shouling the spiritfarer===
+===Talk to Shouling the spiritfarer{{subst:void|<!--801515001-->}}===
 {{Mission Description|type=adventure|location=Fyxestroll Garden|Capturing heliobi requires practice like any other skill. The spiritfarer extends an invitation to you to participate in some well-prepared heliobi training at the Suppression Tower.}}
 {{Dialogue Start}}
+<pre>{
+	"$type": "RPG.GameCore.WaitUIControllerClose",
+	"UIControllerName": "HeliobusActionDayResultPerformanceDialog"
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.WaitUIControllerClose",
+	"UIControllerName": "HeliobusActionDayResultPage"
+}</pre>
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
 :{{tx}}
 {{Dialogue End}}
 
-===Accept the heliobus' challenge===
+===Accept the heliobus' challenge{{subst:void|<!--801515002-->}}===
 {{Dialogue Start}}
+
+
+:{{DIcon|Talk}} Suppression Tower, Pavilion of Cessation
+;(If {{cx}}<!--SubMission Finish: 801510117-->)
+::The Suppression Tower &mdash; part of Fyxestroll Garden's "Evil Binding Matrix" &mdash; is a containment receptacle used to restrain heliobi.
+:<pre>{
+	"$type": "RPG.GameCore.ShowMenu",
+	"DisplaySingleMenuItem": true
+}</pre>
+;(Otherwise)
+:<pre>{
+	"$type": "RPG.GameCore.RandomConfig",
+	"OddsList": [
+		{
+			"IsDynamic": false,
+			"FixedValue": {
+				"Value": 1
+			}
+		},
+		{
+			"IsDynamic": false,
+			"FixedValue": {
+				"Value": 1
+			}
+		},
+		{
+			"IsDynamic": false,
+			"FixedValue": {
+				"Value": 1
+			}
+		},
+		{
+			"IsDynamic": false,
+			"FixedValue": {
+				"Value": 1
+			}
+		}
+	],
+	"TaskList": [
+		{
+			"$type": "RPG.GameCore.PlayMissionTalk",
+			"SimpleTalkList": [
+				{
+					"TalkSentenceID": 502620251,
+					"ProtectTime": 2
+				}
+			]
+		},
+		{
+			"$type": "RPG.GameCore.PlayMissionTalk",
+			"SimpleTalkList": [
+				{
+					"TalkSentenceID": 502620252,
+					"ProtectTime": 2
+				}
+			]
+		},
+		{
+			"$type": "RPG.GameCore.PlayMissionTalk",
+			"SimpleTalkList": [
+				{
+					"TalkSentenceID": 502620253,
+					"ProtectTime": 2
+				}
+			]
+		},
+		{
+			"$type": "RPG.GameCore.PlayMissionTalk",
+			"SimpleTalkList": [
+				{
+					"TalkSentenceID": 502620254,
+					"ProtectTime": 2
+				},
+				{
+					"TalkSentenceID": 502620255,
+					"ProtectTime": 2
+				}
+			]
+		}
+	],
+	"ContinuousNotRepeat": true
+}</pre>
 :{{tx}}
 {{Dialogue End}}
 

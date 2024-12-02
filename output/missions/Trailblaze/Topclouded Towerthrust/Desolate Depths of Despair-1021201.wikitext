@@ -11,7 +11,7 @@ PageTitle=#Desolate Depths of Despair#
 |chapter       = Topclouded Towerthrust
 |requirements  = [[Trailblaze Mission]] ''[[Humming Antlers, Entwined Horns]]'' completed
 |summary       = In a sudden turn of events, the master primus of the Disciples of Sanctus Medicus calls out on the brink of death for the one who brought the Stellaron to her, the assistant from the Antimatter Legion. Then, the guide who had been beside you all this time, "Miss Tingyun," suddenly turns into a ball of flame in a terrifying fashion, declaring to you their true identity of Phantylia, the Lord Ravager.<br />Phantylia uses the Legion's soldiers to block your path while moving deeper into Scalegorge Waterscape to claim the source of the Xianzhou natives' immortality &mdash; the Ambrosial Arbor.
-|characters    = Trailblazer
+|characters    = Alarmed Cloud Knight; Aurumaton Guard; Captured Disciple; Cloud Knight Guard; Cloud Knight Guarding Prisoners; Deranged Disciple; Dying Cloud Knight; Fu Xuan; Injured Cloud Knight; March 7th; On-Duty Cloud Knight; Recovered Cloud Knight; Recuperating Cloud Knight; Sky-Faring Commission Foxian; Tingyun; Tingyun (?); Trailblazer; Welt; Woman in Healer Dress
 |startLocation = [[The Xianzhou Luofu]] - [[Artisanship Commission]]
 |world         = The Xianzhou Luofu
 |area          = Artisanship Commission
@@ -26,13 +26,11 @@ PageTitle=#Desolate Depths of Despair#
 # Check on the survivors
 # Join up with the Cloud Knights commanded by Fu Xuan
 # Get information on the outcome of the fighting and wait for Fu Xuan to return
-# Follow Fu Xuan
 # Talk to March 7th and discuss the current state of affairs
-# Head to the Aureate Elixir Furnace and face the Disciples of Sanctus Medicus
-# Take the starskiff and enter Scalegorge Waterscape
-# Head to the Aureate Elixir Furnace and face the Disciples of Sanctus Medicus
-# Turn off the 3 small elixir crucibles
 # Get information on the outcome of the fighting and wait for Fu Xuan to return
+# Follow Fu Xuan
+# Turn off the 3 small elixir crucibles
+# Head to the Aureate Elixir Furnace and face the Disciples of Sanctus Medicus
 # Take the starskiff and enter Scalegorge Waterscape
 
 <!--
@@ -44,77 +42,561 @@ PageTitle=#Desolate Depths of Despair#
 -->
 ==Dialogue==
 {{Stub Dialogue}}
-
-===Pass through the Artisanship Commission's shortcut and head to the Alchemy Commission===
+===Pass through the Artisanship Commission's shortcut and head to the Alchemy Commission{{subst:void|<!--102120101-->}}===
 {{Mission Description|type=trailblaze|location=Artisanship Commission|The storm calms in the Artisanship Commission and the shortcut also opens up. You should pass through here as per the general's recommendations and head to the Alchemy Commission.}}
 {{Dialogue Start}}
+<pre>{
+	"$type": "RPG.GameCore.PropSetVisibility",
+	"SpecifiedRelativePaths": [],
+	"TargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvPropEx",
+		"FetchType": "SinglePropByPropID",
+		"SinglePropID": {
+			"GroupID": {
+				"fixedValue": {
+					"Value": 8
+				}
+			},
+			"ID": {
+				"fixedValue": {
+					"Value": 300011
+				}
+			}
+		}
+	}
+}</pre>
+:{{A|VO chapter2 6 mar7th 101.ogg}} '''March 7th:''' ...Whoa, looks like the battle here was intense...
+:{{A|VO chapter2 6 tingyun 101.ogg}} '''Tingyun:''' The master diviner must have launched the campaign while we were delayed in the Artisanship Commission.
+:{{DIcon|Arrow}} She must have divined it was the right time.
+::{{A|VO chapter2 6 welt 101.ogg}} '''Welt:''' Time is of the essence. The most important task for the Xianzhou Luofu is suppressing the Stellaron.
+::{{A|VO chapter2 6 welt 102.ogg}} '''Welt:''' General Jing Yuan tasked the master diviner with commanding the Cloud Knights &mdash; he would've known she'd act on the results of her divination.
+:{{DIcon|Arrow}} I can't imagine Fu Xuan obeying orders to the word.
+::{{A|VO chapter2 6 welt 103.ogg}} '''Welt:''' Indeed. Since General Jing Yuan tasked the master diviner with commanding the Cloud Knights, he must've known she'd act on the results of her divination.
+:{{A|VO chapter2 6 mar7th 102.ogg}} '''March 7th:''' Thank goodness the general didn't make us go with the Knights... Fighting is totally different from adventuring. All these people... I&mdash;It's tough to bear.
+:{{A|VO chapter2 6 tingyun 102.ogg}} '''Tingyun:''' I'm afraid this is nothing, benefactor...
+:{{A|VO chapter2 6 tingyun 103.ogg}} '''Tingyun:''' Centuries ago, an Emanator of Abundance besieged the Luofu with the aim of taking the Ambrosial Arbor. They destroyed half our delves and killed most of the Cloud Knights.
+:{{A|VO chapter2 6 tingyun 104.ogg}} '''Tingyun:''' For long-life species, such events are more like yesterday's memories than ancient history. This awful spectacle is child's play in comparison.
+:{{A|VO chapter2 6 mar7th 103.ogg}} '''March 7th:''' Hey, is that supposed to make us feel better!?
+:{{A|VO chapter2 6 welt 104.ogg}} '''Welt:''' It's hard to tell if the master diviner won or lost here.
+:{{DIcon|Arrow}} I think she won total victory!
+::{{A|VO chapter2 6 mar7th 104.ogg}} '''March 7th:''' I think so too! I can't see many Cloud Knights &mdash; the Xianzhou must have fought well!
+:{{DIcon|Arrow}} Seems to me, her troops were wiped out...
+::{{A|VO chapter2 6 mar7th 105.ogg}} '''March 7th:''' Hey, whose side are you on!? I can't see many Cloud Knights &mdash; the Xianzhou must have fought well!
+:{{DIcon|Arrow}} Let's play it safe and say it was a draw.
+::{{A|VO chapter2 6 mar7th 106.ogg}} '''March 7th:''' ...A draw? This isn't a tournament, y'know! I can't see many Cloud Knights &mdash; the Xianzhou must have fought well!
+:{{A|VO chapter2 6 welt 105.ogg}} '''Welt:''' ...Not necessarily. There'd usually be a base with supporting forces set up after a successful engagement, but we don't see any of that.
 :{{tx}}
+
+;(Talk to Injured Cloud Knight)
+:A painful moan amidst the ravaged battlefield draws your attention.
+:{{A|VO chapter2 6 cknightL 101.ogg}} '''Injured Cloud Knight:''' Reignbow's blessing... You're not Disciples of Sanctus Medicus...
+:{{A|VO chapter2 6 mar7th 112.ogg}} '''March 7th:''' Stop moving around! Let's see if there's a way to help you recover faster.
+:{{DIcon|Arrow}} (provides medical attention)
+::{{A|VO chapter2 6 mar7th 113.ogg}} '''March 7th:''' Come on, take this. It'll help with your injuries.
+:<pre>{
+	"$type": "RPG.GameCore.SelectMissionItem",
+	"SubMissionID": 102120141,
+	"ItemIDList": [
+		400007,
+		401007,
+		408408,
+		408602
+	],
+	"ItemHiddenIDList": [],
+	"ItemSelect": [
+		{
+			"Item1": 400007,
+			"TriggerCustomString": "ComsumeItem_102120141"
+		},
+		{
+			"Item1": 401007,
+			"TriggerCustomString": "ComsumeItem_102120141"
+		},
+		{
+			"Item1": 408408,
+			"TriggerCustomString": "ComsumeItem_102120141"
+		},
+		{
+			"Item1": 408602,
+			"TriggerCustomString": "ComsumeItem_102120141"
+		}
+	],
+	"SlotNum": 1,
+	"InfoText": {
+		"Hash": 524940953
+	},
+	"SimpleTalk": {
+		"TextSpeed": 20,
+		"ProtectTime": 0.8
+	},
+	"OnSubmitSucceed": [
+		{
+			"$type": "RPG.GameCore.EndPerformance"
+		}
+	],
+	"OnSubmitCancel": [
+		{
+			"$type": "RPG.GameCore.TriggerCustomString",
+			"CustomString": {
+				"Value": "TalkSentence_102120930"
+			}
+		}
+	]
+}</pre>
+:{{DIcon|Exit}} (temporarily giving up)
+::{{A|VO chapter2 6 mar7th 114.ogg}} '''March 7th:''' Don't we have anything to help her?
+::{{A|VO chapter2 6 mar7th 115.ogg}} '''March 7th:''' Uhh, you wait here. I'm gonna get your comrades to help you.
+::{{A|VO chapter2 6 cknightL 102.ogg}} '''Injured Cloud Knight:''' Just leave me...
+;(Unused &mdash; ComsumeItem_102120141)
+
+
+:{{DIcon|Loupe}} Investigate
+:Its armor is covered in sword marks. But the strange thing is that these marks all came from the deceased's own weapon.
+
+:{{DIcon|Loupe}} Investigate
+:A huge, wolf-like beast lies on the ground. Its corpse shows no signs of life, but tiny saplings are sprouting from underneath it.
+
+:{{DIcon|Loupe}} Investigate
+:Removing the helmet, you look straight into the face of the fallen Cloud Knight.
+:An expression of agony is frozen on the face of this Xianzhou man of indiscernible age. You find a cluster of mutated branches at the temples of his hair &mdash; he seems to have been subjected to purgatory-like torture before his death.
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{A|VO chapter2 6 mar7th 107 m.ogg}} {{A|VO chapter2 6 mar7th 107 f.ogg}} '''March 7th:''' Be careful, (Trailblazer). Those monsters are pretty tough...
+
+;(Upon reaching the destination)
+:{{A|VO chapter2 6 mar7th 108.ogg}} '''March 7th:''' Look, there's someone over there!
 {{Dialogue End}}
 
-===Check on the survivors===
+===Check on the survivors{{subst:void|<!--102120104-->}}===
 {{Mission Description|type=trailblaze|location=Alchemy Commission|update|The Alchemy Commission lies in total chaos with a large-scale skirmish just kicking off. Just as you plan to stay away and assess the situation, you hear the sound of survivors calling for help.}}
 {{Dialogue Start}}
-:{{tx}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+<pre>{
+	"$type": "RPG.GameCore.PlayNPCBubbleTalk",
+	"BubbleTalkInfoList": [
+		{
+			"AutoSkipTime": 2,
+			"GroupID": 13,
+			"GroupNpcID": 400001,
+			"TalkSentenceID": 102121426
+		},
+		{
+			"AutoSkipTime": 2,
+			"GroupID": 13,
+			"GroupNpcID": 400002,
+			"TalkSentenceID": 102121427
+		}
+	],
+	"BubbleTalkType": "Normal",
+	"LoopInterval": 1
+}</pre>
+
+;(Upon reaching the destination)
+----
+:{{A|VO chapter2 6 mar7th 109.ogg}} '''March 7th:''' Here! There are still survivors here...
+:{{A|VO chapter2 6 welt 107.ogg}} '''Welt:''' ...
+:{{A|VO chapter2 6 ywmcB 102.ogg}} '''Woman in Healer Dress:''' Hmm? You're not the Knights... What is your purpose here? It's dangerous.
+:{{A|VO chapter2 6 welt 108.ogg}} '''Welt:''' We're reinforcements sent by the general. Where's everyone else?
+:{{A|VO chapter2 6 ywmcB 103.ogg}} '''Woman in Healer Dress:''' Tsk, resorting to short-life species as reinforcements... Hehe, Jing Yuan is truly running out of options.
+:{{A|VO chapter2 6 cknightJ 102.ogg}} '''Dying Cloud Knight:''' Run! She's... a Disciple of Sanctus Medicus!
+:{{A|VO chapter2 6 ywmcB 104.ogg}} '''Woman in Healer Dress:''' Silence. If my healing worked, you'll become one of us...
+:{{A|VO chapter2 6 ywmcB 105.ogg}} '''Woman in Healer Dress:''' ...and then it's not just me they'll be running from.
+;(Enter battle)
+::Wave 1: {{Enemy List|Mara-Struck Soldier*1/+66.7% HP, +61 SPD}}
+::Wave 2: {{Enemy List|Abundance Sprite: Wooden Lupus*2; Abundance Sprite: Golden Hound*1}}
+::Wave 3: {{Enemy List|Abundance Sprite: Golden Hound*1; Disciples of Sanctus Medicus: Ballistarius*1; Abundance Sprite: Wooden Lupus*1}}
+----
+----
+:{{A|VO chapter2 6 mar7th 110.ogg}} '''March 7th:''' H&mdash;Hold on! We'll find someone to help...
+:{{A|VO chapter2 6 cknightJ 105.ogg}} '''Dying Cloud Knight:''' Don't waste your time. They've "converted" me. I don't have much longer...
+:{{A|VO chapter2 6 cknightJ 106.ogg}} '''Dying Cloud Knight:''' Go... The master diviner's troops are ahead...
+:He stops talking. It could be because he is exhausted, or he's waiting for you to leave him be.
+:{{A|VO chapter2 6 welt 109.ogg}} '''Welt:''' ...Let's go.
+----
+
+;(Talk to Dying Cloud Knight)
+:{{A|VO chapter2 6 cknightJ 107.ogg}} '''Dying Cloud Knight:''' ...
 {{Dialogue End}}
 
-===Join up with the Cloud Knights commanded by Fu Xuan===
+===Join up with the Cloud Knights commanded by Fu Xuan{{subst:void|<!--102120106-->}}===
 {{Mission Description|type=trailblaze|location=Alchemy Commission|update|According to the survivors, the master diviner had led the army to attack the rebel forces made up of Disciples of Sanctus Medicus. Your most urgent task right now is to head to the Knights' encampment and meet up with them.}}
 {{Dialogue Start}}
-:{{tx}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{A|VO chapter2 6 tingyun 105.ogg}} '''Tingyun:''' The Disciples of Sanctus Medicus were in hiding for so long... now they finally show their face. Did the master diviner fail to foresee this...?
+:{{A|VO chapter2 6 tingyun 1061.ogg}} '''Tingyun:''' Be careful, benefactors. The Disciples of Sanctus Medicus worship Yaoshi the Plagues Author &mdash; the greatest enemy of the Xianzhou.
+:{{A|VO chapter2 6 tingyun 1062.ogg}} '''Tingyun:''' The Alliance has been trying to root out their secret organization for millennia &mdash; it's no coincidence that they've chosen this moment to reveal themselves.
+
+;(Upon reaching the destination)
+<pre>{
+	"$type": "RPG.GameCore.PropSetVisibility",
+	"SpecifiedRelativePaths": [],
+	"TargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvPropEx",
+		"FetchType": "SinglePropByPropID",
+		"SinglePropID": {
+			"GroupID": {
+				"fixedValue": {
+					"Value": 18
+				}
+			},
+			"ID": {
+				"fixedValue": {
+					"Value": 300002
+				}
+			}
+		}
+	}
+}</pre>
+----
+:<!--1-second delay-->
+----
+:{{A|VO chapter2 6 cknightK 101.ogg}} '''Cloud Knight Guard:''' Who goes there? Show yourselves!
+:{{A|VO chapter2 6 cknightK 102.ogg}} '''Cloud Knight Guard:''' Wait, it's you...! Quickly, in here! It's dangerous outside.
+:{{A|VO chapter2 6 mar7th 111.ogg}} '''March 7th:''' You recognize us?
+:{{A|VO chapter2 6 cknightK 103.ogg}} '''Cloud Knight Guard:''' Are you not the general's guests? The master diviner prophesied your arrival &mdash; we were ordered to wait for you under any circumstances.
+:{{DIcon|Arrow}} Fu Xuan was here?
+:{{DIcon|Arrow}} Wait for us?
+:{{A|VO chapter2 6 cknightK 104.ogg}} '''Cloud Knight Guard:''' Yes. The master diviner ordered us to remain stationed here and went to scout ahead. They're saying the Disciples of Sanctus Medicus have returned &mdash; they haven't been seen for an age... The troops are anxious.
+:{{A|VO chapter2 6 cknightK 105.ogg}} '''Cloud Knight Guard:''' It's good that you're here &mdash; the master diviner said the Knights weren't to move out until you arrived.
+:{{A|VO chapter2 6 cknightK 106.ogg}} '''Cloud Knight Guard:''' Please wait in the camp &mdash; we'll decide on our next steps once the master diviner returns.
+----
+:{{A|VO chapter2 6 welt 111.ogg}} '''Welt:''' That the Cloud Knights received orders not to advance is a bad sign. The Disciples of Sanctus Medicus... I've heard the name before. If memory serves, they're an underground sect of the Abundance that's said to have lain dormant within the Xianzhou, plotting to overthrow the Alliance...
+:{{A|VO chapter2 6 welt 112.ogg}} '''Welt:''' The Stellaron has certainly caused Abundance-like abnormalities &mdash; is that what motivated the Disciples to come out of the shadows? No. The Knight's main force remains intact... Something must have happened &mdash; something we're not aware of. The master diviner isn't here &mdash; let's head into camp and see what we can learn from the troops here.
+:{{A|VO chapter2 6 tingyun 107.ogg}} '''Tingyun:''' Good idea, why don't you take a look around, benefactors? My feet need a rest.
+----
+
+:{{DIcon|Loupe}} Investigate
+:{{A|VO chapter2 6 welt 110.ogg}} '''Welt:''' May he rest in peace.
 {{Dialogue End}}
 
-===Get information on the outcome of the fighting and wait for Fu Xuan to return===
+===Get information on the outcome of the fighting and wait for Fu Xuan to return{{subst:void|<!--102120107-->}}===
 {{Mission Description|type=trailblaze|location=Alchemy Commission|update|The Cloud Knights are stationed temporarily in a market in the Alchemy Commission. You learn that Fu Xuan had left with the scouts to assess the enemy.<br />All you can do for now is wait... or talk with the Knights to find out about the fighting so far.}}
 {{Dialogue Start}}
+
+
+;(Talk to On-Duty Cloud Knight)
+:There is a ghastly paleness in the face of this resident Cloud Knight. As you approach him, he nods his head in salute.
+::{{A|VO chapter2 6 cknightM 101.ogg}} '''On-Duty Cloud Knight:''' Forgive me for being brief &mdash; warfare is a dangerous business. There's no time for idle chat.
+::{{DIcon|Arrow}} How's the situation?
+::{{A|VO chapter2 6 cknightM 102.ogg}} '''On-Duty Cloud Knight:''' We took over this place a few hours ago under the master diviner's command. It was only afterwards that we learned our enemies were none other than the Disciples of Sanctus Medicus &mdash; those who worship the {{Rubi|Plagues Author|Yaoshi}}.
+::{{A|VO chapter2 6 cknightM 103.ogg}} '''On-Duty Cloud Knight:''' Everything was going as planned. The sorcerers of the Disciples and the fantastic creatures they commanded were no match for us.
+::{{A|VO chapter2 6 cknightM 104.ogg}} '''On-Duty Cloud Knight:''' ...Then, after a while, our comrades suddenly started to slaughter one another...
+:;(If {{cx}}<!--SubMission Finish: 102120142-->)
+:::{{DIcon|Arrow}} They became mara-struck...
+::::{{A|VO chapter2 6 cknightM 105.ogg}} '''On-Duty Cloud Knight:''' Curse it! What Sanctus Medicus sorcery did they use on us!?
+:::{{DIcon|Arrow}} Those monsters...
+::::{{A|VO chapter2 6 cknightM 106.ogg}} '''On-Duty Cloud Knight:''' Yes, among the Sanctus Medicus monsters... there were our comrades.
+:;(If {{cx}}<!--SubMission not Finish: 102120142-->)
+:::{{DIcon|Arrow}} They became mara-struck...
+::::{{A|VO chapter2 6 cknightM 105.ogg}} '''On-Duty Cloud Knight:''' Curse it! What Sanctus Medicus sorcery did they use on us!?
+:::{{DIcon|Arrow}} Those monsters...
+::::{{A|VO chapter2 6 cknightM 106.ogg}} '''On-Duty Cloud Knight:''' Yes, among the Sanctus Medicus monsters... there were our comrades.
+:::{{DIcon|Arrow}} There's a wounded warrior that didn't make it back to his unit...
+::::{{A|VO chapter2 6 cknightM 107.ogg}} '''On-Duty Cloud Knight:''' Thanks for your intel. I'll dispatch someone immediately.
+:{{A|VO chapter2 6 cknightM 108.ogg}} '''On-Duty Cloud Knight:''' The greatest fear of the Xianzhou people is succumbing to our mara-struck form around others. To do so means that we have given up on being human, lost to the abomination sleeping in our immortal blood... and violated the Reignbow's admonishments.
+:{{A|VO chapter2 6 cknightM 109.ogg}} '''On-Duty Cloud Knight:''' What the Disciples of Sanctus Medicus did are despicable acts that every Alliance resident detests!
+:{{A|VO chapter2 6 cknightM 110.ogg}} '''On-Duty Cloud Knight:''' ...I swear to the Arbiter that I will avenge my comrades.
+
+;(Talk to Sky-Faring Commission Foxian)
+:{{A|VO chapter2 6 officerD 101.ogg}} '''Sky-Faring Commission Foxian:''' The Cloud Knights undergo such thorough training. How could they lose control like this?
+:{{A|VO chapter2 6 officerD 102.ogg}} '''Sky-Faring Commission Foxian:''' It's one thing for humans to be stricken with mara. But foxians and Vidyadhara...?
+
+;(Talk to Aurumaton Gatekeeper)
+:{{A|VO chapter2 6 jinrenB 101.ogg}} '''Aurumaton Guard:''' Command Talisman required for operation...
+:{{A|VO chapter2 6 mar7th 117.ogg}} '''March 7th:''' What does it mean?
+:{{A|VO chapter2 6 welt 113.ogg}} '''Welt:''' We probably need to present it with a command for it to act.
+
+;(Talk to Deranged Disciple)
+:The Cloud Knights are guarding a prisoner who is murmuring to himself.
+:{{A|VO chapter2 6 ywmcD 101.ogg}} '''Deranged Disciple:''' I... saw it... I saw myself become thunder... become a storm...
+:{{A|VO chapter2 6 ywmcD 102.ogg}} '''Deranged Disciple:''' That scent in the elixir crucible... I could smell the future...
+:{{A|VO chapter2 6 ywmcD 103.ogg}} '''Deranged Disciple:''' Mere flesh will not trap me... I am the Ebon Deer. I see the leaves and branches covering the sky. I will change again...
+:{{A|VO chapter2 6 cknightT 101.ogg}} '''Cloud Knight Guarding Prisoners:''' We captured a few devils from the Disciples of Sanctus Medicus. Some of them are already mad, and this one is the maddest.
+:The alchemist's eyes were unfocused, darting back and forth, as if he were looking at the two diverging ends of a path.
+
+;(Talk to Captured Disciple)
+:{{A|VO chapter2 6 ywmcC 101.ogg}} '''Captured Disciple:''' ...Finally someone to talk to. These Cloud Knights are so serious, so boring, hehe...
+:{{DIcon|Talk}} About Stellarons...
+::{{A|VO chapter2 6 ywmcC 102.ogg}} '''Captured Disciple:''' That shining seed? Haha, I've seen it, so beautiful. If you gaze into it, there's a voice inside that speaks to you...
+::{{A|VO chapter2 6 mar7th 116 m.ogg}} {{A|VO chapter2 6 mar7th 116 f.ogg}} '''March 7th:''' (Trailblazer)... do you still remember Cocolia?
+::{{A|VO chapter2 6 player 101 m.ogg}} {{A|VO chapter2 6 player 101 f.ogg}} '''(Trailblazer):''' ...
+::{{A|VO chapter2 6 ywmcC 103.ogg}} '''Captured Disciple:''' The master said we could inject new life into the Ambrosial Arbor with it. Hehe, I didn't believe it at first.
+::{{A|VO chapter2 6 ywmcC 104.ogg}} '''Captured Disciple:''' We tried many methods, spending multiple lifetimes of short-life species, yet the Arbor showed no signs of resurrection.
+::{{A|VO chapter2 6 ywmcC 105.ogg}} '''Captured Disciple:''' But look upon it now, hehe &mdash; "only the power of an Aeon can recreate the miracle." Yes, yes, the mighty Sanctus Medicus! The Abundance!
+:;(Return to previous option selection)
+:{{DIcon|Talk}} About the Ambrosial Arbor...
+::{{A|VO chapter2 6 ywmcC 106.ogg}} '''Captured Disciple:''' So you witnessed it too? The Ambrosial Arbor's resurrection, hehe... Magnificent!
+::{{A|VO chapter2 6 ywmcC 107.ogg}} '''Captured Disciple:''' In the {{Rubi|befall era|Theophany Era}}, so far in the past that even long-life species cannot recall, Sanctus Medicus the Abundance gifted the Ambrosial Arbor to the Xianzhou Luofu. With that sacred tree, humanity realized many miracles: The fallow earth, the western soapberry, the altered flesh...
+::{{A|VO chapter2 6 ywmcC 108.ogg}} '''Captured Disciple:''' But that Devilish Archer ruined everything! They twisted right and wrong and erased Sanctus Medicus's achievements... But soon... soon we will return to the glory of the {{Rubi|befall era|Theophany Era}}!
+::{{A|VO chapter2 6 ywmcC 109.ogg}} '''Captured Disciple:''' You've seen the fantastic creatures that fought with us? They are only minor gifts of the Ambrosial Arbor...
+::{{A|VO chapter2 6 cknightN 102.ogg}} '''Alarmed Cloud Knight:''' Shut it, rambling rodent. The Cloud Knights will root all of you out soon.
+:;(Return to previous option selection)
+:{{DIcon|Talk}} What did you do to these Cloud Knights?
+::{{A|VO chapter2 6 ywmcC 110.ogg}} '''Captured Disciple:''' What did we do? We cured our kin! Hehe, it must hurt to be trapped in such weak flesh and blood...
+::{{A|VO chapter2 6 cknightN 103.ogg}} '''Alarmed Cloud Knight:''' You scum... If the order allowed I would cut you down now.
+::{{A|VO chapter2 6 ywmcC 111.ogg}} '''Captured Disciple:''' Oh, you don't understand... a short-life species couldn't understand. Mara-struck? Bah! It's a second life gifted by Sanctus Medicus! To eliminate the self! To achieve transcendence! A life of true freedom!
+::{{A|VO chapter2 6 ywmcC 112.ogg}} '''Captured Disciple:''' I see a desire for power in your eyes. This life is too short for you, isn't it? Hehe, I can... I can help you...
+::{{A|VO chapter2 6 cknightN 104.ogg}} '''Alarmed Cloud Knight:''' Don't listen, his words are poison.
+::{{A|VO chapter2 6 ywmcC 113.ogg}} '''Captured Disciple:''' We're just having fun, sir, hehe... Without the blessing of the Abundance, you short-life species would never be able to endure the transformation.
+:;(Return to previous option selection)
+:{{DIcon|Exit}} I don't have any more questions.
+:You fumble through your bag to find medicine for her wounds and administer it one drop at a time.
+:For a moment you are worried that medicine made for ordinary humans might not work on long-life species.
+----
+----
+:{{A|VO chapter2 6 cknightL 103.ogg}} '''Recovered Cloud Knight:''' ...Th&mdash;Thank you, all of you. I feel much better now.
+:{{A|VO chapter2 6 cknightL 104.ogg}} '''Recovered Cloud Knight:''' Thank goodness you're here... The garrison is up ahead, are you heading there now? I'll wait there for you.
+----
+{{Dialogue End}}
+
+===Talk to March 7th and discuss the current state of affairs{{subst:void|<!--102120119-->}}===
+{{Dialogue Start}}
+;(If {{Mission|Sinners Misled, Credence Falsified|showChapter=0}} has been completed)
+;(If {{Mission|Sinners Misled, Credence Falsified|showChapter=0}} has not been completed)
+::----
+
+;(Talk to March 7th)
+:{{A|VO chapter2 6 mar7th 138.ogg}} '''March 7th:''' When the Master Diviner gets back, we might be in for tough times... It's making me a little nervous.
+:{{A|VO chapter2 6 mar7th 139 m.ogg}} {{A|VO chapter2 6 mar7th 139 f.ogg}} '''March 7th:''' (Trailblazer), are you ready?
+:{{DIcon|Arrow}} Ready.
+:<pre>{
+	"$type": "RPG.GameCore.ShowDeleteMissionDialog",
+	"SubMissionID": 102120119,
+	"OnAllCompleted": [
+		{
+			"$type": "RPG.GameCore.FinishPerformanceMission",
+			"Key": "Mission_102120119"
+		}
+	],
+	"OnConfirm": [
+		{
+			"$type": "RPG.GameCore.FinishPerformanceMission",
+			"Key": "Mission_102120119"
+		}
+	]
+}</pre>
+:{{DIcon|Exit}} Not yet...
+{{Dialogue End}}
+
+===Get information on the outcome of the fighting and wait for Fu Xuan to return{{subst:void|<!--102120112-->}}===
+{{Dialogue Start}}
+:{{A|VO chapter2 6 fuxuan 111.ogg}} '''Fu Xuan:''' *sigh* Who said you'd be heading to the battlefield...
+:{{A|VO chapter2 6 mar7th 123.ogg}} '''March 7th:''' W&mdash;We're not?
+:{{A|VO chapter2 6 fuxuan 112.ogg}} '''Fu Xuan:''' Jing Yuan's orders. He said that the value of unexpected guests lies in the unexpected. The Cloud Knights' assault was to demonstrate our power to the enemy head-on... now it is time for the unexpected.
+:{{A|VO chapter2 6 fuxuan 113.ogg}} '''Fu Xuan:''' Please, come with me.
+:{{DIcon|Arrow}} You kept us waiting alright.
+:{{DIcon|Arrow}} Why didn't you tell us about the Disciples of Sanctus Medicus earlier?
+:{{DIcon|Arrow}} Please tell us the whole truth this time...
+:{{A|VO chapter2 6 welt 114.ogg}} '''Welt:''' The conflict is difficult, master diviner, but you have led your forces from the front lines and beyond in pursuit of the enemy. Admirable work.
+:{{A|VO chapter2 6 fuxuan 107.ogg}} '''Fu Xuan:''' Hardly! A diviner must acquire first-hand knowledge in order to calculate the future. Collecting intelligence in this way assists me in achieving the right answer...
+:{{A|VO chapter2 6 fuxuan 108.ogg}} '''Fu Xuan:''' Wait... what's all this about a difficult conflict? The Disciples of Sanctus Medicus have been scheming for a long time, but our army is in no way inferior. How can things be so difficult?
+:{{DIcon|Arrow}} Is this a segue into us joining the fray?
+::{{A|VO chapter2 6 fuxuan 109.ogg}} '''Fu Xuan:''' Sharp as always.
+::{{A|VO chapter2 6 mar7th 118.ogg}} '''March 7th:''' *sigh* I knew we'd spent too long around the master diviner &mdash; now we're predicting the future...
+:{{DIcon|Arrow}} Just ask for our help already...
+::{{A|VO chapter2 6 fuxuan 110.ogg}} '''Fu Xuan:''' It would seem you came prepared.
+::{{A|VO chapter2 6 mar7th 119.ogg}} '''March 7th:''' *sigh* The first time we met Madam Yukong she said something like: "This is a Xianzhou affair and there's no need for the Express to get involved..."
+::{{A|VO chapter2 6 mar7th 120.ogg}} '''March 7th:''' ...and now here we are running around doing everything. Even the IPC takes it easier on us.
+:{{A|VO chapter2 6 mar7th 121.ogg}} '''March 7th:''' Lemme guess, what are we up to this time? Could it be... heading to the front lines? Leading the Cloud Knight charge?
 :{{tx}}
 {{Dialogue End}}
 
-===Follow Fu Xuan===
+===Follow Fu Xuan{{subst:void|<!--102120113-->}}===
 {{Mission Description|type=trailblaze|location=Alchemy Commission|update|The master diviner soon returns to the encampment. According to her, the Disciples of Sanctus Medicus have summoned bizarre abominations and used sorcery to disturb people's minds, making the Knights unable to push forward.<br />She has figured out the reason but require the help of short-life individuals like you to overcome it.}}
 {{Dialogue Start}}
-:{{tx}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{A|VO chapter2 6 fuxuan 1151.ogg}} '''Fu Xuan:''' After receiving the Ambrosial Arbor, the Alchemy Commission was once the Luofu's most vital commission.
+:{{A|VO chapter2 6 fuxuan 1152.ogg}} '''Fu Xuan:''' After all, it was they who changed the Xianzhou natives into long-life species... They also developed many incredible technologies from the tree itself.
+
+;(Upon reaching the destination)
+:{{A|VO chapter2 6 fuxuan 116.ogg}} '''Fu Xuan:''' But in the end, the alchemists grew discontented and began to obsess over the manipulation of life. Research into the Arbor poisoned their minds... the more they pursued it, the more they longed for it.
+
+;(Talk to Fu Xuan)
+;(If {{cx}}{{subst:void|<!--{"$type":"RPG.GameCore.ByCompareSeriesID"}-->}})
+::{{A|VO chapter2 6 fuxuan 134.ogg}} '''Fu Xuan:''' ...
+::{{A|VO chapter2 6 fuxuan 135.ogg}} '''Fu Xuan:''' *coughing* What? It's not too late to practice holding my breath...
+::{{DIcon|Talk}} You seem quite alright...
+:::{{A|VO chapter2 6 fuxuan 136.ogg}} '''Fu Xuan:''' We're still far from the elixir crucibles. I'm no healer, but I do know that dosage is important in the application of poisons...
+:::{{A|VO chapter2 6 fuxuan 137.ogg}} '''Fu Xuan:''' Hmph, even so... Okay I admit it &mdash; I'm terrified! I'm still young! I don't wanna become mara-struck so soon!
+:::{{DIcon|Arrow}} Then you'd better return to the home front.
+::::{{A|VO chapter2 6 fuxuan 138.ogg}} '''Fu Xuan:''' Out of the question! Jing Yuan gave me authority over the Cloud Knights. If I can't even stand on the front lines, then how can I succeed him as general? *cough* How can I win the hearts of the people!?
+:::;(Return to previous option selection)
+:::{{DIcon|Arrow}} But if your condition worsens...
+::::{{A|VO chapter2 6 fuxuan 139.ogg}} '''Fu Xuan:''' My fortune is fluctuating between the marsh and heaven trigrams &mdash; I can avert disaster by being decisive. So stop talking to me and distracting me!
+::::{{A|VO chapter2 6 fuxuan 140.ogg}} '''Fu Xuan:''' I'll focus on keeping my sanity. The rest is up to you.
+:::;(Return to previous option selection)
+::{{DIcon|Talk}} Is that smoke really safe though?
+:::{{A|VO chapter2 6 fuxuan 141.ogg}} '''Fu Xuan:''' Do you not trust me?
+:::{{A|VO chapter2 6 fuxuan 142.ogg}} '''Fu Xuan:''' *coughing* ...If I told you I wasn't certain, would you turn back on the spot?
+:::{{DIcon|Arrow}} You don't have the slightest clue, do you?
+::::{{A|VO chapter2 6 fuxuan 143.ogg}} '''Fu Xuan:''' Nonsense! I'm very certain! One-hundred percent!
+::::{{A|VO chapter2 6 fuxuan 145.ogg}} '''Fu Xuan:''' ...Though I'm sure a little reassurance wouldn't hurt. You don't know what being mara-struck actually means, do you?
+::::{{A|VO chapter2 6 fuxuan 146.ogg}} '''Fu Xuan:''' The healers believe that the mara-struck condition is related to memories. Unsurprisingly, long-life species have long lifespans, but there is a limit to the brain's capacity.
+::::{{A|VO chapter2 6 fuxuan 147.ogg}} '''Fu Xuan:''' After centuries and millennia, a long-life species' emotional threshold becomes higher and higher. Simultaneously, their memories fade and become dull under the erosion of time, leaving behind only the most extreme and vivid recollections, which are almost guaranteed to be memories full of anguish and regret...
+::::{{A|VO chapter2 6 fuxuan 148.ogg}} '''Fu Xuan:''' Do you understand now? The fate of all long-life species is to no longer feel joy and happiness, left only with hatred and regret etched into the heart. Under such extreme conditions, a person's ego starts to crumble... and that is the beginning of the mara-struck condition.
+::::{{A|VO chapter2 6 fuxuan 149.ogg}} '''Fu Xuan:''' Short-life species don't need to worry about this. Feel better?
+::::{{A|VO chapter2 6 mar7th 125.ogg}} '''March 7th:''' Phew, I do &mdash; I never had memories to begin with.
+::::{{A|VO chapter2 6 fuxuan 150.ogg}} '''Fu Xuan:''' ...No, you still don't understand. The condition isn't caused by memories, but by the emotional threshold having been... Never mind. You can regard it as a memory issue.
+:::;(Return to previous option selection)
+:::{{DIcon|Arrow}} Do a divination.
+::::{{A|VO chapter2 6 fuxuan 144.ogg}} '''Fu Xuan:''' No need. Aside from divinations and calculations, my instincts are accurate too!
+::::{{A|VO chapter2 6 fuxuan 145.ogg}} '''Fu Xuan:''' ...Though I'm sure a little reassurance wouldn't hurt. You don't know what being mara-struck actually means, do you?
+::::{{A|VO chapter2 6 fuxuan 146.ogg}} '''Fu Xuan:''' The healers believe that the mara-struck condition is related to memories. Unsurprisingly, long-life species have long lifespans, but there is a limit to the brain's capacity.
+::::{{A|VO chapter2 6 fuxuan 147.ogg}} '''Fu Xuan:''' After centuries and millennia, a long-life species' emotional threshold becomes higher and higher. Simultaneously, their memories fade and become dull under the erosion of time, leaving behind only the most extreme and vivid recollections, which are almost guaranteed to be memories full of anguish and regret...
+::::{{A|VO chapter2 6 fuxuan 148.ogg}} '''Fu Xuan:''' Do you understand now? The fate of all long-life species is to no longer feel joy and happiness, left only with hatred and regret etched into the heart. Under such extreme conditions, a person's ego starts to crumble... and that is the beginning of the mara-struck condition.
+::::{{A|VO chapter2 6 fuxuan 149.ogg}} '''Fu Xuan:''' Short-life species don't need to worry about this. Feel better?
+::::{{A|VO chapter2 6 mar7th 125.ogg}} '''March 7th:''' Phew, I do &mdash; I never had memories to begin with.
+::::{{A|VO chapter2 6 fuxuan 150.ogg}} '''Fu Xuan:''' ...No, you still don't understand. The condition isn't caused by memories, but by the emotional threshold having been... Never mind. You can regard it as a memory issue.
+:::;(Return to previous option selection)
+::{{DIcon|Talk}} How large are the Disciples of Sanctus Medicus's forces?
+:::{{A|VO chapter2 6 fuxuan 151.ogg}} '''Fu Xuan:''' Only a handful of converted alchemists and healers. They can drive fantastic creatures into battle and strengthen their bodies with medicinal pellets... but they are no match for the Cloud Knights. That's why they decided to spread this demonic vapor.
+:::{{A|VO chapter2 6 fuxuan 152.ogg}} '''Fu Xuan:''' There is a gulf in strength between us, yet still they emerged into the open and rebelled. Something isn't right. They must be waiting for some shift in fortune...
+::;(Return to previous option selection)
+::{{DIcon|Exit}} I'll leave you to it.
+:::{{A|VO chapter2 6 fuxuan 153.ogg}} '''Fu Xuan:''' I will come at once when the crucibles are doused and the smoke dissipates.
+;(If {{cx}}{{subst:void|<!--{"$type":"RPG.GameCore.ByCompareSeriesID"}-->}})
+::{{A|VO chapter2 6 fuxuan 154.ogg}} '''Fu Xuan:''' Hurry. I will come at once when the crucibles are doused and the smoke dissipates.
 {{Dialogue End}}
 
-===Talk to March 7th and discuss the current state of affairs===
-{{Mission Description|type=trailblaze|location=Alchemy Commission|update|The Cloud Knights are stationed temporarily in a market in the Alchemy Commission. You learn that Fu Xuan had left with the scouts to assess the enemy.<br />All you can do for now is wait... or talk with the Knights to find out about the fighting so far.}}
-{{Dialogue Start}}
-:{{tx}}
-{{Dialogue End}}
-
-===Head to the Aureate Elixir Furnace and face the Disciples of Sanctus Medicus===
-{{Mission Description|type=trailblaze|location=Alchemy Commission|update|Deep in the bowels of the Alchemy Commission, the ancient elixir crucibles have been reactivated and smoke wafts out from them. This area was once named Evemist Mansion due to the mist generated by the elixir crucibles. Now these mists have been poisoned by the Disciples of Sanctus Medicus, and can quickly induce mara in long-life species.<br />Since you are the only ones who can break through the stalemate, you don't have a reason to refuse. You immediately prepare to fight the Disciples of Sanctus Medicus after turning off the elixir crucibles.}}
-{{Dialogue Start}}
-:{{tx}}
-{{Dialogue End}}
-
-===Take the starskiff and enter Scalegorge Waterscape===
-{{Mission Description|type=trailblaze|location=Alchemy Commission|update|In a sudden turn of events, the master primus of the Disciples of Sanctus Medicus calls out on the brink of death for the one who brought the Stellaron to her, the assistant from the Antimatter Legion. Then, the guide who had been beside you all this time, "Miss Tingyun," suddenly turns into a ball of flame in a terrifying fashion, declaring to you their true identity of Phantylia, the Lord Ravager.<br />Phantylia uses the Legion's soldiers to block your path while moving deeper into Scalegorge Waterscape to claim the source of the Xianzhou natives' immortality &mdash; the Ambrosial Arbor.}}
-{{Dialogue Start}}
-:{{tx}}
-{{Dialogue End}}
-
-===Head to the Aureate Elixir Furnace and face the Disciples of Sanctus Medicus===
-{{Mission Description|type=trailblaze|location=Alchemy Commission|update|Deep in the bowels of the Alchemy Commission, the ancient elixir crucibles have been reactivated and smoke wafts out from them. This area was once named Evemist Mansion due to the mist generated by the elixir crucibles. Now these mists have been poisoned by the Disciples of Sanctus Medicus, and can quickly induce mara in long-life species.<br />Since you are the only ones who can break through the stalemate, you don't have a reason to refuse. You immediately prepare to fight the Disciples of Sanctus Medicus after turning off the elixir crucibles.}}
-{{Dialogue Start}}
-:{{tx}}
-{{Dialogue End}}
-
-===Turn off the 3 small elixir crucibles===
+===Turn off the 3 small elixir crucibles{{subst:void|<!--102120124-->}}===
 {{Mission Description|type=trailblaze|location=Alchemy Commission|update|Deep in the bowels of the Alchemy Commission, the ancient elixir crucibles have been reactivated, and smoke bellows from them. This area was once named Evemist Mansion due to the mist generated by the elixir crucibles. Now these mists have been poisoned by the Disciples of Sanctus Medicus, and can quickly induce mara in long-life species.<br />However, as short-life individuals led here by the Stellaron Hunters, you happen to be the indispensable help that Fu Xuan desperately needs.}}
 {{Dialogue Start}}
-:{{tx}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{A|VO chapter2 6 mar7th 126.ogg}} '''March 7th:''' *sigh* I feel like... even though long-life species get to live forever...
+:{{A|VO chapter2 6 mar7th 127.ogg}} '''March 7th:''' ...they aren't so different from us short-life species when it comes to worries and suffering.
+
+;(Upon reaching the destination)
+:{{A|VO chapter2 6 mar7th 128.ogg}} '''March 7th:''' Wait, Miss Tingyun, why are you still here!? You're too close to the crucible!
+:{{A|VO chapter2 6 tingyun 121.ogg}} '''Tingyun:''' Thank you for the concern, but I'm fine~ The general commanded me to stay with you &mdash; I dare not go against military orders.
+:{{A|VO chapter2 6 welt 118.ogg}} '''Welt:''' Your life is more important, Miss Tingyun. Go back, we can explain to the general.
+:{{A|VO chapter2 6 tingyun 1221.ogg}} '''Tingyun:''' Hehe, there's really no need &mdash; I've spent my years traveling the universe! Not to mention, I'm younger and stronger than I look.
+:{{A|VO chapter2 6 tingyun 1222.ogg}} '''Tingyun:''' Even you benefactors have probably lived longer than me.
+:The crucible starts to shake, and smoke emits out of the cold elixir crucible.
+:{{A|VO chapter2 6 mar7th 130 m.ogg}} {{A|VO chapter2 6 mar7th 130 f.ogg}} '''March 7th:''' T&mdash;Turn it off! (Trailblazer), why did you turn it on!?
+:The crucible gradually stops shaking, and the smoke slowly ceases to pour out.
+:{{A|VO chapter2 6 mar7th 129.ogg}} '''March 7th:''' Seems like the smoke is getting thinner...
+:{{A|VO chapter2 6 welt 119.ogg}} '''Welt:''' Not thin enough. We need to hurry.
 {{Dialogue End}}
 
-===Get information on the outcome of the fighting and wait for Fu Xuan to return===
-{{Mission Description|type=trailblaze|location=Alchemy Commission|update|The Cloud Knights are stationed temporarily in a market in the Alchemy Commission. You learn that Fu Xuan had left with the scouts to assess the enemy.<br />All you can do for now is wait... or talk with the Knights to find out about the fighting so far.}}
+===Head to the Aureate Elixir Furnace and face the Disciples of Sanctus Medicus{{subst:void|<!--102120120-->}}===
+{{Mission Description|type=trailblaze|location=Alchemy Commission|update|Deep in the bowels of the Alchemy Commission, the ancient elixir crucibles have been reactivated and smoke wafts out from them. This area was once named Evemist Mansion due to the mist generated by the elixir crucibles. Now these mists have been poisoned by the Disciples of Sanctus Medicus, and can quickly induce mara in long-life species.<br />Since you are the only ones who can break through the stalemate, you don't have a reason to refuse. You immediately prepare to fight the Disciples of Sanctus Medicus after turning off the elixir crucibles.}}
 {{Dialogue Start}}
+;(If {{cx}}{{subst:void|<!--{"$type":"RPG.GameCore.ByCompareMissionBattleWin","EventID":20231019,"TaskEnabled":true,"IsClientOnly":true}-->}})
+:<pre>{
+	"$type": "RPG.GameCore.SetAudioEmotionState",
+	"StateName": "State_Severe",
+	"SubMissionID": 102120120
+}</pre>
+::{{tx}}
+::{{tx}}
+:;(Enter battle)
+:::Wave 1: {{Enemy List|Voidranger: Reaver*2; Voidranger: Eliminator*2}}
+:::Wave 2: {{Enemy List|Baryon*2; Voidranger: Reaver*1; Antibaryon*1}}
+:::Wave 3: {{Enemy List|Voidranger: Reaver*1; Voidranger: Trampler*1; Voidranger: Eliminator*1}}
+;(If {{cx}}{{subst:void|<!--{"$type":"RPG.GameCore.ByCompareMissionBattleWin","EventID":20231019,"TaskEnabled":true,"IsClientOnly":true}-->}})
+:;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+<pre>{
+	"$type": "RPG.GameCore.PropSetVisibility",
+	"SpecifiedRelativePaths": [],
+	"TargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvPropEx",
+		"FetchType": "SinglePropByPropID",
+		"SinglePropID": {
+			"GroupID": {
+				"fixedValue": {
+					"Value": 12
+				}
+			},
+			"ID": {
+				"fixedValue": {
+					"Value": 300002
+				}
+			}
+		}
+	}
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.SetAudioEmotionState",
+	"StateName": "State_Tense",
+	"SubMissionID": 102120120
+}</pre>
 :{{tx}}
+;(Enter battle)
+::Wave 1: {{Enemy List|Disciples of Sanctus Medicus: Internal Alchemist*1; Disciples of Sanctus Medicus: Ballistarius*2; Abundance Sprite: Golden Hound*1}}
+::Wave 2: {{Enemy List|Disciples of Sanctus Medicus: Ballistarius*1; The Ascended*1/-16.7% ATK, -60 Toughness{ text = Master of the Disciples of Sanctus Medicus }; Disciples of Sanctus Medicus: Internal Alchemist*1}}
+:'''Tingyun (?):''' What a pity. I would've liked to observe it for a while longer...
+:'''Tingyun (?):''' Since you received the gift of Abundance, surely you can withstand the blessing of Destruction as well?
+:'''March 7th:''' Miss Tingyun!
+:{{A|VO chapter2 ag2 mar7th 105.ogg}} '''March 7th:''' You're saying that the real Tingyun is still...
+:{{A|VO chapter2 ag2 welt 107.ogg}} '''Welt:''' I'm sorry March, I can't say with any certainty where the real Tingyun may be, or at what point she was replaced by the impostor. Without knowing where the body vanished to, it'll be tough to get an answer.
+:{{A|VO chapter2 ag2 welt 108.ogg}} '''Welt:''' At this point, it's all just conjecture and hope. But if that body belonged to the real Tingyun, it does raise the question of why Phantylia would go to such lengths to destroy any evidence of her. Wouldn't it be more in line with her destructive nature to leave Tingyun's remains behind as a display of power?
+:{{A|VO chapter2 ag2 welt 109.ogg}} '''Welt:''' I believe this to be Phantylia's goal &mdash; to sow seeds of doubt among us and ensnare us in a malevolent trap.
+:{{A|VO chapter2 ag2 fuxuan 103.ogg}} '''Fu Xuan:''' It's clear that the sudden resurgence of the Disciples of Sanctus Medicus is all connected to the Lord Ravager. Pretending to be a Xianzhou citizen, planting a Stellaron on the Luofu &mdash; all part of her plan to bring about our self-destruction.
+:{{A|VO chapter2 ag2 welt 105.ogg}} '''Welt:''' I don't believe so. Phantylia revels in watching a corrupted mind eating away its host from inside out, until the obliteration of both is achieved.
+:{{A|VO chapter2 ag2 welt 106.ogg}} '''Welt:''' But there was no indication that Tingyun had been misguided or manipulated... It's possible that the Tingyun we knew wasn't her true self, but an image Phantylia devised to serve her own purposes.
+:{{DIcon|Arrow}} Mr. Yang...
+:{{DIcon|Arrow}} ...
+:{{tx}}
+:{{DIcon|Arrow}} That is to say, Tingyun...
+:{{DIcon|Arrow}} ...
+:Mr. Yang...
+:{{tx}}
+:The talismans on the elixir cauldron are dark and inactive. The elixir crucible lies silent.
+:Curiously, you put your hand on an ancient engraving. The crucible begins to shake and smoke rises up towards the sky.
+:{{A|VO chapter2 6 mar7th 132.ogg}} '''March 7th:''' Are you doing this on purpose!?
 {{Dialogue End}}
 
-===Take the starskiff and enter Scalegorge Waterscape===
+===Take the starskiff and enter Scalegorge Waterscape{{subst:void|<!--102120121-->}}===
 {{Mission Description|type=trailblaze|location=Alchemy Commission|update|In a sudden turn of events, the master primus of the Disciples of Sanctus Medicus calls out on the brink of death for the one who brought the Stellaron to her, the assistant from the Antimatter Legion. Then, the guide who had been beside you all this time, "Miss Tingyun," suddenly turns into a ball of flame in a terrifying fashion, declaring to you their true identity of Phantylia, the Lord Ravager.<br />Phantylia uses the Legion's soldiers to block your path while moving deeper into Scalegorge Waterscape to claim the source of the Xianzhou natives' immortality &mdash; the Ambrosial Arbor.}}
 {{Dialogue Start}}
-:{{tx}}
+:{{A|VO chapter2 6 fuxuan 165.ogg}} '''Fu Xuan:''' We need to take a starskiff to Scalegorge Waterscape &mdash; the Ambrosial Arbor can be sealed from that delve.
+:{{A|VO chapter2 6 fuxuan 166 m.ogg}} {{A|VO chapter2 6 fuxuan 166 f.ogg}} '''Fu Xuan:''' (Trailblazer), let's make haste.
+----
+
+;(Talk to Fu Xuan)
+:{{A|VO chapter2 6 fuxuan 167.ogg}} '''Fu Xuan:''' That impostor had the audacity to carry out her nefarious plans right under our noses... How utterly despicable.
+:{{A|VO chapter2 6 fuxuan 168.ogg}} '''Fu Xuan:''' What worries me more is... just how many more Antimatter saboteurs are at large?
+:{{DIcon|Talk}} About Tingyun...
+::{{A|VO chapter2 ag2 mar7th 106.ogg}} '''March 7th:''' It all happened so suddenly... but looking back, I think Mr. Yang was right. Tingyun was behaving strangely &mdash; she was fascinated with the Abundance's creations.
+::{{A|VO chapter2 ag2 fuxuan 105.ogg}} '''Fu Xuan:''' Since she was an Amicassador dispatched by the Sky-Faring Commission, it's evident that there must indeed be a person with her name in the Commission. We'll have to let the Cloud Knights get to the bottom of what happened to the real Tingyun.
+::{{A|VO chapter2 ag2 fuxuan 106.ogg}} '''Fu Xuan:''' As for the "Tingyun" who accompanied us all that way, it's like what Mr. Yang said &mdash; her appearance was designed to sow seeds of doubt among us... we cannot allow ourselves to fall into her trap.
+:;(Return to previous option selection)
+:{{DIcon|Talk}} About Scalegorge Waterscape...
+::{{A|VO chapter2 6 fuxuan 174.ogg}} '''Fu Xuan:''' It is a delve governed by the Vidyadhara &mdash; supposedly an ancient oceanic region transferred from the Vidyadhara home planet.
+::{{A|VO chapter2 6 fuxuan 175.ogg}} '''Fu Xuan:''' After the Ambrosial Arbor was broken in two during the war, its roots were left gnarled and broken... yet it never died.
+::{{A|VO chapter2 6 fuxuan 176.ogg}} '''Fu Xuan:''' The Alliance decided to seal the Arbor within Scalegorge Waterscape, entrust it to the high elders of the Vidyadhara, and rely on the power of Long's Scions to constrain it.
+::{{A|VO chapter2 6 fuxuan 177.ogg}} '''Fu Xuan:''' It has been so long &mdash; no one knows whether the seal remains... Even if it does, I doubt it will hinder that spectral Lord Ravager.
+:;(Return to previous option selection)
+:{{DIcon|Talk}} Where is Jing Yuan?
+::{{A|VO chapter2 6 fuxuan 178.ogg}} '''Fu Xuan:''' I've reported the current situation to the Seat of Divine Foresight.
+::{{A|VO chapter2 6 fuxuan 179.ogg}} '''Fu Xuan:''' He made no further contact after we communicated at the Matrix of Prescience. He said he had "important matters to personally attend to."
+::{{A|VO chapter2 6 fuxuan 180.ogg}} '''Fu Xuan:''' The situation stands on the edge of a precipice. We must trust in the general...
+:;(Return to previous option selection)
+:{{DIcon|Arrow}} Time is of the essence. Let's go.
+::----
+::----
+:<pre>{
+	"$type": "RPG.GameCore.OpenTreasureChallenge",
+	"RaidID": 40231001
+}</pre>
+:{{DIcon|Exit}} (Stay here for now.)
+::{{A|VO chapter2 6 fuxuan 181.ogg}} '''Fu Xuan:''' Why are we still here? Things will change if we tarry too long.
+
+;(Talk to Investigate)
+:'''Recuperating Cloud Knight:''' Don't worry. I just took some medicine and the wound will heal up soon.
+:{{A|VO chapter2 6 mar7th 133.ogg}} '''March 7th:''' Yay, we did it! Can't see the smoke anymore.
+:{{A|VO chapter2 6 fuxuan 155.ogg}} '''Fu Xuan:''' E&mdash;Excellent. I'll lead my troops to the rendezvous.
 {{Dialogue End}}
 
 ==Other Languages==

@@ -7,7 +7,7 @@ PageTitle=##
 |title         = 
 |image         = <!--Mission .png-->
 |type          = Adventure
-|event_name    = 
+|event_name    = Tides of War
 |chapter       = 
 |requirements  = [[Trailblaze Mission]] ''[[Silent Galaxy]]'' completed
 |summary       = <!--official mission summary from Fate's Atlas-->
@@ -19,7 +19,7 @@ PageTitle=##
 |next          = 
 |rewards       = 
 }}
-'''''''''' is an [[Adventure Mission]] on [[Herta Space Station]].
+'''''''''' is an Event [[Adventure Mission]] from the [[Tides of War]] event.
 
 ==Steps==
 
@@ -34,6 +34,24 @@ PageTitle=##
 ==Dialogue==
 {{Stub Dialogue}}
 
+:{{DIcon|Travel Log}} Tides of War
+<pre>{
+	"$type": "RPG.GameCore.ShowUI",
+	"Name": "Ui.ActivityFeverTime.ActivityFeverTimeMainPage",
+	"OnUIExitImmediately": []
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.TriggerEntityEvent",
+	"EventName": {
+		"Value": "Clt_TriggerClose"
+	},
+	"InstanceID": {
+		"IsDynamic": false,
+		"FixedValue": {
+			"Value": 300001
+		}
+	}
+}</pre>
 {{Dialogue End}}
 
 ==Other Languages==

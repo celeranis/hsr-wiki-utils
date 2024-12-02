@@ -11,7 +11,7 @@ PageTitle=#Wraiths of Mirage: Herding Operation#
 |chapter       = 
 |requirements  = {{subst:void|<!--Unknown: {"Type":"Manual"}-->}}
 |summary       = <!--official mission summary from Fate's Atlas-->
-|characters    = Trailblazer
+|characters    = Guangjin; Guangjin's voice; Trailblazer
 |startLocation = [[The Xianzhou Luofu]] - [[Cloudford]]
 |world         = The Xianzhou Luofu
 |area          = Cloudford
@@ -23,11 +23,8 @@ PageTitle=#Wraiths of Mirage: Herding Operation#
 
 ==Steps==
 # Look for the Trotters at the Trove of Verdure
-# Track the Trotters using the clues
-# Look for the Trotters at the Trove of Verdure
-# Track the Trotters using the clues
-# Look for the Trotters at the Trove of Verdure
 # Use "Echolocation" to locate the hiding Trotters
+# Track the Trotters using the clues
 # Speak with Guangjin
 
 <!--
@@ -40,40 +37,94 @@ PageTitle=#Wraiths of Mirage: Herding Operation#
 ==Dialogue==
 {{Stub Dialogue}}
 
-===Look for the Trotters at the Trove of Verdure===
+===Look for the Trotters at the Trove of Verdure{{subst:void|<!--407201317-->}}===
 {{Mission Description|type=adventure|location=Cloudford|The Realm-Keeping Commission has ascertained that the "imitated cloudhymn magic" isn't something caused by one Warp Trotter alone. Following this, you and the Realm-Keeping Commission have decided to begin a "Herding Operation."<br />What you need to do next is capturing Trotters. Lots and lots of Trotters. Capture them until the operation concludes and the whole thing comes to a close...}}
 {{Dialogue Start}}
-:{{tx}}
+:'''Guangjin's voice:''' *electronic voice* The Realm-Keeping Commission has sealed off the area near the Trove of Verdure. Just {{Color|keyword|nobold=1|focus on tracking down the Trotter}}!
+:'''Guangjin's voice:''' *electronic voice* Remember that the {{Color|keyword|nobold=1|Reverberation Generator}} will help you locate invisible monsters. Please use it wisely.
+:'''Guangjin's voice:''' *electronic voice* Remember, {{Color|keyword|nobold=1|our main focus is the Warp Trotters}}, and I mean the entire lot of them.
+:'''Guangjin's voice:''' *electronic voice* We'll stay in contact remotely. Good hunting.
+
+
+;(Unused &mdash; _CS_PumanHunt_OnPumanEscape)
+:'''Guangjin's voice:''' *electronic voice* Don't worry about it. Track down the other Trotters first. That Trotter will come back once it feels safe again... perhaps.
+
+;(Unused &mdash; _CS_PumanHunt_OnResetPerformanceStart)
+<pre>{
+	"$type": "RPG.GameCore.SetSpecialVisionOn",
+	"VisionType": "PlayerSearchSneakMonster",
+	"VisionEffectType": "SearchMonster"
+}</pre>
+::'''Guangjin's voice:''' *electronic voice* How could this be!?
+::'''Guangjin's voice:''' *electronic voice* ...I didn't think you would let all the Trotters slip away... Was that intentional, or did it just happen by accident?
+::'''Guangjin's voice:''' *electronic voice* ...Well, don't worry. Just wait outside the Trove of Verdure for a while, and they'll come back soon enough.
+::{{Black Screen|A few moments later...}}
+::'''Guangjin's voice:''' *electronic voice* Keep hunting! You will get it!
 {{Dialogue End}}
 
-===Track the Trotters using the clues===
+===Use "Echolocation" to locate the hiding Trotters{{subst:void|<!--407201311-->}}===
 {{Dialogue Start}}
-:{{tx}}
 {{Dialogue End}}
 
-===Look for the Trotters at the Trove of Verdure===
+===Track the Trotters using the clues{{subst:void|<!--407201301-->}}===
 {{Dialogue Start}}
-:{{tx}}
+
+:<!--0.5-second delay-->
+:'''Guangjin's voice:''' *electronic voice* The anomaly's impact area has become smaller. Looks like we're making progress.
+:'''Guangjin's voice:''' *electronic voice* Keep at it! We're doing great!
+:'''Guangjin's voice:''' *electronic voice* We've detected that the last Warp Trotter has escaped.
+:'''Guangjin's voice:''' *electronic voice* Make sure you keep an eye on which direction it's heading and don't let it get away again!
+:'''Guangjin's voice:''' *electronic voice* It's up to you to complete this "Herding Operation."
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+<pre>{
+	"$type": "RPG.GameCore.AdvSpecialVisionProtect"
+}</pre>
+----
+<pre>{
+	"$type": "RPG.GameCore.AdvSpecialVisionProtect"
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.SetSpecialVisionOn",
+	"IsOn": true,
+	"VisionType": "PlayerSearchSneakMonster",
+	"VisionEffectType": "SearchMonster",
+	"IsInfiniteTime": true
+}</pre>
+:Unsurprisingly, Warp Trotters will always try to trick you at every opportunity, but that's part of what makes them so adorable.
+:There's no need to hesitate. You've already caught so many Trotters, and you're not planning on letting the last one go... Wait a minute, you're not really considering it, are you?
+:{{DIcon|Arrow}} I've never hesitated before. I'll catch it now.
+::Good, the Trotter won't get away this time. Catch it!
+:{{DIcon|Arrow}} ...What if I really want to let it go?
+::If you let this Trotter go, you'll fail this task. Then, you'll have to pretend you didn't even participate in the "Herding Operation" before starting everything all over again.
+::...This has to end here!
 {{Dialogue End}}
 
-===Track the Trotters using the clues===
+===Speak with Guangjin{{subst:void|<!--407201315-->}}===
 {{Dialogue Start}}
-:{{tx}}
-{{Dialogue End}}
 
-===Look for the Trotters at the Trove of Verdure===
-{{Dialogue Start}}
-:{{tx}}
-{{Dialogue End}}
+;(Talk to Guangjin)
+:'''Guangjin:''' Thanks to you, all the Warp Trotters are now under the supervision of the Realm-Keeping Commission. The "Herding Operation" has been a huge success.
+:{{DIcon|Arrow}} It felt more fun than the previous hunts, I guess?
+::'''Guangjin:''' Oh, really? Glad to know that.
+:{{DIcon|Arrow}} This was not fun at all!
+::'''Guangjin:''' I'm sorry, but when it comes to work, it's not always about having fun.
+:'''Guangjin:''' I believe our operations will settle the commotion caused by the imitated cloudhymn magic for a while.
+:'''Guangjin:''' Still, I haven't figured out why those Warp Trotters were able to imitate cloudhymn magic... Maybe the scholars in the Intelligentsia Guild can look into this.
+:{{DIcon|Arrow}} ...So, no more troubles in the Realm-Keeping Commission, I guess?
+::'''Guangjin:''' No, at least not for now.
+:{{DIcon|Arrow}} And you still don't know why they were invisible, do you?
+::'''Guangjin:''' ...It's just my hunch, but I think that the "phenomenon of invisibility" is somehow connected to those Trotters. Maybe they used some abilities similar to the Vidyadhara's cloudhymn magic. Otherwise, how would the Reverberation Generator have picked anything up?
+::'''Guangjin:''' But it's just my wild guess. After all, I'm just an orderly of the Realm-Keeping Commission, not a scholar from the Intelligentsia Guild...
+:'''Guangjin:''' Anyway, on behalf of the Commission, I just want to thank you for all your help so far! Here's your well-deserved reward.
+:'''(Trailblazer):''' Things are looking good. This must be the last of those Trotters.
+<!--Unknown TalkSentence: 940720072-->
+;(Upon reaching the destination)
 
-===Use "Echolocation" to locate the hiding Trotters===
-{{Dialogue Start}}
-:{{tx}}
-{{Dialogue End}}
-
-===Speak with Guangjin===
-{{Dialogue Start}}
-:{{tx}}
+;(Upon reaching the destination)
+;(Enter battle)
+::{{tx|Enemy list missing}}
 {{Dialogue End}}
 
 ==Other Languages==

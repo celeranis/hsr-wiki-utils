@@ -7,13 +7,13 @@ PageTitle=##
 |title         = 
 |image         = <!--Mission .png-->
 |type          = Adventure
-|event_name    = 
+|event_name    = Underground Treasure Hunt
 |chapter       = 
 |requirements  = 
 * [[Trailblaze Mission]] ''[[Silent Galaxy]]'' completed
 * Reach [[Trailblaze Level]] 21
 |summary       = <!--official mission summary from Fate's Atlas-->
-|characters    = Trailblazer
+|characters    = Aksay; Trailblazer
 |startLocation = [[Jarilo-VI]] - [[Great Mine]]
 |world         = Jarilo-VI
 |area          = Great Mine
@@ -21,7 +21,7 @@ PageTitle=##
 |next          = 
 |rewards       = 
 }}
-'''''''''' is an [[Adventure Mission]] on [[Jarilo-VI]].
+'''''''''' is an Event [[Adventure Mission]] from the [[Underground Treasure Hunt]] event.
 
 ==Steps==
 
@@ -36,6 +36,41 @@ PageTitle=##
 ==Dialogue==
 {{Stub Dialogue}}
 
+
+;(Talk to Aksay)
+:'''Aksay:''' Ah, it's you again. Ready to go treasure hunting down in the ancient ruins?
+<pre>{
+	"$type": "RPG.GameCore.ShowMenu"
+}</pre>
+;(Unused &mdash; Wait_Mission_End_8012106)
+
+
+;(Unused &mdash; OpenUI_TreasureDungeon)
+:<!--0.6-second delay-->
+:<pre>{
+	"$type": "RPG.GameCore.ShowUI",
+	"Name": "Ui.Activity.TreasureDungeon.TreasureDungeonEntrancePage",
+	"WaitForExit": true,
+	"OnUIExitImmediately": []
+}</pre>
+
+;(Unused &mdash; OpenUI_TreasureDungeon_Mission)
+:<!--0.2-second delay-->
+:<pre>{
+	"$type": "RPG.GameCore.ShowUI",
+	"Name": "Ui.Activity.TreasureDungeon.TreasureDungeonEntrancePage",
+	"WaitForExit": true,
+	"OnUIExitImmediately": []
+}</pre>
+
+;(Unused &mdash; OpenUI_TreasureDungeon_Tutorial)
+:<!--0.5-second delay-->
+:<pre>{
+	"$type": "RPG.GameCore.ShowUI",
+	"Name": "Ui.Activity.TreasureDungeon.TreasureDungeonEntrancePage",
+	"WaitForExit": true,
+	"OnUIExitImmediately": []
+}</pre>
 {{Dialogue End}}
 
 ==Other Languages==

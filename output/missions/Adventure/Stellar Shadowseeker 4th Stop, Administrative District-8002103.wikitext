@@ -7,13 +7,13 @@ PageTitle=#Stellar Shadowseeker: 4th Stop, Administrative District#
 |title         = 
 |image         = <!--Mission Stellar Shadowseeker 4th Stop, Administrative District.png-->
 |type          = Adventure
-|event_name    = 
+|event_name    = Stellar Shadowseeker
 |chapter       = 
 |requirements  = 
 * Reach [[Trailblaze Level]] 21
 * [[Adventure Mission]] ''[[Stellar Shadowseeker: 3rd Stop, Supply Zone]]'' completed
 |summary       = <!--official mission summary from Fate's Atlas-->
-|characters    = Trailblazer
+|characters    = Trailblazer; Tram
 |startLocation = [[Jarilo-VI]] - [[Administrative District]]
 |world         = Jarilo-VI
 |area          = Administrative District
@@ -21,7 +21,7 @@ PageTitle=#Stellar Shadowseeker: 4th Stop, Administrative District#
 |next          = Stellar Shadowseeker: 5th Stop, Boulder Town
 |rewards       = Stellar Jade*70; Refined Aether*4; Sprout of Life*3; Credit*40,000
 }}
-'''''Stellar Shadowseeker: 4th Stop, Administrative District''''' is an [[Adventure Mission]] on [[Jarilo-VI]].
+'''''Stellar Shadowseeker: 4th Stop, Administrative District''''' is an Event [[Adventure Mission]] from the [[Stellar Shadowseeker]] event.
 
 ==Steps==
 # Find and capture the subjects based on the photos
@@ -38,20 +38,51 @@ PageTitle=#Stellar Shadowseeker: 4th Stop, Administrative District#
 ==Dialogue==
 {{Stub Dialogue}}
 
-===Find and capture the subjects based on the photos===
+===Find and capture the subjects based on the photos{{subst:void|<!--800210301-->}}===
 {{Mission Description|type=adventure|location=Administrative District|The shadowy object in the photo looks somewhat familiar. It must be something from the Belobog Overworld...}}
 {{Dialogue Start}}
-:{{tx}}
 {{Dialogue End}}
 
-===Go to Alisa Avenue and take a photo of the subject===
+===Go to Alisa Avenue and take a photo of the subject{{subst:void|<!--800210302-->}}===
 {{Dialogue Start}}
-:{{tx}}
+:<!--6-second delay-->
+:'''(Trailblazer):''' (I need to wait for the object in the picture to appear...)
+:<!--6-second delay-->
+:'''(Trailblazer):''' (What's taking so long... I'll wait a little longer...)
 {{Dialogue End}}
 
-===Read March 7th's message===
+===Read March 7th's message{{subst:void|<!--800210304-->}}===
 {{Dialogue Start}}
-:{{tx}}
+<pre>{
+	"$type": "RPG.GameCore.AdvDestroyGroupEntity",
+	"InstanceIDList": [
+		300001
+	]
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.AdvCreateGroupEntity",
+	"InstanceIDList": [
+		400002,
+		400003
+	]
+}</pre>
+:...You suddenly recall that during a dangerous photo-taking session that you got hit by a moving tram.
+:The fact you're still alive is already a miracle, and the tram's bell seems to be scolding you...
+:'''Tram:''' "Do you know how to cross the street? Are you blind? Don't you know anything about traffic rules? Huh?"
+:...Don't do that again, (Trailblazer).
+<pre>{
+	"$type": "RPG.GameCore.PlayMessage",
+	"MessageSectionID": 1214401,
+	"ShowNotice": true
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.SaveMessage",
+	"MessageSectionID": 1214401
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.ShowUI",
+	"Name": "Ui.Activity.ActivityGuessTheSilhouette.ActivityGuessTheSilhouetteMainPage"
+}</pre>
 {{Dialogue End}}
 
 ==Other Languages==

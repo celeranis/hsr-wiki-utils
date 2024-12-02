@@ -7,7 +7,7 @@ PageTitle=#Hyperlink Match, Topaz!#
 |title         = 
 |image         = <!--Mission Hyperlink Match, Topaz!.png-->
 |type          = Adventure
-|event_name    = 
+|event_name    = Aetherium Wars
 |chapter       = 
 |requirements  = 
 * [[Adventure Mission]] ''[[Hyperlink Match, Qingque!]]'' completed
@@ -16,7 +16,7 @@ PageTitle=#Hyperlink Match, Topaz!#
 * [[Adventure Mission]] ''[[Hyperlink Match, Bronya!]]'' completed
 * [[Adventure Mission]] ''[[Final Showdown! Intergalactic Celebration!]]'' completed
 |summary       = <!--official mission summary from Fate's Atlas-->
-|characters    = Trailblazer
+|characters    = Topaz; Trailblazer
 |startLocation = [[Jarilo-VI]] - [[Old Weapon Testing Ground]]
 |world         = Jarilo-VI
 |area          = Old Weapon Testing Ground
@@ -24,7 +24,7 @@ PageTitle=#Hyperlink Match, Topaz!#
 |next          = 
 |rewards       = 
 }}
-'''''Hyperlink Match, Topaz!''''' is an [[Adventure Mission]] on [[Jarilo-VI]].
+'''''Hyperlink Match, Topaz!''''' is an Event [[Adventure Mission]] from the [[Aetherium Wars]] event.
 
 ==Steps==
 # Have a Hyperlink Match with Topaz!
@@ -38,11 +38,28 @@ PageTitle=#Hyperlink Match, Topaz!#
 -->
 ==Dialogue==
 {{Stub Dialogue}}
-
-===Have a Hyperlink Match with Topaz!===
+===Have a Hyperlink Match with Topaz!{{subst:void|<!--801413801-->}}===
 {{Mission Description|type=adventure|location=Old Weapon Testing Ground|The core gameplay loop behind Aetherium Wars is "dueling." Challenge different players and show your true strength!}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Topaz)
+:'''Topaz:''' Hey, Festival Champion! What do you think, do you like our corporation's game?
+<pre>{
+	"$type": "RPG.GameCore.ShowMenu",
+	"DisplaySingleMenuItem": true
+}</pre>
+:'''Topaz:''' I see you've really put blood, sweat, and tears into this game. I hope you'll continue to support the IPC in future~
+:'''Topaz:''' By the way, if you can take the Championship again, maybe the developers will release a Season Champion Skin based on you!
+:{{DIcon|Arrow}} Another time.
+:'''Topaz:''' No worries, I'll be ready any time.
+<pre>{
+	"$type": "RPG.GameCore.ShowUI",
+	"Name": "Ui.AetherDivide.AetherDivideEntryPage",
+	"Param": {
+		"Value": "2"
+	},
+	"OnUIEnter": []
+}</pre>
 {{Dialogue End}}
 
 ==Other Languages==

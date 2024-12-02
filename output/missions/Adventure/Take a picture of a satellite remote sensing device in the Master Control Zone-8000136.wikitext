@@ -7,7 +7,7 @@ PageTitle=#Take a picture of a satellite remote sensing device in the Master Con
 |title         = 
 |image         = <!--Mission Take a picture of a satellite remote sensing device in the Master Control Zone.png-->
 |type          = Adventure
-|event_name    = 
+|event_name    = Starhunt Game
 |chapter       = 
 |requirements  = [[Companion Mission]] ''[[Punklorde Mentality]]'' completed
 |summary       = <!--official mission summary from Fate's Atlas-->
@@ -19,7 +19,7 @@ PageTitle=#Take a picture of a satellite remote sensing device in the Master Con
 |next          = 
 |rewards       = 
 }}
-'''''Take a picture of a satellite remote sensing device in the Master Control Zone''''' is an [[Adventure Mission]] on [[Herta Space Station]].
+'''''Take a picture of a satellite remote sensing device in the Master Control Zone''''' is an Event [[Adventure Mission]] from the [[Starhunt Game]] event.
 
 ==Steps==
 
@@ -33,7 +33,93 @@ PageTitle=#Take a picture of a satellite remote sensing device in the Master Con
 -->
 ==Dialogue==
 {{Stub Dialogue}}
-
+<pre>{
+	"$type": "RPG.GameCore.PhotoGraphAimTarget",
+	"AimTargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvProp",
+		"MultiGroupFetch": [
+			{
+				"GroupID": {
+					"fixedValue": {
+						"Value": 74
+					}
+				},
+				"ID": {
+					"fixedValue": {
+						"Value": 300001
+					}
+				}
+			}
+		],
+		"MultiGroupFetchByUniqueName": [],
+		"MultiGroupFetchByPropKey": []
+	},
+	"IsAim": true,
+	"AimIdentifyType": "Manual"
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.PhotoGraphWaitIdentifyFinish",
+	"WaitTargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvProp",
+		"MultiGroupFetch": [
+			{
+				"GroupID": {
+					"fixedValue": {
+						"Value": 74
+					}
+				},
+				"ID": {
+					"fixedValue": {
+						"Value": 300001
+					}
+				}
+			}
+		],
+		"MultiGroupFetchByUniqueName": [],
+		"MultiGroupFetchByPropKey": []
+	},
+	"OnIdentifyFinish": [
+		{
+			"$type": "RPG.GameCore.TriggerCustomString",
+			"CustomString": {
+				"Value": "Mission_800013601_String"
+			}
+		}
+	],
+	"OnPreviewFinish": []
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.LockPhotoIdentifyHint"
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.PhotoGraphAimTarget",
+	"AimTargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvProp",
+		"MultiGroupFetch": [
+			{
+				"GroupID": {
+					"fixedValue": {
+						"Value": 74
+					}
+				},
+				"ID": {
+					"fixedValue": {
+						"Value": 300001
+					}
+				}
+			}
+		],
+		"MultiGroupFetchByUniqueName": [],
+		"MultiGroupFetchByPropKey": []
+	}
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.SwitchPhotoGraphMode",
+	"ExitWhenPreViewDialogFinish": true,
+	"IdentifyRadiusOverride": {},
+	"InitFov": -1
+}</pre>
+:<!--0.6-second delay-->
 {{Dialogue End}}
 
 ==Other Languages==

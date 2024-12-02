@@ -11,7 +11,7 @@ PageTitle=#Ghost of the Past#
 |chapter       = 
 |requirements  = {{subst:void|<!--Unknown: {"Type":"Manual"}-->}}
 |summary       = <!--official mission summary from Fate's Atlas-->
-|characters    = Trailblazer
+|characters    = Outgoing Kid; Trailblazer
 |startLocation = [[Jarilo-VI]] - [[Rivet Town]]
 |world         = Jarilo-VI
 |area          = Rivet Town
@@ -34,10 +34,224 @@ PageTitle=#Ghost of the Past#
 ==Dialogue==
 {{Stub Dialogue}}
 
-===Solve the Fragmentum echoes' predicaments and release them from their problems.===
+===Solve the Fragmentum echoes' predicaments and release them from their problems.{{subst:void|<!--301160601-->}}===
 {{Mission Description|type=daily|location=Rivet Town|Some Silvermane Guard patrols spotted illusory echoes in the Fragmentum who are stuck inside due to unfinished businesses. Help them.<br />The outgoing kid wants to take a photo of themself as a souvenir...}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Outgoing Kid)
+:'''Outgoing Kid:''' Hello! C&mdash;Can you take a picture of me?
+:{{DIcon|Arrow}} Are you talking to me?
+::'''Outgoing Kid:''' Yep. There's no one else around.
+:{{DIcon|Arrow}} Sure. Why though?
+:'''Outgoing Kid:''' It's actually my birthday today! Miss Natasha wants to take a photo of me and mail it to my Mom and Dad, so they can see how much I've grown!
+:'''Outgoing Kid:''' But I can't find Miss Natasha at all... Then you passed by and I thought maybe I can ask you, hehe.
+:{{DIcon|Arrow}} Well, do a pose then. Here I go~
+:'''Outgoing Kid:''' Yay! Thank you!
+----
+<pre>{
+	"$type": "RPG.GameCore.PropSetVisibility",
+	"SpecifiedRelativePaths": [],
+	"TargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvPropEx",
+		"FetchType": "SinglePropByPropID",
+		"SinglePropID": {
+			"GroupID": {
+				"fixedValue": {
+					"Value": 103
+				}
+			},
+			"ID": {
+				"fixedValue": {
+					"Value": 300001
+				}
+			}
+		}
+	}
+}</pre>
+
+;(Upon reaching the destination)
+<pre>{
+	"$type": "RPG.GameCore.ShowFuncBtn",
+	"Show": true,
+	"HideWhenGraphFinish": true,
+	"PuzzleFunc": "Identify",
+	"CDDuration": 1,
+	"ShowBtnFucHint": true,
+	"CustomString": {
+		"Value": "PhotoGraphGO30160602"
+	},
+	"ShowBtnEffect": true
+}</pre>
+
+;(Talk to Outgoing Kid)
+
+;(Unused &mdash; PhotoGraphGO30160602)
+<pre>{
+	"$type": "RPG.GameCore.HideEntity",
+	"Target": {
+		"$type": "RPG.GameCore.TargetFetchAdvNpcEx",
+		"FetchType": "SingleNpcByNpcID",
+		"SingleNpcID": {
+			"GroupID": {
+				"fixedValue": {
+					"Value": 103
+				}
+			},
+			"GroupNpcID": {
+				"fixedValue": {
+					"Value": 400002
+				}
+			}
+		}
+	},
+	"IsHide": true
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.PropSetVisibility",
+	"Visible": true,
+	"SpecifiedRelativePaths": [],
+	"TargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvPropEx",
+		"FetchType": "SinglePropByPropID",
+		"SinglePropID": {
+			"GroupID": {
+				"fixedValue": {
+					"Value": 103
+				}
+			},
+			"ID": {
+				"fixedValue": {
+					"Value": 300001
+				}
+			}
+		}
+	}
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.SwitchPhotoGraphMode",
+	"PhotoGraphMode": "Identify",
+	"ExitWhenPreViewDialogFinish": true,
+	"IdentifyRadiusOverride": {},
+	"InitFov": -1
+}</pre>
+
+;(Unused &mdash; PhotoGraphFinishCustomString)
+<pre>{
+	"$type": "RPG.GameCore.HideEntity",
+	"Target": {
+		"$type": "RPG.GameCore.TargetFetchAdvNpcEx",
+		"FetchType": "SingleNpcByNpcID",
+		"SingleNpcID": {
+			"GroupID": {
+				"fixedValue": {
+					"Value": 103
+				}
+			},
+			"GroupNpcID": {
+				"fixedValue": {
+					"Value": 400002
+				}
+			}
+		}
+	}
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.PropSetVisibility",
+	"SpecifiedRelativePaths": [],
+	"TargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvPropEx",
+		"FetchType": "SinglePropByPropID",
+		"SinglePropID": {
+			"GroupID": {
+				"fixedValue": {
+					"Value": 103
+				}
+			},
+			"ID": {
+				"fixedValue": {
+					"Value": 300001
+				}
+			}
+		}
+	}
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.HideEntity",
+	"Target": {
+		"$type": "RPG.GameCore.TargetFetchAdvNpcEx",
+		"FetchType": "SingleNpcByNpcID",
+		"SingleNpcID": {
+			"GroupID": {
+				"fixedValue": {
+					"Value": 103
+				}
+			},
+			"GroupNpcID": {
+				"fixedValue": {
+					"Value": 400002
+				}
+			}
+		}
+	},
+	"IsHide": true
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.DestroyNPC",
+	"TargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvNpcEx",
+		"FetchType": "SingleNpcByNpcID",
+		"SingleNpcID": {
+			"GroupID": {
+				"fixedValue": {
+					"Value": 103
+				}
+			},
+			"GroupNpcID": {
+				"fixedValue": {
+					"Value": 400002
+				}
+			}
+		}
+	},
+	"DestroyList": []
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.PropSetVisibility",
+	"SpecifiedRelativePaths": [],
+	"TargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvPropEx",
+		"FetchType": "SinglePropByPropID",
+		"SinglePropID": {
+			"GroupID": {
+				"fixedValue": {
+					"Value": 103
+				}
+			},
+			"ID": {
+				"fixedValue": {
+					"Value": 300001
+				}
+			}
+		}
+	}
+}</pre>
+::<!--0.3-second delay-->
+
+;(Talk to Outgoing Kid)
+:'''Outgoing Kid:''' Did you take it? Let me see!
+:'''Outgoing Kid:''' ...Huh? Why is there nothing in this picture?
+:{{DIcon|Arrow}} Probably because you're only an echo of the Fragmentum.
+::'''Outgoing Kid:''' Fragmentum... Is that the very dangerous place the adults talk about?
+::'''Outgoing Kid:''' Did I... become a Fragmentum monster?
+::{{DIcon|Arrow}} Yes.
+::{{DIcon|Arrow}} No, you are more like a ghost.
+::'''Outgoing Kid:''' Oh! I get it.
+::'''Outgoing Kid:''' But I should still show up in photographs.
+::'''Outgoing Kid:''' Mmm, it's probably not because of your photography skills... I'll ask someone else to take one for me!
+:{{DIcon|Arrow}} It's because of my bad photography skills. Sorry...
+::'''Outgoing Kid:''' Hehe, it's okay! I'll just ask someone else to take one for me!
+:'''Outgoing Kid:''' Thank you anyways!
+:{{Black Screen|This nice and polite child puts on a bright smile as their figure radiates a dim light, then disappears from the streets constructed by the Fragmentum.}}
 {{Dialogue End}}
 
 ==Other Languages==

@@ -11,11 +11,11 @@ Mission Clockie on 42nd Street Stelle.png|Stelle
 Mission Clockie on 42nd Street Caelus.png|Caelus
 </gallery>
 |type          = Adventure
-|event_name    = 
+|event_name    = ''Clockie: Dreamjoy Memoir''
 |chapter       = Once Upon a Dreamville...
 |requirements  = [[Adventure Mission]] ''[[Day for Night]]'' completed
 |summary       = You retrieved the final reel of ''Clockie: Dreamjoy Memoir'' and also helped an Iris Family member rediscover a long-lost family love that was buried in time.<br />The direction the compass points to doesn't belong to any one person, but rather to this world.
-|characters    = Trailblazer
+|characters    = Angry Resident; Bubble Hound; Cheerful Theme Park Employee; Clockie; Curious Guest; Dissatisfied Citizen; Expectant Guest; Happy Guest; Iris Family Representative; Lalasky; Micah; Mimosa; Mr. Domescreen; Passing Guest; Passionate Guest; Pisce; Shocked Theme Park Employee; Trailblazer; Villain Actor
 |startLocation = [[Penacony]] - [[Clock Studios Theme Park]]
 |world         = Penacony
 |area          = Clock Studios Theme Park
@@ -23,17 +23,17 @@ Mission Clockie on 42nd Street Caelus.png|Caelus
 |next          = Clock-Styled Ending
 |rewards       = Stellar Jade*20; Lost Gold Fragment*3; Credit*20,000
 }}
-'''''Clockie on 42nd Street''''' is an [[Adventure Mission]] on [[Penacony]] in the chapter [[Once Upon a Dreamville...]].
+'''''Clockie on 42nd Street''''' is an Event [[Adventure Mission]] from the [[Clockie: Dreamjoy Memoir]] event.
 
 ==Steps==
 # Find out about ''Dreamjoy Secrecy'' with Pisce
 # Change Mimosa's mind
+# Go back and report to Pisce
 # Find the film in the Grand Theater
 # Change Mimosa's mind
 # Go to Dreamflux Reef
 # Help Mimosa get out of the tricky situation
 # Follow Mimosa and Micah to the Nameless Graveyard
-# Go back and report to Pisce
 
 <!--
 ==Gameplay Notes==
@@ -45,52 +45,519 @@ Mission Clockie on 42nd Street Caelus.png|Caelus
 ==Dialogue==
 {{Stub Dialogue}}
 
-===Find out about ''Dreamjoy Secrecy'' with Pisce===
+===Find out about ''Dreamjoy Secrecy'' with Pisce{{subst:void|<!--802210301-->}}===
 {{Mission Description|type=adventure|location=Clock Studios Theme Park|Thanks to your relationship with the Watchmaker, you have been made a special guest director for Clock Studios and begun editing the ''Dreamjoy Memoir'' movie...<br />It looks like editing can't go ahead for the final part of ''Dreamjoy Memoir''! Find Pisce and ask what's going on.}}
 {{Dialogue Start}}
+<pre>{
+	"$type": "RPG.GameCore.SetFloorCustomFloat",
+	"Name": {
+		"Value": "Clt_ScreenState"
+	},
+	"Value": {
+		"IsDynamic": false,
+		"FixedValue": {
+			"Value": 3
+		}
+	}
+}</pre>
+:{{tx}}
+<pre>{
+	"$type": "RPG.GameCore.SetFloorCustomFloat",
+	"Name": {
+		"Value": "Clt_ScreenState"
+	},
+	"Value": {
+		"IsDynamic": false,
+		"FixedValue": {
+			"Value": 4
+		}
+	}
+}</pre>
+:The film generates a windfall for Clock Studios, and the theme park gradually regains its former status...
+:'''Pisce:''' Director, do you know that the cinemas across the universe are thronged by viewers of ''Dreamjoy Memoir''? Our theme park is seeing more and more guests too!
+:'''Pisce:''' It's been so many years... Since we lost contact with Mr. Watchmaker, we've never seen such a bustling scene.
+:'''Pisce:''' The story is full of twists and turns, has a creative plot, and features lively characters... This has been my first time hearing nothing but good reviews from those fussy movie critics. It's your talent that brought Clock Studios back to life!
+:{{DIcon|Arrow}} It's no big deal.
+::'''Pisce:''' You're being modest. Trust me, I don't mean this as flattery.
+:{{DIcon|Arrow}} Indeed, I made it happen.
+::'''Pisce:''' It's true, but let's not forget about Mr. Watchmaker's creative ideas and the animators' efforts. They worked hard too!
+:{{DIcon|Arrow}} What's next?
+:'''Pisce:''' Well... Both critics and fans are looking forward to the release of the last film &mdash; ''Dreamjoy Secrecy''.
+:'''Pisce:''' The screen should be fixed soon, just in time for the film premiere to be held at the theme park, but...
+:{{DIcon|Arrow}} The film reel hasn't been fixed yet?
+::'''Pisce:''' No, we've long done restoring the reel, but it isn't with us at the moment...
+:{{DIcon|Arrow}} The Watchmaker didn't create the fifth film?
+::'''Pisce:''' No, Mr. Watchmaker has completed the piece for quite some time already...
+:'''Pisce:''' But when we submitted the series for review, the Iris Family only banned ''Dreamjoy Secrecy''. They insisted that there were issues with the content and demanded an explanation from Mr. Watchmaker.
+:'''Pisce:''' It's a dirty move... I'm sure they're deliberately making things difficult for us knowing Mr. Watchmaker isn't around.
+:'''Pisce:''' Director, since you're an important guest of The Family, do you mind stepping in to convince them to take it easy on us?
+:{{DIcon|Arrow}} No problem.
+:{{DIcon|Arrow}} I'll try...
+:{{DIcon|Arrow}} I'm sure they'll listen to me!
+:'''Pisce:''' Thank you so much! The Iris Family conducts the review at the {{Color|keyword|nobold=1|Penacony Grand Theater}}. It'd be great if you could make a trip there. I'll be waiting for your good news!
 :{{tx}}
 {{Dialogue End}}
 
-===Change Mimosa's mind===
+===Change Mimosa's mind{{subst:void|<!--802210307-->}}===
 {{Mission Description|type=adventure|location=Clock Studios Theme Park|update|Mimosa of the Iris Family wants to stop you from taking the film. Go and see what secret she is hiding in her heart.<br />Anyone who stands against Clockie can taste the power of clockwork!}}
 {{Dialogue Start}}
-:{{tx}}
 {{Dialogue End}}
 
-===Find the film in the Grand Theater===
-{{Mission Description|type=adventure|location=Penacony Grand Theater|update|You have arrived at the Penacony Grand Theater to find the ''Dreamjoy Secrecy'' film.<br />The ending of ''Dreamjoy Memoir'' is around here somewhere. Start searching!}}
-{{Dialogue Start}}
-:{{tx}}
-{{Dialogue End}}
-
-===Change Mimosa's mind===
-{{Mission Description|type=adventure|location=Penacony Grand Theater|update|Mimosa of the Iris Family wants to stop you from taking the film. Go and see what secret she is hiding in her heart.<br />Anyone who stands against Clockie can taste the power of clockwork!}}
-{{Dialogue Start}}
-:{{tx}}
-{{Dialogue End}}
-
-===Go to Dreamflux Reef===
-{{Mission Description|type=adventure|location=Dreamflux Reef|update|Under the influence of clockwork, Mimosa changed her mind. She headed to Dreamflux Reef to search for a secret regarding Clockie...<br />It seems that she and the Watchmaker are hiding something. Go and get some answers from her.}}
-{{Dialogue Start}}
-:{{tx}}
-{{Dialogue End}}
-
-===Help Mimosa get out of the tricky situation===
-{{Mission Description|type=adventure|location=Dreamflux Reef|update|Under the influence of clockwork, Mimosa changed her mind. She headed to Dreamflux Reef to search for a secret regarding Clockie...<br />It looks like Mimosa is in some kind of trouble. Go and help her.}}
-{{Dialogue Start}}
-:{{tx}}
-{{Dialogue End}}
-
-===Follow Mimosa and Micah to the Nameless Graveyard===
-{{Mission Description|type=adventure|location=Dreamflux Reef|update|It turns out that Mimosa was Clockie's animator, as well as the Watchmaker's adopted child. The Watchmaker seems to have left behind a relic for Mimosa. Go and see what's going on.}}
-{{Dialogue Start}}
-:{{tx}}
-{{Dialogue End}}
-
-===Go back and report to Pisce===
+===Go back and report to Pisce{{subst:void|<!--802210312-->}}===
 {{Mission Description|type=adventure|location=Clock Studios Theme Park|update|Having learned of the Watchmaker's wishes, Mimosa has decided to help her adopted father complete this posthumous work. Return and tell Pisce the good news: ''Dreamjoy Secrecy'' can get back to editing immediately.}}
 {{Dialogue Start}}
+
+;(Talk to Pisce)
+;(If {{cx}}<!--SubMission Finish: 802210102--> and {{cx}}<!--SubMission not Finish: 802210207-->)
+::'''Pisce:''' Director, can we start editing now?
+::{{DIcon|Travel Log}} Begin editing.
+::<pre>{
+	"$type": "RPG.GameCore.ShowUI",
+	"Name": "Ui.ActivityClockPark.Entrance.ActivityClockParkMainPage"
+}</pre>
+::{{DIcon|Talk}} I'd like to ask you something.
+:::'''Pisce:''' Sure! An in-depth understanding of the subject is essential in creating a masterpiece. Just ask away! I'll tell you everything I know.
+:::{{DIcon|Talk}} What is ''Dreamjoy Memoir'' about?
+::::'''Pisce:''' The series revolves around the story of Dreamville, where Clockie and his friends live &mdash; I bet you already know this.
+::::'''Pisce:''' The series will delve into Clockie's arrival in Dreamville, his experiences of sharing life's ups and downs with the townspeople, and his contributions to the town's growth and development... It can be seen as a comprehensive collection of Clockie's story from the very beginning.
+:::;(Return to previous option selection)
+:::{{DIcon|Talk}} How is animation production done in Penacony?
+::::'''Pisce:''' Producing animations in Penacony is pretty simple. Apart from the common techniques like smart illustration, mental projection, and algorithmic generation, there's also the Sweet Dreams Troupe which is skilled in drawing and capable of recreating the vintage hand-drawn graphic style...
+::::'''Pisce:''' But here at Clock Studios, our storyboards are all hand-drawn by Mr. Watchmaker. He insists that our animators create the content for each frame themselves by hand.
+::::'''Pisce:''' As animation technology in the universe continues to advance, the graphics of films nowadays become increasingly sophisticated. Still, none of those works can rival the hand-drawn ''Clockie'' in Penacony. We're proud of that!
+:::;(Return to previous option selection)
+:::{{DIcon|Talk}} About the destruction of the theme park.
+::::'''Pisce:''' Oh, the mere mention of it saddens me. The theme park has always been one of our most important sources of offline revenue, but it was unexpectedly shut down by the Bloodhound Family for what they called a safety inspection...
+::::'''Pisce:''' Guess what happened after their inspection? The screen in the theater was split in half, and the Sweet Dreams Troupe were all turned into Dreamjolt Troupe. They even tried talking their way out of it by saying the destruction was the doing of some outsiders. How ridiculous!
+::::'''Pisce:''' That's not all. Later, a bunch of Nightingale Family members showed up, asserting that the destruction was unusual and exhibited signs of some... power of Nihility? Anyway, they inundated us with a barrage of technical terms and demanded an exorbitant repair fee that we simply couldn't accept.
+::::'''Pisce:''' Shortly after, the Iris Family representative approached us and proposed to acquire our copyrights. If you ask me, those lineages are probably in cahoots with each other to take advantage of us when we're down and claim Clockie as their own!
+:::;(Return to previous option selection)
+:::{{DIcon|Talk}} About your impression of the Watchmaker.
+::::'''Pisce:''' Well... Although I've worked at Clock Studios for most of my life, I've only met the chairman once...
+::::'''Pisce:''' It was an interview for my promotion. He actually held the interview at a party on the cruise ship "The Sunset."
+::::'''Pisce:''' I already had a little too much to drink when I was dragged to a guest room deep in the corridor, inside of which was an immaculately dressed gentleman wearing a hat. He sat next to a window, staring into the distance at the colorful ocean of dream bubbles.
+::::'''Pisce:''' He asked, "In your opinion, what does ''Clockie'' bring to the people?" I replied, "Happiness, laughter, heartwarming moments, and a bit of reflection on the sweet dreams." Honestly, the last one was just me blabbering away in my state at the time.
+::::'''Pisce:''' He chuckled at my answer before dismissing me from the room. The following day, I received the appointment notice from the executive producer... What a mysterious guy.
+:::;(Return to previous option selection)
+:::{{DIcon|Return}} I don't have any other questions.
+::::{{DIcon|Travel Log}} Begin editing.
+::::<pre>{
+	"$type": "RPG.GameCore.ShowUI",
+	"Name": "Ui.ActivityClockPark.Entrance.ActivityClockParkMainPage"
+}</pre>
+::::{{DIcon|Exit}} Maybe next time.
+:::::'''Pisce:''' Well, time and tide wait for no man. It'd be best if you could complete the editing as soon as possible so that we can get through this rough patch sooner.
+::{{DIcon|Exit}} Maybe next time.
+:::'''Pisce:''' Well, time and tide wait for no man. It'd be best if you could complete the editing as soon as possible so that we can get through this rough patch sooner.
+;(Otherwise, if {{cx}}<!--SubMission Finish: 802210207--> and {{cx}}<!--SubMission not Finish: 802210311-->)
+::'''Pisce:''' Director, the Iris Family conducts the movie review at the {{Color|keyword|nobold=1|Penacony Grand Theater}}. The reels of banned movies are kept there.
+::'''Pisce:''' You're an important guest of The Family. If you have the time, I wonder whether you can ask The Family for a favor and return ''Dreamjoy Secrecy&ast;''s film reel &mdash; Of course, provided this doesn't interfere with your editing job.
+::{{DIcon|Travel Log}} Continue editing
+::<pre>{
+	"$type": "RPG.GameCore.ShowUI",
+	"Name": "Ui.ActivityClockPark.Entrance.ActivityClockParkMainPage"
+}</pre>
+::{{DIcon|Exit}} Let me go find a member of The Family.
+:::'''Pisce:''' Well, time and tide wait for no man. It'd be best if you could complete the editing as soon as possible so that we can get through this rough patch sooner.
+;(Otherwise)
+::'''Pisce:''' Why are you here again? ''Dreamjoy Memoir'' is now showing, and the business of the Clock Studios is on the rise. There's no need for The Family to be involved!
+::'''Mimosa:''' Are you sure? Have you completed the final work?
+::'''Pisce:''' That... is all because of The Family's interference! To think you can use this method to threaten us... How shameless...
+::'''Mimosa:''' That's not true. Here, you can have the film reel.
+::'''Pisce:''' Huh?
+::'''Mimosa:''' You must be on a tight schedule now, isn't it? Then stop wasting time. I'll also help with the animation later.
+::'''Pisce:''' Wh&mdash;What are you up to this time? I'm not going to fall into your trap. We'll wait for the director to be back...
+::'''Pisce:''' Ah! Director, you're back! Where did you go? What took you so long?
+::{{DIcon|Arrow}} I was finding the reel.
+:::'''Pisce:''' Could it be that you've sent this lady to give us the film reel? No doubt you're the hero of Penacony! This is such an honor!
+::{{DIcon|Arrow}} I went to negotiate with Mimosa.
+:::'''Pisce:''' Well... You're incredible. Just with a few words from you, and she's personally delivered the film reel to us!
+::{{DIcon|Arrow}} I went to the Watchmaker's house.
+:::'''Pisce:''' Oh my goodness! Is he doing okay?
+::'''Mimosa:''' Let me explain. This is what happened...
+::{{tx}}
+::'''Mr. Domescreen:''' Will I be able to find a carefree heart? Just look at me right now: Wretched and socially inept!
+::'''Mr. Domescreen:''' Err... I know my take wasn't quite right, but my screen just does not contain anything gloomy or introverted!
+::'''Lalasky:''' Hmm, this industrious trashcan still needs enlightenment, scouring the world for wisdom and truth. The road is a long and difficult one...
+::'''Lalasky:''' Hmph, but outside this show, my can's wisdom is more than enough!
+::'''Bubble Hound:''' Arf, arf arf, arooo...
+::'''Bubble Hound:''' Have you noticed? This bark isn't quite similar to the last one.
+::'''Clockie:''' Let's go, comrades. Forward we go!
+::This Clockie can only repeat fixed lines. It might be a *prop* made by the Iris Family.
+::'''Villain Actor:''' Haha, Clockie! You're dead meat this time!
+::'''Villain Actor:''' I'll teach you a lesson, Clockie!
+::'''Pisce:''' Please follow me to the theater... I'll show you the work Mr. Watchmaker left behind. Seeing that this is your first time doing any {{Color|keyword|nobold=1|editing}}, I'll guide you through the basics. Are you ready?
+::Ready.
+::I'm not ready yet.
+::'''Pisce:''' That's fine. Come find me when you are.
+::'''Pisce:''' This is the material used to shoot {{Color|keyword|nobold=1|Extra Stories}}. You can find animators to complete this extra story. Those animation-obsessed artists are all wearing various characters as headwear. You should be able to identify them immediately.
+::'''Pisce:''' Filming extra stories for characters is a glorious tradition that Clock Studios has continued to the very present. The characters who didn't get to be fully shaped in the main flick can showcase their uniqueness in extra stories and gain more popularity.
+::'''Pisce:''' Do you have time now? Let me explain the details.
+::Go on.
+::'''Pisce:''' Director, have you already finished making Mr. Soda's extra story? I heard that the Extra you shot was all kinds of thrilling. The animator can't stop praising your skill!
+::'''Pisce:''' You can find animators to complete this extra story. Those animation-obsessed artists are all wearing various characters as headwear. You should be able to identify them immediately.
+::'''Pisce:''' I'm counting on you to shoot the Extra! Under your directions, our characters will definitely be classics that echo down the annals of cinema!
+::'''Pisce:''' Director, have you already finished making Brother Hanu's extra story? I heard that the Extra you shot explored Hanu's past from all kinds of angles. The animator for Brother Hanu's can't stop praising your narrative skills!
+::'''Pisce:''' The animator is usually known for his arrogance, so we're going to need you to help him come up with some ideas. We're really sorry about this...
+::That's alright.
+::'''Pisce:''' Ah, the director sure is considerate.
+::What about the reward?
+::'''Pisce:''' Uh... I'm sure you've gained some knowledge during the directing process, right?
+::Then show me a token of your appreciation.
+::'''Pisce:''' *cough* So, like, the production team's been a bit stretched on the budget side of things recently. We hope you understand.
+::'''Pisce:''' The repeating that's to follow is still editing the movie. The refurbishment fund of the theme park, the fate of Clock Studios, Mr. Watchmaker's expectation, and the future of Clockie... They are all in your hands, director!
+::'''Shocked Theme Park Employee:''' Look. The strange markings in the sky have disappeared!
+::'''Cheerful Theme Park Employee:''' My word, that must be the work of the new director...
+::'''Pisce:''' Director, do you have time to direct the {{Color|keyword|nobold=1|commercial}} they mentioned? If it's done by you, the commercial will definitely be an epic one!
+::Go shoot the Commercial.
+::'''Pisce:''' Alright, I'll let the advertisers know.
+::'''Pisce:''' With more funding, the filming process will also go smoother, and the resources available to you will increase...
+::'''Pisce:''' The task of shooting the commercial is now in your hands!
+::Continue editing
+::Shoot the Commercial first.
+::'''Pisce:''' This task will be up to you!
+::'''Pisce:''' You're back. How did it feel shooting the ad?
+::Pretty rad.
+::'''Pisce:''' It did have lots of action-heavy elements, didn't it? Must've been no big deal to you though.
+::Pretty boring.
+::'''Pisce:''' Compared to a film, a commercial can only be considered an appetizer.
+::So-so.
+::'''Pisce:''' Haha, editing a film is probably still more interesting!
+::'''Pisce:''' Many fans look forward to ''Dreamjoy Memoir''. Let's keep up the editing!
+::Begin editing.
+::Hold on, let me take a break.
+::'''Pisce:''' Alright, I'll be here waiting.
+::'''Curious Guest:''' Hm? This screen seems different from before...
+::'''Passing Guest:''' I recently heard the ''Dreamjoy Memoir'' movie is super popular. The new director really breathed life back into this place.
+::'''Happy Guest:''' Let's go! I need to see what this director makes next!
+::'''Passionate Guest:''' Look, the screen here's been fixed. The director's turning things around on by their lonesome. Astonishing!
+::'''Curious Guest:''' I wonder who the director is. It's not the legendary Watchmaker, is it?
+::'''Expectant Guest:''' Don't rush. I heard there's going to be a ''Dreamjoy Memoir'' screening event, maybe we'll be able to see things for ourselves then...
+::No problem, leave it to me.
+::'''Pisce:''' You can definitely produce a great advertisement!
+::'''Pisce:''' You're back. I just got a call from the Iris Family. They praised your professionalism while shooting the commercial to heaven and back. Everyone's looking forward to the results of your completed work!
+::Piece of cake.
+::'''Pisce:''' Haha, commercials must be nothing to you, compared to undertaking a film.
+::What else do you need me for?
+::'''Pisce:''' Many fans look forward to ''Dreamjoy Memoir''. Let's keep up the editing!
+::'''Pisce:''' Thanks a lot! Looking forward to hearing the good news!
+::{{DIcon|Arrow}} Begin the final edits.
+::{{DIcon|Arrow}} Give me a moment.
+:::Give me a moment.
+:::{{tx}}
+:<pre>{
+	"$type": "RPG.GameCore.SetPerformanceResult",
+	"Value": 1
+}</pre>
+;(Unused &mdash; ActivitMovie_OpenTempUI)
+<pre>{
+	"$type": "RPG.GameCore.ClockParkUnlockScript",
+	"ScriptID": 1
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.ShowUI",
+	"Name": "Ui.ActivityClockPark.Entrance.ActivityClockParkScriptDetailPage",
+	"Param": {
+		"Value": "1"
+	}
+}</pre>
+;(Unused &mdash; TriggerPerformance)
+:'''Pisce:''' Why are you here again? ''Dreamjoy Memoir'' is now showing, and the business of the Clock Studios is on the rise. There's no need for The Family to be involved!
+::'''Mimosa:''' Are you sure? Have you completed the final work?
+::'''Pisce:''' That... is all because of The Family's interference! To think you can use this method to threaten us... How shameless...
+::'''Mimosa:''' That's not true. Here, you can have the film reel.
+::'''Pisce:''' Huh?
+::'''Mimosa:''' You must be on a tight schedule now, isn't it? Then stop wasting time. I'll also help with the animation later.
+::'''Pisce:''' Wh&mdash;What are you up to this time? I'm not going to fall into your trap. We'll wait for the director to be back...
+::'''Pisce:''' Ah! Director, you're back! Where did you go? What took you so long?
+::{{DIcon|Arrow}} I was finding the reel.
+:::'''Pisce:''' Could it be that you've sent this lady to give us the film reel? No doubt you're the hero of Penacony! This is such an honor!
+::{{DIcon|Arrow}} I went to negotiate with Mimosa.
+:::'''Pisce:''' Well... You're incredible. Just with a few words from you, and she's personally delivered the film reel to us!
+::{{DIcon|Arrow}} I went to the Watchmaker's house.
+:::'''Pisce:''' Oh my goodness! Is he doing okay?
+::'''Mimosa:''' Let me explain. This is what happened...
+::{{tx}}
+::'''Mr. Domescreen:''' Will I be able to find a carefree heart? Just look at me right now: Wretched and socially inept!
+::'''Mr. Domescreen:''' Err... I know my take wasn't quite right, but my screen just does not contain anything gloomy or introverted!
+::'''Lalasky:''' Hmm, this industrious trashcan still needs enlightenment, scouring the world for wisdom and truth. The road is a long and difficult one...
+::'''Lalasky:''' Hmph, but outside this show, my can's wisdom is more than enough!
+::'''Bubble Hound:''' Arf, arf arf, arooo...
+::'''Bubble Hound:''' Have you noticed? This bark isn't quite similar to the last one.
+::'''Clockie:''' Let's go, comrades. Forward we go!
+::This Clockie can only repeat fixed lines. It might be a *prop* made by the Iris Family.
+::'''Villain Actor:''' Haha, Clockie! You're dead meat this time!
+::'''Villain Actor:''' I'll teach you a lesson, Clockie!
+::'''Pisce:''' Please follow me to the theater... I'll show you the work Mr. Watchmaker left behind. Seeing that this is your first time doing any {{Color|keyword|nobold=1|editing}}, I'll guide you through the basics. Are you ready?
+::Ready.
+::I'm not ready yet.
+::'''Pisce:''' That's fine. Come find me when you are.
+::'''Pisce:''' This is the material used to shoot {{Color|keyword|nobold=1|Extra Stories}}. You can find animators to complete this extra story. Those animation-obsessed artists are all wearing various characters as headwear. You should be able to identify them immediately.
+::'''Pisce:''' Filming extra stories for characters is a glorious tradition that Clock Studios has continued to the very present. The characters who didn't get to be fully shaped in the main flick can showcase their uniqueness in extra stories and gain more popularity.
+::'''Pisce:''' Do you have time now? Let me explain the details.
+::Go on.
+::'''Pisce:''' Director, have you already finished making Mr. Soda's extra story? I heard that the Extra you shot was all kinds of thrilling. The animator can't stop praising your skill!
+::'''Pisce:''' You can find animators to complete this extra story. Those animation-obsessed artists are all wearing various characters as headwear. You should be able to identify them immediately.
+::'''Pisce:''' I'm counting on you to shoot the Extra! Under your directions, our characters will definitely be classics that echo down the annals of cinema!
+::'''Pisce:''' Director, have you already finished making Brother Hanu's extra story? I heard that the Extra you shot explored Hanu's past from all kinds of angles. The animator for Brother Hanu's can't stop praising your narrative skills!
+::'''Pisce:''' The animator is usually known for his arrogance, so we're going to need you to help him come up with some ideas. We're really sorry about this...
+::That's alright.
+::'''Pisce:''' Ah, the director sure is considerate.
+::What about the reward?
+::'''Pisce:''' Uh... I'm sure you've gained some knowledge during the directing process, right?
+::Then show me a token of your appreciation.
+::'''Pisce:''' *cough* So, like, the production team's been a bit stretched on the budget side of things recently. We hope you understand.
+::'''Pisce:''' The repeating that's to follow is still editing the movie. The refurbishment fund of the theme park, the fate of Clock Studios, Mr. Watchmaker's expectation, and the future of Clockie... They are all in your hands, director!
+::'''Shocked Theme Park Employee:''' Look. The strange markings in the sky have disappeared!
+::'''Cheerful Theme Park Employee:''' My word, that must be the work of the new director...
+::'''Pisce:''' Director, do you have time to direct the {{Color|keyword|nobold=1|commercial}} they mentioned? If it's done by you, the commercial will definitely be an epic one!
+::Go shoot the Commercial.
+::'''Pisce:''' Alright, I'll let the advertisers know.
+::'''Pisce:''' With more funding, the filming process will also go smoother, and the resources available to you will increase...
+::'''Pisce:''' The task of shooting the commercial is now in your hands!
+::Continue editing
+::Shoot the Commercial first.
+::'''Pisce:''' This task will be up to you!
+::'''Pisce:''' You're back. How did it feel shooting the ad?
+::Pretty rad.
+::'''Pisce:''' It did have lots of action-heavy elements, didn't it? Must've been no big deal to you though.
+::Pretty boring.
+::'''Pisce:''' Compared to a film, a commercial can only be considered an appetizer.
+::So-so.
+::'''Pisce:''' Haha, editing a film is probably still more interesting!
+::'''Pisce:''' Many fans look forward to ''Dreamjoy Memoir''. Let's keep up the editing!
+::Begin editing.
+::Hold on, let me take a break.
+::'''Pisce:''' Alright, I'll be here waiting.
+::'''Curious Guest:''' Hm? This screen seems different from before...
+::'''Passing Guest:''' I recently heard the ''Dreamjoy Memoir'' movie is super popular. The new director really breathed life back into this place.
+::'''Happy Guest:''' Let's go! I need to see what this director makes next!
+::'''Passionate Guest:''' Look, the screen here's been fixed. The director's turning things around on by their lonesome. Astonishing!
+::'''Curious Guest:''' I wonder who the director is. It's not the legendary Watchmaker, is it?
+::'''Expectant Guest:''' Don't rush. I heard there's going to be a ''Dreamjoy Memoir'' screening event, maybe we'll be able to see things for ourselves then...
+::No problem, leave it to me.
+::'''Pisce:''' You can definitely produce a great advertisement!
+::'''Pisce:''' You're back. I just got a call from the Iris Family. They praised your professionalism while shooting the commercial to heaven and back. Everyone's looking forward to the results of your completed work!
+::Piece of cake.
+::'''Pisce:''' Haha, commercials must be nothing to you, compared to undertaking a film.
+::What else do you need me for?
+::'''Pisce:''' Many fans look forward to ''Dreamjoy Memoir''. Let's keep up the editing!
+::'''Pisce:''' Thanks a lot! Looking forward to hearing the good news!
+::{{DIcon|Arrow}} Begin the final edits.
+::{{DIcon|Arrow}} Give me a moment.
+:::Give me a moment.
+:::{{tx}}
+:<pre>{
+	"$type": "RPG.GameCore.SetPerformanceResult",
+	"Value": 1
+}</pre>
+{{Dialogue End}}
+
+===Find the film in the Grand Theater{{subst:void|<!--802210302-->}}===
+{{Mission Description|type=adventure|location=Penacony Grand Theater|update|You have arrived at the Penacony Grand Theater to find the ''Dreamjoy Secrecy'' film.<br />The ending of ''Dreamjoy Memoir'' is around here somewhere. Start searching!}}
+{{Dialogue Start}}
+
+:{{DIcon|Talk}} Investigate
+:Title: ''Dreamjoy Memoir 5: Dreamjoy Secrecy''
+:This movie is the fifth installment of the ''Dreamjoy Memoir'' series, which tells the story of Dreamville after its prosperity, where Clock■■ and Old ■■■ ■■■■ part ways. To preserve the ■■■■■■■ and ■■■■■ of the town, Clock■■ sets up ■■■■■ville and begins ■■■ ■■■■■■■■ ■■■■■■...
+:Review: <s>This movie contains controversial topics and should be banned.</s> The style of this movie deviates from the previous ''Clockie'' pieces and has the potential to cause negative effects. A temporary ban is recommended, and an interview should be arranged with its creator.
+:'''Iris Family Representative:''' Halt! Who goes there? The Penacony Grand Theater is currently closed to the public...
+:'''Iris Family Representative:''' Wait, you look kinda familiar... Oh! I met you at the Clock Studios Theme Park before!
+:'''Iris Family Representative:''' You really have a thing for odd places, huh? Tell me who you are or I'll have you nabbed by the Bloodhounds.
+:{{DIcon|Arrow}} I'm one of the Nameless on the Astral Express.
+:{{DIcon|Arrow}} I'm the hero of Penacony.
+:{{DIcon|Arrow}} I'm the legendary Galactic Baseballer.
+:'''Mimosa:''' Hmm, that title... You're the gray-haired guest who has recently helped The Family with their trouble, aren't you?
+:'''Mimosa:''' Please forgive my rudeness earlier and allow me to introduce myself again. I'm Mimosa, a member of the Iris Family. Aside from business liaisons, I'm also in charge of managing the film and television productions in Penacony.
+:'''Mimosa:''' Is there something you're looking for in the barred theater?
+:{{DIcon|Arrow}} I'm looking for an animation film reel.
+:'''Mimosa:''' Animation... Oh, you must be talking about ''Dreamjoy Secrecy'' by Clock Studios.
+:'''Mimosa:''' Heh, the Nameless are indeed as helpful as they are described! You helped with the production of the four films recently released by Clock Studios, didn't you?
+:'''Mimosa:''' I'm very sorry, but I can't give you the reel of this film. The decision to ban it was made by Maeven herself because its content didn't comply with The Family's standards. Its director, the Watchmaker, needs to come forward with an explanation.
+:{{DIcon|Arrow}} He can't make it here.
+::'''Mimosa:''' Indeed, the Watchmaker can't make it here... In that case, I'm sorry to say that the release of the film is forbidden.
+:{{DIcon|Arrow}} I'm the director.
+::'''Mimosa:''' No... The director of this film is the Watchmaker. It can't possibly be anyone else.
+:{{DIcon|Arrow}} I'm the Watchmaker.
+::'''Mimosa:''' Haha, that's quite a sad joke. I'm well aware of whom the Watchmaker is.
+:'''Mimosa:''' The ''Clockie'' series has evolved to become something beyond a mere piece of work by the Watchmaker. It embodies the spirit of Penacony and represents the image of a dream &mdash; joyful, pleasant, and harmonious...
+:'''Mimosa:''' However, its creator keeps incorporating his own views and ideas into his works, especially in this film... There are simply too many references to elements in the real world that it is ruining Clockie's image...
+:{{DIcon|Arrow}} Do you know the Watchmaker personally?
+:{{DIcon|Arrow}} Are you okay?
+:'''Mimosa:''' It's nothing. If you don't mind, I'd like to get back to my work. Please just leave.
 :{{tx}}
+
+:{{DIcon|Talk}} Investigate
+:Title: ''Gala of Finality''
+:''The End of the Gala'' is a disaster film produced by Grady Films, depicting the apocalypse of Penacony. Due to the negligence of the Alfalfa Family, the society that is obsessed with extravagance collapses during the economic crisis. The greed of the people attracts the much-dreaded super Memory Zone Memes.
+:The incompetent Family perishes along with the dream, leaving Penacony a desolate slum in the universe, visited by no one...
+:Review: An attempt at scaremongering that can damage the image of The Family. The movie should be banned.
+
+:{{DIcon|Talk}} Investigate
+:Title: ''Alarm Clockie''
+:''Alarm Clockie'' is an independent film produced by a Dreamchaser. The story is about Alarm Clock Boy's adventure in Sleepy Town alongside Brother Nunoo, Cardboard Birds, and their challenge against President Pebble.
+:Review: The story and character design of the movie violated the rights and interests of Clock Studios. The movie is banned until the expiry of Clockie's copyright.
+
+:{{DIcon|Talk}} Investigate
+:Title: ''Aeon Genesis Preservation''
+:This is a foreign film imported and produced by Interastral Peace Entertainment. The story is set in the universe after the occurrence of the Emperor's War II and centers around young IPC employees who pilot mechas to maintain galactic peace in the name of the Amber Lord.
+:Review: From the 23rd to the 53rd minute, the monster named "Inherent Sin of Hundred Arms" that the IPC mechas are up against appears to allude to a certain Chordmaster. Additionally, the movie contains a lot of advertisements and elements that promote the belief in Preservation. It is recommended to cut the violating scenes before releasing the movie.
+:'''(Trailblazer):''' (Suppressed emotions, dazed expression, conflicted language...)
+:'''(Trailblazer):''' (I can tell she is hiding something. Let's find out what's on her mind...)
+
+;(Talk to Mimosa)
+:Title: ''Aeon Genesis Preservation''
+:This is a foreign film imported and produced by Interastral Peace Entertainment. The story is set in the universe after the occurrence of the Emperor's War II and centers around young IPC employees who pilot mechas to maintain galactic peace in the name of the Amber Lord.
+:Review: From the 23rd to the 53rd minute, the monster named "Inherent Sin of Hundred Arms" that the IPC mechas are up against appears to allude to a certain Chordmaster. Additionally, the movie contains a lot of advertisements and elements that promote the belief in Preservation. It is recommended to cut the violating scenes before releasing the movie.
+;(Unused &mdash; 8022103_Angry)
+<pre>{
+	"$type": "RPG.GameCore.HeartDialEmoBlackList",
+	"TargetType": {
+		"$type": "RPG.GameCore.GroupFetchLocalTarget",
+		"Targets": [
+			400001
+		]
+	},
+	"EmoTypeBlackList": [
+		"Anger"
+	]
+}</pre>
+
+;(Unused &mdash; 8022103_Happy)
+<pre>{
+	"$type": "RPG.GameCore.HeartDialEmoBlackList",
+	"TargetType": {
+		"$type": "RPG.GameCore.GroupFetchLocalTarget",
+		"Targets": [
+			400001
+		]
+	},
+	"EmoTypeBlackList": [
+		"Happy"
+	]
+}</pre>
+{{Dialogue End}}
+
+===Change Mimosa's mind{{subst:void|<!--802210308-->}}===
+{{Mission Description|type=adventure|location=Penacony Grand Theater|update|Mimosa of the Iris Family wants to stop you from taking the film. Go and see what secret she is hiding in her heart.<br />Anyone who stands against Clockie can taste the power of clockwork!}}
+{{Dialogue Start}}
+{{Dialogue End}}
+
+===Go to Dreamflux Reef{{subst:void|<!--802210309-->}}===
+{{Mission Description|type=adventure|location=Dreamflux Reef|update|Under the influence of clockwork, Mimosa changed her mind. She headed to Dreamflux Reef to search for a secret regarding Clockie...<br />It seems that she and the Watchmaker are hiding something. Go and get some answers from her.}}
+{{Dialogue Start}}
+
+;(Unused &mdash; 802210307_Open)
+:'''Angry Resident:''' Traitor!
+::'''Dissatisfied Citizen:''' Why did you come back!?
+::'''Mimosa:''' I'm sorry...
+::'''Angry Resident:''' How dare you come back, you traitor to Dreamflux Reef!
+::'''Dissatisfied Citizen:''' Get out of Dreamflux Reef and go back to your Family!
+::'''Mimosa:''' Wait, I'm Mimosa. I'm Watchmaker's...
+::'''Angry Resident:''' Tsk, can't believe you have the face to mention his name! Mr. Watchmaker raised you, and yet you sided with his enemies!
+::'''Dissatisfied Citizen:''' Mr. Watchmaker still thought about you in his twilight years! Don't you feel ashamed of yourself!?
+::'''Mimosa:''' I... I'm very sorry...
+::'''Angry Resident:''' Do you think an apology is enough? We must teach you ingrate a lesson on the Watchmaker's behalf!
+::{{DIcon|Arrow}} That's a little harsh.
+::{{DIcon|Arrow}} Please don't resort to violence.
+::'''Mimosa:''' My distinguished guest...
+::{{tx}}
+:;(Enter battle)
+:::{{tx|Enemy list missing}}
+
+;(Unused &mdash; 802210307_Bubble)
+<pre>{
+	"$type": "RPG.GameCore.PlayNPCBubbleTalk",
+	"BubbleTalkInfoList": [
+		{
+			"GroupID": 41,
+			"GroupNpcID": 400003,
+			"TalkSentenceID": 802211701
+		},
+		{
+			"GroupID": 41,
+			"GroupNpcID": 400002,
+			"TalkSentenceID": 802211702
+		},
+		{
+			"GroupID": 41,
+			"GroupNpcID": 400001,
+			"TalkSentenceID": 802211703
+		}
+	]
+}</pre>
+{{Dialogue End}}
+
+===Help Mimosa get out of the tricky situation{{subst:void|<!--802210310-->}}===
+{{Mission Description|type=adventure|location=Dreamflux Reef|update|Under the influence of clockwork, Mimosa changed her mind. She headed to Dreamflux Reef to search for a secret regarding Clockie...<br />It looks like Mimosa is in some kind of trouble. Go and help her.}}
+{{Dialogue Start}}
+;(Unused &mdash; 802210309_Open)
+:{{tx}}
+::'''Mimosa:''' Are these... letters from the Watchmaker for me?
+::'''Micah:''' Yeah. I couldn't find you, so I kept these letters here, thinking that you might find them when you visit him...
+::'''Micah:''' Now, I can finally return them to you.
+::One, two, three drops... Tears fell onto the letter paper. At that moment, Mimosa seems to have forgotten the people around her as she softly verbalizes the letter's content...
+::'''Mimosa:''' "My stubborn pony, how's life in the dream? When will you ever see this letter?"
+::'''Mimosa:''' "I bet you're still mad at me for painting those ridiculous stories, restricting your freedom to create, and yet I never explain my reasons for doing so..."
+::'''Mimosa:''' "Perhaps you'll find it hard to accept my reason, but I truly mean it &mdash; I wish to protect you and your aspiration."
+::'''Mimosa:''' "I know. Ever since you were a child, you aspire to go to the idyllic dreams above the dome, to witness the Dreamchasers' happiness, and to see smiles on the guests' faces. That's because you're someone who loves to bring joy to others."
+::'''Mimosa:''' "That's why I'm afraid. I'm afraid the stories I wrote in my creations will tarnish this innocence. I hope that there's always a dream in your heart. I hope you'll never be skeptical of this world."
+::'''Mimosa:''' "But I've figured it out now. You are a courageous and kind child. Your pure intent will not be crushed easily. Hence, I am now willing to be truthful and tell you the reason for creating Clockie..."
+::'''Mimosa:''' "It's because I do not want people to forget everything in their dreams."
+::'''Mimosa:''' "From the conflict in the prison to the countless catastrophes, to the expansion of nightmares, to the establishment of sweet dreams... Along the way, I've witnessed the people in the dreams gradually coming to a standstill without looking back. They said the world outside of dreams is cruel, and one should no longer look back at these sorrowful pasts in dreams."
+::'''Mimosa:''' "However, a pleasant dream must always move forward in a trail of blazing flame and look back. And so, I put my pen to paper and rely on my childhood friends to keep these precious memories for me."
+::'''Mimosa:''' "If sometime in the future when all histories are covered in carols and all coming days are buried in laughter, and people can never wake up again, Clockie might be the wake-up call to their existence..."
+::'''Mimosa:''' "Oh yes, do you still remember? I secretly told you once that the brain of Clockie is actually a compass &mdash; a compass that leads one to the future."
+::'''Mimosa:''' "And now, this compass belongs to you. My past has already ended. Please use him to record your future."
+::'''Mimosa:''' "Love always, Mikhail Char Legwork..."
+::{{DIcon|Arrow}} What an amazing animation artist.
+:::'''Micah:''' Yes, the Watchmaker is Penacony's best animation artist... and will always be.
+::{{DIcon|Arrow}} What an amazing father.
+:::'''Micah:''' Heh, he's not the perfect father... but we will always love him. Am I right, Mimosa?
+::{{DIcon|Arrow}} What an amazing trailblazer.
+:::'''Micah:''' You're right. He has been trailblazing forward with his life and engraving his past memories in his creations...
+::'''Mimosa:''' The Watchmaker... why didn't you let me know earlier?
+::'''Micah:''' Mimosa, he had always wanted to protect you so he chose not to tell you about his less-than-glamorous past.
+::'''Mimosa:''' But... if I had known about it earlier, I wouldn't have left Dreamflux Reef and abandoned Clockie...
+::'''Micah:''' Heh heh. To put it in his words, that is the "route" you've chosen. Moreover... it isn't too late now, is it?
+::'''Mimosa:''' ...Yes, it's not too late.
+::'''Mimosa:''' I will request to meet Lady Maeven immediately and tell her... the Watchmaker is only trying to document the history of the Penacony that shouldn't be forgotten. I believe she will understand such a reason. After all...
+::{{DIcon|Arrow}} After all?
+::'''Mimosa:''' Heh, it's nothing. She's a reasonable person, so don't worry about it.
+::{{tx}}
+:'''Angry Resident:''' Ugh, {{MC|m=he|f=she}}'s a tough one...
+:'''Dissatisfied Citizen:''' Don't worry, I just asked Mr. Micah to be here. They're finished!
+:'''Micah:''' ...
+:'''Angry Resident:''' Mr. Micah! We're counting on you to punish the traitor and her underling!
+:'''Micah:''' I'm sorry you have to go through this, my friend from Astral Express.
+:'''Dissatisfied Citizen:''' Ah, Astral Express... Could that be Mr. Watchmaker's...
+:'''Micah:''' You guys should go. Don't embarrass Dreamflux Reef anymore.
+:'''Angry Resident:''' O&mdash;Okay! Let's bolt. I think we've messed with the wrong person!
+:'''Micah:''' My apologies, (Trailblazer) and Mimosa. Are you guys alright?
+:'''Mimosa:''' I... I'm fine...
+:'''Mimosa:''' ...Brother.
+:{{DIcon|Arrow}} You two are... siblings?
+:{{DIcon|Arrow}} Are you also a child of the Watchmaker?
+:'''Micah:''' Just like Mimosa, I'm also an orphan adopted by Watchmaker. There are many more kids like us in Dreamflux Reef.
+:'''Micah:''' When we got older, I chose to stay here in Dreamflux Reef while Mimosa pursued the life she desired in Penacony.
+:'''Micah:''' By the way, how did the two of you meet?
+:{{DIcon|Arrow}} Because of ''Dreamjoy Memoir''...
+::'''Micah:''' Yes, Pisce told me you were involved in the production of this film series.
+:{{DIcon|Arrow}} Because of the film reels left behind by the Watchmaker...
+::'''Micah:''' Film reels... Oh, I think I know what you're saying. Are those for the ''Dreamjoy Memoir'' series?
+::'''Micah:''' Pisce told me you were involved in the production of this film series.
+:{{DIcon|Arrow}} Because of an unpleasant argument...
+::'''Micah:''' Huh? What led to the argument?
+::'''Micah:''' Was it about... the recent Clockie movie?
+::'''Micah:''' Pisce told me you were involved in its production.
+:'''Micah:''' Did you run into any problems during the production? Mimosa used to work as the Watchmaker's animation assistant here before, and she knows Clockie's story like the back of her hand. If it's a technical glitch, you can discuss it with her...
+:{{tx}}
+{{Dialogue End}}
+
+===Follow Mimosa and Micah to the Nameless Graveyard{{subst:void|<!--802210311-->}}===
+{{Mission Description|type=adventure|location=Dreamflux Reef|update|It turns out that Mimosa was Clockie's animator, as well as the Watchmaker's adopted child. The Watchmaker seems to have left behind a relic for Mimosa. Go and see what's going on.}}
+{{Dialogue Start}}
+
 {{Dialogue End}}
 
 ==Other Languages==

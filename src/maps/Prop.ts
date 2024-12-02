@@ -1,16 +1,17 @@
 import type { performance } from '../dialogue/tasks/Performance.js';
 import { getExcelFile } from '../files/GameFile.js';
-import { InternalMazeProp, MapProp, MapTriggerData, PropType, Vector3 } from '../files/MapData.js';
+import { InternalMazeProp, MapProp, MapTriggerData, PropType, Vector3 } from '../files/graph/MapData.js';
 import { Dictionary } from '../Shared.js';
 import { textMap } from '../TextMap.js';
 import { BaseMapObject } from './BaseMapObject.js';
-import { DialogueNPC, NPCDialogue } from './NPCDialogue.js';
+import type { LevelGroup } from './LevelGroup.js';
+import { BaseMapDialogue, DefaultPropDialogue, DialogueNPC, NPCDialogue } from './NPCDialogue.js';
 
 export const MazeProp = await getExcelFile<InternalMazeProp>('MazeProp.json', 'ID')
 
 export class BaseProp {
 	id: number
-	type: PropType
+	prop_type: PropType
 	
 	name?: string
 	title?: string
@@ -28,7 +29,7 @@ export class BaseProp {
 		const data = typeof dataOrId == 'object' ? dataOrId : MazeProp[dataOrId]
 		
 		this.id = data.ID
-		this.type = data.PropType
+		this.prop_type = data.PropType
 		
 		this.name = textMap.getText(data.PropName) || undefined
 		this.title = textMap.getText(data.PropTitle) || undefined
@@ -45,6 +46,8 @@ export class BaseProp {
 }
 
 export class PropInstance extends BaseProp implements BaseMapObject {
+	type: 'prop' = 'prop'
+	
 	object_id: number
 	
 	position: Vector3
@@ -58,9 +61,9 @@ export class PropInstance extends BaseProp implements BaseMapObject {
 	camp_id?: number
 
 	dialogue_ids: number[]
-	dialogue: NPCDialogue[]
+	dialogue: BaseMapDialogue[]
 	
-	constructor(data: MapProp) {
+	constructor(data: MapProp, public group: LevelGroup) {
 		super(data.PropID)
 		this.object_id = data.ID
 		this.position = { X: data.PosX ?? 0, Y: data.PosY ?? 0, Z: data.PosZ ?? 0 }
@@ -75,5 +78,9 @@ export class PropInstance extends BaseProp implements BaseMapObject {
 			.filter(id => DialogueNPC[id])
 			.map(id => new NPCDialogue(id, this))
 			.sort((d0, d1) => d1.priority - d0.priority)
+
+		if (data.Dialog) {
+			this.dialogue.push(new DefaultPropDialogue(data, this))
+		}
 	}
 }

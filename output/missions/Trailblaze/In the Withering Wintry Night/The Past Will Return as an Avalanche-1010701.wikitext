@@ -11,7 +11,7 @@ PageTitle=#The Past Will Return as an Avalanche#
 |chapter       = In the Withering Wintry Night
 |requirements  = [[Trailblaze Mission]] ''[[The Past Will Return as an Avalanche]]'' completed
 |summary       = <!--official mission summary from Fate's Atlas-->
-|characters    = Trailblazer
+|characters    = Bronya; Clara; Eric; Guardbot; Perkins; Seele; Trailblazer
 |startLocation = [[Jarilo-VI]] - [[Rivet Town]]
 |world         = Jarilo-VI
 |area          = Rivet Town
@@ -24,15 +24,14 @@ PageTitle=#The Past Will Return as an Avalanche#
 ==Steps==
 # Find a vantage point for observation
 # Search for the supplies, go to the market square
+# Look for missing supplies on the market square
+# Find the way to the orphanage
 # Go to the orphanage and search for the supplies
 # Search for supplies in the orphanage
 # Search for supplies around the orphanage
-# Search for supplies in the orphanage
-# Go to the orphanage and search for the supplies
-# Look for missing supplies on the market square
 # Ask Clara why she's here
-# Find the way to the orphanage
 # Meet up with Seele and the others
+# Go to the orphanage and search for the supplies
 
 <!--
 ==Gameplay Notes==
@@ -43,72 +42,439 @@ PageTitle=#The Past Will Return as an Avalanche#
 -->
 ==Dialogue==
 {{Stub Dialogue}}
+:{{A|VO chapter1 4 seele 217.ogg}} '''Seele:''' We're here. This is Rivet Town... *sigh* Everything looks familiar...
+:{{A|VO chapter1 4 seele 218.ogg}} '''Seele:''' Let's go, and watch your step. I haven't been here in a long time. There are probably some monsters around.
+:{{A|VO chapter1 Ag1 seele 109.ogg}} '''Seele:''' We can't see anything here... Let's find higher ground to get a better view.
 {{Dialogue End}}
 
-===Find a vantage point for observation===
+===Find a vantage point for observation{{subst:void|<!--101070102-->}}===
 {{Mission Description|type=trailblaze|location=Rivet Town|update|According to Natasha, there may still be remaining medical supplies in the abandoned Rivet Town. The mission for you and Seele is to retrieve the supplies and deplete them of their final value... Erm, to let them shine and be useful in the clinic.<br />You arrive at the entrance of the mining town. Although this place looks to be completely desolate, in reality, Fragmentum monsters have been dwelling here for quite some time. This is a dangerous place.<br />It'd be best to make observations and plan out your route before making your way in.}}
 {{Dialogue Start}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+<pre>{
+	"$type": "RPG.GameCore.PropSetVisibility",
+	"SpecifiedRelativePaths": [],
+	"TargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvPropEx",
+		"FetchType": "SinglePropByPropID",
+		"SinglePropID": {
+			"GroupID": {
+				"fixedValue": {
+					"Value": 49
+				}
+			},
+			"ID": {
+				"fixedValue": {
+					"Value": 300001
+				}
+			}
+		}
+	}
+}</pre>
 :{{tx}}
+<pre>{
+	"$type": "RPG.GameCore.CaptureLocalPlayer",
+	"CharacterUniqueName": "LocalPlayer"
+}</pre>
+----
+<pre>{
+	"$type": "RPG.GameCore.ActiveVirtualCamera",
+	"AreaName": "1010701_temp",
+	"AnchorName": "Camera_101070102",
+	"IsActive": true,
+	"FollowTargetUniqueName": "LocalPlayer",
+	"LookAtTargetAnchorName": "LookAt_101070102",
+	"BlendConfig": {
+		"ExportToJson": true,
+		"BlendType": "Cut",
+		"UseDefaultBlendCurve": true,
+		"BlendTime": 1,
+		"FOVSmoothDampTime": -1,
+		"FrameBlendWeightStart": 1,
+		"FrameBlendDuration": 1
+	},
+	"VCameraDitherMaxDistance": 3,
+	"CenterPosX": -1,
+	"CenterPosY": -1
+}</pre>
+:{{A|VO chapter1 4 seele 219.ogg}} '''Seele:''' Way over there, see that house on the hill? That's Natasha's old orphanage.
+:{{A|VO chapter1 4 seele 220.ogg}} '''Seele:''' After Oleg found me, he sent me there. I spent over half my childhood in that place.
+:{{DIcon|Arrow}} It looks quite impressive...
+:{{DIcon|Arrow}} That must be a time of plenty.
+:{{DIcon|Arrow}} I'd like to retire here.
+<pre>{
+	"$type": "RPG.GameCore.ActiveVirtualCamera",
+	"AreaName": "1010701_temp",
+	"AnchorName": "Camera_101070102",
+	"FollowTargetUniqueName": "LocalPlayer",
+	"LookAtTargetAnchorName": "LookAt_101070102",
+	"BlendConfig": {
+		"ExportToJson": true,
+		"BlendType": "Cut",
+		"UseDefaultBlendCurve": true,
+		"FOVSmoothDampTime": -1,
+		"FrameBlendWeightStart": 1,
+		"FrameBlendDuration": 1
+	},
+	"CenterPosX": -1,
+	"CenterPosY": -1
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.ActiveVirtualCamera",
+	"AreaName": "1010701_temp",
+	"AnchorName": "Camera_101070102_02",
+	"IsActive": true,
+	"BlendConfig": {
+		"ExportToJson": true,
+		"BlendType": "Cut",
+		"UseDefaultBlendCurve": true,
+		"FOVSmoothDampTime": -1,
+		"FrameBlendWeightStart": 1,
+		"FrameBlendDuration": 1
+	},
+	"CenterPosX": -1,
+	"CenterPosY": -1
+}</pre>
+:{{A|VO chapter1 4 seele 221.ogg}} '''Seele:''' Natasha said that the house was donated by some rich businessman. Whatever his business may have been, he must have been a good person.
+:{{A|VO chapter1 4 seele 222.ogg}} '''Seele:''' Oh, I miss those carefree days as a kid...
+:{{A|VO chapter1 4 bronya 248.ogg}} '''Bronya:''' ...
+:{{A|VO chapter1 4 seele 223.ogg}} '''Seele:''' What? Nothing to say?
+:{{A|VO chapter1 4 bronya 249.ogg}} '''Bronya:''' No, it's just... this place seems familiar somehow. Never mind.
+:{{A|VO chapter1 4 seele 224.ogg}} '''Seele:''' ...Weirdo.
+:{{A|VO chapter1 4 seele 225.ogg}} '''Seele:''' Look down there. See the mess that remains of those old stalls? That's Rivet Town's market. The supplies Natasha wants are probably there.
+:{{A|VO chapter1 4 seele 226.ogg}} '''Seele:''' Let's keep moving. Watch out for monsters.
+----
+<pre>{
+	"$type": "RPG.GameCore.RemoveLevelAreas",
+	"AreaName": {
+		"Value": "Level/Mission/1010701/1010701_temp.prefab"
+	}
+}</pre>
 {{Dialogue End}}
 
-===Search for the supplies, go to the market square===
+===Search for the supplies, go to the market square{{subst:void|<!--101070103-->}}===
 {{Mission Description|type=trailblaze|location=Rivet Town|update|According to Natasha, there may still be remaining medical supplies in the abandoned Rivet Town. The mission for you and Seele is to retrieve the supplies and deplete them of their final value... Erm, to let them shine and be useful in the clinic.<br />Seele believes that the supplies Natasha is after are likely to be stocked up in the town's market square. Why don't you head over there and take a look?}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{A|VO chapter1 4 seele 232.ogg}} '''Seele:''' There's a bunch of crates piled over there. Maybe we can find what we're looking for.
+:{{A|VO chapter1 4 seele 233.ogg}} '''Seele:''' Watch out for monsters. They like to hide. If you need to, clear the area before you dig for the supplies.
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{A|VO chapter1 4 seele 227.ogg}} '''Seele:''' Careful! Enemies ahead.
+:{{A|VO chapter1 4 seele 228.ogg}} '''Seele:''' These aren't like vagrants. They won't&mdash;
+:{{A|VO chapter1 4 bronya 250.ogg}} '''Bronya:''' Don't treat me like a new recruit. I'm all too familiar with the monsters of the Fragmentum. Let's get ready to fight!
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{A|VO chapter1 4 bronya 251.ogg}} '''Bronya:''' A... restaurant?
+:{{A|VO chapter1 4 seele 229.ogg}} '''Seele:''' Heh, the most famous restaurant in town. Natasha would bring the kids who behaved well here for a special meal.
+:{{A|VO chapter1 4 bronya 252.ogg}} '''Bronya:''' So did she ever bring you?
+:{{A|VO chapter1 4 seele 230.ogg}} '''Seele:''' Do I seem like I was a goody two-shoes? Of course not.
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{A|VO chapter1 4 bronya 253.ogg}} '''Bronya:''' The facilities here seem to be in pretty good shape, not like those of a place that has been abandoned for years.
+:{{A|VO chapter1 4 seele 231.ogg}} '''Seele:''' Now that you mention it, it does seem a little... Could people still be living here? Impossible...
 {{Dialogue End}}
 
-===Go to the orphanage and search for the supplies===
-{{Mission Description|type=trailblaze|location=Rivet Town|update|You finally find your way through the complex roads of Rivet Town and discover the path to the orphanage. As you make your way uphill, you can see the luxurious mansions that overlook the town, watching its every move each and every day.<br />You see that Seele's expression has turned complex, but what's more confusing is that Bronya seems to be having the same emotions...}}
-{{Dialogue Start}}
-:{{tx}}
-{{Dialogue End}}
-
-===Search for supplies in the orphanage===
-{{Mission Description|type=trailblaze|location=Rivet Town|update|You arrive at the orphanage entrance and have somewhat understood what's bothering Bronya &mdash; although it's just speculation, she might have lived here in the past...<br />Anyways, first search this place for the supplies that Natasha wants.}}
-{{Dialogue Start}}
-:{{tx}}
-{{Dialogue End}}
-
-===Search for supplies around the orphanage===
-{{Mission Description|type=trailblaze|location=Rivet Town|update|You naturally find the supplies, Bronya naturally finds the item to prove her past, and Seele naturally feels very shocked about all of this.<br />The two who almost became childhood friends naturally go for a trip down the memory lane and begin a very long and deep conversation...<br />Although you would really like to ask them when they became such great friends that share all their secrets with one another, would you be able to bring yourself to disturb the rare peace in front of you?<br />You couldn't. So you decide to venture further around the orphanage to search for the supplies...}}
-{{Dialogue Start}}
-:{{tx}}
-{{Dialogue End}}
-
-===Search for supplies in the orphanage===
-{{Mission Description|type=trailblaze|location=Rivet Town|update|You arrive at the orphanage entrance and have somewhat understood what's bothering Bronya &mdash; although it's just speculation, she might have lived here in the past...<br />Anyways, first search this place for the supplies that Natasha wants.}}
-{{Dialogue Start}}
-:{{tx}}
-{{Dialogue End}}
-
-===Go to the orphanage and search for the supplies===
-{{Mission Description|type=trailblaze|location=Rivet Town|update|You finally find your way through the complex roads of Rivet Town and discover the path to the orphanage. As you make your way uphill, you can see the luxurious mansions that overlook the town, watching its every move each and every day.<br />You see that Seele's expression has turned complex, but what's more confusing is that Bronya seems to be having the same emotions...}}
-{{Dialogue Start}}
-:{{tx}}
-{{Dialogue End}}
-
-===Look for missing supplies on the market square===
+===Look for missing supplies on the market square{{subst:void|<!--101070118-->}}===
 {{Mission Description|type=trailblaze|location=Rivet Town|update|You come to the market square only to find the crates for medical supplies looted empty.<br />The looter, however, seems too gentle for creatures in the Fragmentum, judging by what happened at the scene...<br />Bronya and Seele have arrived at the scene and both of them think that this does not look like something that monsters would do.<br />The perpetrator is likely to still be in the vicinity. Join Seele in her search on the square and leave no stone unturned!}}
 {{Dialogue Start}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+<pre>{
+	"$type": "RPG.GameCore.SetAudioEmotionState",
+	"StateName": "State_Relaxing",
+	"SubMissionID": 101070118
+}</pre>
+:{{A|VO chapter1 4 seele 239.ogg}} '''Seele:''' ...Eric?
+:{{A|VO chapter1 4 seele 240.ogg}} '''Seele:''' Hey, brat! How could you come here by yourself. Don't you know how dangerous this place is?
+:{{A|VO chapter1 4 eric 201.ogg}} '''Eric:''' S&mdash;Seele? Y&mdash;You aren't the boss of me! I&mdash;I can go wherever I want, it's none of your beeswax!
+:{{A|VO chapter1 4 seele 241.ogg}} '''Seele:''' You took the materials and hid them all here? Not bad, kid.
+:{{A|VO chapter1 4 seele 242.ogg}} '''Seele:''' But if we didn't take care of those monsters, what were you planning to do? Just stay here, shaking in your boots?
+:{{A|VO chapter1 4 seele 243.ogg}} '''Seele:''' Still stubborn, huh? Then tell me, how exactly were you gonna get those big metal plates out of here past those monsters?
+:{{A|VO chapter1 4 eric 202.ogg}} '''Eric:''' Wh&mdash;Who asked you to do anything? I was just about to escape, I didn't need your help at all!
+:{{DIcon|Arrow}} That's enough. He's just a kid...
+::{{A|VO chapter1 4 seele 244.ogg}} '''Seele:''' Don't let him fool you. Everyone in the Underworld knows that this brat is a no-good thief. If I remember correctly, even the clothes you're wearing came off another kid's back?
+:{{DIcon|Arrow}} Can you share the materials? They're to help injured people.
+::{{A|VO chapter1 4 seele 245.ogg}} '''Seele:''' Don't be so polite to him. Everyone in the Underworld knows this brat is a no-good thief. If I remember correctly, even the clothes you're wearing came off another kid's back?
+:{{A|VO chapter1 4 eric 204.ogg}} '''Eric:''' Uh... About that...
+:{{A|VO chapter1 4 seele 246.ogg}} '''Seele:''' Tell us, what do you even want metal plates and gauze bandages for? We need them to save people.
+:{{A|VO chapter1 4 eric 205.ogg}} '''Eric:''' ...200...
+:{{A|VO chapter1 4 seele 247.ogg}} '''Seele:''' What?
+:{{A|VO chapter1 4 eric 206.ogg}} '''Eric:''' Uh... 200 shield...
+:{{A|VO chapter1 4 seele 248.ogg}} '''Seele:''' ...Are you kidding me? You want to negotiate?
+:{{DIcon|Arrow}} I... don't have any money with me.
+::{{A|VO chapter1 4 bronya 256.ogg}} '''Bronya:''' Me neither... I never bring my coin purse with me on a mission.
+:{{DIcon|Arrow}} What a rip-off!
+::{{A|VO chapter1 4 bronya 257.ogg}} '''Bronya:''' It's just 200... but I never bring my coin purse with me on a mission.
+:{{DIcon|Arrow}} How much is 200 shield worth?
+::{{A|VO chapter1 4 bronya 258.ogg}} '''Bronya:''' ...Not much, but I didn't bring my coin purse.
+:{{A|VO chapter1 4 seele 249.ogg}} '''Seele:''' You're actually planning to give this little crook money? I'm telling you. This is his same old trick&mdash;
 :{{tx}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{A|VO chapter1 4 seele 262.ogg}} '''Seele:''' ...We made it! It's been so long... but this place hasn't changed one bit.
+:{{A|VO chapter1 4 seele 263.ogg}} '''Seele:''' Oh! It looks like there's a lot of stuff piled outside. Let's go see if there's any rubbing alcohol for Nat.
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{A|VO chapter1 4 seele 257.ogg}} '''Seele:''' This is the street alright. The orphanage should be at the end.
+:{{A|VO chapter1 4 bronya 269.ogg}} '''Bronya:''' These shops and signs... Why do I feel like I've seen them before?
+:{{A|VO chapter1 4 bronya 270.ogg}} '''Bronya:''' But when...?
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{A|VO chapter1 4 seele 258.ogg}} '''Seele:''' The entrance to the orphanage is up this way.
+:{{A|VO chapter1 4 seele 259.ogg}} '''Seele:''' I wonder what the old place is like now. Maybe some things will still look familiar.
+:{{A|VO chapter1 4 bronya 271.ogg}} '''Bronya:''' These stairs... they seem to have become more narrow.
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{A|VO chapter1 4 seele 260.ogg}} '''Seele:''' Almost there! I didn't expect this place to be so well preserved.
+:{{A|VO chapter1 4 seele 261.ogg}} '''Seele:''' Y'know, if we could've worked together to push back the Fragmentum... maybe we wouldn't have had to take off and leave our homes behind.
+:'''Bronya:''' ...
+----
+:{{A|VO chapter1 4 seele 251.ogg}} '''Seele:''' ...That object was pretty important to you, right?
+:{{A|VO chapter1 4 seele 252.ogg}} '''Seele:''' Are you sure you're okay just giving it to Eric like that?
+:{{A|VO chapter1 4 bronya 266.ogg}} '''Bronya:''' If it will make him change his ways, it's more than worth it.
+:{{A|VO chapter1 4 seele 253.ogg}} '''Seele:''' Hah, and what if he doesn't?
+:{{A|VO chapter1 4 bronya 267.ogg}} '''Bronya:''' From a young age, my mother taught me to be forgiving and to preserve the goodwill in people's hearts... Even if I am but a small glimmer of light in this world, I must try my best to shine brightly for others.
+:{{A|VO chapter1 4 bronya 268.ogg}} '''Bronya:''' I must give him a chance, Seele, because other people can't.
+:{{A|VO chapter1 4 seele 254.ogg}} '''Seele:''' ...
+:{{A|VO chapter1 4 seele 255.ogg}} '''Seele:''' I don't really get what you just said. Anyway, ahem, we should get moving.
+:{{A|VO chapter1 4 seele 256.ogg}} '''Seele:''' Eric said that we need to take the shopping street to go any further. I think I still remember where it is... this way.
+----
+;(Obtain {{Item|Box of Metal Plates and Bandages|20|x=1}})
 {{Dialogue End}}
 
-===Ask Clara why she's here===
-{{Mission Description|type=trailblaze|location=Rivet Town|update|You've had the feeling that someone has gotten to the supplies before you but you didn't think it'd be someone that you were close with.<br />Okay, maybe not that close... but you've at least met her before &mdash; you're technically family to Clara now.<br />So what is cute Clara doing alone (with a robot) in such a dangerous place? You have to get to the bottom of this.}}
-{{Dialogue Start}}
-:{{tx}}
-{{Dialogue End}}
-
-===Find the way to the orphanage===
+===Find the way to the orphanage{{subst:void|<!--101070123-->}}===
 {{Mission Description|type=trailblaze|location=Rivet Town|update|You discover that the culprit who robbed the supplies is a young thief named Eric. Bronya's generosity has compelled her to make the decision of trading with the thief for the supplies, even though Seele finds him to be untrustworthy.<br />In return for Bronya's friendliness, Eric shares relevant intel regarding the orphanage with everyone. But does this mean that he will change his ways? The answer is unknown &mdash; however, maybe you will have the opportunity to witness it sometime in the future.<br />Right now, your primary objective is to head to the orphanage and continue your search for the supplies.}}
 {{Dialogue Start}}
-:{{tx}}
+;(Upon reaching the destination)
 {{Dialogue End}}
 
-===Meet up with Seele and the others===
+===Go to the orphanage and search for the supplies{{subst:void|<!--101070105-->}}===
+{{Mission Description|type=trailblaze|location=Rivet Town|update|You finally find your way through the complex roads of Rivet Town and discover the path to the orphanage. As you make your way uphill, you can see the luxurious mansions that overlook the town, watching its every move each and every day.<br />You see that Seele's expression has turned complex, but what's more confusing is that Bronya seems to be having the same emotions...}}
+{{Dialogue Start}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{A|VO chapter1 4 bronya 273.ogg}} '''Bronya:''' These crates have been sitting here for many years, right? Even if they have materials in them, are you sure they are still usable...?
+:{{A|VO chapter1 4 seele 264.ogg}} '''Seele:''' Do you think undergrounders care about expiration dates? Even having any supplies is a miracle in itself.
+:{{A|VO chapter1 4 seele 265.ogg}} '''Seele:''' No... No... Empty...
+:{{A|VO chapter1 4 seele 266.ogg}} '''Seele:''' How are they all empty? Who could've&mdash;
+:{{A|VO chapter1 4 bronya 274.ogg}} '''Bronya:''' Careful! Enemy behind you!
+:{{DIcon|Arrow}} That's a big one...
+:{{DIcon|Arrow}} It looks tough...
+:{{A|VO chapter1 4 bronya 275.ogg}} '''Bronya:''' I've only seen this kind of monster before in the restricted zone...
+:{{tx}}
+;(Enter battle)
+:{{Enemy List|Ice Out of Space*1/-60 Toughness}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{A|VO chapter1 4 seele 277.ogg}} '''Seele:''' Hey, where are you going!? Let's look around the orphanage first.
+----
+{{Dialogue End}}
+
+===Search for supplies in the orphanage{{subst:void|<!--101070113-->}}===
+{{Mission Description|type=trailblaze|location=Rivet Town|update|You arrive at the orphanage entrance and have somewhat understood what's bothering Bronya &mdash; although it's just speculation, she might have lived here in the past...<br />Anyways, first search this place for the supplies that Natasha wants.}}
+{{Dialogue Start}}
+
+
+:{{DIcon|Talk}} Investigate
+:{{A|VO chapter1 4 seele 278.ogg}} '''Seele:''' I found this. Here, take it.
+:{{A|VO chapter1 4 bronya 280.ogg}} '''Bronya:''' What is this? ...A brooch?
+:{{A|VO chapter1 4 seele 279.ogg}} '''Seele:''' Natasha would often teach us how to make different handicrafts. This must be some kid's masterpiece.
+:{{A|VO chapter1 4 bronya 281.ogg}} '''Bronya:''' And why give it to me?
+:{{A|VO chapter1 4 seele 280.ogg}} '''Seele:''' You gave your medal to that kid Eric. This thing might not be as valuable, but it's at least a replacement of sorts.
+:{{A|VO chapter1 4 bronya 282.ogg}} '''Bronya:''' But didn't someone work hard to make this? I can't just take it from here...
+:{{A|VO chapter1 4 seele 281.ogg}} '''Seele:''' ...You sure are prissy, huh? Just take it.
+
+:{{DIcon|Talk}} Investigate
+:{{A|VO chapter1 4 bronya 283.ogg}} '''Bronya:''' What's up here? Some kind of toy?
+:{{A|VO chapter1 4 seele 282.ogg}} '''Seele:''' Yep. You pick, red or blue?
+:{{A|VO chapter1 4 bronya 284.ogg}} '''Bronya:''' Hm... blue.
+:{{A|VO chapter1 4 seele 283.ogg}} '''Seele:''' Ha! Look at this. After over ten years, the teeth marks are still here.
+:{{A|VO chapter1 4 bronya 285.ogg}} '''Bronya:''' Teeth marks?
+:{{A|VO chapter1 4 seele 284.ogg}} '''Seele:''' Alright, well... this one time, a big kid was trying to steal this toy from me. I couldn't outwrestle him for it, so I just bit down hard and hung on for dear life.
+:{{A|VO chapter1 4 bronya 286.ogg}} '''Bronya:''' ...How boorish.
+
+:{{DIcon|Talk}} Investigate
+:{{A|VO chapter1 4 bronya 287.ogg}} '''Bronya:''' This swing is covered in dust... Hey, don't sit on it! It's filthy!
+:{{A|VO chapter1 4 seele 285.ogg}} '''Seele:''' Ah, it sure brings back memories... I still remember one time I swung super high, and everyone was scared I would fly off.
+:{{A|VO chapter1 4 bronya 288.ogg}} '''Bronya:''' ...Who knew swinging could be so intense?
+:{{A|VO chapter1 4 seele 286.ogg}} '''Seele:''' At the time, I wanted to swing myself into the sky and fly up to the Overworld.
+:{{A|VO chapter1 4 bronya 289.ogg}} '''Bronya:''' So dangerous... You're lucky to have lived till now.
+:{{A|VO chapter1 4 seele 287.ogg}} '''Seele:''' Hmph, aren't we all, though?
+<pre>{
+	"$type": "RPG.GameCore.SetAudioEmotionState",
+	"StateName": "State_Sorrow",
+	"SubMissionID": 101070107
+}</pre>
+:{{A|VO chapter1 4 bronya 292.ogg}} '''Bronya:''' This is... something from when I was a child.
+:{{A|VO chapter1 4 seele 293.ogg}} '''Seele:''' Wh&mdash;When you were a child!? Are you sure...?
+:{{DIcon|Arrow}} You came to this town as a child?
+::{{A|VO chapter1 4 bronya 293.ogg}} '''Bronya:''' No, I remember now...
+:{{DIcon|Arrow}} Just a coincidence. Lots of kids probably have this toy.
+::{{A|VO chapter1 4 bronya 294.ogg}} '''Bronya:''' There is no such coincidence in this world. I remember now...
+:{{DIcon|Arrow}} Could it be, when you were a child...
+::{{A|VO chapter1 4 bronya 295.ogg}} '''Bronya:''' Yes. I remember now...
+:{{A|VO chapter1 4 bronya 296.ogg}} '''Bronya:''' I&mdash;I used to live here... B&mdash;Before the Architects took me away, before Madam Cocolia adopted me... I used to live here! I'm... an undergrounder.
+:{{A|VO chapter1 4 seele 294.ogg}} '''Seele:''' You're... an undergrounder? Wait a minute... you're saying that Cocolia, the Supreme Guardian, adopted you? Then&mdash;
+:{{A|VO chapter1 4 bronya 297.ogg}} '''Bronya:''' Yes. I'm the successor chosen by the Architects. In the future, I will become the guardian who leads Belobog.
+:{{A|VO chapter1 4 seele 295.ogg}} '''Seele:''' ...
+:{{A|VO chapter1 4 bronya 298.ogg}} '''Bronya:''' Why... Why didn't I remember this until now? My childhood memories are so blurry...
+:{{DIcon|Arrow}} You were too little to remember clearly.
+:{{DIcon|Arrow}} Cocolia must have done something to make you forget.
+::{{A|VO chapter1 4 bronya 299.ogg}} '''Bronya:''' No, mother would never do that to me... there's no way she would.
+:{{A|VO chapter1 4 bronya 300.ogg}} '''Bronya:''' The Architects said that the guardian's successor is selected from among all people in Belobog. The selection process can take anywhere from a few years to a few decades.
+:{{tx}}
+;(Obtain {{Item|Box of Rubbing Alcohol|20|x=1}})
+{{Dialogue End}}
+
+===Search for supplies around the orphanage{{subst:void|<!--101070108-->}}===
+{{Mission Description|type=trailblaze|location=Rivet Town|update|You naturally find the supplies, Bronya naturally finds the item to prove her past, and Seele naturally feels very shocked about all of this.<br />The two who almost became childhood friends naturally go for a trip down the memory lane and begin a very long and deep conversation...<br />Although you would really like to ask them when they became such great friends that share all their secrets with one another, would you be able to bring yourself to disturb the rare peace in front of you?<br />You couldn't. So you decide to venture further around the orphanage to search for the supplies...}}
+{{Dialogue Start}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{A|VO chapter1 4 player 206 m.ogg}} {{A|VO chapter1 4 player 206 f.ogg}} '''(Trailblazer):''' (I should let those two be alone for a bit...)
+:{{A|VO chapter1 4 player 207 m.ogg}} {{A|VO chapter1 4 player 207 f.ogg}} '''(Trailblazer):''' (The only thing left to find is painkillers. I'll see if there's any nearby.)
+
+;(Upon reaching the destination)
+:{{tx}}
+:{{A|VO chapter1 4 guardrobot 202.ogg}} '''Guardbot:''' Warning. Warning. Danger detected&mdash;
+:{{DIcon|Arrow}} I mean no harm&mdash;
+:{{DIcon|Arrow}} I'm just passing by&mdash;
+:{{DIcon|Arrow}} I'm a goner&mdash;
+:{{A|VO chapter1 4 guardrobot 203.ogg}} '''Guardbot:''' Protect Clara. Initiating active defense mode&mdash;
+:{{A|VO chapter1 4 clara 203.ogg}} '''Clara:''' Perkins, don't! Stop!
+:{{A|VO chapter1 4 clara 204 m.ogg}} {{A|VO chapter1 4 clara 204 f.ogg}} '''Clara:''' I've seen this person before. {{MC|f=Sh&mdash;She's|m=H&mdash;He's}} not bad, right?
+:{{A|VO chapter1 4 guardrobot 204.ogg}} '''Perkins:''' Command received. Danger removed. Deactivating active defense mode.
+:{{A|VO chapter1 4 clara 206 m.ogg}} {{A|VO chapter1 4 clara 206 f.ogg}} '''Clara:''' This place is dangerous. You should leave.
+:{{DIcon|Arrow}} I'm looking for medicine to help the injured.
+::{{A|VO chapter1 4 clara 208.ogg}} '''Clara:''' Oh? I came here for these painkillers, too.
+::{{A|VO chapter1 4 clara 209.ogg}} '''Clara:''' There are a lot of people hurt at the vagrant camp, I guess the miners are no different? *sigh* If everyone could just get along, things would be easier...
+:{{DIcon|Arrow}} Shouldn't you be the one leaving, missy?
+::{{A|VO chapter1 4 clara 210.ogg}} '''Clara:''' Perkins is protecting me. I'll be alright. I'm going to leave after I gather up these painkillers.
+::{{A|VO chapter1 4 clara 211 m.ogg}} {{A|VO chapter1 4 clara 211 f.ogg}} '''Clara:''' ...Uh, is that what you're here for too?
+::{{A|VO chapter1 4 clara 213.ogg}} '''Clara:''' That would make sense. I'm sure a lot of miners are injured, right? *sigh* If everyone could just get along, things would be easier...
+:{{A|VO chapter1 4 clara 214.ogg}} '''Clara:''' Mm... Here you are. I hope the medicine is of help to you...
+:{{DIcon|Arrow}} What's your relationship with Svarog?
+:{{DIcon|Arrow}} Is Svarog here, too?
+::{{A|VO chapter1 4 clara 215.ogg}} '''Clara:''' No.
+:{{A|VO chapter1 4 clara 216.ogg}} '''Clara:''' Mr. Svarog, he... he's my family. I met Mr. Svarog when I was real little. He took me in and took care of me.
+:{{A|VO chapter1 4 clara 217.ogg}} '''Clara:''' I'm really sorry about what happened back in the Great Mine... Mr. Svarog doesn't trust any humans besides me, especially everyone from Wildfire.
+:{{DIcon|Arrow}} Why did Svarog attack us?
+::{{A|VO chapter1 4 clara 218.ogg}} '''Clara:''' Mr. Svarog doesn't want to hurt people, but he always follows the calculations of his analysis. He thinks that interaction with humans is... inefficient.
+:{{DIcon|Arrow}} Why did Svarog want to get involved in the incident in the mines?
+::{{A|VO chapter1 4 clara 219.ogg}} '''Clara:''' He heard that the miners and vagrants had begun to engage in a large-scale conflict... He wanted to stop everyone from getting hurt fighting over the mines.
+:{{A|VO chapter1 4 clara 220.ogg}} '''Clara:''' Wildfire wants everyone to leave the underground... But Mr. Svarog wants everyone to stay here. According to his calculations, the overground is already unsafe.
+:{{DIcon|Arrow}} But the underground is safer?
+::{{A|VO chapter1 4 clara 221.ogg}} '''Clara:''' Yes, at least according to Mr. Svarog's calculations...
+:{{DIcon|Arrow}} There must be some error in his system.
+::{{A|VO chapter1 4 clara 222.ogg}} '''Clara:''' No, there can't be... Mr. Svarog is healthy, his system is always being maintained.
+:{{DIcon|Arrow}} So he stands guard at the huge pillar stopping people from leaving?
+::{{A|VO chapter1 4 clara 223.ogg}} '''Clara:''' Yes... Mr. Svarog is very stubborn.
+:{{A|VO chapter1 4 clara 224.ogg}} '''Clara:''' He says that his responsibility is "preservation." To do that, he must make decisions that best protect humanity.
+:{{DIcon|Arrow}} The Fragmentum will swallow up all of the underground sooner or later.
+:{{DIcon|Arrow}} Sounds a lot like the Supreme Guardian.
+:{{A|VO chapter1 4 clara 225.ogg}} '''Clara:''' I know that Wildfire wants to talk to Mr. Svarog... But no matter how many times you talk to him, Mr. Svarog won't change his mind...
+:{{tx}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{A|VO chapter1 4 clara 201.ogg}} '''???:''' ...
+:{{A|VO chapter1 4 player 208 m.ogg}} {{A|VO chapter1 4 player 208 f.ogg}} '''(Trailblazer):''' (What's that sound...)
+
+;(Upon reaching the destination)
+:{{A|VO chapter1 4 clara 202.ogg}} '''???:''' Oh! It's here, we found it! Thank you, Perkins!
+:{{A|VO chapter1 4 guardrobot 201.ogg}} '''???:''' Beep &mdash; Don't mention it, Clara.
+:{{A|VO chapter1 4 player 206 m.ogg}} {{A|VO chapter1 4 player 206 f.ogg}} '''(Trailblazer):''' (I should let those two be alone for a bit...)
+:{{A|VO chapter1 4 player 207 m.ogg}} {{A|VO chapter1 4 player 207 f.ogg}} '''(Trailblazer):''' (The only thing left to find is painkillers. I'll see if there's any nearby.)
+{{Dialogue End}}
+
+===Ask Clara why she's here{{subst:void|<!--101070120-->}}===
+{{Mission Description|type=trailblaze|location=Rivet Town|update|You've had the feeling that someone has gotten to the supplies before you but you didn't think it'd be someone that you were close with.<br />Okay, maybe not that close... but you've at least met her before &mdash; you're technically family to Clara now.<br />So what is cute Clara doing alone (with a robot) in such a dangerous place? You have to get to the bottom of this.}}
+{{Dialogue Start}}
+----
+:{{A|VO chapter1 4 seele 306.ogg}} '''Seele:''' ...Why are you helping the vagrants look for medicine? If they're so great, how could they make a little girl go around running errands for them?
+:{{A|VO chapter1 4 clara 228.ogg}} '''Clara:''' N&mdash;No, it's not like that. I wasn't made to do anything... It's just that, the living conditions for the vagrants aren't great. There's not even a clinic in their camp. So, I wanted to help them out.
+:{{A|VO chapter1 4 clara 229.ogg}} '''Clara:''' Also, not all of them are bad people... everyone just wants to survive.
+:{{A|VO chapter1 4 seele 307.ogg}} '''Seele:''' ...
+:{{A|VO chapter1 4 clara 230.ogg}} '''Clara:''' Miss Seele, did this medicine belong to Miss Natasha? Then... can you give me some? The vagrants' injuries are quite serious.
+:{{A|VO chapter1 4 seele 308.ogg}} '''Seele:''' *sigh* I see. Let's split these painkillers then.
+:{{A|VO chapter1 4 clara 231.ogg}} '''Clara:''' R&mdash;Really? We don't need to ask Miss Natasha first?
+:{{A|VO chapter1 4 seele 309.ogg}} '''Seele:''' If I know Nat, she won't mind. Although this will make it more difficult for us... she'll understand. She always does.
+:{{A|VO chapter1 4 clara 232.ogg}} '''Clara:''' Great, thank you, Miss Seele...
+:{{A|VO chapter1 4 bronya 315.ogg}} '''Bronya:''' Are you leaving? This old town is too dangerous. We'll accompany you part of the way.
+:{{A|VO chapter1 4 clara 233.ogg}} '''Clara:''' I&mdash;It's fine, I have Perkins for company. And... I have some more things I need to look for here first.
+:{{A|VO chapter1 4 bronya 316.ogg}} '''Bronya:''' Understood. Be careful, though.
+----
+<pre>{
+	"$type": "RPG.GameCore.RemoveLevelAreas",
+	"AreaName": {
+		"Value": "Level/Mission/1010701/1010701_temp.prefab"
+	}
+}</pre>
+;(Obtain {{Item|Box of Special Painkillers|20|x=1}})
+
+;(Talk to Clara)
+----
+:{{A|VO chapter1 4 seele 306.ogg}} '''Seele:''' ...Why are you helping the vagrants look for medicine? If they're so great, how could they make a little girl go around running errands for them?
+:{{A|VO chapter1 4 clara 228.ogg}} '''Clara:''' N&mdash;No, it's not like that. I wasn't made to do anything... It's just that, the living conditions for the vagrants aren't great. There's not even a clinic in their camp. So, I wanted to help them out.
+:{{A|VO chapter1 4 clara 229.ogg}} '''Clara:''' Also, not all of them are bad people... everyone just wants to survive.
+:{{A|VO chapter1 4 seele 307.ogg}} '''Seele:''' ...
+:{{A|VO chapter1 4 clara 230.ogg}} '''Clara:''' Miss Seele, did this medicine belong to Miss Natasha? Then... can you give me some? The vagrants' injuries are quite serious.
+:{{A|VO chapter1 4 seele 308.ogg}} '''Seele:''' *sigh* I see. Let's split these painkillers then.
+:{{A|VO chapter1 4 clara 231.ogg}} '''Clara:''' R&mdash;Really? We don't need to ask Miss Natasha first?
+:{{A|VO chapter1 4 seele 309.ogg}} '''Seele:''' If I know Nat, she won't mind. Although this will make it more difficult for us... she'll understand. She always does.
+:{{A|VO chapter1 4 clara 232.ogg}} '''Clara:''' Great, thank you, Miss Seele...
+:{{A|VO chapter1 4 bronya 315.ogg}} '''Bronya:''' Are you leaving? This old town is too dangerous. We'll accompany you part of the way.
+:{{A|VO chapter1 4 clara 233.ogg}} '''Clara:''' I&mdash;It's fine, I have Perkins for company. And... I have some more things I need to look for here first.
+:{{A|VO chapter1 4 bronya 316.ogg}} '''Bronya:''' Understood. Be careful, though.
+----
+{{Dialogue End}}
+
+===Meet up with Seele and the others{{subst:void|<!--101070121-->}}===
 {{Mission Description|type=trailblaze|location=Rivet Town|update|You've had the feeling that someone has gotten to the supplies before you but you didn't think it'd be someone that you were close with.<br />Okay, maybe not that close... but you've at least met her before &mdash; you're technically family to Clara now.<br />Seele and Bronya finally end their conversation and approach the two of you just as you are asking Clara about her reason for being here.<br />Perfect timing, now it's time for everyone to figure out what to do next.}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Seele)
+:{{A|VO chapter1 4 seele 310.ogg}} '''Seele:''' Metal plates and bandages... rubbing alcohol... painkillers. Great, that's everything.
+:{{A|VO chapter1 4 seele 311.ogg}} '''Seele:''' Let's go report to Natasha in Boulder Town, it won't take long to get back.
+{{Dialogue End}}
+
+===Go to the orphanage and search for the supplies{{subst:void|<!--101070114-->}}===
+{{Mission Description|type=trailblaze|location=Rivet Town|update|You finally find your way through the complex roads of Rivet Town and discover the path to the orphanage. As you make your way uphill, you can see the luxurious mansions that overlook the town, watching its every move each and every day.<br />You see that Seele's expression has turned complex, but what's more confusing is that Bronya seems to be having the same emotions...}}
+{{Dialogue Start}}
+----
+:{{A|VO chapter1 4 seele 268.ogg}} '''Seele:''' Ha... That was it?
+:{{DIcon|Arrow}} Well, it was three against one.
+::{{A|VO chapter1 4 seele 269.ogg}} '''Seele:''' Nah, I could've taken it on by myself. But still... fighting alongside you two was pretty fun.
+:{{DIcon|Arrow}} It wouldn't have been so easy on your own though.
+::{{A|VO chapter1 4 seele 270.ogg}} '''Seele:''' Please, you don't think I could do it? But still... fighting alongside you two was pretty fun.
+:{{A|VO chapter1 4 seele 271.ogg}} '''Seele:''' Should be all clear now. Let's poke around.
+:{{A|VO chapter1 4 seele 272.ogg}} '''Seele:''' The kids at the orphanage were always getting into scraps when we played out here. If I remember it right, there ought to be some supplies for our cuts and bruises stored in that corner there.
+:{{A|VO chapter1 4 seele 273.ogg}} '''Seele:''' I just hope the monster didn't get to them.
+:{{A|VO chapter1 4 bronya 276.ogg}} '''Bronya:''' ...It wasn't my imagination.
+:{{A|VO chapter1 4 seele 274.ogg}} '''Seele:''' Huh? What are you talking about?
+:{{A|VO chapter1 4 bronya 277.ogg}} '''Bronya:''' This building, this playground equipment... I've seen it all before.
+:{{A|VO chapter1 4 seele 275.ogg}} '''Seele:''' What!? Come on, the overground and underground have been sealed off from each other for over ten years. It would've been news if a Silvermane Guard had come down here, let alone an Overworld princess.
+:{{A|VO chapter1 4 seele 276.ogg}} '''Seele:''' Wait, unless, before that...
+:{{A|VO chapter1 4 bronya 278.ogg}} '''Bronya:''' ...Yes, it's a possibility. That would explain why my memory of it is so blurry.
+:{{A|VO chapter1 4 bronya 279.ogg}} '''Bronya:''' Come on, I need to look around a bit more before I can be sure...
+----
 {{Dialogue End}}
 
 ==Other Languages==

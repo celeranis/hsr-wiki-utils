@@ -1,5 +1,7 @@
-import { Value } from '../Shared.ts'
-import type { HashReference } from '../TextMap.js'
+import { Value } from '../../Shared.ts'
+import type { HashReference } from '../../TextMap.ts'
+import { GraphPredicate } from './Predicate.js'
+import { PropTaskTarget, TargetFetchAdvancedProp } from './Target.js'
 
 export interface Act {
 	OnInitSequece: unknown[]
@@ -8,7 +10,7 @@ export interface Act {
 }
 
 export interface DialogSequence {
-	TaskList: DialogTask[]
+	TaskList: InternalDialogTask[]
 	IsLoop?: boolean
 }
 
@@ -65,12 +67,13 @@ export interface WaitCustomString {
 }
 
 export interface TriggerCustomString {
-	$type: 'RPG.GameCore.TriggerCustomString'
+	$type: 'RPG.GameCore.TriggerCustomString' | 'RPG.GameCore.TriggerCustomStringOnDialogEnd'
 	CustomString: ValueReference<string>
 }
 
 export interface PlayAndWaitSimpleTalk {
 	$type: 'RPG.GameCore.PlayAndWaitSimpleTalk' | 'RPG.GameCore.PlaySimpleTalk' | 'RPG.GameCore.PlayMissionTalk'
+	BlackMask?: boolean
 	SimpleTalkList: SimpleTalk[]
 }
 
@@ -128,48 +131,30 @@ export interface WaitDialogueEvent {
 export interface PropStateExecute {
 	TargetType: PropTaskTarget
 	State: string
-	Execute: DialogTask[]
+	Execute: InternalDialogTask[]
 }
 
-export interface TargetFetchAdvPropNone {
-	$type: 'RPG.GameCore.TargetFetchAdvPropEx'
-	FetchType: undefined
-}
-
-export interface TargetFetchAdvancedProp {
-	$type: 'RPG.GameCore.TargetFetchAdvPropEx'
-	FetchType: 'SinglePropByPropID'
-	SinglePropID: SinglePropFetchID
-}
-
-export type PropTaskTarget = TargetFetchAdvancedProp | TargetFetchAdvPropNone
-
-export interface SinglePropFetchID {
-	GroupID: TaskParam<number>
-	ID: TaskParam<number>
-}
-
-export interface FixedTaskParam<T> {
+export interface FixedTaskParam {
 	IsDynamic: false
-	FixedValue?: Value<T>
-	fixedValue?: Value<T>
+	FixedValue?: Value<number>
+	fixedValue?: Value<number>
 }
 
-export interface DynamicTaskParam<T> {
+export interface DynamicTaskParam {
 	IsDynamic: true
-	PostfixExpr: PostfixExpr<T>
+	PostfixExpr: PostfixExpr
 }
 
-export interface PostfixExpr<T> {
+export interface PostfixExpr {
 	OpCodes: string
-	FixedValues: Value<T>[]
+	FixedValues: Value<number>[]
 	DynamicHashes: number[]
 }
 
 export interface ShowWaypointByProp {
 	$type: 'RPG.GameCore.ShowWaypointByProp'
-	GroupID: TaskParam<number>
-	InstanceID: TaskParam<number>
+	GroupID: TaskParam
+	InstanceID: TaskParam
 	MaxRange: number
 	IconPath: string
 	OnNameBoard: boolean
@@ -177,8 +162,8 @@ export interface ShowWaypointByProp {
 
 export interface HideWaypointByProp {
 	$type: 'RPG.GameCore.HideWaypointByProp'
-	GroupID: TaskParam<number>
-	InstanceID: TaskParam<number>
+	GroupID: TaskParam
+	InstanceID: TaskParam
 	OnNameBoard: boolean
 }
 
@@ -186,7 +171,7 @@ export interface PropStateChangeListenerConfig {
 	$type: 'RPG.GameCore.PropStateChangeListenerConfig'
 	FromState: string
 	ToState: string
-	OnChange: DialogTask[]
+	OnChange: InternalDialogTask[]
 	TargetType: PropTaskTarget
 }
 
@@ -228,7 +213,7 @@ export interface EndDialogueEntityInteract {
 export interface OpenTreasureChallenge {
 	$type: 'RPG.GameCore.OpenTreasureChallenge'
 	RaidID: number
-	OnCancel: DialogTask[]
+	OnCancel: InternalDialogTask[]
 }
 
 export interface ShowTutorialUI {
@@ -254,30 +239,21 @@ export interface ShowGuideText {
 
 export interface WaitSecond {
 	$type: 'RPG.GameCore.WaitSecond'
-	WaitTime: TaskParam<number>
+	WaitTime: TaskParam
 }
 
 export interface SetupPropUITrigger {
 	$type: 'RPG.GameCore.PropSetupUITrigger'
 	ButtonText: HashReference
-	ButtonCallback: DialogTask[]
+	ButtonCallback: InternalDialogTask[]
 	TargetType: PropTaskTarget
 }
 
 export interface PredicateTaskList {
 	$type: 'RPG.GameCore.PredicateTaskList'
-	Predicate: DialogPredicate
-	SuccessTaskList: DialogTask[]
-	FailedTaskList?: DialogTask[]
-}
-
-export type CompareType = 'Equal'
-
-export interface CompareCustomString {
-	$type: 'RPG.GameCore.ByCompareCustomString'
-	LeftValue: ValueReference<string>
-	RightValue: ValueReference<string>
-	CompareType: CompareType
+	Predicate: GraphPredicate
+	SuccessTaskList: InternalDialogTask[]
+	FailedTaskList?: InternalDialogTask[]
 }
 
 export interface NoContentTask<T extends string> {
@@ -288,6 +264,10 @@ export interface InternalTriggerPerformance {
 	$type: 'RPG.GameCore.TriggerPerformance'
 	PerformanceType: 'A' | 'C' | 'CG' | 'D' | 'DS' | 'E'
 	PerformanceID: number
+	MaskConfig?: {
+		UseExcelData?: boolean
+		StartBlack?: 'NoPre'
+	}
 }
 
 export interface FinishPerformanceMission {
@@ -307,38 +287,91 @@ export interface PlayVideo {
 	VideoID: number
 }
 
-export interface WaitSecond {
-	$type: 'RPG.GameCore.WaitSecond'
-	WaitTime: TaskParam<T>
-}
-
 export type EntityType = 'NPC' | 'LocalPlayer' | 'NPCMonster'
 
 export interface PropSetupTrigger {
 	$type: 'RPG.GameCore.PropSetupTrigger'
 	TargetType: TargetFetchAdvancedProp
 	TargetEntityType: EntityType
-	TargetID: TaskParam<number>
+	TargetID: TaskParam
 	TargetTypes: EntityType[]
 	DestroyAfterTriggered?: boolean
 	OnTriggerEnter?: InternalDialogTask[]
 }
 
+export interface AdvSetupCustomTaskTrigger {
+	$type: 'RPG.GameCore.AdvSetupCustomTaskTrigger'
+	TargetType: TargetFetchAdvancedProp
+	TriggerName: string
+	OnEnter: InternalDialogTask[]
+	DisableAfterTriggered?: boolean
+}
+
 export interface PlayScreenTransfer {
-	$type: 'RPG.GameCore.PlayScreenTransfer'
+	$type: 'RPG.GameCore.PlayScreenTransfer' | 'RPG.GameCore.PlayFullScreenTransfer'
 	Type?: 'Black'
 	Mode?: 'SwitchOut'
 	CustomTime?: number
 }
 
+export interface TriggerBattle {
+	$type: 'RPG.GameCore.TriggerBattle'
+	EventID: TaskParam
+	GroupID: TaskParam
+	BattleAreaID: TaskParam
+}
+
+export interface TriggerGroupEvent {
+	$type: 'RPG.GameCore.TriggerGroupEvent' | 'RPG.GameCore.TriggerGroupEventOnDialogEnd'
+	EventName: Value<string>
+}
+
+export interface WaitGroupEvent {
+	$type: 'RPG.GameCore.WaitGroupEvent'
+	EventName: Value<string>
+	OnEvent: InternalDialogTask[]
+}
+
+export interface MissionCustomValue {
+	Index: number
+	isLocal: boolean
+	ValidValueParamList: number[]
+}
+
+export interface SwitchCaseEntry {
+	Predicate: GraphPredicate
+	SuccessTaskList: InternalDialogTask[]
+}
+
+export interface SwitchCase {
+	$type: 'RPG.GameCore.SwitchCase'
+	TaskList: SwitchCaseEntry[]
+	DefaultTask?: InternalDialogTask[]
+}
+
+export interface ShowHalfScreenPage {
+	$type: 'RPG.GameCore.ShowHalfScreenPage'
+	Name: string
+	Param: string
+	CustomShowUI?: unknown[]
+	OnUIShow: InternalDialogTask[]
+	OnUIExit: InternalDialogTask[]
+}
+
+export interface ObserveMaterialSubmission {
+	$type: 'RPG.GameCore.ObserveMaterialSubmission'
+	ID: number
+	OnFinished: InternalDialogTask[]
+	OnCancelled: InternalDialogTask[]
+	OnInterrupted: InternalDialogTask[]
+}
+
 export type InternalFinishLevelGraph = NoContentTask<'RPG.GameCore.FinishLevelGraph'>
 export type InternalEndPerformance = NoContentTask<'RPG.GameCore.EndPerformance'>
 
-export type DialogPredicate = CompareCustomString
-
 export type ValueSource = SharedFloat | SharedString
 
-export type TaskParam<T> = FixedTaskParam<T> | DynamicTaskParam<T>
+export type TaskParam = FixedTaskParam | DynamicTaskParam
 
 export type InternalDialogTask = 
 	| TaskShowBg | PlayAndWaitSimpleTalk | TriggerSound | PlayOptionTalk | WaitCustomString 
@@ -346,4 +379,5 @@ export type InternalDialogTask =
 	| RoguePlayOptionTalk | WaitPredicateSuccess | TriggerToastPage | ShowWaypointByProp
 	| PerformanceTransition | PredicateTaskList | InternalFinishLevelGraph | InternalTriggerPerformance
 	| InternalEndPerformance | FinishPerformanceMission | PlayTimeline | PlayVideo | WaitSecond
-	| PropSetupTrigger | PlayScreenTransfer
+	| PropSetupTrigger | PlayScreenTransfer | AdvSetupCustomTaskTrigger | TriggerBattle
+	| TriggerGroupEvent | WaitGroupEvent | SwitchCase | ShowHalfScreenPage | ObserveMaterialSubmission

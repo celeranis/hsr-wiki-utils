@@ -11,7 +11,7 @@ PageTitle=#Ancestor's Drill Bit#
 |chapter       = 
 |requirements  = [[Adventure Mission]] ''[[Ancestor's Drill Bit]]'' completed
 |summary       = <!--official mission summary from Fate's Atlas-->
-|characters    = Trailblazer
+|characters    = Molly; Pela; Serval; Trailblazer
 |startLocation = [[Jarilo-VI]] - [[Neverwinter Workshop]]
 |world         = Jarilo-VI
 |area          = Neverwinter Workshop
@@ -34,10 +34,213 @@ PageTitle=#Ancestor's Drill Bit#
 ==Dialogue==
 {{Stub Dialogue}}
 
-===Hand the Key to Molly===
+===Hand the Key to Molly{{subst:void|<!--201130201-->}}===
 {{Mission Description|type=adventure|location=Neverwinter Workshop|You and Pela have suffered a lot in the Corridor of Fading Echoes, but you find the key Molly needs.<br />Return to Neverwinter Workshop and report the findings from your trip to them.}}
 {{Dialogue Start}}
-:{{tx}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+<pre>{
+	"$type": "RPG.GameCore.PlayNPCBubbleTalk",
+	"BubbleTalkInfoList": [
+		{
+			"AutoSkipTime": 4,
+			"GroupID": 16,
+			"GroupNpcID": 400001,
+			"TalkSentenceID": 101013256
+		},
+		{
+			"AutoSkipTime": 1,
+			"GroupID": 6,
+			"GroupNpcID": 400002,
+			"TalkSentenceID": 101013257
+		}
+	],
+	"BubbleTalkType": "Normal",
+	"LoopInterval": 1,
+	"InstantFinish": true
+}</pre>
+
+;(Talk to Serval)
+----
+:<!--0.3-second delay-->
+:'''Serval:''' Look, they are back.
+:'''Molly:''' Hey? You're back! How was it? Did you run into any danger?
+:{{DIcon|Arrow}} Fortunately, none at all.
+::'''Molly:''' That's good! If something happens to you because of me...
+::'''Molly:''' Anyway, enough ifs. Please tell me what happened.
+:{{DIcon|Arrow}} We almost died...
+::'''Molly:''' What, for real? If anything happens to you because of me, I'll definitely...
+::'''Molly:''' Never mind, enough ifs. Please tell me what happened.
+----
+:'''Serval:''' What an interesting adventure. Such a pity I didn't go with you. We should find a chance to investigate those mechanisms and dismantle them next time.
+:'''Pela:''' Well, you have to get Gepard's approval first...
+:'''Molly:''' Anyway, I'm glad to see you two back safely. I very much appreciate your help. Plus, I'm also very interested in what you've found over there... Let me take a look!
+:{{DIcon|Arrow}} I found a... portrait.
+<pre>{
+	"$type": "RPG.GameCore.ActiveVirtualCamera",
+	"AreaName": "Mission_2011101_temp",
+	"AnchorName": "Camera_201130201",
+	"BlendConfig": {
+		"ExportToJson": true,
+		"BlendType": "Cut",
+		"FOVSmoothDampTime": -1,
+		"FrameBlendWeightStart": 1,
+		"FrameBlendDuration": 1
+	},
+	"VCameraDitherMaxDistance": 1,
+	"CenterPosX": -1,
+	"CenterPosY": -1
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.ActiveVirtualCamera",
+	"AreaName": "Mission_2011101_temp",
+	"AnchorName": "Camera_201130201",
+	"IsActive": true,
+	"BlendConfig": {
+		"ExportToJson": true,
+		"BlendType": "Cut",
+		"FOVSmoothDampTime": -1,
+		"FrameBlendWeightStart": 1,
+		"FrameBlendDuration": 1
+	},
+	"VCameraDitherMaxDistance": 1,
+	"CenterPosX": -1,
+	"CenterPosY": -1
+}</pre>
+:<!--0.3-second delay-->
+:'''Molly:''' Ah! This Balakin was really... eccentric when he was young.
+:'''Serval:''' Hmm? I seem to remember that medal on his uniform &mdash; it must be the medal of honor from the Engine of Creation Project.
+:'''Serval:''' Also, according to the shape of the medal, this Richard Balakin was probably one of the chief engineers of the Engine of Creation project.
+:'''Molly:''' Engine of Creation? What is that? I think I may have once seen it in the Technology Division's archives...
+:'''Pela:''' To the best of my knowledge, there are very few relevant records, even in the official documents the Guards have access to. All I know is that this is a giant geological transformation unit built during the Alisa Rand era, and it's all lost now.
+:'''Molly:''' So I see. This guy was really incredible, and it's also strange that he liked messing with people... Are all geniuses so eccentric?
+:'''Molly:''' Anyway, thank you, (Trailblazer)! I will definitely treasure this interesting photo.
+:{{DIcon|Arrow}} I also found your key.
+<pre>{
+	"$type": "RPG.GameCore.ActiveVirtualCamera",
+	"AreaName": "Mission_2011101_temp",
+	"AnchorName": "Camera_201130201",
+	"BlendConfig": {
+		"ExportToJson": true,
+		"BlendType": "Cut",
+		"FOVSmoothDampTime": -1,
+		"FrameBlendWeightStart": 1,
+		"FrameBlendDuration": 1
+	},
+	"VCameraDitherMaxDistance": 1,
+	"CenterPosX": -1,
+	"CenterPosY": -1
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.ConsumeMissionItem",
+	"SubMissionID": 201130202,
+	"Desc": {
+		"Hash": 897702870
+	}
+}</pre>
+
+;(Talk to Serval)
+:'''Serval:''' Ahaha, just kidding. What's up?
+:{{DIcon|Talk}} What does the workshop actually do?
+::'''Serval:''' Just look at the decor &mdash; you can probably guess, right? It's a mechanical repairs shop, of course.
+::{{DIcon|Talk}} You can fix all kinds of machines?
+:::'''Serval:''' Of course! There's nothing in Belobog that I can't fix.
+:::'''Serval:''' Anything as small as a Geomarrow radiator to as large as a car engine &mdash; or even a Silvermane automaton &mdash; ah, but of course cars and automatons can't be dragged into this small room. I offer an outcall service for those.
+:::'''Serval:''' As well as maintenance and renovations of everyday things, we also had a modding service &mdash; like fitting an external drill bit to a snowplow, or a ballistic computer to a toaster...
+:::'''Serval:''' Put simply, the motto of our workshop is: Nothing is unfixable, as long as you can imagine it! Come see us if there's anything we can do, we'll give you a friendly price.
+::;(Return to previous option selection)
+::{{DIcon|Talk}} How's business normally?
+:::'''Serval:''' Business? What's that?
+:::'''Serval:''' Haha, just kidding. There's not much to say about our workshop's business. I make about as much as we spend each day.
+:::'''Serval:''' But I don't plan on just working for a crust &mdash; life is short, so what's the point of just living to make money? If I've got the time, I'd rather be tinkering on my hobbies.
+:::'''Serval:''' Ah, speaking of which... We sometimes put on rock gigs here at the workshop. Why don't you come check it out, if you like?
+::;(Return to previous option selection)
+::{{DIcon|Return}} I see.
+:::'''Serval:''' What else would you like to chat about?
+::;(Return to previous option selection)
+:{{DIcon|Talk}} I heard there are gigs here sometimes?
+::'''Serval:''' That's right. Who told you that? They must have great taste!
+::'''Serval:''' Not many people up in the Overworld consider our rock art a "gig"... Most people just call it "noise," haha.
+::{{DIcon|Talk}} What's your band called?
+:::'''Serval:''' We're called Mechanical Fever &mdash; cool eh?
+::;(Return to previous option selection)
+::{{DIcon|Talk}} Who's in your band?
+:::'''Serval:''' Ha, you've gotten straight to the point.
+:::'''Serval:''' Guitar and vocals are handled by me, of course. The keyboardist is the youngest and cutest of us Landaus &mdash; Lynx.
+:::'''Serval:''' On drums is Pela, one of the Silvermane Guards. She's always out on duty... These days, she should be out in the plaza watching over the kids.
+:::'''Serval:''' As for the bassist, we don't have one...
+:::'''Serval:''' And it's got something to do with Cocolia... I can't really say more than that.
+::;(Return to previous option selection)
+::{{DIcon|Talk}} When's the next gig?
+:::'''Serval:''' Gig? Whenever we want~ If we want it, we do it &mdash; otherwise, we don't. That's rock music!
+::;(Return to previous option selection)
+::{{DIcon|Return}} I understand.
+:::'''Serval:''' It's pretty rare to have someone like you who's so interested in our band. What else would you like to chat about?
+::;(Return to previous option selection)
+:{{DIcon|Exit}} That's all questions I have.
+::'''Serval:''' Cool, I'll be free to chat later whenever you want.
+<pre>{
+	"$type": "RPG.GameCore.ActiveVirtualCamera",
+	"AreaName": "Mission_2011101_temp",
+	"AnchorName": "Camera_201130201",
+	"IsActive": true,
+	"BlendConfig": {
+		"ExportToJson": true,
+		"BlendType": "Cut",
+		"FOVSmoothDampTime": -1,
+		"FrameBlendWeightStart": 1,
+		"FrameBlendDuration": 1
+	},
+	"VCameraDitherMaxDistance": 1,
+	"CenterPosX": -1,
+	"CenterPosY": -1
+}</pre>
+:<!--0.3-second delay-->
+:'''Molly:''' Oh, this is it! Let me see, this drill-like gadget should fit perfectly into the keyhole of this tin box...
+:'''Molly:''' My hands are trembling now, (Trailblazer). I hope your effort won't be wasted...
+:'''Molly:''' ...
+:'''Molly:''' W&mdash;we did it!
+:'''Molly:''' ... What's this? A piece of paper?
+<pre>{
+	"$type": "RPG.GameCore.ShowReading",
+	"BookID": {
+		"fixedValue": {
+			"Value": 190196
+		}
+	},
+	"WaitForExit": true
+}</pre>
+:'''Molly:''' "The Power to Change the World"...
+:'''Molly:''' I... I think I get it now. I've always had a bad temper, ever since I was little, and all the other kids shunned me. Things didn't get better even after I got a job. I've gotten into quite a few fights with people over some very trivial things.
+:'''Molly:''' The truth is, I shouldn't even try to change people at all... It's all just a distraction that keeps draining my passion for life itself.
+:'''Molly:''' It's just like what my ancestors said &mdash; all I ever need is a wrench and a drill.
+:'''Molly:''' ...I have figured it out. I can't go on like this anymore. I'm quitting my job in the Technology Division to start my own thing. This time, I'll make it on my own.
+:'''Molly:''' I'll be able to decide my own fate if I ignore the noise from the outside world and just focus on the work I have at hand. One day... maybe... just maybe... I'll be able to bring change to this city.
+:{{DIcon|Arrow}} I support you!
+::'''Molly:''' My goal in life is to be like Miss Serval, who has no fear and pursues her work with such passion, while simultaneously creating value for others.
+::'''Pela:''' So this is how Molly sees Serval... Never thought she could be a role model for somebody.
+::'''Molly:''' Well, it'd be a bit embarrassing to say it out loud in front of her. Even though I don't have the brain of a genius, nor was I born into an influential family, Miss Serval has always been my role model.
+:{{DIcon|Arrow}} Total independence is hard to achieve.
+::'''Molly:''' ...You are right. If I were to lose my privilege as a public worker, I might face even more horrific retaliation.
+::'''Molly:''' Oh, if only I could be like Miss Serval, supported by a family like the Landaus. Then I wouldn't be in so much trouble...
+:'''Molly:''' But... but I will try my best! After all, I've already gone through so much on my own.
+:'''Serval:''' What are you talking about, Molly? I don't like the sound of that.
+:'''Molly:''' ... Eh? Did I say something wrong? Sorry!
+:'''Serval:''' Well, it's not wrong per se, but I have to point out two inaccuracies in what you said &mdash;
+:'''Serval:''' Firstly, even though I am the eldest daughter of the Landau family, I was actually kicked out of the family a long time ago. All that stuff about prestigious family... it's long been a distant memory.
+:'''Serval:''' Secondly, you and I are really not that different. You see, we actually have similar life experiences. We are both genius technicians who can't fit in with the military, and we are both forced to get out and work on our own...
+:'''Molly:''' Genius? No, no, I'm not like you, Serval. I'm no genius...
+:'''Serval:''' Why are you being so modest now? I heard from (Trailblazer) that you weren't like this before.
+:'''Molly:''' Uh... Miss Serval...
+:'''Molly:''' Please... please take me in as your assistant!
+:'''Serval:''' That's right, that's the spirit of a young and promising mechanic! I've been waiting for you to say this!
+:'''Serval:''' To celebrate the first assistant of Serval's Workshop, let me play a song for everyone! Come on, Pela, get your drum set up here.
+:'''Pela:''' Alright alright... Seems like I can't get out of this one. But let me go to Fizz's place first. I have yet to get my hands on that limited edition magazine yet...
+:{{DIcon|Arrow}} Okay. I want a front-row seat!
+:{{DIcon|Arrow}} I'm actually very interested in Pela's magazine.
+::'''Pela:''' ... Don't think I don't know what you're up to! You guys &mdash; especially you, (Trailblazer) &mdash; you are not allowed to follow me! Absolutely not!
+----
 {{Dialogue End}}
 
 ==Other Languages==

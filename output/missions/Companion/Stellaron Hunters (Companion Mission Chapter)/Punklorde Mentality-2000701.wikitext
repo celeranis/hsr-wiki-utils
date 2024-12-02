@@ -11,7 +11,7 @@ PageTitle=#Punklorde Mentality#
 |chapter       = Stellaron Hunters (Companion Mission Chapter)
 |requirements  = Reach [[Trailblaze Level]] 21
 |summary       = When Herta's esteemed guest came to visit the space station, what they brought was an end to the Simulated Universe project. However, a rash network security engineer and an unaccounted Aether Cartridge has hooked a big fish from beneath the data-streams... The so-called Punklorde mentality is but a game, after all.
-|characters    = Trailblazer
+|characters    = Arlan; Asta; Leonard; Maintenance Department Researcher; Medical Department Researcher; Screwllum; Silver Wolf (?); Trailblazer
 |startLocation = [[Herta Space Station]] - [[Base Zone]]
 |world         = Herta Space Station
 |area          = Base Zone
@@ -22,7 +22,6 @@ PageTitle=#Punklorde Mentality#
 '''''Punklorde Mentality''''' is a [[Companion Mission]] in the chapter [[Stellaron Hunters (Companion Mission Chapter)|Stellaron Hunters]].
 
 ==Steps==
-# (Optional) Find other clues left by Silver Wolf
 # Go to base zone to answer the call
 # Go toward the elevator entrance and see who the important guest is
 # Go and wait at the elevator entrance and see who the important guest is
@@ -35,8 +34,7 @@ PageTitle=#Punklorde Mentality#
 # Investigate the suspicious graffiti
 # Head to the main control room
 # Talk with Leonard
-# Continue to track Silver Wolf's infiltration path
-# Talk with Leonard
+# (Optional) Find other clues left by Silver Wolf
 
 <!--
 ==Gameplay Notes==
@@ -49,85 +47,612 @@ PageTitle=#Punklorde Mentality#
 {{Stub Dialogue}}
 {{Dialogue End}}
 
-===(Optional) Find other clues left by Silver Wolf===
-{{Mission Description|type=companion|location=Base Zone|update|The network security engineer of the space station thinks there is something else behind the invasion of the Legion. You recall what happened to you when you woke up and decide to join him in tracking down the Stellaron Hunter, Silver Wolf.}}
-{{Dialogue Start}}
-:{{tx}}
-{{Dialogue End}}
-
-===Go to base zone to answer the call===
+===Go to base zone to answer the call{{subst:void|<!--200070102-->}}===
 {{Mission Description|type=companion|location=Base Zone|update|You received Arlan's message. He seems to want to formally thank you for helping him when you first met. Get ready and go to Base Zone.}}
 {{Dialogue Start}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:'''(Trailblazer):''' (Why there're so many people here? What is going on?)
+
+;(Talk to Arlan)
 :{{tx}}
+:{{A|VO side0 sw1 arlan 101.ogg}} '''Arlan:''' Correct. All the cabins they might pass by have been checked. Remember to report to Lead Researcher Asta.
+:{{DIcon|Arrow}} Hello...
+:{{DIcon|Arrow}} Excuse me...
+:{{DIcon|Arrow}} I'm here!
+:{{A|VO side0 sw1 arlan 102 m.ogg}} {{A|VO side0 sw1 arlan 102 f.ogg}} '''Arlan:''' We'll deal with problems outside the base zone later... Ah, it's you, (Trailblazer).
+:{{DIcon|Arrow}} You look busy.
+:{{DIcon|Arrow}} Are you surprised?
+:{{DIcon|Arrow}} Didn't you ask me to come?
+:{{A|VO side0 sw1 arlan 103.ogg}} '''Arlan:''' Sorry, this is embarrassing... We suddenly had some stuff come up. I wanted to take care of it before you arrived, but I can't seem to get a break around here.
+:{{A|VO side0 sw1 arlan 104.ogg}} '''Arlan:''' Never mind about that. Here &mdash; this is for you. I made it this morning. And I've been keeping it warm.
+:{{DIcon|Arrow}} You made me some fried rice!
+::{{A|VO side0 sw1 arlan 105.ogg}} '''Arlan:''' It's just a little something I whipped up.
+:{{DIcon|Arrow}} A gift?
+::{{A|VO side0 sw1 arlan 106.ogg}} '''Arlan:''' That's right! I hope you don't hate it.
+:{{DIcon|Arrow}} Did you save any for Asta?
+::{{A|VO side0 sw1 arlan 107.ogg}} '''Arlan:''' No, she had pudding this morning. I made it especially for you.
+:{{A|VO side0 sw1 arlan 108.ogg}} '''Arlan:''' I spent a long time wondering what to give you... In the end, I realized I should stick to what I'm good at. Miss Asta loves my fried rice, so I hope you like it too.
+:{{A|VO side0 sw1 arlan 109.ogg}} '''Arlan:''' Sorry, it's so noisy here... I wanted to find somewhere quieter where I could get your feedback, but...
+:{{DIcon|Arrow}} That's alright.
+::{{A|VO side0 sw1 arlan 110.ogg}} '''Arlan:''' Mm, I'm pretty confident in this dish. Unfortunately, I was a bit rushed at the end...
+:{{DIcon|Arrow}} Don't worry about it.
+::{{A|VO side0 sw1 arlan 111.ogg}} '''Arlan:''' Miss Asta said that gratitude has to be sincere... It's a shame that I had to finish it up so hastily...
+:{{A|VO side0 sw1 arlan 112.ogg}} '''Arlan:''' Some big shot suddenly decided to visit the space station today. Everyone has been in a hurry since the announcement. They're all worried that a bad impression could damage Madam Herta's reputation.
+:{{tx}}
+
+:{{DIcon|Talk}} Listen
+:{{A|VO side0 sw1 staffAB 101.ogg}} '''Medical Department Researcher:''' Are the repairs in the supply zone finished? We have to wrap them up this week. No more delays.
+:{{A|VO side0 sw1 staffAC 101.ogg}} '''Maintenance Department Researcher:''' A&mdash;Almost... there are just a few compressors left...
 {{Dialogue End}}
 
-===Go toward the elevator entrance and see who the important guest is===
+===Go toward the elevator entrance and see who the important guest is{{subst:void|<!--200070103-->}}===
 {{Mission Description|type=companion|location=Base Zone|update|The atmosphere in the base zone seems much more boisterous than you would expect. Hearing of the imminent arrival of an honored guest, researchers all begin their busy work. From Arlan's words, you vaguely guessed the identity of the visitor.}}
 {{Dialogue Start}}
-:{{tx}}
+<pre>{
+	"$type": "RPG.GameCore.WaitUIControllerClose",
+	"UIControllerName": "ToastMissionCompanionDialog"
+}</pre>
+:'''(Trailblazer):''' (Herta's research partner? I remember she once talked about... The elevator's entrance seems to be nearby, I shall check it out now.)
+
+;(Upon reaching the destination)
+<pre>{
+	"$type": "RPG.GameCore.DestroyNPC",
+	"GroupID": 79,
+	"GroupNpcID": 400008,
+	"DestroyList": []
+}</pre>
 {{Dialogue End}}
 
-===Go and wait at the elevator entrance and see who the important guest is===
+===Go and wait at the elevator entrance and see who the important guest is{{subst:void|<!--200070104-->}}===
 {{Mission Description|type=companion|location=Base Zone|update|The atmosphere in the base zone seems much more boisterous than you would expect. Hearing of the imminent arrival of an honored guest, researchers all begin their busy work. From Arlan's words, you vaguely guess the identity of the visitor.}}
 {{Dialogue Start}}
+----
+;([[#Gallery|Cutscene]] plays)
+::So this visitor is...
+::Get ready.
+::Hypothesis
+::Thought always precedes words...
+::...and yet I can't find the words for this moment.
+::It's good to see you
+::Asta.
+;(Cutscene ends)
+----
+:{{A|VO side0 sw1 screwllum 101.ogg}} '''Screwllum:''' I apologize. I'm 4 minutes and 13 seconds earlier than the appointed time. I hope it's not a bother.
+:{{A|VO side0 sw1 asta 101.ogg}} '''Asta:''' Of course not, Mr. Screwllum. Welcome to Herta Space Station.
+:{{A|VO side0 sw1 screwllum 102.ogg}} '''Screwllum:''' No need for formalities, Asta. Herta Space Station is where knowledge converges. Here, we celebrate the equality of thought.
+:{{A|VO side0 sw1 screwllum 103.ogg}} '''Screwllum:''' Such collaboration between organic lifeforms is magnificent and efficient &mdash; you're rebuilding the space station far quicker than I could have imagined.
+:{{A|VO side0 sw1 asta 102.ogg}} '''Asta:''' We appreciate your high praise, Mr. Screwllum. Would you like me to show you around? Since the last summit, we've launched several new research projects focused on silicon-based matrices.
+:{{A|VO side0 sw1 screwllum 104.ogg}} '''Screwllum:''' That sounds lovely. But I do have a meeting with Herta, so let's put the new surprises on hold for now.
+:{{A|VO side0 sw1 asta 103.ogg}} '''Asta:''' Madam Herta should be in her office. I'll take you there. Right this way.
+:{{A|VO side0 sw1 screwllum 105.ogg}} '''Screwllum:''' Sure.
+:{{A|VO side0 sw1 screwllum 106.ogg}} '''Screwllum:''' And you are...
+:{{DIcon|Arrow}} Hi, I'm (Trailblazer).
+::{{A|VO side0 sw1 screwllum 107 m.ogg}} {{A|VO side0 sw1 screwllum 107 f.ogg}} '''Screwllum:''' Ah! Hello, (Trailblazer). I've heard so much about you. Herta talks about you often.
+:{{DIcon|Arrow}} Hello, Mr. Screwllum.
+::{{A|VO side0 sw1 screwllum 108 m.ogg}} {{A|VO side0 sw1 screwllum 108 f.ogg}} '''Screwllum:''' Ah! Hello, (Trailblazer). I've heard so much about you. Herta talks about you often.
+:{{DIcon|Arrow}} Hehe, can you guess?
+::{{A|VO side0 sw1 arlan 115.ogg}} '''Arlan:''' Hey...
+::{{A|VO side0 sw1 screwllum 109.ogg}} '''Screwllum:''' Haha, judging by this fellow's surprised reaction, you must be the one Herta is always talking about.
+:{{A|VO side0 sw1 screwllum 110.ogg}} '''Screwllum:''' She's quite curious about you, as am I. What is it like to live in symbiosis with a Stellaron? I hope we'll have sufficient time in the future to get to know each other and answer this question.
+:{{A|VO side0 sw1 arlan 116.ogg}} '''Arlan:''' Sorry... I wanted to show you around, but now I don't think I'll be able to get away...
+:{{DIcon|Arrow}} That's alright.
+:{{DIcon|Arrow}} Go ahead, or you won't be able to catch up.
+:{{A|VO side0 sw1 arlan 117.ogg}} '''Arlan:''' Alright, see you later.
 :{{tx}}
 {{Dialogue End}}
 
-===Talk to the Distressed Worker===
+===Talk to the Distressed Worker{{subst:void|<!--200070106-->}}===
 {{Mission Description|type=companion|location=Base Zone|update|The atmosphere in the base zone seems much more boisterous than you would expect. Hearing of the imminent arrival of an honored guest, researchers all begin their busy work. From Arlan's words, you vaguely guessed the identity of the visitor.<br />He is one of the other creators of the Simulated Universe, Genius Society No. 76, Screwllum.}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Leonard)
+;(If {{cx}}{{subst:void|<!--{"$type":"RPG.GameCore.ByMainMissionFinish","MainMissionID":8000105,"TaskEnabled":true,"IsClientOnly":true}-->}})
+::----
+::{{A|VO side0 sw1 staffAG 140.ogg}} '''Leonard:''' Strange... it should be around here somewhere. Maybe it's hidden inside Madam Herta's portrait...
+::{{A|VO side0 sw1 staffAG 141 m.ogg}} {{A|VO side0 sw1 staffAG 141 f.ogg}} '''Leonard:''' Huh? Do you need something? If you're looking for the front desk, just go straight... Oh! (Trailblazer)! Long time no see!
+::{{DIcon|Arrow}} Long time no see!
+:::{{A|VO side0 sw1 staffAG 142.ogg}} '''Leonard:''' I didn't expect you to be here! Did you get another Cosmic Warfare message? Haha!
+::{{DIcon|Arrow}} How have you been?
+:::{{A|VO side0 sw1 staffAG 143.ogg}} '''Leonard:''' *sigh* Not so good. Still the same as before... just like during Cosmic Warfare...
+::{{DIcon|Arrow}} Sorry, you are...?
+:::{{A|VO side0 sw1 staffAG 144.ogg}} '''Leonard:''' Huh? You don't remember me...? Cosmic Warfare, remember?
+::{{DIcon|Arrow}} I remember!
+:::{{A|VO side0 sw1 staffAG 145.ogg}} '''Leonard:''' Yeah! I knew you wouldn't forget me.
+::{{DIcon|Arrow}} I don't remember...
+:::{{A|VO side0 sw1 staffAG 146.ogg}} '''Leonard:''' Huh? Well, you've got a lot on your plate. Let me jog your memory...
+:::{{A|VO side0 sw1 staffAG 147.ogg}} '''Leonard:''' Allow me to introduce myself. I'm Leonard, a cybersecurity engineer here at the space station.
+:::{{A|VO side0 sw1 staffAG 148.ogg}} '''Leonard:''' You probably know that this place was recently attacked by the Antimatter Legion. In the chaos, the master control system for each zone was paralyzed.
+:::{{A|VO side0 sw1 staffAG 149.ogg}} '''Leonard:''' Now that the station is being rebuilt, my job is to repair equipment and restore the space station's cybersecurity.
+:::{{A|VO side0 sw1 staffAG 150.ogg}} '''Leonard:''' But during the repair process, I discovered some anomalies. The access records show that a third party other than the Legion invaded while the master control system was paralyzed.
+:::{{A|VO side0 sw1 staffAG 151.ogg}} '''Leonard:''' We suspect that it may have been the Stellaron Hunters. It's an elusive group, and very dangerous. Every member is on the IPC's wanted list.
+:::{{A|VO side0 sw1 staffAG 152.ogg}} '''Leonard:''' One of them is a super hacker from Punklorde. I'm ashamed to admit that I've lost to her once before...
+:::{{A|VO side0 sw1 staffAG 153.ogg}} '''Leonard:''' A while ago, I discovered her whereabouts during a screening process. I was planning to follow the clues to find more details about her, but I fell into her trap.
+:::{{A|VO side0 sw1 staffAG 154.ogg}} '''Leonard:''' Can you guess what happened next? She reverse-hacked my device, sent out a bunch of spam, made a video game open to the space station, and told everyone that an idiot named Leonard made a big, silly mistake...
+:::{{A|VO side0 sw1 staffAG 155.ogg}} '''Leonard:''' Well? Do you remember me now? That should be enough to jog your memory.
+::{{A|VO side0 sw1 staffAG 156.ogg}} '''Leonard:''' Oh, maybe you haven't heard. Now that everything has calmed down, I thought they'd be on my case already. The silver lining? Madam Herta was generous enough to allow me to continue investigating this matter.
+;(If {{cx}}{{subst:void|<!--{"$type":"RPG.GameCore.ByMainMissionFinish","MainMissionID":8000105,"TaskEnabled":true,"IsClientOnly":true}-->}})
+::----
+::{{A|VO side0 sw1 staffAG 101.ogg}} '''Leonard:''' Strange... it should be around here somewhere. Maybe it's hidden inside Madam Herta's portrait...
+::{{A|VO side0 sw1 staffAG 102.ogg}} '''Leonard:''' Huh? Do you need something? If you're looking for the front desk, just go straight through those doors...
+::{{DIcon|Arrow}} What are you doing?
+:::{{A|VO side0 sw1 staffAG 103.ogg}} '''Leonard:''' Wait a second. I know you! I saw you chatting with Captain Arlan just now. You must be the rising star who caught Madam Herta's attention.
+::{{DIcon|Arrow}} Are you having trouble with something?
+:::{{A|VO side0 sw1 staffAG 104.ogg}} '''Leonard:''' ...Such a concerned and responsive tone... You must be the one everyone's been talking about recently! Your kindheartedness is famous throughout the space station!
+::{{DIcon|Arrow}} Aaah... She looks so pretty.
+:::{{A|VO side0 sw1 staffAG 105.ogg}} '''Leonard:''' Oh, another fan of Madam Herta's? Well, I'm afraid this portrait's being taken down soon.
+:::{{A|VO side0 sw1 staffAG 103.ogg}} '''Leonard:''' Wait a second. I know you! I saw you chatting with Captain Arlan just now. You must be the rising star who caught Madam Herta's attention.
+::{{A|VO side0 sw1 staffAG 106.ogg}} '''Leonard:''' Allow me to introduce myself. I'm Leonard, a cybersecurity engineer here at the space station.
+::{{A|VO side0 sw1 staffAG 107.ogg}} '''Leonard:''' You probably know that this place was recently attacked by the Antimatter Legion. In the chaos, the master control system for each zone was paralyzed.
+::{{A|VO side0 sw1 staffAG 108.ogg}} '''Leonard:''' Now that the station is being rebuilt, my job is to repair equipment and restore the space station's cybersecurity.
+::{{A|VO side0 sw1 staffAG 109.ogg}} '''Leonard:''' But during the repair process, I discovered some anomalies. The access records show that a third party other than the Legion invaded while the master control system was paralyzed.
+::{{DIcon|Arrow}} Was it a lady in sunglasses?
+:::{{A|VO side0 sw1 staffAG 110.ogg}} '''Leonard:''' I don't know who or what it was. Actually, I'm investigating that right now.
+::{{DIcon|Arrow}} Stellaron Hunters?
+:::{{A|VO side0 sw1 staffAG 111.ogg}} '''Leonard:''' Mmm, some others have surmised the same as you.
+::{{DIcon|Arrow}} The Astral Express?
+:::{{A|VO side0 sw1 staffAG 112.ogg}} '''Leonard:''' No, they arrived earlier.
+::{{A|VO side0 sw1 staffAG 113.ogg}} '''Leonard:''' We suspect that it may have been the Stellaron Hunters. It's an elusive group, and very dangerous. Every member is on the IPC's wanted list.
+::{{A|VO side0 sw1 staffAG 114.ogg}} '''Leonard:''' They include a super hacker from Punklorde. I'm ashamed to admit that I've lost to her once before...
+::{{A|VO side0 sw1 staffAG 115.ogg}} '''Leonard:''' A while ago, I discovered her whereabouts during a screening process. I was planning to follow the clues to find more details about her, but I fell into her trap.
+::{{A|VO side0 sw1 staffAG 116.ogg}} '''Leonard:''' Can you guess what happened next? She reverse-hacked my device, sent out a bunch of spam, made a video game open to the space station, and told everyone that an idiot named Leonard made a big, silly mistake...
+::{{A|VO side0 sw1 staffAG 117.ogg}} '''Leonard:''' Ugh, I don't want to think about it. Now that everything has calmed down, I thought they'd be on my case already. The silver lining? Madam Herta was generous enough to allow me to continue investigating this matter.
+::{{A|VO side0 sw1 staffAG 121.ogg}} '''Leonard:''' To put it simply, the leaders have given me an opportunity. How could I not cherish it? If I can make up for my mistakes and do a good job, I may have a chance to prove myself.
+::{{A|VO side0 sw1 staffAG 123.ogg}} '''Leonard:''' This time, I plan to start from inside the space station and see if I can find some clues to trace the intruders' steps. Maybe I can find the blind spot I missed before.
+::{{A|VO side0 sw1 staffAG 124.ogg}} '''Leonard:''' I designed a decoding program. Look &mdash; it looks like a camera, but it's actually a detector. We should be able to find hidden clues with it.
+::{{A|VO side0 sw1 staffAG 125.ogg}} '''Leonard:''' Just like... this!
+::----
+:<pre>{
+	"$type": "RPG.GameCore.ActiveVirtualCamera",
+	"AreaName": "2000701_06",
+	"AnchorName": "LookAt_Camera2",
+	"IsActive": true,
+	"BlendConfig": {
+		"ExportToJson": true,
+		"BlendType": "EaseInOut",
+		"CustomCurveName": "Blend_FastToSlow",
+		"BlendTime": 2,
+		"FOVSmoothDampTime": -1,
+		"FrameBlendWeightStart": 1,
+		"FrameBlendDuration": 1
+	},
+	"VCameraDitherMaxDistance": 1,
+	"CenterPosX": -1,
+	"CenterPosY": -1
+}</pre>
+::<!--0.5-second delay-->
+::<!--0.5-second delay-->
+:<pre>{
+	"$type": "RPG.GameCore.CreateProp",
+	"GroupID": {
+		"fixedValue": {
+			"Value": 79
+		}
+	},
+	"GroupPropID": {
+		"fixedValue": {
+			"Value": 300006
+		}
+	},
+	"CreateList": []
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.CreateProp",
+	"GroupID": {
+		"fixedValue": {
+			"Value": 79
+		}
+	},
+	"GroupPropID": {
+		"fixedValue": {
+			"Value": 300012
+		}
+	},
+	"CreateList": []
+}</pre>
+::<!--1-second delay-->
+::{{A|VO side0 sw1 staffAG 126.ogg}} '''Leonard:''' Uh... what exactly are&mdash;
+::{{DIcon|Arrow}} A drop of sweat.
+:::{{A|VO side0 sw1 staffAG 127.ogg}} '''Leonard:''' Really? Why is there... a drop of sweat?
+::{{DIcon|Arrow}} A drop of water.
+:::{{A|VO side0 sw1 staffAG 128.ogg}} '''Leonard:''' A drop of water? Why do I feel like... it's more like a drop a sweat?
+::{{DIcon|Arrow}} A blue, teardrop-shaped object.
+:::{{A|VO side0 sw1 staffAG 129.ogg}} '''Leonard:''' What are you talking about!? This looks like... a drop of sweat?
+::{{DIcon|Arrow}} Aaah... She's just so pretty.
+:::{{A|VO side0 sw1 staffAG 130.ogg}} '''Leonard:''' I didn't ask you to look at that!
+::{{A|VO side0 sw1 staffAG 131.ogg}} '''Leonard:''' Unbelievable. Why would something like this be in the space station? The staff wouldn't even dare scribble on the wall, let alone leave... a drop of sweat?
+::{{A|VO side0 sw1 staffAG 132.ogg}} '''Leonard:''' So, this is what we're looking for... this suspicious evidence? It wasn't what I was expecting, but...
+::{{DIcon|Arrow}} It is pretty suspicious.
+::{{DIcon|Arrow}} It's quite unexpected.
+::{{DIcon|Arrow}} At least it's a clue.
+::{{A|VO side0 sw1 staffAG 133.ogg}} '''Leonard:''' Wait a second... let me take a look...
+::{{A|VO side0 sw1 staffAG 134.ogg}} '''Leonard:''' O&mdash;Oh, I see. This is digital graffiti that appears to represent Punklordian symbols. If I'm not mistaken, this should be some kind of automatic encryption.
+::{{A|VO side0 sw1 staffAG 135.ogg}} '''Leonard:''' We need to decipher it if want to find any culpatory evidence.
+::{{DIcon|Arrow}} What does this have to do with me?
+::{{A|VO side0 sw1 staffAG 137.ogg}} '''Leonard:''' Ugh, you got me there. I got caught up in our conversation. I wasn't paying attention...
+::{{A|VO side0 sw1 staffAG 138.ogg}} '''Leonard:''' Let me think... Um, maybe I've been under too much stress recently and I subconsciously want a friend. Anyway, if I were to find clues related to the Stellaron Hunters, wouldn't that be helpful to you too?
+::{{A|VO side0 sw1 staffAG 139.ogg}} '''Leonard:''' Ugh, just do me a favor! It won't take up too much of your time. Here &mdash; just point it at the graffiti on the wall.
+;(All choices lead to the following options)
+:{{DIcon|Arrow}} Congratulations.
+::{{A|VO side0 sw1 staffAG 118.ogg}} '''Leonard:''' Yeah, it was pretty unexpected. Space station affairs are usually handled by Lead Researcher Asta &mdash; this is the first time I've seen Madam Herta give the orders in person.
+:{{DIcon|Arrow}} Normally she doesn't want to deal with it.
+::{{A|VO side0 sw1 staffAG 119.ogg}} '''Leonard:''' Hence my "silver lining..." You know Madam Herta &mdash; if she's really interested in something, it doesn't matter what anyone else says.
+:{{DIcon|Arrow}} She's getting revenge on you.
+::{{A|VO side0 sw1 staffAG 120.ogg}} '''Leonard:''' I&mdash;I wouldn't go that far... I'm just a nobody. You think Madam Herta would remember me?
+:{{A|VO side0 sw1 staffAG 121.ogg}} '''Leonard:''' To put it simply, the leaders have given me an opportunity. How could I not cherish it? If I can make up for my mistakes and do a good job, I may have a chance to prove myself.
+:{{A|VO side0 sw1 staffAG 122.ogg}} '''Leonard:''' Oh, I haven't properly explained to you what I'm doing here... As I mentioned, I'm investigating this situation.
+:{{A|VO side0 sw1 staffAG 123.ogg}} '''Leonard:''' This time, I plan to start from inside the space station and see if I can find some clues to trace the intruders' steps. Maybe I can find the blind spot I missed before.
+:{{A|VO side0 sw1 staffAG 124.ogg}} '''Leonard:''' I designed a decoding program. Look &mdash; it looks like a camera, but it's actually a detector. We should be able to find hidden clues with it.
+:{{A|VO side0 sw1 staffAG 125.ogg}} '''Leonard:''' Just like... this!
+----
+<pre>{
+	"$type": "RPG.GameCore.CreateProp",
+	"GroupID": {
+		"fixedValue": {
+			"Value": 79
+		}
+	},
+	"GroupPropID": {
+		"fixedValue": {
+			"Value": 300006
+		}
+	},
+	"CreateList": []
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.CreateProp",
+	"GroupID": {
+		"fixedValue": {
+			"Value": 79
+		}
+	},
+	"GroupPropID": {
+		"fixedValue": {
+			"Value": 300012
+		}
+	},
+	"CreateList": []
+}</pre>
+:<!--0.5-second delay-->
+:{{A|VO side0 sw1 staffAG 126.ogg}} '''Leonard:''' Uh, that's...
+:{{DIcon|Arrow}} A drop of sweat.
+::{{A|VO side0 sw1 staffAG 127.ogg}} '''Leonard:''' Really? Why is there... a drop of sweat?
+:{{DIcon|Arrow}} A drop of water.
+::{{A|VO side0 sw1 staffAG 128.ogg}} '''Leonard:''' A drop of water? Why do I feel like... it's more like a drop a sweat?
+:{{DIcon|Arrow}} A blue, teardrop-shaped object.
+::{{A|VO side0 sw1 staffAG 129.ogg}} '''Leonard:''' What are you talking about!? This looks like... a drop of sweat?
+:{{DIcon|Arrow}} Aaah... She's just so pretty.
+::{{A|VO side0 sw1 staffAG 130.ogg}} '''Leonard:''' I didn't ask you to look at that!
+:{{A|VO side0 sw1 staffAG 131.ogg}} '''Leonard:''' Unbelievable. Why would something like this be in the space station? The staff wouldn't even dare scribble on the wall, let alone leave... a drop of sweat?
+:{{A|VO side0 sw1 staffAG 132.ogg}} '''Leonard:''' So, this is what we're looking for... this suspicious evidence? It wasn't what I was expecting, but...
+:{{DIcon|Arrow}} It is pretty suspicious.
+:{{DIcon|Arrow}} It's quite unexpected.
+:{{DIcon|Arrow}} At least it's a clue.
+:{{A|VO side0 sw1 staffAG 133.ogg}} '''Leonard:''' Wait a second... let me take a look...
+:{{A|VO side0 sw1 staffAG 134.ogg}} '''Leonard:''' O&mdash;Oh, I see. This is digital graffiti that appears to represent Punklordian symbols. If I'm not mistaken, this should be some kind of automatic encryption.
+:{{A|VO side0 sw1 staffAG 135.ogg}} '''Leonard:''' We need to decipher it if want to find any culpatory evidence.
+:{{DIcon|Arrow}} What does this have to do with me?
+:{{A|VO side0 sw1 staffAG 137.ogg}} '''Leonard:''' Ugh, you got me there. I got caught up in our conversation. I wasn't paying attention...
+:{{A|VO side0 sw1 staffAG 138.ogg}} '''Leonard:''' Let me think... Um, maybe I've been under too much stress recently and I subconsciously want a friend. Anyway, if I were to find clues related to the Stellaron Hunters, wouldn't that be helpful to you too?
+:{{A|VO side0 sw1 staffAG 139.ogg}} '''Leonard:''' Ugh, just do me a favor! It won't take up too much of your time. Here &mdash; just point it at the graffiti on the wall.
+;(Unused &mdash; TalkSentence_200070537)
+:{{A|VO side0 sw1 staffAG 127.ogg}} '''Leonard:''' Really? Why is there... a drop of sweat?
+::{{A|VO side0 sw1 staffAG 131.ogg}} '''Leonard:''' Unbelievable. Why would something like this be in the space station? The staff wouldn't even dare scribble on the wall, let alone leave... a drop of sweat?
+::{{A|VO side0 sw1 staffAG 132.ogg}} '''Leonard:''' So, this is what we're looking for... this suspicious evidence? It wasn't what I was expecting, but...
+::{{DIcon|Arrow}} It is pretty suspicious.
+::{{DIcon|Arrow}} It's quite unexpected.
+::{{DIcon|Arrow}} At least it's a clue.
+::{{A|VO side0 sw1 staffAG 133.ogg}} '''Leonard:''' Wait a second... let me take a look...
+::{{A|VO side0 sw1 staffAG 134.ogg}} '''Leonard:''' O&mdash;Oh, I see. This is digital graffiti that appears to represent Punklordian symbols. If I'm not mistaken, this should be some kind of automatic encryption.
+::{{A|VO side0 sw1 staffAG 135.ogg}} '''Leonard:''' We need to decipher it if want to find any culpatory evidence.
+::{{DIcon|Arrow}} Let me try.
+:::{{A|VO side0 sw1 staffAG 136.ogg}} '''Leonard:''' Here &mdash; just point it at the graffiti on the wall.
+::{{DIcon|Arrow}} What does this have to do with me?
+:::{{A|VO side0 sw1 staffAG 137.ogg}} '''Leonard:''' Ugh, you got me there. I got caught up in our conversation. I wasn't paying attention...
+:::{{A|VO side0 sw1 staffAG 138.ogg}} '''Leonard:''' Let me think... Um, maybe I've been under too much stress recently and I subconsciously want a friend. Anyway, if I were to find clues related to the Stellaron Hunters, wouldn't that be helpful to you too?
+:::{{A|VO side0 sw1 staffAG 139.ogg}} '''Leonard:''' Ugh, just do me a favor! It won't take up too much of your time. Here &mdash; just point it at the graffiti on the wall.
+
+;(Unused &mdash; TalkSentence_200070539)
+:{{A|VO side0 sw1 staffAG 128.ogg}} '''Leonard:''' A drop of water? Why do I feel like... it's more like a drop a sweat?
+::{{A|VO side0 sw1 staffAG 131.ogg}} '''Leonard:''' Unbelievable. Why would something like this be in the space station? The staff wouldn't even dare scribble on the wall, let alone leave... a drop of sweat?
+::{{A|VO side0 sw1 staffAG 132.ogg}} '''Leonard:''' So, this is what we're looking for... this suspicious evidence? It wasn't what I was expecting, but...
+::{{DIcon|Arrow}} It is pretty suspicious.
+::{{DIcon|Arrow}} It's quite unexpected.
+::{{DIcon|Arrow}} At least it's a clue.
+::{{A|VO side0 sw1 staffAG 133.ogg}} '''Leonard:''' Wait a second... let me take a look...
+::{{A|VO side0 sw1 staffAG 134.ogg}} '''Leonard:''' O&mdash;Oh, I see. This is digital graffiti that appears to represent Punklordian symbols. If I'm not mistaken, this should be some kind of automatic encryption.
+::{{A|VO side0 sw1 staffAG 135.ogg}} '''Leonard:''' We need to decipher it if want to find any culpatory evidence.
+::{{DIcon|Arrow}} Let me try.
+:::{{A|VO side0 sw1 staffAG 136.ogg}} '''Leonard:''' Here &mdash; just point it at the graffiti on the wall.
+::{{DIcon|Arrow}} What does this have to do with me?
+:::{{A|VO side0 sw1 staffAG 137.ogg}} '''Leonard:''' Ugh, you got me there. I got caught up in our conversation. I wasn't paying attention...
+:::{{A|VO side0 sw1 staffAG 138.ogg}} '''Leonard:''' Let me think... Um, maybe I've been under too much stress recently and I subconsciously want a friend. Anyway, if I were to find clues related to the Stellaron Hunters, wouldn't that be helpful to you too?
+:::{{A|VO side0 sw1 staffAG 139.ogg}} '''Leonard:''' Ugh, just do me a favor! It won't take up too much of your time. Here &mdash; just point it at the graffiti on the wall.
+
+;(Unused &mdash; TalkSentence_200070541)
+:{{A|VO side0 sw1 staffAG 129.ogg}} '''Leonard:''' What are you talking about!? This looks like... a drop of sweat?
+::{{A|VO side0 sw1 staffAG 131.ogg}} '''Leonard:''' Unbelievable. Why would something like this be in the space station? The staff wouldn't even dare scribble on the wall, let alone leave... a drop of sweat?
+::{{A|VO side0 sw1 staffAG 132.ogg}} '''Leonard:''' So, this is what we're looking for... this suspicious evidence? It wasn't what I was expecting, but...
+::{{DIcon|Arrow}} It is pretty suspicious.
+::{{DIcon|Arrow}} It's quite unexpected.
+::{{DIcon|Arrow}} At least it's a clue.
+::{{A|VO side0 sw1 staffAG 133.ogg}} '''Leonard:''' Wait a second... let me take a look...
+::{{A|VO side0 sw1 staffAG 134.ogg}} '''Leonard:''' O&mdash;Oh, I see. This is digital graffiti that appears to represent Punklordian symbols. If I'm not mistaken, this should be some kind of automatic encryption.
+::{{A|VO side0 sw1 staffAG 135.ogg}} '''Leonard:''' We need to decipher it if want to find any culpatory evidence.
+::{{DIcon|Arrow}} Let me try.
+:::{{A|VO side0 sw1 staffAG 136.ogg}} '''Leonard:''' Here &mdash; just point it at the graffiti on the wall.
+::{{DIcon|Arrow}} What does this have to do with me?
+:::{{A|VO side0 sw1 staffAG 137.ogg}} '''Leonard:''' Ugh, you got me there. I got caught up in our conversation. I wasn't paying attention...
+:::{{A|VO side0 sw1 staffAG 138.ogg}} '''Leonard:''' Let me think... Um, maybe I've been under too much stress recently and I subconsciously want a friend. Anyway, if I were to find clues related to the Stellaron Hunters, wouldn't that be helpful to you too?
+:::{{A|VO side0 sw1 staffAG 139.ogg}} '''Leonard:''' Ugh, just do me a favor! It won't take up too much of your time. Here &mdash; just point it at the graffiti on the wall.
+
+;(Unused &mdash; TalkSentence_200070543)
+:{{A|VO side0 sw1 staffAG 130.ogg}} '''Leonard:''' I didn't ask you to look at that!
+::{{A|VO side0 sw1 staffAG 131.ogg}} '''Leonard:''' Unbelievable. Why would something like this be in the space station? The staff wouldn't even dare scribble on the wall, let alone leave... a drop of sweat?
+::{{A|VO side0 sw1 staffAG 132.ogg}} '''Leonard:''' So, this is what we're looking for... this suspicious evidence? It wasn't what I was expecting, but...
+::{{DIcon|Arrow}} It is pretty suspicious.
+::{{DIcon|Arrow}} It's quite unexpected.
+::{{DIcon|Arrow}} At least it's a clue.
+::{{A|VO side0 sw1 staffAG 133.ogg}} '''Leonard:''' Wait a second... let me take a look...
+::{{A|VO side0 sw1 staffAG 134.ogg}} '''Leonard:''' O&mdash;Oh, I see. This is digital graffiti that appears to represent Punklordian symbols. If I'm not mistaken, this should be some kind of automatic encryption.
+::{{A|VO side0 sw1 staffAG 135.ogg}} '''Leonard:''' We need to decipher it if want to find any culpatory evidence.
+::{{DIcon|Arrow}} Let me try.
+:::{{A|VO side0 sw1 staffAG 136.ogg}} '''Leonard:''' Here &mdash; just point it at the graffiti on the wall.
+::{{DIcon|Arrow}} What does this have to do with me?
+:::{{A|VO side0 sw1 staffAG 137.ogg}} '''Leonard:''' Ugh, you got me there. I got caught up in our conversation. I wasn't paying attention...
+:::{{A|VO side0 sw1 staffAG 138.ogg}} '''Leonard:''' Let me think... Um, maybe I've been under too much stress recently and I subconsciously want a friend. Anyway, if I were to find clues related to the Stellaron Hunters, wouldn't that be helpful to you too?
+:::{{A|VO side0 sw1 staffAG 139.ogg}} '''Leonard:''' Ugh, just do me a favor! It won't take up too much of your time. Here &mdash; just point it at the graffiti on the wall.
+
+;(Unused &mdash; TalkSentence_200070454)
+:{{A|VO side0 sw1 staffAG 136.ogg}} '''Leonard:''' Here &mdash; just point it at the graffiti on the wall.
 {{Dialogue End}}
 
-===Investigate the suspicious graffiti===
+===Investigate the suspicious graffiti{{subst:void|<!--200070107-->}}===
 {{Mission Description|type=companion|location=Base Zone|update|The network security engineer of the space station thinks there is something else behind the invasion of the Legion. You recall what happened to you when you woke up and decide to join him in tracking down the Stellaron Hunter, Silver Wolf.}}
 {{Dialogue Start}}
-:{{tx}}
+
+----
+:{{A|VO side0 sw1 staffAG 158.ogg}} '''Leonard:''' Th&mdash;That scared me to death! Did you see that? It seemed like something popped up here, then Voidrangers jumped out!
+:{{DIcon|Arrow}} Don't worry. It's taken care of.
+:{{DIcon|Arrow}} That scared me to death!
+:{{DIcon|Arrow}} There seems to be an extra person...
+:{{A|VO side0 sw1 staffAG 159.ogg}} '''Leonard:''' But look! Just like I guessed, this graffiti is encrypted! If we decipher it, we can see some hidden information.
+:{{A|VO side0 sw1 staffAG 160.ogg}} '''Leonard:''' The surveillance camera captured her face &mdash; "Silver Wolf." It's exactly the same as the photo on the IPC's wanted list. Let me see what she was up to...
+:{{A|VO side0 sw1 staffAG 161.ogg}} '''Leonard:''' Is this... a transmitter beacon? Oh, I see! She probably ran into the Antimatter Legion during the invasion, then used this beacon to teleport the enemy somewhere else.
+:{{A|VO side0 sw1 staffAG 162.ogg}} '''Leonard:''' We accidentally activated the beacon again just now, and they were brought back... Geez, Stellaron Hunters have the ability to stow enemies away like that?
+:{{A|VO side0 sw1 staffAG 163.ogg}} '''Leonard:''' Beacon transmission that doesn't require a power source and can be implemented solely through computation? No wonder they were able to break into the space station... With this, I'm afraid not even Madam Herta's office is safe...
+:{{DIcon|Arrow}} Don't be discouraged.
+::{{A|VO side0 sw1 staffAG 164.ogg}} '''Leonard:''' It's really hard to stay calm... Y'know, if it wasn't for you, I'd probably be lying on the ground right now.
+::{{A|VO side0 sw1 staffAG 165.ogg}} '''Leonard:''' So it's really important that we work together! Please!
+:{{DIcon|Arrow}} Is this kind of tech really that impressive?
+::{{A|VO side0 sw1 staffAG 166.ogg}} '''Leonard:''' It's not only impressive &mdash; how should I put it... She can edit "reality" as freely as she could edit a program.
+::{{A|VO side0 sw1 staffAG 167.ogg}} '''Leonard:''' Sounds unbelievable, doesn't it? I always thought it was fringe science, and that nobody other than the Masked Fools believed it really existed.
+:{{DIcon|Arrow}} Have some faith &mdash; we'll figure this out.
+::{{A|VO side0 sw1 staffAG 168.ogg}} '''Leonard:''' Well, I don't share your optimism. If it wasn't for you, I'd probably be lying on the ground right now.
+::{{A|VO side0 sw1 staffAG 169.ogg}} '''Leonard:''' Anyway, let's work together...
+----
 {{Dialogue End}}
 
-===Track Silver Wolf's path of infiltration===
+===Track Silver Wolf's path of infiltration{{subst:void|<!--200070110-->}}===
 {{Dialogue Start}}
-:{{tx}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{A|VO side0 sw1 staffAG 173.ogg}} '''Leonard:''' Look &mdash; up there. Tsk, they even put down a question mark &mdash; they must be making fun of us.
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{A|VO side0 sw1 staffAG 175.ogg}} '''Leonard:''' Ugh, disappeared again? This thing keeps cutting out when I'm deciphering it.
+:{{A|VO side0 sw1 staffAG 176.ogg}} '''Leonard:''' She must have stopped here for a bit. Let's look around.
+:<!--1-second delay-->
+:<!--3-second delay-->
+:{{A|VO side0 sw1 staffAG 174.ogg}} '''Leonard:''' She went toward the base zone... Yep, there's only one way.
 {{Dialogue End}}
 
-===Continue to track Silver Wolf's infiltration pathway===
+===Continue to track Silver Wolf's infiltration pathway{{subst:void|<!--200070112-->}}===
 {{Dialogue Start}}
-:{{tx}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{A|VO side0 sw1 staffAG 197.ogg}} '''Leonard:''' Another graffiti... They're all different too. She really put some thought into this.
+:<!--1-second delay-->
+:<!--3-second delay-->
+:{{A|VO side0 sw1 staffAG 196.ogg}} '''Leonard:''' They seem to be heading toward the monitoring room.
+----
+:<!--4.5-second delay-->
+:{{A|VO side0 sw1 staffAG 198.ogg}} '''Leonard:''' Huh, is this section of the record damaged...? She went through the wall and disappeared.
+:{{DIcon|Arrow}} She altered the records?
+::{{A|VO side0 sw1 staffAG 199.ogg}} '''Leonard:''' That's highly unlikely, but if it's true, everything we've seen till now could be a fake.
+:{{DIcon|Arrow}} She teleported herself?
+::{{A|VO side0 sw1 staffAG 200.ogg}} '''Leonard:''' I don't think so, that's not the same as passing straight through a wall &mdash; look.
+:{{DIcon|Arrow}} Could it be a display malfunction?
+::{{A|VO side0 sw1 staffAG 201.ogg}} '''Leonard:''' That's highly unlikely, I bought this detector just last week. The refund guarantee hasn't even expired yet.
+::{{DIcon|Arrow}} Didn't you say you developed this yourself...?
+::{{A|VO side0 sw1 staffAG 202.ogg}} '''Leonard:''' Uhh... Let's talk about that later.
+:{{A|VO side0 sw1 staffAG 203.ogg}} '''Leonard:''' Hold on, I got it! It might be an effect from a curio. There was a pre-established folded space here, and the intruders found it and took advantage of it.
+:{{A|VO side0 sw1 staffAG 204.ogg}} '''Leonard:''' No wonder she kept going through the curio collection index. This space is connected to the Stellaron room. Do you still remember it? That's where they put the Stellaron inside you.
+:{{DIcon|Arrow}} I can't recall.
+::{{A|VO side0 sw1 staffAG 205.ogg}} '''Leonard:''' Well, that's not unusual. Anyway, this is all just an assumption of mine.
+:{{DIcon|Arrow}} I think I remember this.
+:{{DIcon|Arrow}} Kaf... ka...
+::{{A|VO side0 sw1 staffAG 206.ogg}} '''Leonard:''' Huh? What are you muttering about?
+:{{A|VO side0 sw1 staffAG 207.ogg}} '''Leonard:''' Hmm... Why would they leave you here if their objective was the Stellaron? With her capabilities, all she would've needed to do was make another beacon &mdash; she would've been able to escape with the Stellaron no problem.
+----
 {{Dialogue End}}
 
-===Continue to track Silver Wolf's infiltration path===
+===Continue to track Silver Wolf's infiltration path{{subst:void|<!--200070124-->}}===
 {{Dialogue Start}}
-:{{tx}}
+----
+:{{A|VO side0 sw1 staffAG 209.ogg}} '''Leonard:''' Huh...? There's no graffiti here... We're doomed. The trail has gone cold...
+:{{A|VO side0 sw1 staffAG 210.ogg}} '''Leonard:''' So strange... Did she really leave just like that? She came all this way and didn't take anything with her, nor leave anything behind.
+:{{A|VO side0 sw1 staffAG 211.ogg}} '''Leonard:''' Oh, uh... they did leave you behind. Ahem, sorry, that sounded better in my head... It must've been a terrible feeling waking up in a place that was completely unfamiliar to you...
+:{{DIcon|Arrow}} That's alright.
+:{{DIcon|Arrow}} It wasn't so bad.
+:{{DIcon|Arrow}} Sounds like you've experienced it yourself.
+::{{A|VO side0 sw1 staffAG 212.ogg}} '''Leonard:''' Me? That's how I feel when I wake up every day.
+:{{A|VO side0 sw1 staffAG 213.ogg}} '''Leonard:''' I can't help but feel that there's more that they're after. *sigh* I really hope I can find something that's useful to you... otherwise I'll feel bad for having you do so much work for nothing.
+:{{A|VO side0 sw1 staffAG 214.ogg}} '''Leonard:''' *sigh* ...The more I talk about it, the worse I feel. I should probably find something that I can do... Hmm, there's a rating pistol here. I wonder what my rating would be...
+:{{A|VO side0 sw1 staffAG 215.ogg}} '''Leonard:''' Whoa! Look here! There's a strange access log in the rating pistol's compartment.
+:{{A|VO side0 sw1 staffAG 216.ogg}} '''Leonard:''' It looks like the log time occurred during the Legion's invasion &mdash; the researchers would've already been evacuated by then. Could it have been her? In which case, she didn't leave immediately... She implanted the Stellaron inside you and then fiddled around with the rating pistol for a while?
+:{{A|VO side0 sw1 staffAG 217 m.ogg}} {{A|VO side0 sw1 staffAG 217 f.ogg}} '''Leonard:''' Could it be that... (Trailblazer), I just realized something. We need to go to the Curio collection room on the other side.
+----
 {{Dialogue End}}
 
-===Head to the Curio Collection Room at the other end===
+===Head to the Curio Collection Room at the other end{{subst:void|<!--200070115-->}}===
 {{Dialogue Start}}
-:{{tx}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{A|VO side0 sw1 staffAG 218.ogg}} '''Leonard:''' Just as I thought... She was here!
 {{Dialogue End}}
 
-===Investigate the suspicious graffiti===
+===Investigate the suspicious graffiti{{subst:void|<!--200070116-->}}===
 {{Dialogue Start}}
-:{{tx}}
+
+
+;(Talk to Silver Wolf)
+
 {{Dialogue End}}
 
-===Head to the main control room===
+===Head to the main control room{{subst:void|<!--200070118-->}}===
 {{Dialogue Start}}
-:{{tx}}
+;(Upon reaching the destination)
 {{Dialogue End}}
 
-===Talk with Leonard===
+===Talk with Leonard{{subst:void|<!--200070119-->}}===
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Leonard)
+----
+:{{A|VO side0 sw1 staffAG 234.ogg}} '''Leonard:''' Wait, don't move! I get chills just looking at the space station monitors now. Let me investigate first...
+:{{A|VO side0 sw1 staffAG 235.ogg}} '''Leonard:''' Just perfect. Not only did she shut off all the access logs, she shut off all the terminal transmissions too... I thought it was the Legion that did this.
+:{{DIcon|Arrow}} Do we need to do a restart?
+::{{A|VO side0 sw1 staffAG 236.ogg}} '''Leonard:''' Let's focus on the main task first.
+:{{DIcon|Arrow}} No one noticed it this whole time?
+::{{A|VO side0 sw1 staffAG 237.ogg}} '''Leonard:''' This wouldn't have been a high-priority issue. The space station's to-do list is ridiculously long at this point.
+:{{A|VO side0 sw1 staffAG 238.ogg}} '''Leonard:''' I am curious though. She paused the terminal transmissions, but didn't touch the local data at all. I really don't get her.
+:{{A|VO side0 sw1 staffAG 239.ogg}} '''Leonard:''' As a Stellaron Hunter, she leaves the Stellaron behind. As a hacker, she doesn't delete the local log. Hmm, there's an external port here. I'm gonna plug in and take a look.
+:{{DIcon|Arrow}} I have a bad feeling about this...
+:{{DIcon|Arrow}} It might be a trap...
+:{{DIcon|Arrow}} Why don't you let me do it...
+:{{A|VO side0 sw1 staffAG 240.ogg}} '''Leonard:''' Relax, friend. I've done this a million times. Look at this agreement...
+----
+----
+:{{A|VO side0 sw1 staffAG 241.ogg}} '''Leonard:''' See? I was right! There was something fishy about the local data she left behind!
+:{{DIcon|Arrow}} So there was something strange after all!
+:{{DIcon|Arrow}} Yeah, yeah...
+:{{A|VO side0 sw1 staffAG 242.ogg}} '''Leonard:''' Now we can browse through the curio access logs... Huh? That can't be right. This curio doesn't seem to have ever left the space station.
+:{{DIcon|Arrow}} She didn't take the curio either?
+:{{DIcon|Arrow}} It just disappeared into thin air?
+:{{A|VO side0 sw1 staffAG 243.ogg}} '''Leonard:''' Hmm, from the way things look, yes. The records show that this curio was last sent to... Madam Herta's office? And then it disappeared?
+:{{A|VO side0 sw1 staffAG 244.ogg}} '''Leonard:''' I'm seriously confused. What did she come here for? She wouldn't have put the graffiti up just to mess with us, would she?
+:{{A|VO side0 sw1 staffAG 245.ogg}} '''Leonard:''' *sigh* No, if I start thinking like that I may as well give up now. I have to fully investigate every lead or I'll really be out of a job...
+----
 {{Dialogue End}}
 
-===Continue to track Silver Wolf's infiltration path===
+===(Optional) Find other clues left by Silver Wolf{{subst:void|<!--200070141-->}}===
 {{Dialogue Start}}
-:{{tx}}
-{{Dialogue End}}
-
-===Talk with Leonard===
-{{Dialogue Start}}
-:{{tx}}
+<pre>{
+	"$type": "RPG.GameCore.PhotoGraphAimTarget",
+	"AimTargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvProp",
+		"MultiGroupFetch": [
+			{
+				"GroupID": {
+					"fixedValue": {
+						"Value": 79
+					}
+				},
+				"ID": {
+					"fixedValue": {
+						"Value": 300021
+					}
+				}
+			}
+		],
+		"MultiGroupFetchByUniqueName": [],
+		"MultiGroupFetchByPropKey": []
+	},
+	"IsAim": true,
+	"AimTagExtraOffset": -1
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.PhotoGraphWaitIdentifyFinish",
+	"WaitTargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvProp",
+		"MultiGroupFetch": [
+			{
+				"GroupID": {
+					"fixedValue": {
+						"Value": 79
+					}
+				},
+				"ID": {
+					"fixedValue": {
+						"Value": 300021
+					}
+				}
+			}
+		],
+		"MultiGroupFetchByUniqueName": [],
+		"MultiGroupFetchByPropKey": []
+	},
+	"OnIdentifyFinish": [],
+	"OnPreviewFinish": []
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.PhotoGraphAimTarget",
+	"AimTargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvProp",
+		"MultiGroupFetch": [
+			{
+				"GroupID": {
+					"fixedValue": {
+						"Value": 79
+					}
+				},
+				"ID": {
+					"fixedValue": {
+						"Value": 300021
+					}
+				}
+			}
+		],
+		"MultiGroupFetchByUniqueName": [],
+		"MultiGroupFetchByPropKey": []
+	}
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.CreateProp",
+	"GroupID": {
+		"fixedValue": {
+			"Value": 79
+		}
+	},
+	"GroupPropID": {
+		"fixedValue": {
+			"Value": 300020
+		}
+	}
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.CreateProp",
+	"GroupID": {
+		"fixedValue": {
+			"Value": 79
+		}
+	},
+	"GroupPropID": {
+		"fixedValue": {
+			"Value": 300021
+		}
+	}
+}</pre>
+----
+----
+;(Enter battle)
+:{{Enemy List|Antibaryon*1; Voidranger: Reaver*2; Voidranger: Distorter*1; Baryon*1}}
 {{Dialogue End}}
 
 ==Other Languages==

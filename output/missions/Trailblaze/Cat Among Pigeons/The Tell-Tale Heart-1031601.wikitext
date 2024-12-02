@@ -11,7 +11,7 @@ PageTitle=#The Tell-Tale Heart#
 |chapter       = Cat Among Pigeons
 |requirements  = [[Trailblaze Mission]] ''[[Why Do the Heathen Rage?]]'' completed
 |summary       = Welt and Acheron reached an accord to head to Dewlight Pavilion and obtain evidence of The Family brewing a conspiracy, but their carelessness got them caught in a trap set up by the Oak Family head. Fortunately, Sunday could be reasoned with, and escorted the both of them to safety after professing The Family's absolute innocence in the matter.
-|characters    = Trailblazer
+|characters    = Acheron; Trailblazer; Welt
 |startLocation = [[Penacony]] - [[Dewlight Pavilion]]
 |world         = Penacony
 |area          = Dewlight Pavilion
@@ -26,8 +26,8 @@ PageTitle=#The Tell-Tale Heart#
 # Go deeper into the Dewlight Pavilion to look for clues
 # Defeat the monsters wandering around the Dewlight Pavilion
 # Go deeper into the Dewlight Pavilion to look for clues
-# Keep looking for clues
 # Look for clues
+# Keep looking for clues
 # Confront Sunday
 
 <!--
@@ -40,42 +40,170 @@ PageTitle=#The Tell-Tale Heart#
 ==Dialogue==
 {{Stub Dialogue}}
 
-===Head to the Dewlight Pavilion===
+===Head to the Dewlight Pavilion{{subst:void|<!--103160102-->}}===
 {{Mission Description|type=trailblaze|location=Dewlight Pavilion|Meanwhile, Acheron &mdash; that is to say, you &mdash; and Welt have infiltrated the Dewlight Pavilion to bring to light the truth hidden by The Family. To your surprise, the place is empty when it is supposed to be heavily guarded. Only some wandering monsters can be seen patrolling the place.<br />What's going on?}}
 {{Dialogue Start}}
 :{{tx}}
 {{Dialogue End}}
 
-===Go deeper into the Dewlight Pavilion to look for clues===
+===Go deeper into the Dewlight Pavilion to look for clues{{subst:void|<!--103160103-->}}===
+{{Dialogue Start}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{tx}}
+
+:{{DIcon|Loupe}} Investigate
+:{{tx}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{A|VO chapter3 13 welt 107.ogg}} '''Welt:''' The footprints here are different from the rest... there are two sets of them. Looks like outsiders might have passed through here not long ago.
+;(If {{cx}}{{subst:void|<!--{"$type":"RPG.GameCore.ByLocalPlayerAvatarID","AvatarIDs":[1308],"TaskEnabled":true,"IsClientOnly":true}-->}})
+<pre>{
+	"$type": "RPG.GameCore.PlayMazeButtonEffect",
+	"Enable": true,
+	"BtnType": "MazeSkill"
+}</pre>
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{A|VO chapter3 13 acheron 107.ogg}} '''Acheron:''' The model in the sandpit... it's the Golden Hour, isn't it?
+:{{A|VO chapter3 13 welt 112.ogg}} '''Welt:''' Maybe the heads of The Family use that model for discussing important matters.
+
+;(Upon reaching the destination)
+:{{A|VO chapter3 13 acheron 107.ogg}} '''Acheron:''' The model in the sandpit... it's the Golden Hour, isn't it?
+:{{A|VO chapter3 13 welt 112.ogg}} '''Welt:''' Maybe the heads of The Family use that model for discussing important matters.
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{A|VO chapter3 13 acheron 108.ogg}} '''Acheron:''' While there aren't any people in this mansion... they've set up quite a few memetic guards to patrol this place.
+<pre>{
+	"$type": "RPG.GameCore.SwitchCharacterAnchorV2",
+	"SwitchCharacterAnchorConfig": {
+		"IsLocalPlayer": true,
+		"CharacterUniqueName": "LocalPlayer",
+		"AreaName": {
+			"Value": "LevelArea_P20322_F20322001_G95"
+		},
+		"AnchorName": {
+			"Value": "Anchor1"
+		},
+		"ResetAnimation": true,
+		"ResetCamera": true
+	}
+}</pre>
+;(Enter battle)
+:{{Enemy List|Memory Zone Meme "Allseer"*2; Memory Zone Meme "Shell of Faded Rage"*1/+28.6% HP, -120 Toughness}}
+{{Dialogue End}}
+
+===Defeat the monsters wandering around the Dewlight Pavilion{{subst:void|<!--103160107-->}}===
 {{Dialogue Start}}
 :{{tx}}
 {{Dialogue End}}
 
-===Defeat the monsters wandering around the Dewlight Pavilion===
+===Go deeper into the Dewlight Pavilion to look for clues{{subst:void|<!--103160109-->}}===
 {{Dialogue Start}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
 :{{tx}}
 {{Dialogue End}}
 
-===Go deeper into the Dewlight Pavilion to look for clues===
-{{Dialogue Start}}
-:{{tx}}
-{{Dialogue End}}
-
-===Keep looking for clues===
-{{Mission Description|type=trailblaze|location=Dewlight Pavilion|update|You two manage to sneak into The Family's council chamber almost unhindered. It looks like a place laden with confidential documents, so you two can surely find something here.<br />The more the better. Since no one is stopping you, it shouldn't cause too much trouble if you keep poking around, right?}}
-{{Dialogue Start}}
-:{{tx}}
-{{Dialogue End}}
-
-===Look for clues===
+===Look for clues{{subst:void|<!--103160110-->}}===
 {{Mission Description|type=trailblaze|location=Dewlight Pavilion|update|You two manage to sneak into The Family's council chamber almost unhindered. It looks like a place laden with confidential documents, so you two can surely find something here.}}
 {{Dialogue Start}}
-:{{tx}}
+
+
+:{{DIcon|Loupe}} Investigate
+<pre>{
+	"$type": "RPG.GameCore.ShowReading",
+	"BookID": {
+		"fixedValue": {
+			"Value": 190588
+		}
+	},
+	"WaitForExit": true
+}</pre>
+:{{A|VO chapter3 13 welt 118.ogg}} '''Welt:''' As soon as I and the rest of the Crew arrived in Penacony, Mr. Sunday and Robin showed up to greet us. I remember hearing something unusual in her voice... and now it seems I was right.
+:{{A|VO chapter3 13 acheron 113.ogg}} '''Acheron:''' Robin believed it was because the Harmony had been tampered with somehow, but as far as I know, there aren't many entities capable of interfering with the power of Paths.
+:{{A|VO chapter3 13 welt 119.ogg}} '''Welt:''' Meaning...
+:{{A|VO chapter3 13 acheron 114.ogg}} '''Acheron:''' If there really is a traitor within The Family... that person must hold a high position or possess unimaginable strength.
+:{{A|VO chapter3 13 welt 120.ogg}} '''Welt:''' That would explain why Mr. Sunday has been having such difficulty in catching the traitor.
+
+:{{DIcon|Loupe}} Investigate
+<pre>{
+	"$type": "RPG.GameCore.ShowReading",
+	"BookID": {
+		"fixedValue": {
+			"Value": 190591
+		}
+	},
+	"WaitForExit": true
+}</pre>
+:{{A|VO chapter3 13 acheron 115.ogg}} '''Acheron:''' The information about Robin, Firefly... and the other victims... I don't see any commonalities among them.
+:{{A|VO chapter3 13 welt 121.ogg}} '''Welt:''' Looks like the rumors were right &mdash; "Death" does seem to be targeting random victims. And based on Sunday's notes... he's no stranger to "Death."
+:{{A|VO chapter3 13 acheron 116.ogg}} '''Acheron:''' He's just surprised that it has resurfaced.
+
+:{{DIcon|Loupe}} Investigate
+<pre>{
+	"$type": "RPG.GameCore.TalkFigure",
+	"Show": true,
+	"ImagePath": "SpriteOutput/Mission/TalkItem/SubMission_21043.png",
+	"TriggerSound": true
+}</pre>
+:{{A|VO chapter3 13 acheron 120.ogg}} '''Acheron:''' This Light Cone... is securely guarded. It must hold some important memories.
+:{{A|VO chapter3 13 welt 125.ogg}} '''Welt:''' According to Robin's interview, despite having performed on so many grand stages, her favorite performance was a pretend show she put on with her brother when they were just kids.
+:{{A|VO chapter3 13 acheron 121.ogg}} '''Acheron:''' I wonder how their relationship is now.
+:{{A|VO chapter3 13 welt 126.ogg}} '''Welt:''' Growing up brings gains, but also losses.
+:{{A|VO chapter3 13 acheron 122.ogg}} '''Acheron:''' Yeah, time has a way of smoothing things out. The beautiful dreams of youth... will eventually fade away.
+<pre>{
+	"$type": "RPG.GameCore.TalkFigure",
+	"ImagePath": "SpriteOutput/Mission/TalkItem/SubMission_21043.png",
+	"TriggerSound": true
+}</pre>
 {{Dialogue End}}
 
-===Confront Sunday===
+===Keep looking for clues{{subst:void|<!--103160114-->}}===
 {{Mission Description|type=trailblaze|location=Dewlight Pavilion|update|You two manage to sneak into The Family's council chamber almost unhindered. It looks like a place laden with confidential documents, so you two can surely find something here.<br />The more the better. Since no one is stopping you, it shouldn't cause too much trouble if you keep poking around, right?}}
 {{Dialogue Start}}
+
+
+:{{DIcon|Loupe}} Investigate
+<pre>{
+	"$type": "RPG.GameCore.ShowReading",
+	"BookID": {
+		"fixedValue": {
+			"Value": 190590
+		}
+	},
+	"WaitForExit": true
+}</pre>
+:{{A|VO chapter3 13 acheron 117.ogg}} '''Acheron:''' Mr. Sunday has done some serious research on his suspects... This traitor must have been causing trouble for The Family for a long time.
+:{{A|VO chapter3 13 welt 122.ogg}} '''Welt:''' They all seem to be insiders... but I haven't met any of them.
+:{{A|VO chapter3 13 acheron 118.ogg}} '''Acheron:''' Huh? Wait, these characteristics...
+:{{A|VO chapter3 13 welt 123.ogg}} '''Welt:''' What is it?
+:{{A|VO chapter3 13 acheron 119.ogg}} '''Acheron:''' No, nothing... Maybe I'm just overthinking things... However, if this traitor really exists, could they be responsible for Firefly and Robin's deaths?
+:{{A|VO chapter3 13 welt 124.ogg}} '''Welt:''' Perhaps that's why Sunday is taking this matter so seriously.
+
+:{{DIcon|Loupe}} Investigate
+<pre>{
+	"$type": "RPG.GameCore.ShowReading",
+	"BookID": {
+		"fixedValue": {
+			"Value": 190592
+		}
+	},
+	"WaitForExit": true
+}</pre>
+:{{A|VO chapter3 13 welt 127.ogg}} '''Welt:''' It seems neither the Dreammaster of Penacony nor this Old Oti is happy with Sunday's recent performance.
+:{{A|VO chapter3 13 acheron 123.ogg}} '''Acheron:''' They don't seem to care much about "Death"... Instead, they're more concerned about the Charmony Festival and the Watchmaker.
+:{{A|VO chapter3 13 welt 128.ogg}} '''Welt:''' Maybe the other family heads don't think "Death" is a big deal... One thing's for sure &mdash; there's a lot of internal conflict within The Family, and everybody has their own agenda.
+{{Dialogue End}}
+
+===Confront Sunday{{subst:void|<!--103160120-->}}===
+{{Dialogue Start}}
+:{{tx}}
 :{{tx}}
 {{Dialogue End}}
 

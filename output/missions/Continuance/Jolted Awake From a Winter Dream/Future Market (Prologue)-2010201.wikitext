@@ -11,7 +11,7 @@ PageTitle=#Future Market (Prologue)#
 |chapter       = Jolted Awake From a Winter Dream
 |requirements  = [[Trailblaze Mission]] ''[[Obsequies Performed, A Long Road Ahead]]'' completed
 |summary       = Bronya informed you that Jarilo-VI was preparing a carnival for the Solwarm Festival and invited the Nameless.<br />Outside Belobog, you encountered Topaz, the director of IPC's Strategic Investment Department, who claimed to have come to discuss business.
-|characters    = Trailblazer
+|characters    = Children; Dan Heng; Gepard; Gertie; Himeko; IPC Worker; March 7th; Norbert; Pela; Queuing Man; Rossy; Serval; Serval and Spectators; Topaz; Trailblazer; Wallace
 |startLocation = [[Astral Express]] - [[Parlor Car]]
 |world         = Astral Express
 |area          = Parlor Car
@@ -27,8 +27,6 @@ PageTitle=#Future Market (Prologue)#
 # Ask Himeko about her intentions
 # Return to Belobog alongside March 7th
 # Stroll through the city and take in the festive atmosphere
-# Return to Belobog alongside March 7th
-# Stroll through the city and take in the festive atmosphere
 
 <!--
 ==Gameplay Notes==
@@ -40,46 +38,396 @@ PageTitle=#Future Market (Prologue)#
 ==Dialogue==
 {{Stub Dialogue}}
 
-===Talk to March 7th===
+===Talk to March 7th{{subst:void|<!--201020101-->}}===
 {{Mission Description|type=continuance|location=Parlor Car|(Trailblazer)'s Trailblaze Daily Report:<br />There's still some time before the Express departs. Go speak with March to pass time.}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to March 7th)
+:{{A|VO side1 tp2 mar7th 101 m.ogg}} {{A|VO side1 tp2 mar7th 101 f.ogg}} '''March 7th:''' Hey, (Trailblazer), did you hear about our next stop? It's a world called "Penacony" &mdash; I hear it's a beautiful, dreamy place... I'm so excited...
+:{{A|VO side1 tp2 mar7th 102.ogg}} '''March 7th:''' ...but Pom-Pom said the banquet we were invited to is still a little ways off. Hmm... what can I do to pass the time...?
+<pre>{
+	"$type": "RPG.GameCore.TriggerSound",
+	"SoundName": {
+		"Value": "Ev_sfx_belobog_phone_buzz"
+	},
+	"EmitterType": "LocalPlayer"
+}</pre>
+:{{A|VO side1 tp2 mar7th 103.ogg}} '''March 7th:''' ...Huh? Is that my phone? Must be the group chat.
+<pre>{
+	"$type": "RPG.GameCore.PlayMessage",
+	"MessageSectionID": 1115000,
+	"ShowNotice": true
+}</pre>
+:{{A|VO side1 tp2 mar7th 104.ogg}} '''March 7th:''' That Dan Heng &mdash; he can't just ignore Bronya...
+:{{A|VO side1 tp2 mar7th 105.ogg}} '''March 7th:''' Let's go to his room and talk to him.
+----
+<pre>{
+	"$type": "RPG.GameCore.SaveMessage",
+	"MessageSectionID": 1115000
+}</pre>
 {{Dialogue End}}
 
-===Ask Dan Heng about his thoughts===
+===Ask Dan Heng about his thoughts{{subst:void|<!--201020102-->}}===
 {{Mission Description|type=continuance|location=Passenger Cabin|update|(Trailblazer)'s Trailblaze Daily Report:<br />March wants to go. Asking Dan Heng next.}}
 {{Dialogue Start}}
-:{{tx}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+----
+:{{A|VO side1 tp2 mar7th 106.ogg}} '''March 7th:''' Dan Heng! Bronya just sent all of us a message. Did you see it yet?
+:{{A|VO side1 tp2 danheng 101.ogg}} '''Dan Heng:''' Yes, I saw it.
+:{{A|VO side1 tp2 mar7th 107.ogg}} '''March 7th:''' Then why didn't you reply? Bronya's a good friend of ours!
+:{{A|VO side1 tp2 danheng 102.ogg}} '''Dan Heng:''' ...I'm sorry, I'm just not in the mood for idle chat. There's been a lot weighing on my mind since the Luofu... it was tough on the spirit.
+:{{A|VO side1 tp2 mar7th 108.ogg}} '''March 7th:''' Dan Heng...
+:{{A|VO side1 tp2 mar7th 109.ogg}} '''March 7th:''' I'm the one who should be sorry &mdash; I was being too pushy! You're right, you went through a lot on the Xianzhou &mdash; take all the time you need...
+:{{DIcon|Arrow}} Dan Heng, stay on the Express and get some rest.
+::{{A|VO side1 tp2 danheng 103 m.ogg}} {{A|VO side1 tp2 danheng 103 f.ogg}} '''Dan Heng:''' Thank you for understanding, (Trailblazer).
+:{{DIcon|Arrow}} Why not come with us for a change of scenery?
+::{{A|VO side1 tp2 danheng 104.ogg}} '''Dan Heng:''' No, thanks &mdash; I'll be staying on the Express.
+:{{A|VO side1 tp2 danheng 105.ogg}} '''Dan Heng:''' It's great that Belobog is able to host a celebration. I hope your trip goes well &mdash; say hi to our friends for me.
+:{{A|VO side1 tp2 mar7th 110.ogg}} '''March 7th:''' Okay! Rest up &mdash; you're not allowed to miss the next Trailblaze expedition!
+:{{A|VO side1 tp2 danheng 106.ogg}} '''Dan Heng:''' Mm, I'll be there next time.
+----
 {{Dialogue End}}
 
-===Ask Himeko about her intentions===
+===Ask Himeko about her intentions{{subst:void|<!--201020103-->}}===
 {{Mission Description|type=continuance|location=Passenger Cabin|update|(Trailblazer)'s Trailblaze Daily Report:<br />Dan Heng's not going, too stubborn. Asking Himeko, but probably unlikely.}}
 {{Dialogue Start}}
-:{{tx}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+----
+:{{A|VO side1 tp himeko 101.ogg}} '''Himeko:''' Hey, March. That's a big smile on your face &mdash; what's the good news?
+:{{A|VO side1 tp mar7th 112.ogg}} '''March 7th:''' Himeko! There's a celebration coming up on Jarilo-VI, organized by the Supreme Guardian, and we're invited to go take in the sights and sounds.
+:{{A|VO side1 tp mar7th 113.ogg}} '''March 7th:''' Dan Heng won't be going anywhere for a while &mdash; he's still resting up, so... wanna come with us?
+:{{A|VO side1 tp mar7th 114.ogg}} '''March 7th:''' I mean, considering how you helped us out with Cocolia, I'm sure Bronya would be happy to see you!
+:{{A|VO side1 tp himeko 102.ogg}} '''Himeko:''' Ahh, so that explains the grin &mdash; you're excited about the celebration.
+:{{A|VO side1 tp himeko 103.ogg}} '''Himeko:''' Thanks for the invite, but I'm afraid my hands are full right now. Please send my regards to the Supreme Guardian.
+:{{A|VO side1 tp himeko 104.ogg}} '''Himeko:''' Make the most of the festivities &mdash; you've earned it! You two and Dan Heng did help save Jarilo-VI, after all. I'll be sure to join you guys next time.
+:{{A|VO side1 tp mar7th 115.ogg}} '''March 7th:''' Navigators really do have their plates full, huh? Seems like it's just you and me this time.
+:{{A|VO side1 tp mar7th 116 m.ogg}} {{A|VO side1 tp mar7th 116 f.ogg}} '''March 7th:''' Let me go pack some stuff for the trip first. (Trailblazer), come and find me when you're ready to set off.
+----
+
+;(Talk to Himeko)
+:{{A|VO side1 tp himeko 105.ogg}} '''Himeko:''' I've got a lot going on right now, but I'll try to make it next time.
+:{{A|VO side1 tp himeko 106.ogg}} '''Himeko:''' I'm sure you'll have a great time. Don't forget to send my regards to the Supreme Guardian while you're there.
 {{Dialogue End}}
 
-===Return to Belobog alongside March 7th===
+===Return to Belobog alongside March 7th{{subst:void|<!--201020129-->}}===
 {{Mission Description|type=continuance|location=Passenger Cabin|update|(Trailblazer)'s Trailblaze Daily Report:<br />Looks like it's just us. Bummer. Can't let March know, get ready and get gone.}}
 {{Dialogue Start}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
 :{{tx}}
+:{{A|VO side1 tp mar7th 117 m.ogg}} {{A|VO side1 tp mar7th 117 f.ogg}} '''March 7th:''' So? What do you think about my new dress, (Trailblazer)? Pretty neat, right?
+:{{DIcon|Arrow}} When did you buy it?
+::{{A|VO side1 tp mar7th 118.ogg}} '''March 7th:''' It's actually not new, I just never had the right occasion to try it on.
+:{{DIcon|Arrow}} Very fancy!
+::{{A|VO side1 tp mar7th 119.ogg}} '''March 7th:''' It's been sitting in my wardrobe collecting dust for far too long. But now I've finally got the chance to wear it!
+:{{A|VO side1 tp mar7th 120.ogg}} '''March 7th:''' This kind of event doesn't come around every day &mdash; why shouldn't I dress for the occasion? ...You're not really gonna wear that same old outfit... are you?
+:{{tx}}
+
+;(Talk to March 7th)
+;(If {{cx}}<!--during performance 201020104-->)
+::{{A|VO side1 tp mar7th 122.ogg}} '''March 7th:''' Pajamas, hot water bottle, Pom-Pom doll... That should be everything! Let's go!
+::{{A|VO side1 tp mar7th 123.ogg}} '''March 7th:''' Wow, that was fast... Don't you have anything you wanna bring with you?
+::{{DIcon|Arrow}} Nope, just myself.
+:::{{A|VO side1 tp mar7th 124.ogg}} '''March 7th:''' Huh, you do seem to travel light. But... don't you at least need some pajamas!?
+::{{DIcon|Arrow}} Why are you bringing Pom-Pom doll?
+:::{{A|VO side1 tp mar7th 125.ogg}} '''March 7th:''' Well, I thought since Pom-Pom can't leave the Express, bringing a doll with us is kind of like taking them trailblazing.
+::{{DIcon|Arrow}} My relics all have speed attributes.
+:::{{A|VO side1 tp mar7th 126.ogg}} '''March 7th:''' Other people might fall for that, but I won't!
+::{{A|VO side1 tp mar7th 127.ogg}} '''March 7th:''' I was just taking a look at Mr. Yang's records, and it seems that Jarilo-VI's average temperature has warmed up quite a bit. It's much warmer than it was on our first trip there.
+::{{A|VO side1 tp mar7th 128.ogg}} '''March 7th:''' I wouldn't call it liveable just yet, but things are looking up. I'm so happy for Bronya and Seele.
+::{{A|VO side1 tp mar7th 129 m.ogg}} {{A|VO side1 tp mar7th 129 f.ogg}} '''March 7th:''' Ready to go, (Trailblazer)?
+;(If {{cx}}<!--not during performance 201020104-->)
+::{{A|VO side1 tp mar7th 133 m.ogg}} {{A|VO side1 tp mar7th 133 f.ogg}} '''March 7th:''' Ready to go, (Trailblazer)?
+:{{DIcon|Arrow}} You bet! It's time to celebrate!
+::{{A|VO side1 tp mar7th 130.ogg}} '''March 7th:''' Belobog, here we come!
+:{{DIcon|Exit}} Actually, I think I forgot something...
+::{{A|VO side1 tp mar7th 131.ogg}} '''March 7th:''' What? You're still not ready to go?
+::{{A|VO side1 tp mar7th 132.ogg}} '''March 7th:''' Alright slowpoke, I'll wait for you here.
+----
+;([[#Gallery|Cutscene]] plays)
+::Belobog...
+::...700 years...
+::It's never too late...
+::...to pick up the tab.
+;(Cutscene ends)
+----
+----
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{A|VO side1 tp mar7th 137.ogg}} '''March 7th:''' Brr! How do people living in all this snow celebrate anything...?
+:{{A|VO side1 tp mar7th 138 m.ogg}} {{A|VO side1 tp mar7th 138 f.ogg}} '''March 7th:''' One thing's for sure though, (Trailblazer). Where there's a celebration, there's bound to be food, right?
+:{{A|VO side1 tp mar7th 139.ogg}} '''March 7th:''' Come on Belobog... don't let me down.
 {{Dialogue End}}
 
-===Stroll through the city and take in the festive atmosphere===
+===Stroll through the city and take in the festive atmosphere{{subst:void|<!--201020128-->}}===
 {{Mission Description|type=continuance|location=Outlying Snow Plains|update|(Trailblazer)'s Trailblaze Daily Report:<br />Belobog's quite lively. Taking a stroll around, might bump into familiar faces.}}
 {{Dialogue Start}}
-:{{tx}}
-{{Dialogue End}}
+----
+:{{A|VO side1 tp mar7th 165.ogg}} '''March 7th:''' Wow! There are people everywhere. Are you sure we're in Belobog?
+:{{A|VO side1 tp mar7th 166 m.ogg}} {{A|VO side1 tp mar7th 166 f.ogg}} '''March 7th:''' Now to check out the main event &mdash; the food! C'mon (Trailblazer), keep up!
+;(Upon reaching the destination)
 
-===Return to Belobog alongside March 7th===
-{{Mission Description|type=continuance|location=Passenger Cabin|update|(Trailblazer)'s Trailblaze Daily Report:<br />Looks like it's just us. Bummer. Can't let March know, get ready and get gone.}}
-{{Dialogue Start}}
-:{{tx}}
-{{Dialogue End}}
+;(Upon reaching the destination)
+:{{A|VO side1 tp mar7th 167 m.ogg}} {{A|VO side1 tp mar7th 167 f.ogg}} '''March 7th:''' (Trailblazer), quick! Serval's about to start singing!
+<pre>{
+	"$type": "RPG.GameCore.PlayMunicipalChat",
+	"NewMunicipalChatConfigPath": "Config/Level/MunicipalChatConfig/F10101001/MunicipalChatConfig_F10101001_0001.json",
+	"NewMunicipalChatEntityInfos": {
+		"Value": [
+			{
+				"$type": "RPG.GameCore.MunicipalChatEntityInfo",
+				"UniqueName": "1",
+				"GroupInstanceID": 400002
+			},
+			{
+				"$type": "RPG.GameCore.MunicipalChatEntityInfo",
+				"UniqueName": "2",
+				"GroupInstanceID": 400004
+			},
+			{
+				"$type": "RPG.GameCore.MunicipalChatEntityInfo",
+				"UniqueName": "3",
+				"GroupInstanceID": 400005
+			}
+		]
+	},
+	"MunicipalChatName": "MunicipalChatConfig_F10101001_0001"
+}</pre>
 
-===Stroll through the city and take in the festive atmosphere===
-{{Mission Description|type=continuance|location=Administrative District|update|(Trailblazer)'s Trailblaze Daily Report:<br />Belobog's quite lively. Taking a stroll around, might bump into familiar faces.}}
-{{Dialogue Start}}
-:{{tx}}
+:{{DIcon|Talk}} Listen
+:----
+::{{A|VO side1 tp serval 101.ogg}} '''Serval:''' Woo! Thanks everyone! Hope you're ready for a great show! Let's get started!
+::{{A|VO side1 tp spectatorH 102.ogg}} (Audience cheering)
+::{{A|VO side1 tp serval song.ogg}} '''Serval and Spectators:''' (Singing along)
+::----
+:{{A|VO side1 tp serval song.ogg}} '''Serval and Spectators:''' (Singing along)
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+<pre>{
+	"$type": "RPG.GameCore.PlayMunicipalChat",
+	"NewMunicipalChatConfigPath": "Config/Level/MunicipalChatConfig/F10101001/MunicipalChatConfig_F10101001_0002.json",
+	"NewMunicipalChatEntityInfos": {
+		"Value": [
+			{
+				"$type": "RPG.GameCore.MunicipalChatEntityInfo",
+				"UniqueName": "1",
+				"GroupInstanceID": 400001
+			},
+			{
+				"$type": "RPG.GameCore.MunicipalChatEntityInfo",
+				"UniqueName": "2",
+				"GroupInstanceID": 400002
+			},
+			{
+				"$type": "RPG.GameCore.MunicipalChatEntityInfo",
+				"UniqueName": "3",
+				"GroupInstanceID": 400003
+			},
+			{
+				"$type": "RPG.GameCore.MunicipalChatEntityInfo",
+				"UniqueName": "44",
+				"GroupInstanceID": 400005
+			},
+			{
+				"$type": "RPG.GameCore.MunicipalChatEntityInfo",
+				"UniqueName": "5",
+				"GroupInstanceID": 400004
+			}
+		]
+	},
+	"MunicipalChatName": "MunicipalChatConfig_F10101001_0002"
+}</pre>
+
+;(Talk to Gertie)
+:----
+::{{A|VO side1 tp mar7th 168.ogg}} '''March 7th:''' Aunt Gertie! It's been too long!
+::{{A|VO side1 tp gertie 103.ogg}} '''Gertie:''' Ah! Is that little March!? What brings you this way? I heard you left to go travel the galaxy?
+::{{A|VO side1 tp gertie 104.ogg}} '''Gertie:''' ...Oh, you're here for the Solwarm Festival, right? The atmosphere is like no other. Silly me, where are my manners? Grab yourselves a suncake each &mdash; get 'em while they're hot!
+::{{A|VO side1 tp citizenN 102.ogg}} '''Queuing Man:''' Hey, that's not fair! Get to the back of the line. Ever heard of first come, first served?
+::{{A|VO side1 tp gertie 105 m.ogg}} {{A|VO side1 tp gertie 105 f.ogg}} '''Gertie:''' Tsk, show a little respect! If it weren't for these two, we'd be eating Geomarrow by now!
+:<pre>{
+	"$type": "RPG.GameCore.TriggerSound",
+	"SoundName": {
+		"Value": "Ev_sfx_belobog_pancake"
+	},
+	"EmitterType": "LocalPlayer"
+}</pre>
+::{{Black Screen|Waiting for Gertie's suncakes...}}
+::{{A|VO side1 tp gertie 106.ogg}} '''Gertie:''' Take a look at these beauties! These are the best suncakes I've made all day.
+:<pre>{
+	"$type": "RPG.GameCore.TalkFigure",
+	"Show": true,
+	"ImagePath": "SpriteOutput/Mission/TalkItem/SubMission_201020110.png",
+	"TriggerSound": true
+}</pre>
+::{{A|VO side1 tp mar7th 169.ogg}} '''March 7th:''' Wow, they smell so good! They look so crispy and crunchy! I think I'm in love!
+::{{A|VO side1 tp gertie 107.ogg}} '''Gertie:''' Well, don't wait for them to get cold now. I'm sorry sweethearts, I'd best see to these other customers before their hunger gets the better of them. Thanks for stopping by!
+::----
+:{{A|VO side1 tp gertie 107.ogg}} '''Gertie:''' Well, don't wait for them to get cold now. I'm sorry sweethearts, I'd best see to these other customers before their hunger gets the better of them. Thanks for stopping by!
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{A|VO side1 tp mar7th 170.ogg}} '''March 7th:''' Is that Pela? Looks like she's teaching the kids again.
+<pre>{
+	"$type": "RPG.GameCore.PlayMunicipalChat",
+	"NewMunicipalChatConfigPath": "Config/Level/MunicipalChatConfig/F10101001/MunicipalChatConfig_F10101001_0003.json",
+	"NewMunicipalChatEntityInfos": {
+		"Value": [
+			{
+				"$type": "RPG.GameCore.MunicipalChatEntityInfo",
+				"UniqueName": "1",
+				"GroupInstanceID": 400001
+			},
+			{
+				"$type": "RPG.GameCore.MunicipalChatEntityInfo",
+				"UniqueName": "2",
+				"GroupInstanceID": 400004
+			},
+			{
+				"$type": "RPG.GameCore.MunicipalChatEntityInfo",
+				"UniqueName": "3",
+				"GroupInstanceID": 400002
+			},
+			{
+				"$type": "RPG.GameCore.MunicipalChatEntityInfo",
+				"UniqueName": "4",
+				"GroupInstanceID": 400005
+			}
+		]
+	},
+	"MunicipalChatName": "MunicipalChatConfig_F10101001_0003"
+}</pre>
+
+:{{DIcon|Talk}} Listen
+:----
+::{{A|VO side1 tp pela 103.ogg}} '''Pela:''' Next, I'll be introducing the history of the museum. Everyone, listen carefully, okay?
+::{{A|VO side1 tp pela 104.ogg}} '''Pela:''' Belobog's History and Culture Museum was founded 600 years ago, and was originally built to memorialize Supreme Guardian Alisa...
+::{{A|VO side1 tp childJ 102.ogg}} '''Children:''' Soooo hungry... I wish I could have a Redsunset Salmon right now...
+::{{A|VO side1 tp pela 105.ogg}} '''Pela:''' *cough* It was built to memorialize Supreme Guardian Alisa Rand, and also...
+::{{A|VO side1 tp childL 102.ogg}} '''Children:''' Guess what &mdash; I heard there's gonna be a Silvermane adventure camp opening in the Overworld soon. It's gonna be super awesome.
+::{{A|VO side1 tp pela 106.ogg}} '''Pela:''' ...Also, those who sacrificed their lives in the war against the invaders 700 years ago...
+::{{A|VO side1 tp childK 102.ogg}} '''Children:''' Miss Pela! Peter is falling asleep!
+::{{A|VO side1 tp pela 107.ogg}} '''Pela:''' Enough! From now on, no whispering allowed! If you don't want to have any homework later, you'd better start listening!
+::{{A|VO side1 tp childJ 103.ogg}} '''Children:''' Sorry, Miss Pela...
+::{{A|VO side1 tp pela 108.ogg}} '''Pela:''' That's better. *cough* Now, where was I?
+::{{A|VO side1 tp mar7th 171.ogg}} '''March 7th:''' I never knew Pela had a strict side...
+::----
+:{{A|VO side1 tp pela 104.ogg}} '''Pela:''' Belobog's History and Culture Museum was founded 600 years ago, and was originally built to memorialize Supreme Guardian Alisa...
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+<pre>{
+	"$type": "RPG.GameCore.PlayMunicipalChat",
+	"NewMunicipalChatConfigPath": "Config/Level/MunicipalChatConfig/F10101001/MunicipalChatConfig_F10101001_0004.json",
+	"NewMunicipalChatEntityInfos": {
+		"Value": [
+			{
+				"$type": "RPG.GameCore.MunicipalChatEntityInfo",
+				"UniqueName": "1",
+				"GroupInstanceID": 400001
+			},
+			{
+				"$type": "RPG.GameCore.MunicipalChatEntityInfo",
+				"UniqueName": "2",
+				"GroupInstanceID": 400003
+			},
+			{
+				"$type": "RPG.GameCore.MunicipalChatEntityInfo",
+				"UniqueName": "3",
+				"GroupInstanceID": 400002
+			}
+		]
+	},
+	"MunicipalChatName": "MunicipalChatConfig_F10101001_0004"
+}</pre>
+
+;(Talk to Gepard)
+:----
+::{{A|VO side1 tp mar7th 172.ogg}} '''March 7th:''' Ta-da! Guess who's back?
+::{{A|VO side1 tp gepard 104 m.ogg}} {{A|VO side1 tp gepard 104 f.ogg}} '''Gepard:''' It's you two! Welcome back to Belobog.
+::{{A|VO side1 tp gepard 105.ogg}} '''Gepard:''' The Supreme Guardian mentioned there'd be mystery guests attending the Solwarm celebrations, but I didn't think it'd be the Express crew.
+::{{A|VO side1 tp gepard 106.ogg}} '''Gepard:''' I hope you had a smooth journey. I should have dispatched Silvermane Guards to welcome you on arrival &mdash; my apologies.
+::{{A|VO side1 tp mar7th 173.ogg}} '''March 7th:''' It's fine! You really don't have to apologize. We're just passing through, it's no big deal.
+::{{A|VO side1 tp gepard 107.ogg}} '''Gepard:''' Understood. I hope you both enjoy the festivities.
+::{{A|VO side1 tp gepard 108.ogg}} '''Gepard:''' Please make sure you keep your personal belongings safe &mdash; pickpockets tend to take advantage of events like this. We'll be performing additional patrols.
+::{{A|VO side1 tp mar7th 174.ogg}} '''March 7th:''' Got it! We'll get out of your way, then. Bye!
+::{{A|VO side1 tp gepard 109.ogg}} '''Gepard:''' Bye for now.
+::----
+:{{A|VO side1 tp gepard 105.ogg}} '''Gepard:''' The Supreme Guardian mentioned there'd be mystery guests attending the Solwarm celebrations, but I didn't think it'd be the Express crew.
+::{{A|VO side1 tp gepard 106.ogg}} '''Gepard:''' I hope you had a smooth journey. I should have dispatched Silvermane Guards to welcome you on arrival &mdash; my apologies.
+;(If {{Mission|Opportunity Makes the Thief (III)|showChapter=0}} has been completed)
+<pre>{
+	"$type": "RPG.GameCore.CreateProp",
+	"GroupID": {
+		"fixedValue": {
+			"Value": 199
+		}
+	},
+	"GroupPropID": {
+		"fixedValue": {
+			"Value": 300002
+		}
+	},
+	"CreateList": []
+}</pre>
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{A|VO side1 tp mar7th 175.ogg}} '''March 7th:''' Hang on a sec, isn't that Wallace up ahead? Looks like he's finally made some friends! I wonder what they're talking about...
+<pre>{
+	"$type": "RPG.GameCore.PlayMunicipalChat",
+	"NewMunicipalChatConfigPath": "Config/Level/MunicipalChatConfig/F10101001/MunicipalChatConfig_F10101001_0005.json",
+	"NewMunicipalChatEntityInfos": {
+		"Value": [
+			{
+				"$type": "RPG.GameCore.MunicipalChatEntityInfo",
+				"UniqueName": "1",
+				"GroupInstanceID": 400001
+			},
+			{
+				"$type": "RPG.GameCore.MunicipalChatEntityInfo",
+				"UniqueName": "2",
+				"GroupInstanceID": 400002
+			},
+			{
+				"$type": "RPG.GameCore.MunicipalChatEntityInfo",
+				"UniqueName": "3",
+				"GroupInstanceID": 400003
+			}
+		]
+	},
+	"MunicipalChatName": "MunicipalChatConfig_F10101001_0005"
+}</pre>
+
+:{{DIcon|Talk}} Listen
+:----
+::{{A|VO side1 tp wallosh 103.ogg}} '''Wallace:''' ...Norbert, why don't you tell everyone how you were released from jail so quickly?
+::{{A|VO side1 tp wallosh 104.ogg}} '''Wallace:''' Selling cultural relics and impersonating Silvermane Guards are both heinous crimes!
+::{{A|VO side1 tp norbert 102.ogg}} '''Norbert:''' Well... it was all thanks to my uncle, you know...
+::{{A|VO side1 tp rossy 102.ogg}} '''Rossy:''' Ahh, I remember! Your uncle is Minister Noel &mdash; he heads up the Department of Transportation, no?
+::{{A|VO side1 tp norbert 103.ogg}} '''Norbert:''' Ahem... Yes, y&mdash;you knew that, too?
+::{{A|VO side1 tp rossy 103.ogg}} '''Rossy:''' Haha, you're shameless, Norbert! Not to be rude, but if I were thrown in jail, I wouldn't possibly ask my father to bail me out.
+::{{A|VO side1 tp norbert 104.ogg}} '''Norbert:''' Do you think I wanted to? I'm not the type of person to abuse my status.
+::{{A|VO side1 tp wallosh 105.ogg}} '''Wallace:''' Well, I... don't really know about that...
+::{{A|VO side1 tp norbert 105.ogg}} '''Norbert:''' Ugh, get off my back, will you? I had to deal with hardened criminals in jail &mdash; now that I'm free my supposed "friends" are ganging up on me!
+::{{A|VO side1 tp mar7th 176.ogg}} '''March 7th:''' Looks like things are getting heated. I think we'd better get outta here.
+::----
+:{{A|VO side1 tp mar7th 176.ogg}} '''March 7th:''' Looks like things are getting heated. I think we'd better get outta here.
+:{{Black Screen|After some time...}}
+:{{A|VO side1 tp mar7th 177.ogg}} '''March 7th:''' Whew... who'd have thought just taking a stroll could be so tiring?
+:{{A|VO side1 tp mar7th 178 m.ogg}} {{A|VO side1 tp mar7th 178 f.ogg}} '''March 7th:''' (Trailblazer), say, I think we should probably pay Bronya a visit. After all, she was the one who invited us here.
+:{{A|VO side1 tp mar7th 179.ogg}} '''March 7th:''' Or... we could go check out some other fun stuff elsewhere. Your call!
+
+;(Talk to March 7th)
+:{{A|VO side1 tp mar7th 178 m.ogg}} {{A|VO side1 tp mar7th 178 f.ogg}} '''March 7th:''' (Trailblazer), say, I think we should probably pay Bronya a visit. After all, she was the one who invited us here.
+:{{A|VO side1 tp mar7th 179.ogg}} '''March 7th:''' Or... we could go check out some other fun stuff elsewhere. Your call!
 {{Dialogue End}}
 
 ==Other Languages==

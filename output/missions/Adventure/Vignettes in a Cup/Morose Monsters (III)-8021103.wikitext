@@ -7,11 +7,11 @@ PageTitle=#Morose Monsters (III)#
 |title         = 
 |image         = <!--Mission Morose Monsters (III).png-->
 |type          = Adventure
-|event_name    = 
+|event_name    = Vignettes in a Cup
 |chapter       = Vignettes in a Cup
 |requirements  = [[Adventure Mission]] ''[[Morose Monsters (II)]]'' completed
 |summary       = <!--official mission summary from Fate's Atlas-->
-|characters    = Trailblazer
+|characters    = Tin Man; Trailblazer
 |startLocation = [[Penacony]] - [[The Reverie (Dreamscape)]]
 |world         = Penacony
 |area          = The Reverie (Dreamscape)
@@ -19,7 +19,7 @@ PageTitle=#Morose Monsters (III)#
 |next          = Morose Monsters (IV)
 |rewards       = Trailblaze EXP*150; Stellar Jade*10; Traveler's Guide*4; Lost Crystal*3; Credit*30,000
 }}
-'''''Morose Monsters (III)''''' is an [[Adventure Mission]] on [[Penacony]] in the chapter [[Vignettes in a Cup]].
+'''''Morose Monsters (III)''''' is an Event [[Adventure Mission]] from the [[Vignettes in a Cup]] event.
 
 ==Steps==
 # Head to the Dreamjolt Hostelry
@@ -36,22 +36,65 @@ PageTitle=#Morose Monsters (III)#
 ==Dialogue==
 {{Stub Dialogue}}
 
-===Head to the Dreamjolt Hostelry===
+===Head to the Dreamjolt Hostelry{{subst:void|<!--802110301-->}}===
 {{Mission Description|type=adventure|location=The Reverie (Dreamscape)|Siobhan, the manager of Dreamjolt Hostelry, offered you an assignment to temporarily take over the job of drinksmith.<br />Time to get back in business.}}
 {{Dialogue Start}}
-:{{tx}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+<pre>{
+	"$type": "RPG.GameCore.AdvDestroyGroupEntity",
+	"InstanceIDList": [
+		300001
+	]
+}</pre>
+:'''(Trailblazer):''' (Some customers who are into monsters come in, and the lounge livens up.)
+:'''(Trailblazer):''' (Siobhan hasn't shown up yet... Well, let's start serving customers anyway.)
 {{Dialogue End}}
 
-===Continue serving the customers===
+===Continue serving the customers{{subst:void|<!--802110303-->}}===
 {{Mission Description|type=adventure|location=The Reverie (Dreamscape)|update|Siobhan, the manager of Dreamjolt Hostelry, offered you an assignment to temporarily take over the job of drinksmith.<br />Let's continue serving the customers.}}
 {{Dialogue Start}}
-:{{tx}}
+<pre>{
+	"$type": "RPG.GameCore.WaitUIControllerClose",
+	"UIControllerName": "DrinkMakerMainEntrancePage"
+}</pre>
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:'''(Trailblazer):''' (I have a meeting to attend... Is that alarm clock waiting for me at the lounge?)
+;(Unused &mdash; DrinkMakerBartendResultDialogClose)
+;(Upon reaching the destination)
 {{Dialogue End}}
 
-===Talk to Tin Man===
+===Talk to Tin Man{{subst:void|<!--802110304-->}}===
 {{Mission Description|type=adventure|location=The Reverie (Dreamscape)|update|Siobhan, the manager of Dreamjolt Hostelry, offered you an assignment to temporarily take over the job of drinksmith.<br />Tin Man wants to show you its dream lounge. Go ahead and listen to its ideas.}}
 {{Dialogue Start}}
+
+;(Talk to Tin Man)
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+----
 :{{tx}}
+:'''Tin Man:''' ...Phew! ...Phew!
+:{{DIcon|Arrow}} ...How's it going, Lord Tik-Tok?
+:{{DIcon|Arrow}} Your dream is seriously wild.
+:'''Tin Man:''' ...
+:{{tx}}
+----
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+<pre>{
+	"$type": "RPG.GameCore.AdvDestroyGroupEntity",
+	"InstanceIDList": [
+		300001
+	]
+}</pre>
+----
+:{{tx}}
+----
 {{Dialogue End}}
 
 ==Other Languages==

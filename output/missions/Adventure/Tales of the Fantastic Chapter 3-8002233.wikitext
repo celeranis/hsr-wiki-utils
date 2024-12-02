@@ -11,7 +11,7 @@ PageTitle=#Tales of the Fantastic: Chapter 3#
 |chapter       = 
 |requirements  = [[Adventure Mission]] ''[[Tales of the Fantastic: Chapter 3]]'' completed
 |summary       = <!--official mission summary from Fate's Atlas-->
-|characters    = Trailblazer
+|characters    = (Dan Heng/Cold Dragon Young/High Elder MK2000/John Doe); Mr. Xiyan; Trailblazer; Voidranger: Trampler
 |startLocation = [[The Xianzhou Luofu]] - [[Alchemy Commission]]
 |world         = The Xianzhou Luofu
 |area          = Alchemy Commission
@@ -35,23 +35,116 @@ PageTitle=#Tales of the Fantastic: Chapter 3#
 -->
 ==Dialogue==
 {{Stub Dialogue}}
+----
+:'''(Dan Heng/Cold Dragon Young/High Elder MK2000/John Doe):''' This Star-Shattering Blade of Truth is a divine artifact once wielded by Dan Feng during the Sedition of Imbibitor Lunae.
+:'''(Dan Heng/Cold Dragon Young/High Elder MK2000/John Doe):''' It is said that "A Sword Is Mightier When Hidden." He, therefore, hid the Ignis Aureliae away, from potential thieves before he was imprisoned.
+:'''(Dan Heng/Cold Dragon Young/High Elder MK2000/John Doe):''' Fortunately, I still retain memories from my previous lives, and can dimly recall that Dan Feng has hidden a map somewhere deep in the Alchemy Commission that shows where the Ignis Aureliae is. Perhaps we can find this, and the treasure will be practically revealed to us.
+:{{DIcon|Arrow}} Let me guess, it's treasure huntin' time, innit?
+:{{DIcon|Arrow}} Isn't fetch quest a bit overused?
+:'''(Dan Heng/Cold Dragon Young/High Elder MK2000/John Doe):''' So what? Interastral Peace Entertainment has shot over sixty films in the Allen Jones treasure-hunting franchise. Treasure hunts are family-friendly fun!
+----
+
+;(Talk to (Dan Heng/Cold Dragon Young/High Elder MK2000/John Doe))
 {{Dialogue End}}
 
-===Find the treasure map from the high elder's memories===
+===Find the treasure map from the high elder's memories{{subst:void|<!--800223302-->}}===
 {{Mission Description|type=adventure|location=Alchemy Commission|update|In Mr. Xiyan's story, the "high elder" takes you to many places in the Luofu to look for the various materials needed to forge the divine weapon... Now this is truly a stereotypical treasure-seeking adventure story.}}
 {{Dialogue Start}}
-:{{tx}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:'''(Dan Heng/Cold Dragon Young/High Elder MK2000/John Doe):''' I vaguely remember... The treasure map ought to be around here somewhere...
+;(Obtain {{Item|Treasure Map Indicating the Location of Ignis Aureliae|20|x=1}})
 {{Dialogue End}}
 
-===Find the Ignis Aureliae according to the treasure map===
+===Find the Ignis Aureliae according to the treasure map{{subst:void|<!--800223303-->}}===
 {{Dialogue Start}}
-:{{tx}}
+
+;(Lose {{Item|Treasure Map Indicating the Location of Ignis Aureliae|20|x=10}})
+;(Obtain {{Item|Ignis Aureliae|20|x=1}})
+----
+<pre>{
+	"$type": "RPG.GameCore.SetMissionCustomValue",
+	"SubmissionID": 800223304,
+	"MissionCustomValue": {
+		"ValidValueParamList": [
+			0,
+			1
+		]
+	}
+}</pre>
+:'''Mr. Xiyan:''' Phantylia assumed dispatching crack troops would be enough to win. Little did it know that today, (Trailblazer) had the high elder's support and was far stronger than before. The Antimatter Legion was routed before long, and utterly annihilated without a trace.
+:'''Mr. Xiyan:''' With a flick of his sleeve, the high elder elegantly moved his hands like billowing clouds, as if communicating telepathically with the huge elixir crucible before him. A strange light burst forth from the crucible (by the way, this is where the VFX artists can add some Immersia special effects), and a lump of molten brilliance coalesced like condensation forming in the air &mdash;
+<pre>{
+	"$type": "RPG.GameCore.TriggerSound",
+	"SoundName": {
+		"Value": "Ev_sfx_xianzhou_storytelling_01"
+	}
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.TalkFigure",
+	"Show": true,
+	"ImagePath": "SpriteOutput/Mission/TalkItem/SubMission_140299.png",
+	"TriggerSound": true
+}</pre>
+:'''(Dan Heng/Cold Dragon Young/High Elder MK2000/John Doe):''' This is the Ignis Aureliae that would cast the Star-Shattering Blade of Truth!
+<pre>{
+	"$type": "RPG.GameCore.TalkFigure",
+	"ImagePath": "SpriteOutput/Mission/TalkItem/SubMission_140299.png",
+	"TriggerSound": true
+}</pre>
+:'''(Dan Heng/Cold Dragon Young/High Elder MK2000/John Doe):''' With the Ignis Aureliae in hand, the next step was to forge them into one instrument. This arduous task will need a trip to the Artisanship Commission to borrow their Creation Furnace.
+:{{DIcon|Arrow}} Then let's hit the road.
+:<pre>{
+	"$type": "RPG.GameCore.SetMissionCustomValue",
+	"SubmissionID": 800223304,
+	"MissionCustomValue": {
+		"ValidValueParamList": [
+			0,
+			1
+		]
+	},
+	"CustomValue": 1
+}</pre>
+:{{DIcon|Exit}} Let me catch my breath...
+----
 {{Dialogue End}}
 
-===Forge "divine weapons" with the high elder===
+===Forge "divine weapons" with the high elder{{subst:void|<!--800223307-->}}===
 {{Mission Description|type=adventure|location=Alchemy Commission|update|Mr. Xiyan loudly declares: "Now the materials have all been gathered, it is time to forge the divine weapon and completely destroy the Ruin Author's delusional plots!"}}
 {{Dialogue Start}}
-:{{tx}}
+
+
+;(Talk to (Dan Heng/Cold Dragon Young/High Elder MK2000/John Doe))
+<pre>{
+	"$type": "RPG.GameCore.SetMissionCustomValue",
+	"SubmissionID": 800223307,
+	"MissionCustomValue": {
+		"isLocal": true,
+		"ValidValueParamList": [
+			0,
+			1
+		]
+	}
+}</pre>
+:'''(Dan Heng/Cold Dragon Young/High Elder MK2000/John Doe):''' Rested up enough? I've got work to do later, so hurry up.
+:{{DIcon|Arrow}} Then let's hit the road.
+:<pre>{
+	"$type": "RPG.GameCore.SetMissionCustomValue",
+	"SubmissionID": 800223307,
+	"MissionCustomValue": {
+		"isLocal": true,
+		"ValidValueParamList": [
+			0,
+			1
+		]
+	},
+	"CustomValue": 1
+}</pre>
+::----
+:{{DIcon|Exit}} Let me catch my breath...
+
+;(Talk to (Dan Heng/Cold Dragon Young/High Elder MK2000/John Doe))
 {{Dialogue End}}
 
 ==Other Languages==

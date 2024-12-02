@@ -15,7 +15,7 @@ Mission Whodunit Caelus.png|Caelus
 |chapter       = The Sound and the Fury
 |requirements  = [[Trailblaze Mission]] ''[[Should One Awaken at Midnight]]'' completed
 |summary       = Black Swan "betrayed" you and brought you to Aventurine, an IPC representative. There, you witnessed another fact that was enough to undo the dream &mdash; Robin was reduced to nothingness in front of you.<br />The prelude to the sweet dream comes to an emphatic rest... and the show is about to begin.
-|characters    = Trailblazer
+|characters    = Acheron; Black Swan; Trailblazer
 |startLocation = [[Penacony]] - [[The Reverie (Dreamscape)]]
 |world         = Penacony
 |area          = The Reverie (Dreamscape)
@@ -26,6 +26,8 @@ Mission Whodunit Caelus.png|Caelus
 '''''Whodunit''''' is a [[Trailblaze Mission]] in the chapter [[The Sound and the Fury]].
 
 ==Steps==
+# Follow Black Swan and leave the hotel in the Dreamscape
+# Find a way to shoot down the chandelier to clear a path
 # Follow Black Swan and leave the hotel in the Dreamscape
 # Investigate the charred remains
 # Continue to follow Black Swan to leave the hotel in the Dreamscape
@@ -41,28 +43,170 @@ Mission Whodunit Caelus.png|Caelus
 ==Dialogue==
 {{Stub Dialogue}}
 
-===Follow Black Swan and leave the hotel in the Dreamscape===
+===Follow Black Swan and leave the hotel in the Dreamscape{{subst:void|<!--103070101-->}}===
 {{Mission Description|type=trailblaze|location=The Reverie (Dreamscape)|Black Swan tells you that you should evacuate as quickly as possible. But, as you are evacuating, you may be fortunate enough to find some traces left by Firefly that could help unravel the truth behind this sudden demise.<br />Follow Black Swan to the Memory Zone's exit while investigating the murder scene.}}
 {{Dialogue Start}}
-:{{tx}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+<pre>{
+	"$type": "RPG.GameCore.TriggerSound",
+	"SoundName": {
+		"Value": "Ev_SetState_BGMTrack_0306_common"
+	},
+	"EmitterType": "LocalPlayer"
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.TriggerEntityServerEvent"
+}</pre>
 {{Dialogue End}}
 
-===Investigate the charred remains===
-{{Mission Description|type=trailblaze|location=The Reverie (Dreamscape)|update|Black Swan tells you that you should evacuate as quickly as possible. But, as you are evacuating, you may be fortunate enough to find some traces left by Firefly that could help unravel the truth behind this sudden demise.<br />You discovered a large number of charred remains during your evacuation. They are worth a thorough investigation.}}
-{{Dialogue Start}}
-:{{tx}}
-{{Dialogue End}}
-
-===Continue to follow Black Swan to leave the hotel in the Dreamscape===
-{{Mission Description|type=trailblaze|location=The Reverie (Dreamscape)|update|Black Swan tells you that you should evacuate as quickly as possible. But, as you are evacuating, you may be fortunate enough to find some traces left by Firefly that could help unravel the truth behind this sudden demise.<br />Black Swan believes that the situation may be even more serious than she imagined. You must hurry to the Memory Zone branded with traces of Firefly as quickly as possible.}}
-{{Dialogue Start}}
-:{{tx}}
-{{Dialogue End}}
-
-===Find a way to shoot down the chandelier to clear a path===
+===Find a way to shoot down the chandelier to clear a path{{subst:void|<!--103070111-->}}===
 {{Mission Description|type=trailblaze|location=The Reverie (Dreamscape)|update|Black Swan tells you that you should evacuate as quickly as possible. But, as you are evacuating, you may be fortunate enough to find some traces left by Firefly that could help unravel the truth behind this sudden demise.<br />The Memory Zone keeps transforming. Sometimes, you may have to rely on certain tricks to find the true exit.}}
 {{Dialogue Start}}
+;(If {{cx}}{{subst:void|<!--{"$type":"RPG.GameCore.ByComparePropState","TargetType":{"$type":"RPG.GameCore.TargetFetchAdvPropEx","FetchType":"SinglePropByPropID","SinglePropID":{"GroupID":{"fixedValue":{"Value":51}},"ID":{"fixedValue":{"Value":300005}}}},"State":"CheckPointDisable","TaskEnabled":true,"IsClientOnly":true}-->}})
+<pre>{
+	"$type": "RPG.GameCore.TeleportToRotatableRegion",
+	"TargetRegionIndex": {
+		"fixedValue": {
+			"Value": -1
+		}
+	},
+	"TargetAnchorGroupID": {
+		"fixedValue": {
+			"Value": 140
+		}
+	},
+	"TargetAnchorInstanceID": {
+		"fixedValue": {
+			"Value": 2
+		}
+	}
+}</pre>
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+<pre>{
+	"$type": "RPG.GameCore.WaitStreamingJobFinished"
+}</pre>
+;([[#Gallery|Cutscene]] plays)
 :{{tx}}
+;(Enter battle)
+:{{Enemy List|Dreamjolt Troupe's Sweet Gorilla*1}}
+{{Dialogue End}}
+
+===Follow Black Swan and leave the hotel in the Dreamscape{{subst:void|<!--103070102-->}}===
+{{Mission Description|type=trailblaze|location=The Reverie (Dreamscape)|update|Black Swan tells you that you should evacuate as quickly as possible. But, as you are evacuating, you may be fortunate enough to find some traces left by Firefly that could help unravel the truth behind this sudden demise.<br />Follow Black Swan to the Memory Zone's exit while investigating the murder scene.}}
+{{Dialogue Start}}
+
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{A|VO chapter3 5 blackswan 155.ogg}} '''Black Swan:''' ...What's going on? Why is it... getting hot in the memoria?
+:{{A|VO chapter3 5 acheron 152.ogg}} '''Acheron:''' You've noticed it too. Like something is burning...
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+----
+:{{A|VO chapter3 5 blackswan 156.ogg}} '''Black Swan:''' These are all... charred remains?
+:{{A|VO chapter3 5 acheron 153.ogg}} '''Acheron:''' They're still smoldering &mdash; the culprit can't have gotten far.
+:{{A|VO chapter3 5 blackswan 157.ogg}} '''Black Swan:''' I suppose we can slow down for now then...
+----
+
+;(Talk to March 7th)
+:{{A|VO chapter3 5 blackswan 158.ogg}} '''Black Swan:''' They're all just *burning* Remembrances... a stark contrast to this deep sea.
+
+;(Talk to Himeko)
+:{{A|VO chapter3 5 blackswan 102.ogg}} '''Black Swan:''' Not there. Come back.
+----
+
+;(Talk to Welt Yang)
+
+;(Talk to Acheron)
+:{{A|VO chapter3 5 acheron 154.ogg}} '''Acheron:''' Careful, these traces are fresh. Our unsought guest isn't far away.
+
+;(Talk to Black Swan)
+:{{A|VO chapter3 5 blackswan 158.ogg}} '''Black Swan:''' They're all just *burning* Remembrances... a stark contrast to this deep sea.
+{{Dialogue End}}
+
+===Investigate the charred remains{{subst:void|<!--103070104-->}}===
+{{Mission Description|type=trailblaze|location=The Reverie (Dreamscape)|update|Black Swan tells you that you should evacuate as quickly as possible. But, as you are evacuating, you may be fortunate enough to find some traces left by Firefly that could help unravel the truth behind this sudden demise.<br />You discovered a large number of charred remains during your evacuation. They are worth a thorough investigation.}}
+{{Dialogue Start}}
+
+:{{DIcon|Loupe}} Investigate
+:The remains of this creature bears narrow and deep incisions, with evident traces of charring inflicted by intense burning. A few sparks dance and flicker within, resembling shattered stars departing towards {{Rubi|IX|Aeon of Nihility}}.
+:{{A|VO chapter3 5 player 105 m.ogg}} {{A|VO chapter3 5 player 105 f.ogg}} '''(Trailblazer):''' (Looks like this monster was slain by a thermic weapon...)
+
+:{{DIcon|Loupe}} Investigate
+:The remains of this creature, pierced by an unknown weapon, reveal inner tissues that have been seemingly evaporated rapidly due to intense heat. You cannot approach any closer &mdash; the steam escaping from the shattered body would undoubtedly scorch you.
+:{{A|VO chapter3 5 player 106 m.ogg}} {{A|VO chapter3 5 player 106 f.ogg}} '''(Trailblazer):''' (Looks like this monster died of a hyperthermic reaction...)
+
+
+:{{DIcon|Loupe}} Investigate
+:The surface of this creature's remains appears unremarkable. Yet, as your hand grazes it, the searing heat transferred to your fingertips sends you jolting back, as if struck by an electric shock.
+:Without a doubt, a fierce inferno rages within the remains, desperately longing to break free from its confines. For the sake of your safety, it is best to keep your distance.
+:{{tx}}
+<pre>{
+	"$type": "RPG.GameCore.AdvDestroyGroupEntity",
+	"InstanceIDList": [
+		300006,
+		400004,
+		400005
+	]
+}</pre>
+{{Dialogue End}}
+
+===Continue to follow Black Swan to leave the hotel in the Dreamscape{{subst:void|<!--103070107-->}}===
+{{Mission Description|type=trailblaze|location=The Reverie (Dreamscape)|update|Black Swan tells you that you should evacuate as quickly as possible. But, as you are evacuating, you may be fortunate enough to find some traces left by Firefly that could help unravel the truth behind this sudden demise.<br />Black Swan believes that the situation may be even more serious than she imagined. You must hurry to the Memory Zone branded with traces of Firefly as quickly as possible.}}
+{{Dialogue Start}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{A|VO chapter3 5 blackswan 165.ogg}} '''Black Swan:''' Look... Upon leaving the lobby, the structure has become chaotic. Phase through that corridor, and be careful &mdash; do not alert the meme.
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{A|VO chapter3 5 acheron 157.ogg}} '''Acheron:''' This is truly... a magnificent sight. It's this room, then?
+:{{A|VO chapter3 5 blackswan 166.ogg}} '''Black Swan:''' Yes. More precisely, it's right below.
+:{{DIcon|Arrow}} Right below?
+::{{A|VO chapter3 5 blackswan 167.ogg}} '''Black Swan:''' Exactly what it means: Down.
+::{{A|VO chapter3 5 blackswan 168.ogg}} '''Black Swan:''' You two may not be able to phase through physical structures like Memokeepers, but I've got a great idea that will let you safely reach the floor right below this room.
+:{{DIcon|Arrow}} Doesn't look like there's a way down.
+::{{A|VO chapter3 5 blackswan 169.ogg}} '''Black Swan:''' I wouldn't call it a shortcut if there was.
+::{{A|VO chapter3 5 blackswan 170.ogg}} '''Black Swan:''' You two may not be able to phase through physical structures like Memokeepers, but I've got a great idea that will help you safely reach the floor right below this room.
+:{{DIcon|Arrow}} Are you going to teach me to phase through walls now?
+::{{A|VO chapter3 5 blackswan 171.ogg}} '''Black Swan:''' You two may not be able to phase through physical structures like Memokeepers, but I've got a great idea that will help you safely reach the floor right below this room.
+:{{A|VO chapter3 5 blackswan 172.ogg}} '''Black Swan:''' It's really easy &mdash; see this chandelier? Next... we want to create some reasonably *small movements*.
+:{{tx}}
+{{Dialogue End}}
+
+===Find a way to shoot down the chandelier to clear a path{{subst:void|<!--103070110-->}}===
+{{Mission Description|type=trailblaze|location=The Reverie (Dreamscape)|update|Black Swan tells you that you should evacuate as quickly as possible. But, as you are evacuating, you may be fortunate enough to find some traces left by Firefly that could help unravel the truth behind this sudden demise.<br />The Memory Zone keeps transforming. Sometimes, you may have to rely on certain tricks to find the true exit.}}
+{{Dialogue Start}}
+
+
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{A|VO chapter3 5 blackswan 174.ogg}} '''Black Swan:''' Look, a solitary chain. Go say hello to it.
+<pre>{
+	"$type": "RPG.GameCore.PlayMazeButtonEffect",
+	"Enable": true
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.ToastPile",
+	"DescTextID": {
+		"Hash": -834113317
+	}
+}</pre>
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{A|VO chapter3 5 blackswan 173.ogg}} '''Black Swan:''' Still remember what I taught you? Feel the flow of the memoria, walk up the wall, and then... get close to it.
+
+;(Upon reaching the destination)
 {{Dialogue End}}
 
 ==Other Languages==

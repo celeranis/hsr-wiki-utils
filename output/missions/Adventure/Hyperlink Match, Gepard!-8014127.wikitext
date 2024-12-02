@@ -7,7 +7,7 @@ PageTitle=#Hyperlink Match, Gepard!#
 |title         = 
 |image         = <!--Mission Hyperlink Match, Gepard!.png-->
 |type          = Adventure
-|event_name    = 
+|event_name    = Aetherium Wars
 |chapter       = 
 |requirements  = 
 * [[Adventure Mission]] ''[[Hyperlink Match, Wen Shiling!]]'' completed
@@ -15,7 +15,7 @@ PageTitle=#Hyperlink Match, Gepard!#
 * [[Adventure Mission]] ''[[Hyperlink Match, Dunn!]]'' completed
 * [[Adventure Mission]] ''[[Hyperlink Match, Oleg!]]'' completed
 |summary       = <!--official mission summary from Fate's Atlas-->
-|characters    = Trailblazer
+|characters    = Gepard; Trailblazer
 |startLocation = [[Jarilo-VI]] - [[Silvermane Guard Restricted Zone]]
 |world         = Jarilo-VI
 |area          = Silvermane Guard Restricted Zone
@@ -23,7 +23,7 @@ PageTitle=#Hyperlink Match, Gepard!#
 |next          = 
 |rewards       = 
 }}
-'''''Hyperlink Match, Gepard!''''' is an [[Adventure Mission]] on [[Jarilo-VI]].
+'''''Hyperlink Match, Gepard!''''' is an Event [[Adventure Mission]] from the [[Aetherium Wars]] event.
 
 ==Steps==
 # Have a Hyperlink Match with Gepard
@@ -37,11 +37,36 @@ PageTitle=#Hyperlink Match, Gepard!#
 -->
 ==Dialogue==
 {{Stub Dialogue}}
-
-===Have a Hyperlink Match with Gepard===
+===Have a Hyperlink Match with Gepard{{subst:void|<!--801412701-->}}===
 {{Mission Description|type=adventure|location=Silvermane Guard Restricted Zone|The core gameplay loop behind Aetherium Wars is "dueling." Challenge different players and show your true strength!}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Gepard)
+;(If {{cx}}<!--during performance 501030001-->)
+::'''Gepard:''' Welcome to the Silvermane Guard Restricted Zone, (Trailblazer).
+::'''Gepard:''' I've instructed the soldiers to treat you hospitably, but I do have to remind you to be considerate of your actions.
+::'''Gepard:''' Rules are rules &mdash; once any such acts are discovered, even I, the Captain, can't guarantee your safety.
+::{{DIcon|Arrow}} Duly noted.
+:::'''Gepard:''' I would be deeply grateful. I hope you will enjoy this trip to Belobog...
+:::'''Gepard:''' Or, as you all call this world &mdash; I hope you will enjoy this trip to Jarilo-VI.
+::{{DIcon|Arrow}} The Captain's so uptight.
+:::'''Gepard:''' The Supreme Guardian and her laws are akin to an iron wall around Belobog. Nothing in this place is above them.
+:::'''Gepard:''' As a comrade who once fought by your side, I do not wish to see harm befall you. Which is why I hope you will reconsider my suggestion.
+::'''Gepard:''' But enough of this stuffy topic. I'm about to go on a break. Do you have something else you wish to talk about?
+;(If {{cx}}<!--not during performance 501030001-->)
+:<pre>{
+	"$type": "RPG.GameCore.PlayMultiVoiceTalk",
+	"TalkSentenceID": 501030034
+}</pre>
+:'''Gepard:''' A wonderful battle. I see contests in gaming also require skills and training... I admit complete defeat.
+<pre>{
+	"$type": "RPG.GameCore.ShowUI",
+	"Name": "Ui.AetherDivide.AetherDivideEntryPage",
+	"Param": {
+		"Value": "2"
+	},
+	"OnUIEnter": []
+}</pre>
 {{Dialogue End}}
 
 ==Other Languages==

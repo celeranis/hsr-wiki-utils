@@ -11,7 +11,7 @@ PageTitle=#Food Fest Day Seven#
 |chapter       = 
 |requirements  = [[Adventure Mission]] ''[[Food Fest Day Six]]'' completed
 |summary       = <!--official mission summary from Fate's Atlas-->
-|characters    = Trailblazer
+|characters    = Jay; Trailblazer
 |startLocation = [[Penacony]] - [[Golden Hour]]
 |world         = Penacony
 |area          = Golden Hour
@@ -35,16 +35,94 @@ PageTitle=#Food Fest Day Seven#
 ==Dialogue==
 {{Stub Dialogue}}
 
-===Talk to Jay===
+===Talk to Jay{{subst:void|<!--802010701-->}}===
 {{Mission Description|type=adventure|location=Golden Hour|The gourmet carnival is in progress! Ask Jay what ingredients are needed for today.}}
 {{Dialogue Start}}
-:{{tx}}
+
+
+;(Talk to Jay)
+<pre>{
+	"$type": "RPG.GameCore.PlayMultiVoiceTalk",
+	"TalkSentenceID": 503017101,
+	"KeepDisplay": true
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.ShowMenu"
+}</pre>
+:<!--0.5-second delay-->
+;(Unused &mdash; Talk_802010101)
+<pre>{
+	"$type": "RPG.GameCore.ShowPenaconyGiftSubmitPage",
+	"GiftID": 101
+}</pre>
+
+;(Unused &mdash; Talk_802010201)
+<pre>{
+	"$type": "RPG.GameCore.ShowPenaconyGiftSubmitPage",
+	"GiftID": 102
+}</pre>
+
+;(Unused &mdash; Talk_802010301)
+<pre>{
+	"$type": "RPG.GameCore.ShowPenaconyGiftSubmitPage",
+	"GiftID": 103
+}</pre>
+
+;(Unused &mdash; Talk_802010401)
+<pre>{
+	"$type": "RPG.GameCore.ShowPenaconyGiftSubmitPage",
+	"GiftID": 104
+}</pre>
+
+;(Unused &mdash; Talk_802010501)
+<pre>{
+	"$type": "RPG.GameCore.ShowPenaconyGiftSubmitPage",
+	"GiftID": 105
+}</pre>
+
+;(Unused &mdash; Talk_802010601)
+<pre>{
+	"$type": "RPG.GameCore.ShowPenaconyGiftSubmitPage",
+	"GiftID": 106
+}</pre>
+
+;(Unused &mdash; Talk_802010701)
+<pre>{
+	"$type": "RPG.GameCore.ShowPenaconyGiftSubmitPage",
+	"GiftID": 107
+}</pre>
 {{Dialogue End}}
 
-===Provide Jay with the necessary materials for the carnival===
+===Provide Jay with the necessary materials for the carnival{{subst:void|<!--802010703-->}}===
 {{Mission Description|type=adventure|location=Golden Hour|update|Jay has listed all the ingredients required for today's catering menu. Once you have gathered all of the ingredients, bring them to him!}}
 {{Dialogue Start}}
-:{{tx}}
+<pre>{
+	"$type": "RPG.GameCore.PlayMessage",
+	"MessageSectionID": 1303700,
+	"ShowNotice": true
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.SaveMessage",
+	"MessageSectionID": 1303700
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.PlayMessage",
+	"MessageSectionID": 1303800,
+	"ShowNotice": true
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.SaveMessage",
+	"MessageSectionID": 1303800
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.PlayMessage",
+	"MessageSectionID": 1303900,
+	"ShowNotice": true
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.SaveMessage",
+	"MessageSectionID": 1303900
+}</pre>
 {{Dialogue End}}
 
 ==Other Languages==

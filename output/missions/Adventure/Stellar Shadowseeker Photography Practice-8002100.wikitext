@@ -7,7 +7,7 @@ PageTitle=#Stellar Shadowseeker: Photography Practice#
 |title         = 
 |image         = <!--Mission Stellar Shadowseeker Photography Practice.png-->
 |type          = Adventure
-|event_name    = 
+|event_name    = Stellar Shadowseeker
 |chapter       = 
 |requirements  = Reach [[Trailblaze Level]] 21
 |summary       = <!--official mission summary from Fate's Atlas-->
@@ -19,11 +19,12 @@ PageTitle=#Stellar Shadowseeker: Photography Practice#
 |next          = Stellar Shadowseeker: 1st Stop, Master Control Zone
 |rewards       = Credit*5,000
 }}
-'''''Stellar Shadowseeker: Photography Practice''''' is an [[Adventure Mission]] on [[Astral Express]].
+'''''Stellar Shadowseeker: Photography Practice''''' is an Event [[Adventure Mission]] from the [[Stellar Shadowseeker]] event.
 
 ==Steps==
 # Go to the Astral Express and talk with March 7th
 # Give the photos to March 7th
+# Go to the Astral Express and talk with March 7th
 # Go to the Parlor Car and take a photo of the subject
 # Give the photos to March 7th
 
@@ -37,28 +38,68 @@ PageTitle=#Stellar Shadowseeker: Photography Practice#
 ==Dialogue==
 {{Stub Dialogue}}
 
-===Go to the Astral Express and talk with March 7th===
+===Go to the Astral Express and talk with March 7th{{subst:void|<!--800210003-->}}===
 {{Mission Description|type=adventure|location=Passenger Cabin|March 7th seems like she needs help. Go ask what happened.}}
 {{Dialogue Start}}
-:{{tx}}
+
 {{Dialogue End}}
 
-===Give the photos to March 7th===
+===Give the photos to March 7th{{subst:void|<!--800210004-->}}===
 {{Mission Description|type=adventure|location=Passenger Cabin|update|The photos are all done. Show them to March 7th.}}
 {{Dialogue Start}}
-:{{tx}}
+
 {{Dialogue End}}
 
-===Go to the Parlor Car and take a photo of the subject===
+===Go to the Astral Express and talk with March 7th{{subst:void|<!--800210002-->}}===
+{{Mission Description|type=adventure|location=Passenger Cabin|update|March 7th seems like she needs help. Go ask what happened.}}
+{{Dialogue Start}}
+
+{{Dialogue End}}
+
+===Go to the Parlor Car and take a photo of the subject{{subst:void|<!--800210006-->}}===
 {{Mission Description|type=adventure|location=Parlor Car|update|The shadowy object in the photo looks somewhat familiar. It must be something aboard the Express...}}
 {{Dialogue Start}}
-:{{tx}}
+<pre>{
+	"$type": "RPG.GameCore.ShowTutorialUI",
+	"ForceShowDialog": true
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.WaitUINodeOpen",
+	"NodeID": "MazeMainPage.MazeEventBtn",
+	"SkipCheck": true
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.ShowGuideText",
+	"ID": 1,
+	"GuideResID": 5,
+	"Show": true,
+	"TextPath": "Root/Text",
+	"Text": "TutorialTextmap_503801",
+	"Follow": true,
+	"PCGuide": {
+		"TextPath": "Root/Text"
+	}
+}</pre>
+:<!--3-second delay-->
+<pre>{
+	"$type": "RPG.GameCore.ShowGuideText",
+	"ID": 1,
+	"GuideResID": 5,
+	"TextPath": "Root/Text",
+	"Text": "TutorialTextmap_503802",
+	"Follow": true,
+	"PCGuide": {
+		"TextPath": "Root/Text"
+	}
+}</pre>
+
+:'''(Trailblazer):''' (The shadow in the photo should be something commonly seen on the Express...)
 {{Dialogue End}}
 
-===Give the photos to March 7th===
+===Give the photos to March 7th{{subst:void|<!--800210005-->}}===
 {{Mission Description|type=adventure|location=Passenger Cabin|update|The photos are all done. Show them to March 7th.}}
 {{Dialogue Start}}
-:{{tx}}
+
 {{Dialogue End}}
 
 ==Other Languages==

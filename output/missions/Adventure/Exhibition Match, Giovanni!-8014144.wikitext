@@ -7,11 +7,11 @@ PageTitle=#Exhibition Match, Giovanni!#
 |title         = 
 |image         = <!--Mission Exhibition Match, Giovanni!.png-->
 |type          = Adventure
-|event_name    = 
+|event_name    = Aetherium Wars
 |chapter       = 
 |requirements  = {{subst:void|<!--Unknown: {"Type":"Manual"}-->}}
 |summary       = <!--official mission summary from Fate's Atlas-->
-|characters    = Trailblazer
+|characters    = Giovanni; Trailblazer
 |startLocation = [[Jarilo-VI]] - [[Old Weapon Testing Ground]]
 |world         = Jarilo-VI
 |area          = Old Weapon Testing Ground
@@ -19,7 +19,7 @@ PageTitle=#Exhibition Match, Giovanni!#
 |next          = 
 |rewards       = 
 }}
-'''''Exhibition Match, Giovanni!''''' is an [[Adventure Mission]] on [[Jarilo-VI]].
+'''''Exhibition Match, Giovanni!''''' is an Event [[Adventure Mission]] from the [[Aetherium Wars]] event.
 
 ==Steps==
 # Have a duel with Giovanni
@@ -33,11 +33,23 @@ PageTitle=#Exhibition Match, Giovanni!#
 -->
 ==Dialogue==
 {{Stub Dialogue}}
-
-===Have a duel with Giovanni===
+===Have a duel with Giovanni{{subst:void|<!--801414401-->}}===
 {{Mission Description|type=adventure|location=Old Weapon Testing Ground|The core gameplay loop behind Aetherium Wars is "dueling." Challenge different players and show your true strength!}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Giovanni)
+:'''Giovanni:''' Hahaha, we meet again, Champion! I am so happy to see that you still enjoy this game even after the festival has ended.
+:'''Giovanni:''' Well... I hope that this battle will also bring you "Elation"!
+<pre>{
+	"$type": "RPG.GameCore.ShowUI",
+	"Name": "Ui.AetherDivide.AetherChallenge.AetherChallengePage",
+	"WaitForExit": true,
+	"Param": {
+		"Value": "204"
+	},
+	"OnUIEnter": []
+}</pre>
+:'''Giovanni:''' The power of a Champion truly is something else! I already cannot wait to battle you again!
 {{Dialogue End}}
 
 ==Other Languages==

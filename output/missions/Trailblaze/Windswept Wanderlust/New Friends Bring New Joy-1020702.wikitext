@@ -13,7 +13,7 @@ PageTitle=#New Friends Bring New Joy#
 * [[Trailblaze Mission]] ''[[Stars Spun, Prescience Sprung]]'' completed
 * Reach [[Trailblaze Level]] 13
 |summary       = You meet up with Qingque, the messenger from the Divination Commission. She is indeed "trapped in place" as she ponders how to play her tiles in hand. You can't help but think the master diviner has interesting tastes in hiring staff.<br />Qingque's luck in the game drastically improves as soon as you arrive, and she happily starts to fulfill her duty as your guide.
-|characters    = Trailblazer
+|characters    = Chiyan; March 7th; Player in the East Seat; Player in the South Seat; Player in the West Seat; Qingque; Tingyun; Trailblazer; Welt
 |startLocation = [[The Xianzhou Luofu]] - [[Exalting Sanctum]]
 |world         = The Xianzhou Luofu
 |area          = Exalting Sanctum
@@ -38,22 +38,109 @@ PageTitle=#New Friends Bring New Joy#
 ==Dialogue==
 {{Stub Dialogue}}
 
-===Head to the Exalting Sanctum Plaza whenever you are ready===
+===Head to the Exalting Sanctum Plaza whenever you are ready{{subst:void|<!--102070108-->}}===
 {{Mission Description|type=trailblaze|location=Exalting Sanctum|Fu Xuan took Kafka to the Divination Commission but asked you to wait. The Xianzhou Luofu is in troubled times, and everyone feels trapped in place.<br />You take this chance to stroll around the area and wait for the Divination Commission's messenger to arrive.}}
 {{Dialogue Start}}
-:{{tx}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+<pre>{
+	"$type": "RPG.GameCore.PlayMessage",
+	"MessageSectionID": 1200200,
+	"ShowNotice": true
+}</pre>
+----
+:{{A|VO chapter2 3 mar7th 137.ogg}} '''March 7th:''' What does that mean? It's just a picture. Are we supposed to meet someone there?
+:{{A|VO chapter2 3 mar7th 138.ogg}} '''March 7th:''' It's like one of those messages a kidnapper sends in a horror movie...
+:{{A|VO chapter2 3 welt 122.ogg}} '''Welt:''' That's enough of that. Come on, let's go.
+----
+<pre>{
+	"$type": "RPG.GameCore.SaveMessage",
+	"MessageSectionID": 1200200
+}</pre>
 {{Dialogue End}}
 
-===Use the photo you received on your phone to find the waiting messenger===
+===Use the photo you received on your phone to find the waiting messenger{{subst:void|<!--102070110-->}}===
 {{Mission Description|type=trailblaze|location=Exalting Sanctum|update|Fu Xuan took Kafka to the Divination Commission but asked you to wait. The Xianzhou Luofu is in troubled times, and everyone feels trapped in place.<br />The Divination Commission's messenger is late. Perhaps she, too, is hindered by troublesome business. Maybe it's best to actively go and find her.}}
 {{Dialogue Start}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+<pre>{
+	"$type": "RPG.GameCore.SetAudioEmotionState",
+	"StateName": "State_Joyful",
+	"SubMissionID": 102070110
+}</pre>
+:{{A|VO chapter2 3 mar7th 132.ogg}} '''???:''' Hmmmm...
+:{{A|VO chapter2 3 cltE 101.ogg}} '''Player in the South Seat:''' Hurry up, Qingque! We'll be fossils by the time you're finished.
+:'''Player in the East Seat:''' The Realm-Keeping Commission made an announcement today &mdash; Starskiff Haven has been closed off and the Cloud Knights are shutting everything down. We need to enjoy our celestial jade-playing days while they last!
+:{{A|VO chapter2 3 cltG 101.ogg}} '''Player in the West Seat:''' I heard there was a disaster in the Divination Commission's delve? I'm surprised you're in the mood to play right now, Qingque.
+:'''Qingque:''' *yawn* Celestial jade helps train my concentration. Diviners need to be able to focus.
+:{{A|VO chapter2 3 qingque 103.ogg}} '''Qingque:''' Even if the sky was gonna collapse on the Divination Commission, the master diviner would be there to hold it up. What she lacks in height, she more than makes up for in stamina.
+:{{A|VO chapter2 3 qingque 104.ogg}} '''Qingque:''' Anyway, I didn't come here just to play &mdash; she ordered me to wait here for our guests. Time is precious! I'm simply multitasking.
+:{{A|VO chapter2 3 mar7th 139.ogg}} '''March 7th:''' It's the place in the photo alright. Is this... a games parlor!? What kind of problem can they possibly be facing?
+:{{A|VO chapter2 3 qingque 105.ogg}} '''Qingque:''' Ha! Isn't this hand a problem? I have the worst luck...
+:{{A|VO chapter2 3 qingque 106.ogg}} '''Qingque:''' Hi there! I can tell just by looking at you that you're the Divination Commission's guests.
+:{{DIcon|Arrow}} Did you bring us here just for this?
+:{{DIcon|Arrow}} Do you even know how long we've been waiting!?
+:{{DIcon|Arrow}} You don't want the master diviner to know you've been slacking off, do you?
+:{{A|VO chapter2 3 qingque 107.ogg}} '''Qingque:''' I know, I know, I'm sorry &mdash; I was going to wait for you by the statue, but&mdash; Ah&mdash; Triplet!
 :{{tx}}
+----
+<pre>{
+	"$type": "RPG.GameCore.SetAudioEmotionState",
+	"ResetToFloorDefault": true,
+	"SubMissionID": 102070110
+}</pre>
+:<!--1-second delay-->
+:{{A|VO chapter2 3 qingque 113.ogg}} '''Qingque:''' I must apologize for your long wait, honored guests.
+:{{A|VO chapter2 3 welt 123.ogg}} '''Welt:''' It wasn't too long. Seeing your enthusiasm for this "celestial jade" game has stoked my curiosity.
+:{{A|VO chapter2 3 qingque 114.ogg}} '''Qingque:''' Haha, I'm glad to hear it &mdash; you clearly have excellent taste! If you're interested I can show you how to play &mdash; it's great fun.
+:{{A|VO chapter2 3 welt 124.ogg}} '''Welt:''' Sure!
+:{{A|VO chapter2 3 mar7th 141.ogg}} '''March 7th:''' Mr. Yang! Is this really the best time?
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+----
+:{{A|VO chapter2 3 mar7th 142 m.ogg}} {{A|VO chapter2 3 mar7th 142 f.ogg}} '''March 7th:''' (Trailblazer), look! Is that a...?
+:{{A|VO chapter2 3 tingyun 121.ogg}} '''Tingyun:''' It's an ancient tree &mdash; we call it the Ambrosial Arbor. It was once the Xianzhou Luofu's prized treasure.
+:{{A|VO chapter2 3 qingque 115.ogg}} '''Qingque:''' I didn't know the Sky-Faring Commission were history buffs! Not bad, younger generations usually don't know much about it. It's said that the Ambrosial Arbor is an ancient remnant from when the Xianzhou roamed the ether.
+:{{A|VO chapter2 3 qingque 116.ogg}} '''Qingque:''' From a distance it looks like half a tree stump, but according to ''Records of the Early Nation'', in its prime, "it wound into the heavens, and from it celestial bodies hung!"
+:{{A|VO chapter2 3 mar7th 143.ogg}} '''March 7th:''' Meaning...?
+:{{A|VO chapter2 3 welt 125.ogg}} '''Welt:''' It means the tree was as tall as the sky and stars hung from its branches.
+:{{A|VO chapter2 3 mar7th 144.ogg}} '''March 7th:''' So how big was it? Bigger than the Express? Bigger than Herta space station? No, that can't be right.
+:{{A|VO chapter2 3 mar7th 145.ogg}} '''March 7th:''' "Stars hung from its branches..." Then how did it fit in the Xianzhou!?
+:{{DIcon|Arrow}} Technically, any tree in the spaceship fits this description.
+::{{A|VO chapter2 3 qingque 117.ogg}} '''Qingque:''' Those are metaphors! You shouldn't take poetry so literally.
+:{{DIcon|Arrow}} It sounds like an unimaginably magnificent tree.
+::{{A|VO chapter2 3 qingque 118.ogg}} '''Qingque:''' Exactly, let's just say it was bigger than your imagination.
+:{{A|VO chapter2 3 qingque 119.ogg}} '''Qingque:''' Anyway, it's just a legend. I see this view every day on my way to work &mdash; I'm kinda bored of it.
+:{{A|VO chapter2 3 qingque 120.ogg}} '''Qingque:''' Let's go.
+----
 {{Dialogue End}}
 
-===Head to the Divination Commission===
+===Head to the Divination Commission{{subst:void|<!--102070116-->}}===
 {{Mission Description|type=trailblaze|location=Exalting Sanctum|update|You finally meet up with Qingque, the messenger from the Divination Commission. She is indeed "trapped in place" as she ponders how to play her tiles in hand. You can't help but think the master diviner has interesting tastes in hiring staff.<br />Qingque's luck in the game drastically improves as soon as you arrive, and she happily starts to fulfill her duty as your guide.}}
 {{Dialogue Start}}
-:{{tx}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{A|VO chapter2 3 qingque 121.ogg}} '''Qingque:''' We're almost there everyone, stay close.
+
+;(Talk to undefined)
+:{{A|VO vo ambient w2 greeting chiyan 101.ogg}} {{A|VO vo ambient w2 greeting chiyan 102.ogg}} '''Chiyan:''' May I ask, have you come here to the Seat of Divine Foresight on any official business? I can help you pass it on.
+:{{DIcon|Arrow}} I wanna enter the Seat of Divine Foresight.
+::'''Chiyan:''' Could you please wait here a moment? I'll go and report in for you.
+:<pre>{
+	"$type": "RPG.GameCore.EnterMapByCondition",
+	"EntranceID": {
+		"IsDynamic": false,
+		"FixedValue": {
+			"Value": 1020203
+		}
+	}
+}</pre>
+:{{DIcon|Exit}} Nah, I'm just passing by.
 {{Dialogue End}}
 
 ==Other Languages==

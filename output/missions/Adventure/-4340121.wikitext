@@ -11,7 +11,7 @@ PageTitle=##
 |chapter       = 
 |requirements  = [[Adventure Mission]] ''[[Cloud-Bound Hearts]]'' completed
 |summary       = <!--official mission summary from Fate's Atlas-->
-|characters    = Trailblazer
+|characters    = Caldwick; Pedro; Rosa; Trailblazer
 |startLocation = [[Penacony]] - [[(The Radiant Feldspar/The Trailblaze's Stern/The Tatalov/The Soaring Clock Hand)]]
 |world         = Penacony
 |area          = (The Radiant Feldspar/The Trailblaze's Stern/The Tatalov/The Soaring Clock Hand)
@@ -33,7 +33,75 @@ PageTitle=##
 -->
 ==Dialogue==
 {{Stub Dialogue}}
+:(I wonder what's in the package... I'd better go sign for it. It'll be so awkward if I only pick it up after the hold period.)
+:(The first mate collected the package for me. I'll ask for it in the Captain's Quarters.)
 
+;(Talk to Rosa)
+;(If {{F|MissionCV-2030501-undefined}} is equal to 1)
+::'''Rosa:''' Ah, Captain! A package arrived for you at the collection point. I've brought it over.
+::'''Rosa:''' I didn't see you, so I was wondering if it'd be okay to leave it inside... Haha, but you came at the right time.
+::{{DIcon|Arrow}} Accept the package.
+::'''Rosa:''' I'll leave you to it now. Call for me if you need anything!
+;(If {{F|MissionCV-2030501-undefined}} is not equal to 1)
+:;(Return to previous option selection)
+;(Unused &mdash; TalkSentence_434029008_2)
+:'''Caldwick:''' I'll leave you to it now. Call for me if you need anything!
+
+;(Unused &mdash; TalkSentence_434029008_3)
+:'''Pedro:''' I'll leave you to it now. Call for me if you need anything!
+
+;(Talk to Caldwick)
+;(If {{F|MissionCV-2030501-undefined}} is equal to 1)
+::'''Rosa:''' Ah, Captain! A package arrived for you at the collection point. I've brought it over.
+::'''Rosa:''' I didn't see you, so I was wondering if it'd be okay to leave it inside... Haha, but you came at the right time.
+::{{DIcon|Arrow}} Accept the package.
+::'''Rosa:''' I'll leave you to it now. Call for me if you need anything!
+;(If {{F|MissionCV-2030501-undefined}} is not equal to 1)
+:;(Return to previous option selection)
+;(Unused &mdash; TalkSentence_434029008_2)
+:'''Caldwick:''' I'll leave you to it now. Call for me if you need anything!
+
+;(Unused &mdash; TalkSentence_434029008_3)
+:'''Pedro:''' I'll leave you to it now. Call for me if you need anything!
+
+;(Talk to Pedro)
+;(If {{F|MissionCV-2030501-undefined}} is equal to 1)
+::'''Rosa:''' Ah, Captain! A package arrived for you at the collection point. I've brought it over.
+::'''Rosa:''' I didn't see you, so I was wondering if it'd be okay to leave it inside... Haha, but you came at the right time.
+::{{DIcon|Arrow}} Accept the package.
+::'''Rosa:''' I'll leave you to it now. Call for me if you need anything!
+;(If {{F|MissionCV-2030501-undefined}} is not equal to 1)
+:;(Return to previous option selection)
+;(Unused &mdash; TalkSentence_434029008_2)
+:'''Caldwick:''' I'll leave you to it now. Call for me if you need anything!
+
+;(Unused &mdash; TalkSentence_434029008_3)
+:'''Pedro:''' I'll leave you to it now. Call for me if you need anything!
+;(If {{F|MissionCV-2030501-undefined}} is equal to 1)
+:<pre>{
+	"$type": "RPG.GameCore.AdvCreateGroupEntity",
+	"InstanceIDList": [
+		400001
+	]
+}</pre>
+;(If {{F|MissionCV-2030501-undefined}} is not equal to 1)
+:;(Return to previous option selection)
+:The package is neither damaged nor dirty, and has its seal intact. Your name is printed clearly in the recipient field on the waybill, with Aventurine listed as the sender. The Interastral Peace Corporation's mark of authenticity has also been carefully made visible on the package.
+:You subconsciously let out a sigh of relief, now knowing that this is not a prank by one of those Masked Fools... Though you cannot be absolutely certain either, at least not until the contents of the package are revealed.
+:...Oh, whatever. It is what it is. Just open the package.
+:{{DIcon|Arrow}} Open the package.
+:{{DIcon|Arrow}} Play with the coin and try to increase your luck value.
+::{{DIcon|Arrow}} Search the package for more goodies.
+:{{DIcon|Arrow}} Perfect! What other goodies will you be able to find?
+:{{DIcon|Arrow}} Gold bars, here I come!
+:{{DIcon|Arrow}} Find out exactly what his surprise is.
+:'''(Trailblazer):''' (This is... the Astral Express? No, it's actually a miniature model of the Astral Express!?)
+:{{tx}}
+<pre>{
+	"$type": "RPG.GameCore.AddFinishMissionData_PlayMessage",
+	"SubmissionID": 434012104,
+	"MessageSectionID": 1223500
+}</pre>
 {{Dialogue End}}
 
 ==Other Languages==

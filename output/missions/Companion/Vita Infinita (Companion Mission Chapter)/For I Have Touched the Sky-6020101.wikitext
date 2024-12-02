@@ -15,7 +15,7 @@ Mission For I Have Touched the Sky Caelus.png|Caelus
 |chapter       = Vita Infinita (Companion Mission Chapter)
 |requirements  = [[Trailblaze Mission]] ''[[A Dragon Gallant, Its Ocean Distant]]'' completed
 |summary       = When the concepts of "safety" and "happiness" clash, a mother is confronted with a challenging decision as she prioritizes her child's well-being. Yukong has made a tough choice but will stand firm in her decision.
-|characters    = Trailblazer
+|characters    = Coping Sky-Faring Commission Staff Member; Jing Yuan; Lazy Sky-Faring Commission Staff Member; Qingni; Trailblazer; Welt; Yanming; Yukong
 |startLocation = [[The Xianzhou Luofu]] - [[Stargazer Navalia]]
 |world         = The Xianzhou Luofu
 |area          = Stargazer Navalia
@@ -29,21 +29,21 @@ Mission For I Have Touched the Sky Caelus.png|Caelus
 # Something seems to have happened in Stargazer Navalia...
 # Meet up with Welt at Stargazer Navalia
 # Use the cycrane to search for the victim
-# Ask Yanming about Yukong's past
 # Set out to rescue the trapped victim
 # Eliminate the Abominations of Abundance surrounding the trapped victim
-# Accompany Qingni through the streets to help clear her mind
+# Set out to rescue the trapped victim
+# Eliminate the Abominations of Abundance surrounding the trapped victim
 # Head to the Palace of Astrum and accept Yukong's gratitude
 # Leave the Palace of Astrum
 # Accompany Qingni through the streets to help clear her mind
 # Head to Stargazer Navalia and search for Yukong's lost item
 # Control the cycrane to search for Yukong's missing items
 # Head to the Seat of Divine Foresight and ask Jing Yuan about Yukong's past
+# Head to the Palace of Astrum and meet up with Qingni
 # Search for the location of Yukong's personal archive in the calculation device
 # Search for information related to Yukong's past
-# Eliminate the Abominations of Abundance surrounding the trapped victim
-# Set out to rescue the trapped victim
-# Head to the Palace of Astrum and meet up with Qingni
+# Ask Yanming about Yukong's past
+# Search for information related to Yukong's past
 # Meet up with Welt
 # Accompany Qingni to talk with Yukong
 
@@ -57,119 +57,1621 @@ Mission For I Have Touched the Sky Caelus.png|Caelus
 ==Dialogue==
 {{Stub Dialogue}}
 
-===Something seems to have happened in Stargazer Navalia...===
+===Something seems to have happened in Stargazer Navalia...{{subst:void|<!--602010120-->}}===
 {{Mission Description|type=companion|location=Stargazer Navalia|You hear an explosion from very far away, but it seems only you can hear it. It might be a delusion or some strange sixth sense... Your heart is filled with an ominous premonition.<br />You follow your instincts and head to the source of the explosion &mdash; Stargazer Navalia.}}
 {{Dialogue Start}}
-:{{tx}}
+
+<pre>{
+	"$type": "RPG.GameCore.PlayMessage",
+	"MessageSectionID": 1211500,
+	"ShowNotice": true
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.SaveMessage",
+	"MessageSectionID": 1211500
+}</pre>
 {{Dialogue End}}
 
-===Meet up with Welt at Stargazer Navalia===
+===Meet up with Welt at Stargazer Navalia{{subst:void|<!--602010101-->}}===
 {{Mission Description|type=companion|location=Stargazer Navalia|update|The Sky-Faring Commission sent a message saying that there was a starskiff crash in Stargazer Navalia, and hopes you can help rescue the victim. Welt seems to be nearby. Hurry up and join him in searching for the victim.}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Welt Yang)
+:{{A|VO side2 yk1 welt 101 m.ogg}} {{A|VO side2 yk1 welt 101 f.ogg}} '''Welt:''' (Trailblazer), looks like there's smoke rising in the distance. Miss Xikui sent us a cycrane &mdash; see if you can get an aerial visual. This is an emergency, we need to find where the starskiff crashed as soon as possible.
+::{{DIcon|Arrow}} Connect the cycrane
+:<pre>{
+	"$type": "RPG.GameCore.SetMissionWayPoint",
+	"SubMissionID": 602010102,
+	"OverideMissionWayPointType": true,
+	"MissionWayPointType": "Anchor",
+	"OverideWayPointFloorID": true,
+	"WayPointFloorID": 20212001,
+	"OverideWayPointGroupID": true,
+	"WayPointGroupID": 134,
+	"OverideWayPointEntityID": true,
+	"WayPointEntityID": 1,
+	"OverideWayPointShowRangeMin": true,
+	"WayPointShowRangeMin": -1,
+	"OverideMapWaypointRange": true,
+	"MapWaypointRange": 40
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.ShowWaypointByProp",
+	"GroupID": {
+		"fixedValue": {
+			"Value": 134
+		}
+	},
+	"InstanceID": {
+		"fixedValue": {
+			"Value": 300001
+		}
+	},
+	"MaxRange": 15,
+	"IconPath": "SpriteOutput/MapPics/NaviIcons/IconMapPlay6.png",
+	"OnNameBoard": true
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.ShowWaypointByProp",
+	"GroupID": {
+		"fixedValue": {
+			"Value": 134
+		}
+	},
+	"InstanceID": {
+		"fixedValue": {
+			"Value": 300002
+		}
+	},
+	"MaxRange": 15,
+	"IconPath": "SpriteOutput/MapPics/NaviIcons/IconMapPlay6.png",
+	"OnNameBoard": true
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.ShowWaypointByProp",
+	"GroupID": {
+		"fixedValue": {
+			"Value": 134
+		}
+	},
+	"InstanceID": {
+		"fixedValue": {
+			"Value": 300004
+		}
+	},
+	"MaxRange": 15,
+	"IconPath": "SpriteOutput/MapPics/NaviIcons/IconMapPlay6.png",
+	"OnNameBoard": true
+}</pre>
+:{{A|VO side2 yk1 welt 102.ogg}} '''Welt:''' I'm afraid there's no time for chit-chat &mdash; lives could be at stake.
+::{{DIcon|Arrow}} Connect the cycrane
+::<pre>{
+	"$type": "RPG.GameCore.SetMissionWayPoint",
+	"SubMissionID": 602010102,
+	"OverideMissionWayPointType": true,
+	"MissionWayPointType": "Anchor",
+	"OverideWayPointFloorID": true,
+	"WayPointFloorID": 20212001,
+	"OverideWayPointGroupID": true,
+	"WayPointGroupID": 134,
+	"OverideWayPointEntityID": true,
+	"WayPointEntityID": 1,
+	"OverideWayPointShowRangeMin": true,
+	"WayPointShowRangeMin": -1,
+	"OverideMapWaypointRange": true,
+	"MapWaypointRange": 40
+}</pre>
+::<pre>{
+	"$type": "RPG.GameCore.ShowWaypointByProp",
+	"GroupID": {
+		"fixedValue": {
+			"Value": 134
+		}
+	},
+	"InstanceID": {
+		"fixedValue": {
+			"Value": 300001
+		}
+	},
+	"MaxRange": 15,
+	"IconPath": "SpriteOutput/MapPics/NaviIcons/IconMapPlay6.png",
+	"OnNameBoard": true
+}</pre>
+::<pre>{
+	"$type": "RPG.GameCore.ShowWaypointByProp",
+	"GroupID": {
+		"fixedValue": {
+			"Value": 134
+		}
+	},
+	"InstanceID": {
+		"fixedValue": {
+			"Value": 300002
+		}
+	},
+	"MaxRange": 15,
+	"IconPath": "SpriteOutput/MapPics/NaviIcons/IconMapPlay6.png",
+	"OnNameBoard": true
+}</pre>
+::<pre>{
+	"$type": "RPG.GameCore.ShowWaypointByProp",
+	"GroupID": {
+		"fixedValue": {
+			"Value": 134
+		}
+	},
+	"InstanceID": {
+		"fixedValue": {
+			"Value": 300004
+		}
+	},
+	"MaxRange": 15,
+	"IconPath": "SpriteOutput/MapPics/NaviIcons/IconMapPlay6.png",
+	"OnNameBoard": true
+}</pre>
+::{{DIcon|Exit}} Let's talk about it later
 {{Dialogue End}}
 
-===Use the cycrane to search for the victim===
+===Use the cycrane to search for the victim{{subst:void|<!--602010102-->}}===
 {{Mission Description|type=companion|location=Stargazer Navalia|update|The terrain of Stargazer Navalia is complex, and searching on foot is rather difficult. Fortunately, the Sky-Faring Commission lent you a cycrane. As long as you use it to search from a high vantage point, you will be able to locate the crashed pilot.}}
 {{Dialogue Start}}
-:{{tx}}
+<pre>{
+	"$type": "RPG.GameCore.PhotoGraphAimTarget",
+	"AimTargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvProp",
+		"MultiGroupFetch": [
+			{
+				"GroupID": {
+					"fixedValue": {
+						"Value": 134
+					}
+				},
+				"ID": {
+					"fixedValue": {
+						"Value": 300001
+					}
+				}
+			}
+		]
+	},
+	"IsAim": true
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.PhotoGraphWaitIdentifyFinish",
+	"WaitTargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvProp",
+		"MultiGroupFetch": [
+			{
+				"GroupID": {
+					"fixedValue": {
+						"Value": 134
+					}
+				},
+				"ID": {
+					"fixedValue": {
+						"Value": 300001
+					}
+				}
+			}
+		]
+	},
+	"OnIdentifyFinish": [],
+	"OnPreviewFinish": []
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.PhotoGraphAimTarget",
+	"AimTargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvProp",
+		"MultiGroupFetch": [
+			{
+				"GroupID": {
+					"fixedValue": {
+						"Value": 134
+					}
+				},
+				"ID": {
+					"fixedValue": {
+						"Value": 300001
+					}
+				}
+			}
+		]
+	}
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.SwitchPhotoGraphMode",
+	"ExitWhenPreViewDialogFinish": true,
+	"IdentifyRadiusOverride": {},
+	"InitFov": -1
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.HideWaypointByProp",
+	"TargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvPropEx",
+		"FetchType": "MultiPropByPropID",
+		"MultiPropID": [
+			{
+				"GroupID": {
+					"fixedValue": {
+						"Value": 134
+					}
+				},
+				"ID": {
+					"fixedValue": {
+						"Value": 300001
+					}
+				}
+			}
+		]
+	},
+	"OnNameBoard": true
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.WaitUIControllerClose",
+	"UIControllerName": "DroneIdentifyPage"
+}</pre>
+:{{A|VO side2 yk1 welt 104.ogg}} '''Welt:''' We found it... looks like the pilot isn't inside. If they escaped before it came down, they should still be nearby.
+
+;(Upon reaching the destination)
+----
+:{{A|VO side2 yk1 welt 107 m.ogg}} {{A|VO side2 yk1 welt 107 f.ogg}} '''Welt:''' (Trailblazer), why are you here on your own?
+:{{A|VO side2 yk1 welt 108.ogg}} '''Welt:''' I know you want to help, but we need more intel on the crash site before we start the rescue. There's no time to lose &mdash; let's go.
+----
 {{Dialogue End}}
 
-===Ask Yanming about Yukong's past===
-{{Mission Description|type=companion|location=Palace of Astrum|update|To know more about Yukong's past, you would have to go to the Palace of Astrum sooner or later. Look around with Qingni. The past she will witness here may change her life.}}
-{{Dialogue Start}}
-:{{tx}}
-{{Dialogue End}}
-
-===Set out to rescue the trapped victim===
+===Set out to rescue the trapped victim{{subst:void|<!--602010104-->}}===
 {{Mission Description|type=companion|location=Stargazer Navalia|update|You find the crashed pilot. She is trapped among a group of abominations, and her situation is extremely dire. Quickly, save her!}}
 {{Dialogue Start}}
-:{{tx}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+----
+:{{A|VO side2 yk1 qingni 102.ogg}} '''???:''' Hey! Get out of here &mdash; it's too dangerous! Go get someone from the Sky-Faring Commission &mdash; tell them Qingni is in trouble!
+:{{DIcon|Arrow}} It's okay, we're pretty tough.
+::{{A|VO side2 yk1 welt 109.ogg}} '''Welt:''' Don't worry, Miss Qingni. We've been in worse danger.
+:{{DIcon|Arrow}} They're only abominations &mdash; we got this.
+::{{A|VO side2 yk1 welt 110.ogg}} '''Welt:''' Don't worry, Miss Qingni. We've been in worse danger.
+:{{DIcon|Arrow}} Okay, see you later then.
+::{{A|VO side2 yk1 welt 111 m.ogg}} {{A|VO side2 yk1 welt 111 f.ogg}} '''Welt:''' No, (Trailblazer), it's too late to call for backup. Don't worry, Miss Qingni &mdash; the Sky-Faring Commission sent us to help.
+
+;(Upon reaching the destination)
+:{{A|VO side2 yk1 qingni 101.ogg}} '''???:''' Get back, you demons! I&mdash;I'm not afraid of you! Stay away!
 {{Dialogue End}}
 
-===Eliminate the Abominations of Abundance surrounding the trapped victim===
+===Eliminate the Abominations of Abundance surrounding the trapped victim{{subst:void|<!--602010116-->}}===
 {{Dialogue Start}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{A|VO side2 yk1 welt 112 m.ogg}} {{A|VO side2 yk1 welt 112 f.ogg}} '''Welt:''' There are too many monsters... (Trailblazer), let's hold out for a little longer &mdash; the Cloud Knights should be here soon.
+:{{A|VO side2 yk1 qingni 103.ogg}} '''Qingni:''' Just run! These monsters can't get up here anytime soon!
+:{{A|VO side2 yk1 welt 113.ogg}} '''Welt:''' No can do, Miss Qingni &mdash; we're not abandoning you.
+:{{DIcon|Arrow}} We won't leave you here!
+:{{DIcon|Arrow}} Hey, you think we can't take them?
+::{{A|VO side2 yk1 welt 114 m.ogg}} {{A|VO side2 yk1 welt 114 f.ogg}} '''Welt:''' Easy, (Trailblazer), let's not get ahead of ourselves.
+:{{DIcon|Arrow}} Mr. Yang, let's get out of here...
+::{{A|VO side2 yk1 welt 115.ogg}} '''Welt:''' Hold out a little longer &mdash; I know you can do it.
+:{{A|VO side2 yk1 yukong 101.ogg}} '''Yukong:''' You two have held out long enough &mdash; help is at hand!
 :{{tx}}
 {{Dialogue End}}
 
-===Accompany Qingni through the streets to help clear her mind===
-{{Mission Description|type=companion|location=Central Starskiff Haven|update|Welt and you again meet Yukong's daughter, Qingni. She had just had a big fight with her mother, and is in a very bad mood. Help her clear her mind. After all, helping people solve problems is also a goal of the Astral Express.}}
+===Set out to rescue the trapped victim{{subst:void|<!--602010117-->}}===
 {{Dialogue Start}}
-:{{tx}}
 {{Dialogue End}}
 
-===Head to the Palace of Astrum and accept Yukong's gratitude===
+===Eliminate the Abominations of Abundance surrounding the trapped victim{{subst:void|<!--602010105-->}}===
+{{Dialogue Start}}
+:{{Black Screen|After cleansing the area of the abomination, the Cloud Knights rescued the trapped girl.}}
+:{{A|VO side2 yk1 welt 116.ogg}} '''Welt:''' I didn't know the helm master of the Sky-Faring Commission dealt with situations like this in person.
+:{{A|VO side2 yk1 yukong 104.ogg}} '''Yukong:''' Indeed, I should be reviewing files in the Palace of Astrum. However, Qingni decided to put herself in danger and trouble our esteemed guests with her safety... As her mother, I couldn't sit idly by.
+:{{DIcon|Arrow}} Mother...
+:{{DIcon|Arrow}} So that's why...
+:{{A|VO side2 yk1 yukong 105.ogg}} '''Yukong:''' Qingni! Have you thanked your benefactors yet?
+:{{A|VO side2 yk1 qingni 104.ogg}} '''Qingni:''' Thank you, benefactors...
+:{{A|VO side2 yk1 welt 117.ogg}} '''Welt:''' No need, Miss Qingni. It was nothing.
+:{{DIcon|Arrow}} As easy as taking out the trash.
+::{{A|VO side2 yk1 yukong 106.ogg}} '''Yukong:''' You Astral Express trailblazers have outstanding manners, though your allegories are a little odd...
+:{{DIcon|Arrow}} It was all thanks to Madam Yukong's timely appearance.
+::{{A|VO side2 yk1 yukong 107.ogg}} '''Yukong:''' You flatter me. This is a Sky-Faring Commission affair, yet the two of you had to put yourselves in harm's way. I am ashamed.
+:{{DIcon|Arrow}} I didn't really do anything...
+::{{A|VO side2 yk1 yukong 108.ogg}} '''Yukong:''' No need to be humble, you took great risks for the Xianzhou. I saw what you did.
+:<!--1-second delay-->
+:{{A|VO side2 yk1 yukong 109.ogg}} '''Yukong:''' It was because of both of you that Qingni escaped unscathed. Words cannot express my gratitude.
+:{{A|VO side2 yk1 yukong 110.ogg}} '''Yukong:''' In fact, by way of thanks, I'd like to invite you to the Palace of Astrum for tea. It is about time we knew each other better.
+:{{A|VO side2 yk1 welt 118.ogg}} '''Welt:''' The feeling is mutual, Lady Yukong. We would be honored.
+:{{A|VO side2 yk1 yukong 111.ogg}} '''Yukong:''' Then for now I will excuse myself. Qingni's irresponsible actions caused much trouble for the two of you &mdash; allow me to apologize once again on her behalf.
+:{{A|VO side2 yk1 qingni 105.ogg}} '''Qingni:''' You always do this, mother &mdash; scold me before figuring out what actually happened...
+:{{A|VO side2 yk1 qingni 106.ogg}} '''Qingni:''' It was a dire situation! I was the only one who could&mdash;
+:{{A|VO side2 yk1 yukong 112.ogg}} '''Yukong:''' You promised me, Qingni! ...We shall discuss this when we return.
+:{{A|VO side2 yk1 yukong 113.ogg}} '''Yukong:''' Please excuse us, benefactors. I look forward to our meeting.
+----
+{{Dialogue End}}
+
+===Head to the Palace of Astrum and accept Yukong's gratitude{{subst:void|<!--602010107-->}}===
 {{Mission Description|type=companion|location=Palace of Astrum|update|The girl you and Welt rescued seems to be Yukong's daughter. To express her gratitude, Yukong hopes that you can go to the Palace of Astrum for a cup of tea with her. When you dealt with Yukong before, the atmosphere was inevitably rather awkward. Now you finally have a chance to have a cup of tea in peace... At least that's what you and Welt hope.}}
 {{Dialogue Start}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
 :{{tx}}
+----
+:{{A|VO side2 yk1 welt 134.ogg}} '''Welt:''' Apologies, Madam Yukong, we should have given you some time.
+:{{DIcon|Arrow}} Yes, apologies...
+::{{A|VO side2 yk1 yukong 123.ogg}} '''Yukong:''' On the contrary, I apologize for allowing my own personal matters to encroach on your time.
+:{{DIcon|Arrow}} Mr. Yang, I told you we'd be early...
+::{{A|VO side2 yk1 welt 135.ogg}} '''Welt:''' You're right, an oversight on my part.
+::{{A|VO side2 yk1 yukong 124.ogg}} '''Yukong:''' On the contrary, I apologize for allowing my own personal matters to encroach on your time.
+:{{A|VO side2 yk1 welt 136.ogg}} '''Welt:''' We don't intend to pry into private business, Helm Master Yukong, but if there's anything we can help with, please don't hesitate to ask.
+:{{A|VO side2 yk1 yukong 125.ogg}} '''Yukong:''' Family issues, I'm afraid. You probably heard a thing or two just now?
+:{{A|VO side2 yk1 yukong 126.ogg}} '''Yukong:''' Despite my earnest wish that she continue in her post, Qingni is fixated on becoming a fighter pilot. I may seem overbearing, but the situations she gets herself into send a shiver up my tail...
+:{{A|VO side2 yk1 yukong 127.ogg}} '''Yukong:''' Hehe, it's funny, isn't it? I've seen every disaster imaginable, from the Abundance Axis to a living planet. I thought I'd forgotten what fear was.
+:{{A|VO side2 yk1 yukong 128.ogg}} '''Yukong:''' But when I fought alongside you, I realized there are still things that can terrify me... Sorry. Talking about such vexing matters is unbecoming in front of guests.
+:{{A|VO side2 yk1 yukong 129.ogg}} '''Yukong:''' I invited you here to gain a better understanding of the Express, not bore you with these trivialities.
+:{{A|VO side2 yk1 yukong 130.ogg}} '''Yukong:''' Oh, I prepared refreshments for you. Please, you must try this excellent Whale-Tide Spring!
+:{{Black Screen|Though things didn't get off to a great start, everyone enjoyed this meeting with Yukong.}}
+
+;(Upon reaching the destination)
+:{{A|VO side2 yk1 yukong 114.ogg}} '''Yukong:''' Why won't you listen to me?
+:{{A|VO side2 yk1 qingni 107.ogg}} '''Qingni:''' Because it's MY life!
+
+;(Talk to Yukong)
+:{{A|VO side2 yk1 yukong 133 m.ogg}} {{A|VO side2 yk1 yukong 133 f.ogg}} '''Yukong:''' Looks like you still wish to talk, (Trailblazer).
+:{{A|VO side2 yk1 yukong 134.ogg}} '''Yukong:''' It seems our every meeting is accompanied by an incident of some sort. I hope I can meet the Astral Express crew under better circumstances next time.
 {{Dialogue End}}
 
-===Leave the Palace of Astrum===
+===Leave the Palace of Astrum{{subst:void|<!--602010108-->}}===
 {{Mission Description|type=companion|location=Central Starskiff Haven|update|As if being struck by some strange curse, meetings between the Astral Express crew and Yukong always seems to be tied to some kind of awkward situation. Welt and you don't want to be involved in other people's family affairs, so it's best to leave the Palace of Astrum first. Hopefully the atmosphere will be less tense the next time you meet with Yukong...}}
 {{Dialogue Start}}
-:{{tx}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+----
+:{{A|VO side2 yk1 qingni 114.ogg}} '''Qingni:''' You two! Please wait!
+:{{A|VO side2 yk1 qingni 115.ogg}} '''Qingni:''' Thank you for saving me, benefactors... and I'm sorry you had to witness all that...
+:{{DIcon|Arrow}} I understand. It's the parent-child relationship.
+::{{A|VO side2 yk1 qingni 116.ogg}} '''Qingni:''' So you've experienced it yourself, benefactor? That's great! I&mdash;I mean... I'm happy I finally found someone who can understand me.
+:{{DIcon|Arrow}} You shouldn't have talked like that to your mother.
+::{{A|VO side2 yk1 qingni 117.ogg}} '''Qingni:''' You think so too, benefactor...? I&mdash;I mean, I know getting emotional only makes things worse.
+:{{A|VO side2 yk1 qingni 118.ogg}} '''Qingni:''' But I've had the Hairpin Ceremony &mdash; I'm an adult now! I have the right to pursue my dreams! Mom still insists on sheltering me under her wing, as if I can't even stay alive without her.
+:{{A|VO side2 yk1 welt 139.ogg}} '''Welt:''' Ahem... Miss Qingni, these are family matters, I'm not sure it's my place to comment. However, in my personal experience...
+:{{A|VO side2 yk1 welt 140.ogg}} '''Welt:''' ...becoming a parent often means we become obstinate. To erode a rock, one must be patient and persistent, like water.
+:{{A|VO side2 yk1 welt 141.ogg}} '''Welt:''' What I mean to say is, instead of trying to prove yourself suddenly, perhaps you could demonstrate your ability to look after yourself methodically, over time. Don't you think, Miss Qingni?
+:{{DIcon|Arrow}} Don't think I have the qualifications to advise here...
+:{{DIcon|Arrow}} When it comes to family stuff, I leave it to Mr. Yang...
+:{{A|VO side2 yk1 qingni 119.ogg}} '''Qingni:''' My mom is actually a reasonable person, but she gets unreasonable as soon as I mention flying.
+:{{A|VO side2 yk1 qingni 120.ogg}} '''Qingni:''' She hid my starskiff toys, dragged me away from the port when I stayed behind to count ships, forced me to study for ages... I did everything I could to work my way into the Sky-Faring Commission, but she used her authority to assign me a desk job.
+:{{A|VO side2 yk1 qingni 121.ogg}} '''Qingni:''' *sigh* Every time I walk along Starwatcher Avenue and look up at those ships flying freely across the sky, I feel empty inside...
+<pre>{
+	"$type": "RPG.GameCore.TriggerSound",
+	"SoundName": {
+		"Value": "Ev_sfx_xianzhou_yukong_hungry"
+	},
+	"EmitterType": "LocalPlayer"
+}</pre>
+:{{A|VO side2 yk1 welt 142.ogg}} '''Welt:''' ...
+:{{A|VO side2 yk1 qingni 122.ogg}} '''Qingni:''' Hehe, speaking of empty inside... So how were Mom's refreshments? Good?
+:{{DIcon|Arrow}} Yes! The aroma was incredible...
+:{{DIcon|Arrow}} Help yourself, I'm sure there's some leftover.
+:{{A|VO side2 yk1 qingni 123.ogg}} '''Qingni:''' *sigh* I've been so angry today I forgot to eat anything.
+:{{A|VO side2 yk1 qingni 124.ogg}} '''Qingni:''' How about this? My mom thanked you guys with refreshments, so I should do the same! Let me take you around Starskiff Haven &mdash; we can try the most authentic snack on the Luofu!
+----
 {{Dialogue End}}
 
-===Accompany Qingni through the streets to help clear her mind===
+===Accompany Qingni through the streets to help clear her mind{{subst:void|<!--602010109-->}}===
 {{Mission Description|type=companion|location=Central Starskiff Haven|update|Welt and you again meet Yukong's daughter, Qingni. She had just had a big fight with her mother, and is in a very bad mood. Help her clear her mind. After all, helping people solve problems is also a goal of the Astral Express.}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+----
+<pre>{
+	"$type": "RPG.GameCore.ActiveVirtualCamera",
+	"AreaName": "LevelArea_P10201_F10201001_G77",
+	"AnchorName": "Anchor7",
+	"IsActive": true,
+	"VCameraDitherMaxDistance": 1,
+	"CenterPosX": -1,
+	"CenterPosY": -1
+}</pre>
+:{{A|VO side2 yk1 welt 145.ogg}} '''Welt:''' Hehe, y'know, there are lot of "mung bean soda moments" in life &mdash; if you don't try you won't know. Unique experiences are often a product of risky choices.
+:{{A|VO side2 yk1 qingni 137.ogg}} '''Qingni:''' Ha, tell that to my mom. Her number one life lesson is: "You can't turn back once you enter the sky. Pilots are always dancing with death."
+:{{A|VO side2 yk1 qingni 138.ogg}} '''Qingni:''' I know she's right &mdash; I know being a fighter pilot is an exhausting and dangerous job... but I still want to fly among the stars &mdash; to fight for the Xianzhou Alliance across the vast galaxy...
+:{{A|VO side2 yk1 welt 146.ogg}} '''Welt:''' Why are you so dedicated to that idea, Miss Qingni?
+:{{A|VO side2 yk1 qingni 139.ogg}} '''Qingni:''' Have you heard of the foxian "birthfate" tradition? Soon after a child is born, we surround them with items that represent future destinies.
+:{{A|VO side2 yk1 qingni 140.ogg}} '''Qingni:''' If the child reaches for a jade abacus, then they'll grow up to be a diviner. If they reach for a sword, then they'll grow up to be a famous warrior. And if they reach for a toy starskiff...
+:{{DIcon|Arrow}} They'll become a toy salesman?
+::{{A|VO side2 yk1 qingni 141.ogg}} '''Qingni:''' What? No... It means they'll become a pilot.
+:{{DIcon|Arrow}} They'll become a starskiff pilot?
+::{{A|VO side2 yk1 qingni 142.ogg}} '''Qingni:''' That's right!
+:{{DIcon|Arrow}} So you reached for the starskiff?
+::{{A|VO side2 yk1 qingni 143.ogg}} '''Qingni:''' No, not me... My genius mom did...
+:{{A|VO side2 yk1 qingni 144.ogg}} '''Qingni:''' Mom reached for the starskiff and showed a natural talent for flying. General Jing Yuan recruited her to the Cloud Knights as soon as she was old enough &mdash; that's how she became a fighter pilot.
+:{{A|VO side2 yk1 qingni 145.ogg}} '''Qingni:''' Later, she achieved miracles... One time, she destroyed three beast ships in a hail of borisin anti-aircraft fire &mdash; like an arrow tearing through a thunderstorm... She also holds the Sky-Faring Commission records for speed and enemy vessels destroyed.
+:{{A|VO side2 yk1 qingni 146.ogg}} '''Qingni:''' I'm proud to be Madam Yukong's daughter. I've wanted to become a legend like her for as long as I can remember.
+:{{A|VO side2 yk1 welt 147.ogg}} '''Welt:''' I can imagine. A parent is often a child's first hero, and their image can influence their whole life.
+:{{A|VO side2 yk1 qingni 147.ogg}} '''Qingni:''' *sigh* She never told me any of those stories herself, and she hasn't piloted a starskiff since the Third Denizens of Abundance War. She doesn't even bring up her military achievements.
+:{{A|VO side2 yk1 qingni 148.ogg}} '''Qingni:''' I used to watch her fly when I was young... then one time, I stole a starskiff and I tried all kinds of difficult maneuvers. Turns out I was as talented as she was. Not only did I survive the flight, my landing was perfect.
+:{{A|VO side2 yk1 qingni 149.ogg}} '''Qingni:''' I remember feeling so happy when they took me to see Mom &mdash; there I was boasting about the flight, expecting her to laugh, pat my head, say "that's my girl" or something. But boy, I've never seen her so scary...
+:{{A|VO side2 yk1 qingni 150.ogg}} '''Qingni:''' I admit, I deserved to be punished &mdash; you can't let a kid get away with stealing a starskiff... but my Mom was angry about more than that. She was angry because I viewed her as a role model &mdash; because I had the same talent as her. I don't understand it.
+:{{A|VO side2 yk1 welt 148.ogg}} '''Welt:''' Parents never want their children to be in danger. I think I can understand Madam Yukong.
+:{{A|VO side2 yk1 qingni 151.ogg}} '''Qingni:''' But... flying is the only thing I want to do. I've already touched the sky.
+<pre>{
+	"$type": "RPG.GameCore.TriggerSound",
+	"SoundName": {
+		"Value": "Ev_sfx_xianzhou_phone_buzz"
+	},
+	"EmitterType": "LocalPlayer"
+}</pre>
+:{{Black Screen|Qingni receives a message and frowns as she reads it.}}
+<pre>{
+	"$type": "RPG.GameCore.ActiveVirtualCamera",
+	"AreaName": "LevelArea_P10201_F10201001_G77",
+	"AnchorName": "Anchor7",
+	"VCameraDitherMaxDistance": 1,
+	"CenterPosX": -1,
+	"CenterPosY": -1
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.ActiveVirtualCamera",
+	"AreaName": "LevelArea_P10201_F10201001_G77",
+	"AnchorName": "Anchor6",
+	"IsActive": true,
+	"VCameraDitherMaxDistance": 1,
+	"CenterPosX": -1,
+	"CenterPosY": -1
+}</pre>
+:{{A|VO side2 yk1 qingni 152.ogg}} '''Qingni:''' It's Mom's secretary, Miss Xikui... She just sent me a message &mdash; Mom lost one of her trinkets in Stargazer Navalia when she came to save me...
+:{{A|VO side2 yk1 qingni 153.ogg}} '''Qingni:''' Miss Xikui suggested I find the trinket and return it to Mom &mdash; said it might help me get back in her good books.
+:{{A|VO side2 yk1 welt 149.ogg}} '''Welt:''' In Stargazer Navalia? Mm... Let's go with you and have a look.
+:{{A|VO side2 yk1 qingni 154.ogg}} '''Qingni:''' Is it really okay to bother you two again?
+:{{DIcon|Arrow}} The goal of the Express Crew is to help other people.
+::{{A|VO side2 yk1 welt 150.ogg}} '''Welt:''' Indeed.
+::{{A|VO side2 yk1 qingni 155.ogg}} '''Qingni:''' You're too kind, benefactors. I'll treat you to something better than mung bean soda next time!
+:{{DIcon|Arrow}} Our way of saying thanks for the mung bean soda.
+::{{A|VO side2 yk1 welt 151.ogg}} '''Welt:''' ...
+::{{A|VO side2 yk1 qingni 156.ogg}} '''Qingni:''' S&mdash;Sorry! Please don't mention the mung bean soda again!
+<pre>{
+	"$type": "RPG.GameCore.ActiveVirtualCamera",
+	"AreaName": "LevelArea_P10201_F10201001_G77",
+	"AnchorName": "Anchor6",
+	"VCameraDitherMaxDistance": 1,
+	"CenterPosX": -1,
+	"CenterPosY": -1
+}</pre>
+----
+;(Obtain {{Item|Qingni's Memories|20|x=1}})
 {{Dialogue End}}
 
-===Head to Stargazer Navalia and search for Yukong's lost item===
+===Head to Stargazer Navalia and search for Yukong's lost item{{subst:void|<!--602010110-->}}===
 {{Mission Description|type=companion|location=Stargazer Navalia|update|When Yukong was rushing to rescue Qingni before, she seemed to have dropped something in Stargazer Navalia. Accompany Qingni to find it back. Since the relationship between the two of them is currently very tense, this can be the key to salvage the situation for the mother and daughter.}}
 {{Dialogue Start}}
-:{{tx}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+----
+:{{A|VO side2 yk1 qingni 157.ogg}} '''Qingni:''' The fight with the abominations was pretty chaotic... I think Mom's trinket would've dropped around here.
+:{{A|VO side2 yk1 welt 152.ogg}} '''Welt:''' Do you know what it looks like, Miss Qingni?
+:{{A|VO side2 yk1 qingni 158.ogg}} '''Qingni:''' Lemme think... It should be a little square thing? She's usually got something like that on her.
+:{{A|VO side2 yk1 welt 153 m.ogg}} {{A|VO side2 yk1 welt 153 f.ogg}} '''Welt:''' (Trailblazer), this is your area of expertise.
+:{{DIcon|Arrow}} Isn't combat my expertise?
+::{{A|VO side2 yk1 welt 154.ogg}} '''Welt:''' You're a great fighter, but your perception is even more impressive. No matter how well a treasure chest is hidden, you're always able to spot it...
+::{{A|VO side2 yk1 welt 155 m.ogg}} {{A|VO side2 yk1 welt 155 f.ogg}} '''Welt:''' ...so, (Trailblazer), when it comes to finding a needle in a haystack, is there really anyone more capable than yourself?
+:{{DIcon|Arrow}} Isn't solving puzzles my expertise?
+::{{A|VO side2 yk1 welt 156.ogg}} '''Welt:''' Well, isn't finding a needle in a haystack a type of puzzle-solving?
+::{{A|VO side2 yk1 welt 157.ogg}} '''Welt:''' Your powers of perception are impressive &mdash; no matter how well a treasure chest is hidden, you're always able to spot it... I think you're the right person for the job.
+:{{DIcon|Arrow}} Who do you think I am, Diting!?
+::{{A|VO side2 yk1 welt 158.ogg}} '''Welt:''' Your powers of perception are impressive, that's all &mdash; I think you're the right person for the job.
+----
 {{Dialogue End}}
 
-===Control the cycrane to search for Yukong's missing items===
+===Control the cycrane to search for Yukong's missing items{{subst:void|<!--602010111-->}}===
 {{Dialogue Start}}
-:{{tx}}
+
+;(Obtain {{Item|Divine Arrow Embers|20|x=1}})
+;(Unused &mdash; OpenDrone60201011)
+<pre>{
+	"$type": "RPG.GameCore.SetMissionWayPoint",
+	"SubMissionID": 602010111,
+	"OverideMissionWayPointType": true,
+	"MissionWayPointType": "Anchor",
+	"OverideWayPointFloorID": true,
+	"WayPointFloorID": 20212001,
+	"OverideWayPointGroupID": true,
+	"WayPointGroupID": 98,
+	"OverideWayPointEntityID": true,
+	"WayPointEntityID": 8,
+	"OverideWayPointShowRangeMin": true,
+	"WayPointShowRangeMin": -1,
+	"OverideMapWaypointRange": true,
+	"MapWaypointRange": 20
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.ShowWaypointByProp",
+	"GroupID": {
+		"fixedValue": {
+			"Value": 98
+		}
+	},
+	"InstanceID": {
+		"fixedValue": {
+			"Value": 300001
+		}
+	},
+	"MaxRange": 10,
+	"IconPath": "SpriteOutput/MapPics/NaviIcons/IconMapPlay6.png",
+	"OnNameBoard": true
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.ShowWaypointByProp",
+	"GroupID": {
+		"fixedValue": {
+			"Value": 98
+		}
+	},
+	"InstanceID": {
+		"fixedValue": {
+			"Value": 300002
+		}
+	},
+	"MaxRange": 10,
+	"IconPath": "SpriteOutput/MapPics/NaviIcons/IconMapPlay6.png",
+	"OnNameBoard": true
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.ShowWaypointByProp",
+	"GroupID": {
+		"fixedValue": {
+			"Value": 98
+		}
+	},
+	"InstanceID": {
+		"fixedValue": {
+			"Value": 300004
+		}
+	},
+	"MaxRange": 10,
+	"IconPath": "SpriteOutput/MapPics/NaviIcons/IconMapPlay6.png",
+	"OnNameBoard": true
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.ShowWaypointByProp",
+	"GroupID": {
+		"fixedValue": {
+			"Value": 98
+		}
+	},
+	"InstanceID": {
+		"fixedValue": {
+			"Value": 300006
+		}
+	},
+	"MaxRange": 10,
+	"IconPath": "SpriteOutput/MapPics/NaviIcons/IconMapPlay6.png",
+	"OnNameBoard": true
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.ShowWaypointByProp",
+	"GroupID": {
+		"fixedValue": {
+			"Value": 98
+		}
+	},
+	"InstanceID": {
+		"fixedValue": {
+			"Value": 300007
+		}
+	},
+	"MaxRange": 10,
+	"IconPath": "SpriteOutput/MapPics/NaviIcons/IconMapPlay6.png",
+	"OnNameBoard": true
+}</pre>
+
+;(Unused &mdash; ClosePhotoGraph1)
+<pre>{
+	"$type": "RPG.GameCore.PhotoGraphShowIdentifyResult",
+	"IsShowToast": true,
+	"ToastText": {
+		"Hash": 1496533704
+	},
+	"IsShowAim": true
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.SwitchPhotoGraphMode",
+	"ExitWhenPreViewDialogFinish": true,
+	"IdentifyRadiusOverride": {},
+	"InitFov": -1
+}</pre>
 {{Dialogue End}}
 
-===Head to the Seat of Divine Foresight and ask Jing Yuan about Yukong's past===
+===Head to the Seat of Divine Foresight and ask Jing Yuan about Yukong's past{{subst:void|<!--602010112-->}}===
 {{Mission Description|type=companion|location=Seat of Divine Foresight|update|Unwittingly, you and Welt still got tied up in Yukong's family affairs. Qingni wants to know more about her mother's past, so she wanted to ask someone who knew. After giving it some thought, it seems that General Jing Yuan is the most suitable candidate.}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Obtain {{Item|Jing Yuan's Memories|20|x=1}})
+
+;(Talk to Jing Yuan)
+----
+:{{A|VO side2 yk1 jingyuan 101 m.ogg}} {{A|VO side2 yk1 jingyuan 101 f.ogg}} '''Jing Yuan:''' Mr. Yang, and (Trailblazer)? What brings you to the Seat of Divine Foresight this time?
+:{{A|VO side2 yk1 welt 174.ogg}} '''Welt:''' It's nothing urgent. We were hoping to... understand Helm Master Yukong a little better.
+:{{A|VO side2 yk1 jingyuan 102.ogg}} '''Jing Yuan:''' Yukong? I heard an office worker from the Sky-Faring Commission flew a starskiff to assist in the present crisis, but ran into trouble herself. She was only saved thanks to a couple of travelers... On behalf of the Luofu, you have my thanks, once again.
+:{{A|VO side2 yk1 jingyuan 103.ogg}} '''Jing Yuan:''' The Seat of Divine Foresight heard that Yukong's seldom-seen but often-feared temper was on display. I believe the two of you were caught between mother and daughter?
+:{{A|VO side2 yk1 welt 175.ogg}} '''Welt:''' ...We heard that Helm Master Yukong was an outstanding pilot, but that she refuses to let her daughter embark on the same career...
+:{{A|VO side2 yk1 jingyuan 104.ogg}} '''Jing Yuan:''' Yukong herself is best placed to answer such questions...
+:{{A|VO side2 yk1 jingyuan 105.ogg}} '''Jing Yuan:''' ...but naturally, you are here because you fear that Helm Master Yukong would decline to answer.
+:{{A|VO side2 yk1 jingyuan 106.ogg}} '''Jing Yuan:''' If you wish to dispel Miss Qingni's curiosity, perhaps we can take a small step back from the topic at hand. What do you wish to know about Yukong the pilot?
+<pre>{
+	"$type": "RPG.GameCore.SelectMissionItem",
+	"OnlyPerformance": true,
+	"ItemIDList": [
+		140219,
+		140220
+	],
+	"ItemHiddenIDList": [],
+	"ItemSelect": [
+		{
+			"Item1": 140219,
+			"TriggerCustomString": "JinYuanOption2"
+		},
+		{
+			"Item1": 140220,
+			"TriggerCustomString": "JinYuanOption1"
+		}
+	],
+	"SlotNum": 1,
+	"InfoText": {
+		"Hash": 524940953
+	},
+	"SimpleTalk": {
+		"TextSpeed": 20,
+		"ProtectTime": 0.8
+	},
+	"OnSubmitCancel": [
+		{
+			"$type": "RPG.GameCore.TriggerCustomString",
+			"CustomString": {
+				"Value": "EndPerformance1"
+			}
+		}
+	]
+}</pre>
+;(Unused &mdash; JinYuanOption1)
+:{{A|VO side2 yk1 jingyuan 107.ogg}} '''Jing Yuan:''' This is... a divine object from the Reignbow Arbiter? Where did you find this?
+::{{DIcon|Arrow}} Inside a trinket belonging to Yukong.
+:::{{A|VO side2 yk1 welt 176.ogg}} '''Welt:''' This object has been stored inside Helm Master Yukong's personal trinket all along &mdash; Miss Qingni lent it to us.
+::{{DIcon|Arrow}} Qingni gave it to us.
+:::{{A|VO side2 yk1 welt 177.ogg}} '''Welt:''' This object has been stored inside Helm Master Yukong's personal trinket all along &mdash; Miss Qingni lent it to us.
+::{{DIcon|Arrow}} ...Picked it up off the road.
+:::{{A|VO side2 yk1 jingyuan 108.ogg}} '''Jing Yuan:''' Which road? I should head there myself &mdash; a divine object like this possesses a market value of at least 20,000 strales.
+:::{{A|VO side2 yk1 welt 178 m.ogg}} {{A|VO side2 yk1 welt 178 f.ogg}} '''Welt:''' ...{{MC|f=She's|m=He's}} kidding. This object has been stored inside Helm Master Yukong's personal trinket all along &mdash; Miss Qingni lent it to us.
+::{{A|VO side2 yk1 welt 179.ogg}} '''Welt:''' She thought it might be a way to find out more about Madam Yukong's past, and... why she no longer flies.
+::{{A|VO side2 yk1 jingyuan 109.ogg}} '''Jing Yuan:''' This object is no ordinary trinket. It has borne witness to blood and tears.
+::{{A|VO side2 yk1 jingyuan 110.ogg}} '''Jing Yuan:''' I'm sure you're both familiar with the Xianzhou's long galactic hunt, but have you heard of the Denizens of Abundance Wars? As the Xianzhou has continued to cleanse the universe of immortal abominations, so too has the Abundance Axis succeeded in breaching our defensive lines. They pushed the Xianzhou to the brink of disaster.
+::{{A|VO side2 yk1 jingyuan 111.ogg}} '''Jing Yuan:''' Thirty years ago, the Xianzhou Yaoqing and Fanghu were besieged by our enemies. Even in the long history of warfare between the Xianzhou Alliance and the Denizens of Abundance, that air battle was one of the most tragic.
+::{{A|VO side2 yk1 jingyuan 112.ogg}} '''Jing Yuan:''' We were greatly outnumbered by the Abominations of Abundance. Almost a million fighter pilots fought in the bitter battle. Those who survived numbered no more than a hundred thousand.
+::{{A|VO side2 yk1 jingyuan 113.ogg}} '''Jing Yuan:''' Had the Reignbow Arbiter not descended and destroyed the enemy's assault with their Sky-Shattering Lux Arrow, who's to say whether the Luofu would still be here today?
+::{{A|VO side2 yk1 jingyuan 114.ogg}} '''Jing Yuan:''' Such divine objects were forged from the embers that the Arbiter's divine arrow left behind. For the survivors, these relics contain the blood of their comrades, the ashes of their enemies, and the dust of their memories...
+::{{A|VO side2 yk1 jingyuan 115.ogg}} '''Jing Yuan:''' Yukong is a survivor of that war. Her best friend, Caiyi, perished on the battlefield.
+::----
+::{{A|VO side2 yk1 welt 180.ogg}} '''Welt:''' I don't have any other questions. Thank you, general.
+::{{A|VO side2 yk1 jingyuan 126.ogg}} '''Jing Yuan:''' I do not wish to speculate on the reason behind Helm Master Yukong's reluctance to fly, nor do I want to open up old wounds.
+::{{A|VO side2 yk1 jingyuan 127.ogg}} '''Jing Yuan:''' However, it's difficult to discard one's past. Yukong and Caiyi trusted each other with their lives. The helm master will have strong memories of that time.
+::{{A|VO side2 yk1 jingyuan 128.ogg}} '''Jing Yuan:''' Perhaps it is not my place to say, but I believe Qingni has the right to know about the past... as the past is starting to affect her future.
+::{{DIcon|Arrow}} Thank you, general.
+::{{A|VO side2 yk1 welt 181.ogg}} '''Welt:''' Thank you, general. We apologize for taking up your time with such triviality.
+::{{A|VO side2 yk1 jingyuan 129.ogg}} '''Jing Yuan:''' Mr. Yang, you jest. How can harmony between parent and child constitute a triviality? If you ask me, the mountains of documents in the Seat of Divine Foresight are the only triviality around here.
+::{{A|VO side2 yk1 welt 182.ogg}} '''Welt:''' Mm, we'll take our leave.
+::{{A|VO side2 yk1 welt 183 m.ogg}} {{A|VO side2 yk1 welt 183 f.ogg}} '''Welt:''' Let's go, (Trailblazer). We should head to Starskiff Haven and find Qingni.
+::----
+
+;(Unused &mdash; JinYuanOption2)
+:{{A|VO side2 yk1 jingyuan 116.ogg}} '''Jing Yuan:''' Did Qingni tell you any of this?
+::{{A|VO side2 yk1 jingyuan 117.ogg}} '''Jing Yuan:''' Hehe, it all serves to remind me... A long time ago, a young foxian girl, charged by the Knights with a high-speed flight violation, was brought before me as punishment... now she's the Madam Helm Master &mdash; my equal.
+::{{A|VO side2 yk1 jingyuan 118.ogg}} '''Jing Yuan:''' If I were to turn back the sands of time and try to convince my past self that the little girl in front of me would one day become a wise and experienced helm master... I would probably never have believed it.
+::{{A|VO side2 yk1 jingyuan 119.ogg}} '''Jing Yuan:''' The Yukong of the past was nothing like she is now &mdash; spending her days surrounded by documents at her desk.
+::{{A|VO side2 yk1 jingyuan 120.ogg}} '''Jing Yuan:''' She was a flaming wind. The only one who could ever calm her... was her comrade.
+::{{DIcon|Arrow}} Comrade?
+::{{A|VO side2 yk1 jingyuan 121.ogg}} '''Jing Yuan:''' Yes. Large fighter starskiffs need to be operated in pairs. One pilot takes the helm, the other controls the turrets.
+::{{A|VO side2 yk1 jingyuan 122.ogg}} '''Jing Yuan:''' The legend of the ace fighter pilot is incomplete without the ace gunner. Yukong's partner was Caiyi.
+::{{A|VO side2 yk1 jingyuan 123.ogg}} '''Jing Yuan:''' Both at the controls and behind the turret &mdash; Caiyi was like a cold blade... efficient, decisive, unfeeling when she had to be.
+::{{A|VO side2 yk1 jingyuan 124.ogg}} '''Jing Yuan:''' It's hard to imagine such contrasting personalities working in perfect harmony... As I mentioned, the campaign inflicted heavy losses on the Xianzhou air force...
+:<pre>{
+	"$type": "RPG.GameCore.SelectMissionItem",
+	"OnlyPerformance": true,
+	"ItemIDList": [
+		140219,
+		140220
+	],
+	"ItemHiddenIDList": [],
+	"ItemSelect": [
+		{
+			"Item1": 140219,
+			"TriggerCustomString": "JinYuanOption2"
+		},
+		{
+			"Item1": 140220,
+			"TriggerCustomString": "JinYuanOption1"
+		}
+	],
+	"SlotNum": 1,
+	"InfoText": {
+		"Hash": 524940953
+	},
+	"SimpleTalk": {
+		"TextSpeed": 20,
+		"ProtectTime": 0.8
+	},
+	"OnSubmitCancel": [
+		{
+			"$type": "RPG.GameCore.TriggerCustomString",
+			"CustomString": {
+				"Value": "EndPerformance1"
+			}
+		}
+	]
+}</pre>
+
+;(Unused &mdash; EndPerformance1)
+:----
 {{Dialogue End}}
 
-===Search for the location of Yukong's personal archive in the calculation device===
-{{Mission Description|type=companion|location=Palace of Astrum|update|To know more about Yukong's past, you would have to go to the Palace of Astrum sooner or later. Look around with Qingni. The past she will witness here may change her life.}}
-{{Dialogue Start}}
-:{{tx}}
-{{Dialogue End}}
-
-===Search for information related to Yukong's past===
-{{Dialogue Start}}
-:{{tx}}
-{{Dialogue End}}
-
-===Eliminate the Abominations of Abundance surrounding the trapped victim===
-{{Mission Description|type=companion|location=Stargazer Navalia|update|You find the crashed pilot. She is trapped among a group of abominations, and her situation is extremely dire. Quickly, save her!}}
-{{Dialogue Start}}
-:{{tx}}
-{{Dialogue End}}
-
-===Set out to rescue the trapped victim===
-{{Dialogue Start}}
-:{{tx}}
-{{Dialogue End}}
-
-===Head to the Palace of Astrum and meet up with Qingni===
+===Head to the Palace of Astrum and meet up with Qingni{{subst:void|<!--602010118-->}}===
 {{Mission Description|type=companion|location=Palace of Astrum|update|You learn about Yukong's past from General Jing Yuan. Perhaps she was terrified all along that her daughter would end up the same way her best friend did. In any case, bring this story to Qingni and let her make her decision.}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Qingni)
+----
+:{{A|VO side2 yk1 qingni 175.ogg}} '''Qingni:''' You're here. My mom... isn't in a great mood. She went for a walk.
+:{{DIcon|Arrow}} Isn't in a great mood?
+::{{A|VO side2 yk1 qingni 176.ogg}} '''Qingni:''' Mm-hmm... probably because of me...
+:{{DIcon|Arrow}} She skipped work?
+::{{A|VO side2 yk1 qingni 177.ogg}} '''Qingni:''' Hehe, my mom isn't the irresponsible type &mdash; she only skips work if she's managed to delegate everything.
+:{{A|VO side2 yk1 welt 184.ogg}} '''Welt:''' You two are very similar.
+:{{A|VO side2 yk1 qingni 178.ogg}} '''Qingni:''' Well, we do both like to take a walk after a fight. The only difference is that I come to this side of Starskiff Haven, and she heads to the other... That way we don't bump into each other.
+:{{DIcon|Arrow}} It's actually kind of cute...
+::{{A|VO side2 yk1 qingni 179.ogg}} '''Qingni:''' Really? I think it's silly.
+:{{DIcon|Arrow}} That's a bit childish...
+::{{A|VO side2 yk1 qingni 180.ogg}} '''Qingni:''' Yeah, I agree.
+:{{DIcon|Arrow}} That's a bit silly...
+::{{A|VO side2 yk1 qingni 181.ogg}} '''Qingni:''' You can say that again.
+:{{A|VO side2 yk1 qingni 182.ogg}} '''Qingni:''' Anyway... did you find anything out from General Jing Yuan?
+----
+:{{A|VO side2 yk1 welt 185.ogg}} '''Welt:''' Did Helm Master Yukong never bring this up with you?
+:{{A|VO side2 yk1 qingni 183.ogg}} '''Qingni:''' *sigh* I was always curious about her past, but she either dodged my questions or pretended not to hear them.
+:{{A|VO side2 yk1 qingni 184.ogg}} '''Qingni:''' In the end, I realized she probably experienced something that left a scar... a scar that never fully healed. I never asked her again.
+:{{DIcon|Arrow}} She was afraid of you ending up like her friend...
+::{{A|VO side2 yk1 welt 186.ogg}} '''Welt:''' Indeed. That's probably why Yukong was never willing to fly again after the battle, and why she forbids you from flying.
+:{{DIcon|Arrow}} Even a flying ace can get into trouble...
+::{{A|VO side2 yk1 welt 187.ogg}} '''Welt:''' Yes, Yukong doesn't want you to feel the pressure of her name. Besides, reputation and talent count for something, but you need luck on the battlefield.
+:{{A|VO side2 yk1 qingni 185.ogg}} '''Qingni:''' So, she doesn't want me to fly because she remembers the pain of losing her friend... and she thinks that my talent makes it more likely that she'll lose me in the same way?
+:{{A|VO side2 yk1 welt 188.ogg}} '''Welt:''' I can't guarantee that's what she's thinking, Miss Qingni. You should talk with her yourself.
+:{{A|VO side2 yk1 qingni 186.ogg}} '''Qingni:''' Hmm... You're right, Mr. Yang... but I still have something else to check first. This past that General Jing Yuan mentioned is probably archived in the Palace of Astrum.
+:{{A|VO side2 yk1 qingni 187.ogg}} '''Qingni:''' I remember watching her handle a document with great care before she filed it away... it looked like a diary.
+:{{A|VO side2 yk1 welt 189.ogg}} '''Welt:''' Do you still remember where it was filed, Miss Qingni?
+:{{A|VO side2 yk1 qingni 188.ogg}} '''Qingni:''' Vaguely. But there are so many files stored in the Sky-Faring Commission. Could I ask you benefactors to look for it with me...?
+:{{A|VO side2 yk1 welt 190.ogg}} '''Welt:''' Hmm... A couple of outworlders going through Sky-Faring Commission files isn't a good look... I'm afraid we can only accompany you, Miss Qingni &mdash; you'll need to do the searching yourself.
+:{{A|VO side2 yk1 qingni 189.ogg}} '''Qingni:''' Of course, you're right, sorry!
+----
+<pre>{
+	"$type": "RPG.GameCore.PlayMessage",
+	"MessageSectionID": 1211501,
+	"ShowNotice": true
+}</pre>
 {{Dialogue End}}
 
-===Meet up with Welt===
+===Search for the location of Yukong's personal archive in the calculation device{{subst:void|<!--602010113-->}}===
+{{Mission Description|type=companion|location=Palace of Astrum|update|To know more about Yukong's past, you would have to go to the Palace of Astrum sooner or later. Look around with Qingni. The past she will witness here may change her life.}}
+{{Dialogue Start}}
+
+;(Unused &mdash; CheckComputer1)
+:This calculation device is running a voyage simulation. It shows that it needs two more dual-hours to simulate the voyage from the Luofu to the floating city of Cordelia.
+::{{A|VO side2 yk1 welt 191.ogg}} '''Welt:''' It seems like this device is handling some important procedures. Let's leave it alone.
+
+;(Unused &mdash; CheckComputer2)
+:The desktop background on this calculation device is a line of floating calligraphy &mdash; "Yanming's work station, unauthorized personnel prohibited."
+::{{A|VO side2 yk1 qingni 190.ogg}} '''Qingni:''' Mr. Yanming is a stickler for rules &mdash; I don't wanna annoy him. Let's go to a different device.
+
+;(Unused &mdash; CheckComputer3)
+:{{A|VO side2 yk1 qingni 193.ogg}} '''Qingni:''' We can use this one! Okay... hmm... lemme see &mdash; helm masters, personal archive... got it! Let's go take a look.
+::----
+
+;(Unused &mdash; CheckComputer4)
+:{{A|VO side2 yk1 officerC 101.ogg}} '''Coping Sky-Faring Commission Staff Member:''' I love work. I love overtime. I love work. I love overtime. I love work. I love overtime. I love work. I love overtime.
+::{{A|VO side2 yk1 qingni 192.ogg}} '''Qingni:''' Umm... let's leave her alone...
+
+;(Unused &mdash; CheckComputer6)
+:{{A|VO side2 yk1 officerB 101.ogg}} '''Lazy Sky-Faring Commission Staff Member:''' Uhh... can I help you? I&mdash;I know what it looks like, but I'm using Celestial Jade to... improve the algorithm! I&mdash;I'm working, I swear!
+::{{A|VO side2 yk1 welt 193.ogg}} '''Welt:''' Uh sorry... Sorry, we'll get going.
+{{Dialogue End}}
+
+===Search for information related to Yukong's past{{subst:void|<!--602010114-->}}===
+{{Dialogue Start}}
+
+;(Obtain {{Item|Yukong's Exchange Diary|20|x=1}})
+{{Dialogue End}}
+
+===Ask Yanming about Yukong's past{{subst:void|<!--602010103-->}}===
+{{Dialogue Start}}
+----
+<pre>{
+	"$type": "RPG.GameCore.ActiveVirtualCamera",
+	"AreaName": "LevelArea_P10201_F10201002_G33",
+	"AnchorName": "Anchor3",
+	"IsActive": true,
+	"VCameraDitherMaxDistance": 1,
+	"CenterPosX": -1,
+	"CenterPosY": -1
+}</pre>
+:{{A|VO side2 yk1 yanming 101.ogg}} '''Yanming:''' What is the meaning of this? The Helm Master's daughter, bringing outworlders in to sneak around...?
+:{{A|VO side2 yk1 yanming 102.ogg}} '''Yanming:''' What do you have in your hands? Let me see... *gasp* Madam Yukong's diary!? The nerve!
+:{{A|VO side2 yk1 yanming 103.ogg}} '''Yanming:''' How dare you read Madam Yukong's personal diary! And with her daughter, too!? By the Arbiter, you two are in for a&mdash;
+:{{A|VO side2 yk1 qingni 201.ogg}} '''Qingni:''' Mr. Yanming, please, calm down &mdash; let us explain...
+----
+:{{A|VO side2 yk1 yanming 104.ogg}} '''Yanming:''' I see... Qingni, I know Madam Yukong's position on you becoming a pilot is tough for you to accept, but she has her own concerns...
+:{{A|VO side2 yk1 qingni 202.ogg}} '''Qingni:''' I understand, Mr. Yanming... but now, compared to becoming a fighter pilot, I'm more interested in knowing what my Mom went through...
+:{{A|VO side2 yk1 qingni 203.ogg}} '''Qingni:''' I want to know what happened... how she went from ace pilot to helm master.
+:{{A|VO side2 yk1 yanming 105.ogg}} '''Yanming:''' *sigh* I've been here for a long time, Qingni. If there's something you wish to know, just ask... but don't go rummaging around &mdash; that's a bad habit.
+<pre>{
+	"$type": "RPG.GameCore.SelectMissionItem",
+	"SubMissionID": 602010114,
+	"OnlyPerformance": true,
+	"ItemIDList": [
+		140220,
+		140221,
+		140222
+	],
+	"ItemHiddenIDList": [],
+	"ItemSelect": [
+		{
+			"Item1": 140220,
+			"TriggerCustomString": "OptionYanMing2"
+		},
+		{
+			"Item1": 140221,
+			"TriggerCustomString": "OptionYanMing4"
+		},
+		{
+			"Item1": 140222,
+			"TriggerCustomString": "OptionYanMing3"
+		}
+	],
+	"SlotNum": 1,
+	"InfoText": {
+		"Hash": 524940953
+	},
+	"SimpleTalk": {
+		"TextSpeed": 20,
+		"ProtectTime": 0.8
+	},
+	"OnSubmitCancel": [
+		{
+			"$type": "RPG.GameCore.TriggerCustomString",
+			"CustomString": {
+				"Value": "End01"
+			}
+		}
+	]
+}</pre>
+
+;(Talk to Yanming)
+----
+<pre>{
+	"$type": "RPG.GameCore.ActiveVirtualCamera",
+	"AreaName": "LevelArea_P10201_F10201002_G33",
+	"AnchorName": "Anchor3",
+	"IsActive": true,
+	"VCameraDitherMaxDistance": 1,
+	"CenterPosX": -1,
+	"CenterPosY": -1
+}</pre>
+:{{A|VO side2 yk1 yanming 101.ogg}} '''Yanming:''' What is the meaning of this? The Helm Master's daughter, bringing outworlders in to sneak around...?
+:{{A|VO side2 yk1 yanming 102.ogg}} '''Yanming:''' What do you have in your hands? Let me see... *gasp* Madam Yukong's diary!? The nerve!
+:{{A|VO side2 yk1 yanming 103.ogg}} '''Yanming:''' How dare you read Madam Yukong's personal diary! And with her daughter, too!? By the Arbiter, you two are in for a&mdash;
+:{{A|VO side2 yk1 qingni 201.ogg}} '''Qingni:''' Mr. Yanming, please, calm down &mdash; let us explain...
+----
+:{{A|VO side2 yk1 yanming 104.ogg}} '''Yanming:''' I see... Qingni, I know Madam Yukong's position on you becoming a pilot is tough for you to accept, but she has her own concerns...
+:{{A|VO side2 yk1 qingni 202.ogg}} '''Qingni:''' I understand, Mr. Yanming... but now, compared to becoming a fighter pilot, I'm more interested in knowing what my Mom went through...
+:{{A|VO side2 yk1 qingni 203.ogg}} '''Qingni:''' I want to know what happened... how she went from ace pilot to helm master.
+:{{A|VO side2 yk1 yanming 105.ogg}} '''Yanming:''' *sigh* I've been here for a long time, Qingni. If there's something you wish to know, just ask... but don't go rummaging around &mdash; that's a bad habit.
+<pre>{
+	"$type": "RPG.GameCore.SelectMissionItem",
+	"SubMissionID": 602010114,
+	"OnlyPerformance": true,
+	"ItemIDList": [
+		140220,
+		140221,
+		140222
+	],
+	"ItemHiddenIDList": [],
+	"ItemSelect": [
+		{
+			"Item1": 140220,
+			"TriggerCustomString": "OptionYanMing2"
+		},
+		{
+			"Item1": 140221,
+			"TriggerCustomString": "OptionYanMing4"
+		},
+		{
+			"Item1": 140222,
+			"TriggerCustomString": "OptionYanMing3"
+		}
+	],
+	"SlotNum": 1,
+	"InfoText": {
+		"Hash": 524940953
+	},
+	"SimpleTalk": {
+		"TextSpeed": 20,
+		"ProtectTime": 0.8
+	},
+	"OnSubmitCancel": [
+		{
+			"$type": "RPG.GameCore.TriggerCustomString",
+			"CustomString": {
+				"Value": "End01"
+			}
+		}
+	]
+}</pre>
+;(Unused &mdash; OptionYanMing2)
+:{{A|VO side2 yk1 yanming 115.ogg}} '''Yanming:''' This divine object... If I remember correctly, it's the one Madam Yukong always carries with her?
+::{{A|VO side2 yk1 yanming 116.ogg}} '''Yanming:''' I heard the war that forged this object was only won thanks to the Reignbow Arbiter's blessing. If Madam Yukong still carries objects from that pilot, then perhaps she still longs for the sky...
+::{{A|VO side2 yk1 qingni 205.ogg}} '''Qingni:''' If Mom still longs for the sky, then why does she no longer fly?
+::{{A|VO side2 yk1 yanming 117.ogg}} '''Yanming:''' Perhaps Caiyi's passing was too much for her. You shouldn't be asking me about this &mdash; ask your mother.
+:<pre>{
+	"$type": "RPG.GameCore.SelectMissionItem",
+	"SubMissionID": 602010114,
+	"OnlyPerformance": true,
+	"ItemIDList": [
+		140220,
+		140221,
+		140222
+	],
+	"ItemHiddenIDList": [],
+	"ItemSelect": [
+		{
+			"Item1": 140220,
+			"TriggerCustomString": "OptionYanMing2"
+		},
+		{
+			"Item1": 140221,
+			"TriggerCustomString": "OptionYanMing4"
+		},
+		{
+			"Item1": 140222,
+			"TriggerCustomString": "OptionYanMing3"
+		}
+	],
+	"SlotNum": 1,
+	"InfoText": {
+		"Hash": 524940953
+	},
+	"SimpleTalk": {
+		"TextSpeed": 20,
+		"ProtectTime": 0.8
+	},
+	"OnSubmitCancel": [
+		{
+			"$type": "RPG.GameCore.TriggerCustomString",
+			"CustomString": {
+				"Value": "End01"
+			}
+		}
+	]
+}</pre>
+
+;(Unused &mdash; OptionYanMing3)
+:{{A|VO side2 yk1 yanming 118.ogg}} '''Yanming:''' No, this isn't something I should read. Don't show it to me...
+::{{DIcon|Arrow}} C'mon, we've both had a look.
+:::{{A|VO side2 yk1 yanming 119.ogg}} '''Yanming:''' Just listen to yourself... I suppose you think if you ate your shoes I'd follow suit?
+:::{{A|VO side2 yk1 yanming 120.ogg}} '''Yanming:''' Just ask some other questions. Ones I can answer.
+::{{DIcon|Arrow}} Never mind. Let's talk about something else.
+:::{{A|VO side2 yk1 yanming 121.ogg}} '''Yanming:''' Yes... Just ask some other questions. Ones I can answer.
+::{{DIcon|Arrow}} Yukong won't know.
+:::{{A|VO side2 yk1 yanming 122.ogg}} '''Yanming:''' She won't, but I have my principles.
+:::{{A|VO side2 yk1 yanming 123.ogg}} '''Yanming:''' Just ask some other questions. Ones I can answer.
+:<pre>{
+	"$type": "RPG.GameCore.SelectMissionItem",
+	"SubMissionID": 602010114,
+	"OnlyPerformance": true,
+	"ItemIDList": [
+		140220,
+		140221,
+		140222
+	],
+	"ItemHiddenIDList": [],
+	"ItemSelect": [
+		{
+			"Item1": 140220,
+			"TriggerCustomString": "OptionYanMing2"
+		},
+		{
+			"Item1": 140221,
+			"TriggerCustomString": "OptionYanMing4"
+		},
+		{
+			"Item1": 140222,
+			"TriggerCustomString": "OptionYanMing3"
+		}
+	],
+	"SlotNum": 1,
+	"InfoText": {
+		"Hash": 524940953
+	},
+	"SimpleTalk": {
+		"TextSpeed": 20,
+		"ProtectTime": 0.8
+	},
+	"OnSubmitCancel": [
+		{
+			"$type": "RPG.GameCore.TriggerCustomString",
+			"CustomString": {
+				"Value": "End01"
+			}
+		}
+	]
+}</pre>
+
+;(Unused &mdash; OptionYanMing4)
+:{{A|VO side2 yk1 yanming 106.ogg}} '''Yanming:''' Miss Caiyi? ...I remember her. She was an ace gunner &mdash; many people wanted to be her flight partner.
+::{{A|VO side2 yk1 yanming 107.ogg}} '''Yanming:''' Her husband, Mr. Guangyuan, was a pilot. They manned the same skiff, and were the envy of many...
+::{{A|VO side2 yk1 yanming 108.ogg}} '''Yanming:''' ...but when it came to pilots, your mother was the best match for her &mdash; they flew together all the time. Even Mr. Guangyuan couldn't match their numbers. After he passed away in battle, Caiyi rarely teamed up with anyone except your mother.
+::{{A|VO side2 yk1 yanming 109.ogg}} '''Yanming:''' *sigh* It was tragic when Caiyi died soon after. That's the life of a pilot &mdash; no one knows which flight will be their last.
+::{{A|VO side2 yk1 yanming 110.ogg}} '''Yanming:''' Caiyi's death was a big blow to Madam Yukong. After the battle, she refused to turn in Caiyi's possessions as per regulations. She kept them locked away &mdash; occasionally taking them out to admire.
+::{{DIcon|Arrow}} I didn't think you'd know this many details, Mr. Yanming...
+:::{{A|VO side2 yk1 yanming 111.ogg}} '''Yanming:''' Nonsense. As a Xianzhou native, I've lived long enough to remember more than the foxian pilots could ever hope to.
+:::{{A|VO side2 yk1 yanming 112.ogg}} '''Yanming:''' In the end, all the ace pilots perished. The only thing I can do is to remember them and ensure they are not forgotten too soon.
+::{{DIcon|Arrow}} Why do you pay so much attention to Yukong?
+:::{{A|VO side2 yk1 yanming 113.ogg}} '''Yanming:''' Well, I... As her subordinate, surely I should be concerned with her mental well-being?
+:::{{A|VO side2 yk1 yanming 114.ogg}} '''Yanming:''' If Madam Yukong is unhappy, how can I be happy? I mean to say, how can I be happy in my duties to her?
+::{{A|VO side2 yk1 qingni 204.ogg}} '''Qingni:''' Where are Miss Caiyi's possessions stored?
+::{{A|VO side2 yk1 qingni 206.ogg}} '''Qingni:''' Thanks for telling us all this, Mr. Yanming.
+::{{A|VO side2 yk1 yanming 124.ogg}} '''Yanming:''' You're welcome... I know this is important to you...
+::----
+::{{A|VO side2 yk1 yanming 125.ogg}} '''Yanming:''' ...I suppose you're going to go through Madam Yukong's office desk next?
+::{{A|VO side2 yk1 yanming 126.ogg}} '''Yanming:''' ...I can understand your position, Qingni. I'll take my leave and pretend I didn't see anything. After all, it's an unwritten rule that subordinates should be absent when their superior's privacy is exposed.
+::{{A|VO side2 yk1 yanming 127.ogg}} '''Yanming:''' Please, don't tell your mother that you saw me today!
+::{{A|VO side2 yk1 qingni 207.ogg}} '''Qingni:''' Got it.
+::{{DIcon|Arrow}} Thank you, Mr. Yanming!
+::{{DIcon|Arrow}} So much for Sky-Faring Commission security.
+:::{{A|VO side2 yk1 yanming 128.ogg}} '''Yanming:''' Ensuring the security of public assets and order is the duty of every Xianzhou citizen.
+::{{DIcon|Arrow}} Don't let us catch you nosying around here again!
+:::{{A|VO side2 yk1 yanming 129.ogg}} '''Yanming:''' Hehe, you're a cheeky one... You're lucky I have a sense of humor.
+::{{A|VO side2 yk1 yanming 130.ogg}} '''Yanming:''' Hurry. Madam Yukong will be back soon.
+::----
+
+;(Unused &mdash; End01)
+:----
+;(Unused &mdash; AnotherPerformance)
+:----
+::{{A|VO side2 yk1 yanming 125.ogg}} '''Yanming:''' ...I suppose you're going to go through Madam Yukong's office desk next?
+::{{A|VO side2 yk1 yanming 126.ogg}} '''Yanming:''' ...I can understand your position, Qingni. I'll take my leave and pretend I didn't see anything. After all, it's an unwritten rule that subordinates should be absent when their superior's privacy is exposed.
+::{{A|VO side2 yk1 yanming 127.ogg}} '''Yanming:''' Please, don't tell your mother that you saw me today!
+::{{A|VO side2 yk1 qingni 207.ogg}} '''Qingni:''' Got it.
+::{{DIcon|Arrow}} Thank you, Mr. Yanming!
+::{{DIcon|Arrow}} So much for Sky-Faring Commission security.
+:::{{A|VO side2 yk1 yanming 128.ogg}} '''Yanming:''' Ensuring the security of public assets and order is the duty of every Xianzhou citizen.
+::{{DIcon|Arrow}} Don't let us catch you nosying around here again!
+:::{{A|VO side2 yk1 yanming 129.ogg}} '''Yanming:''' Hehe, you're a cheeky one... You're lucky I have a sense of humor.
+::{{A|VO side2 yk1 yanming 130.ogg}} '''Yanming:''' Hurry. Madam Yukong will be back soon.
+
+;(Unused &mdash; OptionYanMing2)
+:{{A|VO side2 yk1 yanming 115.ogg}} '''Yanming:''' This divine object... If I remember correctly, it's the one Madam Yukong always carries with her?
+::{{A|VO side2 yk1 yanming 116.ogg}} '''Yanming:''' I heard the war that forged this object was only won thanks to the Reignbow Arbiter's blessing. If Madam Yukong still carries objects from that pilot, then perhaps she still longs for the sky...
+::{{A|VO side2 yk1 qingni 205.ogg}} '''Qingni:''' If Mom still longs for the sky, then why does she no longer fly?
+::{{A|VO side2 yk1 yanming 117.ogg}} '''Yanming:''' Perhaps Caiyi's passing was too much for her. You shouldn't be asking me about this &mdash; ask your mother.
+:<pre>{
+	"$type": "RPG.GameCore.SelectMissionItem",
+	"SubMissionID": 602010114,
+	"OnlyPerformance": true,
+	"ItemIDList": [
+		140220,
+		140221,
+		140222
+	],
+	"ItemHiddenIDList": [],
+	"ItemSelect": [
+		{
+			"Item1": 140220,
+			"TriggerCustomString": "OptionYanMing2"
+		},
+		{
+			"Item1": 140221,
+			"TriggerCustomString": "OptionYanMing4"
+		},
+		{
+			"Item1": 140222,
+			"TriggerCustomString": "OptionYanMing3"
+		}
+	],
+	"SlotNum": 1,
+	"InfoText": {
+		"Hash": 524940953
+	},
+	"SimpleTalk": {
+		"TextSpeed": 20,
+		"ProtectTime": 0.8
+	},
+	"OnSubmitCancel": [
+		{
+			"$type": "RPG.GameCore.TriggerCustomString",
+			"CustomString": {
+				"Value": "End01"
+			}
+		}
+	]
+}</pre>
+
+;(Unused &mdash; OptionYanMing3)
+:{{A|VO side2 yk1 yanming 118.ogg}} '''Yanming:''' No, this isn't something I should read. Don't show it to me...
+::{{DIcon|Arrow}} C'mon, we've both had a look.
+:::{{A|VO side2 yk1 yanming 119.ogg}} '''Yanming:''' Just listen to yourself... I suppose you think if you ate your shoes I'd follow suit?
+:::{{A|VO side2 yk1 yanming 120.ogg}} '''Yanming:''' Just ask some other questions. Ones I can answer.
+::{{DIcon|Arrow}} Never mind. Let's talk about something else.
+:::{{A|VO side2 yk1 yanming 121.ogg}} '''Yanming:''' Yes... Just ask some other questions. Ones I can answer.
+::{{DIcon|Arrow}} Yukong won't know.
+:::{{A|VO side2 yk1 yanming 122.ogg}} '''Yanming:''' She won't, but I have my principles.
+:::{{A|VO side2 yk1 yanming 123.ogg}} '''Yanming:''' Just ask some other questions. Ones I can answer.
+:<pre>{
+	"$type": "RPG.GameCore.SelectMissionItem",
+	"SubMissionID": 602010114,
+	"OnlyPerformance": true,
+	"ItemIDList": [
+		140220,
+		140221,
+		140222
+	],
+	"ItemHiddenIDList": [],
+	"ItemSelect": [
+		{
+			"Item1": 140220,
+			"TriggerCustomString": "OptionYanMing2"
+		},
+		{
+			"Item1": 140221,
+			"TriggerCustomString": "OptionYanMing4"
+		},
+		{
+			"Item1": 140222,
+			"TriggerCustomString": "OptionYanMing3"
+		}
+	],
+	"SlotNum": 1,
+	"InfoText": {
+		"Hash": 524940953
+	},
+	"SimpleTalk": {
+		"TextSpeed": 20,
+		"ProtectTime": 0.8
+	},
+	"OnSubmitCancel": [
+		{
+			"$type": "RPG.GameCore.TriggerCustomString",
+			"CustomString": {
+				"Value": "End01"
+			}
+		}
+	]
+}</pre>
+
+;(Unused &mdash; OptionYanMing4)
+:{{A|VO side2 yk1 yanming 106.ogg}} '''Yanming:''' Miss Caiyi? ...I remember her. She was an ace gunner &mdash; many people wanted to be her flight partner.
+::{{A|VO side2 yk1 yanming 107.ogg}} '''Yanming:''' Her husband, Mr. Guangyuan, was a pilot. They manned the same skiff, and were the envy of many...
+::{{A|VO side2 yk1 yanming 108.ogg}} '''Yanming:''' ...but when it came to pilots, your mother was the best match for her &mdash; they flew together all the time. Even Mr. Guangyuan couldn't match their numbers. After he passed away in battle, Caiyi rarely teamed up with anyone except your mother.
+::{{A|VO side2 yk1 yanming 109.ogg}} '''Yanming:''' *sigh* It was tragic when Caiyi died soon after. That's the life of a pilot &mdash; no one knows which flight will be their last.
+::{{A|VO side2 yk1 yanming 110.ogg}} '''Yanming:''' Caiyi's death was a big blow to Madam Yukong. After the battle, she refused to turn in Caiyi's possessions as per regulations. She kept them locked away &mdash; occasionally taking them out to admire.
+::{{DIcon|Arrow}} I didn't think you'd know this many details, Mr. Yanming...
+:::{{A|VO side2 yk1 yanming 111.ogg}} '''Yanming:''' Nonsense. As a Xianzhou native, I've lived long enough to remember more than the foxian pilots could ever hope to.
+:::{{A|VO side2 yk1 yanming 112.ogg}} '''Yanming:''' In the end, all the ace pilots perished. The only thing I can do is to remember them and ensure they are not forgotten too soon.
+::{{DIcon|Arrow}} Why do you pay so much attention to Yukong?
+:::{{A|VO side2 yk1 yanming 113.ogg}} '''Yanming:''' Well, I... As her subordinate, surely I should be concerned with her mental well-being?
+:::{{A|VO side2 yk1 yanming 114.ogg}} '''Yanming:''' If Madam Yukong is unhappy, how can I be happy? I mean to say, how can I be happy in my duties to her?
+::{{A|VO side2 yk1 qingni 204.ogg}} '''Qingni:''' Where are Miss Caiyi's possessions stored?
+::{{A|VO side2 yk1 qingni 206.ogg}} '''Qingni:''' Thanks for telling us all this, Mr. Yanming.
+::{{A|VO side2 yk1 yanming 124.ogg}} '''Yanming:''' You're welcome... I know this is important to you...
+::----
+::{{A|VO side2 yk1 yanming 125.ogg}} '''Yanming:''' ...I suppose you're going to go through Madam Yukong's office desk next?
+::{{A|VO side2 yk1 yanming 126.ogg}} '''Yanming:''' ...I can understand your position, Qingni. I'll take my leave and pretend I didn't see anything. After all, it's an unwritten rule that subordinates should be absent when their superior's privacy is exposed.
+::{{A|VO side2 yk1 yanming 127.ogg}} '''Yanming:''' Please, don't tell your mother that you saw me today!
+::{{A|VO side2 yk1 qingni 207.ogg}} '''Qingni:''' Got it.
+::{{DIcon|Arrow}} Thank you, Mr. Yanming!
+::{{DIcon|Arrow}} So much for Sky-Faring Commission security.
+:::{{A|VO side2 yk1 yanming 128.ogg}} '''Yanming:''' Ensuring the security of public assets and order is the duty of every Xianzhou citizen.
+::{{DIcon|Arrow}} Don't let us catch you nosying around here again!
+:::{{A|VO side2 yk1 yanming 129.ogg}} '''Yanming:''' Hehe, you're a cheeky one... You're lucky I have a sense of humor.
+::{{A|VO side2 yk1 yanming 130.ogg}} '''Yanming:''' Hurry. Madam Yukong will be back soon.
+
+;(Unused &mdash; End01)
+:----
+{{Dialogue End}}
+
+===Search for information related to Yukong's past{{subst:void|<!--602010115-->}}===
+{{Dialogue Start}}
+
+;(Obtain {{Item|Caiyi's Exchange Diary|20|x=1}})
+
+;(Talk to Welt Yang)
+:{{A|VO side2 yk1 welt 197.ogg}} '''Welt:''' You're all done? Did it go smoothly?
+----
+:{{A|VO side2 yk1 welt 198.ogg}} '''Welt:''' ...I see. Let's find Helm Master Yukong &mdash; we'll accompany you...
+:{{A|VO side2 yk1 welt 199 m.ogg}} {{A|VO side2 yk1 welt 199 f.ogg}} '''Welt:''' ...We're here to help, but (Trailblazer) and I really shouldn't interject when you're conversing with your mother.
+:{{A|VO side2 yk1 qingni 232.ogg}} '''Qingni:''' Mm, it's okay, I understand. Just having you stand next to me is already a great help, benefactors.
+----
+{{Dialogue End}}
+
+===Meet up with Welt{{subst:void|<!--602010122-->}}===
 {{Mission Description|type=companion|location=Palace of Astrum|update|Qingni already knew the stories she wanted to know, many of which Yukong wished to conceal from her. Now it's time for her to make a decision for her own life. Just as an old Stellaron Hunter friend once said to you: "When you have a chance to make a choice, make one that you know you won't regret."}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Welt Yang)
+:{{A|VO side2 yk1 welt 197.ogg}} '''Welt:''' You're all done? Did it go smoothly?
+----
+:{{A|VO side2 yk1 welt 198.ogg}} '''Welt:''' ...I see. Let's find Helm Master Yukong &mdash; we'll accompany you...
+:{{A|VO side2 yk1 welt 199 m.ogg}} {{A|VO side2 yk1 welt 199 f.ogg}} '''Welt:''' ...We're here to help, but (Trailblazer) and I really shouldn't interject when you're conversing with your mother.
+:{{A|VO side2 yk1 qingni 232.ogg}} '''Qingni:''' Mm, it's okay, I understand. Just having you stand next to me is already a great help, benefactors.
+----
 {{Dialogue End}}
 
-===Accompany Qingni to talk with Yukong===
+===Accompany Qingni to talk with Yukong{{subst:void|<!--602010119-->}}===
 {{Dialogue Start}}
-:{{tx}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{A|VO side2 yk1 qingni 233.ogg}} '''Qingni:''' When Mom feels down, she usually goes to take in a view of the Jade Gate. She should still be there, let's go find her.
+
+;(Talk to Yukong)
+----
+:{{A|VO side2 yk1 qingni 234.ogg}} '''Qingni:''' Mom...
+:{{A|VO side2 yk1 yukong 135 m.ogg}} {{A|VO side2 yk1 yukong 135 f.ogg}} '''Yukong:''' Qingni? Why are Mr. Yang and (Trailblazer) here too?
+:{{A|VO side2 yk1 welt 200.ogg}} '''Welt:''' Miss Qingni kindly agreed to show us around Starskiff Haven. She mentioned she was trying to mend things between you, but was feeling shy about it. We volunteered to come with her.
+:{{A|VO side2 yk1 yukong 136.ogg}} '''Yukong:''' Thank you. I must apologize for the trouble my daughter has brought you.
+:{{A|VO side2 yk1 qingni 235.ogg}} '''Qingni:''' Mom!
+:{{A|VO side2 yk1 yukong 137.ogg}} '''Yukong:''' Alright, it's getting late. Let's talk once we're home.
+:{{A|VO side2 yk1 qingni 236.ogg}} '''Qingni:''' Actually... I want to talk to you about something right now.
+:{{A|VO side2 yk1 qingni 237.ogg}} '''Qingni:''' I want to become a fighter pilot, no matter what.
+:{{A|VO side2 yk1 yukong 138.ogg}} '''Yukong:''' *sigh* We've talked about this many times. No means no.
+:{{A|VO side2 yk1 qingni 238.ogg}} '''Qingni:''' But...
+:{{A|VO side2 yk1 welt 201.ogg}} '''Welt:''' Seems like Miss Qingni is a little hesitant. Try giving her a little push.
+:{{A|VO side2 yk1 player 101 m.ogg}} {{A|VO side2 yk1 player 101 f.ogg}} '''(Trailblazer):''' (I thought Mr. Yang said we shouldn't interject... What should I say?)
+<pre>{
+	"$type": "RPG.GameCore.SelectMissionItem",
+	"SubMissionID": 602010119,
+	"OnlyPerformance": true,
+	"ItemIDList": [
+		140219,
+		140220,
+		140221,
+		140222,
+		140223
+	],
+	"ItemHiddenIDList": [],
+	"ItemSelect": [
+		{
+			"Item1": 140219,
+			"TriggerCustomString": "OptionYuKong2"
+		},
+		{
+			"Item1": 140220,
+			"TriggerCustomString": "OptionYuKong1"
+		},
+		{
+			"Item1": 140221,
+			"TriggerCustomString": "OptionYuKong3"
+		},
+		{
+			"Item1": 140222,
+			"TriggerCustomString": "OptionYuKong4"
+		},
+		{
+			"Item1": 140223,
+			"TriggerCustomString": "OptionYuKong5"
+		}
+	],
+	"SlotNum": 1,
+	"InfoText": {
+		"Hash": 524940953
+	},
+	"SimpleTalk": {
+		"TextSpeed": 20,
+		"ProtectTime": 0.8
+	},
+	"OnSubmitCancel": [
+		{
+			"$type": "RPG.GameCore.TriggerCustomString",
+			"CustomString": {
+				"Value": "end1"
+			}
+		}
+	]
+}</pre>
+;(Unused &mdash; OptionYuKong1)
+:{{A|VO side2 yk1 player 102 m.ogg}} {{A|VO side2 yk1 player 102 f.ogg}} '''(Trailblazer):''' (This divine object is a testament to Yukong's devotion to The Hunt... Qingni believes it's a sign that Yukong still misses the life of a fighter pilot...)
+::{{A|VO side2 yk1 player 103 m.ogg}} {{A|VO side2 yk1 player 103 f.ogg}} '''(Trailblazer):''' (...Still, it doesn't seem like something to bring up now.)
+:<pre>{
+	"$type": "RPG.GameCore.SelectMissionItem",
+	"SubMissionID": 602010119,
+	"OnlyPerformance": true,
+	"ItemIDList": [
+		140219,
+		140220,
+		140221,
+		140222,
+		140223
+	],
+	"ItemHiddenIDList": [],
+	"ItemSelect": [
+		{
+			"Item1": 140219,
+			"TriggerCustomString": "OptionYuKong2"
+		},
+		{
+			"Item1": 140220,
+			"TriggerCustomString": "OptionYuKong1"
+		},
+		{
+			"Item1": 140221,
+			"TriggerCustomString": "OptionYuKong3"
+		},
+		{
+			"Item1": 140222,
+			"TriggerCustomString": "OptionYuKong4"
+		},
+		{
+			"Item1": 140223,
+			"TriggerCustomString": "OptionYuKong5"
+		}
+	],
+	"SlotNum": 1,
+	"InfoText": {
+		"Hash": 524940953
+	},
+	"SimpleTalk": {
+		"TextSpeed": 20,
+		"ProtectTime": 0.8
+	},
+	"OnSubmitCancel": [
+		{
+			"$type": "RPG.GameCore.TriggerCustomString",
+			"CustomString": {
+				"Value": "end1"
+			}
+		}
+	]
+}</pre>
+
+;(Unused &mdash; OptionYuKong2)
+:{{A|VO side2 yk1 player 104 m.ogg}} {{A|VO side2 yk1 player 104 f.ogg}} '''(Trailblazer):''' (Qingni remembers that Yukong has always avoided talking about her career as a fighter pilot, and that she wants to prevent Qingni from following the same path... Why?)
+::{{A|VO side2 yk1 player 105 m.ogg}} {{A|VO side2 yk1 player 105 f.ogg}} '''(Trailblazer):''' (...Still, it doesn't seem like something to bring up now.)
+:<pre>{
+	"$type": "RPG.GameCore.SelectMissionItem",
+	"SubMissionID": 602010119,
+	"OnlyPerformance": true,
+	"ItemIDList": [
+		140219,
+		140220,
+		140221,
+		140222,
+		140223
+	],
+	"ItemHiddenIDList": [],
+	"ItemSelect": [
+		{
+			"Item1": 140219,
+			"TriggerCustomString": "OptionYuKong2"
+		},
+		{
+			"Item1": 140220,
+			"TriggerCustomString": "OptionYuKong1"
+		},
+		{
+			"Item1": 140221,
+			"TriggerCustomString": "OptionYuKong3"
+		},
+		{
+			"Item1": 140222,
+			"TriggerCustomString": "OptionYuKong4"
+		},
+		{
+			"Item1": 140223,
+			"TriggerCustomString": "OptionYuKong5"
+		}
+	],
+	"SlotNum": 1,
+	"InfoText": {
+		"Hash": 524940953
+	},
+	"SimpleTalk": {
+		"TextSpeed": 20,
+		"ProtectTime": 0.8
+	},
+	"OnSubmitCancel": [
+		{
+			"$type": "RPG.GameCore.TriggerCustomString",
+			"CustomString": {
+				"Value": "end1"
+			}
+		}
+	]
+}</pre>
+
+;(Unused &mdash; OptionYuKong3)
+:{{A|VO side2 yk1 player 106 m.ogg}} {{A|VO side2 yk1 player 106 f.ogg}} '''(Trailblazer):''' (Qingni's birth mother, Caiyi, was Yukong's lifelong friend. When Caiyi passed away in that devastating war, Yukong adopted her daughter. Perhaps this unbearable memory is the root of Yukong's concerns...)
+::{{A|VO side2 yk1 player 107 m.ogg}} {{A|VO side2 yk1 player 107 f.ogg}} '''(Trailblazer):''' (...Still, it doesn't seem like something to bring up now.)
+:<pre>{
+	"$type": "RPG.GameCore.SelectMissionItem",
+	"SubMissionID": 602010119,
+	"OnlyPerformance": true,
+	"ItemIDList": [
+		140219,
+		140220,
+		140221,
+		140222,
+		140223
+	],
+	"ItemHiddenIDList": [],
+	"ItemSelect": [
+		{
+			"Item1": 140219,
+			"TriggerCustomString": "OptionYuKong2"
+		},
+		{
+			"Item1": 140220,
+			"TriggerCustomString": "OptionYuKong1"
+		},
+		{
+			"Item1": 140221,
+			"TriggerCustomString": "OptionYuKong3"
+		},
+		{
+			"Item1": 140222,
+			"TriggerCustomString": "OptionYuKong4"
+		},
+		{
+			"Item1": 140223,
+			"TriggerCustomString": "OptionYuKong5"
+		}
+	],
+	"SlotNum": 1,
+	"InfoText": {
+		"Hash": 524940953
+	},
+	"SimpleTalk": {
+		"TextSpeed": 20,
+		"ProtectTime": 0.8
+	},
+	"OnSubmitCancel": [
+		{
+			"$type": "RPG.GameCore.TriggerCustomString",
+			"CustomString": {
+				"Value": "end1"
+			}
+		}
+	]
+}</pre>
+
+;(Unused &mdash; OptionYuKong4)
+:{{A|VO side2 yk1 player 108 m.ogg}} {{A|VO side2 yk1 player 108 f.ogg}} '''(Trailblazer):''' (It's clear that Yukong suffered greatly after that terrible war. Is that why she doesn't want Qingni to be a fighter pilot?)
+::{{A|VO side2 yk1 player 109 m.ogg}} {{A|VO side2 yk1 player 109 f.ogg}} '''(Trailblazer):''' (...Still, it doesn't seem like something to bring up now.)
+:<pre>{
+	"$type": "RPG.GameCore.SelectMissionItem",
+	"SubMissionID": 602010119,
+	"OnlyPerformance": true,
+	"ItemIDList": [
+		140219,
+		140220,
+		140221,
+		140222,
+		140223
+	],
+	"ItemHiddenIDList": [],
+	"ItemSelect": [
+		{
+			"Item1": 140219,
+			"TriggerCustomString": "OptionYuKong2"
+		},
+		{
+			"Item1": 140220,
+			"TriggerCustomString": "OptionYuKong1"
+		},
+		{
+			"Item1": 140221,
+			"TriggerCustomString": "OptionYuKong3"
+		},
+		{
+			"Item1": 140222,
+			"TriggerCustomString": "OptionYuKong4"
+		},
+		{
+			"Item1": 140223,
+			"TriggerCustomString": "OptionYuKong5"
+		}
+	],
+	"SlotNum": 1,
+	"InfoText": {
+		"Hash": 524940953
+	},
+	"SimpleTalk": {
+		"TextSpeed": 20,
+		"ProtectTime": 0.8
+	},
+	"OnSubmitCancel": [
+		{
+			"$type": "RPG.GameCore.TriggerCustomString",
+			"CustomString": {
+				"Value": "end1"
+			}
+		}
+	]
+}</pre>
+
+;(Unused &mdash; OptionYuKong5)
+:{{A|VO side2 yk1 yukong 139.ogg}} '''Yukong:''' Is that... Caiyi's diary? How did you...?
+::{{A|VO side2 yk1 yukong 140.ogg}} '''Yukong:''' ...I understand now... I'm sorry, Qingni... I cannot support your dream because I made a promise to someone else.
+::{{A|VO side2 yk1 yukong 141.ogg}} '''Yukong:''' I don't expect to gain your forgiveness. I just hope you can... understand my reason.
+::{{A|VO side2 yk1 qingni 239.ogg}} '''Qingni:''' Mom, what are you talking about? I'm your daughter &mdash; our bond is bigger than forgiveness and reason. I'll listen to anything you have to say...
+::----
+:<pre>{
+	"$type": "RPG.GameCore.ActiveVirtualCamera",
+	"AreaName": "LevelArea_P10201_F10201001_G90",
+	"AnchorName": "Anchor4",
+	"IsActive": true,
+	"VCameraDitherMaxDistance": 1,
+	"CenterPosX": -1,
+	"CenterPosY": -1
+}</pre>
+::{{A|VO side2 yk1 yukong 142.ogg}} '''Yukong:''' Just like you, I once longed for the sky. I know what it feels like... to fly through infinite space, to be surrounded by the vast expanse of nothingness, with unimaginable splendors looming in the distance.
+::{{A|VO side2 yk1 yukong 143.ogg}} '''Yukong:''' To float like a single leaf in the fathomless stellar sea... Some called it "loneliness," but we called it "freedom."
+::{{A|VO side2 yk1 yukong 144.ogg}} '''Yukong:''' Caiyi was like that, too. We were friends since childhood. We flew starskiffs everywhere &mdash; causing trouble until the Knights caught us and dragged us before General Jing Yuan.
+::{{A|VO side2 yk1 yukong 145.ogg}} '''Yukong:''' We soon became the most elite fighter pilots of the Sky-Faring Commission. It wasn't an easy life... you could even say it was a cruel one.
+::{{A|VO side2 yk1 yukong 146.ogg}} '''Yukong:''' You never knew if the friend next to you would make it back alive. Of course, the same could be said of yourself.
+::{{A|VO side2 yk1 yukong 147.ogg}} '''Yukong:''' But those are my best memories. We would strike out into the sky &mdash; repelling demons and upholding justice &mdash; the blood we shed bore witness to it all. The life of a foxian is short and fleeting... surely we should dedicate ourselves to such glorious aims?
+::----
+:<pre>{
+	"$type": "RPG.GameCore.ActiveVirtualCamera",
+	"AreaName": "LevelArea_P10201_F10201001_G90",
+	"AnchorName": "Anchor4",
+	"VCameraDitherMaxDistance": 1,
+	"CenterPosX": -1,
+	"CenterPosY": -1
+}</pre>
+::{{tx}}
+:<pre>{
+	"$type": "RPG.GameCore.SetAudioEmotionState",
+	"StateName": "State_Sorrow",
+	"SubMissionID": 602010119
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.TriggerSound",
+	"SoundName": {
+		"Value": "Ev_sfx_xianzhou_yukong_war_crashed"
+	},
+	"EmitterType": "LocalPlayer"
+}</pre>
+:;(Screen fades to black)
+::{{A|VO side2 yk1 yukong 152.ogg}} '''Yukong:''' The mind is mysterious... I've lived for more than two hundred years, forgotten nearly every conversation I've ever had... but I still remember us shooting the breeze that day &mdash; it's crystal clear.
+::{{A|VO side2 yk1 yukong 153.ogg}} '''Yukong:''' It was the last time I spoke to Caiyi.
+::{{tx}}
+:<pre>{
+	"$type": "RPG.GameCore.SetAudioEmotionState",
+	"StateName": "State_Relaxing",
+	"SubMissionID": 602010119
+}</pre>
+::{{tx}}
+:<pre>{
+	"$type": "RPG.GameCore.SetAudioEmotionState",
+	"StateName": "State_Relaxing",
+	"ResetToFloorDefault": true,
+	"SubMissionID": 602010119
+}</pre>
+
+;(Unused &mdash; end1)
+:----
+
+;(Talk to Yukong)
+:Qingni stands beside her mother and quietly gazes at the place that fills her with so much passion.
+:Yukong gazes quietly at the place that once filled her with so much passion and cost her everything.
+:Let's not disturb them.
 {{Dialogue End}}
 
 ==Other Languages==

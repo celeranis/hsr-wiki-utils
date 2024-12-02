@@ -11,7 +11,7 @@ PageTitle=#Eternal Freeze Aftermath#
 |chapter       = Slices of Life Before the Furnace
 |requirements  = {{subst:void|<!--Unknown: {"Type":"Manual"}-->}}
 |summary       = <!--official mission summary from Fate's Atlas-->
-|characters    = Trailblazer
+|characters    = Gepard; Guardian Shadow; Monster-Confronting Girl; Panicked Miner; Sentry Miner; Serval; Silvermane Guard Sentry; Silvermane Lieutenant; Strong Miner; Trailblazer; Trapped Boy
 |startLocation = [[Jarilo-VI]] - [[Great Mine]]
 |world         = Jarilo-VI
 |area          = Great Mine
@@ -23,11 +23,11 @@ PageTitle=#Eternal Freeze Aftermath#
 
 ==Steps==
 # Talk with Gepard about the state of the battlefield
-# Look for the little girl and other miners
 # Move deeper into the battlefield and help the refugees on the way
 # Look for the little girl and other miners
 # Keep moving forward and look for miners who have been separated from the others
 # Keep pushing deeper into the battlefield
+# Look for the little girl and other miners
 
 <!--
 ==Gameplay Notes==
@@ -39,41 +39,267 @@ PageTitle=#Eternal Freeze Aftermath#
 ==Dialogue==
 {{Stub Dialogue}}
 
-===Talk with Gepard about the state of the battlefield===
+===Talk with Gepard about the state of the battlefield{{subst:void|<!--201140401-->}}===
 {{Mission Description|type=companion|location=Great Mine|Serval and you arrive at the Great Mine as fast as you could. Gepard seems to have already finished preparing for battle. Listen to his plans.}}
 {{Dialogue Start}}
-:{{tx}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:'''Silvermane Guard Sentry:''' Battleground to the fore, non-combatants are not allowed beyond this point!
+:'''(Trailblazer):''' (I should take Gepard's order and not act on my own...)
+----
+
+;(Talk to Gepard)
+----
+:{{A|VO Side1 ld1 gepard 208.ogg}} '''Gepard:''' Put all artillery units on standby. Wait for my command to bombard enemy positions and cover our infantry advance.
+:{{A|VO Side1 ld1 gepard 209.ogg}} '''Gepard:''' We have a choke point here. Tell all infantry units to switch to double-line formation &mdash; close-quarters in front, gunners behind. Remember, get the wounded out as soon as possible, and always secure your flanks before advancing.
+:{{A|VO Side1 ld1 soldierAD 101.ogg}} '''Silvermane Lieutenant:''' Yes, sir!
+:{{A|VO Side1 ld1 gepard 210.ogg}} '''Gepard:''' Ah, you're here. Get ready, we need to help the infantry lines drive deep into the mine.
+:{{DIcon|Arrow}} How's the situation?
+::{{A|VO Side1 ld1 gepard 211.ogg}} '''Gepard:''' The back of the mine has been secured, which gives us a forward base to send in supplies. The Silvermane-Wildfire combined regiment is conducting rescue missions as they advance.
+::{{A|VO Side1 ld1 gepard 212.ogg}} '''Gepard:''' The battle is fierce, I need to get to the front line. I'll leave the command post to my officers.
+:{{DIcon|Arrow}} Do you have to go there in person?
+::{{A|VO Side1 ld1 gepard 213.ogg}} '''Gepard:''' The battle is reaching a pivotal point. I have to get to the front line. I'll leave the command post to my officers.
+::{{A|VO Side1 ld1 gepard 214.ogg}} '''Gepard:''' We have clear objectives and the terrain is relatively easy to read. My officers are well-trained &mdash; the command system will be in good hands.
+:{{A|VO Side1 ld1 serval 257.ogg}} '''Serval:''' I... I don't know much about warfare, but I don't see why a commander needs to lead the charge. The situation here is totally different from the Restricted Zone.
+:{{A|VO Side1 ld1 serval 258 m.ogg}} {{A|VO Side1 ld1 serval 258 f.ogg}} '''Serval:''' Gepard, let me and (Trailblazer) clear the way for you. You should stay in your command post.
+:{{A|VO Side1 ld1 gepard 215.ogg}} '''Gepard:''' Thanks, Serval, but please trust my judgment on this.
+:{{A|VO Side1 ld1 gepard 216.ogg}} '''Gepard:''' I made a promise to Mr. Oleg to save as many people as possible. I have to see to it myself.
+:{{A|VO Side1 ld1 serval 259.ogg}} '''Serval:''' ...There's no stopping you once you've made up your mind. Fine, we'll do it your way.
+:{{A|VO Side1 ld1 gepard 217.ogg}} '''Gepard:''' Let's move out. We need to clear a way for Wildfire and the Guards.
+----
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:<!--2-second delay-->
+<pre>{
+	"$type": "RPG.GameCore.PlayNPCBubbleTalk",
+	"BubbleTalkInfoList": [
+		{
+			"AutoSkipTime": 15,
+			"GroupID": 11,
+			"GroupNpcID": 400002,
+			"TalkSentenceID": 201214918
+		}
+	],
+	"BubbleTalkType": "Normal",
+	"LoopInterval": 1,
+	"InstantFinish": true
+}</pre>
 {{Dialogue End}}
 
-===Look for the little girl and other miners===
-{{Mission Description|type=companion|location=Great Mine|update|You and the siblings arrive at a temporary base in the besieged mining area. You inform the vagrants to immediately retreat to the mining bridge with the children and the elderly.<br />After successfully solving the issue for this base, you keep moving forward and look for miners who have been separated from the others. The few people who the miners mentioned should be around here. Look for them carefully.}}
-{{Dialogue Start}}
-:{{tx}}
-{{Dialogue End}}
-
-===Move deeper into the battlefield and help the refugees on the way===
+===Move deeper into the battlefield and help the refugees on the way{{subst:void|<!--201140403-->}}===
 {{Mission Description|type=companion|location=Great Mine|update|Gepard will lead you and Serval to the front lines himself to raise morale and improve overall combat capacity. You will push deeper into the battlefield while helping the refugees along the way.<br />The atmosphere of this battlefield is out of the ordinary. Please be careful during combat.}}
 {{Dialogue Start}}
-:{{tx}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{A|VO Side1 ld1 serval 260.ogg}} '''Serval:''' There's a monster heading this way... What should we do, Gepard?
+:{{A|VO Side1 ld1 gepard 219.ogg}} '''Gepard:''' Bring it down. We need to cover the retreat.
+;(Enter battle)
+:{{Enemy List|Flamespawn*2; Frostspawn*2}}
+:{{A|VO Side1 ld1 gepard 220.ogg}} '''Gepard:''' It made it easy for us... but we can't let our guards down.
+:{{A|VO Side1 ld1 gepard 221.ogg}} '''Gepard:''' It's safe here. Let's move on.
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{A|VO Side1 ld1 serval 261.ogg}} '''Serval:''' Gepard, look! The miners have put up a makeshift defensive line!
 {{Mission Description|type=companion|location=Great Mine|update|Gepard will lead you and Serval to the front lines himself to raise morale and improve overall combat capacity. You will push deeper into the battlefield while helping the refugees along the way.<br />The deeper you go, the more terrifying the atmosphere of the battlefield becomes &mdash; This is not mere exaggeration, but you actually feel the temperature in the air dropping. The situation is definitely odd. Please proceed with caution.}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:'''(Trailblazer):''' (I'll just investigate this temporary camp for now...)
+----
+
+;(Talk to Miner)
+----
+:{{A|VO Side1 ld1 minerM 101.ogg}} '''Panicked Miner:''' A&mdash;Are you... a Silvermane Guard?
+:{{A|VO Side1 ld1 gepard 222.ogg}} '''Gepard:''' That's right. We're evacuating the miners together with Wildfire. Are there any other civilians up ahead?
+:{{A|VO Side1 ld1 minerM 102.ogg}} '''Panicked Miner:''' Silvermane G&mdash;Guards and Wildfire are working together now...?
+:{{A|VO Side1 ld1 minerM 103.ogg}} '''Panicked Miner:''' Oh, Civilians... Ah! I saw a girl run out from our defensive position just now!
+:{{A|VO Side1 ld1 minerM 104.ogg}} '''Panicked Miner:''' My brother went after her, but they haven't come back...
+:{{A|VO Side1 ld1 gepard 223.ogg}} '''Gepard:''' Understood, I'll bring them back. The Guards and Wildfire have set up defenses on the bridge. You should head over.
+:{{A|VO Side1 ld1 minerM 105.ogg}} '''Panicked Miner:''' Thank you! Please bring them back to safety!
+----
+:{{A|VO Side1 ld1 minerN 101.ogg}} '''Sentry Miner:''' Oh no! Monsters are coming this way!
+:{{A|VO Side1 ld1 gepard 224.ogg}} '''Gepard:''' Leave the battle to us, you need to fall back!
+:{{A|VO Side1 ld1 minerM 106.ogg}} '''Panicked Miner:''' O&mdash;Okay! Thank you for saving us!
+;(Enter battle)
+:{{Enemy List|Incineration Shadewalker*2; Blaze Out of Space*1}}
+:{{A|VO Side1 ld1 gepard 225.ogg}} '''Gepard:''' Let's keep searching for the missing girl and the miner.
+:{{A|VO Side1 ld1 serval 262.ogg}} '''Serval:''' Is it me or is it... cold here?
 {{Dialogue End}}
 
-===Look for the little girl and other miners===
+===Look for the little girl and other miners{{subst:void|<!--201140408-->}}===
 {{Mission Description|type=companion|location=Great Mine|update|You and the siblings arrive at a temporary base in the besieged mining area. You inform the vagrants to immediately retreat to the mining bridge with the children and the elderly.<br />After successfully solving the issue for this base, you keep moving forward and look for miners who have been separated from the others. The few people who the miners mentioned should be around here. Look for them carefully.}}
 {{Dialogue Start}}
-:{{tx}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{A|VO Side1 ld1 minerO 101.ogg}} '''Trapped Boy:''' Oh... *sob*
+:{{A|VO Side1 ld1 gepard 226.ogg}} '''Gepard:''' They're in danger, let's go!
+
+;(Upon reaching the destination)
+:{{A|VO Side1 ld1 gepard 227.ogg}} '''Gepard:''' They need our help. We have to deal with these monsters first before advancing further.
+----
+
+;(Upon reaching the destination)
+<pre>{
+	"$type": "RPG.GameCore.PlayNPCBubbleTalk",
+	"BubbleTalkInfoList": [
+		{
+			"AutoSkipTime": 3,
+			"GroupID": 8,
+			"GroupNpcID": 400002,
+			"TalkSentenceID": 201215064
+		},
+		{
+			"AutoSkipTime": 3,
+			"GroupID": 8,
+			"GroupNpcID": 400001,
+			"TalkSentenceID": 201215065
+		}
+	],
+	"BubbleTalkType": "Normal",
+	"LoopInterval": 1,
+	"InstantFinish": true
+}</pre>
+----
+:{{A|VO Side1 ld1 gepard 228.ogg}} '''Gepard:''' You two! It's too dangerous here. Find the Silvermane Guards and Wildfire at the bridge &mdash; they'll protect you.
+:{{A|VO Side1 ld1 minerP 102.ogg}} '''Monster-Confronting Girl:''' O&mdash;Okay...! Thank you, thank you!
+:{{A|VO Side1 ld1 minerP 103.ogg}} '''Monster-Confronting Girl:''' Zino, take my hand! Let's get out of here!
+:{{A|VO Side1 ld1 minerO 103.ogg}} '''Trapped Boy:''' *sob* It's so cold here... I'm scared...
+----
+:{{A|VO Side1 ld1 gepard 229.ogg}} '''Gepard:''' ...The monsters have gotten stronger somehow. I don't remember them being this difficult...
+:{{A|VO Side1 ld1 serval 263.ogg}} '''Serval:''' Thank goodness we got here in time. If we'd arrived any later...
+:{{A|VO Side1 ld1 gepard 230.ogg}} '''Gepard:''' That's one brave little girl... You were like that at her age too.
+:{{A|VO Side1 ld1 serval 264.ogg}} '''Serval:''' Huh? I wouldn't go that far &mdash; I only had Dad to deal with. He could be fierce, but nothing like the monsters here.
+:{{A|VO Side1 ld1 serval 265.ogg}} '''Serval:''' Besides, my problem with him wasn't that he was a strict father...
+:{{A|VO Side1 ld1 serval 266.ogg}} '''Serval:''' I just couldn't believe that he never lifted a finger to oppose Cocolia's order to seal the passageway...
+:{{A|VO Side1 ld1 serval 267.ogg}} '''Serval:''' Vowing to protect the Underworlders in one breath, and then deciding they deserved to be abandoned in the next... "Family code of conduct" &mdash; what a joke.
+:{{A|VO Side1 ld1 gepard 231.ogg}} '''Gepard:''' Father was a soldier. He wasn't supposed to question the orders from his superiors...
+:{{A|VO Side1 ld1 gepard 232.ogg}} '''Gepard:''' ...Never mind. I know I sound like I'm defending him, and I don't want to make you angry. At least now we've got the chance to right the wrongs.
+:{{A|VO Side1 ld1 serval 268.ogg}} '''Serval:''' Hmph, I'm angry just thinking about it. Looking back, I'm glad I left home early.
+:{{A|VO Side1 ld1 gepard 233.ogg}} '''Gepard:''' Running away doesn't solve the problem. It's been ages since you two had those fights, but you still can't let it go... You need to walk out of his shadow.
+:{{A|VO Side1 ld1 serval 269.ogg}} '''Serval:''' ...
+:{{A|VO Side1 ld1 gepard 234.ogg}} '''Gepard:''' I'm not trying to change your mind. I just want to know that your choice to leave this planet is a result of having thought things through, not because you're trying to run away from something.
+:{{A|VO Side1 ld1 serval 270.ogg}} '''Serval:''' My choice...
+:{{A|VO Side1 ld1 gepard 235.ogg}} '''Gepard:''' ...Sorry, I sound like Dad.
+:{{A|VO Side1 ld1 serval 271.ogg}} '''Serval:''' *sigh* Don't worry about it. I get what you're trying to say, I do! It's just... I need some time.
+:{{A|VO Side1 ld1 serval 272.ogg}} '''Serval:''' Let's focus on the business at hand. That miner we met said his brother came this way &mdash; we should look around.
+:{{A|VO Side1 ld1 gepard 236.ogg}} '''Gepard:''' Okay. Be careful though, I sense a drop in temperature. Something's not right.
+:{{A|VO Side1 ld1 gepard 237.ogg}} '''Gepard:''' It could mean something we haven't encountered before is waiting for us. Stay on your toes.
+----
 {{Dialogue End}}
 
-===Keep moving forward and look for miners who have been separated from the others===
+===Keep moving forward and look for miners who have been separated from the others{{subst:void|<!--201140412-->}}===
 {{Mission Description|type=companion|location=Great Mine|update|You found the selfless older sister matching the miners' descriptions and successfully defeated the invading Fragmentum monsters, protecting her and her younger brother.<br />There is only one more separated miner left. Keep looking for them around here.}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Miner)
+:{{A|VO Side1 ld1 minerQ 101.ogg}} '''Strong Miner:''' Phew... These monsters are tough. I need to find those kids...
+:{{A|VO Side1 ld1 serval 273.ogg}} '''Serval:''' Hey... Did you just scare off a Fragmentum monster?
+:{{A|VO Side1 ld1 minerQ 102.ogg}} '''Strong Miner:''' Uhh, kind of... There was one on its own &mdash; I managed to chase it away.
+:{{A|VO Side1 ld1 minerQ 103.ogg}} '''Strong Miner:''' Speaking of which, you came from that direction, right? Did you see two little kids? A girl and her brother...?
+:{{DIcon|Arrow}} They've retreated to the safe zone.
+::{{A|VO Side1 ld1 minerQ 104.ogg}} '''Strong Miner:''' Ah, thank goodness... I chased the monster too far and lost them.
+:{{DIcon|Arrow}} They were surrounded by monsters.
+::{{A|VO Side1 ld1 minerQ 105.ogg}} '''Strong Miner:''' What!? Quick! I knew I shouldn't have&mdash;
+::{{A|VO Side1 ld1 gepard 238.ogg}} '''Gepard:''' Easy, they went back to safety.
+:{{A|VO Side1 ld1 gepard 239.ogg}} '''Gepard:''' They'll be okay now. You should head back to the bridge too &mdash; the Guards and Wildfire have set up a safe zone there.
+:{{A|VO Side1 ld1 minerQ 106.ogg}} '''Strong Miner:''' Thank you &mdash; all of you. I'm just glad they're okay... I can finally retreat as well.
+:{{A|VO Side1 ld1 minerQ 107.ogg}} '''Strong Miner:''' I heard there's a powerful monster down the road &mdash; some kind of leader of the pack... I'd take caution!
+:{{A|VO Side1 ld1 gepard 240.ogg}} '''Gepard:''' Thanks for the intel. We'll be careful.
+----
+:{{A|VO Side1 ld1 gepard 241 m.ogg}} {{A|VO Side1 ld1 gepard 241 f.ogg}} '''Gepard:''' I think he was right about the monster... Serval, (Trailblazer), no sudden moves.
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{A|VO Side1 ld1 gepard 242.ogg}} '''Gepard:''' I've seen this type of monster a few times near the restricted zone.
+:{{A|VO Side1 ld1 gepard 243.ogg}} '''Gepard:''' Ready? Here we go.
 {{Dialogue End}}
 
-===Keep pushing deeper into the battlefield===
+===Keep pushing deeper into the battlefield{{subst:void|<!--201140415-->}}===
 {{Mission Description|type=companion|location=Great Mine|update|All the refugees should have been evacuated. Now you just need to attack the remaining Fragmentum monsters and completely chase them out of this mine.<br />The air around you is almost freezing cold. The abnormality amongst the monsters shouldn't be far. Be on high alert and progress carefully.}}
 {{Dialogue Start}}
-:{{tx}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+----
+:{{A|VO Side1 ld1 gepard 244.ogg}} '''Gepard:''' Wait, don't get too close! Something's not right...
+:{{A|VO Side1 ld1 serval 274.ogg}} '''Serval:''' Huh? What is it?
+:{{A|VO Side1 ld1 gepard 245.ogg}} '''Gepard:''' These monsters are usually eager to fight &mdash; you're guaranteed a fierce battle if you see one in the Fragmentum...
+:{{A|VO Side1 ld1 gepard 246.ogg}} '''Gepard:''' But this one doesn't seem concerned about us... This could be a trap.
+:{{DIcon|Arrow}} A trap laid by a Fragmentum monster? Are they that smart?
+::{{A|VO Side1 ld1 gepard 247.ogg}} '''Gepard:''' ...I'm not sure either. I just have a feeling that something's different.
+:{{DIcon|Arrow}} Enough talking, let's get it!
+::{{A|VO Side1 ld1 gepard 248 m.ogg}} {{A|VO Side1 ld1 gepard 248 f.ogg}} '''Gepard:''' Careful, (Trailblazer). Special circumstances require a special approach.
+:{{A|VO Side1 ld1 serval 275.ogg}} '''Serval:''' The air... it's so cold...
+:{{A|VO Side1 ld1 guardianD 101.ogg}} '''Guardian Shadow:''' ██Stellaron█ ██ promises ██ █ Serval██ █...
+:{{A|VO Side1 ld1 player 109 m.ogg}} {{A|VO Side1 ld1 player 109 f.ogg}} '''(Trailblazer):''' (Did it just... talk?)
+:{{A|VO Side1 ld1 gepard 249.ogg}} '''Gepard:''' ...Steady, get ready to counter its attack...
+:{{A|VO Side1 ld1 player 110 m.ogg}} {{A|VO Side1 ld1 player 110 f.ogg}} '''(Trailblazer):''' (...Can Gepard not hear that?)
+:{{A|VO Side1 ld1 guardianD 102.ogg}} '''Guardian Shadow:''' ██Gepard█ █Serval█ Landau ██ ███ █...
+:{{A|VO Side1 ld1 player 111 m.ogg}} {{A|VO Side1 ld1 player 111 f.ogg}} '''(Trailblazer):''' (Did it just say "Gepard" and "Serval"?)
+:{{A|VO Side1 ld1 serval 276.ogg}} '''Serval:''' ...Ugh, that noise! Do Fragmentum monsters usually sound like this?
+:{{DIcon|Arrow}} The monster... it's talking!
+:{{DIcon|Arrow}} ...It's talking to us. Can you not hear it?
+:{{A|VO Side1 ld1 gepard 250.ogg}} '''Gepard:''' ...Talking? I just hear white noise...
+:{{A|VO Side1 ld1 gepard 251.ogg}} '''Gepard:''' Wait... You understand it?
+:{{DIcon|Arrow}} ...It's repeating your names.
+:{{DIcon|Arrow}} Gepard, Serval...
+:{{A|VO Side1 ld1 serval 277.ogg}} '''Serval:''' Our names? What's happening here...
+:{{A|VO Side1 ld1 gepard 252.ogg}} '''Gepard:''' I heard rumors about this kind of monster... "Shadows in the Fragmentum that assume human forms are echoes of the will of past guardians."
+:{{A|VO Side1 ld1 gepard 253.ogg}} '''Gepard:''' If the rumors are true... could it be...
+:{{A|VO Side1 ld1 serval 278.ogg}} '''Serval:''' ...
+:{{A|VO Side1 ld1 serval 279.ogg}} '''Serval:''' Cocolia...
+;(Screen fades to black)
+:{{A|VO Side1 ld1 guardianD 105.ogg}} '''Guardian Shadow:''' █Serval█S██erval █Ser█ v██ al██ ████ █...
+:{{A|VO Side1 ld1 guardianD 106.ogg}} '''Guardian Shadow:''' █ ███Why█ █do you█ ██al█ways...
+:{{A|VO Side1 ld1 guardianD 107.ogg}} '''Guardian Shadow:''' █ ██ have to██stand █ █ ██in my way ███ ██ █...!
+----
+:{{A|VO Side1 ld1 gepard 262.ogg}} '''Gepard:''' The temperature is returning to normal... the monsters are retreating.
+:{{A|VO Side1 ld1 gepard 263.ogg}} '''Gepard:''' ...I think it's safe to say that the shadow of Madam Cocolia was the reason for this invasion. The other anomalies we experienced were probably also a direct result...
+:{{A|VO Side1 ld1 gepard 264 m.ogg}} {{A|VO Side1 ld1 gepard 264 f.ogg}} '''Gepard:''' Whatever the case, we've managed to avert a crisis. Are you okay, (Trailblazer)?
+:{{DIcon|Arrow}} That was a hard-won battle.
+::{{A|VO Side1 ld1 gepard 265.ogg}} '''Gepard:''' Indeed it was. We're lucky to have an experienced fighter like you who can adapt to different enemies.
+:{{DIcon|Arrow}} That's it? That barely scratched the itch!
+::{{A|VO Side1 ld1 gepard 266.ogg}} '''Gepard:''' Sounds like something the Hero of Belobog would say alright.
+:{{A|VO Side1 ld1 gepard 267.ogg}} '''Gepard:''' It would've taken us much longer to fight off the shadow without you. Serval... how are you feeling?
+:{{A|VO Side1 ld1 serval 292.ogg}} '''Serval:''' I...
+:{{A|VO Side1 ld1 serval 293.ogg}} '''Serval:''' I feel like something heavy has finally been lifted.
+:{{A|VO Side1 ld1 serval 294 m.ogg}} {{A|VO Side1 ld1 serval 294 f.ogg}} '''Serval:''' All that noise before it perished... (Trailblazer), did you catch what it said?
+:{{DIcon|Arrow}} It said, "Why do you always have to stand in my way?"
+::{{A|VO Side1 ld1 serval 295.ogg}} '''Serval:''' I see... You really made no effort to correct your mistakes, Cocolia...
+::{{A|VO Side1 ld1 serval 296.ogg}} '''Serval:''' Anyway, it doesn't matter anymore... From here on out, I'm over that woman.
+:{{DIcon|Arrow}} It said, "Thank you, Serval."
+::{{A|VO Side1 ld1 serval 297.ogg}} '''Serval:''' ...Ha, really?
+::{{A|VO Side1 ld1 serval 298.ogg}} '''Serval:''' *sigh* I guess it doesn't matter. From here on out, I'm over that woman.
+:{{DIcon|Arrow}} I didn't quite catch it...
+::{{A|VO Side1 ld1 serval 299.ogg}} '''Serval:''' Oh... shame.
+::{{A|VO Side1 ld1 serval 300.ogg}} '''Serval:''' *sigh* I guess it doesn't matter. From here on out, I'm over that woman.
+:{{A|VO Side1 ld1 gepard 268.ogg}} '''Gepard:''' ...I can tell you mean it this time.
+:{{A|VO Side1 ld1 gepard 269.ogg}} '''Gepard:''' I'm happy for you, Serval... It's not easy to truly put the past behind you.
+:{{A|VO Side1 ld1 gepard 270.ogg}} '''Gepard:''' Looks like we accomplished our mission. I need to get back to the Guards and Wildfire to wrap things up.
+:{{A|VO Side1 ld1 gepard 271.ogg}} '''Gepard:''' You two should head over to Natasha's place and check in on the wounded.
+:{{A|VO Side1 ld1 serval 301 m.ogg}} {{A|VO Side1 ld1 serval 301 f.ogg}} '''Serval:''' Sure, come find us later at the clinic. (Trailblazer), let's leave Gepard to his business and head back to town.
+----
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{A|VO Side1 ld1 minerO 101.ogg}} '''Trapped Boy:''' Oh... *sob*
+:{{A|VO Side1 ld1 gepard 226.ogg}} '''Gepard:''' They're in danger, let's go!
+:{{A|VO Side1 ld1 gepard 227.ogg}} '''Gepard:''' They need our help. We have to deal with these monsters first before advancing further.
+{{Dialogue End}}
+
+===Look for the little girl and other miners{{subst:void|<!--201140410-->}}===
+{{Mission Description|type=companion|location=Great Mine|update|You and the siblings arrive at a temporary base in the besieged mining area. You inform the vagrants to immediately retreat to the mining bridge with the children and the elderly.<br />After successfully solving the issue for this base, you keep moving forward and look for miners who have been separated from the others. The few people who the miners mentioned should be around here. Look for them carefully.}}
+{{Dialogue Start}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{A|VO Side1 ld1 gepard 227.ogg}} '''Gepard:''' They need our help. We have to deal with these monsters first before advancing further.
+----
 {{Dialogue End}}
 
 ==Other Languages==

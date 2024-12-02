@@ -11,7 +11,7 @@ PageTitle=#Clockwork: Benny#
 |chapter       = Clockwork
 |requirements  = [[Trailblaze Mission]] ''[[Gentleness, the Name of Nocturne]]'' completed
 |summary       = <!--official mission summary from Fate's Atlas-->
-|characters    = Trailblazer
+|characters    = Benny; Trailblazer; Woolsey
 |startLocation = [[Penacony]] - [[Dream's Edge]]
 |world         = Penacony
 |area          = Dream's Edge
@@ -38,26 +38,105 @@ PageTitle=#Clockwork: Benny#
 {{Stub Dialogue}}
 {{Dialogue End}}
 
-===Collect Uma's opinions on the outcomes of the Dream's Edge project===
+===Collect Uma's opinions on the outcomes of the Dream's Edge project{{subst:void|<!--424030704-->}}===
 {{Mission Description|type=adventure|location=Golden Hour|update|Tick... tock! Quick, adjust the hands... Tick, tock!<br />People's minds await your exploration. Help them regain their true selves!}}
 {{Dialogue Start}}
-:{{tx}}
+
 {{Dialogue End}}
 
-===Collect Sir Whittaker's opinions on the outcomes of the Dream's Edge project===
+===Collect Sir Whittaker's opinions on the outcomes of the Dream's Edge project{{subst:void|<!--424030705-->}}===
 {{Dialogue Start}}
-:{{tx}}
+
 {{Dialogue End}}
 
-===Collect Woolsey's opinions on the outcomes of the Dream's Edge project===
+===Collect Woolsey's opinions on the outcomes of the Dream's Edge project{{subst:void|<!--424030706-->}}===
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Woolsey)
+:{{A|VO vo ambient w3 greeting woolsey 101 calm.ogg}} {{A|VO vo ambient w3 greeting woolsey 102 calm.ogg}} '''Woolsey:''' Don't worry about accidents &mdash; The Family will protect each and every guest.
+:{{DIcon|Arrow}} What do you think about the Dream's Edge project?
+:'''Woolsey:''' Hmm...
+:'''Woolsey:''' With all due respect, that entire project... lacks imagination.
+:'''Woolsey:''' From the way I see it, their Dreamweavers seem to follow a fixed formula when they work. When it's supposed to be a creative process, they may look more like they are solving a geometric problem.
+:'''Woolsey:''' That's not the deal-breaker. What truly makes me sick is...
+:{{DIcon|Arrow}} What is it?
+:'''Woolsey:''' ...Their obsession with doors.
+:'''Woolsey:''' You'll get what I mean when you visit the place. Doors are everywhere in the city! You have to pass through a door to enter a building, cross a pedestrian bridge, and access the rooftop garden.
+:'''Woolsey:''' What's the reason behind the obsession? I'm puzzled. If no one cares to explain, I'll take it as a sign of incompetence.
+:{{DIcon|Arrow}} Please give it a score out of ten.
+:'''Woolsey:''' Hmm...
+:'''Woolsey:''' I'll give it a... seven. It isn't too harsh and is fair.
+:'''Woolsey:''' I've been told that the team used to produce many critically acclaimed virtual reality projects back then. Who knows? Some people might be drawn to it.
 {{Dialogue End}}
 
-===Return to the Dream's Edge and report to Benny.===
+===Return to the Dream's Edge and report to Benny.{{subst:void|<!--424030707-->}}===
 {{Mission Description|type=adventure|location=Dream's Edge|update|Tick... tock! Quick, Adjust the hands... Tick, tock!<br />People's minds await your exploration. Help them regain their true selves!}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Benny)
+:'''Benny:''' The mission is yours, buddy! I need a fresh face to gather information for me, as I want to find out how The Family values our work.
+:'''Benny:''' If possible, I'd like them to rate our work... It's up to you who you want to approach. Don't worry, as anyone who holds a position in The Family should have already been here and tried what we have to offer.
+:{{DIcon|Arrow}} I've collected the ratings from some Family members.
+:'''Benny:''' You're so reliable, buddy! I knew I could trust you!
+:'''Benny:''' Now, tell me everything. Let me see what they think of my project.
+:'''Benny:''' ...
+:'''Benny:''' Seven... Seven!?
+:'''Benny:''' ...Are you sure the scores come from the bottom of their hearts? You didn't say anything that swayed their opinions, did you?
+:{{DIcon|Arrow}} Why would I want to do that?
+:{{DIcon|Arrow}} Don't pin this on me...
+:'''Benny:''' This is outrageous... I can't accept it!
+:'''Benny:''' Look at the ridiculous things they said about my project! My team and I are so committed to this project. Why can't they just be grateful for what we've done?
+<pre>{
+	"$type": "RPG.GameCore.TriggerBlendShapesEmotion",
+	"TargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvNpcEx",
+		"FetchType": "SingleNpcByNpcID",
+		"SingleNpcID": {
+			"GroupID": {
+				"fixedValue": {
+					"Value": 213
+				}
+			},
+			"GroupNpcID": {
+				"fixedValue": {
+					"Value": 400001
+				}
+			}
+		}
+	},
+	"EmotionName": "Angry01",
+	"TransitTime": 0.2
+}</pre>
+:'''Benny:''' Who made this comment? Mediocre!? Does she even know anything about the industry? We're making something ahead of this era here. She should improve her tastes before making any comments!
+:'''Benny:''' What does this guy mean about Miracle Benjamin being more of a gimmick than substance?
+:'''Benny:''' It's downright nonsense! Is he accusing us of false advertising? We mean everything we include in the advertisement. He's welcome to come here and count whether there are indeed a thousand buildings here!
+:'''Benny:''' We're obsessed with doors? What kind of a comment is that? Is it a joke? How about he remove all the doors in his house and see whether it makes his life better?
+:'''Benny:''' These two-faced scumbags from The Family! They greet us with smiling faces but criticize us behind our backs...
+:'''Benny:''' They can humiliate me, but they mustn't disrespect my team and our hard work! That would be crossing the line!
+:'''Benny:''' No way. I need to talk to them and sort things out. Why can't they speak up forthrightly if there's something they aren't happy with? Are they secretly waiting to see me making a fool out of myself? Have they forgotten this is also their project?
+:'''Benny:''' Thank you so much, buddy. If it weren't for your help, I might have been kept in the dark until the day I delivered the project. Please keep these tokens of my appreciation.
+<pre>{
+	"$type": "RPG.GameCore.ShowHeartDialToast",
+	"StepType": "Normal",
+	"TargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvNpcEx",
+		"FetchType": "SingleNpcByNpcID",
+		"SingleNpcID": {
+			"GroupID": {
+				"IsDynamic": false,
+				"FixedValue": {
+					"Value": 213
+				}
+			},
+			"GroupNpcID": {
+				"IsDynamic": false,
+				"FixedValue": {
+					"Value": 400001
+				}
+			}
+		}
+	}
+}</pre>
 {{Dialogue End}}
 
 ==Other Languages==

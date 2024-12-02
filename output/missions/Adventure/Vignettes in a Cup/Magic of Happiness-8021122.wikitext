@@ -11,7 +11,7 @@ PageTitle=#Magic of Happiness#
 |chapter       = Vignettes in a Cup
 |requirements  = {{subst:void|<!--Unknown: {"Type":"Manual"}-->}}
 |summary       = <!--official mission summary from Fate's Atlas-->
-|characters    = Trailblazer
+|characters    = Mr. Bigwig; Trailblazer
 |startLocation = [[Penacony]] - [[Mr. Bigwig's Emoscape]]
 |world         = Penacony
 |area          = Mr. Bigwig's Emoscape
@@ -34,10 +34,40 @@ PageTitle=#Magic of Happiness#
 ==Dialogue==
 {{Stub Dialogue}}
 
-===Have fun with Mr. Bigwig===
+===Have fun with Mr. Bigwig{{subst:void|<!--802112201-->}}===
 {{Mission Description|type=adventure|location=Mr. Bigwig's Emoscape|You've entered Mr. Bigwig's Emoscape. Have some fun together.}}
 {{Dialogue Start}}
+:'''Mr. Bigwig:''' Over here, over here! Play with me! I wanna pounce on anything I see moving fast, woof!
+;(Upon reaching the destination)
+:'''Mr. Bigwig:''' Woof!! Incredible! Let's keep playing!
+;(Upon reaching the destination)
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+----
+:'''Mr. Bigwig:''' I feel so much better... Who knew having some company could be such a wonderful thing, woof?
+:'''Mr. Bigwig:''' You gotta take me out to play again, okay? Woof, woof! I wanna go play! I wanna go play!
+:{{DIcon|Arrow}} Will you intentionally make someone angry again?
+:'''Mr. Bigwig:''' ...Woof? I'll be the Soda Doggo that brings you happiness, who's smart and nice. I'll be friendly and won't cause any trouble, woof!
 :{{tx}}
+----
+<pre>{
+	"$type": "RPG.GameCore.ShowUI",
+	"Name": "Ui.DrinkMaker.WorkBook.DrinkMakerWorkBookPage",
+	"WaitForExit": true,
+	"Param": {
+		"Value": "2"
+	}
+}</pre>
+;(If {{cx}}<!--SubMission Finish: 802110206-->)
+:<pre>{
+	"$type": "RPG.GameCore.ShowUI",
+	"Name": "Ui.DrinkMaker.Handbook.DrinkMakerNewContentUnlockDialog",
+	"WaitForExit": true,
+	"Param": {
+		"Value": "802110208"
+	}
+}</pre>
 {{Dialogue End}}
 
 ==Other Languages==

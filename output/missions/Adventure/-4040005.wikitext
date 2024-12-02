@@ -11,7 +11,7 @@ PageTitle=##
 |chapter       = 
 |requirements  = [[Trailblaze Mission]] ''[[Lingering Shadows]]'' completed
 |summary       = <!--official mission summary from Fate's Atlas-->
-|characters    = Trailblazer
+|characters    = Researcher of the Department of Implement Arts; Trailblazer
 |startLocation = [[Herta Space Station]] - [[Master Control Zone]]
 |world         = Herta Space Station
 |area          = Master Control Zone
@@ -33,7 +33,80 @@ PageTitle=##
 -->
 ==Dialogue==
 {{Stub Dialogue}}
-
+:<!--0.25-second delay-->
+<pre>{
+	"$type": "RPG.GameCore.PropSetupUITrigger",
+	"DisableAfterTriggered": true,
+	"ButtonIcon": "SpriteOutput/TalkIcon/BoxIcon.png",
+	"IconType": "BoxIcon",
+	"ButtonText": {
+		"Hash": -199246934
+	},
+	"ButtonCallback": [
+		{
+			"$type": "RPG.GameCore.TriggerCustomString",
+			"CustomString": {
+				"Value": "Mission_404000501_Prop_44_300002_BtnClick"
+			}
+		}
+	],
+	"InteractAngleRange": 180,
+	"OverrideTargetTypes": [],
+	"SkipFakeAvatar": true,
+	"TargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvPropEx",
+		"FetchType": "SinglePropByPropID",
+		"SinglePropID": {
+			"GroupID": {
+				"fixedValue": {
+					"Value": 44
+				}
+			},
+			"ID": {
+				"fixedValue": {
+					"Value": 300002
+				}
+			}
+		}
+	}
+}</pre>
+:<!--0.25-second delay-->
+<pre>{
+	"$type": "RPG.GameCore.PropSetupUITrigger",
+	"DisableAfterTriggered": true,
+	"ButtonIcon": "SpriteOutput/TalkIcon/BoxIcon.png",
+	"IconType": "BoxIcon",
+	"ButtonText": {
+		"Hash": -199246934
+	},
+	"ButtonCallback": [
+		{
+			"$type": "RPG.GameCore.TriggerCustomString",
+			"CustomString": {
+				"Value": "Mission_404000502_Prop_66_300002_BtnClick"
+			}
+		}
+	],
+	"InteractAngleRange": 180,
+	"OverrideTargetTypes": [],
+	"SkipFakeAvatar": true,
+	"TargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvPropEx",
+		"FetchType": "SinglePropByPropID",
+		"SinglePropID": {
+			"GroupID": {
+				"fixedValue": {
+					"Value": 66
+				}
+			},
+			"ID": {
+				"fixedValue": {
+					"Value": 300002
+				}
+			}
+		}
+	}
+}</pre>
 {{Dialogue End}}
 
 ==Other Languages==

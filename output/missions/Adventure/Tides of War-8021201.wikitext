@@ -7,11 +7,11 @@ PageTitle=#Tides of War (Adventure Mission)#
 |title         = Tides of War
 |image         = <!--Mission Tides of War (Adventure Mission).png-->
 |type          = Adventure
-|event_name    = 
+|event_name    = Tides of War
 |chapter       = 
 |requirements  = [[Trailblaze Mission]] ''[[Silent Galaxy]]'' completed
 |summary       = <!--official mission summary from Fate's Atlas-->
-|characters    = Trailblazer
+|characters    = Bob; Lysander; Trailblazer
 |startLocation = [[Herta Space Station]] - [[Supply Zone]]
 |world         = Herta Space Station
 |area          = Supply Zone
@@ -19,7 +19,7 @@ PageTitle=#Tides of War (Adventure Mission)#
 |next          = 
 |rewards       = Credit*5,000
 }}
-'''''Tides of War''''' is an [[Adventure Mission]] on [[Herta Space Station]].
+'''''Tides of War''''' is an Event [[Adventure Mission]] from the [[Tides of War]] event.
 
 ==Steps==
 # Speak with Lysander
@@ -35,16 +35,66 @@ PageTitle=#Tides of War (Adventure Mission)#
 ==Dialogue==
 {{Stub Dialogue}}
 
-===Speak with Lysander===
+===Speak with Lysander{{subst:void|<!--802120101-->}}===
 {{Mission Description|type=adventure|location=Supply Zone|A retired researcher has something to talk with you about at the space station. Best to have this conversation face-to-face.<br />This fellow is always so mysterious, but he might just have some good news to share with you.}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Lysander)
+:'''Lysander:''' Young 'un, you're here...
+:'''Lysander:''' Recently, a young fella made a gadget, and I thought you might like it. I've given him a heads-up. You can go over there and have some fun. It's pretty interesting.
+:'''Lysander:''' He just came back to the space station, and when he heard you were coming, he waited there for you...
 {{Dialogue End}}
 
-===Talk to Bob to find out more===
+===Talk to Bob to find out more{{subst:void|<!--802120102-->}}===
 {{Mission Description|type=adventure|location=Supply Zone|update|Lysander's junior just returned from a vacation at Penacony. He seems to know a lot about your achievements on the space station and wants to meet "the space station's big hero."}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Bob)
+:'''Bob:''' Ooh, so you're that (Trailblazer) everyone's talking about. The Nameless, huh?
+:{{DIcon|Arrow}} That's me. Who are you?
+::'''Bob:''' Uh, didn't old Lysander mention me to you?
+:{{DIcon|Arrow}} Lysander asked me to come to you...
+::'''Bob:''' Yeah, it's me! You've found the right person.
+:'''Bob:''' Ahem, let me introduce myself. I'm Bob. I work in the Maintenance Department, and I just got back to the space station.
+:'''Bob:''' I was on vacation in Penacony, and little did I know I'd miss meeting a big shot like you there.
+:{{DIcon|Arrow}} Don't butter me up. Let's get to the point...
+::'''Bob:''' Well, I'm not trying to butter you up... We were discussing things in the Heritor group, and I genuinely admired you.
+:{{DIcon|Arrow}} What brought you to Penacony?
+::'''Bob:''' Um, when it comes to vacations, any intelligent life would choose the Planet of Festivities, right...?
+:'''Bob:''' Ahem, so I went to Penacony for a vacation and ended up solving a technical issue along the way.
+:'''Bob:''' I met a technician from the Garden of Recollection there, with whom I had exchanged several emails before... With her help, I managed to extract this stuff...
+:Bob gestures towards the memory bubble next to him.
+:{{DIcon|Arrow}} Is this the... interesting stuff?
+::'''Bob:''' Yeah, it took me a lot of effort. I tested it myself, and it's pretty fun.
+:{{DIcon|Arrow}} It's just a memory bubble...
+::'''Bob:''' Nah, nah, it's not "just" an ordinary memory bubble.
+:'''Bob:''' This memory bubble... holds all my childhood memories... and all the good times...
+:{{DIcon|Arrow}} Why such a sudden change of topic?
+::'''Bob:''' Ahem, my bad. I couldn't help but get sentimental when I think about my childhood memories.
+:{{DIcon|Arrow}} Uh... Come on. Cheer up...
+::'''Bob:''' I'm not feeling down, just getting a bit sentimental, you know? It's all those memories from way back when.
+:'''Bob:''' When I was a kid, I was crazy about this game, and I thought about recreating it when I came to the space station... But unfortunately, the game company went bankrupt ages ago, and I had no clue whom to contact for the rights...
+:'''Bob:''' Luckily, I had this amazing idea in my dreams: What if I recreated the game using my "memories" as the basis...?
+:'''Bob:''' I've been working on this project for almost a year now. With all the resources on the space station and some technical assistance, I've finally made it happen.
+:'''Bob:''' This memory bubble is actually "Tides of War: Untainted Childhood Memories Passionate-Heart Burning-Soul Ultimate Collection" &mdash; It's a cool and easy customized fighting game where you can battle all those childhood foes in the memory for a whole day!
+:'''Bob:''' And... I've added all sorts of customized features and assists in there... Now it's way easier than the old version I played as a kid!
+:{{DIcon|Arrow}} Isn't that just cheating?
+::'''Bob:''' W&mdash;Well, it's not... not a cheat, yeah! It's not like you press a button and instantly beat the game! You still have to clear those stages yourself!
+:{{DIcon|Arrow}} Its name is pretty cringy...
+::'''Bob:''' ...Well, that's how they named games back in the day, you know...
+:'''Bob:''' Anyway, this game is still in alpha, and Uncle Lysander has asked me to save you a spot. Why not come and give it a try?
+<pre>{
+	"$type": "RPG.GameCore.TriggerEntityEvent",
+	"EventName": {
+		"Value": "Clt_TriggerClose"
+	},
+	"InstanceID": {
+		"IsDynamic": false,
+		"FixedValue": {
+			"Value": 300001
+		}
+	}
+}</pre>
 {{Dialogue End}}
 
 ==Other Languages==

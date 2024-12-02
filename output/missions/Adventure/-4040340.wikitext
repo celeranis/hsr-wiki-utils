@@ -34,6 +34,67 @@ PageTitle=##
 ==Dialogue==
 {{Stub Dialogue}}
 
+
+:{{DIcon|Loupe}} Signpost
+:A dilapidated sign with an obscure coin slot.
+:"A concealed area is up ahead. Please line up to wait for your ride. Note: This stop only accepts Aideen Tokens." You squint your eyes and notice this line of fine print below the coin slot.
+:Refusing to relent, you shove some ordinary coins in it &mdash; they are spit out right away... Looks like this one's a picky eater.
+:No choice but to heart-wrenchingly sacrifice your tokens.
+<pre>{
+	"$type": "RPG.GameCore.ConsumeMissionItemPerformance",
+	"SubMissionID": 404034001,
+	"Desc": {
+		"Hash": 278713946
+	},
+	"OnSubmitConfirm": [
+		{
+			"$type": "RPG.GameCore.TriggerCustomString",
+			"CustomString": {
+				"Value": "ConsumeItem_4040340"
+			}
+		},
+		{
+			"$type": "RPG.GameCore.PlayAndWaitSimpleTalk",
+			"KeepDisplay": true,
+			"SimpleTalkList": [
+				{
+					"TextSpeed": 20,
+					"TalkSentenceID": 404033905,
+					"ProtectTime": 0.3
+				},
+				{
+					"TextSpeed": 20,
+					"TalkSentenceID": 404033906,
+					"ProtectTime": 0.3
+				}
+			]
+		},
+		{
+			"$type": "RPG.GameCore.EndPerformance"
+		}
+	],
+	"OnSubmitCancel": [
+		{
+			"$type": "RPG.GameCore.PlayAndWaitSimpleTalk",
+			"KeepDisplay": true,
+			"SimpleTalkList": [
+				{
+					"TextSpeed": 20,
+					"TalkSentenceID": 404033907,
+					"ProtectTime": 0.3
+				}
+			]
+		},
+		{
+			"$type": "RPG.GameCore.EndPerformance"
+		}
+	],
+	"SimpleTalk": {
+		"TextSpeed": 20,
+		"ProtectTime": 0.8
+	}
+}</pre>
+;(Upon reaching the destination)
 {{Dialogue End}}
 
 ==Other Languages==

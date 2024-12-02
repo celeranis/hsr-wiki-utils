@@ -5,6 +5,16 @@ export type AeonPath =
 	| 'Abundance' | 'TheHunt' | 'Propagation' | 'Erudition' | 'Trailblaze'
 	| 'Ruan Mei'
 
+export const enum CombatPath {
+	Destruction = 'Warrior',
+	TheHunt = 'Rogue',
+	Erudition = 'Mage',
+	Harmony = 'Shaman',
+	Nihility = 'Warlock',
+	Preservation = 'Knight',
+	Abundance = 'Priest',
+}
+
 export type AttackType = 'Physical' | 'Fire' | 'Wind' | 'Ice' | 'Thunder' | 'Quantum' | 'Imaginary'
 export type CustomAttackType = 'physical' | 'fire' | 'wind' | 'ice' | 'lightning' | 'quantum' | 'imaginary'
 export type RealAttackType = 'Physical' | 'Fire' | 'Wind' | 'Ice' | 'Lightning' | 'Quantum' | 'Imaginary'
@@ -265,4 +275,17 @@ export function allEqual<T extends (string | number | boolean | undefined | null
 	}
 	
 	return true
+}
+
+export function sentenceJoin(list: (string | number)[], conjunction: string = 'and', comma: string = ', ') {
+	if (list.length == 0) {
+		return ''
+	} else if (list.length == 1) {
+		return String(list[0])
+	} else if (list.length == 2) {
+		return `${list[0]} ${conjunction} ${list[1]}`
+	} else {
+		list[list.length - 1] = `${conjunction} ${list[list.length - 1]}`
+		return list.join(comma)
+	}
 }

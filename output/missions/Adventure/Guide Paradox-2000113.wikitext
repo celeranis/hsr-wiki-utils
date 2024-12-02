@@ -11,7 +11,7 @@ PageTitle=#Guide Paradox#
 |chapter       = 
 |requirements  = [[Adventure Mission]] ''[[Guide Paradox]]'' completed
 |summary       = <!--official mission summary from Fate's Atlas-->
-|characters    = Trailblazer
+|characters    = Esther; Gunn; Joanne; Sheila; Trailblazer
 |startLocation = [[Herta Space Station]] - [[Supply Zone]]
 |world         = Herta Space Station
 |area          = Supply Zone
@@ -23,20 +23,20 @@ PageTitle=#Guide Paradox#
 
 ==Steps==
 # Find the lost videotapes
-# Tell Sheila about the secret you found
-# Find the lost videotapes
 # Follow Joanne to the medical cabin
 # Investigate and find out more about this mysterious Sheila
 # Head to the room from Sheila's memory
 # Find the security monitor in Sheila's memory
 # Tell Sheila about the secret you found
 # Get into the Medical Cabin to save Sheila
+# Give instructions to Sheila, who is back online
 # Tell Gunn how to deal with Prototype 157
+# Tell Sheila about the secret you found
+# Get into the Medical Cabin to save Sheila
 # Return the videotapes and go back to where you started
+# Bury the secret in your heart and continue your journey
 # Check the status of Prototype 157
 # Discuss the fate of Prototype 157 with Joanne
-# Give instructions to Sheila, who is back online
-# Bury the secret in your heart and continue your journey
 
 <!--
 ==Gameplay Notes==
@@ -47,94 +47,449 @@ PageTitle=#Guide Paradox#
 -->
 ==Dialogue==
 {{Stub Dialogue}}
-
-===Find the lost videotapes===
+===Find the lost videotapes{{subst:void|<!--200011202-->}}===
 {{Mission Description|type=adventure|location=Supply Zone|The elderly Esther authorizes you to retrieve the videotapes of wonders and secrets. But why you?<br />That's because this researcher from the Department of Insight believes that secrets choose their own witnesses.}}
 {{Dialogue Start}}
-:{{tx}}
 {{Mission Description|type=adventure|location=Supply Zone|update|Esther authorizes you to retrieve the videotapes of wonders and secrets.}}
-{{Mission Description|type=adventure|location=Supply Zone|update|You wake up in the space station's Medical Department, just as a medical researcher, Joanne, is treating another researcher. The patient claims that she is suffering from short-term memory loss. More importantly, her name is... "Sheila."<br />Sensing oddity, secrecy, and conspiracy, you agree to go to the room Sheila tells you about and start an investigation.}}
-{{Dialogue End}}
 
-===Tell Sheila about the secret you found===
-{{Mission Description|type=adventure|location=Base Zone|update|You fulfill your promise, arriving at the room from Sheila's memories and getting Sheila's character script and a confession letter written by the researcher Gunn.<br />The script records Sheila's day-to-day thoughts, while the confession mentions a mysterious experiment. Connecting the dots between the two sends a shiver down your spine.}}
-{{Dialogue Start}}
-:{{tx}}
-{{Mission Description|type=adventure|location=Base Zone|update|You decide to give the character script and the confession letter to Sheila, but Gunn seals off the Medical Cabin and is now in charge of Sheila's treatment.}}
-{{Dialogue End}}
+;(Obtain {{Item|Videotape: Dim Blue Dot|20|x=1}})
 
-===Find the lost videotapes===
+;(Obtain {{Item|Videotape: Justice|20|x=1}})
+
+;(Obtain {{Item|Videotape: Doomsday|20|x=1}})
 {{Mission Description|type=adventure|location=Supply Zone|update|After gathering the three lost videotapes, you notice that they all seem to be records of the life of a researcher named Sheila.<br />Just as you start to figure this out, a secret defense mechanism implanted in the video signal gives you a splitting headache and knocks you unconscious.}}
-{{Dialogue Start}}
-:{{tx}}
+:These videotapes seem to be related... they seem to be records of different stages of life of the same person.
+:A {{Color|fire|nobold=1|space radio}} called Sheila {{Color|fire|nobold=1|pursued justice}} for {{Color|fire|nobold=1|a doomed planet}} geopolitics researcher.
+:The sentences in your mind suddenly become broken and disordered. In your vision, the dark cabin gradually becomes distorted and strange.
+:You get a splitting headache and then lose consciousness.
 {{Dialogue End}}
 
-===Follow Joanne to the medical cabin===
+===Follow Joanne to the medical cabin{{subst:void|<!--200011208-->}}===
 {{Dialogue Start}}
-:{{tx}}
+----
+:This is...
+:'''Joanne:''' The medical cabin of Herta Space Station.
+:'''Joanne:''' You fainted because of contact with improper information. Can you tell me what information you have been exposed to?
+:{{DIcon|Arrow}} The life of a deceased...
+:{{DIcon|Arrow}} The life of a geopolitics researcher.
+:{{DIcon|Arrow}} The life of someone who fought against the Legion...
+:(Also the life of a person named Sheila...)
+:'''Joanne:''' Whatever it is, I have cleared the mental contamination for you. Now, you'd better {{Color|keyword|nobold=1|go for a walk}}, and see if you have any other symptoms.
+:'''Joanne:''' Come with me.
+----
+<pre>{
+	"$type": "RPG.GameCore.CharacterNavigateTo",
+	"CharacterUniqueName": "200011208",
+	"AreaName": "LevelArea_P20001_F20001001_G46",
+	"AnchorName": "Anchor7",
+	"MotionFlag": "Walk",
+	"Duration": 5
+}</pre>
+:<!--6-second delay-->
 {{Dialogue End}}
 
-===Investigate and find out more about this mysterious Sheila===
+===Investigate and find out more about this mysterious Sheila{{subst:void|<!--200011209-->}}===
 {{Dialogue Start}}
-:{{tx}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:'''Joanne:''' Emergency resolved, now let's continue &mdash; same problem this time?
+:'''???:''' Well, I seem to keep... forgetting things lately.
+:'''Joanne:''' I have told you many times before that it is very normal to forget things sometimes.
+:'''???:''' No, I've been forgetting basic things. Like, my birthday, who my friends are. Or how I came to the space station.
+:'''Joanne:''' Fine. Just to reassure you, I will give you a full-body scan using the capsule treatment module this time. There's nothing wrong with your physical functions.
+:'''Joanne:''' On the contrary, they're a little... too perfect. Of course, that's your gift. After all, having a talent is not an unusual occurrence, and your talent seems to be your physical health. So, in turn, it's only fair that you might have a poor memory.
+:'''Joanne:''' With such a perfect physical condition, I better keep this on file. Let me make a record of this. What's your name?
+:'''???:''' Oh, yes, Dr. Joanne. My name is...
+:'''???:''' Sheila Nova.
+:(Sheila Nova... That's the name mentioned in the video.)
+:(In the video recording, she clearly left the space station. She even... died.)
+:(There must be something to this. It also matches the secret Esther was talking about.)
+:(I should investigate this so-called Sheila first.)
+:'''Joanne:''' Don't wander around. You are affected by those videotapes, the consciousness disorder you're experiencing is no joke. This is the price you pay for being nosy.
+
+;(Talk to Sheila)
+:'''Sheila:''' No, Joanne, it's definitely not ordinary forgetfulness. It's like someone stole my memories overnight...
+:{{DIcon|Talk}} Maybe you had a run-in with a Memosnatcher.
+::'''Joanne:''' Are you talking about those radicals in the Garden of Recollection? There's nothing those guys wouldn't do to get hold of other people's memories. If this is their doing, ordinary treatment is not going to work.
+::'''Joanne:''' But as far as I know, those Memosnatchers have never been seen in the space station.
+:;(Return to previous option selection)
+:{{DIcon|Talk}} It's good to have your embarrassing memories stolen!
+::'''Sheila:''' That's a good one, {{MC|m=sir|f=ma'am}}. But I am sure what I have forgotten is very important, even questions like "who am I"...
+::'''Joanne:''' The way I see it, it won't matter as long as it doesn't affect your research.
+:;(Return to previous option selection)
+:{{DIcon|Arrow}} I have some questions that may help you remember.
+::'''Joanne:''' Oh? We have a memory expert here, do we? I'd like to see what treatment you can come up with that even the medical staff don't know.
+::{{DIcon|Talk}} Are you the founder of the Dept. of Galactic Geopolitics?
+:::'''Sheila:''' No, {{MC|m=sir|f=ma'am}}. I'm just a guide in the Department of Galactic Geopolitics. I'm responsible for passing on the rules made by the big shots in the space station. I'm flattered by your question though.
+::;(Return to previous option selection)
+::{{DIcon|Talk}} Have you ever had a lover or a husband?
+:::'''Sheila:''' No, {{MC|m=sir|f=ma'am}}. I hope to contribute my everything to the Department of Galactic Geopolitics, including my health, my dreams, and my passion.
+::;(Return to previous option selection)
+::{{DIcon|Talk}} Have you ever left the space station?
+:::'''Sheila:''' No, {{MC|m=sir|f=ma'am}}. I've never left the space station since I was born. I don't think I'll leave the space station until my soul returns to the cosmos.
+::;(Return to previous option selection)
+::{{DIcon|Arrow}} The answers to these questions don't match the videos at all.
+:::'''Joanne:''' So, memory expert, aren't you gonna cast your memory restoration spell? You sound like you're doing a survey. And what's with the videos?
+:::{{DIcon|Arrow}} Those videos are records of Sheila's past.
+::::'''Joanne:''' As far as I know, all those videos are records of someone's personal experience. You mean those videos you saw are backups of Researcher Sheila's life?
+::::'''Joanne:''' Can you elaborate on what you saw?
+:::{{DIcon|Arrow}} Nothing. I'm just talking to myself.
+::::'''Joanne:''' Now you've piqued my curiosity... What exactly did you see in the videos?
+:::----
+:::'''Sheila:''' That's horrible. I don't remember any of these things. It's like listening to someone else's life.
+:::'''Joanne:''' I'll try to sort it out for you guys. So, {{Color|keyword|nobold=1|in the videos, Sheila is the founder of the Department of Galactic Geopolitics, and she left the space station and died on the way back to her home planet to warn its inhabitants about the invasion of the Legion}} &mdash; which doesn't match this person in front of us at all.
+:::'''Joanne:''' Maybe it's someone with the same name?
+:::'''Sheila:''' The Department of Galactic Geopolitics has registered the names of all its staff. I'm sure there's no one with the same name as me in the database.
+:::'''Joanne:''' How come you remember this so well?
+:::'''Sheila:''' It's very strange. There is also an image that I remember very clearly above all else.
+:::'''Sheila:''' {{Color|keyword|nobold=1|Rows of security monitors}} loom within a dark room.
+:::'''Sheila:''' The scene goes on forever without a beginning or an end. It is as though someone forced this image into my mind, but at the same time, it feels like a complete memory.
+:::'''Sheila:''' {{MC|m=Sir|f=Ma'am}}, since fate has brought us together, I have a request. Please help me get to the place in my memories and find those security monitors.
+:::'''Sheila:''' I have a hunch that if I can just find those security monitors, everything will become clear.
+:::{{DIcon|Arrow}} Sure, I'll help you find it.
+::::'''Joanne:''' Hey, don't forget, you are both patients. One has potential short-term amnesia, and the other had a temporary disturbance of consciousness.
+:::{{DIcon|Arrow}} This sounds mysterious...
+::::'''Joanne:''' What if you can't find this place at all? What if it's just your imagination?
+:::'''Sheila:''' If you can't find this room at all, then maybe I am losing my mind.
 {{Dialogue End}}
 
-===Head to the room from Sheila's memory===
+===Head to the room from Sheila's memory{{subst:void|<!--200011211-->}}===
 {{Mission Description|type=adventure|location=Supply Zone|update|You wake up in the space station's Medical Department, just as a medical researcher, Joanne, is treating another researcher. The patient claims that she is suffering from short-term memory loss. More importantly, her name is... "Sheila."<br />Sensing oddity, secrecy, and conspiracy, you agree to go to the room Sheila tells you about and start an investigation.}}
 {{Dialogue Start}}
-:{{tx}}
+:<!--0.5-second delay-->
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:Sheila's memory is correct. This place is exactly how she described it.
+:Maybe she's been here before. Now, let's look for this security monitor that she was talking about.
 {{Dialogue End}}
 
-===Find the security monitor in Sheila's memory===
+===Find the security monitor in Sheila's memory{{subst:void|<!--200011212-->}}===
 {{Dialogue Start}}
-:{{tx}}
+
 {{Dialogue End}}
 
-===Tell Sheila about the secret you found===
+===Tell Sheila about the secret you found{{subst:void|<!--200011214-->}}===
 {{Mission Description|type=adventure|location=Supply Zone|update|You fulfill your promise, arriving at the room from Sheila's memories and getting Sheila's character script and a confession letter written by the researcher Gunn.<br />The script records Sheila's day-to-day thoughts, while the confession mentions a mysterious experiment. Connecting the dots between the two sends a shiver down your spine.}}
 {{Dialogue Start}}
-:{{tx}}
+<pre>{
+	"$type": "RPG.GameCore.ShowReading",
+	"BookID": {
+		"fixedValue": {
+			"Value": 190201
+		}
+	},
+	"WaitForExit": true
+}</pre>
+:This script is exactly what Sheila said when she answered my questions.
+:Is someone watching her and writing her dialogues? Or is someone controlling her speech?
+:And this Gunn Konolev &mdash; what experiment was he talking about?
+:I have to get this information to Sheila as soon as possible. Then we can work out what the secret is.
+:<!--0.5-second delay-->
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+----
+:'''Joanne:''' Oh, you're too late. Everything's been dealt with.
+:{{DIcon|Arrow}} I found the information!
+:{{DIcon|Arrow}} What are you doing out here?
+:'''Joanne:''' Gunn from the Dept. of Galactic Geopolitics came and temporarily took over the authority of the medical cabin, saying he knows how to cure Sheila.
+:'''Joanne:''' In return for letting him use the medical cabin, he helped our department compile a list of patient confidentiality clauses. With that, no matter how influential a visitor is, they must follow the department's rules. This will greatly improve the privacy of doctors and patients alike!
+:{{DIcon|Arrow}} Open the door.
+::'''Joanne:''' You heard her. We are working internally on a patient confidentiality regulation.
+:{{DIcon|Arrow}} You are just being lazy!
+::'''Joanne:''' I've been busy for days. Can't I take a little break? Besides, there's nothing wrong with Sheila's health.
+:{{DIcon|Arrow}} This Gunn, he could be a bad guy...
+::'''Joanne:''' Why do you say that? Although, judging by your anxious look, you don't seem to be lying. Fine, you can sort it out with him face to face.
+:'''Joanne:''' You look like you're in a rush... Whatever. Our department isn't involved. You can deal with your own problems.
+----
 {{Dialogue End}}
 
-===Get into the Medical Cabin to save Sheila===
+===Get into the Medical Cabin to save Sheila{{subst:void|<!--200011219-->}}===
 {{Mission Description|type=adventure|location=Base Zone|update|You decide to give the character script and the confession letter to Sheila, but Gunn seals off the Medical Cabin and is now in charge of Sheila's treatment.}}
 {{Dialogue Start}}
-:{{tx}}
+:<!--0.5-second delay-->
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+----
+:'''Gunn:''' I'm performing treatment on this young guide from the Department of Galactic Geopolitics. Do you two have a good reason for breaking in here?
+:{{DIcon|Arrow}} This is a treatment?
+::'''Gunn:''' There was a little accident, but nothing serious.
+::'''Joanne:''' She seems to have temporarily lost consciousness, but her vitals are okay.
+::'''Gunn:''' Yes, Researcher Joanne, I thought we have already reached this consensus before. Sheila will return to normal very soon, provided that you wait outside.
+:{{DIcon|Arrow}} I think you have ulterior motives.
+::'''Gunn:''' Look, like I said, I'm helping this guide from the Department of Galactic Geopolitics. Although there was a little accident, it was not serious and far from being a conspiracy.
+::'''Joanne:''' She seems to have temporarily lost consciousness, but her vitals are okay.
+:{{DIcon|Arrow}} I'm feeling a little sick, too...
+::'''Gunn:''' Sorry, young one. As you can see, there was a little accident during the treatment procedure. I have to ask you to leave and wait outside for a while.
+::'''Joanne:''' Okay, what are your symptoms? Let's find a place to rest and I'll take a look at you!
+:'''Gunn:''' By the way, I haven't introduced myself yet. I'm Gunn, the founder of the Department of Galactic Geopolitics. As you can see, I have the knowledge and authority that matches my age.
+:'''Gunn:''' If you don't leave, I will have security take you away on the grounds of interfering with medical procedures.
+:'''Joanne:''' There's nothing we can do... His authority is higher than mine, second only to the likes of Chief Arlan. Let's wait outside for now.
+:{{DIcon|Arrow}} Why don't you take a look at what I have here?
+::'''Gunn:''' Why do you have my manuscript? I distinctly remember putting it away a long time ago.
+::'''Gunn:''' It seems that you may have misunderstood its content.
+:{{DIcon|Arrow}} Let's just call the Security Dept. on him now.
+::'''Gunn:''' Young {{MC|m=man|f=lady}}, why would you say that? Calm down, there seems to be some misunderstanding between us.
+::'''Gunn:''' Why do you have my manuscript? I distinctly remember putting it away a long time ago.
+:'''Gunn:''' To tell you the truth, I'm a theater enthusiast. I've written a play or two myself in my spare time. It's pure fiction.
+:'''Gunn:''' I see you have a lot of doubts about me. Why don't we have a chat. Maybe we can be friends?
+:'''Joanne:''' That's right. If you have anything important to say, spill it.
+:{{DIcon|Talk}} This manuscript talks about a mysterious experiment.
+::'''Gunn:''' The so-called experiment is just a part of my hobby. Some people like gardening, I prefer to write plays.
+::'''Gunn:''' Surely you can't be so naive as to think this has anything to do with what you see here right now, are you?
+:;(Return to previous option selection)
+:{{DIcon|Talk}} Sheila has been reciting the script you wrote in advance.
+::'''Gunn:''' ...Oh, you've spoken to her. That's very observant of you. Most people wouldn't notice this without paying close attention.
+::'''Gunn:''' Let me put it this way. I wrote that so-called script by imitating Sheila's speech. It is still fictional.
+::'''Gunn:''' That should clear up any misunderstandings you may have.
+:;(Return to previous option selection)
+:{{DIcon|Arrow}} I think you have ulterior motives.
+::'''Gunn:''' That's just your personal speculation. Do you have any other evidence? If not, there's no need to continue this conversation.
+::{{DIcon|Arrow}} My intuition has always been accurate.
+::{{DIcon|Arrow}} I am not going to leave.
+::{{DIcon|Arrow}} Joanne, don't just stand there.
+::'''Joanne:''' What are you talking about... Is this another residual effect of watching those videos?
+::{{DIcon|Arrow}} Right, the videos!
+::'''Gunn:''' ...What videos? What are you talking about?
+::{{DIcon|Arrow}} I saw you on the videos.
+::'''Joanne:''' What? How could you have seen Gunn in Sheila's videos?
+::'''Joanne:''' Given their age difference, if you saw a young Gunn in the videos, Sheila must've been a baby at the time &mdash; but that's not what you saw.
+::'''Joanne:''' Unless, the Sheila in front of us now is neither the owner of the videos nor the real Sheila Nova.
+::'''Joanne:''' If there is a so-called conspiracy or some kind of experiment, then it can only mean one thing. She is impersonating Sheila under false pretenses.
+::{{DIcon|Arrow}} And she is strictly following Gunn's script.
+:::'''Joanne:''' Yep, it all makes sense now.
+::{{DIcon|Arrow}} I think Joanne's theory is correct.
+:::'''Joanne:''' Hey, thanks for the compliment.
+::{{DIcon|Arrow}} Unless the experiment is to keep Sheila young forever...
+:::'''Joanne:''' It is said that, in the entire cosmos, only the messenger of Abundance has the power to make people live forever... Surely, Mr. Gunn doesn't have this ability.
+::'''Gunn:''' Hehe, you two... I must say, this is all very entertaining to watch.
+::'''Gunn:''' Well, since you've found the video... I suppose I can't hide it anymore. Who would've thought this tiny experiment of mine could attract so much interest.
+::'''Gunn:''' What happens next may surprise you, but no matter what you see or hear, please be patient until the end.
+::{{DIcon|Arrow}} I can't wait...
+::{{DIcon|Arrow}} You better tell the truth. Don't embellish it.
+::{{DIcon|Arrow}} Get over yourself. There's nothing I haven't seen.
+::'''Gunn:''' Sheila... reconnect. We have something to ask you.
+::'''Sheila:''' Yes, Mr. Gunn... But I don't feel so good.
+::'''Joanne:''' Sheila, are... are you okay?
+::'''Gunn:''' Now, you can give her some instructions, like pray, sing or shout.
+::'''Gunn:''' Be sure to do what I say first. Remember, the instructions include pray, sing and shout.
+::----
 {{Dialogue End}}
 
-===Tell Gunn how to deal with Prototype 157===
+===Give instructions to Sheila, who is back online{{subst:void|<!--200011241-->}}===
+{{Dialogue Start}}
+
+:{{DIcon|Talk}} Sheila
+:'''Sheila:''' Hello, I am Sheila Nova, your guide to the Herta Department of Galactic Geopolitics.
+:{{DIcon|Arrow}} Sheila, pray.
+:{{DIcon|Arrow}} Sheila, sing.
+:{{DIcon|Arrow}} Sheila, shout.
+:{{DIcon|Arrow}} Hit me...
+::'''Joanne:''' Hey, hey, hey! What are you doing...
+::'''Gunn:''' ...Although the instructions are not limited to the three I just mentioned, clearly this is not in the script.
+::'''Gunn:''' Please do as I say.
+::{{DIcon|Arrow}} Sheila, pray.
+::{{DIcon|Arrow}} Sheila, sing.
+::{{DIcon|Arrow}} Sheila, shout.
+----
+:'''Joanne:''' What the heck is going on?
+:'''Gunn:''' Yes, a smart person may have guessed by now...
+:'''Gunn:''' This all happened because I was too idealistic with my initial experiment design &mdash; I thought I could restore Sheila to her original self relying only on a script and some technology.
+:'''Gunn:''' Unfortunately, a limited script will never be able to simulate a person's natural reaction in the real world.
+:'''Gunn:''' So I tried letting her watch videos from the past, hoping that she could get a better understanding of how to be human.
+:'''Gunn:''' But I didn't expect Sheila, or should I say, prototype 157, to become so human.
+:'''Gunn:''' She started to think more and more like a real person. She even realized that another Sheila, who looked exactly like her, once existed in this world. That was when she began to doubt her own existence.
+----
+:'''Gunn:''' This is very dangerous for an android.
+:{{DIcon|Arrow}} Sheila is an android!?
+::'''Joanne:''' No wonder her body scan showed that her parameters were almost perfect &mdash; like a well-calibrated machine.
+:{{DIcon|Arrow}} What is an android?
+::'''Joanne:''' As the name suggests, it is a robot that looks extremely similar to a real person. Now pay attention to Gunn's story and don't interrupt.
+:{{DIcon|Arrow}} The plot thickens!
+::'''Joanne:''' To be honest, it was an eye-opener for me as well. No wonder her body scan showed that her parameters were almost perfect &mdash; it was like a well-calibrated machine.
+:{{DIcon|Arrow}} Beyond expectation, yet within reason.
+::'''Joanne:''' Stop talking like an art critic!
+:'''Gunn:''' That's right. The experiment I referred to is this perfect recreation of a young Sheila standing before you.
+:'''Gunn:''' She was modeled after the co-founder of the Department of Galactic Geopolitics, and... the love of my life, Sheila Nova. She died in the vast ocean of stars a long time ago.
+:'''Gunn:''' The reason I made prototype 157 is that I wanted to make up for my regret of not saving my true love when I had the chance.
+:'''Gunn:''' When she found out that she is not a real person, in order to prevent cognitive confusion, I had to erase her memory again and again, to restore her settings and maintain her normal operation.
+:{{DIcon|Arrow}} That's why Sheila had short-term amnesia.
+::'''Gunn:''' Right... But I never expected she would keep asking for help from the outside world until you eventually found out about all this.
+:{{DIcon|Arrow}} But she still remembered where you hid your information.
+::'''Gunn:''' I underestimated her, or rather, she has surpassed my imagination.
+:{{DIcon|Arrow}} You shouldn't deprive her of the ability to think for herself.
+::'''Gunn:''' No, I actually think this deprivation is necessary.
+::'''Gunn:''' When she became aware of her own memory loss and began to ask around for help, the situation could've easily gone out of control.
+:'''Gunn:''' So when I found out that Sheila was being treated by Researcher Joanne in the medical cabin, I came as soon as I could to try to "fix" her cognition once again.
+:{{DIcon|Arrow}} How did this "fix" go?
+::'''Gunn:''' There are many possibilities. Maybe she will finally live according to the script once and for all. Or perhaps she will continue the cycle, fall into another amnesia, and begin to seek help, until the next fix.
+:{{DIcon|Arrow}} You won't succeed this time.
+::'''Gunn:''' Indeed, I cannot let this cycle go on any longer.
+:'''Gunn:''' No matter how we deal with Sheila, I beg you, please don't make this experiment public. The ethical issues are bound to be investigated by the Department of Galactic Geopolitics.
+:'''Gunn:''' Please, forgive this old man who was just trying to mourn his dead wife.
+:'''Joanne:''' I'm just a bystander, it's not my decision. (Trailblazer), I think you have three choices right now.
+:'''Joanne:''' 1. Tell Prototype 157 the truth about her life.
+:'''Joanne:''' 2. Fix and factory reset Prototype 157.
+:'''Joanne:''' 3. Destroy Prototype 157 and erase all records of this dangerous experiment from the history of the space station.
+:'''Joanne:''' As the leader of this investigation, it's up to you to make the final decision. As for Gunn, I'll keep an eye on him.
+{{Dialogue End}}
+
+===Tell Gunn how to deal with Prototype 157{{subst:void|<!--200011220-->}}===
 {{Mission Description|type=adventure|location=Base Zone|update|You break through Gunn's hindrance and confront him face to face with the documents and videotapes as evidence. Finally, he tells you the truth.<br />It turns out that Gunn and Sheila used to be a couple, but the Sheila in front of you is just an experimental android made to look like his lover in the videotapes, who actually died years ago amidst the stars.}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Gunn)
+:'''Gunn:''' Have you really thought it through?
+:{{DIcon|Arrow}} Please tell Sheila the truth.
+::'''Gunn:''' Well, since you insist, I'll tell Prototype 157 about her story.
+::'''Gunn:''' But how she is gonna react to that is completely beyond my control.
+:;(Screen fades to black)
+::Gunn carries out your decision and leaves the medical cabin in silence.
+::...
+::----
+::<!--2-second delay-->
+:{{DIcon|Arrow}} Please "fix" Sheila's cognition.
+::'''Gunn:''' Thank you, young one. I think you made the right choice.
+::'''Gunn:''' I will fix and factory reset Prototype 157. And then, she will continue to perform her duties as a guide for the Department of Galactic Geopolitics, as usual.
+:;(Screen fades to black)
+::Gunn carries out your decision and leaves the medical cabin in silence.
+::...
+::----
+::<!--2-second delay-->
+:{{DIcon|Arrow}} Please destroy Sheila.
+::'''Gunn:''' This would go against my original wish of mourning my deceased wife, but considering the risks that Prototype 157 poses should she become out of control, I must admit that this is a safe choice.
+::'''Gunn:''' I promise you this. When I leave, I will choose a quiet time to bring Prototype 157 with me to the disposal site and destroy her there.
+::'''Gunn:''' Don't worry, no one will find out. After all, it is the place I am most familiar with outside of the Conference Room. My countless previous failed experimental objects sleep there.
+:;(Screen fades to black)
+::Gunn carries out your decision and leaves the medical cabin in silence.
+::...
+::----
+::<!--2-second delay-->
+:<!--0.5-second delay-->
+{{Mission Description|type=adventure|location=Supply Zone|update|You wake up in the space station's Medical Department, just as a medical researcher, Joanne, is treating another researcher. The patient claims that she is suffering from short-term memory loss. More importantly, her name is... "Sheila."<br />Sensing oddity, secrecy, and conspiracy, you agree to go to the room Sheila tells you about and start an investigation.}}
 {{Dialogue End}}
 
-===Return the videotapes and go back to where you started===
+===Tell Sheila about the secret you found{{subst:void|<!--200011215-->}}===
+{{Mission Description|type=adventure|location=Base Zone|update|You fulfill your promise, arriving at the room from Sheila's memories and getting Sheila's character script and a confession letter written by the researcher Gunn.<br />The script records Sheila's day-to-day thoughts, while the confession mentions a mysterious experiment. Connecting the dots between the two sends a shiver down your spine.}}
+{{Dialogue Start}}
+{{Mission Description|type=adventure|location=Base Zone|update|You decide to give the character script and the confession letter to Sheila, but Gunn seals off the Medical Cabin and is now in charge of Sheila's treatment.}}
+{{Dialogue End}}
+
+===Get into the Medical Cabin to save Sheila{{subst:void|<!--200011218-->}}===
+{{Dialogue Start}}
+:<!--1-second delay-->
+<pre>{
+	"$type": "RPG.GameCore.ChangePropState"
+}</pre>
+{{Dialogue End}}
+
+===Return the videotapes and go back to where you started{{subst:void|<!--200011225-->}}===
 {{Mission Description|type=adventure|location=Master Control Zone|update|Once you uncover the secret of Sheila and Gunn from many years ago, you return the tapes to Esther.<br />She tells you a pitiful story. You will continue your journey with it in mind.}}
 {{Dialogue Start}}
-:{{tx}}
+
+
+;(Talk to Esther)
+;(If {{cx}}<!--SubMission Finish: 300030105-->)
+::{{DIcon|Talk}} Have you found your own fashion style?
+:::'''Esther:''' To be honest, I'm still looking. It's a bit difficult to fix my bad habit of only paying attention to the latest products.
+:::'''Esther:''' But I have a general direction now. I won't fall into the trap of modern fashion again and I have you to thank for that, young one.
+::;(Return to previous option selection)
+::{{DIcon|Talk}} Does the Department of Insight suffer the most from this invasion?
+:::'''Esther:''' I'm not sure about the other departments. But this invasion is undoubtedly a disaster for us.
+:::'''Esther:''' A lot of our files were destroyed. Unlike experimental documents, which they can get the data by repeating the experiment, many Aeon mysteries will be lost forever...
+:::'''Esther:''' I may have to contact some ex-colleagues to transcribe some of the files. Things stored in our heads last the longest.
+::;(Return to previous option selection)
+::{{DIcon|Talk}} Is there anything I can help with?
+:::'''Esther:''' You're such a good kid. You don't look like you are from the Department of Insight. I shouldn't trouble you.
+:::'''Esther:''' We've got enough people. A few of my old friends are willing to help.
+:::'''Esther:''' If even someone as strong as Wen Tianweng couldn't handle this, I guess I'll have to seek help from you.
+::;(Return to previous option selection)
+::{{DIcon|Talk}} You have great fashion sense.
+:::'''Esther:''' Oh, I am flattered. I'll be embarrassed if you keep talking like that.
+:::'''Esther:''' However, I guess you are a stylish youngster yourself if you can see my fashion style and my makeup.
+:::'''Esther:''' Dressing up every day is my secret to staying energetic and happy. This is my secret.
+::;(Return to previous option selection)
+::{{DIcon|Exit}} That's all I have to ask.
+:::'''Esther:''' Feel free to come to me if you have any questions.
+;(If {{cx}}<!--SubMission not Finish: 300030105-->)
+::{{DIcon|Talk}} Does the Department of Insight suffer the most from this invasion?
+:::'''Esther:''' I'm not sure about the other departments. But this invasion is undoubtedly a disaster for us.
+:::'''Esther:''' A lot of our files were destroyed. Unlike experimental documents, which they can get the data by repeating the experiment, many Aeon mysteries will be lost forever...
+:::'''Esther:''' I may have to contact some ex-colleagues to transcribe some of the files. Things stored in our heads last the longest.
+::;(Return to previous option selection)
+::{{DIcon|Talk}} Is there anything I can help with?
+:::'''Esther:''' You're such a good kid. You don't look like you are from the Department of Insight. I shouldn't trouble you.
+:::'''Esther:''' We've got enough people. A few of my old friends are willing to help.
+:::'''Esther:''' If even someone as strong as Wen Tianweng couldn't handle this, I guess I'll have to seek help from you.
+::;(Return to previous option selection)
+::{{DIcon|Talk}} You have great fashion sense.
+:::'''Esther:''' Oh, I am flattered. I'll be embarrassed if you keep talking like that.
+:::'''Esther:''' However, I guess you are a stylish youngster yourself if you can see my fashion style and my makeup.
+:::'''Esther:''' Dressing up every day is my secret to staying energetic and happy. This is my secret.
+::;(Return to previous option selection)
+::{{DIcon|Exit}} That's all I have to ask.
+:::'''Esther:''' Feel free to come to me if you have any questions.
 {{Dialogue End}}
 
-===Check the status of Prototype 157===
+===Bury the secret in your heart and continue your journey{{subst:void|<!--200011226-->}}===
+{{Dialogue Start}}
+:<!--0.5-second delay-->
+{{Dialogue End}}
+
+===Check the status of Prototype 157{{subst:void|<!--200011231-->}}===
 {{Mission Description|type=adventure|location=Base Zone|update|Using the unethical nature of Gunn's experiment as leverage, you persuade him to do just as you decided and dispose of Prototype 157, also known as "Sheila."<br />You get to witness the price of choice.}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Sheila)
+:'''Joanne:''' How do you feel?
+:'''Sheila:''' Like I just had a very long dream.
+:{{DIcon|Arrow}} What did you dream about?
+::'''Sheila:''' I dreamed of a cold space station, a lost lover, a huge planet, and a silent radio.
+:{{DIcon|Arrow}} Can an android dream of electric sheep?
+::'''Sheila:''' Haha, no, {{MC|m=sir|f=ma'am}}. Actually, she dreamed of a cold space station, a lost lover, a huge planet, and a silent radio.
+:'''Sheila:''' So, I'm a mechanical replica... of a real person. My life is a parody of the dead.
+:'''Sheila:''' My thoughts, my speech, and even my behavior are the product of Mr. Gunn's preset.
+:'''Sheila:''' How ridiculous...
+:'''Sheila:''' After learning that the "other me" had such a rich life, I wish I had my own birthday, my own friends and my own dreams.
+:{{DIcon|Arrow}} Take your time. Everything will happen in due course.
+:{{DIcon|Arrow}} You can inherit everything from Sheila.
+:'''Sheila:''' Is it {{Color|fire|nobold=1|my wish?}} Or perhaps {{Color|fire|nobold=1|I do have my own birthday, my own friends, and my own dream}}.
+:'''Joanne:''' Oh no! There seems to be a problem with her language module. Her various functional indicators are fluctuating sharply.
+:'''Sheila:''' Thank you, (Trailblazer). {{Color|fire|nobold=1|I'm just a guide in the Department of Galactic Geopolitics}}. I think there is an even longer dream waiting for me. One where {{Color|fire|nobold=1|I willingly dedicate everything to the department}}.
+:'''Sheila:''' Anyway, thank you and {{Color|fire|nobold=1|farewell}}, (Trailblazer).
+:'''Joanne:''' Her cognitive module was burned due to information overload... It seems that telling her the truth was a bad decision.
+:'''Joanne:''' Alas! Even the most advanced diagnostic equipment couldn't detect the difference between her and a real person. Except... on the side of her neck, there is a vague mark with the number 157.
+:'''Joanne:''' No need to blame yourself. No one could have foreseen this outcome. It's not your fault.
+:'''Joanne:''' By the way, you still have Sheila's videos there? It's time to return them to their rightful place.
+:'''Joanne:''' Cheer up and let everything go back to the way it was.
+
+;(Talk to Sheila)
+:'''Joanne:''' How do you feel?
+:'''Sheila:''' I feel... great. Hello, Researcher Joanne. Long time no see.
+:{{DIcon|Arrow}} Actually, you only just met not long ago.
+::'''Sheila:''' Oh, really? I don't seem to remember anything.
+:{{DIcon|Arrow}} Please cherish how great you are feeling right now.
+:'''Sheila:''' {{MC|m=Sir|f=Ma'am}}, this is the first time we've met. My name is Sheila Nova, if you want to know that.
+:'''Joanne:''' Again... Endless cycle. However, her health parameters appear normal. For her, this ending may be the best outcome.
+:'''Joanne:''' Such a fine piece of technological experimentation, its mere existence is a work of art. Even the most advanced diagnostic equipment couldn't detect the difference between her and a real person. Except... on the side of her neck, there is a vague mark with the number 157.
+:'''Joanne:''' By the way, you still have Sheila's videos there? It's time to return them to their rightful place.
+:'''Joanne:''' Just let everything go back to the way it was.
 {{Dialogue End}}
 
-===Discuss the fate of Prototype 157 with Joanne===
+===Discuss the fate of Prototype 157 with Joanne{{subst:void|<!--200011233-->}}===
 {{Dialogue Start}}
-:{{tx}}
-{{Dialogue End}}
 
-===Give instructions to Sheila, who is back online===
-{{Mission Description|type=adventure|location=Base Zone|update|You decide to give the character script and the confession letter to Sheila, but Gunn seals off the Medical Cabin and is now in charge of Sheila's treatment.}}
-{{Dialogue Start}}
-:{{tx}}
-{{Dialogue End}}
-
-===Bury the secret in your heart and continue your journey===
-{{Mission Description|type=adventure|location=Master Control Zone|update|Once you uncover the secret of Sheila and Gunn from many years ago, you return the tapes to Esther.<br />She tells you a pitiful story. You will continue your journey with it in mind.}}
-{{Dialogue Start}}
-:{{tx}}
+;(Talk to Joanne)
+:'''Joanne:''' I wonder if Gunn will really destroy Prototype 157 as agreed?
+:'''Joanne:''' Such a fine piece of technological experimentation. Even the most advanced diagnostic equipment couldn't detect the difference between her and a real person. Except... on the side of her neck, there is a vague mark with the number 157.
+:'''Joanne:''' I have to say, it would be a shame if it really were destroyed.
+:{{DIcon|Arrow}} It sure is.
+:{{DIcon|Arrow}} It's a shame. No matter what, she's not a real "person."
+:'''Joanne:''' ...You still have Sheila's videos there? It's time to return them to their rightful place.
+:'''Joanne:''' Just let everything go back to the way it was.
 {{Dialogue End}}
 
 ==Other Languages==

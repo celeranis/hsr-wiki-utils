@@ -11,7 +11,7 @@ PageTitle=#Clockwork: Whisper#
 |chapter       = Clockwork
 |requirements  = [[Trailblaze Mission]] ''[[A Walk Among the Tombstones]]'' completed
 |summary       = <!--official mission summary from Fate's Atlas-->
-|characters    = Trailblazer
+|characters    = Trailblazer; Whisper
 |startLocation = [[Penacony]] - [[The Reverie (Dreamscape)]]
 |world         = Penacony
 |area          = The Reverie (Dreamscape)
@@ -36,15 +36,33 @@ PageTitle=#Clockwork: Whisper#
 {{Stub Dialogue}}
 {{Dialogue End}}
 
-===Find the madness-afflicted Whisper.===
+===Find the madness-afflicted Whisper.{{subst:void|<!--424032003-->}}===
 {{Mission Description|type=adventure|location=The Reverie (Dreamscape)|update|Tick... tock! Quick, Adjust the hands... Tick, tock!<br />People's minds await your exploration. Help them regain their true selves!}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:'''(Trailblazer):''' ...What... is going on?
 {{Dialogue End}}
 
-===Speak with Whisper, who has returned to normal.===
+===Speak with Whisper, who has returned to normal.{{subst:void|<!--424032004-->}}===
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Whisper)
+:'''Whisper:''' ...What happened... just now... Arggg&mdash; My head hurts...
+:'''Whisper:''' Were you the one who helped me? Thank you.
+:'''Whisper:''' Let me know when you're ready. I'll take you to a safe place.
+<pre>{
+	"$type": "RPG.GameCore.ShowHeartDialToast",
+	"StepType": "Normal",
+	"TargetType": {
+		"$type": "RPG.GameCore.GroupFetchLocalTarget",
+		"Targets": [
+			400001
+		]
+	}
+}</pre>
 {{Dialogue End}}
 
 ==Other Languages==

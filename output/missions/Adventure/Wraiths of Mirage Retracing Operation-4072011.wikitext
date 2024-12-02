@@ -11,7 +11,7 @@ PageTitle=#Wraiths of Mirage: Retracing Operation#
 |chapter       = 
 |requirements  = {{subst:void|<!--Unknown: {"Type":"Manual"}-->}}
 |summary       = <!--official mission summary from Fate's Atlas-->
-|characters    = Trailblazer
+|characters    = Guangjin; Guangjin's voice; Trailblazer
 |startLocation = [[The Xianzhou Luofu]] - [[Scalegorge Waterscape]]
 |world         = The Xianzhou Luofu
 |area          = Scalegorge Waterscape
@@ -24,8 +24,8 @@ PageTitle=#Wraiths of Mirage: Retracing Operation#
 ==Steps==
 # Speak with Guangjin
 # Head to the beach and look for clues
-# Continue to look for clues throughout the beach
 # Investigate the bait Guangjin left behind
+# Continue to look for clues throughout the beach
 # Speak with Guangjin
 
 <!--
@@ -38,30 +38,78 @@ PageTitle=#Wraiths of Mirage: Retracing Operation#
 ==Dialogue==
 {{Stub Dialogue}}
 
-===Speak with Guangjin===
+===Speak with Guangjin{{subst:void|<!--407201101-->}}===
 {{Mission Description|type=adventure|location=Scalegorge Waterscape|The Realm-Keeping Commission received reports that anomalies resembling cloudhymn magic have been spotted in the Alchemy Commission delve, and that invisible monsters were encountered within this phenomenon.<br />Based on the patterns of anomalies, Guangjin has prepared bait on the beach in hopes of uncovering the true source behind the phenomenon.}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Guangjin)
+:'''Guangjin:''' We've made it to the site where the anomaly hit. All the monsters in this area are under the influence of the Cloudhymn Magic and are invisible.
+:'''Guangjin:''' The Realm-Keeping Commission believes that the culprit for this anomaly is hiding here somewhere.
+:'''Guangjin:''' The {{Color|keyword|nobold=1|Reverberation Generator}} should help locate invisible monsters. Please use it wisely.
+:'''Guangjin:''' I'll be investigating the other direction next. Please help me check out the beach, (Trailblazer).
+:'''Guangjin:''' Be careful. We'll stay in remote contact, and I'll catch up with you later.
+----
+<pre>{
+	"$type": "RPG.GameCore.ShowEnvBuffDialog",
+	"IsAutoGetParam": true,
+	"OnCancel": [
+		{
+			"$type": "RPG.GameCore.FinishPerformanceMission",
+			"Key": "Mission_407201101"
+		}
+	]
+}</pre>
 {{Dialogue End}}
 
-===Head to the beach and look for clues===
+===Head to the beach and look for clues{{subst:void|<!--407201102-->}}===
 {{Dialogue Start}}
-:{{tx}}
+
 {{Dialogue End}}
 
-===Continue to look for clues throughout the beach===
+===Investigate the bait Guangjin left behind{{subst:void|<!--407201104-->}}===
 {{Dialogue Start}}
-:{{tx}}
 {{Dialogue End}}
 
-===Investigate the bait Guangjin left behind===
+===Continue to look for clues throughout the beach{{subst:void|<!--407201105-->}}===
 {{Dialogue Start}}
-:{{tx}}
+
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+<pre>{
+	"$type": "RPG.GameCore.AdvSpecialVisionProtect"
+}</pre>
+----
+<pre>{
+	"$type": "RPG.GameCore.AdvSpecialVisionProtect"
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.SetSpecialVisionOn",
+	"IsOn": true,
+	"VisionType": "PlayerSearchSneakMonster",
+	"VisionEffectType": "SearchMonster",
+	"IsInfiniteTime": true
+}</pre>
+:'''(Trailblazer):''' (Is that a... Warp Trotter? Could the food be...)
+----
+:'''(Trailblazer):''' (Anyway, I should focus on the monsters and catch the Warp Trotter!)
+;(Enter battle)
+::{{tx|Enemy list missing}}
 {{Dialogue End}}
 
-===Speak with Guangjin===
+===Speak with Guangjin{{subst:void|<!--407201110-->}}===
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Guangjin)
+:'''Guangjin:''' Looks like I'm too late. The anomaly has disappeared.
+:'''Guangjin:''' But at least we've figured out something. Turns out those Warp Trotters are the ones behind the anomaly.
+:{{DIcon|Arrow}} ...Can Trotters use cloudhymn magic?
+::'''Guangjin:''' I don't think so. It would be better to say they've somehow learned to imitate cloudhymn magic.
+:{{DIcon|Arrow}} ...As for how they caused the anomaly, it's still a mystery.
+::'''Guangjin:''' After all, we don't know much about these dimension-leaping creatures.
+::'''Guangjin:''' My best guess is that maybe they've somehow imitated cloudhymn magic.
+:'''Guangjin:''' Anyway, we've made progress in the investigation. Thanks to your discoveries, the Realm-Keeping Commission will be looking into those Warp Trotters next.
+:'''Guangjin:''' Meet me at the Alchemy Commission if you're willing to help us all the way through. But for now, please take this reward as a token of our appreciation for all your assistance. We should be heading back.
 {{Dialogue End}}
 
 ==Other Languages==

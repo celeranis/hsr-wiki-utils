@@ -38,8 +38,11 @@ export abstract class AbstractDialogueTree<T extends AbstractDialogueNodeItem> {
 			if (root.length > 1) {
 				const pseudoRoot = this.root = {
 					item: undefined,
+					children: [],
 				} as any
-				pseudoRoot.children = root.map(root => this.makeNode(root, pseudoRoot, true))
+				for (const [i, rootChoice] of root.entries()) {
+					pseudoRoot.children[i] = await this.makeNode(rootChoice, pseudoRoot, true)
+				}
 			} else {
 				this.root = await this.makeNode(root[0])
 			}
@@ -209,14 +212,19 @@ export abstract class AbstractDialogueTree<T extends AbstractDialogueNodeItem> {
 		// placeholder
 	}
 	
-	inverseFind(node: DialogueNode<T | TranscriptionNote>, compare: ((node: DialogueNode<T | TranscriptionNote>) => unknown)) {
+	inverseFind(node: DialogueNode<T | TranscriptionNote>, compare: ((node: DialogueNode<T | TranscriptionNote>) => unknown), allowContinue?: boolean) {
+		let found: DialogueNode<T | TranscriptionNote> | undefined = undefined
 		while (node) {
 			if (compare(node)) {
-				return node
+				if (allowContinue) {
+					found = node
+				} else {
+					return node
+				}
 			}
 			node = node.prev ?? node.parent!
 		}
-		return undefined
+		return found
 	}
 
 	deepFind(node: DialogueNode<T | TranscriptionNote>, compare: ((node: DialogueNode<T | TranscriptionNote>) => unknown)) {

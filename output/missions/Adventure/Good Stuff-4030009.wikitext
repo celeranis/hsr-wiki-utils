@@ -13,7 +13,7 @@ PageTitle=#Good Stuff#
 * [[Adventure Mission]] ''[[Simulated Universe (II)]]'' completed
 * [[Trailblaze Mission]] ''[[No Time for Me, My Friend]]'' completed
 |summary       = <!--official mission summary from Fate's Atlas-->
-|characters    = Trailblazer
+|characters    = Herta; Trailblazer
 |startLocation = [[Herta Space Station]] - [[Herta's Office]]
 |world         = Herta Space Station
 |area          = Herta's Office
@@ -28,6 +28,7 @@ PageTitle=#Good Stuff#
 # Explore the Simulated Universe
 # Use the Immersion Device
 # Complete Exploration of Simulated Universe: World 3 at Difficulty 1
+# Explore the Simulated Universe
 
 <!--
 ==Gameplay Notes==
@@ -40,25 +41,47 @@ PageTitle=#Good Stuff#
 {{Stub Dialogue}}
 {{Dialogue End}}
 
-===Enter Simulated Universe: World 3 at Difficulty 1===
+===Enter Simulated Universe: World 3 at Difficulty 1{{subst:void|<!--403000903-->}}===
 {{Mission Description|type=adventure|location=Herta's Office|update|Herta asks you to enter the Simulated Universe created by the Genius Society while pretending to be the Aeon of Trailblaze, and try to glean the secret of Aeons and Paths from the simulated Aeons.}}
 {{Dialogue Start}}
-:{{tx}}
+<pre>{
+	"$type": "RPG.GameCore.TriggerRogueDialogue",
+	"DialoguePath": "Config/Level/Mission/4030009/Act/Act403000902.json"
+}</pre>
 {{Dialogue End}}
 
-===Explore the Simulated Universe===
+===Explore the Simulated Universe{{subst:void|<!--403000907-->}}===
 {{Dialogue Start}}
-:{{tx}}
+----
+<pre>{
+	"$type": "RPG.GameCore.BlockInputController",
+	"Enable": true,
+	"ActionNameList": []
+}</pre>
+:'''Herta:''' That immersion device in front can generate the Planar Ornament data that I mentioned before.
+:'''Herta:''' Here's an Immersifier. Go try it out. You need an Immersifier every time you generate Planar Ornaments.
+<pre>{
+	"$type": "RPG.GameCore.WaitMissionTalkFinish"
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.BlockInputController",
+	"ActionNameList": []
+}</pre>
 {{Dialogue End}}
 
-===Use the Immersion Device===
+===Use the Immersion Device{{subst:void|<!--403000909-->}}===
 {{Dialogue Start}}
-:{{tx}}
 {{Dialogue End}}
 
-===Complete Exploration of Simulated Universe: World 3 at Difficulty 1===
+===Complete Exploration of Simulated Universe: World 3 at Difficulty 1{{subst:void|<!--403000910-->}}===
 {{Dialogue Start}}
-:{{tx}}
+
+{{Dialogue End}}
+
+===Explore the Simulated Universe{{subst:void|<!--403000906-->}}===
+{{Dialogue Start}}
+
+:'''Herta:''' The change you wanted is here. Now you can choose a different travel route. The content for the next domain will be displayed on the door.
 {{Dialogue End}}
 
 ==Other Languages==

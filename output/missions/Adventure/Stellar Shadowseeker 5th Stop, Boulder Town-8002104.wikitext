@@ -7,13 +7,13 @@ PageTitle=#Stellar Shadowseeker: 5th Stop, Boulder Town#
 |title         = 
 |image         = <!--Mission Stellar Shadowseeker 5th Stop, Boulder Town.png-->
 |type          = Adventure
-|event_name    = 
+|event_name    = Stellar Shadowseeker
 |chapter       = 
 |requirements  = 
 * Reach [[Trailblaze Level]] 21
 * [[Adventure Mission]] ''[[Stellar Shadowseeker: 4th Stop, Administrative District]]'' completed
 |summary       = <!--official mission summary from Fate's Atlas-->
-|characters    = Trailblazer
+|characters    = Hook; Sampo; Trailblazer
 |startLocation = [[Jarilo-VI]] - [[Boulder Town]]
 |world         = Jarilo-VI
 |area          = Boulder Town
@@ -21,7 +21,7 @@ PageTitle=#Stellar Shadowseeker: 5th Stop, Boulder Town#
 |next          = Stellar Shadowseeker: 6th Stop, Rivet Town
 |rewards       = Stellar Jade*70; Traveler's Guide*4; Key of Knowledge*3; Credit*40,000
 }}
-'''''Stellar Shadowseeker: 5th Stop, Boulder Town''''' is an [[Adventure Mission]] on [[Jarilo-VI]].
+'''''Stellar Shadowseeker: 5th Stop, Boulder Town''''' is an Event [[Adventure Mission]] from the [[Stellar Shadowseeker]] event.
 
 ==Steps==
 # Find and capture the subjects based on the photos
@@ -38,20 +38,244 @@ PageTitle=#Stellar Shadowseeker: 5th Stop, Boulder Town#
 ==Dialogue==
 {{Stub Dialogue}}
 
-===Find and capture the subjects based on the photos===
+===Find and capture the subjects based on the photos{{subst:void|<!--800210407-->}}===
 {{Mission Description|type=adventure|location=Boulder Town|The shadowy object in the photo looks somewhat familiar. It must be something from Boulder Town...}}
 {{Dialogue Start}}
-:{{tx}}
+<pre>{
+	"$type": "RPG.GameCore.HideEntity",
+	"Target": {
+		"$type": "RPG.GameCore.TargetFetchAdvNpcEx",
+		"FetchType": "SingleNpcByNpcID",
+		"SingleNpcID": {
+			"GroupID": {
+				"fixedValue": {
+					"Value": 173
+				}
+			},
+			"GroupNpcID": {
+				"fixedValue": {
+					"Value": 400001
+				}
+			}
+		}
+	}
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.HideEntity",
+	"Target": {
+		"$type": "RPG.GameCore.TargetFetchAdvNpcEx",
+		"FetchType": "SingleNpcByNpcID",
+		"SingleNpcID": {
+			"GroupID": {
+				"fixedValue": {
+					"Value": 173
+				}
+			},
+			"GroupNpcID": {
+				"fixedValue": {
+					"Value": 400002
+				}
+			}
+		}
+	},
+	"IsHide": true
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.AdvCreateGroupEntity",
+	"InstanceIDList": [
+		300003
+	]
+}</pre>
+
+;(Unused &mdash; Trigger_Performance_800210406)
+:{{Black Screen|undefined}}
+::'''Hook:''' Hey, honorary member! Quick, help me out!
+::'''Hook:''' I only just popped out for a minute but I locked myself out. Let me in!
+::{{DIcon|Arrow}} Let Hook in.
+:::{{Black Screen|You moved Hook into the picture...}}
+::<pre>{
+	"$type": "RPG.GameCore.SetMissionCustomValue",
+	"SubmissionID": 800210407,
+	"MissionCustomValue": {
+		"ValidValueParamList": [
+			0,
+			1
+		]
+	},
+	"CustomValue": 1
+}</pre>
+::<pre>{
+	"$type": "RPG.GameCore.HideEntity",
+	"Target": {
+		"$type": "RPG.GameCore.TargetFetchAdvNpcEx",
+		"FetchType": "SingleNpcByNpcID",
+		"SingleNpcID": {
+			"GroupID": {
+				"fixedValue": {
+					"Value": 173
+				}
+			},
+			"GroupNpcID": {
+				"fixedValue": {
+					"Value": 400001
+				}
+			}
+		}
+	},
+	"IsHide": true
+}</pre>
+::<pre>{
+	"$type": "RPG.GameCore.HideEntity",
+	"Target": {
+		"$type": "RPG.GameCore.TargetFetchAdvNpcEx",
+		"FetchType": "SingleNpcByNpcID",
+		"SingleNpcID": {
+			"GroupID": {
+				"fixedValue": {
+					"Value": 173
+				}
+			},
+			"GroupNpcID": {
+				"fixedValue": {
+					"Value": 400002
+				}
+			}
+		}
+	}
+}</pre>
+:::'''Hook:''' Whew &mdash; I'm back. Thanks a lot, honorary member!
+:::'''Hook:''' That's a nice camera. Do you want to capture the mighty figure of Pitch-Dark Hook the Great? Go ahead, that's your prize for saving me!
+::{{DIcon|Arrow}} Take a pic.
+:::'''Hook:''' Hey hey hey, honorary member. What are you doing with that camera? Let me in!
+::<pre>{
+	"$type": "RPG.GameCore.SetMissionCustomValue",
+	"SubmissionID": 800210407,
+	"MissionCustomValue": {
+		"ValidValueParamList": [
+			0,
+			1
+		]
+	}
+}</pre>
+::<pre>{
+	"$type": "RPG.GameCore.HideEntity",
+	"Target": {
+		"$type": "RPG.GameCore.TargetFetchAdvNpcEx",
+		"FetchType": "SingleNpcByNpcID",
+		"SingleNpcID": {
+			"GroupID": {
+				"fixedValue": {
+					"Value": 173
+				}
+			},
+			"GroupNpcID": {
+				"fixedValue": {
+					"Value": 400001
+				}
+			}
+		}
+	}
+}</pre>
+::<pre>{
+	"$type": "RPG.GameCore.HideEntity",
+	"Target": {
+		"$type": "RPG.GameCore.TargetFetchAdvNpcEx",
+		"FetchType": "SingleNpcByNpcID",
+		"SingleNpcID": {
+			"GroupID": {
+				"fixedValue": {
+					"Value": 173
+				}
+			},
+			"GroupNpcID": {
+				"fixedValue": {
+					"Value": 400002
+				}
+			}
+		}
+	},
+	"IsHide": true
+}</pre>
+::{{Black Screen|undefined}}
+
+;(Unused &mdash; Create_173_300003)
+<pre>{
+	"$type": "RPG.GameCore.AdvCreateGroupEntity",
+	"InstanceIDList": [
+		300003
+	]
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.HideEntity",
+	"Target": {
+		"$type": "RPG.GameCore.TargetFetchAdvNpcEx",
+		"FetchType": "SingleNpcByNpcID",
+		"SingleNpcID": {
+			"GroupID": {
+				"fixedValue": {
+					"Value": 173
+				}
+			},
+			"GroupNpcID": {
+				"fixedValue": {
+					"Value": 400001
+				}
+			}
+		}
+	}
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.HideEntity",
+	"Target": {
+		"$type": "RPG.GameCore.TargetFetchAdvNpcEx",
+		"FetchType": "SingleNpcByNpcID",
+		"SingleNpcID": {
+			"GroupID": {
+				"fixedValue": {
+					"Value": 173
+				}
+			},
+			"GroupNpcID": {
+				"fixedValue": {
+					"Value": 400002
+				}
+			}
+		}
+	},
+	"IsHide": true
+}</pre>
+
+
+;(Unused &mdash; 800210402_Sampo)
+<pre>{
+	"$type": "RPG.GameCore.AdvDestroyGroupEntity",
+	"InstanceIDList": [
+		300001
+	]
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.AdvCreateGroupEntity",
+	"InstanceIDList": [
+		300001
+	]
+}</pre>
 {{Dialogue End}}
 
-===Talk to Sampo===
+===Talk to Sampo{{subst:void|<!--800210403-->}}===
 {{Dialogue Start}}
-:{{tx}}
+<pre>{
+	"$type": "RPG.GameCore.AdvDestroyGroupEntity",
+	"InstanceIDList": [
+		300001
+	]
+}</pre>
 {{Dialogue End}}
 
-===Read March 7th's message===
+===Read March 7th's message{{subst:void|<!--800210406-->}}===
 {{Dialogue Start}}
-:{{tx}}
+;(If {{F|MissionCV-8002104-undefined}} is equal to 1)
+;(If {{F|MissionCV-8002104-undefined}} is not equal to 1)
+:;(Return to previous option selection)
 {{Dialogue End}}
 
 ==Other Languages==

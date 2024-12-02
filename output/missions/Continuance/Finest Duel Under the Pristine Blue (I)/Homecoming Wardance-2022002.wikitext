@@ -11,7 +11,7 @@ PageTitle=#Homecoming Wardance#
 |chapter       = Finest Duel Under the Pristine Blue (I)
 |requirements  = [[Trailblaze Continuance]] ''[[Homecoming Wardance]]'' completed
 |summary       = <!--official mission summary from Fate's Atlas-->
-|characters    = Trailblazer
+|characters    = Cloud Knights Soldier; Dan Heng; Intellitron Tourist; Lujun; March 7th; Pepeshi Tourist; Trailblazer; Yanqing
 |startLocation = [[The Xianzhou Luofu]] - [[Central Starskiff Haven]]
 |world         = The Xianzhou Luofu
 |area          = Central Starskiff Haven
@@ -27,8 +27,6 @@ PageTitle=#Homecoming Wardance#
 # Defeat the fleeing Wolftrooper
 # Ask Yanqing about the situation
 # Accompany Yanqing and ask about the situation from the Cloud Knights present
-# Look for Yanqing in the crowd
-# Accompany Yanqing and ask about the situation from the Cloud Knights present
 
 <!--
 ==Gameplay Notes==
@@ -40,43 +38,415 @@ PageTitle=#Homecoming Wardance#
 ==Dialogue==
 {{Stub Dialogue}}
 
-===Look for Yanqing in the crowd===
+===Look for Yanqing in the crowd{{subst:void|<!--202200201-->}}===
 {{Mission Description|type=continuance|location=Central Starskiff Haven|Arriving at the Luofu, you are greeted by an overwhelming sight of starskiffs.}}
 {{Dialogue Start}}
 :{{tx}}
+:{{A|VO chapter2 9 mar7th 112.ogg}} '''March 7th:''' Coming back to this place brings back so many memories, you know...
+:{{DIcon|Arrow}} So, here's something for all of you, a poem by March 7th...
+::{{A|VO chapter2 9 mar7th 113.ogg}} '''March 7th:''' Hey, I'm not actually gonna recite a poem! I was just thinking about all the twists and turns we went through when we first arrived on the Xianzhou...
+:{{DIcon|Arrow}} What memories? Care to spill the details?
+::{{A|VO chapter2 9 mar7th 114.ogg}} '''March 7th:''' Well, it's nothing too poetic. I was just thinking about all the twists and turns we went through when we first arrived at the Xianzhou ship...
+:{{A|VO chapter2 9 mar7th 115.ogg}} '''March 7th:''' This time, we're not being forced or enticed, or chasing after wanted criminals. And we didn't have to sneak in through the cargo dock. This trip has been incredibly smooth...
+:{{A|VO chapter2 9 mar7th 116.ogg}} '''March 7th:''' Quite unusual, I must say!
+:{{DIcon|Arrow}} Definitely unusual!
+::{{A|VO chapter2 9 danheng 107.ogg}} '''Dan Heng:''' I agree.
+:{{DIcon|Arrow}} We're so easily pleased. I actually feel sorry for us...
+::{{A|VO chapter2 9 mar7th 117.ogg}} '''March 7th:''' Such is the fate of us Nameless, I suppose.
+:{{DIcon|Arrow}} Oh, come on, don't jinx us...
+::{{A|VO chapter2 9 mar7th 118.ogg}} '''March 7th:''' Haha, I'm just hoping for the best! You're the one jinxing us!
+:{{tx}}
+;(If {{cx}}<!--SubMission not Finish: 202200202-->)
+:<pre>{
+	"$type": "RPG.GameCore.AdvCreateGroupEntity",
+	"InstanceIDList": [
+		400001
+	]
+}</pre>
+;(If {{cx}}<!--SubMission Finish: 202200202-->)
+:;(If {{F|MissionCV-2022002-1}} is equal to 0)
+::<pre>{
+	"$type": "RPG.GameCore.AdvCreateGroupEntity",
+	"InstanceIDList": [
+		400001
+	]
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.PlayMessage",
+	"MessageSectionID": 1222800
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.SaveMessage",
+	"MessageSectionID": 1222800
+}</pre>
+;(Unused &mdash; Finish202200219)
+
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{A|VO chapter2 9 crowdB 101.ogg}} '''Pepeshi Tourist:''' Hey, you guys! Hold on a moment!
+:{{A|VO chapter2 9 mar7th 120.ogg}} '''March 7th:''' Did they just call us? Look at their outfits... they're from Penacony, right?
+:{{A|VO chapter2 9 crowdB 102.ogg}} '''Pepeshi Tourist:''' Are you familiar with the Xianzhou Luofu?
+:{{A|VO chapter2 9 danheng 109.ogg}} '''Dan Heng:''' We know a little bit about it. What do you need?
+:{{A|VO chapter2 9 crowdC 101.ogg}} '''Intellitron Tourist:''' We're from Penacony, maybe you've heard of it? We came to this ship to gather interesting materials for making dream bubbles.
+:{{A|VO chapter2 9 mar7th 121.ogg}} '''March 7th:''' We just left there. Talk about coincidence.
+:{{A|VO chapter2 9 crowdC 102.ogg}} '''Intellitron Tourist:''' That's great! Do you know any must-see attractions on the Luofu?
+:{{DIcon|Arrow}} You've come to the right people!
+::{{A|VO chapter2 9 mar7th 122.ogg}} '''March 7th:''' Exactly! We're Xianzhou experts!
+:{{DIcon|Arrow}} Why don't you ask the locals?
+::{{A|VO chapter2 9 crowdB 103.ogg}} '''Pepeshi Tourist:''' We did! But the locals were all like, "Come on, there's nothing worth seeing on the Luofu! It's so boring here!"
+::{{A|VO chapter2 9 crowdC 103.ogg}} '''Intellitron Tourist:''' Can't blame them. If someone asked me, "What's there to see on Penacony?" I'd probably struggle to answer too.
+::{{A|VO chapter2 9 crowdB 104.ogg}} '''Pepeshi Tourist:''' That's why we're asking fellow tourists!
+:{{A|VO chapter2 9 mar7th 123.ogg}} '''March 7th:''' Most of the tourists around at the moment are here to attend the Wardance, and that's why we're here too.
+:{{A|VO chapter2 9 crowdB 105.ogg}} '''Pepeshi Tourist:''' Yeah, we know about that ceremony, but isn't the fighting ring still closed?
+:{{A|VO chapter2 9 crowdC 104.ogg}} '''Intellitron Tourist:''' I've heard the ring was actually converted from a huge decommissioned Luofu fighter jet.
+:{{DIcon|Arrow}} So, it's even larger than a regular starskiff?
+::{{A|VO chapter2 9 crowdC 105.ogg}} '''Intellitron Tourist:''' No doubt about it! It's a massive fighter jet! It's got to be larger than a civilian starskiff!
+:{{DIcon|Arrow}} So, it's even bigger than the Radiant Feldspar?
+::{{A|VO chapter2 9 crowdC 106.ogg}} '''Intellitron Tourist:''' The Radiant Feldspar is bigger, I guess!
+:{{A|VO chapter2 9 crowdB 106.ogg}} '''Pepeshi Tourist:''' But for now, all we can do is wait until the Wardance starts in a few weeks before we can board it. We've still got work to do, so we can't just sit around waiting for it to start, that's why we're asking you about some must-see attractions.
+:{{A|VO chapter2 9 crowdC 107.ogg}} '''Intellitron Tourist:''' We're looking for unique experiences that you won't find on Penacony. Our clients love these kinds of dream bubbles the most.
+:{{A|VO chapter2 9 mar7th 124 m.ogg}} {{A|VO chapter2 9 mar7th 124 f.ogg}} '''March 7th:''' You're the expert here, (Trailblazer). Give them some suggestions!
+:{{DIcon|Arrow}} Why not visit Aurum Alley?
+:<pre>{
+	"$type": "RPG.GameCore.SetMissionCustomValue",
+	"SubmissionID": 202200202,
+	"MissionCustomValue": {
+		"Index": 2,
+		"ValidValueParamList": [
+			1,
+			2,
+			3,
+			4
+		]
+	},
+	"CustomValue": 1
+}</pre>
+::{{A|VO chapter2 9 crowdB 101.ogg}} '''Pepeshi Tourist:''' Hey, you guys! Hold on a moment!
+::{{A|VO chapter2 9 mar7th 120.ogg}} '''March 7th:''' Did they just call us? Look at their outfits... they're from Penacony, right?
+::{{A|VO chapter2 9 crowdB 102.ogg}} '''Pepeshi Tourist:''' Are you familiar with the Xianzhou Luofu?
+::{{A|VO chapter2 9 danheng 109.ogg}} '''Dan Heng:''' We know a little bit about it. What do you need?
+::{{A|VO chapter2 9 crowdC 101.ogg}} '''Intellitron Tourist:''' We're from Penacony, maybe you've heard of it? We came to this ship to gather interesting materials for making dream bubbles.
+::{{A|VO chapter2 9 mar7th 121.ogg}} '''March 7th:''' We just left there. Talk about coincidence.
+::{{A|VO chapter2 9 crowdC 102.ogg}} '''Intellitron Tourist:''' That's great! Do you know any must-see attractions on the Luofu?
+::You've come to the right people!
+::{{A|VO chapter2 9 mar7th 122.ogg}} '''March 7th:''' Exactly! We're Xianzhou experts!
+::Why don't you ask the locals?
+::{{A|VO chapter2 9 crowdB 103.ogg}} '''Pepeshi Tourist:''' We did! But the locals were all like, "Come on, there's nothing worth seeing on the Luofu! It's so boring here!"
+::{{A|VO chapter2 9 crowdC 103.ogg}} '''Intellitron Tourist:''' Can't blame them. If someone asked me, "What's there to see on Penacony?" I'd probably struggle to answer too.
+::{{A|VO chapter2 9 crowdB 104.ogg}} '''Pepeshi Tourist:''' That's why we're asking fellow tourists!
+::{{A|VO chapter2 9 mar7th 123.ogg}} '''March 7th:''' Most of the tourists around at the moment are here to attend the Wardance, and that's why we're here too.
+::{{A|VO chapter2 9 crowdB 105.ogg}} '''Pepeshi Tourist:''' Yeah, we know about that ceremony, but isn't the fighting ring still closed?
+::{{A|VO chapter2 9 crowdC 104.ogg}} '''Intellitron Tourist:''' I've heard the ring was actually converted from a huge decommissioned Luofu fighter jet.
+::So, it's even larger than a regular starskiff?
+::{{A|VO chapter2 9 crowdC 105.ogg}} '''Intellitron Tourist:''' No doubt about it! It's a massive fighter jet! It's got to be larger than a civilian starskiff!
+::So, it's even bigger than the Radiant Feldspar?
+::{{A|VO chapter2 9 crowdC 106.ogg}} '''Intellitron Tourist:''' The Radiant Feldspar is bigger, I guess!
+::{{A|VO chapter2 9 crowdB 106.ogg}} '''Pepeshi Tourist:''' But for now, all we can do is wait until the Wardance starts in a few weeks before we can board it. We've still got work to do, so we can't just sit around waiting for it to start, that's why we're asking you about some must-see attractions.
+::{{A|VO chapter2 9 crowdC 107.ogg}} '''Intellitron Tourist:''' We're looking for unique experiences that you won't find on Penacony. Our clients love these kinds of dream bubbles the most.
+::{{A|VO chapter2 9 mar7th 124 m.ogg}} {{A|VO chapter2 9 mar7th 124 f.ogg}} '''March 7th:''' You're the expert here, (Trailblazer). Give them some suggestions!
+::Why not visit Aurum Alley?
+::{{A|VO chapter2 9 danheng 110.ogg}} '''Dan Heng:''' Hmm, good idea. The everyday vibe of the Aurum Alley is a rare find on the Planet of Festivities.
+::{{A|VO chapter2 9 crowdB 107.ogg}} '''Pepeshi Tourist:''' Everyday vibe... Yeah, our clients have had their fair share of adrenaline-pumping Dreamscapes. Maybe something down-to-earth would touch their hearts.
+::{{A|VO chapter2 9 crowdC 108.ogg}} '''Intellitron Tourist:''' Thanks for the suggestion. We'll head to the Aurum Alley to gather materials. Maybe we'll run into each other there in a couple of days.
+::Why not visit Fyxestroll Garden?
+::{{A|VO chapter2 9 mar7th 125.ogg}} '''March 7th:''' Oh, yeah! Fyxestroll Garden! It's famous for supernatural stuff, with those mischievous heliobi floating around! It's pretty fascinating!
+::{{A|VO chapter2 9 crowdC 109.ogg}} '''Intellitron Tourist:''' Supernatural? I don't really like scary things... but our clients will love it.
+::{{A|VO chapter2 9 crowdB 108.ogg}} '''Pepeshi Tourist:''' It does sound interesting. Let's go check out Fyxestroll Garden! Maybe we'll bump into each other there!
+::Why not visit Scalegorge Waterscape?
+::{{A|VO chapter2 9 danheng 111.ogg}} '''Dan Heng:''' That's indeed a good idea. While the Dreamscape on Penacony is all artificial, Scalegorge Waterscape is a celebration of nature's resurgence. It has some remarkable scenery.
+::{{A|VO chapter2 9 crowdC 110.ogg}} '''Intellitron Tourist:''' Awesome. I love being out there in nature. Let's go to Scalegorge Waterscape first.
+::{{A|VO chapter2 9 crowdB 109.ogg}} '''Pepeshi Tourist:''' I'm a bit worried that nature-themed dream bubbles might be outdated... but hey, let's go check it out anyway.
+::{{A|VO chapter2 9 crowdC 111.ogg}} '''Intellitron Tourist:''' See you later. Maybe we'll run into each other there in a few days.
+::Why not climb to the top of the Ambrosial Arbor?
+::{{A|VO chapter2 9 mar7th 126.ogg}} '''March 7th:''' Hey! That's a terrible idea! You'll get them arrested!
+::{{A|VO chapter2 9 crowdC 112.ogg}} '''Intellitron Tourist:''' Haha... you're just joking, right? How about giving us some more practical suggestions?
+::{{A|VO chapter2 9 crowdB 110.ogg}} '''Pepeshi Tourist:''' ...Wait a sec. Maybe it's not such a terrible idea after all? No risk, no reward! Come on, let's go climb that tree!
+::{{A|VO chapter2 9 crowdC 113.ogg}} '''Intellitron Tourist:''' Slow down a bit. Wait for me.
+::{{A|VO chapter2 9 mar7th 127.ogg}} '''March 7th:''' Hey, wait! Just think about what you're doing! And... don't mention our names if something goes wrong! Ugh, I hope they don't get into trouble... This is nerve-wracking.
+:{{DIcon|Arrow}} Why not visit Fyxestroll Garden?
+:<pre>{
+	"$type": "RPG.GameCore.SetMissionCustomValue",
+	"SubmissionID": 202200202,
+	"MissionCustomValue": {
+		"Index": 2,
+		"ValidValueParamList": [
+			1,
+			2,
+			3,
+			4
+		]
+	},
+	"CustomValue": 2
+}</pre>
+::{{A|VO chapter2 9 crowdB 101.ogg}} '''Pepeshi Tourist:''' Hey, you guys! Hold on a moment!
+::{{A|VO chapter2 9 mar7th 120.ogg}} '''March 7th:''' Did they just call us? Look at their outfits... they're from Penacony, right?
+::{{A|VO chapter2 9 crowdB 102.ogg}} '''Pepeshi Tourist:''' Are you familiar with the Xianzhou Luofu?
+::{{A|VO chapter2 9 danheng 109.ogg}} '''Dan Heng:''' We know a little bit about it. What do you need?
+::{{A|VO chapter2 9 crowdC 101.ogg}} '''Intellitron Tourist:''' We're from Penacony, maybe you've heard of it? We came to this ship to gather interesting materials for making dream bubbles.
+::{{A|VO chapter2 9 mar7th 121.ogg}} '''March 7th:''' We just left there. Talk about coincidence.
+::{{A|VO chapter2 9 crowdC 102.ogg}} '''Intellitron Tourist:''' That's great! Do you know any must-see attractions on the Luofu?
+::You've come to the right people!
+::{{A|VO chapter2 9 mar7th 122.ogg}} '''March 7th:''' Exactly! We're Xianzhou experts!
+::Why don't you ask the locals?
+::{{A|VO chapter2 9 crowdB 103.ogg}} '''Pepeshi Tourist:''' We did! But the locals were all like, "Come on, there's nothing worth seeing on the Luofu! It's so boring here!"
+::{{A|VO chapter2 9 crowdC 103.ogg}} '''Intellitron Tourist:''' Can't blame them. If someone asked me, "What's there to see on Penacony?" I'd probably struggle to answer too.
+::{{A|VO chapter2 9 crowdB 104.ogg}} '''Pepeshi Tourist:''' That's why we're asking fellow tourists!
+::{{A|VO chapter2 9 mar7th 123.ogg}} '''March 7th:''' Most of the tourists around at the moment are here to attend the Wardance, and that's why we're here too.
+::{{A|VO chapter2 9 crowdB 105.ogg}} '''Pepeshi Tourist:''' Yeah, we know about that ceremony, but isn't the fighting ring still closed?
+::{{A|VO chapter2 9 crowdC 104.ogg}} '''Intellitron Tourist:''' I've heard the ring was actually converted from a huge decommissioned Luofu fighter jet.
+::So, it's even larger than a regular starskiff?
+::{{A|VO chapter2 9 crowdC 105.ogg}} '''Intellitron Tourist:''' No doubt about it! It's a massive fighter jet! It's got to be larger than a civilian starskiff!
+::So, it's even bigger than the Radiant Feldspar?
+::{{A|VO chapter2 9 crowdC 106.ogg}} '''Intellitron Tourist:''' The Radiant Feldspar is bigger, I guess!
+::{{A|VO chapter2 9 crowdB 106.ogg}} '''Pepeshi Tourist:''' But for now, all we can do is wait until the Wardance starts in a few weeks before we can board it. We've still got work to do, so we can't just sit around waiting for it to start, that's why we're asking you about some must-see attractions.
+::{{A|VO chapter2 9 crowdC 107.ogg}} '''Intellitron Tourist:''' We're looking for unique experiences that you won't find on Penacony. Our clients love these kinds of dream bubbles the most.
+::{{A|VO chapter2 9 mar7th 124 m.ogg}} {{A|VO chapter2 9 mar7th 124 f.ogg}} '''March 7th:''' You're the expert here, (Trailblazer). Give them some suggestions!
+::Why not visit Aurum Alley?
+::{{A|VO chapter2 9 danheng 110.ogg}} '''Dan Heng:''' Hmm, good idea. The everyday vibe of the Aurum Alley is a rare find on the Planet of Festivities.
+::{{A|VO chapter2 9 crowdB 107.ogg}} '''Pepeshi Tourist:''' Everyday vibe... Yeah, our clients have had their fair share of adrenaline-pumping Dreamscapes. Maybe something down-to-earth would touch their hearts.
+::{{A|VO chapter2 9 crowdC 108.ogg}} '''Intellitron Tourist:''' Thanks for the suggestion. We'll head to the Aurum Alley to gather materials. Maybe we'll run into each other there in a couple of days.
+::Why not visit Fyxestroll Garden?
+::{{A|VO chapter2 9 mar7th 125.ogg}} '''March 7th:''' Oh, yeah! Fyxestroll Garden! It's famous for supernatural stuff, with those mischievous heliobi floating around! It's pretty fascinating!
+::{{A|VO chapter2 9 crowdC 109.ogg}} '''Intellitron Tourist:''' Supernatural? I don't really like scary things... but our clients will love it.
+::{{A|VO chapter2 9 crowdB 108.ogg}} '''Pepeshi Tourist:''' It does sound interesting. Let's go check out Fyxestroll Garden! Maybe we'll bump into each other there!
+::Why not visit Scalegorge Waterscape?
+::{{A|VO chapter2 9 danheng 111.ogg}} '''Dan Heng:''' That's indeed a good idea. While the Dreamscape on Penacony is all artificial, Scalegorge Waterscape is a celebration of nature's resurgence. It has some remarkable scenery.
+::{{A|VO chapter2 9 crowdC 110.ogg}} '''Intellitron Tourist:''' Awesome. I love being out there in nature. Let's go to Scalegorge Waterscape first.
+::{{A|VO chapter2 9 crowdB 109.ogg}} '''Pepeshi Tourist:''' I'm a bit worried that nature-themed dream bubbles might be outdated... but hey, let's go check it out anyway.
+::{{A|VO chapter2 9 crowdC 111.ogg}} '''Intellitron Tourist:''' See you later. Maybe we'll run into each other there in a few days.
+::Why not climb to the top of the Ambrosial Arbor?
+::{{A|VO chapter2 9 mar7th 126.ogg}} '''March 7th:''' Hey! That's a terrible idea! You'll get them arrested!
+::{{A|VO chapter2 9 crowdC 112.ogg}} '''Intellitron Tourist:''' Haha... you're just joking, right? How about giving us some more practical suggestions?
+::{{A|VO chapter2 9 crowdB 110.ogg}} '''Pepeshi Tourist:''' ...Wait a sec. Maybe it's not such a terrible idea after all? No risk, no reward! Come on, let's go climb that tree!
+::{{A|VO chapter2 9 crowdC 113.ogg}} '''Intellitron Tourist:''' Slow down a bit. Wait for me.
+::{{A|VO chapter2 9 mar7th 127.ogg}} '''March 7th:''' Hey, wait! Just think about what you're doing! And... don't mention our names if something goes wrong! Ugh, I hope they don't get into trouble... This is nerve-wracking.
+:{{DIcon|Arrow}} Why not visit Scalegorge Waterscape?
+:<pre>{
+	"$type": "RPG.GameCore.SetMissionCustomValue",
+	"SubmissionID": 202200202,
+	"MissionCustomValue": {
+		"Index": 2,
+		"ValidValueParamList": [
+			1,
+			2,
+			3,
+			4
+		]
+	},
+	"CustomValue": 3
+}</pre>
+::{{A|VO chapter2 9 crowdB 101.ogg}} '''Pepeshi Tourist:''' Hey, you guys! Hold on a moment!
+::{{A|VO chapter2 9 mar7th 120.ogg}} '''March 7th:''' Did they just call us? Look at their outfits... they're from Penacony, right?
+::{{A|VO chapter2 9 crowdB 102.ogg}} '''Pepeshi Tourist:''' Are you familiar with the Xianzhou Luofu?
+::{{A|VO chapter2 9 danheng 109.ogg}} '''Dan Heng:''' We know a little bit about it. What do you need?
+::{{A|VO chapter2 9 crowdC 101.ogg}} '''Intellitron Tourist:''' We're from Penacony, maybe you've heard of it? We came to this ship to gather interesting materials for making dream bubbles.
+::{{A|VO chapter2 9 mar7th 121.ogg}} '''March 7th:''' We just left there. Talk about coincidence.
+::{{A|VO chapter2 9 crowdC 102.ogg}} '''Intellitron Tourist:''' That's great! Do you know any must-see attractions on the Luofu?
+::You've come to the right people!
+::{{A|VO chapter2 9 mar7th 122.ogg}} '''March 7th:''' Exactly! We're Xianzhou experts!
+::Why don't you ask the locals?
+::{{A|VO chapter2 9 crowdB 103.ogg}} '''Pepeshi Tourist:''' We did! But the locals were all like, "Come on, there's nothing worth seeing on the Luofu! It's so boring here!"
+::{{A|VO chapter2 9 crowdC 103.ogg}} '''Intellitron Tourist:''' Can't blame them. If someone asked me, "What's there to see on Penacony?" I'd probably struggle to answer too.
+::{{A|VO chapter2 9 crowdB 104.ogg}} '''Pepeshi Tourist:''' That's why we're asking fellow tourists!
+::{{A|VO chapter2 9 mar7th 123.ogg}} '''March 7th:''' Most of the tourists around at the moment are here to attend the Wardance, and that's why we're here too.
+::{{A|VO chapter2 9 crowdB 105.ogg}} '''Pepeshi Tourist:''' Yeah, we know about that ceremony, but isn't the fighting ring still closed?
+::{{A|VO chapter2 9 crowdC 104.ogg}} '''Intellitron Tourist:''' I've heard the ring was actually converted from a huge decommissioned Luofu fighter jet.
+::So, it's even larger than a regular starskiff?
+::{{A|VO chapter2 9 crowdC 105.ogg}} '''Intellitron Tourist:''' No doubt about it! It's a massive fighter jet! It's got to be larger than a civilian starskiff!
+::So, it's even bigger than the Radiant Feldspar?
+::{{A|VO chapter2 9 crowdC 106.ogg}} '''Intellitron Tourist:''' The Radiant Feldspar is bigger, I guess!
+::{{A|VO chapter2 9 crowdB 106.ogg}} '''Pepeshi Tourist:''' But for now, all we can do is wait until the Wardance starts in a few weeks before we can board it. We've still got work to do, so we can't just sit around waiting for it to start, that's why we're asking you about some must-see attractions.
+::{{A|VO chapter2 9 crowdC 107.ogg}} '''Intellitron Tourist:''' We're looking for unique experiences that you won't find on Penacony. Our clients love these kinds of dream bubbles the most.
+::{{A|VO chapter2 9 mar7th 124 m.ogg}} {{A|VO chapter2 9 mar7th 124 f.ogg}} '''March 7th:''' You're the expert here, (Trailblazer). Give them some suggestions!
+::Why not visit Aurum Alley?
+::{{A|VO chapter2 9 danheng 110.ogg}} '''Dan Heng:''' Hmm, good idea. The everyday vibe of the Aurum Alley is a rare find on the Planet of Festivities.
+::{{A|VO chapter2 9 crowdB 107.ogg}} '''Pepeshi Tourist:''' Everyday vibe... Yeah, our clients have had their fair share of adrenaline-pumping Dreamscapes. Maybe something down-to-earth would touch their hearts.
+::{{A|VO chapter2 9 crowdC 108.ogg}} '''Intellitron Tourist:''' Thanks for the suggestion. We'll head to the Aurum Alley to gather materials. Maybe we'll run into each other there in a couple of days.
+::Why not visit Fyxestroll Garden?
+::{{A|VO chapter2 9 mar7th 125.ogg}} '''March 7th:''' Oh, yeah! Fyxestroll Garden! It's famous for supernatural stuff, with those mischievous heliobi floating around! It's pretty fascinating!
+::{{A|VO chapter2 9 crowdC 109.ogg}} '''Intellitron Tourist:''' Supernatural? I don't really like scary things... but our clients will love it.
+::{{A|VO chapter2 9 crowdB 108.ogg}} '''Pepeshi Tourist:''' It does sound interesting. Let's go check out Fyxestroll Garden! Maybe we'll bump into each other there!
+::Why not visit Scalegorge Waterscape?
+::{{A|VO chapter2 9 danheng 111.ogg}} '''Dan Heng:''' That's indeed a good idea. While the Dreamscape on Penacony is all artificial, Scalegorge Waterscape is a celebration of nature's resurgence. It has some remarkable scenery.
+::{{A|VO chapter2 9 crowdC 110.ogg}} '''Intellitron Tourist:''' Awesome. I love being out there in nature. Let's go to Scalegorge Waterscape first.
+::{{A|VO chapter2 9 crowdB 109.ogg}} '''Pepeshi Tourist:''' I'm a bit worried that nature-themed dream bubbles might be outdated... but hey, let's go check it out anyway.
+::{{A|VO chapter2 9 crowdC 111.ogg}} '''Intellitron Tourist:''' See you later. Maybe we'll run into each other there in a few days.
+::Why not climb to the top of the Ambrosial Arbor?
+::{{A|VO chapter2 9 mar7th 126.ogg}} '''March 7th:''' Hey! That's a terrible idea! You'll get them arrested!
+::{{A|VO chapter2 9 crowdC 112.ogg}} '''Intellitron Tourist:''' Haha... you're just joking, right? How about giving us some more practical suggestions?
+::{{A|VO chapter2 9 crowdB 110.ogg}} '''Pepeshi Tourist:''' ...Wait a sec. Maybe it's not such a terrible idea after all? No risk, no reward! Come on, let's go climb that tree!
+::{{A|VO chapter2 9 crowdC 113.ogg}} '''Intellitron Tourist:''' Slow down a bit. Wait for me.
+::{{A|VO chapter2 9 mar7th 127.ogg}} '''March 7th:''' Hey, wait! Just think about what you're doing! And... don't mention our names if something goes wrong! Ugh, I hope they don't get into trouble... This is nerve-wracking.
+:{{DIcon|Arrow}} Why not climb to the top of the Ambrosial Arbor?
+:<pre>{
+	"$type": "RPG.GameCore.SetMissionCustomValue",
+	"SubmissionID": 202200202,
+	"MissionCustomValue": {
+		"Index": 2,
+		"ValidValueParamList": [
+			1,
+			2,
+			3,
+			4
+		]
+	},
+	"CustomValue": 4
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.SetMissionCustomValue",
+	"SubmissionID": 202200202,
+	"MissionCustomValue": {
+		"Index": 1,
+		"ValidValueParamList": [
+			0,
+			1
+		]
+	},
+	"CustomValue": 1
+}</pre>
+::{{tx}}
+:<pre>{
+	"$type": "RPG.GameCore.AdvDestroyGroupEntity",
+	"InstanceIDList": [
+		400001
+	]
+}</pre>
+:{{A|VO chapter2 9 danheng 112.ogg}} '''Dan Heng:''' Look, Yanqing's here.
+:{{tx}}
 {{Dialogue End}}
 
-===Meet Yanqing again===
+===Meet Yanqing again{{subst:void|<!--202200203-->}}===
 {{Mission Description|type=continuance|location=Central Starskiff Haven|update|Although you and Yanqing have not been apart for long, but you seem to feel that this kid has somehow grown a little taller.}}
 {{Dialogue Start}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{A|VO chapter2 9 yanqing 102.ogg}} '''Yanqing:''' Hey, everyone! It's been a while!
+:{{A|VO chapter2 9 mar7th 129.ogg}} '''March 7th:''' Doesn't feel like it's been that long since we last saw you, but Yanqing, are you...?
+:{{A|VO chapter2 9 yanqing 103.ogg}} '''Yanqing:''' What's up, Miss March?
+:{{A|VO chapter2 9 mar7th 130.ogg}} '''March 7th:''' They say kids grow up really fast. Yanqing, are you a little bit taller than before?
+:{{A|VO chapter2 9 danheng 113.ogg}} '''Dan Heng:''' We've only been away for a few months.
+:{{DIcon|Arrow}} Long time no see, Yanqing!
+::{{A|VO chapter2 9 mar7th 131.ogg}} '''March 7th:''' Long time no see!
+:{{DIcon|Arrow}} Yeah, you're definitely taller!
+::{{A|VO chapter2 9 yanqing 106.ogg}} '''Yanqing:''' Really? The General is always worried I won't grow much taller, but I keep telling him not to worry about it.
+:{{DIcon|Arrow}} (Cautiously pinch Yanqing's cheek)
+::{{A|VO chapter2 9 yanqing 108 m.ogg}} {{A|VO chapter2 9 yanqing 108 f.ogg}} '''Yanqing:''' Huh? What are you doing, (Trailblazer)?
 :{{tx}}
+
+;(Upon reaching the destination)
+:{{A|VO chapter2 9 yanqing 101.ogg}} '''Yanqing:''' There you are! Everyone, this way!
 {{Dialogue End}}
 
-===Defeat the fleeing Wolftrooper===
+===Defeat the fleeing Wolftrooper{{subst:void|<!--202200205-->}}===
 {{Mission Description|type=continuance|location=Central Starskiff Haven|update|The escorted prisoner attempts to escape amidst the chaos at the harbor. The young swordsman's frosty blade unsheathes, but someone else was a step ahead of him.}}
 {{Dialogue Start}}
-:{{tx}}
+----
+;([[#Gallery|Cutscene]] plays)
+::Not good!
+::Uh... Thanks for the help.
+::Sorry, no time to chat...
+::Could you give me back my...
+;(Cutscene ends)
+----
+<pre>{
+	"$type": "RPG.GameCore.PerformanceEndSeq",
+	"Cases": [
+		{
+			"OnSuccess": [
+				{
+					"$type": "RPG.GameCore.SwitchCharacterAnchorV2",
+					"SwitchCharacterAnchorConfig": {
+						"IsLocalPlayer": true,
+						"CharacterUniqueName": "LocalPlayer",
+						"AreaName": {
+							"Value": "LevelArea_P10201_F10201001_G216"
+						},
+						"AnchorName": {
+							"Value": "Anchor1"
+						}
+					}
+				}
+			]
+		}
+	]
+}</pre>
 {{Dialogue End}}
 
-===Ask Yanqing about the situation===
+===Ask Yanqing about the situation{{subst:void|<!--202200206-->}}===
 {{Dialogue Start}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
 :{{tx}}
+<pre>{
+	"$type": "RPG.GameCore.PerformanceEndSeq",
+	"Cases": [
+		{
+			"OnSuccess": [
+				{
+					"$type": "RPG.GameCore.SwitchCharacterAnchorV2",
+					"SwitchCharacterAnchorConfig": {
+						"IsLocalPlayer": true,
+						"CharacterUniqueName": "LocalPlayer",
+						"AreaName": {
+							"Value": "LevelArea_P10201_F10201001_G226"
+						},
+						"AnchorName": {
+							"Value": "Anchor1"
+						}
+					}
+				}
+			]
+		}
+	]
+}</pre>
+
+;(Upon reaching the destination)
+:{{A|VO chapter2 9 yanqing 127.ogg}} '''Yanqing:''' Wait, my sword!
+:{{A|VO chapter2 9 yanqing 128.ogg}} '''Yanqing:''' Let's just get down to business first.
 {{Dialogue End}}
 
-===Accompany Yanqing and ask about the situation from the Cloud Knights present===
+===Accompany Yanqing and ask about the situation from the Cloud Knights present{{subst:void|<!--202200208-->}}===
 {{Dialogue Start}}
-:{{tx}}
-{{Dialogue End}}
 
-===Look for Yanqing in the crowd===
-{{Mission Description|type=continuance|location=Central Starskiff Haven|update|Arriving at the Luofu, you are greeted by an overwhelming sight of starskiffs.}}
-{{Dialogue Start}}
-:{{tx}}
-{{Dialogue End}}
+;(Talk to Lujun)
+:{{A|VO chapter2 9 lujun 107.ogg}} '''Lujun:''' We'll see to it that these criminals are sent to The Shackling Prison as soon as possible. The cleanup operation is already underway, Lieutenant Yanqing, so there's no need to worry about anything.
+:{{A|VO chapter2 9 yanqing 137.ogg}} '''Yanqing:''' Thanks. By the way, you're... an officer of the patrol defense squad, right? I don't remember meeting you before...
+:{{A|VO chapter2 9 lujun 108.ogg}} '''Lujun:''' Well, I'm just a junior officer. I recently returned to the Luofu from the front lines and was temporarily assigned here for security duty before the ceremony.
+;(Upon reaching the destination)
 
-===Accompany Yanqing and ask about the situation from the Cloud Knights present===
-{{Mission Description|type=continuance|location=Central Starskiff Haven|update|The escorted prisoner attempts to escape amidst the chaos at the harbor. The young swordsman's frosty blade unsheathes, but someone else was a step ahead of him.}}
-{{Dialogue Start}}
+;(Upon reaching the destination)
+:{{tx}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+;(If {{cx}}<!--SubMission not Finish: 202200209-->)
+:{{tx}}
+:The Cloud Knights calm the crowd, then dispersed, and the street was restored to its peaceful state.
+:{{A|VO chapter2 9 mar7th 137.ogg}} '''March 7th:''' You look much maturer now, Yanqing.
+:{{A|VO chapter2 9 yanqing 139.ogg}} '''Yanqing:''' Please don't tease me, Miss March. The situation on the Xianzhou before the Wardance is like a calm lake that can be disturbed by even the smallest pebble &mdash; capable of generating far-reaching ripples with even the slightest disturbance.
+:{{A|VO chapter2 9 mar7th 138.ogg}} '''March 7th:''' What are those people... I mean, those "monsters" we just dealt with?
+:{{DIcon|Arrow}} I know! They're Kobolds, right?
+::{{A|VO chapter2 9 yanqing 140.ogg}} '''Yanqing:''' Those werewolf monsters are known as "borisin." They are Abominations of Abundance, and we've been fighting them for a very long time.
+:{{DIcon|Arrow}} Did you call them "the borisin"?
+::{{A|VO chapter2 9 yanqing 141.ogg}} '''Yanqing:''' Yeah, those werewolf monsters are known as "borisin." They are Abominations of Abundance, and we've been fighting them for a very long time.
+:{{A|VO chapter2 9 yanqing 142.ogg}} '''Yanqing:''' The borisin have been a powerful force for a long time, plundering and enslaving many worlds. The threat they pose is just as terrible as the Swarm Disaster, and the Alliance even had a fierce war with them three decades ago.
+:{{A|VO chapter2 9 yanqing 143.ogg}} '''Yanqing:''' Their presence has faded over the years, but who would have thought...
+:{{A|VO chapter2 9 danheng 118.ogg}} '''Dan Heng:''' According to that officer, they attacked an IPC ship near the Xianzhou Luofu. Such a brazen attack seems quite unusual to me.
+:{{A|VO chapter2 9 yanqing 144.ogg}} '''Yanqing:''' Yeah, that's what I find strange, too. It seems like the IPC and the borisin have some serious grudges.
+:{{A|VO chapter2 9 yanqing 145.ogg}} '''Yanqing:''' Well, enough with the chitchat. The general wants me to take you to the Palace of Astrum.
+:{{A|VO chapter2 9 yanqing 146.ogg}} '''Yanqing:''' I'd love to chichat a little longer, but there are some things that can't be left unchecked...
+:{{A|VO chapter2 9 mar7th 139.ogg}} '''March 7th:''' Hmm? Is it a serious matter? Maybe you'll... need our help in hunting down the borisin?
+:{{A|VO chapter2 9 yanqing 147.ogg}} '''Yanqing:''' Thank you, but it's no big deal.
+:{{A|VO chapter2 9 yanqing 148.ogg}} '''Yanqing:''' By the way... that young lady who just appeared... she took my sword. I'm thinking of filing a lost property report at the Realm-Keeping Commission to see if I can get it back...
+:{{A|VO chapter2 9 mar7th 140.ogg}} '''March 7th:''' Hahaha, I doubt she did it on purpose!
+:{{DIcon|Arrow}} So when Cloud Knights get into trouble, they have to call the emergency services too?
+::{{A|VO chapter2 9 mar7th 141.ogg}} '''March 7th:''' Perhaps she's around here somewhere? Shouldn't we take a look?
+:{{DIcon|Arrow}} You go file the report, and I go fetch the popcorn. It's gonna be quite the show...
+::{{A|VO chapter2 9 yanqing 149.ogg}} '''Yanqing:''' Don't remind me. I just zoned out for a moment, that's all.
+:{{A|VO chapter2 9 yanqing 150.ogg}} '''Yanqing:''' Alright, let's not keep the general waiting.
 :{{tx}}
 {{Dialogue End}}
 

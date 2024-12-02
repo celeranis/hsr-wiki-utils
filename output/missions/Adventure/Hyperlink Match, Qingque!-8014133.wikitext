@@ -7,7 +7,7 @@ PageTitle=#Hyperlink Match, Qingque!#
 |title         = 
 |image         = <!--Mission Hyperlink Match, Qingque!.png-->
 |type          = Adventure
-|event_name    = 
+|event_name    = Aetherium Wars
 |chapter       = 
 |requirements  = 
 * [[Adventure Mission]] ''[[Hyperlink Match, Arlan!]]'' completed
@@ -15,7 +15,7 @@ PageTitle=#Hyperlink Match, Qingque!#
 * [[Adventure Mission]] ''[[Hyperlink Match, Diting!]]'' completed
 * [[Adventure Mission]] ''[[Hyperlink Match, Yanqing!]]'' completed
 |summary       = <!--official mission summary from Fate's Atlas-->
-|characters    = Trailblazer
+|characters    = Qingque; Trailblazer
 |startLocation = [[The Xianzhou Luofu]] - [[Exalting Sanctum]]
 |world         = The Xianzhou Luofu
 |area          = Exalting Sanctum
@@ -23,7 +23,7 @@ PageTitle=#Hyperlink Match, Qingque!#
 |next          = 
 |rewards       = 
 }}
-'''''Hyperlink Match, Qingque!''''' is an [[Adventure Mission]] on [[The Xianzhou Luofu]].
+'''''Hyperlink Match, Qingque!''''' is an Event [[Adventure Mission]] from the [[Aetherium Wars]] event.
 
 ==Steps==
 # Have a Hyperlink Match with Qingque
@@ -37,11 +37,35 @@ PageTitle=#Hyperlink Match, Qingque!#
 -->
 ==Dialogue==
 {{Stub Dialogue}}
-
-===Have a Hyperlink Match with Qingque===
+===Have a Hyperlink Match with Qingque{{subst:void|<!--801413301-->}}===
 {{Mission Description|type=adventure|location=Exalting Sanctum|The core gameplay loop behind Aetherium Wars is "dueling." Challenge different players and show your true strength!}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Qingque)
+;(If {{cx}}<!--during performance 502088101-->)
+::'''Qingque:''' Hey, (Trailblazer), what a coincidence to run into you here!
+::'''Qingque:''' ...Please, hear me out. Although I'm at a games parlor, I'm just observing the games without playing.
+::'''Qingque:''' After all, I've got to go at the drop of the hat as soon as the master diviner sends me a message... I can't take the risk to actually play.
+::{{DIcon|Arrow}} Looks like your job has become more demanding, Qingque.
+:::'''Qingque:''' The Divination Commission has become severely shorthanded since the Ambrosial Arbor started growing. Even an idle position like mine is swamped with work...This is so annoying. I have honestly no idea why I'm even so busy.
+::{{DIcon|Arrow}} It's just a round of Celestial Jade. Go for it.
+:::'''Qingque:''' Oh, stop that. If I sit down at the table but can only stay for one or two rounds, I'll be even more miserable than having not playing at all.
+:::'''Qingque:''' I'll be staying away from the game table until the peace has been fully restored on the Luofu. If things refuse to settle down, I might consider getting an easier job that I can slack off in. However, my family might not be pleased with that... what a bother.
+::{{A|VO vo ambient w2 greeting qingque 101.ogg}} {{A|VO vo ambient w2 greeting qingque 102.ogg}} '''Qingque:''' Since I'm not playing, shall we have a chat? Not about work, of course.
+;(If {{cx}}<!--not during performance 502088101-->)
+:<pre>{
+	"$type": "RPG.GameCore.PlayMultiVoiceTalk",
+	"TalkSentenceID": 502088110
+}</pre>
+:'''Qingque:''' Tsk, I still think Celestial Jade is way more fun. Hey, do you think Celestial Jade would be more popular if two people could play it?
+<pre>{
+	"$type": "RPG.GameCore.ShowUI",
+	"Name": "Ui.AetherDivide.AetherDivideEntryPage",
+	"Param": {
+		"Value": "2"
+	},
+	"OnUIEnter": []
+}</pre>
 {{Dialogue End}}
 
 ==Other Languages==

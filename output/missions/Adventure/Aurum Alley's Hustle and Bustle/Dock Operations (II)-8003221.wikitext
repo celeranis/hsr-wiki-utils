@@ -7,11 +7,11 @@ PageTitle=#Dock Operations (II)#
 |title         = 
 |image         = <!--Mission Dock Operations (II).png-->
 |type          = Adventure
-|event_name    = 
+|event_name    = Aurum Alley's Hustle and Bustle
 |chapter       = Aurum Alley's Hustle and Bustle
 |requirements  = [[Adventure Mission]] ''[[Dock Operations (II)]]'' completed
 |summary       = <!--official mission summary from Fate's Atlas-->
-|characters    = Trailblazer
+|characters    = Mingxi; Trailblazer
 |startLocation = [[The Xianzhou Luofu]] - [[Aurum Alley]]
 |world         = The Xianzhou Luofu
 |area          = Aurum Alley
@@ -19,7 +19,7 @@ PageTitle=#Dock Operations (II)#
 |next          = Back in Business (III)
 |rewards       = Credit*10,000
 }}
-'''''Dock Operations (II)''''' is an [[Adventure Mission]] on [[The Xianzhou Luofu]] in the chapter [[Aurum Alley's Hustle and Bustle]].
+'''''Dock Operations (II)''''' is an Event [[Adventure Mission]] from the [[Aurum Alley's Hustle and Bustle]] event.
 
 ==Steps==
 # Assist the merchant guild to attain their funding goal of (300,000)
@@ -34,10 +34,21 @@ PageTitle=#Dock Operations (II)#
 ==Dialogue==
 {{Stub Dialogue}}
 
-===Assist the merchant guild to attain their funding goal of (300,000)===
+===Assist the merchant guild to attain their funding goal of (300,000){{subst:void|<!--800322101-->}}===
 {{Mission Description|type=adventure|location=Aurum Alley|Help the merchant guild reach the dock's revenue goal, build up cooperation between the guild and the stores, plan reasonable routes... All these tasks will help revitalize Aurum Alley.<br />The Aurum Alley Merchant Guild accumulates funding through operating the docks. You should prioritize reaching the revenue goal and help the guild overcome their immediate crisis.}}
 {{Dialogue Start}}
-:{{tx}}
+:{{A|VO side2 jrx mingxi 182.ogg}} '''Mingxi:''' I have something to tell you &mdash; we achieved our revenue goal for this quarter! This is all thanks to you two, not to mention the merchants of Aurum Alley.
+:{{A|VO side2 jrx mingxi 183.ogg}} '''Mingxi:''' The Merchant Guild promises that we will use the money where it is meant to be spent &mdash; no disappointments!
+:{{A|VO side2 jrx mingxi 184.ogg}} '''Mingxi:''' The funds will be used for the overall repair and upgrade of the dock... which means we won't be able to use the dock's shipping logistics for a while.
+<pre>{
+	"$type": "RPG.GameCore.ConsumeMissionItem",
+	"SubMissionID": 800322101,
+	"IsAutoConsume": true,
+	"SimpleTalk": {
+		"TextSpeed": 20,
+		"ProtectTime": 0.8
+	}
+}</pre>
 {{Dialogue End}}
 
 ==Other Languages==

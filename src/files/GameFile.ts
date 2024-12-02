@@ -1,3 +1,4 @@
+import { existsSync } from 'fs';
 import { readFile } from 'fs/promises';
 import config from '../../config.json' with { "type": "json" };
 import { Dictionary, VERSION_COMMITS } from '../Shared.js';
@@ -12,20 +13,47 @@ const ALT_PATTERNS = [
 	'Config/Level/Rogue/RogueDialogue/',
 	'Config/Level/Mission/',
 	'Story/Mission/',
+	'Story/Discussion/Mission/',
 	'Config/Level/Rogue/RogueNPC/RogueNPC_260/',
+	'Config/CutSceneCaption/',
+	// 'ExcelOutput/Performance'
 ]
 
+export function preprocessFile(obj: any) {
+	for (const [key, value] of Object.entries(obj)) {
+		if (value && typeof value == 'object') {
+			preprocessFile(value)
+		} else if (key == 'Value' && typeof value == 'number') {
+			// round suspected floating point errors to integers
+			const decimal = value % 1
+			if (decimal != 0 && (decimal < 0.01 || decimal > 0.99)) {
+				obj[key] = Math.round(value)
+			}
+		}
+	}
+	return obj
+}
+
+export const MISSING_FILES = new Set<string>()
+
 export async function getFile<T extends object>(path: string, version: string = config.target_version): Promise<T> {
+	path = path.trim()
 	const useAlt = ALT_PATTERNS.find(pattern => path.toLowerCase().startsWith(pattern.toLowerCase())) != undefined
 	
 	if (useAlt ? config.local_roots_mission[version] : config.local_roots[version]) {
+		
+		// TEMPORARY
+		if (useAlt && !existsSync(`${config.local_roots[version]}/${path}`)) {
+			MISSING_FILES.add(path)
+		}
+		
 		const altData = await readFile(`${useAlt ? config.local_roots_mission[version] : config.local_roots[version]}/${path}`)
 			// .catch(err => {
 			// 	console.warn(`Error while fetching local data for ${path}`)
 			// 	throw err
 			// })
 		
-		return JSON.parse(altData.toString())
+		return preprocessFile(JSON.parse(altData.toString()))
 	}
 	
 	const data = await fetch(`${config.repo_root}${VERSION_COMMITS[version] || version}/${path}`)
@@ -39,6 +67,7 @@ export async function getFile<T extends object>(path: string, version: string = 
 	}
 	
 	return data.json()
+		.then(data => preprocessFile(data))
 		.catch(err => {
 			console.error(`Error while parsing JSON from ${path}`)
 			throw err
@@ -48,6 +77,8 @@ export async function getFile<T extends object>(path: string, version: string = 
 // for use with single-layer excel stuff only
 // multi-layer excels (i.e. MazeBuff) will break
 export async function getExcelFile<T extends object>(path: string, key: keyof T, version: string = config.target_version): Promise<Dictionary<T>> {
+	path = path.trim()
+	
 	const file = await getFile<Dictionary<T> | T[]>(path.startsWith('ExcelOutput/') ? path : `ExcelOutput/${path}`, version)
 	if (!Array.isArray(file)) {
 		return file

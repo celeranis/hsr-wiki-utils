@@ -11,7 +11,7 @@ PageTitle=#Ring and Stage II#
 |chapter       = 
 |requirements  = [[Adventure Mission]] ''[[Ring and Stage I]]'' completed
 |summary       = You have successfully acquired the armor of a Fragmentum monster and received the final payment from Scott.<br />However, you have a strange feeling that there is something wrong with the armor...
-|characters    = Trailblazer
+|characters    = Scott; Trailblazer
 |startLocation = [[Jarilo-VI]] - [[Boulder Town]]
 |world         = Jarilo-VI
 |area          = Boulder Town
@@ -34,18 +34,128 @@ PageTitle=#Ring and Stage II#
 -->
 ==Dialogue==
 {{Stub Dialogue}}
+:'''(Trailblazer):''' (Looks like there is no other choice. Guess I'll have to go again...)
 {{Dialogue End}}
 
-===Get the monster's armor===
+===Get the monster's armor{{subst:void|<!--201070802-->}}===
 {{Mission Description|type=adventure|location=Rivet Town|update|Scott refuses to give you the reward he promised, but you insist. In the end, he gives you part of it, but if you want to get the rest, you need to do one more thing for him. You're not happy about it, but for the reward's sake, you agree to this condition.}}
 {{Dialogue Start}}
-:{{tx}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:'''(Trailblazer):''' (Looks like this is the armor that Scott wants.)
+:'''(Trailblazer):''' (Better make this quick.)
+<pre>{
+	"$type": "RPG.GameCore.PropEnableCollider",
+	"SpecifiedRelativePaths": [],
+	"TriggerSelect": "AllDynamic",
+	"TargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvPropEx",
+		"FetchType": "SinglePropByPropID",
+		"SinglePropID": {
+			"GroupID": {
+				"fixedValue": {
+					"Value": 34
+				}
+			},
+			"ID": {
+				"fixedValue": {
+					"Value": 300002
+				}
+			}
+		}
+	}
+}</pre>
+
+;(Upon reaching the destination)
+:'''(Trailblazer):''' (Looks like this is the armor that Scott wants.)
+:'''(Trailblazer):''' (Better make this quick.)
+<pre>{
+	"$type": "RPG.GameCore.PropEnableCollider",
+	"SpecifiedRelativePaths": [],
+	"TriggerSelect": "AllDynamic",
+	"TargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvPropEx",
+		"FetchType": "SinglePropByPropID",
+		"SinglePropID": {
+			"GroupID": {
+				"fixedValue": {
+					"Value": 34
+				}
+			},
+			"ID": {
+				"fixedValue": {
+					"Value": 300001
+				}
+			}
+		}
+	}
+}</pre>
+;(Obtain {{Item|Fragmentum Monster Armor|20|x=1}})
+:'''(Trailblazer):''' (Finally got this dirty armor. It's time to go back and ask Scott for the final payment...)
 {{Dialogue End}}
 
-===Give the armor to Scott===
+===Give the armor to Scott{{subst:void|<!--201070804-->}}===
 {{Mission Description|type=adventure|location=Boulder Town|update|You successfully acquire the armor of a Fragmentum monster. It stinks, but all you can think of right now is to return to the Fight Club and ask Scott for the money. When you finally receive the whole reward, you have a strange feeling that there's something wrong with the armor...}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Scott)
+:'''Scott:''' That's it, that's it! Wow, that texture!
+<pre>{
+	"$type": "RPG.GameCore.ConsumeMissionItem",
+	"SubMissionID": 201070804,
+	"Desc": {
+		"Hash": -1784126322
+	}
+}</pre>
+:'''Scott:''' You had an annoying attitude but you still got the job done... I was right about you, ah&mdash;haha!
+:'''Scott:''' Here's the rest of your money like promised. Scott is always true to his word. If we can get a chance in the future, then come and talk business with me. We can help each other out&mdash; muhahaha!
+:{{DIcon|Arrow}} What do you plan to do with the monster armor?
+::'''Scott:''' To wear it of course, or what? Leave it around as house decor?
+:{{DIcon|Arrow}} Do you have a hobby of collecting armor?
+::'''Scott:''' Hey, I only have a hobby of making money.
+::'''Scott:''' Armor is supposed to be worn. As long as someone's wearing it, then I can make money.
+:{{DIcon|Arrow}} It'll need a belt to serve as a Tokusatsu costume.
+::'''Scott:''' Tokusatsu? What's that?
+::'''Scott:''' This armor is to be worn.
+:'''Scott:''' Hey, since you helped me, I'll let you in on my plan. I'm going to have a boxer dress up as a monster to fight in the ring.
+:'''Scott:''' I've already thought up a name: "Monster Armor." Tickets will definitely be sold out by then, and the boxing arena will be full!
+:'''Scott:''' Hahaha, what do you think? In all of the Underworld, only Scott can come up with such an ingenious idea!
+:{{DIcon|Arrow}} Isn't it unsuitable for people to wear, though?
+::'''Scott:''' What's unsuitable? Oh, you mean the size of this armor? It does look a little big, so just take it to the blacksmith and get it resized.
+:{{DIcon|Arrow}} Isn't it disgusting to wear stuff ripped off monsters?
+::'''Scott:''' It's not like I'm gonna wear it myself, so why does it need to be clean?
+:{{DIcon|Arrow}} I still don't think people should wear it.
+::'''Scott:''' You're right, but it's none of my business.
+:'''Scott:''' All that whining is hard on the ears.
+:{{DIcon|Arrow}} Don't come to me if something goes wrong.
+::'''Scott:''' I know my men. What could go wrong?
+:{{DIcon|Arrow}} Hey, if you don't wanna listen, that's fine...
+::'''Scott:''' Hey, I know my boys, no need for you to get all worked up for nothing.
+:'''Scott:''' Hey hey, you've done your part of the job, so shut up and take your money! All this jibber-jabber is just you trying to squeeze me for more. Don't think I don't know what's on your mind!
+:'''Scott:''' Scott is no cruel boss, you know. Since you've really helped me, and proven yourself capable, I'll give you a little extra "house special."
+:'''Scott:''' Next time you come around, if you see Dr. Dig here, get him to do a head count and squeeze you into a challenge round or something like that. That way, you won't need to line up for tickets.
+:'''Scott:''' Are we good now? Now get out of my face with your money! Hmmmm... so now... which poor fool should try this armor on...
+
+;(Talk to Scott)
+:'''Scott:''' Hmm? What do you want to know? If you want to know my business secrets, then I'll have to tell you to go away.
+:{{DIcon|Talk}} Who are the fighters?
+::'''Scott:''' Anyone that wants to be a fighter here needs to have some selling points. As long as they can bring me profit, whether they are clowns or monsters, I'll hire them.
+::'''Scott:''' I'm the best at seeing through people. I can tell at a glance which boxer has real talent and which one is just a loser.
+::'''Scott:''' Why are you asking? Are you thinking about giving it a try now? You could have said yes to me earlier.
+:;(Return to previous option selection)
+:{{DIcon|Talk}} Is there a lot of money in this line of work?
+::'''Scott:''' As long as we have a constant flow of customers, income is guaranteed. Hah, do you really think that all I do is sell tickets? What could I do with the tiny bit of money I make from tickets?
+::'''Scott:''' My goal is to create an end-to-end in-depth marketing campaign, segment the audience, seize on the trends, and build an audio-visual entertainment industry around boxing in the Underworld...
+::'''Scott:''' And then link it to all the industries in the Underground to create a business empire...
+::'''Scott:''' Ahem, I've said too much. Just consider this as me thinking out loud....pretend you heard nothing, okay?
+:;(Return to previous option selection)
+:{{DIcon|Talk}} I heard you mistreat the boxers.
+::'''Scott:''' Baloney! Who said that? Tell them to say it to my face.
+::'''Scott:''' They are welcome to end their contracts and find a job somewhere else if they can't take it anymore. The mining team would love one of these big, burly guys.
+::'''Scott:''' Maybe they're just too fragile. Instead of reflecting on their own decisions, they accuse me of abuse! The typical mentality of the weak!
+:;(Return to previous option selection)
+:{{DIcon|Exit}} That's all questions I have.
 {{Dialogue End}}
 
 ==Other Languages==

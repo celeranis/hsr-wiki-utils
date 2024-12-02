@@ -1,8 +1,8 @@
 import { BlessingGroup } from '../../Blessing.js'
 import { CurioGroup } from '../../Curio.js'
 import { DynamicContent } from '../../DynamicContent.js'
-import { DialogEventMap, PlayOptionTalkSimple, RoguePlayAndWaitSimpleTalk, RoguePlayOptionTalk, TalkOption, TalkOptionSimple, WaitDialogueEvent } from '../../files/Dialog.js'
 import { getExcelFile } from '../../files/GameFile.js'
+import { DialogEventMap, PlayOptionTalkSimple, RoguePlayAndWaitSimpleTalk, RoguePlayOptionTalk, TalkOption, TalkOptionSimple, WaitDialogueEvent } from '../../files/graph/Dialog.js'
 import { InternalEventSection, InternalTalkName } from '../../files/Occurrence.js'
 import { Item } from '../../Item.js'
 import type { OccurrenceDialogueTree } from '../../Occurrence.js'
@@ -12,6 +12,7 @@ import { textMap } from '../../TextMap.js'
 import { TranscriptionNote } from '../../util/AbstractDialogueTree.js'
 import { DialogueTaskEntry } from '../Dialogue.js'
 import { BaseDialogueTask, BaseDialogueTaskEntry, BaseNonTextDialogueTask, TalkSentenceTaskEntry } from '../DialogueBase.js'
+import { GraphEnvironment } from '../Environment.js'
 import { CustomStringListen } from './CustomString.js'
 
 export const RogueTalkNameConfig = await getExcelFile<InternalTalkName>('RogueTalkNameConfig.json', 'TalkNameID')
@@ -122,9 +123,9 @@ export class RogueTalkTask extends BaseDialogueTask {
 	declare $type: 'RPG.GameCore.PlayAndWaitRogueSimpleTalk'
 	entries?: TalkSentenceTaskEntry[]
 	
-	constructor(data: RoguePlayAndWaitSimpleTalk) {
+	constructor(data: RoguePlayAndWaitSimpleTalk, env: GraphEnvironment) {
 		super(data)
-		this.entries = data.SimpleTalkList.map(sent => new TalkSentenceTaskEntry(sent))
+		this.entries = data.SimpleTalkList.map(sent => new TalkSentenceTaskEntry(sent, env))
 	}
 	
 	wikitext(): undefined {

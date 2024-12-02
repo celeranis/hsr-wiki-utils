@@ -11,7 +11,7 @@ PageTitle=#Eye of the Storm#
 |chapter       = Today Is Yesterday's Tomorrow
 |requirements  = [[Trailblaze Mission]] ''[[Eye of the Storm]]'' completed
 |summary       = <!--official mission summary from Fate's Atlas-->
-|characters    = Trailblazer
+|characters    = Arlan; Dan Heng; March 7th; Trailblazer
 |startLocation = [[Herta Space Station]] - [[Storage Zone]]
 |world         = Herta Space Station
 |area          = Storage Zone
@@ -36,22 +36,169 @@ PageTitle=#Eye of the Storm#
 ==Dialogue==
 {{Stub Dialogue}}
 
-===Go to the monitoring room and meet up with Arlan===
+===Go to the monitoring room and meet up with Arlan{{subst:void|<!--100020110-->}}===
 {{Mission Description|type=trailblaze|location=Storage Zone|Just like in all those classic movie scenes &mdash; the elevator doesn't work.<br />Despite March 7th calling him a "walking encyclopedia," even Dan Heng, who somehow made it in time, doesn't know what to do.<br />However, Arlan, the head of the Security Department rescued by Dan Heng, probably knows the answer...<br />As expected, Dan Heng saves the day once more.}}
 {{Dialogue Start}}
+:<!--1-second delay-->
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+<pre>{
+	"$type": "RPG.GameCore.SetAudioEmotionState",
+	"StateName": "State_Bgm_E7",
+	"SubMissionID": 100020111
+}</pre>
 :{{tx}}
+<pre>{
+	"$type": "RPG.GameCore.SetAudioEmotionState",
+	"ResetToFloorDefault": true,
+	"SubMissionID": 100020111
+}</pre>
 {{Dialogue End}}
 
-===Use the encryption key===
+===Use the encryption key{{subst:void|<!--100020112-->}}===
 {{Mission Description|type=trailblaze|location=Storage Zone|update|You can sense from Arlan's cautious gaze that the encryption key is not only used for unlocking authorization but also proof of your identity.<br />Hurry up and use it.}}
 {{Dialogue Start}}
-:{{tx}}
+:<!--1-second delay-->
+:{{A|VO chapter0 2 arlan 108.ogg}} '''Arlan:''' ...Now that we found the key, we should get going. We can use that console over there to unlock the elevator.
+----
+:<!--0.5-second delay-->
+<pre>{
+	"$type": "RPG.GameCore.PropMoveTo",
+	"Duration": {
+		"fixedValue": {
+			"Value": 5
+		}
+	},
+	"Speed": {
+		"fixedValue": {
+			"Value": 1
+		}
+	},
+	"AreaName": "LevelArea_P20002_F20002001_G8",
+	"AnchorName": "Elevator_2F",
+	"LocalPlayerForwardRadius": 1,
+	"TargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvPropEx",
+		"FetchType": "SinglePropByPropID",
+		"SinglePropID": {
+			"GroupID": {
+				"fixedValue": {
+					"Value": 8
+				}
+			},
+			"ID": {
+				"fixedValue": {
+					"Value": 300003
+				}
+			}
+		}
+	}
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.TriggerSound",
+	"SoundName": {
+		"Value": "Ev_sfx_hertaspacestation_elevator_slowup"
+	}
+}</pre>
+:<!--3.5-second delay-->
+:{{A|VO chapter0 2 danheng 116.ogg}} '''Dan Heng:''' Let's go.
+:{{A|VO chapter0 2 arlan 109.ogg}} '''Arlan:''' Hold on. I only activated the elevator on the highest floor. We'll have to go there to use it.
+:{{DIcon|Arrow}} Why? It's so far away.
+::{{A|VO chapter0 2 arlan 110.ogg}} '''Arlan:''' Because I mustn't give the Legion any chance to reach the master control zone by the elevator. I must ensure the safety of the station's staff.
+::{{A|VO chapter0 2 arlan 111.ogg}} '''Arlan:''' So I'll have to trouble you to take a bit of a detour... Apologies.
+:{{DIcon|Arrow}} Okay.
+::{{A|VO chapter0 2 arlan 112.ogg}} '''Arlan:''' Sorry... This space station was entrusted to Lady Asta by Madam Herta. I must do this for the safety of the master control zone and the staff there.
+::{{A|VO chapter0 2 arlan 113.ogg}} '''Arlan:''' So I'll have to trouble you to take a bit of a detour... Sincerest apologies.
+:{{A|VO chapter0 2 mar7th 140.ogg}} '''March 7th:''' Huh? You're not coming with us?
+:{{A|VO chapter0 2 arlan 114.ogg}} '''Arlan:''' My leg is injured... I'd only slow you down. I'll stay here and shut down the elevator once you've made it to the master control zone.
+:{{A|VO chapter0 2 danheng 117.ogg}} '''Dan Heng:''' You won't slow us down. And you should be able to shut down the elevators from the master control zone, right?
+:{{A|VO chapter0 2 mar7th 141 m.ogg}} {{A|VO chapter0 2 mar7th 141 f.ogg}} '''March 7th:''' Agreed. (Trailblazer) and I made it here safely, and now we've also got Dan Heng. We're more than enough to protect you~
+:{{A|VO chapter0 2 mar7th 142.ogg}} '''March 7th:''' Let us worry about the Antimatter Legion. You just follow us and keep yourself alive~
+:{{DIcon|Arrow}} Trust us.
+:{{DIcon|Arrow}} Don't overthink this.
+:{{DIcon|Arrow}} You can use me as a crutch.
+::{{A|VO chapter0 2 mar7th 143.ogg}} '''March 7th:''' Aren't you a nice kid!
+:{{A|VO chapter0 2 arlan 115.ogg}} '''Arlan:''' ...Thank you.
+----
 {{Dialogue End}}
 
-===Go to the upper level and take the elevator to the master control zone===
+===Go to the upper level and take the elevator to the master control zone{{subst:void|<!--100020108-->}}===
 {{Mission Description|type=trailblaze|location=Storage Zone|update|Arlan seems to worry that he would be a hindrance, but you as a group already developed a sort of delicate rapport in how to persuade him. Could this be what it means to be companions?<br />Hurry and reach the top floor with your companions.}}
 {{Dialogue Start}}
-:{{tx}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{A|VO chapter0 2 arlan 116.ogg}} '''Arlan:''' The Sorting and Analysis Room has been sealed off. We can't go this way.
+
+;(Upon reaching the destination)
+:{{A|VO chapter0 2 danheng 118.ogg}} '''Dan Heng:''' Do you know why the Antimatter Legion would invade the station, Arlan?
+:{{A|VO chapter0 2 arlan 117.ogg}} '''Arlan:''' They must've come for Madam Herta's collection... But as to why, I still...
+:{{A|VO chapter0 2 danheng 119.ogg}} '''Dan Heng:''' I heard there's something called a Stellaron in Madam Herta's collection.
+:{{A|VO chapter0 2 arlan 118.ogg}} '''Arlan:''' ...That's not the kind of information someone in my position would have access to.
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{A|VO chapter0 2 danheng 120.ogg}} '''Dan Heng:''' The repulsion bridge has been shut down?
+:{{A|VO chapter0 2 arlan 119.ogg}} '''Arlan:''' Yes. To stall the enemy, more or less.
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+<pre>{
+	"$type": "RPG.GameCore.ActiveVirtualCamera",
+	"AreaName": "MainMission_2000201",
+	"AnchorName": "Camera_1000201_M3",
+	"IsActive": true,
+	"WaitBlendFinish": true,
+	"BlendConfig": {
+		"ExportToJson": true,
+		"BlendType": "Cut",
+		"FOVSmoothDampTime": -1,
+		"FrameBlendWeightStart": 1,
+		"FrameBlendDuration": 1
+	},
+	"VCameraDitherMaxDistance": 1,
+	"CenterPosX": -1,
+	"CenterPosY": -1
+}</pre>
+:<!--0.5-second delay-->
+:{{A|VO chapter0 2 mar7th 148.ogg}} '''March 7th:''' Hey, these shiny things... Are these Light Cones? I thought only the Interastral Peace Corporation had rare stuff like this.
+:{{A|VO chapter0 2 danheng 124.ogg}} '''Dan Heng:''' No, Light Cones are Garden of Recollection technology. They allow you to carry memories around &mdash; very potent enhancement items. I heard the corporation paid a lot for the usage rights, but I've no idea how Herta managed to get hold of one.
+<pre>{
+	"$type": "RPG.GameCore.ActiveVirtualCamera",
+	"AreaName": "MainMission_2000201",
+	"AnchorName": "Camera_1000201_M4",
+	"IsActive": true,
+	"WaitBlendFinish": true,
+	"BlendConfig": {
+		"ExportToJson": true,
+		"BlendType": "Cut",
+		"FOVSmoothDampTime": -1,
+		"FrameBlendWeightStart": 1,
+		"FrameBlendDuration": 1
+	},
+	"VCameraDitherMaxDistance": 1,
+	"CenterPosX": -1,
+	"CenterPosY": -1
+}</pre>
+:{{A|VO chapter0 2 arlan 120.ogg}} '''Arlan:''' They were acquired legitimately, that's all I can say. Take them, they're very useful in combat.
+<pre>{
+	"$type": "RPG.GameCore.ActiveVirtualCamera",
+	"AreaName": "MainMission_2000201",
+	"AnchorName": "Camera_1000201_07",
+	"BlendConfig": {
+		"ExportToJson": true,
+		"BlendType": "Cut",
+		"BlendTime": 0.1,
+		"FOVSmoothDampTime": -1,
+		"FrameBlendWeightStart": 1,
+		"FrameBlendDuration": 1
+	},
+	"VCameraDitherMaxDistance": 1,
+	"CenterPosX": -1,
+	"CenterPosY": -1
+}</pre>
+:<!--0.5-second delay-->
 {{Dialogue End}}
 
 ==Other Languages==

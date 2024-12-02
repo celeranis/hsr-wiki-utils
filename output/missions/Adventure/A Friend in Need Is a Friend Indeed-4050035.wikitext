@@ -11,7 +11,7 @@ PageTitle=#A Friend in Need Is a Friend Indeed#
 |chapter       = 
 |requirements  = {{subst:void|<!--Unknown: {"Type":"Manual"}-->}}
 |summary       = <!--official mission summary from Fate's Atlas-->
-|characters    = Trailblazer
+|characters    = Maintenance Engineer; Trailblazer
 |startLocation = [[Astral Express]] - [[Parlor Car]]
 |world         = Astral Express
 |area          = Parlor Car
@@ -35,10 +35,29 @@ PageTitle=#A Friend in Need Is a Friend Indeed#
 {{Stub Dialogue}}
 {{Dialogue End}}
 
-===Find the maintenance engineer from the Maintenance Department===
+===Find the maintenance engineer from the Maintenance Department{{subst:void|<!--405003502-->}}===
 {{Mission Description|type=adventure|location=Master Control Zone|update|Speak with the maintenance engineer and help to replenish provisions on the Express.}}
 {{Dialogue Start}}
-:{{tx}}
+
+
+;(Talk to Maintenance Engineer)
+;(If {{cx}}<!--during performance 500002400-->)
+::{{A|VO vo ambient w0 greeting staffAH 101.ogg}} {{A|VO vo ambient w0 greeting staffAH 102.ogg}} '''Maintenance Engineer:''' Everyone is just data... Everyone. And she... She is no exception.
+::'''Maintenance Engineer:''' Even though I love her, so what... She's just another string of data... Sigh!
+::{{DIcon|Arrow}} Are you in love? Who is "she"?
+:::'''Maintenance Engineer:''' Someone who broke my heart. Someone who made me laugh and cry. Someone who I longed for day and night.
+:::'''Maintenance Engineer:''' And these three people respectively are... Aw, forget it. You're just a random stranger, so you wouldn't understand even if I told you.
+::{{DIcon|Arrow}} "Data"? What data?
+:::'''Maintenance Engineer:''' Data relies upon a terminal device to sustain the will of the space station.
+:::'''Maintenance Engineer:''' These are the truths that uphold the world. Those who fail to understand the laws of data are doomed to be deceived by the world.
+::'''Maintenance Engineer:''' The light in here isn't as harsh as it is in other cabins. It's nice.
+;(If {{cx}}<!--not during performance 500002400-->)
+:<pre>{
+	"$type": "RPG.GameCore.PlayMultiVoiceTalk",
+	"TalkSentenceID": 500002401,
+	"KeepDisplay": true
+}</pre>
+::'''Maintenance Engineer:''' Even though I love her, so what... She's just another string of data... Sigh!
 {{Dialogue End}}
 
 ==Other Languages==

@@ -9,9 +9,9 @@ PageTitle=##
 |type          = Adventure
 |event_name    = 
 |chapter       = 
-|requirements  = Complete {{cx}}<!--Hidden Exploration Objective ID 4040012--> and wait for the next Daily [[Reset]]
+|requirements  = Complete {{cx}}<!--Hidden Mission ID 4040012--> and wait for the next Daily [[Reset]]
 |summary       = <!--official mission summary from Fate's Atlas-->
-|characters    = Trailblazer
+|characters    = Strange Plant; Trailblazer
 |startLocation = [[Herta Space Station]] - [[Base Zone]]
 |world         = Herta Space Station
 |area          = Base Zone
@@ -33,7 +33,44 @@ PageTitle=##
 -->
 ==Dialogue==
 {{Stub Dialogue}}
-
+:<!--0.25-second delay-->
+<pre>{
+	"$type": "RPG.GameCore.PropSetupUITrigger",
+	"DestroyAfterTriggered": true,
+	"ButtonIcon": "SpriteOutput/TalkIcon/CheckIcon.png",
+	"IconType": "CheckIcon",
+	"ButtonText": {
+		"Hash": 278713937
+	},
+	"ButtonCallback": [
+		{
+			"$type": "RPG.GameCore.TriggerCustomString",
+			"CustomString": {
+				"Value": "Mission_404001202_Prop_73_300003_BtnClick"
+			}
+		}
+	],
+	"InteractAngleRange": 180,
+	"OverrideTargetTypes": [],
+	"SkipFakeAvatar": true,
+	"TargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvPropEx",
+		"FetchType": "SinglePropByPropID",
+		"SinglePropID": {
+			"GroupID": {
+				"fixedValue": {
+					"Value": 92
+				}
+			},
+			"ID": {
+				"fixedValue": {
+					"Value": 300001
+				}
+			}
+		}
+	}
+}</pre>
+;(Obtain {{Item|Praise of High Morals|20|x=1}})
 {{Dialogue End}}
 
 ==Other Languages==

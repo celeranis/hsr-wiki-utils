@@ -11,7 +11,7 @@ PageTitle=#Dragon Mislay, Dreams Astray#
 |chapter       = Topclouded Towerthrust
 |requirements  = {{subst:void|<!--Unknown: {"Type":"Manual"}-->}}
 |summary       = <!--official mission summary from Fate's Atlas-->
-|characters    = Trailblazer
+|characters    = Dan Heng; Past Echo; Sushang; Trailblazer
 |startLocation = [[The Xianzhou Luofu]] - [[Alchemy Commission]]
 |world         = The Xianzhou Luofu
 |area          = Alchemy Commission
@@ -23,7 +23,6 @@ PageTitle=#Dragon Mislay, Dreams Astray#
 
 ==Steps==
 # Leave the Healer's Market on your own
-# Find out where the Trailblazer and the others are
 # (Optional) Talk with people in the market to understand what is happening
 # Leave the Healer's Market on your own
 # Find out where the Trailblazer and the others are
@@ -39,35 +38,296 @@ PageTitle=#Dragon Mislay, Dreams Astray#
 ==Dialogue==
 {{Stub Dialogue}}
 
-===Leave the Healer's Market on your own===
+===Leave the Healer's Market on your own{{subst:void|<!--102130101-->}}===
 {{Mission Description|type=trailblaze|location=Alchemy Commission|On the other side of Luofu, Sushang parks the skiff at the Alchemy Commission's Healer's Market after making contact with the Cloud Knights. The three finally land after a tumultuous journey. This was once a part of your familiar home. Memories of the past swell up into your mind, and countless bygone shadows swivel before your eyes. However, your friends are currently missing. You have no plans to remain here.}}
 {{Dialogue Start}}
+:The fighting has stopped for the moment at the Alchemy Commission
+:Meanwhile, the ship carrying Dan Heng, Sushang, and Luocha finally arrives nearby...
+:{{A|VO chapter2 6 sushang 101.ogg}} '''Sushang:''' Uh, this is...
+:{{DIcon|Arrow}} The Alchemy Commission.
+:{{DIcon|Arrow}} The delve bordering Scalegorge Waterscape.
+:{{A|VO chapter2 6 sushang 102.ogg}} '''Sushang:''' Huh? You're pretty familiar with this place.
 :{{tx}}
+<pre>{
+	"$type": "RPG.GameCore.PlayMessage",
+	"MessageSectionID": 1201200,
+	"ShowNotice": true
+}</pre>
+:{{A|VO chapter2 6 danheng 101 m.ogg}} {{A|VO chapter2 6 danheng 101 f.ogg}} '''Dan Heng:''' (The messages never get sent... I wonder what's happening with those three?)
+:{{A|VO chapter2 6 danheng 102.ogg}} '''Dan Heng:''' (The Cloud Knights seem to be gathering for the Stellaron disaster... but why did Kafka want us to come here? What happened to them? And what happened to Blade?)
+:{{A|VO chapter2 6 danheng 103.ogg}} '''Dan Heng:''' (I've delayed for too long. I need more information...)
 {{Dialogue End}}
 
-===Find out where the Trailblazer and the others are===
+===(Optional) Talk with people in the market to understand what is happening{{subst:void|<!--102130104-->}}===
 {{Dialogue Start}}
-:{{tx}}
+;(If {{cx}}<!--SubMission not Finish: 102130105-->)
+;(Unused &mdash; Talk_102130104)
+<pre>{
+	"$type": "RPG.GameCore.CalculateMissionCustomValue",
+	"TargetSubmissionID": 102130104,
+	"TargetMissionCustomValue": {
+		"isLocal": true,
+		"isRange": true,
+		"ValidValueParamList": [
+			0,
+			2
+		]
+	},
+	"ValueA": {
+		"Type": "CustomValue",
+		"MainMissionID": 1021301,
+		"MissionCustomValue": {
+			"isLocal": true,
+			"isRange": true,
+			"ValidValueParamList": [
+				0,
+				2
+			]
+		}
+	},
+	"ValueB": {
+		"DirectValue": 1
+	}
+}</pre>
+:;(If {{F|MissionCV-1021301-undefined}} is greater than or equal to 2)
+
+;(Unused &mdash; Talk_102130104_2)
+<pre>{
+	"$type": "RPG.GameCore.CalculateMissionCustomValue",
+	"TargetSubmissionID": 102130104,
+	"TargetMissionCustomValue": {
+		"isLocal": true,
+		"isRange": true,
+		"ValidValueParamList": [
+			0,
+			2
+		]
+	},
+	"ValueA": {
+		"Type": "CustomValue",
+		"MainMissionID": 1021301,
+		"MissionCustomValue": {
+			"isLocal": true,
+			"isRange": true,
+			"ValidValueParamList": [
+				0,
+				2
+			]
+		}
+	},
+	"ValueB": {
+		"DirectValue": 1
+	}
+}</pre>
+:;(If {{F|MissionCV-1021301-undefined}} is greater than or equal to 2)
 {{Dialogue End}}
 
-===(Optional) Talk with people in the market to understand what is happening===
+===Leave the Healer's Market on your own{{subst:void|<!--102130105-->}}===
 {{Dialogue Start}}
-:{{tx}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{A|VO chapter2 6 danheng 109.ogg}} '''Dan Heng:''' (I'm sorry, I have to catch up to my friends. Thank you for looking out for me on this journey, both of you...)
 {{Dialogue End}}
 
-===Leave the Healer's Market on your own===
+===Find out where the Trailblazer and the others are{{subst:void|<!--102130103-->}}===
 {{Dialogue Start}}
-:{{tx}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+<pre>{
+	"$type": "RPG.GameCore.PropSetVisibility",
+	"TargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvPropEx",
+		"FetchType": "SinglePropByPropID",
+		"SinglePropID": {
+			"GroupID": {
+				"fixedValue": {
+					"Value": 27
+				}
+			},
+			"ID": {
+				"fixedValue": {
+					"Value": 300001
+				}
+			}
+		}
+	}
+}</pre>
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+<pre>{
+	"$type": "RPG.GameCore.TriggerSound",
+	"SoundName": {
+		"Value": "Ev_chapter2_6_echo_memory_noscirpt"
+	},
+	"EmitterType": "LocalPlayer"
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.TransitEnvProfile",
+	"Path": {
+		"Value": "Stages/Outputs/Chapter02/EnviroProfile/Chap02_CloseView_MAZ_X301_MainLine_01_Day_Varient1.enviroProfile.asset"
+	},
+	"Duration": 2.5
+}</pre>
+
+;(Upon reaching the destination)
+<pre>{
+	"$type": "RPG.GameCore.PropSetVisibility",
+	"SpecifiedRelativePaths": [],
+	"TargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvPropEx",
+		"FetchType": "SinglePropByPropID",
+		"SinglePropID": {
+			"GroupID": {
+				"fixedValue": {
+					"Value": 8
+				}
+			},
+			"ID": {
+				"fixedValue": {
+					"Value": 300003
+				}
+			}
+		}
+	}
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.TriggerSound",
+	"SoundName": {
+		"Value": "Ev_chapter2_6_echo_memory_noscirpt_stop"
+	},
+	"EmitterType": "LocalPlayer"
+}</pre>
+----
+:{{A|VO chapter2 6 echoA 101.ogg}} '''Past Echo:''' What a huge cauldron.
+:{{A|VO chapter2 6 echoB 101.ogg}} '''Past Echo:''' This aureate cauldron is driven by the cloudhymn magic of our people &mdash; the Vidyadhara. It drinks the water of the ancient sea like a whale swallows the tide, and refines it into medicinal pellets...
+<pre>{
+	"$type": "RPG.GameCore.ActiveVirtualCamera",
+	"AreaName": "LevelArea_P40231_F40231001_G8",
+	"AnchorName": "Anchor2",
+	"IsEntryPointCamera": true,
+	"BlendConfig": {
+		"ExportToJson": true,
+		"BlendType": "Custom",
+		"CustomCurveName": "BlendCut11",
+		"BlendTime": 2,
+		"FOVSmoothDampTime": -1,
+		"FrameBlendWeightStart": 1,
+		"FrameBlendDuration": 1
+	},
+	"VCameraDitherMaxDistance": 1,
+	"CenterPosX": -1,
+	"CenterPosY": -1
+}</pre>
+:{{A|VO chapter2 6 danheng 113.ogg}} '''Dan Heng:''' ...
+:<!--1.3-second delay-->
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+<pre>{
+	"$type": "RPG.GameCore.PropSetVisibility",
+	"SpecifiedRelativePaths": [],
+	"TargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvPropEx",
+		"FetchType": "SinglePropByPropID",
+		"SinglePropID": {
+			"GroupID": {
+				"fixedValue": {
+					"Value": 9
+				}
+			},
+			"ID": {
+				"fixedValue": {
+					"Value": 300002
+				}
+			}
+		}
+	}
+}</pre>
+----
+:{{A|VO chapter2 6 echoB 102.ogg}} '''Past Echo:''' All the elixir crucibles that the Vidyadhara helped to construct contain cloudhymn magic. You should take this chance to learn more, young master...
+:{{A|VO chapter2 6 echoA 102.ogg}} '''Past Echo:''' Huh? But I don't need any sort of device to help me command water, what more is there to learn?
+:{{A|VO chapter2 6 echoB 103.ogg}} '''Past Echo:''' You are indeed the chosen one, with endless potential... yet cloudhymn magic is just the beginning.
+<pre>{
+	"$type": "RPG.GameCore.ActiveVirtualCamera",
+	"AreaName": "LevelArea_P40231_F40231001_G9",
+	"AnchorName": "Anchor2",
+	"IsEntryPointCamera": true,
+	"BlendConfig": {
+		"ExportToJson": true,
+		"BlendType": "Custom",
+		"CustomCurveName": "BlendCut11",
+		"BlendTime": 2,
+		"FOVSmoothDampTime": -1,
+		"FrameBlendWeightStart": 1,
+		"FrameBlendDuration": 1
+	},
+	"VCameraDitherMaxDistance": 1,
+	"CenterPosX": -1,
+	"CenterPosY": -1
+}</pre>
+:{{A|VO chapter2 6 danheng 114.ogg}} '''Dan Heng:''' A Vidyadhara Mirage Echo... Have these shadows of the past yet to disperse?
+
+;(Talk to Vidyadhara Mirage Echo)
+:{{A|VO chapter2 6 echoD 101.ogg}} '''Past Echo:''' I doubt I will be here to see you take charge...
+:{{A|VO chapter2 6 echoD 102.ogg}} '''Past Echo:''' No need to feel aggrieved. Vidyadhara go through cycles of life and death, existing forever in this world.
+:{{A|VO chapter2 6 echoD 103.ogg}} '''Past Echo:''' By the time you are the high elder, my hatching rebirth will be complete and I will be a child once again. Please take care of me.
+
+;(Talk to Vidyadhara Mirage Echo)
+<pre>{
+	"$type": "RPG.GameCore.CaptureLocalPlayer",
+	"CharacterUniqueName": "LocalPlayer"
+}</pre>
+:{{A|VO chapter2 6 echoE 102.ogg}} '''Past Echo:''' Something terrible is happening in Scalegorge Waterscape. Please don't go any further... Your enemies... Your enemies are waiting for you.
+:{{A|VO chapter2 6 danheng 119.ogg}} '''Dan Heng:''' I'm sorry, I cannot linger here. My friends have left &mdash; I must find them.
+:{{A|VO chapter2 6 echoE 103.ogg}} '''Past Echo:''' You didn't heed us then, and won't heed us now... as headstrong as you always were.
+:{{A|VO chapter2 6 echoE 104.ogg}} '''Past Echo:''' It seems you already made your decision. There is a vessel bound for Scalegorge Waterscape located ahead.
+:'''Dan Heng:''' ...
+----
+
+;(Talk to Vidyadhara Mirage Echo)
+:{{A|VO chapter2 6 echoB 102.ogg}} '''Past Echo:''' All the elixir crucibles that the Vidyadhara helped to construct contain cloudhymn magic. You should take this chance to learn more, young master...
+:{{A|VO chapter2 6 echoA 102.ogg}} '''Past Echo:''' Huh? But I don't need any sort of device to help me command water, what more is there to learn?
+:{{A|VO chapter2 6 echoB 103.ogg}} '''Past Echo:''' You are indeed the chosen one, with endless potential... yet cloudhymn magic is just the beginning.
+:{{A|VO chapter2 6 danheng 115.ogg}} '''Dan Heng:''' These memories...
+:{{A|VO chapter2 6 danheng 116.ogg}} '''Dan Heng:''' No. They have nothing to do with me anymore.
 {{Dialogue End}}
 
-===Find out where the Trailblazer and the others are===
+===Take the starskiff and enter Scalegorge Waterscape{{subst:void|<!--102130110-->}}===
 {{Dialogue Start}}
-:{{tx}}
-{{Dialogue End}}
+;(Upon reaching the destination)
 
-===Take the starskiff and enter Scalegorge Waterscape===
-{{Dialogue Start}}
+;(Upon reaching the destination)
+:{{A|VO chapter2 6 echoE 101.ogg}} '''Past Echo:''' This surging power... It's you... You've returned, High Elder.
 :{{tx}}
+:{{tx}}
+----
+;([[#Gallery|Cutscene]] plays)
+::Quit hiding.
+::Your true self...
+::reveal it!
+::Stop!
+::You...!
+::I have news for you, boy...
+::Behind you is none other...
+::...than the traitor of the Xianzhou!
+::A criminal, forever banished!
+::The High Elder of the Vidyadhara...
+::Imbibitor Lunae
+::You really thought the Stellaron Hunters were the only ones to infiltrate the Xianzhou?
+::In that case... I'll bring both of you to justice!
+;(Cutscene ends)
+----
+;(Enter battle)
+:{{Enemy List|Cloud Knight Lieutenant: Yanqing*1/-35% ATK, -56.7% HP, +8 SPD, -60 Toughness}}
+:{{tx}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{A|VO chapter2 6 echoC 101.ogg}} '''Past Echo:''' They say that you are Long's power incarnate. Is that true?
+:{{A|VO chapter2 6 echoA 103.ogg}} '''Past Echo:''' Hmph...
 {{Dialogue End}}
 
 ==Other Languages==

@@ -11,7 +11,7 @@ PageTitle=#Road to Renewal: History-Culture Hall#
 |chapter       = Everwinter City Museum Ledger of Curiosities
 |requirements  = {{subst:void|<!--Unknown: {"Type":"Manual"}-->}}
 |summary       = You have recovered all the exhibits in the History-Culture Hall. Curator Uldan expresses his gratitude and offers payment for your work.
-|characters    = Trailblazer
+|characters    = Exhilarated Spectator; Pondering Spectator; Trailblazer; Uldan
 |startLocation = [[Jarilo-VI]] - [[History and Culture Museum]]
 |world         = Jarilo-VI
 |area          = History and Culture Museum
@@ -34,10 +34,159 @@ PageTitle=#Road to Renewal: History-Culture Hall#
 ==Dialogue==
 {{Stub Dialogue}}
 
-===Chat with Uldan===
+===Chat with Uldan{{subst:void|<!--800124401-->}}===
 {{Mission Description|type=adventure|location=History and Culture Museum|All the exhibits in the History-Culture Hall seems to have been collected. Uldan the curator has something to tell you regarding that.}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Uldan)
+:'''Uldan:''' (Trailblazer), you're our big hero. Do you know the History-Culture Hall has also been successfully set up with your help? This means that we can open the whole museum to the public!
+:<pre>{
+	"$type": "RPG.GameCore.CreateLevelAreas",
+	"AssetPath": {
+		"Value": "Level/Common_Adventure/MuseumShow.prefab"
+	}
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.CreateLevelAreas",
+	"AssetPath": {
+		"Value": "Level/Common_Adventure/ShowAreaAnchors.prefab"
+	}
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.ActiveVirtualCamera",
+	"AreaName": "MuseumShow",
+	"AnchorName": "ShowCamera1",
+	"IsActive": true,
+	"BlendConfig": {
+		"ExportToJson": true,
+		"BlendType": "Cut",
+		"FOVSmoothDampTime": -1,
+		"FrameBlendWeightStart": 1,
+		"FrameBlendDuration": 1
+	},
+	"VCameraDitherMaxDistance": 1,
+	"CenterPosX": -1,
+	"CenterPosY": -1,
+	"DisableProtectWhenBlending": true
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.ChangeTrackVirtualCameraFollowAndAim",
+	"AreaName": "MuseumShow",
+	"TrackName": "MuseumShowTrack",
+	"CameraName": "ShowCamera1",
+	"TargetAreaName": "ShowAreaAnchors",
+	"FollowTargetAnchorName": "ShowCase4",
+	"LookAtTargetAnchorName": "ShowCase4"
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.WaitFrame",
+	"WaitFrameCount": 1
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.MoveVirtualCameraOnDollyPath",
+	"AreaName": "MuseumShow",
+	"AnchorName": "ShowCamera",
+	"StartPoint": 0.48,
+	"EndPoint": 0.47,
+	"CurveName": "C_Story_DollyCamCurve_Line",
+	"Duration": 3
+}</pre>
+::'''Pondering Spectator:''' I had no idea the Supreme Guardian had gone through this...
+::'''Exhilarated Spectator:''' Is this the monster that invaded us 700 years ago?
+::'''Uldan:''' I didn't expect this long-buried history would one day see the light of day, and the museum be brought back to life... This is all so unbelievable...
+::'''Uldan:''' We owe this to you, (Trailblazer). You are the true Hero of Belobog. You deserve that title.
+::----
+:<pre>{
+	"$type": "RPG.GameCore.RemoveLevelAreas",
+	"AreaName": {
+		"Value": "ShowAreaAnchors"
+	}
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.RemoveLevelAreas",
+	"AreaName": {
+		"Value": "MuseumShow"
+	}
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.PlayMultiVoiceTalk",
+	"TalkSentenceID": 501190111,
+	"KeepDisplay": true
+}</pre>
+:::{{DIcon|?}} About the portrait of Cyrille the Fool...
+::::'''Uldan:''' (Trailblazer)... Did you say that the description of {{Color|keyword|nobold=1|Cyrille the Fool's}} portrait deviated from the truth?
+::::'''Uldan:''' But... how's that possible? The description is taken from the history textbooks of the Belobog Academy. Everything is in black and white.
+::::{{DIcon|Talk}} I met Cyrille before.
+:::::'''Uldan:''' Well... Stop pulling my leg.
+:::::'''Uldan:''' Still, I can tell you have at least heard of Cyrille from your tone.
+::::;(Return to previous option selection)
+::::{{DIcon|Arrow}} I have evidence that supports Cyrille.
+:::::'''Uldan:''' Since you sound so sure of yourself, I'll take a look at your evidence.
+::::<pre>{
+	"$type": "RPG.GameCore.ConsumeMissionItemPerformance",
+	"SubMissionID": 800122503,
+	"Desc": {
+		"Hash": 278713946
+	},
+	"OnSubmitConfirm": [
+		{
+			"$type": "RPG.GameCore.PlayAndWaitSimpleTalk",
+			"KeepDisplay": true,
+			"SimpleTalkList": [
+				{
+					"TextSpeed": 20,
+					"TalkSentenceID": 800122739,
+					"ProtectTime": 0.8
+				},
+				{
+					"TextSpeed": 20,
+					"TalkSentenceID": 800122740,
+					"ProtectTime": 0.8
+				},
+				{
+					"TextSpeed": 20,
+					"TalkSentenceID": 800122741,
+					"ProtectTime": 0.8
+				},
+				{
+					"TextSpeed": 20,
+					"TalkSentenceID": 800122742,
+					"ProtectTime": 0.8
+				}
+			]
+		},
+		{
+			"$type": "RPG.GameCore.TriggerCustomString",
+			"CustomString": {
+				"Value": "Talk_800122502"
+			}
+		},
+		{
+			"$type": "RPG.GameCore.TriggerCustomString",
+			"CustomString": {
+				"Value": "TalkSentence_501190151"
+			}
+		}
+	],
+	"OnSubmitCancel": [
+		{
+			"$type": "RPG.GameCore.TriggerCustomString",
+			"CustomString": {
+				"Value": "TalkSentence_501190151"
+			}
+		}
+	],
+	"SimpleTalk": {
+		"TextSpeed": 20,
+		"ProtectTime": 0.8
+	}
+}</pre>
+:::{{DIcon|Exit}} I'll go ahead and tour now.
+:<pre>{
+	"$type": "RPG.GameCore.PlayMultiVoiceTalk",
+	"TalkSentenceID": 501190111,
+	"KeepDisplay": true
+}</pre>
 {{Dialogue End}}
 
 ==Other Languages==

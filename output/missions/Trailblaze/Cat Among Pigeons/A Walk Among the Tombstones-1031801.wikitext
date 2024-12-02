@@ -11,7 +11,7 @@ PageTitle=#A Walk Among the Tombstones#
 |chapter       = Cat Among Pigeons
 |requirements  = [[Trailblaze Mission]] ''[[All the Sad Tales]]'' completed
 |summary       = The Crew was reunited once more and secured Acheron's promise of aid. After analyzing various information, you all determined that The Family was concealing a blood-curdling truth. Aventurine, who was long aware of it, crafted an intricate plan and made the decision to manipulate you all to be his executioner while he played puppeteer. Ultimately, your hand was forced, and you confronted Aventurine, an ironic element in his grand scheme:<br />Aventurine orchestrated his own martyr's death, shattering the illusion of promise made by The Family that the safety of the guests was guaranteed. It also uncovered two startling truths &mdash; The Family had intentionally concealed the harrowing dangers of dreams, and Acheron's true identity, as an Emanator of the Nihility.
-|characters    = Trailblazer
+|characters    = Acheron; Himeko; March 7th; Trailblazer; Welt
 |startLocation = [[Penacony]] - [[Golden Hour]]
 |world         = Penacony
 |area          = Golden Hour
@@ -35,15 +35,74 @@ PageTitle=#A Walk Among the Tombstones#
 ==Dialogue==
 {{Stub Dialogue}}
 
-===Sort through the information with the Crew===
+===Sort through the information with the Crew{{subst:void|<!--103180102-->}}===
 {{Mission Description|type=trailblaze|location=Golden Hour|The Crew stands united once more. Surprisingly, there's also a Galaxy Ranger among your ranks who has been cleared of suspicion &mdash; Acheron.<br />Based on a comprehensive assessment of information from various sources, you confirm that The Family is indeed hiding a terrifying truth. Aventurine seems to have already detected traces of this and spared no effort in making preparations towards it, even secretly selecting you to be the agent to drive his plans forward.<br />The distant broadcast confirms your thoughts. You must push forward &mdash; for the truth, justice for the deceased, and Penacony's future.}}
 {{Dialogue Start}}
+:{{A|VO chapter3 14 himeko 101.ogg}} '''Himeko:''' Is this Miss Acheron? Hello, I'm Himeko, the Astral Express' navigator.
+:{{A|VO chapter3 14 mar7th 101 m.ogg}} {{A|VO chapter3 14 mar7th 101 f.ogg}} '''March 7th:''' Hello, I'm March 7th! I'm sure (Trailblazer) needs no introduction, as you definitely know {{MC|f=her|m=him}}.
+:{{DIcon|Arrow}} Hey, I still deserve a proper intro!
+:{{DIcon|Arrow}} Pleasure to meet ya, Miss Acheron.
+:{{DIcon|Arrow}} You can call me Clockie.
+::{{A|VO chapter3 14 mar7th 102.ogg}} '''March 7th:''' ...
+:{{A|VO chapter3 14 acheron 101.ogg}} '''Acheron:''' Hello. None of you seem surprised by my arrival.
+:{{A|VO chapter3 14 himeko 102.ogg}} '''Himeko:''' Since Welt has decided to travel with you, it means that he trusts you, and we trust his judgment.
+:{{A|VO chapter3 14 acheron 102.ogg}} '''Acheron:''' I envy your close friendships.
+:{{A|VO chapter3 14 welt 101.ogg}} '''Welt:''' Miss Acheron here doesn't present a danger, and she's of no threat to the Astral Express. Aventurine's prior accusation was based on nothing more than his own subjectivity.
+:{{A|VO chapter3 14 welt 102.ogg}} '''Welt:''' Which is why, before we continue working together, he has a duty to explain himself.
+:{{A|VO chapter3 14 himeko 103.ogg}} '''Himeko:''' You want to... create a situation where all three parties are present?
+:{{A|VO chapter3 14 welt 103.ogg}} '''Welt:''' There must be some deeper meaning behind Aventurine's actions. I suspect he's been aware of Penacony's secret from the beginning... and has been continuously strategizing to unveil it.
+:{{A|VO chapter3 14 welt 104.ogg}} '''Welt:''' In that sense, the Astral Express' role in his plans would be imperative. In the worst case scenario... he may use us to do something unexpected.
+:{{A|VO chapter3 14 welt 105.ogg}} '''Welt:''' Assuming things do escalate to that stage, having an extra ally is a good insurance policy. Penacony has numerous factions, and the state of affairs is significantly more intricate than that of Belobog and the Xianzhou.
+:{{DIcon|Arrow}} But we must mete out justice for the dead.
+::{{A|VO chapter3 14 mar7th 103 m.ogg}} {{A|VO chapter3 14 mar7th 103 f.ogg}} '''March 7th:''' (Trailblazer) is right. No matter what, we cannot ignore the safety of Penacony.
+:{{DIcon|Arrow}} Maybe we should now get outta here while we still can?
+::{{A|VO chapter3 14 mar7th 104 m.ogg}} {{A|VO chapter3 14 mar7th 104 f.ogg}} '''March 7th:''' (Trailblazer) also makes a good point. We're completely in the dark on what's going to happen next...
+::{{A|VO chapter3 14 mar7th 105.ogg}} '''March 7th:''' But, I think we can't just ignore the safety of Penacony.
+:{{DIcon|Arrow}} I Am the Bone of My Bat. Stellaron Is My Body and Trailblaze Is My Blood.
+::{{A|VO chapter3 14 mar7th 106.ogg}} '''March 7th:''' You're talking weird again... But it's a good vibe. No matter what, we can't ignore the safety of Penacony.
+:{{A|VO chapter3 14 himeko 104.ogg}} '''Himeko:''' To solve the mystery of the Watchmaker, it is crucial to get the IPC's intel. The path ahead is fraught with danger... but what's Trailblazing without a little danger?
 :{{tx}}
 {{Dialogue End}}
 
-===Head to the Clock Studios Theme Park===
+===Head to the Clock Studios Theme Park{{subst:void|<!--103180103-->}}===
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to March 7th)
+<pre>{
+	"$type": "RPG.GameCore.SetMissionCustomValue",
+	"SubmissionID": 103180103,
+	"MissionCustomValue": {
+		"ValidValueParamList": [
+			0,
+			0
+		]
+	}
+}</pre>
+:{{A|VO chapter3 14 mar7th 108 m.ogg}} {{A|VO chapter3 14 mar7th 108 f.ogg}} '''March 7th:''' Mm... I have a bad feeling that something big's gonna go down. (Trailblazer), are you ready?
+:{{DIcon|Arrow}} Ready.
+:<pre>{
+	"$type": "RPG.GameCore.SetMissionCustomValue",
+	"SubmissionID": 103180102,
+	"MissionCustomValue": {
+		"ValidValueParamList": [
+			0,
+			0
+		]
+	},
+	"CustomValue": 1
+}</pre>
+::{{A|VO chapter3 14 mar7th 109.ogg}} '''March 7th:''' Let's waste no time and head to the theme park then!
+:{{DIcon|Exit}} Wait...
+::{{A|VO chapter3 14 mar7th 110.ogg}} '''March 7th:''' Your trauma isn't getting to you, is it... Take it easy. It'll be fine.
+
+;(Talk to Himeko)
+:{{A|VO chapter3 14 himeko 104.ogg}} '''Himeko:''' To solve the mystery of the Watchmaker, it is crucial to get the IPC's intel. The path ahead is fraught with danger... but what's Trailblazing without a little danger?
+
+;(Talk to Acheron)
+:{{A|VO chapter3 14 acheron 102.ogg}} '''Acheron:''' I envy your close friendships.
+
+;(Talk to Welt Yang)
+:{{A|VO chapter3 14 welt 107.ogg}} '''Welt:''' Let's get going, everyone. The hour of trailblazing is upon us.
 {{Dialogue End}}
 
 ==Other Languages==

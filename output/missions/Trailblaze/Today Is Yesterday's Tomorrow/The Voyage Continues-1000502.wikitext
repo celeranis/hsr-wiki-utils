@@ -11,7 +11,7 @@ PageTitle=#The Voyage Continues#
 |chapter       = Today Is Yesterday's Tomorrow
 |requirements  = [[Trailblaze Mission]] ''[[The Voyage Continues]]'' completed
 |summary       = <!--official mission summary from Fate's Atlas-->
-|characters    = Trailblazer
+|characters    = Dan Heng; Pom-Pom; Trailblazer
 |startLocation = [[Astral Express]] - [[Parlor Car]]
 |world         = Astral Express
 |area          = Parlor Car
@@ -25,14 +25,14 @@ PageTitle=#The Voyage Continues#
 # Find someone to talk to and tell Himeko your decision
 # Look around the Parlor Car
 # Head to the Passenger Cabins
+# (Optional) Investigate the phonograph
 # Visit Dan Heng's room
+# Leave Dan Heng's room
+# Leave March 7th's room
+# Visit March 7th's room
+# Tour March 7th's room
 # Speak with Dan Heng
 # Use the Express Data Bank
-# Leave Dan Heng's room
-# Visit March 7th's room
-# Leave March 7th's room
-# (Optional) Investigate the phonograph
-# Tour March 7th's room
 
 <!--
 ==Gameplay Notes==
@@ -44,60 +44,281 @@ PageTitle=#The Voyage Continues#
 ==Dialogue==
 {{Stub Dialogue}}
 
-===Find someone to talk to and tell Himeko your decision===
+===Find someone to talk to and tell Himeko your decision{{subst:void|<!--100050201-->}}===
 {{Dialogue Start}}
-:{{tx}}
+----
+;([[#Gallery|Cutscene]] plays)
+::Let's go~
+::Time to get on.
+::Ahem!
+::I'm over here!
+;(Cutscene ends)
+----
+<pre>{
+	"$type": "RPG.GameCore.LevelAudioState",
+	"GroupName": "StateGroup_GameState",
+	"StateName": {
+		"Value": "State_Story"
+	}
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.LevelAudioState",
+	"GroupName": "StateGroup_Story",
+	"StateName": {
+		"Value": "State_Herta_Space_Station_Ending"
+	}
+}</pre>
+----
+:{{A|VO chapter0 7 pompom 101.ogg}} '''???:''' Hey, you over there looking dumbfounded. Yes, Pom-Pom's talking to you.
+:{{A|VO chapter0 7 pompom 102.ogg}} '''???:''' Himeko told Pom-Pom about your situation. Now listen up, Pom-Pom will only say this once.
+:{{A|VO chapter0 7 pompom 103.ogg}} '''???:''' Pom-Pom's sure there have been lots of people telling you how special you are lately, but this is the Astral Express, and everyone on here has their secrets.
+:{{A|VO chapter0 7 pompom 104.ogg}} '''???:''' Since you chose to board, you can abide by the rules. You're not the only special one here. You'd best remember that.
+:{{A|VO chapter0 7 pompom 105.ogg}} '''???:''' I'm Pom-Pom, the conductor. Just come find me if you have any trouble.
+----
 {{Dialogue End}}
 
-===Look around the Parlor Car===
+===Look around the Parlor Car{{subst:void|<!--100050203-->}}===
 {{Mission Description|type=trailblaze|location=Parlor Car|update|You boarded the amazing Astral Express, and it's time to get familiar with its passengers and facilities! From now on, this will be your home.}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Pom-Pom)
+:{{A|VO chapter0 7 pompom 106.ogg}} '''Pom-Pom:''' Here already? I was just engaging in pleasantries. How can I help?
+:{{DIcon|Talk}} Where's March 7th's room?
+::{{A|VO chapter0 7 pompom 107.ogg}} '''Pom-Pom:''' Oh? Why are you interested in her room?
+::{{A|VO chapter0 7 pompom 108.ogg}} '''Pom-Pom:''' Ah, Pom-Pom remembers Himeko saying that you saved her...
+::{{A|VO chapter0 7 pompom 109.ogg}} '''Pom-Pom:''' Mmm, very brave! Very foolhardy! But that is what a Trailblazer should be like.
+::{{A|VO chapter0 7 pompom 131.ogg}} '''Pom-Pom:''' March 7th's room is in the Express Sleeper Compartment. She's always running around, so she might not be there.
+:;(Return to previous option selection)
+:{{DIcon|Talk}} About Dan Heng's room...
+::{{A|VO chapter0 7 pompom 111.ogg}} '''Pom-Pom:''' Dan Heng's room? Oh, you mean the archives.
+::{{A|VO chapter0 7 pompom 112.ogg}} '''Pom-Pom:''' He's just... sort of living in there, I guess. I can't be bothered getting him out.
+::{{A|VO chapter0 7 pompom 113.ogg}} '''Pom-Pom:''' March 7th's room is right next to the Archives. You can visit him on the way.
+:;(Return to previous option selection)
+:{{DIcon|Talk}} Is that a... phonograph?
+::{{A|VO chapter0 7 pompom 114.ogg}} '''Pom-Pom:''' You recognize this as well?
+::{{A|VO chapter0 7 pompom 115.ogg}} '''Pom-Pom:''' Himeko always likes to bring back weird junk and try to fix it.
+::{{A|VO chapter0 7 pompom 116.ogg}} '''Pom-Pom:''' That also got modified a bit.
+:;(Return to previous option selection)
+:{{DIcon|Exit}} That's all my questions for today.
+::{{A|VO chapter0 7 pompom 120.ogg}} '''Pom-Pom:''' Pom-Pom still needs to prepare for the Express' warp jump. You can look around the place yourself.
+::{{A|VO chapter0 7 pompom 121.ogg}} '''Pom-Pom:''' No matter where you go on this train, Pom-Pom will always have my eyes on you.
+;(Unused &mdash; TalkSentence_100050445)
+:{{A|VO chapter0 7 pompom 117.ogg}} '''Pom-Pom:''' Shouldn't be a surprise to see the IPC's vending machine anywhere...
+::{{A|VO chapter0 7 pompom 118.ogg}} '''Pom-Pom:''' Pom-Pom doesn't wanna admit it, but they really do have everything you may need on sale.
+::{{A|VO chapter0 7 pompom 119.ogg}} '''Pom-Pom:''' This thing might add some nice flavor to the trip.
+::{{DIcon|Talk}} Where's March 7th's room?
+:::{{A|VO chapter0 7 pompom 107.ogg}} '''Pom-Pom:''' Oh? Why are you interested in her room?
+:::{{A|VO chapter0 7 pompom 108.ogg}} '''Pom-Pom:''' Ah, Pom-Pom remembers Himeko saying that you saved her...
+:::{{A|VO chapter0 7 pompom 109.ogg}} '''Pom-Pom:''' Mmm, very brave! Very foolhardy! But that is what a Trailblazer should be like.
+:::{{A|VO chapter0 7 pompom 131.ogg}} '''Pom-Pom:''' March 7th's room is in the Express Sleeper Compartment. She's always running around, so she might not be there.
+::{{DIcon|Talk}} About Dan Heng's room...
+:::{{A|VO chapter0 7 pompom 111.ogg}} '''Pom-Pom:''' Dan Heng's room? Oh, you mean the archives.
+:::{{A|VO chapter0 7 pompom 112.ogg}} '''Pom-Pom:''' He's just... sort of living in there, I guess. I can't be bothered getting him out.
+:::{{A|VO chapter0 7 pompom 113.ogg}} '''Pom-Pom:''' March 7th's room is right next to the Archives. You can visit him on the way.
+::{{DIcon|Talk}} Is that a... phonograph?
+:::{{A|VO chapter0 7 pompom 114.ogg}} '''Pom-Pom:''' You recognize this as well?
+:::{{A|VO chapter0 7 pompom 115.ogg}} '''Pom-Pom:''' Himeko always likes to bring back weird junk and try to fix it.
+:::{{A|VO chapter0 7 pompom 116.ogg}} '''Pom-Pom:''' That also got modified a bit.
+::{{DIcon|Exit}} That's all my questions for today.
+:::{{A|VO chapter0 7 pompom 120.ogg}} '''Pom-Pom:''' Pom-Pom still needs to prepare for the Express' warp jump. You can look around the place yourself.
+:::{{A|VO chapter0 7 pompom 121.ogg}} '''Pom-Pom:''' No matter where you go on this train, Pom-Pom will always have my eyes on you.
+
+;(Unused &mdash; TalkSentence_100050445)
+:{{A|VO chapter0 7 pompom 117.ogg}} '''Pom-Pom:''' Shouldn't be a surprise to see the IPC's vending machine anywhere...
+::{{A|VO chapter0 7 pompom 118.ogg}} '''Pom-Pom:''' Pom-Pom doesn't wanna admit it, but they really do have everything you may need on sale.
+::{{A|VO chapter0 7 pompom 119.ogg}} '''Pom-Pom:''' This thing might add some nice flavor to the trip.
+::{{DIcon|Talk}} Where's March 7th's room?
+:::{{A|VO chapter0 7 pompom 107.ogg}} '''Pom-Pom:''' Oh? Why are you interested in her room?
+:::{{A|VO chapter0 7 pompom 108.ogg}} '''Pom-Pom:''' Ah, Pom-Pom remembers Himeko saying that you saved her...
+:::{{A|VO chapter0 7 pompom 109.ogg}} '''Pom-Pom:''' Mmm, very brave! Very foolhardy! But that is what a Trailblazer should be like.
+:::{{A|VO chapter0 7 pompom 131.ogg}} '''Pom-Pom:''' March 7th's room is in the Express Sleeper Compartment. She's always running around, so she might not be there.
+::;(Return to previous option selection)
+::{{DIcon|Talk}} About Dan Heng's room...
+:::{{A|VO chapter0 7 pompom 111.ogg}} '''Pom-Pom:''' Dan Heng's room? Oh, you mean the archives.
+:::{{A|VO chapter0 7 pompom 112.ogg}} '''Pom-Pom:''' He's just... sort of living in there, I guess. I can't be bothered getting him out.
+:::{{A|VO chapter0 7 pompom 113.ogg}} '''Pom-Pom:''' March 7th's room is right next to the Archives. You can visit him on the way.
+::;(Return to previous option selection)
+::{{DIcon|Talk}} Is that a... phonograph?
+:::{{A|VO chapter0 7 pompom 114.ogg}} '''Pom-Pom:''' You recognize this as well?
+:::{{A|VO chapter0 7 pompom 115.ogg}} '''Pom-Pom:''' Himeko always likes to bring back weird junk and try to fix it.
+:::{{A|VO chapter0 7 pompom 116.ogg}} '''Pom-Pom:''' That also got modified a bit.
+::;(Return to previous option selection)
+::{{DIcon|Exit}} That's all my questions for today.
+:::{{A|VO chapter0 7 pompom 120.ogg}} '''Pom-Pom:''' Pom-Pom still needs to prepare for the Express' warp jump. You can look around the place yourself.
+:::{{A|VO chapter0 7 pompom 121.ogg}} '''Pom-Pom:''' No matter where you go on this train, Pom-Pom will always have my eyes on you.
+:::----
+
+;(Unused &mdash; Mission_100050203_Prop_4_300001_OnEnter)
+:----
+::{{A|VO chapter0 7 pompom 126.ogg}} '''Pom-Pom:''' Hey! Y&mdash;You don't have any questions to ask Pom-Pom!?
+::{{A|VO chapter0 7 pompom 127.ogg}} '''Pom-Pom:''' Is it because you think Pom-Pom talks too much? Or is it Pom-Pom's age? You youngsters gotta learn to bridge that generation gap.
+::{{DIcon|Talk}} Where's March 7th's room?
+:::{{A|VO chapter0 7 pompom 107.ogg}} '''Pom-Pom:''' Oh? Why are you interested in her room?
+:::{{A|VO chapter0 7 pompom 108.ogg}} '''Pom-Pom:''' Ah, Pom-Pom remembers Himeko saying that you saved her...
+:::{{A|VO chapter0 7 pompom 109.ogg}} '''Pom-Pom:''' Mmm, very brave! Very foolhardy! But that is what a Trailblazer should be like.
+:::{{A|VO chapter0 7 pompom 131.ogg}} '''Pom-Pom:''' March 7th's room is in the Express Sleeper Compartment. She's always running around, so she might not be there.
+::;(Return to previous option selection)
+::{{DIcon|Talk}} About Dan Heng's room...
+:::{{A|VO chapter0 7 pompom 111.ogg}} '''Pom-Pom:''' Dan Heng's room? Oh, you mean the archives.
+:::{{A|VO chapter0 7 pompom 112.ogg}} '''Pom-Pom:''' He's just... sort of living in there, I guess. I can't be bothered getting him out.
+:::{{A|VO chapter0 7 pompom 113.ogg}} '''Pom-Pom:''' March 7th's room is right next to the Archives. You can visit him on the way.
+::;(Return to previous option selection)
+::{{DIcon|Talk}} Is that a... phonograph?
+:::{{A|VO chapter0 7 pompom 114.ogg}} '''Pom-Pom:''' You recognize this as well?
+:::{{A|VO chapter0 7 pompom 115.ogg}} '''Pom-Pom:''' Himeko always likes to bring back weird junk and try to fix it.
+:::{{A|VO chapter0 7 pompom 116.ogg}} '''Pom-Pom:''' That also got modified a bit.
+::;(Return to previous option selection)
+::{{DIcon|Exit}} That's all my questions for today.
+:::{{A|VO chapter0 7 pompom 120.ogg}} '''Pom-Pom:''' Pom-Pom still needs to prepare for the Express' warp jump. You can look around the place yourself.
+:::{{A|VO chapter0 7 pompom 121.ogg}} '''Pom-Pom:''' No matter where you go on this train, Pom-Pom will always have my eyes on you.
+:::----
 {{Dialogue End}}
 
-===Head to the Passenger Cabins===
+===Head to the Passenger Cabins{{subst:void|<!--100050204-->}}===
 {{Dialogue Start}}
-:{{tx}}
 {{Dialogue End}}
 
-===Visit Dan Heng's room===
+===(Optional) Investigate the phonograph{{subst:void|<!--100050233-->}}===
 {{Dialogue Start}}
-:{{tx}}
 {{Dialogue End}}
 
-===Speak with Dan Heng===
+===Visit Dan Heng's room{{subst:void|<!--100050207-->}}===
 {{Dialogue Start}}
-:{{tx}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+<pre>{
+	"$type": "RPG.GameCore.AdvEnablePropDialogMode",
+	"Enable": true,
+	"PlayerFaceToProp": true,
+	"RotateSpeed": 180,
+	"TargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvPropEx",
+		"FetchType": "SinglePropByPropID",
+		"SinglePropID": {
+			"GroupID": {
+				"fixedValue": {
+					"Value": 9
+				}
+			},
+			"ID": {
+				"fixedValue": {
+					"Value": 300001
+				}
+			}
+		}
+	}
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.TriggerSound",
+	"SoundName": {
+		"Value": "Ev_sfx_chaptrain_electronic_tips"
+	},
+	"EmitterType": "LocalPlayer"
+}</pre>
+:{{A|VO chapter0 7 player 101 m.ogg}} {{A|VO chapter0 7 player 101 f.ogg}} '''(Trailblazer):''' (There seems to be the sound of electronic equipment...)
+:{{A|VO chapter0 7 danheng 101.ogg}} '''Dan Heng:''' Hm? Who's there?
+:{{DIcon|Arrow}} It's me, (Trailblazer).
+::{{A|VO chapter0 7 danheng 102.ogg}} '''Dan Heng:''' ...Oh, it's you. The door's not locked. Come in.
+:{{DIcon|Arrow}} I haven't even knocked...
+::{{A|VO chapter0 7 danheng 103.ogg}} '''Dan Heng:''' I learned to sense incoming visitors after people kept barging in so frequently.
+:<!--0.1-second delay-->
 {{Dialogue End}}
 
-===Use the Express Data Bank===
+===Leave Dan Heng's room{{subst:void|<!--100050211-->}}===
 {{Dialogue Start}}
-:{{tx}}
+;(Upon reaching the destination)
 {{Dialogue End}}
 
-===Leave Dan Heng's room===
+===Leave March 7th's room{{subst:void|<!--100050214-->}}===
 {{Dialogue Start}}
-:{{tx}}
+;(Upon reaching the destination)
 {{Dialogue End}}
 
-===Visit March 7th's room===
+===Visit March 7th's room{{subst:void|<!--100050212-->}}===
 {{Dialogue Start}}
-:{{tx}}
+;(Upon reaching the destination)
 {{Dialogue End}}
 
-===Leave March 7th's room===
+===Tour March 7th's room{{subst:void|<!--100050213-->}}===
 {{Dialogue Start}}
-:{{tx}}
+
+:{{DIcon|Loupe}} Investigate
+:The door is locked, but there's a peculiar scent of coffee coming out of the room.
+:<!--3-second delay-->
+:{{A|VO chapter0 7 pompom 143.ogg}} '''Pom-Pom:''' You just left. Why are you back again!?
+:{{A|VO chapter0 7 pompom 144.ogg}} '''Pom-Pom:''' Go, go. I'm busy here and I don't have time for you.
 {{Dialogue End}}
 
-===(Optional) Investigate the phonograph===
+===Speak with Dan Heng{{subst:void|<!--100050209-->}}===
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Dan Heng)
+:{{A|VO chapter0 7 danheng 104.ogg}} '''Dan Heng:''' Can I help you?
+:{{DIcon|Arrow}} Just looking around.
+:{{A|VO chapter0 7 danheng 105.ogg}} '''Dan Heng:''' Feel free. This is open to everyone on the Express.
+:{{A|VO chapter0 7 danheng 113.ogg}} '''Dan Heng:''' While many of the roads that Akivili traveled along no longer exist, I think it's still meaningful to record our adventures as current passengers of the Express.
+:{{A|VO chapter0 7 danheng 114.ogg}} '''Dan Heng:''' I enter the collected data into the archives' data bank. I try to catalog the people and places the Express encounters, and compare and contrast them with the existing records.
+:{{A|VO chapter0 7 danheng 115.ogg}} '''Dan Heng:''' Do you see the terminal over there? It can be used to view information already stored in the data bank. Do give it a go.
+;(Unused &mdash; Wait_Option_100050405_96)
+:{{DIcon|Arrow}} I came to visit your pad.
+::{{A|VO chapter0 7 danheng 106.ogg}} '''Dan Heng:''' This is not my pad, it's just where I sleep.
+::{{A|VO chapter0 7 danheng 107.ogg}} '''Dan Heng:''' These are the Archives. It has the records of all the Astral Express's trips since its first journey.
+::{{A|VO chapter0 7 danheng 108.ogg}} '''Dan Heng:''' A lot of the data is corrupted, but even the residual pieces contain huge amounts of information that we're struggling to process. I'm trying to sort them out.
+::{{A|VO chapter0 7 danheng 113.ogg}} '''Dan Heng:''' While many of the roads that Akivili traveled along no longer exist, I think it's still meaningful to record our adventures as current passengers of the Express.
+::{{A|VO chapter0 7 danheng 114.ogg}} '''Dan Heng:''' I enter the collected data into the archives' data bank. I try to catalog the people and places the Express encounters, and compare and contrast them with the existing records.
+::{{A|VO chapter0 7 danheng 115.ogg}} '''Dan Heng:''' Do you see the terminal over there? It can be used to view information already stored in the data bank. Do give it a go.
+
+;(Unused &mdash; Wait_Option_100050405_101)
+::{{DIcon|Arrow}} Are you sorting out the data?
+:::{{A|VO chapter0 7 danheng 109.ogg}} '''Dan Heng:''' Yes, just my personal interest.
+:::{{A|VO chapter0 7 danheng 110.ogg}} '''Dan Heng:''' Aside from the existing data, I also recorded this trip to the archives.
+::{{DIcon|Arrow}} Any fun ones?
+:::{{A|VO chapter0 7 danheng 111.ogg}} '''Dan Heng:''' Go look them up yourself. I don't know your definition of "fun."
+:::{{A|VO chapter0 7 danheng 112.ogg}} '''Dan Heng:''' If you see your own name, don't be surprised, I also recorded this trip to the archives.
+:{{A|VO chapter0 7 danheng 113.ogg}} '''Dan Heng:''' While many of the roads that Akivili traveled along no longer exist, I think it's still meaningful to record our adventures as current passengers of the Express.
+::{{A|VO chapter0 7 danheng 114.ogg}} '''Dan Heng:''' I enter the collected data into the archives' data bank. I try to catalog the people and places the Express encounters, and compare and contrast them with the existing records.
+::{{A|VO chapter0 7 danheng 115.ogg}} '''Dan Heng:''' Do you see the terminal over there? It can be used to view information already stored in the data bank. Do give it a go.
 {{Dialogue End}}
 
-===Tour March 7th's room===
+===Use the Express Data Bank{{subst:void|<!--100050210-->}}===
 {{Dialogue Start}}
-:{{tx}}
+:<!--0.5-second delay-->
+<pre>{
+	"$type": "RPG.GameCore.PropSetupUITrigger",
+	"ButtonIcon": "SpriteOutput/TalkIcon/CheckIcon.png",
+	"IconType": "CheckIcon",
+	"ButtonText": {
+		"Hash": 278713937
+	},
+	"ButtonCallback": [
+		{
+			"$type": "RPG.GameCore.TriggerCustomString",
+			"CustomString": {
+				"Value": "100050210_Finish"
+			}
+		}
+	],
+	"InteractAngleRange": 180,
+	"OverrideTargetTypes": [],
+	"SkipFakeAvatar": true,
+	"TargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvPropEx",
+		"FetchType": "SinglePropByPropID",
+		"SinglePropID": {
+			"GroupID": {
+				"fixedValue": {
+					"Value": 14
+				}
+			},
+			"ID": {
+				"fixedValue": {
+					"Value": 300002
+				}
+			}
+		}
+	}
+}</pre>
 {{Dialogue End}}
 
 ==Other Languages==

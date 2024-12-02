@@ -11,7 +11,7 @@ PageTitle=#Merchant Event: Longevity Hall#
 |chapter       = Aurum Alley's Hustle and Bustle
 |requirements  = {{subst:void|<!--Unknown: {"Type":"Manual"}-->}}
 |summary       = In order to revitalize Aurum Alley, the merchant guild aims to fully utilize the docks' logistics capacity and establish close collaborations with the stores in the alley.<br />The guild has sent you to persuade Longevity Hall to establish a partnership with the guild. However, its proprietress Little Tian has encountered some troubles at the moment...
-|characters    = Trailblazer
+|characters    = Little Tian; Qingque; Trailblazer
 |startLocation = [[The Xianzhou Luofu]] - [[Aurum Alley]]
 |world         = The Xianzhou Luofu
 |area          = Aurum Alley
@@ -37,25 +37,569 @@ PageTitle=#Merchant Event: Longevity Hall#
 ==Dialogue==
 {{Stub Dialogue}}
 
-===Go to Longevity Hall and inquire with Little Tian about the situation===
+===Go to Longevity Hall and inquire with Little Tian about the situation{{subst:void|<!--800324401-->}}===
 {{Mission Description|type=adventure|location=Aurum Alley|In order to revitalize Aurum Alley, the merchant guild aims to fully utilize the docks' logistics capacity and establish close collaborations with the stores in the alley.<br />The guild has sent you to persuade Longevity Hall to establish a partnership with the guild. However, its proprietress Little Tian has encountered some troubles at the moment...}}
 {{Dialogue Start}}
-:{{tx}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+----
+:'''Little Tian:''' Miss Qingque, you can't always come to me for a medical certificate. This is a pharmacy. We don't do diagnosis.
+:'''Qingque:''' Little Tian, you always gave me a medical certificate before. You can't just turn off the tap now!
+:'''Qingque:''' No, I've contracted an incurable disease. Little Tian, you have to save me. You're from the Alchemy Commission, right?
+:'''Little Tian:''' Miss Qingque, you know how the Alchemy Commission is. If you've got an incurable disease, go and see them there!
+:'''Qingque:''' The Alchemy Commission can't diagnose my disease, Little Tian. Can you help me pick out a little ailment that won't spill the beans for me?
+:'''Little Tian:''' Just say that you're lazy, and you'll never have to reveal anything.
+:'''Qingque:''' If I could use laziness as an excuse on a medical certificate, I would &mdash; but you know I can't.
+:'''Little Tian:''' ...
+:'''Little Tian:''' I've got a customer. Hold on a second.
+:'''Qingque:''' Well, if it isn't (Trailblazer), my {{MC|f=good sister|m=good brother}}.
+:'''(Trailblazer):''' (Little Tian seems to be asking for help with her eyes...)
+----
+<pre>{
+	"$type": "RPG.GameCore.PerformanceExtendEndBlack",
+	"ExtendTime": 0.5
+}</pre>
+
+;(Talk to Little Tian)
+:'''Little Tian:''' You're here! I heard that your guild is trying to port merchants onto the logistics platform... I was actually thinking of signing up, but only on one condition: Can you please help me handle this Qingque lady?
+::{{DIcon|Arrow}} I think I know what's going on here.
+:::'''Little Tian:''' That's great. Then it looks like we have a deal.
+::{{DIcon|Arrow}} These are two separate things. Don't mix them up.
+:::'''Little Tian:''' "Making a deal with the docks" and "getting Miss Qingque to give up her quest for a medical certificate" are now the same thing.
+:::'''Little Tian:''' Please, I'm desperate here.
+::'''Little Tian:''' Don't worry. I'm not some lazy taskmaster. I know you need some evidence to refute her. Let's see what I have here.
+;(Return to previous option selection)
+
+;(Talk to Qingque)
+:'''Qingque:''' Hey, I know you're here to persuade me to give up my delusion so I can get back to work. But this time is different. I really need an excuse to ditch work.
+::'''Qingque:''' The diviner in charge of scheduling made a mistake, and all the divinations ended up getting delayed. And knowing how angry the master diviner would be, with a swipe of the pen, that diviner tried to frame us with that workload...
+::'''Qingque:''' According to the current plan, a month's work now has to be done in half a month. Every diviner at the Divination Commission has fallen victim to this "delayed workload"...
+::{{DIcon|Arrow}} I don't think this is your problem.
+:::'''Qingque:''' I agree that I shouldn't have to pay for other people's mistakes.
+:::'''Qingque:''' But, that diviner put it nicely &mdash; "We are a collective! Knuckle down, work hard, and there's nothing we can't get done!"
+:::'''Qingque:''' Anyway, she's just a supervisor and would never roll her sleeves up and get her hands dirty.
+::{{DIcon|Arrow}} You should go on strike! Stand up for yourselves!
+:::'''Qingque:''' If we do that, I won't even be able to draw a salary.
+:::'''Qingque:''' If I had the courage for that, what would I need to get a healer's note?
+::{{DIcon|Arrow}} Are you really going to ask for sick leave at a time like this?
+:::'''Qingque:''' The Divination Commission needs everyone in a crisis like this &mdash; except a sick Qingque!
+::{{DIcon|Arrow}} But a medical certificate can't beat everything.
+::'''Qingque:''' I get what you mean. You think my job is useless.
+::'''Qingque:''' How about this: I'll take a medical certificate, and you play the role of "sick leave auditor-diviner." C'mon, let's play it out.
+::'''Qingque:''' If my excuse is watertight, then you've no right to stop me. But if my reason is deemed groundless...
+::{{DIcon|Arrow}} Then you can give up on the thought of taking leave.
+::{{DIcon|Arrow}} Come up with a better excuse!
+::'''Qingque:''' Deal.
+:'''Qingque:''' Go ahead and see Little Tian first. I'm in no rush. I'll just wait here.
+;(Unused &mdash; 8003244_ShowNpc1)
+<pre>{
+	"$type": "RPG.GameCore.AdvCreateGroupEntity",
+	"InstanceIDList": [
+		400001
+	]
+}</pre>
 {{Dialogue End}}
 
-===Collect all evidence required to refute Qingque===
+===Collect all evidence required to refute Qingque{{subst:void|<!--800324403-->}}===
 {{Dialogue Start}}
-:{{tx}}
+
+;(Obtain {{Item|''Pan-Cosmic Quick Diagnosis Booklet''|20|x=1|text=''Pan-Cosmic Quick Diagnosis Booklet''}})
+;(Unused &mdash; 800324403_Performance)
+:{{Black Screen|In the Longevity Hall, in addition to the strange medicinal ingredients, you find a few pieces of evidence that are quite convincing.}}
 {{Dialogue End}}
 
-===Speak with Little Tian and organize the collected evidence===
+===Speak with Little Tian and organize the collected evidence{{subst:void|<!--800324405-->}}===
 {{Dialogue Start}}
-:{{tx}}
+
 {{Dialogue End}}
 
-===Speak with Qingque and convince her===
+===Speak with Qingque and convince her{{subst:void|<!--800324404-->}}===
 {{Dialogue Start}}
-:{{tx}}
+
+;(Lose {{Item|''Pan-Cosmic Quick Diagnosis Booklet''|20|x=1|text=''Pan-Cosmic Quick Diagnosis Booklet''}})
+;(Unused &mdash; TalkSentence_800324524)
+:'''Little Tian:''' These are the notes I listed for my own convenience. I recorded a lot of strange and unheard-of ailments within them.
+::'''Little Tian:''' But this ''quick diagnosis booklet'' doesn't have your "No-Game-No-Life Syndrome" listed!
+::'''Qingque:''' Didn't you say these are your personal notes? Won't the problem be solved if you just add in my "No-Game-No-Life Syndrome"?
+::'''Little Tian:''' I&mdash;I...
+::'''Little Tian:''' I'm actually speechless... (Trailblazer), do we have any other evidence or anything?
+:<pre>{
+	"$type": "RPG.GameCore.SelectMissionItem",
+	"OnlyPerformance": true,
+	"ItemIDList": [
+		140306,
+		140307,
+		140308,
+		140309
+	],
+	"ItemHiddenIDList": [],
+	"ItemSelect": [
+		{
+			"Item1": 140306,
+			"TriggerCustomString": "TalkSentence_800324524"
+		},
+		{
+			"Item1": 140307,
+			"TriggerCustomString": "TalkSentence_800324530"
+		},
+		{
+			"Item1": 140308,
+			"TriggerCustomString": "TalkSentence_800324536"
+		},
+		{
+			"Item1": 140309,
+			"TriggerCustomString": "TalkSentence_800324543"
+		}
+	],
+	"SlotNum": 1,
+	"InfoText": {
+		"Hash": 524940953
+	},
+	"SimpleTalk": {
+		"TextSpeed": 20,
+		"ProtectTime": 0.8
+	},
+	"OnSubmitCancel": [
+		{
+			"$type": "RPG.GameCore.PerformanceTransition",
+			"SwitchInTime": 0.5,
+			"SwitchKeepTime": 0.1,
+			"CreateNpcList": [],
+			"CaptureNpcList": [],
+			"DestroyNpcList": [],
+			"CreateProp": {
+				"GroupID": {},
+				"GroupPropID": {},
+				"CreateList": []
+			},
+			"DestroyProp": {
+				"TargetType": {
+					"$type": "RPG.GameCore.TargetFetchAdvPropEx"
+				},
+				"ID": {},
+				"GroupID": {},
+				"DestroyList": []
+			},
+			"AdvCreateGroupEntity": {
+				"InstanceIDList": []
+			},
+			"AdvDestroyGroupEntity": {},
+			"DisactiveVCamOnGraphEnd": true,
+			"ActiveVirtualCamera": {
+				"AreaName": "LevelArea_P10202_F10202004_G114",
+				"AnchorName": "Anchor1",
+				"VCameraDitherMaxDistance": 1,
+				"CenterPosX": -1,
+				"CenterPosY": -1
+			},
+			"ActiveTemplateVirtualCamera": {
+				"IsActive": true
+			},
+			"SwitchCharacterAnchor": {
+				"ResetAnimation": true,
+				"ResetCamera": true
+			},
+			"AdvNpcFaceToPlayer": {
+				"FromDialog": true,
+				"TryFaceToFace": true,
+				"NpcLookAtPlayer": true,
+				"PlayerLookAtNpc": true,
+				"StopLookAtOnGraphEnd": true,
+				"TurnBackOnGraphEnd": true,
+				"WaitFinishMode": "WaitFaceAngle",
+				"ForceToStandBy": true
+			}
+		},
+		{
+			"$type": "RPG.GameCore.TriggerCustomString",
+			"CustomString": {
+				"Value": "8003244_HideNpc"
+			}
+		},
+		{
+			"$type": "RPG.GameCore.PerformanceTransition",
+			"SwitchKeepTime": 0.5,
+			"SwitchOutTime": 0.5,
+			"CreateNpcList": [],
+			"CaptureNpcList": [],
+			"DestroyNpcList": [],
+			"CreateProp": {
+				"GroupID": {},
+				"GroupPropID": {},
+				"CreateList": []
+			},
+			"DestroyProp": {
+				"TargetType": {
+					"$type": "RPG.GameCore.TargetFetchAdvPropEx"
+				},
+				"ID": {},
+				"GroupID": {},
+				"DestroyList": []
+			},
+			"AdvCreateGroupEntity": {},
+			"AdvDestroyGroupEntity": {},
+			"DisactiveVCamOnGraphEnd": true,
+			"ActiveVirtualCamera": {
+				"AreaName": "LevelArea_P10202_F10202004_G114",
+				"AnchorName": "Anchor1",
+				"VCameraDitherMaxDistance": 1,
+				"CenterPosX": -1,
+				"CenterPosY": -1
+			},
+			"ActiveTemplateVirtualCamera": {
+				"IsActive": true
+			},
+			"SwitchCharacterAnchor": {
+				"ResetAnimation": true,
+				"ResetCamera": true
+			},
+			"AdvNpcFaceToPlayer": {
+				"FromDialog": true,
+				"TryFaceToFace": true,
+				"NpcLookAtPlayer": true,
+				"PlayerLookAtNpc": true,
+				"StopLookAtOnGraphEnd": true,
+				"TurnBackOnGraphEnd": true,
+				"WaitFinishMode": "WaitFaceAngle",
+				"ForceToStandBy": true
+			}
+		},
+		{
+			"$type": "RPG.GameCore.EndPerformance"
+		}
+	]
+}</pre>
+
+;(Unused &mdash; TalkSentence_800324530)
+:'''Little Tian:''' ...This is the ''Celestial Jade Techniques 101'' that Miss Qingque gave me! It's evidence of her bribery.
+::'''Little Tian:''' It's because I'm your game mate and have also "benefited" from our friendship that I had to give you this sick leave note!
+::'''Qingque:''' Exactly! But when I take my absence, I won't tell anyone! That way, no one will notice a thing.
+::'''Little Tian:''' I&mdash;I...
+::'''Little Tian:''' ...(Trailblazer), Qingque has a point. The ''Celestial Jade Techniques 101'' isn't actually that useful.
+:<pre>{
+	"$type": "RPG.GameCore.SelectMissionItem",
+	"OnlyPerformance": true,
+	"ItemIDList": [
+		140306,
+		140307,
+		140308,
+		140309
+	],
+	"ItemHiddenIDList": [],
+	"ItemSelect": [
+		{
+			"Item1": 140306,
+			"TriggerCustomString": "TalkSentence_800324524"
+		},
+		{
+			"Item1": 140307,
+			"TriggerCustomString": "TalkSentence_800324530"
+		},
+		{
+			"Item1": 140308,
+			"TriggerCustomString": "TalkSentence_800324536"
+		},
+		{
+			"Item1": 140309,
+			"TriggerCustomString": "TalkSentence_800324543"
+		}
+	],
+	"SlotNum": 1,
+	"InfoText": {
+		"Hash": 524940953
+	},
+	"SimpleTalk": {
+		"TextSpeed": 20,
+		"ProtectTime": 0.8
+	},
+	"OnSubmitCancel": [
+		{
+			"$type": "RPG.GameCore.PerformanceTransition",
+			"SwitchInTime": 0.5,
+			"SwitchKeepTime": 0.1,
+			"CreateNpcList": [],
+			"CaptureNpcList": [],
+			"DestroyNpcList": [],
+			"CreateProp": {
+				"GroupID": {},
+				"GroupPropID": {},
+				"CreateList": []
+			},
+			"DestroyProp": {
+				"TargetType": {
+					"$type": "RPG.GameCore.TargetFetchAdvPropEx"
+				},
+				"ID": {},
+				"GroupID": {},
+				"DestroyList": []
+			},
+			"AdvCreateGroupEntity": {
+				"InstanceIDList": []
+			},
+			"AdvDestroyGroupEntity": {},
+			"DisactiveVCamOnGraphEnd": true,
+			"ActiveVirtualCamera": {
+				"AreaName": "LevelArea_P10202_F10202004_G114",
+				"AnchorName": "Anchor1",
+				"VCameraDitherMaxDistance": 1,
+				"CenterPosX": -1,
+				"CenterPosY": -1
+			},
+			"ActiveTemplateVirtualCamera": {
+				"IsActive": true
+			},
+			"SwitchCharacterAnchor": {
+				"ResetAnimation": true,
+				"ResetCamera": true
+			},
+			"AdvNpcFaceToPlayer": {
+				"FromDialog": true,
+				"TryFaceToFace": true,
+				"NpcLookAtPlayer": true,
+				"PlayerLookAtNpc": true,
+				"StopLookAtOnGraphEnd": true,
+				"TurnBackOnGraphEnd": true,
+				"WaitFinishMode": "WaitFaceAngle",
+				"ForceToStandBy": true
+			}
+		},
+		{
+			"$type": "RPG.GameCore.TriggerCustomString",
+			"CustomString": {
+				"Value": "8003244_HideNpc"
+			}
+		},
+		{
+			"$type": "RPG.GameCore.PerformanceTransition",
+			"SwitchKeepTime": 0.5,
+			"SwitchOutTime": 0.5,
+			"CreateNpcList": [],
+			"CaptureNpcList": [],
+			"DestroyNpcList": [],
+			"CreateProp": {
+				"GroupID": {},
+				"GroupPropID": {},
+				"CreateList": []
+			},
+			"DestroyProp": {
+				"TargetType": {
+					"$type": "RPG.GameCore.TargetFetchAdvPropEx"
+				},
+				"ID": {},
+				"GroupID": {},
+				"DestroyList": []
+			},
+			"AdvCreateGroupEntity": {},
+			"AdvDestroyGroupEntity": {},
+			"DisactiveVCamOnGraphEnd": true,
+			"ActiveVirtualCamera": {
+				"AreaName": "LevelArea_P10202_F10202004_G114",
+				"AnchorName": "Anchor1",
+				"VCameraDitherMaxDistance": 1,
+				"CenterPosX": -1,
+				"CenterPosY": -1
+			},
+			"ActiveTemplateVirtualCamera": {
+				"IsActive": true
+			},
+			"SwitchCharacterAnchor": {
+				"ResetAnimation": true,
+				"ResetCamera": true
+			},
+			"AdvNpcFaceToPlayer": {
+				"FromDialog": true,
+				"TryFaceToFace": true,
+				"NpcLookAtPlayer": true,
+				"PlayerLookAtNpc": true,
+				"StopLookAtOnGraphEnd": true,
+				"TurnBackOnGraphEnd": true,
+				"WaitFinishMode": "WaitFaceAngle",
+				"ForceToStandBy": true
+			}
+		},
+		{
+			"$type": "RPG.GameCore.EndPerformance"
+		}
+	]
+}</pre>
+
+;(Unused &mdash; TalkSentence_800324536)
+:'''Little Tian:''' This is the medical certificate that was used last time...
+::'''Qingque:''' Yeah, yeah! This one! Just change my ailment to "No-Game-No-Life Syndrome" and everything will be fine? I mean, there are all sorts of weird conditions across the cosmos...
+::'''Qingque:''' Little Tian, you just need to {{Color|keyword|nobold=1|randomly make a disease up}}. Nobody's going to check up on that &mdash; provided it looks reasonable. That's how it went down last time.
+::'''Little Tian:''' Making up an illness on the spot won't get you anywhere. The Alchemy Commission has sent someone after me before to check if the symptoms I listed are recorded in their medical texts.
+::'''Qingque:''' What!? Don't tell me the Alchemy Commission turned out to be this thorough with all their work?
+::'''Qingque:''' If that's so, then I don't want to get Little Tian in trouble... I'll have to come up with something else.
+::----
+:<pre>{
+	"$type": "RPG.GameCore.AdvDestroyGroupEntity",
+	"InstanceIDList": [
+		400001
+	]
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.AdvDestroyGroupEntity",
+	"InstanceIDList": [
+		400002
+	]
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.PerformanceExtendEndBlack",
+	"ExtendTime": 0.5
+}</pre>
+
+;(Unused &mdash; TalkSentence_800324543)
+:'''Little Tian:''' The IPC had sent invites to almost all the stores in Aurum Alley, wishing to strike deals with us all. I'm still a bit hesitant...
+::'''Little Tian:''' If the IPC manages to secure Aurum Alley, there may not be a Longevity Hall here anymore to give you sick leave notes.
+::'''Qingque:''' (Trailblazer) won't let them succeed.
+::'''Little Tian:''' Looks like this piece of evidence doesn't work either. Let's try something else.
+:<pre>{
+	"$type": "RPG.GameCore.SelectMissionItem",
+	"OnlyPerformance": true,
+	"ItemIDList": [
+		140306,
+		140307,
+		140308,
+		140309
+	],
+	"ItemHiddenIDList": [],
+	"ItemSelect": [
+		{
+			"Item1": 140306,
+			"TriggerCustomString": "TalkSentence_800324524"
+		},
+		{
+			"Item1": 140307,
+			"TriggerCustomString": "TalkSentence_800324530"
+		},
+		{
+			"Item1": 140308,
+			"TriggerCustomString": "TalkSentence_800324536"
+		},
+		{
+			"Item1": 140309,
+			"TriggerCustomString": "TalkSentence_800324543"
+		}
+	],
+	"SlotNum": 1,
+	"InfoText": {
+		"Hash": 524940953
+	},
+	"SimpleTalk": {
+		"TextSpeed": 20,
+		"ProtectTime": 0.8
+	},
+	"OnSubmitCancel": [
+		{
+			"$type": "RPG.GameCore.PerformanceTransition",
+			"SwitchInTime": 0.5,
+			"SwitchKeepTime": 0.1,
+			"CreateNpcList": [],
+			"CaptureNpcList": [],
+			"DestroyNpcList": [],
+			"CreateProp": {
+				"GroupID": {},
+				"GroupPropID": {},
+				"CreateList": []
+			},
+			"DestroyProp": {
+				"TargetType": {
+					"$type": "RPG.GameCore.TargetFetchAdvPropEx"
+				},
+				"ID": {},
+				"GroupID": {},
+				"DestroyList": []
+			},
+			"AdvCreateGroupEntity": {
+				"InstanceIDList": []
+			},
+			"AdvDestroyGroupEntity": {},
+			"DisactiveVCamOnGraphEnd": true,
+			"ActiveVirtualCamera": {
+				"AreaName": "LevelArea_P10202_F10202004_G114",
+				"AnchorName": "Anchor1",
+				"VCameraDitherMaxDistance": 1,
+				"CenterPosX": -1,
+				"CenterPosY": -1
+			},
+			"ActiveTemplateVirtualCamera": {
+				"IsActive": true
+			},
+			"SwitchCharacterAnchor": {
+				"ResetAnimation": true,
+				"ResetCamera": true
+			},
+			"AdvNpcFaceToPlayer": {
+				"FromDialog": true,
+				"TryFaceToFace": true,
+				"NpcLookAtPlayer": true,
+				"PlayerLookAtNpc": true,
+				"StopLookAtOnGraphEnd": true,
+				"TurnBackOnGraphEnd": true,
+				"WaitFinishMode": "WaitFaceAngle",
+				"ForceToStandBy": true
+			}
+		},
+		{
+			"$type": "RPG.GameCore.TriggerCustomString",
+			"CustomString": {
+				"Value": "8003244_HideNpc"
+			}
+		},
+		{
+			"$type": "RPG.GameCore.PerformanceTransition",
+			"SwitchKeepTime": 0.5,
+			"SwitchOutTime": 0.5,
+			"CreateNpcList": [],
+			"CaptureNpcList": [],
+			"DestroyNpcList": [],
+			"CreateProp": {
+				"GroupID": {},
+				"GroupPropID": {},
+				"CreateList": []
+			},
+			"DestroyProp": {
+				"TargetType": {
+					"$type": "RPG.GameCore.TargetFetchAdvPropEx"
+				},
+				"ID": {},
+				"GroupID": {},
+				"DestroyList": []
+			},
+			"AdvCreateGroupEntity": {},
+			"AdvDestroyGroupEntity": {},
+			"DisactiveVCamOnGraphEnd": true,
+			"ActiveVirtualCamera": {
+				"AreaName": "LevelArea_P10202_F10202004_G114",
+				"AnchorName": "Anchor1",
+				"VCameraDitherMaxDistance": 1,
+				"CenterPosX": -1,
+				"CenterPosY": -1
+			},
+			"ActiveTemplateVirtualCamera": {
+				"IsActive": true
+			},
+			"SwitchCharacterAnchor": {
+				"ResetAnimation": true,
+				"ResetCamera": true
+			},
+			"AdvNpcFaceToPlayer": {
+				"FromDialog": true,
+				"TryFaceToFace": true,
+				"NpcLookAtPlayer": true,
+				"PlayerLookAtNpc": true,
+				"StopLookAtOnGraphEnd": true,
+				"TurnBackOnGraphEnd": true,
+				"WaitFinishMode": "WaitFaceAngle",
+				"ForceToStandBy": true
+			}
+		},
+		{
+			"$type": "RPG.GameCore.EndPerformance"
+		}
+	]
+}</pre>
 {{Dialogue End}}
 
 ==Other Languages==

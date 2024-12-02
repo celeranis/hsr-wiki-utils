@@ -7,7 +7,7 @@ PageTitle=#Hyperlink Match, Asta!#
 |title         = 
 |image         = <!--Mission Hyperlink Match, Asta!.png-->
 |type          = Adventure
-|event_name    = 
+|event_name    = Aetherium Wars
 |chapter       = 
 |requirements  = 
 * [[Adventure Mission]] ''[[Hyperlink Match, Natasha!]]'' completed
@@ -15,7 +15,7 @@ PageTitle=#Hyperlink Match, Asta!#
 * [[Adventure Mission]] ''[[Hyperlink Match, Gepard!]]'' completed
 * [[Adventure Mission]] ''[[Hyperlink Match, Lynx!]]'' completed
 |summary       = <!--official mission summary from Fate's Atlas-->
-|characters    = Trailblazer
+|characters    = Asta; Trailblazer
 |startLocation = [[Herta Space Station]] - [[Supply Zone]]
 |world         = Herta Space Station
 |area          = Supply Zone
@@ -23,7 +23,7 @@ PageTitle=#Hyperlink Match, Asta!#
 |next          = 
 |rewards       = 
 }}
-'''''Hyperlink Match, Asta!''''' is an [[Adventure Mission]] on [[Herta Space Station]].
+'''''Hyperlink Match, Asta!''''' is an Event [[Adventure Mission]] from the [[Aetherium Wars]] event.
 
 ==Steps==
 # Have a Hyperlink Match with Asta
@@ -37,11 +37,25 @@ PageTitle=#Hyperlink Match, Asta!#
 -->
 ==Dialogue==
 {{Stub Dialogue}}
-
-===Have a Hyperlink Match with Asta===
+===Have a Hyperlink Match with Asta{{subst:void|<!--801413001-->}}===
 {{Mission Description|type=adventure|location=Supply Zone|The core gameplay loop behind Aetherium Wars is "dueling." Challenge different players and show your true strength!}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Asta)
+:'''Asta:''' I can't believe it. What did Peppy do with all of my Aether Coins...?
+<pre>{
+	"$type": "RPG.GameCore.ShowMenu",
+	"DisplaySingleMenuItem": true
+}</pre>
+:'''Asta:''' I lost... What a shame. If I hadn't given my strongest Aether Coin to Peppy, who knows how this would have turned out!
+<pre>{
+	"$type": "RPG.GameCore.ShowUI",
+	"Name": "Ui.AetherDivide.AetherDivideEntryPage",
+	"Param": {
+		"Value": "2"
+	},
+	"OnUIEnter": []
+}</pre>
 {{Dialogue End}}
 
 ==Other Languages==

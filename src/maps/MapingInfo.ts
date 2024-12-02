@@ -4,7 +4,7 @@ import { Enemy } from '../Stage.js';
 import { textMap } from '../TextMap.js';
 import { getFile } from '../files/GameFile.js';
 import { ItemReference } from '../files/Item.js';
-import { FarmType, InternalMappingInfo, MappingType } from '../files/MapData.js';
+import { FarmType, InternalMappingInfo, MappingType } from '../files/graph/MapData.js';
 import { Area } from './Area.js';
 
 export const mappingData = await getFile<Dictionary<InternalMappingInfo>>('ExcelOutput/MappingInfo.json')

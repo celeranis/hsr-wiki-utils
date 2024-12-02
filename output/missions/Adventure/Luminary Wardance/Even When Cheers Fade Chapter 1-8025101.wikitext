@@ -7,13 +7,13 @@ PageTitle=#Even When Cheers Fade: Chapter 1#
 |title         = 
 |image         = Mission Even When Cheers Fade Chapter 1.png{{subst:void|<!--$UPLOAD:<<SpriteOutput/Chronicle/8025101.png>-<Mission Even When Cheers Fade Chapter 1.png>-<Fate's Atlas Images>>-->}}
 |type          = Adventure
-|event_name    = 
+|event_name    = Luminary Wardance
 |chapter       = Luminary Wardance
 |requirements  = 
 * [[Trailblaze Continuance]] ''[[A Fugue From Beyond]]'' completed
 * [[Trailblaze Continuance]] ''[[Future Market (II)]]'' completed
 |summary       = To help Belobog rejoin cosmic society, Luka arrives at The Xianzhou Luofu with an expired invitation to participate in the Luminary Wardance. You become his coach by chance and win one victory after another with him...<br />But the road ahead is still long, and your journey has just begun.
-|characters    = Trailblazer
+|characters    = Camera journalist; Carmella; Cloud Knight A; Cloud Knight B; Luka; Owlbert (Remote Puppet); Sushang; Trailblazer
 |startLocation = [[The Xianzhou Luofu]] - [[Skysplitter]]
 |world         = The Xianzhou Luofu
 |area          = Skysplitter
@@ -21,7 +21,7 @@ PageTitle=#Even When Cheers Fade: Chapter 1#
 |next          = By His Lonefist to the Xianzhou
 |rewards       = Stellar Jade*30; Traveler's Guide*3; Lost Crystal*3; Credit*30,000
 }}
-'''''Even When Cheers Fade: Chapter 1''''' is an [[Adventure Mission]] on [[The Xianzhou Luofu]] in the chapter [[Luminary Wardance]].
+'''''Even When Cheers Fade: Chapter 1''''' is an Event [[Adventure Mission]] from the [[Luminary Wardance]] event.
 
 ==Steps==
 # Head to the Skysplitter
@@ -42,50 +42,321 @@ PageTitle=#Even When Cheers Fade: Chapter 1#
 -->
 ==Dialogue==
 {{Stub Dialogue}}
-
-===Head to the Skysplitter===
+===Head to the Skysplitter{{subst:void|<!--802510101-->}}===
 {{Mission Description|type=adventure|location=Skysplitter|March 7th actually managed to get a backstage pass for the Wardance? That'd be a huge loss if you don't go and check it out.<br />It feels like she has rapidly become a powerful figure on the Luofu in just a few short weeks... Would you get a discount in a restaurant if you tell the owner you know her?}}
 {{Dialogue Start}}
-:{{tx}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+<pre>{
+	"$type": "RPG.GameCore.AddFinishMissionData_PlayMessage",
+	"SubmissionID": 802510101,
+	"MessageSectionID": 1222900,
+	"ShowNotice": true
+}</pre>
+:{{A|VO side2 yanwu player 101 m.ogg}} {{A|VO side2 yanwu player 101 f.ogg}} '''(Trailblazer):''' (A rare opportunity. Let's check out the backstage of the Skysplitter. Maybe there's something exciting going on backstage that you won't be able to see from the spectator seats.)
 {{Dialogue End}}
 
-===Go check out the Wardance backstage===
+===Go check out the Wardance backstage{{subst:void|<!--802510102-->}}===
 {{Dialogue Start}}
-:{{tx}}
+
+;(Unused &mdash; EnterArea_G66_2)
+:{{A|VO side2 yanwu player 101 m.ogg}} {{A|VO side2 yanwu player 101 f.ogg}} '''(Trailblazer):''' (A rare opportunity. Let's check out the backstage of the Skysplitter. Maybe there's something exciting going on backstage that you won't be able to see from the spectator seats.)
+::{{A|VO side2 yanwu camera 101.ogg}} '''Carmella:''' How confident are you?
+::{{A|VO side2 yanwu luka 101.ogg}} '''Luka:''' I'm not too sure...
+::{{A|VO side2 yanwu camera 102.ogg}} '''Camera journalist:''' Why did you want to participate in the Wardance?
+::{{A|VO side2 yanwu luka 102.ogg}} '''Luka:''' Because... Because... Because I was qualified to participate?
+::{{A|VO side2 yanwu player 102 m.ogg}} {{A|VO side2 yanwu player 102 f.ogg}} '''(Trailblazer):''' (Isn't that Luka? Why is he here on the Luofu?)
+::{{A|VO side2 yanwu player 103 m.ogg}} {{A|VO side2 yanwu player 103 f.ogg}} '''(Trailblazer):''' Luka, didn't expect to see you here.
+::{{A|VO side2 yanwu luka 103 m.ogg}} {{A|VO side2 yanwu luka 103 f.ogg}} '''Luka:''' (Trailblazer)? Why are you here?
+::{{DIcon|Arrow}} I often visit the Luofu.
+:::{{A|VO side2 yanwu luka 105.ogg}} '''Luka:''' What a coincidence. I'm here to compete! Umm... Though I really doubt I've got any chance at winning, haha.
+::{{DIcon|Arrow}} I came to watch the competition.
+::{{A|VO side2 yanwu camera 103.ogg}} '''Camera journalist:''' Are you a friend of Mr. Luka's? Allow me to introduce myself: I am an Interastral Peace Entertainment journalist-in-training, Carmella.
+::{{A|VO side2 yanwu camera 104.ogg}} '''Carmella:''' I was supposed to follow Mr. Owlbert to cover the Wardance together, but he's got a million things to attend to, so the tasks of interviewing the popular contenders and producing the special program fell on my shoulders.
+::{{A|VO side2 yanwu camera 105.ogg}} '''Carmella:''' These are huge responsibilities... I've been interning for so many years. If I screw this up, I doubt I'll ever get the chance at a full-time role.
+::{{A|VO side2 yanwu luka 106.ogg}} '''Luka:''' The IPC sure is harsh...
+::{{A|VO side2 yanwu camera 106.ogg}} '''Carmella:''' It'll be fine. It's just my boss trying to mentor me! As long as I get some shots that'll shock and awe, I'm sure I'll be able to clinch a full-time job this year!
+::{{A|VO side2 yanwu camera 107.ogg}} '''Carmella:''' ...I can sense the potential of a juicy program just through Luka alone!
+::{{A|VO side2 yanwu luka 107.ogg}} '''Luka:''' Really? I'm not so sure about that...
+::{{DIcon|Arrow}} Why did you come to participate in the Wardance?
+::{{tx}}
+::{{DIcon|Arrow}} Let's go.
+::<pre>{
+	"$type": "RPG.GameCore.SetPerformanceResult",
+	"Value": 1
+}</pre>
+::{{DIcon|Exit}} I have something else to do.
+
+;(Unused &mdash; EnterArea_G66_3)
+:{{A|VO side2 yanwu camera 102.ogg}} '''Camera journalist:''' Why did you want to participate in the Wardance?
+::{{A|VO side2 yanwu luka 102.ogg}} '''Luka:''' Because... Because... Because I was qualified to participate?
+::{{A|VO side2 yanwu player 102 m.ogg}} {{A|VO side2 yanwu player 102 f.ogg}} '''(Trailblazer):''' (Isn't that Luka? Why is he here on the Luofu?)
+
+;(Unused &mdash; EnterArea_G66_1)
+<pre>{
+	"$type": "RPG.GameCore.PlayNPCBubbleTalk",
+	"BubbleTalkInfoList": [
+		{
+			"AutoSkipTime": 2,
+			"GroupID": 66,
+			"GroupNpcID": 400002,
+			"TalkSentenceID": 802510002
+		},
+		{
+			"AutoSkipTime": 2,
+			"GroupID": 66,
+			"GroupNpcID": 400001,
+			"TalkSentenceID": 802510003
+		}
+	]
+}</pre>
+
+;(Unused &mdash; 802510102_OpenRaid)
+<pre>{
+	"$type": "RPG.GameCore.OpenTreasureChallenge",
+	"RaidID": 40102,
+	"OnCancel": []
+}</pre>
 {{Dialogue End}}
 
-===Listen to why Luka came to the Luofu===
+===Listen to why Luka came to the Luofu{{subst:void|<!--802510106-->}}===
 {{Mission Description|type=adventure|location=Skysplitter|update|That red-head boy is actually... Luka from Belobog?<br />For a Belobogian to appear on the Luofu is really a bit... unbelievable. Ask him about the details.}}
 {{Dialogue Start}}
+
+;(Talk to Luka)
+:{{A|VO side2 yanwu luka 109.ogg}} '''Luka:''' You two, let's take a walk. I can tell you all about why I'm here on the way.
+:{{DIcon|Arrow}} Let's go.
+:<pre>{
+	"$type": "RPG.GameCore.SetPerformanceResult",
+	"Value": 1
+}</pre>
+:{{DIcon|Exit}} I have something else to do.
+
+;(Unused &mdash; OpenRaid_40102)
+<pre>{
+	"$type": "RPG.GameCore.OpenTreasureChallenge",
+	"RaidID": 40102,
+	"OnCancel": []
+}</pre>
+----
+:{{A|VO side2 yanwu camera 108.ogg}} '''Carmella:''' Luka, you are absolutely radiating with newsworthiness. I've decided to follow you and report on your progress throughout the competition.
+:{{A|VO side2 yanwu luka 146.ogg}} '''Luka:''' If only everything were as smooth as when it started...
+:{{DIcon|Arrow}} How many matches have you participated in?
+::{{A|VO side2 yanwu luka 147.ogg}} '''Luka:''' If I had participated in the competition these past few days, I wouldn't be so anxious right now...
+:{{DIcon|Arrow}} Did you fail in the knockout stage?
+::{{A|VO side2 yanwu luka 148.ogg}} '''Luka:''' If that was the case... I'd have nothing to feel bad about...
+:{{A|VO side2 yanwu luka 149.ogg}} '''Luka:''' It's been days since I've registered, but I haven't participated in a single match yet. Today's my first one.
+:{{A|VO side2 yanwu luka 150.ogg}} '''Luka:''' But forget about competing, I feel like I'm struggling with just normal everyday life! I'm already halfway into the realm of needing help with daily activities...
+:{{A|VO side2 yanwu luka 151.ogg}} '''Luka:''' Why don't people accept shields? You can pay for things just by swiping a gemstone trinket?
+:{{A|VO side2 yanwu luka 152.ogg}} '''Luka:''' Why doesn't anyone look their age? I approached this girl with pointy ears to ask for directions and I called her "little girl" and she got mad! She said she's over three hundred and forty years old... So now I'm even afraid to talk to people.
+:{{A|VO side2 yanwu luka 153.ogg}} '''Luka:''' Oh and, meals... I'm really not used to the food on the Xianzhou. Yesterday, I ate a bowl of chili oil beef offal stew for dinner, and today... I've been blowing up the toilet with my flaming rockets...
+:{{A|VO side2 yanwu camera 109.ogg}} '''Carmella:''' I feel you, Luka. I also can't get used to the food on the Xianzhou.
+:{{A|VO side2 yanwu luka 154.ogg}} '''Luka:''' Miss Carmella, you can't get used to the food, either?
+:{{A|VO side2 yanwu camera 110.ogg}} '''Carmella:''' Well, not exactly. It's because I'm an Intellitron.
+:{{A|VO side2 yanwu luka 155.ogg}} '''Luka:''' ...
+:{{A|VO side2 yanwu camera 111.ogg}} '''Carmella:''' ...Sorry, please continue.
+:{{A|VO side2 yanwu luka 156.ogg}} '''Luka:''' Anyways, this is the first time in my life I've felt so useless. I can't even do something as trivial as asking for directions...
+:{{DIcon|Arrow}} It's your first time away from home, so it must be hard to get used to things.
+:{{DIcon|Arrow}} It's an alien civilization after all...
+:{{A|VO side2 yanwu luka 157.ogg}} '''Luka:''' Thank you for comforting me... Actually, I did do some mental preparations. It's my first time going out into the world, but I didn't expect it to be so overwhelming that I can't keep my footing.
+:{{A|VO side2 yanwu camera 112.ogg}} '''Carmella:''' Where are your Belobogian buddies?
+:{{A|VO side2 yanwu luka 158.ogg}} '''Luka:''' Lynx went on an archaeological escapade: She wants to try to learn about Igor's history before he returned to Jarilo-VI with that gemmed pendant. Svarog took Hook out to play &mdash; he's really good with kids.
+:{{A|VO side2 yanwu luka 159.ogg}} '''Luka:''' I'm so irate and I'm about to start my first match, I'm in worse shape than ever.
+:{{DIcon|Arrow}} Who's your next opponent?
+:{{A|VO side2 yanwu luka 160.ogg}} '''Luka:''' The next opponents are several Cloud Knights... Ah, they're like the Silvermane here... No, why am I explaining this to you? You should know better than me... I'm the only one who doesn't know anything.
 :{{tx}}
 {{Dialogue End}}
 
-===Find the opponent for the first match===
+===Find the opponent for the first match{{subst:void|<!--802510108-->}}===
 {{Mission Description|type=adventure|location=Skysplitter|update|The opponent for Luka's first match is a Cloud Knight.<br />You carry some weight in the Cloud Knights as well, so maybe they'll do you a favor. Go meet them before the match begins.}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Unused &mdash; EnterArea_G69_2)
+:{{A|VO side2 yanwu luka 162.ogg}} '''Luka:''' Look, those are my opponents for my first match.
+::{{A|VO side2 yanwu player 104 m.ogg}} {{A|VO side2 yanwu player 104 f.ogg}} '''(Trailblazer):''' Isn't that... Sushang!?
+::{{A|VO side2 yanwu camera 115.ogg}} '''Carmella:''' Huh? You know her?
+::{{A|VO side2 yanwu sushang 101 m.ogg}} {{A|VO side2 yanwu sushang 101 f.ogg}} '''Sushang:''' (Trailblazer)! Are you here to watch our match?
+::{{A|VO side2 yanwu yunqiA 101.ogg}} '''Cloud Knight A:''' This is our next opponent, Luka.
+::{{A|VO side2 yanwu luka 163.ogg}} '''Luka:''' Hello everyone, I'm Luka and I come from Belobog. I'll be exchanging fists with you guys in the ring. I hope we'll be able to take this chance to become friends.
+::{{A|VO side2 yanwu sushang 102.ogg}} '''Sushang:''' Belobog... Oh! I think Lil Gui mentioned it before, but I can't seem to remember. What kind of place is it?
+::{{DIcon|Arrow}} It's a snow-covered city.
+:::{{A|VO side2 yanwu sushang 103.ogg}} '''Sushang:''' Oh wow... I can't imagine that. I'm sorry, the Xianzhou Yaoqing doesn't have much artificial snow.
+::{{DIcon|Arrow}} It's a city full of heroes.
+:::{{A|VO side2 yanwu sushang 104.ogg}} '''Sushang:''' Oh, I love hero stories! Tell me more when you have time!
+::{{A|VO side2 yanwu luka 164.ogg}} '''Luka:''' It's okay if you haven't heard of us. I'll make sure the whole cosmos remembers Belobog's name with my fists!
+::{{A|VO side2 yanwu sushang 105.ogg}} '''Sushang:''' In that case, I'll keep my eyes peeled!
+::{{A|VO side2 yanwu yunqiB 101.ogg}} '''Cloud Knight B:''' Sushang used an idiom!
+::{{A|VO side2 yanwu camera 116.ogg}} '''Carmella:''' I'm the journalist who's reporting on Luka. It's fine. J&mdash;Just chat like you always do and ignore me. I'm just snapping shots for material.
+::{{A|VO side2 yanwu sushang 106 m.ogg}} {{A|VO side2 yanwu sushang 106 f.ogg}} '''Sushang:''' (Trailblazer), are you here to join the tournament with Mr. Luka?
+::{{DIcon|Arrow}} I'm his coach.
+:::{{A|VO side2 yanwu sushang 107.ogg}} '''Sushang:''' Could Luka be the fighter that you've been training?
+::{{DIcon|Arrow}} That's right. Scared?
+:::{{A|VO side2 yanwu sushang 108.ogg}} '''Sushang:''' Wh&mdash;Who's afraid! Lemme see... Your name isn't on the list. Are you Luka's coach then?
+::{{A|VO side2 yanwu yunqiA 102.ogg}} '''Cloud Knight A:''' The iron arm on this red-haired boy looks like it's got power, definitely capable of taking down a kid with one punch at a time.
+::{{tx}}
 {{Dialogue End}}
 
-===Help Luka plan for the first match===
+===Help Luka plan for the first match{{subst:void|<!--802510110-->}}===
 {{Mission Description|type=adventure|location=Skysplitter|update|You are now Contestant Luka's coach!<br />Lead Luka to victory in his first match! And let Sushang have a good taste of the passion from the outworld snowlands!}}
 {{Dialogue Start}}
 :{{tx}}
-{{Dialogue End}}
-
-===Start the match against Lil Gui's Support Association===
-{{Dialogue Start}}
+:{{A|VO side2 yanwu luka 167.ogg}} '''Luka:''' So... the coach of my opponent for my first match, is going to give me tactical advice in the ring? I am bewildered by the Xianzhou people's hospitality.
+:{{DIcon|Arrow}} This one's very, very hospitable.
+::{{A|VO side2 yanwu luka 168.ogg}} '''Luka:''' What a kind-hearted person...
+:{{DIcon|Arrow}} See? Xianzhou's not that scary, is it?
+::{{A|VO side2 yanwu luka 169.ogg}} '''Luka:''' You're right. There are many good people here.
+:{{A|VO side2 yanwu camera 117.ogg}} '''Carmella:''' This is your first match, Luka. You're bound to win!
 :{{tx}}
 {{Dialogue End}}
 
-===The goal is... the Ringmaster's Challenge!===
+===Start the match against Lil Gui's Support Association{{subst:void|<!--802510111-->}}===
+{{Dialogue Start}}
+
+;(Talk to Luka)
+:{{A|VO side2 yanwu luka 170.ogg}} '''Luka:''' (Phew, Luka, you're gonna be fine. You're the boxing champion of Belobog.)
+:{{A|VO side2 yanwu luka 171.ogg}} '''Luka:''' (The Cloud Knights... Aren't they just the Silvermane Guards? I'm pretty confident of my odds against them, except Mr. Gepard.)
+:{{A|VO side2 yanwu luka 172.ogg}} '''Luka:''' (Luka, you're the best! You're not gonna lose! Go get 'em!)
+:{{A|VO side2 yanwu player 105 m.ogg}} {{A|VO side2 yanwu player 105 f.ogg}} '''(Trailblazer):''' Luka, ready for your first match?
+:{{DIcon|Arrow}} More or less!
+::{{A|VO side2 yanwu luka 173.ogg}} '''Luka:''' I think, I, more or less, maybe, perhaps I'm ready!
+::{{tx}}
+:<pre>{
+	"$type": "RPG.GameCore.SetPerformanceResult",
+	"Value": 1
+}</pre>
+:{{DIcon|Exit}} Please give me a moment.
+::{{A|VO side2 yanwu luka 174.ogg}} '''Luka:''' Please give me a moment.
+::{{tx}}
+
+;(Talk to Carmella)
+:{{A|VO side2 yanwu camera 117.ogg}} '''Carmella:''' This is your first match, Luka. You're bound to win!
+
+;(Unused &mdash; FightFestBattleStart)
+<pre>{
+	"$type": "RPG.GameCore.AddStreamingSource",
+	"StreamingSource": {
+		"CenterName": "Mission_FightFestBattlePerformance",
+		"AreaName": "LevelArea_P20242_F20242001_G19",
+		"AnchorName": "Anchor7"
+	}
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.SetFloorCustomFloat",
+	"Name": {
+		"Value": "FCV_2.5_Throng"
+	},
+	"Value": {
+		"IsDynamic": false,
+		"FixedValue": {
+			"Value": 1
+		}
+	}
+}</pre>
+----
+:{{A|VO side2 yanwu owlbert 126.ogg}} '''Owlbert (Remote Puppet):''' And the winner is... Luka "Strongarm"!
+:{{A|VO side2 yanwu owlbert 127.ogg}} '''Owlbert (Remote Puppet):''' Who'd have thought a rookie challenger like Luka would win? But how much further will he make it? Let us stay tuned!
+:{{A|VO side2 yanwu luka 178 m.ogg}} {{A|VO side2 yanwu luka 178 f.ogg}} '''Luka:''' (Trailblazer), something feels off... What is happening to me?
+:{{DIcon|Arrow}} What's wrong? Are you okay?
+:{{A|VO side2 yanwu luka 179.ogg}} '''Luka:''' I feel... a little strange. I just saw those Cloud Knights grow fangs and claws, like they were demons.
+:{{tx}}
+<pre>{
+	"$type": "RPG.GameCore.TalkFigure",
+	"Show": true,
+	"ImagePath": "SpriteOutput/Mission/TalkItem/SubMission_408410.png",
+	"TriggerSound": true
+}</pre>
+:{{DIcon|Arrow}} What's with the sudden product placement?
+::{{A|VO side2 yanwu camera 120.ogg}} '''Carmella:''' I was in charge of outsourcing SoulGlad's ads during my sixth internship period...  Some of it might have turned into a mechanical reflex.
+:{{DIcon|Arrow}} Can this stuff even pass a urine test?
+::{{A|VO side2 yanwu camera 121.ogg}} '''Carmella:''' Don't worry. Even Intellitrons and IPC mechs can participate &mdash; The Xianzhou's Wardance has essentially become a tech fair.
+<pre>{
+	"$type": "RPG.GameCore.TalkFigure",
+	"ImagePath": "SpriteOutput/Mission/TalkItem/SubMission_408410.png",
+	"TriggerSound": true
+}</pre>
+:{{tx}}
+:{{tx}}
+{{Dialogue End}}
+
+===The goal is... the Ringmaster's Challenge!{{subst:void|<!--802510113-->}}===
 {{Mission Description|type=adventure|location=Skysplitter|update|You are now Contestant Luka's coach!<br />As the coach, you need to thoroughly familiarize yourself with the rules of the competition.<br />Luckily, Carmella seems to be well-versed in this. Go ask her about it.}}
 {{Dialogue Start}}
+
+;(Talk to Carmella)
+:'''Carmella:''' All the contestants' lounges have been outfitted with such Tactics Board. Luka, you're an experienced athlete. I'm sure you're very familiar with this?
+:'''Luka:''' Yep. But Belobog's Tactics Board are a little shoddier than this, not as technologically advanced.
+:'''Carmella:''' They're all the same when you use them! Let's use this Tactics Board here to give you a simple brief of the Luminary Wardance's itinerary!
+:{{DIcon|Arrow}} (Look towards the Tactics Board)
+<pre>{
+	"$type": "RPG.GameCore.ShowUI",
+	"Name": "Ui.FightFest.Board.FightFestBoardCutDialog",
+	"WaitForExit": true,
+	"Param": {
+		"Value": "1"
+	}
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.SetFloorCustomFloat",
+	"Name": {
+		"Value": "FCV_2.5_Throng"
+	},
+	"Value": {
+		"IsDynamic": false,
+		"FixedValue": {
+			"Value": 2
+		}
+	}
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.SetFloorCustomFloat",
+	"Name": {
+		"Value": "FCV_2.5_Arena"
+	},
+	"Value": {
+		"IsDynamic": false,
+		"FixedValue": {
+			"Value": 0
+		}
+	}
+}</pre>
+----
+:Half a dual-hour later
+:{{A|VO side2 yanwu luka 183.ogg}} '''Luka:''' Those Cloud Knights said they were just ordinary soldiers... They were tough as heck, and yet they are just the Luofu's most ordinary fighters...
+:{{A|VO side2 yanwu luka 184.ogg}} '''Luka:''' Jarilo-VI has been isolated from the cosmos for so long that I'm clueless about things everyone else takes for granted.
+:{{A|VO side2 yanwu luka 185.ogg}} '''Luka:''' Forget strength... even the gap in everyday knowledge isn't something I can get past overnight.
+:{{A|VO side2 yanwu luka 186.ogg}} '''Luka:''' But no matter how wide that gap is, I must... wield my fists... I must fight, and I must win!
+:{{A|VO side2 yanwu luka 187.ogg}} '''Luka:''' Right now, Lady Bronya, Master Oleg, and Seele... all the people who stayed in Belobog are working day and night to keep it up and running.
+:{{A|VO side2 yanwu luka 188.ogg}} '''Luka:''' Mr. Gepard placed his faith in me... entrusted me with the chance to represent Belobog. I cannot disappoint him. Any of them! I must offer nothing less than victory!
+:{{A|VO side2 yanwu luka 189 m.ogg}} {{A|VO side2 yanwu luka 189 f.ogg}} '''Luka:''' So... (Trailblazer), I would like to officially ask you to be my coach!
+:{{DIcon|Arrow}} Wuh? When did I come into the picture?
+:{{DIcon|Arrow}} I've never done this before. Why me?
+:{{A|VO side2 yanwu luka 190.ogg}} '''Luka:''' Because you're strong, and you know plenty of strong people... When you were pretending to be my coach in the last match, you were a great help!
+:{{A|VO side2 yanwu luka 191 m.ogg}} {{A|VO side2 yanwu luka 191 f.ogg}} '''Luka:''' I want to bridge the gap between myself and this world... (Trailblazer), will you help me?
+:{{DIcon|Arrow}} Leave it to me!
+:{{DIcon|Arrow}} Don't blame me if you lose.
+:{{A|VO side2 yanwu luka 192.ogg}} '''Luka:''' Thank you, Coach! I'll do my best to keep up and train seriously!
 :{{tx}}
 {{Dialogue End}}
 
-===Learn about the competition's rules===
+===Learn about the competition's rules{{subst:void|<!--802510114-->}}===
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Carmella)
+:'''Carmella:''' All the contestants' lounges have been outfitted with such Tactics Board. Luka, you're an experienced athlete. I'm sure you're very familiar with this?
+:'''Luka:''' Yep. But Belobog's Tactics Board are a little shoddier than this, not as technologically advanced.
+:'''Carmella:''' They're all the same when you use them! Let's use this Tactics Board here to give you a simple brief of the Luminary Wardance's itinerary!
+:{{DIcon|Arrow}} (Look towards the Tactics Board)
+<pre>{
+	"$type": "RPG.GameCore.ShowUI",
+	"Name": "Ui.FightFest.Board.FightFestBoardCutDialog",
+	"WaitForExit": true,
+	"Param": {
+		"Value": "1"
+	}
+}</pre>
+
+:{{A|VO side2 yanwu player 101 m.ogg}} {{A|VO side2 yanwu player 101 f.ogg}} '''(Trailblazer):''' (A rare opportunity. Let's check out the backstage of the Skysplitter. Maybe there's something exciting going on backstage that you won't be able to see from the spectator seats.)
 {{Dialogue End}}
 
 ==Other Languages==

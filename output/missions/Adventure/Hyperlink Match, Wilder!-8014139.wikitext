@@ -7,7 +7,7 @@ PageTitle=#Hyperlink Match, Wilder!#
 |title         = 
 |image         = <!--Mission Hyperlink Match, Wilder!.png-->
 |type          = Adventure
-|event_name    = 
+|event_name    = Aetherium Wars
 |chapter       = 
 |requirements  = 
 * [[Adventure Mission]] ''[[Hyperlink Match, Qingque!]]'' completed
@@ -16,7 +16,7 @@ PageTitle=#Hyperlink Match, Wilder!#
 * [[Adventure Mission]] ''[[Hyperlink Match, Bronya!]]'' completed
 * [[Adventure Mission]] ''[[Final Showdown! Intergalactic Celebration!]]'' completed
 |summary       = <!--official mission summary from Fate's Atlas-->
-|characters    = Trailblazer
+|characters    = Trailblazer; Wilder
 |startLocation = [[Jarilo-VI]] - [[Old Weapon Testing Ground]]
 |world         = Jarilo-VI
 |area          = Old Weapon Testing Ground
@@ -24,7 +24,7 @@ PageTitle=#Hyperlink Match, Wilder!#
 |next          = 
 |rewards       = 
 }}
-'''''Hyperlink Match, Wilder!''''' is an [[Adventure Mission]] on [[Jarilo-VI]].
+'''''Hyperlink Match, Wilder!''''' is an Event [[Adventure Mission]] from the [[Aetherium Wars]] event.
 
 ==Steps==
 # Have a Hyperlink Match with Wilder
@@ -38,11 +38,29 @@ PageTitle=#Hyperlink Match, Wilder!#
 -->
 ==Dialogue==
 {{Stub Dialogue}}
-
-===Have a Hyperlink Match with Wilder===
+===Have a Hyperlink Match with Wilder{{subst:void|<!--801413901-->}}===
 {{Mission Description|type=adventure|location=Old Weapon Testing Ground|The core gameplay loop behind Aetherium Wars is "dueling." Challenge different players and show your true strength!}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Wilder)
+;(If {{cx}}<!--during performance 501031401-->)
+::{{A|VO vo ambient w1 greeting wilder 101.ogg}} {{A|VO vo ambient w1 greeting wilder 102.ogg}} '''Wilder:''' Hey, {{MC|m=Mr.|f=Ms.}} (Trailblazer)! Welcome to the Interastral Tournament Festival! The tournament is over, though.
+;(If {{cx}}<!--not during performance 501031401-->)
+:<pre>{
+	"$type": "RPG.GameCore.PlayMultiVoiceTalk",
+	"TalkSentenceID": 501031406
+}</pre>
+:'''Wilder:''' However, you can use this terminal to edit your information and lineup, and compete against players worldwide. Anything you need, just let me know!
+:'''Wilder:''' Seeing you get stronger and stronger, I actually feel quite proud. After all, it was me that recommended the game to you, right?
+:'''Wilder:''' Alright, let's battle again in the next season!
+<pre>{
+	"$type": "RPG.GameCore.ShowUI",
+	"Name": "Ui.AetherDivide.AetherDivideEntryPage",
+	"Param": {
+		"Value": "2"
+	},
+	"OnUIEnter": []
+}</pre>
 {{Dialogue End}}
 
 ==Other Languages==

@@ -11,7 +11,7 @@ PageTitle=#A Gift From Xianzhou#
 |chapter       = 
 |requirements  = {{subst:void|<!--Unknown: {"Type":"Manual"}-->}}
 |summary       = <!--official mission summary from Fate's Atlas-->
-|characters    = Trailblazer
+|characters    = Boss Du; Food Stall Owner; Gao Tang; Mengming; Pom-Pom; Qingyue; Trailblazer; Yujin
 |startLocation = [[Astral Express]] - [[Parlor Car]]
 |world         = Astral Express
 |area          = Parlor Car
@@ -40,49 +40,257 @@ PageTitle=#A Gift From Xianzhou#
 -->
 ==Dialogue==
 {{Stub Dialogue}}
+
+
+;(Talk to Pom-Pom)
+:'''Pom-Pom:''' (Trailblazer)...
+<pre>{
+	"$type": "RPG.GameCore.ShowMenu"
+}</pre>
 {{Dialogue End}}
 
-===Give the mung bean soda you bought to Pom-Pom.===
+===Give the mung bean soda you bought to Pom-Pom.{{subst:void|<!--405003802-->}}===
 {{Mission Description|type=adventure|location=Parlor Car|update|After placing yourself in Pom-Pom's shoes and giving the choices a lot of thought, you have bought the perfect drink (in your opinion) for Pom-Pom. What would Pom-Pom's reaction be when they drink it? Would Pom-pom smack their lips? You find yourself eagerly anticipating Pom-Pom's response...}}
 {{Dialogue Start}}
-:{{tx}}
+
 {{Dialogue End}}
 
-===(Optional) Head to Starskiff Haven and buy mung bean soda for Pom-Pom.===
+===(Optional) Head to Starskiff Haven and buy mung bean soda for Pom-Pom.{{subst:void|<!--405003803-->}}===
 {{Mission Description|type=adventure|location=Central Starskiff Haven|update|Pom-Pom is very interested in beverages on the Xianzhou. You decide to return to the Luofu and get an authentic Luofu beverage for Pom-Pom.}}
 {{Dialogue Start}}
-:{{tx}}
 {{Dialogue End}}
 
-===(Optional) Head to Du's Teahouse and buy Flaming Potent Tea for Pom-Pom.===
+===(Optional) Head to Du's Teahouse and buy Flaming Potent Tea for Pom-Pom.{{subst:void|<!--405003804-->}}===
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Boss Du)
+;(If {{cx}}<!--during performance 502058101-->)
+::'''Boss Du:''' Welcome, customer. Would you like a mug of ninety-percent strong Flaming Potent Tea?
+::{{DIcon|Arrow}} You need to explain what is Flaming Potent Tea first.
+:::'''Boss Du:''' Flaming Potent Tea is a tea that is combustible. I guess I don't have to explain what "tea" and "combustible" mean, right?
+::{{DIcon|Arrow}} Sure! I'm a tea-lover.
+:::'''Boss Du:''' Please allow me to remind you that my tea is different from that made by the Sleepless Earl. In case you didn't catch it the first time, I want to emphasize this again &mdash; my Flaming Potent Tea is combustible.
+::{{DIcon|Arrow}} Please elaborate what "tea" and "combustible" mean.
+:::Boss Du lets out a deep sigh.
+:::'''Boss Du:''' ...All right. "Combustion" refers to the chemical reaction that occurs between a combustible material and an oxidizer when the former reaches its ignition point.
+:::'''Boss Du:''' As for "tea"... it usually refers to drinks made from plants. Different teas vary in taste. Flaming Potent Tea is characterized by its pungent and burning taste, and a unique process of production that includes fermentation and distillation. Therefore, drinking too much Flaming Potent Tea may be harmful to your health.
+:::{{DIcon|Arrow}} Alright. Stop muddling. This is alcohol, isn't it?
+::::'''Boss Du:''' No, this is tea.
+::::'''Boss Du:''' According to the regulations issued by the Realm-Keeping Commission, we can only sell TEA to customers. I hope you can understand, dear customer.
+:::{{DIcon|Arrow}} Wonderful! This is exactly what I need.
+:::{{DIcon|Arrow}} If you say so.
+::::'''Boss Du:''' Good, I can tell that you've understood the essence of Flaming Potent Tea. Why bother with its name, or its true composition? Just enjoy your life and drink away all your sorrows... with tea, of course.
+::{{DIcon|Arrow}} Alright. Stop muddling. This is alcohol, isn't it?
+:::'''Boss Du:''' No, this is tea.
+:::'''Boss Du:''' According to the regulations issued by the Realm-Keeping Commission, we can only sell TEA to customers. I hope you can understand, dear customer.
+::'''Boss Du:''' Since you're a new face here, please accept this cup of Flaming Potent Tea as a token of my goodwill. It's on the house.
+::'''Boss Du:''' My tea house may be inconspicuous, but the most influential persons in Exalting Sanctum would come here for tea. Of course, you are free to take a seat here and share your stories.
+;(If {{cx}}<!--not during performance 502058101-->)
+:<pre>{
+	"$type": "RPG.GameCore.PlayMultiVoiceTalk",
+	"TalkSentenceID": 502058301
+}</pre>
 {{Dialogue End}}
 
-===(Optional) Head to Starskiff Haven and buy steamed puffergoat milk for Pom-Pom.===
+===(Optional) Head to Starskiff Haven and buy steamed puffergoat milk for Pom-Pom.{{subst:void|<!--405003805-->}}===
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Food Stall Owner)
+:'''Food Stall Owner:''' It's (Trailblazer)! Have you completed the Diplomacy phase yet?
+::{{DIcon|Arrow}} Done. Let's get on with the real event.
+:::'''Food Stall Owner:''' Already? Wow! Then let's begin the Combat phase, then...
+:::----
+:::'''Food Stall Owner:''' Contestants, listen carefully to my instructions!
+:::You gulp in anticipation. Seems like this ridiculously theatrical Competitive Eater Championship is finally about to begin.
+:::You peek at the other two contestants out of the corner of your eye. The guy remains tight-lipped, gaze fixed on the luscious buns in their bamboo steamer. A look of radiant excitement betrays the girl as she also stares at the bamboo steamer.
+:::You can't help but start to wonder what the real motives behind these two contestants are. However, another loud announcement yanks your thoughts back to reality.
+:::'''Food Stall Owner:''' Ready... get set &mdash; EAT!
+:::The contest has officially begun. Seeing the other two inhaling everything before them like a tornado, you're unable to keep up. All you can do is grab onto your assigned buns in front of you, and start stuffing them like crazy into your poor little mouth.
+:::{{DIcon|Arrow}} Let's eat. Let's eat!
+::::You eat and eat! After frantically stuffing your face, you are pleasantly surprised to discover that you've eaten two extra buns.
+::::You never realized before how big buns actually are. But the contest hasn't finished yet!
+::::{{DIcon|Arrow}} I can't eat anymore...
+:::::The limits of your stomach obviously cannot handle this kind of situation. Honestly, at this point surrendering would be more beneficial to your health.
+:::::Is the prize really worth the pain of a distended belly? I'm afraid you've already made your decision &mdash; and you know it, too.
+:::::'''Food Stall Owner:''' ...Then (Trailblazer) has withdrawn from the contest!
+::::;(If {{F|MissionCV-4040214-undefined}} is equal to 11)
+::::::'''Food Stall Owner:''' Um... Even though Contestant (Trailblazer) couldn't handle the amount of food and ended up passing out...
+::::::'''Food Stall Owner:''' ...The other two contestants also pulled out right at the same time due to their physical discomfort. Have you ever heard of anything like it?
+::::::'''Food Stall Owner:''' No matter which way you look at it, our scrutineers have counted out the remaining buns and adjudged the winner of this year's Competitive Eater Championship as none other than &mdash; Contestant (Trailblazer)!
+::::::'''Food Stall Owner:''' Here's your prize. It's all yours! And we'll see you next year for the next annual contest.
+::::;(If {{F|MissionCV-4040214-undefined}} is not equal to 11)
+::::::'''Food Stall Owner:''' I can tell you've given it absolutely everything you've got... So I've made a decision &mdash; to award you a consolation prize as encouragement!
+::::::'''Food Stall Owner:''' There's an old Xianzhou saying: "No arrogance in victory, no despair in defeat!" It doesn't matter that you lost this year's contest. Just remember to come back and check out next year's contest!
+:::::----
+::::<pre>{
+	"$type": "RPG.GameCore.SetMissionCustomValue",
+	"SubmissionID": 404021405,
+	"MissionCustomValue": {
+		"Index": 1,
+		"ValidValueParamList": [
+			1,
+			2,
+			3
+		]
+	},
+	"CustomValue": 1
+}</pre>
+:::{{DIcon|Arrow}} I can't eat anymore...
+::::All are shocked to hear these words. Nobody seemed to think that this weakling of an Outworlder would capitulate so quickly, before anyone else has the chance to get slightly full.
+::::The girl is even more pathetic &mdash; her uneaten buns drop straight out of her hands onto the ground. For a split second, you don't know whether to feel sorry for the girl, for the bun &mdash; or for yourself.
+::::'''Food Stall Owner:''' ...Then (Trailblazer) has withdrawn from the contest!
+:::;(If {{F|MissionCV-4040214-undefined}} is equal to 11)
+:::::'''Food Stall Owner:''' Um... Even though Contestant (Trailblazer) couldn't handle the amount of food and ended up passing out...
+:::::'''Food Stall Owner:''' ...The other two contestants also pulled out right at the same time due to their physical discomfort. Have you ever heard of anything like it?
+:::::'''Food Stall Owner:''' No matter which way you look at it, our scrutineers have counted out the remaining buns and adjudged the winner of this year's Competitive Eater Championship as none other than &mdash; Contestant (Trailblazer)!
+:::::'''Food Stall Owner:''' Here's your prize. It's all yours! And we'll see you next year for the next annual contest.
+:::;(If {{F|MissionCV-4040214-undefined}} is not equal to 11)
+:::::'''Food Stall Owner:''' I didn't expect... This year's Competitive Eater Championship would finish so abruptly... As the boss here, I'm harboring some really complex emotions...
+:::::'''Food Stall Owner:''' But... I've made a decision &mdash; to award you a consolation prize as encouragement!
+:::::'''Food Stall Owner:''' There's an old Xianzhou saying: "No arrogance in victory, no despair in defeat!" It doesn't matter that you lost this year's contest. Just remember to come back and check out next year's contest!
+::::----
+:::<pre>{
+	"$type": "RPG.GameCore.SetMissionCustomValue",
+	"SubmissionID": 404021405,
+	"MissionCustomValue": {
+		"Index": 1,
+		"ValidValueParamList": [
+			1,
+			2,
+			3
+		]
+	},
+	"CustomValue": 1
+}</pre>
+::{{DIcon|Exit}} Not yet...
+:::'''Food Stall Owner:''' No worries! We'll start the Combat phase once you're good and ready.
+:'''Food Stall Owner:''' Tuskpir wraps! Songlotus cakes! Come get 'em while they're hot!
+::'''Food Stall Owner:''' Greetings. Would you like some cheap but delicious Luofu snacks?
+:<pre>{
+	"$type": "RPG.GameCore.ShowMenu"
+}</pre>
+;(Unused &mdash; ALL_TALK_END)
+:----
 {{Dialogue End}}
 
-===(Optional) Head to Starskiff Haven and buy Immortal's Delight for Pom-Pom.===
+===(Optional) Head to Starskiff Haven and buy Immortal's Delight for Pom-Pom.{{subst:void|<!--405003806-->}}===
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Yujin)
+:'''Yujin:''' Do tell!
+:{{DIcon|Talk}} What's the difference between haute couture and ready-made?
+::'''Yujin:''' Haute couture clothings are premium items that are custom-tailored. The tailor personally handcrafts everything and quantity is limited. Every customer's size must be adhered to, with finer adjustments made to the completed article after.
+::'''Yujin:''' Our hauteur lines are all styled in Xianzhou designs. We're not the bandwagon type &mdash; each series is specially themed and packaged.
+::'''Yujin:''' Ready-made clothes cost much less than haute couture clothes. Plebeians, if you will, and can't be considered trendy. Tailors will slap on out-of-style patterns on these and hail them as "classics" of the heyday.
+::'''Yujin:''' Sometimes, they don't even bother with any designs, and plaster the clothes with their shop logo. And they're a hit with Outworlders for some reason! I hear used clothes have been auctioned off for ridiculous prices... It's an affront to this industry, I say!
+:;(Return to previous option selection)
+:{{DIcon|Talk}} Do you have any outfits to recommend?
+::'''Yujin:''' Pick a simple style, and never blindly go for the complicated. Our shop's advice is to stay away from the gaudy when buying haute couture pieces. Get the more obscure ones instead. That is the style befitting Xianzhou's elegance.
+::'''Yujin:''' To elaborate, when it comes to picking fabric and color, pick items that are skin-friendly and of neutral tones, such as wool-made ones, in colors like dark, brown, and almond.
+::'''Yujin:''' A true mark of a Xianzhou native is to buy the right one, not the most expensive one.
+:;(Return to previous option selection)
+:{{DIcon|Talk}} Has Jing Yuan really visited your shop?
+::'''Yujin:''' Haha, the general has visited before, but it was a... wayward occasion.
+::'''Yujin:''' Madam Qingzu of the Seat of Divine Foresight previously made a tailor's appointment with us, but when General Jing Yuan arrived, he just picked the cheapest ready-made clothes before trying to leave.
+::'''Yujin:''' Persuaded by Madam Qingzu, he reluctantly let our tailors measure him. But while we were fussing over him, the general closed his eyes and fell asleep...
+::'''Yujin:''' We arranged for the Seat's soldiers to help the general head back, but as soon as those Cloud Knights arrived, the general became energized and quickly left, as if the weariness were never there.
+::'''Yujin:''' I remember... I think he ordered dress attire for formal occasions.
+:;(Return to previous option selection)
+:{{DIcon|Exit}} Forget about it. I'll come back next time.
+::'''Yujin:''' It is Cloudbreadth Sleeves' honor to have entertained an esteemed guest such as yourself! Do let us know in advance the next time you come. We will close up the store just to specially welcome you!
+
+;(Talk to Qingyue)
+:'''Qingyue:''' Alright babe, what else would you like to ask?
+:{{DIcon|Talk}} What actually is a jade abacus then?
+::'''Qingyue:''' Darling, to help you understand this as an Outworlder, you can think of a jade abacus as a kind of jade computer unique to Xianzhou.
+::'''Qingyue:''' Every jade abacus contains a precise and meticulous engraved circuit and uses that to process complex calculations &mdash; just like the superconductor circuit boards common in your world.
+::'''Qingyue:''' After the Jade Decipher Workshop from the Artisanship Commission developed their Standards for Manufacture of Civilian-Purpose Jade Abaci, various brands have sprung onto the market &mdash; but I still recommend the Auspicious as the best of the lot.
+:;(Return to previous option selection)
+:{{DIcon|Talk}} You also uploading videos online?
+::'''Qingyue:''' Haha, all the hottest shopkeepers are making videos these days. Only old antique dealers leave things up to luck, desperate for passers-by to notice them...
+::'''Qingyue:''' Besides, these are adverts for my store. People like my videos, trust my products, and then come into the store to buy a jade abacus... that's how the video economy works.
+:;(Return to previous option selection)
+:{{DIcon|Talk}} I never expected jade jewelry to be so popular...
+::'''Qingyue:''' Babe, please forgive me for speaking so frankly. It's not that jade jewelry is so popular here. It's just that Outworlders have an antiquated understanding of jadeware.
+::'''Qingyue:''' Here aboard Xianzhou, these jade items are not just beautiful stones.
+:;(Return to previous option selection)
+:{{DIcon|Talk}} I sense that you're a real fiend for tech...
+::'''Qingyue:''' Ah, there aren't many people these days who can keep up with my sense of fashion. People around me are all out-of-touch. I often think that out of the masses of people who passes Starskiff Haven, only I understand how powerful the new Auspicious' algorithm is...
+::'''Qingyue:''' You know, everyone aboard Xianzhou looks really young at first glance, but as soon as they open their mouths to speak, you instantly realize just how moldy they are from the inside out. Tsk, I can't stand it.
+::'''Qingyue:''' On Xianzhou, aging has nothing to do with your age. If your mind is old, then you truly are old.
+:;(Return to previous option selection)
+:{{DIcon|Exit}} I'll consider it.
+::'''Qingyue:''' Have a good think about it, sweetie. You're welcome back, any time.
+
+;(Talk to Mengming)
+:'''Mengming:''' Ah, you spotted that we're rather quiet right now. Alright, if there are any aspects of etiquette that you don't understand, ask me, and I'll pick your brains about doing business.
+:{{DIcon|Talk}} What are the rules in tea appreciation?
+::'''Mengming:''' It would take forever to explain all the rules. I'll just talk about tea selection and water retention for now.
+::'''Mengming:''' Speaking of tea selection, take our Hunter Maofeng tea as an example. The Sleepless Earl only picks the most precious buds, usually long, pointed, and covered in fine hairs.
+::'''Mengming:''' As for water retention, tea merchants always say that mineral water is the best &mdash; but the clear and ancient water in Scalegorge Waterscape is the best. There's no better water for tea and alchemy than this.
+::'''Mengming:''' I'm also only learning and invite you to call me out if anything I've said is wrong.
+:;(Return to previous option selection)
+:{{DIcon|Talk}} What made you want to open up a teahouse here?
+::'''Mengming:''' My parents opened this teahouse, not me. The Sleepless Earl has been on Starwatcher Avenue for over four hundred years!
+::'''Mengming:''' Dad wanted to be near to the port, with all the tired and thirsty people nearby. It was always sure to be a booming business, and we owe all our successes to the kindness of our customers.
+:;(Return to previous option selection)
+:{{DIcon|Talk}} You are the model of a good young business owner.
+::'''Mengming:''' I'm... not young! I'm just at the right age to take over the family business. People may always say we foxians are naturals when it comes to business, but really it's all practice.
+::'''Mengming:''' Dad said that he wanted to test me, so he left me the teahouse and wandered off traveling with mom. I'm still a long way off from being proficient in doing business.
+::'''Mengming:''' Even now, I still have to ask Mr. Xiyan lots of questions. If you're willing to support me, please be generous with your criticism.
+:;(Return to previous option selection)
+:{{DIcon|Exit}} I don't have any other questions.
+::'''Mengming:''' It's okay. Come back when you've got more time to spare.
+
+;(Talk to Gao Tang)
+:'''Gao Tang:''' Oh, ask away. I have much to share, as long as it's about food.
+:{{DIcon|Talk}} Is it true? That there's no good food in the Starskiff Haven?
+::'''Gao Tang:''' Strictly speaking, Starskiff Haven's food is enough to sate your hunger. Whether it tastes good is another matter.
+::'''Gao Tang:''' Without stringent selection nor prudent handling of ingredients, I refuse to accept food that has been made haphazardly.
+::'''Gao Tang:''' But don't worry. Starskiff Haven's food does not represent Xianzhou's culinary landscape. You can still find restaurants dedicated to the craft here.
+::'''Gao Tang:''' If nothing else, once you've tried the dishes at the Garden of Gourmet, I'm sure you will lose interest in this subpar fare.
+:;(Return to previous option selection)
+:{{DIcon|Talk}} What kind of food does the Garden of Gourmet serve?
+::'''Gao Tang:''' The restaurant's been making sturgeons recently. This type of fish returns once every fifty years, and is a key ingredient in "Five Lords of Anhe River."
+::'''Gao Tang:''' In the Garden of Gourmet, we extract the three crunchiest bones from the tail, boil them in a broth of myriad herbs, then grill them using fresh goat's fat paste. At the final stage, we slow fry them till the meaty bones are caramelized and crisp.
+::'''Gao Tang:''' Any step that's not up to snuff in this process, and I'll dump the dish entirely. This is also why the Garden of Gourmet has no menu &mdash; we only serve one table a day.
+::'''Gao Tang:''' No such thing as food too fine, or meat too minced. Those of Xianzhou have lived for a thousand years, we must be meticulous with what goes in our mouths.
+:;(Return to previous option selection)
+:{{DIcon|Talk}} You speak with such passion when discussing cuisine.
+::'''Gao Tang:''' We are all, in some way, shaped by our food. You wouldn't want to be made shoddily, would you?
+::{{DIcon|Arrow}} I wouldn't.
+:::'''Gao Tang:''' I thought so.
+:::'''Gao Tang:''' I notice you are an Outworlder. Your food tapestry must be limited, so you must make wiser choices.
+:::'''Gao Tang:''' To be strict with what you eat is to be strict with the "reason why we are people."
+::;(Return to previous option selection)
+::{{DIcon|Arrow}} I'm fine either way.
+:::'''Gao Tang:''' Either way?
+:::'''Gao Tang:''' I notice you are an Outworlder. Your food tapestry must be limited, so you must make wiser choices.
+:::'''Gao Tang:''' To be strict with what you eat is to be strict with the "reason why we are people."
+::;(Return to previous option selection)
+::{{DIcon|Arrow}} I'm not exactly a role model to begin with.
+:::'''Gao Tang:''' I worry for you.
+:::'''Gao Tang:''' I notice you are an Outworlder. Your food tapestry must be limited, so you must make wiser choices.
+:::'''Gao Tang:''' To be strict with what you eat is to be strict with the "reason why we are people."
+::;(Return to previous option selection)
+:{{DIcon|Exit}} I'll ask you about something else next time.
+::'''Gao Tang:''' May we meet again.
 {{Dialogue End}}
 
-===Give the Flaming Potent Tea you bought to Pom-Pom.===
+===Give the Flaming Potent Tea you bought to Pom-Pom.{{subst:void|<!--405003807-->}}===
 {{Mission Description|type=adventure|location=Parlor Car|update|After placing yourself in Pom-Pom's shoes and giving the choices a lot of thought, you have bought the perfect drink (in your opinion) for Pom-Pom. What would Pom-Pom's reaction be when they drink it? Would Pom-pom smack their lips? You find yourself eagerly anticipating Pom-Pom's response...}}
 {{Dialogue Start}}
-:{{tx}}
+
 {{Dialogue End}}
 
-===Give the steamed puffergoat milk you bought to Pom-Pom.===
+===Give the steamed puffergoat milk you bought to Pom-Pom.{{subst:void|<!--405003808-->}}===
 {{Dialogue Start}}
-:{{tx}}
+
 {{Dialogue End}}
 
-===Give the Immortal's Delight you bought to Pom-Pom.===
+===Give the Immortal's Delight you bought to Pom-Pom.{{subst:void|<!--405003809-->}}===
 {{Dialogue Start}}
-:{{tx}}
+
 {{Dialogue End}}
 
 ==Other Languages==

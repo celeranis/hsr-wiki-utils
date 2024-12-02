@@ -1,23 +1,27 @@
 import { existsSync } from 'fs';
 import config from '../config.json' with { 'type': 'json' };
+import { Event } from './Event.js';
 import { Item, ItemList } from './Item.js';
 import { wikiTitle, wikiTitleLink } from './Shared.js';
 import { textMap } from './TextMap.js';
 import { ActDialogueTree, DialogueTaskEntry } from './dialogue/Dialogue.js';
 import { BaseDialogueTask } from './dialogue/DialogueBase.js';
+import type { EnvData } from './dialogue/Environment.js';
 import { FinishPerformanceTask } from './dialogue/tasks/Performance.js';
-import { Act } from './files/Dialog.js';
 import { getExcelFile, getFile } from './files/GameFile.js';
 import { ItemReference } from './files/Item.js';
-import { FinishAction, InternalMissionInfo, InternalSubMissionInfo, type InternalFateAtlasEntry, type InternalMainMission, type InternalMissionChapter, type InternalMissionType, type InternalSubMission } from './files/Mission.js';
+import { FinishAction, InternalMissionInfo, InternalSubMissionInfo, MainMissionScheduleData, type InternalFateAtlasEntry, type InternalMainMission, type InternalMissionChapter, type InternalMissionType, type InternalSubMission } from './files/Mission.js';
+import { Act } from './files/graph/Dialog.js';
 import { Area, AreaFloor } from './maps/Area.js';
-import type { NPCDialogue, NPCDialogueTree } from './maps/NPCDialogue.js';
+import type { LevelGroup, LevelGroupDialogueTree } from './maps/LevelGroup.js';
+import type { BaseMapDialogue, NPCDialogueTree } from './maps/NPCDialogue.js';
 import { DialogueNode } from './util/AbstractDialogueTree.js';
 
-const data = await getExcelFile<InternalMainMission>('ExcelOutput/MainMission.json', 'MainMissionID')
-const stepData = await getExcelFile<InternalSubMission>('ExcelOutput/SubMission.json', 'SubMissionID')
-const fatesAtlas = await getExcelFile<InternalFateAtlasEntry>('ExcelOutput/ChronicleConclusion.json', 'MissionID')
-const chapterData = await getExcelFile<InternalMissionChapter>('ExcelOutput/MissionChapterConfig.json', 'ID')
+export const MainMission = await getExcelFile<InternalMainMission>('MainMission.json', 'MainMissionID')
+export const SubMission = await getExcelFile<InternalSubMission>('SubMission.json', 'SubMissionID')
+export const ChronicleConclusion = await getExcelFile<InternalFateAtlasEntry>('ChronicleConclusion.json', 'MissionID')
+export const MissionChapterConfig = await getExcelFile<InternalMissionChapter>('MissionChapterConfig.json', 'ID')
+export const MainMissionSchedule = await getExcelFile<MainMissionScheduleData>('MainMissionSchedule.json', 'MainMissionID')
 
 export type MissionType = 'Trailblaze' | 'Adventure' | 'Companion' | 'Continuance' | 'Daily'
 const missionTypeMap: Record<InternalMissionType, MissionType> = {
@@ -29,24 +33,30 @@ const missionTypeMap: Record<InternalMissionType, MissionType> = {
 }
 
 export class Mission {
-	static readonly missionData = data
-	static readonly fatesAtlasData = fatesAtlas
-	static readonly stepData = stepData
+	static readonly missionData = MainMission
+	static readonly fatesAtlasData = ChronicleConclusion
+	static readonly stepData = MissionChapterConfig
 	name: string
 	name_hash: number
 	type: MissionType
 	id: number
 	description?: string
 	
+	event?: Event
+	
 	constructor(public data: InternalMainMission) {
 		this.name_hash = data.Name.Hash
 		this.name = textMap.getText(data.Name)
 		this.type = missionTypeMap[data.Type] || data.Type
 		this.id = data.MainMissionID
-		this.description = textMap.getText(fatesAtlas[data.MainMissionID]?.MissionConclusion)
+		this.description = textMap.getText(ChronicleConclusion[data.MainMissionID]?.MissionConclusion)
+		
+		if (MainMissionSchedule[this.id]?.ActivityModuleID) {
+			this.event = Event.fromActivityModuleId(MainMissionSchedule[this.id].ActivityModuleID)
+		}
 	}
 	
-	private charset: Set<string> = new Set<string>(['Trailblazer'])
+	charset: Set<string> = new Set<string>(['Trailblazer'])
 	
 	get characters(): string[] {
 		return [...this.charset.values()]
@@ -69,16 +79,16 @@ export class Mission {
 		}
 	}
 	
-	link(): string {
+	link(noChapter?: boolean): string {
 		if (!this.name) {
-			return `{{cx}}<!--Hidden Exploration Objective ID ${this.id}-->`
+			return `{{cx}}<!--Hidden Mission ID ${this.id}-->`
 		}
-		return `{{Mission|${this.name}}}`
+		return noChapter ? `{{Mission|${this.pagetitle}|showChapter=0}}` : `{{Mission|${this.pagetitle}}}`
 	}
 	
 	plainLink(): string {
 		if (!this.name) {
-			return `{{cx}}<!--Hidden Exploration Objective ID ${this.id}-->`
+			return `{{cx}}<!--Hidden Mission ID ${this.id}-->`
 		}
 		return `[[${this.displayType}]] ''${wikiTitleLink(this.name, 'mission')}''`
 	}
@@ -101,50 +111,78 @@ export class Mission {
 		const missionInfo = await this.getMissionInfo()
 		if (missionInfo) {
 			// preferred method
-			const unsortedSteps: MissionStep[] = missionInfo.SubMissionList.map(info => new MissionStep(stepData[info.ID], info))
+			const unsortedSteps: MissionStep[] = missionInfo.SubMissionList.map(info => new MissionStep(SubMission[info.ID], this, info))
 			
 			if (!sortedWithDialogue) return unsortedSteps
 			
-			const dialogue: (MissionDialogueTree | NPCDialogueTree)[] = []
+			const dialogue: (MissionDialogueTree | NPCDialogueTree | LevelGroupDialogueTree)[] = []
 			for (const step of unsortedSteps) {
-				const thisDialogue = (await step.loadDialogue())?.optimize()
+				const thisDialogue = await step.loadDialogue()
 				if (thisDialogue) {
 					dialogue.push(thisDialogue)
 				}
-				// for (const npcDialogue of await step.getMapDialogue()) {
-				// 	dialogue.push((await npcDialogue.loadDialogue()).optimize())
-				// }
+				for (const npcDialogue of await step.getMapDialogue()) {
+					const npcd = await npcDialogue.loadDialogue(thisDialogue?.environment ?? { main_mission_id: this.id, sub_mission_id: step.id })
+					if (!npcd) continue
+					dialogue.push(npcd)
+				}
 			}
 			await ActDialogueTree.crossResolveStrings(dialogue)
 			
-			const sortedSteps: MissionStep[] = []
-			const addSteps = (steps: MissionStep[]) => {
-				for (const step of steps) {
-					if (step && !sortedSteps.includes(step)) {
-						sortedSteps.push(step)
-					}
-				}
-				for (const step of steps) {
-					addSteps(unsortedSteps.filter(ustep => ustep.start_condition?.type == 'AnySequence' && ustep.start_condition.param_list_int!.includes(step.id) && !sortedSteps.includes(step)))
-				}
+			for (const tree of dialogue) {
+				tree.optimize()
 			}
 			
-			addSteps(missionInfo.StartSubMissionList.map(id => unsortedSteps.find(step => step.id == id)).filter(s => s != undefined))
-			addSteps(unsortedSteps.filter(step => step.start_condition!.type == 'Auto'))
+			const sortedSteps: MissionStep[] = []
+			const addSteps = (steps: MissionStep[], why: string | ((step: MissionStep) => string)) => {
+				if (!steps.length) return
+				
+				for (const step of steps) {
+					if (step && !sortedSteps.includes(step)) {
+						step.order_reason = typeof why == 'function' ? why(step) : why
+						sortedSteps.push(step)
+						
+						if (step.finish_condition?.type == 'SubMissionFinishCnt') {
+							addSteps(
+								unsortedSteps.filter(ustep => 
+									step.finish_condition!.param_list_int!.includes(ustep.id)
+									&& !sortedSteps.includes(ustep),
+								),
+								`${typeof why == 'function' ? why(step) : why}-${step.id}:list`
+							)
+						}
+					}
+				}
+
+				addSteps(
+					unsortedSteps.filter(ustep =>
+						ustep.start_condition?.type == 'AnySequence'
+						&& ustep.start_condition.param_list_int!.find(id => steps.find(step => step.id == id))
+						&& !sortedSteps.includes(ustep)
+					),
+					(ustep => {
+						const fstep = steps.find(step => ustep.start_condition?.param_list_int!.find(id => step.id == id))
+						return `${fstep?.order_reason}-${fstep?.id}:chain`
+					})
+				)
+			}
+			
+			addSteps(missionInfo.StartSubMissionList.map(id => unsortedSteps.find(step => step.id == id)).filter(s => s != undefined), 'startids')
+			addSteps(unsortedSteps.filter(step => step.start_condition!.type == 'Auto'), 'auto')
 
 			for (const step of unsortedSteps.toSorted((s0, s1) => (s0.progress ?? 0) - (s1.progress ?? 0))) {
 				if (!missionInfo.FinishSubMissionList.includes(step.id)) {
-					addSteps([step])
+					addSteps([step], 'byid')
 				}
 			}
 
-			addSteps(missionInfo.FinishSubMissionList.map(id => unsortedSteps.find(step => step.id == id)).filter(s => s != undefined))
+			addSteps(missionInfo.FinishSubMissionList.map(id => unsortedSteps.find(step => step.id == id)).filter(s => s != undefined), 'finish')
 			
 			return sortedSteps
 		} else {
 			const steps: MissionStep[] = []
 			// dumber method when MissionInfo is unavailabile
-			let stepList = Object.values(stepData).filter(data =>
+			let stepList = Object.values(SubmitEvent).filter(data =>
 				data.SubMissionID.toString().startsWith(this.id.toString())
 				&& data.SubMissionID.toString().length - this.id.toString().length <= 2
 			)
@@ -154,7 +192,7 @@ export class Mission {
 			let index = 1
 
 			for (const currentStep of stepList) {
-				steps.push(new MissionStep(currentStep))
+				steps.push(new MissionStep(currentStep, this))
 				index++
 			}
 
@@ -247,14 +285,14 @@ export class Mission {
 	getChapterName(): string | undefined {
 		if (!this.data.ChapterID) return
 		
-		const name = textMap.getText(Object.values(chapterData).find(chap => chap.ID == this.data.ChapterID)?.ChapterName)
+		const name = textMap.getText(Object.values(MissionChapterConfig).find(chap => chap.ID == this.data.ChapterID)?.ChapterName)
 		return wikiTitle(name + ((this.type == 'Companion' && name != 'Slices of Life Before the Furnace' && name != 'Age of Awakening' && name != 'Cosmic Splendor and Merited Praises') ? ' (Companion Mission Chapter)' : ''))
 	}
 	
 	getChapterLink(): string | undefined {
 		if (!this.data.ChapterID) return
 		
-		const name = wikiTitle(textMap.getText(Object.values(chapterData).find(chap => chap.ID == this.data.ChapterID)?.ChapterName))
+		const name = wikiTitle(textMap.getText(Object.values(MissionChapterConfig).find(chap => chap.ID == this.data.ChapterID)?.ChapterName))
 		
 		if (this.type == 'Companion' && name != 'Slices of Life Before the Furnace' && name != 'Age of Awakening' && name != 'Cosmic Splendor and Merited Praises') {
 			return `[[${wikiTitle(name, 'mission')} (Companion Mission Chapter)|${name}]]`
@@ -309,6 +347,10 @@ export class MissionStep {
 	dialogue?: MissionDialogueTree
 	finish_actions?: FinishAction[]
 	
+	group_ids?: number[]
+	
+	order_reason?: string
+	
 	async getArea() {
 		return this.plane_id ? await Area.fromId(this.plane_id) : undefined
 	}
@@ -317,11 +359,12 @@ export class MissionStep {
 		return this.floor_id && this.plane_id ? await AreaFloor.fromId(this.plane_id, this.floor_id) : undefined
 	}
 	
+	groups?: LevelGroup[]
 	async getGroups() {
-		return (await this.getFloor())?.loadSubMissionGroups(this.id) ?? []
+		return this.groups ??= await (await this.getFloor())?.loadSubMissionGroups(this.id, this.group_ids) ?? []
 	}
 	
-	constructor(data?: InternalSubMission, info?: InternalSubMissionInfo) {
+	constructor(data?: InternalSubMission, public main_mission?: Mission, info?: InternalSubMissionInfo) {
 		this.id = data?.SubMissionID ?? info?.ID!
 		this.name = textMap.getText(data?.TargetText)
 		this.description = textMap.getText(data?.DescrptionText)
@@ -337,16 +380,25 @@ export class MissionStep {
 			
 			this.json_path = info.MissionJsonPath
 			this.finish_actions = info.FinishActionList
+			
+			this.group_ids = info.GroupIDList ?? []
+			if (info.WayPointGroupID && info.WayPointFloorID == this.floor_id && !this.group_ids.includes(info.WayPointGroupID)) {
+				this.group_ids.push(info.WayPointGroupID)
+			}
 		}
 	}
 	
 	async loadDialogue() {
 		if (!this.json_path || this.id == 202040105 || this.id == 404011001) return
-		return this.dialogue ??= await MissionDialogueTree.fromStep(this)
+		const tree = this.dialogue ??= await MissionDialogueTree.fromStep(this)
+		if (tree && this.main_mission) {
+			tree.environment.characters.forEach(chr => this.main_mission?.charset.add(chr == '(Trailblazer)' ? 'Trailblazer' : chr))
+		}
+		return tree
 	}
 	
 	async getMapDialogue() {
-		const dialogue: NPCDialogue[] = []
+		const dialogue: (BaseMapDialogue | LevelGroup)[] = []
 		const groups = await this.getGroups()
 		for (const group of groups) {
 			const npcDialogueList = await group.getDialogueForMission(this.id)
@@ -390,6 +442,8 @@ export class MissionDialogueTree extends ActDialogueTree {
 	
 	protected constructor(public act: Act, public step: MissionStep) {
 		super(act, `submission_${step.id}`)
+		this.environment.main_mission_id = step.main_mission?.id
+		this.environment.sub_mission_id = step.id
 	}
 
 	getCharacters() {
@@ -402,9 +456,10 @@ export class MissionDialogueTree extends ActDialogueTree {
 		return [...participants]
 	}
 	
-	static async fromStep(step: MissionStep) {
+	static async fromStep(step: MissionStep, env?: EnvData) {
 		const actData = await getFile<Act>(step.json_path!)
 		const tree = new this(actData, step)
+		tree.environment.applyData(env)
 		tree.root = await tree.processAct(actData)
 		return tree
 	}

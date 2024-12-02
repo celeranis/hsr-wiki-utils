@@ -11,7 +11,7 @@ PageTitle=#Exhibit Collection: Portrait of the Supreme Guardian#
 |chapter       = Everwinter City Museum Ledger of Curiosities
 |requirements  = {{subst:void|<!--Unknown: {"Type":"Manual"}-->}}
 |summary       = The Belobog History and Culture Museum is preparing for its grand opening. Uldan is collecting appropriate exhibits to ensure a successful opening.<br />You helped Bronya the Supreme Guardian in completing the exhibit label. Now the portraits of the previous Supreme Guardians can be seen in the museum.
-|characters    = Trailblazer
+|characters    = Bronya; Silvermane Guard; Trailblazer; Uldan
 |startLocation = [[Jarilo-VI]] - [[History and Culture Museum]]
 |world         = Jarilo-VI
 |area          = History and Culture Museum
@@ -35,15 +35,278 @@ PageTitle=#Exhibit Collection: Portrait of the Supreme Guardian#
 ==Dialogue==
 {{Stub Dialogue}}
 
-===Find out more about the situation from Uldan===
+===Find out more about the situation from Uldan{{subst:void|<!--800122601-->}}===
 {{Mission Description|type=adventure|location=History and Culture Museum|Belobog's History and Culture Museum will be opening soon. Uldan is collecting appropriate exhibits to ensure a successful opening.<br />Supreme Guardian Bronya seems to have something to tell you. Go meet with her.}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Bronya)
+:'''Bronya:''' We meet again, (Trailblazer). Thank you for agreeing to this meeting on such short notice.
+::{{DIcon|Arrow}} Is there anything that I can do for you?
+::{{DIcon|Arrow}} Oh, it's nothing, I was here anyway...
+:::'''Bronya:''' That is fate, then &mdash; it seems that this portrait is destined to require your opinion in order to be fully completed...
+::'''Bronya:''' To commemorate my mother, the Architects and I agree that a portrait should be created for her and sent to the museum for the Belobogians to remember her.
+::'''Bronya:''' However, if the portrait is to be added as an exhibit to the museum, it will need a brief introduction.
+::'''Bronya:''' Although we have already put out the narrative that Madam Cocolia has sacrificed herself in the war, we still want to hear your opinion &mdash; the Hero of Belobog who saved the city.
+::{{DIcon|Arrow}} Leave it to me.
+:::'''Bronya:''' ...I'm glad to hear that.
+::{{DIcon|Arrow}} I'm afraid I'm not up to the task
+:::'''Bronya:''' ...You don't have to be modest. I trust your instincts. As for how to organize such language properly, just leave it to me.
+::'''Bronya:''' So let's start. First is the story of mother before her reign...
+::'''Bronya:''' It is said that my mother, like me, was also selected from the barren underground and brought to the Overworld. At that time, she was curious about everything, especially the flowers that she couldn't see in the Underworld. In her spare time, she would always go to the florist.
+::'''Bronya:''' Later, she became the top student at the Belobog Military Academy, graduating at the top of her class. People say she had the most intelligent mind in all of Belobog.
+::'''Bronya:''' After that, mother embarked on her career in governance, and with her charismatic personality, gained the support of the entire city. Under her supervision, the Silvermane Guards were finally able to counterattack and reclaim the Fragmentum... though it comes at too high a cost.
+::'''Bronya:''' What do you think... How should we describe mother's early years in the introduction?
+::{{DIcon|Talk}} Focus on her arrival at the Overworld.
+:::'''Bronya:''' In that case...
+:::'''Bronya:''' "Supreme Guardian Cocolia spent her childhood in the distant Underworld, where she showed curiosity and love for all things - her favorite flower being First Snow, much like her own noble character."
+:::'''Bronya:''' Do you think this description is appropriate, (Trailblazer)?
+:::{{DIcon|Arrow}} Very much so.
+::::'''Bronya:''' Got it. So, next up, mother's story after she has taken power...
+:::<pre>{
+	"$type": "RPG.GameCore.SetTextJoinValue",
+	"TextJoinID": 41,
+	"Value": "1"
+}</pre>
+::::'''Bronya:''' Under mother's rule, the most well-known decree was the "blockade of the Overworld and the Underworld." On one hand, this measure secured Belobog's rear, but it also resulted in many unnecessary sacrifices, causing much controversy among the people.
+::::'''Bronya:''' However, she never forgot her dream of healing the world. But due to certain reasons, she suffered continued torment, both mentally and physically, which eventually led to her becoming the unfeeling and indifferent person you knew.
+::::'''Bronya:''' Nevertheless, mother still regarded me as her dearest daughter, perhaps leaving what little warmth she had left for me, instead of her people...
+::::'''Bronya:''' ...I'm sorry. I may have injected too many personal feelings.
+::::'''Bronya:''' Let's get back on topic. How do you think we should describe mother's experiences during her rule in the introduction?
+::::{{DIcon|Talk}} Emphasize the blockade policy.
+:::::'''Bronya:''' In that case...
+:::::'''Bronya:''' "In the middle of her reign, Supreme Guardian Cocolia issued the well-known order for the blockade. At that time, she firmly believed that only this action could secure Belobog's rear, but it also caused too many brutal and meaningless sacrifices &mdash; the heartbreak was not unfelt universally."
+:::::'''Bronya:''' Do you think this description is appropriate, (Trailblazer)?
+:::::{{DIcon|Return}} I would like to reconsider.
+::::::'''Bronya:''' Of course. We have plenty of time.
+:::::;(Return to previous option selection)
+::::{{DIcon|Talk}} Emphasize on her change in personality.
+:::::'''Bronya:''' In that case...
+:::::'''Bronya:''' "But the burden on her shoulders was too heavy. She tried to weave the fate of Everwinter City from chaos, but was crushed by it. She gradually became ruthless and indifferent, but people still rallied closely around her."
+:::::'''Bronya:''' Do you think this description is appropriate, (Trailblazer)?
+:::::{{DIcon|Return}} I would like to reconsider.
+::::::'''Bronya:''' Of course. We have plenty of time.
+:::::;(Return to previous option selection)
+::::{{DIcon|Talk}} Emphasize her motherly love.
+:::::'''Bronya:''' But... don't you think that might be a bit too personal?
+:::::'''Bronya:''' ...No, I trust your judgment. Let me try and organize the language.
+:::::'''Bronya:''' "Though the Supreme Guardian lost before her cruel destiny and the light of humanity eroded away, she still tried her best to give whatever gentleness she had to the people and help them toward salvation, just like how she treated her daughter."
+:::::'''Bronya:''' Do you think this description is appropriate, (Trailblazer)?
+:::::{{DIcon|Return}} I would like to reconsider.
+::::::'''Bronya:''' Of course. We have plenty of time.
+:::::;(Return to previous option selection)
+::::{{DIcon|Talk}} I would like you to repeat her story...
+:::::'''Bronya:''' No problem. I will repeat it to you.
+:::::'''Bronya:''' Under mother's rule, the most well-known decree was the "blockade of the Overworld and the Underworld." On one hand, this measure secured Belobog's rear, but it also resulted in many unnecessary sacrifices, causing a lot of controversy among the people.
+:::::'''Bronya:''' Mother never forgot her dream of healing the world. But due to certain reasons, she suffered continued torment, both mentally and physically, which eventually led to her becoming the unfeeling and indifferent person you know today.
+:::::'''Bronya:''' Nevertheless, mother still regarded me as her dearest daughter, perhaps leaving what little warmth she had left for me, instead of her people...
+:::::'''Bronya:''' ...I'm sorry. I may have injected too many personal feelings.
+:::::'''Bronya:''' Let's get back on topic. How do you think we should describe mother's experiences during her rule in the introduction?
+::::;(Return to previous option selection)
+:::{{DIcon|Return}} I would like to reconsider.
+::::'''Bronya:''' Of course. We have plenty of time.
+:::;(Return to previous option selection)
+::{{DIcon|Talk}} Focus on her experience while studying.
+:::'''Bronya:''' In that case...
+:::'''Bronya:''' "Supreme Guardian Cocolia showed remarkable knowledge and ability during her studies. Belobog firmly believed that such an intelligent mind would pick up the last torch of civilization and lead people through the dark and boundless snow curtain."
+:::'''Bronya:''' Do you think this description is appropriate, (Trailblazer)?
+:::{{DIcon|Arrow}} Very much so.
+::::'''Bronya:''' Got it. So, next up, mother's story after she has taken power...
+:::<pre>{
+	"$type": "RPG.GameCore.SetTextJoinValue",
+	"TextJoinID": 41,
+	"Value": "2"
+}</pre>
+::::'''Bronya:''' Under mother's rule, the most well-known decree was the "blockade of the Overworld and the Underworld." On one hand, this measure secured Belobog's rear, but it also resulted in many unnecessary sacrifices, causing much controversy among the people.
+::::'''Bronya:''' However, she never forgot her dream of healing the world. But due to certain reasons, she suffered continued torment, both mentally and physically, which eventually led to her becoming the unfeeling and indifferent person you knew.
+::::'''Bronya:''' Nevertheless, mother still regarded me as her dearest daughter, perhaps leaving what little warmth she had left for me, instead of her people...
+::::'''Bronya:''' ...I'm sorry. I may have injected too many personal feelings.
+::::'''Bronya:''' Let's get back on topic. How do you think we should describe mother's experiences during her rule in the introduction?
+::::{{DIcon|Talk}} Emphasize the blockade policy.
+:::::'''Bronya:''' In that case...
+:::::'''Bronya:''' "In the middle of her reign, Supreme Guardian Cocolia issued the well-known order for the blockade. At that time, she firmly believed that only this action could secure Belobog's rear, but it also caused too many brutal and meaningless sacrifices &mdash; the heartbreak was not unfelt universally."
+:::::'''Bronya:''' Do you think this description is appropriate, (Trailblazer)?
+:::::{{DIcon|Return}} I would like to reconsider.
+::::::'''Bronya:''' Of course. We have plenty of time.
+:::::;(Return to previous option selection)
+::::{{DIcon|Talk}} Emphasize on her change in personality.
+:::::'''Bronya:''' In that case...
+:::::'''Bronya:''' "But the burden on her shoulders was too heavy. She tried to weave the fate of Everwinter City from chaos, but was crushed by it. She gradually became ruthless and indifferent, but people still rallied closely around her."
+:::::'''Bronya:''' Do you think this description is appropriate, (Trailblazer)?
+:::::{{DIcon|Return}} I would like to reconsider.
+::::::'''Bronya:''' Of course. We have plenty of time.
+:::::;(Return to previous option selection)
+::::{{DIcon|Talk}} Emphasize her motherly love.
+:::::'''Bronya:''' But... don't you think that might be a bit too personal?
+:::::'''Bronya:''' ...No, I trust your judgment. Let me try and organize the language.
+:::::'''Bronya:''' "Though the Supreme Guardian lost before her cruel destiny and the light of humanity eroded away, she still tried her best to give whatever gentleness she had to the people and help them toward salvation, just like how she treated her daughter."
+:::::'''Bronya:''' Do you think this description is appropriate, (Trailblazer)?
+:::::{{DIcon|Return}} I would like to reconsider.
+::::::'''Bronya:''' Of course. We have plenty of time.
+:::::;(Return to previous option selection)
+::::{{DIcon|Talk}} I would like you to repeat her story...
+:::::'''Bronya:''' No problem. I will repeat it to you.
+:::::'''Bronya:''' Under mother's rule, the most well-known decree was the "blockade of the Overworld and the Underworld." On one hand, this measure secured Belobog's rear, but it also resulted in many unnecessary sacrifices, causing a lot of controversy among the people.
+:::::'''Bronya:''' Mother never forgot her dream of healing the world. But due to certain reasons, she suffered continued torment, both mentally and physically, which eventually led to her becoming the unfeeling and indifferent person you know today.
+:::::'''Bronya:''' Nevertheless, mother still regarded me as her dearest daughter, perhaps leaving what little warmth she had left for me, instead of her people...
+:::::'''Bronya:''' ...I'm sorry. I may have injected too many personal feelings.
+:::::'''Bronya:''' Let's get back on topic. How do you think we should describe mother's experiences during her rule in the introduction?
+::::;(Return to previous option selection)
+:::{{DIcon|Return}} I would like to reconsider.
+::::'''Bronya:''' Of course. We have plenty of time.
+:::;(Return to previous option selection)
+::{{DIcon|Talk}} Focus on her early administration.
+:::'''Bronya:''' In that case...
+:::'''Bronya:''' "Supreme Guardian Cocolia, with her magnanimity and firmness, awakened every sleeping soul in Belobog. She sounded the horn of counterattack for the loyal Silvermane Guards, worthy of being the only pioneer in the last seven hundred years."
+:::'''Bronya:''' Do you think this description is appropriate, (Trailblazer)?
+:::{{DIcon|Arrow}} Very much so.
+::::'''Bronya:''' Got it. So, next up, mother's story after she has taken power...
+:::<pre>{
+	"$type": "RPG.GameCore.SetTextJoinValue",
+	"TextJoinID": 41,
+	"Value": "3"
+}</pre>
+::::'''Bronya:''' Under mother's rule, the most well-known decree was the "blockade of the Overworld and the Underworld." On one hand, this measure secured Belobog's rear, but it also resulted in many unnecessary sacrifices, causing much controversy among the people.
+::::'''Bronya:''' However, she never forgot her dream of healing the world. But due to certain reasons, she suffered continued torment, both mentally and physically, which eventually led to her becoming the unfeeling and indifferent person you knew.
+::::'''Bronya:''' Nevertheless, mother still regarded me as her dearest daughter, perhaps leaving what little warmth she had left for me, instead of her people...
+::::'''Bronya:''' ...I'm sorry. I may have injected too many personal feelings.
+::::'''Bronya:''' Let's get back on topic. How do you think we should describe mother's experiences during her rule in the introduction?
+::::{{DIcon|Talk}} Emphasize the blockade policy.
+:::::'''Bronya:''' In that case...
+:::::'''Bronya:''' "In the middle of her reign, Supreme Guardian Cocolia issued the well-known order for the blockade. At that time, she firmly believed that only this action could secure Belobog's rear, but it also caused too many brutal and meaningless sacrifices &mdash; the heartbreak was not unfelt universally."
+:::::'''Bronya:''' Do you think this description is appropriate, (Trailblazer)?
+:::::{{DIcon|Return}} I would like to reconsider.
+::::::'''Bronya:''' Of course. We have plenty of time.
+:::::;(Return to previous option selection)
+::::{{DIcon|Talk}} Emphasize on her change in personality.
+:::::'''Bronya:''' In that case...
+:::::'''Bronya:''' "But the burden on her shoulders was too heavy. She tried to weave the fate of Everwinter City from chaos, but was crushed by it. She gradually became ruthless and indifferent, but people still rallied closely around her."
+:::::'''Bronya:''' Do you think this description is appropriate, (Trailblazer)?
+:::::{{DIcon|Return}} I would like to reconsider.
+::::::'''Bronya:''' Of course. We have plenty of time.
+:::::;(Return to previous option selection)
+::::{{DIcon|Talk}} Emphasize her motherly love.
+:::::'''Bronya:''' But... don't you think that might be a bit too personal?
+:::::'''Bronya:''' ...No, I trust your judgment. Let me try and organize the language.
+:::::'''Bronya:''' "Though the Supreme Guardian lost before her cruel destiny and the light of humanity eroded away, she still tried her best to give whatever gentleness she had to the people and help them toward salvation, just like how she treated her daughter."
+:::::'''Bronya:''' Do you think this description is appropriate, (Trailblazer)?
+:::::{{DIcon|Return}} I would like to reconsider.
+::::::'''Bronya:''' Of course. We have plenty of time.
+:::::;(Return to previous option selection)
+::::{{DIcon|Talk}} I would like you to repeat her story...
+:::::'''Bronya:''' No problem. I will repeat it to you.
+:::::'''Bronya:''' Under mother's rule, the most well-known decree was the "blockade of the Overworld and the Underworld." On one hand, this measure secured Belobog's rear, but it also resulted in many unnecessary sacrifices, causing a lot of controversy among the people.
+:::::'''Bronya:''' Mother never forgot her dream of healing the world. But due to certain reasons, she suffered continued torment, both mentally and physically, which eventually led to her becoming the unfeeling and indifferent person you know today.
+:::::'''Bronya:''' Nevertheless, mother still regarded me as her dearest daughter, perhaps leaving what little warmth she had left for me, instead of her people...
+:::::'''Bronya:''' ...I'm sorry. I may have injected too many personal feelings.
+:::::'''Bronya:''' Let's get back on topic. How do you think we should describe mother's experiences during her rule in the introduction?
+::::;(Return to previous option selection)
+:::{{DIcon|Return}} I would like to reconsider.
+::::'''Bronya:''' Of course. We have plenty of time.
+:::;(Return to previous option selection)
+::{{DIcon|Talk}} I would like you to repeat her story...
+:::'''Bronya:''' No problem. I will repeat it to you.
+:::'''Bronya:''' It is said that my mother, like me, was also selected from the barren underground and brought to the Overworld. At that time, she was curious about everything, especially the flowers that she couldn't see in the Underworld. In her spare time, she would always go to the florist.
+:::'''Bronya:''' Later, she became the top student at the Belobog Military Academy, graduating at the top of her class. People say she had the most intelligent mind in all of Belobog, one that not even Serval can surpass.
+:::'''Bronya:''' After that, mother embarked on her career in governance, and with her charismatic personality and political measures, gained the support of the entire city. Under her supervision, the Silvermane Guards were finally able to counterattack and reclaim the Fragmentum... though it comes at too high a cost.
+:::'''Bronya:''' What do you think... How should we describe mother's early years in the introduction?
+::;(Return to previous option selection)
+:'''Bronya:''' Thank you, (Trailblazer). The other Architects and I will carefully consider your opinion before finalizing the draft.
+::'''Bronya:''' If you're interested in the final text, come to the History-Culture Hall yourself to check it out.
+::'''Bronya:''' See you later, (Trailblazer). I thank you for your contribution to Belobog &mdash; you will forever be our hero.
+----
+
+;(Talk to Uldan)
+:'''Uldan:''' (Trailblazer), please stay back a little.
+::'''Uldan:''' Lady Bronya will be gracing us with her presence here at the museum &mdash; She would like to meet up with you.
+::{{DIcon|Arrow}} Did she want to reward me herself?
+::{{DIcon|Arrow}} I didn't do anything bad, did I?
+::'''Uldan:''' No... Actually, it has to do with Lady Bronya's mother, the late Supreme Guardian Cocolia.
+::'''Uldan:''' Lady Bronya commissioned Qlipoth Fort for a portrait of Madam Cocolia, and would like it to be displayed in our museum...
+::'''Silvermane Guard:''' {{Size|36|Supreme Guardian Bronya has arrived!}}
+::'''Uldan:''' Looks like she's here. I'm sure Lady Bronya would prefer to confer with you herself.
+:<pre>{
+	"$type": "RPG.GameCore.PlayMultiVoiceTalk",
+	"TalkSentenceID": 501190111,
+	"KeepDisplay": true
+}</pre>
+:::{{DIcon|?}} About the portrait of Cyrille the Fool...
+::::'''Uldan:''' (Trailblazer)... Did you say that the description of {{Color|keyword|nobold=1|Cyrille the Fool's}} portrait deviated from the truth?
+::::'''Uldan:''' But... how's that possible? The description is taken from the history textbooks of the Belobog Academy. Everything is in black and white.
+::::{{DIcon|Talk}} I met Cyrille before.
+:::::'''Uldan:''' Well... Stop pulling my leg.
+:::::'''Uldan:''' Still, I can tell you have at least heard of Cyrille from your tone.
+::::;(Return to previous option selection)
+::::{{DIcon|Arrow}} I have evidence that supports Cyrille.
+:::::'''Uldan:''' Since you sound so sure of yourself, I'll take a look at your evidence.
+::::<pre>{
+	"$type": "RPG.GameCore.ConsumeMissionItemPerformance",
+	"SubMissionID": 800122503,
+	"Desc": {
+		"Hash": 278713946
+	},
+	"OnSubmitConfirm": [
+		{
+			"$type": "RPG.GameCore.PlayAndWaitSimpleTalk",
+			"KeepDisplay": true,
+			"SimpleTalkList": [
+				{
+					"TextSpeed": 20,
+					"TalkSentenceID": 800122739,
+					"ProtectTime": 0.8
+				},
+				{
+					"TextSpeed": 20,
+					"TalkSentenceID": 800122740,
+					"ProtectTime": 0.8
+				},
+				{
+					"TextSpeed": 20,
+					"TalkSentenceID": 800122741,
+					"ProtectTime": 0.8
+				},
+				{
+					"TextSpeed": 20,
+					"TalkSentenceID": 800122742,
+					"ProtectTime": 0.8
+				}
+			]
+		},
+		{
+			"$type": "RPG.GameCore.TriggerCustomString",
+			"CustomString": {
+				"Value": "Talk_800122502"
+			}
+		},
+		{
+			"$type": "RPG.GameCore.TriggerCustomString",
+			"CustomString": {
+				"Value": "TalkSentence_501190151"
+			}
+		}
+	],
+	"OnSubmitCancel": [
+		{
+			"$type": "RPG.GameCore.TriggerCustomString",
+			"CustomString": {
+				"Value": "TalkSentence_501190151"
+			}
+		}
+	],
+	"SimpleTalk": {
+		"TextSpeed": 20,
+		"ProtectTime": 0.8
+	}
+}</pre>
+:::{{DIcon|Exit}} I'll go ahead and tour now.
+:<pre>{
+	"$type": "RPG.GameCore.PlayMultiVoiceTalk",
+	"TalkSentenceID": 501190111,
+	"KeepDisplay": true
+}</pre>
 {{Dialogue End}}
 
-===Speak with Bronya the visitor===
+===Speak with Bronya the visitor{{subst:void|<!--800122602-->}}===
 {{Dialogue Start}}
-:{{tx}}
 {{Dialogue End}}
 
 ==Other Languages==

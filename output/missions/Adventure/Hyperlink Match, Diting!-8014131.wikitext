@@ -7,7 +7,7 @@ PageTitle=#Hyperlink Match, Diting!#
 |title         = 
 |image         = <!--Mission Hyperlink Match, Diting!.png-->
 |type          = Adventure
-|event_name    = 
+|event_name    = Aetherium Wars
 |chapter       = 
 |requirements  = 
 * [[Adventure Mission]] ''[[Hyperlink Match, Natasha!]]'' completed
@@ -15,7 +15,7 @@ PageTitle=#Hyperlink Match, Diting!#
 * [[Adventure Mission]] ''[[Hyperlink Match, Gepard!]]'' completed
 * [[Adventure Mission]] ''[[Hyperlink Match, Lynx!]]'' completed
 |summary       = <!--official mission summary from Fate's Atlas-->
-|characters    = Trailblazer
+|characters    = Diting; Trailblazer
 |startLocation = [[Jarilo-VI]] - [[Old Weapon Testing Ground]]
 |world         = Jarilo-VI
 |area          = Old Weapon Testing Ground
@@ -23,7 +23,7 @@ PageTitle=#Hyperlink Match, Diting!#
 |next          = 
 |rewards       = 
 }}
-'''''Hyperlink Match, Diting!''''' is an [[Adventure Mission]] on [[Jarilo-VI]].
+'''''Hyperlink Match, Diting!''''' is an Event [[Adventure Mission]] from the [[Aetherium Wars]] event.
 
 ==Steps==
 # Have a Hyperlink Match with Diting
@@ -37,11 +37,31 @@ PageTitle=#Hyperlink Match, Diting!#
 -->
 ==Dialogue==
 {{Stub Dialogue}}
-
-===Have a Hyperlink Match with Diting===
+===Have a Hyperlink Match with Diting{{subst:void|<!--801413101-->}}===
 {{Mission Description|type=adventure|location=Old Weapon Testing Ground|The core gameplay loop behind Aetherium Wars is "dueling." Challenge different players and show your true strength!}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Diting)
+:'''Diting:''' Woof woof! Woof!
+:This little one is different than other Ditings you've seen... Its eyes are ferocious and its stare is locked on the Aether Coins around your waist.
+:'''Diting:''' Rrrr&mdash;woof!
+:From its barking, you can sense an intense will to fight. As you look closer you notice... it's got an Aether Coin in its mouth!
+<pre>{
+	"$type": "RPG.GameCore.ShowMenu",
+	"DisplaySingleMenuItem": true
+}</pre>
+:'''Diting:''' Rrr&mdash;ruff ruff woof! Woof woof!
+:From its barking, you feel a sense of praise, a hint of resentment, an inkling of regret at their defeat, and a sprinkle of determination to grow stronger.
+:'''(Trailblazer):''' (I didn't realize "Aetherium Wars" can even be mastered by a Diting...)
+:{{DIcon|Arrow}} Best to just not mess with it...
+<pre>{
+	"$type": "RPG.GameCore.ShowUI",
+	"Name": "Ui.AetherDivide.AetherDivideEntryPage",
+	"Param": {
+		"Value": "2"
+	},
+	"OnUIEnter": []
+}</pre>
 {{Dialogue End}}
 
 ==Other Languages==

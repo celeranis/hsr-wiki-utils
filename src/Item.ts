@@ -2,7 +2,7 @@ import { Dictionary, sanitizeString, titleCase, wikiTitle, wikiTitleLink } from 
 import { textMap } from './TextMap.js';
 import { LazyData, LazyExcelData, getFile } from './files/GameFile.js';
 import type { InternalItem, InternalItemComefrom, InternalItemPurpose, InternalPassPage, InternalPassSticker, InternalRecipeConfig, InternalRewardData, ItemConfig, ItemMainType, ItemRarity, ItemReference, ItemSortData, ItemSubType } from './files/Item.js';
-import { GotoData } from './files/MapData.js';
+import { GotoData } from './files/graph/MapData.js';
 import { MappingInfo } from './maps/MapingInfo.js';
 
 type ItemSourceData = Dictionary<InternalItemComefrom>
@@ -423,7 +423,7 @@ export class ItemList {
 	}
 	
 	add(entry: ItemReference | ItemListEntry) {
-		const item = 'item' in entry ? entry.item : Item.fromId(entry.ItemID)
+		const item = 'item' in entry ? entry.item : Item.fromId(entry.ItemID || (entry as any).ItemId)
 		if (!item) {
 			console.warn('Got unknown item in list entry:', entry)
 			return
@@ -479,7 +479,7 @@ export class ItemList {
 	asCardList(removeCommon?: boolean, mini?: boolean) {
 		const addList = this.asCardListParams(removeCommon)
 		
-		return `{{Card List|${(addList.includes('=') ? '1=' : '') + addList}${mini ? '|mini=1' : ''}}}`
+		return `{{Card List|delim=;|${(addList.includes('=') ? '1=' : '') + addList}${mini ? '|mini=1' : ''}}}`
 	}
 	
 	asItemList(removeCommon?: boolean, mode: 'bullet' | 'br' | 'sent' = 'sent') {

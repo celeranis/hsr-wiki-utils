@@ -11,7 +11,7 @@ PageTitle=#The Trees At Peace#
 |chapter       = 
 |requirements  = {{subst:void|<!--Unknown: {"Type":"Manual"}-->}}
 |summary       = <!--official mission summary from Fate's Atlas-->
-|characters    = Trailblazer
+|characters    = Chadwick; Concerned Scientist; Dudley; Excited Researcher; IPC Officer; IPC Soldier; Nervous Researcher; Researchers; Screwllum; Taciturn Scientist; Terrified Scientist; Trailblazer; Voice of the Mind
 |startLocation = [[Penacony]] - [[Chadwick's Emoscape]]
 |world         = Penacony
 |area          = Chadwick's Emoscape
@@ -23,13 +23,17 @@ PageTitle=#The Trees At Peace#
 
 ==Steps==
 # Witness Chadwick's experiences
+# Take the elevator to reach the secret laboratory's basement
 # Clear the True Stings blocking the way
 # Continue onward and witness Chadwick's experiences
-# Enter Chadwick's Emoscape (2F)
 # Detonate the "Imaginary Pulse"
 # Leave Chadwick's Emoscape (1F)
+# Enter Chadwick's Emoscape (2F)
 # Talk to Chadwick
 # Touch Screwllum's puzzle pieces
+# Find the first puzzle piece
+# Find the second puzzle piece
+# Find the third puzzle piece
 # Find the first puzzle piece
 # Find the second puzzle piece
 # Find the third puzzle piece
@@ -37,16 +41,11 @@ PageTitle=#The Trees At Peace#
 # Listen to the conversation between Chadwick and Screwllum
 # Leave Chadwick's Emoscape (2F)
 # Head to the study and examine Chadwick's situation
+# Search for clues around the study
 # Talk to Chadwick in his study
 # Help the aged Chadwick stand up
-# Leave Chadwick's Emoscape (3F)
-# Find the first puzzle piece
-# Find the second puzzle piece
-# Find the third puzzle piece
-# Take the elevator to reach the secret laboratory's basement
-# Continue onward and witness Chadwick's experiences
-# Search for clues around the study
 # Accompany Chadwick on his final journey
+# Leave Chadwick's Emoscape (3F)
 
 <!--
 ==Gameplay Notes==
@@ -58,150 +57,557 @@ PageTitle=#The Trees At Peace#
 ==Dialogue==
 {{Stub Dialogue}}
 
-===Witness Chadwick's experiences===
+===Witness Chadwick's experiences{{subst:void|<!--203030201-->}}===
 {{Mission Description|type=adventure|location=Chadwick's Emoscape|You have entered Chadwick's Emoscape through your Clockwork.<br />Follow the shadows of his past and witness fragments of this genius' past.}}
 {{Dialogue Start}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+<pre>{
+	"$type": "RPG.GameCore.PerformanceExtendEndBlack",
+	"ExtendTime": 0.5
+}</pre>
 :{{tx}}
 {{Dialogue End}}
 
-===Clear the True Stings blocking the way===
+===Take the elevator to reach the secret laboratory's basement{{subst:void|<!--203030230-->}}===
+{{Dialogue Start}}
+;(Upon reaching the destination)
+{{Dialogue End}}
+
+===Clear the True Stings blocking the way{{subst:void|<!--203030202-->}}===
 {{Mission Description|type=adventure|location=Chadwick's Emoscape|update|You have entered Chadwick's Emoscape through your Clockwork.<br />A swarm of disgusting insects are blocking your way. Eliminate them.}}
 {{Dialogue Start}}
-:{{tx}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+<pre>{
+	"$type": "RPG.GameCore.ActiveVirtualCamera",
+	"AreaName": "LevelArea_P43312_F43312001_G17",
+	"AnchorName": "Anchor1",
+	"IsActive": true,
+	"VCameraDitherMaxDistance": 1,
+	"CenterPosX": -1,
+	"CenterPosY": -1,
+	"DynamicParams": {}
+}</pre>
+:'''Chadwick:''' Are those... True Stings!?
+:'''Dudley:''' You're right, and I think they're probably from the Swarm Disaster era. It's been a long while since anyone stepped foot here. I won't be surprised by anything I see in this facility.
+:'''Chadwick:''' ...I'm impressed you guys managed to find this place. This is the first time I've seen living True Stings.
+:'''Dudley:''' It's a pity you aren't a biologist. Let's clear this place up, or we can't start working.
+<pre>{
+	"$type": "RPG.GameCore.ActiveVirtualCamera",
+	"AreaName": "LevelArea_P43312_F43312001_G17",
+	"AnchorName": "Anchor1",
+	"VCameraDitherMaxDistance": 1,
+	"CenterPosX": -1,
+	"CenterPosY": -1,
+	"DynamicParams": {}
+}</pre>
+;(Enter battle)
+::{{tx|Enemy list missing}}
+:'''Chadwick:''' What exactly is this place, Dud?
+:'''Dudley:''' Forgive me, but I cannot tell you the exact coordinates of this planet &mdash; orders from up top. It's to prevent you all from... err, abandoning the task beforehand. I hope you'll understand, Chad.
+:'''Dudley:''' But I can tell you this: You will absolutely not be disturbed here.
+:'''Chadwick:''' Ah... I see, but you should know too? That if I wanted, I would find a way to locate my position. It's not that hard.
+:Dudley laughs out loud instead of fielding a response. Of course he knows that: It is a genius who stands before him.
 {{Dialogue End}}
 
-===Continue onward and witness Chadwick's experiences===
+===Continue onward and witness Chadwick's experiences{{subst:void|<!--203030203-->}}===
 {{Mission Description|type=adventure|location=Chadwick's Emoscape|update|You have entered Chadwick's Emoscape through your Clockwork.<br />Follow the shadows of his past and witness a fragment of this genius's life.}}
 {{Dialogue Start}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+<pre>{
+	"$type": "RPG.GameCore.ActiveVirtualCamera",
+	"AreaName": "LevelArea_P43312_F43312001_G18",
+	"AnchorName": "Anchor1",
+	"IsActive": true,
+	"VCameraDitherMaxDistance": 1,
+	"CenterPosX": -1,
+	"CenterPosY": -1,
+	"DynamicParams": {}
+}</pre>
+:'''Dudley:''' ...Ladies and gentlemen, the space beyond this door is where we concoct the "miracle."
+<pre>{
+	"$type": "RPG.GameCore.ActiveVirtualCamera",
+	"AreaName": "LevelArea_P43312_F43312001_G18",
+	"AnchorName": "Anchor2",
+	"IsActive": true,
+	"VCameraDitherMaxDistance": 1,
+	"CenterPosX": -1,
+	"CenterPosY": -1,
+	"DynamicParams": {}
+}</pre>
+:'''Excited Researcher:''' Is Dr. Chadwick inside?
+:'''Nervous Researcher:''' I never thought I'd end up working alongside that genius...
+<pre>{
+	"$type": "RPG.GameCore.ActiveVirtualCamera",
+	"AreaName": "LevelArea_P43312_F43312001_G18",
+	"AnchorName": "Anchor3",
+	"IsActive": true,
+	"VCameraDitherMaxDistance": 1,
+	"CenterPosX": -1,
+	"CenterPosY": -1,
+	"DynamicParams": {}
+}</pre>
+:'''Dudley:''' Hahaha, please hold your horses. Before you all officially become Dr. Chadwick's colleagues, there's something I want to remind you.
+:'''Dudley:''' By walking through this door, you'll be selecting a different life for yourselves. This lab will be your life for a very long time to come.
+:'''Dudley:''' You will work, research, have fun, and make friends here, isolated from the outside world until this project is launched or fails.
+:'''Dudley:''' If you aren't ready for this kind of life, you may go before I open this door.
+:'''Researchers:''' ...
+<pre>{
+	"$type": "RPG.GameCore.ActiveVirtualCamera",
+	"AreaName": "LevelArea_P43312_F43312001_G18",
+	"AnchorName": "Anchor2",
+	"IsActive": true,
+	"VCameraDitherMaxDistance": 1,
+	"CenterPosX": -1,
+	"CenterPosY": -1,
+	"DynamicParams": {}
+}</pre>
+:'''Researchers:''' ...
+:'''Excited Researcher:''' ...I've been studying Imaginary theories since the age of 15. Working with Dr. Chadwick is my lifelong ambition.
+:'''Nervous Researcher:''' Right... This is an opportunity others could only dream of. That door is nothing! As scientists, we've long dedicated our lives to science.
+<pre>{
+	"$type": "RPG.GameCore.ActiveVirtualCamera",
+	"AreaName": "LevelArea_P43312_F43312001_G18",
+	"AnchorName": "Anchor3",
+	"IsActive": true,
+	"VCameraDitherMaxDistance": 1,
+	"CenterPosX": -1,
+	"CenterPosY": -1,
+	"DynamicParams": {}
+}</pre>
+:'''Dudley:''' Hahaha... You guys are just like him! I believe you will have a great time working with Dr. Chadwick.
+:'''Dudley:''' Well, ladies and gentlemen, please come on in...
+----
+
+;(Talk to Chadwick)
+<pre>{
+	"$type": "RPG.GameCore.ActiveVirtualCamera",
+	"AreaName": "LevelArea_P43312_F43312001_G20",
+	"AnchorName": "Anchor1",
+	"IsActive": true,
+	"VCameraDitherMaxDistance": 1,
+	"CenterPosX": -1,
+	"CenterPosY": -1,
+	"DynamicParams": {}
+}</pre>
+:'''Taciturn Scientist:''' ...The 37th detonation test, unsuccessful.
+:'''Taciturn Scientist:''' The energy waves from the collision failed to tear up the Imaginary fissure. The detonation capsule did not reach the critical threshold.
+:'''Chadwick:''' ...
+:'''Concerned Scientist:''' Why...
+:'''Chadwick:''' ...
+<pre>{
+	"$type": "RPG.GameCore.TriggerBlendShapesEmotion",
+	"TargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvNpcEx",
+		"FetchType": "SingleNpcByNpcID",
+		"SingleNpcID": {
+			"GroupID": {
+				"fixedValue": {
+					"Value": 20
+				}
+			},
+			"GroupNpcID": {
+				"fixedValue": {
+					"Value": 400001
+				}
+			}
+		}
+	},
+	"EmotionName": "Trouble01",
+	"TransitTime": 0.2
+}</pre>
+:'''Chadwick:''' ...Lift the safety protocols. Increase the collision rate to 1.3 times the default threshold. Let's take it from there.
+:'''Concerned Scientist:''' Eh!? B&mdash;But...
+:'''Taciturn Scientist:''' This is too risky... and might even compromise the researchers' safety.
+:'''Concerned Scientist:''' Exactly! We can try one more time. There's no need to...
+<pre>{
+	"$type": "RPG.GameCore.ActiveVirtualCamera",
+	"AreaName": "LevelArea_P43312_F43312001_G20",
+	"AnchorName": "Anchor2",
+	"IsActive": true,
+	"VCameraDitherMaxDistance": 1,
+	"CenterPosX": -1,
+	"CenterPosY": -1,
+	"DynamicParams": {}
+}</pre>
+:'''Chadwick:''' ...We've tried too many times. It's clear that we won't make any progress if we go down the same road.
+:'''Chadwick:''' Over the past three years, we've overcome nearly every theoretical hurdle. The scientific achievements born in this lab are enough to leave the universe amazed.
+:'''Chadwick:''' But if we fail to build the Imaginary Implosion Pulse... our efforts will all be in vain. The IPC won't allow us to take the scientific results with us, not even a single page.
+:'''Chadwick:''' As physicists, we must succeed.
+----
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
 :{{tx}}
+
+:'''IPC Officer:''' Hurry it up! Round up anyone who dares to resist!
+:'''IPC Officer:''' {{Color|keyword|nobold=1|No one should hinder the detonation!}}
+:'''Terrified Scientist:''' They... Are they really going to use the Pulse!?
+:'''Terrified Scientist:''' Professor Chadwick... Where is he? Only he can put a stop to all this!
+:'''IPC Soldier:''' Captain! We've located Professor Calderon Chadwick!
+:'''IPC Officer:''' Good, we still have time then. Take him to the control room. I'll notify Director Dudley. Hurry, go!
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+----
+:'''Dudley:''' ...I'm very sorry to tell you this, Chad. You might be a genius in your field, but you know nothing about power. Your naivety blinds you from seeing the big picture, and you don't even understand the era you're in.
+<pre>{
+	"$type": "RPG.GameCore.ActiveVirtualCamera",
+	"AreaName": "LevelArea_P43312_F43312001_G23",
+	"AnchorName": "Anchor3",
+	"IsActive": true,
+	"VCameraDitherMaxDistance": 1,
+	"CenterPosX": -1,
+	"CenterPosY": -1,
+	"DynamicParams": {}
+}</pre>
+:'''Dudley:''' You should have realized long ago that we're both merely pawns in this game of chess. Once we're placed on the chessboard, we are no longer in control of our fate.
+:'''Dudley:''' Weapons are made to eliminate enemies. Is it that hard to understand? Over a dozen vanguard units of the Legion are preparing to attack the joint trade routes. Their presence can directly threaten Pier Point's safety.
+:'''Dudley:''' Our enemies are closing in... This is the perfect time to test the power of the Imaginary Implosion Pulse!
+<pre>{
+	"$type": "RPG.GameCore.ActiveVirtualCamera",
+	"AreaName": "LevelArea_P43312_F43312001_G23",
+	"AnchorName": "Anchor5",
+	"IsActive": true,
+	"VCameraDitherMaxDistance": 1,
+	"CenterPosX": -1,
+	"CenterPosY": -1,
+	"DynamicParams": {}
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.TriggerBlendShapesEmotion",
+	"TargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvNpcEx",
+		"FetchType": "SingleNpcByNpcID",
+		"SingleNpcID": {
+			"GroupID": {
+				"fixedValue": {
+					"Value": 23
+				}
+			},
+			"GroupNpcID": {
+				"fixedValue": {
+					"Value": 400004
+				}
+			}
+		}
+	},
+	"EmotionName": "Close01",
+	"TransitTime": 0.2
+}</pre>
+:'''Chadwick:''' ...
+:'''Chadwick:''' You have a hundred... no, a thousand other ways to stop them that can incur lower costs and affect fewer innocents.
+:'''Chadwick:''' I've got it, finally. What we've done here for the past twenty years is just an experiment. The result of our work... never truly belongs to us.
+<pre>{
+	"$type": "RPG.GameCore.ActiveVirtualCamera",
+	"AreaName": "LevelArea_P43312_F43312001_G23",
+	"AnchorName": "Anchor3",
+	"IsActive": true,
+	"VCameraDitherMaxDistance": 1,
+	"CenterPosX": -1,
+	"CenterPosY": -1,
+	"DynamicParams": {}
+}</pre>
+:'''Dudley:''' ...
+:'''Dudley:''' Stop lying to yourself, Chad. You knew what you were getting into right from the beginning, but you chose to ignore it.
+<pre>{
+	"$type": "RPG.GameCore.ActiveVirtualCamera",
+	"AreaName": "LevelArea_P43312_F43312001_G23",
+	"AnchorName": "Anchor4",
+	"IsActive": true,
+	"VCameraDitherMaxDistance": 1,
+	"CenterPosX": -1,
+	"CenterPosY": -1,
+	"DynamicParams": {}
+}</pre>
+:'''Dudley:''' Come here, "bomb-maker." It's time to show the Legion our might.
+----
 {{Dialogue End}}
 
-===Enter Chadwick's Emoscape (2F)===
+===Detonate the "Imaginary Pulse"{{subst:void|<!--203030208-->}}===
+{{Dialogue Start}}
+
+
+{{Dialogue End}}
+
+===Leave Chadwick's Emoscape (1F){{subst:void|<!--203030209-->}}===
 {{Mission Description|type=adventure|location=Chadwick's Emoscape|update|In Chadwick's Emoscape, you have learned about the mysterious yet astounding first half of his life.<br />Leave this place and discover the twists and turns throughout the second half of his life.}}
 {{Dialogue Start}}
-:{{tx}}
 {{Dialogue End}}
 
-===Detonate the "Imaginary Pulse"===
-{{Mission Description|type=adventure|location=Chadwick's Emoscape|update|You have entered Chadwick's Emoscape through your Clockwork.<br />Follow the shadows of his past and witness a fragment of this genius's life.}}
+===Enter Chadwick's Emoscape (2F){{subst:void|<!--203030207-->}}===
 {{Dialogue Start}}
-:{{tx}}
+
+
+:'''(Trailblazer):''' (What I just experienced, was that the first half of Chadwick's life?)
+:'''(Trailblazer):''' (But this memory isn't over yet... Let's take a look at what happened to him after.)
 {{Dialogue End}}
 
-===Leave Chadwick's Emoscape (1F)===
-{{Mission Description|type=adventure|location=Chadwick's Emoscape|update|In Chadwick's Emoscape, you have learned about the mysterious yet astounding first half of his life.<br />Leave this place and discover the twists and turns throughout the second half of his life.}}
-{{Dialogue Start}}
-:{{tx}}
-{{Dialogue End}}
-
-===Talk to Chadwick===
+===Talk to Chadwick{{subst:void|<!--203030210-->}}===
 {{Mission Description|type=adventure|location=Chadwick's Emoscape|update|In Chadwick's Emoscape, you have learned about the mysterious yet astounding first half of his life.<br />Speak with the elderly Chadwick to discover the twists and turns throughout the second half of his life.}}
 {{Dialogue Start}}
+
+;(Talk to Screwllum)
+:{{tx}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:'''Chadwick:''' Oh, (Trailblazer). It's you again.
+:'''Chadwick:''' Now, you have experienced half of my life and learned about my story.
+:{{DIcon|Arrow}} How many people did the Imaginary Pulse kill?
+::'''Chadwick:''' ...A number that I try my best every day to forget. Ever since that day, I haven't dared to look in the mirror even once. I'm worried I might see a monster... A murderer who has killed countless people and ruined even more lives.
+:{{DIcon|Arrow}} I'm not sure what to make of you.
+::'''Chadwick:''' Me too, child... Ever since that day, I don't dare to even glance at myself in the mirror.
+::'''Chadwick:''' I'm worried I might see a monster... A murderer who has killed countless people and ruined even more lives.
+:'''Chadwick:''' That day in the control room was the last I saw Dudley. Perhaps, it's true that pawns don't deserve to be mentioned, just like how he put it.
+:'''Chadwick:''' After that, I disbanded the team and left the lab. I managed to take some crucial data with me to keep them from falling into the wrong hands.
+:'''Chadwick:''' I later learned from others that the higher-ups of the Technology Department who ordered the Imaginary Implosion Pulse detonation were subjected to an internal review. They were never heard of again.
+:'''Chadwick:''' But I knew that IPC wouldn't let the matter rest. The result of our research was way too valuable... Although they released a statement condemning the detonation, they would never really give up the technology related to it.
+:'''Chadwick:''' They needed me to control the knowledge and keep it out of reach of other factions across the universe. So, they would always be breathing down my neck.
+:'''Chadwick:''' ...So, I decided to escape, not wanting to live the rest of my life being controlled by others.
+:'''Chadwick:''' A name came to my mind when I needed help the most. We only met once, but he saw through my hypocrisy and excuses.
+:{{DIcon|Arrow}} Screwllum.
+:'''Chadwick:''' Yes. I made up my mind to look for him, thinking that he could help me rebel against IPC.
 :{{tx}}
 {{Dialogue End}}
 
-===Touch Screwllum's puzzle pieces===
+===Touch Screwllum's puzzle pieces{{subst:void|<!--203030211-->}}===
 {{Mission Description|type=adventure|location=Chadwick's Emoscape|update|Following the Imaginary Pulse's detonation, Chadwick went into hiding to evade the IPC's clutches.<br />Now, he wants to meet up with Screwllum and find his redemption from the latter.}}
 {{Dialogue Start}}
-:{{tx}}
+
 {{Dialogue End}}
 
-===Find the first puzzle piece===
+===Find the first puzzle piece{{subst:void|<!--203030212-->}}===
 {{Mission Description|type=adventure|location=Chadwick's Emoscape|update|Following the Imaginary Pulse's detonation, Chadwick went into hiding to evade the IPC's clutches.<br />Find Screwllum's puzzle pieces to facilitate their reunion.}}
 {{Dialogue Start}}
-:{{tx}}
 {{Dialogue End}}
 
-===Find the second puzzle piece===
+===Find the second puzzle piece{{subst:void|<!--203030213-->}}===
 {{Dialogue Start}}
-:{{tx}}
 {{Dialogue End}}
 
-===Find the third puzzle piece===
+===Find the third puzzle piece{{subst:void|<!--203030214-->}}===
 {{Dialogue Start}}
-:{{tx}}
 {{Dialogue End}}
 
-===Complete Screwllum's puzzle===
+===Find the first puzzle piece{{subst:void|<!--203030227-->}}===
+{{Dialogue Start}}
+
+{{Dialogue End}}
+
+===Find the second puzzle piece{{subst:void|<!--203030228-->}}===
+{{Dialogue Start}}
+
+{{Dialogue End}}
+
+===Find the third puzzle piece{{subst:void|<!--203030229-->}}===
+{{Dialogue Start}}
+
+----
+:'''Voice of the Mind:''' What did Zandar see when he was recording tomes on the "Imaginary Tree" in his strange and ancient language?
+:'''Voice of the Mind:''' When I was little and first discovered the Imaginary theories, what came to my mind was the image of a dense forest, not of a huge tree.
+:'''Voice of the Mind:''' After going through so many things, I still find it hard to believe that the foundation of the universe is a giant tree that nurtures countless leaves selflessly and voluntarily.
+:'''Voice of the Mind:''' I prefer to see each planet as a seed carried by the wind that happens to land on the soil. The seeds then begin to take root and grow bigger, eventually forming the forest.
+:'''Voice of the Mind:''' The universe isn't concerned with our presence... It merely exists and observes.
+----
+{{Dialogue End}}
+
+===Complete Screwllum's puzzle{{subst:void|<!--203030215-->}}===
 {{Mission Description|type=adventure|location=Chadwick's Emoscape|update|Following the Imaginary Pulse's detonation, Chadwick went into hiding to evade the IPC's clutches.<br />Complete Screwllum's puzzle to reunite Chadwick with him.}}
 {{Dialogue Start}}
-:{{tx}}
+
 {{Dialogue End}}
 
-===Listen to the conversation between Chadwick and Screwllum===
+===Listen to the conversation between Chadwick and Screwllum{{subst:void|<!--203030216-->}}===
 {{Mission Description|type=adventure|location=Chadwick's Emoscape|update|Following the Imaginary Pulse's detonation, Chadwick went into hiding to evade the IPC's clutches.<br />Now, Chadwick has finally found Screwllum after many attempts. Listen to their conversation at that time.}}
 {{Dialogue Start}}
 :{{tx}}
 {{Dialogue End}}
 
-===Leave Chadwick's Emoscape (2F)===
+===Leave Chadwick's Emoscape (2F){{subst:void|<!--203030217-->}}===
 {{Mission Description|type=adventure|location=Chadwick's Emoscape|update|Leave Chadwick's Emoscape and witness the final moments of his life.}}
 {{Dialogue Start}}
-:{{tx}}
 {{Dialogue End}}
 
-===Head to the study and examine Chadwick's situation===
+===Head to the study and examine Chadwick's situation{{subst:void|<!--203030218-->}}===
 {{Mission Description|type=adventure|location=Chadwick's Emoscape|update|Witness the final moments of Chadwick's life.<br />Chadwick appears in a sealed-off study, his eyes looking confused. Go and examine his situation.}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Chadwick)
+:'''Chadwick:''' ...
+:The Dr. Chadwick in front of you is at an advanced age. He looks very similar to how he was when you first met him.
+:He still has those contemplative eyes, now tinged with a hint of gloominess.
+:'''Chadwick:''' ...
+:He can't seem to sense your presence... Perhaps, you can take a look around the room first.
 {{Dialogue End}}
 
-===Talk to Chadwick in his study===
-{{Mission Description|type=adventure|location=Chadwick's Emoscape|update|Witness the final moments of Chadwick's life.<br />Talk with him to discover what he experienced during his final days.}}
-{{Dialogue Start}}
-:{{tx}}
-{{Dialogue End}}
-
-===Help the aged Chadwick stand up===
-{{Mission Description|type=adventure|location=Chadwick's Emoscape|update|Witness the final moments of Chadwick's life.<br />Assist Chadwick in standing up and guide him out of his spiritual labyrinth.}}
-{{Dialogue Start}}
-:{{tx}}
-{{Dialogue End}}
-
-===Leave Chadwick's Emoscape (3F)===
-{{Mission Description|type=adventure|location=Chadwick's Emoscape|update|Leave Chadwick's Emoscape and return to the Dreamscape in Penacony.}}
-{{Dialogue Start}}
-:{{tx}}
-{{Dialogue End}}
-
-===Find the first puzzle piece===
-{{Mission Description|type=adventure|location=Chadwick's Emoscape|update|Following the Imaginary Pulse's detonation, Chadwick went into hiding to evade the IPC's clutches.<br />Find Screwllum's puzzle pieces to facilitate their reunion.}}
-{{Dialogue Start}}
-:{{tx}}
-{{Dialogue End}}
-
-===Find the second puzzle piece===
-{{Dialogue Start}}
-:{{tx}}
-{{Dialogue End}}
-
-===Find the third puzzle piece===
-{{Dialogue Start}}
-:{{tx}}
-{{Dialogue End}}
-
-===Take the elevator to reach the secret laboratory's basement===
-{{Mission Description|type=adventure|location=Chadwick's Emoscape|update|You have entered Chadwick's Emoscape through your Clockwork.<br />Follow the shadows of his past and witness fragments of this genius' past.}}
-{{Dialogue Start}}
-:{{tx}}
-{{Dialogue End}}
-
-===Continue onward and witness Chadwick's experiences===
-{{Mission Description|type=adventure|location=Chadwick's Emoscape|update|You have entered Chadwick's Emoscape through your Clockwork.<br />Follow the shadows of his past and witness a fragment of this genius's life.}}
-{{Dialogue Start}}
-:{{tx}}
-{{Dialogue End}}
-
-===Search for clues around the study===
+===Search for clues around the study{{subst:void|<!--203030226-->}}===
 {{Mission Description|type=adventure|location=Chadwick's Emoscape|update|Witness the final moments of Chadwick's life.<br />Investigate the secluded study for any potential clues.}}
 {{Dialogue Start}}
-:{{tx}}
 {{Dialogue End}}
 
-===Accompany Chadwick on his final journey===
+===Talk to Chadwick in his study{{subst:void|<!--203030222-->}}===
+{{Mission Description|type=adventure|location=Chadwick's Emoscape|update|Witness the final moments of Chadwick's life.<br />Talk with him to discover what he experienced during his final days.}}
+{{Dialogue Start}}
+
+;(Talk to Chadwick)
+:{{tx}}
+:'''Chadwick:''' ...
+:{{DIcon|Arrow}} Doctor?
+:{{DIcon|Arrow}} Can you feel me?
+:'''Chadwick:''' Ah... Did they send their guys over again?
+:'''Chadwick:''' Who is sent here makes no difference. I've said time and again that I'm no longer of use to you guys.
+:{{DIcon|Arrow}} You took the Selective Blocking Agent...
+:'''Chadwick:''' How... did you know?
+:{{tx}}
+:{{DIcon|Talk}} What have they done?
+::'''Chadwick:''' At first, they pretended to be friendly with me. They tempted me with valuables and promises in return for my knowledge... all to no avail.
+::{{tx}}
+:;(Return to previous option selection)
+:{{DIcon|Talk}} I'm sorry to hear that.
+::'''Chadwick:''' ...You don't have to. It's the price I have to pay.
+::{{tx}}
+:;(Return to previous option selection)
+:{{DIcon|Arrow}} What will happen next?
+::'''Chadwick:''' I've gathered bits and pieces of info from the people they sent. Combined with my own deduction, I believe the IPC might be scheming to tamper with the memoria left in my brain after the death of my physical body.
+::{{tx}}
+<pre>{
+	"$type": "RPG.GameCore.ShowHeartDialToast",
+	"StepType": "Normal",
+	"TargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvNpcEx",
+		"FetchType": "SingleNpcByNpcID",
+		"SingleNpcID": {
+			"GroupID": {
+				"fixedValue": {
+					"Value": 12
+				}
+			},
+			"GroupNpcID": {
+				"fixedValue": {
+					"Value": 400001
+				}
+			}
+		}
+	}
+}</pre>
+:'''(Trailblazer):''' (Professor Chadwick has been placed under house arrest here?)
+:'''(Trailblazer):''' (I should go talk to him.)
+{{Dialogue End}}
+
+===Help the aged Chadwick stand up{{subst:void|<!--203030223-->}}===
 {{Mission Description|type=adventure|location=Chadwick's Emoscape|update|Witness the final moments of Chadwick's life.<br />Assist Chadwick in standing up and guide him out of his spiritual labyrinth.}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Chadwick)
+----
+:{{DIcon|Arrow}} Help Dr. Chadwick to his feet.
+----
+;(Unused &mdash; Wait_Option_203030133_727)
+:----
+{{Dialogue End}}
+
+===Accompany Chadwick on his final journey{{subst:void|<!--203030224-->}}===
+{{Dialogue Start}}
+:<!--4-second delay-->
+<pre>{
+	"$type": "RPG.GameCore.AdvSetAILeadWay",
+	"EntityInstanceID": {
+		"IsDynamic": false,
+		"FixedValue": {
+			"Value": 400001
+		}
+	},
+	"PathwayGroupID": 13,
+	"PathwayID": 1,
+	"MotionFlag": "Walk",
+	"SpeedScale": 4,
+	"WaitForPlayer": true,
+	"StartWaitDistance": 9,
+	"StopWaitDistance": 7,
+	"ForcePlayerWalk": true,
+	"EndWalkDistance": 5,
+	"OnReach": [
+		{
+			"$type": "RPG.GameCore.TriggerCustomString",
+			"CustomString": {
+				"Value": "start3"
+			}
+		}
+	]
+}</pre>
+;(Unused &mdash; start3)
+:You hear Chadwick emit a satisfied laugh... and then he no longer speaks.
+::<!--2-second delay-->
+:<pre>{
+	"$type": "RPG.GameCore.AdvSetAIFollow",
+	"FetchTarget": true,
+	"EntityInstanceID": {
+		"IsDynamic": false,
+		"FixedValue": {
+			"Value": 400001
+		}
+	},
+	"TargetType": {
+		"$type": "RPG.GameCore.GroupFetchLocalTarget",
+		"Targets": [
+			400002
+		]
+	},
+	"FetchFollowTarget": true,
+	"FollowEntityInstanceID": {
+		"IsDynamic": false,
+		"FixedValue": {
+			"Value": 400002
+		}
+	},
+	"FollowTargetType": {
+		"$type": "RPG.GameCore.GroupFetchLocalTarget",
+		"Targets": [
+			400001
+		]
+	},
+	"StopMoveDistance": 0.5,
+	"StartWalkDistance": 1.5,
+	"StartRunDistance": 1000,
+	"StartSprintDistance": 1000,
+	"PreferSlotIDs": [
+		2,
+		3
+	]
+}</pre>
+
+;(Unused &mdash; endroad2)
+<pre>{
+	"$type": "RPG.GameCore.ActiveVirtualCamera",
+	"AreaName": "LevelArea_P43312_F43312002_G13",
+	"AnchorName": "Anchor1",
+	"IsActive": true,
+	"VCameraDitherMaxDistance": 1,
+	"CenterPosX": -1,
+	"CenterPosY": -1,
+	"DynamicParams": {}
+}</pre>
+::'''Screwllum:''' Let's wake up, {{MC|f=Miss|m=Mr.}} (Trailblazer).
+:<pre>{
+	"$type": "RPG.GameCore.ActiveVirtualCamera",
+	"AreaName": "LevelArea_P43312_F43312002_G13",
+	"AnchorName": "Anchor1",
+	"VCameraDitherMaxDistance": 1,
+	"CenterPosX": -1,
+	"CenterPosY": -1,
+	"DynamicParams": {}
+}</pre>
+{{Dialogue End}}
+
+===Leave Chadwick's Emoscape (3F){{subst:void|<!--203030225-->}}===
+{{Mission Description|type=adventure|location=Chadwick's Emoscape|update|Leave Chadwick's Emoscape and return to the Dreamscape in Penacony.}}
+{{Dialogue Start}}
 {{Dialogue End}}
 
 ==Other Languages==

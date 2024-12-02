@@ -7,11 +7,11 @@ PageTitle=#Exhibition Match, Master Gongshu!#
 |title         = 
 |image         = <!--Mission Exhibition Match, Master Gongshu!.png-->
 |type          = Adventure
-|event_name    = 
+|event_name    = Aetherium Wars
 |chapter       = 
 |requirements  = {{subst:void|<!--Unknown: {"Type":"Manual"}-->}}
 |summary       = <!--official mission summary from Fate's Atlas-->
-|characters    = Trailblazer
+|characters    = Master Gongshu; Trailblazer
 |startLocation = [[Jarilo-VI]] - [[Old Weapon Testing Ground]]
 |world         = Jarilo-VI
 |area          = Old Weapon Testing Ground
@@ -19,7 +19,7 @@ PageTitle=#Exhibition Match, Master Gongshu!#
 |next          = 
 |rewards       = 
 }}
-'''''Exhibition Match, Master Gongshu!''''' is an [[Adventure Mission]] on [[Jarilo-VI]].
+'''''Exhibition Match, Master Gongshu!''''' is an Event [[Adventure Mission]] from the [[Aetherium Wars]] event.
 
 ==Steps==
 # Have a duel with Master Gongshu
@@ -33,11 +33,23 @@ PageTitle=#Exhibition Match, Master Gongshu!#
 -->
 ==Dialogue==
 {{Stub Dialogue}}
-
-===Have a duel with Master Gongshu===
+===Have a duel with Master Gongshu{{subst:void|<!--801414201-->}}===
 {{Mission Description|type=adventure|location=Old Weapon Testing Ground|The core gameplay loop behind Aetherium Wars is "dueling." Challenge different players and show your true strength!}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Master Gongshu)
+:'''Master Gongshu:''' Fwahaha... I am truly blessed to be here today. I get to lay eyes on a foreign land and compete with you again, my friend. I'm truly living the~ good~ life~
+:'''Master Gongshu:''' Let us get down to it, there is no more need for words. Hit me with your best shot, my friend!
+<pre>{
+	"$type": "RPG.GameCore.ShowUI",
+	"Name": "Ui.AetherDivide.AetherChallenge.AetherChallengePage",
+	"WaitForExit": true,
+	"Param": {
+		"Value": "202"
+	},
+	"OnUIEnter": []
+}</pre>
+:'''Master Gongshu:''' My my~ Just what you'd expect from the Champion, my friend. I bow~ to~ your~ strength~
 {{Dialogue End}}
 
 ==Other Languages==

@@ -11,7 +11,7 @@ PageTitle=#Mo Cuishle#
 |chapter       = Age of Awakening
 |requirements  = {{subst:void|<!--Unknown: {"Type":"Manual"}-->}}
 |summary       = <!--official mission summary from Fate's Atlas-->
-|characters    = Trailblazer
+|characters    = Big Ben; Cassidy; Little Fay; Luka; Nervous Thief; Seele; Svarog; Trailblazer
 |startLocation = [[Jarilo-VI]] - [[Robot Settlement]]
 |world         = Jarilo-VI
 |area          = Robot Settlement
@@ -32,7 +32,6 @@ PageTitle=#Mo Cuishle#
 # Defeat the formidable foe from the Fragmentum
 # Find Svarog as per Luka's wishes
 # Challenge Svarog and complete the "trial"
-# Follow Little Fay to find Big Ben's whereabouts
 
 <!--
 ==Gameplay Notes==
@@ -43,70 +42,590 @@ PageTitle=#Mo Cuishle#
 -->
 ==Dialogue==
 {{Stub Dialogue}}
+----
+:{{A|VO side1 lk1 seele 132.ogg}} '''Seele:''' This is Svarog's turf. Where to now?
+:{{A|VO side1 lk1 luka 131.ogg}} '''Luka:''' Don't worry, just follow me. We need to find a mechanic called Cassidy first &mdash; I've hit him up before. This way!
+----
 {{Dialogue End}}
 
-===Speak with Cassidy the mechanic===
+===Speak with Cassidy the mechanic{{subst:void|<!--201170102-->}}===
 {{Mission Description|type=companion|location=Robot Settlement|update|Luka tells you and Seele about his "trial plans" and wants you to accompany him the whole way to witness his improvement.<br />The first goal of the trial is to... help with chores. Chat with Cassidy the mechanic and see how you lot can help him out of this crisis.}}
 {{Dialogue Start}}
-:{{tx}}
+<pre>{
+	"$type": "RPG.GameCore.CreateProp",
+	"GroupID": {
+		"fixedValue": {
+			"Value": 4
+		}
+	},
+	"GroupPropID": {
+		"fixedValue": {
+			"Value": 300020
+		}
+	},
+	"CreateList": []
+}</pre>
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+<pre>{
+	"$type": "RPG.GameCore.PlayNPCBubbleTalk",
+	"BubbleTalkInfoList": [
+		{
+			"AutoSkipTime": 2,
+			"GroupID": 4,
+			"GroupNpcID": 400004,
+			"TalkSentenceID": 217019910
+		},
+		{
+			"AutoSkipTime": 1,
+			"GroupID": 4,
+			"GroupNpcID": 400004,
+			"TalkSentenceID": 217019911
+		}
+	],
+	"BubbleTalkType": "Normal",
+	"LoopInterval": 1,
+	"InstantFinish": true
+}</pre>
+
+;(Upon reaching the destination)
+----
+:{{A|VO side1 lk1 minerS 101.ogg}} '''Cassidy:''' Luka! You're finally here. I've been waiting for you for ages...
+:{{A|VO side1 lk1 luka 132.ogg}} '''Luka:''' Relax, bro! I'm a man of my word. No need to stress out.
+:{{A|VO side1 lk1 minerS 102.ogg}} '''Cassidy:''' And these two are... Oh, Miss Seele!? To think that two senior Wildfire members are concerned with my trivial problems...
+:{{A|VO side1 lk1 luka 133 m.ogg}} {{A|VO side1 lk1 luka 133 f.ogg}} '''Luka:''' They just came along to help. Don't mind them! Just tell us exactly what happened.
+:{{A|VO side1 lk1 seele 133.ogg}} '''Seele:''' Came along to help, huh...
+:{{A|VO side1 lk1 minerS 103.ogg}} '''Cassidy:''' O&mdash;Okay... this may sound strange but &mdash; I'm an amateur mechanic. I like collecting scrap in my free time, doing odd jobs like putting robots together... that sort of thing.
+:{{A|VO side1 lk1 minerS 104.ogg}} '''Cassidy:''' But a few days ago, two of my robots suddenly disappeared! They were my pride and joy. I usually leave them in the tent when I head out &mdash; everyone in the settlement knows each other. This has never happened before...
+:{{A|VO side1 lk1 minerS 105.ogg}} '''Cassidy:''' Someone must have set their sights on my robots and stolen them while I was gone &mdash; I just don't know how they managed it. Did they change the programming? But that's not possible...
+:{{DIcon|Arrow}} Maybe they just went out for a walk together.
+::{{A|VO side1 lk1 minerS 106.ogg}} '''Cassidy:''' H&mdash;Hey, stop kidding around! Can't you tell I have a serious problem on my hands...?
+:{{DIcon|Arrow}} Why isn't that possible?
+::{{A|VO side1 lk1 minerS 107.ogg}} '''Cassidy:''' *sigh* It's not impossible, I just don't think there's anyone in the settlement capable of something like that.
+:{{A|VO side1 lk1 luka 134.ogg}} '''Luka:''' I see, two robots... Do you have any clues? Any reasonable guesses? We need to have an opening to start the investigation.
+:{{A|VO side1 lk1 minerS 108.ogg}} '''Cassidy:''' Not really... but here's the most mysterious part of all this:
+:{{A|VO side1 lk1 minerS 109.ogg}} '''Cassidy:''' One of the machines they stole was a drone &mdash; I call it Little Fay. Little Fay has an alarm that buzzes non-stop as soon as any unauthorized people get close. It's guaranteed to wake up the entire settlement.
+:{{A|VO side1 lk1 minerS 110.ogg}} '''Cassidy:''' But I didn't hear Little Fay's alarm at all... I still can't figure out how that happened.
+:{{DIcon|Arrow}} Maybe it stopped working?
+::{{A|VO side1 lk1 minerS 111.ogg}} '''Cassidy:''' No way! Little Fay was shipshape &mdash; not a hitch nor glitch in sight.
+::{{A|VO side1 lk1 luka 135.ogg}} '''Luka:''' Hmm, a drone that was supposed to sound an alarm suddenly went silent... Worth remembering. Anything else?
+::{{A|VO side1 lk1 minerS 113.ogg}} '''Cassidy:''' Let me think... Oh, there is one other thing, but I don't know if it's useful...
+::{{A|VO side1 lk1 minerS 114.ogg}} '''Cassidy:''' Little Fay also has a tracker. If it gets too far from Big Ben &mdash; oh, Big Ben is the name of the other robot &mdash; if there's too much distance between them, Little Fay will automatically start routing and fly to Big Ben's location.
+::{{A|VO side1 lk1 minerS 115.ogg}} '''Cassidy:''' ...That's all I suppose. I tried to find clues myself, but I don't know where to start. This job needs real professionals...
+::{{A|VO side1 lk1 luka 136.ogg}} '''Luka:''' Mm-hmm... Cool, we've got this! Don't worry, bro. We promise we'll find your robots!
+:;(Return to previous option selection)
+:{{DIcon|Arrow}} Maybe there's a true robotics master in the settlement.
+::{{A|VO side1 lk1 minerS 112 m.ogg}} {{A|VO side1 lk1 minerS 112 f.ogg}} '''Cassidy:''' T&mdash;Trust me! I know the people here &mdash; it's extremely unlikely.
+::{{A|VO side1 lk1 luka 135.ogg}} '''Luka:''' Hmm, a drone that was supposed to sound an alarm suddenly went silent... Worth remembering. Anything else?
+::{{A|VO side1 lk1 minerS 113.ogg}} '''Cassidy:''' Let me think... Oh, there is one other thing, but I don't know if it's useful...
+::{{A|VO side1 lk1 minerS 114.ogg}} '''Cassidy:''' Little Fay also has a tracker. If it gets too far from Big Ben &mdash; oh, Big Ben is the name of the other robot &mdash; if there's too much distance between them, Little Fay will automatically start routing and fly to Big Ben's location.
+::{{A|VO side1 lk1 minerS 115.ogg}} '''Cassidy:''' ...That's all I suppose. I tried to find clues myself, but I don't know where to start. This job needs real professionals...
+::{{A|VO side1 lk1 luka 136.ogg}} '''Luka:''' Mm-hmm... Cool, we've got this! Don't worry, bro. We promise we'll find your robots!
+:;(Return to previous option selection)
+
+;(Talk to Cassidy)
+:{{A|VO side1 lk1 minerS 116.ogg}} '''Cassidy:''' Please, I'm depending on you for Little Fay and Big Ben!
+:{{A|VO side1 lk1 minerS 117.ogg}} '''Cassidy:''' They are the fruits of my entire life's labor...
+
+;(Talk to Nervous Thief)
+:{{A|VO side1 lk1 minerT 110.ogg}} '''Nervous Thief:''' I&mdash;I'm sorry! Please, I've learned my lesson!
+:{{A|VO side1 lk1 minerT 111.ogg}} '''Nervous Thief:''' I've reset its systems &mdash; it won't attack you anymore! Just get it out of here &mdash; take it back to its owner!
+:{{A|VO side1 lk1 minerT 112.ogg}} '''Nervous Thief:''' Ugh... I can't stay here anymore... What am I gonna do...
 {{Dialogue End}}
 
-===Find Cassidy's robot friends===
+===Find Cassidy's robot friends{{subst:void|<!--201170104-->}}===
 {{Mission Description|type=companion|location=Robot Settlement|update|Luka tells you and Seele about his "trial plans" and wants you to accompany him the whole way to witness his improvement.<br />The first goal of the trial is to... help with chores.<br />Cassidy the mechanic's two robot friends, Little Fay and Big Ben, have both been incomprehensibly stolen. You lot need to help him regain his legal property.}}
 {{Dialogue Start}}
-:{{tx}}
+<pre>{
+	"$type": "RPG.GameCore.CreateProp",
+	"GroupID": {
+		"fixedValue": {
+			"Value": 4
+		}
+	},
+	"GroupPropID": {
+		"fixedValue": {
+			"Value": 300020
+		}
+	},
+	"CreateList": [
+		{
+			"GroupID": {
+				"fixedValue": {
+					"Value": 4
+				}
+			},
+			"GroupInstanceID": {
+				"fixedValue": {
+					"Value": 300022
+				}
+			}
+		}
+	]
+}</pre>
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+<pre>{
+	"$type": "RPG.GameCore.PlayNPCBubbleTalk",
+	"BubbleTalkInfoList": [
+		{
+			"AutoSkipTime": 2,
+			"GroupID": 4,
+			"GroupNpcID": 400004,
+			"TalkSentenceID": 217019910
+		},
+		{
+			"AutoSkipTime": 1,
+			"GroupID": 4,
+			"GroupNpcID": 400004,
+			"TalkSentenceID": 217019911
+		}
+	],
+	"BubbleTalkType": "Normal",
+	"LoopInterval": 1,
+	"InstantFinish": true
+}</pre>
+
+;(Upon reaching the destination)
+----
+:{{A|VO side1 lk1 luka 151.ogg}} '''Luka:''' Look, there's a drone over there! But how can we tell if it's the one Cassidy lost...
+:{{A|VO side1 lk1 seele 143.ogg}} '''Seele:''' Here, look... someone deliberately scratched off the paintwork &mdash; didn't even do a good job of it.
+:{{A|VO side1 lk1 luka 152.ogg}} '''Luka:''' Oh, you're right! You've got a good eye, Seele! Whoever did it must've been in a hurry.
+:{{A|VO side1 lk1 luka 153 m.ogg}} {{A|VO side1 lk1 luka 153 f.ogg}} '''Luka:''' We need to fix this little guy up &mdash; (Trailblazer), can you lend a hand?
+----
 {{Dialogue End}}
 
-===Fix Cassidy's robot friend, Little Fay===
+===Fix Cassidy's robot friend, Little Fay{{subst:void|<!--201170105-->}}===
 {{Mission Description|type=companion|location=Robot Settlement|update|Luka tells you and Seele about his "trial plans" and wants you to accompany him the whole way to witness his improvement.<br />The first goal of the trial is to... help with chores.<br />You find one of Cassidy the mechanic's robot friends, Little Fay. However, it is in a very bad state. Flex your muscles as an amateur mechanic and fix it.}}
 {{Dialogue Start}}
-:{{tx}}
+<pre>{
+	"$type": "RPG.GameCore.CreateProp",
+	"GroupID": {
+		"fixedValue": {
+			"Value": 4
+		}
+	},
+	"GroupPropID": {
+		"fixedValue": {
+			"Value": 300020
+		}
+	},
+	"CreateList": [
+		{
+			"GroupID": {
+				"fixedValue": {
+					"Value": 4
+				}
+			},
+			"GroupInstanceID": {
+				"fixedValue": {
+					"Value": 300022
+				}
+			}
+		}
+	]
+}</pre>
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+<pre>{
+	"$type": "RPG.GameCore.PlayNPCBubbleTalk",
+	"BubbleTalkInfoList": [
+		{
+			"AutoSkipTime": 2,
+			"GroupID": 4,
+			"GroupNpcID": 400004,
+			"TalkSentenceID": 217019910
+		},
+		{
+			"AutoSkipTime": 1,
+			"GroupID": 4,
+			"GroupNpcID": 400004,
+			"TalkSentenceID": 217019911
+		}
+	],
+	"BubbleTalkType": "Normal",
+	"LoopInterval": 1,
+	"InstantFinish": true
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.CreateProp",
+	"GroupID": {
+		"fixedValue": {
+			"Value": 4
+		}
+	},
+	"GroupPropID": {
+		"fixedValue": {
+			"Value": 300020
+		}
+	},
+	"CreateList": []
+}</pre>
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+<pre>{
+	"$type": "RPG.GameCore.PlayNPCBubbleTalk",
+	"BubbleTalkInfoList": [
+		{
+			"AutoSkipTime": 2,
+			"GroupID": 4,
+			"GroupNpcID": 400004,
+			"TalkSentenceID": 217019910
+		},
+		{
+			"AutoSkipTime": 1,
+			"GroupID": 4,
+			"GroupNpcID": 400004,
+			"TalkSentenceID": 217019911
+		}
+	],
+	"BubbleTalkType": "Normal",
+	"LoopInterval": 1,
+	"InstantFinish": true
+}</pre>
 {{Dialogue End}}
 
-===Follow Little Fay to find Big Ben's whereabouts===
+===Follow Little Fay to find Big Ben's whereabouts{{subst:void|<!--201170107-->}}===
 {{Mission Description|type=companion|location=Robot Settlement|update|Luka tells you and Seele about his "training plans" and wants you to accompany him the whole way to witness his improvement.<br />The first goal of the trial is to... help with chores.<br />You fix Little Fay the robot. Its auto-navigation function will lead you to Big Ben, Cassidy's other robot friend.}}
 {{Dialogue Start}}
+<pre>{
+	"$type": "RPG.GameCore.CreateProp",
+	"GroupID": {
+		"fixedValue": {
+			"Value": 4
+		}
+	},
+	"GroupPropID": {
+		"fixedValue": {
+			"Value": 300006
+		}
+	},
+	"CreateList": []
+}</pre>
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{A|VO side1 lk1 luka 155.ogg}} '''Luka:''' Look! That fella over there is acting pretty shifty.
+:{{A|VO side1 lk1 luka 156.ogg}} '''Luka:''' He's gotta be the thief we're looking for. Let's go and have a chat with him!
+
+;(Upon reaching the destination)
+:{{A|VO side1 lk1 luka 155.ogg}} '''Luka:''' Look! That fella over there is acting pretty shifty.
+:{{A|VO side1 lk1 luka 156.ogg}} '''Luka:''' He's gotta be the thief we're looking for. Let's go and have a chat with him!
+;(Unused &mdash; MazePuzzle_Drone_Up)
+:<!--2-second delay-->
+::{{A|VO side1 lk1 seele 147.ogg}} '''Seele:''' Hey, it's flying away! Follow it!
+
+;(Unused &mdash; Maze_Prop_RobotGamePlay_Mission)
+
+<pre>{
+	"$type": "RPG.GameCore.CreateProp",
+	"GroupID": {
+		"fixedValue": {
+			"Value": 4
+		}
+	},
+	"GroupPropID": {
+		"fixedValue": {
+			"Value": 300007
+		}
+	},
+	"CreateList": []
+}</pre>
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+----
+:{{A|VO side1 lk1 luka 157.ogg}} '''Luka:''' Hey, friend!
+:{{A|VO side1 lk1 minerT 103.ogg}} '''Nervous Thief:''' Wh&mdash;Who's there!?
+:{{A|VO side1 lk1 minerT 104.ogg}} '''Nervous Thief:''' A red ribbon... W&mdash;Wildfire!? Ha! How did you...? I'm doing just fine &mdash; no monsters around here. Why don't you go bother someone else?
+:{{A|VO side1 lk1 seele 148.ogg}} '''Seele:''' Hmph, shying away from honest work, indulging in petty crime &mdash; of course you're "doing just fine."
+:{{A|VO side1 lk1 luka 158.ogg}} '''Luka:''' Uh, I'm not sure this falls under "petty crime," Seele &mdash; that's a whole robot he's got next to him. It's Big Ben alright.
+:{{A|VO side1 lk1 minerT 105.ogg}} '''Nervous Thief:''' H&mdash;Hold on a second. Who told you the name of this robot? Don't tell me it's&mdash;
+:{{A|VO side1 lk1 luka 159.ogg}} '''Luka:''' That's right. Cassidy sent us here! Hand over what you stole, or be prepared to face the fist of a champion!
+:{{A|VO side1 lk1 minerT 106.ogg}} '''Nervous Thief:''' ...F&mdash;Fist of a champion, huh? Hmph, I've come this far &mdash; I won't be able to show my face around here if news gets out... Do your worst!
+:{{A|VO side1 lk1 minerT 107.ogg}} '''Nervous Thief:''' Big Ben, let's get him!
+:{{A|VO side1 lk1 seele 149.ogg}} '''Seele:''' Going all the way, huh? Enough talk then &mdash; Luka, let's get him!
+:{{A|VO side1 lk1 luka 160.ogg}} '''Luka:''' Ha! I was thinking the exact same thing! Here, let me punch some sense into you!
+;(Enter battle)
+:{{Enemy List|Automaton Beetle*1; Vagrant*1}}
 :{{tx}}
+----
+:{{A|VO side1 lk1 luka 167.ogg}} '''Luka:''' Nice! Our thieving friend surrendered, and Big Ben looks to be in one piece. The first step of the champion's training is complete!
+:{{A|VO side1 lk1 luka 168.ogg}} '''Luka:''' ...Huh, why are you two so straight-faced? Can't you look a little happy?
+:{{DIcon|Arrow}} (Say nothing)
+::{{A|VO side1 lk1 seele 150.ogg}} '''Seele:''' ...What was that supposed to be? "The Moltammerville warrior"...?
+:{{DIcon|Arrow}} "The Moltammerville warrior..."
+::{{A|VO side1 lk1 seele 151.ogg}} '''Seele:''' Yeah, I was gonna ask... what was all that supposed to be?
+:{{A|VO side1 lk1 luka 169.ogg}} '''Luka:''' Oh, that? Nothing, just a slogan &mdash; don't take it too seriously. Let's get Big Ben back to Cassidy.
+:{{A|VO side1 lk1 seele 152.ogg}} '''Seele:''' ...
+:{{A|VO side1 lk1 seele 153.ogg}} '''Seele:''' Fine, let's finish up here. But I'm gonna put it out there &mdash; we're not gonna forget those lines of yours anytime soon...
+----
 {{Dialogue End}}
 
-===Interact with Big Ben===
+===Interact with Big Ben{{subst:void|<!--201170109-->}}===
 {{Mission Description|type=companion|location=Robot Settlement|update|Luka tells you and Seele about his "trial plans" and wants you to accompany him the whole way to witness his improvement.<br />The first goal of the trial is to... help with chores.<br />You defeat the thief and recover Cassidy the mechanic's two robot friends. It's time to tell Cassidy the good news.}}
 {{Dialogue Start}}
-:{{tx}}
+
 {{Dialogue End}}
 
-===Follow Big Ben and report to Cassidy===
+===Follow Big Ben and report to Cassidy{{subst:void|<!--201170110-->}}===
 {{Dialogue Start}}
-:{{tx}}
+
+----
+:{{A|VO side1 lk1 minerS 118.ogg}} '''Cassidy:''' Big Ben! You're back!
+:{{A|VO side1 lk1 robotM 104.ogg}} '''Big Ben:''' Beep... boop. Cassidy. Little Fay. Cassidy.
+:{{A|VO side1 lk1 minerS 119 m.ogg}} {{A|VO side1 lk1 minerS 119 f.ogg}} '''Cassidy:''' I don't know how I can ever thank you... Luka, Seele, and... {{MC|f=miss|m=mister}} outsider! My life can finally get back on track now...
+:{{A|VO side1 lk1 luka 170.ogg}} '''Luka:''' See? I kept my word, right? Wildfire's senior members always deliver what we promise.
+:{{A|VO side1 lk1 minerS 120.ogg}} '''Cassidy:''' I've never doubted you, Luka! I'll remember this forever... Right, time to take Little Fay and Big Ben for a systems check &mdash; until next time!
+:{{A|VO side1 lk1 luka 171.ogg}} '''Luka:''' Yeah, go ahead! We'll catch up later.
+----
+:{{A|VO side1 lk1 luka 172.ogg}} '''Luka:''' ...That felt great! It's such a wholesome feeling to help other people, don't you think?
+:{{A|VO side1 lk1 seele 154.ogg}} '''Seele:''' To be honest, I think you could've handled it yourself.
+:{{A|VO side1 lk1 seele 155.ogg}} '''Seele:''' You said this was the first step, right...? So just how many steps does your training have, exactly?
+:{{A|VO side1 lk1 luka 173.ogg}} '''Luka:''' Three. Just three steps. Trust me, it won't take too much of your time!
+:{{DIcon|Arrow}} Where to next?
+::{{A|VO side1 lk1 luka 174.ogg}} '''Luka:''' Easy, I'm about to tell you.
+:{{DIcon|Arrow}} I THIRST FOR BATTLE!!!
+::{{A|VO side1 lk1 luka 175.ogg}} '''Luka:''' Hahaha, I like your spirit! Shame I didn't run into you sooner.
+:{{DIcon|Arrow}} I care more about what I can get as rewards...
+::{{A|VO side1 lk1 seele 156.ogg}} '''Seele:''' Um, maybe we can talk about that later...
+:{{A|VO side1 lk1 luka 176.ogg}} '''Luka:''' Let's go! Next, we're gonna clear up all the Fragmentum cronies still left in the settlement!
+:{{A|VO side1 lk1 seele 157.ogg}} '''Seele:''' ...Huh? Fragmentum? But the settlement...
+:{{A|VO side1 lk1 luka 177.ogg}} '''Luka:''' ...Wasn't affected by the Fragmentum, right? You're not wrong. The fissure here only recently opened up. Master Oleg got the intel from our network just yesterday.
+:{{A|VO side1 lk1 luka 178.ogg}} '''Luka:''' I asked him to leave this case to me. Perfect for the second step of the training, right?
+:{{A|VO side1 lk1 seele 158.ogg}} '''Seele:''' Like master, like student... I admire your attitude. In any case, if this concerns the Fragmentum, then there's no time to lose. Where are the monsters? Lead the way.
+:{{A|VO side1 lk1 luka 179.ogg}} '''Luka:''' Way ahead of you. Follow me!
+----
 {{Dialogue End}}
 
-===Remove the enemies from the Fragmentum===
+===Remove the enemies from the Fragmentum{{subst:void|<!--201170111-->}}===
 {{Mission Description|type=companion|location=Robot Settlement|update|Luka tells you and Seele about his "trial plans" and wants you to accompany him the whole way to witness his improvement.<br />The second goal of the trial is simple and brutal... clear out all the Fragmentum monsters that have entered the Robot Settlement.<br />Obviously no one is more of an expert at this than you. Let's go!}}
 {{Dialogue Start}}
-:{{tx}}
+<pre>{
+	"$type": "RPG.GameCore.CreateProp",
+	"GroupID": {
+		"fixedValue": {
+			"Value": 4
+		}
+	},
+	"GroupPropID": {
+		"fixedValue": {
+			"Value": 300010
+		}
+	},
+	"CreateList": []
+}</pre>
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{A|VO side1 lk1 luka 181.ogg}} '''Luka:''' Say, how did you settle your beef with Svarog? Tell me the juicy details.
+:{{A|VO side1 lk1 seele 160.ogg}} '''Seele:''' It's a long story... I'll tell you later.
+
+;(Upon reaching the destination)
+:{{A|VO side1 lk1 seele 159.ogg}} '''Seele:''' Luka, come clean with me. Are you here for some other reason?
+:{{A|VO side1 lk1 luka 180.ogg}} '''Luka:''' It's just training, for real! It's not like you to be so suspicious, Seele.
+
+;(Upon reaching the destination)
+----
+:{{A|VO side1 lk1 seele 161.ogg}} '''Seele:''' There are so many of them... Are you sure the fissure only recently opened up?
+:{{A|VO side1 lk1 luka 182.ogg}} '''Luka:''' Our intel should have been accurate... Seems like Boss Svarog must have let his guard down &mdash; these guys are messing up his turf!
+:{{A|VO side1 lk1 seele 162.ogg}} '''Seele:''' Enough talk. Let's clean up this area.
+<pre>{
+	"$type": "RPG.GameCore.ActiveVirtualCamera",
+	"AreaName": "LevelArea_P40123_F40123001_G4",
+	"AnchorName": "Anchor23",
+	"BlendConfig": {
+		"ExportToJson": true,
+		"BlendType": "EaseInOut",
+		"CustomCurveName": "Blend_FastToSlow",
+		"BlendTime": 1,
+		"FOVSmoothDampTime": -1,
+		"FrameBlendWeightStart": 1,
+		"FrameBlendDuration": 1
+	},
+	"VCameraDitherMaxDistance": 1,
+	"CenterPosX": -1,
+	"CenterPosY": -1
+}</pre>
 {{Dialogue End}}
 
-===Defeat the formidable foe from the Fragmentum===
+===Defeat the formidable foe from the Fragmentum{{subst:void|<!--201170112-->}}===
 {{Mission Description|type=companion|location=Robot Settlement|update|Luka tells you and Seele about his "trial plans" and wants you to accompany him the whole way to witness his improvement.<br />The second goal of the trial is simple and brutal... clear out all the Fragmentum monsters that have entered the Robot Settlement.<br />A powerful Fragmentum monster appears before you. Get rid of it!}}
 {{Dialogue Start}}
+<pre>{
+	"$type": "RPG.GameCore.CreateProp",
+	"GroupID": {
+		"fixedValue": {
+			"Value": 4
+		}
+	},
+	"GroupPropID": {
+		"fixedValue": {
+			"Value": 300012
+		}
+	},
+	"CreateList": []
+}</pre>
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+----
+:{{A|VO side1 lk1 luka 183.ogg}} '''Luka:''' Ah, no wonder these minions are so active &mdash; there's a big fella hiding behind them!
+:{{A|VO side1 lk1 seele 163.ogg}} '''Seele:''' So, this guy is the source of it all, right? If we take him out, the Fragmentum activity in this area should subside for a while...
+:{{A|VO side1 lk1 seele 164.ogg}} '''Seele:''' ...And trial two will be complete.
+:{{A|VO side1 lk1 luka 184.ogg}} '''Luka:''' Hahaha, that's right! What's up? Starting to get into it, Seele?
+:{{A|VO side1 lk1 seele 165.ogg}} '''Seele:''' ...It's been too long since I had a good workout. This will be a nice warm-up!
+:{{A|VO side1 lk1 luka 185 m.ogg}} {{A|VO side1 lk1 luka 185 f.ogg}} '''Luka:''' Alright! (Trailblazer) &mdash; we'll charge in once you're ready!
+;(Enter battle)
+:{{Enemy List|Flamespawn*2; Blaze Out of Space*1}}
 :{{tx}}
+----
+:{{A|VO side1 lk1 seele 169.ogg}} '''Seele:''' You...
+:{{A|VO side1 lk1 seele 170.ogg}} '''Seele:''' Are you okay!?
+:{{DIcon|Arrow}} ...Is this some kind of performance art?
+::{{A|VO side1 lk1 seele 171.ogg}} '''Seele:''' ...Why are you so hyped? What's going on?
+:{{DIcon|Arrow}} "Defeater of evil throughout the world!"
+::{{A|VO side1 lk1 seele 172.ogg}} '''Seele:''' ...Don't copy him!
+::{{A|VO side1 lk1 seele 173.ogg}} '''Seele:''' Seriously, why are you so hyped up today?
+:{{A|VO side1 lk1 luka 190.ogg}} '''Luka:''' Hahaha, it's just a normal victory celebration. No need to be so alarmed.
+:{{A|VO side1 lk1 seele 174.ogg}} '''Seele:''' ...You call that normal? I might have let it slide if it was in the cage... On second thought, no, that was cringe even by Fight Club standards.
+:{{A|VO side1 lk1 luka 191.ogg}} '''Luka:''' Don't get so worked up, Seele! I'm thinking clearly! Plus, didn't we just get rid of another major threat to the Underworld?
+:{{A|VO side1 lk1 seele 175.ogg}} '''Seele:''' True, but quit changing the subject! This new "routine" of yours is just...
+:{{A|VO side1 lk1 luka 192.ogg}} '''Luka:''' Hahaha, don't worry! I promise you, it'll only last till the end of my training. Actually, have I been making too many promises today? That's not a good habit...
+:{{A|VO side1 lk1 luka 193.ogg}} '''Luka:''' Anyway, there's only one more step in my training plan. Come on guys, help me wrap it up!
+:{{A|VO side1 lk1 seele 176.ogg}} '''Seele:''' *sigh* ...I guess we're in too deep, better let it run its course. So tell us, what else is on the schedule.
+:{{A|VO side1 lk1 luka 194.ogg}} '''Luka:''' The final step in this training &mdash; is to challenge boss Svarog!
+:{{DIcon|Arrow}} Oh boy...
+:{{DIcon|Arrow}} Noice! Count me in!
+:{{A|VO side1 lk1 seele 177.ogg}} '''Seele:''' Are you sure you're thinking clearly!?
+:{{A|VO side1 lk1 luka 195.ogg}} '''Luka:''' Whoa, whoa, stay cool, Seele. Like I said, I'm thinking clearly. Every word I said is serious!
+:{{A|VO side1 lk1 luka 196.ogg}} '''Luka:''' I set this as the final goal of my training a few days ago. Think about it &mdash; is there any Underworld opponent worth challenging more than Boss Svarog?
+:{{A|VO side1 lk1 seele 178.ogg}} '''Seele:''' ...No, I can't agree to this, you're asking for trouble! Forget about winning or losing &mdash; the relationship between Wildfire and Svarog only just got patched up...
+:{{A|VO side1 lk1 luka 197.ogg}} '''Luka:''' I'm not going to rile him up! Don't make this more complicated than it is. I'm just inviting him to have a fair fight with me, like how you'd have in the cage!
+:{{A|VO side1 lk1 seele 179.ogg}} '''Seele:''' Are you mad? Svarog is a robot! He doesn't understand the rules of the cage! He's different from us. His fists are made of steel&mdash;
+:{{A|VO side1 lk1 luka 198.ogg}} '''Luka:''' ...That means we're evenly matched, right?
+:{{A|VO side1 lk1 seele 180.ogg}} '''Seele:''' ...
+:{{A|VO side1 lk1 seele 181.ogg}} '''Seele:''' You know what I mean &mdash; don't act smart with me! Ugh, you don't make any sense...
+:{{A|VO side1 lk1 luka 199.ogg}} '''Luka:''' Hahaha, I understand what you're saying, Seele! But you know, I'm a fighter... It's my duty to keep training and get stronger.
+:{{A|VO side1 lk1 luka 200.ogg}} '''Luka:''' It's a terrible feeling to have a powerful opponent in your head but never be able to get close to him. It's all thanks to your patching things up with Svarog that I'm able to have this opportunity now &mdash; I'm not gonna miss it for the world!
+:{{A|VO side1 lk1 seele 182.ogg}} '''Seele:''' ...
+:{{DIcon|Arrow}} Let him do it, Seele.
+:{{DIcon|Arrow}} Svarog might go easy because we're here...
+:{{A|VO side1 lk1 seele 183.ogg}} '''Seele:''' ...Alright. Fine. We'll go find Svarog and have a nice chat with him.
+:{{A|VO side1 lk1 seele 184.ogg}} '''Seele:''' Lemme say this first &mdash; if he doesn't wanna deal with you as a challenger, then we're getting out of there ASAP.
+:{{A|VO side1 lk1 luka 201.ogg}} '''Luka:''' Haha, don't worry, I'll convince him! But you're right. If he's not in the mood for it, then I won't force him.
+:{{A|VO side1 lk1 luka 202.ogg}} '''Luka:''' I haven't really worked with boss Svarog before, so please, lead the way. Let's go!
+----
 {{Dialogue End}}
 
-===Find Svarog as per Luka's wishes===
+===Find Svarog as per Luka's wishes{{subst:void|<!--201170114-->}}===
 {{Mission Description|type=companion|location=Robot Settlement|update|Luka tells you and Seele about his "trial plans" and wants you to accompany him the whole way to witness his improvement.<br />The final goal of the trial is to challenge Svarog. You and Seele both think it is absolute nonsense, but Luka insists on completing the goals he set for himself.<br />You and Seele decide to keep following him in case something bad happens.}}
 {{Dialogue Start}}
-:{{tx}}
+<pre>{
+	"$type": "RPG.GameCore.CreateProp",
+	"GroupID": {
+		"fixedValue": {
+			"Value": 4
+		}
+	},
+	"GroupPropID": {
+		"fixedValue": {
+			"Value": 300014
+		}
+	},
+	"CreateList": []
+}</pre>
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{A|VO side1 lk1 seele 187.ogg}} '''Seele:''' Have you talked to Oleg about going to see Svarog?
+:{{A|VO side1 lk1 luka 204.ogg}} '''Luka:''' Hahaha, that's all you wanna ask? I don't necessarily tell master Oleg everything, you know.
+:{{A|VO side1 lk1 seele 188.ogg}} '''Seele:''' *sigh*
+
+;(Upon reaching the destination)
+:{{A|VO side1 lk1 seele 185.ogg}} '''Seele:''' Luka, you&mdash;
+:{{A|VO side1 lk1 luka 203.ogg}} '''Luka:''' Hmm? What's up?
+:{{A|VO side1 lk1 seele 186.ogg}} '''Seele:''' ...Never mind. I get the feeling I'm wasting my breath.
+
+;(Upon reaching the destination)
+----
+:{{A|VO side1 lk1 svarog 101.ogg}} '''Svarog:''' The Trailblazer, Seele of Wildfire, and...
+:{{A|VO side1 lk1 luka 205.ogg}} '''Luka:''' Hey! An honor to meet you, Boss Svarog! I'm Luka, a senior member of Wildfire, just like Seele.
+:{{A|VO side1 lk1 svarog 102.ogg}} '''Svarog:''' Accessing back-end database. Querying...
+:{{A|VO side1 lk1 svarog 103.ogg}} '''Svarog:''' Query complete. Luka, born in Moltammerville, winner of the 28th Boulder Town Fight King Challenge. Beloved student of Oleg, acting chief of Wildfire.
+:{{A|VO side1 lk1 luka 206.ogg}} '''Luka:''' ...Wow, impressive! Thank you for saving me the self-introduction.
+:{{A|VO side1 lk1 svarog 104.ogg}} '''Svarog:''' Luka of Wildfire, what is the purpose of your visit?
+:{{A|VO side1 lk1 luka 207.ogg}} '''Luka:''' Straight to the point, just the way I like it &mdash; I'm here to challenge you, Boss Svarog!
+:{{A|VO side1 lk1 svarog 105.ogg}} '''Svarog:''' ...Challenge?
+:{{A|VO side1 lk1 svarog 106 m.ogg}} {{A|VO side1 lk1 svarog 106 f.ogg}} '''Svarog:''' Intent unclear. (Trailblazer), Seele of Wildfire &mdash; can you provide an explanation?
+:{{DIcon|Arrow}} Not really...
+::{{A|VO side1 lk1 seele 189.ogg}} '''Seele:''' ...Don't look at me. He's the one who came up with this idea. It's up to you to accept it or not, Svarog.
+:{{DIcon|Arrow}} I think he might have hit his head.
+::{{A|VO side1 lk1 seele 190.ogg}} '''Seele:''' ...He's the one who came up with this idea. It's up to you to accept it or not, Svarog.
+:{{DIcon|Arrow}} Just accept!
+::{{A|VO side1 lk1 seele 191.ogg}} '''Seele:''' Hey, why are you fanning the flames!?
+::{{A|VO side1 lk1 seele 192.ogg}} '''Seele:''' *sigh* He's the one who came up with this idea. It's up to you to accept it or not, Svarog.
+;(Unused &mdash; LLS)
+
+
+;(Unused &mdash; SHLS)
+
 {{Dialogue End}}
 
-===Challenge Svarog and complete the "trial"===
+===Challenge Svarog and complete the "trial"{{subst:void|<!--201170115-->}}===
 {{Mission Description|type=companion|location=Robot Settlement|update|You are Luka, a core member of Wildfire, the best fighter of Boulder Town.<br />You are well aware this is probably the only time in your life that you can fight Svarog head-on... This is a dream you had always wanted to achieve.<br />Don't give yourself regrets. Go and fight him fair and square!}}
 {{Dialogue Start}}
-:{{tx}}
-{{Dialogue End}}
+----
 
-===Follow Little Fay to find Big Ben's whereabouts===
-{{Mission Description|type=companion|location=Robot Settlement|update|Luka tells you and Seele about his "training plans" and wants you to accompany him the whole way to witness his improvement.<br />The first goal of the trial is to... help with chores.<br />You fix Little Fay the robot. Its auto-navigation function will lead you to Big Ben, Cassidy's other robot friend.}}
-{{Dialogue Start}}
+;(Upon reaching the destination)
+<pre>{
+	"$type": "RPG.GameCore.PlayNPCBubbleTalk",
+	"BubbleTalkInfoList": [
+		{
+			"AutoSkipTime": 2,
+			"GroupID": 4,
+			"GroupNpcID": 400030,
+			"TalkSentenceID": 217019922
+		},
+		{
+			"AutoSkipTime": 2,
+			"GroupID": 4,
+			"GroupNpcID": 400030,
+			"TalkSentenceID": 217019923
+		}
+	],
+	"BubbleTalkType": "Normal",
+	"LoopInterval": 3,
+	"InstantFinish": true
+}</pre>
+
+;(Upon reaching the destination)
+<pre>{
+	"$type": "RPG.GameCore.PlayNPCBubbleTalk",
+	"BubbleTalkInfoList": [
+		{
+			"AutoSkipTime": 2,
+			"GroupID": 4,
+			"GroupNpcID": 400029,
+			"TalkSentenceID": 217019924
+		},
+		{
+			"AutoSkipTime": 2,
+			"GroupID": 4,
+			"GroupNpcID": 400029,
+			"TalkSentenceID": 217019925
+		}
+	],
+	"BubbleTalkType": "Normal",
+	"IsLoop": true,
+	"LoopInterval": 3,
+	"InstantFinish": true,
+	"UniqueID": 1
+}</pre>
 :{{tx}}
 {{Dialogue End}}
 

@@ -11,7 +11,7 @@ PageTitle=#No Fooling Around#
 |chapter       = Vignettes in a Cup
 |requirements  = {{subst:void|<!--Unknown: {"Type":"Manual"}-->}}
 |summary       = <!--official mission summary from Fate's Atlas-->
-|characters    = Trailblazer
+|characters    = Spade; Trailblazer
 |startLocation = [[Penacony]] - [[Spade's Emoscape]]
 |world         = Penacony
 |area          = Spade's Emoscape
@@ -34,10 +34,62 @@ PageTitle=#No Fooling Around#
 ==Dialogue==
 {{Stub Dialogue}}
 
-===Capture the prank-loving Spade===
+===Capture the prank-loving Spade{{subst:void|<!--802112101-->}}===
 {{Mission Description|type=adventure|location=Spade's Emoscape|You've entered Spade's Emoscape. Now, you need to help it change its bad habit of pranking others!<br />But first, you'll need to catch it...}}
 {{Dialogue Start}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:'''Spade:''' I got you! You fell for it!
+<pre>{
+	"$type": "RPG.GameCore.WaitMissionTalkFinish"
+}</pre>
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:'''Spade:''' You caught me! I&mdash;I'm sorry because I&mdash;I... am not there! Hahaha!
+<pre>{
+	"$type": "RPG.GameCore.WaitMissionTalkFinish"
+}</pre>
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+----
+:'''Spade:''' L&mdash;Let me go! ...I know I was wrong. I'm truly sorry, and I'll apologize to every dog around the world who has ever been bullied!
+:'''Spade:''' From this moment on, I will be the protector of all dogs! I will make sure no dog ever cries and will do so until the day I die!
+:'''Spade:''' I... I...
+:{{DIcon|Arrow}} You want me to teach you another lesson?
+:{{DIcon|Arrow}} Is this how you apologize?
+:'''Spade:''' I... *sob*
+:'''Spade:''' Actually... I didn't really do it on purpose. That wasn't it at all... It's just that, well, Siobhan hasn't been around recently. I thought maybe... if I made a scene, she might come back. Siobhan would come rushing back if the monsters were in trouble. I'm sure of it.
+:'''Spade:''' So that's why... I smashed that idiot pooch's thing...
+:{{DIcon|Arrow}} That's not a good reason, you know?
+:{{DIcon|Arrow}} You shouldn't have done that, right?
+:'''Spade:''' I know... I know... From here on out, I'll be sure to not bother or make fun of that idiot pooch.
+:'''Spade:''' "Idiot pooch!" *slap* See how hard that slap was? It hurt so much I'll never forget!
+:'''Spade:''' What if, *sniffle*... you let me off this time?
+:{{DIcon|Arrow}} There won't be any second chances.
+:{{DIcon|Arrow}} If this happens again, you'll get slapped ten times!
+:'''Spade:''' Whoa whoa whoa! I've been miraculously revived!
 :{{tx}}
+----
+<pre>{
+	"$type": "RPG.GameCore.ShowUI",
+	"Name": "Ui.DrinkMaker.WorkBook.DrinkMakerWorkBookPage",
+	"WaitForExit": true,
+	"Param": {
+		"Value": "1"
+	}
+}</pre>
+;(If {{cx}}<!--SubMission Finish: 802110204-->)
+:<pre>{
+	"$type": "RPG.GameCore.ShowUI",
+	"Name": "Ui.DrinkMaker.Handbook.DrinkMakerNewContentUnlockDialog",
+	"WaitForExit": true,
+	"Param": {
+		"Value": "802110208"
+	}
+}</pre>
 {{Dialogue End}}
 
 ==Other Languages==

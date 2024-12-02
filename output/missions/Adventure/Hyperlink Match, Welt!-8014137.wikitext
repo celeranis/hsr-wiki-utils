@@ -7,7 +7,7 @@ PageTitle=#Hyperlink Match, Welt!#
 |title         = 
 |image         = <!--Mission Hyperlink Match, Welt!.png-->
 |type          = Adventure
-|event_name    = 
+|event_name    = Aetherium Wars
 |chapter       = 
 |requirements  = 
 * [[Adventure Mission]] ''[[Hyperlink Match, Qingque!]]'' completed
@@ -16,7 +16,7 @@ PageTitle=#Hyperlink Match, Welt!#
 * [[Adventure Mission]] ''[[Hyperlink Match, Bronya!]]'' completed
 * [[Adventure Mission]] ''[[Final Showdown! Intergalactic Celebration!]]'' completed
 |summary       = <!--official mission summary from Fate's Atlas-->
-|characters    = Trailblazer
+|characters    = Trailblazer; Welt
 |startLocation = [[Jarilo-VI]] - [[Old Weapon Testing Ground]]
 |world         = Jarilo-VI
 |area          = Old Weapon Testing Ground
@@ -24,7 +24,7 @@ PageTitle=#Hyperlink Match, Welt!#
 |next          = 
 |rewards       = 
 }}
-'''''Hyperlink Match, Welt!''''' is an [[Adventure Mission]] on [[Jarilo-VI]].
+'''''Hyperlink Match, Welt!''''' is an Event [[Adventure Mission]] from the [[Aetherium Wars]] event.
 
 ==Steps==
 # Have a Hyperlink Match with Welt
@@ -38,11 +38,29 @@ PageTitle=#Hyperlink Match, Welt!#
 -->
 ==Dialogue==
 {{Stub Dialogue}}
-
-===Have a Hyperlink Match with Welt===
+===Have a Hyperlink Match with Welt{{subst:void|<!--801413701-->}}===
 {{Mission Description|type=adventure|location=Old Weapon Testing Ground|The core gameplay loop behind Aetherium Wars is "dueling." Challenge different players and show your true strength!}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Welt Yang)
+:'''Welt:''' "Aetherium Wars" really is fun. Since I left home, it's been ages since I've gotten serious about a video game.
+:'''Welt:''' You fancy a battle with me, (Trailblazer)?
+<pre>{
+	"$type": "RPG.GameCore.ShowMenu",
+	"DisplaySingleMenuItem": true
+}</pre>
+:'''Welt:''' Playing games like this makes me feel like I'm young again...
+:'''Welt:''' Let's play again if you have the time, (Trailblazer).
+:{{DIcon|Arrow}} Another time.
+:'''Welt:''' Alright, I'm here whenever you want to play.
+<pre>{
+	"$type": "RPG.GameCore.ShowUI",
+	"Name": "Ui.AetherDivide.AetherDivideEntryPage",
+	"Param": {
+		"Value": "2"
+	},
+	"OnUIEnter": []
+}</pre>
 {{Dialogue End}}
 
 ==Other Languages==

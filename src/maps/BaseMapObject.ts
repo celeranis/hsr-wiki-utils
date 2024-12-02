@@ -1,6 +1,8 @@
-import { MapObject, Vector3 } from '../files/MapData.js';
+import { MapObject, Vector3 } from '../files/graph/MapData.js';
 
-export class BaseMapObject {
+export abstract class BaseMapObject {
+	abstract type: 'npc' | 'prop' | 'anchor'
+	
 	object_id: number
 
 	position: Vector3

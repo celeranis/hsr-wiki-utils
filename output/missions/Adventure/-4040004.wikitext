@@ -11,7 +11,7 @@ PageTitle=##
 |chapter       = 
 |requirements  = [[Trailblaze Mission]] ''[[Lingering Shadows]]'' completed
 |summary       = <!--official mission summary from Fate's Atlas-->
-|characters    = Trailblazer
+|characters    = Researcher who refers to himself as "this old one"; Trailblazer
 |startLocation = [[Herta Space Station]] - [[Storage Zone]]
 |world         = Herta Space Station
 |area          = Storage Zone
@@ -33,7 +33,43 @@ PageTitle=##
 -->
 ==Dialogue==
 {{Stub Dialogue}}
-
+:<!--0.25-second delay-->
+<pre>{
+	"$type": "RPG.GameCore.PropSetupUITrigger",
+	"ButtonIcon": "SpriteOutput/TalkIcon/CheckIcon.png",
+	"IconType": "CheckIcon",
+	"ButtonText": {
+		"Hash": 278713937
+	},
+	"ButtonCallback": [
+		{
+			"$type": "RPG.GameCore.TriggerCustomString",
+			"CustomString": {
+				"Value": "Mission_404000401_Prop_63_300002_BtnClick"
+			}
+		}
+	],
+	"InteractAngleRange": 180,
+	"OverrideTargetTypes": [],
+	"SkipFakeAvatar": true,
+	"TargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvPropEx",
+		"FetchType": "SinglePropByPropID",
+		"SinglePropID": {
+			"GroupID": {
+				"fixedValue": {
+					"Value": 63
+				}
+			},
+			"ID": {
+				"fixedValue": {
+					"Value": 300003
+				}
+			}
+		}
+	}
+}</pre>
+;(Obtain {{Item|Praise of High Morals|20|x=2}})
 {{Dialogue End}}
 
 ==Other Languages==

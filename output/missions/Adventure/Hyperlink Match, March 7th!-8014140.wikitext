@@ -7,7 +7,7 @@ PageTitle=#Hyperlink Match, March 7th!#
 |title         = 
 |image         = <!--Mission Hyperlink Match, March 7th!.png-->
 |type          = Adventure
-|event_name    = 
+|event_name    = Aetherium Wars
 |chapter       = 
 |requirements  = 
 * [[Adventure Mission]] ''[[Hyperlink Match, Qingque!]]'' completed
@@ -16,7 +16,7 @@ PageTitle=#Hyperlink Match, March 7th!#
 * [[Adventure Mission]] ''[[Hyperlink Match, Bronya!]]'' completed
 * [[Adventure Mission]] ''[[Final Showdown! Intergalactic Celebration!]]'' completed
 |summary       = <!--official mission summary from Fate's Atlas-->
-|characters    = Trailblazer
+|characters    = March 7th; Trailblazer
 |startLocation = [[Jarilo-VI]] - [[Old Weapon Testing Ground]]
 |world         = Jarilo-VI
 |area          = Old Weapon Testing Ground
@@ -24,7 +24,7 @@ PageTitle=#Hyperlink Match, March 7th!#
 |next          = 
 |rewards       = 
 }}
-'''''Hyperlink Match, March 7th!''''' is an [[Adventure Mission]] on [[Jarilo-VI]].
+'''''Hyperlink Match, March 7th!''''' is an Event [[Adventure Mission]] from the [[Aetherium Wars]] event.
 
 ==Steps==
 # Have a Hyperlink Match with March 7th
@@ -38,11 +38,30 @@ PageTitle=#Hyperlink Match, March 7th!#
 -->
 ==Dialogue==
 {{Stub Dialogue}}
-
-===Have a Hyperlink Match with March 7th===
+===Have a Hyperlink Match with March 7th{{subst:void|<!--801414001-->}}===
 {{Mission Description|type=adventure|location=Old Weapon Testing Ground|The core gameplay loop behind Aetherium Wars is "dueling." Challenge different players and show your true strength!}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to March 7th)
+:'''March 7th:''' Hehe, you finally came, (Trailblazer)!
+:'''March 7th:''' We've raised Aether Spirits together all this time. We cleared the trials of the Victory Zone and finally, we became the Festival Champions...
+:'''March 7th:''' But don't think that was the end of it! How can there be two Champions? Your fellow Champion wants to battle and find the true victor!
+<pre>{
+	"$type": "RPG.GameCore.ShowMenu",
+	"DisplaySingleMenuItem": true
+}</pre>
+:'''March 7th:''' You're so ruthless, you didn't even give me a chance...
+:'''March 7th:''' Hmph, forget it, you can be the final Champion~ But remember, without my help, you would never have gotten the title of Champion!
+:{{DIcon|Arrow}} Another time.
+:'''March 7th:''' Hey, hey! You're not scared, are you? When you're ready, you have to battle me. You have to!
+<pre>{
+	"$type": "RPG.GameCore.ShowUI",
+	"Name": "Ui.AetherDivide.AetherDivideEntryPage",
+	"Param": {
+		"Value": "2"
+	},
+	"OnUIEnter": []
+}</pre>
 {{Dialogue End}}
 
 ==Other Languages==

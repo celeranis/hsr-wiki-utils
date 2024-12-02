@@ -1,7 +1,7 @@
-import type { performance } from '../dialogue/tasks/Performance.ts'
-import type { DICON_MAP, Dictionary } from '../Shared.ts'
-import { HashReference } from '../TextMap.ts'
-import { ItemReference } from './Item.js'
+import type { performance } from '../../dialogue/tasks/Performance.ts'
+import type { DICON_MAP, Dictionary } from '../../Shared.ts'
+import { HashReference } from '../../TextMap.ts'
+import { ItemReference } from '../Item.js'
 
 export interface StageData {
 	Name: string
@@ -141,6 +141,7 @@ export interface LevelGroupData {
 	GroupGUID: string
 	GroupName: string
 	Category: LevelGroupCategory
+	LevelGraph?: string
 	ConfigPrefabPath: string
 	AreaAnchorName: string
 	SaveType: LevelGroupSaveType
@@ -189,10 +190,18 @@ export interface MapAnchor extends MapObject {
 	Name: string
 }
 
-export interface MapNPC extends MapObject {
+export interface InteractiveMapObject extends MapObject {
+	DialogueGroups: number[]
+	
+	Dialog?: NPCDialogData
+	InteractIconType?: keyof typeof DICON_MAP
+	InteractTitle?: HashReference
+	TalkDialogGroupIDList: number[]
+}
+
+export interface MapNPC extends InteractiveMapObject {
 	NPCID: number
 	LoadOnInitial?: boolean
-	DialogueGroups: number[]
 	ServerInteractVerificationIDList: unknown[]
 	DefaultIdleStateName?: string
 	DefaultLookAtMode: string
@@ -201,12 +210,10 @@ export interface MapNPC extends MapObject {
 	OverrideNPCName?: HashReference
 	OverrideNPCTitle?: HashReference
 	FirstDialogueGroupID?: number
-	TalkDialogGroupIDList: number[]
 	DefaultIdleFreeStyleMotionID: number
 	BornType?: 'Permanent'
 	OverrideSeriesID: number
 	InitialHiddenNodeList: unknown[]
-	Dialog?: NPCDialogData
 	ConnectWithSubMissionIDList?: number[]
 	SpawnConfig?: NPCSpawnConfig
 }
@@ -214,7 +221,8 @@ export interface MapNPC extends MapObject {
 export interface NPCDialogData {
 	LevelGraph: string
 	PackList: unknown[]
-	EnableCondition: LoadConditionList
+	EnableCondition?: LoadConditionList
+	EnableDialogCamera?: boolean
 }
 
 export interface NPCSpawnConfig {
@@ -222,7 +230,7 @@ export interface NPCSpawnConfig {
 	EntitySpawnConfig: unknown
 }
 
-export interface MapProp extends MapObject {
+export interface MapProp extends InteractiveMapObject {
 	PropID: number
 	IsOverrideInitLevelGraph: boolean
 	Trigger: MapTriggerData
@@ -233,8 +241,6 @@ export interface MapProp extends MapObject {
 	AnchorGroupID?: number
 	AnchorID?: number
 	MappingInfoID?: number
-	DialogueGroups?: number[]
-	TalkDialogGroupIDList?: number[]
 	ServerInteractVerificationIDList?: unknown[]
 	CameraCenterEntityList?: unknown[]
 }

@@ -7,11 +7,11 @@ PageTitle=#SoulGlad Ad Expert#
 |title         = 
 |image         = <!--Mission SoulGlad Ad Expert.png-->
 |type          = Adventure
-|event_name    = 
+|event_name    = ''Clockie: Dreamjoy Memoir''
 |chapter       = Once Upon a Dreamville...
-|requirements  = {{cx}}<!--Hidden Exploration Objective ID 8022106--> completed
+|requirements  = {{cx}}<!--Hidden Mission ID 8022106--> completed
 |summary       = <!--official mission summary from Fate's Atlas-->
-|characters    = Trailblazer
+|characters    = SoulGlad Vendor; Trailblazer
 |startLocation = [[Penacony]] - [[Clock Studios Theme Park]]
 |world         = Penacony
 |area          = Clock Studios Theme Park
@@ -19,7 +19,7 @@ PageTitle=#SoulGlad Ad Expert#
 |next          = 
 |rewards       = Credit*5,000
 }}
-'''''SoulGlad Ad Expert''''' is an [[Adventure Mission]] on [[Penacony]] in the chapter [[Once Upon a Dreamville...]].
+'''''SoulGlad Ad Expert''''' is an Event [[Adventure Mission]] from the [[Clockie: Dreamjoy Memoir]] event.
 
 ==Steps==
 # Find the SoulGlad supplier to film ''Bubbly Clockie''
@@ -36,18 +36,50 @@ PageTitle=#SoulGlad Ad Expert#
 ==Dialogue==
 {{Stub Dialogue}}
 
-===Find the SoulGlad supplier to film ''Bubbly Clockie''===
+===Find the SoulGlad supplier to film ''Bubbly Clockie''{{subst:void|<!--802212201-->}}===
 {{Mission Description|type=adventure|location=Clock Studios Theme Park|The ''Dreamjoy Memoir'' crew accepted the collaboration from SoulGlad Enterprise and planned a commercial named ''Bubbly Clockie''. Go help them!}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to SoulGlad Vendor)
+:'''SoulGlad Vendor:''' "SoulGlad &mdash; the source of joy, the quintessence of dreams!"
+::'''SoulGlad Vendor:''' My friend, how about a bottle of SoulGlad?
+::{{DIcon|Arrow}} Have a sip first!
+:::'''SoulGlad Vendor:''' "Grab a bottle of SoulGlad, make your dreams a blast!"
+:::'''SoulGlad Vendor:''' Heh, if we're talking about Penacony trademark products besides Clockie, it's gotta be our SoulGlad.
+:::'''SoulGlad Vendor:''' I'll be candid &mdash; our SoulGlad will soon have a collaboration with Clockie &mdash; don't forget to cheer us on!
+:::{{DIcon|Arrow}} What a coincidence. I'm here to talk about a partnership.
+::{{DIcon|Arrow}} No thanks, I'm here to talk about collaborating.
+::'''SoulGlad Vendor:''' So you're the director of ''Dreamjoy Memoir''!
+::'''SoulGlad Vendor:''' Mr. Pisce mentioned you &mdash; it's an honor to finally meet you! I'm from the SoulGlad™ Advertising Department, just here to chat with you about the current commercial proposal &mdash; {{Color|keyword|nobold=1|''Bubbly Clockie''}}!
+::'''SoulGlad Vendor:''' "SoulGlad can bring joy and laughter to Dreamville, but the evil Boss Stone hates everything nice, so he's imprisoned Mr. Soda and stashed away all of the town's SoulGlad..."
+::'''SoulGlad Vendor:''' "The hero of Dreamville &mdash; Clockie &mdash; will infiltrate Boss Stone's office building to bring back smiles to the townspeople!"
+::'''SoulGlad Vendor:''' ...That's the gist of the story. To complete production quickly, I hope you, as the director, can personally get your hands dirty, and become Clockie's motion capture artist.
+::'''SoulGlad Vendor:''' A total of three commercials. How about it? Will that work?
+:'''SoulGlad Vendor:''' ''Bubbly Clockie'' &mdash; Director, are you ready to roll!
+:{{DIcon|Arrow}} No problem. Action!
+:<pre>{
+	"$type": "RPG.GameCore.SetLocalPlayerDitherAlpha"
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.OpenTreasureChallenge",
+	"RaidID": 44305003,
+	"OnCancel": [
+		{
+			"$type": "RPG.GameCore.EndDialogueEntityInteract"
+		}
+	]
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.EndDialogueEntityInteract"
+}</pre>
+:{{DIcon|Exit}} Allow me to ponder it a bit more...
 {{Dialogue End}}
 
-===Find the SoulGlad supplier to keep filming ''Bubbly Clockie''===
+===Find the SoulGlad supplier to keep filming ''Bubbly Clockie''{{subst:void|<!--802212203-->}}===
 {{Dialogue Start}}
-:{{tx}}
 {{Dialogue End}}
 
-===Finish filming ''Bubbly Clockie''===
+===Finish filming ''Bubbly Clockie''{{subst:void|<!--802212204-->}}===
 {{Mission Description|type=adventure|location=Clock Studios Theme Park|update|Filming for ''Bubbly Clockie'' has concluded. Go show it to the client!}}
 {{Dialogue Start}}
 :{{tx}}

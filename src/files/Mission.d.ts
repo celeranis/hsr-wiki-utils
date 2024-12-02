@@ -150,3 +150,11 @@ export interface FinishAction {
 	FinishActionPara: number[]
 	FinishActionParaString?: string[]
 }
+
+export interface MainMissionScheduleData {
+	MainMissionID: number
+	HideRemainTime?: boolean
+	ActivityModuleID?: number
+	ScheduleDataID?: number
+	IsNotDelete?: boolean
+}

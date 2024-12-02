@@ -11,7 +11,7 @@ PageTitle=#Luofu Myths: Haunted House#
 |chapter       = Luofu Myths
 |requirements  = {{subst:void|<!--Unknown: {"Type":"Manual"}-->}}
 |summary       = <!--official mission summary from Fate's Atlas-->
-|characters    = Trailblazer
+|characters    = Burnie; Critter in a Box; Guinaifen; Sushang; Trailblazer
 |startLocation = [[The Xianzhou Luofu]] - [[Haunted House]]
 |world         = The Xianzhou Luofu
 |area          = Haunted House
@@ -41,51 +41,2129 @@ PageTitle=#Luofu Myths: Haunted House#
 ==Dialogue==
 {{Stub Dialogue}}
 
-===Speak to Sushang and Guinaifen===
+===Speak to Sushang and Guinaifen{{subst:void|<!--801515801-->}}===
 {{Mission Description|type=adventure|location=Haunted House|The ghost-hunting squad obtained the permission to investigate the haunted residence in order to help the landlord recover the deed. Speak with Guinaifen and Sushang on how you should go about investigating the haunted residence.}}
 {{Dialogue Start}}
+:'''Sushang:''' This... Isn't this place exactly the same as the "heliobus labyrinth" that we encountered before? So creepy...
+:'''Guinaifen:''' Ah, there is limited resource on the Xianzhou Luofu, I just had to piece things together with a blueprint of a similar house.
+:'''Sushang:''' ...That must be the haunted house up ahead.
+:{{DIcon|Arrow}} So we're staying here tonight? Good night!
+::'''Guinaifen:''' Wait. I'm not stupid enough to spend the night in a haunted house!
+:{{DIcon|Arrow}} I thought we would be able to look around inside...
+::'''Guinaifen:''' The owner said that when he was moving out, the house was cleared out and locked shut. The deed should be in a safe somewhere.
+:{{DIcon|Arrow}} This isn't as scary as I imagined...
+::'''Guinaifen:''' ...This is a Luofu model house. How scary can it be?
+:'''Guinaifen:''' Either way, we need to find the deed and investigate the truth behind this heliobus while we're at it. Two birds, one stone. Then, we'll put up a "haunted house investigation" post and rake in the followers!
+:'''Sushang:''' You make it all sound so easy! I'm a little concerned... Come to think of it, don't you think that advertisement board over there is a little out of place?
+:{{DIcon|Arrow}} Is this something that should be in a civilian home?
+::'''Guinaifen:''' ...Nope.
+:{{DIcon|Arrow}} See what we can find out...
+::'''Guinaifen:''' ...No time to waste. Let's go now.
 :{{tx}}
 {{Dialogue End}}
 
-===Investigate the odd billboard===
+===Investigate the odd billboard{{subst:void|<!--801515803-->}}===
 {{Mission Description|type=adventure|location=Haunted House|update|There will always be unexpected items appearing in haunted residences, such as billboards with their backs to the front. Perhaps the journey to penetrate into the depths of the haunted residence should start here.}}
 {{Dialogue Start}}
+
+:{{DIcon|Loupe}} Investigate
+:{{tx}}
+:An advertisement board that looks a little out of place. No one would have something like this in their house.
+:{{DIcon|Arrow}} (Investigate closely)
+:Woah, there's a wanted poster for Kafka!
 :{{tx}}
 {{Dialogue End}}
 
-===Investigate the abnormally posted wanted poster===
+===Investigate the abnormally posted wanted poster{{subst:void|<!--801515804-->}}===
 {{Mission Description|type=adventure|location=Haunted House|update|Sure, Kafka's wanted poster is pretty, but it shouldn't be here. Its appearance in the haunted residence is definitely an anomaly. Investigate it to see what is going on.}}
 {{Dialogue Start}}
+
+;(Obtain {{Item|Unusually Colored Lodestone|20|x=1}})
+
+:{{DIcon|Loupe}} Investigate
+:An advertisement board that looks a little out of place. No one would have something like this in their house.
+:(Investigate closely)
+:Woah, there's a wanted poster for Kafka!
+:Given that some time passed since the "Ambrosial Arbor" incident, the Luofu should have already removed the wanted notice for the Stellaron Hunters. However, grassroots-level work can be slow, and you may still see Kafka's wanted poster on the streets.
+:However, a wanted poster for Kafka appearing here, in the courtyard of an apparent haunted house, should raise some caution among you and your companions due to its unexpected nature.
+:It shouldn't be here. You should probably get closer and take a look.
+:Just as you move closer to inspect, the advertisement board suddenly flips over, like it's come to life.
+:{{DIcon|Arrow}} (Touch it)
+:{{DIcon|Arrow}} (Get closer)
+:{{DIcon|Arrow}} This must be a clue about the haunted house!
+:{{DIcon|Arrow}} Cool! Are there any more?
+:{{DIcon|Arrow}} What about a wanted poster for Blade?
+:{{DIcon|Arrow}} I want to tear it down!
+:{{DIcon|Arrow}} She is beautiful.
+:{{DIcon|Arrow}} I thought only I could hear it...
+:{{DIcon|Arrow}} I heard it. I suddenly don't really want to rescue them.
+:'''Sushang:''' Wh&mdash;What do you mean by a vengeful spirit? That was obviously a heliobus, right?
 :{{tx}}
+:'''(Trailblazer):''' (There's no time to waste. Let's take a look around for any clues around here...)
+
+;(Obtain {{Item|Courtyard Gate Key|20|x=1}})
+
+:{{DIcon|Loupe}} Investigate
+:A broken box that is hard to move due to its weight. The lock is corroded, and there is a hole the size of a fist on the topside. It looks like there is something metallic inside. Perhaps there is a way to get the item out from the box...
+:If you use a strongly {{Color|keyword|nobold=1|magnetic stone}}, you may be able to remove the item from the box...
+:{{DIcon|Arrow}} (Try using an item)
+:<pre>{
+	"$type": "RPG.GameCore.SelectMissionItem",
+	"SubMissionID": 801515806,
+	"OnlyPerformance": true,
+	"ItemIDList": [
+		140366,
+		140367,
+		140370,
+		140372,
+		140373,
+		140374,
+		140376,
+		140377,
+		140378
+	],
+	"ItemHiddenIDList": [
+		140366
+	],
+	"ItemInvisibleIDList": [
+		140367,
+		140370,
+		140372,
+		140373,
+		140374,
+		140376,
+		140377,
+		140378
+	],
+	"ItemSelect": [
+		{
+			"Item1": 140366,
+			"TriggerCustomString": "SelectMissionItem_801515710_1"
+		}
+	],
+	"SlotNum": 1,
+	"InfoText": {
+		"Hash": 524940953
+	},
+	"SimpleTalk": {
+		"TextSpeed": 20,
+		"ProtectTime": 0.8
+	},
+	"OnSubmitSucceed": [],
+	"OnSubmitFail": [
+		{
+			"$type": "RPG.GameCore.TriggerCustomString",
+			"CustomString": {
+				"Value": "SelectMissionItem_Fail"
+			}
+		}
+	],
+	"OnSubmitCancel": [
+		{
+			"$type": "RPG.GameCore.TriggerCustomString",
+			"CustomString": {
+				"Value": "SelectMissionItem_Fail"
+			}
+		}
+	]
+}</pre>
+:{{DIcon|Exit}} (Give up)
+;(Unused &mdash; SelectMissionItem_801515710_1)
+:With the magnetic stone placed near the base of the box, you heard the metallic item cling to the side of it. You guide the item to the missing hole in the top and extract it.
+:<pre>{
+	"$type": "RPG.GameCore.ConsumeMissionItem",
+	"SubMissionID": 801515806,
+	"IsAutoConsume": true,
+	"SimpleTalk": {
+		"TextSpeed": 20,
+		"ProtectTime": 0.8
+	}
+}</pre>
+
+;(Unused &mdash; SelectMissionItem_Fail)
+:'''(Trailblazer):''' (Something doesn't seem right. Have another think about what to do.)
 {{Dialogue End}}
 
-===Investigate the haunted residence's secrets and continue onward===
+===Investigate the haunted residence's secrets and continue onward{{subst:void|<!--801515807-->}}===
 {{Mission Description|type=adventure|location=Haunted House|update|Many items removed from the haunted residence are stacked in the small courtyard. Look around, and you might find the clue for your next destination buried within.}}
 {{Dialogue Start}}
-:{{tx}}
+
+:{{DIcon|Talk}} Talk
+;(If the player has {{Item|Unusually Colored Lodestone|20|x=1}})
+::'''Sushang:''' What is this magnet used for?
+::'''Guinaifen:''' It must be for finding hidden metal items? Let's give it a try.
+;(Otherwise, if the player has {{Item|Shattered Cloud Knight Devastator Glaive|20|x=1}})
+::'''Sushang:''' ...A fragment of the Cloud Knights' devastator glaive? That could be used as a paper cutter.
+::'''Guinaifen:''' That's really gonna hurt your hands.
+;(Otherwise, if the player has {{Item|Discarded Letter Sheets|20|x=1}})
+::'''Sushang:''' ...With this rubbing paper, maybe we can try tracing the message on the stone?
+::'''Guinaifen:''' That's smart thinking! Is that really you still, Shangshang?
+::'''Sushang:''' Not being able to read and being stupid are two separate things!
+;(Otherwise, if the player has {{Item|Rubbings on Paper|20|x=1}})
+::'''Sushang:''' Looks like we've found everything we need.
+::'''Guinaifen:''' Let's look at the clues... So if "M" is 71839, "N" is 7193 and "V" is 183... What is "T"?
+::'''Sushang:''' This is so tough... (Trailblazer), why not try drawing them with your hands? "M" is like this, and "N" is like that...
+::'''Guinaifen:''' What does this have to do with the numbers in a nine-square grid?
+::{{DIcon|Arrow}} You're being way too abstract!
+::{{DIcon|Arrow}} Let me think.
+::'''Guinaifen:''' ...The deed is likely held inside the safe. Please, (Trailblazer), we're counting on you.
+;(Otherwise)
+::'''Guinaifen:''' Let's investigate the area again. We must have missed some clues.
+
+;(Obtain {{Item|Shattered Cloud Knight Devastator Glaive|20|x=1}})
+
+:{{DIcon|Loupe}} Investigate
+<pre>{
+	"$type": "RPG.GameCore.TalkFigure",
+	"Show": true,
+	"ImagePath": "SpriteOutput/Mission/TalkItem/SubMission_140162.png",
+	"TriggerSound": true
+}</pre>
+:It's a broken Cloud Knights' devastator glaive. It is extremely sharp, so you decide to take it with you in case it comes in handy.
+<pre>{
+	"$type": "RPG.GameCore.TalkFigure",
+	"ImagePath": "SpriteOutput/Mission/TalkItem/SubMission_140162.png",
+	"TriggerSound": true
+}</pre>
+
+;(Obtain {{Item|Rubbings on Paper|20|x=1}})
+
+:{{DIcon|Loupe}} Investigate
+<pre>{
+	"$type": "RPG.GameCore.TalkFigure",
+	"Show": true,
+	"ImagePath": "SpriteOutput/Mission/TalkItem/SubMission_190010.png",
+	"TriggerSound": true
+}</pre>
+:A heavy stone. It looks like it is engraved with some kind of script, but it is hard to make out. Maybe if you could use {{Color|keyword|nobold=1|rubbing paper}}, you may be able to copy the inscription and read it?
+<pre>{
+	"$type": "RPG.GameCore.TalkFigure",
+	"ImagePath": "SpriteOutput/Mission/TalkItem/SubMission_190010.png",
+	"TriggerSound": true
+}</pre>
+:{{DIcon|Arrow}} (Try using an item)
+:<pre>{
+	"$type": "RPG.GameCore.SelectMissionItem",
+	"SubMissionID": 801515806,
+	"OnlyPerformance": true,
+	"ItemIDList": [
+		140366,
+		140367,
+		140370,
+		140372,
+		140373,
+		140374,
+		140376,
+		140377,
+		140378
+	],
+	"ItemHiddenIDList": [
+		140373
+	],
+	"ItemInvisibleIDList": [
+		140366,
+		140367,
+		140370,
+		140372,
+		140374,
+		140376,
+		140377,
+		140378
+	],
+	"ItemSelect": [
+		{
+			"Item1": 140373,
+			"TriggerCustomString": "SelectMissionItem_801515714_1"
+		}
+	],
+	"SlotNum": 1,
+	"InfoText": {
+		"Hash": -231881045
+	},
+	"SimpleTalk": {
+		"TextSpeed": 20,
+		"TalkSentenceID": 815158301,
+		"ProtectTime": 0.8
+	},
+	"OnSubmitSucceed": [],
+	"OnSubmitFail": [
+		{
+			"$type": "RPG.GameCore.TriggerCustomString",
+			"CustomString": {
+				"Value": "SelectMissionItem_Fail"
+			}
+		}
+	],
+	"OnSubmitCancel": [
+		{
+			"$type": "RPG.GameCore.TriggerCustomString",
+			"CustomString": {
+				"Value": "SelectMissionItem_Fail"
+			}
+		}
+	]
+}</pre>
+:{{DIcon|Exit}} (Give up)
+;(Unused &mdash; SelectMissionItem_801515714_1)
+:You flick through a few pages of unused rubbing paper and place it on the stone, and carefully rub on the message on the stone.
+:<pre>{
+	"$type": "RPG.GameCore.ConsumeMissionItem",
+	"SubMissionID": 801515811,
+	"IsAutoConsume": true,
+	"SimpleTalk": {
+		"TextSpeed": 20,
+		"ProtectTime": 0.8
+	}
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.ShowReading",
+	"BookID": {
+		"fixedValue": {
+			"Value": 190517
+		}
+	},
+	"WaitForExit": true
+}</pre>
+
+;(Unused &mdash; SelectMissionItem_Fail)
+:'''(Trailblazer):''' (Something doesn't seem right. Have another think about what to do.)
+
+;(Obtain {{Item|Old Bell|20|x=1}})
+
+:{{DIcon|Loupe}} Investigate
+<pre>{
+	"$type": "RPG.GameCore.TalkFigure",
+	"Show": true,
+	"ImagePath": "SpriteOutput/Mission/TalkItem/SubMission_140139.png",
+	"TriggerSound": true
+}</pre>
+:An old bell. It looks like an item used to call a small animal. Let's take it, it may come in handy later.
+<pre>{
+	"$type": "RPG.GameCore.TalkFigure",
+	"ImagePath": "SpriteOutput/Mission/TalkItem/SubMission_140139.png",
+	"TriggerSound": true
+}</pre>
 {{Dialogue End}}
 
-===Go through the locked gate and continue===
+===Go through the locked gate and continue{{subst:void|<!--801515815-->}}===
 {{Dialogue Start}}
-:{{tx}}
+
+:{{DIcon|Talk}} Talk
+;(If the player has {{Item|Unusually Colored Lodestone|20|x=1}})
+::'''Sushang:''' What is this magnet used for?
+::'''Guinaifen:''' It must be for finding hidden metal items? Let's give it a try.
+;(Otherwise, if the player has {{Item|Shattered Cloud Knight Devastator Glaive|20|x=1}})
+::'''Sushang:''' ...A fragment of the Cloud Knights' devastator glaive? That could be used as a paper cutter.
+::'''Guinaifen:''' That's really gonna hurt your hands.
+;(Otherwise, if the player has {{Item|Discarded Letter Sheets|20|x=1}})
+::'''Sushang:''' ...With this rubbing paper, maybe we can try tracing the message on the stone?
+::'''Guinaifen:''' That's smart thinking! Is that really you still, Shangshang?
+::'''Sushang:''' Not being able to read and being stupid are two separate things!
+;(Otherwise, if the player has {{Item|Rubbings on Paper|20|x=1}})
+::'''Sushang:''' Looks like we've found everything we need.
+::'''Guinaifen:''' Let's look at the clues... So if "M" is 71839, "N" is 7193 and "V" is 183... What is "T"?
+::'''Sushang:''' This is so tough... (Trailblazer), why not try drawing them with your hands? "M" is like this, and "N" is like that...
+::'''Guinaifen:''' What does this have to do with the numbers in a nine-square grid?
+::{{DIcon|Arrow}} You're being way too abstract!
+::{{DIcon|Arrow}} Let me think.
+::'''Guinaifen:''' ...The deed is likely held inside the safe. Please, (Trailblazer), we're counting on you.
+;(Otherwise)
+::'''Guinaifen:''' Let's investigate the area again. We must have missed some clues.
+
+;(Obtain {{Item|Courtyard Gate Key|20|x=1}})
+
+:{{DIcon|Loupe}} Investigate
+<pre>{
+	"$type": "RPG.GameCore.TalkFigure",
+	"Show": true,
+	"ImagePath": "SpriteOutput/Mission/TalkItem/SubMission_300051.png",
+	"TriggerSound": true
+}</pre>
+:A broken courier package. The sealing tape seems very strong. Wonder if there's a way to open it?
+<pre>{
+	"$type": "RPG.GameCore.TalkFigure",
+	"TriggerSound": true
+}</pre>
+:{{DIcon|Arrow}} (Try using an item)
+:<pre>{
+	"$type": "RPG.GameCore.SelectMissionItem",
+	"SubMissionID": 801515806,
+	"OnlyPerformance": true,
+	"ItemIDList": [
+		140366,
+		140367,
+		140370,
+		140372,
+		140373,
+		140374,
+		140376,
+		140377,
+		140378
+	],
+	"ItemHiddenIDList": [
+		140377
+	],
+	"ItemInvisibleIDList": [
+		140366,
+		140367,
+		140370,
+		140372,
+		140373,
+		140374,
+		140376,
+		140378
+	],
+	"ItemSelect": [
+		{
+			"Item1": 140377,
+			"TriggerCustomString": "SelectMissionItem_801515719_1"
+		}
+	],
+	"SlotNum": 1,
+	"InfoText": {
+		"Hash": 524940953
+	},
+	"SimpleTalk": {
+		"TextSpeed": 20,
+		"TalkSentenceID": 815158801,
+		"ProtectTime": 0.8
+	},
+	"OnSubmitSucceed": [],
+	"OnSubmitFail": [
+		{
+			"$type": "RPG.GameCore.TriggerCustomString",
+			"CustomString": {
+				"Value": "SelectMissionItem_Fail"
+			}
+		}
+	],
+	"OnSubmitCancel": [
+		{
+			"$type": "RPG.GameCore.TriggerCustomString",
+			"CustomString": {
+				"Value": "SelectMissionItem_Fail"
+			}
+		}
+	]
+}</pre>
+:{{DIcon|Exit}} (Give up)
+;(Unused &mdash; SelectMissionItem_801515719_1)
+:The broken Cloud Knights' devastator glaive easily tears through the packing tape, and you obtain a key from the various items inside.
+:<pre>{
+	"$type": "RPG.GameCore.ConsumeMissionItem",
+	"SubMissionID": 801515816,
+	"IsAutoConsume": true,
+	"SimpleTalk": {
+		"TextSpeed": 20,
+		"ProtectTime": 0.8
+	}
+}</pre>
+
+;(Unused &mdash; SelectMissionItem_Fail)
+:'''(Trailblazer):''' (Something doesn't seem right. Have another think about what to do.)
+
+;(Obtain {{Item|Square Rice Ball|20|x=1}})
+
+:{{DIcon|Loupe}} Investigate
+:A discarded food box. The food inside seems to have been prepared very recently.
+:{{DIcon|Arrow}} Remove the food from inside.
+:You remove all of the food items from within and make it into something that "looks like a rice ball." Is there a hungry someone in this courtyard in need of this?
 {{Dialogue End}}
 
-===Open the safe and take out the deed===
+===Open the safe and take out the deed{{subst:void|<!--801515818-->}}===
 {{Mission Description|type=adventure|location=Haunted House|update|The deed the landlord spoke of should be inside this safe. Crack the password on the safe, and you will be able to find the deed and complete the mission.<br />Maybe there is some information on the stone monument that works as clues for the password...}}
 {{Dialogue Start}}
-:{{tx}}
+
+:{{DIcon|Loupe}} Investigate
+<pre>{
+	"$type": "RPG.GameCore.SetMissionCustomValue",
+	"SubmissionID": 801515818,
+	"MissionCustomValue": {
+		"isLocal": true,
+		"ValidValueParamList": []
+	}
+}</pre>
+:An exquisite safe that looks to be holding precious items. There is a note attached. It seems to be reminding the owner of the password. Let's try inputting the password...
+:The note says "the safe's password is 'T.'" There is no "T" on the lock, So, "T" must represent a series of digits? You will need to find clues to prove this.
+:Now, to enter the password...
+:{{DIcon|Arrow}} (Enter the password)
+:;(If the player has greater than or equal to {{Item|Rubbings on Paper|20|x=1}})
+:::"M" is 71839, "N" is 7193, "V" is 183... You have the clue for the password: "The safe password is 'T.'" So, do you have an idea?
+:::{{DIcon|Arrow}} Start from "1"...
+:::<pre>{
+	"$type": "RPG.GameCore.SetTextJoinValue",
+	"TextJoinID": 81,
+	"Value": "1"
+}</pre>
+:::<pre>{
+	"$type": "RPG.GameCore.CalculateMissionCustomValue",
+	"TargetSubmissionID": 801515818,
+	"TargetMissionCustomValue": {
+		"isLocal": true,
+		"ValidValueParamList": []
+	},
+	"ValueA": {
+		"Type": "CustomValue",
+		"MainMissionID": 8015158,
+		"MissionCustomValue": {
+			"isLocal": true,
+			"ValidValueParamList": []
+		}
+	},
+	"ValueB": {
+		"DirectValue": 1
+	}
+}</pre>
+::::Entered: (1/4/7)...
+::::{{DIcon|Arrow}} ..."1"...
+::::<pre>{
+	"$type": "RPG.GameCore.SetTextJoinValue",
+	"TextJoinID": 82,
+	"Value": "1"
+}</pre>
+:::::Entered: (1/4/7) (1/2/3/4/5)...
+:::::{{DIcon|Arrow}} ..."2"...
+:::::<pre>{
+	"$type": "RPG.GameCore.CalculateMissionCustomValue",
+	"TargetSubmissionID": 801515818,
+	"TargetMissionCustomValue": {
+		"isLocal": true,
+		"ValidValueParamList": []
+	},
+	"ValueA": {
+		"Type": "CustomValue",
+		"MainMissionID": 8015158,
+		"MissionCustomValue": {
+			"isLocal": true,
+			"ValidValueParamList": []
+		}
+	},
+	"ValueB": {
+		"DirectValue": 1
+	}
+}</pre>
+:::::{{DIcon|Arrow}} ..."4"...
+:::::{{DIcon|Arrow}} ..."6"...
+:::::{{DIcon|Arrow}} ..."8"...
+:::::{{DIcon|Arrow}} ..."0"...
+::::;(If {{F|MissionCV-8015158-undefined}} is equal to 3)
+::::::You've guessed "1," "3," "2" and "8" so far. The password must be the stroke order for the letter "T" on a nine-square grid.
+::::;(If {{F|MissionCV-8015158-undefined}} is not equal to 3)
+::::::That doesn't seem right. You'll have to try again...
+:::::<pre>{
+	"$type": "RPG.GameCore.CalculateMissionCustomValue",
+	"TargetSubmissionID": 801515818,
+	"TargetMissionCustomValue": {
+		"Index": 1,
+		"isLocal": true,
+		"ValidValueParamList": []
+	},
+	"ValueA": {
+		"Type": "CustomValue",
+		"MainMissionID": 8015158,
+		"MissionCustomValue": {
+			"Index": 1,
+			"isLocal": true,
+			"ValidValueParamList": []
+		}
+	},
+	"ValueB": {
+		"DirectValue": 1
+	}
+}</pre>
+:::::;(Return to previous option selection)
+::::{{DIcon|Arrow}} ..."2"...
+::::<pre>{
+	"$type": "RPG.GameCore.SetTextJoinValue",
+	"TextJoinID": 82,
+	"Value": "2"
+}</pre>
+:::::Entered: (1/4/7) (1/2/3/4/5)...
+:::::{{DIcon|Arrow}} ..."4"...
+:::::;(If {{F|MissionCV-8015158-undefined}} is equal to 3)
+:::::::You've guessed "1," "3," "2" and "8" so far. The password must be the stroke order for the letter "T" on a nine-square grid.
+:::::;(If {{F|MissionCV-8015158-undefined}} is not equal to 3)
+:::::::That doesn't seem right. You'll have to try again...
+::::::<pre>{
+	"$type": "RPG.GameCore.CalculateMissionCustomValue",
+	"TargetSubmissionID": 801515818,
+	"TargetMissionCustomValue": {
+		"Index": 1,
+		"isLocal": true,
+		"ValidValueParamList": []
+	},
+	"ValueA": {
+		"Type": "CustomValue",
+		"MainMissionID": 8015158,
+		"MissionCustomValue": {
+			"Index": 1,
+			"isLocal": true,
+			"ValidValueParamList": []
+		}
+	},
+	"ValueB": {
+		"DirectValue": 1
+	}
+}</pre>
+::::::;(Return to previous option selection)
+:::::{{DIcon|Arrow}} ..."6"...
+:::::;(If {{F|MissionCV-8015158-undefined}} is equal to 3)
+:::::::You've guessed "1," "3," "2" and "8" so far. The password must be the stroke order for the letter "T" on a nine-square grid.
+:::::;(If {{F|MissionCV-8015158-undefined}} is not equal to 3)
+:::::::That doesn't seem right. You'll have to try again...
+::::::<pre>{
+	"$type": "RPG.GameCore.CalculateMissionCustomValue",
+	"TargetSubmissionID": 801515818,
+	"TargetMissionCustomValue": {
+		"Index": 1,
+		"isLocal": true,
+		"ValidValueParamList": []
+	},
+	"ValueA": {
+		"Type": "CustomValue",
+		"MainMissionID": 8015158,
+		"MissionCustomValue": {
+			"Index": 1,
+			"isLocal": true,
+			"ValidValueParamList": []
+		}
+	},
+	"ValueB": {
+		"DirectValue": 1
+	}
+}</pre>
+::::::;(Return to previous option selection)
+:::::{{DIcon|Arrow}} ..."8"...
+:::::;(If {{F|MissionCV-8015158-undefined}} is equal to 3)
+:::::::You've guessed "1," "3," "2" and "8" so far. The password must be the stroke order for the letter "T" on a nine-square grid.
+:::::;(If {{F|MissionCV-8015158-undefined}} is not equal to 3)
+:::::::That doesn't seem right. You'll have to try again...
+::::::<pre>{
+	"$type": "RPG.GameCore.CalculateMissionCustomValue",
+	"TargetSubmissionID": 801515818,
+	"TargetMissionCustomValue": {
+		"Index": 1,
+		"isLocal": true,
+		"ValidValueParamList": []
+	},
+	"ValueA": {
+		"Type": "CustomValue",
+		"MainMissionID": 8015158,
+		"MissionCustomValue": {
+			"Index": 1,
+			"isLocal": true,
+			"ValidValueParamList": []
+		}
+	},
+	"ValueB": {
+		"DirectValue": 1
+	}
+}</pre>
+::::::;(Return to previous option selection)
+:::::{{DIcon|Arrow}} ..."0"...
+:::::;(If {{F|MissionCV-8015158-undefined}} is equal to 3)
+:::::::You've guessed "1," "3," "2" and "8" so far. The password must be the stroke order for the letter "T" on a nine-square grid.
+:::::;(If {{F|MissionCV-8015158-undefined}} is not equal to 3)
+:::::::That doesn't seem right. You'll have to try again...
+::::::<pre>{
+	"$type": "RPG.GameCore.CalculateMissionCustomValue",
+	"TargetSubmissionID": 801515818,
+	"TargetMissionCustomValue": {
+		"Index": 1,
+		"isLocal": true,
+		"ValidValueParamList": []
+	},
+	"ValueA": {
+		"Type": "CustomValue",
+		"MainMissionID": 8015158,
+		"MissionCustomValue": {
+			"Index": 1,
+			"isLocal": true,
+			"ValidValueParamList": []
+		}
+	},
+	"ValueB": {
+		"DirectValue": 1
+	}
+}</pre>
+::::::;(Return to previous option selection)
+::::{{DIcon|Arrow}} ..."3"...
+::::<pre>{
+	"$type": "RPG.GameCore.SetTextJoinValue",
+	"TextJoinID": 82,
+	"Value": "3"
+}</pre>
+::::<pre>{
+	"$type": "RPG.GameCore.CalculateMissionCustomValue",
+	"TargetSubmissionID": 801515818,
+	"TargetMissionCustomValue": {
+		"isLocal": true,
+		"ValidValueParamList": []
+	},
+	"ValueA": {
+		"Type": "CustomValue",
+		"MainMissionID": 8015158,
+		"MissionCustomValue": {
+			"isLocal": true,
+			"ValidValueParamList": []
+		}
+	},
+	"ValueB": {
+		"DirectValue": 1
+	}
+}</pre>
+:::::Entered: (1/4/7) (1/2/3/4/5)...
+:::::{{DIcon|Arrow}} ..."2"...
+:::::<pre>{
+	"$type": "RPG.GameCore.CalculateMissionCustomValue",
+	"TargetSubmissionID": 801515818,
+	"TargetMissionCustomValue": {
+		"isLocal": true,
+		"ValidValueParamList": []
+	},
+	"ValueA": {
+		"Type": "CustomValue",
+		"MainMissionID": 8015158,
+		"MissionCustomValue": {
+			"isLocal": true,
+			"ValidValueParamList": []
+		}
+	},
+	"ValueB": {
+		"DirectValue": 1
+	}
+}</pre>
+:::::{{DIcon|Arrow}} ..."4"...
+:::::{{DIcon|Arrow}} ..."6"...
+:::::{{DIcon|Arrow}} ..."8"...
+:::::{{DIcon|Arrow}} ..."0"...
+::::;(If {{F|MissionCV-8015158-undefined}} is equal to 3)
+::::::You've guessed "1," "3," "2" and "8" so far. The password must be the stroke order for the letter "T" on a nine-square grid.
+::::;(If {{F|MissionCV-8015158-undefined}} is not equal to 3)
+::::::That doesn't seem right. You'll have to try again...
+:::::<pre>{
+	"$type": "RPG.GameCore.CalculateMissionCustomValue",
+	"TargetSubmissionID": 801515818,
+	"TargetMissionCustomValue": {
+		"Index": 1,
+		"isLocal": true,
+		"ValidValueParamList": []
+	},
+	"ValueA": {
+		"Type": "CustomValue",
+		"MainMissionID": 8015158,
+		"MissionCustomValue": {
+			"Index": 1,
+			"isLocal": true,
+			"ValidValueParamList": []
+		}
+	},
+	"ValueB": {
+		"DirectValue": 1
+	}
+}</pre>
+:::::;(Return to previous option selection)
+::::{{DIcon|Arrow}} ..."4"...
+::::<pre>{
+	"$type": "RPG.GameCore.SetTextJoinValue",
+	"TextJoinID": 82,
+	"Value": "4"
+}</pre>
+:::::Entered: (1/4/7) (1/2/3/4/5)...
+:::::{{DIcon|Arrow}} ..."2"...
+:::::<pre>{
+	"$type": "RPG.GameCore.CalculateMissionCustomValue",
+	"TargetSubmissionID": 801515818,
+	"TargetMissionCustomValue": {
+		"isLocal": true,
+		"ValidValueParamList": []
+	},
+	"ValueA": {
+		"Type": "CustomValue",
+		"MainMissionID": 8015158,
+		"MissionCustomValue": {
+			"isLocal": true,
+			"ValidValueParamList": []
+		}
+	},
+	"ValueB": {
+		"DirectValue": 1
+	}
+}</pre>
+:::::;(If {{F|MissionCV-8015158-undefined}} is equal to 3)
+:::::::You've guessed "1," "3," "2" and "8" so far. The password must be the stroke order for the letter "T" on a nine-square grid.
+:::::;(If {{F|MissionCV-8015158-undefined}} is not equal to 3)
+:::::::That doesn't seem right. You'll have to try again...
+::::::<pre>{
+	"$type": "RPG.GameCore.CalculateMissionCustomValue",
+	"TargetSubmissionID": 801515818,
+	"TargetMissionCustomValue": {
+		"Index": 1,
+		"isLocal": true,
+		"ValidValueParamList": []
+	},
+	"ValueA": {
+		"Type": "CustomValue",
+		"MainMissionID": 8015158,
+		"MissionCustomValue": {
+			"Index": 1,
+			"isLocal": true,
+			"ValidValueParamList": []
+		}
+	},
+	"ValueB": {
+		"DirectValue": 1
+	}
+}</pre>
+::::::;(Return to previous option selection)
+:::::{{DIcon|Arrow}} ..."6"...
+:::::;(If {{F|MissionCV-8015158-undefined}} is equal to 3)
+:::::::You've guessed "1," "3," "2" and "8" so far. The password must be the stroke order for the letter "T" on a nine-square grid.
+:::::;(If {{F|MissionCV-8015158-undefined}} is not equal to 3)
+:::::::That doesn't seem right. You'll have to try again...
+::::::<pre>{
+	"$type": "RPG.GameCore.CalculateMissionCustomValue",
+	"TargetSubmissionID": 801515818,
+	"TargetMissionCustomValue": {
+		"Index": 1,
+		"isLocal": true,
+		"ValidValueParamList": []
+	},
+	"ValueA": {
+		"Type": "CustomValue",
+		"MainMissionID": 8015158,
+		"MissionCustomValue": {
+			"Index": 1,
+			"isLocal": true,
+			"ValidValueParamList": []
+		}
+	},
+	"ValueB": {
+		"DirectValue": 1
+	}
+}</pre>
+::::::;(Return to previous option selection)
+:::::{{DIcon|Arrow}} ..."8"...
+:::::;(If {{F|MissionCV-8015158-undefined}} is equal to 3)
+:::::::You've guessed "1," "3," "2" and "8" so far. The password must be the stroke order for the letter "T" on a nine-square grid.
+:::::;(If {{F|MissionCV-8015158-undefined}} is not equal to 3)
+:::::::That doesn't seem right. You'll have to try again...
+::::::<pre>{
+	"$type": "RPG.GameCore.CalculateMissionCustomValue",
+	"TargetSubmissionID": 801515818,
+	"TargetMissionCustomValue": {
+		"Index": 1,
+		"isLocal": true,
+		"ValidValueParamList": []
+	},
+	"ValueA": {
+		"Type": "CustomValue",
+		"MainMissionID": 8015158,
+		"MissionCustomValue": {
+			"Index": 1,
+			"isLocal": true,
+			"ValidValueParamList": []
+		}
+	},
+	"ValueB": {
+		"DirectValue": 1
+	}
+}</pre>
+::::::;(Return to previous option selection)
+:::::{{DIcon|Arrow}} ..."0"...
+:::::;(If {{F|MissionCV-8015158-undefined}} is equal to 3)
+:::::::You've guessed "1," "3," "2" and "8" so far. The password must be the stroke order for the letter "T" on a nine-square grid.
+:::::;(If {{F|MissionCV-8015158-undefined}} is not equal to 3)
+:::::::That doesn't seem right. You'll have to try again...
+::::::<pre>{
+	"$type": "RPG.GameCore.CalculateMissionCustomValue",
+	"TargetSubmissionID": 801515818,
+	"TargetMissionCustomValue": {
+		"Index": 1,
+		"isLocal": true,
+		"ValidValueParamList": []
+	},
+	"ValueA": {
+		"Type": "CustomValue",
+		"MainMissionID": 8015158,
+		"MissionCustomValue": {
+			"Index": 1,
+			"isLocal": true,
+			"ValidValueParamList": []
+		}
+	},
+	"ValueB": {
+		"DirectValue": 1
+	}
+}</pre>
+::::::;(Return to previous option selection)
+::::{{DIcon|Arrow}} ..."5"...
+::::<pre>{
+	"$type": "RPG.GameCore.SetTextJoinValue",
+	"TextJoinID": 82,
+	"Value": "5"
+}</pre>
+:::::Entered: (1/4/7) (1/2/3/4/5)...
+:::::{{DIcon|Arrow}} ..."2"...
+:::::<pre>{
+	"$type": "RPG.GameCore.CalculateMissionCustomValue",
+	"TargetSubmissionID": 801515818,
+	"TargetMissionCustomValue": {
+		"isLocal": true,
+		"ValidValueParamList": []
+	},
+	"ValueA": {
+		"Type": "CustomValue",
+		"MainMissionID": 8015158,
+		"MissionCustomValue": {
+			"isLocal": true,
+			"ValidValueParamList": []
+		}
+	},
+	"ValueB": {
+		"DirectValue": 1
+	}
+}</pre>
+:::::{{DIcon|Arrow}} ..."4"...
+:::::{{DIcon|Arrow}} ..."6"...
+:::::{{DIcon|Arrow}} ..."8"...
+:::::{{DIcon|Arrow}} ..."0"...
+::::;(If {{F|MissionCV-8015158-undefined}} is equal to 3)
+::::::You've guessed "1," "3," "2" and "8" so far. The password must be the stroke order for the letter "T" on a nine-square grid.
+::::;(If {{F|MissionCV-8015158-undefined}} is not equal to 3)
+::::::That doesn't seem right. You'll have to try again...
+:::::<pre>{
+	"$type": "RPG.GameCore.CalculateMissionCustomValue",
+	"TargetSubmissionID": 801515818,
+	"TargetMissionCustomValue": {
+		"Index": 1,
+		"isLocal": true,
+		"ValidValueParamList": []
+	},
+	"ValueA": {
+		"Type": "CustomValue",
+		"MainMissionID": 8015158,
+		"MissionCustomValue": {
+			"Index": 1,
+			"isLocal": true,
+			"ValidValueParamList": []
+		}
+	},
+	"ValueB": {
+		"DirectValue": 1
+	}
+}</pre>
+:::::;(Return to previous option selection)
+:::{{DIcon|Arrow}} Start from "4"...
+:::<pre>{
+	"$type": "RPG.GameCore.SetTextJoinValue",
+	"TextJoinID": 81,
+	"Value": "2"
+}</pre>
+::::Entered: (1/4/7)...
+::::{{DIcon|Arrow}} ..."1"...
+::::<pre>{
+	"$type": "RPG.GameCore.SetTextJoinValue",
+	"TextJoinID": 82,
+	"Value": "1"
+}</pre>
+:::::Entered: (1/4/7) (1/2/3/4/5)...
+:::::{{DIcon|Arrow}} ..."2"...
+:::::<pre>{
+	"$type": "RPG.GameCore.CalculateMissionCustomValue",
+	"TargetSubmissionID": 801515818,
+	"TargetMissionCustomValue": {
+		"isLocal": true,
+		"ValidValueParamList": []
+	},
+	"ValueA": {
+		"Type": "CustomValue",
+		"MainMissionID": 8015158,
+		"MissionCustomValue": {
+			"isLocal": true,
+			"ValidValueParamList": []
+		}
+	},
+	"ValueB": {
+		"DirectValue": 1
+	}
+}</pre>
+:::::{{DIcon|Arrow}} ..."4"...
+:::::{{DIcon|Arrow}} ..."6"...
+:::::{{DIcon|Arrow}} ..."8"...
+:::::{{DIcon|Arrow}} ..."0"...
+::::;(If {{F|MissionCV-8015158-undefined}} is equal to 3)
+::::::You've guessed "1," "3," "2" and "8" so far. The password must be the stroke order for the letter "T" on a nine-square grid.
+::::;(If {{F|MissionCV-8015158-undefined}} is not equal to 3)
+::::::That doesn't seem right. You'll have to try again...
+:::::<pre>{
+	"$type": "RPG.GameCore.CalculateMissionCustomValue",
+	"TargetSubmissionID": 801515818,
+	"TargetMissionCustomValue": {
+		"Index": 1,
+		"isLocal": true,
+		"ValidValueParamList": []
+	},
+	"ValueA": {
+		"Type": "CustomValue",
+		"MainMissionID": 8015158,
+		"MissionCustomValue": {
+			"Index": 1,
+			"isLocal": true,
+			"ValidValueParamList": []
+		}
+	},
+	"ValueB": {
+		"DirectValue": 1
+	}
+}</pre>
+:::::;(Return to previous option selection)
+::::{{DIcon|Arrow}} ..."2"...
+::::<pre>{
+	"$type": "RPG.GameCore.SetTextJoinValue",
+	"TextJoinID": 82,
+	"Value": "2"
+}</pre>
+:::::Entered: (1/4/7) (1/2/3/4/5)...
+:::::{{DIcon|Arrow}} ..."4"...
+:::::;(If {{F|MissionCV-8015158-undefined}} is equal to 3)
+:::::::You've guessed "1," "3," "2" and "8" so far. The password must be the stroke order for the letter "T" on a nine-square grid.
+:::::;(If {{F|MissionCV-8015158-undefined}} is not equal to 3)
+:::::::That doesn't seem right. You'll have to try again...
+::::::<pre>{
+	"$type": "RPG.GameCore.CalculateMissionCustomValue",
+	"TargetSubmissionID": 801515818,
+	"TargetMissionCustomValue": {
+		"Index": 1,
+		"isLocal": true,
+		"ValidValueParamList": []
+	},
+	"ValueA": {
+		"Type": "CustomValue",
+		"MainMissionID": 8015158,
+		"MissionCustomValue": {
+			"Index": 1,
+			"isLocal": true,
+			"ValidValueParamList": []
+		}
+	},
+	"ValueB": {
+		"DirectValue": 1
+	}
+}</pre>
+::::::;(Return to previous option selection)
+:::::{{DIcon|Arrow}} ..."6"...
+:::::;(If {{F|MissionCV-8015158-undefined}} is equal to 3)
+:::::::You've guessed "1," "3," "2" and "8" so far. The password must be the stroke order for the letter "T" on a nine-square grid.
+:::::;(If {{F|MissionCV-8015158-undefined}} is not equal to 3)
+:::::::That doesn't seem right. You'll have to try again...
+::::::<pre>{
+	"$type": "RPG.GameCore.CalculateMissionCustomValue",
+	"TargetSubmissionID": 801515818,
+	"TargetMissionCustomValue": {
+		"Index": 1,
+		"isLocal": true,
+		"ValidValueParamList": []
+	},
+	"ValueA": {
+		"Type": "CustomValue",
+		"MainMissionID": 8015158,
+		"MissionCustomValue": {
+			"Index": 1,
+			"isLocal": true,
+			"ValidValueParamList": []
+		}
+	},
+	"ValueB": {
+		"DirectValue": 1
+	}
+}</pre>
+::::::;(Return to previous option selection)
+:::::{{DIcon|Arrow}} ..."8"...
+:::::;(If {{F|MissionCV-8015158-undefined}} is equal to 3)
+:::::::You've guessed "1," "3," "2" and "8" so far. The password must be the stroke order for the letter "T" on a nine-square grid.
+:::::;(If {{F|MissionCV-8015158-undefined}} is not equal to 3)
+:::::::That doesn't seem right. You'll have to try again...
+::::::<pre>{
+	"$type": "RPG.GameCore.CalculateMissionCustomValue",
+	"TargetSubmissionID": 801515818,
+	"TargetMissionCustomValue": {
+		"Index": 1,
+		"isLocal": true,
+		"ValidValueParamList": []
+	},
+	"ValueA": {
+		"Type": "CustomValue",
+		"MainMissionID": 8015158,
+		"MissionCustomValue": {
+			"Index": 1,
+			"isLocal": true,
+			"ValidValueParamList": []
+		}
+	},
+	"ValueB": {
+		"DirectValue": 1
+	}
+}</pre>
+::::::;(Return to previous option selection)
+:::::{{DIcon|Arrow}} ..."0"...
+:::::;(If {{F|MissionCV-8015158-undefined}} is equal to 3)
+:::::::You've guessed "1," "3," "2" and "8" so far. The password must be the stroke order for the letter "T" on a nine-square grid.
+:::::;(If {{F|MissionCV-8015158-undefined}} is not equal to 3)
+:::::::That doesn't seem right. You'll have to try again...
+::::::<pre>{
+	"$type": "RPG.GameCore.CalculateMissionCustomValue",
+	"TargetSubmissionID": 801515818,
+	"TargetMissionCustomValue": {
+		"Index": 1,
+		"isLocal": true,
+		"ValidValueParamList": []
+	},
+	"ValueA": {
+		"Type": "CustomValue",
+		"MainMissionID": 8015158,
+		"MissionCustomValue": {
+			"Index": 1,
+			"isLocal": true,
+			"ValidValueParamList": []
+		}
+	},
+	"ValueB": {
+		"DirectValue": 1
+	}
+}</pre>
+::::::;(Return to previous option selection)
+::::{{DIcon|Arrow}} ..."3"...
+::::<pre>{
+	"$type": "RPG.GameCore.SetTextJoinValue",
+	"TextJoinID": 82,
+	"Value": "3"
+}</pre>
+::::<pre>{
+	"$type": "RPG.GameCore.CalculateMissionCustomValue",
+	"TargetSubmissionID": 801515818,
+	"TargetMissionCustomValue": {
+		"isLocal": true,
+		"ValidValueParamList": []
+	},
+	"ValueA": {
+		"Type": "CustomValue",
+		"MainMissionID": 8015158,
+		"MissionCustomValue": {
+			"isLocal": true,
+			"ValidValueParamList": []
+		}
+	},
+	"ValueB": {
+		"DirectValue": 1
+	}
+}</pre>
+:::::Entered: (1/4/7) (1/2/3/4/5)...
+:::::{{DIcon|Arrow}} ..."2"...
+:::::<pre>{
+	"$type": "RPG.GameCore.CalculateMissionCustomValue",
+	"TargetSubmissionID": 801515818,
+	"TargetMissionCustomValue": {
+		"isLocal": true,
+		"ValidValueParamList": []
+	},
+	"ValueA": {
+		"Type": "CustomValue",
+		"MainMissionID": 8015158,
+		"MissionCustomValue": {
+			"isLocal": true,
+			"ValidValueParamList": []
+		}
+	},
+	"ValueB": {
+		"DirectValue": 1
+	}
+}</pre>
+:::::{{DIcon|Arrow}} ..."4"...
+:::::{{DIcon|Arrow}} ..."6"...
+:::::{{DIcon|Arrow}} ..."8"...
+:::::{{DIcon|Arrow}} ..."0"...
+::::;(If {{F|MissionCV-8015158-undefined}} is equal to 3)
+::::::You've guessed "1," "3," "2" and "8" so far. The password must be the stroke order for the letter "T" on a nine-square grid.
+::::;(If {{F|MissionCV-8015158-undefined}} is not equal to 3)
+::::::That doesn't seem right. You'll have to try again...
+:::::<pre>{
+	"$type": "RPG.GameCore.CalculateMissionCustomValue",
+	"TargetSubmissionID": 801515818,
+	"TargetMissionCustomValue": {
+		"Index": 1,
+		"isLocal": true,
+		"ValidValueParamList": []
+	},
+	"ValueA": {
+		"Type": "CustomValue",
+		"MainMissionID": 8015158,
+		"MissionCustomValue": {
+			"Index": 1,
+			"isLocal": true,
+			"ValidValueParamList": []
+		}
+	},
+	"ValueB": {
+		"DirectValue": 1
+	}
+}</pre>
+:::::;(Return to previous option selection)
+::::{{DIcon|Arrow}} ..."4"...
+::::<pre>{
+	"$type": "RPG.GameCore.SetTextJoinValue",
+	"TextJoinID": 82,
+	"Value": "4"
+}</pre>
+:::::Entered: (1/4/7) (1/2/3/4/5)...
+:::::{{DIcon|Arrow}} ..."2"...
+:::::<pre>{
+	"$type": "RPG.GameCore.CalculateMissionCustomValue",
+	"TargetSubmissionID": 801515818,
+	"TargetMissionCustomValue": {
+		"isLocal": true,
+		"ValidValueParamList": []
+	},
+	"ValueA": {
+		"Type": "CustomValue",
+		"MainMissionID": 8015158,
+		"MissionCustomValue": {
+			"isLocal": true,
+			"ValidValueParamList": []
+		}
+	},
+	"ValueB": {
+		"DirectValue": 1
+	}
+}</pre>
+:::::;(If {{F|MissionCV-8015158-undefined}} is equal to 3)
+:::::::You've guessed "1," "3," "2" and "8" so far. The password must be the stroke order for the letter "T" on a nine-square grid.
+:::::;(If {{F|MissionCV-8015158-undefined}} is not equal to 3)
+:::::::That doesn't seem right. You'll have to try again...
+::::::<pre>{
+	"$type": "RPG.GameCore.CalculateMissionCustomValue",
+	"TargetSubmissionID": 801515818,
+	"TargetMissionCustomValue": {
+		"Index": 1,
+		"isLocal": true,
+		"ValidValueParamList": []
+	},
+	"ValueA": {
+		"Type": "CustomValue",
+		"MainMissionID": 8015158,
+		"MissionCustomValue": {
+			"Index": 1,
+			"isLocal": true,
+			"ValidValueParamList": []
+		}
+	},
+	"ValueB": {
+		"DirectValue": 1
+	}
+}</pre>
+::::::;(Return to previous option selection)
+:::::{{DIcon|Arrow}} ..."6"...
+:::::;(If {{F|MissionCV-8015158-undefined}} is equal to 3)
+:::::::You've guessed "1," "3," "2" and "8" so far. The password must be the stroke order for the letter "T" on a nine-square grid.
+:::::;(If {{F|MissionCV-8015158-undefined}} is not equal to 3)
+:::::::That doesn't seem right. You'll have to try again...
+::::::<pre>{
+	"$type": "RPG.GameCore.CalculateMissionCustomValue",
+	"TargetSubmissionID": 801515818,
+	"TargetMissionCustomValue": {
+		"Index": 1,
+		"isLocal": true,
+		"ValidValueParamList": []
+	},
+	"ValueA": {
+		"Type": "CustomValue",
+		"MainMissionID": 8015158,
+		"MissionCustomValue": {
+			"Index": 1,
+			"isLocal": true,
+			"ValidValueParamList": []
+		}
+	},
+	"ValueB": {
+		"DirectValue": 1
+	}
+}</pre>
+::::::;(Return to previous option selection)
+:::::{{DIcon|Arrow}} ..."8"...
+:::::;(If {{F|MissionCV-8015158-undefined}} is equal to 3)
+:::::::You've guessed "1," "3," "2" and "8" so far. The password must be the stroke order for the letter "T" on a nine-square grid.
+:::::;(If {{F|MissionCV-8015158-undefined}} is not equal to 3)
+:::::::That doesn't seem right. You'll have to try again...
+::::::<pre>{
+	"$type": "RPG.GameCore.CalculateMissionCustomValue",
+	"TargetSubmissionID": 801515818,
+	"TargetMissionCustomValue": {
+		"Index": 1,
+		"isLocal": true,
+		"ValidValueParamList": []
+	},
+	"ValueA": {
+		"Type": "CustomValue",
+		"MainMissionID": 8015158,
+		"MissionCustomValue": {
+			"Index": 1,
+			"isLocal": true,
+			"ValidValueParamList": []
+		}
+	},
+	"ValueB": {
+		"DirectValue": 1
+	}
+}</pre>
+::::::;(Return to previous option selection)
+:::::{{DIcon|Arrow}} ..."0"...
+:::::;(If {{F|MissionCV-8015158-undefined}} is equal to 3)
+:::::::You've guessed "1," "3," "2" and "8" so far. The password must be the stroke order for the letter "T" on a nine-square grid.
+:::::;(If {{F|MissionCV-8015158-undefined}} is not equal to 3)
+:::::::That doesn't seem right. You'll have to try again...
+::::::<pre>{
+	"$type": "RPG.GameCore.CalculateMissionCustomValue",
+	"TargetSubmissionID": 801515818,
+	"TargetMissionCustomValue": {
+		"Index": 1,
+		"isLocal": true,
+		"ValidValueParamList": []
+	},
+	"ValueA": {
+		"Type": "CustomValue",
+		"MainMissionID": 8015158,
+		"MissionCustomValue": {
+			"Index": 1,
+			"isLocal": true,
+			"ValidValueParamList": []
+		}
+	},
+	"ValueB": {
+		"DirectValue": 1
+	}
+}</pre>
+::::::;(Return to previous option selection)
+::::{{DIcon|Arrow}} ..."5"...
+::::<pre>{
+	"$type": "RPG.GameCore.SetTextJoinValue",
+	"TextJoinID": 82,
+	"Value": "5"
+}</pre>
+:::::Entered: (1/4/7) (1/2/3/4/5)...
+:::::{{DIcon|Arrow}} ..."2"...
+:::::<pre>{
+	"$type": "RPG.GameCore.CalculateMissionCustomValue",
+	"TargetSubmissionID": 801515818,
+	"TargetMissionCustomValue": {
+		"isLocal": true,
+		"ValidValueParamList": []
+	},
+	"ValueA": {
+		"Type": "CustomValue",
+		"MainMissionID": 8015158,
+		"MissionCustomValue": {
+			"isLocal": true,
+			"ValidValueParamList": []
+		}
+	},
+	"ValueB": {
+		"DirectValue": 1
+	}
+}</pre>
+:::::{{DIcon|Arrow}} ..."4"...
+:::::{{DIcon|Arrow}} ..."6"...
+:::::{{DIcon|Arrow}} ..."8"...
+:::::{{DIcon|Arrow}} ..."0"...
+::::;(If {{F|MissionCV-8015158-undefined}} is equal to 3)
+::::::You've guessed "1," "3," "2" and "8" so far. The password must be the stroke order for the letter "T" on a nine-square grid.
+::::;(If {{F|MissionCV-8015158-undefined}} is not equal to 3)
+::::::That doesn't seem right. You'll have to try again...
+:::::<pre>{
+	"$type": "RPG.GameCore.CalculateMissionCustomValue",
+	"TargetSubmissionID": 801515818,
+	"TargetMissionCustomValue": {
+		"Index": 1,
+		"isLocal": true,
+		"ValidValueParamList": []
+	},
+	"ValueA": {
+		"Type": "CustomValue",
+		"MainMissionID": 8015158,
+		"MissionCustomValue": {
+			"Index": 1,
+			"isLocal": true,
+			"ValidValueParamList": []
+		}
+	},
+	"ValueB": {
+		"DirectValue": 1
+	}
+}</pre>
+:::::;(Return to previous option selection)
+:::{{DIcon|Arrow}} Start from "7"...
+:::<pre>{
+	"$type": "RPG.GameCore.SetTextJoinValue",
+	"TextJoinID": 81,
+	"Value": "3"
+}</pre>
+::::Entered: (1/4/7)...
+::::{{DIcon|Arrow}} ..."1"...
+::::<pre>{
+	"$type": "RPG.GameCore.SetTextJoinValue",
+	"TextJoinID": 82,
+	"Value": "1"
+}</pre>
+:::::Entered: (1/4/7) (1/2/3/4/5)...
+:::::{{DIcon|Arrow}} ..."2"...
+:::::<pre>{
+	"$type": "RPG.GameCore.CalculateMissionCustomValue",
+	"TargetSubmissionID": 801515818,
+	"TargetMissionCustomValue": {
+		"isLocal": true,
+		"ValidValueParamList": []
+	},
+	"ValueA": {
+		"Type": "CustomValue",
+		"MainMissionID": 8015158,
+		"MissionCustomValue": {
+			"isLocal": true,
+			"ValidValueParamList": []
+		}
+	},
+	"ValueB": {
+		"DirectValue": 1
+	}
+}</pre>
+:::::{{DIcon|Arrow}} ..."4"...
+:::::{{DIcon|Arrow}} ..."6"...
+:::::{{DIcon|Arrow}} ..."8"...
+:::::{{DIcon|Arrow}} ..."0"...
+::::;(If {{F|MissionCV-8015158-undefined}} is equal to 3)
+::::::You've guessed "1," "3," "2" and "8" so far. The password must be the stroke order for the letter "T" on a nine-square grid.
+::::;(If {{F|MissionCV-8015158-undefined}} is not equal to 3)
+::::::That doesn't seem right. You'll have to try again...
+:::::<pre>{
+	"$type": "RPG.GameCore.CalculateMissionCustomValue",
+	"TargetSubmissionID": 801515818,
+	"TargetMissionCustomValue": {
+		"Index": 1,
+		"isLocal": true,
+		"ValidValueParamList": []
+	},
+	"ValueA": {
+		"Type": "CustomValue",
+		"MainMissionID": 8015158,
+		"MissionCustomValue": {
+			"Index": 1,
+			"isLocal": true,
+			"ValidValueParamList": []
+		}
+	},
+	"ValueB": {
+		"DirectValue": 1
+	}
+}</pre>
+:::::;(Return to previous option selection)
+::::{{DIcon|Arrow}} ..."2"...
+::::<pre>{
+	"$type": "RPG.GameCore.SetTextJoinValue",
+	"TextJoinID": 82,
+	"Value": "2"
+}</pre>
+:::::Entered: (1/4/7) (1/2/3/4/5)...
+:::::{{DIcon|Arrow}} ..."4"...
+:::::;(If {{F|MissionCV-8015158-undefined}} is equal to 3)
+:::::::You've guessed "1," "3," "2" and "8" so far. The password must be the stroke order for the letter "T" on a nine-square grid.
+:::::;(If {{F|MissionCV-8015158-undefined}} is not equal to 3)
+:::::::That doesn't seem right. You'll have to try again...
+::::::<pre>{
+	"$type": "RPG.GameCore.CalculateMissionCustomValue",
+	"TargetSubmissionID": 801515818,
+	"TargetMissionCustomValue": {
+		"Index": 1,
+		"isLocal": true,
+		"ValidValueParamList": []
+	},
+	"ValueA": {
+		"Type": "CustomValue",
+		"MainMissionID": 8015158,
+		"MissionCustomValue": {
+			"Index": 1,
+			"isLocal": true,
+			"ValidValueParamList": []
+		}
+	},
+	"ValueB": {
+		"DirectValue": 1
+	}
+}</pre>
+::::::;(Return to previous option selection)
+:::::{{DIcon|Arrow}} ..."6"...
+:::::;(If {{F|MissionCV-8015158-undefined}} is equal to 3)
+:::::::You've guessed "1," "3," "2" and "8" so far. The password must be the stroke order for the letter "T" on a nine-square grid.
+:::::;(If {{F|MissionCV-8015158-undefined}} is not equal to 3)
+:::::::That doesn't seem right. You'll have to try again...
+::::::<pre>{
+	"$type": "RPG.GameCore.CalculateMissionCustomValue",
+	"TargetSubmissionID": 801515818,
+	"TargetMissionCustomValue": {
+		"Index": 1,
+		"isLocal": true,
+		"ValidValueParamList": []
+	},
+	"ValueA": {
+		"Type": "CustomValue",
+		"MainMissionID": 8015158,
+		"MissionCustomValue": {
+			"Index": 1,
+			"isLocal": true,
+			"ValidValueParamList": []
+		}
+	},
+	"ValueB": {
+		"DirectValue": 1
+	}
+}</pre>
+::::::;(Return to previous option selection)
+:::::{{DIcon|Arrow}} ..."8"...
+:::::;(If {{F|MissionCV-8015158-undefined}} is equal to 3)
+:::::::You've guessed "1," "3," "2" and "8" so far. The password must be the stroke order for the letter "T" on a nine-square grid.
+:::::;(If {{F|MissionCV-8015158-undefined}} is not equal to 3)
+:::::::That doesn't seem right. You'll have to try again...
+::::::<pre>{
+	"$type": "RPG.GameCore.CalculateMissionCustomValue",
+	"TargetSubmissionID": 801515818,
+	"TargetMissionCustomValue": {
+		"Index": 1,
+		"isLocal": true,
+		"ValidValueParamList": []
+	},
+	"ValueA": {
+		"Type": "CustomValue",
+		"MainMissionID": 8015158,
+		"MissionCustomValue": {
+			"Index": 1,
+			"isLocal": true,
+			"ValidValueParamList": []
+		}
+	},
+	"ValueB": {
+		"DirectValue": 1
+	}
+}</pre>
+::::::;(Return to previous option selection)
+:::::{{DIcon|Arrow}} ..."0"...
+:::::;(If {{F|MissionCV-8015158-undefined}} is equal to 3)
+:::::::You've guessed "1," "3," "2" and "8" so far. The password must be the stroke order for the letter "T" on a nine-square grid.
+:::::;(If {{F|MissionCV-8015158-undefined}} is not equal to 3)
+:::::::That doesn't seem right. You'll have to try again...
+::::::<pre>{
+	"$type": "RPG.GameCore.CalculateMissionCustomValue",
+	"TargetSubmissionID": 801515818,
+	"TargetMissionCustomValue": {
+		"Index": 1,
+		"isLocal": true,
+		"ValidValueParamList": []
+	},
+	"ValueA": {
+		"Type": "CustomValue",
+		"MainMissionID": 8015158,
+		"MissionCustomValue": {
+			"Index": 1,
+			"isLocal": true,
+			"ValidValueParamList": []
+		}
+	},
+	"ValueB": {
+		"DirectValue": 1
+	}
+}</pre>
+::::::;(Return to previous option selection)
+::::{{DIcon|Arrow}} ..."3"...
+::::<pre>{
+	"$type": "RPG.GameCore.SetTextJoinValue",
+	"TextJoinID": 82,
+	"Value": "3"
+}</pre>
+::::<pre>{
+	"$type": "RPG.GameCore.CalculateMissionCustomValue",
+	"TargetSubmissionID": 801515818,
+	"TargetMissionCustomValue": {
+		"isLocal": true,
+		"ValidValueParamList": []
+	},
+	"ValueA": {
+		"Type": "CustomValue",
+		"MainMissionID": 8015158,
+		"MissionCustomValue": {
+			"isLocal": true,
+			"ValidValueParamList": []
+		}
+	},
+	"ValueB": {
+		"DirectValue": 1
+	}
+}</pre>
+:::::Entered: (1/4/7) (1/2/3/4/5)...
+:::::{{DIcon|Arrow}} ..."2"...
+:::::<pre>{
+	"$type": "RPG.GameCore.CalculateMissionCustomValue",
+	"TargetSubmissionID": 801515818,
+	"TargetMissionCustomValue": {
+		"isLocal": true,
+		"ValidValueParamList": []
+	},
+	"ValueA": {
+		"Type": "CustomValue",
+		"MainMissionID": 8015158,
+		"MissionCustomValue": {
+			"isLocal": true,
+			"ValidValueParamList": []
+		}
+	},
+	"ValueB": {
+		"DirectValue": 1
+	}
+}</pre>
+:::::{{DIcon|Arrow}} ..."4"...
+:::::{{DIcon|Arrow}} ..."6"...
+:::::{{DIcon|Arrow}} ..."8"...
+:::::{{DIcon|Arrow}} ..."0"...
+::::;(If {{F|MissionCV-8015158-undefined}} is equal to 3)
+::::::You've guessed "1," "3," "2" and "8" so far. The password must be the stroke order for the letter "T" on a nine-square grid.
+::::;(If {{F|MissionCV-8015158-undefined}} is not equal to 3)
+::::::That doesn't seem right. You'll have to try again...
+:::::<pre>{
+	"$type": "RPG.GameCore.CalculateMissionCustomValue",
+	"TargetSubmissionID": 801515818,
+	"TargetMissionCustomValue": {
+		"Index": 1,
+		"isLocal": true,
+		"ValidValueParamList": []
+	},
+	"ValueA": {
+		"Type": "CustomValue",
+		"MainMissionID": 8015158,
+		"MissionCustomValue": {
+			"Index": 1,
+			"isLocal": true,
+			"ValidValueParamList": []
+		}
+	},
+	"ValueB": {
+		"DirectValue": 1
+	}
+}</pre>
+:::::;(Return to previous option selection)
+::::{{DIcon|Arrow}} ..."4"...
+::::<pre>{
+	"$type": "RPG.GameCore.SetTextJoinValue",
+	"TextJoinID": 82,
+	"Value": "4"
+}</pre>
+:::::Entered: (1/4/7) (1/2/3/4/5)...
+:::::{{DIcon|Arrow}} ..."2"...
+:::::<pre>{
+	"$type": "RPG.GameCore.CalculateMissionCustomValue",
+	"TargetSubmissionID": 801515818,
+	"TargetMissionCustomValue": {
+		"isLocal": true,
+		"ValidValueParamList": []
+	},
+	"ValueA": {
+		"Type": "CustomValue",
+		"MainMissionID": 8015158,
+		"MissionCustomValue": {
+			"isLocal": true,
+			"ValidValueParamList": []
+		}
+	},
+	"ValueB": {
+		"DirectValue": 1
+	}
+}</pre>
+:::::;(If {{F|MissionCV-8015158-undefined}} is equal to 3)
+:::::::You've guessed "1," "3," "2" and "8" so far. The password must be the stroke order for the letter "T" on a nine-square grid.
+:::::;(If {{F|MissionCV-8015158-undefined}} is not equal to 3)
+:::::::That doesn't seem right. You'll have to try again...
+::::::<pre>{
+	"$type": "RPG.GameCore.CalculateMissionCustomValue",
+	"TargetSubmissionID": 801515818,
+	"TargetMissionCustomValue": {
+		"Index": 1,
+		"isLocal": true,
+		"ValidValueParamList": []
+	},
+	"ValueA": {
+		"Type": "CustomValue",
+		"MainMissionID": 8015158,
+		"MissionCustomValue": {
+			"Index": 1,
+			"isLocal": true,
+			"ValidValueParamList": []
+		}
+	},
+	"ValueB": {
+		"DirectValue": 1
+	}
+}</pre>
+::::::;(Return to previous option selection)
+:::::{{DIcon|Arrow}} ..."6"...
+:::::;(If {{F|MissionCV-8015158-undefined}} is equal to 3)
+:::::::You've guessed "1," "3," "2" and "8" so far. The password must be the stroke order for the letter "T" on a nine-square grid.
+:::::;(If {{F|MissionCV-8015158-undefined}} is not equal to 3)
+:::::::That doesn't seem right. You'll have to try again...
+::::::<pre>{
+	"$type": "RPG.GameCore.CalculateMissionCustomValue",
+	"TargetSubmissionID": 801515818,
+	"TargetMissionCustomValue": {
+		"Index": 1,
+		"isLocal": true,
+		"ValidValueParamList": []
+	},
+	"ValueA": {
+		"Type": "CustomValue",
+		"MainMissionID": 8015158,
+		"MissionCustomValue": {
+			"Index": 1,
+			"isLocal": true,
+			"ValidValueParamList": []
+		}
+	},
+	"ValueB": {
+		"DirectValue": 1
+	}
+}</pre>
+::::::;(Return to previous option selection)
+:::::{{DIcon|Arrow}} ..."8"...
+:::::;(If {{F|MissionCV-8015158-undefined}} is equal to 3)
+:::::::You've guessed "1," "3," "2" and "8" so far. The password must be the stroke order for the letter "T" on a nine-square grid.
+:::::;(If {{F|MissionCV-8015158-undefined}} is not equal to 3)
+:::::::That doesn't seem right. You'll have to try again...
+::::::<pre>{
+	"$type": "RPG.GameCore.CalculateMissionCustomValue",
+	"TargetSubmissionID": 801515818,
+	"TargetMissionCustomValue": {
+		"Index": 1,
+		"isLocal": true,
+		"ValidValueParamList": []
+	},
+	"ValueA": {
+		"Type": "CustomValue",
+		"MainMissionID": 8015158,
+		"MissionCustomValue": {
+			"Index": 1,
+			"isLocal": true,
+			"ValidValueParamList": []
+		}
+	},
+	"ValueB": {
+		"DirectValue": 1
+	}
+}</pre>
+::::::;(Return to previous option selection)
+:::::{{DIcon|Arrow}} ..."0"...
+:::::;(If {{F|MissionCV-8015158-undefined}} is equal to 3)
+:::::::You've guessed "1," "3," "2" and "8" so far. The password must be the stroke order for the letter "T" on a nine-square grid.
+:::::;(If {{F|MissionCV-8015158-undefined}} is not equal to 3)
+:::::::That doesn't seem right. You'll have to try again...
+::::::<pre>{
+	"$type": "RPG.GameCore.CalculateMissionCustomValue",
+	"TargetSubmissionID": 801515818,
+	"TargetMissionCustomValue": {
+		"Index": 1,
+		"isLocal": true,
+		"ValidValueParamList": []
+	},
+	"ValueA": {
+		"Type": "CustomValue",
+		"MainMissionID": 8015158,
+		"MissionCustomValue": {
+			"Index": 1,
+			"isLocal": true,
+			"ValidValueParamList": []
+		}
+	},
+	"ValueB": {
+		"DirectValue": 1
+	}
+}</pre>
+::::::;(Return to previous option selection)
+::::{{DIcon|Arrow}} ..."5"...
+::::<pre>{
+	"$type": "RPG.GameCore.SetTextJoinValue",
+	"TextJoinID": 82,
+	"Value": "5"
+}</pre>
+:::::Entered: (1/4/7) (1/2/3/4/5)...
+:::::{{DIcon|Arrow}} ..."2"...
+:::::<pre>{
+	"$type": "RPG.GameCore.CalculateMissionCustomValue",
+	"TargetSubmissionID": 801515818,
+	"TargetMissionCustomValue": {
+		"isLocal": true,
+		"ValidValueParamList": []
+	},
+	"ValueA": {
+		"Type": "CustomValue",
+		"MainMissionID": 8015158,
+		"MissionCustomValue": {
+			"isLocal": true,
+			"ValidValueParamList": []
+		}
+	},
+	"ValueB": {
+		"DirectValue": 1
+	}
+}</pre>
+:::::{{DIcon|Arrow}} ..."4"...
+:::::{{DIcon|Arrow}} ..."6"...
+:::::{{DIcon|Arrow}} ..."8"...
+:::::{{DIcon|Arrow}} ..."0"...
+::::;(If {{F|MissionCV-8015158-undefined}} is equal to 3)
+::::::You've guessed "1," "3," "2" and "8" so far. The password must be the stroke order for the letter "T" on a nine-square grid.
+::::;(If {{F|MissionCV-8015158-undefined}} is not equal to 3)
+::::::That doesn't seem right. You'll have to try again...
+:::::<pre>{
+	"$type": "RPG.GameCore.CalculateMissionCustomValue",
+	"TargetSubmissionID": 801515818,
+	"TargetMissionCustomValue": {
+		"Index": 1,
+		"isLocal": true,
+		"ValidValueParamList": []
+	},
+	"ValueA": {
+		"Type": "CustomValue",
+		"MainMissionID": 8015158,
+		"MissionCustomValue": {
+			"Index": 1,
+			"isLocal": true,
+			"ValidValueParamList": []
+		}
+	},
+	"ValueB": {
+		"DirectValue": 1
+	}
+}</pre>
+:::::;(Return to previous option selection)
+:::{{DIcon|Arrow}} Start from "0"...
+::::Sorry, this safe has no "0".
+:;(If the player does not have greater than or equal to {{Item|Rubbings on Paper|20|x=1}})
+:::You have no idea what it could be. Perhaps there are clues around?
+:{{DIcon|Exit}} (Give up)
+;(Unused &mdash; QuickFinish_801515721)
+:{{DIcon|Arrow}} (Why not get Sushang to give the password a try?)
+::From what you know of Sushang, she is a good young girl, but she struggles with studies. By this logic, it makes sense that a brainteaser like this would bring her to her wit's end.
+::But, there is a phrase on the Xianzhou: "Enough random punches can kill a grandmaster," meaning sometimes it is possible to win through pure chaos that defies normal logic. Perhaps this is the "ace up her sleeve."
+::Well, will you ask Sushang?
+::{{DIcon|Arrow}} (Silently look over to Sushang)
+:::'''Sushang:''' Ah, I get it, you want me to have a try! Alright... let's give it a shot!
+:::'''Sushang:''' These... Strange characters, I have no idea what they mean. However, looking at their shapes, "M" is 71839 if we're going by single strokes, "N" is 7193, and "V" is 183...
+:::'''Sushang:''' Then, "T"... That doesn't seem like it can be written with one stroke.
+:::'''Sushang:''' Then I guess we'll use two. 1, 3, 2, 8.
+:::'''Sushang:''' Ah, it opened!
+:::'''Guinaifen:''' Seriously? The password is the stroke order for "T" on a nine-square grid?
+:::{{DIcon|Arrow}} Seriously!?
+:::{{DIcon|Arrow}} What a dull password!
+:::'''Sushang:''' Don't worry about that. It's open, isn't it?
+::{{DIcon|Exit}} (Keep your head buried and find the answer yourself)
+
+:{{DIcon|Talk}} Talk
+;(If the player has {{Item|Unusually Colored Lodestone|20|x=1}})
+::'''Sushang:''' What is this magnet used for?
+::'''Guinaifen:''' It must be for finding hidden metal items? Let's give it a try.
+;(Otherwise, if the player has {{Item|Shattered Cloud Knight Devastator Glaive|20|x=1}})
+::'''Sushang:''' ...A fragment of the Cloud Knights' devastator glaive? That could be used as a paper cutter.
+::'''Guinaifen:''' That's really gonna hurt your hands.
+;(Otherwise, if the player has {{Item|Discarded Letter Sheets|20|x=1}})
+::'''Sushang:''' ...With this rubbing paper, maybe we can try tracing the message on the stone?
+::'''Guinaifen:''' That's smart thinking! Is that really you still, Shangshang?
+::'''Sushang:''' Not being able to read and being stupid are two separate things!
+;(Otherwise, if the player has {{Item|Rubbings on Paper|20|x=1}})
+::'''Sushang:''' Looks like we've found everything we need.
+::'''Guinaifen:''' Let's look at the clues... So if "M" is 71839, "N" is 7193 and "V" is 183... What is "T"?
+::'''Sushang:''' This is so tough... (Trailblazer), why not try drawing them with your hands? "M" is like this, and "N" is like that...
+::'''Guinaifen:''' What does this have to do with the numbers in a nine-square grid?
+::{{DIcon|Arrow}} You're being way too abstract!
+::{{DIcon|Arrow}} Let me think.
+::'''Guinaifen:''' ...The deed is likely held inside the safe. Please, (Trailblazer), we're counting on you.
+;(Otherwise)
+::'''Guinaifen:''' Let's investigate the area again. We must have missed some clues.
 {{Dialogue End}}
 
-===Speak with the heliobus===
+===Speak with the heliobus{{subst:void|<!--801515823-->}}===
 {{Mission Description|type=adventure|location=Haunted House|update|Can safes keep heliobi locked within? You know that's not possible. That means this safe is no ordinary box but the owner's retribution to those who wish to pry into their secrets...<br />Ask the heliobus and see what it knows.}}
 {{Dialogue Start}}
+
+:{{DIcon|Loupe}} Investigate
+
+:{{DIcon|Talk}} Talk
+;(If the player has {{Item|Unusually Colored Lodestone|20|x=1}})
+::'''Sushang:''' What is this magnet used for?
+::'''Guinaifen:''' It must be for finding hidden metal items? Let's give it a try.
+;(Otherwise, if the player has {{Item|Shattered Cloud Knight Devastator Glaive|20|x=1}})
+::'''Sushang:''' ...A fragment of the Cloud Knights' devastator glaive? That could be used as a paper cutter.
+::'''Guinaifen:''' That's really gonna hurt your hands.
+;(Otherwise, if the player has {{Item|Discarded Letter Sheets|20|x=1}})
+::'''Sushang:''' ...With this rubbing paper, maybe we can try tracing the message on the stone?
+::'''Guinaifen:''' That's smart thinking! Is that really you still, Shangshang?
+::'''Sushang:''' Not being able to read and being stupid are two separate things!
+;(Otherwise, if the player has {{Item|Rubbings on Paper|20|x=1}})
+::'''Sushang:''' Looks like we've found everything we need.
+::'''Guinaifen:''' Let's look at the clues... So if "M" is 71839, "N" is 7193 and "V" is 183... What is "T"?
+::'''Sushang:''' This is so tough... (Trailblazer), why not try drawing them with your hands? "M" is like this, and "N" is like that...
+::'''Guinaifen:''' What does this have to do with the numbers in a nine-square grid?
+::{{DIcon|Arrow}} You're being way too abstract!
+::{{DIcon|Arrow}} Let me think.
+::'''Guinaifen:''' ...The deed is likely held inside the safe. Please, (Trailblazer), we're counting on you.
+;(Otherwise)
+::'''Guinaifen:''' Let's investigate the area again. We must have missed some clues.
+;(Unused &mdash; EnterDistrict_801515823)
 :{{tx}}
+:;(Enter battle)
+::{{Enemy List|Wraith Warden*2/+50% HP; Entranced Ingenium: Illumination Dragonfish*1/+50% HP}}
 {{Dialogue End}}
 
-===Speak to Sushang and Guinaifen===
+===Speak to Sushang and Guinaifen{{subst:void|<!--801515824-->}}===
 {{Mission Description|type=adventure|location=Haunted House|update|After conversing with the heliobus, you realize that the man calling himself the "landlord" is not as simple as he looked. You should give the deed to him, but he also needs to answer some questions.}}
 {{Dialogue Start}}
-:{{tx}}
+:'''Burnie:''' Stop, I can be reasonable... Finally, a living person for me to breathe the sweet scent of life. Let me catch my breath first...
+:'''Burnie:''' What is wrong with all of you? You think these kinds of terrifying tricks are funny? You almost scared me to death!
+:{{DIcon|Arrow}} Wait! Isn't the haunting caused by heliobi?
+::'''Burnie:''' Who told you that? Aren't humans the ones who make houses haunted? Seriously.
+:{{DIcon|Arrow}} Do heliobi get scared?
+::'''Burnie:''' Why shouldn't a heliobus get scared? It's dark and creepy in here. It's terrifying!
+:'''Sushang:''' Ah, we heard from the landlord, Renault, that this place is haunted, so we came to investigate!
+:'''Burnie:''' ...Oh. Renault, the landlord. Wait. You're talking about... Renault?
+:'''Guinaifen:''' He said his name was Renault.
+:'''Burnie:''' The owner of this house was indeed Renault, and he was a short-life species, who died a century ago. So, the person you actually saw was...
+:{{DIcon|Arrow}} Renault's ghost!
+::'''Guinaifen:''' Sushang, hey! Sushang... Wake up!
+::'''Sushang:''' I, I&mdash;I'm awake!
+:{{DIcon|Arrow}} It's an imposter Renault!
+::'''Guinaifen:''' That's right. The truth is just that boring.
+:'''Burnie:''' I've had enough here. You lot, get me in that gourd and get me out of here. Take me somewhere with some life and yang energy!
+:{{DIcon|Arrow}} If I call your name, do you dare to respond?
+::'''Burnie:''' My name is Burnie. Hurry and claim me!
+::{{tx}}
+:{{DIcon|Arrow}} I'm taking you right now.
+
+:{{DIcon|Loupe}} Investigate
+
+:{{DIcon|Talk}} Talk
+;(If the player has {{Item|Unusually Colored Lodestone|20|x=1}})
+::'''Sushang:''' What is this magnet used for?
+::'''Guinaifen:''' It must be for finding hidden metal items? Let's give it a try.
+;(Otherwise, if the player has {{Item|Shattered Cloud Knight Devastator Glaive|20|x=1}})
+::'''Sushang:''' ...A fragment of the Cloud Knights' devastator glaive? That could be used as a paper cutter.
+::'''Guinaifen:''' That's really gonna hurt your hands.
+;(Otherwise, if the player has {{Item|Discarded Letter Sheets|20|x=1}})
+::'''Sushang:''' ...With this rubbing paper, maybe we can try tracing the message on the stone?
+::'''Guinaifen:''' That's smart thinking! Is that really you still, Shangshang?
+::'''Sushang:''' Not being able to read and being stupid are two separate things!
+;(Otherwise, if the player has {{Item|Rubbings on Paper|20|x=1}})
+::'''Sushang:''' Looks like we've found everything we need.
+::'''Guinaifen:''' Let's look at the clues... So if "M" is 71839, "N" is 7193 and "V" is 183... What is "T"?
+::'''Sushang:''' This is so tough... (Trailblazer), why not try drawing them with your hands? "M" is like this, and "N" is like that...
+::'''Guinaifen:''' What does this have to do with the numbers in a nine-square grid?
+::{{DIcon|Arrow}} You're being way too abstract!
+::{{DIcon|Arrow}} Let me think.
+::'''Guinaifen:''' ...The deed is likely held inside the safe. Please, (Trailblazer), we're counting on you.
+;(Otherwise)
+::'''Guinaifen:''' Let's investigate the area again. We must have missed some clues.
+
+:{{DIcon|Loupe}} Investigate
+:A courier package that is making a growling sound. The package is out of reach. Maybe you can use {{Color|keyword|nobold=1|something that makes a ringing sound}} to lure it closer?
+:{{DIcon|Arrow}} (Try using an item)
+:<pre>{
+	"$type": "RPG.GameCore.SelectMissionItem",
+	"SubMissionID": 801515806,
+	"OnlyPerformance": true,
+	"ItemIDList": [
+		140366,
+		140367,
+		140370,
+		140372,
+		140373,
+		140374,
+		140376,
+		140377,
+		140378
+	],
+	"ItemHiddenIDList": [
+		140378
+	],
+	"ItemInvisibleIDList": [
+		140366,
+		140367,
+		140370,
+		140373,
+		140372,
+		140374,
+		140376,
+		140377
+	],
+	"ItemSelect": [
+		{
+			"Item1": 140378,
+			"TriggerCustomString": "SelectMissionItem_801515722_1"
+		}
+	],
+	"SlotNum": 1,
+	"InfoText": {
+		"Hash": 524940953
+	},
+	"SimpleTalk": {
+		"TextSpeed": 20,
+		"TalkSentenceID": 815159101,
+		"ProtectTime": 0.8
+	},
+	"OnSubmitSucceed": [],
+	"OnSubmitFail": [
+		{
+			"$type": "RPG.GameCore.TriggerCustomString",
+			"CustomString": {
+				"Value": "SelectMissionItem_Fail"
+			}
+		}
+	],
+	"OnSubmitCancel": [
+		{
+			"$type": "RPG.GameCore.TriggerCustomString",
+			"CustomString": {
+				"Value": "SelectMissionItem_Fail"
+			}
+		}
+	]
+}</pre>
+:{{DIcon|Exit}} (Give up)
+;(Unused &mdash; SelectMissionItem_801515722_1)
+:You ring the bell and it looks like the courier package moved closer.
+:<pre>{
+	"$type": "RPG.GameCore.ConsumeMissionItem",
+	"SubMissionID": 801515819,
+	"IsAutoConsume": true,
+	"SimpleTalk": {
+		"TextSpeed": 20,
+		"ProtectTime": 0.8
+	}
+}</pre>
+::----
+
+;(Unused &mdash; SelectMissionItem_Fail)
+:'''(Trailblazer):''' (Something doesn't seem right. Have another think about what to do.)
+
+:{{DIcon|Loupe}} Investigate
+:A courier package that is making a growling sound. It sounds like there is a small hungry creature in there waiting to be fed. Throw it some food or it won't let you open the courier package.
+:'''Critter in a Box:''' Meow, meow...
+:'''Critter in a Box:''' Woof, woof...
+:'''Critter in a Box:''' Awooo, awooo...
+:{{DIcon|Arrow}} Growl, growl...
+::'''Critter in a Box:''' Eeep, eeep...
+:<pre>{
+	"$type": "RPG.GameCore.SelectMissionItem",
+	"SubMissionID": 801515806,
+	"OnlyPerformance": true,
+	"ItemIDList": [
+		140366,
+		140367,
+		140370,
+		140372,
+		140373,
+		140374,
+		140376,
+		140377,
+		140378
+	],
+	"ItemHiddenIDList": [
+		140376
+	],
+	"ItemInvisibleIDList": [
+		140366,
+		140367,
+		140370,
+		140372,
+		140373,
+		140374,
+		140377,
+		140378
+	],
+	"ItemSelect": [
+		{
+			"Item1": 140376,
+			"TriggerCustomString": "SelectMissionItem_801515723_1"
+		}
+	],
+	"SlotNum": 1,
+	"InfoText": {
+		"Hash": -231881045
+	},
+	"SimpleTalk": {
+		"TextSpeed": 20,
+		"ProtectTime": 0.8
+	},
+	"OnSubmitSucceed": [],
+	"OnSubmitFail": [
+		{
+			"$type": "RPG.GameCore.TriggerCustomString",
+			"CustomString": {
+				"Value": "SelectMissionItem_Fail"
+			}
+		}
+	],
+	"OnSubmitCancel": [
+		{
+			"$type": "RPG.GameCore.TriggerCustomString",
+			"CustomString": {
+				"Value": "SelectMissionItem_Fail"
+			}
+		}
+	]
+}</pre>
+:{{DIcon|Exit}} (Give up)
+;(Unused &mdash; SelectMissionItem_801515723_1)
+:You place the square rice ball to one side and, in the blink of an eye, a shadow seems to burst out of the package, snap up the rice ball, and let out a low growl... What on earth is in that box?
+::Then, it seems like an invisible monster crawls out from the box and shuffles along the wall, leaving... hand prints?
+::Follow it and see.
+:<pre>{
+	"$type": "RPG.GameCore.ConsumeMissionItem",
+	"SubMissionID": 801515820,
+	"IsAutoConsume": true,
+	"SimpleTalk": {
+		"TextSpeed": 20,
+		"ProtectTime": 0.8
+	}
+}</pre>
+
+;(Unused &mdash; SelectMissionItem_Fail)
+:'''(Trailblazer):''' (Something doesn't seem right. Have another think about what to do.)
+
+;(Obtain {{Item|Discarded Letter Sheets|20|x=1}})
+
+:{{DIcon|Loupe}} Investigate
+<pre>{
+	"$type": "RPG.GameCore.TalkFigure",
+	"Show": true,
+	"ImagePath": "SpriteOutput/Mission/TalkItem/SubMission_190011.png",
+	"TriggerSound": true
+}</pre>
+:The strange hand prints remain. Upon closer inspection, there is scrapped rubbing paper hidden around here.
+<pre>{
+	"$type": "RPG.GameCore.TalkFigure",
+	"ImagePath": "SpriteOutput/Mission/TalkItem/SubMission_190011.png",
+	"TriggerSound": true
+}</pre>
+:<!--30-second delay-->
+<pre>{
+	"$type": "RPG.GameCore.SetMissionCustomValue",
+	"SubmissionID": 801515802,
+	"MissionCustomValue": {
+		"Index": 2,
+		"isLocal": true,
+		"ValidValueParamList": []
+	},
+	"CustomValue": 1
+}</pre>
 {{Dialogue End}}
 
 ==Other Languages==

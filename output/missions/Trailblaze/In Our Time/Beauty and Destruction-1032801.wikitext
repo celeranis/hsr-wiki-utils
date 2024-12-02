@@ -11,7 +11,7 @@ PageTitle=#Beauty and Destruction#
 |chapter       = In Our Time
 |requirements  = [[Trailblaze Mission]] ''[[Seabiscuit]]'' completed
 |summary       = Sunday takes the Dreammaster's side in the prior negotiations and cages Robin and Welt under his control. He also clearly reveals his intentions to everyone but indicates he does not wish to fight you. Instead, he asks you a series of questions to explore the possibility of mutual understanding.
-|characters    = Trailblazer
+|characters    = Himeko; March 7th; Sunday; Trailblazer
 |startLocation = [[Penacony]] - [[SoulGlad™ Scorchsand Audition Venue]]
 |world         = Penacony
 |area          = SoulGlad™ Scorchsand Audition Venue
@@ -38,30 +38,278 @@ PageTitle=#Beauty and Destruction#
 ==Dialogue==
 {{Stub Dialogue}}
 
-===Pass through the Path of the Superstars to reach the Penacony Grand Theater===
+===Pass through the Path of the Superstars to reach the Penacony Grand Theater{{subst:void|<!--103280106-->}}===
 {{Dialogue Start}}
+:{{A|VO chapter3 21 himeko 101.ogg}} '''Himeko:''' Unbelievable, to think that there would be... remnants of the Order on Penacony.
+:{{A|VO chapter3 21 mar7th 101.ogg}} '''March 7th:''' What have you done with Mr. Yang and Miss Robin!?
+:{{A|VO chapter3 21 sunday 101.ogg}} '''Sunday:''' Don't worry. I just gave them some time alone to ponder their fates.
+:{{A|VO chapter3 21 himeko 102.ogg}} '''Himeko:''' You should know that these actions make you an enemy of the Astral Express.
+:{{A|VO chapter3 21 sunday 102.ogg}} '''Sunday:''' Should we need to stand against the Nameless, it would only be myself and the Oak family involved. But we haven't reached that point yet, have we?
+:{{A|VO chapter3 21 sunday 103.ogg}} '''Sunday:''' Your efforts for the justice of Penacony are evident to everyone and have been widely observed.
+:{{DIcon|Arrow}} You want to talk terms with us?
+::{{A|VO chapter3 21 sunday 104.ogg}} '''Sunday:''' Smart kid. You're just as sharp as the other one.
+:{{DIcon|Arrow}} Stop beating around the bush and get to the point.
+::{{A|VO chapter3 21 sunday 105.ogg}} '''Sunday:''' Patience is a virtue. However, I won't hold it against you. On the contrary, I'm here to make my intentions clear.
+:{{DIcon|Arrow}} Give Mr. Yang back to us, now!
+::{{A|VO chapter3 21 sunday 106.ogg}} '''Sunday:''' Oh I intend to, but that hinges on the outcome of this negotiation.
+:{{A|VO chapter3 21 himeko 103.ogg}} '''Himeko:''' If it is the Order that drove you to imprison Welt and Robin, and you're using them to coerce our compliance, then there'll be no point in entertaining any type of discussion.
+:{{tx}}
+:{{tx}}
+:{{tx}}
+:{{tx}}
+:{{tx}}
+<pre>{
+	"$type": "RPG.GameCore.TriggerSound",
+	"SoundName": {
+		"Value": "Ev_sfx_penacony_3D_character_appear"
+	},
+	"EmitterType": "DefaultEmitter"
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.AdvCreateGroupEntity",
+	"InstanceIDList": [
+		300001,
+		300002
+	]
+}</pre>
 :{{tx}}
 {{Dialogue End}}
 
-===(Optional) Talk with the others and see what they think===
+===(Optional) Talk with the others and see what they think{{subst:void|<!--103280108-->}}===
 {{Mission Description|type=trailblaze|location=SoulGlad™ Scorchsand Audition Venue|update|To everyone's surprise, the person present to crown you champion is not Robin at all, but her big brother, Sunday. Here, he finally reveals his true intentions, but he does not seem to want to fight you, instead seeking the possibility of reaching a mutual understanding.<br />He asks you a series of questions that leave you a little lost, but fear not - if you are confounded by Sunday's questions, just look for the answers in your personal experience.}}
 {{Dialogue Start}}
-:{{tx}}
+
+
+;(Talk to March 7th)
+<pre>{
+	"$type": "RPG.GameCore.PredicateTaskListWithFail",
+	"Predicate": {
+		"$type": "RPG.GameCore.ByCompareSubMissionState",
+		"SubMissionID": 103280101,
+		"SubMissionState": "Started"
+	},
+	"SuccessTaskList": [
+		{
+			"$type": "RPG.GameCore.TriggerPerformance",
+			"ValueSource": {},
+			"PerformanceType": "E",
+			"PerformanceID": 103270219
+		},
+		{
+			"$type": "RPG.GameCore.FinishLevelGraph"
+		}
+	]
+}</pre>
+
+;(Talk to Himeko)
+
+
+;(Talk to Firefly)
+
 {{Dialogue End}}
 
-===Decide the little Charmony Dove's destiny===
+===Decide the little Charmony Dove's destiny{{subst:void|<!--103280109-->}}===
 {{Dialogue Start}}
+
+
+;(Unused &mdash; Perf)
 :{{tx}}
+::{{Color|keyword|nobold=1|Stick to the original plan, and build a nest with soft net where the Charmony Dove fell?}}
+::{{DIcon|Arrow}} Make the decision.
+::<pre>{
+	"$type": "RPG.GameCore.SetMissionCustomValue",
+	"SubmissionID": 103280109,
+	"MissionCustomValue": {
+		"isLocal": true,
+		"ValidValueParamList": [
+			0,
+			1,
+			2
+		]
+	},
+	"CustomValue": 1
+}</pre>
+::<pre>{
+	"$type": "RPG.GameCore.SetPerformanceResult",
+	"Value": 1
+}</pre>
+:::{{Color|keyword|nobold=1|Stick to the original plan, and build a nest with soft net where the Charmony Dove fell?}}
+:::Make the decision.
+:::Think it over some more.
+::{{DIcon|Exit}} Think it over some more.
+::<pre>{
+	"$type": "RPG.GameCore.SetPerformanceResult"
+}</pre>
+
+;(Unused &mdash; Perf)
+:{{tx}}
+::{{Color|keyword|nobold=1|Or build a cage for it, and feed it, giving it the utmost care from within the warmth of a home?}}
+::{{DIcon|Arrow}} Make the decision.
+::<pre>{
+	"$type": "RPG.GameCore.SetMissionCustomValue",
+	"SubmissionID": 103280109,
+	"MissionCustomValue": {
+		"isLocal": true,
+		"ValidValueParamList": [
+			0,
+			1,
+			2
+		]
+	},
+	"CustomValue": 2
+}</pre>
+::<pre>{
+	"$type": "RPG.GameCore.SetPerformanceResult",
+	"Value": 1
+}</pre>
+:::{{Color|keyword|nobold=1|Or build a cage for it, and feed it, giving it the utmost care from within the warmth of a home?}}
+:::Make the decision.
+:::Think it over some more.
+::{{DIcon|Exit}} Think it over some more.
+::<pre>{
+	"$type": "RPG.GameCore.SetPerformanceResult"
+}</pre>
+:{{tx}}
+:{{tx}}
+:{{tx}}
+;(Unused &mdash; Perf)
+:{{tx}}
+::{{Color|keyword|nobold=1|Or will you remain silent, leaving him to languish while the Hounds are hot on his heels, until his inevitable judgment arrives?}}
+::{{DIcon|Arrow}} Make the decision.
+::<pre>{
+	"$type": "RPG.GameCore.SetMissionCustomValue",
+	"SubmissionID": 103280112,
+	"MissionCustomValue": {
+		"Index": 1,
+		"isLocal": true,
+		"ValidValueParamList": [
+			0,
+			1,
+			2
+		]
+	},
+	"CustomValue": 1
+}</pre>
+::<pre>{
+	"$type": "RPG.GameCore.SetPerformanceResult",
+	"Value": 1
+}</pre>
+:::{{Color|keyword|nobold=1|Or will you remain silent, leaving him to languish while the Hounds are hot on his heels, until his inevitable judgment arrives?}}
+:::Make the decision.
+:::Think it over some more.
+::{{DIcon|Exit}} Think it over some more.
+::<pre>{
+	"$type": "RPG.GameCore.SetPerformanceResult"
+}</pre>
+;(Unused &mdash; Perf)
+:{{tx}}
+::{{Color|keyword|nobold=1|Will you try to convince the Bloodhound Family to stop their pursuit, so that the Dreamchaser may live peacefully and realize his wishes?}}
+::{{DIcon|Arrow}} Make the decision.
+::<pre>{
+	"$type": "RPG.GameCore.SetMissionCustomValue",
+	"SubmissionID": 103280112,
+	"MissionCustomValue": {
+		"Index": 1,
+		"isLocal": true,
+		"ValidValueParamList": [
+			0,
+			1,
+			2
+		]
+	},
+	"CustomValue": 2
+}</pre>
+::<pre>{
+	"$type": "RPG.GameCore.SetPerformanceResult",
+	"Value": 1
+}</pre>
+:::{{Color|keyword|nobold=1|Will you try to convince the Bloodhound Family to stop their pursuit, so that the Dreamchaser may live peacefully and realize his wishes?}}
+:::Make the decision.
+:::Think it over some more.
+::{{DIcon|Exit}} Think it over some more.
+::<pre>{
+	"$type": "RPG.GameCore.SetPerformanceResult"
+}</pre>
 {{Dialogue End}}
 
-===Decide the Dreamchasers' destiny===
+===Decide the Dreamchasers' destiny{{subst:void|<!--103280112-->}}===
 {{Dialogue Start}}
+
 :{{tx}}
+:{{tx}}
+:{{tx}}
+;(Unused &mdash; OptionChosen_1032801)
+<pre>{
+	"$type": "RPG.GameCore.AdvDestroyGroupEntity",
+	"InstanceIDList": [
+		300002
+	]
+}</pre>
+
+;(Unused &mdash; WayChosen)
+:{{tx}}
+:<pre>{
+	"$type": "RPG.GameCore.OpenTreasureChallenge",
+	"RaidID": 43321
+}</pre>
+
+;(Unused &mdash; Perf)
+:{{tx}}
+::Will you make this choice?
+::{{DIcon|Arrow}} Make the decision.
+::<pre>{
+	"$type": "RPG.GameCore.SetPerformanceResult",
+	"Value": 1
+}</pre>
+:::{{tx}}
+::{{DIcon|Exit}} Think it over some more.
+::<pre>{
+	"$type": "RPG.GameCore.SetPerformanceResult"
+}</pre>
+;(Unused &mdash; OptionChosen_1032801)
+<pre>{
+	"$type": "RPG.GameCore.AdvDestroyGroupEntity",
+	"InstanceIDList": [
+		300002
+	]
+}</pre>
+
+;(Unused &mdash; WayChosen)
+:{{tx}}
+:<pre>{
+	"$type": "RPG.GameCore.OpenTreasureChallenge",
+	"RaidID": 43321
+}</pre>
+
+;(Unused &mdash; Perf)
+<pre>{
+	"$type": "RPG.GameCore.SetMissionCustomValue",
+	"SubmissionID": 103280104,
+	"MissionCustomValue": {
+		"Index": 2,
+		"ValidValueParamList": [
+			0,
+			1,
+			2
+		]
+	}
+}</pre>
+::{{tx}}
+::Will you make this choice?
+::{{DIcon|Arrow}} Make the decision.
+::<pre>{
+	"$type": "RPG.GameCore.SetPerformanceResult",
+	"Value": 1
+}</pre>
+:::{{tx}}
+::{{DIcon|Exit}} Think it over some more.
+::<pre>{
+	"$type": "RPG.GameCore.SetPerformanceResult"
+}</pre>
 {{Dialogue End}}
 
-===Decide Robin's destiny===
+===Decide Robin's destiny{{subst:void|<!--103280101-->}}===
 {{Dialogue Start}}
-:{{tx}}
 {{Dialogue End}}
 
 ==Other Languages==

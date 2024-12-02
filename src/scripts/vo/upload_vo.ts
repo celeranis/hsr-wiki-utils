@@ -82,3 +82,23 @@ for (const [ , audioName ] of pageContent.matchAll(/\{\{A\|(.+?\.ogg)\}\}/gi)) {
 	
 	alreadyUploaded.add(internalName)
 }
+
+const catPage = await client.read(`Category:${opts.page}`)
+if (catPage.missing) {
+	if (!opts.list) {
+		await client.create(`Category:${opts.page}`, '{{Category Mission}}', `creating VO category for [[${opts.page}]]`)
+	} else {
+		console.log(`Category [[Category:${opts.page}]] will be created`)
+	}
+}
+
+if (!pageContent.match(/\|voiced\s*=\s*/)) {
+	if (!opts.list) {
+		await client.edit(opts.page, ({ content }) => {
+			return content
+				.replace('\n}}\n', '\n|voiced        = yes\n}}\n')
+		})
+	} else {
+		console.log(`[[${opts.page}]] will be edited to add "voiced" param`)
+	}
+}

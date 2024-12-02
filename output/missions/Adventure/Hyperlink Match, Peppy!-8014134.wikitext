@@ -7,7 +7,7 @@ PageTitle=#Hyperlink Match, Peppy!#
 |title         = 
 |image         = <!--Mission Hyperlink Match, Peppy!.png-->
 |type          = Adventure
-|event_name    = 
+|event_name    = Aetherium Wars
 |chapter       = 
 |requirements  = 
 * [[Adventure Mission]] ''[[Hyperlink Match, Arlan!]]'' completed
@@ -15,7 +15,7 @@ PageTitle=#Hyperlink Match, Peppy!#
 * [[Adventure Mission]] ''[[Hyperlink Match, Diting!]]'' completed
 * [[Adventure Mission]] ''[[Hyperlink Match, Yanqing!]]'' completed
 |summary       = <!--official mission summary from Fate's Atlas-->
-|characters    = Trailblazer
+|characters    = Peppy; Trailblazer
 |startLocation = [[Herta Space Station]] - [[Storage Zone]]
 |world         = Herta Space Station
 |area          = Storage Zone
@@ -23,7 +23,7 @@ PageTitle=#Hyperlink Match, Peppy!#
 |next          = 
 |rewards       = 
 }}
-'''''Hyperlink Match, Peppy!''''' is an [[Adventure Mission]] on [[Herta Space Station]].
+'''''Hyperlink Match, Peppy!''''' is an Event [[Adventure Mission]] from the [[Aetherium Wars]] event.
 
 ==Steps==
 # Have a Hyperlink Match with Peppy
@@ -37,11 +37,27 @@ PageTitle=#Hyperlink Match, Peppy!#
 -->
 ==Dialogue==
 {{Stub Dialogue}}
-
-===Have a Hyperlink Match with Peppy===
+===Have a Hyperlink Match with Peppy{{subst:void|<!--801413401-->}}===
 {{Mission Description|type=adventure|location=Storage Zone|The core gameplay loop behind Aetherium Wars is "dueling." Challenge different players and show your true strength!}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Peppy)
+:'''Peppy:''' Woof woof woof! Woof woof!
+<pre>{
+	"$type": "RPG.GameCore.ShowMenu",
+	"DisplaySingleMenuItem": true
+}</pre>
+:'''Peppy:''' Arf... Arf...
+:After a ferocious battle, Peppy's face looks regretful.
+:'''(Trailblazer):''' (This game really is sweeping the universe...)
+<pre>{
+	"$type": "RPG.GameCore.ShowUI",
+	"Name": "Ui.AetherDivide.AetherDivideEntryPage",
+	"Param": {
+		"Value": "2"
+	},
+	"OnUIEnter": []
+}</pre>
 {{Dialogue End}}
 
 ==Other Languages==

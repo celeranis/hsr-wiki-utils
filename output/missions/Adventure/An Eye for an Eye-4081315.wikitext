@@ -11,7 +11,7 @@ PageTitle=#An Eye for an Eye#
 |chapter       = 
 |requirements  = [[Trailblaze Mission]] ''[[The Return]]'' completed
 |summary       = <!--official mission summary from Fate's Atlas-->
-|characters    = Trailblazer
+|characters    = Liaison Officer William; Trailblazer
 |startLocation = [[Jarilo-VI]] - [[Administrative District]]
 |world         = Jarilo-VI
 |area          = Administrative District
@@ -33,12 +33,188 @@ PageTitle=#An Eye for an Eye#
 -->
 ==Dialogue==
 {{Stub Dialogue}}
+
+;(Talk to Liaison Officer William)
+;(If {{cx}}<!--SubMission Finish: 408131802-->)
+::----
+::'''Liaison Officer William:''' News from the northern front informs that the monsters at the Corridor of Fading Echoes are mounting a comeback.
+::'''Liaison Officer William:''' Those guys just never give up, and we can't seem to deliver the final blow. Without your prowess on the front lines, it's hard to make any progress just by relying on the Silvermane Guards.
+::{{DIcon|Arrow}} Don't worry. I'll do it.
+:::'''Liaison Officer William:''' Really? But we don't have anything to offer in return... Would you still be willing to help out, anyway?
+:::{{DIcon|Arrow}} Say no more. Take me there now.
+::::'''Liaison Officer William:''' ...I'm so grateful! Let's go now. Our target: The Corridor of Fading Echoes!
+:::<pre>{
+	"$type": "RPG.GameCore.SetLocalPlayerDitherAlpha"
+}</pre>
+:::<pre>{
+	"$type": "RPG.GameCore.OpenTreasureChallenge",
+	"RaidID": 4013201,
+	"OnCancel": [
+		{
+			"$type": "RPG.GameCore.EndDialogueEntityInteract"
+		},
+		{
+			"$type": "RPG.GameCore.TriggerCustomString",
+			"CustomString": {
+				"Value": "ALL_TALK_END"
+			}
+		}
+	]
+}</pre>
+:::{{DIcon|Exit}} Next time for sure.
+::::'''Liaison Officer William:''' Got it! You've helped us out so much already, so leave the rest up to us.
+::::'''Liaison Officer William:''' Hope to see you soon, (Trailblazer)!
+::{{DIcon|Exit}} I will pray for their triumphant return.
+:::'''Liaison Officer William:''' Thanks! You've helped us out so much already, so leave the rest up to us.
+:::'''Liaison Officer William:''' Hope to see you soon, (Trailblazer)!
+::'''Liaison Officer William:''' News from the northern front informs that the monsters at the Corridor of Fading Echoes are mounting a comeback.
+::'''Liaison Officer William:''' Those guys just never give up, and we can't seem to deliver the final blow. Without your prowess on the front lines, it's hard to make any progress just by relying on the Silvermane Guards.
+;(Otherwise)
+::----
+::----
+::'''Liaison Officer William:''' I&mdash;If you're ready to go to the front lines now, just let me know. I&mdash;I'll take you to see Captain Oleg.
+::{{DIcon|Talk}} Tell me about the plan for this mission.
+:::'''Liaison Officer William:''' L&mdash;Let me recap your target this time: Err... Charge the Corridor of Fading Echoes, and defeat all the Fragmentum monsters lurking there. Yes, that's what it says here.
+:::'''Liaison Officer William:''' O&mdash;Oh yeah, the Technology Division told me that they'd set up advanced enemy defenses on the front line which could be used in combat. I th&mdash;think they're called... They're called {{Color|keyword|nobold=1|Snowshine Lamps}}.
+:::'''Liaison Officer William:''' Ask Captain Oleg on the front lines about how to use it.
+::;(Return to previous option selection)
+::{{DIcon|Arrow}} Let's go.
+:::'''Liaison Officer William:''' G&mdash;Great! Captain Oleg said, if you're here, then the Fragmentum monsters will h&mdash;have to just flee in fear...
+:::'''Liaison Officer William:''' Th&mdash;This way, please!
+::<pre>{
+	"$type": "RPG.GameCore.SetLocalPlayerDitherAlpha"
+}</pre>
+::<pre>{
+	"$type": "RPG.GameCore.OpenTreasureChallenge",
+	"RaidID": 4013201,
+	"OnCancel": [
+		{
+			"$type": "RPG.GameCore.EndDialogueEntityInteract"
+		},
+		{
+			"$type": "RPG.GameCore.TriggerCustomString",
+			"CustomString": {
+				"Value": "ALL_TALK_END"
+			}
+		}
+	]
+}</pre>
+::{{DIcon|Exit}} One second.
+:::'''Liaison Officer William:''' N&mdash;No problem, take your time. It's dangerous ahead. Make sure you're completely prepared before you set out.
 {{Dialogue End}}
 
-===Talk with Liaison Officer William and complete the Fragmentum raid once===
+===Talk with Liaison Officer William and complete the Fragmentum raid once{{subst:void|<!--408131502-->}}===
 {{Mission Description|type=adventure|location=Silvermane Guard Restricted Zone|update|Oleg sent you a message asking for help with the Silvermane Guards' raid against Fragmentum monsters in the Corridor of Fading Echoes.<br />Oleg wants you to go to the Silvermane Guard Restricted Zone and look for a liaison officer named William. William will take you to the Corridor of Fading Echoes for the first counter attack operation.}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Liaison Officer William)
+;(If {{cx}}<!--SubMission Finish: 408131802-->)
+::----
+::'''Liaison Officer William:''' News from the northern front informs that the monsters at the Corridor of Fading Echoes are mounting a comeback.
+::'''Liaison Officer William:''' Those guys just never give up, and we can't seem to deliver the final blow. Without your prowess on the front lines, it's hard to make any progress just by relying on the Silvermane Guards.
+::{{DIcon|Arrow}} Don't worry. I'll do it.
+:::'''Liaison Officer William:''' Really? But we don't have anything to offer in return... Would you still be willing to help out, anyway?
+:::{{DIcon|Arrow}} Say no more. Take me there now.
+::::'''Liaison Officer William:''' ...I'm so grateful! Let's go now. Our target: The Corridor of Fading Echoes!
+:::<pre>{
+	"$type": "RPG.GameCore.SetLocalPlayerDitherAlpha"
+}</pre>
+:::<pre>{
+	"$type": "RPG.GameCore.OpenTreasureChallenge",
+	"RaidID": 4013201,
+	"OnCancel": [
+		{
+			"$type": "RPG.GameCore.EndDialogueEntityInteract"
+		},
+		{
+			"$type": "RPG.GameCore.TriggerCustomString",
+			"CustomString": {
+				"Value": "ALL_TALK_END"
+			}
+		}
+	]
+}</pre>
+:::{{DIcon|Exit}} Next time for sure.
+::::'''Liaison Officer William:''' Got it! You've helped us out so much already, so leave the rest up to us.
+::::'''Liaison Officer William:''' Hope to see you soon, (Trailblazer)!
+::{{DIcon|Exit}} I will pray for their triumphant return.
+:::'''Liaison Officer William:''' Thanks! You've helped us out so much already, so leave the rest up to us.
+:::'''Liaison Officer William:''' Hope to see you soon, (Trailblazer)!
+::'''Liaison Officer William:''' News from the northern front informs that the monsters at the Corridor of Fading Echoes are mounting a comeback.
+::'''Liaison Officer William:''' Those guys just never give up, and we can't seem to deliver the final blow. Without your prowess on the front lines, it's hard to make any progress just by relying on the Silvermane Guards.
+;(Otherwise, if {{cx}}<!--during performance 408131502-->)
+::----
+::'''Liaison Officer William:''' H&mdash;Hello! Are you the (Trailblazer) I've heard so much about?
+::{{DIcon|Arrow}} It's me.
+:::'''Liaison Officer William:''' I&mdash;It's an honor to meet you!
+:::'''Liaison Officer William:''' Captain Oleg's already hit the front lines... He said that you'd definitely come!
+::{{DIcon|Arrow}} Where's Oleg?
+:::'''Liaison Officer William:''' C&mdash;Captain Oleg's already hit the front lines... He said that you'd definitely come!
+:::'''Liaison Officer William:''' I&mdash;I'm honored to meet you!
+::'''Liaison Officer William:''' L&mdash;Let me recap your target this time: Err... Charge the Corridor of Fading Echoes, and defeat all the Fragmentum monsters lurking there. Yes, that's what it says here in the memo.
+::'''Liaison Officer William:''' O&mdash;Oh yeah, the Technology Division told me that they'd set up advanced enemy defenses on the front line which could be used in combat. I th&mdash;think they're called... They're called {{Color|keyword|nobold=1|Snowshine Lamps}}.
+::'''Liaison Officer William:''' Ask Captain Oleg on the front lines about how to use it.
+::'''Liaison Officer William:''' I&mdash;If you're ready to go to the front lines now, just let me know. I&mdash;I'll take you to see Captain Oleg.
+::{{DIcon|Talk}} Tell me about the plan for this mission.
+:::'''Liaison Officer William:''' L&mdash;Let me recap your target this time: Err... Charge the Corridor of Fading Echoes, and defeat all the Fragmentum monsters lurking there. Yes, that's what it says here.
+:::'''Liaison Officer William:''' O&mdash;Oh yeah, the Technology Division told me that they'd set up advanced enemy defenses on the front line which could be used in combat. I th&mdash;think they're called... They're called {{Color|keyword|nobold=1|Snowshine Lamps}}.
+:::'''Liaison Officer William:''' Ask Captain Oleg on the front lines about how to use it.
+::;(Return to previous option selection)
+::{{DIcon|Arrow}} Let's go.
+:::'''Liaison Officer William:''' G&mdash;Great! Captain Oleg said, if you're here, then the Fragmentum monsters will h&mdash;have to just flee in fear...
+:::'''Liaison Officer William:''' Th&mdash;This way, please!
+::<pre>{
+	"$type": "RPG.GameCore.SetLocalPlayerDitherAlpha"
+}</pre>
+::<pre>{
+	"$type": "RPG.GameCore.OpenTreasureChallenge",
+	"RaidID": 4013201,
+	"OnCancel": [
+		{
+			"$type": "RPG.GameCore.EndDialogueEntityInteract"
+		},
+		{
+			"$type": "RPG.GameCore.TriggerCustomString",
+			"CustomString": {
+				"Value": "ALL_TALK_END"
+			}
+		}
+	]
+}</pre>
+::{{DIcon|Exit}} One second.
+:::'''Liaison Officer William:''' N&mdash;No problem, take your time. It's dangerous ahead. Make sure you're completely prepared before you set out.
+;(Otherwise)
+::----
+::----
+::'''Liaison Officer William:''' I&mdash;If you're ready to go to the front lines now, just let me know. I&mdash;I'll take you to see Captain Oleg.
+::{{DIcon|Talk}} Tell me about the plan for this mission.
+:::'''Liaison Officer William:''' L&mdash;Let me recap your target this time: Err... Charge the Corridor of Fading Echoes, and defeat all the Fragmentum monsters lurking there. Yes, that's what it says here.
+:::'''Liaison Officer William:''' O&mdash;Oh yeah, the Technology Division told me that they'd set up advanced enemy defenses on the front line which could be used in combat. I th&mdash;think they're called... They're called {{Color|keyword|nobold=1|Snowshine Lamps}}.
+:::'''Liaison Officer William:''' Ask Captain Oleg on the front lines about how to use it.
+::;(Return to previous option selection)
+::{{DIcon|Arrow}} Let's go.
+:::'''Liaison Officer William:''' G&mdash;Great! Captain Oleg said, if you're here, then the Fragmentum monsters will h&mdash;have to just flee in fear...
+:::'''Liaison Officer William:''' Th&mdash;This way, please!
+::<pre>{
+	"$type": "RPG.GameCore.SetLocalPlayerDitherAlpha"
+}</pre>
+::<pre>{
+	"$type": "RPG.GameCore.OpenTreasureChallenge",
+	"RaidID": 4013201,
+	"OnCancel": [
+		{
+			"$type": "RPG.GameCore.EndDialogueEntityInteract"
+		},
+		{
+			"$type": "RPG.GameCore.TriggerCustomString",
+			"CustomString": {
+				"Value": "ALL_TALK_END"
+			}
+		}
+	]
+}</pre>
+::{{DIcon|Exit}} One second.
+:::'''Liaison Officer William:''' N&mdash;No problem, take your time. It's dangerous ahead. Make sure you're completely prepared before you set out.
 {{Dialogue End}}
 
 ==Other Languages==

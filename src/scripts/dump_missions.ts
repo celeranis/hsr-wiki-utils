@@ -1,9 +1,10 @@
 import { existsSync, mkdirSync, writeFileSync } from 'fs'
 import { ChangeHistory } from '../ChangeHistory.js'
+import { MISSING_FILES } from '../files/GameFile.js'
 import { Item } from '../Item.js'
 import { Area } from '../maps/Area.js'
 import { Mission } from '../Mission.js'
-import { wikiTitle } from '../Shared.js'
+import { DICON_MAP, wikiTitle } from '../Shared.js'
 import { TextMap, textMap } from '../TextMap.js'
 import { uploadPrompt } from '../util/General.js'
 
@@ -17,7 +18,7 @@ PageTitle=#<<TITLE>>#
 |title         = <<NAME_PARAM>>
 |image         = <<IMAGE>>
 |type          = <<TYPE>>
-|event_name    = 
+|event_name    = <<EVENT>>
 |chapter       = <<CHAPTERTITLE>>
 |requirements  = <<REQUIREMENTS>>
 |summary       = <<SUMMARY>>
@@ -61,8 +62,17 @@ if (existsSync('./output/missions/')) {
 }
 await Item.loadAll()
 
-for (const missionData of Object.values(Mission.missionData)) {
-	// if (missionData.MainMissionID != 1010601 && missionData.MainMissionID != 1010602) continue
+const only = process.argv
+	.find(arg => arg.startsWith('--only='))
+	?.replace('--only=', '')
+	?.split(',')
+
+const startTime = Date.now()
+const allMissionData = Object.values(Mission.missionData)
+
+for (const [i, missionData] of allMissionData.entries()) {
+	if (only && !only.includes(missionData.MainMissionID.toString())) continue
+	let missionStartTime = Date.now()
 	
 	const mission = new Mission(missionData)
 	const title = wikiTitle(mission.name, 'mission', mission.id)
@@ -72,7 +82,7 @@ for (const missionData of Object.values(Mission.missionData)) {
 		.replaceAll('<<NAME>>', mission.name)
 		.replaceAll('<<NAME_PARAM>>', mission.name != title ? mission.name : '')
 		.replaceAll('<<ID>>', mission.id.toString())
-		.replaceAll('<<TAN>>', mission.type == 'Adventure' ? 'an' : 'a')
+		.replaceAll('<<TAN>>', ((mission.type == 'Adventure' || mission.event) ? 'an' : 'a') + (mission.event ? ' Event' : ''))
 		.replaceAll('<<TYPE>>', mission.type == 'Continuance' ? 'Trailblaze Continuance' : mission.type)
 		.replaceAll('<<TYPEDISPLAY>>', mission.displayType)
 		.replaceAll('<<CHAPTERTITLE>>', mission.getChapterName() || '')
@@ -80,6 +90,7 @@ for (const missionData of Object.values(Mission.missionData)) {
 		.replaceAll('<<NEXT>>', mission.getNext().map(mission => wikiTitle(mission?.name || '???', 'mission')).join(';'))
 		.replaceAll('<<OL>>', await TextMap.generateOL(mission.name_hash))
 		.replaceAll('<<VERSION>>', (await ChangeHistory.missions.findAdded(mission.id.toString()))[0] || '<!--unknown-->')
+		.replaceAll('<<EVENT>>', mission.event?.name ?? '')
 	
 	const image = await mission.getImage()
 	const imageName = `Mission ${title.replaceAll(':', '')}.png`
@@ -111,19 +122,21 @@ for (const missionData of Object.values(Mission.missionData)) {
 	let lastName: string | undefined = undefined
 	let lastDesc: string | undefined = undefined
 	
+	const addedMapDialogue = new Set<string | number>()
+	
 	for (const [i, step] of steps.entries()) {
-		if (step.name && step.name != lastName) stepList.push(`# ${step.name}`)
-		// const stepDialogue = await step.loadDialogue()
+		if (step.name && step.name != lastName) stepList.push(`# ${step.name}` + (process.argv.includes('--add-triggers') ? `{{subst:void|<!--${step.id} / ${step.order_reason}-->}}` : ''))
+		const stepDialogue = await step.loadDialogue()
 	
 		const dialogueEntry: (string | undefined)[] = []
 		
 		if (step.name && step.name != lastName) {
 			dialogueEntry.push(
 				i > 0 ? '{{Dialogue End}}\n' : undefined,
-				`===${step.name}===`
+				`===${step.name}{{subst:void|<!--${step.id}-->}}===`
 			)
-		} else {
-			// dialogueEntry.push(`{{subst:void|<!--${step.id}-->}}`)
+		} else if (process.argv.includes('--add-triggers')) {
+			dialogueEntry.push(`{{subst:void|<!--${step.id} / ${step.order_reason}-->}}`)
 		}
 		
 		if (step.description && step.description != lastDesc) {
@@ -131,30 +144,58 @@ for (const missionData of Object.values(Mission.missionData)) {
 		}
 		
 		if (step.name && step.name != lastName) {
-			dialogueEntry.push('{{Dialogue Start}}', ':{{tx}}')
+			dialogueEntry.push('{{Dialogue Start}}')
+			if (process.argv.includes('--no-dialogue')) {
+				dialogueEntry.push(':{{tx}}')
+			}
 		}
 		
-		// dialogueEntry.push(await stepDialogue?.wikitext())
+		if (!process.argv.includes('--no-dialogue')) {
+			dialogueEntry.push(await stepDialogue?.wikitext())
+		}
+
+		// const groups = (await step.getGroups()).filter(group => group.act_path)
+		const npcDialogueList = await step.getMapDialogue()
+		for (const npcDialogue of [/*...groups, */...npcDialogueList]) {
+			if (addedMapDialogue.has(npcDialogue.id)) continue
+			
+			const npcTree = (await npcDialogue.loadDialogue(stepDialogue?.environment ?? { main_mission_id: mission.id, sub_mission_id: step.id }))?.optimize()
+			if (!npcTree) continue
+			
+			if ('source' in npcDialogue && !process.argv.includes('--no-dialogue')) {
+				if (npcDialogue.source.type == 'npc') {
+					dialogueEntry.push(`\n;(Talk to ${npcDialogue.source.name || npcDialogue.prompt})`)
+				} else {
+					dialogueEntry.push(`\n:{{DIcon|${DICON_MAP[npcDialogue.dicon]}}} ${npcDialogue.prompt}`)
+				}
+			}
+			
+			npcTree.environment.characters.forEach(chr => mission.charset.add(chr == '(Trailblazer)' ? 'Trailblazer' : chr))
+
+			if (!process.argv.includes('--no-dialogue')) {
+				dialogueEntry.push(await npcTree.wikitext())
+			}
+			
+			if (process.argv.includes('--add-json')) {
+				dialogueEntry.push('<pre>' + npcTree.toJSON() + '</pre>')
+			}
+			
+			const unusedNpc = await npcTree.unusedWikitext()
+			if (unusedNpc?.length && !process.argv.includes('--no-dialogue')) {
+				dialogueEntry.push(unusedNpc.join('\n\n'))
+			}
+
+			if (!npcTree.environment.has_definite_conditional) {
+				addedMapDialogue.add(npcDialogue.id)
+			}
+		}
 		
-		// const npcDialogueList = await step.getMapDialogue()
-		// for (const npcDialogue of npcDialogueList) {
-		// 	const npcTree = await npcDialogue.loadDialogue()
-		// 	dialogueEntry.push(
-		// 		`;(Talk to ${npcDialogue.source.name || npcDialogue.prompt})`,
-		// 		await npcTree.wikitext()
-		// 	)
-		// 	const unusedNpc = await npcTree.unusedWikitext()
-		// 	if (unusedNpc?.length) {
-		// 		dialogueEntry.push(unusedNpc.join('\n\n'))
-		// 	}
-		// }
+		const unused = await stepDialogue?.unusedWikitext()
+		if (unused?.length && !process.argv.includes('--no-dialogue')) {
+			dialogueEntry.push(unused.join('\n\n'))
+		}
 		
-		// const unused = await stepDialogue?.unusedWikitext()
-		// if (unused?.length) {
-		// 	dialogueEntry.push(unused.join('\n\n'))
-		// }
-		
-		const result = dialogueEntry/*.filter(v => v != unused)*/.join('\n')
+		const result = dialogueEntry.filter(v => v != unused).join('\n')
 		if (result.trim() != '') {
 			dialogueSections.push(result)
 		}
@@ -175,12 +216,16 @@ for (const missionData of Object.values(Mission.missionData)) {
 			break
 		}
 	}
-	if (firstWorld && (mission.type == 'Adventure' || mission.type == 'Daily')) {
-		details += ` on [[${firstWorld}]]`
-	}
+	if (mission.event) {
+		details += ` from the [[${wikiTitle(mission.event.name)}]] event`
+	} else {
+		if (firstWorld && (mission.type == 'Adventure' || mission.type == 'Daily')) {
+			details += ` on [[${firstWorld}]]`
+		}
 
-	if (mission.data.ChapterID) {
-		details += ` in the chapter ${mission.getChapterLink()}`
+		if (mission.data.ChapterID) {
+			details += ` in the chapter ${mission.getChapterLink()}`
+		}
 	}
 	
 	output = output
@@ -195,8 +240,14 @@ for (const missionData of Object.values(Mission.missionData)) {
 	
 	output = output
 		.replaceAll('<<REWARDS>>', rewards.asCardListParams())
+
+	console.log(`[${i+1}/${allMissionData.length}] Generated output for Mission ${mission.id} "${mission.name}" (took ${Date.now() - missionStartTime}ms)`)
 	
 	const path = `./output/missions/${mission.type}${mission.data.ChapterID ? `/${sanitize(mission.getChapterName()!.replace(/\.$/, '_'))}` : ''}/`
 	mkdirSync(path, { recursive: true })
 	writeFileSync(`${path}/${sanitize(mission.name)}-${mission.id}.wikitext`, output)
 }
+
+console.log(`Finished! Generated ${Object.keys(Mission.missionData).length} Mission pages in ${Math.floor((Date.now() - startTime) / 1000)}s`)
+
+writeFileSync('./output/output.txt', [...MISSING_FILES.values()].join('\n'))

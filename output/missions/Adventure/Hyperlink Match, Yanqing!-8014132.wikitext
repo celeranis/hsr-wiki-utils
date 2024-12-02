@@ -7,7 +7,7 @@ PageTitle=#Hyperlink Match, Yanqing!#
 |title         = 
 |image         = <!--Mission Hyperlink Match, Yanqing!.png-->
 |type          = Adventure
-|event_name    = 
+|event_name    = Aetherium Wars
 |chapter       = 
 |requirements  = 
 * [[Adventure Mission]] ''[[Hyperlink Match, Natasha!]]'' completed
@@ -15,7 +15,7 @@ PageTitle=#Hyperlink Match, Yanqing!#
 * [[Adventure Mission]] ''[[Hyperlink Match, Gepard!]]'' completed
 * [[Adventure Mission]] ''[[Hyperlink Match, Lynx!]]'' completed
 |summary       = <!--official mission summary from Fate's Atlas-->
-|characters    = Trailblazer
+|characters    = Trailblazer; Yanqing
 |startLocation = [[The Xianzhou Luofu]] - [[Exalting Sanctum]]
 |world         = The Xianzhou Luofu
 |area          = Exalting Sanctum
@@ -23,7 +23,7 @@ PageTitle=#Hyperlink Match, Yanqing!#
 |next          = 
 |rewards       = 
 }}
-'''''Hyperlink Match, Yanqing!''''' is an [[Adventure Mission]] on [[The Xianzhou Luofu]].
+'''''Hyperlink Match, Yanqing!''''' is an Event [[Adventure Mission]] from the [[Aetherium Wars]] event.
 
 ==Steps==
 # Have a Hyperlink Match with Yanqing
@@ -37,11 +37,25 @@ PageTitle=#Hyperlink Match, Yanqing!#
 -->
 ==Dialogue==
 {{Stub Dialogue}}
-
-===Have a Hyperlink Match with Yanqing===
+===Have a Hyperlink Match with Yanqing{{subst:void|<!--801413201-->}}===
 {{Mission Description|type=adventure|location=Exalting Sanctum|The core gameplay loop behind Aetherium Wars is "dueling." Challenge different players and show your true strength!}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Yanqing)
+:'''Yanqing:''' Aether Spirit battles are extremely different from swordsmanship...
+<pre>{
+	"$type": "RPG.GameCore.ShowMenu",
+	"DisplaySingleMenuItem": true
+}</pre>
+:'''Yanqing:''' I feel I still wield my sword more comfortably than Aether Spirits...
+<pre>{
+	"$type": "RPG.GameCore.ShowUI",
+	"Name": "Ui.AetherDivide.AetherDivideEntryPage",
+	"Param": {
+		"Value": "2"
+	},
+	"OnUIEnter": []
+}</pre>
 {{Dialogue End}}
 
 ==Other Languages==

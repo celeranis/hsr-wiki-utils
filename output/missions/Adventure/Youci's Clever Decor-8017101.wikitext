@@ -7,13 +7,13 @@ PageTitle=#Youci's Clever Decor#
 |title         = 
 |image         = <!--Mission Youci's Clever Decor.png-->
 |type          = Adventure
-|event_name    = 
+|event_name    = Camping in the Snow
 |chapter       = 
 |requirements  = 
 * [[Trailblaze Mission]] ''[[A Dragon Gallant, Its Ocean Distant]]'' completed
 * [[Trailblaze Mission]] ''[[Trial of Equilibrium: Part Three]]'' completed
 |summary       = <!--official mission summary from Fate's Atlas-->
-|characters    = Trailblazer
+|characters    = Bookshop Customer; Trailblazer; Yinshu; Youci
 |startLocation = [[The Xianzhou Luofu]] - [[Exalting Sanctum]]
 |world         = The Xianzhou Luofu
 |area          = Exalting Sanctum
@@ -21,7 +21,7 @@ PageTitle=#Youci's Clever Decor#
 |next          = 
 |rewards       = Jade Feather*20; Credit*5,000
 }}
-'''''Youci's Clever Decor''''' is an [[Adventure Mission]] on [[The Xianzhou Luofu]].
+'''''Youci's Clever Decor''''' is an Event [[Adventure Mission]] from the [[Camping in the Snow]] event.
 
 ==Steps==
 # Go to the Exalting Sanctum and meet Mr. Xiyan's new pet
@@ -38,15 +38,77 @@ PageTitle=#Youci's Clever Decor#
 {{Stub Dialogue}}
 {{Dialogue End}}
 
-===Go to the Exalting Sanctum and meet Mr. Xiyan's new pet===
+===Go to the Exalting Sanctum and meet Mr. Xiyan's new pet{{subst:void|<!--801710102-->}}===
 {{Mission Description|type=adventure|location=Exalting Sanctum|update|Mr. Xiyan suddenly contacted you and said that he got a miraculous new pet, and that "you will definitely like it!"<br />Go to Spare Time Book Shop and have a look. Maybe that pet will bring you an unexpected surprise.}}
 {{Dialogue Start}}
-:{{tx}}
+<pre>{
+	"$type": "RPG.GameCore.AdvCreateGroupEntity",
+	"InstanceIDList": [
+		400001,
+		400002,
+		400003,
+		300002,
+		300003
+	]
+}</pre>
+
+;(Unused &mdash; npchide)
+<pre>{
+	"$type": "RPG.GameCore.AdvDestroyGroupEntity",
+	"InstanceIDList": [
+		400001,
+		400002,
+		400003,
+		300002,
+		300003
+	]
+}</pre>
+
+;(Unused &mdash; Talk_801710102)
+
+
+;(Unused &mdash; challengeshow)
+<pre>{
+	"$type": "RPG.GameCore.VerifyInteractingEntity",
+	"GroupID": 172,
+	"ConfigID": 300001
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.ShowUI",
+	"Name": "Ui.ChallengeStory.Entrance.ChallengeStoryMainPage",
+	"WaitForExit": true,
+	"OnUIEnter": [
+		{
+			"$type": "RPG.GameCore.TriggerCustomString",
+			"CustomString": {
+				"Value": "showui"
+			}
+		}
+	]
+}</pre>
 {{Dialogue End}}
 
-===Listen to Youci's exciting story===
+===Listen to Youci's exciting story{{subst:void|<!--801710103-->}}===
 {{Mission Description|type=adventure|location=Exalting Sanctum|update|Youci seems very eager to tell you a story. Go listen to it.}}
 {{Dialogue Start}}
+
+:'''Youci:''' ...And just like that, (Trailblazer) was victorious. {{MC|f=Her|m=His}} fame spread throughout the cosmos once again.
+:'''Youci:''' Our story ends here.
+:{{DIcon|Arrow}} Why did that feel like a real fight?
+:'''Yinshu:''' *Sigh*... That's pretty normal. You can tell just by looking at its cage that it's no ordinary bird. Once you hear it tell a story, you have this inexplicable feeling that... that this story really did happen.
+:{{DIcon|Arrow}} Did it really happen?
+::'''Yinshu:''' It never happened, right? Youci's stories are all a bit zany and never sound as though they really happened.
+:{{DIcon|Arrow}} I don't remember that adventure.
+::'''Yinshu:''' It's normal that you don't remember, because it just cut that story out of whole cloth, right? Youci's stories are all a bit zany and never sound as though they really happened.
+:{{DIcon|Arrow}} Now that I think about it &mdash; it happened!
+::'''Yinshu:''' It happened!? Um... I thought it was all made up! Youci's stories are all a bit zany and never sound as though they really happened.
+:'''Youci:''' (Trailblazer), did you like that story?
+:'''Yinshu:''' It's talking with you again...
+:'''Bookshop Customer:''' Is Yinshu here? I'd like to buy a book~
+:'''Yinshu:''' Ah, a customer. Forget it then. You and Youci take your time getting acquainted. I'll get back to work.
+:'''Youci:''' (Trailblazer), I've got many more stories I could tell you.
+:{{DIcon|Arrow}} Why me?
+:'''Youci:''' If all the cosmos were a planet, you would be its largest moon. And your legend would impel the tides in every ocean there is.
 :{{tx}}
 {{Dialogue End}}
 

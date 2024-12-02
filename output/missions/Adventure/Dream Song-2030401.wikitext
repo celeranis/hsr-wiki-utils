@@ -11,7 +11,7 @@ PageTitle=#Dream Song#
 |chapter       = 
 |requirements  = [[Trailblaze Mission]] ''[[And on the Eighth Day]]'' completed
 |summary       = The efforts of the Dreamweavers will not be in vain, and true history should not be forgotten. Those brightly shining dreams will eventually be transmuted into starlight, bringing illumination to everyone.<br />May you find your own nest, and may you compose your own poem.
-|characters    = Trailblazer
+|characters    = ??; Blue Bird; Boss Red; Clockie; Dr. Blues; Lady Vermilion; Sir Whittaker; Trailblazer; Verdant Manager
 |startLocation = [[Penacony]] - [[Dreamflux Reef]]
 |world         = Penacony
 |area          = Dreamflux Reef
@@ -24,12 +24,11 @@ PageTitle=#Dream Song#
 ==Steps==
 # Speak with Dr. Blues
 # Listen to what Clockie has discovered
+# Question Sir Whittaker
 # Ask Dr. Blues for confirmation
 # Return the records
-# Question Sir Whittaker
 # Enter Dr. Blues' Emoscape
 # Speak with Dr. Blues
-# Return the records
 # Go to where the Dreamweavers gather
 
 <!--
@@ -41,60 +40,512 @@ PageTitle=#Dream Song#
 -->
 ==Dialogue==
 {{Stub Dialogue}}
-
-===Speak with Dr. Blues===
+===Speak with Dr. Blues{{subst:void|<!--203040101-->}}===
 {{Mission Description|type=adventure|location=Dreamflux Reef|Dr. Blues, the Origami Bird staying in Dreamflux Reef, seems to be a bit different from the other birds. Go and see what is happening.}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Dr. Blues)
+:'''Dr. Blues:''' Hmm? This hat... Looks like you've found the {{Rubi|treasure|Legacy}} that the Watchmaker left behind.
+:'''Dr. Blues:''' Does this mean that his last wishes are fulfilled?
+:'''Dr. Blues:''' Hmph...
+:'''Dr. Blues:''' This Watchmaker sure is a stubborn one... planning such a gigantic plot and betting it all on someone else. I never thought he'd actually find the perfect ending after going around in such a huge circle.
+:'''Dr. Blues:''' All right, now the Watchmaker's wishes have been fulfilled. That drunken hound can also probably retire with honor...
+:'''Dr. Blues:''' ...And I'm the only bird left in this place again.
+:{{DIcon|Arrow}} You don't intend to leave?
+:'''Dr. Blues:''' Me? I'm an origami bird, don't you get it? The sort that can only appear in dreams.
+:'''Dr. Blues:''' Penacony does not welcome birds that can't tweet, which is why I trusted the Watchmaker's deception and built a new nest here. Later, he dragged a bunch of naysayers here, and this place became Dreamflux Reef.
+:'''Dr. Blues:''' ...To a certain extent, this is a grand haven, specifically sheltering poor souls who could neither fit into the Dreamscape, nor leave the dream.
+:{{DIcon|Arrow}} You built Dreamflux Reef?
+:{{DIcon|Arrow}} Birds can be Dreamweavers too?
+:'''Dr. Blues:''' That's right. Treasure all this, for Penacony will be hard-pressed to produce another Dreamweaver as gifted as me. I...
+:The bird before you suddenly goes mute. It is silent for a couple of seconds, and its demeanor turns aloof.
+:'''Dr. Blues:''' Forget it, it's none of your business.
+:'''Dr. Blues:''' I'm very busy. Go find another unlucky soul to be your guide. Don't let me keep you.
+<pre>{
+	"$type": "RPG.GameCore.AdvCreateGroupEntity",
+	"InstanceIDList": [
+		400002
+	]
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.ActiveVirtualCamera",
+	"AreaName": "LevelArea_P10304_F10304001_G66",
+	"AnchorName": "Anchor1",
+	"IsActive": true,
+	"VCameraDitherMaxDistance": 1,
+	"CenterPosX": -1,
+	"CenterPosY": -1,
+	"DynamicParams": {}
+}</pre>
+:'''Clockie:''' ...Tick-tock! Get over here quick, (Trailblazer)!
+
+;(Unused &mdash; OpenRaid_43322)
+<pre>{
+	"$type": "RPG.GameCore.ShowHeartDialUI",
+	"TargetType": {
+		"$type": "RPG.GameCore.GroupFetchLocalTarget",
+		"Targets": [
+			400001
+		]
+	}
+}</pre>
 {{Dialogue End}}
 
-===Listen to what Clockie has discovered===
+===Listen to what Clockie has discovered{{subst:void|<!--203040102-->}}===
 {{Mission Description|type=adventure|location=Dreamflux Reef|update|Clockie found something odd. Go and listen to what he has to say.}}
 {{Dialogue Start}}
+
+;(Talk to Clockie)
+:'''Clockie:''' Tick-tock, something's wrong with Dr. Blues!
+:'''Clockie:''' It's completely different from when I saw it in Dreamville. It's missing something that an origami bird should have!
+:'''Clockie:''' Not just that, it seems like there's another soul inside that paper body... Maybe Dr. Blues is no ordinary Origami Bird?
+:{{DIcon|Arrow}} You've got a point.
+:{{DIcon|Arrow}} It's hard to say...
+:{{DIcon|Arrow}} I knew it!
+:'''Clockie:''' Tick-tock... If we're to search for Dr. Blues' past, we'll just have to start with the information it provided. A bird capable of building Dreamflux Reef must not be an ordinary bird!
 :{{tx}}
 {{Dialogue End}}
 
-===Ask Dr. Blues for confirmation===
-{{Mission Description|type=adventure|location=Dreamflux Reef|update|That photo is probably closely related to Dr. Blues. Go back to ask him for a confirmation.}}
-{{Dialogue Start}}
-:{{tx}}
-{{Dialogue End}}
-
-===Return the records===
-{{Mission Description|type=adventure|location=Dream's Edge|update|You fixed the records for those Dreamweavers by witnessing Dr. Blues' past. Go tell everything you know to Sir Whittaker.}}
-{{Dialogue Start}}
-:{{tx}}
-{{Dialogue End}}
-
-===Question Sir Whittaker===
+===Question Sir Whittaker{{subst:void|<!--203040107-->}}===
 {{Mission Description|type=adventure|location=Dream's Edge|update|Sir Whittaker might know something related to this photo. Keep asking him about it.}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Sir Whittaker)
+:'''Sir Whittaker:''' Found the info you wanted?
+:{{DIcon|Talk}} About this photo...
+::'''Sir Whittaker:''' Oh... This photo really brings back memories.
+::'''Sir Whittaker:''' It once belonged to Origami Dreamweaver Fischer, who was also my mentor. In his later years, he led us Paperfold University students in compiling a family history of the Nightingales. This photo should have been from that time.
+:;(Return to previous option selection)
+:{{DIcon|Talk}} About the Origami Dreamweavers...
+::'''Sir Whittaker:''' They were students of the first Dreamweaver, Professor Glaux, and legendary Dreamweavers who created the Twelve Hours. What you witness in each Dreamscape is their legacy.
+::'''Sir Whittaker:''' ...Alas, it's a shame that this Dreamscape only has their works engraved, but left their names long forgotten.
+:;(Return to previous option selection)
+:{{DIcon|Talk}} About the Dreamchaser era...
+::'''Sir Whittaker:''' That was a time when countless dreams sprouted. Mr. Fischer once told me of that age...
+::'''Sir Whittaker:''' During that time, Penacony had only just completed the Dreamscape's development. The lineages weren't completely given unto Harmony's embrace yet, and countless opportunities buried in dreams were waiting to be unearthed, resulting in numerous Dreamchasers gathering like moths to a flame, thirsting for fortune and success.
+::'''Sir Whittaker:''' To build a true Planet of Festivities, Professor Glaux &mdash; who was the Nightingale's family head &mdash; began recruiting the most stellar talents across the cosmos, leading them in the exploration of methods to modify the Dreamscape &mdash; what you know as dreamweaving technology.
+::'''Sir Whittaker:''' His four most outstanding students were coined the Origami Dreamweavers. They were architects, but first and foremost, they were great Dreamchasers who conquered the Dreamscape.
+:;(Return to previous option selection)
+:{{DIcon|Arrow}} I'm about done with my questions.
+::'''Sir Whittaker:''' This may just be my speculation, but the original inspiration for those leader-birds in the Clockie cartoons &mdash; they were these Origami Dreamweavers.
+::{{DIcon|Arrow}} Hang on! The numbers don't add up!
+::'''(Trailblazer):''' (Origami birds come in five colors... but there are only four legendary Dreamweavers here! Which one is Dr. Blues exactly?)
+::'''Sir Whittaker:''' About this... I'm not too sure either. If you're interested, you may wish to seek out the truth yourself.
+::'''Sir Whittaker:''' Time will cause the colors of past tales to fade, buried by extravagance and embellishment... Young one, I'm very glad that you still remember them.
+::'''Sir Whittaker:''' I'll lend you this photograph for now. I hope you can unearth the history behind this matter.
 {{Dialogue End}}
 
-===Enter Dr. Blues' Emoscape===
-{{Mission Description|type=adventure|location=Dreamflux Reef|update|Enter Dr. Blues' Emoscape and restore the lost memories.}}
+===Ask Dr. Blues for confirmation{{subst:void|<!--203040104-->}}===
+{{Mission Description|type=adventure|location=Dreamflux Reef|update|That photo is probably closely related to Dr. Blues. Go back to ask him for a confirmation.}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Dr. Blues)
+:'''Dr. Blues:''' I told you, I'm super busy... How can I help you? Be quick about it.
+:{{DIcon|Arrow}} I understand everything!
+:{{DIcon|Arrow}} You are a Nightingale Dreamweaver?
+:'''Dr. Blues:''' Who I am is none of your business. If you've got time to spare, you might as well go look for Dreamflux Reef's Origami Birds.
+:{{DIcon|Arrow}} (Show Dr. Blues the faded photo)
+:'''Dr. Blues:''' Where'd you get this photograph from? I already told you I'm very busy, I...
+:'''Dr. Blues:''' ...This is...
+:The bird is dumbfounded. It is the first time you see the definition of "bewilderment" written all over that origami face.
+:'''Dr. Blues:''' This is my photo? No... It seems different...
+:{{DIcon|Arrow}} You're not in it?
+::'''Dr. Blues:''' This isn't my photo, but I recognize, no, I'm very familiar with these few...
+:{{DIcon|Arrow}} You know these Dreamweavers?
+::'''Dr. Blues:''' I should know them, or rather, I'm very familiar...
+:{{DIcon|Arrow}} I've even found some information from the past.
+:'''Dr. Blues:''' ''The Dreamweaver Archives''...
+:'''Dr. Blues:''' ...What's all this nonsense about! The true Nightingales weren't like this at all, we...
+:'''Dr. Blues:''' W&mdash;We...
+:{{DIcon|Arrow}} What were you like?
+:'''Dr. Blues:''' ...I don't remember.
+:'''Dr. Blues:''' Oh no, I've been a bird for so long. It's as if I've forgotten something important...
+:{{DIcon|Arrow}} Well, then, you should let me help you!
+:'''Dr. Blues:''' ...
+:'''Dr. Blues:''' No. I've seen what Clockie does... Letting someone into your brain? That's disgusting. No.
+:The bird regains its *sly* expression &mdash; honestly, it's the most unpleasant cartoon character you've ever seen, hands down.
+:'''(Trailblazer):''' (If a good cop won't work... guess I'll have to go bad cop then!)
+:{{DIcon|Arrow}} Clockwork, forced activation!
+:<pre>{
+	"$type": "RPG.GameCore.SetPerformanceResult",
+	"Value": 1
+}</pre>
+::'''Dr. Blues:''' ...Wait, hey, what're you doing!?
+:{{DIcon|Exit}} We need to plan this out carefully...
+
+
+;(Talk to Sir Whittaker)
+:'''Sir Whittaker:''' Hello, young Dreamchaser. You have something else to ask?
+:{{DIcon|Talk}} About this photo...
+::'''Sir Whittaker:''' Oh... This photo really brings back memories.
+::'''Sir Whittaker:''' It once belonged to Origami Dreamweaver Fischer, who was also my mentor. In his later years, he led us Paperfold University students in compiling a family history of the Nightingales. This photo should have been from that time.
+:;(Return to previous option selection)
+:{{DIcon|Talk}} About the Origami Dreamweavers...
+::'''Sir Whittaker:''' They were students of the first Dreamweaver, Professor Glaux, and legendary Dreamweavers who created the Twelve Hours. What you witness in each Dreamscape is their legacy.
+::'''Sir Whittaker:''' ...Alas, it's a shame that this Dreamscape only has their works engraved, but left their names long forgotten.
+:;(Return to previous option selection)
+:{{DIcon|Talk}} About the Dreamchaser era...
+::'''Sir Whittaker:''' That was a time when countless dreams sprouted. Mr. Fischer once told me of that age...
+::'''Sir Whittaker:''' During that time, Penacony had only just completed the Dreamscape's development. The lineages weren't completely given unto Harmony's embrace yet, and countless opportunities buried in dreams were waiting to be unearthed, resulting in numerous Dreamchasers gathering like moths to a flame, thirsting for fortune and success.
+::'''Sir Whittaker:''' To build a true Planet of Festivities, Professor Glaux &mdash; who was the Nightingale's family head &mdash; began recruiting the most stellar talents across the cosmos, leading them in the exploration of methods to modify the Dreamscape &mdash; what you know as dreamweaving technology.
+::'''Sir Whittaker:''' His four most outstanding students were coined the Origami Dreamweavers. They were architects, but first and foremost, they were great Dreamchasers who conquered the Dreamscape.
+:;(Return to previous option selection)
+:{{DIcon|Exit}} I have nothing else to ask.
+::'''Sir Whittaker:''' Time will cause the colors of past tales to fade, buried by extravagance and embellishment... Young one, I'm very glad that you still remember them.
+::'''Sir Whittaker:''' I hope you can unearth the history behind this matter.
 {{Dialogue End}}
 
-===Speak with Dr. Blues===
-{{Mission Description|type=adventure|location=Dreamflux Reef|update|Dr. Blues has recovered its memories. It might now have some new ideas.}}
-{{Dialogue Start}}
-:{{tx}}
-{{Mission Description|type=adventure|location=Dreamflux Reef|update|Dr. Blues has recovered its memories. Does it... still remember Orla?}}
-{{Dialogue End}}
-
-===Return the records===
+===Return the records{{subst:void|<!--203040106-->}}===
 {{Mission Description|type=adventure|location=Dream's Edge|update|You fixed the records for those Dreamweavers by witnessing Dr. Blues' past. Go tell everything you know to Sir Whittaker.}}
 {{Dialogue Start}}
+
+;(Talk to Sir Whittaker)
+:{{tx}}
+:'''Sir Whittaker:''' We meet again, {{MC|f=madam|m=sir}}.
+:{{DIcon|Arrow}} I'm here to return the file.
+<pre>{
+	"$type": "RPG.GameCore.AddFinishMissionData_ConsumeItem",
+	"SubmissionID": 203040106,
+	"SimpleTalk": {
+		"TextSpeed": 20,
+		"ProtectTime": 0.8
+	},
+	"OnSubmitConfirm": [
+		{
+			"$type": "RPG.GameCore.SetPerformanceResult",
+			"Value": 1
+		},
+		{
+			"$type": "RPG.GameCore.PlayTimeline",
+			"TimelineName": "Story/Discussion/Mission/2030401/DS20304014102.playable",
+			"Type": "Discussion"
+		},
+		{
+			"$type": "RPG.GameCore.PlayOptionTalk",
+			"OptionList": [
+				{
+					"TalkSentenceID": 230414105,
+					"OptionIconType": "ChatContinueIcon",
+					"TriggerCustomString": "TalkSentence_230414106"
+				}
+			]
+		}
+	],
+	"OnSubmitCancel": [
+		{
+			"$type": "RPG.GameCore.TriggerCustomString",
+			"CustomString": {
+				"Value": "EndPerformance"
+			}
+		}
+	]
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.PerformanceEndSeq",
+	"Cases": [
+		{
+			"Case": 1,
+			"OnSuccess": [
+				{
+					"$type": "RPG.GameCore.ClientFinishMission",
+					"SubmissionID": 203040106
+				}
+			]
+		}
+	]
+}</pre>
+;(Unused &mdash; TalkSentence_230414106)
+:----
+::'''Sir Whittaker:''' We meet again, {{MC|f=madam|m=sir}}.
+::I'm here to return the file.
+::'''Sir Whittaker:''' You're back faster than I thought. Is the investigation over already?
+::Yes, I'm done with the investigation.
+::You tell Sir Whittaker about the Dreamchaser era that belonged to the Dreamweavers &mdash; and the truest form of those people, which was unrecorded in history.
+::'''Sir Whittaker:''' I see... Mr. Fischer, the former family head, did not tell me about this past.
+::'''Sir Whittaker:''' I thank you for this record. I will keep it secure.
+::{{DIcon|Arrow}} Will you publish this record?
+::'''Sir Whittaker:''' I'd really like to say yes, but alas, my political stance requires that I be prudent about my actions. I may not be able to publicize the parts that affect The Family's stability, but I promise that the Dreamscape will remember the names of those Dreamweavers.
+::{{DIcon|Arrow}} ...
+::{{DIcon|Arrow}} I guess it will be a long wait...
+::'''Sir Whittaker:''' A pity that, even in the Dreamscape, Penacony is unable to fulfill everyone's wishes.
+::{{tx}}
+
+;(Unused &mdash; EndPerformance)
+
+
+;(Talk to Sir Whittaker)
+:{{tx}}
+:'''Sir Whittaker:''' We meet again, {{MC|f=madam|m=sir}}.
+:{{DIcon|Arrow}} I've come to return something.
+<pre>{
+	"$type": "RPG.GameCore.AddFinishMissionData_ConsumeItem",
+	"SubmissionID": 203040115,
+	"SimpleTalk": {
+		"TextSpeed": 20,
+		"ProtectTime": 0.8
+	},
+	"OnSubmitConfirm": [
+		{
+			"$type": "RPG.GameCore.SetPerformanceResult",
+			"Value": 1
+		},
+		{
+			"$type": "RPG.GameCore.PlayTimeline",
+			"TimelineName": "Story/Discussion/Mission/2030401/DS20304013202.playable",
+			"Type": "Discussion",
+			"Parameters": []
+		},
+		{
+			"$type": "RPG.GameCore.PlayOptionTalk",
+			"OptionList": [
+				{
+					"TalkSentenceID": 230413205,
+					"OptionIconType": "ChatContinueIcon",
+					"TriggerCustomString": "TalkSentence_230413207"
+				},
+				{
+					"TalkSentenceID": 230413206,
+					"OptionIconType": "ChatContinueIcon",
+					"TriggerCustomString": "TalkSentence_230413207"
+				}
+			]
+		}
+	],
+	"OnSubmitCancel": [
+		{
+			"$type": "RPG.GameCore.TriggerCustomString",
+			"CustomString": {
+				"Value": "EndPerformance"
+			}
+		}
+	]
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.PerformanceEndSeq",
+	"Cases": [
+		{
+			"Case": 1,
+			"OnSuccess": [
+				{
+					"$type": "RPG.GameCore.ClientFinishMission",
+					"SubmissionID": 203040115
+				}
+			]
+		}
+	]
+}</pre>
+;(Unused &mdash; TalkSentence_230413207)
+:'''Sir Whittaker:''' Hehe, from your expression, I can tell this isn't going to be a light-hearted story.
+::{{tx}}
+
+;(Unused &mdash; EndPerformance)
+
+
+;(Talk to Dr. Blues)
+;(If {{cx}}{{subst:void|<!--{"$type":"RPG.GameCore.ByCompareQuestGetReward","QuestID":{"fixedValue":{"Value":2200211}},"Inverse":true,"TaskEnabled":true,"IsClientOnly":true}-->}} and {{cx}}{{subst:void|<!--{"$type":"RPG.GameCore.ByCompareQuestGetReward","QuestID":{"fixedValue":{"Value":2200210}},"Inverse":true,"TaskEnabled":true,"IsClientOnly":true}-->}})
+::'''Dr. Blues:''' Hmm? Looks like you found all the birds.
+::'''Dr. Blues:''' Excellent, we can wrap up early. Don't forget to take this gift, and don't let me keep you.
+:<pre>{
+	"$type": "RPG.GameCore.QuestGetReward",
+	"QuestIDList": [
+		{
+			"fixedValue": {
+				"Value": 2200210
+			}
+		},
+		{
+			"fixedValue": {
+				"Value": 2200211
+			}
+		}
+	]
+}</pre>
+;(If {{cx}}{{subst:void|<!--{"$type":"RPG.GameCore.ByCompareQuestGetReward","QuestID":{"fixedValue":{"Value":2200211}},"Inverse":true,"TaskEnabled":true,"IsClientOnly":true}-->}} and {{cx}}{{subst:void|<!--{"$type":"RPG.GameCore.ByCompareQuestGetReward","QuestID":{"fixedValue":{"Value":2200210}},"Inverse":true,"TaskEnabled":true,"IsClientOnly":true}-->}})
+:;(Return to previous option selection)
+{{Dialogue End}}
+
+===Enter Dr. Blues' Emoscape{{subst:void|<!--203040108-->}}===
+{{Mission Description|type=adventure|location=Dreamflux Reef|update|Enter Dr. Blues' Emoscape and restore the lost memories.}}
+{{Dialogue Start}}
+
+;(Talk to Dr. Blues)
+:'''Dr. Blues:''' ...
+:'''Dr. Blues:''' No. I've seen what Clockie does... Letting someone into your brain? That's disgusting. No.
+:The bird regains its *sly* expression &mdash; honestly, it's the most unpleasant cartoon character you've ever seen, hands down.
+:'''(Trailblazer):''' (If a good cop won't work... guess I'll have to go bad cop then!)
+:{{DIcon|Arrow}} Clockwork, forced activation!
+:<pre>{
+	"$type": "RPG.GameCore.SetPerformanceResult",
+	"Value": 1
+}</pre>
+::'''Dr. Blues:''' ...Wait, hey, what're you doing!?
+:{{DIcon|Exit}} We need to plan this out carefully...
+{{Dialogue End}}
+
+===Speak with Dr. Blues{{subst:void|<!--203040113-->}}===
+{{Mission Description|type=adventure|location=Dreamflux Reef|update|Dr. Blues has recovered its memories. It might now have some new ideas.}}
+{{Dialogue Start}}
+
+;(Talk to Dr. Blues)
+:{{tx}}
+:'''Blue Bird:''' ...
+:{{DIcon|Arrow}} (Remain silent)
+::'''Blue Bird:''' ...
+::{{DIcon|Arrow}} (Continue remaining silent)
+:::'''Blue Bird:''' ...
+:::{{DIcon|Arrow}} (Continue to remain silent!)
+:::'''Blue Bird:''' ...Hey.
+::{{DIcon|Arrow}} Orla?
+:::'''Dr. Blues:''' ...I heard you the first time. This name feels weird coming out of your mouth... Call me Dr. Blues.
+:::'''Dr. Blues:''' Anyways &mdash; The truth was found, and the dream was broken. Happy now?
+:::{{DIcon|Arrow}} Happy.
+:::{{DIcon|Arrow}} Feels like it needs something more...
+::::'''Dr. Blues:''' Thank you, and don't do it again. This old bird can't take it.
+:::{{DIcon|Arrow}} I'm happy to help. You're welcome.
+::::'''Dr. Blues:''' I wasn't complimenting you! *sigh* ...Why are you exactly like the Watchmaker? Are all you Nameless cut from the same cloth?
+:::'''Dr. Blues:''' Forget it. Let's leave it be.
+:::{{DIcon|Arrow}} Do you want to go up and take a look?
+:::'''Dr. Blues:''' Maybe next time. Thanks to a certain Nameless, I've just had a huge dream. I'll have to take a break.
+:::'''Dr. Blues:''' ...No matter what, it was great to be able to see them again.
+:::'''Dr. Blues:''' Thank you, (Trailblazer).
+:::{{DIcon|Arrow}} You're welcome.
+:::{{DIcon|Arrow}} I can't hear you. Say it louder!
+::::'''Dr. Blues:''' ...Hey, don't push your luck!
+:::'''??:''' &mdash; Tweet, tweet tweet! Found it!
+:::{{DIcon|Arrow}} That's right, tweet.
+:::{{DIcon|Arrow}} Dr. Blues misses you all too, tweet.
+::::'''Dr. Blues:''' Hey, there's no need for you to talk...!
+:::'''Boss Red:''' Now that we're finally together, we should record this occasion, tweet!
+:::'''Verdant Manager:''' This way, Dr. Blues can always see our faces, tweet!
+:::'''Lady Vermilion:''' Kind guest, could you help us take a group photo, tweet tweet?
+:::{{DIcon|Arrow}} No problem!
+:::{{DIcon|Arrow}} Leave it to me.
+:::{{DIcon|Arrow}} (Press the shutter)
+:::Who says this doesn't count as some sort of *perfect ending*?
+:::{{tx}}
+:{{DIcon|Arrow}} Orla?
+::'''Dr. Blues:''' ...I heard you the first time. This name feels weird coming out of your mouth... Call me Dr. Blues.
+::'''Dr. Blues:''' Anyways &mdash; The truth was found, and the dream was broken. Happy now?
+::{{DIcon|Arrow}} Happy.
+::{{DIcon|Arrow}} Feels like it needs something more...
+:::'''Dr. Blues:''' Thank you, and don't do it again. This old bird can't take it.
+::{{DIcon|Arrow}} I'm happy to help. You're welcome.
+:::'''Dr. Blues:''' I wasn't complimenting you! *sigh* ...Why are you exactly like the Watchmaker? Are all you Nameless cut from the same cloth?
+::'''Dr. Blues:''' Forget it. Let's leave it be.
+::{{DIcon|Arrow}} Do you want to go up and take a look?
+::'''Dr. Blues:''' Maybe next time. Thanks to a certain Nameless, I've just had a huge dream. I'll have to take a break.
+::'''Dr. Blues:''' ...No matter what, it was great to be able to see them again.
+::'''Dr. Blues:''' Thank you, (Trailblazer).
+::{{DIcon|Arrow}} You're welcome.
+::{{DIcon|Arrow}} I can't hear you. Say it louder!
+:::'''Dr. Blues:''' ...Hey, don't push your luck!
+::'''??:''' &mdash; Tweet, tweet tweet! Found it!
+::{{DIcon|Arrow}} That's right, tweet.
+::{{DIcon|Arrow}} Dr. Blues misses you all too, tweet.
+:::'''Dr. Blues:''' Hey, there's no need for you to talk...!
+::'''Boss Red:''' Now that we're finally together, we should record this occasion, tweet!
+::'''Verdant Manager:''' This way, Dr. Blues can always see our faces, tweet!
+::'''Lady Vermilion:''' Kind guest, could you help us take a group photo, tweet tweet?
+::{{DIcon|Arrow}} No problem!
+::{{DIcon|Arrow}} Leave it to me.
+::{{DIcon|Arrow}} (Press the shutter)
+::Who says this doesn't count as some sort of *perfect ending*?
+::{{tx}}
+:{{DIcon|Arrow}} Orla?
+:'''Dr. Blues:''' ...I heard you the first time. This name feels weird coming out of your mouth... Call me Dr. Blues.
+:'''Dr. Blues:''' Anyways &mdash; The truth was found, and the dream was broken. Happy now?
+:{{DIcon|Arrow}} Happy.
+:{{DIcon|Arrow}} Feels like it needs something more...
+::'''Dr. Blues:''' Thank you, and don't do it again. This old bird can't take it.
+:{{DIcon|Arrow}} I'm happy to help. You're welcome.
+::'''Dr. Blues:''' I wasn't complimenting you! *sigh* ...Why are you exactly like the Watchmaker? Are all you Nameless cut from the same cloth?
+:'''Dr. Blues:''' Forget it. Let's leave it be.
+:{{DIcon|Arrow}} Do you want to go up and take a look?
+:'''Dr. Blues:''' Maybe next time. Thanks to a certain Nameless, I've just had a huge dream. I'll have to take a break.
+:'''Dr. Blues:''' ...No matter what, it was great to be able to see them again.
+:'''Dr. Blues:''' Thank you, (Trailblazer).
+:{{DIcon|Arrow}} You're welcome.
+:{{DIcon|Arrow}} I can't hear you. Say it louder!
+::'''Dr. Blues:''' ...Hey, don't push your luck!
+:'''??:''' &mdash; Tweet, tweet tweet! Found it!
+:{{DIcon|Arrow}} That's right, tweet.
+:{{DIcon|Arrow}} Dr. Blues misses you all too, tweet.
+::'''Dr. Blues:''' Hey, there's no need for you to talk...!
+:'''Boss Red:''' Now that we're finally together, we should record this occasion, tweet!
+:'''Verdant Manager:''' This way, Dr. Blues can always see our faces, tweet!
+:'''Lady Vermilion:''' Kind guest, could you help us take a group photo, tweet tweet?
+:{{DIcon|Arrow}} No problem!
+:{{DIcon|Arrow}} Leave it to me.
+:{{DIcon|Arrow}} (Press the shutter)
+:Who says this doesn't count as some sort of *perfect ending*?
+:{{tx}}
+{{Mission Description|type=adventure|location=Dreamflux Reef|update|Dr. Blues has recovered its memories. Does it... still remember Orla?}}
+
+;(Talk to Dr. Blues)
+:{{tx}}
+:'''Blue Bird:''' ...
+:{{DIcon|Arrow}} Orla?
+:'''Blue Bird:''' ...Orla? Who?
+:'''Dr. Blues:''' Here comes another outsider that has never seen an origami bird, tweet. I am Dr. Blues from the Dreamflux Reef, tweet.
+:{{DIcon|Arrow}} ...
+:{{DIcon|Arrow}} Leave it to me.
+:{{DIcon|Arrow}} (Press the shutter)
+:Perhaps... to Dr. Blues, this is what family is. It really did find a home.
 :{{tx}}
 {{Dialogue End}}
 
-===Go to where the Dreamweavers gather===
+===Go to where the Dreamweavers gather{{subst:void|<!--203040117-->}}===
 {{Mission Description|type=adventure|location=Dream's Edge|update|Dr. Blues seems to be related to Penacony's Dreamweavers. Go to Dream's Edge and ask around people who might know about this.}}
 {{Dialogue Start}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
 :{{tx}}
+----
+:{{tx}}
+:{{DIcon|Talk}} Esteemed head?
+::'''Sir Whittaker:''' Please dispense with the formalities. Authority and power blind the soul. When it's after work hours, I much prefer people address me as Sir Whittaker.
+::{{tx}}
+:;(Return to previous option selection)
+:{{DIcon|Talk}} I wish to learn how to weave dreams too.
+::'''Sir Whittaker:''' Of course you may. The Family has established the Paperfold University in the Moment of Sol. When classes start, I'll be sure to welcome you to sit in on our dreamweaving course.
+::{{tx}}
+:;(Return to previous option selection)
+:{{DIcon|Arrow}} Can birds be Dreamweavers?
+::'''Sir Whittaker:''' Birds... Heh-heh, you mean the cartoons that the Watchmaker created.
+::'''Sir Whittaker:''' It's not a bad metaphor at all. The Dreamweavers in this Dreamscape are really all birds. Our Nightingale symbol &mdash; is it not a bird that sings at night?
+::'''Sir Whittaker:''' In this Dreamscape, birds are a symbol of Dreamweavers. This sentiment has been expressed in objects of all sorts, and shown up in some pieces of artistry.
+::{{DIcon|Arrow}} Such as origami birds?
+::'''Sir Whittaker:''' That's right. Art and reality always complement each other. According to what I know, the origami birds in ''Clockie&ast;''s cartoons symbolize the Dreamweavers that gave their all to build the Dreamscapes.
+::{{tx}}
+:<pre>{
+	"$type": "RPG.GameCore.ShowReading",
+	"BookID": {
+		"fixedValue": {
+			"Value": 190623
+		}
+	},
+	"WaitForExit": true
+}</pre>
+::{{tx}}
+<pre>{
+	"$type": "RPG.GameCore.PerformanceEndSeq",
+	"BeforeCases": [
+		{
+			"$type": "RPG.GameCore.SwitchCharacterAnchorV2",
+			"SwitchCharacterAnchorConfig": {
+				"IsLocalPlayer": true,
+				"CharacterUniqueName": "LocalPlayer",
+				"AreaName": {
+					"Value": "LevelArea_P20313_F20313001_G254"
+				},
+				"AnchorName": {
+					"Value": "Anchor1"
+				}
+			}
+		}
+	]
+}</pre>
 {{Dialogue End}}
 
 ==Other Languages==

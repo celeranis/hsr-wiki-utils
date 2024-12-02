@@ -11,7 +11,7 @@ PageTitle=#It All Started With a Man and a Dog (I)#
 |chapter       = 
 |requirements  = {{subst:void|<!--Unknown: {"Type":"Manual"}-->}}
 |summary       = <!--official mission summary from Fate's Atlas-->
-|characters    = Trailblazer
+|characters    = Peppy; Trailblazer
 |startLocation = [[Herta Space Station]] - [[Storage Zone]]
 |world         = Herta Space Station
 |area          = Storage Zone
@@ -25,7 +25,6 @@ PageTitle=#It All Started With a Man and a Dog (I)#
 # Talk to Peppy
 # Follow Peppy and keep moving
 # Control Peppy to search for clues about Curios
-# Follow Peppy and keep moving
 # (Optional) Find Ruan Mei's creation that is asking for help
 # Control Peppy to search for clues about Curios
 
@@ -39,40 +38,94 @@ PageTitle=#It All Started With a Man and a Dog (I)#
 ==Dialogue==
 {{Stub Dialogue}}
 
-===Talk to Peppy===
+===Talk to Peppy{{subst:void|<!--407001101-->}}===
 {{Mission Description|type=adventure|location=Storage Zone|Peppy's coordinates indicate that it is stuck in the current area. Not knowing what is happening, Asta asks you to meet up with Peppy.}}
 {{Dialogue Start}}
-:{{tx}}
+
+
 {{Dialogue End}}
 
-===Follow Peppy and keep moving===
+===Follow Peppy and keep moving{{subst:void|<!--407001102-->}}===
 {{Mission Description|type=adventure|location=Storage Zone|update|Thanks to your help, Peppy is out of danger. You have decided to follow its lead and explore the area together...}}
 {{Dialogue Start}}
-:{{tx}}
+<pre>{
+	"$type": "RPG.GameCore.PerformanceExtendEndBlack",
+	"ExtendTime": 0.5
+}</pre>
+----
+:'''Peppy:''' Woof woof? Woof woof woof!
+:Peppy indicates for you to touch somewhere on its backpack. You press a button...
+:You hear a faint electronic voice: The Synesthesia Beacon has been activated.
+:'''Peppy:''' (Woof, can you hear me? Woof?)
+:{{DIcon|Arrow}} You're... talking!
+::'''Peppy:''' (Is that not normal?)
+:{{DIcon|Arrow}} Am I hearing things?
+::'''Peppy:''' (Stop being stupid. Peppy is talking to you!)
+:After activating the beacon, you realize that this could be the "surprise" that Asta mentioned.
+:'''Peppy:''' (Stop gawking!)
+:{{DIcon|Arrow}} So what are you doing here?
+::'''Peppy:''' (Brave Peppy is hot on the trail!)
+:{{DIcon|Arrow}} Asta is really worried about you...
+::'''Peppy:''' (Peppy knows, and that's why Peppy is investigating hard, to reduce the burden on Miss Asta!)
+:'''Peppy:''' (There's some problem with the signal &mdash; I can't contact Miss Asta.)
+:'''Peppy:''' (I smelled something strange that had the lingering whiff of the Joy Filtration Set. I didn't want to tip anybody off, so I decided to stay guard here.)
+:'''Peppy:''' (I'll lead the way. Let's go!)
+----
 {{Dialogue End}}
 
-===Control Peppy to search for clues about Curios===
+===Control Peppy to search for clues about Curios{{subst:void|<!--407001103-->}}===
 {{Mission Description|type=adventure|location=Storage Zone|update|Asta has developed an incredible synchronization feature for Peppy... Now you and Peppy can venture out in a new form and continue to track down the lost Curio.}}
 {{Dialogue Start}}
-:{{tx}}
+
+
+
+;(If {{cx}}{{subst:void|<!--{"$type":"RPG.GameCore.ByLocalPlayerIsFakeAvatar"}-->}})
+<pre>{
+	"$type": "RPG.GameCore.PlayerRemoteControlOtherEntity",
+	"SpecialNPCID": 16001,
+	"ForcePositionAndRotation": true,
+	"LevelAreaKey": {
+		"Custom": true,
+		"Key": "Anchor1"
+	}
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.SetHudTemplate",
+	"TemplateID": 1014,
+	"EnableTemplate": true
+}</pre>
 {{Dialogue End}}
 
-===Follow Peppy and keep moving===
-{{Mission Description|type=adventure|location=Storage Zone|update|Thanks to your help, Peppy is out of danger. You have decided to follow its lead and explore the area together...}}
-{{Dialogue Start}}
-:{{tx}}
-{{Dialogue End}}
-
-===(Optional) Find Ruan Mei's creation that is asking for help===
+===(Optional) Find Ruan Mei's creation that is asking for help{{subst:void|<!--407001107-->}}===
 {{Mission Description|type=adventure|location=Storage Zone|update|You hear a nearby distress call. It seems that more than one Ruan Mei's creation is wandering in this section. If possible, it's better to go and help them.}}
 {{Dialogue Start}}
-:{{tx}}
+
+
 {{Dialogue End}}
 
-===Control Peppy to search for clues about Curios===
+===Control Peppy to search for clues about Curios{{subst:void|<!--407001106-->}}===
 {{Mission Description|type=adventure|location=Storage Zone|update|Asta has developed an incredible synchronization feature for Peppy... Now you and Peppy can venture out in a new form and continue to track down the lost Curio.}}
 {{Dialogue Start}}
-:{{tx}}
+<pre>{
+	"$type": "RPG.GameCore.PerformanceExtendEndBlack",
+	"ExtendTime": 0.5
+}</pre>
+----
+:'''Peppy:''' (Woof?)
+:{{DIcon|Arrow}} Do you want to go on?
+:'''Peppy:''' (Let me ask Miss Asta about her opinion. I have to go back and inform her.)
+:'''Peppy:''' (The Curio has been eaten, and this is big news... I have to report this to Miss Asta.)
+:'''Peppy:''' (The investigation of the Curio has come to an end. What do you plan to do next?)
+:'''Peppy:''' (There is something wrong with the facilities in this zone. I am worried that something might happen... Come! Let me bring you back.)
+:{{DIcon|Arrow}} Let's go.
+:'''Peppy:''' (Detective Peppy &mdash; hold on! Almost forgot to desynchronize!)
+:'''Peppy:''' Woof woof!
+:{{Black Screen|Peppy desynchronized.}}
+<pre>{
+	"$type": "RPG.GameCore.PlayerRemoteControlOtherEntity",
+	"SpecialNPCID": 16001,
+	"IsCancel": true
+}</pre>
 {{Dialogue End}}
 
 ==Other Languages==

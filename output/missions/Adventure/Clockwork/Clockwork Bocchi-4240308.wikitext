@@ -11,7 +11,7 @@ PageTitle=#Clockwork: Bocchi#
 |chapter       = Clockwork
 |requirements  = [[Trailblaze Mission]] ''[[Gentleness, the Name of Nocturne]]'' completed
 |summary       = <!--official mission summary from Fate's Atlas-->
-|characters    = Trailblazer
+|characters    = Feinman; Trailblazer
 |startLocation = [[Penacony]] - [[Golden Hour]]
 |world         = Penacony
 |area          = Golden Hour
@@ -36,27 +36,193 @@ PageTitle=#Clockwork: Bocchi#
 -->
 ==Dialogue==
 {{Stub Dialogue}}
+
+;(Obtain {{Item|''Project: Scarab''|20|x=1|text=''Project: Scarab''}})
 {{Dialogue End}}
 
-===Talk to IPC workers around Feinman and find some suitable topics.===
+===Talk to IPC workers around Feinman and find some suitable topics.{{subst:void|<!--424030803-->}}===
 {{Mission Description|type=adventure|location=Golden Hour|update|Tick... tock! Quick, Adjust the hands... Tick, tock!<br />People's minds await your exploration. Help them regain their true selves!}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Obtain {{Item|Employees' Idle Chatter|20|x=1}})
+
+;(Unused &mdash; showtoast265)
+<pre>{
+	"$type": "RPG.GameCore.ShowHeartDialToast",
+	"StepType": "Normal",
+	"TargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvNpcEx",
+		"FetchType": "SingleNpcByNpcID",
+		"SingleNpcID": {
+			"GroupID": {
+				"IsDynamic": false,
+				"FixedValue": {
+					"Value": 266
+				}
+			},
+			"GroupNpcID": {
+				"IsDynamic": false,
+				"FixedValue": {
+					"Value": 400001
+				}
+			}
+		}
+	}
+}</pre>
+
+
+;(Talk to Feinman)
+:'''(Trailblazer):''' Before I start, let's see what "topics" I can talk about.
+::{{DIcon|Talk}} Employees' chitchat?
+:::'''(Trailblazer):''' Bocchi's co-workers seem to have a grudge against him because they are forced to work overtime. Feinman seems to have something to do with this.
+::;(Return to previous option selection)
+::{{DIcon|Talk}} The TV news?
+:::'''(Trailblazer):''' A news article about a swindler being caught. I'm writing this down, although I don't know how Bocchi can be related to the case.
+::;(Return to previous option selection)
+::{{DIcon|Talk}} ''Project: Scarab''?
+:::'''(Trailblazer):''' Bocchi's "Precious Proposal." You're uncertain whether it'll see any use.
+::;(Return to previous option selection)
+::{{DIcon|Arrow}} I've gone through everything.
+:::'''(Trailblazer):''' Ready, go!
+::----
+::'''Feinman:''' ...Um, is there anything I can do for you?
+::{{DIcon|Arrow}} Are you here alone? How about grabbing a drink together?
+::<pre>{
+	"$type": "RPG.GameCore.TriggerBlendShapesEmotion",
+	"TargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvNpcEx",
+		"FetchType": "SingleNpcByNpcID",
+		"SingleNpcID": {
+			"GroupID": {
+				"fixedValue": {
+					"Value": 269
+				}
+			},
+			"GroupNpcID": {
+				"fixedValue": {
+					"Value": 400001
+				}
+			}
+		}
+	},
+	"EmotionName": "Angry01",
+	"TransitTime": 0.2
+}</pre>
+:::'''Feinman:''' Weren't you eavesdropping on my colleagues' conversation just now?
+::{{DIcon|Arrow}} I overheard something when your colleagues were talking just now...
+::<pre>{
+	"$type": "RPG.GameCore.TriggerBlendShapesEmotion",
+	"TargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvNpcEx",
+		"FetchType": "SingleNpcByNpcID",
+		"SingleNpcID": {
+			"GroupID": {
+				"fixedValue": {
+					"Value": 269
+				}
+			},
+			"GroupNpcID": {
+				"fixedValue": {
+					"Value": 400001
+				}
+			}
+		}
+	},
+	"EmotionName": "Angry01",
+	"TransitTime": 0.2
+}</pre>
+:::'''Feinman:''' Overheard? Hmph...
+::'''Feinman:''' Just cut the nonsense and stop wasting my time. What do you want from me?
+::{{DIcon|Arrow}} Um... About Bocchi...
+:<pre>{
+	"$type": "RPG.GameCore.TriggerBlendShapesEmotion",
+	"TargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvNpcEx",
+		"FetchType": "SingleNpcByNpcID",
+		"SingleNpcID": {
+			"GroupID": {
+				"fixedValue": {
+					"Value": 269
+				}
+			},
+			"GroupNpcID": {
+				"fixedValue": {
+					"Value": 400001
+				}
+			}
+		}
+	},
+	"EmotionName": "Close02",
+	"TransitTime": 0.2
+}</pre>
+::'''Feinman:''' Let me guess... Did he send you here to trick me into saying things he can use against me in the future?
+::'''Feinman:''' Youngsters these days... Tsk... I already know how he frames me.
+::----
+:'''Feinman:''' Well, I hate pointless overtime...
+;(Unused &mdash; TalkSentence_413081007)
+:'''(Trailblazer):''' Didn't you? Those guys over there told me that Bocchi and you weren't on good terms.
+::{{tx}}
+:<pre>{
+	"$type": "RPG.GameCore.DebateReturnTestimony"
+}</pre>
+
+;(Unused &mdash; TalkSentence_413081011)
+:'''Feinman:''' That's it? Those things just show that he's harboring a one-sided grudge against me.
+::{{tx}}
+:<pre>{
+	"$type": "RPG.GameCore.DebateReturnTestimony"
+}</pre>
+
+;(Unused &mdash; TalkSentence_413081015)
+:'''(Trailblazer):''' Didn't you badmouth Bocchi so that you could take credit for his work?
+::{{tx}}
+:<pre>{
+	"$type": "RPG.GameCore.DebateReturnTestimony"
+}</pre>
+
+;(Unused &mdash; TalkSentence_413081018)
+:'''(Trailblazer):''' Scam? That news program earlier...
+::{{tx}}
+:<pre>{
+	"$type": "RPG.GameCore.DebateReturnTestimony"
+}</pre>
+
+;(Unused &mdash; TalkSentence_413081021)
+:'''(Trailblazer):''' But Bocchi said that you wanted to take credit for his work by oppressing and throwing mud at him.
+::{{tx}}
+:<pre>{
+	"$type": "RPG.GameCore.DebateReturnTestimony"
+}</pre>
+
+;(Unused &mdash; TalkSentence_413081027)
+:'''Feinman:''' Oof, this again... Honestly, I really don't want to waste any more time on this kind of meaningless garbage.
+::{{tx}}
+:<pre>{
+	"$type": "RPG.GameCore.DebateShowToast",
+	"ToastType": "Success"
+}</pre>
+
+;(Unused &mdash; TalkSentence_413081032)
+:'''(Trailblazer):''' Take a look at this.
+::{{tx}}
+:<pre>{
+	"$type": "RPG.GameCore.DebateReturnTestimony"
+}</pre>
 {{Dialogue End}}
 
-===Gather information from the news on the bar's TV.===
+===Gather information from the news on the bar's TV.{{subst:void|<!--424030804-->}}===
 {{Dialogue Start}}
-:{{tx}}
+
+;(Obtain {{Item|TV News|20|x=1}})
+
 {{Dialogue End}}
 
-===Debate with Feinman and uncover the truth.===
+===Debate with Feinman and uncover the truth.{{subst:void|<!--424030805-->}}===
 {{Dialogue Start}}
-:{{tx}}
 {{Dialogue End}}
 
-===Return and inform Bocchi of the outcome.===
+===Return and inform Bocchi of the outcome.{{subst:void|<!--424030806-->}}===
 {{Dialogue Start}}
-:{{tx}}
 {{Dialogue End}}
 
 ==Other Languages==

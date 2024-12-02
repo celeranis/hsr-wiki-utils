@@ -1,6 +1,7 @@
 import { TalkSentenceConfig, textMap } from '../TextMap.js'
 import { DialogueNode, TranscriptionNote } from '../util/AbstractDialogueTree.js'
 import { ActDialogueTree } from './Dialogue.js'
+import { GraphEnvironment } from './Environment.js'
 
 export abstract class BaseDialogueTask {
 	$type: string
@@ -9,6 +10,7 @@ export abstract class BaseDialogueTask {
 	trigger_act?: string
 	entries?: BaseDialogueTaskEntry[]
 	branches?: BaseDialogueTaskEntry[]
+	conditional?: boolean
 	
 	constructor(data: { $type: string }) {
 		this.$type = data.$type
@@ -52,10 +54,13 @@ export class TalkSentenceTaskEntry extends BaseDialogueTaskEntry {
 		return this._sentence_content ??= textMap.getSentence(this.sentence_id)
 	}
 	
-	constructor(entry: { TalkSentenceID: number }) {
+	constructor(entry: { TalkSentenceID: number }, env: GraphEnvironment) {
 		super()
 		this.sentence_id = entry.TalkSentenceID
-		this.character = textMap.getText(TalkSentenceConfig[entry.TalkSentenceID]?.TextmapTalkSentenceName) || undefined
+		this.character = textMap.getText(Object.values(TalkSentenceConfig).find(s => s.TalkSentenceID == entry.TalkSentenceID)?.TextmapTalkSentenceName) || undefined
+		if (this.character && this.character != '???') {
+			env.characters.add(this.character)
+		}
 	}
 	
 	equals(otherEntry: BaseDialogueTask | BaseDialogueTaskEntry | TranscriptionNote) {
@@ -73,6 +78,6 @@ export class UnknownTask extends BaseDialogueTask {
 	}
 	
 	wikitext(_lines: number, _tree: ActDialogueTree): string {
-		return `<pre>${JSON.stringify(this.data, (k, v) => (k != 'TaskEnabled' && k != 'IsClientOnly') ? v : undefined)}</pre>`
+		return `<pre>${JSON.stringify(this.data, (k, v) => (k != 'TaskEnabled' && k != 'IsClientOnly') ? v : undefined, '\t')}</pre>`
 	}
 }

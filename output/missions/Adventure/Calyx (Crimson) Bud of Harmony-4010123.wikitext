@@ -33,7 +33,80 @@ PageTitle=#Calyx (Crimson): Bud of Harmony#
 -->
 ==Dialogue==
 {{Stub Dialogue}}
-
+<pre>{
+	"$type": "RPG.GameCore.PropTriggerAnimState",
+	"AnimStateName": "Hidden",
+	"TransitionDuration": 0.05,
+	"FixedTransitionDuration": true,
+	"TargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvPropEx",
+		"FetchType": "SinglePropByPropID",
+		"SinglePropID": {
+			"GroupID": {
+				"fixedValue": {
+					"Value": 24
+				}
+			},
+			"ID": {
+				"fixedValue": {
+					"Value": 300001
+				}
+			}
+		}
+	}
+}</pre>
+----
+<pre>{
+	"$type": "RPG.GameCore.PropTriggerAnimState",
+	"AnimStateName": "Appear",
+	"TransitionDuration": 0.05,
+	"FixedTransitionDuration": true,
+	"TargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvPropEx",
+		"FetchType": "SinglePropByPropID",
+		"SinglePropID": {
+			"GroupID": {
+				"fixedValue": {
+					"Value": 24
+				}
+			},
+			"ID": {
+				"fixedValue": {
+					"Value": 300001
+				}
+			}
+		}
+	}
+}</pre>
+:<!--2-second delay-->
+<pre>{
+	"$type": "RPG.GameCore.AdvEnablePropDialogMode",
+	"Enable": true,
+	"PlayerFaceToProp": true,
+	"RotateSpeed": 180,
+	"TargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvPropEx",
+		"FetchType": "SinglePropByPropID",
+		"SinglePropID": {
+			"GroupID": {
+				"fixedValue": {
+					"Value": 24
+				}
+			},
+			"ID": {
+				"fixedValue": {
+					"Value": 300001
+				}
+			}
+		}
+	}
+}</pre>
+:'''(Trailblazer):''' (It's Calyx again, but it seems to be slightly different from what I've seen before...)
+:'''(Trailblazer):''' (I'd better send another message to Mr. Yang, then.)
+<pre>{
+	"$type": "RPG.GameCore.PlayMessage",
+	"MessageSectionID": 1151000
+}</pre>
 {{Dialogue End}}
 
 ==Other Languages==

@@ -13,7 +13,7 @@ PageTitle=##
 * [[Trailblaze Mission]] ''[[Lingering Shadows]]'' completed
 * [[Trailblaze Mission]] ''[[The Past Will Return as an Avalanche]]'' completed
 |summary       = <!--official mission summary from Fate's Atlas-->
-|characters    = Trailblazer
+|characters    = Trailblazer; Weak Female Voice
 |startLocation = [[Jarilo-VI]] - [[Rivet Town]]
 |world         = Jarilo-VI
 |area          = Rivet Town
@@ -36,6 +36,74 @@ PageTitle=##
 ==Dialogue==
 {{Stub Dialogue}}
 
+
+;(Talk to Weak Female Voice)
+:'''Weak Female Voice:''' Ah... I understand. Thank you, kind stranger...
+:'''Weak Female Voice:''' Big Sis... where on earth have you gone...?
+
+;(Talk to Weak Female Voice)
+;(If {{cx}}<!--during performance 404010304-->)
+::'''Weak Female Voice:''' Ah... is someone there? Outside the window...
+::'''Weak Female Voice:''' My eyes... I can't see. Please forgive my rudeness...
+::'''Weak Female Voice:''' Stranger... have you seen a girl around? Her voice is soft and kind, and she wears a headband with a bell...
+::'''Weak Female Voice:''' The bell chimes with crisp clarity. It's a joy to hear...
+::'''Weak Female Voice:''' That person... is my elder sister. She has been out for a while and hasn't come home yet...
+;(If {{cx}}<!--not during performance 404010304-->)
+:'''Weak Female Voice:''' She told me she was going to some place called... the "Fragmentum," and she could find something worth selling there...
+:'''Weak Female Voice:''' If you've seen my sister, could you help me tell her to come home quickly...?
+:'''Weak Female Voice:''' Her younger sister is waiting for her all alone at home...
+
+;(Talk to Weak Female Voice)
+
+<pre>{
+	"$type": "RPG.GameCore.CreateProp",
+	"GroupID": {
+		"fixedValue": {
+			"Value": 92
+		}
+	},
+	"GroupPropID": {
+		"fixedValue": {
+			"Value": 300001
+		}
+	}
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.PropSetupUITrigger",
+	"ButtonIcon": "SpriteOutput/TalkIcon/CheckIcon.png",
+	"IconType": "CheckIcon",
+	"ButtonText": {
+		"Hash": 278713937
+	},
+	"ButtonCallback": [
+		{
+			"$type": "RPG.GameCore.TriggerCustomString",
+			"CustomString": {
+				"Value": "Mission_404010302_Prop_92_300001_BtnClick"
+			}
+		}
+	],
+	"InteractAngleRange": 180,
+	"OverrideTargetTypes": [],
+	"SkipFakeAvatar": true,
+	"TargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvPropEx",
+		"FetchType": "SinglePropByPropID",
+		"SinglePropID": {
+			"GroupID": {
+				"fixedValue": {
+					"Value": 92
+				}
+			},
+			"ID": {
+				"fixedValue": {
+					"Value": 300001
+				}
+			}
+		}
+	}
+}</pre>
+;(Obtain {{Item|Damaged Music Box|20|x=1}})
 {{Dialogue End}}
 
 ==Other Languages==

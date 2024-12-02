@@ -7,7 +7,7 @@ PageTitle=#Hyperlink Match, Clara!#
 |title         = 
 |image         = <!--Mission Hyperlink Match, Clara!.png-->
 |type          = Adventure
-|event_name    = 
+|event_name    = Aetherium Wars
 |chapter       = 
 |requirements  = 
 * [[Adventure Mission]] ''[[Hyperlink Match, Wen Shiling!]]'' completed
@@ -15,7 +15,7 @@ PageTitle=#Hyperlink Match, Clara!#
 * [[Adventure Mission]] ''[[Hyperlink Match, Dunn!]]'' completed
 * [[Adventure Mission]] ''[[Hyperlink Match, Oleg!]]'' completed
 |summary       = <!--official mission summary from Fate's Atlas-->
-|characters    = Trailblazer
+|characters    = Clara; Svarog; Trailblazer
 |startLocation = [[Jarilo-VI]] - [[Robot Settlement]]
 |world         = Jarilo-VI
 |area          = Robot Settlement
@@ -23,7 +23,7 @@ PageTitle=#Hyperlink Match, Clara!#
 |next          = 
 |rewards       = 
 }}
-'''''Hyperlink Match, Clara!''''' is an [[Adventure Mission]] on [[Jarilo-VI]].
+'''''Hyperlink Match, Clara!''''' is an Event [[Adventure Mission]] from the [[Aetherium Wars]] event.
 
 ==Steps==
 # Have a Hyperlink Match with Clara
@@ -37,11 +37,43 @@ PageTitle=#Hyperlink Match, Clara!#
 -->
 ==Dialogue==
 {{Stub Dialogue}}
-
-===Have a Hyperlink Match with Clara===
+===Have a Hyperlink Match with Clara{{subst:void|<!--801412601-->}}===
 {{Mission Description|type=adventure|location=Robot Settlement|The core gameplay loop behind Aetherium Wars is "dueling." Challenge different players and show your true strength!}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Svarog)
+;(If {{cx}}<!--during performance 501030301-->)
+::'''Svarog:''' Bio heat reaction detected &mdash; Identifying bio information...
+::'''Svarog:''' Identification result: Outsider (Trailblazer) &mdash; Hostility level: None.
+::'''Svarog:''' Welcome to the Robot Settlement, (Trailblazer).
+;(If {{cx}}<!--not during performance 501030301-->)
+:<pre>{
+	"$type": "RPG.GameCore.PlayMultiVoiceTalk",
+	"TalkSentenceID": 501030333,
+	"KeepDisplay": true
+}</pre>
+
+;(Talk to Clara)
+;(If {{cx}}<!--during performance 501030201-->)
+::'''Clara:''' Ah... It's the outsider, {{MC|f=Miss|m=Mister}} (Trailblazer)! Welcome to the Robot Settlement...
+::'''Clara:''' This place isn't as bustling as a mining town, but we're still quite content with how we live.
+::'''Clara:''' The older folk at the camp, and the little robots, they all like it here...
+::'''Clara:''' If you're interested, {{MC|f=Miss|m=Sir}}, you're welcome to see the sights here too!
+;(If {{cx}}<!--not during performance 501030201-->)
+:<pre>{
+	"$type": "RPG.GameCore.PlayMultiVoiceTalk",
+	"TalkSentenceID": 501030236,
+	"KeepDisplay": true
+}</pre>
+:'''Clara:''' Agh... You really are strong, {{MC|f=big sister|m=big brother}}... I need to work harder!
+<pre>{
+	"$type": "RPG.GameCore.ShowUI",
+	"Name": "Ui.AetherDivide.AetherDivideEntryPage",
+	"Param": {
+		"Value": "2"
+	},
+	"OnUIEnter": []
+}</pre>
 {{Dialogue End}}
 
 ==Other Languages==

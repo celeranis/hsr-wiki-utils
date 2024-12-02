@@ -3,7 +3,6 @@ import { Dictionary, VERSION_LIST, Version } from './Shared.js';
 import { HashReference, SupportedLanguage, TextMap } from './TextMap.js';
 import { HttpError, getFile } from './files/GameFile.js';
 import type { ItemConfig } from './files/Item.js';
-import { MazeFloor } from './files/MapData.js';
 import { InternalMessagesContact } from './files/Messages.js';
 import type { InternalMainMission } from './files/Mission.js';
 import type { RogueTalkNameConfig } from './files/Occurrence.js';
@@ -11,6 +10,7 @@ import { InternalBookSeries } from './files/Readable.js';
 import { InternalShop } from './files/Shop.js';
 import { InternalStage } from './files/Stage.js';
 import type { InternalWorldInfo } from './files/Worlds.js';
+import { MazeFloor } from './files/graph/MapData.js';
 
 const ITEM_ID_MATCH = (items: ItemConfig, itemId: number | string) => Object.values(items).find(item => item.ID == itemId)
 

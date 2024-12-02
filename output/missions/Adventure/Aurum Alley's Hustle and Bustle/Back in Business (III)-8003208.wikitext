@@ -7,11 +7,11 @@ PageTitle=#Back in Business (III)#
 |title         = 
 |image         = <!--Mission Back in Business (III).png-->
 |type          = Adventure
-|event_name    = 
+|event_name    = Aurum Alley's Hustle and Bustle
 |chapter       = Aurum Alley's Hustle and Bustle
 |requirements  = [[Adventure Mission]] ''[[Back in Business (III)]]'' completed
 |summary       = <!--official mission summary from Fate's Atlas-->
-|characters    = Trailblazer
+|characters    = Aurumaton President; Sushang; Trailblazer; Xiaohan; Yukong
 |startLocation = [[The Xianzhou Luofu]] - [[Aurum Alley]]
 |world         = The Xianzhou Luofu
 |area          = Aurum Alley
@@ -19,7 +19,7 @@ PageTitle=#Back in Business (III)#
 |next          = Dock Operations (III)
 |rewards       = Trailblaze EXP*200; Stellar Jade*40; Traveler's Guide*5; Lost Crystal*5; Credit*45,000
 }}
-'''''Back in Business (III)''''' is an [[Adventure Mission]] on [[The Xianzhou Luofu]] in the chapter [[Aurum Alley's Hustle and Bustle]].
+'''''Back in Business (III)''''' is an Event [[Adventure Mission]] from the [[Aurum Alley's Hustle and Bustle]] event.
 
 ==Steps==
 # Find out about the merchant guild's recent happenings at Aurum Alley
@@ -35,16 +35,126 @@ PageTitle=#Back in Business (III)#
 ==Dialogue==
 {{Stub Dialogue}}
 
-===Find out about the merchant guild's recent happenings at Aurum Alley===
+===Find out about the merchant guild's recent happenings at Aurum Alley{{subst:void|<!--800320801-->}}===
 {{Mission Description|type=adventure|location=Aurum Alley|There should be new developments at Aurum Alley. Would you like to go back and check it out?<br />Visit Aurum Alley regularly}}
 {{Dialogue Start}}
-:{{tx}}
+<pre>{
+	"$type": "RPG.GameCore.PlayMessage",
+	"MessageSectionID": 1215901,
+	"ShowNotice": true
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.SaveMessage",
+	"MessageSectionID": 1215901
+}</pre>
+
+;(Talk to Yukong)
+:Yukong's gaze is penetrating, as if she is reminding you that the meeting is about to begin. She will not be biased toward either side.
+
+;(Talk to Lianyan)
+:Lianyan smirks but says nothing, simply waiting for the meeting to start.
 {{Dialogue End}}
 
-===Confirm the negotiation materials and speak with Mingxi===
+===Confirm the negotiation materials and speak with Mingxi{{subst:void|<!--800320802-->}}===
 {{Mission Description|type=adventure|location=Aurum Alley|update|The time of negotiations is drawing near. You should go over your negotiation materials first.<br />Confirm your negotiation materials with Miss Secretary and strive to claim the advantage in the upcoming clash of words.}}
 {{Dialogue Start}}
+
+;(Unused &mdash; Ask0)
 :{{tx}}
+:<pre>{
+	"$type": "RPG.GameCore.DebateReturnTestimony"
+}</pre>
+
+;(Unused &mdash; Ask1)
+:{{tx}}
+:<pre>{
+	"$type": "RPG.GameCore.DebateReturnTestimony"
+}</pre>
+
+;(Unused &mdash; Ask2)
+:{{tx}}
+:<pre>{
+	"$type": "RPG.GameCore.DebateReturnTestimony"
+}</pre>
+
+;(Unused &mdash; Correct)
+:{{tx}}
+
+;(Unused &mdash; Fail)
+:{{tx}}
+:<pre>{
+	"$type": "RPG.GameCore.DebateReturnTestimony"
+}</pre>
+
+;(Unused &mdash; Talk_800320801)
+:{{A|VO side2 jrx yukong 120.ogg}} '''Yukong:''' I will be hosting this hearing on behalf of the Sky-Faring Commission. Mingxi, are your people all present?
+::{{A|VO side2 jrx sushang 198.ogg}} '''Sushang:''' We're all here... but where's the president?
+::{{A|VO side2 jrx huizhang 108.ogg}} '''Aurumaton President:''' I'm right here.
+::{{A|VO side2 jrx sushang 199.ogg}} '''Sushang:''' ...You're the president?
+::{{A|VO side2 jrx huizhang 109.ogg}} '''Aurumaton President:''' That is correct.
+::{{A|VO side2 jrx huizhang 110.ogg}} '''Aurumaton President:''' I know my appearance is a little unsettling... If the hearing weren't of vital importance to the future of Aurum Alley, I wouldn't attend in person.
+::{{A|VO side2 jrx huizhang 111.ogg}} '''Aurumaton President:''' Still, I didn't expect a reaction like this... Are you so afraid to converse with a piece of metal?
+::{{DIcon|Arrow}} More surprised than afraid.
+:::{{A|VO side2 jrx huizhang 112.ogg}} '''Aurumaton President:''' Surprised that there's an aurumaton in Aurum Alley?
+::{{DIcon|Arrow}} I hope there aren't any children here.
+:::{{A|VO side2 jrx huizhang 113.ogg}} '''Aurumaton President:''' *sigh* If there are any children here, just tell them I'm one of those talking toys...
+:::{{A|VO side2 jrx sushang 200.ogg}} '''Sushang:''' ...that's missing the rest of its body.
+::{{DIcon|Arrow}} A talking aurumaton head? So cool!
+:::{{A|VO side2 jrx huizhang 114.ogg}} '''Aurumaton President:''' Glad you think so.
+::{{A|VO side2 jrx yukong 121.ogg}} '''Yukong:''' Let me remind everyone that we are at a hearing. Mr. President, please share with us your vision for Aurum Alley.
+::{{tx}}
+
+;(Obtain {{Item|Aurum Alley Merchant Guild Turnover|20|x=1}})
+----
+:{{A|VO side2 jrx sushang 208 m.ogg}} {{A|VO side2 jrx sushang 208 f.ogg}} '''Sushang:''' First challenging an IPC rep, and now winning over the president of the guild! (Trailblazer), you're pretty good!
+:{{DIcon|Arrow}} I was looking forward to another public apology.
+::<!--0.8-second delay-->
+::{{A|VO side2 jrx sushang 209.ogg}} '''Sushang:''' That won't be necessary...
+:{{DIcon|Arrow}} I got lucky, and it was a collective effort.
+::<!--0.8-second delay-->
+::{{A|VO side2 jrx sushang 210.ogg}} '''Sushang:''' The materials that Mingxi and Xiaohan provided were super useful.
+:{{A|VO side2 jrx yukong 125.ogg}} '''Yukong:''' Knowing the president, I think he's now ready to entrust you with the future of the Alley.
+:{{DIcon|Arrow}} He wasn't really against us?
+:<!--0.8-second delay-->
+:{{A|VO side2 jrx yukong 126.ogg}} '''Yukong:''' The president commands the trust of many reputable shops in the Alley. Their support for him was likely to be a big obstacle to your rejuvenation project.
+:{{A|VO side2 jrx yukong 127.ogg}} '''Yukong:''' His invitation to debate this matter publicly was a chance for the more difficult business owners to hear from you directly.
+:{{DIcon|Arrow}} He is indeed very wise.
+:{{DIcon|Arrow}} You are overinterpreting, Madam Yukong.
+::{{A|VO side2 jrx yukong 128.ogg}} '''Yukong:''' If you say so.
+:{{A|VO side2 jrx sushang 211.ogg}} '''Sushang:''' I almost feel bad for him. Aurum Alley's enemy should be the IPC, not the president.
+:<!--0.5-second delay-->
+:{{A|VO side2 jrx xiaohan 143.ogg}} '''Xiaohan:''' What if... the IPC isn't an enemy?
+:{{DIcon|Arrow}} Have they decided to drop out of the bidding?
+::<!--0.8-second delay-->
+::{{A|VO side2 jrx xiaohan 144.ogg}} '''Xiaohan:''' Of course not. We'll win the operating rights to Aurum Alley fair and square.
+:{{DIcon|Arrow}} You still remember Skott, right?
+::<!--0.8-second delay-->
+::{{A|VO side2 jrx xiaohan 145.ogg}} '''Xiaohan:''' He's been transferred elsewhere. I will be handling things from now on.
+:{{A|VO side2 jrx sushang 212.ogg}} '''Sushang:''' ...You're with the IPC!?
+:{{A|VO side2 jrx yukong 129.ogg}} '''Yukong:''' Xiaohan is the IPC's operation rep in Exalting Sanctum.
+:{{A|VO side2 jrx sushang 213.ogg}} '''Sushang:''' You snake!
+:{{DIcon|Arrow}} You back-stabbing little...
+:{{DIcon|Arrow}} Can't say I'm surprised.
+:<!--0.8-second delay-->
+:{{A|VO side2 jrx xiaohan 146.ogg}} '''Xiaohan:''' My original plan only involved helping you overthrow the current president... but as we progressed, I saw there was more common ground than I'd anticipated.
+:{{A|VO side2 jrx xiaohan 147.ogg}} '''Xiaohan:''' Since we all agree that the dock is vital to Aurum Alley's development, why not take things further and turn the Alley into a full-blown logistics hub?
+:{{A|VO side2 jrx xiaohan 148.ogg}} '''Xiaohan:''' Imagine cargo ships from all corners of the galaxy docking and departing. This place will be transformed into a renowned commercial port, instead of another run-of-the-mill market.
+:{{DIcon|Arrow}} I'm intrigued.
+:{{DIcon|Arrow}} That isn't progress.
+:{{A|VO side2 jrx xiaohan 149.ogg}} '''Xiaohan:''' When the IPC wins the bidding, I'm sure we can continue to work together for a brand-new Aurum Alley.
+:{{A|VO side2 jrx sushang 214.ogg}} '''Sushang:''' Hey! Not so fast, it's still anyone's game.
+:{{A|VO side2 jrx xiaohan 150.ogg}} '''Xiaohan:''' ...Maybe I'm getting ahead of myself. In that case, keep up the good work. I'll see you at the negotiation table.
+:{{Black Screen|Xiaohan leaves the dock, the next phase of Aurum Alley's revival has begun.}}
+;(Lose {{Item|Aurum Alley Merchant Guild Turnover|20|x=1}})
+<pre>{
+	"$type": "RPG.GameCore.PlayMessage",
+	"MessageSectionID": 1216001,
+	"ShowNotice": true
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.SaveMessage",
+	"MessageSectionID": 1216001
+}</pre>
 {{Dialogue End}}
 
 ==Other Languages==

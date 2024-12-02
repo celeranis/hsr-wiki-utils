@@ -7,13 +7,13 @@ PageTitle=#Stellar Shadowseeker: 7th Stop, Astral Express#
 |title         = 
 |image         = <!--Mission Stellar Shadowseeker 7th Stop, Astral Express.png-->
 |type          = Adventure
-|event_name    = 
+|event_name    = Stellar Shadowseeker
 |chapter       = 
 |requirements  = 
 * Reach [[Trailblaze Level]] 21
 * [[Adventure Mission]] ''[[Stellar Shadowseeker: 6th Stop, Rivet Town]]'' completed
 |summary       = <!--official mission summary from Fate's Atlas-->
-|characters    = Trailblazer
+|characters    = March 7th; Trailblazer
 |startLocation = [[Astral Express]] - [[Parlor Car]]
 |world         = Astral Express
 |area          = Parlor Car
@@ -21,14 +21,15 @@ PageTitle=#Stellar Shadowseeker: 7th Stop, Astral Express#
 |next          = 
 |rewards       = Tracks of Destiny*1; Stellar Jade*80; Obsidian of Desolation*3; Credit*40,000
 }}
-'''''Stellar Shadowseeker: 7th Stop, Astral Express''''' is an [[Adventure Mission]] on [[Astral Express]].
+'''''Stellar Shadowseeker: 7th Stop, Astral Express''''' is an Event [[Adventure Mission]] from the [[Stellar Shadowseeker]] event.
 
 ==Steps==
 # Go to the Parlor Car and take a photo of the subject
+# Ask March 7th for a situation update
 # Find and capture the subjects based on the photos
 # Take a selfie with March 7th
-# Ask March 7th for a situation update
 # Talk to March 7th
+# Ask March 7th for a situation update
 
 <!--
 ==Gameplay Notes==
@@ -40,30 +41,90 @@ PageTitle=#Stellar Shadowseeker: 7th Stop, Astral Express#
 ==Dialogue==
 {{Stub Dialogue}}
 
-===Go to the Parlor Car and take a photo of the subject===
+===Go to the Parlor Car and take a photo of the subject{{subst:void|<!--800210701-->}}===
 {{Mission Description|type=adventure|location=Parlor Car|The shadowy object in the photo looks somewhat familiar. It must be something aboard the Express...}}
 {{Dialogue Start}}
-:{{tx}}
+:<!--3-second delay-->
+:'''(Trailblazer):''' (Think I saw this when I looked up on the Express...)
 {{Dialogue End}}
 
-===Find and capture the subjects based on the photos===
+===Ask March 7th for a situation update{{subst:void|<!--800210705-->}}===
 {{Dialogue Start}}
-:{{tx}}
+:<!--1-second delay-->
+:'''(Trailblazer):''' (Just one more pic. This person seems familiar to me...)
+
+;(Unused &mdash; Create_30_300001)
+<pre>{
+	"$type": "RPG.GameCore.AdvCreateGroupEntity",
+	"InstanceIDList": [
+		300001
+	]
+}</pre>
 {{Dialogue End}}
 
-===Take a selfie with March 7th===
+===Find and capture the subjects based on the photos{{subst:void|<!--800210702-->}}===
 {{Dialogue Start}}
-:{{tx}}
+
 {{Dialogue End}}
 
-===Ask March 7th for a situation update===
+===Take a selfie with March 7th{{subst:void|<!--800210703-->}}===
 {{Dialogue Start}}
-:{{tx}}
+
+
+;(Unused &mdash; Reset_31_300001)
+:;(If {{F|MissionCV-8002107-undefined}} is equal to 0)
+::<pre>{
+	"$type": "RPG.GameCore.AdvDestroyGroupEntity",
+	"InstanceIDList": [
+		300001
+	]
+}</pre>
+::<pre>{
+	"$type": "RPG.GameCore.AdvCreateGroupEntity",
+	"InstanceIDList": [
+		300005
+	]
+}</pre>
+::<pre>{
+	"$type": "RPG.GameCore.SetMissionCustomValue",
+	"SubmissionID": 800210703,
+	"MissionCustomValue": {
+		"isLocal": true,
+		"ValidValueParamList": [
+			0,
+			1
+		]
+	},
+	"CustomValue": 1
+}</pre>
+:;(If {{F|MissionCV-8002107-undefined}} is not equal to 0)
+::<pre>{
+	"$type": "RPG.GameCore.AdvDestroyGroupEntity",
+	"InstanceIDList": [
+		300005
+	]
+}</pre>
+::<pre>{
+	"$type": "RPG.GameCore.AdvCreateGroupEntity",
+	"InstanceIDList": [
+		300005
+	]
+}</pre>
 {{Dialogue End}}
 
-===Talk to March 7th===
+===Talk to March 7th{{subst:void|<!--800210704-->}}===
 {{Dialogue Start}}
-:{{tx}}
+:<!--2.5-second delay-->
+<pre>{
+	"$type": "RPG.GameCore.ShowUI",
+	"Name": "Ui.Activity.ActivityGuessTheSilhouette.ActivityGuessTheSilhouetteMainPage"
+}</pre>
+{{Dialogue End}}
+
+===Ask March 7th for a situation update{{subst:void|<!--800210706-->}}===
+{{Dialogue Start}}
+:<!--1-second delay-->
+:'''(Trailblazer):''' (Just one more pic. This person seems familiar to me...)
 {{Dialogue End}}
 
 ==Other Languages==

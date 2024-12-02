@@ -1,15 +1,19 @@
-import { Act, InternalDialogTask } from '../files/Dialog.js';
 import { getFile } from '../files/GameFile.js';
+import { Act, InternalDialogTask } from '../files/graph/Dialog.js';
 import { Dictionary } from '../Shared.js';
 import { AbstractDialogueTree, DialogueNode, TranscriptionNote } from '../util/AbstractDialogueTree.js';
 import { BaseDialogueTask, BaseDialogueTaskEntry, TalkSentenceTaskEntry, UnknownTask } from './DialogueBase.js';
-import { CustomStringListen, CustomStringTrigger, FinishLevelGraph } from './tasks/CustomString.js';
+import { GraphEnvironment } from './Environment.js';
+import { BattleTask } from './tasks/Battle.js';
+import { CustomStringListen, CustomStringTrigger, FinishLevelGraph, GroupEventListen } from './tasks/CustomString.js';
+import { MaterialSubmissionEventTask, ShowMenuScreenTask } from './tasks/Menu.js';
 import { WaitTask } from './tasks/Misc.js';
 import { DialogueEventListenerTask, RogueOptionTalkTask, RogueTalkTask } from './tasks/Occurrence.js';
 import { EndPerformance, FinishPerformanceTask, TransitionTask, TriggerPerformance } from './tasks/Performance.js';
+import { PredicateTask, SwitchTask } from './tasks/Predicate.js';
 import { OptionTalkTask, SimpleTalkTask } from './tasks/SimpleDialogue.js';
 import { TimelineTask } from './tasks/Timeline.js';
-import { PropTrigger } from './tasks/TriggerTask.js';
+import { CustomTaskTrigger, PropTrigger } from './tasks/TriggerTask.js';
 import { VideoTask } from './tasks/Video.js';
 
 export abstract class ActDialogueTree extends AbstractDialogueTree<DialogueTask | DialogueTaskEntry> {
@@ -19,6 +23,8 @@ export abstract class ActDialogueTree extends AbstractDialogueTree<DialogueTask 
 	other_triggered: [DialogueNode<DialogueTask | DialogueTaskEntry>, DialogueNode<DialogueTask | DialogueTaskEntry>][] = []
 	loaded_acts: Dictionary<Act> = {}
 	
+	environment: GraphEnvironment = new GraphEnvironment()
+	
 	protected constructor(public readonly data: Act, debug_id: string) {
 		super(debug_id)
 	}
@@ -27,7 +33,7 @@ export abstract class ActDialogueTree extends AbstractDialogueTree<DialogueTask 
 		let currentNode = prev
 		let firstNode: DialogueNode<DialogueTask | DialogueTaskEntry> | undefined = undefined
 		
-		const hasTrigger: DialogueNode<CustomStringListen>[] = []
+		const hasTrigger: DialogueNode<CustomStringListen | GroupEventListen>[] = []
 
 		for (const item of items) {
 			if (!item) continue
@@ -54,7 +60,10 @@ export abstract class ActDialogueTree extends AbstractDialogueTree<DialogueTask 
 			}
 
 			firstNode ??= currentNode
-			
+
+			if (item instanceof CustomStringListen || item instanceof GroupEventListen) {
+				hasTrigger.push(currentNode as DialogueNode<CustomStringListen | CustomStringListen>)
+			}
 			if (item instanceof BaseDialogueTask) {
 				if (item.branches?.length) {
 					if (item.branches.length > 1) {
@@ -76,11 +85,11 @@ export abstract class ActDialogueTree extends AbstractDialogueTree<DialogueTask 
 					currentNode = this.getEndOf(currentNode.next)
 				}
 			}
-			if (item instanceof CustomStringListen) {
-				hasTrigger.push(currentNode as DialogueNode<CustomStringListen>)
-			}
 			if (item.trigger_act) {
 				const loadedAct = await this.loadAct(item.trigger_act)
+					.catch(err => {
+						return { item: new TranscriptionNote('act-load-failed', `{{tx|Unknown performance}}<!--${err}-->`) } as DialogueNode<TranscriptionNote>
+					})
 				if (loadedAct) {
 					currentNode.next = loadedAct
 					loadedAct.prev = currentNode
@@ -112,7 +121,7 @@ export abstract class ActDialogueTree extends AbstractDialogueTree<DialogueTask 
 	async triggerCS(customString: string, onNode: DialogueNode<DialogueTask | DialogueTaskEntry>): Promise<void> {
 		this.custom_string_triggered[customString] = true
 		
-		if (this.inverseFind(onNode, n => n.item instanceof CustomStringListen && n.item.custom_string == customString)) {
+		if (this.inverseFind(onNode, n => (n.item instanceof CustomStringListen || n.item instanceof GroupEventListen) && n.item.custom_string == customString)) {
 			const noteNode = {
 				item: new TranscriptionNote('custom-string-loop', 'Return to previous option selection'),
 				prev: onNode
@@ -122,7 +131,7 @@ export abstract class ActDialogueTree extends AbstractDialogueTree<DialogueTask 
 		}
 		
 		if (this.custom_string_results[customString]) {
-			const node = this.clone(this.custom_string_results[customString])
+			const node = this.cloneCheckString(this.custom_string_results[customString], onNode)
 			const oldNext = onNode.next
 			
 			onNode.next = node
@@ -185,7 +194,7 @@ export abstract class ActDialogueTree extends AbstractDialogueTree<DialogueTask 
 	async processAct(act: Act, returnLast?: boolean) {
 		const objSequences = act.OnStartSequece.map(sequence =>
 			sequence.TaskList
-				?.map((task, i) => ActDialogueTree.objectFromInternal(task, sequence.TaskList[i - 1], sequence.TaskList[i + 1]))
+				?.map((task, i) => ActDialogueTree.objectFromInternal(task, this.environment, sequence.TaskList[i - 1], sequence.TaskList[i + 1]))
 		).filter(seq => seq && seq.find(Boolean))
 		
 		// load custom string results first
@@ -229,8 +238,8 @@ export abstract class ActDialogueTree extends AbstractDialogueTree<DialogueTask 
 			const content = await this.wikitextFrom(sequence, 0)
 			if (content.trim() != '') {
 				triggeredWikitext.push(
-					(await trigger.item.wikitext(0, this, trigger as any))!
-					+ '\n' + content
+					(((await trigger.item.wikitext(0, this, trigger as any)) || '')
+					+ '\n' + content).trim()
 				)
 			}
 		}
@@ -279,8 +288,9 @@ export abstract class ActDialogueTree extends AbstractDialogueTree<DialogueTask 
 			if (key == 'parent' || key == 'prev' || key == 'clone') {
 				return null
 			}
-			if (key == 'item' && typeof value == 'object' && 'wikitext' in value) {
-				value.__wikitext = value.wikitext(0, this)
+			const item = typeof value == 'object' && 'item' in value && value.item
+			if (item && 'wikitext' in item) {
+				item.__wikitext = item.wikitext(0, this, value)
 			}
 			return value
 		}, '\t')
@@ -303,7 +313,7 @@ export abstract class ActDialogueTree extends AbstractDialogueTree<DialogueTask 
 	cloneCheckString<N extends DialogueTask | DialogueTaskEntry | TranscriptionNote>(node: DialogueNode<N>, checkAgainst: DialogueNode<DialogueTask | DialogueTaskEntry | TranscriptionNote>, prev?: DialogueNode<N | TranscriptionNote>, isParent?: boolean): DialogueNode<N | TranscriptionNote> {
 		if ('trigger' in node.item && node.item.trigger && this.inverseFind(checkAgainst, wn => node.item.equals(wn.item))) {
 			return {
-				item: new TranscriptionNote('custom-string-loop', node.children ? 'Return to previous option selection' : (process.argv.includes('--add-triggers') ? '<!--Return to previous option selection (registerCS)-->' : undefined)),
+				item: new TranscriptionNote('custom-string-loop', this.find(node, n => n.children?.length) ? 'Return to previous option selection' : (process.argv.includes('--add-triggers') ? '<!--Return to previous option selection (registerCS)-->' : undefined)),
 				prev: isParent ? undefined : prev,
 				parent: isParent ? prev : undefined,
 			}
@@ -328,16 +338,21 @@ export abstract class ActDialogueTree extends AbstractDialogueTree<DialogueTask 
 		return newNode
 	}
 	
-	static objectFromInternal(itask: InternalDialogTask, lastTask?: InternalDialogTask, nextTask?: InternalDialogTask) {
+	static objectFromInternal(itask: InternalDialogTask, env: GraphEnvironment, lastTask?: InternalDialogTask, nextTask?: InternalDialogTask) {
 		switch (itask.$type) {
 			case 'RPG.GameCore.PlayRogueOptionTalk':
 				return new RogueOptionTalkTask(itask)
 			case 'RPG.GameCore.PlayRogueSimpleTalk':
 			case 'RPG.GameCore.PlayAndWaitRogueSimpleTalk':
-				return new RogueTalkTask(itask)
+				return new RogueTalkTask(itask, env)
 			case 'RPG.GameCore.WaitCustomString':
 				return new CustomStringListen(itask)
+			case 'RPG.GameCore.WaitGroupEvent':
+				return new GroupEventListen(itask, env)
 			case 'RPG.GameCore.TriggerCustomString':
+			case 'RPG.GameCore.TriggerGroupEvent':
+			case 'RPG.GameCore.TriggerCustomStringOnDialogEnd':
+			case 'RPG.GameCore.TriggerGroupEventOnDialogEnd':
 				return new CustomStringTrigger(itask)
 			case 'RPG.GameCore.WaitDialogueEvent':
 				return new DialogueEventListenerTask(itask)
@@ -346,9 +361,9 @@ export abstract class ActDialogueTree extends AbstractDialogueTree<DialogueTask 
 			case 'RPG.GameCore.PlayAndWaitSimpleTalk':
 			case 'RPG.GameCore.PlaySimpleTalk':
 			case 'RPG.GameCore.PlayMissionTalk':
-				return new SimpleTalkTask(itask)
+				return new SimpleTalkTask(itask, env)
 			case 'RPG.GameCore.PlayOptionTalk':
-				return new OptionTalkTask(itask)
+				return new OptionTalkTask(itask, env)
 			case 'RPG.GameCore.PerformanceTransition':
 			case 'RPG.GameCore.PlayScreenTransfer':
 				return new TransitionTask(itask)
@@ -359,13 +374,26 @@ export abstract class ActDialogueTree extends AbstractDialogueTree<DialogueTask 
 			case 'RPG.GameCore.FinishPerformanceMission':
 				return new FinishPerformanceTask(itask)
 			case 'RPG.GameCore.PlayTimeline':
-				return new TimelineTask(itask, lastTask, nextTask)
+				return new TimelineTask(itask, env, lastTask, nextTask)
 			case 'RPG.GameCore.PlayVideo':
 				return new VideoTask(itask)
 			case 'RPG.GameCore.WaitSecond':
 				return new WaitTask(itask)
 			case 'RPG.GameCore.PropSetupTrigger':
-				return new PropTrigger(itask)
+				return new PropTrigger(itask, env)
+			case 'RPG.GameCore.AdvSetupCustomTaskTrigger':
+				return new CustomTaskTrigger(itask, env)
+			case 'RPG.GameCore.TriggerBattle':
+				return new BattleTask(itask)
+			case 'RPG.GameCore.PredicateTaskList':
+				if (!itask.Predicate) return undefined
+				return new PredicateTask(itask, env)
+			case 'RPG.GameCore.SwitchCase':
+				return new SwitchTask(itask, env)
+			case 'RPG.GameCore.ShowHalfScreenPage':
+				return new ShowMenuScreenTask(itask, env)
+			case 'RPG.GameCore.ObserveMaterialSubmission':
+				return new MaterialSubmissionEventTask(itask, env)
 			case 'RPG.GameCore.WaitRogueSimpleTalkFinish' as any:
 			case 'RPG.GameCore.ShowRogueTalkUI' as any:
 			case 'RPG.GameCore.ShowRogueTalkBg' as any:
@@ -388,10 +416,27 @@ export abstract class ActDialogueTree extends AbstractDialogueTree<DialogueTask 
 			case 'RPG.GameCore.AdvEntityFaceTo' as any:
 			case 'RPG.GameCore.CharacterHeadLookAt' as any:
 			case 'RPG.GameCore.SetAsRogueDialogue' as any:
+			case 'RPG.GameCore.ClientFinishMission' as any:
+			case 'RPG.GameCore.CollectDataConditions' as any:
+			case 'RPG.GameCore.PlayFullScreenTransfer':
+			case 'RPG.GameCore.SetMissionAudioState' as any:
+			case 'RPG.GameCore.StartDialogueEntityInteract' as any:
 				return undefined
 			default:
 				return new UnknownTask(itask)
 		}
+	}
+	
+	static objectListFromInternals(itask: InternalDialogTask[], env: GraphEnvironment, prev?: InternalDialogTask) {
+		const out: (NonNullable<ReturnType<typeof ActDialogueTree['objectFromInternal']>>)[] = []
+		for (const [i, task] of itask.entries()) {
+			const dat = this.objectFromInternal(task, env, itask[i - 1] ?? prev, itask[i + 1])
+			if (dat) {
+				out.push(dat)
+			}
+		}
+		
+		return out
 	}
 	
 	static async crossResolveStrings(trees: ActDialogueTree[]) {

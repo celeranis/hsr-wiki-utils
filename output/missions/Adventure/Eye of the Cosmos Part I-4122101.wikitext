@@ -11,7 +11,7 @@ PageTitle=#Eye of the Cosmos Part I#
 |chapter       = 
 |requirements  = {{subst:void|<!--Unknown: {"Type":"Manual"}-->}}
 |summary       = <!--official mission summary from Fate's Atlas-->
-|characters    = Trailblazer
+|characters    = Courier Cycrane; Trailblazer; Ziqiao
 |startLocation = [[The Xianzhou Luofu]] - [[Cloudford]]
 |world         = The Xianzhou Luofu
 |area          = Cloudford
@@ -41,52 +41,407 @@ PageTitle=#Eye of the Cosmos Part I#
 ==Dialogue==
 {{Stub Dialogue}}
 
-===Speak with Ziqiao===
+===Speak with Ziqiao{{subst:void|<!--412210101-->}}===
 {{Mission Description|type=adventure|location=Cloudford|The Ambrosial Arbor's growth made Luofu's logistic system malfunction. Now, Heron Express is asking you to control cycranes to find a starskiff of theirs, which had an accident.<br />Speak with Ziqiao and see what she actually needs from you.}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Ziqiao)
+
+;(Talk to Ziqiao)
+:'''Ziqiao:''' Please go and deal with those monsters first...we can talk about the remaining problems after we fix the roost.
 {{Dialogue End}}
 
-===Defeat the Abominations of Abundance attracted by the roost===
+===Defeat the Abominations of Abundance attracted by the roost{{subst:void|<!--412210102-->}}===
 {{Mission Description|type=adventure|location=Cloudford|update|The cycrane roost seems to have been deliberately altered, and is currently emitting high-frequency sound waves that attract Abominations of Abundance.<br />You need to defeat the Abominations of Abundance gathered under the roost before you can reach the cycrane.}}
 {{Dialogue Start}}
-:{{tx}}
+
 {{Dialogue End}}
 
-===Fix the broken cycrane roost===
+===Fix the broken cycrane roost{{subst:void|<!--412210103-->}}===
 {{Mission Description|type=adventure|location=Cloudford|update|The cycrane roost seems to have been deliberately altered, and is currently emitting high-frequency sound waves that attracts Abominations of Abundance.<br />Fix this roost so it can function normally again.}}
 {{Dialogue Start}}
-:{{tx}}
+
 {{Dialogue End}}
 
-===Control the cycrane to find the starskiff that had an accident===
+===Control the cycrane to find the starskiff that had an accident{{subst:void|<!--412210104-->}}===
 {{Mission Description|type=adventure|location=Cloudford|update|Control the cycrane and take off. Your job is important, but you also shouldn't ignore life's beautiful moments around you.}}
 {{Dialogue Start}}
-:{{tx}}
+----
+:'''Ziqiao:''' It's finally fixed...thank you so much for your hard work!
+:'''Ziqiao:''' But, the next step is the main event...you need to operate the cycrane to find the lost cargo.
+:{{DIcon|Arrow}} Finally, fly time!
+::'''Ziqiao:''' I had the same reaction the first time I controlled the cycranes!
+:{{DIcon|Arrow}} Why don't you do it yourself?
+::'''Ziqiao:''' This is embarrassing... Ever since I took on a management position, I haven't had much hands-on experience. Use it or lose it. You know what I'm saying?
+:'''Ziqiao:''' In any case, all you need to do is find the missing goods, take pictures, and send the pictures to me. We'll take care of the rest.
 {{Dialogue End}}
 
-===Control the cycrane to find the starskiff that had an accident south of the Trove of Verdure===
+===Control the cycrane to find the starskiff that had an accident south of the Trove of Verdure{{subst:void|<!--412210105-->}}===
 {{Mission Description|type=adventure|location=Cloudford|update|Ziqiao's records say this starskiff was lost south of the Trove of Verdure. Go there to have a closer look.}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Unused &mdash; OnLoad_X101_01)
+:'''Courier Cycrane:''' The signal monitoring system is now available and searching the target area.
+::'''Courier Cycrane:''' The signal monitoring system indicates that the goods were lost near the Meridian Pin. Based on past data, the cycrane recommends that you search {{Color|keyword|nobold=1|under the Meridian Pin}} and between conveyor belts.
+
+;(Unused &mdash; Mission_412210105_Photo_Took)
+<pre>{
+	"$type": "RPG.GameCore.ResetMissionWayPoint",
+	"SubMissionID": 412210105
+}</pre>
+
+;(Unused &mdash; OnEnter)
+<pre>{
+	"$type": "RPG.GameCore.SetMissionWayPoint",
+	"SubMissionID": 412210105,
+	"OverideMissionWayPointType": true,
+	"MissionWayPointType": "Anchor",
+	"OverideWayPointGroupID": true,
+	"WayPointGroupID": 17,
+	"OverideWayPointEntityID": true,
+	"WayPointEntityID": 1,
+	"OverideWayPointShowRangeMin": true,
+	"WayPointShowRangeMin": -1,
+	"OverideMapWaypointRange": true,
+	"MapWaypointRange": 20
+}</pre>
+
+;(Unused &mdash; OnClose_X101_01)
+<pre>{
+	"$type": "RPG.GameCore.ResetMissionWayPoint",
+	"SubMissionID": 412210105
+}</pre>
 {{Dialogue End}}
 
-===Control the cycrane to find the starskiff that had an accident in the Cloudford cargo lane===
+===Control the cycrane to find the starskiff that had an accident in the Cloudford cargo lane{{subst:void|<!--412210106-->}}===
 {{Mission Description|type=adventure|location=Cloudford|update|Ziqiao's records say this starskiff was lost in the Cloudford cargo lane. Go there to have a closer look.}}
 {{Dialogue Start}}
-:{{tx}}
+
+
+;(Talk to Ziqiao)
+<pre>{
+	"$type": "RPG.GameCore.PropEnableCollider",
+	"OPType": "TriggerOnly",
+	"TriggerSelect": "AllDynamic",
+	"TargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvPropEx",
+		"FetchType": "SinglePropByPropID",
+		"SinglePropID": {
+			"GroupID": {
+				"fixedValue": {
+					"Value": 11
+				}
+			},
+			"ID": {
+				"fixedValue": {
+					"Value": 300001
+				}
+			}
+		}
+	}
+}</pre>
+;(Unused &mdash; Option)
+:'''Ziqiao:''' In the future...there may be similar things that need your help. I'll have to ask for your assistance again.
+::{{DIcon|Arrow}} No problem.
+:::'''Ziqiao:''' Have a nice day. See you soon!
+::{{DIcon|Arrow}} Just remember to pay me.
+:::'''Ziqiao:''' Of course. We'll never shortchange you.
+;(Unused &mdash; Mission_412210106_Photo_Took)
+<pre>{
+	"$type": "RPG.GameCore.ResetMissionWayPoint",
+	"SubMissionID": 412210106
+}</pre>
+
+;(Unused &mdash; OnLoad_X101_02)
+<pre>{
+	"$type": "RPG.GameCore.SelectorConfig",
+	"TaskList": [
+		{
+			"$type": "RPG.GameCore.PropStateExecute",
+			"TargetType": {
+				"$type": "RPG.GameCore.TargetFetchAdvPropEx",
+				"FetchType": "SinglePropByPropID",
+				"SinglePropKey": {
+					"Custom": true,
+					"Key": "TargetProp"
+				},
+				"SinglePropID": {
+					"GroupID": {
+						"fixedValue": {
+							"Value": 18
+						}
+					},
+					"ID": {
+						"fixedValue": {
+							"Value": 300002
+						}
+					}
+				}
+			},
+			"Execute": [
+				{
+					"$type": "RPG.GameCore.PlayMissionTalk",
+					"SimpleTalkList": [
+						{
+							"TextSpeed": 20,
+							"TalkSentenceID": 412210416,
+							"ProtectTime": 2
+						},
+						{
+							"TextSpeed": 20,
+							"TalkSentenceID": 412210154,
+							"ProtectTime": 2
+						},
+						{
+							"TextSpeed": 20,
+							"TalkSentenceID": 412210150,
+							"ProtectTime": 2
+						}
+					]
+				}
+			]
+		},
+		{
+			"$type": "RPG.GameCore.PropStateExecute",
+			"TargetType": {
+				"$type": "RPG.GameCore.TargetFetchAdvPropEx",
+				"FetchType": "SinglePropByPropID",
+				"SinglePropKey": {
+					"Custom": true,
+					"Key": "TargetProp"
+				},
+				"SinglePropID": {
+					"GroupID": {
+						"fixedValue": {
+							"Value": 18
+						}
+					},
+					"ID": {
+						"fixedValue": {
+							"Value": 300002
+						}
+					}
+				}
+			},
+			"State": "Open",
+			"Execute": [
+				{
+					"$type": "RPG.GameCore.PlayMissionTalk",
+					"SimpleTalkList": [
+						{
+							"TextSpeed": 20,
+							"TalkSentenceID": 412210416,
+							"ProtectTime": 2
+						},
+						{
+							"TextSpeed": 20,
+							"TalkSentenceID": 412210154,
+							"ProtectTime": 2
+						}
+					]
+				}
+			]
+		}
+	]
+}</pre>
+
+;(Unused &mdash; OnLoad_X101_01)
+<pre>{
+	"$type": "RPG.GameCore.SetMissionWayPoint",
+	"SubMissionID": 412210106,
+	"OverideMissionWayPointType": true,
+	"OverideWayPointGroupID": true,
+	"OverideWayPointEntityID": true,
+	"OverideWayPointShowRangeMin": true,
+	"OverideMapWaypointRange": true
+}</pre>
+
+;(Unused &mdash; OnClose_X101_01)
+<pre>{
+	"$type": "RPG.GameCore.ResetMissionWayPoint",
+	"SubMissionID": 412210106
+}</pre>
+
+;(Unused &mdash; OnClose_X101_02)
+<pre>{
+	"$type": "RPG.GameCore.ResetMissionWayPoint",
+	"SubMissionID": 412210106
+}</pre>
 {{Dialogue End}}
 
-===(Optional) Control the cycrane to find the suspicious signal in the Cloudford cargo lane===
+===(Optional) Control the cycrane to find the suspicious signal in the Cloudford cargo lane{{subst:void|<!--412210107-->}}===
 {{Mission Description|type=adventure|location=Cloudford|update|The cycrane seems to have detected an unknown signal near the Cloudford: Cargo Lane... Go have a look and you might just find some surprise there.}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Unused &mdash; Mission_412210107_Photo_Took)
+:<!--1-second delay-->
+:<pre>{
+	"$type": "RPG.GameCore.ShowTalkUI",
+	"Show": true,
+	"ShowDialogControlUI": true
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.SelectorConfig",
+	"TaskList": [
+		{
+			"$type": "RPG.GameCore.PropStateExecute",
+			"TargetType": {
+				"$type": "RPG.GameCore.TargetFetchAdvPropEx",
+				"FetchType": "SinglePropByPropID",
+				"SinglePropID": {
+					"GroupID": {
+						"fixedValue": {
+							"Value": 18
+						}
+					},
+					"ID": {
+						"fixedValue": {
+							"Value": 300001
+						}
+					}
+				}
+			},
+			"Execute": [
+				{
+					"$type": "RPG.GameCore.PlayAndWaitSimpleTalk",
+					"KeepDisplay": true,
+					"Backgrounds": [],
+					"SimpleTalkList": [
+						{
+							"TextSpeed": 20,
+							"TalkSentenceID": 412210151,
+							"ProtectTime": 0.8
+						},
+						{
+							"TextSpeed": 20,
+							"TalkSentenceID": 412210155,
+							"ProtectTime": 0.8
+						}
+					]
+				},
+				{
+					"$type": "RPG.GameCore.ShowTalkUI",
+					"ShowDialogControlUI": true
+				},
+				{
+					"$type": "RPG.GameCore.UnLockPlayerControl",
+					"UnLockCameraControl": true
+				},
+				{
+					"$type": "RPG.GameCore.TriggerCustomString",
+					"CustomString": {
+						"Value": "Talk_412210107"
+					}
+				}
+			]
+		},
+		{
+			"$type": "RPG.GameCore.PropStateExecute",
+			"TargetType": {
+				"$type": "RPG.GameCore.TargetFetchAdvPropEx",
+				"FetchType": "SinglePropByPropID",
+				"SinglePropID": {
+					"GroupID": {
+						"fixedValue": {
+							"Value": 18
+						}
+					},
+					"ID": {
+						"fixedValue": {
+							"Value": 300001
+						}
+					}
+				}
+			},
+			"State": "Open",
+			"Execute": [
+				{
+					"$type": "RPG.GameCore.PlayAndWaitSimpleTalk",
+					"KeepDisplay": true,
+					"Backgrounds": [],
+					"SimpleTalkList": [
+						{
+							"TextSpeed": 20,
+							"TalkSentenceID": 412210151,
+							"ProtectTime": 0.8
+						},
+						{
+							"TextSpeed": 20,
+							"TalkSentenceID": 412210155,
+							"ProtectTime": 0.8
+						},
+						{
+							"TextSpeed": 20,
+							"TalkSentenceID": 412210426,
+							"ProtectTime": 0.8
+						}
+					]
+				},
+				{
+					"$type": "RPG.GameCore.PlayOptionTalk",
+					"OptionList": [
+						{
+							"TalkSentenceID": 412210405,
+							"OptionIconType": "ChatContinueIcon",
+							"TriggerCustomString": "TalkSentence_412210405"
+						}
+					]
+				},
+				{
+					"$type": "RPG.GameCore.TriggerCustomString",
+					"CustomString": {
+						"Value": "Talk_412210107"
+					}
+				}
+			]
+		}
+	]
+}</pre>
+
+;(Unused &mdash; Talk_412210107)
+<pre>{
+	"$type": "RPG.GameCore.UpdateTreasureChallengeProgress",
+	"RaidTargetID": 412210101,
+	"IsIncrease": true,
+	"DeltaValue": 1
+}</pre>
 {{Dialogue End}}
 
-===Report back to Ziqiao===
+===Report back to Ziqiao{{subst:void|<!--412210108-->}}===
 {{Mission Description|type=adventure|location=Cloudford|update|The job is done, and you did even better than some senior employees that have been working for a few centuries.<br />Go back to Ziqiao quickly to receive your payment.}}
 {{Dialogue Start}}
-:{{tx}}
+;(If {{cx}}{{subst:void|<!--{"$type":"RPG.GameCore.ByLocalPlayerIsFakeAvatar","TaskEnabled":true,"IsClientOnly":true}-->}})
+<pre>{
+	"$type": "RPG.GameCore.SetMissionWayPoint",
+	"SubMissionID": 412210108,
+	"OverideMissionWayPointType": true,
+	"OverideWayPointGroupID": true,
+	"OverideWayPointEntityID": true,
+	"OverideWayPointShowRangeMin": true,
+	"OverideMapWaypointRange": true
+}</pre>
+;(Unused &mdash; OnEnter)
+<pre>{
+	"$type": "RPG.GameCore.SetMissionWayPoint",
+	"SubMissionID": 412210108,
+	"OverideMissionWayPointType": true,
+	"OverideWayPointGroupID": true,
+	"OverideWayPointEntityID": true,
+	"OverideWayPointShowRangeMin": true,
+	"OverideMapWaypointRange": true
+}</pre>
+
+;(Unused &mdash; OnClose_X101_01)
+<pre>{
+	"$type": "RPG.GameCore.ResetMissionWayPoint",
+	"SubMissionID": 412210108
+}</pre>
+
+;(Unused &mdash; OnClose_X101_02)
+<pre>{
+	"$type": "RPG.GameCore.ResetMissionWayPoint",
+	"SubMissionID": 412210108
+}</pre>
 {{Dialogue End}}
 
 ==Other Languages==

@@ -11,7 +11,7 @@ PageTitle=#Hanu's Great Heist#
 |chapter       = 
 |requirements  = {{subst:void|<!--Unknown: {"Type":"Manual"}-->}}
 |summary       = <!--official mission summary from Fate's Atlas-->
-|characters    = Trailblazer
+|characters    = Business Street Rep; Short-Film Narrator; SoulGlad Billboard; Spheroid Billboard; Trailblazer; Trendy Doll Billboard
 |startLocation = [[Penacony]] - [[Hanu's Great Heist]]
 |world         = Penacony
 |area          = Hanu's Great Heist
@@ -23,12 +23,13 @@ PageTitle=#Hanu's Great Heist#
 
 ==Steps==
 # Interact with the shrinking device
+# Go find the billboard staff on this floor
 # Head to the second floor
+# Go find the billboard staff on this floor
 # Head to the third floor
 # Pass the bridge made up of billboards
-# Defeat all enemies
 # Obtain the Hanu Rocket
-# Go find the billboard staff on this floor
+# Defeat all enemies
 
 <!--
 ==Gameplay Notes==
@@ -39,45 +40,143 @@ PageTitle=#Hanu's Great Heist#
 -->
 ==Dialogue==
 {{Stub Dialogue}}
-
-===Interact with the shrinking device===
+===Interact with the shrinking device{{subst:void|<!--802212101-->}}===
 {{Mission Description|type=adventure|location=Hanu's Great Heist|Filming for ''Brother Hanu's Great Heist'' has started. Complete filming missions according to the goals!}}
 {{Dialogue Start}}
+
+;(Unused &mdash; TV_Open)
+<pre>{
+	"$type": "RPG.GameCore.RequestGroupStateChange",
+	"TargetState": 1
+}</pre>
+:'''Business Street Rep:''' Brother Hanu's actor is ready to enter &mdash; please go ahead and get ready at the TV.
+
+:You let out a determined *hmph* &mdash; Brother Hanu never backs down.
+:'''Business Street Rep:''' Brother Hanu's actor is ready to enter &mdash; please go ahead and get ready at the TV.
+:'''Short-Film Narrator:''' "Pain and tears did not exist in dreams until Boss Stone came to the town. The ruthless Boss Stone drove factory workers relentlessly, demanding gems day and night. Within the factory walls, grievances echoed..."
+:'''Short-Film Narrator:''' "Brother Hanu, are you ready?"
+:{{DIcon|Arrow}} Let out a cool grunt.
+:'''Short-Film Narrator:''' "Then &mdash; attack! Raid the ruthless factory and save all the workers!"
 :{{tx}}
 {{Dialogue End}}
 
-===Head to the second floor===
-{{Mission Description|type=adventure|location=Hanu's Great Heist|update|Filming for ''Brother Hanu's Great Heist'' has started. Complete filming missions according to the goals!<br />Filming on this floor has concluded. Go to the next location!}}
-{{Dialogue Start}}
-:{{tx}}
-{{Dialogue End}}
-
-===Head to the third floor===
-{{Dialogue Start}}
-:{{tx}}
-{{Dialogue End}}
-
-===Pass the bridge made up of billboards===
-{{Mission Description|type=adventure|location=Hanu's Great Heist|update|Filming for ''Brother Hanu's Great Heist'' has started. Complete filming missions according to the goals!<br />You need to help staff members to escape on this floor. Defeat the enemies!}}
-{{Dialogue Start}}
-:{{tx}}
-{{Dialogue End}}
-
-===Defeat all enemies===
-{{Dialogue Start}}
-:{{tx}}
-{{Dialogue End}}
-
-===Obtain the Hanu Rocket===
-{{Dialogue Start}}
-:{{tx}}
-{{Dialogue End}}
-
-===Go find the billboard staff on this floor===
+===Go find the billboard staff on this floor{{subst:void|<!--802212104-->}}===
 {{Mission Description|type=adventure|location=Hanu's Great Heist|update|Filming for ''Brother Hanu's Great Heist'' has started. Complete filming missions according to the goals!<br />There are two staff members on this floor. Go find them!}}
 {{Dialogue Start}}
+{{Dialogue End}}
+
+===Head to the second floor{{subst:void|<!--802212107-->}}===
+{{Mission Description|type=adventure|location=Hanu's Great Heist|update|Filming for ''Brother Hanu's Great Heist'' has started. Complete filming missions according to the goals!<br />Filming on this floor has concluded. Go to the next location!}}
+{{Dialogue Start}}
+:'''Short-Film Narrator:''' "Seems like Brother Hanu has already found all the billboards on this level! It's time to head to the next domain."
+
 :{{tx}}
+{{Dialogue End}}
+
+===Go find the billboard staff on this floor{{subst:void|<!--802212110-->}}===
 {{Mission Description|type=adventure|location=Hanu's Great Heist|update|Filming for ''Brother Hanu's Great Heist'' has started. Complete filming missions according to the goals!<br />There are three staff members on this floor. Go find them!}}
+{{Dialogue Start}}
+{{Dialogue End}}
+
+===Head to the third floor{{subst:void|<!--802212114-->}}===
+{{Mission Description|type=adventure|location=Hanu's Great Heist|update|Filming for ''Brother Hanu's Great Heist'' has started. Complete filming missions according to the goals!<br />Filming on this floor has concluded. Go to the next location!}}
+{{Dialogue Start}}
+
+:'''Short-Film Narrator:''' "Seems like Brother Hanu has already found all the billboards on this level! Let's bounce!"
+
+:{{tx}}
+
+;(Unused &mdash; PlayMissionTalk)
+:{{tx}}
+;(Unused &mdash; PlayMissionTalk)
+:'''Trendy Doll Billboard:''' Argh, so heavy!
+::'''Trendy Doll Billboard:''' Go quickly! I can't hold it anymore!!!
+{{Dialogue End}}
+
+===Pass the bridge made up of billboards{{subst:void|<!--802212118-->}}===
+{{Mission Description|type=adventure|location=Hanu's Great Heist|update|Filming for ''Brother Hanu's Great Heist'' has started. Complete filming missions according to the goals!<br />You need to help staff members to escape on this floor. Defeat the enemies!}}
+{{Dialogue Start}}
+
+{{Dialogue End}}
+
+===Obtain the Hanu Rocket{{subst:void|<!--802212122-->}}===
+{{Dialogue Start}}
+
+{{Dialogue End}}
+
+===Defeat all enemies{{subst:void|<!--802212119-->}}===
+{{Dialogue Start}}
+:'''Spheroid Billboard:''' Just pull the trigger and you'll start firing at the pursuers! Pewpewpew!!!
+:'''SoulGlad Billboard:''' Aim true, and avoid friendly fire on the billboards that are covering you!
+;(If {{F|Ending}} is equal to 0 and {{F|Ending}} is equal to 0)
+<pre>{
+	"$type": "RPG.GameCore.SetAdvAchievement",
+	"QuestID": 4053208
+}</pre>
+;(If {{F|Ending}} is equal to 1)
+;(If {{F|Ending}} is not equal to 1)
+:;(If {{F|Ending}} is equal to 1)
+:;(If {{F|Ending}} is not equal to 1)
+:{{tx}}
+;(If {{F|BoardHit_01}} is equal to 1 and {{F|BoardHitCheck_1}} is equal to 0)
+<pre>{
+	"$type": "RPG.GameCore.UpdateTreasureChallengeProgress",
+	"RaidTargetID": 443050038,
+	"IsIncrease": true,
+	"DeltaValue": 1
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.SetFloorSavedValue"
+}</pre>
+;(If {{F|BoardHit_02}} is equal to 1 and {{F|BoardHitCheck_2}} is equal to 0)
+<pre>{
+	"$type": "RPG.GameCore.UpdateTreasureChallengeProgress",
+	"RaidTargetID": 443050038,
+	"IsIncrease": true,
+	"DeltaValue": 1
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.SetFloorSavedValue"
+}</pre>
+;(If {{F|BoardHit_03}} is equal to 1 and {{F|BoardHitCheck_3}} is equal to 0)
+<pre>{
+	"$type": "RPG.GameCore.UpdateTreasureChallengeProgress",
+	"RaidTargetID": 443050038,
+	"IsIncrease": true,
+	"DeltaValue": 1
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.SetFloorSavedValue"
+}</pre>
+;(If {{F|BoardHit_04}} is equal to 1 and {{F|BoardHitCheck_4}} is equal to 0)
+<pre>{
+	"$type": "RPG.GameCore.UpdateTreasureChallengeProgress",
+	"RaidTargetID": 443050038,
+	"IsIncrease": true,
+	"DeltaValue": 1
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.SetFloorSavedValue"
+}</pre>
+;(If {{F|BoardHit_05}} is equal to 1 and {{F|BoardHitCheck_5}} is equal to 0)
+<pre>{
+	"$type": "RPG.GameCore.UpdateTreasureChallengeProgress",
+	"RaidTargetID": 443050038,
+	"IsIncrease": true,
+	"DeltaValue": 1
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.SetFloorSavedValue"
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.UpdateTreasureChallengeProgress",
+	"RaidTargetID": 443050042,
+	"IsIncrease": true,
+	"DeltaValue": 1
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.SetFloorSavedValue"
+}</pre>
 {{Dialogue End}}
 
 ==Other Languages==

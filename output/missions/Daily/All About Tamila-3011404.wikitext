@@ -11,7 +11,7 @@ PageTitle=#All About Tamila#
 |chapter       = 
 |requirements  = {{subst:void|<!--Unknown: {"Type":"Manual"}-->}}
 |summary       = <!--official mission summary from Fate's Atlas-->
-|characters    = Trailblazer
+|characters    = Agnes; Amo; Celine; Chavez; Child Onlooker; Dominic; Female Onlooker; Furdo; Lavonne; Lila; Male Onlooker; Manya; Nika; Senior Onlooker; Tamila; Trailblazer; Wallace
 |startLocation = [[Jarilo-VI]] - [[Administrative District]]
 |world         = Jarilo-VI
 |area          = Administrative District
@@ -36,22 +36,328 @@ PageTitle=#All About Tamila#
 ==Dialogue==
 {{Stub Dialogue}}
 
-===Speak with Celine in front of the Golden Theater===
+===Speak with Celine in front of the Golden Theater{{subst:void|<!--301140401-->}}===
 {{Mission Description|type=daily|location=Administrative District|Celine, the voice actress, seems to be distressed about something.<br />Speak with her and see if there is anything you can help her with.}}
 {{Dialogue Start}}
-:{{tx}}
+
+
+;(Talk to Agnes)
+;(If {{cx}}<!--during performance 501023801-->)
+::'''Agnes:''' "This sweet taste is like the first drop of water from the cracks of the ice when the river unfreezes after the Solwarm Festival, a bit of warmth amidst the bitter cold..."
+::'''Agnes:''' What do you think? Doesn't this description give you an appetite?
+::{{DIcon|Arrow}} ...Are you asking me?
+:::'''Agnes:''' Yeah, do you see anyone else?
+::{{DIcon|Arrow}} ...Maybe?
+:::'''Agnes:''' You don't sound so convinced. I understand, you are saying "No."
+::{{DIcon|Arrow}} Not a chance.
+:::'''Agnes:''' Well, I can't blame you &mdash; it's my own problem. My writing is not good enough.
+::'''Agnes:''' Darn it. What's the point of being a food journalist if I can't use words to construct a sense of taste and utilize synesthesia? By the way, while I'm talking with you, I have another paragraph here. Let me read it to you.
+::'''Agnes:''' "The rich sauces are like an invading army, completely overwhelming the crisp and fresh taste of the salmon. The gentle aroma of fish has no choice but to surrender in defeat..."
+::'''Agnes:''' How's that feel? A little too wordy?
+::{{DIcon|Arrow}} You should write a novel.
+::{{DIcon|Arrow}} Yes, a lot of unnecessary details.
+::'''Agnes:''' I can't help myself, I used to be a literary journalist. Every day I was trying to add more adjectives to the sentence anywhere I could fit them. I wouldn't get my bonus if readers can easily deduce the subject, predicate, and object within three lines.
+::'''Agnes:''' But then a new girl came and was better at filling in words than I was, so I made a career change. Have you read the cuisine section of the ''Crystal Daily''? I am the author of that section.
+::'''Agnes:''' Honestly, I don't want to include all that garish garbage in my writing anyway...
+::'''Agnes:''' I'm gonna put more work into honing my rhetorical skills. Well, enough about me &mdash; how can I help you?
+;(If {{cx}}<!--not during performance 501023801-->)
+:<pre>{
+	"$type": "RPG.GameCore.PlayMultiVoiceTalk",
+	"TalkSentenceID": 501023871,
+	"KeepDisplay": true
+}</pre>
+::'''Agnes:''' Sorry, still scrambling to finish my article. Did one paragraph today, but I want to bin the whole thing already...
+::'''Agnes:''' Need to put more work into honing my rhetorical skills. How may I help?
+
+;(Talk to Chavez)
+;(If {{cx}}<!--during performance 501027101-->)
+::'''Chavez:''' Young person, look over here! Just two minutes of your time can save you from future losses!
+::'''Chavez:''' Has a sneaky kid with dark blue hair ever come up to talk to you?
+::{{DIcon|Arrow}} ...It rings a bell.
+:::'''Chavez:''' You are likely a victim of the "Dark-Blue Scam"!
+::{{DIcon|Arrow}} Isn't that Sampo?
+:::'''Chavez:''' ... Sampo? You've been scammed! That's just an alias. That means... you're a victim of the Dark-Blue Scam!
+::{{DIcon|Arrow}} I've never seen someone like that.
+:::'''Chavez:''' You are likely a potential victim of the Dark-Blue Scam!
+::'''Chavez:''' Take my advice, that guy is a serial scammer. Don't believe anything he says!
+::'''Chavez:''' Here, take this. This is a tutorial on preventing scams written by the Dark-Blue Scam Victims Association. Read it carefully and if you have any questions, come to me!
+;(If {{cx}}<!--not during performance 501027101-->)
+:<pre>{
+	"$type": "RPG.GameCore.PlayMultiVoiceTalk",
+	"TalkSentenceID": 501027142,
+	"KeepDisplay": true
+}</pre>
+;(Unused &mdash; Wait_Option_5010271_18)
+:{{DIcon|Arrow}} Can I ask a question...?
+::'''Chavez:''' Go ahead! It's our responsibility to help prevent the public from being scammed.
+::{{DIcon|Talk}} ...the Dark-Blue Scam Victims Association?
+:::'''Chavez:''' That's right! The members of the Association are all former victims. We are united to share what we have learned and help the public by raising awareness!
+:::'''Chavez:''' The guide goes over case studies of those who were scammed by the blue-haired swindler. It is evidence of his evil crimes, a painful lesson that we predecessors suffered.
+::;(Return to previous option selection)
+::{{DIcon|Talk}} ...How were you scammed?
+:::'''Chavez:''' The first time I met that guy, he asked if I wanted a "parallel universe printer."
+:::'''Chavez:''' Well, I asked him how the printer works... and he immediately started rambling on a bunch of smorgasbord about science stuff. I was almost caught up in it.
+:::'''Chavez:''' Terms like parallel universe, Aeons, and parity anomaly... Swindlers love to use these words related to the universe and Aeons to scam people!
+:::'''Chavez:''' I didn't believe him until he used it to print money. He made two bills with the exact same serial number...
+:::{{DIcon|Arrow}} How much did you pay?
+::::'''Chavez:''' Uh... the price isn't important. What's important is that you need to be careful, so the same scam doesn't happen to you.
+:::{{DIcon|Arrow}} Did the printer work?
+::::'''Chavez:''' Of course not, otherwise why do you think I would have joined the association?
+:::'''Chavez:''' Ahem, sometime later, after the counterfeiting scam, I bumped into that same blue-haired guy again in an alley in the Commercial District.
+:::'''Chavez:''' I should have had the Silvermane Guards arrest him, but I was so angry and I needed an explanation...
+:::'''Chavez:''' Instead, he asked me with a straight face, "Were you staring at the printer?"
+:::'''Chavez:''' He accused me of not reading the manual and wasting such a genius invention. He even offered to refund the full payment so that he could find another buyer for the parallel universe printer.
+:::'''Chavez:''' He also said, "If the operator keeps staring at the printer, the parallel universe transmission can't happen. The only way to avoid interfering with the transmission process is to observe it with the help of an aether lens."
+:::{{DIcon|Arrow}} ...So you bought an aether lens?
+:::'''Chavez:''' Doesn't that sound reasonable? So I was tricked again by his apparent sincerity...
+:::'''Chavez:''' Now I know that nine out of ten people who try to associate their products with any kind of parallel universe theory are scammers!
+:::{{DIcon|Arrow}} Parallel universes actually exist.
+::::'''Chavez:''' Haha, are you kidding me? Do you really expect me to believe that?
+::::'''Chavez:''' Or... are you working with the blue-haired guy?
+::::'''Chavez:''' Get out! If you don't leave, I'll have Silvermane Guards come and arrest you!
+:::;(Return to previous option selection)
+:::{{DIcon|Arrow}} Wow, I am soo scared.
+::::'''Chavez:''' Laugh at me if you want, just remember what I told you... Be careful with anything related to parallel universes!
+:::;(Return to previous option selection)
+::{{DIcon|Exit}} That's all.
+
+;(Talk to Dominic)
+:'''Dominic:''' Normal it is, for you to have doubts in your hearts &mdash; because you look around yourselves, and you can't SEE Preservation anywhere; you cast your eyes hither and thither, and nary do you see ANY evidence of the very existence of Preservation.
+:'''Dominic:''' ...And yet comes this very day, I shall resolve your doubts and let you feel the true grace of Preservation, let you marvel at the almighty will of the Architects...
+:{{DIcon|Talk}} Keep listening...
+::'''Dominic:''' ...Preservation is the embodiment of Qlipoth, and is with us all the time. It's the secret force that imperceptibly shapes our personalities, impacting all the important decisions that we make during our lives...
+::'''Dominic:''' ...The reason why you struggle so to find it, is because Preservation's grace is integrated with the world we know, diffused throughout the air we breathe, refracted through the light we see. It has gently embraced us in its bosom since the very dawn of our existence.
+::'''Dominic:''' The Admonishments of the Supreme Guardian remind us to never take Preservation's grace for granted! We must inherit the spirit of our Architect ancestors: To persevere and survive in this world of ours, and to bravely defy any calamities we face!
+::'''Dominic:''' The Fragmentum and the Eternal Freeze &mdash; These are just bumps in the road on the path to carrying out the will of Preservation! O brothers and sisters, stand together with thine Architects and our Supreme Guardian! Follow in her footsteps &mdash; for victory is our destiny!
+:;(Return to previous option selection)
+:{{DIcon|Talk}} Listen to what the crowd is saying.
+::'''Male Onlooker:''' Hear that? What an impassioned speech! Praise the Architects, as his words have reinvigorated my lust for life...
+::'''Female Onlooker:''' ...Is it really as great as you say? If you ask me, these Architects just say the same empty rhetoric day in day out &mdash; and if you've got time for all this bluster, you've got time to help improve everyone's living conditions around here...
+::'''Child Onlooker:''' Preservation! O praise!
+::'''Senior Onlooker:''' I've been off for a big walk, and come back. It's still going!? Kids these days, they never shut up.
+:;(Return to previous option selection)
+:{{DIcon|Exit}} That's enough for me.
+
+;(Talk to Furdo)
+:{{DIcon|Talk}} You seem upset.
+::'''Furdo:''' Huh? Is it that obvious?
+::'''Furdo:''' Dealing with a bunch of ignorant old people, every day &mdash; you would be annoyed too if you were me.
+::{{DIcon|Arrow}} What kind of legal issues do you help them with?
+::'''Furdo:''' Legal issues? You think too highly of the people of Belobog. What they come to me for has nothing to do with the law. It's all complaints about daily life.
+::'''Furdo:''' It's always the same thing. The complainant tells me they have been altruistic and taken the big picture into consideration and the offending party has taken advantage of them and is being ungrateful.
+::'''Furdo:''' You can hear thousands of stories like this at Solwarm Festival family gatherings. Those stories are, in the end, moral blackmail, which I'm not interested in at all.
+::'''Furdo:''' But I am a legal practitioner after all, so it is my duty to help the public get to know the law. Every time it gets to this part, they start to pretend like they don't understand me.
+::'''Furdo:''' But who's to blame? After all, the law is always fair and impartial, showing favor to no one?
+::{{DIcon|Arrow}} Wow. You have a hard job.
+:::'''Furdo:''' I know, right!? I can't go on being a Roaming Judge for a second longer.
+::;(Return to previous option selection)
+::{{DIcon|Arrow}} Just hearing about it makes my head spin.
+:::'''Furdo:''' I know, right!? I can't go on being a Roaming Judge for a second longer.
+::;(Return to previous option selection)
+:{{DIcon|Talk}} What kind of cases do you consider important?
+::'''Furdo:''' Corruption-related, with evil organizations or personnel involved. Or at least arms smuggling... or scams...
+::'''Furdo:''' Forget it. Just pretend like I'm talking nonsense. Belobog is too safe to have cases like that. Even if there is a big case, it's out of my reach...
+:;(Return to previous option selection)
+:{{DIcon|Exit}} That's all.
+
+;(Talk to Wallace)
+:'''Wallace:''' I'm all ears.
+:{{DIcon|Talk}} Are you rich?
+::'''Wallace:''' Oh, I wouldn't say I'm rich. I'm... comfortable.
+::'''Wallace:''' I have a couple of properties in the Administrative District that require maintenance. I have to pay taxes for them. But I'm far too lazy to rent them out &mdash; I mean, time is money! Besides, they're full of priceless relics...
+:;(Return to previous option selection)
+:{{DIcon|Talk}} You're into ancient relics?
+::'''Wallace:''' Not exactly. I just like to own them.
+::'''Wallace:''' For example, a while back Lord Simon told me he obtained a particularly rare gold watch, said to be a relic left behind by the third supreme guardian.
+::'''Wallace:''' How could I miss out on such a rarity! So I offered him three houses for it...
+:;(Return to previous option selection)
+:{{DIcon|Exit}} I think I get the picture.
+
+;(Talk to Lavonne)
+;(If {{cx}}<!--during performance 501023901-->)
+::'''Lavonne:''' Great location in the outskirt of the city, energy and water already sorted out. For this fully furnished property with fabulous interior design, you need to bring nothing but yourself! High demand, limited supply! I'd want to take one for myself! Hey, you there! What are you waiting for?
+::{{DIcon|Arrow}} I'm waiting for you to finish.
+:::'''Lavonne:''' What else can be said? The price is unbeatable! I have friends in high places. You get my drift? My sources have told me that the price of this property will only go up in the next two years.
+:::'''Lavonne:''' An increase of thirty percent... no, forty! To be honest with you, I'm being conservative here.
+:::'''Lavonne:''' The actual number is at least this much. Don't look so scared. See what I mean here? I'm trying to keep it on the down low, because...
+::{{DIcon|Arrow}} I'm not looking to buy a property.
+:::'''Lavonne:''' Sure, sure, young people are not in a hurry. I get it. Let's put it this way: From the perspective of an investor, we are not talking about a house to live in. It's an asset!
+:::'''Lavonne:''' If I were you, I wouldn't miss out on this opportunity. Buy it now, wait for the price to go up and sell it. Easy money!
+:::'''Lavonne:''' Tell you this, if you buy the property and decide to sell it at some point, no matter if you find a potential buyer, I'll list it for you 13% higher than the current price. You have my word.
+::'''Lavonne:''' Trust me, I am the best local property agent. There hasn't been a house that I couldn't sell!
+::'''Lavonne:''' I've probably said enough. Anyway, think about my proposal. Don't make a decision that you will someday regret.
+;(If {{cx}}<!--not during performance 501023901-->)
+:<pre>{
+	"$type": "RPG.GameCore.PlayMultiVoiceTalk",
+	"TalkSentenceID": 501023980,
+	"KeepDisplay": true
+}</pre>
+::'''Lavonne:''' Or is there anything else you want to talk about?
+
+;(Talk to Lila)
+:<!--0.3-second delay-->
+:{{DIcon|Talk}} What creatures are there in Belobog?
+::'''Lila:''' Cats and dogs. There are wolves and birds in the wild... That's about it. You'll have to check out the museum's specimens to see what other kinds of animals there were in the past.
+::'''Lila:''' I heard that hundreds of years ago, Belobog had domesticated bears, and direwolves roamed the wild. They're no longer around though.
+::'''Lila:''' But I believe there are other animals out there that survived the Eternal Freeze. I just have no way to prove it. Now, I have no choice but to study humans...
+::'''Lila:''' Did you know that humans in Belobog have at least three different origins? But you don't seem to belong to any one of them. That's why I was so surprised back then.
+::{{DIcon|Arrow}} You must be mistaken.
+::{{DIcon|Arrow}} You're right, I'm an alien.
+::'''Lila:''' Haha, I must've been researching too much... Ever since I got my hands on that book, my head's been in the clouds.
+::{{DIcon|Arrow}} What book?
+:::'''Lila:''' This ''Underground Encyclopedia of Zoology'' was apparently brought back from the underground by a Silvermane Guard. It talks about a lot of strange creatures.
+:::'''Lila:''' Ever since I finished the book, I couldn't stop thinking about how these animals must look like.
+:::'''Lila:''' I really want to know more about these crystalline lizards, geomarrow olms, funeral worms... I want to know what they eat, how they reproduce... everything.
+::;(Return to previous option selection)
+::{{DIcon|Arrow}} In the clouds?
+:::'''Lila:''' This ''Underground Encyclopedia of Zoology'' was apparently brought back from the underground by a Silvermane Guard. It talks about a lot of strange creatures.
+:::'''Lila:''' Ever since I finished the book, I couldn't stop thinking about how these animals must look like.
+:::'''Lila:''' I really want to know more about these crystalline lizards, geomarrow olms, funeral worms... I want to know what they eat, how they reproduce... everything.
+::;(Return to previous option selection)
+:{{DIcon|Talk}} Why don't you go look for them?
+::'''Lila:''' I've been outside the city a few times for journalism, but there wasn't enough spare time to do ecological research then.
+::'''Lila:''' But recently, I met a benefactor who is willing to finance my expedition as long as his requirements are met. He's even willing to take care of the expedition permits and formalities as well.
+::'''Lila:''' I'm already making preparations for the expedition.
+:;(Return to previous option selection)
+:{{DIcon|Exit}} That's all questions I have.
+::'''Lila:''' If you see any rare species in the future, remember to tell me about them!
+
+;(Talk to Manya)
+:'''Manya:''' I just said I'm on break... Fine, if you insist.
+:{{DIcon|Talk}} What kind of work do you do exactly?
+::'''Manya:''' Excellent question! My job involves a little bit of everything, but vital to keeping things running smoothly in Belobog! You could say I'm the unsung hero of the city.
+::'''Manya:''' I'm responsible for grassroots affairs in the Administrative District, listening to basic requests from people, and solving day-to-day issues.
+::{{DIcon|Talk}} In that case, can you hear out my request?
+::'''Manya:''' Of course! But you will need to reserve a slot. My work hours are from 9:00 AM to 12:00 PM, and 2:00 PM to 5:00 PM. I handle administrative and civil affairs during these times.
+::'''Manya:''' I'm currently on break. As a public official, separating professional and private time is of basic importance.
+:;(Return to previous option selection)
+:{{DIcon|Talk}} How do I make an official appointment?
+::'''Manya:''' Please fill out a form at counter 236 on the second floor of Qlipoth Fort. Then have a staff member stamp it at window 35 on the third floor.
+::'''Manya:''' After stamping, please head to window 155 on the first floor and wait in line for the proof of appointment. The formal processing usually takes one month after the appointment has been made.
+::'''Manya:''' To inquire about the specific processes, please consult the window staff when making the appointment.
+:;(Return to previous option selection)
+:{{DIcon|Talk}} You're just trying to slack off, aren't you?
+::'''Manya:''' What would make you think that? But I don't blame you. Many have the same misunderstanding, thinking this is just a job where you can kick your feet up.
+::'''Manya:''' A job where I just "Clock in, drink tea, read the newspaper, chit-chat with colleagues, and stare at the time, waiting to get off." But that's all nonsense.
+::'''Manya:''' Please lose these false impressions of grassroots public officials. Our days are busy ones indeed.
+:;(Return to previous option selection)
+:{{DIcon|Exit}} Nothing else.
+
+;(Talk to Nika)
+;(If {{cx}}<!--during performance 501024001-->)
+::'''Nika:''' Excuse me! Sorry&mdash;Yeah, sorry to bother you. Can I take a moment of your time?
+::'''Nika:''' Can I ask you a question, about literature?
+::{{DIcon|Arrow}} Of course.
+:::'''Nika:''' Just one of those general questions. I'd like to hear your take on it.
+::{{DIcon|Arrow}} Literature?
+:::'''Nika:''' Just one of those general questions. I'd like to hear your take on it.
+::{{DIcon|Arrow}} (Pretend you didn't notice her)
+:::'''Nika:''' Wait a minute! It won't take long.
+::'''Nika:''' I'll get straight to it. How would you rate these two books, ''Snow Plains'' and ''The Three Trebles''?
+::{{DIcon|Arrow}} I haven't read either.
+:::'''Nika:''' What? That's a pity. These are must-reads on the list of "Books You Should Read in Belobog."
+:::'''Nika:''' Well, don't mind me... I guess I can't expect everyone to be as educated...
+::{{DIcon|Arrow}} (Make up a generic literary critique)
+:::'''(Trailblazer):''' Powerful, stylish, and full of unexpected twists and turns, these two books demonstrated with their refined language the strengths of both authors.
+:::'''(Trailblazer):''' Their attempt to question and explore the spiritual side of mankind is commendable but unfortunately falls short compared with some of the greatest works of literature.
+:::'''Nika:''' Amazing! Words of wisdom from a true master.
+::'''Nika:''' Let me introduce myself. I am Nika with the ''Crystal Daily''. Sorry to bother you but we are collecting petitions from readers to lift the ban on the ''Tale of the Winterlands''.
+::'''Nika:''' It would be wonderful if you could sign here. Of course, feel free to raise any concerns...
+::'''Nika:''' Ah yes, as a gesture of goodwill, I'll give you ''The Seven Wonders of Belobog'' as a gift!
+;(If {{cx}}<!--not during performance 501024001-->)
+:<pre>{
+	"$type": "RPG.GameCore.PlayMultiVoiceTalk",
+	"TalkSentenceID": 501024077,
+	"KeepDisplay": true
+}</pre>
+
+;(Talk to Celine)
+;(If {{cx}}<!--during performance 501026801-->)
+::'''Celine:''' Ah, ah, ah, ah! La, la, la, la!
+::'''Celine:''' Sorry, I didn't notice there were people around. I'm not disturbing you, am I?
+::{{DIcon|Arrow}} You have a great voice.
+::{{DIcon|Arrow}} I wasn't bothered at all.
+::'''Celine:''' Okay, I shall continue warming up my voice... Oh, no! The play isn't open to the public yet. I'd better not spoil it. I am so forgetful!
+::'''Celine:''' Anyway, the play is still in rehearsal. I'm the leading.... actress' voice. If you like the song, we can meet again in the theater.
+;(If {{cx}}<!--not during performance 501026801-->)
+:<pre>{
+	"$type": "RPG.GameCore.PlayMultiVoiceTalk",
+	"TalkSentenceID": 501026845,
+	"KeepDisplay": true
+}</pre>
+::'''Celine:''' I can feel something deep in the harmony... I know I'm still young, but I'm sure he's the one... la la la...
+::'''Celine:''' Huh. Are you here for my singing again? That won't do. You need to enjoy the performance in the theater... Or are you here for something else?
+
+;(Talk to Tamila)
+:<!--0.3-second delay-->
+:'''Tamila:''' As you can probably tell, my voice is rather low-pitched. The director is not very happy about that, so the theater hired a voice actress to "assist" me.
+:'''Tamila:''' She is impeccable indeed... but I too was professionally trained. Never missed a day of practice.
+:'''Tamila:''' Now I have to lip sync and act as if in a silent film. I can't help but think that maybe one day they'll get rid of me altogether...
+:'''Tamila:''' What do you think I should do?
+:{{DIcon|Talk}} Work on your acting.
+::'''Tamila:''' *sigh* That won't do. People come to musicals for the songs.
+::'''Tamila:''' How embarrassing would it be if a musical performer can't sing with her own voice? It's ridiculous! I'll be like thespians who can't remember their lines and need others to read out the script for them.
+::{{DIcon|Arrow}} Why not try acting in a play?
+::'''Tamila:''' Both are theatrical arts, true. But the skills they require are hardly transferable.
+::'''Tamila:''' Plus, musicals have always been my passion... I don't want to simply give up like this. I still want to give it a go.
+:;(Return to previous option selection)
+:{{DIcon|Talk}} Maybe find a project that suits your voice better.
+::'''Tamila:''' I'm afraid it's not that easy.
+::'''Tamila:''' You might not know this, but musical artists only look good on stage for a very limited period of time.
+::'''Tamila:''' Once their physiques change or their voice becomes coarse, they have to bid the stage farewell. They'll call it "spending more time with the family," but everyone knows that's the end of their career.
+::{{DIcon|Arrow}} You'll have to challenge that.
+:::'''Tamila:''' Even if the theater agreed with me, the audience would not buy it. They have been quite honest in likes and dislikes.
+:::'''Tamila:''' But you do have a point... people should be less judgmental.
+::;(Return to previous option selection)
+::{{DIcon|Arrow}} There are other types of musicals you can try.
+:::'''Tamila:''' The theater manager is convinced that the audience is only interested in love songs aimed at teens. But it's possible that people's taste has changed and the management failed to grasp it.
+:::'''Tamila:''' You know what? I'll see if I can bring some artists together and try some new things. How does that sound?
+::;(Return to previous option selection)
+:{{DIcon|Talk}} Need to find a way to get your voice assist fired.
+::'''Tamila:''' No, I want to keep my job fair and square. I have no interest in theater politics.
+::'''Tamila:''' She is one of us after all. I hope she will see her dream come true on stage one day.
+:;(Return to previous option selection)
+:{{DIcon|Exit}} I can't think of a better way to help.
+::'''Tamila:''' No worries. Thanks for listening to me. I feel much better already. Please keep this conversation a secret.
+
+;(Talk to Amo)
+;(If {{cx}}<!--during performance 501024201-->)
+::'''Amo:''' ...
+::{{DIcon|Arrow}} What are you looking at?
+:::'''Amo:''' Things that were, things that are, and things that are yet to happen.
+::{{DIcon|Arrow}} What's so special about the trashcan?
+:::'''Amo:''' Nothing. It is plain and lacks character, just like me.
+::'''Amo:''' Ah, I am good for nothing. I am destined to end up in a trashcan.
+::{{DIcon|Arrow}} Don't be so harsh on yourself.
+:::'''Amo:''' You misunderstood me. I am pondering about life, value, and eternity.
+::{{DIcon|Arrow}} You're quite a poet.
+:::'''Amo:''' Thank you. That was indeed my occupation.
+::'''Amo:''' I forgot to introduce myself. My name is Amo. I write things for a living. Sorry for blocking your way... Hm? Can I help you with anything?
+;(If {{cx}}<!--not during performance 501024201-->)
+:<pre>{
+	"$type": "RPG.GameCore.PlayMultiVoiceTalk",
+	"TalkSentenceID": 501024272,
+	"KeepDisplay": true
+}</pre>
+::'''Amo:''' Oh, don't mind me. I was completely lost in that sense of belonging. I remember you, friend. What brings you here?
 {{Dialogue End}}
 
-===Listen in on Tamila's conversation with other people at the bookstore===
+===Listen in on Tamila's conversation with other people at the bookstore{{subst:void|<!--301140402-->}}===
 {{Mission Description|type=daily|location=Administrative District|update|The voice actress, Celine, is very interested in the musical star Tamila's way of life.<br />She asked you to observe Tamila's behavior at the Overworld's bookstore.<br />What an ambitious aspiring actress. Help her to the best of your abilities.}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(If {{cx}}{{subst:void|<!--{"$type":"RPG.GameCore.ByTargetNpcExists","GroupID":15,"GroupNpcID":400014,"TaskEnabled":true,"IsClientOnly":true}-->}})
+<pre>{
+	"$type": "RPG.GameCore.DestroyNPC",
+	"GroupID": 15,
+	"GroupNpcID": 400014
+}</pre>
 {{Dialogue End}}
 
-===Report what you found to Celine===
+===Report what you found to Celine{{subst:void|<!--301140403-->}}===
 {{Mission Description|type=daily|location=Administrative District|update|The voice actress, Celine, is very interested in the musical star Tamila's way of life.<br />You overheard a fun conversation between Tamila and another person, so go and tell Celine right away.}}
 {{Dialogue Start}}
-:{{tx}}
+
 {{Dialogue End}}
 
 ==Other Languages==

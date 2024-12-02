@@ -36,7 +36,8 @@ const list = Object.values(loadingData).sort((a, b) => {
 
 for (const load of list) {
 	const name = textMap.getText(load.TitleTextmapID)
-	output.push(`* <section begin="${name.replaceAll('"', '&quot;')}" />{{Loading Screen|${textMap.getText(load.TitleTextmapID)}|${textMap.getText(load.DescTextmapID).replaceAll('\n', '<br />')}}}<section end="${name.replaceAll('"', '&quot;')}" />`)
+	output.push(`* '''${textMap.getText(load.TitleTextmapID)}:''' <section begin="${name.replaceAll('"', '&quot;')}" />${textMap.getText(load.DescTextmapID).replaceAll('\n', ' ')}<section end="${name.replaceAll('"', '&quot;')}" />`)
+	// output.push(`* <section begin="${name.replaceAll('"', '&quot;')}" />{{Loading Screen|${textMap.getText(load.TitleTextmapID)}|${textMap.getText(load.DescTextmapID).replaceAll('\n', '<br />')}}}<section end="${name.replaceAll('"', '&quot;')}" />`)
 }
 
 await writeFile('./output/loading_screens.wikitext', output.join('\n'))

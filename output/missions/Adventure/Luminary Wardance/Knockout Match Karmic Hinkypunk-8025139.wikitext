@@ -7,11 +7,11 @@ PageTitle=#Knockout Match: Karmic Hinkypunk#
 |title         = 
 |image         = <!--Mission Knockout Match Karmic Hinkypunk.png-->
 |type          = Adventure
-|event_name    = 
+|event_name    = Luminary Wardance
 |chapter       = Luminary Wardance
 |requirements  = {{subst:void|<!--Unknown: {"Type":"Manual"}-->}}
 |summary       = <!--official mission summary from Fate's Atlas-->
-|characters    = Trailblazer
+|characters    = Carmella; Luka; Trailblazer
 |startLocation = [[The Xianzhou Luofu]] - [[Skysplitter]]
 |world         = The Xianzhou Luofu
 |area          = Skysplitter
@@ -19,7 +19,7 @@ PageTitle=#Knockout Match: Karmic Hinkypunk#
 |next          = Even When Cheers Fade: Chapter 4
 |rewards       = Wardance Sword Badge*5
 }}
-'''''Knockout Match: Karmic Hinkypunk''''' is an [[Adventure Mission]] on [[The Xianzhou Luofu]] in the chapter [[Luminary Wardance]].
+'''''Knockout Match: Karmic Hinkypunk''''' is an Event [[Adventure Mission]] from the [[Luminary Wardance]] event.
 
 ==Steps==
 # Step into the ring and get those points!
@@ -33,11 +33,230 @@ PageTitle=#Knockout Match: Karmic Hinkypunk#
 -->
 ==Dialogue==
 {{Stub Dialogue}}
-
-===Step into the ring and get those points!===
+===Step into the ring and get those points!{{subst:void|<!--802513901-->}}===
 {{Mission Description|type=adventure|location=Skysplitter|The rules of the Knockout Matches are easy &mdash; Just defeat opponents and win points<br />Contestant Luka just needs to do three things: Win, win, and keep winning!}}
 {{Dialogue Start}}
+
+;(Talk to Luka)
+:'''Luka:''' I am indebted to Mr. Tail. No matter the reason for his participation, I will give my best too. This is my way of repaying him. I'm ready to step onto the arena!
+:{{DIcon|Arrow}} Begin competition.
+:<pre>{
+	"$type": "RPG.GameCore.SetPerformanceResult",
+	"Value": 1
+}</pre>
+:{{DIcon|Exit}} Make some preparations.
+
+;(Unused &mdash; G157_StartBattle)
+<pre>{
+	"$type": "RPG.GameCore.TriggerFightFestLineupInMission",
+	"RaceID": 2009,
+	"ScoreRaceSpecialInviteEventID": 419109,
+	"OnConfirm": [
+		{
+			"$type": "RPG.GameCore.AddStreamingSource",
+			"StreamingSource": {
+				"CenterName": "Mission_FightFestBattlePerformance",
+				"AreaName": "LevelArea_P20242_F20242001_G19",
+				"AnchorName": "Anchor7"
+			}
+		},
+		{
+			"$type": "RPG.GameCore.SetFloorCustomFloat",
+			"Name": {
+				"Value": "FCV_2.5_Arena"
+			},
+			"Value": {
+				"IsDynamic": false,
+				"FixedValue": {
+					"Value": 1
+				}
+			}
+		},
+		{
+			"$type": "RPG.GameCore.SetFloorCustomFloat",
+			"Name": {
+				"Value": "FCV_2.5_Throng"
+			},
+			"Value": {
+				"IsDynamic": false,
+				"FixedValue": {
+					"Value": 1
+				}
+			}
+		},
+		{
+			"$type": "RPG.GameCore.TriggerPerformance",
+			"ValueSource": {},
+			"PerformanceType": "D",
+			"PerformanceID": 802513220
+		},
+		{
+			"$type": "RPG.GameCore.TriggerFightFestBattleInMission"
+		},
+		{
+			"$type": "RPG.GameCore.RemoveStreamingSource",
+			"StreamingSource": "Mission_FightFestBattlePerformance"
+		},
+		{
+			"$type": "RPG.GameCore.SetFloorCustomFloat",
+			"Name": {
+				"Value": "FCV_2.5_Arena"
+			},
+			"Value": {
+				"IsDynamic": false,
+				"FixedValue": {
+					"Value": 0
+				}
+			}
+		}
+	]
+}</pre>
+:'''Luka:''' Mr. Tail? Why is he here participating in the Wardance?
+:'''Carmella:''' Gave himself a very strange team name... Karmic Hinkypunk, sounds like a demon from a Xianzhou fantasy novel...
+:{{DIcon|Arrow}} Life is hard. Tail has to hustle.
+::'''Carmella:''' Really? The salary at the Ten-Lords Commission shouldn't be too shabby.
+:{{DIcon|Arrow}} Maybe he also has a warrior's dream.
+::'''Carmella:''' Do heliobi have such dreams too? I can get behind that.
+:'''Luka:''' I am indebted to Mr. Tail. No matter the reason for his participation, I will give my best too. This is my way of repaying him. I'm ready to step onto the arena!
+:{{DIcon|Arrow}} Begin competition.
+:<pre>{
+	"$type": "RPG.GameCore.SetPerformanceResult",
+	"Value": 1
+}</pre>
+:{{DIcon|Exit}} Make some preparations.
+;(Unused &mdash; BringUpPage_8025139)
+<pre>{
+	"$type": "RPG.GameCore.TriggerFightFestLineupInMission",
+	"RaceID": 2009,
+	"ScoreRaceSpecialInviteEventID": 419109,
+	"OnConfirm": [
+		{
+			"$type": "RPG.GameCore.AddStreamingSource",
+			"StreamingSource": {
+				"CenterName": "Mission_FightFestBattlePerformance",
+				"AreaName": "LevelArea_P20242_F20242001_G19",
+				"AnchorName": "Anchor7"
+			}
+		},
+		{
+			"$type": "RPG.GameCore.SetFloorCustomFloat",
+			"Name": {
+				"Value": "FCV_2.5_Arena"
+			},
+			"Value": {
+				"IsDynamic": false,
+				"FixedValue": {
+					"Value": 1
+				}
+			}
+		},
+		{
+			"$type": "RPG.GameCore.SetFloorCustomFloat",
+			"Name": {
+				"Value": "FCV_2.5_Throng"
+			},
+			"Value": {
+				"IsDynamic": false,
+				"FixedValue": {
+					"Value": 1
+				}
+			}
+		},
+		{
+			"$type": "RPG.GameCore.TriggerPerformance",
+			"ValueSource": {},
+			"PerformanceType": "D",
+			"PerformanceID": 802513220,
+			"MaskConfig": {}
+		},
+		{
+			"$type": "RPG.GameCore.TriggerFightFestBattleInMission"
+		},
+		{
+			"$type": "RPG.GameCore.RemoveStreamingSource",
+			"StreamingSource": "Mission_FightFestBattlePerformance"
+		},
+		{
+			"$type": "RPG.GameCore.SetFloorCustomFloat",
+			"Name": {
+				"Value": "FCV_2.5_Arena"
+			},
+			"Value": {
+				"IsDynamic": false,
+				"FixedValue": {
+					"Value": 0
+				}
+			}
+		}
+	]
+}</pre>
+
+;(Talk to Luka)
+:'''Luka:''' All right! I'm gonna get ready to step into the arena! We need to teach them a good lesson &mdash; identity theft is not a joke!
+:{{DIcon|Arrow}} Begin competition.
+:<pre>{
+	"$type": "RPG.GameCore.SetPerformanceResult",
+	"Value": 1
+}</pre>
+:{{DIcon|Exit}} Make some preparations.
+
+<pre>{
+	"$type": "RPG.GameCore.SetFloorCustomFloat",
+	"Name": {
+		"Value": "FCV_2.5_Arena"
+	},
+	"Value": {
+		"IsDynamic": false,
+		"FixedValue": {
+			"Value": 1
+		}
+	}
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.SetFloorCustomFloat",
+	"Name": {
+		"Value": "FCV_2.5_Throng"
+	},
+	"Value": {
+		"IsDynamic": false,
+		"FixedValue": {
+			"Value": 1
+		}
+	}
+}</pre>
+----
 :{{tx}}
+<pre>{
+	"$type": "RPG.GameCore.SetFloorCustomFloat",
+	"Name": {
+		"Value": "FCV_2.5_Throng"
+	},
+	"Value": {
+		"IsDynamic": false,
+		"FixedValue": {
+			"Value": 2
+		}
+	}
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.SetFloorCustomFloat",
+	"Name": {
+		"Value": "FCV_2.5_Arena"
+	},
+	"Value": {
+		"IsDynamic": false,
+		"FixedValue": {
+			"Value": 0
+		}
+	}
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.ShowUI",
+	"Name": "Ui.FightFest.ScoreMatch.FightFestScoreMatchResultDialog",
+	"Param": {
+		"Value": "2009"
+	}
+}</pre>
 {{Dialogue End}}
 
 ==Other Languages==

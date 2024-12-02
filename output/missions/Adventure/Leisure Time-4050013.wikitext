@@ -11,7 +11,7 @@ PageTitle=#Leisure Time#
 |chapter       = 
 |requirements  = {{subst:void|<!--Unknown: {"Type":"Manual"}-->}}
 |summary       = <!--official mission summary from Fate's Atlas-->
-|characters    = Trailblazer
+|characters    = Pom-Pom; Trailblazer
 |startLocation = [[Astral Express]] - [[Parlor Car]]
 |world         = Astral Express
 |area          = Parlor Car
@@ -34,18 +34,47 @@ PageTitle=#Leisure Time#
 -->
 ==Dialogue==
 {{Stub Dialogue}}
+
+
+;(Talk to Pom-Pom)
+:'''Pom-Pom:''' (Trailblazer)...
+<pre>{
+	"$type": "RPG.GameCore.ShowMenu"
+}</pre>
 {{Dialogue End}}
 
-===Go look outside the window===
+===Go look outside the window{{subst:void|<!--405001302-->}}===
 {{Mission Description|type=adventure|location=Parlor Car|update|Pom-Pom suggests you to take a walk near the window, maybe you'll discover something.}}
 {{Dialogue Start}}
-:{{tx}}
+<pre>{
+	"$type": "RPG.GameCore.CreateProp",
+	"GroupID": {
+		"fixedValue": {
+			"Value": 110
+		}
+	},
+	"GroupPropID": {
+		"fixedValue": {
+			"Value": 300002
+		}
+	}
+}</pre>
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:Despite the view being spectacular outside, it doesn't seem so special once you've been looking for as long as you have.
 {{Dialogue End}}
 
-===Talk to Pom-Pom===
+===Talk to Pom-Pom{{subst:void|<!--405001303-->}}===
 {{Mission Description|type=adventure|location=Parlor Car|update|You take in the astral scenery, go back and talk to Pom-Pom.}}
 {{Dialogue Start}}
-:{{tx}}
+
+
+;(Talk to Pom-Pom)
+:'''Pom-Pom:''' (Trailblazer)...
+<pre>{
+	"$type": "RPG.GameCore.ShowMenu"
+}</pre>
 {{Dialogue End}}
 
 ==Other Languages==

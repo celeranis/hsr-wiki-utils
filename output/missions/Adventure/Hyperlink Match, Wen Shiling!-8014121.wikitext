@@ -7,11 +7,11 @@ PageTitle=#Hyperlink Match, Wen Shiling!#
 |title         = 
 |image         = <!--Mission Hyperlink Match, Wen Shiling!.png-->
 |type          = Adventure
-|event_name    = 
+|event_name    = Aetherium Wars
 |chapter       = 
 |requirements  = [[Adventure Mission]] ''[[Embark! Corridor of Fading Echoes!]]'' completed
 |summary       = <!--official mission summary from Fate's Atlas-->
-|characters    = Trailblazer
+|characters    = Trailblazer; Wen Shiling
 |startLocation = [[Herta Space Station]] - [[Supply Zone]]
 |world         = Herta Space Station
 |area          = Supply Zone
@@ -19,7 +19,7 @@ PageTitle=#Hyperlink Match, Wen Shiling!#
 |next          = 
 |rewards       = 
 }}
-'''''Hyperlink Match, Wen Shiling!''''' is an [[Adventure Mission]] on [[Herta Space Station]].
+'''''Hyperlink Match, Wen Shiling!''''' is an Event [[Adventure Mission]] from the [[Aetherium Wars]] event.
 
 ==Steps==
 # Have a Hyperlink Match with Wen Shiling
@@ -33,11 +33,25 @@ PageTitle=#Hyperlink Match, Wen Shiling!#
 -->
 ==Dialogue==
 {{Stub Dialogue}}
-
-===Have a Hyperlink Match with Wen Shiling===
+===Have a Hyperlink Match with Wen Shiling{{subst:void|<!--801412101-->}}===
 {{Mission Description|type=adventure|location=Supply Zone|The core gameplay loop behind Aetherium Wars is "dueling." Challenge different players and show your true strength!}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Wen Shiling)
+:'''Wen Shiling:''' Something doesn't look right about the data from that last battle...
+<pre>{
+	"$type": "RPG.GameCore.ShowMenu",
+	"DisplaySingleMenuItem": true
+}</pre>
+:'''Wen Shiling:''' Ahh! How can I use horrible data like this in my report...
+<pre>{
+	"$type": "RPG.GameCore.ShowUI",
+	"Name": "Ui.AetherDivide.AetherDivideEntryPage",
+	"Param": {
+		"Value": "2"
+	},
+	"OnUIEnter": []
+}</pre>
 {{Dialogue End}}
 
 ==Other Languages==

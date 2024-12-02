@@ -5,6 +5,7 @@ export class WeirdKey {
 	static data = {
 		// from RogueBuffGroup
 		BlessingGroupID: {
+			'2.7': 'BHOJPHAJLMI',
 			'2.6': 'HFLJEIPCCNF',
 			'2.5': 'IOMDAGGIAME',
 			'2.4': 'MNNPAFJEGJC',
@@ -15,6 +16,7 @@ export class WeirdKey {
 			'1.6': 'JHOKDPADHFM',
 		},
 		BlessingGroupMembers: {
+			'2.7': 'NDFFCMBIOAG',
 			'2.6': 'ILLJGPJPFAC',
 			'2.5': 'HLKMFHBOAIA',
 			'2.4': 'KCFPNHGBGIA',
@@ -26,43 +28,53 @@ export class WeirdKey {
 		},
 		// from RogueTournWeeklyDisplay
 		DescParamType: {
+			'2.7': 'MPNJPFDCBDG',
 			'2.6': 'EOMLKKGEAEF',
 			'2.5': 'FGMDOEKGPEE',
 			'2.4': 'EEOLCCFMJFF',
 			'2.3': 'IAGLGKPDLOE',
 		},
 		DescParamValue: {
+			'2.7': 'ODPKJEJKOIH',
 			'2.6': 'HPPEILAONGE',
 			'2.5': 'NLABNDMDIKM',
 			'2.4': 'DIBKEHHCPAP',
 			'2.3': 'EPBOOFFCKPJ',
 		},
+		// from RogueMagicTalent
 		TalentDescParamValue: {
+			'2.7': 'DOJFLNAILGJ',
 			'2.6': 'GLCDOILMFOM'
 		},
 		// from RogueHandBookEvent
 		UnlockProgress: {
+			'2.7': 'FINLPBFNLHP',
 			'2.6': 'EJJEHNGJCJH',
 			'2.5': 'EEMMLHDLGKP'
 		},
 		UnlockNPCID: {
+			'2.7': 'KOPDNGGIFKN',
 			'2.6': 'GNBAICOJALE',
 			'2.5': 'GFKCKEKCGIB'
 		},
 		// from StageConfig
 		StageConfigKey: {
+			'2.7': 'BNCHHJCHKON',
 			'2.6': 'MFKLINKCPPA',
 			'2.5': 'PFMLCKGCKOB'
 		},
 		StageConfigValue: {
+			'2.7': 'ODPKJEJKOIH',
 			'2.6': 'HPPEILAONGE',
 			'2.5': 'NLABNDMDIKM'
 		},
 		// from RogueMagicScepter
 		LockMagicUnitId: {
+			'2.7': 'OBLJDNJKECG',
 			'2.6': 'GHFHMJLCIEC'
 		},
 		LockMagicUnitLevel: {
+			'2.7': 'KFDGMFMJMIA',
 			'2.6': 'LDEDAMNEIJO'
 		}
 	}

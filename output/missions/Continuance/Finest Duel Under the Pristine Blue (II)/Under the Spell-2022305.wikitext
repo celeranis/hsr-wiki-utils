@@ -11,7 +11,7 @@ PageTitle=#Under the Spell#
 |chapter       = Finest Duel Under the Pristine Blue (II)
 |requirements  = [[Trailblaze Continuance]] ''[[Comrade in Arms]]'' completed
 |summary       = For the hunter, one must always remain vigilant against becoming the prey &mdash; the Merlin's Claw who had fallen into a deadly trap and the borisin wolf-head who had harbored seven centuries of grudges will face off in an unexpected battlefield for a final, to-the-death showdown!
-|characters    = Trailblazer
+|characters    = Feixiao; Hoolay; March 7th; Trailblazer; Yanqing; Yunli
 |startLocation = [[The Xianzhou Luofu]] - [[Skysplitter]]
 |world         = The Xianzhou Luofu
 |area          = Skysplitter
@@ -35,21 +35,119 @@ PageTitle=#Under the Spell#
 -->
 ==Dialogue==
 {{Stub Dialogue}}
-
-===Deal with Hoolay===
+===Deal with Hoolay{{subst:void|<!--202230501-->}}===
 {{Mission Description|type=continuance|location=Skysplitter|When steel finally touches flesh, the young swordmaster emerges victorious at last, thanks to the swordsmanship skills that she has gained through diligent training and countless defeats. It is time to put the wolves behind bars once more.}}
 {{Dialogue Start}}
+
+;(Talk to Hoolay)
+:{{A|VO chapter2 15 hulei 106.ogg}} '''Hoolay:''' Yes, I was defeated, but this was not unexpected. And regardless, you still showed your face, Feixiao.
+:{{DIcon|Arrow}} (Deal with Hoolay)
+:<pre>{
+	"$type": "RPG.GameCore.SetPerformanceResult",
+	"Value": 1
+}</pre>
+:{{DIcon|Exit}} (Wait for a moment)
+
+;(Talk to Feixiao)
+----
+:{{A|VO chapter2 15 feixiao 101.ogg}} '''Feixiao:''' This hunt is finally over. Thank you for holding out so long. The Cloud Knights are withdrawing as we speak.
+:{{A|VO chapter2 15 feixiao 102.ogg}} '''Feixiao:''' Lieutenant Yanqing, how are you holding up?
+:{{DIcon|Arrow}} I could take on ten more!
+::{{A|VO chapter2 15 yanqing 101.ogg}} '''Yanqing:''' I've never been better... I could take on ten more Hoolays...
+::{{A|VO chapter2 15 feixiao 103.ogg}} '''Feixiao:''' Take it easy, young one, your wounds look quite severe. I'll have the Alchemy Commission healers see to you when they arrive.
+:{{DIcon|Arrow}} General, how are things on the ground?
+::{{A|VO chapter2 15 yanqing 102.ogg}} '''Yanqing:''' General... is everything okay on the ground?
+::{{A|VO chapter2 15 feixiao 104.ogg}} '''Feixiao:''' Everything's fine. We were able to suppress the borisin attacks. When I sensed that Hoolay was not on the ground, I raced to get here as quickly as I could.
+:{{DIcon|Arrow}} You saved my life there.
+::{{A|VO chapter2 15 yanqing 103.ogg}} '''Yanqing:''' I... I thought I was done for.
+::{{A|VO chapter2 15 feixiao 105.ogg}} '''Feixiao:''' I wouldn't want General Jing Yuan to lose the disciple that brings him so much pride. When I sensed that Hoolay was not on the ground, I raced to get here as quickly as I could.
+:{{DIcon|Arrow}} I can't believe you didn't tell me the plan...
+::{{A|VO chapter2 15 yanqing 104.ogg}} '''Yanqing:''' ...General, I can't believe you didn't tell me about the plan for the Skysplitter!
+::{{A|VO chapter2 15 feixiao 106.ogg}} '''Feixiao:''' Don't blame me, this was your general's idea. When he learned that you gave up being the ringmaster to join my Wolf Hunt team, he insisted that I hide the plan from you. Perhaps he thought your impatience would mess things up.
+::{{A|VO chapter2 15 feixiao 107.ogg}} '''Feixiao:''' Well? You may have run all over the place, but you ended up back here, did you not?
+:{{A|VO chapter2 15 feixiao 108.ogg}} '''Feixiao:''' Who would have imagined that I would arrive late to the battlefield for the first time in my life? ...No, perhaps you young ones' blades were just too fast for me.
+:{{A|VO chapter2 15 feixiao 109.ogg}} '''Feixiao:''' I originally thought, in the best-case scenario, you would team up and hold this beast back while protecting yourselves. However... You joined forces and defeated Hoolay! The youth are truly to be feared and respected!
+:{{A|VO chapter2 15 feixiao 110.ogg}} '''Feixiao:''' Come, we need to lock up Hoolay once again before anything unexpected happens.
+
+;(Talk to Yunli)
+:{{A|VO chapter2 15 mar7th 101.ogg}} '''March 7th:''' I&mdash;I was so scared! I thought you were a goner there! We're so lucky the general made it in time!
+:{{A|VO chapter2 15 yunli 101.ogg}} '''Yunli:''' Yanqing, that was amazing! The final blow you dealt to Hoolay, how have I never seen that before?
+:{{DIcon|Arrow}} That's my special finishing move.
+::{{A|VO chapter2 15 yanqing 105.ogg}} '''Yanqing:''' Do you want to learn it? I can teach you! But, I'll need some time to heal up first...
+:{{DIcon|Arrow}} Was it really us who defeated Hoolay?
+::{{A|VO chapter2 15 yanqing 106.ogg}} '''Yanqing:''' Was it... really us who defeated Hoolay? Why do I feel like he suddenly started to flag during our battle?
 :{{tx}}
+
+;(Talk to March 7th)
+:{{A|VO chapter2 15 mar7th 101.ogg}} '''March 7th:''' I&mdash;I was so scared! I thought you were a goner there! We're so lucky the general made it in time!
+:{{A|VO chapter2 15 yunli 101.ogg}} '''Yunli:''' Yanqing, that was amazing! The final blow you dealt to Hoolay, how have I never seen that before?
+:{{DIcon|Arrow}} That's my special finishing move.
+::{{A|VO chapter2 15 yanqing 105.ogg}} '''Yanqing:''' Do you want to learn it? I can teach you! But, I'll need some time to heal up first...
+:{{DIcon|Arrow}} Was it really us who defeated Hoolay?
+::{{A|VO chapter2 15 yanqing 106.ogg}} '''Yanqing:''' Was it... really us who defeated Hoolay? Why do I feel like he suddenly started to flag during our battle?
+:{{tx}}
+
+;(Unused &mdash; EnterRaid_40242)
+<pre>{
+	"$type": "RPG.GameCore.OpenTreasureChallenge",
+	"RaidID": 40242,
+	"OnCancel": [
+		{
+			"$type": "RPG.GameCore.EndDialogueEntityInteract"
+		}
+	]
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.EndDialogueEntityInteract"
+}</pre>
+
+;(Talk to Hoolay)
+:{{A|VO chapter2 15 hulei 101.ogg}} '''Hoolay:''' I thought... that this battle would end with a fight to the death against Feixiao. I never imagined I would be defeated by you.
+:{{A|VO chapter2 15 hulei 102.ogg}} '''Hoolay:''' Such an unforgettable blade... So similar to the one wielded by {{Rubi|that woman|Jingliu}} who defeated me all those years ago.
+:{{A|VO chapter2 15 hulei 103.ogg}} '''Hoolay:''' Over seven hundred years have passed, and I thought that I would have a way to overcome it by now. But in the end... my fangs and claws were too slow... You won, child.
+:{{A|VO chapter2 15 feixiao 111.ogg}} '''Feixiao:''' Stop struggling, Hoolay. There's plenty of time for you to be tortured by your regrets when you go back to The Shackling Prison.
+:{{A|VO chapter2 15 hulei 104.ogg}} '''Hoolay:''' Yes, I was defeated, but this was not unexpected. And regardless, you still showed your face, Feixiao.
+:{{DIcon|Arrow}} (Deal with Hoolay)
+:<pre>{
+	"$type": "RPG.GameCore.SetPerformanceResult",
+	"Value": 1
+}</pre>
+:{{DIcon|Exit}} (Wait for a moment)
 {{Dialogue End}}
 
-===(Optional) Discuss the current situation with your companions===
+===(Optional) Discuss the current situation with your companions{{subst:void|<!--202230504-->}}===
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Hoolay)
+:{{A|VO chapter2 15 hulei 106.ogg}} '''Hoolay:''' Yes, I was defeated, but this was not unexpected. And regardless, you still showed your face, Feixiao.
+:{{DIcon|Arrow}} (Deal with Hoolay)
+:<pre>{
+	"$type": "RPG.GameCore.SetPerformanceResult",
+	"Value": 1
+}</pre>
+:{{DIcon|Exit}} (Wait for a moment)
+
+;(Talk to Hoolay)
+:{{A|VO chapter2 15 hulei 106.ogg}} '''Hoolay:''' Yes, I was defeated, but this was not unexpected. And regardless, you still showed your face, Feixiao.
+:{{DIcon|Arrow}} (Deal with Hoolay)
+:<pre>{
+	"$type": "RPG.GameCore.SetPerformanceResult",
+	"Value": 1
+}</pre>
+:{{DIcon|Exit}} (Wait for a moment)
+
+;(Talk to Hoolay)
+:{{A|VO chapter2 15 hulei 106.ogg}} '''Hoolay:''' Yes, I was defeated, but this was not unexpected. And regardless, you still showed your face, Feixiao.
+:{{DIcon|Arrow}} (Deal with Hoolay)
+:<pre>{
+	"$type": "RPG.GameCore.SetPerformanceResult",
+	"Value": 1
+}</pre>
+:{{DIcon|Exit}} (Wait for a moment)
 {{Dialogue End}}
 
-===Deal with Hoolay===
+===Deal with Hoolay{{subst:void|<!--202230508-->}}===
 {{Dialogue Start}}
-:{{tx}}
 {{Dialogue End}}
 
 ==Other Languages==

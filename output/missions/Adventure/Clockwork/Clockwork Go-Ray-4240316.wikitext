@@ -11,7 +11,7 @@ PageTitle=#Clockwork: Go-Ray#
 |chapter       = Clockwork
 |requirements  = [[Trailblaze Mission]] ''[[Gentleness, the Name of Nocturne]]'' completed
 |summary       = <!--official mission summary from Fate's Atlas-->
-|characters    = Trailblazer
+|characters    = Agitated Male Voice; Go-Ray; Proud Male Voice; Trailblazer
 |startLocation = [[Penacony]] - [[Dream's Edge]]
 |world         = Penacony
 |area          = Dream's Edge
@@ -36,15 +36,166 @@ PageTitle=#Clockwork: Go-Ray#
 {{Stub Dialogue}}
 {{Dialogue End}}
 
-===Take a photo of the towering hotel in the Golden Hour.===
+===Take a photo of the towering hotel in the Golden Hour.{{subst:void|<!--424031603-->}}===
 {{Mission Description|type=adventure|location=Golden Hour|update|Tick... tock! Quick, adjust the hands... Tick, tock!<br />People's minds await your exploration. Help them regain their true selves!}}
 {{Dialogue Start}}
-:{{tx}}
+
+
+;(Unused &mdash; TalkSentence_413160323)
+<pre>{
+	"$type": "RPG.GameCore.BindSwitchPhotoGraphFuncBtn",
+	"SimpleMode": false,
+	"MissionID": {
+		"IsDynamic": false,
+		"FixedValue": {
+			"Value": 4240316
+		}
+	},
+	"RangeTriggerProp": {
+		"FetchType": "SinglePropByPropID",
+		"SinglePropID": {
+			"GroupID": {
+				"IsDynamic": false,
+				"FixedValue": {
+					"Value": 363
+				}
+			},
+			"ID": {
+				"IsDynamic": false,
+				"FixedValue": {
+					"Value": 300001
+				}
+			}
+		}
+	},
+	"ColliderRelativePathList": [],
+	"PhotoGraphMode": "SingleTakePhoto",
+	"AimTargetContainerConfig": [
+		{
+			"InnerContainers": [],
+			"AimTargetConfig": {
+				"$type": "RPG.GameCore.PhotoGraphAimContaierProp",
+				"AimPropID": {
+					"IsDynamic": false,
+					"FixedValue": {
+						"Value": 121
+					}
+				},
+				"GameObjectNode": {
+					"Value": "Chest_M"
+				}
+			},
+			"TipConfigs": [
+				{}
+			],
+			"ContainerFlagName": "4240316_photo1",
+			"IsTopContainer": true,
+			"IsAimTargetConfig": true
+		},
+		{
+			"AimTargetConfig": {
+				"$type": "RPG.GameCore.PhotoGraphAimContaierProp",
+				"AimPropID": {
+					"IsDynamic": false,
+					"FixedValue": {
+						"Value": 121
+					}
+				},
+				"GameObjectNode": {
+					"Value": "Chest_M"
+				}
+			},
+			"TipConfigs": [],
+			"ContainerFlagName": "4240316_photo2",
+			"IsTopContainer": true,
+			"IsAimTargetConfig": true
+		}
+	],
+	"OverrideConfig": {
+		"IdentifyLookAt": {
+			"$type": "RPG.GameCore.GroupFetchLocalTarget",
+			"TargetType": "Prop",
+			"Targets": [
+				300003
+			]
+		}
+	},
+	"NotStartPhotoInTriggerRangeMode": true
+}</pre>
+
+;(Talk to Go-Ray)
+:'''Go-Ray:''' That {{Color|keyword|nobold=1|towering hotel}} took my breath away. Please include every part of the building in the photos.
 {{Dialogue End}}
 
-===Hand the photo to Go-Ray.===
+===Hand the photo to Go-Ray.{{subst:void|<!--424031604-->}}===
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Go-Ray)
+:'''Go-Ray:''' Thanks for your hard work. Let me see...
+:'''Go-Ray:''' Indeed, the building is still as tall and grand as I remember it. It looks just like a weapon.
+:'''Go-Ray:''' It looks like a giant rocket on the ground, aiming at the sky. When it is fired, energy surges to its base from all sides, emitting a radiance so bright it can penetrate the thickest of smoke.
+:'''Go-Ray:''' The old me would have been thrilled to see it.
+:{{DIcon|Arrow}} You have a fertile imagination.
+:{{DIcon|Arrow}} You're so knowledgeable...
+:'''Go-Ray:''' My hometown was a chaotic place. The war hasn't ceased for a moment since I was dug out.
+:'''Go-Ray:''' In ancient times, my hometown used to be an invigorating and scenic planet. People at that time, who already mastered the ability to navigate across the universe, had traveled to numerous planets. I was one of the intelligent spaceships created at that time.
+:'''Go-Ray:''' Yet, the war between two major factions changed everything. For some unknown reasons, the two sides started attacking each other using their most formidable weapons...
+:'''Go-Ray:''' All bases on other planets were destroyed, and our home planet was plunged into a long winter. The development of our technology became stunted, and the environment deteriorated, and there went our good lives.
+:'''Go-Ray:''' By the time I woke up, the war was still ongoing at the ruins. People tied cloths of different colors to their tails as they attacked each other with guns and sticks.
+:'''Go-Ray:''' The moment they saw me, they immediately got the impression that I could bring them victory.
+:{{Black Screen|The Intellitron plays a system recording...}}
+;(Screen fades to black)
+:'''Proud Male Voice:''' "Look what we found &mdash; a pre-civilization space machine! We're about to win!"
+:'''Agitated Male Voice:''' "Why are you so excited?"
+:'''Proud Male Voice:''' "Think about all the military bases we used to have across the universe. There must be a lot of pre-civilization superweapons there."
+:'''Proud Male Voice:''' "If we can find those weapons, we'll be one step closer to victory!"
+:'''Agitated Male Voice:''' "I hope this hunk of junk is worth the fuel. We all had to tighten our belts to afford it."
+:'''Agitated Male Voice:''' "Rats. Why can't I open the door to this thing?"
+:'''Proud Male Voice:''' "Didn't you see this? It's an "Unmanned Intelligent Space Explorer"... Oh, there's even a touch panel. How user-friendly."
+:'''Proud Male Voice:''' "Done. I've set it up to collect the other remaining weapons on other planets. Let's see what it can bring back to us."
+:'''Go-Ray:''' At that time, my job was to carry out any instructions given to me. I could not think, so I followed the instructions blindly.
+:'''Go-Ray:''' When I sailed along the route that had long been unused, a planet, once thriving, was quiet and desolate.
+:'''Go-Ray:''' There was no civilization and remaining weapons. Nothing was left in the past three Amber Eras.
+:'''Go-Ray:''' If I had feelings at that time, I would have felt lonely... and scared.
+:'''Go-Ray:''' I visited many more planets after that, and they all wound up the same way. A "feeling" started germinating in my system: Skepticism.
+:'''Go-Ray:''' "Does life still exist on any of those planets? Will I be able to accomplish my mission? Is my search... meaningful?"
+:'''Go-Ray:''' At last, I used up my fuel and was stranded on an asteroid...
+:{{DIcon|Arrow}} You died?
+::'''Go-Ray:''' Haha, of course not, otherwise how could I still be standing here?
+:{{DIcon|Arrow}} How terrible...
+::'''Go-Ray:''' Few organic lives have sympathy for a robot, which was what I was at that time. An incident that happened later changed me.
+:{{DIcon|Arrow}} What happened?
+:'''Go-Ray:''' When I woke up again, I was already in this human body. My ability to think and calculate improved a great deal.
+:'''Go-Ray:''' Someone awakened me, transformed my body, and gave me a name... Sounds like a blessing, no?
+:'''Go-Ray:''' I still can't figure out who did it.
+:{{DIcon|Arrow}} A genius, perhaps?
+::'''Go-Ray:''' Maybe. After all, the technology required to pull off that transformation is... intricate.
+:{{DIcon|Arrow}} A Nameless who happened to pass by?
+::'''Go-Ray:''' The technology required to pull off that transformation is... intricate... Would a Nameless be able to do that?
+:{{DIcon|Arrow}} An Aeon?
+::'''Go-Ray:''' I'm flattered. But as a mere robot, I don't think I deserve the attention of an Aeon.
+:'''Go-Ray:''' No matter who it was, they must have had a love for machinery like how a father loves his child and a king loves his people.
+:'''Go-Ray:''' In the early period after I was reborn, I was angry at the people from my home world. But now, I only pity them.
+:'''Go-Ray:''' Those caught in the throes of war always yearn for peace, hoping that someone or something will come to their aid.
+:'''Go-Ray:''' It can be a miracle, a respectable figure, a faraway Aeon, or even a weapon powerful enough to end the war.
+:'''Go-Ray:''' The thing is, humans are never satisfied with what they have. After a war ceases, they will continue their search for bigger and stronger weapons until their greed backfires and razes everything they have to the ground.
+:'''Go-Ray:''' Thus, not only was my mission incapable of salvaging my home, but it would push it further down the abyss of ruination...
+:{{DIcon|Arrow}} Sounds ironic.
+:{{DIcon|Arrow}} Sounds disheartening.
+:'''Go-Ray:''' Well, humans just tend to want to cause harm to each other. If there's a wooden stick at hand, they'll use it. If there's an imaginary bomb around, they'll use it too.
+:'''Go-Ray:''' Fortunately, the war should be over by this time.
+:'''Go-Ray:''' The sources of energy on my home planet were already close to depletion when I left. Now that an Amber Era has passed, the planet should be uninhabited, according to my estimation.
+:'''Go-Ray:''' The weapons will rust, the grass will grow back, and the soil will slowly recuperate...
+:'''Go-Ray:''' Sadly, there's no one left to appreciate that revived world.
+:{{DIcon|Arrow}} At least you survived.
+::A hint of joy flashes on Go-Ray's face. Intellitrons aren't supposed to have facial expressions, but everything is possible in a dream.
+::'''Go-Ray:''' Indeed, I survived. Nothing is better than staying alive.
+:{{DIcon|Arrow}} (Remain silent)
+::A hint of sorrow flashes on Go-Ray's face. Intellitrons aren't supposed to have facial expressions, but everything is possible in a dream.
+::'''Go-Ray:''' At least I survived. Nothing is better than staying alive.
+:'''Go-Ray:''' After so many twists and turns, I've finally found a place where I belong &mdash; Penacony. I want to live my life here as a human, instead of a tool.
+:'''Go-Ray:''' Thank you, young one, for helping me and hearing me out.
+:'''Go-Ray:''' You might think this is nothing, but I'll always reserve a slot in my storage system for you.
 {{Dialogue End}}
 
 ==Other Languages==

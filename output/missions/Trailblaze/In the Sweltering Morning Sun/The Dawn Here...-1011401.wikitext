@@ -11,7 +11,7 @@ PageTitle=#The Dawn Here...#
 |chapter       = In the Sweltering Morning Sun
 |requirements  = {{subst:void|<!--Unknown: {"Type":"Manual"}-->}}
 |summary       = <!--official mission summary from Fate's Atlas-->
-|characters    = Trailblazer
+|characters    = Bronya; Cocolia; Dan Heng; March 7th; Seele; Trailblazer
 |startLocation = [[Jarilo-VI]] - [[Everwinter Hill]]
 |world         = Jarilo-VI
 |area          = Everwinter Hill
@@ -34,10 +34,96 @@ PageTitle=#The Dawn Here...#
 ==Dialogue==
 {{Stub Dialogue}}
 
-===Look for Bronya and Cocolia===
+===Look for Bronya and Cocolia{{subst:void|<!--101140102-->}}===
 {{Mission Description|type=trailblaze|location=Everwinter Hill|After overcoming numerous difficulties and dangers, you have finally come to the Far North, where the Eternal Freeze is raging. For hundreds of years, no one except the Supreme Guardian could set foot upon this ancient battlefield.<br />Cocolia and Bronya are here somewhere... Your mission is to go deep into the forbidden zone and find them.<br />Stellaron, the source of disaster, also lies ahead. Get ready for a fight to the death!}}
 {{Dialogue Start}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{A|VO chapter1 9 bronya 201.ogg}} '''Bronya:''' ...N&mdash;No...
+:{{A|VO chapter1 9 cocolia 201.ogg}} '''Cocolia:''' Do not resist, Bronya... Accept the common will!
+:{{A|VO chapter1 9 bronya 202.ogg}} '''Bronya:''' No... I... I don't want this...
+:{{A|VO chapter1 9 cocolia 202.ogg}} '''Cocolia:''' Look upon their promised future, Bronya! A world without poverty, without cold, without suffering... A world where people no longer have to pray like prisoners for survival... A world that we can guard for all eternity.
+:{{A|VO chapter1 9 cocolia 203.ogg}} '''Cocolia:''' Seven hundred years ago, we tried and fought unceasingly, believing that the radiance of human nature could shepherd us towards rejuvenation. And to what end? A crushing defeat!
+:{{A|VO chapter1 9 cocolia 204.ogg}} '''Cocolia:''' Why, when faced with irrefutable strength, is our first thought always to resist, to cover our ears, instead of hearing the call?
+:{{A|VO chapter1 9 cocolia 205.ogg}} '''Cocolia:''' It is the conceit and cowardice entrenched in the depths of human nature &mdash; so difficult to efface. Cast them aside, break free of the chains that bind you! The Stellaron will lead humanity to evolve, and THEY will...
+:{{A|VO chapter1 9 seele 204.ogg}} '''Seele:''' Your brainwashing ends here, you witch!
+:{{A|VO chapter1 9 bronya 203.ogg}} '''Bronya:''' ...Seele?
+:{{A|VO chapter1 9 cocolia 206.ogg}} '''Cocolia:''' ...You came. I thought the blizzards had entombed you...
+:{{A|VO chapter1 9 seele 205.ogg}} '''Seele:''' You wish! We're not going down before you do!
+:{{A|VO chapter1 9 seele 206.ogg}} '''Seele:''' Bronya! I don't know what happened between you and them. Even if you explained it to me, I probably wouldn't understand all the crazy details. But there are two things I do know...
+:{{A|VO chapter1 9 seele 207.ogg}} '''Seele:''' One: These guys have come through hell to get here &mdash; to seal this Stellaron thing.
+:{{A|VO chapter1 9 seele 208.ogg}} '''Seele:''' And two: Do you remember what I said? If anything happened to you, I'd save you.
+:{{A|VO chapter1 9 seele 209.ogg}} '''Seele:''' Do you understand? Even if the damage is done &mdash; even if you've completely forgotten our promise, then... then I'm just gonna have to knock you out and bring you back myself!
+:{{DIcon|Arrow}} We need you...
+:{{DIcon|Arrow}} ...Belobog needs you, Bronya.
 :{{tx}}
+----
+;([[#Gallery|Cutscene]] plays)
+::You must break the old to build the new.
+::The supreme guardian commands you...
+::Rise, Engine of Creation!
+::It's one of the Architects' ancient machines! Watch out, all of you!
+;(Cutscene ends)
+----
+;(Enter battle)
+::Wave 1: {{Enemy List|Frostspawn*2/-20% ATK; Everwinter Shadewalker*1/-20% ATK}}
+::Wave 2: {{Enemy List|Mask of No Thought*2/-20% ATK; Imaginary Weaver*1/-46.7% ATK, -21.1% HP}}
+::Wave 3: {{Enemy List|Imaginary Weaver*2/-46.7% ATK, -21.1% HP; Decaying Shadow*1/-46.7% ATK, -40% HP, -120 Toughness}}
+
+;(Upon reaching the destination)
+:{{A|VO chapter1 9 mar7th 210.ogg}} '''March 7th:''' If Cocolia threatens us by taking Bronya hostage...
+:{{A|VO chapter1 9 seele 202.ogg}} '''Seele:''' We have to save her. The Underworld... no, the entire planet relies on her.
+<pre>{
+	"$type": "RPG.GameCore.WaitMissionTalkFinish"
+}</pre>
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+<pre>{
+	"$type": "RPG.GameCore.AdventureCameraLookAt",
+	"LookAtTargetAreaName": {
+		"Value": "1011401_temp"
+	},
+	"LookAtTargetAnchorName": {
+		"Value": "LookatPoint"
+	},
+	"LookAtTransitionDuration": 3,
+	"LookAtTransitionCurvePath": "Camera/BlendCurve/Blend_N1CameraTest.asset",
+	"LockCameraInput": true,
+	"LookAtDuration": 5,
+	"MaxAngle": 60,
+	"FollowLookAtTarget": true
+}</pre>
+:{{A|VO chapter1 9 seele 201.ogg}} '''Seele:''' Did the Architects build this...?
+:{{A|VO chapter1 9 danheng 203.ogg}} '''Dan Heng:''' ...very different from the uniform style of the buildings we saw in the city.
+:{{A|VO chapter1 9 mar7th 209.ogg}} '''March 7th:''' Does it... look like the palm of a huge hand to you?
+<pre>{
+	"$type": "RPG.GameCore.WaitMissionTalkFinish"
+}</pre>
+:<!--5-second delay-->
+:{{A|VO chapter1 9 mar7th 201.ogg}} '''March 7th:''' It's f&mdash;freezing here &mdash; the blizzard's so fierce! The power from the Trailblaze Path isn't enough to stop the cold...
+:{{A|VO chapter1 9 danheng 201.ogg}} '''Dan Heng:''' It means that we're getting closer to the Stellaron... and the heart of the Eternal Freeze.
+<pre>{
+	"$type": "RPG.GameCore.WaitMissionTalkFinish"
+}</pre>
+;([[#Gallery|Cutscene]] plays)
+:{{tx}}
+----
+;([[#Gallery|Cutscene]] plays)
+::I'll cover you!
+::Grab hold of me!
+;(Cutscene ends)
+----
+;(Enter battle)
+:{{Enemy List|Cocolia, Mother of Deception*1}}
+;(Fully recovers all allies' HP)
+:{{tx}}
+;(Fully recovers all allies' HP)
+----
+<pre>{
+	"$type": "RPG.GameCore.RaidSceneTransfer"
+}</pre>
 {{Dialogue End}}
 
 ==Other Languages==

@@ -7,7 +7,7 @@ PageTitle=#Hyperlink Match, Lynx!#
 |title         = 
 |image         = <!--Mission Hyperlink Match, Lynx!.png-->
 |type          = Adventure
-|event_name    = 
+|event_name    = Aetherium Wars
 |chapter       = 
 |requirements  = 
 * [[Adventure Mission]] ''[[Hyperlink Match, Wen Shiling!]]'' completed
@@ -15,7 +15,7 @@ PageTitle=#Hyperlink Match, Lynx!#
 * [[Adventure Mission]] ''[[Hyperlink Match, Dunn!]]'' completed
 * [[Adventure Mission]] ''[[Hyperlink Match, Oleg!]]'' completed
 |summary       = <!--official mission summary from Fate's Atlas-->
-|characters    = Trailblazer
+|characters    = Lynx; Trailblazer
 |startLocation = [[Jarilo-VI]] - [[Outlying Snow Plains]]
 |world         = Jarilo-VI
 |area          = Outlying Snow Plains
@@ -23,7 +23,7 @@ PageTitle=#Hyperlink Match, Lynx!#
 |next          = 
 |rewards       = 
 }}
-'''''Hyperlink Match, Lynx!''''' is an [[Adventure Mission]] on [[Jarilo-VI]].
+'''''Hyperlink Match, Lynx!''''' is an Event [[Adventure Mission]] from the [[Aetherium Wars]] event.
 
 ==Steps==
 # Have a Hyperlink Match with Lynx
@@ -37,11 +37,25 @@ PageTitle=#Hyperlink Match, Lynx!#
 -->
 ==Dialogue==
 {{Stub Dialogue}}
-
-===Have a Hyperlink Match with Lynx===
+===Have a Hyperlink Match with Lynx{{subst:void|<!--801412801-->}}===
 {{Mission Description|type=adventure|location=Outlying Snow Plains|The core gameplay loop behind Aetherium Wars is "dueling." Challenge different players and show your true strength!}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Lynx)
+:'''Lynx:''' You're not going to try and get me to play that game too, are you...?
+<pre>{
+	"$type": "RPG.GameCore.ShowMenu",
+	"DisplaySingleMenuItem": true
+}</pre>
+:'''Lynx:''' Alright, you defeated me.
+<pre>{
+	"$type": "RPG.GameCore.ShowUI",
+	"Name": "Ui.AetherDivide.AetherDivideEntryPage",
+	"Param": {
+		"Value": "2"
+	},
+	"OnUIEnter": []
+}</pre>
 {{Dialogue End}}
 
 ==Other Languages==

@@ -11,7 +11,7 @@ PageTitle=#Scattered Memories of Hooded Past#
 |chapter       = Windswept Wanderlust
 |requirements  = {{subst:void|<!--Unknown: {"Type":"Manual"}-->}}
 |summary       = <!--official mission summary from Fate's Atlas-->
-|characters    = Trailblazer
+|characters    = Himeko; Pom-Pom; Trailblazer
 |startLocation = [[The Xianzhou Luofu]] - [[Parlor Car]]
 |world         = The Xianzhou Luofu
 |area          = Parlor Car
@@ -34,10 +34,44 @@ PageTitle=#Scattered Memories of Hooded Past#
 ==Dialogue==
 {{Stub Dialogue}}
 
-===Board the Xianzhou Luofu===
+===Board the Xianzhou Luofu{{subst:void|<!--102040101-->}}===
 {{Mission Description|type=trailblaze|location=Parlor Car|As you cast your gaze from the Express toward a home you can never return to, you recall a time when the prospect of looking upon the Jade Gate of the Luofu seemed utterly unbelievable.<br />As you review the video communication sent by Kafka, you realize there is a hidden and lethal danger in her invitation &mdash; Her companion, the man named Blade, has an ancient and indelible feud with you.<br />You decide to go against the ban and set foot on the Luofu once again.}}
 {{Dialogue Start}}
+<pre>{
+	"$type": "RPG.GameCore.LevelAudioState",
+	"GroupName": "StateGroup_Story",
+	"StateName": {
+		"Value": "State_Belobog_Maze_M3_3_PathSpace"
+	}
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.LevelAudioState",
+	"GroupName": "StateGroup_GameState",
+	"StateName": {
+		"Value": "State_Story"
+	}
+}</pre>
 :{{tx}}
+<pre>{
+	"$type": "RPG.GameCore.LevelAudioState",
+	"GroupName": "StateGroup_Story",
+	"StateName": {
+		"Value": "None"
+	}
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.LevelAudioState",
+	"GroupName": "StateGroup_GameState",
+	"StateName": {
+		"Value": "State_Adventure"
+	}
+}</pre>
+
+;(Talk to Himeko)
+:{{A|VO chapter2 1 himeko 114.ogg}} '''Himeko:''' If there's something you've got to do, do it now. Better than regretting it further down the line.
+
+;(Talk to Pom-Pom)
+:{{A|VO chapter2 1 pompom 107.ogg}} '''Pom-Pom:''' Something else you need?
 {{Dialogue End}}
 
 ==Other Languages==

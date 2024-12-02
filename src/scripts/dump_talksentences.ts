@@ -3,9 +3,9 @@ import { readFile, readdir } from 'fs/promises';
 import config from '../../config.json' with { "type": "json" };
 import { DICON_MAP, Dictionary } from '../Shared.js';
 import { textMap } from '../TextMap.js';
-import { Act, InternalDialogTask } from '../files/Dialog.js';
 import { getFile } from '../files/GameFile.js';
 import { InternalTalkSentence } from '../files/Occurrence.js';
+import { Act, InternalDialogTask } from '../files/graph/Dialog.js';
 import type { VoiceData } from './vo/dump_vo_names.js';
 
 const TalkSentences = await getFile<InternalTalkSentence[]>('ExcelOutput/TalkSentenceConfig.json')
@@ -46,7 +46,12 @@ function searchAct(act: Act) {
 	}
 }
 
-for (const file of await readdir(config.local_roots[config.target_version], { recursive: true, withFileTypes: true })) {
+const files = [
+	...await readdir(config.local_roots[config.target_version], { recursive: true, withFileTypes: true }),
+	...await readdir(config.local_roots_mission[config.target_version], { recursive: true, withFileTypes: true })
+]
+
+for (const file of files) {
 	if (!file.isFile()) continue
 	const normalPath = file.path.replaceAll('\\', '/')
 	if (normalPath.includes('/Story/') || normalPath.includes('/Level')) {

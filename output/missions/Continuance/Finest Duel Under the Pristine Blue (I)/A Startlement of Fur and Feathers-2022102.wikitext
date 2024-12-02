@@ -11,7 +11,7 @@ PageTitle=#A Startlement of Fur and Feathers#
 |chapter       = Finest Duel Under the Pristine Blue (I)
 |requirements  = {{subst:void|<!--Unknown: {"Type":"Manual"}-->}}
 |summary       = <!--official mission summary from Fate's Atlas-->
-|characters    = Trailblazer
+|characters    = Cloud Knight Soldier; Craftsman; March 7th; Sky-Faring Commission Member; Trailblazer; Yanqing; Yunli
 |startLocation = [[The Xianzhou Luofu]] - [[Stargazer Navalia]]
 |world         = The Xianzhou Luofu
 |area          = Stargazer Navalia
@@ -23,12 +23,14 @@ PageTitle=#A Startlement of Fur and Feathers#
 
 ==Steps==
 # Leave Stargazer Navalia and return to the sword practicing area
+# Track down the suspicious character
+# Photograph evidence of the suspicious character's activities
+# Track down the suspicious character
+# Photograph evidence of the suspicious character's activities
 # Monitor the suspicious character
+# Photograph evidence of the suspicious character's activities
 # Find a suitable box to hide in
 # Track down the suspicious character
-# Photograph evidence of the suspicious character's activities
-# Track down the suspicious character
-# Photograph evidence of the suspicious character's activities
 
 <!--
 ==Gameplay Notes==
@@ -39,41 +41,1005 @@ PageTitle=#A Startlement of Fur and Feathers#
 -->
 ==Dialogue==
 {{Stub Dialogue}}
-
-===Leave Stargazer Navalia and return to the sword practicing area===
+===Leave Stargazer Navalia and return to the sword practicing area{{subst:void|<!--202210201-->}}===
 {{Mission Description|type=continuance|location=Stargazer Navalia|Time goes by, and the moment of the Wardance has arrived once more. Right before the young swordmasters are about to step into the ring, they look up at the fighter jet in the sky and start expressing their opinions to the visitors from afar. But they are not the only ones focused on this moment, for in Stargazer Navalia, certain uninvited guests weave their schemes...}}
 {{Dialogue Start}}
 :{{tx}}
+:{{tx}}
+:{{tx}}
+:{{tx}}
+<pre>{
+	"$type": "RPG.GameCore.ResetMissionAudioState",
+	"ResetBGMEmotionState": true
+}</pre>
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{A|VO chapter2 9 jiangren 101.ogg}} '''Craftsman:''' ...Oh, just shut up, Red Fang! This is not a beast ship, I need some time to take care of things.
+:{{A|VO chapter2 9 yunqiG 101.ogg}} '''Cloud Knight Soldier:''' You willingly donned the skin of a lowly beast to join this mission, dedicating yourself to our glorious cause. And now you're telling me you can't handle it? Do you realize how many ships we need?
+:{{A|VO chapter2 9 jiangren 102.ogg}} '''Craftsman:''' I'm doing my best, alright? It takes time to figure all this out.
+:{{A|VO chapter2 9 crowdA 101.ogg}} '''Sky-Faring Commission Member:''' When the guns go off tomorrow, all eyes will be on it. That'll be our only chance...
+:{{A|VO chapter2 9 yunqiG 102.ogg}} '''Cloud Knight Soldier:''' Harr-zaa-xi? Wh&mdash;Who's there!?
+:{{A|VO chapter2 9 yanqing 316.ogg}} '''Yanqing:''' Who are you guys?
+:{{A|VO chapter2 9 jiangren 103.ogg}} '''Craftsman:''' An impromptu inspection. Why are there outsiders loitering in Stargazer Navalia? And a bunch of kids at that!
+:{{A|VO chapter2 9 crowdA 102.ogg}} '''Sky-Faring Commission Member:''' Hey, kids, didn't your parents ever tell you to stay away from the Stargazer Navalia? I know it's an automated facility, but it doesn't mean you can just break in and do what you want.
+:{{DIcon|Arrow}} I'll take the little ones away right now.
+::{{A|VO chapter2 9 mar7th 254.ogg}} '''March 7th:''' Ah, sorry, I'll take the little ones away right now.
+:{{DIcon|Arrow}} Who are you calling "kids?"
+::{{A|VO chapter2 9 mar7th 255.ogg}} '''March 7th:''' First of all, I'm an adult. Second, I didn't just break in...
+::{{A|VO chapter2 9 yanqing 317.ogg}} '''Yanqing:''' Yeah, we flew here on a starskiff! Like... woosh!
+::{{A|VO chapter2 9 crowdA 103.ogg}} '''Sky-Faring Commission Member:''' Well, I'm not trying to tell you off, but this place is off-limits to the public, you know?
+:{{A|VO chapter2 9 yanqing 318.ogg}} '''Yanqing:''' Big sis! Let's go! I want to play in Ever-Hunt Plains!
+:{{tx}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{A|VO chapter2 9 yanqing 329.ogg}} '''Yanqing:''' Don't get too close, Miss March! They might spot you!
+
+;(Upon reaching the destination)
+:{{A|VO chapter2 9 yanqing 326.ogg}} '''Yanqing:''' Where are you going, Miss March? Follow them!
+
+;(Upon reaching the destination)
+:{{A|VO chapter2 9 yanqing 329.ogg}} '''Yanqing:''' Don't get too close, Miss March! They might spot you!
+
+;(Upon reaching the destination)
+:{{A|VO chapter2 9 yanqing 329.ogg}} '''Yanqing:''' Don't get too close, Miss March! They might spot you!
 {{Dialogue End}}
 
-===Monitor the suspicious character===
+===Track down the suspicious character{{subst:void|<!--202210211-->}}===
 {{Dialogue Start}}
+
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{A|VO chapter2 9 yanqing 335.ogg}} '''Yanqing:''' They're leaving. We should catch up to them, quickly!
+;(Unused &mdash; DES_15_02)
+<pre>{
+	"$type": "RPG.GameCore.AdvDestroyGroupEntity",
+	"InstanceIDList": [
+		400003
+	]
+}</pre>
+
+;(Unused &mdash; CR_15_02)
+<pre>{
+	"$type": "RPG.GameCore.AdvCreateGroupEntity",
+	"InstanceIDList": [
+		400003
+	]
+}</pre>
+{{Dialogue End}}
+
+===Photograph evidence of the suspicious character's activities{{subst:void|<!--202210208-->}}===
+{{Dialogue Start}}
+
+;(Talk to Yanqing)
+:{{A|VO chapter2 9 mar7th 264.ogg}} '''March 7th:''' Never mind who they are, let's just film them.
+<pre>{
+	"$type": "RPG.GameCore.BindSwitchPhotoGraphFuncBtn",
+	"SimpleMode": false,
+	"UseType": "StartPhotoGraph",
+	"RangeTriggerProp": {
+		"SinglePropID": {
+			"GroupID": {
+				"IsDynamic": false,
+				"FixedValue": {
+					"Value": 16
+				}
+			},
+			"ID": {
+				"IsDynamic": false,
+				"FixedValue": {
+					"Value": 300002
+				}
+			}
+		}
+	},
+	"PhotoGraphMode": "PhotoUpdateTwoPointFour",
+	"AimTargetContainerConfig": [
+		{
+			"InnerContainers": [],
+			"AimTargetConfig": {
+				"$type": "RPG.GameCore.PhotoGraphAimContaierTarget",
+				"AimTargetType": {
+					"$type": "RPG.GameCore.GroupFetchLocalTarget",
+					"Targets": [
+						400001
+					]
+				},
+				"ShowAimTag": false,
+				"GameObjectNode": {
+					"Value": "Head_M"
+				},
+				"ShowTipAngle": 210
+			},
+			"TipConfigs": [],
+			"ContainerFlagName": "202210208_npc",
+			"IsTopContainer": true,
+			"IsAimTargetConfig": true
+		},
+		{
+			"AimTargetConfig": {
+				"$type": "RPG.GameCore.PhotoGraphAimContaierTarget",
+				"AimTargetType": {
+					"$type": "RPG.GameCore.GroupFetchLocalTarget",
+					"Targets": [
+						400001
+					]
+				},
+				"GameObjectNode": {
+					"Value": "Head_M"
+				}
+			},
+			"ContainerFlagName": "202210208_npc3",
+			"IsTopContainer": true,
+			"IsAimTargetConfig": true
+		},
+		{
+			"AimTargetConfig": {
+				"$type": "RPG.GameCore.PhotoGraphAimContaierTarget",
+				"AimTargetType": {
+					"$type": "RPG.GameCore.GroupFetchLocalTarget",
+					"Targets": [
+						400001
+					]
+				},
+				"ShowAimTag": false,
+				"GameObjectNode": {
+					"Value": "Wrist_R"
+				}
+			},
+			"ContainerFlagName": "202210208_npc2",
+			"IsTopContainer": true,
+			"IsAimTargetConfig": true
+		}
+	],
+	"OnIdentifyFinish": [],
+	"OnIdentifyTarget": [],
+	"TriggerExitDelay": 0,
+	"OverrideConfig": {
+		"IdentifyLookAt": {
+			"$type": "RPG.GameCore.TargetFetchAdvNpcEx",
+			"FetchType": "SingleNpcByOwnerGroupAndID",
+			"SingleNpcID": {},
+			"NpcIDInOwnerGroup": {
+				"IsDynamic": false,
+				"FixedValue": {
+					"Value": 400001
+				}
+			}
+		},
+		"InitFov": 1,
+		"ToastTemplate": "多条件拍摄",
+		"SuccessToastText": {
+			"Hash": -200668973
+		},
+		"FailToastText": {
+			"Hash": -560216322
+		},
+		"ShowFinishToastManually": true,
+		"OverrideMaxFov": 40,
+		"OverrideMinFov": 1
+	},
+	"ExtraSettings": {
+		"HideEntityConfig": {
+			"HideEntity": {
+				"$type": "RPG.GameCore.TargetConcat",
+				"Targets": [
+					{
+						"$type": "RPG.GameCore.TargetFetchAdvNpcEx",
+						"FetchType": "SingleNpcByNpcID",
+						"SingleNpcID": {
+							"GroupID": {
+								"IsDynamic": false,
+								"FixedValue": {
+									"Value": 16
+								}
+							},
+							"GroupNpcID": {
+								"IsDynamic": false,
+								"FixedValue": {
+									"Value": 400002
+								}
+							}
+						}
+					},
+					{
+						"$type": "RPG.GameCore.TargetFetchAdvNpcEx",
+						"FetchType": "SingleNpcByNpcID",
+						"SingleNpcID": {
+							"GroupID": {
+								"IsDynamic": false,
+								"FixedValue": {
+									"Value": 16
+								}
+							},
+							"GroupNpcID": {
+								"IsDynamic": false,
+								"FixedValue": {
+									"Value": 400003
+								}
+							}
+						}
+					}
+				]
+			}
+		},
+		"FreeStyleConfig": [],
+		"PlayerControlSetting": {
+			"ResetPlayerPosition": true,
+			"AnchorConfig": {
+				"AreaName": {
+					"Value": "LevelArea_P41212_F41212001_G16"
+				},
+				"AnchorName": {
+					"Value": "Anchor3"
+				}
+			},
+			"OverrideCameraHeight": 2,
+			"LockPlayerMove": true
+		},
+		"ShowBubbleTalk": true,
+		"ShotHidePostProcessEffect": true
+	},
+	"BindName": {
+		"Value": "202210208_photo"
+	},
+	"NotStartPhotoInTriggerRangeMode": true,
+	"ShotResultCondition": {
+		"TargetConditionName": {
+			"Hash": -597573782
+		},
+		"ShotResultCondition": [
+			{
+				"PredicateName": {
+					"Hash": -597573779
+				},
+				"Predicate": {
+					"$type": "RPG.GameCore.ByPhotoGraphFovLevel",
+					"Level": "Two"
+				},
+				"OnPredicateSuccess": [],
+				"BindContainerFlagNames": []
+			},
+			{
+				"PredicateName": {
+					"Hash": -597573783
+				},
+				"Predicate": {
+					"$type": "RPG.GameCore.ByTargetContainerRatioInRect",
+					"BindPhotographName": "202210208_photo",
+					"ContainerFlagName": "202210208_npc3",
+					"Size": {}
+				},
+				"OnPredicateSuccess": [],
+				"BindContainerFlagNames": []
+			},
+			{
+				"PredicateName": {
+					"Hash": -597573781
+				},
+				"Predicate": {
+					"$type": "RPG.GameCore.ByTargetContainerRatioInRect",
+					"BindPhotographName": "202210208_photo",
+					"ContainerFlagName": "202210208_npc",
+					"Size": {}
+				},
+				"OnPredicateSuccess": [],
+				"BindContainerFlagNames": []
+			},
+			{
+				"PredicateName": {
+					"Hash": -597573780
+				},
+				"Predicate": {
+					"$type": "RPG.GameCore.ByAnd",
+					"PredicateList": [
+						{
+							"$type": "RPG.GameCore.ByPhotoGraphConditionSuccess",
+							"PhotoGraphName": "202210208_photo",
+							"CustomEvent": "G16_PhotoAvaliable"
+						},
+						{
+							"$type": "RPG.GameCore.ByTargetContainerRatioInRect",
+							"BindPhotographName": "202210208_photo",
+							"ContainerFlagName": "202210208_npc2",
+							"Size": {}
+						}
+					]
+				},
+				"OnPredicateSuccess": [],
+				"BindContainerFlagNames": [
+					"202210208_npc3"
+				]
+			}
+		],
+		"TargetFovLevel": "Two",
+		"AutoSnapFovLevel": true
+	},
+	"HideTwoPointFourParam": false,
+	"ConditionPhotoParam": {
+		"AimContainerName": {
+			"Value": "202210208_npc3"
+		},
+		"RectRangeY": {
+			"IsDynamic": false,
+			"FixedValue": {
+				"Value": 0.3
+			}
+		}
+	}
+}</pre>
+:<!--0.4-second delay-->
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+<pre>{
+	"$type": "RPG.GameCore.SwitchPhotoGraphMode"
+}</pre>
+:{{A|VO chapter2 9 yanqing 329.ogg}} '''Yanqing:''' Don't get too close, Miss March! They might spot you!
+<pre>{
+	"$type": "RPG.GameCore.SwitchCharacterAnchorV2",
+	"SwitchCharacterAnchorConfig": {
+		"IsLocalPlayer": true,
+		"CharacterUniqueName": "LocalPlayer",
+		"AreaName": {
+			"Value": "LevelArea_P41212_F41212001_G16"
+		},
+		"AnchorName": {
+			"Value": "Anchor1"
+		}
+	}
+}</pre>
+;(Unused &mdash; G16_PlayBubbleTalk)
+<pre>{
+	"$type": "RPG.GameCore.PlayNPCBubbleTalk",
+	"BubbleTalkInfoList": [
+		{
+			"AutoSkipTime": 3,
+			"GroupID": 16,
+			"GroupNpcID": 400001,
+			"TalkSentenceID": 222121190
+		},
+		{
+			"AutoSkipTime": 3,
+			"GroupID": 16,
+			"GroupNpcID": 400001,
+			"TalkSentenceID": 222121191
+		}
+	]
+}</pre>
+
+;(Unused &mdash; Start_LowSpeed)
+:<!--0.1-second delay-->
+:<pre>{
+	"$type": "RPG.GameCore.TriggerCustomPhotoGraphCondition",
+	"PhotoGraphName": "202210208_photo",
+	"CustomEvent": "G16_PhotoAvaliable",
+	"Enable": true
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.SetGraphDynamicFloat",
+	"Name": "Event_PhotoAvaliable",
+	"TargetIDs": [],
+	"Value": {
+		"IsDynamic": false,
+		"FixedValue": {
+			"Value": 1
+		}
+	}
+}</pre>
+
+;(Unused &mdash; End_LowSpeed)
+:<!--0.1-second delay-->
+:<pre>{
+	"$type": "RPG.GameCore.TriggerCustomPhotoGraphCondition",
+	"PhotoGraphName": "202210208_photo",
+	"CustomEvent": "G16_PhotoAvaliable"
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.SetGraphDynamicFloat",
+	"Name": "Event_PhotoAvaliable",
+	"TargetIDs": [],
+	"Value": {
+		"IsDynamic": false,
+		"FixedValue": {
+			"Value": 0
+		}
+	}
+}</pre>
+{{Dialogue End}}
+
+===Track down the suspicious character{{subst:void|<!--202210212-->}}===
+{{Dialogue Start}}
+:{{tx}}
+<pre>{
+	"$type": "RPG.GameCore.BindSwitchPhotoGraphFuncBtn",
+	"SimpleMode": false,
+	"UseType": "StartPhotoGraph",
+	"RangeTriggerProp": {
+		"SinglePropID": {
+			"GroupID": {
+				"IsDynamic": false,
+				"FixedValue": {
+					"Value": 16
+				}
+			},
+			"ID": {
+				"IsDynamic": false,
+				"FixedValue": {
+					"Value": 300002
+				}
+			}
+		}
+	},
+	"PhotoGraphMode": "PhotoUpdateTwoPointFour",
+	"AimTargetContainerConfig": [
+		{
+			"InnerContainers": [],
+			"AimTargetConfig": {
+				"$type": "RPG.GameCore.PhotoGraphAimContaierTarget",
+				"AimTargetType": {
+					"$type": "RPG.GameCore.GroupFetchLocalTarget",
+					"Targets": [
+						400001
+					]
+				},
+				"ShowAimTag": false,
+				"GameObjectNode": {
+					"Value": "Head_M"
+				},
+				"ShowTipAngle": 210
+			},
+			"TipConfigs": [],
+			"ContainerFlagName": "202210208_npc",
+			"IsTopContainer": true,
+			"IsAimTargetConfig": true
+		},
+		{
+			"AimTargetConfig": {
+				"$type": "RPG.GameCore.PhotoGraphAimContaierTarget",
+				"AimTargetType": {
+					"$type": "RPG.GameCore.GroupFetchLocalTarget",
+					"Targets": [
+						400001
+					]
+				},
+				"GameObjectNode": {
+					"Value": "Head_M"
+				}
+			},
+			"ContainerFlagName": "202210208_npc3",
+			"IsTopContainer": true,
+			"IsAimTargetConfig": true
+		},
+		{
+			"AimTargetConfig": {
+				"$type": "RPG.GameCore.PhotoGraphAimContaierTarget",
+				"AimTargetType": {
+					"$type": "RPG.GameCore.GroupFetchLocalTarget",
+					"Targets": [
+						400001
+					]
+				},
+				"ShowAimTag": false,
+				"GameObjectNode": {
+					"Value": "Wrist_R"
+				}
+			},
+			"ContainerFlagName": "202210208_npc2",
+			"IsTopContainer": true,
+			"IsAimTargetConfig": true
+		}
+	],
+	"OnIdentifyFinish": [],
+	"OnIdentifyTarget": [],
+	"TriggerExitDelay": 0,
+	"OverrideConfig": {
+		"IdentifyLookAt": {
+			"$type": "RPG.GameCore.TargetFetchAdvNpcEx",
+			"FetchType": "SingleNpcByOwnerGroupAndID",
+			"SingleNpcID": {},
+			"NpcIDInOwnerGroup": {
+				"IsDynamic": false,
+				"FixedValue": {
+					"Value": 400001
+				}
+			}
+		},
+		"InitFov": 1,
+		"ToastTemplate": "多条件拍摄",
+		"SuccessToastText": {
+			"Hash": -200668973
+		},
+		"FailToastText": {
+			"Hash": -560216322
+		},
+		"ShowFinishToastManually": true,
+		"OverrideMaxFov": 40,
+		"OverrideMinFov": 1
+	},
+	"ExtraSettings": {
+		"HideEntityConfig": {
+			"HideEntity": {
+				"$type": "RPG.GameCore.TargetConcat",
+				"Targets": [
+					{
+						"$type": "RPG.GameCore.TargetFetchAdvNpcEx",
+						"FetchType": "SingleNpcByNpcID",
+						"SingleNpcID": {
+							"GroupID": {
+								"IsDynamic": false,
+								"FixedValue": {
+									"Value": 16
+								}
+							},
+							"GroupNpcID": {
+								"IsDynamic": false,
+								"FixedValue": {
+									"Value": 400002
+								}
+							}
+						}
+					},
+					{
+						"$type": "RPG.GameCore.TargetFetchAdvNpcEx",
+						"FetchType": "SingleNpcByNpcID",
+						"SingleNpcID": {
+							"GroupID": {
+								"IsDynamic": false,
+								"FixedValue": {
+									"Value": 16
+								}
+							},
+							"GroupNpcID": {
+								"IsDynamic": false,
+								"FixedValue": {
+									"Value": 400003
+								}
+							}
+						}
+					}
+				]
+			}
+		},
+		"FreeStyleConfig": [],
+		"PlayerControlSetting": {
+			"ResetPlayerPosition": true,
+			"AnchorConfig": {
+				"AreaName": {
+					"Value": "LevelArea_P41212_F41212001_G16"
+				},
+				"AnchorName": {
+					"Value": "Anchor3"
+				}
+			},
+			"OverrideCameraHeight": 2,
+			"LockPlayerMove": true
+		},
+		"ShowBubbleTalk": true,
+		"ShotHidePostProcessEffect": true
+	},
+	"BindName": {
+		"Value": "202210208_photo"
+	},
+	"NotStartPhotoInTriggerRangeMode": true,
+	"ShotResultCondition": {
+		"TargetConditionName": {
+			"Hash": -597573782
+		},
+		"ShotResultCondition": [
+			{
+				"PredicateName": {
+					"Hash": -597573779
+				},
+				"Predicate": {
+					"$type": "RPG.GameCore.ByPhotoGraphFovLevel",
+					"Level": "Two"
+				},
+				"OnPredicateSuccess": [],
+				"BindContainerFlagNames": []
+			},
+			{
+				"PredicateName": {
+					"Hash": -597573783
+				},
+				"Predicate": {
+					"$type": "RPG.GameCore.ByTargetContainerRatioInRect",
+					"BindPhotographName": "202210208_photo",
+					"ContainerFlagName": "202210208_npc3",
+					"Size": {}
+				},
+				"OnPredicateSuccess": [],
+				"BindContainerFlagNames": []
+			},
+			{
+				"PredicateName": {
+					"Hash": -597573781
+				},
+				"Predicate": {
+					"$type": "RPG.GameCore.ByTargetContainerRatioInRect",
+					"BindPhotographName": "202210208_photo",
+					"ContainerFlagName": "202210208_npc",
+					"Size": {}
+				},
+				"OnPredicateSuccess": [],
+				"BindContainerFlagNames": []
+			},
+			{
+				"PredicateName": {
+					"Hash": -597573780
+				},
+				"Predicate": {
+					"$type": "RPG.GameCore.ByAnd",
+					"PredicateList": [
+						{
+							"$type": "RPG.GameCore.ByPhotoGraphConditionSuccess",
+							"PhotoGraphName": "202210208_photo",
+							"CustomEvent": "G16_PhotoAvaliable"
+						},
+						{
+							"$type": "RPG.GameCore.ByTargetContainerRatioInRect",
+							"BindPhotographName": "202210208_photo",
+							"ContainerFlagName": "202210208_npc2",
+							"Size": {}
+						}
+					]
+				},
+				"OnPredicateSuccess": [],
+				"BindContainerFlagNames": [
+					"202210208_npc3"
+				]
+			}
+		],
+		"TargetFovLevel": "Two",
+		"AutoSnapFovLevel": true
+	},
+	"HideTwoPointFourParam": false,
+	"ConditionPhotoParam": {
+		"AimContainerName": {
+			"Value": "202210208_npc3"
+		},
+		"RectRangeY": {
+			"IsDynamic": false,
+			"FixedValue": {
+				"Value": 0.3
+			}
+		}
+	}
+}</pre>
+:<!--0.4-second delay-->
+{{Dialogue End}}
+
+===Photograph evidence of the suspicious character's activities{{subst:void|<!--202210209-->}}===
+{{Dialogue Start}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{tx}}
+;(Enter battle)
+:{{Enemy List|Eclipse Wolftrooper*1; Cloud Knights Patroller*2; Sableclaw Wolftrooper*1}}
+:{{A|VO chapter2 9 yanqing 341.ogg}} '''Yanqing:''' How is this possible? How did these foxians... change their appearances like that!?
+:{{A|VO chapter2 9 yunli 209.ogg}} '''Yunli:''' They're not foxians at all. They revealed their true form. They're borisin, just like the bandits I defeated on the IPC ship.
+:{{A|VO chapter2 9 yanqing 342.ogg}} '''Yanqing:''' Wait, that means...
+:{{DIcon|Arrow}} The borisin have infiltrated the Xianzhou...
+::{{A|VO chapter2 9 mar7th 265.ogg}} '''March 7th:''' How did the borisin manage to infiltrate the Xianzhou?
+:{{DIcon|Arrow}} How did the borisin disguise themselves as foxians?
+::{{A|VO chapter2 9 mar7th 266.ogg}} '''March 7th:''' What kind of trick did they use? When we were tracking them earlier, they looked just like normal Xianzhou foxians...
+:{{A|VO chapter2 9 yanqing 343.ogg}} '''Yanqing:''' It's not just a simple disguise of wearing our clothing and shaving their whiskers. They're somehow able to alter their appearance to be indistinguishable from foxians.
 :{{tx}}
 {{Dialogue End}}
 
-===Find a suitable box to hide in===
+===Monitor the suspicious character{{subst:void|<!--202210204-->}}===
 {{Dialogue Start}}
-:{{tx}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{A|VO chapter2 9 yanqing 329.ogg}} '''Yanqing:''' Don't get too close, Miss March! They might spot you!
+
+;(Upon reaching the destination)
+:{{A|VO chapter2 9 mar7th 264.ogg}} '''March 7th:''' Never mind who they are, let's just film them.
+;(Unused &mdash; Photo_Finish)
+
+
+;(Unused &mdash; Photo_Start)
+<pre>{
+	"$type": "RPG.GameCore.BindSwitchPhotoGraphFuncBtn",
+	"SimpleMode": false,
+	"UseType": "StartPhotoInTriggerRange",
+	"MissionID": {
+		"IsDynamic": false,
+		"FixedValue": {
+			"Value": 2022102
+		}
+	},
+	"RangeTriggerProp": {
+		"FetchType": "SinglePropByPropID",
+		"SinglePropID": {
+			"GroupID": {
+				"IsDynamic": false,
+				"FixedValue": {
+					"Value": 41
+				}
+			},
+			"ID": {
+				"IsDynamic": false,
+				"FixedValue": {
+					"Value": 300003
+				}
+			}
+		}
+	},
+	"ColliderRelativePathList": [],
+	"PhotoGraphMode": "PhotoUpdateTwoPointFour",
+	"AimTargetContainerConfig": [
+		{
+			"InnerContainers": [],
+			"AimTargetConfig": {
+				"$type": "RPG.GameCore.PhotoGraphAimContaierTarget",
+				"AimTargetType": {
+					"$type": "RPG.GameCore.TargetFetchAdvNpcEx",
+					"FetchType": "SingleNpcByNpcID",
+					"SingleNpcID": {
+						"GroupID": {
+							"IsDynamic": false,
+							"FixedValue": {
+								"Value": 41
+							}
+						},
+						"GroupNpcID": {
+							"IsDynamic": false,
+							"FixedValue": {
+								"Value": 400003
+							}
+						}
+					}
+				},
+				"GameObjectNode": {
+					"Value": "Root_M"
+				},
+				"IgnoreColliderTest": true
+			},
+			"ContainerFlagName": "Photo_G41_400003",
+			"IsTopContainer": true,
+			"IsAimTargetConfig": true
+		},
+		{
+			"InnerContainers": [],
+			"AimTargetConfig": {
+				"$type": "RPG.GameCore.PhotoGraphAimContaierTarget",
+				"AimTargetType": {
+					"$type": "RPG.GameCore.TargetFetchAdvNpcEx",
+					"FetchType": "SingleNpcByNpcID",
+					"SingleNpcID": {
+						"GroupID": {
+							"IsDynamic": false,
+							"FixedValue": {
+								"Value": 41
+							}
+						},
+						"GroupNpcID": {
+							"IsDynamic": false,
+							"FixedValue": {
+								"Value": 400004
+							}
+						}
+					}
+				},
+				"GameObjectNode": {
+					"Value": "Root_M"
+				},
+				"IgnoreColliderTest": true
+			},
+			"ContainerFlagName": "Photo_G41_400004",
+			"IsTopContainer": true,
+			"IsAimTargetConfig": true
+		},
+		{
+			"InnerContainers": [],
+			"AimTargetConfig": {
+				"$type": "RPG.GameCore.PhotoGraphAimContaierTarget",
+				"AimTargetType": {
+					"$type": "RPG.GameCore.TargetFetchAdvNpcEx",
+					"FetchType": "SingleNpcByNpcID",
+					"SingleNpcID": {
+						"GroupID": {
+							"IsDynamic": false,
+							"FixedValue": {
+								"Value": 41
+							}
+						},
+						"GroupNpcID": {
+							"IsDynamic": false,
+							"FixedValue": {
+								"Value": 400005
+							}
+						}
+					}
+				},
+				"GameObjectNode": {
+					"Value": "Root_M"
+				},
+				"IgnoreColliderTest": true
+			},
+			"ContainerFlagName": "Photo_G41_400005",
+			"IsTopContainer": true,
+			"IsAimTargetConfig": true
+		}
+	],
+	"OnIdentifyFinish": [],
+	"OnIdentifyTarget": [
+		{
+			"$type": "RPG.GameCore.TriggerGroupEvent",
+			"EventName": {
+				"Value": "Photo_Finish"
+			}
+		}
+	],
+	"TriggerExitDelay": 0.5,
+	"OverrideConfig": {
+		"SuccessToastText": {
+			"Hash": -200668973
+		},
+		"FailToastText": {
+			"Hash": -560216322
+		},
+		"ShowFinishToastManually": true
+	},
+	"BindName": {
+		"Value": "photo_G41"
+	},
+	"ShotResultCondition": {
+		"TargetConditionName": {
+			"Hash": 968510164
+		},
+		"ShotResultCondition": [
+			{
+				"PredicateName": {
+					"Hash": 968510163
+				},
+				"Predicate": {
+					"$type": "RPG.GameCore.ByPhotoGraphFovLevel",
+					"Level": "Three"
+				}
+			},
+			{
+				"PredicateName": {
+					"Hash": 968510162
+				},
+				"Predicate": {
+					"$type": "RPG.GameCore.ByTargetContainerRatioInRect",
+					"BindPhotographName": "photo_G41",
+					"ContainerFlagName": "Photo_G41_400003",
+					"Size": {}
+				},
+				"BindContainerFlagNames": [
+					"Photo_G41_400003"
+				]
+			},
+			{
+				"PredicateName": {
+					"Hash": 968510161
+				},
+				"Predicate": {
+					"$type": "RPG.GameCore.ByTargetContainerRatioInRect",
+					"BindPhotographName": "photo_G41",
+					"ContainerFlagName": "Photo_G41_400004",
+					"Size": {}
+				},
+				"BindContainerFlagNames": [
+					"Photo_G41_400004"
+				]
+			},
+			{
+				"PredicateName": {
+					"Hash": 968510160
+				},
+				"Predicate": {
+					"$type": "RPG.GameCore.ByTargetContainerRatioInRect",
+					"BindPhotographName": "photo_G41",
+					"ContainerFlagName": "Photo_G41_400005",
+					"Size": {}
+				},
+				"BindContainerFlagNames": [
+					"Photo_G41_400005"
+				]
+			}
+		],
+		"TargetFovLevel": "Three",
+		"AutoSnapFovLevel": true
+	},
+	"HideTwoPointFourParam": false
+}</pre>
 {{Dialogue End}}
 
-===Track down the suspicious character===
+===Photograph evidence of the suspicious character's activities{{subst:void|<!--202210213-->}}===
 {{Dialogue Start}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
 :{{tx}}
+:{{tx}}
+
+;(Upon reaching the destination)
+:{{A|VO chapter2 9 yanqing 329.ogg}} '''Yanqing:''' Don't get too close, Miss March! They might spot you!
 {{Dialogue End}}
 
-===Photograph evidence of the suspicious character's activities===
+===Find a suitable box to hide in{{subst:void|<!--202210205-->}}===
 {{Dialogue Start}}
-:{{tx}}
+
+:{{DIcon|Loupe}} Crate
+:Taking advantage of the temporary absence of the group, you cautiously approach a crate and crawl inside.
+;(Screen fades to black)
+:{{A|VO chapter2 9 mar7th 260.ogg}} '''March 7th:''' Ugh, it's so cramped in here...
+:{{A|VO chapter2 9 yunli 207.ogg}} '''Yunli:''' I can hardly breathe.
+:{{A|VO chapter2 9 yanqing 331.ogg}} '''Yanqing:''' Just hang in there...
+:You hear footsteps pacing back and forth beside the crate. If someone were to open the crate at that moment, they would certainly catch you in your ridiculous hiding position. Fortunately, that doesn't happen.
+:The floating mechanism at the bottom of the crate is activated. You feel it begins to drift slowly forward.
+<pre>{
+	"$type": "RPG.GameCore.SwitchCharacterAnchorV2",
+	"SwitchCharacterAnchorConfig": {
+		"IsLocalPlayer": true,
+		"CharacterUniqueName": "LocalPlayer",
+		"AreaName": {
+			"Value": "LevelArea_P41212_F41212001_G13"
+		},
+		"AnchorName": {
+			"Value": "Anchor2"
+		}
+	}
+}</pre>
 {{Dialogue End}}
 
-===Track down the suspicious character===
+===Track down the suspicious character{{subst:void|<!--202210206-->}}===
 {{Dialogue Start}}
-:{{tx}}
-{{Dialogue End}}
 
-===Photograph evidence of the suspicious character's activities===
-{{Dialogue Start}}
-:{{tx}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{A|VO chapter2 9 yanqing 327.ogg}} '''Yanqing:''' Tread softly, breathe quietly...
+:{{A|VO chapter2 9 yanqing 328.ogg}} '''Yanqing:''' And make sure to keep an eye on them. Hide out of sight as soon as there's any sign of activity.
+
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{A|VO chapter2 9 yanqing 329.ogg}} '''Yanqing:''' Don't get too close, Miss March! They might spot you!
+;(Unused &mdash; Track_OnFail_Reset)
+<pre>{
+	"$type": "RPG.GameCore.AdvDestroyGroupEntity",
+	"InstanceIDList": [
+		400002
+	]
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.AdvCreateGroupEntity",
+	"InstanceIDList": [
+		400002
+	]
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.AdvEnableTrigger",
+	"TargetType": {
+		"$type": "RPG.GameCore.GroupFetchLocalTarget",
+		"TargetType": "Prop",
+		"Targets": [
+			300005
+		]
+	},
+	"IsEnable": true,
+	"TriggerName": "MissionTrigger"
+}</pre>
+
+;(Unused &mdash; Track_OnFail_Found)
+<pre>{
+	"$type": "RPG.GameCore.StopNPCBubbleTalk",
+	"UniqueIDList": [
+		0,
+		1,
+		2
+	]
+}</pre>
+
 {{Dialogue End}}
 
 ==Other Languages==

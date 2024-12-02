@@ -7,11 +7,11 @@ PageTitle=#Dock Operations (I)#
 |title         = 
 |image         = <!--Mission Dock Operations (I).png-->
 |type          = Adventure
-|event_name    = 
+|event_name    = Aurum Alley's Hustle and Bustle
 |chapter       = Aurum Alley's Hustle and Bustle
 |requirements  = [[Adventure Mission]] ''[[Back in Business (I)]]'' completed
 |summary       = Miss Secretary has officially informed you that, with your help, the Aurum Alley Merchant Guild has successfully achieved their revenue goal for this phase, and will spend part of the revenue on dock maintenance and renovations. She also ordered plenty of snacks from Tall Auntie for you to enjoy.<br />Though Miss Secretary didn't state it directly, you should take this as a reward for helping everyone reach the revenue target for this phase.
-|characters    = Trailblazer
+|characters    = Mingxi; Trailblazer
 |startLocation = [[The Xianzhou Luofu]] - [[Aurum Alley]]
 |world         = The Xianzhou Luofu
 |area          = Aurum Alley
@@ -19,7 +19,7 @@ PageTitle=#Dock Operations (I)#
 |next          = Back in Business (II)
 |rewards       = Credit*10,000
 }}
-'''''Dock Operations (I)''''' is an [[Adventure Mission]] on [[The Xianzhou Luofu]] in the chapter [[Aurum Alley's Hustle and Bustle]].
+'''''Dock Operations (I)''''' is an Event [[Adventure Mission]] from the [[Aurum Alley's Hustle and Bustle]] event.
 
 ==Steps==
 # Talk with Mingxi at the docks
@@ -34,10 +34,46 @@ PageTitle=#Dock Operations (I)#
 ==Dialogue==
 {{Stub Dialogue}}
 
-===Talk with Mingxi at the docks===
+===Talk with Mingxi at the docks{{subst:void|<!--800321401-->}}===
 {{Mission Description|type=adventure|location=Aurum Alley|As of now, you are an essential aspect of Mingxi's planned "Aurum Alley Revival Project." Do what you can to restore the prosperity of Aurum Alley.<br />Go talk with Mingxi and see what you can help with right now.}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Mingxi)
+:{{A|VO side2 jrx mingxi 159.ogg}} '''Mingxi:''' Now that you're here, let's get started on the dock-related work.
+<pre>{
+	"$type": "RPG.GameCore.ShowAlleyMainEntrancePage",
+	"OnSkip": [
+		{
+			"$type": "RPG.GameCore.EndDialogueEntityInteract"
+		},
+		{
+			"$type": "RPG.GameCore.TriggerCustomStringOnDialogEnd",
+			"CustomString": {
+				"Value": "Talk_800320226_End"
+			}
+		},
+		{
+			"$type": "RPG.GameCore.FinishLevelGraph"
+		}
+	],
+	"OnCancel": [
+		{
+			"$type": "RPG.GameCore.EndDialogueEntityInteract"
+		},
+		{
+			"$type": "RPG.GameCore.TriggerCustomStringOnDialogEnd",
+			"CustomString": {
+				"Value": "Talk_800320226_End"
+			}
+		},
+		{
+			"$type": "RPG.GameCore.FinishLevelGraph"
+		}
+	]
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.EndDialogueEntityInteract"
+}</pre>
 {{Dialogue End}}
 
 ==Other Languages==

@@ -11,7 +11,7 @@ PageTitle=##
 |chapter       = 
 |requirements  = [[Trailblaze Mission]] ''[[Humming Antlers, Entwined Horns]]'' completed
 |summary       = <!--official mission summary from Fate's Atlas-->
-|characters    = Trailblazer
+|characters    = Bailu; Trailblazer
 |startLocation = [[The Xianzhou Luofu]] - [[Alchemy Commission]]
 |world         = The Xianzhou Luofu
 |area          = Alchemy Commission
@@ -33,7 +33,256 @@ PageTitle=##
 -->
 ==Dialogue==
 {{Stub Dialogue}}
+;(Upon reaching the destination)
 
+;(Upon reaching the destination)
+<pre>{
+	"$type": "RPG.GameCore.PlayMessage",
+	"MessageSectionID": 1215101,
+	"ShowNotice": true
+}</pre>
+:'''(Trailblazer):''' (A dangerous parcel... Is that the mini-neutron bomb I picked up earlier?)
+
+;(Lose {{Item|Mini-Neutron Bomb|20|x=1}})
+
+;(Lose {{Item|Praise of High Morals|20|x=6}})
+:'''(Trailblazer):''' (What happened? Did the bomb go off?)
+:'''(Trailblazer):''' (Dang... I was blown all the way here!?)
+:'''Bailu:''' Hey, (Trailblazer)! You're awake!
+:{{DIcon|Arrow}} What is this place?
+::'''Bailu:''' The Alchemy Commission. It sounds like you were scared unconscious in the Seat of Divine Foresight, so Qingzu contacted me to rush over to save you!
+:{{DIcon|Arrow}} The bomb blew me all the way here!?
+::'''Bailu:''' Bomb? Oh, you meant the prank scare box? Qingzu explained most of the situation to me...
+:{{DIcon|Arrow}} Did I get reborn?
+::'''Bailu:''' Reborn? You're not one of us Vidyadhara! Why are you talking nonsense... Maybe you need more electrotherapy...
+::'''Bailu:''' Hey, don't run away! I was only kidding. You want to talk about what happened just now?
+:'''Bailu:''' So, what happened exactly? Why were you knocked out by a prank scare box?
+:{{DIcon|Arrow}} Prank scare box? I don't know.
+:{{DIcon|Arrow}} Just what on earth happened?
+:'''Bailu:''' Hm... Looks like you don't know either.
+:'''Bailu:''' Oh, right! Qingzu left the note inside the box for me. Take a look. Maybe it will jog your memory?
+<pre>{
+	"$type": "RPG.GameCore.ShowReading",
+	"BookID": {
+		"fixedValue": {
+			"Value": 190450
+		}
+	},
+	"WaitForExit": true
+}</pre>
+:{{DIcon|Arrow}} It's him...
+:{{DIcon|Arrow}} He came to the Xianzhou!?
+:'''Bailu:''' Is this someone you know? To pull off such an old-school prank... this person doesn't seem ordinary at all.
+:'''Bailu:''' Oh, yes, almost forgot... Qingzu also asked me to give this to you. Her exact words are: "Thank you for your support of the Seat of Divine Foresight's work, and also for saving everyone on the Xianzhou Luofu."
+:'''Bailu:''' So, keep it! By the way, if you still feel under the weather, come find me anytime.
+----
+;(Obtain {{Item|Praise of High Morals|20|x=3}})
+
+;(Unused &mdash; 140000_SubmitSucceed_1)
+:What!? You actually have six Praises of High Morals...
+::... Alright, there's nothing else I can say. A promise is a promise. Go do what you have to do.
+::But, remember this: Do it at your own risk!
+:<pre>{
+	"$type": "RPG.GameCore.TriggerSound",
+	"SoundName": {
+		"Value": "Ev_sfx_xianzhou_funnybomb_intowater"
+	},
+	"EmitterType": "LocalPlayer"
+}</pre>
+::----
+::{{DIcon|Arrow}} And what happened?
+:::Nothing happened. What did you think was going to happen? A massive explosion blasting a gigantic hole on the Alchemy Commission delve or even the Xianzhou Luofu?
+::{{DIcon|Arrow}} That's it?
+:::Of course. What were you expecting to see? Your weapon of mass destruction making a massive explosion, blasting a gigantic hole on the Alchemy Commission delve or even the Xianzhou Luofu?
+::The best outcome for you would be to watch it silently sink into the water, and maybe see a few bubbles rise up at best. Isn't that enough?
+::{{DIcon|Arrow}} Thank the Aeons it didn't actually explode.
+:::Dear me! Look who's retained a hint of conscience in their humanity?
+::{{DIcon|Arrow}} Let's go. This is boring.
+:::Aha the Elation might've agreed on your perspective, but The Hunt would not have.
+::{{DIcon|Arrow}} But this is not how script's supposed to go!
+:::What script? Don't be silly. There is no script in your life. No one's life is scripted, except the scriptwriter's.
+::Alright, let's just leave it at that. Considering the outcome wasn't too bad, I'll return {{Color|keyword|nobold=1|three Praises of High Morals}} to you.
+::You're welcome. It's nothing! If you really want to thank someone, go thank the Vidyadhara &mdash; thank them for not having a bone to pick with you.
+::----
+
+;(Unused &mdash; 140000_SubmitSucceed_2)
+:What!? You actually have six Praises of High Morals...
+::... Alright, there's nothing else I can say. A promise is a promise. Go do what you have to do.
+::But, remember this: Do it at your own risk!
+:<pre>{
+	"$type": "RPG.GameCore.TriggerSound",
+	"SoundName": {
+		"Value": "Ev_sfx_xianzhou_funnybomb_intowater"
+	},
+	"EmitterType": "LocalPlayer"
+}</pre>
+::----
+::{{DIcon|Arrow}} And what happened?
+:::Nothing happened. What did you think was going to happen? A massive explosion blasting a gigantic hole on the Alchemy Commission delve or even the Xianzhou Luofu?
+::{{DIcon|Arrow}} That's it?
+:::Of course. What were you expecting to see? Your weapon of mass destruction making a massive explosion, blasting a gigantic hole on the Alchemy Commission delve or even the Xianzhou Luofu?
+::The best outcome for you would be to watch it silently sink into the water, and maybe see a few bubbles rise up at best. Isn't that enough?
+::{{DIcon|Arrow}} Thank the Aeons it didn't actually explode.
+:::Dear me! Look who's retained a hint of conscience in their humanity?
+::{{DIcon|Arrow}} Let's go. This is boring.
+:::Aha the Elation might've agreed on your perspective, but The Hunt would not have.
+::{{DIcon|Arrow}} But this is not how script's supposed to go!
+:::What script? Don't be silly. There is no script in your life. No one's life is scripted, except the scriptwriter's.
+::Alright, let's just leave it at that. Considering the outcome wasn't too bad, I'll return {{Color|keyword|nobold=1|three Praises of High Morals}} to you.
+::You're welcome. It's nothing! If you really want to thank someone, go thank the Vidyadhara &mdash; thank them for not having a bone to pick with you.
+::----
+
+;(Unused &mdash; 140000_SubmitSucceed)
+:What!? You actually have six Praises of High Morals...
+::... Alright, there's nothing else I can say. A promise is a promise. Go do what you have to do.
+::But, remember this: Do it at your own risk!
+:<pre>{
+	"$type": "RPG.GameCore.TriggerSound",
+	"SoundName": {
+		"Value": "Ev_sfx_xianzhou_funnybomb_intowater"
+	},
+	"EmitterType": "LocalPlayer"
+}</pre>
+::----
+::{{DIcon|Arrow}} And what happened?
+:::Nothing happened. What did you think was going to happen? A massive explosion blasting a gigantic hole on the Alchemy Commission delve or even the Xianzhou Luofu?
+::{{DIcon|Arrow}} That's it?
+:::Of course. What were you expecting to see? Your weapon of mass destruction making a massive explosion, blasting a gigantic hole on the Alchemy Commission delve or even the Xianzhou Luofu?
+::The best outcome for you would be to watch it silently sink into the water, and maybe see a few bubbles rise up at best. Isn't that enough?
+::{{DIcon|Arrow}} Thank the Aeons it didn't actually explode.
+:::Dear me! Look who's retained a hint of conscience in their humanity?
+::{{DIcon|Arrow}} Let's go. This is boring.
+:::Aha the Elation might've agreed on your perspective, but The Hunt would not have.
+::{{DIcon|Arrow}} But this is not how script's supposed to go!
+:::What script? Don't be silly. There is no script in your life. No one's life is scripted, except the scriptwriter's.
+::Alright, let's just leave it at that. Considering the outcome wasn't too bad, I'll return {{Color|keyword|nobold=1|three Praises of High Morals}} to you.
+::You're welcome. It's nothing! If you really want to thank someone, go thank the Vidyadhara &mdash; thank them for not having a bone to pick with you.
+::----
+
+;(Unused &mdash; Talk_404024207)
+:----
+::The Lunarescent Depths, the sacred and incorruptible holy waters of the Vidyadhara, remain calm and peaceful even today.
+::It is said that the water of this ancient sea has special medicinal properties. Not only can it be used in the elixir crucibles to refining medicine, but it also serve as an antiknock agent that suppresses the shocks and popping during the quenching process &mdash; In theory, you can destroy the dangerous package here.
+::{{DIcon|Arrow}} Destroy the dangerous parcel.
+:::Are you serious!? That package contains a mini-neutron bomb!
+:::Yes, the waters of Lunarescent Depths have flame-retardant and antiknocking properties &mdash; But this body of water is also the sacred water of life for the Vidyadhara people, the symbol of their ancient beliefs!
+:::Do you have the heart to desecrate their beliefs with a weapon of mass destruction? Are you willing to break this peaceful tranquility?
+:::{{DIcon|Arrow}} I do!
+::::You...
+::::No, you can't. This is too immoral.
+::::If you insist on destroying the bomb here, you need {{Color|keyword|nobold=1|six Praises of High Morals}}. Nothing less than six. Do you understand?
+::::{{DIcon|Arrow}} Do I look like an immoral person? Take them!
+::::<pre>{
+	"$type": "RPG.GameCore.ConsumeMissionItemPerformance",
+	"SubMissionID": 404024209,
+	"Desc": {
+		"Hash": -1427895956
+	},
+	"OnSubmitConfirm": [
+		{
+			"$type": "RPG.GameCore.TriggerCustomString",
+			"CustomString": {
+				"Value": "140000_SubmitSucceed_1"
+			}
+		}
+	],
+	"OnSubmitCancel": [
+		{
+			"$type": "RPG.GameCore.TriggerCustomString",
+			"CustomString": {
+				"Value": "Option_404032009"
+			}
+		}
+	],
+	"SimpleTalk": {
+		"TextSpeed": 20,
+		"ProtectTime": 0.8
+	}
+}</pre>
+::::{{DIcon|Arrow}} In theory, it should be safe.
+:::::A theory is just a theory without being put in practice. Can you guarantee that this body of water can absorb all the energy generated by the explosion of the bomb?
+:::::No, you can't. If you insist on doing it, you must fork up {{Color|keyword|nobold=1|six Praises of High Morals}}. This is too dangerous. There's no wiggling room.
+:::::{{DIcon|Arrow}} Fine, here, take them.
+:::::<pre>{
+	"$type": "RPG.GameCore.ConsumeMissionItemPerformance",
+	"SubMissionID": 404024209,
+	"Desc": {
+		"Hash": -1427895956
+	},
+	"OnSubmitConfirm": [
+		{
+			"$type": "RPG.GameCore.TriggerCustomString",
+			"CustomString": {
+				"Value": "140000_SubmitSucceed_2"
+			}
+		}
+	],
+	"OnSubmitCancel": [
+		{
+			"$type": "RPG.GameCore.TriggerCustomString",
+			"CustomString": {
+				"Value": "Option_404032017"
+			}
+		}
+	],
+	"SimpleTalk": {
+		"TextSpeed": 20,
+		"ProtectTime": 0.8
+	}
+}</pre>
+:::::{{DIcon|Arrow}} Are you sure that I can't haggle?
+::::::Of course not. Did you think I was joking?
+:::::;(Return to previous option selection)
+:::::{{DIcon|Exit}} Alright, I give up.
+::::::Hah, great. Just listen to General Jing Yuan and let the Ten-Lords Commission handle it.
+::::::----
+::::{{DIcon|Arrow}} Just let me try.
+:::::Are you listening to what you're saying?
+:::::Sounds like you're still not getting it. This body of water is the Vidyadhara's sacred site and their important spiritual symbol. If you were to set off a big firework here, it would be one of the most immoral things in the world.
+:::::Listen, if you insist on it, you must fork up {{Color|keyword|nobold=1|six Praises of High Morals}}. Understand?
+:::::{{DIcon|Arrow}} Fine, here, take them.
+:::::<pre>{
+	"$type": "RPG.GameCore.ConsumeMissionItemPerformance",
+	"SubMissionID": 404024209,
+	"Desc": {
+		"Hash": -1427895956
+	},
+	"OnSubmitConfirm": [
+		{
+			"$type": "RPG.GameCore.TriggerCustomString",
+			"CustomString": {
+				"Value": "140000_SubmitSucceed"
+			}
+		}
+	],
+	"OnSubmitCancel": [
+		{
+			"$type": "RPG.GameCore.TriggerCustomString",
+			"CustomString": {
+				"Value": "Option_404032028"
+			}
+		}
+	],
+	"SimpleTalk": {
+		"TextSpeed": 20,
+		"ProtectTime": 0.8
+	}
+}</pre>
+:::::{{DIcon|Arrow}} Please! Just let me toss it once.
+::::::How many more neutron bombs do you want to toss? No means no!
+:::::;(Return to previous option selection)
+:::::{{DIcon|Exit}} Alright, I give up.
+::::::Hah, great. Just listen to General Jing Yuan and let the Ten-Lords Commission handle it.
+::::::----
+::::{{DIcon|Exit}} Forget about it.
+:::::Hah, great. Just listen to General Jing Yuan and let the Ten-Lords Commission handle it.
+:::::----
+:::{{DIcon|Exit}} You've convinced me.
+::::Hah, great. Just listen to General Jing Yuan and let the Ten-Lords Commission handle it.
+::::----
+::{{DIcon|Exit}} Leave.
+:::'''(Trailblazer):''' (I'll go somewhere else...)
+:::----
 {{Dialogue End}}
 
 ==Other Languages==

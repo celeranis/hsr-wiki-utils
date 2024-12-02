@@ -7,11 +7,11 @@ PageTitle=#Origami Bird Clash#
 |title         = 
 |image         = <!--Mission Origami Bird Clash.png-->
 |type          = Adventure
-|event_name    = 
+|event_name    = Origami Bird Clash
 |chapter       = Origami Bird Clash
 |requirements  = [[Adventure Mission]] ''[[Origami Bird Clash]]'' completed
 |summary       = <!--official mission summary from Fate's Atlas-->
-|characters    = Trailblazer
+|characters    = Angry Hound; Firefly; Irritable SoulGlad; Silver Wolf; Trailblazer
 |startLocation = [[Penacony]] - [[SoulGlad™ Scorchsand Audition Venue]]
 |world         = Penacony
 |area          = SoulGlad™ Scorchsand Audition Venue
@@ -19,11 +19,12 @@ PageTitle=#Origami Bird Clash#
 |next          = Origami Bird Clash: Collector's Edition
 |rewards       = Stellar Jade*30; Traveler's Guide*4; Lost Crystal*4; Credit*60,000
 }}
-'''''Origami Bird Clash''''' is an [[Adventure Mission]] on [[Penacony]] in the chapter [[Origami Bird Clash]].
+'''''Origami Bird Clash''''' is an Event [[Adventure Mission]] from the [[Origami Bird Clash]] event.
 
 ==Steps==
 # Go to the designated location and find the arcade machine hidden in Scorchsand Audition Venue
 # Obtain the Red Bird's approval
+# Speak with Firefly
 # Return to (The Radiant Feldspar/The Trailblaze's Stern/The Tatalov/The Soaring Clock Hand) and achieve victory against Firefly with the newly acquired arcade machine
 # Review the battle with Firefly afterwards
 # Place the Birefly on the designated arcade machine
@@ -40,40 +41,295 @@ PageTitle=#Origami Bird Clash#
 ==Dialogue==
 {{Stub Dialogue}}
 
-===Go to the designated location and find the arcade machine hidden in Scorchsand Audition Venue===
+===Go to the designated location and find the arcade machine hidden in Scorchsand Audition Venue{{subst:void|<!--802310401-->}}===
 {{Mission Description|type=adventure|location=SoulGlad™ Scorchsand Audition Venue|You have received an invitation from The Family &mdash; Tinah of the Iris Family invites you to test a match-3 puzzle battle game called "Origami Bird Clash."<br />It doesn't seem like a scam... So, go take a look? There's nothing to lose.}}
 {{Dialogue Start}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{tx}}
+:'''Angry Hound:''' I was here first, woof!
+:'''Irritable SoulGlad:''' Yeah, right! Ever heard of "get in line"!?
+:'''Angry Hound:''' And I was here first, woof!
+:'''Irritable SoulGlad:''' Shut your trap. I'm taller, so I got here first. Got it?
+:You and Silver Wolf are so immersed in watching the drama that neither of you notices the rising pressure in the SoulGlad bottle...
+:*POP!*
+:'''Firefly:''' That was close... (Trailblazer), are you okay?
+:{{DIcon|Arrow}} That was close... Thank you!
+::'''Firefly:''' Don't mention it. I'm just glad you're okay.
+:{{DIcon|Arrow}} You can catch bullets with your bare hands too?
+::'''Firefly:''' Um, that's a little overstating it. And what do you mean by "too"?
+:{{DIcon|Arrow}} What are you doing here?
+::'''Firefly:''' I'm just looking around since I didn't have the time to do that before...
+:'''Silver Wolf:''' I didn't expect to see you here. I thought you'd have had enough of the Golden Hour by now.
+:'''Firefly:''' Mm-hmm, I was actually planning to go to the Moment of Oasis after wandering a little longer. I wasn't expecting to bump into the two of you &mdash; and both at the same time, too.
+:{{DIcon|Arrow}} Fate brought us together!
+::'''Firefly:''' Yes, I feel like we get along wonderfully too, (Trailblazer).
+:{{DIcon|Arrow}} Silver Wolf said she was thinking of me all the time.
+::'''Silver Wolf:''' Are we still talking about that!? Don't forget, I can access your account...
+:'''Silver Wolf:''' That said, I'm surprised you stuck around in a place this crowded.
+:'''Firefly:''' The more, the merrier, as they say. Besides, seeing everyone so chipper kind of lifts my spirits too.
+:'''Firefly:''' Oh, since we've run into each other... (Trailblazer), would you like to take another photo together?
+:'''Firefly:''' This place makes for a memory worth remembering. Besides, it'll be hard for us to hang out together like this again once we leave the Dreamscape...
+:'''Silver Wolf:''' ...
+:'''Silver Wolf:''' Chill out, you've still got plenty of time before your holiday's over. No need to take that photo right away. That said, since we've run into each other, why don't you join us for some games?
+:'''Firefly:''' Games?
+:'''Silver Wolf:''' Remember those arcade machines you saw on (The Radiant Feldspar/The Trailblaze's Stern/The Tatalov/The Soaring Clock Hand)? The Family plans to develop a new game based on them.
+:'''Silver Wolf:''' (Trailblazer) and I are testing the game for them now. If you don't have anything on at the moment, why not join us?
+:'''Firefly:''' Uh... I'm still wanted by the Bloodhound Family, though.
+:{{DIcon|Arrow}} I'll do my best to protect a pretty young lady!
+:'''Firefly:''' Haha, thanks. I appreciate the gesture. Still, is it me, or have I heard that line somewhere else before...?
 :{{tx}}
 {{Dialogue End}}
 
-===Obtain the Red Bird's approval===
+===Obtain the Red Bird's approval{{subst:void|<!--802310402-->}}===
 {{Dialogue Start}}
+;(Unused &mdash; G393_CreateProp)
+<pre>{
+	"$type": "RPG.GameCore.SwitchCharacterAnchorV2",
+	"SwitchCharacterAnchorConfig": {
+		"IsLocalPlayer": true,
+		"CharacterUniqueName": "LocalPlayer",
+		"AreaName": {
+			"Value": "LevelArea_P20331_F20331001_G393"
+		},
+		"AnchorName": {
+			"Value": "Anchor1"
+		}
+	}
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.TriggerEffect",
+	"TargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvPropEx",
+		"FetchType": "SinglePropByPropID",
+		"SinglePropID": {
+			"GroupID": {
+				"IsDynamic": false,
+				"FixedValue": {
+					"Value": 393
+				}
+			},
+			"ID": {
+				"IsDynamic": false,
+				"FixedValue": {
+					"Value": 300002
+				}
+			}
+		},
+		"MultiPropID": [],
+		"PropIDInOwnerGroup": {
+			"IsDynamic": false,
+			"FixedValue": {
+				"Value": 300002
+			}
+		}
+	},
+	"Flags": [],
+	"EffectPath": "Effects/Eff_Prefab/Eff_Monster/Eff_XP_Minion04_00/Eff_Monster_XP_Minion04_00_Common_Maze_SpecialAppear.prefab",
+	"SubObjectModifyDataList": []
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.AdvCreateGroupEntity",
+	"InstanceIDList": [
+		300001
+	]
+}</pre>
+{{Dialogue End}}
+
+===Speak with Firefly{{subst:void|<!--802310408-->}}===
+{{Dialogue Start}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:'''Silver Wolf:''' Oh? This NPC sure has a mouth... Okay, so... *disrupt plugin* and done. Let's go back.
+:{{DIcon|Arrow}} Return to (The Radiant Feldspar/The Trailblaze's Stern/The Tatalov/The Soaring Clock Hand)
+{{Dialogue End}}
+
+===Return to (The Radiant Feldspar/The Trailblaze's Stern/The Tatalov/The Soaring Clock Hand) and achieve victory against Firefly with the newly acquired arcade machine{{subst:void|<!--802310403-->}}===
+{{Dialogue Start}}
+
+;(Talk to Firefly)
+:'''Silver Wolf:''' How's it going? Gotten the hang of it yet? If you're ready, you can try a practice match.
+:'''Firefly:''' Um... (Trailblazer), if it's alright with you, could you play the game with me just a bit?
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:'''Silver Wolf:''' How's it going? Gotten the hang of it yet? If you're ready, you can try a practice match.
+:'''Firefly:''' Um... (Trailblazer), if it's alright with you, could you play the game with me just a bit?
+:{{DIcon|Travel Log}} Arcade Machine, it's tweetin' time!
+:<pre>{
+	"$type": "RPG.GameCore.SetPerformanceResult",
+	"Value": 1
+}</pre>
+:{{DIcon|Exit}} Just a moment. I have something else to do.
+;(If {{F|Activity230DIYEntrance}} is greater than or equal to 4)
+:<pre>{
+	"$type": "RPG.GameCore.AdvSetupButtonListTrigger",
+	"TargetType": {
+		"$type": "RPG.GameCore.GroupFetchLocalTarget",
+		"TargetType": "Prop",
+		"Targets": [
+			300001
+		]
+	},
+	"TriggerName": "MissionTrigger",
+	"ButtonsByName": [],
+	"ButtonConfigs": [
+		{
+			"ID": "PlayButton",
+			"IconType": "GeneralActivityIcon",
+			"ButtonText": {
+				"Value": "TalkSentenceName_GameConsole"
+			}
+		},
+		{
+			"ID": "DIYButton",
+			"IconType": "ChatLoopIcon",
+			"ButtonText": {
+				"Value": "TalkSentenceName_DIYPanel"
+			}
+		}
+	]
+}</pre>
+;(If {{F|Activity230DIYEntrance}} is not greater than or equal to 4)
+:<pre>{
+	"$type": "RPG.GameCore.AdvSetupButtonListTrigger",
+	"TargetType": {
+		"$type": "RPG.GameCore.GroupFetchLocalTarget",
+		"TargetType": "Prop",
+		"Targets": [
+			300001
+		]
+	},
+	"TriggerName": "MissionTrigger",
+	"ButtonsByName": [],
+	"ButtonConfigs": [
+		{
+			"ID": "PlayButton",
+			"IconType": "GeneralActivityIcon",
+			"ButtonText": {
+				"Value": "TalkSentenceName_GameConsole"
+			}
+		}
+	]
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.AdvEnableButtons",
+	"TargetType": {
+		"$type": "RPG.GameCore.GroupFetchLocalTarget",
+		"TargetType": "Prop",
+		"Targets": [
+			300001
+		]
+	},
+	"TriggerName": "MissionTrigger",
+	"ButtonsByName": [
+		"PlayButton"
+	]
+}</pre>
+{{Dialogue End}}
+
+===Review the battle with Firefly afterwards{{subst:void|<!--802310404-->}}===
+{{Dialogue Start}}
+<pre>{
+	"$type": "RPG.GameCore.WaitUIControllerClose",
+	"UIControllerName": "MatchThreeMainEntrancePage"
+}</pre>
+:<!--0.5-second delay-->
+<pre>{
+	"$type": "RPG.GameCore.ShowUI",
+	"Name": "Ui.MatchThree.Entrance.MatchThreeNewBirdDialog",
+	"WaitForExit": true,
+	"Param": {
+		"Value": "303"
+	}
+}</pre>
+:{{tx}}
+:'''Firefly:''' I knew this would happen, but... Oh, well. I'll practice some more. When I'm done, (Trailblazer), will you play another round with me?
+:{{DIcon|Arrow}} Of course!
+::'''Firefly:''' Thank you.
+:{{DIcon|Arrow}} We can play as many rounds as you like!
+::'''Firefly:''' Thank you.
+:{{DIcon|Arrow}} I'll think about it...
+::'''Silver Wolf:''' Hey, quit teasing nice people.
+:'''Firefly:''' Um, you can go ahead and play without me. I probably need a bit more time to get the knack of the game.
+:'''Silver Wolf:''' ...I can't believe it. Are you getting hooked on the game!? Hey, (Trailblazer), fess up. Do you have a special "Anti-Firefly Noble Phantasm" or something?
+:{{DIcon|Arrow}} Translation?
+:{{DIcon|Arrow}} How did you know?
+:'''Silver Wolf:''' Uh, do you have any idea how many times I've tried to convince her to game with me? Strategy, action, casual, simulation... I've suggested everything under the sun, but she never shows any interest.
+:'''Silver Wolf:''' Who'd have thought this day would ever come... Tsk tsk...
+:'''Firefly:''' I tried all those games that Silver Wolf mentioned, actually. But in all honesty, compared to SAM's operating system, those games are all a little... bland.
+:'''Silver Wolf:''' Tsk, wish I were you. Anyway, (Trailblazer), feel free to go on ahead. I'll stay behind to teach Firefly a few tips and tricks first. The mechanics in the later stages are pretty much all the same anyway, so I'm not too keen on playing anymore.
+:{{DIcon|Arrow}} Sure thing. But before that...
+:{{DIcon|Arrow}} Check that out, Firefly!
+:'''Firefly:''' Hm? What's that?
+:{{tx}}
+;(Unused &mdash; Activity230_PveResultClose)
+<pre>{
+	"$type": "RPG.GameCore.ClosePage",
+	"PageNames": [
+		"MatchThreeMainEntrancePage"
+	],
+	"PageRootNames": []
+}</pre>
+{{Dialogue End}}
+
+===Place the Birefly on the designated arcade machine{{subst:void|<!--802310405-->}}===
+{{Dialogue Start}}
+
+{{Dialogue End}}
+
+===Speak with Firefly{{subst:void|<!--802310406-->}}===
+{{Dialogue Start}}
+
+;(Talk to Firefly)
+<!--Unknown TalkSentence: 823100001-->
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:'''Firefly:''' Oh, this is... Is it my imagination, or does this Origami Bird look a little like me?
+:'''Silver Wolf:''' Mm-hmm, this is your exclusive little bird. It was made in your likeness. Look, mine's over there.
+:'''Firefly:''' It's so cute. Thank you, (Trailblazer), Silver Wolf! I love it.
+:'''Silver Wolf:''' Tsk tsk, not bad... Could you have been a pro in romance games?
+:{{DIcon|Arrow}} Nothing of the sort!
+::'''Silver Wolf:''' Are you sure...? In that case, shall I recommend a few to start you off? I'm a game connoisseur, so you can rest assured they're all quality recs with plenty of content.
+:{{DIcon|Arrow}} What can I say? I'm a pro at winning people over.
+::'''Silver Wolf:''' Feeling confident, aren't we? Then let's pick a new game later and see who clears all the endings first?
+:'''Firefly:''' Romance games... what kind of games are those? Can you show me how to play them?
 :{{tx}}
 {{Dialogue End}}
 
-===Return to (The Radiant Feldspar/The Trailblaze's Stern/The Tatalov/The Soaring Clock Hand) and achieve victory against Firefly with the newly acquired arcade machine===
+===Open the map that comes with the arcade machine and obtain information about the fourth arcade machine{{subst:void|<!--802310407-->}}===
 {{Dialogue Start}}
-:{{tx}}
-{{Dialogue End}}
 
-===Review the battle with Firefly afterwards===
-{{Dialogue Start}}
-:{{tx}}
-{{Dialogue End}}
-
-===Place the Birefly on the designated arcade machine===
-{{Dialogue Start}}
-:{{tx}}
-{{Dialogue End}}
-
-===Speak with Firefly===
-{{Dialogue Start}}
-:{{tx}}
-{{Dialogue End}}
-
-===Open the map that comes with the arcade machine and obtain information about the fourth arcade machine===
-{{Dialogue Start}}
-:{{tx}}
+<pre>{
+	"$type": "RPG.GameCore.AdvSetupButtonListTrigger",
+	"TargetType": {
+		"$type": "RPG.GameCore.GroupFetchLocalTarget",
+		"TargetType": "Prop",
+		"Targets": [
+			300002
+		]
+	},
+	"TriggerName": "MissionTrigger",
+	"ButtonsByName": [],
+	"ButtonConfigs": [
+		{
+			"ID": "PlayButton",
+			"IconType": "GeneralActivityIcon",
+			"ButtonText": {
+				"Value": "TalkSentenceName_GameConsole"
+			}
+		},
+		{
+			"ID": "DIYButton",
+			"ButtonText": {
+				"Value": "TalkSentenceName_DIYPanel"
+			}
+		}
+	]
+}</pre>
 {{Dialogue End}}
 
 ==Other Languages==

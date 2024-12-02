@@ -7,11 +7,11 @@ PageTitle=#Onward! Cloudford!#
 |title         = 
 |image         = Mission Onward! Cloudford!.png{{subst:void|<!--$UPLOAD:<<SpriteOutput/Chronicle/8014103.png>-<Mission Onward! Cloudford!.png>-<Fate's Atlas Images>>-->}}
 |type          = Adventure
-|event_name    = 
+|event_name    = Aetherium Wars
 |chapter       = Interastral Tournament Festival
 |requirements  = [[Adventure Mission]] ''[[Embark! Corridor of Fading Echoes!]]'' completed
 |summary       = To qualify for the championship, you must complete all the Victory Zone trials.<br />You have cleared the Victory Zone in Cloudford and obtained the Mastery Mark from Master Gongshu.
-|characters    = Trailblazer
+|characters    = (Warp Trotter/Trotter/Bubbles/Puffball/Ivory Menace/Chunky Chops/Turbo Trotter/Trotterlord); Giovanni; Guinaifen; Harsh IPC Worker; March 7th; Master Gongshu; Trailblazer; Vicious IPC Worker
 |startLocation = [[Jarilo-VI]] - [[Hotel Lobby]]
 |world         = Jarilo-VI
 |area          = Hotel Lobby
@@ -19,7 +19,7 @@ PageTitle=#Onward! Cloudford!#
 |next          = Battle of Wits! Herta Space Station!
 |rewards       = Trailblaze EXP*200; Stellar Jade*40; Traveler's Guide*6; Lost Crystal*4; Credit*40,000
 }}
-'''''Onward! Cloudford!''''' is an [[Adventure Mission]] on [[Jarilo-VI]] in the chapter [[Interastral Tournament Festival]].
+'''''Onward! Cloudford!''''' is an Event [[Adventure Mission]] from the [[Aetherium Wars]] event.
 
 ==Steps==
 # Meet up with March 7th
@@ -27,12 +27,12 @@ PageTitle=#Onward! Cloudford!#
 # Explore Cloudford Victory Zone
 # Chat with Giovanni
 # Use the Camera to take photos of the markings in the area
+# Head to the first trial area
+# Complete the trial in the current area
+# Head to the other trial area
 # Complete the trial in the current area
 # Have a duel with Master Gongshu
 # Defeat Topaz's Support Squad
-# Head to the first trial area
-# Head to the other trial area
-# Complete the trial in the current area
 
 <!--
 ==Gameplay Notes==
@@ -44,68 +44,435 @@ PageTitle=#Onward! Cloudford!#
 ==Dialogue==
 {{Stub Dialogue}}
 
-===Meet up with March 7th===
+===Meet up with March 7th{{subst:void|<!--801410301-->}}===
 {{Mission Description|type=adventure|location=Hotel Lobby|The sunlight declares the arrival of a new day. It's time for you keep heading toward the champion's crown!}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to March 7th)
+----
+:{{A|VO side1 ytzx mar7th 285 m.ogg}} {{A|VO side1 ytzx mar7th 285 f.ogg}} '''March 7th:''' Hey, (Trailblazer), sleep well?
+:{{A|VO side1 ytzx trotter puzzle.ogg}} '''(Warp Trotter/Trotter/Bubbles/Puffball/Ivory Menace/Chunky Chops/Turbo Trotter/Trotterlord):''' Oink? Oink...
+:{{DIcon|Arrow}} Like a log.
+::{{A|VO side1 ytzx mar7th 286.ogg}} '''March 7th:''' Hah, me too.
+:{{DIcon|Arrow}} Ugh... I'm tired... Please, five more minutes...
+::{{A|VO side1 ytzx mar7th 287.ogg}} '''March 7th:''' Huh? You don't look that tired to me... Stop playing around.
+:{{A|VO side1 ytzx mar7th 288.ogg}} '''March 7th:''' Since we're all refreshed, ready to head out for the day?
+:{{A|VO side1 ytzx mar7th 289.ogg}} '''March 7th:''' {{Color|keyword|nobold=1|Cloudford Victory Zone}} &mdash; here we come!
+----
 {{Dialogue End}}
 
-===Head to the Starskiff Haven docks===
+===Head to the Starskiff Haven docks{{subst:void|<!--801410302-->}}===
 {{Mission Description|type=adventure|location=Central Starskiff Haven|update|March and you have to take a starskiff to reach the Cloudford Victory Zone... You find it hard to believe that the Xianzhou would accept this kind of request from the IPC.}}
 {{Dialogue Start}}
-:{{tx}}
+<pre>{
+	"$type": "RPG.GameCore.CreateProp",
+	"GroupID": {
+		"fixedValue": {
+			"Value": 165
+		}
+	},
+	"GroupPropID": {
+		"fixedValue": {
+			"Value": 300001
+		}
+	},
+	"CreateList": []
+}</pre>
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+----
+<pre>{
+	"$type": "RPG.GameCore.PerformanceExtendEndBlack",
+	"ExtendTime": 2
+}</pre>
+:{{A|VO side1 ytzx mar7th 290.ogg}} '''March 7th:''' We've arrived! From here we need to take a starskiff to the {{Color|keyword|nobold=1|Cloudford Victory Zone}}.
+:{{A|VO side1 ytzx mar7th 291.ogg}} '''March 7th:''' It's hard to imagine that the Xianzhou Alliance actually agreed to accommodate the IPC's request, don't you think?
+:{{DIcon|Arrow}} They're only leasing the venue.
+::{{A|VO side1 ytzx mar7th 292.ogg}} '''March 7th:''' Hmm, I guess you're right... maybe it isn't such a big deal.
+:{{DIcon|Arrow}} It's about the bigger picture.
+::{{A|VO side1 ytzx mar7th 293.ogg}} '''March 7th:''' Yeah, that makes sense... General Jing Yuan knows how to handle things.
+:{{A|VO side1 ytzx mar7th 294 m.ogg}} {{A|VO side1 ytzx mar7th 294 f.ogg}} '''March 7th:''' So, ready to head out, (Trailblazer)?
+:{{A|VO side1 ytzx trotter normal.ogg}} '''(Warp Trotter/Trotter/Bubbles/Puffball/Ivory Menace/Chunky Chops/Turbo Trotter/Trotterlord):''' Oink, Oink, oink!
+:{{DIcon|Arrow}} Let's go.
+:{{A|VO side1 ytzx mar7th 295.ogg}} '''March 7th:''' Here we go! We'll have another Mastery Mark in no time!
+----
+
+;(Talk to March 7th)
+----
+<pre>{
+	"$type": "RPG.GameCore.PerformanceExtendEndBlack",
+	"ExtendTime": 2
+}</pre>
+:{{A|VO side1 ytzx mar7th 290.ogg}} '''March 7th:''' We've arrived! From here we need to take a starskiff to the {{Color|keyword|nobold=1|Cloudford Victory Zone}}.
+:{{A|VO side1 ytzx mar7th 291.ogg}} '''March 7th:''' It's hard to imagine that the Xianzhou Alliance actually agreed to accommodate the IPC's request, don't you think?
+:{{DIcon|Arrow}} They're only leasing the venue.
+::{{A|VO side1 ytzx mar7th 292.ogg}} '''March 7th:''' Hmm, I guess you're right... maybe it isn't such a big deal.
+:{{DIcon|Arrow}} It's about the bigger picture.
+::{{A|VO side1 ytzx mar7th 293.ogg}} '''March 7th:''' Yeah, that makes sense... General Jing Yuan knows how to handle things.
+:{{A|VO side1 ytzx mar7th 294 m.ogg}} {{A|VO side1 ytzx mar7th 294 f.ogg}} '''March 7th:''' So, ready to head out, (Trailblazer)?
+:{{A|VO side1 ytzx trotter normal.ogg}} '''(Warp Trotter/Trotter/Bubbles/Puffball/Ivory Menace/Chunky Chops/Turbo Trotter/Trotterlord):''' Oink, Oink, oink!
+:{{DIcon|Arrow}} Let's go.
+:{{A|VO side1 ytzx mar7th 295.ogg}} '''March 7th:''' Here we go! We'll have another Mastery Mark in no time!
+----
 {{Dialogue End}}
 
-===Explore Cloudford Victory Zone===
+===Explore Cloudford Victory Zone{{subst:void|<!--801410304-->}}===
 {{Mission Description|type=adventure|location=Victory Zone: Cloudford|update|Cloudford, the twist-and-turn map of Cloudford... You have no idea how much time you'd end up wasting if you didn't have a guide to the championship contender.}}
 {{Dialogue Start}}
-:{{tx}}
+:{{A|VO side1 ytzx mar7th 296.ogg}} '''March 7th:''' Well, we're back... Just being here again is enough to make me feel dizzy...
+:{{A|VO side1 ytzx mar7th 297.ogg}} '''March 7th:''' I hope the IPC made an effort to create some easy-to-follow routes for the players this time...
+
+;(Upon reaching the destination)
+----
+:{{A|VO side1 ytzx mar7th 298.ogg}} '''March 7th:''' Is that... Mr. Giovanni?
+----
+----
+:{{A|VO side1 ytzx staffH 111.ogg}} '''Harsh IPC Worker:''' WHAT!? How could we lose three times in a row to these twerps...
+:{{A|VO side1 ytzx staffI 110.ogg}} '''Vicious IPC Worker:''' Three times... It's not FAIR!
+----
+:{{A|VO side1 ytzx mar7th 332.ogg}} '''March 7th:''' They managed to get away again... Ugh, I have a feeling this won't be the last we see of them...
+:{{A|VO side1 ytzx trotter puzzle.ogg}} '''(Warp Trotter/Trotter/Bubbles/Puffball/Ivory Menace/Chunky Chops/Turbo Trotter/Trotterlord):''' Oink... Oink, oink! Oink!
+:{{A|VO side1 ytzx mar7th 333 m.ogg}} {{A|VO side1 ytzx mar7th 333 f.ogg}} '''March 7th:''' Let's go back to the hotel, (Trailblazer) &mdash; tomorrow we're headed to the Victory Zone on Herta Space Station!
+----
 {{Dialogue End}}
 
-===Chat with Giovanni===
+===Chat with Giovanni{{subst:void|<!--801410305-->}}===
 {{Mission Description|type=adventure|location=Victory Zone: Cloudford|update|Cloudford, the twist-and-turn map of Cloudford... You have no idea how much time you'd end up wasting if you didn't have a guide to the championship contender.<br />Mr. Giovanni is here too? He sure is a mysterious one.}}
 {{Dialogue Start}}
+<pre>{
+	"$type": "RPG.GameCore.CreateProp",
+	"GroupID": {
+		"fixedValue": {
+			"Value": 21
+		}
+	},
+	"GroupPropID": {
+		"fixedValue": {
+			"Value": 300002
+		}
+	},
+	"CreateList": []
+}</pre>
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+----
+:{{A|VO side1 ytzx giovanni 208 m.ogg}} {{A|VO side1 ytzx giovanni 208 f.ogg}} '''Giovanni:''' Aha, it's always a pleasure to bump into you, trailblazers. I didn't expect to see you here.
+:{{A|VO side1 ytzx giovanni 209.ogg}} '''Giovanni:''' I imagine you must be quite familiar with the game by now, how have you been faring?
+:{{DIcon|Arrow}} Things couldn't be better. We're in our element!
+::{{A|VO side1 ytzx giovanni 210.ogg}} '''Giovanni:''' Haha, I knew it!
+:{{DIcon|Arrow}} We'll figure it all out eventually.
+::{{A|VO side1 ytzx giovanni 211.ogg}} '''Giovanni:''' It's been said that this game is easy to pick up, but difficult to master!
+:{{DIcon|Arrow}} Lost... I'm completely lost...
+::{{A|VO side1 ytzx giovanni 212.ogg}} '''Giovanni:''' Not to worry, just take your time... practice makes perfect, after all!
+:{{A|VO side1 ytzx giovanni 213.ogg}} '''Giovanni:''' In any case, seeing both of you still enthusiastic about the game puts my mind at ease!
+:{{A|VO side1 ytzx giovanni 214.ogg}} '''Giovanni:''' Sadly, I have to bid you farewell. As the event's sponsor, I have a lot on my plate!
+:{{A|VO side1 ytzx mar7th 299.ogg}} '''March 7th:''' You must be pretty tired, Mr. Giovanni.
+:{{A|VO side1 ytzx trotter normal.ogg}} '''(Warp Trotter/Trotter/Bubbles/Puffball/Ivory Menace/Chunky Chops/Turbo Trotter/Trotterlord):''' Oink... Oink!
+:{{A|VO side1 ytzx giovanni 215.ogg}} '''Giovanni:''' Oh, it's nothing! I wish you both the best of luck on your quest for the {{Color|keyword|nobold=1|Cloudford Mastery Mark}}.
+:{{A|VO side1 ytzx guinaifen 101.ogg}} '''Guinaifen:''' Whoa, so many people here! If I'd known, I would've brought my jade abacus with me for a livestream...
+:{{A|VO side1 ytzx giovanni 216.ogg}} '''Giovanni:''' Haha, it looks like we've got another eager challenger!
+<pre>{
+	"$type": "RPG.GameCore.PerformanceExtendEndBlack",
+	"ExtendTime": 1
+}</pre>
+----
+:{{A|VO side1 ytzx guinaifen 102.ogg}} '''Guinaifen:''' This place is buzzing! I take it you're both Aetherium Wars players, here to take on Cloudford's champs&mdash; ...uh, championship contenders?
+:{{A|VO side1 ytzx mar7th 300.ogg}} '''March 7th:''' Someone's full of energy! You... don't look like a Xianzh&mdash;
+:{{A|VO side1 ytzx trotter puzzle.ogg}} '''(Warp Trotter/Trotter/Bubbles/Puffball/Ivory Menace/Chunky Chops/Turbo Trotter/Trotterlord):''' Oink? Oink! Oink, oink?
+:{{A|VO side1 ytzx guinaifen 103.ogg}} '''Guinaifen:''' How observant! You're right, I'm not a Xianzhou native~
+:{{A|VO side1 ytzx guinaifen 104.ogg}} '''Guinaifen:''' My real name is Guinevere, but a Xianzhou friend came up with an authentic Xianzhou name based on the pronunciation.
+:{{A|VO side1 ytzx guinaifen 105.ogg}} '''Guinaifen:''' Gui, nai, fen! "Gui" means fine wood, "nai" means to exist, and "fen" means fragrant &mdash; rolls right off the tongue, doesn't it?
+:{{A|VO side1 ytzx guinaifen 106.ogg}} '''Guinaifen:''' Fate has brought us together &mdash; that makes us friends! I often perform at Exalting Sanctum, so if you've ever got time, come and enjoy the show!
+:{{DIcon|Arrow}} Nice to meet you, Guinaifen.
+::{{A|VO side1 ytzx guinaifen 107.ogg}} '''Guinaifen:''' I was hoping you'd say that! Hehe.
+:{{DIcon|Arrow}} Deal!
+:{{A|VO side1 ytzx mar7th 301 m.ogg}} {{A|VO side1 ytzx mar7th 301 f.ogg}} '''March 7th:''' I'm March 7th &mdash; this is my fellow trailblazer, (Trailblazer), and this is Mr. Giovanni &mdash; he's sponsoring this event.
+:{{A|VO side1 ytzx guinaifen 108.ogg}} '''Guinaifen:''' Man, March 7th &mdash; that's such a beautiful name! I'll make sure to remember it!
+:{{A|VO side1 ytzx guinaifen 109.ogg}} '''Guinaifen:''' So the event's sponsor is here too? Is today some sort of special occasion or something?
+:{{A|VO side1 ytzx giovanni 217.ogg}} '''Giovanni:''' Haha, I'm just here to inspect the venue and see how things are going. I have other engagements lined up, so I'll get out of your way!
+:{{A|VO side1 ytzx guinaifen 110.ogg}} '''Guinaifen:''' No worries! I'm more than happy to explain the mechanisms in this Victory Zone to these two.
+:{{A|VO side1 ytzx giovanni 218.ogg}} '''Giovanni:''' Fantastic, Miss Guinaifen. I'll be on my way, now. Stay safe, everyone.
+:{{A|VO side1 ytzx guinaifen 111 m.ogg}} {{A|VO side1 ytzx guinaifen 111 f.ogg}} '''Guinaifen:''' Alrighty, let me explain how {{Color|keyword|nobold=1|Cloudford's Victory Zone}} works.
+:{{A|VO side1 ytzx guinaifen 112.ogg}} '''Guinaifen:''' I should state, I have no idea who the championship contender for this zone is, but I am pretty familiar with the mechanisms.
+:{{A|VO side1 ytzx guinaifen 113.ogg}} '''Guinaifen:''' See the {{Color|keyword|nobold=1|markings}} on the wall over there? All you need to do is use the Jade Abacus's image recorder to capture all of them, and you'll be able to reach this zone's contender...
+:{{A|VO side1 ytzx guinaifen 114.ogg}} '''Guinaifen:''' Oh, right, you guys call it a {{Color|keyword|nobold=1|"camera"}}! Anyway, did that all make sense?
+:{{A|VO side1 ytzx trotter puzzle.ogg}} '''(Warp Trotter/Trotter/Bubbles/Puffball/Ivory Menace/Chunky Chops/Turbo Trotter/Trotterlord):''' Oink... Oink...
+:{{DIcon|Arrow}} Sounds pretty simple.
+::{{A|VO side1 ytzx mar7th 302.ogg}} '''March 7th:''' Hey! This level of gaming is just perfect for me!
+::{{A|VO side1 ytzx mar7th 303.ogg}} '''March 7th:''' ...There's nothing wrong with being a casual player.
+:{{DIcon|Arrow}} Are all these puzzles for kids, or something?
+::{{A|VO side1 ytzx mar7th 303.ogg}} '''March 7th:''' ...There's nothing wrong with being a casual player.
+:{{DIcon|Arrow}} I didn't understand, can you explain it again?
+::{{A|VO side1 ytzx mar7th 305.ogg}} '''March 7th:''' It's pretty simple: We just need to {{Color|keyword|nobold=1|snap photos of all the markings}} in the Victory Zone &mdash; right?
+::{{A|VO side1 ytzx guinaifen 116.ogg}} '''Guinaifen:''' Now that you know what to do, why not give it a go? I'll be right here, waiting for you.
+::{{A|VO side1 ytzx guinaifen 117.ogg}} '''Guinaifen:''' See the {{Color|keyword|nobold=1|markings}} on the wall over there? All you need to do is use the Jade Abacus's image recorder to capture all of them, and you'll be able to reach this zone's contender...
+::{{A|VO side1 ytzx guinaifen 118.ogg}} '''Guinaifen:''' Oh, right, you guys call it a {{Color|keyword|nobold=1|"camera"}}! Anyway, did that all make sense?
+::{{A|VO side1 ytzx guinaifen 119.ogg}} '''Guinaifen:''' Oh, look! The door opened! You guys really aced that first puzzle!
+::{{A|VO side1 ytzx guinaifen 120.ogg}} '''Guinaifen:''' It's time to press on and seek out more markings. Have fun~
+::{{A|VO side1 ytzx guinaifen 121.ogg}} '''Guinaifen:''' In the meantime... I'm gonna figure out how to boost my Victory Rating. Good luck!
+::{{A|VO side1 ytzx mar7th 306.ogg}} '''March 7th:''' Hehe, Guinaifen's enthusiasm is super contagious, I hope we bump into her again.
+::{{A|VO side1 ytzx trotter normal.ogg}} '''(Warp Trotter/Trotter/Bubbles/Puffball/Ivory Menace/Chunky Chops/Turbo Trotter/Trotterlord):''' Oink... Oink, oink! Oink!
+::{{A|VO side1 ytzx gongshu 103.ogg}} '''Master Gongshu:''' Let they come forth who stand now in the hall⁓
+::{{A|VO side1 ytzx gongshu 104.ogg}} '''Master Gongshu:''' and by their name reveal thyself to all⁓!
 :{{tx}}
 {{Dialogue End}}
 
-===Use the Camera to take photos of the markings in the area===
+===Use the Camera to take photos of the markings in the area{{subst:void|<!--801410307-->}}===
 {{Mission Description|type=adventure|location=Victory Zone: Cloudford|update|You must complete the corresponding trials first if you wish to challenge the championship contenders of the Victory Zone.<br />A girl named Guinaifen offered to explain the trial rules at this place. Let's try to solve a puzzle first.}}
 {{Dialogue Start}}
-:{{tx}}
+----
+:{{A|VO side1 ytzx guinaifen 119.ogg}} '''Guinaifen:''' Oh, look! The door opened! You guys really aced that first puzzle!
+:{{A|VO side1 ytzx guinaifen 120.ogg}} '''Guinaifen:''' It's time to press on and seek out more markings. Have fun~
+:{{A|VO side1 ytzx guinaifen 121.ogg}} '''Guinaifen:''' In the meantime... I'm gonna figure out how to boost my Victory Rating. Good luck!
+----
+:{{A|VO side1 ytzx mar7th 306.ogg}} '''March 7th:''' Hehe, Guinaifen's enthusiasm is super contagious, I hope we bump into her again.
+:{{A|VO side1 ytzx trotter normal.ogg}} '''(Warp Trotter/Trotter/Bubbles/Puffball/Ivory Menace/Chunky Chops/Turbo Trotter/Trotterlord):''' Oink... Oink, oink! Oink!
+----
 {{Dialogue End}}
 
-===Complete the trial in the current area===
+===Head to the first trial area{{subst:void|<!--801410318-->}}===
 {{Mission Description|type=adventure|location=Victory Zone: Cloudford|update|You must complete the corresponding trials first if you wish to challenge the championship contenders of the Victory Zone.<br />Some players can't help but wonder whether such simple puzzles can really stop anyone. Meanwhile, players who don't wonder about this question... are the ones who got stopped by these puzzles.}}
 {{Dialogue Start}}
-:{{tx}}
+<pre>{
+	"$type": "RPG.GameCore.CreateProp",
+	"GroupID": {
+		"fixedValue": {
+			"Value": 21
+		}
+	},
+	"GroupPropID": {
+		"fixedValue": {
+			"Value": 300005
+		}
+	},
+	"CreateList": []
+}</pre>
+;(Upon reaching the destination)
 {{Dialogue End}}
 
-===Have a duel with Master Gongshu===
+===Complete the trial in the current area{{subst:void|<!--801410309-->}}===
+{{Dialogue Start}}
+:{{A|VO side1 ytzx mar7th 307.ogg}} '''March 7th:''' One down already! We're on fire!
+:{{A|VO side1 ytzx mar7th 308.ogg}} '''March 7th:''' Let's go find the next one~
+{{Dialogue End}}
+
+===Head to the other trial area{{subst:void|<!--801410319-->}}===
+{{Dialogue Start}}
+<pre>{
+	"$type": "RPG.GameCore.CreateProp",
+	"GroupID": {
+		"fixedValue": {
+			"Value": 21
+		}
+	},
+	"GroupPropID": {
+		"fixedValue": {
+			"Value": 300006
+		}
+	},
+	"CreateList": []
+}</pre>
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+----
+:<!--3-second delay-->
+----
+{{Dialogue End}}
+
+===Complete the trial in the current area{{subst:void|<!--801410320-->}}===
+{{Dialogue Start}}
+----
+:{{A|VO side1 ytzx mar7th 311.ogg}} '''March 7th:''' That's two down already! But seriously, I can't help but notice how... confusing this place is...
+:{{A|VO side1 ytzx gongshu 101.ogg}} '''Master Gongshu:''' Hahaha &mdash; truly, a spark of genius!
+----
+:{{A|VO side1 ytzx gongshu 102.ogg}} '''Master Gongshu:''' I, Gongshu Liang, did forge this tricky road, but who, pray tell, has cracked this old man's code⁓?
+<pre>{
+	"$type": "RPG.GameCore.ActiveVirtualCamera",
+	"AreaName": "LevelArea_P43103_F43103002_G21",
+	"AnchorName": "Anchor22",
+	"IsActive": true,
+	"WaitBlendFinish": true,
+	"BlendConfig": {
+		"ExportToJson": true,
+		"BlendType": "EaseInOut",
+		"BlendTime": 1.5,
+		"FOVSmoothDampTime": -1,
+		"FrameBlendWeightStart": 1,
+		"FrameBlendDuration": 1
+	},
+	"VCameraDitherMaxDistance": 1,
+	"CenterPosX": -1,
+	"CenterPosY": -1,
+	"DynamicParams": {}
+}</pre>
+----
+{{Dialogue End}}
+
+===Have a duel with Master Gongshu{{subst:void|<!--801410314-->}}===
 {{Mission Description|type=adventure|location=Victory Zone: Cloudford|update|You've already completed all trials. It's time to show Master Gongshu the power of youth!}}
 {{Dialogue Start}}
-:{{tx}}
+<pre>{
+	"$type": "RPG.GameCore.CreateProp",
+	"GroupID": {
+		"fixedValue": {
+			"Value": 21
+		}
+	},
+	"GroupPropID": {
+		"fixedValue": {
+			"Value": 300003
+		}
+	},
+	"CreateList": []
+}</pre>
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+----
+:{{A|VO side1 ytzx gongshu 103.ogg}} '''Master Gongshu:''' Let they come forth who stand now in the hall⁓
+:{{A|VO side1 ytzx gongshu 104.ogg}} '''Master Gongshu:''' and by their name reveal thyself to all⁓!
+:{{DIcon|Arrow}} We've met before...
+:{{DIcon|Arrow}} Hark! 'Tis I, (Trailblazer)!
+:{{DIcon|Arrow}} O great one! We surrender! Pray take mercy on us!
+::{{A|VO side1 ytzx mar7th 312.ogg}} '''March 7th:''' Ha? We haven't even started fighting yet!
+:{{A|VO side1 ytzx trotter normal.ogg}} '''(Warp Trotter/Trotter/Bubbles/Puffball/Ivory Menace/Chunky Chops/Turbo Trotter/Trotterlord):''' Oink~ Oink!
+:{{A|VO side1 ytzx gongshu 105.ogg}} '''Master Gongshu:''' Ahaaaa, familiar faces! Now I recall!
+:{{A|VO side1 ytzx gongshu 106.ogg}} '''Master Gongshu:''' I must say, I never expected to see you here in the Victory Zone! Come to challenge this old chunk of coal, have you? Bring it on!
+:{{DIcon|Arrow}} I didn't expect Master Gongshu...
+:{{DIcon|Arrow}} LET'S GOOOO!!!
+::{{A|VO side1 ytzx gongshu 107.ogg}} '''Master Gongshu:''' Haha, splendid! You young ones are all vim and vigor &mdash; that's just what I like to see!
+:{{A|VO side1 ytzx gongshu 108.ogg}} '''Master Gongshu:''' As the old adage goes: Hale and hearty despite the years! I may have a few centuries under my belt, but I can still keep up with the youth!
+:{{A|VO side1 ytzx gongshu 109.ogg}} '''Master Gongshu:''' I won't hold back! A withered ginger root may lack the crunch, but in the dish it packs the fieriest punch!
+<pre>{
+	"$type": "RPG.GameCore.ShowUI",
+	"Name": "Ui.AetherDivide.AetherChallenge.AetherChallengePage",
+	"WaitForExit": true,
+	"Param": {
+		"Value": "102"
+	}
+}</pre>
+----
+:{{A|VO side1 ytzx gongshu 112.ogg}} '''Master Gongshu:''' Ahaaaa! Such vigor! Though generations past have paved the way, 'tis in the youth we see the brightening day!
+<pre>{
+	"$type": "RPG.GameCore.TalkFigure",
+	"Show": true,
+	"ImagePath": "SpriteOutput/Mission/TalkItem/SubMIssion_250402.png",
+	"TriggerSound": true
+}</pre>
+:<!--1-second delay-->
+:{{A|VO side1 ytzx gongshu 113.ogg}} '''Master Gongshu:''' Oh, how I've missed this feeling! I haven't felt this exhilarated since joining the Artisanship Commission! My heartfelt gratitude to both of you for giving me the opportunity to enjoy this splendid duel. The Mastery Mark is all yours!
+<pre>{
+	"$type": "RPG.GameCore.TalkFigure",
+	"ImagePath": "SpriteOutput/Mission/TalkItem/SubMIssion_250402.png",
+	"TriggerSound": true
+}</pre>
+:{{DIcon|Arrow}} The exhilaration is mutual!
+::{{A|VO side1 ytzx gongshu 114.ogg}} '''Master Gongshu:''' Haha, marvelous!
+:{{DIcon|Arrow}} Now everyone's gonna think I pick on the elderly...
+::{{A|VO side1 ytzx gongshu 115.ogg}} '''Master Gongshu:''' Hahaha, now, now, far from it! Our duel was a balanced contest &mdash; both sides showed great prowess!
+:{{A|VO side1 ytzx trotter normal.ogg}} '''(Warp Trotter/Trotter/Bubbles/Puffball/Ivory Menace/Chunky Chops/Turbo Trotter/Trotterlord):''' Oink, oink, oink!
+:{{A|VO side1 ytzx gongshu 116.ogg}} '''Master Gongshu:''' The Aether Spirit in your possession is incredibly charming &mdash; I can't help but wonder where you found them...
+:{{A|VO side1 ytzx mar7th 313.ogg}} '''March 7th:''' Hehe... To be honest, we don't actually know where (Warp Trotter/Trotter/Bubbles/Puffball/Ivory Menace/Chunky Chops/Turbo Trotter/Trotterlord) came from either. They're not your average Aether Spirit. (Warp Trotter/Trotter/Bubbles/Puffball/Ivory Menace/Chunky Chops/Turbo Trotter/Trotterlord) has their own personality!
+:{{A|VO side1 ytzx mar7th 314.ogg}} '''March 7th:''' We swooped in and rescued them from the clutches of the IPC, and then off we went on our adventure together... We're hoping to unravel their origins during the tournament.
+:{{A|VO side1 ytzx mar7th 315.ogg}} '''March 7th:''' Speaking of which, Master Gongshu &mdash; what do you make of them? You're the best artisan in the whole commission, maybe you can pick up on something?
+:{{A|VO side1 ytzx trotter puzzle.ogg}} '''(Warp Trotter/Trotter/Bubbles/Puffball/Ivory Menace/Chunky Chops/Turbo Trotter/Trotterlord):''' Oink! Oink, oink! Oink?
+:{{A|VO side1 ytzx gongshu 117.ogg}} '''Master Gongshu:''' My strength is in metallurgy, my child, I'm afraid I'm not well-versed in the peculiarities of Aether technology. My apologies.
+:{{A|VO side1 ytzx mar7th 316.ogg}} '''March 7th:''' No need to apologize, Master Gongshu! I'm sure we'll figure out the truth behind (Warp Trotter/Trotter/Bubbles/Puffball/Ivory Menace/Chunky Chops/Turbo Trotter/Trotterlord) sooner or later!
+:{{A|VO side1 ytzx trotter normal.ogg}} '''(Warp Trotter/Trotter/Bubbles/Puffball/Ivory Menace/Chunky Chops/Turbo Trotter/Trotterlord):''' Oink! Oink, oink! Oink!
+:{{A|VO side1 ytzx gongshu 118.ogg}} '''Master Gongshu:''' That reminds me... Have you two ever crossed paths with a peculiar fellow that goes by the name of Giovanni? He's an outsider with a fondness for wearing masks. He tasked me with delivering a message to the pair of you...
+:{{A|VO side1 ytzx gongshu 119.ogg}} '''Master Gongshu:''' He asked me to mention a certain "elite player" &mdash; someone who once stormed the championship and kicked up quite the fuss in the gaming world.
+:{{A|VO side1 ytzx mar7th 317.ogg}} '''March 7th:''' Huh... him again? I wonder why Mr. Giovanni didn't tell us face to face when he had the chance?
+:{{A|VO side1 ytzx gongshu 120.ogg}} '''Master Gongshu:''' I'm just as puzzled. But alas, I'm merely a messenger. The subtleties within the words, I imagine, are for you two to decipher.
+:{{A|VO side1 ytzx mar7th 318.ogg}} '''March 7th:''' I understand... Thanks, Master Gongshu!
+:{{DIcon|Arrow}} Thank you, Master Gongshu!
+::{{A|VO side1 ytzx gongshu 121.ogg}} '''Master Gongshu:''' No need for formalities! 'Tis a trifle.
+:{{DIcon|Arrow}} Is he one of The Riddlers?
+::{{A|VO side1 ytzx mar7th 319.ogg}} '''March 7th:''' {{Rubi|The Riddlers|Followers of Enigmata}}? I don't think so... Judging by his appearance, it's more likely he's linked to the {{Rubi|Masked Fools|Followers of Elation}}...
+:{{A|VO side1 ytzx mar7th 320 m.ogg}} {{A|VO side1 ytzx mar7th 320 f.ogg}} '''March 7th:''' (Trailblazer), it's getting pretty late. Let's call it a day and head back to the hotel for some rest. We'll head for our next destination tomorrow~
+----
+:{{A|VO side1 ytzx mar7th 321 m.ogg}} {{A|VO side1 ytzx mar7th 321 f.ogg}} '''March 7th:''' Hmm... (Trailblazer), have you ever wondered why Giovanni keeps getting the championship contenders to drop us these vague hints about things?
+:{{DIcon|Arrow}} He's just urging us to pick up the pace.
+::{{A|VO side1 ytzx mar7th 322.ogg}} '''March 7th:''' I mean... it's possible. But I can't help but wonder why he's so keen for us to speed up.
+:{{DIcon|Arrow}} He just wants us to be well-prepared for upcoming battles.
+::{{A|VO side1 ytzx mar7th 323.ogg}} '''March 7th:''' Yeah... you could be right about that. Is he convinced we'll run into the elusive "elite player," or something?
+:{{DIcon|Arrow}} Maybe he just enjoys stirring things up...
+:{{A|VO side1 ytzx mar7th 325.ogg}} '''March 7th:''' Ugh... why do I feel like we're being played? Anyway, let's forget about it for now, we can ask him in person next time we see him.
+:{{A|VO side1 ytzx trotter confident.ogg}} '''(Warp Trotter/Trotter/Bubbles/Puffball/Ivory Menace/Chunky Chops/Turbo Trotter/Trotterlord):''' Oink! Oink...
+:{{A|VO side1 ytzx mar7th 326 m.ogg}} {{A|VO side1 ytzx mar7th 326 f.ogg}} '''March 7th:''' Let's call it a day and get some rest, (Trailblazer). Tomorrow, we're bound for our next destination &mdash; {{Color|keyword|nobold=1|the Victory Zone on Herta Space Station}}.
+:{{A|VO side1 ytzx mar7th 327 m.ogg}} {{A|VO side1 ytzx mar7th 327 f.ogg}} '''March 7th:''' Hey, (Trailblazer), check it out &mdash; it's those IPC thugs again!
+<pre>{
+	"$type": "RPG.GameCore.PerformanceExtendEndBlack",
+	"ExtendTime": 1
+}</pre>
+----
 {{Dialogue End}}
 
-===Defeat Topaz's Support Squad===
+===Defeat Topaz's Support Squad{{subst:void|<!--801410316-->}}===
 {{Mission Description|type=adventure|location=Victory Zone: Cloudford|update|There is a saying on Xianzhou that "Once is an accident, twice is a coincidence, three times is a pattern." Obviously, these IPC workers are not aware of this logic. They will get it, soon.}}
 {{Dialogue Start}}
-:{{tx}}
-{{Dialogue End}}
+<pre>{
+	"$type": "RPG.GameCore.CreateProp",
+	"GroupID": {
+		"fixedValue": {
+			"Value": 21
+		}
+	},
+	"GroupPropID": {
+		"fixedValue": {
+			"Value": 300004
+		}
+	},
+	"CreateList": []
+}</pre>
+;(Upon reaching the destination)
 
-===Head to the first trial area===
-{{Mission Description|type=adventure|location=Victory Zone: Cloudford|update|You must complete the corresponding trials first if you wish to challenge the championship contenders of the Victory Zone.<br />Some players can't help but wonder whether such simple puzzles can really stop anyone. Meanwhile, players who don't wonder about this question... are the ones who got stopped by these puzzles.}}
-{{Dialogue Start}}
-:{{tx}}
-{{Dialogue End}}
+;(Upon reaching the destination)
+----
+:{{A|VO side1 ytzx staffH 108.ogg}} '''Harsh IPC Worker:''' Ha! I knew it, I knew we'd run into you two here!
+:{{A|VO side1 ytzx staffI 107.ogg}} '''Vicious IPC Worker:''' It's those little twerps from the Express!
+:{{A|VO side1 ytzx mar7th 328.ogg}} '''March 7th:''' Don't you guys have anything better to do!? What did we do this time?
+:{{A|VO side1 ytzx trotter puzzle.ogg}} '''(Warp Trotter/Trotter/Bubbles/Puffball/Ivory Menace/Chunky Chops/Turbo Trotter/Trotterlord):''' Oink... Oink, oink!
+:{{A|VO side1 ytzx staffH 109.ogg}} '''Harsh IPC Worker:''' You just don't get it, do you? That Aether Spirit of yours is of vital importance to Director Topaz!
+:{{A|VO side1 ytzx staffI 108.ogg}} '''Vicious IPC Worker:''' Just hand them over already and save us the hassle! We're just doing our job!
+:{{DIcon|Arrow}} But (Warp Trotter/Trotter/Bubbles/Puffball/Ivory Menace/Chunky Chops/Turbo Trotter/Trotterlord) is our friend!
+::{{A|VO side1 ytzx mar7th 329.ogg}} '''March 7th:''' That's right, we'd never sell out our friend!
+:{{DIcon|Arrow}} What's the point of stealing an Aether Spirit?
+::{{A|VO side1 ytzx mar7th 330.ogg}} '''March 7th:''' Right! Why waste your time?
+:{{DIcon|Arrow}} Why don't we just give them what they want?
+::{{A|VO side1 ytzx mar7th 331.ogg}} '''March 7th:''' Are you kidding!? Nuh-uh, no way!
+:{{A|VO side1 ytzx staffH 110.ogg}} '''Harsh IPC Worker:''' If that's how you're going to be, then we have no choice but to challenge you again!
+:{{A|VO side1 ytzx staffI 109.ogg}} '''Vicious IPC Worker:''' We've been training hard too, there's no way we're losing to you this time!
+<pre>{
+	"$type": "RPG.GameCore.ShowUI",
+	"Name": "Ui.AetherDivide.AetherChallenge.AetherChallengePage",
+	"WaitForExit": true,
+	"Param": {
+		"Value": "107"
+	}
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.CreateProp",
+	"GroupID": {
+		"fixedValue": {
+			"Value": 21
+		}
+	},
+	"GroupPropID": {
+		"fixedValue": {
+			"Value": 300008
+		}
+	},
+	"CreateList": []
+}</pre>
+;(Upon reaching the destination)
 
-===Head to the other trial area===
-{{Dialogue Start}}
-:{{tx}}
-{{Dialogue End}}
-
-===Complete the trial in the current area===
-{{Dialogue Start}}
-:{{tx}}
+;(Upon reaching the destination)
+<!--Unknown TalkSentence: 814190034-->
+:{{A|VO side1 ytzx mar7th 309.ogg}} '''March 7th:''' Another one down!
+:{{A|VO side1 ytzx mar7th 310.ogg}} '''March 7th:''' Let's look for the next one!
 {{Dialogue End}}
 
 ==Other Languages==

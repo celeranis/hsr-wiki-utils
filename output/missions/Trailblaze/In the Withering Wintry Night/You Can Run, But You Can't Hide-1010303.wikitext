@@ -11,7 +11,7 @@ PageTitle=#You Can Run, But You Can't Hide#
 |chapter       = In the Withering Wintry Night
 |requirements  = [[Trailblaze Mission]] ''[[Everwinter Night]]'' completed
 |summary       = <!--official mission summary from Fate's Atlas-->
-|characters    = Trailblazer
+|characters    = Dan Heng; March 7th; Trailblazer
 |startLocation = [[Jarilo-VI]] - [[Backwater Pass]]
 |world         = Jarilo-VI
 |area          = Backwater Pass
@@ -33,7 +33,84 @@ PageTitle=#You Can Run, But You Can't Hide#
 -->
 ==Dialogue==
 {{Stub Dialogue}}
+;(Upon reaching the destination)
 
+;(Upon reaching the destination)
+----
+<pre>{
+	"$type": "RPG.GameCore.TriggerSound",
+	"SoundName": {
+		"Value": "Ev_sfx_belobog_moodtips_tense"
+	},
+	"EmitterType": "LocalPlayer"
+}</pre>
+:{{A|VO chapter1 1 mar7th 281.ogg}} '''March 7th:''' Wait! There are Silvermane Guards here. Careful not to alert them!
+:{{A|VO chapter1 1 danheng 240.ogg}} '''Dan Heng:''' They must have entered from another direction to cut us off.
+:{{A|VO chapter1 1 danheng 241.ogg}} '''Dan Heng:''' We should avoid an open conflict. Let's find another path.
+----
+<pre>{
+	"$type": "RPG.GameCore.ActiveVirtualCamera",
+	"AreaName": "Mission_1010301_temp",
+	"AnchorName": "Camera_101030301",
+	"BlendConfig": {
+		"ExportToJson": true,
+		"BlendType": "Cut",
+		"FOVSmoothDampTime": -1,
+		"FrameBlendWeightStart": 1,
+		"FrameBlendDuration": 1
+	},
+	"VCameraDitherMaxDistance": 1,
+	"CenterPosX": -1,
+	"CenterPosY": -1
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.DestroyNPC",
+	"GroupID": 16,
+	"GroupNpcID": 400004
+}</pre>
+:<!--1-second delay-->
+----
+
+;(Upon reaching the destination)
+----
+:<!--0.5-second delay-->
+<pre>{
+	"$type": "RPG.GameCore.ActiveVirtualCamera",
+	"AreaName": "Mission_1010301_temp",
+	"AnchorName": "Camera_101030302",
+	"IsActive": true,
+	"BlendConfig": {
+		"ExportToJson": true,
+		"BlendType": "Cut",
+		"FOVSmoothDampTime": -1,
+		"FrameBlendWeightStart": 1,
+		"FrameBlendDuration": 1
+	},
+	"VCameraDitherMaxDistance": 1,
+	"CenterPosX": -1,
+	"CenterPosY": -1
+}</pre>
+----
+:{{A|VO chapter1 1 mar7th 281.ogg}} '''March 7th:''' Wait! There are Silvermane Guards here. Careful not to alert them!
+:{{A|VO chapter1 1 danheng 241.ogg}} '''Dan Heng:''' We should avoid an open conflict. Let's find another path.
+----
+<pre>{
+	"$type": "RPG.GameCore.ActiveVirtualCamera",
+	"AreaName": "Mission_1010301_temp",
+	"AnchorName": "Camera_101030302",
+	"BlendConfig": {
+		"ExportToJson": true,
+		"BlendType": "Cut",
+		"FOVSmoothDampTime": -1,
+		"FrameBlendWeightStart": 1,
+		"FrameBlendDuration": 1
+	},
+	"VCameraDitherMaxDistance": 1,
+	"CenterPosX": -1,
+	"CenterPosY": -1
+}</pre>
+:<!--0.5-second delay-->
+----
 {{Dialogue End}}
 
 ==Other Languages==

@@ -11,7 +11,7 @@ PageTitle=##
 |chapter       = 
 |requirements  = [[Trailblaze Continuance]] ''[[Future Market (II)]]'' completed
 |summary       = <!--official mission summary from Fate's Atlas-->
-|characters    = Trailblazer
+|characters    = Crowd; Delusionist; Elderly Scholar; Investor; Manager; Trailblazer
 |startLocation = [[Jarilo-VI]] - [[Pillars of Creation]]
 |world         = Jarilo-VI
 |area          = Pillars of Creation
@@ -34,6 +34,144 @@ PageTitle=##
 ==Dialogue==
 {{Stub Dialogue}}
 
+:{{DIcon|?}} Listen
+;(If {{F|MissionCV-4140102-undefined}} is equal to 1)
+::'''Manager:''' You're back! Do you have time to make a decision now?
+::{{DIcon|Arrow}} Let me see your plans.
+:::'''Manager:''' Great, let's begin.
+::<pre>{
+	"$type": "RPG.GameCore.SetMissionCustomValue",
+	"SubmissionID": 414010201,
+	"MissionCustomValue": {
+		"Index": 4,
+		"isLocal": true,
+		"ValidValueParamList": [
+			1,
+			2
+		]
+	},
+	"CustomValue": 1
+}</pre>
+:::----
+::{{DIcon|Exit}} I'm not ready yet.
+:::'''Manager:''' Very well. We will be here, so come back when you have time.
+::<pre>{
+	"$type": "RPG.GameCore.SetMissionCustomValue",
+	"SubmissionID": 414010201,
+	"MissionCustomValue": {
+		"Index": 4,
+		"isLocal": true,
+		"ValidValueParamList": [
+			1,
+			2
+		]
+	},
+	"CustomValue": 2
+}</pre>
+;(Otherwise)
+::----
+::'''Elderly Scholar:''' That is precisely why your plan is pure nonsense, these requirements simply cannot be met...
+::<!--1-second delay-->
+::'''Delusionist:''' How can I... Um, we are discussing formal affairs, we do not need unnecessary interference.
+::'''Investor:''' Wait, I know this person, {{MC|f=Sh&mdash;She|m=H&mdash;He}} is the savior of Belobog!
+::'''Manager:''' Oh! You're the famous (Trailblazer)?
+::'''Manager:''' This is perfect! We've got a few things here that we just can't settle, we need your opinion.
+:<pre>{
+	"$type": "RPG.GameCore.ActiveVirtualCamera",
+	"AreaName": "LevelArea_P20135_F20135001_G15",
+	"AnchorName": "Anchor3",
+	"IsActive": true,
+	"VCameraDitherMaxDistance": 1,
+	"CenterPosX": -1,
+	"CenterPosY": -1,
+	"DynamicParams": {}
+}</pre>
+::'''Manager:''' I'm sure you know, the biggest challenge facing Belobog right now is repairing this Engine of Creation... However, none of us can seem to agree on how to move this project forward.
+::----
+::'''Manager:''' We've all got our different plans at the moment, and none of us can convince the others.
+::'''Manager:''' You've been to so many places, I'm sure you must be experienced and knowledgeable. We will listen to your insights.
+::'''Manager:''' So, we're going to put our ideas together, and you can select the plan you feel the most appropriate... Of course, if you have your own ideas, you can suggest them, too.
+::'''Manager:''' No one has any objections, do they?
+::'''Crowd:''' No!
+::{{DIcon|Arrow}} Let me see your plans.
+::<pre>{
+	"$type": "RPG.GameCore.SetMissionCustomValue",
+	"SubmissionID": 414010201,
+	"MissionCustomValue": {
+		"Index": 4,
+		"isLocal": true,
+		"ValidValueParamList": [
+			1,
+			2
+		]
+	},
+	"CustomValue": 1
+}</pre>
+:::----
+::{{DIcon|Exit}} I have other things to do.
+::<pre>{
+	"$type": "RPG.GameCore.SetMissionCustomValue",
+	"SubmissionID": 414010201,
+	"MissionCustomValue": {
+		"ValidValueParamList": [
+			0,
+			1,
+			2
+		]
+	},
+	"CustomValue": 1
+}</pre>
+:::'''Manager:''' Very well. We will be here, so come back when you have time.
+::<pre>{
+	"$type": "RPG.GameCore.SetMissionCustomValue",
+	"SubmissionID": 414010201,
+	"MissionCustomValue": {
+		"Index": 4,
+		"isLocal": true,
+		"ValidValueParamList": [
+			1,
+			2
+		]
+	},
+	"CustomValue": 2
+}</pre>
+
+
+:{{DIcon|?}} Listen
+;(If {{F|MissionCV-4140102-undefined}} is equal to 1)
+::'''Manager:''' You're back! Do you have time to make a decision now?
+::{{DIcon|Arrow}} Let me see your plans.
+:::'''Manager:''' Great, let's begin.
+::<pre>{
+	"$type": "RPG.GameCore.SetMissionCustomValue",
+	"SubmissionID": 414010201,
+	"MissionCustomValue": {
+		"Index": 4,
+		"isLocal": true,
+		"ValidValueParamList": [
+			1,
+			2
+		]
+	},
+	"CustomValue": 1
+}</pre>
+:::----
+::{{DIcon|Exit}} I'm not ready yet.
+:::'''Manager:''' Very well. We will be here, so come back when you have time.
+::<pre>{
+	"$type": "RPG.GameCore.SetMissionCustomValue",
+	"SubmissionID": 414010201,
+	"MissionCustomValue": {
+		"Index": 4,
+		"isLocal": true,
+		"ValidValueParamList": [
+			1,
+			2
+		]
+	},
+	"CustomValue": 2
+}</pre>
+;(Otherwise)
 {{Dialogue End}}
 
 ==Other Languages==

@@ -11,7 +11,7 @@ PageTitle=##
 |chapter       = 
 |requirements  = [[Trailblaze Mission]] ''[[Lingering Shadows]]'' completed
 |summary       = <!--official mission summary from Fate's Atlas-->
-|characters    = Trailblazer
+|characters    = Mare; Trailblazer
 |startLocation = [[Herta Space Station]] - [[Master Control Zone]]
 |world         = Herta Space Station
 |area          = Master Control Zone
@@ -33,7 +33,66 @@ PageTitle=##
 -->
 ==Dialogue==
 {{Stub Dialogue}}
-
+:<!--1-second delay-->
+<pre>{
+	"$type": "RPG.GameCore.PropSetupUITrigger",
+	"DestroyAfterTriggered": true,
+	"ButtonIcon": "SpriteOutput/TalkIcon/CheckIcon.png",
+	"IconType": "CheckIcon",
+	"ButtonText": {
+		"Hash": 278713937
+	},
+	"ButtonCallback": [
+		{
+			"$type": "RPG.GameCore.TriggerCustomString",
+			"CustomString": {
+				"Value": "Mission_404001402_Prop_58_300002_BtnClick"
+			}
+		}
+	],
+	"InteractAngleRange": 180,
+	"OverrideTargetTypes": [],
+	"SkipFakeAvatar": true,
+	"TargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvPropEx",
+		"FetchType": "SinglePropByPropID",
+		"SinglePropID": {
+			"GroupID": {
+				"fixedValue": {
+					"Value": 58
+				}
+			},
+			"ID": {
+				"fixedValue": {
+					"Value": 300002
+				}
+			}
+		}
+	}
+}</pre>
+;(Obtain {{Item|A Note Between Book Pages|20|x=1}})
+:'''Mare:''' It's mine! It's not a note, but... an experiment specifically placed there. It worked. I didn't expect it to be a success!
+:'''Mare:''' Great... my research and faith in the Aeons have finally yielded a response... Woohoo!
+:{{DIcon|Arrow}} An "experiment"? What experiment?
+:{{DIcon|Arrow}} A "response"? What response?
+:'''Mare:''' Come on. Didn't you even read the book you found the note in?
+:'''Mare:''' ''Beneath the Aeons: The Low-Dimensional World As A Will and A Surface Phenomenon'' talks about us living in a low-dimensional world, and the Aeons we sense are simply projections from a higher dimension.
+:'''Mare:''' The note I left is a prayer for the Aeons to project and materialize and, as expected, you were summoned.
+:'''Mare:''' Tell me! Are you from a radically different world? Do you come from the higher dimensional world of the Aeons?
+:{{DIcon|Arrow}} What the heck are you harping on about...
+:{{DIcon|Arrow}} Do you need to get a medical check-up?
+:'''Mare:''' Don't worry. Just listen to my analysis. You have to pay attention to those seemingly inconspicuous details.
+:'''Mare:''' Like... you know the IPC's planet, Junipter? Take the types of lumber it exports, list them according to the categories in the IPC's purchase orders, then take the first letter of each one and spell it out &mdash;
+:'''Mare:''' "D... E... S... T..." see? Doesn't it spell out the start of "Destruction"? This is proof that the Aeon of Destruction is secretly pulling all the strings in the IPC!
+:{{DIcon|Arrow}} You're just making this all up.
+::'''Mare:''' Hey, it's a reasonable conclusion to reach based on solid research of the literature!
+:{{DIcon|Arrow}} How is that related?
+::'''Mare:''' You have to feel it with your heart and focus. Are you getting it?
+:'''Mare:''' Keep on reading, then! I hope you can put aside your foolish superstitions and embrace the theories of modern science!
+:{{DIcon|Arrow}} Whatever. So long as you're happy.
+:{{DIcon|Arrow}} ... I don't wanna chat with you right now.
+:'''Mare:''' Don't lose hope. I owe this scientific discovery to the theoretical foundation given to me at the Department of Insight. We come from different backgrounds...
+:'''Mare:''' Ack, I don't think you really look like a high-dimensional being. I've gotta get back to work. Chat with you later then!
 {{Dialogue End}}
 
 ==Other Languages==

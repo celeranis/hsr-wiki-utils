@@ -11,7 +11,7 @@ PageTitle=#Clockwork: Mullich#
 |chapter       = Clockwork
 |requirements  = [[Trailblaze Mission]] ''[[Whodunit]]'' completed
 |summary       = <!--official mission summary from Fate's Atlas-->
-|characters    = Trailblazer
+|characters    = Mullich; Ran; Trailblazer; W
 |startLocation = [[Penacony]] - [[The Reverie (Dreamscape)]]
 |world         = Penacony
 |area          = The Reverie (Dreamscape)
@@ -34,17 +34,197 @@ PageTitle=#Clockwork: Mullich#
 -->
 ==Dialogue==
 {{Stub Dialogue}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+----
+:'''Mullich:''' S&mdash;Stay away. It's dangerous!
+:'''Mullich:''' Quick, go and fetch The Family guard!
+;(Enter battle)
+:{{Enemy List|Dreamjolt Troupe's Spring Loader*2; Dreamjolt Troupe's Birdskull*1; Dreamjolt Troupe's Mr. Domescreen*1}}
+
+;(Upon reaching the destination)
+<pre>{
+	"$type": "RPG.GameCore.PlayNPCBubbleTalk",
+	"BubbleTalkInfoList": [
+		{
+			"AutoSkipTime": 10,
+			"GroupID": 262,
+			"GroupNpcID": 400001,
+			"TalkSentenceID": 413022205
+		}
+	],
+	"IsLoop": true,
+	"LoopInterval": 5,
+	"UniqueID": 1
+}</pre>
+----
+:'''Mullich:''' Whew... S&mdash;Safe and sound... I'm so small that I almost got stuck between its fangs, haha!
+:'''Mullich:''' Even though I know it's just a dream, it's still thrilling to have those things staring at me... Don't you think so?
+:{{DIcon|Arrow}} How'd you get stuck here?
+:'''Mullich:''' Oh, that... I'm ashamed to say that I'd been sick lately and I fell into too deep a sleep. So when I opened my eyes...
+:'''Mullich:''' The atmosphere of the hotel felt a little bit strange to me. I'd been meaning to go to the lobby and check out everything there first, but unfortunately these things surrounded me before I could get halfway.
+:'''Mullich:''' Thanks to your timely arrival, I've been spared from unexpected calamity. Please allow me to express my sincerest of gratitude to you.
+----
 {{Dialogue End}}
 
-===Go to Clockie Plaza and help "W" find Ran.===
+===Go to Clockie Plaza and help "W" find Ran.{{subst:void|<!--424030203-->}}===
 {{Mission Description|type=adventure|location=Golden Hour|update|Tick... tock! Quick, adjust the hands... Tick, tock!<br />People's minds await your exploration. Help them regain their true selves!}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Ran)
+----
+:'''Ran:''' Hello, is there anything I can help you with?
+:'''Ran:''' Whatever worries you might have, you can tell me all about it.
+:'''Ran:''' I will listen to your thoughts and wishes, and provide as much help as I possibly can.
+:{{DIcon|Arrow}} Someone called Mullich is looking for you...
+<pre>{
+	"$type": "RPG.GameCore.TriggerBlendShapesEmotion",
+	"TargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvNpcEx",
+		"FetchType": "SingleNpcByNpcID",
+		"SingleNpcID": {
+			"GroupID": {
+				"fixedValue": {
+					"Value": 184
+				}
+			},
+			"GroupNpcID": {
+				"fixedValue": {
+					"Value": 400001
+				}
+			}
+		}
+	},
+	"EmotionName": "Trouble01",
+	"TransitTime": 0.2
+}</pre>
+:'''Ran:''' Hang on, who... Who did you say was looking for me!?
+:When the woman heard this name, her pupils suddenly shrank and the blood drained from her face as she lost all previous sense of grace and bearing.
+:'''Ran:''' A&mdash;Are you in cahoots with that guy? Stay away, or I'll call out for someone!
+:'''Ran:''' You... you oughta know that if that kind of thing ever happens again, The Family won't just sit by idly and watch!
+:{{DIcon|Arrow}} What kind of thing?
+:'''Ran:''' Don't play dumb. As if you don't know what I'm talking abo... Hang on, do you... Do you really not know?
+:Miss Ran scanned your every expression again and again before letting out a sigh of relief after what seemed like an age &mdash; and what seemed like a heavy burden to bear.
+<pre>{
+	"$type": "RPG.GameCore.TriggerBlendShapesEmotion",
+	"TargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvNpcEx",
+		"FetchType": "SingleNpcByNpcID",
+		"SingleNpcID": {
+			"GroupID": {
+				"fixedValue": {
+					"Value": 184
+				}
+			},
+			"GroupNpcID": {
+				"fixedValue": {
+					"Value": 400001
+				}
+			}
+		}
+	},
+	"EmotionName": "Sad01",
+	"TransitTime": 0.2
+}</pre>
+:'''Ran:''' Whew &mdash; you freaked me out... I thought he'd roped in yet another accomplice. Things were already getting scary enough...
+:'''Ran:''' So can you please tell me what exactly it is you're doing here?
+:{{Black Screen|You spill the beans about Mullich and "W," and tell Ran the whole story...}}
+:'''Ran:''' "She's very important to me" &mdash; I'm afraid what he meant to say was, "Taking vengeance against her is very important to me."
+:'''Ran:''' Listen to me: That guy may sound friendly and harmless, but he's actually an extremist bigot! And as for that W, I've never really met him but...
+:'''Ran:''' In a nutshell, for your own safety, please don't have any contact with him again!
+:{{DIcon|Arrow}} Is he that bad?
+::'''Ran:''' ...That's just because you haven't come into close contact with him yet! I know plenty of people with mental health issues and most of them are great people &mdash; they're just suffering from torturous pain... but this guy, he's completely different!
+::'''Ran:''' He's just... He's just a shrunken little beast! I'm begging you, please don't have any further contact with him...
+:{{DIcon|Arrow}} What about you, then?
+::'''Ran:''' Me? I'm doing what I can... I applied to be put under protection before with The Family, so at least I've had a few days of relative calmness.
+::'''Ran:''' The Family is always very considerate when handling this kind of thing, but unfortunately this time... No wonder that guy went and hid in The Reverie! He's afraid of getting busted by the Bloodhound Family!
+:'''Ran:''' Please, you absolutely have to keep this under wraps! I don't want to ever have anything do with that guy again!
+:'''Ran:''' I&mdash;I have to take my own precautions here... and apply for another round of personal dreamscape protection...
+----
+
+;(Talk to Mullich)
+----
+:'''W:''' Yo &mdash; finally made it back! What's up, any news?
+:{{DIcon|Arrow}} I couldn't find her.
+:<pre>{
+	"$type": "RPG.GameCore.TriggerBlendShapesEmotion",
+	"TargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvNpcEx",
+		"FetchType": "SingleNpcByNpcID",
+		"SingleNpcID": {
+			"GroupID": {
+				"fixedValue": {
+					"Value": 191
+				}
+			},
+			"GroupNpcID": {
+				"fixedValue": {
+					"Value": 400001
+				}
+			}
+		}
+	},
+	"EmotionName": "Happy02",
+	"TransitTime": 0.2
+}</pre>
+::W's eyes comb back and forth across your face, scouting it for signs of deception. Tilting his head, he laughs...
+::'''W:''' Is that so... What a pity! But not to worry, because we're going to find. Her. Soon!
+:{{DIcon|Arrow}} She said you're sick.
+:<pre>{
+	"$type": "RPG.GameCore.TriggerBlendShapesEmotion",
+	"TargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvNpcEx",
+		"FetchType": "SingleNpcByNpcID",
+		"SingleNpcID": {
+			"GroupID": {
+				"fixedValue": {
+					"Value": 191
+				}
+			},
+			"GroupNpcID": {
+				"fixedValue": {
+					"Value": 400001
+				}
+			}
+		}
+	},
+	"EmotionName": "Angry01",
+	"TransitTime": 0.2
+}</pre>
+::You see a flash of anger in W's eyes... as though he is about to jump up and knock you on the head.
+::'''W:''' I see... Looks like she really hates "us" then.
+:'''W:''' Speaking of which, "Dreamscape Motivator" &mdash; what a miraculous job! I bet this line of work is only gonna be available in Penacony, right?
+:'''W:''' I heard that The Family hired a whole bunch of Dreamscape Motivators &mdash; "kind-hearted," "meticulous and perceptive," "responsible" people &mdash; to help protect that "pure and flawless" dreamscape of theirs from being contaminated by any negative mindsets.
+:'''W:''' As for how exactly they encourage people &mdash; "Motivators actively seek out people experiencing abnormal mood swings, and alleviate any negative emotions using communication therapy" &mdash; at least, that's what they say themselves.
+:'''W:''' But in practice? When they say "kind-hearted," they actually mean selfish and hypocritical. When they say "meticulous and perceptive," they actually mean cowardly and timid. And as for "responsible"?
+<pre>{
+	"$type": "RPG.GameCore.TriggerBlendShapesEmotion",
+	"TargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvNpcEx",
+		"FetchType": "SingleNpcByNpcID",
+		"SingleNpcID": {
+			"GroupID": {
+				"fixedValue": {
+					"Value": 191
+				}
+			},
+			"GroupNpcID": {
+				"fixedValue": {
+					"Value": 400001
+				}
+			}
+		}
+	},
+	"EmotionName": "Happy02",
+	"TransitTime": 0.2
+}</pre>
+:'''W:''' Ha, just look at poor old M &mdash; he was gullible and ended up nearly mentally damaged by that Miss Ran and some unknown tricks of hers. That's all the "comfort and healing" that so-called Motivators brought us!
+----
 {{Dialogue End}}
 
-===Go to Aideen Park and give "W" your answer.===
+===Go to Aideen Park and give "W" your answer.{{subst:void|<!--424030204-->}}===
 {{Dialogue Start}}
-:{{tx}}
 {{Dialogue End}}
 
 ==Other Languages==

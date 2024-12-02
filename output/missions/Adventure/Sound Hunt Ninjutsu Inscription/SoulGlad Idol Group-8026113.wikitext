@@ -7,11 +7,11 @@ PageTitle=#SoulGlad Idol Group#
 |title         = 
 |image         = <!--Mission SoulGlad Idol Group.png-->
 |type          = Adventure
-|event_name    = 
+|event_name    = Sound Hunt Ninjutsu Inscription
 |chapter       = Sound Hunt Ninjutsu Inscription
 |requirements  = {{subst:void|<!--Unknown: {"Type":"Manual"}-->}}
 |summary       = <!--official mission summary from Fate's Atlas-->
-|characters    = Trailblazer
+|characters    = Czipo; Gabbana; Richie; SoulGlad Idol Group Manager; Trailblazer
 |startLocation = [[Penacony]] - [[Penacony Paperfold University College]]
 |world         = Penacony
 |area          = Penacony Paperfold University College
@@ -19,7 +19,7 @@ PageTitle=#SoulGlad Idol Group#
 |next          = 
 |rewards       = Credit*5,000
 }}
-'''''SoulGlad Idol Group''''' is an [[Adventure Mission]] on [[Penacony]] in the chapter [[Sound Hunt Ninjutsu Inscription]].
+'''''SoulGlad Idol Group''''' is an Event [[Adventure Mission]] from the [[Sound Hunt Ninjutsu Inscription]] event.
 
 ==Steps==
 # Collect inspiration for composing a song by wandering around the campus
@@ -35,23 +35,144 @@ PageTitle=#SoulGlad Idol Group#
 -->
 ==Dialogue==
 {{Stub Dialogue}}
-
-===Collect inspiration for composing a song by wandering around the campus===
+===Collect inspiration for composing a song by wandering around the campus{{subst:void|<!--802611301-->}}===
 {{Mission Description|type=adventure|location=Penacony Paperfold University College|You've become the manager of the music party's performing band, and now your band needs to complete 3 performances on the stage in the middle of the campus.<br />Wander around the campus to help Rappa collect inspiration for composing.}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Unused &mdash; EnterDistrict_G198)
+:'''Richie:''' Come, come. Pick your SoulGlad bottle and have a guess: Which soda will spray the highest?
+::'''Richie:''' You get a prize for the right answer! The prize is... a Slumbernana Monkey doll that once took the campus by storm!
+::'''Gabbana:''' Hey, don't tell me these are left over from the stock you didn't manage to sell. Who'd stan such a dopey, outdated character?
+::'''Czipo:''' I choose the fourth one! It's my lucky number!
+::{{DIcon|Arrow}} What are you all looking at?
+::{{DIcon|Arrow}} Let me see!
+::'''Czipo:''' If it isn't our manager! Come play a round too. No idea what's up with these SoulGlad bottles, apart from the fact that they're spraying soda all the time.
+::{{tx}}
+::{{DIcon|Talk}} This is what college students do all day?
+:::'''Czipo:''' Yeah, classes are easy, life is cushy, we've got too much time, and we can't have enough fun. We go where the entertainment is.
+:::{{tx}}
+::;(Return to previous option selection)
+::{{DIcon|Talk}} Isn't it practice time right now?
+:::'''Czipo:''' Shhh... I slipped out saying that the room was too stuffy as an excuse. Then I wanted to drink some SoulGlad, and that's how I ended up here.
+:::{{tx}}
+::;(Return to previous option selection)
+::{{DIcon|Arrow}} I'm guessing...
+:::'''Czipo:''' Which one will you pick?
+:::{{tx}}
 {{Dialogue End}}
 
-===Investigate the SoulGlad music fountain===
+===Investigate the SoulGlad music fountain{{subst:void|<!--802611302-->}}===
 {{Mission Description|type=adventure|location=Penacony Paperfold University College|update|You've become the manager of the music party's performing band, and now your band needs to complete 3 performances on the stage in the middle of the campus.<br />Carefully check the exact details about the SoulGlad music fountain.}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Unused &mdash; EnterDistrict_G199)
+:'''SoulGlad Idol Group Manager:''' I remember you, at the qualifiers during the official competition. We promised to meet at the top, but none of it came true.
+::'''SoulGlad Idol Group Manager:''' Now you are a festive superstar, and we are still nobodies. Good thing I'm still young with a heart that never gives up.
+::'''SoulGlad Idol Group Manager:''' Now, we are issuing you a challenge! The SoulGlad auditions' repechage round has officially started!
+::{{DIcon|Arrow}} Who are you?
+::{{DIcon|Arrow}} Did I agree to your challenge?
+::'''SoulGlad Idol Group Manager:''' Ugh. Blast, aren't we archrivals!?
+::'''SoulGlad Idol Group Manager:''' We worked so hard to climb our way up the ranks from the qualifiers, but were mercilessly crushed by you in the first round. Yet we didn't give up, and emerged victorious from the loser's group. And then we got eliminated by you in the second stage...
+::'''SoulGlad Idol Group Manager:''' But it's different this time! We've improved on our team, and we're back!
+::{{DIcon|Arrow}} But I really don't remember you.
+::{{DIcon|Arrow}} Are you not at all embarrassed to say you're my archrival?
+::'''SoulGlad Idol Group Manager:''' Ability speaks for itself when competing on the stage. We were undefeated in the recent training matches, easily beating all our opponents. Even the audience says we're the "strongest group" they've seen.
+::'''SoulGlad Idol Group Manager:''' If you want to prove you're stronger, defeat us fair and square in this competition!
+::{{DIcon|Arrow}} Hurry up. I'm very busy.
+:<pre>{
+	"$type": "RPG.GameCore.ShowUI",
+	"Name": "Ui.MusicRhythm.MusicRhythmChooseLevelPage",
+	"WaitForExit": true,
+	"Param": {
+		"Value": "4"
+	},
+	"OnUICustomEvent": [],
+	"OnUIExitImmediately": [
+		{
+			"$type": "RPG.GameCore.EndDialogueEntityInteract"
+		}
+	]
+}</pre>
+
+;(Talk to SoulGlad Idol Group Manager)
+:'''SoulGlad Idol Group Manager:''' Show what you got on the stage. If you want to prove you're stronger, defeat us fair and square in this competition!
+:{{DIcon|Travel Log}} Hurry up. I'm very busy.
+:<pre>{
+	"$type": "RPG.GameCore.ShowUI",
+	"Name": "Ui.MusicRhythm.MusicRhythmChooseLevelPage",
+	"WaitForExit": true,
+	"Param": {
+		"Value": "4"
+	},
+	"OnUIExitImmediately": [
+		{
+			"$type": "RPG.GameCore.EndDialogueEntityInteract"
+		}
+	]
+}</pre>
+:{{DIcon|Exit}} I've got something else to do.
+
+
+;(Talk to Richie)
+:'''Richie:''' You get a prize for the right answer! The prize is... a Slumbernana Monkey doll that once took the campus by storm!
+:'''Gabbana:''' Hey, don't tell me these are left over from the stock you didn't manage to sell. Who'd stan such a dopey, outdated character?
+
+;(Talk to Czipo)
+:'''Czipo:''' Which one will you pick?
+
+;(Talk to Gabbana)
+:'''Richie:''' You get a prize for the right answer! The prize is... a Slumbernana Monkey doll that once took the campus by storm!
+:'''Gabbana:''' Hey, don't tell me these are left over from the stock you didn't manage to sell. Who'd stan such a dopey, outdated character?
 {{Dialogue End}}
 
-===Accept SoulGlad Idol Group's challenge===
+===Accept SoulGlad Idol Group's challenge{{subst:void|<!--802611303-->}}===
 {{Mission Description|type=adventure|location=Penacony Paperfold University College|update|You've become the manager of the music party's performing band, and now your band needs to complete 3 performances on the stage in the middle of the campus.<br />Obtain a record of SoulGlad Idol Group's beats to help Rappa collect inspiration for composing.}}
 {{Dialogue Start}}
+:'''SoulGlad Idol Group Manager:''' Ugh, how's that possible! We spent endless hours practicing our moves, but you were able to keep up so easily.
+:'''SoulGlad Idol Group Manager:''' Is this the gap in talent... Perhaps, we were never meant to succeed?
+:{{DIcon|Arrow}} (Taunt it)
+::'''(Trailblazer):''' Keep talking. I haven't heard the story of being undefeated in the training matches for a long time.
+:{{DIcon|Arrow}} (Comfort it)
+::'''(Trailblazer):''' Don't be too discouraged. Paperfold University is my home ground after all &mdash; my win is probably inevitable.
+:'''SoulGlad Idol Group Manager:''' Hmph, hold it! Even if we lost this time, there's still next time! The SoulGlad Idol Group will never admit defeat!
 :{{tx}}
+
+;(Talk to SoulGlad Idol Group Manager)
+:'''SoulGlad Idol Group Manager:''' Show what you got on the stage. If you want to prove you're stronger, defeat us fair and square in this competition!
+:{{DIcon|Travel Log}} Hurry up. I'm very busy.
+:<pre>{
+	"$type": "RPG.GameCore.ShowUI",
+	"Name": "Ui.MusicRhythm.MusicRhythmChooseLevelPage",
+	"WaitForExit": true,
+	"Param": {
+		"Value": "4"
+	},
+	"OnUIExitImmediately": [
+		{
+			"$type": "RPG.GameCore.EndDialogueEntityInteract"
+		}
+	]
+}</pre>
+:{{DIcon|Exit}} I've got something else to do.
+
+;(Unused &mdash; MusicRhythm_ShowUI)
+<pre>{
+	"$type": "RPG.GameCore.WaitFrame"
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.ShowUI",
+	"Name": "Ui.MusicRhythm.MusicRhythmChooseLevelPage",
+	"WaitForExit": true,
+	"Param": {
+		"Value": "4"
+	},
+	"OnUICustomEvent": [],
+	"OnUIExitImmediately": [
+		{
+			"$type": "RPG.GameCore.EndDialogueEntityInteract"
+		}
+	]
+}</pre>
 {{Dialogue End}}
 
 ==Other Languages==

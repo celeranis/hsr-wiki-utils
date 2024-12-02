@@ -7,11 +7,11 @@ PageTitle=#Hyperlink Match, Oleg!#
 |title         = 
 |image         = <!--Mission Hyperlink Match, Oleg!.png-->
 |type          = Adventure
-|event_name    = 
+|event_name    = Aetherium Wars
 |chapter       = 
 |requirements  = [[Adventure Mission]] ''[[Embark! Corridor of Fading Echoes!]]'' completed
 |summary       = <!--official mission summary from Fate's Atlas-->
-|characters    = Trailblazer
+|characters    = Oleg; Trailblazer
 |startLocation = [[Jarilo-VI]] - [[Boulder Town]]
 |world         = Jarilo-VI
 |area          = Boulder Town
@@ -19,7 +19,7 @@ PageTitle=#Hyperlink Match, Oleg!#
 |next          = 
 |rewards       = 
 }}
-'''''Hyperlink Match, Oleg!''''' is an [[Adventure Mission]] on [[Jarilo-VI]].
+'''''Hyperlink Match, Oleg!''''' is an Event [[Adventure Mission]] from the [[Aetherium Wars]] event.
 
 ==Steps==
 # Have a Hyperlink Match with Oleg
@@ -33,11 +33,35 @@ PageTitle=#Hyperlink Match, Oleg!#
 -->
 ==Dialogue==
 {{Stub Dialogue}}
-
-===Have a Hyperlink Match with Oleg===
+===Have a Hyperlink Match with Oleg{{subst:void|<!--801412401-->}}===
 {{Mission Description|type=adventure|location=Boulder Town|The core gameplay loop behind Aetherium Wars is "dueling." Challenge different players and show your true strength!}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Oleg)
+;(If {{cx}}<!--during performance 501030501-->)
+::'''Oleg:''' Yo, we meet again, (Trailblazer)! I thought you all left to save the world or something already.
+::'''Oleg:''' Good timing, I still owe you a thank you: Thanks for getting this city back on the right track, outsider.
+::'''Oleg:''' Before this place is completely handed over to the Silvermane Guards, Wildfire still has to oversee the Underworld's daily affairs. Feel free to speak up if you need anything.
+;(If {{cx}}<!--not during performance 501030501-->)
+:<pre>{
+	"$type": "RPG.GameCore.PlayMultiVoiceTalk",
+	"TalkSentenceID": 501030527,
+	"KeepDisplay": true
+}</pre>
+::'''Oleg:''' As long as you're in the Underworld, Wildfire will always treat you with utmost hospitality. Never hesitate to speak your needs.
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:'''Oleg:''' ...You young people really have spirit. Looks like I can rest assured leaving Belobog in your hands...
+:'''Oleg:''' Hah, as if I'd say something like that! I'm not past it yet! When I figure this game out, I'll come back and avenge myself.
+<pre>{
+	"$type": "RPG.GameCore.ShowUI",
+	"Name": "Ui.AetherDivide.AetherDivideEntryPage",
+	"Param": {
+		"Value": "2"
+	},
+	"OnUIEnter": []
+}</pre>
 {{Dialogue End}}
 
 ==Other Languages==

@@ -1,20 +1,25 @@
-import { PlayAndWaitSimpleTalk, PlayOptionTalk, TalkOptionSimple } from '../../files/Dialog.js';
+import { PlayAndWaitSimpleTalk, PlayOptionTalk, TalkOptionSimple } from '../../files/graph/Dialog.js';
 import { DICON_MAP } from '../../Shared.js';
 import { textMap } from '../../TextMap.js';
 import { TranscriptionNote } from '../../util/AbstractDialogueTree.js';
 import { BaseDialogueTask, BaseDialogueTaskEntry, TalkSentenceTaskEntry } from '../DialogueBase.js';
+import { GraphEnvironment } from '../Environment.js';
 
 export class SimpleTalkTask extends BaseDialogueTask {
 	declare $type: 'RPG.GameCore.PlayAndWaitSimpleTalk' | 'RPG.GameCore.PlaySimpleTalk' | 'RPG.GameCore.PlayMissionTalk'
 	entries?: TalkSentenceTaskEntry[]
+	black_screen?: boolean
 
-	constructor(data: PlayAndWaitSimpleTalk) {
+	constructor(data: PlayAndWaitSimpleTalk, env: GraphEnvironment) {
 		super(data)
-		this.entries = data.SimpleTalkList.map(sent => new TalkSentenceTaskEntry(sent))
+		this.entries = data.SimpleTalkList.map(sent => new TalkSentenceTaskEntry(sent, env))
+		this.black_screen = data.BlackMask
 	}
 
-	wikitext(): undefined {
-		return undefined
+	wikitext(): undefined | string {
+		if (this.black_screen) {
+			return `;(Screen fades to black)`
+		}
 	}
 }
 
@@ -22,7 +27,7 @@ export class OptionTalkTask extends BaseDialogueTask {
 	declare $type: 'RPG.GameCore.PlayOptionTalk'
 	branches: OptionTalkTaskEntry[]
 
-	constructor(data: PlayOptionTalk) {
+	constructor(data: PlayOptionTalk, env: GraphEnvironment) {
 		super(data)
 		
 		let onlyOneTrigger = true
@@ -37,7 +42,7 @@ export class OptionTalkTask extends BaseDialogueTask {
 		if (onlyOneTrigger && lastTrigger) {
 			this.trigger = lastTrigger
 		}
-		this.branches = data.OptionList.map(option => new OptionTalkTaskEntry(option, onlyOneTrigger))
+		this.branches = data.OptionList.map(option => new OptionTalkTaskEntry(option, env, onlyOneTrigger))
 	}
 
 	equals(otherTask: BaseDialogueTask | BaseDialogueTaskEntry | TranscriptionNote): boolean {
@@ -55,8 +60,8 @@ export class OptionTalkTaskEntry extends TalkSentenceTaskEntry {
 	option_text?: string
 	icon_type: keyof typeof DICON_MAP
 	
-	constructor(data: TalkOptionSimple, noTrigger?: boolean) {
-		super(data)
+	constructor(data: TalkOptionSimple, env: GraphEnvironment, noTrigger?: boolean) {
+		super(data, env)
 		if (!noTrigger) {
 			this.trigger = data.TriggerCustomString
 		}

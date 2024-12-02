@@ -63,6 +63,11 @@ const ROOT = midpatch ? `./src/version_update/midpatch/${midpatch}` : './src/ver
 const CHECK_NOEXIST: string[] = []
 const CHECK_EXIST: string[] = []
 
+if (!existsSync(ROOT)) {
+	console.warn(`Nothing to upload in "${ROOT}", exiting...`)
+	process.exit()
+}
+
 async function getFile(file: string): Promise<[string, string]> {
 	let content = (await readFile(file)).toString()
 	const page = content.match(/PageTitle\s*=\s*#(.+?)#/i)?.[1]

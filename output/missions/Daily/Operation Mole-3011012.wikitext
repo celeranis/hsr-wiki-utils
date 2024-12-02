@@ -11,7 +11,7 @@ PageTitle=#Operation Mole#
 |chapter       = 
 |requirements  = {{subst:void|<!--Unknown: {"Type":"Manual"}-->}}
 |summary       = <!--official mission summary from Fate's Atlas-->
-|characters    = Trailblazer
+|characters    = Elaine; Julian; Swetta; Trailblazer
 |startLocation = [[Jarilo-VI]] - [[Boulder Town]]
 |world         = Jarilo-VI
 |area          = Boulder Town
@@ -37,28 +37,117 @@ PageTitle=#Operation Mole#
 ==Dialogue==
 {{Stub Dialogue}}
 
-===Talk to Julian===
+===Talk to Julian{{subst:void|<!--301101201-->}}===
 {{Mission Description|type=daily|location=Boulder Town|Julian of the Moles is looking around here, as if planning something... Should you talk to him?}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Julian)
+:'''Julian:''' Hey, honorary member (Trailblazer)! Here, here, come here!
+:{{DIcon|Arrow}} Yikes, it's you again...
+::'''Julian:''' What's that attitude? Sharpen up! And that is an order!
+:{{DIcon|Arrow}} Hats off to you, Captain Julian!
+::'''Julian:''' Huh? Oh, okay... At ease! Er, why are you so polite all of a sudden, I'm not used to this!
+:'''Julian:''' You haven't forgotten The Moles Reinvigoration Plan, have you? Let me tell you, according to my informant's report, Wildfire needs to send lots of supplies today &mdash; isn't this a good time for The Moles to make a move?
+:{{DIcon|Arrow}} Who is your informant?
+::'''Julian:''' It's... Uh, no, I can't tell you! As the Chief Intelligence Officer of The Moles, it is my duty to protect the informant!
+:{{DIcon|Arrow}} What plan was that, I forgot...
+::'''Julian:''' Ugh, do all grown-ups have such bad memory?
+::'''Julian:''' Then I'll explain it to you again &mdash; The Moles Reinvigoration Plan is to find the work that Wildfire has neglected and take it up right away!
+::'''Julian:''' If we keep doing this, The Moles will soon build a reputation in the Underworld, and maybe one day replace Wildfire! Hehe...
+:'''Julian:''' Alright, that's enough talk. Let's go to the secret gathering place of Wildfire and see what's going on.
 {{Dialogue End}}
 
-===Go to the secret gathering place===
+===Go to the secret gathering place{{subst:void|<!--301101202-->}}===
 {{Mission Description|type=daily|location=Boulder Town|update|The sneaky Julian makes you join him. Go to the "Wildfire" gathering place to see what happened.}}
 {{Dialogue Start}}
-:{{tx}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+----
+:'''Swetta:''' Hmm... Boss Oleg said earlier that today's mission is to deliver daily necessities to the mining team, but he didn't mention it was two giant crates...
+:'''Swetta:''' They are so heavy, and should be delivered to different mining areas... What should I do? Think, Swetta, think...
+:'''Swetta:''' ...Ugh, whatever, I'll stick to my old trick! Eeny, meeny, miny, mole, catch a little mole by its toe. If he hollers, let him go, eeny, meeny, miny, mole...
+:'''Swetta:''' Well, I'll deliver this one first! Ugh, my back is gonna hurt tomorrow...
+----
+<pre>{
+	"$type": "RPG.GameCore.RemoveLevelAreas",
+	"AreaName": {
+		"Value": "Act301101101"
+	}
+}</pre>
+:'''Julian:''' Hmm, so grown-ups would also make decisions this childishly...
+:'''Julian:''' Quick, (Trailblazer)! Swetta just left, let's go check out the other box of goods!
+----
 {{Dialogue End}}
 
-===Pick up the supplies===
+===Pick up the supplies{{subst:void|<!--301101203-->}}===
 {{Mission Description|type=daily|location=Boulder Town|update|Pick up the supplies. This is for "The Moles' Reinvigoration Plan." Do not ask why.}}
 {{Dialogue Start}}
-:{{tx}}
+
+:{{DIcon|!}} Operation Mole
+----
+:'''Julian:''' The shipping address is also written on the box. Let me take a look!
+:'''Julian:''' The Great Mine... Elaine... Oh, these are the supplies Elaine needs! Great, now I can ask her to help spread word about The Moles' good deeds.
+:'''Julian:''' Let's go, honorary member! Let's go to the Great Mine to deliver supplies to Elaine!
+----
 {{Dialogue End}}
 
-===Deliver the supplies for Wildfire===
+===Deliver the supplies for Wildfire{{subst:void|<!--301101204-->}}===
 {{Mission Description|type=daily|location=Great Mine|update|To help Julian with his Moles' Reinvigoration Plan, you must quickly deliver this box of supplies to the Great Mine.}}
 {{Dialogue Start}}
-:{{tx}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+----
+:'''Julian:''' Honorary member, look! Elaine seems to be surrounded by some bad people!
+:'''Julian:''' Hurry, (Trailblazer)! Let's teach those bad guys a lesson and save her!
+<pre>{
+	"$type": "RPG.GameCore.ActiveVirtualCamera",
+	"AreaName": "Act301101101",
+	"AnchorName": "Camera02",
+	"BlendConfig": {
+		"ExportToJson": true,
+		"BlendType": "Cut",
+		"BlendTime": 0.5,
+		"FOVSmoothDampTime": -1,
+		"FrameBlendWeightStart": 1,
+		"FrameBlendDuration": 1
+	},
+	"VCameraDitherMaxDistance": 1,
+	"CenterPosX": -1,
+	"CenterPosY": -1
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.RemoveLevelAreas",
+	"AreaName": {
+		"Value": "Act301101101"
+	}
+}</pre>
+;(Enter battle)
+:{{Enemy List|Automaton Hound*1; Vagrant*2}}
+
+;(Talk to Elaine)
+----
+:'''Julian:''' Hmph, those shameless thugs only acted tough when they were bullying a girl.
+:'''Julian:''' Elaine, are you okay?
+:'''Elaine:''' I... I'm fine! Thank you, (Trailblazer), and Julian...
+:{{DIcon|Arrow}} Why are you always targeted by vagrants...
+::'''Elaine:''' You saved me again. I can't thank you enough.
+:{{DIcon|Arrow}} Remember to bring a companion next time you go out for work.
+::'''Elaine:''' I... I will! You saved me again. I can't thank you enough.
+:'''Elaine:''' Em... if I may ask &mdash; why did you come to the Great Mine all of a sudden, with little Julian?
+:'''Julian:''' Ah, I almost forgot! Honorary member, please give Elaine her stuff.
+:'''Elaine:''' This is... the supplies I ordered earlier?
+:'''Elaine:''' Thank you so much! Without this box of supplies, I'd have to be sleeping in this smelly work suit tonight.
+:'''Elaine:''' But isn't Wildfire usually responsible for deliveries? Why is it you two today?
+:'''Julian:''' Hehe, the guys from Wildfire are not reliable. Let me tell you, Elaine &mdash; from now on, The Moles will take over the Underworld! You can entrust us with anything &mdash; beating up bad people or delivering packages, anything!
+:'''Elaine:''' The Moles? Ah... I see. Thank you, Julian, The Moles' members are all very good kids.
+:'''Julian:''' Hehe, don't mention it! But you can spread the word about the heroic deeds of The Moles.
+----
+:<!--0.25-second delay-->
+:'''Julian:''' Good job, (Trailblazer)! You're really worth your salt as an honorary member appointed by Boss Hook &mdash; you act fast, and fight well!
+:'''Julian:''' Thanks to our effort, The Moles Reinvigoration Plan has taken another big step forward! Here, take these rewards, and keep up the good work!
+----
 {{Dialogue End}}
 
 ==Other Languages==

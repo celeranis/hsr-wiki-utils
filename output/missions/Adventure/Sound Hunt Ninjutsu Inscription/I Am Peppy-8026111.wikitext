@@ -7,11 +7,11 @@ PageTitle=#I Am Peppy#
 |title         = 
 |image         = <!--Mission I Am Peppy.png-->
 |type          = Adventure
-|event_name    = 
+|event_name    = Sound Hunt Ninjutsu Inscription
 |chapter       = Sound Hunt Ninjutsu Inscription
 |requirements  = {{subst:void|<!--Unknown: {"Type":"Manual"}-->}}
 |summary       = <!--official mission summary from Fate's Atlas-->
-|characters    = Trailblazer
+|characters    = Asta; Fried Cold Rice Robot; Lukacs; Peppy; Trailblazer
 |startLocation = [[Herta Space Station]] - [[Master Control Zone]]
 |world         = Herta Space Station
 |area          = Master Control Zone
@@ -19,7 +19,7 @@ PageTitle=#I Am Peppy#
 |next          = 
 |rewards       = Credit*5,000
 }}
-'''''I Am Peppy''''' is an [[Adventure Mission]] on [[Herta Space Station]] in the chapter [[Sound Hunt Ninjutsu Inscription]].
+'''''I Am Peppy''''' is an Event [[Adventure Mission]] from the [[Sound Hunt Ninjutsu Inscription]] event.
 
 ==Steps==
 # Collect inspiration for composing a song by heading to the space station
@@ -34,17 +34,161 @@ PageTitle=#I Am Peppy#
 -->
 ==Dialogue==
 {{Stub Dialogue}}
-
-===Collect inspiration for composing a song by heading to the space station===
+===Collect inspiration for composing a song by heading to the space station{{subst:void|<!--802611101-->}}===
 {{Mission Description|type=adventure|location=Master Control Zone|You've become the manager of the music party's performing band, and now your band needs to complete 3 performances on the stage in the middle of the campus.<br />Wander around the master control zone of the space station to help Rappa collect inspiration for composing.}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Unused &mdash; EnterDistrict_G155)
+:'''Peppy:''' Woof?
+::'''Peppy:''' Woof woof... woof woof!
+::Peppy gazes at you with curious eyes, as if asking why you are suddenly visiting.
+::{{DIcon|Arrow}} Actually, I don't understand either.
+::{{DIcon|Arrow}} Actually, I have something to ask...
+::'''(Trailblazer):''' So... Peppy, can you play music? Proper melodies, not just rhythmic howling.
+::'''Peppy:''' ...Woof?
+::'''Peppy:''' Woof! Woof woof... Woof woof woof!
+::{{DIcon|Arrow}} They were on their phones all night.
+::{{DIcon|Arrow}} I'm like that every day.
+::'''Asta:''' This isn't even the scariest thing! At night, along the space station's hallways, you can frequently hear a ding... ding... ding... sound, like someone's rapping on cabin hatches with metal. Sometimes you can hear screaming!
+::'''Asta:''' You don't suppose some space creature managed to break in, do you?
+::{{DIcon|Arrow}} That sounds pretty creepy...
+:::'''Asta:''' I know, right? Later on, when I asked those researchers, they wouldn't tell me anything. All that secrecy, they must definitely be hiding something!
+::{{DIcon|Arrow}} Could you have been hearing things?
+:::'''Asta:''' Impossible. I asked those researchers, but they all feigned ignorance. All that secrecy, they must definitely be hiding something.
+::'''Asta:''' Ah, could it be... everyone was replaced by some evil monster, and I'm the only one alive in this whole space station!?
+::{{tx}}
+::{{DIcon|Talk}} How about asking Herta?
+:::'''Asta:''' Madam Herta's been busy with some important tests recently. She wouldn't bother with such trivialities.
+:::{{tx}}
+::;(Return to previous option selection)
+::{{DIcon|Talk}} How about asking Arlan?
+:::'''Asta:''' *sigh* Arlan's the most suspicious of the lot. I can't ask about it either without solid proof.
+:::{{tx}}
+::;(Return to previous option selection)
+::{{DIcon|Arrow}} How about asking Peppy?
+:::'''Asta:''' Huh, that does sound like a good idea! Peppy's free to roam about in the space station, and no one would suspect it.
+:::{{DIcon|Arrow}} Wait, you were serious?
+:::{{DIcon|Arrow}} I was just spitballing...
+:::'''Asta:''' Do you still remember that special Synesthesia Beacon you used before? The researchers recently made some modifications to it and installed it on the little robot in the station. We can use it to talk to Peppy!
+:::{{tx}}
+
+;(Talk to Asta)
+:'''Asta:''' I'll be recording the content, so I'll trouble you to control the little robot.
+
 {{Dialogue End}}
 
-===Control the Fried Cold Rice Robot and translate Peppy's barks===
+===Control the Fried Cold Rice Robot and translate Peppy's barks{{subst:void|<!--802611103-->}}===
 {{Mission Description|type=adventure|location=Master Control Zone|update|You've become the manager of the music party's performing band, and now your band needs to complete 3 performances on the stage in the middle of the campus.<br />Obtain a record of Peppy's beats to help Rappa collect inspiration for composing.}}
 {{Dialogue Start}}
+:'''Peppy:''' Woof?
+:'''Fried Cold Rice Robot:''' Zzztzzt, hello. Zztzzt...
+:{{DIcon|Arrow}} Beepbeepbeep.
+:{{DIcon|Arrow}} Will this really work?
+:'''Asta:''' We have to give it a shot. I'm pretty curious what Peppy's voice sounds like &mdash; will it be adorable, or really gruff?
+:'''Asta:''' I'll be recording the content, so I'll trouble you to control the little robot.
+:'''Asta:''' Are you ready? I'm running the interpretation program.
+:'''Peppy:''' Woof! Woof woof woof!
+:'''Fried Cold Rice Robot:''' I have no problems. Zztzzt.
+:{{DIcon|Arrow}} *sob in tears*
+:{{DIcon|Arrow}} ...Please, Fried Cold Rice Robot!
+::'''Fried Cold Rice Robot:''' Zzzttzzzt!
+::{{tx}}
+
+;(Talk to Fried Cold Rice Robot)
+:'''Fried Cold Rice Robot:''' Hi, beep! I am responsible for translating what Peppy is saying. Beep. Are you ready to try things out?
+:{{DIcon|Travel Log}} ...Please, Fried Cold Rice Robot!
+:<pre>{
+	"$type": "RPG.GameCore.ShowUI",
+	"Name": "Ui.MusicRhythm.MusicRhythmChooseLevelPage",
+	"WaitForExit": true,
+	"Param": {
+		"Value": "1"
+	},
+	"OnUIExitImmediately": [
+		{
+			"$type": "RPG.GameCore.EndDialogueEntityInteract"
+		}
+	]
+}</pre>
+:{{DIcon|Exit}} I've got something else to do.
+
+;(Unused &mdash; EnterDistrict_G157)
 :{{tx}}
+::'''Peppy:''' Woof!
+::'''Lukacs:''' Been a while, my friend. Seeing that you and the lead researcher invited me here, does that mean that our non-human rights protection initiative has seen progress? Are we finally going to promote this across the whole space station?
+::'''Lukacs:''' I'm so touched! I sincerely thank you on behalf of all non-human organisms who suffer persecution!
+::'''Asta:''' We'll talk about those strange requests that you submitted another time. There's something I need to confirm, which is... Do you know what "ding... ding... ding... ding" is? Just like that, ding... ding... ding, it's got a rhythm.
+::'''Lukacs:''' Of course. Oh? Have... you've also gotten into perfect timing?
+::{{DIcon|Arrow}} ...Perfect timing?
+:::'''Asta:''' Ah... Err, yes! I've only recently gotten into it... It's super interesting!
+::{{DIcon|Arrow}} Yeah! We're really interested in that.
+::'''Lukacs:''' You should've said so! I'll pull you guys into a game group later on! Everyone's been working on their timing every night now. They share their experiences and strategies in the chat as well. These guides are just what newbies like you need to get started!
+::'''Lukacs:''' I've really got to hand it to the designer who came up with this. It's a rhythm game, but they had to make it so difficult. They even added a whole heap of nasty traps in it, forcing us to stay up all night wracking our brains to clear the levels.
+::'''Asta:''' I see... Those researchers have been obsessed with a game lately. Which explains their listlessness in the day, and those weird sounds at night.
+::'''Asta:''' Of course... they'd need to go behind my back to goof off at work.
+::'''Lukacs:''' I also don't know how this Izumo ninja-themed game got so popular all of a sudden. Before I knew it, everyone around me was talking about it. It's pretty hard, but... it's really fun!
+::'''Peppy:''' Woof! Woof! Woof! Woof!
+::'''Lukacs:''' Ding... Ding... Ding... Ding! Haha!
+::'''Lukacs:''' Don't scoff at Peppy's inability to talk. It gets really intense when it's by our side watching us play. An unexpected expert in rhythm games!
+::'''Peppy:''' Woof! Woof woof!
+::'''Asta:''' ...
+::'''Asta:''' I can't help but feel that if I allow Peppy to hang out with them any longer, it'll eventually get led down some bad vices.
+::'''Asta:''' But I can finally be at ease, now that I know what's going on in the space station. Thank you for investigating with me.
+::{{DIcon|Arrow}} (Invite Asta to watch the performance)
+::'''Asta:''' Huh? You're running a band? Interesting!
+::{{tx}}
+
+;(Talk to Fried Cold Rice Robot)
+:'''Fried Cold Rice Robot:''' Hi, beep! I am responsible for translating what Peppy is saying. Beep. Are you ready to try things out?
+:{{DIcon|Travel Log}} ...Please, Fried Cold Rice Robot!
+:<pre>{
+	"$type": "RPG.GameCore.ShowUI",
+	"Name": "Ui.MusicRhythm.MusicRhythmChooseLevelPage",
+	"WaitForExit": true,
+	"Param": {
+		"Value": "1"
+	},
+	"OnUIExitImmediately": [
+		{
+			"$type": "RPG.GameCore.EndDialogueEntityInteract"
+		}
+	]
+}</pre>
+:{{DIcon|Exit}} I've got something else to do.
+
+;(Unused &mdash; MusicRhythm_ShowUI)
+<pre>{
+	"$type": "RPG.GameCore.WaitFrame"
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.ShowUI",
+	"Name": "Ui.MusicRhythm.MusicRhythmChooseLevelPage",
+	"WaitForExit": true,
+	"Param": {
+		"Value": "1"
+	},
+	"OnUICustomEvent": [],
+	"OnUIExitImmediately": [
+		{
+			"$type": "RPG.GameCore.EndDialogueEntityInteract"
+		}
+	]
+}</pre>
+:'''(Trailblazer):''' (Collected Peppy's rhythm record. Should send it to Rappa for a listen.)
+<pre>{
+	"$type": "RPG.GameCore.AddFinishMissionData_PlayMessage",
+	"SubmissionID": 802611108,
+	"MessageSectionID": 1310000
+}</pre>
+:'''(Trailblazer):''' (Huh? Got a new message. It's... from Arfey this time?)
+<pre>{
+	"$type": "RPG.GameCore.AddFinishMissionData_PlayMessage",
+	"SubmissionID": 802611109,
+	"MessageSectionID": 1310100,
+	"ShowNotice": true
+}</pre>
+:'''(Trailblazer):''' (More and more curious... What exactly is this special sound ninja training that Rappa's conducting?)
+:'''(Trailblazer):''' (I'll head back to the rehearsal room for a gander when I'm done collecting inspiration.)
 {{Dialogue End}}
 
 ==Other Languages==

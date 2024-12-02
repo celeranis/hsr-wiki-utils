@@ -11,7 +11,7 @@ PageTitle=#Sealed Sector#
 |chapter       = 
 |requirements  = {{subst:void|<!--Unknown: {"Type":"Manual"}-->}}
 |summary       = <!--official mission summary from Fate's Atlas-->
-|characters    = Trailblazer
+|characters    = Leonard; Trailblazer
 |startLocation = [[Herta Space Station]] - [[Storage Zone]]
 |world         = Herta Space Station
 |area          = Storage Zone
@@ -23,13 +23,13 @@ PageTitle=#Sealed Sector#
 
 ==Steps==
 # Find a way to leave the room
+# Defeat the weakened enemies
 # Continue forward
-# Weaken the enemies using Level graffitis
-# Defeat the weakened enemies
 # Clear this area
 # Weaken the enemies using Level graffitis
 # Defeat the weakened enemies
 # Clear this area
+# Weaken the enemies using Level graffitis
 
 <!--
 ==Gameplay Notes==
@@ -41,45 +41,306 @@ PageTitle=#Sealed Sector#
 ==Dialogue==
 {{Stub Dialogue}}
 
-===Find a way to leave the room===
+===Find a way to leave the room{{subst:void|<!--800020218-->}}===
 {{Mission Description|type=adventure|location=Storage Zone|The troubles caused by Silver Wolf have abated, but Leonard still looks concerned.<br />He's asking for your help to carry out a task that will improve the space station's cybersecurity and help him keep his job...}}
 {{Dialogue Start}}
-:{{tx}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:'''Leonard:''' These guys are no pushovers... Let's borrow the power of the Level graffitis.
+
+;(Obtain {{Item|Simulated Calculation|20|x=1}})
+
+;(Obtain {{Item|Simulated Calculation|20|x=1}})
+
+;(Obtain {{Item|Simulated Calculation|20|x=1}})
+<pre>{
+	"$type": "RPG.GameCore.ShowTalkUI",
+	"Show": true,
+	"ShowDialogControlUI": true
+}</pre>
+----
+<pre>{
+	"$type": "RPG.GameCore.ActiveVirtualCamera",
+	"AreaName": "LevelArea_P40002_F40002102_G2",
+	"AnchorName": "Anchor1",
+	"IsActive": true,
+	"VCameraDitherMaxDistance": 1,
+	"CenterPosX": -1,
+	"CenterPosY": -1
+}</pre>
+----
+<pre>{
+	"$type": "RPG.GameCore.ChangePropState"
+}</pre>
+:<!--1-second delay-->
+:<!--2-second delay-->
+----
+<pre>{
+	"$type": "RPG.GameCore.ActiveVirtualCamera",
+	"AreaName": "LevelArea_P40002_F40002102_G2",
+	"AnchorName": "Anchor1",
+	"VCameraDitherMaxDistance": 1,
+	"CenterPosX": -1,
+	"CenterPosY": -1
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.ShowTalkUI",
+	"ShowDialogControlUI": true
+}</pre>
+----
+<pre>{
+	"$type": "RPG.GameCore.ShowTalkUI",
+	"Show": true,
+	"ShowDialogControlUI": true
+}</pre>
+----
+<pre>{
+	"$type": "RPG.GameCore.ActiveVirtualCamera",
+	"AreaName": "LevelArea_P40002_F40002102_G1",
+	"AnchorName": "Anchor4",
+	"IsActive": true,
+	"VCameraDitherMaxDistance": 1,
+	"CenterPosX": -1,
+	"CenterPosY": -1
+}</pre>
+----
+:<!--0.5-second delay-->
+<pre>{
+	"$type": "RPG.GameCore.ChangePropState"
+}</pre>
+:<!--1-second delay-->
+<!--Unknown TalkSentence: 200073329-->
+----
+<pre>{
+	"$type": "RPG.GameCore.ActiveVirtualCamera",
+	"AreaName": "LevelArea_P40002_F40002102_G1",
+	"VCameraDitherMaxDistance": 1,
+	"CenterPosX": -1,
+	"CenterPosY": -1
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.ShowTalkUI",
+	"ShowDialogControlUI": true
+}</pre>
+----
+<pre>{
+	"$type": "RPG.GameCore.ShowTalkUI",
+	"Show": true,
+	"ShowDialogControlUI": true
+}</pre>
+----
+<pre>{
+	"$type": "RPG.GameCore.ActiveVirtualCamera",
+	"AreaName": "LevelArea_P40002_F40002102_G1",
+	"AnchorName": "Anchor3",
+	"IsActive": true,
+	"VCameraDitherMaxDistance": 1,
+	"CenterPosX": -1,
+	"CenterPosY": -1
+}</pre>
+----
+:<!--1-second delay-->
+:<!--1-second delay-->
+:<!--0.2-second delay-->
+<pre>{
+	"$type": "RPG.GameCore.TriggerEffectList",
+	"TargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvPropEx",
+		"FetchType": "SinglePropByPropID",
+		"SinglePropID": {
+			"GroupID": {
+				"fixedValue": {
+					"Value": 1
+				}
+			},
+			"ID": {
+				"fixedValue": {
+					"Value": 300003
+				}
+			}
+		}
+	},
+	"EffectList": [
+		{
+			"EffectPath": "Effects/Eff_Prefab/Eff_Monster/Eff_XP_Minion04_00/Eff_Monster_XP_Minion04_00_Common_Maze_SpecialAppear.prefab",
+			"AttachPoint": "Root",
+			"Scale": {
+				"x": -1,
+				"y": -1,
+				"z": -1,
+				"normalized": {
+					"x": -0.577350259,
+					"y": -0.577350259,
+					"z": -0.577350259,
+					"normalized": {
+						"x": -0.5773503,
+						"y": -0.5773503,
+						"z": -0.5773503,
+						"magnitude": 1.00000012,
+						"sqrMagnitude": 1.00000024
+					},
+					"magnitude": 0.99999994,
+					"sqrMagnitude": 0.99999994
+				},
+				"magnitude": 1.73205078,
+				"sqrMagnitude": 3
+			}
+		}
+	]
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.CreateProp",
+	"GroupID": {
+		"fixedValue": {
+			"Value": 16
+		}
+	},
+	"GroupPropID": {
+		"fixedValue": {
+			"Value": 300012
+		}
+	},
+	"CreateList": []
+}</pre>
+:<!--3-second delay-->
+----
+<pre>{
+	"$type": "RPG.GameCore.ActiveVirtualCamera",
+	"AreaName": "LevelArea_P40002_F40002102_G1",
+	"AnchorName": "Anchor3",
+	"VCameraDitherMaxDistance": 1,
+	"CenterPosX": -1,
+	"CenterPosY": -1
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.ShowTalkUI",
+	"ShowDialogControlUI": true
+}</pre>
+----
 {{Dialogue End}}
 
-===Continue forward===
+===Defeat the weakened enemies{{subst:void|<!--800020215-->}}===
 {{Dialogue Start}}
-:{{tx}}
+
 {{Dialogue End}}
 
-===Weaken the enemies using Level graffitis===
+===Continue forward{{subst:void|<!--800020203-->}}===
 {{Dialogue Start}}
-:{{tx}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+<pre>{
+	"$type": "RPG.GameCore.EnableNPCMonsterAI",
+	"GroupID": 25,
+	"GroupMonsterIDs": [
+		200001
+	],
+	"UniqueNames": [],
+	"AbortSkillWhenDisable": true,
+	"ResetStateOnDisable": true
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.ShowTalkUI",
+	"Show": true,
+	"ShowDialogControlUI": true
+}</pre>
+----
+<pre>{
+	"$type": "RPG.GameCore.ActiveVirtualCamera",
+	"AreaName": "LevelArea_P40002_F40002102_G1",
+	"AnchorName": "Anchor2",
+	"IsActive": true,
+	"VCameraDitherMaxDistance": 1,
+	"CenterPosX": -1,
+	"CenterPosY": -1
+}</pre>
+----
+:<!--2.5-second delay-->
+----
+<pre>{
+	"$type": "RPG.GameCore.ActiveVirtualCamera",
+	"AreaName": "LevelArea_P40002_F40002102_G1",
+	"AnchorName": "Anchor8",
+	"IsActive": true,
+	"VCameraDitherMaxDistance": 1,
+	"CenterPosX": -1,
+	"CenterPosY": -1
+}</pre>
+----
+:<!--1-second delay-->
+:'''Leonard:''' This is it. These {{Color|keyword|nobold=1|"Level"}} graffitis usually come in pairs. You can use them to change the strength levels of your enemies, to either strengthen them or weaken them.
+:'''Leonard:''' Of course, for now, you don't have to strengthen them. Use the graffiti to weaken your enemies.
+<pre>{
+	"$type": "RPG.GameCore.ActiveVirtualCamera",
+	"AreaName": "LevelArea_P40002_F40002102_G1",
+	"AnchorName": "Anchor8",
+	"VCameraDitherMaxDistance": 1,
+	"CenterPosX": -1,
+	"CenterPosY": -1
+}</pre>
+----
+<pre>{
+	"$type": "RPG.GameCore.ShowTalkUI",
+	"ShowDialogControlUI": true
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.EnableNPCMonsterAI",
+	"Enable": true,
+	"GroupID": 25,
+	"GroupMonsterIDs": [
+		200001
+	],
+	"UniqueNames": [],
+	"AbortSkillWhenDisable": true,
+	"ResetStateOnDisable": true
+}</pre>
 {{Dialogue End}}
 
-===Defeat the weakened enemies===
+===Clear this area{{subst:void|<!--800020216-->}}===
 {{Dialogue Start}}
-:{{tx}}
+<pre>{
+	"$type": "RPG.GameCore.ShowTalkUI",
+	"Show": true,
+	"ShowDialogControlUI": true
+}</pre>
+:'''Leonard:''' After a cyber attack, it's usually followed up with a physical invasion. However, sometimes we can utilize the enemy's tactic and catch them with their own net.
+<pre>{
+	"$type": "RPG.GameCore.ShowTalkUI",
+	"ShowDialogControlUI": true
+}</pre>
+
+:{{DIcon|Loupe}} Investigate
+;(If {{cx}}<!--SubMission Finish: 800020214-->)
+;(Otherwise)
+:'''Leonard:''' Challenge completed, do you want to exit the simulation?
+:{{DIcon|Arrow}} Stay for Now
+:{{DIcon|Exit}} Confirm Exit
+:<pre>{
+	"$type": "RPG.GameCore.UpdateTreasureChallengeProgress",
+	"RaidTargetID": 102000000,
+	"IsIncrease": true,
+	"DeltaValue": 1
+}</pre>
 {{Dialogue End}}
 
-===Clear this area===
+===Weaken the enemies using Level graffitis{{subst:void|<!--800020219-->}}===
 {{Dialogue Start}}
-:{{tx}}
+
 {{Dialogue End}}
 
-===Weaken the enemies using Level graffitis===
+===Defeat the weakened enemies{{subst:void|<!--800020220-->}}===
 {{Dialogue Start}}
-:{{tx}}
+
 {{Dialogue End}}
 
-===Defeat the weakened enemies===
+===Clear this area{{subst:void|<!--800020227-->}}===
 {{Dialogue Start}}
-:{{tx}}
 {{Dialogue End}}
 
-===Clear this area===
+===Weaken the enemies using Level graffitis{{subst:void|<!--800020204-->}}===
 {{Dialogue Start}}
-:{{tx}}
+
 {{Dialogue End}}
 
 ==Other Languages==

@@ -1,7 +1,8 @@
-import { InternalDialogTask, PlayTimeline } from '../../files/Dialog.js';
+import { InternalDialogTask, PlayTimeline } from '../../files/graph/Dialog.js';
 import { TalkSentenceConfig } from '../../TextMap.js';
 import { TranscriptionNote } from '../../util/AbstractDialogueTree.js';
 import { BaseDialogueTask, BaseDialogueTaskEntry, BaseNonTextDialogueTask, TalkSentenceTaskEntry } from '../DialogueBase.js';
+import { GraphEnvironment } from '../Environment.js';
 
 export class TimelineTask extends BaseNonTextDialogueTask {
 	declare $type: 'RPG.GameCore.PlayTimeline'
@@ -9,7 +10,7 @@ export class TimelineTask extends BaseNonTextDialogueTask {
 	str_before?: string
 	str_after?: string
 	
-	constructor(data: PlayTimeline, prevData?: InternalDialogTask, nextData?: InternalDialogTask) {
+	constructor(data: PlayTimeline, env: GraphEnvironment, prevData?: InternalDialogTask, nextData?: InternalDialogTask) {
 		super(data)
 		this.path = data.TimelineName
 		if (prevData?.$type == 'RPG.GameCore.WaitCustomString') {
@@ -33,16 +34,16 @@ export class TimelineTask extends BaseNonTextDialogueTask {
 					lastId = TalkSentenceConfig[lastIndex]?.TalkSentenceID
 				}
 
-				if (lastIndex != firstIndex) {
-					this.entries = TalkSentenceConfig
-						.slice(firstIndex, lastIndex + 1)
-						.map(sent => new TalkSentenceTaskEntry({ TalkSentenceID: sent.TalkSentenceID }))
-				} else {
+				// if (lastIndex != firstIndex) {
+				// 	this.entries = TalkSentenceConfig
+				// 		.slice(firstIndex, lastIndex + 1)
+				// 		.map(sent => new TalkSentenceTaskEntry({ TalkSentenceID: sent.TalkSentenceID }))
+				// } else {
 					this.entries = [
-						new TalkSentenceTaskEntry({ TalkSentenceID: Number(firstSentence) }),
+						new TalkSentenceTaskEntry({ TalkSentenceID: Number(firstSentence) }, env),
 						new TranscriptionMissing()
 					]
-				}
+				// }
 			}
 			
 		} else if (!firstSentence && lastSentence) {
@@ -58,11 +59,11 @@ export class TimelineTask extends BaseNonTextDialogueTask {
 				if (firstIndex != lastIndex - 1) {
 					this.entries = TalkSentenceConfig
 						.slice(firstIndex, lastIndex)
-						.map(sent => new TalkSentenceTaskEntry({ TalkSentenceID: sent.TalkSentenceID }))
+						.map(sent => new TalkSentenceTaskEntry({ TalkSentenceID: sent.TalkSentenceID }, env))
 				} else {
 					this.entries = [
 						new TranscriptionMissing(),
-						new TalkSentenceTaskEntry({ TalkSentenceID: TalkSentenceConfig[lastIndex - 1]?.TalkSentenceID }),
+						new TalkSentenceTaskEntry({ TalkSentenceID: TalkSentenceConfig[lastIndex - 1]?.TalkSentenceID }, env),
 					]
 				}
 			}
@@ -77,7 +78,7 @@ export class TimelineTask extends BaseNonTextDialogueTask {
 			if (firstIndex != -1 && lastIndex != -1 && (lastIndex - firstIndex) < 99) {
 				this.entries = TalkSentenceConfig
 					.slice(firstIndex, lastIndex)
-					.map(sent => new TalkSentenceTaskEntry({ TalkSentenceID: sent.TalkSentenceID }))
+					.map(sent => new TalkSentenceTaskEntry({ TalkSentenceID: sent.TalkSentenceID }, env))
 			}
 		}
 		

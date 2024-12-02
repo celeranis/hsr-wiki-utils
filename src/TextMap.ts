@@ -226,6 +226,10 @@ export class TextMap {
 		return replaced
 	}
 	
+	getTextRaw(key: number | HashReference) {
+		return this.json[typeof key == 'object' ? key.Hash : key]
+	}
+	
 	getText(mapKey?: string | number | HashReference, params?: TextParams, allowNewline: boolean = true): string {
 		if (!mapKey) return ''
 		if (typeof mapKey == 'string' && !Number(mapKey)) {
@@ -238,7 +242,9 @@ export class TextMap {
 		if (typeof sentence != 'object') sentence = Object.values(TextMap.sentence_json).find(sent => sent.TalkSentenceID == sentence)!
 		if (!sentence) return undefined
 		const name = this.getText(sentence.TextmapTalkSentenceName, undefined, false)
-		const text = this.getText(sentence.TalkSentenceText, undefined, allowNewline).replaceAll('\n', '<br />')
+		const text = this.getText(sentence.TalkSentenceText, undefined, allowNewline)
+			.replaceAll('\n', '<br />')
+			.replaceAll(/{{Color\|(\w+)\|/g, '{{Color|$1|nobold=1|')
 		
 		let voiceIds: number[] | undefined = undefined
 		if (allowVO) {

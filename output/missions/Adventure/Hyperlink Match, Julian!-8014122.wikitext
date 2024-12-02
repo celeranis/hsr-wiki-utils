@@ -7,11 +7,11 @@ PageTitle=#Hyperlink Match, Julian!#
 |title         = 
 |image         = <!--Mission Hyperlink Match, Julian!.png-->
 |type          = Adventure
-|event_name    = 
+|event_name    = Aetherium Wars
 |chapter       = 
 |requirements  = [[Adventure Mission]] ''[[Embark! Corridor of Fading Echoes!]]'' completed
 |summary       = <!--official mission summary from Fate's Atlas-->
-|characters    = Trailblazer
+|characters    = Julian; Trailblazer
 |startLocation = [[Jarilo-VI]] - [[Boulder Town]]
 |world         = Jarilo-VI
 |area          = Boulder Town
@@ -19,7 +19,7 @@ PageTitle=#Hyperlink Match, Julian!#
 |next          = 
 |rewards       = 
 }}
-'''''Hyperlink Match, Julian!''''' is an [[Adventure Mission]] on [[Jarilo-VI]].
+'''''Hyperlink Match, Julian!''''' is an Event [[Adventure Mission]] from the [[Aetherium Wars]] event.
 
 ==Steps==
 # Have a Hyperlink Match with Julian
@@ -33,11 +33,50 @@ PageTitle=#Hyperlink Match, Julian!#
 -->
 ==Dialogue==
 {{Stub Dialogue}}
-
-===Have a Hyperlink Match with Julian===
+===Have a Hyperlink Match with Julian{{subst:void|<!--801412201-->}}===
 {{Mission Description|type=adventure|location=Boulder Town|The core gameplay loop behind Aetherium Wars is "dueling." Challenge different players and show your true strength!}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Julian)
+:{{DIcon|Talk}} What are you doing here?
+::'''Julian:''' Hmmm... you seriously do not understand.
+::'''Julian:''' I, Julian of a Thousand Faces, am honing my own disguise skills!
+::{{DIcon|Arrow}} But you're very skilled already, aren't you?
+:::'''Julian:''' Well... um... your praise doesn't excite me...
+:::'''Julian:''' ...Anyway, the next time we play hide-and-seek, you won't be able to find me! I am 100% sure of that!
+::;(Return to previous option selection)
+::{{DIcon|Arrow}} Are you practicing magic?
+:::'''Julian:''' Magic? No. Magic doesn't exist. My disguise is based on pure craftsmanship and skill!
+:::'''Julian:''' ...Anyway, the next time we play hide-and-seek, you won't be able to find me! I am 100% sure of that!
+::;(Return to previous option selection)
+:{{DIcon|Talk}} How exactly do you disguise yourself?
+::'''Julian:''' Hmm... It's a secret. I'm not going to tell you...
+::{{DIcon|Arrow}} Can't you tell me? Please?
+:::'''Julian:''' No! That's one of The Moles' most important secrets!
+:::'''Julian:''' As the right-hand man to Boss Hook, I would never reveal such important information! You might as well give up!
+::{{DIcon|Arrow}} Actually, Hook sent me...
+:::'''Julian:''' Hook? I mean... Pitch-Dark Hook the Great! How dare you address her by just that name!
+:::'''Julian:''' Hmph, I won't be fooled by that excuse! If Boss Hook wanted to know anything from me, she would ask me herself!
+:::'''Julian:''' Haha, your pathetic face tells me that... I saw through your trick.
+:::'''Julian:''' Good. It's better for you to not know everything.
+:::'''Julian:''' If you can bring me a thousand packets of snow-white popping candy... I'll consider teaching you my disguise technique!
+::;(Return to previous option selection)
+:;(All choices lead to the following options)
+::{{DIcon|Arrow}} Hmm... You win.
+::{{DIcon|Arrow}} All right, I give up.
+::'''Julian:''' Good. It's better for you to not know everything.
+::'''Julian:''' If you can bring me a thousand packets of snow-white popping candy... I'll consider teaching you my disguise technique!
+:;(Return to previous option selection)
+:{{DIcon|Exit}} I'm okay.
+:'''Julian:''' Well, as an honorary member won, that counts as a Moles victory too... right?
+<pre>{
+	"$type": "RPG.GameCore.ShowUI",
+	"Name": "Ui.AetherDivide.AetherDivideEntryPage",
+	"Param": {
+		"Value": "2"
+	},
+	"OnUIEnter": []
+}</pre>
 {{Dialogue End}}
 
 ==Other Languages==

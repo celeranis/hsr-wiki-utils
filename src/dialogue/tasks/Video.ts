@@ -1,5 +1,5 @@
-import { PlayVideo } from '../../files/Dialog.js';
 import { getExcelFile, getFile } from '../../files/GameFile.js';
+import { PlayVideo } from '../../files/graph/Dialog.js';
 import { VideoCaptionData, VideoData } from '../../files/Video.js';
 import { textMap } from '../../TextMap.js';
 import { TranscriptionNote } from '../../util/AbstractDialogueTree.js';

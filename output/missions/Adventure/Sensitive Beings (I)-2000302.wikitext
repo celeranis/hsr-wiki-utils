@@ -11,7 +11,7 @@ PageTitle=#Sensitive Beings (I)#
 |chapter       = 
 |requirements  = [[Adventure Mission]] ''[[Sensitive Beings (I)]]'' completed
 |summary       = <!--official mission summary from Fate's Atlas-->
-|characters    = Trailblazer
+|characters    = Maintenance Engineer; Trailblazer
 |startLocation = [[Herta Space Station]] - [[Supply Zone]]
 |world         = Herta Space Station
 |area          = Supply Zone
@@ -37,28 +37,109 @@ PageTitle=#Sensitive Beings (I)#
 ==Dialogue==
 {{Stub Dialogue}}
 
-===Run the identity verification program again===
+===Run the identity verification program again{{subst:void|<!--200030200-->}}===
 {{Mission Description|type=adventure|location=Supply Zone|The engineer helps you gain access to the data in the terminal. Now you can use it.}}
 {{Dialogue Start}}
-:{{tx}}
 {{Dialogue End}}
 
-===Use the terminal to check Mare's data record===
+===Use the terminal to check Mare's data record{{subst:void|<!--200030203-->}}===
 {{Mission Description|type=adventure|location=Supply Zone|update|The terminal stores the data records of everyone in the space station. You decide to begin by checking Mare's record.}}
 {{Dialogue Start}}
-:{{tx}}
+:<!--0.5-second delay-->
+<pre>{
+	"$type": "RPG.GameCore.PropSetupUITrigger",
+	"DestroyAfterTriggered": true,
+	"ButtonIcon": "SpriteOutput/TalkIcon/ChatIcon.png",
+	"IconType": "ChatLoopIcon",
+	"ButtonText": {
+		"Hash": 278713937
+	},
+	"ButtonCallback": [
+		{
+			"$type": "RPG.GameCore.TriggerCustomString",
+			"CustomString": {
+				"Value": "Mission_200030203_Prop_11_300003_BtnClick"
+			}
+		}
+	],
+	"InteractAngleRange": 180,
+	"SkipFakeAvatar": true,
+	"TargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvPropEx",
+		"FetchType": "SinglePropByPropID",
+		"SinglePropID": {
+			"GroupID": {
+				"fixedValue": {
+					"Value": 11
+				}
+			},
+			"ID": {
+				"fixedValue": {
+					"Value": 300003
+				}
+			}
+		}
+	}
+}</pre>
 {{Dialogue End}}
 
-===Use the terminal to check the data records of the others===
+===Use the terminal to check the data records of the others{{subst:void|<!--200030204-->}}===
 {{Mission Description|type=adventure|location=Supply Zone|update|You never thought Mare was someone like this. It's hard to believe that the eccentric person you know and the cute cat-lover in the record are the same. At any rate, she is not infected. Now you need to check the others...}}
 {{Dialogue Start}}
-:{{tx}}
+:<!--0.5-second delay-->
+<pre>{
+	"$type": "RPG.GameCore.PropSetupUITrigger",
+	"DestroyAfterTriggered": true,
+	"ButtonIcon": "SpriteOutput/TalkIcon/ChatIcon.png",
+	"IconType": "ChatLoopIcon",
+	"ButtonText": {
+		"Hash": 278713937
+	},
+	"ButtonCallback": [
+		{
+			"$type": "RPG.GameCore.TriggerCustomString",
+			"CustomString": {
+				"Value": "Mission_200030204_Prop_11_300004_BtnClick"
+			}
+		}
+	],
+	"InteractAngleRange": 180,
+	"SkipFakeAvatar": true,
+	"TargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvPropEx",
+		"FetchType": "SinglePropByPropID",
+		"SinglePropID": {
+			"GroupID": {
+				"fixedValue": {
+					"Value": 11
+				}
+			},
+			"ID": {
+				"fixedValue": {
+					"Value": 300004
+				}
+			}
+		}
+	}
+}</pre>
 {{Dialogue End}}
 
-===Talk to the maintenance engineer and report the computing power issue===
+===Talk to the maintenance engineer and report the computing power issue{{subst:void|<!--200030205-->}}===
 {{Mission Description|type=adventure|location=Supply Zone|update|You planned to finish the investigation as soon as possible after checking Mare's data record. Unfortunately, the terminal's network signal is so poor that you have to ask for the engineer's help again...}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Maintenance Engineer)
+:'''Maintenance Engineer:''' What's wrong?
+:{{DIcon|Arrow}} I only found one record.
+::'''Maintenance Engineer:''' Good... Oh, you mean you couldn't find the others?
+:{{DIcon|Arrow}} "Insufficient computing power. Try again later?"
+::'''Maintenance Engineer:''' Oh, that's normal. The terminal is not broken. It's nothing to worry about.
+:'''Maintenance Engineer:''' Although, it won't be operational until tomorrow.
+:{{DIcon|Arrow}} Why?
+:'''Maintenance Engineer:''' Because the station was invaded. Originally, we had more than one terminal, connecting units on a much larger scale.
+:'''Maintenance Engineer:''' During that debacle, some units were damaged. The computing power of the terminal was thus greatly decreased, not to mention it's only running on a single-core processor right now...
+:'''Maintenance Engineer:''' The lead researcher said she was going to purchase new equipment. But it hasn't arrived yet. Therefore, with the current computing power, you can only query once a day.
+:'''Maintenance Engineer:''' And the current identity verification program has to be activated manually by me every day, so... please {{Color|keyword|nobold=1|come back tomorrow}}. Don't forget to ask me to turn on the verification.
 {{Dialogue End}}
 
 ==Other Languages==

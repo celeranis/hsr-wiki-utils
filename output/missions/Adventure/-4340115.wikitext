@@ -11,7 +11,7 @@ PageTitle=##
 |chapter       = 
 |requirements  = [[Trailblaze Mission]] ''[[The Public Enemy]]'' completed
 |summary       = <!--official mission summary from Fate's Atlas-->
-|characters    = Trailblazer
+|characters    = Crowd; Emanator of Cans; Trailblazer; Unlucky Disciple; Young Disciple
 |startLocation = [[Penacony]] - [[Dreamflux Reef]]
 |world         = Penacony
 |area          = Dreamflux Reef
@@ -33,6 +33,139 @@ PageTitle=##
 -->
 ==Dialogue==
 {{Stub Dialogue}}
+
+;(Talk to Emanator of Cans)
+:'''Emanator of Cans:''' {{MC|f=Miss|m=Sir}}, please stay and allow me to introduce you to my faith &mdash; the mighty King of Cans, the God of Cans who shelters thousands of cans.
+::'''Emanator of Cans:''' Admired by the universe, THEIR nine thousand eyes blink on the thirty thousand cans and sixty thousand arms. THEIR greatness prevents the cans from rusting, and THEIR gaze causes the inorganic things to flourish.
+::{{DIcon|Arrow}} Will THEY bless the trashcans?
+:::'''Emanator of Cans:''' Of course, regardless of whether they are golden cans, silver cans, trashcans, or dirty cans, the King of Cans treats all the people the same.
+::{{DIcon|Arrow}} Sounds like an Aeon...
+:::'''Emanator of Cans:''' Ugh... In our teachings, Aeons are just incarnations of the King of Cans. Of course, they will have some similarities!
+::'''Emanator of Cans:''' Did you see the iron can beside me? It is the King of Cans' divine object left in the mortal realm, a rusted holy body before THEY embarked on THEIR destiny as a "Can."
+::'''Emanator of Cans:''' By sincerely believing in the King of Cans, all your wishes will come true and all your diseases will be cured. Even if you are casually touching this iron can, THEIR holy body will bring you good luck.
+::{{DIcon|Arrow}} Do I need to pay?
+::{{DIcon|Arrow}} I'll touch if it's free.
+::'''Emanator of Cans:''' How shallow! Is that how you see our King of Cans? THEY are saving you! Money is the root of all evil. All your misfortune originates from that toxic curse.
+::'''Emanator of Cans:''' That's why the King of Cans made THEIR holy body descend. You just need to insert your money into this iron can, and THEY will bear the suffering on your behalf.
+::{{DIcon|Arrow}} Do THEY bless humans too?
+:::'''Emanator of Cans:''' Do you not believe in me? How do you think I've become THEIR first disciple?
+::{{DIcon|Arrow}} Mommy, I want to become a trashcan!
+:::'''Emanator of Cans:''' That's the enthusiasm I need! However, turning into a trashcan is a bit of a tall order.
+::{{DIcon|Arrow}} What a friendly god.
+:::'''Emanator of Cans:''' Exactly. Throughout the entire Cosmos, which other gods regarded THEIR people as THEIR own like the King of Cans?
+::'''Emanator of Cans:''' Every person is just a can wearing the shell of a human. The moment you embark onto the iron can's Path, your disguise will fade away, revealing your true self.
+::{{tx}}
+::{{DIcon|Arrow}} Give some money and see what happens.
+::<pre>{
+	"$type": "RPG.GameCore.AddFinishMissionData_ConsumeItem",
+	"SubmissionID": 434011511,
+	"SimpleTalk": {
+		"TextSpeed": 20,
+		"ProtectTime": 0.8
+	},
+	"OnSubmitConfirm": [
+		{
+			"$type": "RPG.GameCore.SetMissionCustomValue",
+			"SubmissionID": 434011510,
+			"MissionCustomValue": {
+				"isLocal": true,
+				"ValidValueParamList": [
+					1,
+					2
+				]
+			},
+			"CustomValue": 1
+		},
+		{
+			"$type": "RPG.GameCore.PlayTimeline",
+			"TimelineName": "Story/Discussion/Mission/4340115/DS43401150110.playable",
+			"Type": "Discussion"
+		},
+		{
+			"$type": "RPG.GameCore.TriggerCustomString",
+			"CustomString": {
+				"Value": "ALL_TALK_END"
+			}
+		}
+	],
+	"OnSubmitCancel": [
+		{
+			"$type": "RPG.GameCore.TriggerCustomString",
+			"CustomString": {
+				"Value": "OptionTalk_434023023"
+			}
+		}
+	]
+}</pre>
+::{{DIcon|Arrow}} Can you '''be''' anymore fake?
+::<pre>{
+	"$type": "RPG.GameCore.SetMissionCustomValue",
+	"SubmissionID": 434011510,
+	"MissionCustomValue": {
+		"isLocal": true,
+		"ValidValueParamList": [
+			1,
+			2
+		]
+	},
+	"CustomValue": 2
+}</pre>
+:::{{tx}}
+:;(If {{F|MissionCV-4340115-undefined}} is equal to 1)
+:::'''Emanator of Cans:''' My dear friend, may the light of the King of Cans shine upon you and me.
+:;(If {{F|MissionCV-4340115-undefined}} is not equal to 1)
+:::'''Emanator of Cans:''' My story should be credible enough... I should try to improve it.
+
+
+;(Talk to Emanator of Cans)
+:'''Emanator of Cans:''' I am happy to see you, Second Disciple of the King of Cans.
+::'''Emanator of Cans:''' Look at this delightful sight! Humans are discarding various impurities in their lives and devote themselves to the King of Cans.
+::'''Emanator of Cans:''' I can feel my body gradually getting nearer to THEM. My head shall turn into a can lid, and my body shall become a can.
+::'''Emanator of Cans:''' Are you here to touch the holy body again? There's no need to insert credits now. The God of Iron Can has forgiven my sins and granted all humans the right to touch THEIR holy body.
+::{{DIcon|Arrow}} Are you convinced too?
+:::'''Emanator of Cans:''' What do you mean? Can't you see it? The grandiose silhouette of the God of Iron Can was projected in the sky.
+::{{DIcon|Arrow}} You have improved on your tricks.
+:::'''Emanator of Cans:''' With the teachings of the King of Cans, I've changed my ways and will never cheat others again.
+::{{DIcon|Arrow}} Oh yeah? I don't believe you.
+:::'''Emanator of Cans:''' The King of Cans will not disappear because of your disbelief. THEY are eternal and will love us forever.
+::'''Emanator of Cans:''' Now I realize that it's not me who has chosen this God &mdash; I am the chosen one, and this is why I know everything about THEM.
+::'''Young Disciple:''' This guy is right. I witnessed the form of the King of Cans, who rescued me from my lack of inspiration, and my work went through to the editor!
+::'''Unlucky Disciple:''' After touching the holy body, I won three times in a row at the casino. I now have the money to buy booze again.
+::'''Emanator of Cans:''' Look, the King of Cans heard our praises for THEM. THEY are gazing at us!
+::{{DIcon|Arrow}} That is not the King of Cans.
+:::'''Emanator of Cans:''' We can tell with our own eyes whether that is the King of Cans. Stop spouting nonsense here, or you'll be punished at the bottom of the can for eternity.
+::{{DIcon|Arrow}} All of you are possessed...
+:::'''Emanator of Cans:''' No. We are awakened! We can now perceive the nature of the world through the cracks in the lid of the can!
+::{{DIcon|Arrow}} I am the King of Cans.
+:::'''Emanator of Cans:''' Absurdity! Your appearance is nothing like a can. How could an odd-shaped primate body be compared to the King of Cans' smooth and perfect cylindrical body?
+::'''Emanator of Cans:''' My friend, I am very disappointed in you. How can you show such disrespect to our God!?
+::'''Emanator of Cans:''' But I will not condemn your betrayal of the King of Cans. Your confusion is only temporary. You'll eventually pass this trial and return to the arms of our King of Cans.
+::'''Emanator of Cans:''' Perhaps you'll become a more devout disciple than I am, becoming an excellent iron can, an astounding gold can, or even a powerful trashcan!
+::'''Crowd:''' Mighty King of Cans! Please turn us into iron cans!
+:'''Emanator of Cans:''' Oh, mighty King of Cans. Turn me into an iron can!
+
+
+;(Talk to Emanator of Cans)
+:'''Emanator of Cans:''' THEY have a stunningly charming face, and THEIR four arms are in charge of metal, paper money, goods, and energy. And this iron can is the holy body blessed by the arm that governs metal.
+::{{DIcon|Arrow}} Have you changed a god?
+::{{DIcon|Arrow}} A new update patch?
+::'''Emanator of Cans:''' Oh, it's you! I didn't recognize you for a second.
+::'''Emanator of Cans:''' Thank you for your feedback. I realized that I was awful at making up stories, and the King of Cans doesn't sound like a good scam... for making money.
+::'''Emanator of Cans:''' So I've summarized the lessons learned from my experience, and with reference to the existing Aeons' images and promotional messages, I burned the midnight oil to come out with this all-new version. With this charming appearance, their popularity can never be low.
+::{{DIcon|Arrow}} You sound like you're advertising for an idol.
+:::'''Emanator of Cans:''' An idol is what the market demands. Do you understand what's the market? Everyone likes this.
+::{{DIcon|Arrow}} Are you not afraid the true disciples will crack down on you?
+:::'''Emanator of Cans:''' If the members of The Family are capable of coming here to punish me, I would drink SoulGlad upside down for you.
+::{{DIcon|Arrow}} I should go home and make a Baseballer God too.
+:::'''Emanator of Cans:''' What kind of nonsense is that? It certainly doesn't sound as mighty as my Sage of Iron Cans.
+::'''Emanator of Cans:''' At the end of the day, reverence is something I lost a long time ago. I'm even willing to believe in Trotters if that can bring me money.
+::'''Emanator of Cans:''' Think about it. If you have two God of Iron Cans, and one looks like a cosmic superstar while the other looks like a typical trashcan. Which one are you more likely to believe in?
+::{{DIcon|Arrow}} The cosmic superstar.
+:::'''Emanator of Cans:''' Right! Even as a God of Iron Can, public image is important too.
+::{{DIcon|Arrow}} The trashcan, of course.
+:::'''Emanator of Cans:''' Eh, putting unique hobbies aside, a cosmic superstar is still more popular overall.
+::'''Emanator of Cans:''' In any case, scams are like buying stocks. If one stock doesn't work for you, just change to another one.
+:'''Emanator of Cans:''' Hehe, I can already see tomorrow's loaded wallet beckoning me.
 
 {{Dialogue End}}
 

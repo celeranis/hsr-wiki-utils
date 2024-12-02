@@ -11,7 +11,7 @@ PageTitle=#Goodness Is Rare#
 |chapter       = 
 |requirements  = [[Trailblaze Mission]] ''[[Whodunit]]'' completed
 |summary       = Tizocic II has no choice but to wake up from the dream, confronting her own sins and punishment.<br />It seems that even within the Dreamscape, there comes a day when one must inevitably wake up.
-|characters    = Trailblazer
+|characters    = Calm Assassin; Chenapon; Clockie; Dorromancha; Enthusiastic Passerby; Excited Assassin; Illifan; Impolite Passerby; Patient Bloodhound; Pleasant Passerby; Polite Passerby; Swanga; Tizocic II; Trailblazer
 |startLocation = [[Penacony]] - [[Golden Hour]]
 |world         = Penacony
 |area          = Golden Hour
@@ -24,7 +24,9 @@ PageTitle=#Goodness Is Rare#
 ==Steps==
 # Talk to Tizocic II
 # Find Ephraim with Tizocic II
+# Stop the assassins from harming Tizocic II
 # Ask people around for news on Ephraim
+# Ask the Bloodhound Family about Ephraim's situation
 # Find out how Ephraim and the rest are doing
 # Talk to Tizocic II
 # Talk to Clockie
@@ -34,7 +36,6 @@ PageTitle=#Goodness Is Rare#
 # Find Tizocic II and ensure her safety
 # Stop the assassins from harming Tizocic II
 # Help Tizocic II find her memories
-# Ask the Bloodhound Family about Ephraim's situation
 # Talk to Tizocic II and the two assassins
 
 <!--
@@ -47,86 +48,472 @@ PageTitle=#Goodness Is Rare#
 ==Dialogue==
 {{Stub Dialogue}}
 
-===Talk to Tizocic II===
+===Talk to Tizocic II{{subst:void|<!--203020101-->}}===
 {{Mission Description|type=adventure|location=Golden Hour|You meet a strange but kindhearted person. She is considerate, warmhearted, and helpful &mdash; you don't know why she calls herself "Emperor of Penacony." What's more puzzling is the people of Penacony recognize her as the Emperor.<br />Follow your Emperor, and join her in helping other Dreamchasers.}}
 {{Dialogue Start}}
-:{{tx}}
+
+<pre>{
+	"$type": "RPG.GameCore.PlayNPCBubbleTalk",
+	"BubbleTalkInfoList": [
+		{
+			"AutoSkipTime": 8,
+			"GroupID": 122,
+			"GroupNpcID": 400002,
+			"TalkSentenceID": 230201029
+		}
+	],
+	"IsLoop": true,
+	"LoopInterval": 8
+}</pre>
+:<!--8-second delay-->
+<pre>{
+	"$type": "RPG.GameCore.PlayNPCBubbleTalk",
+	"BubbleTalkInfoList": [
+		{
+			"AutoSkipTime": 8,
+			"GroupID": 122,
+			"GroupNpcID": 400001,
+			"TalkSentenceID": 230201030
+		}
+	],
+	"IsLoop": true,
+	"LoopInterval": 8,
+	"UniqueID": 1
+}</pre>
 {{Dialogue End}}
 
-===Find Ephraim with Tizocic II===
+===Find Ephraim with Tizocic II{{subst:void|<!--203020102-->}}===
 {{Mission Description|type=adventure|location=Golden Hour|update|Music producer Ephraim seems to have overindulged himself in his dreams, and forgotten that he is here on official business. Find him quickly, before Ephraim and his partners' hard work go up in smoke.}}
 {{Dialogue Start}}
+
+;(Talk to Chenapon)
+:'''Chenapon:''' *Klimt profanity*... That nitwit Ephraim is going to drive me to my grave.
+
+;(Talk to Tizocic II)
+:{{tx}}
+:'''Tizocic II:''' In the Golden Hour, if you lose contact with someone who has sunken into entertainment, odds are that person is stuck here.
+:{{DIcon|Arrow}} This is a house of criminal decadence?
+:{{DIcon|Arrow}} Did he get kidnapped?
+:'''Tizocic II:''' More or less. This place is a bar called the World's End, a depot of debauchery for acolytes of Elation.
+:{{tx}}
+:{{Black Screen|You've barely recovered from startlement when you see a woman with a fawning smile sashaying out of the bar.}}
+:{{tx}}
+:{{Black Screen|Lady Greenham dramatically curtsies, turns around, and ducks through the bar's door.}}
 :{{tx}}
 {{Dialogue End}}
 
-===Ask people around for news on Ephraim===
-{{Dialogue Start}}
-:{{tx}}
-{{Dialogue End}}
-
-===Find out how Ephraim and the rest are doing===
-{{Mission Description|type=adventure|location=Golden Hour|update|The Emperor and you have finally rescued Ephraim. Go find out how they are doing.}}
-{{Dialogue Start}}
-:{{tx}}
-{{Dialogue End}}
-
-===Talk to Tizocic II===
-{{Mission Description|type=adventure|location=Golden Hour|update|The work of helping others has come to an end. Talk to the Emperor to get to know her a little better.}}
-{{Dialogue Start}}
-:{{tx}}
-{{Dialogue End}}
-
-===Talk to Clockie===
-{{Mission Description|type=adventure|location=Golden Hour|update|What's going on? Why is Clockie here again? Is there more to this story than meets the eye?}}
-{{Dialogue Start}}
-:{{tx}}
-{{Dialogue End}}
-
-===Complete Tizocic II's missing emotions===
-{{Mission Description|type=adventure|location=Golden Hour|update|What's going on? Why is Clockie here again? Is there more to this story than meets the eye?<br />Complete Her Majesty's missing emotions and find out what's going on.}}
-{{Dialogue Start}}
-:{{tx}}
-{{Dialogue End}}
-
-===Find out why Tizocic II is angry===
-{{Mission Description|type=adventure|location=Golden Hour|update|What's going on? Why is Clockie here again? Is there more to this story than meets the eye?<br />What troubles did Her Majesty exactly encounter?}}
-{{Dialogue Start}}
-:{{tx}}
-{{Dialogue End}}
-
-===Find the assassins and protect Tizocic II===
-{{Mission Description|type=adventure|location=Golden Hour|update|Assassins are after the Emperor! Unbelievable, who would do such a thing to such a kind soul?<br />Find the assassins quickly and protect Her Majesty.}}
-{{Dialogue Start}}
-:{{tx}}
-{{Dialogue End}}
-
-===Find Tizocic II and ensure her safety===
-{{Dialogue Start}}
-:{{tx}}
-{{Dialogue End}}
-
-===Stop the assassins from harming Tizocic II===
+===Stop the assassins from harming Tizocic II{{subst:void|<!--203020114-->}}===
 {{Mission Description|type=adventure|location=Golden Hour|update|Assassins are after the Emperor! Unbelievable, who would do such a thing to such a kind soul?<br />You will have to thoroughly interrogate these assassins and find out why they want to assassinate the Emperor!}}
 {{Dialogue Start}}
-:{{tx}}
+:'''Tizocic II:''' It appears that this Ephraim is very much a fun-seeker... Then I can guess where he has gone. Come with me.
 {{Dialogue End}}
 
-===Help Tizocic II find her memories===
-{{Mission Description|type=adventure|location=Golden Hour|update|Why did Tizocic II seal the memories of her time as the Emperor? Were the memories so horrific that she never wanted to recall them?}}
-{{Dialogue Start}}
-:{{tx}}
-{{Dialogue End}}
-
-===Ask the Bloodhound Family about Ephraim's situation===
+===Ask people around for news on Ephraim{{subst:void|<!--203020103-->}}===
 {{Mission Description|type=adventure|location=Golden Hour|update|Music producer Ephraim seems to have overindulged himself in his dreams, and forgotten that he is here on official business. Find him quickly, before Ephraim and his partners' hard work go up in smoke.}}
 {{Dialogue Start}}
+
+;(Talk to Pleasant Passerby)
+;(If {{F|MissionCV-2030201-1}} is equal to 0)
+::'''Pleasant Passerby:''' Ooh, if it's not Your Majesty! Come out for a patrol again?
+::'''Tizocic II:''' Mr. Dorromancha, I do hope you observe a little more respect for your Emperor.
+::'''Dorromancha:''' Heehee, I'll be mindful in the future!
+::{{DIcon|Arrow}} Have you seen a really drunken person?
+::'''Dorromancha:''' Oh, oh, I did, a man singing loudly on the road, and it wasn't all that bad either. I shouted for my friend to listen, but he was already gone when I turned around.
+::{{tx}}
+:<pre>{
+	"$type": "RPG.GameCore.SetMissionCustomValue",
+	"SubmissionID": 203020119,
+	"MissionCustomValue": {
+		"Index": 1,
+		"ValidValueParamList": [
+			0,
+			1
+		]
+	},
+	"CustomValue": 1
+}</pre>
+;(If {{F|MissionCV-2030201-1}} is not equal to 0)
+::'''Dorromancha:''' Your Majesty, karaoke session later?
+::'''Tizocic II:''' Next time. I still have business to attend to.
+
+;(Talk to Enthusiastic Passerby)
+;(If {{F|MissionCV-2030201-undefined}} is equal to 0)
+::{{tx}}
+::'''Enthusiastic Passerby:''' Your Majesty? Is there anything I can do to help?
+::{{DIcon|Arrow}} Did you see someone in a drunken frenzy?
+::'''Enthusiastic Passerby:''' A drunken frenzy... This is the World's End bar right here, is it not? There are plenty of 'em around...
+::{{tx}}
+:<pre>{
+	"$type": "RPG.GameCore.SetMissionCustomValue",
+	"SubmissionID": 203020118,
+	"MissionCustomValue": {
+		"ValidValueParamList": [
+			0,
+			1
+		]
+	},
+	"CustomValue": 1
+}</pre>
+;(If {{F|MissionCV-2030201-undefined}} is not equal to 0)
+::'''Enthusiastic Passerby:''' My apologies, Your Majesty, I couldn't be of help.
+::'''Tizocic II:''' It's all good, thank you.
+
+;(Talk to Polite Passerby)
+;(If {{F|MissionCV-2030201-2}} is equal to 0)
+::{{tx}}
+::'''Polite Passerby:''' Your Majesty! It's been a while since you took a stroll here. This person with you is...?
+::{{DIcon|Arrow}} A kind soul who's helping out.
+:::'''Polite Passerby:''' You're not the Emperor for nothing! Your propensity to attract kindness blooms evermore!
+::{{DIcon|Arrow}} I am an imperial retainer.
+:::'''Polite Passerby:''' Haha, you look like you've got some skills.
+::{{DIcon|Arrow}} I am the consort.
+:::'''Polite Passerby:''' I see... Whaaaa???
+:::'''Tizocic II:''' Concubine!? I'm still single! And I'm so old, you're better off seeking a more fitting partner!
+::'''Tizocic II:''' {{MC|f=She|m=He}} is a compassionate subject out on official business with me. Have you seen a drunken man nearby, singing loudly along the street?
+::{{tx}}
+;(If {{F|MissionCV-2030201-2}} is not equal to 0)
+::'''Polite Passerby:''' Ooh, how unfortunate... I just entered the dream, and didn't see a thing...
+::'''Tizocic II:''' It's all right. We'll ask someone else.
+
+;(Talk to Impolite Passerby)
+;(If {{F|MissionCV-2030201-3}} is equal to 0)
+::{{tx}}
+::'''Impolite Passerby:''' Oho, what winds have brought you here this time, Tizocic? I thought you detested such establishments of sinful pleasures?
+::{{DIcon|Arrow}} You will show respect!
+:::'''Impolite Passerby:''' Heh, brought an imperial guard with you too, eh?
+:::'''Tizocic II:''' There's no need to entangle yourself with such people.
+:::'''Tizocic II:''' I am obviously here on business... Did you see a drunken man just now, singing loudly on the street?
+:::'''Impolite Passerby:''' Singing? 'Course I did &mdash; there was a drunken fool singing and accosting passersby. He was taken away by the Bloodhounds.
+:::'''Tizocic II:''' Detained by the Bloodhounds... This is going to be a little troublesome then.
+:::'''Impolite Passerby:''' How much trouble could there be? Aren't you the Emperor? You just have to show your face and the Bloodhounds'll release him, no?
+:::{{DIcon|Arrow}} You will show some respect!
+::::'''Impolite Passerby:''' Ha, a method actor, aren't you? You really think she's the Emperor?
+:::{{DIcon|Arrow}} (Remain silent.)
+:::'''Tizocic II:''' I'm sure I can have them acquiesce to this request, but I can't simply flout rules by abusing my authority... *sigh* No choice then &mdash; I'll have to make an exception for this urgent matter.
+:::{{tx}}
+::{{DIcon|Arrow}} (Remain silent.)
+:::'''Impolite Passerby:''' Who's this person? Your imperial guard?
+:::'''Tizocic II:''' I doubt it's uncommon for an Emperor to have a retainer, is it?
+:::'''Tizocic II:''' I am obviously here on business... Did you see a drunken man just now, singing loudly on the street?
+:::'''Impolite Passerby:''' Singing? 'Course I did &mdash; there was a drunken fool singing and accosting passersby. He was taken away by the Bloodhounds.
+:::'''Tizocic II:''' Detained by the Bloodhounds... This is going to be a little troublesome then.
+:::'''Impolite Passerby:''' How much trouble could there be? Aren't you the Emperor? You just have to show your face and the Bloodhounds'll release him, no?
+:::{{DIcon|Arrow}} You will show some respect!
+::::'''Impolite Passerby:''' Ha, a method actor, aren't you? You really think she's the Emperor?
+::::'''Tizocic II:''' I'm sure I can have them acquiesce to this request, but I can't simply flout rules by abusing my authority... *sigh* No choice then &mdash; I'll have to make an exception for this urgent matter.
+::::{{tx}}
+:<pre>{
+	"$type": "RPG.GameCore.SetMissionCustomValue",
+	"SubmissionID": 203020103,
+	"MissionCustomValue": {
+		"Index": 3,
+		"ValidValueParamList": [
+			0,
+			1
+		]
+	},
+	"CustomValue": 1
+}</pre>
+;(If {{F|MissionCV-2030201-3}} is not equal to 0)
+::'''Impolite Passerby:''' You really have so much pull that you can persuade The Family?
+::'''Tizocic II:''' It's not "pull." It's "prestige." I don't expect you to understand.
+{{Dialogue End}}
+
+===Ask the Bloodhound Family about Ephraim's situation{{subst:void|<!--203020121-->}}===
+{{Dialogue Start}}
+;(Unused &mdash; P_203020111)
+:{{tx}}
+::----
+::'''Patient Bloodhound:''' It's a pleasure, Your Majesty. Is there something I can do for you?
+::'''Tizocic II:''' At ease. I wanted to ask, have you arrested a guest named Ephraim?
+::'''Patient Bloodhound:''' Ah... Yes, we did. That man was drunk on the streets, and the Bloodhounds kicked him out of the Dreamscape. The Family's public relations officer is currently interrogating him.
+::'''Tizocic II:''' So here's what happened...
+::Tizocic II explains to the Bloodhounds regarding Ephraim's urgent matter in a few system hours...
+::'''Tizocic II:''' So, can you take my honor as a guarantee and release Ephraim early? I promise he won't do it again.
+::'''Patient Bloodhound:''' This is too trivial a matter to be worthy of Your Majesty's guarantee. I'll inform The Family's mansion to release Ephraim shortly.
+::'''Tizocic II:''' Thank you, my loyal subject. I will remember your aid.
+::'''Patient Bloodhound:''' It is my honor, Your Majesty.
+::'''Tizocic II:''' I shall return to reality and see to this release. As for you... what's your name?
+::{{DIcon|Arrow}} (Trailblazer).
+:::'''Tizocic II:''' A fine name, I admire that.
+::{{DIcon|Arrow}} I do good deeds not for glory.
+:::'''Tizocic II:''' You have great self-awareness, and I'm impressed.
+::{{DIcon|Arrow}} My name is Luke Skybatter!
+:::'''Tizocic II:''' Skybatter... Ah I see, it's because you're so skillful at using that bat, right? This name does have a certain charm to it!
+::'''Tizocic II:''' Well... Since you've been accompanying me to perform good deeds, I shall reward you with a title. How about this, from now on... I'll knight you as the Gray Knight.
+::{{DIcon|Arrow}} My deepest gratitude, Your Majesty!
+:::'''Tizocic II:''' There's no need for gratitude. I only reward those with goodness in their heart. Good-hearted people are a rare find.
+::{{DIcon|Arrow}} Just like that?
+:::'''Tizocic II:''' Of course not. I only reward those with goodness in their heart. Good-hearted people are a rare find.
+::'''Tizocic II:''' You need not accompany me out of the dream. I will go on my own. I'm always making rounds in the Golden Hour &mdash; if you run into any trouble, feel free to speak to me.
+::{{tx}}
+::{{Black Screen|Tizocic II disappears.}}
+::'''Patient Bloodhound:''' It's a pleasure, Your Majesty. Is there something I can do for you?
+::'''Tizocic II:''' At ease. I wanted to ask, have you arrested a guest named Ephraim?
+::'''Patient Bloodhound:''' Ah... Yes, we did. That man was drunk on the streets, and the Bloodhounds kicked him out of the Dreamscape. The Family's public relations officer is currently interrogating him.
+::'''Tizocic II:''' So here's what happened...
+::Tizocic II explains to the Bloodhounds regarding Ephraim's urgent matter in a few system hours...
+::'''Tizocic II:''' So, can you take my honor as a guarantee and release Ephraim early? I promise he won't do it again.
+::'''Patient Bloodhound:''' This is too trivial a matter to be worthy of Your Majesty's guarantee. I'll inform The Family's mansion to release Ephraim shortly.
+::'''Tizocic II:''' Thank you, my loyal subject. I will remember your aid.
+::'''Patient Bloodhound:''' It is my honor, Your Majesty.
+::'''Tizocic II:''' I shall return to reality and see to this release. As for you... what's your name?
+::(Trailblazer).
+::'''Tizocic II:''' A fine name, I admire that.
+::I do good deeds not for glory.
+::'''Tizocic II:''' You have great self-awareness, and I'm impressed.
+::My name is Luke Skybatter!
+::'''Tizocic II:''' Skybatter... Ah I see, it's because you're so skillful at using that bat, right? This name does have a certain charm to it!
+::'''Tizocic II:''' Well... Since you've been accompanying me to perform good deeds, I shall reward you with a title. How about this, from now on... I'll knight you as the Gray Knight.
+::My deepest gratitude, Your Majesty!
+::'''Tizocic II:''' There's no need for gratitude. I only reward those with goodness in their heart. Good-hearted people are a rare find.
+::Just like that?
+::'''Tizocic II:''' Of course not. I only reward those with goodness in their heart. Good-hearted people are a rare find.
+::'''Tizocic II:''' You need not accompany me out of the dream. I will go on my own. I'm always making rounds in the Golden Hour &mdash; if you run into any trouble, feel free to speak to me.
+::'''Tizocic II:''' Take heed, Gray Knight &mdash; it's easy to be bound in this dream filled with carnal desires, and it's easy to forget where one should go.
+::Tizocic II disappears.
+::'''Patient Bloodhound:''' Hahaha, congratulations, you're now a knight.
+::{{DIcon|Arrow}} She's really the Emperor?
+:::'''Patient Bloodhound:''' Of course not... Wait, maybe she was in the past? Many Dreamchasers from Penacony were aristocrats from the fallen empire. Ha, who knows?
+::{{DIcon|Arrow}} Jealous?
+:::'''Patient Bloodhound:''' What's there to be jealous about? It's a fake knight title given by a fake Emperor, and even has no fiefdom that comes with it, hahaha.
+::'''Patient Bloodhound:''' When Tizocic II first started to call herself "Emperor," no one really acknowledged her. But she's done a lot more than just call herself Emperor &mdash; there were many good deeds she performed: Locating missing people and items, resolving conflicts, and even helping The Family.
+::'''Patient Bloodhound:''' As time passed, at least in the Golden Hour, everyone has been helped by her in some way, so they are willing to show her the courtesy of addressing her as "Majesty."
+::{{DIcon|Arrow}} Do most people respect her?
+::'''Patient Bloodhound:''' How do I put this... Although I don't know why she calls herself "Emperor," she's definitely a good person.
+::{{tx}}
+{{Dialogue End}}
+
+===Find out how Ephraim and the rest are doing{{subst:void|<!--203020104-->}}===
+{{Mission Description|type=adventure|location=Golden Hour|update|The Emperor and you have finally rescued Ephraim. Go find out how they are doing.}}
+{{Dialogue Start}}
+;(Unused &mdash; P_203020112)
 :{{tx}}
 {{Dialogue End}}
 
-===Talk to Tizocic II and the two assassins===
+===Talk to Tizocic II{{subst:void|<!--203020105-->}}===
+{{Mission Description|type=adventure|location=Golden Hour|update|The work of helping others has come to an end. Talk to the Emperor to get to know her a little better.}}
+{{Dialogue Start}}
+
+;(Talk to Tizocic II)
+:{{tx}}
+:'''Tizocic II:''' You've come, my Gray Knight. With our efforts, those two young men finally got their business settled.
+:{{DIcon|Arrow}} It's all thanks to you.
+::'''Tizocic II:''' As an Emperor, it is my duty to help my subjects with their problems, and there's no credit to be taken.
+:{{DIcon|Arrow}} To be honest, I didn't feel too involved.
+::'''Tizocic II:''' Haha, perhaps. I'm guessing that, instead of searching for missing people, you're more suitable for jobs that require your fists.
+:'''Tizocic II:''' Head out there and do some good. You'll definitely find an avenue for your talents.
+:'''Tizocic II:''' Let me think. If you're good at fighting... Are there any good deeds that are more suited to you? Oh, there is! I've always been running into this group of people...
+:'''Tizocic II:''' Never mind. It's nothing.
+:{{DIcon|Arrow}} You've met a bunch of guys, then what?
+:{{DIcon|Arrow}} You can't teach a new dog old tricks!
+::'''Tizocic II:''' You're speaking strangely...
+:'''Tizocic II:''' No no no, it's not something major. I've always emphasized the importance of peace and avoiding conflict. But... those guys at the World's End bar are a little hard to shake off...
+:{{DIcon|Arrow}} I have some urgent matters to attend to. Let's talk later.
+:'''Tizocic II:''' Okay, speak soon.
+:{{tx}}
+{{Dialogue End}}
+
+===Talk to Clockie{{subst:void|<!--203020106-->}}===
+{{Mission Description|type=adventure|location=Golden Hour|update|What's going on? Why is Clockie here again? Is there more to this story than meets the eye?}}
+{{Dialogue Start}}
+
+;(Talk to Clockie)
+:{{tx}}
+:'''Clockie:''' Tick-tock! There's something wrong with the Emperor! My instincts tell me that she's in some sort of danger, but she refuses to tell you!
+:{{DIcon|Arrow}} Is she being threatened?
+:{{DIcon|Arrow}} Is she being deceived?
+:'''Clockie:''' If only it were that simple! She must be missing something! It must be because she is missing something, that's why she refuses to ask you for help.
+:{{tx}}
+{{Dialogue End}}
+
+===Complete Tizocic II's missing emotions{{subst:void|<!--203020107-->}}===
+{{Mission Description|type=adventure|location=Golden Hour|update|What's going on? Why is Clockie here again? Is there more to this story than meets the eye?<br />Complete Her Majesty's missing emotions and find out what's going on.}}
+{{Dialogue Start}}
+{{Dialogue End}}
+
+===Find out why Tizocic II is angry{{subst:void|<!--203020108-->}}===
+{{Mission Description|type=adventure|location=Golden Hour|update|What's going on? Why is Clockie here again? Is there more to this story than meets the eye?<br />What troubles did Her Majesty exactly encounter?}}
+{{Dialogue Start}}
+
+{{Dialogue End}}
+
+===Find the assassins and protect Tizocic II{{subst:void|<!--203020109-->}}===
+{{Mission Description|type=adventure|location=Golden Hour|update|Assassins are after the Emperor! Unbelievable, who would do such a thing to such a kind soul?<br />Find the assassins quickly and protect Her Majesty.}}
+{{Dialogue Start}}
+;(Unused &mdash; G332_Talk)
+:'''Tizocic II:''' This spot is usually quite deserted &mdash; I was ambushed by them here once. Gray Knight, look for a place to hide. If I'm ambushed, that's your cue to capture them.
+----
+:'''Tizocic II:''' Okay, hide behind here and don't move. I'll go fish for some baddies.
+:'''Tizocic II:''' Oh hoho, how dismal! The loyal retainers who patrol with me are busy today... All of them! It's good that they're keeping busy though, busy is good...
+:'''Tizocic II:''' Alas, I'll have to make the rounds all by my lonesome self! Good thing Penacony's a super safe place, so safe that you won't even run into danger walking down a dark alley alone.
+:'''Tizocic II:''' So very quiet, and no Family members on the streets, so different from the hotel premises.
+:'''???:''' Your Majesty! Help! I'm stuck in the phone booth!
+:'''Tizocic II:''' Who's calling for help? Stuck in a phone booth? How careless... Hold on. I will be right there!
+:<!--0.6-second delay-->
+<pre>{
+	"$type": "RPG.GameCore.HideEntity",
+	"Target": {
+		"$type": "RPG.GameCore.TargetFetchAdvNpcEx",
+		"FetchType": "SingleNpcByNpcID",
+		"SingleNpcID": {
+			"GroupID": {
+				"fixedValue": {
+					"Value": 335
+				}
+			},
+			"GroupNpcID": {
+				"fixedValue": {
+					"Value": 400001
+				}
+			}
+		}
+	},
+	"IsHide": true
+}</pre>
+----
+:'''(Trailblazer):''' (Why did she suddenly run off? Gotta hurry and keep up with her... If she was assassinated right under my nose, I'd totally run the Nameless' repute through the mud.)
+
+{{Dialogue End}}
+
+===Find Tizocic II and ensure her safety{{subst:void|<!--203020113-->}}===
+{{Dialogue Start}}
+;(Unused &mdash; TriggerBattle_G338)
+:'''Excited Assassin:''' You can't have forgotten! Even soulless livestock would not forget such an atrocity!
+::'''Calm Assassin:''' Illifan! Calm down. We're executioners, not bandits.
+::'''Illifan:''' But... But... Swanga, how could she have forgotten everything and live life like nothing happened...
+::'''Swanga:''' It's probably just as we feared &mdash; after coming to Penacony, she made a deal with The Family's upper echelon and sealed her past memories away.
+::'''Swanga:''' *sigh* ...Even after so many ambushes, after assassinating her so many times, she still can't remember at all... This is more distressing than anticipated.
+::'''Tizocic II:''' Gentlemen, I really do not know what you are talking about. I don't remember what I did that made you so vengeful. You must have mistaken me for someone else.
+::'''Illifan:''' You really think you're some hotshot Emperor!? How about I kill you again and we'll see if you've really forgotten!
+::{{DIcon|Arrow}} Let's calm down and discuss this!
+::{{DIcon|Arrow}} Everyone! Eyes on me!
+::'''Swanga:''' Illifan, stop. {{MC|f=Miss|m=Dude}}, this has nothing to do with you. Please leave now, as it's in everyone's best interests.
+::{{DIcon|Arrow}} I can't stand by and watch someone die.
+:::'''Illifan:''' It's not like it's a real death! It'll just give her a jolt. Maybe she'll remember what she did, and that's all!
+::{{DIcon|Arrow}} The Nameless and danger are never too far departed.
+:::'''Swanga:''' Oh? The Nameless... I know your creed, but you don't understand the ins and outs of this.
+::{{DIcon|Arrow}} Fine, I'll be leaving then.
+:::'''Illifan:''' Swanga, are you nuts? This one'll definitely report us to the Bloodhounds and wreck all our progress.
+::'''Illifan:''' Swanga's right. We're not bandits, but we do have something we need to do! Sorry about that!
+::{{tx}}
+{{Dialogue End}}
+
+===Stop the assassins from harming Tizocic II{{subst:void|<!--203020115-->}}===
+{{Mission Description|type=adventure|location=Golden Hour|update|Assassins are after the Emperor! Unbelievable, who would do such a thing to such a kind soul?<br />You will have to thoroughly interrogate these assassins and find out why they want to assassinate the Emperor!}}
+{{Dialogue Start}}
+
+;(Obtain {{Item|Components From a Certain Ruin|20|x=1}})
+;(Unused &mdash; TalkSentence_230202846)
+:'''Tizocic II:''' You go get busy. If you two don't mind, you can wait here with me for {{MC|f=her|m=his}} return.
+::{{tx}}
+
+;(Unused &mdash; G339_P203020119)
+:'''Illifan:''' Don't run. I... I can still fight!
+::'''Swanga:''' Forget it, Illifan. Stop! Any more and we'll alert The Family!
+::'''Tizocic II:''' Gray Knight, please stop. You there, it's not that I revel in forcing your hand, but you will explain once and for all your repeated ambushes on me!
+::'''Illifan:''' *Pupsha profanity*, looks like you really don't remember a thing.
+::'''Tizocic II:''' What exactly do you want me to remember!?
+::'''Illifan:''' {{Size|36|Your crimes!!!}}
+::{{DIcon|Arrow}} Can we stop repeating ourselves?
+::{{DIcon|Arrow}} Spill it, now. Stop beating around the bush.
+::'''Swanga:''' ...I know it's really annoying to do this, but she must recall her own crimes. Or else... it won't matter even if we bring her back.
+::'''Illifan:''' It's because of the accursed arm of the law.
+::'''Swanga:''' But if it weren't for that accursed justice system, you would be no different from her.
+::'''Tizocic II:''' My memory's pretty good &mdash; I've never forgotten anything, nor will I!
+::'''Illifan:''' Where were you born?
+::'''Tizocic II:''' What sort of idiot question is that? I was born in...
+::'''Tizocic II:''' Born in...
+::'''Tizocic II:''' ...
+::'''Tizocic II:''' I do have some memories... No, plenty of them... that feel like they didn't exist before...
+::'''Tizocic II:''' I only remember I am an emperor, governing the citizens of Penacony... But where did I come from? When did I become Emperor? I... truly can't remember...
+::'''Swanga:''' Those memories were too cruel, even for someone like you. After fleeing to Penacony, you asked The Family to seal them off.
+::'''Tizocic II:''' Gray Knight, I'm in a conundrum... Should I be finding those memories? Then at least it'll be clear... why these ruffians hate me so much...
+::{{DIcon|Arrow}} You should find your memories.
+::{{DIcon|Arrow}} You shouldn't do that.
+::{{DIcon|Arrow}} You decide for yourself.
+::'''Illifan:''' She does not get a choice! She must find her memories!
+::'''Tizocic II:''' ...I should find my memories. Especially if, in those memories, are buried heinous sins that I've committed...
+::{{DIcon|Arrow}} That's because you're a good person!
+::'''Tizocic II:''' Yes! I'm a good person, and good people must face their evils.
+::'''Swanga:''' ...It looks like Penacony has indeed changed you. It's a pity that... Never mind, I'll drop it for now.
+::'''Swanga:''' If your memories have really been sealed by The Family, then... I don't know how to retrieve them either. It's a dead end...
+::{{DIcon|Arrow}} If The Family did it, I have an idea.
+::'''Illifan:''' You do? What idea could you possibly have...
+::'''Swanga:''' ...You are from the Astral Express, yes? I've heard that they... that you can do the impossible.
+::'''Swanga:''' I trust {{MC|f=her|m=him}}, Illifan. Now... it's up to your skills, Nameless. How about you? Do you agree? Emperor?
+::'''Tizocic II:''' ...
+::'''Tizocic II:''' Yes, please help me retrieve my memories, Gray Knight. We can never escape our own past, for better or worse.
+::{{DIcon|Arrow}} You got any items that have to do with her past?
+::'''Swanga:''' An item to do with her past... Let me think...
+::{{tx}}
+{{Dialogue End}}
+
+===Help Tizocic II find her memories{{subst:void|<!--203020116-->}}===
+{{Mission Description|type=adventure|location=Golden Hour|update|Why did Tizocic II seal the memories of her time as the Emperor? Were the memories so horrific that she never wanted to recall them?}}
+{{Dialogue Start}}
+
+;(Talk to Tizocic II)
+:'''Tizocic II:''' Once you're ready, please help me retrieve my memories, Gray Knight. We can never escape our own past, for better or worse.
+<pre>{
+	"$type": "RPG.GameCore.ShowMenu"
+}</pre>
+
+{{Dialogue End}}
+
+===Talk to Tizocic II and the two assassins{{subst:void|<!--203020117-->}}===
 {{Mission Description|type=adventure|location=Golden Hour|update|Tizocic II &mdash; once a tyrant, now a kind soul. Regardless of how history evaluates her life, you should say your goodbyes to her now.}}
 {{Dialogue Start}}
-:{{tx}}
+;(Unused &mdash; P_203020121)
+:'''Illifan:''' So? You remember everything now?
+::Tizocic II dejectedly looks at you, and suddenly starts bawling.
+::'''Tizocic II:''' Gray Knight... Gray Knight... I'm sorry. I'm truly sorry... I should not have killed you. I did not want to... Why would I have done those things...
+::{{DIcon|Arrow}} I am not the Gray Knight.
+:::'''Tizocic II:''' I know you're not, but you two... look so much alike...
+::{{DIcon|Arrow}} You really are a beast.
+:::'''Tizocic II:''' Yes... I am...
+::{{DIcon|Arrow}} The Gray Knight will understand you.
+:::'''Tizocic II:''' Yes, yes... {{MC|f=She|m=He}} won't hate me...
+::'''Illifan:''' What're you crying about? As if you didn't do anything of those things!
+::{{tx}}
+::{{Black Screen|Tizocic II finally quiets down after much sobbing, regaining her Emperor-like elegance.}}
+::'''Illifan:''' So? You remember everything now?
+::Tizocic II dejectedly looks at you, and suddenly starts bawling.
+::'''Tizocic II:''' Gray Knight... Gray Knight... I'm sorry. I'm truly sorry... I should not have killed you. I did not want to... Why would I have done those things...
+::I am not the Gray Knight.
+::'''Tizocic II:''' I know you're not, but you two... look so much alike...
+::You really are a beast.
+::'''Tizocic II:''' Yes... I am...
+::The Gray Knight will understand you.
+::'''Tizocic II:''' Yes, yes... {{MC|f=She|m=He}} won't hate me...
+::'''Illifan:''' What're you crying about? As if you didn't do anything of those things!
+::'''Swanga:''' Illifan, let her cry. We can wait until after she calms down.
+::Tizocic II finally quiets down after much sobbing, regaining her Emperor-like elegance.
+::'''Swanga:''' Allow me to re-introduce myself: I am Swanga, Executive Leader of the Old Empire Dissolution Committee of the Pupsha Republic.
+::'''Illifan:''' I am his second-in-command, Illifan, Executive Vice-Leader of the Old Empire Dissolution Committee of the Pupsha Republic.
+::'''Swanga:''' We have come to take you back to stand trial, Tizocic II.
+::'''Swanga:''' You have been charged with over 70 war crimes, 13.12 million murders, 127... Forget it. They're too many. This is an arrest warrant. Take a look yourself.
+::'''Tizocic II:''' ...
+::'''Tizocic II:''' If I return with you, what will you do with me?
+::'''Swanga:''' What else can we do? A fair trial, and lenient judgment.
+::'''Illifan:''' Be content with your lot, as your subjects have never had this chance!
+::'''Tizocic II:''' ...
+::'''Tizocic II:''' I feel that, Penacony has certainly turned me... back to my old self.
+::'''Tizocic II:''' A good person... should be brave to face her former crimes, and stoically accept punishment.
+::'''Tizocic II:''' ...I am willing to return with you.
+::'''Swanga:''' Heh... Good person. You've certainly got some imagination, and that's good.
+::'''Tizocic II:''' Gray Knight... I still have a question for you...
+::'''Tizocic II:''' I've done so much good in Penacony, and am now willing to return to my kingdom to face judgment... Will this atone for my sins?
+::{{DIcon|Arrow}} It will.
+:::'''Illifan:''' ...You've gotta be kidding me!
+::{{DIcon|Arrow}} No.
+:::'''Illifan:''' You got that right!
+::{{DIcon|Arrow}} I don't know.
+:::'''Illifan:''' You don't know? I do! It can't!
+::'''Illifan:''' Atonement? How do you intend to do that? You think the tens of millions you've butchered will find peace just because you've apparently made peace for your sins? You think evil will disappear with your death?
+::{{tx}}
+::{{Black Screen|The three of you say your goodbyes and leave the Dreamscape. You know that this is your final farewell to Tizocic II.}}
+::{{tx}}
 {{Dialogue End}}
 
 ==Other Languages==

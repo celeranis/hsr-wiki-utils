@@ -1,10 +1,10 @@
+import { LazyData, getExcelFile, getFile } from './files/GameFile.js';
+import type { InternalPlaneEvent } from './files/graph/MapData.js';
+import { EnemyType, HardLevelGroupEntry, InternalEliteGroup, InternalMonster, InternalMonsterCamp, InternalMonsterSkill, InternalMonsterTemplate, InternalStage, StageInfiniteGroupEntry, StageInfiniteMonsterGroupEntry, TypeResData } from './files/Stage.js';
 import { diffn, tpercent, type AttackType, type Dictionary } from './Shared.js';
 import { Stat } from './Stats.js';
 import { TextMap, textMap } from './TextMap.js';
 import { WeirdKey } from './WeirdKey.js';
-import { LazyData, getExcelFile, getFile } from './files/GameFile.js';
-import type { InternalPlaneEvent } from './files/MapData.js';
-import { EnemyType, HardLevelGroupEntry, InternalEliteGroup, InternalMonster, InternalMonsterCamp, InternalMonsterSkill, InternalMonsterTemplate, InternalStage, StageInfiniteGroupEntry, StageInfiniteMonsterGroupEntry, TypeResData } from './files/Stage.js';
 
 export interface EliteGroup {
 	id: number
@@ -99,7 +99,7 @@ export class Stage {
 		if (this.params._StageInfiniteGroup) {
 			this.waves = StageInfiniteGroup[this.params._StageInfiniteGroup].WaveIDList.map(waveId => {
 				const wave = StageInfiniteMonsterGroup[waveId]
-				return wave.MonsterList.filter(id => id).map(enemyId => {
+				return wave?.MonsterList?.filter(id => id).map(enemyId => {
 					const enemy = EnemyInstance.fromIdLeveled(enemyId, this.level)
 					if (this.elite_group) {
 						enemy.stage_elite_group_ids.push(this.elite_group.id)
@@ -109,7 +109,7 @@ export class Stage {
 					}
 					
 					return enemy
-				})
+				}) ?? [] // TODO: temporary
 			})
 		} else {
 			this.waves = stage.MonsterList.map(wave => {

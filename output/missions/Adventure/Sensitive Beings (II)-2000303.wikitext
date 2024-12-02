@@ -11,7 +11,7 @@ PageTitle=#Sensitive Beings (II)#
 |chapter       = 
 |requirements  = Complete [[Adventure Mission]] ''[[Sensitive Beings (I)]]'' and wait for the next Daily [[Reset]]
 |summary       = The Curio "Crackup Conch" was infected by the memetic virus, spreading anti-motivational quotes in the space station. Asta wanted your help to investigate the source of this virus.<br />Upon checking Chris's browsing history, you discovered that he was not infected.
-|characters    = Trailblazer
+|characters    = Maintenance Engineer; Trailblazer
 |startLocation = [[Herta Space Station]] - [[Supply Zone]]
 |world         = Herta Space Station
 |area          = Supply Zone
@@ -38,34 +38,118 @@ PageTitle=#Sensitive Beings (II)#
 ==Dialogue==
 {{Stub Dialogue}}
 
-===Talk to the maintenance engineer and start the identity verification===
+===Talk to the maintenance engineer and start the identity verification{{subst:void|<!--200030301-->}}===
 {{Mission Description|type=adventure|location=Supply Zone|The space station hasn't recovered from the previous accident. Without the support of new equipment, the terminal's computing power is severely lacking. The computing power should pick up the next day though. Now a new day begins...}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Maintenance Engineer)
+:'''Maintenance Engineer:''' Here you are!
+:{{DIcon|Arrow}} Please turn on the terminal for me.
+:'''Maintenance Engineer:''' Yup, here you go! The optical identity verification program has been set up. The terminal has sufficient computing power. Please feel free to use it.
+----
 {{Dialogue End}}
 
-===Pass the optical identity verification===
+===Pass the optical identity verification{{subst:void|<!--200030302-->}}===
 {{Mission Description|type=adventure|location=Supply Zone|update|The maintenance engineer starts the optical identity verification for you manually. So far, so good.}}
 {{Dialogue Start}}
-:{{tx}}
 {{Dialogue End}}
 
-===Use the terminal to check Chris' data record===
+===Use the terminal to check Chris' data record{{subst:void|<!--200030304-->}}===
 {{Mission Description|type=adventure|location=Supply Zone|update|The terminal stores the data records of everyone in the space station. You decide to check Chris' record today.}}
 {{Dialogue Start}}
-:{{tx}}
+:<!--0.5-second delay-->
+<pre>{
+	"$type": "RPG.GameCore.PropSetupUITrigger",
+	"DestroyAfterTriggered": true,
+	"ButtonIcon": "SpriteOutput/TalkIcon/ChatIcon.png",
+	"IconType": "ChatLoopIcon",
+	"ButtonText": {
+		"Hash": 278713937
+	},
+	"ButtonCallback": [
+		{
+			"$type": "RPG.GameCore.TriggerCustomString",
+			"CustomString": {
+				"Value": "Mission_200030304_Prop_11_300005_BtnClick"
+			}
+		}
+	],
+	"InteractAngleRange": 180,
+	"SkipFakeAvatar": true,
+	"TargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvPropEx",
+		"FetchType": "SinglePropByPropID",
+		"SinglePropID": {
+			"GroupID": {
+				"fixedValue": {
+					"Value": 11
+				}
+			},
+			"ID": {
+				"fixedValue": {
+					"Value": 300005
+				}
+			}
+		}
+	}
+}</pre>
 {{Dialogue End}}
 
-===Use the terminal to check the data records of the others===
+===Use the terminal to check the data records of the others{{subst:void|<!--200030305-->}}===
 {{Mission Description|type=adventure|location=Supply Zone|update|You didn't expect Chris to cause so much trouble in online forums. No wonder he treated you like that. Now it all makes sense. But if he is not infected, who is?}}
 {{Dialogue Start}}
-:{{tx}}
+:<!--0.5-second delay-->
+<pre>{
+	"$type": "RPG.GameCore.PropSetupUITrigger",
+	"DestroyAfterTriggered": true,
+	"ButtonIcon": "SpriteOutput/TalkIcon/ChatIcon.png",
+	"IconType": "ChatLoopIcon",
+	"ButtonText": {
+		"Hash": 278713937
+	},
+	"ButtonCallback": [
+		{
+			"$type": "RPG.GameCore.TriggerCustomString",
+			"CustomString": {
+				"Value": "Mission_200030305_Prop_11_300006_BtnClick"
+			}
+		}
+	],
+	"InteractAngleRange": 180,
+	"SkipFakeAvatar": true,
+	"TargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvPropEx",
+		"FetchType": "SinglePropByPropID",
+		"SinglePropID": {
+			"GroupID": {
+				"fixedValue": {
+					"Value": 11
+				}
+			},
+			"ID": {
+				"fixedValue": {
+					"Value": 300006
+				}
+			}
+		}
+	}
+}</pre>
 {{Dialogue End}}
 
-===Talk to the maintenance engineer and report the bug===
+===Talk to the maintenance engineer and report the bug{{subst:void|<!--200030306-->}}===
 {{Mission Description|type=adventure|location=Supply Zone|update|You planned to check Joanne's record next, but the terminal crashed again. You have to ask for the engineer's help once more...}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Maintenance Engineer)
+:'''Maintenance Engineer:''' What? Is it broken again?
+:{{DIcon|Arrow}} It kept asking me to refresh...
+::'''Maintenance Engineer:''' It seems to be some compatibility issues...
+:{{DIcon|Arrow}} Broken "again?"
+::'''Maintenance Engineer:''' Well, it sometimes breaks down during maintenance.
+:'''Maintenance Engineer:''' Oh no! This is caused by the old units I installed into the terminal today. They looked good to me at the time and I thought they could boost the terminal's computing power.
+:'''Maintenance Engineer:''' Looks like we'll have to wait until the replacement units are delivered.
+:'''Maintenance Engineer:''' Sorry, please give me some time. Let me remove these units. I assure you the existing computing power won't be affected.
+:'''Maintenance Engineer:''' However, I'm afraid you'll have to {{Color|keyword|nobold=1|come back tomorrow}}. I'm sure by tomorrow there will have been sufficient computing power!
 {{Dialogue End}}
 
 ==Other Languages==
