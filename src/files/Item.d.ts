@@ -9,7 +9,8 @@ export type ItemSubType =
 	| 'Mission' | 'Book' | 'ChatBubble' | 'PhoneTheme' | 'MuseumExhibit' | 'MuseumStuff' 
 	| 'AetherSkill' | 'AetherSpirit' | 'ChessRogueDiceSurface' | 'GameplayCounter' 
 	| 'ForceOpitonalGift' | 'Food' | 'Formula' | 'AvatarCard' | 'HeadIcon' | 'Eidolon'
-	| 'MusicAlbum' | 'TravelBrochurePaster' | 'Equipment' | 'Relic'
+	| 'MusicAlbum' | 'TravelBrochurePaster' | 'Equipment' | 'Relic' | 'PamSkin'
+	| 'TrainPartyDiyMaterial'
 	
 export type ItemRarity = 
 	| 'SuperRare'	// 5 stars

@@ -10,7 +10,7 @@ export class BattleTask extends BaseDialogueTask {
 	
 	constructor(data: TriggerBattle) {
 		super(data)
-		this.event_id = (!data.EventID.IsDynamic && (data.EventID.fixedValue?.Value || data.EventID.FixedValue?.Value)) || undefined
+		this.event_id = (!data.EventID.IsDynamic && Math.round(data.EventID.fixedValue?.Value || data.EventID.FixedValue?.Value || 0)) || undefined
 	}
 	
 	wikitext(level: number) {

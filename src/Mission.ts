@@ -182,7 +182,7 @@ export class Mission {
 		} else {
 			const steps: MissionStep[] = []
 			// dumber method when MissionInfo is unavailabile
-			let stepList = Object.values(SubmitEvent).filter(data =>
+			let stepList = Object.values(SubMission).filter(data =>
 				data.SubMissionID.toString().startsWith(this.id.toString())
 				&& data.SubMissionID.toString().length - this.id.toString().length <= 2
 			)

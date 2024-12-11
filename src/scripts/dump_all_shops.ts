@@ -3,7 +3,7 @@ import { ChangeHistory } from '../ChangeHistory.js';
 import { Item } from '../Item.js';
 import { MappingInfo } from '../maps/MapingInfo.js';
 import { Mission } from '../Mission.js';
-import { Version, VERSION_LIST, wikiTitle } from '../Shared.js';
+import { sanitizeString, Version, VERSION_LIST, wikiTitle } from '../Shared.js';
 import { Shop, ShopGood } from '../Shop.js';
 import { TextMap } from '../TextMap.js';
 import { pageInfoHeader } from '../util/General.js';
@@ -195,7 +195,7 @@ for (const shop of await Shop.loadAll()) {
 		`{{Change History|${(await ChangeHistory.shops.findAdded(shop.id))?.[0]}}}`
 	)
 	
-	await writeFile(`./output/shops/${shop.name}-${shop.id}.wikitext`, output.join('\n'))
+	await writeFile(`./output/shops/${sanitizeString(shop.name)}-${shop.id}.wikitext`, output.join('\n'))
 	
 	const chOutput: string[] = []
 	let lastShop: Shop | undefined = undefined
@@ -296,6 +296,6 @@ for (const shop of await Shop.loadAll()) {
 	
 	if (chOutput.length > 1) {
 		const finalChOutput = `${pageInfoHeader(wikiTitle(shop.name, 'location') + '/Change History')}\n{{Change History/Header}}\n` + chOutput.join('\n----\n')
-		await writeFile(`./output/shops/history/${shop.name}-${shop.id}.wikitext`, finalChOutput)
+		await writeFile(`./output/shops/history/${sanitizeString(shop.name)}-${shop.id}.wikitext`, finalChOutput)
 	}
 }

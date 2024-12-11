@@ -1,0 +1,84 @@
+<%-- [PAGE_INFO]
+PageTitle=##
+[END_PAGE_INFO] --%>
+{{Stub|Dialogue.}}
+{{Mission Infobox
+|id            = 4240407
+|title         = 
+|image         = <!--Mission .png-->
+|type          = Adventure
+|event_name    = 
+|chapter       = 
+|requirements  = [[Trailblaze Mission]] ''[[Lingering Shadows]]'' completed
+|summary       = <!--official mission summary from Fate's Atlas-->
+|characters    = Trailblazer
+|startLocation = [[Astral Express]] - [[Party Car]]
+|world         = Astral Express
+|area          = Party Car
+|prev          = 
+|next          = 
+|rewards       = 
+}}
+'''''''''' is an [[Adventure Mission]] on [[Astral Express]].
+
+==Steps==
+
+
+<!--
+==Gameplay Notes==
+
+--><!--
+==Trial Character==
+
+-->
+==Dialogue==
+{{Stub Dialogue}}
+<pre>{
+	"$type": "RPG.GameCore.AdvSetupButtonListTrigger",
+	"TargetType": {
+		"$type": "RPG.GameCore.GroupFetchLocalTarget",
+		"TargetType": "Prop",
+		"Targets": [
+			300001
+		]
+	},
+	"TriggerName": "MissionTrigger",
+	"ButtonsByName": [],
+	"ButtonConfigs": [
+		{
+			"ID": "press01",
+			"IconType": "SecretMissionIcon",
+			"ButtonText": {
+				"Value": "PropInteractTitle_494"
+			},
+			"ShowPriority": "High"
+		}
+	]
+}</pre>
+;(Unused &mdash; SWITCH_424040709)
+:;(If {{F|MissionCV-4240407-undefined}} is equal to 1)
+:::The switch for the room lights emits a "click" when flicked.
+:::"Click," and soft light fills the entire room.
+:;(If {{F|MissionCV-4240407-undefined}} is not equal to 1)
+::;(Return to previous option selection)
+{{Dialogue End}}
+
+==Other Languages==
+{{Other Languages
+|en   = 
+|zhs  = 
+|zht  = 
+|ja   = 
+|ko   = 
+|es   = 
+|fr   = 
+|ru   = 
+|th   = 
+|vi   = 
+|de   = 
+|id   = 
+|pt   = 
+}}
+
+==Change History==
+{{Change History|2.7}}

@@ -17,7 +17,8 @@ const SHOP_KEYWORD_MATCH = new RegExp(`(?:[^\\w]|^)(${SHOP_KEYWORDS.join('|')})(
 const sourceEntryLinkOverride = ['Omni-Synthesizer', 'Assignment', 'Simulated Universe']
 
 const groupMap = {
-	2001: 'Restorative Consumables',
+	2000: 'Restorative Consumables',
+	2001: 'Energy Regen Consumables',
 	2003: 'Attack Consumables',
 	2006: 'Defense Consumables',
 	2009: 'Special Consumables'

@@ -81,7 +81,7 @@ export class Item {
 		light_cones: new LazyData<ItemConfig>('ExcelOutput/ItemConfigEquipment.json'),
 		relics: new LazyData<ItemConfig>('ExcelOutput/ItemConfigRelic.json'),
 		profile_pics: new LazyData<ItemConfig>('ExcelOutput/ItemPlayerCard.json'),
-		// train_dynamic: new LazyData<ItemConfig>('ExcelOutput/ItemConfigTrainDynamic.json')
+		train_dynamic: new LazyData<ItemConfig>('ExcelOutput/ItemConfigTrainDynamic.json')
 	}
 	static readonly itemSources = new LazyData<ItemSourceData>('ExcelOutput/ItemComefrom.json')
 	static readonly passStickerData = new LazyData<Dictionary<InternalPassSticker>>('ExcelOutput/PasterConfig.json')
@@ -212,7 +212,8 @@ export class Item {
 		Mission: 'Mission Item',
 		PhoneTheme: 'Phone Wallpaper',
 		MusicAlbum: 'Disk',
-		TravelBrochurePaster: 'Dreamscape Pass Sticker'
+		TravelBrochurePaster: 'Dreamscape Pass Sticker',
+		PamSkin: 'Pom-Pom Skin',
 	}
 	
 	async getTypes(): Promise<string[]> {

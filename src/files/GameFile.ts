@@ -26,7 +26,7 @@ export function preprocessFile(obj: any) {
 		} else if (key == 'Value' && typeof value == 'number') {
 			// round suspected floating point errors to integers
 			const decimal = value % 1
-			if (decimal != 0 && (decimal < 0.01 || decimal > 0.99)) {
+			if (decimal != 0 && (decimal < 0.001 || decimal > 0.999)) {
 				obj[key] = Math.round(value)
 			}
 		}

@@ -1,0 +1,1047 @@
+<%-- [PAGE_INFO]
+PageTitle=#Photography Exhibition: Stately Antiquity#
+[END_PAGE_INFO] --%>
+{{Stub|Dialogue.}}
+{{Mission Infobox
+|id            = 8027205
+|title         = 
+|image         = <!--Mission Photography Exhibition Stately Antiquity.png-->
+|type          = Adventure
+|event_name    = Between the Frames...
+|chapter       = 
+|requirements  = {{subst:void|<!--Unknown: {"Type":"Manual"}-->}}
+|summary       = <!--official mission summary from Fate's Atlas-->
+|characters    = Huohuo; March 7th; March 7th & (Trailblazer); Tail; Trailblazer
+|startLocation = [[The Xianzhou Luofu]] - [[The Shackling Prison]]
+|world         = The Xianzhou Luofu
+|area          = The Shackling Prison
+|prev          = 
+|next          = 
+|rewards       = Stellar Jade*60; Traveler's Guide*4; Dynamic Outlining*3; Credit*30,000
+}}
+'''''Photography Exhibition: Stately Antiquity''''' is an Event [[Adventure Mission]] from the [[Between the Frames...]] event.
+
+==Steps==
+# Discuss the theme of the day with March 7th
+# Take a photo of the heliobus
+# Discuss the photo with March 7th
+# Take a photo of Huohuo
+# Discuss the photo with March 7th
+
+<!--
+==Gameplay Notes==
+
+--><!--
+==Trial Character==
+
+-->
+==Dialogue==
+{{Stub Dialogue}}
+===Discuss the theme of the day with March 7th{{subst:void|<!--802720501-->}}===
+{{Mission Description|type=adventure|location=The Shackling Prison|March 7th seems to have a new inspiration. Discuss the Photography Task of the day with her.}}
+{{Dialogue Start}}
+
+;(Unused &mdash; EnterDistrict_G236)
+:{{tx}}
+::'''March 7th:''' Heh-heh, (Trailblazer), I walked around the surrounding premises, and finally found this place!
+::{{DIcon|Arrow}} Why have you changed your clothes?
+:::'''March 7th:''' It's not every day we get to visit. When on foreign grounds...
+::{{DIcon|Arrow}} Some bad memories are surfacing...
+:::'''March 7th:''' Don't worry. No one will be locking us up with me around.
+::'''March 7th:''' After reading everyone's comments yesterday, I finally know how to pick the theme.
+::'''March 7th:''' Take today's task for example: You have to photograph "Stately Antiquity," so you can't just shoot the dark-tiled white walls of the Exalting Sanctum, nor the billowing smoke of Aurum Alley, nor the numerous competitions going on at Cloudford...
+::{{DIcon|Arrow}} You sure are waxing eloquence.
+::{{DIcon|Arrow}} Then what can we photograph?
+::'''March 7th:''' Heh-heh, the Shackling Prison, of course! Everyone's most captivated by things they are curious about but can't reach &mdash; just like this place.
+::{{DIcon|Arrow}} A guzheng?
+::{{DIcon|Arrow}} A group of heliobi?
+::{{DIcon|Arrow}} Prisoncore?
+::'''March 7th:''' If my observations aren't wrong, they should be doing impressions of the Xianzhou forefathers &mdash; a hosting of literati engaging in poetry and song.
+::{{tx}}
+:<pre>{
+	"$type": "RPG.GameCore.SwitchCharacterAnchorV2",
+	"SwitchCharacterAnchorConfig": {
+		"IsLocalPlayer": true,
+		"CharacterUniqueName": "LocalPlayer",
+		"AreaName": {
+			"Value": "LevelArea_P20241_F20241001_G236"
+		},
+		"AnchorName": {
+			"Value": "Anchor1"
+		},
+		"ResetAnimation": true,
+		"ResetCamera": true
+	}
+}</pre>
+{{Dialogue End}}
+
+===Take a photo of the heliobus{{subst:void|<!--802720502-->}}===
+{{Mission Description|type=adventure|location=The Shackling Prison|update|To complete the daily tasks and compete for the final prize, you, as a photography assistant, accompanied March 7th on a photography journey.<br />Take a photo based on the photography inspiration.}}
+{{Dialogue Start}}
+;(Unused &mdash; PhotoGraphFinishCustomString_G237)
+<pre>{
+	"$type": "RPG.GameCore.HideEntityV2",
+	"Target": {
+		"$type": "RPG.GameCore.TargetConcat",
+		"Targets": [
+			{
+				"$type": "RPG.GameCore.TargetFetchAdvNpcEx",
+				"FetchType": "SingleNpcByNpcID",
+				"SingleNpcID": {
+					"GroupID": {
+						"IsDynamic": false,
+						"FixedValue": {
+							"Value": 237
+						}
+					},
+					"GroupNpcID": {
+						"IsDynamic": false,
+						"FixedValue": {
+							"Value": 400004
+						}
+					}
+				}
+			},
+			{
+				"$type": "RPG.GameCore.TargetFetchAdvNpcEx",
+				"FetchType": "SingleNpcByNpcID",
+				"SingleNpcID": {
+					"GroupID": {
+						"IsDynamic": false,
+						"FixedValue": {
+							"Value": 237
+						}
+					},
+					"GroupNpcID": {
+						"IsDynamic": false,
+						"FixedValue": {
+							"Value": 400005
+						}
+					}
+				}
+			},
+			{
+				"$type": "RPG.GameCore.TargetFetchAdvNpcEx",
+				"FetchType": "SingleNpcByNpcID",
+				"SingleNpcID": {
+					"GroupID": {
+						"IsDynamic": false,
+						"FixedValue": {
+							"Value": 237
+						}
+					},
+					"GroupNpcID": {
+						"IsDynamic": false,
+						"FixedValue": {
+							"Value": 400006
+						}
+					}
+				}
+			},
+			{
+				"$type": "RPG.GameCore.TargetFetchAdvNpcEx",
+				"FetchType": "SingleNpcByNpcID",
+				"SingleNpcID": {
+					"GroupID": {
+						"IsDynamic": false,
+						"FixedValue": {
+							"Value": 237
+						}
+					},
+					"GroupNpcID": {
+						"IsDynamic": false,
+						"FixedValue": {
+							"Value": 400009
+						}
+					}
+				}
+			},
+			{
+				"$type": "RPG.GameCore.TargetFetchAdvNpcEx",
+				"FetchType": "SingleNpcByNpcID",
+				"SingleNpcID": {
+					"GroupID": {
+						"IsDynamic": false,
+						"FixedValue": {
+							"Value": 237
+						}
+					},
+					"GroupNpcID": {
+						"IsDynamic": false,
+						"FixedValue": {
+							"Value": 400010
+						}
+					}
+				}
+			}
+		]
+	},
+	"IsHide": true
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.HideEntityV2",
+	"Target": {
+		"$type": "RPG.GameCore.TargetConcat",
+		"Targets": [
+			{
+				"$type": "RPG.GameCore.TargetFetchAdvNpcEx",
+				"FetchType": "SingleNpcByNpcID",
+				"SingleNpcID": {
+					"GroupID": {
+						"IsDynamic": false,
+						"FixedValue": {
+							"Value": 237
+						}
+					},
+					"GroupNpcID": {
+						"IsDynamic": false,
+						"FixedValue": {
+							"Value": 400001
+						}
+					}
+				}
+			},
+			{
+				"$type": "RPG.GameCore.TargetFetchAdvNpcEx",
+				"FetchType": "SingleNpcByNpcID",
+				"SingleNpcID": {
+					"GroupID": {
+						"IsDynamic": false,
+						"FixedValue": {
+							"Value": 237
+						}
+					},
+					"GroupNpcID": {
+						"IsDynamic": false,
+						"FixedValue": {
+							"Value": 400002
+						}
+					}
+				}
+			},
+			{
+				"$type": "RPG.GameCore.TargetFetchAdvNpcEx",
+				"FetchType": "SingleNpcByNpcID",
+				"SingleNpcID": {
+					"GroupID": {
+						"IsDynamic": false,
+						"FixedValue": {
+							"Value": 237
+						}
+					},
+					"GroupNpcID": {
+						"IsDynamic": false,
+						"FixedValue": {
+							"Value": 400003
+						}
+					}
+				}
+			},
+			{
+				"$type": "RPG.GameCore.TargetFetchAdvNpcEx",
+				"FetchType": "SingleNpcByNpcID",
+				"SingleNpcID": {
+					"GroupID": {
+						"IsDynamic": false,
+						"FixedValue": {
+							"Value": 237
+						}
+					},
+					"GroupNpcID": {
+						"IsDynamic": false,
+						"FixedValue": {
+							"Value": 400007
+						}
+					}
+				}
+			},
+			{
+				"$type": "RPG.GameCore.TargetFetchAdvNpcEx",
+				"FetchType": "SingleNpcByNpcID",
+				"SingleNpcID": {
+					"GroupID": {
+						"IsDynamic": false,
+						"FixedValue": {
+							"Value": 237
+						}
+					},
+					"GroupNpcID": {
+						"IsDynamic": false,
+						"FixedValue": {
+							"Value": 400008
+						}
+					}
+				}
+			}
+		]
+	}
+}</pre>
+
+;(Unused &mdash; PhotoGraphStartCustomString_G237)
+<pre>{
+	"$type": "RPG.GameCore.HideEntityV2",
+	"Target": {
+		"$type": "RPG.GameCore.TargetConcat",
+		"Targets": [
+			{
+				"$type": "RPG.GameCore.TargetFetchAdvNpcEx",
+				"FetchType": "SingleNpcByNpcID",
+				"SingleNpcID": {
+					"GroupID": {
+						"IsDynamic": false,
+						"FixedValue": {
+							"Value": 237
+						}
+					},
+					"GroupNpcID": {
+						"IsDynamic": false,
+						"FixedValue": {
+							"Value": 400001
+						}
+					}
+				}
+			},
+			{
+				"$type": "RPG.GameCore.TargetFetchAdvNpcEx",
+				"FetchType": "SingleNpcByNpcID",
+				"SingleNpcID": {
+					"GroupID": {
+						"IsDynamic": false,
+						"FixedValue": {
+							"Value": 237
+						}
+					},
+					"GroupNpcID": {
+						"IsDynamic": false,
+						"FixedValue": {
+							"Value": 400002
+						}
+					}
+				}
+			},
+			{
+				"$type": "RPG.GameCore.TargetFetchAdvNpcEx",
+				"FetchType": "SingleNpcByNpcID",
+				"SingleNpcID": {
+					"GroupID": {
+						"IsDynamic": false,
+						"FixedValue": {
+							"Value": 237
+						}
+					},
+					"GroupNpcID": {
+						"IsDynamic": false,
+						"FixedValue": {
+							"Value": 400003
+						}
+					}
+				}
+			},
+			{
+				"$type": "RPG.GameCore.TargetFetchAdvNpcEx",
+				"FetchType": "SingleNpcByNpcID",
+				"SingleNpcID": {
+					"GroupID": {
+						"IsDynamic": false,
+						"FixedValue": {
+							"Value": 237
+						}
+					},
+					"GroupNpcID": {
+						"IsDynamic": false,
+						"FixedValue": {
+							"Value": 400007
+						}
+					}
+				}
+			},
+			{
+				"$type": "RPG.GameCore.TargetFetchAdvNpcEx",
+				"FetchType": "SingleNpcByNpcID",
+				"SingleNpcID": {
+					"GroupID": {
+						"IsDynamic": false,
+						"FixedValue": {
+							"Value": 237
+						}
+					},
+					"GroupNpcID": {
+						"IsDynamic": false,
+						"FixedValue": {
+							"Value": 400008
+						}
+					}
+				}
+			}
+		]
+	},
+	"IsHide": true
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.HideEntityV2",
+	"Target": {
+		"$type": "RPG.GameCore.TargetConcat",
+		"Targets": [
+			{
+				"$type": "RPG.GameCore.TargetFetchAdvNpcEx",
+				"FetchType": "SingleNpcByNpcID",
+				"SingleNpcID": {
+					"GroupID": {
+						"IsDynamic": false,
+						"FixedValue": {
+							"Value": 237
+						}
+					},
+					"GroupNpcID": {
+						"IsDynamic": false,
+						"FixedValue": {
+							"Value": 400004
+						}
+					}
+				}
+			},
+			{
+				"$type": "RPG.GameCore.TargetFetchAdvNpcEx",
+				"FetchType": "SingleNpcByNpcID",
+				"SingleNpcID": {
+					"GroupID": {
+						"IsDynamic": false,
+						"FixedValue": {
+							"Value": 237
+						}
+					},
+					"GroupNpcID": {
+						"IsDynamic": false,
+						"FixedValue": {
+							"Value": 400005
+						}
+					}
+				}
+			},
+			{
+				"$type": "RPG.GameCore.TargetFetchAdvNpcEx",
+				"FetchType": "SingleNpcByNpcID",
+				"SingleNpcID": {
+					"GroupID": {
+						"IsDynamic": false,
+						"FixedValue": {
+							"Value": 237
+						}
+					},
+					"GroupNpcID": {
+						"IsDynamic": false,
+						"FixedValue": {
+							"Value": 400006
+						}
+					}
+				}
+			},
+			{
+				"$type": "RPG.GameCore.TargetFetchAdvNpcEx",
+				"FetchType": "SingleNpcByNpcID",
+				"SingleNpcID": {
+					"GroupID": {
+						"IsDynamic": false,
+						"FixedValue": {
+							"Value": 237
+						}
+					},
+					"GroupNpcID": {
+						"IsDynamic": false,
+						"FixedValue": {
+							"Value": 400009
+						}
+					}
+				}
+			},
+			{
+				"$type": "RPG.GameCore.TargetFetchAdvNpcEx",
+				"FetchType": "SingleNpcByNpcID",
+				"SingleNpcID": {
+					"GroupID": {
+						"IsDynamic": false,
+						"FixedValue": {
+							"Value": 237
+						}
+					},
+					"GroupNpcID": {
+						"IsDynamic": false,
+						"FixedValue": {
+							"Value": 400010
+						}
+					}
+				}
+			}
+		]
+	}
+}</pre>
+{{Dialogue End}}
+
+===Discuss the photo with March 7th{{subst:void|<!--802720503-->}}===
+{{Mission Description|type=adventure|location=The Shackling Prison|update|With the photography session wrapped up, have a chat with March 7th about this work}}
+{{Dialogue Start}}
+<pre>{
+	"$type": "RPG.GameCore.PPFilterStackEffect",
+	"Active": false,
+	"Priority": "High",
+	"AssetPath": "EnviroSystem/PostProcessFilterAsset/DizzinessVarient.asset"
+}</pre>
+:{{tx}}
+:'''March 7th:''' Err... Doesn't look like the "stately" I imagined.
+:{{DIcon|Arrow}} It's not a bad thing to stay informed on the times.
+:{{DIcon|Arrow}} This is a little too modern...
+:'''March 7th:''' What a strange lens. I can't figure out exactly what its use is...
+:'''March 7th:''' Whatever. How about calling this photo "Heliobi in Rave"?
+:{{DIcon|Arrow}} Let's call it "Heliobi in Rave."
+::'''March 7th:''' A heliobus' idyllic life sure is fulfilling.
+:{{DIcon|Arrow}} How about... "Heliobi Literati"?
+::'''March 7th:''' They sure are a cultured bunch of heliobi.
+:{{DIcon|Arrow}} How about... "Heliobi Spooktacular Music Fest"?
+::'''March 7th:''' Too creepy... Though they don't stray far from the supernatural theme to begin with.
+:{{tx}}
+<pre>{
+	"$type": "RPG.GameCore.SetTextJoinValue",
+	"TextJoinID": 200,
+	"Value": "1"
+}</pre>
+:'''March 7th:''' Speaking of which, why would heliobi appear in the Shackling Prison?
+:'''???:''' I&mdash;It's so d&mdash;dark... Are we really going to keep going...
+:{{DIcon|Arrow}} Good thing you showed up. I forgot to bring a model with me...
+:{{DIcon|Arrow}} Before training your guts, how about a photo?
+:{{DIcon|Arrow}} Taking portrait shots helps boost your courage.
+:'''Huohuo:''' A photo of me? I mean, sure... but, right here?
+:'''March 7th:''' I'm also a bit curious what Huohuo will look like through the lens.
+:{{DIcon|Arrow}} We'll only know if we try!
+:{{DIcon|Arrow}} I'm even more eager to try it now...
+{{Dialogue End}}
+
+===Take a photo of Huohuo{{subst:void|<!--802720504-->}}===
+{{Mission Description|type=adventure|location=The Shackling Prison|update|What would Huohuo look like in the "Camereidoscope"? Try the effects of the "Camereidoscope" with Huohuo as your model}}
+{{Dialogue Start}}
+:{{tx}}
+:You aim the camera attached with the Camereidoscope at Huohuo.
+:{{DIcon|Arrow}} Huohuo, look at the camera!
+:'''Tail:''' It's just the flash, stop quivering. I'm gonna laugh so hard that my spirit is gonna stop holding its shape.
+:'''Huohuo:''' ...
+:'''Tail:''' What, so scared you're tongue-tied?
+:'''March 7th:''' Hang on, Mr. Tail... Something strange is going on with Huohuo...
+:'''Huohuo:''' Waahhhh I... I... I can't take this anymore!
+:'''Huohuo:''' I'm just lending you a place to live, yet you're always acting so high and mighty! As a judge of the Ten-Lords Commission, I find you guilty of the crimes of sloth, mockery, and finger-pointing!
+:'''Huohuo:''' With multiple crimes as witness, the sentencing commences now!
+:'''March 7th & (Trailblazer):''' Huh?
+:'''Huohuo:''' And you lot &mdash; trespassing in the prison, you will all be sentenced! Waahhh!!!
+:{{DIcon|Arrow}} It seems that your Effect RES is higher.
+:{{DIcon|Arrow}} That's the physique of the Nameless!
+:'''Tail:''' Heh, she even brave enough to berate me. At least she's grown some guts.
+:{{DIcon|Arrow}} I think Huohuo's looking a little strange...
+:{{DIcon|Arrow}} We'd better catch up!
+<pre>{
+	"$type": "RPG.GameCore.SwitchCharacterAnchorV2",
+	"SwitchCharacterAnchorConfig": {
+		"IsLocalPlayer": true,
+		"CharacterUniqueName": "LocalPlayer",
+		"AreaName": {
+			"Value": "LevelArea_P20241_F20241001_G239"
+		},
+		"AnchorName": {
+			"Value": "Anchor1"
+		},
+		"ResetAnimation": true,
+		"ResetCamera": true
+	}
+}</pre>
+:'''Tail:''' I can feel it. It's not far ahead!
+:'''Tail:''' I'll take the front. You guys keep up!
+{{Mission Description|type=adventure|location=The Shackling Prison|update|To complete the daily tasks and compete for the final prize, you, as a photography assistant, accompanied March 7th on a photography journey.<br />Take a photo based on the photography inspiration.}}
+;(Unused &mdash; PhotoGraphFinishCustomString_G240)
+<pre>{
+	"$type": "RPG.GameCore.HideEntityV2",
+	"Target": {
+		"$type": "RPG.GameCore.TargetConcat",
+		"Targets": [
+			{
+				"$type": "RPG.GameCore.TargetFetchAdvNpcEx",
+				"FetchType": "SingleNpcByNpcID",
+				"SingleNpcID": {
+					"GroupID": {
+						"IsDynamic": false,
+						"FixedValue": {
+							"Value": 240
+						}
+					},
+					"GroupNpcID": {
+						"IsDynamic": false,
+						"FixedValue": {
+							"Value": 400004
+						}
+					}
+				}
+			},
+			{
+				"$type": "RPG.GameCore.TargetFetchAdvNpcEx",
+				"FetchType": "SingleNpcByNpcID",
+				"SingleNpcID": {
+					"GroupID": {
+						"IsDynamic": false,
+						"FixedValue": {
+							"Value": 240
+						}
+					},
+					"GroupNpcID": {
+						"IsDynamic": false,
+						"FixedValue": {
+							"Value": 400005
+						}
+					}
+				}
+			},
+			{
+				"$type": "RPG.GameCore.TargetFetchAdvNpcEx",
+				"FetchType": "SingleNpcByNpcID",
+				"SingleNpcID": {
+					"GroupID": {
+						"IsDynamic": false,
+						"FixedValue": {
+							"Value": 240
+						}
+					},
+					"GroupNpcID": {
+						"IsDynamic": false,
+						"FixedValue": {
+							"Value": 400006
+						}
+					}
+				}
+			},
+			{
+				"$type": "RPG.GameCore.TargetFetchAdvNpcEx",
+				"FetchType": "SingleNpcByNpcID",
+				"SingleNpcID": {
+					"GroupID": {
+						"IsDynamic": false,
+						"FixedValue": {
+							"Value": 240
+						}
+					},
+					"GroupNpcID": {
+						"IsDynamic": false,
+						"FixedValue": {
+							"Value": 400009
+						}
+					}
+				}
+			},
+			{
+				"$type": "RPG.GameCore.TargetFetchAdvNpcEx",
+				"FetchType": "SingleNpcByNpcID",
+				"SingleNpcID": {
+					"GroupID": {
+						"IsDynamic": false,
+						"FixedValue": {
+							"Value": 240
+						}
+					},
+					"GroupNpcID": {
+						"IsDynamic": false,
+						"FixedValue": {
+							"Value": 400010
+						}
+					}
+				}
+			}
+		]
+	},
+	"IsHide": true
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.HideEntityV2",
+	"Target": {
+		"$type": "RPG.GameCore.TargetConcat",
+		"Targets": [
+			{
+				"$type": "RPG.GameCore.TargetFetchAdvNpcEx",
+				"FetchType": "SingleNpcByNpcID",
+				"SingleNpcID": {
+					"GroupID": {
+						"IsDynamic": false,
+						"FixedValue": {
+							"Value": 240
+						}
+					},
+					"GroupNpcID": {
+						"IsDynamic": false,
+						"FixedValue": {
+							"Value": 400001
+						}
+					}
+				}
+			},
+			{
+				"$type": "RPG.GameCore.TargetFetchAdvNpcEx",
+				"FetchType": "SingleNpcByNpcID",
+				"SingleNpcID": {
+					"GroupID": {
+						"IsDynamic": false,
+						"FixedValue": {
+							"Value": 240
+						}
+					},
+					"GroupNpcID": {
+						"IsDynamic": false,
+						"FixedValue": {
+							"Value": 400002
+						}
+					}
+				}
+			},
+			{
+				"$type": "RPG.GameCore.TargetFetchAdvNpcEx",
+				"FetchType": "SingleNpcByNpcID",
+				"SingleNpcID": {
+					"GroupID": {
+						"IsDynamic": false,
+						"FixedValue": {
+							"Value": 240
+						}
+					},
+					"GroupNpcID": {
+						"IsDynamic": false,
+						"FixedValue": {
+							"Value": 400003
+						}
+					}
+				}
+			},
+			{
+				"$type": "RPG.GameCore.TargetFetchAdvNpcEx",
+				"FetchType": "SingleNpcByNpcID",
+				"SingleNpcID": {
+					"GroupID": {
+						"IsDynamic": false,
+						"FixedValue": {
+							"Value": 240
+						}
+					},
+					"GroupNpcID": {
+						"IsDynamic": false,
+						"FixedValue": {
+							"Value": 400007
+						}
+					}
+				}
+			},
+			{
+				"$type": "RPG.GameCore.TargetFetchAdvNpcEx",
+				"FetchType": "SingleNpcByNpcID",
+				"SingleNpcID": {
+					"GroupID": {
+						"IsDynamic": false,
+						"FixedValue": {
+							"Value": 240
+						}
+					},
+					"GroupNpcID": {
+						"IsDynamic": false,
+						"FixedValue": {
+							"Value": 400008
+						}
+					}
+				}
+			}
+		]
+	}
+}</pre>
+
+;(Unused &mdash; PhotoGraphStartCustomString_G240)
+<pre>{
+	"$type": "RPG.GameCore.HideEntityV2",
+	"Target": {
+		"$type": "RPG.GameCore.TargetConcat",
+		"Targets": [
+			{
+				"$type": "RPG.GameCore.TargetFetchAdvNpcEx",
+				"FetchType": "SingleNpcByNpcID",
+				"SingleNpcID": {
+					"GroupID": {
+						"IsDynamic": false,
+						"FixedValue": {
+							"Value": 240
+						}
+					},
+					"GroupNpcID": {
+						"IsDynamic": false,
+						"FixedValue": {
+							"Value": 400001
+						}
+					}
+				}
+			},
+			{
+				"$type": "RPG.GameCore.TargetFetchAdvNpcEx",
+				"FetchType": "SingleNpcByNpcID",
+				"SingleNpcID": {
+					"GroupID": {
+						"IsDynamic": false,
+						"FixedValue": {
+							"Value": 240
+						}
+					},
+					"GroupNpcID": {
+						"IsDynamic": false,
+						"FixedValue": {
+							"Value": 400002
+						}
+					}
+				}
+			},
+			{
+				"$type": "RPG.GameCore.TargetFetchAdvNpcEx",
+				"FetchType": "SingleNpcByNpcID",
+				"SingleNpcID": {
+					"GroupID": {
+						"IsDynamic": false,
+						"FixedValue": {
+							"Value": 240
+						}
+					},
+					"GroupNpcID": {
+						"IsDynamic": false,
+						"FixedValue": {
+							"Value": 400003
+						}
+					}
+				}
+			},
+			{
+				"$type": "RPG.GameCore.TargetFetchAdvNpcEx",
+				"FetchType": "SingleNpcByNpcID",
+				"SingleNpcID": {
+					"GroupID": {
+						"IsDynamic": false,
+						"FixedValue": {
+							"Value": 240
+						}
+					},
+					"GroupNpcID": {
+						"IsDynamic": false,
+						"FixedValue": {
+							"Value": 400007
+						}
+					}
+				}
+			},
+			{
+				"$type": "RPG.GameCore.TargetFetchAdvNpcEx",
+				"FetchType": "SingleNpcByNpcID",
+				"SingleNpcID": {
+					"GroupID": {
+						"IsDynamic": false,
+						"FixedValue": {
+							"Value": 240
+						}
+					},
+					"GroupNpcID": {
+						"IsDynamic": false,
+						"FixedValue": {
+							"Value": 400008
+						}
+					}
+				}
+			}
+		]
+	},
+	"IsHide": true
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.HideEntityV2",
+	"Target": {
+		"$type": "RPG.GameCore.TargetConcat",
+		"Targets": [
+			{
+				"$type": "RPG.GameCore.TargetFetchAdvNpcEx",
+				"FetchType": "SingleNpcByNpcID",
+				"SingleNpcID": {
+					"GroupID": {
+						"IsDynamic": false,
+						"FixedValue": {
+							"Value": 240
+						}
+					},
+					"GroupNpcID": {
+						"IsDynamic": false,
+						"FixedValue": {
+							"Value": 400004
+						}
+					}
+				}
+			},
+			{
+				"$type": "RPG.GameCore.TargetFetchAdvNpcEx",
+				"FetchType": "SingleNpcByNpcID",
+				"SingleNpcID": {
+					"GroupID": {
+						"IsDynamic": false,
+						"FixedValue": {
+							"Value": 240
+						}
+					},
+					"GroupNpcID": {
+						"IsDynamic": false,
+						"FixedValue": {
+							"Value": 400005
+						}
+					}
+				}
+			},
+			{
+				"$type": "RPG.GameCore.TargetFetchAdvNpcEx",
+				"FetchType": "SingleNpcByNpcID",
+				"SingleNpcID": {
+					"GroupID": {
+						"IsDynamic": false,
+						"FixedValue": {
+							"Value": 240
+						}
+					},
+					"GroupNpcID": {
+						"IsDynamic": false,
+						"FixedValue": {
+							"Value": 400006
+						}
+					}
+				}
+			},
+			{
+				"$type": "RPG.GameCore.TargetFetchAdvNpcEx",
+				"FetchType": "SingleNpcByNpcID",
+				"SingleNpcID": {
+					"GroupID": {
+						"IsDynamic": false,
+						"FixedValue": {
+							"Value": 240
+						}
+					},
+					"GroupNpcID": {
+						"IsDynamic": false,
+						"FixedValue": {
+							"Value": 400009
+						}
+					}
+				}
+			},
+			{
+				"$type": "RPG.GameCore.TargetFetchAdvNpcEx",
+				"FetchType": "SingleNpcByNpcID",
+				"SingleNpcID": {
+					"GroupID": {
+						"IsDynamic": false,
+						"FixedValue": {
+							"Value": 240
+						}
+					},
+					"GroupNpcID": {
+						"IsDynamic": false,
+						"FixedValue": {
+							"Value": 400010
+						}
+					}
+				}
+			}
+		]
+	}
+}</pre>
+
+;(Unused &mdash; EnterDistrict_G240)
+<pre>{
+	"$type": "RPG.GameCore.PlayNPCBubbleTalk",
+	"BubbleTalkInfoList": [
+		{
+			"AutoSkipTime": 15,
+			"GroupID": 240,
+			"GroupNpcID": 400011,
+			"TalkSentenceID": 802723413
+		}
+	],
+	"LoopInterval": 2,
+	"InstantFinish": false,
+	"UniqueID": 1
+}</pre>
+{{Dialogue End}}
+
+===Discuss the photo with March 7th{{subst:void|<!--802720507-->}}===
+{{Mission Description|type=adventure|location=The Shackling Prison|update|With the photography session wrapped up, have a chat with March 7th about this work}}
+{{Dialogue Start}}
+
+;(Talk to Huohuo)
+----
+:'''Huohuo:''' Don't worry, {{MC|f=Miss|m=Mr.}} (Trailblazer). I'll be able to return to the Commission when I subdue these heliobi.
+<pre>{
+	"$type": "RPG.GameCore.PPFilterStackEffect",
+	"Active": false,
+	"Priority": "High",
+	"AssetPath": "EnviroSystem/PostProcessFilterAsset/DizzinessVarient.asset"
+}</pre>
+:You all rescue Huohuo from the top of the container and return to the surface.
+:'''Huohuo:''' Mr. Tail, I don't know what happened just now... I suddenly...
+:'''Tail:''' Tch, I thought you finally came to your senses, but it was just some gimmick that caused this. You'd better go back and train some more.
+:'''Tail:''' But this thing's definitely sinister... I felt an evil aura from it that can confuse people's minds. You guys had better be careful.
+:'''Huohuo:''' Sorry, {{MC|f=Miss|m=Mr.}} (Trailblazer), as a judge of the Ten-Lords Commission, I can't allow this evil to roam the realm...
+:'''Tail:''' This little scamp has actually learned to put on airs. At least this wasn't a wasted trip.
+:'''March 7th:''' I've no objections. What about you, (Trailblazer)?
+:{{DIcon|Arrow}} The sentencing commences now!
+::'''Huohuo:''' Th&mdash;Thank you!
+:{{DIcon|Arrow}} Any compensation involved?
+::'''Huohuo:''' The Ten-Lords Commission does not have any compensation policies for items confiscated from citizenry... If you don't mind, you can take this bottle of steamed puffergoat milk.
+:{{tx}}
+<pre>{
+	"$type": "RPG.GameCore.SetPerformanceResult"
+}</pre>
+:'''March 7th:''' Time to upload the photo. Huohuo, why don't you give it a name?
+:'''Huohuo:''' Huh, you're letting me name it? How about... "Please Do Not Climb"? Why not delete such an ominous photo instead...
+:'''Tail:''' You know what I think? "Tiny Judge and Big Bad Heliobi" sounds much better.
+:{{DIcon|Arrow}} "Please Do Not Climb" it is.
+:{{DIcon|Arrow}} "Tiny Judge and Big Bad Heliobi" it is then.
+:{{DIcon|Arrow}} How about "Judge-Heliobus Collab"?
+<pre>{
+	"$type": "RPG.GameCore.SetTextJoinValue",
+	"TextJoinID": 201,
+	"Value": "1"
+}</pre>
+:'''March 7th:''' With that, today's task is complete. What a long day... Huohuo, Mr. Tail, sorry for the trouble!
+:{{tx}}
+<pre>{
+	"$type": "RPG.GameCore.SwitchCharacterAnchorV2",
+	"SwitchCharacterAnchorConfig": {
+		"IsLocalPlayer": true,
+		"CharacterUniqueName": "LocalPlayer",
+		"AreaName": {
+			"Value": "LevelArea_P20241_F20241001_G241"
+		},
+		"AnchorName": {
+			"Value": "Anchor1"
+		},
+		"ResetAnimation": true,
+		"ResetCamera": true
+	}
+}</pre>
+{{Dialogue End}}
+
+==Other Languages==
+{{Other Languages
+|en   = Photography Exhibition: Stately Antiquity
+|zhs  = 摄影展览•古都雅韵
+|zht  = 攝影展覽•古都雅韻
+|ja   = フォトコンテスト・雅な古都
+|ko   = 사진 콘테스트•옛 도읍의 운치
+|es   = Exposición de fotografía: la elegancia de la antigua ciudad
+|fr   = Exposition photo&nbsp;: Raffinement du passé
+|ru   = Выставка фотографий: Изящество древности
+|th   = นิทรรศการภาพถ่าย: ความสง่าแห่งเมืองโบราณ
+|vi   = Triển Lãm Nhiếp Ảnh-Thành Cổ Thanh Lịch
+|de   = Fotoausstellung: Eleganz der alten Stadt
+|id   = Pameran Fotografi: Pesona Kota Tua
+|pt   = Exibição de Fotografia: Antiguidade Imponente
+}}
+
+==Change History==
+{{Change History|2.7}}

@@ -1,0 +1,144 @@
+<%-- [PAGE_INFO]
+PageTitle=#Bow Out At Moment of Début#
+[END_PAGE_INFO] --%>
+{{Stub|Dialogue.}}
+{{Mission Infobox
+|id            = 1036105
+|title         = 
+|image         = <!--Mission Bow Out At Moment of Début.png-->
+|type          = Trailblaze
+|event_name    = 
+|chapter       = A New Venture on the Eighth Dawn
+|requirements  = {{subst:void|<!--Unknown: {"Type":"Manual"}-->}}
+|summary       = <!--official mission summary from Fate's Atlas-->
+|characters    = Sunday; Trailblazer
+|startLocation = [[Penacony]] - [[Penacony Grand Theater]]
+|world         = Penacony
+|area          = Penacony Grand Theater
+|prev          = 
+|next          = 
+|rewards       = Traveler's Guide*2; Lost Crystal*2; Credit*30,000
+}}
+'''''Bow Out At Moment of Début''''' is a [[Trailblaze Mission]] in the chapter [[A New Venture on the Eighth Dawn]].
+
+==Steps==
+# Explain your reason for being here
+# Go to the center stage
+# Complete your own tuning
+# Send a request to Welt
+
+<!--
+==Gameplay Notes==
+
+--><!--
+==Trial Character==
+
+-->
+==Dialogue==
+{{Stub Dialogue}}
+
+===Explain your reason for being here{{subst:void|<!--103610501-->}}===
+{{Mission Description|type=trailblaze|location=Penacony Grand Theater|Only when one has fallen to the ground can they learn how to fly. If one wants to take a curtain call, they must stand on the stage once more.<br />Explain Wonweek's true identity to Welt.}}
+{{Dialogue Start}}
+;(Unused &mdash; EnterArea_G22)
+:<!--0.5-second delay-->
+:<pre>{
+	"$type": "RPG.GameCore.AdvDestroyGroupEntity",
+	"InstanceIDList": [
+		300001
+	]
+}</pre>
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{tx}}
+----
+:{{tx}}
+----
+:{{tx}}
+----
+:{{tx}}
+<pre>{
+	"$type": "RPG.GameCore.PerformanceEndSeq",
+	"BeforeCases": [
+		{
+			"$type": "RPG.GameCore.SwitchCharacterAnchorV2",
+			"SwitchCharacterAnchorConfig": {
+				"IsLocalPlayer": true,
+				"CharacterUniqueName": "LocalPlayer",
+				"AreaName": {
+					"Value": "LevelArea_P40302_F40302001_G20"
+				},
+				"AnchorName": {
+					"Value": "Anchor1"
+				}
+			}
+		}
+	]
+}</pre>
+{{Dialogue End}}
+
+===Go to the center stage{{subst:void|<!--103610502-->}}===
+{{Dialogue Start}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{A|VO chapter3 46 sunday 144.ogg}} '''Sunday:''' Falling is just another name for flying.
+:{{A|VO chapter3 46 sunday 145.ogg}} '''Sunday:''' That's why I rejoice at my broken wings.
+:{{A|VO chapter3 46 sunday 146.ogg}} '''Sunday:''' Step into the mortal world to see how it truly is.
+:{{A|VO chapter3 46 sunday 147.ogg}} '''Sunday:''' Then, be born as a human and die as one.
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+----
+:{{tx}}
+{{Dialogue End}}
+
+===Complete your own tuning{{subst:void|<!--103610503-->}}===
+{{Mission Description|type=trailblaze|location=Penacony Grand Theater|update|Only when one has fallen to the ground can they learn how to fly. If one wants to take a curtain call, they must stand on the stage once more.<br />Complete your own tuning.}}
+{{Dialogue Start}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+----
+;([[#Gallery|Cutscene]] plays)
+::Planet of Festivities, Land of the Dreams. I say goodbye to my home.
+::Should one desire to leave the stage for good...
+::One must first step back onto the stage.
+;(Cutscene ends)
+----
+;(Enter battle)
+:{{Enemy List|"Harmonious Choir" The Great Septimus*1}}
+{{Dialogue End}}
+
+===Send a request to Welt{{subst:void|<!--103610504-->}}===
+{{Mission Description|type=trailblaze|location=Penacony Grand Theater|update|Having resolved to advance, Sunday decides to look back on his past... Having embraced everything that happened, on the eighth day, the day of his departure also embraces him. However, he is still missing one thing... Permission to board the Express.}}
+{{Dialogue Start}}
+----
+;([[#Gallery|Cutscene]] plays)
+::On this eighth day, I grant myself&mdash;
+::Departure.
+;(Cutscene ends)
+----
+:{{tx}}
+{{Dialogue End}}
+
+==Other Languages==
+{{Other Languages
+|en   = Bow Out At Moment of Début
+|zhs  = 谢幕于登台之时
+|zht  = 謝幕於登台之時
+|ja   = 舞台上のカーテンコール
+|ko   = 커튼콜은 무대에 오른 순간에
+|es   = Cuando cae el telón
+|fr   = Adieux sur scène
+|ru   = Занавес в момент дебюта
+|th   = โค้งคำนับเมื่อม่านปิดฉาก
+|vi   = Cúi Chào Lúc Lên Sân Khấu
+|de   = Wenn der Vorhang fällt
+|id   = Saat Tirai Penutup Muncul
+|pt   = Quando As Cortinas Caem
+}}
+
+==Change History==
+{{Change History|2.7}}

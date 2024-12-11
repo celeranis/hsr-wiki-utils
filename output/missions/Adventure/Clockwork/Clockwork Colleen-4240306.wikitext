@@ -89,8 +89,20 @@ PageTitle=#Clockwork: Colleen#
 <pre>{
 	"$type": "RPG.GameCore.TriggerEffect",
 	"TargetType": {
-		"$type": "RPG.GameCore.TargetAlias",
-		"Alias": "Caster"
+		"$type": "RPG.GameCore.TargetFetchAdvNpcEx",
+		"FetchType": "SingleNpcByNpcID",
+		"SingleNpcID": {
+			"GroupID": {
+				"fixedValue": {
+					"Value": 241
+				}
+			},
+			"GroupNpcID": {
+				"fixedValue": {
+					"Value": 400001
+				}
+			}
+		}
 	},
 	"Flags": [],
 	"EffectPath": "Effects/Eff_Prefab/Eff_Common/Eff_NPC_Full_W0_Lady_Messenger_Rim.prefab",

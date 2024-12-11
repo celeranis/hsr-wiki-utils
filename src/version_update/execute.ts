@@ -255,20 +255,20 @@ for (const [from, to] of Object.entries(MOVE)) {
 }
 
 for (const file of await readDir(`${ROOT}/create`)) {
-	if (file.isFile() && file.name.endsWith('.wikitext')) {
+	if ((file.isFile() || file.isSymbolicLink()) && (file.name.endsWith('.wikitext') || file.name.endsWith('.lua'))) {
 		await create(file.path + '/' + file.name)
 	}
 }
 
 for (const file of await readDir(`${ROOT}/edit`)) {
-	if (file.isFile() && file.name.endsWith('.wikitext')) {
+	if ((file.isFile() || file.isSymbolicLink()) && (file.name.endsWith('.wikitext') || file.name.endsWith('.lua'))) {
 		await edit(file.path + '/' + file.name)
 	}
 }
 
 for (const file of await readDir(`${ROOT}/upload`)) {
-	if (file.isFile() && !file.name.endsWith('.wikitext')) {
-		await upload(file.path + '/' + file.name, file.name, )
+	if ((file.isFile() || file.isSymbolicLink()) && !file.name.endsWith('.wikitext')) {
+		await upload(file.path + '/' + file.name, file.name)
 	}
 }
 
@@ -277,7 +277,7 @@ for (const [from, to] of Object.entries(REDIRECT)) {
 }
 
 for (const file of await readDir(`${ROOT}/ol_edit`)) {
-	if (file.isFile() && file.name.endsWith('.wikitext')) {
+	if ((file.isFile() || file.isSymbolicLink()) && file.name.endsWith('.wikitext')) {
 		await updateOL(file.path + '/' + file.name)
 	}
 }

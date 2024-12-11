@@ -74,6 +74,7 @@ export class ChangeHistory<FileContents extends object, SearchReturn, FindArg> {
 		light_cones: new ChangeHistory('ExcelOutput/ItemConfigEquipment.json', ITEM_ID_MATCH),
 		relics: new ChangeHistory('ExcelOutput/ItemConfigRelic.json', ITEM_ID_MATCH),
 		profile_pics: new ChangeHistory('ExcelOutput/ItemPlayerCard.json', ITEM_ID_MATCH),
+		train_dynamic: new ChangeHistory('ExcelOutput/ItemConfigTrainDynamic.json', ITEM_ID_MATCH),
 	}
 	
 	static occurrences = new ChangeHistory(

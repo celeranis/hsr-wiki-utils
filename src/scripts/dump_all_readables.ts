@@ -83,5 +83,5 @@ for (const series of ReadableSeries.loadAll()) {
 	)
 	
 	await mkdir(`./output/readables/${series.getWorld()}/`, { recursive: true })
-	await writeFile(`./output/readables/${series.getWorld()}/${sanitizeString(series.name)}-${series.id}.wikitext`, output.join('\n'))
+	await writeFile(`./output/readables/${series.getWorld()}/${sanitizeString(series.name.replaceAll(',', ''))}-${series.id}.wikitext`, output.join('\n'))
 }

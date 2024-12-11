@@ -1,0 +1,141 @@
+<%-- [PAGE_INFO]
+PageTitle=##
+[END_PAGE_INFO] --%>
+{{Stub|Dialogue.}}
+{{Mission Infobox
+|id            = 4340142
+|title         = 
+|image         = <!--Mission .png-->
+|type          = Adventure
+|event_name    = 
+|chapter       = 
+|requirements  = [[Adventure Mission]] ''[[Cosmic Home Décor Guide: Introduction]]'' completed
+|summary       = <!--official mission summary from Fate's Atlas-->
+|characters    = Trailblazer
+|startLocation = [[Astral Express]] - [[Party Car]]
+|world         = Astral Express
+|area          = Party Car
+|prev          = Cosmic Home Décor Guide: Introduction
+|next          = 
+|rewards       = 
+}}
+'''''''''' is an [[Adventure Mission]] on [[Astral Express]].
+
+==Steps==
+
+
+<!--
+==Gameplay Notes==
+
+--><!--
+==Trial Character==
+
+-->
+==Dialogue==
+{{Stub Dialogue}}
+
+:{{DIcon|?}} Sleep
+;(If {{F|Progress_PartyTrainGlobal}} is equal to 100)
+;(If {{F|Progress_PartyTrainGlobal}} is not equal to 100)
+:A philosopher once said, "You need to stay awake all day to sleep all night." A poet once wrote, "Lying down late after the lamp is out, sleeping soundly amid the sound of rain."
+:These two lines have nothing to do with what's coming next... Why are we talking about this?
+:Anyway, after a day's hard work, there's no greater relief than going back to your room for a good sleep. Throwing yourself onto your bed with no alarm clock and no worries about oversleeping &mdash; ah, how happy it is.
+:The warm, cozy bed in front of you beckons like an obvious trap. Perhaps you should follow your heart, lie down, and get a good sleep.
+:{{DIcon|Arrow}} (Lie in bed)
+::Soft mattress, warm quilt. As soon as your head hits the cloud-like pillow, sleepiness comes in waves.
+::Turn off the light and have a good sleep.
+::{{DIcon|Arrow}} (Turn off the light)
+::<pre>{
+	"$type": "RPG.GameCore.SetMissionCustomValue",
+	"SubmissionID": 434014203,
+	"MissionCustomValue": {
+		"Index": 1,
+		"ValidValueParamList": [
+			0,
+			1
+		]
+	},
+	"CustomValue": 1
+}</pre>
+:::It's as if the instincts lurking in your mammalian genes awakened in the darkness. This is your "lair" &mdash; warm, dark, and safe, where no one can harm you.
+::{{DIcon|Arrow}} Don't. I'm terrified of the dark.
+::<pre>{
+	"$type": "RPG.GameCore.SetFloorCustomFloat",
+	"Name": {
+		"Value": "FCV_LightOff"
+	},
+	"Value": {
+		"fixedValue": {
+			"Value": 1
+		}
+	}
+}</pre>
+::So, how long are you going to sleep?
+::{{DIcon|Arrow}} A little while.
+:::'''(Trailblazer):''' What a nice sleep~ Got enough strength to fool around again!
+::{{DIcon|Arrow}} Sleep as long as I can.
+::;(Screen fades to black)
+:::You look exhausted. Please have a good rest. No one will disturb you.
+:::{{A|VO vo ambient wX v270 broadcast player 108 m.ogg}} {{A|VO vo ambient wX v270 broadcast player 108 f.ogg}} '''(Trailblazer):''' Goodnight, Astral Express.
+::<pre>{
+	"$type": "RPG.GameCore.SetMissionCustomValue",
+	"SubmissionID": 434014202,
+	"MissionCustomValue": {
+		"Index": 3,
+		"isLocal": true,
+		"ValidValueParamList": [
+			0,
+			1
+		]
+	},
+	"CustomValue": 1
+}</pre>
+::{{DIcon|Arrow}} As long as possible.
+::;(Screen fades to black)
+:::{{A|VO vo ambient wX v270 broadcast player 108 m.ogg}} {{A|VO vo ambient wX v270 broadcast player 108 f.ogg}} '''(Trailblazer):''' Goodnight, Astral Express.
+:::'''(Trailblazer):''' Here we go again, "Trailblaze sleepwalking"! What on earth is the science behind this?
+::<pre>{
+	"$type": "RPG.GameCore.SetPerformanceResult",
+	"Value": 2
+}</pre>
+::{{DIcon|Arrow}} I'm so sleepy! I'm going to sleep until the heat death of the universe!
+::;(Screen fades to black)
+:::No problem. You will sleep until the heat death of the universe as desired.
+:::'''(Trailblazer):''' Goodnight, Astral Express.
+::<pre>{
+	"$type": "RPG.GameCore.ReturnToLoginPage",
+	"WaitTalkMissionKey": "Mission_434014201"
+}</pre>
+:{{DIcon|Exit}} It's not the time to sleep now!
+::Oh, well. But remember not to exhaust yourself. Your health is the prerequisite for trailblazing.
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:'''(Trailblazer):''' Hmm? Where the heck am I? Is it still the Astral Express?
+:{{Rubi| Medical study shows |Note: There is no such study.}} that sleeping too long can lead to sleepwalking.
+:{{DIcon|Arrow}} Would I sleepwalk that far?
+::That's why you deserve the title of Trailblazer!
+:{{DIcon|Arrow}} Don't make up medical knowledge. It's misleading.
+::Sorry, it was a mistake that all narrators make.
+:In short, please note you may find yourself in strange places after waking up if you are asleep so long~
+{{Dialogue End}}
+
+==Other Languages==
+{{Other Languages
+|en   = 
+|zhs  = 
+|zht  = 
+|ja   = 
+|ko   = 
+|es   = 
+|fr   = 
+|ru   = 
+|th   = 
+|vi   = 
+|de   = 
+|id   = 
+|pt   = 
+}}
+
+==Change History==
+{{Change History|2.7}}
