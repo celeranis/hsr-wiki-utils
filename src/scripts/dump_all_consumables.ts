@@ -1,4 +1,4 @@
-import { mkdirSync, rmSync, writeFileSync } from 'fs';
+import { existsSync, mkdirSync, rmSync, writeFileSync } from 'fs';
 import { ChangeHistory } from '../ChangeHistory.js';
 import { Item } from '../Item.js';
 import { sanitizeString, wikiTitle } from '../Shared.js';
@@ -6,7 +6,9 @@ import { TextMap } from '../TextMap.js';
 import { uploadPrompt } from '../util/General.js';
 import { Template } from '../util/Template.js';
 
-rmSync('./output/consumables/', { recursive: true })
+if (existsSync('./output/consumables')) {
+	rmSync('./output/consumables/', { recursive: true })
+}
 
 const SHOP_KEYWORDS: string[] = [
 	'exchange', 'shop', 'store', 'stall', 'vend', 'stand',

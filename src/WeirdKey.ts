@@ -5,6 +5,8 @@ export class WeirdKey {
 	static data = {
 		// from RogueBuffGroup
 		BlessingGroupID: {
+			'3.1': 'IDLBMIHBAPB',
+			'3.0': 'IKOLKLEFCGO',
 			'2.7': 'BHOJPHAJLMI',
 			'2.6': 'HFLJEIPCCNF',
 			'2.5': 'IOMDAGGIAME',
@@ -16,6 +18,8 @@ export class WeirdKey {
 			'1.6': 'JHOKDPADHFM',
 		},
 		BlessingGroupMembers: {
+			'3.1': 'GNGDPDOMDFH',
+			'3.0': 'DKLEHCPFLFJ',
 			'2.7': 'NDFFCMBIOAG',
 			'2.6': 'ILLJGPJPFAC',
 			'2.5': 'HLKMFHBOAIA',
@@ -28,6 +32,7 @@ export class WeirdKey {
 		},
 		// from RogueTournWeeklyDisplay
 		DescParamType: {
+			'3.1': 'PICHIHHCOCB',
 			'3.0': 'PGCFPBGPDGG',
 			'2.7': 'MPNJPFDCBDG',
 			'2.6': 'EOMLKKGEAEF',
@@ -36,6 +41,7 @@ export class WeirdKey {
 			'2.3': 'IAGLGKPDLOE',
 		},
 		DescParamValue: {
+			'3.1': 'HMCDHMFHABF',
 			'3.0': 'CPPHDJHHGGN',
 			'2.7': 'ODPKJEJKOIH',
 			'2.6': 'HPPEILAONGE',
@@ -45,37 +51,51 @@ export class WeirdKey {
 		},
 		// from RogueMagicTalent
 		TalentDescParamValue: {
+			'3.1': 'HMCDHMFHABF',
+			'3.0': 'INNKEBMHLNF',
 			'2.7': 'DOJFLNAILGJ',
 			'2.6': 'GLCDOILMFOM'
 		},
 		// from RogueHandBookEvent
 		UnlockProgress: {
+			'3.1': 'NNDEOKKKKPE',
+			'3.0': 'AFMKGEHANLM',
 			'2.7': 'FINLPBFNLHP',
 			'2.6': 'EJJEHNGJCJH',
 			'2.5': 'EEMMLHDLGKP'
 		},
 		UnlockNPCID: {
+			'3.1': 'MBNKLBEBOHB',
+			'3.0': 'HLNMOFDGLAA',
 			'2.7': 'KOPDNGGIFKN',
 			'2.6': 'GNBAICOJALE',
 			'2.5': 'GFKCKEKCGIB'
 		},
 		// from StageConfig
 		StageConfigKey: {
+			'3.1': 'HEIKKHLKMOA',
+			'3.0': 'EGIHHBKIHAK',
 			'2.7': 'BNCHHJCHKON',
 			'2.6': 'MFKLINKCPPA',
 			'2.5': 'PFMLCKGCKOB'
 		},
 		StageConfigValue: {
+			'3.1': 'HEIKKHLKMOA',
+			'3.0': 'MBMDOCJIMEJ',
 			'2.7': 'ODPKJEJKOIH',
 			'2.6': 'HPPEILAONGE',
 			'2.5': 'NLABNDMDIKM'
 		},
 		// from RogueMagicScepter
 		LockMagicUnitId: {
+			'3.1': 'KAMGFNJJJDE',
+			'3.0': 'MMBMHEHDIBF',
 			'2.7': 'OBLJDNJKECG',
 			'2.6': 'GHFHMJLCIEC'
 		},
 		LockMagicUnitLevel: {
+			'3.1': 'OMAMNKOLIOE',
+			'3.0': 'PKHCKBELLKE',
 			'2.7': 'KFDGMFMJMIA',
 			'2.6': 'LDEDAMNEIJO'
 		}

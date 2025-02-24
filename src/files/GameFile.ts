@@ -1,4 +1,3 @@
-import { existsSync } from 'fs';
 import { readFile } from 'fs/promises';
 import config from '../../config.json' with { "type": "json" };
 import { Dictionary, VERSION_COMMITS } from '../Shared.js';
@@ -34,18 +33,11 @@ export function preprocessFile(obj: any) {
 	return obj
 }
 
-export const MISSING_FILES = new Set<string>()
-
 export async function getFile<T extends object>(path: string, version: string = config.target_version): Promise<T> {
 	path = path.trim()
 	const useAlt = ALT_PATTERNS.find(pattern => path.toLowerCase().startsWith(pattern.toLowerCase())) != undefined
 	
 	if (useAlt ? config.local_roots_mission[version] : config.local_roots[version]) {
-		
-		// TEMPORARY
-		if (useAlt && !existsSync(`${config.local_roots[version]}/${path}`)) {
-			MISSING_FILES.add(path)
-		}
 		
 		const altData = await readFile(`${useAlt ? config.local_roots_mission[version] : config.local_roots[version]}/${path}`)
 			// .catch(err => {

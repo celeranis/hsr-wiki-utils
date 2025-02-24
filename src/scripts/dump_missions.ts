@@ -1,6 +1,5 @@
 import { existsSync, mkdirSync, writeFileSync } from 'fs'
 import { ChangeHistory } from '../ChangeHistory.js'
-import { MISSING_FILES } from '../files/GameFile.js'
 import { Item } from '../Item.js'
 import { Area } from '../maps/Area.js'
 import { Mission } from '../Mission.js'
@@ -249,5 +248,3 @@ for (const [i, missionData] of allMissionData.entries()) {
 }
 
 console.log(`Finished! Generated ${Object.keys(Mission.missionData).length} Mission pages in ${Math.floor((Date.now() - startTime) / 1000)}s`)
-
-writeFileSync('./output/output.txt', [...MISSING_FILES.values()].join('\n'))
