@@ -42,208 +42,26 @@ PageTitle=#Gladiator#
 ===Talk to Dr. Dig and learn about the "house special" from Scott{{subst:void|<!--201072003-->}}===
 {{Mission Description|type=adventure|location=Fight Club|After completing Scott's assignment, he says you'll get the "house special"... But what does that mean? Go find Dr. Dig for more details.}}
 {{Dialogue Start}}
-
-;(Fully recovers all allies' HP)
-;(Unused &mdash; fistuiclose)
-:----
-
-;(Unused &mdash; Talk_201071001)
-:<!--0.5-second delay-->
-::----
-:<pre>{
-	"$type": "RPG.GameCore.ShowFistClubMissionPage",
-	"FistIndex": 1,
-	"OnPageCancel": [
-		{
-			"$type": "RPG.GameCore.TriggerCustomString",
-			"CustomString": {
-				"Value": "fistuiclose"
-			}
-		}
-	],
-	"FistResult": true
-}</pre>
-::'''Dr. Dig:''' Coming up, we are honored by a legendary guest fighter from the Fight Club, a superstar from beyond the walls&mdash;
-::'''Dr. Dig:''' {{Size|36|(Trailblazer)!}}
-::'''Dr. Dig:''' The opponent {{MC|m=he|f=she}} will be facing is none other than... the twin automatons known in the Fight Club as Rookie Busters...
-::'''Dr. Dig:''' {{Size|36|Silo and Yur!}}
-::'''Dr. Dig:''' Will our superstar maintain {{MC|m=his|f=her}} level like the last match and beat the undefeatable Rookie Busters in this game? Let's wait and see!
-::'''Dr. Dig:''' Dear viewers, no time to blink...
-::'''Dr. Dig:''' {{Size|36|The match officially starts now!}}
-:<pre>{
-	"$type": "RPG.GameCore.ResetBillboardInfo",
-	"TargetEntityType": "NPC",
-	"ID": 400001,
-	"GroupID": 5
-}</pre>
-:;(Enter battle)
-::{{Enemy List|Automaton Spider*1/+66.7% ATK, +366.7% HP, +30 Toughness{ text = Rookie Buster: Silo }; Automaton Spider*1/+66.7% ATK, +366.7% HP, +30 Toughness{ text = Rookie Buster: Yur }}}
-----
-:'''Dr. Dig:''' This really is... this is a once-in-a-lifetime show&mdash; Silo and Yur have never been at a disadvantage against a rookie fighter, but this time they were demolished by (Trailblazer) in one go!
-:'''Dr. Dig:''' Ahhh... I'm afraid that the two bots are done for the season, but in this part of the jungle, losers have no choice but to accept their own destiny!
-:'''Dr. Dig:''' Let me hear you say {{MC|m=his|f=her}} name&mdash; (Trailblazer)! Congratulations on a phenomenal win in the opening!
-:'''Audience:''' {{Size|36|(Trailblazer)! (Trailblazer)!}}
-----
-:'''Dr. Dig:''' The next match is starting soon. Are you ready, (Trailblazer)?
-:{{DIcon|Arrow}} Let us continue!
-::'''Dr. Dig:''' Contestant (Trailblazer) is ready to continue the match! Who will be {{MC|m=his|f=her}} next opponent? Put your hands together for...
-::<!--0.5-second delay-->
-::----
-:<pre>{
-	"$type": "RPG.GameCore.ShowFistClubMissionPage",
-	"FistIndex": 2,
-	"OnPageCancel": [
-		{
-			"$type": "RPG.GameCore.TriggerCustomString",
-			"CustomString": {
-				"Value": "fistuiclose"
-			}
-		}
-	],
-	"FistResult": true
-}</pre>
-::'''Dr. Dig:''' Next up, we have! Sitting in the west corner of the ring, the newcomer fighter who caused a huge stir in Boulder Town with {{MC|m=his|f=her}} superb skills and moves...
-::'''Dr. Dig:''' {{Size|36|(Trailblazer)!}}
-::'''Dr. Dig:''' And in front of {{MC|m=him|f=her}} is another dark horse of this season &mdash; the young mechanic from Moltammerville!
-::'''Dr. Dig:''' {{Size|36|Ash and his electrifying robot partner Beet-Ka-Choo!}}
-::'''Dr. Dig:''' And their goal is to become this season's champion!
-::'''Dr. Dig:''' Will (Trailblazer) ruthlessly crush their opponent's dreams, or be a stepping stone to a young and promising Mechanic's dream? This battle will reveal the answer to the audience!
-::'''Dr. Dig:''' Now, I hereby declare...
-::'''Dr. Dig:''' {{Size|36|Let the match begin!}}
-:{{DIcon|Exit}} I need to take a rest...
-::'''Dr. Dig:''' No problem, the octagon and the audience await your return!
+:{{tx}}
 {{Dialogue End}}
 
 ===Talk to Dr. Dig to participate in the contest{{subst:void|<!--201072005-->}}===
 {{Mission Description|type=adventure|location=Fight Club|update|It looks like you're the guest boxer at the Boulder Town Fight Club, where you can participate in all kinds of events anytime during this season.<br />If you want to hone your skills in the arena, you can go to Dr. Dig, who will arrange for you to participate in fighting matches.}}
 {{Dialogue Start}}
-
-;(Fully recovers all allies' HP)
-----
-:'''Dr. Dig:''' Behold, what a tragedy! Our Outsider (Trailblazer) showed no mercy! The mechanic and his partner fell on the road to their dream. Is there a chance for them to make a comeback?
-:'''Dr. Dig:''' Just kidding, no one cares about losers here. Let's focus on the winner of this match! Viewers, give it up to our winner of the day&mdash; (Trailblazer)!
-:'''Audience:''' {{Size|36|(Trailblazer)! (Trailblazer)! (Trailblazer)!}}
-----
-:'''Dr. Dig:''' The next match is starting soon. Are you ready, (Trailblazer)?
-:{{DIcon|Arrow}} Let us continue!
-::'''Dr. Dig:''' Contestant (Trailblazer) is ready to continue the match! Who will be {{MC|m=his|f=her}} next opponent? Put your hands together for...
-::<!--0.5-second delay-->
-::----
-:<pre>{
-	"$type": "RPG.GameCore.ShowFistClubMissionPage",
-	"FistIndex": 3,
-	"OnPageCancel": [
-		{
-			"$type": "RPG.GameCore.TriggerCustomString",
-			"CustomString": {
-				"Value": "fistuiclose"
-			}
-		}
-	],
-	"FistResult": true
-}</pre>
-::'''Dr. Dig:''' Let me hear your roars! Because tonight you will witness the return of the king! The most legendary automaton fighter to ever grace the Fight Club's arena...
-::'''Dr. Dig:''' {{Size|36|Grayback Whale, and its brand-new remote support system, the Light Cavalry!}}
-::'''Dr. Dig:''' On this day, the former champion will be returning to the arena, welcomed by the applause and cheers of everyone!
-::'''Dr. Dig:''' And who's the unlucky one to be facing such a fearful opponent? That's right. It's the rookie who has made great strides on the club Leaderboard recently!
-::'''Dr. Dig:''' {{Size|36|Give it up for the emotionless Limbo Champion &mdash; (Trailblazer)!}}
-::'''Dr. Dig:''' Facing the full-scale mechanical warrior, what should (Trailblazer) do? Hold your breath, because...
-::'''Dr. Dig:''' {{Size|36|The match officially starts now!}}
-:{{DIcon|Exit}} I need to take a rest...
-::'''Dr. Dig:''' No problem, the octagon and the audience await your return!
+:{{tx}}
 {{Dialogue End}}
 
 ===Talk to Dr. Dig to participate in the next match{{subst:void|<!--201072007-->}}===
 {{Mission Description|type=adventure|location=Fight Club|update|Your name is now well-known in the underworld. Everyone is talking about you, an "outsider" fighter.<br />If you want to hone your skills in the arena, you can go to Dr. Dig, who will arrange for you to participate in fighting matches.}}
 {{Dialogue Start}}
-
-;(Fully recovers all allies' HP)
-----
-:'''Dr. Dig:''' {{Size|36|How could this be!?}}
-:'''Dr. Dig:''' (Trailblazer) showed no signs of weakness in the face of such a fierce opponent, and even handled the battle with ease, defeating the Grayback Whale and its Light Cavalry with ease...
-:'''Dr. Dig:''' What a marvelous power to behold! Spectators, give your applause to today's winner. Let's commemorate a fight that will go down in the Fight Club's history together!
-:'''Audience:''' {{Size|36|(Trailblazer)! (Trailblazer)! (Trailblazer)!}}
-----
-:'''Dr. Dig:''' The next match is starting soon. Are you ready, (Trailblazer)?
-:{{DIcon|Arrow}} Let us continue!
-::'''Dr. Dig:''' Contestant (Trailblazer) is ready to continue the match! Who will be {{MC|m=his|f=her}} next opponent? Put your hands together for...
-::<!--0.5-second delay-->
-::----
-:<pre>{
-	"$type": "RPG.GameCore.ShowFistClubMissionPage",
-	"FistIndex": 4,
-	"OnPageCancel": [
-		{
-			"$type": "RPG.GameCore.TriggerCustomString",
-			"CustomString": {
-				"Value": "fistuiclose"
-			}
-		}
-	],
-	"FistResult": true
-}</pre>
-::'''Dr. Dig:''' The club's new star, (Trailblazer), isn't disappointing us &mdash; {{MC|m=he|f=she}} is stepping into the ring once more! (Trailblazer) had no trouble with the previous opponents on {{MC|m=his|f=her}} way up to the fourth cycle of the season-opening matches. And now, which tough challenger will be facing off against {{MC|m=him|f=her}}?
-::'''Dr. Dig:''' The answer might surprise you: Standing in the ring is a legendary mechanical warrior from the faraway mining town...
-::'''Dr. Dig:''' {{Size|36|Master! And its equally formidable disciple &mdash; Domon!}}
-::'''Dr. Dig:''' Will our superstar be able to emerge victorious against these mighty inheritors of the unpredictable "mechanical fighting style"!?
-::'''Dr. Dig:''' Don't blink, or you might miss a moment of this brilliant spectacle!
-::'''Dr. Dig:''' {{Size|36|Now, let the fight begin!}}
-:{{DIcon|Exit}} I need to take a rest...
-::'''Dr. Dig:''' No problem, the octagon and the audience await your return!
+:{{tx}}
 {{Mission Description|type=adventure|location=Fight Club|update|People in the underworld call you a "supernova." Your rank gets higher and higher on the club's ranking list.<br />If you want to hone your skills in the arena, you can go to Dr. Dig, who will arrange for you to participate in fighting matches.}}
-
-;(Fully recovers all allies' HP)
-----
-:'''Dr. Dig:''' Wow, that was a&mdash;ma&mdash;zing! Today's battle nailed the total failure of the "mechanical fighting style." What a shame!
-:'''Dr. Dig:''' Who would have thought that such an unfathomable ancient martial art would be cracked by an Outsider one day? What a spectacular showdown!
-:'''Dr. Dig:''' After this epic victory, (Trailblazer) is on the verge of facing {{MC|m=his|f=her}} final opponent of the season opener &mdash; what a feat!
-:'''Dr. Dig:''' Please, everyone, shower your cheers and applauses on the winner for {{MC|m=his|f=her}} victorious glory!
-----
-:'''Dr. Dig:''' The next match is starting soon. Are you ready, (Trailblazer)?
-:{{DIcon|Arrow}} Let us continue!
-::'''Dr. Dig:''' Contestant (Trailblazer) is ready to continue the match! Who will be {{MC|m=his|f=her}} next opponent? Put your hands together for...
-::<!--0.5-second delay-->
-::----
-:<pre>{
-	"$type": "RPG.GameCore.ShowFistClubMissionPage",
-	"FistIndex": 5,
-	"OnPageCancel": [
-		{
-			"$type": "RPG.GameCore.TriggerCustomString",
-			"CustomString": {
-				"Value": "fistuiclose"
-			}
-		}
-	],
-	"FistResult": true
-}</pre>
-::'''Dr. Dig:''' The legendary outsider has climbed {{MC|m=his|f=her}} way to the very top, and the season opener win is so close at hand, but will (Trailblazer) beat the champ as easily as usual? Let us wait and see!
-::'''Dr. Dig:''' And right now sitting at the top of the ladder, is actually an old friend of (Trailblazer)&mdash;
-::'''Dr. Dig:''' {{Size|36|Grayback Whale, and its fully upgraded remote support system, the Dragon Rider!}}
-::'''Dr. Dig:''' Listen here, what a name it is! This battle will decide the one who lays claim to the season opener ultimate prize!
-::'''Dr. Dig:''' Will the championship change hands at this very last moment? This will be the highlight of the match!
-::'''Dr. Dig:''' Let's give it up for the two warriors &mdash; Now, I'm proud to announce that...
-::'''Dr. Dig:''' {{Size|36|The battle for the top begins!}}
-:{{DIcon|Exit}} I need to take a rest...
-::'''Dr. Dig:''' No problem, the octagon and the audience await your return!
 {{Dialogue End}}
 
 ===Talk to Dr. Dig to participate in the final match{{subst:void|<!--201072011-->}}===
 {{Mission Description|type=adventure|location=Fight Club|update|You're invincible! Now you're 2nd on the ranking list, only one step away from becoming the season champion.<br />But who is at the top? If you're curious, you can go to Dr. Dig, who will arrange for you to participate in the final match of the season.}}
 {{Dialogue Start}}
-
-;(Fully recovers all allies' HP)
-----
-:'''Dr. Dig:''' Oh gosh oh gosh oh gosh! The battlefield is completely out of control! The Grayback Whale lost it at the very last moment and kissed the championship a regretful goodbye&mdash;
-:'''Dr. Dig:''' {{Size|36|(Trailblazer)! (Trailblazer)! (Trailblazer)!}}
-:'''Dr. Dig:''' This battle welcomes a new era of evolution for the Boulder Town Fight Club! A new era for freestyle fighting has dawned upon us, and it's pushed by this season's ultimate winner &mdash; (Trailblazer)!
-:'''Dr. Dig:''' Cheer and celebrate! You're all lucky witnesses to the birth of a new king, and a future of the Fight Club!
-:'''Dr. Dig:''' {{Size|36|(Trailblazer)! (Trailblazer)! (Trailblazer)!}}
-----
-:'''Dr. Dig:''' Congratulations on your season opener win in all five of the matches! And of course, Mr. Scott has arranged for your rich reward. Here you go!
-:'''Dr. Dig:''' Remember, Scott Business Alliance is only made for you, the strongest!
-:'''Dr. Dig:''' Now the Fight Club will be preparing for the new season. Planning and preparation for the new season are already underway, please stay tuned!
-::'''Dr. Dig:''' The Fight Club will inform you when the matches officially begin. If you want to know more, Dr. Dig is more than pleased to answer you anytime!
+:{{tx}}
 {{Dialogue End}}
 
 ==Other Languages==

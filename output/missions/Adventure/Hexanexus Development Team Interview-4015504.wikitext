@@ -33,67 +33,12 @@ PageTitle=#Hexanexus: Development Team Interview#
 -->
 ==Dialogue==
 {{Stub Dialogue}}
-:'''(Trailblazer):''' Why is Hexanexus also available in The Shackling Prison?
-:'''(Trailblazer):''' To think they even promote their game in the prison... Are the members of the Hex Club obsessed with it?
 {{Dialogue End}}
 
 ===Head to the Hex Club's cell{{subst:void|<!--401550405-->}}===
 {{Mission Description|type=adventure|location=The Shackling Prison|update|You solve the "Hexanexus: Remake" placed in the Shackling Prison. The Hex Club, who were rounded up and arrested for creating the game, have specially invited you to meet them in prison. There is much to gripe about, but let's head to the Hex Club's cell first and take a look.}}
 {{Dialogue Start}}
-
-;(Talk to Seymour)
-:'''???:''' Oh! You've arrived.
-:'''???:''' Hello, I am the "Main Think-Tank" for the Hexanexus secret society.
-<pre>{
-	"$type": "RPG.GameCore.AddFinishMissionData_ConsumeItem",
-	"SubmissionID": 401550405,
-	"IsShowConsumeFinishTips": true,
-	"Desc": {
-		"Hash": 278713946
-	},
-	"SimpleTalk": {
-		"TextSpeed": 20,
-		"ProtectTime": 0.8
-	},
-	"OnSubmitConfirm": [
-		{
-			"$type": "RPG.GameCore.PlayAndWaitSimpleTalk",
-			"KeepDisplay": true,
-			"SimpleTalkList": [
-				{
-					"TalkSentenceID": 401550238
-				},
-				{
-					"TalkSentenceID": 401550239
-				}
-			]
-		},
-		{
-			"$type": "RPG.GameCore.TriggerCustomString",
-			"CustomString": {
-				"Value": "Wait_Option_401550401_11"
-			}
-		}
-	],
-	"OnSubmitCancel": [
-		{
-			"$type": "RPG.GameCore.EndPerformance"
-		}
-	]
-}</pre>
-;(Upon reaching the destination)
-
-;(Upon reaching the destination)
-:'''(Trailblazer):''' This must be the cell where the Hex Club is...
-:'''(Trailblazer):''' Let's go up and ask.
-
-
-;(Talk to Seymour)
-;(If {{cx}}<!--Hidden Mission ID 4015505--> has been completed)
-:'''Seymour:''' Hi, this is Department IV of the "Hexanexus: Remake" Developers. How may I help you?
-<pre>{
-	"$type": "RPG.GameCore.ShowMenu"
-}</pre>
+:{{tx}}
 {{Dialogue End}}
 
 ==Other Languages==

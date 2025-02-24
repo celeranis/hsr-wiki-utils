@@ -42,133 +42,22 @@ PageTitle=#Stellar Shadowseeker: 2nd Stop, Storage Zone#
 ===Find and capture the subjects based on the photos{{subst:void|<!--800210201-->}}===
 {{Mission Description|type=adventure|location=Storage Zone|The shadowy object in the photo looks somewhat familiar. It must be something from the Storage Zone...}}
 {{Dialogue Start}}
+:{{tx}}
 {{Dialogue End}}
 
 ===Find clues about the subject in the photo{{subst:void|<!--800210203-->}}===
 {{Dialogue Start}}
-
-
-;(Talk to Herta)
-<pre>{
-	"$type": "RPG.GameCore.RandomConfig",
-	"OddsList": [
-		{
-			"IsDynamic": false,
-			"FixedValue": {
-				"Value": 0.25
-			}
-		},
-		{
-			"IsDynamic": false,
-			"FixedValue": {
-				"Value": 0.25
-			}
-		},
-		{
-			"IsDynamic": false,
-			"FixedValue": {
-				"Value": 0.25
-			}
-		},
-		{
-			"IsDynamic": false,
-			"FixedValue": {
-				"Value": 0.25
-			}
-		}
-	],
-	"TaskList": [
-		{
-			"$type": "RPG.GameCore.TriggerCustomString",
-			"CustomString": {
-				"Value": "500002106_1"
-			}
-		},
-		{
-			"$type": "RPG.GameCore.TriggerCustomString",
-			"CustomString": {
-				"Value": "500002106_2"
-			}
-		},
-		{
-			"$type": "RPG.GameCore.TriggerCustomString",
-			"CustomString": {
-				"Value": "500002106_3"
-			}
-		},
-		{
-			"$type": "RPG.GameCore.TriggerCustomString",
-			"CustomString": {
-				"Value": "500002106_4"
-			}
-		}
-	]
-}</pre>
-;(Unused &mdash; 500002106_1)
-:'''Herta:''' Stop staring at my puppet all the time! I don't find the view of your nostrils that enjoyable.
-
-;(Unused &mdash; 500002106_2)
-:'''Herta:''' If you don't have anything better to do, go test my Simulated Universe. Quit wandering about the station carrying a Stellaron. People will have to wipe you down everywhere if it explodes.
-
-;(Unused &mdash; 500002106_3)
-:'''Herta:''' You look like you need work. How about assisting me with a tiny little experiment?
-
-;(Unused &mdash; 500002106_4)
-:'''Herta:''' State your business and stop blocking my view.
-
-;(Unused &mdash; 500002106_5)
-:'''Herta:''' ...
-::No reaction from the puppet, looks like Herta hasn't come online yet.
-
-;(Unused &mdash; Create_119_300001)
-<pre>{
-	"$type": "RPG.GameCore.AdvDestroyGroupEntity",
-	"InstanceIDList": [
-		300002
-	]
-}</pre>
-:<pre>{
-	"$type": "RPG.GameCore.AdvCreateGroupEntity",
-	"InstanceIDList": [
-		300001,
-		400001,
-		400002
-	]
-}</pre>
-
-;(Unused &mdash; Destroy_119_300001)
-<pre>{
-	"$type": "RPG.GameCore.AdvDestroyGroupEntity",
-	"InstanceIDList": [
-		300001
-	]
-}</pre>
+:{{tx}}
 {{Dialogue End}}
 
 ===Find and capture the subjects based on the photos{{subst:void|<!--800210202-->}}===
 {{Dialogue Start}}
-<pre>{
-	"$type": "RPG.GameCore.AdvDestroyGroupEntity",
-	"InstanceIDList": [
-		300002
-	]
-}</pre>
-<pre>{
-	"$type": "RPG.GameCore.AdvCreateGroupEntity",
-	"InstanceIDList": [
-		300001,
-		400001,
-		400002
-	]
-}</pre>
+:{{tx}}
 {{Dialogue End}}
 
 ===Read March 7th's message{{subst:void|<!--800210204-->}}===
 {{Dialogue Start}}
-<pre>{
-	"$type": "RPG.GameCore.ShowUI",
-	"Name": "Ui.Activity.ActivityGuessTheSilhouette.ActivityGuessTheSilhouetteMainPage"
-}</pre>
+:{{tx}}
 {{Dialogue End}}
 
 ==Other Languages==

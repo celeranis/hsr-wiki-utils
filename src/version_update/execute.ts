@@ -75,7 +75,7 @@ async function getFile(file: string): Promise<[string, string]> {
 		throw new TypeError(`No PageTitle on ${file}`)
 	}
 
-	content = content.replace(/<%\-\-\s+\[PAGE_INFO\].+\[END_PAGE_INFO\]\s+\-\-%>/is, '').trimStart()
+	content = content.replace(/(?:\-\-\[\=\[)?<%\-\-\s+\[PAGE_INFO\].+\[END_PAGE_INFO\]\s+\-\-%>(?:\-\-\]\=\])?/is, '').trimStart()
 	
 	// console.log(content)
 	

@@ -41,180 +41,18 @@ PageTitle=#Photography Exhibition: Exhibition#
 ===Find March 7th as promised{{subst:void|<!--802720001-->}}===
 {{Mission Description|type=adventure|location=Penacony Paperfold University College|March 7th wants to meet you in Paperfold University, citing her need for your help. Go check it out. Don't make her wait for too long.}}
 {{Dialogue Start}}
-
-:{{DIcon|undefined}} Listen
-:'''Overeager Student:''' Charmony Academy's quite impressive now, to have invited Mr. Reca to organize the photography exhibition.
-:'''Apprehensive Student:''' The photography task states that we still have to upload the photo online for everyone to comment? That's so embarrassing!
-:'''Provident Student:''' How many art credits is your shame worth? The exhibition's evaluation awards are what's imperative.
-:'''March 7th:''' Hey, (Trailblazer), over here!
-:{{DIcon|Arrow}} What do you need, Master March?
-::'''March 7th:''' Ahem... (Trailblazer), I have important instructions for you, of course.
-:{{DIcon|Arrow}} You want some school credits, too?
-::'''March 7th:''' We're not even enrolled students here. What's the point of credits? It's all about participation in such a fun event.
-:'''March 7th:''' Here's the thing &mdash; Being a famous director, Mr. Reca also has deep knowledge of photography. It's a pity we had to leave Paperfold University in a hurry, so I didn't get to pick his brain.
-:'''March 7th:''' Now that he's collaborating with Charmony Academy to organize a photography exhibition, I simply can't miss out!
-:'''"Assistant Director":''' "Miss March 7th, you have great potential in photography, and since you're enthused about joining the exhibition, I will spare no effort in guiding you."
-:{{DIcon|Arrow}} When did the assistant director become such a nice person?
-:{{DIcon|Arrow}} It mimics Mr. Reca's speech rather well.
-:{{DIcon|Arrow}} Get your director over here.
-:'''Mr. Reca:''' "Heh-heh, ad-libbed dialogue from the Festive Superstar never fails to surprise. It is not the assistant director who is talking to you now, but the director himself, who is in a distant place."
-:'''Mr. Reca:''' "I could hardly refuse Charmony Academy's invitation, but I really couldn't get my schedule to work, so I had to ask the assistant director to manage it in my stead."
-:'''March 7th:''' That's right, and this is the reason I called you here. We need an ID photo for registration. (Trailblazer), help me take one!
-:{{DIcon|Arrow}} Calm down. I'll do it.
-::'''March 7th:''' I'm counting on you then! Take a good one!
-:{{DIcon|Arrow}} Why can't you ask someone else?
-::'''March 7th:''' ID photos are the most dangerous photos in the world. You'll never know how you'll turn out before it is taken... which is why it must be left to someone you can trust!
-:'''March 7th:''' But the lighting's not great here. Let's head to the performing arts classroom.
 :{{tx}}
-
 {{Dialogue End}}
 
 ===Take an ID photo for March 7th{{subst:void|<!--802720002-->}}===
 {{Mission Description|type=adventure|location=Penacony Paperfold University College|update|Joining the Photography Exhibition requires participants to submit their ID photo. March 7th hopes you can take this very important photo for her.}}
 {{Dialogue Start}}
-
-;(Unused &mdash; EnterDistrict_G355)
-----
-::{{tx}}
-
-;(Talk to March 7th)
-----
-:'''March 7th:''' M&mdash;My face is getting numb from smiling too long...
-:{{DIcon|Arrow}} Is there anything I should look out for?
-::'''March 7th:''' Aim the aperture at the subject, wait for the camera to identify the photo subject, then just hit the shutter.
-::'''March 7th:''' Go with your gut for the rest of it. That's my secret to great photos!
-:{{DIcon|Arrow}} Just hang in there!
-::'''March 7th:''' (Trailblazer), I'm leaving it to you!
-;(Unused &mdash; PhotoGraphStartCustomString)
-<pre>{
-	"$type": "RPG.GameCore.TutorialTaskUnlock",
-	"TriggerParam": {
-		"Value": "Tutorial_5716"
-	}
-}</pre>
-::<!--0.2-second delay-->
-:<pre>{
-	"$type": "RPG.GameCore.TriggerPermanentEmotion",
-	"TargetType": {
-		"$type": "RPG.GameCore.TargetFetchAdvNpcEx",
-		"FetchType": "SingleNpcByNpcID",
-		"SingleNpcID": {
-			"GroupID": {
-				"IsDynamic": false,
-				"FixedValue": {
-					"Value": 356
-				}
-			},
-			"GroupNpcID": {
-				"IsDynamic": false,
-				"FixedValue": {
-					"Value": 400001
-				}
-			}
-		}
-	},
-	"EmotionName": "Happy01"
-}</pre>
-
-;(Unused &mdash; PhotoGraphFinishCustomString)
-<pre>{
-	"$type": "RPG.GameCore.StopPermanentEmotion",
-	"TargetType": {
-		"$type": "RPG.GameCore.TargetFetchAdvNpcEx",
-		"FetchType": "SingleNpcByNpcID",
-		"SingleNpcID": {
-			"GroupID": {
-				"IsDynamic": false,
-				"FixedValue": {
-					"Value": 356
-				}
-			},
-			"GroupNpcID": {
-				"IsDynamic": false,
-				"FixedValue": {
-					"Value": 400001
-				}
-			}
-		}
-	}
-}</pre>
-<pre>{
-	"$type": "RPG.GameCore.ShowTutorialUI",
-	"ForceShowDialog": true
-}</pre>
-<pre>{
-	"$type": "RPG.GameCore.ShowGuideHintWithText",
-	"Block": true,
-	"TargetEvent": [
-		{
-			"$type": "RPG.GameCore.WaitSecond",
-			"WaitTime": {
-				"fixedValue": {
-					"Value": 2.500000001047738
-				}
-			},
-			"MaxAdvencePerTick": -1
-		}
-	],
-	"NodeIDList": [],
-	"IsAutoMatchGuideHintType": true,
-	"GuideTextType": "TopCenterTip",
-	"GuideText": "TutorialTextmap_571601",
-	"ShowKeyMapTip": true,
-	"GuideHintShowConfig": {
-		"ScaleX": 1,
-		"ScaleY": 1
-	},
-	"GuideTextShowConfig": {
-		"ScaleX": 1,
-		"ScaleY": 1
-	},
-	"GuideUIContextConfig": {
-		"Type": "MainPage"
-	},
-	"EnableActionList": [],
-	"EnableBattleOperationList": [],
-	"DisableBlackMask": true
-}</pre>
-<pre>{
-	"$type": "RPG.GameCore.ShowTutorialUI",
-	"IsHide": true,
-	"ForceShowDialog": true
-}</pre>
-:'''(Trailblazer):''' (Use your camera to take an ID photo for March.)
+:{{tx}}
 {{Dialogue End}}
 
 ===Listen to the assistant director explain the exhibition rules{{subst:void|<!--802720005-->}}===
 {{Mission Description|type=adventure|location=Penacony Paperfold University College|update|The ID photo has been taken, the registration materials have been prepared. It's time to submit the registration to the assistant director.}}
 {{Dialogue Start}}
-
-;(Talk to March 7th)
-----
-:'''Mr. Reca:''' "Photography tasks will be announced every morning. Please take note of the photography exhibition's online page during that time."
-:'''March 7th:''' (Trailblazer), I've got some inspiration already. Let's set off now!
-:'''March 7th:''' Not bad, (Trailblazer)!
-:'''Mr. Reca:''' "Registration information is ready. The last step is to fill in your name."
-:'''March 7th:''' (Trailblazer), what name do you think I should use to participate?
-:{{DIcon|Arrow}} March 7th.
-:<pre>{
-	"$type": "RPG.GameCore.SetTextJoinValue",
-	"TextJoinID": 191,
-	"Value": "1"
-}</pre>
-:{{DIcon|Arrow}} Say~Cheese~
-:<pre>{
-	"$type": "RPG.GameCore.SetTextJoinValue",
-	"TextJoinID": 191,
-	"Value": "2"
-}</pre>
-:'''March 7th:''' Not bad, (Trailblazer)!
-:'''Mr. Reca:''' "Registration information is ready. The last step is to fill in your name."
-:'''March 7th:''' (Trailblazer), what name do you think I should use to participate?
-:March 7th.
-:'''March 7th:''' Sounds good! I should use my real name for recognition in such a major competition.
-:Say~Cheese~
-:'''March 7th:''' You're right! A famous photographer should always have an interesting pseudonym.
-:'''March 7th:''' Now then, the budding photographer (March 7th/Say~Cheese~/) is officially making her mark!
 :{{tx}}
 {{Dialogue End}}
 

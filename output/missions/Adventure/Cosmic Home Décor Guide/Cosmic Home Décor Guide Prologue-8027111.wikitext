@@ -48,429 +48,54 @@ Mission Cosmic Home Décor Guide Prologue Caelus.png|Caelus
 ===Go to the Parlor Car{{subst:void|<!--802711101-->}}===
 {{Mission Description|type=adventure|location=Parlor Car|Another day of peace and quiet aboard the Astral Express. You are bored on the Express and are preparing to find something to do.}}
 {{Dialogue Start}}
-:{{A|VO sideX paidui player 101 m.ogg}} {{A|VO sideX paidui player 101 f.ogg}} '''(Trailblazer):''' Hmm, I haven't really "trailblazed" that bar car much, have I...? Heh, and I AM free today... Time to go check it out, then!
+:{{tx}}
 {{Dialogue End}}
 
 ===Head to the Party Car{{subst:void|<!--802711102-->}}===
 {{Mission Description|type=adventure|location=Party Car|update|It's been so long since you explored the Party Car. It's rare to have free time like today, so let's go take a look.<br />What? You say you don't remember a car like this on the Express? Ahahah... You must have misremembered it!}}
 {{Dialogue Start}}
-;(Upon reaching the destination)
-
-;(Upon reaching the destination)
-<pre>{
-	"$type": "RPG.GameCore.SetMissionCustomValue",
-	"SubmissionID": 802711102,
-	"MissionCustomValue": {
-		"ValidValueParamList": [
-			0,
-			1,
-			2
-		]
-	}
-}</pre>
-:{{A|VO sideX paidui player 102 m.ogg}} {{A|VO sideX paidui player 102 f.ogg}} '''(Trailblazer):''' Every time I come here, I can't help but marvel at just how spacious this car is...
-:{{A|VO sideX paidui player 103 m.ogg}} {{A|VO sideX paidui player 103 f.ogg}} '''(Trailblazer):''' It also feels wider than the other cars... How is this even physically possible?
-:{{A|VO sideX paidui bizui 101.ogg}} '''"Shush":''' Welcome to the Party Car, Nameless. Would you like to have a drink, a snack, or... commence "Party Time?"
-:{{DIcon|Arrow}} I'll have a drink.
-::{{A|VO sideX paidui bizui 102.ogg}} '''"Shush":''' Right away. Here's a Rustic Infusion for you. The fragrant aroma of rice, the refreshing taste of sea salt, and a rich consistency matching that of oil &mdash; this has been a classic drink on board the Express for several Amber Eras now.
-::{{tx}}
-:<pre>{
-	"$type": "RPG.GameCore.SetMissionCustomValue",
-	"SubmissionID": 802711102,
-	"MissionCustomValue": {
-		"isLocal": true,
-		"ValidValueParamList": [
-			0,
-			1,
-			2
-		]
-	},
-	"CustomValue": 1
-}</pre>
-:{{DIcon|Arrow}} I'll have a snack.
-::{{A|VO sideX paidui bizui 104.ogg}} '''"Shush":''' Right away. Here's a Wrench Drenched Salad for you. Made with healthy ingredients in the perfect serving size, this is just the flavorful refreshment you should be reaching for between meals.
-::{{tx}}
-:<pre>{
-	"$type": "RPG.GameCore.SetMissionCustomValue",
-	"SubmissionID": 802711102,
-	"MissionCustomValue": {
-		"isLocal": true,
-		"ValidValueParamList": [
-			0,
-			1,
-			2
-		]
-	},
-	"CustomValue": 2
-}</pre>
-:{{DIcon|Arrow}} Party Time!
-::{{A|VO sideX paidui bizui 106.ogg}} '''"Shush":''' It's Party Time! ...You're the only Nameless here. We can't start a party with only one person. Perhaps next time, then.
-::{{A|VO sideX paidui bizui 107.ogg}} '''"Shush":''' This brings to mind a joke. Someone asked a Nameless: How many names are on your guest list? The Nameless shrugged and said, none, they were all "Nameless."
-:{{DIcon|Arrow}} This car has an upbeat name...
-::{{A|VO sideX paidui bizui 108.ogg}} '''"Shush":''' You mean the Party Car? Yes, it does sound upbeat. It's a pity that the Express is so quiet right now... The exact opposite of "upbeat."
-::{{A|VO sideX paidui bizui 109.ogg}} '''"Shush":''' But this might be for the best. If the train were too crowded, our "Party Car" might just become a "Panic Car." Another joke of mine! You can't help but laugh, can you?
-:{{A|VO sideX paidui bizui 110.ogg}} '''"Shush":''' I hope you enjoy your time in the Party Car, dear Nameless. We may not be able to get a party started right now, but please feel free to relax and unwind here.
-:{{A|VO sideX paidui bizui 111.ogg}} '''"Shush":''' This used to be called the Meeting Car, until my {{Rubi|previous master|Void Archives}} came along thinking they wouldn't need an entire car for meetings among just a handful of Nameless. That's when my previous master made the decision to rename it the Party Car.
-:{{DIcon|Arrow}} Actually... Who are you?
-::{{A|VO sideX paidui bizui 112.ogg}} '''"Shush":''' I'm merely a drinksmith robot who has been doing his best to provide impeccable service to the Nameless for several Amber Eras.
-:{{DIcon|Arrow}} Were you here all along...?
-::{{A|VO sideX paidui bizui 113.ogg}} '''"Shush":''' As a robot drinksmith, my design ensures I remain appropriately inconspicuous. The fact that you don't remember me is precisely as intended.
-:{{A|VO sideX paidui bizui 114.ogg}} '''"Shush":''' Should I introduce myself again?
-:{{DIcon|Arrow}} Sure. No more than three sentences, please.
-::{{A|VO sideX paidui bizui 115.ogg}} '''"Shush":''' I am a robot drinksmith, invented and created several Amber Eras ago by a certain Nameless. My {{Rubi|previous master|Void Archives}} found me in a corner, dusted me off, and has had me serving passengers on the Astral Express ever since.
-::{{A|VO sideX paidui bizui 116.ogg}} '''"Shush":''' Oh, that only took two sentences. I'll add one more then. I was named after the last thing Miss Himeko said to my previous master: Shush.
-:{{DIcon|Arrow}} Sure. Keep it under 40 words, please.
-::{{A|VO sideX paidui bizui 117.ogg}} '''"Shush":''' I am an antique robot drinksmith. My {{Rubi|previous master|Void Archives}} repaired me. I now work in the Party Car, mixing drinks for passengers.
-:{{DIcon|Arrow}} Maybe later.
-::{{A|VO sideX paidui bizui 118.ogg}} '''"Shush":''' Of course, as you wish.
-:{{A|VO sideX paidui bizui 119.ogg}} '''"Shush":''' I should mention that the conductor and Miss March 7th went up to your room looking for you a short while ago.
 :{{tx}}
 {{Dialogue End}}
 
 ===Head to the room upstairs{{subst:void|<!--802711103-->}}===
 {{Mission Description|type=adventure|location=Party Car|update|Shush said that Pom-Pom and March 7th went to the room upstairs to find you. Strange... why did they decide that was the place to go looking for you?}}
 {{Dialogue Start}}
-;(Upon reaching the destination)
-
-;(Upon reaching the destination)
-:{{A|VO sideX paidui pompom 101 m.ogg}} {{A|VO sideX paidui pompom 101 f.ogg}} '''Pom-Pom:''' There you are, (Trailblazer)! Pom-Pom has been looking for you all day!
-:{{A|VO sideX paidui player 104 m.ogg}} {{A|VO sideX paidui player 104 f.ogg}} '''(Trailblazer):''' What made you think I'd be here?
-:{{A|VO sideX paidui mar7th 101.ogg}} '''March 7th:''' Are you daydreaming? This is your room, silly! Where else would we go to look for you, if not here?
-:{{DIcon|Arrow}} I have my own room now?
-::{{A|VO sideX paidui pompom 102.ogg}} '''Pom-Pom:''' Of course you have one. You're part of the Crew!
-:{{DIcon|Arrow}} Why is it such a mess in here...?
-::{{A|VO sideX paidui mar7th 102.ogg}} '''March 7th:''' Shouldn't you be asking yourself that...?
-:{{DIcon|Arrow}} I've lost my memory! Who am I? Who are you guys?
-::{{A|VO sideX paidui mar7th 103.ogg}} '''March 7th:''' Hey, are you sure? Maybe a couple of punches will help to jog your memory?
-:{{A|VO sideX paidui pompom 103 m.ogg}} {{A|VO sideX paidui pompom 103 f.ogg}} '''Pom-Pom:''' Aw, looking at this mess reminds Pom-Pom of the time when (Trailblazer) first joined the Nameless...
 :{{tx}}
-
-;(Talk to "Shush")
-;(If {{cx}}<!--during performance 503114001-->)
-:<pre>{
-	"$type": "RPG.GameCore.PlayMultiVoiceTalk",
-	"TalkSentenceID": 503114001,
-	"KeepDisplay": true
-}</pre>
-::{{DIcon|Arrow}} I would like a drink.
-:::'''"Shush":''' Your trust in my skills moves me!
-::{{DIcon|Arrow}} I would like to chat with you.
-:::'''"Shush":''' You taking time from your busy schedule to chat truly touches me!
-::'''"Shush":''' I've decided to upgrade your Party Car membership level to the highest tier! You might ask, "What are the benefits to the membership tier?"
-::'''"Shush":''' The answer is of course: Nothing!
-::'''"Shush":''' But just for my highest-tier members, I will provide my most handcrafted heavenly jokes. Though I have no hands for crafting, only a lever for craft cocktails. And I {{Rubi|haven't|heaven}} a soul, but a haven for the inebriated.
-;(If {{cx}}<!--not during performance 503114001-->)
-:<pre>{
-	"$type": "RPG.GameCore.PlayMultiVoiceTalk",
-	"TalkSentenceID": 503114101,
-	"KeepDisplay": true
-}</pre>
-:<pre>{
-	"$type": "RPG.GameCore.ShowMenu"
-}</pre>
-:{{A|VO sideX paidui mar7th 104.ogg}} '''March 7th:''' I... I'd heard noises coming from the ventilation ducts, which made me wonder if something was hiding in there. Curiosity got the better of me, and I climbed up to take a look... And then I got stuck...
-:{{A|VO sideX paidui himeko 101.ogg}} '''Himeko:''' So, did you find anything out of the ordinary in there?
-:{{A|VO sideX paidui mar7th 105 m.ogg}} {{A|VO sideX paidui mar7th 105 f.ogg}} '''March 7th:''' Mm-hmm. I found somebody else stuck in the ducts: (Trailblazer).
-:{{A|VO sideX paidui danheng 101 m.ogg}} {{A|VO sideX paidui danheng 101 f.ogg}} '''Dan Heng:''' Any thoughts to share on the matter, (Trailblazer)?
-:{{DIcon|Arrow}} I just wanted to explore the place.
-::{{A|VO sideX paidui himeko 102.ogg}} '''Himeko:''' I'm glad we found ourselves a natural at trailblazing.
-::{{A|VO sideX paidui pompom 104 m.ogg}} {{A|VO sideX paidui pompom 104 f.ogg}} '''Pom-Pom:''' Hmph. Don't go encouraging {{MC|f=her|m=him}}!
-:{{DIcon|Arrow}} I apologize for my grave misjudgment.
-::{{A|VO sideX paidui welt 101.ogg}} '''Welt:''' Hehe, let's not go overboard. Still, it was dangerous &mdash; let's not do anything like that again.
-:{{DIcon|Arrow}} I heard noises coming from the ducts, so&mdash;
-::{{A|VO sideX paidui pompom 105.ogg}} '''Pom-Pom:''' No copycat excuses!!!
-:{{A|VO sideX paidui pompom 106.ogg}} '''Pom-Pom:''' Alright, alright. Today's a happy day, so Pom-Pom won't spoil it with lectures. I've gathered everyone here today because I have an announcement to make!
-:{{A|VO sideX paidui pompom 107 m.ogg}} {{A|VO sideX paidui pompom 107 f.ogg}} '''Pom-Pom:''' Ahem. It was terribly remiss of the conductor to have left (Trailblazer) without a room of {{MC|m=his|f=her}} own on the Express...
-:{{A|VO sideX paidui mar7th 106 m.ogg}} {{A|VO sideX paidui mar7th 106 f.ogg}} '''March 7th:''' (Trailblazer) seems pretty happy with the current arrangement, though!
-:{{A|VO sideX paidui danheng 102 m.ogg}} {{A|VO sideX paidui danheng 102 f.ogg}} '''Dan Heng:''' No, {{MC|f=she|m=he}} isn't.
-:{{A|VO sideX paidui pompom 108.ogg}} '''Pom-Pom:''' Hehe, go on, Himeko. Ask the golden question!
-:{{A|VO sideX paidui himeko 103.ogg}} '''Himeko:''' Ah, but I think the conductor should be the one to do the honor instead.
-:{{A|VO sideX paidui pompom 109 m.ogg}} {{A|VO sideX paidui pompom 109 f.ogg}} '''Pom-Pom:''' ...Ahem... Then here goes: (Trailblazer), will you join the Astral Express Crew as a Nameless?
-:{{DIcon|Arrow}} I thought I was already part of the Crew.
-::{{A|VO sideX paidui mar7th 107.ogg}} '''March 7th:''' Hehe, not so easy! You can't call yourself a Nameless until you've cleared the "18 Sentinels: Mr. Yang" trial!
-::{{A|VO sideX paidui welt 102.ogg}} '''Welt:''' Which reminds me &mdash; March hasn't cleared it yet either. I'll set it up a little later &mdash; tomorrow afternoon you can be the first one to give it a shot.
-::{{A|VO sideX paidui mar7th 108.ogg}} '''March 7th:''' Ohhh! Please don't! I was just joking!
-:{{DIcon|Arrow}} I'd love to.
-::{{A|VO sideX paidui mar7th 109.ogg}} '''March 7th:''' Wow, you answered in a heartbeat!
-:{{DIcon|Arrow}} Can I pass?
-::{{A|VO sideX paidui mar7th 110.ogg}} '''March 7th:''' Of course! It's your choice, after all. But I'd really, really, really love for you to try!
-:{{DIcon|Arrow}} And here I thought you were going to assign me a room...
-::{{A|VO sideX paidui pompom 110 m.ogg}} {{A|VO sideX paidui pompom 110 f.ogg}} '''Pom-Pom:''' Don't jump the gun, (Trailblazer)! That's next on the list!
-:{{A|VO sideX paidui danheng 103.ogg}} '''Dan Heng:''' You don't have to give us an answer right away.
-:{{tx}}
-:{{DIcon|Arrow}} Yes, I do.
-::{{A|VO sideX paidui mar7th 115.ogg}} '''March 7th:''' Yay! I'm sure we'll be the bestest Trailblazing buddies!
-::{{tx}}
-:{{DIcon|Arrow}} No, do not.
-::{{A|VO sideX paidui pompom 113 m.ogg}} {{A|VO sideX paidui pompom 113 f.ogg}} '''Pom-Pom:''' Great! Since you've decided to become... Wait, what!? Pom-Pom can't believe you said no! Okay, fine... Then, if you don't want to be a Nameless, what do you want to do, (Trailblazer)?
-::{{DIcon|Arrow}} A Galaxy Ranger who upholds justice with their fists!
-:::{{tx}}
-::;(Return to previous option selection)
-::{{DIcon|Arrow}} A top-level executive of the IPC with a high salary!
-:::{{tx}}
-::;(Return to previous option selection)
-::{{DIcon|Arrow}} A Riddler like Babbibalo Bala!
-:::{{tx}}
-::;(Return to previous option selection)
 {{Dialogue End}}
 
 ===Take an oath to be a Nameless{{subst:void|<!--802711105-->}}===
 {{Mission Description|type=adventure|location=Parlor Car|update|Dear Nameless,<br /><br />Thank you for boarding the Astral Express and setting off on this journey among the stars and across the cosmic ocean with us. The Cosmos used to be silent and stagnant until your presence helped us illuminate the stars and cause beautiful things to occur.<br /><br />In this time and space, please look up at the starry sky and see those faint, flickering lights in the deep darkness. We are born on the ground, yet we know deep down that the vast and endless starry sky is our true home.<br /><br />May this journey lead us starward.<br /><br /><div align="right">Yours Faithfully, Shush</div>}}
 {{Dialogue Start}}
-
-;(Talk to Pom-Pom)
 :{{tx}}
-:{{A|VO sideX paidui pompom 115 m.ogg}} {{A|VO sideX paidui pompom 115 f.ogg}} '''Pom-Pom:''' Are you ready for your initiation into the Nameless, (Trailblazer)?
-:{{DIcon|Arrow}} You bet I am!
-::{{A|VO sideX paidui welt 104.ogg}} '''Welt:''' You youngsters are so full of energy. I'm jealous.
-:{{DIcon|Arrow}} This doesn't involve a blood oath, does it?
-::{{A|VO sideX paidui mar7th 116.ogg}} '''March 7th:''' Of course not! We're just gonna to recite a simple oath together.
-:{{DIcon|Arrow}} Do I need to do something to prove my loyalty?
-::{{A|VO sideX paidui mar7th 117.ogg}} '''March 7th:''' Yep! When I joined, I had to crush a... Just kidding! Why would you even think that? Haha! We're not a crime syndicate!
-:{{A|VO sideX paidui pompom 116 m.ogg}} {{A|VO sideX paidui pompom 116 f.ogg}} '''Pom-Pom:''' Let's recite the Trailblazer Creed. Now, (Trailblazer), please repeat after Pom-Pom:
-:{{DIcon|Arrow}} (Recite creed.)
-::{{A|VO sideX paidui pompom 117.ogg}} '''Pom-Pom:''' One, no matter the ebb and flow of fate, stop staying within the lines. Two, even in the face of tempestuous seas, we always align.
-::{{A|VO sideX paidui pompom 118.ogg}} '''Pom-Pom:''' Three, even if we don't gain the upper hand, we'll fight for right. Four, even if forgotten by the world, never care a rap for hindsight.
-::{{A|VO sideX paidui pompom 119.ogg}} '''Pom-Pom:''' Five, no matter how bleak the cosmos may get, let us light the night. Six, even when there are wheels within wheels, go ahead!
-::{{A|VO sideX paidui player 114 m.ogg}} {{A|VO sideX paidui player 114 f.ogg}} '''Astral Express Crew:''' May this journey lead us starward.
-::{{A|VO sideX paidui mar7th 120.ogg}} '''March 7th:''' Uhh, this is kind of cringey... You think we can drop this part of the initiation next time?
-::{{A|VO sideX paidui pompom 120.ogg}} '''Pom-Pom:''' Hey, March 7th! Don't ruin the moment!
-::{{A|VO sideX paidui pompom 121 m.ogg}} {{A|VO sideX paidui pompom 121 f.ogg}} '''Pom-Pom:''' Ahem! You are now officially a Nameless, (Trailblazer). Welcome to the Crew!
-:{{DIcon|Arrow}} This is kind of cringey. Can I skip over this part?
-::{{A|VO sideX paidui pompom 122.ogg}} '''Pom-Pom:''' H&mdash;How is it cringey!? This is an especially meaningful part of the initiation!
-::{{A|VO sideX paidui mar7th 121.ogg}} '''March 7th:''' See! There's no way anyone can do this without feeling awkward!
-::{{A|VO sideX paidui danheng 107.ogg}} '''Dan Heng:''' Alright. We'll leave this part out from now on.
-::{{A|VO sideX paidui pompom 123.ogg}} '''Pom-Pom:''' You can't do that! Th&mdash;This is a time-honored tradition of the Trailblazers! You can't just change old customs as you please!
-::{{A|VO sideX paidui himeko 107.ogg}} '''Himeko:''' Yes, let's leave it out from now on.
-::{{A|VO sideX paidui welt 107.ogg}} '''Welt:''' I'm sorry, conductor, but it seems we're in the minority.
-::{{A|VO sideX paidui pompom 124 m.ogg}} {{A|VO sideX paidui pompom 124 f.ogg}} '''Pom-Pom:''' Well, if you all are absolutely certain... As the conductor, Pom-Pom can only respect the results of the vote. In any case, welcome, (Trailblazer), our newest member of the Nameless!
-:{{A|VO sideX paidui welt 108 m.ogg}} {{A|VO sideX paidui welt 108 f.ogg}} '''Welt:''' Alright, let's get back on track. Now that you're a Nameless on the Astral Express, (Trailblazer), it's only right that you have a room of your own.
-:{{A|VO sideX paidui pompom 125 m.ogg}} {{A|VO sideX paidui pompom 125 f.ogg}} '''Pom-Pom:''' That's right! Pom-Pom is so glad that (Trailblazer) finally has a place of {{MC|m=his|f=her}} own!
-:{{A|VO sideX paidui welt 109.ogg}} '''Welt:''' It's just that the current Express has far fewer cars compared to the past. The Passenger Cabin only has four rooms &mdash; well, three, technically, since Dan Heng has been sleeping in the Archives.
-:{{A|VO sideX paidui danheng 108.ogg}} '''Dan Heng:''' It doesn't bother me, though.
-:{{DIcon|Arrow}} Staying in the Parlor Car doesn't sound half bad!
-::{{A|VO sideX paidui pompom 126.ogg}} '''Pom-Pom:''' Don't even think about it! The Parlor Car is for receiving guests!
-:{{DIcon|Arrow}} Let's buy another car!
-::{{A|VO sideX paidui pompom 127.ogg}} '''Pom-Pom:''' It's not that easy to find the parts needed to build another car...
-:{{DIcon|Arrow}} I can just room with one of you!
-::{{A|VO sideX paidui pompom 128.ogg}} '''Pom-Pom:''' Okay, you can room with the Express' engine, then!
-:{{A|VO sideX paidui welt 110 m.ogg}} {{A|VO sideX paidui welt 110 f.ogg}} '''Welt:''' (Trailblazer)'s room doesn't have to be in the Passenger Cabin, actually.
-:{{tx}}
-
 {{Dialogue End}}
 
 ===Head to the Party Car{{subst:void|<!--802711106-->}}===
 {{Mission Description|type=adventure|location=Party Car|update|So much time has passed before we knew it... Thinking back, it's really quite nostalgic.<br />What? You say you don't even remember experiencing this part of the story when you first boarded? Haha... You sure have a way of forgetting important things!}}
 {{Dialogue Start}}
-:{{A|VO sideX paidui bizui 121.ogg}} '''"Shush":''' Greetings, my Nameless friends. My, look at those sunny smiles! Has something good happened? Don't tell me &mdash; is it finally Party Time?
-:{{A|VO sideX paidui bizui 122.ogg}} '''"Shush":''' How about a joke to kick off the party? I have just the one for you: Behold, a Knight of Beauty on this night of beauty! Knight and night sound the same, get it? Ah, homophonous puns. You can't help but laugh, can you?
-:{{A|VO sideX paidui himeko 108.ogg}} '''Himeko:''' Shush. Thank you. Maybe we should reformat its system before allowing it to manage the car.
-:{{A|VO sideX paidui bizui 123.ogg}} '''"Shush":''' Warning: Reformatting me will wipe all user data, including their eating habits, energy expenditure plans, metabolic rates, and more!
-:{{A|VO sideX paidui bizui 124.ogg}} '''"Shush":''' Mishandling during the reformatting process may also lead to serious consequences, including but not limited to disruption of the life support system and derailment of the Express. The loss of dietary data may even result in a new Subsistellaron Disaster!
-:{{A|VO sideX paidui bizui 125.ogg}} '''"Shush":''' I'm sure you've already realized, but that was just a joke for before the party begins.
-:{{A|VO sideX paidui himeko 109.ogg}} '''Himeko:''' Here we go again.
-:{{DIcon|Arrow}} I haven't had enough of its jokes, actually.
-::{{A|VO sideX paidui mar7th 122.ogg}} '''March 7th:''' Ahaha, keep the dad jokes coming!
-::{{A|VO sideX paidui welt 111.ogg}} '''Welt:''' ...Perhaps another time when I'm not here? Jokes like this make my head hurt, to put it mildly.
-:{{DIcon|Arrow}} I was born for parties!
-::{{A|VO sideX paidui bizui 126.ogg}} '''"Shush":''' It's Party Time!
-::{{A|VO sideX paidui mar7th 123.ogg}} '''March 7th:''' I don't think now's the right time for a party!
-:{{DIcon|Arrow}} Select "Reformat"
-::{{A|VO sideX paidui bizui 127.ogg}} '''"Shush":''' Thank you for all the time we've spent together. May your journey hereafter be a pleasant one. You may now resume reformatting.
-::{{DIcon|Arrow}} Select "Abort Reformat"
-:::{{A|VO sideX paidui bizui 128.ogg}} '''"Shush":''' Thank you for aborting the reformat operation! Rest assured I shall continue to serve the crew diligently.
-:::{{A|VO sideX paidui mar7th 124.ogg}} '''March 7th:''' Why is there only one option!?
-::{{DIcon|Arrow}} Select "Cancel Reformat"
-:::{{A|VO sideX paidui bizui 129.ogg}} '''"Shush":''' Thank you for canceling the reformat operation! Rest assured I shall continue to serve the crew diligently.
-:::{{A|VO sideX paidui mar7th 125.ogg}} '''March 7th:''' Why is there only one option!?
-:{{A|VO sideX paidui pompom 131.ogg}} '''Pom-Pom:''' Hehe, all this excitement really takes Pom-Pom back to the old days! When this car was still known as the "Meeting Car," the passengers would gather here and eagerly debate over their next destination.
-:{{A|VO sideX paidui danheng 109.ogg}} '''Dan Heng:''' There's a large storeroom that is not in use on the upper level of this car. I think it'll make a fitting room.
-:{{DIcon|Arrow}} You want me to live in a storeroom? Really?
-::{{A|VO sideX paidui player 115 m.ogg}} {{A|VO sideX paidui player 115 f.ogg}} '''(Trailblazer):''' Is an owl going to bring me my offer letter from the IPC?
-::{{A|VO sideX paidui mar7th 126.ogg}} '''March 7th:''' Hmph, isn't the Astral Express boarding pass from Pom-Pom enough? You already have the biggest room on the Express, so just be happy with what you've got!
-:{{DIcon|Arrow}} What about the junk in there?
-::{{A|VO sideX paidui danheng 110.ogg}} '''Dan Heng:''' The conductor has amassed a mountain of knickknacks over the years, thinking that they'll eventually be useful. We're overdue for some decluttering anyway.
-::{{A|VO sideX paidui mar7th 127 m.ogg}} {{A|VO sideX paidui mar7th 127 f.ogg}} '''March 7th:''' Hehe, but I bet it won't take long for (Trailblazer) to fill this room up with your own clutter.
-:{{A|VO sideX paidui himeko 110 m.ogg}} {{A|VO sideX paidui himeko 110 f.ogg}} '''Himeko:''' There won't be enough space to fit all of us. March, you and the conductor should go with (Trailblazer) to see {{MC|m=his|f=her}} new room.
 :{{tx}}
 {{Dialogue End}}
 
 ===Go upstairs and look at your room{{subst:void|<!--802711107-->}}===
 {{Dialogue Start}}
-
-;(Talk to Himeko)
-:{{A|VO sideX paidui himeko 111 m.ogg}} {{A|VO sideX paidui himeko 111 f.ogg}} '''Himeko:''' There won't be enough space to fit all of us. March, you and the conductor should go with (Trailblazer) to see {{MC|m=his|f=her}} new room.
-:{{A|VO sideX paidui mar7th 129.ogg}} '''March 7th:''' Okay! It's this way. Follow me!
-;(Upon reaching the destination)
-
-;(Upon reaching the destination)
-----
-:{{A|VO sideX paidui pompom 132.ogg}} '''Pom-Pom:''' Ta-da! We're here!
-:{{A|VO sideX paidui mar7th 130.ogg}} '''March 7th:''' See? I wasn't kidding when I said this is the largest room on the Express! You could fit even a Doomsday Beast in here!
-:{{DIcon|Arrow}} It's larger than I imagined.
-::{{A|VO sideX paidui mar7th 131.ogg}} '''March 7th:''' Right? Even if you put a couple Doomsday Beasts in here, you'd still have room to spare!
-::{{A|VO sideX paidui pompom 133.ogg}} '''Pom-Pom:''' Pom-Pom hopes you aren't actually thinking about keeping those things as pets...
-:{{DIcon|Arrow}} It's big, but it's still a storeroom...
-::{{A|VO sideX paidui mar7th 132.ogg}} '''March 7th:''' Think of it this way: The more space there is, the more room you'll have to express your creativity!
-:{{DIcon|Arrow}} How could I allow a Doomsday Beast to slumber next to me?
-::{{A|VO sideX paidui mar7th 133.ogg}} '''March 7th:''' Oh, that'd be the least of your worries. Even if a Doomsday Beast were here, it'd have to sleep in a cardboard box for now.
-::{{A|VO sideX paidui pompom 134.ogg}} '''Pom-Pom:''' I hope you aren't actually thinking about keeping those things as pets...
-:{{A|VO sideX paidui mar7th 134.ogg}} '''March 7th:''' The room is... admittedly kind of messy right now, but so was everybody else's when they first boarded the Express.
-:{{A|VO sideX paidui mar7th 135.ogg}} '''March 7th:''' My room may look pretty fancy now, but that's because I put a lot of effort into designing it myself!
-:{{A|VO sideX paidui pompom 135.ogg}} '''Pom-Pom:''' Ahem! May I remind you that your expenses on "lifestyle essentials" have grossly exceeded your Express Fund budget?
-:{{A|VO sideX paidui mar7th 136.ogg}} '''March 7th:''' Carpets, pillows, rocking chairs, and jumbo Pom-Pom toys are lifestyle essentials, aren't they? Hehe.
-:{{A|VO sideX paidui pompom 136.ogg}} '''Pom-Pom:''' Do you really need over 20 pillows, though?
-:{{A|VO sideX paidui mar7th 137.ogg}} '''March 7th:''' Of course I do! How else would I have pillow fights?
-:{{A|VO sideX paidui pompom 137.ogg}} '''Pom-Pom:''' In any case, to prevent such situations from happening again, I must reiterate the rules for accessing the Express Fund!
-:{{A|VO sideX paidui pompom 138.ogg}} '''Pom-Pom:''' Firstly, the conductor is in charge of all resource allocation within the Express. If you need any renovation work done, look for Pom-Pom!
-:{{A|VO sideX paidui pompom 139.ogg}} '''Pom-Pom:''' Secondly, since you're now officially a member of the Astral Express, you must be responsible for your share of duties aboard. Only then can you exchange the corresponding amount of Express Funds for supplies from Pom-Pom.
-:{{A|VO sideX paidui mar7th 138.ogg}} '''March 7th:''' Unless you want to sleep in a cardboard box, I suggest prioritizing the renovation of your bedroom first.
-:{{A|VO sideX paidui mar7th 139 m.ogg}} {{A|VO sideX paidui mar7th 139 f.ogg}} '''March 7th:''' Wait a second. Pom-Pom will provide (Trailblazer) with the renovation funds, then (Trailblazer) will use those funds to pay Pom-Pom for the renovations... What's the point of that? Just get the conductor to renovate {{MC|f=her|m=his}} room directly!
-:{{A|VO sideX paidui pompom 140.ogg}} '''Pom-Pom:''' This is called procedural justice!
-:{{A|VO sideX paidui player 116 m.ogg}} {{A|VO sideX paidui player 116 f.ogg}} '''(Trailblazer):''' At any rate, I'm now a member of the Astral Express crew, and I even have my own room to boot.
-:{{A|VO sideX paidui player 117 m.ogg}} {{A|VO sideX paidui player 117 f.ogg}} '''(Trailblazer):''' I'll just make do for today. Tomorrow, I'll clean the place up and build myself a nice, cozy bedroom...
-:{{DIcon|Arrow}} I was planning to start cleaning up tomorrow...
-::{{A|VO sideX paidui pompom 141.ogg}} '''Pom-Pom:''' And how many times have you said that already!?
-:{{DIcon|Arrow}} I forgot that I have my own room now.
-::{{A|VO sideX paidui mar7th 141.ogg}} '''March 7th:''' All I want to know now is... Isn't it uncomfortable to sleep on a cardboard box?
-:{{DIcon|Arrow}} Actually, I just wanted to avoid doing my duties.
-::{{A|VO sideX paidui pompom 142.ogg}} '''Pom-Pom:''' Heh, Pom-Pom knew it!
-:{{A|VO sideX paidui pompom 143.ogg}} '''Pom-Pom:''' But Pom-Pom also knows that the first step is always the hardest.
-:{{A|VO sideX paidui mar7th 142.ogg}} '''March 7th:''' That is why we're here today &mdash; to help you with taking that first step!
-:{{A|VO sideX paidui pompom 144.ogg}} '''Pom-Pom:''' Pom-Pom has prepared a starter fund to help you kick-start the renovation. You can use it to set up your bedroom!
-:{{DIcon|Arrow}} Thank you, conductor!
-::{{A|VO sideX paidui mar7th 143.ogg}} '''March 7th:''' Hehe, appreciation is better shown with actions. We're getting that bedroom done one way or another!
-:{{DIcon|Arrow}} I'm tired. Let's discuss this again tomorrow.
-::{{A|VO sideX paidui mar7th 144.ogg}} '''March 7th:''' Absolutely not! We're getting that bedroom done one way or another!
 :{{tx}}
-:{{DIcon|Arrow}} Let's get to it, then!
-::{{A|VO sideX paidui mar7th 145.ogg}} '''March 7th:''' Yay! Let's do this!
-:{{DIcon|Exit}} Hold on. I've got something else I need to do.
-::{{A|VO sideX paidui pompom 145.ogg}} '''Pom-Pom:''' Come back soon. We'll be waiting for you here.
-:{{tx}}
-<pre>{
-	"$type": "RPG.GameCore.SetPerformanceResult",
-	"Value": 1
-}</pre>
-
-;(Talk to "Shush")
-;(If {{cx}}<!--during performance 503114001-->)
-:<pre>{
-	"$type": "RPG.GameCore.PlayMultiVoiceTalk",
-	"TalkSentenceID": 503114001,
-	"KeepDisplay": true
-}</pre>
-::{{DIcon|Arrow}} I would like a drink.
-:::'''"Shush":''' Your trust in my skills moves me!
-::{{DIcon|Arrow}} I would like to chat with you.
-:::'''"Shush":''' You taking time from your busy schedule to chat truly touches me!
-::'''"Shush":''' I've decided to upgrade your Party Car membership level to the highest tier! You might ask, "What are the benefits to the membership tier?"
-::'''"Shush":''' The answer is of course: Nothing!
-::'''"Shush":''' But just for my highest-tier members, I will provide my most handcrafted heavenly jokes. Though I have no hands for crafting, only a lever for craft cocktails. And I {{Rubi|haven't|heaven}} a soul, but a haven for the inebriated.
-;(If {{cx}}<!--not during performance 503114001-->)
-:<pre>{
-	"$type": "RPG.GameCore.PlayMultiVoiceTalk",
-	"TalkSentenceID": 503114101,
-	"KeepDisplay": true
-}</pre>
-:<pre>{
-	"$type": "RPG.GameCore.ShowMenu"
-}</pre>
 {{Dialogue End}}
 
 ===Set up a bed for yourself{{subst:void|<!--802711108-->}}===
 {{Mission Description|type=adventure|location=Party Car|update|One need not a bed for sleeping, but a bed would make it better. Even if you don't sleep in it, you can use it as a stage for pillow fights.}}
 {{Dialogue Start}}
-
-;(Talk to Pom-Pom)
-:{{A|VO sideX paidui mar7th 146.ogg}} '''March 7th:''' With us around, we're getting that bedroom done one way or another!
-:{{DIcon|Arrow}} Let's get to it, then!
-::{{A|VO sideX paidui mar7th 147.ogg}} '''March 7th:''' Yay! Let's do this!
-:<pre>{
-	"$type": "RPG.GameCore.OpenTrainPartyBuildUI",
-	"OpenTaskPage": true,
-	"AreaID": 12
-}</pre>
-:{{DIcon|Exit}} Hold on. I've got something else I need to do.
-::{{A|VO sideX paidui pompom 146.ogg}} '''Pom-Pom:''' Come back soon. We'll be waiting for you here.
-
-<pre>{
-	"$type": "RPG.GameCore.BackToMainPage",
-	"Delay": 1
-}</pre>
-:{{A|VO sideX paidui pompom 147 m.ogg}} {{A|VO sideX paidui pompom 147 f.ogg}} '''Pom-Pom:''' Phew! We're finally done! (Trailblazer) has finally taken {{MC|m=his|f=her}} first step toward completing the renovation of {{MC|m=his|f=her}} bedroom!
-:{{A|VO sideX paidui pompom 148.ogg}} '''Pom-Pom:''' Pom-Pom is so glad... I was worried I might never see this room get completed...
-:{{A|VO sideX paidui mar7th 148 m.ogg}} {{A|VO sideX paidui mar7th 148 f.ogg}} '''March 7th:''' Hahaha! One small step for (Trailblazer), one giant leap toward humankind overcoming procrastination!
-:{{A|VO sideX paidui mar7th 149.ogg}} '''March 7th:''' Uh, we're still lacking a pillow in here. Although someone who can sleep comfortably on a cardboard box probably doesn't need one...
-:{{A|VO sideX paidui pompom 149.ogg}} '''Pom-Pom:''' Hm... Let's just leave it for now, and get one tomorrow?
-:{{A|VO sideX paidui mar7th 150.ogg}} '''March 7th:''' No can do! If we drag this out till tomorrow, it'll never be done! Wait here. I'll be right back!
-:March 7th hurriedly ran off. A few minutes later, she knocks the door open, holding a pillow in her arms.
-:{{A|VO sideX paidui mar7th 151 m.ogg}} {{A|VO sideX paidui mar7th 151 f.ogg}} '''March 7th:''' Here, use this pillow for now, (Trailblazer). It's a good thing that there's no shortage of pillows in my room! I told you pillows were essentials!
-:{{A|VO sideX paidui pompom 150 m.ogg}} {{A|VO sideX paidui pompom 150 f.ogg}} '''Pom-Pom:''' Ho-ho, not bad! (Trailblazer), hurry and place the pillow on your bed.
-:{{DIcon|Arrow}} (Put the pillow down)
-::{{A|VO sideX paidui mar7th 152.ogg}} '''March 7th:''' Time for me to see if this pillow matches your bedroom!
-:{{DIcon|Exit}} Give me a minute. I've got something else I need to do.
-::{{A|VO sideX paidui mar7th 153.ogg}} '''March 7th:''' Are you serious? You're putting off even something like this?
 :{{tx}}
-<pre>{
-	"$type": "RPG.GameCore.SetPerformanceResult",
-	"Value": 1
-}</pre>
 {{Dialogue End}}
 
 ===Place March 7th's pillow on the bed{{subst:void|<!--802711110-->}}===
 {{Mission Description|type=adventure|location=Party Car|update|The saying "If you want to sleep, just find a pillow" has been so vividly brought to life! March 7th, you're so gentle.}}
 {{Dialogue Start}}
-
-;(Talk to Pom-Pom)
-:{{A|VO sideX paidui pompom 151 m.ogg}} {{A|VO sideX paidui pompom 151 f.ogg}} '''Pom-Pom:''' Ho-ho, not bad! (Trailblazer), hurry and place the pillow on your bed.
-:{{DIcon|Arrow}} (Put the pillow down)
-::{{A|VO sideX paidui mar7th 154.ogg}} '''March 7th:''' Time for me to see if this pillow matches your bedroom!
-:<pre>{
-	"$type": "RPG.GameCore.OpenTrainPartyBuildUI",
-	"OpenTaskPage": true,
-	"AreaID": 12
-}</pre>
-:{{DIcon|Exit}} Give me a minute. I've got something else I need to do.
-::{{A|VO sideX paidui mar7th 155.ogg}} '''March 7th:''' Are you serious? You're putting off even something like this?
-
 :{{tx}}
 {{Dialogue End}}
 
 ===Sleepy time!{{subst:void|<!--802711112-->}}===
 {{Mission Description|type=adventure|location=Party Car|update|So tired. Can't be bothered to write a description. Night night!}}
 {{Dialogue Start}}
-
-:{{DIcon|Talk}} Sleep
-:A strange ceiling.
-:But you have a vague feeling that it will become the ceiling you know best in the future.
-:When you wake up tomorrow morning, you'll see it. When you go to sleep tomorrow night, you'll see it... This is truly incredible.
-:The drowsiness is encroaching...
-:{{DIcon|Arrow}} Sleep.
-:{{A|VO sideX paidui player 118 m.ogg}} {{A|VO sideX paidui player 118 f.ogg}} '''(Trailblazer):''' Goodnight, Astral Express.
 :{{tx}}
-<pre>{
-	"$type": "RPG.GameCore.PerformanceEndSeq",
-	"Cases": [
-		{
-			"OnSuccess": [
-				{
-					"$type": "RPG.GameCore.SwitchCharacterAnchorV2",
-					"SwitchCharacterAnchorConfig": {
-						"IsLocalPlayer": true,
-						"CharacterUniqueName": "LocalPlayer",
-						"AreaName": {
-							"Value": "LevelArea_P10000_F10000003_G60"
-						},
-						"AnchorName": {
-							"Value": "Anchor1"
-						}
-					}
-				}
-			]
-		}
-	]
-}</pre>
 {{Dialogue End}}
 
 ==Other Languages==

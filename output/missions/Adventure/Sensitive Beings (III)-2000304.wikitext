@@ -41,127 +41,31 @@ PageTitle=#Sensitive Beings (III)#
 ===Talk to the maintenance engineer and start the identity verification{{subst:void|<!--200030401-->}}===
 {{Mission Description|type=adventure|location=Supply Zone|The terminal units are so old that they can only provide enough computing power for one check a day. You're annoyed, but the engineer promises that nothing else will go wrong today. You decide to trust him one more time.}}
 {{Dialogue Start}}
-
-;(Talk to Maintenance Engineer)
-:'''Maintenance Engineer:''' We've got enough computing power today. I've reported it to the lead researcher. She said she expects you to get this done today.
-:'''Maintenance Engineer:''' Please let me know when you are done. I'll need to reinforce the terminal's security system.
-:{{DIcon|Arrow}} Sure. Please turn on the terminal for me.
-:'''Maintenance Engineer:''' The optical identity verification program is all set. The terminal has sufficient computing power. Please help yourself!
-----
+:{{tx}}
 {{Dialogue End}}
 
 ===Pass the optical identity verification{{subst:void|<!--200030402-->}}===
 {{Mission Description|type=adventure|location=Supply Zone|update|The maintenance engineer starts the optical identity verification for you manually. So far, so good.}}
 {{Dialogue Start}}
+:{{tx}}
 {{Dialogue End}}
 
 ===Use the terminal to check Joanne's data record{{subst:void|<!--200030403-->}}===
 {{Mission Description|type=adventure|location=Supply Zone|update|The terminal stores the data records of everyone in the space station. You decide to check Joanne's record today.}}
 {{Dialogue Start}}
-:<!--0.5-second delay-->
-<pre>{
-	"$type": "RPG.GameCore.PropSetupUITrigger",
-	"DestroyAfterTriggered": true,
-	"ButtonIcon": "SpriteOutput/TalkIcon/ChatIcon.png",
-	"IconType": "ChatLoopIcon",
-	"ButtonText": {
-		"Hash": 278713937
-	},
-	"ButtonCallback": [
-		{
-			"$type": "RPG.GameCore.TriggerCustomString",
-			"CustomString": {
-				"Value": "Mission_200030403_Prop_11_300007_BtnClick"
-			}
-		}
-	],
-	"InteractAngleRange": 180,
-	"SkipFakeAvatar": true,
-	"TargetType": {
-		"$type": "RPG.GameCore.TargetFetchAdvPropEx",
-		"FetchType": "SinglePropByPropID",
-		"SinglePropID": {
-			"GroupID": {
-				"fixedValue": {
-					"Value": 11
-				}
-			},
-			"ID": {
-				"fixedValue": {
-					"Value": 300007
-				}
-			}
-		}
-	}
-}</pre>
+:{{tx}}
 {{Dialogue End}}
 
 ===Complete the handover with the maintenance engineer{{subst:void|<!--200030404-->}}===
 {{Mission Description|type=adventure|location=Supply Zone|update|You feel relieved after identifying the infected. Now you just need to return your identity authorization to the engineer, then leave this shabby terminal room where you've wasted so much time...}}
 {{Dialogue Start}}
-
-;(Talk to Maintenance Engineer)
-:'''Maintenance Engineer:''' Are you done?
-:{{DIcon|Arrow}} Yes, I think I got the result.
-:'''Maintenance Engineer:''' Okay. According to the space station data center's regulations, your query access will be terminated as soon as you leave the terminal room. Thank you for your cooperation.
+:{{tx}}
 {{Dialogue End}}
 
 ===Report the final result to Asta{{subst:void|<!--200030405-->}}===
 {{Mission Description|type=adventure|location=Master Control Zone|update|You're sure that Joanne is the one infected, so you report this finding to Asta. But Asta's revelation about the other two suspects is a big surprise.}}
 {{Dialogue Start}}
-
-;(Talk to Asta)
-:'''Asta:''' Great. I heard from the maintenance engineer that, due to incomplete recovery from the previous invasion, the terminal's computing power had been hindering your progress.
-:'''Asta:''' So I didn't expect you to finish the investigation so soon. Thank you for your hard work. So what's the conclusion?
-:{{DIcon|Arrow}} (Tell her your observation and your analysis.)
-:'''Asta:''' Haha, I see. I did have a suspicion that Joanne was the one who got infected. But I didn't have any substantial evidence.
-:{{DIcon|Arrow}} How did you know it was her?
-::'''Asta:''' Simple. Out of the three of them, she is the only one who exhibited speech patterns similar to those of the Crackup Conch after its infection.
-::'''Asta:''' I've always found it rather suspicious that she, a person who dozes off all the time, would have such a drastic change of personality and would quit all her habits and hobbies out of nowhere.
-:{{DIcon|Arrow}} Have you ever suspected the other two?
-::'''Asta:''' Their behaviors may seem strange to you, but to me, they are extremely normal.
-::'''Asta:''' Let's start with Mare. Getting distracted at work is such a common occurrence for all humans. It sometimes happens to me, even when I'm working in my favorite field of research.
-::'''Asta:''' Then there's Chris. He is said to be a good student from a poor family. And compared with the other researchers, he's still fairly new here on the space station. So it's normal that he would experience discomfort after a lengthy space flight.
-::'''Asta:''' What surprised me was the severity of his discomfort. So I've already sent for a doctor to check on him.
-:'''Asta:''' Anyway, the overall result is as expected. Next, we should weed out Joanne's virus and get her "back on track" to her old self.
-:'''Asta:''' Thank you for your hard work on finding such substantial evidence, so&mdash;
-:{{DIcon|Arrow}} Hold on, I have a few questions.
-::'''Asta:''' Oh? Go ahead. I'll answer all your questions if I know the answers.
-:{{DIcon|Arrow}} I still don't get it...
-::'''Asta:''' Huh?
-:'''Asta:''' Is there anything else I need to clarify?
-:{{DIcon|Talk}} Isn't it a good thing to keep Joanne this way?
-::'''Asta:''' ...That was a dangerous thought. Of course not. Joanne is a living human being. You shouldn't think like that.
-::'''Asta:''' Although we come from different cultural backgrounds, some of the most basic rights and interests are recognized by all of us as the common bottom line and must not be deprived.
-::'''Asta:''' Besides, based on my personal experience, you'll never get great results in any field of research unless you are passionate about it.
-:;(Return to previous option selection)
-:{{DIcon|Talk}} How did you guess correctly that Joanne was the one?
-::'''Asta:''' Guess? I didn't "guess." To some extent, it was just simple psychology.
-::'''Asta:''' Joanne completely wiped out her personal life, which is very unusual. Think about this simple analogy. People's capacity for work is limited, just like how a balloon can only hold a finite amount of air...
-::'''Asta:''' When they don't get enough rest or fulfillment, people will just be like a balloon being unceasingly inflated, which will inevitably blow up if there's no chance for an air release.
-:;(Return to previous option selection)
-:{{DIcon|Talk}} Aren't you worried about the other two?
-::'''Asta:''' Worried about what? Do you mean how their research at the space station will be affected? I don't think there's any problem except that Chris might need some psychological counseling from a doctor.
-::'''Asta:''' People have the freedom to do whatever they want in their own lives, as long as they don't undermine the security of the space station or violate the regulations.
-:;(Return to previous option selection)
-:{{DIcon|Arrow}} I don't have any more questions.
-::'''Asta:''' Well, I do get your point to some extent. It might seem productive, at least in the short term, to just disregard people's safety concerns and force them into nonstop work. But in the real world, such practices will only spell disaster.
-::'''Asta:''' The station is built in space, far away from any land surface. Not everyone can adapt to life here. This will become clear after a while.
-::'''Asta:''' Despite our top-notch equipment and resources, some people still find it unbearable to live on the station after staying here for a long time.
-::'''Asta:''' In that case, letting people develop their own hobbies improves everyone's mental health, especially when they have been away from land for an extended period of time. This is the best way to improve overall productivity.
-::'''Asta:''' After all, we are born to be humans, not plants or rocks that do not have emotions. How could we still call ourselves humans if we were to throw away our hobbies and emotions?
-::{{DIcon|Arrow}} But I don't seem to have any hobbies...
-:::'''Asta:''' Well, I do know a little about your situation. It's alright. You still have a long way to go. You'll eventually find your hobbies and your own way of life.
-::{{DIcon|Arrow}} That makes sense.
-:::'''Asta:''' Of course it does. This is also my life experience. Having fun in life is all about investing in things that you find interesting.
-::'''Asta:''' Well, you still have a long way ahead of you. When you are out there exploring, remember &mdash; no matter what, don't just throw away your hobbies and your emotions.
-::'''Asta:''' Oh right, by the way, I almost forgot one thing.
-::'''Asta:''' I know paper records will be printed out at the terminal. Keep those records to yourself. Don't let the information leak out in the space station. Promise me, or I'll take back the reward.
-::{{DIcon|Arrow}} Don't worry, they will never leak out.
-::'''Asta:''' Well, anyway, thank you so much. This is the reward for you. I made this myself.
-::'''Asta:''' Ehem, if you don't like it, I can take you to buy the starnought fleet when the latest version comes out. It's very popular among young people these days.
-;(Unused &mdash; Wait_Option_2000311_288)
-:{{DIcon|Arrow}} I've gone through all the data records.
+:{{tx}}
 {{Dialogue End}}
 
 ==Other Languages==

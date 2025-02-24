@@ -37,34 +37,7 @@ PageTitle=#Merchant Event: Food Stand#
 ===Return to the Aurum Alley and report to Tall Auntie{{subst:void|<!--800324701-->}}===
 {{Mission Description|type=adventure|location=Aurum Alley|In order to revitalize Aurum Alley, the merchant guild aims to fully utilize the docks' logistics capacity and establish close collaborations with the stores in the alley.<br />The guild has sent you to persuade Tall Auntie, who sells snacks, to establish a partnership with the guild. However, Tall Auntie has encountered some troubles at the moment...}}
 {{Dialogue Start}}
-
-;(Lose {{Item|Authorized Recordings by Mr. Xiyan|20|x=1}})
-----
-:'''Tall Auntie:''' Thank you, (Trailblazer). By the way, Sushang told me that those performers have prepared more shows. Feel free to drop by and check them out if you're interested.
-:{{Black Screen|Thanks to your aid, more and more people are visiting the Food Stall.}}
-----
-<pre>{
-	"$type": "RPG.GameCore.CharacterTriggerAnimState",
-	"CharacterUniqueName": {
-		"Value": "Bird"
-	},
-	"ForceStart": true,
-	"AnimStateName": "FlyBack",
-	"NormalizedTransitionDuration": 0.25
-}</pre>
-:<!--6-second delay-->
-----
-
-;(Talk to Tall Auntie)
-:'''Tall Auntie:''' I heard that Mr. Xiyan and Back'n & Forth are famous storytellers on this ship. Their recordings will definitely attract new customers to my stall! Please, help me get their recordings!
-<pre>{
-	"$type": "RPG.GameCore.PlayMultiVoiceTalk",
-	"TalkSentenceID": 502064102
-}</pre>
-::'''Tall Auntie:''' Want to try some local Luofu snacks, customer? You'll love them!
-:<pre>{
-	"$type": "RPG.GameCore.ShowMenu"
-}</pre>
+:{{tx}}
 {{Dialogue End}}
 
 ==Other Languages==

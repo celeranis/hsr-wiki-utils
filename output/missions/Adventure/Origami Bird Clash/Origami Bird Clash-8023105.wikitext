@@ -46,293 +46,51 @@ PageTitle=#Origami Bird Clash#
 ===Go to the designated location and find the arcade machine hidden in the Penacony Grand Theater{{subst:void|<!--802310501-->}}===
 {{Mission Description|type=adventure|location=Penacony Grand Theater|You have received an invitation from The Family &mdash; Tinah of the Iris Family invites you to test a match-3 puzzle battle game called "Origami Bird Clash."<br />It doesn't seem like a scam... So, go take a look? There's nothing to lose.}}
 {{Dialogue Start}}
-;(Upon reaching the destination)
-
-;(Upon reaching the destination)
-<pre>{
-	"$type": "RPG.GameCore.PlayMessage",
-	"MessageSectionID": 1309100,
-	"ShowNotice": true
-}</pre>
-;(Upon reaching the destination)
-
-;(Upon reaching the destination)
-:{{tx}}
-:'''???:''' (Trailblazer)? I didn't think I would be able to meet you here. Are you here to test the game about Origami Birds too?
-:{{DIcon|Arrow}} They even invited you?
-::'''Robin:''' I felt like I needed a change of pace lately, so I decided to pop by.
-:{{DIcon|Arrow}} You like playing video games too?
-::'''Robin:''' Not really... Games aren't my strong suit, to be honest. But I felt like I needed a change of pace lately, so I decided to pop by.
-:'''Robin:''' If I recall correctly, (Trailblazer), you're quite the expert at games, right? After all, I've never seen you without your phone in your hands. Do you mind if I join you?
 :{{tx}}
 {{Dialogue End}}
 
 ===Complete the Blue Bird's game of hide-and-seek{{subst:void|<!--802310502-->}}===
 {{Dialogue Start}}
-;(Upon reaching the destination)
-
-;(Upon reaching the destination)
-:'''Robin:''' When it comes to Origami Birds, there has always been an urban legend spreading around Penacony: That these cartoon characters are actually real, but can only be seen by people whom they approve of.
-:'''Robin:''' Therefore, when these birds appeared before my eyes, an intense feeling of marvel welled up inside me...
-
-;(Upon reaching the destination)
-:'''Robin:''' Oh, right. (Trailblazer), can you wait a while for me later?
-:'''Robin:''' Before I return to the ship, I may need to disguise myself for a bit.
-;(Unused &mdash; Create_G474)
-<pre>{
-	"$type": "RPG.GameCore.TriggerEffect",
-	"TargetType": {
-		"$type": "RPG.GameCore.TargetFetchAdvPropEx",
-		"FetchType": "SinglePropByPropID",
-		"SinglePropID": {
-			"GroupID": {
-				"IsDynamic": false,
-				"FixedValue": {
-					"Value": 474
-				}
-			},
-			"ID": {
-				"IsDynamic": false,
-				"FixedValue": {
-					"Value": 300004
-				}
-			}
-		}
-	},
-	"Flags": [],
-	"EffectPath": "Effects/Eff_Prefab/Eff_Monster/Eff_XP_Minion04_00/Eff_Monster_XP_Minion04_00_Common_Maze_SpecialAppear.prefab",
-	"SubObjectModifyDataList": []
-}</pre>
-:<pre>{
-	"$type": "RPG.GameCore.AdvCreateGroupEntity",
-	"InstanceIDList": [
-		300001
-	]
-}</pre>
-:<pre>{
-	"$type": "RPG.GameCore.SwitchCharacterAnchorV2",
-	"SwitchCharacterAnchorConfig": {
-		"IsLocalPlayer": true,
-		"CharacterUniqueName": "LocalPlayer",
-		"AreaName": {
-			"Value": "LevelArea_P20332_F20332001_G474"
-		},
-		"AnchorName": {
-			"Value": "Anchor1"
-		}
-	}
-}</pre>
+:{{tx}}
 {{Dialogue End}}
 
 ===Obtain the approval of the Blue Bird{{subst:void|<!--802310511-->}}===
 {{Dialogue Start}}
-;(Upon reaching the destination)
-
-;(Upon reaching the destination)
 :{{tx}}
-:'''Robin:''' Ah... So similar...
-:{{DIcon|Arrow}} What is?
-:'''Robin:''' Back when I was on a cosmic tour, a friend once gave me a children's book. The protagonist of the story was a hero without a name.
-:'''Robin:''' Tasked with the duty of vanquishing the demon lord and rescuing the princess, the hero walked every corner of the land, going on adventure after adventure.
-:'''Robin:''' During the journey, he occasionally encounters mischievous little sprites. They enjoy playing hide and seek, and when found, they emit a strange laughter, just like the little bird from earlier...
-:'''Robin:''' Although it's a tale for children, the story is incredibly exciting and engaging. During his journey, the hero encountered so many fantastic creatures and witnessed so many unique and breathtaking places.
-:'''Robin:''' He rode across fields, scaled snowy peaks, and crossed deserts, even reaching as far as the fiery core of the planet...
-:{{DIcon|Arrow}} Did he vanquish the demon lord in the end?
-:{{DIcon|Arrow}} Did he rescue the princess in the end?
-:{{DIcon|Arrow}} Return to (The Radiant Feldspar/The Trailblaze's Stern/The Tatalov/The Soaring Clock Hand)
 {{Dialogue End}}
 
 ===Return to (The Radiant Feldspar/The Trailblaze's Stern/The Tatalov/The Soaring Clock Hand) and achieve victory against Robin with the newly acquired arcade machine{{subst:void|<!--802310503-->}}===
 {{Dialogue Start}}
-
-;(Talk to Robin)
-:'''Robin:''' I'm ready, (Trailblazer).
-;(Upon reaching the destination)
-
-;(Upon reaching the destination)
-:'''(Trailblazer):''' This... you've changed so much that even your species is different now?
-:'''Robin:''' Of course, in dreams, people should be able to do as they please... Oh, by the way, (Trailblazer), I'm actually not very good at these games. Can you teach me?
-:{{DIcon|Travel Log}} Arcade Machine, it's tweetin' time!
-:<pre>{
-	"$type": "RPG.GameCore.SetPerformanceResult",
-	"Value": 1
-}</pre>
-:{{DIcon|Exit}} Just a moment. I have something else to do.
-<pre>{
-	"$type": "RPG.GameCore.AdvSetupButtonListTrigger",
-	"TargetType": {
-		"$type": "RPG.GameCore.GroupFetchLocalTarget",
-		"TargetType": "Prop",
-		"Targets": [
-			300001
-		]
-	},
-	"TriggerName": "MissionTrigger",
-	"ButtonsByName": [],
-	"ButtonConfigs": [
-		{
-			"ID": "PlayButton",
-			"IconType": "GeneralActivityIcon",
-			"ButtonText": {
-				"Value": "TalkSentenceName_GameConsole"
-			}
-		},
-		{
-			"ID": "DIYButton",
-			"IconType": "ChatLoopIcon",
-			"ButtonText": {
-				"Value": "TalkSentenceName_DIYPanel"
-			}
-		}
-	]
-}</pre>
+:{{tx}}
 {{Dialogue End}}
 
 ===Review the battle with Tinah afterwards{{subst:void|<!--802310504-->}}===
 {{Dialogue Start}}
-<pre>{
-	"$type": "RPG.GameCore.WaitUIControllerClose",
-	"UIControllerName": "MatchThreeMainEntrancePage"
-}</pre>
-:<!--0.5-second delay-->
-<pre>{
-	"$type": "RPG.GameCore.ShowUI",
-	"Name": "Ui.MatchThree.Entrance.MatchThreeNewBirdDialog",
-	"WaitForExit": true,
-	"Param": {
-		"Value": "304"
-	}
-}</pre>
-:'''March 7th:''' You're finally back, (Trailblazer)! Hurry up and play a match with me. This time around, I will avenge my previous loss!
-:'''March 7th:''' Huh... There are other people here as well. Who are you, miss?
-:'''Robin:''' It's me, Miss March. It's good to see you again.
-:'''March 7th:''' This voice... sounds like Ro&mdash; *cough, cough cough*!
-:'''Robin:''' This is why dreams are such wonderful things &mdash; it's so convenient to disguise myself, from my appearance to my voice.
-:'''March 7th:''' So convenient that I couldn't even recognize you at all, haha... So, are you also here to test out the game, Miss Robin? I think it's a really fun one...
-:'''Robin:''' Yes, I just played a match with (Trailblazer) and it was indeed quite interesting.
-:'''March 7th:''' Wha... I can't believe you didn't tell me about this, (Trailblazer)! I want to play the game with Miss Robin too... So, who won in the end?
-:{{DIcon|Arrow}} I did, of course!
-::'''March 7th:''' Hah, don't be so cocky. Later, let's have a one-on-one battle!
-:{{DIcon|Arrow}} I was just lucky.
-::'''March 7th:''' You're just pretending to be humble. Later, let's have a one-on-one battle!
-:'''March 7th:''' Oh right, (Trailblazer), you should place Miss Robin's Origami Bird first, so that I can take a look at it...
 :{{tx}}
-;(Unused &mdash; Activity230_PveResultClose)
-<pre>{
-	"$type": "RPG.GameCore.ClosePage",
-	"PageNames": [
-		"MatchThreeMainEntrancePage"
-	],
-	"PageRootNames": []
-}</pre>
 {{Dialogue End}}
 
 ===Achieve victory against Tinah with the newly acquired arcade machine{{subst:void|<!--802310505-->}}===
 {{Dialogue Start}}
-
-;(Talk to Tinah)
-:'''Tinah:''' You can start anytime you're ready, esteemed guests.
-;(Upon reaching the destination)
-
-;(Upon reaching the destination)
-:'''Tinah:''' You can start anytime you're ready, esteemed guests.
-:{{DIcon|Travel Log}} Arcade Machine, it's tweetin' time!
-:<pre>{
-	"$type": "RPG.GameCore.SetPerformanceResult",
-	"Value": 1
-}</pre>
-:{{DIcon|Exit}} Just a moment. I have something else to do.
-<pre>{
-	"$type": "RPG.GameCore.AdvSetupButtonListTrigger",
-	"TargetType": {
-		"$type": "RPG.GameCore.GroupFetchLocalTarget",
-		"TargetType": "Prop",
-		"Targets": [
-			300001
-		]
-	},
-	"TriggerName": "MissionTrigger",
-	"ButtonsByName": [],
-	"ButtonConfigs": [
-		{
-			"ID": "PlayButton",
-			"IconType": "GeneralActivityIcon",
-			"ButtonText": {
-				"Value": "TalkSentenceName_GameConsole"
-			}
-		},
-		{
-			"ID": "DIYButton",
-			"IconType": "ChatLoopIcon",
-			"ButtonText": {
-				"Value": "TalkSentenceName_DIYPanel"
-			}
-		}
-	]
-}</pre>
+:{{tx}}
 {{Dialogue End}}
 
 ===Review the battle with Tinah afterwards{{subst:void|<!--802310506-->}}===
 {{Dialogue Start}}
-
-:{{DIcon|Loupe}} Investigate
-<!--Unknown TalkSentence: 802310007-->
-<pre>{
-	"$type": "RPG.GameCore.WaitUIControllerClose",
-	"UIControllerName": "MatchThreeMainEntrancePage"
-}</pre>
-:'''Tinah:''' How impressive! No wonder you were able to come in first during the test, {{MC|f=Miss|m=Mr.}} (Trailblazer)!
-:'''Tinah:''' In that case, my heartiest congratulations, for this beautifully elegant and quietly dignified bird now belongs to you! Are you not going to place it right now?
-:As Tinah looks on, her eyes sparkling with anticipation, you place the Jadebird on the final arcade machine.
-:'''Tinah:''' Perfect! Utterly perfect... Alright, seeing as the test is coming to an end, shall we take a group photo to commemorate this moment?
-:'''March 7th:''' A photo? Sure thing, count me in! Ro... *ahem*, are you joining in?
-:'''Robin:''' Fine by me.
-:{{DIcon|Arrow}} (Wave at Firefly)
-:'''Firefly:''' Huh... I can be in the photo, too?
 :{{tx}}
-<pre>{
-	"$type": "RPG.GameCore.RequestChangeMatchThreeBirdLocation",
-	"BirdID": 305,
-	"LocationID": {
-		"IsDynamic": false,
-		"FixedValue": {
-			"Value": 6
-		}
-	}
-}</pre>
-;(Unused &mdash; Activity230_PveResultClose)
-<pre>{
-	"$type": "RPG.GameCore.ClosePage",
-	"PageNames": [
-		"MatchThreeMainEntrancePage"
-	],
-	"PageRootNames": []
-}</pre>
 {{Dialogue End}}
 
 ===(Optional) Place the Origami Birds on the arcade machines according to your preference{{subst:void|<!--802310507-->}}===
 {{Dialogue Start}}
-
-;(Talk to Listen)
 :{{tx}}
 {{Dialogue End}}
 
 ===Take a photo with players who participated in the test{{subst:void|<!--802310508-->}}===
 {{Dialogue Start}}
-
-;(Talk to Tinah)
-
-
+:{{tx}}
 {{Dialogue End}}
 
 ===Speak with Tinah and review the test with her{{subst:void|<!--802310509-->}}===
 {{Dialogue Start}}
-
-:{{DIcon|Loupe}} Investigate
-<!--Unknown TalkSentence: 802310009-->
-;(Upon reaching the destination)
-
-;(Upon reaching the destination)
 :{{tx}}
 {{Dialogue End}}
 

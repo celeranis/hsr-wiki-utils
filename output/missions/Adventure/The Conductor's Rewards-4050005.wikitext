@@ -40,34 +40,7 @@ PageTitle=#The Conductor's Rewards#
 ===Return to the Express and talk to Pom-Pom{{subst:void|<!--405000502-->}}===
 {{Mission Description|type=adventure|location=Parlor Car|update|Pom-Pom seems to have something to give you, go back and have a look.}}
 {{Dialogue Start}}
-<pre>{
-	"$type": "RPG.GameCore.WaitUIControllerClose",
-	"UIControllerName": "PhoneNoticePage"
-}</pre>
-<pre>{
-	"$type": "RPG.GameCore.WaitUIControllerClose",
-	"UIControllerName": "MobilePhonePage"
-}</pre>
-;(Upon reaching the destination)
-
-;(Upon reaching the destination)
-<pre>{
-	"$type": "RPG.GameCore.SetCharacterVisible",
-	"CharacterUniqueName": "PamMission_PamTut1",
-	"MuteColliderWhenInvisible": true
-}</pre>
-:The Conductor's Rewards
-:'''Pom-Pom:''' Tickets, please! ...Oh (Trailblazer), you're not the same person Pom-Pom first met! What's happened to you?
-:{{DIcon|Arrow}} I had a really fast growth spurt.
-:{{DIcon|Arrow}} The only thing that's changed is your opinion of me.
-:'''Pom-Pom:''' A conductor's eyes never lie. (Trailblazer), you are not the same person that you were!
 :{{tx}}
-
-;(Talk to Pom-Pom)
-:'''Pom-Pom:''' (Trailblazer)...
-<pre>{
-	"$type": "RPG.GameCore.ShowMenu"
-}</pre>
 {{Dialogue End}}
 
 ==Other Languages==

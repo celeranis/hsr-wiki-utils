@@ -42,150 +42,23 @@ PageTitle=#Grim Film of Finality#
 ===Go to Dreamflux Reef{{subst:void|<!--802330101-->}}===
 {{Mission Description|type=adventure|location=Dreamflux Reef|You suddenly feel a strong bout of anxiety while at Dreamflux Reef &mdash; As if something important is about to meet its end, and that you're about to encounter a miracle yet again... You stand up and pace around, waiting for the premonition to come true.}}
 {{Dialogue Start}}
-;(Unused &mdash; triggerper)
-:;(If {{Mission|Sleepless Night|showChapter=0}} has been completed)
-:;(If {{Mission|Sleepless Night|showChapter=0}} has not been completed)
-<pre>{
-	"$type": "RPG.GameCore.AddFinishMissionData_PlayMessage",
-	"SubmissionID": 802330107,
-	"MessageSectionID": 1309000,
-	"ShowNotice": true
-}</pre>
+:{{tx}}
 {{Dialogue End}}
 
 ===Speak with the mysterious puppet{{subst:void|<!--802330103-->}}===
 {{Mission Description|type=adventure|location=Dreamflux Reef|update|According to the address given by Dr. Edward, you arrive at "the city chiseled from the Primordial Dreamscape." However, there is no one here that looks like a "collaborative partner." The only thing here is a bizarre puppet. Could this be... Dr. Edward's "partner"?}}
 {{Dialogue Start}}
-
-:{{DIcon|Talk}} Elegy
-;(If {{cx}}<!--during performance 802330102-->)
-::'''???:''' "...The unknown forms are captivating, and the elusive shadows dance gracefully."
-::'''???:''' "Everything shall be reborn in the name of Destruction... at the moment of Finality and atop Finality's cliff..."
-::{{DIcon|Arrow}} Who are you?
-::'''Elegy:''' I seek the traces of Finality. You can call me Elegy.
-::'''Elegy:''' Finally, you're here... {{MC|f=Ms.|m=Mr.}} (Trailblazer) &mdash; the one who looked at the Apocalypse in the eye. I've been waiting for you for a long time.
-::The puppet wearing a black veil over her face doesn't move, yet you somehow feel that she gave you a small curtsy.
-::{{DIcon|Arrow}} You know me?
-:::'''Elegy:''' I've known you for longer than you can imagine, {{MC|f=Ms.|m=Mr.}} (Trailblazer).
-:::'''Elegy:''' I come from your Finality in search of the {{Rubi|shapeless prince|one against the current}}.
-::{{DIcon|Arrow}} Why are you dressed in mourning attire?
-:::'''Elegy:''' Because I'm the one who mourns for the dying world.
-:::'''Elegy:''' Time is flowing backward, and the world becomes increasingly fragmented every moment in &mdash; that's what I mourn for.
-::'''Elegy:''' You're here for those Apocalyptic Shadows, right?
-::{{DIcon|Arrow}} Do you make dream bubbles for Dr. Edward?
-::'''Elegy:''' You can see it that way, but Dr. Edward and I have different destinations. We only complement each other's needs {{Rubi|at this moment|where time intersects}}.
-::'''Elegy:''' I travel between civilizations at the moment of their obliteration and track down intelligence from countless annihilated worlds. As for Dr. Edward, he attaches more importance to the... "commercial value" of these traces.
-::{{DIcon|Arrow}} Are you a History Fictionologist?
-::{{DIcon|Arrow}} Are you a Messenger from the Garden of Recollection?
-::{{DIcon|Arrow}} Are you a Mourning Actor?
-::'''Elegy:''' No, I'm not mourning the worlds that are {{Rubi|already|eventually}} destroyed, but the {{Rubi|future|past}} that is destined to reach to Finality.
-::'''Elegy:''' Seeking traces of Finality... That is the calling of us Creed Exequies.
-::'''Elegy:''' {{MC|f=Ms.|m=Mr.}} (Trailblazer), memory is the breeding ground of dreams. Behind each of the many do-or-die battles you have experienced lies a potential Finality. The traces of Finality can probably be found therein.
-::'''Elegy:''' I'll reward you generously for your help. Would you be willing to share your {{Rubi|past|future}} dreams with me?
-;(If {{cx}}<!--not during performance 802330102-->)
-::'''Elegy:''' (Trailblazer), are you ready to gaze at the projection of Finality?
-:{{DIcon|Arrow}} What should I do?
-::'''Elegy:''' Please close your eyes and let me help you with the backtracking to see Finality's projection...
-:<pre>{
-	"$type": "RPG.GameCore.VerifyInteractingEntity",
-	"GroupID": 146,
-	"ConfigID": 300001
-}</pre>
-:<pre>{
-	"$type": "RPG.GameCore.ShowUI",
-	"Name": "Ui.ChallengeBoss.Entrance.ChallengeBossMainPage"
-}</pre>
-:{{DIcon|Exit}} Nah, I've got better stuff to do.
-::'''Elegy:''' I'll continue my wait here until you are fully prepared.
-;(Upon reaching the destination)
-
-;(Upon reaching the destination)
-:'''(Trailblazer):''' "The city chiseled from the Primordial Dreamscape"... Is that puppet over there the one who collaborates with Dr. Edward? Let me check it out.
+:{{tx}}
 {{Dialogue End}}
 
 ===Complete an Apocalyptic Shadow Challenge{{subst:void|<!--802330104-->}}===
 {{Dialogue Start}}
-
-:{{DIcon|Talk}} Elegy
-:'''Elegy:''' (Trailblazer), are you ready to gaze at the projection of Finality?
-:{{DIcon|Arrow}} What should I do?
-::'''Elegy:''' Please close your eyes and let me help you with the backtracking to see Finality's projection...
-:<pre>{
-	"$type": "RPG.GameCore.VerifyInteractingEntity",
-	"GroupID": 146,
-	"ConfigID": 300001
-}</pre>
-:<pre>{
-	"$type": "RPG.GameCore.ShowUI",
-	"Name": "Ui.ChallengeBoss.Entrance.ChallengeBossMainPage"
-}</pre>
-:{{DIcon|Exit}} Nah, I've got better stuff to do.
-::'''Elegy:''' I'll continue my wait here until you are fully prepared.
-;(Unused &mdash; openui)
-<pre>{
-	"$type": "RPG.GameCore.VerifyInteractingEntity",
-	"GroupID": 152,
-	"ConfigID": 300001
-}</pre>
-:<pre>{
-	"$type": "RPG.GameCore.ShowUI",
-	"Name": "Ui.ChallengeBoss.Entrance.ChallengeBossMainPage"
-}</pre>
+:{{tx}}
 {{Dialogue End}}
 
 ===Speak with the mysterious puppet{{subst:void|<!--802330105-->}}===
 {{Dialogue Start}}
-
-:{{DIcon|Talk}} Elegy
-;(If {{cx}}<!--during performance 802330102-->)
-::'''???:''' "...The unknown forms are captivating, and the elusive shadows dance gracefully."
-::'''???:''' "Everything shall be reborn in the name of Destruction... at the moment of Finality and atop Finality's cliff..."
-::{{DIcon|Arrow}} Who are you?
-::'''Elegy:''' I seek the traces of Finality. You can call me Elegy.
-::'''Elegy:''' Finally, you're here... {{MC|f=Ms.|m=Mr.}} (Trailblazer) &mdash; the one who looked at the Apocalypse in the eye. I've been waiting for you for a long time.
-::The puppet wearing a black veil over her face doesn't move, yet you somehow feel that she gave you a small curtsy.
-::{{DIcon|Arrow}} You know me?
-:::'''Elegy:''' I've known you for longer than you can imagine, {{MC|f=Ms.|m=Mr.}} (Trailblazer).
-:::'''Elegy:''' I come from your Finality in search of the {{Rubi|shapeless prince|one against the current}}.
-::{{DIcon|Arrow}} Why are you dressed in mourning attire?
-:::'''Elegy:''' Because I'm the one who mourns for the dying world.
-:::'''Elegy:''' Time is flowing backward, and the world becomes increasingly fragmented every moment in &mdash; that's what I mourn for.
-::'''Elegy:''' You're here for those Apocalyptic Shadows, right?
-::{{DIcon|Arrow}} Do you make dream bubbles for Dr. Edward?
-::'''Elegy:''' You can see it that way, but Dr. Edward and I have different destinations. We only complement each other's needs {{Rubi|at this moment|where time intersects}}.
-::'''Elegy:''' I travel between civilizations at the moment of their obliteration and track down intelligence from countless annihilated worlds. As for Dr. Edward, he attaches more importance to the... "commercial value" of these traces.
-::{{DIcon|Arrow}} Are you a History Fictionologist?
-::{{DIcon|Arrow}} Are you a Messenger from the Garden of Recollection?
-::{{DIcon|Arrow}} Are you a Mourning Actor?
-::'''Elegy:''' No, I'm not mourning the worlds that are {{Rubi|already|eventually}} destroyed, but the {{Rubi|future|past}} that is destined to reach to Finality.
-::'''Elegy:''' Seeking traces of Finality... That is the calling of us Creed Exequies.
-::'''Elegy:''' {{MC|f=Ms.|m=Mr.}} (Trailblazer), memory is the breeding ground of dreams. Behind each of the many do-or-die battles you have experienced lies a potential Finality. The traces of Finality can probably be found therein.
-::'''Elegy:''' I'll reward you generously for your help. Would you be willing to share your {{Rubi|past|future}} dreams with me?
-;(If {{cx}}<!--not during performance 802330102-->)
-::'''Elegy:''' (Trailblazer), are you ready to gaze at the projection of Finality?
-:{{DIcon|Arrow}} What should I do?
-::'''Elegy:''' Please close your eyes and let me help you with the backtracking to see Finality's projection...
-:<pre>{
-	"$type": "RPG.GameCore.VerifyInteractingEntity",
-	"GroupID": 146,
-	"ConfigID": 300001
-}</pre>
-:<pre>{
-	"$type": "RPG.GameCore.ShowUI",
-	"Name": "Ui.ChallengeBoss.Entrance.ChallengeBossMainPage"
-}</pre>
-:{{DIcon|Exit}} Nah, I've got better stuff to do.
-::'''Elegy:''' I'll continue my wait here until you are fully prepared.
-:'''Elegy:''' ...Although the desperate crises you have experienced did not bring about the Finality, it has made THEIR mumbling much clearer.
-:{{DIcon|Arrow}} Is the apocalypse inevitable?
-::'''Elegy:''' That day {{Rubi|will definitely|has already}} come.
-:{{DIcon|Arrow}} This battle didn't feel so intense at that time.
-::'''Elegy:''' Your subconscious has tampered with the real experience. The most terrifying experiences do not exist in the outside world but within one's soul.
-:'''Elegy:''' At some point in time earlier, I definitely caught THEIR murmuring. THEY said you {{Rubi|would join|had joined}} THEM in THEIR journey {{Rubi|in the near future|not too long ago}}.
-:{{DIcon|Arrow}} Why me?
-:'''Elegy:''' Because you have received THEIR grace.
-:'''Elegy:''' Wherever you walk, you are under THEIR gaze. What you practice is also THEIR prophecy that has {{Rubi|already been|yet to be}} announced. The stars are THEIR eyes, and the breeze is THEIR hands. Every disaster that befalls you is a revelation of Finality.
-:'''Elegy:''' I'll reward you as promised... If possible, please continue assisting me. Those images of the apocalypse can help my search for the {{Rubi|shapeless prince|one against the current}}.
+:{{tx}}
 {{Dialogue End}}
 
 ==Other Languages==

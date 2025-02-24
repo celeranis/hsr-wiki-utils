@@ -40,219 +40,24 @@ PageTitle=#Gentleness, the Name of Nocturne#
 ===Follow Firefly to the "secret spot"{{subst:void|<!--103040101-->}}===
 {{Mission Description|type=trailblaze|location=Golden Hour|Firefly has an extremely guilty look on her. She wants to take you to another place &mdash; not a tourist spot, but her very own "secret stronghold." Once there, she will explain all the secrets to you.<br />Follow her, as she does not seem to have ill intentions.}}
 {{Dialogue Start}}
-;(Upon reaching the destination)
-
-;(Upon reaching the destination)
-:{{A|VO chapter3 3 clock 101.ogg}} '''???:''' Tick-tock! Help! Help! Can anyone help me?
-<pre>{
-	"$type": "RPG.GameCore.PlayNPCBubbleTalk",
-	"BubbleTalkInfoList": [
-		{
-			"AutoSkipTime": 2,
-			"GroupID": 45,
-			"GroupNpcID": 400002,
-			"TalkSentenceID": 103035001
-		},
-		{
-			"AutoSkipTime": 2,
-			"GroupID": 45,
-			"GroupNpcID": 400002,
-			"TalkSentenceID": 103035002
-		}
-	],
-	"IsLoop": true,
-	"LoopInterval": 2
-}</pre>
-:{{A|VO chapter3 3 player 101 m.ogg}} {{A|VO chapter3 3 player 101 f.ogg}} '''(Trailblazer):''' (...Eh? Is something... crying for help over there?)
-
-;(Upon reaching the destination)
-:{{A|VO chapter3 3 clock 102.ogg}} '''???:''' Tick-tock! Help! Help me!
-:{{A|VO chapter3 3 clock 103.ogg}} '''???:''' Someone's dying! Please come here!
-:{{DIcon|Arrow}} What's going on?
-::{{A|VO chapter3 3 clock 104.ogg}} '''???:''' Didn't I make myself clear? Someone is dying! Please help!
-:{{DIcon|Arrow}} Are you asking for help?
-::{{A|VO chapter3 3 clock 105.ogg}} '''???:''' Yes, yes! Please help! Someone's life is in your hands!
-:{{DIcon|Arrow}} What kind of thing... are you?
-::{{A|VO chapter3 3 clock 106.ogg}} '''???:''' I'm not some random thing, I'm a clock!
-:{{A|VO chapter3 3 clock 107.ogg}} '''???:''' Wait... Can you... see me?
-:{{A|VO chapter3 3 firefly 117.ogg}} '''Firefly:''' ...Is there a problem?
-:{{DIcon|Arrow}} I can see a... clock with limbs.
-:{{DIcon|Arrow}} I think I'm seeing things...
-:{{DIcon|Arrow}} Nothing. It's inconsequential.
-:{{A|VO chapter3 3 clock 108.ogg}} '''???:''' Can you really see me?
 :{{tx}}
-
-;(Upon reaching the destination)
-:{{A|VO chapter3 3 firefly 116.ogg}} '''Firefly:''' Let's go this way...
-:{{A|VO chapter3 3 clock 119.ogg}} '''Clockie:''' Come on! Chop-chop! Move as fast as the Hamster Ball Knight!
 {{Dialogue End}}
 
 ===Follow Clockie{{subst:void|<!--103040103-->}}===
 {{Mission Description|type=trailblaze|location=Golden Hour|update|Firefly has an extremely guilty look on her. She wants to take you to another place &mdash; not a tourist spot, but her very own "secret stronghold." Once there, she will explain all the secrets to you.<br />As you go to follow her, you are stopped in your path by a talking clock. He begs you to help rescue Misha, the hotel bellboy. Perhaps you should go and take a look?}}
 {{Dialogue Start}}
-;(Upon reaching the destination)
-
-;(Upon reaching the destination)
-<pre>{
-	"$type": "RPG.GameCore.PlayMunicipalChat",
-	"NewMunicipalChatConfigPath": "Config/Level/MunicipalChatConfig/F10301001/MunicipalChatConfig_F10301001_0005.json",
-	"NewMunicipalChatEntityInfos": {
-		"Value": [
-			{
-				"$type": "RPG.GameCore.MunicipalChatEntityInfo",
-				"UniqueName": "1",
-				"GroupInstanceID": 400007
-			},
-			{
-				"$type": "RPG.GameCore.MunicipalChatEntityInfo",
-				"UniqueName": "2",
-				"GroupInstanceID": 400001
-			},
-			{
-				"$type": "RPG.GameCore.MunicipalChatEntityInfo",
-				"UniqueName": "3",
-				"GroupInstanceID": 400002
-			}
-		]
-	},
-	"MunicipalChatName": "MunicipalChatConfig_F10301001_0005"
-}</pre>
-:<!--0.5-second delay-->
-:{{A|VO chapter3 3 firefly 128.ogg}} '''Firefly:''' There's a crowd over there. Looks like something really did happen...
-:{{A|VO chapter3 3 clock 120.ogg}} '''Clockie:''' Tick-tock! He's there! He's there! See, Clockie does not tell lies!
-
-;(Upon reaching the destination)
-<pre>{
-	"$type": "RPG.GameCore.StopMunicipalChat",
-	"MunicipalChatName": "MunicipalChatConfig_F10301001_0005"
-}</pre>
-:{{A|VO chapter3 3 misha 101.ogg}} '''Misha:''' Everyone, please stay calm...
-:{{A|VO chapter3 3 rachG 101.ogg}} '''Gangster Boss:''' You broke the rules! And now you're gonna pay the price!
-:{{A|VO chapter3 3 rachC 101.ogg}} '''Gang Members:''' {{Size|36|Punish her, boss!}}
-:{{A|VO chapter3 3 acheron 101.ogg}} '''Acheron:''' How did it come to this...
-:{{DIcon|Arrow}} Isn't that Misha?
-::{{A|VO chapter3 3 firefly 129.ogg}} '''Firefly:''' Eh? Who's Misha?
-:{{DIcon|Arrow}} Isn't that Acheron?
-::{{A|VO chapter3 3 firefly 130.ogg}} '''Firefly:''' Eh? Do you know her?
-:{{DIcon|Arrow}} How come they are all people I know!?
-::{{A|VO chapter3 3 firefly 131.ogg}} '''Firefly:''' What do you mean by "all"?
-:{{A|VO chapter3 3 clock 121.ogg}} '''Clockie:''' See? I wasn't lying! Misha really is in trouble!
 :{{tx}}
-
-;(Upon reaching the destination)
-:<!--1-second delay-->
-<pre>{
-	"$type": "RPG.GameCore.AdvSetAIMoveTo",
-	"EntityInstanceID": {
-		"IsDynamic": false,
-		"FixedValue": {
-			"Value": 400008
-		}
-	},
-	"GroupId": 46,
-	"PointID": 4,
-	"MotionFlag": "Run",
-	"AlignRotation": true
-}</pre>
 {{Dialogue End}}
 
 ===Use the Clockwork on the Gangster Boss{{subst:void|<!--103040104-->}}===
 {{Mission Description|type=trailblaze|location=Golden Hour|update|As you follow Clockie to the scene of the incident, you realize that it's not only Misha who is under siege but also that Galaxy Ranger who is bad with directions. The situation seems bleak, so Clockie personally bestows you with a special technique: "Clockwork." According to Clockie, it can be used to "fill a person's body with positive emotions." ...Will this really work? You will have to try to find out.}}
 {{Dialogue Start}}
-
-
-;(Talk to Gangster Boss)
-:{{A|VO chapter3 3 rachG 103 m.ogg}} {{A|VO chapter3 3 rachG 103 f.ogg}} '''Gangster Boss:''' Mind your own business, {{MC|m=lad|f=lass}}! I have to let that lady there know she's messed with the wrong person!
-
-:{{DIcon|Talk}} Acheron & Misha
-:The two of you are too busy to chat. Use your Clockwork and solve your pressing issues first.
-:{{A|VO chapter3 3 misha 103.ogg}} '''Misha:''' We meet again! Are you the one who helped settle everything down here?
-:{{A|VO chapter3 3 clock 151.ogg}} '''Clockie:''' Misha, are you acquainted with this gray friend of mine?
-:{{A|VO chapter3 3 misha 104 m.ogg}} {{A|VO chapter3 3 misha 104 f.ogg}} '''Misha:''' {{MC|m=He|f=She}}'s an esteemed guest whom I've befriended recently. I told you about {{MC|m=him|f=her}} before. Does it ring a bell?
-:{{A|VO chapter3 3 clock 152 m.ogg}} {{A|VO chapter3 3 clock 152 f.ogg}} '''Clockie:''' Oh, it's {{MC|m=him|f=her}}!
-:{{A|VO chapter3 3 misha 105.ogg}} '''Misha:''' Anyway, thanks a lot! If you hadn't gotten here in time, I would have been in a real mess...
-:{{A|VO chapter3 3 acheron 103 m.ogg}} {{A|VO chapter3 3 acheron 103 f.ogg}} '''Acheron:''' Thank you, (Trailblazer). I'm surprised we get to see each other again so soon.
-:{{DIcon|Arrow}} No need to thank me. It's the least I can do.
-:{{DIcon|Arrow}} I'm surprised too.
-:{{A|VO chapter3 3 acheron 104.ogg}} '''Acheron:''' About all the commotion just now... I heard a bunch of Masked Fools were causing a ruckus on the streets. I happened to be passing through, got stopped for questioning, and there were some... misunderstandings along the way. Anyway, I owe you another one.
-:{{A|VO chapter3 3 firefly 135.ogg}} '''Firefly:''' Is this lady... your friend too?
-:{{A|VO chapter3 3 acheron 105 m.ogg}} {{A|VO chapter3 3 acheron 105 f.ogg}} '''Acheron:''' Well, we've only met each other once before. But {{MC|m=he|f=she}} is a kind soul for helping me at the hotel.
-:{{A|VO chapter3 3 acheron 106.ogg}} '''Acheron:''' It's my pleasure to meet you, beautiful lady.
-:{{A|VO chapter3 3 firefly 136.ogg}} '''Firefly:''' B&mdash;Beautiful lady...
-:{{A|VO chapter3 3 acheron 107.ogg}} '''Acheron:''' By the way, what did you do to that man earlier? It was like someone took him on an emotional roller coaster.
-:{{A|VO chapter3 3 firefly 137.ogg}} '''Firefly:''' I was wondering about that too... What happened back there, exactly?
-:{{DIcon|Arrow}} Clockie taught me some Clockwork.
-::{{A|VO chapter3 3 clock 153.ogg}} '''Clockie:''' That's right! It was me, Clockie!
-::{{A|VO chapter3 3 clock 154.ogg}} '''Clockie:''' Of course, you played a big part too. Without you doing the Clockwork, Dreamville would've been in some real trouble!
-:{{DIcon|Arrow}} Talk therapy. I used that on him.
-::{{A|VO chapter3 3 clock 155.ogg}} '''Clockie:''' What're you talking about? It wasn't talk therapy! It was Clockwork!
-::{{A|VO chapter3 3 acheron 108.ogg}} '''Acheron:''' I don't think it's that simple.
-::{{A|VO chapter3 3 firefly 138.ogg}} '''Firefly:''' Could it have something to do with... That Clockie that only you can see?
-:{{DIcon|Arrow}} It's only natural for people to get intimidated by my baseball bat.
-::{{A|VO chapter3 3 clock 156.ogg}} '''Clockie:''' What're you talking about? It wasn't the baseball bat! It was Clockwork!
-::{{A|VO chapter3 3 acheron 109.ogg}} '''Acheron:''' I don't think it's that simple.
-::{{A|VO chapter3 3 firefly 139.ogg}} '''Firefly:''' Could it have something to do with... That Clockie that only you can see?
-:{{A|VO chapter3 3 acheron 110.ogg}} '''Acheron:''' ...Clockie?
 :{{tx}}
-;(Unused &mdash; random_103040105_1)
-:{{tx}}
-::{{tx}}
-
-;(Unused &mdash; random_103040105_2)
-:{{tx}}
-::{{tx}}
-
-;(Unused &mdash; random_103040105_3)
-:{{tx}}
-::{{tx}}
-:{{A|VO chapter3 3 firefly 145.ogg}} '''Firefly:''' Please come with me. I hope you won't be distracted by some invisible friend again...
 {{Dialogue End}}
 
 ===Keep following Firefly to the "secret spot"{{subst:void|<!--103040107-->}}===
 {{Mission Description|type=trailblaze|location=Golden Hour|update|After resolving Clockie's crisis, you say farewell to everyone. Next, it's onward to Firefly's "secret stronghold"... If you still remember that.}}
 {{Dialogue Start}}
-
-;(If {{F|FSV_PinBall}} is equal to 0)
-:<pre>{
-	"$type": "RPG.GameCore.TriggerEntityServerEvent"
-}</pre>
-;(If {{F|FSV_PinBall}} is not equal to 0)
-:;(Return to previous option selection)
-;(Upon reaching the destination)
-
-;(Upon reaching the destination)
-:{{A|VO chapter3 3 firefly 146.ogg}} '''Firefly:''' Sorry, I'm afraid we need to take the pinball machine to reach this place... You go first, and I'll be right behind you.
-
-:{{DIcon|undefined}} 
-;(Upon reaching the destination)
-
-;(Upon reaching the destination)
-:{{A|VO chapter3 3 player 103 m.ogg}} {{A|VO chapter3 3 player 103 f.ogg}} '''(Trailblazer):''' (Her secret stronghold is... a cafe?)
-<pre>{
-	"$type": "RPG.GameCore.WaitMissionTalkFinish"
-}</pre>
-:{{A|VO chapter3 3 firefly 154.ogg}} '''Firefly:''' Here...
-<pre>{
-	"$type": "RPG.GameCore.WaitMissionTalkFinish"
-}</pre>
-;(Upon reaching the destination)
-
-;(Upon reaching the destination)
-:{{tx}}
-:{{A|VO chapter3 3 firefly 147.ogg}} '''Firefly:''' Here we are. This is the place.
-:{{DIcon|Arrow}} This place looks mighty fine.
-:{{DIcon|Arrow}} Is this your secret stronghold?
-:{{A|VO chapter3 3 firefly 148.ogg}} '''Firefly:''' No, it isn't...
-:{{A|VO chapter3 3 firefly 149.ogg}} '''Firefly:''' ...This is.
-:{{DIcon|Arrow}} What a beautiful manhole cover.
-:{{DIcon|Arrow}} Is this... your secret stronghold?
-:{{A|VO chapter3 3 firefly 150.ogg}} '''Firefly:''' Yes, it's right inside.
-:{{DIcon|Arrow}} Inside? What does that mean?
-::{{A|VO chapter3 3 firefly 151.ogg}} '''Firefly:''' Just the literal meaning.
-:{{DIcon|Arrow}} Do you want me... to crawl in there?
-:{{DIcon|Arrow}} This is embarrassing. People are watching us...
-::{{A|VO chapter3 3 firefly 152.ogg}} '''Firefly:''' It doesn't matter! Anything can happen in a dream, and there are lots of people falling from the sky every day. The pedestrians aren't going to be fazed by anything.
-:{{A|VO chapter3 3 firefly 153.ogg}} '''Firefly:''' Let me show you how to do it. It's going to be very dark at first, so you'll have to stay close to me.
 :{{tx}}
 {{Dialogue End}}
 

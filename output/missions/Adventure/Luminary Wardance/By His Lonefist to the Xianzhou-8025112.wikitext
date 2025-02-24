@@ -48,484 +48,58 @@ PageTitle=#By His Lonefist to the Xianzhou#
 ===Return to the lounge{{subst:void|<!--802511201-->}}===
 {{Mission Description|type=adventure|location=Skysplitter|The tense and exciting match draws to a temporary close. It's time to have a quick breather.<br />Use this time to prepare for the upcoming match.}}
 {{Dialogue Start}}
-;(If {{cx}}<!--SubMission Finish: 802511202--> or {{cx}}<!--SubMission Finish: 802511203-->)
-<pre>{
-	"$type": "RPG.GameCore.AdvDestroyGroupEntity",
-	"InstanceIDList": [
-		400001,
-		400002,
-		400003
-	]
-}</pre>
-;(Unused &mdash; EnterArea_G78)
-::{{A|VO side2 yanwu luka 233.ogg}} '''Luka:''' What does the Divination Commission do again...
-:::{{A|VO side2 yanwu camera 132.ogg}} '''Carmella:''' A simple explanation would be that they are the information technology department on the Xianzhou. They are mainly responsible for predicting the future.
-:::{{A|VO side2 yanwu luka 234.ogg}} '''Luka:''' Predicting... the future? I guess they're kind of a big deal! At first I thought she was a little awkward, but I guess she just doesn't like socializing.
-:::{{A|VO side2 yanwu luka 235.ogg}} '''Luka:''' What should we do first... See a doctor, or go to the Divination Commission?
-:::{{DIcon|Arrow}} It's more important to see a doctor. Let's go to the Alchemy Commission first.
-::::{{A|VO side2 yanwu camera 133.ogg}} '''Carmella:''' I agree. If the hallucinations are getting bad, we should see a doctor sooner rather than later.
-:::{{DIcon|Arrow}} We don't want to keep Lynx waiting too long. Let's go to the Divination Commission.
-::::{{A|VO side2 yanwu luka 236.ogg}} '''Luka:''' Actually, I'm not too sure how long it takes to see a doctor. Let's meet up with Lynx at the Divination Commission first.
-:::{{tx}}
-::<pre>{
-	"$type": "RPG.GameCore.SetPerformanceResult",
-	"Value": 2
-}</pre>
-:::{{A|VO side2 yanwu hook 105.ogg}} '''Hook:''' I wanna go too! I wanna go too!
-:::{{tx}}
-::<pre>{
-	"$type": "RPG.GameCore.AdvDestroyGroupEntity",
-	"InstanceIDList": [
-		400001,
-		400002,
-		400003
-	]
-}</pre>
-::{{A|VO side2 yanwu luka 225.ogg}} '''Luka:''' My hallucinations are getting worse. When I was fighting Topaz... Do you know who I saw?
-:::{{A|VO side2 yanwu luka 226.ogg}} '''Luka:''' I saw Madam Cocolia, standing at the other end of the ring, summoning blades of ice aimed at me...
-:::{{DIcon|Arrow}} It sounds like your problem is getting serious.
-::::{{A|VO side2 yanwu luka 227.ogg}} '''Luka:''' I guess so. I don't think this is just some simple "culture shock" issue...
-:::{{DIcon|Arrow}} Maybe the Supreme Guardian is watching over you.
-::::{{A|VO side2 yanwu luka 228.ogg}} '''Luka:''' How's that watching over me!? Raining down a hail of ice on my face, that really hurt!
-:::{{A|VO side2 yanwu hook 103.ogg}} '''Hook:''' Ooh! I know! It's gotta be some IPC baddie dressed up as the Supreme Guardian so you would hesitate to attack Topaz!
-:::{{A|VO side2 yanwu camera 131.ogg}} '''Carmella:''' There's a break coming up, so there won't be any fights. Luka, you can use this chance to rest and recuperate.
-:::{{A|VO side2 yanwu luka 229.ogg}} '''Luka:''' Mm, I do need a break. I'm not actually an iron man or anything. Speaking of which... Pitch-Dark Hook the Great, what are you doing here on your own? Where'd Svarog go?
-:::{{A|VO side2 yanwu hook 104.ogg}} '''Hook:''' Svarog said he needed to do some data sampling. He asked Hook to wait for him here and not disturb Luka. Hook has been a goodie and waiting here alone!
-:::{{A|VO side2 yanwu luka 230.ogg}} '''Luka:''' Data sampling? Forget it. It's not something I should be worrying about...
-:::{{A|VO side2 yanwu luka 231 m.ogg}} {{A|VO side2 yanwu luka 231 f.ogg}} '''Luka:''' (Trailblazer), I think I need to get my symptoms looked at. But, where can I see a doctor on the Xianzhou?
-:::{{DIcon|Arrow}} Let's go to the Alchemy Commission. I know someone there.
-:::{{A|VO side2 yanwu luka 232.ogg}} '''Luka:''' Please, if you don't mind. I hope they are as good as Natasha.
-:::{{tx}}
-::<pre>{
-	"$type": "RPG.GameCore.SwitchCharacterAnchorV2",
-	"SwitchCharacterAnchorConfig": {
-		"IsLocalPlayer": true,
-		"CharacterUniqueName": "LocalPlayer",
-		"AreaName": {
-			"Value": "LevelArea_P20242_F20242001_G78"
-		},
-		"AnchorName": {
-			"Value": "Anchor2"
-		},
-		"ResetAnimation": true,
-		"ResetCamera": true
-	}
-}</pre>
+:{{tx}}
 {{Dialogue End}}
 
 ===Listen to Qingque's analysis regarding the jade abacus{{subst:void|<!--802511207-->}}===
 {{Mission Description|type=adventure|location=Divination Commission|update|Qingque fixed some information in the jade abacus. View them together with the others.<br />Slack off when working (or studying) on your main job, but extremely efficient when working on personal jobs that have nothing to do with your actual job &mdash; Be honest. Are you like this too?}}
 {{Dialogue Start}}
-
-;(Talk to Lynx)
-:{{A|VO side2 yanwu qingque 111.ogg}} '''Qingque:''' Is this the friend that you mentioned? Luka? Pleased to finally meet you. I keep seeing you in the news! My name is Qingque, a diviner from the Divination Commission.
-:{{A|VO side2 yanwu qingque 112.ogg}} '''Qingque:''' Miss Lynx has told me everything. She also said she found some rare antique that she hopes I can fix.
-:{{A|VO side2 yanwu qingque 113.ogg}} '''Qingque:''' At first glance, I knew it was a jade abacus... and an old model from centuries ago too. Out of curiosity, I accepted the job to restore the data inside it.
-:{{DIcon|Arrow}} You actually accepted a job without resistance?
-:{{DIcon|Arrow}} That's not like you at all, Qingque!
-:{{A|VO side2 yanwu qingque 114.ogg}} '''Qingque:''' ...Nothing gets past you. You know that the master diviner has returned to the Yuque on business? Before she departed, she left me with a mountain of data, spreadsheets, and even more data and spreadsheets... My eyes were seeing stars!
 :{{tx}}
-----
-:{{tx}}
-:{{A|VO side2 yanwu luka 243.ogg}} '''Luka:''' ...
-:{{A|VO side2 yanwu lynx 108.ogg}} '''Lynx:''' ...
-:{{A|VO side2 yanwu qingque 118.ogg}} '''Qingque:''' ...
-:{{DIcon|Arrow}} This is sad, nobody's saying anything.
-::{{A|VO side2 yanwu lynx 109.ogg}} '''Lynx:''' I don't know what to say.
-:{{DIcon|Arrow}} (Remain silent)
-::{{A|VO side2 yanwu qingque 119.ogg}} '''Qingque:''' This story... got much heavier than anticipated...
-:{{A|VO side2 yanwu lynx 110.ogg}} '''Lynx:''' Igor left his home planet before the Antimatter Legion invaded. When he participated in all the fighting tournaments across the cosmos, he would address the audience with a speech after he won, hoping that would raise awareness about the Antimatter Legion and save his planet.
-:{{tx}}
-
-;(Talk to Qingque)
-:{{A|VO side2 yanwu qingque 111.ogg}} '''Qingque:''' Is this the friend that you mentioned? Luka? Pleased to finally meet you. I keep seeing you in the news! My name is Qingque, a diviner from the Divination Commission.
-:{{A|VO side2 yanwu qingque 112.ogg}} '''Qingque:''' Miss Lynx has told me everything. She also said she found some rare antique that she hopes I can fix.
-:{{A|VO side2 yanwu qingque 113.ogg}} '''Qingque:''' At first glance, I knew it was a jade abacus... and an old model from centuries ago too. Out of curiosity, I accepted the job to restore the data inside it.
-:{{DIcon|Arrow}} You actually accepted a job without resistance?
-:{{DIcon|Arrow}} That's not like you at all, Qingque!
-:{{A|VO side2 yanwu qingque 114.ogg}} '''Qingque:''' ...Nothing gets past you. You know that the master diviner has returned to the Yuque on business? Before she departed, she left me with a mountain of data, spreadsheets, and even more data and spreadsheets... My eyes were seeing stars!
-:{{tx}}
-----
-:{{tx}}
-:{{A|VO side2 yanwu luka 243.ogg}} '''Luka:''' ...
-:{{A|VO side2 yanwu lynx 108.ogg}} '''Lynx:''' ...
-:{{A|VO side2 yanwu qingque 118.ogg}} '''Qingque:''' ...
-:{{DIcon|Arrow}} This is sad, nobody's saying anything.
-::{{A|VO side2 yanwu lynx 109.ogg}} '''Lynx:''' I don't know what to say.
-:{{DIcon|Arrow}} (Remain silent)
-::{{A|VO side2 yanwu qingque 119.ogg}} '''Qingque:''' This story... got much heavier than anticipated...
-:{{A|VO side2 yanwu lynx 110.ogg}} '''Lynx:''' Igor left his home planet before the Antimatter Legion invaded. When he participated in all the fighting tournaments across the cosmos, he would address the audience with a speech after he won, hoping that would raise awareness about the Antimatter Legion and save his planet.
-:{{tx}}
-
-;(Talk to Game-Obsessed Diviner)
-:{{A|VO side2 yanwu buzhe 123.ogg}} '''Game-Obsessed Diviner:''' We put out an ad in the newspaper, you should look out for it!
-
 {{Dialogue End}}
 
 ===Go to the Alchemy Commission with Luka about the hallucination{{subst:void|<!--802511208-->}}===
 {{Mission Description|type=adventure|location=Alchemy Commission|update|Luka's hallucinations are getting worse. You decide to take him to the Alchemy Commission to see a healer.}}
 {{Dialogue Start}}
-
-;(Unused &mdash; EnterArea_G183)
 :{{tx}}
-::{{A|VO side2 yanwu luka 253.ogg}} '''Luka:''' Woah! This is the Alchemy Commission? This whole place is a hospital? Can it get any bigger than this?
-::{{DIcon|Arrow}} This isn't really a hospital, but a research institute.
-:::{{A|VO side2 yanwu luka 254.ogg}} '''Luka:''' Wow! Cutting edge medicine. You must really be something to bring me straight here to get treated!
-::{{DIcon|Arrow}} And this is just the lowest-ranking department.
-:::{{A|VO side2 yanwu luka 255.ogg}} '''Luka:''' This is the smallest of all departments? This... This is just unbelievable...
-:::{{A|VO side2 yanwu lingsha 101.ogg}} '''Lingsha:''' A few patches should do the trick.
-:::{{A|VO side2 yanwu luka 256.ogg}} '''Luka:''' Oh! Isn't that Miss Sushang? What's she doing here?
-:::{{A|VO side2 yanwu luka 257.ogg}} '''Luka:''' Miss Sushang, what a coincidence! I guess you have a problem too?
-:::{{A|VO side2 yanwu sushang 126.ogg}} '''Sushang:''' What sort of greeting is that!? You're the one with the problem!
-:::{{A|VO side2 yanwu luka 258.ogg}} '''Luka:''' Fine! Sorry, I mean... Are you here to see a doctor too?
-:::{{A|VO side2 yanwu sushang 127.ogg}} '''Sushang:''' No, I came here to help my Cloud Knight coworkers get medication for their bruises and swelling.
-:::{{A|VO side2 yanwu luka 259.ogg}} '''Luka:''' ...Sorry, I went too hard on them.
-:::{{A|VO side2 yanwu sushang 128.ogg}} '''Sushang:''' It was a fair match, so no one's to blame. Actually, we should be grateful to you &mdash; they were so impressed by your abilities that they said they want to train harder.
-:::{{A|VO side2 yanwu lingsha 102 m.ogg}} {{A|VO side2 yanwu lingsha 102 f.ogg}} '''Lingsha:''' (Trailblazer), we meet again. Who is this beside you?
-:<pre>{
-	"$type": "RPG.GameCore.SwitchCharacterAnchorV2",
-	"SwitchCharacterAnchorConfig": {
-		"IsLocalPlayer": true,
-		"CharacterUniqueName": "LocalPlayer",
-		"AreaName": {
-			"Value": "LevelArea_P20231_F20231001_G1"
-		},
-		"AnchorName": {
-			"Value": "CheckPoint02"
-		},
-		"ResetAnimation": true,
-		"ResetCamera": true
-	}
-}</pre>
 {{Dialogue End}}
 
 ===Ask Lingsha to diagnose Luka{{subst:void|<!--802511209-->}}===
 {{Mission Description|type=adventure|location=Alchemy Commission|update|Luka's hallucinations are getting worse. You decide to take him to the Alchemy Commission to see a healer.<br />Who'd have thought that you'd run into the Alchemy Commission's Cauldron Master, Lingsha? You are lucky to have the Cauldron Master do a specialist consultation!}}
 {{Dialogue Start}}
-
-;(Talk to Sushang)
-:{{A|VO side2 yanwu lingsha 101.ogg}} '''Lingsha:''' A few patches should do the trick.
-:{{A|VO side2 yanwu luka 256.ogg}} '''Luka:''' Oh! Isn't that Miss Sushang? What's she doing here?
-:{{A|VO side2 yanwu luka 257.ogg}} '''Luka:''' Miss Sushang, what a coincidence! I guess you have a problem too?
-:{{A|VO side2 yanwu sushang 126.ogg}} '''Sushang:''' What sort of greeting is that!? You're the one with the problem!
-:{{A|VO side2 yanwu luka 258.ogg}} '''Luka:''' Fine! Sorry, I mean... Are you here to see a doctor too?
-:{{A|VO side2 yanwu sushang 127.ogg}} '''Sushang:''' No, I came here to help my Cloud Knight coworkers get medication for their bruises and swelling.
-:{{A|VO side2 yanwu luka 259.ogg}} '''Luka:''' ...Sorry, I went too hard on them.
-:{{A|VO side2 yanwu sushang 128.ogg}} '''Sushang:''' It was a fair match, so no one's to blame. Actually, we should be grateful to you &mdash; they were so impressed by your abilities that they said they want to train harder.
-:{{A|VO side2 yanwu lingsha 102 m.ogg}} {{A|VO side2 yanwu lingsha 102 f.ogg}} '''Lingsha:''' (Trailblazer), we meet again. Who is this beside you?
-:{{DIcon|Arrow}} A Wardance contestant.
-:{{DIcon|Arrow}} A foreign visitor from Belobog.
-:{{DIcon|Arrow}} The thug who beat up the kind Cloud Knights.
-::{{A|VO side2 yanwu luka 260.ogg}} '''Luka:''' It was a martial contest! Open and fair! I swear I didn't do anything unjust!
-:{{A|VO side2 yanwu luka 261 m.ogg}} {{A|VO side2 yanwu luka 261 f.ogg}} '''Luka:''' Hello, I'm Luka, a friend of (Trailblazer)'s. I'm from Belobog, and a contestant in the current Wardance!
 :{{tx}}
-:{{tx}}
-<pre>{
-	"$type": "RPG.GameCore.SwitchCharacterAnchorV2",
-	"SwitchCharacterAnchorConfig": {
-		"IsLocalPlayer": true,
-		"CharacterUniqueName": "LocalPlayer",
-		"AreaName": {
-			"Value": "LevelArea_P20231_F20231001_G176"
-		},
-		"AnchorName": {
-			"Value": "Anchor1"
-		},
-		"ResetAnimation": true,
-		"ResetCamera": true
-	}
-}</pre>
-
-;(Unused &mdash; Create_G176_300001)
-<pre>{
-	"$type": "RPG.GameCore.AdvCreateGroupEntity",
-	"InstanceIDList": [
-		300001
-	]
-}</pre>
 {{Dialogue End}}
 
 ===Wait for Lingsha's medical diagnosis{{subst:void|<!--802511216-->}}===
 {{Dialogue Start}}
-
-;(Talk to Lingsha)
-:{{A|VO side2 yanwu lingsha 109.ogg}} '''Lingsha:''' Hmm...
-:{{A|VO side2 yanwu luka 264.ogg}} '''Luka:''' Cauldron Master, what do you see? Is there any hope for me?
-:{{A|VO side2 yanwu lingsha 110.ogg}} '''Lingsha:''' Hmm...
-:{{A|VO side2 yanwu player 118 m.ogg}} {{A|VO side2 yanwu player 118 f.ogg}} '''(Trailblazer):''' Hmm...
-:{{A|VO side2 yanwu lingsha 111.ogg}} '''Lingsha:''' There's a huge shadow in his brain... Could it be...
-:{{A|VO side2 yanwu luka 265.ogg}} '''Luka:''' I&mdash;I'm too young to die, Doc...
-:{{DIcon|Arrow}} Don't worry, Luka. Let's stay positive and focus on the treatment.
-::{{A|VO side2 yanwu luka 266.ogg}} '''Luka:''' I'll do it, I'll stay positive and defeat the demons of this illness.
-:{{DIcon|Arrow}} Could it be a mistake?
-:{{A|VO side2 yanwu sushang 131.ogg}} '''Sushang:''' Ah... That shadow looks a lot like my hand.
 :{{tx}}
-<pre>{
-	"$type": "RPG.GameCore.AdvDestroyGroupEntity",
-	"InstanceIDList": [
-		400001,
-		400002,
-		400003
-	]
-}</pre>
-<pre>{
-	"$type": "RPG.GameCore.SwitchCharacterAnchorV2",
-	"SwitchCharacterAnchorConfig": {
-		"IsLocalPlayer": true,
-		"CharacterUniqueName": "LocalPlayer",
-		"AreaName": {
-			"Value": "LevelArea_P20231_F20231001_G180"
-		},
-		"AnchorName": {
-			"Value": "Anchor1"
-		},
-		"ResetAnimation": true,
-		"ResetCamera": true
-	}
-}</pre>
-
 {{Dialogue End}}
 
 ===Wait for Lingsha to retrieve her healing apparatus{{subst:void|<!--802511217-->}}===
 {{Dialogue Start}}
-
-;(Talk to Sushang)
 :{{tx}}
-:{{A|VO side2 yanwu sushang 134.ogg}} '''Sushang:''' Lady Lingsha said that these medical patches are very effective... But we're fighting again tomorrow, will it be enough?
-:{{DIcon|Arrow}} I thought you guys were eliminated?
-::{{A|VO side2 yanwu sushang 135.ogg}} '''Sushang:''' We were, but we've been revived.
-:{{DIcon|Arrow}} Are there other competitions happening?
-::{{A|VO side2 yanwu sushang 136.ogg}} '''Sushang:''' Nope.
-:{{A|VO side2 yanwu sushang 137.ogg}} '''Sushang:''' You guys didn't know? The Wardance has a "popularity revival" rule. If eliminated contenders or teams garner enough popularity votes in online polls, they can participate in the repechage and re-enter the ring!
-:{{A|VO side2 yanwu luka 274.ogg}} '''Luka:''' So Miss Sushang's team is really popular then?
-:{{A|VO side2 yanwu sushang 138.ogg}} '''Sushang:''' Heheh, it's all mainly thanks to my good friend, Lil Gui! All she has to do is tap a finger on the internet, and our popularity votes will blast through the roof like a comet!
-:{{DIcon|Arrow}} You mean like a rocket?
-::{{A|VO side2 yanwu sushang 139.ogg}} '''Sushang:''' You know what I mean!
-:{{DIcon|Arrow}} You mean like a crocket?
-::{{A|VO side2 yanwu sushang 140.ogg}} '''Sushang:''' Are you sure? I'm not well-read, so I might really believe you!
-<pre>{
-	"$type": "RPG.GameCore.AdvCreateGroupEntity",
-	"InstanceIDList": [
-		400003,
-		400004
-	]
-}</pre>
-<pre>{
-	"$type": "RPG.GameCore.AdvDestroyGroupEntity",
-	"InstanceIDList": [
-		400002
-	]
-}</pre>
-<pre>{
-	"$type": "RPG.GameCore.SwitchCharacterAnchorV2",
-	"SwitchCharacterAnchorConfig": {
-		"IsLocalPlayer": true,
-		"CharacterUniqueName": "LocalPlayer",
-		"AreaName": {
-			"Value": "LevelArea_P20231_F20231001_G181"
-		},
-		"AnchorName": {
-			"Value": "Anchor1"
-		}
-	}
-}</pre>
-:{{tx}}
-
 {{Dialogue End}}
 
 ===Speak with the tuskpir{{subst:void|<!--802511210-->}}===
 {{Mission Description|type=adventure|location=Alchemy Commission|update|A philosophical tuskpir once said: "Moo moo moo~ Moo! Moo moo!"<br />Translated into the language used by the Nameless, it means:<br />"The day is like a dream, and dreams are reality."}}
 {{Dialogue Start}}
-
-;(Talk to Tuskpir)
-
-<pre>{
-	"$type": "RPG.GameCore.SwitchCharacterAnchorV2",
-	"SwitchCharacterAnchorConfig": {
-		"IsLocalPlayer": true,
-		"CharacterUniqueName": "LocalPlayer",
-		"AreaName": {
-			"Value": "LevelArea_P20231_F20231001_G182"
-		},
-		"AnchorName": {
-			"Value": "Anchor1"
-		},
-		"ResetAnimation": true,
-		"ResetCamera": true
-	}
-}</pre>
-:{{A|VO side2 yanwu sushang 142.ogg}} '''Sushang:''' Whoa... What is it? Touch it! Touch it!
-:{{A|VO side2 yanwu mengmo 101.ogg}} '''Tuskpir:''' Mehr mehr! Mehr!
-:{{A|VO side2 yanwu sushang 143.ogg}} '''Sushang:''' Ooh... It's too cute! You're just like a strawberry bun! Little sweetie!
-:{{DIcon|Arrow}} Please come back to your senses, Sushang.
-::{{A|VO side2 yanwu sushang 144.ogg}} '''Sushang:''' Never! I can't stay rational in the face of such cuteness!
-:{{DIcon|Arrow}} Please stay calm, Sushang.
-::{{A|VO side2 yanwu sushang 145.ogg}} '''Sushang:''' Never! I can't stay calm in the face of such cuteness!
-:{{A|VO side2 yanwu lingsha 122.ogg}} '''Lingsha:''' This is a Tuskpir of the Xianzhou Zhuming: Warm, sweet, not for consumption.
-:{{A|VO side2 yanwu luka 276.ogg}} '''Luka:''' It's pretty cute, but how can it make me better?
-:{{A|VO side2 yanwu lingsha 123.ogg}} '''Lingsha:''' The tuskpir is a creature that subsists on memoria. Hugging it while you fall asleep can raise your sleep quality, treat insomnia, and relieve anxiety and depression.
-:{{A|VO side2 yanwu lingsha 124.ogg}} '''Lingsha:''' And, the tuskpir loves "strong" memoria: The more depressed you are, the more happy it'll be. Isn't that right, little fella?
-:{{A|VO side2 yanwu mengmo 102.ogg}} '''Tuskpir:''' Mehr mehr, mehr!
-:{{A|VO side2 yanwu luka 277.ogg}} '''Luka:''' Sounds great! Er, how much?
-:{{A|VO side2 yanwu lingsha 125.ogg}} '''Lingsha:''' Don't worry. This tuskpir is a personal pet of mine. I can lend it to you for this treatment, but you have to take good care of it for me.
-:{{A|VO side2 yanwu luka 278.ogg}} '''Luka:''' I can't thank you enough. All throughout my journey, I've received so much help from the Alliance. I will definitely repay everyone.
-:{{A|VO side2 yanwu sushang 146.ogg}} '''Sushang:''' Oh! Oh! You two! You guys have something important to attend to later, right? It must be awfully tiring lugging this cutie-pie around, right? Right? Right!?
-:{{DIcon|Arrow}} What are you up to...
-::{{A|VO side2 yanwu sushang 147.ogg}} '''Sushang:''' Stop staring at me with those wary eyes!
-:{{DIcon|Arrow}} Are you trying to take our tuskpir?
-::{{A|VO side2 yanwu sushang 148.ogg}} '''Sushang:''' What, can't I touch it just a little?
-:{{A|VO side2 yanwu sushang 149.ogg}} '''Sushang:''' You all go take care of your stuff. I'm about to head back to the Skysplitter to deliver some meds to the team... As a Cloud Knight, I always help out and do at least one good deed a day. I can take this tuskpir to the lounge for you! I'll just hold it for a bit, I swear I won't steal it!
 :{{tx}}
-<pre>{
-	"$type": "RPG.GameCore.AdvDestroyGroupEntity",
-	"InstanceIDList": [
-		400004,
-		400002
-	]
-}</pre>
-<pre>{
-	"$type": "RPG.GameCore.AdvDestroyGroupEntity",
-	"InstanceIDList": [
-		400001,
-		400003
-	]
-}</pre>
 {{Dialogue End}}
 
 ===Meet with Lynx at the Divination Commission{{subst:void|<!--802511204-->}}===
 {{Mission Description|type=adventure|location=Divination Commission|update|Lynx found a helpful diviner who could help Luka fix the jade abacus that Igor left behind.<br />Quickly, go to the Divination Commission to meet them.}}
 {{Dialogue Start}}
-
-;(Unused &mdash; EnterArea_G218_2)
-:{{A|VO side2 yanwu luka 239.ogg}} '''Luka:''' Look, Lynx is over there. Quick, let's go see her.
-::{{A|VO side2 yanwu lynx 101.ogg}} '''Lynx:''' Luka, you're here.
-::{{A|VO side2 yanwu lynx 102.ogg}} '''Lynx:''' I had a strange encounter. I was at the plaza, watching people play cards and I met a kind-hearted girl. She said she could help us repair the jade abacus we brought.
-::{{A|VO side2 yanwu lynx 103.ogg}} '''Lynx:''' But she was just called away by a few diviners and still hasn't returned.
-::{{DIcon|Arrow}} She left you here alone?
-::{{A|VO side2 yanwu luka 240.ogg}} '''Luka:''' Yeah, isn't this girl a bit much?
-::{{DIcon|Arrow}} I'll go call her back over.
-:::{{A|VO side2 yanwu lynx 104.ogg}} '''Lynx:''' Could you? There are too many unfamiliar people over there.
-::{{DIcon|Arrow}} Ok then, I'll go call her back over.
-:::{{A|VO side2 yanwu lynx 105.ogg}} '''Lynx:''' Thank you. You're a huge help.
-::{{A|VO side2 yanwu lynx 106.ogg}} '''Lynx:''' The girl should be just over there, playing some game with other diviners.
-::{{tx}}
-:<pre>{
-	"$type": "RPG.GameCore.SwitchCharacterAnchorV2",
-	"SwitchCharacterAnchorConfig": {
-		"IsLocalPlayer": true,
-		"CharacterUniqueName": "LocalPlayer",
-		"AreaName": {
-			"Value": "LevelArea_P20221_F20221001_G218"
-		},
-		"AnchorName": {
-			"Value": "Anchor1"
-		},
-		"ResetAnimation": true,
-		"ResetCamera": true
-	}
-}</pre>
-
-;(Unused &mdash; EnterArea_G218_1)
-:{{A|VO side2 yanwu luka 239.ogg}} '''Luka:''' Look, Lynx is over there. Quick, let's go see her.
+:{{tx}}
 {{Dialogue End}}
 
 ===Find that "helpful diviner"{{subst:void|<!--802511206-->}}===
 {{Mission Description|type=adventure|location=Divination Commission|update|Lynx found a helpful diviner who could help Luka fix the jade abacus that Igor left behind.<br />But that helpful diviner is nowhere to be found after you arrived... Go look for her.}}
 {{Dialogue Start}}
-
-;(Talk to Lynx)
-:{{A|VO side2 yanwu lynx 107.ogg}} '''Lynx:''' She should be just over there, playing some game with other diviners.
-
-;(Talk to Qingque)
-:{{A|VO side2 yanwu buzhe 101.ogg}} '''Game-Obsessed Diviner:''' President Qing, you're getting better and better! You're probably slacking off at work, playing this game, right?
-:{{A|VO side2 yanwu qingque 101.ogg}} '''Qingque:''' You're one to talk, setting up endless scenarios in the Divination Commission!
-:{{A|VO side2 yanwu player 117 m.ogg}} {{A|VO side2 yanwu player 117 f.ogg}} '''(Trailblazer):''' ...So it is you, President Qing.
-:{{A|VO side2 yanwu qingque 102 m.ogg}} {{A|VO side2 yanwu qingque 102 f.ogg}} '''Qingque:''' (Trailblazer)? I'm sorry, I was too engrossed playing, I didn't notice the time.
-:{{A|VO side2 yanwu buzhe 102 m.ogg}} {{A|VO side2 yanwu buzhe 102 f.ogg}} '''Game-Obsessed Diviner:''' Ah! Isn't this (Trailblazer)? You're super popular in our circle.
-:{{DIcon|Arrow}} I thought I was famous even outside your circle.
-::{{A|VO side2 yanwu buzhe 103.ogg}} '''Game-Obsessed Diviner:''' That's not the same. We "Pathfinder" fans definitely admire you more than others outside the circle!
-:{{DIcon|Arrow}} What circle?
-::{{A|VO side2 yanwu buzhe 104.ogg}} '''Game-Obsessed Diviner:''' Every "Pathfinder" fan knows you!
-:{{A|VO side2 yanwu qingque 103.ogg}} '''Qingque:''' It's the..."Pathfinder" fan circle...
-:{{A|VO side2 yanwu buzhe 105.ogg}} '''Game-Obsessed Diviner:''' We heard that you relied solely on the "Pathfinder" to overcome the heliobus possessing the master diviner! That's definitely the highlight of the "Pathfinder" since its conception three hundred years ago!
-:{{DIcon|Arrow}} That was all thanks to Qingque.
-::{{A|VO side2 yanwu buzhe 106.ogg}} '''Game-Obsessed Diviner:''' But our President Qing said it was all down to your hard work!
-:{{DIcon|Arrow}} The truth of that incident probably wasn't reported!
-::{{A|VO side2 yanwu buzhe 107.ogg}} '''Game-Obsessed Diviner:''' Many of the diviners here were there... you can't hide it from us.
-:{{A|VO side2 yanwu qingque 104 m.ogg}} {{A|VO side2 yanwu qingque 104 f.ogg}} '''Qingque:''' Okay, (Trailblazer) and I have some things to take care of. Play with you next time!
-:{{A|VO side2 yanwu buzhe 108.ogg}} '''Game-Obsessed Diviner:''' Nooooo! You guys can't leave!
-:{{A|VO side2 yanwu qingque 105.ogg}} '''Qingque:''' Gosh you scared me. What do you want...
-:{{A|VO side2 yanwu buzhe 109.ogg}} '''Game-Obsessed Diviner:''' It's not every day we meet a "Pathfinder" legend! We can't let you leave that easily.
-:{{A|VO side2 yanwu buzhe 110 m.ogg}} {{A|VO side2 yanwu buzhe 110 f.ogg}} '''Game-Obsessed Diviner:''' (Trailblazer), you have to play a round of "Pathfinder" with me, or I won't let you take President Qing away!
-:{{DIcon|Arrow}} Holding her hostage, hmm?
-::{{A|VO side2 yanwu buzhe 111.ogg}} '''Game-Obsessed Diviner:''' Heh-heh, I'll do anything it takes just to have a match with you.
-:{{DIcon|Arrow}} I don't want this Qingque then. You can have her.
-::{{A|VO side2 yanwu qingque 106.ogg}} '''Qingque:''' How many Qingques do you have???
-:{{A|VO side2 yanwu qingque 107.ogg}} '''Qingque:''' Just play a round with her &mdash; I doubt she'll let go of this chance to boast about it.
 :{{tx}}
-
-;(Talk to Game-Obsessed Diviner)
-:{{A|VO side2 yanwu buzhe 101.ogg}} '''Game-Obsessed Diviner:''' President Qing, you're getting better and better! You're probably slacking off at work, playing this game, right?
-:{{A|VO side2 yanwu qingque 101.ogg}} '''Qingque:''' You're one to talk, setting up endless scenarios in the Divination Commission!
-:{{A|VO side2 yanwu player 117 m.ogg}} {{A|VO side2 yanwu player 117 f.ogg}} '''(Trailblazer):''' ...So it is you, President Qing.
-:{{A|VO side2 yanwu qingque 102 m.ogg}} {{A|VO side2 yanwu qingque 102 f.ogg}} '''Qingque:''' (Trailblazer)? I'm sorry, I was too engrossed playing, I didn't notice the time.
-:{{A|VO side2 yanwu buzhe 102 m.ogg}} {{A|VO side2 yanwu buzhe 102 f.ogg}} '''Game-Obsessed Diviner:''' Ah! Isn't this (Trailblazer)? You're super popular in our circle.
-:{{DIcon|Arrow}} I thought I was famous even outside your circle.
-::{{A|VO side2 yanwu buzhe 103.ogg}} '''Game-Obsessed Diviner:''' That's not the same. We "Pathfinder" fans definitely admire you more than others outside the circle!
-:{{DIcon|Arrow}} What circle?
-::{{A|VO side2 yanwu buzhe 104.ogg}} '''Game-Obsessed Diviner:''' Every "Pathfinder" fan knows you!
-:{{A|VO side2 yanwu qingque 103.ogg}} '''Qingque:''' It's the..."Pathfinder" fan circle...
-:{{A|VO side2 yanwu buzhe 105.ogg}} '''Game-Obsessed Diviner:''' We heard that you relied solely on the "Pathfinder" to overcome the heliobus possessing the master diviner! That's definitely the highlight of the "Pathfinder" since its conception three hundred years ago!
-:{{DIcon|Arrow}} That was all thanks to Qingque.
-::{{A|VO side2 yanwu buzhe 106.ogg}} '''Game-Obsessed Diviner:''' But our President Qing said it was all down to your hard work!
-:{{DIcon|Arrow}} The truth of that incident probably wasn't reported!
-::{{A|VO side2 yanwu buzhe 107.ogg}} '''Game-Obsessed Diviner:''' Many of the diviners here were there... you can't hide it from us.
-:{{A|VO side2 yanwu qingque 104 m.ogg}} {{A|VO side2 yanwu qingque 104 f.ogg}} '''Qingque:''' Okay, (Trailblazer) and I have some things to take care of. Play with you next time!
-:{{A|VO side2 yanwu buzhe 108.ogg}} '''Game-Obsessed Diviner:''' Nooooo! You guys can't leave!
-:{{A|VO side2 yanwu qingque 105.ogg}} '''Qingque:''' Gosh you scared me. What do you want...
-:{{A|VO side2 yanwu buzhe 109.ogg}} '''Game-Obsessed Diviner:''' It's not every day we meet a "Pathfinder" legend! We can't let you leave that easily.
-:{{A|VO side2 yanwu buzhe 110 m.ogg}} {{A|VO side2 yanwu buzhe 110 f.ogg}} '''Game-Obsessed Diviner:''' (Trailblazer), you have to play a round of "Pathfinder" with me, or I won't let you take President Qing away!
-:{{DIcon|Arrow}} Holding her hostage, hmm?
-::{{A|VO side2 yanwu buzhe 111.ogg}} '''Game-Obsessed Diviner:''' Heh-heh, I'll do anything it takes just to have a match with you.
-:{{DIcon|Arrow}} I don't want this Qingque then. You can have her.
-::{{A|VO side2 yanwu qingque 106.ogg}} '''Qingque:''' How many Qingques do you have???
-:{{A|VO side2 yanwu qingque 107.ogg}} '''Qingque:''' Just play a round with her &mdash; I doubt she'll let go of this chance to boast about it.
-:{{tx}}
-
-;(Talk to Luka)
-:{{A|VO side2 yanwu luka 241.ogg}} '''Luka:''' This Divination Commission is so majestic... Why is that device floating in midair? Won't it fall?
-
 {{Dialogue End}}
 
 ===Have a round of "Pathfinder" with Qingque's colleague{{subst:void|<!--802511205-->}}===
 {{Mission Description|type=adventure|location=Divination Commission|update|Qingque, the Xianzhou's most slackerly busybody.<br />Anytime, anywhere, super Qingque is guaranteed to be serious slacking.}}
 {{Dialogue Start}}
-
-;(Talk to Qingque)
-:{{A|VO side2 yanwu qingque 108.ogg}} '''Qingque:''' Play one round with her, and make it quick. I've made Lynx wait for me too long...
-
-;(Talk to Game-Obsessed Diviner)
-:{{A|VO side2 yanwu buzhe 113.ogg}} '''Game-Obsessed Diviner:''' You ready to have a match with me?
-:{{DIcon|Arrow}} Let's end it quickly.
-::{{A|VO side2 yanwu buzhe 114.ogg}} '''Game-Obsessed Diviner:''' Sure, lightning quick!
-:<pre>{
-	"$type": "RPG.GameCore.SetPerformanceResult",
-	"Value": 1
-}</pre>
-:{{DIcon|Exit}} I have to prepare a little.
-
-:{{A|VO side2 yanwu buzhe 115 m.ogg}} {{A|VO side2 yanwu buzhe 115 f.ogg}} '''Game-Obsessed Diviner:''' They don't call you a legend for nothing, (Trailblazer)! You solved my riddle in a flash!
-:{{A|VO side2 yanwu buzhe 116.ogg}} '''Game-Obsessed Diviner:''' "Pathfinder" &mdash; Once you play, you'll forget about hatred, love, and life itself! In the Divination Commission, we play such a magnificent, bold, and fiery game!
-:{{A|VO side2 yanwu qingque 109.ogg}} '''Qingque:''' Satisfied now? Then we'll be off. We'll come find you tomorrow if we're free.
-:{{A|VO side2 yanwu buzhe 117 m.ogg}} {{A|VO side2 yanwu buzhe 117 f.ogg}} '''Game-Obsessed Diviner:''' Hold on, (Trailblazer). Recently, our "Pathfinder" circle has also been organizing a major event, taking advantage of the momentum from the Wardance.
-:{{A|VO side2 yanwu buzhe 118.ogg}} '''Game-Obsessed Diviner:''' Not just for those on the Luofu, plenty of our like-minded brethren on other Xianzhou ships have also come.
-:{{A|VO side2 yanwu buzhe 119.ogg}} '''Game-Obsessed Diviner:''' You may have seen our ad we put out in the papers. You should join if you're interested.
-:{{A|VO side2 yanwu buzhe 120.ogg}} '''Game-Obsessed Diviner:''' If you join up, our first major event will be considered a wild success!
-:{{DIcon|Arrow}} I'll participate if I have time.
-::{{A|VO side2 yanwu buzhe 121.ogg}} '''Game-Obsessed Diviner:''' Fantastic! Looking forward to it!
-:{{DIcon|Arrow}} I'm not interested.
-::{{A|VO side2 yanwu buzhe 122.ogg}} '''Game-Obsessed Diviner:''' That's fine too. The Pathfinder soul within you will come round eventually!
-:{{A|VO side2 yanwu qingque 110.ogg}} '''Qingque:''' Haha, who would've thought? That you'd be so immensely popular in some weird circle.
 :{{tx}}
 {{Dialogue End}}
 
@@ -537,28 +111,13 @@ PageTitle=#By His Lonefist to the Xianzhou#
 
 ===Return to the lounge and meet up with Luka{{subst:void|<!--802511213-->}}===
 {{Dialogue Start}}
-
-;(Unused &mdash; EnterArea_G79)
-:'''Luka:''' Such a little thing bursting with so much wondrous ability... The Xianzhou is certainly full of surprises!
-::'''Tuskpir:''' Mehr? Mehrmehrmehr!
-::{{DIcon|Arrow}} Does this tuskpir do anything?
-:::'''Luka:''' It's more amazing than I thought!
-::{{DIcon|Arrow}} Mehr mehr mehr!
-:::'''Luka:''' Hahaha, you sure learn quick.
-::'''Luka:''' I hugged this tuskpir and took a nap just now, and I dreamt I was fighting a battle that felt super real! It was against a giant cockroach three meters long!
-::'''Luka:''' Could this tuskpir be used for combat training?
-::'''Tuskpir:''' Mehr mehr! Mehr! Mehr mehr!
-::{{DIcon|Arrow}} Really? Lemme try!
-::'''Luka:''' Hmm... Maybe it's because I'm sick, and that triggered the tuskpir's special trait? Maybe it doesn't work on you? I don't know. You should give it a shot.
-::{{DIcon|Arrow}} Hold the tuskpir in your arms and enter the dreamland.
-::'''Tuskpir:''' Mehr! Mehr!
-::{{tx}}
-:{{A|VO side2 yanwu player 119 m.ogg}} {{A|VO side2 yanwu player 119 f.ogg}} '''(Trailblazer):''' (Is Luka back yet? Let's head back to the lounge and take a look.)
+:{{tx}}
 {{Dialogue End}}
 
 ===(Optional) Walk around a bit{{subst:void|<!--802511224-->}}===
 {{Mission Description|type=adventure|location=Skysplitter|update|The tense and exciting match draws to a temporary close. It's time to have a quick breather.<br />Use this time to prepare for the upcoming match.}}
 {{Dialogue Start}}
+:{{tx}}
 {{Dialogue End}}
 
 ==Other Languages==

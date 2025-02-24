@@ -45,326 +45,55 @@ PageTitle=#Eye of the Cosmos Part II#
 ===Speak with Ziqiao{{subst:void|<!--412210201-->}}===
 {{Mission Description|type=adventure|location=Divination Commission|The Ambrosial Arbor's growth made Luofu's logistic system malfunction. Now, Heron Express is asking you to control cycranes to find a starskiff of theirs, which had an accident.<br />Speak with Ziqiao and see what she actually needs from you.}}
 {{Dialogue Start}}
-
-;(Talk to Ziqiao)
-
-;(Talk to Ziqiao)
-:'''Ziqiao:''' These abominations seem to be attracted by this malfunctioning roost and have gathered around it... The Sky-Faring Commission is already investigating.
+:{{tx}}
 {{Dialogue End}}
 
 ===Defeat the Abominations of Abundance attracted by the roost{{subst:void|<!--412210202-->}}===
 {{Mission Description|type=adventure|location=Divination Commission|update|The cycrane roost seems to have been deliberately altered, and is currently emitting high-frequency sound waves that attract Abominations of Abundance.<br />You need to defeat the Abominations of Abundance gathered under the roost before you can reach the cycrane.}}
 {{Dialogue Start}}
+:{{tx}}
 {{Dialogue End}}
 
 ===Fix the broken cycrane roost{{subst:void|<!--412210203-->}}===
 {{Mission Description|type=adventure|location=Divination Commission|update|The cycrane roost seems to have been deliberately altered, and is currently emitting high-frequency sound waves that attracts Abominations of Abundance.<br />Fix this roost so it can function normally again.}}
 {{Dialogue Start}}
-
+:{{tx}}
 {{Dialogue End}}
 
 ===Control the cycrane to find the starskiff that had an accident{{subst:void|<!--412210204-->}}===
 {{Mission Description|type=adventure|location=Divination Commission|update|Control the cycrane and take off. Your job is important, but you also shouldn't ignore life's beautiful moments around you.}}
 {{Dialogue Start}}
-----
-:'''Ziqiao:''' Great, this roost is back to normal as well! Thank you so much for your help, (Trailblazer)!
-:'''Ziqiao:''' Now, it's time to search for the lost cargo with the cycrane. Are you ready?
+:{{tx}}
 {{Dialogue End}}
 
 ===Control the cycrane to find the starskiff that had an accident in Fortuna Augurstead{{subst:void|<!--412210205-->}}===
 {{Mission Description|type=adventure|location=Divination Commission|update|Ziqiao's records say this starskiff was lost in Fortuna Augurstead. Go there to have a closer look.}}
 {{Dialogue Start}}
-
-;(Unused &mdash; Mission_412210205_Photo_Took)
-<pre>{
-	"$type": "RPG.GameCore.ResetMissionWayPoint",
-	"SubMissionID": 412210205
-}</pre>
-
-;(Unused &mdash; OnStart_X201_01)
-:'''Courier Cycrane:''' The signal monitoring system is now available and searching the target area.
-::'''Courier Cycrane:''' The signal monitoring system indicates that the goods were lost in the buildings around the Matrix of Prescience. Based on past data, the cycrane recommends that you search near the firewall, {{Color|keyword|nobold=1|on top of the roof}}.
-
-;(Unused &mdash; OnClose_X201_01)
-<pre>{
-	"$type": "RPG.GameCore.ResetMissionWayPoint",
-	"SubMissionID": 412210205
-}</pre>
-
-;(Unused &mdash; OnEnter)
-<pre>{
-	"$type": "RPG.GameCore.SetMissionWayPoint",
-	"SubMissionID": 412210205,
-	"OverideMissionWayPointType": true,
-	"MissionWayPointType": "Anchor",
-	"OverideWayPointGroupID": true,
-	"WayPointGroupID": 59,
-	"OverideWayPointEntityID": true,
-	"WayPointEntityID": 1,
-	"OverideWayPointShowRangeMin": true,
-	"WayPointShowRangeMin": -1,
-	"OverideMapWaypointRange": true,
-	"MapWaypointRange": 20
-}</pre>
+:{{tx}}
 {{Dialogue End}}
 
 ===Control the cycrane to find the starskiff that had an accident in Conclave Hall{{subst:void|<!--412210206-->}}===
 {{Mission Description|type=adventure|location=Divination Commission|update|Ziqiao's records say this starskiff was lost in Conclave Hall. Go there to have a closer look.}}
 {{Dialogue Start}}
-
-;(Unused &mdash; Mission_412210206_Photo_Took)
-<pre>{
-	"$type": "RPG.GameCore.ResetMissionWayPoint",
-	"SubMissionID": 412210206
-}</pre>
-
-;(Unused &mdash; OnStart_X201_02)
-:'''Courier Cycrane:''' The signal monitoring system is now available and searching the target area.
-::'''Courier Cycrane:''' The signal monitoring system indicates that the goods were lost near the Conclave Hall. Based on past data, the cycrane recommends that you search {{Color|keyword|nobold=1|under the terrace}} of the Conclave Hall, above the cornices.
-
-;(Unused &mdash; OnClose_X201_02)
-<pre>{
-	"$type": "RPG.GameCore.ResetMissionWayPoint",
-	"SubMissionID": 412210206
-}</pre>
-
-;(Unused &mdash; OnClose_X201_01)
-<pre>{
-	"$type": "RPG.GameCore.ResetMissionWayPoint",
-	"SubMissionID": 412210206
-}</pre>
-
-;(Unused &mdash; OnStart_X201_01)
-<pre>{
-	"$type": "RPG.GameCore.SetMissionWayPoint",
-	"SubMissionID": 412210206,
-	"OverideMissionWayPointType": true,
-	"OverideWayPointGroupID": true,
-	"OverideWayPointEntityID": true,
-	"OverideWayPointShowRangeMin": true,
-	"OverideMapWaypointRange": true
-}</pre>
+:{{tx}}
 {{Dialogue End}}
 
 ===Control the cycrane to find the starskiff that had an accident in Matrix of Prescience Ultima{{subst:void|<!--412210207-->}}===
 {{Mission Description|type=adventure|location=Divination Commission|update|Ziqiao's records say this starskiff was lost in Matrix of Prescience Ultima. Go there to have a closer look.}}
 {{Dialogue Start}}
-
-
-;(Talk to Ziqiao)
-<pre>{
-	"$type": "RPG.GameCore.PropEnableCollider",
-	"OPType": "TriggerOnly",
-	"TriggerSelect": "AllDynamic",
-	"TargetType": {
-		"$type": "RPG.GameCore.TargetFetchAdvPropEx",
-		"FetchType": "SinglePropByPropID",
-		"SinglePropID": {
-			"GroupID": {
-				"fixedValue": {
-					"Value": 55
-				}
-			},
-			"ID": {
-				"fixedValue": {
-					"Value": 300001
-				}
-			}
-		}
-	}
-}</pre>
-;(Unused &mdash; TalkSentence_412210216)
-:'''Ziqiao:''' Thanks for all your help the past few times! See you next time!
-
-;(Unused &mdash; TalkSentence_412210218)
-:'''Ziqiao:''' Don't worry, not every roost will be malfunctioning... I hope...
-;(Unused &mdash; Mission_412210207_Photo_Took)
-<pre>{
-	"$type": "RPG.GameCore.ResetMissionWayPoint",
-	"SubMissionID": 412210207
-}</pre>
-
-;(Unused &mdash; OnStart_X201_03)
-<pre>{
-	"$type": "RPG.GameCore.SelectorConfig",
-	"TaskList": [
-		{
-			"$type": "RPG.GameCore.PropStateExecute",
-			"TargetType": {
-				"$type": "RPG.GameCore.TargetFetchAdvPropEx",
-				"FetchType": "SinglePropByPropID",
-				"SinglePropKey": {
-					"Custom": true,
-					"Key": "TargetProp"
-				},
-				"SinglePropID": {
-					"GroupID": {
-						"fixedValue": {
-							"Value": 64
-						}
-					},
-					"ID": {
-						"fixedValue": {
-							"Value": 300006
-						}
-					}
-				}
-			},
-			"Execute": [
-				{
-					"$type": "RPG.GameCore.PlayMissionTalk",
-					"SimpleTalkList": [
-						{
-							"TextSpeed": 20,
-							"TalkSentenceID": 412210416,
-							"ProtectTime": 2
-						},
-						{
-							"TextSpeed": 20,
-							"TalkSentenceID": 412210231,
-							"ProtectTime": 2
-						},
-						{
-							"TextSpeed": 20,
-							"TalkSentenceID": 412210226,
-							"ProtectTime": 2
-						}
-					]
-				}
-			]
-		},
-		{
-			"$type": "RPG.GameCore.PropStateExecute",
-			"TargetType": {
-				"$type": "RPG.GameCore.TargetFetchAdvPropEx",
-				"FetchType": "SinglePropByPropID",
-				"SinglePropKey": {
-					"Custom": true,
-					"Key": "TargetProp"
-				},
-				"SinglePropID": {
-					"GroupID": {
-						"fixedValue": {
-							"Value": 64
-						}
-					},
-					"ID": {
-						"fixedValue": {
-							"Value": 300006
-						}
-					}
-				}
-			},
-			"State": "Open",
-			"Execute": [
-				{
-					"$type": "RPG.GameCore.PlayMissionTalk",
-					"SimpleTalkList": [
-						{
-							"TextSpeed": 20,
-							"TalkSentenceID": 412210416,
-							"ProtectTime": 2
-						},
-						{
-							"TextSpeed": 20,
-							"TalkSentenceID": 412210231,
-							"ProtectTime": 2
-						}
-					]
-				}
-			]
-		}
-	]
-}</pre>
-
-;(Unused &mdash; OnStart_X201_01)
-<pre>{
-	"$type": "RPG.GameCore.SetMissionWayPoint",
-	"SubMissionID": 412210207,
-	"OverideMissionWayPointType": true,
-	"OverideWayPointGroupID": true,
-	"OverideWayPointEntityID": true,
-	"OverideWayPointShowRangeMin": true,
-	"OverideMapWaypointRange": true
-}</pre>
-
-;(Unused &mdash; OnStart_X201_02)
-<pre>{
-	"$type": "RPG.GameCore.SetMissionWayPoint",
-	"SubMissionID": 412210207,
-	"OverideMissionWayPointType": true,
-	"OverideWayPointGroupID": true,
-	"OverideWayPointEntityID": true,
-	"OverideWayPointShowRangeMin": true,
-	"OverideMapWaypointRange": true
-}</pre>
-
-;(Unused &mdash; OnClose_X201_01)
-<pre>{
-	"$type": "RPG.GameCore.ResetMissionWayPoint",
-	"SubMissionID": 412210207
-}</pre>
-
-;(Unused &mdash; OnClose_X201_02)
-<pre>{
-	"$type": "RPG.GameCore.ResetMissionWayPoint",
-	"SubMissionID": 412210207
-}</pre>
-
-;(Unused &mdash; OnClose_X201_03)
-<pre>{
-	"$type": "RPG.GameCore.ResetMissionWayPoint",
-	"SubMissionID": 412210207
-}</pre>
+:{{tx}}
 {{Dialogue End}}
 
 ===(Optional) Control the cycrane to find the suspicious signal in Matrix of Prescience Ultima{{subst:void|<!--412210208-->}}===
 {{Mission Description|type=adventure|location=Divination Commission|update|The cycrane seems to have detected an unknown signal near the Matrix of Prescience Ultima... Go have a look and you might just find some surprise there.}}
 {{Dialogue Start}}
-
+:{{tx}}
 {{Dialogue End}}
 
 ===Report back to Ziqiao{{subst:void|<!--412210209-->}}===
 {{Mission Description|type=adventure|location=Divination Commission|update|The job is done, and you did even better than some senior employees that have been working for a few centuries.<br />Go back to Ziqiao quickly to receive your payment.}}
 {{Dialogue Start}}
-;(If {{cx}}{{subst:void|<!--{"$type":"RPG.GameCore.ByLocalPlayerIsFakeAvatar","TaskEnabled":true,"IsClientOnly":true}-->}})
-<pre>{
-	"$type": "RPG.GameCore.SetMissionWayPoint",
-	"SubMissionID": 412210209,
-	"OverideMissionWayPointType": true,
-	"OverideWayPointGroupID": true,
-	"OverideWayPointEntityID": true,
-	"OverideWayPointShowRangeMin": true,
-	"OverideMapWaypointRange": true
-}</pre>
-;(Unused &mdash; OnEnter)
-<pre>{
-	"$type": "RPG.GameCore.SetMissionWayPoint",
-	"SubMissionID": 412210209,
-	"OverideMissionWayPointType": true,
-	"OverideWayPointGroupID": true,
-	"OverideWayPointEntityID": true,
-	"OverideWayPointShowRangeMin": true,
-	"OverideMapWaypointRange": true
-}</pre>
-
-;(Unused &mdash; OnClose_X201_01)
-<pre>{
-	"$type": "RPG.GameCore.ResetMissionWayPoint",
-	"SubMissionID": 412210209
-}</pre>
-
-;(Unused &mdash; OnClose_X201_02)
-<pre>{
-	"$type": "RPG.GameCore.ResetMissionWayPoint",
-	"SubMissionID": 412210209
-}</pre>
-
-;(Unused &mdash; OnClose_X201_03)
-<pre>{
-	"$type": "RPG.GameCore.ResetMissionWayPoint",
-	"SubMissionID": 412210209
-}</pre>
+:{{tx}}
 {{Dialogue End}}
 
 ==Other Languages==

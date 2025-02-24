@@ -31,6 +31,11 @@ export const langs: Dictionary<LangData> = {
 		display: 'Korean',
 		file: 'KO ',
 		txtp_dir: 'korean'
+	},
+	sfx: {
+		display: 'SFX',
+		file: '',
+		txtp_dir: 'sfx'
 	}
 }
 
@@ -52,6 +57,7 @@ for (const [code, lang] of Object.entries(langs)) {
 	for (const [, realName, fileName] of fileContent.matchAll(/\r?\n# %TITLE\s*(.+?)\r?\n([^#]+?\.txtp)/gi)) {
 		files[realName] = `${loadFrom}\\${lang.txtp_dir}\\${fileName}`
 	}
+	if (code == 'sfx') continue
 	for (const voiceFile of readdirSync(`${config.asset_roots.Audio}/${lang.txtp_dir}/voice`, { withFileTypes: true })) {
 		if (!voiceFile.isFile()) continue
 		files[voiceFile.name.replace('.wem', '') + ` {l=${code}}`] = `${voiceFile.path}/${voiceFile.name}`

@@ -45,323 +45,40 @@ PageTitle=#Sensitive Beings (I)#
 ===Ask Asta what she needs you for{{subst:void|<!--200030100-->}}===
 {{Mission Description|type=adventure|location=Master Control Zone|The Curio "Crackup Conch" is infected by the memetic virus, spreading anti-motivational quotes in the space station. Asta wants your help to investigate the source of this virus.<br />Which of the three suspects caused this drama?}}
 {{Dialogue Start}}
-
-;(Talk to Asta)
-:'''Asta:''' Yeah. I want you to investigate the source of the memetic virus that infected the Crackup Conch.
-:{{DIcon|Talk}} Crackup Conch?
-::'''Asta:''' It's one of our Curios. It looks like an ordinary conch, but when you get close, you can hear the dirty jokes coming from the inside.
-::'''Asta:''' As long as you hold your laughter, you can slowly obtain the secret power it contains. Of course, no one has succeeded so far, so we only use it on people in interrogations.
-:;(Return to previous option selection)
-:{{DIcon|Talk}} "Memetic virus?"
-::'''Asta:''' It is a kind of information particle that spreads around exponentially like a virus, which will bring changes and contamination to the host's nature of thinking.
-::'''Asta:''' Unfortunately, it can infect inanimate objects, and thus it changed the Crackup Conch's external expression &mdash; it no longer tells jokes, but instead, it keeps talking weird nonsense.
-::'''Asta:''' Like "Get out of your comfort zone, or you'll be wasted," or "The pain you suffer will light up your way"... cliché quotes that just make people cringe.
-:;(Return to previous option selection)
-:{{DIcon|Arrow}} Thank you for the explanation. I got the gist.
-::'''Asta:''' I had someone examine it and found that it was caused by the memetic virus. But the Crackup Conch has been properly stored all this time, which means it's impossible for it to get infected on its own.
-::'''Asta:''' The only possibility is that workers who were already infected passed on the virus when they came into contact with the item. After I looked into the list of people who had recent contact with it, I identified three suspects.
-::'''Asta:''' Well, I'm sure you already know what I'm about to say next. I want you to investigate these three suspects for me.
-::{{DIcon|Arrow}} Why me...
-:::'''Asta:''' Hehe, with great power comes great responsibility. Besides, I'm not just trying to take advantage of you. I sent people from the Security Department earlier, but they all failed.
-::{{DIcon|Arrow}} Is the Security Department here just for show?
-:::'''Asta:''' I arranged for them to investigate as soon as I identified the list of suspects. But they all found nothing unusual.
-:::'''Asta:''' Since these suspects have spent a fair bit of time in the space station, they are pretty familiar with the Security Department. They might have gotten away with their possible misconduct.
-::'''Asta:''' I, therefore, could not get any useful investigation results. That's why I need to ask you for a favor &mdash; you don't know them very well. It may be easier for you to spot their flaws from a stranger's perspective.
-::{{DIcon|Arrow}} What if they find out?
-:::'''Asta:''' Don't worry, you are a hero who has saved the space station. No one will suspect you.
-::{{DIcon|Arrow}} Sounds reasonable...
-:::'''Asta:''' It is!
-:::'''Asta:''' And it is not rocket science. You just need to walk up to them and listen, then see if there are any unusual behaviors.
-::'''Asta:''' If you find anything weird, just write it down and report it to me. So, what do you think?
-::{{DIcon|Arrow}} No problem. I'll take care of it.
-:::'''Asta:''' That's great. I'm so relieved that you're willing to help. I will reward you fairly. Let me think...
-::{{DIcon|Arrow}} I can help, but are there any rewards...
-:::'''Asta:''' Don't worry. Do you have anything in mind already? I heard the starnought fleet has been very popular recently. But that thing is huge. I don't think you'll like it...
-::'''Asta:''' Well... I don't know your taste. Why don't I pay for everything in your shopping cart out of my own pocket? You are free to choose whatever you like.
-::'''Asta:''' Well, let me tell you about the three suspects &mdash; Mare from the Department of Insight, Chris from the Department of Galactic Geopolitics, and Joanne from the Medical Department.
-::'''Asta:''' They usually stay in their own cabins. Given the station's current situation, I don't think they'll be anywhere else... So, please help me take care of this.
+:{{tx}}
 {{Dialogue End}}
 
 ===Investigate Mare for unusual behavior{{subst:void|<!--200030102-->}}===
 {{Dialogue Start}}
-:<!--0.5-second delay-->
-<pre>{
-	"$type": "RPG.GameCore.PropSetupUITrigger",
-	"DestroyAfterTriggered": true,
-	"ButtonIcon": "SpriteOutput/TalkIcon/ChatIcon.png",
-	"IconType": "ChatLoopIcon",
-	"ButtonText": {
-		"Hash": 278713941
-	},
-	"ButtonCallback": [
-		{
-			"$type": "RPG.GameCore.TriggerCustomString",
-			"CustomString": {
-				"Value": "Mission_200030102_Prop_27_300003_BtnClick"
-			}
-		}
-	],
-	"InteractAngleRange": 180,
-	"SkipFakeAvatar": true,
-	"TargetType": {
-		"$type": "RPG.GameCore.TargetFetchAdvPropEx",
-		"FetchType": "SinglePropByPropID",
-		"SinglePropID": {
-			"GroupID": {
-				"fixedValue": {
-					"Value": 27
-				}
-			},
-			"ID": {
-				"fixedValue": {
-					"Value": 300003
-				}
-			}
-		}
-	}
-}</pre>
+:{{tx}}
 {{Dialogue End}}
 
 ===Investigate Chris for unusual behavior{{subst:void|<!--200030104-->}}===
 {{Dialogue Start}}
-:<!--0.5-second delay-->
-<pre>{
-	"$type": "RPG.GameCore.PropSetupUITrigger",
-	"DestroyAfterTriggered": true,
-	"ButtonIcon": "SpriteOutput/TalkIcon/ChatIcon.png",
-	"IconType": "ChatLoopIcon",
-	"ButtonText": {
-		"Hash": 278713941
-	},
-	"ButtonCallback": [
-		{
-			"$type": "RPG.GameCore.TriggerCustomString",
-			"CustomString": {
-				"Value": "Mission_200030104_Prop_27_300004_BtnClick"
-			}
-		}
-	],
-	"InteractAngleRange": 180,
-	"SkipFakeAvatar": true,
-	"TargetType": {
-		"$type": "RPG.GameCore.TargetFetchAdvPropEx",
-		"FetchType": "SinglePropByPropID",
-		"SinglePropID": {
-			"GroupID": {
-				"fixedValue": {
-					"Value": 27
-				}
-			},
-			"ID": {
-				"fixedValue": {
-					"Value": 300004
-				}
-			}
-		}
-	}
-}</pre>
+:{{tx}}
 {{Dialogue End}}
 
 ===Investigate Joanne for unusual behavior{{subst:void|<!--200030106-->}}===
 {{Dialogue Start}}
-:<!--0.5-second delay-->
-<pre>{
-	"$type": "RPG.GameCore.PropSetupUITrigger",
-	"DestroyAfterTriggered": true,
-	"ButtonIcon": "SpriteOutput/TalkIcon/ChatIcon.png",
-	"IconType": "ChatLoopIcon",
-	"ButtonText": {
-		"Hash": 278713941
-	},
-	"ButtonCallback": [
-		{
-			"$type": "RPG.GameCore.TriggerCustomString",
-			"CustomString": {
-				"Value": "Mission_200030106_Prop_48_300002_BtnClick"
-			}
-		}
-	],
-	"InteractAngleRange": 180,
-	"SkipFakeAvatar": true,
-	"TargetType": {
-		"$type": "RPG.GameCore.TargetFetchAdvPropEx",
-		"FetchType": "SinglePropByPropID",
-		"SinglePropID": {
-			"GroupID": {
-				"fixedValue": {
-					"Value": 48
-				}
-			},
-			"ID": {
-				"fixedValue": {
-					"Value": 300002
-				}
-			}
-		}
-	}
-}</pre>
-:(There's something strange about Mare.)
-:(At first she was imitating some strange sounds. Then when they talked about "Leviathan Worship," she looked very nervous...)
-:(Did she come into contact with some kind of Leviathan during her research? And got her mind contaminated? That's very strange.)
-:(...Chris is very strange. I can't have a normal conversation with this person...)
-:(He's such a paranoid... Is he infected with the memetic virus?)
-:(Although Joanne looks normal, the way she speaks is very strange.)
-:(She is emotionless when she talks and her face looks stiff, like a robot. Is there something wrong...)
+:{{tx}}
 {{Dialogue End}}
 
 ===Report your findings to Asta{{subst:void|<!--200030108-->}}===
 {{Mission Description|type=adventure|location=Master Control Zone|update|After investigating the three suspects, you make note of their unusual behavior in your mind and return to Asta. But looking back, you can't help but wonder if you can confirm who is the infected one.}}
 {{Dialogue Start}}
-
-;(Talk to Asta)
-:'''Asta:''' So, all three of them sound unusual. But in theory, there should only be one person who is infected.
-:'''Asta:''' The principle behind it is actually quite simple. The viral load of informational particles left behind by the memetic virus in the Crackup Conch is simply not high enough.
-:'''Asta:''' The viral load detected barely reaches the amount that can be carried by an infected adult. So it's absolutely impossible for the Crackup Conch to have contracted the virus from multiple individuals.
-:{{DIcon|Arrow}} But my investigation couldn't corroborate this...
-::'''Asta:''' It's okay. I've got a backup plan.
-:{{DIcon|Arrow}} So, what next?
-::'''Asta:''' Hehe, I've got a backup plan.
-:'''Asta:''' The memetic virus is transmitted through virtual data. And all the virtual data in the space station leave traces in the terminal.
-:'''Asta:''' Since we couldn't get much from our previous investigation, let's check the browsing records of the three suspects. Then we should be able to identify the source of the infection.
-:'''Asta:''' Hehe, I've got an emergency plan for situations like this. Please visit the Data Exchange Center &mdash; where the terminal is located.
-:{{DIcon|Arrow}} But I've never used a terminal...
-::'''Asta:''' Don't worry. It's simple. Enter the terminal room, verify your identity, and you can start your query.
-:{{DIcon|Arrow}} Why don't you go yourself?
-::'''Asta:''' *sigh* I have my own reasons. It's a long story.
-:'''Asta:''' Simply put, anyone using any data gadget, which basically includes everyone on the space station, would have their user behaviors recorded by the terminal. It is thus inappropriate for me or any other staff member to check such information.
-:{{DIcon|Arrow}} Um, I still don't get it.
-::'''Asta:''' Don't worry. I'll explain to you when I have time.
-:{{DIcon|Arrow}} I know. You are just looking for excuses to slack off.
-::'''Asta:''' It's not like that. I would have gone if I could.
-:'''Asta:''' Think about it. Despite different backgrounds and identities, people on the space station have reached an agreement on personal privacy.
-:'''Asta:''' The traces left from using virtual data can be found on the terminal. For example, from here people can see all the unusual virtual platforms you visited during your working hours.
-:'''Asta:''' Therefore, to respect everyone's privacy, no one, including myself and the other staff, should access the terminal.
-:'''Asta:''' Think about it in their shoes, if you are space station staff, would you be happy with me going through your browsing records on the virtual network?
-:{{DIcon|Arrow}} I'd rather die...
-:{{DIcon|Arrow}} It's unacceptable.
-:'''Asta:''' Now you understand, right? That's why your special identity makes you the perfect candidate for this!
-:{{DIcon|Arrow}} Why? I don't understand.
-::'''Asta:''' Let me start with your heroic deeds and your special identity.
-:{{DIcon|Arrow}} So, you just want me to get beaten up?
-::'''Asta:''' Jeez, is this the kind of nonsense you think about all day? I have nothing against you. Why would I set you up?
-:'''Asta:''' From an objective point of view, you are an outsider on the space station. You are not familiar with most people here, so it's unlikely that you hold any personal grudge against anyone.
-:'''Asta:''' Not every outsider has the right to access the data records. But you are different. You are the hero who saved the space station. People trust your moral character.
-:'''Asta:''' But of course, if you do decide to help, I hope you will keep everything you see strictly confidential.
-:{{DIcon|Arrow}} No problem. My lips are sealed.
-::'''Asta:''' Anyway, keep it all a secret while you're still in the space station. As for where you go or what you do in the future, it's none of my business.
-:{{DIcon|Arrow}} Piece of cake. Just leave it to me.
-::'''Asta:''' Thank you so much!
-:'''Asta:''' Before you leave, let me tell you how to use the terminal.
-:'''Asta:''' As you know, the invasion of the station severely damaged the whole data center. And the server room where the terminal is housed is no exception.
-:'''Asta:''' Despite our best efforts, the damage is yet to be fully remediated. And reported cases of memetic virus infection only made things worse. I had to send a maintenance engineer to monitor the situation on a daily basis.
-:'''Asta:''' {{Color|keyword|nobold=1|The engineer would turn on the optical identity verification program manually every day}} to check whether the bioelectricity of each visitor entering the room is normal, thus ensuring that the terminal room is not invaded.
-:'''Asta:''' Since the optical identity verification program is {{Color|keyword|nobold=1|refreshed dynamically after it is turned on every day, you need to re-verify your identity every time you enter.}}
-:'''Asta:''' For more details, please {{Color|keyword|nobold=1|consult the maintenance engineer}}. I've told the engineer that you have permission to enter the room.
-:'''Asta:''' So... I will leave the rest to you!
-;(Unused &mdash; Wait_Option_2000305_125)
-::{{DIcon|Arrow}} Maybe they are all infected.
-:::'''Asta:''' It can't be. It doesn't match the data detected in the Crackup Conch.
-::{{DIcon|Arrow}} Why are you so sure that only one person is infected?
-:::'''Asta:''' Because I have test results that have been scientifically verified.
-:'''Asta:''' The principle behind it is actually quite simple. The viral load of informational particles left behind by the memetic virus in the Crackup Conch is simply not high enough.
-::'''Asta:''' The viral load detected barely reaches the amount that can be carried by an infected adult. So it's absolutely impossible for the Crackup Conch to have contracted the virus from multiple individuals.
-::{{DIcon|Arrow}} But my investigation couldn't corroborate this...
-:::'''Asta:''' It's okay. I've got a backup plan.
-::{{DIcon|Arrow}} So, what next?
-:::'''Asta:''' Hehe, I've got a backup plan.
-::'''Asta:''' The memetic virus is transmitted through virtual data. And all the virtual data in the space station leave traces in the terminal.
-::'''Asta:''' Since we couldn't get much from our previous investigation, let's check the browsing records of the three suspects. Then we should be able to identify the source of the infection.
-::'''Asta:''' Hehe, I've got an emergency plan for situations like this. Please visit the Data Exchange Center &mdash; where the terminal is located.
-::{{DIcon|Arrow}} But I've never used a terminal...
-:::'''Asta:''' Don't worry. It's simple. Enter the terminal room, verify your identity, and you can start your query.
-::{{DIcon|Arrow}} Why don't you go yourself?
-:::'''Asta:''' *sigh* I have my own reasons. It's a long story.
-::'''Asta:''' Simply put, anyone using any data gadget, which basically includes everyone on the space station, would have their user behaviors recorded by the terminal. It is thus inappropriate for me or any other staff member to check such information.
-::{{DIcon|Arrow}} Um, I still don't get it.
-:::'''Asta:''' Don't worry. I'll explain to you when I have time.
-::{{DIcon|Arrow}} I know. You are just looking for excuses to slack off.
-:::'''Asta:''' It's not like that. I would have gone if I could.
-::'''Asta:''' Think about it. Despite different backgrounds and identities, people on the space station have reached an agreement on personal privacy.
-::'''Asta:''' The traces left from using virtual data can be found on the terminal. For example, from here people can see all the unusual virtual platforms you visited during your working hours.
-::'''Asta:''' Therefore, to respect everyone's privacy, no one, including myself and the other staff, should access the terminal.
-::'''Asta:''' Think about it in their shoes, if you are space station staff, would you be happy with me going through your browsing records on the virtual network?
-::{{DIcon|Arrow}} I'd rather die...
-::{{DIcon|Arrow}} It's unacceptable.
-::'''Asta:''' Now you understand, right? That's why your special identity makes you the perfect candidate for this!
-::{{DIcon|Arrow}} Why? I don't understand.
-:::'''Asta:''' Let me start with your heroic deeds and your special identity.
-::{{DIcon|Arrow}} So, you just want me to get beaten up?
-:::'''Asta:''' Jeez, is this the kind of nonsense you think about all day? I have nothing against you. Why would I set you up?
-::'''Asta:''' From an objective point of view, you are an outsider on the space station. You are not familiar with most people here, so it's unlikely that you hold any personal grudge against anyone.
-::'''Asta:''' Not every outsider has the right to access the data records. But you are different. You are the hero who saved the space station. People trust your moral character.
-::'''Asta:''' But of course, if you do decide to help, I hope you will keep everything you see strictly confidential.
-::{{DIcon|Arrow}} No problem. My lips are sealed.
-:::'''Asta:''' Anyway, keep it all a secret while you're still in the space station. As for where you go or what you do in the future, it's none of my business.
-::{{DIcon|Arrow}} Piece of cake. Just leave it to me.
-:::'''Asta:''' Thank you so much!
-::'''Asta:''' Before you leave, let me tell you how to use the terminal.
-::'''Asta:''' As you know, the invasion of the station severely damaged the whole data center. And the server room where the terminal is housed is no exception.
-::'''Asta:''' Despite our best efforts, the damage is yet to be fully remediated. And reported cases of memetic virus infection only made things worse. I had to send a maintenance engineer to monitor the situation on a daily basis.
-::'''Asta:''' {{Color|keyword|nobold=1|The engineer would turn on the optical identity verification program manually every day}} to check whether the bioelectricity of each visitor entering the room is normal, thus ensuring that the terminal room is not invaded.
-::'''Asta:''' Since the optical identity verification program is {{Color|keyword|nobold=1|refreshed dynamically after it is turned on every day, you need to re-verify your identity every time you enter.}}
-::'''Asta:''' For more details, please {{Color|keyword|nobold=1|consult the maintenance engineer}}. I've told the engineer that you have permission to enter the room.
-::'''Asta:''' So... I will leave the rest to you!
+:{{tx}}
 {{Dialogue End}}
 
 ===Go to the terminal room and use the terminal{{subst:void|<!--200030111-->}}===
 {{Mission Description|type=adventure|location=Supply Zone|update|Based on your findings, neither Asta nor you can tell who is infected. Asta has no choice but to grant you temporary permission to access the terminal, which stores the browsing data of everyone in the space station...}}
 {{Dialogue Start}}
-:<!--0.5-second delay-->
-<pre>{
-	"$type": "RPG.GameCore.PropSetupUITrigger",
-	"DestroyAfterTriggered": true,
-	"ButtonIcon": "SpriteOutput/TalkIcon/ChatIcon.png",
-	"IconType": "ChatLoopIcon",
-	"ButtonText": {
-		"Hash": 278713937
-	},
-	"ButtonCallback": [
-		{
-			"$type": "RPG.GameCore.TriggerCustomString",
-			"CustomString": {
-				"Value": "Mission_200030111_Prop_11_300001_BtnClick"
-			}
-		}
-	],
-	"InteractAngleRange": 180,
-	"SkipFakeAvatar": true,
-	"TargetType": {
-		"$type": "RPG.GameCore.TargetFetchAdvPropEx",
-		"FetchType": "SinglePropByPropID",
-		"SinglePropID": {
-			"GroupID": {
-				"fixedValue": {
-					"Value": 11
-				}
-			},
-			"ID": {
-				"fixedValue": {
-					"Value": 300001
-				}
-			}
-		}
-	}
-}</pre>
+:{{tx}}
 {{Dialogue End}}
 
 ===Ask for the maintenance engineer's help{{subst:void|<!--200030112-->}}===
 {{Mission Description|type=adventure|location=Supply Zone|update|The terminal keeps reporting errors, as if it's laughing at you. Thankfully, Asta has asked a maintenance engineer to guard the terminal room. It's time to ask for his help.}}
 {{Dialogue Start}}
-
-;(Talk to Maintenance Engineer)
-:'''Maintenance Engineer:''' Sorry &mdash; huff puff &mdash; I'm sorry!
-:'''Maintenance Engineer:''' Are you (Trailblazer)? Asta already gave me a heads up that you are going to come use the terminal.
-:'''Maintenance Engineer:''' I'm terribly sorry. The computer system in the next room suddenly initiated an auto-update. The researchers didn't have time to save their results. So I went to help them just now.
-:{{DIcon|Arrow}} The terminal did not respond.
-:{{DIcon|Arrow}} Prompted error code 505?
-:'''Maintenance Engineer:''' Ahh, I didn't connect the data to the terminal while I was away. Let me turn it on. It'll just take a second...
-:'''Maintenance Engineer:''' It's all set now! Please verify your identity again. And the results will come up when you input your query.
-----
+:{{tx}}
 {{Dialogue End}}
 
 ==Other Languages==

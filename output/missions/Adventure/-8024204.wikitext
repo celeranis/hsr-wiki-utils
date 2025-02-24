@@ -34,64 +34,6 @@ PageTitle=##
 ==Dialogue==
 {{Stub Dialogue}}
 
-
-;(Unused &mdash; EnterDistrict_G179)
-:Looking at the man before you, you're shocked that Litter Pony would call him along for this... Would you consider him your "friend"?
-::'''Sampo:''' Woah, if it isn't (Trailblazer), my favorite customer!
-::'''Sampo:''' You came to the right person for a Proof of Friendship! I'm your trustworthy old Sampo after all, right?
-::{{DIcon|Arrow}} Do you really see trust when you look in my eyes?
-::{{DIcon|Arrow}} "Sampo" and "trustworthy" have the opposite meaning.
-::'''Sampo:''' My friend, how can you be so cruel? Think about it. Isn't the essence of friendship just mutual benefit?
-::'''Sampo:''' No matter how you look at it, our relationship meets the standard definition of "friendship" in every way. You pay with money, and I pay with effort. Is this not friendship in its purest, most perfect form?
-::'''Litter Pony:''' I can't say that sounds pure to me, but I still sense... a bittersweet friendship between you.
-::'''Litter Pony:''' (Trailblazer), how do you think you would be able to obtain your Proof of Friendship?
-::{{DIcon|Arrow}} (Strain to recall good points on Sampo)
-::{{DIcon|Arrow}} (Buy Proof of Friendship from Sampo)
-::'''Sampo:''' That's more like it. Welcome to the adults' world!
-::'''Litter Pony:''' Here, (Trailblazer). This is what you wanted &mdash; the stuff only adults can see.
-::{{DIcon|Arrow}} (Enter Battle)
-:<pre>{
-	"$type": "RPG.GameCore.PerformanceExtendEndBlack",
-	"ExtendTime": 1
-}</pre>
-
-:{{DIcon|Travel Log}} Manifest "Magic of Friendship"
-<pre>{
-	"$type": "RPG.GameCore.ShowUI",
-	"Name": "Ui.ActivitySummon.Entrance.ActivitySummonEntrancePage",
-	"WaitForExit": true,
-	"Param": {
-		"Value": "3"
-	},
-	"OnUIEnter": [],
-	"OnUIExitImmediately": [
-		{
-			"$type": "RPG.GameCore.EndDialogueEntityInteract"
-		},
-		{
-			"$type": "RPG.GameCore.SetMunicipalEnable",
-			"Visible": true
-		}
-	]
-}</pre>
-
-;(Talk to Sampo)
-:'''Sampo:''' Friend, there is no need to be anxious. I will not charge any extra fees, even if I am made to wait a little longer. See, don't you think I am a great friend?
-
-;(Talk to Litter Pony)
-<pre>{
-	"$type": "RPG.GameCore.ShowUI",
-	"Name": "Ui.ActivitySummon.Main.ActivitySummonMainPage",
-	"OnUIEnter": [
-		{
-			"$type": "RPG.GameCore.FinishLevelGraph"
-		}
-	]
-}</pre>
-
-;(Talk to Sampo)
-:'''Sampo:''' If a friend is in trouble, I will always rush to their aid! See, even if it means infiltrating the enemy and taking them down from the inside!
-:...Truly a fighting style fitting for his personality...
 {{Dialogue End}}
 
 ==Other Languages==

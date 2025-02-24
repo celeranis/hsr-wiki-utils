@@ -39,184 +39,19 @@ PageTitle=#Everwinter Night#
 ===Rest in the Goethe Hotel{{subst:void|<!--101020201-->}}===
 {{Mission Description|type=trailblaze|location=Hotel Corridor|After an entire day of sightseeing, you've got a complete understanding of the local culture and are just an appointment at Belobog's Administrative Department away from becoming its actual citizens.<br />You return to the Goethe Hotel. The warm Geomarrow lights and the tea fragrance in the air make you feel at ease.<br />There's still some time to walk around the hotel before washing up and getting ready for bed. It seems like March 7th and Dan Heng also wants to speak with you &mdash; arrange your time before sleeping as you wish.}}
 {{Dialogue Start}}
-;(Upon reaching the destination)
-
-;(Upon reaching the destination)
-<pre>{
-	"$type": "RPG.GameCore.PropSetVisibility",
-	"SpecifiedRelativePaths": [],
-	"TargetType": {
-		"$type": "RPG.GameCore.TargetFetchAdvPropEx",
-		"FetchType": "SinglePropByPropID",
-		"SinglePropID": {
-			"GroupID": {
-				"fixedValue": {
-					"Value": 3
-				}
-			},
-			"ID": {
-				"fixedValue": {
-					"Value": 300001
-				}
-			}
-		}
-	}
-}</pre>
-----
-:{{A|VO chapter1 1 danheng 225.ogg}} '''Dan Heng:''' Is there anything left to do? We're meeting the guardian tomorrow. There won't be any time for sightseeing.
-:{{DIcon|Arrow}} That's enough fun for today. Time to rest.
-::{{A|VO chapter1 1 mar7th 254.ogg}} '''March 7th:''' It was a long day today. All I need is a hot shower and a good night's sleep.
-:;(If {{cx}}{{subst:void|<!--{"$type":"RPG.GameCore.ByHeroGender","Gender":"GENDER_WOMAN","TaskEnabled":true,"IsClientOnly":true}-->}})
-:::{{DIcon|Arrow}} Sleep well guys!
-::::{{A|VO chapter1 1 mar7th 255.ogg}} '''March 7th:''' *yawn* You too!
-:::{{DIcon|Arrow}} I've got a bad feeling...
-::::{{A|VO chapter1 1 mar7th 256.ogg}} '''March 7th:''' Well don't talk about it then!
-:::{{DIcon|Arrow}} {F#Didn't someone mention a pillow fight?}
-::::{{A|VO chapter1 1 mar7th 257.ogg}} '''March 7th:''' Yeah! About time!
-:;(If {{cx}}{{subst:void|<!--{"$type":"RPG.GameCore.ByHeroGender","Gender":"GENDER_WOMAN","TaskEnabled":true,"IsClientOnly":true}-->}})
-:::{{DIcon|Arrow}} Sleep well guys!
-::::{{A|VO chapter1 1 mar7th 255.ogg}} '''March 7th:''' *yawn* You too!
-:::{{DIcon|Arrow}} I've got a bad feeling...
-::::{{A|VO chapter1 1 mar7th 256.ogg}} '''March 7th:''' Well don't talk about it then!
-::{{A|VO chapter1 1 danheng 226.ogg}} '''Dan Heng:''' Let's get to bed early and save our energy. I sense the next few days could be tiring.
-::{{A|VO chapter1 1 mar7th 258.ogg}} '''March 7th:''' Well, I'm off to my room then. Express lights off!
-::----
-:<pre>{
-	"$type": "RPG.GameCore.DestroyNPC",
-	"GroupID": 3,
-	"GroupNpcID": 400001
-}</pre>
-:<pre>{
-	"$type": "RPG.GameCore.DestroyNPC",
-	"GroupID": 3,
-	"GroupNpcID": 400002
-}</pre>
-:<pre>{
-	"$type": "RPG.GameCore.PropEnableCollider",
-	"TriggerSelect": "AllDynamic",
-	"TargetType": {
-		"$type": "RPG.GameCore.TargetFetchAdvPropEx",
-		"FetchType": "SinglePropByPropID",
-		"SinglePropID": {
-			"GroupID": {
-				"fixedValue": {
-					"Value": 3
-				}
-			},
-			"ID": {
-				"fixedValue": {
-					"Value": 300001
-				}
-			}
-		}
-	}
-}</pre>
-:<pre>{
-	"$type": "RPG.GameCore.ActiveVirtualCamera",
-	"AreaName": "Mission_1010201_TypeD",
-	"AnchorName": "101020201_Camera",
-	"BlendConfig": {
-		"ExportToJson": true,
-		"BlendType": "Cut",
-		"FOVSmoothDampTime": -1,
-		"FrameBlendWeightStart": 1,
-		"FrameBlendDuration": 1
-	},
-	"VCameraDitherMaxDistance": 1,
-	"CenterPosX": -1,
-	"CenterPosY": -1
-}</pre>
-:{{DIcon|Exit}} Let's have another stroll.
-::----
-:<pre>{
-	"$type": "RPG.GameCore.PropSetVisibility",
-	"Visible": true,
-	"SpecifiedRelativePaths": [],
-	"TargetType": {
-		"$type": "RPG.GameCore.TargetFetchAdvPropEx",
-		"FetchType": "SinglePropByPropID",
-		"SinglePropID": {
-			"GroupID": {
-				"fixedValue": {
-					"Value": 3
-				}
-			},
-			"ID": {
-				"fixedValue": {
-					"Value": 300001
-				}
-			}
-		}
-	}
-}</pre>
+:{{tx}}
 {{Dialogue End}}
 
 ===Go to bed{{subst:void|<!--101020203-->}}===
 {{Mission Description|type=trailblaze|location=Hotel Room|update|After an entire day of sightseeing, you've got a complete understanding of the local culture and are just an appointment at Belobog's Administrative Department away from becoming its actual citizens.<br />It's finally time for sleep and you feel an uncontrollable urge to snuggle with the soft and fluffy hotel bed.<br />Get some sleep and rest well, you deserve it &mdash; Express lights off!}}
 {{Dialogue Start}}
-
-;(Screen fades to black)
-:{{A|VO chapter1 CG1 stellaron 201.ogg}} '''Voice of the Stellaron:''' Cocolia... Cocolia...
-:{{A|VO chapter1 CG1 cocolia 201.ogg}} '''Teenage Cocolia:''' Wh&mdash;Who are you...? ...What are you?
-:{{A|VO chapter1 CG1 stellaron 202.ogg}} '''Voice of the Stellaron:''' We are allies... allies of the guardians through generations.
-:{{A|VO chapter1 CG1 cocolia 202.ogg}} '''Teenage Cocolia:''' What do you want...?
-:{{A|VO chapter1 CG1 stellaron 203.ogg}} '''Voice of the Stellaron:''' To rebuild... this dying world...
-:{{A|VO chapter1 CG1 stellaron 204.ogg}} '''Voice of the Stellaron:''' To help you... achieve your wish.
-<pre>{
-	"$type": "RPG.GameCore.TriggerSound",
-	"SoundName": {
-		"Value": "Ev_sfx_belobog_hwardrobe_knocked"
-	},
-	"EmitterType": "LocalPlayer"
-}</pre>
-----
-<pre>{
-	"$type": "RPG.GameCore.SetAudioEmotionState",
-	"StateName": "State_Tense",
-	"SubMissionID": 101020204
-}</pre>
-;(Fully recovers all allies' HP)
+:{{tx}}
 {{Dialogue End}}
 
 ===Investigate the commotion outside the hotel{{subst:void|<!--101020205-->}}===
 {{Mission Description|type=trailblaze|location=Hotel Corridor|update|On the first night of the trailblazing expedition, you don't sleep as soundly and at ease as you did on the Express.<br />It's not because you have some kind of close bond with the Express but because you keep hearing the sound of troops moving around as you sleep.<br />And now, you can hear frantic door-knocking &mdash; your instincts tell you that something's not right... Go and investigate.}}
 {{Dialogue Start}}
-----
-:<!--0.5-second delay-->
-<pre>{
-	"$type": "RPG.GameCore.ActiveVirtualCamera",
-	"AreaName": "Mission_1010201_TypeD",
-	"AnchorName": "101020205_Camera",
-	"IsActive": true,
-	"BlendConfig": {
-		"ExportToJson": true,
-		"BlendType": "Cut",
-		"FOVSmoothDampTime": -1,
-		"FrameBlendWeightStart": 1,
-		"FrameBlendDuration": 1
-	},
-	"VCameraDitherMaxDistance": 1,
-	"CenterPosX": -1,
-	"CenterPosY": -1
-}</pre>
-<pre>{
-	"$type": "RPG.GameCore.TriggerSound",
-	"SoundName": {
-		"Value": "Ev_sfx_belobog_moodtips_tense"
-	},
-	"EmitterType": "LocalPlayer"
-}</pre>
-:{{A|VO chapter1 1 mar7th 259 m.ogg}} {{A|VO chapter1 1 mar7th 259 f.ogg}} '''March 7th:''' Hey, (Trailblazer). Did you hear that?
-:{{A|VO chapter1 1 danheng 227.ogg}} '''Dan Heng:''' There's a group of Silvermane Guards at the entrance... and I don't think they're here to say hi.
-:{{A|VO chapter1 1 mar7th 261.ogg}} '''March 7th:''' If this is our escort, it's less friendly than I was expecting.
-:{{DIcon|Arrow}} You guys are assuming a lot. All I can see is their helmets.
-::{{A|VO chapter1 1 mar7th 262.ogg}} '''March 7th:''' ...I just have a feeling.
-:{{DIcon|Arrow}} You can't always be friendly on the job, you know.
-::{{A|VO chapter1 1 mar7th 263.ogg}} '''March 7th:''' Huh, you must've had some miserable jobs.
-:{{DIcon|Arrow}} Maybe they're not here to escort us?
-::{{A|VO chapter1 1 mar7th 264.ogg}} '''March 7th:''' I guess we'll have to find out...
-:{{A|VO chapter1 1 danheng 228.ogg}} '''Dan Heng:''' Let's go and meet them. We won't know until we're down there.
-----
+:{{tx}}
 {{Dialogue End}}
 
 ==Other Languages==

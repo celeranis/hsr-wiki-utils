@@ -37,49 +37,7 @@ PageTitle=#Escapism Is Disgraceful#
 ===Discover Lady's true feelings{{subst:void|<!--802112301-->}}===
 {{Mission Description|type=adventure|location=Lady's Emoscape|You've entered Lady's Emoscape. Lady will habitually hide its heart. What are its true thoughts?}}
 {{Dialogue Start}}
-:'''Lady:''' ...What are my true feelings?
-;(Upon reaching the destination)
-
-;(Upon reaching the destination)
-:'''Lady:''' If I reveal my true feelings so easily... won't I seem too impatient?
-<pre>{
-	"$type": "RPG.GameCore.WaitMissionTalkFinish"
-}</pre>
-;(Upon reaching the destination)
-
-;(Upon reaching the destination)
-:'''Lady:''' I keep wondering but never get an answer... I want to be reassured...
-<pre>{
-	"$type": "RPG.GameCore.WaitMissionTalkFinish"
-}</pre>
-;(Upon reaching the destination)
-
-;(Upon reaching the destination)
-----
 :{{tx}}
-:'''Lady:''' Awww! You've found... my true heart.
-:{{DIcon|Arrow}} Alright, just stop pretending.
-:{{DIcon|Arrow}} You're pure and innocent deep down...
-:'''Lady:''' It's easy to get hurt if you just tell others what's in your heart.
-:{{tx}}
-----
-<pre>{
-	"$type": "RPG.GameCore.ShowUI",
-	"Name": "Ui.DrinkMaker.WorkBook.DrinkMakerWorkBookPage",
-	"WaitForExit": true,
-	"Param": {
-		"Value": "6"
-	}
-}</pre>
-;(If {{cx}}<!--SubMission Finish: 802110407-->)
-:<pre>{
-	"$type": "RPG.GameCore.ShowUI",
-	"Name": "Ui.DrinkMaker.Handbook.DrinkMakerNewContentUnlockDialog",
-	"WaitForExit": true,
-	"Param": {
-		"Value": "802110404"
-	}
-}</pre>
 {{Dialogue End}}
 
 ==Other Languages==

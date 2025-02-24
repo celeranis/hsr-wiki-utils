@@ -41,130 +41,17 @@ PageTitle=#Stellar Shadowseeker: 6th Stop, Rivet Town#
 ===Find and capture the subjects based on the photos{{subst:void|<!--800210508-->}}===
 {{Mission Description|type=adventure|location=Rivet Town|The shadowy object in the photo looks somewhat familiar. It must be something from Rivet Town...}}
 {{Dialogue Start}}
-;(Upon reaching the destination)
-
-;(Upon reaching the destination)
-<pre>{
-	"$type": "RPG.GameCore.SwitchPhotoGraphMode",
-	"ExitWhenPreViewDialogFinish": true,
-	"InitFov": -1
-}</pre>
-
-;(Unused &mdash; Create_115_400003)
-<pre>{
-	"$type": "RPG.GameCore.AdvDestroyGroupEntity",
-	"InstanceIDList": [
-		400002,
-		300001,
-		400005
-	]
-}</pre>
-:<pre>{
-	"$type": "RPG.GameCore.AdvCreateGroupEntity",
-	"InstanceIDList": [
-		300002
-	]
-}</pre>
-<pre>{
-	"$type": "RPG.GameCore.AdvDestroyGroupEntity",
-	"InstanceIDList": [
-		400002,
-		300001,
-		400005
-	]
-}</pre>
-<pre>{
-	"$type": "RPG.GameCore.AdvCreateGroupEntity",
-	"InstanceIDList": [
-		300002
-	]
-}</pre>
-;(Upon reaching the destination)
-
-;(Upon reaching the destination)
-:'''(Trailblazer):''' (Seems like there's a couple of Trotters on the slide...)
+:{{tx}}
 {{Dialogue End}}
 
 ===Investigate Trotter{{subst:void|<!--800210503-->}}===
 {{Dialogue Start}}
-<pre>{
-	"$type": "RPG.GameCore.AdvDestroyGroupEntity",
-	"InstanceIDList": [
-		300001,
-		300003
-	]
-}</pre>
-<pre>{
-	"$type": "RPG.GameCore.AdvDestroyGroupEntity",
-	"InstanceIDList": [
-		400003,
-		400002
-	]
-}</pre>
-<pre>{
-	"$type": "RPG.GameCore.AdvCreateGroupEntity",
-	"InstanceIDList": [
-		400001
-	]
-}</pre>
-;(Unused &mdash; TriggerPerformance_800210504)
-:The Trotter lies on the ground shaking. There's no place for it to escape to now.
-::{{DIcon|Arrow}} Give me back the photo!
-:::{{Black Screen|The Trotter seems to understand you, and spits out the photo before fleeing...}}
-::{{DIcon|Arrow}} I'll just have to take you out!
-:::{{Black Screen|The Trotter seems to have sensed your bloodthirst, and flees in a hurry, dropping the photo in the middle of the street...}}
-::{{DIcon|Arrow}} (Shake it down for the photo with your own two hands)
-:::You pry open the Trotter's mouth to see its deep, dark gullet akin to a black hole. You slowly stroke its shiny belly, and softly press on it...
-:::{{Black Screen|The Trotter struggles and spits out your photo, then flees in a panic...}}
-:<pre>{
-	"$type": "RPG.GameCore.HideEntity",
-	"Target": {
-		"$type": "RPG.GameCore.TargetFetchAdvNpcEx",
-		"FetchType": "SingleNpcByNpcID",
-		"SingleNpcID": {
-			"GroupID": {
-				"fixedValue": {
-					"Value": 116
-				}
-			},
-			"GroupNpcID": {
-				"fixedValue": {
-					"Value": 400001
-				}
-			}
-		}
-	},
-	"IsHide": true
-}</pre>
-
-;(Unused &mdash; Puman_Battle_Start_8002105)
-:{{Black Screen|undefined}}
-:;(Enter battle)
-::{{Enemy List|Frostspawn*2; Warp Trotter*1/-14 SPD}}
+:{{tx}}
 {{Dialogue End}}
 
 ===Read March 7th's message{{subst:void|<!--800210506-->}}===
 {{Dialogue Start}}
-<pre>{
-	"$type": "RPG.GameCore.GuessTheSilhouetteResult",
-	"SilhouetteID": 12,
-	"IsExecuting": true
-}</pre>
-<pre>{
-	"$type": "RPG.GameCore.PlayMessage",
-	"MessageSectionID": 1214601,
-	"ShowNotice": true
-}</pre>
-<pre>{
-	"$type": "RPG.GameCore.SaveMessage",
-	"MessageSectionID": 1214601
-}</pre>
-<pre>{
-	"$type": "RPG.GameCore.ShowUI",
-	"Name": "Ui.Activity.ActivityGuessTheSilhouette.ActivityGuessTheSilhouetteMainPage"
-}</pre>
-:<!--1-second delay-->
-:'''(Trailblazer):''' (The photo isn't in its mouth, and there's nothing valuable on its body. It really is a poor, pitiful Trotter...)
+:{{tx}}
 {{Dialogue End}}
 
 ==Other Languages==

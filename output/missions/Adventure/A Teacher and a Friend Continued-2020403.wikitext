@@ -48,601 +48,68 @@ PageTitle=#A Teacher and a Friend: Continued#
 ===Head to the Artisanship Commission and find Chengjie{{subst:void|<!--202040302-->}}===
 {{Mission Description|type=adventure|location=Artisanship Commission|update|Chengjie's enthusiasm has visibly faded, to the point that he even asks Qingque for tips to slack off... What happened to the Chengjie who was shooting for the stars? Let's pay him a visit.<br />You know it is nearly impossible to sustain a career with passion and dreams alone, but Chengjie's excitement seems to have died down a little too quickly.}}
 {{Dialogue Start}}
-----
-
-;(Upon reaching the destination)
-----
-:'''Chengjie:''' What are you doing here?
-:{{DIcon|Arrow}} Why? Am I an eyesore to you?
-::'''Chengjie:''' That's not what I mean... I'm sorry for lying. In fact, I was trying to avoid you two.
-::'''Chengjie:''' I was all motivated to do my best last time, but in the end, I still lost my fighting spirit.
-::'''Qingque:''' I think it looks good to me. What's wrong?
-::'''Chengjie:''' Since I built the starskiff according to my master's design, the starskiff has malfunctioned a lot of times, and its quality isn't up to par... I'll give you a demonstration if you guys are interested.
-:{{DIcon|Arrow}} I'm here to see how you are faring.
-::'''Chengjie:''' It isn't going well, so I'm too embarrassed to show the design to you.
-::'''Qingque:''' I think it looks good to me. What's wrong?
-::'''Chengjie:''' Since I built the starskiff according to my master's design, the starskiff has malfunctioned a lot of times, and its quality isn't up to par... I'll give you a demonstration if you guys are interested.
-:;(All choices lead to the following options)
-::{{DIcon|Arrow}} (Move forward)
-::{{DIcon|Arrow}} (Move backward)
-::{{DIcon|Arrow}} (Take off and land vertically)
-::{{DIcon|Arrow}} (Bell maneuver)
-::The starskiff isn't moving.
-:;(Return to previous option selection)
-;(All choices lead to the following options)
-:{{DIcon|Arrow}} Let me try.
-::'''Chengjie:''' You'll see what I mean after trying it out.
-::'''Chengjie:''' This is the remote control used to test the starskiff. Just treat it as a shoddy driving simulator.
-::'''Chengjie:''' ...Don't ask me why you can't hop straight on the starskiff to test it. I wouldn't recommend it if you want to stay safe.
-:{{DIcon|Arrow}} How bad can it be?
-::'''Chengjie:''' It's not a normal experience whatsoever.
-::'''Chengjie:''' This is the remote control used to test the starskiff. Just treat it as a shoddy driving simulator.
-::'''Chengjie:''' ...Don't ask me why you can't hop straight on the starskiff to test it. I wouldn't recommend it if you want to stay safe.
-::The starskiff isn't moving.
-:;(Return to previous option selection)
-;(All choices lead to the following options)
-:{{DIcon|Arrow}} (Move forward)
-:{{DIcon|Arrow}} (Move backward)
-:{{DIcon|Arrow}} (Take off and land vertically)
-:{{DIcon|Arrow}} (Bell maneuver)
-:The starskiff isn't moving.
-;(Return to previous option selection)
-
-;(Talk to Chengjie)
-:'''Chengjie:''' You go check the parts area. There should be some usable aurumaton parts there. I'll go borrow an aurumaton and see how I can transfer the technology over...
+:{{tx}}
 {{Dialogue End}}
 
 ===Head to Machinery District and look for standard aurumaton parts{{subst:void|<!--202040303-->}}===
 {{Mission Description|type=adventure|location=Artisanship Commission|update|You only need to change a few parts to install a starskiff's system on an aurumaton? Well, the artisan said so, so you just have to look for the parts.<br />No matter what build an aurumaton is on the Xianzhou, they use standardized parts, what an efficient design.}}
 {{Dialogue Start}}
-
-;(Obtain {{Item|Artisanship Commission Standard Parts Set|20|x=1}})
+:{{tx}}
 {{Dialogue End}}
 
 ===Hand over the parts to Chengjie{{subst:void|<!--202040304-->}}===
 {{Mission Description|type=adventure|location=Artisanship Commission|update|It is as if you picked up trash by the side of the road. You pick up some standard aurumaton parts, so go ahead and hand it over to Chengjie.<br />It was supposed to be a production material requested from the Artisanship Commission... but let's not worry about that now.}}
 {{Dialogue Start}}
-
-:'''Chengjie:''' Thanks a lot! Now, we need to fix this jade abacus with the set-and-forget system on the aurumaton. Could you please do me another favor?
-:{{DIcon|Talk}} Why does this aurumaton keep shaking?
-::'''Chengjie:''' The veteran craftsmen of the Artisanship Commission always say that as long as you make the aurumaton shake constantly, it will look more lifelike.
-::'''Chengjie:''' It doesn't make any sense to me.
-:;(Return to previous option selection)
-:{{DIcon|Talk}} Can it fit in the cockpit of the starskiff?
-::'''Chengjie:''' ...I don't think so.
-:;(Return to previous option selection)
-:{{DIcon|Arrow}} You need my help to fix the jade abacus, don't you?
-::'''Chengjie:''' Bingo. Please take care of the jade abacus!
+:{{tx}}
 {{Dialogue End}}
 
 ===Repair the jade abacus module of the aurumaton{{subst:void|<!--202040391-->}}===
 {{Mission Description|type=adventure|location=Artisanship Commission|update|As expected, whenever there is an opportunity to make you fix jade abaci, Luofu residents will take it. Go and give them a hand.<br />You've done it a few times by now. Honestly, it's not difficult to fix, but why does nobody want to do it themselves?}}
 {{Dialogue Start}}
-<pre>{
-	"$type": "RPG.GameCore.CreateProp",
-	"GroupID": {
-		"fixedValue": {
-			"Value": 70
-		}
-	},
-	"GroupPropID": {
-		"fixedValue": {
-			"Value": 300007
-		}
-	},
-	"CreateList": []
-}</pre>
-;(Upon reaching the destination)
-<pre>{
-	"$type": "RPG.GameCore.CreateProp",
-	"GroupID": {
-		"fixedValue": {
-			"Value": 70
-		}
-	},
-	"GroupPropID": {
-		"fixedValue": {
-			"Value": 300008
-		}
-	},
-	"CreateList": []
-}</pre>
-;(Upon reaching the destination)
-
-;(Upon reaching the destination)
-----
-:'''Chengjie:''' If Master Gongshu can figure out the concept behind the system, will he be suspicious...
-:'''Chengjie:''' ...Forget it. Being a worrywart now isn't going to help.
-:{{Black Screen|Soon after, Qingque brings Master Gongshu here.}}
-:'''Chengjie:''' Master Gongshu, there's something I need to trouble you with today.
-:'''Master Gongshu:''' This girl from the Divination Commission has told me about the set-and-forget pilot system you are working on. She said you needed my help to check what went wrong.
-:'''Master Gongshu:''' Since Ryan passed away, I haven't seen you working on something new for ages. I'm so upset that you've never approached me but chose to do it alone before this!
-:'''Master Gongshu:''' Now, you're finally seeking my help. I can't wait to look at your masterpiece! Drumroll, please!
-:{{DIcon|Arrow}} Master Gongshu is so dramatic!
-::'''Qingque:''' Master Gongshu just whispered to me that he had been worrying about Chengjie for a long time, but his pride got in the way of approaching Chengjie...
-::'''Master Gongshu:''' Ahem...
-::'''Qingque:''' Fine, I'll keep my mouth shut now.
-:{{DIcon|Arrow}} Please help us, Master Gongshu!
-::'''Master Gongshu:''' I'll check it to spare you guys from taking unnecessary steps.
-:{{DIcon|Arrow}} See what you've missed, Chengjie.
-::'''Chengjie:''' I thought you would look down on me, Master Gongshu...
-::'''Master Gongshu:''' Your incompetence is known to all apprentices at the Artisanship Commission, and I indeed consider you an unskillful craftsman.
-::'''Master Gongshu:''' But all apprentices have to go through the same thing. If you refuse to ask questions and learn, you won't ever be respected.
-::'''Chengjie:''' Master Ryan told me the same thing before. M&mdash;Master Gongshu, I really need your help!
-:'''Master Gongshu:''' You have a set-and-forget pilot system... and a driving support aurumaton... Why don't you fix the system onto the starskiffs? How youngsters nowadays think is beyond me...
-:{{Black Screen|Master Gongshu examines the design of the aurumaton pilot and completes a test on the aurumaton's abilities. Furrowing his eyebrows, he notices something is amiss.}}
-:'''Master Gongshu:''' The first thing I'd like to point out is the incompatibility of the system with the aurumaton. The system belongs to the starskiff, doesn't it?
-:'''Chengjie:''' ...
-:'''Qingque:''' (You really can't hide anything from an experienced craftsman...)
-:'''Master Gongshu:''' ...It's very dangerous to modify the aurumaton sloppily like this.
-:'''Master Gongshu:''' Secondly, the system won't work even if it's used on a starskiff. It's riddled with errors!
-:'''Chengjie:''' ...!
-:{{DIcon|Arrow}} Why do you think so, Master Gongshu?
-::'''Qingque:''' Both of us know next to nothing about artifex or artificium, but I believe you must have a valid reason behind your opinion, Master Gongshu.
-::'''Master Gongshu:''' I can show you by performing a test. Please hold the weapon first.
-:{{DIcon|Arrow}} That's why we need your help...
-::'''Master Gongshu:''' To say the system is riddled with errors is an understatement.
-::'''Master Gongshu:''' If this were my apprentice's work, I would have asked him to get out of my sight and redo the system.
-::'''Qingque:''' Is it really that bad?
-::'''Master Gongshu:''' I can show you by performing a test. Please get the weapon ready first.
-:'''Master Gongshu:''' Now, let's enter some random starskiff traffic flow data of several starskiff ports, and the system will make a timely judgment based on the number and distance of other nearby starskiffs... One, two... Divination Commission girl, please increase the number...
-:'''Qingque:''' Three, four...
-:'''Qingque:''' Argh, the system is locked.
-<pre>{
-	"$type": "RPG.GameCore.TriggerSound",
-	"SoundName": {
-		"Value": "Ev_sfx_xianzhou_friend_warning"
-	},
-	"EmitterType": "NPC",
-	"GroupID": 70,
-	"ID": 400002
-}</pre>
-:'''Prototype Aurumaton:''' Security mode is activated. Threats on the route are to be eliminated immediately!
-:'''Prototype Aurumaton:''' Security mode is activated. Threats on the route are to be eliminated immediately!
-:'''Master Gongshu:''' Use that iron rod to protect us, kid!
-----
-:'''Qingque:''' The aurumaton has stopped moving.
-:'''Master Gongshu:''' The system collapses while it's monitoring the 4th starskiff. Think about how many starskiffs there are in a lane on a normal day.
-:'''Chengjie:''' There will be dozens of them from all directions...
-:'''Master Gongshu:''' Ryan made this system, didn't he?
-:'''Chengjie:''' It must be my fault as I am the one who has completed the missing part of my master's manuscript. I'm sure there's no problem with the original version.
-:'''Master Gongshu:''' If Ryan were here, I would have told him forthrightly that his design wouldn't work. I'm sure you know I have nothing against you. Please don't take this personally.
-:'''Chengjie:''' ...Master Ryan couldn't have been wrong.
-:'''Master Gongshu:''' Well, I think I should get going. Feel free to come to me if you have any questions.
-----
-:'''Qingque:''' Even someone like Master Gongshu cannot be 100% sure that he will never make mistakes... You might be idolizing your master too much. Perhaps, there's a mistake in his manuscript.
-:{{DIcon|Arrow}} Master Ryan made mistakes before, right?
-::'''Chengjie:''' He did, but this is, after all, his last manuscript...
-::'''Qingque:''' That doesn't mean he wouldn't make mistakes.
-:{{DIcon|Arrow}} Qingque, you're being too harsh on Chengjie.
-::'''Qingque:''' My work radar is pretty accurate. It's trying to get me to stop because my effort will be in vain...
-::'''Qingque:''' Chengjie, building a starskiff is not your true intention, given that you only want to finish it for a sense of closure. This is a dangerous mindset.
-:'''Chengjie:''' ...
-:'''Chengjie:''' Do you still remember the manuscript is my master's dream? I have to complete it by hook or crook.
-:{{DIcon|Arrow}} Well, then you should fix the errors and continue working on the design.
-::'''Chengjie:''' ...I can't. Only Master Ryan himself can complete his manuscript, not me.
-::'''Chengjie:''' How I wish Master Ryan were still around. He would have been able to explain his design to me.
-:{{DIcon|Arrow}} If you think that way, you won't succeed.
-::'''Chengjie:''' My skill isn't up to snuff, and I'm a poor successor to my master. Only my master can complete the missing part.
-::'''Chengjie:''' How I wish Master Ryan were still around. He would have been able to explain his design to me.
-:{{DIcon|Arrow}} If only Master Ryan could be brought back to life.
-::'''Chengjie:''' Indeed. How I wish Master Ryan were still around. He would have been able to explain his design to me.
-:'''Qingque:''' What if Master Ryan could explain to you face-to-face?
-:{{DIcon|Arrow}} Isn't Master Ryan already dead?
-::'''Qingque:''' He is, but death in Xianzhou is different.
-:{{DIcon|Arrow}} Can you summon his soul?
-::'''Qingque:''' Of course, I can't! But it might be possible if you get the right person to help you.
-:'''Qingque:''' According to a book I flipped through at the repository of Divination Commission, life on Xianzhou doesn't end in a strict sense...
-:'''Qingque:''' When someone's life is on the brink of death &mdash; for example, when they become mara-struck &mdash; a judge of the Ten-Lords Commission will take them away and send their soul to the Hall of Karma.
-:{{DIcon|Arrow}} What do you mean by their soul?
-::'''Qingque:''' The fact that you're an Outworlder has slipped my mind just now. Let me put it this way &mdash; the judge will make a copy of the person's consciousness. Got it now?
-:{{DIcon|Arrow}} Ten-Lords Commission?
-::'''Qingque:''' Other than the six major commissions, there is a commission named "Ten-Lords Commission" on Xianzhou that is in charge of managing the lifespan of the long-life species and fighting against plagues and disasters. Judges of the commission are responsible for bringing the souls on Xianzhou to trials.
-:{{DIcon|Arrow}} Hall of Karma?
-::'''Qingque:''' To put it simply, it's a place at the bottom of Xianzhou, the precise location of which is known to no one. The judges will keep the souls of the dead there.
-:'''Qingque:''' According to what you said, Master Ryan passed away alone on Xianzhou without any relatives or friends taking care of his funeral. In that case, his soul &mdash; which is the data of his consciousness &mdash; should be stored in the Hall of Karma.
-:'''Chengjie:''' Does that mean I will be able to ask him questions if I manage to locate his consciousness?
-:{{DIcon|Arrow}} It sounds incredulous, but it's worth trying...
-::'''Qingque:''' Will the Ten-Lords Commission allow us to meddle in matters of life and death?
-:{{DIcon|Arrow}} Wouldn't it be inappropriate for us to disturb the deceased?
-::'''Qingque:''' Right. Will the Ten-Lords Commission allow us to meddle in matters of life and death?
-:{{DIcon|Arrow}} The confidence in your tone tells me it's possible.
-::'''Qingque:''' Will the Ten-Lords Commission allow us to meddle in matters of life and death?
-:'''Chengjie:''' (Trailblazer) and Qingque, I want to give the design one last try. I wish to meet my master.
-:'''Chengjie:''' Not only do I want to ask for his advice, but I... I'd like to see him in person. I hope he can tell me what I should do next...
-:'''Qingque:''' ...(Trailblazer)? What do you think?
-:{{DIcon|Arrow}} I'm the Nameless...
-:{{DIcon|Arrow}} ...The harder the challenge is, the more I wanna try it.
-:{{DIcon|Arrow}} ...The chance is slim, but I want to have no regrets.
-:'''Qingque:''' Well, if you really want to try, you have to hurry. I heard the judge of the Ten-Lords Commission would have a meeting with the master diviner today.
-:{{DIcon|Talk}} How did you find out about that?
-::'''Qingque:''' Since the rebirth of Ambrosial Arbor, the master diviner has been ordered to perform divination. So, she asked me, a custodian, to compile and submit the divination results and stamp the reports with the "To the Ten Lords" seal.
-:;(Return to previous option selection)
-:{{DIcon|Talk}} How opportune for us.
-::'''Qingque:''' Why else do you think I'm telling you this?
-:;(Return to previous option selection)
-:{{DIcon|Arrow}} Alright. Now, should we hit the road?
-::'''Qingque:''' Sure. By the way, you two must rely on yourselves to do all the heavy lifting. I have done everything I can to help.
-::----
+:{{tx}}
 {{Dialogue End}}
 
 ===Head to Divination Commission and ask Fu Xuan for help{{subst:void|<!--202040308-->}}===
 {{Mission Description|type=adventure|location=Divination Commission|update|Qingque mentioned that the Ten-Lords Commission might be able to reunite Masters Chengjie and Ryan for a final time. No matter what the price is, you have to try your luck at the Divination Commission.<br />Luck smiles upon you! Just when you need a helping hand, a judge from the Ten-Lords Commission is present at the Divination Commission!}}
 {{Dialogue Start}}
-;(Upon reaching the destination)
-----
-:'''Fu Xuan:''' If the Ten-Lords Commission wants a more precise divination from the Divination Commission, they will need to provide enough information.
-:'''Xueyi:''' I've provided more than enough. Not only have I made the dossier available to you, but I also captured the criminals myself...
-:'''Fu Xuan:''' Those from the Disciples of Sanctus Medicus have all died in your hands. What sort of divination can I do for dead people?
-:'''Xueyi:''' Hmph, if I didn't kill them, I would have been harmed by them. I can collect evidence from them even though they are dead.
-:'''Fu Xuan:''' As far as I know, a judge has four duties: Detention, interrogation, incarceration, and punishment. You aren't in charge of the punishment, are you?
-:'''Fu Xuan:''' I'd appreciate it if you could turn a blind eye and leave the merciful duty to my people here for them to complete their mission.
-:'''Xueyi:''' Your people?
-:'''Fu Xuan:''' (Trailblazer), Qingque, and the young man from the Artisanship Commission, please come over here!
-:'''Fu Xuan:''' I've been waiting for you here for a long time.
-:{{DIcon|Arrow}} Did you foresee our visit?
-::'''Qingque:''' Eh? Did you also predict that I would flip through the documents?
-:{{DIcon|Arrow}} Your divination was wrong! I'm just here to check out the place.
-::'''Fu Xuan:''' Oh? We don't welcome visitors here.
-::'''Qingque:''' Alas, it seems like she's predicted everything we've done so far.
-:{{DIcon|Arrow}} Oh, no. We've been tricked into running errands...
-:'''Fu Xuan:''' You're an honored guest of the general and a great helper &mdash; ahem, friend &mdash; of Xianzhou. I have no problem entrusting you with the work of the judge.
-:'''Fu Xuan:''' Now, please tell me what you need and the ins and outs of the matter.
-----
-:'''Chengjie:''' I'd like to meet my master, Master Ryan, who has passed away. Please help me.
-:'''Xueyi:''' According to the law of the Ten-Lords Commission, souls that have entered the Hall of Karma can never return to the world of the living.
-:'''Xueyi:''' However... Things should be done in order of priority, and I can make decisions at my discretion as the judge of the Ten-Lords Commission. If you can bring back the living people the master diviner is looking for, I don't mind helping you guys.
-----
-
-;(Upon reaching the destination)
-<pre>{
-	"$type": "RPG.GameCore.PlayNPCBubbleTalk",
-	"BubbleTalkInfoList": [
-		{
-			"AutoSkipTime": 1,
-			"GroupID": 84,
-			"GroupNpcID": 400004,
-			"TalkSentenceID": 204038001
-		},
-		{
-			"AutoSkipTime": 1,
-			"GroupID": 84,
-			"GroupNpcID": 400004,
-			"TalkSentenceID": 204038002
-		},
-		{
-			"AutoSkipTime": 1,
-			"GroupID": 84,
-			"GroupNpcID": 400003,
-			"TalkSentenceID": 204038003
-		}
-	],
-	"BubbleTalkType": "Normal",
-	"LoopInterval": 1,
-	"InstantFinish": true
-}</pre>
-
-;(Talk to Fu Xuan)
-;(If {{cx}}<!--SubMission Finish: 202040392-->)
-::'''Fu Xuan:''' What you need to do now is to reactivate the three base terminals. Go on now. Don't make the judge wait too long.
-;(Otherwise)
-::'''Fu Xuan:''' Follow Judge Xueyi's instructions. And I shall be waiting for you here at the Matrix core.
-
-;(Talk to Xueyi)
-;(If {{cx}}<!--SubMission Finish: 202040392-->)
-::'''Xueyi:''' As there are countless souls in the Hall of Karma, the Matrix of Prescience Ultima is required to locate the deceased. Please adjust the matrix immediately.
-;(Otherwise)
-::'''Xueyi:''' The fugitives are on this list...
-::'''Xueyi:''' You can find many of them roaming around at Stargazer Navalia. Bring them back alive, then we'll talk about your master.
-
-;(Talk to Aurumaton Gatekeeper)
-:The aurumaton stops moving and falls silent.
-
-;(Talk to Chengjie)
-:'''Chengjie:''' ...
-:'''Chengjie:''' Are you asking me to take the aurumaton away? Sorry, my mind is a mess now.
-:'''Chengjie:''' ...I just need some time to get hold of myself.
-----
-<pre>{
-	"$type": "RPG.GameCore.DestroyNPC",
-	"GroupID": 84,
-	"GroupNpcID": 400006,
-	"DestroyList": []
-}</pre>
-
-;(Talk to Qingque)
-:'''Qingque:''' I agree with what Master Ryan said, as I think there's no such thing as helping someone fulfill their dream.
-:'''Qingque:''' My dream only belongs to me. Even if someone helps me realize it, it isn't the same as doing it myself.
-:'''Qingque:''' ...Do people do that to make themselves feel better?
-:{{DIcon|Arrow}} No.
-::'''Qingque:''' Alright.
-:{{DIcon|Arrow}} Yes.
-:'''Qingque:''' Come to think of it, Chengjie only talks about his master's dream. How about his dream?
-:'''Qingque:''' Alas, we should have asked him that earlier.
+:{{tx}}
 {{Dialogue End}}
 
 ===Head to the Stargazer Navalia and help Xueyi capture the criminal{{subst:void|<!--202040392-->}}===
 {{Mission Description|type=adventure|location=Stargazer Navalia|update|Both the Ten-Lords Commission and the Divination Commission need something of you, and you only need to apprehend the criminal for Madam Xueyi to ask for a favor from her. This is a great deal!<br />Which poor sod needs capturing and questioning?}}
 {{Dialogue Start}}
-----
+:{{tx}}
 {{Mission Description|type=adventure|location=Divination Commission|update|Activate the Matrix of Prescience Ultima base terminal}}
-<pre>{
-	"$type": "RPG.GameCore.CreateProp",
-	"GroupID": {
-		"fixedValue": {
-			"Value": 84
-		}
-	},
-	"GroupPropID": {
-		"fixedValue": {
-			"Value": 300002
-		}
-	}
-}</pre>
-;(Upon reaching the destination)
-
-;(Upon reaching the destination)
-----
-:This Temporal Terminal that observes the potential of the temporal plane is a base terminal designed to retrieve information related to time.
-:'''Qingque:''' "Ryan Masteronzo was sent to the Hall of Karma about 120 years ago." I've entered the info on my side, and I'll leave you to do your part at the base terminals.
-----
-<pre>{
-	"$type": "RPG.GameCore.CreateProp",
-	"GroupID": {
-		"fixedValue": {
-			"Value": 84
-		}
-	},
-	"GroupPropID": {
-		"fixedValue": {
-			"Value": 300003
-		}
-	}
-}</pre>
-;(Upon reaching the destination)
-
-;(Upon reaching the destination)
-----
-:This Spatial Terminal that observes the changes in the universe is a base terminal designed to retrieve information related to space.
-:'''Qingque:''' "Ryan Masteronzo passed away at the Sapientia Academe of the Artisanship Commission." I've entered the info on my side, and I'll leave you to do your part at the base terminals.
-----
-<pre>{
-	"$type": "RPG.GameCore.CreateProp",
-	"GroupID": {
-		"fixedValue": {
-			"Value": 84
-		}
-	},
-	"GroupPropID": {
-		"fixedValue": {
-			"Value": 300004
-		}
-	}
-}</pre>
-;(Upon reaching the destination)
-
-;(Upon reaching the destination)
-----
-:This Karma Terminal that recognizes the order of karma is a base terminal designed to sort out causal relationships.
-:'''Qingque:''' "Ryan Masteronzo, once an Artisanship Commission craftsman, died of old age and heart failure." I've entered the info on my side, and I'll leave you to do your part at the base terminals.
-----
 {{Dialogue End}}
 
 ===Activate the Matrix of Prescience Ultima{{subst:void|<!--202040390-->}}===
 {{Mission Description|type=adventure|location=Divination Commission|update|To accurately locate Master Ryan in the Hall of Karma, you need to activate the Matrix of Prescience Ultima and search for information about the deceased.<br />It sounds like the Matrix of Prescience Ultima can be used to do anything.}}
 {{Dialogue Start}}
-----
-:'''Qingque:''' I never thought that the Matrix of Prescience could be used to locate people retroactively using precise information of time, space, and karma.
-:'''Qingque:''' After combining all the information, we'll be able to find Master Ryan's soul in the Hall of Karma.
-:'''Qingque:''' Let's go and invite Master Ryan back to the world of the living.
-----
+:{{tx}}
 {{Dialogue End}}
 
 ===Return to the Matrix core and wait for Xueyi to guide the spirit{{subst:void|<!--202040313-->}}===
 {{Mission Description|type=adventure|location=Divination Commission|update|The three base terminals have been activated, what was left to do is for Madam Xueyi to guide Master Ryan back to the living world. Let's go, to the Matrix core.<br />Chengjie is prepared for the aurumaton to be inhabited. It can't be the one that attacks people, can it?}}
 {{Dialogue Start}}
-:<!--0.5-second delay-->
-
-;(Upon reaching the destination)
-----
-:'''Fu Xuan:''' Next, we'll wait for judge Xueyi to summon the deceased out.
-:'''Xueyi:''' Please prepare the body needed for Master Ryan to inhabit.
-:'''Chengjie:''' S&mdash;Sure... I've brought the aurumaton over here.
-----
-:{{DIcon|Talk}} Are they really human souls in the Hall of Karma?
-::'''Fu Xuan:''' If you perceive your continued existence as the same one, then what is inside the Hall of Karma is the souls.
-::'''Fu Xuan:''' But for travelers, this is just something that carries information and a mark left behind by an artificial body.
-:;(Return to previous option selection)
-:{{DIcon|Talk}} Why do you have the power to do these things?
-::'''Xueyi:''' As a judge, my body is connected to the Hall of Karma. I wouldn't be a proper judge if I was unable to collect souls and decide on karmic consequences.
-:;(Return to previous option selection)
-:{{DIcon|Arrow}} Let's get started.
-::'''Xueyi:''' The wandering soul in a deep slumber, please wake up and possess the body!
-::'''Xueyi:''' By the order of the Ten Lords, wake up now, Ryan Masteronzo!
-:<pre>{
-	"$type": "RPG.GameCore.TriggerSound",
-	"SoundName": {
-		"Value": "Ev_sfx_xianzhou_friend_soul_arriving"
-	},
-	"EmitterType": "NPC",
-	"GroupID": 84,
-	"ID": 400005
-}</pre>
-::----
-::'''Ryan:''' *A muffled mechanical roar*
-::'''Ryan:''' ...
-::'''Chengjie:''' M&mdash;Master Ryan?
-::'''Ryan:''' I had a very long dream... Before that, I was sitting at my desk at the Artisanship Commission...
-::'''Ryan:''' Chengjie? Am I looking down at you from a distance? Where am I...
-::'''Qingque:''' Master Ryan, Chengjie is having difficulty mastering craftsmanship and needs your guidance. So, we've disturbed your eternal rest. Please don't hold it against us.
-::'''Ryan:''' Oh, I'm dead...
-::The enormous aurumaton moves its bulky body slowly and scans its surroundings. Then, it moved as if waking up from a long and bleak dream.
-::'''Ryan:''' Chengjie, I never thought I could come back and teach you again.
-::'''Xueyi:''' The deceased's lucidity only lasts for a brief moment. Please hurry up and skip the chitchatting.
-::'''Chengjie:''' I...
-::'''Ryan:''' Chengjie, let's cut to the chase. You have important questions for me, right?
-::'''Chengjie:''' Master Ryan, I found your last manuscript in the Sapientia Academe stashed together with the IPC Designer Invite. At the back of the first page, it wrote, "This is the dream of my life"...
-::'''Ryan:''' I remember putting it deep in the drawer.
-::'''Chengjie:''' I'd been avoiding the manuscript since you passed away... It was only until recently did I muster up the courage to treat the manuscript as the last test from you. I decided to have the starskiff drawn on the manuscript.
-::'''Chengjie:''' Yet, I failed to build both the lightweight framework and the auxiliary driving system... I followed the instructions in your manuscript, but the things I built could not function at all. I have tried and failed for numerous times.
-:<pre>{
-	"$type": "RPG.GameCore.ActiveVirtualCamera",
-	"AreaName": "LevelArea_P20221_F20221001_G89",
-	"AnchorName": "Anchor9",
-	"IsActive": true,
-	"VCameraDitherMaxDistance": 1,
-	"CenterPosX": -1,
-	"CenterPosY": -1
-}</pre>
-::'''Ryan:''' The manuscript is flawed.
-::'''Chengjie:''' ...How could it be?
-::'''Ryan:''' Do you have the manuscript with you? I'll show you the errors.
-::----
-::{{Black Screen|To everyone's surprise, the enormous aurumaton takes the manuscript and tears it into pieces. Before Chengjie can react, the pieces of paper have gone with the wind like flying flower petals.}}
-::'''Chengjie:''' Master! The manuscript...
-::'''Ryan:''' Don't pick them up.
-::'''Chengjie:''' It's your last manuscript and my last chance at mastering craftsmanship...
-::'''Ryan:''' That's nothing but a dumb and incomplete design. Even though you're a long-life species, you shouldn't waste your time on it. That's a poor design I made when I was still a novice.
-::'''Chengjie:''' But isn't it the dream of your life?
-::'''Ryan:''' Yes, it used to be my dream. I'm very touched that you're willing to fulfill it for me.
-::'''Ryan:''' You focus too much on that concept that you overlook the weaknesses and inferiority of the manuscript... Chengjie, I'm very sorry to say that you aren't cut out for being a starskiff craftsman.
-::{{DIcon|Arrow}} (Isn't that a bit too harsh?)
-::{{DIcon|Arrow}} (I think so too.)
-::'''Ryan:''' When I first met you, you were full of passion. You reminded me of myself when I first came to Xianzhou to learn.
-::'''Ryan:''' Unlike other masters who emphasized talent, I valued passion for learning. That was why I took you in as my disciple. Do you remember how we used to exchange ideas and encourage each other? That was my happiest moment at the Artisanship Commission.
-::'''Ryan:''' Now, look at yourself. Your enthusiasm is fettered by my poor design and is about to be depleted... I never thought that things would pan out this way.
-::'''Chengjie:''' ...
-::'''Ryan:''' There's nothing I can do to help you. I can neither guide you nor say pleasant things to trick you into wasting more of your time.
-::'''Ryan:''' So, destroying the manuscript is the last thing I can do for you.
-::'''Chengjie:''' But, wh&mdash;what should I do in the future?
-::'''Ryan:''' You're so much older than I was when I passed away. Hence, you should follow your heart.
-::'''Ryan:''' Why don't you try another career? Unlike me, you're a Xianzhou citizen with plenty of time ahead of you...
-::'''Ryan:''' *Whirring noise of a machine that stops working*
-::The enormous aurumaton stops moving and falls silent like how it was at the beginning.
-::'''Xueyi:''' He isn't here. He's returned to the Hall of Karma.
-::----
-::'''Chengjie:''' Master! The manuscript...
-::'''Ryan:''' Don't pick them up.
-::'''Chengjie:''' It's your last manuscript and my last chance at mastering craftsmanship...
-::'''Ryan:''' That's nothing but a dumb and incomplete design. Even though you're a long-life species, you shouldn't waste your time on it. That's a poor design I made when I was still a novice.
-::'''Chengjie:''' But isn't it the dream of your life?
-::'''Ryan:''' Yes, it used to be my dream. I'm very touched that you're willing to fulfill it for me.
-::'''Ryan:''' You focus too much on that concept that you overlook the weaknesses and inferiority of the manuscript... Chengjie, I'm very sorry to say that you aren't cut out for being a starskiff craftsman.
-::{{DIcon|Arrow}} (Isn't that a bit too harsh?)
-::{{DIcon|Arrow}} (I think so too.)
-::'''Ryan:''' When I first met you, you were full of passion. You reminded me of myself when I first came to Xianzhou to learn.
-::'''Ryan:''' Unlike other masters who emphasized talent, I valued passion for learning. That was why I took you in as my disciple. Do you remember how we used to exchange ideas and encourage each other? That was my happiest moment at the Artisanship Commission.
-::'''Ryan:''' Now, look at yourself. Your enthusiasm is fettered by my poor design and is about to be depleted... I never thought that things would pan out this way.
-::'''Chengjie:''' ...
-::'''Ryan:''' There's nothing I can do to help you. I can neither guide you nor say pleasant things to trick you into wasting more of your time.
-::'''Ryan:''' So, destroying the manuscript is the last thing I can do for you.
-::'''Chengjie:''' But, wh&mdash;what should I do in the future?
-::'''Ryan:''' You're so much older than I was when I passed away. Hence, you should follow your heart.
-::'''Ryan:''' Why don't you try another career? Unlike me, you're a Xianzhou citizen with plenty of time ahead of you...
-::'''Ryan:''' *Whirring noise of a machine that stops working*
-::The enormous aurumaton stops moving and falls silent like how it was at the beginning.
-::'''Xueyi:''' He isn't here. He's returned to the Hall of Karma.
-::----
+:{{tx}}
 {{Dialogue End}}
 
 ===Speak with Chengjie{{subst:void|<!--202040314-->}}===
 {{Mission Description|type=adventure|location=Divination Commission|update|Master Ryan tears apart the last of his manuscripts and wants Chengjie to pursue his own dream. What does Chengjie think about that?<br />You understand that having a pursuit is something to be encouraged, and giving up a pursuit is the same... Which decision is the right choice, that depends on you.}}
 {{Dialogue Start}}
-:<!--0.5-second delay-->
+:{{tx}}
 {{Dialogue End}}
 
 ===Leave the Divination Commission{{subst:void|<!--202040315-->}}===
 {{Mission Description|type=adventure|location=Divination Commission|update|Only an awkward silence hangs in the air now. Go, leave the Divination Commission and let the Master Diviner and the judge busy themselves with their own business.<br />You understand, you should allow Chengjie some time to digest what has transpired. He'll look for you in a few days anyway.}}
 {{Dialogue Start}}
-<pre>{
-	"$type": "RPG.GameCore.PlayMessage",
-	"MessageSectionID": 1212500,
-	"ShowNotice": true
-}</pre>
-<pre>{
-	"$type": "RPG.GameCore.SaveMessage",
-	"MessageSectionID": 1212500
-}</pre>
+:{{tx}}
 {{Dialogue End}}
 
 ===Head to Starskiff Haven and find Chengjie{{subst:void|<!--202040317-->}}===
 {{Mission Description|type=adventure|location=Central Starskiff Haven|update|Chengjie seems to have recovered from his depressed episode. As he said, completing his master's final work could be a good closure, but this did not happen... Go to Starskiff Haven and talk to Chengjie again.<br />His master helped him unload the pressure he placed on himself, but it is still up to him to decide where to go next.}}
 {{Dialogue Start}}
-<pre>{
-	"$type": "RPG.GameCore.CreateProp",
-	"GroupID": {
-		"fixedValue": {
-			"Value": 99
-		}
-	},
-	"GroupPropID": {
-		"fixedValue": {
-			"Value": 300001
-		}
-	}
-}</pre>
-;(Upon reaching the destination)
-
-;(Upon reaching the destination)
-----
-:'''Chengjie:''' Hi there. I was discussing with Miss Qingque what I could do besides being a craftsman.
-:'''Qingque:''' We touched on occupations like the pilot, professional celestial jade player, chef, and even scriptwriter. Yet, Chengjie was not sure if any of those is suitable for him.
-:{{DIcon|Arrow}} Are you sure you want to change your career?
-::'''Chengjie:''' I've always considered myself born to be a craftsman. Although the job is tough, the idea of finding another job never crosses my mind.
-::'''Chengjie:''' Now, I'd like to give other careers a shot.
-:{{DIcon|Arrow}} The Divination Commission custodian seems to be an easy gig.
-::'''Qingque:''' Well, it actually requires a lot of skills to be a custodian. Please stop eyeing my job, you two.
-:'''Qingque:''' What motivated you to become a craftsman back then? Did your parents urge you to find a stable job like mine?
-:'''Chengjie:''' At first, I thought it was cool to be able to come up with a well-drawn design, so I was inspired to do the same... In the end, I only became better at drawing without creating my own design.
-:'''Qingque:''' If that's the case, should you give painting a try?
-:'''Chengjie:''' Painting? I've only drawn design manuscripts before. Will I be good enough to be a painter?
-:{{DIcon|Arrow}} No one is born a master.
-::'''Chengjie:''' I understand what you mean. I should start from being an apprentice, right?
-:{{DIcon|Arrow}} Painting isn't a good idea. You should find a factory job instead.
-::'''Chengjie:''' You've got a point. It's more important to do something that can earn me a living. But how can life be without passion?
-:{{DIcon|Arrow}} Machines are capable of drawing now. You won't find a job as a painter.
-::'''Chengjie:''' ...Alas, it seems like there are no easy jobs in the world. If I keep hesitating, I won't be able to achieve anything.
-:'''Chengjie:''' Well, I'll heed your advice and start exploring my passion &mdash; painting.
-:'''Chengjie:''' ...I don't think I've lost anything after dropping my master's dream.
-:'''Chengjie:''' Without the guilt and the obligation to do my best, it's like a weight off my shoulders. My body feels light and airy.
-:'''Qingque:''' You have such a strong sense of responsibility.
-:'''Chengjie:''' I remember saying this when I was in Stargazer Navalia...
-:'''Chengjie:''' "One day, I'll build my master's dream starskiff, push it out gently, and set it sailing in the busiest lane of Starskiff Haven!"
-:Chengjie holds a paper boat amid the blowing wind by the Starskiff Haven. Then, he gives the paper boat a push and sets it sailing in the busiest lane of the sea.
-:Together you stare at the paper boat as it flies until it vanishes from sight...
-----
-:'''Chengjie:''' {{Size|36|Master, thank you. I've graduated today!}}
-----
-
-;(Talk to Chengjie)
-:'''Chengjie:''' There's one more paper boat left. You can have it.
-:{{DIcon|Arrow}} (Push the paper boat and send it onto a lane)
-::'''Chengjie:''' Goodbye, starskiff.
-::{{DIcon|Arrow}} Goodbye, starskiff.
-::{{DIcon|Arrow}} (Remain Silent)
-::'''Chengjie:''' Let's hope we'll cross paths again in the future.
-::----
-:{{DIcon|Arrow}} (Keep the paper boat as a memento)
-::'''Chengjie:''' That's great too. Thank you.
-::'''Chengjie:''' Let's hope we'll cross paths again in the future.
-::----
-
-;(Talk to Qingque)
-:'''Qingque:''' Chengjie seems to have prepared a gift for you. You can ask him about it.
-:'''Qingque:''' I'll take my leave soon to attend to something.
-
-;(Talk to Female Protagonist)
-:'''Chengjie:''' There's one more paper boat left. You can have it.
-:{{DIcon|Arrow}} (Push the paper boat and send it onto a lane)
-::'''Chengjie:''' Goodbye, starskiff.
-::{{DIcon|Arrow}} Goodbye, starskiff.
-::{{DIcon|Arrow}} (Remain Silent)
-::'''Chengjie:''' Let's hope we'll cross paths again in the future.
-::----
-:{{DIcon|Arrow}} (Keep the paper boat as a memento)
-::'''Chengjie:''' That's great too. Thank you.
-::'''Chengjie:''' Let's hope we'll cross paths again in the future.
-::----
+:{{tx}}
 {{Dialogue End}}
 
 ==Other Languages==

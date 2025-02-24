@@ -43,242 +43,43 @@ PageTitle=#Pathfinder#
 ===Head to the suppression tower and talk with the Chess Ghost{{subst:void|<!--401540101-->}}===
 {{Mission Description|type=adventure|location=Fyxestroll Garden|The Chess Ghost &mdash; who hasn't been quiet for long &mdash; has started looking for someone to play chess with near the suppression tower again. It seems that its significant defeat last time wasn't enough to make the lesson sink in. You can check out what new tricks it has up its sleeve.}}
 {{Dialogue Start}}
-
-;(Talk to Chess Ghost)
-:'''Chess Ghost:''' Hey, consider yourself lucky today to have received guidance from a master like me.
-:'''Chess Ghost:''' Come, then. I'm about to unfold the Pathfinder. You should listen, observe, and think lots. If you don't understand something, just ask me...
-:{{DIcon|Arrow}} Who are you, great master?
-::'''Chess Ghost:''' Who am I? How can you not recognize me? Who are YOU?
-:{{DIcon|Arrow}} Master, do you not recognize me?
-::'''Chess Ghost:''' Busy people have short memories. It shouldn't come as a surprise that I can't seem to recall who you are.
-:'''Chess Ghost:''' Hm. Why do you look so familiar...
-:'''Chess Ghost:''' Damnation! You... you feckless, insidious little... to obtain victory through such conniving... oh, you don't seem to have used any dastardly tricks to win...
-:'''Chess Ghost:''' However! I must avenge myself of the shame of defeat today! You! Dare you accept a duel?
-:{{DIcon|Arrow}} ...But what you're doing can't really be called chess...
-::'''Chess Ghost:''' What's it to you? Make your chess move! We'll see how long your mouth stays smart!
-::'''Chess Ghost:''' Silence. Spare me your words and show me your skill.
-:<pre>{
-	"$type": "RPG.GameCore.ActiveVirtualCamera",
-	"AreaName": "LevelArea_P20223_F20223001_G159",
-	"AnchorName": "Anchor1",
-	"IsActive": true,
-	"WaitBlendFinish": true,
-	"VCameraDitherMaxDistance": 1,
-	"CenterPosX": -1,
-	"CenterPosY": -1,
-	"DynamicParams": {}
-}</pre>
-::<!--1-second delay-->
-::----
-:<pre>{
-	"$type": "RPG.GameCore.ActiveVirtualCamera",
-	"AreaName": "LevelArea_P20223_F20223001_G159",
-	"AnchorName": "Anchor1",
-	"VCameraDitherMaxDistance": 1,
-	"CenterPosX": -1,
-	"CenterPosY": -1,
-	"DynamicParams": {}
-}</pre>
-:{{DIcon|Arrow}} I'm soooo scared.
-::'''Chess Ghost:''' Slippery, duplicitous human.
-::'''Chess Ghost:''' Silence. Spare me your words and show me your skill.
-:<pre>{
-	"$type": "RPG.GameCore.ActiveVirtualCamera",
-	"AreaName": "LevelArea_P20223_F20223001_G159",
-	"AnchorName": "Anchor1",
-	"IsActive": true,
-	"WaitBlendFinish": true,
-	"VCameraDitherMaxDistance": 1,
-	"CenterPosX": -1,
-	"CenterPosY": -1,
-	"DynamicParams": {}
-}</pre>
-::<!--1-second delay-->
-::----
-:<pre>{
-	"$type": "RPG.GameCore.ActiveVirtualCamera",
-	"AreaName": "LevelArea_P20223_F20223001_G159",
-	"AnchorName": "Anchor1",
-	"VCameraDitherMaxDistance": 1,
-	"CenterPosX": -1,
-	"CenterPosY": -1,
-	"DynamicParams": {}
-}</pre>
-:{{DIcon|Exit}} I don't have time to play with you right now
-::'''Chess Ghost:''' You'll be back! Because I KNOW you want to face me in chess!
-;(Upon reaching the destination)
-
-;(Upon reaching the destination)
-<pre>{
-	"$type": "RPG.GameCore.PlayNPCBubbleTalk",
-	"BubbleTalkInfoList": [
-		{
-			"AutoSkipTime": 3,
-			"GroupID": 159,
-			"GroupNpcID": 400001,
-			"TalkSentenceID": 401540120
-		}
-	],
-	"IsLoop": true,
-	"LoopInterval": 2
-}</pre>
+:{{tx}}
 {{Dialogue End}}
 
 ===Enter commands and guide the ingenium to leave the maze{{subst:void|<!--401540102-->}}===
 {{Mission Description|type=adventure|location=Fyxestroll Garden|update|Unwilling to accept defeat, the Chess Ghost has prepared a new Pathfinder puzzle. It's time to make it acknowledge defeat gracefully.}}
 {{Dialogue Start}}
-
-;(Talk to Chess Ghost)
-:'''Chess Ghost:''' You're back?
-:{{DIcon|Arrow}} Can we play chess again, master?
-::'''Chess Ghost:''' Yes. Let's play right now.
-:<pre>{
-	"$type": "RPG.GameCore.ActiveVirtualCamera",
-	"AreaName": "LevelArea_P20223_F20223001_G160",
-	"AnchorName": "Anchor1",
-	"IsActive": true,
-	"WaitBlendFinish": true,
-	"VCameraDitherMaxDistance": 1,
-	"CenterPosX": -1,
-	"CenterPosY": -1,
-	"DynamicParams": {}
-}</pre>
-::<!--1-second delay-->
-::----
-:<pre>{
-	"$type": "RPG.GameCore.ActiveVirtualCamera",
-	"AreaName": "LevelArea_P20223_F20223001_G160",
-	"AnchorName": "Anchor1",
-	"VCameraDitherMaxDistance": 1,
-	"CenterPosX": -1,
-	"CenterPosY": -1,
-	"DynamicParams": {}
-}</pre>
-:{{DIcon|Exit}} I don't have time to play with you right now
-::'''Chess Ghost:''' You'll be back! Because I KNOW you want to face me in chess!
-;(Upon reaching the destination)
-
-;(Upon reaching the destination)
-:<!--2-second delay-->
-<pre>{
-	"$type": "RPG.GameCore.PlayNPCBubbleTalk",
-	"BubbleTalkInfoList": [
-		{
-			"AutoSkipTime": 3,
-			"GroupID": 160,
-			"GroupNpcID": 400001,
-			"TalkSentenceID": 401540117
-		}
-	],
-	"IsLoop": true,
-	"LoopInterval": 2
-}</pre>
-:'''Chess Ghost:''' Hm. Your skill is acceptable. Nothing comparable to mine, of course.
-:{{DIcon|Arrow}} Got anything harder?
-::'''Chess Ghost:''' Oh. Turned cocky from a single bit of praise, have we?
-:{{DIcon|Arrow}} Thanks for your guidance, master.
-::'''Chess Ghost:''' Hm. Good, good, good. This is the attitude one should take when learning.
-:'''Chess Ghost:''' It will not be so easy next time.
+:{{tx}}
 {{Dialogue End}}
 
 ===Claim rewards{{subst:void|<!--401540104-->}}===
 {{Mission Description|type=adventure|location=Fyxestroll Garden|update|You provided the optimal solution with your superior intellect.<br />Claim your treasure chest reward next to the Chess Ghost.}}
 {{Dialogue Start}}
-
-;(Talk to Chess Ghost)
-:'''Chess Ghost:''' Take the reward. I can't use it anyway.
+:{{tx}}
 {{Dialogue End}}
 
 ===Enter commands and guide the ingenium to leave the maze{{subst:void|<!--401540105-->}}===
 {{Mission Description|type=adventure|location=Fyxestroll Garden|update|Unwilling to accept defeat, the Chess Ghost has prepared a new Pathfinder puzzle. It's time to make it acknowledge defeat gracefully.}}
 {{Dialogue Start}}
-
-;(Talk to Chess Ghost)
-:'''Chess Ghost:''' The last one was only a beginner's test. This game will be much harder.
-:{{DIcon|Arrow}} How much harder is it?
-:{{DIcon|Arrow}} Are you just pulling my leg?
-:'''Chess Ghost:''' Shut your mouth and face me to find out.
-:{{DIcon|Arrow}} Come on then.
-::'''Chess Ghost:''' Then let's start.
-::----
-:{{DIcon|Exit}} Wait a moment.
-::'''Chess Ghost:''' You really know how to dawdle.
-;(Upon reaching the destination)
-
-;(Upon reaching the destination)
-:<!--2-second delay-->
-<pre>{
-	"$type": "RPG.GameCore.PlayNPCBubbleTalk",
-	"BubbleTalkInfoList": [
-		{
-			"AutoSkipTime": 3,
-			"GroupID": 163,
-			"GroupNpcID": 400001,
-			"TalkSentenceID": 401540118
-		}
-	],
-	"IsLoop": true,
-	"LoopInterval": 2
-}</pre>
-:'''Chess Ghost:''' No, no, wait. How could you have figured that out so quickly?
-:{{DIcon|Arrow}} Isn't it still kind of easy?
-::'''Chess Ghost:''' R&mdash;Really?
-:{{DIcon|Arrow}} Someone's salty.
-::'''Chess Ghost:''' Who said that!
-:'''Chess Ghost:''' I expected no less from someone I've deemed as my opponent. You have some skill, I'll give you that.
+:{{tx}}
 {{Dialogue End}}
 
 ===Claim rewards{{subst:void|<!--401540107-->}}===
 {{Mission Description|type=adventure|location=Fyxestroll Garden|update|You provided the optimal solution with your superior intellect.<br />Claim your treasure chest reward next to the Chess Ghost.}}
 {{Dialogue Start}}
-
-;(Talk to Chess Ghost)
-:'''Chess Ghost:''' Take the reward. I can't use it anyway.
+:{{tx}}
 {{Dialogue End}}
 
 ===Enter commands and guide the ingenium to leave the maze{{subst:void|<!--401540108-->}}===
 {{Mission Description|type=adventure|location=Fyxestroll Garden|update|Unwilling to accept defeat, the Chess Ghost has prepared a new Pathfinder puzzle. It's time to make it acknowledge defeat gracefully.}}
 {{Dialogue Start}}
-
-;(Talk to Chess Ghost)
-:'''Chess Ghost:''' This round of chess will be quite extraordinary. Are you ready?
-:{{DIcon|Arrow}} I'm ready. Are you ready?
-:{{DIcon|Arrow}} You say that every time.
-:'''Chess Ghost:''' Hmph. Chess is not a game of words. Hurry up and start!
-:{{DIcon|Arrow}} Come on then.
-::'''Chess Ghost:''' Then let's start.
-::----
-:{{DIcon|Exit}} Wait a moment.
-::'''Chess Ghost:''' Stop dillydallying.
-;(Upon reaching the destination)
-
-;(Upon reaching the destination)
-:<!--2-second delay-->
-<pre>{
-	"$type": "RPG.GameCore.PlayNPCBubbleTalk",
-	"BubbleTalkInfoList": [
-		{
-			"AutoSkipTime": 3,
-			"GroupID": 166,
-			"GroupNpcID": 400001,
-			"TalkSentenceID": 401540118
-		}
-	],
-	"IsLoop": true,
-	"LoopInterval": 2
-}</pre>
-:'''Chess Ghost:''' You figured it out? Something must have gone wrong!
-:{{DIcon|Arrow}} Does this really confuse you so much?
-:{{DIcon|Arrow}} Could the problem be with you?
-:'''Chess Ghost:''' Don't celebrate too soon. I was going soft with you before. Now, I will unleash my true potential!
+:{{tx}}
 {{Dialogue End}}
 
 ===Claim rewards{{subst:void|<!--401540110-->}}===
 {{Mission Description|type=adventure|location=Fyxestroll Garden|update|You provided the optimal solution with your superior intellect.<br />Claim your treasure chest reward next to the Chess Ghost.}}
 {{Dialogue Start}}
-
-;(Talk to Chess Ghost)
-:'''Chess Ghost:''' Take the reward. I can't use it anyway.
+:{{tx}}
 {{Dialogue End}}
 
 ==Other Languages==

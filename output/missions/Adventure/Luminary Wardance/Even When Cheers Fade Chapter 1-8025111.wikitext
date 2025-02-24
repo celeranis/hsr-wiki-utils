@@ -40,232 +40,30 @@ PageTitle=#Even When Cheers Fade: Chapter 1#
 ===Participate in the Knockout Matches and win points{{subst:void|<!--802511101-->}}===
 {{Mission Description|type=adventure|location=Skysplitter|The rules of the Knockout Matches are easy &mdash; Just defeat opponents and win points<br />Contestant Luka just needs to do three things: Win, win, and keep winning!}}
 {{Dialogue Start}}
-<pre>{
-	"$type": "RPG.GameCore.WaitUIControllerClose",
-	"UIControllerName": "FightFestScoreMatchResultDialog"
-}</pre>
-----
-:'''Carmella:''' The first knockout match comes to a triumphant close! How do you feel, Luka?
-:'''Luka:''' Not bad! I'm starting to get into my groove!
-:'''Carmella:''' (Trailblazer), how does it feel, being the coach?
-:{{DIcon|Arrow}} It's pretty chill.
-::'''Luka:''' Spoken like the legendary Galactic Baseballer!
-:{{DIcon|Arrow}} It's pretty tiring.
-::'''Luka:''' Haha, you've worked hard, coach!
-:{{DIcon|Arrow}} It feels no different from fighting in the ring myself.
-::'''Carmella:''' That's right! It's not some walk in the park!
-:'''Carmella:''' We have time to take a short break. Let's return to the lounge and decide which opponent to fight next at the Tactics Board!
 :{{tx}}
 {{Dialogue End}}
 
 ===Head to the Reception Hall and confirm your match qualifications{{subst:void|<!--802511102-->}}===
 {{Mission Description|type=adventure|location=Skysplitter|update|Luka finally wins enough points after a few rounds of Knockout Matches.<br />Now he'll face the truly formidable foes.}}
 {{Dialogue Start}}
-<pre>{
-	"$type": "RPG.GameCore.WaitUIControllerClose",
-	"UIControllerName": "FightFestScoreMatchResultDialog"
-}</pre>
-:{{A|VO side2 yanwu player 114 m.ogg}} {{A|VO side2 yanwu player 114 f.ogg}} '''(Trailblazer):''' (After fighting in so many knockout stages, I think our points should be enough. Time to head to the Skysplitter's leaderboard to confirm our ranking.)
+:{{tx}}
 {{Dialogue End}}
 
 ===Start the match against Topaz{{subst:void|<!--802511103-->}}===
 {{Mission Description|type=adventure|location=Skysplitter|update|Topaz &mdash; someone who has quite the history with Belobog.<br />Luka is very much looking forward to this chance to fight her.<br />Luka can't help but think "maybe it is the destiny of a Belobogian for me to fight her as my first powerful opponent."}}
 {{Dialogue Start}}
-
-;(Talk to Luka)
-:{{A|VO side2 yanwu camera 129.ogg}} '''Carmella:''' Mr. Luka, the IPC is a megacorp. It's easy to pin labels on people, but at the end of it, everyone we meet is living flesh and bones with feelings. I'm also an IPC staff member. Do you hate me too?
-:{{A|VO side2 yanwu luka 205.ogg}} '''Luka:''' I spoke out of turn. Please forgive my rudeness, Miss Carmella.
-:{{A|VO side2 yanwu luka 206.ogg}} '''Luka:''' You're right ... You're right... I should find out what kind of person Topaz is for myself.
-
-;(Talk to Carmella)
-:{{A|VO side2 yanwu camera 129.ogg}} '''Carmella:''' Mr. Luka, the IPC is a megacorp. It's easy to pin labels on people, but at the end of it, everyone we meet is living flesh and bones with feelings. I'm also an IPC staff member. Do you hate me too?
-:{{A|VO side2 yanwu luka 205.ogg}} '''Luka:''' I spoke out of turn. Please forgive my rudeness, Miss Carmella.
-:{{A|VO side2 yanwu luka 206.ogg}} '''Luka:''' You're right ... You're right... I should find out what kind of person Topaz is for myself.
-
-;(Unused &mdash; FightFest_MainRace_802511103)
-----
-::{{A|VO side2 yanwu luka 207.ogg}} '''Luka:''' (Topaz... the IPC's participating representative. Honestly, I don't really hate her. I heard she was the one who granted the time extension... Maybe she's not so bad after all.)
-::{{A|VO side2 yanwu luka 208.ogg}} '''Luka:''' (But I have a certain instinctive wariness of those bigwigs from the IPC... No, I can't let that fear control me!)
-::{{A|VO side2 yanwu luka 209.ogg}} '''Luka:''' (If she's my opponent, I will let her witness our strength... I can't lose to her!)
-::{{A|VO side2 yanwu player 115 m.ogg}} {{A|VO side2 yanwu player 115 f.ogg}} '''(Trailblazer):''' Luka, are you ready to fight?
-::{{DIcon|Arrow}} Ready.
-:::{{A|VO side2 yanwu luka 210.ogg}} '''Luka:''' I'm ready.
-:::{{tx}}
-::<pre>{
-	"$type": "RPG.GameCore.SetPerformanceResult",
-	"Value": 1
-}</pre>
-::{{DIcon|Exit}} Please give me a moment.
-:::{{A|VO side2 yanwu luka 211.ogg}} '''Luka:''' Please give me a moment.
-:::{{tx}}
-
-;(Unused &mdash; G75_TriggerBattle)
-----
-::{{A|VO side2 yanwu luka 207.ogg}} '''Luka:''' (Topaz... the IPC's participating representative. Honestly, I don't really hate her. I heard she was the one who granted the time extension... Maybe she's not so bad after all.)
-::{{A|VO side2 yanwu luka 208.ogg}} '''Luka:''' (But I have a certain instinctive wariness of those bigwigs from the IPC... No, I can't let that fear control me!)
-::{{A|VO side2 yanwu luka 209.ogg}} '''Luka:''' (If she's my opponent, I will let her witness our strength... I can't lose to her!)
-::{{A|VO side2 yanwu player 115 m.ogg}} {{A|VO side2 yanwu player 115 f.ogg}} '''(Trailblazer):''' Luka, are you ready to fight?
-::{{DIcon|Arrow}} Ready.
-:::{{A|VO side2 yanwu luka 210.ogg}} '''Luka:''' I'm ready.
-:::{{tx}}
-::<pre>{
-	"$type": "RPG.GameCore.SetPerformanceResult",
-	"Value": 1
-}</pre>
-::{{DIcon|Exit}} Please give me a moment.
-:::{{A|VO side2 yanwu luka 211.ogg}} '''Luka:''' Please give me a moment.
-:::{{tx}}
-
-;(Unused &mdash; FightFestBattleStart)
-<pre>{
-	"$type": "RPG.GameCore.AddStreamingSource",
-	"StreamingSource": {
-		"CenterName": "Mission_FightFestBattlePerformance",
-		"AreaName": "LevelArea_P20242_F20242001_G19",
-		"AnchorName": "Anchor7"
-	}
-}</pre>
-<pre>{
-	"$type": "RPG.GameCore.SetFloorCustomFloat",
-	"Name": {
-		"Value": "FCV_2.5_Throng"
-	},
-	"Value": {
-		"IsDynamic": false,
-		"FixedValue": {
-			"Value": 1
-		}
-	}
-}</pre>
-----
 :{{tx}}
-<pre>{
-	"$type": "RPG.GameCore.SwitchCharacterAnchorV2",
-	"SwitchCharacterAnchorConfig": {
-		"IsLocalPlayer": true,
-		"CharacterUniqueName": "LocalPlayer",
-		"AreaName": {
-			"Value": "LevelArea_P20242_F20242001_G19"
-		},
-		"AnchorName": {
-			"Value": "Anchor7"
-		}
-	}
-}</pre>
-<pre>{
-	"$type": "RPG.GameCore.ShowFightFestMainRaceUpgradeResultDialog",
-	"MainRaceID": 1001,
-	"IsSuccess": true
-}</pre>
-<pre>{
-	"$type": "RPG.GameCore.WaitUIControllerClose",
-	"UIControllerName": "FightFestUpgradeSuccessDialog"
-}</pre>
 {{Dialogue End}}
 
 ===Return to the lounge and prepare for the first Faceoff Match{{subst:void|<!--802511106-->}}===
 {{Dialogue Start}}
-
-;(Unused &mdash; EnterArea_G74)
-:{{A|VO side2 yanwu camera 125.ogg}} '''Carmella:''' Already a few matches have gone by in the blink of an eye! Have you gotten used to the situation, Luka?
-::{{A|VO side2 yanwu luka 197.ogg}} '''Luka:''' Haha, yes, yes, I have. But the hallucinations are getting stronger... Could there actually be something wrong with me?
-::{{DIcon|Arrow}} Could this be what they call a "culture shock"?
-:::{{A|VO side2 yanwu luka 198.ogg}} '''Luka:''' Can culture shock really cause such strong hallucinations?
-:::{{A|VO side2 yanwu camera 126.ogg}} '''Carmella:''' It's possible! There was a scholar from the Intelligentsia Guild who wished for an audience with the Erudition no matter the cost, but he went mad the instant he laid eyes on Nous. The minds of organic lifeforms are very fragile.
-::{{DIcon|Arrow}} Did you hit your head?
-:::{{A|VO side2 yanwu luka 199.ogg}} '''Luka:''' I'm a boxer! My head gets hit every other day!
-:::{{A|VO side2 yanwu camera 127.ogg}} '''Carmella:''' You should be more careful then. Many athletes suffer from brain complications in their later years. The minds of organic lifeforms are very fragile.
-::{{A|VO side2 yanwu luka 200.ogg}} '''Luka:''' You're starting to scare me now... Good thing I've got plenty of youth left to burn! I can't falter now!
-::{{A|VO side2 yanwu luka 201.ogg}} '''Luka:''' The next match is gonna be crucial, and my opponent is... I guess you can call her an old acquaintance.
-::{{DIcon|Arrow}} You know Topaz?
-:::{{A|VO side2 yanwu luka 202.ogg}} '''Luka:''' Never met her in the flesh. But who in Belobog wouldn't know of her?
-::{{DIcon|Arrow}} I guess you can say she's an old friend of his from back home.
-:::{{A|VO side2 yanwu luka 203.ogg}} '''Luka:''' Yup. Me and the IPC brass. Super "old friends."
-::{{A|VO side2 yanwu camera 128.ogg}} '''Carmella:''' Miss Topaz is the cutest among the Ten Stonehearts. I like her.
-::{{tx}}
-:<pre>{
-	"$type": "RPG.GameCore.SwitchCharacterAnchorV2",
-	"SwitchCharacterAnchorConfig": {
-		"IsLocalPlayer": true,
-		"CharacterUniqueName": "LocalPlayer",
-		"AreaName": {
-			"Value": "LevelArea_P20242_F20242001_G74"
-		},
-		"AnchorName": {
-			"Value": "Anchor1"
-		},
-		"ResetAnimation": true,
-		"ResetCamera": true
-	}
-}</pre>
+:{{tx}}
 {{Dialogue End}}
 
 ===Hold the press conference{{subst:void|<!--802511105-->}}===
 {{Mission Description|type=adventure|location=Skysplitter|update|Press conferences are a specialty of sporting events. You've gotta experience it.<br />Are you prepared to face the cunning, plotting, devious, and conniving friends working in the media industry?<br />It's time to have a battle of wits against them.}}
 {{Dialogue Start}}
-<pre>{
-	"$type": "RPG.GameCore.SetFloorCustomFloat",
-	"Name": {
-		"Value": "FCV_2.5_Throng"
-	},
-	"Value": {
-		"IsDynamic": false,
-		"FixedValue": {
-			"Value": 2
-		}
-	}
-}</pre>
-<pre>{
-	"$type": "RPG.GameCore.SetFloorCustomFloat",
-	"Name": {
-		"Value": "FCV_2.5_Arena"
-	},
-	"Value": {
-		"IsDynamic": false,
-		"FixedValue": {
-			"Value": 0
-		}
-	}
-}</pre>
 :{{tx}}
-<pre>{
-	"$type": "RPG.GameCore.SetMissionCustomValue",
-	"SubmissionID": 802511105,
-	"MissionCustomValue": {
-		"Index": 1,
-		"isLocal": true,
-		"ValidValueParamList": [
-			1,
-			2
-		]
-	},
-	"CustomValue": 1
-}</pre>
-:{{DIcon|Arrow}} Front row, first from the left.
-:{{DIcon|Arrow}} Front row, second from the left.
-:{{DIcon|Arrow}} Front row, third from the left.
-<pre>{
-	"$type": "RPG.GameCore.SetTextJoinValue",
-	"TextJoinID": 108,
-	"Value": "1"
-}</pre>
-;(Unused &mdash; TriggerPerformance_AfterShowUI)
-----
-:<pre>{
-	"$type": "RPG.GameCore.TriggerPermanentEmotion",
-	"TargetType": {
-		"$type": "RPG.GameCore.TargetFetchAdvLocalPlayer",
-		"IncludeStoryPlayer": true
-	},
-	"EmotionName": "Trouble02",
-	"TransitTime": 0.2
-}</pre>
-::'''(Trailblazer):''' These journalists really will sensationalize anything and everything. Gotta watch my words next time.
-::'''(Trailblazer):''' Getting off to such a great start in his first Faceoff Match should give Luka a confidence boost.
-::'''(Trailblazer):''' Although, Luka's hallucinations have been getting more and more intense. I have to think of a way to stop them...
-::<!--1-second delay-->
-::'''(Trailblazer):''' Luka has his own supporters now, and this is wonderful news.
-::'''(Trailblazer):''' Luka should be back at the lounge now. Let's take a walk nearby and look for him.
 {{Dialogue End}}
 
 ==Other Languages==

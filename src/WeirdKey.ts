@@ -28,6 +28,7 @@ export class WeirdKey {
 		},
 		// from RogueTournWeeklyDisplay
 		DescParamType: {
+			'3.0': 'PGCFPBGPDGG',
 			'2.7': 'MPNJPFDCBDG',
 			'2.6': 'EOMLKKGEAEF',
 			'2.5': 'FGMDOEKGPEE',
@@ -35,6 +36,7 @@ export class WeirdKey {
 			'2.3': 'IAGLGKPDLOE',
 		},
 		DescParamValue: {
+			'3.0': 'CPPHDJHHGGN',
 			'2.7': 'ODPKJEJKOIH',
 			'2.6': 'HPPEILAONGE',
 			'2.5': 'NLABNDMDIKM',

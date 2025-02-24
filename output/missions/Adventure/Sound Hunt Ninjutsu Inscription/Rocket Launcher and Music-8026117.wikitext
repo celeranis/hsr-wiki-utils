@@ -37,117 +37,13 @@ PageTitle=#Rocket Launcher and Music#
 ===Collect inspiration for composing a song by wandering around the Golden Hour{{subst:void|<!--802611701-->}}===
 {{Mission Description|type=adventure|location=Golden Hour|You've become the manager of the music party's performing band, and now your band needs to complete 3 performances on the stage in the middle of the campus.<br />Wander around the Golden Hour to help Rappa collect inspiration for composing.}}
 {{Dialogue Start}}
-
-;(Unused &mdash; EnterDistrict_G555)
-:'''Pepeshi Merchant:''' ...New game's first test! Don't miss out!
-::'''Pepeshi Merchant:''' Give it a try. Just three minutes and I'm sure you'll love this game just like I do!
-::{{DIcon|Arrow}} Feels like so many games have gone into beta testing recently.
-::'''Pepeshi Merchant:''' That's because it's almost time for the Paperfold University anniversary festival. They won't make it if they don't launch now. Not that I'm bragging, but this title I developed? I reckon it can probably clinch a "Most Beloved Mobile Game by Students" award.
-::{{tx}}
-::{{DIcon|Talk}} Are arcade games considered mobile games?
-:::The Pepeshi merchant shows you the wheels attached to the bottom of the arcade machine. He even pushes the machine around for a few rounds.
-:::{{tx}}
-::;(Return to previous option selection)
-::{{DIcon|Talk}} Actually, there is a game with a similar theme...
-:::You tell him about that Intellitron merchant and emphasize how fun the other's game was.
-:::{{tx}}
-::;(Return to previous option selection)
-::{{DIcon|Arrow}} Let me play it first.
-:::'''Pepeshi Merchant:''' All right! You look like someone who knows games. Feel free to critique if you find anything lacking. I welcome all feedback. If you're satisfied, please write a five-star review for me.
-:::{{tx}}
-:<pre>{
-	"$type": "RPG.GameCore.ShowUI",
-	"Name": "Ui.MusicRhythm.MusicRhythmChooseLevelPage",
-	"WaitForExit": true,
-	"Param": {
-		"Value": "8"
-	},
-	"OnUICustomEvent": [],
-	"OnUIExitImmediately": [
-		{
-			"$type": "RPG.GameCore.EndDialogueEntityInteract"
-		}
-	]
-}</pre>
-
-
-;(Talk to Pepeshi Merchant)
-:'''Pepeshi Merchant:''' There's a new game doing their first playtest. Just three minutes and I'm sure you'll love this game just like I do!
-:{{DIcon|Travel Log}} Let me play it.
-:<pre>{
-	"$type": "RPG.GameCore.ShowUI",
-	"Name": "Ui.MusicRhythm.MusicRhythmChooseLevelPage",
-	"WaitForExit": true,
-	"Param": {
-		"Value": "8"
-	},
-	"OnUIExitImmediately": [
-		{
-			"$type": "RPG.GameCore.EndDialogueEntityInteract"
-		}
-	]
-}</pre>
-:{{DIcon|Exit}} I've got something else to do.
+:{{tx}}
 {{Dialogue End}}
 
 ===Play the new arcade game developed by the Pepeshi merchant{{subst:void|<!--802611704-->}}===
 {{Mission Description|type=adventure|location=Golden Hour|update|You've become the manager of the music party's performing band, and now your band needs to complete 3 performances on the stage in the middle of the campus.<br />Obtain a record of Brother Hanu's beats to help Rappa collect inspiration for composing.}}
 {{Dialogue Start}}
 :{{tx}}
-:'''Pepeshi Merchant:''' ...How was the experience? Was it fun?
-:{{DIcon|Arrow}} It was super easy!
-::'''Pepeshi Merchant:''' That's because you were too good at maneuvering. Average players wouldn't be able to hit such a level, really.
-:{{DIcon|Arrow}} Isn't there auto-battle?
-::'''Pepeshi Merchant:''' Yes, there can be! We can add anything you want. As long as you have fun, all requests will be fulfilled. As a dev, I will listen!
-:'''Pepeshi Merchant:''' Looks like there's decent player feedback. I can now feel at ease. To be honest, this is my first time making a game.
-:'''Pepeshi Merchant:''' I may look all prim and proper now, but when I was younger, I also played in a band. It wasn't anything trendy... If I had to be specific, you could call it electronic music. All the wubs and zaps on stage... so cool!
-:'''Pepeshi Merchant:''' I really considered music my dream back then. I even encouraged my bandmates to drop out of school together, and fantasized that we can all feed ourselves off band money, hahaha... It was a very lively dream, now that I think back on it.
-:{{DIcon|Arrow}} Why did you give up on music?
-:{{DIcon|Arrow}} So you changed professions and made games instead?
-:'''Pepeshi Merchant:''' I had no choice. Being in a band was hard &mdash; You need to stay creative, and spend time practising, and network and find a chance to perform, and you still earned no money at the end of the day... *sigh* Don't be misled by the glamor of the stage. We even had to scrimp on hair gel.
-:'''Pepeshi Merchant:''' A member later left the band, and then it just disbanded like that. After many twists and turns, I ended up here, starting making games and earning proper revenue. Haven't touched an instrument since.
-:'''Pepeshi Merchant:''' *sigh* ...I said too much before I knew it. Don't mind me. Just treat it as a cautionary tale of sorrow from a former band member.
-:{{DIcon|Arrow}} Do you regret it?
-:'''(Trailblazer):''' So... do you regret it? Giving up on your original dream for a better life?
-:{{tx}}
-:{{tx}}
-
-;(Talk to Pepeshi Merchant)
-:'''Pepeshi Merchant:''' There's a new game doing their first playtest. Just three minutes and I'm sure you'll love this game just like I do!
-:{{DIcon|Travel Log}} Let me play it.
-:<pre>{
-	"$type": "RPG.GameCore.ShowUI",
-	"Name": "Ui.MusicRhythm.MusicRhythmChooseLevelPage",
-	"WaitForExit": true,
-	"Param": {
-		"Value": "8"
-	},
-	"OnUIExitImmediately": [
-		{
-			"$type": "RPG.GameCore.EndDialogueEntityInteract"
-		}
-	]
-}</pre>
-:{{DIcon|Exit}} I've got something else to do.
-
-;(Unused &mdash; MusicRhythm_ShowUI)
-<pre>{
-	"$type": "RPG.GameCore.WaitFrame"
-}</pre>
-:<pre>{
-	"$type": "RPG.GameCore.ShowUI",
-	"Name": "Ui.MusicRhythm.MusicRhythmChooseLevelPage",
-	"WaitForExit": true,
-	"Param": {
-		"Value": "8"
-	},
-	"OnUICustomEvent": [],
-	"OnUIExitImmediately": [
-		{
-			"$type": "RPG.GameCore.EndDialogueEntityInteract"
-		}
-	]
-}</pre>
 {{Dialogue End}}
 
 ==Other Languages==

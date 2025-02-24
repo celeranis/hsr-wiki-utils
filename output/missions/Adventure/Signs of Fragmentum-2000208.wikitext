@@ -37,31 +37,7 @@ PageTitle=#Signs of Fragmentum#
 ===Learn about the current status of the blocked-off area{{subst:void|<!--200020801-->}}===
 {{Mission Description|type=adventure|location=Storage Zone|Go to the storage zone and ask the investigators sent by Asta about the current situation.}}
 {{Dialogue Start}}
-
-;(Talk to Security Department Member)
-:'''Security Department Member:''' The extent of Fragmentum corrosion in this zone is very severe, and even the terminal devices recently broke. Establishing a remote connection is the only way to go, but that requires beacon data...
-:'''Security Department Member:''' Are you (Trailblazer)? I guess you're sent here by Lead Researcher Asta. Awesome! Please do us a favor and collect data from the beacons inside. Please!
-:'''Security Department Member:''' It's quite dangerous in there... But if you're ready, just let me know.
-:{{DIcon|Arrow}} Let's go.
-:<pre>{
-	"$type": "RPG.GameCore.SetLocalPlayerDitherAlpha"
-}</pre>
-:<pre>{
-	"$type": "RPG.GameCore.OpenTreasureChallenge",
-	"RaidID": 4000202,
-	"OnCancel": [
-		{
-			"$type": "RPG.GameCore.EndDialogueEntityInteract"
-		},
-		{
-			"$type": "RPG.GameCore.TriggerCustomString",
-			"CustomString": {
-				"Value": "ALL_TALK_END"
-			}
-		}
-	]
-}</pre>
-:{{DIcon|Exit}} Maybe later.
+:{{tx}}
 {{Dialogue End}}
 
 ==Other Languages==

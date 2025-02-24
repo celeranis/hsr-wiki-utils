@@ -39,170 +39,17 @@ PageTitle=#Hiring Guides: Hook#
 ===Head to Boulder Town to find Hook{{subst:void|<!--800125301-->}}===
 {{Mission Description|type=adventure|location=Boulder Town|The Belobog History and Culture Museum is about to open, but there is a great lack of guides. To rapidly fill up these positions and improve the visitor experience, Pela and Eris are inviting all Belobog citizens to apply for these positions.<br />This time they have their eye on the boss of The Moles, Pitch-Dark Hook the Great. Head to Boulder Town in their stead, and see whether Pitch-Dark Hook the Great is interested in the position.}}
 {{Dialogue Start}}
-
-
-;(Talk to Hook)
-;(If {{cx}}<!--during performance 501030401-->)
-::'''Hook:''' Mm-hmm! Another peaceful day in Boulder Town!
-::'''Hook:''' ...
-::'''Hook:''' Hmm...
-::'''Hook:''' Uhh...
-::'''Hook:''' ...It's all thanks to us Moles!
-::{{DIcon|Arrow}} What are you doing here?
-:::'''Hook:''' Need you even ask? I'm here to see the sights!
-::{{DIcon|Arrow}} The great Hook is certainly in high spirits.
-:::'''Hook:''' Hmph, I'm not the boss of The Moles without reason!
-::{{DIcon|Arrow}} It's all thanks to us Moles!
-:::'''Hook:''' That's right! The Moles are the greatest!
-::{{DIcon|Arrow}} That's the best you could come up with...?
-:::'''Hook:''' You say something then! You think you can do better than Hook!?
-::'''Hook:''' Oh? If it isn't the honorary member of The Moles, (Trailblazer)!
-::'''Hook:''' Impudence! Ignoring the presence of Pitch-Dark Hook the Great!
-::'''Hook:''' But I'm in a good mood today, so you're off the hook! (No pun intended.) How can I help you, honorary member?
-;(If {{cx}}<!--not during performance 501030401-->)
-:<pre>{
-	"$type": "RPG.GameCore.PlayMultiVoiceTalk",
-	"TalkSentenceID": 501030466,
-	"KeepDisplay": true
-}</pre>
-::'''Hook:''' How can I help you, honorary member?
+:{{tx}}
 {{Dialogue End}}
 
 ===Head to the Belobog History and Culture Museum to find Eris{{subst:void|<!--800125302-->}}===
 {{Dialogue Start}}
-
-;(Talk to Eris)
-;(If {{cx}}{{subst:void|<!--{"$type":"RPG.GameCore.ByIfGroupIsOccupied","GroupID":35,"Inverse":true}-->}})
-::----
-::'''Hook:''' Wow, it's so big in here! It feels... It feels like ten clinics put together!
-::'''Hook:''' What happens next? Don't tell me we've already started playing volunteers?
-::{{DIcon|Arrow}} Miss Eris, here's a resume.
-::'''Eris:''' Hello, (Trailblazer)! I see you've got the company of a lovely kid today.
-::'''Hook:''' I'm not a kid! I'm Pitch-Dark Hook the Great!
-::'''Eris:''' Hehe, are you here to be a volunteer guide too? I'll have Pela look at your resume. Please wait here.
-:<pre>{
-	"$type": "RPG.GameCore.TriggerSound",
-	"SoundName": {
-		"Value": "Ev_sfx_belobog_clara_walk_near"
-	},
-	"EmitterType": "LocalPlayer"
-}</pre>
-::----
-::'''Clara:''' Here we are again, {{MC|m=Mister|f=Miss}} (Trailblazer) and... Pitch-Dark Hook the Great?
-::'''Hook:''' Eh? Aren't you Clara, one of our honorary members? Are you here to be a volunteer too?
-::{{DIcon|Arrow}} Why are you here? Where's Pela?
-:::'''Clara:''' ... Pela asked me to help conduct the interview today...
-::{{DIcon|Arrow}} Are you here to be a volunteer too?
-:::'''Clara:''' Yup... That's right. By the way, Pela asked me to help conduct the interview today...
-::{{DIcon|Arrow}} Why can't she be here herself?
-:::'''Clara:''' She has other matters to attend to...
-:::'''Clara:''' Still, she checked Hook's resume and thought she was a good fit... So, she entrusted the rest of the process to me.
-::{{DIcon|Arrow}} Thanks, Clara.
-:::'''Clara:''' It's no problem. I'm glad to be able to help Pela out.
-::{{DIcon|Arrow}} I have a bad feeling about this...
-:::'''Clara:''' Um... There... shouldn't be any problem! Although I have no experience giving interviews, I'll do my best.
-::'''Clara:''' Anyway... let's head to the lounge first. The interview will be held there.
-::'''Clara:''' By the way, Pela has also appointed {{MC|m=Mister|f=Miss}} (Trailblazer) as the assistant assessor of the interview...
-::'''Clara:''' So... this is going to take up some of your time, {{MC|m=Mister|f=Miss}} (Trailblazer).
-::{{DIcon|Arrow}} That's fine. I'd love to help.
-:::'''Clara:''' Oh, thank you so much, {{MC|m=Mister|f=Miss}} (Trailblazer)!
-::{{DIcon|Arrow}} That's fine. I'm used to it...
-:::'''Clara:''' I'm... sorry for imposing this on you!
-::'''Clara:''' Well, let's start the interview when you're ready, {{MC|m=Mister|f=Miss}} (Trailblazer). We'll wait for you here.
-::'''Hook:''' Although I'm not sure what all this is about, I'll wait for you with Clara!
-::----
-;(Otherwise)
-:<pre>{
-	"$type": "RPG.GameCore.PlayMultiVoiceTalk",
-	"TalkSentenceID": 501190301,
-	"KeepDisplay": true
-}</pre>
-:<pre>{
-	"$type": "RPG.GameCore.ShowMenu"
-}</pre>
+:{{tx}}
 {{Dialogue End}}
 
 ===Start the interviews in the museum's rest area{{subst:void|<!--800125303-->}}===
 {{Dialogue Start}}
-
-;(Talk to Clara)
-----
-:'''Clara:''' Oh, {{MC|m=Mister|f=Miss}} (Trailblazer) is here! Are you ready?
-:{{DIcon|Arrow}} Let's begin.
-::'''Clara:''' Great! Let's do it.
-::<!--0.5-second delay-->
-::'''Hook:''' So, what exactly is an interview? Can't I just become that vo&mdash;volunteer directly?
-::'''Clara:''' I'm not sure about it either... According to Pela, an interview is a way to find out whether a person is suitable for a job through a face-to-face conversation.
-::'''Hook:''' So that's just chatting, right? That's great!
-::'''Clara:''' Um... Not exactly...
-::'''Hook:''' Take it easy, Clara! I fully understand what an interview is all about. Let's get started!
-::{{DIcon|Arrow}} Clara, don't be nervous!
-:::'''Clara:''' Okay... I'm fine...
-::{{DIcon|Arrow}} This is getting weird...
-:::'''Clara:''' It.. it should be fine. I'll give it my all!
-::'''Clara:''' ...Eh? It doesn't feel right for me to say this.
-::'''Clara:''' Anyway... I'll start asking questions about your resume. Are you ready?
-::'''Hook:''' Wait a minute, Clara! Even though we are in the Overworld, you should still address me properly as Pitch-Dark Hook the Great!
-::'''Clara:''' ...Huh?
-::{{DIcon|Arrow}} Hook the Great is right!
-:::'''Clara:''' {{MC|m=Mister|f=Miss}} (Trailblazer), even you are chirping in...
-::{{DIcon|Arrow}} ...Huh?
-:::'''Clara:''' This isn't what I expected...
-::'''Hook:''' Hmm, seems like you're a little nervous. I'll take over this in-interview from here!
-::'''Hook:''' Please listen to the questions carefully, Clara! Question One: Why do you want to be a volunteer guide at the museum?
-::'''Clara:''' Well...
-::'''Clara:''' What should I do, {{MC|m=Mister|f=Miss}} (Trailblazer)?
-::{{DIcon|Arrow}} Answer Hook the Great's questions &mdash; truthfully!
-:::'''Hook:''' Exactly, Clara. Just answer truthfully, and don't be scared! We're just having a casual conversation here!
-:::'''Clara:''' Eh!? Is this how the interview should be conducted... Fine...
-::{{DIcon|Arrow}} You should try to take back control of the interview...
-:::'''Clara:''' Ah... {{MC|m=Mister|f=Miss}} (Trailblazer) is right! I should think of a way...
-:::'''Hook:''' Don't interrupt her train of thought, honorary member! What if Clara gets even more nervous?
-:::'''Hook:''' Take it easy, Clara... Just answer truthfully, and don't be scared! We're just having a casual conversation here!
-:::'''Clara:''' Eh... O&mdash;Okay then...
-::'''Clara:''' In fact, it's because I helped Pela and {{MC|m=Mister|f=Miss}} (Trailblazer) to solve the missing exhibits case before...
-::'''Clara:''' Pela recognized my ability, so she suggested that I work as a volunteer guide here...
-::'''Hook:''' As the leader of The Moles, I didn't even know about this... I have neglected my responsibilities!
-::'''Hook:''' Anyway, this case indirectly manifests your talent! Since you were able to help find the missing exhibits, I'm sure you will ace it as a volunteer guide!
-::'''Hook:''' Now, the next question! Are you aware of the duties of a volunteer guide?
-::'''Clara:''' Well...
-::{{DIcon|Arrow}} Please share what you know. I'm sure you know more than Hook the Great!
-:::'''Hook:''' Exactly! Just say whatever you want to share, Clara!
-:::'''Hook:''' ...Hold on, (Trailblazer). What you just said didn't sound right to me.
-::{{DIcon|Arrow}} This interview is getting out of hand...
-:::'''Hook:''' What are you talking about, (Trailblazer)? Isn't this what an interview is supposed to be like?
-:::'''Hook:''' Nobody knows interviews better than me, believe me! So don't you worry!
-::'''Clara:''' Um... The duties of a volunteer guide... Let me think...
-::'''Clara:''' Firstly, I should respond to the questions and needs of the visitors promptly and help everyone to understand the museum and the exhibits. Secondly, I should take care of the exhibits and other public properties, as well as maintain the cleanliness of the exhibition hall. Thirdly...
-::'''Hook:''' Well, that's a brilliant answer! I don't think you have to elaborate any further.
-::'''Clara:''' Eh... Thank you, Ho- Sorry &mdash; it should be Pitch-Dark Hook the Great!
-::{{DIcon|Arrow}} Hook the Great is an amazing interviewer!
-:::'''Hook:''' Hee-hee, I know I'm good! Clara's done a pretty good job too!
-::{{DIcon|Arrow}} Why did you thank her?
-:::'''Clara:''' Sorry! I just blurted it out...
-::'''Hook:''' Now, the next question...
-::{{DIcon|Arrow}} What will the next question be?
-::{{DIcon|Arrow}} Are we still doing this!?
-::'''Clara:''' Seems like there's no going back now...
-::----
-::'''Hook:''' Well, let's call it a day. I'll announce the result now...
-::'''Hook:''' Congratulations, Clara! I believe you will make a perfect volunteer guide!
-::'''Clara:''' Umm, I'm already a volunteer...
-::'''Hook:''' Isn't that even better? With the help of the Moles, this museum will soon be teeming with life!
-::'''Clara:''' Well... You're right in a sense...
-::'''Clara:''' {{MC|m=Mister|f=Miss}} (Trailblazer), I'll take Hook with me to prepare her for the job. Thanks for being with us during the interview.
-::{{DIcon|Arrow}} It's no big deal.
-::{{DIcon|Arrow}} Are we sure that's how interviews should be done!?
-:::'''Clara:''' I had my doubts. Still, Hook should be able to do the job well &mdash; at least that's what I think.
-::'''Clara:''' Anyway, thanks for your help, {{MC|m=Mister|f=Miss}} (Trailblazer). Please swing by if you are free.
-::'''Hook:''' Remember to visit us, honorary member! Clara and I will wait for you!
-::----
-:{{DIcon|Exit}} Please give me a moment.
-::'''Clara:''' Sure. Come back here when you're ready, {{MC|m=Mister|f=Miss}} (Trailblazer).
-::----
-----
-:'''Eris:''' Hello, (Trailblazer)! Pela and I have been screening prospective volunteer guides for the museum recently, and we've finally found the right candidate...
-:'''Eris:''' Could you help us contact the chief of Boulder Town's Moles, {{Color|keyword|nobold=1|Hook}} &mdash; thanks, (Trailblazer)!
+:{{tx}}
 {{Dialogue End}}
 
 ==Other Languages==

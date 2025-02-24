@@ -34,66 +34,6 @@ PageTitle=##
 ==Dialogue==
 {{Stub Dialogue}}
 
-
-;(Unused &mdash; EnterDistrict_G240)
-:{{tx}}
-::Seeing this human and trashcan engaged in heated conversation, you can't help but be curious about what common language a trashcan could have with a Silvermane Guard Intelligence Officer.
-::{{DIcon|Arrow}} What are you two talking about?
-::'''Pela:''' (Trailblazer), long time no see! Welcome back to Belobog!
-::'''Pela:''' I was just having a fascinating conversation with Pony. It turns out that we like a lot of the same works, and he even generously gifted me an autographed painting... I never thought I'd see fresh new works from such an obscure fandom. I'm so happy!
-::'''Litter Pony:''' I should be the one thanking you for taking my recommendation, Miss Pela. What were we talking about just now? Oh, that's right, we were discussing the Magic of Friendship.
-::'''Pela:''' There was once a popular anime that was all about using the Magic of Friendship to save the world: The characters would set out on exciting adventures with their best friends, and could also wield wonderful magical techniques...
-::'''Pela:''' I actually... wrote a few fanfics about this anime, too. I never imagined that this kind of magic really existed!
-::'''Pela:''' If it's possible, I would love the chance to... experience this for myself. Please tell me how I can use this Magic of Friendship!
-::'''Litter Pony:''' That will not be a problem for you, Miss Pela! It's time to test Miss Pela's Proof of Friendship. What do you think a girl like her should do...?
-::{{DIcon|Arrow}} Share her fanfics with her friends.
-::{{DIcon|Arrow}} Become a magical girl with her friends!
-::'''Pela:''' Is that all I needed to do?
-::'''Pela:''' This is my... Magic of Friendship?
-::'''Litter Pony:''' That's right! Now, you are a true magical girl, Miss Pela! It's time for you to join the real battlefield and defeat these "Betweenwhere intruders" by my side!
-::{{DIcon|Arrow}} (Enter Battle)
-:<pre>{
-	"$type": "RPG.GameCore.PerformanceExtendEndBlack",
-	"ExtendTime": 1
-}</pre>
-
-:{{DIcon|Travel Log}} Manifest "Magic of Friendship"
-<pre>{
-	"$type": "RPG.GameCore.ShowUI",
-	"Name": "Ui.ActivitySummon.Entrance.ActivitySummonEntrancePage",
-	"WaitForExit": true,
-	"Param": {
-		"Value": "5"
-	},
-	"OnUIEnter": [],
-	"OnUIExitImmediately": [
-		{
-			"$type": "RPG.GameCore.EndDialogueEntityInteract"
-		},
-		{
-			"$type": "RPG.GameCore.SetMunicipalEnable",
-			"Visible": true
-		}
-	]
-}</pre>
-
-;(Talk to Pela)
-:'''Pela:''' Once we've defeated these dark shadows, I want to try and get an autographed picture for Lynxy too. Do you think... Mr. Pony will agree?
-
-;(Talk to Litter Pony)
-<pre>{
-	"$type": "RPG.GameCore.ShowUI",
-	"Name": "Ui.ActivitySummon.Main.ActivitySummonMainPage",
-	"OnUIEnter": [
-		{
-			"$type": "RPG.GameCore.FinishLevelGraph"
-		}
-	]
-}</pre>
-
-;(Talk to Pela)
-:'''Pela:''' My Magic of Friendship attack isn't as cute as I imagined it would be... I wonder what Lynxy's would be like...
-:(Pela seems a little disheartened.)
 {{Dialogue End}}
 
 ==Other Languages==

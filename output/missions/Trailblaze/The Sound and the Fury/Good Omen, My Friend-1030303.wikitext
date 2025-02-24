@@ -48,309 +48,71 @@ PageTitle=#Good Omen, My Friend#
 ===Follow Sampo and experience "the adult side of things"{{subst:void|<!--103030325-->}}===
 {{Mission Description|type=trailblaze|location=Golden Hour|What surprises you most is that your old friend Sampo (okay, maybe friend is a strong word) happens to be in Penacony, too. Firefly doesn't seem to trust him very much, but the ever-friendly and enthusiastic dark-blue gentleman wants to teach you all about the "adult side" of things (in a legal way).<br />Well, you're here now so, it couldn't hurt to try... Right?}}
 {{Dialogue Start}}
-
-;(Upon reaching the destination)
-;(If {{F|FSV_PinBall}} is equal to 0)
-:<pre>{
-	"$type": "RPG.GameCore.TriggerEntityServerEvent"
-}</pre>
-:<pre>{
-	"$type": "RPG.GameCore.TriggerEntityServerEvent"
-}</pre>
-;(If {{F|FSV_PinBall}} is not equal to 0)
-:;(Return to previous option selection)
-;(Upon reaching the destination)
-
-;(Upon reaching the destination)
 :{{tx}}
 {{Dialogue End}}
 
 ===Head to "Peppy Pepeshi's Salon"{{subst:void|<!--103030301-->}}===
 {{Mission Description|type=trailblaze|location=Golden Hour|update|What surprises you most is that your old friend Sampo happens to be in Penacony, too. Firefly doesn't seem to trust him very much, but the ever-friendly and enthusiastic dark-blue gentleman wants to teach you all about the "adult side" of things.<br />According to him, your destination for this journey is a salon named "Peppy Pepeshi's Salon" &mdash; The name must have been intentional.}}
 {{Dialogue Start}}
-;(Upon reaching the destination)
-
-;(Obtain {{Item|Emotion Prototype: The Moment of Betrayal|20|x=1}})
-;(Upon reaching the destination)
-
-;(Upon reaching the destination)
-:{{A|VO chapter3 2 firefly 228.ogg}} '''Firefly:''' Is this... the lower level of the Commercial District?
-:{{A|VO chapter3 2 sampo 122.ogg}} '''Sampo:''' Bingo. Our destination is right there &mdash; Peppy Pepeshi's Salon!
-
-;(Upon reaching the destination)
-:{{A|VO chapter3 2 sampo 123.ogg}} '''Sampo:''' This is no ordinary salon. The only guests allowed to enter are the Pepeshi people &mdash; or those with VIP cards.
-:{{A|VO chapter3 2 sampo 124.ogg}} '''Sampo:''' But then again, nothing is too difficult for Sampo.
+:{{tx}}
 {{Dialogue End}}
 
 ===Investigate the suspicious television{{subst:void|<!--103030313-->}}===
 {{Mission Description|type=trailblaze|location=Golden Hour|update|What surprises you most is that your old friend Sampo happens to be in Penacony, too. Firefly doesn't seem to trust him very much, but the ever-friendly and enthusiastic dark-blue gentleman wants to teach you all about the "adult side" of things.<br />You're turned away at the door of Peppy Pepeshi's Salon, but the quick-witted Sampo immediately thinks of a back-up plan. However, before this mystery can be unveiled, he entrusted you to collect some materials... from an arcade machine.}}
 {{Dialogue Start}}
-;(Upon reaching the destination)
-
-;(Upon reaching the destination)
-:{{A|VO chapter3 2 firefly 231.ogg}} '''Firefly:''' Why was this TV... dumped on the side of the road?
-:{{A|VO chapter3 2 sampo 138.ogg}} '''Sampo:''' Haha, I'm afraid you're mistaken, Miss Firefly! This is an arcade! This fine machine has a sense of aesthetics worthy of the Dreamscape &mdash; it's nothing like the techy junk you see around Punklorde.
-:{{A|VO chapter3 2 sampo 139 m.ogg}} {{A|VO chapter3 2 sampo 139 f.ogg}} '''Sampo:''' (Trailblazer), how about you try touching it and see what happens?
-:{{DIcon|Arrow}} Couldn't hurt, I guess...
-::{{A|VO chapter3 2 firefly 232.ogg}} '''Firefly:''' Well... I might be totally off base here, but I think there's something fishy with this TV.
-::{{A|VO chapter3 2 firefly 233.ogg}} '''Firefly:''' But it's fine if you want to give it a shot... I trust your judgment.
-:{{DIcon|Arrow}} Why don't you try it yourself?
-::{{A|VO chapter3 2 sampo 140.ogg}} '''Sampo:''' I want to let you enjoy this firsthand experience, hee-hee.
-::{{A|VO chapter3 2 sampo 141.ogg}} '''Sampo:''' Of course, it's just a suggestion. If you aren't up for it, I'll do it myself...
-:{{DIcon|Arrow}} Is this a trap?
-::{{A|VO chapter3 2 firefly 234.ogg}} '''Firefly:''' Well... I do think there's something fishy with this TV.
-::{{A|VO chapter3 2 sampo 142.ogg}} '''Sampo:''' This belongs to The Family. How can there be anything wrong with it? If you aren't up for it, I'll just do it myself...
-:{{DIcon|Arrow}} Touch it!
-::You take a deep breath, close your eyes, muster your courage, and reach out to the suspicious screen in front of you
-:{{DIcon|Arrow}} Touch it!!
-::You take a deep breath, close your eyes, muster your courage, and with a resolve akin to facing death, you reach out to the suspicious screen before you...
-:{{DIcon|Arrow}} Touch it!!!
-::You take a deep breath, close your eyes, muster great courage, and with a resolve as weighty as three exclamation marks, you reach out to the suspicious screen before you...
-:{{DIcon|Arrow}} Seems like I'm left with no other options.
-::You reach out to the suspicious screen in front of you...
 :{{tx}}
-
-;(Upon reaching the destination)
-:{{A|VO chapter3 2 firefly 230.ogg}} '''Firefly:''' Is that... a TV?
-:<!--0.5-second delay-->
-;(If {{F|FSV_Shrink}} is equal to 1)
-<pre>{
-	"$type": "RPG.GameCore.TriggerEntityEvent",
-	"EventName": {
-		"Value": "Srv_TriggerAnim"
-	},
-	"InstanceID": {
-		"IsDynamic": false,
-		"FixedValue": {
-			"Value": 300008
-		}
-	}
-}</pre>
-;(Unused &mdash; TV_Open)
-<pre>{
-	"$type": "RPG.GameCore.RequestGroupStateChange",
-	"TargetState": 1
-}</pre>
 {{Dialogue End}}
 
 ===Touch the suspicious television{{subst:void|<!--103030304-->}}===
 {{Dialogue Start}}
-
-:<!--0.1-second delay-->
 :{{tx}}
-:{{DIcon|Arrow}} I have no idea. What happened?
-::"I don't know... What's happening?" &mdash; You desperately want to say these, but somehow, you've transformed into a certain... cartoon character.
-::{{tx}}
-:;(Return to previous option selection)
-:{{DIcon|Arrow}} I think I've been sucked into the TV...
-::"Looks like I got sucked into the TV" &mdash; You desperately want to say this, but somehow, you've transformed into a certain... cartoon character.
-::{{tx}}
-:;(Return to previous option selection)
-:{{DIcon|Arrow}} Gosh, you guys are tall!
-::"Goodness me, you guys are so tall" &mdash; You desperately want to say this, but somehow, you've transformed into a certain... cartoon character.
-::{{tx}}
-:;(Return to previous option selection)
-:{{DIcon|Arrow}} Let out a really cool sounding *hmph*
-::You make an extremely cool grunt. Man, really, it was so cool.
-::{{tx}}
-::{{tx}}
-::{{DIcon|Arrow}} Fine. What do I need to do?
-:::"Alright, then what should I do?" You already completely understand the situations, and decide to ask your old friend about what actions you should take next, but your character design doesn't permit you to do such a thing.
-:::{{tx}}
-::;(Return to previous option selection)
-::{{DIcon|Arrow}} How do you know that?
-:::"How do you know?" You really want to ask your old friend how they're so confident, but your character design doesn't permit you to do such a thing.
-:::{{tx}}
-::;(Return to previous option selection)
-::{{DIcon|Arrow}} I'm not going to take you at your word again.
-:::"I will never believe you again." You really want to reply to your old friend in rage, but with your current state, the best you can do is jumping up to strike his knees.
-:::{{tx}}
-::;(Return to previous option selection)
 {{Dialogue End}}
 
 ===Touch the television and return to normal{{subst:void|<!--103030307-->}}===
 {{Mission Description|type=trailblaze|location=Golden Hour|update|What surprises you most is that your old friend Sampo happens to be in Penacony, too. Firefly doesn't seem to trust him very much, but the ever-friendly and enthusiastic dark-blue gentleman wants to teach you all about the "adult side" of things.<br />As you touch the mysterious machine, you realize that you've been transformed into a taciturn cartoon character and successfully defeat Boss Stone. Now you must touch the television once more to return to normal.}}
 {{Dialogue Start}}
-
+:{{tx}}
 {{Dialogue End}}
 
 ===Speak with Sampo and Firefly{{subst:void|<!--103030309-->}}===
 {{Mission Description|type=trailblaze|location=Golden Hour|update|What surprises you most is that your old friend Sampo happens to be in Penacony, too. Firefly doesn't seem to trust him very much, but the ever-friendly and enthusiastic dark-blue gentleman wants to teach you all about the "adult side" of things.<br />You successfully collected the mysterious materials that Sampo needed. It is time to experience this thing that he calls: "true entertainment."}}
 {{Dialogue Start}}
-
+:{{tx}}
 {{Dialogue End}}
 
 ===Return to the "Dreamscape Sales Store"{{subst:void|<!--103030310-->}}===
 {{Mission Description|type=trailblaze|location=Golden Hour|update|What surprises you most is that your old friend Sampo happens to be in Penacony, too. Firefly doesn't seem to trust him very much, but the ever-friendly and enthusiastic dark-blue gentleman wants to teach you all about the "adult side" of things.<br />Though he has not said where you are headed, you are confident that this route leads to the "Dreamscape Sales Store."}}
 {{Dialogue Start}}
-
-
-;(Talk to Dr. Edward)
-:{{A|VO chapter3 2 edward 150.ogg}} '''Dr. Edward:''' Are you ready to experience a wonderful dream? Please close your eyes and rest your forehead on the dream bubble.
-::{{DIcon|Arrow}} I'm ready.
-::<pre>{
-	"$type": "RPG.GameCore.SetPerformanceResult",
-	"Value": 2
-}</pre>
-::{{DIcon|Exit}} Maybe later.
-:::{{A|VO chapter3 2 edward 151.ogg}} '''Dr. Edward:''' No problem! Dr. Edward is happy to help you when you're ready!
-:{{A|VO chapter3 2 edward 143.ogg}} '''Dr. Edward:''' Welcome to Dreamscape Sales Store! Dr. Edward at your service!
-::{{A|VO chapter3 2 edward 144.ogg}} '''Dr. Edward:''' Trailblazer of the Astral Express, here we are again! Haha, I see you've brought two friends with you! They seem like fun people!
-::{{A|VO chapter3 2 sampo 154.ogg}} '''Sampo:''' Hello, Edward. I'd like my friends to try something... fun, if you know what I mean.
-::{{A|VO chapter3 2 edward 145.ogg}} '''Dr. Edward:''' Be my guest! Dr. Edward welcomes anyone who's ready for some excitement! How about we use your Dreamscape, sir?
-::{{A|VO chapter3 2 sampo 155.ogg}} '''Sampo:''' A superb idea, sir &mdash; let's do it. The one from last night would be perfect.
-::{{A|VO chapter3 2 firefly 245.ogg}} '''Firefly:''' Um... What's going on?
-::{{A|VO chapter3 2 edward 146.ogg}} '''Dr. Edward:''' This is a service we offer to our long-time customers. You can submit dreams you've recently had to me. With the relevant emotion prototypes, I'll be able to turn them into customized dream bubbles that can be experienced repeatedly.
-::{{DIcon|Arrow}} Any dreams we want?
-:::{{A|VO chapter3 2 sampo 156.ogg}} '''Sampo:''' Exactly! Looks like you've got the picture. You've probably woken up from a dream one time, and wished you could just go back to dreaming it, right?
-::{{DIcon|Arrow}} What's so fun about this?
-:::{{A|VO chapter3 2 sampo 157.ogg}} '''Sampo:''' Well, whether a dream bubble is fun or not depends on what kind of dreams you've had. We all had dreams that we wished we could have continued after waking up, right?
-::{{A|VO chapter3 2 firefly 246.ogg}} '''Firefly:''' A dream I wished I could have continued after waking up...
-::{{tx}}
-:<pre>{
-	"$type": "RPG.GameCore.ConsumeMissionItemPerformance",
-	"SubMissionID": 103030323,
-	"OnSubmitConfirm": [
-		{
-			"$type": "RPG.GameCore.PlayTimeline",
-			"TimelineName": "Story/Discussion/Mission/1030303/DS10303031005.playable",
-			"Type": "Discussion",
-			"Parameters": []
-		},
-		{
-			"$type": "RPG.GameCore.SetPerformanceResult",
-			"Value": 1
-		},
-		{
-			"$type": "RPG.GameCore.EndPerformance"
-		}
-	],
-	"OnSubmitCancel": [
-		{
-			"$type": "RPG.GameCore.EndPerformance"
-		}
-	],
-	"SimpleTalk": {
-		"TextSpeed": 20,
-		"ProtectTime": 0.8
-	}
-}</pre>
-;(Upon reaching the destination)
-
-;(Upon reaching the destination)
-:{{A|VO chapter3 2 firefly 244.ogg}} '''Firefly:''' This road... Are we heading back to the Oti Mall?
-:{{A|VO chapter3 2 sampo 153.ogg}} '''Sampo:''' That's right, Miss Firefly. That's where the good stuff is.
+:{{tx}}
 {{Dialogue End}}
 
 ===Speak with Dr. Edward and enter the Dreamscape{{subst:void|<!--103030323-->}}===
 {{Mission Description|type=trailblaze|location=Golden Hour|update|Sampo has led you back to the Dreamscape Sales Store and confessed to Dr. Edward the service reserved for regular customers (why didn't he say this earlier?), then ordered a customized dream bubble for you to experience.<br />Though you have no idea what he is up to, your instincts fear that what you're about to experience is going to be... beyond your imagination.}}
 {{Dialogue Start}}
-;(If {{cx}}<!--SubMission Finish: 103030310-->)
-<pre>{
-	"$type": "RPG.GameCore.ConsumeMissionItem",
-	"SubMissionID": 103030323,
-	"IsAutoConsume": true,
-	"SimpleTalk": {
-		"TextSpeed": 20,
-		"ProtectTime": 0.8
-	}
-}</pre>
+:{{tx}}
 {{Dialogue End}}
 
 ===Speak with Sampo{{subst:void|<!--103030311-->}}===
 {{Dialogue Start}}
-:{{tx}}
-:{{A|VO chapter3 2 sampo 168 m.ogg}} {{A|VO chapter3 2 sampo 168 f.ogg}} '''Sampo:''' What a bummer... I was really looking forward to seeing how (Trailblazer) was going to overthrow the Garbage King...
-:{{DIcon|Arrow}} It really is a shame.
-:{{DIcon|Arrow}} I'd easily finish him off with one punch.
-:{{DIcon|Arrow}} The Garbage King? You're the real Garbage King!
-:{{A|VO chapter3 2 sampo 169.ogg}} '''Sampo:''' What a huge pity! Such a meaningful dream came to an abrupt halt because of Miss Firefly...
-:{{A|VO chapter3 2 sampo 170.ogg}} '''Sampo:''' ...I was looking forward to seeing your face when the truth dawned on you.
-:{{DIcon|Arrow}} Truth? What truth?
-:{{DIcon|Arrow}} What are you trying to say?
-::{{A|VO chapter3 2 sampo 171.ogg}} '''Sampo:''' ...Trying to say? I'm not saying anything, I just want to reveal the truth...
-:{{DIcon|Arrow}} Is this weird dream trying to hint at some hidden meaning?
-::{{A|VO chapter3 2 sampo 172.ogg}} '''Sampo:''' Hint at? No, more like reveal...
-:{{A|VO chapter3 2 sampo 173.ogg}} '''Sampo:''' Don't you want to find out the truth behind the dream? Don't let all the pretty scenery in the dream world distract you from your goal &mdash; as soon as you get complacent, you'll lose sight of the truth.
-:{{A|VO chapter3 2 sampo 174.ogg}} '''Sampo:''' Don't you think this dream bubble looks really similar to modern-day Penacony?
-:{{A|VO chapter3 2 sampo 175.ogg}} '''Sampo:''' A small stage is crowded with a bunch of scheming people. None of them want to be exposed under the spotlight, so they all push you to the front...
-:{{A|VO chapter3 2 sampo 176.ogg}} '''Sampo:''' You're not at home anymore kid &mdash; you've wandered into the depths of the unknown. Let me put it to you straight &mdash; don't let yourself get enticed by that glowing light. I'm going to be very disappointed if you get bamboozled by the likes of them.
-:{{DIcon|Arrow}} What in the dream world are you talking about?
-::{{A|VO chapter3 2 sampo 177.ogg}} '''Sampo:''' Seems like you really do have no clue. Turn around and take a look...
-:{{DIcon|Arrow}} Sampo, just what are you up to, exactly?
-::{{A|VO chapter3 2 sampo 178.ogg}} '''Sampo:''' Same as always, pal. If you still don't get it, just turn around and take a look...
-:{{DIcon|Arrow}} A glowing light...
-:{{A|VO chapter3 2 sampo 179.ogg}} '''Sampo:''' Is that girl still here?
 :{{tx}}
 {{Dialogue End}}
 
 ===Search for Firefly{{subst:void|<!--103030317-->}}===
 {{Mission Description|type=trailblaze|location=Golden Hour|update|Sampo's previously relaxed and joyous attitude suddenly drops to a serious and stern tone as he warns you that there is something abnormal about Firefly's origin. After spouting a series of confusing but upsetting metaphors, he turns on his heel and leaves. At this moment, you realize that Firefly, who had been following you like a shadow, is suddenly nowhere to be seen.<br />First things first, you must find Firefly, ensure her safety, and get an explanation.}}
 {{Dialogue Start}}
-:{{A|VO chapter3 2 player 131 m.ogg}} {{A|VO chapter3 2 player 131 f.ogg}} '''(Trailblazer):''' (What did Sampo mean? Is Firefly hiding something?)
-:{{A|VO chapter3 2 player 132 m.ogg}} {{A|VO chapter3 2 player 132 f.ogg}} '''(Trailblazer):''' (...I must find her and demand an explanation from her. She shouldn't be too far off...)
-;(Upon reaching the destination)
-
-;(Upon reaching the destination)
-:{{A|VO chapter3 3 firefly 101.ogg}} '''Firefly:''' ...
-:The girl turns her body sideways, gazing into the distance, as if evading your gaze. After a momentary pause, she finally turns back and softly speaks.
-:{{A|VO chapter3 3 firefly 102.ogg}} '''Firefly:''' ...I'm sorry.
-:{{DIcon|Arrow}} You don't have to apologize. I don't find you suspicious.
-::{{A|VO chapter3 3 firefly 103.ogg}} '''Firefly:''' ...Thank you.
-:{{DIcon|Arrow}} I want to know the truth. Is that too much to ask?
-::{{A|VO chapter3 3 firefly 104.ogg}} '''Firefly:''' ...Sure.
-:{{DIcon|Arrow}} You feel guilty, don't you?
-::{{A|VO chapter3 3 firefly 105.ogg}} '''Firefly:''' ...Yes.
-:{{A|VO chapter3 3 firefly 106.ogg}} '''Firefly:''' There are things... I'm hiding from you...
-:{{A|VO chapter3 3 firefly 107.ogg}} '''Firefly:''' I'm not a local, and there's a reason why the Bloodhound Family is after me... I also have my own purpose for joining you on your journey...
-:{{A|VO chapter3 3 firefly 108.ogg}} '''Firefly:''' ...But still, I appreciate your help. I mean it from the bottom of my heart.
-:{{A|VO chapter3 3 firefly 109.ogg}} '''Firefly:''' And my admiration for the Nameless is also genuine. You guys have been to a lot of worlds, met people from all walks of life, and experienced all sorts of things. Every day is a new beginning for you guys...
-:{{DIcon|Arrow}} I really love that kind of life.
-:{{DIcon|Arrow}} It's not as great as you think...
-:{{DIcon|Arrow}} You can board the Astral Express, too.
-:{{A|VO chapter3 3 firefly 110.ogg}} '''Firefly:''' ...
-:{{A|VO chapter3 3 firefly 111.ogg}} '''Firefly:''' Can I bring you to one more place? It isn't another tourist attraction &mdash; it's my very own secret base.
-:{{A|VO chapter3 3 firefly 112.ogg}} '''Firefly:''' I'll do my best to tell you everything I know when we get there.
-:{{DIcon|Arrow}} Sure. I believe you.
-::{{A|VO chapter3 3 firefly 113.ogg}} '''Firefly:''' Thanks...
-:{{DIcon|Arrow}} How am I supposed to believe you?
-::{{A|VO chapter3 3 firefly 114.ogg}} '''Firefly:''' I... don't know, but I hope you do.
-::{{DIcon|Arrow}} Never mind. I have no reason to be so harsh on you.
-::{{DIcon|Arrow}} I'm going to be vigilant to the end.
-::{{A|VO chapter3 3 firefly 115.ogg}} '''Firefly:''' ...Sure.
 :{{tx}}
 {{Dialogue End}}
 
 ===Enter the doorway and begin your adventure{{subst:void|<!--103030314-->}}===
 {{Mission Description|type=trailblaze|location=Golden Hour|update|What surprises you most is that your old friend Sampo happens to be in Penacony, too. Firefly doesn't seem to trust him very much, but the ever-friendly and enthusiastic dark-blue gentleman wants you to learn all about what the adult world is.<br />After you touched the mysterious machine, you realize that you've been transformed into a taciturn cartoon character. According to the game's setting, you now must enter the doorway and begin a great adventure.}}
 {{Dialogue Start}}
-;(Upon reaching the destination)
-
-;(Upon reaching the destination)
-:{{A|VO chapter3 2 stone 101.ogg}} '''Boss Stone:''' Hahaha, I've finally caught you, you little Hanu!
-:{{A|VO chapter3 2 stone 102.ogg}} '''Boss Stone:''' Look how small you've become! You won't be able to escape this time!
+:{{tx}}
 {{Dialogue End}}
 
 ===Find Boss Stone's treasure{{subst:void|<!--103030318-->}}===
 {{Mission Description|type=trailblaze|location=Golden Hour|update|What surprises you most is that your old friend Sampo happens to be in Penacony, too. Firefly doesn't seem to trust him very much, but the ever-friendly and enthusiastic dark-blue gentleman wants to teach you all about the "adult side" of things.<br />As you touch the mysterious machine, you realize that you've been transformed into a taciturn cartoon character. According to the game story, you will now defeat Boss Stone and confiscate his illegal items.}}
 {{Dialogue Start}}
-;(Upon reaching the destination)
-
-;(Upon reaching the destination)
-:{{A|VO chapter3 2 stone 104.ogg}} '''Boss Stone:''' Hahaha! Your way is blocked! How pitiful!
-:{{A|VO chapter3 2 stone 105.ogg}} '''Boss Stone:''' There's a huge secret that I would never tell you &mdash; if you swap bodies again through the TV, you'll be able to destroy the obstacle and break through! Hahaha!
-;(Upon reaching the destination)
-
-;(Upon reaching the destination)
-:{{A|VO chapter3 2 stone 103.ogg}} '''Boss Stone:''' Oh, rats! Hands off my treasures! You've no idea how hard I worked to swindle those off other people!
-
-;(Upon reaching the destination)
-:{{A|VO chapter3 2 stone 106.ogg}} '''Boss Stone:''' Argh! I hate my mouth for revealing my secret!
-:{{A|VO chapter3 2 stone 107.ogg}} '''Boss Stone:''' Oh, drat! All my traps are worthless against the likes of you!
-::{{A|VO chapter3 2 stone 108.ogg}} '''Boss Stone:''' I hate your furry head! It has such a clever brain!
-:{{A|VO chapter3 2 stone 111.ogg}} '''Boss Stone:''' Oh, rats! You've foiled my plan again and taken the treasure I worked so hard to snatch away from other people!
-:{{A|VO chapter3 2 stone 112.ogg}} '''Boss Stone:''' Fine, I'll admit it &mdash; you've rescued Dreamville once again. But you just wait... I'll be back!
-;(Obtain {{Item|Emotion Prototype: Momentary Freedom|20|x=1}})
+:{{tx}}
 {{Dialogue End}}
 
 ==Other Languages==

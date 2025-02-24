@@ -39,193 +39,48 @@ PageTitle=#Express Regulations: Management Experience#
 -->
 ==Dialogue==
 {{Stub Dialogue}}
-
-
-;(Talk to Pom-Pom)
-:'''Pom-Pom:''' (Trailblazer)...
-<pre>{
-	"$type": "RPG.GameCore.ShowMenu"
-}</pre>
 {{Dialogue End}}
 
 ===Inquire from Hook{{subst:void|<!--405003703-->}}===
 {{Mission Description|type=adventure|location=Boulder Town|update|Ask Hook about her managerial experiences, but... does Hook really know this stuff?}}
 {{Dialogue Start}}
-
-
-;(Talk to Hook)
-;(If {{cx}}<!--during performance 501030401-->)
-::'''Hook:''' Mm-hmm! Another peaceful day in Boulder Town!
-::'''Hook:''' ...
-::'''Hook:''' Hmm...
-::'''Hook:''' Uhh...
-::'''Hook:''' ...It's all thanks to us Moles!
-::{{DIcon|Arrow}} What are you doing here?
-:::'''Hook:''' Need you even ask? I'm here to see the sights!
-::{{DIcon|Arrow}} The great Hook is certainly in high spirits.
-:::'''Hook:''' Hmph, I'm not the boss of The Moles without reason!
-::{{DIcon|Arrow}} It's all thanks to us Moles!
-:::'''Hook:''' That's right! The Moles are the greatest!
-::{{DIcon|Arrow}} That's the best you could come up with...?
-:::'''Hook:''' You say something then! You think you can do better than Hook!?
-::'''Hook:''' Oh? If it isn't the honorary member of The Moles, (Trailblazer)!
-::'''Hook:''' Impudence! Ignoring the presence of Pitch-Dark Hook the Great!
-::'''Hook:''' But I'm in a good mood today, so you're off the hook! (No pun intended.) How can I help you, honorary member?
-;(If {{cx}}<!--not during performance 501030401-->)
-:<pre>{
-	"$type": "RPG.GameCore.PlayMultiVoiceTalk",
-	"TalkSentenceID": 501030466,
-	"KeepDisplay": true
-}</pre>
-::'''Hook:''' How can I help you, honorary member?
+:{{tx}}
 {{Dialogue End}}
 
 ===Inquire from Pela{{subst:void|<!--405003705-->}}===
 {{Mission Description|type=adventure|location=Qlipoth Fort|update|Ask Pela about her managerial experiences.}}
 {{Dialogue Start}}
-
-
-;(Talk to Pela)
-;(If {{cx}}<!--during performance 501029901-->)
-::'''Pela:''' Year 301, Year 302...
-::'''Pela:''' Hmm, it seems like the archives of Fortification Year 232 are in order. The next should be...
-::{{DIcon|Arrow}} Fortification Year 233.
-:::'''Pela:''' That's right. It's Fortification Year 233.
-::{{DIcon|Arrow}} What are you doing?
-:::'''Pela:''' Don't disturb me. I'm sorting out the archives...
-::{{DIcon|Arrow}} Miss~ Pela~
-:::'''Pela:''' Um, please don't...
-::'''Pela:''' ...Eh? When did you get here?
-::{{DIcon|Arrow}} I just got here.
-:::'''Pela:''' Could you not stand behind people so quietly like that? It's kinda creepy!
-::{{DIcon|Arrow}} Hah, did I give you a fright?
-:::'''Pela:''' Argh! How old are you? Stop acting like a kid!
-::{{DIcon|Arrow}} Do you need help in organizing the archives on the bookshelf?
-:::'''Pela:''' ...I can reach them. Thanks for your concern, but please don't do that again.
-::'''Pela:''' Um, which year was it just now?
-::'''Pela:''' Alas, forget it... It's time I take a break after all the work.
-::'''Pela:''' I'll keep you company then. What can I do for you?
-;(If {{cx}}<!--not during performance 501029901-->)
-:<pre>{
-	"$type": "RPG.GameCore.PlayMultiVoiceTalk",
-	"TalkSentenceID": 501029942,
-	"KeepDisplay": true
-}</pre>
-::'''Pela:''' Hmph, I know you're standing behind me. I won't let you scare me this time.
-::'''Pela:''' So, what brings you here?
+:{{tx}}
 {{Dialogue End}}
 
 ===Inquire from Bronya{{subst:void|<!--405003707-->}}===
 {{Mission Description|type=adventure|location=Qlipoth Fort|update|Ask Bronya about her managerial experiences.}}
 {{Dialogue Start}}
-
-
-;(Talk to Bronya)
-:'''Bronya:''' Of course, I do, (Trailblazer). I've always benefited lots from our discussions.
-:{{DIcon|Talk}} How does it feel to be the Supreme Guardian?
-::'''Bronya:''' For me, it's just a title and nothing more. I'll still stick to doing the right thing with or without this title.
-::'''Bronya:''' ...But not from the point of view of the people. For them, the Supreme Guardian is a powerful symbol &mdash; not just of the city's leadership, but also of a future with hope.
-::'''Bronya:''' So I have to re-examine my thinking more critically. I have to always bear in mind that every decision I make could affect the lives of thousands of people...
-::'''Bronya:''' It's a heavy load to bear. To be honest, I don't even know if I can do it. But I'm lucky &mdash; because I don't have to go through it all alone.
-:;(Return to previous option selection)
-:{{DIcon|Talk}} What plans do you have next?
-::'''Bronya:''' The number one priority is to revitalize Belobog... Ah, it still sounds so vague, doesn't it?
-::'''Bronya:''' As for specific actions, I think the number one priority is to reorganize the economy of Belobog.
-::'''Bronya:''' The blockade has had a huge impact on the Overworld and Underworld economies. Right now, ordinary miners in the Underworld can't bear the high cost of living in the Administrative District.
-::'''Bronya:''' If things don't get better, then you can forget about reintegrating the Overworld and the Underworld. I've booked meetings with several of the finance ministers to try to hammer out a basic direction for reforms.
-::'''Bronya:''' &mdash; Of course, this is only the first step in a great revitalization plan. I hope it will be a strong start.
-:;(Return to previous option selection)
-:{{DIcon|Talk}} About Cocolia...
-::'''Bronya:''' ...Keep your voice down, (Trailblazer).
-::'''Bronya:''' As for Mom... All I can do is keep myself from remembering how she looked before she passed.
-::'''Bronya:''' (Trailblazer), no matter what she might look like to you, Madam Cocolia was my only living family. Everything that has made me into the person I am... I owe it to her teachings.
-::'''Bronya:''' I don't know when she started going astray, but this whole time, all she's ever done has been to shower me with love... And I don't think that's the Stellaron's influence.
-::'''Bronya:''' Honestly speaking, the thought of not seeing her again... always wells me up with tears. Yet, now is not the time for me to show my vulnerable side.
-::'''Bronya:''' So, let's talk about something else, (Trailblazer).
-:;(Return to previous option selection)
-:{{DIcon|Talk}} Is Seele here?
-::'''Bronya:''' She wants to get stuck into some material change, rather than stick around in this lifeless office. She was always thinking about the Underworld. You can't stop someone like that from leaving.
-::'''Bronya:''' Seele is a doer. She can't do what she does best at the negotiation table. She knows where her strengths lie... And as a friend and fellow fighter, I support her choice.
-::'''Bronya:''' Besides, if I send a signal asking for her help... I know she'll return to me. And that's all I need.
-:;(Return to previous option selection)
-:{{DIcon|Exit}} Thanks for your time, Bronya.
+:{{tx}}
 {{Dialogue End}}
 
 ===Inquire from Natasha{{subst:void|<!--405003709-->}}===
 {{Mission Description|type=adventure|location=Natasha's Clinic|update|Ask Natasha about her managerial experiences.}}
 {{Dialogue Start}}
-
-
-;(Talk to Natasha)
-:'''Natasha:''' I hope your exploration will make progress, (Trailblazer), and your journey will be free of pain.
-:'''Natasha:''' Of course, even if you get injured by accident, no need to panic. Just leave it to the doctor.
+:{{tx}}
 {{Dialogue End}}
 
 ===Inquire from Svarog and Clara{{subst:void|<!--405003711-->}}===
 {{Mission Description|type=adventure|location=Robot Settlement|update|Ask Svarog and Clara about their managerial experiences.}}
 {{Dialogue Start}}
-
-
-;(Talk to Svarog)
-;(If {{cx}}<!--during performance 501030301-->)
-::'''Svarog:''' Bio heat reaction detected &mdash; Identifying bio information...
-::'''Svarog:''' Identification result: Outsider (Trailblazer) &mdash; Hostility level: None.
-::'''Svarog:''' Welcome to the Robot Settlement, (Trailblazer).
-;(If {{cx}}<!--not during performance 501030301-->)
-:<pre>{
-	"$type": "RPG.GameCore.PlayMultiVoiceTalk",
-	"TalkSentenceID": 501030333,
-	"KeepDisplay": true
-}</pre>
-
-;(Talk to Clara)
-;(If {{cx}}<!--during performance 501030201-->)
-::'''Clara:''' Ah... It's the outsider, {{MC|f=Miss|m=Mister}} (Trailblazer)! Welcome to the Robot Settlement...
-::'''Clara:''' This place isn't as bustling as a mining town, but we're still quite content with how we live.
-::'''Clara:''' The older folk at the camp, and the little robots, they all like it here...
-::'''Clara:''' If you're interested, {{MC|f=Miss|m=Sir}}, you're welcome to see the sights here too!
-;(If {{cx}}<!--not during performance 501030201-->)
-:<pre>{
-	"$type": "RPG.GameCore.PlayMultiVoiceTalk",
-	"TalkSentenceID": 501030236,
-	"KeepDisplay": true
-}</pre>
+:{{tx}}
 {{Dialogue End}}
 
 ===Inquire from Gepard{{subst:void|<!--405003713-->}}===
 {{Mission Description|type=adventure|location=Silvermane Guard Restricted Zone|update|Ask Gepard about his managerial experiences.}}
 {{Dialogue Start}}
-
-
-;(Talk to Gepard)
-;(If {{cx}}<!--during performance 501030001-->)
-::'''Gepard:''' Welcome to the Silvermane Guard Restricted Zone, (Trailblazer).
-::'''Gepard:''' I've instructed the soldiers to treat you hospitably, but I do have to remind you to be considerate of your actions.
-::'''Gepard:''' Rules are rules &mdash; once any such acts are discovered, even I, the Captain, can't guarantee your safety.
-::{{DIcon|Arrow}} Duly noted.
-:::'''Gepard:''' I would be deeply grateful. I hope you will enjoy this trip to Belobog...
-:::'''Gepard:''' Or, as you all call this world &mdash; I hope you will enjoy this trip to Jarilo-VI.
-::{{DIcon|Arrow}} The Captain's so uptight.
-:::'''Gepard:''' The Supreme Guardian and her laws are akin to an iron wall around Belobog. Nothing in this place is above them.
-:::'''Gepard:''' As a comrade who once fought by your side, I do not wish to see harm befall you. Which is why I hope you will reconsider my suggestion.
-::'''Gepard:''' But enough of this stuffy topic. I'm about to go on a break. Do you have something else you wish to talk about?
-;(If {{cx}}<!--not during performance 501030001-->)
-:<pre>{
-	"$type": "RPG.GameCore.PlayMultiVoiceTalk",
-	"TalkSentenceID": 501030034
-}</pre>
+:{{tx}}
 {{Dialogue End}}
 
 ===Report to Pom-Pom{{subst:void|<!--405003714-->}}===
 {{Mission Description|type=adventure|location=Parlor Car|update|Return and report to Pom-Pom with your newfound knowledge gathered from your friends!}}
 {{Dialogue Start}}
-
-
-;(Talk to Pom-Pom)
-:'''Pom-Pom:''' (Trailblazer)...
-<pre>{
-	"$type": "RPG.GameCore.ShowMenu"
-}</pre>
+:{{tx}}
 {{Dialogue End}}
 
 ==Other Languages==

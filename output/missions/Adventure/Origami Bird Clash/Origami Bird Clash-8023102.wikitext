@@ -45,369 +45,47 @@ PageTitle=#Origami Bird Clash#
 ===Go to the designated location and locate the arcade machine hidden in Golden Hour{{subst:void|<!--802310201-->}}===
 {{Mission Description|type=adventure|location=Golden Hour|You have received an invitation from The Family &mdash; Tinah of the Iris Family invites you to test a match-3 puzzle battle game called "Origami Bird Clash."<br />It doesn't seem like a scam... So, go take a look? There's nothing to lose.}}
 {{Dialogue Start}}
-
-;(Upon reaching the destination)
-
-;(Upon reaching the destination)
-:'''Silver Wolf:''' Whoa, there are actually offline interactive processes. Are they making people do in-person fetch quests because they know the game is too simple and want to make up for it? Hmph, it's so easy to tell what they're thinking.
-;(Upon reaching the destination)
-
-;(Upon reaching the destination)
-:'''Silver Wolf:''' Look at the NPC over there... Yeah, those billboards gathered together. Something's definitely up with them.
-:<!--3-second delay-->
-<pre>{
-	"$type": "RPG.GameCore.PlayNPCBubbleTalk",
-	"BubbleTalkInfoList": [
-		{
-			"AutoSkipTime": 3,
-			"GroupID": 520,
-			"GroupNpcID": 400002,
-			"TalkSentenceID": 823102151
-		}
-	],
-	"IsLoop": true,
-	"LoopInterval": 3,
-	"UniqueID": 2
-}</pre>
+:{{tx}}
 {{Dialogue End}}
 
 ===Disperse the gathered Billboards{{subst:void|<!--802310208-->}}===
 {{Dialogue Start}}
-:'''Silver Wolf:''' Look at the NPC over there... Yeah, those billboards gathered together. Something's definitely up with them.
-:<!--3-second delay-->
-<pre>{
-	"$type": "RPG.GameCore.PlayNPCBubbleTalk",
-	"BubbleTalkInfoList": [
-		{
-			"AutoSkipTime": 3,
-			"GroupID": 520,
-			"GroupNpcID": 400002,
-			"TalkSentenceID": 823102151
-		}
-	],
-	"IsLoop": true,
-	"LoopInterval": 3,
-	"UniqueID": 2
-}</pre>
-
-;(Upon reaching the destination)
-<pre>{
-	"$type": "RPG.GameCore.PlayMazeButtonEffect",
-	"Enable": true
-}</pre>
+:{{tx}}
 {{Dialogue End}}
 
 ===Investigate the abnormality hidden in the grass{{subst:void|<!--802310210-->}}===
 {{Dialogue Start}}
-;(Unused &mdash; G518_TriggerEffect)
-<pre>{
-	"$type": "RPG.GameCore.TriggerEffect",
-	"TargetType": {
-		"$type": "RPG.GameCore.TargetFetchAdvPropEx",
-		"FetchType": "SinglePropByPropID",
-		"SinglePropID": {
-			"GroupID": {
-				"IsDynamic": false,
-				"FixedValue": {
-					"Value": 518
-				}
-			},
-			"ID": {
-				"IsDynamic": false,
-				"FixedValue": {
-					"Value": 300002
-				}
-			}
-		}
-	},
-	"Flags": [],
-	"EffectPath": "Effects/Eff_Prefab/Eff_Monster/Eff_XP_Minion04_00/Eff_Monster_XP_Minion04_00_Common_Maze_SpecialAppear.prefab",
-	"SubObjectModifyDataList": []
-}</pre>
-:<pre>{
-	"$type": "RPG.GameCore.AdvCreateGroupEntity",
-	"InstanceIDList": [
-		300001
-	]
-}</pre>
-
-;(Unused &mdash; G518_SwitchCharacterV2)
-<pre>{
-	"$type": "RPG.GameCore.SwitchCharacterAnchorV2",
-	"SwitchCharacterAnchorConfig": {
-		"IsLocalPlayer": true,
-		"CharacterUniqueName": "LocalPlayer",
-		"AreaName": {
-			"Value": "LevelArea_P10301_F10301001_G518"
-		},
-		"AnchorName": {
-			"Value": "Anchor1"
-		}
-	}
-}</pre>
-;(Unused &mdash; G526_StopBubbleTalk)
-<pre>{
-	"$type": "RPG.GameCore.StopNPCBubbleTalk",
-	"UniqueIDList": [
-		526400001
-	]
-}</pre>
+:{{tx}}
 {{Dialogue End}}
 
 ===Obtain the approval of the Golden Bird{{subst:void|<!--802310202-->}}===
 {{Dialogue Start}}
-
-
-;(Talk to Young Master Gold)
-:'''Silver Wolf:''' ...That's it? Isn't this a bit too simple even for a demo?
-:'''Silver Wolf:''' It's pretty much just white-box testing at this rate. Everything is so perfunctory... Forget it, let's just go back and see how the arcade's built-in games are doing for now.
-:{{DIcon|Arrow}} Return to (The Radiant Feldspar/The Trailblaze's Stern/The Tatalov/The Soaring Clock Hand)
-<pre>{
-	"$type": "RPG.GameCore.SetPerformanceResult"
-}</pre>
-<pre>{
-	"$type": "RPG.GameCore.PerformanceEndSeq",
-	"Cases": [
-		{
-			"OnSuccess": [
-				{
-					"$type": "RPG.GameCore.ClientFinishMission",
-					"SubmissionID": 802310202
-				}
-			]
-		},
-		{
-			"Case": 1,
-			"OnSuccess": [
-				{
-					"$type": "RPG.GameCore.ClientFinishMission",
-					"SubmissionID": 802310211
-				}
-			]
-		}
-	]
-}</pre>
-;(Unused &mdash; 8023102_Exit)
-<pre>{
-	"$type": "RPG.GameCore.SetPerformanceResult",
-	"Value": 1
-}</pre>
-;(Upon reaching the destination)
-
-;(Upon reaching the destination)
-:'''Silver Wolf:''' ...That's it? Isn't this a bit too simple even for a demo?
-:'''Silver Wolf:''' It's pretty much just white-box testing at this rate. Everything is so perfunctory... Forget it, let's just go back and see how the arcade's built-in games are doing for now.
-:{{DIcon|Arrow}} Return to (The Radiant Feldspar/The Trailblaze's Stern/The Tatalov/The Soaring Clock Hand)
-<pre>{
-	"$type": "RPG.GameCore.SetPerformanceResult"
-}</pre>
-;(Unused &mdash; 8023102_Exit)
-<pre>{
-	"$type": "RPG.GameCore.SetPerformanceResult",
-	"Value": 1
-}</pre>
+:{{tx}}
 {{Dialogue End}}
 
 ===Return to (The Radiant Feldspar/The Trailblaze's Stern/The Tatalov/The Soaring Clock Hand) and achieve victory against Silver Wolf with the newly acquired arcade machine{{subst:void|<!--802310203-->}}===
 {{Dialogue Start}}
-;(If {{F|Activity230DIYEntrance}} is greater than or equal to 1)
-:<pre>{
-	"$type": "RPG.GameCore.AdvSetupButtonListTrigger",
-	"TargetType": {
-		"$type": "RPG.GameCore.GroupFetchLocalTarget",
-		"TargetType": "Prop",
-		"Targets": [
-			300001
-		]
-	},
-	"TriggerName": "MissionTrigger",
-	"ButtonsByName": [],
-	"ButtonConfigs": [
-		{
-			"ID": "PlayButton",
-			"IconType": "GeneralActivityIcon",
-			"ButtonText": {
-				"Value": "TalkSentenceName_GameConsole"
-			}
-		},
-		{
-			"ID": "DIYButton",
-			"ButtonText": {
-				"Value": "TalkSentenceName_DIYPanel"
-			}
-		}
-	]
-}</pre>
-;(If {{F|Activity230DIYEntrance}} is not greater than or equal to 1)
-:<pre>{
-	"$type": "RPG.GameCore.AdvSetupButtonListTrigger",
-	"TargetType": {
-		"$type": "RPG.GameCore.GroupFetchLocalTarget",
-		"TargetType": "Prop",
-		"Targets": [
-			300001
-		]
-	},
-	"TriggerName": "MissionTrigger",
-	"ButtonsByName": [],
-	"ButtonConfigs": [
-		{
-			"ID": "PlayButton",
-			"IconType": "GeneralActivityIcon",
-			"ButtonText": {
-				"Value": "TalkSentenceName_GameConsole"
-			}
-		}
-	]
-}</pre>
-:<pre>{
-	"$type": "RPG.GameCore.AdvEnableButtons",
-	"TargetType": {
-		"$type": "RPG.GameCore.GroupFetchLocalTarget",
-		"TargetType": "Prop",
-		"Targets": [
-			300001
-		]
-	},
-	"TriggerName": "MissionTrigger",
-	"ButtonsByName": [
-		"PlayButton"
-	]
-}</pre>
-
-;(Talk to Silver Wolf)
-<pre>{
-	"$type": "RPG.GameCore.AdvEntityFaceToPoint",
-	"SourceType": {
-		"$type": "RPG.GameCore.TargetFetchAdvLocalPlayer",
-		"IncludeStoryPlayer": true
-	},
-	"GroupId": 220,
-	"PointID": 1
-}</pre>
-:'''Silver Wolf:''' I can't believe they have the nerve to release such a crude demo for testing. Shouldn't have expected better...
-:'''Silver Wolf:''' Ready? Then let's get started. I want to see how they designed the combat system...
-<pre>{
-	"$type": "RPG.GameCore.PerformanceEndSeq",
-	"Cases": [
-		{
-			"Case": 1,
-			"OnSuccess": [
-				{
-					"$type": "RPG.GameCore.ShowUI",
-					"Name": "Ui.MatchThree.Entrance.MatchThreeMainEntrancePage",
-					"Param": {
-						"Value": "1100"
-					}
-				}
-			]
-		}
-	]
-}</pre>
-;(Upon reaching the destination)
-
-;(Upon reaching the destination)
-<pre>{
-	"$type": "RPG.GameCore.AdvEntityFaceToPoint",
-	"SourceType": {
-		"$type": "RPG.GameCore.TargetFetchAdvLocalPlayer",
-		"IncludeStoryPlayer": true
-	},
-	"GroupId": 220,
-	"PointID": 1
-}</pre>
-:'''Silver Wolf:''' I can't believe they have the nerve to release such a crude demo for testing. Shouldn't have expected better...
-:'''Silver Wolf:''' Ready? Then let's get started. I want to see how they designed the combat system...
-:{{DIcon|Travel Log}} Arcade Machine, it's tweetin' time!
-:<pre>{
-	"$type": "RPG.GameCore.SetPerformanceResult",
-	"Value": 1
-}</pre>
-:{{DIcon|Exit}} Just a moment. I have something else to do.
+:{{tx}}
 {{Dialogue End}}
 
 ===Review the battle with Silver Wolf afterwards{{subst:void|<!--802310204-->}}===
 {{Dialogue Start}}
-<pre>{
-	"$type": "RPG.GameCore.WaitUIControllerClose",
-	"UIControllerName": "MatchThreeMainEntrancePage"
-}</pre>
-:<!--0.5-second delay-->
-<pre>{
-	"$type": "RPG.GameCore.ShowUI",
-	"Name": "Ui.MatchThree.Entrance.MatchThreeNewBirdDialog",
-	"WaitForExit": true,
-	"Param": {
-		"Value": "301"
-	}
-}</pre>
 :{{tx}}
-:'''Silver Wolf:''' Uh, it's surprisingly better than I expected it to be. Maybe I can take this as an opportunity to relax and have a break... Hm? What's up with you?
-:{{DIcon|Arrow}} ...I actually won?
-:'''Silver Wolf:''' You know what they say about PVP games: You win a few, and you lose a few. No need to get all worked up just because you beat me in an occasional round, is there? You're about to start dropping frames.
-:{{tx}}
-;(Unused &mdash; Activity230_PveResultClose)
-<pre>{
-	"$type": "RPG.GameCore.ClosePage",
-	"PageNames": [
-		"MatchThreeMainEntrancePage"
-	],
-	"PageRootNames": []
-}</pre>
 {{Dialogue End}}
 
 ===Place the Trailbirder on the designated arcade machine{{subst:void|<!--802310205-->}}===
 {{Dialogue Start}}
-
+:{{tx}}
 {{Dialogue End}}
 
 ===Speak with Tinah and confirm the content of the subsequent test{{subst:void|<!--802310206-->}}===
 {{Dialogue Start}}
-;(Upon reaching the destination)
-
-;(Upon reaching the destination)
-:'''Tinah:''' Nicely done! We actually designed more game modes for the DIY module, but they haven't been implemented. Not for this test, anyway.
-:'''Tinah:''' As amends, you can have this basic Golden Bird you saw earlier.
-:'''Silver Wolf:''' Oh, you can customize the design? The game mode itself could use some work, but I guess the peripheral gameplay systems aren't too shabby.
-:'''Silver Wolf:''' Yep, that looks so much better.
-:{{DIcon|Arrow}} ...
-::'''Silver Wolf:''' Why are you looking at me like that? Don't worry, I encrypted the hologram. No one's gonna notice.
-:{{DIcon|Arrow}} Who died and made you Unit-01?
-::'''Silver Wolf:''' Don't like it? Well, too bad.
-:'''Tinah:''' Alright, I'll leave you to it now. I hope you enjoy the game!
 :{{tx}}
 {{Dialogue End}}
 
 ===Open the map that comes with the arcade machine and obtain information about the second arcade machine{{subst:void|<!--802310207-->}}===
 {{Dialogue Start}}
-
-<pre>{
-	"$type": "RPG.GameCore.AdvSetupButtonListTrigger",
-	"TargetType": {
-		"$type": "RPG.GameCore.GroupFetchLocalTarget",
-		"TargetType": "Prop",
-		"Targets": [
-			300002
-		]
-	},
-	"TriggerName": "MissionTrigger",
-	"ButtonsByName": [],
-	"ButtonConfigs": [
-		{
-			"ID": "PlayButton",
-			"IconType": "GeneralActivityIcon",
-			"ButtonText": {
-				"Value": "TalkSentenceName_GameConsole"
-			}
-		},
-		{
-			"ID": "DIYButton",
-			"ButtonText": {
-				"Value": "TalkSentenceName_DIYPanel"
-			}
-		}
-	]
-}</pre>
+:{{tx}}
 {{Dialogue End}}
 
 ==Other Languages==

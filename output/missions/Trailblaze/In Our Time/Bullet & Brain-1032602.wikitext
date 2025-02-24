@@ -40,98 +40,17 @@ PageTitle=#Bullet & Brain#
 {{Dialogue Start}}
 :{{tx}}
 {{Mission Description|type=trailblaze|location=The Reverie (Reality)|update|Meanwhile, you, the cowboy who is a little late to the party, bring unfortunate news to Dan Heng and Pom-Pom who have stayed guard aboard the Express... There is a strong chance that the Crew members who have entered the dream are in danger, because an Emanator of Nihility is roaming the Dreamscape. You quickly succeed in convincing Dan Heng to accompany you into the Dreamscape and provide assistance, but run into a serious setback as you enter the hotel lobby: Due to strict hotel regulations, you are forbidden from entering Penacony.<br />The astute Dan Heng seems to notice something out of the ordinary and suggests that he goes ahead to investigate alone. You wholeheartedly agree with his view and suggest splitting up to reassure him... Now, the instincts you developed over your many years of being exposed to dangerous situations are telling you that as you have time on your hands, perhaps collecting some information couldn't hurt.}}
-
-;(Talk to Sabrina)
-:{{tx}}
-:;(If {{F|MissionCV-1032602-undefined}} is equal to 0)
-::<pre>{
-	"$type": "RPG.GameCore.SetMissionCustomValue",
-	"SubmissionID": 103260204,
-	"MissionCustomValue": {
-		"isLocal": true,
-		"ValidValueParamList": [
-			0,
-			1
-		]
-	}
-}</pre>
-::----
-:{{A|VO chapter3 18 subalpina 103.ogg}} '''Sabrina:''' Surely there'll be a lot of celebrities at the Charmony Festival. It's a great opportunity to make some valuable connections.
-::{{A|VO chapter3 18 jno 105.ogg}} '''Jno:''' Don't enter the dream with such a utilitarian agenda!
-
-;(Talk to Coty)
-:{{tx}}
-:;(If {{F|MissionCV-1032602-undefined}} is equal to 0)
-::<pre>{
-	"$type": "RPG.GameCore.SetMissionCustomValue",
-	"SubmissionID": 103260205,
-	"MissionCustomValue": {
-		"ValidValueParamList": [
-			0,
-			1
-		]
-	}
-}</pre>
-::----
-:{{A|VO chapter3 18 coty 105.ogg}} '''Coty:''' Please be patient as you await the festival. The Family will spare no effort to ensure your satisfaction.
-
-;(Unused &mdash; EnterArea_G132)
-:{{A|VO chapter3 18 boothill 110.ogg}} '''Boothill:''' (This place is too big... I better not wander too far in case he can't find me later.)
-:<pre>{
-	"$type": "RPG.GameCore.SwitchCharacterAnchorV2",
-	"SwitchCharacterAnchorConfig": {
-		"IsLocalPlayer": true,
-		"CharacterUniqueName": "LocalPlayer",
-		"AreaName": {
-			"Value": "LevelArea_P10305_F10305001_G132"
-		},
-		"AnchorName": {
-			"Value": "Anchor1"
-		}
-	}
-}</pre>
-
-;(Unused &mdash; EnterArea_G132_2)
-:{{A|VO chapter3 18 boothill 110.ogg}} '''Boothill:''' (This place is too big... I better not wander too far in case he can't find me later.)
-:<pre>{
-	"$type": "RPG.GameCore.SwitchCharacterAnchorV2",
-	"SwitchCharacterAnchorConfig": {
-		"IsLocalPlayer": true,
-		"CharacterUniqueName": "LocalPlayer",
-		"AreaName": {
-			"Value": "LevelArea_P10305_F10305001_G132"
-		},
-		"AnchorName": {
-			"Value": "Anchor2"
-		}
-	}
-}</pre>
-:{{A|VO chapter3 18 boothill 109.ogg}} '''Boothill:''' (Dan Heng seems pretty worried about his companions. I should give him some space. Stressing out about it won't help anything.)
-:{{tx}}
 {{Dialogue End}}
 
 ===Use your "street smarts"{{subst:void|<!--103260208-->}}===
 {{Mission Description|type=trailblaze|location=The Reverie (Reality)|update|Meanwhile, you, the cowboy who is a little late to the party, bring unfortunate news to Dan Heng and Pom-Pom who have stayed guard aboard the Express... There is a strong chance that the Crew members who have entered the dream are in danger, because an Emanator of Nihility is roaming the Dreamscape. You quickly succeed in convincing Dan Heng to accompany you into the Dreamscape and provide assistance, but run into a serious setback as you enter the hotel lobby: Due to strict hotel regulations, you are forbidden from entering Penacony.<br />You and Dan Heng reach a consensus: Whether this is reality or a dream, nothing about Penacony in its current state can be described as "normal." Fortunately, you always keep a backup plan ready for yourself (though it may not always lead to good things...) It's time for you to use your "street smarts"!}}
 {{Dialogue Start}}
-
-;(Talk to Dennis)
 :{{tx}}
-:{{A|VO chapter3 18 danheng 117.ogg}} '''Dan Heng:''' How do we get into the VIP lounge?
-:{{A|VO chapter3 18 boothill 131.ogg}} '''Boothill:''' This is where my street smarts come into play.
 {{Dialogue End}}
 
 ===Take a seat in the VIP Lounge drinks table{{subst:void|<!--103260210-->}}===
 {{Mission Description|type=trailblaze|location=The Reverie (Reality)|update|You used your "street smarts" to win your deserved rights. That poor lobby manager crumbled in the face of your intimidation tactics and organized refreshments for you in the VIP lounge... Though it may look like all they have offered is thoroughly insufficient emotional compensation, you know this is just one part of your backup plan... What now? Let's pray that things can go a little more smoothly from here.}}
 {{Dialogue Start}}
-
-;(Talk to Anderson)
-:{{tx}}
-:{{tx}}
-;(Unused &mdash; ruaa)
-:{{A|VO chapter3 18 boothill 137.ogg}} '''Boothill:''' Wow! This bar is something else &mdash; certainly worthy of the Planet of Festivities.
-:{{tx}}
-:{{tx}}
-:{{tx}}
 :{{tx}}
 {{Dialogue End}}
 

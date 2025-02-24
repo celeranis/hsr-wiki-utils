@@ -41,270 +41,37 @@ PageTitle=#Even When Cheers Fade: Chapter 2#
 ===Review the Tactics Board and prepare for future matches{{subst:void|<!--802510201-->}}===
 {{Mission Description|type=adventure|location=Skysplitter|The tense and exciting match draws to a temporary close. It's time to have a quick breather.<br />Use this time to prepare for the upcoming match.}}
 {{Dialogue Start}}
-
-;(Talk to Carmella)
-:'''Carmella:''' All the contestants' lounges have been outfitted with such Tactics Board. Luka, you're an experienced athlete. I'm sure you're very familiar with this?
-:'''Luka:''' Yep. But Belobog's Tactics Board are a little shoddier than this, not as technologically advanced.
-:'''Carmella:''' They're all the same when you use them! Let's use this Tactics Board here to give you a simple brief of the Luminary Wardance's itinerary!
-:(Look towards the Tactics Board)
-:'''Tuskpir:''' Mehr, mehr! Mehr, mehr!
-:Hold the tuskpir in your arms and enter the dreamland.
-:'''Tuskpir:''' Mehr, mehr!
-:Let's try it later.
-:'''Tuskpir:''' Mehr?
-:'''(Trailblazer):''' The latest edition of Luofu Sports Illustrated is out. Let's see what exciting news is in store.
-:(Check Luofu Sports Illustrated)
-:'''(Trailblazer):''' These journalists really will sensationalize anything and everything. Gotta watch my words next time.
-:'''(Trailblazer):''' I wouldn't have known if I didn't read the paper &mdash; the ripple effect of this tournament is much larger than I expected.
-:'''(Trailblazer):''' This bunch of editors really are clickbait connoisseurs &mdash; each header is more explosive than the last.
-:'''(Trailblazer):''' This article is beautifully written. I could almost cry!
-:'''(Trailblazer):''' Luka should be back at the lounge now. Let's take a walk nearby and look for him.
-:'''Carmella:''' Folks, let's take a look at the opponent's profile for the next Faceoff Match.
-:{{DIcon|Arrow}} (Look towards the Tactics Board)
-<pre>{
-	"$type": "RPG.GameCore.ShowUI",
-	"Name": "Ui.FightFest.Board.FightFestBoardCutDialog",
-	"WaitForExit": true,
-	"Param": {
-		"Value": "2"
-	}
-}</pre>
-
+:{{tx}}
 {{Dialogue End}}
 
 ===Head to the Reception Hall and confirm your match qualifications{{subst:void|<!--802510203-->}}===
 {{Mission Description|type=adventure|location=Skysplitter|update|Luka finally wins enough points after a few rounds of Knockout Matches.<br />Now he'll face the truly formidable foes.}}
 {{Dialogue Start}}
-<pre>{
-	"$type": "RPG.GameCore.WaitUIControllerClose",
-	"UIControllerName": "FightFestScoreMatchResultDialog"
-}</pre>
-:{{A|VO side2 yanwu player 114 m.ogg}} {{A|VO side2 yanwu player 114 f.ogg}} '''(Trailblazer):''' (After fighting in so many knockout stages, I think our points should be enough. Time to head to the Skysplitter's leaderboard to confirm our ranking.)
+:{{tx}}
 {{Dialogue End}}
 
 ===Start the match and confront Boothill{{subst:void|<!--802510204-->}}===
 {{Mission Description|type=adventure|location=Skysplitter|update|Carmella is very scared of Boothill as he is a criminal wanted by the IPC.<br />You're definitely not scared of Boothill &mdash; You've even gone through a lot together.<br />Luka doesn't know which version of your descriptions of Boothill is more accurate. He only walks away with a simple understanding in his subconsciousness &mdash; Those who go against the IPC probably aren't bad guys.}}
 {{Dialogue Start}}
-
-;(Talk to Luka)
-:{{A|VO side2 yanwu camera 142.ogg}} '''Carmella:''' You just have to be cautious, Luka. A wanted criminal on the IPC's list is really no joke.
-:{{A|VO side2 yanwu luka 313.ogg}} '''Luka:''' Haha, what's there to be afraid of! When I was defending the Underworld with my master, I also met many hardened criminals! I even personally apprehended the Dark Widower of Boulder Town with my own two hands!
-
-;(Talk to Carmella)
-:{{A|VO side2 yanwu camera 142.ogg}} '''Carmella:''' You just have to be cautious, Luka. A wanted criminal on the IPC's list is really no joke.
-:{{A|VO side2 yanwu luka 313.ogg}} '''Luka:''' Haha, what's there to be afraid of! When I was defending the Underworld with my master, I also met many hardened criminals! I even personally apprehended the Dark Widower of Boulder Town with my own two hands!
-
-;(Unused &mdash; FightFest_MainRace_802510204)
-----
-::{{A|VO side2 yanwu luka 314.ogg}} '''Luka:''' (Boothill... a fugitive wanted by the IPC... I'd hate to say it in front of Miss Carmella, but... I have a feeling this "wanted criminal" might not actually be such a bad guy.)
-::{{A|VO side2 yanwu luka 315.ogg}} '''Luka:''' (After all, the Xianzhou Alliance didn't arrest him, and they even allowed him to participate in the Wardance.)
-::{{A|VO side2 yanwu luka 316.ogg}} '''Luka:''' (Of course, I'm not afraid of criminals. My Iron Fist is made to punish bad guys!)
-::{{A|VO side2 yanwu player 121 m.ogg}} {{A|VO side2 yanwu player 121 f.ogg}} '''(Trailblazer):''' Luka, are you ready to go up against Boothill?
-::{{DIcon|Arrow}} It's time to go see what the IPC's wanted criminal is made of!
-:::{{A|VO side2 yanwu luka 317.ogg}} '''Luka:''' It's time to go see what this criminal the IPC wants so bad is made of!
-:::{{tx}}
-::<pre>{
-	"$type": "RPG.GameCore.SetPerformanceResult",
-	"Value": 1
-}</pre>
-::{{DIcon|Exit}} Please give me a moment.
-:::{{A|VO side2 yanwu luka 318.ogg}} '''Luka:''' Please give me a moment.
-:::{{tx}}
-
-;(Unused &mdash; G81_TriggerBattle)
-----
-::{{A|VO side2 yanwu luka 314.ogg}} '''Luka:''' (Boothill... a fugitive wanted by the IPC... I'd hate to say it in front of Miss Carmella, but... I have a feeling this "wanted criminal" might not actually be such a bad guy.)
-::{{A|VO side2 yanwu luka 315.ogg}} '''Luka:''' (After all, the Xianzhou Alliance didn't arrest him, and they even allowed him to participate in the Wardance.)
-::{{A|VO side2 yanwu luka 316.ogg}} '''Luka:''' (Of course, I'm not afraid of criminals. My Iron Fist is made to punish bad guys!)
-::{{A|VO side2 yanwu player 121 m.ogg}} {{A|VO side2 yanwu player 121 f.ogg}} '''(Trailblazer):''' Luka, are you ready to go up against Boothill?
-::{{DIcon|Arrow}} It's time to go see what the IPC's wanted criminal is made of!
-:::{{A|VO side2 yanwu luka 317.ogg}} '''Luka:''' It's time to go see what this criminal the IPC wants so bad is made of!
-:::{{tx}}
-::<pre>{
-	"$type": "RPG.GameCore.SetPerformanceResult",
-	"Value": 1
-}</pre>
-::{{DIcon|Exit}} Please give me a moment.
-:::{{A|VO side2 yanwu luka 318.ogg}} '''Luka:''' Please give me a moment.
-:::{{tx}}
-
-;(Unused &mdash; FightFestBattleStart)
-<pre>{
-	"$type": "RPG.GameCore.AddStreamingSource",
-	"StreamingSource": {
-		"CenterName": "Mission_FightFestBattlePerformance",
-		"AreaName": "LevelArea_P20242_F20242001_G19",
-		"AnchorName": "Anchor7"
-	}
-}</pre>
-<pre>{
-	"$type": "RPG.GameCore.SetFloorCustomFloat",
-	"Name": {
-		"Value": "FCV_2.5_Arena"
-	},
-	"Value": {
-		"IsDynamic": false,
-		"FixedValue": {
-			"Value": 1
-		}
-	}
-}</pre>
-<pre>{
-	"$type": "RPG.GameCore.SetFloorCustomFloat",
-	"Name": {
-		"Value": "FCV_2.5_Throng"
-	},
-	"Value": {
-		"IsDynamic": false,
-		"FixedValue": {
-			"Value": 1
-		}
-	}
-}</pre>
-----
 :{{tx}}
-----
-:{{tx}}
-<pre>{
-	"$type": "RPG.GameCore.SwitchCharacterAnchorV2",
-	"SwitchCharacterAnchorConfig": {
-		"IsLocalPlayer": true,
-		"CharacterUniqueName": "LocalPlayer",
-		"AreaName": {
-			"Value": "LevelArea_P20242_F20242001_G19"
-		},
-		"AnchorName": {
-			"Value": "Anchor7"
-		}
-	}
-}</pre>
-<pre>{
-	"$type": "RPG.GameCore.ShowFightFestMainRaceUpgradeResultDialog",
-	"MainRaceID": 1002
-}</pre>
-<pre>{
-	"$type": "RPG.GameCore.WaitUIControllerClose",
-	"UIControllerName": "FightFestUpgradeFailDialog"
-}</pre>
 {{Dialogue End}}
 
 ===Hold the press conference{{subst:void|<!--802510206-->}}===
 {{Mission Description|type=adventure|location=Skysplitter|update|Press conferences are a specialty of sporting events. You've gotta experience it.<br />Are you prepared to face the cunning, plotting, devious, and conniving friends working in the media industry?<br />It's time to have a battle of wits against them.}}
 {{Dialogue Start}}
-
-;(Talk to Luka)
-
-
-;(Talk to Carmella)
-:{{A|VO side2 yanwu camera 142.ogg}} '''Carmella:''' You just have to be cautious, Luka. A wanted criminal on the IPC's list is really no joke.
-:{{A|VO side2 yanwu luka 313.ogg}} '''Luka:''' Haha, what's there to be afraid of! When I was defending the Underworld with my master, I also met many hardened criminals! I even personally apprehended the Dark Widower of Boulder Town with my own two hands!
-<pre>{
-	"$type": "RPG.GameCore.SetFloorCustomFloat",
-	"Name": {
-		"Value": "FCV_2.5_Throng"
-	},
-	"Value": {
-		"IsDynamic": false,
-		"FixedValue": {
-			"Value": 2
-		}
-	}
-}</pre>
-<pre>{
-	"$type": "RPG.GameCore.SetFloorCustomFloat",
-	"Name": {
-		"Value": "FCV_2.5_Arena"
-	},
-	"Value": {
-		"IsDynamic": false,
-		"FixedValue": {
-			"Value": 0
-		}
-	}
-}</pre>
-:{{tx}}
-<pre>{
-	"$type": "RPG.GameCore.SetMissionCustomValue",
-	"SubmissionID": 802510206,
-	"MissionCustomValue": {
-		"Index": 1,
-		"isLocal": true,
-		"ValidValueParamList": [
-			1,
-			2
-		]
-	},
-	"CustomValue": 1
-}</pre>
-:{{DIcon|Arrow}} Front row, first from the left.
-:{{DIcon|Arrow}} Front row, second from the left.
-:{{DIcon|Arrow}} Front row, third from the left.
-<pre>{
-	"$type": "RPG.GameCore.SetTextJoinValue",
-	"TextJoinID": 111,
-	"Value": "1"
-}</pre>
-;(Unused &mdash; TriggerPerformance_AfterShowUI)
-----
-:<pre>{
-	"$type": "RPG.GameCore.TriggerPermanentEmotion",
-	"TargetType": {
-		"$type": "RPG.GameCore.TargetFetchAdvLocalPlayer",
-		"IncludeStoryPlayer": true
-	},
-	"EmotionName": "Trouble02",
-	"TransitTime": 0.2
-}</pre>
-::'''(Trailblazer):''' I wouldn't have known if I didn't read the paper &mdash; the ripple effect of this tournament is much larger than I expected.
-::'''(Trailblazer):''' Ah, this is bad! Boothill just completely shattered Luka's confidence!
-::'''(Trailblazer):''' Now we'll just have to place our hopes on the repechage and pray everything goes well.
-::<!--1-second delay-->
-::'''(Trailblazer):''' It looks like the spectators enjoyed this match. Luka's popularity is on the rise again.
-::'''(Trailblazer):''' You have to get it together, Luka. Do it for everyone supporting us!
-<pre>{
-	"$type": "RPG.GameCore.WaitUIControllerClose",
-	"UIControllerName": "FightFestChallengeEntrancePage"
-}</pre>
-:{{tx}}
-:'''Luka:''' You dozed off immediately! How was it? Did you get to see any hyper-realistic battles?
-:{{DIcon|Arrow}} This is practically a portable Penacony!
-::'''Luka:''' I keep hearing the name of that place. Looks like I'll have to go visit it too!
-:{{DIcon|Arrow}} It was pretty realistic.
-::'''Luka:''' The Xianzhou Alliance... Is truly amazing...
-:'''Tuskpir:''' Mehr! Mehr mehr mehr, mehr mehr!
 :{{tx}}
 {{Dialogue End}}
 
 ===Return to the lounge and prepare for the next Faceoff Match{{subst:void|<!--802510208-->}}===
 {{Mission Description|type=adventure|location=Skysplitter|update|Carmella is very scared of Boothill as he is a criminal wanted by the IPC.<br />You're definitely not scared of Boothill &mdash; You've even gone through a lot together.<br />Luka doesn't know which version of your descriptions of Boothill is more accurate. He only walks away with a simple understanding in his subconsciousness &mdash; Those who go against the IPC probably aren't bad guys.}}
 {{Dialogue Start}}
-
-;(Unused &mdash; EnterArea_G80)
 :{{tx}}
-::{{A|VO side2 yanwu camera 137.ogg}} '''Carmella:''' Luka, your next opponent is Boothill... You have to be careful. He's a dangerous maniac!
-::{{DIcon|Arrow}} That's right. He's quite something.
-:::{{A|VO side2 yanwu luka 309.ogg}} '''Luka:''' Indeed, by the looks of his photo he really looks like a formidable character...
-::{{DIcon|Arrow}} He's just got a grudge against the IPC, that's all.
-:::{{A|VO side2 yanwu camera 138.ogg}} '''Carmella:''' Among those who harbor plenty of hatred against IPC, he's probably one of the more dangerous ones.
-::{{A|VO side2 yanwu luka 310.ogg}} '''Luka:''' I heard he's a Galaxy Ranger? What type of organization is that?
-::{{A|VO side2 yanwu camera 139.ogg}} '''Carmella:''' The Galaxy Rangers are a diverse group of individualistic warriors that are disciples of The Hunt. Some are pretty easy-going, but there's also bloodthirsty wanted criminals like Boothill.
-::{{A|VO side2 yanwu luka 311.ogg}} '''Luka:''' Disciples of The Hunt? So isn't he the same as Xianzhou folks? No matter how dangerous he is, he won't be causing trouble in the land of his fellow disciples, right?
-::{{DIcon|Arrow}} I met him on Penacony. He's a pretty decent guy.
-:::{{A|VO side2 yanwu camera 140.ogg}} '''Carmella:''' Would a "decent guy" be on the IPC's wanted list? I don't think so.
-::{{DIcon|Arrow}} Both the IPC and Belobogians believe in the Preservation...
-:::{{A|VO side2 yanwu luka 312.ogg}} '''Luka:''' I take your point.
-:::{{A|VO side2 yanwu camera 141.ogg}} '''Carmella:''' Yeah... Wait, no! The IPC didn't do anything bad to Belobog!
-::{{A|VO side2 yanwu camera 142.ogg}} '''Carmella:''' You just have to be cautious, Luka. A wanted criminal on the IPC's list is really no joke.
-::{{tx}}
-:<pre>{
-	"$type": "RPG.GameCore.PerformanceExtendEndBlack",
-	"ExtendTime": 0.5
-}</pre>
 {{Dialogue End}}
 
 ===Participate in the Knockout Matches and win points{{subst:void|<!--802510202-->}}===
 {{Mission Description|type=adventure|location=Skysplitter|update|The rules of the Knockout Matches are easy &mdash; Just defeat opponents and win points<br />Contestant Luka just needs to do three things: Win, win, and keep winning!}}
 {{Dialogue Start}}
+:{{tx}}
 {{Dialogue End}}
 
 ==Other Languages==

@@ -49,603 +49,85 @@ PageTitle=#Cloud-Bound Hearts#
 ===Talk to the Family's secretary.{{subst:void|<!--203050101-->}}===
 {{Mission Description|type=adventure|location=(The Radiant Feldspar/The Trailblaze's Stern/The Tatalov/The Soaring Clock Hand)|The Family's secretary has something to discuss with you in detail in person. It seems to be about the transfer of Radiant Feldspar's ownership.}}
 {{Dialogue Start}}
-
-;(Talk to Family Secretary)
-<pre>{
-	"$type": "RPG.GameCore.PerformanceExtendEndBlack",
-	"ExtendTime": 1.5
-}</pre>
-:'''Family Secretary:''' You must be {{MC|f=Miss|m=Mr.}} (Trailblazer)? I've heard so much about you. I am Mr. Alfalfa's secretary, and I'm responsible for coordinating the handover of the Radiant Feldspar.
-:{{DIcon|Arrow}} How can I help you?
-::'''Family Secretary:''' Regarding the issue of Radiant Feldspar's ownership, there are some matters that require your attention.
-:{{DIcon|Arrow}} ...Are you guys really giving it to me unconditionally?
-::'''Family Secretary:''' Yes. According to the agreement between us and the Astral Express, the Radiant Feldspar will be left in your care.
-:{{DIcon|Arrow}} But this obviously belongs to everyone...
-::'''Family Secretary:''' Correct. Ownership of the Radiant Feldspar has been transferred to the Astral Express, but... according to the latest agreement's terms... the Astral Express has appointed you as the authoritative representative for this handover.
-;(If {{cx}}{{subst:void|<!--{"$type":"RPG.GameCore.ByComparePropState","TargetType":{"$type":"RPG.GameCore.TargetFetchAdvPropEx","FetchType":"SinglePropByPropID","SinglePropID":{"GroupID":{"fixedValue":{"Value":12}},"ID":{"fixedValue":{"Value":300003}}}},"State":"Open","TaskEnabled":true,"IsClientOnly":true}-->}})
-::'''Family Secretary:''' The Astral Express has also confirmed with us &mdash; they have officially authorized you to be the administrator of the Radiant Feldspar. Which means, you are the present captain of this airship. Congratulations!
-::'''Family Secretary:''' Next, to ensure the airship's proper operation, you need to hire a reliable first mate to organize its daily affairs.
-::{{DIcon|Arrow}} Where should I go about hiring such a person?
-:::'''Family Secretary:''' Please do not worry, I will be assisting you the entire way. I'll help organize the recruitment, and you just have to make the final call.
-::{{DIcon|Arrow}} Nothing better than doing it myself &mdash; I don't think hiring a first mate is necessary...
-:::'''Family Secretary:''' I apologize. I know the Nameless are all masters of their craft, but airship affairs are quite complicated... It's better to look for a first mate with ample experience to handle them.
-::'''Family Secretary:''' Don't worry, as a show of sincerity from The Family to the Astral Express, I have selected a few suitable candidates from the Alfalfa's talent repository...
-;(If {{cx}}{{subst:void|<!--{"$type":"RPG.GameCore.ByComparePropState","TargetType":{"$type":"RPG.GameCore.TargetFetchAdvPropEx","FetchType":"SinglePropByPropID","SinglePropID":{"GroupID":{"fixedValue":{"Value":12}},"ID":{"fixedValue":{"Value":300003}}}},"State":"Open","TaskEnabled":true,"IsClientOnly":true}-->}})
-::<!--1-second delay-->
+:{{tx}}
 {{Dialogue End}}
 
 ===Select the first mate you want to recruit{{subst:void|<!--203050102-->}}===
 {{Mission Description|type=adventure|location=(The Radiant Feldspar/The Trailblaze's Stern/The Tatalov/The Soaring Clock Hand)|update|The Family's secretary is handing over the responsibilities of the Radiant Feldspar to you. It's time to recruit a reliable first mate for your airship.}}
 {{Dialogue Start}}
-
-;(Talk to Family Secretary)
-<pre>{
-	"$type": "RPG.GameCore.PerformanceExtendEndBlack",
-	"ExtendTime": 1
-}</pre>
 :{{tx}}
-:{{DIcon|Arrow}} I'd like to learn more about Rosa.
-::'''Rosa:''' I am relentless when it comes to the pursuit of detail. I hope to work with you if I get the chance.
-::'''Family Secretary:''' Rosa's meticulousness, vigor, and speed in executing tasks are well known. She always puts her employers first, and once proclaimed that she would never place additional burdens on them.
-::'''Family Secretary:''' Do you wish to recruit Rosa as your first mate?
-:{{DIcon|Arrow}} I'd like to learn more about Caldwick.
-::'''Caldwick:''' I am Caldwick, and I have heard about your feats aplenty. If I may be allowed the honor, I would be more than glad to be of service.
-::'''Family Secretary:''' Mr. Caldwick was awarded the title of "Best Superior" five years in a row by the Navigators Association, proving that he has garnered stellar performances in the domain of talent management.
-::'''Family Secretary:''' Do you wish to recruit Caldwick as your first mate?
-:{{DIcon|Arrow}} I'd like to learn more about Pedro.
-::'''Pedro:''' My captain, I wonder if I'll be lucky enough to flaunt my skills under your command!
-::'''Family Secretary:''' Mr. Pedro is famed for his tenacious character and extensive network. His capabilities and influence are also outstanding among his peers.
-::'''Family Secretary:''' Do you wish to recruit Pedro as your first mate?
-:'''Family Secretary:''' According to the clause's restrictions imposed by the agreement, {{Color|keyword|nobold=1|once you employ the current first mate, you are prohibited from changing your selection.}} Unless the first mate commits an act of gross misconduct, the unprofessional dismissal of your first mate will incur a massive compensation fee. Please take note of that.
-:{{DIcon|Arrow}} I'll pick you then.
-::'''Family Secretary:''' Very good. Congrats on hiring your desired first mate!
-:<pre>{
-	"$type": "RPG.GameCore.SetMissionCustomValue",
-	"SubmissionID": 203050102,
-	"MissionCustomValue": {
-		"ValidValueParamList": [
-			1,
-			2,
-			3
-		]
-	},
-	"CustomValue": 1
-}</pre>
-::{{tx}}
-:{{DIcon|Return}} No, let me think about it.
-::'''Family Secretary:''' There's no hurry. Please take your time.
-::{{tx}}
-:;(Return to previous option selection)
-
 {{Dialogue End}}
 
 ===Return to the captain's cabin with Rosa{{subst:void|<!--203050107-->}}===
 {{Mission Description|type=adventure|location=(The Radiant Feldspar/The Trailblaze's Stern/The Tatalov/The Soaring Clock Hand)|update|Rosa invites you to return to the captain's cabin together. Some affairs seem to require your attention.}}
 {{Dialogue Start}}
-
-;(Talk to Rosa)
-<pre>{
-	"$type": "RPG.GameCore.PerformanceExtendEndBlack",
-	"ExtendTime": 1
-}</pre>
-:'''Rosa:''' Please, look over here...
-:'''Rosa:''' The wall is starkly empty. This won't do... A captain's cabin should honor tradition by having your portrait hung high. It's the only way to declare your status.
-:'''Rosa:''' I've already prepared your portrait for you... but... whether it should be hung up is your decision.
-:{{DIcon|Arrow}} Chop-chop, then!
-::'''Rosa:''' Aye-aye, Cap'n!
-:{{DIcon|Arrow}} ...You make it sound like I had a choice to begin with.
-::'''Rosa:''' Hmm? Voice? Oh, you meant choice. No, no, if you're insistent on leaving it empty, that's fine too. I just think it's unbecoming for someone of your station. It never hurts to flaunt a little.
-:{{tx}}
 :{{tx}}
 {{Dialogue End}}
 
 ===Return to the captain's cabin with Caldwick{{subst:void|<!--203050112-->}}===
 {{Mission Description|type=adventure|location=(The Radiant Feldspar/The Trailblaze's Stern/The Tatalov/The Soaring Clock Hand)|update|Caldwick invites you to return to the captain's cabin together. Some affairs seem to require your attention.}}
 {{Dialogue Start}}
-
-;(Talk to Caldwick)
-<pre>{
-	"$type": "RPG.GameCore.PerformanceExtendEndBlack",
-	"ExtendTime": 1
-}</pre>
-:'''Caldwick:''' The crew member suggests hanging a painting of you here. When you leave the airship, your presence will still be felt here. We are a team. Everyone wishes to see you, no matter the form.
-:'''Caldwick:''' The crew member who suggested this was an apprentice of a master painter who also long-admired the legends of the Nameless, and had your portrait painted long ago. Please feel free to decide whether you want to hang up the painting.
-:{{DIcon|Arrow}} Quickly, hang it up for me to see!
-::'''Caldwick:''' Just a moment.
-:{{DIcon|Arrow}} ...Wow, our crew can do anything.
-::'''Caldwick:''' You jest. According to management guidelines, I allow people to showcase their specialties. It was pure coincidence that we met someone who could draw.
-:Caldwick holds your portrait and hangs it on the wall securely.
 :{{tx}}
 {{Dialogue End}}
 
 ===Return to the captain's cabin with Pedro{{subst:void|<!--203050117-->}}===
 {{Mission Description|type=adventure|location=(The Radiant Feldspar/The Trailblaze's Stern/The Tatalov/The Soaring Clock Hand)|update|Pedro invites you to return to the captain's cabin together. Some affairs seem to require your attention.}}
 {{Dialogue Start}}
-
-;(Talk to Pedro)
-<pre>{
-	"$type": "RPG.GameCore.PerformanceExtendEndBlack",
-	"ExtendTime": 1
-}</pre>
-:'''Pedro:''' This is the captain's cabin, no? When I came to prepare for your handover, I realized that it has a blank area.
-:'''Pedro:''' Since it's the captain's cabin, your portrait should be hanging there. That way, when people come in for discussions, you'll be sitting on the sofa, with your painting behind you, that'll show em' who's boss!
-:'''Pedro:''' The secretary from the Alfalfa Family has prepared your portrait as a sign of graciousness. Do you want to hang it up?
-:{{DIcon|Arrow}} Of course we are hanging it up, pronto!
-::'''Pedro:''' No rush. We'll do it immediately.
-:{{DIcon|Arrow}} How very gracious of them.
-::'''Pedro:''' It was a piece of cake. I'd be willing to help out too for something like this.
-:Pedro holds your painting and steadily hangs it on the wall.
 :{{tx}}
 {{Dialogue End}}
 
 ===Talk to Rosa{{subst:void|<!--203050103-->}}===
 {{Mission Description|type=adventure|location=(The Radiant Feldspar/The Trailblaze's Stern/The Tatalov/The Soaring Clock Hand)|update|You have hired Rosa, a Halovian, as the new first mate to manage your airship. On her first day reporting to duty, you want to hear her thoughts on airship affairs.}}
 {{Dialogue Start}}
-
-;(Talk to Rosa)
-<pre>{
-	"$type": "RPG.GameCore.PerformanceExtendEndBlack",
-	"ExtendTime": 1
-}</pre>
-:'''Rosa:''' Hello, are you the new captain? I didn't think you'd be this young... I'm Rosa, pleased to meet you.
-:'''Rosa:''' Thank you for your trust in me. I won't waste your precious time. Some official matters require your attention.
-:'''Rosa:''' Firstly, I think the existing crew's sense of professionalism is decent, but there is room for improvement. For example, their uniforms do not match their job's roles and responsibilities. As an airship that services distinguished guests, this is a slight of manners.
-:'''Rosa:''' I hope you will agree to my request to manage the crewmates and draw up a code of conduct...
-:{{DIcon|Arrow}} No problem.
-::'''Rosa:''' I won't disappoint you. Don't worry.
-:{{DIcon|Arrow}} I'll acquiesce on principle. Just go easy on them.
-::'''Rosa:''' Don't worry. I'm not that kind of person.
-:'''Rosa:''' Details decide success or failure. Don't worry, captain, I've already prepared a draft proposal. I guarantee this will elevate the airship's service quality to new heights!
+:{{tx}}
 {{Dialogue End}}
 
 ===Inspect the empennage, select the paint, name the airship, and confirm all are of an acceptable quality{{subst:void|<!--203050104-->}}===
 {{Mission Description|type=adventure|location=(The Radiant Feldspar/The Trailblaze's Stern/The Tatalov/The Soaring Clock Hand)|update|You and Rosa inspect the airship's empennage. As she raises the business of changing the empennage paint and naming the airship, several ideas come to your mind...}}
 {{Dialogue Start}}
-
-;(Talk to Rosa)
 :{{tx}}
-:'''Rosa:''' Hello captain, I'm honored to report the current phase's initial results to you &mdash; these young newcomers are coming along fine, and are getting used to the airship's current work pace.
-:{{DIcon|Arrow}} This lineup looks pretty good.
-::'''Rosa:''' Only the most professional of teams will leave a lasting impression on our VIP guests.
-:{{DIcon|Arrow}} Did you call for me for such a trivial matter...?
-::'''Rosa:''' Apologies, I shall inform you on other matters in a while.
-:'''Rosa:''' I just have something else to report to you at present. It's better if I showed you in person...
-:{{DIcon|Arrow}} Spray-paint my face on it!
-::'''Rosa:''' I admit that your visage is extraordinary, but according to tradition, it's usually a mascot that's painted on the tail... Your idea might perhaps be beneath your station.
-:{{DIcon|Arrow}} I'll name it after myself then!
-::'''Rosa:''' Mmm... The "Radiant Feldspar" renamed to the "(Trailblazer)"... that might invite criticism, presenting you as an object.
-:{{DIcon|Arrow}} Do you have any good suggestions?
-::'''Rosa:''' Let me think...
-:'''Rosa:''' Do you have any pets or mascots you like?
-:{{DIcon|Arrow}} ...Pom-Pom, Conductor of the Astral Express.
-:<pre>{
-	"$type": "RPG.GameCore.SetMissionCustomValue",
-	"SubmissionID": 203050104,
-	"MissionCustomValue": {
-		"Index": 1,
-		"ValidValueParamList": [
-			1,
-			2,
-			3
-		]
-	},
-	"CustomValue": 1
-}</pre>
-:{{DIcon|Arrow}} ...I like trashcans.
-:<pre>{
-	"$type": "RPG.GameCore.SetMissionCustomValue",
-	"SubmissionID": 203050104,
-	"MissionCustomValue": {
-		"Index": 1,
-		"ValidValueParamList": [
-			1,
-			2,
-			3
-		]
-	},
-	"CustomValue": 2
-}</pre>
-:{{DIcon|Arrow}} ...I guess it still has to be Clockie.
-:<pre>{
-	"$type": "RPG.GameCore.SetMissionCustomValue",
-	"SubmissionID": 203050104,
-	"MissionCustomValue": {
-		"Index": 1,
-		"ValidValueParamList": [
-			1,
-			2,
-			3
-		]
-	},
-	"CustomValue": 3
-}</pre>
-:'''Rosa:''' Hello captain, I'm honored to report the current phase's initial results to you &mdash; these young newcomers are coming along fine, and are getting used to the airship's current work pace.
-:This lineup looks pretty good.
-:'''Rosa:''' Only the most professional of teams will leave a lasting impression on our VIP guests.
-:Did you call for me for such a trivial matter...?
-:'''Rosa:''' Apologies, I shall inform you on other matters in a while.
-:'''Rosa:''' I just have something else to report to you at present. It's better if I showed you in person...
-:Rosa takes you to the deck.
-:'''Rosa:''' I don't know if you've noticed &mdash; the airship has a new owner now, but it's still called the Radiant Feldspar. And the airship's empennage isn't spray-painted...
-:'''Rosa:''' This is, to me, simply unacceptable. You should be flying your own flag that heralds your glorious appointment.
-:'''Rosa:''' I suggest that you set the tone for future endeavors, and decide on a design for the airship. What do you think?
-:Spray-paint my face on it!
-:'''Rosa:''' I admit that your visage is extraordinary, but according to tradition, it's usually a mascot that's painted on the tail... Your idea might perhaps be beneath your station.
-:I'll name it after myself then!
-:'''Rosa:''' Mmm... The "Radiant Feldspar" renamed to the "(Trailblazer)"... that might invite criticism, presenting you as an object.
-:Do you have any good suggestions?
-:'''Rosa:''' Let me think...
-:'''Rosa:''' Do you have any pets or mascots you like?
-:...Pom-Pom, Conductor of the Astral Express.
-:'''Rosa:''' Mm, that doesn't sound like a bad idea at all. It represents the authority of the Astral Express holds over the airship.
-:'''Rosa:''' Then {{Color|keyword|nobold=1|the airship's new name shall henceforth be the Trailblaze's Stern}}. Pom-Pom's image will be painted on the empennage &mdash; we'll never get lost in the stars if we follow the conductor's trail.
-:...I like trashcans.
-:'''Rosa:''' A trashcan might be unorthodox, but that visual imbues an inexplicable sense of heroic staunchness in me &mdash; an intense personal style that stands out in a dream. This is a rare feeling.
-:'''Rosa:''' Then {{Color|keyword|nobold=1|the airship's new name shall henceforth be the Tatalov}} &mdash; the grand Garbage King of legend. It will guide us toward conquest and majestic grandeur! Give it a coat of paint to demonstrate your show of force and intimidation.
-:...I guess it still has to be Clockie.
-:'''Rosa:''' Not bad, a Penaconian hallmark, and... no worries about copyright infringement.
-:'''Rosa:''' Then {{Color|keyword|nobold=1|the airship's new name shall henceforth be the Soaring Clock Hand}} &mdash; an inheritance of Clockie's will. It sounds like a high-flying organization of justice.
-:'''Rosa:''' Looks like you've already made the most astute choice. Leave the rest of the matter to me.
-:{{tx}}
-
-:{{tx}}
-<pre>{
-	"$type": "RPG.GameCore.PerformanceEndSeq",
-	"Cases": [
-		{
-			"OnSuccess": [
-				{
-					"$type": "RPG.GameCore.SwitchCharacterAnchorV2",
-					"SwitchCharacterAnchorConfig": {
-						"IsLocalPlayer": true,
-						"CharacterUniqueName": "LocalPlayer",
-						"AreaName": {
-							"Value": "LevelArea_P10341_F10341001_G166"
-						},
-						"AnchorName": {
-							"Value": "Anchor1"
-						}
-					}
-				}
-			]
-		}
-	]
-}</pre>
 {{Dialogue End}}
 
 ===Inspect the area near the long gallery with Rosa{{subst:void|<!--203050106-->}}===
 {{Mission Description|type=adventure|location=(The Radiant Feldspar/The Trailblaze's Stern/The Tatalov/The Soaring Clock Hand)|update|Rosa invites you to inspect the long gallery together. Some affairs seem to require your attention.}}
 {{Dialogue Start}}
-
-;(Talk to Rosa)
-:'''Rosa:''' This place... I'd add your statue to it if it were up to me. Passing visitors and crew members will instantly understand at a glance: This is the master of this airship.
-:'''Rosa:''' Penacony's origami printing techniques are quite advanced. Do you want to print a bust tailored to your visage and place it here?
-:{{DIcon|Arrow}} Do it!
-::'''Rosa:''' Aye-aye, Cap'n!
-:{{DIcon|Arrow}} Make me look nicer, please.
-::'''Rosa:''' Don't worry, you'll never go wrong with a Halovian's aesthetics.
-:'''Rosa:''' Mm-hmm, excellent, a perfect fit.
 :{{tx}}
 {{Dialogue End}}
 
 ===Talk to Caldwick{{subst:void|<!--203050108-->}}===
 {{Mission Description|type=adventure|location=(The Radiant Feldspar/The Trailblaze's Stern/The Tatalov/The Soaring Clock Hand)|update|You have hired Caldwick, an Intellitron, as the new first mate to manage your airship. On his first day reporting to duty, you want to hear his thoughts on airship affairs.}}
 {{Dialogue Start}}
-
-;(Talk to Caldwick)
-<pre>{
-	"$type": "RPG.GameCore.PerformanceExtendEndBlack",
-	"ExtendTime": 1
-}</pre>
-:'''Caldwick:''' My esteemed captain, I am Caldwick &mdash; it is an honor to be your first mate.
-:'''Caldwick:''' There are certain ship-related matters I must report to you &mdash; these are problems I noticed when I set foot on the airship...
-:'''Caldwick:''' The first being, I have prepared a set of management guidelines which I hope will be adhered to while aboard the airship. Please grant my request.
-:{{DIcon|Arrow}} No problem.
-::'''Caldwick:''' Thank you for your trust.
-:{{DIcon|Arrow}} What are these guidelines about?
-::'''Caldwick:''' They are based on trust, as well as my insights on humanity. I hope they can provide sufficient professional freedom for the crew members.
-:'''Caldwick:''' I believe in giving the crew members their space with hopes of inspiring them to realize their own potential and creativity. As long as they are able to accomplish their task, they can have more freedom to organize their personal working style.
-:'''Caldwick:''' From my own experiences, this will immensely increase productivity for the crew as well as team bonding &mdash; from the trust given to them, they will often perform with elevated enthusiasm and show a greater sense of responsibility.
-:'''Caldwick:''' So, I implore you to allow me to follow this management style for a trial period...
-:{{DIcon|Arrow}} Go ahead. I believe in you.
-:{{DIcon|Arrow}} ...Let's try it.
-:'''Caldwick:''' Captain, thank you sincerely for your trust in me. I'll follow this guideline for a while, then evaluate and adjust the plan based off the outcome. I'm confident that you'll see satisfactory results soon.
+:{{tx}}
 {{Dialogue End}}
 
 ===Inspect the empennage, select the paint, name the airship, and confirm all are of an acceptable quality{{subst:void|<!--203050109-->}}===
 {{Mission Description|type=adventure|location=(The Radiant Feldspar/The Trailblaze's Stern/The Tatalov/The Soaring Clock Hand)|update|You and Caldwick inspect the airship's empennage. As he raises the business of changing the empennage paint and naming the airship, several ideas come to your mind...}}
 {{Dialogue Start}}
-
-;(Talk to Caldwick)
 :{{tx}}
-:'''Caldwick:''' Captain, it's an honor to see you again. I've recruited new crew members based on my own management guidelines.
-:{{DIcon|Arrow}} How are the results?
-::'''Caldwick:''' The feedback from our guests is overflowing with praise!
-:{{DIcon|Arrow}} Looks like there are all sorts of people here...
-::'''Caldwick:''' I value their initiative more than their appearance or uniform.
-:'''Caldwick:''' With the freedom and trust given to the crew, their performance level has increased, and the guests on the airship have been showering us with compliments.
-:'''Caldwick:''' Additionally, we've also gotten a glowing recommendation from a famous travel influencer! All these events prove the effectiveness of my management guidelines.
-:'''Caldwick:''' With this successful endeavor in hand, I'd like to suggest a few improvements to be made to the airship &mdash; a couple of crew members have come forth with feedback on an issue they're facing in a certain area. I'll need your help to conduct a site visit with me.
-:{{DIcon|Arrow}} Just use my name and face.
-::'''Caldwick:''' I'm sorry. The airship's name will be used for commercial purposes. If we use your image and name directly, it poses too much of a risk. I'll have to reject that proposal, and beg your understanding.
-:{{DIcon|Arrow}} Do you have any good suggestions?
-::'''Caldwick:''' The best design must be attractive to guests and emphasize your style.
-:'''Caldwick:''' You're the captain. It's of utmost importance to consider your aesthetic preferences. Do you have a favorite person or thing to use as the mascot of the airship?
-:{{DIcon|Arrow}} ...Pom-Pom, Conductor of the Astral Express.
-:<pre>{
-	"$type": "RPG.GameCore.SetMissionCustomValue",
-	"SubmissionID": 203050109,
-	"MissionCustomValue": {
-		"Index": 1,
-		"ValidValueParamList": [
-			1,
-			2,
-			3
-		]
-	},
-	"CustomValue": 1
-}</pre>
-:{{DIcon|Arrow}} ...Trashcan.
-:<pre>{
-	"$type": "RPG.GameCore.SetMissionCustomValue",
-	"SubmissionID": 203050109,
-	"MissionCustomValue": {
-		"Index": 1,
-		"ValidValueParamList": [
-			1,
-			2,
-			3
-		]
-	},
-	"CustomValue": 2
-}</pre>
-:{{DIcon|Arrow}} ...Clockie.
-:<pre>{
-	"$type": "RPG.GameCore.SetMissionCustomValue",
-	"SubmissionID": 203050109,
-	"MissionCustomValue": {
-		"Index": 1,
-		"ValidValueParamList": [
-			1,
-			2,
-			3
-		]
-	},
-	"CustomValue": 3
-}</pre>
-:'''Caldwick:''' Captain, it's an honor to see you again. I've recruited new crew members based on my own management guidelines.
-:How are the results?
-:'''Caldwick:''' The feedback from our guests is overflowing with praise!
-:Looks like there are all sorts of people here...
-:'''Caldwick:''' I value their initiative more than their appearance or uniform.
-:'''Caldwick:''' With the freedom and trust given to the crew, their performance level has increased, and the guests on the airship have been showering us with compliments.
-:'''Caldwick:''' Additionally, we've also gotten a glowing recommendation from a famous travel influencer! All these events prove the effectiveness of my management guidelines.
-:'''Caldwick:''' With this successful endeavor in hand, I'd like to suggest a few improvements to be made to the airship &mdash; a couple of crew members have come forth with feedback on an issue they're facing in a certain area. I'll need your help to conduct a site visit with me.
-:Caldwick takes you to the deck.
-:'''Caldwick:''' This is the suggestion given by the crew: It's time to change the empennage and the name of the airship to denote the changes that have taken place since the airship's change of hands.
-:'''Caldwick:''' I believe this change will be able to elevate our brand image. Can I get your opinion on this?
-:Just use my name and face.
-:'''Caldwick:''' I'm sorry. The airship's name will be used for commercial purposes. If we use your image and name directly, it poses too much of a risk. I'll have to reject that proposal, and beg your understanding.
-:Do you have any good suggestions?
-:'''Caldwick:''' The best design must be attractive to guests and emphasize your style.
-:'''Caldwick:''' You're the captain. It's of utmost importance to consider your aesthetic preferences. Do you have a favorite person or thing to use as the mascot of the airship?
-:...Pom-Pom, Conductor of the Astral Express.
-:'''Caldwick:''' The Astral Express' conductor? It'll be a nice touch to paint a Pom-Pom lookalike on the airship's empennage.
-:'''Caldwick:''' Then {{Color|keyword|nobold=1|the airship's new name shall henceforth be the Trailblaze's Stern}}, emphasizing the importance of conductor Pom-Pom and highlighting your status as a Nameless.
-:...Trashcan.
-:'''Caldwick:''' Even though it's a trashcan, the more unconventional something appears in dreams, the more captivating it becomes.
-:'''Caldwick:''' Then {{Color|keyword|nobold=1|the airship's new name shall henceforth be the Tatalov}}. It is the legendary Garbage King, and it has a forward-looking feel with a post-modern aesthetic.
-:...Clockie.
-:'''Caldwick:''' Oh, by using a well-known image in Penacony. This will save a fortune in promotional costs.
-:'''Caldwick:''' Then {{Color|keyword|nobold=1|the airship's new name shall henceforth be the Soaring Clock Hand}} &mdash; only with an airship helmed by Clockie is worthy of its guests.
-:'''Caldwick:''' Thank you for your support, captain. Please hold on for a moment...
-:{{tx}}
-
-:{{tx}}
-<pre>{
-	"$type": "RPG.GameCore.PerformanceEndSeq",
-	"Cases": [
-		{
-			"OnSuccess": [
-				{
-					"$type": "RPG.GameCore.SwitchCharacterAnchorV2",
-					"SwitchCharacterAnchorConfig": {
-						"IsLocalPlayer": true,
-						"CharacterUniqueName": "LocalPlayer",
-						"AreaName": {
-							"Value": "LevelArea_P10341_F10341001_G171"
-						},
-						"AnchorName": {
-							"Value": "Anchor1"
-						}
-					}
-				}
-			]
-		}
-	]
-}</pre>
 {{Dialogue End}}
 
 ===Inspect the area near the long gallery with Caldwick{{subst:void|<!--203050111-->}}===
 {{Mission Description|type=adventure|location=(The Radiant Feldspar/The Trailblaze's Stern/The Tatalov/The Soaring Clock Hand)|update|Caldwick invites you to inspect the long gallery together. Some affairs seem to require your attention.}}
 {{Dialogue Start}}
-
-;(Talk to Caldwick)
-:'''Caldwick:''' It's usually bustling here. Once you board the airship, you'll have to pass by here no matter where you're going.
-:'''Caldwick:''' The crew suggests that we place a statue of your bust here. I think it's a great way for our team to show our respect and trust in your leadership. Additionally, it will strengthen our team's unity.
-:'''Caldwick:''' We've had many new recruits, one among them having graduated from the Paperfold University. He has already tried printing your statue. I wonder if you're agreeable to having it be placed here?
-:{{DIcon|Arrow}} Bring it up!
-::'''Caldwick:''' Just a moment.
-:{{DIcon|Arrow}} Don't put it up if it's not nice.
-::'''Caldwick:''' Please be rest assured. I've checked it. His aesthetics are good. He's able to replicate at least sixty percent of your appearance.
-:'''Caldwick:''' No matter how many times I've seen it, I'm still taken aback. The statue looks refreshing, unrivaled by any captain in the industry...
 :{{tx}}
 {{Dialogue End}}
 
 ===Talk to Pedro{{subst:void|<!--203050113-->}}===
 {{Mission Description|type=adventure|location=(The Radiant Feldspar/The Trailblaze's Stern/The Tatalov/The Soaring Clock Hand)|update|You have hired Pedro, a Pepeshi, as the new first mate to manage your airship. On his first day reporting to duty, you want to hear his thoughts on airship affairs.}}
 {{Dialogue Start}}
-
-;(Talk to Pedro)
-<pre>{
-	"$type": "RPG.GameCore.PerformanceExtendEndBlack",
-	"ExtendTime": 1
-}</pre>
-:'''Pedro:''' You're the captain? Call me Pedro, I'm your new first mate. I've heard of the Nameless. I'm in awe of you!
-:'''Pedro:''' I come from a family that has been flying for generations, and I've inherited a bunch of experience from my folks. I've made my rounds on the airship, and I feel that there is some room for improvement.
-:'''Pedro:''' The first area for improvement: Crew member training. Of course, this is a legacy issue left behind by the previous captain. I'd like to ask for a favor of letting me be in charge of recruiting and managing the crew!
-:{{DIcon|Arrow}} No problem.
-::'''Pedro:''' Thank you so much!
-:{{DIcon|Arrow}} It doesn't look like I have the option to refuse...
-::'''Pedro:''' Sorry, my ears must be failing me. You agree to my request, then?
-:'''Pedro:''' Thank you for the approval. I'll get on it!
+:{{tx}}
 {{Dialogue End}}
 
 ===Inspect the empennage, select the paint, name the airship, and confirm all are of an acceptable quality{{subst:void|<!--203050114-->}}===
 {{Mission Description|type=adventure|location=(The Radiant Feldspar/The Trailblaze's Stern/The Tatalov/The Soaring Clock Hand)|update|You and Pedro inspect the airship's empennage. As he raises the business of changing the empennage paint and naming the airship, several ideas come to your mind...}}
 {{Dialogue Start}}
-
-;(Talk to Pedro)
-:'''Pedro:''' Captain, we meet again. I've recruited some folks from my hometown. Please take a look!
-:'''Pedro:''' I'm not tooting my own horn. You can ask around in the industry. Although they are from an offshoot of my family, I can guarantee that they are all veterans, packed with experience and integrity.
-:{{DIcon|Arrow}} I don't have much experience in flying, so don't trick me.
-:{{DIcon|Arrow}} Really?
-:'''Pedro:''' Of course! Not to mention, we Pepeshi are natural repairmen. These folks that I'm bringing on board all hold official certificates to verify their abilities, issued by The Family themselves! They were verified by the Alfalfa Family as well.
-:'''Pedro:''' Our unity and world-class professional skills are the key to guaranteeing a successful voyage. We are deeply honored to be under your employment. Captain, please allow us to serve you with everything we've got!
-:'''Pedro:''' Instead of describing it, let me bring you to a place, and you'll know &mdash; my nephew told me about it, and I thought it'd be good to report it to you.
-:{{DIcon|Arrow}} Proudly use my image!
-::'''Pedro:''' Ah, that's a big no-no. The empennage is filthy, and if an accident happens during flying, it'll be split open and ruin your image. That's bad luck!
-:{{DIcon|Arrow}} Do you have any good suggestions?
-::'''Pedro:''' Let me think...
-:'''Pedro:''' You're the captain, so it's all about what you like! Do you have a person or thing that you like? Best if it's a cute pet, or a mascot, something everyone will like.
-:{{DIcon|Arrow}} ...Pom-Pom, Conductor of the Astral Express.
-:<pre>{
-	"$type": "RPG.GameCore.SetMissionCustomValue",
-	"SubmissionID": 203050114,
-	"MissionCustomValue": {
-		"Index": 1,
-		"ValidValueParamList": [
-			1,
-			2,
-			3
-		]
-	},
-	"CustomValue": 1
-}</pre>
-:{{DIcon|Arrow}} ...Trashcan.
-:<pre>{
-	"$type": "RPG.GameCore.SetMissionCustomValue",
-	"SubmissionID": 203050114,
-	"MissionCustomValue": {
-		"Index": 1,
-		"ValidValueParamList": [
-			1,
-			2,
-			3
-		]
-	},
-	"CustomValue": 2
-}</pre>
-:{{DIcon|Arrow}} ...Clockie.
-:<pre>{
-	"$type": "RPG.GameCore.SetMissionCustomValue",
-	"SubmissionID": 203050114,
-	"MissionCustomValue": {
-		"Index": 1,
-		"ValidValueParamList": [
-			1,
-			2,
-			3
-		]
-	},
-	"CustomValue": 3
-}</pre>
-:'''Pedro:''' Captain, we meet again. I've recruited some folks from my hometown. Please take a look!
-:'''Pedro:''' I'm not tooting my own horn. You can ask around in the industry. Although they are from an offshoot of my family, I can guarantee that they are all veterans, packed with experience and integrity.
-:I don't have much experience in flying, so don't trick me.
-:Really?
-:'''Pedro:''' Of course! Not to mention, we Pepeshi are natural repairmen. These folks that I'm bringing on board all hold official certificates to verify their abilities, issued by The Family themselves! They were verified by the Alfalfa Family as well.
-:'''Pedro:''' Our unity and world-class professional skills are the key to guaranteeing a successful voyage. We are deeply honored to be under your employment. Captain, please allow us to serve you with everything we've got!
-:'''Pedro:''' Instead of describing it, let me bring you to a place, and you'll know &mdash; my nephew told me about it, and I thought it'd be good to report it to you.
-:Pedro takes you to the deck.
-:'''Pedro:''' My nephew realized that the paint job on the empennage hasn't been changed, nor has the old name, Radiant Feldspar. Since you're its new master, isn't it time to change it?
-:'''Pedro:''' What do you think?
-:Proudly use my image!
-:'''Pedro:''' Ah, that's a big no-no. The empennage is filthy, and if an accident happens during flying, it'll be split open and ruin your image. That's bad luck!
-:Do you have any good suggestions?
-:'''Pedro:''' Let me think...
-:'''Pedro:''' You're the captain, so it's all about what you like! Do you have a person or thing that you like? Best if it's a cute pet, or a mascot, something everyone will like.
-:...Pom-Pom, Conductor of the Astral Express.
-:'''Pedro:''' The Conductor of the Astral Express? Not a problem. Looking at this face, everyone will know that this is the turf of the Nameless!
-:'''Pedro:''' Then, we'll rename the airship to {{Color|keyword|nobold=1|the Trailblaze's Stern}}! Just like its namesake, as long as we keep our eyes on the conductor's tail, we'll never get lost!
-:...Trashcan.
-:'''Pedro:''' ...To be honest, it's a little weird, but I love it. After all, you're above ordinary things, captain.
-:'''Pedro:''' Then, we'll rename the airship to {{Color|keyword|nobold=1|the Tatalov}}! The legendary Garbage King will lead us on a path of conquest and greatness!
-:...Clockie.
-:'''Pedro:''' Well, it's certainly a family favorite for all ages. I'd say, no issue!
-:'''Pedro:''' Then, we'll rename the airship to the {{Color|keyword|nobold=1|Soaring Clock Hand}}! Inheriting the spirit of Clockie, we will defend the peace of Dreamville from the skies!
-:'''Pedro:''' I have a cousin who studies dream bubbles. He gave me a device that can record detailed imagery from human minds. Handy when needed for painting.
 :{{tx}}
-
-:{{tx}}
-<pre>{
-	"$type": "RPG.GameCore.PerformanceEndSeq",
-	"Cases": [
-		{
-			"OnSuccess": [
-				{
-					"$type": "RPG.GameCore.SwitchCharacterAnchorV2",
-					"SwitchCharacterAnchorConfig": {
-						"IsLocalPlayer": true,
-						"CharacterUniqueName": "LocalPlayer",
-						"AreaName": {
-							"Value": "LevelArea_P10341_F10341001_G176"
-						},
-						"AnchorName": {
-							"Value": "Anchor1"
-						}
-					}
-				}
-			]
-		}
-	]
-}</pre>
 {{Dialogue End}}
 
 ===Inspect the area near the long gallery with Pedro{{subst:void|<!--203050116-->}}===
 {{Mission Description|type=adventure|location=(The Radiant Feldspar/The Trailblaze's Stern/The Tatalov/The Soaring Clock Hand)|update|Pedro invites you to inspect the long gallery together. Some affairs seem to require your attention.}}
 {{Dialogue Start}}
-
-;(Talk to Pedro)
-:'''Pedro:''' Captain, this long gallery is situated at the heart of the ship. Every visitor that passes by will notice it, but it's currently empty &mdash; and it'd look quite boorish if we only decorate it with art pieces.
-:'''Pedro:''' I gave it some thought, and I feel that it's most suitable to place a bust of you here.
-:'''Pedro:''' I have a friend who is a graduate of the Paperfold University, and his origami skills are top-notch. He has tried to print a statue for you. Here, take a look. Why don't we try to place it here?
-:{{DIcon|Arrow}} I can't wait to see it!
-:{{DIcon|Arrow}} Put it here and we'll see.
-:'''Pedro:''' Hang on, let me display it...
 :{{tx}}
-<pre>{
-	"$type": "RPG.GameCore.PerformanceEndSeq",
-	"Cases": [
-		{
-			"OnSuccess": [
-				{
-					"$type": "RPG.GameCore.SwitchCharacterAnchorV2",
-					"SwitchCharacterAnchorConfig": {
-						"IsLocalPlayer": true,
-						"CharacterUniqueName": "LocalPlayer",
-						"AreaName": {
-							"Value": "LevelArea_P10341_F10341001_G177"
-						},
-						"AnchorName": {
-							"Value": "Anchor1"
-						}
-					}
-				}
-			]
-		}
-	]
-}</pre>
 {{Dialogue End}}
 
 ==Other Languages==

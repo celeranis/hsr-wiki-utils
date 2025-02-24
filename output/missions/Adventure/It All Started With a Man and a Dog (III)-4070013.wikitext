@@ -41,218 +41,60 @@ PageTitle=#It All Started With a Man and a Dog (III)#
 -->
 ==Dialogue==
 {{Stub Dialogue}}
-----
-<pre>{
-	"$type": "RPG.GameCore.PerformanceExtendEndBlack",
-	"ExtendTime": 0.5
-}</pre>
-:'''Peppy:''' Woof woof! Woof woof woof!
-:{{DIcon|Arrow}} You've found the butler's whereabouts?
-:'''Peppy:''' (I know where it is &mdash; it's hiding in the seclusion zone!)
-:'''Peppy:''' ((Trailblazer), Peppy knows you're the strongest. Can you come with me...)
-:The puppy gazes at you expectantly, tilting its head, its eyes shimmering.
-:{{DIcon|Arrow}} Fine, I'll play along.
-::Peppy wags its little tail at you.
-:{{DIcon|Arrow}} It has to be me, of course!
-::Peppy widens its eyes, awed by your confidence.
-:'''Peppy:''' (Time is of the essence. Let's go!)
-----
 {{Dialogue End}}
 
 ===Meet up with Peppy and proceed to the suspicious room{{subst:void|<!--407001301-->}}===
 {{Mission Description|type=adventure|location=Seclusion Zone|update|Peppy has discovered the butler. You join forces again and start investigating the suspicious area...}}
 {{Dialogue Start}}
-
-
+:{{tx}}
 {{Dialogue End}}
 
 ===Find a way to open the door{{subst:void|<!--407001302-->}}===
 {{Mission Description|type=adventure|location=Seclusion Zone|update|The sensor door has malfunctioned once again, trapping you inside the room. Instead of complaining about its poor quality to Asta, you should focus on finding a way to open the door with Peppy.}}
 {{Dialogue Start}}
-
-;(Obtain {{Item|Abnormal images from surveillance records|20|x=1}})
+:{{tx}}
 {{Dialogue End}}
 
 ===Move forward and talk to the butler.{{subst:void|<!--407001303-->}}===
 {{Mission Description|type=adventure|location=Seclusion Zone|update|The butler awaits just ahead. A few threats may be sufficient to retrieve the Curio, but you have a lingering sense that it won't be that easy...}}
 {{Dialogue Start}}
-
-
+:{{tx}}
 {{Dialogue End}}
 
 ===Talk to nearby creations to gather clues{{subst:void|<!--407001304-->}}===
 {{Mission Description|type=adventure|location=Seclusion Zone|update|While all the other creations appear to be obedient to the butler, there could be dissatisfied individuals among them. Perhaps you can learn something from them...}}
 {{Dialogue Start}}
-
-;(Lose {{Item|Freshly-Baked Cake|20|x=1}})
-
-;(If {{cx}}{{subst:void|<!--{"$type":"RPG.GameCore.ByLocalPlayerIsFakeAvatar"}-->}})
-<pre>{
-	"$type": "RPG.GameCore.PlayerRemoteControlOtherEntity",
-	"TargetEntity": {
-		"$type": "RPG.GameCore.TargetFetchAdvNpcEx",
-		"FetchType": "SingleNpcByNpcID",
-		"SingleNpcID": {
-			"GroupID": {
-				"IsDynamic": false,
-				"FixedValue": {
-					"Value": 3
-				}
-			},
-			"GroupNpcID": {
-				"IsDynamic": false,
-				"FixedValue": {
-					"Value": 400001
-				}
-			}
-		}
-	},
-	"SpecialNPCID": 16001,
-	"LeavePlayerStubInplace": true,
-	"PlayerStubAnimation": {
-		"Value": "LookatPhoneBS"
-	},
-	"ForcePositionAndRotation": true,
-	"LevelAreaKey": {
-		"Custom": true,
-		"Key": "Anchor"
-	}
-}</pre>
-<pre>{
-	"$type": "RPG.GameCore.CreatePhoneOnCharacter",
-	"TargetType": {
-		"$type": "RPG.GameCore.TargetFetchAdvFakeAvatarPlayerStub"
-	}
-}</pre>
-<pre>{
-	"$type": "RPG.GameCore.SetHudTemplate",
-	"TemplateID": 1014,
-	"EnableTemplate": true
-}</pre>
+:{{tx}}
 {{Dialogue End}}
 
 ===Investigate the nearby terminal{{subst:void|<!--407001306-->}}===
 {{Mission Description|type=adventure|location=Seclusion Zone|update|The creations have occupied the room since the researchers left. The terminal is still operational, so maybe you can get some useful clues from it...}}
 {{Dialogue Start}}
-
-;(Obtain {{Item|External communication records|20|x=1}})
-;(If {{cx}}{{subst:void|<!--{"$type":"RPG.GameCore.ByLocalPlayerIsFakeAvatar"}-->}})
-<pre>{
-	"$type": "RPG.GameCore.PlayerRemoteControlOtherEntity",
-	"TargetEntity": {
-		"$type": "RPG.GameCore.TargetFetchAdvNpcEx",
-		"FetchType": "SingleNpcByNpcID",
-		"SingleNpcID": {
-			"GroupID": {
-				"IsDynamic": false,
-				"FixedValue": {
-					"Value": 3
-				}
-			},
-			"GroupNpcID": {
-				"IsDynamic": false,
-				"FixedValue": {
-					"Value": 400001
-				}
-			}
-		}
-	},
-	"SpecialNPCID": 16001,
-	"LeavePlayerStubInplace": true,
-	"PlayerStubAnimation": {
-		"Value": "LookatPhoneBS"
-	},
-	"ForcePositionAndRotation": true,
-	"LevelAreaKey": {
-		"Custom": true,
-		"Key": "Anchor"
-	}
-}</pre>
-<pre>{
-	"$type": "RPG.GameCore.CreatePhoneOnCharacter",
-	"TargetType": {
-		"$type": "RPG.GameCore.TargetFetchAdvFakeAvatarPlayerStub"
-	}
-}</pre>
-<pre>{
-	"$type": "RPG.GameCore.SetHudTemplate",
-	"TemplateID": 1014,
-	"EnableTemplate": true
-}</pre>
+:{{tx}}
 {{Dialogue End}}
 
 ===Retrieve the lost Curio{{subst:void|<!--407001308-->}}===
 {{Mission Description|type=adventure|location=Seclusion Zone|update|The butler has revealed the location of the lost Curio. Now it is time to retrieve it...}}
 {{Dialogue Start}}
-
-;(Obtain {{Item|Freshly-Baked Cake|20|x=1}})
+:{{tx}}
 {{Dialogue End}}
 
 ===Talk to nearby creations to gather clues{{subst:void|<!--407001305-->}}===
 {{Mission Description|type=adventure|location=Seclusion Zone|update|While all the other creations appear to be obedient to the butler, there could be dissatisfied individuals among them. Perhaps you can learn something from them...}}
 {{Dialogue Start}}
-
-;(Obtain {{Item|Cosmic Fried Rice (Overnight Edition)|20|x=1}})
-;(If {{cx}}{{subst:void|<!--{"$type":"RPG.GameCore.ByLocalPlayerIsFakeAvatar"}-->}})
-<pre>{
-	"$type": "RPG.GameCore.PlayerRemoteControlOtherEntity",
-	"TargetEntity": {
-		"$type": "RPG.GameCore.TargetFetchAdvNpcEx",
-		"FetchType": "SingleNpcByNpcID",
-		"SingleNpcID": {
-			"GroupID": {
-				"IsDynamic": false,
-				"FixedValue": {
-					"Value": 3
-				}
-			},
-			"GroupNpcID": {
-				"IsDynamic": false,
-				"FixedValue": {
-					"Value": 400001
-				}
-			}
-		}
-	},
-	"SpecialNPCID": 16001,
-	"LeavePlayerStubInplace": true,
-	"PlayerStubAnimation": {
-		"Value": "LookatPhoneBS"
-	},
-	"ForcePositionAndRotation": true,
-	"LevelAreaKey": {
-		"Custom": true,
-		"Key": "Anchor"
-	}
-}</pre>
-<pre>{
-	"$type": "RPG.GameCore.CreatePhoneOnCharacter",
-	"TargetType": {
-		"$type": "RPG.GameCore.TargetFetchAdvFakeAvatarPlayerStub"
-	}
-}</pre>
-<pre>{
-	"$type": "RPG.GameCore.SetHudTemplate",
-	"TemplateID": 1014,
-	"EnableTemplate": true
-}</pre>
+:{{tx}}
 {{Dialogue End}}
 
 ===Talk to the butler and expose its lies to locate the lost Curio.{{subst:void|<!--407001307-->}}===
 {{Mission Description|type=adventure|location=Seclusion Zone|update|As you suspected, the butler has lied to you and all the other creations. Now that you have gathered all the evidence, it is time to expose its lies. Undeniable evidence will make it speak the truth, right?}}
 {{Dialogue Start}}
-
-:<!--1-second delay-->
-:'''Peppy:''' (We've collected enough evidence. Now we can go back and throw it in the butler's face.)
-:'''Peppy:''' ((Trailblazer), let's go talk to him more once we're back. We'll see what else he has to say. Let's go!)
+:{{tx}}
 {{Dialogue End}}
 
 ===Retrieve the lost Curio{{subst:void|<!--407001309-->}}===
 {{Mission Description|type=adventure|location=Seclusion Zone|update|The butler has revealed the location of the lost Curio. Now it is time to retrieve it...}}
 {{Dialogue Start}}
-
-:<!--1-second delay-->
-:The Ruan Mei creations that have witnessed this are very upset at the "butler." They no longer want to be friends with it.
+:{{tx}}
 {{Dialogue End}}
 
 ==Other Languages==

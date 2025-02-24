@@ -5,9 +5,11 @@ import { mkdir, rm, writeFile } from 'fs/promises';
 import config from '../../../config.json' with { "type": "json" };
 import { sanitizeString, zeroPad } from '../../Shared.js';
 import { Enemy } from '../../Stage.js';
-import { textMap } from '../../TextMap.js';
+import { TextMap } from '../../TextMap.js';
 import { getFile } from '../../files/GameFile.js';
 import { files, langs } from './util.js';
+
+const textMap3 = await TextMap.load('3.0')
 
 const loadFrom = config.asset_roots.TXTP
 // const VO_MAP: Record<string, SoundData[]> = JSON.parse((await readFile('./output/VO_Map.json')).toString())
@@ -73,6 +75,11 @@ const STATE_MAP = {
 	// Skill09: 'Aethereal Dreamflux',
 	// Skill04: 'Mara-Summon'
 	// Skill04: 'Rite of Subduing Prana'
+	// Skill01: 'Brainteaser- Basic ATK',
+	// Skill02: 'Brainteaser- Skill',
+	// Skill03: 'Brainteaser- Ultimate',
+	// Skill04: 'Looping Explanation',
+	Skill07: 'Fury Falls, and All Bows to Strife'
 }
 
 const AS_LIST = [
@@ -107,7 +114,7 @@ const SKIP: string[] = [
 	// 'Weakness Broken (Phase 3)',
 	// 'Hit by Light Attack (Phase 3)'
 	'Stun_Occur', // seems to be unused?
-	'Skill03'
+	// 'Skill03'
 ]
 
 const SWAP_SPEED = {
@@ -123,25 +130,25 @@ const IGNORE_SPEED = {
 }
 
 const monster = Enemy.fromId(opts.id)
-const battleAudioPath = (await getFile<any>(monster.config_path))?.AnimEventConfigList?.find(path => path.includes('/Audio/')) as (string | undefined)
+const battleAudioPath = (await getFile<any>(monster.config_path, 'beta'))?.AnimEventConfigList?.find(path => path.includes('/Audio/')) as (string | undefined)
 
 if (!battleAudioPath) {
 	throw new Error(`Could not find audio file path for ${monster.name}`)
 }
 
-const animEvents = (await getFile<SoundEventData>(battleAudioPath)).AnimatorStateEvents
+const animEvents = (await getFile<SoundEventData>(battleAudioPath, 'beta')).AnimatorStateEvents
 
 const npcMonsters = (await getFile<any>('ExcelOutput/NPCMonsterData.json')).filter(nmons => monster.npc_monster_ids.includes(nmons.ID))
 // console.log(npcMonsters)
 for (const npcMonster of npcMonsters) {
-	const npcConfig = await getFile<any>(npcMonster.JsonPath)
+	const npcConfig = await getFile<any>(npcMonster.JsonPath, 'beta')
 	const audioPath = npcConfig.AnimEventConfigList.find(path => path.includes('/Audio/'))
 	if (!audioPath) continue
-	const audioData = await getFile<SoundEventData>(audioPath)
+	const audioData = await getFile<SoundEventData>(audioPath, 'beta')
 	animEvents.unshift(...audioData.AnimatorStateEvents)
 }
 
-const folderName = sanitizeString(opts.name || monster.name)
+const folderName = sanitizeString(opts.name || monster.name) || 'unnamed'
 
 const VO_TABLE = [
 	'{{VO/Enemy',
@@ -184,7 +191,7 @@ for (const animState of animEvents) {
 		|| STATE_MAP[animState.AnimatorStateName.replace(/_.+/, '')]
 		|| (
 			animState.AnimatorStateName.startsWith('Skill') 
-			&& sanitizeString(textMap.getText((await monster.getSkill(animState.AnimatorStateName))?.SkillName))
+			&& sanitizeString(textMap3.getText((await monster.getSkill(animState.AnimatorStateName))?.SkillName))
 		) 
 		|| animState.AnimatorStateName
 		
@@ -198,6 +205,7 @@ for (const animState of animEvents) {
 		''
 	]
 	const list: string[] = []
+	const list2x: string[] = []
 	let entryIndex = 1
 	let addPending = false
 	
@@ -205,7 +213,7 @@ for (const animState of animEvents) {
 		if (!animEvent.SoundName || animEvent.SoundName.startsWith('Ev_sfx')) continue
 		
 		for (const soundData of getFilesByPrefix(animEvent.SoundName)) {
-			if (exported.has(soundData.file) || soundData.lang == 'sfx' || soundData.duplicate || (soundData.phase && soundData.phase != 'None')) continue
+			if (exported.has(soundData.file) /*|| soundData.lang == 'sfx'*/ || soundData.duplicate || (soundData.phase && soundData.phase != 'None')) continue
 
 			const notes: string[] = []
 
@@ -233,9 +241,9 @@ for (const animState of animEvents) {
 			
 			const txPrefix = notes.length > 0 ? `''(${notes.join(', ')})'' ` : ''
 			
-			if (soundData.lang == 'en') {
-				if (AS_LIST.includes(stateName)) {
-					list.push(`VO {lang}{name} - ${outFileSuffix}.ogg`)
+			if (soundData.lang == 'en' || soundData.lang == 'sfx') {
+				if (AS_LIST.includes(stateName)||true) {
+					(soundData.speed_state == 2 ? list2x : list).push(`VO ${soundData.lang == 'sfx' ? '' : '{lang}'}{name} - ${outFileSuffix}.ogg`)
 				} else {
 					pendingEntries.push(
 						`|vo_${zeroPad(currentIndex, 2)}_${zeroPad(entryIndex, 2)}_file           = VO {lang}{name} - ${outFileSuffix}.ogg`,
@@ -277,7 +285,7 @@ for (const animState of animEvents) {
 			entryIndex++
 		}
 	}
-	if (AS_LIST.includes(stateName)) {
+	if (AS_LIST.includes(stateName)||true) {
 		pendingEntries.push(
 			`|vo_${zeroPad(currentIndex, 2)}_01_file           = ${list.join('; ')}`,
 			`|vo_${zeroPad(currentIndex, 2)}_01_tx_en          = &nbsp;`,
@@ -286,6 +294,16 @@ for (const animState of animEvents) {
 			`|vo_${zeroPad(currentIndex, 2)}_01_tx_ko          = &nbsp;`,
 			''
 		)
+		if (list2x.length > 0) {
+			pendingEntries.push(
+				`|vo_${zeroPad(currentIndex, 2)}_02_file           = ${list2x.join('; ')}`,
+				`|vo_${zeroPad(currentIndex, 2)}_02_tx_en          = ''(2&times; speed)''`,
+				`|vo_${zeroPad(currentIndex, 2)}_02_tx_zh          = ''(2&times; speed)''`,
+				`|vo_${zeroPad(currentIndex, 2)}_02_tx_ja          = ''(2&times; speed)''`,
+				`|vo_${zeroPad(currentIndex, 2)}_02_tx_ko          = ''(2&times; speed)''`,
+				''
+			)
+		}
 	}
 	
 	// incs[stateName] = inc

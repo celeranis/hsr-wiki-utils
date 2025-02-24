@@ -38,79 +38,13 @@ PageTitle=#Back in Business (I)#
 ===Go to Exalting Sanctum and speak with Bailu{{subst:void|<!--800320101-->}}===
 {{Mission Description|type=adventure|location=Exalting Sanctum|Bailu, who ran away from the Alchemy Commission, seems to be in Exalting Sanctum. Greet her, and maybe then you can figure out why she is always coming to this place.<br />Sharp as you are, you've already discovered that she always appears at opportune moments to lead you into unknown dangers...}}
 {{Dialogue Start}}
-;(Upon reaching the destination)
-
-;(Upon reaching the destination)
-<pre>{
-	"$type": "RPG.GameCore.PlayMunicipalChat",
-	"NewMunicipalChatConfigPath": "Config/Level/MunicipalChatConfig/F10202001/MunicipalChatConfig_F10202001_0001.json",
-	"NewMunicipalChatEntityInfos": {
-		"Value": [
-			{
-				"$type": "RPG.GameCore.MunicipalChatEntityInfo",
-				"UniqueName": "1",
-				"GroupInstanceID": 400001
-			}
-		]
-	},
-	"MunicipalChatName": "MunicipalChatConfig_F10202001_0001"
-}</pre>
-
-;(Talk to Bailu)
-<pre>{
-	"$type": "RPG.GameCore.StopMunicipalChat",
-	"MunicipalChatName": "MunicipalChatConfig_F10202001_0001"
-}</pre>
-----
-:{{A|VO side2 jrx bailu 102 m.ogg}} {{A|VO side2 jrx bailu 102 f.ogg}} '''Bailu:''' You're easy to spot, haha! Are you going to Aurum Alley?
-:{{DIcon|Arrow}} Indeed I am.
-::<!--0.8-second delay-->
-::{{A|VO side2 jrx bailu 103.ogg}} '''Bailu:''' A new arrival like you should get a tour guide!
-::{{DIcon|Arrow}} Seems fair.
-:::<!--0.8-second delay-->
-:::{{A|VO side2 jrx bailu 104.ogg}} '''Bailu:''' Mm-hm, as a renowned doctor, I regularly go out for street food. A&mdash;After I'm done treating my patients, that is! Anyway, basically I'm an expert on all the culinary delights the Xianzhou has to offer, so... Ugh, hire me as your tour guide already!
-::{{DIcon|Arrow}} Aren't you... a doctor?
-:::{{A|VO side2 jrx bailu 105.ogg}} '''Bailu:''' Yeah, so what? I go out all the time to see patients, so I know the food establishments around here like the back of my hand. I'm the best tour guide around!
-::{{DIcon|Arrow}} "Tour guide"? Sounds like a fancy way of getting free food.
-:::{{A|VO side2 jrx bailu 106.ogg}} '''Bailu:''' ...Eh-he, was it that obvious...?
-:::{{A|VO side2 jrx bailu 107.ogg}} '''Bailu:''' But the more the merrier, right? I go out all the time to see patients, so I know the food establishments around here like the back of my hand. I'm the best tour guide you could hope for!
-::{{A|VO side2 jrx bailu 108.ogg}} '''Bailu:''' I won't charge anything for my services... except for food, of course!
-::{{A|VO side2 jrx bailu 109.ogg}} '''Bailu:''' And if you get into medical trouble &mdash; gastrointestinal discomfort, sprained ankle, yadi yada &mdash; you'll have a professional doctor right by your side! That's a two-in-one deal!
-:{{DIcon|Arrow}} Aurum Alley? What's that?
-::<!--0.8-second delay-->
-::{{A|VO side2 jrx bailu 110.ogg}} '''Bailu:''' Wait, you've been to Exalting Sanctum before but you never visited Aurum Alley?
-::{{DIcon|Arrow}} I'm too busy to wander around random places.
-:::{{A|VO side2 jrx bailu 111.ogg}} '''Bailu:''' Really? You didn't have time to look around? What a pity...
-::{{DIcon|Arrow}} I didn't know there was anything else to see in Exalting Sanctum.
-:::{{A|VO side2 jrx bailu 112.ogg}} '''Bailu:''' Didn't know? There's lots to see around here!
-::{{A|VO side2 jrx bailu 113.ogg}} '''Bailu:''' Looks like you're in need of a professional tour guide!
-::{{DIcon|Arrow}} Aren't you... a doctor?
-:::{{A|VO side2 jrx bailu 114.ogg}} '''Bailu:''' Yeah, so what? I go out all the time to see patients, so I know the food establishments around here like the back of my hand. I'm the best tour guide around!
-::{{DIcon|Arrow}} "Tour guide"? Sounds like a fancy way of getting free food.
-:::{{A|VO side2 jrx bailu 115.ogg}} '''Bailu:''' ...Eh-he, was it that obvious...?
-:::{{A|VO side2 jrx bailu 116.ogg}} '''Bailu:''' But the more the merrier, right? I go out all the time to see patients, so I know the food establishments around here like the back of my hand. I'm the best tour guide you could hope for!
-::{{A|VO side2 jrx bailu 117.ogg}} '''Bailu:''' I won't charge anything for my services... except for food, of course!
-::{{A|VO side2 jrx bailu 118.ogg}} '''Bailu:''' And if you get into medical trouble &mdash; gastrointestinal discomfort, sprained ankle, yadi yada &mdash; you'll have a professional doctor right by your side! That's a two-in-one deal!
-:{{DIcon|Arrow}} Before you continue &mdash; I'm not a free meal ticket.
-::<!--0.8-second delay-->
-::{{A|VO side2 jrx bailu 119.ogg}} '''Bailu:''' ...Eh-he, was it that obvious...?
-::{{A|VO side2 jrx bailu 120.ogg}} '''Bailu:''' But the more the merrier, right? I go out all the time to see patients, so I know the food establishments around here like the back of my hand. I'm the best tour guide you could hope for!
-::{{A|VO side2 jrx bailu 121.ogg}} '''Bailu:''' And if you get into medical trouble &mdash; gastrointestinal discomfort, sprained ankle, yadi yada &mdash; you'll have a professional doctor right by your side! That's a two-in-one deal!
-:{{DIcon|Arrow}} A two-in-one tour guide doctor?
-::<!--0.8-second delay-->
-::{{A|VO side2 jrx bailu 122.ogg}} '''Bailu:''' It's called an "all-inclusive package."
-:{{DIcon|Arrow}} Sounds like an offer I can't refuse...
-::<!--0.8-second delay-->
-::{{A|VO side2 jrx bailu 123.ogg}} '''Bailu:''' Yay!
-:{{DIcon|Arrow}} Let the food tour begin.
-::<!--0.8-second delay-->
-::{{A|VO side2 jrx bailu 124.ogg}} '''Bailu:''' Yay!
-----
+:{{tx}}
 {{Dialogue End}}
 
 ===Enter Aurum Alley under Bailu's guidance{{subst:void|<!--800320102-->}}===
 {{Mission Description|type=adventure|location=Exalting Sanctum|update|Bailu has plans to show you around the food establishments at Aurum Alley over in Exalting Sanctum. It's a rare and fine thing to have someone willing to serve as a free guide!<br />Since Bailu already made up her mind, you should make an effort to follow her and browse the stores in Aurum Alley...}}
 {{Dialogue Start}}
+:{{tx}}
 {{Dialogue End}}
 
 ==Other Languages==

@@ -38,119 +38,19 @@ PageTitle=#March of Sweet Dreams#
 ===Collect inspiration for composing a song by wandering around the campus{{subst:void|<!--802611007-->}}===
 {{Mission Description|type=adventure|location=Penacony Paperfold University College|You've become the manager of the music party's performing band, and now your band needs to complete 3 performances on the stage in the middle of the campus.<br />Wander around the campus to help Rappa collect inspiration for composing.}}
 {{Dialogue Start}}
-
-;(Unused &mdash; EnterDistrict_G245)
 :{{tx}}
-::'''Professor Owl:''' Hoot hoot. New student, you should be careful and not run in the hallway, hoot.
-::{{DIcon|Arrow}} A new kind of origami bird?
-:::'''Professor Owl:''' Hoot hoothoot, I am Professor Owl, a good friend of Clockie's. See the birds in Paperfold Woods? They're all my students.
-::{{DIcon|Arrow}} I'm in a hurry.
-:::'''Professor Owl:''' Hoot hoot. You're still young, with plenty of time. Everything should be resolved slowly.
-:::'''Professor Owl:''' Even if Boss Stone were here, there's no need to rush, hoot.
-::{{DIcon|Arrow}} Sorry.
-:::'''Professor Owl:''' Hoot hoot, it's all right. What a polite student, hoot.
-::'''Professor Owl:''' Hoot hoot. I know why you're in a hurry: It's for our Paperfold Woods' Chirpy Banquet, isn't it? This old bird has heard that you have an important duty to perform this night. How admirable.
-::{{tx}}
-
-:'''(Trailblazer):''' (Origami Birds... practicing? The room ahead must be the classroom... Better go take a look.)
-;(Unused &mdash; EnterDistrict_G123)
-:'''Lead Bird:''' Music is the world's treasure, tweet!
-::'''Lead Bird:''' Come on, sing along with soul, tweet!
-::'''Lead Bird:''' We are Paperfold University's band, The Chirples! We offer our music to the great Professor Owl. Those who're deaf to music have no right to be talking to us, tweet!
-::'''Lead Bird:''' Tweet? Aren't you the one loitering about the stage just now? Didn't know you were one of us. What role are you in your band, tweet?
-::{{DIcon|Arrow}} I'm the guitarist.
-:::'''Lead Bird:''' Tweet! The protags in popular band manga are all guitarists. That's unfair to the rest of the band, tweet!
-::{{DIcon|Arrow}} I'm the bassist.
-:::'''Lead Bird:''' Tweet! I hate it when fans can't even tell the difference between bass and guitar! Bassists exist too, tweet!
-::{{DIcon|Arrow}} I'm the keyboardist.
-:::'''Lead Bird:''' Tweet! Many keyboardists also compose songs. It's super tiring! Everyone should treat keyboardists better, tweet!
-::{{DIcon|Arrow}} I'm the drummer.
-:::'''Lead Bird:''' Tweet! Drummers can only hold on to their sticks in group photos, poor things, tweet!
-::{{DIcon|Arrow}} I'm the band manager.
-:::'''Lead Bird:''' Tweet! So you're the producer then, scurrying about preparing tracks and venues for the band. Your job's tough too, tweet!
-::'''Lead Bird:''' Since we're all mutual music enthusiasts, come play with us! Let's see what you got, tweet!
-::'''Lead Bird:''' The band's playing the Dreamville's marching song &mdash; Good Dreams Come, tweet! Do your best to keep up with us, tweet!
-::{{DIcon|Arrow}} (Join the Origami Birds' ensemble)
-
-;(Talk to Lead Bird)
-----
-:'''Lead Bird:''' The band's playing the Dreamville's marching song &mdash; Good Dreams Come, tweet! Do your best to keep up with us, tweet!
-:{{DIcon|Travel Log}} (Join the Origami Birds' ensemble)
-:<pre>{
-	"$type": "RPG.GameCore.ShowUI",
-	"Name": "Ui.MusicRhythm.MusicRhythmChooseLevelPage",
-	"WaitForExit": true,
-	"Param": {
-		"Value": "2"
-	},
-	"OnUICustomEvent": [],
-	"OnUIExitImmediately": [
-		{
-			"$type": "RPG.GameCore.EndDialogueEntityInteract"
-		}
-	]
-}</pre>
-:{{DIcon|Exit}} I've got something else to do.
 {{Dialogue End}}
 
 ===Join the Origami Birds' ensemble{{subst:void|<!--802611003-->}}===
 {{Mission Description|type=adventure|location=Penacony Paperfold University College|update|You've become the manager of the music party's performing band, and now your band needs to complete 3 performances on the stage in the middle of the campus.<br />Obtain a record of the origami birds' beats to help Rappa collect inspiration for composing.}}
 {{Dialogue Start}}
-
-;(Talk to Lead Bird)
-:'''Lead Bird:''' The band's playing the Dreamville's marching song &mdash; Good Dreams Come, tweet! Do your best to keep up with us, tweet!
-:{{DIcon|Travel Log}} (Join the Origami Birds' ensemble)
-:<pre>{
-	"$type": "RPG.GameCore.ShowUI",
-	"Name": "Ui.MusicRhythm.MusicRhythmChooseLevelPage",
-	"WaitForExit": true,
-	"Param": {
-		"Value": "2"
-	},
-	"OnUICustomEvent": [],
-	"OnUIExitImmediately": [
-		{
-			"$type": "RPG.GameCore.EndDialogueEntityInteract"
-		}
-	]
-}</pre>
-:{{DIcon|Exit}} I've got something else to do.
-
-;(Unused &mdash; MusicRhythm_ShowUI)
-<pre>{
-	"$type": "RPG.GameCore.WaitFrame"
-}</pre>
-:<pre>{
-	"$type": "RPG.GameCore.ShowUI",
-	"Name": "Ui.MusicRhythm.MusicRhythmChooseLevelPage",
-	"WaitForExit": true,
-	"Param": {
-		"Value": "2"
-	},
-	"OnUICustomEvent": [],
-	"OnUIExitImmediately": [
-		{
-			"$type": "RPG.GameCore.EndDialogueEntityInteract"
-		}
-	]
-}</pre>
 :{{tx}}
-:'''Lead Bird:''' Tweet! Tweet tweet! You scored really high in the origami birds' ensemble training! Congrats, tweet!
-:{{DIcon|Arrow}} That was awesome!
-:{{DIcon|Arrow}} I was acknowledged by the origami birds!
-:'''Lead Bird:''' The Dreamville's marching song has even harder performance methods. You're welcome to play with us again, tweet!
-:{{tx}}
-:'''(Trailblazer):''' (I collected the origami birds' rhythm record. Better send it to Rappa for a listen.)
-<pre>{
-	"$type": "RPG.GameCore.AddFinishMissionData_PlayMessage",
-	"SubmissionID": 802611005,
-	"MessageSectionID": 1309900
-}</pre>
 {{Dialogue End}}
 
 ===Return to the stage and tell Montana what you saw{{subst:void|<!--802611006-->}}===
 {{Mission Description|type=adventure|location=Penacony Paperfold University College|update|You've become the manager of the music party's performing band, and now your band needs to complete 3 performances on the stage in the middle of the campus.<br />Return to the central stage and tell Montana the wonders you just saw.}}
 {{Dialogue Start}}
+:{{tx}}
 {{Dialogue End}}
 
 ==Other Languages==

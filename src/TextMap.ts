@@ -166,10 +166,21 @@ export class TextMap {
 		replaced = replaced
 			.replaceAll(/{NICKNAME}/gi, '(Trailblazer)')
 			.replaceAll('\\n', '\n')
-			.replaceAll(/{(F|M)#(.+?)}{(F|M)#(.+?)}/gi, 
-				(_str: string, gender1: string, text1: string, gender2: string, text2: string) => 
-					`⟨⟨MC|${gender1.toLowerCase()}=${text1}|${gender2.toLowerCase()}=${text2}⟩⟩`
+			.replaceAll(/{(F|M)#([^}]+?)}{(F|M)#([^}]+?)}/gi,
+				(_str: string, gender1: string, text1: string, gender2: string, text2: string) =>
+					`⟨⟨MC|${gender1.toLowerCase() == 'm' ? 'm' : 'f'}=${text1}|${gender2.toLowerCase() == 'm' ? 'm' : 'f'}=${text2}⟩⟩`
 			)
+			.replaceAll(/(\s|^)(\S*\{[FM]#.+?\}[^\p{P}\s]*?)(\p{P}*)(\s|$)/giu, (_str: string, ws1: string, word: string, punct: string, ws2: string) => {
+				const feminineWord = word
+					.replaceAll(/{F#(.+?)}/gi, '$1')
+					.replaceAll(/{M#(.+?)}/gi, '')
+
+				const masculineWord = word
+					.replaceAll(/{M#(.+?)}/gi, '$1')
+					.replaceAll(/{F#(.+?)}/gi, '')
+
+				return `${ws1}⟨⟨MC|f=${feminineWord}|m=${masculineWord}⟩⟩${punct}${ws2}`
+			})
 			.replaceAll(/<color=#(\w{1,6})\w{2}?>(.*?)<\/color>/gis, (substr, color, text) => {
 				color = color.toLowerCase()
 				if (COLOR_MAP[color]) {

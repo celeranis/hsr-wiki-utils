@@ -39,154 +39,19 @@ PageTitle=#On the Doorsteps of Science#
 ===Speak with Regin at the Goethe Hotel{{subst:void|<!--301120401-->}}===
 {{Mission Description|type=daily|location=Hotel Lobby|The Civilian Scientist, Regin, is looking for help.<br />He seems to have currently taken an interest in the Belobog Ministry of Education's question bank. Maybe you can help him.}}
 {{Dialogue Start}}
-
-;(Talk to Old Goethe)
-;(If {{cx}}<!--during performance 501028701-->)
-::'''Old Goethe:''' Hello! Welcome to the Goethe Hotel!
-::'''Old Goethe:''' Are you staying with us? Or would you like to try our special afternoon tea?
-::{{DIcon|Arrow}} I'm here as I was attracted by the hotel's fame.
-:::'''Old Goethe:''' The hotel has just been here for a long time and it became a bit famous in Belobog.
-:::'''Old Goethe:''' Make yourself at home. Feel free to take a tour, as long as you are not interrupting the other guests.
-::{{DIcon|Arrow}} I am only passing by. I'll have a look around.
-:::'''Old Goethe:''' I happen to have some free time. If you don't mind, you can chat with me.
-::{{DIcon|Arrow}} I would like to reserve a room.
-:::'''Old Goethe:''' Sure, please register at the reception.
-::{{DIcon|Arrow}} I would like to try your afternoon tea.
-:::'''Old Goethe:''' Oh, it's on the sides of the lobby. Find yourself a sofa and take a seat. I'll arrange it.
-::'''Old Goethe:''' This is where I grew up. I wouldn't say that I know all about the Administrative District. But I do know the history and goings-on around these parts fairly well.
-::'''Old Goethe:''' Just let me know if you are interested.
-;(If {{cx}}<!--not during performance 501028701-->)
-:<pre>{
-	"$type": "RPG.GameCore.PlayMultiVoiceTalk",
-	"TalkSentenceID": 501028736,
-	"KeepDisplay": true
-}</pre>
-::'''Old Goethe:''' It's you. You're not here for sightseeing, are you? Are you here to stay or for our afternoon tea? Or did you come here to chat with me?
-::{{DIcon|Arrow}} I would like to reserve a room.
-:::'''Old Goethe:''' Sure, please register at the reception.
-:::'''Old Goethe:''' This is where I grew up. I wouldn't say that I know all about the Administrative District. But I do know the history and goings-on around these parts fairly well.
-:::'''Old Goethe:''' Just let me know if you are interested.
-::{{DIcon|Arrow}} I would like to try your afternoon tea.
-:::'''Old Goethe:''' Oh, it's on the sides of the lobby. Find yourself a sofa and take a seat. I'll arrange it.
-:::'''Old Goethe:''' This is where I grew up. I wouldn't say that I know all about the Administrative District. But I do know the history and goings-on around these parts fairly well.
-:::'''Old Goethe:''' Just let me know if you are interested.
-::{{DIcon|Arrow}} I'd like to chat with you.
-:::'''Old Goethe:''' Sure. I'm usually quite free. I'd love to have a chat with someone.
-:::'''Old Goethe:''' What do you want to chat about?
-;(Unused &mdash; Wait_Option_5010287_21)
-:{{DIcon|Arrow}} I want to ask...
-::'''Old Goethe:''' Sure! Answering the guests' questions is a way to show your hospitality.
-::{{DIcon|Talk}} About Old Goethe and Goethe Hotel...
-:::'''Old Goethe:''' Oh, that's what you're interested in? Goethe is my family name and Goethe Hotel is my family business. Well, it all began a long, long time ago.
-:::'''Old Goethe:''' The Goethe family used to be prosperous. My ancestors invested in many industries. Unfortunately, due to poor economics, our family declined. Frustrated, my ancestors sold all of their properties and moved to the Underworld.
-:::'''Old Goethe:''' Luckily later on another ancestor from my family started empty-handed and revived our family business. Once again, Goethe Hotel was moved back to the Overworld.
-::;(Return to previous option selection)
-::{{DIcon|Talk}} Have you received any special guests?
-:::'''Old Goethe:''' Well, it depends on how you define special guest. Many guests have stayed with us. Indeed there are a lot of stories.
-:::'''Old Goethe:''' For example, a lady from a rich family escaped her wedding and jumped out of the window on the second floor in her pajamas. No one ever heard from her since...
-:::'''Old Goethe:''' There was a couple who were theater celebrities. They appeared as though they were in love but they stayed in different rooms when they were here for their honeymoon...
-:::'''Old Goethe:''' And there was a lady who would always stay in a single room when her family was at work. She was always drawing in her room. And she would cry every time she finished drawing. I wonder what she's been through...
-:::'''Old Goethe:''' It happens a lot in our industry. We always encounter weird things, especially when we've been in the industry for a long enough time.
-::;(Return to previous option selection)
-::{{DIcon|Talk}} Any recommendations on food around here?
-:::'''Old Goethe:''' Haha, I'm not trying to brag, but our afternoon tea is a specialty of Belobog.
-:::'''Old Goethe:''' There are a few desserts that only we can make. You can't eat them anywhere else in the Administrative District. Many young people visit us during holidays. Sometimes people have to line up.
-::;(Return to previous option selection)
-::{{DIcon|Talk}} Any recommendation on sightseeing around here?
-:::'''Old Goethe:''' I'd recommend the Western District, which is known for its artistic atmosphere. The Golden Theater is right there. You'll find everything from celebrities to merchandise.
-:::'''Old Goethe:''' But be careful, don't go on their premiere day. For example, shows with many fans like ''Beneath the White Cloak'' and ''Stardust Rose'' will make the area totally over-crowded...
-:::'''Old Goethe:''' It's best to drive there. If you don't have a car... Alisa Avenue is right outside the hotel. You can take a tram or walk there along the track.
-::{{DIcon|Arrow}} I don't have any other questions.
-
-;(Talk to Regin)
-:'''Regin:''' Me? Up to? Ha, well what else &mdash; naturally I've been consolidating and fine-tuning my big universe time tunnel theory.
-:'''Regin:''' Speaking of which, have you heard? The entire Belobog scientific community is going crazy with gossip... Because apparently the crankiest, oldest codger of them all &mdash; Minister Bova &mdash; is retiring!
-:{{DIcon|Arrow}} Gossip?
-::'''Regin:''' What else? Do you think I just made it up?
-:{{DIcon|Arrow}} ...So what?
-::'''Regin:''' So what? Don't you get it? This is the equivalent of saying: My time has come! The time of Regin is now!
-:'''Regin:''' Once Bova retires, I'll knock right on the door of the Ministry of Education and ask them to add my theory of big universe time tunnel into the science textbooks of Belobog!
-:'''Regin:''' ...Ahem, I got a little bit excited there. I hope I didn't freak you out. Getting back on track and seeing as you're all here, I'd like to ask another quick favor...
-:'''Regin:''' I'd like you to go chase up those boffins at the Ministry of Education and see if they have any other weird content inside their archives. How about it, can you help me out?
-:{{DIcon|Arrow}} Sounds pretty interesting.
-:{{DIcon|Arrow}} My time is very valuable...
-
-;(Talk to Rossy)
-;(If {{cx}}<!--during performance 501027001-->)
-::'''Rossy:''' *sigh* Have you read today's ''Crystal Daily''? What kind of news is that!? If the media keeps going on like this, Belobog will eventually be doomed!
-::{{DIcon|Arrow}} Are you talking to me?
-:::'''Rossy:''' Of course. Who else would I be talking to? Do I look like someone who talks to himself in the street? It's not like I'm old man Dominic.
-::{{DIcon|Arrow}} What does that have to do with me?
-:::'''Rossy:''' We share a home. It's called Belobog. How can you call yourself a citizen of Belobog if you don't even care about the news in our city?
-::'''Rossy:''' Look at the front page of the ''Crystal Daily''. The content that the newspaper puts out is just junk, tabloid-level stuff. What's going on in their heads? Can you really put this stuff on the front page? I'm about to blow a gasket here!
-::{{DIcon|Arrow}} You don't have to make it sound so extreme.
-:::'''Rossy:''' I bet you're not someone who follows the news. Anyone who is ambitious should pay attention to the world and think more, like I do. That way they can contribute to the development of Belobog!
-::{{DIcon|Arrow}} You sure seem to have plenty of time on your hands.
-:::'''Rossy:''' Hey, I'm making a reasonable suggestion, alright? Belobog is getting better because of people like me &mdash; people who keep offering their insight!
-::'''Rossy:''' Hmm, you really don't know anything. How about I give you a lecture right now!
-;(If {{cx}}<!--not during performance 501027001-->)
-:<pre>{
-	"$type": "RPG.GameCore.PlayMultiVoiceTalk",
-	"TalkSentenceID": 501027048,
-	"KeepDisplay": true
-}</pre>
+:{{tx}}
 {{Dialogue End}}
 
 ===Help Regin test the question bank reserves of the Ministry of Education Officers{{subst:void|<!--301120402-->}}===
 {{Mission Description|type=daily|location=Administrative District|update|The Civilian Scientist, Regin, wants you to test the Ministry of Education's question bank reserves.<br />Go to the Overworld to find officials of the Belobog Ministry of Education and see if they are able to have you stumped.}}
 {{Dialogue Start}}
-
-;(Talk to Ministry of Education Officer)
-:'''Ministry of Education Officer:''' Oops, it's you. Minister Bova has been singing your praises since last time, calling you a rising star in the Belobog academic circle.
-:'''Ministry of Education Officer:''' For what purpose have you come today? What task requires the support of the Ministry of Education?
-:{{DIcon|Arrow}} Test me.
-::'''Ministry of Education Officer:''' Hmm? Do you mean...
-::'''Ministry of Education Officer:''' Ah, I see. You've come on a mission, haven't you? You've come to test the variety of questions in our quiz pool, haven't you?
-::'''Ministry of Education Officer:''' Then I absolutely cannot let you down. I just so happen to have some advanced quiz questions right here with me. Would you like to give them a try?
-::'''Ministry of Education Officer:''' I would like to remind you in advance that these questions are far from simple... and it's no shame to get them wrong. Onto the quiz, then.
-:<pre>{
-	"$type": "RPG.GameCore.ClearTalkUI"
-}</pre>
-:<pre>{
-	"$type": "RPG.GameCore.ShowReading",
-	"BookID": {
-		"fixedValue": {
-			"Value": 190306
-		}
-	},
-	"WaitForExit": true
-}</pre>
-:<pre>{
-	"$type": "RPG.GameCore.ShowTalkUI",
-	"Show": true,
-	"ShowDialogControlUI": true
-}</pre>
-::'''Ministry of Education Officer:''' How about it then? Do you know what the answer is? Howard, Philip, and Joyce: Who is the liar?
-::{{DIcon|Arrow}} Howard.
-::{{DIcon|Arrow}} Philip.
-::{{DIcon|Arrow}} Joyce.
-::{{DIcon|Loupe}} Let me see the question again...
-::;(Return to previous option selection)
-:{{DIcon|Arrow}} I heard Minister Bova is thinking about retiring soon?
-::'''Ministry of Education Officer:''' Hmm? Where'd you hear that? I haven't heard anything...
-::'''Ministry of Education Officer:''' Ahem, sorry. Please allow me to sidestep this question of yours. Is there anything else I can do for you?
-::{{DIcon|Arrow}} Yeah. I wanna take the quiz.
-:;(Return to previous option selection)
+:{{tx}}
 {{Dialogue End}}
 
 ===Report your tests back to Regin{{subst:void|<!--301120403-->}}===
 {{Mission Description|type=daily|location=Hotel Lobby|update|The Civilian Scientist, Regin, wants you to test the Ministry of Education's question bank reserves.<br />It no longer matters if you got it right or wrong. You have already gotten the information he needs. Find him and tell him your findings.}}
 {{Dialogue Start}}
-
-;(Talk to Regin)
-:'''Regin:''' My word! Tell me then, what questions did they throw at you this time?
-----
-----
-;(Return to previous option selection)
-:'''Regin:''' Mmm... interesting. Their quiz pool is utterly bizarre.
-:'''Regin:''' How about this, then: I've been thinking about maybe changing careers and becoming an Expert Quizmaster. After all, I recently came to realize that I'm rather good at these.
-:'''Regin:''' Ahem... it's just an idea, still way too undercooked! My big universe time tunnel theory is still the masterpiece brainchild of all my life's work... I can't just throw that all away!
-:'''Regin:''' Thank you for helping me, my dear friend! Take these, and once I save enough money I'll come looking for you again...
+:{{tx}}
 {{Dialogue End}}
 
 ==Other Languages==

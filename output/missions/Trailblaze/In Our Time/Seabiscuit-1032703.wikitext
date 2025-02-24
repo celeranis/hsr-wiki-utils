@@ -55,746 +55,104 @@ PageTitle=#Seabiscuit#
 
 ===Learn about the challenge from the guide{{subst:void|<!--103270338-->}}===
 {{Dialogue Start}}
-<pre>{
-	"$type": "RPG.GameCore.SetMissionCustomValue",
-	"SubmissionID": 103270338,
-	"MissionCustomValue": {
-		"Index": 3,
-		"ValidValueParamList": [
-			1,
-			2
-		]
-	},
-	"CustomValue": 1
-}</pre>
-{{Mission Description|type=trailblaze|location=SoulGlad™ Scorchsand Audition Venue|update|The second choice! You and Firefly arrive at the Dreamplay Fantasia &mdash; Gunfire Time: Time Trial stage. According to the guide's instructions, you need to play the role ever-popular protagonist from the Clockie series &mdash; Clockie. Smash through the final obstacles together...<br />...Help this inauthentic Clockie overcome an existential crisis. The game can also be rather profound, can't it?}}
-;(Unused &mdash; EnterArea_LocalGroup)
 :{{tx}}
-;(Upon reaching the destination)
-
-;(Upon reaching the destination)
-:{{A|VO chapter3 20 mizhong 101.ogg}} '''Big Ticker:''' Am I... just a failed experiment?
-:{{A|VO chapter3 20 firefly 168.ogg}} '''Firefly:''' That statue... Did it just speak?
+{{Mission Description|type=trailblaze|location=SoulGlad™ Scorchsand Audition Venue|update|The second choice! You and Firefly arrive at the Dreamplay Fantasia &mdash; Gunfire Time: Time Trial stage. According to the guide's instructions, you need to play the role ever-popular protagonist from the Clockie series &mdash; Clockie. Smash through the final obstacles together...<br />...Help this inauthentic Clockie overcome an existential crisis. The game can also be rather profound, can't it?}}
 {{Dialogue End}}
 
 ===Investigate the talking Clock Statue{{subst:void|<!--103270303-->}}===
 {{Dialogue Start}}
-;(Unused &mdash; MainClockToy_Open)
-<pre>{
-	"$type": "RPG.GameCore.ActiveVirtualCamera",
-	"AreaName": "LevelArea_P20331_F20331001_G56",
-	"AnchorName": "Anchor2",
-	"IsActive": false,
-	"BlendConfig": {
-		"ExportToJson": true,
-		"BlendType": "Custom",
-		"UseDefaultBlendCurve": true,
-		"CustomCurveName": "BlendCut09",
-		"BlendTime": 1.2
-	},
-	"DynamicParams": {}
-}</pre>
-
-;(Unused &mdash; EnterArea_G153)
-<pre>{
-	"$type": "RPG.GameCore.ActiveVirtualCamera",
-	"AreaName": "LevelArea_P20331_F20331001_G56",
-	"AnchorName": "Anchor2",
-	"IsActive": true,
-	"BlendConfig": {
-		"ExportToJson": true,
-		"BlendType": "Custom",
-		"UseDefaultBlendCurve": true,
-		"CustomCurveName": "BlendCut09",
-		"BlendTime": 1.2,
-		"FOVSmoothDampTime": -1,
-		"FrameBlendWeightStart": 1,
-		"FrameBlendDuration": 1
-	},
-	"VCameraDitherMaxDistance": 1,
-	"CenterPosX": -1,
-	"CenterPosY": -1,
-	"DynamicParams": {}
-}</pre>
-::{{A|VO chapter3 20 mizhong 102.ogg}} '''Big Ticker:''' Am I... just a failed experiment?
-::{{A|VO chapter3 20 mizhong 103.ogg}} '''Big Ticker:''' ...I'm just an expendable failure of a clock, aren't I?
-::{{DIcon|Arrow}} Hello, I'd like to play Dreamscape Ticker.
-:::{{A|VO chapter3 20 mizhong 104.ogg}} '''Big Ticker:''' "Play"... So, I'm not just a failed clock, I'm also a failed toy.
-::{{DIcon|Arrow}} So, this stage is requiring us to cure this thing with a whole therapy session now?
-:::{{A|VO chapter3 20 mizhong 105.ogg}} '''Big Ticker:''' Don't be naive, buddy. Failure isn't a sickness &mdash; it's a sin, and sins can't be cured.
-::{{DIcon|Arrow}} We've got an urgent matter to attend to... Can you please let us pass already?
-:::{{A|VO chapter3 20 firefly 169.ogg}} '''Firefly:''' I know that this may sound like an exaggeration, but Penacony is actually in danger right now... We have to prevent it at all costs, sooner rather than later.
-:::{{A|VO chapter3 20 mizhong 106.ogg}} '''Big Ticker:''' Oh, another group of opportunistic challengers. Sorry, though I may be a failure of a clock, I still have my principles.
-::{{A|VO chapter3 20 mizhong 107.ogg}} '''Big Ticker:''' You guys are just like the other challengers. You want to enter my inner self? Then please, be my guest. But you won't find anything worthwhile... I'm just a failed piece.
-
-
-;(Unused &mdash; EnterArea_G202)
-:{{A|VO chapter3 20 clock 125.ogg}} '''Clockie:''' Tick-tock! Hey there my gray-haired friend, we still haven't helped Big Ticker find closure yet!
-:<pre>{
-	"$type": "RPG.GameCore.SwitchCharacterAnchorV2",
-	"SwitchCharacterAnchorConfig": {
-		"IsLocalPlayer": true,
-		"CharacterUniqueName": "LocalPlayer",
-		"AreaName": {
-			"Value": "LevelArea_P20331_F20331001_G243"
-		},
-		"AnchorName": {
-			"Value": "Anchor1"
-		}
-	}
-}</pre>
+:{{tx}}
 {{Dialogue End}}
 
 ===Find the Big Ticker's missing parts{{subst:void|<!--103270304-->}}===
 {{Dialogue Start}}
-
-;(Unused &mdash; B2_ClockFE)
-:;(If {{F|SceneStateByMainMission}} is equal to 0)
-:::{{A|VO chapter3 20 mizhong 108.ogg}} '''Big Ticker:''' See, I'm just empty inside.
-:::{{A|VO chapter3 20 clock 106.ogg}} '''Clockie:''' Tick-tock, it's time for me to make an appearance!
-:;(If {{F|SceneStateByMainMission}} is not equal to 0)
-:::'''Big Ticker:''' See, I'm just empty inside.
-:::'''Clockie:''' Tick-tock, it's time for me to make an appearance!
-::{{DIcon|Arrow}} How come you're here too?
-::{{DIcon|Arrow}} Where did you come from?
-::{{DIcon|Arrow}} Ah, the plot thickens. Help!
-:;(If {{F|SceneStateByMainMission}} is equal to 0)
-:::{{A|VO chapter3 20 firefly 170.ogg}} '''Firefly:''' Clockie? I can also see him... Is this character part of the show?
-:::{{A|VO chapter3 20 clock 107.ogg}} '''Clockie:''' In Dreamville, Clockie is everywhere and can do anything! Like... right now, I could solve this problem with your Big Ticker pal, tick-tock!
-:::{{A|VO chapter3 20 mizhong 109.ogg}} '''Big Ticker:''' I can't believe it's actually Clockie! Why would you come and visit a failure of a clock like me for no reason?
-:::{{A|VO chapter3 20 clock 108.ogg}} '''Clockie:''' You see, we're all clocks, we're family! I want to help you be happy! Tell your pal Clockie what's troubling you!
-:::{{A|VO chapter3 20 mizhong 110.ogg}} '''Big Ticker:''' I... I came across a startling revelation yesterday. Apparently, Dreamscape Ticker isn't the same as Clockie at all. It's just a discarded prototype from Clockie's early development.
-:::{{A|VO chapter3 20 mizhong 111.ogg}} '''Big Ticker:''' Please... just leave me be, Clockie. I just don't know how to face you... because I'm just a failure.
-:::{{A|VO chapter3 20 clock 109.ogg}} '''Clockie:''' Oh dear, seeing it like this is utterly heart-wrenching. But fear not! We're here to help it rediscover the missing parts of its inner self and guide it out of despair!
-:;(If {{F|SceneStateByMainMission}} is not equal to 0)
-:::'''Firefly:''' Clockie? I can also see him... Is this character part of the show?
-:::'''Clockie:''' In Dreamville, Clockie is everywhere and can do anything! Like... right now, I could solve this problem with your Big Ticker pal, tick-tock!
-:::'''Big Ticker:''' I can't believe it's actually Clockie! Why would you come and visit a failure of a clock like me for no reason?
-:::'''Clockie:''' You see, we're all clocks, we're family! I want to help you be happy! Tell your pal Clockie what's troubling you!
-:::'''Big Ticker:''' I... I came across a startling revelation yesterday. Apparently, Dreamscape Ticker isn't the same as Clockie at all. It's just a discarded prototype from Clockie's early development.
-:::'''Big Ticker:''' Please... just leave me be, Clockie. I just don't know how to face you... because I'm just a failure.
-:::'''Clockie:''' Oh dear, seeing it like this is utterly heart-wrenching. But fear not! We're here to help it rediscover the missing parts of its inner self and guide it out of despair!
-
-;(Obtain {{Item|Big Ticker's Broken Heart (I)|20|x=1}})
-
-
-;(Obtain {{Item|Big Ticker's Broken Heart (III)|20|x=1}})
-
-;(If {{F|Dino_Bird_Performance}} is equal to 0)
-<pre>{
-	"$type": "RPG.GameCore.SetEntityVisible",
-	"TargetType": {
-		"$type": "RPG.GameCore.AdvGroupFetchTargetByString",
-		"Target": {
-			"Value": "200001"
-		}
-	}
-}</pre>
-<pre>{
-	"$type": "RPG.GameCore.DestroyNPCMonster",
-	"GroupID": 187,
-	"GroupMonsterIDs": [
-		200001
-	],
-	"UniqueNames": []
-}</pre>
-<pre>{
-	"$type": "RPG.GameCore.PropEnableCollider",
-	"TargetType": {
-		"$type": "RPG.GameCore.AdvGroupFetchTargetByString",
-		"Target": {
-			"Value": "300003"
-		}
-	}
-}</pre>
-<pre>{
-	"$type": "RPG.GameCore.PropEnableCollider",
-	"TargetType": {
-		"$type": "RPG.GameCore.AdvGroupFetchTargetByString",
-		"Target": {
-			"Value": "300004"
-		}
-	}
-}</pre>
-:{{A|VO chapter3 20 clock 113.ogg}} '''Clockie:''' This must be one of the missing parts that Big Ticker needs. That's great!
-:{{A|VO chapter3 20 firefly 173.ogg}} '''Firefly:''' An inner self fragment belonging to the Sweet Dreams Troupe... This is just too surreal.
-
-;(Unused &mdash; Perf)
-<pre>{
-	"$type": "RPG.GameCore.ActiveVirtualCamera",
-	"AreaName": "LevelArea_P20331_F20331001_G155",
-	"AnchorName": "Anchor1",
-	"IsActive": true,
-	"VCameraDitherMaxDistance": 1,
-	"CenterPosX": -1,
-	"CenterPosY": -1,
-	"DynamicParams": {}
-}</pre>
-:<pre>{
-	"$type": "RPG.GameCore.SwitchCharacterAnchorV2",
-	"SwitchCharacterAnchorConfig": {
-		"IsLocalPlayer": true,
-		"CharacterUniqueName": "LocalPlayer",
-		"AreaName": {
-			"Value": "LevelArea_P20331_F20331001_G155"
-		},
-		"AnchorName": {
-			"Value": "Anchor2"
-		},
-		"ResetAnimation": true,
-		"ResetCamera": true
-	}
-}</pre>
-::{{A|VO chapter3 20 birdA 102.ogg}} '''???:''' Tweet! Help, help help, tweet! This fella's body is boiling hot, tweet!
-::{{A|VO chapter3 20 birdA 103.ogg}} '''???:''' Is anyone there, tweet? I can't take it anymore, tweet!
-::{{A|VO chapter3 20 clock 115.ogg}} '''Clockie:''' Oh dear, it's an origami bird! What's it doing in Beyond Overcooked's tail?
-::{{A|VO chapter3 20 birdA 104.ogg}} '''???:''' Is that Clockie, tweet? Please save me, tweet! I'm being roasted alive, tweet!
-::{{A|VO chapter3 20 clock 116.ogg}} '''Clockie:''' A roasted bird! This is horrible &mdash; let's save it, quickly!
-:<pre>{
-	"$type": "RPG.GameCore.ActiveVirtualCamera",
-	"AreaName": "LevelArea_P20331_F20331001_G155",
-	"AnchorName": "Anchor1",
-	"VCameraDitherMaxDistance": 1,
-	"CenterPosX": -1,
-	"CenterPosY": -1,
-	"DynamicParams": {}
-}</pre>
-:;(Enter battle)
-::{{Enemy List|Dreamjolt Troupe's Fortune Seller*2; Dreamjolt Troupe's Beyond Overcooked*1}}
-:<!--1-second delay-->
-:{{A|VO chapter3 20 clock 111.ogg}} '''Clockie:''' Over here, my friends! Better be fast like Hamster Ball Knight!
+:{{tx}}
 {{Dialogue End}}
 
 ===Fix the Big Ticker's fragmented core{{subst:void|<!--103270305-->}}===
 {{Dialogue Start}}
-
-;(Lose {{Item|Big Ticker's Broken Heart (I)|20|x=1}})
-;(Lose {{Item|Big Ticker's Broken Heart (II)|20|x=1}})
-;(Lose {{Item|Big Ticker's Broken Heart (III)|20|x=1}})
-
-;(Unused &mdash; MainClockToy_Open)
-<pre>{
-	"$type": "RPG.GameCore.ActiveVirtualCamera",
-	"AreaName": "LevelArea_P20331_F20331001_G56",
-	"AnchorName": "Anchor2",
-	"IsActive": false,
-	"BlendConfig": {
-		"ExportToJson": true,
-		"BlendType": "Custom",
-		"UseDefaultBlendCurve": true,
-		"CustomCurveName": "BlendCut09",
-		"BlendTime": 1.2
-	},
-	"DynamicParams": {}
-}</pre>
-
-;(Unused &mdash; ItemSelect_1032703)
-<pre>{
-	"$type": "RPG.GameCore.SetMissionCustomValue",
-	"SubmissionID": 103270334,
-	"MissionCustomValue": {
-		"Index": 4,
-		"ValidValueParamList": [
-			0,
-			1
-		]
-	},
-	"CustomValue": 1
-}</pre>
-::{{A|VO chapter3 20 mizhong 113.ogg}} '''Big Ticker:''' Wow! This sudden surge of joy...
-::{{A|VO chapter3 20 clock 119.ogg}} '''Clockie:''' It's working, tick-tock! Next, we just need to enter its Emoscape, help connect its pathways, and we're done!
-
-;(Unused &mdash; EnterArea_G{GroupID})
-<pre>{
-	"$type": "RPG.GameCore.SetFloorCustomFloat",
-	"Name": {
-		"Value": "FCV_ReshaClockToy_State"
-	},
-	"Value": {
-		"IsDynamic": false,
-		"FixedValue": {
-			"Value": 2
-		}
-	}
-}</pre>
-:<pre>{
-	"$type": "RPG.GameCore.ActiveVirtualCamera",
-	"AreaName": "LevelArea_P20331_F20331001_G56",
-	"AnchorName": "Anchor2",
-	"IsActive": true,
-	"BlendConfig": {
-		"ExportToJson": true,
-		"BlendType": "Custom",
-		"UseDefaultBlendCurve": true,
-		"CustomCurveName": "BlendCut09",
-		"BlendTime": 1.2,
-		"FOVSmoothDampTime": -1,
-		"FrameBlendWeightStart": 1,
-		"FrameBlendDuration": 1
-	},
-	"VCameraDitherMaxDistance": 1,
-	"CenterPosX": -1,
-	"CenterPosY": -1,
-	"DynamicParams": {}
-}</pre>
-::{{A|VO chapter3 20 clock 118.ogg}} '''Clockie:''' We're back! As long as you have these, you'll be able to find closure, tick-tock!
-:<pre>{
-	"$type": "RPG.GameCore.AddFinishMissionData_ConsumeItem",
-	"SubmissionID": 103270334,
-	"OnlyPerformance": true,
-	"SimpleTalk": {
-		"TextSpeed": 20,
-		"ProtectTime": 0.8
-	},
-	"OnSubmitConfirm": [
-		{
-			"$type": "RPG.GameCore.TriggerCustomString",
-			"CustomString": {
-				"Value": "ItemSelect_1032703"
-			}
-		}
-	],
-	"OnSubmitCancel": [
-		{
-			"$type": "RPG.GameCore.TriggerCustomString",
-			"CustomString": {
-				"Value": "All_Talk_Cancel"
-			}
-		}
-	]
-}</pre>
-:;(If {{F|MissionCV-1032703-4}} is equal to 1)
-::<pre>{
-	"$type": "RPG.GameCore.SetFloorCustomFloat",
-	"Name": {
-		"Value": "FCV_ReshaClockToy_State"
-	},
-	"Value": {
-		"IsDynamic": false,
-		"FixedValue": {
-			"Value": 3
-		}
-	}
-}</pre>
-::<pre>{
-	"$type": "RPG.Client.AdventureGameplayLock",
-	"IsLock": true,
-	"LockSource": "FullScreenLock"
-}</pre>
-:;(If {{F|MissionCV-1032703-4}} is not equal to 1)
-::<pre>{
-	"$type": "RPG.GameCore.ActiveVirtualCamera",
-	"AreaName": "LevelArea_P20331_F20331001_G56",
-	"AnchorName": "Anchor2",
-	"IsActive": false,
-	"BlendConfig": {
-		"ExportToJson": true,
-		"BlendType": "Custom",
-		"UseDefaultBlendCurve": true,
-		"CustomCurveName": "BlendCut09",
-		"BlendTime": 1.2
-	},
-	"DynamicParams": {}
-}</pre>
-:<pre>{
-	"$type": "RPG.GameCore.SetMissionCustomValue",
-	"SubmissionID": 103270334,
-	"MissionCustomValue": {
-		"Index": 4,
-		"isLocal": true,
-		"ValidValueParamList": [
-			0,
-			1
-		]
-	}
-}</pre>
-:{{A|VO chapter3 20 firefly 174.ogg}} '''Firefly:''' We've gathered all the missing parts... Let's hurry back, we don't want to keep Big Ticker waiting.
-:{{A|VO chapter3 20 firefly 175.ogg}} '''Firefly:''' It's all done... Victory is in sight. Let's head to the final stage.
+:{{tx}}
 {{Dialogue End}}
 
 ===Go to the third stage entrance{{subst:void|<!--103270312-->}}===
 {{Dialogue Start}}
-;(Upon reaching the destination)
-
-;(Upon reaching the destination)
 :{{tx}}
 {{Dialogue End}}
 
 ===Select the stage you wish to challenge{{subst:void|<!--103270339-->}}===
 {{Dialogue Start}}
-;(If {{F|BlockShowIndex}} is equal to 5)
-<pre>{
-	"$type": "RPG.GameCore.SetMissionCustomValue",
-	"SubmissionID": 103270339,
-	"MissionCustomValue": {
-		"Index": 2,
-		"ValidValueParamList": [
-			0,
-			1,
-			2
-		]
-	},
-	"CustomValue": 1
-}</pre>
+:{{tx}}
 {{Dialogue End}}
 
 ===Learn about the challenge from the guide{{subst:void|<!--103270308-->}}===
 {{Mission Description|type=trailblaze|location=SoulGlad™ Scorchsand Audition Venue|update|The second choice! You and Firefly arrive at the Dreamplay Fantasia &mdash; Gunfire Time: Gunfire Trial arena. According to the guide's instructions, you need to play the role of the evil-retributing, charisma-overflowing character from the Clockie series &mdash; Brother Hanu.<br />"What is this competition supposed to be about?" You wonder. "Are we trying to see who has the coolest 'hmph'?"}}
 {{Dialogue Start}}
-;(Unused &mdash; EnterArea_G{GroupID})
 :{{tx}}
 {{Dialogue End}}
 
 ===Enter the world of ''Hanu's Adventure''{{subst:void|<!--103270309-->}}===
 {{Dialogue Start}}
-<pre>{
-	"$type": "RPG.GameCore.WaitEntityArtLoad",
-	"TargetType": {
-		"$type": "RPG.GameCore.TargetFetchAdvPropEx",
-		"FetchType": "SinglePropByPropID",
-		"SinglePropID": {
-			"GroupID": {
-				"IsDynamic": false,
-				"FixedValue": {
-					"Value": 39
-				}
-			},
-			"ID": {
-				"IsDynamic": false,
-				"FixedValue": {
-					"Value": 300005
-				}
-			}
-		}
-	}
-}</pre>
-;(If {{F|Jigsaw_TV_Finished}} is equal to 0)
-<pre>{
-	"$type": "RPG.GameCore.AdvEnableButtons",
-	"TargetType": {
-		"$type": "RPG.GameCore.TargetFetchAdvPropEx",
-		"FetchType": "SinglePropByPropID",
-		"SinglePropID": {
-			"GroupID": {
-				"IsDynamic": false,
-				"FixedValue": {
-					"Value": 39
-				}
-			},
-			"ID": {
-				"IsDynamic": false,
-				"FixedValue": {
-					"Value": 300005
-				}
-			}
-		}
-	},
-	"TriggerName": "InteractTrigger",
-	"ButtonsByName": [
-		"Interact"
-	]
-}</pre>
-
-;(Upon reaching the destination)
-;(If {{F|EasterB1Phase}} is equal to 0)
-:Dear challenger, you're about to head to a hidden battlefield &mdash;
-:Brother Hanu never ceased his fight at the frontier of Dreamville, where neither Clockie nor the residents can see him.
-:Do you have what it takes to face endless powerful enemies with him and withstand the challenge of ''Hanu Wars''?
-<pre>{
-	"$type": "RPG.GameCore.TriggerEntityEventV2",
-	"EventName": {
-		"Value": "Srv_TriggerReshaAnim"
-	},
-	"TargetType": {
-		"$type": "RPG.GameCore.TargetFetchAdvPropEx",
-		"FetchType": "SinglePropByPropID",
-		"SinglePropID": {
-			"GroupID": {
-				"IsDynamic": false,
-				"FixedValue": {
-					"Value": 39
-				}
-			},
-			"ID": {
-				"IsDynamic": false,
-				"FixedValue": {
-					"Value": 300011
-				}
-			}
-		}
-	}
-}</pre>
-;(Unused &mdash; TV_Open)
-<pre>{
-	"$type": "RPG.GameCore.RequestGroupStateChange",
-	"TargetState": 1
-}</pre>
-;(Unused &mdash; EnterArea_G{GroupID})
-:{{A|VO chapter3 20 firefly 141.ogg}} '''Firefly:''' Are we... both in control of this Hanu character?
-::{{A|VO chapter3 20 usher 120.ogg}} '''Guide:''' Very good! Looks like you've got the hang of it!
-::{{A|VO chapter3 20 usher 121.ogg}} '''Guide:''' In this ''Hanu's Adventure'' episode, Boss Stone has gathered his battleships for an assault on Dreamville! Old Buzzfly, Cousin Wolf and Bombhead are all raring to go... The brave Hanu must thwart their advance and protect his home!
-::{{A|VO chapter3 20 usher 122.ogg}} '''Guide:''' Alas, Hanu presently is ill-equipped to fend off the Malevolent Mischief Makers, which is why he is preparing to seek out the Puzzle Gentleman's aid. Go forth and speak to him!
+:{{tx}}
 {{Dialogue End}}
 
 ===Enter the passage{{subst:void|<!--103270335-->}}===
 {{Dialogue Start}}
-
-
+:{{tx}}
 {{Dialogue End}}
 
 ===Seek the Puzzle Gentleman's assistance{{subst:void|<!--103270314-->}}===
 {{Dialogue Start}}
-;(Unused &mdash; EnterArea_LocalGroup)
-:{{A|VO chapter3 20 pintu 102.ogg}} '''Puzzle Gentleman:''' Long time no see, Hanu. You look pretty stressed out. How about an intense and thrilling game of Dream Jigsaw to blow off some steam?
-::{{DIcon|Arrow}} Actually, the plot dictates that you directly provide aid to us.
-:::"Actually, the plot dictates that you directly provide aid to us." - You really want to say this to the Dreamweaver Gentleman, but given your character's design, you can only respond with a cool *hmph*.
-::;(Return to previous option selection)
-::{{DIcon|Arrow}} Is Dream Jigsaw really that intense and thrilling?
-:::"Is Dream Jigsaw really that intense and thrilling?" You really want to say this to the Dreamweaver Gentleman, but given your character's design, you can only respond with a cool *hmph*.
-::;(Return to previous option selection)
-::{{DIcon|Arrow}} Gosh, this is the first time I've ever seen you crouch down.
-:::"Gosh, this is the first time I've ever seen you crouch down." You really want to say this to the Dreamweaver Gentleman, but given your character's design, you can only respond with a cool *hmph*.
-::;(Return to previous option selection)
-::{{DIcon|Arrow}} Let out a really cool sounding *hmph*
-:::You let out a cool *hmph*. It might just be the coolest hmph in history.
-:::{{A|VO chapter3 20 pintu 103.ogg}} '''Puzzle Gentleman:''' Oh, my, are you telling me that Boss Stone has rallied the villains to seize Dreamville? What a dreadful twist of fate...
-:::{{A|VO chapter3 20 pintu 104.ogg}} '''Puzzle Gentleman:''' Listen closely, Hanu. I'm aware you're in need of a suitable weapon, and I also know there's one just upstairs...
-:::{{A|VO chapter3 20 pintu 105.ogg}} '''Puzzle Gentleman:''' But, you know what? You'll have to play an exhilarating round of Dream Jigsaw first. No jigsaw, no moving forward.
-:::{{DIcon|Arrow}} That's not fair! You have to help me now.
-::::"It's not fair! You have to help me." &mdash; You really want to say this to the Dreamweaver Gentleman, but given your character's design, you can only respond with a cool *hmph*.
-:::;(Return to previous option selection)
-:::{{DIcon|Arrow}} What do the weapon and Dream Jigsaw have to do with one another?
-::::"What is the relationship between the weapon and the Dream Jigsaw?" You really want to say this to the Dreamweaver Gentleman, but given your character's design, you can only respond with a cool *hmph*.
-:::;(Return to previous option selection)
-:::{{DIcon|Arrow}} Dreamville's in danger! How do you not understand the predicament?
-::::"Dreamville is in danger! Don't you understand?" You really want to say this to the Dreamweaver Gentleman, but given your character's design, you can only respond with a cool *hmph*.
-:::;(Return to previous option selection)
-<pre>{
-	"$type": "RPG.GameCore.WaitEntityServerEvent"
-}</pre>
-;(If {{cx}}{{subst:void|<!--{"$type":"RPG.GameCore.ByComparePropState","TargetType":{"$type":"RPG.GameCore.GroupFetchLocalTarget","TargetType":"Prop","Targets":[300002]}}-->}}, {{cx}}{{subst:void|<!--{"$type":"RPG.GameCore.ByComparePropState","TargetType":{"$type":"RPG.GameCore.GroupFetchLocalTarget","TargetType":"Prop","Targets":[300003]}}-->}}, {{cx}}{{subst:void|<!--{"$type":"RPG.GameCore.ByComparePropState","TargetType":{"$type":"RPG.GameCore.GroupFetchLocalTarget","TargetType":"Prop","Targets":[300004]}}-->}}, and {{cx}}{{subst:void|<!--{"$type":"RPG.GameCore.ByComparePropState","TargetType":{"$type":"RPG.GameCore.GroupFetchLocalTarget","TargetType":"Prop","Targets":[300001]},"State":"Open"}-->}})
-<pre>{
-	"$type": "RPG.GameCore.ChangePropState"
-}</pre>
+:{{tx}}
 {{Dialogue End}}
 
 ===Collect Jigsaw Fragments{{subst:void|<!--103270310-->}}===
 {{Dialogue Start}}
+:{{tx}}
 {{Dialogue End}}
 
 ===Complete the Dream Jigsaw{{subst:void|<!--103270315-->}}===
 {{Dialogue Start}}
-:{{A|VO chapter3 20 firefly 145.ogg}} '''Firefly:''' Finally, that's all the jigsaw pieces... Let's hurry back.
+:{{tx}}
 {{Dialogue End}}
 
 ===Go to the second floor{{subst:void|<!--103270317-->}}===
 {{Dialogue Start}}
-:{{A|VO chapter3 20 pintu 108.ogg}} '''Puzzle Gentleman:''' Oh my! The exquisite sensation of perfect alignment... My organizational itch has been quite thoroughly scratched!
-:{{A|VO chapter3 20 pintu 109.ogg}} '''Puzzle Gentleman:''' Hurry now, Hanu! Touch that TV set and transform back into your old self. Then, head upstairs &mdash; your weapon awaits you there!
-:{{A|VO chapter3 20 firefly 146.ogg}} '''Firefly:''' Are such haphazard instructions really okay...
+:{{tx}}
 {{Dialogue End}}
 
 ===Talk with Brother Hanu{{subst:void|<!--103270319-->}}===
 {{Dialogue Start}}
-;(Unused &mdash; Perf)
-:{{A|VO chapter3 20 hanu 101.ogg}} '''Brother Hanu:''' Hmph.
-::{{A|VO chapter3 20 hanu 102.ogg}} '''Brother Hanu:''' Hmph... Hmph!
-::{{DIcon|Arrow}} What are you talking about?
-:::{{A|VO chapter3 20 hanu 103.ogg}} '''Brother Hanu:''' Hmph? Hmph.
-::{{DIcon|Arrow}} Is staying in character this much REALLY necessary...?
-:::{{A|VO chapter3 20 hanu 104.ogg}} '''Brother Hanu:''' Hmph... Hmph.
-::{{DIcon|Arrow}} Aha, I know the answer for this one! "Hmph."
-:::{{A|VO chapter3 20 hanu 105.ogg}} '''Brother Hanu:''' Hmph! Hmph.
-::{{DIcon|Arrow}} Penacony's in danger. Can you get out of the way?
-:::{{A|VO chapter3 20 firefly 149.ogg}} '''Firefly:''' I know that this may sound like an exaggeration, but Penacony is actually in danger right now... We have to prevent it at all costs, sooner rather than later.
-:::{{A|VO chapter3 20 hanu 106.ogg}} '''Brother Hanu:''' Hmph? Hmph... Hmph.
-::{{A|VO chapter3 20 firefly 150.ogg}} '''Firefly:''' What exactly is he... talking about?
-::{{A|VO chapter3 20 clock 101.ogg}} '''Clockie:''' Tick-tock, it's time for me to make an appearance!
-::{{DIcon|Arrow}} How come you're here too?
-::{{DIcon|Arrow}} Where did you come from?
-::{{DIcon|Arrow}} Ah, the plot thickens. Help!
-::{{A|VO chapter3 20 firefly 151.ogg}} '''Firefly:''' Clockie? I can also see him... Is this character part of the show?
-::{{tx}}
-::{{tx}}
+:{{tx}}
 {{Dialogue End}}
 
 ===Return to the world of ''Hanu's Adventure''{{subst:void|<!--103270320-->}}===
 {{Dialogue Start}}
-;(Unused &mdash; Perf)
-:{{A|VO chapter3 20 firefly 155.ogg}} '''Firefly:''' I am gradually getting used to this... who knows, I might even be able to perform some high-level moves with Hanu.
-::{{A|VO chapter3 20 usher 123.ogg}} '''Guide:''' Oh? Did someone say "high-level moves" just now? That's right, pal! The upcoming script is just exploding with all sorts of high-level shenanigans!
-::{{A|VO chapter3 20 usher 124.ogg}} '''Guide:''' Last we saw, Hanu was preparing for battle. Suddenly, he hears heavy footsteps coming from the hallway. The Malevolent Mischief Makers have broken into his home!
-::{{A|VO chapter3 20 usher 125.ogg}} '''Guide:''' But brave Hanu won't go down without a fight! He instantly sprints for the storage room, ready for a do-or-die showdown against the baddies...
-::{{A|VO chapter3 20 firefly 156.ogg}} '''Firefly:''' But... we still don't have any weapons in hand...
-::{{A|VO chapter3 20 usher 126.ogg}} '''Guide:''' Guess what? Hanu's favorite bazooka just so happens to be in that storage room! So get a move on!
-::{{A|VO chapter3 20 firefly 157.ogg}} '''Firefly:''' What a coincidentally convenient plot twist... It'd be even more awesome if the organizers allowed me to wear armor.
+:{{tx}}
 {{Dialogue End}}
 
 ===Retrieve Brother Hanu's beloved launcher{{subst:void|<!--103270321-->}}===
 {{Dialogue Start}}
-
+:{{tx}}
 {{Dialogue End}}
 
 ===Defeat the Malevolent Mischief Makers{{subst:void|<!--103270322-->}}===
 {{Dialogue Start}}
-:{{A|VO chapter3 20 firefly 160.ogg}} '''Firefly:''' Now... we should have a way of dealing with those baddies.
+:{{tx}}
 {{Dialogue End}}
 
 ===Leave the world of ''Hanu's Adventure''{{subst:void|<!--103270326-->}}===
 {{Dialogue Start}}
-----
-<pre>{
-	"$type": "RPG.GameCore.ActiveVirtualCamera",
-	"AreaName": "LevelArea_P20331_F20331001_G39",
-	"AnchorName": "MLCamera1",
-	"IsActive": true,
-	"BlendConfig": {
-		"ExportToJson": true,
-		"BlendType": "Cut",
-		"FOVSmoothDampTime": -1,
-		"FrameBlendWeightStart": 1,
-		"FrameBlendDuration": 1
-	},
-	"VCameraDitherMaxDistance": 1,
-	"CenterPosX": -1,
-	"CenterPosY": -1,
-	"DynamicParams": {}
-}</pre>
-----
-:{{A|VO chapter3 20 firefly 164.ogg}} '''Firefly:''' That should be all of them, right?
-:{{A|VO chapter3 20 usher 127.ogg}} '''Guide:''' Oh my! Hanu is on a streak! Everyone, the stage is complete, quickly head through the TV to the next stage!
-----
-<pre>{
-	"$type": "RPG.GameCore.ActiveVirtualCamera",
-	"AreaName": "LevelArea_P20331_F20331001_G39",
-	"AnchorName": "MLCamera1",
-	"BlendConfig": {
-		"ExportToJson": true,
-		"BlendType": "Cut",
-		"FOVSmoothDampTime": -1,
-		"FrameBlendWeightStart": 1,
-		"FrameBlendDuration": 1
-	},
-	"VCameraDitherMaxDistance": 1,
-	"CenterPosX": -1,
-	"CenterPosY": -1,
-	"DynamicParams": {}
-}</pre>
-----
-;(Unused &mdash; Perf)
-
+:{{tx}}
 {{Dialogue End}}
 
 ===Go to the third stage entrance{{subst:void|<!--103270342-->}}===
 {{Dialogue Start}}
-
-;(Unused &mdash; Perf)
 :{{tx}}
-<pre>{
-	"$type": "RPG.GameCore.SetFloorSavedValue"
-}</pre>
-----
-<pre>{
-	"$type": "RPG.GameCore.SwitchCharacterAnchorV2",
-	"SwitchCharacterAnchorConfig": {
-		"IsLocalPlayer": true,
-		"CharacterUniqueName": "LocalPlayer",
-		"AreaName": {
-			"Value": "LevelArea_P20331_F20331001_G363"
-		},
-		"AnchorName": {
-			"Value": "Anchor1"
-		},
-		"ResetAnimation": true,
-		"ResetCamera": true
-	}
-}</pre>
-<pre>{
-	"$type": "RPG.GameCore.ActiveVirtualCamera",
-	"AreaName": "LevelArea_P20331_F20331001_G39",
-	"AnchorName": "MLCamera2",
-	"IsActive": true,
-	"BlendConfig": {
-		"ExportToJson": true,
-		"BlendType": "Cut",
-		"FOVSmoothDampTime": -1,
-		"FrameBlendWeightStart": 1,
-		"FrameBlendDuration": 1
-	},
-	"VCameraDitherMaxDistance": 1,
-	"CenterPosX": -1,
-	"CenterPosY": -1,
-	"DynamicParams": {}
-}</pre>
-----
-:{{A|VO chapter3 20 firefly 165.ogg}} '''Firefly:''' Well, that's that. But it is gonna be hard to let go of this bazooka...
-:{{A|VO chapter3 20 firefly 166.ogg}} '''Firefly:''' ...Uhm, nevermind. Let's hurry over to the next stage.
-----
-<pre>{
-	"$type": "RPG.GameCore.ActiveVirtualCamera",
-	"AreaName": "LevelArea_P20331_F20331001_G39",
-	"AnchorName": "MLCamera2",
-	"BlendConfig": {
-		"ExportToJson": true,
-		"BlendType": "Cut",
-		"FOVSmoothDampTime": -1,
-		"FrameBlendWeightStart": 1,
-		"FrameBlendDuration": 1
-	},
-	"VCameraDitherMaxDistance": 1,
-	"CenterPosX": -1,
-	"CenterPosY": -1,
-	"DynamicParams": {}
-}</pre>
-----
 {{Dialogue End}}
 
 ===Select the stage you wish to challenge{{subst:void|<!--103270340-->}}===
 {{Dialogue Start}}
-
-;(If {{F|BlockShowIndex}} is equal to 5)
-<pre>{
-	"$type": "RPG.GameCore.SetMissionCustomValue",
-	"SubmissionID": 103270339,
-	"MissionCustomValue": {
-		"Index": 2,
-		"ValidValueParamList": [
-			0,
-			1,
-			2
-		]
-	},
-	"CustomValue": 1
-}</pre>
-;(Unused &mdash; 1032703_ChoseC2)
-<pre>{
-	"$type": "RPG.GameCore.SetMissionCustomValue",
-	"SubmissionID": 103270340,
-	"MissionCustomValue": {
-		"Index": 2,
-		"ValidValueParamList": [
-			0,
-			1,
-			2
-		]
-	},
-	"CustomValue": 2
-}</pre>
-
-;(Unused &mdash; 1032703_ChoseC1)
-<pre>{
-	"$type": "RPG.GameCore.SetMissionCustomValue",
-	"SubmissionID": 103270340,
-	"MissionCustomValue": {
-		"Index": 2,
-		"ValidValueParamList": [
-			0,
-			1,
-			2
-		]
-	},
-	"CustomValue": 1
-}</pre>
+:{{tx}}
 {{Dialogue End}}
 
 ==Other Languages==

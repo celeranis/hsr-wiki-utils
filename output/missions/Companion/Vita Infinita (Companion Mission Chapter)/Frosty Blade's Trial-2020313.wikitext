@@ -42,109 +42,36 @@ PageTitle=#Frosty Blade's Trial#
 ===Help the Diting that seems to want something{{subst:void|<!--202031302-->}}===
 {{Mission Description|type=companion|location=Central Starskiff Haven|Chaos reigned on the Xianzhou ship, even cats and dogs have become restless. You arrive at the Starskiff Haven to find a homeless little dog whimpering as if asking for help. Playing with homeless animals isn't your favorite pastime, but what if this little dog wants you to dig out a treasure buried somewhere? What if that's the case?}}
 {{Dialogue Start}}
-;(Upon reaching the destination)
-
-;(Upon reaching the destination)
-<pre>{
-	"$type": "RPG.GameCore.PlayNPCBubbleTalk",
-	"BubbleTalkInfoList": [
-		{
-			"AutoSkipTime": 1,
-			"GroupID": 71,
-			"GroupNpcID": 400002,
-			"TalkSentenceID": 202130201
-		}
-	],
-	"BubbleTalkType": "Normal",
-	"LoopInterval": 1,
-	"InstantFinish": true
-}</pre>
+:{{tx}}
 {{Dialogue End}}
 
 ===Find someone who could understand a Diting's bark{{subst:void|<!--202031303-->}}===
 {{Mission Description|type=companion|location=Central Starskiff Haven|update|Unfortunately, you don't understand a single thing said by the Diting, and vice versa. Can't you find anyone on the huge Xianzhou ship who could understand dog barks? Hey, speaking of understanding dog barks, you might just know someone...}}
 {{Dialogue Start}}
-
+:{{tx}}
 {{Dialogue End}}
 
 ===Check out the clue discovered by the Diting at Cloudford{{subst:void|<!--202031304-->}}===
 {{Mission Description|type=companion|location=Cloudford|update|With March 7th's translation, you understand that the Diting found some strange clues in the Cloudford dock. Not a buried treasure... You sigh wordlessly. If you can do it over, you wouldn't have beckoned to the puppy. Looks like you're on a trip to Cloudford now...}}
 {{Dialogue Start}}
-<pre>{
-	"$type": "RPG.GameCore.CreateProp",
-	"GroupID": {
-		"fixedValue": {
-			"Value": 105
-		}
-	},
-	"GroupPropID": {
-		"fixedValue": {
-			"Value": 300003
-		}
-	},
-	"CreateList": []
-}</pre>
-;(Upon reaching the destination)
-
-;(Upon reaching the destination)
-----
-:{{A|VO side2 yq1 diting 102.ogg}} '''Diting:''' Woof! Woof woof!
-:{{A|VO side2 yq1 mar7th 114.ogg}} '''March 7th:''' Little Diting says he's been dutifully searching for clues all over the Xianzhou. He notified us as soon as he found something strange.
-:{{A|VO side2 yq1 diting 101.ogg}} '''Diting:''' Woof!
-:{{A|VO side2 yq1 mar7th 115.ogg}} '''March 7th:''' So what does he want us to take a look at?
-----
+:{{tx}}
 {{Dialogue End}}
 
 ===Follow the Diting and find the clue{{subst:void|<!--202031301-->}}===
 {{Dialogue Start}}
-
+:{{tx}}
 {{Dialogue End}}
 
 ===Investigate a jade tracer dropped by someone{{subst:void|<!--202031305-->}}===
 {{Mission Description|type=companion|location=Cloudford|update|A jade tracer was dropped here. It could be a moment of absent-mindedness, or it could have been intentionally placed there. No matter what, it would be advisable to investigate it.}}
 {{Dialogue Start}}
-<pre>{
-	"$type": "RPG.GameCore.CreateProp",
-	"GroupID": {
-		"fixedValue": {
-			"Value": 105
-		}
-	},
-	"GroupPropID": {
-		"fixedValue": {
-			"Value": 300004
-		}
-	},
-	"CreateList": []
-}</pre>
-;(Upon reaching the destination)
-
-;(Upon reaching the destination)
-:{{A|VO side2 yq1 diting 103.ogg}} '''Diting:''' Woof!
-----
-:{{A|VO side2 yq1 mar7th 121.ogg}} '''March 7th:''' And that's... the end? There's nothing else in the operations log?
-:{{DIcon|Arrow}} Writer's block perhaps...
-:{{DIcon|Arrow}} Who doesn't like a good cliffhanger?
-:{{A|VO side2 yq1 mar7th 122.ogg}} '''March 7th:''' That Jingliu seems pretty dangerous... *sigh* The Stellaron crisis sure has attracted a lot of strange people to the Luofu.
-:{{A|VO side2 yq1 mar7th 123 m.ogg}} {{A|VO side2 yq1 mar7th 123 f.ogg}} '''March 7th:''' (Trailblazer), shouldn't we hand this over to Jing Yuan as soon as possible?
-:{{A|VO side2 yq1 diting 103.ogg}} '''Diting:''' Woof!
-:{{DIcon|Arrow}} Yeah.
-:{{DIcon|Arrow}} Woof!
-----
-;(Obtain {{Item|Jade Tracer|20|x=1}})
+:{{tx}}
 {{Dialogue End}}
 
 ===Send the jade tracer along to the Seat of Divine Foresight to tell them about Yanqing's current situation{{subst:void|<!--202031307-->}}===
 {{Mission Description|type=companion|location=Seat of Divine Foresight|update|Seat of Divine Foresight's retainer, Yanqing, left his jade tracer here that details his experience hunting down Blade. It should be returned to the Seat of Divine Foresight immediately so they know.}}
 {{Dialogue Start}}
-
-
-;(Talk to Jing Yuan)
-:Jing Yuan's apparition turned to you. You are not sure whether this is some kind of automatic audio-visual answering technique, or a real-time remote materialization from himself.
-<pre>{
-	"$type": "RPG.GameCore.ShowMenu",
-	"DisplaySingleMenuItem": true
-}</pre>
+:{{tx}}
 {{Dialogue End}}
 
 ==Other Languages==

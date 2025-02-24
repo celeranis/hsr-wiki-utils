@@ -12,7 +12,7 @@ import { InternalStage } from './files/Stage.js';
 import type { InternalWorldInfo } from './files/Worlds.js';
 import { MazeFloor } from './files/graph/MapData.js';
 
-const ITEM_ID_MATCH = (items: ItemConfig, itemId: number | string) => Object.values(items).find(item => item.ID == itemId)
+const ITEM_ID_MATCH = (items: ItemConfig, itemId: number | string) => Object.values(items).find(item => item?.ID == itemId)
 
 /**
  * This is a somewhat abstract class used to figure out the change history of something.

@@ -55,8 +55,13 @@ function addObjects(obj: object, addAll?: boolean) {
 addObjects(await getFile('Config/AudioConfig.json'), true)
 
 for (const file of await readdir(root, { recursive: true, withFileTypes: true })) {
-	if (file.isFile() && !file.path.includes('TextMap') && file.name.endsWith('.json')) {
-		const contents = JSON.parse(readFileSync(`${file.path}\\${file.name}`).toString())
+	if (file && file.isFile() && !file.path.includes('TextMap') && file.name.endsWith('.json')) {
+		const fileContents = readFileSync(`${file.parentPath}\\${file.name}`).toString()
+		if (!fileContents) {
+			console.log(`${file.parentPath}\\${file.name} is blank??`)
+			continue
+		}
+		const contents = JSON.parse(fileContents)
 		addObjects(contents)
 	}
 }

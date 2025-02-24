@@ -37,187 +37,36 @@ PageTitle=#Future Market (I)#
 -->
 ==Dialogue==
 {{Stub Dialogue}}
-:{{tx}}
 {{Dialogue End}}
 
 ===Check the condition of the miners{{subst:void|<!--201020210-->}}===
 {{Mission Description|type=continuance|location=Robot Settlement|update|(Trailblazer)'s Trailblaze Daily Report:<br />Lots of miners look dazed. Need to chat with them.}}
 {{Dialogue Start}}
-;(Upon reaching the destination)
-
-;(Upon reaching the destination)
-----
-:{{A|VO side1 tp mar7th 238.ogg}} '''March 7th:''' All the miners here huddled together... anyone else getting déjà vu?
-:{{A|VO side1 tp seele 122.ogg}} '''Seele:''' Well, the situation here is pretty similar to when you first arrived. It's just that instead of a few thugs and broken robots, now we're dealing with much more formidable adversaries.
-<pre>{
-	"$type": "RPG.GameCore.ActiveVirtualCamera",
-	"AreaName": "LevelArea_P43101_F43101001_G4",
-	"AnchorName": "Anchor3",
-	"IsActive": true,
-	"VCameraDitherMaxDistance": 1,
-	"CenterPosX": -1,
-	"CenterPosY": -1,
-	"DynamicParams": {}
-}</pre>
-:{{A|VO side1 tp mar7th 239 m.ogg}} {{A|VO side1 tp mar7th 239 f.ogg}} '''March 7th:''' Hey, (Trailblazer), check it out! Isn't that Topaz's little trotter over there? What was it again... Numby, right?
-:{{A|VO side1 tp seele 123.ogg}} '''Seele:''' What!? Isn't that thing a Fragmentum monster? She's keeping one as a pet!?
-:{{A|VO side1 tp mar7th 240.ogg}} '''March 7th:''' The IPC are all about their sci-fi sorcery, so it's not that surprising. Wanna go take a look?
-----
+:{{tx}}
 {{Dialogue End}}
 
 ===Attempt to "communicate" with Numby{{subst:void|<!--201020203-->}}===
 {{Mission Description|type=continuance|location=Great Mine|update|(Trailblazer)'s Trailblaze Daily Report:<br />Trotter! Trotter! Little~ Trotter!}}
 {{Dialogue Start}}
-;(Upon reaching the destination)
-
-;(Upon reaching the destination)
-----
-----
-:{{A|VO side1 tp zhangzhang 101.ogg}} '''Numby:''' ...Oink?
-:{{DIcon|Arrow}} Oink.
-::{{A|VO side1 tp zhangzhang 102.ogg}} '''Numby:''' Oink... Grunt, oink?
-:{{DIcon|Arrow}} ...Oink?
-::{{A|VO side1 tp zhangzhang 103.ogg}} '''Numby:''' Oink! Oink oink!
-:{{DIcon|Arrow}} Oink... Grunt, grunt, oink!
-::{{A|VO side1 tp zhangzhang 104.ogg}} '''Numby:''' Oink? Oink, oink... Grunt!
-:{{A|VO side1 tp mar7th 241.ogg}} '''March 7th:''' ...Sounds like you two are getting along! What's Numby saying?
-:{{DIcon|Arrow}} "Topaz isn't here."
-::{{A|VO side1 tp mar7th 242.ogg}} '''March 7th:''' Seriously!? You actually speak trotter?
-:{{DIcon|Arrow}} "Life is ultimately meaningless."
-::{{A|VO side1 tp mar7th 243.ogg}} '''March 7th:''' Wow, that's soooo deep... Come on, stop fooling around!
-:{{DIcon|Arrow}} Not sure, strong accent.
-::{{A|VO side1 tp mar7th 244.ogg}} '''March 7th:''' I should've known... Don't quit your day job.
-:<!--2.5-second delay-->
-<pre>{
-	"$type": "RPG.GameCore.CharacterNavigateTo",
-	"CharacterUniqueName": "Zhang_201020203",
-	"AreaName": "LevelArea_P43101_F43101001_G4",
-	"AnchorName": "Anchor2",
-	"MotionFlag": "Run",
-	"Duration": -1,
-	"AvoidOthers": true,
-	"DontTurnInPlaceInEnd": true
-}</pre>
-:{{A|VO side1 tp seele 124.ogg}} '''Seele:''' Look, you guys. Looks like it wants to leave.
-:{{A|VO side1 tp mar7th 245 m.ogg}} {{A|VO side1 tp mar7th 245 f.ogg}} '''March 7th:''' Looks like they want to find their master. Let's follow them, (Trailblazer).
-----
+:{{tx}}
 {{Dialogue End}}
 
 ===Follow Numby deeper into the Great Mines{{subst:void|<!--201020204-->}}===
 {{Mission Description|type=continuance|location=Great Mine|update|(Trailblazer)'s Trailblaze Daily Report:<br />The Trotter seems to be leading the way for us. Follow it for now.}}
 {{Dialogue Start}}
-;(Upon reaching the destination)
-
-;(Upon reaching the destination)
-----
-:{{A|VO side1 tp2 staffF 101.ogg}} '''Bossy Worker:''' ...Hey, I'm talking to you! Where do you guys store the Geomarrow?
-:{{A|VO side1 tp2 staffG 101.ogg}} '''Timid Miner:''' I&mdash;I really don't know anything!
-:{{A|VO side1 tp2 staffF 102.ogg}} '''Bossy Worker:''' Tsk, this place is filled with nothing but incompetents...
-:{{A|VO side1 tp2 seele 101.ogg}} '''Seele:''' Those cowards! I guess they wanna do this the hard way!
-;(Enter battle)
-:{{Enemy List|Automaton Hound*2; Grunt: Security Personnel*1; Grunt: Field Personnel*1}}
-;(Upon reaching the destination)
-
-;(Upon reaching the destination)
-:{{A|VO side1 tp2 staffE 101.ogg}} '''Fleeing Miner:''' H&mdash;Help! Those people dressed in black are attacking us!
-<pre>{
-	"$type": "RPG.GameCore.CharacterNavigateTo",
-	"CharacterUniqueName": "NPC_201020206_1",
-	"AreaName": "LevelArea_P43101_F43101001_G7",
-	"AnchorName": "Anchor1",
-	"MotionFlag": "Run",
-	"WaitUntilFinish": true,
-	"Duration": -1,
-	"AvoidOthers": true,
-	"DontTurnInPlaceInEnd": true
-}</pre>
-<pre>{
-	"$type": "RPG.GameCore.CharacterNavigateTo",
-	"CharacterUniqueName": "NPC_201020206_2",
-	"AreaName": "LevelArea_P43101_F43101001_G7",
-	"AnchorName": "Anchor2",
-	"MotionFlag": "Run",
-	"WaitUntilFinish": true,
-	"Duration": -1,
-	"AvoidOthers": true,
-	"TurnInPlace": true
-}</pre>
-;(Upon reaching the destination)
-
-;(Upon reaching the destination)
-:{{A|VO side1 tp2 zhangzhang 101.ogg}} '''Numby:''' Oink! Oink, oink!
-:{{A|VO side1 tp2 mar7th 111.ogg}} '''March 7th:''' Huh? Looks like Numby's in a good mood.
-:{{A|VO side1 tp2 seele 102.ogg}} '''Seele:''' ...But aren't they on the IPC's side? Strange...
-
-;(Upon reaching the destination)
-----
-:{{A|VO side1 tp2 zhangzhang 102.ogg}} '''Numby:''' Oink... Oink! Oink!
-:{{A|VO side1 tp2 mar7th 112.ogg}} '''March 7th:''' Look &mdash; that big guy down there &mdash; is he the one in charge?
-:{{A|VO side1 tp2 seele 103.ogg}} '''Seele:''' Hmph! We'll see who's really in charge. Let's go!
-----
-:{{A|VO side1 tp mar7th 246.ogg}} '''March 7th:''' Huh? Where'd Numby go?
-:{{A|VO side1 tp seele 125.ogg}} '''Seele:''' Wow, for something so short and stubby, he's pretty nimble.
-:{{A|VO side1 tp seele 126.ogg}} '''Seele:''' Well, I guess that's that. We're on our own now. Let's keep going.
+:{{tx}}
 {{Dialogue End}}
 
 ===Confront the IPC Workers in the depths of the Great Mine{{subst:void|<!--201020208-->}}===
 {{Mission Description|type=continuance|location=Great Mine|update|(Trailblazer)'s Trailblaze Daily Report:<br />Found the IPC's rascals. Little Trotter was pretty useful. Time to smash.}}
 {{Dialogue Start}}
-;(Upon reaching the destination)
-
-;(Upon reaching the destination)
-:{{A|VO side1 tp seele 127.ogg}} '''Seele:''' Hey, you! Are you in charge around here?
-:{{A|VO side1 tp staffB 101.ogg}} '''Team Leader:''' A local? The IPC is currently conducting asset evaluation work here. Local residents are advised to follow those responsible for evacuation to the&mdash;
-:{{A|VO side1 tp seele 128.ogg}} '''Seele:''' Don't lie to us! You seized the mine by force for yourself &mdash; you drove the locals out of their homes!
-:{{A|VO side1 tp seele 129.ogg}} '''Seele:''' I'm warning you &mdash; get lost or suffer the consequences! Don't you dare show your face around here again!
-:{{A|VO side1 tp staffB 102.ogg}} '''Team Leader:''' And who might you be? You have quite the attitude... This is our jurisdiction now &mdash; we are all-powerful here.
-:{{DIcon|Arrow}} Topaz just lets you do whatever you want?
-:{{DIcon|Arrow}} I want to speak to your boss!
-::{{A|VO side1 tp mar7th 247.ogg}} '''March 7th:''' Yeah! We demand to speak with Topaz!
-:{{A|VO side1 tp staffB 103.ogg}} '''Team Leader:''' You know Topaz? Interesting...
 :{{tx}}
-:{{tx}}
-----
-:{{A|VO side1 tp mar7th 250.ogg}} '''March 7th:''' Phew... So are we all good here, or what?
-:{{A|VO side1 tp seele 132.ogg}} '''Seele:''' Yeah. Judging by the looks on their faces, I don't think they'll be back.
-:{{A|VO side1 tp seele 133.ogg}} '''Seele:''' So who is this "Topaz" anyway? She seems to have no problem ordering these idiots around, or taming Fragmentum creatures, for that matter...
-:{{A|VO side1 tp mar7th 251.ogg}} '''March 7th:''' It's a long story...
-:{{DIcon|Arrow}} You're better off asking Bronya.
-:{{DIcon|Arrow}} Belobog is in debt...
-::{{A|VO side1 tp seele 134.ogg}} '''Seele:''' Debt? What do you mean?
-::{{A|VO side1 tp mar7th 252.ogg}} '''March 7th:''' You should probably ask Bronya to explain it to you.
-:{{A|VO side1 tp seele 135.ogg}} '''Seele:''' Why did this mess have to happen so close to the festivities? The timing couldn't have been any worse.
-:{{A|VO side1 tp mar7th 253.ogg}} '''March 7th:''' ...Oh! Looks like we've got a message.
-<pre>{
-	"$type": "RPG.GameCore.PlayMessage",
-	"MessageSectionID": 1115400,
-	"ShowNotice": true
-}</pre>
-:{{A|VO side1 tp mar7th 254 m.ogg}} {{A|VO side1 tp mar7th 254 f.ogg}} '''March 7th:''' Hmm... I get the feeling Bronya's worried about something. We'd better go back and see her, (Trailblazer).
-:{{A|VO side1 tp mar7th 255.ogg}} '''March 7th:''' Are you coming with us, Seele?
-:{{A|VO side1 tp seele 136.ogg}} '''Seele:''' Go on without me, I still have stuff to take care of. The miners need to know what happened here.
-:{{A|VO side1 tp seele 137.ogg}} '''Seele:''' Bronya messaged you, which means she thinks you can help. I trust her judgment.
-:{{A|VO side1 tp mar7th 256.ogg}} '''March 7th:''' Got it, Seele. We'll do what we can to help Bronya out.
-:{{A|VO side1 tp mar7th 257 m.ogg}} {{A|VO side1 tp mar7th 257 f.ogg}} '''March 7th:''' Come on, (Trailblazer), to Qlipoth Fort.
 {{Dialogue End}}
 
 ===Follow Numby deeper into the Great Mines{{subst:void|<!--201020205-->}}===
 {{Mission Description|type=continuance|location=Great Mine|update|(Trailblazer)'s Trailblaze Daily Report:<br />The Trotter seems to be leading the way for us. Follow it for now.}}
 {{Dialogue Start}}
-;(Upon reaching the destination)
-
-;(Upon reaching the destination)
-:{{A|VO side1 tp zhangzhang 104.ogg}} '''Numby:''' Oink? Oink, oink... Grunt!
-<pre>{
-	"$type": "RPG.GameCore.CharacterNavigateTo",
-	"CharacterUniqueName": "Zhang_201020205",
-	"AreaName": "LevelArea_P43101_F43101001_G6",
-	"AnchorName": "Anchor1",
-	"Duration": -1,
-	"AvoidOthers": true,
-	"DontTurnInPlaceInEnd": true
-}</pre>
-:<!--2-second delay-->
+:{{tx}}
 {{Dialogue End}}
 
 ==Other Languages==

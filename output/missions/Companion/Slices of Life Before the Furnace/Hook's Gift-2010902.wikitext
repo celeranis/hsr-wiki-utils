@@ -44,335 +44,49 @@ PageTitle=#Hook's Gift#
 ===Talk to the auctioneer and wait for the auction to begin{{subst:void|<!--201090201-->}}===
 {{Mission Description|type=companion|location=Robot Settlement|Every possible buyer at the auction can help you sell "Junjun" at a high price. Once you're ready, find the auctioneer and wait for the auction to begin.<br />Keep looking and searching, because everyone here might become a fan of "Junjun."}}
 {{Dialogue Start}}
-----
-:{{A|VO Side1 hk3 auctioneerB 117.ogg}} '''Auctioneer:''' The next item has been provided by Hook, a gemstone collector from Boulder Town. It's a handmade teddy bear adorned with erebus.
-:{{A|VO Side1 hk3 auctioneerB 118.ogg}} '''Auctioneer:''' An innovative design! It combines incredibly valuable erebus gemstones with, uh... a good old-fashioned cuddly teddy bear! The opening bid is 300 shield.
-:{{A|VO Side1 hk3 buyerA 111.ogg}} '''Weird Man:''' 325!
-:{{A|VO Side1 hk3 auctioneerB 119.ogg}} '''Auctioneer:''' Oh, you're adding 25? Isn't that...
-:{{A|VO Side1 hk3 buyerA 112.ogg}} '''Weird Man:''' What's the problem with 325? That's my offer!
-:{{A|VO Side1 hk3 buyerB 111.ogg}} '''Gemologist:''' 350!
-;(If {{cx}}{{subst:void|<!--{"$type":"RPG.GameCore.ByComparePropState","TargetType":{"$type":"RPG.GameCore.TargetFetchAdvPropEx","FetchType":"SinglePropByPropID","SinglePropID":{"GroupID":{"fixedValue":{"Value":1}},"ID":{"fixedValue":{"Value":300001}}}},"State":"Open","TaskEnabled":true,"IsClientOnly":true}-->}})
-::{{A|VO Side1 hk3 buyerC 115.ogg}} '''Old Lady With Poor Eyesight:''' I'll add another 50!
-;(If {{cx}}{{subst:void|<!--{"$type":"RPG.GameCore.ByComparePropState","TargetType":{"$type":"RPG.GameCore.TargetFetchAdvPropEx","FetchType":"SinglePropByPropID","SinglePropID":{"GroupID":{"fixedValue":{"Value":1}},"ID":{"fixedValue":{"Value":300001}}}},"State":"Open","TaskEnabled":true,"IsClientOnly":true}-->}})
-:;(Return to previous option selection)
-;(Unused &mdash; 201090201_next)
-:{{A|VO Side1 hk3 buyerB 112.ogg}} '''Gemologist:''' I'm putting my reputation as a gemologist on the line &mdash; I have to get my hands on that erebus... Add another 100 shield!
-:;(If {{cx}}{{subst:void|<!--{"$type":"RPG.GameCore.ByComparePropState","TargetType":{"$type":"RPG.GameCore.TargetFetchAdvPropEx","FetchType":"SinglePropByPropID","SinglePropID":{"GroupID":{"fixedValue":{"Value":1}},"ID":{"fixedValue":{"Value":300001}}}},"State":"Open","TaskEnabled":true,"IsClientOnly":true}-->}})
-:;(If {{cx}}{{subst:void|<!--{"$type":"RPG.GameCore.ByComparePropState","TargetType":{"$type":"RPG.GameCore.TargetFetchAdvPropEx","FetchType":"SinglePropByPropID","SinglePropID":{"GroupID":{"fixedValue":{"Value":1}},"ID":{"fixedValue":{"Value":300001}}}},"State":"Open","TaskEnabled":true,"IsClientOnly":true}-->}})
-::;(Return to previous option selection)
-
-;(Unused &mdash; 201090201_end)
-:{{A|VO Side1 hk3 buyerB 113.ogg}} '''Gemologist:''' Phew! The gems belong to me.
-::{{A|VO Side1 hk3 hook 161.ogg}} '''Hook:''' Hmm... I hope this money is enough to buy the probe...
-::{{DIcon|Arrow}} Don't worry, we have a solid chance.
-:::{{A|VO Side1 hk3 hook 162.ogg}} '''Hook:''' ...You're right, let's do this!
-::{{DIcon|Arrow}} Even if it isn't, you can still get another gift.
-:::{{A|VO Side1 hk3 hook 163.ogg}} '''Hook:''' That's true, but I want to help daddy get his treasure back...
-::----
-::{{A|VO Side1 hk3 auctioneerB 132.ogg}} '''Auctioneer:''' The bidding for the Geomarrow Probe has been postponed due to unanticipated complications at the venue. Please be patient and don't leave the auction if you want to bid on it...
-::{{A|VO Side1 hk3 auctioneerB 133.ogg}} '''Auctioneer:''' Don't worry, everyone &mdash; just a minor technical issue! We'll take a quick break now, and the auction will resume soon.
-::{{A|VO Side1 hk3 hook 164 m.ogg}} {{A|VO Side1 hk3 hook 164 f.ogg}} '''Hook:''' ...A break? (Trailblazer), do you think there's something wrong with the Geomarrow Probe?
-::{{DIcon|Arrow}} Let's go ask them.
-::{{DIcon|Arrow}} "Technical glitches" are always excuses...
-::{{A|VO Side1 hk3 hook 165.ogg}} '''Hook:''' Let's go ask that staff member!
-::----
+:{{tx}}
 {{Dialogue End}}
 
 ===Ask the staff why the auction has been suspended{{subst:void|<!--201090202-->}}===
 {{Mission Description|type=companion|location=Robot Settlement|update|The auction has been suspended because of some technical issues. What issues?<br />Is the Geomarrow Probe that you and Hook have been waiting for still here?}}
 {{Dialogue Start}}
-
-;(Talk to Auction Staff)
-:{{A|VO Side1 hk3 hook 166.ogg}} '''Hook:''' What happened to the Geomarrow Probe? Tell me right now! Straight away! Immediately!
-:{{A|VO Side1 hk3 auctioneerA 128.ogg}} '''Auction Staff:''' Uh... There's nothing to worry about &mdash; it's just a technical issue.
-:{{A|VO Side1 hk3 hook 167.ogg}} '''Hook:''' ...You don't sound very convincing! *gasp* ...Did someone steal it?
-:{{A|VO Side1 hk3 auctioneerA 129.ogg}} '''Auction Staff:''' ...Well, we can't say for sure that it was "stolen..." We've contacted the seller and sent some people in search. We should soon be able to...
-:{{DIcon|Arrow}} This place is full of troublemakers.
-::{{A|VO Side1 hk3 hook 168.ogg}} '''Hook:''' Yeah, why wasn't Wildfire keeping a lookout?
-:{{DIcon|Arrow}} Who would dare steal from Wildfire?
-::{{A|VO Side1 hk3 hook 169.ogg}} '''Hook:''' Yeah, why is Wildfire so incompetent? You should have put The Moles in charge!
-:{{A|VO Side1 hk3 hook 170.ogg}} '''Hook:''' I gotta catch the thief and get the probe back! Any ideas, honorary member?
-:{{DIcon|Arrow}} Let's have a look at the auction registration form.
-:{{A|VO Side1 hk3 auctioneerA 130.ogg}} '''Auction Staff:''' Are you suggesting that someone altered the registration form? That's simply not possible! We've been keeping a close eye on everything...
-:{{A|VO Side1 hk3 hook 171 m.ogg}} {{A|VO Side1 hk3 hook 171 f.ogg}} '''Hook:''' Fool! What the honorary member means is that the thief only came here to create trouble &mdash; they weren't interested in buying or selling! Right, (Trailblazer)?
-:{{DIcon|Arrow}} You're smarter than I thought!
-::{{A|VO Side1 hk3 hook 172.ogg}} '''Hook:''' When the going gets smart, the boss of The Moles gets smarter!
-:{{DIcon|Arrow}} This guy should give us half his salary...
-::{{A|VO Side1 hk3 auctioneerA 131.ogg}} '''Auction Staff:''' I don't have a salary to give! I'm a volunteer... *sigh*
-:{{A|VO Side1 hk3 auctioneerA 132.ogg}} '''Auction Staff:''' Wait a minute, let me see...
-:{{A|VO Side1 hk3 auctioneerA 133.ogg}} '''Auction Staff:''' ...Hmm, aside from you, there was someone else who registered as a buyer but never put in a bid!
-:{{A|VO Side1 hk3 auctioneerA 134.ogg}} '''Auction Staff:''' ...And I think there was a miner who registered with him. Come on, let's go and interrogate them.
+:{{tx}}
 {{Dialogue End}}
 
 ===Ask for more information about this suspicious buyer{{subst:void|<!--201090203-->}}===
 {{Mission Description|type=companion|location=Robot Settlement|update|Apart from you, there is another buyer who hasn't participated in the auction and has left. You want to learn more about this buyer.<br />Although your reasons for suspicion seem farfetched, you still think this buyer is suspicious. Why are there so many thieves here?}}
 {{Dialogue Start}}
-
-;(Talk to Naive Miner)
-:{{A|VO Side1 hk3 auctioneerA 135.ogg}} '''Auction Staff:''' Hi, excuse me... may I ask where the miner who registered with you has gone?
-:{{A|VO Side1 hk3 minerH 103.ogg}} '''Naive Miner:''' ...Him? I think he went back into town.
-:{{A|VO Side1 hk3 hook 173.ogg}} '''Hook:''' So... he already ran away?
-:{{A|VO Side1 hk3 minerH 104.ogg}} '''Naive Miner:''' He came here saying he wanted to buy the Geomarrow Probe, but then he changed his mind for some reason and ran back to Boulder Town alone.
-:{{DIcon|Arrow}} Where can you usually find him?
-:{{A|VO Side1 hk3 minerH 105.ogg}} '''Naive Miner:''' I don't know him all that well. Why don't you just head into town and look for him?
-:{{A|VO Side1 hk3 auctioneerA 136.ogg}} '''Auction Staff:''' Do you really think he'll turn out to be a thief? I'm not so sure now...
-:{{A|VO Side1 hk3 auctioneerA 137.ogg}} '''Auction Staff:''' Ahem, anyway. Outsiders, you should go and look for him in Boulder Town. I need to make sure the other buyers haven't left. If you don't find anything, the thief might still be among us...
+:{{tx}}
 {{Dialogue End}}
 
 ===Return to Boulder Town and find the suspect{{subst:void|<!--201090204-->}}===
 {{Mission Description|type=companion|location=Boulder Town|update|Of course, the suspect came to the auction for the Geomarrow Probe. It will be too late once they've sold it off, so hurry up and catch them!<br />Wait, what's this feeling of déjà vu? Like this happened not too long ago...}}
 {{Dialogue Start}}
-;(Upon reaching the destination)
-
-;(Upon reaching the destination)
-----
-:{{A|VO Side1 hk3 hook 175.ogg}} '''Hook:''' Hey, you! Did you take the Geomarrow Probe? Hand it over, right now!
-:{{A|VO Side1 hk3 minerG 105.ogg}} '''Suspicious Miner:''' ...Huh &mdash; what? Who are you? Where are the people I'm supposed to meet up with?
-:{{A|VO Side1 hk3 hook 176.ogg}} '''Hook:''' Honorary member, we shouldn't waste any time talking to him. Let's just knock him out!
-:{{A|VO Side1 hk3 minerG 106.ogg}} '''Suspicious Miner:''' Hahahaha, what could a couple of brats do to me? Do you even know how much the probe is worth?
-:{{DIcon|Arrow}} It's a very important treasure.
-:{{DIcon|Arrow}} Shut it, thief!
-:{{A|VO Side1 hk3 minerG 107.ogg}} '''Suspicious Miner:''' You two better think twice. The boss put in a lot of effort to find this item. If you even...
-:{{A|VO Side1 hk3 hook 177.ogg}} '''Hook:''' Enough talk! How about a Diggertron knuckle sandwich!
-;(Enter battle)
-:{{Enemy List|Automaton Spider*2; Vagrant*1}}
-----
-:{{A|VO Side1 hk3 minerG 108.ogg}} '''Suspicious Miner:''' Okay, enough! I give up, okay!? S&mdash;Stay calm! I'll give you the probe, just listen to me...
-:{{A|VO Side1 hk3 minerG 109.ogg}} '''Suspicious Miner:''' I overheard the auctioneer say that the Geomarrow Probe would fetch at least 600 shield... 600 shield! Have you ever seen that much money?
-:{{DIcon|Arrow}} I'm one of the ten wealthiest people in Belobog...
-::{{A|VO Side1 hk3 minerG 110.ogg}} '''Suspicious Miner:''' Tsk. You? Yeah right. I don't believe you!
-:{{DIcon|Arrow}} Don't try to fool this kid. She's smart.
-::{{A|VO Side1 hk3 minerG 111.ogg}} '''Suspicious Miner:''' ...Why would I lie to you at this point?
-:{{A|VO Side1 hk3 minerG 112.ogg}} '''Suspicious Miner:''' How about this. The boss, along with a few buddies and I &mdash; we put together 600 shield and buy the probe from you, hmm?
-:{{A|VO Side1 hk3 hook 178.ogg}} '''Hook:''' ...No! Hook won't do that!
-:{{A|VO Side1 hk3 minerG 113.ogg}} '''Suspicious Miner:''' Come on missy, don't be so stubborn. We can talk it over...
-:{{A|VO Side1 hk3 minerG 114.ogg}} '''Suspicious Miner:''' Oh... I see. You just wanna keep the probe to yourselves, right? *sigh* And here I was thinking I'd met some nice people. You're worse than I am...
-:{{A|VO Side1 hk3 hook 179.ogg}} '''Hook:''' ...
-:{{DIcon|Arrow}} This belongs to your dad, Hook.
-::{{A|VO Side1 hk3 hook 180.ogg}} '''Hook:''' ...Maybe it did in the beginning, but things have changed now.
-:{{DIcon|Arrow}} Do you know what to do, Hook?
-::{{A|VO Side1 hk3 hook 181.ogg}} '''Hook:''' ...Yeah, of course I do!
-:{{A|VO Side1 hk3 hook 182.ogg}} '''Hook:''' Let's go, honorary member! Back to the auction.
-:{{A|VO Side1 hk3 minerG 115.ogg}} '''Suspicious Miner:''' Wait a minute! You're just gonna give it back? That's 600 shield! 600! At least think about it!
-:{{A|VO Side1 hk3 hook 183.ogg}} '''Hook:''' There's nothing to think about, Mr. Thief! I want this detector, but I don't wanna be a louse like you!
-:{{A|VO Side1 hk3 hook 184 m.ogg}} {{A|VO Side1 hk3 hook 184 f.ogg}} '''Hook:''' We're gonna win it at the auction, fair and square! Let's go, (Trailblazer)!
-----
-;(Obtain {{Item|Geomarrow Probe|20|x=1}})
+:{{tx}}
 {{Dialogue End}}
 
 ===Get back to the auction and return the Geomarrow Probe{{subst:void|<!--201090206-->}}===
 {{Mission Description|type=companion|location=Robot Settlement|update|Although Hook knows she might not get the Geomarrow Probe, she decides to return it to the auction. You know that she has made up her mind.<br />This child may have told a few white lies over trivial matters, but she has a heart of gold.}}
 {{Dialogue Start}}
-
-;(Talk to Auction Staff)
-:{{A|VO Side1 hk3 auctioneerA 138.ogg}} '''Auction Staff:''' ...You got the probe back? Amazing! Fantastic!
-<pre>{
-	"$type": "RPG.GameCore.ConsumeMissionItem",
-	"SubMissionID": 201090206,
-	"Desc": {
-		"Hash": -1810977507
-	}
-}</pre>
-:{{A|VO Side1 hk3 auctioneerA 139.ogg}} '''Auction Staff:''' The owner asked me to pass on 150 shield as a reward for retrieving it.
-:{{A|VO Side1 hk3 auctioneerA 140.ogg}} '''Auction Staff:''' And thanks to you, the auction house has regained its credibility. Please accept an extra 50 shield!
-:{{A|VO Side1 hk3 hook 185.ogg}} '''Hook:''' That's 200 shield! R&mdash;Really?
-:{{A|VO Side1 hk3 auctioneerA 141.ogg}} '''Auction Staff:''' You've earned it. Besides, if you win the bid for the Geomarrow Probe, you'll have paid back the seller anyway, right?
-:{{DIcon|Arrow}} So this is like a discount from the seller?
-::{{A|VO Side1 hk3 auctioneerA 142.ogg}} '''Auction Staff:''' Well, I didn't say that, but you could certainly interpret it that way.
-:{{DIcon|Arrow}} Then we'll happily accept it...
-::{{A|VO Side1 hk3 auctioneerA 143.ogg}} '''Auction Staff:''' Haha, you should check your reflections. Your eyes light up whenever money's involved.
-;(If {{cx}}{{subst:void|<!--{"$type":"RPG.GameCore.ByComparePropState","TargetType":{"$type":"RPG.GameCore.TargetFetchAdvPropEx","FetchType":"SinglePropByPropID","SinglePropID":{"GroupID":{"fixedValue":{"Value":1}},"ID":{"fixedValue":{"Value":300001}}}},"State":"Open","TaskEnabled":true,"IsClientOnly":true}-->}})
-;(If {{cx}}{{subst:void|<!--{"$type":"RPG.GameCore.ByComparePropState","TargetType":{"$type":"RPG.GameCore.TargetFetchAdvPropEx","FetchType":"SinglePropByPropID","SinglePropID":{"GroupID":{"fixedValue":{"Value":1}},"ID":{"fixedValue":{"Value":300001}}}},"State":"Open","TaskEnabled":true,"IsClientOnly":true}-->}})
-:;(Return to previous option selection)
-----
-:{{A|VO Side1 hk3 auctioneerB 134.ogg}} '''Auctioneer:''' ...The next item up for auction has been provided by a veteran prospector from the vagrant camp. It's an ancient relic &mdash; a Geomarrow Probe.
-:{{A|VO Side1 hk3 auctioneerB 135.ogg}} '''Auctioneer:''' The item itself was once a key component of another Old World relic, and its one-of-a-kind craftsmanship has long since ceased to exist. This meticulously preserved probe is a rare work of art! The opening bid is 400 shield.
-:{{DIcon|Arrow}} 420!
-:{{A|VO Side1 hk3 buyerF 101.ogg}} '''Simple Male Voice:''' 450!
-:{{A|VO Side1 hk3 buyerG 101.ogg}} '''Sharp Female Voice:''' 480!
-:{{DIcon|Arrow}} 500!
-:{{A|VO Side1 hk3 buyerH 101.ogg}} '''Trembling Old Person Voice:''' 520!
-:{{A|VO Side1 hk3 buyerF 102.ogg}} '''Simple Male Voice:''' 550!
-:{{A|VO Side1 hk3 buyerG 102.ogg}} '''Sharp Female Voice:''' 560!
-:{{DIcon|Arrow}} 600!
-:{{A|VO Side1 hk3 hook 190.ogg}} '''Hook:''' Order! Order! You're just throwing bids out at random!
-:{{A|VO Side1 hk3 buyerH 102.ogg}} '''Trembling Old Person Voice:''' 650!
-:{{A|VO Side1 hk3 buyerF 103.ogg}} '''Simple Male Voice:''' 700!
-:{{A|VO Side1 hk3 buyerH 103.ogg}} '''Trembling Old Person Voice:''' 720! *coughing*
-:{{A|VO Side1 hk3 hook 191 m.ogg}} {{A|VO Side1 hk3 hook 191 f.ogg}} '''Hook:''' Argh, (Trailblazer)! Everyone's looking at us! What should we do?
-:{{DIcon|Arrow}} Over to you, Hook.
-:{{DIcon|Arrow}} Let's go all in!
-;(If {{cx}}{{subst:void|<!--{"$type":"RPG.GameCore.ByComparePropState","TargetType":{"$type":"RPG.GameCore.TargetFetchAdvPropEx","FetchType":"SinglePropByPropID","SinglePropID":{"GroupID":{"fixedValue":{"Value":1}},"ID":{"fixedValue":{"Value":300001}}}},"State":"Open","TaskEnabled":true,"IsClientOnly":true}-->}})
-;(If {{cx}}{{subst:void|<!--{"$type":"RPG.GameCore.ByComparePropState","TargetType":{"$type":"RPG.GameCore.TargetFetchAdvPropEx","FetchType":"SinglePropByPropID","SinglePropID":{"GroupID":{"fixedValue":{"Value":1}},"ID":{"fixedValue":{"Value":300001}}}},"State":"Open","TaskEnabled":true,"IsClientOnly":true}-->}})
-:;(Return to previous option selection)
-;(Unused &mdash; TalkSentence_201235442)
-::{{DIcon|Arrow}} We did our best.
-::{{DIcon|Arrow}} Let's head back, Hook.
-::{{DIcon|Arrow}} I'll give you my shield, too.
-:::{{A|VO Side1 hk3 hook 195.ogg}} '''Hook:''' But the auction's over now...
-:{{A|VO Side1 hk3 hook 196.ogg}} '''Hook:''' *sob* Daddy's Geomarrow Probe...
-::{{DIcon|Arrow}} Aren't there any other gifts you could send him?
-:::{{A|VO Side1 hk3 hook 197.ogg}} '''Hook:''' ...
-:::{{DIcon|Arrow}} Don't wanna accept defeat, huh?
-:::{{DIcon|Arrow}} Hook?
-:::{{A|VO Side1 hk3 hook 198.ogg}} '''Hook:''' ...Hook still thinks the probe is the best gift.
-::{{DIcon|Arrow}} Do you regret not making a deal with the thief?
-:::{{A|VO Side1 hk3 hook 199.ogg}} '''Hook:''' I did the right thing! H&mdash;Hook regrets nothing...
-::{{A|VO Side1 hk3 hook 200.ogg}} '''Hook:''' Just now... I thought I saw the old witch. Was Hook imagining things?
-::{{A|VO Side1 hk3 hook 201.ogg}} '''Hook:''' Ugh... what does it matter, Hook didn't get the gift. I'll have to go back and ask the old witch for ideas.
-
-;(Unused &mdash; TalkSentence_201235487)
-:{{DIcon|Arrow}} Wake up! This isn't a dream!
-::{{A|VO Side1 hk3 hook 204.ogg}} '''Hook:''' Woohoo!!! Hook actually won the bid!
-::{{A|VO Side1 hk3 hook 205 m.ogg}} {{A|VO Side1 hk3 hook 205 f.ogg}} '''Hook:''' (Trailblazer), thank you so much... Hook would never have won the probe without your help!
-::{{DIcon|Arrow}} What makes you say that...?
-:::{{A|VO Side1 hk3 hook 206.ogg}} '''Hook:''' ...No explanation needed! Just accept Pitch-Dark Hook the Great's gratitude!
-::{{DIcon|Arrow}} It's what an honorary member should do.
-:::{{A|VO Side1 hk3 hook 207.ogg}} '''Hook:''' Haha... It doesn't matter whether you're an honorary member or not. Just accept Pitch-Dark Hook the Great's gratitude!
-::{{A|VO Side1 hk3 hook 208.ogg}} '''Hook:''' Let's go see the old witch later! I'll ask her to wrap this probe up as a beautiful gift for daddy!
-
-;(Unused &mdash; TalkSentence_201235503)
-:{{DIcon|Arrow}} Wake up! This isn't a dream!
-::{{A|VO Side1 hk3 hook 204.ogg}} '''Hook:''' Woohoo!!! Hook actually won the bid!
-::{{A|VO Side1 hk3 hook 205 m.ogg}} {{A|VO Side1 hk3 hook 205 f.ogg}} '''Hook:''' (Trailblazer), thank you so much... Hook would never have won the probe without your help!
-::{{A|VO Side1 hk3 hook 214 m.ogg}} {{A|VO Side1 hk3 hook 214 f.ogg}} '''Hook:''' We've got some money left over &mdash; let's use it on the old witch. She helped Hook repair Junjun, so Hook's gonna treat her to some stone-grilled olm! As for you, (Trailblazer)... you've earned Hook's verbal praise!
-::{{DIcon|Arrow}} How about you let me be the boss of The Moles?
-:::{{A|VO Side1 hk3 hook 215.ogg}} '''Hook:''' Hmph, don't even think about it! We're not a simple organization! Still, I may consider making you my deputy...
-:::{{A|VO Side1 hk3 hook 216 m.ogg}} {{A|VO Side1 hk3 hook 216 f.ogg}} '''Hook:''' Anyway, enough about The Moles... Thanks for the help, {{MC|f=big sister|m=big brother}}!
-::{{DIcon|Arrow}} Then how about you say "thanks for the help, {{MC|f=big sister|m=big brother}}" ten times in a row?
-:::{{A|VO Side1 hk3 hook 217.ogg}} '''Hook:''' Ten times!? That's too many!
-:::{{A|VO Side1 hk3 hook 218.ogg}} '''Hook:''' I'll say it once. Listen carefully!
-:::{{A|VO Side1 hk3 hook 219 m.ogg}} {{A|VO Side1 hk3 hook 219 f.ogg}} '''Hook:''' Thanks for the help, {{MC|f=big sister|m=big brother}}.
-::{{DIcon|Arrow}} I want money. Give me money.
-:::{{A|VO Side1 hk3 hook 220.ogg}} '''Hook:''' Uhh... there's only this much left, sorry. You'll just have to accept Hook's heartfelt gratitude!
-:::{{A|VO Side1 hk3 hook 221 m.ogg}} {{A|VO Side1 hk3 hook 221 f.ogg}} '''Hook:''' Thanks for the help, {{MC|f=big sister|m=big brother}}.
-::{{DIcon|Arrow}} It's no big deal, I don't need any praise.
-:::{{A|VO Side1 hk3 hook 222.ogg}} '''Hook:''' Hook knows this is what grownups should be like, But Hook still wants to thank you.
-:::{{A|VO Side1 hk3 hook 223 m.ogg}} {{A|VO Side1 hk3 hook 223 f.ogg}} '''Hook:''' Thanks for the help, {{MC|f=big sister|m=big brother}}.
-::{{A|VO Side1 hk3 hook 208.ogg}} '''Hook:''' Let's go see the old witch later! I'll ask her to wrap this probe up as a beautiful gift for daddy!
-;(If {{cx}}{{subst:void|<!--{"$type":"RPG.GameCore.ByComparePropState","TargetType":{"$type":"RPG.GameCore.TargetFetchAdvPropEx","FetchType":"SinglePropByPropID","SinglePropID":{"GroupID":{"fixedValue":{"Value":1}},"ID":{"fixedValue":{"Value":300001}}}},"State":"Open","TaskEnabled":true,"IsClientOnly":true}-->}})
-;(If {{cx}}{{subst:void|<!--{"$type":"RPG.GameCore.ByComparePropState","TargetType":{"$type":"RPG.GameCore.TargetFetchAdvPropEx","FetchType":"SinglePropByPropID","SinglePropID":{"GroupID":{"fixedValue":{"Value":1}},"ID":{"fixedValue":{"Value":300001}}}},"State":"Open","TaskEnabled":true,"IsClientOnly":true}-->}})
-:;(Return to previous option selection)
-;(If {{cx}}{{subst:void|<!--{"$type":"RPG.GameCore.ByComparePropState","TargetType":{"$type":"RPG.GameCore.TargetFetchAdvPropEx","FetchType":"SinglePropByPropID","SinglePropID":{"GroupID":{"fixedValue":{"Value":1}},"ID":{"fixedValue":{"Value":300001}}}},"State":"Open","TaskEnabled":true,"IsClientOnly":true}-->}})
-;(If {{cx}}{{subst:void|<!--{"$type":"RPG.GameCore.ByComparePropState","TargetType":{"$type":"RPG.GameCore.TargetFetchAdvPropEx","FetchType":"SinglePropByPropID","SinglePropID":{"GroupID":{"fixedValue":{"Value":1}},"ID":{"fixedValue":{"Value":300001}}}},"State":"Open","TaskEnabled":true,"IsClientOnly":true}-->}})
-:;(Return to previous option selection)
+:{{tx}}
 {{Dialogue End}}
 
 ===Return to the clinic and ask Natasha to wrap the present{{subst:void|<!--201090208-->}}===
 {{Mission Description|type=companion|location=Natasha's Clinic|update|With strength and a bit of luck, you get the Geomarrow Probe. Hook is not good at wrapping presents, so you have to ask for Natasha's help.<br />Perhaps Hook wants to prove herself by presenting the gift in front of Natasha.}}
 {{Dialogue Start}}
-
-
-;(Talk to Natasha)
-----
-:{{A|VO Side1 hk3 hook 237.ogg}} '''Hook:''' Natasha!
-:{{A|VO Side1 hk3 natasha 128.ogg}} '''Natasha:''' Hook, you look very happy. Did something good happen?
-:{{A|VO Side1 hk3 hook 238.ogg}} '''Hook:''' Mine and daddy's birthday party is starting soon! Can you help me wrap up this gift! I wanna surprise daddy!
-:{{A|VO Side1 hk3 natasha 129.ogg}} '''Natasha:''' *sigh* You rascal... You only come and find me in situations like this.
-:{{A|VO Side1 hk3 hook 239.ogg}} '''Hook:''' Pleeease Natasha! I'll help you clean the clinic for... half a month if you help me!
-:{{A|VO Side1 hk3 natasha 130.ogg}} '''Natasha:''' Deal. I can't believe you won such a valuable item. Junjun must have fetched a small fortune, huh?
-:{{DIcon|Arrow}} We persuaded lots of people to bid on him.
-:{{DIcon|Arrow}} Natasha's craftsmanship was very popular.
-:{{A|VO Side1 hk3 natasha 131.ogg}} '''Natasha:''' Even with the erebus, you must've put in a lot of effort to get such a good price?
-:{{A|VO Side1 hk3 natasha 132.ogg}} '''Natasha:''' Fersman will be very happy with his gift.
-:{{A|VO Side1 hk3 natasha 133 m.ogg}} {{A|VO Side1 hk3 natasha 133 f.ogg}} '''Natasha:''' By the way, Hook, how are your birthday party plans coming along? Have you invited this {{MC|f=young lady|m=young man}}?
-:{{A|VO Side1 hk3 hook 233 m.ogg}} {{A|VO Side1 hk3 hook 233 f.ogg}} '''Hook:''' Oh! Not yet! (Trailblazer), do you wanna come to my birthday party?
-:{{DIcon|Arrow}} Of course.
-::{{A|VO Side1 hk3 hook 234.ogg}} '''Hook:''' Great!
-:{{DIcon|Arrow}} Can I say no?
-::{{A|VO Side1 hk3 hook 235.ogg}} '''Hook:''' Of course not! All members of The Moles must obey Pitch-Dark Hook the Great's commands!
-:{{A|VO Side1 hk3 hook 236.ogg}} '''Hook:''' I'll contact the other members of The Moles too. Come find me when you're ready &mdash; we'll go together!
-----
+:{{tx}}
 {{Dialogue End}}
 
 ===Return to the clinic and ask for Natasha's advice{{subst:void|<!--201090213-->}}===
 {{Mission Description|type=companion|location=Natasha's Clinic|update|You fail to get the Geomarrow Probe, but you still need to prepare a present. You ask for Natasha's advice.<br />She is well-informed and knows Fersman well. Maybe she will give you some great suggestions.}}
 {{Dialogue Start}}
-
-
-;(Talk to Natasha)
-----
-:{{A|VO Side1 hk3 hook 225.ogg}} '''Hook:''' Natasha!
-:{{A|VO Side1 hk3 natasha 116.ogg}} '''Natasha:''' Hook, what's wrong? Has someone been bullying you?
-:{{A|VO Side1 hk3 hook 226.ogg}} '''Hook:''' Mine and daddy's birthday party is starting soon, but I haven't bought daddy his gift yet...
-:{{A|VO Side1 hk3 natasha 117.ogg}} '''Natasha:''' So... the auction didn't go too well, huh?
-:{{DIcon|Arrow}} There are quite a lot of rich people in the Underworld.
-::{{A|VO Side1 hk3 natasha 118.ogg}} '''Natasha:''' It's true. It's ridiculous that a single probe can fetch 750 shield.
-:{{DIcon|Arrow}} You tried your best, Hook.
-::{{A|VO Side1 hk3 natasha 119.ogg}} '''Natasha:''' You made a very high bid... The problem is that there are a lot of wealthy people lurking in the Underworld.
-:{{A|VO Side1 hk3 hook 227.ogg}} '''Hook:''' Huh!? You were at the auction too, Natasha?
-:{{A|VO Side1 hk3 natasha 120.ogg}} '''Natasha:''' Hook, you're upset that you don't have a gift for your daddy, right? Well, what about this?
-:{{A|VO Side1 hk3 hook 228.ogg}} '''Hook:''' ...
-:{{A|VO Side1 hk3 hook 229.ogg}} '''Hook:''' Ah! It's... the Geomarrow Probe from the auction! How did you get it?
-:{{DIcon|Arrow}} That mysterious high-bidding stranger...
-:{{DIcon|Arrow}} It's a rich person's world...
-:{{A|VO Side1 hk3 natasha 121.ogg}} '''Natasha:''' I wasn't planning on saying anything... but I saw a couple of very sad-looking faces in the crowd.
-:{{A|VO Side1 hk3 natasha 123.ogg}} '''Natasha:''' What do you think, Hook? Are you willing to buy the Geomarrow Probe from me?
-:{{A|VO Side1 hk3 hook 230.ogg}} '''Hook:''' ...Th&mdash;This is all the money we got for Junjun. Here, it's all yours!
-:{{A|VO Side1 hk3 natasha 124.ogg}} '''Natasha:''' Let's have a count. Hmm, doesn't seem to be enough...
-:{{A|VO Side1 hk3 hook 231.ogg}} '''Hook:''' ...Hook could also help Natasha clean the clinic for... half a month?
-:{{A|VO Side1 hk3 natasha 125.ogg}} '''Natasha:''' Three months.
-:{{A|VO Side1 hk3 hook 232.ogg}} '''Hook:''' Th&mdash;Three months!? Witchy old... Natasha, let's negotiate...
-:{{A|VO Side1 hk3 natasha 126.ogg}} '''Natasha:''' Ah-uh, no bargaining.
-:{{A|VO Side1 hk3 natasha 127 m.ogg}} {{A|VO Side1 hk3 natasha 127 f.ogg}} '''Natasha:''' By the way, Hook, how are your birthday party plans coming along? Have you invited this {{MC|f=young lady|m=young man}}?
-:{{A|VO Side1 hk3 hook 233 m.ogg}} {{A|VO Side1 hk3 hook 233 f.ogg}} '''Hook:''' Oh! Not yet! (Trailblazer), do you wanna come to my birthday party?
-:{{DIcon|Arrow}} Of course.
-::{{A|VO Side1 hk3 hook 234.ogg}} '''Hook:''' Great!
-:{{DIcon|Arrow}} Can I say no?
-::{{A|VO Side1 hk3 hook 235.ogg}} '''Hook:''' Of course not! All members of The Moles must obey Pitch-Dark Hook the Great's commands!
-:{{A|VO Side1 hk3 hook 236.ogg}} '''Hook:''' I'll contact the other members of The Moles too. Come find me when you're ready &mdash; we'll go together!
-----
+:{{tx}}
 {{Dialogue End}}
 
 ===Find Hook and get ready for the birthday party{{subst:void|<!--201090209-->}}===
 {{Mission Description|type=companion|location=Boulder Town|update|Hook is calling her friends in the Moles. Find her so you can celebrate her birthday with them.<br />Although people in Boulder Town live in scarcity, they always know how to enjoy life. Hook and her father's birthday party will be another happy moment for them.}}
 {{Dialogue Start}}
-
-;(Talk to Hook)
-:{{A|VO Side1 hk3 julian 101.ogg}} '''Julian:''' Boss, the "big hero" you mentioned is here.
-:{{A|VO Side1 hk3 hook 244.ogg}} '''Hook:''' Julian, knock it off!
-:{{DIcon|Arrow}} "Big hero"?
-::{{A|VO Side1 hk3 hook 245.ogg}} '''Hook:''' Argh, you heard that? Don't get too cocky, honorary member!
-:{{DIcon|Arrow}} What are you guys talking about?
-::{{A|VO Side1 hk3 hook 246.ogg}} '''Hook:''' Nothing! Hmph, Hook would never compliment an honorary member behind their back.
-:{{A|VO Side1 hk3 hook 247.ogg}} '''Hook:''' We were talking about the birthday party. You wanna hear about it too?
-:{{DIcon|Talk}} What will there be to eat?
-::{{A|VO Side1 hk3 hook 248.ogg}} '''Hook:''' Aunt Gertie always makes a big Black Bean Cake for Hook's birthday!
-::{{A|VO Side1 hk3 hook 249.ogg}} '''Hook:''' Oh! Oh! And daddy always makes a huge Roasted Rock Crab for me. It makes my mouth water just thinking about it!
-::{{A|VO Side1 hk3 hook 250.ogg}} '''Hook:''' And don't forget about Diggertron! Daddy brings a year's worth of machine oil and Diggertron drinks it all up!
-::{{DIcon|Arrow}} Sounds like they spoil you...
-::{{A|VO Side1 hk3 hook 251.ogg}} '''Hook:''' I'm the boss of The Moles! If I don't get enough to eat, how will I have the energy to punish villains?
-:;(Return to previous option selection)
-:{{DIcon|Talk}} Who have you invited?
-::{{A|VO Side1 hk3 hook 252.ogg}} '''Hook:''' Well, I had to invite daddy first! Speaking of birthdays, daddy never used to celebrate them. He only started doing it when he adopted Hook.
-::{{A|VO Side1 hk3 hook 253.ogg}} '''Hook:''' I also invited other members of The Moles, and... Oh yeah! Seele too! She couldn't come today, but she said she'd still send me a gift.
-::{{A|VO Side1 hk3 hook 254 m.ogg}} {{A|VO Side1 hk3 hook 254 f.ogg}} '''Hook:''' I also invited the old witch, Swetta, aaaand... you, of course! The honorary member (Trailblazer)!
-:;(Return to previous option selection)
-:{{DIcon|Arrow}} Let's get going.
-----
-:{{A|VO Side1 hk3 fersman 101.ogg}} '''Fersman:''' I do hope you'll forgive the ramblings of an old man, but I would like to say a few words...
-:{{A|VO Side1 hk3 fersman 102.ogg}} '''Fersman:''' I had no idea when my birthday was before I adopted Hook, and I most certainly did not celebrate it.
-:{{A|VO Side1 hk3 fersman 103.ogg}} '''Fersman:''' I didn't realize how important birthday celebrations were until I met my daughter... That is why I chose to have my birthday on the same day as Hook, so that we could celebrate this special day together.
-:{{A|VO Side1 hk3 fersman 104.ogg}} '''Fersman:''' That continued year after year... until I, too, began to look forward to the party.
-:{{A|VO Side1 hk3 fersman 105 m.ogg}} {{A|VO Side1 hk3 fersman 105 f.ogg}} '''Fersman:''' Today is an extra special day. In addition to The Moles, Hook has invited a dear and brave new friend. (Trailblazer), I hope you have a wonderful time at the party today!
-:{{DIcon|Arrow}} Thank you for inviting me.
-:{{DIcon|Arrow}} I guess I did help out a little.
-::{{A|VO Side1 hk3 hook 255.ogg}} '''Hook:''' That's right, this honorary member helped Hook a lot!
-:{{A|VO Side1 hk3 fersman 106.ogg}} '''Fersman:''' Natasha told me that you helped Hook retrieve her teddy bear. It used to be that Hook could only fall asleep when she held that bear in her arms.
-:{{A|VO Side1 hk3 hook 256.ogg}} '''Hook:''' D&mdash;Daddy! Don't bring that up! Hook's grown up now &mdash; I can sleep without hugging Junjun...
-:{{A|VO Side1 hk3 fersman 107.ogg}} '''Fersman:''' Life has gotten increasingly difficult since we left the mining town. All those days away at work have meant that your dad hasn't always been around to look after you.
-:{{A|VO Side1 hk3 fersman 108.ogg}} '''Fersman:''' But fortunately, Junjun was always with you to keep you company when I wasn't around. I...
-:{{A|VO Side1 hk3 hook 257.ogg}} '''Hook:''' ...Daddy! I&mdash;I have to tell you something...
-:{{A|VO Side1 hk3 hook 258.ogg}} '''Hook:''' I... I sold Junjun!
-:{{A|VO Side1 hk3 fersman 109.ogg}} '''Fersman:''' Huh? Y&mdash;You sold him?
-:{{A|VO Side1 hk3 hook 259.ogg}} '''Hook:''' Don't worry, daddy! I don't need a doll to keep me company anymore! Natasha, The Moles and the honorary member will keep me company from now on, so I won't be lonely.
-:{{A|VO Side1 hk3 fersman 110.ogg}} '''Fersman:''' You... sold him...
-:{{A|VO Side1 hk3 fersman 111.ogg}} '''Fersman:''' I truly am an incompetent father. I had no idea...
-:{{A|VO Side1 hk3 hook 260.ogg}} '''Hook:''' Not true! I know you care about me the most, daddy! I just didn't tell you because I didn't want you to worry.
-:{{A|VO Side1 hk3 fersman 112.ogg}} '''Fersman:''' ...
-:{{A|VO Side1 hk3 fersman 113.ogg}} '''Fersman:''' Thank you, Hook... but the birthday gift I've chosen is...
-:{{A|VO Side1 hk3 hook 261.ogg}} '''Hook:''' Huh? What did you get for me, daddy?
-----
+:{{tx}}
 {{Dialogue End}}
 
 ==Other Languages==

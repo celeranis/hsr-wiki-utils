@@ -37,109 +37,13 @@ PageTitle=#Collegiate Zenith of Rapping#
 ===Collect inspiration for composing a song by wandering around the campus{{subst:void|<!--802611601-->}}===
 {{Mission Description|type=adventure|location=Penacony Paperfold University College|You've become the manager of the music party's performing band, and now your band needs to complete 3 performances on the stage in the middle of the campus.<br />Wander around the campus to help Rappa collect inspiration for composing.}}
 {{Dialogue Start}}
-
-;(Unused &mdash; EnterDistrict_G203)
-:'''Trashcan of MCing:''' Though I hail from distant icy lands, the cold never extinguished my passion for rhymes. Now I visit uncharted dreamscapes, only to seek the trail of my dear friend.
-::'''Trashcan of Rap:''' Please stop avoidin'. Don't make us keep searchin'!
-::'''Trashcan of Hip-Hop:''' Big Bro! We've been singing for so long, and still no answer. Could we have the wrong place?
-::'''Trashcan of MCing:''' Hmph. This is a test of our sincerity. We mustn't give up so easily!
-::'''Chaletka:''' ...Are my eyes deceiving me? Th&mdash;This is a trashcan group? How curious.
-::{{DIcon|Arrow}} (Warmly greet them)
-:::'''(Trailblazer):''' Hiii! My dear trashfriends, it's a joy to see you. How have you been?
-::{{DIcon|Arrow}} (Pretend not to know them)
-:::'''(Trailblazer):''' (Watch me silently slink away...)
-:::'''Trashcan of Hip-Hop:''' Big Bro! Over there, I found that trashfriend! Hiiii!
-:::'''Trashcan of MCing:''' Did you forget? We're comrades who performed together, and your rapping left a deep impression on me.
-:::'''Trashcan of Rap:''' We overcame so many hardships all this way, finally arriving at the place you're living in. Don't make us come all this way for nothing!
-:::'''Onlooking Student:''' Isn't this the performing band's manager? How does the manager know these trashcans?
-::'''Trashcan of MCing:''' Trashfriend, your band's grand reputation is known from the Belobog plaza all the way to the junkyard. That's why we have specially come all this way to pay a visit, hoping that we'll have the honor of watching your glorious performance.
-::'''Trashcan of Rap:''' And also to cheer you on!
-::'''Trashcan of Hip-Hop:''' Waaa, Big Bro... {{MC|f=She|m=He}} is right here. We've finally made it!
-::'''Chaletka:''' This burning friendship, this spirit of traveling so far just to cheer a peer on... It's... It's simply too touching!
-::{{DIcon|Arrow}} But actually...
-::{{DIcon|Arrow}} Thank you so much.
-::'''Trashcan of MCing:''' ...Then we have arrived at just the right time.
-::'''Trashcan of Rap:''' It's time for us to shine!
-::'''Trashcan of Hip-Hop:''' Big Bro! Let us demonstrate a show of force to those ruffians and send out a call to the entire crowd for justice!
-::'''Trashcan of MCing:''' Even if all the lights are extinguished, and we're booted off the stage... Even if no one cheers for us, our music will never cease.
-::'''Trashcan of MCing:''' ...Come! Join us! Let the world remember your existence with the loudest volume, the most beautiful performance, and the most confident poise!
-::{{DIcon|Arrow}} (Join the trashcans' demonstration...?)
-
-;(Talk to Chaletka)
-:'''Chaletka:''' This burning friendship, this spirit of traveling so far just to cheer a peer on... It's... It's simply too touching!
-
-
-;(Talk to Trashcan of MCing)
-:'''Trashcan of MCing:''' ...Come! Join us! Let the world remember your existence with the loudest volume, the most beautiful performance, and the most confident poise!
-:{{DIcon|Travel Log}} Join the trashcans' demonstration.
-:<pre>{
-	"$type": "RPG.GameCore.ShowUI",
-	"Name": "Ui.MusicRhythm.MusicRhythmChooseLevelPage",
-	"WaitForExit": true,
-	"Param": {
-		"Value": "7"
-	},
-	"OnUIExitImmediately": [
-		{
-			"$type": "RPG.GameCore.EndDialogueEntityInteract"
-		}
-	]
-}</pre>
-:{{DIcon|Exit}} I've got something else to do.
+:{{tx}}
 {{Dialogue End}}
 
 ===Join the trashcan group's demonstration{{subst:void|<!--802611603-->}}===
 {{Mission Description|type=adventure|location=Penacony Paperfold University College|update|You've become the manager of the music party's performing band, and now your band needs to complete 3 performances on the stage in the middle of the campus.<br />Obtain a record of the trashcan group's beats to help Rappa collect inspiration for composing.}}
 {{Dialogue Start}}
-:'''Trashcan of MCing:''' ...Academy's reps, academy's reps, I'm hafta say you're all a huge pain, putting on a show of utter disdain. Spitting respect and morals out on your main, but traps and tricks are all you've got in yo brain! Refrain!
-:'''Trashcan of Rap:''' We're gonna come, come, come for your domain, till all you can do is cower in shame!
-:'''Trashcan of Hip-Hop:''' Big Bro! We gotta turn up our noise and let those hiding cowards hear us!
-:'''Onlooking Student:''' I heard from the trashcans that the academy is intending to replace that performing band, and even discipline them. You think it's true?
-:'''Onlooking Student:''' Hard to say. Look at how fierce that Fortune Academy's rep is. I wouldn't be surprised if he does something so outrageous.
-:'''Chaletka:''' Ah, so... news of the band disbanding is true?
-:{{DIcon|Arrow}} Yeah, the school hates our band.
-::'''Chaletka:''' The band's doing so well though. It makes no sense to replace you. Everyone obviously loves you...
-:{{DIcon|Arrow}} You don't believe me?
-::'''Chaletka:''' It's not that. I just think... with the band doing so well, it makes no sense to replace you...
-:'''Chaletka:''' If the school intends to change bands and prevent you from performing... I-I will cheer you all on!
 :{{tx}}
-
-;(Talk to Trashcan of MCing)
-:'''Trashcan of MCing:''' ...Come! Join us! Let the world remember your existence with the loudest volume, the most beautiful performance, and the most confident poise!
-:{{DIcon|Travel Log}} Join the trashcans' demonstration.
-:<pre>{
-	"$type": "RPG.GameCore.ShowUI",
-	"Name": "Ui.MusicRhythm.MusicRhythmChooseLevelPage",
-	"WaitForExit": true,
-	"Param": {
-		"Value": "7"
-	},
-	"OnUIExitImmediately": [
-		{
-			"$type": "RPG.GameCore.EndDialogueEntityInteract"
-		}
-	]
-}</pre>
-:{{DIcon|Exit}} I've got something else to do.
-
-;(Unused &mdash; MusicRhythm_ShowUI)
-<pre>{
-	"$type": "RPG.GameCore.WaitFrame"
-}</pre>
-:<pre>{
-	"$type": "RPG.GameCore.ShowUI",
-	"Name": "Ui.MusicRhythm.MusicRhythmChooseLevelPage",
-	"WaitForExit": true,
-	"Param": {
-		"Value": "7"
-	},
-	"OnUICustomEvent": [],
-	"OnUIExitImmediately": [
-		{
-			"$type": "RPG.GameCore.EndDialogueEntityInteract"
-		}
-	]
-}</pre>
 {{Dialogue End}}
 
 ==Other Languages==

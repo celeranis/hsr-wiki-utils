@@ -37,43 +37,7 @@ PageTitle=#Dock Operations (I)#
 ===Talk with Mingxi at the docks{{subst:void|<!--800321401-->}}===
 {{Mission Description|type=adventure|location=Aurum Alley|As of now, you are an essential aspect of Mingxi's planned "Aurum Alley Revival Project." Do what you can to restore the prosperity of Aurum Alley.<br />Go talk with Mingxi and see what you can help with right now.}}
 {{Dialogue Start}}
-
-;(Talk to Mingxi)
-:{{A|VO side2 jrx mingxi 159.ogg}} '''Mingxi:''' Now that you're here, let's get started on the dock-related work.
-<pre>{
-	"$type": "RPG.GameCore.ShowAlleyMainEntrancePage",
-	"OnSkip": [
-		{
-			"$type": "RPG.GameCore.EndDialogueEntityInteract"
-		},
-		{
-			"$type": "RPG.GameCore.TriggerCustomStringOnDialogEnd",
-			"CustomString": {
-				"Value": "Talk_800320226_End"
-			}
-		},
-		{
-			"$type": "RPG.GameCore.FinishLevelGraph"
-		}
-	],
-	"OnCancel": [
-		{
-			"$type": "RPG.GameCore.EndDialogueEntityInteract"
-		},
-		{
-			"$type": "RPG.GameCore.TriggerCustomStringOnDialogEnd",
-			"CustomString": {
-				"Value": "Talk_800320226_End"
-			}
-		},
-		{
-			"$type": "RPG.GameCore.FinishLevelGraph"
-		}
-	]
-}</pre>
-<pre>{
-	"$type": "RPG.GameCore.EndDialogueEntityInteract"
-}</pre>
+:{{tx}}
 {{Dialogue End}}
 
 ==Other Languages==

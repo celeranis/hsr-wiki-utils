@@ -39,141 +39,25 @@ PageTitle=#Hymn Chorus#
 ===Meet up with Dafanchy on campus{{subst:void|<!--802611406-->}}===
 {{Mission Description|type=adventure|location=Penacony Paperfold University College|You've become the manager of the music party's performing band, and now your band needs to complete 3 performances on the stage in the middle of the campus.<br />Dafanchy seems to have something to talk with you about. Meet up with her on campus.}}
 {{Dialogue Start}}
-
-;(Talk to Dafanchy)
-----
-:'''Dafanchy:''' Manager! Head Ninja Rappa said I should follow you around more, so... could you please take me with you when you're collecting inspiration?
-:'''Dafanchy:''' I don't really know... what's the point.
-:{{DIcon|Arrow}} Want to broaden your horizons?
-:{{DIcon|Arrow}} Let's watch and see.
-:'''Dafanchy:''' Okay. Then... I'll be troubling you.
+:{{tx}}
 {{Dialogue End}}
 
 ===Collect inspiration for composing a song by heading to the space station{{subst:void|<!--802611401-->}}===
 {{Mission Description|type=adventure|location=Seclusion Zone|update|You've become the manager of the music party's performing band, and now your band needs to complete 3 performances on the stage in the middle of the campus.<br />Wander around the seclusion zone of the space station to help Rappa collect inspiration for composing.}}
 {{Dialogue Start}}
-
-
-;(Unused &mdash; EnterDistrict_G194)
-:'''Ruan Mei's Sad Creation:''' Boohoo. This place... doesn't need me anymore, meow.
-::'''Ruan Mei's Angry Creation:''' It's clearly a you-problem! The harmonies are not in sync, and as you're constantly moving around, the formation is completely messed up!
-::'''Ruan Mei's Arrogant Creation:''' If we keep dragging things out, it'll be your fault if we miss the selection time.
-::'''Dafanchy:''' ...I don't understand what they are saying, but that stuffed toy looks like it's being rejected by its companion. I feel pity for it.
-::{{DIcon|Arrow}} What's wrong?
-::{{DIcon|Arrow}} This is quite common.
-::'''Ruan Mei's Sad Creation:''' Boo... it's all my fault, meow. Recently, the creations on the space station want to sing a hymn of praise for Madam Ruan Mei, so we are going through vocal training. But I... just can't seem to sing well.
-::'''Ruan Mei's Angry Creation:''' For a choral hymn, what's required is unison, loudness, and impact!
-::'''Ruan Mei's Arrogant Creation:''' *sigh* Stop wasting time on this guy. It'll definitely be disqualified at the selection phase. Why don't we just kick it out and practice on our own?
-::'''Ruan Mei's Arrogant Creation:''' Not all creations are equal, no matter how hard one may work. Trash is still trash. Nothing we can do about it.
-::'''Ruan Mei's Sad Creation:''' Boohoo... I want to express my love to Madam Ruan Mei too. Please help me, {{MC|f=big sis|m=big bro}}!
-::{{DIcon|Arrow}} Let me help you!
-:::'''Ruan Mei's Arrogant Creation:''' Huh!? It's your problem if you're bad at singing. Nothing to do with anyone else.
-:::'''Dafanchy:''' Manager... Can you communicate with these animals? If you can, please help that ostracized child.
-:::'''Dafanchy:''' Just looking at it, I can't help but... think of myself.
-:::{{DIcon|Arrow}} Okay, let me try.
-::{{DIcon|Arrow}} What's it got to do with me?
-:::'''Ruan Mei's Arrogant Creation:''' Exactly! It's your own problem if you can't sing, not anyone else's.
-:::'''Dafanchy:''' Manager... Can you communicate with these animals? If you can, please help that ostracized child.
-:::'''Dafanchy:''' Just looking at it, I can't help but... think of myself.
-:::{{DIcon|Arrow}} ...Okay, I'll give it a try.
-
-;(Unused &mdash; EnterDistrict_G194_1)
-:'''Dafanchy:''' I've never been to a place like this... it's like an incubator. Will you find the inspiration you're looking for in a place like this, Manager?
-::'''Dafanchy:''' Hey, hey, that stuffed toy over there seems to be moving!
-
-;(Talk to Ruan Mei's Sad Creation)
-:'''Ruan Mei's Sad Creation:''' Boohoo... I want to express my love to Madam Ruan Mei too. Please help me, {{MC|f=big sis|m=big bro}}!
-:{{DIcon|Travel Log}} Let me help you!
-:<pre>{
-	"$type": "RPG.GameCore.ShowUI",
-	"Name": "Ui.MusicRhythm.MusicRhythmChooseLevelPage",
-	"WaitForExit": true,
-	"Param": {
-		"Value": "5"
-	},
-	"OnUIExitImmediately": [
-		{
-			"$type": "RPG.GameCore.EndDialogueEntityInteract"
-		}
-	]
-}</pre>
-:{{DIcon|Exit}} I've got something else to do.
+:{{tx}}
 {{Dialogue End}}
 
 ===Help Ruan Mei's Sad Creation complete the chorus{{subst:void|<!--802611404-->}}===
 {{Mission Description|type=adventure|location=Seclusion Zone|update|You've become the manager of the music party's performing band, and now your band needs to complete 3 performances on the stage in the middle of the campus.<br />Obtain a record of Ruan Mei's creations' beats to help Rappa collect inspiration for composing.}}
 {{Dialogue Start}}
-
-;(Talk to Ruan Mei's Sad Creation)
-:'''Ruan Mei's Sad Creation:''' Boohoo... I want to express my love to Madam Ruan Mei too. Please help me, {{MC|f=big sis|m=big bro}}!
-:{{DIcon|Travel Log}} Let me help you!
-:<pre>{
-	"$type": "RPG.GameCore.ShowUI",
-	"Name": "Ui.MusicRhythm.MusicRhythmChooseLevelPage",
-	"WaitForExit": true,
-	"Param": {
-		"Value": "5"
-	},
-	"OnUIExitImmediately": [
-		{
-			"$type": "RPG.GameCore.EndDialogueEntityInteract"
-		}
-	]
-}</pre>
-:{{DIcon|Exit}} I've got something else to do.
-
-;(Unused &mdash; MusicRhythm_ShowUI)
-<pre>{
-	"$type": "RPG.GameCore.WaitFrame"
-}</pre>
-:<pre>{
-	"$type": "RPG.GameCore.ShowUI",
-	"Name": "Ui.MusicRhythm.MusicRhythmChooseLevelPage",
-	"WaitForExit": true,
-	"Param": {
-		"Value": "5"
-	},
-	"OnUICustomEvent": [],
-	"OnUIExitImmediately": [
-		{
-			"$type": "RPG.GameCore.EndDialogueEntityInteract"
-		}
-	]
-}</pre>
-:'''Ruan Mei's Sad Creation:''' Thank you, meow! I've finally learned how to sing in a chorus. It won't be a problem later on!
-:'''Ruan Mei's Angry Creation:''' The selection is about to start. Get ready.
-:'''Ruan Mei's Arrogant Creation:''' *sigh* As I've said, there was already a difference in talent when we were first created. It can't be changed.
-:Not long after, all of Ruan Mei's creations are all huddled in the middle of the cabin, taking turns to perform their vocals.
-:'''Guardian of the Domain:''' Ahem. I'll be announcing the selection results now.
-:'''Guardian of the Domain:''' After comprehensive evaluation of all members, combined with the practical needs of the hymn performance, the roster is as follows...
-:'''Guardian of the Domain:''' ...Ruan Mei's angry creation.
-:'''Ruan Mei's Angry Creation:''' Yes!
-:'''Guardian of the Domain:''' ...Ruan Mei's sad creation.
-:'''Ruan Mei's Arrogant Creation:''' ...Eh?
-:'''Ruan Mei's Arrogant Creation:''' That's not right! Unfair! This fellow had to rely on another one's help to qualify. That's not its true capability at all!
-:'''Guardian of the Domain:''' Ahem. But it did indeed finish the selection by itself, and I have no choice but to acknowledge the outcome.
-:'''Ruan Mei's Sad Creation:''' Meow! I'm super happy!
-:'''Ruan Mei's Arrogant Creation:''' Boohoo... Waaahhhh!
-:'''Dafanchy:''' That's fantastic. Looks like this little buddy has been accepted by its companions. We probably... have done a good thing, haven't we?
-:You detail what you saw just now to Dafanchy, including the incident about how that creation wrested a slot from the other creations.
-:'''Dafanchy:''' ...
-:'''Dafanchy:''' Someone of average talent, relying on external help, and robbing something that originally belonged to others. Manager, you think this is fair?
-:{{DIcon|Arrow}} It is, very.
-::'''(Trailblazer):''' Results are results. Moreover, it also demonstrated its own ability to pass the selection. There's nothing suspicious about it.
-::'''Dafanchy:''' ...Yes, that's true. As long as you work hard to improve yourself, there's no need to fear any gossip.
-:{{DIcon|Arrow}} It's not fair.
-::'''(Trailblazer):''' It's hard to say, but it wasn't objectively fair to begin with. All I can say is that it lucked out.
-::'''Dafanchy:''' Really... Though I guess being lucky is a skill too. My luck's pretty good to have known you all... Yes.
-:{{DIcon|Arrow}} Why are you overthinking this!
-::'''(Trailblazer):''' All that matters is getting what you want. There's no point to hesitation. Stop thinking so much.
-::'''Dafanchy:''' That's true... Getting all indecisive over this won't change anything. Only positive action will move things forward.
-:'''Dafanchy:''' Got it... Since Head Ninja Rappa and the manager believe in me, I... won't let you all down.
 :{{tx}}
 {{Dialogue End}}
 
 ===Check on how Ruan Mei's creations are doing{{subst:void|<!--802611405-->}}===
 {{Mission Description|type=adventure|location=Seclusion Zone|update|You've become the manager of the music party's performing band, and now your band needs to complete 3 performances on the stage in the middle of the campus.<br />Carefully examine this creation of Ruan Mei.}}
 {{Dialogue Start}}
+:{{tx}}
 {{Dialogue End}}
 
 ==Other Languages==

@@ -40,135 +40,22 @@ PageTitle=#Exhibit Replica: Alisa Rand's Lance#
 ===Find out more about the situation from Uldan{{subst:void|<!--800122401-->}}===
 {{Mission Description|type=adventure|location=History and Culture Museum|Belobog's History and Culture Museum will be opening soon. Uldan is collecting appropriate exhibits to ensure a successful opening.<br />This time, Boris hopes that you could show him how you wield Alisa Rand's Lance in combat to help him make a replica.}}
 {{Dialogue Start}}
-
-;(Talk to Uldan)
-:'''Uldan:''' (Trailblazer), you're right on time. Boris is looking for you.
-::'''Uldan:''' If you're free, head over to the {{Color|keyword|nobold=1|museum workshop}} and pay him a visit.
-:<pre>{
-	"$type": "RPG.GameCore.PlayMultiVoiceTalk",
-	"TalkSentenceID": 501190111,
-	"KeepDisplay": true
-}</pre>
-:::{{DIcon|?}} About the portrait of Cyrille the Fool...
-::::'''Uldan:''' (Trailblazer)... Did you say that the description of {{Color|keyword|nobold=1|Cyrille the Fool's}} portrait deviated from the truth?
-::::'''Uldan:''' But... how's that possible? The description is taken from the history textbooks of the Belobog Academy. Everything is in black and white.
-::::{{DIcon|Talk}} I met Cyrille before.
-:::::'''Uldan:''' Well... Stop pulling my leg.
-:::::'''Uldan:''' Still, I can tell you have at least heard of Cyrille from your tone.
-::::;(Return to previous option selection)
-::::{{DIcon|Arrow}} I have evidence that supports Cyrille.
-:::::'''Uldan:''' Since you sound so sure of yourself, I'll take a look at your evidence.
-::::<pre>{
-	"$type": "RPG.GameCore.ConsumeMissionItemPerformance",
-	"SubMissionID": 800122503,
-	"Desc": {
-		"Hash": 278713946
-	},
-	"OnSubmitConfirm": [
-		{
-			"$type": "RPG.GameCore.PlayAndWaitSimpleTalk",
-			"KeepDisplay": true,
-			"SimpleTalkList": [
-				{
-					"TextSpeed": 20,
-					"TalkSentenceID": 800122739,
-					"ProtectTime": 0.8
-				},
-				{
-					"TextSpeed": 20,
-					"TalkSentenceID": 800122740,
-					"ProtectTime": 0.8
-				},
-				{
-					"TextSpeed": 20,
-					"TalkSentenceID": 800122741,
-					"ProtectTime": 0.8
-				},
-				{
-					"TextSpeed": 20,
-					"TalkSentenceID": 800122742,
-					"ProtectTime": 0.8
-				}
-			]
-		},
-		{
-			"$type": "RPG.GameCore.TriggerCustomString",
-			"CustomString": {
-				"Value": "Talk_800122502"
-			}
-		},
-		{
-			"$type": "RPG.GameCore.TriggerCustomString",
-			"CustomString": {
-				"Value": "TalkSentence_501190151"
-			}
-		}
-	],
-	"OnSubmitCancel": [
-		{
-			"$type": "RPG.GameCore.TriggerCustomString",
-			"CustomString": {
-				"Value": "TalkSentence_501190151"
-			}
-		}
-	],
-	"SimpleTalk": {
-		"TextSpeed": 20,
-		"ProtectTime": 0.8
-	}
-}</pre>
-:::{{DIcon|Exit}} I'll go ahead and tour now.
-:<pre>{
-	"$type": "RPG.GameCore.PlayMultiVoiceTalk",
-	"TalkSentenceID": 501190111,
-	"KeepDisplay": true
-}</pre>
+:{{tx}}
 {{Dialogue End}}
 
 ===Speak with Boris{{subst:void|<!--800122402-->}}===
 {{Dialogue Start}}
-
-
-;(Talk to Boris)
-;(If {{cx}}<!--during performance 501190201-->)
-::'''Boris:''' Hey, who are you? This is the restoration room of the museum, nothing here is on display...
-::{{DIcon|Arrow}} Pela sent me to help.
-:::'''Boris:''' Miss Pela sent you to help...
-::{{DIcon|Arrow}} I'm the hero of Belobog.
-:::'''Boris:''' The hero of Belobog...
-::{{DIcon|Arrow}} I'm (Trailblazer).
-:::'''Boris:''' (Trailblazer)...
-::'''Boris:''' Oh, now I remember! Haha, my forgetfulness!
-::'''Boris:''' Pleased to meet you, I'm the museum's artifact restorer, Boris! So sorry for not recognizing you earlier.
-;(If {{cx}}<!--not during performance 501190201-->)
-:<pre>{
-	"$type": "RPG.GameCore.PlayMultiVoiceTalk",
-	"TalkSentenceID": 501190211,
-	"KeepDisplay": true
-}</pre>
-::'''Boris:''' Are you... looking to have a chat with me?
+:{{tx}}
 {{Dialogue End}}
 
 ===Demonstrate to Boris how you use the weapon{{subst:void|<!--800122403-->}}===
 {{Dialogue Start}}
-
-;(Talk to Boris)
-:'''Boris:''' Ha, there you are! Are you ready?
-:{{DIcon|Arrow}} I'm ready to give a combat demonstration.
-:'''Boris:''' Haha, thank you! Allow me to observe!
-;(Enter battle)
-:{{Enemy List|Flamespawn*1; Everwinter Shadewalker*2; Frostspawn*1}}
-:'''Boris:''' Thank you so much, Hero of Belobog, (Trailblazer). You've done a real solid for me here!
-:'''Boris:''' I put together something to thank you. Go ahead and take it!
-----
+:{{tx}}
 {{Dialogue End}}
 
 ===Place the exhibit at the specified spot{{subst:void|<!--800122405-->}}===
 {{Dialogue Start}}
-
-:{{DIcon|Loupe}} Investigate
-:An oil painting depicting the Administrative District in its full majesty.
-:The Administrative District depicted in the painting is much larger than you remember. Maybe it's because there are many places off-limits to you.
+:{{tx}}
 {{Dialogue End}}
 
 ==Other Languages==
