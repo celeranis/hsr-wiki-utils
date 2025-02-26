@@ -1,8 +1,11 @@
+import { existsSync, mkdirSync, rmSync, writeFileSync } from 'fs';
 import { writeFile } from 'fs/promises';
 import { Blessing } from '../Blessing.js';
-import { Equation, override } from '../Equation.js';
-import { AeonPath, pathDisplayName } from '../Shared.js';
-import { textMap } from '../TextMap.js';
+import { ChangeHistory } from '../ChangeHistory.js';
+import { Equation, override, PERIOD_MAP } from '../Equation.js';
+import { AeonPath, sanitizeString } from '../Shared.js';
+import { pathDisplayName, TextMap, textMap } from '../TextMap.js';
+import { pageInfoHeader } from '../util/General.js';
 import { Table } from '../util/Table.js';
 
 const equations = Equation.loadAll()
@@ -12,30 +15,12 @@ const output2: string[] = ['{{Divergent Universe Tabs}}', '']
 const glossary = new Set<number>()
 const glossary2 = new Set<number>()
 
-function addEquationRarity(id: string, display: string) {
-	output.push(
-		`===${display} Equations===`,
-		'{{Equation/Header}}'
-	)
-	
-	for (const equation of equations) {
-		if (equation.rarity != id) continue
-		output.push(equation.entry())
-		equation.traits.forEach(trait => glossary.add(trait))
-	}
-	
-	output.push(
-		'{{Equation/Footer}}',
-		''
-	)
-}
-
 function addBlessingPath(path: AeonPath) {
 	output2.push(`===${pathDisplayName(path)}===`)
 	const blessings = [...Blessing.loadAll(true)].sort((a, b) => ((a.id - (a.rarity * 1000000000)) - (b.id - (b.rarity * 1000000000))))
 	const table = new Table('sortable mw-collapsible article-table', ['Icon', 'Name', 'Effect', 'Enhanced Effect'])
 	for (const blessing of blessings) {
-		if (blessing.path != path || blessing.enhanced) continue
+		if (blessing.path != path || !blessing.active || blessing.enhanced) continue
 		const enhanced = blessings.find(eblessing => eblessing.buff_id == blessing.buff_id && eblessing.enhanced)
 		table.addRowWithAttr(`id="${blessing.name.replaceAll('"', '&quot;').replaceAll("''", '')}"`, [
 			`{{SU Blessing Card|${pathDisplayName(blessing.path)}|${blessing.icon_variant}|${blessing.rarity}}}`,
@@ -52,22 +37,73 @@ function addBlessingPath(path: AeonPath) {
 	output2.push(table.wikitable(false), '')
 }
 
-output.push('==Equations==')
-addEquationRarity('boundary', 'Boundary')
-addEquationRarity('3', '3-Star')
-addEquationRarity('2', '2-Star')
-addEquationRarity('1', '1-Star')
+if (existsSync('./output/equations/')) {
+	rmSync('./output/equations/', { recursive: true })
+}
+
+for (const period of Object.keys(PERIOD_MAP)) {
+	mkdirSync(`./output/equations/${period}/boundary`, { recursive: true })
+	mkdirSync(`./output/equations/${period}/3`, { recursive: true })
+	mkdirSync(`./output/equations/${period}/2`, { recursive: true })
+	mkdirSync(`./output/equations/${period}/1`, { recursive: true })
+}
+
+for (const equation of equations) {
+	if (!equation.in_handbook && equation.rarity != 'boundary') continue
+	
+	const output: string[] = [
+		pageInfoHeader(equation.name),
+	]
+	
+	if (!equation.active) {
+		output.push('{{Removed|Equation}}')
+	}
+	
+	output.push(
+		equation.infobox(),
+		`'''${equation.name}''' ${equation.active ? 'is' : 'was'} a ${equation.rarity == 'boundary' ? 'Boundary' : `${equation.rarity}-star`} [[Divergent Universe: ${equation.period_name}/Equatoins|Equation]] in [[Divergent Universe: ${equation.period_name}]].`,
+		'',
+		'==Story==',
+		`{{Description|${equation.story.replaceAll('\n', '<br />')}}}`,
+		'<!--',
+		'==Gameplay Notes==',
+		'* ',
+		'-->',
+	)
+	
+	if (equation.story_json) {
+		const dialogue = (await equation.loadDialogue())!.optimize()
+		output.push(
+			'==Extrapolation Rewind==',
+			'{{Dialogue Start}}',
+			await dialogue.wikitext(),
+			'{{Dialogue End}}',
+			'',
+		)
+	}
+	
+	output.push(
+		'==Other Languages==',
+		await TextMap.generateOL(equation.name_hash),
+		'',
+		'==Change History==',
+		`{{Change History|${(await ChangeHistory.equation.findAdded(equation.id))[0]}}}`
+	)
+	
+	writeFileSync(`./output/equations/${equation.period}/${equation.rarity}/${sanitizeString(equation.name)}-${equation.id}.wikitext`, output.join('\n'))
+}
 
 output2.push('==Blessings==')
-addBlessingPath('Preservation')
+// addBlessingPath('Preservation')
 addBlessingPath('Remembrance')
 addBlessingPath('Nihility')
-addBlessingPath('Abundance')
+// addBlessingPath('Abundance')
 addBlessingPath('TheHunt')
 addBlessingPath('Destruction')
 addBlessingPath('Elation')
 addBlessingPath('Propagation')
 addBlessingPath('Erudition')
+addBlessingPath('Harmony')
 
 output.push('==Glossary==')
 output2.push('==Glossary==')

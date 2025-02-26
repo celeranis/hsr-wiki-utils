@@ -31,9 +31,9 @@ export const SPECIAL_OPTION_PATHS: { [key: number]: string } = {
 	101: 'Ruan Mei',
 }
 
-export type SUMode = 'su' | 'pinf' | 'swarm' | 'gng' | 'du' | 'und'
+export type SUMode = 'su' | 'pinf' | 'swarm' | 'gng' | 'du' | 'du_thc' | 'und'
 
-export function displaySUMode(mode: SUMode, the?: boolean): string {
+export function displaySUMode(mode: SUMode, the?: boolean): string | undefined {
 	switch (mode) {
 		case 'su':
 			return (the ? 'the ' : '') + '[[Simulated Universe]]'
@@ -61,10 +61,12 @@ export class OccurrenceSeries {
 		this.story_id = data.RogueNPCID % 1e5
 		this.path = data.NPCJsonPath
 		
-		if (this.id > 5e5) {
+		if (this.id > 6e5) {
+			this.mode = 'du' // protean hero ids: 60000-69999
+		} else if (this.id > 5e5) {
 			this.mode = 'und' // unknowable domain ids: 50001-59999
 		} else if (this.id > 4e5) {
-			this.mode = 'du' // divergent universe ids: 40001-49999
+			this.mode = 'du_thc' // the human comedy ids: 40001-49999
 		} else if (this.id >= 3e5) {
 			this.mode = 'gng' // gold and gears ids: 30001-39999
 		} else if (this.id >= 2e5) {
@@ -171,7 +173,7 @@ export class Occurrence {
 				choice: textMap.getText(displayData.OptionTitle, params),
 				result: textMap.getText(displayData.OptionDesc, params),
 				path: internalOption.SpecialOptionID ? SPECIAL_OPTION_PATHS[internalOption.SpecialOptionID] : undefined,
-				modes: [this.mode]
+				modes: this.mode == 'du_thc' ? [] : [this.mode]
 			}
 			this.options.push(option)
 		}
@@ -197,6 +199,14 @@ export class AbstractOccurrence {
 	occurrences: Occurrence[] = []
 	modes: SUMode[] = []
 	
+	get active_modes() {
+		return this.modes.filter(mode => !mode.startsWith('du_'))
+	}
+
+	get active_occurrences() {
+		return this.occurrences.filter(occurrence => !occurrence.mode.startsWith('du_'))
+	}
+	
 	constructor(public id: string) {
 		AbstractOccurrence.abstractOccurrences[this.id] = this
 	}
@@ -205,8 +215,9 @@ export class AbstractOccurrence {
 	
 	addOccurrence(occurrence: Occurrence) {
 		if (this.occurrences.includes(occurrence)) return this
+		// if (occurrence.mode.startsWith('du_')) return this // ignore old DU versions
 		
-		if (!this.modes.includes(occurrence.mode)) {
+		if (!this.modes.includes(occurrence.mode) || occurrence.mode.startsWith('du_')) {
 			this.modes.push(occurrence.mode)
 		}
 		
@@ -221,7 +232,7 @@ export class AbstractOccurrence {
 			const existingOption = this.options.find(eopt => eopt.choice == option.choice && eopt.result == option.result && eopt.path == option.path)
 			
 			if (existingOption) {
-				if (existingOption.modes.includes(occurrence.mode)) continue
+				if (existingOption.modes.includes(occurrence.mode) || occurrence.mode.startsWith('du_')) continue
 				existingOption.modes.push(occurrence.mode)
 			} else {
 				for (let ci = Math.max(this.options.length - 1, 0); ci > i - 1; ci--) {

@@ -1,22 +1,12 @@
 import config from '../config.json' with { "type": "json" }
-import { AeonPath, pathDisplayName, pathListDisplay } from './Shared.js'
-import { textMap } from './TextMap.js'
+import { AeonPath } from './Shared.js'
+import { pathListDisplay, textMap } from './TextMap.js'
 import { WeirdKey } from './WeirdKey.js'
-import type { InternalBlessing, InternalBlessingGroup, InternalDUBlessingGroup } from './files/Blessing.js'
+import type { InternalBlessing, InternalBlessingGroup, InternalBlessingType, InternalDUBlessingGroup } from './files/Blessing.js'
 import { getExcelFile, getFile } from './files/GameFile.js'
 import { InternalMazeBuff } from './scripts/dump_boss_decay.js'
 
-export const PathMap: {[id: string]: AeonPath} = {
-	'120': 'Preservation',
-	'121': 'Remembrance',
-	'122': 'Nihility',
-	'123': 'Abundance',
-	'124': 'TheHunt',
-	'125': 'Destruction',
-	'126': 'Elation',
-	'127': 'Propagation',
-	'128': 'Erudition',
-}
+export const PathMap = await getExcelFile<InternalBlessingType>('RogueTournBuffType.json', 'RogueBuffType')
 
 export type EnhanceFilter = 'both' | 'none' | 'only'
 
@@ -124,10 +114,11 @@ export class Blessing {
 	buff_id: number
 	id: number
 	rarity: number
-	path: AeonPath
+	path: string
 	enhanced: boolean
 	level: number
 	traits: number[]
+	active?: boolean
 	
 	buff: InternalMazeBuff
 	name: string
@@ -152,8 +143,10 @@ export class Blessing {
 		}
 		this.level = data.MazeBuffLevel
 		this.enhanced = this.level > 1
-		this.path = PathMap[data.RogueBuffType]
+		this.path = Blessing.getPath(data.RogueBuffType)
 		this.traits = data.ExtraEffectIDList
+		
+		this.active = Object.values(RogueTournBuffGroup).find(group => group.RogueBuffDrop.includes(this.id) && group.TournMode == 'Tourn2') != undefined
 		
 		this.buff = [...RogueMazeBuff, ...MazeBuff].find(buff => buff.ID == this.buff_id && buff.Lv == this.level)!
 		this.name = textMap.getText(this.buff.BuffName)
@@ -173,7 +166,7 @@ export class Blessing {
 	}
 	
 	static getPath(id: number) {
-		return pathDisplayName(PathMap[id])
+		return textMap.getText(PathMap[id]?.RogueBuffTypeName)
 	}
 	
 	resolveAllBlessings(): Blessing[] {

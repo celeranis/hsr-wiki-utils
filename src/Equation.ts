@@ -1,8 +1,11 @@
 import { Blessing, RogueMazeBuff } from './Blessing.js'
 import { Dictionary } from './Shared.js'
 import { textMap } from './TextMap.js'
+import { ActDialogueTree } from './dialogue/Dialogue.js'
 import { InternalEquationData, InternalEquationDisplay, InternalExtraEffect } from './files/Equation.js'
 import { getFile } from './files/GameFile.js'
+import { Act } from './files/graph/Dialog.js'
+import { getMentions } from './util/Mentions.js'
 import { Template } from './util/Template.js'
 
 const EquationData = await getFile<Dictionary<InternalEquationData>>('ExcelOutput/RogueTournFormula.json')
@@ -14,8 +17,15 @@ export const override: Dictionary<string> = {
 	'Spore(s)': 'Spores'
 }
 
+export const PERIOD_MAP = {
+	Tourn1: 'The Human Comedy',
+	Tourn2: textMap.getText(16383159019624647075n),
+} as const
+
 export class Equation {
-	mode: 'Tourn1'
+	period: 'Tourn1' | 'Tourn2'
+	period_name: string
+	active: boolean
 	path1: string
 	path1count: number
 	path2?: string
@@ -32,6 +42,7 @@ export class Equation {
 	story: string
 	
 	name: string
+	name_hash: number | bigint
 	description: string
 	simple_description: string
 	
@@ -39,7 +50,8 @@ export class Equation {
 	
 	constructor(public id: number) {
 		const data = Object.values(EquationData).find(dat => dat.FormulaID == id)!
-		this.mode = data.TournMode
+		this.period = data.TournMode
+		this.period_name = PERIOD_MAP[data.TournMode]
 		this.rarity = data.FormulaCategory == 'PathEcho' ? 'boundary' : data.FormulaCategory == 'Rare' ? '1' : data.FormulaCategory == 'Epic' ? '2' : '3'
 		this.buff_id = data.MazeBuffID
 		this.display_id = data.FormulaDisplayID
@@ -61,11 +73,14 @@ export class Equation {
 		
 		const buffData = Object.values(RogueMazeBuff).find(buff => buff.ID == this.buff_id)!
 		this.name = textMap.getText(buffData.BuffName)
+		this.name_hash = buffData.BuffName?.Hash
 		this.description = textMap.getText(buffData.BuffDesc, buffData.ParamList)
 			.replaceAll(/<u>(.+?)<\/u>/gi, (_, trait) => override[trait] ? `{{Trait|${override[trait]}|${trait}}}` : `{{Trait|${trait}}}`)
 		this.simple_description = textMap.getText(buffData.BuffSimpleDesc, buffData.ParamList)
 		
 		this.sortkey = (data.MainBuffTypeID * 100) + (data.SubBuffTypeID ?? 0)
+		
+		this.active = this.period == 'Tourn2'
 	}
 	
 	static getExtraEffect(id: number) {
@@ -76,7 +91,13 @@ export class Equation {
 		return Object.values(EquationData).map(id => new this(Number(id.FormulaID)))
 			.sort((a, b) => (a.sortkey - b.sortkey))
 	}
-	
+		
+	async loadDialogue() {
+		if (!this.story_json) return undefined
+		const dialogueData = await getFile<Act>(this.story_json)
+		return EquationDialogueTree.fromEquation(dialogueData, this)
+	}
+		
 	entry() {
 		const template = new Template('Equation')
 			.addParam('name', this.name)
@@ -92,5 +113,31 @@ export class Equation {
 			.addParam('story', this.story.replaceAll('\n', '<br />'))
 		
 		return template.block(7)
+	}
+	
+	infobox() {
+		const template = new Template('Equation Infobox')
+			.addParam('period', this.period_name)
+			.addParam('rarity', this.rarity)
+			.addParam('path1', `${this.path1}*${this.path1count}`)
+			.addParam('path2', this.path2 ? `${this.path2}*${this.path2count}` : undefined)
+			.addParam('effect', this.description.replaceAll('\n', '<br />'))
+			.addParam('mentions', getMentions(this.story, this.name).join('; '))
+		
+		return template.block(7)
+	}
+}
+
+export class EquationDialogueTree extends ActDialogueTree {
+	type: 'equation' = 'equation'
+	
+	protected constructor(act: Act, occurrence: Equation) {
+		super(act, `equation_${occurrence.name}_${occurrence.id}`)
+	}
+	
+	static async fromEquation(act: Act, occurrence: Equation) {
+		const tree = new this(act, occurrence)
+		tree.root = await tree.processAct(act)
+		return tree
 	}
 }

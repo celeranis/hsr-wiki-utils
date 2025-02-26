@@ -1,6 +1,11 @@
 import { readFile } from 'fs/promises';
+import JSONbig_package from 'json-bigint';
 import config from '../../config.json' with { "type": "json" };
 import { Dictionary, VERSION_COMMITS } from '../Shared.js';
+
+const JSONbig = JSONbig_package({
+	useNativeBigInt: true,
+})
 
 export class HttpError extends Error {
 	constructor(public path: string, public status: number, public statusText: string, public body: string) {
@@ -8,13 +13,13 @@ export class HttpError extends Error {
 	}
 }
 
-const ALT_PATTERNS = [
-	'Config/Level/Rogue/RogueDialogue/',
-	'Config/Level/Mission/',
-	'Story/Mission/',
-	'Story/Discussion/Mission/',
-	'Config/Level/Rogue/RogueNPC/RogueNPC_260/',
-	'Config/CutSceneCaption/',
+const ALT_PATTERNS: string[] = [
+	// 'Config/Level/Rogue/RogueDialogue/',
+	// 'Config/Level/Mission/',
+	// 'Story/Mission/',
+	// 'Story/Discussion/Mission/',
+	// 'Config/Level/Rogue/RogueNPC/RogueNPC_260/',
+	// 'Config/CutSceneCaption/',
 	// 'ExcelOutput/Performance'
 ]
 
@@ -44,8 +49,9 @@ export async function getFile<T extends object>(path: string, version: string = 
 			// 	console.warn(`Error while fetching local data for ${path}`)
 			// 	throw err
 			// })
+			
 		
-		return preprocessFile(JSON.parse(altData.toString()))
+		return preprocessFile(JSONbig.parse(altData.toString()))
 	}
 	
 	const data = await fetch(`${config.repo_root}${VERSION_COMMITS[version] || version}/${path}`)
@@ -58,8 +64,8 @@ export async function getFile<T extends object>(path: string, version: string = 
 		throw new HttpError(path, data.status, data.statusText, await data.text())
 	}
 	
-	return data.json()
-		.then(data => preprocessFile(data))
+	return data.text()
+		.then(data => preprocessFile(JSONbig.parse(data)))
 		.catch(err => {
 			console.error(`Error while parsing JSON from ${path}`)
 			throw err

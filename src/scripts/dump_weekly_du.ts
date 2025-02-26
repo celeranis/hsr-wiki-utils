@@ -1,6 +1,6 @@
 import { writeFile } from 'fs/promises';
 import { ChangeHistory } from '../ChangeHistory.js';
-import { Curio } from '../Curio.js';
+import { Curio, RogueTournHandbookMiracle } from '../Curio.js';
 import { Equation } from '../Equation.js';
 import { Item, ItemList } from '../Item.js';
 import { Dictionary, zeroPad } from '../Shared.js';
@@ -71,6 +71,7 @@ for (const data of Object.values(weeklyData)) {
 			if (entry[WeirdKey.get('DescParamType')] == 'Formula') {
 				equations.push(new Equation(Number(entry[WeirdKey.get('DescParamValue')])))
 			} else if (entry[WeirdKey.get('DescParamType')] == 'Miracle') {
+				if (!RogueTournHandbookMiracle[entry[WeirdKey.get('DescParamValue')]]) continue
 				curios.push(new Curio(Number(entry[WeirdKey.get('DescParamValue')]), true))
 			}
 		}

@@ -1,3 +1,4 @@
+import JSONbig from 'json-bigint'
 import { TalkSentenceConfig, textMap } from '../TextMap.js'
 import { DialogueNode, TranscriptionNote } from '../util/AbstractDialogueTree.js'
 import { ActDialogueTree } from './Dialogue.js'
@@ -78,6 +79,6 @@ export class UnknownTask extends BaseDialogueTask {
 	}
 	
 	wikitext(_lines: number, _tree: ActDialogueTree): string {
-		return `<pre>${JSON.stringify(this.data, (k, v) => (k != 'TaskEnabled' && k != 'IsClientOnly') ? v : undefined, '\t')}</pre>`
+		return `<pre>${JSONbig.stringify(this.data, (k, v) => (k != 'TaskEnabled' && k != 'IsClientOnly') ? v : undefined, '\t')}</pre>`
 	}
 }

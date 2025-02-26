@@ -10,6 +10,7 @@ export interface TemplateMap {
 		story: string
 		notes: string
 		available: string
+		mentions: string
 	}
 	'Item': {
 		1: string
@@ -250,6 +251,16 @@ export interface TemplateMap {
 		notes: string
 	}
 	'SU Ability': any
+	'Equation Infobox': {
+		title?: string
+		image?: string
+		period: string
+		rarity: 'boundary' | '1' | '2' | '3'
+		effect: string
+		path1: string
+		path2: string
+		mentions: string
+	}
 }
 
 export type DomainType = 
@@ -263,7 +274,9 @@ export class Template<N extends keyof TemplateMap, P extends TemplateMap[N]> {
 	constructor(public name: N, public params: Partial<P> = {}) {}
 	newlinesAfter: string[] = []
 
-	addParam<K extends keyof P>(key: K, value: P[K]) {
+	addParam<K extends keyof P>(key: K, value?: P[K]) {
+		if (value == undefined) return this
+		
 		if (typeof value == 'boolean') {
 			value = (value ? '1' : '') as P[K]
 		}

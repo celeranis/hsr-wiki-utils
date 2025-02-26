@@ -1,10 +1,11 @@
+import xxhash from 'xxhashjs';
 import config from '../config.json' with { type: "json" };
-import { roundTo, type Dictionary, type Value, type Version } from './Shared.js';
+import { AeonPath, roundTo, type Dictionary, type Value, type Version } from './Shared.js';
 import { getExcelFile, getFile } from './files/GameFile.js';
 import { whitespace } from './util/General.js';
 
 export interface HashReference {
-	Hash: number
+	Hash: number | bigint
 }
 
 export interface Sentence {
@@ -104,20 +105,27 @@ export class TextMap {
 		const data: Dictionary<string> = await getFile(`TextMap/TextMap${lang}.json`, version)
 		return new this(version, lang, data)
 	}
-	
-	// via https://github.com/Dimbreath/StarRailData/issues/6#issuecomment-1639425428
-	static getStableHash(str: string) {
-		let hash1 = 5381n;
-		let hash2 = 5381n;
 
-		for (let i = 0; i < str.length && typeof str[i] !== 'undefined'; i += 2) {
-			hash1 = ((hash1 << 5n) + hash1) ^ BigInt(str.charCodeAt(i));
-			if (i + 1 < str.length) {
-				hash2 = ((hash2 << 5n) + hash2) ^ BigInt(str.charCodeAt(i + 1));
+	static getStableHash(str: string, xxHash: true): bigint
+	static getStableHash(str: string, xxHash: false): number
+	static getStableHash(str: string, xxHash?: boolean): number | bigint
+	static getStableHash(str: string, xxHash: boolean = config.target_version >= '3.1'): number | bigint {
+		if (xxHash) {
+			return BigInt(xxhash.h64(str, 0).toString(10))
+		} else {
+			// via https://github.com/Dimbreath/StarRailData/issues/6#issuecomment-1639425428
+			let hash1 = 5381n;
+			let hash2 = 5381n;
+
+			for (let i = 0; i < str.length && typeof str[i] !== 'undefined'; i += 2) {
+				hash1 = ((hash1 << 5n) + hash1) ^ BigInt(str.charCodeAt(i));
+				if (i + 1 < str.length) {
+					hash2 = ((hash2 << 5n) + hash2) ^ BigInt(str.charCodeAt(i + 1));
+				}
 			}
+
+			return Number(BigInt.asIntN(32, (hash1 + (hash2 * 1566083941n)) | 0n));
 		}
-		
-		return Number(BigInt.asIntN(32, (hash1 + (hash2 * 1566083941n)) | 0n));
     }
 	
 	replaceParams(text: string, params: TextParams) {
@@ -237,16 +245,16 @@ export class TextMap {
 		return replaced
 	}
 	
-	getTextRaw(key: number | HashReference) {
-		return this.json[typeof key == 'object' ? key.Hash : key]
+	getTextRaw(key: number | bigint | HashReference) {
+		return this.json[typeof key == 'object' ? key.Hash.toString() : key.toString()]
 	}
 	
-	getText(mapKey?: string | number | HashReference, params?: TextParams, allowNewline: boolean = true): string {
+	getText(mapKey?: string | number | bigint | HashReference, params?: TextParams, allowNewline: boolean = true): string {
 		if (!mapKey) return ''
 		if (typeof mapKey == 'string' && !Number(mapKey)) {
 			mapKey = TextMap.getStableHash(mapKey.toString())
 		}
-		return this.wikiFormatting((this.json[((mapKey instanceof Object) && mapKey.Hash?.toString()) || mapKey.toString()] ?? '').replaceAll('|', '&vert;'), params, allowNewline)
+		return this.wikiFormatting((this.json[(typeof mapKey == 'object' && mapKey.Hash?.toString()) || mapKey.toString()] ?? '').replaceAll('|', '&vert;'), params, allowNewline)
 	}
 	
 	getSentence(sentence: Sentence | number | string, textOnly: boolean = false, allowNewline: boolean = true, allowVO: boolean = true) {
@@ -323,7 +331,7 @@ export class TextMap {
 		console.groupEnd()
 	}
 	
-	static async generateOL(keys?: (string | number | HashReference) | (string | number | HashReference | undefined)[], params?: TextParams): Promise<string> {
+	static async generateOL(keys?: (string | number | bigint | HashReference) | (string | number | bigint | HashReference | undefined)[], params?: TextParams): Promise<string> {
 		const output = ['{{Other Languages']
 		if (!Array.isArray(keys)) keys = [keys]
 		const targetWsp = keys.length > 1 ? 9 : 5
@@ -343,3 +351,76 @@ export class TextMap {
 
 export const textMap = await TextMap.load(config.target_version as Version, config.output_lang as SupportedLanguage)
 TextMap.default = textMap
+
+export const LOCALIZED_NAMES = {
+	// paths
+	Destruction: 10116566940563878966n,
+	TheHunt: 4367365179576232430n,
+	Erudition: 6325610700042370526n,
+	Harmony: 232967775503330328n,
+	Nihility: 10009174905191400515n,
+	Preservation: 4258030345548324088n,
+	Abundance: 21284642533200943n,
+	Remembrance: 119435972213994950n,
+	Elation: 14156660547976442090n,
+	Propagation: 8204925788599882675n,
+	Trailblaze: 8687582118987184760n,
+	RuanMei: 12487974543366005194n,
+
+	// types
+	Physical: 16955357985363994060n,
+	Fire: 1719817313615897075n,
+	Ice: 17771509087530210676n,
+	Lightning: 2257691052810076110n,
+	Wind: 11465789813865379720n,
+	Quantum: 14107960176367381646n,
+	Imaginary: 17452231582631645515n,
+}
+
+export function pathDisplayName(pathName: string): string {
+	switch (pathName) {
+		case 'Destruction':
+		case 'Warrior':
+			return textMap.getText(LOCALIZED_NAMES.Destruction)
+		case 'The Hunt':
+		case 'TheHunt':
+		case 'Rogue':
+			return textMap.getText(LOCALIZED_NAMES.TheHunt)
+		case 'Erudition':
+		case 'Mage':
+			return textMap.getText(LOCALIZED_NAMES.Erudition)
+		case 'Harmony':
+		case 'Shaman':
+			return textMap.getText(LOCALIZED_NAMES.Harmony)
+		case 'Nihility':
+		case 'Warlock':
+			return textMap.getText(LOCALIZED_NAMES.Nihility)
+		case 'Preservation':
+		case 'Knight':
+			return textMap.getText(LOCALIZED_NAMES.Preservation)
+		case 'Abundance':
+		case 'Priest':
+			return textMap.getText(LOCALIZED_NAMES.Abundance)
+		case 'Remembrance':
+		case 'Memory':
+			return textMap.getText(LOCALIZED_NAMES.Remembrance)
+		default:
+			return LOCALIZED_NAMES[pathName] ? textMap.getText(LOCALIZED_NAMES[pathName]) : pathName
+	}
+}
+
+export function typeDisplayName(type: string): string {
+	switch (type) {
+		case 'Thunder':
+		case 'Lightning':
+			return textMap.getText(LOCALIZED_NAMES.Lightning)
+		default:
+			return LOCALIZED_NAMES[type] ? textMap.getText(LOCALIZED_NAMES[type]) : type
+	}
+}
+
+export function pathListDisplay(pathNames: AeonPath[]) {
+	if (pathNames.length == 1) return pathDisplayName(pathNames[0])
+	if (pathNames.length == 2) return `${pathDisplayName(pathNames[0])} or ${pathDisplayName(pathNames[1])}`
+	return [...pathNames.slice(0, -1).map(name => pathDisplayName(name)), 'or ' + pathDisplayName(pathNames[pathNames.length])].join(', ')
+}

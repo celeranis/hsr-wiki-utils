@@ -103,7 +103,7 @@ export class Item {
 	type: ItemMainType
 	subtype: ItemSubType
 	name: string
-	name_hash: number
+	name_hash: number | bigint
 	effect: string
 	desc: string
 	bg_desc: string
@@ -484,13 +484,13 @@ export class ItemList {
 		return `{{Card List|delim=;|${(addList.includes('=') ? '1=' : '') + addList}${mini ? '|mini=1' : ''}}}`
 	}
 	
-	asItemList(removeCommon?: boolean, mode: 'bullet' | 'br' | 'sent' = 'sent') {
+	asItemList(removeCommon?: boolean, mode: 'bullet' | 'br' | 'sent' = 'sent', noText?: boolean) {
 		let adding = this.sortRarityId()
 		if (removeCommon) adding = adding.filter(entry => !MISSION_COMMON.includes(entry.item.id))
 		
 		const addList = adding.map(entry => `${entry.item.pagetitle}*${entry.count}`).join('; ')
 
-		return `{{Item List|${(addList.includes('=') ? '1=' : '') + addList}|mode=${mode}}}`
+		return `{{Item List|${(addList.includes('=') ? '1=' : '') + addList}|mode=${mode}${noText ? '|notext=1' : ''}}}`
 	}
 	
 	asBasicList(delim: string = '; ', link?: boolean) {

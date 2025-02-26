@@ -56,9 +56,9 @@ echo Running dump_talksentences...
 pause
 node --inspect --enable-source-maps src/scripts/dump_talksentences
 
-echo Running dump_value_hashes...
-pause
-node --inspect --enable-source-maps src/scripts/dump_value_hashes
+@REM echo Running dump_value_hashes...
+@REM pause
+@REM node --inspect --enable-source-maps src/scripts/dump_value_hashes
 
 echo Running dump_vo_names...
 node --inspect --enable-source-maps src/scripts/vo/dump_vo_names

@@ -1,6 +1,7 @@
 import config from '../config.json' with { "type": "json" };
 import { Dictionary, VERSION_LIST, Version } from './Shared.js';
 import { HashReference, SupportedLanguage, TextMap } from './TextMap.js';
+import { InternalEquationData } from './files/Equation.js';
 import { HttpError, getFile } from './files/GameFile.js';
 import type { ItemConfig } from './files/Item.js';
 import { InternalMessagesContact } from './files/Messages.js';
@@ -120,6 +121,11 @@ export class ChangeHistory<FileContents extends object, SearchReturn, FindArg> {
 	static stage = new ChangeHistory(
 		'ExcelOutput/StageConfig.json',
 		(stages: InternalStage[], stageId: number) => Object.values(stages).find(stage => stage.StageID == stageId)
+	)
+
+	static equation = new ChangeHistory(
+		'ExcelOutput/RogueTournFormula.json',
+		(equations: InternalEquationData[], equationId: number) => Object.values(equations).find(equation => equation.FormulaID == equationId)
 	)
 	
 	static async getRenameHistory(textMapHash: HashReference | number | string) {

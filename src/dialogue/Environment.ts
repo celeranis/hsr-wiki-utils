@@ -21,23 +21,23 @@ export class GraphEnvironment {
 	
 	post_mission: DialogueTaskEntry[] = []
 	
-	dynamic_values: Record<number, DynamicValue> = {}
+	dynamic_values: Record<string, DynamicValue> = {}
 	
 	registerPostMissionDialogue(item: DialogueTaskEntry) {
 		this.post_mission.push(item)
 	}
 	
-	getDynamicValueByHash(hash: number, create: true): DynamicValue
-	getDynamicValueByHash(hash: number, create?: boolean): DynamicValue | undefined
-	getDynamicValueByHash(hash: number, create?: boolean) {
-		const hashed = this.dynamic_values[hash]
+	getDynamicValueByHash(hash: number | bigint, create: true): DynamicValue
+	getDynamicValueByHash(hash: number | bigint, create?: boolean): DynamicValue | undefined
+	getDynamicValueByHash(hash: number | bigint, create?: boolean) {
+		const hashed = this.dynamic_values[hash.toString()]
 		if (hashed) {
 			return hashed
 		}
 		
 		if (create) {
 			const newDV = new DynamicValue(this, hash)
-			this.dynamic_values[hash] = newDV
+			this.dynamic_values[hash.toString()] = newDV
 			return newDV
 		}
 	}
@@ -147,7 +147,7 @@ export class GraphEnvironment {
 }
 
 export class DynamicValue {
-	constructor(public environment: GraphEnvironment, public hash: number, public name?: string) { }
+	constructor(public environment: GraphEnvironment, public hash: number | bigint, public name?: string) { }
 	
 	private _static_value?: number
 	postfix?: PostfixExpr

@@ -37,7 +37,7 @@ export class Mission {
 	static readonly fatesAtlasData = ChronicleConclusion
 	static readonly stepData = MissionChapterConfig
 	name: string
-	name_hash: number
+	name_hash: number | bigint
 	type: MissionType
 	id: number
 	description?: string
@@ -45,7 +45,7 @@ export class Mission {
 	event?: Event
 	
 	constructor(public data: InternalMainMission) {
-		this.name_hash = data.Name.Hash
+		this.name_hash = data.Name?.Hash
 		this.name = textMap.getText(data.Name)
 		this.type = missionTypeMap[data.Type] || data.Type
 		this.id = data.MainMissionID
@@ -458,6 +458,8 @@ export class MissionDialogueTree extends ActDialogueTree {
 	
 	static async fromStep(step: MissionStep, env?: EnvData) {
 		const actData = await getFile<Act>(step.json_path!)
+			.catch(err => void console.error(`Failed to load ${step.json_path}: ${err}`))
+		if (!actData) return undefined
 		const tree = new this(actData, step)
 		tree.environment.applyData(env)
 		tree.root = await tree.processAct(actData)

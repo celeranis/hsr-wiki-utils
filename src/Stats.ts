@@ -50,7 +50,7 @@ function mockAvatarProperty(key: AvatarPropertyType, Hash: number): AvatarProper
 
 export class Stat {
 	name!: string
-	name_hash!: number
+	name_hash!: number | bigint
 	name_relic?: string
 	name_filter?: string
 	name_trace?: string

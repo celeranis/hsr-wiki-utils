@@ -3,7 +3,7 @@ import { HashReference } from '../TextMap.ts'
 
 export interface InternalEquationData {
 	FormulaID: number
-	TournMode: 'Tourn1'
+	TournMode: 'Tourn1' | 'Tourn2'
 	MainBuffTypeID: number
 	MainBuffNum: number
 	SubBuffTypeID?: number

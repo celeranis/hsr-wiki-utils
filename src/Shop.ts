@@ -46,7 +46,7 @@ export class Shop {
 	main_type: MainShopType
 	group: number
 	name: string
-	name_hash: number
+	name_hash?: number | bigint
 	secondary_name: string
 	icon: string
 	sort_id: number
@@ -60,7 +60,7 @@ export class Shop {
 		this.group = config.ShopType
 		
 		this.name = textMap.getText(config.ShopName)
-		this.name_hash = config.ShopName.Hash
+		this.name_hash = config.ShopName?.Hash
 		
 		this.secondary_name = textMap.getText(config.ShopDesc)
 		this.icon = config.ShopIconPath

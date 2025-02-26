@@ -1,5 +1,5 @@
-import { AttackType, Dictionary, RealAttackType, Value, typeDisplayName } from '../../Shared.js'
-import { HashReference, textMap } from '../../TextMap.js'
+import { AttackType, Dictionary, Value } from '../../Shared.js'
+import { HashReference, textMap, typeDisplayName } from '../../TextMap.js'
 import { getFile } from '../../files/GameFile.js'
 
 export interface InternalGBBGearCollection {
@@ -66,7 +66,7 @@ export class GBBGear {
 	name: string
 	max_level: number
 	tags: GBBTag[]
-	elements: RealAttackType[]
+	elements: string[]
 	type: 'Accessory' | 'Weapon' | 'Legendary Weapon'
 	overview_desc!: string
 	level_descs: string[]

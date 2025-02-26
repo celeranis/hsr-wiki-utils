@@ -9,7 +9,7 @@ export interface InternalBlessingGroup {
 
 export interface InternalDUBlessingGroup {
 	RogueBuffDrop: number[]
-	TournMode: 'Permanent' | 'Tourn1'
+	TournMode: 'Permanent' | 'Tourn1' | 'Tourn2'
 	RogueBuffGroupID: number
 }
 
@@ -49,4 +49,15 @@ export interface InternalBlessingBuff {
 	BuffDescBattle: HashReference
 	BuffEffect: string
 	MazeBuffType: string
+}
+
+export interface InternalBlessingType {
+	RogueBuffType: number
+	RogueBuffTypeName: HashReference
+	RogueBuffTypeTitle: HashReference
+	RogueBuffTypeSubTitle: HashReference
+	RogueBuffTypeDecoName: string
+	RogueBuffTypeIcon: string
+	RogueBuffTypeSmallIcon: string
+	RogueBuffTypeLargeIcon: string
 }

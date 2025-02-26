@@ -9,7 +9,7 @@ const BookSeriesWorld = await getFile<InternalBookWorld[]>('ExcelOutput/BookSeri
 export class ReadableSeries {
 	id: number
 	name: string
-	name_hash: number
+	name_hash: number | bigint
 	description: string
 	world_id: number
 	visible: boolean

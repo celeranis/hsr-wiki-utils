@@ -27,7 +27,7 @@ export class PredicateTask extends BaseNonTextDialogueTask {
 				failedTasks
 			]
 		} else {
-			this.entries = successTasks ? [successTasks] : [failedTasks!]
+			this.entries = successTasks ? [successTasks] : failedTasks ? [failedTasks] : []
 		}
 	}
 	

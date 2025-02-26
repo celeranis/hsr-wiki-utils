@@ -8,8 +8,8 @@ export interface InternalShop {
 	ShopID: number
 	ShopMainType: MainShopType
 	ShopType: number
-	ShopName: HashReference
-	ShopDesc: HashReference
+	ShopName?: HashReference
+	ShopDesc?: HashReference
 	ShopIconPath: string
 	ShopBar: string
 	ShopSortID: number

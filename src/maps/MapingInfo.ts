@@ -14,7 +14,7 @@ export class MappingInfo {
 	
 	mapping_id: number
 	name: string
-	name_hash: number
+	name_hash: number | bigint
 	desc: string
 	
 	is_waypoint: boolean

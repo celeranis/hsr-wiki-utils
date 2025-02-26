@@ -3,13 +3,11 @@ import type { HashReference } from '../TextMap.ts'
 
 export interface InternalCurio {
 	MiracleID: number
-	MiracleDisplayID: number
-	UnlockIDList: number[]
-	UseEffect: HashReference
+	MiracleDisplayID?: number
+	TournMode?: 'Tourn1' | 'Tourn2'
 	HandbookMiracleID?: number
 	UnlockHandbookMiracleID?: number
-	MiracleDesc?: HashReference
-	DescParamList?: Value<number>[]
+	MiracleEffectDisplayID: number
 }
 
 export interface InternalCurioDisplay {
@@ -37,6 +35,13 @@ export interface InternalUNDCurio {
 	MiracleID: number
 	MiracleDisplayID: number
 	UnlockHandbookMiracleID: number
+	MiracleDesc: HashReference
+	DescParamList: Value<number>[]
+	ExtraEffect: number[]
+}
+
+export interface InternalCurioEffectDisplay {
+	MiracleEffectDisplayID: number
 	MiracleDesc: HashReference
 	DescParamList: Value<number>[]
 	ExtraEffect: number[]

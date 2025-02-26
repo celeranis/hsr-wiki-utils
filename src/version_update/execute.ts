@@ -125,7 +125,11 @@ async function edit(file: string, summary: string = REASON) {
 	
 	if (!CHECK) {
 		await client.save(page, content, summary)
-			.catch(console.error)
+			.catch(err => {
+				if (err.code == 'ratelimited') {
+					setTimeout(() => edit(file, summary), 20_000)
+				}
+			})
 		console.log(`Edited "${page}"`)
 	} else {
 		CHECK_EXIST.push(page)

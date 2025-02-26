@@ -92,7 +92,7 @@ for (const occurrence of Object.values(await OccurrenceSeries.loadAllAbstract())
 			output.push(`|path_${i}   = ${option.path}`)
 		}
 		
-		if (option.modes.toString() != occurrence.modes.toString()) {
+		if (option.modes.toString() != occurrence.active_modes.toString()) {
 			output.push(`|modes_${i}  = ${option.modes.join(',') }`)
 		}
 		
@@ -109,7 +109,7 @@ for (const occurrence of Object.values(await OccurrenceSeries.loadAllAbstract())
 		'{{Dialogue Start}}',
 	)
 	
-	if (occurrence.occurrences.length == 1) {
+	if (occurrence.active_occurrences.length == 1) {
 		const dialogue = await firstOccurrence.loadDialogue()
 		
 		output.push(

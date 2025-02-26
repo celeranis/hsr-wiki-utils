@@ -181,7 +181,7 @@ interface EnemyFaction {
 	id: number
 	sortId: number
 	name: string
-	name_hash: number
+	name_hash: number | bigint
 	icon: string
 }
 
@@ -191,7 +191,7 @@ export class EnemyTemplate {
 	template_id: number
 	template_name: string
 	name: string
-	name_hash: number
+	name_hash: number | bigint
 	data_bank_sort?: number
 	faction_id?: number
 	rank: ENEMY_RANK

@@ -2,8 +2,8 @@ import { wikiPageMap } from './util/wikipagemap.js'
 
 export type AeonPath =
 	'Remembrance' | 'Destruction' | 'Elation' | 'Nihility' | 'Preservation'
-	| 'Abundance' | 'TheHunt' | 'Propagation' | 'Erudition' | 'Trailblaze'
-	| 'Ruan Mei'
+	| 'Abundance' | 'TheHunt' | 'Propagation' | 'Erudition' | 'Harmony'
+	| 'Trailblaze' | 'Ruan Mei'
 
 export const enum CombatPath {
 	Destruction = 'Warrior',
@@ -20,20 +20,6 @@ export type CustomAttackType = 'physical' | 'fire' | 'wind' | 'ice' | 'lightning
 export type RealAttackType = 'Physical' | 'Fire' | 'Wind' | 'Ice' | 'Lightning' | 'Quantum' | 'Imaginary'
 
 export const DAMAGE_TYPES: AttackType[] = ['Physical', 'Fire', 'Ice', 'Thunder', 'Wind', 'Quantum', 'Imaginary']
-
-export function pathDisplayName(pathName: AeonPath) {
-	return pathName == 'TheHunt' ? 'The Hunt' : pathName
-}
-
-export function typeDisplayName(type: AttackType): RealAttackType {
-	return type == 'Thunder' ? 'Lightning' : type
-}
-
-export function pathListDisplay(pathNames: AeonPath[]) {
-	if (pathNames.length == 1) return pathDisplayName(pathNames[0])
-	if (pathNames.length == 2) return `${pathDisplayName(pathNames[0])} or ${pathDisplayName(pathNames[1])}`
-	return [...pathNames.slice(0, -1).map(name => pathDisplayName(name)), 'or ' + pathDisplayName(pathNames[pathNames.length])].join(', ')
-}
 
 export function sanitizeString(str: string) {
 	return str
@@ -117,16 +103,16 @@ const ambigTitles = {
 		item: 'The Sound and the Fury (Item)',
 		mission: 'The Sound and the Fury'
 	},
-	'Alchemy Commission (Location)': {
-		location: 'Alchemy Commission (Location)',
+	'Alchemy Commission (Location': {
+		location: 'Alchemy Commission (Location',
 		faction: 'Alchemy Commission'
 	},
 	'Artisanship Commission': {
-		location: 'Artisanship Commission (Location)',
+		location: 'Artisanship Commission (Location',
 		faction: 'Artisanship Commission'
 	},
 	'Divination Commission': {
-		location: 'Divination Commission (Location)',
+		location: 'Divination Commission (Location',
 		faction: 'Divination Commission'
 	},
 	'A Foxian Tale of the Haunted': {

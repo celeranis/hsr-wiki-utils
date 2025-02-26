@@ -26,7 +26,7 @@ const ShopVersions: [Version, Shop[]][] = []
 for (const version of VERSION_LIST) {
 	ShopVersions.push([version, await Shop.loadFromVersion(version)])
 }
-await writeFile('./tmp/help.json', JSON.stringify(ShopVersions, null, '\t'))
+// await writeFile('./tmp/help.json', JSON.stringify(ShopVersions, null, '\t'))
 
 function refreshDisplay(good: ShopGood, short?: boolean) {
 	switch (good.refresh) {

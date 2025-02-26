@@ -48,7 +48,7 @@ function searchAct(act: Act) {
 
 const files = [
 	...await readdir(config.local_roots[config.target_version], { recursive: true, withFileTypes: true }),
-	...await readdir(config.local_roots_mission[config.target_version], { recursive: true, withFileTypes: true })
+	// ...await readdir(config.local_roots_mission[config.target_version], { recursive: true, withFileTypes: true })
 ]
 
 for (const file of files) {

@@ -105,6 +105,8 @@ export class NPCDialogueTree extends ActDialogueTree {
 			return
 		}
 		const actData = await getFile<Act>(data.act_path)
+			.catch(err => void console.error(`Failed to load ${data.act_path}: ${err}`))
+		if (!actData) return
 		const tree = new this(data, actData)
 		tree.environment.applyData(env)
 		tree.root = await tree.processAct(actData)
