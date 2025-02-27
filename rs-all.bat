@@ -48,6 +48,12 @@ node --inspect --enable-source-maps src/scripts/dump_und_secrets
 echo Running dump_weekly_du...
 node --inspect --enable-source-maps src/scripts/dump_weekly_du
 
+echo Running dump_odes...
+node --inspect --enable-source-maps src/scripts/dump_odes
+
+echo Running dump_boons...
+node --inspect --enable-source-maps src/scripts/dump_boons
+
 echo Running dump_occurrences...
 pause
 node --inspect --enable-source-maps src/scripts/dump_occurrences
