@@ -86,6 +86,7 @@ export type TextParams = (string | number | undefined | Value<number> | [number,
 export class TextMap {
 	static readonly cache = new Map<`${SupportedLanguage}${Version}`, TextMap>()
 	static readonly sentence_json: Sentence[] = TalkSentenceConfig
+	trailblazer?: string
 	
 	private constructor(public version: Version, public lang: SupportedLanguage, public json: Dictionary<string>) {
 		TextMap.cache.set(`${this.lang}${this.version}`, this)
@@ -172,7 +173,7 @@ export class TextMap {
 		let replaced = text
 		
 		replaced = replaced
-			.replaceAll(/{NICKNAME}/gi, '(Trailblazer)')
+			.replaceAll(/{NICKNAME}/gi, `(${this.trailblazer ??= this.getTextRaw(6354779731002018877n)})`)
 			.replaceAll('\\n', '\n')
 			.replaceAll(/{(F|M)#([^}]+?)}{(F|M)#([^}]+?)}/gi,
 				(_str: string, gender1: string, text1: string, gender2: string, text2: string) =>
