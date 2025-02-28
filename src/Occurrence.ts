@@ -1,5 +1,6 @@
 import { ActDialogueTree, DialogueTask, DialogueTaskEntry } from './dialogue/Dialogue.js'
-import { DialogueEvent, DialogueEventTask, RogueTalkNameConfig } from './dialogue/tasks/Occurrence.js'
+import { BaseDialogueTask } from './dialogue/DialogueBase.js'
+import { DialogueEvent, DialogueEventTask, RogueOption, RogueRandomEvent, RogueTalkNameConfig } from './dialogue/tasks/Occurrence.js'
 import { getExcelFile, getFile } from './files/GameFile.js'
 import type { Act } from './files/graph/Dialog.js'
 import { DynamicDisplay, InternalEventSectionDisplay, InternalNPC, InternalRogueImage, OptData, RogueNPCData, RogueNPCDialogue } from './files/Occurrence.js'
@@ -18,17 +19,27 @@ export const RogueHandBookEvent = await getFile<any[]>('ExcelOutput/RogueHandBoo
 export const RogueTournHandBookEvent = await getFile<any[]>('ExcelOutput/RogueTournHandBookEvent.json')
 
 export const SPECIAL_OPTION_PATHS: { [key: number]: string } = {
-	1: 'Preservation',
-	2: 'Remembrance',
-	3: 'Nihility',
-	4: 'Abundance',
-	5: 'The Hunt',
-	6: 'Destruction',
-	7: 'Elation',
-	8: 'Propagation',
-	9: 'Erudition',
+	1: textMap.getText(6178763687218641443n), // Preservation
+	2: textMap.getText(6247479463014894143n), // Remembrance
+	3: textMap.getText(9769058996315038438n), // Nihility
+	4: textMap.getText(4791291087730112112n), // Abundance
+	5: textMap.getText(10382082583325775186n), // The Hunt
+	6: textMap.getText(4615555231162745037n), // Destruction
+	7: textMap.getText(13070270830580014015n), // Elation
+	8: textMap.getText(14981730811477752852n), // Propagation
+	9: textMap.getText(15904619425728612032n), // Erudition
 
-	101: 'Ruan Mei',
+	101: textMap.getText(4222254373063957829n), // Ruan Mei
+	
+	201: textMap.getText(5878176038809002817n), // Day
+	202: textMap.getText(12174553876493060569n), // Night
+}
+
+const OVERRIDE_PROGRESS: Record<string, number> = {
+	'319601-0': 6, // The Cuckoo Clock Fanatic (III); Gold and Gears
+	'314401-0': 3, // Loneliness, Cosmic Beauty Bugs, Simulated Universe (II); Gold and Gears
+	'614401-2': 3, // Loneliness, Cosmic Beauty Bugs, Simulated Universe (II); Divergent Universe: Protean Hero
+	'414401-2': 3, // Loneliness, Cosmic Beauty Bugs, Simulated Universe (II); Divergent Universe: The Human Comedy
 }
 
 export type SUMode = 'su' | 'pinf' | 'swarm' | 'gng' | 'du' | 'du_thc' | 'und'
@@ -133,6 +144,10 @@ export class Occurrence {
 		this.mode = series.mode
 		this.progress = dialogueInfo.DialogueProgress ?? 0
 		
+		if (OVERRIDE_PROGRESS[`${series.id}-${this.progress}`]) {
+			this.progress = OVERRIDE_PROGRESS[`${series.id}-${this.progress}`]
+		}
+		
 		const talkName = RogueTalkNameConfig[dialogueInfo.TalkNameID]
 		this.name = textMap.getText(talkName?.Name) ?? ''
 		this.name_hash = talkName?.Name ?? 0
@@ -173,7 +188,7 @@ export class Occurrence {
 				choice: textMap.getText(displayData.OptionTitle, params),
 				result: textMap.getText(displayData.OptionDesc, params),
 				path: internalOption.SpecialOptionID ? SPECIAL_OPTION_PATHS[internalOption.SpecialOptionID] : undefined,
-				modes: this.mode == 'du_thc' ? [] : [this.mode]
+				modes: this.mode.startsWith('du_') ? [] : [this.mode],
 			}
 			this.options.push(option)
 		}
@@ -246,6 +261,10 @@ export class AbstractOccurrence {
 		return this
 	}
 	
+	get active_options() {
+		return this.options.filter(opt => opt.modes.find(mode => !mode.startsWith('du_')))
+	}
+	
 	static fromOccurrence(occurrence: Occurrence) {
 		const aid = occurrence.progress ? `${occurrence.series.story_id}-${occurrence.progress}` : occurrence.series.story_id.toString()
 		if (this.abstractOccurrences[aid]) {
@@ -254,6 +273,15 @@ export class AbstractOccurrence {
 			return new this(aid).addOccurrence(occurrence)
 		}
 	}
+}
+
+export interface OccurrenceOptionTreeEntry {
+	choice?: string
+	chance?: string
+	result?: string
+	modes?: SUMode[]
+	path?: string
+	children: OccurrenceOptionTreeEntry[]
 }
 
 export class OccurrenceDialogueTree extends ActDialogueTree {
@@ -299,5 +327,81 @@ export class OccurrenceDialogueTree extends ActDialogueTree {
 			wikitext = wikitext.substring(0, wikitext.length - 35)
 		}
 		return wikitext
+	}
+	
+	getOptionTree(from: DialogueNode<BaseDialogueTask | DialogueTaskEntry> = this.root!): OccurrenceOptionTreeEntry[] {
+		let currentNode: DialogueNode<BaseDialogueTask | DialogueTaskEntry> | undefined = from
+		let tree: OccurrenceOptionTreeEntry[] = []
+		const treeRoot = tree
+		while (currentNode) {
+			if (currentNode.item instanceof RogueOption && currentNode.item.option_id) {
+				tree.push({
+					choice: currentNode.item.option_id ? this.option_data[currentNode.item.option_id]?.choice : textMap.getSentence(currentNode.item.sentence_id!, false, false)!,
+					result: currentNode.item.option_id ? this.option_data[currentNode.item.option_id]?.result : undefined,
+					path: currentNode.item.option_id ? this.option_data[currentNode.item.option_id]?.path : undefined,
+					modes: [this.su_mode],
+					children: tree = []
+				})
+			} else if (currentNode.item instanceof RogueRandomEvent) {
+				tree.push({
+					chance: currentNode.item.chance,
+					result: undefined,
+					modes: [this.su_mode],
+					children: tree = []
+				})
+			}
+			if (currentNode.children?.length) {
+				tree.push(...currentNode.children.map(child => this.getOptionTree(child)).flat(1))
+			}
+			currentNode = currentNode.next
+		}
+		return treeRoot
+	}
+	
+	static mergeOptionBranch(merged: OccurrenceOptionTreeEntry[], branch: OccurrenceOptionTreeEntry[], modes?: SUMode[]) {
+		for (const entry of branch) {
+			let existingMerged = merged.find(mentry => mentry.choice == entry.choice && mentry.result == entry.result && mentry.chance == entry.chance && mentry.path == entry.path)
+			if (existingMerged) {
+				if (existingMerged.modes && !existingMerged.modes?.includes(entry.modes![0])) {
+					existingMerged.modes.push(entry.modes![0])
+				}
+			} else {
+				existingMerged = {
+					...entry,
+					children: []
+				}
+				if (entry.path) {
+					merged.unshift(existingMerged)
+				} else {
+					merged.push(existingMerged)
+				}
+			}
+			if (entry.children?.length) {
+				this.mergeOptionBranch(existingMerged.children, entry.children, modes?.filter(mode => !entry.modes || entry.modes.includes(mode)))
+			}
+			if (modes && existingMerged.modes && existingMerged.modes.length == modes.length) {
+				existingMerged.modes = undefined
+			}
+		}
+		merged.sort((entry0, entry1) => {
+			if (entry0.path && !entry1.path) return -1
+			if (entry1.path && !entry0.path) return 1
+			const index0 = branch.findIndex(mentry => mentry.choice == entry0.choice && mentry.result == entry0.result && mentry.chance == entry0.chance && mentry.path == entry0.path)
+			const index1 = branch.findIndex(mentry => mentry.choice == entry1.choice && mentry.result == entry1.result && mentry.chance == entry1.chance && mentry.path == entry1.path)
+			if (index0 != -1 && index1 != -1) {
+				return index0 - index1
+			} else {
+				return 0
+			}
+		})
+		return merged
+	}
+	
+	static mergeOptionTrees(trees: OccurrenceOptionTreeEntry[][], modes?: SUMode[]) {
+		let mergedTree: OccurrenceOptionTreeEntry[] = []
+		for (const tree of trees) {
+			this.mergeOptionBranch(mergedTree, tree, modes)
+		}
+		return mergedTree
 	}
 }

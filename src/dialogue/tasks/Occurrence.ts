@@ -97,7 +97,7 @@ export class RogueOption extends BaseDialogueTask {
 				const specialDialogue = `{{SU Special Dialogue|${optionData.path}|${optionData.choice}|${optionData.result}}}`
 				let condition: string | undefined = undefined
 				if (optionData.path == 'Ruan Mei') {
-					condition = tree.su_mode == 'du' ? 'If the player has [[Ruan Mei]]' : `If [[Ruan Mei]] is in the active party`
+					condition = tree.su_mode.startsWith('du') ? 'If the player has [[Ruan Mei]]' : `If [[Ruan Mei]] is in the active party`
 				} else if (tree.su_mode == 'swarm') {
 					condition = `If embarking on the Path of [[Simulated Universe: Swarm Disaster/Paths#${optionData.path}|${optionData.path}]] in [[Simulated Universe: Swarm Disaster]]`
 				} else if (tree.su_mode == 'gng' && optionData.path == 'Erudition' && this.condition_ids) {

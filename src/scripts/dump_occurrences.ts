@@ -2,7 +2,7 @@ import { mkdir, writeFile } from 'fs/promises';
 import { BlessingGroup } from '../Blessing.js';
 import { ChangeHistory } from '../ChangeHistory.js';
 import { Item } from '../Item.js';
-import { displaySUMode, OccurrenceSeries, RogueImage } from '../Occurrence.js';
+import { displaySUMode, OccurrenceDialogueTree, OccurrenceOptionTreeEntry, OccurrenceSeries, RogueImage } from '../Occurrence.js';
 import { sanitizeString, wikiTitle, zeroPad } from '../Shared.js';
 import { TextMap } from '../TextMap.js';
 import { pageInfoHeader } from '../util/General.js';
@@ -45,10 +45,26 @@ const IMAGE_ID_MAP = {
 	130: 'Occurrence Trash Steed.png',
 	131: 'Occurrence Ape.png',
 	132: 'Occurrence Ceremony.png',
+	133: 'Occurrence Race.png',
+	134: 'Occurrence Incubator.png',
+	135: 'Occurrence Repairman.png',
+	136: 'Occurrence Fool.png',
+	137: 'Occurrence Temple of Reticence.png',
+	138: 'Occurrence Hackers and Sailors.png',
+	139: 'Occurrence Paranormal.png',
+	140: 'Occurrence Life is Like a Vegetable.png',
+	141: 'Occurrence Theater.png',
+	142: 'Occurrence Hero.png',
+	143: 'Occurrence Black Tide.png',
+	144: 'Occurrence Dolos.png',
 }
 
 for (const occurrence of Object.values(await OccurrenceSeries.loadAllAbstract())) {
-	const firstOccurrence = occurrence.occurrences.find(occ => occ.mode != 'du') ?? occurrence.occurrences[0]
+	const firstOccurrence = occurrence.active_occurrences.find(occ => occ.mode != 'du') ?? occurrence.active_occurrences[0]
+	if (!firstOccurrence) {
+		console.warn(`Skipping ${occurrence.id}, no active Occurrences`)
+		continue
+	}
 	
 	let duOccurrence = occurrence.occurrences.find(occ => occ.mode == 'du')
 	
@@ -74,30 +90,55 @@ for (const occurrence of Object.values(await OccurrenceSeries.loadAllAbstract())
 		pageInfoHeader(wikiTitle(firstOccurrence.name)),
 		'{{Stub}}',
 		infobox.block(13),
-		`'''${firstOccurrence.name}''' is an [[${occurrence.modes.includes('du') ? 'Divergent' : 'Simulated'} Universe/Occurrence|Occurrence]] in ${displaySUMode(occurrence.modes[0], true)}${occurrence.modes.length > 1 && occurrence.modes.includes('du') ? ' and [[Divergent Universe]]' : ''}.`,
+		`'''${firstOccurrence.name}''' is an [[${occurrence.modes.includes('du') ? 'Divergent' : 'Simulated'} Universe/Occurrence|Occurrence]] in ${displaySUMode(occurrence.active_modes[0], true)}${occurrence.active_modes.length > 1 && occurrence.modes.includes('du') ? ' and [[Divergent Universe]]' : ''}.`,
 		'',
 		'==Possible Outcomes==',
 		'{{Possible Outcomes'
 	]
-	
-	for (let [i, option] of occurrence.options.entries()) {
-		if (option.choice == '' && option.result == '') continue
-		i += 1
-		output.push(
-			`|choice_${i} = ${option.choice}`,
-			`|result_${i} = ${option.result}`
-		)
-		
-		if (option.path) {
-			output.push(`|path_${i}   = ${option.path}`)
+
+	const dialogueMap: Record<string, OccurrenceDialogueTree> = {}
+	const allOptions: OccurrenceOptionTreeEntry[][] = []
+	for (const occurrenceVariant of occurrence.active_occurrences) {
+		if (dialogueMap[occurrenceVariant.mode]) {
+			console.warn(`Multiple ${occurrenceVariant.mode} Occurrences found for ${occurrence.id}, ${occurrenceVariant.name}`)
 		}
 		
-		if (option.modes.toString() != occurrence.active_modes.toString()) {
-			output.push(`|modes_${i}  = ${option.modes.join(',') }`)
-		}
-		
-		output.push('')
+		const dialogue = dialogueMap[occurrenceVariant.mode] = await occurrenceVariant.loadDialogue()!
+		dialogue.optimize()
+		allOptions.push(dialogue.getOptionTree())
 	}
+	
+	const mergedOptions = OccurrenceDialogueTree.mergeOptionTrees(allOptions, occurrence.active_modes)
+	
+	function addOptions(opts: OccurrenceOptionTreeEntry[], prefix: string = '') {
+		for (let [i, option] of opts.entries()) {
+			i += 1
+			if (option.choice) {
+				output.push(`|choice${prefix}_${i} = ${option.choice}`)
+			}
+			if (option.chance) {
+				output.push(`|chance${prefix}_${i} = ${option.chance}`)
+			}
+			if (option.result && !option.children?.length) {
+				output.push(`|result${prefix}_${i} = ${option.result}`)
+			}
+			if (option.path) {
+				output.push(`|path${prefix}_${i}   = ${option.path}`)
+			}
+			if (option.modes?.length) {
+				output.push(`|modes${prefix}_${i}  = ${option.modes.sort().join(',')}`)
+			}
+			if (option.children?.length) {
+				output.push('')
+				addOptions(option.children, `${prefix}_${i}`)
+			}
+			if (i != opts.length) {
+				output.push('')
+			}
+		}
+	}
+	
+	addOptions(mergedOptions)
 	
 	output.push(
 		'}}',
@@ -110,10 +151,10 @@ for (const occurrence of Object.values(await OccurrenceSeries.loadAllAbstract())
 	)
 	
 	if (occurrence.active_occurrences.length == 1) {
-		const dialogue = await firstOccurrence.loadDialogue()
+		const dialogue = dialogueMap[firstOccurrence.mode]
 		
 		output.push(
-			(await dialogue?.optimize()?.wikitext()) || '',
+			(await dialogue?.wikitext()) || '',
 		)
 		const unused = (await dialogue?.unusedWikitext())?.join('\n\n')
 		if (unused) {
@@ -142,12 +183,12 @@ for (const occurrence of Object.values(await OccurrenceSeries.loadAllAbstract())
 	await writeFile(`${container}/${sanitizeString(firstOccurrence.name)}-${occurrence.id}.wikitext`, output.join('\n'))
 	
 	for (const occurrenceVariant of occurrence.occurrences) {
-		const dialogue = await occurrenceVariant.loadDialogue()
+		const dialogue = dialogueMap[occurrenceVariant.mode] ?? (await occurrenceVariant.loadDialogue())?.optimize()
 		
 		const voutput: string[] = []
 		voutput.push(
 			'{{Dialogue Start}}',
-			(await dialogue?.optimize()?.wikitext()) || '',
+			(await dialogue?.wikitext()) || '',
 		)
 		
 		const unused = (await dialogue?.unusedWikitext())?.join('\n\n')
