@@ -3,7 +3,7 @@ import { writeFile } from 'fs/promises';
 import { Blessing } from '../Blessing.js';
 import { ChangeHistory } from '../ChangeHistory.js';
 import { Equation, override, PERIOD_MAP } from '../Equation.js';
-import { AeonPath, sanitizeString } from '../Shared.js';
+import { sanitizeString } from '../Shared.js';
 import { pathDisplayName, TextMap, textMap } from '../TextMap.js';
 import { pageInfoHeader } from '../util/General.js';
 import { Table } from '../util/Table.js';
@@ -15,12 +15,12 @@ const output2: string[] = ['{{Divergent Universe Tabs}}', '']
 const glossary = new Set<number>()
 const glossary2 = new Set<number>()
 
-function addBlessingPath(path: AeonPath) {
+function addBlessingPath(path: string) {
 	output2.push(`===${pathDisplayName(path)}===`)
 	const blessings = [...Blessing.loadAll(true)].sort((a, b) => ((a.id - (a.rarity * 1000000000)) - (b.id - (b.rarity * 1000000000))))
 	const table = new Table('sortable mw-collapsible article-table', ['Icon', 'Name', 'Effect', 'Enhanced Effect'])
 	for (const blessing of blessings) {
-		if (blessing.path != path || !blessing.active || blessing.enhanced) continue
+		if (blessing.path != pathDisplayName(path) || !blessing.active || blessing.enhanced) continue
 		const enhanced = blessings.find(eblessing => eblessing.buff_id == blessing.buff_id && eblessing.enhanced)
 		table.addRowWithAttr(`id="${blessing.name.replaceAll('"', '&quot;').replaceAll("''", '')}"`, [
 			`{{SU Blessing Card|${pathDisplayName(blessing.path)}|${blessing.icon_variant}|${blessing.rarity}}}`,
