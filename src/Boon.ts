@@ -57,7 +57,7 @@ export class GoldenBloodBoon {
 		return Object.values(RogueTournTitanBless).map(data => new this(data))
 	}
 	
-	static fromId(id: number) {
+	static fromId(id: number | string) {
 		if (!RogueTournTitanBless[id]) {
 			throw new Error(`Unknown Golden Blood's Boon ID: ${id}`)
 		}

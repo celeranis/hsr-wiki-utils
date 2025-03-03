@@ -5,11 +5,9 @@ import { mkdir, rm, writeFile } from 'fs/promises';
 import config from '../../../config.json' with { "type": "json" };
 import { sanitizeString, zeroPad } from '../../Shared.js';
 import { Enemy } from '../../Stage.js';
-import { TextMap } from '../../TextMap.js';
+import { textMap } from '../../TextMap.js';
 import { getFile } from '../../files/GameFile.js';
 import { files, langs } from './util.js';
-
-const textMap3 = await TextMap.load('3.0')
 
 const loadFrom = config.asset_roots.TXTP
 // const VO_MAP: Record<string, SoundData[]> = JSON.parse((await readFile('./output/VO_Map.json')).toString())
@@ -79,9 +77,11 @@ const STATE_MAP = {
 	// Skill02: 'Brainteaser- Skill',
 	// Skill03: 'Brainteaser- Ultimate',
 	// Skill04: 'Looping Explanation',
-	Skill07: 'Fury Falls, and All Bows to Strife'
+	// Skill07: 'Fury Falls, and All Bows to Strife'
+	Skill05_Wait: 'But Suffering is Essential',
 }
 
+const ALL_AS_LIST = false
 const AS_LIST = [
 	'Defeated',
 	'Hit by Light Attack',
@@ -130,21 +130,21 @@ const IGNORE_SPEED = {
 }
 
 const monster = Enemy.fromId(opts.id)
-const battleAudioPath = (await getFile<any>(monster.config_path, 'beta'))?.AnimEventConfigList?.find(path => path.includes('/Audio/')) as (string | undefined)
+const battleAudioPath = (await getFile<any>(monster.config_path))?.AnimEventConfigList?.find(path => path.includes('/Audio/')) as (string | undefined)
 
 if (!battleAudioPath) {
 	throw new Error(`Could not find audio file path for ${monster.name}`)
 }
 
-const animEvents = (await getFile<SoundEventData>(battleAudioPath, 'beta')).AnimatorStateEvents
+const animEvents = (await getFile<SoundEventData>(battleAudioPath)).AnimatorStateEvents
 
 const npcMonsters = (await getFile<any>('ExcelOutput/NPCMonsterData.json')).filter(nmons => monster.npc_monster_ids.includes(nmons.ID))
 // console.log(npcMonsters)
 for (const npcMonster of npcMonsters) {
-	const npcConfig = await getFile<any>(npcMonster.JsonPath, 'beta')
+	const npcConfig = await getFile<any>(npcMonster.JsonPath)
 	const audioPath = npcConfig.AnimEventConfigList.find(path => path.includes('/Audio/'))
 	if (!audioPath) continue
-	const audioData = await getFile<SoundEventData>(audioPath, 'beta')
+	const audioData = await getFile<SoundEventData>(audioPath)
 	animEvents.unshift(...audioData.AnimatorStateEvents)
 }
 
@@ -191,7 +191,7 @@ for (const animState of animEvents) {
 		|| STATE_MAP[animState.AnimatorStateName.replace(/_.+/, '')]
 		|| (
 			animState.AnimatorStateName.startsWith('Skill') 
-			&& sanitizeString(textMap3.getText((await monster.getSkill(animState.AnimatorStateName))?.SkillName))
+			&& sanitizeString(textMap.getText((await monster.getSkill(animState.AnimatorStateName))?.SkillName))
 		) 
 		|| animState.AnimatorStateName
 		
@@ -242,7 +242,7 @@ for (const animState of animEvents) {
 			const txPrefix = notes.length > 0 ? `''(${notes.join(', ')})'' ` : ''
 			
 			if (soundData.lang == 'en' || soundData.lang == 'sfx') {
-				if (AS_LIST.includes(stateName)||true) {
+				if (ALL_AS_LIST || AS_LIST.includes(stateName)) {
 					(soundData.speed_state == 2 ? list2x : list).push(`VO ${soundData.lang == 'sfx' ? '' : '{lang}'}{name} - ${outFileSuffix}.ogg`)
 				} else {
 					pendingEntries.push(
@@ -285,7 +285,7 @@ for (const animState of animEvents) {
 			entryIndex++
 		}
 	}
-	if (AS_LIST.includes(stateName)||true) {
+	if (ALL_AS_LIST || AS_LIST.includes(stateName)) {
 		pendingEntries.push(
 			`|vo_${zeroPad(currentIndex, 2)}_01_file           = ${list.join('; ')}`,
 			`|vo_${zeroPad(currentIndex, 2)}_01_tx_en          = &nbsp;`,

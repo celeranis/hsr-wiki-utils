@@ -286,6 +286,46 @@ for (const file of await readDir(`${ROOT}/ol_edit`)) {
 	}
 }
 
+if (midpatch && asiaTime.getUTCDate() == 1 && !CHECK) {
+	console.log('Creating new Starlight Exchange page')
+	let activeCharacter1 = ''
+	let activeCharacter2 = ''
+	switch ((asiaTime.getUTCMonth() + 1) % 6) {
+		case 1:
+			activeCharacter1 = 'March 7th (Preservation)'
+			activeCharacter2 = 'Tingyun'
+			break
+		case 2:
+			activeCharacter1 = 'Hook'
+			activeCharacter2 = 'Pela'
+			break
+		case 3:
+			activeCharacter1 = 'Qingque'
+			activeCharacter2 = 'Sushang'
+			break
+		case 4:
+			activeCharacter1 = 'Arlan'
+			activeCharacter2 = 'Sushang'
+			break
+		case 5:
+			activeCharacter1 = 'Dan Heng'
+			activeCharacter2 = 'Serval'
+			break
+		case 0:
+			activeCharacter1 = 'Natasha'
+			activeCharacter2 = 'Sampo'
+			break
+		default:
+			console.error('what', asiaTime, asiaTime.getUTCMonth())
+	}
+	const nextMonth = asiaTime.getUTCMonth() == 11 ? 1 : asiaTime.getUTCMonth() + 2
+	const nextMonthYear = nextMonth == 1 ? asiaTime.getUTCFullYear() + 1 : asiaTime.getUTCFullYear()
+	const starlightExchange = `{{Starlight Exchange\n|time_start = ${midpatch} 04:00:00\n|time_end   = ${nextMonthYear}-${zeroPad(nextMonth, 2)}-01 03:59:59\n|shop = \n{{Shop/Old|${activeCharacter1}|140|1|type=Character}}\n{{Shop/Old|${activeCharacter2}|140|1|type=Character}}\n}}`
+
+	await client.create(`Starlight Exchange/${midpatch}`, starlightExchange, REASON)
+		.catch(console.error)
+}
+
 if (CHECK) {
 	await checkPages(CHECK_EXIST, true)
 	await checkPages(CHECK_NOEXIST)

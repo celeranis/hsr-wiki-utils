@@ -1,4 +1,5 @@
 import { writeFile } from 'fs/promises';
+import { GoldenBloodBoon } from '../Boon.js';
 import { ChangeHistory } from '../ChangeHistory.js';
 import { Curio, RogueTournHandbookMiracle } from '../Curio.js';
 import { Equation } from '../Equation.js';
@@ -64,6 +65,7 @@ for (const data of Object.values(weeklyData)) {
 
 	const curios: Curio[] = []
 	const equations: Equation[] = []
+	const boons: GoldenBloodBoon[] = []
 	
 	for (const displayId of data.WeeklyContentList) {
 		const display = Object.values(weeklyDisplay).find(display => display.WeeklyDisplayID == displayId)!
@@ -73,6 +75,10 @@ for (const data of Object.values(weeklyData)) {
 			} else if (entry[WeirdKey.get('DescParamType')] == 'Miracle') {
 				if (!RogueTournHandbookMiracle[entry[WeirdKey.get('DescParamValue')]]) continue
 				curios.push(new Curio(Number(entry[WeirdKey.get('DescParamValue')]), true))
+			} else if (entry[WeirdKey.get('DescParamType')] == 'TitanBless') {
+				boons.push(GoldenBloodBoon.fromId(entry[WeirdKey.get('DescParamValue')]))
+			} else {
+				console.warn(`Unknown DescParam type`, entry)
 			}
 		}
 	}
@@ -80,7 +86,7 @@ for (const data of Object.values(weeklyData)) {
 	const [version] = await ChangeHistory.weeklyChallenge.findAdded(data.ChallengeID)
 	const output = [
 		`<%-- [PAGE_INFO]`,
-		`PageTitle=#Divergent Universe/Extrapolation/${periodStart.getUTCFullYear()}-${zeroPad(periodStart.getUTCMonth()+1, 2)}-${zeroPad(periodStart.getUTCDate(), 2)}#`,
+		`PageTitle=#Divergent Universe/Cyclical Extrapolation/${periodStart.getUTCFullYear()}-${zeroPad(periodStart.getUTCMonth()+1, 2)}-${zeroPad(periodStart.getUTCDate(), 2)}#`,
 		`[END_PAGE_INFO] --%>`,
 		`{{Event`,
 		`|name              = ${textMap.getText(data.WeeklyName)}`,
@@ -92,6 +98,7 @@ for (const data of Object.values(weeklyData)) {
 		'}}',
 		'',
 		`{{Cyclical Extrapolation`,
+		`|boons      = ${boons.map(boon => boon.name).join('; ')}`,
 		`|curios     = ${curios.map(curio => curio.name).join('; ')}`,
 		`|equations  = ${equations.map(equation => equation.name).join(';; ')}`,
 		`|trailblaze = `,
@@ -102,6 +109,7 @@ for (const data of Object.values(weeklyData)) {
 		`|boss_2_2   = ${getEnemyList(data.DisplayMonsterGroups2[3]).join('; ')}`,
 		`|boss_3     = ${getEnemyList(data.DisplayMonsterGroups3[0]).join('; ')}`,
 		`|rules      = ${data.WeeklyContentDetailList.map(id => textMap.getText(Object.values(weeklyDisplay).find(d => d.WeeklyDisplayID == id)?.WeeklyDisplayContent)?.replace(/^● /, '')).join('; ')}`,
+		`|root       = ${data.ChallengeID > 37 ? 'Divergent Universe: Protean Hero' : 'Divergent Universe: The Human Comedy'}`,
 		`}}`,
 		'',
 		`==Other Languages==`,
