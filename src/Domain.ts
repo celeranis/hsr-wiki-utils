@@ -174,7 +174,7 @@ export abstract class CocoonDomain extends BaseDomain {
 export class StagnantShadowDomain extends BaseDomain {
 	domain_type: 'shadow' = 'shadow';
 	max_waves: number = 1;
-	type_display = textMap.getText(2072535210)
+	type_display = textMap.getText(2979485018042972636n)
 	
 	getMainDrops(): Item[] {
 		return this.getItems().filter(item => item.purpose_id == ItemPurpose.ASCENSION_MATERIAL)
@@ -198,7 +198,7 @@ export type CalyxGoldenType = 'memories' | 'aether' | 'treasures'
 export class CalyxGoldenDomain extends CocoonDomain {
 	readonly domain_type: 'calyx_golden' = 'calyx_golden';
 	subtype: CalyxGoldenType
-	type_display = textMap.getText(909735796)
+	type_display = textMap.getText(17270097842088462076n)
 
 	getMainDrops(): Item[] {
 		const targetPurpose = 
@@ -228,7 +228,7 @@ export class CalyxGoldenDomain extends CocoonDomain {
 
 export class CalyxCrimsonDomain extends CocoonDomain {
 	readonly domain_type: 'calyx_crimson' = 'calyx_crimson';
-	type_display = textMap.getText(-656348145)
+	type_display = textMap.getText(18367602007122703045n)
 
 	getImage(): string {
 		return `Path ${this.getPath()}.png`
@@ -249,7 +249,7 @@ export class CalyxCrimsonDomain extends CocoonDomain {
 
 export class CavernDomain extends CocoonDomain {
 	readonly domain_type: 'cavern' = 'cavern';
-	type_display = textMap.getText(506451269)
+	type_display = textMap.getText(8411535710367480676n)
 
 	async getImage(): Promise<string> {
 		return `Cavern of Corrosion - ${await this.getShortName()}.png`
@@ -266,7 +266,7 @@ export class CavernDomain extends CocoonDomain {
 
 export class EchoOfWarDomain extends CocoonDomain {
 	readonly domain_type: 'echo' = 'echo';
-	type_display = textMap.getText(-1059632672)
+	type_display = textMap.getText(18014528022268912511n)
 
 	async getImage(): Promise<string> {
 		return `Echo of War - ${await this.getShortName()}.png`

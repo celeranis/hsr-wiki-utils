@@ -17,17 +17,17 @@ export const RogueMagicUnlock = await getExcelFile<InternalUnlockConfig>('RogueM
 export const RogueMagicFinishWay = await getExcelFile<InternalFinishWay>('RogueMagicFinishWay.json', 'ID')
 
 export const DisplayTypeMap = {
-	Break: textMap.getText(-224884001),
-	Dot: textMap.getText(-224884002),
-	Ultimate: textMap.getText(-224884003),
-	Follow: textMap.getText(-224883996),
-	Eject: textMap.getText(-224883997),
-	Spread: textMap.getText(-224883998),
-	AOE: textMap.getText(-224883999),
-	Concentrate: textMap.getText(-224883992),
-	ActionDelay: textMap.getText(-224883993),
-	SP: textMap.getText(-1790967941),
-	Common: textMap.getText(-1790967942)
+	Break: textMap.getText(12275225068698442916n),
+	Dot: textMap.getText(4015019035168065781n),
+	Ultimate: textMap.getText(7322083406970019729n),
+	Follow: textMap.getText(2102302353411690929n),
+	Eject: textMap.getText(11043211720788534633n), // Bounce
+	Spread: textMap.getText(12724348429103288765n), // Blast
+	AOE: textMap.getText(2507560763235863104n),
+	Concentrate: textMap.getText(17566594339531478568n), // Focus
+	ActionDelay: textMap.getText(13084984851682207206n), // Speed
+	SP: textMap.getText(7306310060620602505n), // Charge
+	Common: textMap.getText(96853949381075047n) // General
 }
 
 function varTemplate(params: (string | number)[]) {

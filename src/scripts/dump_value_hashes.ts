@@ -10,12 +10,12 @@ const results: Record<string, string> = {}
 const audioResults: Record<string, string> = {}
 
 function addKey(key: string) {
-	results[TextMap.getStableHash(key).toString()] = key
+	results[TextMap.getStableHash(key, false).toString()] = key
 	audioResults[getAudioHash(key)] = key
 	if (!key.match(/^(?:ADF_|MDF|_)/i)) {
-		results[TextMap.getStableHash(`ADF_${key}`).toString()] = `ADF_${key}`
-		results[TextMap.getStableHash(`MDF_${key}`).toString()] = `MDF_${key}`
-		results[TextMap.getStableHash(`_${key}`).toString()] = `_${key}`
+		results[TextMap.getStableHash(`ADF_${key}`, false).toString()] = `ADF_${key}`
+		results[TextMap.getStableHash(`MDF_${key}`, false).toString()] = `MDF_${key}`
+		results[TextMap.getStableHash(`_${key}`, false).toString()] = `_${key}`
 	}
 }
 

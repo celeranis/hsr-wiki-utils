@@ -1,4 +1,4 @@
-import { getExcelFile, getFile } from '../../files/GameFile.js';
+import { getExcelFile, getFileSafe } from '../../files/GameFile.js';
 import { PlayVideo } from '../../files/graph/Dialog.js';
 import { VideoCaptionData, VideoData } from '../../files/Video.js';
 import { textMap } from '../../TextMap.js';
@@ -23,13 +23,19 @@ export class VideoTask extends BaseDialogueTask {
 			return ';([[#Gallery|Cutscene]] plays)'
 		}
 		
-		const captionData = await getFile<VideoCaptionData>(this.caption_path)
+		const captionData = await getFileSafe<VideoCaptionData>(this.caption_path)
+		if (!captionData) {
+			return '----\n' + ':'.repeat(level) + ';([[#Gallery|Cutscene]] plays)\n'
+				+ ':'.repeat(level + 2) + `{{tx}}{{subst:void|<!--Failed to load captions from ${this.caption_path}-->}}`
+				+ '\n' + ':'.repeat(level) + ';(Cutscene ends)\n'
+				+ ':'.repeat(level) + '----'
+		}
 		
 		return '----\n' + ':'.repeat(level) + ';([[#Gallery|Cutscene]] plays)\n' + captionData.CaptionList
 			.sort((c0, c1) => c0.StartTime - c1.StartTime)
 			.map(caption => `${':'.repeat(level + 2)}${textMap.getText(caption.CaptionTextID)}`)
 			.join('\n')
-			+ ':'.repeat(level) + '\n;(Cutscene ends)\n'
+			+ '\n' + ':'.repeat(level) + ';(Cutscene ends)\n'
 			+ ':'.repeat(level) + '----'
 	}
 	

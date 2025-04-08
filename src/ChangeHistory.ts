@@ -1,3 +1,4 @@
+import { readFile } from 'fs/promises';
 import config from '../config.json' with { "type": "json" };
 import { Dictionary, VERSION_LIST, Version } from './Shared.js';
 import { HashReference, SupportedLanguage, TextMap } from './TextMap.js';
@@ -14,6 +15,7 @@ import type { InternalWorldInfo } from './files/Worlds.js';
 import { MazeFloor } from './files/graph/MapData.js';
 
 const ITEM_ID_MATCH = (items: ItemConfig, itemId: number | string) => Object.values(items).find(item => item?.ID == itemId)
+let hashDiffs: Record<number, bigint> | undefined = undefined
 
 /**
  * This is a somewhat abstract class used to figure out the change history of something.
@@ -128,18 +130,30 @@ export class ChangeHistory<FileContents extends object, SearchReturn, FindArg> {
 		(equations: InternalEquationData[], equationId: number) => Object.values(equations).find(equation => equation.FormulaID == equationId)
 	)
 	
-	static async getRenameHistory(textMapHash: HashReference | number | string) {
+	static async getRenameHistory(textMapHash: HashReference | number | bigint | string) {
 		let lastText: string | undefined = undefined
 		let results: string[] = []
+		
+		let oldHash: number
+		if (typeof (textMapHash) == 'string' && !Number(textMapHash)) {
+			oldHash = TextMap.getStableHash(textMapHash, false)
+			textMapHash = TextMap.getStableHash(textMapHash, true)
+		} else {
+			hashDiffs ??= JSON.parse((await readFile('./output/hash_diffs.json')).toString())
+			oldHash = hashDiffs![textMapHash.toString()]
+		}
 
 		for (const version of VERSION_LIST) {
 			const textMap = await TextMap.load(version, config.output_lang as SupportedLanguage)
-
-			const text = textMap.getText(textMapHash)
+			
+			const text = textMap.getText(version < '3.1' ? (oldHash ?? textMapHash) : textMapHash)
 			if (text && lastText != text) {
 				if (lastText) {
 					results.push(`Renamed to "${text}" in version ${version}`)
 				} else {
+					if (version == '3.1' && !oldHash) {
+						results.push('History before version 3.1 may have been lost due to hash changes.')
+					}
 					results.push(`Added in version ${version} as "${text}"`)
 				}
 				lastText = text
