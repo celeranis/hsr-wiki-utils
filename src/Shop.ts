@@ -54,20 +54,20 @@ export class Shop {
 	
 	private version: Version = cfg.target_version as Version
 	
-	constructor(config: InternalShop, textMap: TextMap = TextMap.default) {
+	constructor(config: InternalShop, thisTextMap: TextMap = TextMap.default) {
 		this.id = config.ShopID
 		this.main_type = config.ShopMainType
 		this.group = config.ShopType
 		
-		this.name = textMap.getText(config.ShopName)
+		this.name = thisTextMap.getText(config.ShopName)
 		this.name_hash = config.ShopName?.Hash
 		
-		this.secondary_name = textMap.getText(config.ShopDesc)
+		this.secondary_name = thisTextMap.getText(config.ShopDesc)
 		this.icon = config.ShopIconPath
 		this.sort_id = config.ShopSortID
 		this.open = config.IsOpen ?? false
 		
-		this.version = textMap.version
+		this.version = thisTextMap.version
 	}
 	
 	static fromId(id: string | number) {
@@ -84,7 +84,7 @@ export class Shop {
 		if (!goodsByVersion[version]) {
 			goodsByVersion[version] = await getFile<InternalShopGoods[]>('ExcelOutput/ShopGoodsConfig.json', version)
 		}
-		return Object.values(await getFile('ExcelOutput/ShopConfig.json')).map(config => new this(config, textMap))
+		return Object.values(await getFile('ExcelOutput/ShopConfig.json', version)).map(config => new this(config, textMap))
 	}
 	
 	static async loadAll() {

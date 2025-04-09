@@ -167,6 +167,14 @@ for (const shop of await Shop.loadAll()) {
 					case 'EquipmentRankUpNum':
 						notes.push(`if the associated Light Cone has not reached Superimposition V`)
 						break
+					case 'AvatarNum':
+						notes.push(`if the character has not yet reached Eidolon Lv. 6`)
+						break
+					case 'FinishQuest':
+						if (args[0] == 2200502) { // hardcoded for now
+							notes.push(`after obtaining a {{Item|Silver Companion Spirit}} for the first time`)
+							break
+						}
 					default:
 						notes.push(`{{cx}}<!--${type}, ${args}-->`)
 						break
@@ -202,7 +210,12 @@ for (const shop of await Shop.loadAll()) {
 	let lastItems: ShopGood[] | undefined = undefined
 	for (const [version, shops] of ShopVersions) {
 		const thisShop = shops.find(oshop => oshop.id == shop.id)
-		if (!thisShop || !thisShop.name) continue
+		if (!thisShop || !thisShop.name) {
+			if (shop.name == "Herta's Store") {
+				console.log(version, thisShop?.id, thisShop?.name, thisShop?.name_hash)
+			}
+			continue
+		}
 
 		const oldItems = thisShop.getItems()
 		

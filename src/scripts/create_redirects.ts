@@ -45,10 +45,12 @@ const REDIRECTS = [
 		redirectName: (page: string, infobox) => `File:Item ${page}.png`,
 		redirectTarget: (page: string, infobox) => `File:${infobox.image}`
 	},
-	// {
-	// 	sourceCategory: 'Playable Characters',
-	// 	readTemplate
-	// }
+	{
+		sourceCategory: 'Playable Characters',
+		readTemplate: 'Character Infobox',
+		redirectName: (page: string, infobox) => `File:Character ${page} Icon.png`,
+		redirectTarget: (page: string, infobox) => `File:${infobox.image}`
+	}
 ]
 
 const REDIRECT_FORMAT = (target: string) => `#REDIRECT [[${target}]]\n\n[[Category:Redirect Pages]]`

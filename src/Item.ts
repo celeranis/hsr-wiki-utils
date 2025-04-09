@@ -1,7 +1,7 @@
 import { Dictionary, sanitizeString, titleCase, wikiTitle, wikiTitleLink } from './Shared.js';
 import { textMap } from './TextMap.js';
-import { LazyData, LazyExcelData, getFile } from './files/GameFile.js';
-import type { InternalItem, InternalItemComefrom, InternalItemPurpose, InternalPassPage, InternalPassSticker, InternalRecipeConfig, InternalRewardData, ItemConfig, ItemMainType, ItemRarity, ItemReference, ItemSortData, ItemSubType } from './files/Item.js';
+import { LazyData, LazyExcelData, getExcelFile, getFile } from './files/GameFile.js';
+import { InternalCureInfo, type InternalItem, type InternalItemComefrom, type InternalItemPurpose, type InternalPassPage, type InternalPassSticker, type InternalRecipeConfig, type InternalRewardData, type ItemConfig, type ItemMainType, type ItemRarity, type ItemReference, type ItemSortData, type ItemSubType } from './files/Item.js';
 import { GotoData } from './files/graph/MapData.js';
 import { MappingInfo } from './maps/MapingInfo.js';
 
@@ -68,6 +68,7 @@ export const COMMON_ICON_MAP = {
 }
 
 const sortData = Object.fromEntries((await getFile<ItemSortData[]>('ExcelOutput/ItemDisplaySort.json')).map(sort => [sort.ID, sort]))
+const ItemCureInfoData = await getExcelFile<InternalCureInfo>('ItemCureInfoData.json', 'ID')
 
 export class Item {
 	static readonly itemData = {
@@ -388,6 +389,16 @@ export class Item {
 			: ''
 		
 		return this.pagetitle + argsString
+	}
+	
+	getText() {
+		let cureInfo = ItemCureInfoData[this.id]
+		if (!cureInfo) return
+		return {
+			title: textMap.getText(cureInfo.CureInfoTitle),
+			content: textMap.getText(cureInfo.CureInfoDesc),
+			image_path: cureInfo.ImgPath || undefined
+		}
 	}
 }
 

@@ -142,6 +142,26 @@ for (const [source, data] of Object.entries(Item.itemData)) {
 			output.push(`\n==Usage==\n{{Craft Usage}}`)
 		}
 		
+		let readableData = item.getText()
+		if (readableData) {
+			output.push(
+				`\n==Text==`,
+				`<div align="center">{{Color|Keyword|${readableData.title}}}</div>`
+			)
+			if (readableData.content) {
+				output.push(
+					readableData.content
+						.replaceAll(/{{Color\|(\w+)\|/gi, '{{Color|$1|nobold=1|')
+						.replaceAll('\n', '<br />')
+						.replaceAll('<br /><br />', '\n\n')
+				)
+			}
+			if (readableData.image_path) {
+				let filename = `Item ${sanitizeString(item.name)}.png`
+				output.push(`[[File:${filename}|185px]]${uploadPrompt(readableData.image_path, filename, 'Item Images')}`)
+			}
+		}
+		
 		output.push(
 			'\n==Other Languages==',
 			await TextMap.generateOL(item.name_hash),

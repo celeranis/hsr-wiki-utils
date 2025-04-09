@@ -126,3 +126,10 @@ export interface ItemSortData {
 }
 
 export type InternalRecipeConfig = Dictionary<InternalRecipe>
+
+export interface InternalCureInfo {
+	ID: number
+	CureInfoTitle: HashReference
+	CureInfoDesc: HashReference
+	ImgPath: string
+}

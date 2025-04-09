@@ -109,7 +109,8 @@ async function move(from: string, to: string, summary: string = REASON) {
 
 async function create(file: string, summary: string = REASON) {
 	const [page, content] = await getFile(file)
-	
+
+	await processUploadPrompts(content)
 	if (!CHECK) {
 		await client.create(page, content, summary)
 			.catch(console.error)
@@ -117,12 +118,12 @@ async function create(file: string, summary: string = REASON) {
 	} else {
 		CHECK_NOEXIST.push(page)
 	}
-	await processUploadPrompts(content)
 }
 
 async function edit(file: string, summary: string = REASON) {
 	const [page, content] = await getFile(file)
-	
+
+	await processUploadPrompts(content)
 	if (!CHECK) {
 		await client.save(page, content, summary)
 			.catch(err => {
@@ -134,7 +135,6 @@ async function edit(file: string, summary: string = REASON) {
 	} else {
 		CHECK_EXIST.push(page)
 	}
-	await processUploadPrompts(content)
 }
 
 async function redirect(from: string, to: string, summary: string = REASON) {

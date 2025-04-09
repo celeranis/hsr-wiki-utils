@@ -94,7 +94,7 @@ export class Mission {
 	}
 	
 	static fromId(missionId: string | number): Mission {
-		const dat = Object.values(this.missionData).find(dat => dat.MainMissionID == missionId)
+		const dat = this.missionData[missionId]
 		if (!dat) {
 			throw new TypeError(`Unknown mission ID ${missionId}`)
 		}
@@ -273,7 +273,7 @@ export class Mission {
 	
 	getNext(): Mission[] {
 		const list = this.data.NextMainMissionList?.map(data => Mission.fromId(data)) || []
-		if (this.data.NextTrackMainMission) {
+		if (this.data.NextTrackMainMission && MainMission[this.data.NextTrackMainMission]) {
 			let next = Mission.fromId(this.data.NextTrackMainMission)
 			if (next.id == this.id) return list
 			else if (next.name == this.name) next = next.getNext()[0]

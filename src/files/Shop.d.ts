@@ -1,7 +1,7 @@
 import { HashReference } from '../TextMap.ts'
 
 export type MainShopType = 'Main' | 'Npc'
-export type ShopLimitType = 'Level' | 'MainMission' | 'HasNoRefreshGoods' | 'PreGoods' | 'ItemNum' | 'EquipmentRankUpNum'
+export type ShopLimitType = 'Level' | 'MainMission' | 'HasNoRefreshGoods' | 'PreGoods' | 'ItemNum' | 'EquipmentRankUpNum' | 'AvatarNum' | 'FinishQuest'
 export type RefreshType = 'DAILY' | 'WEEK' | 'MONTH' | 'CYCLE'
 
 export interface InternalShop {
