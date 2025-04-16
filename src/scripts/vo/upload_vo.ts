@@ -1,7 +1,7 @@
 import { program } from 'commander';
 import { existsSync } from 'fs';
 import { rm } from 'fs/promises';
-import { client } from '../../util/Bot.js';
+import { client, retryIfRatelimit } from '../../util/Bot.js';
 import { dumpFile, files } from './util.js';
 
 program
@@ -65,10 +65,10 @@ for (const pageTitle of opts.page.split(';;')) {
 		await dumpFile(`./tmp/`, `uploading.ogg`, file)
 
 		if (!opts.list) {
-			const response = await client.upload('./tmp/uploading.ogg', audioName, `==Summary==\n{{File\n|categories = ${pageTitle}\n}}\n\n==Licensing==\n{{Fairuse}}`, {
+			const response = await retryIfRatelimit(() => client.upload('./tmp/uploading.ogg', audioName, `==Summary==\n{{File\n|categories = ${pageTitle}\n}}\n\n==Licensing==\n{{Fairuse}}`, {
 				comment: `uploading VO for [[${pageTitle}]]`,
 				ignorewarnings: opts.ignoreWarnings ?? false
-			})
+			}))
 			if (response.result == 'Warning') {
 				if (response.warnings?.exists) {
 					console.log(`Skipped ${internalName}, already uploaded to ${audioName}`)

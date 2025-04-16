@@ -1,12 +1,11 @@
 import { program } from 'commander'
 import { Dirent, existsSync } from 'fs'
 import { readFile, readdir, writeFile } from 'fs/promises'
-import { MwnError } from 'mwn/build/error.js'
 import config from '../../config.json' with { "type": 'json' }
 import { COMMON_ICON_MAP } from '../Item.js'
 import { sanitizeString, zeroPad } from '../Shared.js'
 import { AWB } from '../util/AWB.js'
-import { client } from '../util/Bot.js'
+import { client, fileRedirectMap, redirectRetry, retryIfRatelimit, uploadRetry } from '../util/Bot.js'
 
 const MOVE: Record<string, string> = {
 	
@@ -15,11 +14,6 @@ const MOVE: Record<string, string> = {
 const REDIRECT: Record<string, string> = {
 	
 }
-
-let fileRedirectMap: Record<string, string> = 
-	existsSync('./src/version_update/FileRedirectMap.json')
-		? JSON.parse((await readFile('./src/version_update/FileRedirectMap.json')).toString())
-		: {}
 
 for (const [key, val] of Object.entries(COMMON_ICON_MAP)) {
 	fileRedirectMap[config.asset_roots.Texture2D + '/' + key] = val
@@ -98,7 +92,7 @@ async function processUploadPrompts(content: string): Promise<void> {
 
 async function move(from: string, to: string, summary: string = REASON) {
 	if (!CHECK) {
-		await client.move(from, to, summary)
+		await retryIfRatelimit(() => client.move(from, to, summary))
 			.catch(console.error)
 		console.log(`Moved "${from}" to "${to}"`)
 	} else {
@@ -125,12 +119,7 @@ async function edit(file: string, summary: string = REASON) {
 
 	await processUploadPrompts(content)
 	if (!CHECK) {
-		await client.save(page, content, summary)
-			.catch(err => {
-				if (err.code == 'ratelimited') {
-					setTimeout(() => edit(file, summary), 20_000)
-				}
-			})
+		await retryIfRatelimit(() => client.save(page, content, summary))
 		console.log(`Edited "${page}"`)
 	} else {
 		CHECK_EXIST.push(page)
@@ -139,12 +128,7 @@ async function edit(file: string, summary: string = REASON) {
 
 async function redirect(from: string, to: string, summary: string = REASON) {
 	if (!CHECK) {
-		const err = await client.create(from, `#REDIRECT [[${to}]]\n\n[[Category:Redirect Pages]]`, `${summary} — Redirecting page to [[${to}]]`)
-			.catch(err => err)
-		if (err && err instanceof Error && !(err instanceof MwnError && err.code == 'articleexists')) {
-			console.error(err)
-		}
-		console.log(`Redirected "${from}" to "${to}"`)
+		await redirectRetry(from, to, summary)
 	} else {
 		CHECK_NOEXIST.push(from)
 	}
@@ -159,7 +143,7 @@ async function updateOL(file: string, summary: string = REASON) {
 	pageContent = pageContent?.replace(/{{Other Languages.+?\n}}/is, content.match(/{{Other Languages.+?\n}}/is)?.[0]!)
 
 	if (!CHECK) {
-		await client.save(page, pageContent!, summary)
+		await retryIfRatelimit(() => client.save(page, pageContent!, summary))
 		console.log(`Updated OL for "${page}"`)
 	} else {
 		CHECK_EXIST.push(page)
@@ -179,14 +163,6 @@ const CATEGORIES = {
 }
 
 async function upload(file: string, fileName: string, categories?: string, reason: string = REASON) {
-	if (fileRedirectMap[file] == fileName) {
-		return
-	} else if (fileRedirectMap[file]) {
-		await redirect('File:' + fileName, 'File:' + fileRedirectMap[file], reason)
-	}
-	
-	let pageContentFile = file.replace(/\.png$/, '.wikitext')
-	
 	if (!categories) {
 		for (const [folder, cat] of Object.entries(CATEGORIES)) {
 			if (file.replaceAll('\\', '/').includes(`/${folder}/`)) {
@@ -195,49 +171,19 @@ async function upload(file: string, fileName: string, categories?: string, reaso
 		}
 	}
 	
-	let pageContent = `==Summary==\n{{File\n|categories = ${categories}\n}}\n\n==Licensing==\n{{Fairuse}}`
-	if (existsSync(pageContentFile)) {
-		pageContent = (await readFile(pageContentFile)).toString()
-	} else {
-		if (!categories) {
-			console.warn(`No category found for ${file}, skipping...`)
-			return
-		}
-	}
-	
 	if (!CHECK) {
-		const result = await client.upload(file, fileName, pageContent, {
-			comment: reason,
-			ignorewarnings: false
-		})
-		if (result.result == 'Warning') {
-			const dupe_of = result.warnings?.duplicate?.toString()?.replaceAll('_', ' ')
-			if (dupe_of) {
-				fileRedirectMap[file] = dupe_of
-				await redirect('File:' + fileName, 'File:' + dupe_of, reason)
-				return
-			}
-			
-			if (result.warnings?.exists) {
-				const currentContent = (await client.read('File:' + fileName)).revisions?.[0]?.content
-				if (!currentContent || currentContent.includes('{{Placeholder Image')) {
-					// if this is placeholder image, we can safely replace it
-					await client.upload(file, fileName, pageContent, {
-						comment: reason,
-						ignorewarnings: true
-					})
-					// and remove the placeholder template
-					await client.save('File:' + fileName, pageContent, reason)
-				}
-			}
-		} else if (result.filename) {
-			fileRedirectMap[file] = result.filename.replaceAll('_', ' ')
+		if (categories) {
+			await uploadRetry(file, fileName, categories, reason)
+		} else {
+			console.error(`No categories found for "${file}", skipping...`)
 		}
-		console.log(`Uploaded "${fileName}"`)
 	} else {
 		CHECK_NOEXIST.push(fileName)
 		if (!existsSync(file)) {
 			console.error(`File "${file}" (to be uploaded to "${fileName}") does not exist!`)
+		}
+		if (!categories) {
+			console.error(`File "${file}" has no categories and will be skipped`)
 		}
 	}
 }
@@ -260,19 +206,19 @@ for (const [from, to] of Object.entries(MOVE)) {
 
 for (const file of await readDir(`${ROOT}/create`)) {
 	if ((file.isFile() || file.isSymbolicLink()) && (file.name.endsWith('.wikitext') || file.name.endsWith('.lua'))) {
-		await create(file.path + '/' + file.name)
+		await create(file.parentPath + '/' + file.name)
 	}
 }
 
 for (const file of await readDir(`${ROOT}/edit`)) {
 	if ((file.isFile() || file.isSymbolicLink()) && (file.name.endsWith('.wikitext') || file.name.endsWith('.lua'))) {
-		await edit(file.path + '/' + file.name)
+		await edit(file.parentPath + '/' + file.name)
 	}
 }
 
 for (const file of await readDir(`${ROOT}/upload`)) {
 	if ((file.isFile() || file.isSymbolicLink()) && !file.name.endsWith('.wikitext')) {
-		await upload(file.path + '/' + file.name, file.name)
+		await upload(file.parentPath + '/' + file.name, file.name)
 	}
 }
 
@@ -282,7 +228,7 @@ for (const [from, to] of Object.entries(REDIRECT)) {
 
 for (const file of await readDir(`${ROOT}/ol_edit`)) {
 	if ((file.isFile() || file.isSymbolicLink()) && file.name.endsWith('.wikitext')) {
-		await updateOL(file.path + '/' + file.name)
+		await updateOL(file.parentPath + '/' + file.name)
 	}
 }
 
@@ -322,7 +268,7 @@ if (midpatch && asiaTime.getUTCDate() == 1 && !CHECK) {
 	const nextMonthYear = nextMonth == 1 ? asiaTime.getUTCFullYear() + 1 : asiaTime.getUTCFullYear()
 	const starlightExchange = `{{Starlight Exchange\n|time_start = ${midpatch} 04:00:00\n|time_end   = ${nextMonthYear}-${zeroPad(nextMonth, 2)}-01 03:59:59\n|shop = \n{{Shop/Old|${activeCharacter1}|140|1|type=Character}}\n{{Shop/Old|${activeCharacter2}|140|1|type=Character}}\n}}`
 
-	await client.create(`Starlight Exchange/${midpatch}`, starlightExchange, REASON)
+	await retryIfRatelimit(() => client.create(`Starlight Exchange/${midpatch}`, starlightExchange, REASON))
 		.catch(console.error)
 }
 
