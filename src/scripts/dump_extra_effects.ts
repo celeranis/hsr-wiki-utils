@@ -8,7 +8,7 @@ const ExtraEffectConfig = await getExcelFile<InternalExtraEffect>('ExtraEffectCo
 
 const ALIASES: Record<string, string[]> = {
 	'Action Delayed': ['delayed'],
-	'Action Advanced': ['advanced', 'advanced forward', 'advance forward', 'action advances'],
+	'Action Advanced': ['advanced', 'advanced forward', 'advance forward', 'action advances', 'advances its action'],
 	'Extra Turn': ['extra action'],
 	'Follow-up ATK': ['follow-up attack', 'follow-up'],
 	'Additional DMG': ['additional damage', 'additional', 'additional ice dmg', ''],
@@ -22,6 +22,11 @@ const ALIASES: Record<string, string[]> = {
 	'Spores': ['spore', 'spore(s)'],
 	'AoE ATK': ['aoe', 'aoe attack'],
 	'Overflow DMG': ['overflow', 'overflows', 'overflow damage'],
+	'Summon Memosprite': ['summons the memosprite'],
+	
+	// inconsistent
+	'Joint Attack': ['joint atk'],
+	'Joint ATK': ['joint attack'],
 }
 
 const output = [
