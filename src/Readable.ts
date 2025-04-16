@@ -61,7 +61,10 @@ export class Readable {
 		this.content = textMap.getText(config.BookContent)
 			.replaceAll(/{{Color\|(\w+)\|/gi, '{{Color|$1|nobold=1|')
 			.replaceAll('\n', '<br />')
+			.replaceAll('<br /><br /><br />', '\n\n\n')
 			.replaceAll('<br /><br />', '\n\n')
+			.replaceAll(/<\/div>((<br \/>|[\s\t\r\n])*)<div align="\w+">/gi, '$1')
+			.replaceAll(/([^\s>])<br \/>([^\s<])/gi, '$1<br />\n$2')
 			// .replaceAll(/{Img#(\d+)}/gi, `[[File:]]`)
 		
 		this.image_paths = config.LocalBookImagePath ?? []

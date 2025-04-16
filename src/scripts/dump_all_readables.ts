@@ -4,6 +4,7 @@ import { Item } from '../Item.js';
 import { ReadableSeries } from '../Readable.js';
 import { sanitizeString, wikiTitle, zeroPad } from '../Shared.js';
 import { TextMap } from '../TextMap.js';
+import { getCharacterMentions, getFactionMentions } from '../util/Mentions.js';
 import { Template } from '../util/Template.js';
 
 await Item.loadFrom('main', 'readables')
@@ -50,8 +51,10 @@ for (const series of ReadableSeries.loadAll()) {
 		infobox.addParam(`source${i+1}`, '{{cx|Source missing}}')
 	}
 	
-	infobox.addParam('characters', '')
-	infobox.addParam('factions', '')
+	let checkStrings = readables.map(book => [book.name, book.content]).flat(1)
+	
+	infobox.addParam('characters', getCharacterMentions(...checkStrings).join('; '))
+	infobox.addParam('factions', getFactionMentions(...checkStrings).join('; '))
 	
 	output.push(
 		infobox.block(12),
