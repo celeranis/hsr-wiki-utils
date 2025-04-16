@@ -23,6 +23,7 @@ const ALIASES: Record<string, string[]> = {
 	'AoE ATK': ['aoe', 'aoe attack'],
 	'Overflow DMG': ['overflow', 'overflows', 'overflow damage'],
 	'Summon Memosprite': ['summons the memosprite'],
+	'Even Distribution': ['distributed evenly'],
 	
 	// inconsistent
 	'Joint Attack': ['joint atk'],
@@ -40,9 +41,9 @@ const output = [
 	`	to prevent your changes from being overwritten with the next version update.`,
 	``,
 	`	--><span class="custom-tt-wrapper srw-extra-effect-wrapper toggle-tooltip mw-collapsible mw-made-collapsible mw-collapsed srw-collapsible"><!--`,
-	`		--><span class="mw-collapsible-toggle mw-collapsible-toggle-default mw-collapsible-toggle-collapsed srw-extra-effect toggle-tooltip">{{{1|{{{2|}}}}}}</span><!--`,
+	`		--><span class="mw-collapsible-toggle mw-collapsible-toggle-default mw-collapsible-toggle-collapsed srw-extra-effect toggle-tooltip">{{{1}}}</span><!--`,
 	`		--><span class="mw-collapsible-content srw-extra-effect" style="display:none"><!--`,
-	`			-->{{#switch:{{lc:{{{2|{{{1}}}}}}}}`,
+	`			-->{{#switch:{{#replace:{{#replace:{{lc:{{{2|{{{1}}}}}}}}|"|}}|.|}}`,
 ]
 
 function resolvePriority(name: string, id0: number) {
@@ -88,7 +89,7 @@ for (const effect of Object.values(ExtraEffectConfig).sort((e0, e1) => e0.ExtraE
 	names = names.filter(name => priority[name] == effect.ExtraEffectID)
 	names.push(effect.ExtraEffectID.toString())
 	
-	output.push(`\t\t\t\t| ${names.join(' | ')} = <!--\n\t\t\t\t\t--><span class="srw-extra-effect-header">${name}</span><!--\n\t\t\t\t\t--><span class="srw-extra-effect-content">${textMap.getText(effect.ExtraEffectDesc, effect.DescParamList).replaceAll('\n', '<br />')}</span>`)
+	output.push(`\t\t\t\t| ${names.map(n => n.replaceAll(/[\.\"]/gi, '')).join(' | ')} = <!--\n\t\t\t\t\t--><span class="srw-extra-effect-header">${name}</span><!--\n\t\t\t\t\t--><span class="srw-extra-effect-content">${textMap.getText(effect.ExtraEffectDesc, effect.DescParamList).replaceAll('\n', '<br />')}</span>`)
 }
 
 output.push(
