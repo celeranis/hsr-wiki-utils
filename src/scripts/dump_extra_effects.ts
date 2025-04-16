@@ -34,7 +34,7 @@ const output = [
 	`	or submit a PR to the script on GitHub (https://github.com/celeranis/hsr-wiki-utils/blob/main/src/scripts/dump_extra_effects.ts)`,
 	`	to prevent your changes from being overwritten with the next version update.`,
 	``,
-	`	--><span class="custom-tt-wrapper toggle-tooltip mw-collapsible mw-made-collapsible mw-collapsed srw-collapsible"><!--`,
+	`	--><span class="custom-tt-wrapper srw-extra-effect-wrapper toggle-tooltip mw-collapsible mw-made-collapsible mw-collapsed srw-collapsible"><!--`,
 	`		--><span class="mw-collapsible-toggle mw-collapsible-toggle-default mw-collapsible-toggle-collapsed srw-extra-effect toggle-tooltip">{{{1|{{{2|}}}}}}</span><!--`,
 	`		--><span class="mw-collapsible-content srw-extra-effect" style="display:none"><!--`,
 	`			-->{{#switch:{{lc:{{{2|{{{1}}}}}}}}`,
