@@ -33,6 +33,7 @@ for (const effect of Object.values(ExtraEffectConfig).sort((e0, e1) => e0.ExtraE
 }
 
 output.push(
+	`				|#default = [[Category:Pages Referencing Unknown Extra Effects]]{{tx}}`,
 	`			}}<!--`,
 	`		--></span><!--`,
 	`	--></span><!--`,
