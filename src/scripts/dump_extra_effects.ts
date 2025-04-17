@@ -11,7 +11,7 @@ const ALIASES: Record<string, string[]> = {
 	'Action Advanced': ['advanced', 'advanced forward', 'advance forward', 'action advances', 'advances its action'],
 	'Extra Turn': ['extra action'],
 	'Follow-up ATK': ['follow-up attack', 'follow-up'],
-	'Additional DMG': ['additional damage', 'additional', 'additional ice dmg', ''],
+	'Additional DMG': ['additional damage', 'additional', 'additional ice dmg'],
 	'Weakness Break State': ['weakness broken', 'weakness break'],
 	'Downed State': ['downed', 'knocked down'],
 	'Buff': ['buffs', 'buff(s)'],
