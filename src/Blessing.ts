@@ -117,7 +117,7 @@ export class Blessing {
 	path: string
 	enhanced: boolean
 	level: number
-	traits: number[]
+	extra_effects: number[]
 	active?: boolean
 	
 	buff: InternalMazeBuff
@@ -144,7 +144,7 @@ export class Blessing {
 		this.level = data.MazeBuffLevel
 		this.enhanced = this.level > 1
 		this.path = Blessing.getPath(data.RogueBuffType)
-		this.traits = data.ExtraEffectIDList
+		this.extra_effects = data.ExtraEffectIDList
 		
 		this.active = Object.values(RogueTournBuffGroup).find(group => group.RogueBuffDrop.includes(this.id) && group.TournMode == 'Tourn2') != undefined
 		

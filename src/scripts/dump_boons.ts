@@ -1,7 +1,7 @@
 import { writeFileSync } from 'fs';
 import { GoldenBloodBoon } from '../Boon.js';
 import { Dictionary } from '../Shared.js';
-import { TextMap } from '../TextMap.js';
+import { textMap, TextMap } from '../TextMap.js';
 import { pageInfoHeader, uploadPrompt } from '../util/General.js';
 import { Table } from '../util/Table.js';
 
@@ -21,6 +21,13 @@ const output = [
 	'',
 ]
 
+const LEVEL_NAMES = [
+	'',
+	textMap.getText(17071722397368373557n),
+	textMap.getText(4012427840480718761n),
+	textMap.getText(10677933335688389864n)
+]
+
 for (const [cycle, heirs] of Object.entries(sets)) {
 	output.push(`==${cycle}==`)
 	for (const heir of Object.keys(heirs)) {
@@ -30,7 +37,7 @@ for (const [cycle, heirs] of Object.entries(sets)) {
 		let level = 0
 		for (const boon of boons.filter(boon => boon.titan_heir == heir).sort((b0, b1) => ((b0.level * 1000000) + b0.id) - ((b1.level * 1000000) + b1.id))) {
 			if (boon.level != level) {
-				table.addRow(`! colspan="3" | Level ${'I'.repeat(boon.level)}`)
+				table.addRow(`! colspan="3" | ${LEVEL_NAMES[boon.level]}`)
 				level = boon.level
 			}
 			table.addRowWithAttr(

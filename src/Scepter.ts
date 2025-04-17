@@ -1,3 +1,4 @@
+import { replaceUnderlinedEE } from './ExtraEffect.js'
 import { getExcelFile, getFile } from './files/GameFile.js'
 import { InternalScepter, InternalScepterDisplay, InternalUnit, InternalUnitDisplay, ScepterEffectType, ScepterLimitRangeType, ScepterStyleType, ScepterUnitSlot } from './files/Scepter.js'
 import { InternalFinishWay, InternalUnlockConfig } from './files/Unlock.js'
@@ -120,7 +121,7 @@ export class Component {
 	
 	descriptions: string[]
 	simple_descriptions: string[]
-1
+
 	range_types: ScepterLimitRangeType[]
 	effect_types: ScepterEffectType[]
 	unlock_requirement?: string
@@ -163,10 +164,10 @@ export class Component {
 				buffParams[i][data.MagicUnitLevel - 1] = val.Value
 			}
 			
-			return desc
+			return replaceUnderlinedEE(desc, data.ExtraEffectID)
 		})
 		
-		this.simple_descriptions = dataVersions.map(data => textMap.getText(data.MagicUnitSimpleDesc))
+		this.simple_descriptions = dataVersions.map(data => replaceUnderlinedEE(textMap.getText(data.MagicUnitSimpleDesc), data.ExtraEffectID))
 		
 		this.range_types = data1.AttachRangeTypeList
 		this.effect_types = data1.EffectTypeList
@@ -213,7 +214,7 @@ export class Component {
 					}
 				}
 				
-				this.unified_description = desc.replaceAll('\n', '<br />')
+				this.unified_description = replaceUnderlinedEE(desc.replaceAll('\n', '<br />'), data1.ExtraEffectID)
 			}
 		} else {
 			this.unified_description = this.descriptions[0]

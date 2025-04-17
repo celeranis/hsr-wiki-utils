@@ -1,4 +1,5 @@
 import { Blessing, RogueMazeBuff } from './Blessing.js'
+import { replaceUnderlinedEE } from './ExtraEffect.js'
 import { Dictionary } from './Shared.js'
 import { textMap } from './TextMap.js'
 import { ActDialogueTree } from './dialogue/Dialogue.js'
@@ -11,11 +12,6 @@ import { Template } from './util/Template.js'
 const EquationData = await getFile<Dictionary<InternalEquationData>>('ExcelOutput/RogueTournFormula.json')
 const EquationDisplayData = await getFile<Dictionary<InternalEquationDisplay>>('ExcelOutput/RogueTournFormulaDisplay.json')
 const ExtraEffectData = await getFile<Dictionary<InternalExtraEffect>>('ExcelOutput/ExtraEffectConfig.json')
-
-export const override: Dictionary<string> = {
-	Spore: 'Spores',
-	'Spore(s)': 'Spores'
-}
 
 export const PERIOD_MAP = {
 	Tourn1: 'The Human Comedy',
@@ -74,8 +70,7 @@ export class Equation {
 		const buffData = Object.values(RogueMazeBuff).find(buff => buff.ID == this.buff_id)!
 		this.name = textMap.getText(buffData.BuffName)
 		this.name_hash = buffData.BuffName?.Hash
-		this.description = textMap.getText(buffData.BuffDesc, buffData.ParamList)
-			.replaceAll(/<u>(.+?)<\/u>/gi, (_, trait) => override[trait] ? `{{Trait|${override[trait]}|${trait}}}` : `{{Trait|${trait}}}`)
+		this.description = replaceUnderlinedEE(textMap.getText(buffData.BuffDesc, buffData.ParamList), displayData.ExtraEffect)
 		this.simple_description = textMap.getText(buffData.BuffSimpleDesc, buffData.ParamList)
 		
 		this.sortkey = (data.MainBuffTypeID * 100) + (data.SubBuffTypeID ?? 0)

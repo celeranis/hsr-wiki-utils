@@ -15,6 +15,7 @@ export interface InternalCurioDisplay {
 	MiracleName: HashReference
 	MiracleDesc: HashReference
 	DescParamList: Value<number>[]
+	ExtraEffect?: number[]
 	MiracleBGDesc: HashReference
 	MiracleTag: HashReference
 	MiracleIconPath: string

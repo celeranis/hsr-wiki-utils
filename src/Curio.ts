@@ -1,3 +1,4 @@
+import { replaceUnderlinedEE } from './ExtraEffect.js'
 import { textMap } from './TextMap.js'
 import { InternalCurio, InternalCurioDisplay, InternalCurioEffectDisplay, InternalIndexCurio, InternalUNDCurio } from './files/Curio.js'
 import { getExcelFile } from './files/GameFile.js'
@@ -163,7 +164,7 @@ export class Curio {
 		this.period = curio.TournMode
 		this.index_id = curio.HandbookMiracleID ?? curio.UnlockHandbookMiracleID!
 		this.name = textMap.getText(display.MiracleName)
-		this.effect = textMap.getText(effectDisplay.MiracleDesc, effectDisplay.DescParamList) || textMap.getText(display.MiracleDesc, display.DescParamList)
+		this.effect = replaceUnderlinedEE(textMap.getText(effectDisplay.MiracleDesc, effectDisplay.DescParamList) || textMap.getText(display.MiracleDesc, display.DescParamList), display.ExtraEffect || effectDisplay.ExtraEffect  || [])
 		this.lore = textMap.getText(display.MiracleBGDesc)
 		this.obtainable_in = index?.MiracleTypeList?.map(id => TYPE_MAP[id]) || []
 		this.order = index?.Order ?? 1000

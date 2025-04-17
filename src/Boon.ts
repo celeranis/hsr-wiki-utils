@@ -1,4 +1,5 @@
 import { RogueMazeBuff } from './Blessing.js'
+import { replaceUnderlinedEE } from './ExtraEffect.js'
 import { DayCycle, InternalTitanBless, InternalTitanType } from './files/Boon.js'
 import { getExcelFile } from './files/GameFile.js'
 import { textMap } from './TextMap.js'
@@ -40,7 +41,7 @@ export class GoldenBloodBoon {
 		
 		this.name = textMap.getText(buffData.BuffName)
 		this.name_hash = buffData.BuffName.Hash
-		this.description = textMap.getText(buffData.BuffDesc, buffData.ParamList)
+		this.description = replaceUnderlinedEE(textMap.getText(buffData.BuffDesc, buffData.ParamList), data.ExtraEffectIDList)
 		
 		this.titan_id = data.TitanType
 		this.titan_title = textMap.getText(titan.TitanTitle)

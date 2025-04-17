@@ -2,7 +2,8 @@ import { existsSync, mkdirSync, rmSync, writeFileSync } from 'fs';
 import { writeFile } from 'fs/promises';
 import { Blessing } from '../Blessing.js';
 import { ChangeHistory } from '../ChangeHistory.js';
-import { Equation, override, PERIOD_MAP } from '../Equation.js';
+import { Equation, PERIOD_MAP } from '../Equation.js';
+import { replaceUnderlinedEE } from '../ExtraEffect.js';
 import { sanitizeString } from '../Shared.js';
 import { pathDisplayName, TextMap, textMap } from '../TextMap.js';
 import { pageInfoHeader } from '../util/General.js';
@@ -20,19 +21,17 @@ function addBlessingPath(path: string) {
 	const blessings = [...Blessing.loadAll(true)].sort((a, b) => ((a.id - (a.rarity * 1000000000)) - (b.id - (b.rarity * 1000000000))))
 	const table = new Table('sortable mw-collapsible article-table', ['Icon', 'Name', 'Effect', 'Enhanced Effect'])
 	for (const blessing of blessings) {
-		if (blessing.path != pathDisplayName(path) || !blessing.active || blessing.enhanced) continue
+		if (blessing.path != pathDisplayName(path) || blessing.active || blessing.enhanced) continue
 		const enhanced = blessings.find(eblessing => eblessing.buff_id == blessing.buff_id && eblessing.enhanced)
 		table.addRowWithAttr(`id="${blessing.name.replaceAll('"', '&quot;').replaceAll("''", '')}"`, [
 			`{{SU Blessing Card|${pathDisplayName(blessing.path)}|${blessing.icon_variant}|${blessing.rarity}}}`,
 			blessing.name,
-			blessing.description
-				.replaceAll('\n', '<br />')
-				.replaceAll(/<u>(.+?)<\/u>/gi, (_, trait) => override[trait] ? `{{Trait|${override[trait]}|${trait}}}` : `{{Trait|${trait}}}`),
-			enhanced!.description
-				.replaceAll('\n', '<br />')
-				.replaceAll(/<u>(.+?)<\/u>/gi, (_, trait) => override[trait] ? `{{Trait|${override[trait]}|${trait}}}` : `{{Trait|${trait}}}`)
+			replaceUnderlinedEE(blessing.description
+				.replaceAll('\n', '<br />'), blessing.extra_effects),
+			replaceUnderlinedEE(enhanced!.description
+				.replaceAll('\n', '<br />'), blessing.extra_effects),
 		])
-		blessing.traits.forEach(trait => glossary2.add(trait))
+		blessing.extra_effects.forEach(trait => glossary2.add(trait))
 	}
 	output2.push(table.wikitable(false), '')
 }
@@ -61,7 +60,7 @@ for (const equation of equations) {
 	
 	output.push(
 		equation.infobox(),
-		`'''${equation.name}''' ${equation.active ? 'is' : 'was'} a ${equation.rarity == 'boundary' ? 'Boundary' : `${equation.rarity}-star`} [[Divergent Universe: ${equation.period_name}/Equatoins|Equation]] in [[Divergent Universe: ${equation.period_name}]].`,
+		`'''${equation.name}''' ${equation.active ? 'is' : 'was'} a ${equation.rarity == 'boundary' ? 'Boundary' : `${equation.rarity}-star`} [[Divergent Universe: ${equation.period_name}/Equations|Equation]] in [[Divergent Universe: ${equation.period_name}]].`,
 		'',
 		'==Story==',
 		`{{Description|${equation.story.replaceAll('\n', '<br />')}}}`,
@@ -94,16 +93,16 @@ for (const equation of equations) {
 }
 
 output2.push('==Blessings==')
-// addBlessingPath('Preservation')
+addBlessingPath('Preservation')
 addBlessingPath('Remembrance')
 addBlessingPath('Nihility')
-// addBlessingPath('Abundance')
+addBlessingPath('Abundance')
 addBlessingPath('TheHunt')
 addBlessingPath('Destruction')
 addBlessingPath('Elation')
 addBlessingPath('Propagation')
 addBlessingPath('Erudition')
-addBlessingPath('Harmony')
+// addBlessingPath('Harmony')
 
 output.push('==Glossary==')
 output2.push('==Glossary==')
