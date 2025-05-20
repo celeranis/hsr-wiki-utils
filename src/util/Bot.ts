@@ -21,7 +21,7 @@ export function retryIfRatelimit<T>(action: (() => Promise<T>), cooldown: number
 				console.log(`Ratelimited, waiting ${cooldown} seconds...`)
 				await setTimeout(cooldown * 1000)
 				return retryIfRatelimit(action, cooldown * cooldownRamp, cooldownRamp)
-			} else if (err instanceof Error && ('code' in err && err.code == 'ECONNABORTED') || ('response' in err && err.response && err.response.status == 503)) {
+			} else if (err instanceof Error && ('code' in err && (err.code == 'ECONNABORTED' || err.code == 'maxlag')) || ('response' in err && err.response && err.response.status == 503)) {
 				console.log(`Request timed out or returned server error, waiting ${cooldown * 10} seconds...`)
 				await setTimeout(cooldown * 1000 * 10)
 				return retryIfRatelimit(action, cooldown * cooldownRamp, cooldownRamp)

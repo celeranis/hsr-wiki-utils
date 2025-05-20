@@ -57,11 +57,6 @@ const ROOT = midpatch ? `./src/version_update/midpatch/${midpatch}` : './src/ver
 const CHECK_NOEXIST: string[] = []
 const CHECK_EXIST: string[] = []
 
-if (!existsSync(ROOT)) {
-	console.warn(`Nothing to upload in "${ROOT}", exiting...`)
-	process.exit()
-}
-
 async function getFile(file: string): Promise<[string, string]> {
 	let content = (await readFile(file)).toString()
 	const page = content.match(/PageTitle\s*=\s*#(.+?)#/i)?.[1]
@@ -200,35 +195,37 @@ if (!CHECK && !midpatch) {
 	if (!confirmed) process.exit()
 }
 
-for (const [from, to] of Object.entries(MOVE)) {
-	await move(from, to)
-}
-
-for (const file of await readDir(`${ROOT}/create`)) {
-	if ((file.isFile() || file.isSymbolicLink()) && (file.name.endsWith('.wikitext') || file.name.endsWith('.lua'))) {
-		await create(file.parentPath + '/' + file.name)
+if (existsSync(ROOT)) {
+	for (const [from, to] of Object.entries(MOVE)) {
+		await move(from, to)
 	}
-}
-
-for (const file of await readDir(`${ROOT}/edit`)) {
-	if ((file.isFile() || file.isSymbolicLink()) && (file.name.endsWith('.wikitext') || file.name.endsWith('.lua'))) {
-		await edit(file.parentPath + '/' + file.name)
+	
+	for (const file of await readDir(`${ROOT}/create`)) {
+		if ((file.isFile() || file.isSymbolicLink()) && (file.name.endsWith('.wikitext') || file.name.endsWith('.lua'))) {
+			await create(file.parentPath + '/' + file.name)
+		}
 	}
-}
 
-for (const file of await readDir(`${ROOT}/upload`)) {
-	if ((file.isFile() || file.isSymbolicLink()) && !file.name.endsWith('.wikitext')) {
-		await upload(file.parentPath + '/' + file.name, file.name)
+	for (const file of await readDir(`${ROOT}/edit`)) {
+		if ((file.isFile() || file.isSymbolicLink()) && (file.name.endsWith('.wikitext') || file.name.endsWith('.lua'))) {
+			await edit(file.parentPath + '/' + file.name)
+		}
 	}
-}
 
-for (const [from, to] of Object.entries(REDIRECT)) {
-	await redirect(from, to)
-}
+	for (const file of await readDir(`${ROOT}/upload`)) {
+		if ((file.isFile() || file.isSymbolicLink()) && !file.name.endsWith('.wikitext')) {
+			await upload(file.parentPath + '/' + file.name, file.name)
+		}
+	}
 
-for (const file of await readDir(`${ROOT}/ol_edit`)) {
-	if ((file.isFile() || file.isSymbolicLink()) && file.name.endsWith('.wikitext')) {
-		await updateOL(file.parentPath + '/' + file.name)
+	for (const [from, to] of Object.entries(REDIRECT)) {
+		await redirect(from, to)
+	}
+
+	for (const file of await readDir(`${ROOT}/ol_edit`)) {
+		if ((file.isFile() || file.isSymbolicLink()) && file.name.endsWith('.wikitext')) {
+			await updateOL(file.parentPath + '/' + file.name)
+		}
 	}
 }
 

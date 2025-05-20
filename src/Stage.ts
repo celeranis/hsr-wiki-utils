@@ -370,6 +370,10 @@ export class Enemy extends EnemyTemplate {
 		return new this(monsterData, Object.values(MonsterTemplateConfig).find(temp => temp.MonsterTemplateID == monsterData.MonsterTemplateID)!)
 	}
 	
+	static loadAll() {
+		return Object.values(MonsterConfig).map(monster => new this(monster, MonsterTemplateConfig[monster.MonsterTemplateID]))
+	}
+	
 	hasCustomName(): boolean {
 		return this.name != this.template_name
 	}

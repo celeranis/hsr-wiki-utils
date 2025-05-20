@@ -1,9 +1,10 @@
+import { AWB } from './AWB.js'
 import { client, retryIfRatelimit } from './Bot.js'
 
 export type TemplateParamUpdater = (page: string, currentParams: Record<string, string>) => (string | number | Promise<string | number>)
 export type NameMatcher = (name: string) => boolean
 
-export async function updateAllPages(templateName: string | NameMatcher, paramName: string, pages: string[], updater: TemplateParamUpdater) {
+export async function updateAllPages(templateName: string | NameMatcher, paramName: string, summary: string, pages: string[], updater: TemplateParamUpdater) {
 	for (const page of pages) {
 		await retryIfRatelimit(() => client.edit(page, async (rev) => {
 			let content = rev.content
@@ -22,9 +23,10 @@ export async function updateAllPages(templateName: string | NameMatcher, paramNa
 			}
 			
 			if (content == rev.content) return null as any
-			// await AWB.viewDiff(rev.content, content)
+			content = await AWB.viewDiff(rev.content, content)
 			
-			return content
+			return { text: content, summary }
+			// return null as any
 		}))
 	}
 }

@@ -138,7 +138,7 @@ export class TextMap {
 				text = text.replaceAll(new RegExp(`{C\\d+#([^{}]*?<unbreak>#${i + 1}\\[?\\w+?\\]?%?<\\/unbreak>[^{}]*?)}`, 'gi'), '$1')
 			}
 			text = text.replaceAll(new RegExp(`<unbreak>#${i + 1}(?:\\[(\\w+)\\])?(%)?<\\/unbreak>`, 'g'), (_substr, mode: string, percent?: string) => {
-				let factor = mode?.startsWith('f') ? Number(mode.substring(1)) : 0
+				let factor = mode?.startsWith('f') ? Number(mode.substring(1)) : 2
 				
 				let additionalMult = 1
 				if (percent) {
@@ -150,7 +150,7 @@ export class TextMap {
 				if (Array.isArray(param)) {
 					if (param[0] != param[1]) {
 						return ((param[0] ? roundTo(param[0] * additionalMult, factor).toLocaleString() : '??') + percent)
-							+ '–'
+							+ '\\{–}'
 							+ (param[1] ? roundTo(param[1] * additionalMult, factor).toLocaleString() : '??') + percent
 						}
 					else {
@@ -222,6 +222,7 @@ export class TextMap {
 		replaced = replaced
 			// .replaceAll(/–/g, '&ndash;')
 			.replaceAll(/—/g, '&mdash;')
+			.replaceAll(/\\\{–\}/g, '—')
 			.replaceAll(/\u00d7/g, '&times;')
 			.replaceAll(/'(<\s*\/?\s*(?:i|b)\s*>)/gi, '&ast;$1')
 			.replaceAll(/(<\s*\/?\s*(?:i|b)\s*>)'/gi, '&ast;$1')

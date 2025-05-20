@@ -154,3 +154,4 @@ export interface StageInfiniteMonsterGroupEntry {
 	EliteGroup?: number
 	MonsterList: number[]
 }
+

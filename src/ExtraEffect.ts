@@ -6,20 +6,23 @@ export const EE_ALIASES: Record<string, string[]> = {
 	'Action Delayed': ['delayed'],
 	'Action Advanced': ['advanced', 'advanced forward', 'advance forward', 'action advances', 'advances its action'],
 	'Extra Turn': ['extra action'],
-	'Follow-up ATK': ['follow-up attack', 'follow-up'],
+	'Follow-up ATK': ['follow-up attack', 'follow-up', 'follow-up attacks', 'follow-up atks'],
 	'Additional DMG': ['additional damage', 'additional', 'additional ice dmg'],
-	'Weakness Break State': ['weakness broken', 'weakness break'],
+	'Weakness Break State': ['weakness broken', 'weakness break', 'weakness broken state', 'weakness-broken'],
 	'Downed State': ['downed', 'knocked down'],
-	'Buff': ['buffs', 'buff(s)'],
-	'Debuff': ['debuffs', 'debuff(s)'],
+	'Buff': ['buffs', 'buff(s)', 'buffed'],
+	'Debuff': ['debuffs', 'debuff(s)', 'debuffed'],
 	'DoT Debuff': ['dot'],
 	'distribute': ['distributed'],
 	'Grit': ['fighting spirit'],
 	'Spores': ['spore', 'spore(s)', "spore's"],
 	'AoE ATK': ['aoe', 'aoe attack'],
 	'Overflow DMG': ['overflow', 'overflows', 'overflow damage'],
-	'Summon Memosprite': ['summons the memosprite'],
-	'Even Distribution': ['distributed evenly'],
+	'Summon Memosprite': ['summons the memosprite', 'summons memosprite'],
+	'Even Distribution': ['distributed evenly', 'evenly distributed'],
+	'Crowd Control debuff': ['crowd control debuffs'],
+	'Counter': ['counters', 'counter(s)'],
+	'Enemy units that can enter Moon Rage': ['friendly units who can enter the moon rage effect', 'friendly units who can enter the moon rage state'],
 	
 	'Soul Chrysalis/Butterfly Soul': ['butterfly soul', 'soul chrysalis'],
 	
@@ -67,7 +70,7 @@ for (const effect of Object.values(ExtraEffectConfig)) {
 
 export function replaceUnderlinedEE(str: string, activeEE: number[]) {
 	return str
-		.replaceAll(/<u>(["\.]*)(.+?)(["\.]*)<\/u>/gi, (fullMatch: string, before: string, eeName: string, after: string) => {
+		.replaceAll(/<u>(["\.\s]*)(.+?)(["\.\s]*)<\/u>/gi, (fullMatch: string, before: string, eeName: string, after: string) => {
 			let lowerName = eeName.toLowerCase()
 				.replaceAll(/[\.\"]/gi, '')
 			
