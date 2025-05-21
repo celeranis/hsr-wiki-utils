@@ -47,162 +47,47 @@ PageTitle=#Simulated Universe (I)#
 ===Talk to Herta{{subst:void|<!--403000300-->}}===
 {{Mission Description|type=adventure|location=Herta's Office|Herta asks you to enter the Simulated Universe created by the Genius Society while pretending to be the Aeon of Trailblaze, and try to glean the secret of Aeons and Paths from the simulated Aeons.}}
 {{Dialogue Start}}
-:<!--1-second delay-->
-<pre>{
-	"$type": "RPG.GameCore.PropSetupUITrigger",
-	"IconType": "ChatLoopIcon",
-	"ButtonText": {
-		"Hash": 1190877493979542598
-	},
-	"ButtonCallback": [
-		{
-			"$type": "RPG.GameCore.TriggerCustomString",
-			"CustomString": {
-				"Value": "TriggerPerformance_403000300"
-			}
-		}
-	],
-	"OverrideTargetTypes": [],
-	"TargetType": {
-		"$type": "RPG.GameCore.TargetFetchAdvPropEx",
-		"FetchType": "SinglePropByPropID",
-		"SinglePropID": {
-			"GroupID": {
-				"FixedValue": {
-					"Value": 15
-				}
-			},
-			"ID": {
-				"FixedValue": {
-					"Value": 300002
-				}
-			}
-		}
-	}
-}</pre>
-
-;(Talk to Herta)
-----
-:'''Herta:''' The official version of "Simulated Universe"! Forget about the previous beta version. There are lots of changes. Do you want me to give you the patch notes?
-:{{DIcon|Arrow}} Just say them out loud to me.
-::'''Herta:''' You have zero manners...
-::'''Herta:''' Firstly, Stephen has made significant adjustments to the gameplay loop. According to him, "The challenge goal of each phase is even clearer" &mdash; I don't really get it. Just because I'm a genius doesn't mean I understand gaming &mdash; so whatever he says goes.
-::'''Herta:''' This version offers a higher degree of freedom. You can mix and match your team, choose from a variety of Blessings, and there are even random events to guarantee you a unique experience every time.
-::'''Herta:''' Finally, there's a new mechanic that helps you to better pretend to be Akivili.
-:{{DIcon|Arrow}} I'll figure it out myself.
-::'''Herta:''' Alright, stay curious.
-:{{DIcon|Arrow}} Nah, I'm not interested.
-::'''Herta:''' Alright. You'll find out soon enough.
+:{{tx}}
 {{Dialogue End}}
 
 ===Enter Simulated Universe: World 1{{subst:void|<!--403000301-->}}===
 {{Dialogue Start}}
-;(Upon reaching the destination)
-
-;(Upon reaching the destination)
-;(If {{cx}}<!--SubMission not Finish: 403000310-->)
-:<pre>{
-	"$type": "RPG.GameCore.TriggerRogueDialogue",
-	"DialoguePath": "Config/Level/Mission/4030003/Act/Act403000302.json"
-}</pre>
+:{{tx}}
 {{Dialogue End}}
 
 ===Explore Simulated Universe: World 1{{subst:void|<!--403000303-->}}===
 {{Dialogue Start}}
-:'''Herta:''' Destructible objects in the Simulated Universe will drop Cosmic Fragments.
+:{{tx}}
 {{Dialogue End}}
 
 ===Use Cosmic Fragments to enhance{{subst:void|<!--403000304-->}}===
 {{Dialogue Start}}
-;(Upon reaching the destination)
-
-;(Upon reaching the destination)
-:'''(Trailblazer):''' (Huh... That's...)
-
-;(Talk to Herta)
-<pre>{
-	"$type": "RPG.GameCore.TriggerRogueDialogue",
-	"DialoguePath": "Config/Level/Mission/4030003/Act/Act403000304.json"
-}</pre>
+:{{tx}}
 {{Dialogue End}}
 
 ===Head to the next zone{{subst:void|<!--403000305-->}}===
 {{Dialogue Start}}
-
-;(Talk to Herta)
+:{{tx}}
 {{Dialogue End}}
 
 ===Explore Simulated Universe: World 1{{subst:void|<!--403000306-->}}===
 {{Dialogue Start}}
-;(Upon reaching the destination)
-
-;(Upon reaching the destination)
-:'''Herta:''' Go get closer to that picture frame. Time to try something new.
-:<!--1-second delay-->
-
-;(Talk to Occurrence)
-:'''Simulated Universe:''' You see a man about thirty years old with an unremarkable appearance, wearing a white shirt and brown suspenders. His eyes wander while he speaks, as if avoiding something. "Uh, I wanted to add some random occurrences to this game to make it more fun... But I think the brainwave reader is on the fritz. So, uh, now the events you encounter will be a little more, uh, monotonous. Sorry about that."
-:{{DIcon|Arrow}} What are you talking about?
-:{{DIcon|Arrow}} How bland will they be?
-:'''Simulated Universe:''' "Like," he stutters without looking at you, "like, uh, this is a random Occurrence now. I wrote some templates, but the simulation currently doesn't have any way of converting them into content. So, you will just see the following..."
-:'''Simulated Universe:''' After speaking, the man disappears, and a line of words materializes where he was standing: You have encountered a {{Color|keyword|nobold=1|random Occurrence}}.
-:{{DIcon|Star}} undefined &mdash; undefined
-:;(Obtain {{Item|Cosmic Fragment|20|x=150}})
-:{{DIcon|Star}} undefined &mdash; undefined
-:;(Obtain a Blessing [100410])
-:{{DIcon|Star}} undefined &mdash; undefined
-:'''Simulated Universe:''' "Uh, yeah, that's how monotonous." The man says as if he is genuinely sorry.
-:{{DIcon|Arrow}} Alright, I understand.
-:{{DIcon|Arrow}} A borderline acceptable solution.
-:{{DIcon|Arrow}} When will it be fixed?
-:'''Simulated Universe:''' "Hopefully very soon," the man says earnestly. "I really want you to have a good time, really. Um, once again, I'm really sorry about that."
-:{{DIcon|Arrow}} Finish.
-<pre>{
-	"$type": "RPG.GameCore.SwitchUIMenuBGM",
-	"StateName": "State_Menu_Rougelite",
-	"ShouldStop": true
-}</pre>
-<pre>{
-	"$type": "RPG.GameCore.SetAllRogueDoorState"
-}</pre>
-<pre>{
-	"$type": "RPG.GameCore.SetRogueRoomFinish"
-}</pre>
+:{{tx}}
 {{Dialogue End}}
 
 ===Defeat the boss enemy{{subst:void|<!--403000309-->}}===
 {{Dialogue Start}}
-
+:{{tx}}
 {{Dialogue End}}
 
 ===Leave the Simulated Universe{{subst:void|<!--403000315-->}}===
 {{Dialogue Start}}
+:{{tx}}
 {{Dialogue End}}
 
 ===Talk to Herta{{subst:void|<!--403000314-->}}===
 {{Dialogue Start}}
-----
-:'''Herta:''' How's your experience with the official version? If you find it easy, you can go challenge the next world.
-:'''Herta:''' Apparently it's more difficult with stronger enemies. Screwllum said that, according to his model, you have a 60% chance of losing the first time, but it's not like you'll actually lose anything.
-:'''Herta:''' You'll clear it sooner or later.
-:{{DIcon|Arrow}} Are you folks really here to research Aeons?
-:{{DIcon|Arrow}} This is feeling more and more like a real game...
-:'''Herta:''' What are you talking about? Our goals haven't changed. Now run off and get ready.
-<pre>{
-	"$type": "RPG.GameCore.RogueShowSelectMainPage"
-}</pre>
-
-;(Talk to Herta)
-----
-:'''Herta:''' How's your experience with the official version? If you find it easy, you can go challenge the next world.
-:'''Herta:''' Apparently it's more difficult with stronger enemies. Screwllum said that, according to his model, you have a 60% chance of losing the first time, but it's not like you'll actually lose anything.
-:'''Herta:''' You'll clear it sooner or later.
-:{{DIcon|Arrow}} Are you folks really here to research Aeons?
-:{{DIcon|Arrow}} This is feeling more and more like a real game...
-:'''Herta:''' What are you talking about? Our goals haven't changed. Now run off and get ready.
-<pre>{
-	"$type": "RPG.GameCore.RogueShowSelectMainPage"
-}</pre>
+:{{tx}}
 {{Dialogue End}}
 
 ==Other Languages==

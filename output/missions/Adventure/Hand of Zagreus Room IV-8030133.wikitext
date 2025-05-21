@@ -38,111 +38,17 @@ PageTitle=#Hand of Zagreus: Room IV#
 ===Shatter the obstacle using "Punch"{{subst:void|<!--803013302-->}}===
 {{Mission Description|type=adventure|location=Hand of Zagreus: Room IV|Every room in the hypogea is protected by a seal, and this one is controlled by the "Hand of Zagreus." You will need to complete its trial before you can continue any further.}}
 {{Dialogue Start}}
-
+:{{tx}}
 {{Dialogue End}}
 
 ===Collect the Coins of Whimsy{{subst:void|<!--803013301-->}}===
 {{Dialogue Start}}
-;(If {{F|undefined}} is undefined 1)
-<pre>{
-	"$type": "RPG.GameCore.TriggerEntityEventV2",
-	"EventName": {
-		"Value": "Clt_TriggerLock"
-	},
-	"TargetType": {
-		"$type": "RPG.GameCore.GroupFetchLocalTarget",
-		"TargetType": "Prop",
-		"Targets": [
-			300001
-		]
-	}
-}</pre>
-;(Unused &mdash; AddCrashNum)
-<pre>{
-	"$type": "RPG.GameCore.SetGraphDynamicFloat",
-	"Name": "_CrashNum",
-	"TargetIDs": [],
-	"Value": {
-		"IsDynamic": true,
-		"PostfixExpr": {
-			"OpCodes": "AQAAAAIR",
-			"FixedValues": [
-				{
-					"Value": 1
-				}
-			],
-			"DynamicHashes": [
-				-1830384358
-			]
-		}
-	}
-}</pre>
-
-;(Unused &mdash; SwitchHand_TriggerPullBack)
-<pre>{
-	"$type": "RPG.GameCore.SwitchCharacterAnchorV2",
-	"SwitchCharacterAnchorConfig": {
-		"IsLocalPlayer": true,
-		"CharacterUniqueName": "LocalPlayer",
-		"AreaName": {
-			"Custom": true,
-			"Key": "PullBackArea"
-		},
-		"LevelAreaKey": {
-			"Custom": true,
-			"Key": "PullBackAnchor"
-		}
-	}
-}</pre>
-:<pre>{
-	"$type": "RPG.GameCore.TriggerEntityEventV2",
-	"EventName": {
-		"Value": "SwitchHand_ClosePuzzle"
-	},
-	"TargetType": {
-		"$type": "RPG.GameCore.TargetFetchAdvPropEx",
-		"FetchType": "SinglePropByPropKey",
-		"SinglePropKey": {
-			"Custom": true,
-			"Key": "SwitchHandConsole"
-		}
-	}
-}</pre>
-::<!--0.2-second delay-->
-
-;(Unused &mdash; SwitchHand_Group_ResetTransform)
-<pre>{
-	"$type": "RPG.GameCore.DebugLog",
-	"Message": "###机械手Prop位置重置###"
-}</pre>
-:<pre>{
-	"$type": "RPG.GameCore.SwitchHandResetTransform",
-	"ID": {
-		"FixedValue": {
-			"Value": 19
-		}
-	},
-	"AnchorID": {
-		"Custom": true,
-		"Key": "PullBackAnchor"
-	}
-}</pre>
-::<!--0.2-second delay-->
-
-;(Unused &mdash; SwitchHand_ResetPlayerPosition)
-<pre>{
-	"$type": "RPG.GameCore.DebugLog",
-	"Message": "###机械手Player位置重置###"
-}</pre>
-::<!--0.2-second delay-->
-<pre>{
-	"$type": "RPG.GameCore.SetAllMissionWaypointsVisiable"
-}</pre>
+:{{tx}}
 {{Dialogue End}}
 
 ===End control and continue forward{{subst:void|<!--803013303-->}}===
 {{Dialogue Start}}
-
+:{{tx}}
 {{Dialogue End}}
 
 ==Other Languages==

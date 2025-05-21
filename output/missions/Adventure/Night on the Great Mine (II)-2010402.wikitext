@@ -48,434 +48,73 @@ PageTitle=#Night on the Great Mine (II)#
 ===Talk to the senior mine cart operator and see if he has come up with a new test{{subst:void|<!--201040201-->}}===
 {{Mission Description|type=adventure|location=Great Mine|After a series of challenges, you seem to have finally gotten the knack for being a mine cart operator's assistant.<br />The Senior Miner says that he's also prepared a series of questions to test his apprentice. Naturally, the burden of demonstrating the correct way to operate mine carts for his apprentice has been relegated to you, the "Ace Assistant."<br />Before getting started, you should check in with the senior mine cart operator and see how his preparation is going.}}
 {{Dialogue Start}}
-
-;(Talk to Apprentice Mine Cart Operator)
-:'''Apprentice Mine Cart Operator:''' The master has a new puzzle. Go ask him about it if you're interested.
-
-;(Talk to Senior Mine Cart Operator)
-:'''Senior Mine Cart Operator:''' I guess you really are interested in mine carts? Well, I've laid out the site for you already. I've made sure it's challenging this time! Why don't you give it a try?
-:{{DIcon|Arrow}} Watch this!
-::'''Senior Mine Cart Operator:''' Youngsters should be motivated! You could learn a thing or two kid!
-::'''Apprentice Mine Cart Operator:''' Seems easy enough, just watch me &mdash; Ouch! Master, stop pinching me, it hurts!
-:{{DIcon|Exit}} Just a moment, I have something else to do.
-::'''Senior Mine Cart Operator:''' That's fine. Come back when you have time.
-<pre>{
-	"$type": "RPG.GameCore.ActiveVirtualCamera",
-	"AreaName": "Puzzle_Cameras",
-	"AnchorName": "Tramcar_M21_Lv1",
-	"BlendConfig": {
-		"ExportToJson": true,
-		"BlendType": "Cut"
-	}
-}</pre>
-:'''Senior Mine Cart Operator:''' Watch carefully, {{MC|m=boy|f=girl}}. The blocker with the {{Color|keyword|nobold=1|yellow light}} on is the stop for {{Color|keyword|nobold=1|the loaded mine carts}}.
-:'''Senior Mine Cart Operator:''' The {{Color|keyword|nobold=1|empty mine cart}} should be driven to the stop with {{Color|keyword|nobold=1|blue lights}}.
-<pre>{
-	"$type": "RPG.GameCore.ActiveVirtualCamera",
-	"AreaName": "Puzzle_Cameras",
-	"AnchorName": "Tramcar_M21_Lv1",
-	"IsActive": false,
-	"BlendConfig": {
-		"ExportToJson": true,
-		"BlendType": "Cut"
-	}
-}</pre>
-
-;(Talk to Apprentice Mine Cart Operator)
-:'''Apprentice Mine Cart Operator:''' ... Oh, it's you. My master is still preparing his new puzzle, so I'm taking the chance to relax for a while...
-:{{DIcon|Arrow}} I still have some more questions...
-::{{DIcon|Talk}} What drove you to become a mine cart operator?
-:::'''Apprentice Mine Cart Operator:''' Hmm? Why the sudden interest?
-:::'''Apprentice Mine Cart Operator:''' Well, I guess, life happens. You see, my parents... they died a long time ago. My master, who was a friend of my father, adopted me.
-:::'''Apprentice Mine Cart Operator:''' The old man has been very good to me. I know he's worried that I wouldn't be able to make a good living in Belobog without the right skills. I guess that's why he decided to pass his skills to me.
-:::'''Apprentice Mine Cart Operator:''' But I just can't help being lazy... I mean, that's okay, right? I'm still young, so I still have plenty of time...
-:::{{DIcon|Talk}} Have you been working in these mines for a long time?
-::::'''Apprentice Mine Cart Operator:''' My master said that the mine cart operator is the lifeblood of the mine. The operator ensures the Geomarrow can be continuously transported out of the depths of the mine.
-::::'''Apprentice Mine Cart Operator:''' Geomarrow can only be delivered to the place it's supposed to go through the tracks we lay.
-::::'''Apprentice Mine Cart Operator:''' I mean it sounds pretty important... But still I want to do something much bigger in life. I don't want to be trapped in these mines forever.
-::::'''Apprentice Mine Cart Operator:''' Forget it. I guess there's no point thinking so far ahead... I have to stay here for the time being to repay the debt of kindness I owe to my master. If I think like this, I feel more at ease.
-:::;(Return to previous option selection)
-:::{{DIcon|Exit}} That's all the questions I have.
-::{{DIcon|Talk}} Have you been working in these mines for a long time?
-:::'''Apprentice Mine Cart Operator:''' My master said that the mine cart operator is the lifeblood of the mine. The operator ensures the Geomarrow can be continuously transported out of the depths of the mine.
-:::'''Apprentice Mine Cart Operator:''' Geomarrow can only be delivered to the place it's supposed to go through the tracks we lay.
-:::'''Apprentice Mine Cart Operator:''' I mean it sounds pretty important... But still I want to do something much bigger in life. I don't want to be trapped in these mines forever.
-:::'''Apprentice Mine Cart Operator:''' Forget it. I guess there's no point thinking so far ahead... I have to stay here for the time being to repay the debt of kindness I owe to my master. If I think like this, I feel more at ease.
-:::{{DIcon|Talk}} What drove you to become a mine cart operator?
-::::'''Apprentice Mine Cart Operator:''' Hmm? Why the sudden interest?
-::::'''Apprentice Mine Cart Operator:''' Well, I guess, life happens. You see, my parents... they died a long time ago. My master, who was a friend of my father, adopted me.
-::::'''Apprentice Mine Cart Operator:''' The old man has been very good to me. I know he's worried that I wouldn't be able to make a good living in Belobog without the right skills. I guess that's why he decided to pass his skills to me.
-::::'''Apprentice Mine Cart Operator:''' But I just can't help being lazy... I mean, that's okay, right? I'm still young, so I still have plenty of time...
-:::;(Return to previous option selection)
-:::{{DIcon|Exit}} That's all the questions I have.
-::{{DIcon|Exit}} That's all the questions I have.
-:{{DIcon|Exit}} Nothing else.
-
-;(Talk to Senior Mine Cart Operator)
-:'''Senior Mine Cart Operator:''' Hmm? You're early. I'm still working on a new puzzle, so you'll have to come back later.
-:{{DIcon|Arrow}} I still have some more questions...
-::{{DIcon|Talk}} How did you meet your current apprentice?
-:::'''Senior Mine Cart Operator:''' Hmm? You mean the kid... Well, that's a long story. He's had a pretty tough life so far.
-:::'''Senior Mine Cart Operator:''' His father was working with me in the mines before. But he decided to try his luck scavenging in the Fragmentum with a group of vagrants... He never came back.
-:::'''Senior Mine Cart Operator:''' I saw he had no one to rely on, so I thought to pass on my track-laying skills to him. With those skills, he can make a living for himself.
-:::{{DIcon|Talk}} Have you been working in these mines for a long time?
-::::'''Senior Mine Cart Operator:''' That's right! I've been with this mining team for many years. I can't remember exactly how long, but this mine has been operating for nearly twenty years now.
-::::'''Senior Mine Cart Operator:''' Do you see that big vein in the middle of the mine? Absolutely stunning! Why didn't those useless surveyors find it earlier! To think that the most valuable prize was hiding in plain sight...
-:::;(Return to previous option selection)
-:::{{DIcon|Exit}} That's all the questions I have.
-::{{DIcon|Talk}} Have you been working in these mines for a long time?
-:::'''Senior Mine Cart Operator:''' That's right! I've been with this mining team for many years. I can't remember exactly how long, but this mine has been operating for nearly twenty years now.
-:::'''Senior Mine Cart Operator:''' Do you see that big vein in the middle of the mine? Absolutely stunning! Why didn't those useless surveyors find it earlier! To think that the most valuable prize was hiding in plain sight...
-:::{{DIcon|Talk}} How did you meet your current apprentice?
-::::'''Senior Mine Cart Operator:''' Hmm? You mean the kid... Well, that's a long story. He's had a pretty tough life so far.
-::::'''Senior Mine Cart Operator:''' His father was working with me in the mines before. But he decided to try his luck scavenging in the Fragmentum with a group of vagrants... He never came back.
-::::'''Senior Mine Cart Operator:''' I saw he had no one to rely on, so I thought to pass on my track-laying skills to him. With those skills, he can make a living for himself.
-:::;(Return to previous option selection)
-:::{{DIcon|Exit}} That's all the questions I have.
-::{{DIcon|Exit}} That's all the questions I have.
-:{{DIcon|Exit}} Nothing else.
+:{{tx}}
 {{Dialogue End}}
 
 ===Pass the senior mine cart operator's test{{subst:void|<!--201040203-->}}===
 {{Mission Description|type=adventure|location=Great Mine|update|The senior mine cart operator prepared the Mine Cart Puzzle in front of you. Solve it promptly.}}
 {{Dialogue Start}}
-
-;(Talk to Apprentice Mine Cart Operator)
-:'''Apprentice Mine Cart Operator:''' Take the loaded mine cart to the place with the yellow lights...
-:'''Apprentice Mine Cart Operator:''' Wait, no. Is it yellow lights...?
-
-;(Talk to Senior Mine Cart Operator)
-:'''Senior Mine Cart Operator:''' So, do you want me to reset the mine carts for you?
-:{{DIcon|Arrow}} Yes. Please help me reset the carts.
-:{{DIcon|Exit}} There's no need.
-;(Unused &mdash; Tramcar_StartReset)
-:'''Senior Mine Cart Operator:''' Okay, just one moment...
-:<pre>{
-	"$type": "RPG.GameCore.ActiveVirtualCamera",
-	"AreaName": "Puzzle_Cameras",
-	"AnchorName": "Tramcar_M21_Lv1",
-	"BlendConfig": {
-		"ExportToJson": true,
-		"BlendType": "Cut"
-	}
-}</pre>
-::'''Senior Mine Cart Operator:''' Watch carefully, {{MC|m=boy|f=girl}}. The blocker with the {{Color|keyword|nobold=1|yellow light}} on is the stop for {{Color|keyword|nobold=1|the loaded mine carts}}.
-::'''Senior Mine Cart Operator:''' If a mine cart needs to {{Color|keyword|nobold=1|load or unload the Geomarrow}}, it needs to be moved to the {{Color|keyword|nobold=1|stop next to the Geomarrow pile}} first.
-:<pre>{
-	"$type": "RPG.GameCore.ActiveVirtualCamera",
-	"AreaName": "Puzzle_Cameras",
-	"AnchorName": "Tramcar_M21_Lv1",
-	"IsActive": false,
-	"BlendConfig": {
-		"ExportToJson": true,
-		"BlendType": "Cut"
-	}
-}</pre>
+:{{tx}}
 {{Dialogue End}}
 
 ===Go to the senior mine cart operator to claim your reward{{subst:void|<!--201040204-->}}===
 {{Mission Description|type=adventure|location=Great Mine|update|With your ingenuity, you quickly solved the mine cart puzzle set up by the senior mine cart operator.<br />Go ask him what the reward is &mdash; there is usually a reward for this kind of task, isn't there?}}
 {{Dialogue Start}}
-
-;(Talk to Apprentice Mine Cart Operator)
-:'''Apprentice Mine Cart Operator:''' Take the loaded mine cart to the place with the yellow lights...
-:'''Apprentice Mine Cart Operator:''' Wait, no. Is it yellow lights...?
-
-;(Talk to Senior Mine Cart Operator)
-:'''Senior Mine Cart Operator:''' Haha, great! Come and get your reward.
-:'''Senior Mine Cart Operator:''' Today's challenge however has only just begun &mdash; here's the puzzle...
+:{{tx}}
 {{Dialogue End}}
 
 ===Claim the reward for passing the test{{subst:void|<!--201040205-->}}===
 {{Mission Description|type=adventure|location=Great Mine|update|The senior mine cart operator prepared the rewards for solving the puzzle. Collect them now.}}
 {{Dialogue Start}}
+:{{tx}}
 {{Dialogue End}}
 
 ===Talk to the senior mine cart operator and begin the next round of testing{{subst:void|<!--201040206-->}}===
 {{Mission Description|type=adventure|location=Great Mine|update|The senior mine cart operator seems to have prepared a new puzzle. Go and inquire about his preparation}}
 {{Dialogue Start}}
-
-;(Talk to Apprentice Mine Cart Operator)
-:'''Apprentice Mine Cart Operator:''' The master has a new puzzle. Go ask him about it if you're interested.
-
-;(Talk to Senior Mine Cart Operator)
-:'''Senior Mine Cart Operator:''' Great! The venue's all sorted. Are you up for the next challenge?
-:{{DIcon|Arrow}} Let's go!
-::'''Senior Mine Cart Operator:''' Now that's the spirit! Let's begin.
-:{{DIcon|Exit}} Just a moment. I have something else to do.
-::'''Senior Mine Cart Operator:''' Okay, we'll be right here waiting for you.
-<pre>{
-	"$type": "RPG.GameCore.ActiveVirtualCamera",
-	"AreaName": "Puzzle_Cameras",
-	"AnchorName": "Tramcar_M21_Lv1",
-	"BlendConfig": {
-		"ExportToJson": true,
-		"BlendType": "Cut"
-	}
-}</pre>
-:'''Senior Mine Cart Operator:''' Watch carefully, {{MC|m=boy|f=girl}}. The blocker with the {{Color|keyword|nobold=1|yellow light}} on is the stop for {{Color|keyword|nobold=1|the loaded mine carts}}.
-:'''Senior Mine Cart Operator:''' The {{Color|keyword|nobold=1|empty mine cart}} should be driven to the stop with {{Color|keyword|nobold=1|blue lights}}.
-<pre>{
-	"$type": "RPG.GameCore.ActiveVirtualCamera",
-	"AreaName": "Puzzle_Cameras",
-	"AnchorName": "Tramcar_M21_Lv1",
-	"IsActive": false,
-	"BlendConfig": {
-		"ExportToJson": true,
-		"BlendType": "Cut"
-	}
-}</pre>
-
-;(Talk to Apprentice Mine Cart Operator)
-:'''Apprentice Mine Cart Operator:''' ... Oh, it's you. My master is still preparing his new puzzle, so I'm taking the chance to relax for a while...
-:{{DIcon|Arrow}} I still have some more questions...
-::{{DIcon|Talk}} What drove you to become a mine cart operator?
-:::'''Apprentice Mine Cart Operator:''' Hmm? Why the sudden interest?
-:::'''Apprentice Mine Cart Operator:''' Well, I guess, life happens. You see, my parents... they died a long time ago. My master, who was a friend of my father, adopted me.
-:::'''Apprentice Mine Cart Operator:''' The old man has been very good to me. I know he's worried that I wouldn't be able to make a good living in Belobog without the right skills. I guess that's why he decided to pass his skills to me.
-:::'''Apprentice Mine Cart Operator:''' But I just can't help being lazy... I mean, that's okay, right? I'm still young, so I still have plenty of time...
-:::{{DIcon|Talk}} Have you been working in these mines for a long time?
-::::'''Apprentice Mine Cart Operator:''' My master said that the mine cart operator is the lifeblood of the mine. The operator ensures the Geomarrow can be continuously transported out of the depths of the mine.
-::::'''Apprentice Mine Cart Operator:''' Geomarrow can only be delivered to the place it's supposed to go through the tracks we lay.
-::::'''Apprentice Mine Cart Operator:''' I mean it sounds pretty important... But still I want to do something much bigger in life. I don't want to be trapped in these mines forever.
-::::'''Apprentice Mine Cart Operator:''' Forget it. I guess there's no point thinking so far ahead... I have to stay here for the time being to repay the debt of kindness I owe to my master. If I think like this, I feel more at ease.
-:::;(Return to previous option selection)
-:::{{DIcon|Exit}} That's all the questions I have.
-::{{DIcon|Talk}} Have you been working in these mines for a long time?
-:::'''Apprentice Mine Cart Operator:''' My master said that the mine cart operator is the lifeblood of the mine. The operator ensures the Geomarrow can be continuously transported out of the depths of the mine.
-:::'''Apprentice Mine Cart Operator:''' Geomarrow can only be delivered to the place it's supposed to go through the tracks we lay.
-:::'''Apprentice Mine Cart Operator:''' I mean it sounds pretty important... But still I want to do something much bigger in life. I don't want to be trapped in these mines forever.
-:::'''Apprentice Mine Cart Operator:''' Forget it. I guess there's no point thinking so far ahead... I have to stay here for the time being to repay the debt of kindness I owe to my master. If I think like this, I feel more at ease.
-:::{{DIcon|Talk}} What drove you to become a mine cart operator?
-::::'''Apprentice Mine Cart Operator:''' Hmm? Why the sudden interest?
-::::'''Apprentice Mine Cart Operator:''' Well, I guess, life happens. You see, my parents... they died a long time ago. My master, who was a friend of my father, adopted me.
-::::'''Apprentice Mine Cart Operator:''' The old man has been very good to me. I know he's worried that I wouldn't be able to make a good living in Belobog without the right skills. I guess that's why he decided to pass his skills to me.
-::::'''Apprentice Mine Cart Operator:''' But I just can't help being lazy... I mean, that's okay, right? I'm still young, so I still have plenty of time...
-:::;(Return to previous option selection)
-:::{{DIcon|Exit}} That's all the questions I have.
-::{{DIcon|Exit}} That's all the questions I have.
-:{{DIcon|Exit}} Nothing else.
-
-;(Talk to Senior Mine Cart Operator)
-:'''Senior Mine Cart Operator:''' Hmm? You're early. I'm still working on a new puzzle, so you'll have to come back later.
-:{{DIcon|Arrow}} I still have some more questions...
-::{{DIcon|Talk}} How did you meet your current apprentice?
-:::'''Senior Mine Cart Operator:''' Hmm? You mean the kid... Well, that's a long story. He's had a pretty tough life so far.
-:::'''Senior Mine Cart Operator:''' His father was working with me in the mines before. But he decided to try his luck scavenging in the Fragmentum with a group of vagrants... He never came back.
-:::'''Senior Mine Cart Operator:''' I saw he had no one to rely on, so I thought to pass on my track-laying skills to him. With those skills, he can make a living for himself.
-:::{{DIcon|Talk}} Have you been working in these mines for a long time?
-::::'''Senior Mine Cart Operator:''' That's right! I've been with this mining team for many years. I can't remember exactly how long, but this mine has been operating for nearly twenty years now.
-::::'''Senior Mine Cart Operator:''' Do you see that big vein in the middle of the mine? Absolutely stunning! Why didn't those useless surveyors find it earlier! To think that the most valuable prize was hiding in plain sight...
-:::;(Return to previous option selection)
-:::{{DIcon|Exit}} That's all the questions I have.
-::{{DIcon|Talk}} Have you been working in these mines for a long time?
-:::'''Senior Mine Cart Operator:''' That's right! I've been with this mining team for many years. I can't remember exactly how long, but this mine has been operating for nearly twenty years now.
-:::'''Senior Mine Cart Operator:''' Do you see that big vein in the middle of the mine? Absolutely stunning! Why didn't those useless surveyors find it earlier! To think that the most valuable prize was hiding in plain sight...
-:::{{DIcon|Talk}} How did you meet your current apprentice?
-::::'''Senior Mine Cart Operator:''' Hmm? You mean the kid... Well, that's a long story. He's had a pretty tough life so far.
-::::'''Senior Mine Cart Operator:''' His father was working with me in the mines before. But he decided to try his luck scavenging in the Fragmentum with a group of vagrants... He never came back.
-::::'''Senior Mine Cart Operator:''' I saw he had no one to rely on, so I thought to pass on my track-laying skills to him. With those skills, he can make a living for himself.
-:::;(Return to previous option selection)
-:::{{DIcon|Exit}} That's all the questions I have.
-::{{DIcon|Exit}} That's all the questions I have.
-:{{DIcon|Exit}} Nothing else.
+:{{tx}}
 {{Dialogue End}}
 
 ===Pass the senior mine cart operator's test{{subst:void|<!--201040208-->}}===
 {{Mission Description|type=adventure|location=Great Mine|update|The senior mine cart operator prepared the Mine Cart Puzzle in front of you. Solve it promptly.}}
 {{Dialogue Start}}
-
-;(Talk to Apprentice Mine Cart Operator)
-:'''Apprentice Mine Cart Operator:''' Yellow light, yellow light...
-:'''Apprentice Mine Cart Operator:''' Err... What does the yellow light mean?
-
-;(Talk to Senior Mine Cart Operator)
-:'''Senior Mine Cart Operator:''' So, do you want me to reset the mine carts for you?
-:{{DIcon|Arrow}} Yes. Please help me reset the carts.
-:{{DIcon|Exit}} There's no need.
-;(Unused &mdash; Tramcar_StartReset)
-:'''Senior Mine Cart Operator:''' Okay, just one moment...
-:<pre>{
-	"$type": "RPG.GameCore.ActiveVirtualCamera",
-	"AreaName": "Puzzle_Cameras",
-	"AnchorName": "Tramcar_M21_Lv1",
-	"BlendConfig": {
-		"ExportToJson": true,
-		"BlendType": "Cut"
-	}
-}</pre>
-::<!--3-second delay-->
-:<pre>{
-	"$type": "RPG.GameCore.ActiveVirtualCamera",
-	"AreaName": "Puzzle_Cameras",
-	"AnchorName": "Tramcar_M21_Lv1",
-	"IsActive": false,
-	"BlendConfig": {
-		"ExportToJson": true,
-		"BlendType": "Cut"
-	}
-}</pre>
+:{{tx}}
 {{Dialogue End}}
 
 ===Go to the senior mine cart operator to claim your reward{{subst:void|<!--201040209-->}}===
 {{Mission Description|type=adventure|location=Great Mine|update|With your ingenuity, you quickly solve the mine cart puzzle set up by the senior mine cart operator.<br />Go ask him about the reward &mdash; there is usually a reward for this kind of task, isn't there?}}
 {{Dialogue Start}}
-
-;(Talk to Apprentice Mine Cart Operator)
-:'''Apprentice Mine Cart Operator:''' Yellow light, yellow light...
-:'''Apprentice Mine Cart Operator:''' Err... What does the yellow light mean?
-
-;(Talk to Senior Mine Cart Operator)
-:'''Senior Mine Cart Operator:''' Haha, not bad! I wish this stupid brat would learn a thing or two from you...
-:'''Senior Mine Cart Operator:''' Here's another part of your reward &mdash; and now, another puzzle...
+:{{tx}}
 {{Dialogue End}}
 
 ===Claim the reward for passing the test{{subst:void|<!--201040210-->}}===
 {{Mission Description|type=adventure|location=Great Mine|update|The senior mine cart operator prepared the rewards for solving the puzzle. Collect them now.}}
 {{Dialogue Start}}
+:{{tx}}
 {{Dialogue End}}
 
 ===Talk to the senior mine cart operator and begin the next round of testing{{subst:void|<!--201040211-->}}===
 {{Mission Description|type=adventure|location=Great Mine|update|The senior mine cart operator seems to have prepared a new puzzle. Go and inquire about his preparation}}
 {{Dialogue Start}}
-
-;(Talk to Apprentice Mine Cart Operator)
-:'''Apprentice Mine Cart Operator:''' The master has a new puzzle. Go ask him about it if you're interested.
-
-;(Talk to Senior Mine Cart Operator)
-:'''Senior Mine Cart Operator:''' Great! The venue's all sorted. Are you up for the next challenge?
-:{{DIcon|Arrow}} Let's go!
-::'''Senior Mine Cart Operator:''' Now that's the spirit! Let's begin.
-:{{DIcon|Exit}} Just a moment. I have something else to do.
-::'''Senior Mine Cart Operator:''' Okay, we'll be right here waiting for you.
-<pre>{
-	"$type": "RPG.GameCore.ActiveVirtualCamera",
-	"AreaName": "Puzzle_Cameras",
-	"AnchorName": "Tramcar_M21_Lv1",
-	"BlendConfig": {
-		"ExportToJson": true,
-		"BlendType": "Cut"
-	}
-}</pre>
-:'''Senior Mine Cart Operator:''' Watch carefully, {{MC|m=boy|f=girl}}. The blocker with the {{Color|keyword|nobold=1|yellow light}} on is the stop for {{Color|keyword|nobold=1|the loaded mine carts}}.
-:'''Senior Mine Cart Operator:''' If a mine cart needs to {{Color|keyword|nobold=1|load or unload the Geomarrow}}, it needs to be moved to the {{Color|keyword|nobold=1|stop next to the Geomarrow pile}} first.
-<pre>{
-	"$type": "RPG.GameCore.ActiveVirtualCamera",
-	"AreaName": "Puzzle_Cameras",
-	"AnchorName": "Tramcar_M21_Lv1",
-	"IsActive": false,
-	"BlendConfig": {
-		"ExportToJson": true,
-		"BlendType": "Cut"
-	}
-}</pre>
-
-;(Talk to Apprentice Mine Cart Operator)
-:'''Apprentice Mine Cart Operator:''' ... Oh, it's you. My master is still preparing his new puzzle, so I'm taking the chance to relax for a while...
-:{{DIcon|Arrow}} I still have some more questions...
-::{{DIcon|Talk}} What drove you to become a mine cart operator?
-:::'''Apprentice Mine Cart Operator:''' Hmm? Why the sudden interest?
-:::'''Apprentice Mine Cart Operator:''' Well, I guess, life happens. You see, my parents... they died a long time ago. My master, who was a friend of my father, adopted me.
-:::'''Apprentice Mine Cart Operator:''' The old man has been very good to me. I know he's worried that I wouldn't be able to make a good living in Belobog without the right skills. I guess that's why he decided to pass his skills to me.
-:::'''Apprentice Mine Cart Operator:''' But I just can't help being lazy... I mean, that's okay, right? I'm still young, so I still have plenty of time...
-:::{{DIcon|Talk}} Have you been working in these mines for a long time?
-::::'''Apprentice Mine Cart Operator:''' My master said that the mine cart operator is the lifeblood of the mine. The operator ensures the Geomarrow can be continuously transported out of the depths of the mine.
-::::'''Apprentice Mine Cart Operator:''' Geomarrow can only be delivered to the place it's supposed to go through the tracks we lay.
-::::'''Apprentice Mine Cart Operator:''' I mean it sounds pretty important... But still I want to do something much bigger in life. I don't want to be trapped in these mines forever.
-::::'''Apprentice Mine Cart Operator:''' Forget it. I guess there's no point thinking so far ahead... I have to stay here for the time being to repay the debt of kindness I owe to my master. If I think like this, I feel more at ease.
-:::;(Return to previous option selection)
-:::{{DIcon|Exit}} That's all the questions I have.
-::{{DIcon|Talk}} Have you been working in these mines for a long time?
-:::'''Apprentice Mine Cart Operator:''' My master said that the mine cart operator is the lifeblood of the mine. The operator ensures the Geomarrow can be continuously transported out of the depths of the mine.
-:::'''Apprentice Mine Cart Operator:''' Geomarrow can only be delivered to the place it's supposed to go through the tracks we lay.
-:::'''Apprentice Mine Cart Operator:''' I mean it sounds pretty important... But still I want to do something much bigger in life. I don't want to be trapped in these mines forever.
-:::'''Apprentice Mine Cart Operator:''' Forget it. I guess there's no point thinking so far ahead... I have to stay here for the time being to repay the debt of kindness I owe to my master. If I think like this, I feel more at ease.
-:::{{DIcon|Talk}} What drove you to become a mine cart operator?
-::::'''Apprentice Mine Cart Operator:''' Hmm? Why the sudden interest?
-::::'''Apprentice Mine Cart Operator:''' Well, I guess, life happens. You see, my parents... they died a long time ago. My master, who was a friend of my father, adopted me.
-::::'''Apprentice Mine Cart Operator:''' The old man has been very good to me. I know he's worried that I wouldn't be able to make a good living in Belobog without the right skills. I guess that's why he decided to pass his skills to me.
-::::'''Apprentice Mine Cart Operator:''' But I just can't help being lazy... I mean, that's okay, right? I'm still young, so I still have plenty of time...
-:::;(Return to previous option selection)
-:::{{DIcon|Exit}} That's all the questions I have.
-::{{DIcon|Exit}} That's all the questions I have.
-:{{DIcon|Exit}} Nothing else.
-
-;(Talk to Senior Mine Cart Operator)
-:'''Senior Mine Cart Operator:''' Hmm? You're early. I'm still working on a new puzzle, so you'll have to come back later.
-:{{DIcon|Arrow}} I still have some more questions...
-::{{DIcon|Talk}} How did you meet your current apprentice?
-:::'''Senior Mine Cart Operator:''' Hmm? You mean the kid... Well, that's a long story. He's had a pretty tough life so far.
-:::'''Senior Mine Cart Operator:''' His father was working with me in the mines before. But he decided to try his luck scavenging in the Fragmentum with a group of vagrants... He never came back.
-:::'''Senior Mine Cart Operator:''' I saw he had no one to rely on, so I thought to pass on my track-laying skills to him. With those skills, he can make a living for himself.
-:::{{DIcon|Talk}} Have you been working in these mines for a long time?
-::::'''Senior Mine Cart Operator:''' That's right! I've been with this mining team for many years. I can't remember exactly how long, but this mine has been operating for nearly twenty years now.
-::::'''Senior Mine Cart Operator:''' Do you see that big vein in the middle of the mine? Absolutely stunning! Why didn't those useless surveyors find it earlier! To think that the most valuable prize was hiding in plain sight...
-:::;(Return to previous option selection)
-:::{{DIcon|Exit}} That's all the questions I have.
-::{{DIcon|Talk}} Have you been working in these mines for a long time?
-:::'''Senior Mine Cart Operator:''' That's right! I've been with this mining team for many years. I can't remember exactly how long, but this mine has been operating for nearly twenty years now.
-:::'''Senior Mine Cart Operator:''' Do you see that big vein in the middle of the mine? Absolutely stunning! Why didn't those useless surveyors find it earlier! To think that the most valuable prize was hiding in plain sight...
-:::{{DIcon|Talk}} How did you meet your current apprentice?
-::::'''Senior Mine Cart Operator:''' Hmm? You mean the kid... Well, that's a long story. He's had a pretty tough life so far.
-::::'''Senior Mine Cart Operator:''' His father was working with me in the mines before. But he decided to try his luck scavenging in the Fragmentum with a group of vagrants... He never came back.
-::::'''Senior Mine Cart Operator:''' I saw he had no one to rely on, so I thought to pass on my track-laying skills to him. With those skills, he can make a living for himself.
-:::;(Return to previous option selection)
-:::{{DIcon|Exit}} That's all the questions I have.
-::{{DIcon|Exit}} That's all the questions I have.
-:{{DIcon|Exit}} Nothing else.
+:{{tx}}
 {{Dialogue End}}
 
 ===Pass the senior mine cart operator's test{{subst:void|<!--201040213-->}}===
 {{Mission Description|type=adventure|location=Great Mine|update|The senior mine cart operator prepared the Mine Cart Puzzle in front of you. Solve it promptly.}}
 {{Dialogue Start}}
-
-;(Talk to Apprentice Mine Cart Operator)
-:'''Apprentice Mine Cart Operator:''' I think... I've given up on thinking...
-
-;(Talk to Senior Mine Cart Operator)
-:'''Senior Mine Cart Operator:''' So, do you want me to reset the mine carts for you?
-:{{DIcon|Arrow}} Yes. Please help me reset the carts.
-:{{DIcon|Exit}} There's no need.
-;(Unused &mdash; Tramcar_StartReset)
-:'''Senior Mine Cart Operator:''' Okay, just one moment...
-:<pre>{
-	"$type": "RPG.GameCore.ActiveVirtualCamera",
-	"AreaName": "Puzzle_Cameras",
-	"AnchorName": "Tramcar_M21_Lv1",
-	"BlendConfig": {
-		"ExportToJson": true,
-		"BlendType": "Cut"
-	}
-}</pre>
-::<!--3-second delay-->
-:<pre>{
-	"$type": "RPG.GameCore.ActiveVirtualCamera",
-	"AreaName": "Puzzle_Cameras",
-	"AnchorName": "Tramcar_M21_Lv1",
-	"IsActive": false,
-	"BlendConfig": {
-		"ExportToJson": true,
-		"BlendType": "Cut"
-	}
-}</pre>
+:{{tx}}
 {{Dialogue End}}
 
 ===Go to the senior mine cart operator to claim your reward{{subst:void|<!--201040214-->}}===
 {{Mission Description|type=adventure|location=Great Mine|update|With your ingenuity, you quickly solve the mine cart puzzle set up by the senior mine cart operator.<br />Go ask him about the reward &mdash; there is usually a reward for this kind of task, isn't there?}}
 {{Dialogue Start}}
-
-;(Talk to Apprentice Mine Cart Operator)
-:'''Senior Mine Cart Operator:''' Oho, nicely done {{MC|m=lad|f=young lady}}! If you can handle this, you can take care of some simple coordinating duties in the mine.
-:'''Senior Mine Cart Operator:''' Not bad. You're setting an example for the brat! Remember to come back tomorrow. I have to think of some more tests first...
-
-;(Talk to Senior Mine Cart Operator)
-:'''Senior Mine Cart Operator:''' Oho, nicely done {{MC|m=lad|f=young lady}}! If you can handle this, you can take care of some simple coordinating duties in the mine.
-:'''Senior Mine Cart Operator:''' Not bad. You're setting an example for the brat! Remember to come back tomorrow. I have to think of some more tests first...
+:{{tx}}
 {{Dialogue End}}
 
 ===Claim the reward for passing the test{{subst:void|<!--201040215-->}}===
 {{Mission Description|type=adventure|location=Great Mine|update|After a series of challenges, you seem to have finally gotten the knack for being a mine cart operator's assistant.<br />The senior miner says that he's also prepared a series of questions to test his apprentice. Naturally, the burden of demonstrating to his apprentice the correct way to operate mine carts falls on your shoulders as the "Ace Assistant."<br />You passed another one of the senior miner's tests, and he has naturally prepared a fitting reward for you. Go see what the reward is this time.}}
 {{Dialogue Start}}
+:{{tx}}
 {{Dialogue End}}
 
 ==Other Languages==

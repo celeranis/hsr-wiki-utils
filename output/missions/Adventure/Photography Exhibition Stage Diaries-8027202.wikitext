@@ -41,129 +41,19 @@ PageTitle=#Photography Exhibition: Stage Diaries#
 ===Discuss the theme of the day with March 7th{{subst:void|<!--802720201-->}}===
 {{Mission Description|type=adventure|location=SoulGlad™ Scorchsand Audition Venue|March 7th seems to have a new inspiration. Discuss the Photography Task of the day with her.}}
 {{Dialogue Start}}
-
-;(Unused &mdash; EnterDistrict_G422)
 :{{tx}}
-:<pre>{
-	"$type": "RPG.GameCore.SwitchCharacterAnchorV2",
-	"SwitchCharacterAnchorConfig": {
-		"IsLocalPlayer": true,
-		"CharacterUniqueName": "LocalPlayer",
-		"AreaName": {
-			"Value": "LevelArea_P20331_F20331001_G422"
-		},
-		"AnchorName": {
-			"Value": "Anchor1"
-		}
-	}
-}</pre>
-
-;(Talk to Old Oti)
-:Did he not bring along attendants this time? This Alfalfa Head sure is brave.
-
-;(Talk to Brother Hanu)
-:Brother Hanu restlessly shifts his posture &mdash; you are interrupting his viewing of the show.
-
-;(Talk to Robin)
-:Robin is recording a show right now... So this is what she's like in work mode.
-
 {{Dialogue End}}
 
 ===Take photos of the first half of the impressions show{{subst:void|<!--802720204-->}}===
 {{Mission Description|type=adventure|location=SoulGlad™ Scorchsand Audition Venue|update|To complete the daily tasks and compete for the final prize, you, as a photography assistant, accompanied March 7th on a photography journey.<br />Take a photo based on the photography inspiration.}}
 {{Dialogue Start}}
-;(Unused &mdash; PhotoGraphStartCustomString)
-:<!--0.5-second delay-->
-::<!--2-second delay-->
-::<!--2-second delay-->
-
-;(Unused &mdash; PhotoGraphFinishCustomString)
-<pre>{
-	"$type": "RPG.GameCore.HideEntity",
-	"Target": {
-		"$type": "RPG.GameCore.TargetFetchAdvNpcEx",
-		"FetchType": "SingleNpcByNpcID",
-		"SingleNpcID": {
-			"GroupID": {
-				"FixedValue": {
-					"Value": 424
-				}
-			},
-			"GroupNpcID": {
-				"FixedValue": {
-					"Value": 400001
-				}
-			}
-		}
-	},
-	"IsHide": true
-}</pre>
-:<pre>{
-	"$type": "RPG.GameCore.HideEntity",
-	"Target": {
-		"$type": "RPG.GameCore.TargetFetchAdvNpcEx",
-		"FetchType": "SingleNpcByNpcID",
-		"SingleNpcID": {
-			"GroupID": {
-				"FixedValue": {
-					"Value": 424
-				}
-			},
-			"GroupNpcID": {
-				"FixedValue": {
-					"Value": 400004
-				}
-			}
-		}
-	}
-}</pre>
+:{{tx}}
 {{Dialogue End}}
 
 ===Discuss the photo with March 7th{{subst:void|<!--802720206-->}}===
 {{Mission Description|type=adventure|location=SoulGlad™ Scorchsand Audition Venue|update|With the photography session wrapped up, have a chat with March 7th about the work}}
 {{Dialogue Start}}
-:The first half of Dreamscape Shift is over. During the intermission, Clockie comes up to you.
-:'''Clockie:''' Tick-tock! Pink-haired friend, gray-haired friend, it's all thanks to your support that the smart and brave Clockie managed to repel Boss Stone!
-:{{DIcon|Arrow}} You're welcome, tick-tock!
-::'''Clockie:''' I have prepared a gift for you. Please accept it, tick-tock!
-:{{DIcon|Arrow}} You're still doing it!
-::'''Clockie:''' Aaahem... Haha, sorry, I was too immersed. Thanks for taking my photo. Please accept this!
 :{{tx}}
-<pre>{
-	"$type": "RPG.GameCore.SetPerformanceResult"
-}</pre>
-:'''Clockie:''' To be frank, I've been on Penacony so long, but this is the first time I've gotten a chance to be on stage. With this photo, my family will surely approve of my decision to strive for my dream on Penacony!
-:'''March 7th:''' So it holds such deep sentiment! (Trailblazer), you must give this photo a great name.
-:{{DIcon|Arrow}} "Megabomb Change."
-::'''March 7th:''' Err... I know you mean that his performance was the bomb, but some might understand it the other way...
-::{{tx}}
-:{{DIcon|Arrow}} "Promising Future."
-:{{DIcon|Arrow}} "'''Hmph'''."
-::'''March 7th:''' So facetious! At least a name like "'Hmph' of Approval"!
-::{{tx}}
-<pre>{
-	"$type": "RPG.GameCore.SetTextJoinValue",
-	"TextJoinID": 194,
-	"Value": "1"
-}</pre>
-:'''March 7th:''' The second half is about to begin. Let's just wait around here for a bit.
-:{{DIcon|Arrow}} I've got a good idea...
-:{{DIcon|Arrow}} Just wait for a great performance to unfold.
-:'''March 7th:''' Mm, so secretive. I wonder what scheme you're plotting again... Come back early. I still need you to help with the camera later!
-:{{tx}}
-<pre>{
-	"$type": "RPG.GameCore.SwitchCharacterAnchorV2",
-	"SwitchCharacterAnchorConfig": {
-		"IsLocalPlayer": true,
-		"CharacterUniqueName": "LocalPlayer",
-		"AreaName": {
-			"Value": "LevelArea_P20331_F20331001_G425"
-		},
-		"AnchorName": {
-			"Value": "Anchor1"
-		}
-	}
-}</pre>
 {{Dialogue End}}
 
 ===Get ready to take photos of the second half of the impressions show{{subst:void|<!--802720207-->}}===
@@ -174,65 +64,13 @@ PageTitle=#Photography Exhibition: Stage Diaries#
 
 ===Take photos of the second half of the impressions show{{subst:void|<!--802720209-->}}===
 {{Dialogue Start}}
-;(Unused &mdash; PhotoGraphStartCustomString)
-:<!--1-second delay-->
-
-;(Unused &mdash; EnterDistrict_G427)
-
-
-;(Talk to Old Oti)
-:Ohohoho, Old Oti is tickled pink by the show.
-:You're starting to believe that he is only here as a judge purely out of personal interest.
-
-;(Talk to Brother Hanu)
-:Brother Hanu restlessly shifts his posture &mdash; you are interrupting his viewing of the show.
-
-;(Talk to Robin)
-:Robin maintains a professional smile, and flashes a wink at you all when the cameras aren't on her.
-:Why is our Robin the only one without a bench to sit on? The show crew is so brazenly snubbing her!
+:{{tx}}
 {{Dialogue End}}
 
 ===Discuss the photo with March 7th{{subst:void|<!--802720210-->}}===
 {{Mission Description|type=adventure|location=SoulGlad™ Scorchsand Audition Venue|update|With the photography session wrapped up, have a chat with March 7th about the work}}
 {{Dialogue Start}}
 :{{tx}}
-:'''Old Oti:''' Ohohoho! That was marvelous. The three actors' performances were stellar. What a feat to portray the Sweet Dreams Troupe that provokes such endearment!
-:'''Robin:''' Yes, these excellent actors deserve the audience's applause.
-:'''Brother Hanu:''' Hmphs in approval.
-:'''Old Oti:''' Now, please shed your disguises and show everyone your true visages!
-:'''Lady:''' Judges, audience members... This IS what we really look like.
-:'''Mr. Bigwig:''' Woof! I'm a genuine soda doggo!
-:'''Old Oti:''' Ohohohoho, simply marvelous! Looks like our performers were too immersed in their acting... Let us applaud them again, to thank them for such a splendid performance!
-:'''Lady:''' But... we are the Sweet Dreams Troupe to begin with?
-:'''Starlet:''' Shh... (Trailblazer) said that we have to do something gimmicky like this to generate hype, and maybe the theater will get more awareness.
-:'''Mr. Bigwig:''' Woof! Such thunderous applause... Is it all for me? I'm a syrupy soda about to burst with happiness!
-:'''March 7th:''' ...So, you got all the monsters from the Dreamjolt Hostelry to play as themselves in an impressions show?
-:'''March 7th:''' That's one way to go about it. Then again, we definitely got some shots that captured the stage's vibe!
-:'''March 7th:''' Alright, last thing &mdash; name this photo!
-:{{DIcon|Arrow}} "Dreamjolt Tap."
-:{{DIcon|Arrow}} "Sweet Dreams Troupe Comeback Show."
-:{{DIcon|Arrow}} "Appearing as Myself."
-<pre>{
-	"$type": "RPG.GameCore.SetTextJoinValue",
-	"TextJoinID": 195,
-	"Value": "1"
-}</pre>
-:'''March 7th:''' With that upload, today's task is done. Good job, (Trailblazer)!
-:{{tx}}
-<pre>{
-	"$type": "RPG.GameCore.SwitchCharacterAnchorV2",
-	"SwitchCharacterAnchorConfig": {
-		"IsLocalPlayer": true,
-		"CharacterUniqueName": "LocalPlayer",
-		"AreaName": {
-			"Value": "LevelArea_P20331_F20331001_G429"
-		},
-		"AnchorName": {
-			"Value": "Anchor1"
-		}
-	}
-}</pre>
-:...
 {{Dialogue End}}
 
 ==Other Languages==

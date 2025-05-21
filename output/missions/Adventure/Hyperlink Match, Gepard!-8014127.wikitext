@@ -40,33 +40,7 @@ PageTitle=#Hyperlink Match, Gepard!#
 ===Have a Hyperlink Match with Gepard{{subst:void|<!--801412701-->}}===
 {{Mission Description|type=adventure|location=Silvermane Guard Restricted Zone|The core gameplay loop behind Aetherium Wars is "dueling." Challenge different players and show your true strength!}}
 {{Dialogue Start}}
-
-;(Talk to Gepard)
-;(If {{cx}}<!--during performance 501030001-->)
-::'''Gepard:''' Welcome to the Silvermane Guard Restricted Zone, (Trailblazer).
-::'''Gepard:''' I've instructed the soldiers to treat you hospitably, but I do have to remind you to be considerate of your actions.
-::'''Gepard:''' Rules are rules &mdash; once any such acts are discovered, even I, the Captain, can't guarantee your safety.
-::{{DIcon|Arrow}} Duly noted.
-:::'''Gepard:''' I would be deeply grateful. I hope you will enjoy this trip to Belobog...
-:::'''Gepard:''' Or, as you all call this world &mdash; I hope you will enjoy this trip to Jarilo-VI.
-::{{DIcon|Arrow}} The Captain's so uptight.
-:::'''Gepard:''' The Supreme Guardian and her laws are akin to an iron wall around Belobog. Nothing in this place is above them.
-:::'''Gepard:''' As a comrade who once fought by your side, I do not wish to see harm befall you. Which is why I hope you will reconsider my suggestion.
-::'''Gepard:''' But enough of this stuffy topic. I'm about to go on a break. Do you have something else you wish to talk about?
-;(If {{cx}}<!--not during performance 501030001-->)
-:<pre>{
-	"$type": "RPG.GameCore.PlayMultiVoiceTalk",
-	"TalkSentenceID": 501030034
-}</pre>
-:'''Gepard:''' A wonderful battle. I see contests in gaming also require skills and training... I admit complete defeat.
-<pre>{
-	"$type": "RPG.GameCore.ShowUI",
-	"Name": "Ui.AetherDivide.AetherDivideEntryPage",
-	"Param": {
-		"Value": "2"
-	},
-	"OnUIEnter": []
-}</pre>
+:{{tx}}
 {{Dialogue End}}
 
 ==Other Languages==

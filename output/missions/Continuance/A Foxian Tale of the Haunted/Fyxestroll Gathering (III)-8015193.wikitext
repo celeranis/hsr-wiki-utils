@@ -38,62 +38,13 @@ PageTitle=#Fyxestroll Gathering (III)#
 ===Meet up with your teammates in Fyxestroll Garden{{subst:void|<!--801519301-->}}===
 {{Mission Description|type=continuance|location=Fyxestroll Garden|Once again, you reunite with your fellow ghost hunters at Fyxestroll Garden. Scanning through the posts on Ghostly Grove and conducting investigations have become routine tasks for you.}}
 {{Dialogue Start}}
-<pre>{
-	"$type": "RPG.GameCore.CreateProp",
-	"GroupID": {
-		"FixedValue": {
-			"Value": 52
-		}
-	},
-	"GroupPropID": {
-		"FixedValue": {
-			"Value": 300001
-		}
-	},
-	"CreateList": []
-}</pre>
-;(Upon reaching the destination)
-
-;(Upon reaching the destination)
-:{{A|VO side2 hzzy guinaifen 213.ogg}} '''Guinaifen:''' I don't think searching like this is the best way...
-:{{A|VO side2 hzzy huohuo 213.ogg}} '''Huohuo:''' "Diner haunted! Evil spirit breaks into restaurant and eats double its body weight in food!" ...Do you think Tail did this? Seems like his style...
-:{{A|VO side2 hzzy sushang 183.ogg}} '''Sushang:''' Sounds like a very hungry criminal came up with a very poor excuse...
-:{{A|VO side2 hzzy huohuo 214.ogg}} '''Huohuo:''' What about this one... "Paranormal activity reported at exclusive horror immersia! Guests experience haunting within seven days of screening!"
-:{{A|VO side2 hzzy huohuo 215.ogg}} '''Huohuo:''' It reminds me of when I used to watch horror immersia to train my courage... whenever there was a suspenseful moment, Tail would jump up and scare me.
-:{{A|VO side2 hzzy sushang 184.ogg}} '''Sushang:''' Guys, I feel like this is just some sort of prank... or a marketing stunt to boost ticket sales.
-:{{DIcon|Arrow}} What are you guys up to?
-:{{DIcon|Arrow}} Have we planned out our next steps yet?
-:{{A|VO side2 hzzy sushang 185.ogg}} '''Sushang:''' Huohuo has been browsing Ghostly Grove for hours. Every time she finds a suspicious incident, she says: "Do you think Tail did this?"
-:{{A|VO side2 hzzy sushang 186.ogg}} '''Sushang:''' The problem is, any suspicious incident could be Tail-related when you think about it...
-:{{A|VO side2 hzzy huohuo 216.ogg}} '''Huohuo:''' I feel like Tail is still around... but if so, why didn't he come back to see me?
-:{{DIcon|Arrow}} He'll come back.
-:{{DIcon|Arrow}} Well, he is a heliobus...
-::{{A|VO side2 hzzy guinaifen 214.ogg}} '''Guinaifen:''' That's right &mdash; we can't really know what a heliobus is thinking, right? Tail was sealed away for ages and then suddenly let free... If it were me, I'd want some away time.
-::{{A|VO side2 hzzy guinaifen 215.ogg}} '''Guinaifen:''' You'll just have to be a little patient.
-
-;(Talk to Huohuo)
-:{{A|VO side2 hzzy huohuo 220.ogg}} '''Huohuo:''' Hey! Look at this!
-<pre>{
-	"$type": "RPG.GameCore.ShowTransitionLoadingUI",
-	"Name": "Ui.Heliobus.Transition.HeliobusTransitionDialog"
-}</pre>
-<pre>{
-	"$type": "RPG.GameCore.ShowUI",
-	"Name": "Ui.Heliobus.SNS.SNSMain.SNSDetail.HeliobusSNSDetailDialog",
-	"Param": {
-		"Value": "103"
-	},
-	"OnUIEnter": [
-		{
-			"$type": "RPG.GameCore.ExitTransitionLoadingUI"
-		}
-	]
-}</pre>
+:{{tx}}
 {{Dialogue End}}
 
 ===Talk to Huohuo and check the post asking for help{{subst:void|<!--801519302-->}}===
 {{Mission Description|type=continuance|location=Fyxestroll Garden|update|Having completed your adventure, you reunite with your fellow ghost hunters at Fyxestroll Garden. Scanning through the posts on Ghostly Grove and conducting investigations have become routine tasks for you.}}
 {{Dialogue Start}}
+:{{tx}}
 {{Dialogue End}}
 
 ==Other Languages==

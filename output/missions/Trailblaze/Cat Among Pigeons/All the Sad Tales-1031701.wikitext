@@ -60,506 +60,129 @@ PageTitle=#All the Sad Tales#
 {{Mission Description|type=trailblaze|location=Clock Studios Theme Park|The murmurs near your ears grow louder, more booming. Let's hope you can hold on until the moment you step onto the stage of the amusement park.}}
 {{Dialogue Start}}
 :{{tx}}
-:{{tx}}
-:{{A|VO chapter3 14 aventurine 124.ogg}} '''Aventurine:''' First I'm hearing things, and now I'm seeing them. Great! Am I going to be elevated into the Harmony's Emanator next?
-:{{A|VO chapter3 14 aventurine 125.ogg}} '''Aventurine:''' ...Why are there no guests here? What's that feather-head doing?
 {{Dialogue End}}
 
 ===Get onstage. Fear not. Never look back{{subst:void|<!--103170158-->}}===
 {{Mission Description|type=trailblaze|location=Clock Studios Theme Park|update|Get onstage<br />Fear not<br />Never look back}}
 {{Dialogue Start}}
 :{{tx}}
-:{{A|VO chapter3 14 aventurine 220.ogg}} '''Aventurine:''' Kakavasha?
-:{{A|VO chapter3 14 aventurine 221.ogg}} '''Aventurine:''' ...
-:{{A|VO chapter3 14 aventurine 222.ogg}} '''Aventurine:''' ...Bye.
-:{{DIcon|Arrow}} Go on stage.
-:{{A|VO chapter3 14 aventurine 223.ogg}} '''Aventurine:''' Okay, all the actors are in place. It's time for the show to begin.
-:{{tx}}
 {{Dialogue End}}
 
 ===Head t█ the c█ntr█l stage of the p█rk{{subst:void|<!--103170107-->}}===
 {{Mission Description|type=trailblaze|location=Clock Studios Theme Park|update|The murmurs n██r your ears grow louder, more booming. You can even see another ███ ██████.<br />Let's hope you can hold on until the m█ment you st█p onto the stag█ of the █m█sement pa██.}}
 {{Dialogue Start}}
-;(If {{cx}}<!--SubMission not Finish: 103170104-->)
-<pre>{
-	"$type": "RPG.GameCore.AdvCreateGroupEntity",
-	"InstanceIDList": [
-		400001
-	]
-}</pre>
-;(Unused &mdash; LetKKWXFacePlayer)
-
-;(Unused &mdash; LookatPerformanceM)
-
-
-;(Unused &mdash; LookatPerformanceL)
-
-
-;(Unused &mdash; LookatPerformanceR)
-
+:{{tx}}
 {{Dialogue End}}
 
 ===Talk to the strang█ ch█ld{{subst:void|<!--103170104-->}}===
 {{Mission Description|type=trailblaze|location=Clock Studios Theme Park|update|You █████ ██ ██ █ ███ discovered a str█ng█ ch█ld &mdash; H█ s██ms t█ h██l fr█m th█ Avgin █r█g█ns...<br />W█r█n't th█y █lr██dy w█p█d out?}}
 {{Dialogue Start}}
-;(Upon reaching the destination)
-
-;(Upon reaching the destination)
 :{{tx}}
 {{Dialogue End}}
 
 ===Cat█h up ███th██You█g Avgin b█y{{subst:void|<!--103170103-->}}===
 {{Mission Description|type=trailblaze|location=Clock Studios Theme Park|update|You are c█m█lete██ ██tranc█d by t█e █vgin boy.██ust who ███he? There█s sti█l tim███Mayb█ you ███ catch up ██ h██ and as█ █im exactly wha█ █████████.}}
 {{Dialogue Start}}
-:{{A|VO chapter3 14 aventurine 132.ogg}} '''Aventurine:''' Those eyes... and Mama Fenge... No! It can't...
-:{{A|VO chapter3 14 aventurine 133.ogg}} '''Aventurine:''' There AREN'T any Avgins left!
-;(Upon reaching the destination)
-
-;(Upon reaching the destination)
 :{{tx}}
-:{{A|VO chapter3 14 aventurine 141.ogg}} '''Aventurine:''' ...It's not going to be me anyway.
-;(Upon reaching the destination)
-
-;(Upon reaching the destination)
-<pre>{
-	"$type": "RPG.GameCore.AdvSetAIMoveTo",
-	"EntityInstanceID": {
-		"FixedValue": {
-			"Value": 400001
-		}
-	},
-	"GroupId": 32,
-	"PointID": 1,
-	"MotionFlag": "FastRun",
-	"SkipStartTurn": true,
-	"OnReach": [
-		{
-			"$type": "RPG.GameCore.AdvDestroyGroupEntity",
-			"InstanceIDList": [
-				400001
-			]
-		}
-	]
-}</pre>
-;(Upon reaching the destination)
-
-;(Upon reaching the destination)
-:<!--8-second delay-->
-<pre>{
-	"$type": "RPG.GameCore.AdvDestroyGroupEntity",
-	"InstanceIDList": [
-		400001
-	]
-}</pre>
-;(Upon reaching the destination)
-
-;(Upon reaching the destination)
-<pre>{
-	"$type": "RPG.GameCore.SetFloorCustomFloat",
-	"Name": {
-		"Value": "PinballPerfermance_01"
-	},
-	"Value": {
-		"FixedValue": {
-			"Value": 1
-		}
-	}
-}</pre>
-<pre>{
-	"$type": "RPG.GameCore.TriggerSound",
-	"SoundName": {
-		"Value": "Ev_sfx_storyd_pinball_launch"
-	},
-	"EmitterType": "Prop",
-	"GroupID": 2,
-	"ID": 300002
-}</pre>
-:<!--8-second delay-->
-<pre>{
-	"$type": "RPG.GameCore.AdvDestroyGroupEntity",
-	"InstanceIDList": [
-		400001
-	]
-}</pre>
-:{{A|VO chapter3 14 aventurine 141.ogg}} '''Aventurine:''' ...It's not going to be me anyway.
-;(Upon reaching the destination)
-
-;(Upon reaching the destination)
-<pre>{
-	"$type": "RPG.GameCore.AdvSetAIMoveTo",
-	"EntityInstanceID": {
-		"FixedValue": {
-			"Value": 400001
-		}
-	},
-	"GroupId": 33,
-	"PointID": 1,
-	"MotionFlag": "FastRun",
-	"SkipStartTurn": true,
-	"OnReach": [
-		{
-			"$type": "RPG.GameCore.AdvDestroyGroupEntity",
-			"InstanceIDList": [
-				400001
-			]
-		}
-	]
-}</pre>
 {{Dialogue End}}
 
 ===Ri██ ███ Pinb██l ██chine{{subst:void|<!--103170115-->}}===
 {{Dialogue Start}}
-;(Upon reaching the destination)
+:{{tx}}
 {{Dialogue End}}
 
 ===Cat█h up ███th██You█g Avgin b█y{{subst:void|<!--103170117-->}}===
 {{Dialogue Start}}
-:<!--2-second delay-->
-:{{A|VO chapter3 14 kakawx 108.ogg}} '''Young Child:''' It's my turn to hide now! I bet you guys can't find meeee!
-;(Upon reaching the destination)
-
-;(Upon reaching the destination)
 :{{tx}}
 {{Dialogue End}}
 
 ===W█n th█ Hide█an██S█ek █ame an█ f█nd the A█gin bo█{{subst:void|<!--103170120-->}}===
 {{Mission Description|type=trailblaze|location=Clock Studios Theme Park|update|You are unable to uncover your past<br />You are █nable to uncover your past<br />You █████nable to uncover your ████<br />You █████nabl█ to unco█er y█ur ████<br />You █████na███ to un███er y█ur ████}}
 {{Dialogue Start}}
-:<!--2-second delay-->
-:{{A|VO chapter3 14 aventurine 145.ogg}} '''Aventurine:''' That child... Could he be in here?
-;(Upon reaching the destination)
-
-;(Upon reaching the destination)
 :{{tx}}
-<pre>{
-	"$type": "RPG.GameCore.ResetMissionAudioState"
-}</pre>
 {{Dialogue End}}
 
 ===Cat█h up ███th██You█g Avgin b█y{{subst:void|<!--103170122-->}}===
 {{Mission Description|type=trailblaze|location=Clock Studios Theme Park|update|You are c█m█lete██ ██tranc█d by t█e █vgin boy.██ust who ███he? There█s sti█l tim███Mayb█ you ███ catch up ██ h██ and as█ █im exactly wha█ █████████.}}
 {{Dialogue Start}}
-:{{A|VO chapter3 14 aventurine 165.ogg}} '''Aventurine:''' The cornerstone is gone... Another illusion of the Harmony.
-:{{A|VO chapter3 14 aventurine 166.ogg}} '''Aventurine:''' ...Huh?
-;(Upon reaching the destination)
 :{{tx}}
-<pre>{
-	"$type": "RPG.GameCore.AdvCreateGroupEntity",
-	"InstanceIDList": [
-		400002
-	]
-}</pre>
-;(Upon reaching the destination)
-<pre>{
-	"$type": "RPG.GameCore.WaitSubMissionStateChange",
-	"SubMissions": [
-		103170122
-	],
-	"State": "Finish",
-	"OnChange": [
-		{
-			"$type": "RPG.GameCore.AdvSetAIMoveTo",
-			"EntityInstanceID": {
-				"FixedValue": {
-					"Value": 400001
-				}
-			},
-			"GroupId": 39,
-			"PointID": 1,
-			"MotionFlag": "Run",
-			"AlignRotation": true,
-			"AccurateStop": true,
-			"SkipStartTurn": true,
-			"FinishAfterStop": true
-		}
-	]
-}</pre>
 {{Dialogue End}}
 
 ===Play t█e ro█l of █████ fil█{{subst:void|<!--103170124-->}}===
 {{Mission Description|type=trailblaze|location=Clock Studios Theme Park|update|Your wounds will never heal<br />Your █ound█ will never heal<br />Your █ound█ will n██er heal<br />Yo██ █ound█ will n██er heal<br />Yo██ █ound█ w███ n██er ████}}
 {{Dialogue Start}}
-
-
 :{{tx}}
-<pre>{
-	"$type": "RPG.GameCore.PerformanceEndSeq",
-	"Cases": [
-		{
-			"OnSuccess": [
-				{
-					"$type": "RPG.GameCore.SwitchCharacterAnchorV2",
-					"SwitchCharacterAnchorConfig": {
-						"IsLocalPlayer": true,
-						"CharacterUniqueName": "LocalPlayer",
-						"AreaName": {
-							"Value": "LevelArea_P20321_F20321001_G311"
-						},
-						"AnchorName": {
-							"Value": "Anchor1"
-						}
-					}
-				}
-			]
-		}
-	]
-}</pre>
-<pre>{
-	"$type": "RPG.GameCore.TutorialTaskUnlock",
-	"TriggerParam": {
-		"Value": "6095"
-	}
-}</pre>
 {{Dialogue End}}
 
 ===Cat█h up ███th██You█g Avgin b█y{{subst:void|<!--103170126-->}}===
 {{Mission Description|type=trailblaze|location=Clock Studios Theme Park|update|You are c█m█lete██ ██tranc█d by t█e █vgin boy.██ust who ███he? There█s sti█l tim███Mayb█ you ███ catch up ██ h██ and as█ █im exactly wha█ █████████.}}
 {{Dialogue Start}}
-;(Upon reaching the destination)
-
-;(Upon reaching the destination)
 :{{tx}}
-;(If {{cx}}<!--SubMission not Finish: 103170127-->)
-<pre>{
-	"$type": "RPG.GameCore.WaitSubMissionStateChange",
-	"SubMissions": [
-		103170127
-	],
-	"State": "Finish",
-	"OnChange": [
-		{
-			"$type": "RPG.GameCore.AdvSetAIMoveTo",
-			"EntityInstanceID": {
-				"FixedValue": {
-					"Value": 400001
-				}
-			},
-			"GroupId": 278,
-			"PointID": 1,
-			"MotionFlag": "FastRun",
-			"OnReach": [
-				{
-					"$type": "RPG.GameCore.AdvDestroyGroupEntity",
-					"InstanceIDList": [
-						400001
-					]
-				}
-			]
-		}
-	]
-}</pre>
 {{Dialogue End}}
 
 ===Ri██ ███ Pinb██l ██chine{{subst:void|<!--103170127-->}}===
 {{Dialogue Start}}
-;(Upon reaching the destination)
+:{{tx}}
 {{Dialogue End}}
 
 ===Cat█h up ███th██You█g Avgin b█y{{subst:void|<!--103170128-->}}===
 {{Dialogue Start}}
-:{{A|VO chapter3 14 kakawx 116.ogg}} '''Young Child:''' Woah, this place... it's so tall. Even taller than the tallest rocks in the desert...
-;(Upon reaching the destination)
+:{{tx}}
 {{Dialogue End}}
 
 ===Lea█e █h█ maze{{subst:void|<!--103170131-->}}===
 {{Mission Description|type=trailblaze|location=Clock Studios Theme Park|update|You cannot escape from the past<br />You ██nnot escape from the pa██<br />You ██nnot ███ape from the pa██<br />You ██nnot ███ape from ███ pa██<br />You ██nn█t ███ape from ███ pa██<br />You █████t ███ape f██m ███ pa██<br />You █████t █████ f██m ███ pa██<br />██u █████t █████ f██m ███ pa██}}
 {{Dialogue Start}}
-:{{A|VO chapter3 14 kakawx 117.ogg}} '''Young Child:''' And there are so many flowers here. Big Sis, this one's for you!
-;(Upon reaching the destination)
-
-:{{DIcon|Loupe}} Investigate
-:<!--1-second delay-->
 :{{tx}}
-<pre>{
-	"$type": "RPG.GameCore.SwitchCharacterAnchorV2",
-	"SwitchCharacterAnchorConfig": {
-		"IsLocalPlayer": true,
-		"CharacterUniqueName": "LocalPlayer",
-		"AreaName": {
-			"Value": "LevelArea_P20321_F20321001_G58"
-		},
-		"AnchorName": {
-			"Value": "Anchor2"
-		}
-	}
-}</pre>
 {{Dialogue End}}
 
 ===C█eck █he th██gs ███ los█{{subst:void|<!--103170132-->}}===
 {{Dialogue Start}}
-:{{A|VO chapter3 14 aventurine 175.ogg}} '''Aventurine:''' A dead end... Is this the wrong way?
+:{{tx}}
 {{Dialogue End}}
 
 ===L██ve █he █aze ███ █o{{subst:void|<!--103170135-->}}===
 {{Mission Description|type=trailblaze|location=Clock Studios Theme Park|update|Your future never existed<br />You█ future never existed<br />You█ future ne█er existed<br />You█ fut███ ne█er existed<br />You█ fut███ ne█er ████ted<br />You█ fut███ █e█er ████ted<br />Yo██ ██████ █e█er ████ted}}
 {{Dialogue Start}}
-:{{A|VO chapter3 14 kakawx 118.ogg}} '''Young Child:''' If these leaves could be brought back... Would they bloom into new flowers?
-;(Upon reaching the destination)
-
-:{{DIcon|Loupe}} Investigate
-:<!--1-second delay-->
 :{{tx}}
 {{Dialogue End}}
 
 ===C██ck th█ l█st thi███ and m█m█ries{{subst:void|<!--103170136-->}}===
 {{Dialogue Start}}
+:{{tx}}
 {{Dialogue End}}
 
 ===E██ape █sca██ th█ maz█ ███ape ██e █ast esc███{{subst:void|<!--103170140-->}}===
 {{Mission Description|type=trailblaze|location=Clock Studios Theme Park|update|Failure discarded selfish useless pointless coward murderer gambler blessed discarded loser chosen-one Mother Goddess's beloved crazy murderer blessed failure discarded loser pointless coward murderer chosen-one selfish ████ blessed discarded loser chosen-one ███ loser discarded pointle██ ██ward mur█████ gambler blessed █isc█████ useless loser ███sen-███ Mother Goddess██ ███████ loser loser loser loser loser loser loser loser loser loser loser loser loser ████ ████ ███████████ ███ ██████ █████ █ ██ ████ █}}
 {{Dialogue Start}}
-:<!--2.5-second delay-->
-:{{A|VO chapter3 14 aventurine 191.ogg}} '''Aventurine:''' It's so quiet this time. Is he finally gone...? Or am I the one about to disappear?
-;(Upon reaching the destination)
-
-;(Upon reaching the destination)
-:{{A|VO chapter3 14 aventurine 191.ogg}} '''Aventurine:''' It's so quiet this time. Is he finally gone...? Or am I the one about to disappear?
-
-;(Upon reaching the destination)
-:{{A|VO chapter3 14 aventurine 192.ogg}} '''Aventurine:''' Finally... made it out of this place.
+:{{tx}}
 {{Dialogue End}}
 
 ===Cat█h up ███th██You█g Avgin b█y{{subst:void|<!--103170142-->}}===
 {{Mission Description|type=trailblaze|location=Clock Studios Theme Park|update|You are c█m█lete██ ██tranc█d by t█e █vgin boy.██ust who ███he? There█s sti█l tim███Mayb█ you ███ catch up ██ h██ and as█ █im exactly wha█ █████████.}}
 {{Dialogue Start}}
-;(Upon reaching the destination)
-;(If {{cx}}<!--SubMission not Finish: 103170143-->)
-<pre>{
-	"$type": "RPG.GameCore.AdvSetAIMoveTo",
-	"EntityInstanceID": {
-		"FixedValue": {
-			"Value": 400001
-		}
-	},
-	"GroupId": 279,
-	"PointID": 1,
-	"MotionFlag": "FastRun",
-	"OnReach": [
-		{
-			"$type": "RPG.GameCore.AdvDestroyGroupEntity",
-			"InstanceIDList": [
-				400001
-			]
-		}
-	]
-}</pre>
+:{{tx}}
 {{Dialogue End}}
 
 ===Ri██ ███ Pinb██l ██chine{{subst:void|<!--103170143-->}}===
 {{Dialogue Start}}
-:{{A|VO chapter3 14 kakawx 119.ogg}} '''Young Child:''' We're going home? But I don't want to go back yet...
-;(Upon reaching the destination)
-
-;(Upon reaching the destination)
-<pre>{
-	"$type": "RPG.GameCore.AdvSetAIMoveTo",
-	"EntityInstanceID": {
-		"FixedValue": {
-			"Value": 400001
-		}
-	},
-	"GroupId": 279,
-	"PointID": 1,
-	"MotionFlag": "FastRun",
-	"OnReach": [
-		{
-			"$type": "RPG.GameCore.AdvDestroyGroupEntity",
-			"InstanceIDList": [
-				400001
-			]
-		}
-	]
-}</pre>
+:{{tx}}
 {{Dialogue End}}
 
 ===Cat█h up ███th██You█g Avgin b█y{{subst:void|<!--103170145-->}}===
 {{Dialogue Start}}
-
-;(Upon reaching the destination)
-
-;(Upon reaching the destination)
-:{{A|VO chapter3 14 kakawx 121.ogg}} '''Young Child:''' Mister... Is that you? I hear the sound of leather shoes.
-
-;(Upon reaching the destination)
-:{{A|VO chapter3 14 kakawx 120.ogg}} '''Young Child:''' It's so fun here... I want to stay here forever...
-
-;(Upon reaching the destination)
-<pre>{
-	"$type": "RPG.GameCore.SetMissionCustomValue",
-	"SubmissionID": 103170145,
-	"MissionCustomValue": {
-		"Name": "OldValue_0",
-		"ValidValueParamList": [
-			0,
-			1
-		]
-	},
-	"CustomValue": 1
-}</pre>
-;(Upon reaching the destination)
-;(Upon reaching the destination)
-
-;(Upon reaching the destination)
-;(Upon reaching the destination)
-
-;(Upon reaching the destination)
 :{{tx}}
-<pre>{
-	"$type": "RPG.GameCore.SwitchCharacterAnchorV2",
-	"SwitchCharacterAnchorConfig": {
-		"IsLocalPlayer": true,
-		"CharacterUniqueName": "LocalPlayer",
-		"AreaName": {
-			"Value": "LevelArea_P20321_F20321001_G69"
-		},
-		"AnchorName": {
-			"Value": "Anchor1"
-		}
-	}
-}</pre>
-
-;(Upon reaching the destination)
-:{{A|VO chapter3 14 kakawx 122.ogg}} '''Young Child:''' Ah... It really is you.
 {{Dialogue End}}
 
 ===Take███ █ ph█to of █ █ ██ Kakavasha{{subst:void|<!--103170152-->}}===
 {{Mission Description|type=trailblaze|location=Clock Studios Theme Park|update|█████ █████████████████ █████████<br />████ █████████████████████ ██ ████<br />██ ███████████████ ██████████████<br />██ ████████████ ███████████████ ██<br />██ ████████████████ ███████████ ██<br />███████ ████████ █████ ███}}
 {{Dialogue Start}}
-
-;(Talk to Young Child)
-:{{A|VO chapter3 14 kakawx 132.ogg}} '''"Kakavasha":''' Can you take a photo for me? I want a memento.
 :{{tx}}
 {{Dialogue End}}
 
 ===Get onstage. Fear not. Never look back{{subst:void|<!--103170155-->}}===
 {{Mission Description|type=trailblaze|location=Clock Studios Theme Park|update|Get onstage<br />Fear not<br />Never look back}}
 {{Dialogue Start}}
-:<!--1-second delay-->
-:{{A|VO chapter3 14 kakawx 137.ogg}} '''"Kakavasha":''' So you're an actor... No wonder your clothes are so stylish.
-:{{A|VO chapter3 14 aventurine 213.ogg}} '''Aventurine:''' I'm actually a... merchant. But I do have a show to do.
-:{{A|VO chapter3 14 kakawx 138.ogg}} '''"Kakavasha":''' Are you the same as those men in black in the sky? But you're not wearing black.
-:{{A|VO chapter3 14 aventurine 214.ogg}} '''Aventurine:''' Only ordinary employees have to wear that. My position... is much higher than theirs.
-:{{A|VO chapter3 14 kakawx 139.ogg}} '''"Kakavasha":''' Awesome, I hope I can become as good-looking as you when I grow up.
-:{{A|VO chapter3 14 aventurine 215.ogg}} '''Aventurine:''' Of course you can.
-:{{A|VO chapter3 14 aventurine 216.ogg}} '''Aventurine:''' You'll be better, and stronger than me.
-;(Upon reaching the destination)
-
-;(If {{F|CurtainState}} is undefined 1)
-:;(If {{cx}}{{subst:void|<!--{"$type":"RPG.GameCore.ByComparePropState","TargetType":{"$type":"RPG.GameCore.GroupFetchLocalTarget","TargetType":"Prop","Targets":[300010]}}-->}})
-:<pre>{
-	"$type": "RPG.GameCore.TriggerEntityEvent",
-	"EventName": {
-		"Value": "Clt_TriggerOpen"
-	},
-	"InstanceID": {
-		"FixedValue": {
-			"Value": 300010
-		}
-	}
-}</pre>
-;(Upon reaching the destination)
-
-;(Upon reaching the destination)
 :{{tx}}
 {{Dialogue End}}
 

@@ -11,10 +11,10 @@ PageTitle=#Snow Plains Photography#
 |chapter       = Sound Hunt Ninjutsu Inscription
 |requirements  = {{subst:void|<!--Unknown: {"Type":"Manual"}-->}}
 |summary       = <!--official mission summary from Fate's Atlas-->
-|characters    = Arfey; Dunn; Lynx; Trailblazer
-|startLocation = [[Jarilo-VI]] - [[Outlying Snow Plains]]
-|world         = Jarilo-VI
-|area          = Outlying Snow Plains
+|characters    = Arfey; Dunn; Lynx; Trailblazer; Warp Trotter
+|startLocation = [[Penacony]] - [[Penacony Paperfold University College]]
+|world         = Penacony
+|area          = Penacony Paperfold University College
 |prev          = 
 |next          = 
 |rewards       = Credit*5,000
@@ -22,7 +22,10 @@ PageTitle=#Snow Plains Photography#
 '''''Snow Plains Photography''''' is an Event [[Adventure Mission]] from the [[Sound Hunt Ninjutsu Inscription]] event.
 
 ==Steps==
+# Meet up with Arfey on campus
+# Collect inspiration for composing a song by heading to Belobog's Snow Plains
 # Find the Trotter that suddenly appeared in the snow
+# Capture the moment the Trotter appears
 # Report what you saw to Lynx and Dunn
 
 <!--
@@ -34,59 +37,34 @@ PageTitle=#Snow Plains Photography#
 -->
 ==Dialogue==
 {{Stub Dialogue}}
+===Meet up with Arfey on campus{{subst:void|<!--802611501-->}}===
+{{Mission Description|type=adventure|location=Penacony Paperfold University College|You've become the manager of the music party's performing band, and now your band needs to complete 3 performances on the stage in the middle of the campus.<br />Arfey seems to have something to talk with you about. Meet up with her on campus.}}
+{{Dialogue Start}}
+:{{tx}}
+{{Dialogue End}}
+
+===Collect inspiration for composing a song by heading to Belobog's Snow Plains{{subst:void|<!--802611502-->}}===
+{{Mission Description|type=adventure|location=Outlying Snow Plains|update|You've become the manager of the music party's performing band, and now your band needs to complete 3 performances on the stage in the middle of the campus.<br />Wander around Belobog's Snow Plains to help Rappa collect inspiration for composing.}}
+{{Dialogue Start}}
+:{{tx}}
 {{Dialogue End}}
 
 ===Find the Trotter that suddenly appeared in the snow{{subst:void|<!--802611503-->}}===
 {{Mission Description|type=adventure|location=Outlying Snow Plains|update|You've become the manager of the music party's performing band, and now your band needs to complete 3 performances on the stage in the middle of the campus.<br />Carefully examine the condition of this Trotter that suddenly appeared.}}
 {{Dialogue Start}}
-
-;(Talk to Warp Trotter)
-----
-:The Trotter wiggles and waggles about, as if welcoming your presence. Now what? Take out your camera and play with it for a while?
-:{{DIcon|Travel Log}} Take a commemorative photo of it.
-:<pre>{
-	"$type": "RPG.GameCore.WaitFrame"
-}</pre>
-:<pre>{
-	"$type": "RPG.GameCore.ShowUI",
-	"Name": "Ui.MusicRhythm.MusicRhythmChooseLevelPage",
-	"WaitForExit": true,
-	"Param": {
-		"Value": "6"
-	},
-	"OnUICustomEvent": [],
-	"OnUIExitImmediately": [
-		{
-			"$type": "RPG.GameCore.EndDialogueEntityInteract"
-		}
-	]
-}</pre>
-:{{DIcon|Exit}} I've got something else to do.
-
+:{{tx}}
 {{Dialogue End}}
 
-===Report what you saw to Lynx and Dunn{{subst:void|<!--802611506-->}}===
+===Capture the moment the Trotter appears{{subst:void|<!--802611507-->}}===
+{{Mission Description|type=adventure|location=Outlying Snow Plains|update|You've become the manager of the music party's performing band, and now your band needs to complete 3 performances on the stage in the middle of the campus.<br />Obtain a record of the Trotter's beats to help Rappa collect inspiration for composing.}}
+{{Dialogue Start}}
+:{{tx}}
+{{Dialogue End}}
+
+===Report what you saw to Lynx and Dunn{{subst:void|<!--802611505-->}}===
 {{Mission Description|type=adventure|location=Outlying Snow Plains|update|You've become the manager of the music party's performing band, and now your band needs to complete 3 performances on the stage in the middle of the campus.<br />Go back to where you were and tell Lynx and Dunn what you just experienced.}}
 {{Dialogue Start}}
-
-;(Unused &mdash; EnterDistrict_G101)
-:'''Dunn:''' Oh, so that's how it was. Nothing to worry about, then. Fragmentum creatures such as these have been pretty lively recently.
-::'''Lynx:''' So did you find the inspiration you wanted?
-::{{DIcon|Arrow}} I did.
-::{{DIcon|Arrow}} I suppose...
-::'''Arfey:''' Honestly, I never once thought that... such a meaningless record could be used to inspire creativity.
-::'''Lynx:''' As long as it's something that can help you create new ideas, that counts as inspiration.
-::'''Arfey:''' But... if we don't follow standard music theory, wouldn't we write really strange melodies?
-::'''Lynx:''' Mm, I don't really know that complicated stuff. But Big Sis said that the most important thing about being in a band is that the audience is happy.
-::'''Dunn:''' Not just that! She also said that the band members and the one playing should be happy too!
-::'''Lynx:''' ...You sure remember my sister's words well.
-::'''Dunn:''' Ha, haha... Of course! She's the heart of our band!
-::'''Arfey:''' ...
-::'''Arfey:''' {{MC|f=Miss|m=Mr.}} Manager, we should be heading back to school. I have something... I need to think about.
-::'''Dunn:''' Leaving so suddenly? My olms aren't done roasting yet.
-::{{DIcon|Arrow}} (Invite them to the performance)
-::'''Lynx:''' Sure. I was also thinking of exploring a vast dreamscape. I'll go ask Big Sis about the times later.
-::{{tx}}
+:{{tx}}
 {{Dialogue End}}
 
 ==Other Languages==

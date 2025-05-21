@@ -40,468 +40,54 @@ PageTitle=#Old Fortress Scavenge#
 -->
 ==Dialogue==
 {{Stub Dialogue}}
-:'''Pela:''' Let's start searching for Miss Molly's things from here. We don't need to go up the stairs. That place is not part of the old city fortress and has nothing but ancient battlefields.
-:'''Pela:''' Thankfully, we didn't encounter any enemies coming here, but I can't promise it'll stay that way on our way back. Keep your eyes peeled. This place gives off a strange vibe today.
-:{{DIcon}} You seem familiar with this place?
-::'''Pela:''' Yeah. I used to come here with Gepard to survey the terrain &mdash; but that was a long time ago.
-::'''Pela:''' Needless to say, it was very important for an intelligence officer to personally map the battlefield. Unfortunately, the pressure on the front line increased so quickly that we had to retreat to the Silvermane Guard Restricted Zone... And those pieces of intelligence were not very useful in the end.
-:;(Return to previous option selection)
-:{{DIcon}} What's so strange about this place's vibe?
-::'''Pela:''' It's... too quiet. Normally, we couldn't have come all this way without any fights.
-::'''Pela:''' That may seem like a good thing... But deep down, I'm disturbed by this strange quietness. Anyway, let's be more careful from now on.
-:;(Return to previous option selection)
-:{{DIcon}} Why should we start searching here?
-::'''Pela:''' The old citadel runs from the north to the south, and we are now at the southernmost end&mdash;
-::'''Pela:''' If we start from here, we can save a trip going backward. Technically, it'd be the same if we were to start from the north. I just picked this direction at random when we came.
-:;(Return to previous option selection)
-:{{DIcon|Arrow}} Okay, let's go.
-::'''Pela:''' Great, let's go. Even though we didn't encounter any enemies coming here, it's still hard to say what will happen later. If we get into a fight, I will cover you.
-::'''Pela:''' If it so happens that you are defeated, I will definitely fight my way to bring you back to a safe place and continue our exploration when you are ready.
-::'''Pela:''' But it's best to avoid that. After all, there is only so much help I can give you... So stay sharp, (Trailblazer).
-:<pre>{
-	"$type": "RPG.GameCore.PropMoveTo",
-	"AreaName": "LevelArea_P40101_F40101001_G7",
-	"AnchorName": "Anchor1",
-	"TargetType": {
-		"$type": "RPG.GameCore.TargetFetchAdvPropEx",
-		"FetchType": "SinglePropByPropID",
-		"SinglePropID": {
-			"GroupID": {
-				"FixedValue": {
-					"Value": 7
-				}
-			},
-			"ID": {
-				"FixedValue": {
-					"Value": 300001
-				}
-			}
-		}
-	}
-}</pre>
-:<pre>{
-	"$type": "RPG.GameCore.PropTriggerAnimState",
-	"AnimStateName": "Appear",
-	"WatiAnimFinish": true,
-	"TargetType": {
-		"$type": "RPG.GameCore.TargetFetchAdvPropEx",
-		"FetchType": "SinglePropByPropID",
-		"SinglePropID": {
-			"GroupID": {
-				"FixedValue": {
-					"Value": 7
-				}
-			},
-			"ID": {
-				"FixedValue": {
-					"Value": 300001
-				}
-			}
-		}
-	}
-}</pre>
-::<!--0.3-second delay-->
-::'''Findie:''' Beep! Beep! Matching object found, matching object found &mdash; do you want to switch to search mode?
-::'''Pela:''' ...What's that sound?
-::'''Pela:''' Um, (Trailblazer), why are you carrying that thing with you?
-::'''Findie:''' Beep... Findie is not a thing. I am Richard, the Home-Use Object Finder. Model information: Version 0.63, Professional model, Annual Deluxe Edition. Nickname: "Findie."
-:<pre>{
-	"$type": "RPG.GameCore.DestroyNPC",
-	"GroupID": 13,
-	"GroupNpcID": 400004
-}</pre>
-::{{DIcon|Arrow}} It can help us find things. Pretty useful.
-:::'''Pela:''' I see... You outsiders sure have a lot of gadgets that come in handy.
-::{{DIcon|Arrow}} It claims it can find things.
-:::'''Pela:''' Uh... Does that mean it's not very reliable? But it does seem to have found something...
-:::'''Pela:''' Anyway, one more pair of eyes might not be a bad thing. Let's try it out.
-::{{DIcon|Arrow}} It's my emotional support robot.
-:::'''Pela:''' ...If you say so. But it just called itself a "Home-Use Object Finder." So, can it help us find things?
-:::'''Pela:''' Anyway, one more pair of eyes might not be a bad thing. Let's try it out.
-::'''Pela:''' Hey, Findie! Can you show us the way?
-::'''Findie:''' Yes, yes, yes. When you need to find something, just call Findie.
-::'''Findie:''' The current target is "something hidden." And there is "one" such target in detectable range. Please follow yours truly to conduct the search in accordance with the "Home-Use Object Finder Safety Manual."
-::'''Pela:''' It seems confident... Let's follow it.
-::<!--1-second delay-->
-:<pre>{
-	"$type": "RPG.GameCore.CharacterTriggerAnimState",
-	"CharacterUniqueName": {
-		"Value": "StoryPlayer"
-	},
-	"AnimStateName": "UseProp1",
-	"NormalizedTransitionDuration": 0.3
-}</pre>
-::<!--1-second delay-->
-:<pre>{
-	"$type": "RPG.GameCore.PropTriggerAnimState",
-	"AnimStateName": "Separate",
-	"WatiAnimFinish": true,
-	"TargetType": {
-		"$type": "RPG.GameCore.TargetFetchAdvPropEx",
-		"FetchType": "SinglePropByPropID",
-		"SinglePropID": {
-			"GroupID": {
-				"FixedValue": {
-					"Value": 7
-				}
-			},
-			"ID": {
-				"FixedValue": {
-					"Value": 300001
-				}
-			}
-		}
-	}
-}</pre>
-:<pre>{
-	"$type": "RPG.GameCore.PropMoveTo",
-	"AreaName": "LevelArea_P40101_F40101001_G7",
-	"AnchorName": "Anchor2",
-	"TargetType": {
-		"$type": "RPG.GameCore.TargetFetchAdvPropEx",
-		"FetchType": "SinglePropByPropID",
-		"SinglePropID": {
-			"GroupID": {
-				"FixedValue": {
-					"Value": 7
-				}
-			},
-			"ID": {
-				"FixedValue": {
-					"Value": 300001
-				}
-			}
-		}
-	}
-}</pre>
-:'''Pela:''' Let's use Findie to search along the way we came. Let's go!
 {{Dialogue End}}
 
 ===Look for clues in the Corridor of Fading Echoes{{subst:void|<!--201130302-->}}===
 {{Mission Description|type=adventure|location=Corridor of Fading Echoes|update|You and Pela have come to the depths of the Corridor of Fading Echoes, and decide to start to look for the entrance from here.<br />The Corridor of Fading Echoes feels different today... Be careful and proceed cautiously.}}
 {{Dialogue Start}}
-
-;(Obtain {{Item|Portrait With a Clue|20|x=1}})
-<pre>{
-	"$type": "RPG.GameCore.WaitPredicateSucc"
-}</pre>
+:{{tx}}
 {{Dialogue End}}
 
 ===Look for the next clue in the Corridor of Fading Echoes{{subst:void|<!--201130303-->}}===
 {{Mission Description|type=adventure|location=Corridor of Fading Echoes|update|You and Pela have come to the depths of the Corridor of Fading Echoes, and decide to start looking for the entrance from here.<br />Soon, you find a useful clue, but this is just the beginning. It looks like old Balakin didn't want you to solve the puzzle easily... Anyway, keep searching according to the clues in his message.}}
 {{Dialogue Start}}
-;(Upon reaching the destination)
-:'''Pela:''' There seem to be enemies roaming nearby... We probably shouldn't call Findie right now.
-:'''Pela:''' Let's proceed with caution, and keep an eye out for the {{Color|keyword|nobold=1|arch}} that may contain clues.
-;(Obtain {{Item|Pela's Notes|20|x=1}})
-;(Unused &mdash; TalkSentence_201130503)
-:'''Pela:''' Huh? Let me see...
-::'''Pela:''' ... Just as I thought. This floor tile was not built into the ground. It was also artificially modified and concealed. It's probably because of this that Findie judged it as "something hidden."
-::'''Pela:''' To be honest, I don't know for sure, but it's probably related to some kind of {{Color|keyword|nobold=1|rotatable structure}}.
-::'''Pela:''' Anyway, I'll write it down first, and then I'll copy it for you. Here you are.
-::On the sheet of paper Pela gave you, there are several ordered drawings of {{Color|keyword|nobold=1|clockwise rotation arrow}} and {{Color|keyword|nobold=1|counterclockwise rotation arrow}}, with her annotation at the bottom that says "rotatable structure."
-::You turn the sheet over and see some beautifully written but illegible scribbles. The words are all jumbled, but you do see that this passage is about three characters, respectively named Artem, Anna and Dalmir.
-::{{DIcon|Arrow}} Thank you. Let's keep going.
-:::'''Pela:''' Okay, let's go...
-::{{DIcon|Arrow}} So... What are these texts?
-:::'''Pela:''' Huh? The clues we just saw...
-::'''Pela:''' ... Wait, no, I forgot! Give me back that piece of paper now!
-::{{DIcon|Arrow}} Okay, here you are.
-:::'''Pela:''' Humph, good...
-::{{DIcon|Arrow}} I want to treasure Miss Pela's masterpiece...
-:::'''Pela:''' (Trailblazer), ahhhh... You gotta be kidding me! If you don't give it back to me right now, I'll... I'll have to take it back! Give it to me.
-::'''Pela:''' Grr... Let me find another blank page to write it down...
-::'''Pela:''' ...Done. Take this one instead. Forget all the texts you saw on the back, and don't you dare tell anyone else about it!
-
-;(Unused &mdash; 40101001_Item_2)
-:'''Pela:''' The clue this time is very straightforward &mdash; you see, on this floor tile, there is a pattern of {{Color|keyword|nobold=1|a counterclockwise rotation arrow}}... It must be somehow related to the previous clue.
-::{{DIcon|Arrow}} What exactly do these arrows mean?
-::'''Pela:''' To be honest, I don't know for sure, but it's probably related to some kind of {{Color|keyword|nobold=1|rotatable structure}}.
-::'''Pela:''' Anyway, I'll write it down first, and then I'll copy it for you. Here you are.
-::On the sheet of paper Pela gave you, there are several ordered drawings of {{Color|keyword|nobold=1|clockwise rotation arrow}} and {{Color|keyword|nobold=1|counterclockwise rotation arrow}}, with her annotation at the bottom that says "rotatable structure."
-::You turn the sheet over and see some beautifully written but illegible scribbles. The words are all jumbled, but you do see that this passage is about three characters, respectively named Artem, Anna and Dalmir.
-::{{DIcon|Arrow}} Thank you. Let's keep going.
-:::'''Pela:''' Okay, let's go...
-::{{DIcon|Arrow}} So... What are these texts?
-:::'''Pela:''' Huh? The clues we just saw...
-::'''Pela:''' ... Wait, no, I forgot! Give me back that piece of paper now!
-::{{DIcon|Arrow}} Okay, here you are.
-:::'''Pela:''' Humph, good...
-::{{DIcon|Arrow}} I want to treasure Miss Pela's masterpiece...
-:::'''Pela:''' (Trailblazer), ahhhh... You gotta be kidding me! If you don't give it back to me right now, I'll... I'll have to take it back! Give it to me.
-::'''Pela:''' Grr... Let me find another blank page to write it down...
-::'''Pela:''' ...Done. Take this one instead. Forget all the texts you saw on the back, and don't you dare tell anyone else about it!
+:{{tx}}
 {{Dialogue End}}
 
 ===Enter the innermost part of the Corridor of Fading Echoes{{subst:void|<!--201130304-->}}===
 {{Mission Description|type=adventure|location=Corridor of Fading Echoes|update|You've found two clues, but you have no idea how to use them.<br />Pela has an idea, but to test it, she has to go deeper into the "Corridor of Fading Echoes." Follow Pela. You might find another clue on the way.}}
 {{Dialogue Start}}
-;(Upon reaching the destination)
-
-;(Upon reaching the destination)
-<pre>{
-	"$type": "RPG.GameCore.DestroyNPC",
-	"GroupID": 13,
-	"GroupNpcID": 400001
-}</pre>
-----
-:'''Pela:''' Here we are. Now, on the left, it's a road towards the Fortified Zone, which is just behind the fortress defense line. And on the right, it's the path leading to the Frontline Fortress's parapet.
-:'''Pela:''' Let's split up for now. In the Fortified Zone, there is a revolving gear bridge that has the same structure as the one in the Silvermane Guard Restricted Zone. I have to go there to investigate its control terminal.
-:'''Pela:''' So, I'll pick the road on the left. In the meantime, please use the path on the right to go to the Frontline Fortress and look for clues there.
-:<!--0.5-second delay-->
-:{{DIcon}} What if you run into a Fragmentum monster?
-::'''Pela:''' On the way here, I checked and found that that road is full of roadblocks and debris. Monsters wouldn't get close to where I'm going.
-::'''Pela:''' Plus, all those obstacles are much easier for someone as small as me to pass through, even though I hate to talk about my size. Anyway, I can do it alone.
-:;(Return to previous option selection)
-:{{DIcon}} Aren't there control terminals all around the gear bridge?
-::'''Pela:''' This kind of gear bridge is pre-equipped with a data storage terminal. Only through this very specific terminal can you view essential data about the gear bridge.
-::'''Pela:''' I need to verify some theories of mine, so I have to investigate this data terminal myself, which is just down the road on the left.
-:;(Return to previous option selection)
-:{{DIcon|Arrow}} I see. Stay safe.
-::'''Pela:''' Humph, never underestimate an intelligence officer &mdash; I've worked out every possible scenario, and nothing will go wrong.
-::'''Pela:''' So let's split up. After we finish our respective investigations, we shall meet on the other side of the bridge.
-::----
-:<pre>{
-	"$type": "RPG.GameCore.PropMoveTo",
-	"AreaName": "LevelArea_P40101_F40101001_G12",
-	"AnchorName": "Anchor1",
-	"TargetType": {
-		"$type": "RPG.GameCore.TargetFetchAdvPropEx",
-		"FetchType": "SinglePropByPropID",
-		"SinglePropID": {
-			"GroupID": {
-				"FixedValue": {
-					"Value": 12
-				}
-			},
-			"ID": {
-				"FixedValue": {
-					"Value": 300001
-				}
-			}
-		}
-	}
-}</pre>
-:<pre>{
-	"$type": "RPG.GameCore.PropTriggerAnimState",
-	"AnimStateName": "Appear",
-	"WatiAnimFinish": true,
-	"TargetType": {
-		"$type": "RPG.GameCore.TargetFetchAdvPropEx",
-		"FetchType": "SinglePropByPropID",
-		"SinglePropID": {
-			"GroupID": {
-				"FixedValue": {
-					"Value": 12
-				}
-			},
-			"ID": {
-				"FixedValue": {
-					"Value": 300001
-				}
-			}
-		}
-	}
-}</pre>
-::'''Findie:''' Beep! Beep! Matching object found, matching object found &mdash; do you want to switch to search mode?
-::'''(Trailblazer):''' (Findie seems to have found something. Let's take a look around here.)
-::<!--1-second delay-->
-:<pre>{
-	"$type": "RPG.GameCore.CharacterTriggerAnimState",
-	"CharacterUniqueName": {
-		"Value": "StoryPlayer"
-	},
-	"AnimStateName": "UseProp1",
-	"NormalizedTransitionDuration": 0.3
-}</pre>
-::<!--1-second delay-->
-:<pre>{
-	"$type": "RPG.GameCore.PropTriggerAnimState",
-	"AnimStateName": "Separate",
-	"WatiAnimFinish": true,
-	"TargetType": {
-		"$type": "RPG.GameCore.TargetFetchAdvPropEx",
-		"FetchType": "SinglePropByPropID",
-		"SinglePropID": {
-			"GroupID": {
-				"FixedValue": {
-					"Value": 12
-				}
-			},
-			"ID": {
-				"FixedValue": {
-					"Value": 300001
-				}
-			}
-		}
-	}
-}</pre>
-:<pre>{
-	"$type": "RPG.GameCore.PropMoveTo",
-	"AreaName": "LevelArea_P40101_F40101001_G7",
-	"AnchorName": "Anchor2",
-	"TargetType": {
-		"$type": "RPG.GameCore.TargetFetchAdvPropEx",
-		"FetchType": "SinglePropByPropID",
-		"SinglePropID": {
-			"GroupID": {
-				"FixedValue": {
-					"Value": 12
-				}
-			},
-			"ID": {
-				"FixedValue": {
-					"Value": 300001
-				}
-			}
-		}
-	}
-}</pre>
+:{{tx}}
 {{Dialogue End}}
 
 ===Continue to look for clues in the Corridor of Fading Echoes{{subst:void|<!--201130305-->}}===
 {{Mission Description|type=adventure|location=Corridor of Fading Echoes|update|You part with Pela for now and come to the "Frontline Fortress" for more clues.<br />Without a companion, you feel a little lonely. Maybe you can talk to Findie, but it's better to let it do its job.}}
 {{Dialogue Start}}
-;(Upon reaching the destination)
-:'''(Trailblazer):''' (I seem to hear a gear bridge moving...)
-;(Obtain {{Item|Edited Note|20|x=1}})
-
-;(Lose {{Item|Pela's Notes|20|x=1}})
+:{{tx}}
 {{Dialogue End}}
 
 ===Unlock the Gear Bridge{{subst:void|<!--201130306-->}}===
 {{Mission Description|type=adventure|location=Corridor of Fading Echoes|update|As you're exploring alone, you hear the roar of the Gear Bridge far away. When you arrive there, you find that your worries have come true.<br />For some reason, Pela is trapped on the other side of the bridge. Find a way to unlock the bridge and reunite with Pela.}}
 {{Dialogue Start}}
-;(Upon reaching the destination)
-
-;(Upon reaching the destination)
-:'''Pela:''' Hey! (Trailblazer)! Can you hear me?
-:'''(Trailblazer):''' (I seem to hear Pela's voice...)
-;(Unused &mdash; Act201130306_01)
-<pre>{
-	"$type": "RPG.GameCore.PropEnableCollider",
-	"Enabled": true,
-	"TargetType": {
-		"$type": "RPG.GameCore.TargetFetchAdvPropEx",
-		"FetchType": "SinglePropByPropID",
-		"SinglePropID": {
-			"GroupID": {
-				"FixedValue": {
-					"Value": 6
-				}
-			},
-			"ID": {
-				"FixedValue": {
-					"Value": 300001
-				}
-			}
-		}
-	}
-}</pre>
-:<pre>{
-	"$type": "RPG.GameCore.EndPropInteract"
-}</pre>
-:<pre>{
-	"$type": "RPG.GameCore.PropReqInteract",
-	"TargetType": {
-		"$type": "RPG.GameCore.TargetFetchAdvPropEx",
-		"FetchType": "SinglePropByPropID",
-		"SinglePropID": {
-			"GroupID": {
-				"FixedValue": {
-					"Value": 6
-				}
-			},
-			"ID": {
-				"FixedValue": {
-					"Value": 300001
-				}
-			}
-		}
-	},
-	"InteractID": {
-		"FixedValue": {
-			"Value": 1200
-		}
-	}
-}</pre>
-
-;(Unused &mdash; Act201130306_02)
-<pre>{
-	"$type": "RPG.GameCore.PropEnableCollider",
-	"Enabled": true,
-	"TargetType": {
-		"$type": "RPG.GameCore.TargetFetchAdvPropEx",
-		"FetchType": "SinglePropByPropID",
-		"SinglePropID": {
-			"GroupID": {
-				"FixedValue": {
-					"Value": 6
-				}
-			},
-			"ID": {
-				"FixedValue": {
-					"Value": 300001
-				}
-			}
-		}
-	}
-}</pre>
-:<pre>{
-	"$type": "RPG.GameCore.EndPropInteract"
-}</pre>
+:{{tx}}
 {{Dialogue End}}
 
 ===Go meet Pela{{subst:void|<!--201130308-->}}===
 {{Mission Description|type=adventure|location=Corridor of Fading Echoes|update|For some reason, Pela is trapped on the other side of the bridge. Luckily, you solve old Balakin's puzzle quickly and unlock the bridge. Go check on Pela.}}
 {{Dialogue Start}}
-;(Upon reaching the destination)
-
-;(Upon reaching the destination)
-:'''Pela:''' Ah, finally! I almost began to think you couldn't make it.
-:{{DIcon|Arrow}} A piece of cake.
-::'''Pela:''' You handled that with such elegance. Looks like you truly are worth your salt.
-:{{DIcon|Arrow}} Are you all right?
-::'''Pela:''' Thank you for your concern, but I'm fine. I'm an intelligence officer of the Silvermane Guards, after all.
-:{{DIcon|Arrow}} You thought I couldn't do it?
-::'''Pela:''' Haha, I was just kidding.
-:'''Pela:''' Let's recount what just happened. After checking the data storage terminal, I found that the gear bridge brakes can be released by following the sequence of these given patterns.
-:'''Pela:''' However, I still don't quite understand why old Balakin left these passwords behind. So I thought I should meet up with you first and discuss it together.
-:'''Pela:''' But who would have thought... The moment I crossed the gear bridge, it started rotating by itself, leaving me on the other side!
-:'''Pela:''' I tried to control that thing, but the bridge was locked by an emergency brake.
-:'''Pela:''' There was nothing I could do. In a hurry, I called out your name... Fortunately, you heard me. Thank god.
-:{{DIcon}} I suppose you know how to release the brakes?
-::'''Pela:''' To be honest, before looking at the data terminal, I really didn't know it could work this way... The braking system of the bridge in the Silvermane Guard Restricted Zone was modified by Serval, and is much easier to use.
-::'''Pela:''' Anyway, the strange thing is... I tried operating the terminal according to the instructions, and the gear bridge didn't move at all.
-::'''Pela:''' I guess old Balakin somehow modified the instructions himself and purposefully used some outdated instructions as a ruse. If it weren't for you, I would have been stuck here forever. So, I really can't thank you enough.
-:;(Return to previous option selection)
-:{{DIcon}} Why did the gear bridge move on its own?
-::'''Pela:''' I was careless... I didn't notice the pressure pedal on the ground.
-::'''Pela:''' If I had brought Findie, it probably wouldn't have happened... But then you probably wouldn't be able to find the last clue. What a hassle.
-:;(Return to previous option selection)
-:{{DIcon}} Aren't you afraid that your shouting will attract monsters?
-::'''Pela:''' I was aware of this, but there was simply no other way at that time. Lucky for us, they didn't come.
-:;(Return to previous option selection)
-:{{DIcon|Arrow}} Almost left you here alone...
-::'''Pela:''' But you came to help in the end and now all is well. By the way, I also found the "key" Miss Molly talked about. It's here.
-::'''Pela:''' Also, there seems to be a scary monster nearby... I wouldn't be able to deal with it alone, so I have to wait for your help.
-::{{DIcon|Arrow}} Then let's go kick its butt!
-::{{DIcon|Arrow}} Thank God, it's over...
-::'''Pela:''' Hear, hear. My legs are sore... Grab the key and let's go back!
-::'''Pela:''' I'll cover for you. Let's go. Good luck!
+:{{tx}}
 {{Dialogue End}}
 
 ===Defeat the monsters guarding the key{{subst:void|<!--201130309-->}}===
 {{Mission Description|type=adventure|location=Corridor of Fading Echoes|update|After exchanging your findings with each other, you finally understand what happened just now. Fortunately, Pela has confirmed the location of the "key," but there are some fierce monsters lurking around.<br />This is the last challenge. Defeat the monsters and get Molly's treasure back!}}
 {{Dialogue Start}}
+:{{tx}}
 {{Dialogue End}}
 
 ===Get Molly's key{{subst:void|<!--201130310-->}}===
 {{Mission Description|type=adventure|location=Corridor of Fading Echoes|update|What a fierce battle! You successfully defeat the monsters and get the "key." This trip was completely worth it...<br />I know what you want to complain about, but let's keep our heads down and complain as much as you want when you're back at the workshop.}}
 {{Dialogue Start}}
-:'''Pela:''' This piece of drill-shaped jewelry is engraved with the word "Balakin"... It must be the key Miss Molly is looking for.
-:'''Pela:''' Mission accomplished. Let's head back to the workshop. This trip has been so tiring.
-;(Obtain {{Item|Old Photo of Balakin|20|x=1}})
+:{{tx}}
 {{Dialogue End}}
 
 ==Other Languages==

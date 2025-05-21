@@ -40,190 +40,22 @@ PageTitle=#Origami Bird Clash (Adventure Mission)#
 ===Head to the deck of (The Radiant Feldspar/The Trailblaze's Stern/The Tatalov/The Soaring Clock Hand) and talk to Tinah{{subst:void|<!--802310123-->}}===
 {{Mission Description|type=adventure|location=(The Radiant Feldspar/The Trailblaze's Stern/The Tatalov/The Soaring Clock Hand)|You have received an invitation from The Family &mdash; Tinah of the Iris Family invites you to test a match-3 puzzle battle game called "Origami Bird Clash."<br />It doesn't seem like a scam... So, go take a look? There's nothing to lose.}}
 {{Dialogue Start}}
-;(Upon reaching the destination)
-
-;(Upon reaching the destination)
-:{{tx}}
-<pre>{
-	"$type": "RPG.GameCore.SwitchCharacterAnchorV2",
-	"SwitchCharacterAnchorConfig": {
-		"IsLocalPlayer": true,
-		"CharacterUniqueName": "LocalPlayer",
-		"AreaName": {
-			"Value": "LevelArea_P10341_F10341001_G114"
-		},
-		"AnchorName": {
-			"Value": "Anchor1"
-		}
-	}
-}</pre>
-
-;(Obtain {{Item|Trailbirder ID Card|20|x=1}})
-
-;(Talk to Silver Wolf)
-<!--Unknown TalkSentence: 802310011-->
-;(Upon reaching the destination)
-
-;(Upon reaching the destination)
 :{{tx}}
 {{Dialogue End}}
 
 ===Use Unit-01 to playtest the game under Tinah's guidance{{subst:void|<!--802310102-->}}===
 {{Dialogue Start}}
-<pre>{
-	"$type": "RPG.GameCore.AdvDestroyGroupEntity",
-	"InstanceIDList": [
-		400001,
-		400002,
-		400003,
-		400004,
-		400005,
-		400006
-	]
-}</pre>
-;(If {{cx}}{{subst:void|<!--{"$type":"RPG.GameCore.ByCompareMatchThreeBirdLocation","BirdID":300,"LocationID":{"FixedValue":{"Value":1}}}-->}})
-:<pre>{
-	"$type": "RPG.GameCore.AdvCreateGroupEntity",
-	"InstanceIDList": [
-		400001
-	]
-}</pre>
-;(Otherwise, if {{cx}}{{subst:void|<!--{"$type":"RPG.GameCore.ByCompareMatchThreeBirdLocation","BirdID":301,"LocationID":{"FixedValue":{"Value":1}}}-->}})
-:<pre>{
-	"$type": "RPG.GameCore.AdvCreateGroupEntity",
-	"InstanceIDList": [
-		400002
-	]
-}</pre>
-;(Otherwise, if {{cx}}{{subst:void|<!--{"$type":"RPG.GameCore.ByCompareMatchThreeBirdLocation","BirdID":302,"LocationID":{"FixedValue":{"Value":1}}}-->}})
-:<pre>{
-	"$type": "RPG.GameCore.AdvCreateGroupEntity",
-	"InstanceIDList": [
-		400003
-	]
-}</pre>
-;(Otherwise, if {{cx}}{{subst:void|<!--{"$type":"RPG.GameCore.ByCompareMatchThreeBirdLocation","BirdID":303,"LocationID":{"FixedValue":{"Value":1}}}-->}})
-:<pre>{
-	"$type": "RPG.GameCore.AdvCreateGroupEntity",
-	"InstanceIDList": [
-		400004
-	]
-}</pre>
-;(Otherwise, if {{cx}}{{subst:void|<!--{"$type":"RPG.GameCore.ByCompareMatchThreeBirdLocation","BirdID":304,"LocationID":{"FixedValue":{"Value":1}}}-->}})
-:<pre>{
-	"$type": "RPG.GameCore.AdvCreateGroupEntity",
-	"InstanceIDList": [
-		400005
-	]
-}</pre>
-;(Otherwise, if {{cx}}{{subst:void|<!--{"$type":"RPG.GameCore.ByCompareMatchThreeBirdLocation","BirdID":305,"LocationID":{"FixedValue":{"Value":1}}}-->}})
-:<pre>{
-	"$type": "RPG.GameCore.AdvCreateGroupEntity",
-	"InstanceIDList": [
-		400006
-	]
-}</pre>
-;(If {{cx}}{{subst:void|<!--{"$type":"RPG.GameCore.ByCompareMatchThreeBirdLocation","BirdID":300,"LocationID":{"FixedValue":{"Value":1}}}-->}})
-<pre>{
-	"$type": "RPG.GameCore.AdvCreateGroupEntity",
-	"InstanceIDList": [
-		400001
-	]
-}</pre>
-;(Unused &mdash; G186_Create400001)
-<pre>{
-	"$type": "RPG.GameCore.AdvCreateGroupEntity",
-	"InstanceIDList": [
-		400001
-	]
-}</pre>
+:{{tx}}
 {{Dialogue End}}
 
 ===Speak with Tinah and confirm the content of the subsequent test{{subst:void|<!--802310103-->}}===
 {{Dialogue Start}}
-;(Upon reaching the destination)
-
-;(Upon reaching the destination)
-:<!--0.5-second delay-->
-:'''Tinah:''' Great! You've mastered the basics. You can now use Unit-01's built-in map to find more arcade machines and unlock more gameplay and features!
-:'''Tinah:''' If you have any doubts or feedback while playing, please approach me anytime. Your support is what motivates us to do better.
-:'''Tinah:''' With that, I wish you an enjoyable gaming session!
-:'''(Trailblazer):''' Phew, finally...
-:'''Silver Wolf:''' She's finally gone. This tutorial kind of sucks...
-:{{DIcon|Arrow}} ...Silver Wolf?
-::'''Silver Wolf:''' Yo! I haven't seen you in a while. Missed me?
-::What are you doing here?
-:{{DIcon|Arrow}} What are you doing here?
-:'''Silver Wolf:''' Take a guess? I'll tell you if you get it right.
-:'''Silver Wolf:''' Not bad! Glad to see you've still got your wits about you. Don't worry, my hologram is encrypted. You're the only one who can see it right now.
-:'''Silver Wolf:''' Well? Don't you have anything to say after seeing me pop up in front of you so suddenly?
-:{{DIcon|Arrow}} When did you hack your way in?
-::'''Silver Wolf:''' Take a guess. I'll tell you if you get it right.
-::{{DIcon|Arrow}} ...
-::{{DIcon|Arrow}} Take a guess if I'm gonna take a guess?
-::'''Silver Wolf:''' Meh, I'll stop teasing. Remember the cheat code for the hidden map I gave you some time back? To ensure that everyone from the Astral Express can clear the stages, I've specially added a small Easter egg inside.
-::You've been spying on me?
-::'''Silver Wolf:''' Huh? Do you think I've got nothing better to do? If I had the time for that, I'd spend it playing with a virtual pet.
-::'''Silver Wolf:''' Remember the cheat code for the hidden map I gave you some time back? To ensure that everyone from the Astral Express can clear the stages, I've specially added a small Easter egg within.
-::You must think of me all the time.
-:{{DIcon|Arrow}} You've been spying on me?
-::'''Silver Wolf:''' Huh? Do you think I've got nothing better to do? If I had the time for that, I'd spend it playing with a virtual pet.
-::'''Silver Wolf:''' Remember the cheat code for the hidden map I gave you some time back? To ensure that everyone from the Astral Express can clear the stages, I've specially added a small Easter egg within.
-::You must think of me all the time.
-:{{DIcon|Arrow}} You must think of me all the time.
-:'''Silver Wolf:''' ...Has your brain been infected with a virus? Me, think of you all the time? Don't kid yourself. It's not like you're my Interastral Network account.
-:'''Silver Wolf:''' I'll just get to the point. Remember the cheat code for the hidden map I gave you some time back? To ensure that everyone from the Astral Express can clear the stages, I've specially added a small Easter egg within.
-:'''Silver Wolf:''' Surprise! Didn't see that coming, did you?
-:{{DIcon|Arrow}} What did you do?
-:'''Silver Wolf:''' Hey now, don't get your hackles up. If I were up to no good, I wouldn't have waited until now to do it, nor would I be appearing before you now.
-:'''Silver Wolf:''' Relax, that thing only works in dreams. Besides, its shelf life will be over soon.
-:'''Silver Wolf:''' Can we now move on to more important matters?
-:'''Silver Wolf:''' I'm here for a very simple reason: The Origami Bird Clash game you're testing.
-:'''Silver Wolf:''' Although the game is terribly boring and kind of mindless, the people behind it aren't simple.
-:'''Silver Wolf:''' I'm sure you're aware that those guys in the IPC made use of the Charmony Festival to hook up with The Family. But I bet you didn't know that this game is The Family's way of testing the waters and a show of goodwill to the IPC.
-:'''Silver Wolf:''' The Alfalfa Family invests in the game, the Iris Family develops it, and the IPC manages it. An intriguing combo, don't you think? It's only natural for me to be curious, no?
-:{{DIcon|Arrow}} ...Certainly makes sense.
-:{{DIcon|Arrow}} Now that you mention it, I'm starting to get a little curious too.
-:'''Silver Wolf:''' Well, since you've agreed to it, let me use your ID for a while. Just place it over there and&mdash;
-:{{DIcon|Arrow}} ...What did I agree to?
-:{{DIcon|Arrow}} What do you need my ID for?
-:'''Silver Wolf:''' To play the game with me, of course. I'll copy the data from your account first...
 :{{tx}}
 {{Dialogue End}}
 
 ===Open the map that comes with the arcade machine and obtain information about the first arcade machine{{subst:void|<!--802310104-->}}===
 {{Dialogue Start}}
-
-<pre>{
-	"$type": "RPG.GameCore.AdvSetupButtonListTrigger",
-	"TargetType": {
-		"$type": "RPG.GameCore.GroupFetchLocalTarget",
-		"TargetType": "Prop",
-		"Targets": [
-			300002
-		]
-	},
-	"TriggerName": "MissionTrigger",
-	"ButtonsByName": [],
-	"ButtonConfigs": [
-		{
-			"ID": "PlayButton",
-			"IconType": "GeneralActivityIcon",
-			"ButtonText": {
-				"Value": "TalkSentenceName_GameConsole"
-			}
-		},
-		{
-			"ID": "DIYButton",
-			"ButtonText": {
-				"Value": "TalkSentenceName_DIYPanel"
-			}
-		}
-	]
-}</pre>
-
-;(Talk to Silver Wolf)
-:'''Silver Wolf:''' Got it &mdash; Let's see, hmm... "Find clues according to the map in the arcade machine"... (Trailblazer), what are you waiting for? Hurry up and launch Unit-01!
+:{{tx}}
 {{Dialogue End}}
 
 ==Other Languages==

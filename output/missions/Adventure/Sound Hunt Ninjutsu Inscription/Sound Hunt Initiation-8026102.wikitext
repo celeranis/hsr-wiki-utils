@@ -11,7 +11,7 @@ PageTitle=#Sound Hunt: Initiation#
 |chapter       = Sound Hunt Ninjutsu Inscription
 |requirements  = [[Adventure Mission]] ''[[Sound Hunt: Prologue]]'' completed
 |summary       = Following a successful conclusion to the first show, the audience's enthusiasm for the band is soaring. Take a short break and prepare for the second show!
-|characters    = Trailblazer
+|characters    = Arfey; Audience; Band Members; Calm Spectator; Charmony Academy Rep; Czipo; Dafanchy; Dreamweaver Academy Rep; Enraged Spectator; Excited Spectator; Fortune Academy Rep; Joyful Audience; Montana; Mr. Reca; Nervous Band Member; Quiet Band Member; Rappa; Trailblazer; Trendy Band Member
 |startLocation = [[Penacony]] - [[Penacony Paperfold University College]]
 |world         = Penacony
 |area          = Penacony Paperfold University College
@@ -22,13 +22,14 @@ PageTitle=#Sound Hunt: Initiation#
 '''''Sound Hunt: Initiation''''' is an Event [[Adventure Mission]] from the [[Sound Hunt Ninjutsu Inscription]] event.
 
 ==Steps==
-# Help Rappa collect inspiration for composing a song
-# Go check out the stage with Rappa
-# Prepare to take the stage
-# Wait for the performance to finish
 # Head to the rehearsal room and meet your band members
 # Go check out the stage with Rappa
+# Help Rappa collect inspiration for composing a song
+# Return to the rehearsal room
+# Chat with band members and wait for Rappa to finish composing songs
 # Prepare to take the stage
+# Ask the live audience for their reviews of the band's performance
+# Wait for the performance to finish
 
 <!--
 ==Gameplay Notes==
@@ -39,147 +40,54 @@ PageTitle=#Sound Hunt: Initiation#
 -->
 ==Dialogue==
 {{Stub Dialogue}}
-===Help Rappa collect inspiration for composing a song{{subst:void|<!--802610204-->}}===
-{{Mission Description|type=adventure|location=Penacony Paperfold University College|You've become the manager of the music party's performing band, and now your band needs to complete 3 performances on the stage in the middle of the campus.<br />The band can only perform original works, and Rappa took over all the work involving composition. You need to collect enough inspiration to help her with composing.}}
-{{Dialogue Start}}
-
-;(Talk to Montana)
-
-
-;(Unused &mdash; OpenUI_MusicRhythm)
-<pre>{
-	"$type": "RPG.GameCore.ShowTransitionLoadingUI",
-	"Name": "Ui.MusicRhythm.MusicRhythmTransitionDialog"
-}</pre>
-:<pre>{
-	"$type": "RPG.GameCore.ShowUI",
-	"Name": "Ui.MusicRhythm.MusicRhythmMainEntrancePage",
-	"WaitForExit": true,
-	"OnUIEnter": [
-		{
-			"$type": "RPG.GameCore.ExitTransitionLoadingUI"
-		},
-		{
-			"$type": "RPG.GameCore.SetLocalPlayerDitherAlpha"
-		},
-		{
-			"$type": "RPG.GameCore.LockPlayerControl"
-		}
-	],
-	"OnUIExitImmediately": [
-		{
-			"$type": "RPG.GameCore.SetLocalPlayerDitherAlpha",
-			"DitherAlpha": 1
-		},
-		{
-			"$type": "RPG.GameCore.UnLockPlayerControl"
-		}
-	]
-}</pre>
-
-;(Unused &mdash; OpenUI_1)
-<pre>{
-	"$type": "RPG.GameCore.ShowUI",
-	"Name": "Ui.MusicRhythm.Composition.MusicRhythmCompositionPresetPage",
-	"WaitForExit": true,
-	"Param": {
-		"Value": "1"
-	},
-	"OnUIExitImmediately": [
-		{
-			"$type": "RPG.GameCore.EndDialogueEntityInteract"
-		}
-	]
-}</pre>
-
-;(Unused &mdash; OpenUI_2)
-<pre>{
-	"$type": "RPG.GameCore.ShowUI",
-	"Name": "Ui.MusicRhythm.Composition.MusicRhythmCompositionPresetPage",
-	"WaitForExit": true,
-	"Param": {
-		"Value": "2"
-	},
-	"OnUIExitImmediately": [
-		{
-			"$type": "RPG.GameCore.EndDialogueEntityInteract"
-		}
-	]
-}</pre>
-
-;(Unused &mdash; OpenUI_3)
-<pre>{
-	"$type": "RPG.GameCore.ShowUI",
-	"Name": "Ui.MusicRhythm.Composition.MusicRhythmCompositionPresetPage",
-	"WaitForExit": true,
-	"Param": {
-		"Value": "3"
-	},
-	"OnUIExitImmediately": [
-		{
-			"$type": "RPG.GameCore.EndDialogueEntityInteract"
-		}
-	]
-}</pre>
-{{Dialogue End}}
-
-===Go check out the stage with Rappa{{subst:void|<!--802610224-->}}===
-{{Mission Description|type=adventure|location=Penacony Paperfold University College|update|You've become the manager of the music party's performing band, and now your band needs to complete 3 performances on the stage in the middle of the campus.<br />The band has been created. Go check out the stage with Rappa.}}
-{{Dialogue Start}}
-{{Dialogue End}}
-
-===Prepare to take the stage{{subst:void|<!--802610216-->}}===
-{{Mission Description|type=adventure|location=Penacony Paperfold University College|update|You've become the manager of the music party's performing band, and now your band needs to complete 3 performances on the stage in the middle of the campus.<br />All is ready. It's time to head to the battlefield!}}
-{{Dialogue Start}}
-
-;(Talk to Montana)
-----
-<pre>{
-	"$type": "RPG.GameCore.PerformanceEndSeq",
-	"Cases": [
-		{
-			"Case": 1,
-			"OnSuccess": [
-				{
-					"$type": "RPG.GameCore.TriggerGroupEventOnDialogEnd",
-					"EventName": {
-						"Value": "OpenUI_1"
-					}
-				}
-			]
-		}
-	]
-}</pre>
-{{Dialogue End}}
-
-===Wait for the performance to finish{{subst:void|<!--802610223-->}}===
-{{Mission Description|type=adventure|location=Penacony Paperfold University College|update|You've become the manager of the music party's performing band, and now your band needs to complete 3 performances on the stage in the middle of the campus.<br />The audience gave a high score to the performance! You can finally relax and watch the show...}}
-{{Dialogue Start}}
-
 {{Dialogue End}}
 
 ===Head to the rehearsal room and meet your band members{{subst:void|<!--802610202-->}}===
 {{Mission Description|type=adventure|location=Penacony Paperfold University College|update|You've become the manager of the music party's performing band, and now your band needs to complete 3 performances on the stage in the middle of the campus.<br />Hurry to the rehearsal room and greet your band members!}}
 {{Dialogue Start}}
-
-;(Talk to Montana)
-
+:{{tx}}
 {{Dialogue End}}
 
 ===Go check out the stage with Rappa{{subst:void|<!--802610203-->}}===
 {{Mission Description|type=adventure|location=Penacony Paperfold University College|update|You've become the manager of the music party's performing band, and now your band needs to complete 3 performances on the stage in the middle of the campus.<br />The band has been created. Go check out the stage with Rappa.}}
 {{Dialogue Start}}
-
-;(Talk to Montana)
-
+:{{tx}}
 {{Dialogue End}}
 
-===Prepare to take the stage{{subst:void|<!--802610227-->}}===
+===Help Rappa collect inspiration for composing a song{{subst:void|<!--802610204-->}}===
+{{Mission Description|type=adventure|location=Penacony Paperfold University College|update|You've become the manager of the music party's performing band, and now your band needs to complete 3 performances on the stage in the middle of the campus.<br />The band can only perform original works, and Rappa took over all the work involving composition. You need to collect enough inspiration to help her with composing.}}
+{{Dialogue Start}}
+:{{tx}}
+{{Dialogue End}}
+
+===Return to the rehearsal room{{subst:void|<!--802610205-->}}===
+{{Mission Description|type=adventure|location=Penacony Paperfold University College|update|You've become the manager of the music party's performing band, and now your band needs to complete 3 performances on the stage in the middle of the campus.<br />The inspiration required for composing music has all been collected. Go back and see how the rehearsal is going.}}
+{{Dialogue Start}}
+:{{tx}}
+{{Dialogue End}}
+
+===Chat with band members and wait for Rappa to finish composing songs{{subst:void|<!--802610207-->}}===
+{{Mission Description|type=adventure|location=Penacony Paperfold University College|update|You've become the manager of the music party's performing band, and now your band needs to complete 3 performances on the stage in the middle of the campus.<br />Rappa is immersed in composing music. Use this time to chat with the other band members.}}
+{{Dialogue Start}}
+:{{tx}}
+{{Dialogue End}}
+
+===Prepare to take the stage{{subst:void|<!--802610214-->}}===
 {{Mission Description|type=adventure|location=Penacony Paperfold University College|update|You've become the manager of the music party's performing band, and now your band needs to complete 3 performances on the stage in the middle of the campus.<br />All is ready. It's time to head to the battlefield!}}
 {{Dialogue Start}}
+:{{tx}}
+{{Dialogue End}}
 
-;(Talk to Montana)
+===Ask the live audience for their reviews of the band's performance{{subst:void|<!--802610218-->}}===
+{{Mission Description|type=adventure|location=Penacony Paperfold University College|update|You've become the manager of the music party's performing band, and now your band needs to complete 3 performances on the stage in the middle of the campus.<br />The first performance is happening. Ask the live audience about their reviews of the band's performance.}}
+{{Dialogue Start}}
+:{{tx}}
+{{Dialogue End}}
 
+===Wait for the performance to finish{{subst:void|<!--802610223-->}}===
+{{Mission Description|type=adventure|location=Penacony Paperfold University College|update|You've become the manager of the music party's performing band, and now your band needs to complete 3 performances on the stage in the middle of the campus.<br />The audience gave a high score to the performance! You can finally relax and watch the show...}}
+{{Dialogue Start}}
+:{{tx}}
 {{Dialogue End}}
 
 ==Other Languages==

@@ -42,253 +42,37 @@ PageTitle=#Back in Business (II)#
 ===Speak with Mr. Xiao at Artistry Hardware{{subst:void|<!--800320601-->}}===
 {{Mission Description|type=adventure|location=Aurum Alley|Yukong told you that you need to "reassemble" the merchant guild's representatives. If you can convince Mr. Xiao, you'll win the support of many business owners.<br />Mr. Xiao is the owner of Artistry Hardware. Head there and speak with him.}}
 {{Dialogue Start}}
-<pre>{
-	"$type": "RPG.GameCore.PlayMessage",
-	"MessageSectionID": 1215701
-}</pre>
-<pre>{
-	"$type": "RPG.GameCore.SaveMessage",
-	"MessageSectionID": 1215701
-}</pre>
+:{{tx}}
 {{Dialogue End}}
 
 ===Leave Artistry Hardware and plan your next step{{subst:void|<!--800320606-->}}===
 {{Mission Description|type=adventure|location=Aurum Alley|update|Mr. Xiao is steadfast in his decision. Inquiring further might just lead nowhere.<br />You can leave first and make new plans after.}}
 {{Dialogue Start}}
-;(Upon reaching the destination)
-
-;(Upon reaching the destination)
-<pre>{
-	"$type": "RPG.GameCore.BlockInputController",
-	"Enable": true,
-	"ActionNameList": []
-}</pre>
-:{{A|VO side2 jrx xiaohan 115.ogg}} '''Xiaohan:''' Wait &mdash; please wait a moment.
-<pre>{
-	"$type": "RPG.GameCore.WaitMissionTalkFinish"
-}</pre>
-<pre>{
-	"$type": "RPG.GameCore.BlockInputController",
-	"ActionNameList": []
-}</pre>
+:{{tx}}
 {{Dialogue End}}
 
 ===Speak with Mr. Xiao at Artistry Hardware{{subst:void|<!--800320603-->}}===
 {{Mission Description|type=adventure|location=Aurum Alley|update|Yukong told you that you need to "reassemble" the merchant guild's representatives. If you can convince Mr. Xiao, you'll win the support of many business owners.<br />Mr. Xiao is the owner of Artistry Hardware. Head there and speak with him.}}
 {{Dialogue Start}}
-----
-----
-:{{A|VO side2 jrx xiaohan 116.ogg}} '''Xiaohan:''' It sounded like my father was being a little difficult... I'm Xiaohan &mdash; people around here call me Little Master.
-:{{A|VO side2 jrx xiaohan 117.ogg}} '''Xiaohan:''' If I'm not mistaken, you're the ones who made Representative Skott apologize in public?
-:{{DIcon|Arrow}} Our fame precedes us...
-::<!--0.8-second delay-->
-::{{A|VO side2 jrx xiaohan 118.ogg}} '''Xiaohan:''' You stood up for Aurum Alley with reason and integrity &mdash; I'm thankful to you.
-:{{DIcon|Arrow}} Why would someone call themselves Little Master?
-::<!--0.8-second delay-->
-::{{A|VO side2 jrx xiaohan 119.ogg}} '''Xiaohan:''' Oh, hehe, I didn't give myself that name &mdash; it's what my friends have always called me. I only recently returned to the Xianzhou after many years away, but it seems like the name stuck!
-:{{A|VO side2 jrx xiaohan 120.ogg}} '''Xiaohan:''' May I ask why you wanted to speak with my father?
-:{{A|VO side2 jrx mingxi 200.ogg}} '''Mingxi:''' We need the support of the merchants for the dock, and we wanted to see if your father could join us...
-:{{A|VO side2 jrx xiaohan 121.ogg}} '''Xiaohan:''' Hadn't my father already refused?
-:{{A|VO side2 jrx mingxi 201.ogg}} '''Mingxi:''' We heard that Mr. Xiao proposed to "reorganize" the Merchant Guild, and we wanted to ask why.
-:{{A|VO side2 jrx xiaohan 122.ogg}} '''Xiaohan:''' I see... I'll help you figure something out.
-:{{A|VO side2 jrx sushang 193.ogg}} '''Sushang:''' Great! Uh... your father is a very tough nut to crack.
-:{{A|VO side2 jrx xiaohan 123.ogg}} '''Xiaohan:''' The older generation of craftsmen can be rather set in their ways... Here, how about this &mdash; why not join my father's shop as apprentices?
-:{{A|VO side2 jrx xiaohan 124.ogg}} '''Xiaohan:''' My father is stern on the surface, but if he sees a capable apprentice and a sincere heart, he'll change his attitude.
-:{{DIcon|Arrow}} What if he refuses?
-::<!--0.8-second delay-->
-::{{A|VO side2 jrx xiaohan 125.ogg}} '''Xiaohan:''' Well, it's better to beg forgiveness than ask permission. Let's just start you out and see what he says.
-:{{DIcon|Arrow}} Things might just fall into place if we try hard enough.
-::<!--0.8-second delay-->
-::{{A|VO side2 jrx xiaohan 126.ogg}} '''Xiaohan:''' A sincere heart always has the power to impress people.
-:{{DIcon|Arrow}} You aren't tricking us into doing free work, are you?
-::<!--0.8-second delay-->
-::{{A|VO side2 jrx xiaohan 127.ogg}} '''Xiaohan:''' I truly want to help you &mdash; and you'll receive compensation for your work.
-:{{A|VO side2 jrx xiaohan 128.ogg}} '''Xiaohan:''' So it's decided? Let's get moving then. Time to make you apprentices.
-----
+:{{tx}}
 {{Dialogue End}}
 
 ===Fix the broken cycrane as an apprentice{{subst:void|<!--800320604-->}}===
 {{Mission Description|type=adventure|location=Aurum Alley|update|Xiaohan recommended that you pose as an apprentice to get close to Mr. Xiao. Most of these craftsmen are harsh of words but soft of heart. Maybe after you wear them down, the talks will get smoother as well.<br />But this method rests entirely on the foundations of you providing free labor. You should get a cycrane fixed first. If you keep trying to repair it, the whole thing might seem a bit rude.}}
 {{Dialogue Start}}
-
-----
-----
-:{{A|VO side2 jrx xlaoda 110.ogg}} '''Mr. Xiao:''' Hmm... not bad.
-:{{DIcon|Arrow}} Anything else I can help you with?
-:{{DIcon|Arrow}} Are we friends now? Wanna have a chat?
-:{{A|VO side2 jrx xlaoda 111.ogg}} '''Mr. Xiao:''' ...No.
-:{{A|VO side2 jrx xiaohan 133.ogg}} '''Xiaohan:''' *sigh* He's hard to impress. I'll find you some more work.
-:{{A|VO side2 jrx xlaoda 112.ogg}} '''Mr. Xiao:''' Ugh... what did I do to deserve this?
-:{{A|VO side2 jrx xiaohan 134.ogg}} '''Xiaohan:''' Just a reminder, Father &mdash; fair work for fair pay.
-:{{A|VO side2 jrx xiaohan 135 m.ogg}} {{A|VO side2 jrx xiaohan 135 f.ogg}} '''Xiaohan:''' Over here, (Trailblazer)! See what you can do with this jade abacus.
-:{{A|VO side2 jrx xiaohan 136.ogg}} '''Xiaohan:''' Don't just stand there, Father! Go teach your apprentice a thing or two.
-:{{A|VO side2 jrx xlaoda 113.ogg}} '''Mr. Xiao:''' Fine, I give in! I know why you're here. Just... please stop tinkering with my customers' items.
-:{{DIcon|Arrow}} We convinced him!
-::{{A|VO side2 jrx sushang 194.ogg}} '''Sushang:''' I think we just made him surrender...
-:{{DIcon|Arrow}} Sorry if I made a mess of your workbench.
-::{{A|VO side2 jrx xlaoda 114.ogg}} '''Mr. Xiao:''' It's fine, just leave it as it is.
-:{{A|VO side2 jrx xlaoda 115.ogg}} '''Mr. Xiao:''' *sigh* Ask what you wanted to ask.
-:{{DIcon|Talk}} You and the president &mdash; you know each other well?
-::{{A|VO side2 jrx xlaoda 116.ogg}} '''Mr. Xiao:''' Yes, he's an old friend.
-:;(Return to previous option selection)
-:{{DIcon|Talk}} You seem to be on the side of the IPC?
-::{{A|VO side2 jrx xlaoda 117.ogg}} '''Mr. Xiao:''' I see a lot of potential in the Corporation's plan... but a certain old friend of mine lives in the past. Whatever vision he has &mdash; it won't come true.
-:;(Return to previous option selection)
-:{{DIcon|Arrow}} What's your issue with the Merchant Guild?
-::{{A|VO side2 jrx xlaoda 118.ogg}} '''Mr. Xiao:''' Issue? It's less about issues, and more about stubbornness.
-::{{A|VO side2 jrx xlaoda 119.ogg}} '''Mr. Xiao:''' We walk a single path, do the same things, and talk to the same people for centuries... A mind can become insensitive to change.
-::{{A|VO side2 jrx xlaoda 120.ogg}} '''Mr. Xiao:''' However, compared to the president, my stubbornness is nothing. Back in his day, Aurum Alley was teeming with shuttling starskiffs and commercial aurumatons.
-::{{A|VO side2 jrx xlaoda 121.ogg}} '''Mr. Xiao:''' But then the Luofu departed again on the Path of The Hunt. Our business partners couldn't follow, so they stopped trading with us.
-::{{DIcon|Arrow}} You want to restore the Alley to its former glory?
-:::<!--0.8-second delay-->
-:::{{A|VO side2 jrx xlaoda 122.ogg}} '''Mr. Xiao:''' The president does &mdash; he wants to bring the old times back. Shop owners like me know that's impossible.
-:::{{A|VO side2 jrx xlaoda 123.ogg}} '''Mr. Xiao:''' Therefore, I stand behind the IPC's plan. Aurum Alley will inevitably be replaced.
-::{{DIcon|Arrow}} Is that why the president is against the IPC?
-:::<!--0.8-second delay-->
-:::{{A|VO side2 jrx mingxi 202.ogg}} '''Mingxi:''' He always says the Alley deserves another chance.
-:::{{A|VO side2 jrx xlaoda 124.ogg}} '''Mr. Xiao:''' Indeed, which is why he won't let it go. He wants to see the streets teeming with tourists, not IPC cargo.
-:::{{A|VO side2 jrx xlaoda 125.ogg}} '''Mr. Xiao:''' But times have changed &mdash; we can't sail against the current. That's why I stand behind the IPC's plan &mdash; Aurum Alley will inevitably be replaced.
-::{{A|VO side2 jrx sushang 195.ogg}} '''Sushang:''' But is your shop part of the future that the IPC promised?
-::{{A|VO side2 jrx xlaoda 126.ogg}} '''Mr. Xiao:''' ...Hard to say. Chances are I'll have to sell it.
-::{{A|VO side2 jrx xlaoda 127.ogg}} '''Mr. Xiao:''' Not the easiest decision to make, but I won't regret it. The good days are behind us &mdash; we must accept that short-life species will repurpose our lands, and that night markets are destined to become shipping docks...
-::{{A|VO side2 jrx xlaoda 128.ogg}} '''Mr. Xiao:''' ...We must come to terms with the fact that short-life ambitions will reshape a world where things were thought to last forever...
-::{{A|VO side2 jrx sushang 196.ogg}} '''Sushang:''' Mr. Xiao, why not try working with us? Mingxi is pushing for reforms within the guild. We're nothing like the president.
-::{{A|VO side2 jrx xlaoda 129.ogg}} '''Mr. Xiao:''' Reforms?
-::{{A|VO side2 jrx xiaohan 137.ogg}} '''Xiaohan:''' They made a lot of good points when arguing with the IPC at the dock. I do see possibilities for the guild to change.
-::{{DIcon|Arrow}} You don't have to choose between the president and the IPC.
-::{{DIcon|Arrow}} Join us and profit!
-::<!--0.8-second delay-->
-::{{A|VO side2 jrx xlaoda 130.ogg}} '''Mr. Xiao:''' Given the state of the guild, my money is on the IPC winning...
-::{{A|VO side2 jrx xlaoda 131.ogg}} '''Mr. Xiao:''' ...but since I've accepted the worst-case scenario &mdash; Aurum Alley ceasing to exist &mdash; I can't see why it hurts to endorse your idea... and see how far it takes us.
-::{{A|VO side2 jrx mingxi 203.ogg}} '''Mingxi:''' Thank you! Now that you have joined our revival project, I'm sure many others will follow suit.
-::{{A|VO side2 jrx xlaoda 132.ogg}} '''Mr. Xiao:''' Mm... That's settled then. I'm curious to see what comes of your plan.
-::----
+:{{tx}}
 {{Dialogue End}}
 
 ===Ask Mr. Xiao for guidance as an apprentice{{subst:void|<!--800320607-->}}===
 {{Mission Description|type=adventure|location=Aurum Alley|update|Xiaohan recommended that you pose as an apprentice to get close to Mr. Xiao. Most of these craftsmen are harsh of words but soft of heart. Maybe after you wear them down, the talks will get smoother as well.<br />You have already done what a good apprentice is supposed to do. Next, it's time for the old teacher to speak.}}
 {{Dialogue Start}}
+:{{tx}}
 {{Dialogue End}}
 
 ===Complete the logistics planning and speak with Mingxi{{subst:void|<!--800320608-->}}===
 {{Mission Description|type=adventure|location=Aurum Alley|update|Mr. Xiao is fed up with Aurum Alley's stagnancy and forced himself to believe that the IPC would provide a better future. However, now he has a new choice in the form of the "Aurum Alley Revival Project."<br />Mr. Xiao has agreed to establish business relations with the docks, and the merchant guild should also offer something back by including Artistry Hardware into their plans.}}
 {{Dialogue Start}}
-
-;(Talk to Mingxi)
-----
-:{{A|VO side2 jrx mingxi 204.ogg}} '''Mingxi:''' Now that Mr. Xiao is on board, his shop can be part of the logistics network we've been working on.
-:{{DIcon|Arrow}} Let's get the planning started.
-:{{DIcon|Arrow}} I love planning stuff. I wanna do it now!
-:{{Black Screen|undefined}}
-<pre>{
-	"$type": "RPG.GameCore.CreateLevelAreas",
-	"AssetPath": {
-		"Value": "Level/Common_Adventure/Alley_TopView.prefab"
-	}
-}</pre>
-<pre>{
-	"$type": "RPG.GameCore.TriggerSound",
-	"SoundName": {
-		"Value": "Ev_sfx_ui_menu_activity_alley_transportPage_fadeIn_long"
-	},
-	"EmitterType": "DefaultEmitter"
-}</pre>
-<pre>{
-	"$type": "RPG.GameCore.BlockInputController",
-	"Enable": true,
-	"ActionNameList": []
-}</pre>
-<pre>{
-	"$type": "RPG.GameCore.RadialBlurEffect",
-	"BlurStart": 0.25
-}</pre>
-<pre>{
-	"$type": "RPG.GameCore.SpeedLineEffect",
-	"Speed": 0.8,
-	"Divide": 0.6,
-	"Start": 0.4,
-	"Brightness": 0.2,
-	"Density": 0.4,
-	"SpeedlineSeedPath": "Effects/Eff_Texture/Special/Noise/Eff_Noise_35.tga"
-}</pre>
-<pre>{
-	"$type": "RPG.GameCore.RadialBlurEffect",
-	"Active": false,
-	"BlurStart": 0.25
-}</pre>
-<pre>{
-	"$type": "RPG.GameCore.SpeedLineEffect",
-	"Active": false,
-	"Speed": 0.8,
-	"Divide": 0.6,
-	"Start": 0.4,
-	"Brightness": 0.2,
-	"Density": 0.4,
-	"SpeedlineSeedPath": "Effects/Eff_Texture/Special/Noise/Eff_Noise_35.tga"
-}</pre>
-<pre>{
-	"$type": "RPG.GameCore.ActiveVirtualCamera",
-	"AreaName": "Alley_TopView",
-	"AnchorName": "TopCam",
-	"FollowTargetUniqueName": "LocalPlayer",
-	"FollowTargetAttachPoint": "CameraRoot",
-	"LookAtTargetUniqueName": "LocalPlayer",
-	"LookAtTargetAttachPoint": "CameraRoot",
-	"WaitBlendFinish": true,
-	"BlendConfig": {
-		"ExportToJson": true,
-		"BlendType": "EaseInOut",
-		"BlendTime": 2
-	},
-	"DynamicParams": {
-		"OrbitalTransposerBias": true
-	}
-}</pre>
-----
-:{{A|VO side2 jrx mingxi 205.ogg}} '''Mingxi:''' I'll head back to the dock for now. Thanks for all the hard work by the way &mdash; hope things work out just as smoothly down the line.
-:{{Black Screen|The merchant guild has established a promotional plan for Artistry Hardware, and hence did its fame begin to grow.}}
-
-;(Talk to Mr. Xiao)
-;(If {{cx}}<!--during performance 502067101-->)
-::'''Mr. Xiao:''' ...Need something fixed? We guarantee that your ingenium will be good as new.
-::'''Mr. Xiao:''' Of course, if it's outworlder technology, it'll depend on the world...
-::{{DIcon|Arrow}} I didn't come to fix anything.
-:::'''Mr. Xiao:''' But I only fix things, dear customer.
-::{{DIcon|Arrow}} Can you fix my broken heart?
-:::'''Mr. Xiao:''' I'm not good at riddles, dear customer.
-::'''Mr. Xiao:''' If you're not here to fix your ingenium marionette, then I'll get back to work.
-::{{DIcon|Arrow}} You didn't even look at me.
-::{{DIcon|Arrow}} Are all craftsmen so dedicated to their work?
-::'''Mr. Xiao:''' ...I'm not good at small talk, dear customer. What can I do for you?
-::{{DIcon|Arrow}} Just a casual chat.
-:::'''Mr. Xiao:''' Then please allow me to refuse.
-:::'''Mr. Xiao:''' By the way, take this. A gift for you.
-::{{DIcon|Exit}} I have nothing else.
-:::'''Mr. Xiao:''' See you.
-;(If {{cx}}<!--not during performance 502067101-->)
-::'''Mr. Xiao:''' ...I'm not good at small talk, dear customer. What can I do for you?
-:<pre>{
-	"$type": "RPG.GameCore.ShowMenu"
-}</pre>
-----
-<pre>{
-	"$type": "RPG.GameCore.CharacterTriggerAnimState",
-	"CharacterUniqueName": {
-		"Value": "Bird"
-	},
-	"AnimStateName": "FlyBack",
-	"NormalizedTransitionDuration": 0.25
-}</pre>
-:<!--6-second delay-->
-----
-<pre>{
-	"$type": "RPG.GameCore.PlayMessage",
-	"MessageSectionID": 1215801
-}</pre>
-<pre>{
-	"$type": "RPG.GameCore.SaveMessage",
-	"MessageSectionID": 1215801
-}</pre>
+:{{tx}}
 {{Dialogue End}}
 
 ==Other Languages==

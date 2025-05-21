@@ -34,58 +34,6 @@ PageTitle=##
 ==Dialogue==
 {{Stub Dialogue}}
 
-
-;(Unused &mdash; EnterDistrict_G121)
-:You see a person and a trashcan standing on the platform in front of the orphanage, laughing and talking as they stare into the distance.
-::'''Bronya:''' (Trailblazer), it's been a while! Please say hello to the Express Crew for me when you see them.
-::'''Bronya:''' Mr. Litter Pony has explained the situation to me. Fortunately, it seems there is a solution to all these recent strange happenings. Looks like we're counting on you once more.
-::{{DIcon|Arrow}} Piece of cake.
-:::'''Bronya:''' I'd like to thank you for all your effort too, Mr. Pony... Thank you for thinking of Belobog's safety.
-:::I'm being forced to do this.
-::{{DIcon|Arrow}} I'm being forced to do this.
-::'''Bronya:''' But the fact that you have chosen to be here now proves that you are still willing to help Belobog resolve this problem, wouldn't you agree?
-::'''Litter Pony:''' My friend, it is okay to take credit for good deeds! Just admit that you are the kind of person that is extremely concerned for others!
-::'''Bronya:''' When you mentioned the Magic of Friendship, so many memories came flooding back to me. Before I knew it, I had been talking non-stop for ages with Mr. Pony. Sorry for getting carried away and rambling.
-::'''Litter Pony:''' I was honored that you would share all this with me... This elegant young lady has made a new, like-minded friend and has been able to reunite with an old one, too.
-::'''Bronya:''' Every experience is truly a Proof of Friendship that should be treasured. I have learned a lot through meeting all of you.
-::{{DIcon|Arrow}} Like how to unite our efforts with our hearts aligned.
-:::Bronya laughs softly and begins to reminisce about how your hearts were aligned and your efforts were united on your journey to save Belobog together...
-:::With a bright flash of light, Litter Pony obtains Bronya's Magic of Friendship.
-:::Like how to swear in foul language.
-::{{DIcon|Arrow}} Like how to swear in foul language.
-::Bronya laughs softly and begins to talk about Seele's tireless efforts to teach her "foul language"...
-::With a bright flash of light, Litter Pony obtains Bronya's Magic of Friendship.
-::'''Bronya:''' This picture on Mr. Litter Pony's body... is that me?
-::'''Litter Pony:''' That's right. I will also inherit part of your combat style.
-::'''Litter Pony:''' (Trailblazer), are you ready?
-::{{DIcon|Arrow}} (Enter Battle)
-:<pre>{
-	"$type": "RPG.GameCore.PerformanceExtendEndBlack",
-	"ExtendTime": 1
-}</pre>
-
-:{{DIcon|Travel Log}} Manifest "Magic of Friendship"
-<pre>{
-	"$type": "RPG.GameCore.ShowUI",
-	"Name": "Ui.ActivitySummon.Entrance.ActivitySummonEntrancePage",
-	"WaitForExit": true,
-	"Param": {
-		"Value": "4"
-	},
-	"OnUIEnter": [],
-	"OnUIExitImmediately": [
-		{
-			"$type": "RPG.GameCore.EndDialogueEntityInteract"
-		}
-	]
-}</pre>
-
-;(Talk to Bronya)
-:'''Bronya:''' If you bring Seele along, I'm curious about how her abstract portrait would look like... Actually, the more I talk about it, the more I want to see it. If it's not too much trouble, would you take me with you to see her?
-
-;(Talk to Bronya)
-:'''Bronya:''' This fighting style... I never imagined that I would have such an extreme side.
-:You feel like you can see the shadow of someone else...
 {{Dialogue End}}
 
 ==Other Languages==

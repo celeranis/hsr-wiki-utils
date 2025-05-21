@@ -40,179 +40,22 @@ PageTitle=#Sealed Sector#
 ===Find a way to leave the room{{subst:void|<!--800020420-->}}===
 {{Mission Description|type=adventure|location=Storage Zone|The troubles caused by Silver Wolf have abated, but Leonard still looks concerned.<br />He's asking for your help to carry out a task that will improve the space station's cybersecurity and help him keep his job...}}
 {{Dialogue Start}}
-;(Upon reaching the destination)
-
-;(Upon reaching the destination)
-:'''Leonard:''' These guys are no pushovers... Let's borrow the power of the Level graffitis.
-
-;(Obtain {{Item|Simulated Calculation|20|x=1}})
-
-;(Obtain {{Item|Simulated Calculation|20|x=1}})
-
-;(Obtain {{Item|Simulated Calculation|20|x=1}})
-<pre>{
-	"$type": "RPG.GameCore.ShowTalkUI",
-	"Show": true
-}</pre>
-<pre>{
-	"$type": "RPG.GameCore.ActiveVirtualCamera",
-	"AreaName": "LevelArea_P40002_F40002104_G1",
-	"AnchorName": "C1"
-}</pre>
-----
-:<!--0.1-second delay-->
-<pre>{
-	"$type": "RPG.GameCore.AnimSetParameter",
-	"TargetType": {
-		"$type": "RPG.GameCore.TargetFetchAdvPropEx",
-		"FetchType": "SinglePropByPropID",
-		"SinglePropID": {
-			"GroupID": {
-				"FixedValue": {
-					"Value": 15
-				}
-			},
-			"ID": {
-				"FixedValue": {
-					"Value": 300004
-				}
-			}
-		}
-	},
-	"ParameterName": "TriggerOpen",
-	"ParameterType": "Trigger"
-}</pre>
-:<!--1-second delay-->
-:<!--2-second delay-->
-----
-<pre>{
-	"$type": "RPG.GameCore.ActiveVirtualCamera",
-	"AreaName": "LevelArea_P40002_F40002104_G1",
-	"AnchorName": "C1",
-	"IsActive": false
-}</pre>
-<pre>{
-	"$type": "RPG.GameCore.ShowTalkUI"
-}</pre>
-<pre>{
-	"$type": "RPG.GameCore.ShowTalkUI",
-	"Show": true
-}</pre>
-<pre>{
-	"$type": "RPG.GameCore.ActiveVirtualCamera",
-	"AreaName": "LevelArea_P40002_F40002104_G1",
-	"AnchorName": "C3"
-}</pre>
-<pre>{
-	"$type": "RPG.GameCore.ChangePropState"
-}</pre>
-:<!--1-second delay-->
-<!--Unknown TalkSentence: 200073329-->
-<pre>{
-	"$type": "RPG.GameCore.ActiveVirtualCamera",
-	"AreaName": "LevelArea_P40002_F40002104_G1",
-	"AnchorName": "C3",
-	"IsActive": false
-}</pre>
-<pre>{
-	"$type": "RPG.GameCore.ShowTalkUI"
-}</pre>
+:{{tx}}
 {{Dialogue End}}
 
 ===Clear this area{{subst:void|<!--800020406-->}}===
 {{Dialogue Start}}
-
-<pre>{
-	"$type": "RPG.GameCore.ShowTalkUI",
-	"Show": true
-}</pre>
-<pre>{
-	"$type": "RPG.GameCore.ActiveVirtualCamera",
-	"AreaName": "LevelArea_P40002_F40002104_G1",
-	"AnchorName": "C2"
-}</pre>
-----
-:<!--0.1-second delay-->
-:<!--1-second delay-->
-:<!--0.2-second delay-->
-<pre>{
-	"$type": "RPG.GameCore.TriggerEffectList",
-	"TargetType": {
-		"$type": "RPG.GameCore.TargetFetchAdvPropEx",
-		"FetchType": "SinglePropByPropID",
-		"SinglePropID": {
-			"GroupID": {
-				"FixedValue": {
-					"Value": 1
-				}
-			},
-			"ID": {
-				"FixedValue": {
-					"Value": 300003
-				}
-			}
-		}
-	},
-	"EffectList": [
-		{
-			"EffectPath": "Effects/Eff_Prefab/Eff_Monster/Eff_XP_Minion04_00/Eff_Monster_XP_Minion04_00_Common_Maze_SpecialAppear.prefab",
-			"AttachPoint": "Root"
-		}
-	]
-}</pre>
-<pre>{
-	"$type": "RPG.GameCore.CreateProp",
-	"GroupID": {
-		"FixedValue": {
-			"Value": 21
-		}
-	},
-	"GroupPropID": {
-		"FixedValue": {
-			"Value": 300010
-		}
-	},
-	"CreateList": []
-}</pre>
-:<!--3-second delay-->
-----
-<pre>{
-	"$type": "RPG.GameCore.ActiveVirtualCamera",
-	"AreaName": "LevelArea_P40002_F40002104_G1",
-	"AnchorName": "C2",
-	"IsActive": false
-}</pre>
-<pre>{
-	"$type": "RPG.GameCore.ShowTalkUI"
-}</pre>
-:<!--1-second delay-->
+:{{tx}}
 {{Dialogue End}}
 
 ===Overcome the final obstacle{{subst:void|<!--800020426-->}}===
 {{Dialogue Start}}
-;(Upon reaching the destination)
-
-
-:{{DIcon|Loupe}} Investigate
-;(If {{cx}}<!--SubMission Finish: 800020415-->)
-;(Otherwise)
-:'''Leonard:''' Challenge completed, do you want to exit the simulation?
-:{{DIcon|Arrow}} Stay for Now
-:{{DIcon|Exit}} Confirm Exit
-:<pre>{
-	"$type": "RPG.GameCore.UpdateTreasureChallengeProgress",
-	"RaidTargetID": 102000000,
-	"IsIncrease": true,
-	"DeltaValue": 1
-}</pre>
-:'''Leonard:''' Remarkable... Sure enough, not even the highest difficulty challenge can faze you, but I believe it is enough.
-:'''Leonard:''' Fascinating. Just seeing you untangling my puzzles and breaking through the obstacles I laid down makes me proud and... somewhat thrilled. Even if it's just a fraction of the original, I think I can understand how Silver Wolf feels.
-:'''Leonard:''' Hah! That made me reminisce about the time I joined the IPC... What a precious memory, I will never forget it.
-:'''Leonard:''' Of course, it wouldn't have happened if you didn't help. Allow me to thank you once again... Thank you, friend!
+:{{tx}}
 {{Dialogue End}}
 
 ===Clear this area{{subst:void|<!--800020427-->}}===
 {{Dialogue Start}}
+:{{tx}}
 {{Dialogue End}}
 
 ==Other Languages==

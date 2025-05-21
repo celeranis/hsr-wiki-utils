@@ -39,102 +39,17 @@ PageTitle=#Meals Are More Important#
 ===Speak with the maintenance engineer{{subst:void|<!--300070201-->}}===
 {{Mission Description|type=daily|location=Base Zone|The maintenance engineer has a new idea about the meal-delivery robot's malfunction. He asks you to obtain the error log on the robot to verify if his guess is accurate.}}
 {{Dialogue Start}}
-
-;(Talk to Maintenance Engineer)
-:'''Maintenance Engineer:''' Good thing you're here! I have a hypothesis!
-:{{DIcon|Arrow}} Enough hypotheses. Did you fix the robots?
-::'''Maintenance Engineer:''' Hey, I'm trying to hypothesize about how to fix it!
-:{{DIcon|Arrow}} What hypothesis?
-::'''Maintenance Engineer:''' About the cause behind the maglev robots breaking down&mdash;
-:'''Maintenance Engineer:''' I'm not sure about it yet... Can you give me a hand and record the robots' error logs?
-:'''Maintenance Engineer:''' I need to confirm where the fault is... then I'll have an easier time fixing them.
-----
+:{{tx}}
 {{Dialogue End}}
 
 ===Retrieve the error log on the meal-delivery robot{{subst:void|<!--300070208-->}}===
 {{Dialogue Start}}
-
-;(Talk to Little Robot)
-:'''Malfunctioning Robot:''' Error code 00040. Maximum load reached. Thruster compartment unresponsive.
-
-;(Talk to Little Robot)
-:'''Malfunctioning Robot:''' Error code 00026. Weak signal from positioning device. Unable to read location data.
-
-;(Talk to Little Robot)
-:'''Malfunctioning Robot:''' Error code 00019. Unable to recognize firmware. Remote connection cannot be established. Please try again later.
-
-
-;(Talk to Little Robot)
-:The robot's batteries are flat. It is unresponsive to your commands.
-;(Unused &mdash; 300070202_Finish)
-
-
-;(Unused &mdash; 300070203_Finish)
-
-
-;(Unused &mdash; 300070204_Finish)
-
-
-
-;(Talk to Little Robot)
-:The robot's batteries are flat. It is unresponsive to your commands.
-;(Unused &mdash; 300070202_Finish)
-
-
-;(Unused &mdash; 300070203_Finish)
-
-
-;(Unused &mdash; 300070204_Finish)
-
+:{{tx}}
 {{Dialogue End}}
 
 ===Hand over the collected error log to the maintenance engineer{{subst:void|<!--300070207-->}}===
 {{Dialogue Start}}
-
-;(Talk to Maintenance Engineer)
-:'''Maintenance Engineer:''' How is it? Did you get it?
-:{{DIcon|Arrow}} (Give him the error logs)
-:'''Maintenance Engineer:''' There are lots of different error types here. Lemme think...
-<pre>{
-	"$type": "RPG.GameCore.RandomConfig",
-	"OddsList": [
-		{
-			"FixedValue": {
-				"Value": 0.33
-			}
-		},
-		{
-			"FixedValue": {
-				"Value": 0.33
-			}
-		},
-		{
-			"FixedValue": {
-				"Value": 0.34
-			}
-		}
-	],
-	"TaskList": [
-		{
-			"$type": "RPG.GameCore.TriggerCustomString",
-			"CustomString": {
-				"Value": "Wait_Option_300070203_15"
-			}
-		},
-		{
-			"$type": "RPG.GameCore.TriggerCustomString",
-			"CustomString": {
-				"Value": "Wait_Option_300070203_26"
-			}
-		},
-		{
-			"$type": "RPG.GameCore.TriggerCustomString",
-			"CustomString": {
-				"Value": "Wait_Option_300070203_37"
-			}
-		}
-	]
-}</pre>
+:{{tx}}
 {{Dialogue End}}
 
 ==Other Languages==

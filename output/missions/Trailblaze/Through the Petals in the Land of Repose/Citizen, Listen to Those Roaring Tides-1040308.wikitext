@@ -41,134 +41,33 @@ PageTitle=#Citizen, Listen to Those Roaring Tides#
 ===Speak with Cerces{{subst:void|<!--104030801-->}}===
 {{Mission Description|type=trailblaze|location="Demigod Council" Dawncloud|The citizens' assembly on the matter of "Pausing the Flame-Chase Journey" is coming to an end. Soon, everyone will witness what "vote-decided tomorrow" they will experience.<br />Your fifteen Entry Hours are done. The last performance is about to begin.}}
 {{Dialogue Start}}
-;(Upon reaching the destination)
-
-;(Upon reaching the destination)
-----
 :{{tx}}
-----
-:{{tx}}
-----
-:{{tx}}
-<pre>{
-	"$type": "RPG.GameCore.PerformanceEndSeq",
-	"BeforeCases": [
-		{
-			"$type": "RPG.GameCore.SwitchCharacterAnchorV2",
-			"SwitchCharacterAnchorConfig": {
-				"IsLocalPlayer": true,
-				"CharacterUniqueName": "LocalPlayer",
-				"AreaName": {
-					"Value": "LevelArea_P10403_F10403001_G52"
-				},
-				"AnchorName": {
-					"Value": "Anchor1"
-				}
-			}
-		}
-	]
-}</pre>
 {{Dialogue End}}
 
 ===Head to the Demigod Council and witness the results of the citizens' assembly{{subst:void|<!--104030802-->}}===
 {{Dialogue Start}}
-;(Upon reaching the destination)
-
-;(Upon reaching the destination)
 :{{tx}}
-
-;(Upon reaching the destination)
-:{{A|VO chapter4 28 anaxa 117.ogg}} '''Anaxa:''' Phainon... So, they are leaving the final debate to him.
 {{Dialogue End}}
 
 ===Speak with the message-bearing soldier and take a seat at the special seating section{{subst:void|<!--104030803-->}}===
 {{Dialogue Start}}
-
-;(Talk to Military Runner)
-;(If {{cx}}<!--during performance 104030805-->)
-::{{A|VO chapter4 28 shibingA 101.ogg}} '''Military Runner:''' Lord Anaxa, you're finally here!
-::{{A|VO chapter4 28 shibingA 102.ogg}} '''Military Runner:''' The last speaker for the assembly will be taking the stage soon. The resolution will be passed after that.
-::{{A|VO chapter4 28 shibingA 103.ogg}} '''Military Runner:''' Lady Caenis has reserved a special seat for you. Shall I show you to it?
-;(If {{cx}}<!--not during performance 104030805-->)
-::{{A|VO chapter4 28 shibingA 106.ogg}} '''Military Runner:''' Lady Caenis has reserved a special seat for you. Shall I show you to it?
-:{{DIcon|Arrow}} Lead the way.
-::{{A|VO chapter4 28 shibingA 104.ogg}} '''Military Runner:''' Alright. This way, please.
-:<pre>{
-	"$type": "RPG.GameCore.SetPerformanceResult",
-	"Value": 1
-}</pre>
-:{{DIcon|Exit}} Not now.
-::{{A|VO chapter4 28 shibingA 105.ogg}} '''Military Runner:''' As you command.
-;(Upon reaching the destination)
-
-;(Upon reaching the destination)
-;(If {{cx}}<!--during performance 104030805-->)
-::{{A|VO chapter4 28 shibingA 101.ogg}} '''Military Runner:''' Lord Anaxa, you're finally here!
-::{{A|VO chapter4 28 shibingA 102.ogg}} '''Military Runner:''' The last speaker for the assembly will be taking the stage soon. The resolution will be passed after that.
-::{{A|VO chapter4 28 shibingA 103.ogg}} '''Military Runner:''' Lady Caenis has reserved a special seat for you. Shall I show you to it?
-;(If {{cx}}<!--not during performance 104030805-->)
-::{{A|VO chapter4 28 shibingA 106.ogg}} '''Military Runner:''' Lady Caenis has reserved a special seat for you. Shall I show you to it?
-:{{DIcon|Arrow}} Lead the way.
-::{{A|VO chapter4 28 shibingA 104.ogg}} '''Military Runner:''' Alright. This way, please.
-:<pre>{
-	"$type": "RPG.GameCore.SetPerformanceResult",
-	"Value": 1
-}</pre>
-:{{DIcon|Exit}} Not now.
-::{{A|VO chapter4 28 shibingA 105.ogg}} '''Military Runner:''' As you command.
+:{{tx}}
 {{Dialogue End}}
 
 ===Sit down and listen to Phainon's speech to the public{{subst:void|<!--104030804-->}}===
 {{Dialogue Start}}
-;(Upon reaching the destination)
-
-;(Upon reaching the destination)
-:{{tx}}
-:{{tx}}
 :{{tx}}
 {{Dialogue End}}
 
 ===Head to the dolium and place the last vote{{subst:void|<!--104030809-->}}===
 {{Mission Description|type=trailblaze|location="Demigod Council" Dawncloud|update|The citizens' assembly on the matter of "Pausing the Flame-Chase Journey" is coming to an end. Soon, everyone will witness what "vote-decided tomorrow" they will experience.<br />You hold the last ceramic shard that will decide Amphoreus's fate. Where will your vote fall?}}
 {{Dialogue Start}}
-
-;(Talk to Aglaea)
-:{{A|VO chapter4 28 aglaea 102.ogg}} '''Aglaea:''' Heh...
-
-;(Talk to Elder Caenis)
-:{{A|VO chapter4 28 kainisi 103.ogg}} '''Caenis:''' I trust you haven't forgotten the world we've envisioned together.
-;(Upon reaching the destination)
 :{{tx}}
-----
-:{{tx}}
-----
-:{{tx}}
-----
-:{{tx}}
-;(Upon reaching the destination)
-
-;(Upon reaching the destination)
-----
-;([[#Gallery|Cutscene]] plays)
-::Professor... I completed the proof you wanted.
-::Thank you, Castorice.
-::The answer is plain as day.
-::My vote goes to &mdash;
-::&mdash; The Flame-Chase Journey and nothing else!
-::I have deciphered the truth of this world &mdash;
-;(Cutscene ends)
-----
 {{Dialogue End}}
 
 ===Complete the Great Performer's performance{{subst:void|<!--104030807-->}}===
 {{Mission Description|type=trailblaze|location="Demigod Council" Dawncloud|update|The citizens' assembly on the matter of "Pausing the Flame-Chase Journey" is coming to an end. Soon, everyone will witness what "vote-decided tomorrow" they will experience.<br />How foolish, trying to decide the fate of the world through votes when the apocalypse looms... Your professional ethics demand that you give these fools an education.}}
 {{Dialogue Start}}
-;(Upon reaching the destination)
-
-;(Upon reaching the destination)
-:{{tx}}
-:{{tx}}
-:{{tx}}
 :{{tx}}
 {{Dialogue End}}
 

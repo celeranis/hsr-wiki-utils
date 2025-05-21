@@ -42,110 +42,27 @@ PageTitle=#Clockwork: Arturo#
 ===Pass a message to Harrison{{subst:void|<!--424032404-->}}===
 {{Mission Description|type=adventure|location=Penacony Paperfold University College|update|Tick... tock! Quick, Adjust the hands... Tick, tock!<br />People's minds await your exploration. Help them regain their true selves!}}
 {{Dialogue Start}}
+:{{tx}}
 {{Dialogue End}}
 
 ===Pass a message to Chad{{subst:void|<!--424032405-->}}===
 {{Dialogue Start}}
+:{{tx}}
 {{Dialogue End}}
 
 ===Pass a message to Shawn{{subst:void|<!--424032406-->}}===
 {{Dialogue Start}}
+:{{tx}}
 {{Dialogue End}}
 
 ===Return to the dean's office{{subst:void|<!--424032407-->}}===
 {{Dialogue Start}}
-;(Upon reaching the destination)
-
-;(Upon reaching the destination)
 :{{tx}}
-:{{DIcon|Talk}} He's the current dean...
-::'''Professor Owl:''' Hoot, I know that. He's helping me look after this forest and serves as a guardian to the other fledglings.
-::{{tx}}
-:;(Return to previous option selection)
-:{{DIcon|Arrow}} But other people can't see you...
-::'''Professor Owl:''' Hoot, you're right... It seems I got ahead of myself.
-::'''Professor Owl:''' Could you bring over a pen and piece of paper so you can write down what I say and deliver it to him?
-::{{DIcon|Arrow}} Sure!
-:::'''Professor Owl:''' Then I'll start dictating. I may be a bit slow, so please be patient with me...
-:::No can do!
-::{{DIcon|Arrow}} No can do!
-::'''Professor Owl:''' Hoot, you're a warm-hearted child, so I trust you were just joking. But if you were serious, could you see it as doing a favor for the {{Color|keyword|nobold=1|first dean}} instead?
-::You find it difficult to refuse such a request. Driven by a certain emotion, you take out a pen and piece of paper...
-::Professor Owl's voice suddenly becomes solemn, gone is the cuteness and his "hoot" catchphrase as he earnestly conveys his feelings to you...
-::{{tx}}
 {{Dialogue End}}
 
 ===Give the message to Mr. Arturo{{subst:void|<!--424032408-->}}===
 {{Dialogue Start}}
-
-;(Talk to Mr. Arturo)
-<pre>{
-	"$type": "RPG.GameCore.SwitchAudioListenerToTarget",
-	"TargetType": {
-		"$type": "RPG.GameCore.TargetFetchAdvNpcEx",
-		"FetchType": "SingleNpcByNpcID",
-		"SingleNpcID": {
-			"GroupID": {
-				"FixedValue": {
-					"Value": 405
-				}
-			},
-			"GroupNpcID": {
-				"FixedValue": {
-					"Value": 400001
-				}
-			}
-		}
-	}
-}</pre>
 :{{tx}}
-:'''Mr. Arturo:''' {{Color|keyword|nobold=1|Harrison}}, {{Color|keyword|nobold=1|Chad}}, and {{Color|keyword|nobold=1|Shawn}}, three obstinate kids who don't heed my advice... Perhaps you will be able to make them see the error of their ways.
-:{{DIcon|Arrow}} I've relayed your words...
-:'''Mr. Arturo:''' Is that so. How did they react?
-:You relay to Mr. Arturo the three students' answers as they were presented to you, including the phrasings where they've given up and the ones that felt like personal attacks.
-:'''Mr. Arturo:''' Hmph, as I expected. I've heard similar views from my other students. I just don't understand young people nowadays...
-:'''Mr. Arturo:''' There's nothing more I can do to help those three. I only hope my stricter regimen will help future students &mdash; even if I can only save them one at a time.
-:'''Mr. Arturo:''' If this is the case, I'll try managing the school as an enclosed institution from next month.
-:'''Mr. Arturo:''' ...
-:'''Mr. Arturo:''' *sigh* These students spent a lot of time and effort to get into this school, so why don't they cherish this opportunity at all?
-:'''Mr. Arturo:''' Perhaps they'll look back on the errors of their youth some day in the future and come to a different realization... Though it'll be far too late for regrets by then.
-:'''Mr. Arturo:''' This room feels overdue for a tidying... Did you need anything else?
-:{{DIcon|Arrow}} I have a letter for you.
-:'''Mr. Arturo:''' A letter for me? Why now and from who?
-:Mr. Arturo looks stunned the moment he accepts the envelope. There is a crooked drawing of an origami bird on the envelope &mdash; a drawing you spent some effort into making resemble a bird as much as possible.
-:On closer inspection, this bird looks quite similar to the current crest of Paperfold University, yet it also has some distinct differences. Only by opening a certain dusty drawer in the Dean's Office will one be able to find the original concept for this design.
-:This is a proposed version of the university crest that went unused. Only two types of individuals would know of it: Someone who is or was once a dean, or someone of renown who had already arrived in Penacony in the early days of the university's construction, or... someone who is both.
-:'''Mr. Arturo:''' I&mdash;Is this...
-:Without even waiting to ask who told you about the design, Mr. Arturo immediately opens the envelope and eagerly reads its contents like a freshman on his first day of university.
-:'''Professor Owl:''' Hello, my dearest fledgling Arturo. I hope you'll permit me to refer to you as such. I'm Professor Owl, an old bird who has been closely watching the growth and health of my fledglings.
-:'''Professor Owl:''' Perhaps from where you're standing, Paperfold University has reached a crucial juncture of life and death: Your students are shrouded in a cloud of disorganization and lack of discipline. They've abandoned the school's fine traditions and are having a difficult time shouldering the responsibilities of Penacony.
-:'''Professor Owl:''' I've observed every little thing that has happened in this school and have given a lot of thought to the problems the students are currently facing. And now it is time I express those thoughts.
-:'''Professor Owl:''' When I was still teaching, I witnessed many children who flew with injured wings. Sometimes I would give those fledglings a hand, but more often, I would remain silent and wait until they were able to take to the skies by their own power.
-:'''Professor Owl:''' After all, it is only by falling over many times in our youth that our bones can become stronger in adulthood. If we become afraid of making mistakes, we would only bid farewell to progress.
-:'''Professor Owl:''' You have to admit, even though their feathers aren't fully developed yet, the fledglings in your tree are all ready to take flight. What we instruct them to do may not always be the best choice for them.
-:'''Professor Owl:''' As the elder, we must suppress our desire to reach out and instead offer the children support without meddling. With time, they will recover from their '''banananxiety'''.
-:'''Mr. Arturo:''' But... what about our commitment? It's a teacher's responsibility to help students through difficult problems.
-:Mr. Arturo is so absorbed in reading that he can't help but voice his confusion out loud. As if predicting his query, "Professor Owl" provides an answer in the next passage of his letter:
-:'''Professor Owl:''' The road ahead is meant for them to walk alone. Similarly, only they can reflect on what will happen in their future. They're ready to be responsible for their own choices.
-:'''Professor Owl:''' Not to mention, ten years is enough time for the world to look completely different. How can we be sure our life experiences would still apply to the youths now?
-:'''Professor Owl:''' The era that once belonged to us eventually became yours, and now it will soon become theirs. No matter how much you worry, neither you nor I can help them find their path into the next Amber Era.
-:'''Professor Owl:''' I choose to leave the future to the youths. So, young fledgling Arturo, it's also time for you to make your own decision.
-:'''Professor Owl:''' This old bird will not tell you what choice you should make. As a fledgling, you should be free. However, before you decide, always keep our school's motto in mind...
-:'''Professor Owl:''' "Color your dreams, free your ideals."
-:'''Mr. Arturo:''' ...
-:The dean has a complicated expression on his face, one that seems to contain equal amounts of joy and bitterness.
-:'''Mr. Arturo:''' Young fledgling... At this age, how can I still be considered a young fledgling?
-:{{DIcon|Arrow}} Perhaps to him...
-:{{DIcon|Arrow}} Everyone in the academy can be considered young fledglings.
-:'''Mr. Arturo:''' Paperfold University really does have a worrywart of a dean. He still cares so much about the school, even though he's already...
-:{{tx}}
-:{{DIcon|Talk}} Do you know who this letter is from?
-::'''Mr. Arturo:''' This letter can only be from the only true dean of Paperfold University.
-::{{tx}}
-:;(Return to previous option selection)
-:{{DIcon|Arrow}} Then are you still going to change the school rules?
-::'''Mr. Arturo:''' I'll give it more thought. Such major changes have to be carefully considered before the final decision is made.
-::{{tx}}
 {{Dialogue End}}
 
 ==Other Languages==

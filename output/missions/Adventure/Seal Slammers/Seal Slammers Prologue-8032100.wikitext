@@ -11,7 +11,7 @@ PageTitle=#Seal Slammers: Prologue#
 |chapter       = Seal Slammers
 |requirements  = [[Trailblaze Mission]] ''[[Witch's Mirrored Reversal]]'' completed
 |summary       = A prophetic dream bestowed by Phagousa, Chalice of Plenty dragged you into the baby seal transformation crisis.<br />As the rumored "Child of Prophecy," bravely participate in Seal Slammers to save the unsuspecting people of Amphoreus and prevent the nightmare from coming true!
-|characters    = Apophis; Baby Seal Turncoats; Bubbles; Hyacine; Phagousa; Phainon's Look-Alike; Pie-non; Trailblazer
+|characters    = Aglaea; Angel Seal; Apophis; Baby Seal Turncoats; Bubbles; Hyacine; Mega Seal; Phagousa; Phainon; Phainon's Look-Alike; Pie-non; Rubber Seal; Trailblazer; Tribbie
 |startLocation = [[Amphoreus]] - [["Eternal Holy City" Okhema]]
 |world         = Amphoreus
 |area          = "Eternal Holy City" Okhema
@@ -23,11 +23,10 @@ PageTitle=#Seal Slammers: Prologue#
 
 ==Steps==
 # Speak with Aglaea and Tribbie
+# Sleep
 # Continue the dream
 # Defeat Pie-non's Legion
-# Sleep
 # Officially participate in the matches
-# Sleep
 
 <!--
 ==Gameplay Notes==
@@ -41,247 +40,31 @@ PageTitle=#Seal Slammers: Prologue#
 ===Speak with Aglaea and Tribbie{{subst:void|<!--803210003-->}}===
 {{Mission Description|type=adventure|location="Eternal Holy City" Okhema|The two demigods arrive at your bath chamber, elevating your humble abode.<br />However, you are sure that they aren't here for a house tour... Ask them the reason for their visitation.}}
 {{Dialogue Start}}
-
-;(Talk to Apophis)
-
-
-{{Dialogue End}}
-
-===Continue the dream{{subst:void|<!--803210001-->}}===
-{{Mission Description|type=adventure|location="Eternal Holy City" Okhema|update|Your dream is interrupted by a mysterious force, and so it's time to return to the prophetic dream.}}
-{{Dialogue Start}}
-
-;(Talk to Apophis)
-<pre>{
-	"$type": "RPG.GameCore.EnterMarblePVEMatch",
-	"MatchID": 1,
-	"HeroTeamMarbleSealIDList": [
-		202,
-		201,
-		202
-	]
-}</pre>
-
-{{Dialogue End}}
-
-===Defeat Pie-non's Legion{{subst:void|<!--803210002-->}}===
-{{Mission Description|type=adventure|location="Eternal Holy City" Okhema|update|Even in dreams, you must uphold the creed of Trailblaze.<br />In the name of baby seals, defeat Pie-non's Legion!}}
-{{Dialogue Start}}
-
-;(Unused &mdash; EnterDistrict_G831)
-<pre>{
-	"$type": "RPG.GameCore.PerformanceEndSeq",
-	"BeforeCases": [
-		{
-			"$type": "RPG.GameCore.SwitchCharacterAnchorV2",
-			"SwitchCharacterAnchorConfig": {
-				"IsLocalPlayer": true,
-				"CharacterUniqueName": "LocalPlayer",
-				"AreaName": {
-					"Value": "LevelArea_P10401_F10401001_G417"
-				},
-				"AnchorName": {
-					"Value": "Transform"
-				}
-			}
-		}
-	]
-}</pre>
-:<pre>{
-	"$type": "RPG.GameCore.HideEntityV2",
-	"Target": {
-		"$type": "RPG.GameCore.TargetFetchAdvNpcEx",
-		"FetchType": "SingleNpcByNpcID",
-		"SingleNpcID": {
-			"GroupID": {
-				"FixedValue": {
-					"Value": 417
-				}
-			},
-			"GroupNpcID": {
-				"FixedValue": {
-					"Value": 400001
-				}
-			}
-		}
-	}
-}</pre>
+:{{tx}}
 {{Dialogue End}}
 
 ===Sleep{{subst:void|<!--803210004-->}}===
 {{Mission Description|type=adventure|location="Eternal Holy City" Okhema|update|You have had sweet dreams, nightmares, and daydreams, but not a prophetic dream.<br />Silently recite the phrase "prophetic dream" ten times before you sleep might work?}}
 {{Dialogue Start}}
-
-;(Unused &mdash; EnterDistrict_G739)
-----
-::{{tx}}
-::{{DIcon|Talk}} Isn't this crisis a little extreme?
-:::'''Phagousa:''' The crisis of Amphoreus is never just one thing.
-:::{{tx}}
-::;(Return to previous option selection)
-::{{DIcon|Talk}} Then are humans evolved from baby seals?
-:::'''Phagousa:''' Amphoreus doesn't care about such strict theories of evolution.
-:::{{tx}}
-::;(Return to previous option selection)
-::{{DIcon|Arrow}} So, why did you come to me, Phagousa?
-:::'''Phagousa:''' Because you are the Child of Prophecy who can save all the baby seals.
-:::{{tx}}
-:::'''Phagousa:''' ...You don't believe in my prophecy? If you keep up your doubts and hesitations, the baby seal crisis will become inevitable. I hereby prophesize &mdash;
-:::'''Phagousa:''' {{Color|fire|nobold=1|If you don't win the trophy, you will turn into a baby seal and stay that way forever.}}
-:::{{DIcon|Arrow}} How can there be a prophecy for the bad end?
-::::'''Phagousa:''' There has to be one prophecy that will come true &mdash; that's more rigorous.
-::::...Becoming a baby seal doesn't seem that bad.
-:::{{DIcon|Arrow}} ...Becoming a baby seal doesn't seem that bad.
-:::'''Phagousa:''' If even the prophecy doesn't alarm you, then I'll make you experience it in the dream.
-:::Suddenly, you feel like you're falling from a great height, crashing onto the ground.
-:::{{A|VO side4 haibao haibaoA 02.ogg}} '''(Trailblazer):''' o((◉ω◉ ! )o "Help! Why did I turn into a seal!?" )∋
-:::{{A|VO side4 haibao haibaoA 08.ogg}} '''(Trailblazer):''' o((〒ω〒; )o "Help! I'm surrounded by seals!" )∋
-:::'''Phagousa:''' Now, do you understand the '''imminent danger'''?
-:::{{DIcon|Arrow}} o((〒ω〒; )o "I understand." )∋
-:::{{DIcon|Arrow}} o((-'ω´- )o "This feels just fine..." )∋
-:::'''Phagousa:''' You haven't understood it at all.
-:::'''Phagousa:''' If you fail, you'll become a baby seal, and I can't guarantee what kind of baby seal you'll turn into.
-:::'''Phagousa:''' The base chance of you turning into a lively, speaking, and laughing baby seal is 0.6%.
-:::'''Phagousa:''' However, the base chance of you turning into an {{Color|fire|nobold=1|inert and passive baby seal for display on the shelves}} is {{Color|fire|nobold=1|99.4%}}.
-:::{{DIcon|Arrow}} o((◉ω◉ ! )o "I turn into a plushie!?" )∋
-:::{{DIcon|Arrow}} o((='ω´=; )o "Are you threatening me?" )∋
-:::'''Phagousa:''' ...We've spent too long chit-chatting. Look, your enemy is here!
-:::'''Phainon's Look-Alike:''' Baby seals, your end is neigh!
-:::'''Phagousa:''' That's Pie-non &mdash; the evil mastermind trying to bring down the Seal Kingdom!
-:::'''Pie-non:''' I am Pie-non. Behold my legion of baby seal turncoats! Together, we are Pie-non's Legion!
-:::{{A|VO side4 haibao haibaoA 02.ogg}} '''Baby Seal Turncoats:''' o((^'ω´^ )o "Ho-ho-ho! That's right, submit yourselves to our great Lord Pie-non!" )∋
-:::{{DIcon|Arrow}} Phainon, blink twice if you need help.
-::::'''Pie-non:''' Silence, Child of Prophecy! I am Pie-non.
-::::I can't believe someone like you would switch sides.
-::::'''Pie-non:''' I was always the invader. There was never any side-switching.
-::::Wait... am I human again?
-:::{{DIcon|Arrow}} I can't believe someone like you would switch sides.
-::::'''Pie-non:''' I was always the invader. There was never any side-switching.
-::::Wait... am I human again?
-:::{{DIcon|Arrow}} Wait... am I human again?
-:::'''Phagousa:''' ...That's not what's important right now.
-:::'''Phagousa:''' There's no need to fear. You still have trusty seal companions to depend on. Behold, the outlander warrior of legends.
-:::{{A|VO side4 haibao chimera 08.ogg}} '''Bubbles:''' Awooo!~ So you are the Child of Prophecy. I am Bubbles the Chimera.
-:::{{A|VO side4 haibao chimera 12.ogg}} '''Bubbles:''' Stand with me and become heroes!
-:::{{DIcon|Arrow}} Phainon, they stole your line!
-::::'''Pie-non:''' I told you, I'm not Phainon! I am Pie-non, the ultimate Pie-non!
-::::Time for another tutorial stage, right? Got it.
-:::{{DIcon|Arrow}} Time for another tutorial stage, right? Got it.
-:::{{A|VO side4 haibao chimera 01.ogg}} '''Bubbles:''' Awooo~ You're a fast learner, Child of Prophecy.
-:::'''Pie-non:''' That golden trophy already belongs to Pie-non's Legion. You're too late, Child of Prophecy!
-:::Not so fast. Time to play my reverse card!
-:::{{DIcon|Arrow}} Cut the chatter, face me in battle!
-:::{{DIcon|Arrow}} Not so fast. Time to play my reverse card!
-:<pre>{
-	"$type": "RPG.GameCore.EnterMarblePVEMatch",
-	"MatchID": 1,
-	"HeroTeamMarbleSealIDList": [
-		202,
-		201,
-		202
-	]
-}</pre>
-:<!--3-second delay-->
-:'''(Trailblazer):''' (With Okhema being in daylight forever, I almost forgot it's now resting time. I should sleep...)
-;(Unused &mdash; TalkSentence_803216617)
-
-
-;(Unused &mdash; EnterDistrict_G793)
-----
-::'''Hyacine:''' Since Grayie has decided to participate in the tournament, you should take this little one with you.
-::'''Hyacine:''' This is Bubbles, a little chimera raised in the Garden of Life. It's energetic and quite the trouble-maker. The scholars simply don't know what to do with it.
-::'''(Trailblazer):''' Bubbles, the chimera wearing a hat, sunglasses, and swimming ring!?
-::{{A|VO side4 haibao chimera 02.ogg}} '''Bubbles:''' Awooo? You know me? Or... do I know you?
-::'''(Trailblazer):''' (The prophesied outlander warrior...!)
-::{{DIcon|Arrow}} Oh Bubbles, my Bubbles.
-:::{{A|VO side4 haibao chimera 04.ogg}} '''Bubbles:''' Awooo? What's the meaning of this?
-:::'''Hyacine:''' {{MC|f=She|m=He}} already considers you a part of the team.
-:::Good Bubbles, save me!
-::{{DIcon|Arrow}} Good Bubbles, save me!
-::{{A|VO side4 haibao chimera 12.ogg}} '''Bubbles:''' Awooo! You can count on me!
-::'''Apophis:''' ...But it doesn't know anything. Is this going to work?
-::{{tx}}
-::{{tx}}
-
-:{{DIcon|undefined}} Continue the dream
 :{{tx}}
-:{{DIcon|Talk}} Isn't this crisis a little extreme?
-::'''Phagousa:''' The crisis of Amphoreus is never just one thing.
-::{{tx}}
-:;(Return to previous option selection)
-:{{DIcon|Talk}} Then are humans evolved from baby seals?
-::'''Phagousa:''' Amphoreus doesn't care about such strict theories of evolution.
-::{{tx}}
-:;(Return to previous option selection)
-:{{DIcon|Arrow}} So, why did you come to me, Phagousa?
-::'''Phagousa:''' Because you are the Child of Prophecy who can save all the baby seals.
-::{{tx}}
-::'''Phagousa:''' ...You don't believe in my prophecy? If you keep up your doubts and hesitations, the baby seal crisis will become inevitable. I hereby prophesize &mdash;
-::'''Phagousa:''' {{Color|fire|nobold=1|If you don't win the trophy, you will turn into a baby seal and stay that way forever.}}
-::{{DIcon|Arrow}} How can there be a prophecy for the bad end?
-:::'''Phagousa:''' There has to be one prophecy that will come true &mdash; that's more rigorous.
-:::...Becoming a baby seal doesn't seem that bad.
-::{{DIcon|Arrow}} ...Becoming a baby seal doesn't seem that bad.
-::'''Phagousa:''' If even the prophecy doesn't alarm you, then I'll make you experience it in the dream.
-::Suddenly, you feel like you're falling from a great height, crashing onto the ground.
-::{{A|VO side4 haibao haibaoA 02.ogg}} '''(Trailblazer):''' o((◉ω◉ ! )o "Help! Why did I turn into a seal!?" )∋
-::{{A|VO side4 haibao haibaoA 08.ogg}} '''(Trailblazer):''' o((〒ω〒; )o "Help! I'm surrounded by seals!" )∋
-::'''Phagousa:''' Now, do you understand the '''imminent danger'''?
-::{{DIcon|Arrow}} o((〒ω〒; )o "I understand." )∋
-::{{DIcon|Arrow}} o((-'ω´- )o "This feels just fine..." )∋
-::'''Phagousa:''' You haven't understood it at all.
-::'''Phagousa:''' If you fail, you'll become a baby seal, and I can't guarantee what kind of baby seal you'll turn into.
-::'''Phagousa:''' The base chance of you turning into a lively, speaking, and laughing baby seal is 0.6%.
-::'''Phagousa:''' However, the base chance of you turning into an {{Color|fire|nobold=1|inert and passive baby seal for display on the shelves}} is {{Color|fire|nobold=1|99.4%}}.
-::{{DIcon|Arrow}} o((◉ω◉ ! )o "I turn into a plushie!?" )∋
-::{{DIcon|Arrow}} o((='ω´=; )o "Are you threatening me?" )∋
-::'''Phagousa:''' ...We've spent too long chit-chatting. Look, your enemy is here!
-::'''Phainon's Look-Alike:''' Baby seals, your end is neigh!
-::'''Phagousa:''' That's Pie-non &mdash; the evil mastermind trying to bring down the Seal Kingdom!
-::'''Pie-non:''' I am Pie-non. Behold my legion of baby seal turncoats! Together, we are Pie-non's Legion!
-::{{A|VO side4 haibao haibaoA 02.ogg}} '''Baby Seal Turncoats:''' o((^'ω´^ )o "Ho-ho-ho! That's right, submit yourselves to our great Lord Pie-non!" )∋
-::{{DIcon|Arrow}} Phainon, blink twice if you need help.
-:::'''Pie-non:''' Silence, Child of Prophecy! I am Pie-non.
-:::I can't believe someone like you would switch sides.
-:::'''Pie-non:''' I was always the invader. There was never any side-switching.
-:::Wait... am I human again?
-::{{DIcon|Arrow}} I can't believe someone like you would switch sides.
-:::'''Pie-non:''' I was always the invader. There was never any side-switching.
-:::Wait... am I human again?
-::{{DIcon|Arrow}} Wait... am I human again?
-::'''Phagousa:''' ...That's not what's important right now.
-::'''Phagousa:''' There's no need to fear. You still have trusty seal companions to depend on. Behold, the outlander warrior of legends.
-::{{A|VO side4 haibao chimera 08.ogg}} '''Bubbles:''' Awooo!~ So you are the Child of Prophecy. I am Bubbles the Chimera.
-::{{A|VO side4 haibao chimera 12.ogg}} '''Bubbles:''' Stand with me and become heroes!
-::{{DIcon|Arrow}} Phainon, they stole your line!
-:::'''Pie-non:''' I told you, I'm not Phainon! I am Pie-non, the ultimate Pie-non!
-:::Time for another tutorial stage, right? Got it.
-::{{DIcon|Arrow}} Time for another tutorial stage, right? Got it.
-::{{A|VO side4 haibao chimera 01.ogg}} '''Bubbles:''' Awooo~ You're a fast learner, Child of Prophecy.
-::'''Pie-non:''' That golden trophy already belongs to Pie-non's Legion. You're too late, Child of Prophecy!
-::Not so fast. Time to play my reverse card!
-::{{DIcon|Arrow}} Cut the chatter, face me in battle!
-::{{DIcon|Arrow}} Not so fast. Time to play my reverse card!
-<pre>{
-	"$type": "RPG.GameCore.EnterMarblePVEMatch",
-	"MatchID": 1,
-	"HeroTeamMarbleSealIDList": [
-		202,
-		201,
-		202
-	]
-}</pre>
+{{Dialogue End}}
 
+===Continue the dream{{subst:void|<!--803210001-->}}===
+{{Mission Description|type=adventure|location="Eternal Holy City" Okhema|update|Your dream is interrupted by a mysterious force, and so it's time to return to the prophetic dream.}}
+{{Dialogue Start}}
+:{{tx}}
+{{Dialogue End}}
+
+===Defeat Pie-non's Legion{{subst:void|<!--803210002-->}}===
+{{Mission Description|type=adventure|location="Eternal Holy City" Okhema|update|Even in dreams, you must uphold the creed of Trailblaze.<br />In the name of baby seals, defeat Pie-non's Legion!}}
+{{Dialogue Start}}
+:{{tx}}
 {{Dialogue End}}
 
 ===Officially participate in the matches{{subst:void|<!--803210010-->}}===
 {{Mission Description|type=adventure|location="Eternal Holy City" Okhema|update|After waking up, you are still in a daze.<br />"If you don't win the trophy, you will become a baby seal forever!" Lady Phagousa's prophecy still rings in your ears.<br />Is this just senselessness of dreams, or is it real?}}
 {{Dialogue Start}}
-{{Dialogue End}}
-
-===Sleep{{subst:void|<!--803210009-->}}===
-{{Mission Description|type=adventure|location="Eternal Holy City" Okhema|update|You have had sweet dreams, nightmares, and daydreams, but not a prophetic dream.<br />Silently recite the phrase "prophetic dream" ten times before you sleep might work?}}
-{{Dialogue Start}}
+:{{tx}}
 {{Dialogue End}}
 
 ==Other Languages==

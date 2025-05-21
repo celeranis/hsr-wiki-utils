@@ -39,173 +39,17 @@ PageTitle=#Comrade in Arms#
 {{Mission Description|type=continuance|location=Skysplitter|Meanwhile, March 7th has also noticed the unusual events aboard the Skysplitter. The time for her to put her swordsmanship skills to the test has finally come.}}
 {{Dialogue Start}}
 :{{tx}}
-;(Upon reaching the destination)
-
-;(Upon reaching the destination)
-:{{tx}}
-;(Enter battle)
-:{{Enemy List|Eclipse Wolftrooper*2; Sableclaw Wolftrooper*2}}
-:{{A|VO chapter2 14 mar7th 112.ogg}} '''March 7th:''' The plan said that if Hoolay appears, the Cloud Knights will assemble and do everything they can to suppress him.
-:{{A|VO chapter2 14 mar7th 113.ogg}} '''March 7th:''' Master Yunli, where are you?
-:{{A|VO chapter2 14 yunli 143.ogg}} '''Yunli:''' March, I'm below the ring!
-;(Upon reaching the destination)
-
-;(Upon reaching the destination)
-:{{A|VO chapter2 14 mar7th 114.ogg}} '''March 7th:''' The hall below the ring... I remember it being this way...
-
-:{{DIcon|Loupe}} Investigate
-:Under the careful planning and deliberation of the generals, you are about to face the powerful borisin enemies. You should make your preparations before advancing forward.
-:{{DIcon|Arrow}} I'm ready.
-:<pre>{
-	"$type": "RPG.GameCore.SetPerformanceResult",
-	"Value": 1
-}</pre>
-:{{DIcon|Exit}} Let me rest for a bit first.
-
-;(Unused &mdash; EnterArea_G29)
-----
-::{{A|VO chapter2 14 mar7th 115.ogg}} '''March 7th:''' ...Master Yanqing, what are you doing here?
-::{{A|VO chapter2 14 yanqing 111.ogg}} '''Yanqing:''' I was concerned about the safety of the Skysplitter and my dear disciple, of course!
-::{{A|VO chapter2 14 yunli 144.ogg}} '''Yunli:''' Yanqing, the wolf you are hunting is standing above us in the Wardance ring at this very moment, facing the Cloud Knights...
-::{{A|VO chapter2 14 yunli 145.ogg}} '''Yunli:''' This "Wardance" will not be seen by the people of the Xianzhou, nor will it be just a ceremonial sword fight. This is a battle to the death that offers no honor, only mortal danger. March, are you ready?
-::{{DIcon|Arrow}} I am March 7th.
-:::{{A|VO chapter2 14 mar7th 116.ogg}} '''March 7th:''' Please, I am March 7th, a swordmaster who will represent the Luofu in glorious battle!
-:::I am your disciple.
-:::{{A|VO chapter2 14 mar7th 117.ogg}} '''March 7th:''' If my masters are going to battle, how could they go without their disciple?
-:::Well, since I'm already here!
-::{{DIcon|Arrow}} I am your disciple.
-:::{{A|VO chapter2 14 mar7th 117.ogg}} '''March 7th:''' If my masters are going to battle, how could they go without their disciple?
-:::Well, since I'm already here!
-::{{DIcon|Arrow}} Well, since I'm already here!
-::{{A|VO chapter2 14 mar7th 118.ogg}} '''March 7th:''' To use General Jing Yuan's favorite expression: "Since I'm already here..."
-::{{A|VO chapter2 14 yanqing 112.ogg}} '''Yanqing:''' Yunli, Miss March, may your blades be sharp and your victories glorious!
-::{{tx}}
 {{Dialogue End}}
 
 ===Defeat Hoolay{{subst:void|<!--202230406-->}}===
 {{Mission Description|type=continuance|location=Skysplitter|update|Aboard the Skysplitter in the sky, a hunter draws their bow amid prowling wolves. The Xianzhou Luofu's Wardance arena finally plays host to a bloody contest...}}
 {{Dialogue Start}}
-;(Upon reaching the destination)
-
-;(Upon reaching the destination)
-----
-;([[#Gallery|Cutscene]] plays)
-::So feeble! Such weakness is truly pathetic!
-;(Cutscene ends)
-----
-;(Enter battle)
-::{{tx|Enemy list missing}}
-----
-----
-;([[#Gallery|Cutscene]] plays)
-::I've had enough... Time to finish this little game!
-::...What's happening?
-;(Cutscene ends)
-----
-----
-----
 :{{tx}}
-----
-:{{tx}}
-----
-:{{tx}}
-<pre>{
-	"$type": "RPG.GameCore.PerformanceEndSeq",
-	"BeforeCases": [
-		{
-			"$type": "RPG.GameCore.SwitchCharacterAnchorV2",
-			"SwitchCharacterAnchorConfig": {
-				"IsLocalPlayer": true,
-				"CharacterUniqueName": "LocalPlayer",
-				"AreaName": {
-					"Value": "LevelArea_P20242_F20242001_G31"
-				},
-				"AnchorName": {
-					"Value": "Anchor1"
-				}
-			}
-		}
-	]
-}</pre>
-<pre>{
-	"$type": "RPG.GameCore.ResetMissionAudioState",
-	"ResetBGMEmotionState": true
-}</pre>
-;(Upon reaching the destination)
-
-;(Upon reaching the destination)
-----
-----
-;([[#Gallery|Cutscene]] plays)
-::So... you want to play dirty?
-::The air... it's colder?
-::My sword... is even colder.
-;(Cutscene ends)
-----
-;(Enter battle)
-:{{Enemy List|Borisin Warhead: Hoolay*1}}
 {{Dialogue End}}
 
 ===Witness Hoolay's defeat{{subst:void|<!--202230409-->}}===
 {{Dialogue Start}}
-----
-----
-;([[#Gallery|Cutscene]] plays)
-::Impossible! How could a mere whelp... defeat me!?
-;(Cutscene ends)
-----
-<pre>{
-	"$type": "RPG.GameCore.PerformanceEndSeq",
-	"BeforeCases": [
-		{
-			"$type": "RPG.GameCore.SwitchCharacterAnchorV2",
-			"SwitchCharacterAnchorConfig": {
-				"IsLocalPlayer": true,
-				"CharacterUniqueName": "LocalPlayer",
-				"AreaName": {
-					"Value": "LevelArea_P20242_F20242001_G33"
-				},
-				"AnchorName": {
-					"Value": "Anchor1"
-				}
-			}
-		},
-		{
-			"$type": "RPG.GameCore.SetAudienceGroupVisible",
-			"GroupMemberList": {
-				"Value": [
-					{
-						"$type": "RPG.GameCore.AudienceGroupMemberInfo",
-						"GroupID": 203
-					}
-				]
-			}
-		},
-		{
-			"$type": "RPG.GameCore.SetAudienceGroupVisible",
-			"GroupMemberList": {
-				"Value": [
-					{
-						"$type": "RPG.GameCore.AudienceGroupMemberInfo",
-						"GroupID": 202
-					}
-				]
-			}
-		},
-		{
-			"$type": "RPG.GameCore.SetAudienceGroupVisible",
-			"GroupMemberList": {
-				"Value": [
-					{
-						"$type": "RPG.GameCore.AudienceGroupMemberInfo",
-						"GroupID": 318
-					}
-				]
-			},
-			"Visible": true
-		}
-	]
-}</pre>
+:{{tx}}
 {{Dialogue End}}
 
 ==Other Languages==

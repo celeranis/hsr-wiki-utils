@@ -46,336 +46,40 @@ PageTitle=#Fleeting Lights#
 ===Return to the Express{{subst:void|<!--401010503-->}}===
 {{Mission Description|type=adventure|location=Parlor Car|update|Pom-Pom messages you, claiming that something strange has appeared on the Express. They hope you can help them catch it.<br />What can you possibly do? It's not like you're a member of the Weird-Busters. You've got no choice but to heed the conductor's request, though.}}
 {{Dialogue Start}}
-:<!--0.5-second delay-->
-
-;(Talk to Pom-Pom)
-:{{A|VO SideX sys1 pompom 101 m.ogg}} {{A|VO SideX sys1 pompom 101 f.ogg}} '''Pom-Pom:''' Oh good, you're here, (Trailblazer)!
-:{{DIcon|Arrow}} Where is the strange thing you were talking about?
-:{{A|VO SideX sys1 pompom 102.ogg}} '''Pom-Pom:''' Pom-Pom doesn't know, but it's in the Express! No one knows Akivili's Express better than Pom-Pom. There is something strange in here, Pom-Pom can feel it!
-:{{A|VO SideX sys1 pompom 103.ogg}} '''Pom-Pom:''' Help Pom-Pom look for it. We have to find it.
-:{{A|VO SideX sys1 pompom 104.ogg}} '''Pom-Pom:''' We have to find it!
-<pre>{
-	"$type": "RPG.GameCore.ShowMenu"
-}</pre>
-:{{A|VO SideX sys1 pompom 105 m.ogg}} {{A|VO SideX sys1 pompom 105 f.ogg}} '''Pom-Pom:''' (Trailblazer), have you found something?
-:{{DIcon|Arrow}} There's this strange mirror...
-::{{A|VO SideX sys1 pompom 106.ogg}} '''Pom-Pom:''' Wahh! P&mdash;P&mdash;Pom-Pom knew something strange was going on!
-:{{DIcon|Arrow}} There's nothing.
-::{{A|VO SideX sys1 pompom 107.ogg}} '''Pom-Pom:''' Wahh! Even you didn't find anything...?
-:{{A|VO SideX sys1 pompom 108 m.ogg}} {{A|VO SideX sys1 pompom 108 f.ogg}} '''Pom-Pom:''' Come on, (Trailblazer), think of something!
+:{{tx}}
 {{Dialogue End}}
 
 ===Talk to Pom-Pom{{subst:void|<!--401010504-->}}===
 {{Dialogue Start}}
-<pre>{
-	"$type": "RPG.GameCore.WaitUIControllerClose",
-	"UIControllerName": "PhoneNoticePage"
-}</pre>
-<pre>{
-	"$type": "RPG.GameCore.WaitUIControllerClose",
-	"UIControllerName": "MobilePhonePage"
-}</pre>
-;(Upon reaching the destination)
-
-;(Upon reaching the destination)
-:{{tx}}
-
-;(Upon reaching the destination)
-:{{tx}}
-
-;(Upon reaching the destination)
 :{{tx}}
 {{Dialogue End}}
 
 ===Locate the strange occurrence aboard the Express{{subst:void|<!--401010505-->}}===
 {{Dialogue Start}}
-:<!--0.25-second delay-->
-<pre>{
-	"$type": "RPG.GameCore.PropSetupUITrigger",
-	"DestroyAfterTriggered": true,
-	"ButtonIcon": "SpriteOutput/TalkIcon/ChatMissionIcon.png",
-	"IconType": "ChatMissionIcon",
-	"ButtonText": {
-		"Hash": 16304550243505668348
-	},
-	"ButtonCallback": [
-		{
-			"$type": "RPG.GameCore.PlayMissionTalk",
-			"SimpleTalkList": [
-				{
-					"TalkSentenceID": 401010530,
-					"ProtectTime": 3
-				}
-			]
-		}
-	],
-	"OverrideTargetTypes": [],
-	"TargetType": {
-		"$type": "RPG.GameCore.TargetFetchAdvPropEx",
-		"FetchType": "SinglePropByPropID",
-		"SinglePropID": {
-			"GroupID": {
-				"FixedValue": {
-					"Value": 48
-				}
-			},
-			"ID": {
-				"FixedValue": {
-					"Value": 300001
-				}
-			}
-		}
-	}
-}</pre>
-
-;(Talk to Welt Yang)
-:{{A|VO SideX sys1 welt 101.ogg}} '''Welt:''' Did they send for you as well? Looks like Pom-Pom is quite serious this time...
-:{{DIcon|Talk}} Mr. Yang, did you notice anything unusual?
-::{{A|VO SideX sys1 welt 102.ogg}} '''Welt:''' No. I have a heightened sense of hostility and danger, but I don't sense anything on the Express.
-::{{A|VO SideX sys1 welt 103.ogg}} '''Welt:''' The galaxy is huge. Maybe there's some kind of organism that can become invisible visiting us...
-:;(Return to previous option selection)
-:{{DIcon|Talk}} What is this strange thing the conductor is referring to?
-::{{A|VO SideX sys1 welt 104.ogg}} '''Welt:''' Not sure, Pom-Pom couldn't put it into words. It's like a gut feeling.
-::{{A|VO SideX sys1 welt 105.ogg}} '''Welt:''' I lean towards trusting Pom-Pom's instinct when it has to do with the Express.
-:;(Return to previous option selection)
-:{{DIcon|Talk}} Where are March 7th and Dan Heng?
-::{{A|VO SideX sys1 welt 106.ogg}} '''Welt:''' Himeko had them go to a different coach. We can take care of what's going on here.
-:;(Return to previous option selection)
-:{{DIcon|Exit}} Okay...
-
-;(Talk to Himeko)
-:{{A|VO SideX sys1 himeko 101 m.ogg}} {{A|VO SideX sys1 himeko 101 f.ogg}} '''Himeko:''' Oh hey (Trailblazer), thanks for coming!
-:{{DIcon|Talk}} Himeko, did you notice anything unusual?
-::{{A|VO SideX sys1 himeko 102.ogg}} '''Himeko:''' Nope, but there must be something on the Express if Pom-Pom is getting so worked up.
-::{{A|VO SideX sys1 himeko 103.ogg}} '''Himeko:''' Don't worry, I have another way to deal with this if no one can find anything... It's just a little wasteful to use it on something like this. But we can't let it continue to stress the conductor either.
-:;(Return to previous option selection)
-:{{DIcon|Talk}} The conductor seems very anxious...
-::{{A|VO SideX sys1 himeko 104.ogg}} '''Himeko:''' Yep, Pom-Pom has a deep connection with the Astral Express. Anything that could harm the Express always stresses out the conductor.
-::{{A|VO SideX sys1 himeko 105.ogg}} '''Himeko:''' So... help me educate March about not messing with the equipment on the Express.
-:;(Return to previous option selection)
-:{{DIcon|Talk}} What can I do?
-::{{A|VO SideX sys1 himeko 106.ogg}} '''Himeko:''' Check the coach and see if there is anything out of the ordinary.
-:;(Return to previous option selection)
-:{{DIcon|Exit}} Will do.
-
-;(Talk to Pom-Pom)
-:{{A|VO SideX sys1 pompom 104.ogg}} '''Pom-Pom:''' We have to find it!
+:{{tx}}
 {{Dialogue End}}
 
 ===Investigate the strange mirror{{subst:void|<!--401010506-->}}===
 {{Mission Description|type=adventure|location=Parlor Car|update|You actually did discover something weird aboard the Express &mdash; a mirror.<br />Why is everyone turning a blind eye to this mirror?}}
 {{Dialogue Start}}
-:<!--0.25-second delay-->
-<pre>{
-	"$type": "RPG.GameCore.PropSetupUITrigger",
-	"DestroyAfterTriggered": true,
-	"ButtonIcon": "SpriteOutput/TalkIcon/CheckIcon.png",
-	"IconType": "CheckIcon",
-	"ButtonText": {
-		"Hash": 16304550243505668348
-	},
-	"ButtonCallback": [
-		{
-			"$type": "RPG.GameCore.TriggerCustomString",
-			"CustomString": {
-				"Value": "401010506_performance"
-			}
-		}
-	],
-	"OverrideTargetTypes": [],
-	"TargetType": {
-		"$type": "RPG.GameCore.TargetFetchAdvPropEx",
-		"FetchType": "SinglePropByPropID",
-		"SinglePropID": {
-			"GroupID": {
-				"FixedValue": {
-					"Value": 48
-				}
-			},
-			"ID": {
-				"FixedValue": {
-					"Value": 300004
-				}
-			}
-		}
-	}
-}</pre>
+:{{tx}}
 {{Dialogue End}}
 
 ===Clear any Memory stage of the Forgotten Hall{{subst:void|<!--401010507-->}}===
 {{Mission Description|type=adventure|location=Parlor Car|update|This mirror turns out to be a memetic entity. A messenger from the Garden of Recollection had quietly boarded the Express in the hope of making some kind of deal with you. She says your memory is very precious, and that the Garden is willing to exchange precious materials for it. Doing so requires inducement of memories inside the Forgotten Hall, so that they can be extracted.<br />You've never seen such a complex system packaging as this.}}
 {{Dialogue Start}}
-<pre>{
-	"$type": "RPG.GameCore.DestroyNPC",
-	"GroupID": 48,
-	"GroupNpcID": 400005
-}</pre>
-:<!--0.25-second delay-->
-
-;(Talk to Messenger)
-:{{A|VO SideX sys1 messenger 141.ogg}} '''Messenger:''' Do you want to enter the Forgotten Hall?
-:{{DIcon|Arrow}} Enter.
-:<pre>{
-	"$type": "RPG.GameCore.ShowGroupChallengeSelectPage"
-}</pre>
-:{{DIcon|Exit}} No, goodbye.
-:{{A|VO SideX sys1 player 101 m.ogg}} {{A|VO SideX sys1 player 101 f.ogg}} '''(Trailblazer):''' (Ask the conductor about what happened...)
-:{{A|VO SideX sys1 pompom 101 m.ogg}} {{A|VO SideX sys1 pompom 101 f.ogg}} '''Pom-Pom:''' Oh good, you're here, (Trailblazer)!
-:Where is the strange thing you were talking about?
-:The conductor is in trouble, we can't just stand around and do nothing.
-:{{A|VO SideX sys1 pompom 102.ogg}} '''Pom-Pom:''' Pom-Pom doesn't know, but it's in the Express! No one knows Akivili's Express better than Pom-Pom. There is something strange in here, Pom-Pom can feel it!
-:{{A|VO SideX sys1 pompom 103.ogg}} '''Pom-Pom:''' Help Pom-Pom look for it. We have to find it.
-:{{A|VO SideX sys1 pompom 104.ogg}} '''Pom-Pom:''' We have to find it!
-:{{A|VO SideX sys1 welt 101.ogg}} '''Welt:''' Did they send for you as well? Looks like Pom-Pom is quite serious this time...
-:Mr. Yang, did you notice anything unusual?
-:{{A|VO SideX sys1 welt 102.ogg}} '''Welt:''' No. I have a heightened sense of hostility and danger, but I don't sense anything on the Express.
-:{{A|VO SideX sys1 welt 103.ogg}} '''Welt:''' The galaxy is huge. Maybe there's some kind of organism that can become invisible visiting us...
-:What is this strange thing the conductor is referring to?
-:{{A|VO SideX sys1 welt 104.ogg}} '''Welt:''' Not sure, Pom-Pom couldn't put it into words. It's like a gut feeling.
-:{{A|VO SideX sys1 welt 105.ogg}} '''Welt:''' I lean towards trusting Pom-Pom's instinct when it has to do with the Express.
-:Where are March 7th and Dan Heng?
-:{{A|VO SideX sys1 welt 106.ogg}} '''Welt:''' Himeko had them go to a different coach. We can take care of what's going on here.
-:Okay...
-:{{A|VO SideX sys1 himeko 101 m.ogg}} {{A|VO SideX sys1 himeko 101 f.ogg}} '''Himeko:''' Oh hey (Trailblazer), thanks for coming!
-:Himeko, did you notice anything unusual?
-:{{A|VO SideX sys1 himeko 102.ogg}} '''Himeko:''' Nope, but there must be something on the Express if Pom-Pom is getting so worked up.
-:{{A|VO SideX sys1 himeko 103.ogg}} '''Himeko:''' Don't worry, I have another way to deal with this if no one can find anything... It's just a little wasteful to use it on something like this. But we can't let it continue to stress the conductor either.
-:The conductor seems very anxious...
-:{{A|VO SideX sys1 himeko 104.ogg}} '''Himeko:''' Yep, Pom-Pom has a deep connection with the Astral Express. Anything that could harm the Express always stresses out the conductor.
-:{{A|VO SideX sys1 himeko 105.ogg}} '''Himeko:''' So... help me educate March about not messing with the equipment on the Express.
-:What can I do?
-:{{A|VO SideX sys1 himeko 106.ogg}} '''Himeko:''' Check the coach and see if there is anything out of the ordinary.
-:Will do.
-:There doesn't seem to be anything wrong with the coffee machine. You make a cup of coffee, and it tastes good, at least better than Himeko's.
-:You scrutinize every leaf and rhizome, turn over every piece of dirt, and do not find anything suspicious.
-:The light bulb emits a soft glow, and you stare hard at it.
-:A mirror catches your eye... You're confused.
-:Where's the mirror from?
-:You don't remember there being such a mirror on the Express.
-:The mirror is broken. Why isn't it repaired?
-:The mirror is grateful for your kindness. But the question is... when did it appear? You don't remember there being such a mirror on the Express.
-:Why am I so pretty?
-:That's a great question, but the mirror can't answer it. You don't even remember there being such a mirror on the Express.
-:What's even stranger is that everyone else on the train seems to turn a blind eye to the sudden appearance of the mirror... Maybe you should re-check the mirror or ask the others about it. If you want to save time, you should check it yourself.
-:{{A|VO SideX sys1 welt 101.ogg}} '''Welt:''' Did they send for you as well? Looks like Pom-Pom is quite serious this time...
-:What's the deal with that mirror?
-:{{A|VO SideX sys1 welt 108.ogg}} '''Welt:''' Mirror...?
-:The one right there.
-:{{A|VO SideX sys1 welt 109.ogg}} '''Welt:''' ...
-:{{A|VO SideX sys1 player 102 m.ogg}} {{A|VO SideX sys1 player 102 f.ogg}} '''(Trailblazer):''' (Looks like Mr. Yang really can't see it...)
-:{{A|VO SideX sys1 welt 110.ogg}} '''Welt:''' An invisible mirror? I think I've heard something about that...
-:{{A|VO SideX sys1 himeko 101 m.ogg}} {{A|VO SideX sys1 himeko 101 f.ogg}} '''Himeko:''' Oh hey (Trailblazer), thanks for coming!
-:What's the deal with that mirror?
-:{{A|VO SideX sys1 himeko 108.ogg}} '''Himeko:''' What are you talking about? What mirror?
-:The one right there.
-:{{A|VO SideX sys1 himeko 109.ogg}} '''Himeko:''' I don't see a mirror...
-:{{A|VO SideX sys1 player 103 m.ogg}} {{A|VO SideX sys1 player 103 f.ogg}} '''(Trailblazer):''' (Seems like I'm the only one who can see it...)
-:{{A|VO SideX sys1 himeko 110.ogg}} '''Himeko:''' There's nothing there.
-:{{A|VO SideX sys1 pompom 105 m.ogg}} {{A|VO SideX sys1 pompom 105 f.ogg}} '''Pom-Pom:''' (Trailblazer), have you found something?
-:There's this strange mirror...
-:{{A|VO SideX sys1 pompom 106.ogg}} '''Pom-Pom:''' Wahh! P&mdash;P&mdash;Pom-Pom knew something strange was going on!
-:There's nothing.
-:{{A|VO SideX sys1 pompom 107.ogg}} '''Pom-Pom:''' Wahh! Even you didn't find anything...?
-:{{A|VO SideX sys1 pompom 108 m.ogg}} {{A|VO SideX sys1 pompom 108 f.ogg}} '''Pom-Pom:''' Come on, (Trailblazer), think of something!
-:{{A|VO SideX sys1 pompom 108 m.ogg}} {{A|VO SideX sys1 pompom 108 f.ogg}} '''Pom-Pom:''' Come on, (Trailblazer), think of something!
-:You approach the mirror and see a figure slowly emerging in it &mdash; but it doesn't look like you at all. In the mirror is a girl in a hood, her face hidden by a strange mask, making it impossible to make out her appearance.
-:Before you can react, the girl steps out of the mirror.
-:{{A|VO SideX sys1 messenger 101.ogg}} '''???:''' Wow, so this is the Astral Express?
-:Yes, that's right.
-:{{A|VO SideX sys1 messenger 102.ogg}} '''???:''' Huh, perfect.
-:Who are you...
-:{{A|VO SideX sys1 messenger 103.ogg}} '''???:''' Oh, I haven't introduced myself yet...
-:Take this, you monster!
-:Before any words are spoken, you swing your baseball bat at the girl. The bat goes through her body and through the mirror as if they don't even exist.
-:{{A|VO SideX sys1 messenger 104.ogg}} '''???:''' Wait a minute! I'm not one of the bad guys!
-:{{A|VO SideX sys1 messenger 105.ogg}} '''Messenger:''' I'm a messenger from the Garden of Recollection. I will be staying on the Express from now on. It's very nice to meet you!
-:Err, it's nice to meet you too.
-:{{A|VO SideX sys1 messenger 106.ogg}} '''Messenger:''' Thank you! You're a friendly one! However, I should still explain&mdash;
-:Do you have the approval of the train's owner?
-:{{A|VO SideX sys1 messenger 107.ogg}} '''Messenger:''' Erm, that's why I'm here. Let me explain&mdash;
-:Garden of Recollection? What is that?
-:{{A|VO SideX sys1 messenger 108.ogg}} '''Messenger:''' Let me explain&mdash;
-:{{A|VO SideX sys1 messenger 109.ogg}} '''Messenger:''' Garden of Recollection is an organization that worships the Aeon Fuli. As a messenger for the Remembrance, we surrendered our worldly bodies and traverse the universe in the form of memes to search the stars on behalf of Fuli for the most precious memories.
-:{{A|VO SideX sys1 messenger 110.ogg}} '''Messenger:''' Seeing that I'm able to be here, you must have already come to understand the concept of Remembrance and the Garden of Recollection. The memories that you possess have activated a pathway for the Garden of Recollection to make copies and implant me into your thoughts...
-:{{A|VO SideX sys1 messenger 111.ogg}} '''Messenger:''' We can actually just follow you without being noticed. However, the Garden of Recollection believes that you're special: The memories that you possess are extremely rare and precious, and it's very likely there'll be even more in the future...
-:{{A|VO SideX sys1 messenger 112.ogg}} '''Messenger:''' That's why I thought it'd be best if I introduced myself to you! I noticed that you've also received the concept of Memosnatchers... The Garden of Recollection wouldn't want you to mistake us for thieves or crooks! Everything we do is for a higher purpose.
-:{{A|VO SideX sys1 messenger 113.ogg}} '''Messenger:''' I believe we've become acquainted now.
-:When did I come across those things before...
-:{{A|VO SideX sys1 messenger 114.ogg}} '''Messenger:''' Some keywords and hints to your question: Herta and Light Cone &mdash; when you came in contact with them, the concept of Remembrance, Garden of Recollection, and Memosnatcher were implanted in you.
-:{{A|VO SideX sys1 messenger 115.ogg}} '''Messenger:''' Madam Herta has a slight prejudice against us, so the Garden of Recollection believes that it'll be best if I provide you with a proper understanding of these concepts.
-:What is your noble cause?
-:{{A|VO SideX sys1 messenger 116.ogg}} '''Messenger:''' We want to prevent the universe from being forgotten because of the Destruction.
-:{{A|VO SideX sys1 messenger 117.ogg}} '''Messenger:''' Even if all matter is annihilated, it can continue to live on in the form of memories.
-:So you're just smuggling yourself on board the express?
-:{{A|VO SideX sys1 messenger 118.ogg}} '''Messenger:''' There's a big difference, of course. I don't have a material body, so it doesn't count as smuggling.
-:So, you're a... 2D character?
-:{{A|VO SideX sys1 messenger 119.ogg}} '''Messenger:''' Yup, just imagine me as someone from the posters. It would be strange if you were to scold someone from the cartoons for smuggling, right?
-:So, you're a... burglar of physical bodies?
-:{{A|VO SideX sys1 messenger 120.ogg}} '''Messenger:''' Why would I want to steal a material body? I gave up my own willingly!
-:{{A|VO SideX sys1 messenger 121 m.ogg}} {{A|VO SideX sys1 messenger 121 f.ogg}} '''Messenger:''' There is actually something that I need. So I'll get right to it. (Trailblazer), the Garden of Recollection wants to preserve your memories.
-:{{A|VO SideX sys1 messenger 122.ogg}} '''Messenger:''' But don't worry, we won't take it from you. We just want to make a copy of the precious moments. You can see it as a trade between us...
-:{{A|VO SideX sys1 messenger 123.ogg}} '''Messenger:''' This is the Forgotten Hall created specially to store your memories. We hope that you can visit this place regularly to rekindle your lost memories. The Garden of Recollection will extract the memories they want and give you something in return &mdash; in the form of matter and Light Cones.
-:{{A|VO SideX sys1 messenger 124.ogg}} '''Messenger:''' Come, I swear on the memories of my past self that you won't be at a loss for anything.
-:{{A|VO SideX sys1 messenger 125.ogg}} '''Messenger:''' What is it? Are you not feeling well?
-:{{DIcon|Arrow}} I don't think I'm used to this...
-::{{A|VO SideX sys1 messenger 126.ogg}} '''Messenger:''' That's how it is the first time.
-::It's nothing, I feel fine.
-::{{A|VO SideX sys1 messenger 127.ogg}} '''Messenger:''' Ah, that's good. I was afraid you'd be angry.
-::Why do we still have to fight inside?
-:{{DIcon|Arrow}} It's nothing, I feel fine.
-::{{A|VO SideX sys1 messenger 127.ogg}} '''Messenger:''' Ah, that's good. I was afraid you'd be angry.
-::Why do we still have to fight inside?
-:{{DIcon|Arrow}} Why do we still have to fight inside?
-:{{A|VO SideX sys1 messenger 128.ogg}} '''Messenger:''' A strong stimulus will lower your guard against your subconscious. Only then will we be able to copy your memories.
-:{{A|VO SideX sys1 messenger 129.ogg}} '''Messenger:''' From now on, all you have to do is enter the Forgotten Hall periodically, and we'll give you an abundant amount of rewards.
-:{{A|VO SideX sys1 messenger 130.ogg}} '''Messenger:''' Erm, about me being on the Astral Express... It'd be best if you kept it between the two of us. I won't reveal myself to your companions, so make sure you don't tell them about me, okay?
-:{{DIcon|Arrow}} No, I have to tell them.
-::{{A|VO SideX sys1 messenger 131.ogg}} '''Messenger:''' If that's the case, the Garden of Recollection will have to block out their memories... I really don't have a choice, please don't make me do that!
-::This is our little secret.
-::{{A|VO SideX sys1 messenger 132 m.ogg}} {{A|VO SideX sys1 messenger 132 f.ogg}} '''Messenger:''' Perfect! Thank you, (Trailblazer). I'm glad you're so pleasant to work with.
-::Then what should I tell everyone?
-:{{DIcon|Arrow}} This is our little secret.
-::{{A|VO SideX sys1 messenger 132 m.ogg}} {{A|VO SideX sys1 messenger 132 f.ogg}} '''Messenger:''' Perfect! Thank you, (Trailblazer). I'm glad you're so pleasant to work with.
-::Then what should I tell everyone?
-:{{DIcon|Arrow}} Then what should I tell everyone?
-:{{A|VO SideX sys1 messenger 133.ogg}} '''Messenger:''' Erm, you can say that it's just a Phase Flame or an Inquisition Spirit. They often suddenly appear and then vanish. You should be able to get past them with that...
-:{{A|VO SideX sys1 messenger 134.ogg}} '''Messenger:''' Alrighty then, just step close to the mirror if you ever want to find me.
 :{{tx}}
 {{Dialogue End}}
 
 ===Tell the truth to the Astral Express Crew{{subst:void|<!--401010509-->}}===
 {{Dialogue Start}}
-
-;(Talk to Welt Yang)
-----
-:{{A|VO SideX sys1 welt 111 m.ogg}} {{A|VO SideX sys1 welt 111 f.ogg}} '''Welt:''' (Trailblazer), did you find anything?
-:{{DIcon|Arrow}} (Tell the truth.)
-::{{A|VO SideX sys1 himeko 111.ogg}} '''Himeko:''' Someone from the Garden of Recollection is here? On the Express...?
-::{{A|VO SideX sys1 welt 112.ogg}} '''Welt:''' Seems like the rumors are true. The Emanators of the Remembrance don't have a physical body and only those they allow can see them.
-::{{A|VO SideX sys1 pompom 110.ogg}} '''Pom-Pom:''' The Express is not a place they can just come and go as they wish! We have to kick them out!
-::{{A|VO SideX sys1 welt 113.ogg}} '''Welt:''' Yes, I agree. Dealing with the Garden of Recollection is dangerous, and the trade of memories is... a shady business.
-::{{A|VO SideX sys1 himeko 112.ogg}} '''Himeko:''' We'll come up with something. Don't worry, conductor.
-::{{A|VO SideX sys1 pompom 111.ogg}} '''Pom-Pom:''' Alright, thanks!
-:{{DIcon|Arrow}} (Cover up for the Messenger.)
-::{{A|VO SideX sys1 himeko 113.ogg}} '''Himeko:''' An Inquisition Spirit...? On the Express?
-::{{A|VO SideX sys1 welt 114 m.ogg}} {{A|VO SideX sys1 welt 114 f.ogg}} '''Welt:''' Yeah, these creatures do suddenly pop up sometimes and start questioning the first person they see... (Trailblazer), what did it ask you?
-::{{DIcon|Arrow}} It asked... Why does one plus one equal two?
-:::{{A|VO SideX sys1 welt 115.ogg}} '''Welt:''' This actually confirms a theory that I've always had: It seems like Inquisition Spirits are a creation of the Erudition.
-::{{DIcon|Arrow}} It asked... What it should ask me?
-:::{{A|VO SideX sys1 welt 116.ogg}} '''Welt:''' This actually confirms a theory that I've always had: It seems like Inquisition Spirits are a creation of the Enigmata.
-::{{DIcon|Arrow}} It asked... if anything joyous happened recently.
-:::{{A|VO SideX sys1 welt 117.ogg}} '''Welt:''' This actually confirms a theory that I've always had: It seems like Inquisition Spirits are a creation of the Elation.
-::{{A|VO SideX sys1 pompom 112.ogg}} '''Pom-Pom:''' Pom-Pom doesn't care whose creation it is! It has to go!
-::{{A|VO SideX sys1 himeko 114.ogg}} '''Himeko:''' Indeed. Welt, do you know what to do?
-::{{A|VO SideX sys1 welt 118.ogg}} '''Welt:''' Don't worry, it should be gone by now &mdash; Inquisition Spirits only ask one question at a time. It will go elsewhere once it gets an answer.
-::{{A|VO SideX sys1 pompom 113.ogg}} '''Pom-Pom:''' That's good...
-::{{A|VO SideX sys1 player 104 m.ogg}} {{A|VO SideX sys1 player 104 f.ogg}} '''(Trailblazer):''' (That should do it...)
-----
+:{{tx}}
 {{Dialogue End}}
 
 ===(Optional) Ask the others about the weird mirror{{subst:void|<!--401010511-->}}===
 {{Mission Description|type=adventure|location=Parlor Car|update|You actually did discover something weird aboard the Express &mdash; a mirror.<br />Why is everyone turning a blind eye to this mirror?}}
 {{Dialogue Start}}
+:{{tx}}
 {{Dialogue End}}
 
 ==Other Languages==

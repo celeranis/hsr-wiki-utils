@@ -11,7 +11,7 @@ PageTitle=#Hip Hop Underground#
 |chapter       = Sound Hunt Ninjutsu Inscription
 |requirements  = {{subst:void|<!--Unknown: {"Type":"Manual"}-->}}
 |summary       = <!--official mission summary from Fate's Atlas-->
-|characters    = Trailblazer; Trashcan of MCing
+|characters    = Pela; Serval; Trailblazer; Trashcan of Hip-Hop; Trashcan of MCing; Trashcan of Rap
 |startLocation = [[Jarilo-VI]] - [[Administrative District]]
 |world         = Jarilo-VI
 |area          = Administrative District
@@ -22,8 +22,9 @@ PageTitle=#Hip Hop Underground#
 '''''Hip Hop Underground''''' is an Event [[Adventure Mission]] from the [[Sound Hunt Ninjutsu Inscription]] event.
 
 ==Steps==
-# Conduct a rapping battle against the trashcan group
+# Collect inspiration for composing a song by heading to Belobog
 # Search for traces of the underground band
+# Conduct a rapping battle against the trashcan group
 
 <!--
 ==Gameplay Notes==
@@ -34,73 +35,22 @@ PageTitle=#Hip Hop Underground#
 -->
 ==Dialogue==
 {{Stub Dialogue}}
-{{Dialogue End}}
-
-===Conduct a rapping battle against the trashcan group{{subst:void|<!--802611208-->}}===
-{{Mission Description|type=adventure|location=Administrative District|update|You've become the manager of the music party's performing band, and now your band needs to complete 3 performances on the stage in the middle of the campus.<br />Obtain a record of the trashcan group's beats to help Rappa collect inspiration for composing.}}
+===Collect inspiration for composing a song by heading to Belobog{{subst:void|<!--802611201-->}}===
+{{Mission Description|type=adventure|location=Administrative District|You've become the manager of the music party's performing band, and now your band needs to complete 3 performances on the stage in the middle of the campus.<br />Wander around Belobog's plaza, to help Rappa collect inspiration for composing.}}
 {{Dialogue Start}}
-
-;(Talk to Trashcan of MCing)
-:'''Trashcan of MCing:''' Express your sincerity. Keep up with my flow. We're gonna have the ultimate rap showdown that marks the end of the Amber Era!!!
-:{{DIcon|Travel Log}} Here I come. I'm not scared!
-:<pre>{
-	"$type": "RPG.GameCore.ShowUI",
-	"Name": "Ui.MusicRhythm.MusicRhythmChooseLevelPage",
-	"WaitForExit": true,
-	"Param": {
-		"Value": "3"
-	},
-	"OnUIExitImmediately": [
-		{
-			"$type": "RPG.GameCore.EndDialogueEntityInteract"
-		}
-	]
-}</pre>
-:{{DIcon|Exit}} I've got something else to do.
-
-;(Unused &mdash; MusicRhythm_ShowUI)
-<pre>{
-	"$type": "RPG.GameCore.WaitFrame"
-}</pre>
-:<pre>{
-	"$type": "RPG.GameCore.ShowUI",
-	"Name": "Ui.MusicRhythm.MusicRhythmChooseLevelPage",
-	"WaitForExit": true,
-	"Param": {
-		"Value": "3"
-	},
-	"OnUICustomEvent": [],
-	"OnUIExitImmediately": [
-		{
-			"$type": "RPG.GameCore.EndDialogueEntityInteract"
-		}
-	]
-}</pre>
-
-;(Talk to Trashcan of MCing)
-----
-:'''Trashcan of MCing:''' Express your sincerity. Keep up with my flow. We're gonna have the ultimate rap showdown that marks the end of the Amber Era!!!
-:{{DIcon|Travel Log}} Here I come. I'm not scared!
-:<pre>{
-	"$type": "RPG.GameCore.ShowUI",
-	"Name": "Ui.MusicRhythm.MusicRhythmChooseLevelPage",
-	"WaitForExit": true,
-	"Param": {
-		"Value": "3"
-	},
-	"OnUIExitImmediately": [
-		{
-			"$type": "RPG.GameCore.EndDialogueEntityInteract"
-		}
-	]
-}</pre>
-:{{DIcon|Exit}} I've got something else to do.
-
+:{{tx}}
 {{Dialogue End}}
 
 ===Search for traces of the underground band{{subst:void|<!--802611202-->}}===
 {{Mission Description|type=adventure|location=Administrative District|update|You've become the manager of the music party's performing band, and now your band needs to complete 3 performances on the stage in the middle of the campus.<br />Head to Belobog's underground rail station and find the mysterious band Serval mentioned.}}
 {{Dialogue Start}}
+:{{tx}}
+{{Dialogue End}}
+
+===Conduct a rapping battle against the trashcan group{{subst:void|<!--802611205-->}}===
+{{Mission Description|type=adventure|location=Administrative District|update|You've become the manager of the music party's performing band, and now your band needs to complete 3 performances on the stage in the middle of the campus.<br />Obtain a record of the trashcan group's beats to help Rappa collect inspiration for composing.}}
+{{Dialogue Start}}
+:{{tx}}
 {{Dialogue End}}
 
 ==Other Languages==

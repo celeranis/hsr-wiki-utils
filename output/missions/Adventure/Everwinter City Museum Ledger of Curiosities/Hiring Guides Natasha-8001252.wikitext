@@ -39,139 +39,17 @@ PageTitle=#Hiring Guides: Natasha#
 ===Head to the Boulder Town clinic to find Natasha{{subst:void|<!--800125201-->}}===
 {{Mission Description|type=adventure|location=Natasha's Clinic|The Belobog History and Culture Museum is about to open, but there is a great lack of guides. To rapidly fill up these positions and improve the visitor experience, Pela and Eris are inviting all Belobog citizens to apply for these positions.<br />This time they have their eye on Natasha, leader of the Underworld. Head to the Boulder Town clinic in their stead, and see whether Natasha is interested in the position.}}
 {{Dialogue Start}}
-
-
-;(Talk to Natasha)
-:'''Natasha:''' I hope your exploration will make progress, (Trailblazer), and your journey will be free of pain.
-:'''Natasha:''' Of course, even if you get injured by accident, no need to panic. Just leave it to the doctor.
+:{{tx}}
 {{Dialogue End}}
 
 ===Head to the Belobog History and Culture Museum to find Eris{{subst:void|<!--800125202-->}}===
 {{Dialogue Start}}
-
-;(Talk to Eris)
-;(If {{cx}}{{subst:void|<!--{"$type":"RPG.GameCore.ByIfGroupIsOccupied","GroupID":34,"Inverse":true}-->}})
-::----
-::'''Natasha:''' I didn't expect things to look like this inside... What a magnificent museum.
-::'''Natasha:''' Now then... Miss Eris, right? I heard that volunteer guide applications need to be submitted to you...
-::'''Eris:''' Hello! I'll pass your resume on to Miss Pela right away!
-::'''Natasha:''' Qlipoth Fort has been running surprisingly efficiently recently... (Trailblazer), can you stay on with me a while longer?
-:<pre>{
-	"$type": "RPG.GameCore.TriggerSound",
-	"SoundName": {
-		"Value": "Ev_sfx_belobog_pela_walk_near"
-	},
-	"EmitterType": "LocalPlayer"
-}</pre>
-::----
-::'''Pela:''' It's Miss Natasha! Long time no see.
-::'''Natasha:''' Indeed. Good to see you again, Miss Pela.
-::{{DIcon|Arrow}} You two know each other?
-:::'''Pela:''' That's right. When the Overworld and Underworld were reconnected, I was in charge of contacting everyone in Wildfire. At that time, it was Miss Natasha who took care of me.
-:::'''Natasha:''' Hehe, you're too kind. So then, what's the next step in the application process?
-::{{DIcon|Arrow}} I haven't seen you in a long time either!
-:::'''Pela:''' Really? A long time? Does time flow differently for you?
-:::'''Natasha:''' Hehe, looks like you two are quite familiar. So then, what's the next step?
-::'''Pela:''' Hmm... Next up, we need to conduct a quick interview. But don't worry. It's just a formality, and we won't ask too many questions.
-::'''Pela:''' (Trailblazer), since you're the assistant assessor of the interview, we'll begin when you're ready.
-::----
-;(Otherwise)
-:<pre>{
-	"$type": "RPG.GameCore.PlayMultiVoiceTalk",
-	"TalkSentenceID": 501190301
-}</pre>
-:<pre>{
-	"$type": "RPG.GameCore.ShowMenu"
-}</pre>
-
-;(Talk to Pela)
-----
-:'''Pela:''' And now you're back, (Trailblazer). Can we begin the interview now?
-:{{DIcon|Arrow}} Let's begin.
-::'''Pela:''' Alright. Let's get started then, Miss Natasha.
-::'''Natasha:''' Ask away &mdash; I'll answer everything to the best of my knowledge.
-::'''Pela:''' Thank you. Then let's begin with the name column...
-::'''Pela:''' Now, this question actually has nothing to do with the requirements to become a volunteer guide, but I just want to ask out of curiosity &mdash;
-::'''Pela:''' I noticed here that Miss Natasha has only written a given name here, but not any surname... May I ask what provoked that?
-::'''Natasha:''' Oops... As expected of a Silvermane Intelligence Officer, you don't miss a thing.
-::{{DIcon|Arrow}} Indeed. So what happened to the surname?
-::;(If {{Mission|Blizzard Immunity|showChapter=0}} has been completed)
-::::'''Natasha:''' Hmm... Do you remember that whole "Blizzard Immunity" thing? I told you about my personal experiences back then.
-::::'''Natasha:''' If you don't remember, it won't hurt to go over it again.
-::;(If {{Mission|Blizzard Immunity|showChapter=0}} has not been completed)
-::::'''Natasha:''' Hehe, since you're so curious, I'll fill you in.
-::{{DIcon|Arrow}} This question seems rather pointed...
-:::'''Natasha:''' Hehe, nah. Since you're so curious, I'll fill you in.
-::'''Natasha:''' Actually, the answer's very simple: Ever since I was a child, I've never met my parents, and I don't remember the surname they passed down to me...
-::'''Natasha:''' The Harrowers had taken me in, but they didn't ask me to take their surname &mdash; they just hoped that I could be myself, and not just a footnote of some family line. I never cared too much about the matter.
-::'''Pela:''' Harrower... Wasn't that the surname of the old director at Charice Hospital?
-::'''Natasha:''' I didn't think you'd know him... He retired long before you were even born.
-::'''Pela:''' Well, he's a famous figure in Belobog's history &mdash; sorry, I never expected Miss Natasha to have such a colorful background...
-::{{DIcon|Arrow}} Such a precious family story. Thanks for sharing.
-::{{DIcon|Arrow}} Nice one, Pela. But don't you think that question is a bit nosy?
-:::'''Pela:''' Wh&mdash;what... Even you don't like that question... Alright, I get it, my bad!
-::'''Natasha:''' That's okay. It's no big deal &mdash; don't worry about it, Miss Pela. Shall we continue?
-::'''Pela:''' Thank you, Miss Natasha... Let's continue. But having said that, your resume is beautifully written. Both your character and ability are beyond reproach... Once you've gone through the standard training, you'll be a shoo-in for this position.
-::'''Natasha:''' Hehe, you're flattering me. If you really have nothing else to inquire about, then it's okay if you want to hear about my past &mdash; you two are free to ask questions.
-::'''Pela:''' That's... Thank you very much, Miss Natasha! But I'll have to think about it...
-::'''Pela:''' (Trailblazer), have you got any questions to ask?
-::{{DIcon|Talk}} Tell me more about the Harrowers.
-::;(If {{Mission|Blizzard Immunity|showChapter=0}} has been completed)
-::::'''Natasha:''' Yevgeny and Vanessa Harrower: They might just be the most renowned couple among Belobog's surgeons... Of course, they were also my foster parents.
-::::'''Natasha:''' Do you still remember, (Trailblazer)? Back during those Blizzard Immunity days, when you and I met Vanessa &mdash; my adoptive mother?
-::::'''Natasha:''' My adoptive father was the leading surgeon in all of Belobog &mdash; he devoted his life to Charice Hospital. Mom was better at theoretical research. She stayed at the medical school leading the project team in their academic research.
-::::'''Natasha:''' The Harrowers are great people... I was so impacted by them that I took up medicine myself.
-:::;(Return to previous option selection)
-::;(If {{Mission|Blizzard Immunity|showChapter=0}} has not been completed)
-::::'''Natasha:''' Yevgeny and Vanessa Harrower: They might just be the most renowned couple among Belobog's surgeons... Of course, they were also my foster parents.
-::::'''Natasha:''' My adoptive father was the leading surgeon in all of Belobog &mdash; he devoted his life to Charice Hospital. Mom was better at theoretical research. She stayed at the medical school leading the project team in their academic research.
-::::'''Natasha:''' The Harrowers are great people... I was so impacted by them that I took up medicine myself.
-:::;(Return to previous option selection)
-::{{DIcon|Talk}} Tell me more about the scientific expeditionary team.
-:::'''Natasha:''' Before Supreme Guardian Cocolia took office, the Architects had never suspended exploration beyond the outer walls. And the scientific expeditionary team was entrusted with this dangerous task.
-:::'''Natasha:''' This expeditionary team consisted of a group of curious researchers and explorers who had volunteered to discover a world beyond Belobog, trying to find another home for our people.
-:::'''Natasha:''' I joined their ranks in order to get my credentials and became the expeditionary team's accompanying doctor. However, that was the very year in which the great explorer Penya passed away...
-:::'''Pela:''' I never expected you to have met my mom...
-:::'''Natasha:''' ...I'm sorry, Miss Pela. We tried everything we could, but there really was nothing we could do...
-:::'''Pela:''' I understand, Miss Natasha. Let bygones be bygones...
-::;(Return to previous option selection)
-::{{DIcon|Talk}} Tell me more about field hospitals.
-:::'''Natasha:''' Field hospitals... I guess Miss Pela knows more about those than I do?
-:::'''Pela:''' Well, then allow me to explain. Field hospitals fall under the Silvermane Guards' Logistics Department, and are mainly responsible for providing on-the-spot medical care for those wounded in battle &mdash; but they're also often available for the masses, too.
-:::'''Pela:''' I remember... Before Madam Cocolia took office, the Silvermane Guards were still focused on defense &mdash; back then, field treatment hospitals were pretty much just the same as normal hospitals, right?
-:::'''Natasha:''' Hehe, you're right. Back then, we rarely received expeditionary orders and mostly treated normal citizens, which wasn't really any different from doing an internship at Charice Hospital.
-:::'''Natasha:''' But after Madame Cocolia took office, the fighting intensified and field hospitals were under more stress. But by that time, I'd already returned to the Underworld...
-:::'''Natasha:''' Sometimes, when I think things over carefully... I feel like I'm no different from a soldier deserting the army.
-::;(Return to previous option selection)
-::{{DIcon|Talk}} Tell me more about Rivet Town's orphanage.
-:::'''Natasha:''' After I got back to the Underworld, I'd spent all my time running around treating patients and looking after the children at the orphanage &mdash; the clinic nursery was really just another name for an orphanage.
-:::'''Natasha:''' But... I think you must've heard what happened later &mdash; Rivet Town became affected by the Fragmentum, and we had no choice but to leave for Boulder Town.
-:::'''Natasha:''' Losing the big old estate house in Rivet Town left the clinic nursery in a real predicament... But fortunately the kids didn't mind the transition at all.
-:::'''Natasha:''' For them, having food to eat, clothes on their backs, and friends to play with was all they needed in life. They've no way of longing for anything more &mdash; because they come from the Underworld. They've never known any other kind of world.
-:::'''Natasha:''' But that's not the case for me &mdash; I will do everything I can to give them the best living conditions possible, to help them grow up to be upright, kind, and happy people...
-:::'''Natasha:''' ...Because they deserve such a future. This is why I've been running the clinic nursery and the clinic, and it's why I've joined Wildfire.
-::;(Return to previous option selection)
-::{{DIcon|Arrow}} I don't have any more questions.
-:::'''Pela:''' If that's so... Then please allow me to ask you one more thing.
-:::'''Pela:''' Miss Natasha: What is your reason for wanting to be a volunteer guide?
-:::'''Natasha:''' Oh...
-:::'''Natasha:''' I'm afraid it's nothing lofty... Maybe I'm just fulfilling a childhood dream? Also, I want to retell what I see here to the kids who couldn't make it up to the Overworld &mdash; they would love to hear about it.
-:::'''Pela:''' ...I understand. Thank you, Miss Natasha.
-:::'''Pela:''' Let's call it a day then. I'll announce the result now...
-:::'''Pela:''' Congratulations, Miss Natasha &mdash; it's a pleasure to be able to work with you again!
-:::'''Natasha:''' Hehe... The pleasure is mine, too. I hope to see you at the museum again in the future as well, (Trailblazer).
-:::'''Pela:''' Good work today, (Trailblazer). I'll help Miss Natasha finish getting all signed up. See you later!
-:::----
-:{{DIcon|Exit}} Please give me a moment.
-::'''Pela:''' No problem. We'll wait for you.
-::----
+:{{tx}}
 {{Dialogue End}}
 
 ===Start the interviews in the museum's rest area{{subst:void|<!--800125203-->}}===
 {{Dialogue Start}}
-----
-:'''Eris:''' Hello, (Trailblazer)! Pela and I have been screening prospective volunteer guides for the museum recently, and we've finally found the right candidate...
-:'''Eris:''' Could you help us contact the itinerant doctor at the Boulder Town, {{Color|keyword|nobold=1|Natasha}} &mdash; thanks, (Trailblazer)!
+:{{tx}}
 {{Dialogue End}}
 
 ==Other Languages==

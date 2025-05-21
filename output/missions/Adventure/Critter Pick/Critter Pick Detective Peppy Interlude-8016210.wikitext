@@ -33,51 +33,12 @@ PageTitle=#Critter Pick: Detective Peppy Interlude#
 -->
 ==Dialogue==
 {{Stub Dialogue}}
-<pre>{
-	"$type": "RPG.GameCore.WaitUIControllerClose",
-	"UIControllerName": "SpaceZooBreedResultDialog"
-}</pre>
-<pre>{
-	"$type": "RPG.GameCore.WaitUIControllerClose",
-	"UIControllerName": "SpaceZooMainPage"
-}</pre>
-<pre>{
-	"$type": "RPG.GameCore.PlayMessage",
-	"MessageSectionID": 1221300
-}</pre>
-<pre>{
-	"$type": "RPG.GameCore.SaveMessage",
-	"MessageSectionID": 1221300
-}</pre>
 {{Dialogue End}}
 
 ===Clear all stages in It All Started With a Man and a Dog{{subst:void|<!--801621002-->}}===
 {{Mission Description|type=adventure|location=Seclusion Zone|update|Asta approaches you for help: Peppy is missing, and she's too busy, so she needs you to find Peppy. Fortunately, the nurturing work is going very well, so you happen to be free right now &mdash; go help out.<br />How exactly is Peppy's disappearance connected to the creations? The Helper Robot isn't very clear on this, either.}}
 {{Dialogue Start}}
-
-;(Talk to Little Robot)
-:'''Little Robot:''' Dear (Trailblazer), Peppy has arrived at the designated zone.
-:'''Little Robot:''' The zone has been sealed off. Do we enter?
-:{{DIcon|Arrow}} Let's go.
-:<pre>{
-	"$type": "RPG.GameCore.SetLocalPlayerDitherAlpha"
-}</pre>
-:<pre>{
-	"$type": "RPG.GameCore.OpenTreasureChallenge",
-	"RaidID": 4400101,
-	"OnCancel": [
-		{
-			"$type": "RPG.GameCore.EndDialogueEntityInteract"
-		},
-		{
-			"$type": "RPG.GameCore.TriggerCustomString",
-			"CustomString": {
-				"Value": "ALL_TALK_END"
-			}
-		}
-	]
-}</pre>
-:{{DIcon|Exit}} I'm not ready yet.
+:{{tx}}
 {{Dialogue End}}
 
 ==Other Languages==

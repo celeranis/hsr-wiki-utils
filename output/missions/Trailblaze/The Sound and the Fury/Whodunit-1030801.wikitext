@@ -40,156 +40,23 @@ PageTitle=#Whodunit#
 ===Interrogate Black Swan{{subst:void|<!--103080101-->}}===
 {{Mission Description|type=trailblaze|location=The Reverie (Dreamscape)|As Acheron wages a ferocious battle against the Stellaron Hunter, Black Swan abducts you and takes you before Aventurine. Aventurine expresses his request to you, but you still cannot shake off your shock and the (to an extent) rage at being betrayed.<br />Perhaps you should ask the Memokeeper just what she is planning.}}
 {{Dialogue Start}}
-
-;(Talk to Black Swan)
-:{{A|VO chapter3 7 blackswan 102.ogg}} '''Black Swan:''' My, my... you look like a small injured animal. Are you still willing to talk to me? Of course... I'm still willing to be your psychotherapist.
-:{{DIcon|Talk}} You betrayed me?
-::{{A|VO chapter3 7 blackswan 103.ogg}} '''Black Swan:''' I admit I'd made a transaction with that gentleman to bring you before him. But... this is also a safe place.
-::{{A|VO chapter3 7 blackswan 104.ogg}} '''Black Swan:''' He needs you. It's essential if we want to reclaim Penacony. Recognizing his immense potential and the invaluable memories he can help me gather, I opted to join forces with him.
-::{{A|VO chapter3 7 blackswan 105.ogg}} '''Black Swan:''' In Penacony, everyone may be lying, and yes... that includes me. I can't deny this, nor do I seek forgiveness.
-::{{A|VO chapter3 7 blackswan 106.ogg}} '''Black Swan:''' But do you still remember? I said... "I have faith in your potential," and that's not a lie.
-::{{A|VO chapter3 7 blackswan 107.ogg}} '''Black Swan:''' The Garden of Recollection wants to witness the future of the Astral Express Trailblazing the cosmos, and as for these memories &mdash; I will treasure them. I do not have reasons to hurt any of you. Instead, I will continue to assist you &mdash; provided you are willing to accept my assistance.
-:;(Return to previous option selection)
-:{{DIcon|Talk}} Can I trust Aventurine?
-::{{A|VO chapter3 7 blackswan 108.ogg}} '''Black Swan:''' My take on this might surprise you.
-::{{A|VO chapter3 7 blackswan 109.ogg}} '''Black Swan:''' In my view, he's a trustworthy individual. Not for any other reason, but because he's an exceptional businessman. In this vast universe, no one values honesty and contracts more than a merchant.
-::{{A|VO chapter3 7 blackswan 110.ogg}} '''Black Swan:''' But, always be on guard, particularly when making agreements with him. Scrutinize the details. Beyond the confines of the contract, your rights are off his radar... He'll go to extreme lengths to ensure his advantage.
-:;(Return to previous option selection)
-:{{DIcon|Talk}} Who do you think is the mastermind...?
-::{{A|VO chapter3 7 blackswan 111.ogg}} '''Black Swan:''' I still believe that Miss Firefly's situation... is deeply connected with the Stellaron Hunter, just as we speculated. But as you've heard, Aventurine has his finger pointed at the Galaxy Ranger.
-::{{A|VO chapter3 7 blackswan 112.ogg}} '''Black Swan:''' I can't fathom why he'd draw that conclusion, but given his access to the IPC's intelligence network, we should seriously consider his perspective. Moreover, I believe Miss Acheron is also hiding something.
-::{{A|VO chapter3 7 blackswan 113.ogg}} '''Black Swan:''' ...No, in fact, I should say, she's hiding everything from us.
-::{{A|VO chapter3 7 blackswan 114.ogg}} '''Black Swan:''' It was an unexpected finding from an earlier encounter. With regards to the Annihilation Gang... I can also prove that what Aventurine said was the truth.
-::{{A|VO chapter3 7 blackswan 115.ogg}} '''Black Swan:''' That's why, during this golden soirée... she is the dance's centerpiece.
-:;(Return to previous option selection)
-:{{DIcon|Arrow}} Are you willing to bring me out of this Memory Zone?
-::{{A|VO chapter3 7 blackswan 116.ogg}} '''Black Swan:''' Why of course, but now's not the time.
-::{{A|VO chapter3 7 blackswan 117.ogg}} '''Black Swan:''' I know you're confused and... sad. Whoever that girl might have been, a living soul, a "memory" that was meant to last... she simply vanished, like the dissolution of bubbles in water, disappearing in an instant...
-::{{A|VO chapter3 7 blackswan 118.ogg}} '''Black Swan:''' No matter what, I hope you can trust Aventurine &mdash; or rather &mdash; trust me and see the {{Color|keyword|nobold=1|"truth"}} with your own eyes. This can lead us deeper into the secrets behind Penacony.
-::{{A|VO chapter3 7 blackswan 119.ogg}} '''Black Swan:''' I will protect you. Once I gather more information from him, I'll make sure you're safely returned to your companions.
-::{{A|VO chapter3 7 blackswan 120.ogg}} '''Black Swan:''' For the truth and to prevent more unnecessary sacrifices... It is the right choice.
-::{{DIcon|Arrow}} You're right. Let's go.
-::{{DIcon|Arrow}} How would I know you're not trying to frame me?
-:::{{A|VO chapter3 7 blackswan 121.ogg}} '''Black Swan:''' Perhaps he plans on doing so, but I won't.
-:::{{A|VO chapter3 7 blackswan 122.ogg}} '''Black Swan:''' The Garden of Recollection has eyes everywhere. If he wants to hurt you, he'll have to fight against the Memokeepers &mdash; I've warned him about that.
-::{{A|VO chapter3 7 blackswan 123 m.ogg}} {{A|VO chapter3 7 blackswan 123 f.ogg}} '''Black Swan:''' Later, I'll stay by your side as a memetic entity, just in case. Time to set off, (Trailblazer).
-;(Upon reaching the destination)
+:{{tx}}
 {{Dialogue End}}
 
 ===(Optional) Leave this Memory Zone{{subst:void|<!--103080105-->}}===
 {{Dialogue Start}}
-;(Upon reaching the destination)
-
-;(Upon reaching the destination)
-;(If {{cx}}<!--SubMission Finish: 103080101-->)
-:<pre>{
-	"$type": "RPG.GameCore.AdvCreateGroupEntity",
-	"InstanceIDList": [
-		400001
-	]
-}</pre>
-::{{A|VO chapter3 7 blackswan 124.ogg}} '''Black Swan:''' Are you still... continuing down this path? This is a rare opportunity. Leaving here... will also mean leaving the truth.
-::{{DIcon|Arrow}} I've decided. I'm leaving this place.
-:::{{A|VO chapter3 7 blackswan 126.ogg}} '''Black Swan:''' I see... Fine, I respect your choice. Let's return to reality.
-::<pre>{
-	"$type": "RPG.GameCore.AdvDestroyGroupEntity",
-	"InstanceIDList": [
-		400001
-	]
-}</pre>
-::<pre>{
-	"$type": "RPG.GameCore.ReturnToLoginPage",
-	"WaitTalkMissionKey": "Mission_103080105"
-}</pre>
-::{{DIcon|Arrow}} You're right. I can't leave.
-:::{{A|VO chapter3 7 blackswan 125.ogg}} '''Black Swan:''' Yes, I better think about Aventurine's proposal.
-:::----
-;(If {{cx}}<!--SubMission not Finish: 103080101-->)
-::Aventurine isn't here. You know that, and so does he. You can also choose to turn around and find out what the facts are directly from his mouth, but if you insist on going forward, that signals a "rejection."
-::{{DIcon|Arrow}} Leave directly.
-::<pre>{
-	"$type": "RPG.GameCore.ReturnToLoginPage",
-	"WaitTalkMissionKey": "Mission_103080105"
-}</pre>
-::{{DIcon|Arrow}} Let's go back and find Aventurine...
-:::----
+:{{tx}}
 {{Dialogue End}}
 
 ===Find Aventurine{{subst:void|<!--103080102-->}}===
 {{Mission Description|type=trailblaze|location=The Reverie (Dreamscape)|update|The Memokeeper similarly expresses mistrust of Aventurine, but convinces you that it is for the greater good. You decide to go and see what this truth that he speaks of is &mdash; the truth that could "overturn Penacony."}}
 {{Dialogue Start}}
-;(Upon reaching the destination)
-
-;(Upon reaching the destination)
-:{{A|VO chapter3 7 player 103 m.ogg}} {{A|VO chapter3 7 player 103 f.ogg}} '''(Trailblazer):''' (Go and meet Aventurine, or... I could still choose not to help...)
-
-;(Talk to Aventurine)
-:{{A|VO chapter3 7 aventurine 127.ogg}} '''Aventurine:''' Excellent, I knew you would come. By the way, about that Memokeeper... Never mind, I won't press the issue further.
-:{{A|VO chapter3 7 aventurine 128.ogg}} '''Aventurine:''' I've said before, you can liaise with your companions, or even twist the narrative against me. I'll wholeheartedly embrace it! It signifies your potential.
-:{{A|VO chapter3 7 aventurine 129.ogg}} '''Aventurine:''' I don't do deals where I'm on the losing end. So, my "friends"... don't let me down.
-:{{A|VO chapter3 7 aventurine 130.ogg}} '''Aventurine:''' Please, this way if you will!
-;(Upon reaching the destination)
+:{{tx}}
 {{Dialogue End}}
 
 ===Follow Aventurine{{subst:void|<!--103080104-->}}===
 {{Mission Description|type=trailblaze|location=The Reverie (Dreamscape)|update|The "truth that could overturn Penacony" is just ahead... Good luck.}}
 {{Dialogue Start}}
-
-:{{DIcon|Loupe}} Open Door
-:{{A|VO chapter3 7 aventurine 133.ogg}} '''Aventurine:''' This is it, just beyond this door. Take a deep breath and get ready.
-:{{DIcon|Arrow}} (Enter the room.)
-;(Screen fades to black)
-:{{A|VO chapter3 7 aventurine 134.ogg}} '''Aventurine:''' Oh, I remember... my friend! After that, we played an enjoyable game.
-:{{A|VO chapter3 7 aventurine 135.ogg}} '''Aventurine:''' Tell me, doesn't this feel eerily familiar?
-:{{A|VO chapter3 7 aventurine 136.ogg}} '''Aventurine:''' I remember everything now. This was what I told you at that time...
-;(If {{cx}}{{subst:void|<!--{"$type":"RPG.GameCore.ByCompareVersionFinalMainMission","MainMissionID":1030801}-->}})
-<pre>{
-	"$type": "RPG.GameCore.PerformanceEndBlackText",
-	"TalkSentenceID": 100000005
-}</pre>
-----
-;([[#Gallery|Cutscene]] plays)
-::Look, friend.
-::The game has already begun.
-::Allow me to make you an offer &mdash; one you can't refuse.
-::No reason to choose otherwise...
-::...and no other choices.
-;(Cutscene ends)
-----
-;(Upon reaching the destination)
-
-;(Upon reaching the destination)
-:{{A|VO chapter3 7 aventurine 131.ogg}} '''Aventurine:''' Oh right, I remember mentioning something after that... What was it again?
-:{{A|VO chapter3 7 aventurine 132.ogg}} '''Aventurine:''' Ah... a familiar hallway, a familiar room. Do you remember? The last time we met was right here.
-
-;(Upon reaching the destination)
-<pre>{
-	"$type": "RPG.GameCore.AdvSetAIMoveTo",
-	"TargetType": {
-		"$type": "RPG.GameCore.GroupFetchLocalTarget",
-		"Targets": [
-			400001
-		]
-	},
-	"EntityInstanceID": {
-		"FixedValue": {
-			"Value": 400001
-		}
-	},
-	"GroupId": 152,
-	"PointID": 1,
-	"MotionFlag": "Walk",
-	"OnReach": [
-		{
-			"$type": "RPG.GameCore.CharacterTriggerFreeStyle",
-			"CharacterUniqueName": "Group_F20311001_G152_G152N400001",
-			"StoryAvatarID": "NPC_Avatar_Lad_Aventurine_00",
-			"StoryMotionID": 313040230
-		}
-	]
-}</pre>
-;(Unused &mdash; PT_1030801044)
-
 :{{tx}}
 {{Dialogue End}}
 

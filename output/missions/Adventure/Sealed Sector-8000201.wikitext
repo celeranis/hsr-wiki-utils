@@ -39,124 +39,17 @@ PageTitle=#Sealed Sector#
 ===Find a way to leave the room{{subst:void|<!--800020113-->}}===
 {{Mission Description|type=adventure|location=Storage Zone|The troubles caused by Silver Wolf have abated, but Leonard still looks concerned.<br />He's asking for your help to carry out a task that will improve the space station's cybersecurity and help him keep his job...}}
 {{Dialogue Start}}
-;(Upon reaching the destination)
-
-;(Upon reaching the destination)
-<pre>{
-	"$type": "RPG.GameCore.ShowTalkUI",
-	"Show": true
-}</pre>
-<pre>{
-	"$type": "RPG.GameCore.ActiveVirtualCamera",
-	"AreaName": "LevelArea_P40002_F40002101_G2",
-	"AnchorName": "Anchor1"
-}</pre>
-:<!--1-second delay-->
-:'''Leonard:''' Affected by the cyber attack, the sensor door cannot be activated normally. In order to open it, you have to find the {{Color|keyword|nobold=1|graffiti}} associated with it.
-<pre>{
-	"$type": "RPG.GameCore.ActiveVirtualCamera",
-	"AreaName": "LevelArea_P40002_F40002101_G2",
-	"AnchorName": "Anchor1",
-	"IsActive": false
-}</pre>
-<pre>{
-	"$type": "RPG.GameCore.ShowTalkUI"
-}</pre>
-
-;(Obtain {{Item|Simulated Calculation|20|x=1}})
-
-;(Obtain {{Item|Simulated Calculation|20|x=1}})
-
-;(Obtain {{Item|Simulated Calculation|20|x=1}})
-<pre>{
-	"$type": "RPG.GameCore.ShowTalkUI",
-	"Show": true
-}</pre>
-<pre>{
-	"$type": "RPG.GameCore.ActiveVirtualCamera",
-	"AreaName": "LevelArea_P40002_F40002101_G2",
-	"AnchorName": "Anchor1"
-}</pre>
-<pre>{
-	"$type": "RPG.GameCore.ChangePropState"
-}</pre>
-:<!--1-second delay-->
-:'''Leonard:''' Look, the sensor door is open. Remove the corresponding graffiti to restore the affected devices.
-<pre>{
-	"$type": "RPG.GameCore.ActiveVirtualCamera",
-	"AreaName": "LevelArea_P40002_F40002101_G2",
-	"AnchorName": "Anchor1",
-	"IsActive": false
-}</pre>
-<pre>{
-	"$type": "RPG.GameCore.ShowTalkUI"
-}</pre>
-:'''Leonard:''' Hah, you found the little easter egg I hid.
-:'''Leonard:''' These graffitis are usually referred to as {{Color|keyword|nobold=1|"hacking callcards."}} They don't serve any actual function other than to distract. I wrote them in the codes to make it more realistic.
-:'''Leonard:''' There are {{Color|keyword|nobold=1|3}} hacking callcards in each area. Try and locate all of them. As an added reward, collecting hacking callcards will increase your combat ability in the test.
-<pre>{
-	"$type": "RPG.GameCore.ShowTutorialGuide",
-	"GuideID": 8008
-}</pre>
+:{{tx}}
 {{Dialogue End}}
 
 ===Open the other door in the area{{subst:void|<!--800020103-->}}===
 {{Dialogue Start}}
-
-<pre>{
-	"$type": "RPG.GameCore.ShowTalkUI",
-	"Show": true
-}</pre>
-----
-<pre>{
-	"$type": "RPG.GameCore.ActiveVirtualCamera",
-	"AreaName": "LevelArea_P40002_F40002101_G12",
-	"AnchorName": "Anchor1"
-}</pre>
-<pre>{
-	"$type": "RPG.GameCore.ChangePropState"
-}</pre>
-:<!--1-second delay-->
-:<!--2-second delay-->
-----
-<pre>{
-	"$type": "RPG.GameCore.ActiveVirtualCamera",
-	"AreaName": "LevelArea_P40002_F40002101_G12",
-	"AnchorName": "Anchor1",
-	"IsActive": false
-}</pre>
-<pre>{
-	"$type": "RPG.GameCore.ShowTalkUI"
-}</pre>
+:{{tx}}
 {{Dialogue End}}
 
 ===Clear this area{{subst:void|<!--800020108-->}}===
 {{Dialogue Start}}
-;(Upon reaching the destination)
-
-;(Upon reaching the destination)
-:'''Leonard:''' The end is right there in front. Let's see how long you took... You're faster than I expected, (Trailblazer)! Keep going, it's only the final obstacle left.
-:'''Leonard:''' Wonderful! A textbook performance.
-:{{DIcon|Arrow}} It's so easy.
-::'''Leonard:''' Of course. You've fought the real Silver Wolf. It's only natural that this practice is incomparable to the real thing.
-:{{DIcon|Arrow}} It's so difficult.
-::'''Leonard:''' You're too humble! You've fought the real Silver Wolf. It's only natural that this practice is incomparable to the real thing.
-:'''Leonard:''' If all researchers are able to face it as calmly as you did, there would've been no need to worry that the space station is under a cyber attack.
-:'''Leonard:''' Let's go back. Oh, right. I've submitted an application for your test rewards. It's already been approved and will be sent to you immediately. Thanks again, my friend!
-:'''Leonard:''' This test gave me some new ideas. There is still a lot of room for improvement in the flow of the program... If you're interested, come back again!
-
-:{{DIcon|Loupe}} Investigate
-;(If {{cx}}<!--SubMission Finish: 800020111-->)
-;(Otherwise)
-:'''Leonard:''' Challenge completed, do you want to exit the simulation?
-:{{DIcon|Arrow}} Stay for Now
-:{{DIcon|Exit}} Confirm Exit
-:<pre>{
-	"$type": "RPG.GameCore.UpdateTreasureChallengeProgress",
-	"RaidTargetID": 102000000,
-	"IsIncrease": true,
-	"DeltaValue": 1
-}</pre>
+:{{tx}}
 {{Dialogue End}}
 
 ==Other Languages==

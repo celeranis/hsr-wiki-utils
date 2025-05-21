@@ -38,64 +38,12 @@ PageTitle=#You Can Run, But You Can't Hide#
 ===Eliminate the monster and activate the switch{{subst:void|<!--101030203-->}}===
 {{Mission Description|type=trailblaze|location=Backwater Pass|You rush into the Fragmentum to avoid getting caught. How come things went downhill so quickly? March 7th has no clue &mdash; she's written as an innocent and sweet teenage girl after all.<br />Despite the initial shock, you quickly agree on the course of action: Find the way out of the Fragmentum first. Everything else can wait.<br />Being blocked by a second gate while trying to escape is so cliche... However, there are monsters wandering around the gate switch this time.<br />Defeat the monsters and clear the stage!}}
 {{Dialogue Start}}
+:{{tx}}
 {{Dialogue End}}
 
 ===Find a way to leave the Fragmentum and shake off the pursuers{{subst:void|<!--101030204-->}}===
 {{Mission Description|type=trailblaze|location=Backwater Pass|update|You rush into the Fragmentum to avoid getting caught. How come things went downhill so quickly? March 7th has no clue &mdash; she's written as an innocent and sweet teenage girl after all.<br />Despite the initial shock, you quickly agree on the course of action: Find the way out of the Fragmentum first. Everything else can wait.<br />You are the bane of all gates... The two you've opened would agree.<br />The Fragmentum exit is right in front of you. Safety is within reach... for the time being.}}
 {{Dialogue Start}}
-;(If {{cx}}{{subst:void|<!--{"$type":"RPG.GameCore.ByCompareMissionBattleWin","EventID":20111009}-->}})
-::{{tx}}
-:;(Enter battle)
-::{{Enemy List|Bronya*1/-40% ATK, -16.7% HP, -60 }}
-;(If {{cx}}{{subst:void|<!--{"$type":"RPG.GameCore.ByCompareMissionBattleWin","EventID":20111009}-->}})
-:;(Upon reaching the destination)
-
-;(Upon reaching the destination)
-<pre>{
-	"$type": "RPG.GameCore.PropTriggerAnimState",
-	"AnimStateName": "Activing",
-	"TargetType": {
-		"$type": "RPG.GameCore.TargetFetchAdvPropEx",
-		"FetchType": "SinglePropByPropID",
-		"SinglePropID": {
-			"GroupID": {
-				"FixedValue": {
-					"Value": 4
-				}
-			},
-			"ID": {
-				"FixedValue": {
-					"Value": 300009
-				}
-			}
-		}
-	}
-}</pre>
-:{{tx}}
-:{{tx}}
-<pre>{
-	"$type": "RPG.GameCore.PropEnableCollider",
-	"SpecifiedRelativePaths": [],
-	"TargetType": {
-		"$type": "RPG.GameCore.TargetFetchAdvPropEx",
-		"FetchType": "SinglePropByPropID",
-		"SinglePropID": {
-			"GroupID": {
-				"FixedValue": {
-					"Value": 4
-				}
-			},
-			"ID": {
-				"FixedValue": {
-					"Value": 300005
-				}
-			}
-		}
-	}
-}</pre>
-;(Enter battle)
-:{{Enemy List|Flamespawn*2; Incineration Shadewalker*2}}
-:{{tx}}
 :{{tx}}
 {{Dialogue End}}
 

@@ -51,530 +51,67 @@ Mission Battle of Wits! Herta Space Station! Caelus.png|Caelus
 ===Meet up with March 7th{{subst:void|<!--801410401-->}}===
 {{Mission Description|type=adventure|location=Central Starskiff Haven|You've completed all challenges in the Cloudford Victory Zone and obtained the second qualifying mark.<br />The road to the championship stretches out beneath your feet like a red carpet &mdash; It's time for the third stage.}}
 {{Dialogue Start}}
-
-;(Talk to March 7th)
-----
-:{{A|VO side1 ytzx mar7th 334 m.ogg}} {{A|VO side1 ytzx mar7th 334 f.ogg}} '''March 7th:''' Hey, (Trailblazer)! You all set to start today's journey?
-:{{A|VO side1 ytzx trotter normal.ogg}} '''(Warp Trotter/Trotter/Bubbles/Puffball/Ivory Menace/Chunky Chops/Turbo Trotter/Trotterlord):''' Oink~ Oink!
-:{{DIcon|Arrow}} You bet!
-::{{A|VO side1 ytzx mar7th 335.ogg}} '''March 7th:''' Hehe, I was hoping you'd say that~
-:{{DIcon|Arrow}} Am I allowed to say no?
-::{{A|VO side1 ytzx mar7th 336.ogg}} '''March 7th:''' Hmph, you look ready enough to me. Hey... are you messing with me again?
-:{{A|VO side1 ytzx mar7th 337.ogg}} '''March 7th:''' Come on, let's head to our next destination &mdash; {{Color|keyword|nobold=1|Herta Space Station Victory Zone}}!
-----
+:{{tx}}
 {{Dialogue End}}
 
 ===Head to the space station's railway platform{{subst:void|<!--801410402-->}}===
 {{Mission Description|type=adventure|location=Supply Zone|update|The road to the championship stretches out beneath your feet like a red carpet.<br />The third Mastery Mark hides within Herta Space Station. What kind of challenges await within?}}
 {{Dialogue Start}}
-<pre>{
-	"$type": "RPG.GameCore.CreateProp",
-	"GroupID": {
-		"FixedValue": {
-			"Value": 122
-		}
-	},
-	"GroupPropID": {
-		"FixedValue": {
-			"Value": 300001
-		}
-	},
-	"CreateList": []
-}</pre>
-;(Upon reaching the destination)
-
-;(Upon reaching the destination)
-----
-<pre>{
-	"$type": "RPG.GameCore.PerformanceExtendEndBlack",
-	"ExtendTime": 2
-}</pre>
-:{{A|VO side1 ytzx mar7th 338.ogg}} '''March 7th:''' We made it! From here, we can head to the {{Color|keyword|nobold=1|space station's Victory Zone}}. Hmm... the atmosphere doesn't seem to have changed much &mdash; doesn't have that tournament vibe.
-:{{A|VO side1 ytzx trotter puzzle.ogg}} '''(Warp Trotter/Trotter/Bubbles/Puffball/Ivory Menace/Chunky Chops/Turbo Trotter/Trotterlord):''' Oink... Oink?
-:{{A|VO side1 ytzx mar7th 339 m.ogg}} {{A|VO side1 ytzx mar7th 339 f.ogg}} '''March 7th:''' Ready to head out, (Trailblazer)?
-:{{A|VO side1 ytzx trotter normal.ogg}} '''(Warp Trotter/Trotter/Bubbles/Puffball/Ivory Menace/Chunky Chops/Turbo Trotter/Trotterlord):''' Oink, oink, oink!
-:{{DIcon|Arrow}} Let's go.
-:{{A|VO side1 ytzx mar7th 340.ogg}} '''March 7th:''' It's time to get the next Mastery Mark!
-----
-<pre>{
-	"$type": "RPG.GameCore.ShowUI",
-	"Name": "Ui.AetherDivide.AetherDivideEntryPage"
-}</pre>
-
-;(Talk to March 7th)
-----
-<pre>{
-	"$type": "RPG.GameCore.PerformanceExtendEndBlack",
-	"ExtendTime": 2
-}</pre>
-:{{A|VO side1 ytzx mar7th 338.ogg}} '''March 7th:''' We made it! From here, we can head to the {{Color|keyword|nobold=1|space station's Victory Zone}}. Hmm... the atmosphere doesn't seem to have changed much &mdash; doesn't have that tournament vibe.
-:{{A|VO side1 ytzx trotter puzzle.ogg}} '''(Warp Trotter/Trotter/Bubbles/Puffball/Ivory Menace/Chunky Chops/Turbo Trotter/Trotterlord):''' Oink... Oink?
-:{{A|VO side1 ytzx mar7th 339 m.ogg}} {{A|VO side1 ytzx mar7th 339 f.ogg}} '''March 7th:''' Ready to head out, (Trailblazer)?
-:{{A|VO side1 ytzx trotter normal.ogg}} '''(Warp Trotter/Trotter/Bubbles/Puffball/Ivory Menace/Chunky Chops/Turbo Trotter/Trotterlord):''' Oink, oink, oink!
-:{{DIcon|Arrow}} Let's go.
-:{{A|VO side1 ytzx mar7th 340.ogg}} '''March 7th:''' It's time to get the next Mastery Mark!
-----
-<pre>{
-	"$type": "RPG.GameCore.ShowUI",
-	"Name": "Ui.AetherDivide.AetherDivideEntryPage"
-}</pre>
+:{{tx}}
 {{Dialogue End}}
 
 ===Ask about Giovanni's true intentions{{subst:void|<!--801410404-->}}===
 {{Mission Description|type=adventure|location=Victory Zone: Herta Space Station|update|As it turns out, Giovanni intended to use you as a means to his ends all along, manipulating you like a puppet. The entire thing leaves you with a nasty feeling, and you need to find him at once to get some clear answers.}}
 {{Dialogue Start}}
-:{{A|VO side1 ytzx mar7th 341.ogg}} '''March 7th:''' Mr. Giovanni... Again? What's he up to this time?
-
-;(Upon reaching the destination)
-----
-:{{A|VO side1 ytzx giovanni 219 m.ogg}} {{A|VO side1 ytzx giovanni 219 f.ogg}} '''Giovanni:''' Ah, (Trailblazer) and Miss March, we cross paths again! It's wonderful to have both of you here. Your gaming skills have certainly improved quite a bit, judging by your presence.
-:{{A|VO side1 ytzx mar7th 342.ogg}} '''March 7th:''' Thank you, Mr. Giovanni. While you're here... mind if we ask you a few questions?
-:{{A|VO side1 ytzx giovanni 220.ogg}} '''Giovanni:''' Why, of course not! If it's a topic I'm familiar with, I'll do my best to answer.
-:{{A|VO side1 ytzx mar7th 343 m.ogg}} {{A|VO side1 ytzx mar7th 343 f.ogg}} '''March 7th:''' (Trailblazer), how about you ask him instead? About that thing we couldn't figure out earlier, remember...?
-:{{DIcon|Arrow}} What exactly are you up to?
-:{{DIcon|Arrow}} Why are you here?
-::{{A|VO side1 ytzx mar7th 344.ogg}} '''March 7th:''' No, no! Not that...
-:{{DIcon|Arrow}} Had your lunch? What did you have?
-::{{A|VO side1 ytzx mar7th 345.ogg}} '''March 7th:''' What!? What's that got to do with anything!?
-:{{A|VO side1 ytzx mar7th 346.ogg}} '''March 7th:''' Mr. Giovanni, have you been deliberately guiding us towards a certain goal?
-:{{A|VO side1 ytzx mar7th 347.ogg}} '''March 7th:''' You keep asking the champions of each venue to give us cryptic hints, don't you? What's that all about?
-:{{A|VO side1 ytzx trotter puzzle.ogg}} '''(Warp Trotter/Trotter/Bubbles/Puffball/Ivory Menace/Chunky Chops/Turbo Trotter/Trotterlord):''' Oink! Oink?
-:{{A|VO side1 ytzx giovanni 221.ogg}} '''Giovanni:''' Hahaha, so that's what you were wondering about. Let me assure you both: I harbor no malicious intentions towards either of you.
-:{{A|VO side1 ytzx giovanni 222.ogg}} '''Giovanni:''' In my capacity as the sole sponsor of the event and a devoted player of Aetherium Wars, there's one thing I wish to ensure...
-:{{A|VO side1 ytzx giovanni 223.ogg}} '''Giovanni:''' I hope to witness a festival that is truly flawless, allowing every participant to truly appreciate the magic of the game.
-:{{A|VO side1 ytzx giovanni 224.ogg}} '''Giovanni:''' I hope you both find this to be an acceptable answer.
-:{{A|VO side1 ytzx mar7th 348.ogg}} '''March 7th:''' That's...
-:{{DIcon|Arrow}} We were out of line.
-::{{A|VO side1 ytzx mar7th 349.ogg}} '''March 7th:''' ...Alright. I guess we'll just have to trust you... for now.
-::{{A|VO side1 ytzx giovanni 226.ogg}} '''Giovanni:''' I'm glad to hear it. With that said, please forgive my departure &mdash; I hope to catch a glimpse of your remarkable skills in the championship!
-::{{A|VO side1 ytzx trotter puzzle.ogg}} '''(Warp Trotter/Trotter/Bubbles/Puffball/Ivory Menace/Chunky Chops/Turbo Trotter/Trotterlord):''' Oink... Oink! Oink?
-:;(Return to previous option selection)
-:{{DIcon|Arrow}} You better not be up to anything fishy!
-::{{A|VO side1 ytzx giovanni 225.ogg}} '''Giovanni:''' As mentioned, I promise both of you that I harbor no malicious intentions &mdash; I swear upon this mask.
-::{{A|VO side1 ytzx mar7th 349.ogg}} '''March 7th:''' ...Alright. I guess we'll just have to trust you... for now.
-::{{A|VO side1 ytzx giovanni 226.ogg}} '''Giovanni:''' I'm glad to hear it. With that said, please forgive my departure &mdash; I hope to catch a glimpse of your remarkable skills in the championship!
-::{{A|VO side1 ytzx trotter puzzle.ogg}} '''(Warp Trotter/Trotter/Bubbles/Puffball/Ivory Menace/Chunky Chops/Turbo Trotter/Trotterlord):''' Oink... Oink! Oink?
-:;(Return to previous option selection)
-<pre>{
-	"$type": "RPG.GameCore.PlayMessage",
-	"MessageSectionID": 1115600
-}</pre>
-----
-:{{A|VO side1 ytzx mar7th 397.ogg}} '''March 7th:''' Huh? Wilder? Didn't he mention something about Topaz's Support Squad and the Aether Spirit?
-:{{A|VO side1 ytzx trotter puzzle.ogg}} '''(Warp Trotter/Trotter/Bubbles/Puffball/Ivory Menace/Chunky Chops/Turbo Trotter/Trotterlord):''' Oink, oink?
-:{{DIcon|Arrow}} I think so.
-:{{DIcon|Arrow}} Maybe he has some new intel.
-:{{A|VO side1 ytzx mar7th 398.ogg}} '''March 7th:''' Well, we'd better go find him then. Back to Belobog it is...
-----
-<pre>{
-	"$type": "RPG.GameCore.SaveMessage",
-	"MessageSectionID": 1115600
-}</pre>
+:{{tx}}
 {{Dialogue End}}
 
 ===Head to Goethe Hotel and meet with Wilder{{subst:void|<!--801410420-->}}===
 {{Mission Description|type=adventure|location=Hotel Lobby|update|Wilder somehow knows about (Warp Trotter/Trotter/Bubbles/Puffball/Ivory Menace/Chunky Chops/Turbo Trotter/Trotterlord)'s existence! More than that, he also wants to go over some important matters. Might this game truly have some unknowable mysteries?}}
 {{Dialogue Start}}
-;(Upon reaching the destination)
-
-;(Upon reaching the destination)
-:{{A|VO side1 ytzx mar7th 399.ogg}} '''March 7th:''' Look, Wilder's over there!
-
-;(Upon reaching the destination)
-----
-:{{A|VO side1 ytzx wilder 130 m.ogg}} {{A|VO side1 ytzx wilder 130 f.ogg}} '''Wilder:''' (Trailblazer), Miss March! Thank you both for coming.
-:{{A|VO side1 ytzx mar7th 400.ogg}} '''March 7th:''' No problem, we were in the area anyway. What did you want to discuss with us?
-:{{A|VO side1 ytzx wilder 131.ogg}} '''Wilder:''' Director Topaz sent me to handle the "Topaz's Support Squad situation" and the problems caused by the Aether Spirit.
-:{{A|VO side1 ytzx wilder 132.ogg}} '''Wilder:''' I've been told that the Aether Spirit is with you... so, I thought it'd be good to have a chat with you about them.
-:{{DIcon|Arrow}} That's right, (Warp Trotter/Trotter/Bubbles/Puffball/Ivory Menace/Chunky Chops/Turbo Trotter/Trotterlord) is with us.
-::{{A|VO side1 ytzx wilder 133.ogg}} '''Wilder:''' (Warp Trotter/Trotter/Bubbles/Puffball/Ivory Menace/Chunky Chops/Turbo Trotter/Trotterlord)? Oh, is that the name you picked for them?
-::{{A|VO side1 ytzx wilder 142.ogg}} '''Wilder:''' It appears you've grown quite attached to them... but I'd really appreciate it if you'd hear me out. Director Topaz has a request.
-::----
-::<!--1-second delay-->
-::{{A|VO side1 ytzx trotter confident.ogg}} '''(Warp Trotter/Trotter/Bubbles/Puffball/Ivory Menace/Chunky Chops/Turbo Trotter/Trotterlord):''' Oink, oink, oink!
-::{{A|VO side1 ytzx mar7th 401.ogg}} '''March 7th:''' Ah! (Warp Trotter/Trotter/Bubbles/Puffball/Ivory Menace/Chunky Chops/Turbo Trotter/Trotterlord)! How did you get out again?
-::{{A|VO side1 ytzx wilder 145.ogg}} '''Wilder:''' ...Ah, as I suspected, this is the Aether Spirit that Director Topaz spoke of.
-::{{A|VO side1 ytzx wilder 146.ogg}} '''Wilder:''' It's like this... This Aether Spirit was a museum piece held on Herta Space Station, which was later snatched by Topaz's Support Squad. To be precise, they actually belong to Asta, the station's lead researcher.
-::{{A|VO side1 ytzx wilder 147.ogg}} '''Wilder:''' Initially, Director Topaz refrained from commenting on the support squad situation, but their actions undoubtedly created a predicament for the director. As a result, she ordered the squad to disband, but also ordered them to return the stolen Aether Spirit to its owner first.
-:;(Return to previous option selection)
-:{{DIcon|Arrow}} Care to elaborate?
-::{{A|VO side1 ytzx wilder 143.ogg}} '''Wilder:''' No problem, that's exactly why I'm here.
-::----
-::<!--1-second delay-->
-::{{A|VO side1 ytzx trotter confident.ogg}} '''(Warp Trotter/Trotter/Bubbles/Puffball/Ivory Menace/Chunky Chops/Turbo Trotter/Trotterlord):''' Oink, oink, oink!
-::{{A|VO side1 ytzx mar7th 401.ogg}} '''March 7th:''' Ah! (Warp Trotter/Trotter/Bubbles/Puffball/Ivory Menace/Chunky Chops/Turbo Trotter/Trotterlord)! How did you get out again?
-::{{A|VO side1 ytzx wilder 145.ogg}} '''Wilder:''' ...Ah, as I suspected, this is the Aether Spirit that Director Topaz spoke of.
-::{{A|VO side1 ytzx wilder 146.ogg}} '''Wilder:''' It's like this... This Aether Spirit was a museum piece held on Herta Space Station, which was later snatched by Topaz's Support Squad. To be precise, they actually belong to Asta, the station's lead researcher.
-::{{A|VO side1 ytzx wilder 147.ogg}} '''Wilder:''' Initially, Director Topaz refrained from commenting on the support squad situation, but their actions undoubtedly created a predicament for the director. As a result, she ordered the squad to disband, but also ordered them to return the stolen Aether Spirit to its owner first.
-:;(Return to previous option selection)
-:{{DIcon|Arrow}} If you want to take (Warp Trotter/Trotter/Bubbles/Puffball/Ivory Menace/Chunky Chops/Turbo Trotter/Trotterlord), you'll have to speak with my bat first!
-::{{A|VO side1 ytzx wilder 144.ogg}} '''Wilder:''' No, no! You've got the wrong idea. Please, just let me explain...
-::----
-::<!--1-second delay-->
-::{{A|VO side1 ytzx trotter confident.ogg}} '''(Warp Trotter/Trotter/Bubbles/Puffball/Ivory Menace/Chunky Chops/Turbo Trotter/Trotterlord):''' Oink, oink, oink!
-::{{A|VO side1 ytzx mar7th 401.ogg}} '''March 7th:''' Ah! (Warp Trotter/Trotter/Bubbles/Puffball/Ivory Menace/Chunky Chops/Turbo Trotter/Trotterlord)! How did you get out again?
-::{{A|VO side1 ytzx wilder 145.ogg}} '''Wilder:''' ...Ah, as I suspected, this is the Aether Spirit that Director Topaz spoke of.
-::{{A|VO side1 ytzx wilder 146.ogg}} '''Wilder:''' It's like this... This Aether Spirit was a museum piece held on Herta Space Station, which was later snatched by Topaz's Support Squad. To be precise, they actually belong to Asta, the station's lead researcher.
-::{{A|VO side1 ytzx wilder 147.ogg}} '''Wilder:''' Initially, Director Topaz refrained from commenting on the support squad situation, but their actions undoubtedly created a predicament for the director. As a result, she ordered the squad to disband, but also ordered them to return the stolen Aether Spirit to its owner first.
-:;(Return to previous option selection)
 :{{tx}}
-----
-:{{A|VO side1 ytzx mar7th 423.ogg}} '''March 7th:''' I was so close to bursting into tears! That would've been embarrassing...
-:{{DIcon|Arrow}} It's alright, I know the feeling.
-::{{A|VO side1 ytzx mar7th 424 m.ogg}} {{A|VO side1 ytzx mar7th 424 f.ogg}} '''March 7th:''' ...Thank you, (Trailblazer).
-:{{DIcon|Arrow}} I would LOVE to see that happen.
-::{{A|VO side1 ytzx mar7th 425.ogg}} '''March 7th:''' ...Don't you have anything nice to say!?
-:{{DIcon|Arrow}} There's still time to cry.
-::{{A|VO side1 ytzx mar7th 426.ogg}} '''March 7th:''' Mm... Too late, the moment's gone!
-:{{A|VO side1 ytzx trotter normal.ogg}} '''(Warp Trotter/Trotter/Bubbles/Puffball/Ivory Menace/Chunky Chops/Turbo Trotter/Trotterlord):''' Oink! Oink, oink!
-:{{A|VO side1 ytzx mar7th 427.ogg}} '''March 7th:''' Let's call it a day, shall we? And since we're in Belobog, it means another night at the Goethe Hotel!
-:{{A|VO side1 ytzx mar7th 428.ogg}} '''March 7th:''' Tomorrow we'll set out for the final stop &mdash; {{Color|keyword|nobold=1|the Great Mine Victory Zone}}. The championship is so close, I can almost feel it!
-:{{A|VO side1 ytzx trotter happy.ogg}} '''(Warp Trotter/Trotter/Bubbles/Puffball/Ivory Menace/Chunky Chops/Turbo Trotter/Trotterlord):''' Oink, oink, oink!
-:{{A|VO side1 ytzx mar7th 429.ogg}} '''March 7th:''' I can't shake the feeling that we missed something today. Maybe I'm just overthinking...
-----
 {{Dialogue End}}
 
 ===Locate the service robots and take the Treasure Maps{{subst:void|<!--801410405-->}}===
 {{Mission Description|type=adventure|location=Victory Zone: Herta Space Station|update|You must complete the corresponding trials first if you wish to challenge the championship contenders of the Victory Zone.<br />The space station's rules seem akin to hunting for treasures in a dungeon. You must obtain the treasure map before you begin your adventure.}}
 {{Dialogue Start}}
-
-;(Obtain {{Item|Encryption Key Treasure Map|20|x=1}})
-;(Unused &mdash; Mission_801410405_PropTrigger)
-:The {{Color|keyword|nobold=1|Treasure Map}} was printed out from the slit on the back of the Little Robot.
-
-;(Unused &mdash; Mission_801410407_PropUITrigger_2)
-:The elevator interface displays a line of text: "Please enter the encryption key to gain control over the elevator."
-::{{A|VO side1 ytzx player 103 m.ogg}} {{A|VO side1 ytzx player 103 f.ogg}} '''(Trailblazer):''' (Looks like we need to find the {{Color|keyword|nobold=1|encryption key for the elevator}} first...)
+:{{tx}}
 {{Dialogue End}}
 
 ===Find the elevator encryption key according to the Treasure Map{{subst:void|<!--801410406-->}}===
 {{Mission Description|type=adventure|location=Victory Zone: Herta Space Station|update|You must complete the corresponding trials first if you wish to challenge the championship contenders of the Victory Zone.<br />The space station's rules seem akin to hunting for treasures in a dungeon. Find the first piece of treasure and prove your worth.}}
 {{Dialogue Start}}
-<pre>{
-	"$type": "RPG.GameCore.CreateProp",
-	"GroupID": {
-		"FixedValue": {
-			"Value": 11
-		}
-	},
-	"GroupPropID": {
-		"FixedValue": {
-			"Value": 300013
-		}
-	},
-	"CreateList": []
-}</pre>
-;(Upon reaching the destination)
-
-;(Upon reaching the destination)
-:{{A|VO side1 ytzx mar7th 364.ogg}} '''March 7th:''' Hey, isn't that a Wubbaboo?
-:{{A|VO side1 ytzx mar7th 365.ogg}} '''March 7th:''' Wait a minute, so we're actually looking for Wubbaboos, not passes?
-;(Obtain {{Item|Elevator Encryption Key|20|x=1}})
-;(Lose {{Item|Encryption Key Treasure Map|20|x=1}})
-;(Unused &mdash; PropTrigger_801410406)
-:{{A|VO side1 ytzx wubbaboo 101.ogg}} '''Wubbaboo:''' Woo-woo, woo!
-::{{Black Screen|Wubbaboo gives you the {{Color|keyword|nobold=1|elevator encryption key}} and then leisurely walks away as if saying: "I haven't had time to hide the encryption key."}}
-::{{A|VO side1 ytzx mar7th 366.ogg}} '''March 7th:''' Isn't this an encryption key for the elevator? With this, we should be able to use the elevator to reach the first floor of the storage zone.
-:<pre>{
-	"$type": "RPG.GameCore.ShowFuncBtn",
-	"Show": false,
-	"ItemID": 140282,
-	"CDDuration": 2
-}</pre>
-
-;(Unused &mdash; Mission_801410407_PropUITrigger_3)
-:The elevator interface displays a line of text: "Please enter the encryption key to gain control over the elevator."
-::{{A|VO side1 ytzx player 103 m.ogg}} {{A|VO side1 ytzx player 103 f.ogg}} '''(Trailblazer):''' (Looks like we need to find the {{Color|keyword|nobold=1|encryption key for the elevator}} first...)
+:{{tx}}
 {{Dialogue End}}
 
 ===Input elevator encryption key{{subst:void|<!--801410407-->}}===
 {{Mission Description|type=adventure|location=Victory Zone: Herta Space Station|update|You must complete the corresponding trials first if you wish to challenge the championship contenders of the Victory Zone.<br />The space station's rules seem akin to hunting for treasures in a dungeon. It seems that the "dragon" tasked with guarding the treasure isn't all that professional... Regardless, you are another set closer to facing your final foe &mdash; the "Demon Lord."}}
 {{Dialogue Start}}
-
+:{{tx}}
 {{Dialogue End}}
 
 ===Find the next access pass according to the Treasure Map{{subst:void|<!--801410410-->}}===
 {{Mission Description|type=adventure|location=Victory Zone: Herta Space Station|update|You must complete the corresponding trials first if you wish to challenge the championship contenders of the Victory Zone.<br />The Wubbaboos don't seem to be terribly enthused about guarding the treasure. And what kind of "dragon" is this? That's clearly just Qingque.}}
 {{Dialogue Start}}
-<pre>{
-	"$type": "RPG.GameCore.CreateProp",
-	"GroupID": {
-		"FixedValue": {
-			"Value": 11
-		}
-	},
-	"GroupPropID": {
-		"FixedValue": {
-			"Value": 300014
-		}
-	},
-	"CreateList": []
-}</pre>
-;(Upon reaching the destination)
-
-;(Upon reaching the destination)
-:{{A|VO side1 ytzx mar7th 368.ogg}} '''March 7th:''' Another Wubbaboo! It's definitely holding onto another {{Color|keyword|nobold=1|pass}}!
-;(Lose {{Item|Treasure Map No. 1|20|x=1}})
-;(Obtain {{Item|Championship Contender Pass 1|20|x=1}})
-:<!--1-second delay-->
-<pre>{
-	"$type": "RPG.GameCore.ShowFuncBtn",
-	"ItemID": 140284,
-	"CDDuration": 2
-}</pre>
-
-;(Upon reaching the destination)
-:{{A|VO side1 ytzx mar7th 371.ogg}} '''March 7th:''' Another Wubbaboo! ...It's crying?
-;(Lose {{Item|Treasure Map No. 2|20|x=1}})
-;(Obtain {{Item|Championship Contender Pass 2|20|x=1}})
-;(Unused &mdash; PropTrigger_801410406)
-:----
-::{{A|VO side1 ytzx wubbaboo 103.ogg}} '''Wubbaboo:''' Woo... Woo...
-::{{Black Screen|Wubbaboo hands you the {{Color|keyword|nobold=1|championship contender pass}} with tears in their eyes and floats away, as if saying, "I don't want to do this anymore... I don't want to do this anymore..."}}
-::{{A|VO side1 ytzx mar7th 372.ogg}} '''March 7th:''' That Wubbaboo looked so upset. What happened to it...
-:<pre>{
-	"$type": "RPG.GameCore.TriggerSound",
-	"SoundName": {
-		"Value": "Ev_sfx_belobog_phone_buzz"
-	},
-	"EmitterType": "NPC",
-	"GroupID": 11,
-	"ID": 400011
-}</pre>
-:<pre>{
-	"$type": "RPG.GameCore.CreatePhoneOnCharacter",
-	"GroupID": 11,
-	"GroupNpcID": 400011,
-	"TargetType": {
-		"$type": "RPG.GameCore.TargetFetchAdvNpcEx",
-		"FetchType": "SingleNpcByNpcID",
-		"SingleNpcID": {
-			"GroupID": {
-				"FixedValue": {
-					"Value": 11
-				}
-			},
-			"GroupNpcID": {
-				"FixedValue": {
-					"Value": 400011
-				}
-			}
-		}
-	}
-}</pre>
-::{{A|VO side1 ytzx mar7th 373.ogg}} '''March 7th:''' I'm sending you the next {{Color|keyword|nobold=1|treasure map}}, let's go find the next {{Color|keyword|nobold=1|pass}}.
-::----
-
-;(Unused &mdash; 801410412_WWB_appear)
-<pre>{
-	"$type": "RPG.GameCore.CreateProp",
-	"GroupID": {
-		"FixedValue": {
-			"Value": 11
-		}
-	},
-	"GroupPropID": {
-		"FixedValue": {
-			"Value": 300015
-		}
-	},
-	"CreateList": []
-}</pre>
-:;(Upon reaching the destination)
-:<!--1-second delay-->
-<pre>{
-	"$type": "RPG.GameCore.ShowFuncBtn",
-	"ItemID": 140285,
-	"CDDuration": 2
-}</pre>
-
-;(Upon reaching the destination)
-:{{A|VO side1 ytzx mar7th 374.ogg}} '''March 7th:''' Another Wubbaboo! Let's have a chat with it.
-;(Lose {{Item|Treasure Map No. 3|20|x=1}})
-;(Obtain {{Item|Championship Contender Pass 3|20|x=1}})
-;(Unused &mdash; PropTrigger_801410406)
-:----
-::{{A|VO side1 ytzx wubbaboo 104.ogg}} '''Wubbaboo:''' Woo, woo-woo! woo!
-::{{Black Screen|Wubbaboo hands you the {{Color|keyword|nobold=1|championship contender pass}} excitedly and floats away, as if saying, "I'm free! I'm free!"}}
-::{{A|VO side1 ytzx mar7th 375.ogg}} '''March 7th:''' That Wubbaboo back there seemed quite happy... it must mean we're doing something right.
-::{{A|VO side1 ytzx mar7th 376.ogg}} '''March 7th:''' We've collected all three {{Color|keyword|nobold=1|passes}} now &mdash; that should mean we've solved all the puzzles in the Victory Zone.
-::{{A|VO side1 ytzx herta 109.ogg}} '''Herta:''' Hello? Hello, hello?
-::{{A|VO side1 ytzx herta 110.ogg}} '''Herta:''' You've got all three passes.
-::{{A|VO side1 ytzx herta 111.ogg}} '''Herta:''' I'm sending you the coordinates.
-::{{A|VO side1 ytzx herta 112.ogg}} '''Herta:''' Hurry up already. Stop wasting my time!
-::----
-
-;(Unused &mdash; 801410414_WWB_appear)
-<pre>{
-	"$type": "RPG.GameCore.CreateProp",
-	"GroupID": {
-		"FixedValue": {
-			"Value": 11
-		}
-	},
-	"GroupPropID": {
-		"FixedValue": {
-			"Value": 300016
-		}
-	},
-	"CreateList": []
-}</pre>
-:;(Upon reaching the destination)
+:{{tx}}
 {{Dialogue End}}
 
 ===Locate the service robots and take the Treasure Maps{{subst:void|<!--801410409-->}}===
 {{Mission Description|type=adventure|location=Victory Zone: Herta Space Station|update|You must complete the corresponding trials first if you wish to challenge the championship contenders of the Victory Zone.<br />The space station's rules seem akin to hunting for treasures in a dungeon. Now, you must find the other treasure map.}}
 {{Dialogue Start}}
-<pre>{
-	"$type": "RPG.GameCore.CreateProp",
-	"GroupID": {
-		"FixedValue": {
-			"Value": 11
-		}
-	},
-	"GroupPropID": {
-		"FixedValue": {
-			"Value": 300017
-		}
-	},
-	"CreateList": []
-}</pre>
-;(Upon reaching the destination)
-
-;(Upon reaching the destination)
-:{{A|VO side1 ytzx mar7th 367.ogg}} '''March 7th:''' Look, another {{Color|keyword|nobold=1|service robot}}!
-;(Obtain {{Item|Treasure Map No. 1|20|x=1}})
+:{{tx}}
 {{Dialogue End}}
 
 ===Head to the room where Herta is located{{subst:void|<!--801410415-->}}===
 {{Mission Description|type=adventure|location=Victory Zone: Herta Space Station|update|After experiencing that uneventful adventure, you finally earned the right to challenge the "Demon Lord." But Herta doesn't seem to care much about the matches at all. Are you the only ones treating this game seriously?}}
 {{Dialogue Start}}
-
+:{{tx}}
 {{Dialogue End}}
 
 ===Have a duel with Herta{{subst:void|<!--801410416-->}}===
 {{Mission Description|type=adventure|location=Victory Zone: Herta Space Station|update|After experiencing that uneventful adventure, you finally earned the right to challenge the "Demon Lord." But Herta doesn't seem to care much about the matches at all. Are you the only ones treating this game seriously?<br />Regardless, you have already completed all the trials. Now, it is time for a "genius" to stand witness before the true strength of those deemed "mundane."}}
 {{Dialogue Start}}
-;(Upon reaching the destination)
-
-;(Upon reaching the destination)
-----
-:{{A|VO side1 ytzx herta 113.ogg}} '''Herta:''' Well, well, well, little miss pink and the twerp. Having fun tackling the ridiculous puzzles the Gaming Association cooked up?
-:{{A|VO side1 ytzx mar7th 377.ogg}} '''March 7th:''' ...Who're you calling little miss pink!?
-:{{A|VO side1 ytzx herta 114.ogg}} '''Herta:''' You, of course, it's not like Asta's here.
-:{{A|VO side1 ytzx herta 115.ogg}} '''Herta:''' Alright, alright, hurry it up. We're here for that &mdash; what's it called again &mdash; duel, right?
-;(Return to previous option selection)
-:{{A|VO side1 ytzx herta 116.ogg}} '''Herta:''' Or I can just give you the Mastery Mark, up to you.
-:{{DIcon|Arrow}} We'd better follow the proper rules of the tournament.
-:{{DIcon|Arrow}} I'll take it off your hands for you.
-::{{A|VO side1 ytzx mar7th 378.ogg}} '''March 7th:''' Wait, seriously? Can we do that?
-::{{A|VO side1 ytzx herta 117.ogg}} '''Herta:''' Sure, no problem... Ugh, wait, I need to take this call.
-::{{A|VO side1 ytzx herta 118.ogg}} '''Herta:''' ...
-::{{A|VO side1 ytzx herta 119.ogg}} '''Herta:''' Mm-hmm... Mm-hmm... Alright...
-::{{A|VO side1 ytzx herta 120.ogg}} '''Herta:''' That was the Gaming Association &mdash; turns out they're making me stick to the rules.
-:{{A|VO side1 ytzx trotter normal.ogg}} '''(Warp Trotter/Trotter/Bubbles/Puffball/Ivory Menace/Chunky Chops/Turbo Trotter/Trotterlord):''' Oink, oink... Oink, oink!
-:{{A|VO side1 ytzx herta 121.ogg}} '''Herta:''' Ugh, so annoying. The IPC's too concerned with its own reputation...
-:{{A|VO side1 ytzx herta 122.ogg}} '''Herta:''' Fine, let's get this over with. Bring it on, I'm in a hurry.
-:<!--1-second delay-->
-<pre>{
-	"$type": "RPG.GameCore.ShowUI",
-	"Name": "Ui.AetherDivide.AetherChallenge.AetherChallengePage",
-	"WaitForExit": true,
-	"Param": {
-		"Value": "103"
-	}
-}</pre>
-----
-<pre>{
-	"$type": "RPG.GameCore.TalkFigure",
-	"ImagePath": "SpriteOutput/Mission/TalkItem/SubMIssion_250403.png"
-}</pre>
-:<!--1-second delay-->
-:{{A|VO side1 ytzx herta 125.ogg}} '''Herta:''' Oops, well, looks like I lost. Here, the Mastery Mark is yours.
-<pre>{
-	"$type": "RPG.GameCore.TalkFigure",
-	"Show": false,
-	"ImagePath": "SpriteOutput/Mission/TalkItem/SubMIssion_250403.png"
-}</pre>
-:{{A|VO side1 ytzx mar7th 381.ogg}} '''March 7th:''' ...
-:{{A|VO side1 ytzx trotter puzzle.ogg}} '''(Warp Trotter/Trotter/Bubbles/Puffball/Ivory Menace/Chunky Chops/Turbo Trotter/Trotterlord):''' Oink...
-:{{DIcon|Arrow}} ...
-::{{A|VO side1 ytzx herta 126.ogg}} '''Herta:''' What? Isn't this what you wanted?
-:{{DIcon|Arrow}} Feels kinda underwhelming...
-::{{A|VO side1 ytzx mar7th 382.ogg}} '''March 7th:''' Yeah... feels like we're missing something...
-::{{A|VO side1 ytzx herta 127.ogg}} '''Herta:''' Missing something? Did you expect me to remove the twerp's Stellaron, too?
-::{{A|VO side1 ytzx herta 128.ogg}} '''Herta:''' You can't always have your cake and eat it, too, you know.
-:{{A|VO side1 ytzx herta 129.ogg}} '''Herta:''' Alright, let's wrap things up and get going. Next you'll be asking for a tea party...
-:{{A|VO side1 ytzx herta 130.ogg}} '''Herta:''' *sigh* Fine, since you're here, I'll throw in a Q&A. One question per person, and make it snappy!
-:{{DIcon|Arrow}} Why did you become a championship contender?
-::{{A|VO side1 ytzx herta 132.ogg}} '''Herta:''' To bolster the IPC's reputation &mdash; it's a win-win for me.
-::{{A|VO side1 ytzx herta 133.ogg}} '''Herta:''' Alright, that's enough small talk. I've got things to do, seriously...
-::{{A|VO side1 ytzx trotter normal.ogg}} '''(Warp Trotter/Trotter/Bubbles/Puffball/Ivory Menace/Chunky Chops/Turbo Trotter/Trotterlord):''' Oink! Grunt! Oink, oink!
-::{{A|VO side1 ytzx herta 134.ogg}} '''Herta:''' One question per person, remember? The little one doesn't count.
-::{{A|VO side1 ytzx mar7th 386.ogg}} '''March 7th:''' Seems like (Warp Trotter/Trotter/Bubbles/Puffball/Ivory Menace/Chunky Chops/Turbo Trotter/Trotterlord) can sense some kind of danger... One last question, please?
-::{{A|VO side1 ytzx herta 135.ogg}} '''Herta:''' ...Go on then.
-::{{A|VO side1 ytzx mar7th 387.ogg}} '''March 7th:''' This Warp Trotter &mdash; I mean &mdash; Aether Spirit... they've been acting a little strange. Do you have any idea what the reason could be?
-::{{A|VO side1 ytzx herta 136.ogg}} '''Herta:''' ...
-::{{A|VO side1 ytzx herta 137.ogg}} '''Herta:''' No.
-::{{A|VO side1 ytzx mar7th 388.ogg}} '''March 7th:''' ...Not even the Genius Society can figure it out. Why did (Warp Trotter/Trotter/Bubbles/Puffball/Ivory Menace/Chunky Chops/Turbo Trotter/Trotterlord) end up this way?
-::{{A|VO side1 ytzx herta 138.ogg}} '''Herta:''' Oh, hang on.
-::{{A|VO side1 ytzx mar7th 389.ogg}} '''March 7th:''' Did you remember something!?
-::{{A|VO side1 ytzx herta 139.ogg}} '''Herta:''' Nope, but you just reminded me, Giovanni wanted me to pass on a message to you both:
-::{{A|VO side1 ytzx herta 140.ogg}} '''Herta:''' "The elite player has already bested last year's champion, and claimed this year's title. Hence, this year's event will crown two champions."
-::{{A|VO side1 ytzx herta 141.ogg}} '''Herta:''' That's all he had to say. Now, you'd better get a move on.
-::{{A|VO side1 ytzx mar7th 390.ogg}} '''March 7th:''' Uh... Why would he say that?
-::{{A|VO side1 ytzx trotter puzzle.ogg}} '''(Warp Trotter/Trotter/Bubbles/Puffball/Ivory Menace/Chunky Chops/Turbo Trotter/Trotterlord):''' Oink, oink? Oink!
-::{{A|VO side1 ytzx herta 142.ogg}} '''Herta:''' Maybe he's just trying to get you two to move faster, or he just wants to provoke you... Given his nature, this "elite player" might even be him.
-::{{DIcon|Arrow}} That sounds plausible.
-:::{{A|VO side1 ytzx mar7th 391.ogg}} '''March 7th:''' I mean, it does sound like something a Masked Fool might do...
-::{{DIcon|Arrow}} I doubt it.
-:::{{A|VO side1 ytzx mar7th 392.ogg}} '''March 7th:''' Really? The Stellaron Hunter girl did say he was a Masked Fool... and it seems like a stunt they'd pull...
-::{{DIcon|Arrow}} Classic Masked Fool move...
-:::{{A|VO side1 ytzx mar7th 393.ogg}} '''March 7th:''' Ugh... It feels like Mr. Giovanni has been stringing us along the whole time!
-::{{A|VO side1 ytzx herta 143.ogg}} '''Herta:''' Then you'd better ask him about it. It's got nothing to do with me.
-::{{A|VO side1 ytzx mar7th 394.ogg}} '''March 7th:''' Okay... Thanks Madam Herta.
-::----
-::{{A|VO side1 ytzx mar7th 395 m.ogg}} {{A|VO side1 ytzx mar7th 395 f.ogg}} '''March 7th:''' (Trailblazer), since we've got the Mastery Mark, let's head back to the Express and get some well-earned rest.
-::{{A|VO side1 ytzx mar7th 396.ogg}} '''March 7th:''' Uh... Is that your phone?
-::{{A|VO side1 ytzx trotter normal.ogg}} '''(Warp Trotter/Trotter/Bubbles/Puffball/Ivory Menace/Chunky Chops/Turbo Trotter/Trotterlord):''' Oink, oink, oink!
-::----
-:{{DIcon|Arrow}} Do you have any intel on Giovanni?
-::{{A|VO side1 ytzx herta 131.ogg}} '''Herta:''' Nope. Apart from this boring festival, I have no dealings with the man.
-::{{A|VO side1 ytzx mar7th 383.ogg}} '''March 7th:''' I was wondering, Madam Herta, why did you become a championship contender?
-::{{A|VO side1 ytzx herta 132.ogg}} '''Herta:''' To bolster the IPC's reputation &mdash; it's a win-win for me.
-::{{A|VO side1 ytzx herta 133.ogg}} '''Herta:''' Alright, that's enough small talk. I've got things to do, seriously...
-::{{A|VO side1 ytzx trotter normal.ogg}} '''(Warp Trotter/Trotter/Bubbles/Puffball/Ivory Menace/Chunky Chops/Turbo Trotter/Trotterlord):''' Oink! Grunt! Oink, oink!
-::{{A|VO side1 ytzx herta 134.ogg}} '''Herta:''' One question per person, remember? The little one doesn't count.
-::{{A|VO side1 ytzx mar7th 386.ogg}} '''March 7th:''' Seems like (Warp Trotter/Trotter/Bubbles/Puffball/Ivory Menace/Chunky Chops/Turbo Trotter/Trotterlord) can sense some kind of danger... One last question, please?
-::{{A|VO side1 ytzx herta 135.ogg}} '''Herta:''' ...Go on then.
-::{{A|VO side1 ytzx mar7th 387.ogg}} '''March 7th:''' This Warp Trotter &mdash; I mean &mdash; Aether Spirit... they've been acting a little strange. Do you have any idea what the reason could be?
-::{{A|VO side1 ytzx herta 136.ogg}} '''Herta:''' ...
-::{{A|VO side1 ytzx herta 137.ogg}} '''Herta:''' No.
-::{{A|VO side1 ytzx mar7th 388.ogg}} '''March 7th:''' ...Not even the Genius Society can figure it out. Why did (Warp Trotter/Trotter/Bubbles/Puffball/Ivory Menace/Chunky Chops/Turbo Trotter/Trotterlord) end up this way?
-::{{A|VO side1 ytzx herta 138.ogg}} '''Herta:''' Oh, hang on.
-::{{A|VO side1 ytzx mar7th 389.ogg}} '''March 7th:''' Did you remember something!?
-::{{A|VO side1 ytzx herta 139.ogg}} '''Herta:''' Nope, but you just reminded me, Giovanni wanted me to pass on a message to you both:
-::{{A|VO side1 ytzx herta 140.ogg}} '''Herta:''' "The elite player has already bested last year's champion, and claimed this year's title. Hence, this year's event will crown two champions."
-::{{A|VO side1 ytzx herta 141.ogg}} '''Herta:''' That's all he had to say. Now, you'd better get a move on.
-::{{A|VO side1 ytzx mar7th 390.ogg}} '''March 7th:''' Uh... Why would he say that?
-::{{A|VO side1 ytzx trotter puzzle.ogg}} '''(Warp Trotter/Trotter/Bubbles/Puffball/Ivory Menace/Chunky Chops/Turbo Trotter/Trotterlord):''' Oink, oink? Oink!
-::{{A|VO side1 ytzx herta 142.ogg}} '''Herta:''' Maybe he's just trying to get you two to move faster, or he just wants to provoke you... Given his nature, this "elite player" might even be him.
-::{{DIcon|Arrow}} That sounds plausible.
-:::{{A|VO side1 ytzx mar7th 391.ogg}} '''March 7th:''' I mean, it does sound like something a Masked Fool might do...
-::{{DIcon|Arrow}} I doubt it.
-:::{{A|VO side1 ytzx mar7th 392.ogg}} '''March 7th:''' Really? The Stellaron Hunter girl did say he was a Masked Fool... and it seems like a stunt they'd pull...
-::{{DIcon|Arrow}} Classic Masked Fool move...
-:::{{A|VO side1 ytzx mar7th 393.ogg}} '''March 7th:''' Ugh... It feels like Mr. Giovanni has been stringing us along the whole time!
-::{{A|VO side1 ytzx herta 143.ogg}} '''Herta:''' Then you'd better ask him about it. It's got nothing to do with me.
-::{{A|VO side1 ytzx mar7th 394.ogg}} '''March 7th:''' Okay... Thanks Madam Herta.
-::----
-::{{A|VO side1 ytzx mar7th 395 m.ogg}} {{A|VO side1 ytzx mar7th 395 f.ogg}} '''March 7th:''' (Trailblazer), since we've got the Mastery Mark, let's head back to the Express and get some well-earned rest.
-::{{A|VO side1 ytzx mar7th 396.ogg}} '''March 7th:''' Uh... Is that your phone?
-::{{A|VO side1 ytzx trotter normal.ogg}} '''(Warp Trotter/Trotter/Bubbles/Puffball/Ivory Menace/Chunky Chops/Turbo Trotter/Trotterlord):''' Oink, oink, oink!
-::----
-:{{DIcon|Arrow}} Can we have a tea party?
-::{{A|VO side1 ytzx mar7th 384.ogg}} '''March 7th:''' Ugh, do trailblazers not understand sarcasm?
-:;(Return to previous option selection)
+:{{tx}}
 {{Dialogue End}}
 
 ==Other Languages==

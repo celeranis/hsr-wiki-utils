@@ -37,99 +37,13 @@ PageTitle=#Operation Snapshot: Day 1#
 ===Look for Randolph{{subst:void|<!--802430101-->}}===
 {{Mission Description|type=adventure|location=Central Starskiff Haven|Apparently there's an outworlder named Randolph who's looking for you at Starskiff Haven. You decide to check it out.}}
 {{Dialogue Start}}
-
-;(Talk to Randolph)
 :{{tx}}
-:'''Randolph:''' Hello, (Trailblazer). You may not know me, but I know all about you.
-:{{DIcon|Arrow}} Who are you?
-:'''Randolph:''' Allow me to introduce myself, my name is Randolph. I am a Penaconian Trainee Dreamscape Healer, training under Dr. Edward. Recently, I've been working hard to remove this "trainee" part from my title.
-:'''Randolph:''' I've heard about you from a number of friends in Penacony, and I believe that you and I are quite similar.
-:{{DIcon|Arrow}} How so?
-:{{DIcon|Arrow}} Are you as cool as I am? Or as great a fighter?
-:'''Randolph:''' No, no I think you misunderstand me... I just mean that we have interests in common.
-:'''Randolph:''' You and I are both bona fide "trashcan enthusiasts."
-:{{DIcon|Arrow}} I could tell that you were a man of fine taste.
-::'''Randolph:''' Haha, I am happy you approve.
-::Though we may have different parents, I guess that makes us...
-::'''Randolph:''' ...{{MC|f=Siblings|m=Brothers}}, right?
-::What nonsense are you spouting...
-:{{DIcon|Arrow}} Though we may have different parents, I guess that makes us...
-::'''Randolph:''' ...{{MC|f=Siblings|m=Brothers}}, right?
-::What nonsense are you spouting...
-:{{DIcon|Arrow}} What nonsense are you spouting...
-:'''Randolph:''' There's no need to be embarrassed! If you truly love something and that love does not hurt anyone, why would you not celebrate it loud and proud?
-:'''Randolph:''' I make no secret of it, {{Size|32|I love rummaging through trashcans!}}
-:'''Randolph:''' Searching for evidence that people once existed in a deserted land... I don't think there is anything else that greater satisfies the curiosity of the heart.
-:'''Randolph:''' So, I have combined this passion of mine with my path in life and come to Xianzhou to complete my graduate research.
-:{{DIcon|Arrow}} Researching Xianzhou's trashcans?
-::'''Randolph:''' You could put it that way. However, my research target is actually "psychological trash." I'm sure you've heard of memoria before, right?
-::What has being a Dreamscape healer got to do with trashcans?
-::'''Randolph:''' I'm sure you've heard of "memoria" before, right? Memoria constantly reflects the psychological state of people. What I want to do is go trashcan diving into people's "psychological trash."
-::I'm sorry to tell you this, but there are no trashcans on the Xianzhou!
-:{{DIcon|Arrow}} What has being a Dreamscape healer got to do with trashcans?
-::'''Randolph:''' I'm sure you've heard of "memoria" before, right? Memoria constantly reflects the psychological state of people. What I want to do is go trashcan diving into people's "psychological trash."
-::I'm sorry to tell you this, but there are no trashcans on the Xianzhou!
-:{{DIcon|Arrow}} I'm sorry to tell you this, but there are no trashcans on the Xianzhou!
-:'''Randolph:''' It is not possible for a civilization to not create trash, just like a person will never stop emitting "memoria."
-:'''Randolph:''' What I want to do is research the memoria that the Xianzhou people emit. I guess you could say that I want to research "psychological trash."
-:'''Randolph:''' Put simply, I need people to help me "photograph" &mdash; or should I say "locate" &mdash; the scattered memoria floating amongst the Xianzhou people.
-:'''Randolph:''' You mustn't underestimate the importance of such trace amounts of memoria. Much as the contents of a trashcan reflect the quality of life in a city, scattered memoria reflects various indicators of mental states in people. It has outstanding value for medical research.
-:Having finished his explanation, Randolph pulls out his phone to show you some pictures and videos. At first, the images just seem to show regular street scenes and interactions. However, there is a familiar and unexpected figure among the crowd.
-:{{DIcon|Arrow}} A trashcan!
-::'''Randolph:''' Precisely. The undervalued psychological fragments of people &mdash; memoria, roaming the streets and alleys.
-::'''Randolph:''' I have developed an imaging program that makes these scattered memoria clumps visible to your camera lens, using the physical form we both love most.
-::Trashcans?
-:{{DIcon|Arrow}} Trashcans?
-:'''Randolph:''' There is no need for doubt. It is precisely the thing we love the most!
-:'''Randolph:''' These are the undervalued psychological fragments of people &mdash; memoria, roaming the streets and alleys. I have developed an imaging program that makes these scattered memoria clumps visible to your camera lens.
-:'''Randolph:''' So, (Trailblazer), this is the simple and joyous task ahead of us. Pick up your camera, roam the streets and alleys of the Xianzhou, and snap up pictures of these "trashcans" for me!
-:'''Randolph:''' Once the marking for scattered memoria is complete, I will begin the capture work and carry out research on the memoria of the Xianzhou people.
-:{{DIcon|Arrow}} Is this legal?
-:'''Randolph:''' Of course it's legal! The Xianzhou people don't give a hoot about this kind of "spiritual dandruff," there's no way they'd make legislation to protect it... So, there is no way my research would be forbidden.
-:'''Randolph:''' Sorry, (Trailblazer), I've been talking your ear off all this time. Would you like to give it a try for yourself?
-:{{DIcon|Arrow}} I'll give it a shot!
-:<pre>{
-	"$type": "RPG.GameCore.SetPerformanceResult",
-	"Value": 1
-}</pre>
-:{{DIcon|Exit}} I've got something else to do.
-::'''Randolph:''' Alright, I shall wait for you here.
-::{{tx}}
-
-;(Unused &mdash; G266_OpenUI)
-<pre>{
-	"$type": "RPG.GameCore.ShowUI",
-	"Name": "Ui.Activity.ActivityTrackPhoto.Entrance.ActivityTrackPhotoEntrancePage",
-	"OnUIEnter": []
-}</pre>
 {{Dialogue End}}
 
 ===Assist Randolph in filming the scattered memoria{{subst:void|<!--802430102-->}}===
 {{Mission Description|type=adventure|location=Central Starskiff Haven|update|Aid the Trainee Healer Randolph with the filming, thus helping him to position and capture these scattered memoria.}}
 {{Dialogue Start}}
-
-;(Talk to Randolph)
-:'''Randolph:''' My beloved assistant, (Trailblazer)! If you want to retake any pictures, you can come and find me any time.
-:{{DIcon|Travel Log}} Let's begin today's shoot.
-:<pre>{
-	"$type": "RPG.GameCore.SetPerformanceResult",
-	"Value": 1
-}</pre>
-:{{DIcon|Exit}} I've got something else to do.
-::'''Randolph:''' Alright. If you need to retake any pictures, you can come back anytime.
-
-;(Unused &mdash; G253_OpenUI)
-<pre>{
-	"$type": "RPG.GameCore.ShowUI",
-	"Name": "Ui.Activity.ActivityTrackPhoto.Entrance.ActivityTrackPhotoEntrancePage"
-}</pre>
-<pre>{
-	"$type": "RPG.GameCore.WaitFrame"
-}</pre>
-:'''Randolph:''' Some fine photos, my friend.
-:'''Randolph:''' My last assistant had an insatiable quirk. They'd spend so long fiddling with the composition and lighting that when they finally picked up the camera, they weren't able to capture anything!
-:'''Randolph:''' Before I send you out for more sampling, I'm going to try and store this scattered memoria. I need to test whether containment is possible.
-:'''Randolph:''' Alright, (Trailblazer), if you have time again in the future, remember to come and find me.
+:{{tx}}
 {{Dialogue End}}
 
 ==Other Languages==

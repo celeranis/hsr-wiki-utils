@@ -42,328 +42,42 @@ PageTitle=#Photography Exhibition: Statuesque Glimpse#
 ===Find a suitable statue{{subst:void|<!--802720301-->}}===
 {{Mission Description|type=adventure|location=Penacony Grand Theater|There are countless sculptures in the Penacony Grand Theater. Which one should you snap a picture of?}}
 {{Dialogue Start}}
-
-;(Unused &mdash; EnterDistrict_G500)
-:'''March 7th:''' This statue is pretty majestic upon closer inspection. Look at this elegant poise, meticulous carvings, and...
-::'''(Trailblazer):''' Dashing hairstyle.
-::'''March 7th:''' What a stylish statue... Let's use it in our picture!
-::'''???:''' Tweet...tweet......
-::{{DIcon|Arrow}} Take a tweet at it.
-::<pre>{
-	"$type": "RPG.GameCore.AdvDestroyGroupEntity",
-	"InstanceIDList": [
-		300001
-	]
-}</pre>
-::{{DIcon|Arrow}} Yank at it.
-:::'''Pioneering Bird:''' Rules are made to be broken, tweet!
-::{{DIcon|Arrow}} Ignore it.
-:::'''(Trailblazer):''' (A dashing hairstyle is also a big plus... Better not cramp its style for now.)
-::{{tx}}
-:<pre>{
-	"$type": "RPG.GameCore.SetPerformanceResult",
-	"Value": 1
-}</pre>
-
-;(Unused &mdash; EnterDistrict_G500_2)
-:'''March 7th:''' That statue's location and lighting are pretty good. Let's take some shots over there.
+:{{tx}}
 {{Dialogue End}}
 
 ===Take a photo of the statue{{subst:void|<!--802720302-->}}===
 {{Mission Description|type=adventure|location=Penacony Grand Theater|update|To complete the daily tasks and compete for the final prize, you, as a photography assistant, accompanied March 7th on a photography journey.<br />Take a photo based on the photography inspiration.}}
 {{Dialogue Start}}
-;(Unused &mdash; PhotoGraphStartCustomString)
-:<!--1.5-second delay-->
+:{{tx}}
 {{Dialogue End}}
 
 ===Discuss the photo with March 7th{{subst:void|<!--802720305-->}}===
 {{Mission Description|type=adventure|location=Penacony Grand Theater|update|With the photography session wrapped up, have a chat with March 7th about this work}}
 {{Dialogue Start}}
-:'''March 7th:''' (Trailblazer), come up with a name for this photo!
-:"Disco Youth."
-:'''March 7th:''' Hmm... Sounds like a name that suits its time.
-:"Rise of the Eyas."
-:'''March 7th:''' Hmm... It evokes a feeling full of hope for the future.
-:"Trailblazing is Bird-Brained."
-:'''March 7th:''' Such a disrespectful name. If the conductor catches wind of this, they'll eject us from the Express!
-:'''March 7th:''' Upload complete! Huh, what's over there?
-:Just in sight, a familiar marble statue stands in stoic silence. Its owner must still be nearby.
-:'''(Trailblazer):''' I know what to take next. C'mon, let's take a look over there!
-:{{DIcon|Arrow}} This could be the power of Trailblaze.
-:{{DIcon|Arrow}} The Trailbirder was born to trailblaze!
 :{{tx}}
-:'''(Trailblazer):''' Go closer and try it... He should be near the statue.
-:'''March 7th:''' Follow the statue's directions and look around.
-;(Unused &mdash; EnterArea_G505_3)
-:{{tx}}
-:<pre>{
-	"$type": "RPG.GameCore.AdvCreateGroupEntity",
-	"InstanceIDList": [
-		300003,
-		300004,
-		300005,
-		300006,
-		300007
-	]
-}</pre>
-::'''Dr. Ratio:''' My dear Nameless, you managed to wring precious time out of your grand Trailblazing schedule to casually stroll about here? So aesthetically refined.
-::'''Dr. Ratio:''' What you're saying... is that you want to take a photo of my statue to explore the "limits of photography"? Interesting. Using a statue as an academic tool... that is certainly maximizing its potential.
-::After a complicated session of calculations, Dr. Ratio places the statue appropriately. Its weight, height, spaces between, and sequence, all seemingly fit the "golden ratio."
-::Even though it can't be photographed.
-::'''Dr. Ratio:''' Is there anything else you need adjusted?
-::{{DIcon|Arrow}} Prof, can you wear the plaster headpiece?
-:::'''Dr. Ratio:''' Heh, not a bad idea, with decent taste. Photograph to your heart's desires. If something isn't clear... just think harder.
-:::{{tx}}
-::<pre>{
-	"$type": "RPG.GameCore.SetPerformanceResult",
-	"Value": 1
-}</pre>
-::{{DIcon|Arrow}} This is perfect!
-:::'''Dr. Ratio:''' Photograph to your heart's desires then. If something isn't clear... just think harder.
-:::{{tx}}
-
-;(Unused &mdash; EnterArea_G505_1)
-:'''March 7th:''' Follow the statue's directions and look around.
-
-;(Unused &mdash; EnterArea_G505_3)
-:{{tx}}
-:<pre>{
-	"$type": "RPG.GameCore.AdvCreateGroupEntity",
-	"InstanceIDList": [
-		300003,
-		300004,
-		300005,
-		300006,
-		300007
-	]
-}</pre>
-::'''Dr. Ratio:''' My dear Nameless, you managed to wring precious time out of your grand Trailblazing schedule to casually stroll about here? So aesthetically refined.
-::'''Dr. Ratio:''' What you're saying... is that you want to take a photo of my statue to explore the "limits of photography"? Interesting. Using a statue as an academic tool... that is certainly maximizing its potential.
-::After a complicated session of calculations, Dr. Ratio places the statue appropriately. Its weight, height, spaces between, and sequence, all seemingly fit the "golden ratio."
-::Even though it can't be photographed.
-::'''Dr. Ratio:''' Is there anything else you need adjusted?
-::{{DIcon|Arrow}} Prof, can you wear the plaster headpiece?
-:::'''Dr. Ratio:''' Heh, not a bad idea, with decent taste. Photograph to your heart's desires. If something isn't clear... just think harder.
-:::{{tx}}
-::<pre>{
-	"$type": "RPG.GameCore.SetPerformanceResult",
-	"Value": 1
-}</pre>
-::{{DIcon|Arrow}} This is perfect!
-:::'''Dr. Ratio:''' Photograph to your heart's desires then. If something isn't clear... just think harder.
-:::{{tx}}
-
-;(Unused &mdash; EnterArea_G505_2)
-:'''(Trailblazer):''' Could it be behind the curtain...?
 {{Dialogue End}}
 
 ===Find the statue's master following its hint{{subst:void|<!--802720309-->}}===
 {{Mission Description|type=adventure|location=Penacony Grand Theater|update|The statue reminds you of an old acquaintance. He may just be nearby.}}
 {{Dialogue Start}}
-
-;(Unused &mdash; EnterArea_G505_3)
 :{{tx}}
-:<pre>{
-	"$type": "RPG.GameCore.AdvCreateGroupEntity",
-	"InstanceIDList": [
-		300003,
-		300004,
-		300005,
-		300006,
-		300007
-	]
-}</pre>
-::'''Dr. Ratio:''' My dear Nameless, you managed to wring precious time out of your grand Trailblazing schedule to casually stroll about here? So aesthetically refined.
-::'''Dr. Ratio:''' What you're saying... is that you want to take a photo of my statue to explore the "limits of photography"? Interesting. Using a statue as an academic tool... that is certainly maximizing its potential.
-::After a complicated session of calculations, Dr. Ratio places the statue appropriately. Its weight, height, spaces between, and sequence, all seemingly fit the "golden ratio."
-::Even though it can't be photographed.
-::'''Dr. Ratio:''' Is there anything else you need adjusted?
-::{{DIcon|Arrow}} Prof, can you wear the plaster headpiece?
-:::'''Dr. Ratio:''' Heh, not a bad idea, with decent taste. Photograph to your heart's desires. If something isn't clear... just think harder.
-:::{{tx}}
-::<pre>{
-	"$type": "RPG.GameCore.SetPerformanceResult",
-	"Value": 1
-}</pre>
-::{{DIcon|Arrow}} This is perfect!
-:::'''Dr. Ratio:''' Photograph to your heart's desires then. If something isn't clear... just think harder.
-:::{{tx}}
 {{Dialogue End}}
 
 ===Discuss the photo with March 7th{{subst:void|<!--802720312-->}}===
 {{Mission Description|type=adventure|location=Penacony Grand Theater|update|With the photography session wrapped up, have a chat with March 7th about this work}}
 {{Dialogue Start}}
-:'''Dr. Ratio:''' Let's put the "limits" of photography aside for now... Even reaching the starting line is a concern.
-:'''March 7th:''' No matter what you learn, it all begins at the starting line!
-:'''Dr. Ratio:''' Heh, that's a precious attitude to learning... A fool who humbly acknowledges the truth is already a step ahead of the witless arrogant.
-:'''Dr. Ratio:''' I'll bequeath you with a question, as inspiration for your photograph's name: "What is hard on the outside, soft on the inside; smooth on the surface, coarse within; appears legion, but fundamentally united; cold in its welcome, but can be savored by the observer?"
-:{{DIcon|Arrow}} A group of stone statues that have something on their minds.
-:<pre>{
-	"$type": "RPG.GameCore.SetTextJoinValue",
-	"TextJoinID": 197,
-	"Value": "1"
-}</pre>
-:{{DIcon|Arrow}} Berrypheasant skewers.
-:<pre>{
-	"$type": "RPG.GameCore.SetTextJoinValue",
-	"TextJoinID": 197,
-	"Value": "2"
-}</pre>
-:{{DIcon|Arrow}} Professor Ratio (third from left).
-:<pre>{
-	"$type": "RPG.GameCore.SetTextJoinValue",
-	"TextJoinID": 197,
-	"Value": "3"
-}</pre>
-:'''Dr. Ratio:''' Let's put the "limits" of photography aside for now... Even reaching the starting line is a concern.
-:'''March 7th:''' No matter what you learn, it all begins at the starting line!
-:'''Dr. Ratio:''' Heh, that's a precious attitude to learning... A fool who humbly acknowledges the truth is already a step ahead of the witless arrogant.
-:'''Dr. Ratio:''' I'll bequeath you with a question, as inspiration for your photograph's name: "What is hard on the outside, soft on the inside; smooth on the surface, coarse within; appears legion, but fundamentally united; cold in its welcome, but can be savored by the observer?"
-:A group of stone statues that have something on their minds.
-:'''Dr. Ratio:''' Not bad, perfect score... if you remove "something on their minds." It appears that this riddle was too easy.
-:Berrypheasant skewers.
-:'''Dr. Ratio:''' ...Zero points.
-:'''March 7th:''' Sweet berrypheasant fruit wrapped in a crispy rock candy shell &mdash; isn't that something that can be savored?
-:Professor Ratio (third from left).
-:'''Dr. Ratio:''' ...Zero points!
-:'''March 7th:''' That feels awfully specific, real academic-like.
-:'''March 7th:''' That's it for today's photography. I'll upload the photos and see what everyone has to say.
 :{{tx}}
-:'''Dr. Ratio:''' Let's put the "limits" of photography aside for now... Even reaching the starting line is a concern.
-:'''March 7th:''' No matter what you learn, it all begins at the starting line!
-:'''Dr. Ratio:''' Heh, that's a precious attitude to learning... A fool who humbly acknowledges the truth is already a step ahead of the witless arrogant.
-:'''Dr. Ratio:''' I'll bequeath you with a question, as inspiration for your photograph's name: "What is hard on the outside, soft on the inside; smooth on the surface, coarse within; appears legion, but fundamentally united; cold in its welcome, but can be savored by the observer?"
-:{{DIcon|Arrow}} A group of stone statues that have something on their minds.
-:<pre>{
-	"$type": "RPG.GameCore.SetTextJoinValue",
-	"TextJoinID": 197,
-	"Value": "1"
-}</pre>
-:{{DIcon|Arrow}} Berrypheasant skewers.
-:<pre>{
-	"$type": "RPG.GameCore.SetTextJoinValue",
-	"TextJoinID": 197,
-	"Value": "2"
-}</pre>
-:{{DIcon|Arrow}} Professor Ratio (third from left).
-:<pre>{
-	"$type": "RPG.GameCore.SetTextJoinValue",
-	"TextJoinID": 197,
-	"Value": "3"
-}</pre>
-:'''Dr. Ratio:''' Let's put the "limits" of photography aside for now... Even reaching the starting line is a concern.
-:'''March 7th:''' No matter what you learn, it all begins at the starting line!
-:'''Dr. Ratio:''' Heh, that's a precious attitude to learning... A fool who humbly acknowledges the truth is already a step ahead of the witless arrogant.
-:'''Dr. Ratio:''' I'll bequeath you with a question, as inspiration for your photograph's name: "What is hard on the outside, soft on the inside; smooth on the surface, coarse within; appears legion, but fundamentally united; cold in its welcome, but can be savored by the observer?"
-:A group of stone statues that have something on their minds.
-:'''Dr. Ratio:''' Not bad, perfect score... if you remove "something on their minds." It appears that this riddle was too easy.
-:Berrypheasant skewers.
-:'''Dr. Ratio:''' ...Zero points.
-:'''March 7th:''' Sweet berrypheasant fruit wrapped in a crispy rock candy shell &mdash; isn't that something that can be savored?
-:Professor Ratio (third from left).
-:'''Dr. Ratio:''' ...Zero points!
-:'''March 7th:''' That feels awfully specific, real academic-like.
-:'''March 7th:''' That's it for today's photography. I'll upload the photos and see what everyone has to say.
-:{{tx}}
-
-;(Unused &mdash; EnterArea_G505_3)
-:{{tx}}
-:<pre>{
-	"$type": "RPG.GameCore.AdvCreateGroupEntity",
-	"InstanceIDList": [
-		300003,
-		300004,
-		300005,
-		300006,
-		300007
-	]
-}</pre>
-::'''Dr. Ratio:''' My dear Nameless, you managed to wring precious time out of your grand Trailblazing schedule to casually stroll about here? So aesthetically refined.
-::'''Dr. Ratio:''' What you're saying... is that you want to take a photo of my statue to explore the "limits of photography"? Interesting. Using a statue as an academic tool... that is certainly maximizing its potential.
-::After a complicated session of calculations, Dr. Ratio places the statue appropriately. Its weight, height, spaces between, and sequence, all seemingly fit the "golden ratio."
-::Even though it can't be photographed.
-::'''Dr. Ratio:''' Is there anything else you need adjusted?
-::{{DIcon|Arrow}} Prof, can you wear the plaster headpiece?
-:::'''Dr. Ratio:''' Heh, not a bad idea, with decent taste. Photograph to your heart's desires. If something isn't clear... just think harder.
-:::{{tx}}
-::<pre>{
-	"$type": "RPG.GameCore.SetPerformanceResult",
-	"Value": 1
-}</pre>
-::{{DIcon|Arrow}} This is perfect!
-:::'''Dr. Ratio:''' Photograph to your heart's desires then. If something isn't clear... just think harder.
-:::{{tx}}
 {{Dialogue End}}
 
 ===Take a photo of the statue{{subst:void|<!--802720303-->}}===
 {{Mission Description|type=adventure|location=Penacony Grand Theater|update|To complete the daily tasks and compete for the final prize, you, as a photography assistant, accompanied March 7th on a photography journey.<br />Take a photo based on the photography inspiration.}}
 {{Dialogue Start}}
-;(Unused &mdash; PhotoGraphStartCustomString)
-:<!--1.5-second delay-->
-
-:{{DIcon|Origami Bird}} Jump and pluck!
-;(Unused &mdash; PhotoGraphStartCustomString)
-:<!--0.5-second delay-->
-:<pre>{
-	"$type": "RPG.GameCore.SetCharacterAtlasFaceEmotion",
-	"CharacterUniqueName": "G503_NPC400002",
-	"EmotionIndex": 12
-}</pre>
-
-;(Unused &mdash; PhotoGraphFinishCustomString)
-<pre>{
-	"$type": "RPG.GameCore.HideEntityV2",
-	"Target": {
-		"$type": "RPG.GameCore.TargetFetchAdvNpcEx",
-		"FetchType": "SingleNpcByNpcID",
-		"SingleNpcID": {
-			"GroupID": {
-				"FixedValue": {
-					"Value": 503
-				}
-			},
-			"GroupNpcID": {
-				"FixedValue": {
-					"Value": 400002
-				}
-			}
-		}
-	},
-	"IsHide": true
-}</pre>
-:<pre>{
-	"$type": "RPG.GameCore.HideEntityV2",
-	"Target": {
-		"$type": "RPG.GameCore.TargetFetchAdvPropEx",
-		"FetchType": "SinglePropByPropID",
-		"SinglePropID": {
-			"GroupID": {
-				"FixedValue": {
-					"Value": 503
-				}
-			},
-			"ID": {
-				"FixedValue": {
-					"Value": 300003
-				}
-			}
-		}
-	}
-}</pre>
+:{{tx}}
 {{Dialogue End}}
 
 ===Take a photo of Dr. Ratio{{subst:void|<!--802720310-->}}===
 {{Dialogue Start}}
-;(Unused &mdash; PhotoGraphStartCustomString)
-
-
-;(Unused &mdash; PhotoGraphFinishCustomString)
-
-;(Unused &mdash; PhotoGraphStartCustomString)
-
-
-;(Unused &mdash; PhotoGraphFinishCustomString)
-
+:{{tx}}
 {{Dialogue End}}
 
 ==Other Languages==

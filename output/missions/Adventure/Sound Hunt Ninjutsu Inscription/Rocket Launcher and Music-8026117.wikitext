@@ -22,6 +22,7 @@ PageTitle=#Rocket Launcher and Music#
 '''''Rocket Launcher and Music''''' is an Event [[Adventure Mission]] from the [[Sound Hunt Ninjutsu Inscription]] event.
 
 ==Steps==
+# Collect inspiration for composing a song by wandering around the Golden Hour
 # Play the new arcade game developed by the Pepeshi merchant
 
 <!--
@@ -33,67 +34,16 @@ PageTitle=#Rocket Launcher and Music#
 -->
 ==Dialogue==
 {{Stub Dialogue}}
-
-;(Talk to Pepeshi Merchant)
-:'''Pepeshi Merchant:''' There's a new game doing their first playtest. Just three minutes and I'm sure you'll love this game just like I do!
-:{{DIcon|Travel Log}} Let me play it.
-:<pre>{
-	"$type": "RPG.GameCore.ShowUI",
-	"Name": "Ui.MusicRhythm.MusicRhythmChooseLevelPage",
-	"WaitForExit": true,
-	"Param": {
-		"Value": "8"
-	},
-	"OnUIExitImmediately": [
-		{
-			"$type": "RPG.GameCore.EndDialogueEntityInteract"
-		}
-	]
-}</pre>
-:{{DIcon|Exit}} I've got something else to do.
-
+===Collect inspiration for composing a song by wandering around the Golden Hour{{subst:void|<!--802611701-->}}===
+{{Mission Description|type=adventure|location=Golden Hour|You've become the manager of the music party's performing band, and now your band needs to complete 3 performances on the stage in the middle of the campus.<br />Wander around the Golden Hour to help Rappa collect inspiration for composing.}}
+{{Dialogue Start}}
+:{{tx}}
 {{Dialogue End}}
 
-===Play the new arcade game developed by the Pepeshi merchant{{subst:void|<!--802611703-->}}===
+===Play the new arcade game developed by the Pepeshi merchant{{subst:void|<!--802611704-->}}===
 {{Mission Description|type=adventure|location=Golden Hour|update|You've become the manager of the music party's performing band, and now your band needs to complete 3 performances on the stage in the middle of the campus.<br />Obtain a record of Brother Hanu's beats to help Rappa collect inspiration for composing.}}
 {{Dialogue Start}}
-
-;(Talk to Pepeshi Merchant)
-:'''Pepeshi Merchant:''' There's a new game doing their first playtest. Just three minutes and I'm sure you'll love this game just like I do!
-:{{DIcon|Travel Log}} Let me play it.
-:<pre>{
-	"$type": "RPG.GameCore.ShowUI",
-	"Name": "Ui.MusicRhythm.MusicRhythmChooseLevelPage",
-	"WaitForExit": true,
-	"Param": {
-		"Value": "8"
-	},
-	"OnUIExitImmediately": [
-		{
-			"$type": "RPG.GameCore.EndDialogueEntityInteract"
-		}
-	]
-}</pre>
-:{{DIcon|Exit}} I've got something else to do.
-
-;(Unused &mdash; MusicRhythm_ShowUI)
-<pre>{
-	"$type": "RPG.GameCore.WaitFrame"
-}</pre>
-:<pre>{
-	"$type": "RPG.GameCore.ShowUI",
-	"Name": "Ui.MusicRhythm.MusicRhythmChooseLevelPage",
-	"WaitForExit": true,
-	"Param": {
-		"Value": "8"
-	},
-	"OnUICustomEvent": [],
-	"OnUIExitImmediately": [
-		{
-			"$type": "RPG.GameCore.EndDialogueEntityInteract"
-		}
-	]
-}</pre>
+:{{tx}}
 {{Dialogue End}}
 
 ==Other Languages==

@@ -40,77 +40,25 @@ PageTitle=#Winter Soldiers' March (I)#
 ===Talk to the aide to understand the objective of the training{{subst:void|<!--407131101-->}}===
 {{Mission Description|type=adventure|location=Silvermane Guard Restricted Zone|Dunn invites you to a joint training in the Silvermane Guard Restricted Zone.<br />Talk to the aide and get a sense of the objective of this training.}}
 {{Dialogue Start}}
-;(Upon reaching the destination)
-
-;(Upon reaching the destination)
-<pre>{
-	"$type": "RPG.GameCore.EnableNPCMonsterAI",
-	"Enable": true,
-	"GroupMonsterIDs": [],
-	"UniqueNames": []
-}</pre>
-<pre>{
-	"$type": "RPG.GameCore.CharacterTriggerAnimState",
-	"CharacterUniqueName": {
-		"Value": "Robot_1"
-	},
-	"AnimStateName": "Maze_Idle_01",
-	"NormalizedTransitionDuration": 0.25
-}</pre>
-:'''Aide:''' Beep &mdash; boop.
-:'''Aide:''' Thanks for being our sparring partner, Drillmaster (Trailblazer).
-:'''Aide:''' The Silvermane Guards have set up position in the restricted zone and are prepared to meet your challenge.
-:'''Aide:''' You have to break through the blockade we've set up, and take on Captain Dunn's trial at the end.
-<pre>{
-	"$type": "RPG.GameCore.CharacterTriggerAnimState",
-	"CharacterUniqueName": {
-		"Value": "Robot_1"
-	},
-	"AnimStateName": "Maze_Idle_01",
-	"NormalizedTransitionDuration": 0.25
-}</pre>
-:<!--1-second delay-->
+:{{tx}}
 {{Dialogue End}}
 
 ===Find a way to unlock the gate at the restricted zone blockade line{{subst:void|<!--407131102-->}}===
 {{Mission Description|type=adventure|location=Silvermane Guard Restricted Zone|update|Dunn invites you to a joint training in the Silvermane Guard Restricted Zone.<br />The first aim is to break through the blockade line in the restricted zone, so go ahead and find a way to open the gate.}}
 {{Dialogue Start}}
-<pre>{
-	"$type": "RPG.GameCore.WaitPredicateSucc"
-}</pre>
-<pre>{
-	"$type": "RPG.GameCore.WaitPredicateSucc"
-}</pre>
+:{{tx}}
 {{Dialogue End}}
 
 ===Pass Dunn's trial{{subst:void|<!--407131104-->}}===
 {{Mission Description|type=adventure|location=Silvermane Guard Restricted Zone|update|You successfully broke through the blockade line of the Silvermane Guard Restricted Zone. Defeat Dunn to conclude the training.}}
 {{Dialogue Start}}
-;(Upon reaching the destination)
-
-;(Upon reaching the destination)
-:'''Dunn:''' Oh, if it isn't Drillmaster (Trailblazer)! Let me check the time...
-:'''Dunn:''' ...Marvelous. As expected, you've cut straight through our carefully-laid blockade in no time at all.
-:'''Dunn:''' But the aide should have already explained to you that, if you want to win this drill, you'll have to get through me.
-:'''Dunn:''' How about it, (Trailblazer)? Are you ready to go head-to-head with me?
-:{{DIcon}} Let's begin.
-::'''Dunn:''' ...Good!
-:{{DIcon}} I'll beat you!
-::'''Dunn:''' ...You sure talk big!
+:{{tx}}
 {{Dialogue End}}
 
 ===Talk to the aide and complete the restricted zone training{{subst:void|<!--407131105-->}}===
 {{Mission Description|type=adventure|location=Silvermane Guard Restricted Zone|update|You passed the first restricted zone training.<br />Talk to the aide and collect your reward.}}
 {{Dialogue Start}}
-:'''Dunn:''' Hoo... Wonderful... Truly wonderful. Your combat skills are more proficient than before...
-:{{DIcon}} I only have two abilities.
-::'''Dunn:''' ...Huh? What are you talking about?
-:{{DIcon}} After that, I gacha'ed loads more.
-::'''Dunn:''' ...Huh? What do you mean?
-:'''Dunn:''' Never mind. No need to go over the details. The strong have their own ways for getting stronger. I get it!
-:'''Dunn:''' That's enough drills in the restricted zone for now. Go chat with the aide and claim your well-deserved reward.
-:'''Dunn:''' Thanks for helping the Guards hone our combat skills &mdash; We hope you can come back and train with us again sometime, Drillmaster (Trailblazer).
-;(Upon reaching the destination)
+:{{tx}}
 {{Dialogue End}}
 
 ==Other Languages==

@@ -38,79 +38,13 @@ PageTitle=#Fyxestroll Gathering (II)#
 ===Meet up with your teammates in Fyxestroll Garden{{subst:void|<!--801519201-->}}===
 {{Mission Description|type=continuance|location=Fyxestroll Garden|Once again, you reunite with your fellow ghost hunters at Fyxestroll Garden. Scanning through the posts on Ghostly Grove and conducting investigations have become routine tasks for you.}}
 {{Dialogue Start}}
-<pre>{
-	"$type": "RPG.GameCore.CreateProp",
-	"GroupID": {
-		"FixedValue": {
-			"Value": 51
-		}
-	},
-	"GroupPropID": {
-		"FixedValue": {
-			"Value": 300001
-		}
-	}
-}</pre>
-;(Upon reaching the destination)
-
-;(Upon reaching the destination)
-<pre>{
-	"$type": "RPG.GameCore.SetAudioEmotionState",
-	"StateName": "State_Joyful",
-	"SubMissionID": 801519201
-}</pre>
-:{{A|VO side2 hzzy huohuo 175 m.ogg}} {{A|VO side2 hzzy huohuo 175 f.ogg}} '''Huohuo:''' Hello. Let's get started with today's operations.
-:{{A|VO side2 hzzy guinaifen 194.ogg}} '''Guinaifen:''' The Ten-Lords Commission Special Operations Team for the Heliobus Containment Breach Incident &mdash; A.K.A the ghost-hunting squad &mdash; is ready for action! Yeahhh⁓!
-:{{A|VO side2 hzzy sushang 164.ogg}} '''Sushang:''' Yeah...
-:{{A|VO side2 hzzy huohuo 176.ogg}} '''Huohuo:''' ...?
-:{{DIcon|Arrow}} Yeah!
-::{{A|VO side2 hzzy guinaifen 195.ogg}} '''Guinaifen:''' Looks like we're the only ones in good spirits today...
-::Clocking in...
-::{{A|VO side2 hzzy guinaifen 196.ogg}} '''Guinaifen:''' Yo, why the exhaustion? You look like the officers over at the Realm-Keeping Commission.
-::Can I switch to a four-day week?
-:{{DIcon|Arrow}} Clocking in...
-::{{A|VO side2 hzzy guinaifen 196.ogg}} '''Guinaifen:''' Yo, why the exhaustion? You look like the officers over at the Realm-Keeping Commission.
-::Can I switch to a four-day week?
-:{{DIcon|Arrow}} Can I switch to a four-day week?
-:{{A|VO side2 hzzy guinaifen 197.ogg}} '''Guinaifen:''' I don't think that was included in the job posting. Actually, I don't think there ever was a job posting.
-:{{A|VO side2 hzzy sushang 165.ogg}} '''Sushang:''' I'm sleepy... Little Gui, what kind of magical elixir did you take to make you so energetic?
-:{{A|VO side2 hzzy guinaifen 198.ogg}} '''Guinaifen:''' Every time I see our follower count increase, I get so excited I can't even sleep &mdash; it works better than any kind of tea or coffee.
-:{{A|VO side2 hzzy sushang 166.ogg}} '''Sushang:''' Well aren't you lucky. As soon as I closed my eyes, I dreamt of endless running and circling and chasing after Lady Bailu... it was even more exhausting than doing it in real life.
-:{{A|VO side2 hzzy guinaifen 199.ogg}} '''Guinaifen:''' Sushang, you slept for an entire day!
-:{{A|VO side2 hzzy sushang 167.ogg}} '''Sushang:''' Catching ghosts is a night job &mdash; it only makes sense to sleep during the day.
-:{{A|VO side2 hzzy sushang 168.ogg}} '''Sushang:''' I have an idea &mdash; how about we all just pretend that I've been possessed by a sleep ghost, let me sleep for another ten hours, and then call it a day's work?
-:{{DIcon|Arrow}} You sound like someone I know...
-::{{A|VO side2 hzzy guinaifen 200.ogg}} '''Guinaifen:''' A certain Celestial Jade-playing Divination Commission employee, perhaps...?
-::{{A|VO side2 hzzy sushang 169.ogg}} '''Sushang:''' Divination Commission? Celestial Jade? Shouldn't they be doing... divinations?
-::Sounds like you've spent time with Qingque...
-:{{DIcon|Arrow}} Sounds like you've spent time with Qingque...
-:{{A|VO side2 hzzy huohuo 177.ogg}} '''Huohuo:''' That's the Celestial Jade player over at Exalting Sanctum! Whenever I pass through on official business, I always see her with loads of other players.
-:{{A|VO side2 hzzy guinaifen 201.ogg}} '''Guinaifen:''' Even a judge knows her! Her reputation sure does precede her...
-----
-
-;(Talk to Guinaifen)
-:{{A|VO side2 hzzy guinaifen 202.ogg}} '''Guinaifen:''' It's this girl. Here, look at this post.
-<pre>{
-	"$type": "RPG.GameCore.ShowTransitionLoadingUI",
-	"Name": "Ui.Heliobus.Transition.HeliobusTransitionDialog"
-}</pre>
-<pre>{
-	"$type": "RPG.GameCore.ShowUI",
-	"Name": "Ui.Heliobus.SNS.SNSMain.SNSDetail.HeliobusSNSDetailDialog",
-	"Param": {
-		"Value": "102"
-	},
-	"OnUIEnter": [
-		{
-			"$type": "RPG.GameCore.ExitTransitionLoadingUI"
-		}
-	]
-}</pre>
+:{{tx}}
 {{Dialogue End}}
 
 ===Talk to Guinaifen and check the post asking for help{{subst:void|<!--801519202-->}}===
 {{Mission Description|type=continuance|location=Fyxestroll Garden|update|Having completed your adventure, you reunite with your fellow ghost hunters at Fyxestroll Garden. Scanning through the posts on Ghostly Grove and conducting investigations have become routine tasks for you.}}
 {{Dialogue Start}}
+:{{tx}}
 {{Dialogue End}}
 
 ==Other Languages==

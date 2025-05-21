@@ -40,196 +40,22 @@ PageTitle=#Exhibit Collection: Automaton Hound#
 ===Find out more about the situation from Uldan{{subst:void|<!--800121101-->}}===
 {{Mission Description|type=adventure|location=History and Culture Museum|Belobog's History and Culture Museum will be opening soon. Uldan is collecting appropriate exhibits to ensure a successful opening.<br />This time, Uldan needs your help to collect Automaton Hound combat data at the Robot Settlement to help the museum make a replica.}}
 {{Dialogue Start}}
-
-;(Talk to Uldan)
-:'''Uldan:''' (Trailblazer), you're back. I have absolute confidence that you're the right person for this next job.
-::'''Uldan:''' This time around, I hope you can help us retrieve some data from {{Color|keyword|nobold=1|Automaton Hound}}...
-::'''Uldan:''' We put in a request with the Silvermane Guards' Technology Division, but they shut us down. They said that data from Silvermane automatons is top secret, so they're unwilling to let it be an exhibit in the Museum.
-::'''Uldan:''' That's why I've thought of you &mdash; I heard you've made quite the name for yourself down in the Underworld, and even that Svarog is willing to sing your praises...
-::'''Uldan:''' This is a simple job: Just take this recording device down to the Underworld and get into a fight with an {{Color|keyword|nobold=1|Automaton Hound}} &mdash; that's all.
-::'''Uldan:''' Automaton data from the Underworld presumably is not classified... And so, I leave this task in your capable hands.
-:<pre>{
-	"$type": "RPG.GameCore.PlayMultiVoiceTalk",
-	"TalkSentenceID": 501190111
-}</pre>
-:::{{DIcon|?}} About the portrait of Cyrille the Fool...
-::::'''Uldan:''' (Trailblazer)... Did you say that the description of {{Color|keyword|nobold=1|Cyrille the Fool's}} portrait deviated from the truth?
-::::'''Uldan:''' But... how's that possible? The description is taken from the history textbooks of the Belobog Academy. Everything is in black and white.
-::::{{DIcon|Talk}} I met Cyrille before.
-:::::'''Uldan:''' Well... Stop pulling my leg.
-:::::'''Uldan:''' Still, I can tell you have at least heard of Cyrille from your tone.
-::::;(Return to previous option selection)
-::::{{DIcon|Arrow}} I have evidence that supports Cyrille.
-:::::'''Uldan:''' Since you sound so sure of yourself, I'll take a look at your evidence.
-::::<pre>{
-	"$type": "RPG.GameCore.ConsumeMissionItemPerformance",
-	"SubMissionID": 800122503,
-	"Desc": {
-		"Hash": 18096028862919064994
-	},
-	"OnSubmitConfirm": [
-		{
-			"$type": "RPG.GameCore.PlayAndWaitSimpleTalk",
-			"SimpleTalkList": [
-				{
-					"TalkSentenceID": 800122739
-				},
-				{
-					"TalkSentenceID": 800122740
-				},
-				{
-					"TalkSentenceID": 800122741
-				},
-				{
-					"TalkSentenceID": 800122742
-				}
-			]
-		},
-		{
-			"$type": "RPG.GameCore.TriggerCustomString",
-			"CustomString": {
-				"Value": "Talk_800122502"
-			}
-		},
-		{
-			"$type": "RPG.GameCore.TriggerCustomString",
-			"CustomString": {
-				"Value": "TalkSentence_501190151"
-			}
-		}
-	],
-	"OnSubmitCancel": [
-		{
-			"$type": "RPG.GameCore.TriggerCustomString",
-			"CustomString": {
-				"Value": "TalkSentence_501190151"
-			}
-		}
-	],
-	"SimpleTalk": {}
-}</pre>
-:::{{DIcon|Exit}} I'll go ahead and tour now.
-:<pre>{
-	"$type": "RPG.GameCore.PlayMultiVoiceTalk",
-	"TalkSentenceID": 501190111
-}</pre>
+:{{tx}}
 {{Dialogue End}}
 
 ===Go to the Robot Settlement and collect Automaton Hound combat data{{subst:void|<!--800121102-->}}===
 {{Dialogue Start}}
-
-;(Talk to "Mech-Pet" Lover)
-:'''"Mech-Pet" Lover:''' Huh? A fresh face. What have you come to our robot settlement for?
-:{{DIcon|Arrow}} I want some data from an automaton hound.
-:'''"Mech-Pet" Lover:''' Yeah, right. That's a pretty tall order! No way I'm handing over automaton data to just anybody.
-:'''"Mech-Pet" Lover:''' But then again, if you're willing to spar with my big baby, then I might just be willin' to reconsider.
-:'''"Mech-Pet" Lover:''' How about it, then? A fight? Or are you scared of my baby?
-:{{DIcon|Arrow}} Let's fight, then! Bring it on!
-:'''"Mech-Pet" Lover:''' Haha! Good! Another chance for my sweetie to pick up some new combat data &mdash;
-:'''"Mech-Pet" Lover:''' Let's start!
-;(Enter battle)
-:{{Enemy List|Automaton Spider*4}}
-:'''"Mech-Pet" Lover:''' Haha, now that's some precious data. Don't worry, my dear &mdash; I'll give you an upgrade...
-:'''"Mech-Pet" Lover:''' So here's the previous automaton data for you. I ain't got no use for it anymore.
-:'''"Mech-Pet" Lover:''' You earned it &mdash; seeya later, {{MC|f=sister|m=brother}}!
-:'''(Trailblazer):''' (The data seems to have been recorded...)
-----
+:{{tx}}
 {{Dialogue End}}
 
 ===Report to Uldan{{subst:void|<!--800121104-->}}===
 {{Dialogue Start}}
-
-
-;(Talk to Uldan)
-;(If {{cx}}<!--during performance 501190101-->)
-::'''Uldan:''' Welcome to the Belobog History and Culture Museum, {{MC|f=young miss|m=young man}}. Is there anything an old man like me can help you with?
-::{{DIcon|Arrow}} I'm just here to visit the museum.
-:::'''Uldan:''' Oh hoho, you're at the wrong place. This is the museum's warehouse. Head out then turn right, the exhibition hall is past the reception counter.
-::{{DIcon|Arrow}} I'm here solely to talk with older people.
-:::'''Uldan:''' Hah, what a unique hobby. However, this is a museum after all. Since you're here, might as well have a tour. Head out then turn right, the exhibition hall is past the reception counter.
-::'''Uldan:''' If you have any questions along your tour, or if you have any feedback or opinions, welcome to come talk to me...
-::'''Uldan:''' ...I am Uldan, former dean of the Belobog College of Art, and now the curator of this museum. Pleased to meet you.
-;(If {{cx}}<!--not during performance 501190101-->)
-::<pre>{
-	"$type": "RPG.GameCore.PlayMultiVoiceTalk",
-	"TalkSentenceID": 501190111
-}</pre>
-::::{{DIcon|?}} About the portrait of Cyrille the Fool...
-:::::'''Uldan:''' (Trailblazer)... Did you say that the description of {{Color|keyword|nobold=1|Cyrille the Fool's}} portrait deviated from the truth?
-:::::'''Uldan:''' But... how's that possible? The description is taken from the history textbooks of the Belobog Academy. Everything is in black and white.
-:::::{{DIcon|Talk}} I met Cyrille before.
-::::::'''Uldan:''' Well... Stop pulling my leg.
-::::::'''Uldan:''' Still, I can tell you have at least heard of Cyrille from your tone.
-:::::;(Return to previous option selection)
-:::::{{DIcon|Arrow}} I have evidence that supports Cyrille.
-::::::'''Uldan:''' Since you sound so sure of yourself, I'll take a look at your evidence.
-:::::<pre>{
-	"$type": "RPG.GameCore.ConsumeMissionItemPerformance",
-	"SubMissionID": 800122503,
-	"Desc": {
-		"Hash": 18096028862919064994
-	},
-	"OnSubmitConfirm": [
-		{
-			"$type": "RPG.GameCore.PlayAndWaitSimpleTalk",
-			"SimpleTalkList": [
-				{
-					"TalkSentenceID": 800122739
-				},
-				{
-					"TalkSentenceID": 800122740
-				},
-				{
-					"TalkSentenceID": 800122741
-				},
-				{
-					"TalkSentenceID": 800122742
-				}
-			]
-		},
-		{
-			"$type": "RPG.GameCore.TriggerCustomString",
-			"CustomString": {
-				"Value": "Talk_800122502"
-			}
-		},
-		{
-			"$type": "RPG.GameCore.TriggerCustomString",
-			"CustomString": {
-				"Value": "TalkSentence_501190151"
-			}
-		}
-	],
-	"OnSubmitCancel": [
-		{
-			"$type": "RPG.GameCore.TriggerCustomString",
-			"CustomString": {
-				"Value": "TalkSentence_501190151"
-			}
-		}
-	],
-	"SimpleTalk": {}
-}</pre>
-::::{{DIcon|Exit}} I'll go ahead and tour now.
-::<pre>{
-	"$type": "RPG.GameCore.PlayMultiVoiceTalk",
-	"TalkSentenceID": 501190111
-}</pre>
-:<pre>{
-	"$type": "RPG.GameCore.PlayMultiVoiceTalk",
-	"TalkSentenceID": 501190111
-}</pre>
-<pre>{
-	"$type": "RPG.GameCore.ShowMenu"
-}</pre>
+:{{tx}}
 {{Dialogue End}}
 
 ===Place the exhibit at the specified spot{{subst:void|<!--800121105-->}}===
 {{Dialogue Start}}
-
-:{{DIcon|Loupe}} Investigate
-:An oil painting depicting the Administrative District in its full majesty.
-:The Administrative District depicted in the painting is much larger than you remember. Maybe it's because there are many places off-limits to you.
+:{{tx}}
 {{Dialogue End}}
 
 ==Other Languages==

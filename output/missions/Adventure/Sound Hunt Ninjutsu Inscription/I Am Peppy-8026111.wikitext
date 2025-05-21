@@ -11,7 +11,7 @@ PageTitle=#I Am Peppy#
 |chapter       = Sound Hunt Ninjutsu Inscription
 |requirements  = {{subst:void|<!--Unknown: {"Type":"Manual"}-->}}
 |summary       = <!--official mission summary from Fate's Atlas-->
-|characters    = Fried Cold Rice Robot; Trailblazer
+|characters    = Asta; Fried Cold Rice Robot; Lukacs; Peppy; Trailblazer
 |startLocation = [[Herta Space Station]] - [[Master Control Zone]]
 |world         = Herta Space Station
 |area          = Master Control Zone
@@ -22,6 +22,7 @@ PageTitle=#I Am Peppy#
 '''''I Am Peppy''''' is an Event [[Adventure Mission]] from the [[Sound Hunt Ninjutsu Inscription]] event.
 
 ==Steps==
+# Collect inspiration for composing a song by heading to the space station
 # Control the Fried Cold Rice Robot and translate Peppy's barks
 
 <!--
@@ -33,34 +34,16 @@ PageTitle=#I Am Peppy#
 -->
 ==Dialogue==
 {{Stub Dialogue}}
+===Collect inspiration for composing a song by heading to the space station{{subst:void|<!--802611101-->}}===
+{{Mission Description|type=adventure|location=Master Control Zone|You've become the manager of the music party's performing band, and now your band needs to complete 3 performances on the stage in the middle of the campus.<br />Wander around the master control zone of the space station to help Rappa collect inspiration for composing.}}
+{{Dialogue Start}}
+:{{tx}}
 {{Dialogue End}}
 
-===Control the Fried Cold Rice Robot and translate Peppy's barks{{subst:void|<!--802611109-->}}===
+===Control the Fried Cold Rice Robot and translate Peppy's barks{{subst:void|<!--802611103-->}}===
 {{Mission Description|type=adventure|location=Master Control Zone|update|You've become the manager of the music party's performing band, and now your band needs to complete 3 performances on the stage in the middle of the campus.<br />Obtain a record of Peppy's beats to help Rappa collect inspiration for composing.}}
 {{Dialogue Start}}
-
-;(Talk to Fried Cold Rice Robot)
-:'''Fried Cold Rice Robot:''' Hi, beep! I am responsible for translating what Peppy is saying. Beep. Are you ready to try things out?
-:{{DIcon|Travel Log}} ...Please, Fried Cold Rice Robot!
-:<pre>{
-	"$type": "RPG.GameCore.WaitFrame"
-}</pre>
-:<pre>{
-	"$type": "RPG.GameCore.ShowUI",
-	"Name": "Ui.MusicRhythm.MusicRhythmChooseLevelPage",
-	"WaitForExit": true,
-	"Param": {
-		"Value": "1"
-	},
-	"OnUICustomEvent": [],
-	"OnUIExitImmediately": [
-		{
-			"$type": "RPG.GameCore.EndDialogueEntityInteract"
-		}
-	]
-}</pre>
-:{{DIcon|Exit}} I've got something else to do.
-
+:{{tx}}
 {{Dialogue End}}
 
 ==Other Languages==

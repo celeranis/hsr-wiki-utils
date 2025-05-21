@@ -40,147 +40,25 @@ PageTitle=#Only A Child#
 ===Return to Boulder Town clinic and report to Natasha{{subst:void|<!--201140501-->}}===
 {{Mission Description|type=companion|location=Natasha's Clinic|The culprit of this invasion of the Fragmentum monsters is Cocolia's phantom &mdash; The monsters crowding between the mines and rocks all scattered after the phantom was defeated, and the crisis was officially over.<br />Gepard stated he still needs to stay at the mines to make sure things settle down. It is then up to you and Serval to report the good news to Natasha and Oleg.}}
 {{Dialogue Start}}
-
-;(Talk to Natasha)
-----
-:{{A|VO Side1 ld1 natasha 108.ogg}} '''Natasha:''' I see... Thanks for bringing me up to speed. The clinic has been busy while you were gone. We've treated many people &mdash; soldiers and civilians alike.
-:{{A|VO Side1 ld1 natasha 109.ogg}} '''Natasha:''' All in all, I owe everyone a big thank you. It would've been much harder if Wildfire had operated alone.
-:{{A|VO Side1 ld1 natasha 110.ogg}} '''Natasha:''' Thanks to Captain Gepard, we managed to keep our losses to a minimum. I'm sure people will begin to appreciate the Silvermane Guards after this battle.
-:{{DIcon|Arrow}} What about me?
-:{{DIcon|Arrow}} Serval helped too!
-:{{A|VO Side1 ld1 natasha 111.ogg}} '''Natasha:''' Haha, how could I forget about you two? We couldn't have done it without your help.
-:{{A|VO Side1 ld1 serval 302.ogg}} '''Serval:''' You're too kind, they deserve the real credit. I doubt I'd have come back in one piece without them.
-:{{A|VO Side1 ld1 natasha 112.ogg}} '''Natasha:''' Sounds like you went through a lot of danger... Are you hurt, Miss Serval? I can have a look if you like.
-:{{A|VO Side1 ld1 serval 303.ogg}} '''Serval:''' I'm alright, don't worry! Everything worked out eventually. Let's wait for the rest of them to get back...
-:{{A|VO Side1 ld1 gepard 272.ogg}} '''Gepard:''' Miss Natasha, we've returned.
-:{{A|VO Side1 ld1 serval 304.ogg}} '''Serval:''' Is that Gepard?
-----
-:{{A|VO Side1 ld1 gepard 273.ogg}} '''Gepard:''' ...Mr. Oleg has a pretty good handle on what's needed in the mine.
-:{{A|VO Side1 ld1 gepard 274.ogg}} '''Gepard:''' He's arranging for rescue teams and supplies to be sent over. He won't be back for a while.
-:{{A|VO Side1 ld1 natasha 113.ogg}} '''Natasha:''' Looks like you guys have the situation under control. Thank you.
-:{{A|VO Side1 ld1 natasha 114.ogg}} '''Natasha:''' *sigh* I'd love to sit down and chat with all of you, but I still have a backlog of patients to see.
-:{{A|VO Side1 ld1 natasha 115.ogg}} '''Natasha:''' Oh, there was a girl and her brother who said you saved their lives. You might want to check on them and see how they're doing.
-----
-:{{A|VO Side1 ld1 gepard 275.ogg}} '''Gepard:''' Natasha's right, we should make sure those children are alright.
+:{{tx}}
 {{Dialogue End}}
 
 ===Speak to the miner siblings who were saved{{subst:void|<!--201140502-->}}===
 {{Mission Description|type=companion|location=Natasha's Clinic|update|The news of the victory is spreading everywhere in Boulder Town and you can finally rest &mdash; Why don't you chat with the refugees whom the Landau siblings had saved.}}
 {{Dialogue Start}}
-;(Upon reaching the destination)
-
-;(Upon reaching the destination)
-<pre>{
-	"$type": "RPG.GameCore.PlayNPCBubbleTalk",
-	"BubbleTalkInfoList": [
-		{
-			"AutoSkipTime": 4,
-			"GroupID": 20,
-			"GroupNpcID": 400002,
-			"TalkSentenceID": 101028219
-		},
-		{
-			"AutoSkipTime": 4,
-			"GroupID": 20,
-			"GroupNpcID": 400001,
-			"TalkSentenceID": 101028220
-		}
-	]
-}</pre>
-
-;(Talk to Rescued Girl)
-----
-:{{A|VO Side1 ld1 minerP 104.ogg}} '''Rescued Girl:''' C'mon, drink it up and you'll feel better.
-:{{A|VO Side1 ld1 minerO 104.ogg}} '''Rescued Boy:''' But... there's smoke coming out of it...
-:{{DIcon|Arrow}} How are you guys feeling?
-:{{A|VO Side1 ld1 minerP 105.ogg}} '''Rescued Girl:''' Ah, it's you! You saved us from the monsters in the mine. You guys are... Silvermane Guards from the Overworld, right?
-:{{A|VO Side1 ld1 minerP 106.ogg}} '''Rescued Girl:''' If you hadn't been there, we would've...
-:{{A|VO Side1 ld1 minerP 107.ogg}} '''Rescued Girl:''' I&mdash;I'll think of a way to repay you! I'll get a job, and&mdash;
-:{{DIcon|Arrow}} Saving lives doesn't need repayment.
-::{{A|VO Side1 ld1 minerP 108.ogg}} '''Rescued Girl:''' Th&mdash;That's very kind of you... If Mom and Dad were still here, they'd want us to return the favor...
-:{{DIcon|Arrow}} Don't hesitate to let us know if you need anything.
-::{{A|VO Side1 ld1 minerP 109.ogg}} '''Rescued Girl:''' Thanks! We can manage our daily expenses...
-:{{DIcon|Arrow}} ...Where are your parents?
-:{{A|VO Side1 ld1 minerO 105.ogg}} '''Rescued Boy:''' Mom and Dad went somewhere far away a long time ago &mdash; haven't come back yet!
-:{{A|VO Side1 ld1 minerP 110.ogg}} '''Rescued Girl:''' ...Mm. They'll come back one day, Zino.
-:{{A|VO Side1 ld1 serval 305.ogg}} '''Serval:''' ...So you're looking after your brother on your own? That must be hard.
-:{{A|VO Side1 ld1 minerP 111.ogg}} '''Rescued Girl:''' Mm, not really &mdash; it's my responsibility as a sister. I'm just worried that with all these monster invasions, maybe one day I won't...
-:{{A|VO Side1 ld1 minerP 112.ogg}} '''Rescued Girl:''' My brother is too young to survive in the Underworld. To think he might have to live on his own ...
-:{{A|VO Side1 ld1 gepard 276.ogg}} '''Gepard:''' The misjudgment of the former supreme guardian isolated the Underworld for more than a decade. With that isolation, came tragedy...
-:{{A|VO Side1 ld1 gepard 277.ogg}} '''Gepard:''' But under Lady Bronya's leadership, the Silvermane Guards will atone for past mistakes and bring relief to the people. From now on, you don't need to worry about the safety of your family.
-:{{A|VO Side1 ld1 minerP 113.ogg}} '''Rescued Girl:''' Captain Gepard...
-:{{A|VO Side1 ld1 gepard 278.ogg}} '''Gepard:''' Taking care of yourself is hard enough under these circumstances, let alone if you have a brother to look after. I know it can't have been easy.
-:{{A|VO Side1 ld1 gepard 279.ogg}} '''Gepard:''' ...Zino, right?
-:{{A|VO Side1 ld1 minerO 106.ogg}} '''Rescued Boy:''' Yes, Mr. Captain!
-:{{A|VO Side1 ld1 gepard 280.ogg}} '''Gepard:''' You're still young, so you need to stay under your sister's wing. But when you grow up, remember to use what you've learned to protect her.
-:{{A|VO Side1 ld1 gepard 281.ogg}} '''Gepard:''' Be there when she needs you, and listen to her when she feels vulnerable. She'll do the same for you.
-:{{A|VO Side1 ld1 serval 306.ogg}} '''Serval:''' ...
-:{{A|VO Side1 ld1 minerO 107.ogg}} '''Rescued Boy:''' O&mdash;Okay sir! I'll protect my sister when I grow up!
-:{{A|VO Side1 ld1 minerP 114.ogg}} '''Rescued Girl:''' Thank you, Captain Gepard. Zino and I will remember your words.
-:{{A|VO Side1 ld1 serval 307.ogg}} '''Serval:''' Y'know... we're pretty good at turning a happy reunion into a tear fest. Let's call it a day and give them some room.
-:{{A|VO Side1 ld1 serval 308.ogg}} '''Serval:''' If you're not too tired, Gepard, can I talk to you for a moment?
-----
+:{{tx}}
 {{Dialogue End}}
 
 ===Leave the clinic and listen to what Serval has to say{{subst:void|<!--201140503-->}}===
 {{Mission Description|type=companion|location=Boulder Town|update|The experiences of the mining siblings seemed to resonate with the Landau siblings. Serval seems to want to say something &mdash; Listen to what she has to say in front of the clinic.}}
 {{Dialogue Start}}
-
-;(Talk to Serval)
-----
-:{{A|VO Side1 ld1 serval 309.ogg}} '''Serval:''' What you said back there... did you really mean it?
-:{{A|VO Side1 ld1 gepard 282.ogg}} '''Gepard:''' Of course I did. And it wasn't some last-minute speech I cobbled together. It's how I've always felt.
-:{{A|VO Side1 ld1 gepard 283.ogg}} '''Gepard:''' We can't always face problems alone and build walls to keep people out... We need to learn to rely on others &mdash; especially those we care about the most.
-:{{A|VO Side1 ld1 serval 310.ogg}} '''Serval:''' I know what you're up to, Geppie...
-:{{A|VO Side1 ld1 gepard 284.ogg}} '''Gepard:''' ...Huh? What do you mean?
-:{{A|VO Side1 ld1 serval 311.ogg}} '''Serval:''' You made it sound like you were talking to those kids... but you were talking to me.
-:{{A|VO Side1 ld1 serval 312.ogg}} '''Serval:''' Who's building that wall now?
-:{{A|VO Side1 ld1 gepard 285.ogg}} '''Gepard:''' ...
-:{{A|VO Side1 ld1 gepard 286.ogg}} '''Gepard:''' Well, a Landau just called out a Landau.
-:{{A|VO Side1 ld1 serval 313 m.ogg}} {{A|VO Side1 ld1 serval 313 f.ogg}} '''Serval:''' (Trailblazer), Gepard, I changed my mind.
-:{{DIcon|Arrow}} Changed your mind on what?
-:{{DIcon|Arrow}} You mean...
-:{{A|VO Side1 ld1 serval 314.ogg}} '''Serval:''' Change of plan. I've decided to stay in Belobog.
-:{{A|VO Side1 ld1 gepard 287.ogg}} '''Gepard:''' Serval, I... I just want you to know that I would've supported your decision no matter what you chose. I wasn't trying to force you to stay.
-:{{A|VO Side1 ld1 serval 315.ogg}} '''Serval:''' I know that, Gepard. Don't worry, I've thought this one through for a change.
-:{{A|VO Side1 ld1 serval 316.ogg}} '''Serval:''' What you said was the last piece of the puzzle for me. I suddenly realized that my decision to leave was just me trying to run away from my problems... Wasn't a mature decision.
-:{{A|VO Side1 ld1 serval 317.ogg}} '''Serval:''' I've always found it hard to handle complex relationships... be it Cocolia or my family.
-:{{A|VO Side1 ld1 serval 318.ogg}} '''Serval:''' The first thought I have when things don't work out is to run away. Starting from today, that's no longer the case.
-:{{A|VO Side1 ld1 serval 319.ogg}} '''Serval:''' After all... I'm not doing this on my own, right?
-:{{A|VO Side1 ld1 gepard 288.ogg}} '''Gepard:''' Right.
-:{{A|VO Side1 ld1 serval 320.ogg}} '''Serval:''' If it weren't for you, I wouldn't have had any idea about the hardships people were going through in the Underworld. It made me feel like... maybe I could help a little, and make Belobog a better place.
-:{{A|VO Side1 ld1 serval 321 m.ogg}} {{A|VO Side1 ld1 serval 321 f.ogg}} '''Serval:''' Gepard, (Trailblazer), I have one last thing that I might need your help with.
-:{{DIcon|Arrow}} Let's hear it. Always glad to help.
-:{{DIcon|Arrow}} Not again...
-::{{A|VO Side1 ld1 serval 322.ogg}} '''Serval:''' I'm so sorry! This is the last one, I promise!
-:{{A|VO Side1 ld1 serval 323.ogg}} '''Serval:''' I... want to see the Stellaron. I want to see the place where Cocolia sacrificed herself.
-:{{A|VO Side1 ld1 gepard 289.ogg}} '''Gepard:''' ...Say no more. We'll go with you.
-:{{A|VO Side1 ld1 serval 324 m.ogg}} {{A|VO Side1 ld1 serval 324 f.ogg}} '''Serval:''' Oh, but before that, I need to go back to the workshop and get something. (Trailblazer), why don't you head north first and we'll catch up with you.
-:{{A|VO Side1 ld1 serval 325.ogg}} '''Serval:''' It's alright, I've got Gepard with me &mdash; we'll be safe. See you in a bit!
-----
+:{{tx}}
 {{Dialogue End}}
 
 ===Wait for the Landau siblings at Everwinter Hill{{subst:void|<!--201140504-->}}===
 {{Mission Description|type=companion|location=Everwinter Hill|update|Serval solemnly announced that she decided not to board the Express for now.<br />To be honest, you guessed she was going to say this... but she seems to have left a puzzle or two at Everwinter Hill. Go to the Stellaron Imprisonment Device and see what she is up to.}}
 {{Dialogue Start}}
-;(Upon reaching the destination)
-
-;(Upon reaching the destination)
-:'''(Trailblazer):''' (I'll wait for them here...)
-:{{A|VO Side1 ld1 serval 326.ogg}} '''Serval:''' Brr... it's cold here...
-:{{A|VO Side1 ld1 serval 327.ogg}} '''Serval:''' Is this... the Stellaron Imprisonment Device? They had such advanced technology back in the day.... impressive.
-:{{A|VO Side1 ld1 gepard 290.ogg}} '''Gepard:''' ...This is where Madam Cocolia died.
-:{{A|VO Side1 ld1 serval 328.ogg}} '''Serval:''' ...Mm. She gave something back, in death.
-:{{DIcon|Arrow}} Is there anything you want to do here?
-::Is there anything you want to do here?
-::Did you come here to pay tribute?
-:{{DIcon|Arrow}} Did you come here to pay tribute?
-:{{A|VO Side1 ld1 serval 329.ogg}} '''Serval:''' I think I'm mostly here for myself. Still...
-:{{A|VO Side1 ld1 serval 330.ogg}} '''Serval:''' I wanted to come here to perform for Cocolia. To say goodbye...
 :{{tx}}
-
-;(Upon reaching the destination)
-:'''(Trailblazer):''' (I'll wait for them here...)
 {{Dialogue End}}
 
 ==Other Languages==

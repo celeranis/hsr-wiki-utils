@@ -34,65 +34,6 @@ PageTitle=##
 ==Dialogue==
 {{Stub Dialogue}}
 
-;(Talk to Diogena)
-;(If the player has greater than or equal to {{Item|Golden Remains|20|x=7}})
-::'''Diogena:''' *sigh* Mr. Lygus is always like this. The moment he loses interest in something, he completely ignores it. Anyway, if you have more trophies, feel free to hand them over to me.
-:<pre>{
-	"$type": "RPG.GameCore.AddFinishMissionData_ConsumeItem",
-	"SubmissionID": 401590302,
-	"SimpleTalk": {},
-	"OnSubmitConfirm": [
-		{
-			"$type": "RPG.GameCore.PlayAndWaitSimpleTalk",
-			"SimpleTalkList": [
-				{
-					"TextSpeed": 0,
-					"TalkSentenceID": 401590702,
-					"ProtectTime": 0
-				}
-			]
-		},
-		{
-			"$type": "RPG.GameCore.PlayFullScreenTransfer",
-			"PrevDuration": 0,
-			"TextInfo": {
-				"TextList": [
-					{
-						"TalkSentenceID": 401590703
-					}
-				]
-			}
-		},
-		{
-			"$type": "RPG.GameCore.SetMissionCustomValue",
-			"SubmissionID": 401590302,
-			"MissionCustomValue": {
-				"Name": "OldValue_0",
-				"ValidValueParamList": [
-					0,
-					1,
-					2
-				]
-			},
-			"CustomValue": 1
-		},
-		{
-			"$type": "RPG.GameCore.EndPerformance"
-		}
-	],
-	"OnSubmitCancel": [
-		{
-			"$type": "RPG.GameCore.EndPerformance"
-		}
-	]
-}</pre>
-;(If the player does not have greater than or equal to {{Item|Golden Remains|20|x=7}})
-::'''Diogena:''' You know, Mr. Lygus's earlier remarks gave me a certain impression&mdash;
-::'''Diogena:''' Maybe our translations of ''Golden Scapegoat's Mutterings'' are somehow connected to the swordmaster who destroyed the Grove? Could they reflect something from that person's past?
-::{{DIcon|Arrow}} It's possible.
-:::'''Diogena:''' Right? Too bad we don't have any evidence.
-::{{DIcon|Arrow}} Hard to say. Without evidence, it's just speculation.
-::'''Diogena:''' *sigh* Just like I reminded Avilius earlier, speculation alone won't solve anything.
 {{Dialogue End}}
 
 ==Other Languages==

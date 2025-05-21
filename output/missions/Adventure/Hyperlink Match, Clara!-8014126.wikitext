@@ -40,38 +40,7 @@ PageTitle=#Hyperlink Match, Clara!#
 ===Have a Hyperlink Match with Clara{{subst:void|<!--801412601-->}}===
 {{Mission Description|type=adventure|location=Robot Settlement|The core gameplay loop behind Aetherium Wars is "dueling." Challenge different players and show your true strength!}}
 {{Dialogue Start}}
-
-;(Talk to Svarog)
-;(If {{cx}}<!--during performance 501030301-->)
-::'''Svarog:''' Bio heat reaction detected &mdash; Identifying bio information...
-::'''Svarog:''' Identification result: Outsider (Trailblazer) &mdash; Hostility level: None.
-::'''Svarog:''' Welcome to the Robot Settlement, (Trailblazer).
-;(If {{cx}}<!--not during performance 501030301-->)
-:<pre>{
-	"$type": "RPG.GameCore.PlayMultiVoiceTalk",
-	"TalkSentenceID": 501030333
-}</pre>
-
-;(Talk to Clara)
-;(If {{cx}}<!--during performance 501030201-->)
-::'''Clara:''' Ah... It's the outsider, {{MC|f=Miss|m=Mister}} (Trailblazer)! Welcome to the Robot Settlement...
-::'''Clara:''' This place isn't as bustling as a mining town, but we're still quite content with how we live.
-::'''Clara:''' The older folk at the camp, and the little robots, they all like it here...
-::'''Clara:''' If you're interested, {{MC|f=Miss|m=Sir}}, you're welcome to see the sights here too!
-;(If {{cx}}<!--not during performance 501030201-->)
-:<pre>{
-	"$type": "RPG.GameCore.PlayMultiVoiceTalk",
-	"TalkSentenceID": 501030236
-}</pre>
-:'''Clara:''' Agh... You really are strong, {{MC|f=big sister|m=big brother}}... I need to work harder!
-<pre>{
-	"$type": "RPG.GameCore.ShowUI",
-	"Name": "Ui.AetherDivide.AetherDivideEntryPage",
-	"Param": {
-		"Value": "2"
-	},
-	"OnUIEnter": []
-}</pre>
+:{{tx}}
 {{Dialogue End}}
 
 ==Other Languages==

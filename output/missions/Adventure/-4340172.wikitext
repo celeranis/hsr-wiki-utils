@@ -34,67 +34,6 @@ PageTitle=##
 ==Dialogue==
 {{Stub Dialogue}}
 
-;(Talk to Janus' Steed)
-:No doubt you recognize this massive wooden prop from tales of old &mdash; its proud head held high, its cavernous belly large enough to hold several people &mdash; every detail matches the stories you know.
-::But wait &mdash; rustling sounds are coming from inside the wooden horse, suggesting someone might be hiding within.
-::{{DIcon|Arrow}} (Knock on the wooden panels)
-::<pre>{
-	"$type": "RPG.GameCore.AdvCreateGroupEntity",
-	"InstanceIDList": [
-		400003
-	]
-}</pre>
-::<pre>{
-	"$type": "RPG.GameCore.SetFloorCustomFloatV2",
-	"Name": {
-		"Value": "FCV_TrojanCtrl"
-	},
-	"Value": {
-		"FixedValue": {
-			"Value": 3
-		}
-	}
-}</pre>
-:::'''Janus' Steed:''' ...Oh, you're the maintenance acolyte? No need for formalities &mdash; I'm just here for a brief rest before leaving.
-:::'''Janus' Steed:''' Speaking of which, any updates on my modification proposal from last month?
-:::{{DIcon|Arrow}} ...What modification?
-::::'''Janus' Steed:''' Delayed again, I see. The Temple of the Three Fates operates with a sluggishness unbefitting of Janus' name.
-:::{{DIcon|Arrow}} They've forbidden any changes to the appearance.
-::::'''Janus' Steed:''' Just as I thought. Hmph, how ironic that the servants of the "Passage" are so set in their ways &mdash; quite unworthy of Janus' name.
-:::'''Janus' Steed:''' When carrying prophecies across the land, appearance matters. That's why I proposed painting the divine foal red &mdash; striking to behold and perfect for heralding the Maiden's name.
-:::'''Janus' Steed:''' Yet the High Priest rejected the appearance changes and opted to add wheels instead &mdash; how perplexing! What use are wheels to a divine foal that can travel anywhere at will? Preposterous!
-:::{{DIcon|Arrow}} Yeah, red would've been pretty cool.
-::::'''Janus' Steed:''' Right? It would really emphasize a sense of swiftness, too.
-:::{{DIcon|Arrow}} But aren't wheels more essential?
-::::'''Janus' Steed:''' The wheels are just for show &mdash; those stubborn priests wouldn't understand.
-:::'''Janus' Steed:''' I'd enjoy talking longer, but we're nearly there with gaining Ladon's support.
-:::'''Janus' Steed:''' My calling beckons. Farewell, young acolyte &mdash; may the door of tomorrow remain ever open to you.
-::<pre>{
-	"$type": "RPG.GameCore.SetFloorCustomFloatV2",
-	"Name": {
-		"Value": "FCV_TrojanCtrl"
-	},
-	"Value": {
-		"FixedValue": {
-			"Value": 0
-		}
-	}
-}</pre>
-:::The ancient words linger in the air, but the sliding window has been sealed shut. In your daze, you notice a faint glow around the wooden horse, as if an invisible portal opens &mdash; an ineffable emptiness suddenly grips your heart.
-:::You realize the being that just spoke to you has disappeared. But maybe when you return after some time, there might be... new discoveries?
-::<pre>{
-	"$type": "RPG.GameCore.AdvDestroyGroupEntity",
-	"InstanceIDList": [
-		400003
-	]
-}</pre>
-::<pre>{
-	"$type": "RPG.GameCore.SetPerformanceResult",
-	"Value": 1
-}</pre>
-::{{DIcon|Exit}} This is not something a Nameless should be doing!
-:::True, this plain wooden horse hasn't piqued your Trailblazing curiosity. No matter, though &mdash; it seems firmly planted here, so you can always return when time permits.
-;(Return to previous option selection)
 {{Dialogue End}}
 
 ==Other Languages==

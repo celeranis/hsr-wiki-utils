@@ -36,101 +36,27 @@ PageTitle=#Clockwork: Morris#
 -->
 ==Dialogue==
 {{Stub Dialogue}}
-<pre>{
-	"$type": "RPG.GameCore.WaitEntityServerEvent"
-}</pre>
-;(If {{cx}}{{subst:void|<!--{"$type":"RPG.GameCore.ByComparePropState","TargetType":{"$type":"RPG.GameCore.GroupFetchLocalTarget","TargetType":"Prop","Targets":[300002]}}-->}}, {{cx}}{{subst:void|<!--{"$type":"RPG.GameCore.ByComparePropState","TargetType":{"$type":"RPG.GameCore.GroupFetchLocalTarget","TargetType":"Prop","Targets":[300003]}}-->}}, {{cx}}{{subst:void|<!--{"$type":"RPG.GameCore.ByComparePropState","TargetType":{"$type":"RPG.GameCore.GroupFetchLocalTarget","TargetType":"Prop","Targets":[300004]}}-->}}, and {{cx}}{{subst:void|<!--{"$type":"RPG.GameCore.ByComparePropState","TargetType":{"$type":"RPG.GameCore.GroupFetchLocalTarget","TargetType":"Prop","Targets":[300001]},"State":"Open"}-->}})
-<pre>{
-	"$type": "RPG.GameCore.ChangePropState"
-}</pre>
 {{Dialogue End}}
 
 ===Head to the hotel in reality and take a photo of Coty.{{subst:void|<!--424031003-->}}===
 {{Mission Description|type=adventure|location=The Reverie (Reality)|update|Tick... tock! Quick, Adjust the hands... Tick, tock!<br />People's minds await your exploration. Help them regain their true selves!}}
 {{Dialogue Start}}
-
-;(Talk to Coty)
-;(If {{cx}}<!--SubMission Finish: 424031008-->)
-::'''Coty:''' If my photo can make Mr. Morris feel better, consider it a "service" we offer to our guests.
-:<pre>{
-	"$type": "RPG.GameCore.BindSwitchPhotoGraphFuncBtn",
-	"UseType": "StartPhotoInTriggerRange",
-	"RangeTriggerProp": {
-		"FetchType": "SinglePropByPropID",
-		"SinglePropID": {
-			"GroupID": {
-				"FixedValue": {
-					"Value": 104
-				}
-			},
-			"ID": {
-				"FixedValue": {
-					"Value": 300003
-				}
-			}
-		}
-	},
-	"PhotoGraphMode": "SingleTakePhoto",
-	"AimTargetContainerConfig": [
-		{
-			"AimTargetType": {
-				"$type": "RPG.GameCore.GroupFetchLocalTarget",
-				"TargetType": "Prop",
-				"Targets": [
-					300002
-				]
-			},
-			"ContainerFlagName": "PhotoG104",
-			"IsTopContainer": true,
-			"IsSimpleConfig": true,
-			"IsAimTargetType": true
-		}
-	]
-}</pre>
-;(Otherwise)
-::'''Coty:''' If my photo can make Mr. Morris feel better, consider it a "service" we offer to our guests.
+:{{tx}}
 {{Dialogue End}}
 
 ===Hand the photo to Morris.{{subst:void|<!--424031004-->}}===
 {{Dialogue Start}}
-
+:{{tx}}
 {{Dialogue End}}
 
 ===Complete the puzzle and fulfill Morris' wish.{{subst:void|<!--424031005-->}}===
 {{Dialogue Start}}
+:{{tx}}
 {{Dialogue End}}
 
 ===Talk to Morris once more.{{subst:void|<!--424031006-->}}===
 {{Dialogue Start}}
-
-;(Talk to Morris)
-:'''Morris:''' Ah, Coty... It's you! My dream... my destiny!
-:'''Morris:''' Look at you, so flawless. I'd gladly give you *one-twentieth* of my life without thinking twice...
-:{{DIcon|Arrow}} Wait, one-twentieth?
-:'''Morris:''' Yeah... Isn't one-twentieth more than enough?
-:'''Morris:''' Life is full of moments where you fall in love at first sight... I mean, there are so many beautiful things in the universe!
-:'''Morris:''' I'm short-lived, yet I'm willing to dedicate one-twentieth of it to just one individual... Is that not loyalty and devotion?
-:'''Morris:''' Anyway, I must thank you for getting me this last piece. I'll treasure my Coty until that *one-twentieth* of my devotion burns out...
-<pre>{
-	"$type": "RPG.GameCore.ShowHeartDialToast",
-	"StepType": "Normal",
-	"TargetType": {
-		"$type": "RPG.GameCore.TargetFetchAdvNpcEx",
-		"FetchType": "SingleNpcByNpcID",
-		"SingleNpcID": {
-			"GroupID": {
-				"FixedValue": {
-					"Value": 425
-				}
-			},
-			"GroupNpcID": {
-				"FixedValue": {
-					"Value": 400001
-				}
-			}
-		}
-	}
-}</pre>
+:{{tx}}
 {{Dialogue End}}
 
 ==Other Languages==

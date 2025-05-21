@@ -38,38 +38,6 @@ PageTitle=#The Quieting of Quillons#
 {{Mission Description|type=continuance|location=Alchemy Commission|Under the mediation of the newly appointed Alchemy Commission's Cauldron Master, you all successfully fended off the accusatory blame from the IPC Specialist, after which you had a chat with her at the Alchemy Commission. But more speed bumps threatened this doomsday talk, for the swordswoman had been waiting long for a showdown with Yanqing.}}
 {{Dialogue Start}}
 :{{tx}}
-<pre>{
-	"$type": "RPG.GameCore.PerformanceEndSeq",
-	"Cases": [
-		{
-			"OnSuccess": [
-				{
-					"$type": "RPG.GameCore.SwitchCharacterAnchorV2",
-					"SwitchCharacterAnchorConfig": {
-						"IsLocalPlayer": true,
-						"CharacterUniqueName": "LocalPlayer",
-						"AreaName": {
-							"Value": "LevelArea_P40235_F40235001_G16"
-						},
-						"AnchorName": {
-							"Value": "Anchor1"
-						}
-					}
-				}
-			]
-		}
-	]
-}</pre>
-
-;(Talk to Lingsha)
-:{{tx}}
-;(Enter battle)
-:{{Enemy List|Abundance Sprite: Wooden Lupus*5/-70% ATK; Abundance Sprite: Golden Hound*4/-70% ATK; Abundance Sprite: Malefic Ape*2/-75% ATK, -66.7% HP, -240 ; Disciples of Sanctus Medicus: Ballistarius*4/-70% ATK; Mara-Struck Warden*4/-70% ATK}}
-;(If {{cx}}<!--SubMission Finish: 202200506-->)
-;(If {{cx}}<!--SubMission not Finish: 202200506-->)
-:{{tx}}
-;([[#Gallery|Cutscene]] plays)
-:{{tx}}
 {{Dialogue End}}
 
 ==Other Languages==

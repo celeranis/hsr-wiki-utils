@@ -46,266 +46,75 @@ PageTitle=#In the Name of Kephale#
 -->
 ==Dialogue==
 {{Stub Dialogue}}
-
-;(Talk to Serena)
-:{{tx}}
-::'''Serena:''' {{MC|f=Miss|m=Mister}}, we meet again.
-::{{DIcon|Arrow}} We meet again, little Cipher.
-:::'''Serena:''' Cipher... Who's that?
-:::'''Serena:''' Ah, {{MC|f=miss|m=mister}}, I wanted to share some good news &mdash; I'm not stealing petty things anymore, and I don't have to curl up in a box to sleep now.
-:::'''Serena:''' Everyone at the Marmoreal Market has looked after me. I'm quite happy nowadays, but...
-:::Who are you again?
-:::'''Serena:''' {{MC|f=Miss|m=Mister}}, you don't remember me? I'm Serena, and I once stole your pouch of coins.
-:::'''Serena:''' Since that incident, I've been so happy with everyone's help, and I'm striving to change myself. But...
-:::What are you doing here?
-::{{DIcon|Arrow}} Who are you again?
-:::'''Serena:''' {{MC|f=Miss|m=Mister}}, you don't remember me? I'm Serena, and I once stole your pouch of coins.
-:::'''Serena:''' Since that incident, I've been so happy with everyone's help, and I'm striving to change myself. But...
-:::What are you doing here?
-::{{DIcon|Arrow}} What are you doing here?
-::'''Serena:''' I heard that on a mountain even higher than the Marmoreal Palace, many people have gathered to decide Okhema's future.
-::'''Serena:''' Everyone in the market is talking about it. Though they trust Lady Aglaea, there are also ominous rumors. It scares me...
-::'''Serena:''' Will Okhema become like Icatus &mdash; dark, chaotic, full of terrifying monsters everywhere?
-::'''Serena:''' That's why I want to visit the great Kephale. They say the holy city stands to this day thanks to their protection... maybe if I talk to them, I won't be afraid.
-::'''Serena:''' But the guard won't let me in...
-::'''Serena:''' {{MC|f=Miss|m=Mister}}, you're Okhema's great hero, so you must be able to come and go at Dawncloud. Could you bring me to Kephale?
-::Rules are made to be followed. Let's not go.
-::'''Serena:''' Mmm... I won't be a bother, but I want to wait a little longer. Maybe there's another way in...
-:'''Serena:''' {{MC|f=Miss|m=Mister}}, did you change your mind?
-;(All choices lead to the following options)
-:{{DIcon|Arrow}} Leave it to me!
-:<pre>{
-	"$type": "RPG.GameCore.SetMissionCustomValue",
-	"SubmissionID": 500041501,
-	"MissionCustomValue": {
-		"Name": "OldValue_0",
-		"ValidValueParamList": [
-			1,
-			2
-		]
-	},
-	"CustomValue": 1
-}</pre>
-:{{DIcon|Exit}} Rules are made to be followed. Let's not go.
-:<pre>{
-	"$type": "RPG.GameCore.SetMissionCustomValue",
-	"SubmissionID": 500041501,
-	"MissionCustomValue": {
-		"Name": "OldValue_0",
-		"ValidValueParamList": [
-			1,
-			2
-		]
-	},
-	"CustomValue": 2
-}</pre>
-:{{tx}}
-
 {{Dialogue End}}
 
 ===Speak with the guard to ask for entry{{subst:void|<!--500041503-->}}===
 {{Mission Description|type=adventure|location="Demigod Council" Dawncloud|update|Due to Dawncloud's entry regulations, Serena, who wishes to speak with Kephale, is stopped by the guard at the entrance. Try talking to the guard to allow this little girl's innocent wish.}}
 {{Dialogue Start}}
-
-;(Talk to Young Guard)
 :{{tx}}
-:'''Young Guard:''' Good day, distinguished guest, (Trailblazer). How may I help you?
-:{{DIcon|Arrow}} You&mdash; have you heard my story?
-::'''Young Guard:''' Of course. You're a VIP the Council of Elders specifically mentioned and recorded. I heard you and the other Chrysos Heirs defeated Nikador &mdash; there's no way I'd slack off around you.
-::{{DIcon|Arrow}} Do me a favor: I want to bring someone in.
-:{{DIcon|Arrow}} I want to bring someone in.
-:'''Young Guard:''' Distinguished guest, are you referring to that small girl?
-:'''Young Guard:''' This... my apologies, but we have our duties. We can't casually allow civilians through. I hope you understand...
-:{{DIcon|Arrow}} Tell him the truth.
-::You tell the guard about Serena's wish honestly. He seems somewhat moved.
-::{{tx}}
-:{{DIcon|Arrow}} Try confusing him with a trick.
-::{{DIcon}} She's the granddaughter of Caenis.
-::{{DIcon}} She's a Chrysos Heir from the outlands.
-::{{DIcon}} She's the phantom thief, Cipher.
-:::'''(Trailblazer):''' She's Cipher, a demigod who inherited Zagreus's power, a lightning-fast master thief and Chrysos Heir!
-:::'''Young Guard:''' Cipher... I do recall that name. She's indeed a Chrysos Heir endowed with divine authority. Her portrait should be on file &mdash; let me check.
-:::The guard opens his VIP register, finds Cipher's portrait, then glances at Serena a few steps away and frowns.
-:::'''Young Guard:''' ...Is this portrait really her?
-:::{{DIcon|Arrow}} Yes, she's only eight right now.
-:::{{DIcon|Arrow}} Right. She wasn't that slim in those days.
-::{{DIcon|Arrow}} Better to tell the truth.
-:::You tell the guard about Serena's wish honestly. He seems somewhat moved.
-:::{{tx}}
 {{Dialogue End}}
 
 ===Greet Serena before entering Dawncloud{{subst:void|<!--500041504-->}}===
 {{Mission Description|type=adventure|location="Demigod Council" Dawncloud|update|The sympathetic but dutiful guard suggests that you could bring Serena into Dawncloud quietly during the less-crowded morning hours...}}
 {{Dialogue Start}}
-<pre>{
-	"$type": "RPG.GameCore.AdvSetAIFollow",
-	"FetchTarget": true,
-	"TargetType": {
-		"$type": "RPG.GameCore.GroupFetchLocalTarget",
-		"Targets": [
-			400001
-		]
-	},
-	"FetchFollowTarget": true,
-	"FollowTargetType": {
-		"$type": "RPG.GameCore.TargetFetchAdvLocalPlayer"
-	},
-	"PreferSlotIDs": [
-		2,
-		3
-	]
-}</pre>
+:{{tx}}
 {{Dialogue End}}
 
 ===Take Serena around to explore Dawncloud{{subst:void|<!--500041505-->}}===
 {{Mission Description|type=adventure|location="Demigod Council" Dawncloud|update|As a holy site dedicated to honoring Kephale, Dawncloud features many remarkable views. Show Serena around the place.}}
 {{Dialogue Start}}
-;(Upon reaching the destination)
-
-;(Upon reaching the destination)
-:'''(Trailblazer):''' Is there anything worth seeing at Dawncloud...
-:'''(Trailblazer):''' Hurry up, and take her for a walk along the way.
+:{{tx}}
 {{Dialogue End}}
 
 ===Observe the giant mural{{subst:void|<!--500041506-->}}===
 {{Dialogue Start}}
-;(Upon reaching the destination)
-
-;(Upon reaching the destination)
-:'''Serena:''' Wow, what a spectacular mural... it's even bigger than the one at Kephale Plaza!
-:'''Serena:''' {{MC|f=Miss|m=Mister}}, what's the story behind this mural?
-:{{DIcon|Arrow}} A small brazier roasting big-eyed cuties.
-:{{DIcon|Arrow}} The intimidation trait took effect.
-:'''Serena:''' That's kind of hard to grasp... but that big eye must be Aquila, right? I've read a bunch of Titan stories lately, so I can sort of recognize it.
 :{{tx}}
 {{Dialogue End}}
 
 ===Observe the other giant mural{{subst:void|<!--500041507-->}}===
 {{Dialogue Start}}
-;(Upon reaching the destination)
-
-;(Upon reaching the destination)
-:'''Serena:''' This mural depicts... Kephale receiving the "Dawn Device"? I think I saw that in Miss Ctesiphona's art collection...
-:'''Serena:''' Supposedly, the Dawn Device was a gift from Aquila to Kephale &mdash; Aquila stuffed lots of radiance into that huge mechanical sphere.
-:'''Serena:''' After Aquila closed all their eyes and plunged the world into darkness, Kephale rose from their throne to shoulder the world's final dawn...
-:'''Serena:''' {{MC|f=Miss|m=Mister}}, did you notice? In the previous mural, lots of people knelt down in submission, but in this one, everyone naturally reaches out to share the light.
-:'''Serena:''' Maybe it's hinting at the difference between the two suns &mdash; Aquila's light was once harsh and merciless, while Kephale's dawn seems warmer and gentler...
-:{{DIcon|Arrow}} No way... Are you for real?
-::'''Serena:''' Thanks for the compliment! I really hope Kephale will respond to me soon...
-:{{DIcon|Arrow}} Wow, a natural-born talent for priesthood!
-::'''Serena:''' Thanks for the compliment! I really hope Kephale will respond to me soon...
-:{{DIcon|Arrow}} Uh, you might be reading too much into it...
-::'''Serena:''' Ah, you're right &mdash; humility is an important virtue, too! If only Kephale could personally give me some answers soon...
 :{{tx}}
 {{Dialogue End}}
 
 ===Continue deeper into Dawncloud toward Kephale's divine vessel{{subst:void|<!--500041515-->}}===
 {{Mission Description|type=adventure|location="Demigod Council" Dawncloud|update|Now, proceed further into Dawncloud toward the Worldbearing Titan.}}
 {{Dialogue Start}}
-;(Upon reaching the destination)
-
-;(Upon reaching the destination)
-:'''Serena:''' What a huge lake! Could it have been the great Kephale's mirror... or maybe their washbasin?
-;(Upon reaching the destination)
-
-;(Upon reaching the destination)
-:'''Serena:''' "The long straight stairway leads to the Throne of Worlds" &mdash; So the picture book was telling the truth!
+:{{tx}}
 {{Dialogue End}}
 
 ===Visit the Demigod Council{{subst:void|<!--500041508-->}}===
 {{Dialogue Start}}
-;(Upon reaching the destination)
-
-;(Upon reaching the destination)
-:'''Serena:''' What a beautiful plaza... I see so many Titan symbols all around, and I don't recognize them all yet.
-:'''Serena:''' Kephale's so close to us... If we talk here, can they hear us?
-:'''???:''' Heh, a clueless child who doesn't even know how to pay respects to Kephale, yet still thinks a Titan will answer her trivial chatter?
-:'''Cyrones:''' Young girl, let me ask: Do you know what the Kephale ritual is?
-:'''Serena:''' {{MC|f=Miss|m=Mister}}, do I really need to learn these complicated rituals to talk with Kephale? I've never heard that before...
-:'''Cyrones:''' Heh, little girl, you're free to ask me anything. Don't let these heretical outsiders lead your faith astray.
-:{{DIcon|Arrow}} So you know Kephale well?
-:{{DIcon|Arrow}} Nobility matters not when it comes to faith.
-:'''Cyrones:''' Ridiculous! I've presided over the rituals for decades &mdash; no one knows Kephale better than I do.
-:'''Serena:''' Grandpa, the people at the market aren't heretics! Everyone says as long as we speak earnestly to Kephale, they'll definitely hear us!
-:'''Cyrones:''' How sad, that such a young child has already picked up these stubborn bad habits. Fine, since it's still early, I, the high priest of Kephale, shall enlighten the next generation.
-:{{DIcon|Arrow}} Bullying someone so much younger... have you no shame?
-:{{DIcon|Arrow}} Throwing your age around &mdash; pathetic.
-:{{DIcon|Arrow}} Old-timer, go ahead &mdash; straighten us out with all your might!
-:'''Cyrones:''' Heh, someone like you can't provoke me. Faith has nothing to do with age.
 :{{tx}}
 {{Dialogue End}}
 
 ===Comfort Serena{{subst:void|<!--500041509-->}}===
 {{Mission Description|type=adventure|location="Demigod Council" Dawncloud|update|The conversation with the priest has stirred up emotions in Serena. Perhaps talking with her will help her feel better.}}
 {{Dialogue Start}}
-
-;(Talk to Cyrones)
-:'''Cyrones:''' ...
-:'''Cyrones:''' Heh, you think a child's naive rambling will warp my faith? I'll go through every proper step of the ritual!
-:{{DIcon|Arrow}} What's Kephale to you people?
-::'''Cyrones:''' ...
-::'''Cyrones:''' Kephale... obviously the father of all living beings.
-:{{DIcon|Exit}} ...Farewell.
-
-;(Talk to Serena)
-:'''Serena:''' Sorry, {{MC|f=Miss|m=Mister}}... I lost my composure just now.
-:'''Serena:''' But I've been around long enough to know how to calm myself. I'm totally fine now!
-:{{DIcon|Arrow}} Great, you're in good spirits!
-:{{DIcon|Arrow}} How old are you, really...?
-::'''Serena:''' Hehe... I think I'm already an adult!
-::It's not your fault &mdash; blame that old man from before.
-:{{DIcon|Arrow}} It's not your fault &mdash; blame that old man from before.
-:'''Serena:''' ...Next time I see that old man, I should still apologize to him. He's just living in his own world...
 :{{tx}}
 {{Dialogue End}}
 
 ===Proceed further into Dawncloud towards Kephale's divine vessel{{subst:void|<!--500041510-->}}===
 {{Mission Description|type=adventure|location="Demigod Council" Dawncloud|update|Now, proceed further into Dawncloud toward the Worldbearing Titan.}}
 {{Dialogue Start}}
-;(Upon reaching the destination)
-
-;(Upon reaching the destination)
-:'''Serena:''' Can we really go up here?
-
-;(Upon reaching the destination)
-
-;(Upon reaching the destination)
-:'''Serena:''' Ah, we're getting closer to Kephale...
+:{{tx}}
 {{Dialogue End}}
 
 ===Approach Kephale and try speaking with the Titan{{subst:void|<!--500041512-->}}===
 {{Mission Description|type=adventure|location="Demigod Council" Dawncloud|update|You've finally reached the closest spot to Kephale. Try speaking with it.}}
 {{Dialogue Start}}
-;(Upon reaching the destination)
-
-;(Upon reaching the destination)
 :{{tx}}
 {{Dialogue End}}
 
 ===Investigate the source of "Kephale's" voice{{subst:void|<!--500041513-->}}===
 {{Mission Description|type=adventure|location="Demigod Council" Dawncloud|update|Something seems suspicious about "Kephale's" voice... Perhaps we should quietly investigate its source.}}
 {{Dialogue Start}}
-;(Upon reaching the destination)
-
-;(Upon reaching the destination)
 :{{tx}}
 {{Dialogue End}}
 
 ===Speak with Serena and escort her out of Dawncloud{{subst:void|<!--500041514-->}}===
 {{Mission Description|type=adventure|location="Demigod Council" Dawncloud|update|Serena has finally fulfilled her wish. Just keep this kind lie to yourself for now, and escort her out of Dawncloud.}}
 {{Dialogue Start}}
-
-;(Talk to Serena)
-:'''Serena:''' {{MC|f=Miss|m=Mister}}, thanks for waiting! The great Kephale was really kind and patiently listened to everything I had to say.
-:'''Serena:''' Now, my heart feels all warm and fuzzy. I'm not scared at all!
-:{{DIcon|Arrow}} From today onward, you're a little ray of sunshine!
-::'''Serena:''' Hehe~ Then I'll take the warmth I felt from the great Kephale today back to the market and share it with everyone!
-::I'm so jealous you got to speak to a Titan.
-:{{DIcon|Arrow}} I'm so jealous you got to speak to a Titan.
-:'''Serena:''' It's okay, {{MC|f=miss|m=mister}}. Someone as heroic as you will definitely get a chance to speak to them someday. Who knows. Maybe the great Kephale will be the one getting nervous then!
-:'''Serena:''' Thank you for climbing all the way up here with me... It's getting late, {{MC|f=miss|m=mister}}. Let's head back together!
 :{{tx}}
-
 {{Dialogue End}}
 
 ==Other Languages==

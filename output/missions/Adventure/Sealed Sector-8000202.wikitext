@@ -44,223 +44,42 @@ PageTitle=#Sealed Sector#
 ===Find a way to leave the room{{subst:void|<!--800020218-->}}===
 {{Mission Description|type=adventure|location=Storage Zone|The troubles caused by Silver Wolf have abated, but Leonard still looks concerned.<br />He's asking for your help to carry out a task that will improve the space station's cybersecurity and help him keep his job...}}
 {{Dialogue Start}}
-;(Upon reaching the destination)
-
-;(Upon reaching the destination)
-:'''Leonard:''' These guys are no pushovers... Let's borrow the power of the Level graffitis.
-
-;(Obtain {{Item|Simulated Calculation|20|x=1}})
-
-;(Obtain {{Item|Simulated Calculation|20|x=1}})
-
-;(Obtain {{Item|Simulated Calculation|20|x=1}})
-<pre>{
-	"$type": "RPG.GameCore.ShowTalkUI",
-	"Show": true
-}</pre>
-<pre>{
-	"$type": "RPG.GameCore.ActiveVirtualCamera",
-	"AreaName": "LevelArea_P40002_F40002102_G2",
-	"AnchorName": "Anchor1"
-}</pre>
-<pre>{
-	"$type": "RPG.GameCore.ChangePropState"
-}</pre>
-:<!--1-second delay-->
-:<!--2-second delay-->
-<pre>{
-	"$type": "RPG.GameCore.ActiveVirtualCamera",
-	"AreaName": "LevelArea_P40002_F40002102_G2",
-	"AnchorName": "Anchor1",
-	"IsActive": false
-}</pre>
-<pre>{
-	"$type": "RPG.GameCore.ShowTalkUI"
-}</pre>
-<pre>{
-	"$type": "RPG.GameCore.ShowTalkUI",
-	"Show": true
-}</pre>
-<pre>{
-	"$type": "RPG.GameCore.ActiveVirtualCamera",
-	"AreaName": "LevelArea_P40002_F40002102_G1",
-	"AnchorName": "Anchor4"
-}</pre>
-:<!--0.5-second delay-->
-<pre>{
-	"$type": "RPG.GameCore.ChangePropState"
-}</pre>
-:<!--1-second delay-->
-<!--Unknown TalkSentence: 200073329-->
-<pre>{
-	"$type": "RPG.GameCore.ActiveVirtualCamera",
-	"AreaName": "LevelArea_P40002_F40002102_G1",
-	"IsActive": false
-}</pre>
-<pre>{
-	"$type": "RPG.GameCore.ShowTalkUI"
-}</pre>
-<pre>{
-	"$type": "RPG.GameCore.ShowTalkUI",
-	"Show": true
-}</pre>
-<pre>{
-	"$type": "RPG.GameCore.ActiveVirtualCamera",
-	"AreaName": "LevelArea_P40002_F40002102_G1",
-	"AnchorName": "Anchor3"
-}</pre>
-:<!--1-second delay-->
-:<!--1-second delay-->
-:<!--0.2-second delay-->
-<pre>{
-	"$type": "RPG.GameCore.TriggerEffectList",
-	"TargetType": {
-		"$type": "RPG.GameCore.TargetFetchAdvPropEx",
-		"FetchType": "SinglePropByPropID",
-		"SinglePropID": {
-			"GroupID": {
-				"FixedValue": {
-					"Value": 1
-				}
-			},
-			"ID": {
-				"FixedValue": {
-					"Value": 300003
-				}
-			}
-		}
-	},
-	"EffectList": [
-		{
-			"EffectPath": "Effects/Eff_Prefab/Eff_Monster/Eff_XP_Minion04_00/Eff_Monster_XP_Minion04_00_Common_Maze_SpecialAppear.prefab",
-			"AttachPoint": "Root"
-		}
-	]
-}</pre>
-<pre>{
-	"$type": "RPG.GameCore.CreateProp",
-	"GroupID": {
-		"FixedValue": {
-			"Value": 16
-		}
-	},
-	"GroupPropID": {
-		"FixedValue": {
-			"Value": 300012
-		}
-	},
-	"CreateList": []
-}</pre>
-:<!--3-second delay-->
-<pre>{
-	"$type": "RPG.GameCore.ActiveVirtualCamera",
-	"AreaName": "LevelArea_P40002_F40002102_G1",
-	"AnchorName": "Anchor3",
-	"IsActive": false
-}</pre>
-<pre>{
-	"$type": "RPG.GameCore.ShowTalkUI"
-}</pre>
+:{{tx}}
 {{Dialogue End}}
 
 ===Defeat the weakened enemies{{subst:void|<!--800020215-->}}===
 {{Dialogue Start}}
-
+:{{tx}}
 {{Dialogue End}}
 
 ===Continue forward{{subst:void|<!--800020203-->}}===
 {{Dialogue Start}}
-;(Upon reaching the destination)
-
-;(Upon reaching the destination)
-<pre>{
-	"$type": "RPG.GameCore.EnableNPCMonsterAI",
-	"GroupID": 25,
-	"GroupMonsterIDs": [
-		200001
-	],
-	"UniqueNames": []
-}</pre>
-<pre>{
-	"$type": "RPG.GameCore.ShowTalkUI",
-	"Show": true
-}</pre>
-<pre>{
-	"$type": "RPG.GameCore.ActiveVirtualCamera",
-	"AreaName": "LevelArea_P40002_F40002102_G1",
-	"AnchorName": "Anchor2"
-}</pre>
-:<!--2.5-second delay-->
-<pre>{
-	"$type": "RPG.GameCore.ActiveVirtualCamera",
-	"AreaName": "LevelArea_P40002_F40002102_G1",
-	"AnchorName": "Anchor8"
-}</pre>
-:<!--1-second delay-->
-:'''Leonard:''' This is it. These {{Color|keyword|nobold=1|"Level"}} graffitis usually come in pairs. You can use them to change the strength levels of your enemies, to either strengthen them or weaken them.
-:'''Leonard:''' Of course, for now, you don't have to strengthen them. Use the graffiti to weaken your enemies.
-<pre>{
-	"$type": "RPG.GameCore.ActiveVirtualCamera",
-	"AreaName": "LevelArea_P40002_F40002102_G1",
-	"AnchorName": "Anchor8",
-	"IsActive": false
-}</pre>
-<pre>{
-	"$type": "RPG.GameCore.ShowTalkUI"
-}</pre>
-<pre>{
-	"$type": "RPG.GameCore.EnableNPCMonsterAI",
-	"Enable": true,
-	"GroupID": 25,
-	"GroupMonsterIDs": [
-		200001
-	],
-	"UniqueNames": []
-}</pre>
+:{{tx}}
 {{Dialogue End}}
 
 ===Clear this area{{subst:void|<!--800020216-->}}===
 {{Dialogue Start}}
-<pre>{
-	"$type": "RPG.GameCore.ShowTalkUI",
-	"Show": true
-}</pre>
-:'''Leonard:''' After a cyber attack, it's usually followed up with a physical invasion. However, sometimes we can utilize the enemy's tactic and catch them with their own net.
-<pre>{
-	"$type": "RPG.GameCore.ShowTalkUI"
-}</pre>
-
-:{{DIcon|Loupe}} Investigate
-;(If {{cx}}<!--SubMission Finish: 800020214-->)
-;(Otherwise)
-:'''Leonard:''' Challenge completed, do you want to exit the simulation?
-:{{DIcon|Arrow}} Stay for Now
-:{{DIcon|Exit}} Confirm Exit
-:<pre>{
-	"$type": "RPG.GameCore.UpdateTreasureChallengeProgress",
-	"RaidTargetID": 102000000,
-	"IsIncrease": true,
-	"DeltaValue": 1
-}</pre>
+:{{tx}}
 {{Dialogue End}}
 
 ===Weaken the enemies using Level graffitis{{subst:void|<!--800020219-->}}===
 {{Dialogue Start}}
-
+:{{tx}}
 {{Dialogue End}}
 
 ===Defeat the weakened enemies{{subst:void|<!--800020220-->}}===
 {{Dialogue Start}}
-
+:{{tx}}
 {{Dialogue End}}
 
 ===Clear this area{{subst:void|<!--800020227-->}}===
 {{Dialogue Start}}
+:{{tx}}
 {{Dialogue End}}
 
 ===Weaken the enemies using Level graffitis{{subst:void|<!--800020204-->}}===
 {{Dialogue Start}}
-
+:{{tx}}
 {{Dialogue End}}
 
 ==Other Languages==

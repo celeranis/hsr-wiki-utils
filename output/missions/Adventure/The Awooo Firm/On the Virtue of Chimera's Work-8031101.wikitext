@@ -15,7 +15,7 @@ Mission On the Virtue of Chimera's Work Caelus.png|Caelus
 |chapter       = The Awooo Firm
 |requirements  = [[Trailblaze Mission]] ''[[Passage, Reveal the Past Once More]]'' completed
 |summary       = The soon-to-be-dissolved chimera squad, under your leadership, defeated numerous opponents one after another, earning the title of the strongest. Your legacy as an administrator will be forever remembered by all the chimeras of the Garden of Life.
-|characters    = Trailblazer
+|characters    = "Horn of Freedom"; ??; Absentee Freak; All Chimeras; Arielle; Aristocratic Man; Bad-tempered; Chimera Formation; Complaining Chimera; Hyacine; Kind Praiser; Little Chimera; Mityphon; Professional Manager; Proud Chimera; Serious Chimera; Slacker; Slacking Chimera; Tired Chimera; Trailblazer; Tribbie
 |startLocation = [[Amphoreus]] - [["Eternal Holy City" Okhema]]
 |world         = Amphoreus
 |area          = "Eternal Holy City" Okhema
@@ -26,28 +26,22 @@ Mission On the Virtue of Chimera's Work Caelus.png|Caelus
 '''''On the Virtue of Chimera's Work''''' is an Event [[Adventure Mission]] from the [[The Awooo Firm]] event.
 
 ==Steps==
-# Consult the Gardener at the Garden of Life.
-# Work hard and aim for 7th place.
-# Check out what is happening.
-# Keep working and aim for 4th place.
-# Have a chat with chimeras demonstrating sub-par performance.
-# Keep working and aim for 2nd place.
-# Keep it up and defeat Tribbie's squad.
-# Confront the Horn of Freedom.
-# Keep pushing and defeat the final opponent.
 # Head over to the Garden of Life and listen to what Hyacine has to share.
 # Stop the man who is causing a scene.
 # Do a demonstration with Hyacine
 # Stop the man who is causing a scene.
+# Consult the Gardener at the Garden of Life.
+# Work hard and aim for 7th place.
+# Check out what is happening.
 # Keep working and aim for 4th place.
 # Take a peek at the chimeras' daily routine.
 # Discuss with Hyacine about your next step.
 # Have a chat with chimeras demonstrating sub-par performance.
 # Keep working and aim for 2nd place.
 # Keep it up and defeat Tribbie's squad.
+# Confront the Horn of Freedom.
 # Keep pushing and defeat the final opponent.
 # Attend the award ceremony as the ultimate winner.
-# Keep working and aim for 4th place.
 # (Optional) Chat with the King of the Baths
 
 <!--
@@ -59,153 +53,104 @@ Mission On the Virtue of Chimera's Work Caelus.png|Caelus
 -->
 ==Dialogue==
 {{Stub Dialogue}}
-
-;(Talk to Enthusiastic Gardener)
-<pre>{
-	"$type": "RPG.GameCore.StartChimeraWorkRound",
-	"WorkRoundID": 1
-}</pre>
-
-;(Talk to Enthusiastic Gardener)
-----
-<pre>{
-	"$type": "RPG.GameCore.WaitUIControllerClose",
-	"UIControllerName": "Talk.TalkDialog"
-}</pre>
-
-;(Talk to Arielle)
-----
-<pre>{
-	"$type": "RPG.GameCore.ShowUI",
-	"Name": "Ui.Chimera.Goals.ChimeraGoalsPage",
-	"WaitForExit": true,
-	"Param": {
-		"Value": "ShowInMission"
-	},
-	"OnUIExitImmediately": [
-		{
-			"$type": "RPG.GameCore.TriggerCustomString",
-			"CustomString": {
-				"Value": "UIEnd"
-			}
-		}
-	]
-}</pre>
-;(Unused &mdash; UIEnd)
-----
-{{Dialogue End}}
-
-===Consult the Gardener at the Garden of Life.{{subst:void|<!--803110124-->}}===
-{{Mission Description|type=adventure|location="Eternal Holy City" Okhema|update|While you have been tasked with overseeing this chimera squad, what exactly should you do...? Perhaps it is time to check with the Gardener.}}
-{{Dialogue Start}}
-{{Dialogue End}}
-
-===Work hard and aim for 7th place.{{subst:void|<!--803110106-->}}===
-{{Mission Description|type=adventure|location="Eternal Holy City" Okhema|update|The situation is even worse than you imagined... Take charge of your chimeras, keep the team together, and save the day!}}
-{{Dialogue Start}}
-{{Dialogue End}}
-
-===Check out what is happening.{{subst:void|<!--803110108-->}}===
-{{Mission Description|type=adventure|location="Eternal Holy City" Okhema|update|A man has followed the Alpha Chimera to the Garden and is desperately asking it to join his team. Go there and find out what is going on.}}
-{{Dialogue Start}}
-{{Dialogue End}}
-
-===Keep working and aim for 4th place.{{subst:void|<!--803110109-->}}===
-{{Mission Description|type=adventure|location="Eternal Holy City" Okhema|update|When a worthy challenger shows up, don't shy away. Put in the effort and defeat this rival fair and square!}}
-{{Dialogue Start}}
-{{Dialogue End}}
-
-===Have a chat with chimeras demonstrating sub-par performance.{{subst:void|<!--803110132-->}}===
-{{Mission Description|type=adventure|location="Eternal Holy City" Okhema|update|The smoother things go, the less room there is for slacking off. It is time to motivate your team!}}
-{{Dialogue Start}}
-{{Dialogue End}}
-
-===Keep working and aim for 2nd place.{{subst:void|<!--803110115-->}}===
-{{Mission Description|type=adventure|location="Eternal Holy City" Okhema|update|Now that all the internal issues are sorted out, let's get back to work!}}
-{{Dialogue Start}}
-{{Dialogue End}}
-
-===Keep it up and defeat Tribbie's squad.{{subst:void|<!--803110116-->}}===
-{{Mission Description|type=adventure|location="Eternal Holy City" Okhema|update|Surprisingly, Tribbie's chimera squad secured second place... But there's still time to turn the tables. Work hard and outperform her squad!}}
-{{Dialogue Start}}
-{{Dialogue End}}
-
-===Confront the Horn of Freedom.{{subst:void|<!--803110119-->}}===
-{{Mission Description|type=adventure|location="Eternal Holy City" Okhema|update|A group of chimeras has suddenly broken into the Garden of Life. Hurry there and figure out what is happening. By the way, isn't the chimera calling itself the "Horn of Freedom" the former leader of your squad!?}}
-{{Dialogue Start}}
-{{Dialogue End}}
-
-===Keep pushing and defeat the final opponent.{{subst:void|<!--803110120-->}}===
-{{Mission Description|type=adventure|location="Eternal Holy City" Okhema|update|This chimera has gone to great lengths to challenge you. Show it what you are truly capable of and give it your best shot!}}
-{{Dialogue Start}}
-{{Dialogue End}}
-
 ===Head over to the Garden of Life and listen to what Hyacine has to share.{{subst:void|<!--803110101-->}}===
-{{Mission Description|type=adventure|location="Eternal Holy City" Okhema|update|Hyacine, the healer from the Twilight Courtyard, needs your presence at the Garden of Life. Head there and listen to what she has to say!}}
+{{Mission Description|type=adventure|location="Eternal Holy City" Okhema|Hyacine, the healer from the Twilight Courtyard, needs your presence at the Garden of Life. Head there and listen to what she has to say!}}
 {{Dialogue Start}}
+:{{tx}}
 {{Dialogue End}}
 
 ===Stop the man who is causing a scene.{{subst:void|<!--803110102-->}}===
 {{Mission Description|type=adventure|location="Eternal Holy City" Okhema|update|Someone is causing a scene in the Garden! Join Hyacine in stopping the furious man.}}
 {{Dialogue Start}}
+:{{tx}}
 {{Dialogue End}}
 
 ===Do a demonstration with Hyacine{{subst:void|<!--803110103-->}}===
 {{Dialogue Start}}
+:{{tx}}
 {{Dialogue End}}
 
 ===Stop the man who is causing a scene.{{subst:void|<!--803110104-->}}===
 {{Dialogue Start}}
+:{{tx}}
 {{Dialogue End}}
 
-===Keep working and aim for 4th place.{{subst:void|<!--803110110-->}}===
+===Consult the Gardener at the Garden of Life.{{subst:void|<!--803110124-->}}===
+{{Mission Description|type=adventure|location="Eternal Holy City" Okhema|update|While you have been tasked with overseeing this chimera squad, what exactly should you do...? Perhaps it is time to check with the Gardener.}}
+{{Dialogue Start}}
+:{{tx}}
+{{Dialogue End}}
+
+===Work hard and aim for 7th place.{{subst:void|<!--803110106-->}}===
+{{Mission Description|type=adventure|location="Eternal Holy City" Okhema|update|The situation is even worse than you imagined... Take charge of your chimeras, keep the team together, and save the day!}}
+{{Dialogue Start}}
+:{{tx}}
+{{Dialogue End}}
+
+===Check out what is happening.{{subst:void|<!--803110108-->}}===
+{{Mission Description|type=adventure|location="Eternal Holy City" Okhema|update|A man has followed the Alpha Chimera to the Garden and is desperately asking it to join his team. Go there and find out what is going on.}}
+{{Dialogue Start}}
+:{{tx}}
+{{Dialogue End}}
+
+===Keep working and aim for 4th place.{{subst:void|<!--803110109-->}}===
 {{Mission Description|type=adventure|location="Eternal Holy City" Okhema|update|When a worthy challenger shows up, don't shy away. Put in the effort and defeat this rival fair and square!}}
 {{Dialogue Start}}
+:{{tx}}
 {{Dialogue End}}
 
 ===Take a peek at the chimeras' daily routine.{{subst:void|<!--803110111-->}}===
 {{Mission Description|type=adventure|location="Eternal Holy City" Okhema|update|The Alpha Chimera mentioned some doubts circulating within the team lately. It might be time to look into the daily routines of those chimeras.}}
 {{Dialogue Start}}
+:{{tx}}
 {{Dialogue End}}
 
 ===Discuss with Hyacine about your next step.{{subst:void|<!--803110112-->}}===
 {{Mission Description|type=adventure|location="Eternal Holy City" Okhema|update|The chimeras in the team are getting a bit too carried away. Talk with Hyacine to figure out a solution.}}
 {{Dialogue Start}}
+:{{tx}}
 {{Dialogue End}}
 
 ===Have a chat with chimeras demonstrating sub-par performance.{{subst:void|<!--803110113-->}}===
 {{Mission Description|type=adventure|location="Eternal Holy City" Okhema|update|The smoother things go, the less room there is for slacking off. It is time to motivate your team!}}
 {{Dialogue Start}}
+:{{tx}}
 {{Dialogue End}}
 
 ===Keep working and aim for 2nd place.{{subst:void|<!--803110114-->}}===
 {{Mission Description|type=adventure|location="Eternal Holy City" Okhema|update|Now that all the internal issues are sorted out, let's get back to work!}}
 {{Dialogue Start}}
+:{{tx}}
 {{Dialogue End}}
 
-===Keep it up and defeat Tribbie's squad.{{subst:void|<!--803110117-->}}===
+===Keep it up and defeat Tribbie's squad.{{subst:void|<!--803110116-->}}===
 {{Mission Description|type=adventure|location="Eternal Holy City" Okhema|update|Surprisingly, Tribbie's chimera squad secured second place... But there's still time to turn the tables. Work hard and outperform her squad!}}
 {{Dialogue Start}}
+:{{tx}}
 {{Dialogue End}}
 
-===Keep pushing and defeat the final opponent.{{subst:void|<!--803110121-->}}===
+===Confront the Horn of Freedom.{{subst:void|<!--803110119-->}}===
+{{Mission Description|type=adventure|location="Eternal Holy City" Okhema|update|A group of chimeras has suddenly broken into the Garden of Life. Hurry there and figure out what is happening. By the way, isn't the chimera calling itself the "Horn of Freedom" the former leader of your squad!?}}
+{{Dialogue Start}}
+:{{tx}}
+{{Dialogue End}}
+
+===Keep pushing and defeat the final opponent.{{subst:void|<!--803110120-->}}===
 {{Mission Description|type=adventure|location="Eternal Holy City" Okhema|update|This chimera has gone to great lengths to challenge you. Show it what you are truly capable of and give it your best shot!}}
 {{Dialogue Start}}
+:{{tx}}
 {{Dialogue End}}
 
 ===Attend the award ceremony as the ultimate winner.{{subst:void|<!--803110122-->}}===
 {{Mission Description|type=adventure|location="Eternal Holy City" Okhema|update|Your team has emerged as the top team in the Garden! Proudly raise the medal that is rightfully yours!}}
 {{Dialogue Start}}
-{{Dialogue End}}
-
-===Keep working and aim for 4th place.{{subst:void|<!--803110127-->}}===
-{{Mission Description|type=adventure|location="Eternal Holy City" Okhema|update|When a worthy challenger shows up, don't shy away. Put in the effort and defeat this rival fair and square!}}
-{{Dialogue Start}}
+:{{tx}}
 {{Dialogue End}}
 
 ===(Optional) Chat with the King of the Baths{{subst:void|<!--803110134-->}}===
 {{Mission Description|type=adventure|location="Eternal Holy City" Okhema|update|Why would the King of the Baths decide to side with the chimera? Have a chat with him and listen to what he has to say.}}
 {{Dialogue Start}}
+:{{tx}}
 {{Dialogue End}}
 
 ==Other Languages==

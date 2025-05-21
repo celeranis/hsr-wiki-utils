@@ -74,1905 +74,207 @@ PageTitle=#Grove, Wherefore Are the Wise Silent#
 ===Speak with Castorice{{subst:void|<!--104020401-->}}===
 {{Mission Description|type=trailblaze|location="Eternal Holy City" Okhema|Aglaea shows sincere gratitude for our help in defeating Nikador, preparing generous gifts and inviting (Trailblazer) and I to the Hero's Bath for a discussion.}}
 {{Dialogue Start}}
-
-;(Unused &mdash; EnterDistrict_G233)
-----
-::Now, in your private bath chamber
-::Ever since the battle with {{Rubi|Nikador|Strife Titan}}, you haven't slept so soundly in ages.
-::Even if Death itself came to rouse you, you'd proudly retort: Why does life slumber? Because the bed is warm...
-::Yet, a chill from the River of Souls wafted by, a sensation hauntingly familiar. Could Death truly be at your door?
-::Best to open your eyes, just in case...
-::{{A|VO chapter4 12 castorice 101 m.ogg}} {{A|VO chapter4 12 castorice 101 f.ogg}} '''Castorice:''' {{MC|m=Mr.|f=Miss}} (Trailblazer), you're awake.
-::{{DIcon|Arrow}} ...No wonder I felt a chill.
-:::{{A|VO chapter4 12 castorice 102.ogg}} '''Castorice:''' Is the room too cold?
-:::...Castorice, why does life slumber?
-:::{{A|VO chapter4 12 castorice 103.ogg}} '''Castorice:''' ...That's a complicated question. I'm not sure I can answer that.
-:::...Why are you here?
-::{{DIcon|Arrow}} ...Castorice, why does life slumber?
-:::{{A|VO chapter4 12 castorice 103.ogg}} '''Castorice:''' ...That's a complicated question. I'm not sure I can answer that.
-:::...Why are you here?
-::{{DIcon|Arrow}} ...Why are you here?
-::{{A|VO chapter4 12 castorice 104.ogg}} '''Castorice:''' I apologize for arriving uninvited. I saw that you were still asleep, so I took the liberty of waiting nearby.
-::{{A|VO chapter4 12 castorice 105.ogg}} '''Castorice:''' I bring a message from Lady Aglaea. She has prepared a gift for you and Dan Heng, and wishes to present it to you in person.
-::{{DIcon|Arrow}} A gift? Gimme, gimme!
-::{{DIcon|Arrow}} What are we waiting for? Let's go!
-::{{A|VO chapter4 12 castorice 106.ogg}} '''Castorice:''' I'm glad you're in good spirits. Alright, let's set off.
-::{{tx}}
-;(Unused &mdash; EnterDistrict_G{GroupID})
-:{{A|VO chapter4 12 castorice 107.ogg}} '''Castorice:''' The baths are bustling. Now that {{Rubi|Nikador|Strife Titan}} has fallen, the soldiers in the city can finally catch a break.
-
-;(Unused &mdash; EnterDistrict_G243)
-:{{A|VO chapter4 12 castorice 108.ogg}} '''Castorice:''' Is that... Lady Tribbie and Lady Trianne?
+:{{tx}}
 {{Dialogue End}}
 
 ===Follow Castorice to meet with Aglaea{{subst:void|<!--104020445-->}}===
 {{Dialogue Start}}
-
-;(Talk to Tribbie)
-
-
-;(Unused &mdash; EnterDistrict_G238)
 :{{tx}}
-
-;(Unused &mdash; EnterDistrict_G428)
-<pre>{
-	"$type": "RPG.GameCore.AdvSetAILeadWay",
-	"TargetType": {
-		"$type": "RPG.GameCore.GroupFetchLocalTarget",
-		"Targets": [
-			400001
-		]
-	},
-	"PathwayGroupID": 428,
-	"PathwayID": 1,
-	"MotionFlag": "Run",
-	"WaitForPlayer": true,
-	"OnReach": [],
-	"PathOffset": []
-}</pre>
 {{Dialogue End}}
 
 ===Find out about what's happening from the merchants{{subst:void|<!--104020406-->}}===
 {{Dialogue Start}}
-
-;(Talk to Merchant)
-:{{A|VO chapter4 12 castorice 109.ogg}} '''Castorice:''' Excuse me. If you don't mind, could you tell me what Lady Tribbie and Lady Trianne were discussing just now?
-:{{A|VO chapter4 12 shangrenB 104.ogg}} '''Merchant:''' Oh, it's Miss Castorice! It's been a while! Well, honestly, I'm not quite sure myself.
-:{{A|VO chapter4 12 shangrenB 105.ogg}} '''Merchant:''' See, I have a little hobby of collecting handicrafts. Some time ago, I found this trinket being sold at the Marmoreal Market and bought it to use as decoration at my stall.
-:{{A|VO chapter4 12 shangrenB 106.ogg}} '''Merchant:''' When Lady Tribbie and Lady Trianne walked by earlier, Lady Trianne happened to catch sight of it and promptly insisted that it was a precious memento from her hometown.
-:{{A|VO chapter4 12 shangrenB 107.ogg}} '''Merchant:''' But Lady Tribbie believed it to be a counterfeit. She said it couldn't possibly be from Janusopolis &mdash; the likelihood of such fragile glassware surviving the Chrysos War is simply too low.
-:{{A|VO chapter4 12 shangrenB 108.ogg}} '''Merchant:''' For some reason, Lady Trianne became awfully upset after hearing that.
-:{{A|VO chapter4 12 castorice 110.ogg}} '''Castorice:''' I see...
-:{{A|VO chapter4 12 castorice 111.ogg}} '''Castorice:''' Madam, would you mind selling this trinket to me?
-:{{A|VO chapter4 12 shangrenB 109.ogg}} '''Merchant:''' Certainly. It's just... if it truly is a relic from Janusopolis, it could be worth a small fortune... Miss Castorice, I'm running a business here, after all, so...
-:{{A|VO chapter4 12 castorice 112.ogg}} '''Castorice:''' I understand. Feel free to name your price.
-:{{DIcon|Arrow}} Not so fast! I object to this!
-:<pre>{
-	"$type": "RPG.GameCore.SetMissionCustomValue",
-	"SubmissionID": 104020406,
-	"MissionCustomValue": {
-		"Name": "OldValue_0",
-		"ValidValueParamList": []
-	},
-	"CustomValue": 1
-}</pre>
-:<pre>{
-	"$type": "RPG.GameCore.SetPerformanceResult",
-	"Value": 1
-}</pre>
-::{{A|VO chapter4 12 castorice 109.ogg}} '''Castorice:''' Excuse me. If you don't mind, could you tell me what Lady Tribbie and Lady Trianne were discussing just now?
-::{{A|VO chapter4 12 shangrenB 104.ogg}} '''Merchant:''' Oh, it's Miss Castorice! It's been a while! Well, honestly, I'm not quite sure myself.
-::{{A|VO chapter4 12 shangrenB 105.ogg}} '''Merchant:''' See, I have a little hobby of collecting handicrafts. Some time ago, I found this trinket being sold at the Marmoreal Market and bought it to use as decoration at my stall.
-::{{A|VO chapter4 12 shangrenB 106.ogg}} '''Merchant:''' When Lady Tribbie and Lady Trianne walked by earlier, Lady Trianne happened to catch sight of it and promptly insisted that it was a precious memento from her hometown.
-::{{A|VO chapter4 12 shangrenB 107.ogg}} '''Merchant:''' But Lady Tribbie believed it to be a counterfeit. She said it couldn't possibly be from Janusopolis &mdash; the likelihood of such fragile glassware surviving the Chrysos War is simply too low.
-::{{A|VO chapter4 12 shangrenB 108.ogg}} '''Merchant:''' For some reason, Lady Trianne became awfully upset after hearing that.
-::{{A|VO chapter4 12 castorice 110.ogg}} '''Castorice:''' I see...
-::{{A|VO chapter4 12 castorice 111.ogg}} '''Castorice:''' Madam, would you mind selling this trinket to me?
-::{{A|VO chapter4 12 shangrenB 109.ogg}} '''Merchant:''' Certainly. It's just... if it truly is a relic from Janusopolis, it could be worth a small fortune... Miss Castorice, I'm running a business here, after all, so...
-::{{A|VO chapter4 12 castorice 112.ogg}} '''Castorice:''' I understand. Feel free to name your price.
-::Not so fast! I object to this!
-::{{A|VO chapter4 12 shangrenB 110.ogg}} '''Merchant:''' And what might your concerns be, my friend?
-::{{DIcon|Arrow}} You've got some nerve trying to rip off a Chrysos Heir.
-::{{DIcon|Arrow}} Tribbie already called it a fake! Are you trying to pull a fast one on us?
-:{{DIcon|Arrow}} (Glare at her in silence.)
-:<pre>{
-	"$type": "RPG.GameCore.SetMissionCustomValue",
-	"SubmissionID": 104020406,
-	"MissionCustomValue": {
-		"Name": "OldValue_0",
-		"ValidValueParamList": []
-	},
-	"CustomValue": 2
-}</pre>
-:<pre>{
-	"$type": "RPG.GameCore.SetPerformanceResult",
-	"Value": 2
-}</pre>
-::{{A|VO chapter4 12 castorice 109.ogg}} '''Castorice:''' Excuse me. If you don't mind, could you tell me what Lady Tribbie and Lady Trianne were discussing just now?
-::{{A|VO chapter4 12 shangrenB 104.ogg}} '''Merchant:''' Oh, it's Miss Castorice! It's been a while! Well, honestly, I'm not quite sure myself.
-::{{A|VO chapter4 12 shangrenB 105.ogg}} '''Merchant:''' See, I have a little hobby of collecting handicrafts. Some time ago, I found this trinket being sold at the Marmoreal Market and bought it to use as decoration at my stall.
-::{{A|VO chapter4 12 shangrenB 106.ogg}} '''Merchant:''' When Lady Tribbie and Lady Trianne walked by earlier, Lady Trianne happened to catch sight of it and promptly insisted that it was a precious memento from her hometown.
-::{{A|VO chapter4 12 shangrenB 107.ogg}} '''Merchant:''' But Lady Tribbie believed it to be a counterfeit. She said it couldn't possibly be from Janusopolis &mdash; the likelihood of such fragile glassware surviving the Chrysos War is simply too low.
-::{{A|VO chapter4 12 shangrenB 108.ogg}} '''Merchant:''' For some reason, Lady Trianne became awfully upset after hearing that.
-::{{A|VO chapter4 12 castorice 110.ogg}} '''Castorice:''' I see...
-::{{A|VO chapter4 12 castorice 111.ogg}} '''Castorice:''' Madam, would you mind selling this trinket to me?
-::{{A|VO chapter4 12 shangrenB 109.ogg}} '''Merchant:''' Certainly. It's just... if it truly is a relic from Janusopolis, it could be worth a small fortune... Miss Castorice, I'm running a business here, after all, so...
-::{{A|VO chapter4 12 castorice 112.ogg}} '''Castorice:''' I understand. Feel free to name your price.
-::Not so fast! I object to this!
-::{{A|VO chapter4 12 shangrenB 110.ogg}} '''Merchant:''' And what might your concerns be, my friend?
-::You've got some nerve trying to rip off a Chrysos Heir.
-::Tribbie already called it a fake! Are you trying to pull a fast one on us?
-:{{A|VO chapter4 12 shangrenB 111.ogg}} '''Merchant:''' I... Fine. I'll sell it to you at cost as a sign of goodwill, Miss Castorice. Just promise to support my business in the future!
-:(Glare at her in silence.)
-:{{A|VO chapter4 12 shangrenB 112.ogg}} '''Merchant:''' Uh... I suppose I can sell it to you at cost as a sign of goodwill, Miss Castorice. Just promise to support my business in the future!
-:{{A|VO chapter4 12 castorice 113.ogg}} '''Castorice:''' Much appreciated.
 :{{tx}}
-;(Unused &mdash; EnterDistrict_G239)
-:{{A|VO chapter4 12 shangrenB 103.ogg}} '''Merchant:''' It's so hard to understand what they're thinking sometimes...
-:{{A|VO chapter4 12 castorice 119.ogg}} '''Castorice:''' Alright, back to business after that little detour.
-:{{A|VO chapter4 12 castorice 120.ogg}} '''Castorice:''' Let's keep moving. Don't stray far now &mdash; we've already kept Lady Aglaea waiting long enough.
-
-;(Unused &mdash; 111)
-:{{A|VO chapter4 12 castorice 121.ogg}} '''Castorice:''' It seems your friend arrived before us.
 {{Dialogue End}}
 
 ===Continue following Castorice to meet with Aglaea{{subst:void|<!--104020446-->}}===
 {{Dialogue Start}}
-;(Upon reaching the destination)
-<pre>{
-	"$type": "RPG.GameCore.AdvSetAIFollow",
-	"FetchTarget": true,
-	"TargetType": {
-		"$type": "RPG.GameCore.GroupFetchLocalTarget",
-		"Targets": [
-			400001
-		]
-	},
-	"StopMoveDistance": 2,
-	"StartWalkTime": 1,
-	"StartRunDistance": 3,
-	"StartSprintDistance": 6,
-	"PreferSlotIDs": [
-		2,
-		3
-	],
-	"StartAvoidTime": 2
-}</pre>
-;(Unused &mdash; EnterDistrict_G429)
-;(Upon reaching the destination)
+:{{tx}}
 {{Dialogue End}}
 
 ===Speak with Aglaea{{subst:void|<!--104020402-->}}===
 {{Dialogue Start}}
-
-;(Obtain {{Item|Dew of Divine Blood|20|x=1}})
-;(Obtain {{Item|Weft|20|x=1}})
-
-;(Talk to Aglaea)
-:{{A|VO chapter4 12 danheng 101 m.ogg}} {{A|VO chapter4 12 danheng 101 f.ogg}} '''Dan Heng:''' You're finally here, (Trailblazer).
-:{{A|VO chapter4 12 aglaea 101.ogg}} '''Aglaea:''' Welcome, Cas. And you as well, Trailblazer from beyond the sky.
-:{{DIcon|Arrow}} You're up so early, Dan Heng!
-::{{A|VO chapter4 12 danheng 102.ogg}} '''Dan Heng:''' You would've been, too, if you hadn't stayed up so late. But what matters is that you got a good rest.
-::I didn't expect you to call me that.
-::{{A|VO chapter4 12 aglaea 102.ogg}} '''Aglaea:''' Your companion here kindly explained the meaning behind the name to me earlier.
-::{{A|VO chapter4 12 aglaea 103.ogg}} '''Aglaea:''' Through him, I've come to understand that you and your friends walk the paths of {{Rubi|Kephale|Worldbearing Titan}} and Janus in places beyond the sky. Addressing you appropriately is the least I can do as a show of respect.
-::The gift! Gimme the gift!
-:{{DIcon|Arrow}} I didn't expect you to call me that.
-::{{A|VO chapter4 12 aglaea 102.ogg}} '''Aglaea:''' Your companion here kindly explained the meaning behind the name to me earlier.
-::{{A|VO chapter4 12 aglaea 103.ogg}} '''Aglaea:''' Through him, I've come to understand that you and your friends walk the paths of {{Rubi|Kephale|Worldbearing Titan}} and Janus in places beyond the sky. Addressing you appropriately is the least I can do as a show of respect.
-::The gift! Gimme the gift!
-:{{DIcon|Arrow}} The gift! Gimme the gift!
-:{{A|VO chapter4 12 danheng 103.ogg}} '''Dan Heng:''' ...I'm sorry about my companion's behavior.
-:{{A|VO chapter4 12 aglaea 104 m.ogg}} {{A|VO chapter4 12 aglaea 104 f.ogg}} '''Aglaea:''' Not at all. It's good to see (Trailblazer) bouncing back with such energy after that tough battle.
-:{{A|VO chapter4 12 aglaea 105.ogg}} '''Aglaea:''' For all that has happened, it was never our intention to drag you two into the battle against {{Rubi|Nikador|Strife Titan}} and jeopardize your safety. To express our gratitude for your kind Trailblazing endeavors, we would like to present you with the highest honor of Okhema.
-:{{A|VO chapter4 12 aglaea 106.ogg}} '''Aglaea:''' This is the Dew of Divine Blood, brewed from crops nourished by the blood of the Titans. It is said that only twelve bottles existed. The last three bottles are now being kept in the treasure vault of Okhema.
-:{{A|VO chapter4 12 aglaea 107.ogg}} '''Aglaea:''' Back in the days of prosperity, cities fortunate enough to acquire it regarded it as one of the greatest treasures ever. Unsealing it during a ceremony held in honor of two cities' diplomatic ties was the highest form of respect one could show the other.
-:{{A|VO chapter4 12 aglaea 108.ogg}} '''Aglaea:''' And now, in keeping with tradition, Okhema dedicates this drink to our esteemed guests from beyond the sky in appreciation of what you have done for us.
-:{{DIcon|Arrow}} My hand is trembling under the weight of this gift...
-:{{DIcon|Arrow}} I'm not of drinking age yet.
-::{{A|VO chapter4 12 danheng 104.ogg}} '''Dan Heng:''' ...The Express has house rules about drinking, and even I'm not exempt to them.
-:{{A|VO chapter4 12 danheng 105.ogg}} '''Dan Heng:''' This precious gift isn't simply a token of gratitude though, is it, Lady Aglaea?
-:{{A|VO chapter4 12 aglaea 109.ogg}} '''Aglaea:''' Very perceptive, Mr. Dan Heng. Your heroic deeds have proven that you come in good faith. With the Dew of Divine Blood as testament, we wish to forge an alliance with the Trailblazers.
-:{{A|VO chapter4 12 danheng 106.ogg}} '''Dan Heng:''' With all due respect... won't forging an alliance with the Chrysos Heirs embroil us in the conflicts within Okhema?
-:{{A|VO chapter4 12 danheng 107.ogg}} '''Dan Heng:''' I'm sure you can understand where our misgivings come from, Lady Aglaea.
-:{{DIcon|Arrow}} Right, we need to think about this first.
-:{{DIcon|Arrow}} Waaaah, my gift! My gift...
-::{{A|VO chapter4 12 danheng 108.ogg}} '''Dan Heng:''' ...Wow, you seriously took a liking to the gift.
-:{{A|VO chapter4 12 danheng 109.ogg}} '''Dan Heng:''' Having said that, Lady Aglaea, please don't misunderstand, we will still do what we can to assist you in the Flame-Chase Journey.
 :{{tx}}
 {{Dialogue End}}
 
 ===Speak with Castorice and Hyacine and prepare to head out{{subst:void|<!--104020404-->}}===
 {{Mission Description|type=trailblaze|location="Eternal Holy City" Okhema|update|During alliance negotiations with Aglaea, we encounter Hyacine from the Twilight Courtyard. (Trailblazer) and Castorice opt to join her journey back to the Grove to complete Aglaea's diplomatic mission.}}
 {{Dialogue Start}}
-
-;(Talk to Castorice)
-----
-:{{A|VO chapter4 12 castorice 125 m.ogg}} {{A|VO chapter4 12 castorice 125 f.ogg}} '''Castorice:''' I'm glad to be in your company again, {{MC|m=Mr.|f=Miss}} (Trailblazer).
-:{{DIcon|Talk}} Tell me about the Titan known as Thanatos.
-::{{A|VO chapter4 12 castorice 126.ogg}} '''Castorice:''' {{Rubi|Thanatos|Death Titan}}... controls my fate, in a sense. The curse I bear came from them.
-::{{A|VO chapter4 12 castorice 127.ogg}} '''Castorice:''' And they have something of mine... something of great importance that I must get back from them.
-:;(Return to previous option selection)
-:{{DIcon|Talk}} Who is Professor Anaxa?
-::{{A|VO chapter4 12 castorice 128.ogg}} '''Castorice:''' When I was studying at the Grove alongside Phainon and the others, Professor Anaxa was responsible for teaching us about the Chrysos Heirs and the Titans. That's also when I met Miss Hyacine... She was Anaxa's teaching assistant then.
-:;(Return to previous option selection)
-:{{DIcon|Talk}} What is the Grove of Epiphany?
-::{{A|VO chapter4 12 castorice 129.ogg}} '''Castorice:''' The Grove of Epiphany is Okhema's partner academy. They look after the Coreflame of {{Rubi|Cerces|Reason Titan}} and are the organization at the forefront of researching phenomena such as the black tide and the Titans. They also provide academic research support for the Flame-Chase Journey.
-::{{A|VO chapter4 12 castorice 130.ogg}} '''Castorice:''' Several Chrysos Heirs are based in the Grove, including Miss Hyacine and Professor Anaxa.
-:;(Return to previous option selection)
-:{{DIcon|Arrow}} I don't have any more questions. Let's go!
-::{{A|VO chapter4 12 hyacine 117.ogg}} '''Hyacine:''' I came here with a colleague from the Twilight Courtyard. I've asked her to pack her luggage in advance, so she's already waiting for us by the city gates. Let's go meet up with her!
-::<!--0.5-second delay-->
-<pre>{
-	"$type": "RPG.GameCore.PerformanceEndSeq",
-	"BeforeCases": [
-		{
-			"$type": "RPG.GameCore.SwitchCharacterAnchorV2",
-			"SwitchCharacterAnchorConfig": {
-				"IsLocalPlayer": true,
-				"CharacterUniqueName": "LocalPlayer",
-				"AreaName": {
-					"Value": "LevelArea_P10401_F10401001_G237"
-				},
-				"AnchorName": {
-					"Value": "Anchor3"
-				}
-			}
-		}
-	]
-}</pre>
-
-
-;(Talk to Aglaea)
-----
-:{{A|VO chapter4 12 aglaea 122.ogg}} '''Aglaea:''' Make good use of it. Trianne is already waiting for you at the outskirts of Okhema, so I won't keep you any longer. May your journey be smooth.
+:{{tx}}
 {{Dialogue End}}
 
 ===Meet up with Hyacine's friends{{subst:void|<!--104020403-->}}===
 {{Dialogue Start}}
-
-;(Unused &mdash; EnterDistrict_G236)
 :{{tx}}
-
-;(Unused &mdash; EnterDistrict_G{GroupID})
-:{{A|VO chapter4 12 hyacine 118.ogg}} '''Hyacine:''' Look, there she is... and Lady Trianne! But who's that they're looking at?
 {{Dialogue End}}
 
 ===Follow Trianne and move forward{{subst:void|<!--104020407-->}}===
 {{Mission Description|type=trailblaze|location="Eternal Holy City" Okhema|update|With Hyacine remaining in Okhema to treat the unnamed wounded person, Trianne, Castorice, and (Trailblazer) head to the Grove &mdash; the academic sanctuary dedicated to {{Rubi|Cerces|Reason Titan}}.}}
 {{Dialogue Start}}
-<pre>{
-	"$type": "RPG.GameCore.AdvCreateGroupEntity",
-	"InstanceIDList": [
-		400001
-	]
-}</pre>
-:<pre>{
-	"$type": "RPG.GameCore.AdvSetAILeadWay",
-	"TargetType": {
-		"$type": "RPG.GameCore.GroupFetchLocalTarget",
-		"Targets": [
-			400001
-		]
-	},
-	"PathwayGroupID": 240,
-	"PathwayID": 1,
-	"MotionFlag": "Run",
-	"OnReach": [
-		{
-			"$type": "RPG.GameCore.AdvEntityFaceTo",
-			"SourceType": {
-				"$type": "RPG.GameCore.GroupFetchLocalTarget",
-				"Targets": [
-					400001
-				]
-			},
-			"TargetType": {
-				"$type": "RPG.GameCore.GroupFetchLocalTarget",
-				"TargetType": "Prop",
-				"Targets": [
-					300001
-				]
-			},
-			"EnableSteer": true,
-			"EnableLookAt": false
-		},
-		{
-			"$type": "RPG.GameCore.ClientFinishMission",
-			"SubmissionID": 104020407
-		}
-	]
-}</pre>
-;(If {{cx}}{{subst:void|<!--{"$type":"RPG.GameCore.ByEntityCreated","InstanceIDList":[40001],"Inverse":true}-->}})
-:<pre>{
-	"$type": "RPG.GameCore.AdvCreateGroupEntity",
-	"InstanceIDList": [
-		400002
-	]
-}</pre>
-:{{A|VO chapter4 12 trianne 109.ogg}} '''Trianne:''' Everybody, follow Trianne! Fly, fly, fly away from Okhema!
-
-;(Talk to Hyacine)
-----
-:{{A|VO chapter4 12 hyacine 124.ogg}} '''Hyacine:''' I'm sorry for leaving in the middle of the journey... but as a healer, I can't just stand by and watch someone pass away in front of me.
-:{{A|VO chapter4 12 hyacine 125.ogg}} '''Hyacine:''' Please make your way to the Grove first. May Cerces safeguard your thoughts!
+:{{tx}}
 {{Dialogue End}}
 
 ===Speak with Trianne and prepare to depart{{subst:void|<!--104020449-->}}===
 {{Dialogue Start}}
-
-;(Talk to Trianne)
 :{{tx}}
-:{{DIcon|Talk}} Are we not using the Century Gate?
-::{{A|VO chapter4 12 castorice 133.ogg}} '''Castorice:''' You might not be aware of this... but using the Century Gate takes a significant toll on Lady Trianne.
-::{{tx}}
-:;(Return to previous option selection)
-:{{DIcon|Arrow}} Let's go.
-::{{A|VO chapter4 12 castorice 132.ogg}} '''Castorice:''' I'm ready, too.
-::{{tx}}
-:<pre>{
-	"$type": "RPG.GameCore.SetPerformanceResult",
-	"Value": 1
-}</pre>
-:{{DIcon|Exit}} Hang on a minute.
-::{{A|VO chapter4 12 trianne 114.ogg}} '''Trianne:''' The Grove is far! It's important to be ready!
-::{{tx}}
-:<pre>{
-	"$type": "RPG.GameCore.SetPerformanceResult",
-	"Value": 2
-}</pre>
-<pre>{
-	"$type": "RPG.GameCore.PerformanceEndSeq",
-	"Cases": [
-		{
-			"Case": 1,
-			"OnSuccess": [
-				{
-					"$type": "RPG.GameCore.ClientFinishMission",
-					"SubmissionID": 104020449
-				}
-			]
-		}
-	]
-}</pre>
 {{Dialogue End}}
 
 ===Wait for Trianne to wake up{{subst:void|<!--104020412-->}}===
 {{Dialogue Start}}
-----
-:{{tx}}
-:<!--1-second delay-->
-:A few days later, Grove of Epiphany
-:{{A|VO chapter4 13 castorice 101.ogg}} '''Castorice:''' Hm...
-:{{A|VO chapter4 13 castorice 102.ogg}} '''Castorice:''' It's harder than I thought to sew gemstones onto wool felt...
-:{{A|VO chapter4 13 mem 101.ogg}} '''Mem:''' Cas has such nimble fingers. I want to learn too...
-:{{A|VO chapter4 13 castorice 103.ogg}} '''Castorice:''' Hehe, Mem wants to try sewing? Here, why don't you give it a go?
-:{{DIcon|Arrow}} How are you two so close already?
-::{{A|VO chapter4 13 mem 102.ogg}} '''Mem:''' Cas and I are now good friends after traveling together for so many days!
-::{{A|VO chapter4 13 castorice 104.ogg}} '''Castorice:''' It's hard not to like Mem when they're so adorable.
-::I wanna try, too.
-:{{DIcon|Arrow}} I wanna try, too.
-:{{A|VO chapter4 13 castorice 105.ogg}} '''Castorice:''' Sure.
-:{{A|VO chapter4 13 mem 103.ogg}} '''Mem:''' You go first! I'll cheer you on!
-:{{A|VO chapter4 13 castorice 106.ogg}} '''Castorice:''' This is amazing... It seems as if their voice has become more intelligible after the battle with {{Rubi|Nikador|Strife Titan}}...
-:{{A|VO chapter4 13 castorice 107.ogg}} '''Castorice:''' After spending the last few days together, I feel like I'm gradually gaining the ability to understand what they're saying... even if it's just a little.
-:{{A|VO chapter4 13 mem 104.ogg}} '''Mem:''' This shows that I'm learning new things! Once I obtain the memory of poking wool felt, will I grow hands that are as pretty as Cas' hands?
-:{{DIcon|Arrow}} That just sounds weird.
-:{{DIcon|Arrow}} Scary. Don't teach her how to sew, Cas.
-:{{A|VO chapter4 13 mem 105.ogg}} '''Mem:''' That's horrible! You can't say that to a girl!
-:{{A|VO chapter4 13 castorice 108.ogg}} '''Castorice:''' Hehe...
-:{{A|VO chapter4 13 mem 106.ogg}} '''Mem:''' I was just kidding! Anyway, I believe that this trip to the Grove of Epiphany will definitely be a fruitful one.
-:{{A|VO chapter4 13 mem 107.ogg}} '''Mem:''' How exciting... I wonder what changes I'll experience next?
-:{{DIcon|Arrow}} You'll learn a powerful new ability!
-::{{A|VO chapter4 13 mem 108.ogg}} '''Mem:''' Mm-hmm! Being adorable isn't enough. I need to be strong, too!
-::You might... become fluffier?
-::{{A|VO chapter4 13 mem 109.ogg}} '''Mem:''' Do you like cute little animals that much? ...Are you secretly the type that cares a lot about outward appearances?
-::Transform into a cute girl! Now!
-:{{DIcon|Arrow}} You might... become fluffier?
-::{{A|VO chapter4 13 mem 109.ogg}} '''Mem:''' Do you like cute little animals that much? ...Are you secretly the type that cares a lot about outward appearances?
-::Transform into a cute girl! Now!
-:{{DIcon|Arrow}} Transform into a cute girl! Now!
-:{{A|VO chapter4 13 mem 110.ogg}} '''Mem:''' Wah, you don't have to yell!
-:{{A|VO chapter4 13 trianne 101.ogg}} '''Trianne:''' Phew... Is everybody awake? Little Gray, Little Cas, and... a little pink puppy?
-:{{A|VO chapter4 13 mem 111.ogg}} '''Mem:''' Puppy? I've become a different species altogether...!? And here I thought she would just give me a nickname like Little Memmy...
-:{{A|VO chapter4 13 castorice 109.ogg}} '''Castorice:''' It's already {{Rubi|Action Hour|Noon}}. Lady Trianne, I hope you're well-rested?
-:{{A|VO chapter4 13 castorice 110.ogg}} '''Castorice:''' You were talking in your sleep... Did you dream of many things?
-:{{A|VO chapter4 13 trianne 102.ogg}} '''Trianne:''' Sleep talking? Um... What did Trianne say?
-:{{A|VO chapter4 13 castorice 111.ogg}} '''Castorice:''' Something like... "Mommy! Doll with sword! Let's fight together! We'll be brave!"
-:{{A|VO chapter4 13 trianne 103.ogg}} '''Trianne:''' Eek, so embarrassing...! Please don't make fun of Trianne!
-:{{A|VO chapter4 13 castorice 112.ogg}} '''Castorice:''' Of course not.
-:{{A|VO chapter4 13 castorice 113.ogg}} '''Castorice:''' Wasn't Lady Trianne's mother also the Holy Maiden of Janusopolis?
-:{{A|VO chapter4 13 trianne 104.ogg}} '''Trianne:''' Uh-huh! Mama was the strongest Holy Maiden in all of our history! She also gave '''us''' the Prophecy of Deliverance... and she had red hair that looked like a cute red mushroom!
-:{{A|VO chapter4 13 trianne 105.ogg}} '''Trianne:''' But... Trianne can't remember what Mama looked like anymore... Not even in the dream just now...
-:{{A|VO chapter4 13 mem 112 m.ogg}} {{A|VO chapter4 13 mem 112 f.ogg}} '''Mem:''' In that case... (Trailblazer) and I will lend Trianne a hand!
-:{{DIcon|Arrow}} So, what's your superpower?
-:{{DIcon|Arrow}} But you don't have hands... Only paws.
-::{{A|VO chapter4 13 mem 113.ogg}} '''Mem:''' It's just a figure of speech!
-:{{A|VO chapter4 13 mem 114.ogg}} '''Mem:''' Think about it: There are so many memories scattered all over this world! Surely at least one contains an image of Trianne's mama?
 :{{tx}}
 {{Dialogue End}}
 
 ===Step onto the Woven Trail and enter the Grove of Epiphany{{subst:void|<!--104020413-->}}===
 {{Dialogue Start}}
-;(Upon reaching the destination)
-
-;(Upon reaching the destination)
-:A giant tree bowed slightly in the silent forest, tilting and falling into the wilting green waves. A passing breeze rustled through the leaves, as if it was sighing, softly fading into the lightless ocean above on high.
-:Would March 7th appreciate this sublime scene? You're uncertain. Dan Heng, perhaps...
-:Never mind, every time he encounters a tree as big as this one, it would be a deeply troubling situation.
-:{{DIcon|Arrow}} Take a photo of this big tree.
-<pre>{
-	"$type": "RPG.GameCore.PerformanceEndSeq",
-	"BeforeCases": [
-		{
-			"$type": "RPG.GameCore.SwitchCharacterAnchorV2",
-			"SwitchCharacterAnchorConfig": {
-				"IsLocalPlayer": true,
-				"CharacterUniqueName": "LocalPlayer",
-				"AreaName": {
-					"Value": "LevelArea_P20421_F20421001_G61"
-				},
-				"AnchorName": {
-					"Value": "Anchor2"
-				}
-			}
-		}
-	]
-}</pre>
-;(Unused &mdash; G61_1040204_Dialog)
-:{{A|VO chapter4 13 trianne 110.ogg}} '''Trianne:''' Look, a huge tree! It's... huge!
-:{{A|VO chapter4 13 mem 119.ogg}} '''Mem:''' Woven Trail... Where did it get its name from?
-:{{A|VO chapter4 13 castorice 114.ogg}} '''Castorice:''' Legend has it that whenever they requested an audience with Cerces, {{Rubi|Mnestia|Romance Titan}} would always come to the meeting in a long white dress. As the warps and wefts of the dress came into contact with the ground, they turned into paths and stairs...
-:{{A|VO chapter4 13 castorice 115.ogg}} '''Castorice:''' May this romantic path bring good tidings to Okhema.
+:{{tx}}
 {{Dialogue End}}
 
 ===Defeat the black-robed swordmaster{{subst:void|<!--104020438-->}}===
 {{Mission Description|type=trailblaze|location="Murmuring Woods" Grove of Epiphany|update|After careful observation, Castorice exposes Calypso's true identity as {{Rubi|Cerces|Reason Titan}}. Cerces admits to this and asks (Trailblazer)'s group to help them reach Anaxa, so they can fuse the Coreflame again to catch the culprit behind the annihilation of the Grove &mdash; the nameless black-robed swordmaster.}}
 {{Dialogue Start}}
-----
-----
-;([[#Gallery|Cutscene]] plays)
-::This is bad...
-::Century Gate...
-::Open!
-;(Cutscene ends)
-----
+:{{tx}}
 {{Dialogue End}}
 
 ===Help March 7th take a picture of the giant tree as a keepsake{{subst:void|<!--104020414-->}}===
 {{Mission Description|type=trailblaze|location="Murmuring Woods" Grove of Epiphany|update|With Hyacine remaining in Okhema to treat the unnamed wounded person, Trianne, Castorice, and (Trailblazer) head to the Grove &mdash; the academic sanctuary dedicated to {{Rubi|Cerces|Reason Titan}}.}}
 {{Dialogue Start}}
-
-:{{DIcon|Talk}} Photograph the "giant tree"
-<pre>{
-	"$type": "RPG.GameCore.BindSwitchPhotoGraphFuncBtn",
-	"SimpleMode": false,
-	"UseType": "StartPhotoInTriggerRange",
-	"MissionID": {
-		"FixedValue": {
-			"Value": 104020420
-		}
-	},
-	"RangeTriggerProp": {
-		"FetchType": "SinglePropByPropID",
-		"SinglePropID": {
-			"GroupID": {
-				"FixedValue": {
-					"Value": 62
-				}
-			},
-			"ID": {
-				"FixedValue": {
-					"Value": 300001
-				}
-			}
-		}
-	},
-	"ColliderRelativePathList": [],
-	"PhotoGraphMode": "LongRange",
-	"AimTargetContainerConfig": [
-		{
-			"AimTargetConfig": {
-				"$type": "RPG.GameCore.PhotoGraphAimContainerGiantTarget",
-				"AimTargetType": {
-					"$type": "RPG.GameCore.GroupFetchLocalTarget",
-					"TargetType": "Prop",
-					"Targets": [
-						300002
-					]
-				},
-				"Radius": 80,
-				"ShowAimTag": false,
-				"UseGameObjectNode": false,
-				"GameObjectNode": {
-					"Value": "Chest_M"
-				}
-			},
-			"ContainerFlagName": "BigTree",
-			"IsTopContainer": true,
-			"IsAimTargetConfig": true
-		}
-	],
-	"OverrideConfig": {
-		"IdentifyLookAt": {
-			"$type": "RPG.GameCore.GroupFetchLocalTarget",
-			"TargetType": "Prop",
-			"Targets": [
-				300002
-			]
-		},
-		"InitFov": 1,
-		"ShowFinishToastManually": true,
-		"OverrideMaxFov": 60,
-		"OverrideMinFov": 10
-	},
-	"ExtraSettings": {
-		"HideEntityConfig": {
-			"HideEntity": {
-				"$type": "RPG.GameCore.TargetFetchAdvProp",
-				"MultiGroupFetch": [
-					{
-						"GroupID": {
-							"FixedValue": {
-								"Value": 62
-							}
-						},
-						"ID": {
-							"FixedValue": {
-								"Value": 300001
-							}
-						}
-					},
-					{
-						"GroupID": {
-							"FixedValue": {
-								"Value": 108
-							}
-						},
-						"ID": {
-							"FixedValue": {
-								"Value": 300001
-							}
-						}
-					},
-					{
-						"GroupID": {
-							"FixedValue": {
-								"Value": 108
-							}
-						},
-						"ID": {
-							"FixedValue": {
-								"Value": 300002
-							}
-						}
-					},
-					{
-						"GroupID": {
-							"FixedValue": {
-								"Value": 108
-							}
-						},
-						"ID": {
-							"FixedValue": {
-								"Value": 300003
-							}
-						}
-					},
-					{
-						"GroupID": {
-							"FixedValue": {
-								"Value": 225
-							}
-						},
-						"ID": {
-							"FixedValue": {
-								"Value": 300001
-							}
-						}
-					}
-				]
-			}
-		}
-	},
-	"BindName": {
-		"Value": "BigTree"
-	},
-	"ShotResultCondition": {
-		"TargetConditionName": {
-			"Hash": 4239232322731573076
-		},
-		"ShotResultCondition": [
-			{
-				"PredicateName": {
-					"Hash": 12518437936274253375
-				},
-				"Predicate": {
-					"$type": "RPG.GameCore.ByTargetContainerRatioInRect",
-					"BindPhotographName": "BigTree",
-					"ContainerFlagName": "BigTree",
-					"Size": {},
-					"Ratio": 0.3
-				},
-				"BindContainerFlagNames": [
-					"BigTree"
-				]
-			}
-		]
-	},
-	"HideTwoPointFourParam": false
-}</pre>
-
-
-;(Unused &mdash; G171_1040204_Dialog)
-:A giant tree bowed slightly in the silent forest, tilting and falling into the wilting green waves. A passing breeze rustled through the leaves, as if it was sighing, softly fading into the lightless ocean above on high.
-::Would March 7th appreciate this sublime scene? You're uncertain. Dan Heng, perhaps...
-::Never mind, every time he encounters a tree as big as this one, it would be a deeply troubling situation.
-::Take a photo of this big tree.
-::{{A|VO chapter4 13 player 101 m.ogg}} {{A|VO chapter4 13 player 101 f.ogg}} '''(Trailblazer):''' (I never fail to impress... This photo deserves an award!)
-::{{A|VO chapter4 13 mem 121.ogg}} '''Mem:''' What is this huge tree, though...?
-::{{A|VO chapter4 13 castorice 116.ogg}} '''Castorice:''' It's the {{Rubi|Bough of Rift|Reason Titan}} &mdash; the divine body of Cerces. Flora began to grow where they planted their roots, and this flatland basin upon which we stand gradually became a large, verdant forest.
-::{{A|VO chapter4 13 castorice 117.ogg}} '''Castorice:''' A long time ago, Thalesus, the First Scholar, led the masses to build a garden and courtyard in the forest, naming the site the "Grove of Epiphany." There, people sought mental clarity, knowledge, and enlightenment.
-::{{A|VO chapter4 13 trianne 111.ogg}} '''Trianne:''' Trianne knows this! Everybody says that was how this big academy came to be.
-::{{A|VO chapter4 13 mem 122.ogg}} '''Mem:''' But... is the academy supposed to be this quiet?
-::{{A|VO chapter4 13 castorice 118.ogg}} '''Castorice:''' Something feels off...
-::{{A|VO chapter4 13 castorice 119.ogg}} '''Castorice:''' The Grove has always welcomed scholars. So too would {{Rubi|Cerces|Reason Titan}} give us her delicate leaves and extend her branches in greeting.
-::{{A|VO chapter4 13 castorice 120.ogg}} '''Castorice:''' Yet... it seems both the Grove's messengers and the Titan are indifferent to our arrival.
-::{{DIcon|Arrow}} So, we have no way in?
-:::{{A|VO chapter4 13 castorice 121.ogg}} '''Castorice:''' There should still be a way in. I'm just... a little surprised.
-:::Is the Grove closed to visitors?
-:::{{A|VO chapter4 13 castorice 122.ogg}} '''Castorice:''' That doesn't seem likely... Miss Hyacine didn't mention anything about it.
-:::What an inconsiderate Titan!
-::{{DIcon|Arrow}} Is the Grove closed to visitors?
-:::{{A|VO chapter4 13 castorice 122.ogg}} '''Castorice:''' That doesn't seem likely... Miss Hyacine didn't mention anything about it.
-:::What an inconsiderate Titan!
-::{{DIcon|Arrow}} What an inconsiderate Titan!
-::{{A|VO chapter4 13 castorice 123.ogg}} '''Castorice:''' Um... Please don't speak such words once we're in the confines of the Grove.
-::{{A|VO chapter4 13 trianne 112.ogg}} '''Trianne:''' Maybe everybody's still asleep because classes haven't started yet! They don't want to be disturbed, so they shut the entrance.
-::{{tx}}
+:{{tx}}
 {{Dialogue End}}
 
 ===Find the way to enter the Grove of Epiphany{{subst:void|<!--104020415-->}}===
 {{Mission Description|type=trailblaze|location="Murmuring Woods" Grove of Epiphany|update|The Grove, once filled with scholarly discourse, has now fallen into an eerie silence. (Trailblazer)'s group manages to enter, only to find that something seems amiss inside...}}
 {{Dialogue Start}}
-;(Upon reaching the destination)
-
-;(Upon reaching the destination)
-:{{A|VO chapter4 13 trianne 113.ogg}} '''Trianne:''' Trianne found it! Everybody, fly across to the other side!
-:{{A|VO chapter4 13 castorice 124.ogg}} '''Castorice:''' This place is too quiet... What in the world is going on?
+:{{tx}}
 {{Dialogue End}}
 
 ===Pass the Janus' Hidden Passage and enter the Grove of Epiphany{{subst:void|<!--104020452-->}}===
 {{Dialogue Start}}
-;(Upon reaching the destination)
-
-;(Upon reaching the destination)
-:{{A|VO chapter4 13 trianne 114.ogg}} '''Trianne:''' The entrance on the other side... Where could it be?
+:{{tx}}
 {{Dialogue End}}
 
 ===Continue forward{{subst:void|<!--104020416-->}}===
 {{Dialogue Start}}
-;(Upon reaching the destination)
-
-;(Upon reaching the destination)
-:{{A|VO chapter4 13 castorice 126.ogg}} '''Castorice:''' ...As I expected, something's not right here.
-:{{A|VO chapter4 13 mem 124.ogg}} '''Mem:''' Even though we're not scholars, someone should've come forward to receive us by now...
-:{{A|VO chapter4 13 castorice 127.ogg}} '''Castorice:''' Not to mention that this whole place is also eerily quiet.
-:{{DIcon|Arrow}} Maybe Aglaea didn't give them a heads-up?
-::{{A|VO chapter4 13 castorice 128.ogg}} '''Castorice:''' There is no way she would have neglected such an important diplomatic matter.
-::Maybe... something happened?
-::{{A|VO chapter4 13 castorice 129.ogg}} '''Castorice:''' Hm... That's possible.
-::Maybe they really are asleep?
-:{{DIcon|Arrow}} Maybe... something happened?
-::{{A|VO chapter4 13 castorice 129.ogg}} '''Castorice:''' Hm... That's possible.
-::Maybe they really are asleep?
-:{{DIcon|Arrow}} Maybe they really are asleep?
-:{{A|VO chapter4 13 castorice 130.ogg}} '''Castorice:''' That's not very likely... As far as I can recall, the voices of people engaged in debate echoed throughout the Grove at all hours of the day.
-:{{A|VO chapter4 13 trianne 116.ogg}} '''Trianne:''' {{Size|36|Helloooo? Is anyone thereeee?}}
-:{{A|VO chapter4 13 trianne 117.ogg}} '''Trianne:''' ...
-:{{A|VO chapter4 13 trianne 118.ogg}} '''Trianne:''' No one's here!
-:{{DIcon|Arrow}} Whoa, that scared me!
-:{{DIcon|Arrow}} What should we do now?
-:{{DIcon|Arrow}} Should we head back?
-::{{A|VO chapter4 13 mem 125.ogg}} '''Mem:''' Come now... Don't give up so easily! At least struggle a bit like a scared bunny!
-:{{A|VO chapter4 13 castorice 131.ogg}} '''Castorice:''' ...I have an idea. Lady Trianne, could you lend me that {{Color|keyword|nobold=1|golden spindle}}?
 :{{tx}}
-:<!--1-second delay-->
-:{{A|VO chapter4 13 castorice 126.ogg}} '''Castorice:''' ...As I expected, something's not right here.
-:{{A|VO chapter4 13 mem 124.ogg}} '''Mem:''' Even though we're not scholars, someone should've come forward to receive us by now...
-:{{A|VO chapter4 13 castorice 127.ogg}} '''Castorice:''' Not to mention that this whole place is also eerily quiet.
-:Maybe Aglaea didn't give them a heads-up?
-:{{A|VO chapter4 13 castorice 128.ogg}} '''Castorice:''' There is no way she would have neglected such an important diplomatic matter.
-:Maybe... something happened?
-:{{A|VO chapter4 13 castorice 129.ogg}} '''Castorice:''' Hm... That's possible.
-:Maybe they really are asleep?
-:{{A|VO chapter4 13 castorice 130.ogg}} '''Castorice:''' That's not very likely... As far as I can recall, the voices of people engaged in debate echoed throughout the Grove at all hours of the day.
-:{{A|VO chapter4 13 trianne 116.ogg}} '''Trianne:''' {{Size|36|Helloooo? Is anyone thereeee?}}
-:{{A|VO chapter4 13 trianne 117.ogg}} '''Trianne:''' ...
-:{{A|VO chapter4 13 trianne 118.ogg}} '''Trianne:''' No one's here!
-:Whoa, that scared me!
-:What should we do now?
-:Should we head back?
-:{{A|VO chapter4 13 mem 125.ogg}} '''Mem:''' Come now... Don't give up so easily! At least struggle a bit like a scared bunny!
-:{{A|VO chapter4 13 castorice 131.ogg}} '''Castorice:''' ...I have an idea. Lady Trianne, could you lend me that {{Color|keyword|nobold=1|golden spindle}}?
-:{{A|VO chapter4 13 castorice 132.ogg}} '''Castorice:''' Do you remember? Lady Aglaea said this: "While you're in the Grove, the golden thread of the Weft can also render all things around you visible, regardless of whether they're corporeal or not."
-:{{A|VO chapter4 13 castorice 133.ogg}} '''Castorice:''' This is achievable because the Grove is not only where the roots of {{Rubi|Cerces|Reason Titan}} are... but also where the Chrysalis of Gold manifests.
-:{{A|VO chapter4 13 castorice 134.ogg}} '''Castorice:''' "O {{Rubi|Mnestia|Romance Titan}}! With the Weft as my vow, I beseech you: Entwine my body with your golden thread and affection!"
-:{{DIcon|Arrow}} Whoa, that scared me too!
-::{{A|VO chapter4 13 castorice 135.ogg}} '''Castorice:''' Ah, I'm sorry... I had to recite that chant so that the golden thread would resonate with the Titan's presence within the leylines.
-::Is this some kind of ritualistic prayer?
-::{{A|VO chapter4 13 castorice 136.ogg}} '''Castorice:''' This is... a proverb that was recorded in the handbook of Mnestia's priests.
-::Who came up with this? How... unique...
-:{{DIcon|Arrow}} Is this some kind of ritualistic prayer?
-::{{A|VO chapter4 13 castorice 136.ogg}} '''Castorice:''' This is... a proverb that was recorded in the handbook of Mnestia's priests.
-::Who came up with this? How... unique...
-:{{DIcon|Arrow}} Who came up with this? How... unique...
-:{{A|VO chapter4 13 castorice 137.ogg}} '''Castorice:''' Well... These lines are documented in the handbook of Mnestia's priests, so...
-<pre>{
-	"$type": "RPG.GameCore.AdvCreateGroupEntity",
-	"InstanceIDList": [
-		300002
-	]
-}</pre>
-:{{tx}}
-:{{A|VO chapter4 13 trianne 115.ogg}} '''Trianne:''' Little Gray's eyes are so sharp!
-:{{A|VO chapter4 13 castorice 125.ogg}} '''Castorice:''' I knew you would find it. The Courtyard of Storge should be just ahead of us.
 {{Dialogue End}}
 
 ===Investigate the White Dryad{{subst:void|<!--104020417-->}}===
 {{Dialogue Start}}
-
-:{{DIcon|Talk}} ???
-:{{A|VO chapter4 13 mem 127.ogg}} '''Mem:''' White Dryad... What a cute name.
-:{{A|VO chapter4 13 castorice 142.ogg}} '''Castorice:''' ...
-:{{A|VO chapter4 13 castorice 143.ogg}} '''Castorice:''' No, it isn't a White Dryad...
-:{{A|VO chapter4 13 castorice 144.ogg}} '''Castorice:''' It is the shadow of a dead White Dryad.
-:{{A|VO chapter4 13 mem 128.ogg}} '''Mem:''' Dead White Dryad...
-:{{A|VO chapter4 13 trianne 120.ogg}} '''Trianne:''' ...Shadow?
-:{{A|VO chapter4 13 castorice 145.ogg}} '''Castorice:''' Strictly speaking... these white dryads are still plants. They only gained sentience as a result of {{Rubi|Cerces|Reason Titan}}' blessing of equality, but their sentience is minimal when compared to that of humans. These flowers have already died... What you see here are just faint afterimages of their souls.
-:{{A|VO chapter4 13 castorice 146.ogg}} '''Castorice:''' However, this also means that {{Color|keyword|nobold=1|the golden thread}} has definitely connected with the Titan's presence. Without the golden thread's outlines, we would not have been able to see them at all.
-:{{A|VO chapter4 13 trianne 121.ogg}} '''Trianne:''' But... what happened to them? Why are there only tiny shadows of them left?
-:{{A|VO chapter4 13 castorice 147.ogg}} '''Castorice:''' Mem, can you read their memories?
-:{{A|VO chapter4 13 mem 129.ogg}} '''Mem:''' Let me try. Mem... memem...
-:{{DIcon|Arrow}} Got anything?
-::{{A|VO chapter4 13 mem 130.ogg}} '''Mem:''' Almost...
-::Memem... mememem...
-:{{DIcon|Arrow}} Memem... mememem...
-:{{A|VO chapter4 13 mem 131.ogg}} '''Mem:''' Hey! Don't say it together with me! You're distracting me!
-:{{A|VO chapter4 13 mem 132.ogg}} '''Mem:''' ...
 :{{tx}}
-
 {{Dialogue End}}
 
 ===Leave the Courtyard of Storge and keep moving forward{{subst:void|<!--104020418-->}}===
 {{Dialogue Start}}
-;(Upon reaching the destination)
-
-;(Upon reaching the destination)
 :{{tx}}
-;(Enter battle)
-::{{tx|Enemy list missing}}
-:<!--1.5-second delay-->
-:{{A|VO chapter4 13 trianne 122.ogg}} '''Trianne:''' Oh... Trianne will be on high alert!
-
-;(Unused &mdash; EnterDistrict_G{GroupID})
-:{{A|VO chapter4 13 castorice 150.ogg}} '''Castorice:''' The smell of Death... is becoming more and more intense.
-::{{A|VO chapter4 13 castorice 151.ogg}} '''Castorice:''' There... On the steps.
 {{Dialogue End}}
 
 ===Report the situation to Aglaea{{subst:void|<!--104020456-->}}===
 {{Dialogue Start}}
-
-;(Unused &mdash; EnterDistrict_G{GroupID})
-----
-::{{tx}}
-:<pre>{
-	"$type": "RPG.GameCore.SetLoadingStratageType",
-	"StratageType": "Plain"
-}</pre>
-
-;(Unused &mdash; EnterDistrict_G{GroupID})
-----
-::{{tx}}
-:<pre>{
-	"$type": "RPG.GameCore.SetLoadingStratageType",
-	"StratageType": "Plain"
-}</pre>
+:{{tx}}
 {{Dialogue End}}
 
 ===Keep going and investigate the cause of the calamity{{subst:void|<!--104020458-->}}===
 {{Mission Description|type=trailblaze|location="Murmuring Woods" Grove of Epiphany|update|Black tide creations roaming throughout the Grove... this doesn't bode well. In this calamity, the Grove's fate looks grim. After reporting to Aglaea, (Trailblazer)'s group continues deeper into the Grove to investigate.}}
 {{Dialogue Start}}
-
-;(Unused &mdash; EnterDistrict_G{GroupID})
-----
-::{{A|VO chapter4 13 trianne 128.ogg}} '''Trianne:''' Everything will be fine! The people at the Grove are really smart. They'll definitely be able to chase away the black tide!
-::{{A|VO chapter4 13 mem 140.ogg}} '''Mem:''' Aglaea said that Anaxa is still alive. If that's true, then there's still hope for everyone else too...
-::{{A|VO chapter4 13 mem 141.ogg}} '''Mem:''' Who is this Anaxa anyway? Why does everybody seem to have some kind of trust in him?
-::{{A|VO chapter4 13 castorice 163.ogg}} '''Castorice:''' How should I put it...
-::{{A|VO chapter4 13 castorice 164.ogg}} '''Castorice:''' Lady Aglaea doesn't "trust" Anaxa at all, I'm afraid.
-::{{DIcon|Arrow}} He sounds like a big shot.
-::{{DIcon|Arrow}} Ah... That makes complete sense...
-:::{{A|VO chapter4 13 mem 142.ogg}} '''Mem:''' Hm? Were you in a similar situation before, friend?
-:::{{A|VO chapter4 13 castorice 165.ogg}} '''Castorice:''' Believe me, she is far nicer to the two of you than she is to Anaxa.
-::{{A|VO chapter4 13 castorice 166.ogg}} '''Castorice:''' Despite being a Chrysos Heir, Anaxa resolutely believes that Titans and prophecies are a load of nonsense.
-::{{tx}}
-
-;(Unused &mdash; EnterDistrict_G{GroupID})
-:{{A|VO chapter4 13 mem 148.ogg}} '''Mem:''' I wonder if I'll find any memories.
+:{{tx}}
 {{Dialogue End}}
 
 ===Open the gate and continue forward{{subst:void|<!--104020461-->}}===
 {{Dialogue Start}}
-
-;(Talk to Investigate)
-:{{tx}}
-:{{A|VO chapter4 13 castorice 177.ogg}} '''Castorice:''' I can't open it... It was probably sealed in order to ward off the black tide.
-:{{DIcon|Arrow}} There's no keyhole in this door...
-::{{A|VO chapter4 13 castorice 178.ogg}} '''Castorice:''' Yes, most of the doors on Amphoreus are sealed using the power of {{Rubi|Janus|Passage Titan}}.
-::Flaming lance, chaaaarge!
-:{{DIcon|Arrow}} Flaming lance, chaaaarge!
-:{{A|VO chapter4 13 castorice 179.ogg}} '''Castorice:''' Save your energy. {{Rubi|Janus|Passage Titan}}'s power... is far stronger than we could ever imagine.
-:{{A|VO chapter4 13 mem 158.ogg}} '''Mem:''' Since this door is a creation of the Three Titans of Fate, maybe the eyes of {{Rubi|Oronyx|Time Titan}} will help me find a way to open it...
 :{{tx}}
 {{Dialogue End}}
 
 ===Keep moving forward and head to the Luminary Throne{{subst:void|<!--104020419-->}}===
 {{Dialogue Start}}
-;(Upon reaching the destination)
-
-;(Upon reaching the destination)
-:{{A|VO chapter4 13 mem 171.ogg}} '''Mem:''' Huh...?
-:{{A|VO chapter4 13 mem 172.ogg}} '''Mem:''' There's no one here... Did I just imagine that singing?
-:{{A|VO chapter4 13 castorice 193.ogg}} '''Castorice:''' No, you didn't imagine it. I heard it as well.
-:{{A|VO chapter4 13 castorice 194.ogg}} '''Castorice:''' I'm afraid that someone's probably nearby. As we are unable to ascertain whether they are friend or foe... we better remain cautious.
-:{{A|VO chapter4 13 cerces 102.ogg}} '''???:''' "Giants raised their glasses in a toast beheld by the twelve constellations..."
-:{{A|VO chapter4 13 mem 173.ogg}} '''Mem:''' It's that voice again! This time, it's coming from...
-:{{A|VO chapter4 13 mem 174.ogg}} '''Mem:''' ...I have no clue where it's coming from. There's too much echo in this library!
-:{{DIcon|Arrow}} That's why you're supposed to keep quiet in a library.
-::{{A|VO chapter4 13 mem 175.ogg}} '''Mem:''' I know! Also, I wasn't even the one singing...
-::Don't be afraid, I have experience in ghost hunting!
-:{{DIcon|Arrow}} Don't be afraid, I have experience in ghost hunting!
-:{{A|VO chapter4 13 mem 176.ogg}} '''Mem:''' Why do you even have experience in that...?
-:{{A|VO chapter4 13 castorice 195.ogg}} '''Castorice:''' ...Found it.
-:{{A|VO chapter4 13 castorice 196.ogg}} '''Castorice:''' The voice is coming from... over there.
-:{{DIcon|Arrow}} The heart?
-::{{A|VO chapter4 13 mem 177.ogg}} '''Mem:''' How can a heart possibly speak &mdash; and it's not even lit up! I think that something supernatural must be at play here...
-::The air?
-::{{A|VO chapter4 13 mem 178.ogg}} '''Mem:''' How can the air possibly speak! I think that something supernatural must be at play here...
-::White Dryads?
-:{{DIcon|Arrow}} The air?
-::{{A|VO chapter4 13 mem 178.ogg}} '''Mem:''' How can the air possibly speak! I think that something supernatural must be at play here...
-::White Dryads?
-:{{DIcon|Arrow}} White Dryads?
-:{{A|VO chapter4 13 mem 179.ogg}} '''Mem:''' White Dryads... Shadows of dead white dryads just like before?
-:{{A|VO chapter4 13 castorice 197.ogg}} '''Castorice:''' No, it seems to be coming from somewhere even further that way...
 :{{tx}}
-:<!--4-second delay-->
-:{{A|VO chapter4 13 castorice 175.ogg}} '''Castorice:''' So many monsters...
-:{{A|VO chapter4 13 mem 149.ogg}} '''Mem:''' Maybe I'll find some useful memories here... Let me try.
 {{Dialogue End}}
 
 ===(Optional) Try to sense the black tide monster's memory{{subst:void|<!--104020462-->}}===
 {{Dialogue Start}}
-
-;(Talk to Investigate)
-----
-:The black-colored monster has fallen like a toppled statue. Within its body lie golden ashes, perhaps the same substance as the golden blood that is commonly seen in Amphoreus.
-:{{A|VO chapter4 13 mem 150.ogg}} '''Mem:''' Mem... Memem...
-:{{A|VO chapter4 13 mem 151.ogg}} '''Mem:''' It's no good... I didn't see anything.
-
-;(Talk to Investigate)
-----
-:The monster's body is twisted like brambles, not allowing any living being to approach.
-:{{A|VO chapter4 13 mem 152.ogg}} '''Mem:''' Let me see...
-:{{A|VO chapter4 13 mem 153.ogg}} '''Mem:''' Ow, that hurt! And I didn't even detect any memories...
-
-;(Talk to Investigate)
-----
-:A despicable, twisted life form &mdash; it was once a living soul that could mourn pain, but now it can only turn its head at others, until its soul drifts silently out of its shell.
-:{{A|VO chapter4 13 mem 154.ogg}} '''Mem:''' Maybe this monster will show us some useful memories...
-:{{A|VO chapter4 13 mem 155.ogg}} '''Mem:''' ...
-:{{A|VO chapter4 13 mem 156.ogg}} '''Mem:''' I shouldn't have gotten my hopes up.
-:{{A|VO chapter4 13 mem 169.ogg}} '''Mem:''' Hey, the door can finally be opened! It seems like that message also served as a lock.
-:{{A|VO chapter4 13 castorice 192.ogg}} '''Castorice:''' Alchemy is truly... incredible.
-
-;(Unused &mdash; EnterDistrict_G{GroupID})
-:{{A|VO chapter4 13 cerces 101.ogg}} '''???:''' "Happiness abounded in this lush land by gods chosen..."
-::{{A|VO chapter4 13 mem 170.ogg}} '''Mem:''' Wh&mdash;What's that sound?
+:{{tx}}
 {{Dialogue End}}
 
 ===Find the source of the sound{{subst:void|<!--104020422-->}}===
 {{Mission Description|type=trailblaze|location="Murmuring Woods" Grove of Epiphany|update|The Chrysos Heir Anaxa's whereabouts remain uncertain, but he left alchemical clues. (Trailblazer)'s group follows these leads to verify the Coreflame's condition.}}
 {{Dialogue Start}}
-
-:{{DIcon|undefined}} Investigate
-:A statue resembling an old man draped in robes, seated in deep meditation...
-:{{A|VO chapter4 13 cerces 104.ogg}} '''???:''' ...
-:...resembling an old man, draped in robes, seated in deep meditation, and capable of singing.
-:{{DIcon|Arrow}} (Stare at the statue)
-:{{DIcon|Arrow}} (Stroke the statue)
-:{{DIcon|Arrow}} (Knock on the statue)
-:{{A|VO chapter4 13 kalvpusuo 101.ogg}} '''???:''' Ha... Regardless of what you do, a stone won't be able to speak.
-:{{A|VO chapter4 13 mem 181.ogg}} '''Mem:''' {{Size|36|Whoa... Who's there!?}}
-:{{A|VO chapter4 13 kalvpusuo 102.ogg}} '''???:''' Hehe... Such a lively little bunny. You even smell a little familiar.
-:{{DIcon|Arrow}} What a good-looking ghost.
-::{{A|VO chapter4 13 kalvpusuo 103.ogg}} '''???:''' What a smooth-talking child... I'll accept your praise.
-::Ha! Demon, eat my bat!
-:{{DIcon|Arrow}} Ha! Demon, eat my bat!
-:{{A|VO chapter4 13 kalvpusuo 104.ogg}} '''???:''' What an impatient child... Don't you know that haste makes waste?
-:{{A|VO chapter4 13 castorice 199.ogg}} '''Castorice:''' ...Who are you? Keep your distance and identify yourself. Otherwise, you'll face the consequences.
-:{{A|VO chapter4 13 kalvpusuo 105.ogg}} '''???:''' The scent of {{Rubi|Thanatos|Death Titan}}... I recognize you. Aidonia's renowned Goddess of Death.
-:{{A|VO chapter4 13 castorice 200.ogg}} '''Castorice:''' Since you are aware, stop provoking the authority of Death. Answer my question.
-:{{A|VO chapter4 13 kalvpusuo 106.ogg}} '''???:''' Hehe, baring your fangs at me... How cute.
-:{{A|VO chapter4 13 kalvpusuo 107.ogg}} '''Calypso:''' Just call me {{Color|keyword|nobold=1|Calypso}}. I greet you on behalf of the Seven Sages and the Lotophagists.
-:{{DIcon|Arrow}} Hi, professor!
-:{{DIcon|Arrow}} I understand what you're saying, but... are you a specter?
-::{{A|VO chapter4 13 kalvpusuo 108.ogg}} '''Calypso:''' Of course not. Just ask the fair lady beside you. She'll definitely know the reason why.
-:{{A|VO chapter4 13 castorice 201 m.ogg}} {{A|VO chapter4 13 castorice 201 f.ogg}} '''Castorice:''' Be careful, (Trailblazer)... Even if the head of the Lotophagists has never shown their true identity before, we shouldn't trust this person so easily.
 :{{tx}}
-:{{A|VO chapter4 13 mem 157.ogg}} '''Mem:''' Ugh, I really tried my hardest... Why couldn't I see even a sliver of a memory?
-:{{A|VO chapter4 13 castorice 176.ogg}} '''Castorice:''' It could be because when a life is devoured by the black tide... it loses its soul.
-:{{A|VO chapter4 13 castorice 198.ogg}} '''Castorice:''' Let's go check it out.
-:{{A|VO chapter4 13 mem 180.ogg}} '''Mem:''' S&mdash;Slow down. We don't want to alert them.
-
-;(Obtain {{Item|Praise of High Morals|20|x=1}})
-
-:{{DIcon|Loupe}} Investigate
-:A giant waterwheel. It looks like it can turn, and it can actually turn. If the waterwheel could turn right now, it would be a sure win. It's a pity that it can't be turned for the time being.
-:The answer is "water" &mdash; without it, the waterwheel cannot turn.
-:{{A|VO chapter4 13 kalvpusuo 121.ogg}} '''Calypso:''' Why did you suddenly freeze? Do you have another way to make the water wheel turn?
-:{{DIcon|Arrow}} Consider it done.
-::{{A|VO chapter4 13 castorice 211.ogg}} '''Castorice:''' Can you... really do it?
-::The pure white girl gazed at you with a subtle expression, while the pink creature's large eyes held a hint of curiosity. And that ghostly woman appeared unwilling to open her eyes.
-::Once the bow is drawn, there's no turning back. You decide to proceed...
-::{{DIcon|Arrow}} Come up with a relatively normal idea.
-:::'''Normal'''? Gosh, what a pity.
-:::With both hands, you press against the heavy stone slab, resembling a scraper but actually the bottom of a sedan, and with a sudden push&mdash;
-:::The waterwheel didn't even move an inch...
-:::{{DIcon|Arrow}} I'll use all of my strength!
-::::You move one foot back, brace yourself, and lower one shoulder while supporting the slab with the other. Once steady, you repeat your technique, placing both palms beneath the slab. With a sudden surge of strength, you channel all your power into your shoulder and hands&mdash;
-:::{{DIcon|Arrow}} Forget it. That doesn't seem like it's going to work.
-::::{{A|VO chapter4 13 kalvpusuo 124.ogg}} '''Calypso:''' Indeed... You can only do so much by yourself.
-::{{DIcon|Arrow}} Come up with a trailblazing type of idea.
-:::Courageous! Then, how "Trailblazing"?
-:::{{DIcon|Arrow}} Akivili, lend me your strength!
-::::"Trailblaze," it's "Trailblaze!" You remember whenever in trouble, keeping "Trailblaze" in mind has always guided you through adversity. You once even toppled an almost nascent Aeon with it. A mere waterwheel is trivial by comparison.
-::::{{tx}}
-::::<!--1-second delay-->
-::::{{tx}}
-::::<!--1-second delay-->
-::::A giant waterwheel. It looks like it can turn, and it can actually turn. If the waterwheel could turn right now, it would be a sure win. It's a pity that it can't be turned for the time being.
-::::The answer is "water" &mdash; without it, the waterwheel cannot turn.
-::::{{A|VO chapter4 13 kalvpusuo 121.ogg}} '''Calypso:''' Why did you suddenly freeze? Do you have another way to make the water wheel turn?
-::::Consider it done.
-::::It's simple, I'll just have to turn it.
-::::I can't do it...
-::::{{A|VO chapter4 13 kalvpusuo 122.ogg}} '''Calypso:''' Indeed... You can only do so much by yourself.
-::::{{A|VO chapter4 13 castorice 211.ogg}} '''Castorice:''' Can you... really do it?
-::::The pure white girl gazed at you with a subtle expression, while the pink creature's large eyes held a hint of curiosity. And that ghostly woman appeared unwilling to open her eyes.
-::::Once the bow is drawn, there's no turning back. You decide to proceed...
-::::Come up with a relatively normal idea.
-::::'''Normal'''? Gosh, what a pity.
-::::With both hands, you press against the heavy stone slab, resembling a scraper but actually the bottom of a sedan, and with a sudden push&mdash;
-::::The waterwheel didn't even move an inch...
-::::I'll use all of my strength!
-::::You move one foot back, brace yourself, and lower one shoulder while supporting the slab with the other. Once steady, you repeat your technique, placing both palms beneath the slab. With a sudden surge of strength, you channel all your power into your shoulder and hands&mdash;
-::::{{A|VO chapter4 13 player 103 m.ogg}} {{A|VO chapter4 13 player 103 f.ogg}} '''(Trailblazer):''' {{Size|40|Haaa&mdash;Haaaaaah!}}
-::::Your heavy breathing is a testament to your determination, deeply moving, as even the forest leaves rustle in response.
-::::Has the waterwheel moved? &mdash; No, because it needs water to turn. What a pity.
-::::{{A|VO chapter4 13 kalvpusuo 123.ogg}} '''Calypso:''' Indeed... You can only do so much by yourself.
-::::Forget it. That doesn't seem like it's going to work.
-::::{{A|VO chapter4 13 kalvpusuo 124.ogg}} '''Calypso:''' Indeed... You can only do so much by yourself.
-::::Come up with a trailblazing type of idea.
-::::Courageous! Then, how "Trailblazing"?
-::::Akivili, lend me your strength!
-::::"Trailblaze," it's "Trailblaze!" You remember whenever in trouble, keeping "Trailblaze" in mind has always guided you through adversity. You once even toppled an almost nascent Aeon with it. A mere waterwheel is trivial by comparison.
-::::Indeed, it is "Trailblaze," and only "Trailblaze." You center your breath, nod slightly, and close your eyes, entering a state of deep meditation. Before you is not darkness, but a vast tapestry of countless galaxies unfurls like a scroll...
-::::Amidst the vast expanse of stars, a voice, a voice from the past pierces your mind: "Nameless, do as you intend!" &mdash; Who could it be? It is (seemingly) Akivili, the eternal beacon of the Express!
-::::"999,900 layers of Trailblaze power! Nameless, we unite!" You (seemingly) merged with the fallen Aeon as one, and then the Trailblaze power immediately surged! Rise! Leap! Such dominance and such ferocity...
-::::As such a "Trailblazing" Trailblazer, what in the world could possibly stand in your way? Son of a fudge, nothing can stop you, let alone an immobile waterwheel! You snap your eyes open and let out a fierce roar&mdash;
-::::{{A|VO chapter4 13 player 104 m.ogg}} {{A|VO chapter4 13 player 104 f.ogg}} '''(Trailblazer):''' {{Size|40|Haaa!}}
-::::You unleash the (presumably) surging force of Trailblaze within you. So, has the waterwheel begun to turn?
-::::&mdash; No, because it needs water to turn. What a pity.
-::::Ultimate Extreme Galactic Phantom Heavy Caliber Home Run!
-::::Exactly, this is how it should be done &mdash; no, how it can only be done! To destroy all obstacles... It's your art where "Destruction" and "Traiblaze" intertwine. This is the reason you are the Galactic Baseballer and the protagonist of ''Legend of the Trailblazer''!
-::::At this critical moment when the waterwheel refused to turn, (Trailblazer) shouted:
-::::{{A|VO chapter4 13 player 105 m.ogg}} {{A|VO chapter4 13 player 105 f.ogg}} '''(Trailblazer):''' {{Size|36|Ultimate Extreme Galactic Phantom Heavy Caliber Home Run!}}
-::::Like a celestial thunderbolt piercing the earth, the "Destruction" radiance threatened to tear apart the Dawn Device, shattering the firmament. In an instant, within the many delves of Amphoreus, everyone felt the world overturn and the mountains and rivers tremble. It was as if the imperial bow had returned to shoot the stars, splintering sacred trees and raising clouds of dust...
-::::Oops, wrong channel, this is Amphoreus, not the ''Legend of the Trailblazer''. So, did the waterwheel move?
-::::&mdash; No, because it needs water to turn. What a pity.
-::::Admit that you were only joking.
-::::Once spoken, words are irrevocable. As the Kremnoans would often say, "the word 'joke' does not exist in the Trailblazer's dictionary."
-::::To avoid a guilty conscience, think it over carefully. Don't let your partners down!
-:::{{DIcon|Arrow}} Ultimate Extreme Galactic Phantom Heavy Caliber Home Run!
-::::Exactly, this is how it should be done &mdash; no, how it can only be done! To destroy all obstacles... It's your art where "Destruction" and "Traiblaze" intertwine. This is the reason you are the Galactic Baseballer and the protagonist of ''Legend of the Trailblazer''!
-::::At this critical moment when the waterwheel refused to turn, (Trailblazer) shouted:
-::::{{A|VO chapter4 13 player 105 m.ogg}} {{A|VO chapter4 13 player 105 f.ogg}} '''(Trailblazer):''' {{Size|36|Ultimate Extreme Galactic Phantom Heavy Caliber Home Run!}}
-::::Like a celestial thunderbolt piercing the earth, the "Destruction" radiance threatened to tear apart the Dawn Device, shattering the firmament. In an instant, within the many delves of Amphoreus, everyone felt the world overturn and the mountains and rivers tremble. It was as if the imperial bow had returned to shoot the stars, splintering sacred trees and raising clouds of dust...
-::::Oops, wrong channel, this is Amphoreus, not the ''Legend of the Trailblazer''. So, did the waterwheel move?
-::::&mdash; No, because it needs water to turn. What a pity.
-::::Admit that you were only joking.
-::::Once spoken, words are irrevocable. As the Kremnoans would often say, "the word 'joke' does not exist in the Trailblazer's dictionary."
-::::To avoid a guilty conscience, think it over carefully. Don't let your partners down!
-:::{{DIcon|Arrow}} Admit that you were only joking.
-::::Once spoken, words are irrevocable. As the Kremnoans would often say, "the word 'joke' does not exist in the Trailblazer's dictionary."
-::::{{tx}}
-::::<!--1-second delay-->
-:::{{A|VO chapter4 13 castorice 212.ogg}} '''Castorice:''' ...
-:::{{A|VO chapter4 13 castorice 213.ogg}} '''Castorice:''' ...
-:::{{DIcon|Arrow}} Please, stop laughing...
-::::{{A|VO chapter4 13 castorice 214.ogg}} '''Castorice:''' ...I'm not.
-:::{{DIcon|Arrow}} Although it failed... I'm sure I can put it to good use next time.
-::::{{A|VO chapter4 13 castorice 215.ogg}} '''Castorice:''' Truly a rare sight to behold.
-:{{DIcon|Arrow}} It's simple, I'll just have to turn it.
-::{{A|VO chapter4 13 castorice 211.ogg}} '''Castorice:''' Can you... really do it?
-::The pure white girl gazed at you with a subtle expression, while the pink creature's large eyes held a hint of curiosity. And that ghostly woman appeared unwilling to open her eyes.
-::Once the bow is drawn, there's no turning back. You decide to proceed...
-::{{DIcon|Arrow}} Come up with a relatively normal idea.
-:::'''Normal'''? Gosh, what a pity.
-:::With both hands, you press against the heavy stone slab, resembling a scraper but actually the bottom of a sedan, and with a sudden push&mdash;
-:::The waterwheel didn't even move an inch...
-:::{{DIcon|Arrow}} I'll use all of my strength!
-::::You move one foot back, brace yourself, and lower one shoulder while supporting the slab with the other. Once steady, you repeat your technique, placing both palms beneath the slab. With a sudden surge of strength, you channel all your power into your shoulder and hands&mdash;
-:::{{DIcon|Arrow}} Forget it. That doesn't seem like it's going to work.
-::::{{A|VO chapter4 13 kalvpusuo 124.ogg}} '''Calypso:''' Indeed... You can only do so much by yourself.
-::{{DIcon|Arrow}} Come up with a trailblazing type of idea.
-:::Courageous! Then, how "Trailblazing"?
-:::{{DIcon|Arrow}} Akivili, lend me your strength!
-::::"Trailblaze," it's "Trailblaze!" You remember whenever in trouble, keeping "Trailblaze" in mind has always guided you through adversity. You once even toppled an almost nascent Aeon with it. A mere waterwheel is trivial by comparison.
-::::{{tx}}
-::::<!--1-second delay-->
-::::{{tx}}
-::::<!--1-second delay-->
-::::A giant waterwheel. It looks like it can turn, and it can actually turn. If the waterwheel could turn right now, it would be a sure win. It's a pity that it can't be turned for the time being.
-::::The answer is "water" &mdash; without it, the waterwheel cannot turn.
-::::{{A|VO chapter4 13 kalvpusuo 121.ogg}} '''Calypso:''' Why did you suddenly freeze? Do you have another way to make the water wheel turn?
-::::Consider it done.
-::::It's simple, I'll just have to turn it.
-::::I can't do it...
-::::{{A|VO chapter4 13 kalvpusuo 122.ogg}} '''Calypso:''' Indeed... You can only do so much by yourself.
-::::{{A|VO chapter4 13 castorice 211.ogg}} '''Castorice:''' Can you... really do it?
-::::The pure white girl gazed at you with a subtle expression, while the pink creature's large eyes held a hint of curiosity. And that ghostly woman appeared unwilling to open her eyes.
-::::Once the bow is drawn, there's no turning back. You decide to proceed...
-::::Come up with a relatively normal idea.
-::::'''Normal'''? Gosh, what a pity.
-::::With both hands, you press against the heavy stone slab, resembling a scraper but actually the bottom of a sedan, and with a sudden push&mdash;
-::::The waterwheel didn't even move an inch...
-::::I'll use all of my strength!
-::::You move one foot back, brace yourself, and lower one shoulder while supporting the slab with the other. Once steady, you repeat your technique, placing both palms beneath the slab. With a sudden surge of strength, you channel all your power into your shoulder and hands&mdash;
-::::{{A|VO chapter4 13 player 103 m.ogg}} {{A|VO chapter4 13 player 103 f.ogg}} '''(Trailblazer):''' {{Size|40|Haaa&mdash;Haaaaaah!}}
-::::Your heavy breathing is a testament to your determination, deeply moving, as even the forest leaves rustle in response.
-::::Has the waterwheel moved? &mdash; No, because it needs water to turn. What a pity.
-::::{{A|VO chapter4 13 kalvpusuo 123.ogg}} '''Calypso:''' Indeed... You can only do so much by yourself.
-::::Forget it. That doesn't seem like it's going to work.
-::::{{A|VO chapter4 13 kalvpusuo 124.ogg}} '''Calypso:''' Indeed... You can only do so much by yourself.
-::::Come up with a trailblazing type of idea.
-::::Courageous! Then, how "Trailblazing"?
-::::Akivili, lend me your strength!
-::::"Trailblaze," it's "Trailblaze!" You remember whenever in trouble, keeping "Trailblaze" in mind has always guided you through adversity. You once even toppled an almost nascent Aeon with it. A mere waterwheel is trivial by comparison.
-::::Indeed, it is "Trailblaze," and only "Trailblaze." You center your breath, nod slightly, and close your eyes, entering a state of deep meditation. Before you is not darkness, but a vast tapestry of countless galaxies unfurls like a scroll...
-::::Amidst the vast expanse of stars, a voice, a voice from the past pierces your mind: "Nameless, do as you intend!" &mdash; Who could it be? It is (seemingly) Akivili, the eternal beacon of the Express!
-::::"999,900 layers of Trailblaze power! Nameless, we unite!" You (seemingly) merged with the fallen Aeon as one, and then the Trailblaze power immediately surged! Rise! Leap! Such dominance and such ferocity...
-::::As such a "Trailblazing" Trailblazer, what in the world could possibly stand in your way? Son of a fudge, nothing can stop you, let alone an immobile waterwheel! You snap your eyes open and let out a fierce roar&mdash;
-::::{{A|VO chapter4 13 player 104 m.ogg}} {{A|VO chapter4 13 player 104 f.ogg}} '''(Trailblazer):''' {{Size|40|Haaa!}}
-::::You unleash the (presumably) surging force of Trailblaze within you. So, has the waterwheel begun to turn?
-::::&mdash; No, because it needs water to turn. What a pity.
-::::Ultimate Extreme Galactic Phantom Heavy Caliber Home Run!
-::::Exactly, this is how it should be done &mdash; no, how it can only be done! To destroy all obstacles... It's your art where "Destruction" and "Traiblaze" intertwine. This is the reason you are the Galactic Baseballer and the protagonist of ''Legend of the Trailblazer''!
-::::At this critical moment when the waterwheel refused to turn, (Trailblazer) shouted:
-::::{{A|VO chapter4 13 player 105 m.ogg}} {{A|VO chapter4 13 player 105 f.ogg}} '''(Trailblazer):''' {{Size|36|Ultimate Extreme Galactic Phantom Heavy Caliber Home Run!}}
-::::Like a celestial thunderbolt piercing the earth, the "Destruction" radiance threatened to tear apart the Dawn Device, shattering the firmament. In an instant, within the many delves of Amphoreus, everyone felt the world overturn and the mountains and rivers tremble. It was as if the imperial bow had returned to shoot the stars, splintering sacred trees and raising clouds of dust...
-::::Oops, wrong channel, this is Amphoreus, not the ''Legend of the Trailblazer''. So, did the waterwheel move?
-::::&mdash; No, because it needs water to turn. What a pity.
-::::Admit that you were only joking.
-::::Once spoken, words are irrevocable. As the Kremnoans would often say, "the word 'joke' does not exist in the Trailblazer's dictionary."
-::::To avoid a guilty conscience, think it over carefully. Don't let your partners down!
-:::{{DIcon|Arrow}} Ultimate Extreme Galactic Phantom Heavy Caliber Home Run!
-::::Exactly, this is how it should be done &mdash; no, how it can only be done! To destroy all obstacles... It's your art where "Destruction" and "Traiblaze" intertwine. This is the reason you are the Galactic Baseballer and the protagonist of ''Legend of the Trailblazer''!
-::::At this critical moment when the waterwheel refused to turn, (Trailblazer) shouted:
-::::{{A|VO chapter4 13 player 105 m.ogg}} {{A|VO chapter4 13 player 105 f.ogg}} '''(Trailblazer):''' {{Size|36|Ultimate Extreme Galactic Phantom Heavy Caliber Home Run!}}
-::::Like a celestial thunderbolt piercing the earth, the "Destruction" radiance threatened to tear apart the Dawn Device, shattering the firmament. In an instant, within the many delves of Amphoreus, everyone felt the world overturn and the mountains and rivers tremble. It was as if the imperial bow had returned to shoot the stars, splintering sacred trees and raising clouds of dust...
-::::Oops, wrong channel, this is Amphoreus, not the ''Legend of the Trailblazer''. So, did the waterwheel move?
-::::&mdash; No, because it needs water to turn. What a pity.
-::::Admit that you were only joking.
-::::Once spoken, words are irrevocable. As the Kremnoans would often say, "the word 'joke' does not exist in the Trailblazer's dictionary."
-::::To avoid a guilty conscience, think it over carefully. Don't let your partners down!
-:::{{DIcon|Arrow}} Admit that you were only joking.
-::::Once spoken, words are irrevocable. As the Kremnoans would often say, "the word 'joke' does not exist in the Trailblazer's dictionary."
-::::{{tx}}
-::::<!--1-second delay-->
-:::{{A|VO chapter4 13 castorice 212.ogg}} '''Castorice:''' ...
-:::{{A|VO chapter4 13 castorice 213.ogg}} '''Castorice:''' ...
-:::{{DIcon|Arrow}} Please, stop laughing...
-::::{{A|VO chapter4 13 castorice 214.ogg}} '''Castorice:''' ...I'm not.
-:::{{DIcon|Arrow}} Although it failed... I'm sure I can put it to good use next time.
-::::{{A|VO chapter4 13 castorice 215.ogg}} '''Castorice:''' Truly a rare sight to behold.
-:{{DIcon|Arrow}} I can't do it...
-::{{A|VO chapter4 13 kalvpusuo 122.ogg}} '''Calypso:''' Indeed... You can only do so much by yourself.
-:{{tx}}
-
-:{{DIcon|Loupe}} Investigate
-:{{tx}}
-:{{DIcon|Arrow}} Then let me ignite my creativity... Ummmm...
-::You hold your breath and focus. Drip drip! A drop of water falls into the pool.
-::{{tx}}
-:<pre>{
-	"$type": "RPG.GameCore.SetPerformanceResult"
-}</pre>
-::{{A|VO chapter4 13 kalvpusuo 126.ogg}} '''Calypso:''' Heh... Just come with me.
-::{{tx}}
-:{{DIcon|Arrow}} Actually, I have some Solid Water.
-:<pre>{
-	"$type": "RPG.GameCore.AddFinishMissionData_ConsumeItem",
-	"SubmissionID": 104020410,
-	"IsShowConsumeFinishTips": true,
-	"SimpleTalk": {},
-	"OnSubmitConfirm": [
-		{
-			"$type": "RPG.GameCore.TriggerCustomString",
-			"CustomString": {
-				"Value": "Water01_104020429"
-			}
-		}
-	],
-	"OnSubmitCancel": [
-		{
-			"$type": "RPG.GameCore.TriggerCustomString",
-			"CustomString": {
-				"Value": "Wait_Option_104020429_666"
-			}
-		}
-	]
-}</pre>
-<pre>{
-	"$type": "RPG.GameCore.PerformanceEndSeq",
-	"Cases": [
-		{
-			"OnSuccess": [
-				{
-					"$type": "RPG.GameCore.ClientFinishMission",
-					"SubmissionID": 104020421
-				}
-			]
-		},
-		{
-			"Case": 1,
-			"OnSuccess": [
-				{
-					"$type": "RPG.GameCore.ClientFinishMission",
-					"SubmissionID": 104020410
-				}
-			]
-		}
-	]
-}</pre>
-;(Unused &mdash; Water01_104020429)
-:{{tx}}
-::<!--1-second delay-->
-::{{tx}}
-:<pre>{
-	"$type": "RPG.GameCore.SetPerformanceResult",
-	"Value": 1
-}</pre>
-::{{A|VO chapter4 13 kalvpusuo 126.ogg}} '''Calypso:''' Heh... Just come with me.
-::{{tx}}
 {{Dialogue End}}
 
 ===Follow Calypso's guidance and find a way to keep going forward{{subst:void|<!--104020423-->}}===
 {{Mission Description|type=trailblaze|location="Murmuring Woods" Grove of Epiphany|update|During their advance, a mysterious woman identifying herself as Calypso appears suddenly, stating she saved Anaxa and offering guidance to (Trailblazer)'s group to the Luminary Throne.}}
 {{Dialogue Start}}
-
-;(Upon reaching the destination)
-
-;(Upon reaching the destination)
-:{{A|VO chapter4 13 kalvpusuo 129.ogg}} '''Calypso:''' My intentions should be obvious...
-:{{A|VO chapter4 13 kalvpusuo 130.ogg}} '''Calypso:''' See that shallow pond over there? Water lilies grow there. Initially, {{Rubi|Cerces|Reason Titan}} watered them with their tears while Mnestia nurtured them with affectionate love. They are a token of the eternal companionship between the two gods.
-:{{A|VO chapter4 13 kalvpusuo 131.ogg}} '''Calypso:''' All the two of you have to do is to cross the deep well and retrieve the {{Color|keyword|nobold=1|Golden Bough of Vows}} for me.
-:{{A|VO chapter4 13 mem 185.ogg}} '''Mem:''' ...Cal, you're making things sound too complicated. All you want us to do is to retrieve the flower, right?
-:{{DIcon|Arrow}} Is this how you're going to test a Nameless?
-::{{A|VO chapter4 13 kalvpusuo 132.ogg}} '''Calypso:''' Indeed. Could it be that you actually do not know how to proceed?
-::Could the deep well be a trap...?
-:{{DIcon|Arrow}} Could the deep well be a trap...?
-:{{A|VO chapter4 13 kalvpusuo 133.ogg}} '''Calypso:''' Heh, you're making it sound so ominous.
-:{{A|VO chapter4 13 castorice 222.ogg}} '''Castorice:''' We can retrieve it, but I advise you not to waste your time on any schemes.
 :{{tx}}
-
-:{{DIcon|Talk}} "Golden Bough of Vows"
-
-
-;(Unused &mdash; EnterDistrict_G{GroupID})
-:{{A|VO chapter4 13 castorice 220.ogg}} '''Castorice:''' Is that the... "Chamber of Purifying Tears"?
-::{{A|VO chapter4 13 kalvpusuo 128.ogg}} '''Calypso:''' You have a good memory.
-
-;(Unused &mdash; EnterDistrict_G{GroupID})
-:{{A|VO chapter4 13 castorice 221.ogg}} '''Castorice:''' ...Why exactly did you bring us here?
 {{Dialogue End}}
 
 ===Pass the deep wall and obtain Golden Bough of Vows{{subst:void|<!--104020424-->}}===
 {{Dialogue Start}}
-
-:{{DIcon|Talk}} "Golden Bough of Vows"
-:{{A|VO chapter4 13 castorice 228.ogg}} '''Castorice:''' So, this is the Golden Bough of Vows...
-:{{A|VO chapter4 13 castorice 229.ogg}} '''Castorice:''' ...I hope that the Titan will not take their anger out on us.
-:{{DIcon|Arrow}} So, what we're doing is simply provoking the Titans...
-:{{DIcon|Arrow}} Don't worry. There are several Aeons that have my back.
-::{{A|VO chapter4 13 castorice 230.ogg}} '''Castorice:''' ...If only THEY could interfere in the affairs of the Titans.
-:{{A|VO chapter4 13 kalvpusuo 142.ogg}} '''Calypso:''' Heh, so lustrous and beautiful... It's even more magnificent than before.
 :{{tx}}
-
-;(Unused &mdash; EnterDistrict_G{GroupID})
-:{{A|VO chapter4 13 castorice 227.ogg}} '''Castorice:''' Let's hope that this is not a trap set by her...
-
-;(Unused &mdash; A201_MainMission_Chat03_G8)
-<pre>{
-	"$type": "RPG.GameCore.EnterFlipperLightDeviceControl",
-	"TargetDevice": {
-		"$type": "RPG.GameCore.TargetFetchAdvPropEx",
-		"FetchType": "SinglePropByPropID",
-		"SinglePropID": {
-			"GroupID": {
-				"FixedValue": {
-					"Value": 8
-				}
-			},
-			"ID": {
-				"FixedValue": {
-					"Value": 300002
-				}
-			}
-		},
-		"MultiPropID": []
-	}
-}</pre>
-:<pre>{
-	"$type": "RPG.GameCore.ClosePage",
-	"PageNames": [
-		"MiniGameEraFlipperChooseTargetPage"
-	],
-	"PageRootNames": [],
-	"IsSilentExit": false
-}</pre>
-:<pre>{
-	"$type": "RPG.GameCore.ShowMazeUI",
-	"IsShow": true
-}</pre>
-::{{A|VO chapter4 13 kalvpusuo 141.ogg}} '''Calypso:''' Hehe... How smart.
-
-;(Unused &mdash; A201_MainMission_Chat03_G9)
-<pre>{
-	"$type": "RPG.GameCore.EnterFlipperLightDeviceControl",
-	"TargetDevice": {
-		"$type": "RPG.GameCore.TargetFetchAdvPropEx",
-		"FetchType": "SinglePropByPropID",
-		"SinglePropID": {
-			"GroupID": {
-				"FixedValue": {
-					"Value": 9
-				}
-			},
-			"ID": {
-				"FixedValue": {
-					"Value": 300002
-				}
-			}
-		},
-		"MultiPropID": []
-	}
-}</pre>
-:<pre>{
-	"$type": "RPG.GameCore.ClosePage",
-	"PageNames": [
-		"MiniGameEraFlipperChooseTargetPage"
-	],
-	"PageRootNames": [],
-	"IsSilentExit": false
-}</pre>
-:<pre>{
-	"$type": "RPG.GameCore.ShowMazeUI",
-	"IsShow": true
-}</pre>
-::{{A|VO chapter4 13 kalvpusuo 141.ogg}} '''Calypso:''' Hehe... How smart.
 {{Dialogue End}}
 
 ===Offer the Golden Bough of Vows to the heart{{subst:void|<!--104020425-->}}===
 {{Dialogue Start}}
-
-;(Talk to Offer "Golden Bough of Vows")
 :{{tx}}
-:{{A|VO chapter4 13 kalvpusuo 147.ogg}} '''Calypso:''' We're here. Could you kindly pluck a petal for me and place it into the pool?
-:{{DIcon|Arrow}} (Remove a petal from the Golden Bough of Vows.)
-:{{A|VO chapter4 13 kalvpusuo 148.ogg}} '''Calypso:''' Now, can our little goddess perform that again?
-:{{tx}}
-:<!--1-second delay-->
-:{{A|VO chapter4 13 kalvpusuo 147.ogg}} '''Calypso:''' We're here. Could you kindly pluck a petal for me and place it into the pool?
-:(Remove a petal from the Golden Bough of Vows.)
-:{{A|VO chapter4 13 kalvpusuo 148.ogg}} '''Calypso:''' Now, can our little goddess perform that again?
-:{{A|VO chapter4 13 castorice 233.ogg}} '''Castorice:''' Huh?
-:{{A|VO chapter4 13 kalvpusuo 149.ogg}} '''Calypso:''' That being the oath of {{Rubi|Mnestia|Romance Titan}}'s priests.
-:{{A|VO chapter4 13 castorice 234.ogg}} '''Castorice:''' Right, got it...
-:{{A|VO chapter4 13 castorice 235.ogg}} '''Castorice:''' "O {{Rubi|Mnestia|Romance Titan}}! With the Weft as my vow, I beseech you: Entwine my body with your golden thread and affection!"
-:{{A|VO chapter4 13 mem 194.ogg}} '''Mem:''' Oh... It really lit up!
-:{{DIcon|Arrow}} What is the principle behind this?
-:{{DIcon|Arrow}} How dazzling...
-:{{A|VO chapter4 13 kalvpusuo 150.ogg}} '''Calypso:''' Heh, it's just... an ancient promise between the Titan and humans.
-:{{A|VO chapter4 13 kalvpusuo 151.ogg}} '''Calypso:''' So, what do you think? It really is the Golden Bough of Vows, and I did not set any traps for you, right?
-:{{A|VO chapter4 13 castorice 236.ogg}} '''Castorice:''' That is... indeed true.
-:{{A|VO chapter4 13 kalvpusuo 152.ogg}} '''Calypso:''' Haha, you look like a sad lost puppy. Even if this is indeed a scheme to get you to lower your guard, you don't have any other choice but to play along, do you?
-:{{A|VO chapter4 13 kalvpusuo 153.ogg}} '''Calypso:''' Therefore, why don't we just put everything aside and work together? We can always determine who's right and who's wrong once we overcome this.
-:{{A|VO chapter4 13 castorice 237.ogg}} '''Castorice:''' Yes... I agree.
-:{{A|VO chapter4 13 kalvpusuo 154.ogg}} '''Calypso:''' Great. Then, let's ride the water wheel...
-:{{A|VO chapter4 13 castorice 238.ogg}} '''Castorice:''' However, giving us half-truths is not the right attitude for cooperation.
-:{{A|VO chapter4 13 castorice 239.ogg}} '''Castorice:''' Furthermore, according to the principle of "equivalent exchange," since we have passed your so-called trial, isn't it time for you to make your intentions clear to us?
-:{{A|VO chapter4 13 kalvpusuo 155.ogg}} '''Calypso:''' Ahh, I really can't bear to look at your sad expressions. Although you only cleared a simple trial... I'm willing to make an exception and treat you with sincerity.
-:{{A|VO chapter4 13 kalvpusuo 156.ogg}} '''Calypso:''' I'll allow each of you to ask a question... Ah, but not the little bunny. So, ask away.
-:{{A|VO chapter4 13 mem 195.ogg}} '''Mem:''' What's with this unfair treatment? Is it because I'm too smart and you're afraid that the question I ask will turn Amphoreus upside down?
-:{{A|VO chapter4 13 castorice 240 m.ogg}} {{A|VO chapter4 13 castorice 240 f.ogg}} '''Castorice:''' Well... In that case, {{MC|m=Mr.|f=Miss}} (Trailblazer), please go ahead.
-:{{DIcon|Arrow}} What is your true identity?
-::{{A|VO chapter4 13 kalvpusuo 157.ogg}} '''Calypso:''' Hm...
-::{{A|VO chapter4 13 kalvpusuo 158.ogg}} '''Calypso:''' {{Color|keyword|nobold=1|As I've previously mentioned, I'm one of the Seven Sages of the Grove of Epiphany. If you think that this answer is insufficient, then I'll add to it. I'm the leader of the Seven Sages.}}
-::Why don't you show your true appearance?
-::{{A|VO chapter4 13 kalvpusuo 159.ogg}} '''Calypso:''' Mmm... A good question.
-::{{A|VO chapter4 13 kalvpusuo 160.ogg}} '''Calypso:''' {{Color|keyword|nobold=1|It's an inability to do so rather than an unwillingness. For me to appear in my true form, I'll require your help.}}
-::What is your purpose in testing us?
-::{{A|VO chapter4 13 kalvpusuo 161.ogg}} '''Calypso:''' Mmm... A good question.
-::{{A|VO chapter4 13 kalvpusuo 162.ogg}} '''Calypso:''' {{Color|keyword|nobold=1|I want to ascertain your ability to help me reclaim my true form... and reclaim the Grove from the black tide.}}
-::Why do you say that our fates are intertwined?
-:{{DIcon|Arrow}} Why don't you show your true appearance?
-::{{A|VO chapter4 13 kalvpusuo 159.ogg}} '''Calypso:''' Mmm... A good question.
-::{{A|VO chapter4 13 kalvpusuo 160.ogg}} '''Calypso:''' {{Color|keyword|nobold=1|It's an inability to do so rather than an unwillingness. For me to appear in my true form, I'll require your help.}}
-::What is your purpose in testing us?
-::{{A|VO chapter4 13 kalvpusuo 161.ogg}} '''Calypso:''' Mmm... A good question.
-::{{A|VO chapter4 13 kalvpusuo 162.ogg}} '''Calypso:''' {{Color|keyword|nobold=1|I want to ascertain your ability to help me reclaim my true form... and reclaim the Grove from the black tide.}}
-::Why do you say that our fates are intertwined?
-:{{DIcon|Arrow}} What is your purpose in testing us?
-::{{A|VO chapter4 13 kalvpusuo 161.ogg}} '''Calypso:''' Mmm... A good question.
-::{{A|VO chapter4 13 kalvpusuo 162.ogg}} '''Calypso:''' {{Color|keyword|nobold=1|I want to ascertain your ability to help me reclaim my true form... and reclaim the Grove from the black tide.}}
-::Why do you say that our fates are intertwined?
-:{{DIcon|Arrow}} Why do you say that our fates are intertwined?
-:{{DIcon|Arrow}} Ahh? Me first? But why?
-::{{DIcon|Arrow}} What is your true identity?
-:::{{A|VO chapter4 13 kalvpusuo 157.ogg}} '''Calypso:''' Hm...
-:::{{A|VO chapter4 13 kalvpusuo 158.ogg}} '''Calypso:''' {{Color|keyword|nobold=1|As I've previously mentioned, I'm one of the Seven Sages of the Grove of Epiphany. If you think that this answer is insufficient, then I'll add to it. I'm the leader of the Seven Sages.}}
-:::Why don't you show your true appearance?
-:::{{A|VO chapter4 13 kalvpusuo 159.ogg}} '''Calypso:''' Mmm... A good question.
-:::{{A|VO chapter4 13 kalvpusuo 160.ogg}} '''Calypso:''' {{Color|keyword|nobold=1|It's an inability to do so rather than an unwillingness. For me to appear in my true form, I'll require your help.}}
-:::What is your purpose in testing us?
-:::{{A|VO chapter4 13 kalvpusuo 161.ogg}} '''Calypso:''' Mmm... A good question.
-:::{{A|VO chapter4 13 kalvpusuo 162.ogg}} '''Calypso:''' {{Color|keyword|nobold=1|I want to ascertain your ability to help me reclaim my true form... and reclaim the Grove from the black tide.}}
-:::Why do you say that our fates are intertwined?
-::{{DIcon|Arrow}} Why don't you show your true appearance?
-:::{{A|VO chapter4 13 kalvpusuo 159.ogg}} '''Calypso:''' Mmm... A good question.
-:::{{A|VO chapter4 13 kalvpusuo 160.ogg}} '''Calypso:''' {{Color|keyword|nobold=1|It's an inability to do so rather than an unwillingness. For me to appear in my true form, I'll require your help.}}
-:::What is your purpose in testing us?
-:::{{A|VO chapter4 13 kalvpusuo 161.ogg}} '''Calypso:''' Mmm... A good question.
-:::{{A|VO chapter4 13 kalvpusuo 162.ogg}} '''Calypso:''' {{Color|keyword|nobold=1|I want to ascertain your ability to help me reclaim my true form... and reclaim the Grove from the black tide.}}
-:::Why do you say that our fates are intertwined?
-::{{DIcon|Arrow}} What is your purpose in testing us?
-:::{{A|VO chapter4 13 kalvpusuo 161.ogg}} '''Calypso:''' Mmm... A good question.
-:::{{A|VO chapter4 13 kalvpusuo 162.ogg}} '''Calypso:''' {{Color|keyword|nobold=1|I want to ascertain your ability to help me reclaim my true form... and reclaim the Grove from the black tide.}}
-:::Why do you say that our fates are intertwined?
-::{{DIcon|Arrow}} Why do you say that our fates are intertwined?
-:{{A|VO chapter4 13 kalvpusuo 163.ogg}} '''Calypso:''' Oh... Straight to the point.
-:{{A|VO chapter4 13 kalvpusuo 164.ogg}} '''Calypso:''' {{Color|keyword|nobold=1|The Titans have cast a net over this place because of the black tide. If we want to escape, I'll require your help to reclaim my true form.}}
-:Ahh? Me first? But why?
-:{{A|VO chapter4 13 kalvpusuo 165.ogg}} '''Calypso:''' That's no good... You asked two questions.
-:{{A|VO chapter4 13 castorice 241.ogg}} '''Castorice:''' ...Let's not get into a game of semantics, Lady Calypso.
-:{{A|VO chapter4 13 castorice 242 m.ogg}} {{A|VO chapter4 13 castorice 242 f.ogg}} '''Castorice:''' {{MC|m=Mr.|f=Miss}} (Trailblazer), I will observe her reaction based on your question to determine whether she is being truthful.
-:{{A|VO chapter4 13 castorice 243.ogg}} '''Castorice:''' So, don't worry about it. Go ahead and ask your question.
-:{{A|VO chapter4 13 kalvpusuo 166.ogg}} '''Calypso:''' Well, it's your turn now, little goddess of Death.
-:{{tx}}
-
-:{{A|VO chapter4 13 kalvpusuo 145.ogg}} '''Calypso:''' There's a secret passageway behind the pond. It's faster if we take that path.
-:{{A|VO chapter4 13 castorice 232.ogg}} '''Castorice:''' ...How do you know this place so well?
-:{{A|VO chapter4 13 kalvpusuo 146.ogg}} '''Calypso:''' Well... I'm one of the Seven Sages after all.
 {{Dialogue End}}
 
 ===Take the waterwheel to head to the top level of the Library of Philia{{subst:void|<!--104020426-->}}===
 {{Dialogue Start}}
-;(Upon reaching the destination)
-:{{A|VO chapter4 13 kalvpusuo 172.ogg}} '''Calypso:''' Alright, go ride the water wheel. I'll wait for you up there.
-:{{A|VO chapter4 13 mem 196.ogg}} '''Mem:''' Eh... So, you don't actually have to take the water wheel?
-;(Upon reaching the destination)
-
-;(Upon reaching the destination)
-:{{A|VO chapter4 13 mem 198.ogg}} '''Mem:''' Phew, finally! Some fresh air!
-:{{A|VO chapter4 13 mem 199.ogg}} '''Mem:''' Brr... But the wind feels so chilly...
+:{{tx}}
 {{Dialogue End}}
 
 ===Leave the Library of Philia and head to the Luminary Throne{{subst:void|<!--104020428-->}}===
 {{Dialogue Start}}
-
-:{{DIcon|undefined}} 
-
-
-;(Unused &mdash; EnterDistrict_G{GroupID})
-<pre>{
-	"$type": "RPG.GameCore.SetCharacterShadowFactor",
-	"EnableFactor": true,
-	"OnlyEnableWhenUseShadowProbe": true
-}</pre>
-::{{A|VO chapter4 13 trianne 136.ogg}} '''Trianne:''' Woah, it's Little Gray, Little Cas, and the pink puppy!
-::{{A|VO chapter4 13 mem 200.ogg}} '''Mem:''' I... Forget it. I'll just be a puppy. Be forgiving... Be forgiving!
-::{{A|VO chapter4 13 castorice 252.ogg}} '''Castorice:''' Lady Trianne! Are you alright? Were you hurt?
-::{{A|VO chapter4 13 trianne 137.ogg}} '''Trianne:''' No, Trianne flew high up into the air so the monsters couldn't reach '''us'''.
-::{{DIcon|Arrow}} All that matters is you're alright.
-:::{{A|VO chapter4 13 trianne 138.ogg}} '''Trianne:''' Heh heh, also, the spindle that Agy gave '''us''' is so powerful that Trianne seems to have found Nax...
-:::Did you find Anaxa?
-:::{{A|VO chapter4 13 trianne 139.ogg}} '''Trianne:''' Yup! The spindle that Agy gave '''us''' is so powerful that Trianne seems to have found Nax...
-:::Air supremacy secured!
-::{{DIcon|Arrow}} Did you find Anaxa?
-:::{{A|VO chapter4 13 trianne 139.ogg}} '''Trianne:''' Yup! The spindle that Agy gave '''us''' is so powerful that Trianne seems to have found Nax...
-:::Air supremacy secured!
-::{{DIcon|Arrow}} Air supremacy secured!
-::{{A|VO chapter4 13 trianne 140.ogg}} '''Trianne:''' "Air supremacy secured!" ...That sounds so cool! But what does it mean?
-::{{A|VO chapter4 13 trianne 141.ogg}} '''Trianne:''' Wait a minute, let's get back on track! The spindle that Agy gave '''us''' is so powerful that Trianne seems to have found Nax...
-::{{A|VO chapter4 13 trianne 142.ogg}} '''Trianne:''' He's near the treetop! Even though '''our''' perception of him is very weak, it's not like the White Dryads from before.
-::{{A|VO chapter4 13 trianne 143.ogg}} '''Trianne:''' But, since Trianne was alone and afraid that it might be dangerous, '''we''' did not fly there to take a look.
-::{{A|VO chapter4 13 castorice 253.ogg}} '''Castorice:''' It seems like Lady Trianne did not forget our promise.
-::{{A|VO chapter4 13 castorice 254.ogg}} '''Castorice:''' Anaxa is indeed still alive, and he's at the Luminary Throne right now... It seems like Lady Calypso did not lie regarding this.
-::{{A|VO chapter4 13 trianne 144.ogg}} '''Trianne:''' Hm? Kalipso... Who's that?
-::{{DIcon|Arrow}} She seems to be the head of the Lotophagists.
-:::{{A|VO chapter4 13 trianne 145.ogg}} '''Trianne:''' Oh, so you found a survivor! But the golden thread doesn't seem to be able to sense the person you're talking about.
-:::A kind-hearted and mysterious passer-by.
-:::{{A|VO chapter4 13 trianne 146.ogg}} '''Trianne:''' Oh, so you received help from a kind-hearted person! But the golden thread doesn't seem to be able to sense the person you're talking about.
-:::A spirit... wandering around the Grove?
-::{{DIcon|Arrow}} A kind-hearted and mysterious passer-by.
-:::{{A|VO chapter4 13 trianne 146.ogg}} '''Trianne:''' Oh, so you received help from a kind-hearted person! But the golden thread doesn't seem to be able to sense the person you're talking about.
-:::A spirit... wandering around the Grove?
-::{{DIcon|Arrow}} A spirit... wandering around the Grove?
-::{{A|VO chapter4 13 trianne 147.ogg}} '''Trianne:''' Whoa! A spirit... Trianne wants to meet this spirit that even the gold thread can't sense!
-::{{A|VO chapter4 13 mem 201.ogg}} '''Mem:''' Cal, come and meet our other companion!
-::{{tx}}
-::<!--1-second delay-->
-::{{tx}}
-
-;(Unused &mdash; EnterDistrict_G{GroupID})
-:{{A|VO chapter4 13 kalvpusuo 173.ogg}} '''Calypso:''' Speaking of which, don't you also have a red-haired companion?
-::{{A|VO chapter4 13 mem 197.ogg}} '''Mem:''' Seriously... Exactly how much do you know about us?
-::{{A|VO chapter4 13 kalvpusuo 174.ogg}} '''Calypso:''' Hehe, not too much. It's just that I seem to hear the sound of a bee buzzing around.
-::{{A|VO chapter4 13 castorice 251.ogg}} '''Castorice:''' Lady, your metaphors... are not worthy of praise at all.
+:{{tx}}
 {{Dialogue End}}
 
 ===Keep moving forward and pass through the Dome of Devotion{{subst:void|<!--104020429-->}}===
 {{Dialogue Start}}
-;(Upon reaching the destination)
-
-;(Upon reaching the destination)
-:{{A|VO chapter4 13 castorice 262.ogg}} '''Castorice:''' That can't be. Was it for fending off the black tide, or perhaps...
-:{{A|VO chapter4 13 trianne 154.ogg}} '''Trianne:''' What exactly is this "Butterfly of the Vine Mine"? Is it a very powerful guardian monster?
-:{{A|VO chapter4 13 castorice 263.ogg}} '''Castorice:''' No, how should I put it... It's considered a safeguard for the Titan's Coreflame. This butterfly is created from {{Rubi|Mnestia|Romance Titan}}'s remaining divine mind and bears the responsibility of guarding the Coreflame.
-:{{A|VO chapter4 13 castorice 264.ogg}} '''Castorice:''' Legend has it that someone can only pass the trial of the butterfly by proving they possess pure and unselfish love within their heart. Only then can they awaken the Great Tree to open up the path to meet {{Rubi|Cerces|Reason Titan}}.
-:{{A|VO chapter4 13 trianne 155.ogg}} '''Trianne:''' But how are we... going to prove it?
-:{{A|VO chapter4 13 mem 204.ogg}} '''Mem:''' Will telling the Titan "I love you" work? Mem is good at doing that!
-:{{A|VO chapter4 13 castorice 265.ogg}} '''Castorice:''' Sorry, but even I don't know how... After all, this is a secret among secrets that only a select few in the entire Grove and even Amphoreus know.
-:{{A|VO chapter4 13 castorice 266.ogg}} '''Castorice:''' Rather than worry about this, Lady Trianne, did the golden thread react to anything around here?
-:{{A|VO chapter4 13 trianne 156.ogg}} '''Trianne:''' Umm, no. That unknown thing seems to be even farther ahead and higher up.
-:{{A|VO chapter4 13 mem 205.ogg}} '''Mem:''' Uhhh, but... Isn't that a dead end up ahead?
-:{{A|VO chapter4 13 castorice 267.ogg}} '''Castorice:''' Perhaps we can try again... Let's see if the butterfly will still react to the Golden Bough of Vows despite having dissipated.
-:{{A|VO chapter4 13 castorice 268.ogg}} '''Castorice:''' If it's indeed the token mentioned in the legends, there should be a reaction.
-:{{DIcon|Arrow}} Take petal from Golden Bough of Vows
-----
-:<!--1-second delay-->
-:You take a single petal from the Golden Bough of Vows and offer it with both hands.
-:The butterfly didn't even move one inch.
-:{{DIcon|Arrow}} Just hang on a little longer, a sincere heart will prevail.
-::Even in the native myths of Amphoreus, it all boils down to "sincerity brings miracles." Show genuine intent, and the butterfly will surely respond...
-:{{DIcon|Arrow}} Pick up the petal and wave it in front of the butterfly.
-::With your extensive experience in dealing with little creatures, you are certain the butterfly will not ignore you&mdash;unless it can resist the urge.
-:{{DIcon|Arrow}} Chew on the petal with a highly provocative expression.
-::Understanding the common nature of human society, you believe that the drive to compete is an innate instinct of all living beings &mdash; surely the butterfly is no exception &mdash; and that vying for shared prey should awaken this primal urge deeply embedded in its genes.
 :{{tx}}
-:{{DIcon|Arrow}} I did what I could, but the butterfly didn't even move an inch.
-:{{DIcon|Arrow}} Do we also have to use some kind of special spell?
-:{{A|VO chapter4 13 castorice 270.ogg}} '''Castorice:''' ...Let me give it a try.
-:{{tx}}
-:{{A|VO chapter4 13 castorice 259.ogg}} '''Castorice:''' Calypso... Just what are you hiding?
-
-;(Unused &mdash; EnterDistrict_G{GroupID})
-:{{A|VO chapter4 13 trianne 153.ogg}} '''Trianne:''' Ugh, the golden thread is vibrating more and more violently...
-::{{A|VO chapter4 13 castorice 260.ogg}} '''Castorice:''' Everyone, let's be even more cautious.
-
-;(Unused &mdash; EnterDistrict_G{GroupID})
-:{{A|VO chapter4 13 castorice 261.ogg}} '''Castorice:''' There's no one... Hold on, the Butterfly of Divine Mind is gone?
 {{Dialogue End}}
 
 ===Find Mem and Trianne by listening to the sounds{{subst:void|<!--104020431-->}}===
 {{Dialogue Start}}
-;(Upon reaching the destination)
-
-;(Upon reaching the destination)
-:{{A|VO chapter4 13 trianne 160.ogg}} '''Trianne:''' Waaaah... Little Gray, Little Cas! It's bad... It's very bad!
-:{{A|VO chapter4 13 mem 206.ogg}} '''Mem:''' Don't worry, friend... I'm fine...! I just feel... a little warm...!
-:{{A|VO chapter4 13 mem 207.ogg}} '''Mem:''' But... It would be best if you could keep me from becoming a snack for these little things...!
-:{{A|VO chapter4 13 guaiwu 102.ogg}} '''Starving Magical Beast:''' ███ ██ ███ █ ██ ███ █ ██ █ ██████
-:{{A|VO chapter4 13 mem 208.ogg}} '''Mem:''' Sorry, I shouldn't have called you guys "little things"...!
-:{{DIcon|Arrow}} Calm down, we'll be right there!
-:{{DIcon|Arrow}} If that's the case, let's get out of here.
-:{{A|VO chapter4 13 castorice 275.ogg}} '''Castorice:''' Lady Trianne, what exactly happened just now?
 :{{tx}}
-;(Upon reaching the destination)
-
-;(Upon reaching the destination)
-<pre>{
-	"$type": "RPG.GameCore.SetCharacterShadowFactor",
-	"EnableFactor": true,
-	"OnlyEnableWhenUseShadowProbe": true
-}</pre>
-::{{tx}}
-:;(Enter battle)
-::{{Enemy List|Meteoric Eagle*1; Moonlit Pegasus*1}}
-
-;(Talk to "Amber")
-----
-:{{A|VO chapter4 13 castorice 284.ogg}} '''Castorice:''' According to Calypso, we just have to "gather the embers before us with the Golden Bough of Vows"...
-:<!--1-second delay-->
-;(Screen fades to black)
-:As the golden water lily touches the amber, flames spill from its petals.
-:Curiously, the fire does not consume the entire flower. Only faint sparks gather at the tips, subtly burning.
-:<!--1-second delay-->
-
-:{{DIcon|undefined}} "Amber"
-
-:{{A|VO chapter4 13 castorice 274.ogg}} '''Castorice:''' The voice seems to be coming from the Star-Chase Atrium.
 {{Dialogue End}}
 
 ===Try to reach where Mem is and rescue Mem{{subst:void|<!--104020432-->}}===
 {{Dialogue Start}}
-
-:{{DIcon|undefined}} "Amber"
-
-
-;(Unused &mdash; DoneRoom2Lookat)
-
-
-;(Unused &mdash; EnterDistrict_G{GroupID})
-:{{A|VO chapter4 13 mem 216.ogg}} '''Mem:''' So warm... much comfort...
-
-;(Unused &mdash; EnterDistrict_G{GroupID})
-:{{A|VO chapter4 13 castorice 278.ogg}} '''Castorice:''' Oh no, I'm starting to smell something delicious.
-::{{A|VO chapter4 13 mem 217.ogg}} '''Mem:''' Haha... That must be because I can't help giving off an irresistible charm.
+:{{tx}}
 {{Dialogue End}}
 
 ===Defeat the magical beasts surrounding Mem{{subst:void|<!--104020482-->}}===
 {{Dialogue Start}}
-----
-:{{A|VO chapter4 13 mem 222.ogg}} '''Mem:''' Precision, and grace. That did not take much effort... Was this supposed to be a challenge?
-:{{A|VO chapter4 13 mem 223.ogg}} '''Mem:''' ...Just kidding! I just wanted to marvel at how (Trailblazer) and Cas always manage to resolve crises so effortlessly.
-:{{DIcon|Arrow}} I'm just so-so, only third best, ya know?
-::{{A|VO chapter4 13 mem 224.ogg}} '''Mem:''' Friend, you're too humble! In that case, I'll just have to settle for being second best while Cas can be the best.
-::Actually, there's four of us.
-:{{DIcon|Arrow}} Actually, there's four of us.
-:{{A|VO chapter4 13 mem 225.ogg}} '''Mem:''' Oh, right! Sorry, I forgot about Trianne.
-:{{A|VO chapter4 13 trianne 164.ogg}} '''Trianne:''' It's all right! Trianne only just flew down.
-:{{A|VO chapter4 13 castorice 279.ogg}} '''Castorice:''' I'm glad that everyone is alright. Speaking of which, this piece of amber is...?
 :{{tx}}
 {{Dialogue End}}
 
 ===Pick the remaining fires with the Golden Bough of Vows{{subst:void|<!--104020433-->}}===
 {{Dialogue Start}}
-
-:{{DIcon|undefined}} "Amber"
-----
-:{{A|VO chapter4 13 castorice 284.ogg}} '''Castorice:''' According to Calypso, we just have to "gather the embers before us with the Golden Bough of Vows"...
-:<!--1-second delay-->
-;(Screen fades to black)
-:As the golden water lily touches the amber, flames spill from its petals.
-:Curiously, the fire does not consume the entire flower. Only faint sparks gather at the tips, subtly burning.
-:<!--1-second delay-->
+:{{tx}}
 {{Dialogue End}}
 
 ===Offer the remaining fires to the Butterfly of Divine Mind{{subst:void|<!--104020434-->}}===
 {{Dialogue Start}}
-
-:{{DIcon|Talk}} Offer Embers
-:{{A|VO chapter4 13 kalvpusuo 181.ogg}} '''Calypso:''' Hehe, it seems like you managed to gather the embers.
-:{{A|VO chapter4 13 kalvpusuo 182.ogg}} '''Calypso:''' In that case... just offer it to the divine butterfly.
-:{{A|VO chapter4 13 castorice 286.ogg}} '''Castorice:''' It'll be fine. Let's just do as she says.
-:{{DIcon|Arrow}} (Offer the faintly burning Golden Bough of Vows.)
-:{{A|VO chapter4 13 trianne 169.ogg}} '''Trianne:''' It's a success! The path has appeared...
 :{{tx}}
-----
-:{{A|VO chapter4 13 kalvpusuo 202.ogg}} '''Cerces:''' As for the last one... {{Color|keyword|nobold=1|It's currently in Anaxa's body, which is in dire need of repair}}.
-:{{A|VO chapter4 13 castorice 297.ogg}} '''Castorice:''' What? Do you mean that, you're using such a method...
-:{{A|VO chapter4 13 kalvpusuo 203.ogg}} '''Cerces:''' Hehe, after all, the scholars of the Grove have always been willing to lay down their lives to defend my Coreflame... As a respected god, it would be too embarrassing if I were to do nothing and simply watch the children of humanity give up their lives for me.
-:{{A|VO chapter4 13 kalvpusuo 204.ogg}} '''Cerces:''' Especially that heretic named Anaxa. He did not even hesitate to tear his soul apart and use it to perform a miracle. He trapped all the creations of the black tide within the Grove so that they would not be able to harm others.
-:{{A|VO chapter4 13 kalvpusuo 205.ogg}} '''Cerces:''' His way of thinking was so out-of-the-ordinary that I felt it would be a waste for him to meet his demise in the black tide. And so, I decided to save his life.
-:{{A|VO chapter4 13 kalvpusuo 206.ogg}} '''Cerces:''' Of course, this also meant that I was able to conceal myself and remain hidden... Well, that's also an "equivalent exchange," right?
-:{{A|VO chapter4 13 mem 229.ogg}} '''Mem:''' Ah, I finally understand! So, you want us to lend you a hand in piecing your Coreflame back together! We'll also be able to save Anaxa that way!
-:{{A|VO chapter4 13 kalvpusuo 207.ogg}} '''Cerces:''' What a smart little bunny. This way, I'll be able to regain my true form, and you will be able to bring the Coreflame and your teacher back to Okhema...
-:{{A|VO chapter4 13 kalvpusuo 208.ogg}} '''Cerces:''' ...We'll also take down the black-robed swordmaster at the throne, together in one go.
-:{{A|VO chapter4 13 trianne 171.ogg}} '''Trianne:''' But... Cerces, aren't you the Reason Titan?
-:{{A|VO chapter4 13 kalvpusuo 209.ogg}} '''Cerces:''' Heh... Even if I do not have the authority of Strife, I'm still a god.
-:{{A|VO chapter4 13 kalvpusuo 210.ogg}} '''Cerces:''' I just need you to buy me some time against the warrior's blade... Once the Coreflame is re-formed, I'll be able to show my hand.
-:{{DIcon|Arrow}} Just leave it to me. Buying time is my specialty.
-:{{DIcon|Arrow}} Let's take him down in one go!
-:{{A|VO chapter4 13 kalvpusuo 211.ogg}} '''Cerces:''' Excellent. Then, just continue climbing to reach my throne.
-:{{tx}}
-
-:{{A|VO chapter4 13 castorice 285.ogg}} '''Castorice:''' How incredible...
-:{{A|VO chapter4 13 mem 227.ogg}} '''Mem:''' Uhh, so... We just have to present it to the butterfly?
 {{Dialogue End}}
 
 ===Climb upwards and reach the Luminary Throne{{subst:void|<!--104020435-->}}===
 {{Mission Description|type=trailblaze|location="Murmuring Woods" Grove of Epiphany|update|After careful observation, Castorice exposes Calypso's true identity as {{Rubi|Cerces|Reason Titan}}. Cerces admits to this and asks (Trailblazer)'s group to help them reach Anaxa, so they can fuse the Coreflame again to catch the culprit behind the annihilation of the Grove &mdash; the nameless black-robed swordmaster.}}
 {{Dialogue Start}}
-;(Upon reaching the destination)
-
-;(Upon reaching the destination)
 :{{tx}}
-<pre>{
-	"$type": "RPG.GameCore.PerformanceEndSeq",
-	"BeforeCases": [
-		{
-			"$type": "RPG.GameCore.SwitchCharacterAnchorV2",
-			"SwitchCharacterAnchorConfig": {
-				"IsLocalPlayer": true,
-				"CharacterUniqueName": "LocalPlayer",
-				"AreaName": {
-					"Value": "LevelArea_P20421_F20421001_G85"
-				},
-				"AnchorName": {
-					"Value": "Anchor1"
-				}
-			}
-		}
-	]
-}</pre>
-
-;(Unused &mdash; EnterDistrict_G{GroupID})
-:{{A|VO chapter4 13 kalvpusuo 213.ogg}} '''Cerces:''' I'll leave it to you, children of humanity. May you be blessed with good fortune.
-::{{A|VO chapter4 13 castorice 298.ogg}} '''Castorice:''' It seems like... a fierce battle will be inevitable.
-::{{A|VO chapter4 13 trianne 172.ogg}} '''Trianne:''' Don't worry! Trianne will protect everyone!
-
-;(Unused &mdash; EnterDistrict_G{GroupID})
-:{{A|VO chapter4 13 anaxa 113.ogg}} '''Anaxa:''' Ha... My eyes can no longer see...
-::<!--1.5-second delay-->
 {{Dialogue End}}
 
 ===Keep moving forward and meet up with Cerces at the throne{{subst:void|<!--104020437-->}}===
 {{Dialogue Start}}
-;(Upon reaching the destination)
-
-;(Upon reaching the destination)
-:{{A|VO chapter4 13 mem 234.ogg}} '''Mem:''' Ah...
-:{{A|VO chapter4 13 castorice 303.ogg}} '''Castorice:''' {{Rubi|Cerces|Reason Titan}} was right. He's indeed here.
-:'''Trianne:''' I&mdash;Is he still unconscious? Where's {{Rubi|Cerces|Reason Titan}}?
-:{{A|VO chapter4 13 trianne 175.ogg}} '''Trianne:''' Who is this black-robed guy...?
-:{{A|VO chapter4 13 mem 235.ogg}} '''Mem:''' This person is the source of the smell and the memory... No, he's basically the memory itself!
-:{{A|VO chapter4 13 mem 236.ogg}} '''Mem:''' The burning paradise, the shattered sun, and...
-:{{A|VO chapter4 13 mem 237.ogg}} '''Mem:''' ...Carnage. Death and destruction.
-:{{A|VO chapter4 13 daohuoxingzhe 101.ogg}} '''???:''' ...
-:{{A|VO chapter4 13 castorice 304.ogg}} '''Castorice:''' Everyone, brace yourself... This must be the hunter reborn from the black tide that {{Rubi|Cerces|Reason Titan}} was talking about...
-:{{A|VO chapter4 13 castorice 305.ogg}} '''Castorice:''' The black sword and cloak...
-:{{A|VO chapter4 13 castorice 306.ogg}} '''Castorice:''' The owner of the piece of cloth... The north wind that sent over the deathly fog of {{Rubi|Thanatos|Death Titan}}.
-:{{A|VO chapter4 13 daohuoxingzhe 102.ogg}} '''???:''' You're not... demigods.
-:{{A|VO chapter4 13 daohuoxingzhe 103.ogg}} '''???:''' Stand down. Or die.
-:{{A|VO chapter4 13 mem 238.ogg}} '''Mem:''' Quick... run! It's just us... We won't be able to defeat them...
-:{{DIcon|Arrow}} Don't worry, I'll protect everyone.
-:{{DIcon|Arrow}} Things will get better when the Titan attacks.
-::{{A|VO chapter4 13 castorice 307.ogg}} '''Castorice:''' That's right, let's do our best to buy time for {{Rubi|Cerces|Reason Titan}}.
-::I&mdash;Is there still time for us to escape now...
-::{{A|VO chapter4 13 castorice 308.ogg}} '''Castorice:''' He has already discovered us... Let's do our best to buy time for {{Rubi|Cerces|Reason Titan}}.
-:{{DIcon|Arrow}} I&mdash;Is there still time for us to escape now...
-::{{A|VO chapter4 13 castorice 308.ogg}} '''Castorice:''' He has already discovered us... Let's do our best to buy time for {{Rubi|Cerces|Reason Titan}}.
-:{{A|VO chapter4 13 trianne 176.ogg}} '''Trianne:''' T&mdash;Trianne will also protect everyone! Trianne is brave!
 :{{tx}}
-;(Upon reaching the destination)
-
-;(Upon reaching the destination)
-<pre>{
-	"$type": "RPG.GameCore.SetSpecialVisionOn",
-	"IsOn": true,
-	"VisionType": "MemoryVision",
-	"VisionEffectType": "MemoryVision",
-	"CameraEffectType": "MemoryVision",
-	"SmellProp": {},
-	"IsInfiniteTime": true
-}</pre>
-;(Unused &mdash; EnterArea_G91-3)
-<pre>{
-	"$type": "RPG.GameCore.SetSpecialVisionOn",
-	"VisionType": "MemoryVision",
-	"VisionEffectType": "MemoryVision",
-	"CameraEffectType": "MemoryVision",
-	"SmellProp": {},
-	"IsInfiniteTime": true
-}</pre>
 {{Dialogue End}}
 
 ===Defeat the black-robed swordmaster{{subst:void|<!--104020430-->}}===
 {{Dialogue Start}}
-;(Upon reaching the destination)
-
-;(Upon reaching the destination)
-----
-----
-;([[#Gallery|Cutscene]] plays)
-::In that case...
-::Can't be killed in a single blow...
-::You are indeed no ordinary human.
-;(Cutscene ends)
-----
-;(Enter battle)
-:{{Enemy List|???*1/+53.8% HP, -12% SPD}}
-
-;(Unused &mdash; EnterDistrict_G{GroupID})
-:{{A|VO chapter4 13 anaxa 114.ogg}} '''Anaxa:''' No matter... All I have to do is to place this body at the core of the array...
-::<!--1.5-second delay-->
-
-;(Unused &mdash; EnterDistrict_G{GroupID})
-:{{A|VO chapter4 13 anaxa 115.ogg}} '''Anaxa:''' For the sake of Amphoreus... Die with me, Titan.
-::<!--1.5-second delay-->
-;(Upon reaching the destination)
+:{{tx}}
 {{Dialogue End}}
 
 ===Keep moving forward and pass through the Dome of Devotion{{subst:void|<!--104020405-->}}===
 {{Mission Description|type=trailblaze|location="Murmuring Woods" Grove of Epiphany|update|During their advance, a mysterious woman identifying herself as Calypso appears suddenly, stating she saved Anaxa and offering guidance to (Trailblazer)'s group to the Luminary Throne.}}
 {{Dialogue Start}}
-
-;(Unused &mdash; SwitchHand_ShowChest)
-<pre>{
-	"$type": "RPG.GameCore.TriggerEntityEventV2",
-	"EventName": {
-		"Value": "SwitchHand_LockInput"
-	},
-	"TargetType": {
-		"$type": "RPG.GameCore.GroupFetchLocalTarget",
-		"TargetType": "Prop",
-		"Targets": [
-			300001
-		]
-	}
-}</pre>
-::<!--0.7-second delay-->
-:<pre>{
-	"$type": "RPG.GameCore.ActiveVirtualCamera",
-	"LevelAreaCameraKey": {
-		"Custom": true,
-		"Key": "CameraAnchor"
-	},
-	"WaitBlendFinish": true,
-	"BlendConfig": {
-		"ExportToJson": true,
-		"BlendType": "Custom",
-		"CustomCurveName": "BlendCut01"
-	}
-}</pre>
-::<!--0.5-second delay-->
-:<pre>{
-	"$type": "RPG.GameCore.SwitchHandShowPuzzleFinishToast"
-}</pre>
-::<!--1.5-second delay-->
-:<pre>{
-	"$type": "RPG.GameCore.TriggerEffect",
-	"Flags": [],
-	"EffectPath": "Effects/Eff_Prefab/Eff_Scene/InteractiveProp/Eff_Chap04_Prop_SwitchHand_01_Catchable01_Lod0.prefab",
-	"AttachPoint": "Root",
-	"TowardTarget": {
-		"$type": "RPG.GameCore.GroupFetchLocalTarget",
-		"TargetType": "Prop",
-		"Targets": [
-			300003
-		]
-	},
-	"SubObjectModifyDataList": [],
-	"SyncPropState": true
-}</pre>
-:<pre>{
-	"$type": "RPG.GameCore.PropReqInteract",
-	"TargetType": {
-		"$type": "RPG.GameCore.GroupFetchLocalTarget",
-		"TargetType": "Prop",
-		"Targets": [
-			300003
-		]
-	},
-	"InteractID": {
-		"FixedValue": {
-			"Value": 120120
-		}
-	}
-}</pre>
-
-;(Unused &mdash; SwitchHand_MonsterDie)
-<pre>{
-	"$type": "RPG.GameCore.SetAdvAchievement",
-	"QuestID": 4044105
-}</pre>
-
-;(Unused &mdash; SwitchHand_TriggerPullBack)
-:;(If {{cx}}{{subst:void|<!--{"$type":"RPG.GameCore.ByCompareFloorCustomFloatV2","Name":{"Value":"FCV_SwitchHand_P15"},"CompareValue":{"FixedValue":{"Value":1}}}-->}})
-::<pre>{
-	"$type": "RPG.GameCore.SpeedLineEffect",
-	"TargetType": {
-		"$type": "RPG.GameCore.TargetAlias",
-		"Alias": "None"
-	},
-	"Active": false,
-	"SpeedlineSeedPath": "Effects/Eff_Texture/Special/Noise/Eff_Noise_30.png"
-}</pre>
-::<pre>{
-	"$type": "RPG.GameCore.SwitchCharacterAnchorV2",
-	"SwitchCharacterAnchorConfig": {
-		"IsLocalPlayer": true,
-		"CharacterUniqueName": "LocalPlayer",
-		"AreaName": {
-			"Custom": true,
-			"Key": "PullBackArea"
-		},
-		"LevelAreaKey": {
-			"Custom": true,
-			"Key": "PullBackAnchor"
-		}
-	}
-}</pre>
-::<pre>{
-	"$type": "RPG.GameCore.TriggerEntityEventV2",
-	"EventName": {
-		"Value": "SwitchHand_ClosePuzzle"
-	},
-	"TargetType": {
-		"$type": "RPG.GameCore.GroupFetchLocalTarget",
-		"TargetType": "Prop",
-		"Targets": [
-			300001
-		]
-	}
-}</pre>
-:<!--0.2-second delay-->
-
-;(Unused &mdash; SwitchHand_PuzzleStart)
-<pre>{
-	"$type": "RPG.GameCore.SetFloorCustomFloatV2",
-	"Name": {
-		"Value": "FCV_Catchable_isHand"
-	},
-	"Value": {
-		"FixedValue": {
-			"Value": 1
-		}
-	}
-}</pre>
-
-;(Unused &mdash; SwitchHand_PuzzleClose)
-<pre>{
-	"$type": "RPG.GameCore.SetFloorCustomFloatV2",
-	"Name": {
-		"Value": "FCV_Catchable_isHand"
-	},
-	"Value": {
-		"FixedValue": {
-			"Value": 0
-		}
-	}
-}</pre>
-
-;(Unused &mdash; SwitchHand_Group_ResetTransform)
-<pre>{
-	"$type": "RPG.GameCore.DebugLog",
-	"Message": "###机械手Prop位置重置###"
-}</pre>
-:<pre>{
-	"$type": "RPG.GameCore.SwitchHandResetTransform",
-	"ID": {
-		"FixedValue": {
-			"Value": 15
-		}
-	},
-	"AnchorID": {
-		"Custom": true,
-		"Key": "PullBackAnchor"
-	}
-}</pre>
-::<!--0.2-second delay-->
-
-;(Unused &mdash; SwitchHand_ResetPlayerPosition)
-<pre>{
-	"$type": "RPG.GameCore.DebugLog",
-	"Message": "###机械手Player位置重置###"
-}</pre>
-::<!--0.2-second delay-->
+:{{tx}}
 {{Dialogue End}}
 
 ==Other Languages==

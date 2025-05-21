@@ -11,7 +11,7 @@ PageTitle=#Even When Cheers Fade: Chapter 4#
 |chapter       = Luminary Wardance
 |requirements  = [[Adventure Mission]] ''[[The Epitome of Young Morals]]'' completed
 |summary       = Luka once challenged Svarog and ultimately lost. Now, walking out onto the "Ringmaster's Challenge" arena, he's able to challenge Svarog once again.<br />And this time, Luka wins.
-|characters    = Carmella; Luka; Trailblazer
+|characters    = Carmella; Guinaifen; Hook; Luka; Press Officer; Trailblazer; Tuskpir
 |startLocation = [[The Xianzhou Luofu]] - [[Skysplitter]]
 |world         = The Xianzhou Luofu
 |area          = Skysplitter
@@ -25,6 +25,7 @@ PageTitle=#Even When Cheers Fade: Chapter 4#
 # Review the Tactics Board and prepare for future matches
 # Participate in the Knockout Matches and win points
 # Head to the Reception Hall and confirm your match qualifications
+# Return to the lounge and prepare for the next Faceoff Match
 # Start the match and confront "Independent Contestant &mdash; Iron Arm"
 # Hold the press conference
 # Return to the lounge and prepare for the next Faceoff Match
@@ -41,223 +42,42 @@ PageTitle=#Even When Cheers Fade: Chapter 4#
 ===Review the Tactics Board and prepare for future matches{{subst:void|<!--802510411-->}}===
 {{Mission Description|type=adventure|location=Skysplitter|The tense and exciting match draws to a temporary close. It's time to have a quick breather.<br />Use this time to prepare for the upcoming match.}}
 {{Dialogue Start}}
-
-;(Unused &mdash; EnterDistrict_G46)
-:<pre>{
-	"$type": "RPG.GameCore.AdvSetupButtonListTrigger",
-	"TargetType": {
-		"$type": "RPG.GameCore.GroupFetchLocalTarget",
-		"TargetType": "Prop",
-		"Targets": [
-			300001
-		]
-	},
-	"TriggerName": "MissionTrigger",
-	"ButtonsByName": [],
-	"ButtonConfigs": [
-		{
-			"ID": "OpenUI",
-			"IconType": "GeneralActivityIcon",
-			"ButtonText": {
-				"Value": "PropInteractTitle_442"
-			}
-		}
-	]
-}</pre>
-:<pre>{
-	"$type": "RPG.GameCore.AdvEnableButtons",
-	"TargetType": {
-		"$type": "RPG.GameCore.GroupFetchLocalTarget",
-		"TargetType": "Prop",
-		"Targets": [
-			300001
-		]
-	},
-	"TriggerName": "MissionTrigger",
-	"ButtonsByName": [
-		"OpenUI"
-	]
-}</pre>
-
-;(Unused &mdash; G46_ShowUI)
-<pre>{
-	"$type": "RPG.GameCore.ShowTransitionLoadingUI",
-	"Name": "Ui.FightFest.Board.FightFestBoardCutBriefDialog"
-}</pre>
-:<pre>{
-	"$type": "RPG.GameCore.ShowUI",
-	"Name": "Ui.FightFest.FightFestMainPage",
-	"WaitForExit": true,
-	"OnUIEnter": [
-		{
-			"$type": "RPG.GameCore.ExitTransitionLoadingUI"
-		}
-	]
-}</pre>
-
-;(Unused &mdash; G46_ShowUI_Chap1)
-<pre>{
-	"$type": "RPG.GameCore.ShowUI",
-	"Name": "Ui.FightFest.Board.FightFestBoardCutDialog",
-	"WaitForExit": true,
-	"Param": {
-		"Value": "1"
-	}
-}</pre>
-
-;(Unused &mdash; G46_ShowUI_Chap2)
-<pre>{
-	"$type": "RPG.GameCore.ShowUI",
-	"Name": "Ui.FightFest.Board.FightFestBoardCutDialog",
-	"WaitForExit": true,
-	"Param": {
-		"Value": "2"
-	}
-}</pre>
-
-;(Unused &mdash; G46_ShowUI_Chap4)
-<pre>{
-	"$type": "RPG.GameCore.ShowUI",
-	"Name": "Ui.FightFest.Board.FightFestBoardCutDialog",
-	"WaitForExit": true,
-	"Param": {
-		"Value": "4"
-	}
-}</pre>
-
-;(Unused &mdash; ShowUI_G303)
-<pre>{
-	"$type": "RPG.GameCore.ShowUI",
-	"Name": "Ui.FightFest.Board.FightFestBoardCutDialog",
-	"WaitForExit": true,
-	"Param": {
-		"Value": "4"
-	}
-}</pre>
+:{{tx}}
 {{Dialogue End}}
 
 ===Participate in the Knockout Matches and win points{{subst:void|<!--802510402-->}}===
 {{Mission Description|type=adventure|location=Skysplitter|update|The rules of the Knockout Matches are easy &mdash; Just defeat opponents and win points<br />Contestant Luka just needs to do three things: Win, win, and keep winning!}}
 {{Dialogue Start}}
+:{{tx}}
 {{Dialogue End}}
 
 ===Head to the Reception Hall and confirm your match qualifications{{subst:void|<!--802510403-->}}===
 {{Mission Description|type=adventure|location=Skysplitter|update|Luka finally wins enough points after a few rounds of Knockout Matches.<br />Now he'll face the truly formidable foes.}}
 {{Dialogue Start}}
-<pre>{
-	"$type": "RPG.GameCore.WaitUIControllerClose",
-	"UIControllerName": "ScoreMatchResultDialog"
-}</pre>
-:{{A|VO side2 yanwu player 114 m.ogg}} {{A|VO side2 yanwu player 114 f.ogg}} '''(Trailblazer):''' (After fighting in so many knockout stages, I think our points should be enough. Time to head to the Skysplitter's leaderboard to confirm our ranking.)
-{{Dialogue End}}
-
-===Start the match and confront "Independent Contestant &mdash; Iron Arm"{{subst:void|<!--802510406-->}}===
-{{Mission Description|type=adventure|location=Skysplitter|update|You can probably guess who this "Independent Contestant &mdash; Iron Arm" is, so there's no need to play up the mystery here.<br /><br />Let's chat about some unimportant Luminary Wardance behind-the-scenes gossip instead.<br />You might have discovered that Hook and Svarog didn't make much of an appearance in the story. It's because they are busy with their own affairs.<br />Apart from taking part in the competition, Svarog is also visiting the shops in Luofu with Hook. He wants to bring some souvenirs to Clara but doesn't know what to buy, so after some "calculation" &mdash; He figures that Hook, as another female child, must know what to buy for Clara! He can't go wrong listening to Hook!<br /><br />A few days later in the Robot Settlement,<br />Clara sinks into deep thought as she gazes upon the six boxes of mung bean soda before her.}}
-{{Dialogue Start}}
-
-;(Unused &mdash; FightFest_MainRace_802510406)
-<pre>{
-	"$type": "RPG.GameCore.PerformanceEndSeq",
-	"Cases": [
-		{
-			"Case": 1,
-			"OnSuccess": [
-				{
-					"$type": "RPG.GameCore.TriggerFightFestLineupInMission",
-					"RaceID": 1004,
-					"OnConfirm": [
-						{
-							"$type": "RPG.GameCore.TriggerPerformance",
-							"ValueSource": {},
-							"PerformanceType": "E",
-							"PerformanceID": 1802510103,
-							"MaskConfig": {}
-						},
-						{
-							"$type": "RPG.GameCore.TriggerFightFestBattleInMission"
-						}
-					]
-				}
-			]
-		}
-	]
-}</pre>
-
-;(Unused &mdash; G62_TriggerBattle)
-<pre>{
-	"$type": "RPG.GameCore.PerformanceEndSeq",
-	"Cases": [
-		{
-			"Case": 1,
-			"OnSuccess": [
-				{
-					"$type": "RPG.GameCore.TriggerFightFestLineupInMission",
-					"RaceID": 1004,
-					"OnConfirm": [
-						{
-							"$type": "RPG.GameCore.TriggerPerformance",
-							"ValueSource": {},
-							"PerformanceType": "E",
-							"PerformanceID": 1802510103,
-							"MaskConfig": {}
-						},
-						{
-							"$type": "RPG.GameCore.TriggerFightFestBattleInMission"
-						}
-					]
-				}
-			]
-		}
-	]
-}</pre>
-{{Dialogue End}}
-
-===Hold the press conference{{subst:void|<!--802510408-->}}===
-{{Mission Description|type=adventure|location=Skysplitter|update|Press conferences are a specialty of sporting events. You've gotta experience it.<br />Are you prepared to face the cunning, plotting, devious, and conniving friends working in the media industry?<br />It's time to have a battle of wits against them.}}
-{{Dialogue Start}}
+:{{tx}}
 {{Dialogue End}}
 
 ===Return to the lounge and prepare for the next Faceoff Match{{subst:void|<!--802510404-->}}===
 {{Mission Description|type=adventure|location=Skysplitter|update|You can probably guess who this "Independent Contestant &mdash; Iron Arm" is, so there's no need to play up the mystery here.<br /><br />Let's chat about some unimportant Luminary Wardance behind-the-scenes gossip instead.<br />You might have discovered that Hook and Svarog didn't make much of an appearance in the story. It's because they are busy with their own affairs.<br />Apart from taking part in the competition, Svarog is also visiting the shops in Luofu with Hook. He wants to bring some souvenirs to Clara but doesn't know what to buy, so after some "calculation" &mdash; He figures that Hook, as another female child, must know what to buy for Clara! He can't go wrong listening to Hook!<br /><br />A few days later in the Robot Settlement,<br />Clara sinks into deep thought as she gazes upon the six boxes of mung bean soda before her.}}
 {{Dialogue Start}}
-:{{A|VO side2 yanwu luka 429.ogg}} '''Luka:''' After this match, I'll be up against Yanqing in the "Ringmaster's Challenge."
-:{{A|VO side2 yanwu luka 430.ogg}} '''Luka:''' I thought I'd be really nervous, but I don't have the jitters at all! To say I'm not nervous at all isn't accurate... How should I put it? I'm unusually calm!
-:{{A|VO side2 yanwu camera 166.ogg}} '''Carmella:''' I get you! I felt the same way for my seventy-fifth round of interviews with Interastral Peace Entertainment!
-:{{A|VO side2 yanwu luka 431.ogg}} '''Luka:''' Seventy-five rounds... See? It's fortunate we didn't join the IPC system, now we don't have to endure this misery.
-:{{A|VO side2 yanwu camera 167.ogg}} '''Carmella:''' Let's not dwell on that... How about we check out your next opponent?
-:{{DIcon|Arrow}} Who's this contestant with an iron arm?
-::{{A|VO side2 yanwu luka 432.ogg}} '''Luka:''' "Independent Contestant: Iron Arm"? Why so mysterious...
-::Finally, there's a contestant I haven't met before!
-::{{A|VO side2 yanwu luka 433.ogg}} '''Luka:''' Don't be too sure about that. They might turn out to be another old friend of yours again! Hahahaha!
-::You always change the subject whenever we mention anything negative about IPC!
-:{{DIcon|Arrow}} Finally, there's a contestant I haven't met before!
-::{{A|VO side2 yanwu luka 433.ogg}} '''Luka:''' Don't be too sure about that. They might turn out to be another old friend of yours again! Hahahaha!
-::You always change the subject whenever we mention anything negative about IPC!
-:{{DIcon|Arrow}} You always change the subject whenever we mention anything negative about IPC!
-:{{A|VO side2 yanwu camera 168.ogg}} '''Carmella:''' That's not true!
-:{{A|VO side2 yanwu luka 434.ogg}} '''Luka:''' Haha, cut Miss Carmella some slack! Let's turn our attention to my next opponent!
-:{{A|VO side2 yanwu camera 169.ogg}} '''Carmella:''' This contestant is quite mysterious. I looked him up and found out that he always wore a heavy cloak in his previous matches, so his face was concealed... Perhaps he asked the organizers to hide his real identity?
 :{{tx}}
+{{Dialogue End}}
 
-;(Unused &mdash; TriggerPerformance)
-:{{A|VO side2 yanwu luka 429.ogg}} '''Luka:''' After this match, I'll be up against Yanqing in the "Ringmaster's Challenge."
-::{{A|VO side2 yanwu luka 430.ogg}} '''Luka:''' I thought I'd be really nervous, but I don't have the jitters at all! To say I'm not nervous at all isn't accurate... How should I put it? I'm unusually calm!
-::{{A|VO side2 yanwu camera 166.ogg}} '''Carmella:''' I get you! I felt the same way for my seventy-fifth round of interviews with Interastral Peace Entertainment!
-::{{A|VO side2 yanwu luka 431.ogg}} '''Luka:''' Seventy-five rounds... See? It's fortunate we didn't join the IPC system, now we don't have to endure this misery.
-::{{A|VO side2 yanwu camera 167.ogg}} '''Carmella:''' Let's not dwell on that... How about we check out your next opponent?
-::{{DIcon|Arrow}} Who's this contestant with an iron arm?
-:::{{A|VO side2 yanwu luka 432.ogg}} '''Luka:''' "Independent Contestant: Iron Arm"? Why so mysterious...
-:::Finally, there's a contestant I haven't met before!
-:::{{A|VO side2 yanwu luka 433.ogg}} '''Luka:''' Don't be too sure about that. They might turn out to be another old friend of yours again! Hahahaha!
-:::You always change the subject whenever we mention anything negative about IPC!
-::{{DIcon|Arrow}} Finally, there's a contestant I haven't met before!
-:::{{A|VO side2 yanwu luka 433.ogg}} '''Luka:''' Don't be too sure about that. They might turn out to be another old friend of yours again! Hahahaha!
-:::You always change the subject whenever we mention anything negative about IPC!
-::{{DIcon|Arrow}} You always change the subject whenever we mention anything negative about IPC!
-::{{A|VO side2 yanwu camera 168.ogg}} '''Carmella:''' That's not true!
-::{{A|VO side2 yanwu luka 434.ogg}} '''Luka:''' Haha, cut Miss Carmella some slack! Let's turn our attention to my next opponent!
-::{{A|VO side2 yanwu camera 169.ogg}} '''Carmella:''' This contestant is quite mysterious. I looked him up and found out that he always wore a heavy cloak in his previous matches, so his face was concealed... Perhaps he asked the organizers to hide his real identity?
-::{{tx}}
+===Start the match and confront "Independent Contestant &mdash; Iron Arm"{{subst:void|<!--802510406-->}}===
+{{Dialogue Start}}
+:{{tx}}
+{{Dialogue End}}
+
+===Hold the press conference{{subst:void|<!--802510408-->}}===
+{{Mission Description|type=adventure|location=Skysplitter|update|Press conferences are a specialty of sporting events. You've gotta experience it.<br />Are you prepared to face the cunning, plotting, devious, and conniving friends working in the media industry?<br />It's time to have a battle of wits against them.}}
+{{Dialogue Start}}
+:{{tx}}
+{{Dialogue End}}
+
+===Return to the lounge and prepare for the next Faceoff Match{{subst:void|<!--802510405-->}}===
+{{Mission Description|type=adventure|location=Skysplitter|update|You can probably guess who this "Independent Contestant &mdash; Iron Arm" is, so there's no need to play up the mystery here.<br /><br />Let's chat about some unimportant Luminary Wardance behind-the-scenes gossip instead.<br />You might have discovered that Hook and Svarog didn't make much of an appearance in the story. It's because they are busy with their own affairs.<br />Apart from taking part in the competition, Svarog is also visiting the shops in Luofu with Hook. He wants to bring some souvenirs to Clara but doesn't know what to buy, so after some "calculation" &mdash; He figures that Hook, as another female child, must know what to buy for Clara! He can't go wrong listening to Hook!<br /><br />A few days later in the Robot Settlement,<br />Clara sinks into deep thought as she gazes upon the six boxes of mung bean soda before her.}}
+{{Dialogue Start}}
+:{{tx}}
 {{Dialogue End}}
 
 ==Other Languages==

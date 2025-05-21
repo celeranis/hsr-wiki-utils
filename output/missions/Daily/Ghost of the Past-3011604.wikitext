@@ -36,61 +36,7 @@ PageTitle=#Ghost of the Past#
 ===Solve the Fragmentum echoes' predicaments and release them from their problems.{{subst:void|<!--301160401-->}}===
 {{Mission Description|type=daily|location=Backwater Pass|Some Silvermane Guard patrols spotted illusory echoes in the Fragmentum who are stuck inside due to unfinished businesses. Help them.<br />The leisurely senior wants to fix his phone...}}
 {{Dialogue Start}}
-
-;(Talk to Senior at Leisure)
-:'''Senior at Leisure:''' Oh? Wait, kid. You're holding...
-:'''Senior at Leisure:''' I have a similar gadget with me from before the war. It can help us talk to people across the skies and memorialize your surroundings in images. Pity it's broken now, and no one knows how to fix it anymore...
-:'''Senior at Leisure:''' Kiddo, what you have in your hand looks similar to my gadget &mdash; Can I please ask you to give a good look at this thing?
-:{{DIcon|Arrow}} Of course.
-:'''Senior at Leisure:''' Thank you, kid. I hope this won't take a lot of your time.
-<pre>{
-	"$type": "RPG.GameCore.RandomConfig",
-	"OddsList": [
-		{
-			"FixedValue": {
-				"Value": 0.3
-			}
-		},
-		{
-			"FixedValue": {
-				"Value": 0.3
-			}
-		},
-		{
-			"FixedValue": {
-				"Value": 0.3
-			}
-		}
-	],
-	"TaskList": [
-		{
-			"$type": "RPG.GameCore.TriggerCustomStringOnDialogEnd",
-			"CustomString": {
-				"Value": "CablePuzzle_Mission_30116_01"
-			}
-		},
-		{
-			"$type": "RPG.GameCore.TriggerCustomStringOnDialogEnd",
-			"CustomString": {
-				"Value": "CablePuzzle_Mission_30116_02"
-			}
-		},
-		{
-			"$type": "RPG.GameCore.TriggerCustomStringOnDialogEnd",
-			"CustomString": {
-				"Value": "CablePuzzle_Mission_30116_03"
-			}
-		}
-	]
-}</pre>
-:'''Senior at Leisure:''' Ohoho... Amazing! I didn't think I'd live to see this light up again...
-:'''Senior at Leisure:''' My most precious treasure is kept inside this machine. Thank goodness it's fixed...
-:'''Senior at Leisure:''' Thank you, kid... Thank you.
-:{{DIcon|Arrow}} You're welcome. Please take care.
-:'''Senior at Leisure:''' Hahaha... Take care of yourself as well.
-:{{Black Screen|As you turn to leave, you try to get one last look at the old man, but he is already nowhere to be found.}}
-
-;(Talk to Senior at Leisure)
+:{{tx}}
 {{Dialogue End}}
 
 ==Other Languages==

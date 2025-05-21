@@ -37,65 +37,7 @@ PageTitle=#Merchant Event: Delicacy Pavilion#
 ===Speak with Short Auntie{{subst:void|<!--800324301-->}}===
 {{Mission Description|type=adventure|location=Aurum Alley|In order to revitalize Aurum Alley, the merchant guild aims to fully utilize the docks' logistics capacity and establish close collaborations with the stores in the alley.<br />The guild has sent you to persuade Short Auntie, owner of Delicacy Pavilion, to establish a partnership with the guild. However, Short Auntie has encountered some troubles at the moment...}}
 {{Dialogue Start}}
-
-;(Talk to Short Auntie)
-:{{Black Screen|When you finally have some downtime after serving the customers, Mingxi had already arrived at Delicacy Pavilion.}}
-<pre>{
-	"$type": "RPG.GameCore.AdvCreateGroupEntity",
-	"InstanceIDList": [
-		400002
-	]
-}</pre>
-:{{Black Screen|When you finally have some downtime after serving the customers, Mingxi had already arrived at Delicacy Pavilion.}}
-:{{Black Screen|When you finally have some downtime after serving the customers, Mingxi had already arrived at Delicacy Pavilion.}}
-;(If {{F|MissionCV-8003242-undefined}} is undefined 1)
-::'''Short Auntie:''' Thanks for your hard work. I heard the chef say that you didn't mess up any orders at all, which was really amazing.
-;(If {{F|MissionCV-8003242-undefined}} is not undefined 1)
-::'''Short Auntie:''' Thanks for your hard work. There were loads of diners today. It's really hard for one person to do everything you did.
-:'''Mingxi:''' Short Auntie just agreed to collaborate with the docks. (Trailblazer), please add Delicacy Pavilion into the logistics plan. This way, the docks can get some new orders soon.
-:{{DIcon|Arrow}} Let's get the planning started.
-:{{DIcon|Arrow}} I love planning stuff. I wanna do it now!
-:{{Black Screen|Thanks to your aid, more and more people are visiting Delicacy Pavilion.}}
-<pre>{
-	"$type": "RPG.GameCore.AdvDestroyGroupEntity",
-	"InstanceIDList": [
-		400002
-	]
-}</pre>
-:{{Black Screen|Thanks to your aid, more and more people are visiting Delicacy Pavilion.}}
-----
-<pre>{
-	"$type": "RPG.GameCore.AdvCreateGroupEntity",
-	"InstanceIDList": [
-		400002
-	]
-}</pre>
-----
-----
-:'''Short Auntie:''' Actually... The IPC came looking for me once before, hoping to buy this place. I asked them what they planned to do with it, and they just said they wouldn't stick a diner here &mdash; so I told them that I'd have to think on it.
-:'''Short Auntie:''' Delicacy Pavilion might not be as famous as Spices Supreme, but if I just sold out like that, then nothing would be left at all. And wouldn't that be a shame? So I thought, maybe I could make some new dishes like Master Yancui, and earn a little fame and fortune for myself.
-:'''Short Auntie:''' But then later on, I figured out that I wanted to cook what I was good at, and I wanted to keep my little diner going... So, (Trailblazer), and Miss Secretary: I hope you can help me make a name for myself.
-:'''Mingxi:''' Hmm, don't worry Short Auntie! I hope we can cooperate again in the future. We'll definitely make a name for Delicacy Pavilion.
-
-;(Talk to Short Auntie)
-<pre>{
-	"$type": "RPG.GameCore.PlayMultiVoiceTalk",
-	"TalkSentenceID": 502066102
-}</pre>
-<pre>{
-	"$type": "RPG.GameCore.ShowMenu"
-}</pre>
-----
-<pre>{
-	"$type": "RPG.GameCore.CharacterTriggerAnimState",
-	"CharacterUniqueName": {
-		"Value": "Bird"
-	},
-	"AnimStateName": "FlyBack",
-	"NormalizedTransitionDuration": 0.25
-}</pre>
-:<!--6-second delay-->
-----
+:{{tx}}
 {{Dialogue End}}
 
 ==Other Languages==

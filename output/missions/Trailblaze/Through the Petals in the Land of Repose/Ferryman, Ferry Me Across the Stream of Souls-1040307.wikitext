@@ -55,717 +55,118 @@ PageTitle=#Ferryman, Ferry Me Across the Stream of Souls#
 ===Speak to Castorice{{subst:void|<!--104030701-->}}===
 {{Mission Description|type=trailblaze|location="Dragonbone City" Styxia|Styxia, the City-State of Dragons and Waves... At present, the River of Souls has encircled this pitiful city.<br />The Philosopher's Stone provided by Anaxagoras and the art of alchemy can summon the Titan lurking with the River of Souls, and the alchemical materials should be found in the city as well.}}
 {{Dialogue Start}}
-;(Upon reaching the destination)
-
-;(Upon reaching the destination)
-:Next day, Okhema...
-:{{A|VO chapter4 26 player 114 m.ogg}} {{A|VO chapter4 26 player 114 f.ogg}} '''(Trailblazer):''' (Where am I...? Is this my room? How did I get back here?)
-:{{A|VO chapter4 26 player 115 m.ogg}} {{A|VO chapter4 26 player 115 f.ogg}} '''(Trailblazer):''' (This is... a coin...? It was Cipher? And she even tucked me in!?)
-:{{A|VO chapter4 26 player 116 m.ogg}} {{A|VO chapter4 26 player 116 f.ogg}} '''(Trailblazer):''' (...)
-:{{A|VO chapter4 26 player 117 m.ogg}} {{A|VO chapter4 26 player 117 f.ogg}} '''(Trailblazer):''' (Never mind... It's getting late. I'd better get going.)
-:{{A|VO chapter4 27 mem 101.ogg}} '''Mem:''' Don't worry. Mem's here to help!
-:So you came!
-:Can you teleport too?
-:{{A|VO chapter4 27 mem 102.ogg}} '''Mem:''' Being cute isn't my only forte. I'm strong, too!
-:Mem, did you pay your fare?
-:{{A|VO chapter4 27 mem 103.ogg}} '''Mem:''' Um... I don't think I even meet the height requirement for the ticket, so I won't need one, right?
-:{{A|VO chapter4 27 castorice 104.ogg}} '''Castorice:''' This is Styxia, the city of dragons and waves... Anaxa hypothesizes that the missing {{Rubi|Thanatos|Death Titan}} is somewhere in these ruins.
-:{{A|VO chapter4 27 castorice 105.ogg}} '''Castorice:''' This is the land of their birth... Or perhaps of their death.
-:Are there any other clues?
-:How would we find them?
-:Aha, I know this one! They returned whence they came!
-:{{A|VO chapter4 27 castorice 106.ogg}} '''Castorice:''' Anaxa had used a secret alchemical art to temporarily fuse his soul with {{Rubi|Cerces|Reason Titan}} and {{Rubi|Kephale|Worldbearing Titan}}. And when he was on the verge of death, he was pulled by {{Rubi|Thanatos|Death Titan}} and caught a glimpse of the flowing River of Souls.
-:{{A|VO chapter4 27 castorice 107.ogg}} '''Castorice:''' This alchemy, considered a sacrilegious act, might actually make the souls of mortals and Titans attract each other...
-:{{A|VO chapter4 27 castorice 108.ogg}} '''Castorice:''' Even though {{Rubi|Thanatos|Death Titan}} has been missing for a thousand years and even their followers haven't been able to find them... perhaps that special attraction could summon them here.
-:{{A|VO chapter4 27 mem 104.ogg}} '''Mem:''' Oh! So are we going to use that Philosopher's Stone to... conjure the Titan?
-:{{A|VO chapter4 27 castorice 109.ogg}} '''Castorice:''' I guess that's the only way. The only leads we have now are the name of this city and the fairy tale about the dragon...
-:{{A|VO chapter4 27 mem 105.ogg}} '''Mem:''' {{Rubi|Thanatos|Death Titan}} is even more mysterious than I am...
-:{{A|VO chapter4 27 castorice 110.ogg}} '''Castorice:''' Indeed. Even one as erudite as Anaxa could only point us to this place, and no further. We will be entering the unknown as soon as we take our first steps... But that won't be the first time in my long journeys.
-:{{A|VO chapter4 27 castorice 111.ogg}} '''Castorice:''' I believe that...
-:{{A|VO chapter4 27 castorice 112.ogg}} '''Castorice:''' Rather than standing still, taking action is by far the better option. Perhaps fate might take pity on us today and show some compassion.
-:{{A|VO chapter4 27 castorice 101.ogg}} '''Castorice:''' Are you feeling alright?
-:{{DIcon|Arrow}} Ugh... I swear she was speeding...
-:{{DIcon|Arrow}} Where am I? Are we still in Amphoreus?
-:{{A|VO chapter4 26 player 116 m.ogg}} {{A|VO chapter4 26 player 116 f.ogg}} '''(Trailblazer):''' (...)
-:{{A|VO chapter4 26 player 117 m.ogg}} {{A|VO chapter4 26 player 117 f.ogg}} '''(Trailblazer):''' (Never mind... It's getting late. I'd better get going.)
-:{{A|VO chapter4 27 mem 101.ogg}} '''Mem:''' Don't worry. Mem's here to help!
-;(Return to previous option selection)
-;(Return to previous option selection)
-;(Return to previous option selection)
+:{{tx}}
 {{Dialogue End}}
 
 ===Search Dragonbone City and find the entrance to the nether realm{{subst:void|<!--104030702-->}}===
 {{Dialogue Start}}
-;(Upon reaching the destination)
-
-;(Upon reaching the destination)
-:{{A|VO chapter4 27 wangyudie 101.ogg}} '''???:''' Go back whence you came... Go back...
-:{{A|VO chapter4 27 wangyudie 102.ogg}} '''???:''' Ahead lies the realm of the dead...
-<pre>{
-	"$type": "RPG.GameCore.AdvClientChangePropState",
-	"TargetType": {
-		"$type": "RPG.GameCore.TargetFetchAdvPropEx",
-		"FetchType": "SinglePropByPropID",
-		"SinglePropID": {
-			"GroupID": {
-				"FixedValue": {
-					"Value": 57
-				}
-			},
-			"ID": {
-				"FixedValue": {
-					"Value": 300001
-				}
-			}
-		}
-	},
-	"FromState": "Locked"
-}</pre>
-<pre>{
-	"$type": "RPG.GameCore.SetGraphDynamicString",
-	"Name": "TargetPointAlias",
-	"TargetSelf": false,
-	"TargetIDs": [
-		300001
-	],
-	"Value": {
-		"Value": "End"
-	}
-}</pre>
-
-;(Upon reaching the destination)
-----
 :{{tx}}
-;(Unused &mdash; G57_ButterFly2)
-<pre>{
-	"$type": "RPG.GameCore.AdvCreateGroupEntity",
-	"InstanceIDList": [
-		300003
-	]
-}</pre>
-:<pre>{
-	"$type": "RPG.GameCore.AdvClientChangePropState",
-	"TargetType": {
-		"$type": "RPG.GameCore.TargetFetchAdvPropEx",
-		"FetchType": "SinglePropByPropID",
-		"SinglePropID": {
-			"GroupID": {
-				"FixedValue": {
-					"Value": 57
-				}
-			},
-			"ID": {
-				"FixedValue": {
-					"Value": 300001
-				}
-			}
-		}
-	},
-	"ToState": "Open"
-}</pre>
-
 {{Dialogue End}}
 
 ===Speak with the Styxian Spirit of the Dead{{subst:void|<!--104030703-->}}===
 {{Dialogue Start}}
-
-
-;(Upon reaching the destination)
-
-;(Upon reaching the destination)
-:{{A|VO chapter4 27 shangren 101.ogg}} '''Marketplace Merchant:''' Do you... want to buy any fish?
-:{{A|VO chapter4 27 mem 109.ogg}} '''Mem:''' Huh? He can see us?
-:{{A|VO chapter4 27 shangren 102.ogg}} '''Marketplace Merchant:''' Wait... More living people?
-:{{A|VO chapter4 27 shangren 103.ogg}} '''Marketplace Merchant:''' I'm not selling my fish to... living people. You lot are too... shameless. Buying fish without paying... If I ever see her again, I will... I will...
-:{{A|VO chapter4 27 castorice 119.ogg}} '''Castorice:''' Could it be that... You're all dead souls that never achieved rest?
-:{{A|VO chapter4 27 shangren 104.ogg}} '''Marketplace Merchant:''' The nether realm... Does not exist...
-:{{A|VO chapter4 27 shangren 105.ogg}} '''Marketplace Merchant:''' Titan... Rejects... You... Me...
-:{{A|VO chapter4 27 shangren 106.ogg}} '''Marketplace Merchant:''' So... do you want to buy any fish?
-:{{A|VO chapter4 27 mem 110.ogg}} '''Mem:''' But there aren't any "fish" nearby...
-:{{A|VO chapter4 27 shangren 107.ogg}} '''Marketplace Merchant:''' Are the fish... gone? The people... are gone, too...
-:{{A|VO chapter4 27 shangren 108.ogg}} '''Marketplace Merchant:''' I can only... keep selling fish. So... do you... want to buy any fish?
-:{{A|VO chapter4 27 castorice 120.ogg}} '''Castorice:''' ...
-:{{A|VO chapter4 27 castorice 121.ogg}} '''Castorice:''' Apologies, I don't have much in the way of savings, but perhaps there's another way for me to release you from your suffering.
-:{{A|VO chapter4 27 castorice 122.ogg}} '''Castorice:''' Please relax. May you fall asleep peacefully... amid a gentle field of flowers.
-:{{A|VO chapter4 27 shangren 109.ogg}} '''Marketplace Merchant:''' This... this...
-:{{A|VO chapter4 27 castorice 123.ogg}} '''Castorice:''' I knew it. These people aren't illusions. They're the souls of the deceased.
-:{{A|VO chapter4 27 castorice 124.ogg}} '''Castorice:''' They're supposed to reach the end of the west wind by floating down the River of Souls... Yet they have floundered upon the shoals of the stream, unable to move forward.
-:{{A|VO chapter4 27 castorice 125.ogg}} '''Castorice:''' Did {{Rubi|Thanatos|Death Titan}} reject them? Or perhaps they didn't really die at all?
-:{{DIcon|Arrow}} Are they in the same situation as me?
-:{{DIcon|Arrow}} Perhaps all of us can still use some CPR.
-::{{A|VO chapter4 27 mem 111.ogg}} '''Mem:''' Why are you identifying as a dead person now? Don't give up on yourself!
-:{{A|VO chapter4 27 castorice 126.ogg}} '''Castorice:''' I have no idea. This circumstance... is completely unprecedented.
 :{{tx}}
-
-;(Upon reaching the destination)
-:{{A|VO chapter4 27 castorice 117.ogg}} '''Castorice:''' These shadowy figures... are they illusions reflected by the River of Souls?
 {{Dialogue End}}
 
 ===Use Oronyx's Miracle to cross the River of Souls{{subst:void|<!--104030704-->}}===
 {{Mission Description|type=trailblaze|location="Dragonbone City" Styxia|update|Styxia, the City-State of Dragons and Waves... At present, the River of Souls has encircled this pitiful city.<br />Use Oronyx's Miracle to cross the treacherous waters of the River of Souls.}}
 {{Dialogue Start}}
-;(Upon reaching the destination)
-
-;(Upon reaching the destination)
-:{{A|VO chapter4 27 mem 116.ogg}} '''Mem:''' Hey, over here!
+:{{tx}}
 {{Dialogue End}}
 
 ===Continue exploring Dragonbone City and speak with the spirit of the centurion{{subst:void|<!--104030706-->}}===
 {{Mission Description|type=trailblaze|location="Dragonbone City" Styxia|update|Styxia, the City-State of Dragons and Waves... At present, the River of Souls has encircled this pitiful city.<br />The spirits of Anaxagoras repeatedly recount the past. They seem to be those who fell during Era Chrysea.}}
 {{Dialogue Start}}
-
-;(Talk to Centurion)
-:{{A|VO chapter4 27 baifuzhang 101.ogg}} '''Centurion:''' Ah, by the looks of it... you must be the foreign warriors that the queen had mentioned, right?
-:{{A|VO chapter4 27 baifuzhang 102.ogg}} '''Centurion:''' Since the current campaign requires the utmost care, I wasn't able to make time to welcome all of you. Please, forgive me.
-:{{A|VO chapter4 27 castorice 147.ogg}} '''Castorice:''' ...Foreign warriors?
-:{{A|VO chapter4 27 baifuzhang 103.ogg}} '''Centurion:''' A priestess, a warrior, and a, um... a divine beast... You look identical to the blessed saviors that the queen described!
-:{{DIcon|Arrow}} This is my pet, so I'm actually of the Hunter class.
-::{{A|VO chapter4 27 mem 124.ogg}} '''Mem:''' What...?
-::Oh darn. No healer on this team.
-:{{DIcon|Arrow}} Oh darn. No healer on this team.
-:{{A|VO chapter4 27 castorice 148.ogg}} '''Castorice:''' A campaign? Who are you campaigning against?
-:{{A|VO chapter4 27 baifuzhang 104.ogg}} '''Centurion:''' Nobody knows... as of now.
-:{{A|VO chapter4 27 baifuzhang 105.ogg}} '''Centurion:''' Of the scouts that went ahead, only one has managed to return. He says that the land ahead is a forbidden land that should not be approached, as it's the doorway between the netherworld and the mortal realm...
-:{{A|VO chapter4 27 baifuzhang 106.ogg}} '''Centurion:''' As for the rest of the scouts... They've completely lost their souls and are decaying by the day.
-:{{A|VO chapter4 27 baifuzhang 107.ogg}} '''Centurion:''' While there is still dissension within the city, the scholars agree that this calamity was so unprecedented that it needed to be given a new designation.
-:{{A|VO chapter4 27 castorice 149.ogg}} '''Castorice:''' An unprecedented calamity? Could it be... "Death"?
-:{{A|VO chapter4 27 baifuzhang 108.ogg}} '''Centurion:''' It seems that you have indeed heard about this. Well... "Death" is just one of the possibilities. It's too early to come to a definitive conclusion.
-:{{A|VO chapter4 27 castorice 150.ogg}} '''Castorice:''' A world that has never seen "Death"... Looks like these people lived in the Era Chrysea, before the Calamity Titans descended upon the land.
-:{{A|VO chapter4 27 castorice 151.ogg}} '''Castorice:''' May I ask... where is the scout who managed to came back?
-:{{A|VO chapter4 27 baifuzhang 109.ogg}} '''Centurion:''' Though he returned to Styxia... he only had enough left in him to last no more than half a day. However, it was his intel that convinced us to rally together.
-:{{A|VO chapter4 27 baifuzhang 110.ogg}} '''Centurion:''' He said that he witnessed the demonic specter of an evil dragon at that treacherous land. The apparition opened its giant maw and devoured everything in sight, and thus brought Styxia that thing called "Death."
-:{{A|VO chapter4 27 castorice 152.ogg}} '''Castorice:''' Styxia... an evil dragon that brings Death...
-:{{A|VO chapter4 27 mem 125.ogg}} '''Mem:''' It all sounds rather familiar... Wait, wasn't this part of that fable?
-:{{A|VO chapter4 27 castorice 153.ogg}} '''Castorice:''' Sir, could I... ask how the queen and princess are doing?
-:{{A|VO chapter4 27 baifuzhang 111.ogg}} '''Centurion:''' The queen?
-:{{A|VO chapter4 27 baifuzhang 112.ogg}} '''Centurion:''' &mdash; Ah, by the looks of it... you must be the foreign warriors that the queen had mentioned, right?
-:{{DIcon|Arrow}} Echo?
-:{{DIcon|Arrow}} I think he asked that already.
-:{{DIcon|Arrow}} Is he set to loop on repeat?
-:{{A|VO chapter4 27 mem 126.ogg}} '''Mem:''' It's the same lines... Looks like he's still trapped in the moments before his death.
 :{{tx}}
-;(Upon reaching the destination)
-
-;(Upon reaching the destination)
-<pre>{
-	"$type": "RPG.GameCore.PlayNPCBubbleTalk",
-	"BubbleTalkInfoList": [
-		{
-			"GroupID": 67,
-			"GroupNpcID": 400002,
-			"TalkSentenceID": 140311215
-		},
-		{
-			"AutoSkipTime": 2,
-			"GroupID": 67,
-			"GroupNpcID": 400003,
-			"TalkSentenceID": 140311217
-		}
-	],
-	"UniqueID": 1
-}</pre>
-;(Upon reaching the destination)
-
-;(Upon reaching the destination)
-:{{A|VO chapter4 27 castorice 145.ogg}} '''Castorice:''' There are wandering souls of the deceased here as well...
-:{{A|VO chapter4 27 castorice 146.ogg}} '''Castorice:''' We must first return to "the present" before we can communicate with them.
-
-;(Upon reaching the destination)
-:{{A|VO chapter4 27 mem 122.ogg}} '''Mem:''' Huh... So this path actually didn't exist back then?
-;(Upon reaching the destination)
-
-;(Upon reaching the destination)
-:{{A|VO chapter4 27 castorice 142.ogg}} '''Castorice:''' {{Rubi|Oronyx|Time Titan}}'s miracle has appeared...
-:{{A|VO chapter4 27 mem 120.ogg}} '''Mem:''' Amazing! It's like we're inside a giant bubble. Even the river got parted.
 {{Dialogue End}}
 
 ===Check the souls remains{{subst:void|<!--104030707-->}}===
 {{Mission Description|type=trailblaze|location="Dragonbone City" Styxia|update|Styxia, the City-State of Dragons and Waves... At present, the River of Souls has encircled this pitiful city.<br />The spirits of Anaxagoras repeatedly recount the past. They seem to be fallen who lived during Era Chrysea.<br />The remains left by these spirits seem to have a connection with alchemy and Thanatos.}}
 {{Dialogue Start}}
-
+:{{tx}}
 {{Dialogue End}}
 
 ===Continue exploring Dragonbone City and head higher{{subst:void|<!--104030705-->}}===
 {{Mission Description|type=trailblaze|location="Dragonbone City" Styxia|update|Styxia, the City-State of Dragons and Waves... At present, the River of Souls has encircled this pitiful city.<br />Everything points to the highest towers at Styxia. There, remains left by the great dragon linger.}}
 {{Dialogue Start}}
-;(Upon reaching the destination)
-
-;(Upon reaching the destination)
-:{{A|VO chapter4 27 mem 117.ogg}} '''Mem:''' Ah! Why are the black tide monsters here too? Can they swim in the River of Souls?
-:{{A|VO chapter4 27 castorice 383.ogg}} '''Castorice:''' Even {{Rubi|Thanatos|Death Titan}} wouldn't be able to accept black tide monsters into their realm...
-:{{A|VO chapter4 27 castorice 137.ogg}} '''Castorice:''' These traces seem to suggest that anybody who trespasses upon "Death"... will pay a heavy price.
-:{{DIcon|Arrow}} Will we suffer the same fate as well?
-:{{DIcon|Arrow}} We're also here to trespass upon the Titan.
-:{{A|VO chapter4 27 castorice 138.ogg}} '''Castorice:''' Since the realm of the dead must remain peaceful, it's imperative that we rid the place of such discordant noise.
 :{{tx}}
-;(Enter battle)
-::{{tx|Enemy list missing}}
-
-;(Upon reaching the destination)
-:{{A|VO chapter4 27 mem 118.ogg}} '''Mem:''' Could these dead monsters actually be...
-:{{A|VO chapter4 27 castorice 140.ogg}} '''Castorice:''' If Lady Cipher is to be believed... this could be the handiwork of Lord Mydei.
-:{{A|VO chapter4 27 castorice 141.ogg}} '''Castorice:''' He's still fighting against the black tide, even in the nether realm...
-;(Upon reaching the destination)
-
-;(Upon reaching the destination)
-:{{A|VO chapter4 27 mem 121.ogg}} '''Mem:''' If Dan Heng was around, he'd definitely be able to raise the waters of the River of Souls into the sky...
-:{{A|VO chapter4 27 castorice 144.ogg}} '''Castorice:''' If Lady Hysilens was still alive, I think she might be able to do that, too.
-
-;(Upon reaching the destination)
-:{{A|VO chapter4 27 castorice 167.ogg}} '''Castorice:''' The path ahead is blocked by the River of Souls again...
-:{{A|VO chapter4 27 mem 130.ogg}} '''Mem:''' In that case, let us go back to "the past"! This miracle sure is handy...
-:{{A|VO chapter4 27 castorice 168.ogg}} '''Castorice:''' ...This is yet another aspect of a Titan's divine power.
-
-;(Upon reaching the destination)
-:{{A|VO chapter4 27 mem 131.ogg}} '''Mem:''' We can't get through here. Let us return to "the present."
-
-;(Upon reaching the destination)
-;(If {{F|undefined}} is undefined 1)
-:{{A|VO chapter4 27 castorice 169.ogg}} '''Castorice:''' You seem to be able to discern both the past and the future...
 {{Dialogue End}}
 
 ===Continue exploring Dragonbone City and speak with the spirit of the court scholar{{subst:void|<!--104030708-->}}===
 {{Mission Description|type=trailblaze|location="Dragonbone City" Styxia|update|Styxia, the City-State of Dragons and Waves... At present, the River of Souls has encircled this pitiful city.<br />The spirits of Anaxagoras repeatedly recount the past. They seem to be those who fell during Era Chrysea.}}
 {{Dialogue Start}}
-;(Upon reaching the destination)
-
-;(Upon reaching the destination)
-:{{A|VO chapter4 27 xuezhe 101.ogg}} '''Court Scholar:''' Please excuse me. I am but a scholar from a distant land who had the misfortune of falling into the River of Souls and turned into a member of the dead...
-:{{A|VO chapter4 27 mem 136.ogg}} '''Mem:''' Huh? This one... seems to know that she's already dead.
-:{{A|VO chapter4 27 xuezhe 102.ogg}} '''Court Scholar:''' Oh, I was merely speculating. But it seems I was right.
-:{{A|VO chapter4 27 xuezhe 103.ogg}} '''Court Scholar:''' And you... You... I recognize you. You're the Holy Maiden of "Death" from Aidonia, right?
-:{{A|VO chapter4 27 castorice 172.ogg}} '''Castorice:''' I'm sorry... I cannot bring you back to life. However, should you desire it, I can end your prolonged limbo.
-:{{A|VO chapter4 27 xuezhe 104.ogg}} '''Court Scholar:''' Hah, I'm well aware of that. Even if you were able to revive me, I would never choose that option.
-:{{A|VO chapter4 27 xuezhe 105.ogg}} '''Court Scholar:''' That's because I didn't fall into the River of Souls by accident. Instead, I leaped into it to seek my death.
-:{{A|VO chapter4 27 castorice 173.ogg}} '''Castorice:''' ...Why?
-:{{A|VO chapter4 27 xuezhe 106.ogg}} '''Court Scholar:''' If you could see the life I've led, then you would not reproach me so. My life... was far too miserable.
-:{{A|VO chapter4 27 xuezhe 107.ogg}} '''Court Scholar:''' But I did not expect that things stay the same even in death! What a joke! In escaping my mortal life, I've entered a millennium of pain instead.
-:{{A|VO chapter4 27 xuezhe 108.ogg}} '''Court Scholar:''' Cerces above! What cowards humans are, for we fear both life and death simultaneously?
-:{{A|VO chapter4 27 castorice 174.ogg}} '''Castorice:''' I'm sorry... I'm also powerless to answer that question.
-:{{A|VO chapter4 27 xuezhe 109.ogg}} '''Court Scholar:''' That's alright, Holy Maiden. At least you are able to respond to me. Please... grant me "Death."
-:{{A|VO chapter4 27 xuezhe 110.ogg}} '''Court Scholar:''' Cerces above... Does this count as thinking till the moment I die?
-:{{DIcon|Arrow}} She seems... free.
-:{{DIcon|Arrow}} I can't imagine what it'd feel like to roam around this void for centuries...
-:{{A|VO chapter4 27 castorice 175.ogg}} '''Castorice:''' I have seen too many farewells... Her distress is quite commonplace. There are those who will end their lives over what seems to be the smallest of worries.
-:{{A|VO chapter4 27 castorice 176.ogg}} '''Castorice:''' For some people... This power that I possess is a "blessing" rather than a curse.
-:{{A|VO chapter4 27 castorice 177.ogg}} '''Castorice:''' ...But I never managed to convince myself of that.
-:{{A|VO chapter4 27 mem 137.ogg}} '''Mem:''' Cas... Are you still trying to create a world without "Death"?
-:{{A|VO chapter4 27 castorice 178.ogg}} '''Castorice:''' Yes. Because... When placed under time's vast scales, there is no worry in this world that cannot be solved.
-:{{DIcon|Arrow}} You should chat with Dan Heng about this.
-:{{DIcon|Arrow}} I can't agree with you on this.
-:{{A|VO chapter4 27 castorice 179.ogg}} '''Castorice:''' This is a wish that I've held for almost a millennium. My mind might have changed once upon a time if people managed to strike up a friendship with me...
 :{{tx}}
-
-;(Upon reaching the destination)
-:{{A|VO chapter4 27 mem 135.ogg}} '''Mem:''' This place... must have been a beautiful courtyard in the past.
-
 {{Dialogue End}}
 
 ===Continue exploring Dragonbone City and enter the royal vault{{subst:void|<!--104030709-->}}===
 {{Dialogue Start}}
-;(Upon reaching the destination)
-
-;(Upon reaching the destination)
-----
-:{{tx}}
-:{{A|VO chapter4 27 mem 138.ogg}} '''Mem:''' Wow... This place is so spacious! Is this the kingdom's vault?
-:{{DIcon|Arrow}} It's time to use Oronyx's miracle!
-::{{A|VO chapter4 27 mem 139.ogg}} '''Mem:''' That's fine and all, but we need to lay down some rules. We're not gonna return to the past to steal things.
-::I get scared when I see these vertical structures.
-:{{DIcon|Arrow}} I get scared when I see these vertical structures.
-:{{A|VO chapter4 27 mem 140.ogg}} '''Mem:''' Broken stairs, blocked paths... This place is gonna fall down soon...
-:{{A|VO chapter4 27 mem 141.ogg}} '''Mem:''' Do we need to enter that doorway to climb even higher? There seems to be a person... more like a soul guarding it.
 :{{tx}}
 {{Dialogue End}}
 
 ===Seek a pathway to higher ground{{subst:void|<!--104030710-->}}===
 {{Mission Description|type=trailblaze|location="Dragonbone City" Styxia|update|Styxia, the City-State of Dragons and Waves... At present, the River of Souls has encircled this pitiful city.<br />Everything points to the highest towers at Styxia. There, remains left by the great dragon linger.}}
 {{Dialogue Start}}
-
-;(Talk to Vault Officer)
-:{{A|VO chapter4 27 guanyuan 102.ogg}} '''Vault Officer:''' D&mdash;Don't come near me...
-:{{A|VO chapter4 27 mem 147.ogg}} '''Mem:''' Huh? Why does he look so panicked? Did the black tide monsters frighten him?
-:{{A|VO chapter4 27 mem 148.ogg}} '''Mem:''' Or... is he actually scared of his own extraordinary power?
-:{{DIcon|Arrow}} Lemme fight him!
-:{{DIcon|Arrow}} Ah, these are the troubles that powerhouses like us face...
-:{{A|VO chapter4 27 castorice 184.ogg}} '''Castorice:''' There's no need to be alarmed. We're just passing by the area. See? None of us look threatening.
 :{{tx}}
-;(Upon reaching the destination)
-
-;(Upon reaching the destination)
-:{{A|VO chapter4 27 castorice 181.ogg}} '''Castorice:''' But how should we get up there?
-
-;(Upon reaching the destination)
-:{{A|VO chapter4 27 castorice 182.ogg}} '''Castorice:''' The path is blocked yet again.
-:{{A|VO chapter4 27 mem 142.ogg}} '''Mem:''' {{Rubi|Oronyx|Time Titan}}'s aid always appears in times like this. How convenient...
-
-;(Upon reaching the destination)
-:{{A|VO chapter4 27 mem 145.ogg}} '''Mem:''' A "Chest of the Past" has been left behind, but none of its treasures remain inside...
-:{{A|VO chapter4 27 player 101 m.ogg}} {{A|VO chapter4 27 player 101 f.ogg}} '''(Trailblazer):''' (I'm crying!)
-
-;(Upon reaching the destination)
-:{{A|VO chapter4 27 guanyuan 101.ogg}} '''Ghost Voice:''' Stay back... Don't come any closer!
-;(Upon reaching the destination)
-
-;(Upon reaching the destination)
-:{{A|VO chapter4 27 mem 143.ogg}} '''Mem:''' Look. There's even a platform lift over there.
 {{Dialogue End}}
 
 ===Borrow the Philosopher's Stone and complete the alchemical ritual{{subst:void|<!--104030717-->}}===
 {{Mission Description|type=trailblaze|location="Dragonbone City" Styxia|update|With Anaxagoras's Philosopher's Stone, Styxia's alchemical array, and the spiritual remains in Castorice's hands, the alchemical preparations are ready.<br />According to data from the Grove, "All things come into being through the combination of the Four Roots and perish with their separation." Complete the alchemical array and summon the Titan.}}
 {{Dialogue Start}}
-
-;(Upon reaching the destination)
+:{{tx}}
 {{Dialogue End}}
 
 ===Check the souls remains{{subst:void|<!--104030711-->}}===
 {{Mission Description|type=trailblaze|location="Dragonbone City" Styxia|update|Styxia, the City-State of Dragons and Waves... At present, the River of Souls has encircled this pitiful city.<br />The spirits of Anaxagoras repeatedly recount the past. They seem to be fallen who lived during Era Chrysea.<br />The remains left by these spirits seem to have a connection with alchemy and Thanatos.}}
 {{Dialogue Start}}
-:{{A|VO chapter4 27 castorice 193.ogg}} '''Castorice:''' This is his...
-;(Upon reaching the destination)
-;(Upon reaching the destination)
-
-;(Upon reaching the destination)
-:{{A|VO chapter4 27 mem 146.ogg}} '''Mem:''' W&mdash;Wait! What if the miracle suddenly loses its effect?
-:{{A|VO chapter4 27 castorice 183.ogg}} '''Castorice:''' Mem... Do you really want me to answer that?
+:{{tx}}
 {{Dialogue End}}
 
 ===Continue exploring Dragonbone City and speak with the spirit of the alchemist{{subst:void|<!--104030719-->}}===
 {{Mission Description|type=trailblaze|location="Dragonbone City" Styxia|update|Styxia, the City-State of Dragons and Waves... At present, the River of Souls has encircled this pitiful city.<br />Everything points to the highest towers at Styxia. There, remains left by the great dragon linger.}}
 {{Dialogue Start}}
-
-;(Upon reaching the destination)
-
-;(Upon reaching the destination)
-:{{A|VO chapter4 27 wangyudie 103.ogg}} '''Eulogistic Butterfly:''' Don't look back... Keep moving forward, always.
-:{{A|VO chapter4 27 castorice 196.ogg}} '''Castorice:''' It's yet another Eulogistic Butterfly... Are we getting closer to the nether realm?
-<pre>{
-	"$type": "RPG.GameCore.AdvClientChangePropState",
-	"TargetType": {
-		"$type": "RPG.GameCore.TargetFetchAdvPropEx",
-		"FetchType": "SinglePropByPropID",
-		"SinglePropID": {
-			"GroupID": {
-				"FixedValue": {
-					"Value": 188
-				}
-			},
-			"ID": {
-				"FixedValue": {
-					"Value": 300001
-				}
-			}
-		}
-	},
-	"FromState": "Locked"
-}</pre>
-<pre>{
-	"$type": "RPG.GameCore.SetGraphDynamicString",
-	"Name": "TargetPointAlias",
-	"TargetSelf": false,
-	"TargetIDs": [
-		300001
-	],
-	"Value": {
-		"Value": "End"
-	}
-}</pre>
-:<!--10-second delay-->
-<pre>{
-	"$type": "RPG.GameCore.AdvClientChangePropState",
-	"TargetType": {
-		"$type": "RPG.GameCore.TargetFetchAdvPropEx",
-		"FetchType": "SinglePropByPropID",
-		"SinglePropID": {
-			"GroupID": {
-				"FixedValue": {
-					"Value": 188
-				}
-			},
-			"ID": {
-				"FixedValue": {
-					"Value": 300001
-				}
-			}
-		}
-	},
-	"ToState": "Open"
-}</pre>
-;(Upon reaching the destination)
-;(Upon reaching the destination)
-
-;(Upon reaching the destination)
-:{{A|VO chapter4 27 lianjin 102.ogg}} '''Alchemist:''' Oh... Could you be the scions of Styxia?
-:{{A|VO chapter4 27 lianjin 103.ogg}} '''Alchemist:''' Did you hear about the great work that I'm doing here, and have thus arrived to give me the last material that I need for transmutation?
-:{{A|VO chapter4 27 castorice 197.ogg}} '''Castorice:''' Great work?
-:{{A|VO chapter4 27 lianjin 104.ogg}} '''Alchemist:''' Have you heard of the great name of Pollux, perchance?
-:Its pilot is probably right here.
-:{{A|VO chapter4 27 castorice 198 m.ogg}} {{A|VO chapter4 27 castorice 198 f.ogg}} '''Castorice:''' You don't have to describe it like that, {{MC|m=Mr.|f=Miss}} (Trailblazer)...
-:{{DIcon|Arrow}} I've definitely heard that name many times today.
-:{{DIcon|Arrow}} Its pilot is probably right here.
-::{{A|VO chapter4 27 castorice 198 m.ogg}} {{A|VO chapter4 27 castorice 198 f.ogg}} '''Castorice:''' You don't have to describe it like that, {{MC|m=Mr.|f=Miss}} (Trailblazer)...
-::I've definitely heard that name many times today.
-:{{A|VO chapter4 27 lianjin 105.ogg}} '''Alchemist:''' You have? Then that's good.
-:{{A|VO chapter4 27 lianjin 106.ogg}} '''Alchemist:''' During the age of myth, a time likely before your birth, I was the unsurpassed zenith of alchemy that none could reach! On the shoals of the River of Souls, I shall make Pollux soar again... and bring "Death" back to the world!
-:{{A|VO chapter4 27 mem 153.ogg}} '''Mem:''' But... didn't that dragon already bring "Death" to the world?
-:{{A|VO chapter4 27 lianjin 107.ogg}} '''Alchemist:''' Oh...? Looks like you don't know the whole picture.
-:{{A|VO chapter4 27 lianjin 108.ogg}} '''Alchemist:''' While it's true that the missing girl can grant death to mortals... Pollux, the one who delivered her onto this world... Makes it so that humankind "cannot die."
-:{{A|VO chapter4 27 castorice 199.ogg}} '''Castorice:''' ...
-:{{A|VO chapter4 27 castorice 200.ogg}} '''Castorice:''' So... It's just as I feared...
-:{{DIcon|Arrow}} What did you figure out?
-:{{DIcon|Arrow}} You and that dragon... Are you the two sides of the same coin?
-:{{A|VO chapter4 27 castorice 201.ogg}} '''Castorice:''' This is my guess...
 :{{tx}}
-
-;(Upon reaching the destination)
-:{{A|VO chapter4 27 lianjin 101.ogg}} '''Alchemist:''' ...Living ones?
-
-;(Upon reaching the destination)
-:*A rumble from the distance*
-:{{A|VO chapter4 27 mem 152.ogg}} '''Mem:''' This... This is...
-<pre>{
-	"$type": "RPG.GameCore.TriggerSound",
-	"SoundName": {
-		"Value": "Ev_sfx_storyd_320dev_indoorthunder2"
-	}
-}</pre>
 {{Dialogue End}}
 
 ===Speak with Mydei{{subst:void|<!--104030713-->}}===
 {{Mission Description|type=trailblaze|location="Dragonbone City" Styxia|update|Styxia, the City-State of Dragons and Waves... At present, the River of Souls has encircled this pitiful city.<br />Illusions of Mydei's soul seem to have appeared on the banks of the River of Souls as he slaughters his way out of the nether realm.}}
 {{Dialogue Start}}
-;(Upon reaching the destination)
-
-;(Upon reaching the destination)
-:After the rumble, a towering figure stands before you...
-:That is probably the wrath of the nether realm, as spoken of by the alchemists. How terrifying must it be? It must be more hideous than anything you've ever encountered, more...
-:More... familiar.
-:{{A|VO chapter4 27 mydei 101.ogg}} '''Mydei:''' You...?
-:{{A|VO chapter4 27 castorice 207.ogg}} '''Castorice:''' Lord Mydei...?
-:{{DIcon|Arrow}} I missed you so much that it almost killed me... Uh. Pun unintended.
-:{{DIcon|Arrow}} You're adventuring in the River of Souls, too?
-:{{A|VO chapter4 27 castorice 208.ogg}} '''Castorice:''' Lord Mydei... You've been through some tough battles once again.
-:{{A|VO chapter4 27 mydei 102.ogg}} '''Mydei:''' That black tide... is endless. My death... is only temporary.
-:{{A|VO chapter4 27 mydei 103.ogg}} '''Mydei:''' I will find my path of return... and go back to the world of the living... and continue my "protection."
-:{{A|VO chapter4 27 castorice 209.ogg}} '''Castorice:''' Lord Mydei, I have always wanted to... Why does Death reject you?
-:{{A|VO chapter4 27 mydei 104.ogg}} '''Mydei:''' I'm the one... resisting it. I must resist... the temptation to go with the flow...
-:{{A|VO chapter4 27 mydei 105.ogg}} '''Mydei:''' I'll go against the current... and kill my way out of this cursed nether realm...
-:{{A|VO chapter4 27 mydei 106.ogg}} '''Mydei:''' That is... my destiny.
-:{{DIcon|Arrow}} He seems to be stuttering...
-:{{DIcon|Arrow}} Is this really the proud Mydei?
-:{{A|VO chapter4 27 castorice 210.ogg}} '''Castorice:''' It seems like he's completely focused on resisting the temptation of the deads' whispers... He's working hard every minute to deny death.
 :{{tx}}
 {{Dialogue End}}
 
 ===Continue exploring Dragonbone City and seek a path to higher ground{{subst:void|<!--104030714-->}}===
 {{Mission Description|type=trailblaze|location="Dragonbone City" Styxia|update|Styxia, the City-State of Dragons and Waves... At present, the River of Souls has encircled this pitiful city.<br />Everything points to the highest towers at Styxia. There, remains left by the great dragon linger.}}
 {{Dialogue Start}}
-;(Upon reaching the destination)
-
-;(Upon reaching the destination)
-:Before you are rusted and broken chains, remnants of a path that once led to the tower.
-:{{A|VO chapter4 27 castorice 218.ogg}} '''Castorice:''' ...This is going to be difficult.
-:Watch me jump over!
-:{{A|VO chapter4 27 castorice 219.ogg}} '''Castorice:''' ...Please calm down. If you were to fall into the icy cold River of Souls... I'm afraid that you really would die here.
-:{{DIcon|Arrow}} Didn't Castrum Kremnos also have this...?
-:{{DIcon|Arrow}} Watch me jump over!
-::{{A|VO chapter4 27 castorice 219.ogg}} '''Castorice:''' ...Please calm down. If you were to fall into the icy cold River of Souls... I'm afraid that you really would die here.
-::Didn't Castrum Kremnos also have this...?
-:{{A|VO chapter4 27 mydei 112.ogg}} '''Mydei:''' I'm familiar... with this kind of mechanism.
-:{{A|VO chapter4 27 mydei 113.ogg}} '''Mydei:''' But I've never repaired... broken chains.
-:{{A|VO chapter4 27 mem 158.ogg}} '''Mem:''' Ugh... If I was more powerful, I would be able to carry one person with each limb and fly the four of us to the other side.
-:{{A|VO chapter4 27 mem 159.ogg}} '''Mem:''' The Rune of Recollection is here, but I can't find a Miracle Orb anywhere. So weird...
-:{{A|VO chapter4 27 mem 160.ogg}} '''Mem:''' Could it be in that collapsed tower in the distance?
-:{{DIcon|Arrow}} Looks like it's your time to shine.
-::{{A|VO chapter4 27 mem 161.ogg}} '''Mem:''' It's still up to me to step up in a crisis... Wait here. I'll go check things out!
-:{{DIcon|Arrow}} One minute of Mem being useful comes from a thousand days of training Mem.
-::{{A|VO chapter4 27 mem 162.ogg}} '''Mem:''' That sounds so weird... Forget it. Just leave it to me!
 :{{tx}}
 {{Dialogue End}}
 
 ===Ask Mem to use Oronyx's Prayer{{subst:void|<!--104030715-->}}===
 {{Mission Description|type=trailblaze|location="Dragonbone City" Styxia|update|Styxia, the City-State of Dragons and Waves... At present, the River of Souls has encircled this pitiful city.<br />The path ahead has been severed. Mem, capable of flying and using Oronyx's Miracle, has restored the Miracle Orb in a distant tower.}}
 {{Dialogue Start}}
-
+:{{tx}}
 {{Dialogue End}}
 
 ===Continue exploring Dragonbone City and proceed upward with the chains of the past{{subst:void|<!--104030716-->}}===
 {{Mission Description|type=trailblaze|location="Dragonbone City" Styxia|update|Styxia, the City-State of Dragons and Waves... At present, the River of Souls has encircled this pitiful city.<br />Everything points to the highest towers at Styxia. There, remains left by the great dragon linger.}}
 {{Dialogue Start}}
-;(Upon reaching the destination)
-
-;(Upon reaching the destination)
-:{{A|VO chapter4 27 trianne 101.ogg}} '''Trianne:''' Wow, there are so many of you!
-:{{A|VO chapter4 27 trianne 102.ogg}} '''Trianne:''' It's Little Cas, and Little Gray! There's also... Little De and the pink puppy!
-:{{A|VO chapter4 27 mem 167.ogg}} '''Mem:''' Trianne? Aren't you...
-:{{DIcon|Arrow}} ...Dead?
-:{{DIcon|Arrow}} Trianne and Mydei... I get it now.
-::{{A|VO chapter4 27 mem 168.ogg}} '''Mem:''' G-Get what? I'm getting even more confused...
-:{{A|VO chapter4 27 mydei 115.ogg}} '''Mydei:''' Heh...
 :{{tx}}
-;(Upon reaching the destination)
-
-;(Upon reaching the destination)
-:{{A|VO chapter4 27 castorice 220.ogg}} '''Castorice:''' Mem did it...
-:{{A|VO chapter4 27 mydei 114.ogg}} '''Mydei:''' The pink squirrel... is very smart.
-:{{A|VO chapter4 27 mem 165.ogg}} '''Mem:''' ...Why am I a squirrel now?
-
-;(Upon reaching the destination)
-:{{A|VO chapter4 27 castorice 221.ogg}} '''Castorice:''' The miracle's range is limited. Please come a little closer...
-
-;(Upon reaching the destination)
-:{{A|VO chapter4 27 mem 166.ogg}} '''Mem:''' Heehee. Aren't I a good fit for {{Rubi|Oronyx|Time Titan}}'s priest?
-:{{A|VO chapter4 27 castorice 222.ogg}} '''Castorice:''' Of course, you're the most competent priest ever.
-
-;(Upon reaching the destination)
-:{{A|VO chapter4 27 castorice 223.ogg}} '''Castorice:''' The alchemical matrix... should be behind this door.
-
-;(Upon reaching the destination)
-:{{A|VO chapter4 27 castorice 224.ogg}} '''Castorice:''' Is that...
-:{{A|VO chapter4 27 castorice 225.ogg}} '''Castorice:''' ...
 {{Dialogue End}}
 
 ===Borrow the Philosopher's Stone and complete the alchemical ritual{{subst:void|<!--104030722-->}}===
 {{Mission Description|type=trailblaze|location="Dragonbone City" Styxia|update|With Anaxagoras's Philosopher's Stone, Styxia's alchemical array, and the spiritual remains in Castorice's hands, the alchemical preparations are ready.<br />According to data from the Grove, "All things come into being through the combination of the Four Roots and perish with their separation." Complete the alchemical array and summon the Titan.}}
 {{Dialogue Start}}
-
-;(Unused &mdash; Battle_G83)
-;(Enter battle)
-::{{Enemy List|Pollux, Netherwing Husk, Ferry of Souls*1}}
+:{{tx}}
 {{Dialogue End}}
 
 ===Speak with Castorice and head to the nether realm{{subst:void|<!--104030723-->}}===
 {{Mission Description|type=trailblaze|location="Dragonbone City" Styxia|update|The remains of Netherwing forged by the River of Souls. It carries Castorice to a shore none could cross.<br />Before Castorice makes her move, speak with her again.}}
 {{Dialogue Start}}
-;(Upon reaching the destination)
-
-;(Upon reaching the destination)
-----
-----
-;([[#Gallery|Cutscene]] plays)
-::O, Death...
-::...Sleep in peace.
-;(Cutscene ends)
-----
-:{{A|VO chapter4 27 silong 103.ogg}} '''"Netherwing" Pollux:''' ...
-:{{A|VO chapter4 27 castorice 321.ogg}} '''Castorice:''' I'm sorry I have to wake you up from ancient death...
-:{{A|VO chapter4 27 castorice 322.ogg}} '''Castorice:''' And I know you're anxious... Shh, don't be afraid...
-:{{A|VO chapter4 27 silong 104.ogg}} '''"Netherwing" Pollux:''' ...
-:{{A|VO chapter4 27 castorice 323.ogg}} '''Castorice:''' Do you remember me? I'm the girl you once carried across the Sea of Souls.
-:{{A|VO chapter4 27 castorice 324.ogg}} '''Castorice:''' I'm sorry I wasn't able to remember you, but with the help of many people, I was finally able to pick up these broken fragments of my past...
-:{{A|VO chapter4 27 castorice 325.ogg}} '''Castorice:''' ...I'm back, Pollux.
-:{{A|VO chapter4 27 castorice 326.ogg}} '''Castorice:''' I know this might not be what you wanted.
-:{{A|VO chapter4 27 silong 105.ogg}} '''"Netherwing" Pollux:''' ...
-:{{A|VO chapter4 27 castorice 327.ogg}} '''Castorice:''' But I have to do this.
-:{{A|VO chapter4 27 castorice 328.ogg}} '''Castorice:''' So please, carry me across the Sea of Souls again and return me to the nether realm, just like you did in the past...
-:{{A|VO chapter4 27 castorice 329.ogg}} '''Castorice:''' Please take me to where the Coreflame of "Death" rests.
-:{{A|VO chapter4 27 castorice 330.ogg}} '''Castorice:''' ...I'll be going now.
-:{{DIcon|Arrow}} Great, let's go.
-:{{DIcon|Arrow}} Uh... We won't have to go into an egg, right?
-:{{A|VO chapter4 27 silong 103.ogg}} '''"Netherwing" Pollux:''' ...
-:{{A|VO chapter4 27 castorice 321.ogg}} '''Castorice:''' I'm sorry I have to wake you up from ancient death...
-:{{A|VO chapter4 27 castorice 322.ogg}} '''Castorice:''' And I know you're anxious... Shh, don't be afraid...
-:{{A|VO chapter4 27 silong 104.ogg}} '''"Netherwing" Pollux:''' ...
-:{{A|VO chapter4 27 castorice 323.ogg}} '''Castorice:''' Do you remember me? I'm the girl you once carried across the Sea of Souls.
-:{{A|VO chapter4 27 castorice 324.ogg}} '''Castorice:''' I'm sorry I wasn't able to remember you, but with the help of many people, I was finally able to pick up these broken fragments of my past...
-:{{A|VO chapter4 27 castorice 325.ogg}} '''Castorice:''' ...I'm back, Pollux.
-:{{A|VO chapter4 27 castorice 326.ogg}} '''Castorice:''' I know this might not be what you wanted.
-:{{A|VO chapter4 27 silong 105.ogg}} '''"Netherwing" Pollux:''' ...
-:{{A|VO chapter4 27 castorice 327.ogg}} '''Castorice:''' But I have to do this.
-:{{A|VO chapter4 27 castorice 328.ogg}} '''Castorice:''' So please, carry me across the Sea of Souls again and return me to the nether realm, just like you did in the past...
-:{{A|VO chapter4 27 castorice 329.ogg}} '''Castorice:''' Please take me to where the Coreflame of "Death" rests.
-:{{A|VO chapter4 27 castorice 330.ogg}} '''Castorice:''' ...I'll be going now.
-:Great, let's go.
-:Uh... We won't have to go into an egg, right?
-:{{A|VO chapter4 27 castorice 331.ogg}} '''Castorice:''' They may look scary, but as long... as... we...
-:{{A|VO chapter4 27 player 102 m.ogg}} {{A|VO chapter4 27 player 102 f.ogg}} '''(Trailblazer):''' (What's... happening...)
-:{{A|VO chapter4 27 mem 180.ogg}} '''Mem:''' Huh...? What's wrong...!?
-:{{DIcon|Arrow}} I feel dizzy...
-:{{DIcon|Arrow}} I think I...
-:{{DIcon|Arrow}} I'm done for...
-:{{A|VO chapter4 27 castorice 332.ogg}} '''Castorice:''' Are you...?
-:{{A|VO chapter4 27 mem 181 m.ogg}} {{A|VO chapter4 27 mem 181 f.ogg}} '''Mem:''' What's wrong with {{MC|m=him?|f=her?}}
-:{{A|VO chapter4 27 castorice 333 m.ogg}} {{A|VO chapter4 27 castorice 333 f.ogg}} '''Castorice:''' {{MC|m=His|f=Her}} time is almost up. If I don't go now, I'm afraid {{MC|m=his|f=her}} soul will return to {{Rubi|Thanatos|Death Titan}}' embrace before me.
-:{{A|VO chapter4 27 mem 182.ogg}} '''Mem:''' What! Oh no... Is there anything we can do?
-:{{A|VO chapter4 27 castorice 334.ogg}} '''Castorice:''' Don't worry. I promised I would ask {{Rubi|Thanatos|Death Titan}} for the Trailblazer's right to roam the earth again.
-:{{A|VO chapter4 27 castorice 335.ogg}} '''Castorice:''' Mem, stay here and keep a close watch until I return, alright?
-:{{A|VO chapter4 27 mem 183.ogg}} '''Mem:''' Alright! I'm the best at taking care of others.
-:{{A|VO chapter4 27 mem 184.ogg}} '''Mem:''' Go on, Cas. Make sure not to leave yourself with any regrets.
-:{{DIcon|Arrow}} No regrets...
-::{{A|VO chapter4 27 silong 103.ogg}} '''"Netherwing" Pollux:''' ...
-::{{A|VO chapter4 27 castorice 321.ogg}} '''Castorice:''' I'm sorry I have to wake you up from ancient death...
-::{{A|VO chapter4 27 castorice 322.ogg}} '''Castorice:''' And I know you're anxious... Shh, don't be afraid...
-::{{A|VO chapter4 27 silong 104.ogg}} '''"Netherwing" Pollux:''' ...
-::{{A|VO chapter4 27 castorice 323.ogg}} '''Castorice:''' Do you remember me? I'm the girl you once carried across the Sea of Souls.
-::{{A|VO chapter4 27 castorice 324.ogg}} '''Castorice:''' I'm sorry I wasn't able to remember you, but with the help of many people, I was finally able to pick up these broken fragments of my past...
-::{{A|VO chapter4 27 castorice 325.ogg}} '''Castorice:''' ...I'm back, Pollux.
-::{{A|VO chapter4 27 castorice 326.ogg}} '''Castorice:''' I know this might not be what you wanted.
-::{{A|VO chapter4 27 silong 105.ogg}} '''"Netherwing" Pollux:''' ...
-::{{A|VO chapter4 27 castorice 327.ogg}} '''Castorice:''' But I have to do this.
-::{{A|VO chapter4 27 castorice 328.ogg}} '''Castorice:''' So please, carry me across the Sea of Souls again and return me to the nether realm, just like you did in the past...
-::{{A|VO chapter4 27 castorice 329.ogg}} '''Castorice:''' Please take me to where the Coreflame of "Death" rests.
-::{{A|VO chapter4 27 castorice 330.ogg}} '''Castorice:''' ...I'll be going now.
-::Great, let's go.
-::Uh... We won't have to go into an egg, right?
-::{{A|VO chapter4 27 castorice 331.ogg}} '''Castorice:''' They may look scary, but as long... as... we...
-::{{A|VO chapter4 27 player 102 m.ogg}} {{A|VO chapter4 27 player 102 f.ogg}} '''(Trailblazer):''' (What's... happening...)
-::{{A|VO chapter4 27 mem 180.ogg}} '''Mem:''' Huh...? What's wrong...!?
-::I feel dizzy...
-::I think I...
-::I'm done for...
-::{{A|VO chapter4 27 castorice 332.ogg}} '''Castorice:''' Are you...?
-::{{A|VO chapter4 27 mem 181 m.ogg}} {{A|VO chapter4 27 mem 181 f.ogg}} '''Mem:''' What's wrong with {{MC|m=him?|f=her?}}
-::{{A|VO chapter4 27 castorice 333 m.ogg}} {{A|VO chapter4 27 castorice 333 f.ogg}} '''Castorice:''' {{MC|m=His|f=Her}} time is almost up. If I don't go now, I'm afraid {{MC|m=his|f=her}} soul will return to {{Rubi|Thanatos|Death Titan}}' embrace before me.
-::{{A|VO chapter4 27 mem 182.ogg}} '''Mem:''' What! Oh no... Is there anything we can do?
-::{{A|VO chapter4 27 castorice 334.ogg}} '''Castorice:''' Don't worry. I promised I would ask {{Rubi|Thanatos|Death Titan}} for the Trailblazer's right to roam the earth again.
-::{{A|VO chapter4 27 castorice 335.ogg}} '''Castorice:''' Mem, stay here and keep a close watch until I return, alright?
-::{{A|VO chapter4 27 mem 183.ogg}} '''Mem:''' Alright! I'm the best at taking care of others.
-::{{A|VO chapter4 27 mem 184.ogg}} '''Mem:''' Go on, Cas. Make sure not to leave yourself with any regrets.
-::No regrets...
-::Take your time. I can still hold out...
-::I'll go too. Let's see who gets to the nether realm first...
-:{{DIcon|Arrow}} Take your time. I can still hold out...
-::{{A|VO chapter4 27 silong 103.ogg}} '''"Netherwing" Pollux:''' ...
-::{{A|VO chapter4 27 castorice 321.ogg}} '''Castorice:''' I'm sorry I have to wake you up from ancient death...
-::{{A|VO chapter4 27 castorice 322.ogg}} '''Castorice:''' And I know you're anxious... Shh, don't be afraid...
-::{{A|VO chapter4 27 silong 104.ogg}} '''"Netherwing" Pollux:''' ...
-::{{A|VO chapter4 27 castorice 323.ogg}} '''Castorice:''' Do you remember me? I'm the girl you once carried across the Sea of Souls.
-::{{A|VO chapter4 27 castorice 324.ogg}} '''Castorice:''' I'm sorry I wasn't able to remember you, but with the help of many people, I was finally able to pick up these broken fragments of my past...
-::{{A|VO chapter4 27 castorice 325.ogg}} '''Castorice:''' ...I'm back, Pollux.
-::{{A|VO chapter4 27 castorice 326.ogg}} '''Castorice:''' I know this might not be what you wanted.
-::{{A|VO chapter4 27 silong 105.ogg}} '''"Netherwing" Pollux:''' ...
-::{{A|VO chapter4 27 castorice 327.ogg}} '''Castorice:''' But I have to do this.
-::{{A|VO chapter4 27 castorice 328.ogg}} '''Castorice:''' So please, carry me across the Sea of Souls again and return me to the nether realm, just like you did in the past...
-::{{A|VO chapter4 27 castorice 329.ogg}} '''Castorice:''' Please take me to where the Coreflame of "Death" rests.
-::{{A|VO chapter4 27 castorice 330.ogg}} '''Castorice:''' ...I'll be going now.
-::Great, let's go.
-::Uh... We won't have to go into an egg, right?
-::{{A|VO chapter4 27 castorice 331.ogg}} '''Castorice:''' They may look scary, but as long... as... we...
-::{{A|VO chapter4 27 player 102 m.ogg}} {{A|VO chapter4 27 player 102 f.ogg}} '''(Trailblazer):''' (What's... happening...)
-::{{A|VO chapter4 27 mem 180.ogg}} '''Mem:''' Huh...? What's wrong...!?
-::I feel dizzy...
-::I think I...
-::I'm done for...
-::{{A|VO chapter4 27 castorice 332.ogg}} '''Castorice:''' Are you...?
-::{{A|VO chapter4 27 mem 181 m.ogg}} {{A|VO chapter4 27 mem 181 f.ogg}} '''Mem:''' What's wrong with {{MC|m=him?|f=her?}}
-::{{A|VO chapter4 27 castorice 333 m.ogg}} {{A|VO chapter4 27 castorice 333 f.ogg}} '''Castorice:''' {{MC|m=His|f=Her}} time is almost up. If I don't go now, I'm afraid {{MC|m=his|f=her}} soul will return to {{Rubi|Thanatos|Death Titan}}' embrace before me.
-::{{A|VO chapter4 27 mem 182.ogg}} '''Mem:''' What! Oh no... Is there anything we can do?
-::{{A|VO chapter4 27 castorice 334.ogg}} '''Castorice:''' Don't worry. I promised I would ask {{Rubi|Thanatos|Death Titan}} for the Trailblazer's right to roam the earth again.
-::{{A|VO chapter4 27 castorice 335.ogg}} '''Castorice:''' Mem, stay here and keep a close watch until I return, alright?
-::{{A|VO chapter4 27 mem 183.ogg}} '''Mem:''' Alright! I'm the best at taking care of others.
-::{{A|VO chapter4 27 mem 184.ogg}} '''Mem:''' Go on, Cas. Make sure not to leave yourself with any regrets.
-::No regrets...
-::Take your time. I can still hold out...
-::I'll go too. Let's see who gets to the nether realm first...
-:{{DIcon|Arrow}} I'll go too. Let's see who gets to the nether realm first...
-:{{A|VO chapter4 27 mem 185.ogg}} '''Mem:''' That's not funny!
-:{{A|VO chapter4 27 castorice 336.ogg}} '''Castorice:''' It's a deal then.
 :{{tx}}
 {{Dialogue End}}
 
 ===Return to the nether realm via "Netherwing" Pollux{{subst:void|<!--104030725-->}}===
 {{Mission Description|type=trailblaze|location="Dragonbone City" Styxia|update|The remains of Netherwing forged by the River of Souls. It carries Castorice to a shore none could cross.<br />The twins will soon reunite at the other shore.}}
 {{Dialogue Start}}
+:{{tx}}
 {{Dialogue End}}
 
 ==Other Languages==

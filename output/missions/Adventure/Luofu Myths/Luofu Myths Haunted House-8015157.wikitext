@@ -42,205 +42,35 @@ PageTitle=#Luofu Myths: Haunted House#
 ===Head to the Alchemy Commission and find the poster{{subst:void|<!--801515701-->}}===
 {{Mission Description|type=adventure|location=Fyxestroll Garden|A post on Ghostly Grove concerning a haunted residence catches your group's attention. After Guinaifen sent a private message to the poster, she now believes this issue is not only related to heliobi but also great content that can get more fans. You decide to go to the Alchemy Commission to meet up with the poster...}}
 {{Dialogue Start}}
-:'''Guinaifen:''' A haunted house... A ghost... I can already smell our followers increasing!
-:'''Sushang:''' ...This must be the work of a heliobus?
-:'''Huohuo:''' Yes, I imagine so.
-:{{DIcon|Arrow}} We're not ruling out the chance that it's a fraud...?
-::'''Guinaifen:''' ...(Trailblazer) is right. We'll need to visit personally to reach a proper conclusion.
-::There's no doubt about it. It's a heliobus!
-:{{DIcon|Arrow}} There's no doubt about it. It's a heliobus!
-:'''Guinaifen:''' It's so hard to tell what's true and what's not on the network... We should go and visit before reaching a conclusion.
-:'''Sushang:''' So, will you go, Huohuo?
-:'''Huohuo:''' I've found some clues that may be linked to Tail on another post. I want to go and confirm for myself...
-:'''Sushang:''' You go and do what you need, Huohuo. Little Gui, (Trailblazer), and I will go to the haunted house!
-:{{DIcon|Arrow}} Don't worry. We're on it.
-::'''Guinaifen:''' Make sure you tell us if you come across any trouble, Huohuo.
-::...I actually want to find Tail more.
-:{{DIcon|Arrow}} ...I actually want to find Tail more.
-:'''Huohuo:''' I'm not actually sure if these messages are reliable, so I don't want to trouble you all...
-:'''Guinaifen:''' Huohuo, make sure you tell us if you come across any trouble!
-:'''Sushang:''' After all, it's not the ghost-hunting squad without any of us, right?
-:'''Huohuo:''' ...Thank you.
-:'''Guinaifen:''' I've messaged the person who made the post, and he has sent me an address. Alright, ghost-hunting squad, let's move out!
-:{{DIcon|Arrow}} Move out!
+:{{tx}}
 {{Dialogue End}}
 
 ===Speak with the poster{{subst:void|<!--801515702-->}}===
 {{Dialogue Start}}
-
-;(Talk to Renault)
-:'''Unfamiliar Man:''' ...You're finally here. It's me, and I am the landlord of the haunted house. Just call me Renault.
-:'''Guinaifen:''' Woo, let's go! It's time to investigate your haunted house!
-:'''Renault:''' Wait a minute. Where is your Ten-Lords member?
-:'''Sushang:''' We may not be members of the Ten-Lords, but we're all pretty capable! Is there something that you cannot tell us?
-:'''Renault:''' It's not that I am looking down on you. It's just that there are so many strange stories on the Ghostly Grove, and so many of them are just baseless made-up stories... But this time, I've met the real thing!
-:'''Renault:''' Without the assistance of the Ten-Lords Commission, I fear that you alone may not be of any use.
-:{{DIcon|Arrow}} We've dealt with the real thing before, too!
-:{{DIcon|Arrow}} If you ask me, the Ten-Lords Commission aren't all they're cracked up to be.
-::'''Renault:''' You talk big, {{MC|f=girl|m=boy}}.
-::For all we know, you're the one making up stories.
-::'''Renault:''' Hey! You still don't believe me?
-:{{DIcon|Arrow}} For all we know, you're the one making up stories.
-::'''Renault:''' Hey! You still don't believe me?
-:'''Renault:''' Fine. There are some things that I did not mention in my original post. You'll understand once I explain.
-:'''Renault:''' At first, this was just a property that I bought at a low price, thinking I'd gotten myself a steal. But, after they sold me the property, I never heard from the previous owner again. It was later that I learned that every prior landlord had met with an unfortunate end.
-:'''Renault:''' I never used to believe in "haunted houses" or things like that... But, ever since I moved in, I've developed a cough and it was difficult for me to even breathe sometimes. It's starting to make me nervous.
-:'''Renault:''' After some time, I found a geomantic master. He checked his compass and said that: "Though there are windows and pavilions, there is no flow of yang energy. The courtyard walls do not foster a growth of wealth. There is sickness to the east and the population to the west lacks harmony in community. The four directions are not favorable and the five elements clash..."
-:'''Renault:''' "What's more, this house has a long history and all residents have met with ruin. Spiritfarers are frequently called, yet the spirits of the aggrieved dead linger. My advice: Move out within three days, or you will fall gravely ill and tragedy will befall you."
-:{{DIcon|Arrow}} Are you sure this geomantic master isn't just a con man?
-::'''Renault:''' Once you're inside, you will know that the master was telling the truth.
-::We decide our fates, not the heavens. You should continue living there.
-:{{DIcon|Arrow}} We decide our fates, not the heavens. You should continue living there.
-:'''Renault:''' What do you mean? Continue living there!? If I hadn't moved out when I did, I'd have fallen into mara-struck long ago!
-:'''Renault:''' Even though I don't want this busted house anymore, it is still a personal asset. I'd like to sell it no matter the price. If you're going to investigate the haunted house, there's something I'd like to ask you.
-:{{DIcon|Arrow}} I knew it. Well, what is it?
-:{{DIcon|Arrow}} Who could you even sell this rickety haunted house to?
-::'''Renault:''' Well, whether I can sell it or not depends on the results of your investigation, does it not?
-::Little Gui, I think we should just head back.
-::'''Guinaifen:''' Wait! "Haunted house investigation" is perfect material. We can't miss out on this!
-:{{DIcon|Arrow}} Little Gui, I think we should just head back.
-::'''Guinaifen:''' Wait! "Haunted house investigation" is perfect material. We can't miss out on this!
-:'''Renault:''' While you are investigating the haunted house, could you help me find the {{Color|keyword|nobold=1|deed}}? I won't be able to sell it without...
 :{{tx}}
-<pre>{
-	"$type": "RPG.GameCore.AdvDistrictSetupTrigger",
-	"GroupID": {
-		"FixedValue": {
-			"Value": 155
-		}
-	},
-	"DistrictID": {
-		"FixedValue": {
-			"Value": 1
-		}
-	},
-	"DisableAfterTrigger": true,
-	"OnEnter": [
-		{
-			"$type": "RPG.GameCore.TriggerCustomString",
-			"CustomString": {
-				"Value": "EnterArea_G155_300001"
-			}
-		}
-	],
-	"OverridedValidGuestConfig": {}
-}</pre>
-;(Unused &mdash; EnterArea_G155_300001)
-:'''Guinaifen:''' This is the meeting place. That must be the person who made the post?
 {{Dialogue End}}
 
 ===Speak with Guinaifen and prepare to enter the haunted residence{{subst:void|<!--801515703-->}}===
 {{Mission Description|type=adventure|location=Alchemy Commission|update|The ghost-hunting squad obtained the permission to investigate the haunted residence in order to help the landlord recover the deed. Guinaifen can hardly keep her excitement down.}}
 {{Dialogue Start}}
-
-;(Obtain {{Item|Family Photo|20|x=1}})
-
-;(Talk to Renault)
-:'''Renault:''' I was worried I would lose the deed, so I put it in a safe. I know you can find it. I'm counting on you!
-
-;(Talk to Guinaifen)
-:'''Guinaifen:''' Well? Shall we head on over?
-:{{DIcon|Arrow}} Let's head off!
-::'''Sushang:''' ...I&mdash;I'm ready.
-::'''Guinaifen:''' Let's go!
-:<pre>{
-	"$type": "RPG.GameCore.OpenTreasureChallenge",
-	"RaidID": 43216,
-	"OnCancel": []
-}</pre>
-:{{DIcon|Exit}} Hold on a sec. I'm not ready yet.
-
-;(Talk to Sushang)
-:'''Sushang:''' A haunted house... I hope the paper talisman Huohuo gave us works...
+:{{tx}}
 {{Dialogue End}}
 
 ===Give the deed to the landlord{{subst:void|<!--801515704-->}}===
 {{Mission Description|type=adventure|location=Alchemy Commission|update|After conversing with the heliobus, you realize that the man calling himself the "landlord" is not as simple as he looked. You should give the deed to him, but he also needs to answer some questions.}}
 {{Dialogue Start}}
-
-;(Talk to Renault)
-<pre>{
-	"$type": "RPG.GameCore.SetMissionCustomValue",
-	"SubmissionID": 801515704,
-	"MissionCustomValue": {
-		"Name": "OldValue_0",
-		"isLocal": true,
-		"ValidValueParamList": []
-	}
-}</pre>
 :{{tx}}
-<pre>{
-	"$type": "RPG.GameCore.ConsumeMissionItemPerformance",
-	"SubMissionID": 801515704,
-	"OnSubmitConfirm": [
-		{
-			"$type": "RPG.GameCore.TriggerCustomString",
-			"CustomString": {
-				"Value": "TalkSentence_815159703"
-			}
-		}
-	],
-	"OnSubmitCancel": [
-		{
-			"$type": "RPG.GameCore.TriggerCustomString",
-			"CustomString": {
-				"Value": "TalkSentence_815159703_Cancel"
-			}
-		}
-	],
-	"SimpleTalk": {}
-}</pre>
-;(If {{F|MissionCV-8015157-undefined}} is undefined 1)
-<pre>{
-	"$type": "RPG.GameCore.ConsumeMissionItem",
-	"SubMissionID": 801515704,
-	"IsAutoConsume": true,
-	"SimpleTalk": {}
-}</pre>
-;(Unused &mdash; TalkSentence_815159703)
-:'''Guinaifen:''' Wait, how about we test you a little about who exactly is the owner of the household written on this deed?
-::'''Renault:''' ...I&mdash;Is... Is it not Renault?
-::'''Sushang:''' So, you are Renault?
-::'''Renault:''' ...Yeah! I told you that before. I am Renault.
-::'''Guinaifen:''' Wrong. Renault was a short-life species that passed away a century ago. It says right here on the deed! You are not the real Renault!
-::'''Renault:''' ...Wh&mdash;What?
-::{{DIcon|Arrow}} You faked the haunting!
-::{{DIcon|Arrow}} You were the one that chased out the real landlord of that haunted house.
-::'''Guinaifen:''' We found a picture of Renault and his family. Which one of these is you?
-::{{tx}}
-::{{tx}}
-:<pre>{
-	"$type": "RPG.GameCore.SetMissionCustomValue",
-	"SubmissionID": 801515704,
-	"MissionCustomValue": {
-		"Name": "OldValue_0",
-		"isLocal": true,
-		"ValidValueParamList": []
-	},
-	"CustomValue": 1
-}</pre>
-:<pre>{
-	"$type": "RPG.GameCore.PerformanceExtendEndBlack"
-}</pre>
-
-;(Unused &mdash; TalkSentence_815159703_Cancel)
-
 {{Dialogue End}}
 
 ===Cast the heliobus into the suppression tower{{subst:void|<!--801515705-->}}===
 {{Mission Description|type=adventure|location=Fyxestroll Garden|update|The only good heliobus is a captured heliobus. The only place they should go is the Suppression Towers in Fyxestroll Garden.}}
 {{Dialogue Start}}
-
-:{{DIcon|Talk}} Suppression Tower, Locufox Forest
 :{{tx}}
 {{Dialogue End}}
 
 ===Make a new post on Ghostly Grove{{subst:void|<!--801515706-->}}===
 {{Mission Description|type=adventure|location=Fyxestroll Garden|update|Regardless, the incident has been resolved. It is time to post on Ghostly Grove, as per usual.}}
 {{Dialogue Start}}
-:{{tx}}
-
-;(Talk to Guinaifen)
 :{{tx}}
 {{Dialogue End}}
 

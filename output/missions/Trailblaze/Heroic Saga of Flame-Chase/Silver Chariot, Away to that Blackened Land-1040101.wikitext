@@ -49,413 +49,51 @@ Mission Silver Chariot, Away to that Blackened Land Caelus.png|Caelus
 ===Join the navigation meeting to decide the next destination of the Express{{subst:void|<!--104010103-->}}===
 {{Mission Description|type=trailblaze|location=Parlor Car|The journey to Penacony has come to a close once again. With the Express running low on energy, a journey that is sufficiently Trailblazing is urgently needed to refuel.}}
 {{Dialogue Start}}
-<pre>{
-	"$type": "RPG.GameCore.SetMissionCustomValue",
-	"SubmissionID": 104010103,
-	"MissionCustomValue": {
-		"Name": "OldValue_0",
-		"isLocal": true,
-		"ValidValueParamList": [
-			0,
-			1
-		]
-	}
-}</pre>
-;(Unused &mdash; EnterArea_G200)
 :{{tx}}
-::{{A|VO chapter4 1 player 102 m.ogg}} {{A|VO chapter4 1 player 102 f.ogg}} '''(Trailblazer):''' (Hmm? It's Pom-Pom. Time for our navigation meeting?)
-::{{A|VO chapter4 1 pompom 101.ogg}} '''Pom-Pom:''' Please stand by, passengers. The navigation meeting will be starting soon!
-::{{DIcon|Talk}} Black Swan isn't joining us?
-:::{{A|VO chapter4 1 himeko 101.ogg}} '''Himeko:''' She doesn't think it's right to join in on our vote when she's only hitchhiking with us, so she's waiting in the Party Car.
-:::{{A|VO chapter4 1 himeko 102.ogg}} '''Himeko:''' Though she did say that she believes we'll end up deciding on Amphoreus.
-:::{{DIcon|Arrow}} She can read our minds!
-:::{{DIcon|Arrow}} Let's prove her wrong.
-::;(Return to previous option selection)
-::{{DIcon|Talk}} Where's Sunday?
-:::{{tx}}
-::;(If {{F|MissionCV-1040101-undefined}} is undefined 1)
-::::{{DIcon|Arrow}} I'm not worrying about him.
-::::;(Return to previous option selection)
-::::{{DIcon|Arrow}} Send him back to the IPC, then!
-::::;(Return to previous option selection)
-::::{{DIcon|Arrow}} He's pretty laid-back about this, huh.
-::::;(Return to previous option selection)
-::;(If {{F|MissionCV-1040101-undefined}} is not undefined 1)
-::::{{DIcon|Arrow}} Let the control freak lose all control!
-::::;(Return to previous option selection)
-::::{{DIcon|Arrow}} Send him to a Washtopia!
-::::;(Return to previous option selection)
-::::{{DIcon|Arrow}} He's pretty laid-back about this, huh.
-::::;(Return to previous option selection)
-::{{DIcon|Arrow}} Let's start voting on our destination.
-:::{{A|VO chapter4 1 pompom 102.ogg}} '''Pom-Pom:''' Since everyone's here, Pom-Pom will start presenting our options. First up is {{Color|keyword|nobold=1|the oceanic planet of Lushaka}}.
-:::{{A|VO chapter4 1 danheng 101.ogg}} '''Dan Heng:''' Mr. Mikhail's homeworld. Lushaka was hit by rising sea levels after the Stellaron Disaster, though I'm not sure how things are on the planet now.
-:::{{A|VO chapter4 1 pompom 103.ogg}} '''Pom-Pom:''' Next, we have {{Color|keyword|nobold=1|Melustanin, the Agate World}}.
-:::{{A|VO chapter4 1 himeko 104.ogg}} '''Himeko:''' That's where Idrila the Beauty ascended, a world of undying allure. It's also said to be one of the initial sites of the Stellaron Disaster. Probably not the safest choice.
-:::{{A|VO chapter4 1 welt 109.ogg}} '''Welt:''' Given the {{Rubi|Express' fuel|Trailblaze Power}} situation, it's worth us thinking through our options carefully.
-:::{{A|VO chapter4 1 pompom 104.ogg}} '''Pom-Pom:''' And finally, the most adventurous option: {{Color|keyword|nobold=1|The Eternal Land, Amphoreus}}.
-:::{{A|VO chapter4 1 mar7th 101.ogg}} '''March 7th:''' A planet not recorded in the data bank and a world even Akivili has never set foot on... But if this trailblazing expedition works out, it could solve our fuel problem!
-:::{{DIcon|Arrow}} The Express can soon achieve perpetual motion?
-::::{{A|VO chapter4 1 danheng 102.ogg}} '''Dan Heng:''' It's not that simple. But we can save Pom-Pom from worrying about service delays, at least for a foreseeable period of time.
-::::We don't really have a choice in a time like this, do we?
-::::No one wants to go to Edo Star?
-::::{{A|VO chapter4 1 welt 110.ogg}} '''Welt:''' They suffered an ambush by the Antimatter Legion some time ago. According to the IPC, the enemy was repelled, but Edo Star placed their planet on temporary lockdown. I'm afraid there's nothing we can do there.
-::::No one wants to go to a Washtopia?
-::::{{A|VO chapter4 1 mar7th 102.ogg}} '''March 7th:''' Geez, stop messing around. We don't need a scrub. The Express is already spotlessly clean.
-:::{{DIcon|Arrow}} We don't really have a choice in a time like this, do we?
-:::{{DIcon|Arrow}} No one wants to go to Edo Star?
-::::{{A|VO chapter4 1 welt 110.ogg}} '''Welt:''' They suffered an ambush by the Antimatter Legion some time ago. According to the IPC, the enemy was repelled, but Edo Star placed their planet on temporary lockdown. I'm afraid there's nothing we can do there.
-::::No one wants to go to a Washtopia?
-::::{{A|VO chapter4 1 mar7th 102.ogg}} '''March 7th:''' Geez, stop messing around. We don't need a scrub. The Express is already spotlessly clean.
-:::{{DIcon|Arrow}} No one wants to go to a Washtopia?
-::::{{A|VO chapter4 1 mar7th 102.ogg}} '''March 7th:''' Geez, stop messing around. We don't need a scrub. The Express is already spotlessly clean.
-:::{{A|VO chapter4 1 mar7th 103.ogg}} '''March 7th:''' Amphoreus does have something to offer, unlike the other options...
-:::{{tx}}
 {{Dialogue End}}
 
 ===Take a short rest at the Party Car and wait for the warp jump{{subst:void|<!--104010110-->}}===
 {{Dialogue Start}}
-----
-:{{A|VO chapter4 1 blackswan 109.ogg}} '''Black Swan:''' Here it is &mdash; the isolated world that can only be seen through the Garden's mirror...
-:{{A|VO chapter4 1 blackswan 110.ogg}} '''Black Swan:''' {{Color|keyword|nobold=1|The Eternal Land, Amphoreus}}.
-:{{DIcon|Arrow}} So blindingly bright...
-:{{DIcon|Arrow}} What celestial body is this?
-::{{A|VO chapter4 1 blackswan 111.ogg}} '''Black Swan:''' No one knows. That's what you're about to find out.
-::How did it suddenly just appear?
-::{{A|VO chapter4 1 blackswan 112.ogg}} '''Black Swan:''' I used a little magic so all of you can also see what it looks like.
-::Woah. It's in the shape of an "8"!
-:{{DIcon|Arrow}} How did it suddenly just appear?
-::{{A|VO chapter4 1 blackswan 112.ogg}} '''Black Swan:''' I used a little magic so all of you can also see what it looks like.
-::Woah. It's in the shape of an "8"!
-:{{DIcon|Arrow}} Woah. It's in the shape of an "8"!
-:{{A|VO chapter4 1 blackswan 113.ogg}} '''Black Swan:''' As you can see, Amphoreus is surrounded by a mass of chaotic matter that conceals it from the outside world &mdash; nearly. Conventional interstellar travel can't detect its presence, let alone pass by or land on the planet.
-:{{A|VO chapter4 1 blackswan 114.ogg}} '''Black Swan:''' Yet the Garden, caught a glimpse of this place, and along with it, discovered ever-shifting Traces.
-:{{A|VO chapter4 1 himeko 114.ogg}} '''Himeko:''' "Three Paths interweave and fetter Amphoreus, co-authoring the fate of the world." Ordinary Pathstriders aren't known to leave traces in the mirror, so if what you said is true...
-:{{A|VO chapter4 1 himeko 115.ogg}} '''Himeko:''' Then this isolated star system must have been home to at least three beings comparable to Emanators.
-:{{A|VO chapter4 1 blackswan 115.ogg}} '''Black Swan:''' I would even go as far as to say Aeons THEMSELVES.
-:{{A|VO chapter4 1 welt 117.ogg}} '''Welt:''' For a world to have nurtured such marvels yet still remain unheard of throughout the cosmos? Now, that is hard to fathom.
-:{{A|VO chapter4 1 himeko 116.ogg}} '''Himeko:''' We already know one of the three Paths to be the Erudition...
-:{{A|VO chapter4 1 blackswan 116.ogg}} '''Black Swan:''' I can reveal the second. In fact, you've all seen it just now. It's the Remembrance.
-:{{A|VO chapter4 1 welt 118.ogg}} '''Welt:''' I see. Then it makes sense that a messenger of the Garden would be capable of unveiling Amphoreus for us. What about the final Path?
-:{{A|VO chapter4 1 blackswan 117.ogg}} '''Black Swan:''' Unfortunately, fate is keeping the third Path a mystery. I don't know what it is, either.
-:{{A|VO chapter4 1 blackswan 118.ogg}} '''Black Swan:''' Hidden beneath the brilliance of Erudition and Remembrance, yet possessing enough power to rival the other two Paths. It could be the Equilibrium, the Enigmata, or perhaps the Permanence? I have no clue at all.
-:{{A|VO chapter4 1 blackswan 119.ogg}} '''Black Swan:''' This white ribbon of light encircling Amphoreus might very well be a product of the three interwoven Paths. Only when Pathstriders of the Trailblaze enter the center of the vortex will its true nature be revealed.
-:{{A|VO chapter4 1 danheng 109.ogg}} '''Dan Heng:''' Still, we know far too little about the planet.
-:{{A|VO chapter4 1 danheng 110.ogg}} '''Dan Heng:''' What's more pressing is finding a suitable landing site. We could end up over an ocean, in a vacuum without oxygen, or worse yet, in the middle of a lava field...
-:{{DIcon|Arrow}} Now I see why the data bank's important.
-::{{A|VO chapter4 1 danheng 111.ogg}} '''Dan Heng:''' It is. Still, encountering worlds that exist which are not recorded in data bank is unavoidable.
-::Have no fear, resilient little me will volunteer!
-::{{A|VO chapter4 1 danheng 112.ogg}} '''Dan Heng:''' I know you're fearless even in the face of death, but don't act recklessly &mdash; everyone values you.
-::We're turning back! Next stop: Lushaka!
-:{{DIcon|Arrow}} Have no fear, resilient little me will volunteer!
-::{{A|VO chapter4 1 danheng 112.ogg}} '''Dan Heng:''' I know you're fearless even in the face of death, but don't act recklessly &mdash; everyone values you.
-::We're turning back! Next stop: Lushaka!
-:{{DIcon|Arrow}} We're turning back! Next stop: Lushaka!
-:{{A|VO chapter4 1 danheng 113.ogg}} '''Dan Heng:''' Throwing in the towel already? I don't think we're at that point yet.
-:{{A|VO chapter4 1 himeko 117.ogg}} '''Himeko:''' Looks like someone is all set and itching to get off the train.
-:{{A|VO chapter4 1 welt 119.ogg}} '''Welt:''' ...Wait, I think we might be missing someone.
-:{{DIcon|Arrow}} Hey, where's March 7th?
-:{{DIcon|Arrow}} Yeah, I was wondering where that chatterbox had gone.
-:{{DIcon|Arrow}} Really? Who? All four of us are here.
-::{{A|VO chapter4 1 welt 120.ogg}} '''Welt:''' Very funny... But seriously, where's March 7th?
-:{{A|VO chapter4 1 danheng 114.ogg}} '''Dan Heng:''' She said something about her camera before going back to her room. I haven't seen her since the warp.
 :{{tx}}
-:{{A|VO chapter4 1 player 106 m.ogg}} {{A|VO chapter4 1 player 106 f.ogg}} '''(Trailblazer):''' (Is March 7th okay?)
 {{Dialogue End}}
 
 ===Seek out March 7th, who seems to be out of sorts{{subst:void|<!--104010111-->}}===
 {{Mission Description|type=trailblaze|location=Passenger Cabin|update|When setting off, March 7th seems to be feeling unwell...}}
 {{Dialogue Start}}
-;(Upon reaching the destination)
-
-;(Upon reaching the destination)
-<pre>{
-	"$type": "RPG.GameCore.TriggerSound",
-	"SoundName": {
-		"Value": "Ev_sfx_storyd_300dev_knockmar7thdoor"
-	},
-	"EmitterType": "DefaultEmitter"
-}</pre>
-;(Screen fades to black)
-:{{A|VO chapter4 1 himeko 119.ogg}} '''Himeko:''' March, are you in here?
-:{{A|VO chapter4 1 mar7th 114.ogg}} '''March 7th:''' Yeah...
-<pre>{
-	"$type": "RPG.GameCore.TriggerSound",
-	"SoundName": {
-		"Value": "Ev_sfx_storyd_300dev_mar7thdooropen"
-	},
-	"EmitterType": "DefaultEmitter"
-}</pre>
-----
-:{{A|VO chapter4 1 himeko 119.ogg}} '''Himeko:''' March, are you in here?
-:{{A|VO chapter4 1 mar7th 114.ogg}} '''March 7th:''' Yeah...
-:{{A|VO chapter4 1 mar7th 115.ogg}} '''March 7th:''' Sorry, guys. I don't know what's wrong... I just feel really weak after the warp...
-:{{DIcon|Arrow}} Did you come down with something?
-::{{A|VO chapter4 1 mar7th 116.ogg}} '''March 7th:''' I doubt it...? Pretty girls aren't supposed to get sick...
-::Is it motion sickness?
-::{{A|VO chapter4 1 mar7th 117.ogg}} '''March 7th:''' Of course not! I've been through way more jumps than you ever have!
-::Are you... possessed?
-:{{DIcon|Arrow}} Is it motion sickness?
-::{{A|VO chapter4 1 mar7th 117.ogg}} '''March 7th:''' Of course not! I've been through way more jumps than you ever have!
-::Are you... possessed?
-:{{DIcon|Arrow}} Are you... possessed?
-:{{A|VO chapter4 1 mar7th 118.ogg}} '''March 7th:''' Have a heart, will you? Stop scaring me...
-:{{A|VO chapter4 1 himeko 120.ogg}} '''Himeko:''' Miss Black Swan, could you take a look at the memories in this room?
-:{{A|VO chapter4 1 blackswan 121.ogg}} '''Black Swan:''' Gladly.
-:Black Swan presses her forehead against March 7th's head, as if feeling the latter's body temperature...
-:{{A|VO chapter4 1 blackswan 122.ogg}} '''Black Swan:''' ...I'm seeing March 7th hit by a sudden bout of weakness in her memories, as if something was weighing on her. The onset of it far too quick to be any kind of sickness.
-:{{A|VO chapter4 1 sunday 106.ogg}} '''Sunday:''' Perhaps it's the effect of some external stimulus?
-:{{A|VO chapter4 1 mar7th 119.ogg}} '''March 7th:''' Ahh, why is everyone here!? I should've cleaned my room...
-:{{A|VO chapter4 1 welt 121.ogg}} '''Welt:''' I invited Sunday to help with the diagnosis. He grew up in a star system rich in memoria. When it comes to mental healing, he's quite the specialist.
-:{{A|VO chapter4 1 sunday 107.ogg}} '''Sunday:''' You've all been to Penacony before. I presume you are aware of how some might find themselves in a Synesthesia Dreamscape after warping to Asdana.
-:{{A|VO chapter4 1 sunday 108.ogg}} '''Sunday:''' I'm guessing this is something similar. Miss March appears to be affected by a certain external stimulus, perhaps a Path, an Aeon, or even... Amphoreus itself.
-:{{A|VO chapter4 1 blackswan 123.ogg}} '''Black Swan:''' I agree. That's likely the case.
-:{{A|VO chapter4 1 welt 122.ogg}} '''Welt:''' Why is she the only one affected?
-:{{A|VO chapter4 1 sunday 109.ogg}} '''Sunday:''' There's no way to tell at this point. It could just be a matter of time before everyone feels unwell.
-:{{A|VO chapter4 1 sunday 110.ogg}} '''Sunday:''' Before we identify the cause, my suggestion is for Miss March to avoid venturing anywhere near Amphoreus.
-:{{A|VO chapter4 1 himeko 121.ogg}} '''Himeko:''' ...
-:{{A|VO chapter4 1 mar7th 120.ogg}} '''March 7th:''' It's okay, Himeko. I'll be good on my own. Go ahead, guys! I'll catch up once I feel better...
-:{{A|VO chapter4 1 mar7th 121 m.ogg}} {{A|VO chapter4 1 mar7th 121 f.ogg}} '''March 7th:''' Here, (Trailblazer). Take my camera along! I was planning to take photos when we got there, but looks like you'll have to help me with that now...
-:{{DIcon|Arrow}} Leave it to me.
-::{{A|VO chapter4 1 mar7th 122.ogg}} '''March 7th:''' Heh, I know I can always count on you.
-::Nooo, how could I leave you by yourself...?
-::{{A|VO chapter4 1 mar7th 123.ogg}} '''March 7th:''' Haha, what's with the melodramatic turn... I'll be fine.
-::Three, two, one... Cheeeese&mdash;!
-:{{DIcon|Arrow}} Nooo, how could I leave you by yourself...?
-::{{A|VO chapter4 1 mar7th 123.ogg}} '''March 7th:''' Haha, what's with the melodramatic turn... I'll be fine.
-::Three, two, one... Cheeeese&mdash;!
-:{{DIcon|Arrow}} Three, two, one... Cheeeese&mdash;!
-:{{A|VO chapter4 1 mar7th 124.ogg}} '''March 7th:''' No&mdash;! Not when my hair's messy. And don't drain the camera's battery now...
-:{{A|VO chapter4 1 himeko 122.ogg}} '''Himeko:''' Why don't we take our discussion outside so March 7th can rest?
 :{{tx}}
-
-;(Talk to March 7th)
-----
-:{{A|VO chapter4 1 mar7th 126.ogg}} '''March 7th:''' Oh, I almost forgot. I was looking at the photos from before when I realized something. When we were on Jarilo-VI, the Xianzhou, and Penacony...
-:{{A|VO chapter4 1 mar7th 127.ogg}} '''March 7th:''' The first local we met in each of those worlds all harbored their own deep secret! I'm sure it'll be the same on Amphoreus.
-:{{A|VO chapter4 1 mar7th 128.ogg}} '''March 7th:''' I can't join you guys this time, but make sure to always look out for one another, okay...?
-
-
-;(Talk to Sunday)
-----
-:{{A|VO chapter4 1 sunday 105.ogg}} '''Sunday:''' Let me know if there's anything I can assist with. I'll do whatever I can.
-
-;(Talk to Black Swan)
-----
-:{{A|VO chapter4 1 blackswan 120.ogg}} '''Black Swan:''' Something feels... off. Please, all of you go ahead without me. I'll join you later.
 {{Dialogue End}}
 
 ===Seek your companions' opinions{{subst:void|<!--104010129-->}}===
 {{Dialogue Start}}
-
-;(Unused &mdash; G64_Performance)
-:{{A|VO chapter4 1 welt 123.ogg}} '''Welt:''' Do you think March 7th's past could be connected to Amphoreus?
-::{{A|VO chapter4 1 himeko 123.ogg}} '''Himeko:''' No, that'd be too much of a coincidence. I haven't seen anything related to Six-Phased Ice yet. It's more likely that some kind of energy on Amphoreus affected her before any of us.
-::{{A|VO chapter4 1 himeko 124 m.ogg}} {{A|VO chapter4 1 himeko 124 f.ogg}} '''Himeko:''' (Trailblazer), I want you and Dan Heng to take the lead in this trailblazing expedition. Are you up for it?
-::{{DIcon|Arrow}} Sure, we work well together.
-:::{{A|VO chapter4 1 himeko 125 m.ogg}} {{A|VO chapter4 1 himeko 125 f.ogg}} '''Himeko:''' I see our adventure in Penacony has helped (Trailblazer) grow into an experienced Nameless.
-:::Pretty sure we're going to need more help...
-:::{{A|VO chapter4 1 danheng 115.ogg}} '''Dan Heng:''' Not to worry, we have a knack for finding trustworthy friends wherever we go.
-:::What about the rest of you?
-::{{DIcon|Arrow}} Pretty sure we're going to need more help...
-:::{{A|VO chapter4 1 danheng 115.ogg}} '''Dan Heng:''' Not to worry, we have a knack for finding trustworthy friends wherever we go.
-:::What about the rest of you?
-::{{DIcon|Arrow}} What about the rest of you?
-::{{A|VO chapter4 1 himeko 126.ogg}} '''Himeko:''' Amphoreus is a crucial stop, so everyone on the Express has been roped in to help in some way or another. Venturing into the unknown world is a task perfect for you youngsters. I'm sure you'll both have each other's backs.
-::{{tx}}
+:{{tx}}
 {{Dialogue End}}
 
 ===Go to the Parlor Car and prepare to activate the Backup Plan{{subst:void|<!--104010102-->}}===
 {{Mission Description|type=trailblaze|location=Parlor Car|update|The absence of March 7th has introduced a new layer of uncertainty to this trailblazing expedition. To keep the expedition on course, Miss Himeko decides to activate the Backup Plan.}}
 {{Dialogue Start}}
-
-;(Talk to Himeko)
-;(If {{cx}}<!--SubMission Finish: 104010112-->)
-:----
-::{{A|VO chapter4 1 himeko 133.ogg}} '''Himeko:''' The landing car is ready. My dear trailblazing vanguards, are you all set to dive into the unknown?
-;(If {{cx}}<!--SubMission not Finish: 104010112-->)
-::{{A|VO chapter4 1 himeko 130.ogg}} '''Himeko:''' Now that our ground exploration team is assembled, I'll let the conductor reveal our backup plan.
-::{{A|VO chapter4 1 pompom 108.ogg}} '''Pom-Pom:''' Yes. Seeing how this is going to be a perilous expedition, Pom-Pom and the Navigator have come together to prepare a special trailblazing gift for you!
-::{{A|VO chapter4 1 pompom 109.ogg}} '''Pom-Pom:''' Your~ very~ own~ car~!
-::{{DIcon|Arrow}} Our what now?
-::{{DIcon|Arrow}} The Express is splitting up?
-::{{DIcon|Arrow}} Can I have the Party Car instead?
-::{{A|VO chapter4 1 himeko 131.ogg}} '''Himeko:''' Amphoreus is outside the Interastral Peace Telecommunications' coverage zone, so there's no chance of remote communication when you're there.
-::{{A|VO chapter4 1 himeko 132.ogg}} '''Himeko:''' Uncoupling and using one of the Express' cars as your landing capsule is the best way we can ease your exploration. It can also be your safe house once you're on Amphoreus.
-::{{A|VO chapter4 1 pompom 110.ogg}} '''Pom-Pom:''' The car you're getting has its own thrusters, so just buckle up, and It'll take you into Amphoreus and land you somewhere safe.
-::{{DIcon|Arrow}} The Express is more multipurpose than I thought...
-:::{{A|VO chapter4 1 pompom 111.ogg}} '''Pom-Pom:''' Only in extenuating circumstances~! Don't go thinking you can detach cars from the Express every which way, alright!
-:::Woohoo, a powerful engine to send cars blasting off in space!
-::{{DIcon|Arrow}} Woohoo, a powerful engine to send cars blasting off in space!
-::{{A|VO chapter4 1 pompom 112.ogg}} '''Pom-Pom:''' Oh, no you don't! Only in extenuating circumstances! Don't go thinking you can detach cars from the Express every which way, alright!
-::{{A|VO chapter4 1 danheng 116 m.ogg}} {{A|VO chapter4 1 danheng 116 f.ogg}} '''Dan Heng:''' I'll make sure to keep an eye on {{MC|m=him.|f=her.}}
-::{{A|VO chapter4 1 pompom 113.ogg}} '''Pom-Pom:''' Get going whenever you're ready. Pom-Pom can't wait to hear about your exciting discoveries!
-::{{A|VO chapter4 1 himeko 133.ogg}} '''Himeko:''' The landing car is ready. My dear trailblazing vanguards, are you all set to dive into the unknown?
-;(All choices lead to the following options)
-:{{DIcon|Arrow}} I'm ready.
-::{{A|VO chapter4 1 himeko 134.ogg}} '''Himeko:''' Go ahead and journey into The Eternal Land!
-:<pre>{
-	"$type": "RPG.GameCore.SetPerformanceResult",
-	"Value": 1
-}</pre>
-:{{DIcon|Exit}} Hold on a moment.
-::{{A|VO chapter4 1 himeko 135.ogg}} '''Himeko:''' Oh? Need to psyche yourself up? Don't keep us waiting too long.
-
-;(Unused &mdash; 1040101_EnterRaid)
-<pre>{
-	"$type": "RPG.GameCore.OpenTreasureChallenge",
-	"RaidID": 40401001
-}</pre>
-
-:{{DIcon|Loupe}} Investigate
-:Welt Yang and Sunday seem to be discussing March 7th's symptoms and planning their next steps. It's best not to bother them.
-:{{A|VO chapter4 1 danheng 106.ogg}} '''Dan Heng:''' Mhm, I suppose there's a lot to do. I'll disembark with all of you this time.
+:{{tx}}
 {{Dialogue End}}
 
 ===Continue your trailblazing expedition in Amphoreus{{subst:void|<!--104010138-->}}===
 {{Mission Description|type=trailblaze|location=Parlor Car|update|The coach was forced to make an emergency landing, but thankfully, we were both unharmed. Our initial assessment suggests that this world contains civilization. We resolve to remain vigilant as we explore this unfamiliar land.}}
 {{Dialogue Start}}
-:{{A|VO chapter4 1 player 103 m.ogg}} {{A|VO chapter4 1 player 103 f.ogg}} '''(Trailblazer):''' (I'd better start packing up, too. Or should I go chat some more with the others?)
+:{{tx}}
 {{Dialogue End}}
 
 ===Pack up and get ready to set off!{{subst:void|<!--104010118-->}}===
 {{Mission Description|type=trailblaze|location=Party Car|update|The journey to Penacony has come to a close once again. With the Express running low on energy, a journey that is sufficiently Trailblazing is urgently needed to refuel.}}
 {{Dialogue Start}}
-
-;(Unused &mdash; G47_Interact)
-:{{tx}}
-:<pre>{
-	"$type": "RPG.GameCore.SetPerformanceResult",
-	"Value": 1
-}</pre>
-:<pre>{
-	"$type": "RPG.GameCore.PerformanceEndSeq",
-	"Cases": [
-		{
-			"Case": 1,
-			"OnSuccess": [
-				{
-					"$type": "RPG.GameCore.ClientFinishMission",
-					"SubmissionID": 104010118
-				}
-			]
-		}
-	]
-}</pre>
-
-;(Talk to Welt Yang)
-----
-:{{A|VO chapter4 1 welt 112.ogg}} '''Welt:''' A world yet to be explored by the Trailblaze... No self-respecting Nameless would turn that opportunity down.
-:{{DIcon|Arrow}} An opportunity hard to come by?
-::{{A|VO chapter4 1 welt 113.ogg}} '''Welt:''' Absolutely. The Astral Express has always traveled along the silver rail laid down by Akivili. We don't normally get to venture into a world beyond the knowledge of the Trailblaze.
-:{{DIcon|Arrow}} Hah! So I'm better than an Aeon!
-::{{A|VO chapter4 1 welt 114.ogg}} '''Welt:''' This is Akivili we're talking about. In the first instance, every one of THEIR stops was a world no human had ever set foot on. The Astral Express has always traveled along the silver rail laid down by Akivili, so we don't normally get to venture into a world beyond the knowledge of the Trailblaze.
-:{{A|VO chapter4 1 welt 115.ogg}} '''Welt:''' But this time, we might just get the chance to add a brand-new stop to the astral charts. I don't mind telling you &mdash; I'm a little excited.
-
-;(Talk to Himeko)
-----
-:{{A|VO chapter4 1 himeko 113.ogg}} '''Himeko:''' But we'll be fine. Let's just say I have a backup plan. I'll reveal it when the time comes.
-
-;(Talk to Welt Yang)
-----
-:{{A|VO chapter4 1 welt 116.ogg}} '''Welt:''' An unknown world brings unknown challenges. Exciting stuff.
-
-;(Talk to Himeko)
-----
-:{{A|VO chapter4 1 himeko 108 m.ogg}} {{A|VO chapter4 1 himeko 108 f.ogg}} '''Himeko:''' Ah, (Trailblazer). This is your first time exploring beyond the astral charts, isn't it?
-:{{DIcon|Arrow}} It doesn't feel any different to me...
-::{{A|VO chapter4 1 himeko 109.ogg}} '''Himeko:''' Worlds that have been mapped on the astral charts also present new surprises from time to time.
-:{{DIcon|Arrow}} Same for everyone else, right?
-::{{A|VO chapter4 1 himeko 110.ogg}} '''Himeko:''' Maybe not for Pom-Pom. And worlds that have been mapped on the astral charts also present new surprises from time to time.
-:{{DIcon|Arrow}} Are credits going to be useless there?
-::{{A|VO chapter4 1 himeko 111.ogg}} '''Himeko:''' That's quite the detail to fixate on. Perhaps you should be worrying about language barriers instead?
-:{{A|VO chapter4 1 himeko 112.ogg}} '''Himeko:''' But we'll be fine. Let's just say I have a backup plan. I'll reveal it when the time comes.
-
-;(Talk to Dan Heng)
-----
-:{{A|VO chapter4 1 danheng 104.ogg}} '''Dan Heng:''' I can't provide many details about our destination this time. You can ask the Memokeeper if you want to know more.
-:{{DIcon|Arrow}} Are you nervous, Dan Heng?
-::{{A|VO chapter4 1 danheng 105.ogg}} '''Dan Heng:''' Why do you ask that? Are you feeling nervous yourself? It'll be fine. Just trust the Crew.
-:{{DIcon|Arrow}} Oh ho, the data bank's getting a huge update.
-::{{A|VO chapter4 1 danheng 106.ogg}} '''Dan Heng:''' Mhm, I suppose there's a lot to do. I'll disembark with all of you this time.
-:{{A|VO chapter4 1 danheng 107.ogg}} '''Dan Heng:''' We've never had this many passengers on board before... I'm still not used to it. Why don't you head to the Party Car first? I'll see you later.
-
-;(Talk to March 7th)
-----
-:{{A|VO chapter4 1 mar7th 107.ogg}} '''March 7th:''' Hey, great timing! I just turned on my camera and was looking through some old photos.
-:{{A|VO chapter4 1 mar7th 108.ogg}} '''March 7th:''' Can I ask you something? What's your favorite part of a journey, from start to finish?
-:{{DIcon|Arrow}} The start of a journey, when we dive into the unknown.
-::{{A|VO chapter4 1 mar7th 109.ogg}} '''March 7th:''' Then let's go snap some photos as soon as we arrive in Amphoreus!
-:{{DIcon|Arrow}} The middle of the journey, when some gains are made.
-::{{A|VO chapter4 1 mar7th 110.ogg}} '''March 7th:''' Then you're going to have to give me a nudge whenever there's something worth snapping!
-:{{DIcon|Arrow}} The end of the journey, when we wanna commemorate the adventure.
-::{{A|VO chapter4 1 mar7th 111.ogg}} '''March 7th:''' Me too! This time in Amphoreus let's make sure we get a group photo that everyone loves!
-:{{A|VO chapter4 1 mar7th 112.ogg}} '''March 7th:''' Anyway, enough chitchat! I better pack some extra batteries in case we end up somewhere without power!
-
-;(Talk to Sunday)
-----
-:{{A|VO chapter4 1 sunday 101.ogg}} '''Sunday:''' Looks like you've decided on your next stop?
-:{{DIcon|Arrow}} We're going to Amphoreus.
-:{{DIcon|Arrow}} We're going to a Washtopia.
-:{{DIcon|Arrow}} We're going back to Penacony.
-:{{A|VO chapter4 1 sunday 102.ogg}} '''Sunday:''' I see.
-:{{DIcon|Arrow}} You're taking it very calmly.
-:{{DIcon|Arrow}} No comment from you?
-:{{A|VO chapter4 1 sunday 103.ogg}} '''Sunday:''' Those who embark on a long journey simply need to "set off."
-
-;(Talk to Black Swan)
-:{{tx}}
-:{{A|VO chapter4 1 blackswan 101.ogg}} '''Black Swan:''' Ah, you're here. I hear the Nameless are going to Amphoreus. A very wise decision.
-:{{DIcon|Arrow}} Who did you hear that from?
-::{{A|VO chapter4 1 blackswan 102.ogg}} '''Black Swan:''' I am a Memokeeper, after all. Memories don't lie.
-::Why do you want to go to Amphoreus?
-::Why is the Garden turning to us for help?
-::{{A|VO chapter4 1 blackswan 103.ogg}} '''Black Swan:''' Truth be told, it's more of a personal request.
-:{{DIcon|Arrow}} Why do you want to go to Amphoreus?
-:{{DIcon|Arrow}} Why is the Garden turning to us for help?
-::{{A|VO chapter4 1 blackswan 103.ogg}} '''Black Swan:''' Truth be told, it's more of a personal request.
-:{{A|VO chapter4 1 blackswan 104.ogg}} '''Black Swan:''' "Memokeepers traverse the worlds only to collect precious memories." Have you heard that before?
 :{{tx}}
 {{Dialogue End}}
 
 ===(Optional) Chat with your companions{{subst:void|<!--104010125-->}}===
 {{Dialogue Start}}
-
-;(Talk to Welt Yang)
-----
-:{{A|VO chapter4 1 welt 116.ogg}} '''Welt:''' An unknown world brings unknown challenges. Exciting stuff.
-
-;(Talk to Himeko)
-----
-:{{A|VO chapter4 1 himeko 113.ogg}} '''Himeko:''' But we'll be fine. Let's just say I have a backup plan. I'll reveal it when the time comes.
-
-;(Talk to Sunday)
-----
-:{{A|VO chapter4 1 sunday 104.ogg}} '''Sunday:''' I look forward to the journey ahead.
+:{{tx}}
 {{Dialogue End}}
 
 ===Take a short rest at the Party Car and wait for the warp jump{{subst:void|<!--104010109-->}}===
 {{Dialogue Start}}
-
-
-;(Talk to Black Swan)
-----
-:{{A|VO chapter4 1 blackswan 108.ogg}} '''Black Swan:''' I trust you won't disappoint me?
-
-;(Talk to Dan Heng)
-:{{A|VO chapter4 1 danheng 108.ogg}} '''Dan Heng:''' Why don't you head to the Party Car first? I'll see you later.
-
-;(Talk to March 7th)
-:{{A|VO chapter4 1 mar7th 113.ogg}} '''March 7th:''' Enough chitchat. You should get packing, too!
-:{{A|VO chapter4 1 player 105 m.ogg}} {{A|VO chapter4 1 player 105 f.ogg}} '''(Trailblazer):''' (Looks like it's about time. I should go find a spot to take in the views during the warp.)
-
-;(Talk to Welt Yang)
-----
-:{{A|VO chapter4 1 welt 116.ogg}} '''Welt:''' An unknown world brings unknown challenges. Exciting stuff.
-
-;(Talk to Himeko)
-----
-:{{A|VO chapter4 1 himeko 113.ogg}} '''Himeko:''' But we'll be fine. Let's just say I have a backup plan. I'll reveal it when the time comes.
+:{{tx}}
 {{Dialogue End}}
 
 ==Other Languages==

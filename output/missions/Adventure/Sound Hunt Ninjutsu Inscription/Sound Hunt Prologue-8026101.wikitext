@@ -13,7 +13,7 @@ PageTitle=#Sound Hunt: Prologue#
 * [[Trailblaze Continuance]] ''[[Battles Without Ninja and Humanity]]'' completed
 * [[Trailblaze Continuance]] ''[[When the Stars of Ingenuity Shine]]'' completed
 |summary       = Paperfold University's anniversary is happening in full swing and the music party &mdash; the biggest event in this festival &mdash; is about to begin. As recommended by Robin, you have become the manager of the stage performance band, with Rappa at the band's center position. Gather your bandmates and immerse yourselves in this musical celebration together!
-|characters    = Trailblazer
+|characters    = Charmony Academy Rep; Curious Student; Dreamweaver Academy Rep; Fortune Academy Rep; Rappa; Robin; Serious Student; Trailblazer
 |startLocation = [[Penacony]] - [[Penacony Paperfold University College]]
 |world         = Penacony
 |area          = Penacony Paperfold University College
@@ -24,7 +24,9 @@ PageTitle=#Sound Hunt: Prologue#
 '''''Sound Hunt: Prologue''''' is an Event [[Adventure Mission]] from the [[Sound Hunt Ninjutsu Inscription]] event.
 
 ==Steps==
-
+# Meet with Robin
+# Feel the festive atmosphere of the music party on campus
+# Head to the dean's office
 
 <!--
 ==Gameplay Notes==
@@ -35,44 +37,22 @@ PageTitle=#Sound Hunt: Prologue#
 -->
 ==Dialogue==
 {{Stub Dialogue}}
+===Meet with Robin{{subst:void|<!--802610101-->}}===
+{{Mission Description|type=adventure|location=Penacony Paperfold University College|Paperfold University's anniversary is happening in full swing and the music party &mdash; the biggest event in this festival &mdash; is about to begin.<br />Robin suddenly asks to meet you on campus at this moment. What is happening?}}
+{{Dialogue Start}}
+:{{tx}}
+{{Dialogue End}}
 
-;(Talk to Montana)
+===Feel the festive atmosphere of the music party on campus{{subst:void|<!--802610102-->}}===
+{{Mission Description|type=adventure|location=Penacony Paperfold University College|update|Paperfold University's anniversary is happening in full swing and the music party &mdash; the biggest event in this festival &mdash; is about to begin.<br />All the students are preparing for the music party and the atmosphere is getting heated. It's such a rare opportunity. Have a stroll in the school with Robin.}}
+{{Dialogue Start}}
+:{{tx}}
+{{Dialogue End}}
 
-
-;(Unused &mdash; OpenUI_MusicRhythm)
-<pre>{
-	"$type": "RPG.GameCore.ShowTransitionLoadingUI",
-	"Name": "Ui.MusicRhythm.MusicRhythmTransitionDialog"
-}</pre>
-:<pre>{
-	"$type": "RPG.GameCore.ShowUI",
-	"Name": "Ui.MusicRhythm.MusicRhythmMainEntrancePage",
-	"WaitForExit": true,
-	"OnUIEnter": [
-		{
-			"$type": "RPG.GameCore.ExitTransitionLoadingUI"
-		},
-		{
-			"$type": "RPG.GameCore.SetLocalPlayerDitherAlpha"
-		},
-		{
-			"$type": "RPG.GameCore.LockPlayerControl"
-		},
-		{
-			"$type": "RPG.GameCore.ClientFinishMission",
-			"SubmissionID": 1802610101
-		}
-	],
-	"OnUIExitImmediately": [
-		{
-			"$type": "RPG.GameCore.SetLocalPlayerDitherAlpha",
-			"DitherAlpha": 1
-		},
-		{
-			"$type": "RPG.GameCore.UnLockPlayerControl"
-		}
-	]
-}</pre>
+===Head to the dean's office{{subst:void|<!--802610103-->}}===
+{{Mission Description|type=adventure|location=Penacony Paperfold University College|update|Paperfold University's anniversary is happening in full swing and the music party &mdash; the biggest event in this festival &mdash; is about to begin.<br />Robin mentions she would like you to become the manager of the band due to perform at the music party and help organize this event. There seems to be more to this request. Head to the dean's office with her to see what is going on.}}
+{{Dialogue Start}}
+:{{tx}}
 {{Dialogue End}}
 
 ==Other Languages==

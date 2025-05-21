@@ -11,7 +11,7 @@ PageTitle=#Collegiate Zenith of Rapping#
 |chapter       = Sound Hunt Ninjutsu Inscription
 |requirements  = {{subst:void|<!--Unknown: {"Type":"Manual"}-->}}
 |summary       = <!--official mission summary from Fate's Atlas-->
-|characters    = Trailblazer; Trashcan of MCing
+|characters    = Chaletka; Fortune Academy Rep; Onlooking Student; Trailblazer; Trashcan of Hip-Hop; Trashcan of MCing; Trashcan of Rap
 |startLocation = [[Penacony]] - [[Penacony Paperfold University College]]
 |world         = Penacony
 |area          = Penacony Paperfold University College
@@ -22,6 +22,7 @@ PageTitle=#Collegiate Zenith of Rapping#
 '''''Collegiate Zenith of Rapping''''' is an Event [[Adventure Mission]] from the [[Sound Hunt Ninjutsu Inscription]] event.
 
 ==Steps==
+# Collect inspiration for composing a song by wandering around the campus
 # Join the trashcan group's demonstration
 
 <!--
@@ -33,34 +34,16 @@ PageTitle=#Collegiate Zenith of Rapping#
 -->
 ==Dialogue==
 {{Stub Dialogue}}
+===Collect inspiration for composing a song by wandering around the campus{{subst:void|<!--802611601-->}}===
+{{Mission Description|type=adventure|location=Penacony Paperfold University College|You've become the manager of the music party's performing band, and now your band needs to complete 3 performances on the stage in the middle of the campus.<br />Wander around the campus to help Rappa collect inspiration for composing.}}
+{{Dialogue Start}}
+:{{tx}}
 {{Dialogue End}}
 
-===Join the trashcan group's demonstration{{subst:void|<!--802611604-->}}===
+===Join the trashcan group's demonstration{{subst:void|<!--802611603-->}}===
 {{Mission Description|type=adventure|location=Penacony Paperfold University College|update|You've become the manager of the music party's performing band, and now your band needs to complete 3 performances on the stage in the middle of the campus.<br />Obtain a record of the trashcan group's beats to help Rappa collect inspiration for composing.}}
 {{Dialogue Start}}
-
-;(Talk to Trashcan of MCing)
-:'''Trashcan of MCing:''' ...Come! Join us! Let the world remember your existence with the loudest volume, the most beautiful performance, and the most confident poise!
-:{{DIcon|Travel Log}} Join the trashcans' demonstration.
-:<pre>{
-	"$type": "RPG.GameCore.WaitFrame"
-}</pre>
-:<pre>{
-	"$type": "RPG.GameCore.ShowUI",
-	"Name": "Ui.MusicRhythm.MusicRhythmChooseLevelPage",
-	"WaitForExit": true,
-	"Param": {
-		"Value": "7"
-	},
-	"OnUICustomEvent": [],
-	"OnUIExitImmediately": [
-		{
-			"$type": "RPG.GameCore.EndDialogueEntityInteract"
-		}
-	]
-}</pre>
-:{{DIcon|Exit}} I've got something else to do.
-
+:{{tx}}
 {{Dialogue End}}
 
 ==Other Languages==

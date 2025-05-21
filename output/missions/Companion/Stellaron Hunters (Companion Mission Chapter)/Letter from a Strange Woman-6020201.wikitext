@@ -54,384 +54,92 @@ PageTitle=#Letter from a Strange Woman#
 ===(Optional) Report Kafka to the Seat of Divine Foresight{{subst:void|<!--602020124-->}}===
 {{Mission Description|type=companion|location=Exalting Sanctum|update|You received a message from Kafka claiming that she is in trouble and requires your help. Do you go to her rescue? ...Or rather, do you believe her?}}
 {{Dialogue Start}}
-
-;(Talk to undefined)
-:{{A|VO vo ambient w2 greeting chiyan 101.ogg}} {{A|VO vo ambient w2 greeting chiyan 102.ogg}} '''Chiyan:''' May I ask, have you come here to the Seat of Divine Foresight on any official business? I can help you pass it on.
-:{{DIcon|Arrow}} I wanna enter the Seat of Divine Foresight.
-::'''Chiyan:''' Could you please wait here a moment? I'll go and report in for you.
-:<pre>{
-	"$type": "RPG.GameCore.EnterMapByCondition",
-	"EntranceID": {
-		"FixedValue": {
-			"Value": 1020203
-		}
-	}
-}</pre>
-:{{DIcon|Exit}} Nah, I'm just passing by.
-;(Upon reaching the destination)
-
-;(Upon reaching the destination)
-:'''(Trailblazer):''' (Let's not give ourselves away and make sure where Kafka is first...)
+:{{tx}}
 {{Dialogue End}}
 
 ===Head to Kafka's location{{subst:void|<!--602020181-->}}===
 {{Dialogue Start}}
-;(Upon reaching the destination)
-
-;(Upon reaching the destination)
 :{{tx}}
-----
-
-;(Talk to Kafka)
-:Kafka turned a blind eye to you. She mutters some words in her mouth, and these powerful words are known as "Spirit Whispers."
-:{{Black Screen|You return to Kafka and Blade's hideout, and wait patiently for a while until Kafka cuts the Spirit Whisper short.}}
-:{{A|VO side2 kfk1 kafka 147 m.ogg}} {{A|VO side2 kfk1 kafka 147 f.ogg}} '''Kafka:''' ...That felt like a time. It's good to open my eyes and see you back here, (Trailblazer).
-:{{DIcon|Arrow}} I eliminated all the monsters.
-::{{A|VO side2 kfk1 kafka 148.ogg}} '''Kafka:''' Ha, inevitably so.
-:{{DIcon|Arrow}} How's progress on your side?
-::{{A|VO side2 kfk1 kafka 149.ogg}} '''Kafka:''' Not fast enough.
-:{{DIcon|Arrow}} What do we do now?
-::{{A|VO side2 kfk1 kafka 150.ogg}} '''Kafka:''' Let me tell you...
-----
-:{{A|VO side2 kfk1 kafka 151.ogg}} '''Kafka:''' I've weakened Blade's senses to the outside world so that he's only able to hear my voice and feel my touch &mdash; he's oblivious to everything else.
-----
-:{{A|VO side2 kfk1 kafka 152.ogg}} '''Kafka:''' I'm going to transfer his consciousness away from the Xianzhou and cleanse his memories of Jing Yuan, Jingliu, Yingxing, and your friend Dan Heng. Again, this process mustn't be interrupted, but I can answer questions before I begin.
-:{{DIcon|Arrow}} My questions?
-:{{A|VO side2 kfk1 kafka 153.ogg}} '''Kafka:''' Yes, as compensation for helping me... You don't have any questions? I put you into a deep sleep then reawakened you, abandoned you at the space station then lured you to the Xianzhou... I owe you an explanation or two &mdash; don't you want to know?
-:{{DIcon|Arrow}} Now that you mention it...
-:{{DIcon|Arrow}} I couldn't care less.
-:{{A|VO side2 kfk1 kafka 154.ogg}} '''Kafka:''' Don't rush, we still have time. Think about it first and ask when you're ready.
-:{{A|VO side2 kfk1 kafka 155.ogg}} '''Kafka:''' One rule though &mdash; please don't ask anything boring...
-:{{A|VO side2 kfk1 kafka 156.ogg}} '''Kafka:''' Let's play truth and lies!
-:{{DIcon|Arrow}} Truth and lies?
-:{{DIcon|Arrow}} Sounds childish...
-:{{A|VO side2 kfk1 kafka 157.ogg}} '''Kafka:''' It's a game I play with Silver Wolf all the time &mdash; kinda psychological: Both sides ask each other two questions, then give one true answer and one false answer each.
-:{{A|VO side2 kfk1 kafka 158.ogg}} '''Kafka:''' So, one of my answers will be true, the other will be false. As for which is which, that's up to the asker to make the call...
-:{{A|VO side2 kfk1 kafka 159.ogg}} '''Kafka:''' We don't have much time &mdash; let's do two rounds to start. You ask me two questions, and you'll also have to answer two of mine. But remember: One truth, one lie.
-:{{DIcon|Arrow}} What if both my answers are true?
-::{{A|VO side2 kfk1 kafka 160.ogg}} '''Kafka:''' Ah, that's not allowed! *sigh* The game only works when both sides follow the rules, but I'll be none the wiser if you break them. Let morality be your guide.
-::{{A|VO side2 kfk1 kafka 161 m.ogg}} {{A|VO side2 kfk1 kafka 161 f.ogg}} '''Kafka:''' But I give you my word, (Trailblazer): I will abide by the rule of one truth, one lie.
-:{{DIcon|Arrow}} How do I know you won't cheat?
-::{{A|VO side2 kfk1 kafka 162 m.ogg}} {{A|VO side2 kfk1 kafka 162 f.ogg}} '''Kafka:''' I give you my word, (Trailblazer): I will abide by the rule of one truth, one lie.
-:{{DIcon|Arrow}} Sounds childish...
-::{{A|VO side2 kfk1 kafka 163.ogg}} '''Kafka:''' You think? I really like it. I'm not good at it though &mdash; Silver Wolf always manages to guess right.
-:{{A|VO side2 kfk1 kafka 164.ogg}} '''Kafka:''' I'll go first to give you a demo.
-;(Unused &mdash; TalkSentence_202100385)
-:'''(Trailblazer):''' (Maybe if this door is closed, this path would be closed as well?)
-::'''(Trailblazer):''' (With this, the path is secured.)
-::'''(Trailblazer):''' (There are Cloud Knights guarding this place. Maybe I can destroy the aurumaton in secret?)
-:<pre>{
-	"$type": "RPG.GameCore.SetAudioEmotionState",
-	"StateName": "State_Relaxing",
-	"SubMissionID": 602020117
-}</pre>
-::{{A|VO side2 kfk1 kafka 233.ogg}} '''Kafka:''' Oh...
-::{{A|VO side2 kfk1 kafka 234.ogg}} '''Kafka:''' That's the second time you've evaded the possibility of a battle... You really do want to change my prediction, don't you...
-::{{A|VO side2 kfk1 kafka 235.ogg}} '''Kafka:''' But the future is still clear &mdash; the real test lies ahead... The young swordmaster of the Cloud Knights. He will not be an easy foe.
-::{{A|VO side2 kfk1 kafka 236 m.ogg}} {{A|VO side2 kfk1 kafka 236 f.ogg}} '''Kafka:''' If you want to change my prediction, you'll have to put in more effort, (Trailblazer).
-::{{A|VO side2 kfk1 kafka 237.ogg}} '''Kafka:''' The future is still clear &mdash; the real test lies ahead... The young swordmaster of the Cloud Knights. He will not be an easy foe.
-::{{A|VO side2 kfk1 kafka 238 m.ogg}} {{A|VO side2 kfk1 kafka 238 f.ogg}} '''Kafka:''' Well, you're doing a great job, (Trailblazer).
-::{{A|VO side2 kfk1 kafka 239.ogg}} '''Kafka:''' The future is still clear &mdash; the real test lies ahead... The young swordmaster of the Cloud Knights. He will not be an easy foe.
-::{{A|VO side2 kfk1 kafka 240.ogg}} '''Kafka:''' Until then, let's continue our game. It's my turn again.
-::{{A|VO side2 kfk1 kafka 241.ogg}} '''Kafka:''' Hehe, second question: Do you want to see me again?
-::{{A|VO side2 kfk1 player 115 m.ogg}} {{A|VO side2 kfk1 player 115 f.ogg}} '''(Trailblazer):''' (What kind of question is that? ...Will we see each other again? She'd know the answer to that one...)
-::{{A|VO side2 kfk1 player 116 m.ogg}} {{A|VO side2 kfk1 player 116 f.ogg}} '''(Trailblazer):''' (As for whether I'd want to, it seems obvious to me...)
-::{{DIcon|Arrow}} (I want to see Kafka again)
-:::{{A|VO side2 kfk1 player 117 m.ogg}} {{A|VO side2 kfk1 player 117 f.ogg}} '''(Trailblazer):''' (...I guess I do want to see her again.)
-::{{DIcon|Arrow}} (I don't want to see Kafka again)
-:::{{A|VO side2 kfk1 player 119 m.ogg}} {{A|VO side2 kfk1 player 119 f.ogg}} '''(Trailblazer):''' (...No, I don't want to deal with this lady again.)
-::{{tx}}
-:;(If {{cx}}<!--SubMission Finish: 602020162-->)
-:::{{DIcon|Arrow}} (Obey the rules of the game) I don't want to see you again.
-::::{{A|VO side2 kfk1 kafka 242.ogg}} '''Kafka:''' ...
-::::{{tx}}
-:::{{DIcon|Arrow}} (Ignore the rules of the game) I want to see you again.
-::::{{A|VO side2 kfk1 kafka 243.ogg}} '''Kafka:''' ...
-::::{{tx}}
-:;(If {{cx}}<!--SubMission not Finish: 602020162-->)
-:::{{DIcon|Arrow}} (Obey the rules of the game) I want to see you again.
-::::(Obey the rules of the game) I want to see you again.
-::::{{tx}}
-:::{{DIcon|Arrow}} (Disobey the rules of the game) I don't want to see you again.
-::::(Disobey the rules of the game) I don't want to see you again.
-::::{{tx}}
-
-;(Unused &mdash; TalkSentence_202100386)
-:'''(Trailblazer):''' (With this, the path is secured.)
-::'''(Trailblazer):''' (There are Cloud Knights guarding this place. Maybe I can destroy the aurumaton in secret?)
-:<pre>{
-	"$type": "RPG.GameCore.SetAudioEmotionState",
-	"StateName": "State_Relaxing",
-	"SubMissionID": 602020117
-}</pre>
-::{{A|VO side2 kfk1 kafka 233.ogg}} '''Kafka:''' Oh...
-::{{A|VO side2 kfk1 kafka 234.ogg}} '''Kafka:''' That's the second time you've evaded the possibility of a battle... You really do want to change my prediction, don't you...
-::{{A|VO side2 kfk1 kafka 235.ogg}} '''Kafka:''' But the future is still clear &mdash; the real test lies ahead... The young swordmaster of the Cloud Knights. He will not be an easy foe.
-::{{A|VO side2 kfk1 kafka 236 m.ogg}} {{A|VO side2 kfk1 kafka 236 f.ogg}} '''Kafka:''' If you want to change my prediction, you'll have to put in more effort, (Trailblazer).
-::{{A|VO side2 kfk1 kafka 237.ogg}} '''Kafka:''' The future is still clear &mdash; the real test lies ahead... The young swordmaster of the Cloud Knights. He will not be an easy foe.
-::{{A|VO side2 kfk1 kafka 238 m.ogg}} {{A|VO side2 kfk1 kafka 238 f.ogg}} '''Kafka:''' Well, you're doing a great job, (Trailblazer).
-::{{A|VO side2 kfk1 kafka 239.ogg}} '''Kafka:''' The future is still clear &mdash; the real test lies ahead... The young swordmaster of the Cloud Knights. He will not be an easy foe.
-::{{A|VO side2 kfk1 kafka 240.ogg}} '''Kafka:''' Until then, let's continue our game. It's my turn again.
-::{{A|VO side2 kfk1 kafka 241.ogg}} '''Kafka:''' Hehe, second question: Do you want to see me again?
-::{{A|VO side2 kfk1 player 115 m.ogg}} {{A|VO side2 kfk1 player 115 f.ogg}} '''(Trailblazer):''' (What kind of question is that? ...Will we see each other again? She'd know the answer to that one...)
-::{{A|VO side2 kfk1 player 116 m.ogg}} {{A|VO side2 kfk1 player 116 f.ogg}} '''(Trailblazer):''' (As for whether I'd want to, it seems obvious to me...)
-::{{DIcon|Arrow}} (I want to see Kafka again)
-:::{{A|VO side2 kfk1 player 117 m.ogg}} {{A|VO side2 kfk1 player 117 f.ogg}} '''(Trailblazer):''' (...I guess I do want to see her again.)
-::{{DIcon|Arrow}} (I don't want to see Kafka again)
-:::{{A|VO side2 kfk1 player 119 m.ogg}} {{A|VO side2 kfk1 player 119 f.ogg}} '''(Trailblazer):''' (...No, I don't want to deal with this lady again.)
-::{{tx}}
-:;(If {{cx}}<!--SubMission Finish: 602020162-->)
-:::{{DIcon|Arrow}} (Obey the rules of the game) I don't want to see you again.
-::::{{A|VO side2 kfk1 kafka 242.ogg}} '''Kafka:''' ...
-::::{{tx}}
-:::{{DIcon|Arrow}} (Ignore the rules of the game) I want to see you again.
-::::{{A|VO side2 kfk1 kafka 243.ogg}} '''Kafka:''' ...
-::::{{tx}}
-:;(If {{cx}}<!--SubMission not Finish: 602020162-->)
-:::{{DIcon|Arrow}} (Obey the rules of the game) I want to see you again.
-::::(Obey the rules of the game) I want to see you again.
-::::{{tx}}
-:::{{DIcon|Arrow}} (Disobey the rules of the game) I don't want to see you again.
-::::(Disobey the rules of the game) I don't want to see you again.
-::::{{tx}}
-
-;(Talk to Cloud Knight Soldier)
-:'''Cloud Knight Soldier:''' Have you seen this person?
-:'''(Trailblazer):''' (This is... Blade's wanted poster? Is Xianzhou still hunting down Blade?)
-
-:{{DIcon|Loupe}} Investigate
-:{{A|VO side2 kfk1 player 104 m.ogg}} {{A|VO side2 kfk1 player 104 f.ogg}} '''(Trailblazer):''' That's Blade. Kafka says he's Mara-struck.
 {{Dialogue End}}
 
 ===Speak with Kafka{{subst:void|<!--602020101-->}}===
 {{Dialogue Start}}
-:<!--2-second delay-->
-<pre>{
-	"$type": "RPG.GameCore.ActiveVirtualCamera",
-	"AreaName": "MainMission_2022101",
-	"AnchorName": "Camera_6020201_10"
-}</pre>
-:{{A|VO side2 kfk1 kafka 141.ogg}} '''Kafka:''' Being stricken with mara is the inescapable destiny of the long-life species. It is a madness triggered by the accumulation of emotions and memories. Blade doesn't remember much, but the mara still haunts him in some form...
-:{{A|VO side2 kfk1 kafka 142.ogg}} '''Kafka:''' After we arrived on the Xianzhou, the mara in him flared up so violently that even my Spirit Whisper couldn't suppress it. He's not fit for interstellar travel in this state.
-----
-:{{A|VO side2 kfk1 kafka 143.ogg}} '''Kafka:''' My plan is to use Spirit Whisper to temporarily seal the mara by reducing its potency. I need to focus all my concentration so I'll be vulnerable for some time &mdash; I need you to protect me while I suppress Blade.
-:{{A|VO side2 kfk1 kafka 144.ogg}} '''Kafka:''' I know when danger will come and what form it will take. Don't worry, together we can do this &mdash; no harm will come to you.
-:{{A|VO side2 kfk1 kafka 145.ogg}} '''Kafka:''' Now...
-:{{A|VO side2 kfk1 kafka 146.ogg}} '''Kafka:''' There are wandering monsters nearby &mdash; they'll spell trouble if we let them hang around. Go take care of them &mdash; your victory is certain.
-----
-:<!--8-second delay-->
-:{{A|VO side2 kfk1 kafka 136.ogg}} '''Kafka:''' Whatever your choice is, I will accept it.
+:{{tx}}
 {{Dialogue End}}
 
 ===(Optional) Help Kafka{{subst:void|<!--602020191-->}}===
 {{Mission Description|type=companion|location=Divination Commission|update|So Blade is still aboard the Xianzhou and is still wanted. Kafka plans to use her Spirit Whisper to suppress Blade's mara-struck condition, hoping that you would protect her while she uses her ability.}}
 {{Dialogue Start}}
-
+:{{tx}}
 {{Dialogue End}}
 
 ===(Optional) Leave Kafka alone{{subst:void|<!--602020192-->}}===
 {{Dialogue Start}}
-;(Upon reaching the destination)
-
-;(Upon reaching the destination)
-----
-:{{A|VO side2 kfk1 kafka 133.ogg}} '''Kafka:''' Have you made up your mind?
-
-;(Upon reaching the destination)
-----
-:{{A|VO side2 kfk1 kafka 133.ogg}} '''Kafka:''' Have you made up your mind?
+:{{tx}}
 {{Dialogue End}}
 
 ===Clear out the enemies roaming nearby{{subst:void|<!--602020103-->}}===
 {{Mission Description|type=companion|location=Divination Commission|update|Does "choice" really exist? From Kafka's perspective, all choices are illusions and merely represent predetermined possibilities. Free will does not exist, and your presence here is clear proof of that. Her ideas are somewhat pessimistic and nihilistic, and you can either accept or reject them.}}
 {{Dialogue Start}}
+:{{tx}}
 {{Dialogue End}}
 
 ===Speak with Kafka{{subst:void|<!--602020104-->}}===
 {{Dialogue Start}}
+:{{tx}}
 {{Dialogue End}}
 
 ==="Conflict is inevitable"{{subst:void|<!--602020105-->}}===
 {{Dialogue Start}}
-;(Upon reaching the destination)
-
-;(Upon reaching the destination)
-----
-:'''Cloud Knight Soldier:''' Hey! You &mdash; Stop!
-----
-:'''Cloud Knight Soldier:''' We've received an order to capture the wanted criminal! Put down your weapons and come with us!
-:'''(Trailblazer):''' (How should I respond?)
-:{{DIcon|Arrow}} (Threaten the Cloud Knights.)
-::'''(Trailblazer):''' (Try to intimidate them!)
-::{{DIcon|Arrow}} I am General Jing Yuan's esteemed guest!
-:::'''Cloud Knight Soldier:''' The law is the law, even if we must offend the general. Everyone, take them down!
-::{{DIcon|Arrow}} Who do you think you are, yelling like this?
-:::'''Cloud Knight Soldier:''' They're talking nonsense. Everyone, take them down!
-::{{DIcon|Arrow}} A Cloud Knight pawn dares to speak like this to the Marshal!?
-:::'''Cloud Knight Soldier:''' You dare to pretend to be the Marshal? Scoundrel! Everyone, take them down!
-::{{DIcon|Arrow}} I, Diviner Fu, do not like conflict...
-:::'''Cloud Knight Soldier:''' Nonsense. Everyone, take them down!
-::{{DIcon|Arrow}} I&mdash;I'm a variable...
-:::'''Cloud Knight Soldier:''' Utter nonsense. Everyone, take them down!
-:{{DIcon|Arrow}} (Lie to the Cloud Knights.)
-::'''(Trailblazer):''' (Maybe you can lie to the Cloud Knights and distract them...)
-::{{DIcon|Arrow}} The order was faked. You've been fooled.
-:::'''Cloud Knight Soldier:''' ...Don't you think of fooling me. Everyone, take them down!
-::{{DIcon|Arrow}} You're here too late. The criminal ran thataway.
-:::'''Cloud Knight Soldier:''' The criminal is right behind you! At least look around when you lie...
-::{{DIcon|Arrow}} Wake up! The Garden of Recollection is stealing your memories!
-:::'''Cloud Knight Soldier:''' What... This place...
-:::'''Cloud Knight Soldier:''' Take this, Memosnatcher!
-::{{DIcon|Arrow}} You can't see me, you can't see me, you can't...
-:::'''Cloud Knight Soldier:''' Nonsense. Everyone, take them down!
-::{{DIcon|Arrow}} I want to lie to you, but I really dunno how...
-:::'''Cloud Knight Soldier:''' You're an honest one.
-:::'''Cloud Knight Soldier:''' Everyone, take them down!
-:{{DIcon|Arrow}} (Report Kafka.)
-::'''(Trailblazer):''' (Thinking about it, Kafka is a villain, and the Cloud Knights are justified in trying to capture her...)
-::{{DIcon|Arrow}} Kafka is right here. Be careful of her Spirit Whisper ability!
-:::'''Cloud Knight Soldier:''' Hah! None of you will get away. Everyone, take them down!
-::{{DIcon|Arrow}} Blade is right here. Be careful of his regenerative ability!
-:::'''Cloud Knight Soldier:''' Hah! None of you will get away. Everyone, take them down!
-::{{DIcon|Arrow}} I'm willing to become a prosecution witness...
-:::'''Cloud Knight Soldier:''' What are you talking about? Everyone, take them down!
-::{{DIcon|Arrow}} Truth is, I work undercover for the Realm-Keeping Commission.
-:::'''Cloud Knight Soldier:''' I know all the undercover agents from the Realm-Keeping Commission, and you're not one of them. Everyone, take them down!
-:{{DIcon|Arrow}} (Talk to the fist.)
-::'''(Trailblazer):''' (Why waste my breath on them? Time to fight!)
-----
-:<!--1.5-second delay-->
-;(Enter battle)
-:{{Enemy List|Cloud Knights Patroller*3}}
+:{{tx}}
 {{Dialogue End}}
 
 ===(Optional) Try to change the future and persuade the Cloud Knights to leave{{subst:void|<!--602020106-->}}===
 {{Dialogue Start}}
+:{{tx}}
 {{Dialogue End}}
 
 ===Speak with Kafka{{subst:void|<!--602020108-->}}===
 {{Dialogue Start}}
+:{{tx}}
 {{Dialogue End}}
 
 ==="Prevail in the following battles"{{subst:void|<!--602020110-->}}===
 {{Dialogue Start}}
-:<!--4-second delay-->
-<pre>{
-	"$type": "RPG.GameCore.PlayNPCBubbleTalk",
-	"BubbleTalkInfoList": [
-		{
-			"AutoSkipTime": 1,
-			"GroupID": 75,
-			"GroupNpcID": 400007,
-			"TalkSentenceID": 602020039
-		}
-	]
-}</pre>
-
-;(Upon reaching the destination)
-:'''(Trailblazer):''' (The Cloud Knights are all distracted by the aurumaton. I should just stay away from the commotion.)
-----
-
-;(Upon reaching the destination)
-:'''(Trailblazer):''' (The Cloud Knights are all distracted by the aurumaton. I should just stay away from the commotion.)
-----
+:{{tx}}
 {{Dialogue End}}
 
 ===Speak with Kafka{{subst:void|<!--602020117-->}}===
 {{Dialogue Start}}
+:{{tx}}
 {{Dialogue End}}
 
 ===Play the second round of truth and lies{{subst:void|<!--602020122-->}}===
 {{Mission Description|type=companion|location=Divination Commission|update|The game of truth and lies has entered its second round. What does Kafka hope to gain from this game? Perhaps just some entertainment. But from the truthful and false answers, you can finally find answers to things you've been curious about for a long time. As for which answers are true or false...}}
 {{Dialogue Start}}
-
+:{{tx}}
 {{Dialogue End}}
 
 ===Battle Yanqing with Kafka's help{{subst:void|<!--602020118-->}}===
 {{Dialogue Start}}
-;(Upon reaching the destination)
-
-;(Upon reaching the destination)
 :{{tx}}
-;(Enter battle)
-:{{Enemy List|Cloud Knight Lieutenant: Yanqing*1}}
 {{Dialogue End}}
 
 ===Speak with Kafka{{subst:void|<!--602020119-->}}===
 {{Dialogue Start}}
-----
-:{{Black Screen|Kafka used Spirit Whisper on Yanqing and told him to leave, then breathed a sigh of relief.}}
-:<!--0.5-second delay-->
-:{{A|VO side2 kfk1 kafka 309 m.ogg}} {{A|VO side2 kfk1 kafka 309 f.ogg}} '''Kafka:''' (Trailblazer), if it weren't for you, that kid would've had me and Blade in The Shackling Prison in no time.
-:{{A|VO side2 kfk1 kafka 310.ogg}} '''Kafka:''' Of course, Sam and Silver Wolf would have broken us out, but Bladie would've been gravely injured, and our relationship with the Xianzhou would've been damaged beyond repair.
-:{{A|VO side2 kfk1 kafka 311.ogg}} '''Kafka:''' If possible, I'd like to avoid that kind of future at all costs.
-----
-:{{A|VO side2 kfk1 blade 101.ogg}} '''Blade:''' ...Can I leave now?
-:{{A|VO side2 kfk1 kafka 312.ogg}} '''Kafka:''' Yes, the mara in you is temporarily suppressed. So long as you avoid over-stimulation and familiar faces, you shouldn't have a problem.
-:{{A|VO side2 kfk1 kafka 313.ogg}} '''Kafka:''' ...Wait, you're not leaving?
-:{{A|VO side2 kfk1 blade 102.ogg}} '''Blade:''' I am sorry, Kafka. There is a person... a person to whom I am greatly indebted. I must see them.
-:{{A|VO side2 kfk1 kafka 314.ogg}} '''Kafka:''' ...Then it's in your hands. Elio didn't say anything about what happens next.
-:{{A|VO side2 kfk1 kafka 315 m.ogg}} {{A|VO side2 kfk1 kafka 315 f.ogg}} '''Kafka:''' Thank you for coming to my aid, (Trailblazer) &mdash; I appreciate it... Our paths will cross again.
-----
-:{{A|VO side2 kfk1 blade 103.ogg}} '''Blade:''' ...
-:{{A|VO side2 kfk1 blade 104.ogg}} '''Blade:''' I remember you.
-:{{DIcon|Arrow}} Huh?
-:{{DIcon|Arrow}} Well I don't remember you.
-:{{A|VO side2 kfk1 blade 105.ogg}} '''Blade:''' You once followed Kafka, didn't you? There was a time when she was on a mission &mdash; you were next to her. I remember.
-:{{A|VO side2 kfk1 blade 106.ogg}} '''Blade:''' I've yet to see anyone follow her for as long as you did... and live to tell the tale.
-:{{DIcon|Arrow}} What exactly are you getting at...?
-:{{DIcon|Arrow}} Guess I owe her my thanks, then.
-:{{DIcon|Arrow}} You all need me alive.
-:{{A|VO side2 kfk1 blade 107.ogg}} '''Blade:''' ...
-:{{A|VO side2 kfk1 blade 108.ogg}} '''Blade:''' Every Stellaron Hunter has a deal with Elio. I do not know the nature of those deals, but I do know that Kafka and I agreed to take orders from Elio. She must have sought something extraordinary. Everything she does comes at a great cost.
-:{{A|VO side2 kfk1 blade 109 m.ogg}} {{A|VO side2 kfk1 blade 109 f.ogg}} '''Blade:''' She will have done many things to keep you alive until now, young one.
-:'''(Trailblazer):''' ...
-----
-<pre>{
-	"$type": "RPG.GameCore.PropTriggerAnimState",
-	"AnimStateName": "Open",
-	"TargetType": {
-		"$type": "RPG.GameCore.TargetFetchAdvPropEx",
-		"FetchType": "SinglePropByPropID",
-		"SinglePropID": {
-			"GroupID": {
-				"FixedValue": {
-					"Value": 97
-				}
-			},
-			"ID": {
-				"FixedValue": {
-					"Value": 300001
-				}
-			}
-		}
-	}
-}</pre>
+:{{tx}}
 {{Dialogue End}}
 
 ===(Optional) Try to change the future and prevent the battle from happening{{subst:void|<!--602020111-->}}===
 {{Mission Description|type=companion|location=Divination Commission|update|Does "choice" really exist? From Kafka's perspective, all choices are illusions and merely represent predetermined possibilities. Free will does not exist, and your presence here is clear proof of that. Her ideas are somewhat pessimistic and nihilistic, and you can either accept or reject them.}}
 {{Dialogue Start}}
-;(Upon reaching the destination)
-
-;(Upon reaching the destination)
-:{{A|VO side2 kfk1 player 102 m.ogg}} {{A|VO side2 kfk1 player 102 f.ogg}} '''(Trailblazer):''' (She should be around here somewhere...)
-
-;(Upon reaching the destination)
-:{{A|VO side2 kfk1 player 102 m.ogg}} {{A|VO side2 kfk1 player 102 f.ogg}} '''(Trailblazer):''' (She should be around here somewhere...)
-:<!--2-second delay-->
-:{{A|VO side2 kfk1 player 101 m.ogg}} {{A|VO side2 kfk1 player 101 f.ogg}} '''(Trailblazer):''' (Hiding out at the Divination Commission... that's a bold decision.)
-
-;(Unused &mdash; Talk_602020195JZ)
-
-
-;(Unused &mdash; Talk_602020195WY)
-
+:{{tx}}
 {{Dialogue End}}
 
 ===(Optional) Ask Himeko and Welt's opinion{{subst:void|<!--602020196-->}}===
 {{Mission Description|type=companion|location=Parlor Car|update|You received a message from Kafka claiming that she is in trouble and requires your help. Do you go to her rescue? ...Or rather, do you believe her?}}
 {{Dialogue Start}}
+:{{tx}}
 {{Dialogue End}}
 
 ==Other Languages==

@@ -38,186 +38,19 @@ PageTitle=#Photography Exhibition: Award Ceremony#
 ===Attend March 7th's Award Ceremony{{subst:void|<!--802720801-->}}===
 {{Mission Description|type=adventure|location=Penacony Paperfold University College|The award ceremony for the Photography Exhibition is about to begin. Will March 7th be able to win a prize? Go and witness this exciting moment!}}
 {{Dialogue Start}}
-
-;(Unused &mdash; EnterDistrict_G380)
 :{{tx}}
-::'''March 7th:''' (Trailblazer), you're here!
-::{{DIcon|Arrow}} Where's the closing ceremony up to?
-:::'''March 7th:''' Mr. Reca just finished his closing speech. They're giving out the awards now!
-:::You really got all dressed up?
-::{{DIcon|Arrow}} You really got all dressed up?
-::'''March 7th:''' This is an important event, so I've got to take it seriously! And I went through so much trouble to buy this dress. It'd be a waste if I only wore it once.
-::'''March 7th:''' Shh, they're about to announce the last batch of awards!
-::'''Mr. Reca:''' Next up is the final award of this photography exhibition &mdash; the Best New Artist award.
-::'''Mr. Reca:''' Allow me to declare the name of our winner: The Nameless from the Astral Express, Miss (March 7th/Say~Cheese~/)!
-::'''March 7th:''' Heyheyheyyyyy! Wowowow!
-::{{DIcon|Arrow}} She's totally tongue-tied...
-::{{DIcon|Arrow}} Deep breaths. Watch your expressions!
-::'''Mr. Reca:''' If the magic of movies is using a moving lens to capture the flow of space and time, then photography is using a stationary lens to freeze moments of captivation.
-::{{tx}}
-:<pre>{
-	"$type": "RPG.GameCore.SwitchCharacterAnchorV2",
-	"SwitchCharacterAnchorConfig": {
-		"IsLocalPlayer": true,
-		"CharacterUniqueName": "LocalPlayer",
-		"AreaName": {
-			"Value": "LevelArea_P10306_F10306001_G380"
-		},
-		"AnchorName": {
-			"Value": "Anchor1"
-		}
-	}
-}</pre>
 {{Dialogue End}}
 
 ===Speak with March 7th{{subst:void|<!--802720802-->}}===
 {{Mission Description|type=adventure|location=Penacony Paperfold University College|update|As the award ceremony enters its conclusion, March 7th finally has time to rest. Chat with her.}}
 {{Dialogue Start}}
-
-;(Unused &mdash; EnterDistrict_G381)
-:'''(Trailblazer):''' (I'm late... What's going on with the award ceremony right now?)
-::'''(Trailblazer):''' (The award ceremony is finally over... Let's go talk to March 7th.)
-::'''March 7th:''' Phewwww, the ceremony is over! Someone even asked for my autograph just now. I was so nervous I almost broke the pen in half!
-::{{DIcon|Arrow}} Congrats on winning!
-:::Congrats on winning!
-:::'''March 7th:''' Without the help of my Best Photography Assistant, I never would've won!
-::{{DIcon|Arrow}} It's all thanks to my awesome assistant skills!
-:::It's all thanks to my awesome assistant skills!
-:::'''March 7th:''' Obviously! They should give you a "Best Photography Assistant award"!
-:::'''March 7th:''' (Trailblazer), I still want to take some shots for memories. How about we invite a few friends for a group photo?
-:::{{tx}}
-:::{{DIcon}} Invite the Express family!
-::::How could we let the Astral Express family miss out on such a momentous occasion? Coincidentally, they're all free right now.
-::::{{tx}}
-:::<pre>{
-	"$type": "RPG.GameCore.SetPerformanceResult"
-}</pre>
-:::{{DIcon}} Invite those who helped with the photos!
-::::You recall all your friends who helped complete your photography during the exhibition... Coincidentally, many of them are free right now.
-::::{{tx}}
-:::<pre>{
-	"$type": "RPG.GameCore.SetPerformanceResult",
-	"Value": 1
-}</pre>
-:::{{DIcon}} Invite your friends from the IPC!
-::::You recall Topaz, Aventurine, and Jade, and you give them a ring... An Intellitron assistant's emotionless robotic voice politely reminds you that they are "in a meeting."
-::::{{tx}}
-:::;(Return to previous option selection)
-:::{{DIcon}} Invite the Stellaron Hunters!
-::::You recall Kafka, Blade, Silver Wolf, and Firefly, and you give them a call... But all you can hear from the earpiece is a cascading cacophony of gunfire and explosions.
-::::{{tx}}
-:::;(Return to previous option selection)
-::It's all thanks to my awesome assistant skills!
-::'''March 7th:''' Obviously! They should give you a "Best Photography Assistant award"!
-::'''March 7th:''' (Trailblazer), I still want to take some shots for memories. How about we invite a few friends for a group photo?
-::{{tx}}
-::{{DIcon}} Invite the Express family!
-:::How could we let the Astral Express family miss out on such a momentous occasion? Coincidentally, they're all free right now.
-:::{{tx}}
-::<pre>{
-	"$type": "RPG.GameCore.SetPerformanceResult"
-}</pre>
-::{{DIcon}} Invite those who helped with the photos!
-:::You recall all your friends who helped complete your photography during the exhibition... Coincidentally, many of them are free right now.
-:::{{tx}}
-::<pre>{
-	"$type": "RPG.GameCore.SetPerformanceResult",
-	"Value": 1
-}</pre>
-::{{DIcon}} Invite your friends from the IPC!
-:::You recall Topaz, Aventurine, and Jade, and you give them a ring... An Intellitron assistant's emotionless robotic voice politely reminds you that they are "in a meeting."
-:::{{tx}}
-::;(Return to previous option selection)
-::{{DIcon}} Invite the Stellaron Hunters!
-:::You recall Kafka, Blade, Silver Wolf, and Firefly, and you give them a call... But all you can hear from the earpiece is a cascading cacophony of gunfire and explosions.
-:::{{tx}}
-::;(Return to previous option selection)
-
-;(Unused &mdash; G381_TriggerPerformance_1)
-----
-::{{tx}}
-::'''March 7th:''' Hee-hee, thank you everyone! Let's take a group photo!
-::{{DIcon|Arrow}} Ready, everyone?
-:<pre>{
-	"$type": "RPG.GameCore.AdvCreateGroupEntity",
-	"InstanceIDList": [
-		300001
-	]
-}</pre>
-::'''March 7th:''' Hee-hee, thank you everyone! Let's take a group photo!
-::Ready, everyone?
-::Instructed by you and March 7th, everyone stands in their appropriate spots.
-::We'll have this group photo be the grand finale for this exhibition!
-::{{DIcon|Arrow}} Everyone say...
-::{{DIcon|Arrow}} ...Cheese!
-::Everyone's smiles are captured...
-::{{tx}}
-:<pre>{
-	"$type": "RPG.GameCore.SetMissionCustomValue",
-	"SubmissionID": 802720802,
-	"MissionCustomValue": {
-		"Name": "OldValue_0",
-		"ValidValueParamList": [
-			1,
-			2,
-			3
-		]
-	},
-	"CustomValue": 2
-}</pre>
-
-;(Unused &mdash; G381_TriggerPerformance_2)
-----
-::'''Himeko:''' Congrats, March, you really garnered plenty of recognition for the Express.
-::'''Welt:''' The next time you see these photos again, they'll probably bring back some great memories.
-::'''Dan Heng:''' You can also get me to be your photography assistant next time. Also, Pom-Pom has a message for you:
-::'''Dan Heng:''' "When you're back, I'll place the trophy in the most conspicuous spot, pom!"
-::'''March 7th:''' Hee-hee, thank you everyone! Let's take a group photo!
-::{{DIcon|Arrow}} Ready, everyone?
-:<pre>{
-	"$type": "RPG.GameCore.AdvCreateGroupEntity",
-	"InstanceIDList": [
-		300003
-	]
-}</pre>
-::'''Himeko:''' Congrats, March, you really garnered plenty of recognition for the Express.
-::'''Welt:''' The next time you see these photos again, they'll probably bring back some great memories.
-::'''Dan Heng:''' You can also get me to be your photography assistant next time. Also, Pom-Pom has a message for you:
-::'''Dan Heng:''' "When you're back, I'll place the trophy in the most conspicuous spot, pom!"
-::'''March 7th:''' Hee-hee, thank you everyone! Let's take a group photo!
-::Ready, everyone?
-::Instructed by you and March 7th, everyone stands in their appropriate spots.
-::'''March 7th:''' We'll have this group photo be the grand finale for this exhibition~
-::{{DIcon|Arrow}} Everyone say...
-::{{DIcon|Arrow}} ...Cheese!
-::Everyone's smiles are captured...
-::{{tx}}
-:<pre>{
-	"$type": "RPG.GameCore.SetMissionCustomValue",
-	"SubmissionID": 802720802,
-	"MissionCustomValue": {
-		"Name": "OldValue_0",
-		"ValidValueParamList": [
-			1,
-			2,
-			3
-		]
-	},
-	"CustomValue": 1
-}</pre>
+:{{tx}}
 {{Dialogue End}}
 
 ===Take a commemorative picture with March 7th{{subst:void|<!--802720803-->}}===
 {{Mission Description|type=adventure|location=Penacony Paperfold University College|update|March 7th wants to share the joy of winning with her friends. Take group photos as a keepsake for the friends she has invited.}}
 {{Dialogue Start}}
-<pre>{
-	"$type": "RPG.GameCore.ShowUI",
-	"Name": "Ui.Activity.ActivityPhotoExhibition.Result.ActivityPhotoExhibitionShotResultDialog",
-	"WaitForExit": true,
-	"Param": {
-		"Value": "15"
-	}
-}</pre>
+:{{tx}}
 {{Dialogue End}}
 
 ==Other Languages==

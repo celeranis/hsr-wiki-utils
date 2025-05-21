@@ -43,335 +43,37 @@ PageTitle=#Let's Go! Aetherium Wars!#
 ===Discuss with March 7th{{subst:void|<!--801410102-->}}===
 {{Mission Description|type=adventure|location=Administrative District|update|An IPC worker named Wilder is passionately promoting a game named Aetherium Wars to you, and sent you an invitation for the Interastral Tournament Festival.<br />Will you go to experience this game in person? Chat with March 7th first.}}
 {{Dialogue Start}}
-
-;(Talk to March 7th)
-----
-<pre>{
-	"$type": "RPG.GameCore.CreatePhoneOnCharacter",
-	"GroupID": 217,
-	"GroupNpcID": 400001
-}</pre>
-:{{A|VO side1 ytzx mar7th 101.ogg}} '''March 7th:''' Huh... Who's Wilder? ...And what's "Aetherium Wars"?
-:{{DIcon|Arrow}} It's an ad for a game. Looks pretty cool.
-::{{A|VO side1 ytzx mar7th 102.ogg}} '''March 7th:''' A game ad...?
-:{{DIcon|Arrow}} It's nothing, just another advertisement.
-::{{A|VO side1 ytzx mar7th 103.ogg}} '''March 7th:''' Really? Let me see...
-:{{A|VO side1 ytzx mar7th 104.ogg}} '''March 7th:''' Hmm... using the IPC's cutting-edge Aether copying technology, we can record any creature you've seen inside of an Aether Coin...
-:{{A|VO side1 ytzx mar7th 105.ogg}} '''March 7th:''' Just print it out and compete against other players &mdash; let your Aether Spirits fight for your glory...
-:{{A|VO side1 ytzx mar7th 106.ogg}} '''March 7th:''' Ooh... Seems pretty neat, don't you think?
-:{{DIcon|Arrow}} I gotta say, sounds pretty cool.
-::<!--0.5-second delay-->
-:<pre>{
-	"$type": "RPG.GameCore.CreatePhoneOnCharacter",
-	"IsDestroy": true,
-	"GroupID": 217,
-	"GroupNpcID": 400001
-}</pre>
-::{{A|VO side1 ytzx mar7th 107.ogg}} '''March 7th:''' Right? I knew you were a gamer! Wanna check it out on the way?
-:{{DIcon|Arrow}} Seriously?
-::<!--0.5-second delay-->
-:<pre>{
-	"$type": "RPG.GameCore.CreatePhoneOnCharacter",
-	"IsDestroy": true,
-	"GroupID": 217,
-	"GroupNpcID": 400001
-}</pre>
-::{{A|VO side1 ytzx mar7th 108.ogg}} '''March 7th:''' I mean... Yeah? Wanna check it out on the way?
-:{{DIcon|Arrow}} Let's do it!
-:<pre>{
-	"$type": "RPG.GameCore.ActiveVirtualCamera",
-	"AreaName": "LevelArea_P10101_F10101001_G217",
-	"AnchorName": "Anchor3",
-	"DynamicParams": {}
-}</pre>
-::{{A|VO side1 ytzx mar7th 109.ogg}} '''March 7th:''' Awesome! I've heard that Stellaron Hunter girl uses this kind of tech &mdash; maybe we can see it in action.
-:{{DIcon|Arrow}} Well, since I'm already here...
-:<pre>{
-	"$type": "RPG.GameCore.ActiveVirtualCamera",
-	"AreaName": "LevelArea_P10101_F10101001_G217",
-	"AnchorName": "Anchor3",
-	"DynamicParams": {}
-}</pre>
-::{{A|VO side1 ytzx mar7th 110.ogg}} '''March 7th:''' ...Why do you look so unimpressed?
-::{{A|VO side1 ytzx mar7th 111.ogg}} '''March 7th:''' Seriously, think about it, it's Aether copying! I've only ever heard of that Stellaron Hunter girl using this kind of tech.
-::{{A|VO side1 ytzx mar7th 112.ogg}} '''March 7th:''' Come on, let's go. Just think of it as... keeping me company for a while!
-:{{A|VO side1 ytzx mar7th 113.ogg}} '''March 7th:''' It's at the Rivet Town Plaza, right? Let's hit the road, there's no time like the present!
-----
+:{{tx}}
 {{Dialogue End}}
 
 ===Go to Rivet Town and meet with Wilder{{subst:void|<!--801410103-->}}===
 {{Mission Description|type=adventure|location=Rivet Town|update|An IPC worker named Wilder is passionately promoting a game named Aetherium Wars to you, and sent you an invitation for the Interastral Tournament Festival.<br />After deciding to experience this game in person, you firstly need to find this person named Wilder.}}
 {{Dialogue Start}}
-<pre>{
-	"$type": "RPG.GameCore.CreateProp",
-	"GroupID": {
-		"FixedValue": {
-			"Value": 113
-		}
-	},
-	"GroupPropID": {
-		"FixedValue": {
-			"Value": 300001
-		}
-	},
-	"CreateList": []
-}</pre>
-;(Upon reaching the destination)
-
-;(Upon reaching the destination)
-:{{A|VO side1 ytzx mar7th 114.ogg}} '''March 7th:''' That uniform... Was it him that texted you?
-
-;(Talk to Wilder)
-----
-:{{A|VO side1 ytzx wilder 101 m.ogg}} {{A|VO side1 ytzx wilder 101 f.ogg}} '''Wilder:''' {{MC|m=Mr. |f=Miss. }}(Trailblazer)! I knew you'd come!
-:{{A|VO side1 ytzx wilder 102.ogg}} '''Wilder:''' Come on, let's chat about Aetherium Wars! I've been playing it for 18 years, so ask me anything &mdash; I'll tell you everything I know!
-:{{DIcon|Talk}} What kind of game is this, exactly?
-:;(Return to previous option selection)
-:{{DIcon|Talk}} What's "Aether copying?"
-:;(Return to previous option selection)
-:{{DIcon|Talk}} What's the Interastral Tournament Festival?
-:;(Return to previous option selection)
-:{{DIcon|Talk}} How did you get my number?
-::{{A|VO side1 ytzx wilder 113.ogg}} '''Wilder:''' Uh... Haha, well, that's...
-::{{A|VO side1 ytzx mar7th 120 m.ogg}} {{A|VO side1 ytzx mar7th 120 f.ogg}} '''March 7th:''' Ugh, do we have to start an interrogation right now? I know the IPC aren't exactly our friends, but that's not just his fault.
-:;(Return to previous option selection)
-:{{DIcon|Arrow}} We want to try the game out.
+:{{tx}}
 {{Dialogue End}}
 
 ===Head to the arena{{subst:void|<!--801410104-->}}===
 {{Mission Description|type=adventure|location=Rivet Town|update|An IPC worker named Wilder is passionately promoting a game named Aetherium Wars to you, and sent you an invitation for the Interastral Tournament Festival.<br />Wilder claims you can only play this game by heading to a specific lobby to register an account. Why don't you go and see what tricks he has up his sleeve...}}
 {{Dialogue Start}}
+:{{tx}}
 {{Dialogue End}}
 
 ===Follow Wilder{{subst:void|<!--801410105-->}}===
 {{Mission Description|type=adventure|location=Old Weapon Testing Ground|update|An IPC worker named Wilder is passionately promoting a game named Aetherium Wars to you, and sent you an invitation for the Interastral Tournament Festival.<br />With Wilder leading you, you walk deeper into the arena...}}
 {{Dialogue Start}}
-<pre>{
-	"$type": "RPG.GameCore.CreateProp",
-	"GroupID": {
-		"FixedValue": {
-			"Value": 12
-		}
-	},
-	"GroupPropID": {
-		"FixedValue": {
-			"Value": 300003
-		}
-	},
-	"CreateList": []
-}</pre>
-;(Upon reaching the destination)
-
-;(Upon reaching the destination)
-;(If {{Mission|Future Market (II)|showChapter=0}} has been completed)
-::{{A|VO side1 ytzx mar7th 124.ogg}} '''March 7th:''' The atmosphere here is so different now... It's so lively!
-::{{A|VO side1 ytzx wilder 122.ogg}} '''Wilder:''' Haha, so you guys have been here before? The Corporation recently saw the potential in Jarilo-VI and decided to renovate this old weapon testing ground.
-::{{A|VO side1 ytzx wilder 123.ogg}} '''Wilder:''' Haha, don't worry, you won't find any "weapon testing" going on here. Now it's the venue for the Interastral Tournament Festival!
-;(If {{Mission|Future Market (II)|showChapter=0}} has not been completed)
-::{{A|VO side1 ytzx mar7th 123.ogg}} '''March 7th:''' ...Such a huge area.
-::{{A|VO side1 ytzx wilder 120.ogg}} '''Wilder:''' Mm-hmm &mdash; the Corporation saw the potential in Jarilo-VI and decided to renovate this old weapon testing ground.
-::{{A|VO side1 ytzx wilder 121.ogg}} '''Wilder:''' Haha, don't worry, you won't find any "weapon testing" going on here. Now it's the venue for the Interastral Tournament Festival!
-
-;(Talk to Giovanni)
-----
-:{{A|VO side1 ytzx mar7th 126.ogg}} '''March 7th:''' Thanks for introducing yourself, Mr. Giovanni Di... something something...
-:{{A|VO side1 ytzx mar7th 127.ogg}} '''March 7th:''' You seem like a pretty important person. What brings you to this kind of place?
-:{{DIcon|Arrow}} That's not very polite, March.
-::{{A|VO side1 ytzx giovanni 112.ogg}} '''Giovanni:''' Hahaha, no harm done! Your candid personality is charming, Miss March.
-:{{DIcon|Arrow}} Yeah! What brings you here?
-::{{A|VO side1 ytzx giovanni 113.ogg}} '''Giovanni:''' You truly live up to your reputation as the saviors of Belobog. Such keen insight!
-:{{DIcon|Arrow}} Can you take off your mask, so I can get a better look at you?
-::{{A|VO side1 ytzx giovanni 114.ogg}} '''Giovanni:''' Hahaha, how humorous! As much as I'd like to oblige, this mask is a necessary precaution for me. Let's leave something to the imagination, shall we?
-:{{A|VO side1 ytzx giovanni 115.ogg}} '''Giovanni:''' Now, let me answer Miss March's question &mdash; as you can see, the Interastral Tournament Festival is about to be held on this beautiful icy planet...
-:{{A|VO side1 ytzx giovanni 116.ogg}} '''Giovanni:''' ...and as the sole sponsor of this event, it's only natural for me to come to the tournament venue and check on its operations.
-:{{A|VO side1 ytzx giovanni 117.ogg}} '''Giovanni:''' Furthermore, I'd also like to get to know the players of the tournament, including yourselves. One can never have too many friends when it comes to doing business in this vast universe of ours.
-:{{A|VO side1 ytzx giovanni 118.ogg}} '''Giovanni:''' If you'd be willing to call me "friend," it would be a great honor to have you as such!
-:{{A|VO side1 ytzx mar7th 128.ogg}} '''March 7th:''' Hmm... weird mask, strange vibes, a little out of touch...
-:{{A|VO side1 ytzx mar7th 129 m.ogg}} {{A|VO side1 ytzx mar7th 129 f.ogg}} '''March 7th:''' ...but he seems friendly enough, right, (Trailblazer)?
-:{{DIcon|Arrow}} A toast to our new friendship!
-:{{DIcon|Arrow}} Something's off...
-:{{DIcon|Arrow}} Monthly friendship payments are due on the first of each month...
-:{{A|VO side1 ytzx wilder 124.ogg}} '''Wilder:''' Take a look, this is where the Interastral Tournament Festival will be held this year.
-:{{A|VO side1 ytzx wilder 125.ogg}} '''Wilder:''' The Aetherium Wars Gaming Association specifically chose this planet to help rejuvenate it and bring it up to date with the latest trends...
-:{{A|VO side1 ytzx giovanni 101.ogg}} '''???:''' Good, good... Everything is going according to plan.
-:{{A|VO side1 ytzx wilder 126.ogg}} '''Wilder:''' Is that...?
-:{{A|VO side1 ytzx wilder 127.ogg}} '''Wilder:''' Mr. Giovanni, is that you?
-:{{A|VO side1 ytzx giovanni 102.ogg}} '''Giovanni:''' Hmm?
-:{{A|VO side1 ytzx giovanni 103.ogg}} '''Giovanni:''' Ha, Wilder! I was just wondering where you'd got to...
-:{{A|VO side1 ytzx giovanni 104 m.ogg}} {{A|VO side1 ytzx giovanni 104 f.ogg}} '''Giovanni:''' ...and you brought along {{MC|m=a handsome gentleman and a beautiful young lady|f=two beautiful young ladies}}! Welcome to my arena!
-:{{A|VO side1 ytzx giovanni 105 m.ogg}} {{A|VO side1 ytzx giovanni 105 f.ogg}} '''Giovanni:''' If I'm not mistaken, you're the trailblazers, right?
-:{{A|VO side1 ytzx giovanni 106.ogg}} '''Giovanni:''' So, I presume you two have heard about the Interastral Tournament Festival? Have you come to show off your skills?
-:{{A|VO side1 ytzx mar7th 125 m.ogg}} {{A|VO side1 ytzx mar7th 125 f.ogg}} '''March 7th:''' Psst, (Trailblazer) look at his mask! Pretty cool, don't you think?
-:{{DIcon|Arrow}} Correct! Where do we sign up?
-::{{A|VO side1 ytzx giovanni 107.ogg}} '''Giovanni:''' Hahaha, just as I expected &mdash; you're exactly as they say in the rumors!
-::How did you know who we are?
-::{{A|VO side1 ytzx giovanni 108.ogg}} '''Giovanni:''' It doesn't matter, my friend. What matters is that we're now acquainted!
-::Yo, mask-face, introduce yourself.
-:{{DIcon|Arrow}} How did you know who we are?
-::{{A|VO side1 ytzx giovanni 108.ogg}} '''Giovanni:''' It doesn't matter, my friend. What matters is that we're now acquainted!
-::Yo, mask-face, introduce yourself.
-:{{DIcon|Arrow}} Yo, mask-face, introduce yourself.
-:{{A|VO side1 ytzx giovanni 109.ogg}} '''Giovanni:''' Haha, look at me, forgetting my manners.
-:{{A|VO side1 ytzx giovanni 110.ogg}} '''Giovanni:''' My name is Giovanni di Giorgio da Epsilon, a humble private trader from Epsilon, and the sole sponsor of this year's Interastral Tournament Festival...
 :{{tx}}
-----
-:{{A|VO side1 ytzx mar7th 126.ogg}} '''March 7th:''' Thanks for introducing yourself, Mr. Giovanni Di... something something...
-:{{A|VO side1 ytzx mar7th 127.ogg}} '''March 7th:''' You seem like a pretty important person. What brings you to this kind of place?
-:{{DIcon|Arrow}} That's not very polite, March.
-::{{A|VO side1 ytzx giovanni 112.ogg}} '''Giovanni:''' Hahaha, no harm done! Your candid personality is charming, Miss March.
-:{{DIcon|Arrow}} Yeah! What brings you here?
-::{{A|VO side1 ytzx giovanni 113.ogg}} '''Giovanni:''' You truly live up to your reputation as the saviors of Belobog. Such keen insight!
-:{{DIcon|Arrow}} Can you take off your mask, so I can get a better look at you?
-::{{A|VO side1 ytzx giovanni 114.ogg}} '''Giovanni:''' Hahaha, how humorous! As much as I'd like to oblige, this mask is a necessary precaution for me. Let's leave something to the imagination, shall we?
-:{{A|VO side1 ytzx giovanni 115.ogg}} '''Giovanni:''' Now, let me answer Miss March's question &mdash; as you can see, the Interastral Tournament Festival is about to be held on this beautiful icy planet...
-:{{A|VO side1 ytzx giovanni 116.ogg}} '''Giovanni:''' ...and as the sole sponsor of this event, it's only natural for me to come to the tournament venue and check on its operations.
-:{{A|VO side1 ytzx giovanni 117.ogg}} '''Giovanni:''' Furthermore, I'd also like to get to know the players of the tournament, including yourselves. One can never have too many friends when it comes to doing business in this vast universe of ours.
-:{{A|VO side1 ytzx giovanni 118.ogg}} '''Giovanni:''' If you'd be willing to call me "friend," it would be a great honor to have you as such!
-:{{A|VO side1 ytzx mar7th 128.ogg}} '''March 7th:''' Hmm... weird mask, strange vibes, a little out of touch...
-:{{A|VO side1 ytzx mar7th 129 m.ogg}} {{A|VO side1 ytzx mar7th 129 f.ogg}} '''March 7th:''' ...but he seems friendly enough, right, (Trailblazer)?
-:{{DIcon|Arrow}} A toast to our new friendship!
-:{{DIcon|Arrow}} Something's off...
-:{{DIcon|Arrow}} Monthly friendship payments are due on the first of each month...
 {{Dialogue End}}
 
 ===Defeat Topaz's Support Squad{{subst:void|<!--801410108-->}}===
 {{Mission Description|type=adventure|location=Old Weapon Testing Ground|update|You run into IPC workers threatening Eric in the arena. This group of adults is ganging up on one child. How shameless!<br />With Giovanni's mediation, you decide to resolve the issue with a match of Aetherium Wars. Come, the hotblooded debut match!}}
 {{Dialogue Start}}
-:{{A|VO side1 ytzx staffH 101.ogg}} '''Harsh IPC Worker:''' Hey, twerp! Hand over that coin!
-:{{A|VO side1 ytzx staffI 101.ogg}} '''Vicious IPC Worker:''' You little brat &mdash; who said you could touch this?
-:{{A|VO side1 ytzx eric 101.ogg}} '''Eric:''' B&mdash;But this is mine, I found it on the ground...
-:{{A|VO side1 ytzx mar7th 136.ogg}} '''March 7th:''' Hey, that's enough! Picking on a kid, are we?
-:{{A|VO side1 ytzx eric 102.ogg}} '''Eric:''' O&mdash;Outworlder lady! Careful, they're dangerous...
-:{{A|VO side1 ytzx mar7th 137.ogg}} '''March 7th:''' Don't sweat it &mdash; leave them to us.
-:{{A|VO side1 ytzx giovanni 141.ogg}} '''Giovanni:''' I say, my IPC friends, I can see how captivated you are by that coin. Am I right in assuming that you're also Aetherium Wars players?
-:{{A|VO side1 ytzx staffH 102.ogg}} '''Harsh IPC Worker:''' Where did mask-dude come from? And what does it have to do with you whether I'm a player or not?
-:{{A|VO side1 ytzx staffI 102.ogg}} '''Vicious IPC Worker:''' Exactly! What's it to you? Sneaking around with a mask on &mdash; you must be some kind of creep.
-:{{A|VO side1 ytzx giovanni 142.ogg}} '''Giovanni:''' Hehe, what I'm getting at is this &mdash; since you're both players, why not have a showdown to settle the matter? Following the proper rules of the game, of course.
-:{{A|VO side1 ytzx giovanni 143 m.ogg}} {{A|VO side1 ytzx giovanni 143 f.ogg}} '''Giovanni:''' But, instead of this young boy, I propose that {{MC|m=this gentleman and Miss March|f=these two young ladies}} be the challengers.
-:{{A|VO side1 ytzx giovanni 144 m.ogg}} {{A|VO side1 ytzx giovanni 144 f.ogg}} '''Giovanni:''' If they lose, the coin will naturally become yours, and you can do as you wish with it...
-:{{A|VO side1 ytzx giovanni 145.ogg}} '''Giovanni:''' ...but if you lose, I would kindly ask that you gracefully accept defeat and refrain from causing any more trouble in my arena. Are we all in agreement?
-:{{DIcon|Arrow}} Sounds like a great idea!
-::{{A|VO side1 ytzx mar7th 138.ogg}} '''March 7th:''' Hah! I had a feeling you'd say that!
-::But I've never played this game before...
-::{{A|VO side1 ytzx mar7th 139.ogg}} '''March 7th:''' Not to worry! Mr. Giovanni will explain it all, right?
-::{{A|VO side1 ytzx giovanni 146.ogg}} '''Giovanni:''' Hahaha, why of course! I assure you that I will do everything in my power to assist you both.
-::How about I use a bat to resolve our differences?
-:{{DIcon|Arrow}} But I've never played this game before...
-::{{A|VO side1 ytzx mar7th 139.ogg}} '''March 7th:''' Not to worry! Mr. Giovanni will explain it all, right?
-::{{A|VO side1 ytzx giovanni 146.ogg}} '''Giovanni:''' Hahaha, why of course! I assure you that I will do everything in my power to assist you both.
-::How about I use a bat to resolve our differences?
-:{{DIcon|Arrow}} How about I use a bat to resolve our differences?
-:{{A|VO side1 ytzx giovanni 147.ogg}} '''Giovanni:''' Ahem, I wouldn't advise it. Violence wouldn't make for a very interesting outcome now, would it?
-:{{A|VO side1 ytzx giovanni 148.ogg}} '''Giovanni:''' Let's all agree to keep things peaceful and enjoyable.
-:{{A|VO side1 ytzx mar7th 140.ogg}} '''March 7th:''' Mr. Giovanni is right! Now's our chance to check out this game and see if it lives up to the hype.
-:{{A|VO side1 ytzx giovanni 149 m.ogg}} {{A|VO side1 ytzx giovanni 149 f.ogg}} '''Giovanni:''' Here are a few beginner-level Aether Spirits for you, (Trailblazer). They'll help you get the hang of the game's pace and rules.
 :{{tx}}
-<pre>{
-	"$type": "RPG.GameCore.PerformanceExtendEndBlack",
-	"ExtendTime": 1
-}</pre>
-----
-:{{A|VO side1 ytzx mar7th 141.ogg}} '''March 7th:''' We sure showed those troublemakers who's boss! Are you okay, Eric?
-:{{A|VO side1 ytzx eric 103.ogg}} '''Eric:''' Thanks, Miss March, I&mdash;I'm fine.
-:{{DIcon|Arrow}} Glad to hear it.
-::{{A|VO side1 ytzx mar7th 142.ogg}} '''March 7th:''' Good. Why were those IPC workers threatening you?
-::{{A|VO side1 ytzx eric 104.ogg}} '''Eric:''' I&mdash;I don't know... I just found this coin on the floor...
-:<pre>{
-	"$type": "RPG.GameCore.TalkFigure",
-	"ImagePath": "SpriteOutput/Mission/TalkItem/SubMission_140286.png"
-}</pre>
-::<!--1-second delay-->
-::{{A|VO side1 ytzx giovanni 151.ogg}} '''Giovanni:''' Hmm... based on the appearance of the coin alone, it's difficult to discern any significance. As for who it belongs to &mdash; that's also a mystery.
-:<pre>{
-	"$type": "RPG.GameCore.TalkFigure",
-	"Show": false,
-	"ImagePath": "SpriteOutput/Mission/TalkItem/SubMission_140286.png"
-}</pre>
-::{{A|VO side1 ytzx giovanni 152.ogg}} '''Giovanni:''' Didn't they mention something else? "Topaz"?
-::{{A|VO side1 ytzx mar7th 146.ogg}} '''March 7th:''' Yeah, they mentioned Miss Topaz! What's that all about?
-::{{A|VO side1 ytzx eric 105.ogg}} '''Eric:''' Oh, I know! They said they were members of Miss Topaz's "support squad"... They said they'd gather the strongest Aether Spirits from across the universe and give them to her... so she could win the tournament!
-::{{A|VO side1 ytzx mar7th 147.ogg}} '''March 7th:''' Huh!? Would Miss Topaz stoop so low? I can't believe she'd be that desperate...
-::{{A|VO side1 ytzx giovanni 153.ogg}} '''Giovanni:''' I think there must be some kind of misunderstanding. I have had some interactions with Miss Topaz, and this doesn't seem like her way of dealing with people.
-::{{A|VO side1 ytzx mar7th 148.ogg}} '''March 7th:''' I suppose that means this coin doesn't belong to Miss Topaz after all. I wonder whose it could be... it doesn't seem to have any info on it...
-::{{A|VO side1 ytzx giovanni 154.ogg}} '''Giovanni:''' Indeed. There is no information on the Aether Coin that could help us trace it back to its owner... It seems returning it to its rightful owner will be quite the challenge.
-::{{A|VO side1 ytzx eric 106.ogg}} '''Eric:''' I...
-:;(Return to previous option selection)
-:{{DIcon|Arrow}} Why were they threatening you?
-::{{A|VO side1 ytzx mar7th 143.ogg}} '''March 7th:''' I was wondering the same thing. Why would they pick on someone half their size?
-::{{A|VO side1 ytzx eric 104.ogg}} '''Eric:''' I&mdash;I don't know... I just found this coin on the floor...
-:<pre>{
-	"$type": "RPG.GameCore.TalkFigure",
-	"ImagePath": "SpriteOutput/Mission/TalkItem/SubMission_140286.png"
-}</pre>
-::<!--1-second delay-->
-::{{A|VO side1 ytzx giovanni 151.ogg}} '''Giovanni:''' Hmm... based on the appearance of the coin alone, it's difficult to discern any significance. As for who it belongs to &mdash; that's also a mystery.
-:<pre>{
-	"$type": "RPG.GameCore.TalkFigure",
-	"Show": false,
-	"ImagePath": "SpriteOutput/Mission/TalkItem/SubMission_140286.png"
-}</pre>
-::{{A|VO side1 ytzx giovanni 152.ogg}} '''Giovanni:''' Didn't they mention something else? "Topaz"?
-::{{A|VO side1 ytzx mar7th 146.ogg}} '''March 7th:''' Yeah, they mentioned Miss Topaz! What's that all about?
-::{{A|VO side1 ytzx eric 105.ogg}} '''Eric:''' Oh, I know! They said they were members of Miss Topaz's "support squad"... They said they'd gather the strongest Aether Spirits from across the universe and give them to her... so she could win the tournament!
-::{{A|VO side1 ytzx mar7th 147.ogg}} '''March 7th:''' Huh!? Would Miss Topaz stoop so low? I can't believe she'd be that desperate...
-::{{A|VO side1 ytzx giovanni 153.ogg}} '''Giovanni:''' I think there must be some kind of misunderstanding. I have had some interactions with Miss Topaz, and this doesn't seem like her way of dealing with people.
-::{{A|VO side1 ytzx mar7th 148.ogg}} '''March 7th:''' I suppose that means this coin doesn't belong to Miss Topaz after all. I wonder whose it could be... it doesn't seem to have any info on it...
-::{{A|VO side1 ytzx giovanni 154.ogg}} '''Giovanni:''' Indeed. There is no information on the Aether Coin that could help us trace it back to its owner... It seems returning it to its rightful owner will be quite the challenge.
-::{{A|VO side1 ytzx eric 106.ogg}} '''Eric:''' I...
-:;(Return to previous option selection)
-:{{DIcon|Arrow}} This game is way too easy.
-::{{A|VO side1 ytzx mar7th 144.ogg}} '''March 7th:''' Here we go.... Let's save the victory speeches for later.
-:;(Return to previous option selection)
-;(Obtain {{Item|Aether Coin|20|x=1}})
 {{Dialogue End}}
 
 ===Head to the Aetherium Wars Player Terminal{{subst:void|<!--801410110-->}}===
 {{Mission Description|type=adventure|location=Old Weapon Testing Ground|update|You receive surprise rewards after defeating the IPC workers... However, if you want to take the championship crown in the festival, you gotta first learn how to use the Aetherium Wars Player Terminal.}}
 {{Dialogue Start}}
-<pre>{
-	"$type": "RPG.GameCore.CreateProp",
-	"GroupID": {
-		"FixedValue": {
-			"Value": 12
-		}
-	},
-	"GroupPropID": {
-		"FixedValue": {
-			"Value": 300005
-		}
-	},
-	"CreateList": []
-}</pre>
-;(Upon reaching the destination)
-
-;(Upon reaching the destination)
-----
-:{{A|VO side1 ytzx giovanni 165.ogg}} '''Giovanni:''' This is the Aetherium Wars Player Terminal &mdash; give it a try.
-----
-<pre>{
-	"$type": "RPG.GameCore.ShowUI",
-	"Name": "Ui.AetherDivide.AetherDivideEntryPage",
-	"WaitForExit": true,
-	"OnUIExitImmediately": []
-}</pre>
-----
-:{{A|VO side1 ytzx mar7th 209.ogg}} '''March 7th:''' It seems kinda complicated...
-:{{A|VO side1 ytzx mar7th 210 m.ogg}} {{A|VO side1 ytzx mar7th 210 f.ogg}} '''March 7th:''' Have you got the hang of it yet, (Trailblazer)?
-:{{DIcon|Arrow}} Yep, and it only took me ten minutes.
-::{{A|VO side1 ytzx mar7th 211.ogg}} '''March 7th:''' Pretty impressive... So if we encounter any problems, we'll know who to turn to for help⁓
-::{{A|VO side1 ytzx giovanni 167.ogg}} '''Giovanni:''' To participate in the tournament championship, make your way to the various {{Color|keyword|nobold=1|"Victory Zones"}} and increase your {{Color|keyword|nobold=1|"Victory Rating."}} Complete the {{Color|keyword|nobold=1|"Trials"}} in each Victory Zone to earn all of the {{Color|keyword|nobold=1|"Mastery Marks."}}
-::{{A|VO side1 ytzx giovanni 168.ogg}} '''Giovanni:''' Please excuse me, if you may. I have a few other facilities to inspect to ensure the festival runs smoothly. If you have any problems, the staff at the service hall will be more than happy to assist you.
-::{{A|VO side1 ytzx giovanni 169 m.ogg}} {{A|VO side1 ytzx giovanni 169 f.ogg}} '''Giovanni:''' I wish you all a memorable festival! Farewell for now, dear friends.
-::<!--1-second delay-->
-::----
-:{{DIcon|Arrow}} It seems kinda complicated...
-::{{A|VO side1 ytzx mar7th 212.ogg}} '''March 7th:''' ...Back to copying me, huh?
-::{{A|VO side1 ytzx giovanni 166.ogg}} '''Giovanni:''' Hahaha, I wouldn't worry yourselves too much. Remember &mdash; practice makes perfect! I imagine you'll grasp the core concept in no time.
-::{{A|VO side1 ytzx giovanni 167.ogg}} '''Giovanni:''' To participate in the tournament championship, make your way to the various {{Color|keyword|nobold=1|"Victory Zones"}} and increase your {{Color|keyword|nobold=1|"Victory Rating."}} Complete the {{Color|keyword|nobold=1|"Trials"}} in each Victory Zone to earn all of the {{Color|keyword|nobold=1|"Mastery Marks."}}
-::{{A|VO side1 ytzx giovanni 168.ogg}} '''Giovanni:''' Please excuse me, if you may. I have a few other facilities to inspect to ensure the festival runs smoothly. If you have any problems, the staff at the service hall will be more than happy to assist you.
-::{{A|VO side1 ytzx giovanni 169 m.ogg}} {{A|VO side1 ytzx giovanni 169 f.ogg}} '''Giovanni:''' I wish you all a memorable festival! Farewell for now, dear friends.
-::<!--1-second delay-->
-::----
+:{{tx}}
 {{Dialogue End}}
 
 ==Other Languages==

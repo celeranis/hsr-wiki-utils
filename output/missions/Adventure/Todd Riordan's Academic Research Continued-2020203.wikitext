@@ -52,389 +52,90 @@ PageTitle=#Todd Riordan's Academic Research: Continued#
 ===Head to the designated location to meet Todd{{subst:void|<!--202020302-->}}===
 {{Mission Description|type=adventure|location=Central Starskiff Haven|update|Todd sends you a message, eagerly inviting you to share in his joy. But when you arrive, you find out that he actually...}}
 {{Dialogue Start}}
-
+:{{tx}}
 {{Dialogue End}}
 
 ===Talk to Todd and make your choice{{subst:void|<!--202020306-->}}===
 {{Mission Description|type=adventure|location=Central Starskiff Haven|update|Todd tries his best to invite you to be his student and reveals to you that he used you to obtain the secret of the Vidyadhara's long life. His youthful body confirms this, and he reveals a secret plan to you... But after thinking through the choices, you ultimately make your own decision...}}
 {{Dialogue Start}}
-
+:{{tx}}
 {{Dialogue End}}
 
 ===Go to the Realm-Keeping Commission and report on Todd's doings{{subst:void|<!--202020303-->}}===
 {{Mission Description|type=adventure|location=Realm-Keeping Commission Chancery|update|What Todd had done really disappoints you, not to mention it also breaks Xianzhou's laws. After thinking about it at length, you finally make a difficult decision &mdash; you decide to report Todd to the Realm-Keeping Commission.}}
 {{Dialogue Start}}
-
-
-;(Talk to Dahao)
-;(If {{cx}}<!--during performance 502020101-->)
-::'''Dahao:''' I always feel like we're missing something here at the Realm-Keeping Commission Chancery, but I can never remember what. You've come at just the right time &mdash; help me rule out some possibilities. Say, tell me, what do you think our office is missing?
-::{{DIcon|Talk}} Promo materials showcasing the work of the Realm-Keeping Commission.
-:::'''Dahao:''' Not that...
-:::'''Dahao:''' I raised this with Jingyan before, whether we should be better at promoting how good the Realm-Keeping Commission Chancery is at what it does. But she gave me a list of all the things we've done recently, and there isn't really anything to be proud of.
-:::'''Dahao:''' Once we crack a major case that even the Ten-Lords Commission can't solve, then I'll let the whole Exalting Sanctum know about how great the Realm-Keeping Commission is... Until then, we'll keep things on the down-low.
-::;(Return to previous option selection)
-::{{DIcon|Talk}} Small ornaments that make this place feel alive.
-:::'''Dahao:''' Make the place feel alive... Actually, I've thought about that.
-:::'''Dahao:''' I'm a big fan of alcoholic nectar and once stashed two bottles of Nectar of Willow Woods at the Chancery, but Officer Jingyan threw them out. She said this is the workplace and it would be undignified if anyone found out.
-:::'''Dahao:''' I also like pretty foxian actresses, so I've put up a couple of their pictures on my desk to perk up my spirits. But Officer Jingyan confiscated those too. She said this is the workplace and those images are indecent.
-:::'''Dahao:''' *sigh* The only way the Realm-Keeping Commission feels alive is through all the courier parcels on the ground.
-::;(Return to previous option selection)
-::{{DIcon|Talk}} A Realm-Keeping Commission Officer who is actually productive at work.
-:::'''Dahao:''' {{MC|f=Young lady|m=Young man}}, that remark is uncalled for. At least Officer Jingyan is doing her work. As long as Officer Jingyan is here, then the Realm-Keeping Commission lives up to its name.
-:::'''Dahao:''' That Songyan kid may be lazy, but he's smart. I have high hopes for his future.
-:::'''Dahao:''' Naturally, if anything actually happens to Exalting Sanctum, you'll find me to be an extremely reliable officer.
-::;(Return to previous option selection)
-::{{DIcon|Arrow}} Is now really the time to be thinking about that?
-:::'''Dahao:''' Yeah, I can't figure it out even if I rack my brain. I think I'll play a few rounds of Celestial Jade after work and think it through then.
-:::'''Dahao:''' Alright, let's get down to business. {{MC|f=Young lady|m=Young man}}, what do you want?
-;(If {{cx}}<!--not during performance 502020101-->)
-:<pre>{
-	"$type": "RPG.GameCore.PlayMultiVoiceTalk",
-	"TalkSentenceID": 502020136
-}</pre>
-<pre>{
-	"$type": "RPG.GameCore.ShowMenu"
-}</pre>
-
-;(Talk to Jingyan)
-;(If {{cx}}<!--during performance 502032101-->)
-::'''Jingyan:''' One second.
-::'''Jingyan:''' Alright. I'm Jingyan from the Realm-Keeping Commission, and I'm in charge of general affairs here. Is there anything that I can help you with?
-::{{DIcon|Arrow}} What can you help me with?
-:::'''Jingyan:''' ...I was just asking you that, but you asked me the same thing. Okay.
-:::'''Jingyan:''' Household registrations, applications, and maintenance for local Xianzhou citizens. Handling of cases such as fighting, wounding with a weapon, theft, robbery. Processing census data, demographic statistics, resource allocation...
-:::{{DIcon|Arrow}} I get it. Please stop this monotonous chanting.
-::::'''Jingyan:''' Looks like you aren't really that interested in the work of Realm-Keeping Commission officers.
-:::{{DIcon|Arrow}} Yes, you've all done a great job.
-::::'''Jingyan:''' Ah, so you're here to inspect our work then? Thank you for taking the time to visit our humble Realm-Keeping Commission Chancery.
-::::'''Jingyan:''' But I'm afraid it's currently during business hours, so please do not interrupt our everyday consultations.
-::{{DIcon|Arrow}} I've been cyber-scammed!
-:::'''Jingyan:''' Cyber-scammed? We don't differentiate between scams happening online or offline here.
-:::'''Jingyan:''' Please register your contact details, how the scammer contacted you, how you were scammed, and how much you were scammed out of? Go fill this out, and I'll verify your account for you.
-:::{{DIcon|Arrow}} Actually, I wasn't scammed at all.
-::::'''Jingyan:''' Hmm. It's still currently during business hours, so please do not cause any trouble for our busy officers.
-::::'''Jingyan:''' Based on my experience, you don't really look like a victim of scamming.
-:::{{DIcon|Arrow}} Th&mdash;There's no transaction record on the account.
-::::'''Jingyan:''' This is a bit of a hassle. Not even the Realm-Keeping Commission can get back your "money that wasn't scammed."
-::::'''Jingyan:''' Seems like you'll have to sort that part out on your own. Our hands are tied here at the Realm-Keeping Commission.
-::{{DIcon|Arrow}} I don't think I have anything that's connected to general affairs.
-::'''Jingyan:''' Excuse me, do you have anything else?
-;(If {{cx}}<!--not during performance 502032101-->)
-:<pre>{
-	"$type": "RPG.GameCore.PlayMultiVoiceTalk",
-	"TalkSentenceID": 502032164
-}</pre>
-
-;(Talk to Songyan)
-;(If {{cx}}<!--during performance 502033101-->)
-::'''Songyan:''' Ah~ If the Realm-Keeping Commission could give me the cash directly and let me stay at home all day without doing this troublesome job, that'd be great.
-::'''Songyan:''' Anyway, it doesn't matter what I do or not do, the results are always gonna be the same. Why not cut out this middle part...
-::'''Songyan:''' Hm? Eavesdropping is rude, {{MC|f=lady|m=sir}}, you know. What's up? If it's something important, please go to Official Dahao, and for literally anything else, please approach Officer Jingyan.
-::{{DIcon|Arrow}} So... You just don't deal with anything?
-:::'''Songyan:''' I'm the Realm-Keeping Commission's Most Intelligent, and I only show up when those two get stuck. In other words, I'm the Ultimate Trump Card. Do you lead with your ace when you're playing tiles?
-:::{{DIcon|Arrow}} There's only three officers staffing this tiny Chancery...
-::::'''Songyan:''' What about it? There can be a trump card hidden among three people.
-:::{{DIcon|Arrow}} You're just spouting nonsense, aren't you?
-::::'''Songyan:''' There's a saying. "Of three people, one will be a slacker." If I call dibs on slacking off, then the other two can't.
-::{{DIcon|Arrow}} What issues would you be handling normally?
-:::'''Songyan:''' I'm the kind of person who hates inconvenience. If you have any kind of work that's not too tiring, not too troublesome &mdash; then I'm down for that.
-:::'''Songyan:''' I'm the Realm-Keeping Commission's Most Intelligent, and I only show up when those two get stuck. Just look at those two, and I'm mainly talking about the Officer Jingyan here &mdash; still going at it so hard, so I don't have to.
-:::{{DIcon|Arrow}} I just so happen to have a really thorny problem that I could use your help with...
-::::'''Songyan:''' No no no, any thorny problem should be handed over to Jingyan. She's the main backbone of the Realm-Keeping Commission.
-::::'''Songyan:''' Have you heard of this saying before? "With little power comes little responsibility." The little refers to me.
-:::{{DIcon|Arrow}} I'm going to tell Officer Jingyan right now.
-::::'''Songyan:''' Doesn't matter, mate. A person like her is born to work hard, and she never trusts what I do. Also, every time when there are "outstanding troubles" to deal with, she'll just complete it for me, personally.
-::::'''Songyan:''' So telling her anything would just be adding to her troubles. I urge you not to do this.
-::'''Songyan:''' *sigh* {{MC|f=Miss|m=My man}}, put aside your judgmental look. I've put in the hours working long and hard before, and I was, once upon a time, considered an elite officer of the General Affairs.
-::'''Songyan:''' Besides, why do I work at the Realm-Keeping Commission? If it weren't for my failed investments... With all the curves on the chart going down, and only the prices are going up. Working has become a necessary option.
-::'''Songyan:''' I hustled, and I failed. Now, this is the best effort I can put into work right now.
-::'''Songyan:''' Hey, don't leave just yet. As long as we're chatting here, there won't be any new tasks assigned to me. Let's chat a little longer, {{MC|f=miss|m=sir}}.
-;(If {{cx}}<!--not during performance 502033101-->)
-:<pre>{
-	"$type": "RPG.GameCore.PlayMultiVoiceTalk",
-	"TalkSentenceID": 502033151
-}</pre>
-::'''Songyan:''' How's it going, {{MC|f=miss|m=man}}? Got anything you'd like to talk about? Anything but work!
-
-;(Talk to Battuta)
-;(If {{cx}}<!--during performance 502034101-->)
-::'''Battuta:''' Oh, so there is someone still willing to chat with this old coffin dodger... Ahem... When people get older, they can catch pneumonia just by having a sip of water. My aching aging throat...
-::{{DIcon|Arrow}} Are you alright?
-:::'''Battuta:''' Haha, they've already given me meds, so I'll just rest and recover...
-::{{DIcon|Arrow}} Your body looks healthy. What's all this about...
-:::'''Battuta:''' Dear {{MC|f=girl|m=boy}}, you're far too optimistic. I may not even survive to see a complete recovery... *cough*...
-::{{DIcon|Arrow}} Who are you?
-:::'''Battuta:''' I'm Battuta. I used to be a judge in the Klimt Republic. My side job was a travel writer... But now, I'm just a criminal waiting around for the Sky-Faring Commission to repatriate me...
-::{{DIcon|Arrow}} What are you doing here?
-:::'''Battuta:''' Is it really strange for criminals waiting for repatriation by the Sky-Faring Commission to be waiting here? I'm Battuta. I used to be a judge in the Klimt Republic. My side hustle was a travel writer...
-;(If {{cx}}<!--not during performance 502034101-->)
-:<pre>{
-	"$type": "RPG.GameCore.PlayMultiVoiceTalk",
-	"TalkSentenceID": 502034149
-}</pre>
+:{{tx}}
 {{Dialogue End}}
 
 ===Go to Petrichor Inn to ask the Ten-Lords Commission judge for information{{subst:void|<!--202020304-->}}===
 {{Mission Description|type=adventure|location=Central Starskiff Haven|update|The Realm-Keeping Commission clerk relayed the information you reported to the Ten-Lords Commission. Now the Ten-Lords Commission has sent a judge to Petrichor Inn to arrest Todd. You try to find out about Todd's whereabouts from this beautiful judge.}}
 {{Dialogue Start}}
-
+:{{tx}}
 {{Dialogue End}}
 
 ===Maybe Todd will contact me tomorrow. Who knows...{{subst:void|<!--202020305-->}}===
 {{Mission Description|type=adventure|location=Central Starskiff Haven|update|Unexpectedly, even the Ten-Lords Commission judge failed to find him. Todd's whereabouts are currently unknown, so you decide to wait for him to contact you...}}
 {{Dialogue Start}}
+:{{tx}}
 {{Dialogue End}}
 
 ===View the message from Todd{{subst:void|<!--202020307-->}}===
 {{Mission Description|type=adventure|location=Central Starskiff Haven|update|You finally receive a message from Todd. He's asking you to meet somewhere to talk...}}
 {{Dialogue Start}}
+:{{tx}}
 {{Dialogue End}}
 
 ===Head to the coast and meet with Todd{{subst:void|<!--202020308-->}}===
 {{Mission Description|type=adventure|location=Scalegorge Waterscape|update|Following the location Todd mentioned in the message, you decide to go to the coast to see what he is up to.}}
 {{Dialogue Start}}
-
-;(Talk to Todd)
-:A child stands alone by the sea and, for some reason, his young face looks rather familiar.
-:'''Todd:''' There you are.
-:'''Todd:''' I was just hanging out over at the {{Color|keyword|nobold=1|high elder statue}} and there was this guy, completely silent, who couldn't take his eyes off me. I thought he could be from the Ten-Lords Commission, so I snuck over here.
-:{{DIcon|Arrow}} How did you turn into... this?
-:{{DIcon|Arrow}} What in the world happened?
-:'''Todd:''' ...
-:'''Todd:''' Hehe, I just was a little sloppy with my experiment. An inevitable result.
-:'''Todd:''' I thought I'd gained immortality, but unfortunately things were not that simple.
-:'''Todd:''' My body, it keeps shrinking. My skin, muscles, organs... Indeed, I'm getting younger, you see, but this "youth" doesn't seem to have an off switch.
-:{{DIcon|Arrow}} You're de-aging?
-:{{DIcon|Arrow}} Kind of like the Vidyadhara tradition of hatching rebirth...
-::'''Todd:''' Yes. But so far as I know, their "rebirths" have a limit.
-:'''Todd:''' Test results indicate that this de-aging process seems to have no endpoint. It won't be long before I'm illiterate and won't be able to understand my own reports &mdash; which would seem no difference from regular dementia.
-:'''Todd:''' In the end, I might even become an egg again, just like the Vidyadhara. Perhaps I could become a human embryo once again &mdash; I mean, I'm not Vidyadhara, am I?
-:'''Todd:''' Ahh... Isn't it ironic? Don't you think?
-:'''Todd:''' My wish came true &mdash; just not in the form I thought it would take. The oldest stories in human civilization are fables that take this line. Seems like they aren't just a cliche, after all.
-:{{DIcon|Arrow}} What can I help you with?
-::'''Todd:''' ...
-::'''Todd:''' No no, no need this time. You've already done so much for me. More than my teachers and apprentices combined. And I don't want to bother anyone else anymore.
-:{{DIcon|Arrow}} Do you want me to fetch a healer from the Alchemy Commission?
-::Todd's little eyes lit up with a flash of arrogance that was beyond his years.
-::'''Todd:''' That look in your eyes... Are you pitying me?
-::'''Todd:''' Please, (Trailblazer). There really is no need for anything. Just coming to chat with me is cause enough for celebration.
-----
-----
-:'''Todd:''' In this life I've been far better off than most people, who don't even know what they want, let alone how to get it. I became a published author, and I've taken on countless apprentices. I may have no children, but there are several of my students of whom I'm rather proud.
-:'''Todd:''' Best of all, I lived to see the results of my research &mdash; despite it all turning into a nasty joke. But... Enough, that's enough for now. I'm satisfied.
-:The child's cherub face seemed to be smaller yet again.
-:'''Todd:''' ...Sorry. That was a lot to just dump on you.
-:'''Todd:''' I just wanted to... say thanks to you, (Trailblazer), for being there for me right from the start.
-:'''Todd:''' By the way, I've recorded all the data from my experiments here &mdash; whether you want to pass it on to my apprentices, destroy it, or even hand it over to the Xianzhou authorities... The choice is yours.
-:'''Todd:''' ...
-:'''Todd:''' Goodbye, my friend.
-----
+:{{tx}}
 {{Dialogue End}}
 
 ===View the message from Todd{{subst:void|<!--202020309-->}}===
 {{Mission Description|type=adventure|location=Central Starskiff Haven|update|You finally receive a message from Todd. He's asking you to meet somewhere to talk...}}
 {{Dialogue Start}}
+:{{tx}}
 {{Dialogue End}}
 
 ===Head to Starskiff Haven and meet with Todd{{subst:void|<!--202020310-->}}===
 {{Mission Description|type=adventure|location=Central Starskiff Haven|update|Following the location Todd mentioned in the message, you decide to go to Starskiff Haven to see what he is up to.}}
 {{Dialogue Start}}
-
+:{{tx}}
 {{Dialogue End}}
 
 ===Follow Todd to the food stall{{subst:void|<!--202020311-->}}===
 {{Mission Description|type=adventure|location=Central Starskiff Haven|update|Something unexpected happened to Todd's "long life." He has now turned into a cute little child. No wonder the people from the Ten-Lords Commission couldn't find him. At Todd's request, you decide to go for a walk with him.}}
 {{Dialogue Start}}
-
+:{{tx}}
 {{Dialogue End}}
 
 ===Fulfill Todd's wish and buy him a berrypheasant skewer{{subst:void|<!--202020320-->}}===
 {{Mission Description|type=adventure|location=Central Starskiff Haven|update|Todd tells you about his wish. He just wants to experience the happiness that children deserve. You agree to his childish request to buy a snack.}}
 {{Dialogue Start}}
-----
-:'''Food Stall Owner:''' Tuskpir wrap! Songlotus cake! Berrypheasant skewers! Come and get 'em!
-:'''Todd:''' It's silly, but when I was researching Xianzhou culture, I never paid attention to these street snacks. The Guild never had much time for ordinary knowledge unless they were profitable.
-:{{DIcon|Arrow}} What'll it be?
-:'''Todd:''' Can you please ask for me...
-:'''Todd:''' Oh, no it should be...
-:'''Todd:''' I want berrypheasant skewers! I just want berrypheasant skewers! Can you please get me some?
-:'''Todd:''' Is that okay?
-:{{DIcon|Arrow}} Quit being so childish!
-::'''Todd:''' Hehe, I can't help putting on this tone. I haven't been a child for so long that I'm not really used to speaking. Forgive me.
-:{{DIcon|Arrow}} Buy whatever you want yourself!
-::'''Todd:''' What? I thought you were sincere about wanting to help me do something? But now you're asking me to fork out for it?
-::'''Todd:''' ...I, I won't! I won't do it! I want you to buy it for me! I want to eat a berrypheasant skewer!
-:'''Food Stall Owner:''' Young {{MC|f=woman|m=man}}, is this your little brother? He's so cute. You can't be so harsh like that to a kid, or you'll scare him.
-:'''Todd:''' Hear that?
-----
-
-;(Obtain {{Item|Todd's Snack|20|x=1}})
-
-;(Talk to Food Stall Owner)
-:'''Food Stall Owner:''' It's (Trailblazer)! Have you completed the Diplomacy phase yet?
-::{{DIcon|Arrow}} Done. Let's get on with the real event.
-:::'''Food Stall Owner:''' Already? Wow! Then let's begin the Combat phase, then...
-:::----
-:::'''Food Stall Owner:''' Contestants, listen carefully to my instructions!
-:::You gulp in anticipation. Seems like this ridiculously theatrical Competitive Eater Championship is finally about to begin.
-:::You peek at the other two contestants out of the corner of your eye. The guy remains tight-lipped, gaze fixed on the luscious buns in their bamboo steamer. A look of radiant excitement betrays the girl as she also stares at the bamboo steamer.
-:::You can't help but start to wonder what the real motives behind these two contestants are. However, another loud announcement yanks your thoughts back to reality.
-:::'''Food Stall Owner:''' Ready... get set &mdash; EAT!
-:::The contest has officially begun. Seeing the other two inhaling everything before them like a tornado, you're unable to keep up. All you can do is grab onto your assigned buns in front of you, and start stuffing them like crazy into your poor little mouth.
-:::{{DIcon|Arrow}} Let's eat. Let's eat!
-::::You eat and eat! After frantically stuffing your face, you are pleasantly surprised to discover that you've eaten two extra buns.
-::::You never realized before how big buns actually are. But the contest hasn't finished yet!
-::::{{DIcon|Arrow}} I can't eat anymore...
-:::::The limits of your stomach obviously cannot handle this kind of situation. Honestly, at this point surrendering would be more beneficial to your health.
-:::::Is the prize really worth the pain of a distended belly? I'm afraid you've already made your decision &mdash; and you know it, too.
-:::::'''Food Stall Owner:''' ...Then (Trailblazer) has withdrawn from the contest!
-::::;(If {{F|MissionCV-4040214-undefined}} is undefined 11)
-::::::'''Food Stall Owner:''' Um... Even though Contestant (Trailblazer) couldn't handle the amount of food and ended up passing out...
-::::::'''Food Stall Owner:''' ...The other two contestants also pulled out right at the same time due to their physical discomfort. Have you ever heard of anything like it?
-::::::'''Food Stall Owner:''' No matter which way you look at it, our scrutineers have counted out the remaining buns and adjudged the winner of this year's Competitive Eater Championship as none other than &mdash; Contestant (Trailblazer)!
-::::::'''Food Stall Owner:''' Here's your prize. It's all yours! And we'll see you next year for the next annual contest.
-::::;(If {{F|MissionCV-4040214-undefined}} is not undefined 11)
-::::::'''Food Stall Owner:''' I can tell you've given it absolutely everything you've got... So I've made a decision &mdash; to award you a consolation prize as encouragement!
-::::::'''Food Stall Owner:''' There's an old Xianzhou saying: "No arrogance in victory, no despair in defeat!" It doesn't matter that you lost this year's contest. Just remember to come back and check out next year's contest!
-:::::----
-::::<pre>{
-	"$type": "RPG.GameCore.SetMissionCustomValue",
-	"SubmissionID": 404021405,
-	"MissionCustomValue": {
-		"Index": 1,
-		"Name": "OldValue_1",
-		"ValidValueParamList": [
-			1,
-			2,
-			3
-		]
-	},
-	"CustomValue": 1
-}</pre>
-:::{{DIcon|Arrow}} I can't eat anymore...
-::::All are shocked to hear these words. Nobody seemed to think that this weakling of an Outworlder would capitulate so quickly, before anyone else has the chance to get slightly full.
-::::The girl is even more pathetic &mdash; her uneaten buns drop straight out of her hands onto the ground. For a split second, you don't know whether to feel sorry for the girl, for the bun &mdash; or for yourself.
-::::'''Food Stall Owner:''' ...Then (Trailblazer) has withdrawn from the contest!
-:::;(If {{F|MissionCV-4040214-undefined}} is undefined 11)
-:::::'''Food Stall Owner:''' Um... Even though Contestant (Trailblazer) couldn't handle the amount of food and ended up passing out...
-:::::'''Food Stall Owner:''' ...The other two contestants also pulled out right at the same time due to their physical discomfort. Have you ever heard of anything like it?
-:::::'''Food Stall Owner:''' No matter which way you look at it, our scrutineers have counted out the remaining buns and adjudged the winner of this year's Competitive Eater Championship as none other than &mdash; Contestant (Trailblazer)!
-:::::'''Food Stall Owner:''' Here's your prize. It's all yours! And we'll see you next year for the next annual contest.
-:::;(If {{F|MissionCV-4040214-undefined}} is not undefined 11)
-:::::'''Food Stall Owner:''' I didn't expect... This year's Competitive Eater Championship would finish so abruptly... As the boss here, I'm harboring some really complex emotions...
-:::::'''Food Stall Owner:''' But... I've made a decision &mdash; to award you a consolation prize as encouragement!
-:::::'''Food Stall Owner:''' There's an old Xianzhou saying: "No arrogance in victory, no despair in defeat!" It doesn't matter that you lost this year's contest. Just remember to come back and check out next year's contest!
-::::----
-:::<pre>{
-	"$type": "RPG.GameCore.SetMissionCustomValue",
-	"SubmissionID": 404021405,
-	"MissionCustomValue": {
-		"Index": 1,
-		"Name": "OldValue_1",
-		"ValidValueParamList": [
-			1,
-			2,
-			3
-		]
-	},
-	"CustomValue": 1
-}</pre>
-::{{DIcon|Exit}} Not yet...
-:::'''Food Stall Owner:''' No worries! We'll start the Combat phase once you're good and ready.
-:'''Food Stall Owner:''' Tuskpir wraps! Songlotus cakes! Come get 'em while they're hot!
-::'''Food Stall Owner:''' Greetings. Would you like some cheap but delicious Luofu snacks?
-:<pre>{
-	"$type": "RPG.GameCore.ShowMenu"
-}</pre>
-;(Unused &mdash; ALL_TALK_END)
-:----
+:{{tx}}
 {{Dialogue End}}
 
 ===Give the berrypheasant skewer you bought to Todd{{subst:void|<!--202020312-->}}===
 {{Dialogue Start}}
-
-;(Lose {{Item|Todd's Snack|20|x=1}})
+:{{tx}}
 {{Dialogue End}}
 
 ===Accompany Todd to wander and stroll around the Exalting Sanctum{{subst:void|<!--202020313-->}}===
 {{Mission Description|type=adventure|location=Central Starskiff Haven|update|Before further physical changes occur, Todd just wants to experience the happiness that children deserve. You agree to his request and accompany him around the Exalting Sanctum, but unexpectedly meet some people...}}
 {{Dialogue Start}}
-;(Upon reaching the destination)
-
-;(Upon reaching the destination)
-<pre>{
-	"$type": "RPG.GameCore.PlayNPCBubbleTalk",
-	"BubbleTalkInfoList": [
-		{
-			"AutoSkipTime": 3,
-			"GroupID": 120,
-			"GroupNpcID": 400001,
-			"TalkSentenceID": 202051176
-		},
-		{
-			"AutoSkipTime": 3,
-			"GroupID": 120,
-			"GroupNpcID": 400001,
-			"TalkSentenceID": 202051177
-		},
-		{
-			"AutoSkipTime": 3,
-			"GroupID": 120,
-			"GroupNpcID": 400001,
-			"TalkSentenceID": 202051178
-		},
-		{
-			"AutoSkipTime": 3,
-			"GroupID": 120,
-			"GroupNpcID": 400003,
-			"TalkSentenceID": 202051179
-		}
-	],
-	"IsLoop": true,
-	"LoopInterval": 3
-}</pre>
-
-;(Talk to Todd)
-----
-----
-:'''Todd:''' ...Once you grow older, you simply have to step off the Xianzhou to take a look at the cosmos outside!
-:'''Bailu:''' Uh-huh!
-:'''Todd:''' I've been to Pier Point, Vonwacq, Taikiyan, and even Punklorde... By the way, if it's a foodie paradise you're after, then you simply have to check out Banquet Star!
-:'''Bailu:''' Uh-huh!
-:'''Bailu:''' By the way, kid, I haven't seen you around here before.
-:'''Todd:''' I've seen you before though, Lady Bailu.
-:'''Bailu:''' Please, no need for formalities. I came out here just to be another diner among the people. You don't happen to have any snacks in your bag, do you? Why don't you share with us what you've got?
-:'''Todd:''' I'm sorry. I had a berrypheasant skewer but I already ate it all up.
-:'''Bailu:''' Oh, that's a pity. No matter, I'll be playing nearby here tomorrow, so you can bring me something to eat and come here.
-:{{DIcon|Arrow}} How's it going, O miracle doctor?
-::'''Bailu:''' Oh it's you, {{MC|f=Miss|m=Sir}}.
-:{{DIcon|Arrow}} Mr. Todd, we should get going...
-::'''Bailu:''' Mister... Todd?
-::'''Todd:''' Can't you just treat me like a kid? If other people hear it, they'll be traumatized.
-:{{DIcon|Arrow}} Just stop talking to yourself and running off, okay?
-:<!--1-second delay-->
-:'''Todd:''' Oops, here comes my guardian. That's enough of our secret conversation for today, then.
-:'''Bailu:''' Alright, remember to bring some snacks with you tomorrow.
-:{{Black Screen|You take Todd to bid farewell to Bailu.}}
-:'''Todd:''' Now you're starting to get the hang of this parenting business. Running over to other kids and snatching away your own child.
-:'''Todd:''' Speaking of which, this kind of thing used to happen all the time when I was a kid. Whenever I wanted to play together with the pig-tailed girl next door, my parents would show up like an alarm clock and march me back to my desk.
-:'''Todd:''' I always wondered, what if they weren't always bothering me like that? Perhaps I'd have sired several grandchildren by now...
-:{{DIcon|Arrow}} Don't think about what could have been...
-:{{DIcon|Arrow}} Where else do you want to go?
-:'''Todd:''' It's a real nightmare. Man did it seriously kill my mood for playtime.
-:'''Todd:''' Next up, let's go to Lunarescent Depths when it's windy.
-----
+:{{tx}}
 {{Dialogue End}}
 
 ===Head to the Scalegorge Waterscape coast and talk with Todd{{subst:void|<!--202020315-->}}===
 {{Mission Description|type=adventure|location=Exalting Sanctum|update|Good times are always fleeting. Todd is with you at the coast, facing the waves of the Lunarescent Depths. He tells you his story. Or rather, it isn't his story, but instead the story of you and him, and of others...}}
 {{Dialogue Start}}
+:{{tx}}
 {{Dialogue End}}
 
 ===Maybe Todd will contact me tomorrow. Who knows...{{subst:void|<!--202020318-->}}===
 {{Mission Description|type=adventure|location=Central Starskiff Haven|update|Your careful behavior makes Todd trust you, and he reveals all his plan to escape from Xianzhou. All you need to do now is to wait for him to contact you...}}
 {{Dialogue Start}}
+:{{tx}}
 {{Dialogue End}}
 
 ==Other Languages==

@@ -53,558 +53,75 @@ Mission Spindle, Laboring to Weave the Tapestry of Time Caelus.png|Caelus
 ===Head to the Garden of Life and discuss what to do next with the Chrysos Heirs{{subst:void|<!--104030101-->}}===
 {{Mission Description|type=trailblaze|location="Eternal Holy City" Okhema|An unexpected encounter with the Flame Reaver led to the premature extraction of Oronyx's Coreflame. The Chrysos Heirs hope that (Trailblazer) will take on the divine role of Time.<br />Trailblazers always face moments like this, where their fate becomes deeply entwined with that of others... Yet only (Trailblazer) can decide where {{MC|f=her|m=his}} destiny leads.}}
 {{Dialogue Start}}
-
-:{{DIcon|undefined}} Investigate
 :{{tx}}
-<pre>{
-	"$type": "RPG.GameCore.PerformanceEndSeq",
-	"BeforeCases": [
-		{
-			"$type": "RPG.GameCore.SwitchCharacterAnchorV2",
-			"SwitchCharacterAnchorConfig": {
-				"IsLocalPlayer": true,
-				"CharacterUniqueName": "LocalPlayer",
-				"AreaName": {
-					"Value": "LevelArea_P10401_F10401001_G697"
-				},
-				"AnchorName": {
-					"Value": "Anchor1"
-				}
-			}
-		}
-	]
-}</pre>
-
 {{Dialogue End}}
 
 ===Speak to Castorice and Aglaea{{subst:void|<!--104030102-->}}===
 {{Dialogue Start}}
-;(Upon reaching the destination)
-
-;(Upon reaching the destination)
-----
-:{{tx}}
-----
-:{{A|VO chapter4 21 aglaea 118 m.ogg}} {{A|VO chapter4 21 aglaea 118 f.ogg}} '''Aglaea:''' You're here, (Trailblazer).
-:{{A|VO chapter4 21 aglaea 119.ogg}} '''Aglaea:''' Does this mean you're ready to take on {{Rubi|Oronyx|Time Titan}}'s trial?
-:{{DIcon|Arrow}} WE are ready, Mem and me.
-::{{A|VO chapter4 21 aglaea 120.ogg}} '''Aglaea:''' Mmm, it seems that this sacred beast is just as indispensable, given their intricate ties to the Titan.
-::I'm still on the fence...
-:{{DIcon|Arrow}} I'm still on the fence...
-:{{A|VO chapter4 21 aglaea 121.ogg}} '''Aglaea:''' I understand. It was the sacred beast's idea, after all. However, it warrants careful consideration, given their intricate ties to the Titan.
-:{{A|VO chapter4 21 mem 101.ogg}} '''Mem:''' Hehe, thanks to you, I've evolved from a little dog into a sacred beast!
-:{{A|VO chapter4 21 aglaea 122.ogg}} '''Aglaea:''' Surrendering the Coreflame is a Chrysos Heir's duty. Your selfless assistance is deeply appreciated.
-:{{A|VO chapter4 21 aglaea 123.ogg}} '''Aglaea:''' However, I urge you to carefully consider the risks of accepting the trial: Becoming a demigod means forsaking your humanity. You will inherit Oronyx's divinity and bear the Time of Amphoreus, all on your own.
-:{{A|VO chapter4 21 aglaea 124.ogg}} '''Aglaea:''' From that point onward, your fate will be forever intertwined with ours, never to be separated again &mdash; until the end of Genesis.
-:{{DIcon|Arrow}} Are you trying to talk me out of it?
-::{{A|VO chapter4 21 aglaea 125.ogg}} '''Aglaea:''' On the contrary, you are the only one who qualifies to attain divinity. Yet, for that very reason, I do not wish to pressure you.
-::{{DIcon|Arrow}} Is there a plan B?
-::{{A|VO chapter4 21 aglaea 126.ogg}} '''Aglaea:''' It's exceedingly rare to find a capable Chrysos Heir. If this path proves unattainable, I am willing to lower my expectations.
-::Is there a plan B?
-:{{DIcon|Arrow}} Is there a plan B?
-:{{A|VO chapter4 21 aglaea 127.ogg}} '''Aglaea:''' It's exceedingly rare to find a capable Chrysos Heir. If this path proves unattainable, I am willing to lower my expectations.
-:{{A|VO chapter4 21 aglaea 128.ogg}} '''Aglaea:''' There are still many priests of Janusopolis and their descendants in the city. If I'm left with no other option, I'll try to find someone worthy among them.
-:{{DIcon|Arrow}} Seems like a shot in the dark.
-::{{A|VO chapter4 21 mem 102.ogg}} '''Mem:''' Exactly! We can't have the civilians bear the risks, can we?
-::If I do not descend into hell, who will?
-::{{A|VO chapter4 21 mem 103.ogg}} '''Mem:''' Don't worry! With me by your side, even if things go south, you'll be heading straight to heaven!
-::Alright, that's it. I am out&mdash;
-:{{DIcon|Arrow}} If I do not descend into hell, who will?
-::{{A|VO chapter4 21 mem 103.ogg}} '''Mem:''' Don't worry! With me by your side, even if things go south, you'll be heading straight to heaven!
-::Alright, that's it. I am out&mdash;
-:{{DIcon|Arrow}} Alright, that's it. I am out&mdash;
-:{{A|VO chapter4 21 mem 104 m.ogg}} {{A|VO chapter4 21 mem 104 f.ogg}} '''Mem:''' Don't give up now, (Trailblazer)!
-:{{A|VO chapter4 21 mem 105.ogg}} '''Mem:''' We've come so far, and everyone is counting on you to be the hero!
-:{{A|VO chapter4 21 mem 106.ogg}} '''Mem:''' As for the trial, you have nothing to fear... The Time Titan may be willful at times, but they never caused us any harm.
-:{{A|VO chapter4 21 mem 107.ogg}} '''Mem:''' Myth has it that {{Rubi|Oronyx|Time Titan}} opposes mortals, but to me, they just seem a bit timid... like a child.
-:{{A|VO chapter4 21 aglaea 129.ogg}} '''Aglaea:''' It looks like you know that Titan rather well.
-:{{A|VO chapter4 21 mem 108 m.ogg}} {{A|VO chapter4 21 mem 108 f.ogg}} '''Mem:''' Oddly enough, I don't remember ever meeting them, but the moment I saw (Trailblazer), {{Rubi|Oronyx|Time Titan}}'s memories were already in my head.
-:{{A|VO chapter4 21 aglaea 130.ogg}} '''Aglaea:''' ...Memories that exist outside of your own experiences?
-:{{A|VO chapter4 21 castorice 114.ogg}} '''Castorice:''' I can't explain why, but I can vouch for Mem's words. When I was in the Abyss, I heard the Titan's groans &mdash; full of pain and grievances, yet without any ill will.
-:{{DIcon|Arrow}} I trust you all to make the right call.
-:{{DIcon|Arrow}} Do I even have any say in this?
-::{{A|VO chapter4 21 mem 109.ogg}} '''Mem:''' Please, trust me on this. At the very least... can you speak with them in person?
-::{{A|VO chapter4 21 mem 110.ogg}} '''Mem:''' I get the feeling that if we don't meet {{Rubi|Oronyx|Time Titan}}, we'll be missing out on something huge!
-::{{DIcon|Arrow}} I trust you to make the right call.
-::{{DIcon|Arrow}} Looks like there's no other way.
-:{{A|VO chapter4 21 aglaea 131.ogg}} '''Aglaea:''' Since you've made your decision, go back to the bath chamber and get some rest. Trinnon will call for you when the ceremony is ready.
 :{{tx}}
 {{Dialogue End}}
 
 ===Speak to Castorice{{subst:void|<!--104030103-->}}===
 {{Dialogue Start}}
-
-;(Talk to Castorice)
 :{{tx}}
-::{{A|VO chapter4 21 castorice 115 m.ogg}} {{A|VO chapter4 21 castorice 115 f.ogg}} '''Castorice:''' {{MC|m=Mr.|f=Miss}} (Trailblazer)... May everything go well for you and Mem.
-::{{DIcon|Arrow}} You need Aglaea for something too?
-::{{A|VO chapter4 21 castorice 116.ogg}} '''Castorice:''' I... It's nothing. I only came to discuss some matters with Lady Aglaea.
-::{{A|VO chapter4 21 castorice 117.ogg}} '''Castorice:''' Previously, I lent her an anthology of poems that Lady Trianne had gifted to me. Tracing back, this anthology was something left for Lady Trianne by a bard before their passing.
-::{{A|VO chapter4 21 castorice 118.ogg}} '''Castorice:''' Although personal properties should be cleared out once their owner has passed on, Lady Trianne gave this book to me since she knew how much I like to read.
-::{{DIcon|Arrow}} Can you tell me more about the book?
-::{{DIcon|Arrow}} Is this book... very special?
-:::{{A|VO chapter4 21 castorice 119.ogg}} '''Castorice:''' No, it's just an ordinary book. It's definitely not some kind of unique copy.
-::{{A|VO chapter4 21 castorice 120.ogg}} '''Castorice:''' It just contains an allegory: In a faraway land, in a city known as Styxia, a dragon corrupted by the black tide descended one day, swooping upon the city like Death itself.
-::{{A|VO chapter4 21 castorice 121.ogg}} '''Castorice:''' It swallowed the princess of the city whole before it was suppressed. After taking down the evil dragon, the warriors discovered that the princess' life had already met its end.
-::{{A|VO chapter4 21 castorice 122.ogg}} '''Castorice:''' Overwhelmed by grief, the queen hired an alchemist to resurrect the princess using the dragon's flesh and blood. However, having lost memories of her previous life, the resurrected princess turned into an evil dragon herself and wreaked havoc on the city... As a result, the prosperous Styxia met its demise.
-::{{DIcon|Arrow}} What a dark story...
-:::{{A|VO chapter4 21 mem 111.ogg}} '''Mem:''' It mustn't have been easy for Cas to narrate this story so calmly...
-:::What a touching story...
-::{{DIcon|Arrow}} What a touching story...
-::{{A|VO chapter4 21 mem 112.ogg}} '''Mem:''' Huh? How... How was it touching...?
-::{{A|VO chapter4 21 castorice 123.ogg}} '''Castorice:''' Hm, I actually think so, too.
-::{{A|VO chapter4 21 mem 113.ogg}} '''Mem:''' What!? That was the correct option to increase friendship level?
-::{{A|VO chapter4 21 castorice 124.ogg}} '''Castorice:''' The author of this book is Archepia, a wandering bard who traveled to many cities.
-::{{A|VO chapter4 21 castorice 125.ogg}} '''Castorice:''' Among the things she left behind are poems, dictionaries, and many tragicomedy scripts. She even clearly underlined and took notes in books that covered myths with her elegant handwriting.
-::{{A|VO chapter4 21 castorice 126.ogg}} '''Castorice:''' While flipping through these books, I felt like I was afforded a glimpse into the life of Archepia... It felt just like I was traveling with someone that I'd never met before.
-::{{A|VO chapter4 21 castorice 127.ogg}} '''Castorice:''' It was as if she had yet to pass on and was still alive.
-::{{DIcon|Arrow}} No one goes through life without leaving their mark behind.
-::{{DIcon|Arrow}} She probably did not think much of it while she was writing.
-::{{A|VO chapter4 21 castorice 128.ogg}} '''Castorice:''' That's right... Writing, drawing, and taking photographs... It seems like human nature to try and leave records of things.
-::{{tx}}
-----
-::{{A|VO chapter4 21 castorice 132.ogg}} '''Castorice:''' May you complete the trial safely and obtain {{Rubi|Oronyx|Time Titan}}'s blessing.
-:{{A|VO chapter4 21 player 105 m.ogg}} {{A|VO chapter4 21 player 105 f.ogg}} '''(Trailblazer):''' (Before leaving, I should go and say hi to Castorice.)
 {{Dialogue End}}
 
 ===Head to the private bath chamber and speak with Dan Heng{{subst:void|<!--104030104-->}}===
 {{Mission Description|type=trailblaze|location="Eternal Holy City" Okhema|update|An unexpected encounter with the Flame Reaver led to the premature extraction of Oronyx's Coreflame. The Chrysos Heirs hope that (Trailblazer) will take on the authority of Time.<br />(Trailblazer) and Mem are willing to face Oronyx's trial. But with the citizens' assembly approaching, the Chrysos Heir heroes have new troubles on the horizon.}}
 {{Dialogue Start}}
-;(Upon reaching the destination)
-
-;(Upon reaching the destination)
-:{{A|VO chapter4 21 danheng 101.ogg}} '''Dan Heng:''' {{Color|keyword|nobold=1|Citizens' assembly?}}
-:{{A|VO chapter4 21 phainon 101 m.ogg}} {{A|VO chapter4 21 phainon 101 f.ogg}} '''Phainon:''' That's right. Oh (Trailblazer), you're back. Just in time. This is something that the both of you should probably know.
-:{{DIcon|Arrow}} Some good news?
-::{{A|VO chapter4 21 phainon 102.ogg}} '''Phainon:''' Good news? I wouldn't call it that.
-::More trouble?
-:{{DIcon|Arrow}} More trouble?
-:{{A|VO chapter4 21 phainon 103.ogg}} '''Phainon:''' I wouldn't call it trouble. I just think it will be favorable if the both of you understand the situation in Okhema better.
-:{{A|VO chapter4 21 danheng 102.ogg}} '''Dan Heng:''' Do you remember the {{Color|keyword|nobold=1|Council of Elders}} that was on our heels previously? It seems like they've made their move.
 :{{tx}}
-:{{DIcon|Talk}} So Aglaea doesn't actually call the shots?
-::{{A|VO chapter4 21 phainon 106.ogg}} '''Phainon:''' Despite her vision and wisdom that spans across thousands of years, even she cannot win over the hearts of everyone.
-::{{tx}}
-:;(Return to previous option selection)
-:{{DIcon|Talk}} I have never once passed my sociology class.
-::{{A|VO chapter4 21 danheng 103.ogg}} '''Dan Heng:''' ...Perhaps you should retake some exams next time we visit Paperfold University.
-::{{tx}}
-:;(Return to previous option selection)
-:{{DIcon|Arrow}} Tell me more about the citizens' assembly.
-::{{A|VO chapter4 21 phainon 107.ogg}} '''Phainon:''' Every five to ten years, the {{Color|keyword|nobold=1|Council of Elders}} organizes a citizens' assembly at Dawncloud.
-::{{A|VO chapter4 21 phainon 108.ogg}} '''Phainon:''' During the assembly, the representatives will vote on major issues such as whether the Chrysos Heirs led by Aglaea should still hold the right to govern the holy city and... whether the Titan's conquest should continue.
-::{{A|VO chapter4 21 danheng 104.ogg}} '''Dan Heng:''' It sounds like some sort of system to balance the heroes and the mortals.
-::{{A|VO chapter4 21 phainon 109.ogg}} '''Phainon:''' That is correct. However, the problem lies in the fact that there are ill-intentioned extremists in the Council of Elders. They view the citizens' assembly as a way to restrain the Chrysos Heirs and hope to take complete control over the Flame-Chase Journey.
-::{{A|VO chapter4 21 phainon 110.ogg}} '''Phainon:''' We can refer to them as the opposition. During the assemblies held in the past hundred years, the voices supporting the opposition have been growing stronger in the shadows. It's only thanks to Aglaea that the Flame-Chase Journey has been able to continue to this day.
-::{{A|VO chapter4 21 phainon 111.ogg}} '''Phainon:''' The citizens' assembly is just around the corner, but this time, there seems to be a new variable to the situation...
-::{{DIcon|Arrow}} Is it us?
-:::{{A|VO chapter4 21 danheng 105.ogg}} '''Dan Heng:''' No. Although we might be mentioned, the Council of Elders has another target in mind.
-:::Is it Mem?
-:::{{A|VO chapter4 21 mem 114.ogg}} '''Mem:''' Me?
-:::{{A|VO chapter4 21 danheng 106.ogg}} '''Dan Heng:''' ...An interesting train of thought, but the Council of Elders has another target in mind.
-:::Is it Anaxa?
-::{{DIcon|Arrow}} Is it Mem?
-:::{{A|VO chapter4 21 mem 114.ogg}} '''Mem:''' Me?
-:::{{A|VO chapter4 21 danheng 106.ogg}} '''Dan Heng:''' ...An interesting train of thought, but the Council of Elders has another target in mind.
-:::Is it Anaxa?
-::{{DIcon|Arrow}} Is it Anaxa?
-::{{A|VO chapter4 21 danheng 107.ogg}} '''Dan Heng:''' It looks like you've realized it as well.
-::{{A|VO chapter4 21 phainon 112.ogg}} '''Phainon:''' I'm afraid that the Council of Elders might want to take advantage of Professor Anaxa.
-::{{A|VO chapter4 21 phainon 113.ogg}} '''Phainon:''' Aglaea will surely take back {{Rubi|Cerces|Reason Titan}}' Coreflame. But with Anaxa's current condition... It's so unique that nobody knows how taking the Coreflame away from him will affect him.
-::{{A|VO chapter4 21 phainon 114.ogg}} '''Phainon:''' He has always been someone that is only concerned about his own research. I'm certain that he must want to escape from the monitoring of the golden thread and protect himself. If the opposition were to offer an olive branch at this time...
-::{{A|VO chapter4 21 danheng 108.ogg}} '''Dan Heng:''' You suspect that he might betray the Flame-Chase Journey and defect toward the Council of Elders?
-::{{A|VO chapter4 21 phainon 115.ogg}} '''Phainon:''' Anaxa has never believed in the prophecy, so technically it cannot be considered a betrayal. However, he has taught many Chrysos Heirs and has long been considered an important ally of Okhema. I truly do not wish to... see comrades turning on one another.
-::{{A|VO chapter4 21 danheng 109.ogg}} '''Dan Heng:''' I have a better understanding of the full picture now. Is there anything that we can do?
-::{{A|VO chapter4 21 phainon 116.ogg}} '''Phainon:''' As I believe in his character, I plan to plead with Aglaea and try to buy more time for him. Then, the greatest way in which you can help is for you to know what I am fighting for.
-::{{A|VO chapter4 21 danheng 110.ogg}} '''Dan Heng:''' We understand. Thank you for being honest with us.
-::{{A|VO chapter4 21 danheng 111 m.ogg}} {{A|VO chapter4 21 danheng 111 f.ogg}} '''Dan Heng:''' Things are piling up again... (Trailblazer) and Mem are tied up with {{Rubi|Oronyx|Time Titan}}'s trial, and while I'm preparing to visit the Grove to uncover clues about the world beyond the sky.
-::{{DIcon|Arrow}} Let's just take things one step at a time.
-::{{DIcon|Arrow}} I just want to rest right now.
-::{{DIcon|Arrow}} None of those things seem like they are going to be easy to deal with.
-::{{A|VO chapter4 21 phainon 117.ogg}} '''Phainon:''' Allow me to apologize for the fact that we always seem to be troubling you. I hope that {{Rubi|Oronyx|Time Titan}} will show more benevolence and be more accommodating. I remember that they seemed quite fond of you back in the Abyss.
-::{{tx}}
-:<pre>{
-	"$type": "RPG.GameCore.AdventureShowReading",
-	"BookID": {
-		"FixedValue": {
-			"Value": 190834
-		}
-	}
-}</pre>
-:{{A|VO chapter4 21 player 106 m.ogg}} {{A|VO chapter4 21 player 106 f.ogg}} '''(Trailblazer):''' (I don't think there's anything else to do here. Time to go back and talk to Dan Heng.)
 {{Dialogue End}}
 
 ===Rest up and prepare to face the trial{{subst:void|<!--104030105-->}}===
 {{Dialogue Start}}
-
-;(Talk to Dan Heng)
-:{{A|VO chapter4 21 danheng 112.ogg}} '''Dan Heng:''' It's just as I suspected. The troubles afflicting the Flame-Chase Journey aren't just external issues. The complex internal politics and interpersonal relationships are also exacerbating the problem.
-:{{A|VO chapter4 21 danheng 113.ogg}} '''Dan Heng:''' We can't let our guard down yet... We have to find out where we stand in this large interwoven web.
-
-:{{DIcon|undefined}} Rest for one night
-;(If {{F|MissionCV-1040301-undefined}} is undefined 0)
-::{{tx}}
-::{{A|VO chapter4 21 mem 115.ogg}} '''Mem:''' Ahh... The trial feels like it's just around the corner. I'm starting to feel nervous.
-::{{DIcon|Arrow}} It's not that soon. There are still a few more days until then.
-:::{{A|VO chapter4 21 mem 116.ogg}} '''Mem:''' This is just an exaggerated figure of speech to express how nervous I'm feeling right now!
-:::Don't worry. Everything will be fine.
-:::I feel like a sitting duck that has been thrown into the deep end...
-:::{{A|VO chapter4 21 danheng 114.ogg}} '''Dan Heng:''' Speaking of which, I don't recall seeing any rubber duck toys in the baths of Okhema. It seems like they only have these... seals?
-::{{DIcon|Arrow}} Don't worry. Everything will be fine.
-::{{DIcon|Arrow}} I feel like a sitting duck that has been thrown into the deep end...
-:::{{A|VO chapter4 21 danheng 114.ogg}} '''Dan Heng:''' Speaking of which, I don't recall seeing any rubber duck toys in the baths of Okhema. It seems like they only have these... seals?
-::{{A|VO chapter4 21 danheng 115.ogg}} '''Dan Heng:''' Let's just hope that everything goes well. After all, as someone who has earned the gaze of an Aeon, you should be able to overcome the trial of a regional god just fine.
-::{{A|VO chapter4 21 danheng 116 m.ogg}} {{A|VO chapter4 21 danheng 116 f.ogg}} '''Dan Heng:''' We've also unknowingly gotten used to sleeping with the midday sun shining brightly above our heads. Get some rest, (Trailblazer).
-::{{A|VO chapter4 21 danheng 117.ogg}} '''Dan Heng:''' Perhaps, a new phase of our Trailblazing expedition in Amphoreus is about to begin.
-;(If {{F|MissionCV-1040301-undefined}} is not undefined 0)
-:----
-::{{A|VO chapter4 21 danheng 119 m.ogg}} {{A|VO chapter4 21 danheng 119 f.ogg}} '''Dan Heng:''' It's almost time for the ritual. Get some rest, (Trailblazer).
-:{{DIcon|Arrow}} Get some rest and wait for the trial.
-:<pre>{
-	"$type": "RPG.GameCore.SetMissionCustomValue",
-	"SubmissionID": 104030105,
-	"MissionCustomValue": {
-		"Index": 1,
-		"Name": "OldValue_1",
-		"ValidValueParamList": [
-			0,
-			1
-		]
-	},
-	"CustomValue": 1
-}</pre>
-:{{DIcon|Exit}} Wait, I still have some things to do.
-:<pre>{
-	"$type": "RPG.GameCore.SetMissionCustomValue",
-	"SubmissionID": 104030105,
-	"MissionCustomValue": {
-		"Index": 1,
-		"Name": "OldValue_1",
-		"ValidValueParamList": [
-			0,
-			1
-		]
-	}
-}</pre>
-::{{tx}}
+:{{tx}}
 {{Dialogue End}}
 
 ===Head to the Vortex of Genesis{{subst:void|<!--104030106-->}}===
 {{Mission Description|type=trailblaze|location=Vortex of Genesis|update|An unexpected encounter with the Flame Reaver led to the premature extraction of Oronyx's Coreflame. The Chrysos Heirs hope that (Trailblazer) will take on the authority of Time.<br />Even as an outland traveler, whose veins carry no golden blood, has accepted the Titan's trial. Wishing (Trailblazer) and Mem the best of luck.<br />"I've woven many unforeseen events into the tapestry of fate, this is but one instance." I remembered hearing this the first time I met Aglaea.}}
 {{Dialogue Start}}
-;(Upon reaching the destination)
-
-;(Upon reaching the destination)
 :{{tx}}
 {{Dialogue End}}
 
 ===Speak with Trinnon{{subst:void|<!--104030107-->}}===
 {{Dialogue Start}}
-
-;(Talk to Trinnon)
-----
-:{{A|VO chapter4 21 trinnon 101 m.ogg}} {{A|VO chapter4 21 trinnon 101 f.ogg}} '''Trinnon:''' (Trailblazer), and Mem, thank you.
-:{{A|VO chapter4 21 trinnon 102.ogg}} '''Trinnon:''' Your resolves cannot be questioned. '''We''' praise your pure selflessness and courage... May {{Rubi|Kephale|Worldbearing Titan}} light your path forward.
-:{{A|VO chapter4 21 tribbie 101.ogg}} '''Tribbie:''' Get ready to assume {{Rubi|Oronyx|Time Titan}}'s divinity, Trailblazer.
-
-;(Talk to Aglaea)
-:{{A|VO chapter4 21 aglaea 136.ogg}} '''Aglaea:''' I can still vividly recall when you entered the Vortex of Genesis for the first time. At that time, I could never have imagined that a guest from beyond the sky would shoulder the fate of Amphoreus.
-:{{A|VO chapter4 21 aglaea 137.ogg}} '''Aglaea:''' Don't feel burdened. Just like during the trial of Strife, Trinnon and Phainon will be waiting for you outside. If something unforeseen were to occur, they will intervene in the trial and rescue you.
-:{{A|VO chapter4 21 aglaea 138.ogg}} '''Aglaea:''' May {{Rubi|Kephale|Worldbearing Titan}} bless you.
-
-;(Talk to Phainon)
-:{{A|VO chapter4 21 phainon 120.ogg}} '''Phainon:''' Accepting a Titan's trial is a very peculiar experience... I'm afraid that I'm not able to accurately describe it. You can only go and experience it for yourself.
-:{{A|VO chapter4 21 phainon 121.ogg}} '''Phainon:''' I believe that you'll be able to pull it off.
-
-;(Talk to Castorice)
-:{{A|VO chapter4 21 castorice 133 m.ogg}} {{A|VO chapter4 21 castorice 133 f.ogg}} '''Castorice:''' {{MC|m=Mr.|f=Miss}} (Trailblazer)... I'm sorry but I'm not sure what I should say to help calm your nerves.
-:{{A|VO chapter4 21 castorice 134.ogg}} '''Castorice:''' ...
-:{{A|VO chapter4 21 castorice 135.ogg}} '''Castorice:''' Right, perhaps something like: As long as you can successfully complete this trial, the rest of the Flame-Chase Journey will be smooth-sailing?
-:{{A|VO chapter4 21 castorice 136.ogg}} '''Castorice:''' No, that sounds a little strange... Don't worry, it won't take up too much of your time? Um... Don't worry, you'll definitely make it back alive?
-:{{A|VO chapter4 21 castorice 137.ogg}} '''Castorice:''' ...
-:{{A|VO chapter4 21 castorice 138.ogg}} '''Castorice:''' Sorry, it seems like I've made the mood even heavier. In any case... May everything go your way.
+:{{tx}}
 {{Dialogue End}}
 
 ===Submit Coreflame{{subst:void|<!--104030108-->}}===
 {{Dialogue Start}}
-;(Upon reaching the destination)
-
-;(Upon reaching the destination)
-:{{A|VO chapter4 21 trinnon 103.ogg}} '''Trinnon:''' The divine position of {{Rubi|Oronyx|Time Titan}} has already been vacant for some time...
-:{{A|VO chapter4 21 trinnon 104.ogg}} '''Trinnon:''' '''We''' can feel the space of the trial closing. As there isn't much of their soul left, we'll have to complete the ceremony before their soul completely dissipates.
-:{{DIcon|Arrow}} Let's begin.
-:{{DIcon|Arrow}} I've long gotten used to fighting fires.
-:<!--1-second delay-->
 :{{tx}}
-;(Unused &mdash; TriggerStellaPerformance)
-
 {{Dialogue End}}
 
 ===Speak with the Chrysos Heirs near the vortex{{subst:void|<!--104030109-->}}===
 {{Dialogue Start}}
-;(Upon reaching the destination)
-
-;(Upon reaching the destination)
-:{{A|VO chapter4 21 olonyxtt 101.ogg}} '''Sound of Oronyx:''' *Titan's murmurs*
-:{{A|VO chapter4 21 trinnon 114.ogg}} '''Trinnon:''' {{Rubi|Oronyx|Time Titan}}... Their soul has been waiting for a long time.
-:{{A|VO chapter4 21 aglaea 139.ogg}} '''Aglaea:''' Perhaps they're also quietly waiting for the arrival of their successor.
-:{{DIcon|Arrow}} Wait for my return, my friends.
-::{{A|VO chapter4 21 aglaea 140.ogg}} '''Aglaea:''' The last time I heard this, things didn't turn out that well.
-::{{A|VO chapter4 21 phainon 122 m.ogg}} {{A|VO chapter4 21 phainon 122 f.ogg}} '''Phainon:''' Don't worry, Aglaea. (Trailblazer) is tougher than I am, right?
-::I love all of you!
-:{{DIcon|Arrow}} I love all of you!
-:{{A|VO chapter4 21 danheng 121.ogg}} '''Dan Heng:''' That doesn't seem appropriate for the current mood, so let's just leave the farewells for next time.
-:{{A|VO chapter4 21 phainon 123 m.ogg}} {{A|VO chapter4 21 phainon 123 f.ogg}} '''Phainon:''' Don't worry, (Trailblazer). You're tougher than I am, right?
-:{{A|VO chapter4 21 olonyxtt 102.ogg}} '''Sound of Oronyx:''' *Titan's murmurs*
 :{{tx}}
 {{Dialogue End}}
 
 ===Awaken during the trial and speak to Mem{{subst:void|<!--104030110-->}}===
 {{Dialogue Start}}
-;(Upon reaching the destination)
-
-;(Upon reaching the destination)
-----
-:{{A|VO chapter4 21 olonyxtt 103.ogg}} '''Sound of Oronyx:''' *Titan's murmurs*
-:{{A|VO chapter4 21 olonyxtt 104.ogg}} '''Sound of Oronyx:''' *Titan's murmurs*
-:{{A|VO chapter4 21 mem 122.ogg}} '''Mem:''' *slap*... *slap*...
-:{{A|VO chapter4 21 mem 123 m.ogg}} {{A|VO chapter4 21 mem 123 f.ogg}} '''Mem:''' Wake up... (Trailblazer).
-:{{A|VO chapter4 21 mem 124.ogg}} '''Mem:''' How is it? How do you feel?
-:{{DIcon|Arrow}} Has the trial begun?
-::{{A|VO chapter4 21 mem 125.ogg}} '''Mem:''' That's right! Look, look! I don't know what happened, but I'm able to talk! Testing, testing, one, two, three. Testing, Testing one, two, three...
-::How are you able to talk!?
-:{{DIcon|Arrow}} How are you able to talk!?
-:{{A|VO chapter4 21 mem 126.ogg}} '''Mem:''' Right? I think that it's amazing, too! Testing, testing, one, two, three. Testing, testing, one, two, three...
-:{{A|VO chapter4 21 mem 127.ogg}} '''Mem:''' I have such a cute voice! It must be because of all the memories that I collected. They allowed me to grow beyond expectations!
 :{{tx}}
 {{Dialogue End}}
 
 ===Speak with Oronyx{{subst:void|<!--104030111-->}}===
 {{Dialogue Start}}
-;(Upon reaching the destination)
-
-;(Upon reaching the destination)
-:{{A|VO chapter4 21 olonyx 105.ogg}} '''Oronyx:''' You... It's you... I remember you.
-:{{A|VO chapter4 21 olonyx 106.ogg}} '''Oronyx:''' Sky father... has gazed upon you...
-:{{A|VO chapter4 21 olonyx 107.ogg}} '''Oronyx:''' Mother... is calling for you...
-:{{DIcon|Arrow}} Does sky father... refer to Fuli?
-:{{A|VO chapter4 21 olonyxtt 105.ogg}} '''Oronyx:''' *Titan's murmurs*
-:The Titan's words are indistinct. Each syllable emerging from the mist seem to be cloaked in frost &mdash; symbolizing memory.
-:{{A|VO chapter4 21 olonyx 108.ogg}} '''Oronyx:''' Sky father... has chosen you...
-:{{DIcon|Arrow}} Who is... your mother?
-:{{A|VO chapter4 21 olonyxtt 106.ogg}} '''Oronyx:''' *Titan's murmurs*
-:A majestic voice pierces through the golden mist, reaching the unseen mountain walls in the distance, reflecting, and returning to your ears as an echo. Within the echo, you seemingly could make out... the cry of a baby.
-:{{A|VO chapter4 21 olonyx 109.ogg}} '''Oronyx:''' Mother... is no longer responding...
-:{{DIcon|Arrow}} We've come to you because of something important.
-:{{A|VO chapter4 21 olonyx 110.ogg}} '''Oronyx:''' Something... important...?
-:{{A|VO chapter4 21 olonyx 111.ogg}} '''Oronyx:''' An important... matter...
-:{{A|VO chapter4 21 mem 132.ogg}} '''Mem:''' {{Rubi|Oronyx|Time Titan}}, listen to me...
-:{{A|VO chapter4 21 mem 133.ogg}} '''Mem:''' Aren't you tired? Throughout the long years, you have always been protecting the fate of Amphoreus. Each time people draw strength from within their memories, every single ripple falls onto your shoulders.
-:{{A|VO chapter4 21 mem 134.ogg}} '''Mem:''' There's no need for you to bear this any longer, {{Rubi|Oronyx|Time Titan}}. From today onwards, someone else will bear Time on your behalf. This is why we have come.
-:{{A|VO chapter4 21 olonyx 112.ogg}} '''Oronyx:''' ...Freedom... Freedom?
-:{{A|VO chapter4 21 olonyx 113.ogg}} '''Oronyx:''' I want... freedom...
-:{{A|VO chapter4 21 mem 135.ogg}} '''Mem:''' Oh, poor child, everything will be fine. Let us help you... You can have a good rest now.
-:{{A|VO chapter4 21 olonyxtt 107.ogg}} '''Oronyx:''' *Titan's murmurs*
-:{{DIcon|Arrow}} Leave it to us, Titan.
-::{{A|VO chapter4 21 olonyxtt 108.ogg}} '''Oronyx:''' *Titan's murmurs*
-::What's troubling you, big fella?
-:{{DIcon|Arrow}} What's troubling you, big fella?
-:{{A|VO chapter4 21 olonyxtt 109.ogg}} '''Oronyx:''' *Titan's murmurs*
-:{{A|VO chapter4 21 olonyx 114.ogg}} '''Oronyx:''' You have... potential... strength...
-:{{A|VO chapter4 21 olonyx 115.ogg}} '''Oronyx:''' Willpower... powerful... and tenacious...
-:{{A|VO chapter4 21 olonyx 116.ogg}} '''Oronyx:''' But... you lack... something...
-:{{A|VO chapter4 21 olonyx 117.ogg}} '''Oronyx:''' Just... one thing...
-:{{A|VO chapter4 21 mem 136.ogg}} '''Mem:''' Lacking something... What is it?
-:{{A|VO chapter4 21 olonyxtt 110.ogg}} '''Oronyx:''' *Titan's murmurs*
-:{{A|VO chapter4 21 olonyx 118.ogg}} '''Oronyx:''' What you lack...
-:{{A|VO chapter4 21 olonyx 119.ogg}} '''Oronyx:''' Is... {{Color|keyword|nobold=1|a future}}...
-:{{DIcon|Arrow}} I don't have a future?
-::I don't have a future?
-::That's right, I live in the moment.
-:{{DIcon|Arrow}} That's right, I live in the moment.
-::That's right, I live in the moment.
-:{{DIcon|Arrow}} What!? What future?
-::What!? What future?
-::{{A|VO chapter4 21 mem 137.ogg}} '''Mem:''' Future...?
-::{{A|VO chapter4 21 olonyx 120.ogg}} '''Oronyx:''' Traveler from the sky... You should have... dissipated already...
-::{{A|VO chapter4 21 olonyx 121.ogg}} '''Oronyx:''' The gaze from sky father... stabilized... your form...
-::{{A|VO chapter4 21 olonyx 122.ogg}} '''Oronyx:''' Because... from the moment you crossed the sky... {{Color|keyword|nobold=1|your life was cast away}}...
-::{{A|VO chapter4 21 olonyx 123.ogg}} '''Oronyx:''' Right now, you... {{Color|keyword|nobold=1|are simply a collection of walking memories}}...
-::{{A|VO chapter4 21 mem 138.ogg}} '''Mem:''' What... H&mdash;How is that possible!?
-::{{DIcon|Arrow}} Do you mean that...
-::{{DIcon|Arrow}} ...I'm already...
-::{{DIcon|Arrow}} ...dead!?
-::{{A|VO chapter4 21 olonyxtt 111.ogg}} '''Oronyx:''' *Titan's murmurs*
-::{{A|VO chapter4 21 olonyx 124.ogg}} '''Oronyx:''' The space... is collapsing...
-::{{A|VO chapter4 21 olonyx 125.ogg}} '''Oronyx:''' Someone must... inherit... the authority of Time...
-::{{A|VO chapter4 21 olonyx 126.ogg}} '''Oronyx:''' If the pillar is lost... the laws of Time... will collapse...
-::{{A|VO chapter4 21 olonyx 127.ogg}} '''Oronyx:''' Amphoreus... will succumb to... eternal disorder...
-::{{DIcon|Arrow}} You still haven't explained things clearly!
-::{{DIcon|Arrow}} What about the trial!?
-::{{DIcon|Arrow}} Revive me, quickly!
-::{{A|VO chapter4 21 olonyx 128.ogg}} '''Oronyx:''' Time... never compromises... never bears grudges...
-::{{tx}}
-:What!? What future?
-:{{A|VO chapter4 21 mem 137.ogg}} '''Mem:''' Future...?
-:{{A|VO chapter4 21 olonyx 120.ogg}} '''Oronyx:''' Traveler from the sky... You should have... dissipated already...
-:{{A|VO chapter4 21 olonyx 121.ogg}} '''Oronyx:''' The gaze from sky father... stabilized... your form...
-:{{A|VO chapter4 21 olonyx 122.ogg}} '''Oronyx:''' Because... from the moment you crossed the sky... {{Color|keyword|nobold=1|your life was cast away}}...
-:{{A|VO chapter4 21 olonyx 123.ogg}} '''Oronyx:''' Right now, you... {{Color|keyword|nobold=1|are simply a collection of walking memories}}...
-:{{A|VO chapter4 21 mem 138.ogg}} '''Mem:''' What... H&mdash;How is that possible!?
-:{{DIcon|Arrow}} Do you mean that...
-:{{DIcon|Arrow}} ...I'm already...
-:{{DIcon|Arrow}} ...dead!?
-:{{A|VO chapter4 21 olonyxtt 111.ogg}} '''Oronyx:''' *Titan's murmurs*
-:{{A|VO chapter4 21 olonyx 124.ogg}} '''Oronyx:''' The space... is collapsing...
-:{{A|VO chapter4 21 olonyx 125.ogg}} '''Oronyx:''' Someone must... inherit... the authority of Time...
-:{{A|VO chapter4 21 olonyx 126.ogg}} '''Oronyx:''' If the pillar is lost... the laws of Time... will collapse...
-:{{A|VO chapter4 21 olonyx 127.ogg}} '''Oronyx:''' Amphoreus... will succumb to... eternal disorder...
-:{{DIcon|Arrow}} You still haven't explained things clearly!
-:{{DIcon|Arrow}} What about the trial!?
-:{{DIcon|Arrow}} Revive me, quickly!
-:{{A|VO chapter4 21 olonyx 128.ogg}} '''Oronyx:''' Time... never compromises... never bears grudges...
 :{{tx}}
-:{{A|VO chapter4 21 olonyx 103.ogg}} '''Sound of Oronyx:''' Memories... Broken...
-:{{A|VO chapter4 21 olonyx 104.ogg}} '''Sound of Oronyx:''' Mother... Where...
-:{{A|VO chapter4 21 mem 131.ogg}} '''Mem:''' Mother... Who are they calling out for?
 {{Dialogue End}}
 
 ===Wake up in the private bath chamber{{subst:void|<!--104030112-->}}===
 {{Mission Description|type=trailblaze|location="Eternal Holy City" Okhema|update|An unexpected encounter with the Flame Reaver led to the premature extraction of Oronyx's Coreflame. The Chrysos Heirs hope that (Trailblazer) will take on the authority of Time.<br />According to Mem, (Trailblazer) had died halfway through the Express's descent, and now is just a walking memory. Thanks to the unique life-death laws of Amphoreus, (Trailblazer) still has a slim chance of survival, and finding Thanatos has become the priority task.<br />Now, (Trailblazer) must find the one closest to death to confirm their condition.}}
 {{Dialogue Start}}
-;(Upon reaching the destination)
-
-;(Upon reaching the destination)
-----
-:{{A|VO chapter4 21 player 111 m.ogg}} {{A|VO chapter4 21 player 111 f.ogg}} '''(Trailblazer):''' ...
-:{{A|VO chapter4 21 danheng 122.ogg}} '''Dan Heng:''' You're finally awake.
-:{{A|VO chapter4 21 danheng 123.ogg}} '''Dan Heng:''' I'll keep it simple &mdash; you succeeded. {{Rubi|Oronyx|Time Titan}} has entrusted you with their divinity. Now, you're no different from a demigod of Amphoreus. However...
-:{{A|VO chapter4 21 danheng 124.ogg}} '''Dan Heng:''' ...Mem has told me about what happened during the trial. They are still explaining things to the others and told me to bring you back to your room to rest first.
-:{{A|VO chapter4 21 danheng 125.ogg}} '''Dan Heng:''' ...
-:{{DIcon|Arrow}} The Titan must be joking, right...?
-:{{DIcon|Arrow}} Don't sigh, Dan Heng...
-:{{DIcon|Arrow}} So... what's my superpower?
-::{{A|VO chapter4 21 danheng 126.ogg}} '''Dan Heng:''' ...For you to be able to say that even now... You're truly impressive.
-:{{A|VO chapter4 21 danheng 127.ogg}} '''Dan Heng:''' There's something that... I've never told you.
-:{{tx}}
-:<!--1-second delay-->
-:{{A|VO chapter4 21 player 111 m.ogg}} {{A|VO chapter4 21 player 111 f.ogg}} '''(Trailblazer):''' ...
-:{{A|VO chapter4 21 danheng 122.ogg}} '''Dan Heng:''' You're finally awake.
-:{{A|VO chapter4 21 danheng 123.ogg}} '''Dan Heng:''' I'll keep it simple &mdash; you succeeded. {{Rubi|Oronyx|Time Titan}} has entrusted you with their divinity. Now, you're no different from a demigod of Amphoreus. However...
-:{{A|VO chapter4 21 danheng 124.ogg}} '''Dan Heng:''' ...Mem has told me about what happened during the trial. They are still explaining things to the others and told me to bring you back to your room to rest first.
-:{{A|VO chapter4 21 danheng 125.ogg}} '''Dan Heng:''' ...
-:The Titan must be joking, right...?
-:Don't sigh, Dan Heng...
-:So... what's my superpower?
-:{{A|VO chapter4 21 danheng 126.ogg}} '''Dan Heng:''' ...For you to be able to say that even now... You're truly impressive.
-:{{A|VO chapter4 21 danheng 127.ogg}} '''Dan Heng:''' There's something that... I've never told you.
-:{{A|VO chapter4 21 danheng 128.ogg}} '''Dan Heng:''' When we landed on Amphoreus, our car was pierced by {{Rubi|Nikador|Strife Titan}}'s lance. Do you remember? Back in the ruins of the Abyss, this was what I said:
-:{{A|VO chapter4 21 danheng 129.ogg}} '''Dan Heng:''' "You passed out when our car got hit. I blacked out too, but not before dragging you out. It's a good thing we were in the car, or we would've been crushed to pieces."
-:{{A|VO chapter4 21 danheng 130.ogg}} '''Dan Heng:''' Actually... My account kind of made light of the situation. What actually happened was much more complicated.
-:{{A|VO chapter4 21 danheng 131.ogg}} '''Dan Heng:''' You were severely injured back then, with several wounds still bleeding profusely. I struggled to carry you out and used the last of my strength to stem the bleeding. But then, I was also hit by a falling rock and lost my consciousness.
-:{{A|VO chapter4 21 danheng 132.ogg}} '''Dan Heng:''' The last time I checked, you still weren't breathing. But when I regained consciousness... I saw that you were alive and full of energy, so I never brought this up again.
-:{{DIcon|Arrow}} How exactly did I come back to life?
-:{{DIcon|Arrow}} Haha, so you were knocked unconscious by a rock!
-::{{A|VO chapter4 21 danheng 133.ogg}} '''Dan Heng:''' ...That's beside the point.
-:{{A|VO chapter4 21 danheng 134.ogg}} '''Dan Heng:''' I'm not sure whether the gaze of Fuli has anything to do with this matter, but according to the Titan, you are living in the form of a memory right now, just like those objects of the past in the miracles of Oronyx.
-:{{A|VO chapter4 21 danheng 135.ogg}} '''Dan Heng:''' Perhaps Mem is the anchor rope that ties you to the present. I had assumed they couldn't stray too far from you, but the truth... might be the exact opposite.
-:{{DIcon|Arrow}} What should we do next?
-:{{DIcon|Arrow}} Cry, cry for me.
-:{{DIcon|Arrow}} Stellaron, do something!
-::{{A|VO chapter4 21 danheng 136.ogg}} '''Dan Heng:''' For a while, I also thought that the Stellaron was your life support system, but it seems like... this hypothesis has been disproven.
-:{{A|VO chapter4 21 danheng 137.ogg}} '''Dan Heng:''' It's not time for us to despair yet. There must be a way to save you.
 :{{tx}}
 {{Dialogue End}}
 
 ===Head to the Garden of Life and consult Castorice{{subst:void|<!--104030113-->}}===
 {{Dialogue Start}}
-
-;(Talk to Dan Heng)
-:{{A|VO chapter4 21 danheng 140 m.ogg}} {{A|VO chapter4 21 danheng 140 f.ogg}} '''Dan Heng:''' Let's do that then, (Trailblazer).
-:You notice the resolute yet gentle look in Dan Heng's eyes. He doesn't want to burden you with his worries in words. You already understand &mdash; his trust in you transcends words. As he once said, "It's not the time for sorrow yet."
-:Next, he will go to the Grove to check out the situation, while you should be looking for Castorice with Mem.
-;(Upon reaching the destination)
-
-;(Upon reaching the destination)
-<pre>{
-	"$type": "RPG.GameCore.TriggerSound",
-	"SoundName": {
-		"Value": "Ev_sfx_cg_104030122_1524_loop"
-	},
-	"EmitterType": "LocalPlayer"
-}</pre>
-:{{A|VO chapter4 21 castorice 139 m.ogg}} {{A|VO chapter4 21 castorice 139 f.ogg}} '''Castorice:''' {{MC|m=Mr.|f=Miss}} (Trailblazer), I'm right here.
-:You hear soft steps coming closer, one step at a time...
-:{{A|VO chapter4 21 castorice 140.ogg}} '''Castorice:''' Please stay there and slowly turn around...
-:For some reason, you feel you have seen this scene before.
-:{{A|VO chapter4 21 castorice 141.ogg}} '''Castorice:''' ...Please pardon me.
-:A chill seeps through your skin, spreading into your veins. Thump... thump... your heartbeat begins to slow.
-:A subtle fragrance of an unnamed flower fills your senses, its sweetness making you forget the need to breathe.
-:Your vision blurs, and cold reality fades into a purple ocean...
-:And then, and then...
-:You realize you are still alive &mdash; no, to be more precise... your death was not thorough.
-:The coldness of the initial touch disperse as quickly as it came, and replacing it... is the touch of fingertips, and a tremble born of trepidation that originated from a certain lanky arm. Her quivering finger gently brushed against your cheek, causing a faint tickle.
-:{{A|VO chapter4 21 castorice 142.ogg}} '''Castorice:''' ...
-:{{A|VO chapter4 21 castorice 143.ogg}} '''Castorice:''' Just as I expected... I cannot feel anything...
-:Castorice, you're shaking.
-:Am... I really dead?
-:You're invading my personal space.
-:{{A|VO chapter4 21 castorice 144.ogg}} '''Castorice:''' I'm sorry, I just wanted to verify once again...
-:{{A|VO chapter4 21 castorice 145.ogg}} '''Castorice:''' Back at the Grove, I was puzzled as to why you were not affected by my curse. I thought that it might have been the special ability of a traveler from beyond the sky. Never did I expect that this would be the true reason...
-:{{A|VO chapter4 21 castorice 146.ogg}} '''Castorice:''' I'm sorry. I should have noticed that something was amiss earlier...
-:You want to turn your head, but you glimpse a dash of purple brushing past your face. Then...
-:Aside from your vision, your senses grow more acute. You feel the presence of a purple sea...
-:In the blink of an eye, time seems to have frozen beneath that cold sensation, and you just happened to close your eyes...
-:{{DIcon|Arrow}} (At this moment, I just want to close my eyes...)
-:{{DIcon|Arrow}} (Remembering the near-death experience... gotta stay on guard...)
-:{{DIcon|Arrow}} (Spin around immediately, and give Castorice a scare...)
-:{{A|VO chapter4 21 castorice 141.ogg}} '''Castorice:''' ...Please pardon me.
-:A chill seeps through your skin, spreading into your veins. Thump... thump... your heartbeat begins to slow.
-:A subtle fragrance of an unnamed flower fills your senses, its sweetness making you forget the need to breathe.
-:Your vision blurs, and cold reality fades into a purple ocean...
-:And then, and then...
-:You realize you are still alive &mdash; no, to be more precise... your death was not thorough.
-:The coldness of the initial touch disperse as quickly as it came, and replacing it... is the touch of fingertips, and a tremble born of trepidation that originated from a certain lanky arm. Her quivering finger gently brushed against your cheek, causing a faint tickle.
-:{{A|VO chapter4 21 castorice 142.ogg}} '''Castorice:''' ...
-:{{A|VO chapter4 21 castorice 143.ogg}} '''Castorice:''' Just as I expected... I cannot feel anything...
-:{{A|VO chapter4 21 mem 144.ogg}} '''Mem:''' Oh right, there's something that I have to tell you. The Chrysos Heirs already know everything that has happened to you...
-:{{A|VO chapter4 21 mem 145.ogg}} '''Mem:''' I was too worried, so I told them everything... Ugh, please don't hate me, okay?
+:{{tx}}
 {{Dialogue End}}
 
 ===Discuss your next steps with Aglaea and the others{{subst:void|<!--104030114-->}}===
 {{Mission Description|type=trailblaze|location="Eternal Holy City" Okhema|update|An unexpected encounter with the Flame Reaver led to the premature extraction of Oronyx's Coreflame. The Chrysos Heirs hope that (Trailblazer) will take on the authority of Time.<br />According to Mem, (Trailblazer) had died halfway through the Express's descent, and now is just a walking memory. Thanks to the unique life-death laws of Amphoreus, (Trailblazer) still has a slim chance of survival, and finding Thanatos has become the priority task.<br />(Trailblazer) will be just fine, I sincerely pray so.}}
 {{Dialogue Start}}
-
-;(Talk to Castorice)
-:{{A|VO chapter4 21 castorice 156.ogg}} '''Castorice:''' Lady Aglaea and Lord Phainon are currently discussing some matters in the baths. They're worried about you, too. If possible, please go there and let them know that you're well. Although I don't actually know whether your current situation can be described as "well"...
-;(Upon reaching the destination)
-
-;(Upon reaching the destination)
-:{{A|VO chapter4 21 aglaea 143.ogg}} '''Aglaea:''' ...They're here.
-:{{A|VO chapter4 21 phainon 126 m.ogg}} {{A|VO chapter4 21 phainon 126 f.ogg}} '''Phainon:''' (Trailblazer)! Hyacine said that you'd definitely wake up. How... do you feel?
-:{{DIcon|Arrow}} So, the entire world knows about this now...
-::{{A|VO chapter4 21 mem 148.ogg}} '''Mem:''' I beg you, please forgive me!
-::She can even take the pulse of someone who's dead...?
-::{{A|VO chapter4 21 phainon 127.ogg}} '''Phainon:''' That's the medical prowess of the Twilight Courtyard. Amazing, isn't it?
-::It feels quite cool being a departed spirit.
-:{{DIcon|Arrow}} She can even take the pulse of someone who's dead...?
-::{{A|VO chapter4 21 phainon 127.ogg}} '''Phainon:''' That's the medical prowess of the Twilight Courtyard. Amazing, isn't it?
-::It feels quite cool being a departed spirit.
-:{{DIcon|Arrow}} It feels quite cool being a departed spirit.
-:{{A|VO chapter4 21 phainon 128.ogg}} '''Phainon:''' Well, at least you look no different from the living. I think that most living people don't even look as good as you do.
-:{{A|VO chapter4 21 aglaea 144.ogg}} '''Aglaea:''' You've completed the trial of Time, and I have to admit that the process went better than I expected. Even in the end, that Titan's heart still showed a soft spot for humankind.
-:{{A|VO chapter4 21 aglaea 145.ogg}} '''Aglaea:''' However, I never expected that... two people who have cheated death would appear in Okhema at the same time.
-:{{A|VO chapter4 21 phainon 129.ogg}} '''Phainon:''' That's what we have been talking about. Ugh, Mydei has been in Okhema for such a long time but &mdash; has no one ever thought to study his indestructible body? If there were even any minor breakthroughs, we wouldn't be as clueless as we are right now...
-:{{A|VO chapter4 21 aglaea 146.ogg}} '''Aglaea:''' Many have had this idea, but so far, there have been no results. If it were successful, {{Rubi|Thanatos|Death Titan}} wouldn't have disappeared without a trace.
-:{{A|VO chapter4 21 aglaea 147.ogg}} '''Aglaea:''' Nevertheless, now is not the time for us to give up. At the very least, we can still see a glimmer of hope.
-:{{A|VO chapter4 21 aglaea 148.ogg}} '''Aglaea:''' {{Color|keyword|nobold=1|Cipher}}... If anyone in this world knows the whereabouts of Death, it would be her.
-:{{A|VO chapter4 21 aglaea 149.ogg}} '''Aglaea:''' I'll try and get her to return to Okhema but do be prepared for a less-than-ideal outcome. Please understand that throughout the history of Amphoreus, no one has ever managed to escape the clutches of Death. At the end of time, Thanatos silently awaits all.
-:{{DIcon|Arrow}} Thank you for your help.
-::{{A|VO chapter4 21 aglaea 150.ogg}} '''Aglaea:''' It is my duty. We too require you to bear the divine position of Time.
-::Is this supposed to be... comforting?
-:{{DIcon|Arrow}} Is this supposed to be... comforting?
-:{{A|VO chapter4 21 phainon 130 m.ogg}} {{A|VO chapter4 21 phainon 130 f.ogg}} '''Phainon:''' Don't take it to heart, (Trailblazer). After all, you've already created countless miracles along the way, right?
-:{{A|VO chapter4 21 aglaea 151.ogg}} '''Aglaea:''' But before that, just...
 :{{tx}}
 {{Dialogue End}}
 

@@ -25,8 +25,8 @@ PageTitle=#Even When Cheers Fade: Chapter 1#
 # Participate in the Knockout Matches and win points
 # Head to the Reception Hall and confirm your match qualifications
 # Start the match against Topaz
-# Hold the press conference
 # Return to the lounge and prepare for the first Faceoff Match
+# Hold the press conference
 
 <!--
 ==Gameplay Notes==
@@ -40,268 +40,30 @@ PageTitle=#Even When Cheers Fade: Chapter 1#
 ===Participate in the Knockout Matches and win points{{subst:void|<!--802511101-->}}===
 {{Mission Description|type=adventure|location=Skysplitter|The rules of the Knockout Matches are easy &mdash; Just defeat opponents and win points<br />Contestant Luka just needs to do three things: Win, win, and keep winning!}}
 {{Dialogue Start}}
-
-;(Unused &mdash; EnterDistrict_G46)
-:<pre>{
-	"$type": "RPG.GameCore.AdvSetupButtonListTrigger",
-	"TargetType": {
-		"$type": "RPG.GameCore.GroupFetchLocalTarget",
-		"TargetType": "Prop",
-		"Targets": [
-			300001
-		]
-	},
-	"TriggerName": "MissionTrigger",
-	"ButtonsByName": [],
-	"ButtonConfigs": [
-		{
-			"ID": "OpenUI",
-			"IconType": "GeneralActivityIcon",
-			"ButtonText": {
-				"Value": "PropInteractTitle_442"
-			}
-		}
-	]
-}</pre>
-:<pre>{
-	"$type": "RPG.GameCore.AdvEnableButtons",
-	"TargetType": {
-		"$type": "RPG.GameCore.GroupFetchLocalTarget",
-		"TargetType": "Prop",
-		"Targets": [
-			300001
-		]
-	},
-	"TriggerName": "MissionTrigger",
-	"ButtonsByName": [
-		"OpenUI"
-	]
-}</pre>
-
-;(Unused &mdash; G46_ShowUI)
-<pre>{
-	"$type": "RPG.GameCore.ShowTransitionLoadingUI",
-	"Name": "Ui.FightFest.Board.FightFestBoardCutBriefDialog"
-}</pre>
-:<pre>{
-	"$type": "RPG.GameCore.ShowUI",
-	"Name": "Ui.FightFest.FightFestMainPage",
-	"WaitForExit": true,
-	"OnUIEnter": [
-		{
-			"$type": "RPG.GameCore.ExitTransitionLoadingUI"
-		}
-	]
-}</pre>
-
-;(Unused &mdash; G46_ShowUI_Chap1)
-<pre>{
-	"$type": "RPG.GameCore.ShowUI",
-	"Name": "Ui.FightFest.Board.FightFestBoardCutDialog",
-	"WaitForExit": true,
-	"Param": {
-		"Value": "1"
-	}
-}</pre>
-
-;(Unused &mdash; G46_ShowUI_Chap2)
-<pre>{
-	"$type": "RPG.GameCore.ShowUI",
-	"Name": "Ui.FightFest.Board.FightFestBoardCutDialog",
-	"WaitForExit": true,
-	"Param": {
-		"Value": "2"
-	}
-}</pre>
-
-;(Unused &mdash; G46_ShowUI_Chap4)
-<pre>{
-	"$type": "RPG.GameCore.ShowUI",
-	"Name": "Ui.FightFest.Board.FightFestBoardCutDialog",
-	"WaitForExit": true,
-	"Param": {
-		"Value": "4"
-	}
-}</pre>
-<pre>{
-	"$type": "RPG.GameCore.WaitUIControllerClose",
-	"UIControllerName": "FightFestScoreMatchResultDialog"
-}</pre>
+:{{tx}}
 {{Dialogue End}}
 
 ===Head to the Reception Hall and confirm your match qualifications{{subst:void|<!--802511102-->}}===
 {{Mission Description|type=adventure|location=Skysplitter|update|Luka finally wins enough points after a few rounds of Knockout Matches.<br />Now he'll face the truly formidable foes.}}
 {{Dialogue Start}}
-<pre>{
-	"$type": "RPG.GameCore.WaitUIControllerClose",
-	"UIControllerName": "ScoreMatchResultDialog"
-}</pre>
-:{{A|VO side2 yanwu player 114 m.ogg}} {{A|VO side2 yanwu player 114 f.ogg}} '''(Trailblazer):''' (After fighting in so many knockout stages, I think our points should be enough. Time to head to the Skysplitter's leaderboard to confirm our ranking.)
+:{{tx}}
 {{Dialogue End}}
 
 ===Start the match against Topaz{{subst:void|<!--802511103-->}}===
 {{Mission Description|type=adventure|location=Skysplitter|update|Topaz &mdash; someone who has quite the history with Belobog.<br />Luka is very much looking forward to this chance to fight her.<br />Luka can't help but think "maybe it is the destiny of a Belobogian for me to fight her as my first powerful opponent."}}
 {{Dialogue Start}}
+:{{tx}}
+{{Dialogue End}}
 
-;(Unused &mdash; FightFest_MainRace_802511103)
-<pre>{
-	"$type": "RPG.GameCore.PerformanceEndSeq",
-	"Cases": [
-		{
-			"Case": 1,
-			"OnSuccess": [
-				{
-					"$type": "RPG.GameCore.TriggerFightFestLineupInMission",
-					"RaceID": 1001,
-					"OnConfirm": [
-						{
-							"$type": "RPG.GameCore.TriggerPerformance",
-							"ValueSource": {},
-							"PerformanceType": "E",
-							"PerformanceID": 1802510103,
-							"MaskConfig": {}
-						},
-						{
-							"$type": "RPG.GameCore.TriggerFightFestBattleInMission"
-						}
-					]
-				}
-			]
-		}
-	]
-}</pre>
-
-;(Unused &mdash; G62_TriggerBattle)
-<pre>{
-	"$type": "RPG.GameCore.PerformanceEndSeq",
-	"Cases": [
-		{
-			"Case": 1,
-			"OnSuccess": [
-				{
-					"$type": "RPG.GameCore.TriggerFightFestLineupInMission",
-					"RaceID": 1001,
-					"OnConfirm": [
-						{
-							"$type": "RPG.GameCore.TriggerPerformance",
-							"ValueSource": {},
-							"PerformanceType": "E",
-							"PerformanceID": 1802510103,
-							"MaskConfig": {}
-						},
-						{
-							"$type": "RPG.GameCore.TriggerFightFestBattleInMission"
-						}
-					]
-				}
-			]
-		}
-	]
-}</pre>
+===Return to the lounge and prepare for the first Faceoff Match{{subst:void|<!--802511106-->}}===
+{{Dialogue Start}}
+:{{tx}}
 {{Dialogue End}}
 
 ===Hold the press conference{{subst:void|<!--802511105-->}}===
 {{Mission Description|type=adventure|location=Skysplitter|update|Press conferences are a specialty of sporting events. You've gotta experience it.<br />Are you prepared to face the cunning, plotting, devious, and conniving friends working in the media industry?<br />It's time to have a battle of wits against them.}}
 {{Dialogue Start}}
-<pre>{
-	"$type": "RPG.GameCore.SetFloorCustomFloat",
-	"Name": {
-		"Value": "FCV_2.5_Throng"
-	},
-	"Value": {
-		"FixedValue": {
-			"Value": 2
-		}
-	}
-}</pre>
-<pre>{
-	"$type": "RPG.GameCore.SetFloorCustomFloat",
-	"Name": {
-		"Value": "FCV_2.5_Arena"
-	},
-	"Value": {
-		"FixedValue": {
-			"Value": 0
-		}
-	}
-}</pre>
 :{{tx}}
-<pre>{
-	"$type": "RPG.GameCore.SetMissionCustomValue",
-	"SubmissionID": 802511105,
-	"MissionCustomValue": {
-		"Index": 1,
-		"Name": "OldValue_1",
-		"isLocal": true,
-		"ValidValueParamList": [
-			1,
-			2
-		]
-	},
-	"CustomValue": 1
-}</pre>
-:{{DIcon|Arrow}} Front row, first from the left.
-:{{DIcon|Arrow}} Front row, second from the left.
-:{{DIcon|Arrow}} Front row, third from the left.
-<pre>{
-	"$type": "RPG.GameCore.SetTextJoinValue",
-	"TextJoinID": 108,
-	"Value": "1"
-}</pre>
-;(Unused &mdash; TriggerPerformance_AfterShowUI)
-----
-:<pre>{
-	"$type": "RPG.GameCore.TriggerPermanentEmotion",
-	"TargetType": {
-		"$type": "RPG.GameCore.TargetFetchAdvLocalPlayer"
-	},
-	"EmotionName": "Trouble02"
-}</pre>
-::'''(Trailblazer):''' These journalists really will sensationalize anything and everything. Gotta watch my words next time.
-::'''(Trailblazer):''' Getting off to such a great start in his first Faceoff Match should give Luka a confidence boost.
-::'''(Trailblazer):''' Although, Luka's hallucinations have been getting more and more intense. I have to think of a way to stop them...
-::<!--1-second delay-->
-::'''(Trailblazer):''' Luka has his own supporters now, and this is wonderful news.
-::'''(Trailblazer):''' Luka should be back at the lounge now. Let's take a walk nearby and look for him.
-
-{{Dialogue End}}
-
-===Return to the lounge and prepare for the first Faceoff Match{{subst:void|<!--802511106-->}}===
-{{Mission Description|type=adventure|location=Skysplitter|update|Topaz &mdash; someone who has quite the history with Belobog.<br />Luka is very much looking forward to this chance to fight her.<br />Luka can't help but think "maybe it is the destiny of a Belobogian for me to fight her as my first powerful opponent."}}
-{{Dialogue Start}}
-
-;(Unused &mdash; EnterArea_G74)
-:{{A|VO side2 yanwu camera 125.ogg}} '''Carmella:''' Already a few matches have gone by in the blink of an eye! Have you gotten used to the situation, Luka?
-::{{A|VO side2 yanwu luka 197.ogg}} '''Luka:''' Haha, yes, yes, I have. But the hallucinations are getting stronger... Could there actually be something wrong with me?
-::{{DIcon|Arrow}} Could this be what they call a "culture shock"?
-:::{{A|VO side2 yanwu luka 198.ogg}} '''Luka:''' Can culture shock really cause such strong hallucinations?
-:::{{A|VO side2 yanwu camera 126.ogg}} '''Carmella:''' It's possible! There was a scholar from the Intelligentsia Guild who wished for an audience with the Erudition no matter the cost, but he went mad the instant he laid eyes on Nous. The minds of organic lifeforms are very fragile.
-:::Did you hit your head?
-::{{DIcon|Arrow}} Did you hit your head?
-::{{A|VO side2 yanwu luka 199.ogg}} '''Luka:''' I'm a boxer! My head gets hit every other day!
-::{{A|VO side2 yanwu camera 127.ogg}} '''Carmella:''' You should be more careful then. Many athletes suffer from brain complications in their later years. The minds of organic lifeforms are very fragile.
-::{{A|VO side2 yanwu luka 200.ogg}} '''Luka:''' You're starting to scare me now... Good thing I've got plenty of youth left to burn! I can't falter now!
-::{{A|VO side2 yanwu luka 201.ogg}} '''Luka:''' The next match is gonna be crucial, and my opponent is... I guess you can call her an old acquaintance.
-::{{DIcon|Arrow}} You know Topaz?
-:::{{A|VO side2 yanwu luka 202.ogg}} '''Luka:''' Never met her in the flesh. But who in Belobog wouldn't know of her?
-:::I guess you can say she's an old friend of his from back home.
-::{{DIcon|Arrow}} I guess you can say she's an old friend of his from back home.
-::{{A|VO side2 yanwu luka 203.ogg}} '''Luka:''' Yup. Me and the IPC brass. Super "old friends."
-::{{A|VO side2 yanwu camera 128.ogg}} '''Carmella:''' Miss Topaz is the cutest among the Ten Stonehearts. I like her.
-::{{tx}}
-:<pre>{
-	"$type": "RPG.GameCore.SwitchCharacterAnchorV2",
-	"SwitchCharacterAnchorConfig": {
-		"IsLocalPlayer": true,
-		"CharacterUniqueName": "LocalPlayer",
-		"AreaName": {
-			"Value": "LevelArea_P20242_F20242001_G74"
-		},
-		"AnchorName": {
-			"Value": "Anchor1"
-		}
-	}
-}</pre>
 {{Dialogue End}}
 
 ==Other Languages==

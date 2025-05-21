@@ -40,177 +40,18 @@ PageTitle=#Mo Cuishle#
 ===Follow Luka &mdash; Don't get discovered!{{subst:void|<!--201180102-->}}===
 {{Mission Description|type=companion|location=Rivet Town|update|Luka's string of weird behaviors have made you and Seele quite suspicious.<br />You follow him to Rivet Town in order to find out the truth of the matter.<br />Follow Luka quietly and see what kind of secret he is hiding.}}
 {{Dialogue Start}}
-
-;(Unused &mdash; Mission_201180102)
-
-
-;(Unused &mdash; hookready)
-<pre>{
-	"$type": "RPG.GameCore.HideWaypointByProp",
-	"TargetType": {
-		"$type": "RPG.GameCore.TargetFetchAdvNpcEx",
-		"FetchType": "SingleNpcByNpcID",
-		"SingleNpcID": {
-			"GroupID": {
-				"FixedValue": {
-					"Value": 2
-				}
-			},
-			"GroupNpcID": {
-				"FixedValue": {
-					"Value": 400001
-				}
-			}
-		}
-	},
-	"OnNameBoard": true
-}</pre>
-::<!--0.1-second delay-->
-:<pre>{
-	"$type": "RPG.GameCore.SetMissionWayPoint",
-	"SubMissionID": 201180102,
-	"OverideMissionWayPointType": true,
-	"MissionWayPointType": "Prop",
-	"OverideWayPointGroupID": true,
-	"WayPointGroupID": 11,
-	"OverideWayPointEntityID": true,
-	"WayPointEntityID": 300007
-}</pre>
-
-;(Unused &mdash; Track_OnFail_Found)
-<pre>{
-	"$type": "RPG.GameCore.CharacterStopFreeStyle",
-	"TargetType": {
-		"$type": "RPG.GameCore.TargetFetchAdvNpcEx",
-		"FetchType": "SingleNpcByNpcID",
-		"SingleNpcID": {
-			"GroupID": {
-				"FixedValue": {
-					"Value": 11
-				}
-			},
-			"GroupNpcID": {
-				"FixedValue": {
-					"Value": 400001
-				}
-			}
-		}
-	}
-}</pre>
-
-;(Unused &mdash; Track_OnFail_Reset)
-<pre>{
-	"$type": "RPG.GameCore.ResetMissionWayPoint",
-	"SubMissionID": 201180102
-}</pre>
-:<pre>{
-	"$type": "RPG.GameCore.ShowWaypointByProp",
-	"TargetType": {
-		"$type": "RPG.GameCore.TargetFetchAdvNpcEx",
-		"FetchType": "SingleNpcByNpcID",
-		"SingleNpcID": {
-			"GroupID": {
-				"FixedValue": {
-					"Value": 2
-				}
-			},
-			"GroupNpcID": {
-				"FixedValue": {
-					"Value": 400001
-				}
-			}
-		}
-	},
-	"IconPath": "SpriteOutput/MapPics/Billboard/IconBillboardMapCompanion02.png",
-	"OnNameBoard": true
-}</pre>
+:{{tx}}
 {{Dialogue End}}
 
 ===Keep following Luka &mdash; Don't get discovered!{{subst:void|<!--201180105-->}}===
 {{Dialogue Start}}
-
-;(Unused &mdash; Mission_201180105)
 :{{tx}}
-:<pre>{
-	"$type": "RPG.GameCore.CharacterStopFreeStyle",
-	"CharacterUniqueName": "LocalPlayer",
-	"TargetType": {
-		"$type": "RPG.GameCore.TargetFetchAdvLocalPlayer",
-		"IncludeStoryPlayer": false
-	},
-	"NormalizedTransitionDuration": 0.1
-}</pre>
-:<pre>{
-	"$type": "RPG.GameCore.BlockInputController",
-	"ActionNameList": []
-}</pre>
-
-;(Unused &mdash; Track_OnFail_Reset01)
-<pre>{
-	"$type": "RPG.GameCore.ResetMissionWayPoint",
-	"SubMissionID": 201180105
-}</pre>
-:<pre>{
-	"$type": "RPG.GameCore.ShowWaypointByProp",
-	"TargetType": {
-		"$type": "RPG.GameCore.TargetFetchAdvNpcEx",
-		"FetchType": "SingleNpcByNpcID",
-		"SingleNpcID": {
-			"GroupID": {
-				"FixedValue": {
-					"Value": 10
-				}
-			},
-			"GroupNpcID": {
-				"FixedValue": {
-					"Value": 400001
-				}
-			}
-		}
-	},
-	"IconPath": "SpriteOutput/MapPics/Billboard/IconBillboardMapCompanion02.png",
-	"OnNameBoard": true
-}</pre>
-
-;(Unused &mdash; isReached02)
-<pre>{
-	"$type": "RPG.GameCore.HideWaypointByProp",
-	"TargetType": {
-		"$type": "RPG.GameCore.TargetFetchAdvNpcEx",
-		"FetchType": "SingleNpcByNpcID",
-		"SingleNpcID": {
-			"GroupID": {
-				"FixedValue": {
-					"Value": 10
-				}
-			},
-			"GroupNpcID": {
-				"FixedValue": {
-					"Value": 400001
-				}
-			}
-		}
-	},
-	"OnNameBoard": true
-}</pre>
-::<!--0.1-second delay-->
-:<pre>{
-	"$type": "RPG.GameCore.SetMissionWayPoint",
-	"SubMissionID": 201180105,
-	"OverideMissionWayPointType": true,
-	"MissionWayPointType": "Prop",
-	"OverideWayPointGroupID": true,
-	"WayPointGroupID": 12,
-	"OverideWayPointEntityID": true,
-	"WayPointEntityID": 300004
-}</pre>
 {{Dialogue End}}
 
 ===Investigate the item Luka left behind{{subst:void|<!--201180104-->}}===
 {{Mission Description|type=companion|location=Rivet Town|update|Luka's string of weird behaviors have made you and Seele quite suspicious.<br />You follow him to Rivet Town in order to find out the truth of the matter.<br />Luka left a mysterious box before the orphanage. Go and open it, and see what kind of secret lies within.}}
 {{Dialogue Start}}
-:{{A|VO side1 lk1 seele 245.ogg}} '''Seele:''' Did he... put something down?
-:{{A|VO side1 lk1 seele 246.ogg}} '''Seele:''' Let's go have a look.
+:{{tx}}
 {{Dialogue End}}
 
 ==Other Languages==

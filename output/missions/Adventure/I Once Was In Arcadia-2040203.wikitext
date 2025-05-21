@@ -53,631 +53,104 @@ PageTitle=#I Once Was In Arcadia#
 ===Search for Paris and the Furiae Archer{{subst:void|<!--204020301-->}}===
 {{Mission Description|type=adventure|location="Eternal Holy City" Okhema|The stage of this memory has transitioned from under Strife's blade to beneath Worldbearing's seat. The threat and disaster have subsided for now, and maybe you will even be able to immerse yourself in a slightly less heavy story. But you must be aware that any play that begins with slaughter and suffering often meets a similar end... Whatever the case, it would be best to find the protagonist of this story first.<br />"Human, what is it you wish to gain from them?"}}
 {{Dialogue Start}}
-----
 :{{tx}}
 {{Dialogue End}}
 
 ===Flee Okhema with Paris{{subst:void|<!--204020321-->}}===
 {{Mission Description|type=adventure|location="Eternal Holy City" Okhema|update|Romance is seemingly powerless in the face of strife. Its brittle thread is unable to protect anything. This thread can still glow faintly in the darkness. Even if it is broken and withered, people can still appreciate its lingering beauty... Tell me, when that broken thread breaks, do you think it reflects on the beauty of its own end?<br />"People regard victory in the pursuit of love as glory and failure as shame. People can do all sorts of strange things in order to achieve this victory."}}
 {{Dialogue Start}}
+:{{tx}}
 {{Dialogue End}}
 
 ===Use the Prophecy Tablet to restore the Furiae Archer{{subst:void|<!--204020304-->}}===
 {{Mission Description|type=adventure|location="Eternal Holy City" Okhema|update|The stage of this memory has transitioned from under Strife's blade to beneath Worldbearing's seat. The threat and disaster have subsided for now, and maybe you might even be able to immerse yourself in a slightly less heavy story. But you must be aware that any play that begins with slaughter and suffering often meets a similar end... The actor has now fallen. Now it's the moment to use your invincible power of time! By the way, there was someone just like you in the past who lent a helping hand in this story, and you have simply taken their place in this memory... Who were they? That doesn't matter. Let's just call them fate.<br />"If this is what you desire, then I shall fuse you together and allow you to become one."}}
 {{Dialogue Start}}
-;(If {{cx}}{{subst:void|<!--{"$type":"RPG.GameCore.ByCompareGroupProperty","DynamicName":{"Value":"SGP_PuzzleState"}}-->}})
-:<pre>{
-	"$type": "RPG.GameCore.AdvCreateGroupEntityV2",
-	"InstanceIDList": [
-		300001,
-		300002,
-		300004
-	]
-}</pre>
-:<pre>{
-	"$type": "RPG.GameCore.BindPropsCablelines",
-	"StartPropInstanceID": 300001,
-	"EndPropInstanceID": 300002,
-	"LinePropInstanceID": 300004,
-	"LineEffectPath": {
-		"Custom": true,
-		"Key": "LineEffect"
-	},
-	"MoveEffectPath": {
-		"Value": "Effects/Eff_Prefab/Eff_Scene/InteractiveProp/Eff_Chap04_Prop_OracleMachine_01_Ball_Lod0.prefab"
-	},
-	"MoveEffectSpeedOverride": {
-		"IsDynamic": true,
-		"PostfixExpr": {
-			"OpCodes": "AQAR",
-			"FixedValues": [],
-			"DynamicHashes": [
-				584429333
-			]
-		}
-	}
-}</pre>
-:<pre>{
-	"$type": "RPG.GameCore.SetPropCablelineVisible",
-	"LinePropInstanceID": 300004
-}</pre>
-:<pre>{
-	"$type": "RPG.GameCore.TriggerEffect",
-	"TargetType": {
-		"$type": "RPG.GameCore.GroupFetchLocalTarget",
-		"TargetType": "Prop",
-		"Targets": [
-			300002
-		]
-	},
-	"Flags": [],
-	"EffectPath": "Effects/Eff_Prefab/Eff_Scene/InteractiveProp/Eff_Chap04_Prop_OracleMachine_01_Hint_Lod0.prefab",
-	"AttachPoint": "Root",
-	"Scale": {
-		"X": 1,
-		"Y": 1,
-		"Z": 1
-	},
-	"SubObjectModifyDataList": []
-}</pre>
-:;(Upon reaching the destination)
-:;(Upon reaching the destination)
-
-;(Upon reaching the destination)
-;(If {{cx}}{{subst:void|<!--{"$type":"RPG.GameCore.ByCompareTarget","TargetType":{"$type":"RPG.GameCore.TargetFetchAdvLocalPlayer"},"CompareType":{"$type":"RPG.GameCore.TargetFetchTaskActionTarget"}}-->}})
-<pre>{
-	"$type": "RPG.GameCore.SetPropCablelineVisible",
-	"LinePropInstanceID": 300004,
-	"IsVisible": true
-}</pre>
-<pre>{
-	"$type": "RPG.GameCore.TriggerSound",
-	"SoundName": {
-		"Value": "Ev_sfx_amphoreus_oraclepuzzle_idle"
-	},
-	"EmitterType": "TargetEvaluator",
-	"TargetType": {
-		"$type": "RPG.GameCore.GroupFetchLocalTarget",
-		"TargetType": "Prop",
-		"Targets": [
-			300001
-		]
-	}
-}</pre>
-
-;(Upon reaching the destination)
-;(If {{cx}}{{subst:void|<!--{"$type":"RPG.GameCore.ByCompareTarget","TargetType":{"$type":"RPG.GameCore.TargetFetchAdvLocalPlayer"},"CompareType":{"$type":"RPG.GameCore.TargetFetchTaskActionTarget"}}-->}})
-<pre>{
-	"$type": "RPG.GameCore.SetPropCablelineVisible",
-	"LinePropInstanceID": 300004,
-	"IsVisible": true
-}</pre>
-<pre>{
-	"$type": "RPG.GameCore.TriggerSound",
-	"SoundName": {
-		"Value": "Ev_sfx_amphoreus_oraclepuzzle_idle"
-	},
-	"EmitterType": "TargetEvaluator",
-	"TargetType": {
-		"$type": "RPG.GameCore.GroupFetchLocalTarget",
-		"TargetType": "Prop",
-		"Targets": [
-			300001
-		]
-	}
-}</pre>
-;(Unused &mdash; OraclePuzzleEndLinePerform)
-<pre>{
-	"$type": "RPG.GameCore.ToastPage",
-	"MessageOne_DS": {
-		"Custom": true,
-		"Key": "Toast1"
-	},
-	"MessageTwo": {
-		"Hash": 2012001348524219443
-	}
-}</pre>
-::<!--0.4-second delay-->
-:<pre>{
-	"$type": "RPG.GameCore.SetFloorCustomFloat",
-	"Name": {
-		"Custom": true,
-		"Key": "FCV"
-	},
-	"Value": {
-		"FixedValue": {
-			"Value": 1
-		}
-	}
-}</pre>
-::<!--0.5-second delay-->
-:<pre>{
-	"$type": "RPG.GameCore.UnBindPropsCablelines",
-	"LinePropInstanceID": 300004
-}</pre>
-:<pre>{
-	"$type": "RPG.GameCore.TriggerSound",
-	"SoundName": {
-		"Value": "Ev_sfx_amphoreus_oraclepuzzle_idle_stop"
-	},
-	"EmitterType": "TargetEvaluator",
-	"TargetType": {
-		"$type": "RPG.GameCore.GroupFetchLocalTarget",
-		"TargetType": "Prop",
-		"Targets": [
-			300001
-		]
-	}
-}</pre>
-:<pre>{
-	"$type": "RPG.GameCore.RemoveEffect",
-	"TargetType": {
-		"$type": "RPG.GameCore.GroupFetchLocalTarget",
-		"TargetType": "Prop",
-		"Targets": [
-			300002
-		]
-	},
-	"EffectPath": "Effects/Eff_Prefab/Eff_Scene/InteractiveProp/Eff_Chap04_Prop_OracleMachine_01_Hint_Lod0.prefab",
-	"Flags": []
-}</pre>
-
-;(Unused &mdash; OraclePuzzleStartLinePerform)
-<pre>{
-	"$type": "RPG.GameCore.PropEnableCollider",
-	"SpecifiedRelativePaths": [],
-	"TargetType": {
-		"$type": "RPG.GameCore.GroupFetchLocalTarget",
-		"TargetType": "Prop",
-		"Targets": [
-			300005
-		]
-	}
-}</pre>
-:<pre>{
-	"$type": "RPG.GameCore.RequestSetServerGroupProperty",
-	"DynamicName": {
-		"Value": "SGP_PuzzleState"
-	},
-	"Value": 1
-}</pre>
-
-;(Talk to Paris)
-:'''Paris:''' I'm counting on you, my handy... I mean, my all-powerful savior!
-
-;(Unused &mdash; TalkSentence_240201711)
-:You can't help but stop to ask yourself... If something is done in order to receive praise, is it worthy of being looked at as highly moral?
-::{{DIcon|Arrow}} Now that you said it...
-:::Right? As you were not even clear of your motivation, the high morality finds it hard to place their faith in you.
-:::Of course it is!
-:::Right? It's about the means above the ends. Your decisiveness and confidence are worthy of high moral praise... Perhaps this is a reward from Talanton themself!
-::{{DIcon|Arrow}} Of course it is!
-:::Right? It's about the means above the ends. Your decisiveness and confidence are worthy of high moral praise... Perhaps this is a reward from Talanton themself!
-:::{{tx}}
-::<pre>{
-	"$type": "RPG.GameCore.SetPerformanceResult",
-	"Value": 1
-}</pre>
-::'''Furiae Archer:''' Hmph, I knew you had ulterior motives. Then what of you, soldier by the name of Paris?
-::{{tx}}
-
-;(Unused &mdash; TalkSentence_240201726)
-:'''Paris:''' Oh, sorry. I forgot about you, our savior. Come with us, I shall take care of your payment there, too.
-::{{tx}}
-
-;(Unused &mdash; EnterDistrict_G{GroupID})
 :{{tx}}
-::'''Paris:''' My savior, you are truly amazing! After all my years in Okhema, I cannot fathom that I knew not of a hero as both wise and strong as you!
-::{{DIcon|Arrow}} You're a real charmer.
-::{{DIcon|Arrow}} Just pay me extra.
-::{{DIcon|Arrow}} Live a few more centuries and you'll see.
-::'''Furiae Archer:''' ...
-::'''Furiae Archer:''' Why... Why are you trying to save me?
-::{{DIcon|Arrow}} I need some information from you.
-::{{DIcon|Arrow}} You will have something I need one day.
-::'''Furiae Archer:''' Hmph, I knew you had ulterior motives. Then what of you, soldier by the name of Paris?
-::{{tx}}
 {{Dialogue End}}
 
 ===Browse the fruit shop with Paris and the Furiae Archer{{subst:void|<!--204020306-->}}===
 {{Mission Description|type=adventure|location="Eternal Holy City" Okhema|update|The stage of this memory has transitioned from under Strife's blade to beneath Worldbearing's seat. The threat and disaster have subsided for now, and maybe you might even be able to immerse yourself in a slightly less heavy story. But you must be aware that any play that begins with slaughter and suffering often meets a similar end... Shopping &mdash; it is a wonderful way to increase intimacy in any world or time.<br />"It is shameful to accept a lover too quickly. One must take their time &mdash; as time is often the best test."}}
 {{Dialogue Start}}
-
-;(Unused &mdash; TalkSentence_240201833)
-:'''Paris:''' Ughh... Things have been a bit tight lately. Take these as a token of my gratitude for now... We need to hurry off, or she'll nag me till Curtain-Fall Hour!
-::{{tx}}
-
-;(Unused &mdash; EnterDistrict_G{GroupID})
-:'''Paris:''' Hey, Granny Metanella. How's business?
-::'''Metanella of the Fruit Stall:''' Heavens! Young Paris! You're alive! I was all prepared to give offerings to Thanatos for your safe passage!
-::'''Paris:''' Oh, then I thank you for your kindness. Seeing as I have returned alive, how about giving these offerings to me instead?
-::'''Metanella of the Fruit Stall:''' Hah, fine, take them. Hold on, am I seeing things? Is that a Nikador Titankin behind you!?
-::'''Paris:''' Fear not, granny. She is a guest of Okhema.
-::'''Metanella of the Fruit Stall:''' I see... My apologies, welcome to Okhema, dear guest.
-::'''Furiae Archer:''' Do you not fear me?
-::'''Metanella of the Fruit Stall:''' Hah, here in the land of Okhema, we are under the protection of Kephale. There is nothing to fear here.
-::'''Metanella of the Fruit Stall:''' I have never left this city in my life, so all I know of Castrum Kremnos is what I've heard... like how you live only to fight and do not farm the land. I imagine the only fruit you've ever tasted is what you have pillaged?
-::'''Metanella of the Fruit Stall:''' You are in Okhema now, let me treat you to a feast! Would you care for an apple? Maybe a Mediterrana fig?
-::'''Furiae Archer:''' I don't need it.
-::'''Paris:''' You must not refuse her generosity. Granny Metanella is normally extremely stingy.
-::'''Furiae Archer:''' But my race is built only for battle. We have no organs with which to feed.
-::'''Paris:''' Ah, such a pity...
-::{{DIcon|Arrow}} Then how do you sustain yourselves?
-:::'''Furiae Archer:''' We are bathed in the golden blood of Nikador. We need no external objects to sustain ourselves. We feed only on strife.
-:::Then, how do you speak?
-:::'''Furiae Archer:''' Our language is created using resonance between our helmets and armor, which is the echo of strife.
-:::Then... can you whistle?
-::{{DIcon|Arrow}} Then, how do you speak?
-:::'''Furiae Archer:''' Our language is created using resonance between our helmets and armor, which is the echo of strife.
-:::Then... can you whistle?
-::{{DIcon|Arrow}} Then... can you whistle?
-::'''Furiae Archer:''' ...I cannot.
-::'''Metanella of the Fruit Stall:''' Get a load of this wretched Nikador. Spending their days drowning in their sacramental wine while never giving their children mouths to sample the flavors of the world.
-::{{tx}}
+:{{tx}}
 {{Dialogue End}}
 
 ===Browse the bookstore with Paris and the Furiae Archer{{subst:void|<!--204020307-->}}===
 {{Dialogue Start}}
-
-;(Unused &mdash; EnterDistrict_G{GroupID})
-:'''Calpe at the Bookstore:''' Praise Cerces! May you grant my descendants wisdom that their writings never grow cheap...
-::'''Paris:''' Oh, Calpe! Praying again?
-::'''Calpe at the Bookstore:''' Paris? You're alive! Thank heavens I saved the new ''Secret of the Golden Carpet'' here for you... Just a second, what is that you've brought with you!?
-::'''Paris:''' Hey! This is a guest of Okhema. Don't be so rude.
-::'''Calpe at the Bookstore:''' Ho, I apologize. I have only ever read of the Titankin of Strife in battle reports and stories &mdash; I got a little startled.
-::'''Paris:''' So, this ''Secret of the Golden Carpet'' you mentioned, does it say anything about Arcadia in it?
-::'''Mem:''' There it is again, Arcadia!
-::{{DIcon|Arrow}} Music to my ears!
-::{{DIcon|Arrow}} Will we get any information this time?
-::{{DIcon|Arrow}} Please don't leave us hanging this time!
-::'''Calpe at the Bookstore:''' It does not. I imagine writer have moved on to other interests. Nowadays, people want to read about the heroes of Chrysos Heir doing battle with the monsters of the black tide. This kind of utopian storylines has grown old now.
-::'''Paris:''' Tsk, they have no taste!
-::'''Furiae Archer:''' Wait, I meant to ask... What is this Arcadia?
-::'''Calpe at the Bookstore:''' Do you not read in Castrum Kremnos? Arcadia is a wonderland woven by Mnestia. It was one of their gifts to Cerces. Safe under the bindings of the golden thread, the Lance of Fury cannot pierce it and the Hand of Shadow cannot touch it...
-::'''Furiae Archer:''' Hah. It sounds like no more than a story created by those that fear strife and death.
-::'''Paris:''' ...No. Arcadia definitely exists. Because I hold in my hand a {{Color|keyword|nobold=1|Golden Thread of Rebirth}} from Arcadia itself.
-::Paris produces a spindle from his robes, around which a number of golden threads glisten in the dawn light.
-::'''Calpe at the Bookstore:''' Oh, I never expected you to reveal your treasure to others?
-::'''Furiae Archer:''' Golden Thread of Rebirth...
-::'''Paris:''' I once rescued a princess as she fled from the black tide. As her thanks, she gifted me this national treasure. Every day I can hear it whispering to me, calling me to go to a distant land...
-::'''Paris:''' One day, I will find this place. I will escape this endless strife and ever-looming death and enjoy an eternal romance with the one I love.
-::'''Calpe at the Bookstore:''' Hah, who is this one you love? Surely it is not {{Color|keyword|nobold=1|Lady Oenone}}, the one that gifted you this treasure?
-::{{DIcon|Arrow}} This guy really gets around...
-::{{DIcon|Arrow}} Am I sensing a love triangle...?
-::{{DIcon|Arrow}} Ooh, gossip!
-::'''Paris:''' Don't joke like that. If I had not saved her life, I would not even have the right to speak with her now.
-::{{tx}}
+:{{tx}}
 {{Dialogue End}}
 
 ===Browse the tailor's shop with Paris and the Furiae Archer{{subst:void|<!--204020308-->}}===
 {{Dialogue Start}}
-
-;(Unused &mdash; EnterDistrict_G{GroupID})
 :{{tx}}
-::'''Furiae Archer:''' ...
-::{{DIcon|Arrow}} What is she looking at?
-::{{DIcon|Arrow}} She's not still collecting those things here, is she?
-::'''Mem:''' Shh, there is a familiar scent nearby.
-::'''Furiae Archer:''' The city of Okhema... There are so many butterflies here.
-::'''????:''' They are nymphs. They are Titankin, like yourself.
-::'''Mem:''' That's Aglaea from the past! She seems no different to how she is today?
-::{{DIcon|Arrow}} Probably because she's a Chrysos Heir.
-::{{DIcon|Arrow}} Probably because of Mnestia's power.
-::{{DIcon|Arrow}} We'll have to ask her for her skincare routine.
-::'''Aglaea:''' How unusual! A soldier of the Lance of Fury browsing the Marmoreal Market is a rare sight indeed... Welcome to the Eternal City, guest from Kremnos.
-::{{tx}}
 {{Dialogue End}}
 
 ===Speak with Paris and the Furiae Archer{{subst:void|<!--204020309-->}}===
 {{Dialogue Start}}
-
-;(Unused &mdash; EnterDistrict_G{GroupID})
-:'''Paris:''' What do you think? Isn't life in the holy city much happier than the life of constant fighting of Castrum Kremnos?
-::'''Furiae Archer:''' It is. But I feel pity for this happiness that you feel. The strife of the outside world prepares to break through your city walls, yet your citizens are immersed in a false sense of peace. You enjoy this tranquility without any shame at all.
-::'''Furiae Archer:''' Compared to the bloodthirsty lions bred by the Lance of Fury, you are no more than a flock of sheep coddled by the love of Kephale.
-::'''Paris:''' But it is this right to enjoy tranquility that brings the people of Okhema together. Your pride of lions has already abandoned you. Why not wrap yourself in the wool of a sheep and enjoy the happiness of a flock for yourself?
-::'''Furiae Archer:''' ...
-::'''Paris:''' I'll take your silence as tacit consent. My savior, I will bid you farewell. I must go and find a bed that can sleep a Titankin.
-::{{DIcon|Arrow}} Hold on...
-::{{DIcon|Arrow}} I have a question for you...
-::'''Paris:''' Oh? Please, tell me, savior. I will tell you all that I know.
-::{{DIcon|Arrow}} Just where on earth is Arcadia?
-::'''Paris:''' Haha, how would I know? If I knew that, I wouldn't linger one second longer in Okhema.
-::{{tx}}
+:{{tx}}
 {{Dialogue End}}
 
 ===Head to the Marmoreal Palace Banquet{{subst:void|<!--204020310-->}}===
 {{Mission Description|type=adventure|location="Eternal Holy City" Okhema|update|Living in this unfamiliar city, the master of this memory is experiencing new feelings and changes within themself. There are many things here that she has never seen before, just like this banquet at the Marmoreal Palace... To the Kremnoans, Phagousa is nothing worth singing about. They may simply throw them a passing mention when they indulge in heavy drinking.<br />Sometimes play interludes are used to represent the passage of time. Some playwrights criticize this approach, saying that time, location, and characters should be unified in order for spectators to resonate with the scene... But this is very difficult.}}
 {{Dialogue Start}}
-
-;(Unused &mdash; EnterDistrict_G{GroupID})
-----
-::{{tx}}
-:{{A|VO chapter4 1 player 102 m.ogg}} {{A|VO chapter4 1 player 102 f.ogg}} '''(Trailblazer):''' (Hmm? It's Pom-Pom. Time for our navigation meeting?)
-
-;(Unused &mdash; EnterDistrict_G{GroupID})
-:'''Friendly People:''' That's it! You're such a great dancer, Paris!
-::'''Paris:''' No matter how great I dance, it is one that you have all seen before. However, we have a rare guest here today that may be able to show us a new dance like no other...
-::'''Paris:''' Miss, come, dance with me!
-::'''Furiae Archer:''' ...Me?
-::'''Paris:''' Come on, it's not difficult! Just move your body to the rhythm.
-::'''Friendly Citizens:''' Don't be shy! Let us see the dance of Castrum Kremnos!
-::'''Outraged Citizens:''' Hey now! You're not still so attached to your past that you cannot do Okhema the honor of a dance, are you?
-::'''Furiae Archer:''' Ah... Fine, I'll try.
-::'''Paris:''' Hahaha, not bad at all!
-::'''Furiae Archer:''' You... call that dancing?
-::'''Paris:''' Wait, girl, look out&mdash;
-::Crash!
-::'''Paris:''' Oh no, that's not good...
-::'''Furiae Archer:''' I'm sorry... I didn't mean to...
-::The sound of the statue shattering to the ground brought the entire atmosphere to dead silence. As the laughter faded, the bubbling of whispers began...
-::'''Friendly Citizens:''' That was carved from the sacred rock of Georios. She smashed it like it was nothing...
-::'''Scared Citizen:''' That's right. I was just standing next to her... If she had fallen on me, I'd have been sent straight to Thanatos, would I not?
-::'''Outraged Citizens:''' I hear this thing was created only for war. It might have even killed our kin! Why should we allow something like that to come to our celebration...
-::'''Furiae Archer:''' ...
-::{{DIcon|Arrow}} These people changed their tune quickly...
-::{{DIcon|Arrow}} Such fickle inclusivity...
-::{{DIcon|Arrow}} Essentially the comment sections of the universe.
-::'''Paris:''' Hey, what are you saying...
-::'''Philoc:''' Everyone, do not insult our guest!
-::'''Philoc:''' This Titankin... This lady is a guest of Okhema. Do not bring your prejudices into this city of acceptance.
-::'''Concerned Citizen:''' Captain, the bodies of Titankin and mortals are not the same. Is allowing her to frolic here freely not endangering the lives of the citizens?
-::'''Philoc:''' Hm, you have a point... Did you hear that, Paris? You should not have brought her here.
-::'''Paris:''' Alright, we'll go. It's not like there is nowhere else in Marmoreal Palace for us to enjoy ourselves.
-::'''Philoc:''' Hold on. She is one of us now. She must obey our laws.
-::'''Philoc:''' The Marmoreal Palace is a gift to us from Phagousa, and the precious property of Okhema. According to law, the Garrison must detain any criminal that damages this place and take them to the court for sentencing.
-::'''Paris:''' Huh? Surely it's not that serious? Don't forget, she is a guest of Elder Oenone...
-::'''Philoc:''' Are you saying that, as a guest of the elder, she is above the checks and balances of Talanton?
-::'''Displeased Citizen:''' He's right! You think an outsider being above the laws of our holy city is justifiable?
-::'''Outraged Citizens:''' That's right! Take her for sentencing! Judge her for this damage to Okhema alongside the past offenses she has committed against our people!
-::'''Philoc:''' Do you see the will of the people? Do not use your personal affairs to interfere with the justice of this land any longer! That is, unless you can restore this damaged item to its previous glory?
-::{{DIcon|Arrow}} I may be able to fix it.
-::{{DIcon|Arrow}} Galactic Baseballer to the rescue, once more!
-::{{DIcon|Arrow}} I will use the unmatched power of the Titans to find a way.
-::'''Mem:''' You're right! We can fix it with Oronyx's Prayer!
-::{{tx}}
+:{{tx}}
 {{Dialogue End}}
 
 ===Use prayer to repair the items broken by the Furiae Archer{{subst:void|<!--204020313-->}}===
 {{Mission Description|type=adventure|location="Eternal Holy City" Okhema|update|Living in this unfamiliar city, the master of this memory is experiencing new feelings and changes within themself. There are many things here that she has never seen before, just like this banquet at the Marmoreal Palace... To the Kremnoans, Phagousa is nothing worth singing about. They may simply throw them a passing mention when they indulge in heavy drinking.<br />It seems that the dance of Strife cannot fully express its grace at a banquet of the ocean. When prejudice and fear rage like giant waves, no blade or shield can hold them back. The only assistance that you and Paris can offer is to prevent her little boat from being overturned so soon.}}
 {{Dialogue Start}}
-
-;(Talk to Paris)
-:'''Paris:''' I'm counting on you, my handy... I mean, my all-powerful savior!
-<pre>{
-	"$type": "RPG.GameCore.SetTimelineEntityState",
-	"Target": {
-		"$type": "RPG.GameCore.GroupFetchLocalTarget",
-		"TargetType": "Prop",
-		"Targets": [
-			300002
-		]
-	},
-	"StateName": {
-		"Value": "L1_Broken01"
-	}
-}</pre>
-----
 :{{tx}}
 {{Dialogue End}}
 
 ===Speak with Paris{{subst:void|<!--204020315-->}}===
 {{Dialogue Start}}
-
-;(Talk to Paris)
 :{{tx}}
-:'''Paris:''' Savior. Did you see where the Titankin girl went?
-:{{DIcon|Arrow}} I didn't.
-:{{DIcon|Arrow}} I think she went outside.
-:{{DIcon|Arrow}} There's only so far she can go in this scene.
-::'''Paris:''' I guess you're right. I doubt she left Marmoreal Palace.
-:'''Paris:''' I'm sure the captain's words just now really hurt her...
-:{{tx}}
-
-;(Talk to Philoc)
-:'''Philoc:''' The elders and the soldiers no longer hold the safety of this city's people most dear. They prioritize their useless sentiments...
-:'''Philoc:''' If we all continue this way, how could we hope to fight against the impending threat? Are we supposed to beg Mnestia and their threads to protect us from their weapons?
 {{Dialogue End}}
 
 ===(Optional) Speak with Philoc{{subst:void|<!--204020326-->}}===
 {{Dialogue Start}}
-
-;(Talk to Paris)
-
+:{{tx}}
 {{Dialogue End}}
 
 ===Go and find the lone Furiae Archer{{subst:void|<!--204020316-->}}===
 {{Mission Description|type=adventure|location="Eternal Holy City" Okhema|update|Living in this unfamiliar city, the master of this memory is experiencing new feelings and changes within themself. There are many things here that she has never seen before, just like this banquet at the Marmoreal Palace... To the Kremnoans, Phagousa is nothing worth singing about. They may simply throw them a passing mention when they indulge in heavy drinking.<br />It seems that the dance of Strife cannot fully express its grace at a banquet of the ocean. When prejudice and fear rage like giant waves, no blade or shield can hold them back. The only assistance that you and Paris can offer is to prevent her little boat from being overturned so soon.<br />"It is shameful to accept a lover too quickly. One must take their time &mdash; as time is often the best test."}}
 {{Dialogue Start}}
-
-;(Unused &mdash; EnterDistrict_G{GroupID})
-:The Furiae Archer sits alone, staring at Kephale in the distance. Their carved stone face shows no emotions at all.
-::'''Furiae Archer:''' ...Can I help you?
-::{{DIcon|Arrow}} Are you okay?
-::{{DIcon|Arrow}} Paris is looking for you.
-:::'''Furiae Archer:''' Hah, he just doesn't give up.
-:::Don't cry. Your enemies will laugh.
-:::'''Furiae Archer:''' Why would I cry...? I'm not even capable of producing tears.
-::{{DIcon|Arrow}} Don't cry. Your enemies will laugh.
-:::'''Furiae Archer:''' Why would I cry...? I'm not even capable of producing tears.
-::'''Furiae Archer:''' I am indeed thinking about what that captain said, but I am not sad. I am thinking about whether what he said is true.
-::'''Furiae Archer:''' Humans are different to us. Kephale has bestowed you with infinite possibilities. Your bodies can be used for any kind of work, you can worship any Titan you choose, and you can do whatever it is you please.
-::'''Furiae Archer:''' But we Titankin are not the same. My body is created for strife. I cannot taste food, dance with man, or create future generations. If it were not for Cerces' power overflowing into the world, I would not even have the right to thought or language.
-::'''Furiae Archer:''' Perhaps I should return to the battlefield. That is the only way that I can truly know who I am... A warrior that does not even have a name. That is my fate.
-::'''Paris:''' Girl, how is it that you are still speaking of fate? If the chains of fate were truly unbreakable, you would have long since been reduced to gravel in Castrum Kremnos.
-::'''Furiae Archer:''' Paris...
-::'''Paris:''' What is there to fear about fate? The Titan that bears the scales is themself confused. The Titan that pulls the curtain is blind, and the Titan that guides the way is lost. They are no more than three blind mice that guide the strings of fate!
-::'''Furiae Archer:''' Hah. You cower on the battlefield, yet wield the courage to curse the gods of fate. I believe this courage of yours is misplaced.
-::'''Paris:''' The gods would never pierce my heart with their blade personally, unlike the warriors of Castrum Kremnos. What's more, they cannot find it in themselves to assist their most devoted disciples. Do you think they have time to address a rambling mortal like me?
-::'''Furiae Archer:''' ...This is true. To the Titans on their golden thrones, we are no more than insignificant ants.
-::'''Paris:''' So, why not curse them with me? Come and vent your dissatisfaction with the arrogance of fate!
-::{{DIcon|Arrow}} Janus' mechanisms are boring!
-::{{DIcon|Arrow}} Talanton's scale puzzle is boring!
-::{{DIcon|Arrow}} The puppy Oronyx gave me wasn't cute enough!
-:::'''Mem:''' How am I not cute enough... Wait, I'm not a dog!
-::'''Paris:''' I'm not entirely sure what that means but... Our savior has led by example. It's your turn!
-::{{tx}}
+:{{tx}}
 {{Dialogue End}}
 
 ===Speak with Paris{{subst:void|<!--204020317-->}}===
 {{Mission Description|type=adventure|location="Eternal Holy City" Okhema|update|Unbound, the spectators leap through time: Skipping past how it was that she suppressed the concerns in her heart, how she wore down the cold stares of those around her and how she won the acceptance of her former enemies. She has done so much to finally become a true subject of Okhema, as opposed to a guest or an enemy... But is this truly what she wants to do?<br />Is she not the same as you, being blindly led along by fate towards her mission?<br />Sometimes play interludes are used to represent the passage of time. Some playwrights criticize this approach, saying that time, location, and characters should be unified in order for spectators to resonate with the scene... But this is very difficult.}}
 {{Dialogue Start}}
-----
 :{{tx}}
-
-;(Unused &mdash; EnterDistrict_G{GroupID})
-:{{tx}}
-::'''Paris:''' Oh Mnestia, please grant me a romantic miracle!
-::{{DIcon|Arrow}} What's wrong?
-::{{DIcon|Arrow}} Do you need my help again?
-::'''Paris:''' Ah, my savior! It has been far too long! You always appear when I need you most. I cannot help but feel that fate is always watching out for me!
-::'''Paris:''' I'm sure you are aware that Okhema is in grave danger. As the forces of Castrum Kremnos have made it to the city gate, now we have to mobilize the guards of the city garrison to battle.
-::'''Paris:''' The enemy forces are attacking with the Revelation of Nikador. I fear any soldier that face them will meet a grim fate... But I don't want to die!
-::{{DIcon|Arrow}} This is your duty.
-::{{DIcon|Arrow}} You are truly useless.
-::{{DIcon|Arrow}} You want to desert your duty again?
-::'''Paris:''' My savior, it is not that I do not love this city that raised me. It's just that I have a dream that I have not yet completed... I have still not seen Arcadia. I don't want to enter the River of Souls without ever having laid eyes on it!
-::'''Paris:''' So, let them say what they will about me. Traitor, deserter, coward... My duty, my responsibility, and my mission, I will happily abandon them all, but I must reach that place.
-::'''Paris:''' I have already prepared my bags for my escape. But, before I go, there is someone that I hope would accompany me. You know who that is, right?
-::{{DIcon|Arrow}} The Titankin, right?
-::{{DIcon|Arrow}} Aren't you two moving a bit fast?
-:::'''Paris:''' Hah, we have spent many days and nights together now. Anyone with sense can see how I feel for her.
-:::Me? But wouldn't that be wrong?
-:::'''Paris:''' Haha, my savior, this is not the time to be joking with me.
-::{{DIcon|Arrow}} Me? But wouldn't that be wrong?
-:::'''Paris:''' Haha, my savior, this is not the time to be joking with me.
-::'''Paris:''' I want to leave with her. Even if we die on our path, we can fly into the hands of Thanatos together on the wings of romance. We can become butterflies and fly to that place together.
-::'''Paris:''' Savior, this love of mine has always relied on your assistance. In my heart, you are like an embodiment of Mnestia herself.
-::'''Paris:''' Now, I will confess my love and wishes to her. Please bear witness and give me your blessings and strength... This is the last favor I will ask of you.
-::{{DIcon|Arrow}} You have my blessings. Go for it!
-::{{DIcon|Arrow}} Nothing is more important than your happiness.
-::{{DIcon|Arrow}} I'll be here with my popcorn.
-::'''Paris:''' Thank you, savior. I will go now. I pray that you can bring me good fortune once more.
-::{{tx}}
 {{Dialogue End}}
 
 ===Witness Paris' plan{{subst:void|<!--204020319-->}}===
 {{Mission Description|type=adventure|location="Eternal Holy City" Okhema|update|Unbound, the spectators leap through time: Skipping past how it was that she suppressed the concerns in her heart, how she wore down the cold stares of those around her and how she won the acceptance of her former enemies. She has done so much to finally become a true subject of Okhema, as opposed to a guest or an enemy... The person that gave her this mission, was it this person that seems to love her? Or are they both simply bound by their own cocoons?<br />"What we seek is not only the good, it is also the permanent. What love seeks is to have something good forever."}}
 {{Dialogue Start}}
-
-;(Unused &mdash; EnterDistrict_G{GroupID})
 :{{tx}}
 {{Dialogue End}}
 
 ===Speak with Paris{{subst:void|<!--204020320-->}}===
 {{Mission Description|type=adventure|location="Eternal Holy City" Okhema|update|Romance is seemingly powerless in the face of strife. Its brittle thread is unable to protect anything. This thread can still glow faintly in the darkness. Even if it is broken and withered, people can still appreciate its lingering beauty... Of course, to the one that appreciates this beauty, the thoughts of the thread are of no consequence at all.<br />"People always have a clear idea of what it is that they want in their hearts, but they are never able to say it out loud. They simply predict what each other hopes to receive and ends up speaking in riddles."}}
 {{Dialogue Start}}
-
-;(Talk to Paris)
-:{{tx}}
-:'''Paris:''' Oh felicitations, my savior! This all went so smoothly thanks to you bearing witness.
-:{{DIcon|Arrow}} Not at all.
-:{{DIcon|Arrow}} This actually had nothing to do with me.
-:{{DIcon|Arrow}} Why did that seem a little off to me...?
-::'''Paris:''' Haha, she's always been the shy type. You know this.
-:'''Paris:''' My savior, you don't wish to fight to the death with Nikador here either, do you? Why not come with us, so that we can look after each other along the way?
 :{{tx}}
 {{Dialogue End}}
 
 ===Flee Okhema with Paris{{subst:void|<!--204020322-->}}===
 {{Mission Description|type=adventure|location="Eternal Holy City" Okhema|update|Romance is seemingly powerless in the face of strife. Its brittle thread is unable to protect anything. This thread can still glow faintly in the darkness. Even if it is broken and withered, people can still appreciate its lingering beauty... Tell me, when that broken thread breaks, do you think it reflects on the beauty of its own end?<br />"People regard victory in the pursuit of love as glory and failure as shame. People can do all sorts of strange things in order to achieve this victory."}}
 {{Dialogue Start}}
-
-;(Unused &mdash; EnterDistrict_1)
-
+:{{tx}}
 {{Dialogue End}}
 
 ===Investigate the clash in front of the gates{{subst:void|<!--204020323-->}}===
 {{Mission Description|type=adventure|location="Eternal Holy City" Okhema|update|Romance is seemingly powerless in the face of strife. Its brittle thread is unable to protect anything. This thread can still glow faintly in the darkness. Even if it is broken and withered, people can still appreciate its lingering beauty... Perhaps there isn't even anyone present to appreciate the beauty of an ending. This is all just the imagination of the thread itself as it breaks. Perhaps this is all just their attempt to cover up a loss that never had any romance to speak of in the first place.<br />"Whether something is beautiful or ugly is decided in how an action is carried out. No action is beautiful or ugly in itself. If the methods of this action are beautiful, then the action itself is beautiful. If the methods of this action are ugly, then the action itself is ugly."}}
 {{Dialogue Start}}
-
-;(Unused &mdash; EnterDistrict_2)
-:'''Paris:''' Girl, what is the meaning of this?
-::'''Philoc:''' Umm...
-::'''Oenone:''' Pa&mdash;Paris! Help us!
-::'''Furiae Archer:''' ...
-::'''Paris:''' It can't be... Did you do this to captain?
-::'''Oenone:''' Paris, what are you saying!? This Titankin is...
-::{{DIcon|Arrow}} Look out!
-::{{DIcon|Arrow}} She's an intruder!
-::{{DIcon|Arrow}} It's a trick!
-:;(Enter battle)
-:::{{tx|Enemy list missing}}
-----
-:'''Paris:''' Phew... Thank the heavens you are here, savior. But how did the soldiers of Castrum Kremnos get into the city?
-:'''Philoc:''' Isn't it obvious...? This is all... your fault!
-:'''Paris:''' My fault?
-:'''Philoc:''' You allowed that wicked creature to step foot inside Okhema... You caused the city guards to lose their vigilance around Titankin... Now, she has joined the team outside the gates to attack Okhema... This is the creature that you saved. See how your kindness is repaid with vengeance and betrayal!
-:'''Paris:''' That girl, she... How could... We made a promise...
-:'''Oenone:''' Captain! We can settle blame later. Your wounds are severe. Please save your words.
-:'''Philoc:''' Ack! I... I must say this... Before Thanatos descends... I curse you two vile scoundrels...
-:'''Philoc:''' You and your romance... Your love... It is us that have sustained it with our blood and sacrifice... And now I have to pay with my life to protect you blind fools...
-:'''Paris:''' ...
-:'''Philoc:''' I curse you... to never gain {{Rubi|Janus|Passage Titan}}'s guidance... to never gain {{Rubi|Oronyx|Time Titan}}'s guidance... to face stern judgement at the hands of {{Rubi|Talanton|Law Titan}}...
-:'''Philoc:''' May you never... lay eyes on... your godforsaken Mnestia... Ahhck!
-:'''Oenone:''' Captain? Captain!?
-:'''Philoc:''' ...
-:'''Paris:''' Elder, he... He has been taken by the Hand of Shadow.
-:'''Oenone:''' Was... Was this our fault? Is this only happening because we allowed the Titankin of strife to enter the city!?
-:{{DIcon|Arrow}} Calm down...
-:{{DIcon|Arrow}} This is not your fault...
-:{{DIcon|Arrow}} Yes.
-::'''Oenone:''' I knew it... I was never worthy to serve as an elder...
-:'''Paris:''' No, no, that's not true! This is all fate's fault!
-:'''Paris:''' It is fate that caused us to show kindness and mercy to the wrong person! It was fate that brought this dire ending on the captain!
-:'''Oenone:''' Ah, but how are we supposed to cast judgment on fate... The Titan that presides over judgment also sits atop its throne.
-:'''Paris:''' Elder Oenone, I am sorry... I cannot take part in this judgment. I must go. Someone is waiting for me outside the city.
-:'''Oenone:''' You... You are going to desert us? You are going to flee with that Titankin that is attacking our city as we speak?
-:'''Oenone:''' Paris. You must not allow yourself to be bewitched by this bringer of calamity any longer! I have already allowed you to make one mistake. I cannot allow you to continue!
-:'''Paris:''' But...
-:'''Oenone:''' If you side with her, you will forever bear her sins. You will become a villain, hated by the people of Okhema for eternity!
-:'''Paris:''' But...
-:'''Oenone:''' Further... Furthermore, the garrison guards will all place the death of Philoc on both of your heads! They may even bring you back to Okhema and see that you receive the most brutal of judgment!
-:'''Paris:''' But... But if I don't have her, who else will help me escape my terrifying duties and responsibilities? Who will believe my stories and go in search of Arcadia with me?
-:'''Oenone:''' ...Me.
-:'''Oenone:''' Paris, my hero. I am here for you. Why would you give the golden thread to a vile, evil creature like that and not return it to its original owner?
-:'''Oenone:''' With my influence, you can be spared from the battlefield and kept far away from the nightmares of strife. Let us escape to Dawncloud and spend our days in peace under the protection of Kephale.
-:'''Oenone:''' Then, when the black tide falls and strife has been defeated, we can ride in our grand carriage as nobles and go in search of our city of romance...
-:'''Paris:''' Arca... dia.
-:'''Oenone:''' That's right, Arcadia. With the golden thread as my witness, it is a land known to the people of my hometown. I can help you find it...
-:{{DIcon|Arrow}} What are you playing at?
-::'''Oenone:''' I'm just giving the person I love another option. Is there something wrong with that?
-::A home wrecker knows when to strike.
-::'''Oenone:''' How dare you slander me like that? ...I am the original owner of the golden thread. Am I not far more suitable to accompany him than that monster?
-::At least go and look for the statue lady!
-:{{DIcon|Arrow}} A home wrecker knows when to strike.
-::'''Oenone:''' How dare you slander me like that? ...I am the original owner of the golden thread. Am I not far more suitable to accompany him than that monster?
-::At least go and look for the statue lady!
-:{{DIcon|Arrow}} At least go and look for the statue lady!
-:'''Oenone:''' You're saying that Paris should run out onto the battlefield and risk his life among those insane Titankin to look for her?
-:'''Paris:''' Savior, I... I think Oenone is right.
 :{{tx}}
-
-;(Unused &mdash; EnterDistrict_G{GroupID})
-----
-::{{tx}}
 {{Dialogue End}}
 
 ===Search for Paris and the Furiae Archer{{subst:void|<!--204020303-->}}===
 {{Mission Description|type=adventure|location="Eternal Holy City" Okhema|update|The stage of this memory has transitioned from under Strife's blade to beneath Worldbearing's seat. The threat and disaster have subsided for now, and maybe you will even be able to immerse yourself in a slightly less heavy story. But you must be aware that any play that begins with slaughter and suffering often meets a similar end... Whatever the case, it would be best to find the protagonist of this story first.<br />"Human, what is it you wish to gain from them?"}}
 {{Dialogue Start}}
-
-;(Unused &mdash; EnterDistrict_G{GroupID})
-:'''Paris:''' Surely not. Grand Craftsman, are you saying that you cannot repair her?
-::'''Chartonus:''' Can. Materials, have not. Earth's stones, golden blood of strife, seeds of reason &mdash; nothing there is.
-::'''Paris:''' Ah! Why are all those things derived from the Titans. Oh, how they rejoice at the suffering of mortals.
-::'''Furiae Archer:''' Just give up... Do not further sully what little honor I have remaining... Let me give myself to my destiny in the underworld...
-::'''Paris:''' Miss, your strength is fading. Do not waste it on pessimism.
-::'''Paris:''' Let me think of a way... Grand Craftsman, what is this?
-::'''Chartonus:''' Calculation tablet, divine object, Oronyx's it is. Unravel prophecy, change time and space, hard it is.
-::'''Paris:''' Oh! I know this! This is Janusopolis' astrologers' favorite toy! This should be able to repair the holes in her body!
-::'''Chartonus:''' Understand, you do not. Use it, you can not.
-::'''Paris:''' Hey, with a city as vast as Okhema, are you sure we can find no one that can make this thing spin?
-::{{DIcon|Arrow}} I can make it spin.
-::{{DIcon|Arrow}} Disciple of Oronyx, at your service.
-::{{DIcon|Arrow}} Calculation tablet national champion, ready for battle!
-::'''Paris:''' Ah! My savior from before! I never expected you would defeat the Titankin... I mean, I just knew you'd make it out alive!
-::{{tx}}
+:{{tx}}
 {{Dialogue End}}
 
 ==Other Languages==

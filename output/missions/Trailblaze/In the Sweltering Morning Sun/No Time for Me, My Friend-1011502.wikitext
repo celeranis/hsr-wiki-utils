@@ -43,340 +43,42 @@ PageTitle=#No Time for Me, My Friend#
 ===Meet up with Natasha and prepare to welcome the re-opening of the Underworld{{subst:void|<!--101150119-->}}===
 {{Mission Description|type=trailblaze|location=Boulder Town|Bronya sent news that the blockade between the Overworld and Underworld is about to lift after more than a decade.<br />Go meet Natasha and pass this exciting news to every Underworld resident.}}
 {{Dialogue Start}}
-<pre>{
-	"$type": "RPG.GameCore.CreateProp",
-	"GroupID": {
-		"FixedValue": {
-			"Value": 111
-		}
-	},
-	"GroupPropID": {
-		"FixedValue": {
-			"Value": 300002
-		}
-	}
-}</pre>
-;(Upon reaching the destination)
-
-;(Talk to Natasha)
-:{{A|VO chapter1 10 natasha 217.ogg}} '''Natasha:''' You made it... I thought you were about to miss out on a moment of history.
-:{{A|VO chapter1 10 mar7th 265 m.ogg}} {{A|VO chapter1 10 mar7th 265 f.ogg}} '''March 7th:''' No way! After all our hard work, how could we miss out on the final celebration? Right, (Trailblazer)?
-:{{DIcon|Arrow}} I'll go sit at the children's table.
-::{{A|VO chapter1 10 natasha 218.ogg}} '''Natasha:''' Haha, I don't know how much of a celebration we'll be having... but I know Hook and Clara will be pleased to sit with you.
-:{{DIcon|Arrow}} The smell of freedom's in the air...
-::{{A|VO chapter1 10 natasha 219.ogg}} '''Natasha:''' Hehe, I smell it too.
-:{{A|VO chapter1 10 natasha 220.ogg}} '''Natasha:''' For Oleg and I, not to mention the other adults, reopening the passageway means rediscovering old ways of living &mdash; a return to "normality..." Survival is no longer the top of the agenda...
-:{{A|VO chapter1 10 natasha 221.ogg}} '''Natasha:''' But for the children who were born into this era, who grew up in this isolation... this will be a new life altogether.
-:{{A|VO chapter1 10 natasha 222.ogg}} '''Natasha:''' ...Once you've tasted freedom, it's difficult to accept a life of separation and isolation. Those of us whose childhoods were marred by tragedy... we must strive to do better for the next generation.
-:{{A|VO chapter1 10 natasha 223.ogg}} '''Natasha:''' I'm sorry, here I am talking your ear off again. This is a day to remember. We should welcome it with smiles.
-:{{A|VO chapter1 10 natasha 224.ogg}} '''Natasha:''' If you have time, talk to the folks here &mdash; every one of them will tell you about their excitement. Then, when you're ready... let's "go home."
-
-;(Talk to Miner)
-:{{A|VO chapter1 10 citizenG 201.ogg}} '''Expectant Gentleman:''' It's been more than ten years. I can finally see my little girl again...
-:{{A|VO chapter1 10 citizenG 202.ogg}} '''Expectant Gentleman:''' She must have graduated by now. I hope she found a good job &mdash; government administration or legal consulting, perhaps...
-:{{A|VO chapter1 10 citizenG 203.ogg}} '''Expectant Gentleman:''' Please, Amber Lord, anything but those terrible magazine publishers! She's always liked to read those pointless things...
-
-;(Talk to Miner)
-:{{A|VO chapter1 10 alina 207.ogg}} '''Alina:''' Mommy, what do children in the Overworld dress like?
-:{{A|VO chapter1 10 dunya 201.ogg}} '''Dunya:''' Mommy doesn't know either, sweety &mdash; the Overworld is different from here. Their fashion is always changing, I don't know what's popular these days...
-:{{A|VO chapter1 10 alina 208.ogg}} '''Alina:''' Then... will other children laugh at me when we go up?
-:{{A|VO chapter1 10 dunya 202.ogg}} '''Dunya:''' Don't be silly, that won't happen &mdash; mommy's gonna buy you some pretty new clothes as soon as we're on the surface.
-:{{A|VO chapter1 10 alina 209.ogg}} '''Alina:''' ...Deal! Thanks, mommy.
-
-;(Talk to Cable Car Operator)
-;(If {{cx}}<!--during performance 101150121-->)
-::{{A|VO chapter1 10 citizenH 201.ogg}} '''Cable Car Operator:''' Finally... Finally I can get back to supervising the cable cars! I thought I'd spend the rest of my life in those mines...
-::{{A|VO chapter1 10 citizenH 202.ogg}} '''Cable Car Operator:''' Ah, it's you! The liberators of the Underworld! You're the first passengers we've had since being sealed off &mdash; it'll be my honor to get you to the surface in one piece!
-::{{DIcon|Arrow}} Do you have a license?
-:::{{A|VO chapter1 10 citizenH 203 m.ogg}} {{A|VO chapter1 10 citizenH 203 f.ogg}} '''Cable Car Operator:''' Oh, uh, I'm afraid you might have to make an exception, {{MC|f=miss|m=mr}}. My license has expired, but then I haven't had the chance to go up and renew it for 10 years now...
-::{{DIcon|Arrow}} Does this thing have a good safety record?
-:::{{A|VO chapter1 10 citizenH 204.ogg}} '''Cable Car Operator:''' Relax, relax! In all my 20 years on the job, there were only ever, uh... Anyway, none of them were serious!
-::{{A|VO chapter1 10 citizenH 205.ogg}} '''Cable Car Operator:''' *cough* So! Ready to climb aboard?
-;(If {{cx}}<!--not during performance 101150121-->)
-::{{A|VO chapter1 10 citizenH 208.ogg}} '''Cable Car Operator:''' So! Ready to climb aboard?
-:{{DIcon|Arrow}} Time to take the kids out for some fresh air.
-::{{A|VO chapter1 10 citizenH 206.ogg}} '''Cable Car Operator:''' Brothers, sisters, ladies, gentlemen, boys, and girls of all ages &mdash; gather round! The cable car passenger service is about to restart!
-:<pre>{
-	"$type": "RPG.GameCore.SetAudioEmotionState",
-	"StateName": "State_Bgm_E2",
-	"SubMissionID": 101150121
-}</pre>
-::{{tx}}
-:{{DIcon|Exit}} Not yet.
-::{{A|VO chapter1 10 citizenH 207.ogg}} '''Cable Car Operator:''' No problem, this car won't be leaving without you!
-
-:{{DIcon|Talk}} Listen
-:{{A|VO chapter1 10 joshua 203.ogg}} '''Joshua:''' The Guards... they m&mdash;moved so q&mdash;quickly... don't you think it's a little f&mdash;fishy?
-:{{A|VO chapter1 10 elaine 201.ogg}} '''Elaine:''' I... I think it's hard to believe, but I've met that young lady Bronya. We didn't talk much, but she felt trustworthy to me.
-:{{A|VO chapter1 10 fidora 201.ogg}} '''Fidora:''' I don't really know what kind of person the new guardian is, but I heard the three outsiders are on good terms with her.
-:{{A|VO chapter1 10 fidora 202.ogg}} '''Fidora:''' Those three are really capable people. If they believe the Guards, then there's no reason for us not to.
-:{{A|VO chapter1 10 joshua 204.ogg}} '''Joshua:''' I g&mdash;guess...
-:{{A|VO chapter1 10 elaine 202.ogg}} '''Elaine:''' Fidora's right. They saved lots of people at the mines... I think they can be trusted.
+:{{tx}}
 {{Dialogue End}}
 
 ===Talk with the cable car operator and return to the Overworld{{subst:void|<!--101150121-->}}===
 {{Mission Description|type=trailblaze|location=Boulder Town|update|Bronya sent news that the blockade between the Overworld and Underworld is about to lift after more than a decade.<br />The cable car is about to re-open. Underworld residents would see the light again and breathe freely under the open sky.<br />Though you are rather concerned with the safety of the cable car due to its lack of maintenance, you still decide to give it a go and return to the Overworld in this traditional method.}}
 {{Dialogue Start}}
-
-;(Talk to Cable Car Operator)
-:{{A|VO chapter1 10 citizenH 208.ogg}} '''Cable Car Operator:''' So! Ready to climb aboard?
-:{{DIcon|Arrow}} Time to take the kids out for some fresh air.
-::{{A|VO chapter1 10 citizenH 206.ogg}} '''Cable Car Operator:''' Brothers, sisters, ladies, gentlemen, boys, and girls of all ages &mdash; gather round! The cable car passenger service is about to restart!
-:<pre>{
-	"$type": "RPG.GameCore.SetAudioEmotionState",
-	"StateName": "State_Bgm_E2",
-	"SubMissionID": 101150121
-}</pre>
-::{{tx}}
-:{{DIcon|Exit}} Not yet.
-::{{A|VO chapter1 10 citizenH 207.ogg}} '''Cable Car Operator:''' No problem, this car won't be leaving without you!
+:{{tx}}
 {{Dialogue End}}
 
 ===Talk with Gepard{{subst:void|<!--101150201-->}}===
 {{Mission Description|type=trailblaze|location=Administrative District|update|Bronya sent news that the blockade between the Overworld and Underworld is about to lift after more than a decade.<br />You and other Underworld residents take the cable car back to the Administrative District and face Gepard, with whom you had fought just a short time ago.<br />This time, however, the captain of the Silvermane Guards is wearing a smile.}}
 {{Dialogue Start}}
-;(Upon reaching the destination)
-
-;(Upon reaching the destination)
-:{{A|VO chapter1 10 mar7th 266.ogg}} '''March 7th:''' Ah, it's Gepard! Is he here to meet us?
-:{{A|VO chapter1 10 danheng 222.ogg}} '''Dan Heng:''' He's still on duty. Huh, he must have recovered quickly.
-:{{A|VO chapter1 10 mar7th 267.ogg}} '''March 7th:''' Let's go say hi.
-
-;(Talk to Gepard)
-:{{A|VO chapter1 10 gepard 201.ogg}} '''Gepard:''' Welcome back to the Administrative District, Trailblazers.
-:{{A|VO chapter1 10 mar7th 268.ogg}} '''March 7th:''' Trailblazers... first time anyone's called us that on this planet!
-:{{A|VO chapter1 10 gepard 202.ogg}} '''Gepard:''' The Architects think it's only right that we should address you properly. "Outsiders" is hardly fitting anymore.
-:{{A|VO chapter1 10 gepard 203.ogg}} '''Gepard:''' ...Please allow me to apologize again for what happened in the restricted zone. You were only trying to help... I should've trusted Serval's judgment.
-:{{DIcon|Arrow}} You were just doing your job.
-::{{A|VO chapter1 10 gepard 204.ogg}} '''Gepard:''' Thanks for understanding.
-:{{DIcon|Arrow}} Your sister knows what's up...
-::{{A|VO chapter1 10 gepard 205.ogg}} '''Gepard:''' I'll keep that in mind, thanks.
-:{{DIcon|Arrow}} Ha! Didn't expect to get wrecked, huh?
-::{{A|VO chapter1 10 gepard 206.ogg}} '''Gepard:''' You are excellent fighters. I'd love to have you provide training for the Guards, but I know you have places to be.
-:{{A|VO chapter1 10 gepard 207.ogg}} '''Gepard:''' Lady Bronya's inaugural address will begin soon. She asked me to pass on her invitation to you.
-:{{A|VO chapter1 10 mar7th 269.ogg}} '''March 7th:''' Huh? That's sooner than I expected. Is she well enough to...
-:{{A|VO chapter1 10 gepard 208.ogg}} '''Gepard:''' Not really... But Lady Bronya insisted on delivering the speech as soon as possible. She wants the people to understand what happened.
-:{{A|VO chapter1 10 gepard 209.ogg}} '''Gepard:''' The address will be held at Everwinter Monument. I hope the three of you can find time to attend.
-----
-
-;(Talk to Miner)
-:{{A|VO chapter1 10 citizenG 204.ogg}} '''Expectant Gentleman:''' Sasha! My Sasha, is that you?
-:{{A|VO chapter1 10 citizenI 201.ogg}} '''Tearful Woman:''' Dad! &mdash; by the Amber Lord, I thought I was never going to see you again!
-:{{A|VO chapter1 10 citizenG 205.ogg}} '''Expectant Gentleman:''' Praise the Preservation, my child. Praise THEIR leniency... And who's this little one?
-:{{A|VO chapter1 10 citizenI 202.ogg}} '''Tearful Woman:''' Here, Barry... say hello to grandpa!
-:{{A|VO chapter1 10 childC 201.ogg}} '''Innocent Child:''' ...Hello grandpa!
-:{{A|VO chapter1 10 citizenG 206.ogg}} '''Expectant Gentleman:''' My grandson... Is this my grandson? *sob*
-:{{A|VO chapter1 10 citizenI 203.ogg}} '''Tearful Woman:''' Sorry Dad, I wanted to introduce you to my husband too, but he can't get away from the publisher today.
-:{{A|VO chapter1 10 citizenG 207.ogg}} '''Expectant Gentleman:''' That's okay, my child, we've got all the time in the... did you say "publisher"?
-
-;(Talk to Silvermane Soldier)
-:{{A|VO chapter1 10 soldierAB 201.ogg}} '''Nervous Silvermane Guard:''' U&mdash;Uh, excuse me... are you Captain Oleg?
-:{{A|VO chapter1 10 oleg 208.ogg}} '''Oleg:''' ...Huh? I didn't think anyone would still remember my name after all this time.
-:{{A|VO chapter1 10 soldierAB 202.ogg}} '''Nervous Silvermane Guard:''' Of course we remember! Every young guard knows about your courageous exploits!
-:{{A|VO chapter1 10 oleg 209.ogg}} '''Oleg:''' Oh? Which ones might they be? The time I finished off that rampaging prowler with just three bullets? Or when I defended the outpost from monsters for six days straight without food or water?
-:{{A|VO chapter1 10 soldierAB 203.ogg}} '''Nervous Silvermane Guard:''' I haven't heard of either of them actually... But I'd love to hear all about them!
-:{{A|VO chapter1 10 oleg 210.ogg}} '''Oleg:''' Hahaha, sure! In which case, I'll cut my walk short and tell you all the grisly details...
-
-;(Talk to Natasha)
-:{{A|VO chapter1 10 natasha 229 m.ogg}} {{A|VO chapter1 10 natasha 229 f.ogg}} '''Natasha:''' I don't know if you've ever had that feeling, (Trailblazer)... When you stop and look back on the things you've done, and wonder at all the obstacles you've overcome, the strength you've displayed...
-:{{A|VO chapter1 10 natasha 230.ogg}} '''Natasha:''' And then you start to doubt yourself, and wonder if you've lost that drive... If everything were to happen again, would you still stand strong?
-:{{DIcon|Arrow}} I know the feeling.
-::{{A|VO chapter1 10 natasha 231.ogg}} '''Natasha:''' You do? Good... I mean, it's good to know someone in this world feels the same way as me.
-:{{DIcon|Arrow}} I don't quite understand what you mean.
-::{{A|VO chapter1 10 natasha 232.ogg}} '''Natasha:''' And that's not surprising &mdash; you're different from others. You seem to radiate a confidence most people don't have.
-:{{A|VO chapter1 10 natasha 233.ogg}} '''Natasha:''' I haven't been able to sit back once over the past ten years &mdash; a moment's negligence could have brought Wildfire crashing down... and the Underworld would've been beyond saving.
-:{{A|VO chapter1 10 natasha 234.ogg}} '''Natasha:''' Staying vigilant wasn't the issue... it was the not knowing whether I'd ever be able to let my guard down again...
-:{{A|VO chapter1 10 natasha 235.ogg}} '''Natasha:''' No matter what anyone says, I believe your arrival was the reward for my long vigil. Thank you, Trailblazer.
-
-;(Talk to Hook)
-:{{A|VO chapter1 10 hook 215.ogg}} '''Hook:''' Wow! Did you see that, Clara? A super suuuper big steel monster just ran past!
-:{{A|VO chapter1 10 clara 207.ogg}} '''Clara:''' I don't think that's a monster... Mr. Svarog's database has information about it. It's called... hmm, I can't remember.
-:{{A|VO chapter1 10 hook 216.ogg}} '''Hook:''' Don't worry about the name! The important thing is I saw what it can do &mdash; it has a huuuuge appetite and swallows people whole!
-:{{A|VO chapter1 10 hook 217.ogg}} '''Hook:''' And it just so happens to be The Moles' next target, hehe... We'll defeat the iron monster and save the people in its tummy!
-:{{A|VO chapter1 10 clara 208.ogg}} '''Clara:''' Um... I don't think that's how it works...
+:{{tx}}
 {{Dialogue End}}
 
 ===Go to Bronya's succession ceremony{{subst:void|<!--101150202-->}}===
 {{Mission Description|type=trailblaze|location=Administrative District|update|Bronya sent news that the blockade between the Overworld and Underworld is about to lift after more than a decade.<br />You learn from Gepard that Bronya's succession ceremony as the Supreme Guardian is about to start.<br />You are warmly invited as someone who had gone through great difficulties with her. Go to the Everwinter Monument and wait for the ceremony to start.}}
 {{Dialogue Start}}
-;(Upon reaching the destination)
-
-;(Upon reaching the destination)
-:{{A|VO chapter1 10 mar7th 270.ogg}} '''March 7th:''' Look! There's a crowd gathering over there. Is the address starting soon?
-:{{A|VO chapter1 10 danheng 223.ogg}} '''Dan Heng:''' Looks like it. Bronya hasn't arrived yet, though. Let's find somewhere to wait.
+:{{tx}}
 {{Dialogue End}}
 
 ===Find somewhere to rest before the ceremony starts{{subst:void|<!--101150224-->}}===
 {{Mission Description|type=trailblaze|location=Administrative District|update|Bronya sent news that the blockade between the Overworld and Underworld is about to lift after more than a decade.<br />The succession ceremony for the young Guardian is about to start. You arrive at the Everwinter Monument early to wait for the speech.<br />The time is still early. Find somewhere to rest and enjoy a rare moment of respite in Belobog.}}
 {{Dialogue Start}}
-;(Upon reaching the destination)
-
-;(Upon reaching the destination)
-:<!--5-second delay-->
-<pre>{
-	"$type": "RPG.GameCore.PlayNPCBubbleTalk",
-	"BubbleTalkInfoList": [
-		{
-			"AutoSkipTime": 4,
-			"GroupID": 95,
-			"GroupNpcID": 400007,
-			"TalkSentenceID": 101013393
-		}
-	],
-	"ID": 3
-}</pre>
-<pre>{
-	"$type": "RPG.GameCore.PlayNPCBubbleTalk",
-	"BubbleTalkInfoList": [
-		{
-			"AutoSkipTime": 4,
-			"GroupID": 95,
-			"GroupNpcID": 400004,
-			"TalkSentenceID": 101013394
-		},
-		{
-			"AutoSkipTime": 4,
-			"GroupID": 95,
-			"GroupNpcID": 400004,
-			"TalkSentenceID": 101013395
-		}
-	],
-	"ID": 2
-}</pre>
-<pre>{
-	"$type": "RPG.GameCore.PlayNPCBubbleTalk",
-	"BubbleTalkInfoList": [
-		{
-			"AutoSkipTime": 4,
-			"GroupID": 95,
-			"GroupNpcID": 400003,
-			"TalkSentenceID": 101013389
-		}
-	],
-	"ID": 5
-}</pre>
+:{{tx}}
 {{Dialogue End}}
 
 ===Talk to Bronya{{subst:void|<!--101150204-->}}===
 {{Mission Description|type=trailblaze|location=Qlipoth Fort|update|The story ended and Bronya succeeded as the Supreme Guardian. The Overworld and Underworld reunited to create a complete Belobog.<br />All things must end. There is always a bit of sadness at the time of farewell.<br />It is best to talk to Bronya again before you leave and tell her everything you heard from Welt.}}
 {{Dialogue Start}}
-;(Upon reaching the destination)
-
-;(Upon reaching the destination)
-:{{A|VO chapter1 10 mar7th 266.ogg}} '''March 7th:''' Ah, it's Gepard! Is he here to meet us?
-:{{A|VO chapter1 10 danheng 222.ogg}} '''Dan Heng:''' He's still on duty. Huh, he must have recovered quickly.
-:{{A|VO chapter1 10 mar7th 267.ogg}} '''March 7th:''' Let's go say hi.
-:{{A|VO chapter1 10 gepard 201.ogg}} '''Gepard:''' Welcome back to the Administrative District, Trailblazers.
-:{{A|VO chapter1 10 mar7th 268.ogg}} '''March 7th:''' Trailblazers... first time anyone's called us that on this planet!
-:{{A|VO chapter1 10 gepard 202.ogg}} '''Gepard:''' The Architects think it's only right that we should address you properly. "Outsiders" is hardly fitting anymore.
-:{{A|VO chapter1 10 gepard 203.ogg}} '''Gepard:''' ...Please allow me to apologize again for what happened in the restricted zone. You were only trying to help... I should've trusted Serval's judgment.
-:You were just doing your job.
-:{{A|VO chapter1 10 gepard 204.ogg}} '''Gepard:''' Thanks for understanding.
-:Your sister knows what's up...
-:{{A|VO chapter1 10 gepard 205.ogg}} '''Gepard:''' I'll keep that in mind, thanks.
-:Ha! Didn't expect to get wrecked, huh?
-:{{A|VO chapter1 10 gepard 206.ogg}} '''Gepard:''' You are excellent fighters. I'd love to have you provide training for the Guards, but I know you have places to be.
-:{{A|VO chapter1 10 gepard 207.ogg}} '''Gepard:''' Lady Bronya's inaugural address will begin soon. She asked me to pass on her invitation to you.
-:{{A|VO chapter1 10 mar7th 269.ogg}} '''March 7th:''' Huh? That's sooner than I expected. Is she well enough to...
-:{{A|VO chapter1 10 gepard 208.ogg}} '''Gepard:''' Not really... But Lady Bronya insisted on delivering the speech as soon as possible. She wants the people to understand what happened.
-:{{A|VO chapter1 10 gepard 209.ogg}} '''Gepard:''' The address will be held at Everwinter Monument. I hope the three of you can find time to attend.
-:{{A|VO chapter1 10 mar7th 270.ogg}} '''March 7th:''' Look! There's a crowd gathering over there. Is the address starting soon?
-:{{A|VO chapter1 10 danheng 223.ogg}} '''Dan Heng:''' Looks like it. Bronya hasn't arrived yet, though. Let's find somewhere to wait.
-:{{A|VO chapter1 10 soldierAC 201.ogg}} '''Silvermane Guard Announcer:''' Guards, formation!
-:{{A|VO chapter1 10 mar7th 271.ogg}} '''March 7th:''' Whoa, this must be it.
-:{{A|VO chapter1 10 soldierAC 202.ogg}} '''Silvermane Guard Announcer:''' Citizens of Belobog, I kindly ask for your attention! Lady Bronya Rand's inaugural address will begin shortly. Please remain orderly!
-:{{A|VO chapter1 10 bronya 233.ogg}} '''Bronya:''' People of Belobog &mdash; hear me!
-:{{A|VO chapter1 10 bronya 234.ogg}} '''Bronya:''' Today we gather here to celebrate our victory... but it was a sacrifice made by a mighty guardian that delivered us this opportunity. She dispelled an evil that cost us 700 years of suffering... and in the process, she paid the ultimate price.
-:{{A|VO chapter1 10 bronya 235.ogg}} '''Bronya:''' The sacrifice of Cocolia Rand ushers in a new chapter. The blizzard beyond the walls will die away and the offensives of our Silvermane Guards will begin to contain the Fragmentum's advance.
-:{{A|VO chapter1 10 bronya 236.ogg}} '''Bronya:''' In the far north, I witnessed with my own eyes the struggle between the late supreme guardian and the evil power that sought to destroy us. In her last moments, the supreme guardian told me her greatest regret...
-:{{A|VO chapter1 10 bronya 237.ogg}} '''Bronya:''' ...The order to seal off the Underworld from the Overworld. With the passage of time, she gradually came to realize the consequences of that decision... Although tortured with guilt, she could not undo the damage.
-:{{A|VO chapter1 10 bronya 238.ogg}} '''Bronya:''' In her final moments, she wanted us to mark the Stellaron's end by reuniting Belobog. Overworlders and Underworlders must embrace the dawn of a new age... together.
-:{{A|VO chapter1 10 bronya 239.ogg}} '''Bronya:''' People of the Underworld, I dare not ask for your forgiveness &mdash; I now know the reality of your decade of suffering...
-:{{A|VO chapter1 10 bronya 240.ogg}} '''Bronya:''' But I want us to work together. We know that without your perseverance and hard work, Belobog will not recover its former glory... and the seed of civilization will not be preserved.
-:{{A|VO chapter1 10 bronya 241.ogg}} '''Bronya:''' ...And on that note, I'd like to extend my heartfelt gratitude to a few guests of the city.
-:{{A|VO chapter1 10 bronya 242.ogg}} '''Bronya:''' Most of you were not aware of their arrival... but it is thanks to them that our world now flourishes with hope.
-:{{A|VO chapter1 10 bronya 243.ogg}} '''Bronya:''' They made me realize that while we remain focused on "preserving" the ground beneath our feet, we should not forget to look up into the sky.
-:{{A|VO chapter1 10 bronya 244.ogg}} '''Bronya:''' I firmly believe that with the determination of everyone, our world, the world the Trailblazers call "Jarilo-VI," will no longer be alone among the stars.
-:{{A|VO chapter1 10 bronya 245.ogg}} '''Bronya:''' But before we accomplish that goal, I humbly ask you to follow me into the future...
-:{{A|VO chapter1 10 bronya 246.ogg}} '''Bronya:''' I, Bronya Rand, the nineteenth guardian of Belobog, hereby take my oath...
-:{{A|VO chapter1 10 crowd 201.ogg}} '''Onlookers:''' Lady Bronya! Lady Bronya! Long live Belobog!
-:{{A|VO chapter1 10 mar7th 272.ogg}} '''March 7th:''' Back in this office again... The last time I was here was... the last time I was here.
-:{{A|VO chapter1 10 mar7th 273.ogg}} '''March 7th:''' No more unnerving gaze this time! Hehe...
-:{{A|VO chapter1 10 mar7th 274.ogg}} '''March 7th:''' Bronya, we're back!
-:{{A|VO chapter1 10 bronya 247 m.ogg}} {{A|VO chapter1 10 bronya 247 f.ogg}} '''Bronya:''' March, Dan Heng, (Trailblazer)... it's wonderful you made it to the address.
-:{{A|VO chapter1 10 bronya 248.ogg}} '''Bronya:''' Sorry, I know the invitation was very last minute... but I needed to get the news out as soon as possible. The longer people waited, the more rumors started to swirl. The situation risked spinning out of control.
-:{{DIcon|Arrow}} Are you fully recovered?
-::{{A|VO chapter1 10 bronya 249.ogg}} '''Bronya:''' Yes, I'm fine now. Don't worry.
-::{{A|VO chapter1 10 bronya 250.ogg}} '''Bronya:''' My mother... she tried to force the voice of the Stellaron into my head... It was a terrible feeling. I don't know what would've happened if you hadn't shown up.
-::Was Seele not there for the address?
-:{{DIcon|Arrow}} Was Seele not there for the address?
-:{{A|VO chapter1 10 bronya 251.ogg}} '''Bronya:''' She was there. She just made sure no one could see her.
-:{{A|VO chapter1 10 bronya 252.ogg}} '''Bronya:''' Seele is still new to the vastness of the Overworld &mdash; she feels uncomfortable in a big crowd... I'll help her adjust to life here.
-:{{A|VO chapter1 10 mar7th 275.ogg}} '''March 7th:''' That was some speech, Bronya! If I had to talk like that in front of a huge crowd, I'd be shaking head to toe!
-:{{A|VO chapter1 10 bronya 253.ogg}} '''Bronya:''' It was all just a bunch of palatable lies. I hope you never have a similar experience, March.
-:{{DIcon|Arrow}} The part about preserving the seed of civilization was real.
-:{{DIcon|Arrow}} It's what you do as a leader that matters.
-:{{DIcon|Arrow}} Sometimes people need to hear white lies.
-:{{A|VO chapter1 10 bronya 254.ogg}} '''Bronya:''' Mm... I'd prefer to be honest with the people... but I also want to preserve their hope.
-:{{A|VO chapter1 10 mar7th 276.ogg}} '''March 7th:''' ...Dan Heng, wanna... talk about Mr. Yang's findings?
-:{{A|VO chapter1 10 danheng 224.ogg}} '''Dan Heng:''' Mm, allow me to explain.
-:Telling Bronya about Welt's observations...
-:{{A|VO chapter1 10 bronya 255.ogg}} '''Bronya:''' ...Which means the Fragmentum has already taken root by this point. Even though the Stellaron is sealed, we won't be able to reverse the damage immediately...
-:{{DIcon|Arrow}} Stellarons are terrible things.
-:{{DIcon|Arrow}} Sorry, we promised you...
 :{{tx}}
-:{{tx}}
-:{{DIcon|Arrow}} We will find a way to root out the Fragmentum.
-:{{DIcon|Arrow}} The Astral Express will do everything within our power to help.
-:{{A|VO chapter1 10 bronya 259.ogg}} '''Bronya:''' Besides, I agree with Mr. Yang. Ultimately, the fate of Belobog is in the hands of its own people...
-:{{tx}}
-----
-:{{A|VO chapter1 10 mar7th 277 m.ogg}} {{A|VO chapter1 10 mar7th 277 f.ogg}} '''March 7th:''' Congrats, (Trailblazer)! That was one heck of a first trailblazing expedition!
-:{{A|VO chapter1 10 danheng 225.ogg}} '''Dan Heng:''' Worth celebrating, I'd say.
-:{{DIcon|Arrow}} On a scale from 1 to 5, how would you rate this journey...
-:{{A|VO chapter1 10 danheng 226.ogg}} '''Dan Heng and March 7th:''' Two point five. Five!
-:{{A|VO chapter1 10 mar7th 279.ogg}} '''March 7th:''' ...What!? That run-of-the-mill, huh?
-:{{A|VO chapter1 10 danheng 227.ogg}} '''Dan Heng:''' My scoring criteria are different from yours.
-:{{A|VO chapter1 10 mar7th 280 m.ogg}} {{A|VO chapter1 10 mar7th 280 f.ogg}} '''March 7th:''' Ugh! Anyway, we should be asking (Trailblazer)... Any thoughts you want to share?
-:{{DIcon|Arrow}} Time for a nap...
-::{{A|VO chapter1 10 mar7th 281.ogg}} '''March 7th:''' Wait, what? No way &mdash; we're about to leave and I've hardly got any decent photos.
-::{{A|VO chapter1 10 mar7th 282.ogg}} '''March 7th:''' Come on, let's go back to the Administrative District and hang out for a bit longer!
-:{{DIcon|Arrow}} I feel like I could fight a hundred more monsters!
-::{{A|VO chapter1 10 mar7th 283.ogg}} '''March 7th:''' That's the spirit! Come on, we should take some more photos before we head back to the Express.
-::{{A|VO chapter1 10 mar7th 284.ogg}} '''March 7th:''' Let's go! One more round in the Administrative District!
-:{{DIcon|Arrow}} What will the next adventure be like?
-::{{A|VO chapter1 10 mar7th 285.ogg}} '''March 7th:''' Equally unforgettable, I'm sure. Anyway, don't worry about the future &mdash; live in the moment!
-::{{A|VO chapter1 10 mar7th 286.ogg}} '''March 7th:''' Let's go for one more round in the Administrative District! I wanna take more photos!
-----
-
-;(Talk to Seele)
-:{{A|VO chapter1 10 seele 217.ogg}} '''Seele:''' The inauguration ceremony went very smoothly. I didn't expect so many Underworlders to come and listen to the address.
-:{{A|VO chapter1 10 seele 218.ogg}} '''Seele:''' Everyone seemed supportive, too. Seems like Bronya made a pretty good impression on them.
-:{{DIcon|Talk}} Maybe Natasha and Oleg helped promote her a little.
-::{{A|VO chapter1 10 seele 219.ogg}} '''Seele:''' Possibly. They always think ahead.
-::{{A|VO chapter1 10 seele 220.ogg}} '''Seele:''' If those two approve of Bronya, then everyone following Wildfire won't question her either.
-:;(Return to previous option selection)
-:{{DIcon|Talk}} Were you there? I don't think I saw you.
-::{{A|VO chapter1 10 seele 221.ogg}} '''Seele:''' Of course I was! I was just hidden in the crowd. I'm glad you didn't notice me &mdash; means I'm doing something right. I want to protect Bronya in my own way.
-::{{A|VO chapter1 10 seele 222.ogg}} '''Seele:''' She wanted me to stand next to her, but I'm glad I stuck to my guns. Besides, I'm not sure I could handle that many people staring at me.
-:;(Return to previous option selection)
-:{{DIcon|Talk}} She will be an outstanding leader.
-::{{A|VO chapter1 10 seele 223.ogg}} '''Seele:''' No doubt. I figured that out back in the Underworld.
-:;(Return to previous option selection)
-:{{DIcon|Exit}} We're about to leave Belobog.
-::{{A|VO chapter1 10 seele 224.ogg}} '''Seele:''' Leave...? So soon? I thought you'd stay for a few more days &mdash; at least until everything had calmed down...
-::{{A|VO chapter1 10 seele 225.ogg}} '''Seele:''' Ahh... I get it. People are waiting for you to go back so you can keep traveling, right?
-::{{A|VO chapter1 10 seele 226.ogg}} '''Seele:''' Shame, I thought we'd have more time to discuss all the crazy things you guys like to talk about. Looks like that'll have to wait till next time.
-::{{A|VO chapter1 10 seele 227.ogg}} '''Seele:''' ...And before you say anything, there will be a next time. I know we'll meet again.
-
-;(Talk to Bronya)
-:{{A|VO chapter1 10 bronya 263.ogg}} '''Bronya:''' If you walk with your head down and your heart full of fear, your steps will grow heavier and your spirit will suffer.
-:{{A|VO chapter1 10 bronya 264.ogg}} '''Bronya:''' But if you find something to look up to and move forward with hope, then your steps will grow lighter... and if you should fall, you'll be on your feet before you know it.
-:{{A|VO chapter1 10 bronya 265.ogg}} '''Bronya:''' ...Thank you for teaching me this, Trailblazers.
 {{Dialogue End}}
 
 ===(Optional) Talk to the Underworld residents nearby{{subst:void|<!--101150120-->}}===
 {{Dialogue Start}}
+:{{tx}}
 {{Dialogue End}}
 
 ==Other Languages==

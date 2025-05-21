@@ -33,96 +33,12 @@ PageTitle=#Advanced Trial#
 -->
 ==Dialogue==
 {{Stub Dialogue}}
-----
-<pre>{
-	"$type": "RPG.GameCore.AddFinishMissionData_PlayMessage",
-	"SubmissionID": 802612002,
-	"MessageSectionID": 1312000
-}</pre>
 {{Dialogue End}}
 
 ===Head to the stage and learn about Montana's recent discoveries{{subst:void|<!--802612003-->}}===
 {{Mission Description|type=adventure|location=Penacony Paperfold University College|update|As the closing show concludes, your band experience is reaching its end...<br />All of a sudden, Montana says she has something to share with you. Head to the stage to hear her out.}}
 {{Dialogue Start}}
-
-;(Talk to Montana)
-:'''Montana:''' The Festive Superstar! There's... I heard some of my friends say that those special musical phenomena have undergone some recent changes. You can go and check them out! Maybe that might be helpful for you.
-:{{DIcon|Travel Log}} Prepare for the band performance.
-:'''Montana:''' Yeah. I'll help you get everything organized!
-<pre>{
-	"$type": "RPG.GameCore.ShowTransitionLoadingUI",
-	"Name": "Ui.MusicRhythm.MusicRhythmTransitionDialog"
-}</pre>
-<pre>{
-	"$type": "RPG.GameCore.ShowUI",
-	"Name": "Ui.MusicRhythm.MusicRhythmMainEntrancePage",
-	"WaitForExit": true,
-	"OnUIEnter": [
-		{
-			"$type": "RPG.GameCore.ExitTransitionLoadingUI"
-		},
-		{
-			"$type": "RPG.GameCore.SetLocalPlayerDitherAlpha"
-		},
-		{
-			"$type": "RPG.GameCore.LockPlayerControl"
-		}
-	],
-	"OnUIExitImmediately": [
-		{
-			"$type": "RPG.GameCore.SetLocalPlayerDitherAlpha",
-			"DitherAlpha": 1
-		},
-		{
-			"$type": "RPG.GameCore.UnLockPlayerControl"
-		}
-	]
-}</pre>
-
-;(Unused &mdash; OpenUI_1)
-<pre>{
-	"$type": "RPG.GameCore.ShowUI",
-	"Name": "Ui.MusicRhythm.Composition.MusicRhythmCompositionPresetPage",
-	"WaitForExit": true,
-	"Param": {
-		"Value": "1"
-	},
-	"OnUIExitImmediately": [
-		{
-			"$type": "RPG.GameCore.EndDialogueEntityInteract"
-		}
-	]
-}</pre>
-
-;(Unused &mdash; OpenUI_2)
-<pre>{
-	"$type": "RPG.GameCore.ShowUI",
-	"Name": "Ui.MusicRhythm.Composition.MusicRhythmCompositionPresetPage",
-	"WaitForExit": true,
-	"Param": {
-		"Value": "2"
-	},
-	"OnUIExitImmediately": [
-		{
-			"$type": "RPG.GameCore.EndDialogueEntityInteract"
-		}
-	]
-}</pre>
-
-;(Unused &mdash; OpenUI_3)
-<pre>{
-	"$type": "RPG.GameCore.ShowUI",
-	"Name": "Ui.MusicRhythm.Composition.MusicRhythmCompositionPresetPage",
-	"WaitForExit": true,
-	"Param": {
-		"Value": "3"
-	},
-	"OnUIExitImmediately": [
-		{
-			"$type": "RPG.GameCore.EndDialogueEntityInteract"
-		}
-	]
-}</pre>
+:{{tx}}
 {{Dialogue End}}
 
 ==Other Languages==

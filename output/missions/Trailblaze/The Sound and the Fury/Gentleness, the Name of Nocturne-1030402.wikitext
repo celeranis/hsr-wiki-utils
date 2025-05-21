@@ -58,608 +58,122 @@ PageTitle=#Gentleness, the Name of Nocturne#
 ===Meet with Firefly{{subst:void|<!--103040201-->}}===
 {{Mission Description|type=trailblaze|location=Dream's Edge|After some twisted crawling in the syrup-filled sewers, you successfully reach the entrance to... Firefly's "secret stronghold."<br />Firefly is waiting for you nearby. You should go and meet her.}}
 {{Dialogue Start}}
-
-:<!--0.5-second delay-->
-:{{A|VO chapter3 3 firefly 154.ogg}} '''Firefly:''' Here...
-
-;(Upon reaching the destination)
-:{{A|VO chapter3 3 firefly 155.ogg}} '''Firefly:''' We're almost there.
-
-;(Upon reaching the destination)
-:{{A|VO chapter3 3 player 105 m.ogg}} {{A|VO chapter3 3 player 105 f.ogg}} '''(Trailblazer):''' (I'd better stay close to Firefly...)
-----
+:{{tx}}
 {{Dialogue End}}
 
 ===Continue following Firefly to reach the depths of the Dream's Edge{{subst:void|<!--103040228-->}}===
 {{Mission Description|type=trailblaze|location=Dream's Edge|update|Firefly explains this place to you: It is the edge of the Golden Hour, the inner depths of the Dreamscape, and The Family's construction and remodeling zone (in other words, a construction site within the dream). She adds that her "secret stronghold" is further on... The only problem is that "The Family" has eyes everywhere and you will have to sneak in to get inside.<br />You have successfully overcome every obstacle on your path. Congratulations! Your final destination lies just ahead.}}
 {{Dialogue Start}}
-;(Upon reaching the destination)
-
-;(Upon reaching the destination)
-<pre>{
-	"$type": "RPG.GameCore.SetFloorCustomFloat",
-	"Name": {
-		"Value": "FCV_103040228"
-	},
-	"Value": {
-		"FixedValue": {
-			"Value": 1
-		}
-	}
-}</pre>
-<pre>{
-	"$type": "RPG.GameCore.TriggerSound",
-	"SoundName": {
-		"Value": "Ev_SetState_EmotionBGM_RoofTop_Low"
-	},
-	"EmitterType": "LocalPlayer"
-}</pre>
-:{{A|VO chapter3 3 firefly 201.ogg}} '''Firefly:''' Have you heard of the song? It's called ''If I Can Stop One Heart From Breaking'', by Robin. Her songs are played in the dreamland from time to time as the Charmony Festival is drawing close.
-:{{A|VO chapter3 3 firefly 202.ogg}} '''Firefly:''' This spot is the closest place to the sky in the Dreamscape. It's far from the hustle and bustle of the city and free from the bickering among the Dreamweavers. You can feel the moment &mdash; the scenery, the people, and the dreams &mdash; without being disturbed by anyone...
-:{{A|VO chapter3 3 firefly 203.ogg}} '''Firefly:''' How beautiful... Time is frozen at this golden hour, this golden dream shared by the Fool from the Tavern and the Memokeeper from the Garden of Recollection, the wandering Ranger and the IPC ambassador, the Astral Express Nameless... and me.
-:{{A|VO chapter3 3 firefly 204.ogg}} '''Firefly:''' Everyone falls asleep here equally, regardless of our different agendas...
-:{{A|VO chapter3 3 firefly 205.ogg}} '''Firefly:''' ...
-:{{A|VO chapter3 3 firefly 206 m.ogg}} {{A|VO chapter3 3 firefly 206 f.ogg}} '''Firefly:''' ... I'm sorry, (Trailblazer). I really am a stowaway.
-:{{DIcon|Arrow}} I know.
-::{{A|VO chapter3 3 firefly 207.ogg}} '''Firefly:''' I knew I couldn't hide it from you.
-::I never saw that coming...
-:{{DIcon|Arrow}} I never saw that coming...
-:{{A|VO chapter3 3 firefly 208.ogg}} '''Firefly:''' I think it's only right to tell you.
-:{{A|VO chapter3 3 firefly 209.ogg}} '''Firefly:''' My hometown was destroyed a long time ago. It was probably the doing of the Legion or the Swarm... I'm an interstellar refugee, just like many of the Penacony locals.
-:{{A|VO chapter3 3 firefly 210.ogg}} '''Firefly:''' The Harmony accepts everyone, including wanderers from afar. The Family takes them in, but they... don't belong here.
-:{{A|VO chapter3 3 firefly 211.ogg}} '''Firefly:''' In this splendid metropolis, some have a dream called Penacony, but some have dreams... that are no different from reality, even though everyone who comes here harbors the same motive in the beginning.
-:{{A|VO chapter3 3 firefly 212.ogg}} '''Firefly:''' And it's likewise for me. I have a wish I want to achieve so badly in the real world, but I can't. So, I want to give it a shot here...
-:{{DIcon|Arrow}} I know the feel.
-::I know the feel.
-::What's your wish?
-:{{DIcon|Arrow}} What's your wish?
-::What's your wish?
-:{{DIcon|Arrow}} You can't run away from reality.
-::You can't run away from reality.
-::{{A|VO chapter3 3 firefly 213.ogg}} '''Firefly:''' Entropy Loss Syndrome. Have you heard of this term?
-::{{A|VO chapter3 3 firefly 214.ogg}} '''Firefly:''' It's a strange condition. Those suffering from it will experience an irreversible chronic dissociation of their physical structure. This means they will slowly fade away, and the process is barely noticeable to others...
-::{{A|VO chapter3 3 firefly 215.ogg}} '''Firefly:''' You can still run, jump, and talk as usual. Everything seems normal, but then you'll start doing everything slightly slower than others...
-::{{A|VO chapter3 3 firefly 216.ogg}} '''Firefly:''' ...And then even slower than that, until the lines between your body and the entire world become blurry. You won't be able to tell reality from dreams because they have all been shattered.
-::{{A|VO chapter3 3 firefly 217.ogg}} '''Firefly:''' So, how could I possibly resist it... I mean can you imagine? I can actually free myself from this icy medical cabin in this dream...
-::{{A|VO chapter3 3 firefly 218.ogg}} '''Firefly:''' I can forget about all the doctor's advice. I can listen, and see, and touch, and think, and understand whatever I want with my body. So, although this world isn't real, this experience is priceless...
-::{{A|VO chapter3 3 firefly 219.ogg}} '''Firefly:''' ...Just like this moment.
-::{{A|VO chapter3 3 firefly 220.ogg}} '''Firefly:''' I'm sorry. For certain reasons, there are things I can't reveal to you yet. But there are also things you should know.
-::{{A|VO chapter3 3 firefly 221.ogg}} '''Firefly:''' I am, in fact, after the Watchmaker's Legacy, but that doesn't mean we have to go our separate ways and be enemies. But at least... I hope things won't turn out that way.
-::{{DIcon|Arrow}} I hope so too.
-:::{{A|VO chapter3 3 firefly 222.ogg}} '''Firefly:''' ...Thanks.
-:::I can't make any promises.
-:::{{A|VO chapter3 3 firefly 223.ogg}} '''Firefly:''' ...It's okay. Thanks.
-:::I can't put my trust in someone who hides things from me.
-:::{{A|VO chapter3 3 firefly 224.ogg}} '''Firefly:''' ...I understand, and I'm okay with that.
-:::Who exactly are you?
-::{{DIcon|Arrow}} I can't make any promises.
-:::{{A|VO chapter3 3 firefly 223.ogg}} '''Firefly:''' ...It's okay. Thanks.
-:::I can't put my trust in someone who hides things from me.
-:::{{A|VO chapter3 3 firefly 224.ogg}} '''Firefly:''' ...I understand, and I'm okay with that.
-:::Who exactly are you?
-::{{DIcon|Arrow}} I can't put my trust in someone who hides things from me.
-:::{{A|VO chapter3 3 firefly 224.ogg}} '''Firefly:''' ...I understand, and I'm okay with that.
-:::Who exactly are you?
-::{{DIcon|Arrow}} Who exactly are you?
-::{{A|VO chapter3 3 firefly 225.ogg}} '''Firefly:''' I'll tell you, but... not now.
-::{{A|VO chapter3 3 firefly 226.ogg}} '''Firefly:''' In my dream, I saw a scorched earth, and a new sapling emerging from it. It bloomed against the morning sun, and whispered to me.
-::{{tx}}
-:You can't run away from reality.
-:{{A|VO chapter3 3 firefly 213.ogg}} '''Firefly:''' Entropy Loss Syndrome. Have you heard of this term?
-:{{A|VO chapter3 3 firefly 214.ogg}} '''Firefly:''' It's a strange condition. Those suffering from it will experience an irreversible chronic dissociation of their physical structure. This means they will slowly fade away, and the process is barely noticeable to others...
-:{{A|VO chapter3 3 firefly 215.ogg}} '''Firefly:''' You can still run, jump, and talk as usual. Everything seems normal, but then you'll start doing everything slightly slower than others...
-:{{A|VO chapter3 3 firefly 216.ogg}} '''Firefly:''' ...And then even slower than that, until the lines between your body and the entire world become blurry. You won't be able to tell reality from dreams because they have all been shattered.
-:{{A|VO chapter3 3 firefly 217.ogg}} '''Firefly:''' So, how could I possibly resist it... I mean can you imagine? I can actually free myself from this icy medical cabin in this dream...
-:{{A|VO chapter3 3 firefly 218.ogg}} '''Firefly:''' I can forget about all the doctor's advice. I can listen, and see, and touch, and think, and understand whatever I want with my body. So, although this world isn't real, this experience is priceless...
-:{{A|VO chapter3 3 firefly 219.ogg}} '''Firefly:''' ...Just like this moment.
-:{{A|VO chapter3 3 firefly 220.ogg}} '''Firefly:''' I'm sorry. For certain reasons, there are things I can't reveal to you yet. But there are also things you should know.
-:{{A|VO chapter3 3 firefly 221.ogg}} '''Firefly:''' I am, in fact, after the Watchmaker's Legacy, but that doesn't mean we have to go our separate ways and be enemies. But at least... I hope things won't turn out that way.
-:{{DIcon|Arrow}} I hope so too.
-::{{A|VO chapter3 3 firefly 222.ogg}} '''Firefly:''' ...Thanks.
-::I can't make any promises.
-::{{A|VO chapter3 3 firefly 223.ogg}} '''Firefly:''' ...It's okay. Thanks.
-::I can't put my trust in someone who hides things from me.
-::{{A|VO chapter3 3 firefly 224.ogg}} '''Firefly:''' ...I understand, and I'm okay with that.
-::Who exactly are you?
-:{{DIcon|Arrow}} I can't make any promises.
-::{{A|VO chapter3 3 firefly 223.ogg}} '''Firefly:''' ...It's okay. Thanks.
-::I can't put my trust in someone who hides things from me.
-::{{A|VO chapter3 3 firefly 224.ogg}} '''Firefly:''' ...I understand, and I'm okay with that.
-::Who exactly are you?
-:{{DIcon|Arrow}} I can't put my trust in someone who hides things from me.
-::{{A|VO chapter3 3 firefly 224.ogg}} '''Firefly:''' ...I understand, and I'm okay with that.
-::Who exactly are you?
-:{{DIcon|Arrow}} Who exactly are you?
-:{{A|VO chapter3 3 firefly 225.ogg}} '''Firefly:''' I'll tell you, but... not now.
-:{{A|VO chapter3 3 firefly 226.ogg}} '''Firefly:''' In my dream, I saw a scorched earth, and a new sapling emerging from it. It bloomed against the morning sun, and whispered to me.
 :{{tx}}
-
-;(Upon reaching the destination)
-:{{A|VO chapter3 3 firefly 200.ogg}} '''Firefly:''' Here we are. This is the place.
-
-;(Upon reaching the destination)
-:{{A|VO chapter3 3 player 109 m.ogg}} {{A|VO chapter3 3 player 109 f.ogg}} '''(Trailblazer):''' (...Someone's singing? Where is the sound coming from?)
 {{Dialogue End}}
 
 ===Meet with Firefly{{subst:void|<!--103040202-->}}===
 {{Mission Description|type=trailblaze|location=Dream's Edge|update|After some twisted crawling in the syrup-filled sewers, you successfully reach the entrance to... Firefly's "secret stronghold."<br />Firefly is waiting for you nearby. You should go and meet her.}}
 {{Dialogue Start}}
-
-;(Talk to Firefly)
 :{{tx}}
-:{{tx}}
-:{{A|VO chapter3 3 firefly 160.ogg}} '''Firefly:''' Let's sneak inside.
 {{Dialogue End}}
 
 ===Follow Firefly to reach the depths of the Dream's Edge{{subst:void|<!--103040203-->}}===
 {{Mission Description|type=trailblaze|location=Dream's Edge|update|Firefly explains this place to you: It is the edge of the Golden Hour, the inner depths of the Dreamscape, and The Family's construction and remodeling zone (in other words, a construction site within the dream). She adds that her "secret stronghold" is further on... The only problem is that "The Family" has eyes everywhere, and you will have to sneak in to get inside.<br />Head deep into the Dream's Edge... As a Nameless, sneaking into a construction site is a piece of cake, right?}}
 {{Dialogue Start}}
-;(Upon reaching the destination)
-
-;(Upon reaching the destination)
-:{{A|VO chapter3 3 rachH 101.ogg}} '''Bloodhound Family Member:''' Excuse me, there's a construction site ahead. Unauthorized personnel are not allowed in.
-:{{A|VO chapter3 3 firefly 161.ogg}} '''Firefly:''' Drat... We're caught right away.
-:{{DIcon|Arrow}} Could you let us through just this time?
-:{{DIcon|Arrow}} Fine. We'll head back.
-::{{A|VO chapter3 3 firefly 162.ogg}} '''Firefly:''' Let me try.
-:{{A|VO chapter3 3 firefly 163.ogg}} '''Firefly:''' Could you... please make an exception? We're not going to cause any trouble.
-:{{A|VO chapter3 3 rachH 102.ogg}} '''Bloodhound Family Member:''' Not a chance. Our boss made it clear that only the Dreamweavers are allowed here.
-:{{A|VO chapter3 3 firefly 164.ogg}} '''Firefly:''' He won't budge...
-:{{DIcon|Arrow}} We know Gallagher.
-::{{A|VO chapter3 3 rachH 103.ogg}} '''Bloodhound Family Member:''' Who? Never heard of him. I wouldn't let you in even if the Dreammaster were here.
-::Here are some credits for you...
-::{{A|VO chapter3 3 rachH 104.ogg}} '''Bloodhound Family Member:''' Get those out of my sight, and I'll pretend nothing happened this time. Try pulling something like that again, and I'll report it to the Oak Family.
-::Pretty please...
-:{{DIcon|Arrow}} Here are some credits for you...
-::{{A|VO chapter3 3 rachH 104.ogg}} '''Bloodhound Family Member:''' Get those out of my sight, and I'll pretend nothing happened this time. Try pulling something like that again, and I'll report it to the Oak Family.
-::Pretty please...
-:{{DIcon|Arrow}} Pretty please...
-:{{A|VO chapter3 3 rachH 105.ogg}} '''Bloodhound Family Member:''' People ask for favors every day. Am I supposed to just say yes to all of them?
-:{{A|VO chapter3 3 rachH 106.ogg}} '''Bloodhound Family Member:''' None of your tricks are going to work. Please do yourself and me a favor and go home.
 :{{tx}}
 {{Dialogue End}}
 
 ===Use Clockwork on the Bloodhound Family member{{subst:void|<!--103040204-->}}===
 {{Mission Description|type=trailblaze|location=Dream's Edge|update|Firefly explains this place to you: It is the edge of the Golden Hour, the inner depths of the Dreamscape, and The Family's construction and remodeling zone (in other words, a construction site within the dream). She adds that her "secret stronghold" is further on... The only problem is that "The Family" has eyes everywhere, and you will have to sneak in to get inside.<br />Just as your journey begins, it comes to an end as a Bloodhound Family member with a strong sense of principles guards the door before you. If you wish to continue ahead, you may have to use Clockwork for no good... Let's hope Clockie forgives you.}}
 {{Dialogue Start}}
-
-
-;(Talk to Bloodhound Family Member)
-:{{A|VO chapter3 3 rachH 107.ogg}} '''Bloodhound Family Member:''' None of your tricks are going to work. Please do yourself and me a favor and go home.
-:The composed man before you appears impenetrable. Perhaps you need to {{Color|keyword|nobold=1|provoke}} him a bit.
-;(Upon reaching the destination)
-
-;(Upon reaching the destination)
-:{{A|VO chapter3 3 player 107 m.ogg}} {{A|VO chapter3 3 player 107 f.ogg}} '''(Trailblazer):''' (I can sense his penetrating gaze. Let's turn around...)
-----
-;(Unused &mdash; reopenui_Happy)
-<pre>{
-	"$type": "RPG.GameCore.SwitchCharacterAnchorV2",
-	"SwitchCharacterAnchorConfig": {
-		"IsLocalPlayer": true,
-		"CharacterUniqueName": "LocalPlayer",
-		"AreaName": {
-			"Value": "LevelArea_P20313_F20313001_G79"
-		},
-		"AnchorName": {
-			"Value": "Anchor2"
-		}
-	}
-}</pre>
-:<pre>{
-	"$type": "RPG.GameCore.HeartDialEmoBlackList",
-	"TargetType": {
-		"$type": "RPG.GameCore.GroupFetchLocalTarget",
-		"Targets": [
-			400001
-		]
-	},
-	"EmoTypeBlackList": [
-		"Happy"
-	]
-}</pre>
-:<pre>{
-	"$type": "RPG.GameCore.ShowHeartDialUI",
-	"TargetType": {
-		"$type": "RPG.GameCore.GroupFetchLocalTarget",
-		"Targets": [
-			400001
-		]
-	}
-}</pre>
-
-;(Unused &mdash; reopenui_Sad)
-<pre>{
-	"$type": "RPG.GameCore.SwitchCharacterAnchorV2",
-	"SwitchCharacterAnchorConfig": {
-		"IsLocalPlayer": true,
-		"CharacterUniqueName": "LocalPlayer",
-		"AreaName": {
-			"Value": "LevelArea_P20313_F20313001_G79"
-		},
-		"AnchorName": {
-			"Value": "Anchor2"
-		}
-	}
-}</pre>
-:<pre>{
-	"$type": "RPG.GameCore.HeartDialEmoBlackList",
-	"TargetType": {
-		"$type": "RPG.GameCore.GroupFetchLocalTarget",
-		"Targets": [
-			400001
-		]
-	},
-	"EmoTypeBlackList": [
-		"Sad"
-	]
-}</pre>
-:<pre>{
-	"$type": "RPG.GameCore.ShowHeartDialUI",
-	"TargetType": {
-		"$type": "RPG.GameCore.GroupFetchLocalTarget",
-		"Targets": [
-			400001
-		]
-	}
-}</pre>
 :{{tx}}
-:{{A|VO chapter3 3 firefly 169.ogg}} '''Firefly:''' Never imagined that's how we'd end up getting past the guard... That trick of Clockie's really is amazing.
 {{Dialogue End}}
 
 ===Continue following Firefly to reach the depths of the Dream's Edge{{subst:void|<!--103040207-->}}===
 {{Mission Description|type=trailblaze|location=Dream's Edge|update|Firefly explains this place to you: It is the edge of the Golden Hour, the inner depths of the Dreamscape, and The Family's construction and remodeling zone (in other words, a construction site within the dream). She adds that her "secret stronghold" is further on... The only problem is that "The Family" has eyes everywhere, and you will have to sneak in to get inside.<br />After stepping over the collapsed Bloodhound Family member, you decide to continue onwards. You wouldn't want your trip to be a waste, right?}}
 {{Dialogue Start}}
-
-;(If {{F|IsInIsometric}} is undefined 1)
-:;(If {{cx}}{{subst:void|<!--{"$type":"RPG.GameCore.ByComparePropState","TargetType":{"$type":"RPG.GameCore.GroupFetchLocalTarget","TargetType":"Prop","Targets":[300004]},"State":"Open"}-->}})
-::<pre>{
-	"$type": "RPG.GameCore.AddStreamingSource",
-	"StreamingSource": {
-		"CenterName": "C1SS1",
-		"AreaName": "LevelArea_P20313_F20313001_G3",
-		"AnchorName": "Case1_StreamingSource"
-	}
-}</pre>
-;(If {{F|IsInIsometric}} is not undefined 1)
-:<pre>{
-	"$type": "RPG.GameCore.RemoveStreamingSource",
-	"StreamingSource": "C1SS1"
-}</pre>
-;(Unused &mdash; OnIsometricTransitComplete)
-<pre>{
-	"$type": "RPG.GameCore.TriggerEntityEvent",
-	"EventName": {
-		"Value": "Clt_TriggerEmit"
-	},
-	"InstanceID": {
-		"FixedValue": {
-			"Value": 300006
-		}
-	}
-}</pre>
-
-;(Talk to Bloodhound Family Member)
-:{{A|VO chapter3 3 rachH 143.ogg}} '''Bloodhound Family Member:''' Alright, you can go in. As the winner, you deserve it...
-;(Upon reaching the destination)
-
-;(Upon reaching the destination)
-:{{A|VO chapter3 3 firefly 170.ogg}} '''Firefly:''' The path ends here. For the rest of the way, we need to borrow the Dreamweaver's tools.
-:{{A|VO chapter3 3 firefly 171.ogg}} '''Firefly:''' What happens next is going to blow your mind...
+:{{tx}}
 {{Dialogue End}}
 
 ===Use the characteristics of the Dreamscape to continue onwards{{subst:void|<!--103040206-->}}===
 {{Mission Description|type=trailblaze|location=Dream's Edge|update|Firefly explains this place to you: It is the edge of the Golden Hour, the inner depths of the Dreamscape, and The Family's construction and remodeling zone (in other words, a construction site within the dream). She adds that her "secret stronghold" is further on... The only problem is that "The Family" has eyes everywhere, and you will have to sneak in to get inside.<br />The path into the depths is complicated and confusing. You may have to think outside of the box and creatively utilize the characteristics of the Dreamscape to continue onwards.}}
 {{Dialogue Start}}
-
-;(Upon reaching the destination)
-
-;(Upon reaching the destination)
-:{{A|VO chapter3 3 player 108 m.ogg}} {{A|VO chapter3 3 player 108 f.ogg}} '''(Trailblazer):''' (Different points in space are... linked together!?)
-:{{A|VO chapter3 3 firefly 172.ogg}} '''Firefly:''' Now, we can go to the other side. This is how the Nightingale Family repairs the Dreamscape. Fascinating, isn't it?
-;(Upon reaching the destination)
-
-;(Upon reaching the destination)
-:{{A|VO chapter3 3 firefly 173.ogg}} '''Firefly:''' We can use the building materials that are floating around in the air.
-
-;(Upon reaching the destination)
-:{{A|VO chapter3 3 firefly 174.ogg}} '''Firefly:''' It's like stepping on planks floating on water.
-:{{A|VO chapter3 3 firefly 175.ogg}} '''Firefly:''' Let's go that way.
+:{{tx}}
 {{Dialogue End}}
 
 ===Use the characteristics of the Dreamscape to construct a path{{subst:void|<!--103040210-->}}===
 {{Dialogue Start}}
-;(Upon reaching the destination)
-
-;(Upon reaching the destination)
-:{{A|VO chapter3 3 firefly 178.ogg}} '''Firefly:''' We can get to the rooftop of the opposite building from here, but it requires a device. I remember it's hidden here...
-<pre>{
-	"$type": "RPG.GameCore.WaitEntityServerEvent"
-}</pre>
-;(If {{cx}}{{subst:void|<!--{"$type":"RPG.GameCore.ByComparePropState","TargetType":{"$type":"RPG.GameCore.GroupFetchLocalTarget","TargetType":"Prop","Targets":[300002]}}-->}}, {{cx}}{{subst:void|<!--{"$type":"RPG.GameCore.ByComparePropState","TargetType":{"$type":"RPG.GameCore.GroupFetchLocalTarget","TargetType":"Prop","Targets":[300003]}}-->}}, {{cx}}{{subst:void|<!--{"$type":"RPG.GameCore.ByComparePropState","TargetType":{"$type":"RPG.GameCore.GroupFetchLocalTarget","TargetType":"Prop","Targets":[300004]}}-->}}, and {{cx}}{{subst:void|<!--{"$type":"RPG.GameCore.ByComparePropState","TargetType":{"$type":"RPG.GameCore.GroupFetchLocalTarget","TargetType":"Prop","Targets":[300001]},"State":"Open"}-->}})
-<pre>{
-	"$type": "RPG.GameCore.ChangePropState"
-}</pre>
+:{{tx}}
 {{Dialogue End}}
 
 ===Continue following Firefly to reach the depths of the Dream's Edge{{subst:void|<!--103040208-->}}===
 {{Mission Description|type=trailblaze|location=Dream's Edge|update|Firefly explains this place to you: It is the edge of the Golden Hour, the inner depths of the Dreamscape, and The Family's construction and remodeling zone (in other words, a construction site within the dream). She adds that her "secret stronghold" is further on... The only problem is that "The Family" has eyes everywhere, and you will have to sneak in to get inside.<br />After stepping over the collapsed Bloodhound Family member, you decide to continue onwards. You wouldn't want your trip to be a waste, right?}}
 {{Dialogue Start}}
-;(Upon reaching the destination)
-
-;(Upon reaching the destination)
-:{{A|VO chapter3 3 firefly 179.ogg}} '''Firefly:''' Bam, and it comes out just like that. No matter how many times I've seen it, it still looks magical.
-:{{A|VO chapter3 3 firefly 180.ogg}} '''Firefly:''' Let's go.
+:{{tx}}
 {{Dialogue End}}
 
 ===Ride the pinball machine{{subst:void|<!--103040211-->}}===
 {{Mission Description|type=trailblaze|location=Dream's Edge|update|Firefly explains this place to you: It is the edge of the Golden Hour, the inner depths of the Dreamscape, and The Family's construction and remodeling zone (in other words, a construction site within the dream). She adds that her "secret stronghold" is further on... The only problem is that "The Family" has eyes everywhere, and you will have to sneak in to get inside.<br />The path into the depths is complicated and confusing. You may have to think outside of the box and creatively utilize the characteristics of the Dreamscape to continue onwards.}}
 {{Dialogue Start}}
-;(Upon reaching the destination)
+:{{tx}}
 {{Dialogue End}}
 
 ===Continue following Firefly to reach the depths of the Dream's Edge{{subst:void|<!--103040213-->}}===
 {{Dialogue Start}}
-;(Upon reaching the destination)
-
-;(Upon reaching the destination)
-:{{A|VO chapter3 3 firefly 181.ogg}} '''Firefly:''' Look, that's the Penacony Grand Theater over there.
+:{{tx}}
 {{Dialogue End}}
 
 ===(Optional) Take a break and admire the Penacony Grand Theater{{subst:void|<!--103040214-->}}===
 {{Dialogue Start}}
-;(Upon reaching the destination)
-
-;(Upon reaching the destination)
 :{{tx}}
 {{Dialogue End}}
 
 ===Continue following Firefly to reach the depths of the Dream's Edge{{subst:void|<!--103040215-->}}===
 {{Dialogue Start}}
-;(Upon reaching the destination)
-
-;(Upon reaching the destination)
-:{{A|VO chapter3 3 firefly 186.ogg}} '''Firefly:''' This one is a little bit complicated... I have to put on my thinking cap.
-;(Upon reaching the destination)
-
-;(Upon reaching the destination)
-:{{A|VO chapter3 3 firefly 187.ogg}} '''Firefly:''' I wonder whether I can still control the floating building materials in this condition...
-;(Upon reaching the destination)
-
-;(Upon reaching the destination)
-:{{A|VO chapter3 3 firefly 176.ogg}} '''Firefly:''' The Family recruited many artists, architects, and scholars from across the universe to form the team of Dreamweavers that built the dream of Penacony.
-:{{A|VO chapter3 3 firefly 177.ogg}} '''Firefly:''' These areas are not developed yet, so guests don't come here. It's not as lively as the town center here, but I relish the serene atmosphere.
-;(Upon reaching the destination)
-;(Upon reaching the destination)
-
-;(Upon reaching the destination)
-:{{A|VO chapter3 3 firefly 188.ogg}} '''Firefly:''' We moved from that building to this building in the blink of an eye... This would be impossible in reality.
-
-;(Upon reaching the destination)
-:{{A|VO chapter3 3 firefly 189.ogg}} '''Firefly:''' It's the same routine. You've mastered it, right?
-<pre>{
-	"$type": "RPG.GameCore.WaitEntityServerEvent"
-}</pre>
-;(If {{cx}}{{subst:void|<!--{"$type":"RPG.GameCore.ByComparePropState","TargetType":{"$type":"RPG.GameCore.GroupFetchLocalTarget","TargetType":"Prop","Targets":[300002]}}-->}}, {{cx}}{{subst:void|<!--{"$type":"RPG.GameCore.ByComparePropState","TargetType":{"$type":"RPG.GameCore.GroupFetchLocalTarget","TargetType":"Prop","Targets":[300003]}}-->}}, {{cx}}{{subst:void|<!--{"$type":"RPG.GameCore.ByComparePropState","TargetType":{"$type":"RPG.GameCore.GroupFetchLocalTarget","TargetType":"Prop","Targets":[300004]}}-->}}, and {{cx}}{{subst:void|<!--{"$type":"RPG.GameCore.ByComparePropState","TargetType":{"$type":"RPG.GameCore.GroupFetchLocalTarget","TargetType":"Prop","Targets":[300001]},"State":"Open"}-->}})
-<pre>{
-	"$type": "RPG.GameCore.ChangePropState"
-}</pre>
-<pre>{
-	"$type": "RPG.GameCore.WaitSubMissionStateChange",
-	"SubMissions": [
-		103040231
-	],
-	"State": "Started",
-	"OnChange": [
-		{
-			"$type": "RPG.GameCore.AdvSetupButtonListTrigger",
-			"TargetType": {
-				"$type": "RPG.GameCore.GroupFetchLocalTarget",
-				"TargetType": "Prop",
-				"Targets": [
-					300002
-				]
-			},
-			"TriggerName": "MissionTrigger",
-			"ButtonsByName": [],
-			"ButtonConfigs": [
-				{
-					"ID": "Trigger1",
-					"IconType": "HeartDialRaid",
-					"ButtonText": {
-						"Value": "PropInteractTitle_275"
-					}
-				}
-			],
-			"DisableAfterTriggered": true
-		}
-	],
-	"Condition": {
-		"$type": "RPG.GameCore.ByCompareSubMissionState",
-		"SubMissionID": 103040231,
-		"SubMissionState": "Started"
-	}
-}</pre>
-
-;(Upon reaching the destination)
-<pre>{
-	"$type": "RPG.GameCore.PlayNPCBubbleTalk",
-	"BubbleTalkInfoList": [
-		{
-			"AutoSkipTime": 3,
-			"GroupID": 250,
-			"GroupNpcID": 400001,
-			"TalkSentenceID": 103040459
-		},
-		{
-			"AutoSkipTime": 3,
-			"GroupID": 250,
-			"GroupNpcID": 400002,
-			"TalkSentenceID": 103040460
-		}
-	],
-	"BubbleTalkType": "HeartDial",
-	"LoopInterval": 5,
-	"UniqueID": 250
-}</pre>
+:{{tx}}
 {{Dialogue End}}
 
 ===Find the second jigsaw piece{{subst:void|<!--103040220-->}}===
 {{Dialogue Start}}
-;(Upon reaching the destination)
-
-;(Upon reaching the destination)
-;(If {{cx}}<!--SubMission Finish: 103040221-->)
-:{{A|VO chapter3 3 firefly 193.ogg}} '''Firefly:''' Was the other puzzle piece... taken away by it?
-
+:{{tx}}
 {{Dialogue End}}
 
 ===Find the first jigsaw piece{{subst:void|<!--103040221-->}}===
 {{Dialogue Start}}
-
-;(Talk to Dreamweaver)
-;(Unused &mdash; HeartDial_D_103040235)
-<pre>{
-	"$type": "RPG.GameCore.HeartDialEmoBlackList",
-	"TargetType": {
-		"$type": "RPG.GameCore.GroupFetchLocalTarget",
-		"Targets": [
-			400001
-		]
-	},
-	"EmoTypeBlackList": [
-		"Peace"
-	]
-}</pre>
-:<pre>{
-	"$type": "RPG.GameCore.ShowHeartDialUI",
-	"TargetType": {
-		"$type": "RPG.GameCore.GroupFetchLocalTarget",
-		"Targets": [
-			400001
-		]
-	}
-}</pre>
-
-;(Unused &mdash; HeartDial_D_103040234)
-<pre>{
-	"$type": "RPG.GameCore.HeartDialEmoBlackList",
-	"TargetType": {
-		"$type": "RPG.GameCore.GroupFetchLocalTarget",
-		"Targets": [
-			400001
-		]
-	},
-	"EmoTypeBlackList": [
-		"Sad"
-	]
-}</pre>
-:<pre>{
-	"$type": "RPG.GameCore.ShowHeartDialUI",
-	"TargetType": {
-		"$type": "RPG.GameCore.GroupFetchLocalTarget",
-		"Targets": [
-			400001
-		]
-	}
-}</pre>
+:{{tx}}
 {{Dialogue End}}
 
 ===Find the lost pieces{{subst:void|<!--103040229-->}}===
 {{Dialogue Start}}
+:{{tx}}
 {{Dialogue End}}
 
 ===Use the characteristics of the Dreamscape to construct a path{{subst:void|<!--103040223-->}}===
 {{Dialogue Start}}
+:{{tx}}
 {{Dialogue End}}
 
 ===Obtain the Dreamweaver's missing Emo Gear from a passerby{{subst:void|<!--103040231-->}}===
 {{Dialogue Start}}
-
+:{{tx}}
 {{Dialogue End}}
 
 ===Continue following Firefly to reach the depths of the Dream's Edge{{subst:void|<!--103040224-->}}===
 {{Dialogue Start}}
-:<!--4-second delay-->
-<pre>{
-	"$type": "RPG.GameCore.WaitTutorial",
-	"Event": "ShowUIMainPage",
-	"OnSuccessImmediate": [
-		{
-			"$type": "RPG.GameCore.TutorialTaskUnlock",
-			"TriggerParam": {
-				"Value": "6089"
-			}
-		}
-	]
-}</pre>
-;(Upon reaching the destination)
-
-;(Upon reaching the destination)
-:{{A|VO chapter3 3 firefly 196.ogg}} '''Firefly:''' Phew... finally. There won't be too many hindrances after this.
-
-;(Upon reaching the destination)
-:{{A|VO chapter3 3 firefly 194.ogg}} '''Firefly:''' This moment has finally come... I always get stuck here for a long time, but it also means I'm getting to the endpoint.
-
-;(Upon reaching the destination)
-:{{A|VO chapter3 3 firefly 195.ogg}} '''Firefly:''' This place is really complicated. It gives me a headache every time I pass through... Not only do we have to activate the Dream's Eye, but we also have to close it a couple of times to get through.
+:{{tx}}
 {{Dialogue End}}
 
 ===Complete the Dreamweaver's Emo Dial{{subst:void|<!--103040232-->}}===
 {{Dialogue Start}}
+:{{tx}}
 {{Dialogue End}}
 
 ===Continue following Firefly to reach the depths of the Dream's Edge{{subst:void|<!--103040226-->}}===
 {{Mission Description|type=trailblaze|location=Dream's Edge|update|Firefly explains this place to you: It is the edge of the Golden Hour, the inner depths of the Dreamscape, and The Family's construction and remodeling zone (in other words, a construction site within the dream). She adds that her "secret stronghold" is further on... The only problem is that "The Family" has eyes everywhere and you will have to sneak in to get inside.<br />After overcoming a variety of obstacles, your final destination lies just ahead. Unfortunately, there are many monsters occupying the path ahead. Proceed with caution.}}
 {{Dialogue Start}}
-;(Upon reaching the destination)
-
-;(Upon reaching the destination)
-----
-:{{A|VO chapter3 3 firefly 197.ogg}} '''Firefly:''' Um, this area wasn't guarded the last time I was here... Have my frequent comings and goings started drawing attention?
-:{{A|VO chapter3 3 firefly 198.ogg}} '''Firefly:''' ...I don't think we can get around them. Knocking them out is the only way to go...
-:{{DIcon|Arrow}} I'm ready.
-:{{DIcon|Arrow}} At long last, this baseball bat of mine has found its purpose.
-:{{A|VO chapter3 3 firefly 199.ogg}} '''Firefly:''' Let's get rid of them!
 :{{tx}}
-;(Enter battle)
-:{{Enemy List|Dreamjolt Troupe's Bubble Hound*2; Dreamjolt Troupe's Beyond Overcooked*1}}
 {{Dialogue End}}
 
 ===Speak with the Dreamweaver with a completed Emo Dial{{subst:void|<!--103040233-->}}===
 {{Mission Description|type=trailblaze|location=Dream's Edge|update|Firefly explains this place to you: It is the edge of the Golden Hour, the inner depths of the Dreamscape, and The Family's construction and remodeling zone (in other words, a construction site within the dream). She adds that her "secret stronghold" is further on... The only problem is that "The Family" has eyes everywhere, and you will have to sneak in to get inside.<br />The path into the depths is complicated and confusing. You may have to think outside of the box and creatively utilize the characteristics of the Dreamscape to continue onwards.}}
 {{Dialogue Start}}
 :{{tx}}
-:{{A|VO chapter3 3 firefly 231.ogg}} '''Firefly:''' I'm sorry things are getting all bleak and serious... Let me see what I can do to lighten the mood.
-:{{A|VO chapter3 3 firefly 232.ogg}} '''Firefly:''' I mean, don't you have lots of friends on the Astral Express? What would you guys do if something like this happened?
-:Pom-Pom would cool us down with water from a spray can...
-:{{A|VO chapter3 3 firefly 233.ogg}} '''Firefly:''' Spray can? That's... rough.
-:{{A|VO chapter3 3 firefly 234.ogg}} '''Firefly:''' Perhaps, there's something else we can do?
-:Dan Heng would tell us dry jokes with a deadpan expression...
-:{{A|VO chapter3 3 firefly 235.ogg}} '''Firefly:''' Jokes? Um, I... don't really have a good sense of humor...
-:{{A|VO chapter3 3 firefly 236.ogg}} '''Firefly:''' Perhaps, we can think of another way?
-:Himeko would make coffee for us...
-:{{A|VO chapter3 3 firefly 237.ogg}} '''Firefly:''' Coffee... We can't really make that here...
-:{{A|VO chapter3 3 firefly 238.ogg}} '''Firefly:''' Aren't there... other Crew members we can take inspiration from?
-:Mr. Yang would try to change the subject...
-:{{A|VO chapter3 3 firefly 239.ogg}} '''Firefly:''' I... have been trying to do that...
-:{{A|VO chapter3 3 firefly 240.ogg}} '''Firefly:''' ...But I think I failed. Maybe... there are other things that you guys do?
-:March would force us to take a selfie with her...
-:{{A|VO chapter3 3 firefly 241.ogg}} '''Firefly:''' Selfie, selfie... You're right. I've been here so many times. Why didn't I think of taking a photo?
-:{{A|VO chapter3 3 firefly 242.ogg}} '''Firefly:''' I feel a little awkward taking it by myself. Would you like to join me? Let's commemorate this moment.
-:Sure.
-:{{A|VO chapter3 3 firefly 243.ogg}} '''Firefly:''' I can be a little bit camera-shy &mdash; just don't laugh at me. Here, you hold the camera.
-:I don't think so.
-:{{A|VO chapter3 3 firefly 244.ogg}} '''Firefly:''' ...Is there a problem?
-:I'm kidding. Let's do it!
-:{{A|VO chapter3 3 firefly 245.ogg}} '''Firefly:''' I can be a little bit camera-shy &mdash; just don't laugh at me. Here, you hold the camera.
-:I don't want to.
-:{{A|VO chapter3 3 firefly 246.ogg}} '''Firefly:''' Well... Okay.
-;(Return to previous option selection)
-;(Return to previous option selection)
-;(Return to previous option selection)
-;(Return to previous option selection)
-;(Return to previous option selection)
 {{Dialogue End}}
 
 ==Other Languages==

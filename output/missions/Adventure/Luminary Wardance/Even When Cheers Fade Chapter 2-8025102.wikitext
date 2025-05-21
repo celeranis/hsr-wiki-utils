@@ -11,7 +11,7 @@ PageTitle=#Even When Cheers Fade: Chapter 2#
 |chapter       = Luminary Wardance
 |requirements  = [[Adventure Mission]] ''[[By His Lonefist to the Xianzhou]]'' completed
 |summary       = Luka courageously swings his fist against Boothill's muzzle and wins a "glorious defeat" for himself.<br />However, the crushing difference in their strengths severely affects Luka's confidence. He doesn't want to keep going anymore.<br />Thankfully, our Mr. Tail makes his move just in time and drags Luka out of the depressive abyss. Mr. Tail is a true hero!
-|characters    = Carmella; Luka; Trailblazer
+|characters    = Carmella; Chatty Professional Journalist; Hook; Luka; Press Officer; Trailblazer; Tuskpir
 |startLocation = [[The Xianzhou Luofu]] - [[Skysplitter]]
 |world         = The Xianzhou Luofu
 |area          = Skysplitter
@@ -41,209 +41,37 @@ PageTitle=#Even When Cheers Fade: Chapter 2#
 ===Review the Tactics Board and prepare for future matches{{subst:void|<!--802510201-->}}===
 {{Mission Description|type=adventure|location=Skysplitter|The tense and exciting match draws to a temporary close. It's time to have a quick breather.<br />Use this time to prepare for the upcoming match.}}
 {{Dialogue Start}}
-
-;(Unused &mdash; EnterDistrict_G46)
-:<pre>{
-	"$type": "RPG.GameCore.AdvSetupButtonListTrigger",
-	"TargetType": {
-		"$type": "RPG.GameCore.GroupFetchLocalTarget",
-		"TargetType": "Prop",
-		"Targets": [
-			300001
-		]
-	},
-	"TriggerName": "MissionTrigger",
-	"ButtonsByName": [],
-	"ButtonConfigs": [
-		{
-			"ID": "OpenUI",
-			"IconType": "GeneralActivityIcon",
-			"ButtonText": {
-				"Value": "PropInteractTitle_442"
-			}
-		}
-	]
-}</pre>
-:<pre>{
-	"$type": "RPG.GameCore.AdvEnableButtons",
-	"TargetType": {
-		"$type": "RPG.GameCore.GroupFetchLocalTarget",
-		"TargetType": "Prop",
-		"Targets": [
-			300001
-		]
-	},
-	"TriggerName": "MissionTrigger",
-	"ButtonsByName": [
-		"OpenUI"
-	]
-}</pre>
-
-;(Unused &mdash; G46_ShowUI)
-<pre>{
-	"$type": "RPG.GameCore.ShowTransitionLoadingUI",
-	"Name": "Ui.FightFest.Board.FightFestBoardCutBriefDialog"
-}</pre>
-:<pre>{
-	"$type": "RPG.GameCore.ShowUI",
-	"Name": "Ui.FightFest.FightFestMainPage",
-	"WaitForExit": true,
-	"OnUIEnter": [
-		{
-			"$type": "RPG.GameCore.ExitTransitionLoadingUI"
-		}
-	]
-}</pre>
-
-;(Unused &mdash; G46_ShowUI_Chap1)
-<pre>{
-	"$type": "RPG.GameCore.ShowUI",
-	"Name": "Ui.FightFest.Board.FightFestBoardCutDialog",
-	"WaitForExit": true,
-	"Param": {
-		"Value": "1"
-	}
-}</pre>
-
-;(Unused &mdash; G46_ShowUI_Chap2)
-<pre>{
-	"$type": "RPG.GameCore.ShowUI",
-	"Name": "Ui.FightFest.Board.FightFestBoardCutDialog",
-	"WaitForExit": true,
-	"Param": {
-		"Value": "2"
-	}
-}</pre>
-
-;(Unused &mdash; G46_ShowUI_Chap4)
-<pre>{
-	"$type": "RPG.GameCore.ShowUI",
-	"Name": "Ui.FightFest.Board.FightFestBoardCutDialog",
-	"WaitForExit": true,
-	"Param": {
-		"Value": "4"
-	}
-}</pre>
-
-;(Unused &mdash; ShowUI_G295)
-<pre>{
-	"$type": "RPG.GameCore.ShowUI",
-	"Name": "Ui.FightFest.Board.FightFestBoardCutDialog",
-	"WaitForExit": true,
-	"Param": {
-		"Value": "2"
-	}
-}</pre>
+:{{tx}}
 {{Dialogue End}}
 
 ===Head to the Reception Hall and confirm your match qualifications{{subst:void|<!--802510203-->}}===
 {{Mission Description|type=adventure|location=Skysplitter|update|Luka finally wins enough points after a few rounds of Knockout Matches.<br />Now he'll face the truly formidable foes.}}
 {{Dialogue Start}}
-<pre>{
-	"$type": "RPG.GameCore.WaitUIControllerClose",
-	"UIControllerName": "ScoreMatchResultDialog"
-}</pre>
-:{{A|VO side2 yanwu player 114 m.ogg}} {{A|VO side2 yanwu player 114 f.ogg}} '''(Trailblazer):''' (After fighting in so many knockout stages, I think our points should be enough. Time to head to the Skysplitter's leaderboard to confirm our ranking.)
+:{{tx}}
 {{Dialogue End}}
 
 ===Start the match and confront Boothill{{subst:void|<!--802510204-->}}===
 {{Mission Description|type=adventure|location=Skysplitter|update|Carmella is very scared of Boothill as he is a criminal wanted by the IPC.<br />You're definitely not scared of Boothill &mdash; You've even gone through a lot together.<br />Luka doesn't know which version of your descriptions of Boothill is more accurate. He only walks away with a simple understanding in his subconsciousness &mdash; Those who go against the IPC probably aren't bad guys.}}
 {{Dialogue Start}}
-
-;(Unused &mdash; FightFest_MainRace_802510204)
-<pre>{
-	"$type": "RPG.GameCore.PerformanceEndSeq",
-	"Cases": [
-		{
-			"Case": 1,
-			"OnSuccess": [
-				{
-					"$type": "RPG.GameCore.TriggerFightFestLineupInMission",
-					"RaceID": 1002,
-					"OnConfirm": [
-						{
-							"$type": "RPG.GameCore.TriggerPerformance",
-							"ValueSource": {},
-							"PerformanceType": "E",
-							"PerformanceID": 1802510103,
-							"MaskConfig": {}
-						},
-						{
-							"$type": "RPG.GameCore.TriggerFightFestBattleInMission"
-						}
-					]
-				}
-			]
-		}
-	]
-}</pre>
-
-;(Unused &mdash; G62_TriggerBattle)
-<pre>{
-	"$type": "RPG.GameCore.PerformanceEndSeq",
-	"Cases": [
-		{
-			"Case": 1,
-			"OnSuccess": [
-				{
-					"$type": "RPG.GameCore.TriggerFightFestLineupInMission",
-					"RaceID": 1002,
-					"OnConfirm": [
-						{
-							"$type": "RPG.GameCore.TriggerPerformance",
-							"ValueSource": {},
-							"PerformanceType": "E",
-							"PerformanceID": 1802510103,
-							"MaskConfig": {}
-						},
-						{
-							"$type": "RPG.GameCore.TriggerFightFestBattleInMission"
-						}
-					]
-				}
-			]
-		}
-	]
-}</pre>
+:{{tx}}
 {{Dialogue End}}
 
 ===Hold the press conference{{subst:void|<!--802510206-->}}===
 {{Mission Description|type=adventure|location=Skysplitter|update|Press conferences are a specialty of sporting events. You've gotta experience it.<br />Are you prepared to face the cunning, plotting, devious, and conniving friends working in the media industry?<br />It's time to have a battle of wits against them.}}
 {{Dialogue Start}}
-
+:{{tx}}
 {{Dialogue End}}
 
 ===Return to the lounge and prepare for the next Faceoff Match{{subst:void|<!--802510208-->}}===
 {{Mission Description|type=adventure|location=Skysplitter|update|Carmella is very scared of Boothill as he is a criminal wanted by the IPC.<br />You're definitely not scared of Boothill &mdash; You've even gone through a lot together.<br />Luka doesn't know which version of your descriptions of Boothill is more accurate. He only walks away with a simple understanding in his subconsciousness &mdash; Those who go against the IPC probably aren't bad guys.}}
 {{Dialogue Start}}
-
-;(Unused &mdash; EnterArea_G80)
 :{{tx}}
-::{{A|VO side2 yanwu camera 137.ogg}} '''Carmella:''' Luka, your next opponent is Boothill... You have to be careful. He's a dangerous maniac!
-::{{DIcon|Arrow}} That's right. He's quite something.
-:::{{A|VO side2 yanwu luka 309.ogg}} '''Luka:''' Indeed, by the looks of his photo he really looks like a formidable character...
-:::He's just got a grudge against the IPC, that's all.
-::{{DIcon|Arrow}} He's just got a grudge against the IPC, that's all.
-::{{A|VO side2 yanwu camera 138.ogg}} '''Carmella:''' Among those who harbor plenty of hatred against IPC, he's probably one of the more dangerous ones.
-::{{A|VO side2 yanwu luka 310.ogg}} '''Luka:''' I heard he's a Galaxy Ranger? What type of organization is that?
-::{{A|VO side2 yanwu camera 139.ogg}} '''Carmella:''' The Galaxy Rangers are a diverse group of individualistic warriors that are disciples of The Hunt. Some are pretty easy-going, but there's also bloodthirsty wanted criminals like Boothill.
-::{{A|VO side2 yanwu luka 311.ogg}} '''Luka:''' Disciples of The Hunt? So isn't he the same as Xianzhou folks? No matter how dangerous he is, he won't be causing trouble in the land of his fellow disciples, right?
-::{{DIcon|Arrow}} I met him on Penacony. He's a pretty decent guy.
-:::{{A|VO side2 yanwu camera 140.ogg}} '''Carmella:''' Would a "decent guy" be on the IPC's wanted list? I don't think so.
-:::Both the IPC and Belobogians believe in the Preservation...
-::{{DIcon|Arrow}} Both the IPC and Belobogians believe in the Preservation...
-::{{A|VO side2 yanwu luka 312.ogg}} '''Luka:''' I take your point.
-::{{A|VO side2 yanwu camera 141.ogg}} '''Carmella:''' Yeah... Wait, no! The IPC didn't do anything bad to Belobog!
-::{{A|VO side2 yanwu camera 142.ogg}} '''Carmella:''' You just have to be cautious, Luka. A wanted criminal on the IPC's list is really no joke.
-::{{tx}}
-:<pre>{
-	"$type": "RPG.GameCore.PerformanceExtendEndBlack"
-}</pre>
 {{Dialogue End}}
 
 ===Participate in the Knockout Matches and win points{{subst:void|<!--802510202-->}}===
 {{Mission Description|type=adventure|location=Skysplitter|update|The rules of the Knockout Matches are easy &mdash; Just defeat opponents and win points<br />Contestant Luka just needs to do three things: Win, win, and keep winning!}}
 {{Dialogue Start}}
+:{{tx}}
 {{Dialogue End}}
 
 ==Other Languages==

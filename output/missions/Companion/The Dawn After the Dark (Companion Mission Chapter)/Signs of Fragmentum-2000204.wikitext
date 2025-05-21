@@ -43,126 +43,37 @@ PageTitle=#Signs of Fragmentum#
 ===Inquire the current status of the blocked-off area with nearby staff members{{subst:void|<!--200020201-->}}===
 {{Mission Description|type=companion|location=Storage Zone|update|Learn about the current status of the blocked-off area.}}
 {{Dialogue Start}}
-:<!--3-second delay-->
-<pre>{
-	"$type": "RPG.GameCore.ChangePropState"
-}</pre>
-
-;(Talk to Security Department Member)
-:{{A|VO Side0 ast1 staffS 101.ogg}} '''Security Department Member:''' You're... Brother Arlan's friend!
-:{{DIcon|Arrow}} What happened?
-::{{A|VO Side0 ast1 staffS 102.ogg}} '''Security Department Member:''' The Security Department received information about sightings of Legion remnants in the vicinity.
-::{{A|VO Side0 ast1 staffS 103.ogg}} '''Security Department Member:''' However, we just confirmed that there are monsters here that have never been seen before.
-::{{A|VO Side0 ast1 staffS 104.ogg}} '''Security Department Member:''' The Security Department sectioned off the area immediately, but we lost contact with some people.
-:{{DIcon|Arrow}} Is Pamela here?
-::{{A|VO Side0 ast1 staffS 105.ogg}} '''Security Department Member:''' Pamela...? Let me check, I remember her name was on the rescuer list.
-:{{A|VO Side0 ast1 staffS 106.ogg}} '''Security Department Member:''' Did Arlan ask you to investigate? Great! I've made some new discoveries.
-:{{A|VO Side0 ast1 staffS 107.ogg}} '''Security Department Member:''' Did you see it? Look... It seems like the rumors about the station are true &mdash; there are Stellaron traces here.
-:{{A|VO Side0 ast1 staffT 101.ogg}} '''Maintenance Staff Member:''' Good luck figuring that out. All I know is that monsters have destroyed the power supply installations here.
-:{{A|VO Side0 ast1 staffT 102.ogg}} '''Maintenance Staff Member:''' The elevator is out of commission, so the people stuck on the floor below can't make it up.
-:{{DIcon|Arrow}} Why don't you go down there?
-::{{A|VO Side0 ast1 staffS 108.ogg}} '''Security Department Member:''' It happened so suddenly. The support from the Security Department is still on the way.
-::{{A|VO Side0 ast1 staffS 109.ogg}} '''Security Department Member:''' We're low on staff right now &mdash; all we can do is make sure the monsters don't make it up here.
-:{{DIcon|Arrow}} Is there anything I can do?
-::{{A|VO Side0 ast1 staffS 110.ogg}} '''Security Department Member:''' Maybe you can help us restart the central elevator?
-:{{A|VO Side0 ast1 staffT 103.ogg}} '''Maintenance Staff Member:''' There are plenty of backup power sources in the storage zone &mdash; right opposite, if I remember right.
-:{{A|VO Side0 ast1 staffS 111.ogg}} '''Security Department Member:''' As soon as we can restart the power supply, we can get this elevator working and rescue everyone.
+:{{tx}}
 {{Dialogue End}}
 
 ===Head to the power supply room and collect the backup batteries{{subst:void|<!--200020202-->}}===
 {{Mission Description|type=companion|location=Storage Zone|update|To restart the elevator, you need to find all of the backup batteries. Even though there are monsters roaming near the power source room, you have to go deeper into the fray...}}
 {{Dialogue Start}}
-:<!--3-second delay-->
-<pre>{
-	"$type": "RPG.GameCore.PlayNPCBubbleTalk",
-	"BubbleTalkInfoList": [
-		{
-			"AutoSkipTime": 5,
-			"GroupID": 14,
-			"GroupNpcID": 400006,
-			"TalkSentenceID": 200020221
-		}
-	]
-}</pre>
-;(Obtain {{Item|Backup Batteries|20|x=1}})
-
-;(Obtain {{Item|Backup Batteries|20|x=1}})
-
-;(Obtain {{Item|Backup Batteries|20|x=1}})
+:{{tx}}
 {{Dialogue End}}
 
 ===Hand over the backup batteries and restart the elevator{{subst:void|<!--200020206-->}}===
 {{Mission Description|type=companion|location=Storage Zone|update|Thanks to your outstanding skills, the trip posed no real dangers as you finally collected all the backup batteries.<br />It's time to return to the elevator with the batteries and hope. The researchers are still waiting for you.}}
 {{Dialogue Start}}
-
-;(Talk to Maintenance Staff)
-:{{A|VO Side0 ast1 staffS 112.ogg}} '''Maintenance Staff Member:''' Well, did you find the backup power source?
-<pre>{
-	"$type": "RPG.GameCore.ConsumeMissionItem",
-	"SubMissionID": 200020206,
-	"Desc": {
-		"Hash": 2738742136644414259
-	}
-}</pre>
+:{{tx}}
 {{Dialogue End}}
 
 ===Take the elevator to the lower zone{{subst:void|<!--200020207-->}}===
 {{Mission Description|type=companion|location=Storage Zone|update|The Maintenance Staff took the backup batteries and successfully restarted the elevator. You step into the elevator to make your way down.<br />There's no telling whether you will be greeted by the Gossipmonger, Pamela, or unknown danger.}}
 {{Dialogue Start}}
-:{{A|VO Side0 ast1 staffS 113.ogg}} '''Maintenance Staff Member:''' Phew, thank goodness you're here. Give me a moment &mdash; I'll give the elevator a little shake-up.
-:{{A|VO Side0 ast1 staffS 114.ogg}} '''Maintenance Staff Member:''' Alright, you can use it now. Be safe.
-;(Upon reaching the destination)
+:{{tx}}
 {{Dialogue End}}
 
 ===Defeat the monster and save Pamela{{subst:void|<!--200020209-->}}===
 {{Mission Description|type=companion|location=Storage Zone|update|The trapped researcher told you that Pamela went missing near where the monsters gathered.<br />Finding Gossipmonger proves to be more troublesome than you thought, but at this point, saving people is more important.}}
 {{Dialogue Start}}
-;(Upon reaching the destination)
-
-;(Upon reaching the destination)
-:{{A|VO Side0 ast1 staffU 101.ogg}} '''Distressed Researcher:''' Help! Somebody help! ...Wait, the elevator is here!
-:{{A|VO Side0 ast1 staffV 101.ogg}} '''Timid Researcher:''' W&mdash;We lost sight of Pamela... There's a terrifying monster over there &mdash; we didn't dare to go over on our own.
-:{{A|VO Side0 ast1 staffV 102.ogg}} '''Timid Researcher:''' Please save her! W&mdash;We'll take the elevator up.
-:{{A|VO Side0 ast1 staffU 102.ogg}} '''Distressed Researcher:''' Please!
-----
+:{{tx}}
 {{Dialogue End}}
 
 ===Find out who the anonymous person is from Pamela{{subst:void|<!--200020211-->}}===
 {{Mission Description|type=companion|location=Storage Zone|update|You succeeded in defeating the monsters and saved "the Gossipmonger" Pamela.<br />You thought she might appreciate your deed, but she adhered to her professional ethics and insisted that you pay some kind of price.<br />You agreed, but surprisingly, Pamela's "price" is a picture of Himeko.}}
 {{Dialogue Start}}
-
-;(Talk to Pamela)
-:{{A|VO Side0 ast1 staffW 101.ogg}} '''Pamela:''' Holy mackerel, you scared the stars out of me... Y&mdash;You took your time!
-:{{DIcon|Arrow}} Are you Gossipmonger?
-:{{A|VO Side0 ast1 staffW 102.ogg}} '''Pamela:''' That's right, I'm the one you're looking for.
-:{{DIcon|Arrow}} You knew I was looking for you?
-:{{A|VO Side0 ast1 staffW 103.ogg}} '''Pamela:''' Of course. Not only did I know you were coming, but I also know why.
-:{{DIcon|Arrow}} I came to ask you something...
-:{{A|VO Side0 ast1 staffW 104.ogg}} '''Pamela:''' Heh, you want to know who Richard_Knowitall from that Heritor group is, don't you?
-:{{DIcon|Arrow}} Heritor?
-::{{A|VO Side0 ast1 staffW 105.ogg}} '''Pamela:''' Fans of Madam Herta. They call themselves the Heritors.
-:{{DIcon|Arrow}} How did you know?
-::{{A|VO Side0 ast1 staffW 106.ogg}} '''Pamela:''' If I didn't even know that, could I really call myself Gossipmonger?
-:{{A|VO Side0 ast1 staffW 107.ogg}} '''Pamela:''' I'm a businesswoman, and we play by our own rules. If you want the scoop, you have to pay the price.
-:{{DIcon|Arrow}} I saved you, isn't that enough?
-::{{A|VO Side0 ast1 staffW 108.ogg}} '''Pamela:''' Certainly not. I have a very clear notion of how much different favors cost.
-:{{DIcon|Arrow}} Well then, what's the price?
-::{{A|VO Side0 ast1 staffW 109.ogg}} '''Pamela:''' Don't worry, the price is a fair one. Why would I make it difficult for you?
-:{{A|VO Side0 ast1 staffW 110.ogg}} '''Pamela:''' I don't have any particular hobbies. I do indulge in a little tittle-tattling here and there, not to mention, admiring... of a certain scientist...
-:{{A|VO Side0 ast1 staffW 111.ogg}} '''Pamela:''' A&mdash;And now here you are, vanquishing monsters left, right, and center! I heard you're with the Astral Express...?
-:{{A|VO Side0 ast1 staffW 112.ogg}} '''Pamela:''' How fortunate! As it happens, I'm a huge fan of Himeko... An amalgamation of beauty and brains &mdash; the epitome of a graceful and gentle... scientist.
-:{{DIcon|Arrow}} Soooo...?
-:{{DIcon|Arrow}} ...
-:{{A|VO Side0 ast1 staffW 113.ogg}} '''Pamela:''' Can you help me take a hi-def portrait photo of Himeko smiling? Pleeeaase~
-:{{A|VO Side0 ast1 staffW 114.ogg}} '''Pamela:''' Make sure you capture her electrifying smile &mdash; the one that stuns people into a trance &mdash; that million-volt smile~
-:{{DIcon|Arrow}} Do you have a request that's more... normal?
-::{{A|VO Side0 ast1 staffW 116.ogg}} '''Pamela:''' What's the matter? You know Himeko well, right? If you ask her, I'm sure she'll say yes~
-:{{DIcon|Arrow}} This is a strange request.
-::{{A|VO Side0 ast1 staffW 116.ogg}} '''Pamela:''' What's the matter? You know Himeko well, right? If you ask her, I'm sure she'll say yes~
-:{{DIcon|Arrow}} Alright, though it'll probably be my funeral...
-::{{A|VO Side0 ast1 staffW 117.ogg}} '''Pamela:''' I appreciate young, brave, talented people like yourself!
-:{{A|VO Side0 ast1 staffW 118.ogg}} '''Pamela:''' A superbly beautiful, dazzling, electrifying portrait shot of Himeko in exchange for the secret behind Richard_Knowitall.
-:{{A|VO Side0 ast1 staffW 119.ogg}} '''Pamela:''' Send the picture over when you have it. I'm always fair when it comes to haggling.
+:{{tx}}
 {{Dialogue End}}
 
 ==Other Languages==
