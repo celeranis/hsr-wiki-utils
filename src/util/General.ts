@@ -23,7 +23,7 @@ export function uploadPrompt(filePath: string, destinationName: string, categori
 		throw new TypeError(`Failed to generate upload prompt: categories are empty or missing!`)
 	}
 	
-	return `{{subst:void|<!--$UPLOAD:<<${filePath}>-<${destinationName}>-<${categories}>>-->}}`
+	return `{{subst:void|<!--$UPLOAD:<<${filePath}>-<${destinationName.replaceAll('&mdash;', '—')}>-<${categories}>>-->}}`
 }
 
 export const PAGENAME = '{{subst:#titleparts:{{subst:PAGENAME}}}}'

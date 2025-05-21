@@ -51,66 +51,2160 @@ Mission Clash! Great Mine! Caelus.png|Caelus
 ===Meet up with March 7th{{subst:void|<!--801410501-->}}===
 {{Mission Description|type=adventure|location=Administrative District|Right now, you hold three Mastery Marks and are one away from earning the right to make your bid for championship.<br />The path toward becoming a champion unfurls like a red carpet beneath your feet, so embark on the last step before the time of your great ascent arrives.}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to March 7th)
+----
+:{{A|VO side1 ytzx mar7th 430 m.ogg}} {{A|VO side1 ytzx mar7th 430 f.ogg}} '''March 7th:''' How'd you sleep, (Trailblazer)? Today marks the end of our Victory Zone journey! We'll need all the energy we can get!
+:{{A|VO side1 ytzx trotter normal.ogg}} '''(Warp Trotter/Trotter/Bubbles/Puffball/Ivory Menace/Chunky Chops/Turbo Trotter/Trotterlord):''' Oink, oink, oink!
+:{{DIcon|Arrow}} Slept like a log!
+::{{A|VO side1 ytzx mar7th 431.ogg}} '''March 7th:''' Great~
+:{{DIcon|Arrow}} It's finally going to be over...
+::{{A|VO side1 ytzx mar7th 432.ogg}} '''March 7th:''' Hehe... Thanks for sticking with me through everything.
+:{{A|VO side1 ytzx mar7th 433.ogg}} '''March 7th:''' Let's do this! {{Color|keyword|nobold=1|Great Mine}}, here we come!
+----
 {{Dialogue End}}
 
 ===Head to the Great Mine: Entrance{{subst:void|<!--801410502-->}}===
 {{Mission Description|type=adventure|location=Boulder Town|update|The path toward becoming a champion unfurls like a red carpet beneath your feet.<br />The final Mastery Mark is in the hands of a certain someone in the Great Mine. Find and defeat him and sweep aside all impediments preventing you from starting your match!}}
 {{Dialogue Start}}
-:{{tx}}
+<pre>{
+	"$type": "RPG.GameCore.CreateProp",
+	"GroupID": {
+		"FixedValue": {
+			"Value": 166
+		}
+	},
+	"GroupPropID": {
+		"FixedValue": {
+			"Value": 300001
+		}
+	},
+	"CreateList": []
+}</pre>
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+----
+<pre>{
+	"$type": "RPG.GameCore.PerformanceExtendEndBlack",
+	"ExtendTime": 2
+}</pre>
+:{{A|VO side1 ytzx mar7th 434.ogg}} '''March 7th:''' The Great Mine's just down here. The IPC should have the venue all sorted by now.
+:{{A|VO side1 ytzx mar7th 435 m.ogg}} {{A|VO side1 ytzx mar7th 435 f.ogg}} '''March 7th:''' Ready, (Trailblazer)?
+:{{A|VO side1 ytzx trotter normal.ogg}} '''(Warp Trotter/Trotter/Bubbles/Puffball/Ivory Menace/Chunky Chops/Turbo Trotter/Trotterlord):''' Oink! Oink! Oink!
+:{{DIcon|Arrow}} Let's go.
+:{{A|VO side1 ytzx mar7th 436.ogg}} '''March 7th:''' Alright then, let's go get our ticket to the championship!
+----
+<pre>{
+	"$type": "RPG.GameCore.ShowUI",
+	"Name": "Ui.AetherDivide.AetherDivideEntryPage"
+}</pre>
+
+;(Talk to March 7th)
+----
+<pre>{
+	"$type": "RPG.GameCore.PerformanceExtendEndBlack",
+	"ExtendTime": 2
+}</pre>
+:{{A|VO side1 ytzx mar7th 434.ogg}} '''March 7th:''' The Great Mine's just down here. The IPC should have the venue all sorted by now.
+:{{A|VO side1 ytzx mar7th 435 m.ogg}} {{A|VO side1 ytzx mar7th 435 f.ogg}} '''March 7th:''' Ready, (Trailblazer)?
+:{{A|VO side1 ytzx trotter normal.ogg}} '''(Warp Trotter/Trotter/Bubbles/Puffball/Ivory Menace/Chunky Chops/Turbo Trotter/Trotterlord):''' Oink! Oink! Oink!
+:{{DIcon|Arrow}} Let's go.
+:{{A|VO side1 ytzx mar7th 436.ogg}} '''March 7th:''' Alright then, let's go get our ticket to the championship!
+----
+<pre>{
+	"$type": "RPG.GameCore.ShowUI",
+	"Name": "Ui.AetherDivide.AetherDivideEntryPage"
+}</pre>
 {{Dialogue End}}
 
 ===Question Topaz's Support Squad{{subst:void|<!--801410504-->}}===
 {{Mission Description|type=adventure|location=Victory Zone: Great Mine|update|Topaz's Support Squad just don't know when to give up. They're more unyielding than actual boulders.<br />But before you stomp them into the earth again, maybe it's wise to get a few things cleared up first.}}
 {{Dialogue Start}}
-:{{tx}}
+:{{A|VO side1 ytzx mar7th 437.ogg}} '''March 7th:''' Isn't that Topaz's Support Squad?
+
+;(Upon reaching the destination)
+----
+:{{A|VO side1 ytzx staffH 112.ogg}} '''Harsh IPC Worker:''' Hehe... Just as expected!
+:{{A|VO side1 ytzx staffI 111.ogg}} '''Vicious IPC Worker:''' We knew you'd turn up here sooner or later! Come to challenge the final {{Color|keyword|nobold=1|championship contender}}?
+:{{A|VO side1 ytzx mar7th 438.ogg}} '''March 7th:''' I knew we missed something yesterday – turns out I was right: We forgot to teach you guys a lesson!
+:{{A|VO side1 ytzx trotter puzzle.ogg}} '''(Warp Trotter/Trotter/Bubbles/Puffball/Ivory Menace/Chunky Chops/Turbo Trotter/Trotterlord):''' Oink! Oink! Oink...
+:{{A|VO side1 ytzx staffH 113.ogg}} '''Harsh IPC Worker:''' It's all your fault, making us look bad in front of the director! But since you're here...
+:{{A|VO side1 ytzx staffI 112.ogg}} '''Vicious IPC Worker:''' ...We'll be taking back what's ours!
+:{{DIcon|Arrow}} Dream on, that's our friend you're talking about!
+::{{A|VO side1 ytzx mar7th 439.ogg}} '''March 7th:''' Yeah, (Warp Trotter/Trotter/Bubbles/Puffball/Ivory Menace/Chunky Chops/Turbo Trotter/Trotterlord) is not going anywhere!
+:{{DIcon|Arrow}} It's your own fault for losing them in the first place...
+::{{A|VO side1 ytzx mar7th 440.ogg}} '''March 7th:''' Yeah! We're not the ones to blame. Did you think we're just gonna hand (Warp Trotter/Trotter/Bubbles/Puffball/Ivory Menace/Chunky Chops/Turbo Trotter/Trotterlord) over willingly!?
+:{{DIcon|Arrow}} Why don't we talk it out?
+::{{A|VO side1 ytzx mar7th 441.ogg}} '''March 7th:''' ...No talking!
+::{{A|VO side1 ytzx mar7th 442.ogg}} '''March 7th:''' (Warp Trotter/Trotter/Bubbles/Puffball/Ivory Menace/Chunky Chops/Turbo Trotter/Trotterlord) is our friend, and we're not giving them to you!
+:{{A|VO side1 ytzx mar7th 443.ogg}} '''March 7th:''' Also, does Miss Topaz even approve of your so-called "support squad"?
+:{{A|VO side1 ytzx trotter puzzle.ogg}} '''(Warp Trotter/Trotter/Bubbles/Puffball/Ivory Menace/Chunky Chops/Turbo Trotter/Trotterlord):''' Oink! Oink? Oink! Oink!
+:{{A|VO side1 ytzx staffH 114.ogg}} '''Harsh IPC Worker:''' Well, since you asked so nicely...
+:{{A|VO side1 ytzx staffI 113.ogg}} '''Vicious IPC Worker:''' ...But don't think we'll be taking it easy on you!
+:{{A|VO side1 ytzx topaz 101.ogg}} '''???:''' Yikes, enough already. Don't make a spectacle.
+:{{A|VO side1 ytzx staffH 115.ogg}} '''Harsh IPC Worker:''' That sounds like...
+----
+:{{A|VO side1 ytzx staffI 114.ogg}} '''Vicious IPC Worker:''' ...Director Topaz!?
+:{{A|VO side1 ytzx topaz 102.ogg}} '''Topaz:''' Making a mess wherever you go... I should have disbanded this "support squad" months ago.
+:{{A|VO side1 ytzx staffH 116.ogg}} '''Harsh IPC Worker:''' D&mdash;Director Topaz, we're sorry!
+:{{A|VO side1 ytzx staffI 115.ogg}} '''Vicious IPC Worker:''' We messed up!
+:{{A|VO side1 ytzx topaz 103.ogg}} '''Topaz:''' If apologies were enough, there'd be no need for a Talent Motivation Department, would there? I've received a report about your misdeeds &mdash; I may have to include the results in your performance reviews.
+:{{A|VO side1 ytzx staffH 117.ogg}} '''Topaz's Support Squad:''' Oh no...
+----
+:{{A|VO side1 ytzx topaz 104 m.ogg}} {{A|VO side1 ytzx topaz 104 f.ogg}} '''Topaz:''' As for {{MC|m=Mr.|f=Miss}} (Trailblazer) and Miss March, Wilder has informed me of your situation with the Aether Spirit.
+:{{A|VO side1 ytzx topaz 105.ogg}} '''Topaz:''' I've spoken to Miss Asta &mdash; she proposed that the two of you should decide what to do with the Aether Spirit... Her only requirement is that you keep her updated.
+:{{DIcon|Arrow}} We'll give it a lot of careful consideration.
+::{{A|VO side1 ytzx mar7th 444.ogg}} '''March 7th:''' So it's up to us...? But, Miss Asta is (Warp Trotter/Trotter/Bubbles/Puffball/Ivory Menace/Chunky Chops/Turbo Trotter/Trotterlord)'s owner...
+:{{DIcon|Arrow}} Does that mean we can keep them?
+::{{A|VO side1 ytzx mar7th 445.ogg}} '''March 7th:''' It... sounds like it? But, Miss Asta is (Warp Trotter/Trotter/Bubbles/Puffball/Ivory Menace/Chunky Chops/Turbo Trotter/Trotterlord)'s owner...
+:{{DIcon|Arrow}} Long live the director and lead researcher!
+::{{A|VO side1 ytzx mar7th 446.ogg}} '''March 7th:''' Hehe... Thanks to both of you for understanding.
+:{{A|VO side1 ytzx topaz 106.ogg}} '''Topaz:''' Mm, you should take this opportunity to enjoy the rest of the tournament &mdash; no need to rush to a decision now.
+:{{A|VO side1 ytzx trotter normal.ogg}} '''(Warp Trotter/Trotter/Bubbles/Puffball/Ivory Menace/Chunky Chops/Turbo Trotter/Trotterlord):''' Oink Oink! Oink...
+:{{A|VO side1 ytzx mar7th 447.ogg}} '''March 7th:''' Looks like (Warp Trotter/Trotter/Bubbles/Puffball/Ivory Menace/Chunky Chops/Turbo Trotter/Trotterlord) thinks so, too.
+:{{A|VO side1 ytzx mar7th 448.ogg}} '''March 7th:''' Miss Topaz, what brings you here? Do you also play Aetherium Wars?
+:{{A|VO side1 ytzx topaz 107.ogg}} '''Topaz:''' Hehe, correct, but I haven't come here to challenge a championship contender.
+:{{A|VO side1 ytzx topaz 108.ogg}} '''Topaz:''' As the titleholder of last year's championship, I've earned a place in this year's final... but my visit here today is purely to discuss matters with the event sponsor.
+:{{A|VO side1 ytzx topaz 109.ogg}} '''Topaz:''' There's been a lot of buzz lately about an "{{Color|keyword|nobold=1|elite player}}" who's been making waves in the gaming community &mdash; I want to discuss the situation with Mr. Giovanni.
+:{{DIcon|Arrow}} I'm sure you've got some serious gaming skills.
+::{{A|VO side1 ytzx topaz 110.ogg}} '''Topaz:''' Hahaha, you're too kind. Compared to Mr. Giovanni, I'm practically a novice.
+:{{DIcon|Arrow}} Can you reveal the true identity of the elite player?
+::{{A|VO side1 ytzx mar7th 449.ogg}} '''March 7th:''' Now that I think of it, Mr. Giovanni mentioned that the previous tournament champion was defeated by the elite player...
+::{{A|VO side1 ytzx topaz 111.ogg}} '''Topaz:''' Hahaha, it's embarrassing to admit, but I did face off against that player... Unfortunately, I didn't quite measure up.
+:{{A|VO side1 ytzx mar7th 450.ogg}} '''March 7th:''' So, who exactly is this elite player?
+:{{A|VO side1 ytzx topaz 112.ogg}} '''Topaz:''' I'm afraid I can't reveal that &mdash; Mr. Giovanni specifically reminded me to keep some "surprises" in store for you.
+:{{DIcon|Arrow}} So how are we supposed to find out?
+:{{DIcon|Arrow}} Oh wow, I'm sooo "Elated" now...
+::{{A|VO side1 ytzx mar7th 451.ogg}} '''March 7th:''' Tell me about it... Dealing with a Masked Fool is exhausting...
+::{{A|VO side1 ytzx topaz 113.ogg}} '''Topaz:''' Hey, don't lose heart, I'm rooting for you all the way!
+:{{DIcon|Arrow}} I suppose being the sole sponsor means you can just do whatever you want...
+::{{A|VO side1 ytzx mar7th 452.ogg}} '''March 7th:''' Seriously, these financially fortunate types are starting to get on my nerves...
+::{{A|VO side1 ytzx topaz 114.ogg}} '''Topaz:''' Hey, don't lose heart, I'm rooting for you all the way!
+:{{A|VO side1 ytzx topaz 115.ogg}} '''Topaz:''' As a fellow player, I can still give you some good advice &mdash; like how the mechanisms in this Victory Zone work, for example.
+:{{A|VO side1 ytzx topaz 116.ogg}} '''Topaz:''' Take a look &mdash; simply follow this path, and you'll eventually bump into the {{Color|keyword|nobold=1|guide}} for this Victory Zone.
+<pre>{
+	"$type": "RPG.GameCore.ActiveVirtualCamera",
+	"AreaName": "LevelArea_P43103_F43103004_G13",
+	"AnchorName": "Anchor9",
+	"DynamicParams": {}
+}</pre>
+:{{A|VO side1 ytzx topaz 117.ogg}} '''Topaz:''' If you need any information, your best bet is to talk to the guide. Unfortunately, I've got a few other matters to attend to right now, but I wish you both the best of luck!
+----
+:{{A|VO side1 ytzx mar7th 453.ogg}} '''March 7th:''' The {{Color|keyword|nobold=1|guide}} Miss Topaz mentioned could have important information for us.
+:{{A|VO side1 ytzx mar7th 454 m.ogg}} {{A|VO side1 ytzx mar7th 454 f.ogg}} '''March 7th:''' Let's go find him, (Trailblazer)!
+:{{A|VO side1 ytzx trotter normal.ogg}} '''(Warp Trotter/Trotter/Bubbles/Puffball/Ivory Menace/Chunky Chops/Turbo Trotter/Trotterlord):''' Oink! Oink! Oink!
+----
+
+;(Talk to Guide)
+----
+:{{A|VO side1 ytzx mar7th 455.ogg}} '''March 7th:''' Is... this the {{Color|keyword|nobold=1|guide}}?
+:{{A|VO side1 ytzx guide 101.ogg}} '''Guide:''' Boop... boop... boop...
+:{{A|VO side1 ytzx guide 102.ogg}} '''Guide:''' Player credentials validated. Hello, hello. Welcome to the Great Mine Victory Zone.
+:{{DIcon|Arrow}} Can you tell us what we need to do?
+::{{A|VO side1 ytzx guide 103.ogg}} '''Guide:''' Hello, hello. I'm happy to assist.
+:{{DIcon|Arrow}} Not another robot...
+::{{A|VO side1 ytzx guide 104.ogg}} '''Guide:''' Hello, hello. I am classified as an automaton, I am not a "robot."
+:{{A|VO side1 ytzx guide 105.ogg}} '''Guide:''' Allow me to introduce the puzzles for the Great Mine Victory Zone.
+:{{A|VO side1 ytzx guide 106.ogg}} '''Guide:''' A group of unidentified IPC workers, who call themselves the "{{Color|keyword|nobold=1|Topaz Support Squad}}," have taken over the Victory Zone, causing numerous problems for players.
+:{{A|VO side1 ytzx guide 107.ogg}} '''Guide:''' You must {{Color|keyword|nobold=1|operate Automaton Spiders}} to {{Color|keyword|nobold=1|trigger an explosion in their vicinity}} and disperse these disruptive people.
+:{{A|VO side1 ytzx guide 108.ogg}} '''Guide:''' Please be aware that {{Color|keyword|nobold=1|if you approach the targets head on, they are highly likely to cause damage to the Automaton Spiders}}. Thus, it is imperative that you {{Color|keyword|nobold=1|detonate the Automaton Spiders behind your targets}}.
+:{{A|VO side1 ytzx guide 109.ogg}} '''Guide:''' To clarify, the explosion is purely optical and poses no physical threat.
+:{{A|VO side1 ytzx mar7th 456.ogg}} '''March 7th:''' What does Director Topaz think about us having to take on her support squad?
+:{{A|VO side1 ytzx guide 110.ogg}} '''Guide:''' In response to your question, I am currently retrieving the relevant audio recording...
+:{{A|VO side1 ytzx topaz 118.ogg}} '''Guide:''' "You guys have caused me nothing but trouble... It's time for you to make amends by proving yourselves in the Victory Zone!"
+:{{DIcon|Arrow}} So it was all an act...
+:{{DIcon|Arrow}} It's a tough life working for the IPC...
+:{{A|VO side1 ytzx mar7th 457.ogg}} '''March 7th:''' Haha... Sometimes you just have to laugh at the absurdity of it all.
+:{{A|VO side1 ytzx guide 111.ogg}} '''Guide:''' This concludes instructions. If you are ready, please follow me to the first {{Color|keyword|nobold=1|detonation location}}.
+:{{A|VO side1 ytzx mar7th 458.ogg}} '''March 7th:''' Hey, the guide is on the move, let's keep up!
+----
+;(Unused &mdash; SLPM)
+
+
+;(Unused &mdash; TLP)
+
+----
+:{{A|VO side1 ytzx giovanni 240.ogg}} '''Giovanni:''' Impressive... Truly impressive! What a riveting duel! I, Giovanni di Giorgio, humbly concede!
+:{{A|VO side1 ytzx trotter happy.ogg}} '''(Warp Trotter/Trotter/Bubbles/Puffball/Ivory Menace/Chunky Chops/Turbo Trotter/Trotterlord):''' Oink! Oink! Oink!
+:{{DIcon|Arrow}} That was an amazing duel!
+::{{A|VO side1 ytzx mar7th 488.ogg}} '''March 7th:''' Phew... Miss Topaz wasn't kidding... Mr. Giovanni really knows his stuff!
+::{{A|VO side1 ytzx giovanni 241.ogg}} '''Giovanni:''' Haha, you flatter me! I've witnessed your unwavering resolve. Now it's time I revealed the answer to your question.
+:{{DIcon|Arrow}} So, can you give us some answers now?
+::{{A|VO side1 ytzx mar7th 489.ogg}} '''March 7th:''' Yeah... Surely we've earned it?
+::{{A|VO side1 ytzx giovanni 242.ogg}} '''Giovanni:''' I've witnessed your unwavering resolve... Now it's time I revealed the answer to your questions.
+:{{DIcon|Arrow}} Hand over the Mastery Mark &mdash; chop chop!
+::{{A|VO side1 ytzx mar7th 490.ogg}} '''March 7th:''' ...Hey, slow down! We still have questions that need answering!
+::{{A|VO side1 ytzx giovanni 243.ogg}} '''Giovanni:''' Ha, no need to worry &mdash; even if you had forgotten, I had my answers at the ready.
+:{{A|VO side1 ytzx giovanni 244.ogg}} '''Giovanni:''' So... who exactly is the {{Color|keyword|nobold=1|elite player}}?
+:{{A|VO side1 ytzx giovanni 245.ogg}} '''Giovanni:''' I can assure you that it is not me &mdash; I am bound by an agreement to keep her identity confidential.
+:{{A|VO side1 ytzx mar7th 491.ogg}} '''March 7th:''' So... what's the special connection between you and the player, then?
+:{{A|VO side1 ytzx giovanni 246.ogg}} '''Giovanni:''' The answer is... there is no special connection.
+:{{A|VO side1 ytzx giovanni 247.ogg}} '''Giovanni:''' Simply put, this player wanted to meet you both, and I happen to possess the means to make this happen. Therefore, we came to an agreement: She provided the ideal festival for me, and I would be responsible for taking you to her...
+:{{A|VO side1 ytzx mar7th 492.ogg}} '''March 7th:''' Who could it be...? Going to all this effort just to meet us?
+:{{DIcon|Arrow}} Could it be... Topaz?
+::{{A|VO side1 ytzx mar7th 493.ogg}} '''March 7th:''' Don't you remember what Mr. Giovanni said? This player beat the last reigning champion &mdash; it can't be her...
+::{{A|VO side1 ytzx mar7th 494.ogg}} '''March 7th:''' ...Or he wasn't telling us the truth?
+:{{DIcon|Arrow}} Time to employ the process of elimination.
+::{{A|VO side1 ytzx mar7th 495.ogg}} '''March 7th:''' We've met so many people on our journey, there's no way we'll be able to narrow it down...
+:{{DIcon|Arrow}} Alright, you got me, guilty as charged...
+::{{A|VO side1 ytzx mar7th 496.ogg}} '''March 7th:''' Could we tone down the narcissism just a tad?
+:{{A|VO side1 ytzx giovanni 248.ogg}} '''Giovanni:''' Haha, I can't reveal anymore. If you want to know the truth, you must first take this Mastery Mark.
+<pre>{
+	"$type": "RPG.GameCore.TalkFigure",
+	"ImagePath": "SpriteOutput/Mission/TalkItem/SubMission_250404.png"
+}</pre>
+:<!--1-second delay-->
+:{{A|VO side1 ytzx giovanni 249.ogg}} '''Giovanni:''' Take it and enter the {{Color|keyword|nobold=1|championship}}. Show the universe your {{Color|keyword|nobold=1|strength}} and {{Color|keyword|nobold=1|resolve}}, and you will surely find the answer you seek.
+<pre>{
+	"$type": "RPG.GameCore.TalkFigure",
+	"Show": false,
+	"ImagePath": "SpriteOutput/Mission/TalkItem/SubMission_250404.png"
+}</pre>
+:{{A|VO side1 ytzx mar7th 497.ogg}} '''March 7th:''' Mr. Giovanni is right, we got all the Victory Zone Mastery Marks... All we need to do now is wait for the final showdown!
+:{{DIcon|Arrow}} Let's do it! This championship is ours!
+::{{A|VO side1 ytzx trotter normal.ogg}} '''(Warp Trotter/Trotter/Bubbles/Puffball/Ivory Menace/Chunky Chops/Turbo Trotter/Trotterlord):''' Oink! Oink! Oink!
+::{{A|VO side1 ytzx mar7th 498.ogg}} '''March 7th:''' Looks like (Warp Trotter/Trotter/Bubbles/Puffball/Ivory Menace/Chunky Chops/Turbo Trotter/Trotterlord) is also ready.
+::{{A|VO side1 ytzx mar7th 499.ogg}} '''March 7th:''' Then what are we waiting for? Let's go grab ourselves the title!
+:{{DIcon|Arrow}} Alright! Let's go find this elusive Elite Player!
+::{{A|VO side1 ytzx trotter normal.ogg}} '''(Warp Trotter/Trotter/Bubbles/Puffball/Ivory Menace/Chunky Chops/Turbo Trotter/Trotterlord):''' Oink! Oink! Oink!
+::{{A|VO side1 ytzx mar7th 500.ogg}} '''March 7th:''' Looks like (Warp Trotter/Trotter/Bubbles/Puffball/Ivory Menace/Chunky Chops/Turbo Trotter/Trotterlord) is also ready.
+::{{A|VO side1 ytzx mar7th 501.ogg}} '''March 7th:''' Let's do it! Time to end the mystery once and for all!
+:{{DIcon|Arrow}} Ready? Time to add the finishing touch to our journey!
+::{{A|VO side1 ytzx trotter normal.ogg}} '''(Warp Trotter/Trotter/Bubbles/Puffball/Ivory Menace/Chunky Chops/Turbo Trotter/Trotterlord):''' Oink! Oink! Oink!
+::{{A|VO side1 ytzx mar7th 502.ogg}} '''March 7th:''' Looks like (Warp Trotter/Trotter/Bubbles/Puffball/Ivory Menace/Chunky Chops/Turbo Trotter/Trotterlord) is also ready.
+::{{A|VO side1 ytzx mar7th 503.ogg}} '''March 7th:''' Alright then, let's bring this journey to a close!
+----
 {{Dialogue End}}
 
 ===Ask the Guide Robot{{subst:void|<!--801410505-->}}===
 {{Mission Description|type=adventure|location=Victory Zone: Great Mine|update|You must complete the corresponding trials first if you wish to challenge the championship contenders of the Victory Zone.<br />What will the rules for the Great Mine's trial be? This time, there doesn't seem to be anyone to actively explain anything.}}
 {{Dialogue Start}}
-:{{tx}}
+<pre>{
+	"$type": "RPG.GameCore.CreateProp",
+	"GroupID": {
+		"FixedValue": {
+			"Value": 13
+		}
+	},
+	"GroupPropID": {
+		"FixedValue": {
+			"Value": 300012
+		}
+	},
+	"CreateList": []
+}</pre>
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+----
+:{{A|VO side1 ytzx mar7th 455.ogg}} '''March 7th:''' Is... this the {{Color|keyword|nobold=1|guide}}?
+:{{A|VO side1 ytzx guide 101.ogg}} '''Guide:''' Boop... boop... boop...
+:{{A|VO side1 ytzx guide 102.ogg}} '''Guide:''' Player credentials validated. Hello, hello. Welcome to the Great Mine Victory Zone.
+:{{DIcon|Arrow}} Can you tell us what we need to do?
+::{{A|VO side1 ytzx guide 103.ogg}} '''Guide:''' Hello, hello. I'm happy to assist.
+:{{DIcon|Arrow}} Not another robot...
+::{{A|VO side1 ytzx guide 104.ogg}} '''Guide:''' Hello, hello. I am classified as an automaton, I am not a "robot."
+:{{A|VO side1 ytzx guide 105.ogg}} '''Guide:''' Allow me to introduce the puzzles for the Great Mine Victory Zone.
+:{{A|VO side1 ytzx guide 106.ogg}} '''Guide:''' A group of unidentified IPC workers, who call themselves the "{{Color|keyword|nobold=1|Topaz Support Squad}}," have taken over the Victory Zone, causing numerous problems for players.
+:{{A|VO side1 ytzx guide 107.ogg}} '''Guide:''' You must {{Color|keyword|nobold=1|operate Automaton Spiders}} to {{Color|keyword|nobold=1|trigger an explosion in their vicinity}} and disperse these disruptive people.
+:{{A|VO side1 ytzx guide 108.ogg}} '''Guide:''' Please be aware that {{Color|keyword|nobold=1|if you approach the targets head on, they are highly likely to cause damage to the Automaton Spiders}}. Thus, it is imperative that you {{Color|keyword|nobold=1|detonate the Automaton Spiders behind your targets}}.
+:{{A|VO side1 ytzx guide 109.ogg}} '''Guide:''' To clarify, the explosion is purely optical and poses no physical threat.
+:{{A|VO side1 ytzx mar7th 456.ogg}} '''March 7th:''' What does Director Topaz think about us having to take on her support squad?
+:{{A|VO side1 ytzx guide 110.ogg}} '''Guide:''' In response to your question, I am currently retrieving the relevant audio recording...
+:{{A|VO side1 ytzx topaz 118.ogg}} '''Guide:''' "You guys have caused me nothing but trouble... It's time for you to make amends by proving yourselves in the Victory Zone!"
+:{{DIcon|Arrow}} So it was all an act...
+:{{DIcon|Arrow}} It's a tough life working for the IPC...
+:{{A|VO side1 ytzx mar7th 457.ogg}} '''March 7th:''' Haha... Sometimes you just have to laugh at the absurdity of it all.
+:{{A|VO side1 ytzx guide 111.ogg}} '''Guide:''' This concludes instructions. If you are ready, please follow me to the first {{Color|keyword|nobold=1|detonation location}}.
+:{{A|VO side1 ytzx mar7th 458.ogg}} '''March 7th:''' Hey, the guide is on the move, let's keep up!
+----
 {{Dialogue End}}
 
 ===Go to the indicated area and pass the trial{{subst:void|<!--801410506-->}}===
 {{Mission Description|type=adventure|location=Victory Zone: Great Mine|update|You must complete the corresponding trials first if you wish to challenge the championship contenders of the Victory Zone.<br />The trial at the Great Mine involves blowing up Topaz's Support Squad with robots, though as the explosions are rooted in special effects, no one actually risks getting hurt. Still, blowing things up is a form of art, right?}}
 {{Dialogue Start}}
-:{{tx}}
+<pre>{
+	"$type": "RPG.GameCore.CreateProp",
+	"GroupID": {
+		"FixedValue": {
+			"Value": 13
+		}
+	},
+	"GroupPropID": {
+		"FixedValue": {
+			"Value": 300003
+		}
+	},
+	"CreateList": []
+}</pre>
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+----
+:{{A|VO side1 ytzx guide 112.ogg}} '''Guide:''' That support squad member is directly facing us.
+:{{A|VO side1 ytzx guide 113.ogg}} '''Guide:''' We must find a way of moving around him without being seen. Please, follow me.
+----
+<pre>{
+	"$type": "RPG.GameCore.CreateProp",
+	"GroupID": {
+		"FixedValue": {
+			"Value": 13
+		}
+	},
+	"GroupPropID": {
+		"FixedValue": {
+			"Value": 300002
+		}
+	},
+	"CreateList": []
+}</pre>
+;(Upon reaching the destination)
+<pre>{
+	"$type": "RPG.GameCore.ByCompareGroupState",
+	"Value": 1
+}</pre>
+:<!--1-second delay-->
+;(Unused &mdash; BoomRobot_StartPerformance)
+<pre>{
+	"$type": "RPG.GameCore.PlayerRemoteControlOtherEntity",
+	"SpecialNPCID": 12113,
+	"RecoverControlEntityPosition": true,
+	"LeavePlayerStubInplace": true,
+	"PlayerStubAnimation": {
+		"Value": "LookatPhoneBS"
+	},
+	"ForcePositionAndRotation": true,
+	"LevelAreaKey": {
+		"Custom": true,
+		"Key": "StartPoint"
+	}
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.PropStateExecute",
+	"TargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvPropEx",
+		"FetchType": "SinglePropByPropKey",
+		"SinglePropKey": {
+			"Custom": true,
+			"Key": "WayPointProp"
+		}
+	},
+	"Execute": [
+		{
+			"$type": "RPG.GameCore.PropReqInteract",
+			"TargetType": {
+				"$type": "RPG.GameCore.TargetFetchAdvPropEx",
+				"FetchType": "SinglePropByPropKey",
+				"SinglePropKey": {
+					"Custom": true,
+					"Key": "WayPointProp"
+				}
+			},
+			"InteractID": {
+				"FixedValue": {
+					"Value": 1010
+				}
+			},
+			"OnUICancel": []
+		}
+	]
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.SetNPCPlatformMove",
+	"TargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvLocalPlayer",
+		"IncludeStoryPlayer": false
+	},
+	"EnableMove": true
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.NpcSetupTrigger",
+	"TargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvFakeAvatar"
+	},
+	"TriggerID": "Trigger_102050117_06",
+	"Range": 4,
+	"OnTriggerEnter": [
+		{
+			"$type": "RPG.GameCore.AdvLockSpecialTarget",
+			"IsLock": true,
+			"TargetType": {
+				"$type": "RPG.GameCore.TargetAlias",
+				"Alias": "TaskActionTarget"
+			}
+		},
+		{
+			"$type": "RPG.GameCore.DebugLog",
+			"Message": "进入了"
+		}
+	],
+	"OnTriggerExit": [
+		{
+			"$type": "RPG.GameCore.AdvLockSpecialTarget",
+			"TargetType": {
+				"$type": "RPG.GameCore.TargetAlias",
+				"Alias": "TaskActionTarget"
+			}
+		}
+	],
+	"TargetTypes": [
+		"NPCMonster"
+	]
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.CreatePhoneOnCharacter",
+	"TargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvFakeAvatarPlayerStub"
+	}
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.SetHudTemplate",
+	"TemplateID": 1005,
+	"EnableTemplate": true
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.TutorialTaskUnlock",
+	"TriggerParam": {
+		"Value": "8062"
+	}
+}</pre>
+
+;(Unused &mdash; BoomRobot_BoomPerformance)
+:<!--1.5-second delay-->
+
+;(Unused &mdash; BoomRobot_OnFoundFailPerformance)
+:<!--1-second delay-->
+:<pre>{
+	"$type": "RPG.GameCore.PPFilterStackEffect",
+	"Duration": 0.5,
+	"AssetPath": "EnviroSystem/PostProcessFilterAsset/NoiseGlitch.asset"
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.TriggerSound",
+	"SoundName": {
+		"Value": "Ev_sfx_chaptrain_filter_fuzzy"
+	},
+	"EmitterType": "LocalPlayer"
+}</pre>
+::<!--0.5-second delay-->
+:<pre>{
+	"$type": "RPG.GameCore.PlayerRemoteControlOtherEntity",
+	"SpecialNPCID": 12113,
+	"IsCancel": true,
+	"RecoverControlEntityPosition": true,
+	"LeavePlayerStubInplace": true,
+	"ForcePositionAndRotation": true,
+	"LevelAreaKey": {
+		"Custom": true,
+		"Key": "EndPoint"
+	}
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.PPFilterStackEffect",
+	"Active": false,
+	"Rate": 0,
+	"Duration": 1,
+	"AssetPath": "EnviroSystem/PostProcessFilterAsset/NoiseGlitch.asset"
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.ActiveVirtualCamera",
+	"LevelAreaCameraKey": {
+		"Custom": true,
+		"Key": "BoomCamAnchor"
+	},
+	"IsActive": false,
+	"WaitBlendFinish": true,
+	"BlendConfig": {
+		"ExportToJson": true,
+		"BlendType": "Cut",
+		"BlendTime": 1
+	}
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.PropStateExecute",
+	"TargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvPropEx",
+		"FetchType": "SinglePropByPropKey",
+		"SinglePropKey": {
+			"Custom": true,
+			"Key": "WayPointProp"
+		}
+	},
+	"State": "Open",
+	"Execute": [
+		{
+			"$type": "RPG.GameCore.PropReqInteract",
+			"TargetType": {
+				"$type": "RPG.GameCore.TargetFetchAdvPropEx",
+				"FetchType": "SinglePropByPropKey",
+				"SinglePropKey": {
+					"Custom": true,
+					"Key": "WayPointProp"
+				}
+			},
+			"InteractID": {
+				"FixedValue": {
+					"Value": 1100
+				}
+			},
+			"OnUICancel": []
+		}
+	]
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.SetHudTemplate",
+	"TemplateID": 1005
+}</pre>
+::<!--2-second delay-->
+
+;(Unused &mdash; BoomRobot_OnPartialFailPerformance)
+:<!--2.5-second delay-->
+:<pre>{
+	"$type": "RPG.GameCore.PPFilterStackEffect",
+	"Duration": 0.5,
+	"AssetPath": "EnviroSystem/PostProcessFilterAsset/NoiseGlitch.asset"
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.TriggerSound",
+	"SoundName": {
+		"Value": "Ev_sfx_chaptrain_filter_fuzzy"
+	},
+	"EmitterType": "LocalPlayer"
+}</pre>
+::<!--0.5-second delay-->
+:<pre>{
+	"$type": "RPG.GameCore.PlayerRemoteControlOtherEntity",
+	"SpecialNPCID": 12113,
+	"IsCancel": true,
+	"RecoverControlEntityPosition": true,
+	"LeavePlayerStubInplace": true,
+	"ForcePositionAndRotation": true,
+	"LevelAreaKey": {
+		"Custom": true,
+		"Key": "EndPoint"
+	}
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.PPFilterStackEffect",
+	"Active": false,
+	"Rate": 0,
+	"Duration": 1,
+	"AssetPath": "EnviroSystem/PostProcessFilterAsset/NoiseGlitch.asset"
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.ActiveVirtualCamera",
+	"LevelAreaCameraKey": {
+		"Custom": true,
+		"Key": "BoomCamAnchor"
+	},
+	"IsActive": false,
+	"WaitBlendFinish": true,
+	"BlendConfig": {
+		"ExportToJson": true,
+		"BlendType": "Cut",
+		"BlendTime": 1
+	}
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.PropStateExecute",
+	"TargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvPropEx",
+		"FetchType": "SinglePropByPropKey",
+		"SinglePropKey": {
+			"Custom": true,
+			"Key": "WayPointProp"
+		}
+	},
+	"State": "Open",
+	"Execute": [
+		{
+			"$type": "RPG.GameCore.PropReqInteract",
+			"TargetType": {
+				"$type": "RPG.GameCore.TargetFetchAdvPropEx",
+				"FetchType": "SinglePropByPropKey",
+				"SinglePropKey": {
+					"Custom": true,
+					"Key": "WayPointProp"
+				}
+			},
+			"InteractID": {
+				"FixedValue": {
+					"Value": 1100
+				}
+			},
+			"OnUICancel": []
+		}
+	]
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.SetHudTemplate",
+	"TemplateID": 1005
+}</pre>
+::<!--2-second delay-->
+
+;(Unused &mdash; BoomRobot_EnterBoomCam)
+<pre>{
+	"$type": "RPG.GameCore.ActiveVirtualCamera",
+	"LevelAreaCameraKey": {
+		"Custom": true,
+		"Key": "BoomCamAnchor"
+	},
+	"WaitBlendFinish": true,
+	"BlendConfig": {
+		"ExportToJson": true,
+		"BlendType": "Cut",
+		"BlendTime": 1
+	}
+}</pre>
+
+;(Unused &mdash; BoomRobot_OnSuccessPerformance)
+<pre>{
+	"$type": "RPG.GameCore.ToastPage",
+	"MessageOne": {
+		"Hash": 10370186140942766706
+	},
+	"MessageTwo": {
+		"Hash": 2012001348524219443
+	}
+}</pre>
+::<!--2.5-second delay-->
+::<!--0.5-second delay-->
+:<pre>{
+	"$type": "RPG.GameCore.PlayerRemoteControlOtherEntity",
+	"SpecialNPCID": 12113,
+	"IsCancel": true,
+	"RecoverControlEntityPosition": true,
+	"LeavePlayerStubInplace": true,
+	"ForcePositionAndRotation": true,
+	"LevelAreaKey": {
+		"Custom": true,
+		"Key": "EndPoint"
+	}
+}</pre>
+::<!--0.5-second delay-->
+:<pre>{
+	"$type": "RPG.GameCore.ActiveVirtualCamera",
+	"LevelAreaCameraKey": {
+		"Custom": true,
+		"Key": "BoomCamAnchor"
+	},
+	"IsActive": false,
+	"WaitBlendFinish": true,
+	"BlendConfig": {
+		"ExportToJson": true,
+		"BlendType": "Cut",
+		"BlendTime": 1
+	}
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.PropStateExecute",
+	"TargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvPropEx",
+		"FetchType": "SinglePropByPropKey",
+		"SinglePropKey": {
+			"Custom": true,
+			"Key": "WayPointProp"
+		}
+	},
+	"State": "Open",
+	"Execute": [
+		{
+			"$type": "RPG.GameCore.PropReqInteract",
+			"TargetType": {
+				"$type": "RPG.GameCore.TargetFetchAdvPropEx",
+				"FetchType": "SinglePropByPropKey",
+				"SinglePropKey": {
+					"Custom": true,
+					"Key": "WayPointProp"
+				}
+			},
+			"InteractID": {
+				"FixedValue": {
+					"Value": 1100
+				}
+			},
+			"OnUICancel": []
+		}
+	]
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.SetHudTemplate",
+	"TemplateID": 1005
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.DestroyNPC",
+	"GroupID": 13,
+	"GroupNpcID": 400006,
+	"DestroyList": []
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.RequestGroupStateChange",
+	"TargetState": 1
+}</pre>
 {{Dialogue End}}
 
 ===Disperse the troublesome workers{{subst:void|<!--801410508-->}}===
 {{Mission Description|type=adventure|location=Victory Zone: Great Mine|update|The trial of the Great Mine involves blowing up Topaz's Support Squad with robots, though as the explosions are rooted in special effects, no one actually risks getting hurt. Still, blowing things up is a form of art, right?<br />Suppose you best incorporate your unfortunate adversaries into this artistic expression.}}
 {{Dialogue Start}}
-:{{tx}}
+<pre>{
+	"$type": "RPG.GameCore.CreateProp",
+	"GroupID": {
+		"FixedValue": {
+			"Value": 13
+		}
+	},
+	"GroupPropID": {
+		"FixedValue": {
+			"Value": 300018
+		}
+	},
+	"CreateList": []
+}</pre>
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+----
+:{{A|VO side1 ytzx guide 114.ogg}} '''Guide:''' Multiple dispersible targets detected ahead. Granting operation access to Automaton Spider.
+:{{A|VO side1 ytzx guide 115.ogg}} '''Guide:''' Access granted. Please take control of the Automaton Spider and trigger an explosion to disperse the disruptive workers.
+:{{A|VO side1 ytzx guide 116.ogg}} '''Guide:''' Warning: {{Color|keyword|nobold=1|If you approach the targets head on, they are highly likely to cause damage to the Automaton Spiders}}. Thus, it is imperative that you {{Color|keyword|nobold=1|detonate the Automaton Spiders behind your targets}}.
+----
 {{Dialogue End}}
 
 ===Use the Automaton Stealth Bomb to disperse the workers{{subst:void|<!--801410517-->}}===
 {{Mission Description|type=adventure|location=Victory Zone: Great Mine|update|The trial of the Great Mine involves blowing up Topaz's Support Squad with robots, though as the explosions are rooted in special effects, no one actually risks getting hurt. Still, blowing things up is an art form, right?<br />Sometimes, art requires a bit more thinking, and explosions themselves might need some minor variations.}}
 {{Dialogue Start}}
-:{{tx}}
+<pre>{
+	"$type": "RPG.GameCore.CreateProp",
+	"GroupID": {
+		"FixedValue": {
+			"Value": 13
+		}
+	},
+	"GroupPropID": {
+		"FixedValue": {
+			"Value": 300021
+		}
+	},
+	"CreateList": []
+}</pre>
+;(Upon reaching the destination)
+;(Unused &mdash; BoomerGame06)
+:{{A|VO side1 ytzx mar7th 482.ogg}} '''March 7th:''' Yay, we did it!
+::{{A|VO side1 ytzx guide 134.ogg}} '''Guide:''' Congratulations. Please maintain forward progression.
+
+;(Unused &mdash; BoomRobot_OnSuccessPerformanceFinish)
+<pre>{
+	"$type": "RPG.GameCore.DestroyNPC",
+	"GroupID": 13,
+	"GroupNpcID": 400010,
+	"DestroyList": []
+}</pre>
 {{Dialogue End}}
 
 ===Go to the indicated area and pass the trial{{subst:void|<!--801410518-->}}===
 {{Mission Description|type=adventure|location=Victory Zone: Great Mine|update|The trial of the Great Mine involves blowing up Topaz's Support Squad with robots, though as the explosions are rooted in special effects, no one actually risks getting hurt. Still, blowing things up is a form of art, right?<br />Suppose you best incorporate your unfortunate adversaries into this artistic expression.}}
 {{Dialogue Start}}
-:{{tx}}
+<pre>{
+	"$type": "RPG.GameCore.CreateProp",
+	"GroupID": {
+		"FixedValue": {
+			"Value": 13
+		}
+	},
+	"GroupPropID": {
+		"FixedValue": {
+			"Value": 300008
+		}
+	},
+	"CreateList": []
+}</pre>
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+----
+:{{A|VO side1 ytzx staffK 101.ogg}} '''Topaz's Support Squad Member:''' H&mdash;Huh? How'd you get behind me?
+:{{A|VO side1 ytzx staffK 102.ogg}} '''Topaz's Support Squad Member:''' Are you telling me you wiped out all my co-workers?
+:{{DIcon|Arrow}} Your powers of perception are truly astounding.
+:{{DIcon|Arrow}} You're next!
+:{{A|VO side1 ytzx staffK 103.ogg}} '''Topaz's Support Squad Member:''' Fine, if that's the case then I'm outta here... Do whatever you want!
+:{{A|VO side1 ytzx staffK 104.ogg}} '''Topaz's Support Squad Member:''' Ugh! I can't believe it!
+----
+:{{A|VO side1 ytzx guide 135.ogg}} '''Guide:''' Congratulations! The Great Mine Victory Zone crisis has been resolved &mdash; you may now challenge the championship contender!
+:{{A|VO side1 ytzx guide 136.ogg}} '''Guide:''' Transmitting championship contender coordinates... transmission complete. May your path lead to triumph!
+:{{A|VO side1 ytzx mar7th 483 m.ogg}} {{A|VO side1 ytzx mar7th 483 f.ogg}} '''March 7th:''' Well, looks like this is our last stop &mdash; time to make a move, (Trailblazer)!
+----
 {{Dialogue End}}
 
 ===Challenge the championship contender{{subst:void|<!--801410519-->}}===
 {{Mission Description|type=adventure|location=Victory Zone: Great Mine|update|You have completed all the trials, but the championship contender still hasn't revealed themselves. Just who is your mysterious adversary?<br />Whatever the case, you already have the right to issue your challenge. They can't continue to wear their mask when you fight, can they?}}
 {{Dialogue Start}}
-:{{tx}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+----
+:{{A|VO side1 ytzx giovanni 227.ogg}} '''Giovanni:''' Haha... I never doubted you two would show up sooner or later!
+:{{A|VO side1 ytzx giovanni 228.ogg}} '''Giovanni:''' Your enthusiasm is truly unmatched! As the sponsor of this event, and this Victory Zone's {{Color|keyword|nobold=1|championship contender}}, it brings me great joy to see you here!
+:{{DIcon|Arrow}} It's... you?
+::{{A|VO side1 ytzx mar7th 484.ogg}} '''March 7th:''' Mr. Giovanni! I guess it's not that surprising...
+::{{A|VO side1 ytzx giovanni 229.ogg}} '''Giovanni:''' Not who you were expecting? I must say it's truly a privilege!
+:{{DIcon|Arrow}} As suspected...
+::{{A|VO side1 ytzx mar7th 485.ogg}} '''March 7th:''' Mr. Giovanni? Seems like my hunch was right all along...
+::{{A|VO side1 ytzx giovanni 230.ogg}} '''Giovanni:''' Haha, so astute!
+:{{DIcon|Arrow}} Enough talk, hand over the Mastery Mark!
+::{{A|VO side1 ytzx mar7th 486.ogg}} '''March 7th:''' Wait, wait, wait &mdash; you're not even a little bit surprised by this?
+::{{A|VO side1 ytzx giovanni 231.ogg}} '''Giovanni:''' Ha, now I see why you've made it so far. Truly impressive!
+:{{A|VO side1 ytzx giovanni 232.ogg}} '''Giovanni:''' I imagine before our final bout begins, you'd like me to answer some questions... Who is this {{Color|keyword|nobold=1|elite player}}? What exactly is my connection to them...?
+:{{A|VO side1 ytzx mar7th 487.ogg}} '''March 7th:''' Are you finally going to tell us?
+:{{A|VO side1 ytzx trotter puzzle.ogg}} '''(Warp Trotter/Trotter/Bubbles/Puffball/Ivory Menace/Chunky Chops/Turbo Trotter/Trotterlord):''' Oink? Oink, oink?
+:{{A|VO side1 ytzx giovanni 233.ogg}} '''Giovanni:''' Tsk, tsk... Patience, Miss March.
+:{{A|VO side1 ytzx giovanni 234.ogg}} '''Giovanni:''' Did you ever wonder why the Aetherium Wars Gaming Association chose Mastery Marks as a requirement for progression?
+:{{A|VO side1 ytzx giovanni 235.ogg}} '''Giovanni:''' The answer is actually quite simple: In order to claim the title of {{Color|keyword|nobold=1|champion}}, one must demonstrate the necessary {{Color|keyword|nobold=1|strength}} and {{Color|keyword|nobold=1|resolve}} to surpass others...
+:{{A|VO side1 ytzx giovanni 236.ogg}} '''Giovanni:''' ...and the same principle applies to {{Color|keyword|nobold=1|asking questions}} as well.
+:{{A|VO side1 ytzx giovanni 237.ogg}} '''Giovanni:''' If you truly wish to question {{Color|keyword|nobold=1|fate}}, and learn the {{Color|keyword|nobold=1|answer}}, then defeat me in a duel and show me your unwavering {{Color|keyword|nobold=1|resolve}}!
+<pre>{
+	"$type": "RPG.GameCore.ShowUI",
+	"Name": "Ui.AetherDivide.AetherChallenge.AetherChallengePage",
+	"WaitForExit": true,
+	"Param": {
+		"Value": "104"
+	}
+}</pre>
 {{Dialogue End}}
 
 ===Disperse the troublesome workers{{subst:void|<!--801410511-->}}===
 {{Mission Description|type=adventure|location=Victory Zone: Great Mine|update|The trial of the Great Mine involves blowing up Topaz's Support Squad with robots, though as the explosions are rooted in special effects, no one actually risks getting hurt. Still, blowing things up is a form of art, right?<br />Suppose you best incorporate your unfortunate adversaries into this artistic expression.}}
 {{Dialogue Start}}
-:{{tx}}
+<pre>{
+	"$type": "RPG.GameCore.CreateProp",
+	"GroupID": {
+		"FixedValue": {
+			"Value": 13
+		}
+	},
+	"GroupPropID": {
+		"FixedValue": {
+			"Value": 300017
+		}
+	},
+	"CreateList": []
+}</pre>
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+----
+:{{A|VO side1 ytzx guide 118.ogg}} '''Guide:''' Multiple dispersible targets detected ahead. Granting operation access to Automaton Spider.
+:{{A|VO side1 ytzx guide 119.ogg}} '''Guide:''' Access granted. Please take control of the Automaton Spider and trigger an explosion to disperse the disruptive workers.
+:{{A|VO side1 ytzx guide 120.ogg}} '''Guide:''' Be aware: Automaton Spiders may only be used once. Trigger explosions {{Color|keyword|nobold=1|when targets are grouped closely together}}.
+----
+<pre>{
+	"$type": "RPG.GameCore.ByCompareGroupState",
+	"Value": 1
+}</pre>
+:<!--1-second delay-->
+;(Unused &mdash; BoomRobot_StartPerformance)
+<pre>{
+	"$type": "RPG.GameCore.PlayerRemoteControlOtherEntity",
+	"SpecialNPCID": 12113,
+	"RecoverControlEntityPosition": true,
+	"LeavePlayerStubInplace": true,
+	"PlayerStubAnimation": {
+		"Value": "LookatPhoneBS"
+	},
+	"ForcePositionAndRotation": true,
+	"LevelAreaKey": {
+		"Custom": true,
+		"Key": "StartPoint"
+	}
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.PropStateExecute",
+	"TargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvPropEx",
+		"FetchType": "SinglePropByPropKey",
+		"SinglePropKey": {
+			"Custom": true,
+			"Key": "WayPointProp"
+		}
+	},
+	"Execute": [
+		{
+			"$type": "RPG.GameCore.PropReqInteract",
+			"TargetType": {
+				"$type": "RPG.GameCore.TargetFetchAdvPropEx",
+				"FetchType": "SinglePropByPropKey",
+				"SinglePropKey": {
+					"Custom": true,
+					"Key": "WayPointProp"
+				}
+			},
+			"InteractID": {
+				"FixedValue": {
+					"Value": 1010
+				}
+			},
+			"OnUICancel": []
+		}
+	]
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.SetNPCPlatformMove",
+	"TargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvLocalPlayer",
+		"IncludeStoryPlayer": false
+	},
+	"EnableMove": true
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.NpcSetupTrigger",
+	"TargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvFakeAvatar"
+	},
+	"TriggerID": "Trigger_102050117_06",
+	"Range": 4,
+	"OnTriggerEnter": [
+		{
+			"$type": "RPG.GameCore.AdvLockSpecialTarget",
+			"IsLock": true,
+			"TargetType": {
+				"$type": "RPG.GameCore.TargetAlias",
+				"Alias": "TaskActionTarget"
+			}
+		},
+		{
+			"$type": "RPG.GameCore.DebugLog",
+			"Message": "进入了"
+		}
+	],
+	"OnTriggerExit": [
+		{
+			"$type": "RPG.GameCore.AdvLockSpecialTarget",
+			"TargetType": {
+				"$type": "RPG.GameCore.TargetAlias",
+				"Alias": "TaskActionTarget"
+			}
+		}
+	],
+	"TargetTypes": [
+		"NPCMonster"
+	]
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.CreatePhoneOnCharacter",
+	"TargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvFakeAvatarPlayerStub"
+	}
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.SetHudTemplate",
+	"TemplateID": 1005,
+	"EnableTemplate": true
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.TutorialTaskUnlock",
+	"TriggerParam": {
+		"Value": "8062"
+	}
+}</pre>
+
+;(Unused &mdash; BoomRobot_BoomPerformance)
+:<!--1.5-second delay-->
+
+;(Unused &mdash; BoomRobot_OnFoundFailPerformance)
+:<!--1-second delay-->
+:<pre>{
+	"$type": "RPG.GameCore.PPFilterStackEffect",
+	"Duration": 0.5,
+	"AssetPath": "EnviroSystem/PostProcessFilterAsset/NoiseGlitch.asset"
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.TriggerSound",
+	"SoundName": {
+		"Value": "Ev_sfx_chaptrain_filter_fuzzy"
+	},
+	"EmitterType": "LocalPlayer"
+}</pre>
+::<!--0.5-second delay-->
+:<pre>{
+	"$type": "RPG.GameCore.PlayerRemoteControlOtherEntity",
+	"SpecialNPCID": 12113,
+	"IsCancel": true,
+	"RecoverControlEntityPosition": true,
+	"LeavePlayerStubInplace": true,
+	"ForcePositionAndRotation": true,
+	"LevelAreaKey": {
+		"Custom": true,
+		"Key": "EndPoint"
+	}
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.PPFilterStackEffect",
+	"Active": false,
+	"Rate": 0,
+	"Duration": 1,
+	"AssetPath": "EnviroSystem/PostProcessFilterAsset/NoiseGlitch.asset"
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.ActiveVirtualCamera",
+	"LevelAreaCameraKey": {
+		"Custom": true,
+		"Key": "BoomCamAnchor"
+	},
+	"IsActive": false,
+	"WaitBlendFinish": true,
+	"BlendConfig": {
+		"ExportToJson": true,
+		"BlendType": "Cut",
+		"BlendTime": 1
+	}
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.PropStateExecute",
+	"TargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvPropEx",
+		"FetchType": "SinglePropByPropKey",
+		"SinglePropKey": {
+			"Custom": true,
+			"Key": "WayPointProp"
+		}
+	},
+	"State": "Open",
+	"Execute": [
+		{
+			"$type": "RPG.GameCore.PropReqInteract",
+			"TargetType": {
+				"$type": "RPG.GameCore.TargetFetchAdvPropEx",
+				"FetchType": "SinglePropByPropKey",
+				"SinglePropKey": {
+					"Custom": true,
+					"Key": "WayPointProp"
+				}
+			},
+			"InteractID": {
+				"FixedValue": {
+					"Value": 1100
+				}
+			},
+			"OnUICancel": []
+		}
+	]
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.SetHudTemplate",
+	"TemplateID": 1005
+}</pre>
+::<!--2-second delay-->
+
+;(Unused &mdash; BoomRobot_OnPartialFailPerformance)
+:<!--2.5-second delay-->
+:<pre>{
+	"$type": "RPG.GameCore.PPFilterStackEffect",
+	"Duration": 0.5,
+	"AssetPath": "EnviroSystem/PostProcessFilterAsset/NoiseGlitch.asset"
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.TriggerSound",
+	"SoundName": {
+		"Value": "Ev_sfx_chaptrain_filter_fuzzy"
+	},
+	"EmitterType": "LocalPlayer"
+}</pre>
+::<!--0.5-second delay-->
+:<pre>{
+	"$type": "RPG.GameCore.PlayerRemoteControlOtherEntity",
+	"SpecialNPCID": 12113,
+	"IsCancel": true,
+	"RecoverControlEntityPosition": true,
+	"LeavePlayerStubInplace": true,
+	"ForcePositionAndRotation": true,
+	"LevelAreaKey": {
+		"Custom": true,
+		"Key": "EndPoint"
+	}
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.PPFilterStackEffect",
+	"Active": false,
+	"Rate": 0,
+	"Duration": 1,
+	"AssetPath": "EnviroSystem/PostProcessFilterAsset/NoiseGlitch.asset"
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.ActiveVirtualCamera",
+	"LevelAreaCameraKey": {
+		"Custom": true,
+		"Key": "BoomCamAnchor"
+	},
+	"IsActive": false,
+	"WaitBlendFinish": true,
+	"BlendConfig": {
+		"ExportToJson": true,
+		"BlendType": "Cut",
+		"BlendTime": 1
+	}
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.PropStateExecute",
+	"TargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvPropEx",
+		"FetchType": "SinglePropByPropKey",
+		"SinglePropKey": {
+			"Custom": true,
+			"Key": "WayPointProp"
+		}
+	},
+	"State": "Open",
+	"Execute": [
+		{
+			"$type": "RPG.GameCore.PropReqInteract",
+			"TargetType": {
+				"$type": "RPG.GameCore.TargetFetchAdvPropEx",
+				"FetchType": "SinglePropByPropKey",
+				"SinglePropKey": {
+					"Custom": true,
+					"Key": "WayPointProp"
+				}
+			},
+			"InteractID": {
+				"FixedValue": {
+					"Value": 1100
+				}
+			},
+			"OnUICancel": []
+		}
+	]
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.SetHudTemplate",
+	"TemplateID": 1005
+}</pre>
+::<!--2-second delay-->
+
+;(Unused &mdash; BoomRobot_EnterBoomCam)
+<pre>{
+	"$type": "RPG.GameCore.ActiveVirtualCamera",
+	"LevelAreaCameraKey": {
+		"Custom": true,
+		"Key": "BoomCamAnchor"
+	},
+	"WaitBlendFinish": true,
+	"BlendConfig": {
+		"ExportToJson": true,
+		"BlendType": "Cut",
+		"BlendTime": 1
+	}
+}</pre>
+
+;(Unused &mdash; BoomRobot_OnSuccessPerformance)
+<pre>{
+	"$type": "RPG.GameCore.ToastPage",
+	"MessageOne": {
+		"Hash": 10370186140942766706
+	},
+	"MessageTwo": {
+		"Hash": 2012001348524219443
+	}
+}</pre>
+::<!--2.5-second delay-->
+::<!--0.5-second delay-->
+:<pre>{
+	"$type": "RPG.GameCore.PlayerRemoteControlOtherEntity",
+	"SpecialNPCID": 12113,
+	"IsCancel": true,
+	"RecoverControlEntityPosition": true,
+	"LeavePlayerStubInplace": true,
+	"ForcePositionAndRotation": true,
+	"LevelAreaKey": {
+		"Custom": true,
+		"Key": "EndPoint"
+	}
+}</pre>
+::<!--0.5-second delay-->
+:<pre>{
+	"$type": "RPG.GameCore.ActiveVirtualCamera",
+	"LevelAreaCameraKey": {
+		"Custom": true,
+		"Key": "BoomCamAnchor"
+	},
+	"IsActive": false,
+	"WaitBlendFinish": true,
+	"BlendConfig": {
+		"ExportToJson": true,
+		"BlendType": "Cut",
+		"BlendTime": 1
+	}
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.PropStateExecute",
+	"TargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvPropEx",
+		"FetchType": "SinglePropByPropKey",
+		"SinglePropKey": {
+			"Custom": true,
+			"Key": "WayPointProp"
+		}
+	},
+	"State": "Open",
+	"Execute": [
+		{
+			"$type": "RPG.GameCore.PropReqInteract",
+			"TargetType": {
+				"$type": "RPG.GameCore.TargetFetchAdvPropEx",
+				"FetchType": "SinglePropByPropKey",
+				"SinglePropKey": {
+					"Custom": true,
+					"Key": "WayPointProp"
+				}
+			},
+			"InteractID": {
+				"FixedValue": {
+					"Value": 1100
+				}
+			},
+			"OnUICancel": []
+		}
+	]
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.SetHudTemplate",
+	"TemplateID": 1005
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.DestroyNPC",
+	"GroupID": 13,
+	"GroupNpcID": 400006,
+	"DestroyList": []
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.RequestGroupStateChange",
+	"TargetState": 1
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.CreateProp",
+	"GroupID": {
+		"FixedValue": {
+			"Value": 13
+		}
+	},
+	"GroupPropID": {
+		"FixedValue": {
+			"Value": 300019
+		}
+	},
+	"CreateList": []
+}</pre>
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+----
+:{{A|VO side1 ytzx guide 118.ogg}} '''Guide:''' Multiple dispersible targets detected ahead. Granting operation access to Automaton Spider.
+:{{A|VO side1 ytzx guide 119.ogg}} '''Guide:''' Access granted. Please take control of the Automaton Spider and trigger an explosion to disperse the disruptive workers.
+:{{A|VO side1 ytzx guide 120.ogg}} '''Guide:''' Be aware: Automaton Spiders may only be used once. Trigger explosions {{Color|keyword|nobold=1|when targets are grouped closely together}}.
+----
+<pre>{
+	"$type": "RPG.GameCore.ByCompareGroupState",
+	"Value": 1
+}</pre>
+:<!--1-second delay-->
+;(Unused &mdash; BoomRobot_StartPerformance)
+<pre>{
+	"$type": "RPG.GameCore.PlayerRemoteControlOtherEntity",
+	"SpecialNPCID": 12113,
+	"RecoverControlEntityPosition": true,
+	"LeavePlayerStubInplace": true,
+	"PlayerStubAnimation": {
+		"Value": "LookatPhoneBS"
+	},
+	"ForcePositionAndRotation": true,
+	"LevelAreaKey": {
+		"Custom": true,
+		"Key": "StartPoint"
+	}
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.PropStateExecute",
+	"TargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvPropEx",
+		"FetchType": "SinglePropByPropKey",
+		"SinglePropKey": {
+			"Custom": true,
+			"Key": "WayPointProp"
+		}
+	},
+	"Execute": [
+		{
+			"$type": "RPG.GameCore.PropReqInteract",
+			"TargetType": {
+				"$type": "RPG.GameCore.TargetFetchAdvPropEx",
+				"FetchType": "SinglePropByPropKey",
+				"SinglePropKey": {
+					"Custom": true,
+					"Key": "WayPointProp"
+				}
+			},
+			"InteractID": {
+				"FixedValue": {
+					"Value": 1010
+				}
+			},
+			"OnUICancel": []
+		}
+	]
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.SetNPCPlatformMove",
+	"TargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvLocalPlayer",
+		"IncludeStoryPlayer": false
+	},
+	"EnableMove": true
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.NpcSetupTrigger",
+	"TargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvFakeAvatar"
+	},
+	"TriggerID": "Trigger_102050117_06",
+	"Range": 4,
+	"OnTriggerEnter": [
+		{
+			"$type": "RPG.GameCore.AdvLockSpecialTarget",
+			"IsLock": true,
+			"TargetType": {
+				"$type": "RPG.GameCore.TargetAlias",
+				"Alias": "TaskActionTarget"
+			}
+		},
+		{
+			"$type": "RPG.GameCore.DebugLog",
+			"Message": "进入了"
+		}
+	],
+	"OnTriggerExit": [
+		{
+			"$type": "RPG.GameCore.AdvLockSpecialTarget",
+			"TargetType": {
+				"$type": "RPG.GameCore.TargetAlias",
+				"Alias": "TaskActionTarget"
+			}
+		}
+	],
+	"TargetTypes": [
+		"NPCMonster"
+	]
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.CreatePhoneOnCharacter",
+	"TargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvFakeAvatarPlayerStub"
+	}
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.SetHudTemplate",
+	"TemplateID": 1005,
+	"EnableTemplate": true
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.TutorialTaskUnlock",
+	"TriggerParam": {
+		"Value": "8062"
+	}
+}</pre>
+
+;(Unused &mdash; BoomRobot_BoomPerformance)
+:<!--1.5-second delay-->
+
+;(Unused &mdash; BoomRobot_OnFoundFailPerformance)
+:<!--1-second delay-->
+:<pre>{
+	"$type": "RPG.GameCore.PPFilterStackEffect",
+	"Duration": 0.5,
+	"AssetPath": "EnviroSystem/PostProcessFilterAsset/NoiseGlitch.asset"
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.TriggerSound",
+	"SoundName": {
+		"Value": "Ev_sfx_chaptrain_filter_fuzzy"
+	},
+	"EmitterType": "LocalPlayer"
+}</pre>
+::<!--0.5-second delay-->
+:<pre>{
+	"$type": "RPG.GameCore.PlayerRemoteControlOtherEntity",
+	"SpecialNPCID": 12113,
+	"IsCancel": true,
+	"RecoverControlEntityPosition": true,
+	"LeavePlayerStubInplace": true,
+	"ForcePositionAndRotation": true,
+	"LevelAreaKey": {
+		"Custom": true,
+		"Key": "EndPoint"
+	}
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.PPFilterStackEffect",
+	"Active": false,
+	"Rate": 0,
+	"Duration": 1,
+	"AssetPath": "EnviroSystem/PostProcessFilterAsset/NoiseGlitch.asset"
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.ActiveVirtualCamera",
+	"LevelAreaCameraKey": {
+		"Custom": true,
+		"Key": "BoomCamAnchor"
+	},
+	"IsActive": false,
+	"WaitBlendFinish": true,
+	"BlendConfig": {
+		"ExportToJson": true,
+		"BlendType": "Cut",
+		"BlendTime": 1
+	}
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.PropStateExecute",
+	"TargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvPropEx",
+		"FetchType": "SinglePropByPropKey",
+		"SinglePropKey": {
+			"Custom": true,
+			"Key": "WayPointProp"
+		}
+	},
+	"State": "Open",
+	"Execute": [
+		{
+			"$type": "RPG.GameCore.PropReqInteract",
+			"TargetType": {
+				"$type": "RPG.GameCore.TargetFetchAdvPropEx",
+				"FetchType": "SinglePropByPropKey",
+				"SinglePropKey": {
+					"Custom": true,
+					"Key": "WayPointProp"
+				}
+			},
+			"InteractID": {
+				"FixedValue": {
+					"Value": 1100
+				}
+			},
+			"OnUICancel": []
+		}
+	]
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.SetHudTemplate",
+	"TemplateID": 1005
+}</pre>
+::<!--2-second delay-->
+
+;(Unused &mdash; BoomRobot_OnPartialFailPerformance)
+:<!--2.5-second delay-->
+:<pre>{
+	"$type": "RPG.GameCore.PPFilterStackEffect",
+	"Duration": 0.5,
+	"AssetPath": "EnviroSystem/PostProcessFilterAsset/NoiseGlitch.asset"
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.TriggerSound",
+	"SoundName": {
+		"Value": "Ev_sfx_chaptrain_filter_fuzzy"
+	},
+	"EmitterType": "LocalPlayer"
+}</pre>
+::<!--0.5-second delay-->
+:<pre>{
+	"$type": "RPG.GameCore.PlayerRemoteControlOtherEntity",
+	"SpecialNPCID": 12113,
+	"IsCancel": true,
+	"RecoverControlEntityPosition": true,
+	"LeavePlayerStubInplace": true,
+	"ForcePositionAndRotation": true,
+	"LevelAreaKey": {
+		"Custom": true,
+		"Key": "EndPoint"
+	}
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.PPFilterStackEffect",
+	"Active": false,
+	"Rate": 0,
+	"Duration": 1,
+	"AssetPath": "EnviroSystem/PostProcessFilterAsset/NoiseGlitch.asset"
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.ActiveVirtualCamera",
+	"LevelAreaCameraKey": {
+		"Custom": true,
+		"Key": "BoomCamAnchor"
+	},
+	"IsActive": false,
+	"WaitBlendFinish": true,
+	"BlendConfig": {
+		"ExportToJson": true,
+		"BlendType": "Cut",
+		"BlendTime": 1
+	}
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.PropStateExecute",
+	"TargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvPropEx",
+		"FetchType": "SinglePropByPropKey",
+		"SinglePropKey": {
+			"Custom": true,
+			"Key": "WayPointProp"
+		}
+	},
+	"State": "Open",
+	"Execute": [
+		{
+			"$type": "RPG.GameCore.PropReqInteract",
+			"TargetType": {
+				"$type": "RPG.GameCore.TargetFetchAdvPropEx",
+				"FetchType": "SinglePropByPropKey",
+				"SinglePropKey": {
+					"Custom": true,
+					"Key": "WayPointProp"
+				}
+			},
+			"InteractID": {
+				"FixedValue": {
+					"Value": 1100
+				}
+			},
+			"OnUICancel": []
+		}
+	]
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.SetHudTemplate",
+	"TemplateID": 1005
+}</pre>
+::<!--2-second delay-->
+
+;(Unused &mdash; BoomRobot_EnterBoomCam)
+<pre>{
+	"$type": "RPG.GameCore.ActiveVirtualCamera",
+	"LevelAreaCameraKey": {
+		"Custom": true,
+		"Key": "BoomCamAnchor"
+	},
+	"WaitBlendFinish": true,
+	"BlendConfig": {
+		"ExportToJson": true,
+		"BlendType": "Cut",
+		"BlendTime": 1
+	}
+}</pre>
+
+;(Unused &mdash; BoomRobot_OnSuccessPerformance)
+<pre>{
+	"$type": "RPG.GameCore.ToastPage",
+	"MessageOne": {
+		"Hash": 10370186140942766706
+	},
+	"MessageTwo": {
+		"Hash": 2012001348524219443
+	}
+}</pre>
+::<!--2.5-second delay-->
+::<!--0.5-second delay-->
+:<pre>{
+	"$type": "RPG.GameCore.PlayerRemoteControlOtherEntity",
+	"SpecialNPCID": 12113,
+	"IsCancel": true,
+	"RecoverControlEntityPosition": true,
+	"LeavePlayerStubInplace": true,
+	"ForcePositionAndRotation": true,
+	"LevelAreaKey": {
+		"Custom": true,
+		"Key": "EndPoint"
+	}
+}</pre>
+::<!--0.5-second delay-->
+:<pre>{
+	"$type": "RPG.GameCore.ActiveVirtualCamera",
+	"LevelAreaCameraKey": {
+		"Custom": true,
+		"Key": "BoomCamAnchor"
+	},
+	"IsActive": false,
+	"WaitBlendFinish": true,
+	"BlendConfig": {
+		"ExportToJson": true,
+		"BlendType": "Cut",
+		"BlendTime": 1
+	}
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.PropStateExecute",
+	"TargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvPropEx",
+		"FetchType": "SinglePropByPropKey",
+		"SinglePropKey": {
+			"Custom": true,
+			"Key": "WayPointProp"
+		}
+	},
+	"State": "Open",
+	"Execute": [
+		{
+			"$type": "RPG.GameCore.PropReqInteract",
+			"TargetType": {
+				"$type": "RPG.GameCore.TargetFetchAdvPropEx",
+				"FetchType": "SinglePropByPropKey",
+				"SinglePropKey": {
+					"Custom": true,
+					"Key": "WayPointProp"
+				}
+			},
+			"InteractID": {
+				"FixedValue": {
+					"Value": 1100
+				}
+			},
+			"OnUICancel": []
+		}
+	]
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.SetHudTemplate",
+	"TemplateID": 1005
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.DestroyNPC",
+	"GroupID": 13,
+	"GroupNpcID": 400006,
+	"DestroyList": []
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.RequestGroupStateChange",
+	"TargetState": 1
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.CreateProp",
+	"GroupID": {
+		"FixedValue": {
+			"Value": 13
+		}
+	},
+	"GroupPropID": {
+		"FixedValue": {
+			"Value": 300020
+		}
+	},
+	"CreateList": []
+}</pre>
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+----
+<pre>{
+	"$type": "RPG.GameCore.ActiveVirtualCamera",
+	"AreaName": "LevelArea_P43103_F43103004_G11",
+	"AnchorName": "GameCamera4",
+	"WaitBlendFinish": true,
+	"BlendConfig": {
+		"ExportToJson": true,
+		"BlendType": "Cut",
+		"UseDefaultBlendCurve": true
+	}
+}</pre>
+:{{A|VO side1 ytzx guide 126.ogg}} '''Guide:''' Multiple dispersible targets detected ahead. Granting operation access to Automaton Spider.
+:{{A|VO side1 ytzx guide 127.ogg}} '''Guide:''' Access granted. Please take control of the Automaton Spider and trigger an explosion to disperse the disruptive workers.
+:{{A|VO side1 ytzx guide 128.ogg}} '''Guide:''' Be aware: Automaton Spiders may only be used once. Trigger explosions {{Color|keyword|nobold=1|when targets are grouped closely together}}.
+:{{A|VO side1 ytzx mar7th 462 m.ogg}} {{A|VO side1 ytzx mar7th 462 f.ogg}} '''March 7th:''' Look how many there are, (Trailblazer)! Better make sure you choose the moment to strike. Don't let me down~
+<pre>{
+	"$type": "RPG.GameCore.ActiveVirtualCamera",
+	"AreaName": "LevelArea_P43103_F43103004_G11",
+	"AnchorName": "GameCamera4",
+	"IsActive": false,
+	"WaitBlendFinish": true,
+	"BlendConfig": {
+		"ExportToJson": true,
+		"BlendType": "Cut",
+		"UseDefaultBlendCurve": true
+	}
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.ByCompareGroupState",
+	"Value": 1
+}</pre>
+:<!--1-second delay-->
+;(Unused &mdash; BoomRobot_StartPerformance)
+<pre>{
+	"$type": "RPG.GameCore.PlayerRemoteControlOtherEntity",
+	"SpecialNPCID": 12113,
+	"RecoverControlEntityPosition": true,
+	"LeavePlayerStubInplace": true,
+	"PlayerStubAnimation": {
+		"Value": "LookatPhoneBS"
+	},
+	"ForcePositionAndRotation": true,
+	"LevelAreaKey": {
+		"Custom": true,
+		"Key": "StartPoint"
+	}
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.PropStateExecute",
+	"TargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvPropEx",
+		"FetchType": "SinglePropByPropKey",
+		"SinglePropKey": {
+			"Custom": true,
+			"Key": "WayPointProp"
+		}
+	},
+	"Execute": [
+		{
+			"$type": "RPG.GameCore.PropReqInteract",
+			"TargetType": {
+				"$type": "RPG.GameCore.TargetFetchAdvPropEx",
+				"FetchType": "SinglePropByPropKey",
+				"SinglePropKey": {
+					"Custom": true,
+					"Key": "WayPointProp"
+				}
+			},
+			"InteractID": {
+				"FixedValue": {
+					"Value": 1010
+				}
+			},
+			"OnUICancel": []
+		}
+	]
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.SetNPCPlatformMove",
+	"TargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvLocalPlayer",
+		"IncludeStoryPlayer": false
+	},
+	"EnableMove": true
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.NpcSetupTrigger",
+	"TargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvFakeAvatar"
+	},
+	"TriggerID": "Trigger_102050117_06",
+	"Range": 4,
+	"OnTriggerEnter": [
+		{
+			"$type": "RPG.GameCore.AdvLockSpecialTarget",
+			"IsLock": true,
+			"TargetType": {
+				"$type": "RPG.GameCore.TargetAlias",
+				"Alias": "TaskActionTarget"
+			}
+		},
+		{
+			"$type": "RPG.GameCore.DebugLog",
+			"Message": "进入了"
+		}
+	],
+	"OnTriggerExit": [
+		{
+			"$type": "RPG.GameCore.AdvLockSpecialTarget",
+			"TargetType": {
+				"$type": "RPG.GameCore.TargetAlias",
+				"Alias": "TaskActionTarget"
+			}
+		}
+	],
+	"TargetTypes": [
+		"NPCMonster"
+	]
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.CreatePhoneOnCharacter",
+	"TargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvFakeAvatarPlayerStub"
+	}
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.SetHudTemplate",
+	"TemplateID": 1005,
+	"EnableTemplate": true
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.TutorialTaskUnlock",
+	"TriggerParam": {
+		"Value": "8062"
+	}
+}</pre>
+
+;(Unused &mdash; BoomRobot_BoomPerformance)
+:<!--1.5-second delay-->
+
+;(Unused &mdash; BoomRobot_OnFoundFailPerformance)
+:<!--1-second delay-->
+:<pre>{
+	"$type": "RPG.GameCore.PPFilterStackEffect",
+	"Duration": 0.5,
+	"AssetPath": "EnviroSystem/PostProcessFilterAsset/NoiseGlitch.asset"
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.TriggerSound",
+	"SoundName": {
+		"Value": "Ev_sfx_chaptrain_filter_fuzzy"
+	},
+	"EmitterType": "LocalPlayer"
+}</pre>
+::<!--0.5-second delay-->
+:<pre>{
+	"$type": "RPG.GameCore.PlayerRemoteControlOtherEntity",
+	"SpecialNPCID": 12113,
+	"IsCancel": true,
+	"RecoverControlEntityPosition": true,
+	"LeavePlayerStubInplace": true,
+	"ForcePositionAndRotation": true,
+	"LevelAreaKey": {
+		"Custom": true,
+		"Key": "EndPoint"
+	}
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.PPFilterStackEffect",
+	"Active": false,
+	"Rate": 0,
+	"Duration": 1,
+	"AssetPath": "EnviroSystem/PostProcessFilterAsset/NoiseGlitch.asset"
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.ActiveVirtualCamera",
+	"LevelAreaCameraKey": {
+		"Custom": true,
+		"Key": "BoomCamAnchor"
+	},
+	"IsActive": false,
+	"WaitBlendFinish": true,
+	"BlendConfig": {
+		"ExportToJson": true,
+		"BlendType": "Cut",
+		"BlendTime": 1
+	}
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.PropStateExecute",
+	"TargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvPropEx",
+		"FetchType": "SinglePropByPropKey",
+		"SinglePropKey": {
+			"Custom": true,
+			"Key": "WayPointProp"
+		}
+	},
+	"State": "Open",
+	"Execute": [
+		{
+			"$type": "RPG.GameCore.PropReqInteract",
+			"TargetType": {
+				"$type": "RPG.GameCore.TargetFetchAdvPropEx",
+				"FetchType": "SinglePropByPropKey",
+				"SinglePropKey": {
+					"Custom": true,
+					"Key": "WayPointProp"
+				}
+			},
+			"InteractID": {
+				"FixedValue": {
+					"Value": 1100
+				}
+			},
+			"OnUICancel": []
+		}
+	]
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.SetHudTemplate",
+	"TemplateID": 1005
+}</pre>
+::<!--2-second delay-->
+
+;(Unused &mdash; BoomRobot_OnPartialFailPerformance)
+:<!--2.5-second delay-->
+:<pre>{
+	"$type": "RPG.GameCore.PPFilterStackEffect",
+	"Duration": 0.5,
+	"AssetPath": "EnviroSystem/PostProcessFilterAsset/NoiseGlitch.asset"
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.TriggerSound",
+	"SoundName": {
+		"Value": "Ev_sfx_chaptrain_filter_fuzzy"
+	},
+	"EmitterType": "LocalPlayer"
+}</pre>
+::<!--0.5-second delay-->
+:<pre>{
+	"$type": "RPG.GameCore.PlayerRemoteControlOtherEntity",
+	"SpecialNPCID": 12113,
+	"IsCancel": true,
+	"RecoverControlEntityPosition": true,
+	"LeavePlayerStubInplace": true,
+	"ForcePositionAndRotation": true,
+	"LevelAreaKey": {
+		"Custom": true,
+		"Key": "EndPoint"
+	}
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.PPFilterStackEffect",
+	"Active": false,
+	"Rate": 0,
+	"Duration": 1,
+	"AssetPath": "EnviroSystem/PostProcessFilterAsset/NoiseGlitch.asset"
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.ActiveVirtualCamera",
+	"LevelAreaCameraKey": {
+		"Custom": true,
+		"Key": "BoomCamAnchor"
+	},
+	"IsActive": false,
+	"WaitBlendFinish": true,
+	"BlendConfig": {
+		"ExportToJson": true,
+		"BlendType": "Cut",
+		"BlendTime": 1
+	}
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.PropStateExecute",
+	"TargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvPropEx",
+		"FetchType": "SinglePropByPropKey",
+		"SinglePropKey": {
+			"Custom": true,
+			"Key": "WayPointProp"
+		}
+	},
+	"State": "Open",
+	"Execute": [
+		{
+			"$type": "RPG.GameCore.PropReqInteract",
+			"TargetType": {
+				"$type": "RPG.GameCore.TargetFetchAdvPropEx",
+				"FetchType": "SinglePropByPropKey",
+				"SinglePropKey": {
+					"Custom": true,
+					"Key": "WayPointProp"
+				}
+			},
+			"InteractID": {
+				"FixedValue": {
+					"Value": 1100
+				}
+			},
+			"OnUICancel": []
+		}
+	]
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.SetHudTemplate",
+	"TemplateID": 1005
+}</pre>
+::<!--2-second delay-->
+
+;(Unused &mdash; BoomRobot_EnterBoomCam)
+<pre>{
+	"$type": "RPG.GameCore.ActiveVirtualCamera",
+	"LevelAreaCameraKey": {
+		"Custom": true,
+		"Key": "BoomCamAnchor"
+	},
+	"WaitBlendFinish": true,
+	"BlendConfig": {
+		"ExportToJson": true,
+		"BlendType": "Cut",
+		"BlendTime": 1
+	}
+}</pre>
+
+;(Unused &mdash; BoomRobot_OnSuccessPerformance)
+<pre>{
+	"$type": "RPG.GameCore.ToastPage",
+	"MessageOne": {
+		"Hash": 10370186140942766706
+	},
+	"MessageTwo": {
+		"Hash": 2012001348524219443
+	}
+}</pre>
+::<!--2.5-second delay-->
+::<!--0.5-second delay-->
+:<pre>{
+	"$type": "RPG.GameCore.PlayerRemoteControlOtherEntity",
+	"SpecialNPCID": 12113,
+	"IsCancel": true,
+	"RecoverControlEntityPosition": true,
+	"LeavePlayerStubInplace": true,
+	"ForcePositionAndRotation": true,
+	"LevelAreaKey": {
+		"Custom": true,
+		"Key": "EndPoint"
+	}
+}</pre>
+::<!--0.5-second delay-->
+:<pre>{
+	"$type": "RPG.GameCore.ActiveVirtualCamera",
+	"LevelAreaCameraKey": {
+		"Custom": true,
+		"Key": "BoomCamAnchor"
+	},
+	"IsActive": false,
+	"WaitBlendFinish": true,
+	"BlendConfig": {
+		"ExportToJson": true,
+		"BlendType": "Cut",
+		"BlendTime": 1
+	}
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.PropStateExecute",
+	"TargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvPropEx",
+		"FetchType": "SinglePropByPropKey",
+		"SinglePropKey": {
+			"Custom": true,
+			"Key": "WayPointProp"
+		}
+	},
+	"State": "Open",
+	"Execute": [
+		{
+			"$type": "RPG.GameCore.PropReqInteract",
+			"TargetType": {
+				"$type": "RPG.GameCore.TargetFetchAdvPropEx",
+				"FetchType": "SinglePropByPropKey",
+				"SinglePropKey": {
+					"Custom": true,
+					"Key": "WayPointProp"
+				}
+			},
+			"InteractID": {
+				"FixedValue": {
+					"Value": 1100
+				}
+			},
+			"OnUICancel": []
+		}
+	]
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.SetHudTemplate",
+	"TemplateID": 1005
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.DestroyNPC",
+	"GroupID": 13,
+	"GroupNpcID": 400006,
+	"DestroyList": []
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.RequestGroupStateChange",
+	"TargetState": 1
+}</pre>
 {{Dialogue End}}
 
 ===Go to the indicated area and pass the trial{{subst:void|<!--801410512-->}}===
 {{Dialogue Start}}
-:{{tx}}
+<pre>{
+	"$type": "RPG.GameCore.CreateProp",
+	"GroupID": {
+		"FixedValue": {
+			"Value": 13
+		}
+	},
+	"GroupPropID": {
+		"FixedValue": {
+			"Value": 300005
+		}
+	},
+	"CreateList": []
+}</pre>
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{A|VO side1 ytzx guide 121.ogg}} '''Guide:''' Task completion: Satisfactory. Maintain forward progression.
+:{{A|VO side1 ytzx mar7th 460.ogg}} '''March 7th:''' ...I've gotta say, this puzzle is pretty unorthodox...
+<pre>{
+	"$type": "RPG.GameCore.CreateProp",
+	"GroupID": {
+		"FixedValue": {
+			"Value": 13
+		}
+	},
+	"GroupPropID": {
+		"FixedValue": {
+			"Value": 300007
+		}
+	},
+	"CreateList": []
+}</pre>
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{A|VO side1 ytzx guide 129.ogg}} '''Guide:''' Task completion: Exceptional! Maintain forward progression.
+:{{A|VO side1 ytzx mar7th 463.ogg}} '''March 7th:''' Is it just me, or does the guide sound like it's enjoying itself?
+<pre>{
+	"$type": "RPG.GameCore.CreateProp",
+	"GroupID": {
+		"FixedValue": {
+			"Value": 13
+		}
+	},
+	"GroupPropID": {
+		"FixedValue": {
+			"Value": 300011
+		}
+	},
+	"CreateList": []
+}</pre>
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{A|VO side1 ytzx guide 125.ogg}} '''Guide:''' Task completion: Satisfactory. Maintain forward progression.
+:{{A|VO side1 ytzx mar7th 461.ogg}} '''March 7th:''' I think I'm starting to get the hang of this...
+<pre>{
+	"$type": "RPG.GameCore.CreateProp",
+	"GroupID": {
+		"FixedValue": {
+			"Value": 13
+		}
+	},
+	"GroupPropID": {
+		"FixedValue": {
+			"Value": 300006
+		}
+	},
+	"CreateList": []
+}</pre>
+;(Upon reaching the destination)
+<pre>{
+	"$type": "RPG.GameCore.CreateProp",
+	"GroupID": {
+		"FixedValue": {
+			"Value": 13
+		}
+	},
+	"GroupPropID": {
+		"FixedValue": {
+			"Value": 300004
+		}
+	},
+	"CreateList": []
+}</pre>
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{A|VO side1 ytzx guide 117.ogg}} '''Guide:''' Task completion: Satisfactory. Maintain forward progression.
+:{{A|VO side1 ytzx mar7th 459.ogg}} '''March 7th:''' Sounds like we did it. Let's press on.
 {{Dialogue End}}
 
 ==Other Languages==

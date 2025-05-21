@@ -40,24 +40,90 @@ PageTitle=#Clouds Leave No Trace#
 ===Read the anonymous letter on the Express{{subst:void|<!--202100105-->}}===
 {{Mission Description|type=companion|location=Parlor Car|A letter without a sender silently lies in the Express' Parlor Car. No one knows of its arrival, just like how no one knows who will receive it.}}
 {{Dialogue Start}}
-:{{tx}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{A|VO side2 jl player 101 m.ogg}} {{A|VO side2 jl player 101 f.ogg}} '''(Trailblazer):''' Is this... a letter?
+
+;(Obtain {{Item|''A Letter of Unknown Origin''|20|x=1|text=''A Letter of Unknown Origin''}})
+
+;(Talk to Pom-Pom)
+:{{A|VO side2 jl pompom 107.ogg}} '''Pom-Pom:''' I'm certain that no one entered this car &mdash; so who delivered the letter?
+:{{A|VO side2 jl pompom 108.ogg}} '''Pom-Pom:''' ...This is giving me the shivers!
+<pre>{
+	"$type": "RPG.GameCore.ShowMenu"
+}</pre>
 {{Dialogue End}}
 
 ===Show the anonymous letter to Pom-Pom{{subst:void|<!--202100104-->}}===
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Pom-Pom)
+----
+:{{A|VO side2 jl pompom 101 m.ogg}} {{A|VO side2 jl pompom 101 f.ogg}} '''Pom-Pom:''' Heave-ho! Heave-ho! ...Huh? Trailblazer, do you need help with something?
+:{{DIcon|Arrow}} There's a letter on the table...
+:{{DIcon|Arrow}} Who sent the letter?
+:{{A|VO side2 jl pompom 102.ogg}} '''Pom-Pom:''' Pom-Pom's been cleaning up this whole time and didn't see any letters!
+:{{DIcon|Arrow}} This is creepy...
+:{{DIcon|Arrow}} Did someone sneak onto the Express?
+:{{A|VO side2 jl pompom 103.ogg}} '''Pom-Pom:''' Wh&mdash;What!? Don't scare Pom-Pom like that! Why are there always strange things sneaking onto our train? P&mdash;Pom-Pom is going to upgrade the security level around here!
+:{{A|VO side2 jl pompom 104.ogg}} '''Pom-Pom:''' What does the letter say?
+:{{DIcon|Arrow}} (Hand the letter over to Pom-Pom)
+:{{A|VO side2 jl pompom 105.ogg}} '''Pom-Pom:''' It looks like an invitation... Hmm... Who could have sent it? Does Dan Heng have any friends on the Luofu? If Pom-Pom remembers correctly, he said he was exiled from there, right?
+:{{DIcon|Arrow}} Friends... Jing Yuan...?
+::{{A|VO side2 jl player 103 m.ogg}} {{A|VO side2 jl player 103 f.ogg}} '''(Trailblazer):''' (Unlikely. If the general sent the letter, he would've signed it.)
+:{{DIcon|Arrow}} Enemies... Blade...?
+::{{A|VO side2 jl player 104 m.ogg}} {{A|VO side2 jl player 104 f.ogg}} '''(Trailblazer):''' (I highly doubt Dan Heng's enemy would send an invitation letter...)
+:{{A|VO side2 jl pompom 106.ogg}} '''Pom-Pom:''' Why don't you show Dan Heng the letter? You know {{Rubi|where|Archives}} to find him.
+----
+;(Unused &mdash; Allend)
+:----
 {{Dialogue End}}
 
 ===Pass the letter to Dan Heng{{subst:void|<!--202100102-->}}===
 {{Mission Description|type=companion|location=Passenger Cabin|update|The business outlined in the letter is muddled. However, it is clear that whoever left it wishes to invite Dan Heng to an "old place" familiar to him and reminisce past friendships.}}
 {{Dialogue Start}}
+
+;(Lose {{Item|''A Letter of Unknown Origin''|20|x=1|text=''A Letter of Unknown Origin''}})
+
+;(Talk to Dan Heng)
 :{{tx}}
+::{{A|VO side2 jl danheng 101 m.ogg}} {{A|VO side2 jl danheng 101 f.ogg}} '''Dan Heng:''' What is it, (Trailblazer)? Do you need something?
+::{{DIcon|Arrow}} There's a letter for you...
+::{{DIcon|Arrow}} Someone's inviting you to return to old ground...
+::{{A|VO side2 jl danheng 102.ogg}} '''Dan Heng:''' ...There's no signature, and it doesn't mention a time or place. Looks like whoever sent this expects me to remember.
+::{{A|VO side2 jl danheng 103.ogg}} '''Dan Heng:''' Unfortunately, I'm going to disappoint them.
+::{{DIcon|Arrow}} Why so serious?
+:::{{A|VO side2 jl danheng 104.ogg}} '''Dan Heng:''' Huh? I'm just thinking.
+:::Do you need any help?
+:::{{A|VO side2 jl danheng 105.ogg}} '''Dan Heng:''' Thanks, but I don't even know where to start...
+:::Could it be Blade...?
+::{{DIcon|Arrow}} Do you need any help?
+:::{{A|VO side2 jl danheng 105.ogg}} '''Dan Heng:''' Thanks, but I don't even know where to start...
+:::Could it be Blade...?
+::{{DIcon|Arrow}} Could it be Blade...?
+::{{A|VO side2 jl danheng 106.ogg}} '''Dan Heng:''' The handwriting does seem like that of a swordmaster, but Blade would've gotten straight to the point.
+::{{A|VO side2 jl danheng 107.ogg}} '''Dan Heng:''' It's an invitation alright, but this is too mysterious to be him.
+::{{A|VO side2 jl danheng 108 m.ogg}} {{A|VO side2 jl danheng 108 f.ogg}} '''Dan Heng:''' (Trailblazer), let me hold on to the letter. Anything related to Dan Feng's past should be handled with care.
+::{{tx}}
+:{{A|VO side2 jl danheng 113 m.ogg}} {{A|VO side2 jl danheng 113 f.ogg}} '''Dan Heng:''' What is it, (Trailblazer)? Do you need something?
+::{{DIcon|Arrow}} About the anonymous letter...
+::{{A|VO side2 jl danheng 114.ogg}} '''Dan Heng:''' Oh... are you interested in what happened?
+:<pre>{
+	"$type": "RPG.GameCore.OpenTreasureChallenge",
+	"RaidID": 43202,
+	"OnCancel": [
+		{
+			"$type": "RPG.GameCore.FinishLevelGraph"
+		}
+	]
+}</pre>
 {{Dialogue End}}
 
 ===Ask Dan Heng about his meeting{{subst:void|<!--202100103-->}}===
 {{Mission Description|type=companion|location=Passenger Cabin|update|Delivering the message to Dan Heng and having him attend the meeting alone doesn't imply that you are indifferent to what later transpires.}}
 {{Dialogue Start}}
-:{{tx}}
+
 {{Dialogue End}}
 
 ==Other Languages==

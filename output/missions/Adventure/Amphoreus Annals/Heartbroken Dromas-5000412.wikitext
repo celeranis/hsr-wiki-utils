@@ -41,37 +41,333 @@ PageTitle=#Heartbroken Dromas#
 ===Try your luck along the dromas's path{{subst:void|<!--500041201-->}}===
 {{Mission Description|type=adventure|location="Eternal Holy City" Okhema|It is said that in Okhema, the unfortunate will be knocked over by a dromas. Are you one of the "lucky" ones?}}
 {{Dialogue Start}}
+;(If {{cx}}{{subst:void|<!--{"$type":"RPG.GameCore.ByCompareGroupProperty","GroupID":797,"DynamicName":{"Value":"PlayerBeingHit_5000412"},"CompareValue":1}-->}})
+----
+:Bang &mdash; You feel a sudden dizziness, your ears ringing loudly. Clarity and reason slip away as you notice a blurred figure waving at you from a distance. Could that be {{Rubi|Thanatos|Death Titan}}?
+:It's said that during its prime, Amphoreus was home to over 1,200 dromases. What an astounding number! So, do you know what that means?
+:{{DIcon|Arrow}} This was a paradise for dromases!
+:{{DIcon|Arrow}} Each Titan must defeat 100 dromases.
+:{{DIcon|Arrow}} Why couldn't dromases become Titans?
+:'''??:''' Come... over here...
+:Oh dear, that figure is waving at you now, growing clearer by the second. You vaguely recognize it as if it's calling you over.
+:Fine, you decide not to be afraid anymore. After all, everyone has their day. Don't be scared &mdash; come, sweet death!
+:'''??:''' ...Are you... still alive? Hey...
+:Alive? If to think is to exist, then undoubtedly, you are alive. But just now, your thoughts had clearly drifted far away. You saw Thanatos beckoning to you... What's going on?
+:'''??:''' Ah, my apologies! This dromas just went mad and dashed out, knocking you down. Are you alright?
+:{{DIcon|Arrow}} And you are...?
+:{{DIcon|Arrow}} Are you Thanatos?
+:{{DIcon|Arrow}} Were you the one calling me just now?
+:'''??:''' I... Well, how should I put it? You could say I'm currently this dromas's caretaker. Sorry about that. I chased it all the way from the Marmoreal Market to the Marmoreal Palace, and I still couldn't catch up to it. But I didn't expect it to cause harm along the way.
+:'''??:''' That was close! If it had collided with an elder, it would've been disastrous. Even if it trampled a chimera, it'd be a huge mess!
+:{{DIcon|Arrow}} So I got hit by a dromas?
+:{{DIcon|Arrow}} And now it's no big deal?
+:'''??:''' I see you're in good health, full of energy, and even in the mood to chat with me, so you must be fine! But... oh dear, what am I going to do?
+:'''??:''' A rampaging dromas running wild in a bustling city-state is bound to cause trouble someday. But it's too strong for the workshop fences to hold it back, and it's too fast for an ordinary person to catch... Who could help me?
+:It's quite obvious that this caretaker is sneaking glances at you, as if he already has something in mind.
+:{{DIcon|Arrow}} Are you trying to dump this on me?
+::'''Dromas Caretaker:''' Oh, how could it be considered dumping? The citizens of Okhema all know how capable guests from outlands are. Perhaps if you prayed a bit to {{Rubi|Cerces|Reason Titan}}, you might come up with a brilliant solution!
+::'''Dromas Caretaker:''' Besides, we can't just let this slide. That dromas hit you hard, so compensation is definitely in order!
+::But I refuse to deal with this!
+:{{DIcon|Arrow}} But I refuse to deal with this!
+:'''Dromas Caretaker:''' Well, we can't just let this slide. That dromas hit you hard, so compensation is definitely in order.
+:'''Dromas Caretaker:''' It's not just you, even I want compensation! Just a few days ago, as I arrived at the workshop at my usual time to start the day's work, guess what? There was suddenly one more dromas in the pen!
+:'''Dromas Caretaker:''' I figured, this dromas wasn't exactly a crop from the field, so how could it appear out of thin air? But now that it was there, I couldn't just drive it away, so I've been feeding it for now. But it's not that simple...
+:'''Dromas Caretaker:''' {{Size|28|At the same time every day, on this very road, it runs back and forth several times! Who can endure this!?}}
+:{{DIcon|Arrow}} Don't you know the reason?
+:{{DIcon|Arrow}} Well, it's normal &mdash; everyone's going crazy these days.
+:'''Dromas Caretaker:''' To tell you the truth, with my years of experience caring for dromases, I suspect... {{Color|keyword|nobold=1|this dromas must've had its heart broken.}}
 :{{tx}}
+
+;(Unused &mdash; MovePause)
+<pre>{
+	"$type": "RPG.GameCore.FormationMovePause",
+	"StreamId": 825
+}</pre>
+
+;(Unused &mdash; MoveResume)
+<pre>{
+	"$type": "RPG.GameCore.FormationMoveResume",
+	"StreamId": 825
+}</pre>
+
+;(Unused &mdash; Maze_Riding_SwitchRun_Off)
+<pre>{
+	"$type": "RPG.GameCore.FormationMoveSetStreamSpeed",
+	"StreamId": 825,
+	"Speed": 0.6
+}</pre>
+
+;(Unused &mdash; Maze_Riding_SwitchRun_On)
+<pre>{
+	"$type": "RPG.GameCore.FormationMoveSetStreamSpeed",
+	"StreamId": 825,
+	"Speed": 1.6
+}</pre>
+
+;(Unused &mdash; TriggerPerformance_500041201)
+<pre>{
+	"$type": "RPG.GameCore.RequestSetServerGroupPropertyV2",
+	"GroupID": 797,
+	"DynamicName": {
+		"Value": "PlayerBeingHit_5000412"
+	},
+	"Value": 1
+}</pre>
 {{Dialogue End}}
 
 ===Meet with the caretaker and try to come up with a solution{{subst:void|<!--500041202-->}}===
 {{Mission Description|type=adventure|location="Eternal Holy City" Okhema|update|Even if it's just for the compensation, you need to figure out where this dromas came from. But first, you need to calm it down.}}
 {{Dialogue Start}}
+
+;(Talk to Bard by the Roadside)
+:'''Bard by the Roadside:''' ...Oh? Looking for something?
+:'''Bard by the Roadside:''' I specialize in ghostwriting love poems. If you need one, feel free to come and ask anytime.
+----
+:'''Bard by the Roadside:''' "Forgetting is the only thing ordinary people can do, but for her, I've decided not to &mdash;"
+:'''Dromas Caretaker:''' The guards at the city gate mentioned that the heartbroken dromas has been running wild more frequently, scaring plenty of visitors. So, have you thought of any solutions?
+:{{DIcon|Arrow}} ...Start with its favorite food?
+:{{DIcon|Arrow}} ...Try playing music for it.
+:{{DIcon|Arrow}} ...Bring in another dromas and call it a day!
+:{{DIcon|Arrow}} That's about all I've got.
+:'''Dromas Caretaker:''' Hmm, sounds reasonable enough. Luckily, we've got plenty of time to test these methods one by one.
+:'''Dromas Caretaker:''' I'll leave it to you! If we find this dromas's original owner, I'll make sure they apologize to you properly!
+:{{DIcon|Arrow}} Have them bow deeply!
+:{{DIcon|Arrow}} Can they help me clean the bathhouse?
+:{{DIcon|Arrow}} Make them mimic a chimera's call.
+:'''Dromas Caretaker:''' Sure, whatever you want! By this time, it should've returned to the workshop. Let's head over and deal with it.
 :{{tx}}
 {{Dialogue End}}
 
 ===Try to soothe the heartbroken dromas{{subst:void|<!--500041203-->}}===
 {{Mission Description|type=adventure|location="Eternal Holy City" Okhema|update|Now, try to solve this dromas's woes.}}
 {{Dialogue Start}}
+
+;(Talk to Dromas Caretaker)
+:As the saying goes: There's no dromas a meal of redsoil can't handle. If there is, give it another meal.
+:Thanks to the caretaker, you manage to procure heaps of redsoil from the Dromas Workshop. If all 1,200 dromases were present, they might've finished it all &mdash; but alas, they're not.
+:'''(Trailblazer):''' (Now it's time to feed this dromas.)
+:'''Dromas Caretaker:''' You can do it, outlander! You must feed it with a sincere heart!
+:{{DIcon|Arrow}} (Feed it respectfully)
+::'''(Trailblazer):''' Come on, eat this, please &mdash;
+::'''Heartbroken Dromas:''' Grumph... Grumphhh!
+::Although you don't understand the dromas's language, you seem to sense its joy... if it's not just your imagination.
+::(Feed it pridefully)
+:{{DIcon|Arrow}} (Feed it pridefully)
+:'''(Trailblazer):''' Ho, eat &mdash;
+:'''Heartbroken Dromas:''' Grumph... Grumphhh?
+:Although you don't understand the dromas's language, you seem to feel its disdain towards you... hopefully, that's just your imagination.
+:'''Heartbroken Dromas:''' Grumphhhh!
+:The heartbroken dromas suddenly bursts out of the pen and vanishes in a flash.
+:'''Dromas Caretaker:''' Well, looks it doesn't work at all.
+:{{DIcon|Arrow}} Did I do something wrong?
+:{{DIcon|Arrow}} Was I not earnest enough?
+:'''Dromas Caretaker:''' No, it's just that the time has come. Let's check its usual spot. It'll surely be there.
 :{{tx}}
+
+
+;(Talk to Dromas Caretaker)
+:'''Bard by the Roadside:''' ...Would saying "I love you" to the dromas work? I'm pretty good at that.
+:'''Dromas Caretaker:''' No need to go that far. Just play some tunes or sing a little to cheer it up.
+:'''Dromas Caretaker:''' Come on! I know you're great at supporting others. Do it sincerely and earnestly!
+:'''Bard by the Roadside:''' Alright, I'll give it a shot.
+:'''Bard by the Roadside:''' "Forgetting is the only thing ordinary people can do, but for her, I've decided not to &mdash;"
+:{{DIcon|Arrow}} Louder!
+:{{DIcon|Arrow}} More emotion!
+:'''Bard by the Roadside:''' "When the Parting Hour clouds my vision, everywhere I look, I see her shadow &mdash;"
+:{{tx}}
+
+
+;(Talk to Dromas Caretaker)
+:'''Gorgeous Dromas:''' Grumph... Grumphhh!
+:'''Heartbroken Dromas:''' ...Grumph?
+:'''Gorgeous Dromas:''' Grumphhh... Grumphhh! Grumphhhh!
+:'''Heartbroken Dromas:''' Grumphhh...
+:'''Dromas Caretaker:''' Keep it up! Okhema's most beautiful dromas deserves your utmost effort to win its heart!
+:{{DIcon|Arrow}} ...This isn't something sincerity can solve, right?
+:{{DIcon|Arrow}} I think they're making progress.
+:'''Heartbroken Dromas:''' ...Grumph.
+:{{tx}}
+
 {{Dialogue End}}
 
 ===Meet up with the caretaker again and chat about your plans for what follows{{subst:void|<!--500041206-->}}===
 {{Mission Description|type=adventure|location="Eternal Holy City" Okhema|update|You tried everything you can think of, but nothing worked... Go chat with the caretaker again.}}
 {{Dialogue Start}}
+----
+:'''Dromas Caretaker:''' It's hopeless &mdash; we've tried every idea, and yet the heartbroken dromas continues to sprint down the road with reckless abandon. That reminds me of an old ballad I once heard...
+:'''Dromas Caretaker:''' Ah, my steps stumble and stagger to run towards you&mdash;
+:{{DIcon|Arrow}} Let's talk about something serious.
+:{{DIcon|Arrow}} The power of love, isn't it amazing?
+:'''Dromas Caretaker:''' Look, it's coming again. I don't even bother stopping it anymore... Huh? Something's different this time.
 :{{tx}}
+;(Unused &mdash; NPCMove_G802_400001)
+<pre>{
+	"$type": "RPG.GameCore.AdvSetAIMoveTo",
+	"EntityInstanceID": {
+		"FixedValue": {
+			"Value": 400001
+		}
+	},
+	"GroupId": 802,
+	"PointID": 1,
+	"MotionFlag": "Run",
+	"SpeedScale": 5
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.TriggerAnimState",
+	"TargetType": {
+		"$type": "RPG.GameCore.GroupFetchLocalTarget",
+		"Targets": [
+			400001
+		]
+	},
+	"AnimStateName": "Run"
+}</pre>
+
+;(Unused &mdash; NPCMove_G802_400002)
+<pre>{
+	"$type": "RPG.GameCore.AdvSetAIMoveTo",
+	"EntityInstanceID": {
+		"FixedValue": {
+			"Value": 400002
+		}
+	},
+	"GroupId": 802,
+	"PointID": 1,
+	"MotionFlag": "Run",
+	"SpeedScale": 0.8
+}</pre>
+
+;(Unused &mdash; NPCMove_G802_400003)
+<pre>{
+	"$type": "RPG.GameCore.AdvSetAIMoveTo",
+	"EntityInstanceID": {
+		"FixedValue": {
+			"Value": 400003
+		}
+	},
+	"GroupId": 802,
+	"PointID": 1,
+	"MotionFlag": "Run",
+	"SpeedScale": 0.8
+}</pre>
+
+;(Unused &mdash; NPCMove_G802_400004)
+<pre>{
+	"$type": "RPG.GameCore.AdvSetAIMoveTo",
+	"EntityInstanceID": {
+		"FixedValue": {
+			"Value": 400004
+		}
+	},
+	"GroupId": 802,
+	"PointID": 1,
+	"MotionFlag": "Run",
+	"SpeedScale": 0.8
+}</pre>
 {{Dialogue End}}
 
 ===Stop the rampaging dromas{{subst:void|<!--500041207-->}}===
 {{Mission Description|type=adventure|location="Eternal Holy City" Okhema|update|Now, you must enter the fray and stop this reckless dromas!}}
 {{Dialogue Start}}
+----
+:Bang &mdash; You feel the world spin once again, but before you can fall, a strong arm catches you.
+:'''???:''' Sorry about that. We were jogging here and accidentally knocked you over. Are you alright?
+:'''???:''' Hey, why are you being so kind to these Okhemans? When they were ostracizing the Kremnoans, they weren't using such nice words!
+:'''???:''' True, we were at fault first. If not for Kokopo's incredible speed, this citizen wouldn't have been injured.
+:'''???:''' Kremnoans don't stop for anyone. Breaking through everything in our path &mdash; that's what flows through our veins!
+:Alright, you think you've figured out who these people are.
+:{{DIcon|Arrow}} You know, Mydei is a brother to me.
+:{{DIcon|Arrow}} So Mydei leaves, and now you're stirring up trouble!?
+:'''Friendly Kremnoan:''' Huh!? Oh... so you're a friend of His Highness? That's different. Sorry, this was our mistake.
+:'''Impetuous Kremnoan:''' And what of it? His Highness instructed us to treat the Okhemans amicably, but does that mean we must retreat with every step, live dishonorably, and abandon the dignity and glory of the Kremnoans!?
+:'''Rational Kremnoan:''' Let's focus on the matter at hand. A friend of His Highness is naturally our friend as well. Don't lose your manners, or the foreign guest might think we're nothing but brutes who only know how to fight.
+:'''Dromas Caretaker:''' So... uh, let me interrupt. Are you the owners of this dromas?
+:'''Rational Kremnoan:''' No. Kokopo belongs to only one master, and that is His Highness, Mydei.
+:'''Rational Kremnoan:''' To be precise, Kokopo's full name is "The Fierce Beast of Kremnos: Kokopo III." It was the loyal steed of Lord Mydei, accompanying him through countless battles &mdash; valiant, peerless in combat, and utterly unstoppable.
+:'''Rational Kremnoan:''' But ever since our king left, Kokopo's temperament has grown erratic, burdened by profound longing...
+:{{DIcon|Arrow}} Longing is a sickness!
+::'''Rational Kremnoan:''' Indeed. The old saying goes, "Loneliness is a fatal ailment." It seems Kokopo, too, longs deeply for its master. Struggling to adapt to the tranquil life within the city walls has only exacerbated its restlessness.
+::'''Rational Kremnoan:''' Heh. And we, the Kremnoans left behind &mdash; aren't we the same?
+::So what are you doing now?
+:{{DIcon|Arrow}} So what are you doing now?
+:'''Rational Kremnoan:''' We... made a fool of ourselves in front of you.
+:'''Rational Kremnoan:''' The old saying goes, "Loneliness is a fatal ailment." It seems Kokopo, too, longs deeply for its master. Struggling to adapt to the tranquil life within the city walls has only exacerbated its restlessness.
+:'''Rational Kremnoan:''' Heh. And we, the Kremnoans left behind &mdash; aren't we the same?
+:'''Rational Kremnoan:''' Born into a life of war, weapons are like our limbs, and armor is our finest attire. But now, we Kremnoans are told to put down our glory, pick up hoes and abacuses... It's not something I can easily accept.
+:'''Rational Kremnoan:''' Yearning for our homeland, for meaning, for our king... Being forced to integrate into the city of our enemies &mdash; there's a gap too wide to bridge. Only by continuing to run after Kokopo can we soothe the turmoil in our hearts.
+:'''Rational Kremnoan:''' It's as if... we're still following His Highness into battle...
+:'''Kokopo III:''' Grumphhh...
+:'''Rational Kremnoan:''' Also, how could those who've always lived in peace understand this? To them, Kremnoans are just belligerent troublemakers, prone to anger and always talking of "dying in battle." But they don't realize...
+:'''Rational Kremnoan:''' In such a world, being able to live peacefully is a luxury. And the King of Kremnos bore that weight for them.
+:{{DIcon|Arrow}} Don't get too sentimental.
+::'''Rational Kremnoan:''' True. It's just the scars of Strife &mdash; something that takes time to heal. However...
+::Got it, you're just looking for a substitute.
+:{{DIcon|Arrow}} Got it, you're just looking for a substitute.
+:'''Rational Kremnoan:''' More like the scars of Strife... but it takes time to heal. But...
+:'''Impetuous Kremnoan:''' There's no need to heal. We Kremnoans will find our path. Come on, Kokopo, let's go home.
+:'''Impetuous Kremnoan:''' Let's find our king, and go to where we're needed. If we're unwelcome here, then we'll leave.
+:'''Impetuous Kremnoan:''' At the gates of Okhema, I'll wait with Kokopo. Come to join me if you want to return. Castrum Kremnos welcomes warriors but does not tolerate the cowards.
+:'''Kokopo III:''' Grumphh... Grumphhh!
+:'''Dromas Caretaker:''' Tch. The fate of the Kremnoans is indeed tragic and lamentable. But now, you finally realize one thing &mdash;
+:{{DIcon|Arrow}} You forgot to ask them for money?
+:{{DIcon|Arrow}} Where's my compensation?
+:{{DIcon|Arrow}} And I even got hit twice.
+:'''Dromas Caretaker:''' So... {{Color|keyword|nobold=1|that dromas' true love is none other than Mydei!}}
 :{{tx}}
 {{Dialogue End}}
 
 ===Go to Okhema's city gate and see how things have gone for the incident{{subst:void|<!--500041208-->}}===
 {{Mission Description|type=adventure|location="Eternal Holy City" Okhema|update|Some Kremnoans plan to return home and wish to take this dromas. Go see how things are unfolding with them.}}
 {{Dialogue Start}}
+
+;(Talk to Kokopo III)
+:'''Impetuous Kremnoan:''' ...Is that all?
+:'''Friendly Kremnoan:''' Maybe... think it over again? The journey home is long, and there are monsters outside the city. I'm worried about your safety.
+:'''Impetuous Kremnoan:''' No more thinking! I'd rather die outside than survive under the protection of a foreign land. Have you forgotten the ancient creed of Kremnos? Have you soaked in those warm baths so long that you've gone soft!?
+:'''Friendly Kremnoan:''' But this is the will of our king! Are you going to openly defy Lord Mydei's orders?
+:'''Friendly Kremnoan:''' His Highness chose to return home alone and became the Guardian of Amphoreus so that we could live peacefully, free from the company of blades. Why must we bleed for tradition to prove ourselves?
+:'''Impetuous Kremnoan:''' ...
+:'''Impetuous Kremnoan:''' Then tell me &mdash; how do we live here!? All I know is how to wield a sword. I can't handle a kitchen knife, let alone a life of flattering guests. I'm a warrior, not some grinning entertainer!
+:'''Impetuous Kremnoan:''' No matter how many choose to follow, I've made up my mind &mdash; I'm going home.
+:'''Kokopo III:''' Grumph!
+:'''Rational Kremnoan:''' Since we all regard Kokopo as His Highness's embodiment, you won't reach Castrum Kremnos without its help. Perhaps... let it decide the path ahead.
+:'''Rational Kremnoan:''' As a warrior from the outlands, a companion of Lord Mydei, please bear witness to our choice &mdash;
+:{{DIcon|Arrow}} I just want my compensation.
+:{{DIcon|Arrow}} Is this some new kind of divination ceremony?
+:'''Rational Kremnoan:''' Kokopo, hear my plea &mdash; I know the Kremnoans struggle in Okhema, and adaptation isn't something achieved overnight. But this is the path we must walk.
+:'''Rational Kremnoan:''' The King of Kremnos is far away, shedding blood for us. We should respect his will and ease his burdens.
+:'''Rational Kremnoan:''' Returning home now isn't an act of courage, it's one of cowardice &mdash; an escape from His Highness' entrusted mission, from this new battlefield. It's a refusal to change, a retreat into comfort, a fear of an uncontrollable future.
+:'''Rational Kremnoan:''' In the Kremnoan creed, there is no '''fear'''. There never was, and there never should be. That is our tradition, the foundation of our identity as Kremnoans.
+:'''Rational Kremnoan:''' Kokopo, make your choice &mdash;
+:'''Kokopo III:''' Grumphhh...
+:The dromas gazes towards the direction of its homeland, letting out a low, mournful cry. But the only response is indifferent clouds and hollow winds.
+:Here, can it still hear the sounds of battle ringing out in Castrum Kremnos? In its deep sleep, has it dreamed of warring alongside its master? Does it still feel the stir of its soul, yearning to return to those days?
+:'''Kokopo III:''' Grumphhh...
+:The dromas turns to look at the Kremnoans behind it &mdash; warriors who had fought alongside its master. No matter how they dressed their wounds in honor and pride, they are still people who bled and felt pain.
+:They have a long road ahead of them &mdash; so long that not even the {{Rubi|Gate of Infinity|Passage Titan}} could measure it precisely. Because life isn't divine providence &mdash; it's human resolve.
+:'''Kokopo III:''' Grumphhh...
+:'''Rational Kremnoan:''' ...
+:'''Dromas Caretaker:''' Come on, heartbroken dromas, you've got to make a serious decision with a sincere heart!
+:{{DIcon|Arrow}} Hey, read the room, will ya!
+:{{DIcon|Arrow}} Why are you still here?
+:In that instant, a clear cry pierced the silence.
+:'''Kokopo III:''' Grumph! Grumph! Grumphhh! Grumphhh! Grumphhhh! Grumph &mdash;
+:The dromas has made its choice. It turns toward Okhema's gates, walking away without looking back.
+:'''Impetuous Kremnoan:''' ...
+:'''Impetuous Kremnoan:''' So that's it. The second command &mdash; I have no reason to disobey further. It ends here.
+:'''Friendly Kremnoan:''' Perhaps you can find work in the workshop. Walking Kokopo isn't a job just anyone can do.
+:'''Rational Kremnoan:''' Farewell, Your Highness. Our king...
+:'''Rational Kremnoan:''' May every Kremnoan find a new life. Though it's difficult, fleeing back to familiarity from the start ensures no change will ever come.
+:'''Rational Kremnoan:''' And thank you for witnessing this. May the {{Rubi|Nikador|Strife Titan}} watch over you.
+:'''Dromas Caretaker:''' Oooh... heartbroken dromas, you're so gentle...
+:'''Dromas Caretaker:''' Oooh... I'm so moved, so tearful... I finally understand &mdash;
+:{{DIcon|Arrow}} You've turned into a dromas?
+:{{DIcon|Arrow}} Are we about to hear more about the dromas' love story?
+:'''Dromas Caretaker:''' Turns out... {{Color|keyword|nobold=1|the dromas' true love is Castrum Kremnos!}}
 :{{tx}}
+
+:'''(Trailblazer):''' (Are those Kremnoans really planning to go back? Maybe I should check the gates of Okhema.)
 {{Dialogue End}}
 
 ==Other Languages==

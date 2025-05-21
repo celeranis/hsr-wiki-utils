@@ -36,17 +36,46 @@ PageTitle=#Stellar Shadowseeker: 1st Stop, Master Control Zone#
 -->
 ==Dialogue==
 {{Stub Dialogue}}
+
+;(Talk to March 7th)
+:'''March 7th:''' What's wrong? Have you forgotten how to use a camera?
+:{{DIcon|Arrow}} I forgot...
+::'''March 7th:''' Come on, let me show you! First, line up the subject in the viewfinder. There's a target recognition thingy &mdash; then just push the shutter button!
+:{{DIcon|Exit}} It's nothing.
+:'''March 7th:''' Don't forget to show me the photos. I'm waiting!
 {{Dialogue End}}
 
 ===Read March 7th's message{{subst:void|<!--800210106-->}}===
 {{Mission Description|type=adventure|location=Master Control Zone|update|The shady object in the photo looks somewhat familiar. It must be something from the master control zone...}}
 {{Dialogue Start}}
-:{{tx}}
+<pre>{
+	"$type": "RPG.GameCore.ShowUI",
+	"Name": "Ui.Activity.ActivityGuessTheSilhouette.ActivityGuessTheSilhouetteMainPage"
+}</pre>
 {{Dialogue End}}
 
 ===Find and capture the subjects based on the photos{{subst:void|<!--800210101-->}}===
 {{Dialogue Start}}
-:{{tx}}
+
+
+;(Unused &mdash; Trigger_Performance_800210104)
+:{{Black Screen|After some time...}}
+::'''Asta:''' Hello, (Trailblazer). What's going on?
+::{{DIcon|Arrow}} I'd like to take a picture of you.
+::'''Asta:''' Of course, no problem. But I have high standards about my image, so you'll have to take it seriously.
+::{{Black Screen|After some time...}}
+:<pre>{
+	"$type": "RPG.GameCore.AdvDestroyGroupEntity",
+	"InstanceIDList": [
+		300002
+	]
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.AdvCreateGroupEntity",
+	"InstanceIDList": [
+		300001
+	]
+}</pre>
 {{Dialogue End}}
 
 ==Other Languages==

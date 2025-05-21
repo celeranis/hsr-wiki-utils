@@ -40,7 +40,28 @@ PageTitle=#Hyperlink Match, Diting!#
 ===Have a Hyperlink Match with Diting{{subst:void|<!--801413101-->}}===
 {{Mission Description|type=adventure|location=Old Weapon Testing Ground|The core gameplay loop behind Aetherium Wars is "dueling." Challenge different players and show your true strength!}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Diting)
+:'''Diting:''' Woof woof! Woof!
+:This little one is different than other Ditings you've seen... Its eyes are ferocious and its stare is locked on the Aether Coins around your waist.
+:'''Diting:''' Rrrr&mdash;woof!
+:From its barking, you can sense an intense will to fight. As you look closer you notice... it's got an Aether Coin in its mouth!
+<pre>{
+	"$type": "RPG.GameCore.ShowMenu",
+	"DisplaySingleMenuItem": true
+}</pre>
+:'''Diting:''' Rrr&mdash;ruff ruff woof! Woof woof!
+:From its barking, you feel a sense of praise, a hint of resentment, an inkling of regret at their defeat, and a sprinkle of determination to grow stronger.
+:'''(Trailblazer):''' (I didn't realize "Aetherium Wars" can even be mastered by a Diting...)
+:{{DIcon|Arrow}} Best to just not mess with it...
+<pre>{
+	"$type": "RPG.GameCore.ShowUI",
+	"Name": "Ui.AetherDivide.AetherDivideEntryPage",
+	"Param": {
+		"Value": "2"
+	},
+	"OnUIEnter": []
+}</pre>
 {{Dialogue End}}
 
 ==Other Languages==

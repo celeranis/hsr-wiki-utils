@@ -25,8 +25,6 @@ PageTitle=#Way of Primaveral Blade#
 
 ==Steps==
 # Go to the Palace of Astrum's backyard and check in on March 7th's swordplay training
-# Go to the Sleepless Earl and prepare to join a discipleship ceremony
-# Talk to Mengming
 # Go to the Palace of Astrum's backyard and help March 7th in her swordplay training
 # Engage in the promised duel
 # Assist March 7th with learning the sword and try other directions the story could have turned out
@@ -37,6 +35,8 @@ PageTitle=#Way of Primaveral Blade#
 # Engage in the promised duel
 # Assist March 7th with learning the sword and try other directions the story could have turned out
 # Engage in the promised duel
+# Go to the Sleepless Earl and prepare to join a discipleship ceremony
+# Talk to Mengming
 
 <!--
 ==Gameplay Notes==
@@ -50,79 +50,215 @@ PageTitle=#Way of Primaveral Blade#
 ===Go to the Palace of Astrum's backyard and check in on March 7th's swordplay training{{subst:void|<!--802410101-->}}===
 {{Mission Description|type=adventure|location=Central Starskiff Haven|Let us revisit the time when March 7th received a gift from her two young mentors. Accepting the pair of swords made her soar with anticipation as she imagined herself becoming a chivalrous swordsmaster, much like those depicted in immersia.<br />How about taking this opportunity to follow March 7th on her journey of mastering swordplay?}}
 {{Dialogue Start}}
-:{{tx}}
+;(Upon reaching the destination)
+{{Dialogue End}}
+
+===Go to the Palace of Astrum's backyard and help March 7th in her swordplay training{{subst:void|<!--802410104-->}}===
+{{Mission Description|type=adventure|location=Central Starskiff Haven|update|Alas, adversaries are wont to cross paths! The both of you encounter Skott, who is up to no good yet again. March 7th and Skott end up making a pact to cross swords in fifteen days.<br />March 7th makes you her "assistant swordplay instructor," leaving you in charge of her training schedule. Alongside her two masters, you have fifteen days to train March 7th into a swordswoman capable of holding her own in a duel.<br />March 7th believes that you can do it, for this is both your responsibility and obligation.<br /><br />''"The ultimate Luofu duel begins in fifteen days. Watch a pair of swords whiz through the skies in a peerless swordplay."''}}
+{{Dialogue Start}}
+
+;(Talk to Practice Dummy)
+<pre>{
+	"$type": "RPG.GameCore.SwordTrainingCheckStoryLineFinished",
+	"StoryID": 1,
+	"OnFinished": [
+		{
+			"$type": "RPG.GameCore.ShowUI",
+			"Name": "Ui.ActivitySwordTraining.Entrance.SwordTrainingSelectStoryLinePage",
+			"OnUIEnter": []
+		}
+	],
+	"OnNotFinished": [
+		{
+			"$type": "RPG.GameCore.SwordTrainingEnterGame",
+			"StoryID": 1
+		}
+	]
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.SwordTrainingCheckCanEnterGame",
+	"OnPermitted": [
+		{
+			"$type": "RPG.GameCore.TriggerPerformance",
+			"ValueSource": {},
+			"PerformanceType": "E",
+			"PerformanceID": 802410121
+		},
+		{
+			"$type": "RPG.GameCore.ShowMenu"
+		},
+		{
+			"$type": "RPG.GameCore.TriggerCustomString",
+			"CustomString": {
+				"Value": "FINISH_LEVEL_GRAPH_DialogueMain_F10201001_G242_P300001"
+			}
+		}
+	],
+	"OnNotPermitted": [
+		{
+			"$type": "RPG.GameCore.TriggerCustomString",
+			"CustomString": {
+				"Value": "NOT_ALLOW_ENTER_GAME"
+			}
+		}
+	]
+}</pre>
+;(Unused &mdash; NOT_ALLOW_ENTER_GAME)
+:'''Practice Dummy:''' I hear that you have already made sufficient battle preparations. May thy blade split and sever, and may victory find you!
+
+{{Dialogue End}}
+
+===Engage in the promised duel{{subst:void|<!--802410105-->}}===
+{{Mission Description|type=adventure|location=Central Starskiff Haven|update|The promised time of fifteen days had already passed. March 7th needs to face the arrogant and domineering Skott, whether dueling him with her sword skills or seeking help from friends with whom she had spent a long time.<br />You must have figured out how to deal with him, right?}}
+{{Dialogue Start}}
+{{Dialogue End}}
+
+===Assist March 7th with learning the sword and try other directions the story could have turned out{{subst:void|<!--802410106-->}}===
+{{Mission Description|type=adventure|location=Central Starskiff Haven|update|Alas, adversaries are wont to cross paths! The both of you encounter Skott, who is up to no good yet again. March 7th and Skott end up making a pact to cross swords in fifteen days.<br />March 7th makes you her "assistant swordplay instructor," leaving you in charge of her training schedule. Alongside her two masters, you have fifteen days to train March 7th into a swordswoman capable of holding her own in a duel.<br />Perhaps the story can go in other directions. Please give them a try!<br /><br />''"The ultimate Luofu duel begins in fifteen days. Watch a pair of swords whiz through the skies in a peerless swordplay."''}}
+{{Dialogue Start}}
+{{Dialogue End}}
+
+===Engage in the promised duel{{subst:void|<!--802410107-->}}===
+{{Mission Description|type=adventure|location=Central Starskiff Haven|update|The promised time of fifteen days had already passed. March 7th needs to face the arrogant and domineering Skott, whether dueling him with her sword skills or seeking help from friends with whom she had spent a long time.<br />You must have figured out how to deal with him, right?}}
+{{Dialogue Start}}
+{{Dialogue End}}
+
+===Assist March 7th with learning the sword and try other directions the story could have turned out{{subst:void|<!--802410108-->}}===
+{{Mission Description|type=adventure|location=Central Starskiff Haven|update|Alas, adversaries are wont to cross paths! The both of you encounter Skott, who is up to no good yet again. March 7th and Skott end up making a pact to cross swords in fifteen days.<br />March 7th makes you her "assistant swordplay instructor," leaving you in charge of her training schedule. Alongside her two masters, you have fifteen days to train March 7th into a swordswoman capable of holding her own in a duel.<br />Perhaps the story can go in other directions. Please give them a try!<br /><br />''"The ultimate Luofu duel begins in fifteen days. Watch a pair of swords whiz through the skies in a peerless swordplay."''}}
+{{Dialogue Start}}
+{{Dialogue End}}
+
+===Engage in the promised duel{{subst:void|<!--802410109-->}}===
+{{Mission Description|type=adventure|location=Central Starskiff Haven|update|The promised time of fifteen days had already passed. March 7th needs to face the arrogant and domineering Skott, whether dueling him with her sword skills or seeking help from friends with whom she had spent a long time.<br />You must have figured out how to deal with him, right?}}
+{{Dialogue Start}}
+{{Dialogue End}}
+
+===Assist March 7th with learning the sword and try other directions the story could have turned out{{subst:void|<!--802410110-->}}===
+{{Mission Description|type=adventure|location=Central Starskiff Haven|update|Alas, adversaries are wont to cross paths! The both of you encounter Skott, who is up to no good yet again. March 7th and Skott end up making a pact to cross swords in fifteen days.<br />March 7th makes you her "assistant swordplay instructor," leaving you in charge of her training schedule. Alongside her two masters, you have fifteen days to train March 7th into a swordswoman capable of holding her own in a duel.<br />Perhaps the story can go in other directions. Please give them a try!<br /><br />''"The ultimate Luofu duel begins in fifteen days. Watch a pair of swords whiz through the skies in a peerless swordplay."''}}
+{{Dialogue Start}}
+{{Dialogue End}}
+
+===Engage in the promised duel{{subst:void|<!--802410111-->}}===
+{{Mission Description|type=adventure|location=Central Starskiff Haven|update|The promised time of fifteen days had already passed. March 7th needs to face the arrogant and domineering Skott, whether dueling him with her sword skills or seeking help from friends with whom she had spent a long time.<br />You must have figured out how to deal with him, right?}}
+{{Dialogue Start}}
+{{Dialogue End}}
+
+===Assist March 7th with learning the sword and try other directions the story could have turned out{{subst:void|<!--802410112-->}}===
+{{Mission Description|type=adventure|location=Central Starskiff Haven|update|Alas, adversaries are wont to cross paths! The both of you encounter Skott, who is up to no good yet again. March 7th and Skott end up making a pact to cross swords in fifteen days.<br />March 7th makes you her "assistant swordplay instructor," leaving you in charge of her training schedule. Alongside her two masters, you have fifteen days to train March 7th into a swordswoman capable of holding her own in a duel.<br />Perhaps the story can go in other directions. Please give them a try!<br /><br />''"The ultimate Luofu duel begins in fifteen days. Watch a pair of swords whiz through the skies in a peerless swordplay."''}}
+{{Dialogue Start}}
+{{Dialogue End}}
+
+===Engage in the promised duel{{subst:void|<!--802410113-->}}===
+{{Mission Description|type=adventure|location=Central Starskiff Haven|update|The promised time of fifteen days had already passed. March 7th needs to face the arrogant and domineering Skott, whether dueling him with her sword skills or seeking help from friends with whom she had spent a long time.<br />You must have figured out how to deal with him, right?}}
+{{Dialogue Start}}
 {{Dialogue End}}
 
 ===Go to the Sleepless Earl and prepare to join a discipleship ceremony{{subst:void|<!--802410102-->}}===
 {{Mission Description|type=adventure|location=Central Starskiff Haven|update|Those who pursue the art of swordplay know to set goals for themselves, for they would have worked toward these goals even if they are never achieved eventually. March 7th's interest in swordplay came about from the Xianzhou's novels and immersia, which nurtured her fantasy of roaming the world as a great swordswoman.<br />To fully play out the role of a swordswoman, she has to first be taken under the wing of a swordmaster.}}
 {{Dialogue Start}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{A|VO side2 baishi scott 101.ogg}} '''Skott:''' Hey, this is... not how it's supposed to be, right? The Xianzhou is known for its tea culture and hospitality, but you're not treating me like a guest at all! Seriously, am I not a guest?
+:{{A|VO side2 baishi mengming 101.ogg}} '''Mengming:''' Dear guest...
+:{{A|VO side2 baishi scott 102.ogg}} '''Skott:''' Stop, don't call me a "guest." You're not even treating me as one. I want my tea just right, not too hot, not too cold, but the tea you served was either freezing or scalding! Is this how you treat your guests on the Xianzhou? How fantastic!
+:{{A|VO side2 baishi scott 103.ogg}} '''Skott:''' Your tea tastes like slop, and you even have the nerve to charge me for it! Are you trying to scam honest folks!?
+:{{A|VO side2 baishi scott 104.ogg}} '''Skott:''' And that name, "The Sleepless Earl," it's so hard to remember. How about we give you a new plaque that says "Xianzhou Slop?" It suits this place better, don't you think?
+:{{DIcon|Arrow}} (Why is it that guy again?)
+:{{DIcon|Arrow}} (Let's just give him a good beating.)
+:{{A|VO side2 baishi mar7th 122.ogg}} '''March 7th:''' Stop! You've gone too far!
+:{{A|VO side2 baishi scott 105.ogg}} '''Skott:''' Oh, who's that trying to be a hero?
+:{{A|VO side2 baishi mar7th 123 m.ogg}} {{A|VO side2 baishi mar7th 123 f.ogg}} '''March 7th:''' It's me! March 7th! Cause more trouble and I'll show you who your mommy is... Wait, that sounded lame... Hey, (Trailblazer), say something for me!
+:{{DIcon|Arrow}} She's March 7th, your ancestor!
+::{{A|VO side2 baishi mar7th 124.ogg}} '''March 7th:''' That's right! I'm your ancestor!
+::She's March 7th, the Sword Champion of the Astral Express!
+:{{DIcon|Arrow}} She's March 7th, the Sword Champion of the Astral Express!
+:{{A|VO side2 baishi mar7th 125.ogg}} '''March 7th:''' That's right, I'm the Sword Champion...
+:{{A|VO side2 baishi scott 106.ogg}} '''Skott:''' Never heard of you. Now scurry back to wherever you crawled out from.
+:{{A|VO side2 baishi yanqing 115.ogg}} '''Yanqing:''' Mr. Skott, I'm Yanqing, a Cloud Knight Lieutenant. We've met before, and I suggest you stop causing trouble.
+:{{A|VO side2 baishi scott 107.ogg}} '''Skott:''' Trouble? Hah! I'm just giving some feedback as a regular customer. The tea here is terrible, and now the Cloud Knights want to stop me from complaining about it? At this rate, who would want to ever come here for tea in the future?
+:{{A|VO side2 baishi yunli 112.ogg}} '''Yunli:''' A regular customer? You?
+:{{A|VO side2 baishi scott 108.ogg}} '''Skott:''' Yeah, what else would I be? The Xianzhou's prisoner?
+:{{A|VO side2 baishi mar7th 126.ogg}} '''March 7th:''' Anyway, if you're trying to bully this young lady, you'd better watch out for the weapon in my hand!
+:{{A|VO side2 baishi scott 109.ogg}} '''Skott:''' Huh...? Oh, that really scares me! Come on, you're not seriously trying to take my life with that piece of... scrap metal, are you?
+:{{A|VO side2 baishi mar7th 127.ogg}} '''March 7th:''' Scrap metal? This is my sword! I'm here to learn Xianzhou swordplay!
+:{{A|VO side2 baishi scott 110.ogg}} '''Skott:''' Swordplay? Oh, I get it now. It's just another kind of play, right? That explains why you're dressed like you're in a show. You're not even from the Xianzhou, so why bother learning their swordplay? If you're feeling unsafe, I can sell you an IPC mech.
+:{{A|VO side2 baishi mar7th 128.ogg}} '''March 7th:''' Pfft! As if anyone wants your junkyard scrap mechs!
+:{{DIcon|Arrow}} Your mechs are only good for show.
+::{{A|VO side2 baishi scott 111.ogg}} '''Skott:''' Looks like you guys are totally clueless.
+::March 7th can cut through your mechs with a single slash!
+:{{DIcon|Arrow}} March 7th can cut through your mechs with a single slash!
+:{{A|VO side2 baishi scott 112.ogg}} '''Skott:''' Oh! How marvelous! How about you show me, then?
+:{{A|VO side2 baishi scott 113.ogg}} '''Skott:''' Well, guess it's time to show these bumpkins something serious.
+:A few IPC mechs respond and appear near the Sleepless Earl, and more and more Xianzhou passers-by stop to watch.
+:{{A|VO side2 baishi yanqing 116.ogg}} '''Yanqing:''' Just a reminder, IPC members. Street fighting on the Xianzhou Luofu is prohibited.
+:{{A|VO side2 baishi yunli 113.ogg}} '''Yunli:''' Make any funny moves, and I'll smash those hunks of scrap metal.
+:{{A|VO side2 baishi scott 114.ogg}} '''Skott:''' Hey, hey, relax. I know the rules. These are my subordinates. They got stuck here because of the transport ship incident, and they need to vent their frustration... In the end, it's all the Xianzhou's fault.
+:{{A|VO side2 baishi scott 115.ogg}} '''Skott:''' Well, I can overlook the terrible tea, but now that you're questioning my security, I can't let it slide. After all, I have a courier business to run, and with so many clients watching, that just wouldn't look too good now, would it?
+:{{A|VO side2 baishi scott 116.ogg}} '''Skott:''' Instead of wasting your life learning useless swordplay, why not invest in our civilian mechs? You'll have your master kneeling and begging for mercy in no time.
+:{{A|VO side2 baishi mar7th 129.ogg}} '''March 7th:''' Stop! Don't you dare insult Xianzhou swordplay like that! If you have the guts, I'll show your mechs what I can do!
+:{{A|VO side2 baishi scott 117.ogg}} '''Skott:''' Huh...!? A fight, you say? Hahahahaha! Now that you've thrown down the gauntlet, March 7th, I feel I'm obliged to accept your challenge!
+:{{A|VO side2 baishi scott 118.ogg}} '''Skott:''' Say whatever you want, but once you've seen what our mechs can do, you'll be practically begging us for them.
+:{{DIcon|Arrow}} Let's make a bet.
+:{{A|VO side2 baishi scott 119.ogg}} '''Skott:''' Oh, come on, how could I say no to a bet?
+:{{A|VO side2 baishi scott 120.ogg}} '''Skott:''' So, I can see you're no master yet, March, but I'll play fair. You go back and learn swordplay from your teachers here, and in fifteen days, I'll come find you and challenge you with my mechs.
+:{{A|VO side2 baishi mar7th 130.ogg}} '''March 7th:''' Only fifteen days? Alright... fine!
+:{{A|VO side2 baishi scott 121.ogg}} '''Skott:''' And if you lose, you'll have to bark like a dog in public and shout, "Xianzhou swordplay is a total joke!" You'll stand at the entrance of Aurum Alley and say it to everyone passing by.
+:{{A|VO side2 baishi scott 122.ogg}} '''Skott:''' Oh, and if that's the case, just forget about your master and become my apprentice instead! I'll teach you how to pilot a mech!
+:{{A|VO side2 baishi mar7th 131.ogg}} '''March 7th:''' And... if I win?
+:{{A|VO side2 baishi scott 123.ogg}} '''Skott:''' I'll become your apprentice?
+:{{A|VO side2 baishi mar7th 132.ogg}} '''March 7th:''' Nah, I don't think so. I don't like you.
+:{{A|VO side2 baishi scott 124.ogg}} '''Skott:''' ...Okay, how about this? If I lose, I'll squeal like a pig in public and say, "IPC mechs are a total joke!" And I'll even print that on every mech on the transport ship. Deal?
+:{{DIcon|Arrow}} So, he just changed "barking" into "squealing" and that's supposed to be a different story?
+:{{DIcon|Arrow}} Feel like this has happened before...
+:{{DIcon|Arrow}} Your bets always sound so childish...
+:{{A|VO side2 baishi mar7th 133.ogg}} '''March 7th:''' Squealing isn't enough! You also need to apologize to the owner of the Sleepless Earl, and take back what you said about Xianzhou swordplay!
 :{{tx}}
 {{Dialogue End}}
 
 ===Talk to Mengming{{subst:void|<!--802410103-->}}===
 {{Mission Description|type=adventure|location=Central Starskiff Haven|update|Alas, adversaries are wont to cross paths! The both of you encounter Skott, who is up to no good yet again. March 7th and Skott end up making a pact to cross swords in fifteen days.<br />The way you went to Mengming's aid was exactly what swordmasters would do. Don't stop now, go over and comfort the young innkeeper of the Sleepless Earl.}}
 {{Dialogue Start}}
-:{{tx}}
-{{Dialogue End}}
 
-===Go to the Palace of Astrum's backyard and help March 7th in her swordplay training{{subst:void|<!--802410104-->}}===
-{{Mission Description|type=adventure|location=Central Starskiff Haven|update|Alas, adversaries are wont to cross paths! The both of you encounter Skott, who is up to no good yet again. March 7th and Skott end up making a pact to cross swords in fifteen days.<br />March 7th makes you her "assistant swordplay instructor," leaving you in charge of her training schedule. Alongside her two masters, you have fifteen days to train March 7th into a swordswoman capable of holding her own in a duel.<br />March 7th believes that you can do it, for this is both your responsibility and obligation.<br /><br />''"The ultimate Luofu duel begins in fifteen days. Watch a pair of swords whiz through the skies in a peerless swordplay."''}}
-{{Dialogue Start}}
+;(Talk to Mengming)
+:{{A|VO side2 baishi mar7th 135.ogg}} '''March 7th:''' Are you okay?
+:{{A|VO side2 baishi mengming 102.ogg}} '''Mengming:''' Yes, thank you all for your timely help. The shop facing a bit of flak from visitors is a minor issue, but Miss March's decision to challenge him is serious... I feel responsible, as if the shop has inconvenienced you.
+:{{A|VO side2 baishi mar7th 136.ogg}} '''March 7th:''' Don't worry! I can't stand by and watch someone be bullied. I have to stand up against injustice, no matter what!
+:{{A|VO side2 baishi mengming 103.ogg}} '''Mengming:''' Not only do you speak like a hero from an immersia, but you also have a kind heart. Your charisma has completely won me over, Miss March.
+:{{A|VO side2 baishi mar7th 137.ogg}} '''March 7th:''' Ahahaha... I'm not quite a hero yet.
+:{{A|VO side2 baishi mengming 104.ogg}} '''Mengming:''' I know you're here for the tea ceremony. Please come inside.
+:{{A|VO side2 baishi mar7th 138.ogg}} '''March 7th:''' Thanks for the invitation, but right now, I just want to focus on practicing swordplay. Masters, let's save the tea for later.
+:{{A|VO side2 baishi yanqing 118.ogg}} '''Yanqing:''' Sure, the tea can wait for now. However, I have a question, Miss March... How confident are you about the bet you just made?
+:{{DIcon|Arrow}} I don't think March has given it any thought at all...
+::{{A|VO side2 baishi mar7th 139.ogg}} '''March 7th:''' Come on, how could I possibly lose?
+::{{A|VO side2 baishi yanqing 119.ogg}} '''Yanqing:''' ...
+::{{A|VO side2 baishi yunli 115.ogg}} '''Yunli:''' You're right. It seems she really hasn't considered anything.
+::I don't think March is confident enough.
+:{{DIcon|Arrow}} I don't think March is confident enough.
+:{{A|VO side2 baishi mar7th 140.ogg}} '''March 7th:''' C&mdash;Come on! How could I possibly lack confidence! You believe in me, right, masters?
+:{{A|VO side2 baishi yunli 116.ogg}} '''Yunli:''' What do you think, Master Yanqing?
+:{{A|VO side2 baishi yanqing 120.ogg}} '''Yanqing:''' I think you already know the answer, Master Yunli.
+:{{A|VO side2 baishi yunli 117.ogg}} '''Yunli:''' I don't see any issue with it. Let March give it a shot. As long as she trains diligently, I believe she can easily deal with that hunk of IPC scrap metal.
+:{{A|VO side2 baishi yanqing 121.ogg}} '''Yanqing:''' ...As long as she trains diligently.
+:{{A|VO side2 baishi mar7th 141.ogg}} '''March 7th:''' I'm now filled with determination, masters! I'll learn swordplay well and teach that guy a lesson!
+:{{A|VO side2 baishi mar7th 142 m.ogg}} {{A|VO side2 baishi mar7th 142 f.ogg}} '''March 7th:''' (Trailblazer), you're my most trusted friend. You'll be my assistant teacher and make sure I learn swordplay properly.
+:{{DIcon|Arrow}} Three teachers and one apprentice...
+::{{A|VO side2 baishi mar7th 143.ogg}} '''March 7th:''' If I can't learn swordplay well, I'll have no one to blame but myself.
+::Do I get paid as an assistant teacher?
+:{{DIcon|Arrow}} Do I get paid as an assistant teacher?
+:{{A|VO side2 baishi mar7th 144.ogg}} '''March 7th:''' Hey, when have I ever treated you poorly?
+:{{A|VO side2 baishi mar7th 145 m.ogg}} {{A|VO side2 baishi mar7th 145 f.ogg}} '''March 7th:''' Masters, (Trailblazer), let's go back and start the training now.
 :{{tx}}
-{{Dialogue End}}
 
-===Engage in the promised duel{{subst:void|<!--802410105-->}}===
-{{Mission Description|type=adventure|location=Central Starskiff Haven|update|The promised time of fifteen days had already passed. March 7th needs to face the arrogant and domineering Skott, whether dueling him with her sword skills or seeking help from friends with whom she had spent a long time.<br />You must have figured out how to deal with him, right?}}
-{{Dialogue Start}}
-:{{tx}}
-{{Dialogue End}}
+;(Talk to Yanqing)
+:{{A|VO side2 baishi yanqing 117.ogg}} '''Yanqing:''' The Xianzhou and IPC signed a trade agreement, so those IPC people won't dare to cause any trouble. But I mean... a bet like this is quite unexpected...
 
-===Assist March 7th with learning the sword and try other directions the story could have turned out{{subst:void|<!--802410106-->}}===
-{{Mission Description|type=adventure|location=Central Starskiff Haven|update|Alas, adversaries are wont to cross paths! The both of you encounter Skott, who is up to no good yet again. March 7th and Skott end up making a pact to cross swords in fifteen days.<br />March 7th makes you her "assistant swordplay instructor," leaving you in charge of her training schedule. Alongside her two masters, you have fifteen days to train March 7th into a swordswoman capable of holding her own in a duel.<br />Perhaps the story can go in other directions. Please give them a try!<br /><br />''"The ultimate Luofu duel begins in fifteen days. Watch a pair of swords whiz through the skies in a peerless swordplay."''}}
-{{Dialogue Start}}
-:{{tx}}
-{{Dialogue End}}
+;(Talk to Yunli)
+:{{A|VO side2 baishi yunli 114.ogg}} '''Yunli:''' Those IPC guys just want to pick on an easy target so they can promote their scrap metal. So typical.
 
-===Engage in the promised duel{{subst:void|<!--802410107-->}}===
-{{Mission Description|type=adventure|location=Central Starskiff Haven|update|The promised time of fifteen days had already passed. March 7th needs to face the arrogant and domineering Skott, whether dueling him with her sword skills or seeking help from friends with whom she had spent a long time.<br />You must have figured out how to deal with him, right?}}
-{{Dialogue Start}}
-:{{tx}}
-{{Dialogue End}}
+;(Talk to March 7th)
+:{{A|VO side2 baishi mar7th 134.ogg}} '''March 7th:''' I'm still worried about the owner. Let's go check on her.
 
-===Assist March 7th with learning the sword and try other directions the story could have turned out{{subst:void|<!--802410108-->}}===
-{{Mission Description|type=adventure|location=Central Starskiff Haven|update|Alas, adversaries are wont to cross paths! The both of you encounter Skott, who is up to no good yet again. March 7th and Skott end up making a pact to cross swords in fifteen days.<br />March 7th makes you her "assistant swordplay instructor," leaving you in charge of her training schedule. Alongside her two masters, you have fifteen days to train March 7th into a swordswoman capable of holding her own in a duel.<br />Perhaps the story can go in other directions. Please give them a try!<br /><br />''"The ultimate Luofu duel begins in fifteen days. Watch a pair of swords whiz through the skies in a peerless swordplay."''}}
-{{Dialogue Start}}
-:{{tx}}
-{{Dialogue End}}
-
-===Engage in the promised duel{{subst:void|<!--802410109-->}}===
-{{Mission Description|type=adventure|location=Central Starskiff Haven|update|The promised time of fifteen days had already passed. March 7th needs to face the arrogant and domineering Skott, whether dueling him with her sword skills or seeking help from friends with whom she had spent a long time.<br />You must have figured out how to deal with him, right?}}
-{{Dialogue Start}}
-:{{tx}}
-{{Dialogue End}}
-
-===Assist March 7th with learning the sword and try other directions the story could have turned out{{subst:void|<!--802410110-->}}===
-{{Mission Description|type=adventure|location=Central Starskiff Haven|update|Alas, adversaries are wont to cross paths! The both of you encounter Skott, who is up to no good yet again. March 7th and Skott end up making a pact to cross swords in fifteen days.<br />March 7th makes you her "assistant swordplay instructor," leaving you in charge of her training schedule. Alongside her two masters, you have fifteen days to train March 7th into a swordswoman capable of holding her own in a duel.<br />Perhaps the story can go in other directions. Please give them a try!<br /><br />''"The ultimate Luofu duel begins in fifteen days. Watch a pair of swords whiz through the skies in a peerless swordplay."''}}
-{{Dialogue Start}}
-:{{tx}}
-{{Dialogue End}}
-
-===Engage in the promised duel{{subst:void|<!--802410111-->}}===
-{{Mission Description|type=adventure|location=Central Starskiff Haven|update|The promised time of fifteen days had already passed. March 7th needs to face the arrogant and domineering Skott, whether dueling him with her sword skills or seeking help from friends with whom she had spent a long time.<br />You must have figured out how to deal with him, right?}}
-{{Dialogue Start}}
-:{{tx}}
-{{Dialogue End}}
-
-===Assist March 7th with learning the sword and try other directions the story could have turned out{{subst:void|<!--802410112-->}}===
-{{Mission Description|type=adventure|location=Central Starskiff Haven|update|Alas, adversaries are wont to cross paths! The both of you encounter Skott, who is up to no good yet again. March 7th and Skott end up making a pact to cross swords in fifteen days.<br />March 7th makes you her "assistant swordplay instructor," leaving you in charge of her training schedule. Alongside her two masters, you have fifteen days to train March 7th into a swordswoman capable of holding her own in a duel.<br />Perhaps the story can go in other directions. Please give them a try!<br /><br />''"The ultimate Luofu duel begins in fifteen days. Watch a pair of swords whiz through the skies in a peerless swordplay."''}}
-{{Dialogue Start}}
-:{{tx}}
-{{Dialogue End}}
-
-===Engage in the promised duel{{subst:void|<!--802410113-->}}===
-{{Mission Description|type=adventure|location=Central Starskiff Haven|update|The promised time of fifteen days had already passed. March 7th needs to face the arrogant and domineering Skott, whether dueling him with her sword skills or seeking help from friends with whom she had spent a long time.<br />You must have figured out how to deal with him, right?}}
-{{Dialogue Start}}
-:{{tx}}
 {{Dialogue End}}
 
 ==Other Languages==

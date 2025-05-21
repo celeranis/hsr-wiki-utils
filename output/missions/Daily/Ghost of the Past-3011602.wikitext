@@ -37,7 +37,64 @@ PageTitle=#Ghost of the Past#
 ===Solve the Fragmentum echoes' predicaments and release them from their problems.{{subst:void|<!--301160201-->}}===
 {{Mission Description|type=daily|location=Backwater Pass|Some Silvermane Guard patrols spotted illusory echoes in the Fragmentum who are stuck inside due to unfinished businesses. Help them.<br />The stern Silvermane Guard mistook you for a thief...}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Stern Silvermane Guard)
+----
+----
+:'''Stern Silvermane Guard:''' You! That's right, you! Don't you run away this time!
+:{{DIcon|Arrow}} Who are you?
+::'''Stern Silvermane Guard:''' You pretending to be dumb? Everyone knows you've been stealing things left and right!
+:{{DIcon|Arrow}} What is this? Are you trying to start a fight?
+::'''Stern Silvermane Guard:''' You've got guts, little thief! Not only do you steal all day, you're also trying to resist arrest?
+:{{DIcon|Arrow}} Stop. Just stop...
+::'''Stern Silvermane Guard:''' What are you talking about? Theft isn't a serious crime. I won't go tough on you if you don't resist arrest.
+:{{DIcon|Arrow}} I don't know what you're talking about.
+:{{DIcon|Arrow}} I didn't steal anything. You've got the wrong person.
+:'''Stern Silvermane Guard:''' Alright, enough yapping. Just give it up already! I'm telling you, if you admit to your crimes, the Minister of Justice may even let you go!
+:'''Stern Silvermane Guard:''' But if you insist on resisting arrest... then I may have to go tough on you!
+----
+----
+:'''Stern Silvermane Guard:''' How can it be...!? I&mdash;I need to call for support...
+:{{DIcon|Arrow}} I told you, you've got the wrong person.
+::'''Stern Silvermane Guard:''' No way! You're the only one on the road. Who else would it be...
+:{{DIcon|Arrow}} Where are you going to get other Guards in the Fragmentum?
+::'''Stern Silvermane Guard:''' What? Fragmentum? What are you talking about...
+:'''Stern Silvermane Guard:''' Wait. Are you saying...
+:{{DIcon|Arrow}} You're trapped in the past.
+::'''Stern Silvermane Guard:''' I &mdash; How? What do you mean, trapped in the past?
+::{{DIcon|Arrow}} Put it simply... You are now a ghost.
+::{{DIcon|Arrow}} This is the Belobog of the past.
+:::'''Stern Silvermane Guard:''' This is the Belobog of the past? You mean, you're from the future? No, that's not right...
+:{{DIcon|Arrow}} You're now merely an echo in the Fragmentum.
+::'''Stern Silvermane Guard:''' I &mdash; But how? What Fragmentum? What echo?
+:'''Stern Silvermane Guard:''' Are you saying that I... I'm dead?
+:{{DIcon|Arrow}} You can think of it that way, yes.
+:{{DIcon|Arrow}} (Remain Silent)
+::'''Stern Silvermane Guard:''' ...Please say something. Is that true?
+:'''Stern Silvermane Guard:''' That's... That can't be real...
+:'''Stern Silvermane Guard:''' What about my brothers-in-arms? Boss Goethe? Madam Alisa? There's no way Madam Alisa would be dead!
+:'''Stern Silvermane Guard:''' She... She led us to victory against the monsters from the sky! Even the monsters couldn't hurt her... How could she die?
+:'''Stern Silvermane Guard:''' And if everyone is dead... If the people I swore to protect are all gone... Then why am I still protecting this street?
+<pre>{
+	"$type": "RPG.GameCore.DestroyNPC",
+	"TargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvNpcEx",
+		"FetchType": "SingleNpcByNpcID",
+		"SingleNpcID": {
+			"GroupID": {
+				"FixedValue": {
+					"Value": 67
+				}
+			},
+			"GroupNpcID": {
+				"FixedValue": {
+					"Value": 400001
+				}
+			}
+		}
+	}
+}</pre>
+:As the Guard mutters to himself, he gradually turns to dust and dissipates into the empty Fragmentum.
 {{Dialogue End}}
 
 ==Other Languages==

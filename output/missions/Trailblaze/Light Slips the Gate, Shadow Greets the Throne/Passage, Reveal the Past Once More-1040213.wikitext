@@ -17,7 +17,7 @@ PageTitle=#Passage, Reveal the Past Once More#
 |area          = "Eternal Holy City" Okhema
 |prev          = Throne, End Those Long Years Forlorn
 |next          = 
-|rewards       = Trailblaze EXP*800; Stellar Jade*100; Lost Crystal*18; Trianne Doll (Profile Picture)*1 { text = Trianne Doll }; Celestial Ambrosia*320; Strumming Time*1 { text = ''Strumming Time'' }; Credit*100,000
+|rewards       = Trailblaze EXP*800; Stellar Jade*100; Lost Crystal*18; Trianne Doll (Profile Picture)*1 { text = Trianne Doll }; Celestial Ambrosia*320; Strumming Time (Disk)*1 { text = ''Strumming Time'' }; Credit*100,000
 }}
 '''''Passage, Reveal the Past Once More''''' is a [[Trailblaze Mission]] in the chapter [[Light Slips the Gate, Shadow Greets the Throne]].
 
@@ -56,111 +56,1221 @@ PageTitle=#Passage, Reveal the Past Once More#
 ===Participate in Trianne's funeral{{subst:void|<!--104021301-->}}===
 {{Mission Description|type=trailblaze|location="Eternal Holy City" Okhema|Though we won the fight against the Flame Reaver, we have lost Trianne forever.}}
 {{Dialogue Start}}
+
+;(Unused &mdash; Talk294)
+----
+::{{A|VO chapter4 18 aglaea 108.ogg}} '''Aglaea:''' You've returned unscathed and brought tidings of triumph. Truly a moment worthy of celebration.
+::{{A|VO chapter4 19 tribbie 101.ogg}} '''Tribbie:''' We smell sunlight in the wind of Okhema...
+::{{A|VO chapter4 19 tribbie 102.ogg}} '''Tribbie:''' This was your favorite spot, wasn't it, Trianne?
+::{{A|VO chapter4 19 castorice 101.ogg}} '''Castorice:''' Lady Trianne... Why did it have to end up like this?
+::{{A|VO chapter4 19 tribbie 103.ogg}} '''Tribbie:''' Take it easy, Cas. Departure is a part of life. It's just that '''ours''' isn't as tumultuous as it is for ordinary folks.
+::{{A|VO chapter4 19 trinnon 101.ogg}} '''Trinnon:''' When '''we''' started our journey, {{Rubi|Janus|Passage Titan}} had already provided their prophecy. Just like how that Titan divided themself to create the countless passages in the world...
+::{{A|VO chapter4 19 trinnon 102.ogg}} '''Trinnon:''' It's only natural for '''us''' to follow the same path since '''we''' inherited their destiny.
+::{{A|VO chapter4 19 phainon 101.ogg}} '''Phainon:''' If you don't mind, Tribbie...
+::{{A|VO chapter4 19 phainon 102.ogg}} '''Phainon:''' Are you still willing to unveil that past for us? The past regarding the "prophecy."
+::{{A|VO chapter4 19 tribbie 104.ogg}} '''Tribbie:''' What do you seek to learn, Snowy?
+::{{A|VO chapter4 19 phainon 103.ogg}} '''Phainon:''' ...
+::{{A|VO chapter4 19 phainon 104.ogg}} '''Phainon:''' Mydeimos has left the city to face his own fate.
+::{{A|VO chapter4 19 phainon 105.ogg}} '''Phainon:''' That is the fate of every demigod. We will all eventually let go of our past to follow the same path as his.
+::{{A|VO chapter4 19 phainon 106.ogg}} '''Phainon:''' So, what I want to know is &mdash; As Amphoreus' first demigod, what compelled you to take the first step on this journey?
+::{{A|VO chapter4 19 phainon 107.ogg}} '''Phainon:''' And what has sustained you to make it this far without looking back, despite the fracturing of your body and the numerous departures you have endured?
+::{{A|VO chapter4 19 tribbie 105.ogg}} '''Tribbie:''' ...Alright.
+::{{A|VO chapter4 19 aglaea 101.ogg}} '''Aglaea:''' Teacher, are you sure about this?
+::{{A|VO chapter4 19 tribbie 106.ogg}} '''Tribbie:''' De is already doing what he has to do... What reason do '''we''' have to keep it from them? Let's go, everyone...
+::{{A|VO chapter4 19 trinnon 103.ogg}} '''Trinnon:''' Let's go to the Abyss of Fate and see how it used to be.
+::{{DIcon|Arrow}} Count me in.
+:::{{A|VO chapter4 19 tribbie 107.ogg}} '''Tribbie:''' That's great. Thank you.
+::{{DIcon|Arrow}} Mem, time to work!
+:::{{A|VO chapter4 19 tribbie 108.ogg}} '''Tribbie:''' Then... '''we''' will leave it to you.
+::{{tx}}
+
+;(Unused &mdash; EnterDistrict_G65)
 :{{tx}}
+:----
+::{{A|VO chapter4 19 olonyx 101.ogg}} '''???:''' ...
+::{{A|VO chapter4 19 olonyx 102.ogg}} '''Oronyx:''' *Titan's murmurs*
+::{{A|VO chapter4 19 olonyx 103.ogg}} '''Oronyx:''' Tri... bios...
+::{{A|VO chapter4 19 datibao 101.ogg}} '''Tribios:''' You're here, {{Rubi|Oronyx|Time Titan}}.
+::{{DIcon|Arrow}} Wait, I can understand the Titan language now?
+::{{DIcon|Arrow}} Fancy simultaneous interpretation!
+::{{DIcon|Arrow}} Your voice now sounds so... mature.
+::{{A|VO chapter4 19 trinnon 115.ogg}} '''Trinnon:''' This is '''our''' memory, so your senses are also aligned with the Tribios' of that moment.
+::{{tx}}
+
+;(Unused &mdash; EnterDistrict_G{GroupID})
+:{{A|VO chapter4 19 phainon 120.ogg}} '''Phainon:''' I never thought there would be such a hidden space in the Abyss.
+::{{A|VO chapter4 19 trinnon 124.ogg}} '''Trinnon:''' This is the Archive of Prophecies, an important ceremonial site back then.
 {{Dialogue End}}
 
 ===Advance towards the Archive of Prophecies at the left of the altar{{subst:void|<!--104021307-->}}===
 {{Mission Description|type=trailblaze|location="Sanctum of Prophecy" Janusopolis|update|Through (Trailblazer)'s power, Phainon's group journeys to the past of the Abyss of Fate &mdash; the "Sanctum of Prophecy" Janusopolis, where they see the Tribbie trio as they were a thousand years ago.}}
 {{Dialogue Start}}
-:{{tx}}
+;(If {{F|undefined}} is undefined 0)
+<pre>{
+	"$type": "RPG.GameCore.TriggerEntityEventV2",
+	"EventName": {
+		"Value": "Clt_TriggerClose"
+	},
+	"TargetType": {
+		"$type": "RPG.GameCore.GroupFetchLocalTarget",
+		"TargetType": "Prop",
+		"Targets": [
+			300012
+		]
+	}
+}</pre>
+;(Unused &mdash; PuzzleSwitchPerformance)
+<pre>{
+	"$type": "RPG.GameCore.GravityBallPuzzleSwitchBoardWaitFinish"
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.TriggerEntityEventV2",
+	"EventName": {
+		"Value": "exit_pad"
+	},
+	"TargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvPropEx",
+		"FetchType": "SinglePropByPropID",
+		"SinglePropID": {
+			"GroupID": {
+				"FixedValue": {
+					"Value": 6
+				}
+			},
+			"ID": {
+				"FixedValue": {
+					"Value": 300003
+				}
+			}
+		}
+	}
+}</pre>
+
+;(Unused &mdash; PuzzleStartPerformance)
+:<!--0.3-second delay-->
+:<pre>{
+	"$type": "RPG.GameCore.TriggerSound",
+	"SoundName": {
+		"Value": "Ev_sfx_amphoreus_gravityball_platform"
+	},
+	"EmitterType": "Prop",
+	"TargetType": {
+		"$type": "RPG.GameCore.GroupFetchLocalTarget",
+		"TargetType": "Prop",
+		"Targets": [
+			300014
+		]
+	}
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.TriggerEffectList",
+	"TargetType": {
+		"$type": "RPG.GameCore.GroupFetchLocalTarget",
+		"TargetType": "Prop",
+		"Targets": [
+			300014
+		]
+	},
+	"EffectList": [
+		{
+			"EffectPath": "Effects/Eff_Prefab/Eff_Scene/InteractiveProp/Eff_Chap04_Prop_GravityBallPuzzleBoard_01_Start_Lod0.prefab"
+		}
+	]
+}</pre>
+::<!--2.5-second delay-->
+::<!--0.5-second delay-->
+:<pre>{
+	"$type": "RPG.GameCore.RemoveEffect",
+	"TargetType": {
+		"$type": "RPG.GameCore.GroupFetchLocalTarget",
+		"TargetType": "Prop",
+		"Targets": [
+			300014
+		]
+	},
+	"EffectPath": "Effects/Eff_Prefab/Eff_Scene/InteractiveProp/Eff_Chap04_Prop_GravityBallPuzzleBoard_01_Start_Lod0.prefab",
+	"Flags": []
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.TutorialTaskUnlock",
+	"TriggerParam": {
+		"Value": "6348"
+	}
+}</pre>
+
+;(Unused &mdash; PuzzleResetPerformance)
+
+
+;(Unused &mdash; PuzzleFinishPerformance)
+<pre>{
+	"$type": "RPG.GameCore.GravityBallPuzzleLastFinishCondition",
+	"DefaultGroupEvent": {
+		"Value": "default_finish"
+	},
+	"ConditionLogic": [
+		{
+			"PuzzleID": {
+				"FixedValue": {
+					"Value": 23
+				}
+			},
+			"GroupEvent": {
+				"Value": "finish_id_23"
+			}
+		},
+		{
+			"PuzzleID": {
+				"FixedValue": {
+					"Value": 14
+				}
+			},
+			"GroupEvent": {
+				"Value": "finish_id_14"
+			}
+		}
+	]
+}</pre>
+
+;(Unused &mdash; finish_id_23)
+<pre>{
+	"$type": "RPG.GameCore.TriggerEntityEventV2",
+	"EventName": {
+		"Value": "enter_pad"
+	},
+	"TargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvPropEx",
+		"FetchType": "SinglePropByPropID",
+		"SinglePropID": {
+			"GroupID": {
+				"FixedValue": {
+					"Value": 6
+				}
+			},
+			"ID": {
+				"FixedValue": {
+					"Value": 300003
+				}
+			}
+		}
+	}
+}</pre>
+::<!--2-second delay-->
+:<pre>{
+	"$type": "RPG.GameCore.TriggerEntityEventV2",
+	"EventName": {
+		"Value": "Clt_TriggerOpen"
+	},
+	"TargetType": {
+		"$type": "RPG.GameCore.GroupFetchLocalTarget",
+		"TargetType": "Prop",
+		"Targets": [
+			300012
+		]
+	}
+}</pre>
+::<!--2-second delay-->
+:<pre>{
+	"$type": "RPG.GameCore.TriggerEntityEventV2",
+	"EventName": {
+		"Value": "Clt_TriggerStopUsing"
+	},
+	"TargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvPropEx",
+		"FetchType": "SinglePropByPropID",
+		"SinglePropID": {
+			"GroupID": {
+				"FixedValue": {
+					"Value": 6
+				}
+			},
+			"ID": {
+				"FixedValue": {
+					"Value": 300004
+				}
+			}
+		}
+	}
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.RequestSetServerGroupProperty",
+	"GroupID": 6,
+	"DynamicName": {
+		"Value": "MainMissionState"
+	},
+	"Value": 1
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.ToastPage",
+	"MessageOne": {
+		"Hash": 2012001348524219443
+	},
+	"MessageTwo": {
+		"Hash": 3531031601469204543
+	}
+}</pre>
+
+;(Unused &mdash; finish_id_14)
+<pre>{
+	"$type": "RPG.GameCore.TriggerEntityEventV2",
+	"EventName": {
+		"Value": "enter_pad"
+	},
+	"TargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvPropEx",
+		"FetchType": "SinglePropByPropID",
+		"SinglePropID": {
+			"GroupID": {
+				"FixedValue": {
+					"Value": 6
+				}
+			},
+			"ID": {
+				"FixedValue": {
+					"Value": 300003
+				}
+			}
+		}
+	}
+}</pre>
+::<!--2-second delay-->
+:<pre>{
+	"$type": "RPG.GameCore.TriggerEntityEventV2",
+	"EventName": {
+		"Value": "Clt_TriggerOpen"
+	},
+	"TargetType": {
+		"$type": "RPG.GameCore.GroupFetchLocalTarget",
+		"TargetType": "Prop",
+		"Targets": [
+			300013
+		]
+	}
+}</pre>
+::<!--2-second delay-->
+:<pre>{
+	"$type": "RPG.GameCore.ActiveVirtualCamera",
+	"LevelAreaCameraKey": {
+		"Custom": true,
+		"Key": "BlendCamera"
+	},
+	"IsActive": false
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.ShowTalkUI",
+	"Show": true,
+	"ShowDialogControlUI": false
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.ActiveVirtualCamera",
+	"LevelAreaCameraKey": {
+		"Custom": true,
+		"Key": "StairsCamera"
+	}
+}</pre>
+::<!--1-second delay-->
+:<pre>{
+	"$type": "RPG.GameCore.SetFloorCustomFloat",
+	"Name": {
+		"Value": "FCV_SpiralStairs"
+	},
+	"Value": {
+		"FixedValue": {
+			"Value": 1
+		}
+	}
+}</pre>
+::<!--4-second delay-->
+:<pre>{
+	"$type": "RPG.GameCore.ShowTalkUI",
+	"ShowDialogControlUI": false
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.TriggerEntityEventV2",
+	"EventName": {
+		"Value": "Clt_TriggerStopUsing"
+	},
+	"TargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvPropEx",
+		"FetchType": "SinglePropByPropID",
+		"SinglePropID": {
+			"GroupID": {
+				"FixedValue": {
+					"Value": 6
+				}
+			},
+			"ID": {
+				"FixedValue": {
+					"Value": 300004
+				}
+			}
+		}
+	}
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.RequestSetServerGroupProperty",
+	"GroupID": 6,
+	"DynamicName": {
+		"Value": "MainMissionState"
+	},
+	"Value": 2
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.ToastPage",
+	"MessageOne": {
+		"Hash": 2012001348524219443
+	},
+	"MessageTwo": {
+		"Hash": 3531031601469204543
+	}
+}</pre>
+
+;(Unused &mdash; default_finish)
+<pre>{
+	"$type": "RPG.GameCore.TriggerEntityEventV2",
+	"EventName": {
+		"Value": "enter_pad"
+	},
+	"TargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvPropEx",
+		"FetchType": "SinglePropByPropID",
+		"SinglePropID": {
+			"GroupID": {
+				"FixedValue": {
+					"Value": 6
+				}
+			},
+			"ID": {
+				"FixedValue": {
+					"Value": 300003
+				}
+			}
+		}
+	}
+}</pre>
+::<!--1.5-second delay-->
+:<pre>{
+	"$type": "RPG.GameCore.TriggerEntityEventV2",
+	"EventName": {
+		"Value": "Clt_TriggerStopUsing"
+	},
+	"TargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvPropEx",
+		"FetchType": "SinglePropByPropID",
+		"SinglePropID": {
+			"GroupID": {
+				"FixedValue": {
+					"Value": 6
+				}
+			},
+			"ID": {
+				"FixedValue": {
+					"Value": 300004
+				}
+			}
+		}
+	}
+}</pre>
+
+;(Unused &mdash; PuzzleExitPerformance)
+<pre>{
+	"$type": "RPG.GameCore.TriggerEntityEventV2",
+	"EventName": {
+		"Value": "Clt_TriggerStopUsing"
+	},
+	"TargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvPropEx",
+		"FetchType": "SinglePropByPropID",
+		"SinglePropID": {
+			"GroupID": {
+				"FixedValue": {
+					"Value": 6
+				}
+			},
+			"ID": {
+				"FixedValue": {
+					"Value": 300004
+				}
+			}
+		}
+	}
+}</pre>
+
+;(Unused &mdash; PuzzleBallFall)
+<pre>{
+	"$type": "RPG.GameCore.ActiveVirtualCamera",
+	"LevelAreaCameraKey": {
+		"Custom": true,
+		"Key": "BlendCamera"
+	},
+	"BlendConfig": {
+		"ExportToJson": true,
+		"BlendType": "EaseInOut",
+		"UseDefaultBlendCurve": true,
+		"BlendTime": 3
+	}
+}</pre>
+
+;(Unused &mdash; EnterDistrict_G66)
+:{{A|VO chapter4 19 phainon 121.ogg}} '''Phainon:''' Is this... Janus' Maze that Trinnon used for divination in the past?
+::{{A|VO chapter4 19 trinnon 125.ogg}} '''Trinnon:''' Not only that. It also serves as a lock &mdash; '''our''' childhood abode lies sealed within.
+::{{A|VO chapter4 19 phainon 122.ogg}} '''Phainon:''' This is the largest puzzle I've ever laid eyes on, and it even acts as a door lock... Should've expected something like this in the homeland of puzzles, I suppose. So, how are we going to solve it?
+::{{A|VO chapter4 19 trinnon 126.ogg}} '''Trinnon:''' {{Color|keyword|nobold=1|Just follow the designated path and let the stone ball fall into the pool twice.}}
+::{{A|VO chapter4 19 phainon 123.ogg}} '''Phainon:''' Seems pretty straightforward. Even Mydei might be able to complete it in a single try.
+::{{DIcon|Arrow}} How could you talk smack about Mydei behind his back!
+:::{{A|VO chapter4 19 phainon 124.ogg}} '''Phainon:''' That's not talking smack. It's clearly a compliment.
+:::I agree it's straightforward, but Mydei might need at least two shots at it.
+::{{DIcon|Arrow}} I agree it's straightforward, but Mydei might need at least two shots at it.
+::{{A|VO chapter4 19 phainon 125.ogg}} '''Phainon:''' You still don't know him well enough then. He might not even need a first try &mdash; he'd just punch the door open.
+::{{A|VO chapter4 19 phainon 126.ogg}} '''Phainon:''' Mydei... If he were still here, we'd probably take a lot fewer detours to solve our issues.
+::{{tx}}
+:{{A|VO chapter4 19 phainon 118.ogg}} '''Phainon:''' That thing ahead...
+:{{A|VO chapter4 19 trinnon 122.ogg}} '''Trinnon:''' It's the altar of {{Rubi|Talanton|Law Titan}}.
+:{{A|VO chapter4 19 trinnon 123.ogg}} '''Trinnon:''' But that's not our destination. We're heading to the left.
+:{{A|VO chapter4 19 phainon 119.ogg}} '''Phainon:''' This place used to be passable, huh...
 {{Dialogue End}}
 
 ===Complete the first Janus' Maze{{subst:void|<!--104021365-->}}===
 {{Dialogue Start}}
-:{{tx}}
 {{Dialogue End}}
 
 ===Complete the second Janus' Maze and open the gates{{subst:void|<!--104021309-->}}===
 {{Dialogue Start}}
-:{{tx}}
+;(If {{F|undefined}} is undefined 1)
+:{{A|VO chapter4 19 phainon 131.ogg}} '''Phainon:''' The secret door is open.
+:{{A|VO chapter4 19 trinnon 130.ogg}} '''Trinnon:''' Go inside... and you'll see the place where '''we''' grew up.
+:{{A|VO chapter4 19 trinnon 129.ogg}} '''Trinnon:''' Impressive. You too have the makings of a High Priest now.
+:{{A|VO chapter4 19 phainon 130.ogg}} '''Phainon:''' Tsk, getting that stone ball to the endpoint looks pretty tough... My hands are shaking just from looking at it.
 {{Dialogue End}}
 
 ===Enter Tribios' abode{{subst:void|<!--104021330-->}}===
 {{Mission Description|type=trailblaze|location="Sanctum of Prophecy" Janusopolis|update|As Trinnon returned to her homeland, familiar sights stirred forgotten memories within her &mdash; of people, moments, and treasures she thought time had washed away.}}
 {{Dialogue Start}}
+
+;(Unused &mdash; EnterDistrict_G{GroupID})
+
+
+;(Unused &mdash; EnterDistrict_G69)
+:{{tx}}
+
+:{{DIcon|Loupe}} Investigate
+:{{A|VO chapter4 19 phainon 135.ogg}} '''Phainon:''' There is a blackboard here. What's that drawing on it?
+:{{A|VO chapter4 19 trinnon 137.ogg}} '''Trinnon:''' That doesn't ring a bell. It should be something '''we''' invented during those ten years.
+:{{DIcon|Arrow}} Those ten years?
+:{{DIcon|Arrow}} Invented? On your own?
+:{{A|VO chapter4 19 trinnon 138.ogg}} '''Trinnon:''' It has been approximately ten years between {{Rubi|Kephale|Worldbearing Titan}}'s prophecy and this moment, when '''we''' are about to set out.
+:{{tx}}
+
+:{{DIcon|Loupe}} Investigate
+:{{A|VO chapter4 19 phainon 138.ogg}} '''Phainon:''' The shelf is packed full, but all I see are annals of geography for various cities. There are also documents about various kinds of Titan worship...
+:{{A|VO chapter4 19 trinnon 147.ogg}} '''Trinnon:''' Because '''we''' believed that '''we''' would need to travel great distances to convey {{Rubi|Kephale|Worldbearing Titan}}'s prophecy to everyone, and should learn about the terrains and customs of various places beforehand.
+:{{DIcon|Arrow}} Don't tell me you actually read them all...
+:{{DIcon|Arrow}} Reading all of this... that's crazy.
+:{{A|VO chapter4 19 trinnon 148.ogg}} '''Trinnon:''' Back then, '''our''' memories were still sharp. Ten years was enough for '''us''' to memorize all these.
+:{{tx}}
+
+:{{DIcon|Loupe}} Investigate
+:{{A|VO chapter4 19 phainon 136.ogg}} '''Phainon:''' There are so many boxes here...
+:{{A|VO chapter4 19 trinnon 141.ogg}} '''Trinnon:''' These should be '''our''' belongings... Huh? What's this?
+:{{A|VO chapter4 19 phainon 137.ogg}} '''Phainon:''' A red glass fragment?
+:{{DIcon|Arrow}} I've seen this type of glass before.
+:{{DIcon|Arrow}} It looks like a specialty from your hometown.
+:{{A|VO chapter4 19 trinnon 142.ogg}} '''Trinnon:''' '''We''' were still very young the first time '''we''' saw it. Mother came back with a beautiful glass piece, but her face was streaked with tears. She simply placed it on the table.
 :{{tx}}
 {{Dialogue End}}
 
 ===Walk around with Trinnon{{subst:void|<!--104021337-->}}===
 {{Dialogue Start}}
-:{{tx}}
+:{{A|VO chapter4 19 trinnon 136.ogg}} '''Trinnon:''' Let's explore the room a bit.
 {{Dialogue End}}
 
 ===Walk with Trinnon to Tribios' bedroom{{subst:void|<!--104021311-->}}===
 {{Dialogue Start}}
+:{{A|VO chapter4 19 trinnon 151.ogg}} '''Trinnon:''' Let's move on to the bedroom.
+;(Unused &mdash; EnterDistrict_G70)
 :{{tx}}
+:----
+::{{tx}}
+:----
+::{{tx}}
 {{Dialogue End}}
 
 ===Look for Tribios{{subst:void|<!--104021332-->}}===
 {{Dialogue Start}}
-:{{tx}}
+
+;(Unused &mdash; EnterDistrict_G69)
+:{{A|VO chapter4 19 trinnon 155.ogg}} '''Trinnon:''' This way. Now, we'll go through this shelf.
+::{{A|VO chapter4 19 phainon 141.ogg}} '''Phainon:''' But how? With {{Rubi|Janus|Passage Titan}}' power?
+::{{DIcon|Arrow}} Can the power of passages even go through walls?
+:::{{A|VO chapter4 19 trinnon 156.ogg}} '''Trinnon:''' No, '''we''' hadn't acquired their power back then.
+:::She hadn't become a demigod yet.
+::{{DIcon|Arrow}} She hadn't become a demigod yet.
+::{{A|VO chapter4 19 trinnon 157.ogg}} '''Trinnon:''' Indeed. '''We''' hadn't acquired their power back then.
+::{{A|VO chapter4 19 phainon 142.ogg}} '''Phainon:''' So, this obstacle... it was simply a mirage?
+::{{tx}}
+:{{A|VO chapter4 19 phainon 140.ogg}} '''Phainon:''' Where... did she go?
 {{Dialogue End}}
 
 ===Open the bookshelf's hidden door{{subst:void|<!--104021312-->}}===
 {{Dialogue Start}}
-:{{tx}}
+;(If {{cx}}{{subst:void|<!--{"$type":"RPG.GameCore.ByComparePropState","TargetType":{"$type":"RPG.GameCore.GroupFetchLocalTarget","TargetType":"Prop","Targets":[300002]},"State":"Open"}-->}})
+<pre>{
+	"$type": "RPG.GameCore.TriggerEntityServerEvent"
+}</pre>
 {{Dialogue End}}
 
 ===Follow Tribios forward{{subst:void|<!--104021313-->}}===
 {{Dialogue Start}}
+
+;(Unused &mdash; EnterDistrict_G72)
 :{{tx}}
+::{{A|VO chapter4 19 datibao 127.ogg}} '''Tribios:''' I can't move it... Can't climb over it either...
+
+;(Unused &mdash; 90Run)
+<pre>{
+	"$type": "RPG.GameCore.AdvSetAILeadWay",
+	"TargetType": {
+		"$type": "RPG.GameCore.GroupFetchLocalTarget",
+		"Targets": [
+			400001
+		]
+	},
+	"PathwayGroupID": 90,
+	"PathwayID": 1,
+	"MotionFlag": "FastRun",
+	"OnReach": [
+		{
+			"$type": "RPG.GameCore.ClientFinishMission",
+			"SubmissionID": 104021331
+		}
+	],
+	"PathOffset": []
+}</pre>
 {{Dialogue End}}
 
 ===Keep following Tribios forward{{subst:void|<!--104021317-->}}===
 {{Dialogue Start}}
+
+;(Unused &mdash; EnterDistrict_G76)
 :{{tx}}
 {{Dialogue End}}
 
 ===Watch Tribios' past conversations{{subst:void|<!--104021318-->}}===
 {{Dialogue Start}}
+
+;(Unused &mdash; EnterDistrict_G{GroupID})
+:{{A|VO chapter4 19 juanshuC 103.ogg}} '''Holy City Guard:''' Please stay clear.
+:<pre>{
+	"$type": "RPG.GameCore.PerformanceEndSeq",
+	"BeforeCases": [
+		{
+			"$type": "RPG.GameCore.SwitchCharacterAnchorV2",
+			"SwitchCharacterAnchorConfig": {
+				"IsLocalPlayer": true,
+				"CharacterUniqueName": "LocalPlayer",
+				"AreaName": {
+					"Value": "LevelArea_P20422_F20422001_G77"
+				},
+				"AnchorName": {
+					"Value": "Anchor1"
+				}
+			}
+		}
+	]
+}</pre>
+:<!--1-second delay-->
+<pre>{
+	"$type": "RPG.GameCore.AdvSetAILeadWay",
+	"TargetType": {
+		"$type": "RPG.GameCore.GroupFetchLocalTarget",
+		"Targets": [
+			400001
+		]
+	},
+	"PathwayGroupID": 135,
+	"PathwayID": 1,
+	"MotionFlag": "Run",
+	"OnReach": [
+		{
+			"$type": "RPG.GameCore.ClientFinishMission",
+			"SubmissionID": 104021340
+		}
+	],
+	"PathOffset": []
+}</pre>
+
+;(Talk to Tribios)
 :{{tx}}
+
+;(Talk to Dagra)
+:{{tx}}
+
+;(Talk to Tribios)
+:{{tx}}
+
+;(Unused &mdash; 11)
+:{{A|VO chapter4 19 juanshuC 103.ogg}} '''Holy City Guard:''' Please stay clear.
 {{Dialogue End}}
 
 ===Follow Tribios and cross the bridge{{subst:void|<!--104021320-->}}===
 {{Dialogue Start}}
+
+;(Unused &mdash; EnterDistrict_G78)
 :{{tx}}
+
+;(Talk to Amiable Woman)
+:{{A|VO chapter4 19 trinnon 170.ogg}} '''Trinnon:''' This lady is Mother's old friend. When '''we''' were little, '''we''' sometimes got to eat the sweet pastries she brought back.
 {{Dialogue End}}
 
 ===Keep following Tribios to the Janus Vault{{subst:void|<!--104021321-->}}===
 {{Dialogue Start}}
+
+;(Unused &mdash; EnterDistrict_G80)
 :{{tx}}
+:----
+::{{tx}}
+:----
+::{{tx}}
+::{{tx}}
 {{Dialogue End}}
 
 ===Face the holy city's guards together with Tribios{{subst:void|<!--104021322-->}}===
 {{Dialogue Start}}
+
+;(Unused &mdash; 104021327)
 :{{tx}}
+:;(Enter battle)
+:::{{tx|Enemy list missing}}
+:{{A|VO chapter4 19 shibingL 102.ogg}} '''Strict Holy City Guard:''' It's opening up! Move aside and get ready &mdash;
+:{{A|VO chapter4 19 shibingM 101.ogg}} '''Scared Holy City Guard:''' The Holy Maiden...?
+----
+:{{tx}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+<pre>{
+	"$type": "RPG.GameCore.AddAdventureModifier",
+	"TargetType": {
+		"$type": "RPG.GameCore.TargetFetchTaskActionTarget"
+	},
+	"Caster": {
+		"$type": "RPG.GameCore.GroupFetchLocalTarget",
+		"Targets": [
+			400001
+		]
+	},
+	"ModifierName": "ADV_Monster_Common_HuntNPC",
+	"LifeTime": {
+		"FixedValue": {
+			"Value": 100
+		}
+	},
+	"Count": {
+		"FixedValue": {
+			"Value": 1
+		}
+	},
+	"DynamicValues": {}
+}</pre>
+;(Unused &mdash; Finish104021350)
+<pre>{
+	"$type": "RPG.GameCore.PlayVoice_Single",
+	"VoiceID": 104020082,
+	"EmitterTargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvMonsterEx",
+		"FetchType": "SingleByMonsterID",
+		"SingleMonsterID": {
+			"GroupID": {
+				"FixedValue": {
+					"Value": 151
+				}
+			},
+			"ID": {
+				"FixedValue": {
+					"Value": 200005
+				}
+			}
+		},
+		"MultiMonsterID": []
+	}
+}</pre>
+
+;(Unused &mdash; Voice3)
+<pre>{
+	"$type": "RPG.GameCore.PlayVoice_Single",
+	"VoiceID": 104037701,
+	"EmitterTargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvMonsterEx",
+		"FetchType": "SingleByMonsterID",
+		"SingleMonsterID": {
+			"GroupID": {
+				"FixedValue": {
+					"Value": 151
+				}
+			},
+			"ID": {
+				"FixedValue": {
+					"Value": 200001
+				}
+			}
+		},
+		"MultiMonsterID": []
+	}
+}</pre>
+
+;(Unused &mdash; Voice2)
+<pre>{
+	"$type": "RPG.GameCore.PlayVoice_Single",
+	"VoiceID": 104037702,
+	"EmitterTargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvMonsterEx",
+		"FetchType": "SingleByMonsterID",
+		"SingleMonsterID": {
+			"GroupID": {
+				"FixedValue": {
+					"Value": 151
+				}
+			},
+			"ID": {
+				"FixedValue": {
+					"Value": 200003
+				}
+			}
+		},
+		"MultiMonsterID": []
+	}
+}</pre>
 {{Dialogue End}}
 
 ===Open the way together with Tribios{{subst:void|<!--104021323-->}}===
 {{Mission Description|type=trailblaze|location="Sanctum of Prophecy" Janusopolis|update|Tribios takes the Coreflame of Passage, receiving Janus's divine authority. Now, she must flee this Sanctum of Tripartite Prophecy that has held her captive for decades and pursue her destiny.}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+<pre>{
+	"$type": "RPG.GameCore.AddAdventureModifier",
+	"TargetType": {
+		"$type": "RPG.GameCore.TargetFetchTaskActionTarget"
+	},
+	"Caster": {
+		"$type": "RPG.GameCore.GroupFetchLocalTarget",
+		"Targets": [
+			400001
+		]
+	},
+	"ModifierName": "ADV_Monster_Common_HuntNPC",
+	"LifeTime": {
+		"FixedValue": {
+			"Value": 100
+		}
+	},
+	"Count": {
+		"FixedValue": {
+			"Value": 1
+		}
+	},
+	"DynamicValues": {}
+}</pre>
+;(Unused &mdash; tibaoreach)
+<pre>{
+	"$type": "RPG.GameCore.RemoveAdventureModifier",
+	"TargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvAllNPCMonsters"
+	},
+	"ModifierName": "ADV_Monster_Common_HuntNPC"
+}</pre>
+;(Upon reaching the destination)
+:{{A|VO chapter4 19 datibao 161.ogg}} '''Tribios:''' The path... is opening up for me.
+
+;(Upon reaching the destination)
+:{{A|VO chapter4 19 datibao 162.ogg}} '''Tribios:''' O {{Rubi|Janus|Passage Titan}}... protect me.
+
+;(Upon reaching the destination)
+<pre>{
+	"$type": "RPG.GameCore.AddAdventureModifier",
+	"TargetType": {
+		"$type": "RPG.GameCore.TargetFetchTaskActionTarget"
+	},
+	"Caster": {
+		"$type": "RPG.GameCore.GroupFetchLocalTarget",
+		"Targets": [
+			400001
+		]
+	},
+	"ModifierName": "ADV_Monster_Common_HuntNPC",
+	"LifeTime": {
+		"FixedValue": {
+			"Value": 100
+		}
+	},
+	"Count": {
+		"FixedValue": {
+			"Value": 1
+		}
+	},
+	"DynamicValues": {}
+}</pre>
+;(Unused &mdash; playerreach6)
+
+
+;(Unused &mdash; Voice1)
+<pre>{
+	"$type": "RPG.GameCore.PlayVoice_Single",
+	"VoiceID": 104020073,
+	"EmitterTargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvMonsterEx",
+		"FetchType": "SingleByMonsterID",
+		"SingleMonsterID": {
+			"GroupID": {
+				"FixedValue": {
+					"Value": 134
+				}
+			},
+			"ID": {
+				"FixedValue": {
+					"Value": 200002
+				}
+			}
+		}
+	}
+}</pre>
+
+;(Unused &mdash; Voice2)
+<pre>{
+	"$type": "RPG.GameCore.PlayVoice_Single",
+	"VoiceID": 104037700,
+	"EmitterTargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvMonsterEx",
+		"FetchType": "SingleByMonsterID",
+		"SingleMonsterID": {
+			"GroupID": {
+				"FixedValue": {
+					"Value": 134
+				}
+			},
+			"ID": {
+				"FixedValue": {
+					"Value": 200003
+				}
+			}
+		}
+	}
+}</pre>
 {{Dialogue End}}
 
 ===Escape with Tribios{{subst:void|<!--104021324-->}}===
 {{Dialogue Start}}
-:{{tx}}
+
+;(Unused &mdash; EnterDistrict_G83)
+:{{A|VO chapter4 19 datibao 167.ogg}} '''Tribios:''' At long last...
+
+;(Unused &mdash; Tribbiegogogo4)
+<pre>{
+	"$type": "RPG.GameCore.AdvSetAILeadWay",
+	"TargetType": {
+		"$type": "RPG.GameCore.GroupFetchLocalTarget",
+		"Targets": [
+			400001
+		]
+	},
+	"PathwayGroupID": 146,
+	"PathwayID": 1,
+	"MotionFlag": "FastRun",
+	"OnReach": [
+		{
+			"$type": "RPG.GameCore.ClientFinishMission",
+			"SubmissionID": 104021352
+		}
+	],
+	"PathOffset": []
+}</pre>
+
+;(Unused &mdash; Tribbiegogogo2)
+:{{A|VO chapter4 19 datibao 164.ogg}} '''Tribios:''' The main path is likely well-guarded... What do I do?
 {{Dialogue End}}
 
 ===Defeat the pursuers with Tribios{{subst:void|<!--104021325-->}}===
 {{Dialogue Start}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{A|VO chapter4 19 datibao 168.ogg}} '''Tribios:''' A creature of the holy city guards? But I'm already so close...
+:{{A|VO chapter4 19 phainon 151.ogg}} '''Phainon:''' This should be the last fight. We have to help her get through.
+:{{A|VO chapter4 19 phainon 152.ogg}} '''Phainon:''' But... I don't get it. This has been puzzling me for a while now.
+:{{A|VO chapter4 19 phainon 153.ogg}} '''Phainon:''' Who has been aiding Tribios in her escape?
+:{{DIcon|Arrow}} I've been curious about that, too...
+:{{DIcon|Arrow}} Is the fallen Titan manifesting?
+:{{DIcon|Arrow}} Logic in Amphoreus isn't adding up.
+:{{A|VO chapter4 19 phainon 154.ogg}} '''Phainon:''' While history might be blurred by memories, seeing how the whole city is hunting her down, she clearly had no allies...
 :{{tx}}
+;(Enter battle)
+:{{Enemy List|Noontide Gryphon*1/-20% ATK; Moonlit Pegasus*1/-20% ATK}}
+:{{tx}}
+----
+:{{tx}}
+<pre>{
+	"$type": "RPG.GameCore.SetLoadingStratageType",
+	"StratageType": "Plain"
+}</pre>
+----
+:{{tx}}
+----
+----
+;([[#Gallery|Cutscene]] plays)
+::We will now continue the journey and face our destiny.
+::We will step over the gods' corpses and wander among humanity. And thus, we shall sweep apart Amphoreus' pitch-dark fog.
+::And at the end, all will reach that silver-white shoal, that end of the journey, that new world and new tomorrow.
+::It is a haven free from storms, cold, and heavy rains. No sorrow can linger there.
+::We've made a promise to meet again at the end of the west wind, where flowers bloom in spring.
+::See you tomorrow, Trianne.
+::Mmm. See you tomorrow!
+;(Cutscene ends)
+----
+----
+:{{tx}}
+----
+:{{A|VO chapter4 19 danheng 101 m.ogg}} {{A|VO chapter4 19 danheng 101 f.ogg}} '''Dan Heng:''' I'm back. Finally have a moment to catch my breath. Want to chat, (Trailblazer)?
+:{{A|VO chapter4 19 danheng 102.ogg}} '''Dan Heng:''' It's unusual to see Mem isn't with you.
+:{{DIcon|Arrow}} Let Mem rest. They've had a tiring past few days.
+:{{DIcon|Arrow}} No idea. I can't control Mem...
+:{{DIcon|Arrow}} Don't worry. They're inside the ball.
+::{{A|VO chapter4 19 danheng 103.ogg}} '''Dan Heng:''' ...Let's not joke about monsters in your pockets.
+:{{A|VO chapter4 19 danheng 104.ogg}} '''Dan Heng:''' Since they're not here, let me ask you &mdash; {{Color|keyword|nobold=1|are you really sure you want to take on the trial of}} {{Rubi|{{Color|keyword|nobold=1|Oronyx}}|{{Color|keyword|nobold=1|Time Titan}}}}{{Color|keyword|nobold=1|'s Coreflame on behalf of the Chrysos Heirs?}}
+:{{DIcon|Arrow}} Absolutely! I don't see why not.
+:{{DIcon|Arrow}} Still on the fence. It was Mem's idea...
+:{{DIcon|Arrow}} It's about time for me to level up.
+:{{A|VO chapter4 19 danheng 105.ogg}} '''Dan Heng:''' ...We've ended up at this point after all. This is probably a fate that "Trailblaze" can't evade.
+:{{A|VO chapter4 19 danheng 106.ogg}} '''Dan Heng:''' You should be extra cautious and watch out for yourself. Based on the experiences of those before you, the trial is no walk in the park.
+:{{A|VO chapter4 19 danheng 107.ogg}} '''Dan Heng:''' But what concerns me even more is that you'll further bind yourself to Amphoreus... If you truly assume that Titan's divinity, do you believe you'll be able to lay it down again?
+:{{A|VO chapter4 19 danheng 108.ogg}} '''Dan Heng:''' Forget it. We'll deal with that when the time comes. No matter what happens, I'll be right there with you.
+:{{DIcon|Arrow}} Thanks, bro!
+::{{A|VO chapter4 19 danheng 109.ogg}} '''Dan Heng:''' Oh, by the way, I got held up by two people in guard uniforms and ended up missing Trianne's farewell ceremony.
+::Aww, how sweet! But where were you earlier?
+:{{DIcon|Arrow}} Aww, how sweet! But where were you earlier?
+:{{A|VO chapter4 19 danheng 110.ogg}} '''Dan Heng:''' I got held up by two people in guard uniforms and ended up missing Trianne's farewell ceremony.
+:{{A|VO chapter4 19 danheng 111.ogg}} '''Dan Heng:''' They said they were {{Color|keyword|nobold=1|messengers of the Council of Elders}} and wanted to verify my identity.
+:{{A|VO chapter4 19 danheng 112.ogg}} '''Dan Heng:''' But I suspect we've been on their radar for a while... and they only made their move when you and I got separated.
+:{{A|VO chapter4 19 danheng 113.ogg}} '''Dan Heng:''' Their questions were quite specific, from how we arrived in Okhema to our relationships with each Chrysos Heir. They even asked about what we did in the market.
+:{{A|VO chapter4 19 danheng 114.ogg}} '''Dan Heng:''' Luckily, those pawns aren't the brightest. I managed to brush off most of their questions, so they'll probably leave us alone for a bit.
+:{{DIcon|Arrow}} The Council of Elders... are they the bad guys?
+::{{A|VO chapter4 19 danheng 115.ogg}} '''Dan Heng:''' I'm not ready to label them as good or bad, but their conduct... is certainly irritating.
+::Looks like dark undercurrents are roiling in Okhema.
+::{{A|VO chapter4 19 danheng 116.ogg}} '''Dan Heng:''' Their conduct... is certainly irritating.
+::Is this foreshadowing for the next version?
+:{{DIcon|Arrow}} Looks like dark undercurrents are roiling in Okhema.
+::{{A|VO chapter4 19 danheng 116.ogg}} '''Dan Heng:''' Their conduct... is certainly irritating.
+::Is this foreshadowing for the next version?
+:{{DIcon|Arrow}} Is this foreshadowing for the next version?
+:{{A|VO chapter4 19 danheng 117.ogg}} '''Dan Heng:''' Their conduct... is certainly irritating.
+:{{A|VO chapter4 19 danheng 118.ogg}} '''Dan Heng:''' But on second thought, Aglaea also initially kept her guard up with us. It's best not to provoke either side until we know the full truth.
+:{{A|VO chapter4 19 danheng 119.ogg}} '''Dan Heng:''' The only thing we know for sure is that {{Color|keyword|nobold=1|some members of the Council of Elders aren't happy with the Chrysos Heirs}}. In the worst-case scenario... we could be caught up in the internal conflicts of the holy city.
+:{{DIcon|Arrow}} That's my favorite episode.
+:{{DIcon|Arrow}} That's the episode I hate the most.
+:{{DIcon|Arrow}} To be continued?
+:{{A|VO chapter4 19 danheng 120.ogg}} '''Dan Heng:''' If only we had more time to sort through the clues about the black tide. But now...
+:{{tx}}
+:{{tx}}
+;(Unused &mdash; EnterDistrict_G288)
+:{{tx}}
+::{{A|VO chapter4 11 danheng 125.ogg}} '''Dan Heng:''' An "unspeakable" thing of "unknown origin"... What comes to your mind when we put these keywords together?
+::{{DIcon|Arrow}} A Stellaron?
+:::{{A|VO chapter4 11 danheng 126.ogg}} '''Dan Heng:''' That's right. If you think about the various characteristics of Amphoreus &mdash; an isolated world of eternal night being eroded by an unknown power... we cannot discount this possibility.
+:::An Aeon?
+:::{{A|VO chapter4 11 danheng 127.ogg}} '''Dan Heng:''' That's right. If you think about the various characteristics of Amphoreus &mdash; an isolated world of eternal night being eroded by an unknown power... we cannot discount this possibility.
+:::Uhh... a Leviathan? A cosmic mega octopus?
+::{{DIcon|Arrow}} An Aeon?
+:::{{A|VO chapter4 11 danheng 127.ogg}} '''Dan Heng:''' That's right. If you think about the various characteristics of Amphoreus &mdash; an isolated world of eternal night being eroded by an unknown power... we cannot discount this possibility.
+:::Uhh... a Leviathan? A cosmic mega octopus?
+::{{DIcon|Arrow}} Uhh... a Leviathan? A cosmic mega octopus?
+::{{A|VO chapter4 11 danheng 128.ogg}} '''Dan Heng:''' ...A hypothesis like that has never occurred to me, I must admit. But considering how the Leviathan hasn't been sighted in the universe for hundreds of Amber Eras, I think the possibility of it being the culprit is minuscule.
+::{{A|VO chapter4 11 danheng 129.ogg}} '''Dan Heng:''' Let's think about the various characteristics of Amphoreus instead. An isolated world of eternal night being eroded by an unknown power...
+::{{A|VO chapter4 11 danheng 130.ogg}} '''Dan Heng:''' This has been bothering me for a while now. Everything we have seen thus far suggests that Amphoreus wasn't always isolated from the rest of the universe. Be it the birth of the Titans or the encroaching black tide, none of these can be explained as a "natural progression" of a civilization.
+::{{A|VO chapter4 11 danheng 131.ogg}} '''Dan Heng:''' There must be other reasons for its current state of isolation. It's just... if the Cancer of All Worlds is truly the culprit, then we should have observed certain phenomena &mdash; explicit or otherwise &mdash; by now, but that isn't the case.
+::{{DIcon|Arrow}} The Voice of the Stellaron?
+:::{{A|VO chapter4 11 danheng 132.ogg}} '''Dan Heng:''' That's what I was thinking too. From past experience, the Stellaron within you should be able to resonate with other Stellarons, but we haven't encountered anything like that here.
+:::The Antimatter Legion?
+:::{{A|VO chapter4 11 danheng 133.ogg}} '''Dan Heng:''' That's what I was thinking too. From past experience, the Destruction has always been involved in some way when it comes to a world corrupted by a Stellaron.
+:::The Stellaron Hunters?
+::{{DIcon|Arrow}} The Antimatter Legion?
+:::{{A|VO chapter4 11 danheng 133.ogg}} '''Dan Heng:''' That's what I was thinking too. From past experience, the Destruction has always been involved in some way when it comes to a world corrupted by a Stellaron.
+:::The Stellaron Hunters?
+::{{DIcon|Arrow}} The Stellaron Hunters?
+::{{A|VO chapter4 11 danheng 134.ogg}} '''Dan Heng:''' That's what I was thinking too. From past experience, Stellaron Hunters are certain to appear on a world with a Stellaron.
+::{{A|VO chapter4 11 danheng 135.ogg}} '''Dan Heng:''' There are several other unanswered questions, too. My gut feeling is that things here are not as simple as they seem...
+::{{A|VO chapter4 11 danheng 136.ogg}} '''Dan Heng:''' Furthermore, what happened in Penacony also proved that the appearance of a world may not necessarily be due to the influence of just one Path.
+::{{DIcon|Arrow}} No sweat! The Trailblaze can tackle even ten Paths if it must!
+:::{{A|VO chapter4 11 danheng 137.ogg}} '''Dan Heng:''' *sigh* It's good to be motivated at least.
+:::It could be an all-star cast.
+:::{{A|VO chapter4 11 danheng 138.ogg}} '''Dan Heng:''' Heh... In another sense, it's Penacony all over again.
+:::Who knows, maybe Akivili's behind it all.
+::{{DIcon|Arrow}} It could be an all-star cast.
+:::{{A|VO chapter4 11 danheng 138.ogg}} '''Dan Heng:''' Heh... In another sense, it's Penacony all over again.
+:::Who knows, maybe Akivili's behind it all.
+::{{DIcon|Arrow}} Who knows, maybe Akivili's behind it all.
+::{{A|VO chapter4 11 danheng 139.ogg}} '''Dan Heng:''' ...Not even the History Fictionologists would dare to spin a tale like that.
+::{{A|VO chapter4 11 danheng 140.ogg}} '''Dan Heng:''' For now, let's just take things as they come. The black tide could be a good starting point. Since {{Rubi|Nikador|Strife Titan}} has fallen, those who were suppressed by them will no doubt begin to counterattack now.
+::{{tx}}
+
+;(Unused &mdash; EnterDistrict_G{GroupID})
+:{{A|VO chapter4 19 phainon 148.ogg}} '''Phainon:''' Tribios... what does that name actually mean?
+::{{A|VO chapter4 19 trinnon 177.ogg}} '''Trinnon:''' "The one with three lives." Mother believed '''our''' birth was blessed by the Three Titans of Fate. She named '''us''' thus to express her gratitude.
+::{{A|VO chapter4 19 trinnon 178.ogg}} '''Trinnon:''' Looking at how things have unfolded, fate might have had a role in it.
+
+;(Unused &mdash; EnterDistrict_G{GroupID})
+:{{A|VO chapter4 19 trinnon 179.ogg}} '''Tribios:''' Finally... the {{Rubi|Janus|Passage Titan}} Vault is right ahead.
 {{Dialogue End}}
 
 ===Follow Tribios and head to the Janus Vault{{subst:void|<!--104021353-->}}===
 {{Mission Description|type=trailblaze|location="Sanctum of Prophecy" Janusopolis|update|As Trinnon returned to her homeland, familiar sights stirred forgotten memories within her &mdash; of people, moments, and treasures she thought time had washed away.}}
 {{Dialogue Start}}
-:{{tx}}
+
 {{Dialogue End}}
 
 ===Try to open the way forward{{subst:void|<!--104021354-->}}===
 {{Dialogue Start}}
-:{{tx}}
+
+;(Unused &mdash; 1040213_148)
+<pre>{
+	"$type": "RPG.GameCore.PlayNPCBubbleTalk",
+	"BubbleTalkInfoList": [
+		{
+			"GroupID": 148,
+			"GroupNpcID": 400002,
+			"TalkSentenceID": 104037762,
+			"EnableVoice": true
+		},
+		{
+			"GroupID": 148,
+			"GroupNpcID": 400001,
+			"TalkSentenceID": 104037761,
+			"EnableVoice": true
+		}
+	]
+}</pre>
+
+;(Unused &mdash; 73Bubble)
+<pre>{
+	"$type": "RPG.GameCore.PlayNPCBubbleTalk",
+	"BubbleTalkInfoList": [
+		{
+			"GroupID": 73,
+			"GroupNpcID": 400001,
+			"TalkSentenceID": 104020064,
+			"EnableVoice": true
+		}
+	],
+	"UniqueID": 7301
+}</pre>
 {{Dialogue End}}
 
 ===Try to open up the way for Tribios{{subst:void|<!--104021338-->}}===
 {{Dialogue Start}}
+:{{A|VO chapter4 19 datibao 111.ogg}} '''Tribios:''' Time Titan... is that you?
+
+
+;(Unused &mdash; 11)
 :{{tx}}
+:<pre>{
+	"$type": "RPG.GameCore.PerformanceEndSeq",
+	"BeforeCases": [
+		{
+			"$type": "RPG.GameCore.SwitchCharacterAnchorV2",
+			"SwitchCharacterAnchorConfig": {
+				"IsLocalPlayer": true,
+				"CharacterUniqueName": "LocalPlayer",
+				"AreaName": {
+					"Value": "LevelArea_P20422_F20422001_G279"
+				},
+				"AnchorName": {
+					"Value": "Anchor1"
+				}
+			}
+		}
+	]
+}</pre>
+
+;(Unused &mdash; 22)
+:{{A|VO chapter4 19 juanshuC 103.ogg}} '''Holy City Guard:''' Please stay clear.
+
+;(Unused &mdash; 33)
+:{{A|VO chapter4 19 juanshuC 103.ogg}} '''Holy City Guard:''' Please stay clear.
+
+;(Unused &mdash; 44)
+:{{A|VO chapter4 19 juanshuC 103.ogg}} '''Holy City Guard:''' Please stay clear.
+
+;(Unused &mdash; 147Bubble)
+<pre>{
+	"$type": "RPG.GameCore.PlayNPCBubbleTalk",
+	"BubbleTalkInfoList": [
+		{
+			"GroupID": 147,
+			"GroupNpcID": 400001,
+			"TalkSentenceID": 104020062,
+			"EnableVoice": true
+		}
+	],
+	"UniqueID": 14701
+}</pre>
+:<!--8-second delay-->
+<pre>{
+	"$type": "RPG.GameCore.ActiveVirtualCamera",
+	"AreaName": "LevelArea_P20422_F20422001_G75",
+	"AnchorName": "Anchor1",
+	"IsActive": false
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.ActiveVirtualCamera",
+	"AreaName": "LevelArea_P20422_F20422001_G75",
+	"AnchorName": "Anchor1"
+}</pre>
+:{{A|VO chapter4 19 trinnon 163.ogg}} '''Trinnon:''' Just like this.
+:{{DIcon|Arrow}} Is this replicating the memories...
+:{{DIcon|Arrow}} Or disrupting the spacetime dimension?
+:{{A|VO chapter4 19 trinnon 164.ogg}} '''Trinnon:''' Regardless of our actions, the past will remain unchanged. It was someone else who helped Tribios in the actual events of history.
+:{{A|VO chapter4 19 trinnon 165.ogg}} '''Trinnon:''' '''We''' don't remember the details. As for why Memory recreated the past to be like this, it must be because...
+:{{A|VO chapter4 19 trinnon 166.ogg}} '''Trinnon:''' It's closer to the answer within '''our''' heart.
+<pre>{
+	"$type": "RPG.GameCore.ActiveVirtualCamera",
+	"AreaName": "LevelArea_P20422_F20422001_G75",
+	"AnchorName": "Anchor1",
+	"IsActive": false
+}</pre>
+:{{A|VO chapter4 19 datibao 126.ogg}} '''Tribios:''' The passage... is now cleared!
+<pre>{
+	"$type": "RPG.GameCore.ActiveVirtualCamera",
+	"AreaName": "LevelArea_P20422_F20422001_G75",
+	"AnchorName": "Anchor2"
+}</pre>
+:{{A|VO chapter4 19 trinnon 163.ogg}} '''Trinnon:''' Just like this.
+:{{DIcon|Arrow}} Is this replicating the memories...
+:{{DIcon|Arrow}} Or disrupting the spacetime dimension?
+:{{A|VO chapter4 19 trinnon 164.ogg}} '''Trinnon:''' Regardless of our actions, the past will remain unchanged. It was someone else who helped Tribios in the actual events of history.
+:{{A|VO chapter4 19 trinnon 165.ogg}} '''Trinnon:''' '''We''' don't remember the details. As for why Memory recreated the past to be like this, it must be because...
+:{{A|VO chapter4 19 trinnon 166.ogg}} '''Trinnon:''' It's closer to the answer within '''our''' heart.
+<pre>{
+	"$type": "RPG.GameCore.ActiveVirtualCamera",
+	"AreaName": "LevelArea_P20422_F20422001_G75",
+	"AnchorName": "Anchor2",
+	"IsActive": false
+}</pre>
+:{{A|VO chapter4 19 datibao 126.ogg}} '''Tribios:''' The passage... is now cleared!
+;(If {{F|undefined}} is undefined 1)
+:{{A|VO chapter4 19 datibao 128.ogg}} '''Tribios:''' Thank you, nameless god!
+;(Unused &mdash; 158Bubble)
+<pre>{
+	"$type": "RPG.GameCore.PlayNPCBubbleTalk",
+	"BubbleTalkInfoList": [
+		{
+			"GroupID": 158,
+			"GroupNpcID": 400001,
+			"TalkSentenceID": 104020060,
+			"EnableVoice": true
+		}
+	],
+	"UniqueID": 15801
+}</pre>
+:{{A|VO chapter4 19 datibao 125.ogg}} '''Tribios:''' Someone will help me...
 {{Dialogue End}}
 
 ==Other Languages==
@@ -175,7 +1285,7 @@ PageTitle=#Passage, Reveal the Past Once More#
 |ru   = О дорога, яви прошлое ещё раз
 |th   = ผู้มาเยือนเอ๋ย โปรดแสดงอดีตอีกครา
 |vi   = Hỡi Nơi Bắt Đầu, Hãy Tái Hiện Quá Khứ Một Lần Nữa
-|de   = Tore, zeigt den Weg zurück zur Vergangenheit
+|de   = O Passage, zeig den Weg zurück zur Vergangenheit
 |id   = Jalan, Tunjukkan Sekali Lagi Jejak Masa Lalu
 |pt   = Passagem, Revele o Passado Mais Uma Vez
 }}

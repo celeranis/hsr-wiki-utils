@@ -34,6 +34,113 @@ PageTitle=##
 ==Dialogue==
 {{Stub Dialogue}}
 
+<pre>{
+	"$type": "RPG.GameCore.AdvCreateGroupEntity",
+	"InstanceIDList": [
+		400001
+	]
+}</pre>
+
+;(Upon reaching the destination)
+<pre>{
+	"$type": "RPG.GameCore.PlayNPCBubbleTalk",
+	"BubbleTalkInfoList": [
+		{
+			"AutoSkipTime": 5,
+			"GroupID": 173,
+			"GroupNpcID": 400001,
+			"TalkSentenceID": 801326401
+		}
+	]
+}</pre>
+;(Unused &mdash; Move_800326402)
+<pre>{
+	"$type": "RPG.GameCore.AdvSetAIMoveTo",
+	"EntityInstanceID": {
+		"FixedValue": {
+			"Value": 400002
+		}
+	},
+	"GroupId": 173,
+	"PointID": 1,
+	"MotionFlag": "Walk",
+	"OnReach": [
+		{
+			"$type": "RPG.GameCore.TriggerCustomString",
+			"CustomString": {
+				"Value": "Talk_800326402"
+			}
+		}
+	]
+}</pre>
+
+;(Unused &mdash; Destory_173_400002)
+<pre>{
+	"$type": "RPG.GameCore.AdvDestroyGroupEntity",
+	"InstanceIDList": [
+		400002
+	]
+}</pre>
+
+;(Unused &mdash; Destory_173_400001)
+<pre>{
+	"$type": "RPG.GameCore.AdvDestroyGroupEntity",
+	"InstanceIDList": [
+		400001
+	]
+}</pre>
+
+;(Talk to New Cycrane)
+----
+----
+:'''New Cycrane:''' Looks like this is it. The Delicacy Pavilion... Uploading pathing data... Please wait.
+:'''New Cycrane:''' Thank you very much, {{MC|f=miss|m=mister}}.
+:'''New Cycrane:''' There's another blank place here, the Spices Supreme... Could you please navigate again for me?
+:{{DIcon|Arrow}} Let me get my bearings first...
+:'''New Cycrane:''' Bearings... Locating "bearings"... Is this like... a "building"...?
+:{{Black Screen|You're not sure where you are, so you look it up on the map in your phone.}}
+<pre>{
+	"$type": "RPG.GameCore.AdvDestroyGroupEntity",
+	"InstanceIDList": [
+		400002
+	]
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.AdvCreateGroupEntity",
+	"InstanceIDList": [
+		400003
+	]
+}</pre>
+:{{Black Screen|You're not sure where you are, so you look it up on the map in your phone.}}
+:'''(Trailblazer):''' So the Spices Supreme is right next door. Let's go!
+:'''(Trailblazer):''' Hm? Cycrane? Where did a cycrane that size duck off to?
+:You raise your head, only to discover the cycrane that has been following along with you all the way has somehow disappeared.
+:'''Kind Visitor:''' Are you looking for that cycrane? I just saw it flying straight ahead...
+:'''Kind Visitor:''' Over there... I think it's the rear courtyard of the Spices Supreme? Right beside the Longevity Hall.
+:'''(Trailblazer):''' Thank you. I'll be off then!
+:{{Black Screen|Are you looking for that cycrane? I just saw it flying straight ahead...}}
+<pre>{
+	"$type": "RPG.GameCore.AdvDestroyGroupEntity",
+	"InstanceIDList": [
+		400003
+	]
+}</pre>
+:{{Black Screen|Are you looking for that cycrane? I just saw it flying straight ahead...}}
+;(Unused &mdash; Act_800326404)
+:----
+::'''New Cycrane:''' Is this really Spices Supreme? Could be, could be not.
+::'''New Tester:''' ...Isn't this the back kitchen's pantry? Navigation tools shouldn't be sending people here. How can I get in there?
+::'''New Tester:''' Also, what about that kind-hearted person who just gave you directions? How could you just leave them behind like that? Please be more professional and don't just lose track of people like that...
+::'''New Cycrane:''' Hmm? {{MC|f=She|m=He}} isn't back yet? Let me see... Golly gee, you're right!
+::{{DIcon|Arrow}} Who are you talking about!
+:::'''New Cycrane:''' There you are! It's my fault. I was drifting and not paying attention. I really should install a rear-view mirror...
+::{{DIcon|Arrow}} You're so lost in yourself that you've lost track of me...
+:::'''New Cycrane:''' I'm sorry. I've only been in this role a few days and I'm not very experienced. I'll do better next time!
+::'''New Tester:''' Well then, where is the front entrance to the Spices Supreme?
+::{{DIcon|Arrow}} This is the rear courtyard. You'll have to turn around and skirt across.
+::'''New Tester:''' I see!
+::'''New Cycrane:''' Thank you for your help. I've updated the southwest corner of the Aurum Alley map. Here's a little fee for your work. Take it, otherwise we'd feel awkward.
+::----
 {{Dialogue End}}
 
 ==Other Languages==

@@ -55,97 +55,886 @@ PageTitle=#An Unexpected Turn of Events#
 ===Find out more details from Asta{{subst:void|<!--200021102-->}}===
 {{Mission Description|type=companion|location=Master Control Zone|update|Asta seems to have encountered something worrying indeed.<br />She's waiting for you at "the old place." Head over and find out what has happened.}}
 {{Dialogue Start}}
-:{{tx}}
+<pre>{
+	"$type": "RPG.GameCore.WaitUIControllerClose",
+	"UIControllerName": "PhoneNoticePage"
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.WaitUIControllerClose",
+	"UIControllerName": "MobilePhonePage"
+}</pre>
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{A|VO Side0 al asta 101.ogg}} '''Asta:''' Finally, you're here. This is urgent, so I'll cut to the chase &mdash; Arlan's disappeared.
+:{{DIcon|Arrow}} Disappeared?
+:{{A|VO Side0 al asta 102.ogg}} '''Asta:''' Yes, I can't find him. He's not answering his messages or calls.
+:{{A|VO Side0 al asta 103.ogg}} '''Asta:''' In all the time since I took him in, this has never happened.
+:{{DIcon|Arrow}} Have you checked the surveillance cameras?
+:{{A|VO Side0 al asta 104.ogg}} '''Asta:''' Of course! I didn't see him...
+:{{A|VO Side0 al asta 105.ogg}} '''Asta:''' Parts of the surveillance system were destroyed when the Legion invaded &mdash; it still hasn't been fully repaired. Maybe he took advantage of a blind spot.
+:{{A|VO Side0 al asta 106.ogg}} '''Asta:''' It's been thirteen hours since he last contacted me. He usually takes less than 13 seconds to reply to my messages!
+:{{A|VO Side0 al asta 107.ogg}} '''Asta:''' I looked everywhere and couldn't find him, so I checked the Security Department's work plan records. This is what I found!
+:{{A|VO Side0 al asta 108.ogg}} '''Asta:''' Look, at his last work objectives entry: "Of the heart. Of the mirror. Of the self." It's so strange...
+:{{DIcon|Arrow}} The entries for last week are pretty odd too.
+::{{A|VO Side0 al asta 109.ogg}} '''Asta:''' ...Ahaha, d&mdash;don't worry about those.
+:{{DIcon|Arrow}} Sure is.
+::{{A|VO Side0 al asta 110 m.ogg}} {{A|VO Side0 al asta 110 f.ogg}} '''Asta:''' I knew it. (Trailblazer), you think so too, right?
+:{{DIcon|Arrow}} I think guys his age do tend to write like this.
+::{{A|VO Side0 al asta 111.ogg}} '''Asta:''' ...B&mdash;But he's never written poetry before!
+:{{A|VO Side0 al asta 112.ogg}} '''Asta:''' *sigh* I asked people in the Security Department, but none of them thought it was concerning. They said stuff like:
+:{{A|VO Side0 al asta 113.ogg}} '''Asta:''' "Brother Arlan is a grown man with his own plans!"
+:{{A|VO Side0 al asta 114.ogg}} '''Asta:''' I couldn't get them to listen at all, so I'm asking you for help.
+:{{DIcon|Arrow}} You don't have any clues, how can I&mdash;
+::{{A|VO Side0 al asta 115.ogg}} '''Asta:''' I have a secret weapon! Say hello to...
+:{{DIcon|Arrow}} Guys his age just need "alone time" sometimes!
+::{{A|VO Side0 al asta 116.ogg}} '''Asta:''' Why are you acting like those Security Department idiots!? Stop fooling around and help me!
+::{{A|VO Side0 al asta 117.ogg}} '''Asta:''' I have a secret weapon! Say hello to...
+:{{A|VO Side0 al asta 118.ogg}} '''Asta:''' Peppy!
+:{{DIcon|Arrow}} Peppy?
+:{{A|VO Side0 al asta 119.ogg}} '''Asta:''' Mm-hmm, Peppy's my dog &mdash; Arlan's looked after him since he was a puppy. They're great friends.
+:{{A|VO Side0 al asta 120.ogg}} '''Asta:''' Peppy knows Arlan's scent &mdash; maybe he can track him down.
+:{{DIcon|Arrow}} Then... am I still needed?
+::{{A|VO Side0 al asta 121.ogg}} '''Asta:''' Y&mdash;Yes! Think about it &mdash; if people see me, the acting lead researcher, searching for Arlan...
+:{{DIcon|Arrow}} Then get Peppy to find Arlan.
+::{{A|VO Side0 al asta 122.ogg}} '''Asta:''' Peppy can't go alone. What if he gets lost too? And I can't go with him &mdash; if people see me, the acting lead researcher, searching for Arlan...
+:{{A|VO Side0 al asta 123.ogg}} '''Asta:''' Wouldn't that... Wouldn't that make Arlan look incompetent as head of the Security Department?
+:{{A|VO Side0 al asta 124.ogg}} '''Asta:''' ...Let's go together! Relax &mdash; Peppy doesn't bite.
+
+;(Talk to Asta)
+:{{A|VO Side0 al asta 101.ogg}} '''Asta:''' Finally, you're here. This is urgent, so I'll cut to the chase &mdash; Arlan's disappeared.
+:{{DIcon|Arrow}} Disappeared?
+:{{A|VO Side0 al asta 102.ogg}} '''Asta:''' Yes, I can't find him. He's not answering his messages or calls.
+:{{A|VO Side0 al asta 103.ogg}} '''Asta:''' In all the time since I took him in, this has never happened.
+:{{DIcon|Arrow}} Have you checked the surveillance cameras?
+:{{A|VO Side0 al asta 104.ogg}} '''Asta:''' Of course! I didn't see him...
+:{{A|VO Side0 al asta 105.ogg}} '''Asta:''' Parts of the surveillance system were destroyed when the Legion invaded &mdash; it still hasn't been fully repaired. Maybe he took advantage of a blind spot.
+:{{A|VO Side0 al asta 106.ogg}} '''Asta:''' It's been thirteen hours since he last contacted me. He usually takes less than 13 seconds to reply to my messages!
+:{{A|VO Side0 al asta 107.ogg}} '''Asta:''' I looked everywhere and couldn't find him, so I checked the Security Department's work plan records. This is what I found!
+:{{A|VO Side0 al asta 108.ogg}} '''Asta:''' Look, at his last work objectives entry: "Of the heart. Of the mirror. Of the self." It's so strange...
+:{{DIcon|Arrow}} The entries for last week are pretty odd too.
+::{{A|VO Side0 al asta 109.ogg}} '''Asta:''' ...Ahaha, d&mdash;don't worry about those.
+:{{DIcon|Arrow}} Sure is.
+::{{A|VO Side0 al asta 110 m.ogg}} {{A|VO Side0 al asta 110 f.ogg}} '''Asta:''' I knew it. (Trailblazer), you think so too, right?
+:{{DIcon|Arrow}} I think guys his age do tend to write like this.
+::{{A|VO Side0 al asta 111.ogg}} '''Asta:''' ...B&mdash;But he's never written poetry before!
+:{{A|VO Side0 al asta 112.ogg}} '''Asta:''' *sigh* I asked people in the Security Department, but none of them thought it was concerning. They said stuff like:
+:{{A|VO Side0 al asta 113.ogg}} '''Asta:''' "Brother Arlan is a grown man with his own plans!"
+:{{A|VO Side0 al asta 114.ogg}} '''Asta:''' I couldn't get them to listen at all, so I'm asking you for help.
+:{{DIcon|Arrow}} You don't have any clues, how can I&mdash;
+::{{A|VO Side0 al asta 115.ogg}} '''Asta:''' I have a secret weapon! Say hello to...
+:{{DIcon|Arrow}} Guys his age just need "alone time" sometimes!
+::{{A|VO Side0 al asta 116.ogg}} '''Asta:''' Why are you acting like those Security Department idiots!? Stop fooling around and help me!
+::{{A|VO Side0 al asta 117.ogg}} '''Asta:''' I have a secret weapon! Say hello to...
+:{{A|VO Side0 al asta 118.ogg}} '''Asta:''' Peppy!
+:{{DIcon|Arrow}} Peppy?
+:{{A|VO Side0 al asta 119.ogg}} '''Asta:''' Mm-hmm, Peppy's my dog &mdash; Arlan's looked after him since he was a puppy. They're great friends.
+:{{A|VO Side0 al asta 120.ogg}} '''Asta:''' Peppy knows Arlan's scent &mdash; maybe he can track him down.
+:{{DIcon|Arrow}} Then... am I still needed?
+::{{A|VO Side0 al asta 121.ogg}} '''Asta:''' Y&mdash;Yes! Think about it &mdash; if people see me, the acting lead researcher, searching for Arlan...
+:{{DIcon|Arrow}} Then get Peppy to find Arlan.
+::{{A|VO Side0 al asta 122.ogg}} '''Asta:''' Peppy can't go alone. What if he gets lost too? And I can't go with him &mdash; if people see me, the acting lead researcher, searching for Arlan...
+:{{A|VO Side0 al asta 123.ogg}} '''Asta:''' Wouldn't that... Wouldn't that make Arlan look incompetent as head of the Security Department?
+:{{A|VO Side0 al asta 124.ogg}} '''Asta:''' ...Let's go together! Relax &mdash; Peppy doesn't bite.
 {{Dialogue End}}
 
 ===Follow Peppy{{subst:void|<!--200021103-->}}===
 {{Mission Description|type=companion|location=Master Control Zone|update|Sniff sniff, sniff sniff.<br />Follow Peppy!}}
 {{Dialogue Start}}
-:{{tx}}
+;(Upon reaching the destination)
+----
+:{{A|VO Side0 al asta 125.ogg}} '''Asta:''' That's... Professor Capote? Are you sure Arlan was here, Peppy?
+:{{A|VO Side0 al peppy 101.ogg}} '''Peppy:''' Woof!
+:{{A|VO Side0 al asta 126.ogg}} '''Asta:''' Weird. Why would he visit this Casanova?
+:{{DIcon|Arrow}} Casanova?
+::{{A|VO Side0 al asta 127.ogg}} '''Asta:''' Look at all his fans! Need I say more?
+::{{A|VO Side0 al asta 128.ogg}} '''Asta:''' Behold, the winner of the "Most Awesome Researcher" contest.
+:{{DIcon|Arrow}} I thought you said his name was Capote...
+::{{A|VO Side0 al asta 129.ogg}} '''Asta:''' Haha, he probably should've been named Casanova... I've gotten used to saying it, anyway.
+::{{A|VO Side0 al asta 130.ogg}} '''Asta:''' Behold, the winner of the "Most Awesome Researcher" contest.
+:{{A|VO Side0 al asta 131 m.ogg}} {{A|VO Side0 al asta 131 f.ogg}} '''Asta:''' Hmm, it's better if I don't show my face... (Trailblazer), see if you can get some intel out of him.
+----
 {{Dialogue End}}
 
 ===Fish information out of Professor Capote{{subst:void|<!--200021104-->}}===
 {{Mission Description|type=companion|location=Master Control Zone|update|Professor Capote seems to know something about the trials.<br />Carefully fish out some useful information from him.}}
 {{Dialogue Start}}
-:{{tx}}
+:<!--0.5-second delay-->
+<pre>{
+	"$type": "RPG.GameCore.PropSetupUITrigger",
+	"ButtonIcon": "SpriteOutput/TalkIcon/ChatIcon.png",
+	"IconType": "ChatLoopIcon",
+	"ButtonText": {
+		"Hash": 18245525267712877410
+	},
+	"ButtonCallback": [
+		{
+			"$type": "RPG.GameCore.TriggerCustomString",
+			"CustomString": {
+				"Value": "Mission_200021105_Prop_50_300002_BtnClick"
+			}
+		}
+	],
+	"OverrideTargetTypes": [],
+	"TargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvPropEx",
+		"FetchType": "SinglePropByPropID",
+		"SinglePropID": {
+			"GroupID": {
+				"FixedValue": {
+					"Value": 50
+				}
+			},
+			"ID": {
+				"FixedValue": {
+					"Value": 300002
+				}
+			}
+		}
+	}
+}</pre>
+:<!--0.5-second delay-->
+<pre>{
+	"$type": "RPG.GameCore.PropSetupUITrigger",
+	"ButtonIcon": "SpriteOutput/TalkIcon/ChatIcon.png",
+	"IconType": "ChatLoopIcon",
+	"ButtonText": {
+		"Hash": 18245525267712877410
+	},
+	"ButtonCallback": [
+		{
+			"$type": "RPG.GameCore.TriggerCustomString",
+			"CustomString": {
+				"Value": "Mission_200021107_Prop_50_300003_BtnClick"
+			}
+		}
+	],
+	"OverrideTargetTypes": [],
+	"TargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvPropEx",
+		"FetchType": "SinglePropByPropID",
+		"SinglePropID": {
+			"GroupID": {
+				"FixedValue": {
+					"Value": 50
+				}
+			},
+			"ID": {
+				"FixedValue": {
+					"Value": 300003
+				}
+			}
+		}
+	}
+}</pre>
+:<!--0.5-second delay-->
+<pre>{
+	"$type": "RPG.GameCore.PropSetupUITrigger",
+	"ButtonIcon": "SpriteOutput/TalkIcon/ChatIcon.png",
+	"IconType": "ChatLoopIcon",
+	"ButtonText": {
+		"Hash": 18245525267712877410
+	},
+	"ButtonCallback": [
+		{
+			"$type": "RPG.GameCore.TriggerCustomString",
+			"CustomString": {
+				"Value": "Mission_200021109_Prop_50_300004_BtnClick"
+			}
+		}
+	],
+	"OverrideTargetTypes": [],
+	"TargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvPropEx",
+		"FetchType": "SinglePropByPropID",
+		"SinglePropID": {
+			"GroupID": {
+				"FixedValue": {
+					"Value": 50
+				}
+			},
+			"ID": {
+				"FixedValue": {
+					"Value": 300004
+				}
+			}
+		}
+	}
+}</pre>
+:<!--0.5-second delay-->
+<pre>{
+	"$type": "RPG.GameCore.PropSetupUITrigger",
+	"ButtonIcon": "SpriteOutput/TalkIcon/ChatIcon.png",
+	"IconType": "ChatLoopIcon",
+	"ButtonText": {
+		"Hash": 18245525267712877410
+	},
+	"ButtonCallback": [
+		{
+			"$type": "RPG.GameCore.TriggerCustomString",
+			"CustomString": {
+				"Value": "Mission_200021111_Prop_50_300005_BtnClick"
+			}
+		}
+	],
+	"OverrideTargetTypes": [],
+	"TargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvPropEx",
+		"FetchType": "SinglePropByPropID",
+		"SinglePropID": {
+			"GroupID": {
+				"FixedValue": {
+					"Value": 50
+				}
+			},
+			"ID": {
+				"FixedValue": {
+					"Value": 300005
+				}
+			}
+		}
+	}
+}</pre>
 {{Dialogue End}}
 
 ===Talk to Capote's fans{{subst:void|<!--200021112-->}}===
 {{Mission Description|type=companion|location=Master Control Zone|update|One of Capote's fans has a transcript that contains important clues.<br />Seeing as you can't get any useful information out of Professor Capote, keep digging from another angle.}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Obtain {{Item|Master Capote's Fan Reply Card|20|x=1}})
+
+;(Talk to Researcher)
+:{{A|VO Side0 al player 114 m.ogg}} {{A|VO Side0 al player 114 f.ogg}} '''(Trailblazer):''' (This is the one who mentioned the transcript just now...)
+:{{A|VO Side0 al staffAB 114.ogg}} '''Seemingly Vigilant Researcher:''' Hey, you've been talking Master Capote's ear off this whole time. Do you... want to join the fan club?
+:{{A|VO Side0 al staffAC 110.ogg}} '''Ruminative Researcher after a Long Period of Thinking:''' I bet you do... You wouldn't have known about Captain Arlan's meeting with Master Capote unless you had an interest.
+:{{A|VO Side0 al staffAB 115.ogg}} '''Seemingly Vigilant Researcher:''' You even memorized the internal testing content for version 12.0 of Master Capote's Life Wiki!
+:{{A|VO Side0 al staffAC 111.ogg}} '''Ruminative Researcher after a Long Period of Thinking:''' You must be one of those super fans that stayed under the radar. *sigh* We've been careless.
+:{{A|VO Side0 al staffAB 116.ogg}} '''Less-Guarded Researcher:''' We're on the same side after all! Here, this is our latest welcome bundle for new members of the fan club, and I'll toss in an updated version of Master Capote's Life Wiki!
+:{{A|VO Side0 al staffAC 112.ogg}} '''Smiley Researcher:''' Aww... He looks really cool in the new limited-edition snapshots~
 {{Dialogue End}}
 
 ===Pass on all the clues you learned to Asta{{subst:void|<!--200021113-->}}===
 {{Mission Description|type=companion|location=Master Control Zone|update|You learned quite a few things from Capote's fans.<br />Give everything to Asta and see if she has any more ideas.}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Asta)
+:{{A|VO Side0 al asta 132.ogg}} '''Asta:''' *sigh* What happened to you, Arlan? Why did you have to get that sleazy Capote to help you with a trial?
+:{{DIcon|Arrow}} Let's look at these materials first.
+::{{A|VO Side0 al asta 133.ogg}} '''Asta:''' Yeah, I guess that's our starting point.
+:{{DIcon|Arrow}} That Capote does have something about him...
+::{{A|VO Side0 al asta 134.ogg}} '''Asta:''' I heard he's good at rallying people to his cause... Ugh, never mind, let's stay on track and find some clues.
+:{{DIcon|Talk}} Read the fan reply card.
+::{{A|VO Side0 al asta 135.ogg}} '''Asta:''' This handwriting looks familiar... Is it Arlan's...?
+::{{A|VO Side0 al asta 136.ogg}} '''Asta:''' "Against the scorching sun, a beautiful flower will never endure. Within my fair embrace, my love for you is tender and pure."
+::{{A|VO Side0 al asta 137.ogg}} '''Asta:''' Yuck, so slimy... it does sound like Capote.
+:;(Return to previous option selection)
+:{{DIcon|Talk}} Look at the limited-edition snapshot.
+::{{A|VO Side0 al asta 138.ogg}} '''Asta:''' Looks like a candid shot... but surely he knew it was being taken &mdash; it's autographed.
+::{{A|VO Side0 al asta 139.ogg}} '''Asta:''' There's a figure that's not quite in the shot. Is that... Arlan!?
+::{{A|VO Side0 al asta 140.ogg}} '''Asta:''' So Arlan did go to see Professor Capote. This is the evidence.
+:;(Return to previous option selection)
+:{{DIcon|Talk}} Read Master Capote's Life Wiki version 12.0.
+::{{A|VO Side0 al asta 141.ogg}} '''Asta:''' ...Even the space station handbook doesn't get updated this frequently.
+::{{A|VO Side0 al asta 142.ogg}} '''Asta:''' Is this... an audio transcript?
+:<pre>{
+	"$type": "RPG.GameCore.ShowReading",
+	"BookID": {
+		"FixedValue": {
+			"Value": 190301
+		}
+	}
+}</pre>
+:;(Return to previous option selection)
+:{{DIcon|Arrow}} We have enough clues.
+::{{A|VO Side0 al asta 143.ogg}} '''Asta:''' So... the trial of the heart means knowing how to deal with an overbearing boss.
+::{{A|VO Side0 al asta 144.ogg}} '''Asta:''' So that's... how Arlan sees me...
+::{{DIcon|Arrow}} Maybe it isn't about you.
+::{{DIcon|Arrow}} Don't be too hard on yourself.
+::{{A|VO Side0 al asta 145.ogg}} '''Asta:''' I need to talk to him &mdash; let's hurry up and find him.
+::{{A|VO Side0 al asta 146.ogg}} '''Asta:''' Peppy, it's your turn again.
 {{Dialogue End}}
 
 ===Keep following Peppy{{subst:void|<!--200021114-->}}===
 {{Mission Description|type=companion|location=Base Zone|update|Sniff sniff, sniff sniff.<br />Keep following Peppy!}}
 {{Dialogue Start}}
-:{{tx}}
+;(Upon reaching the destination)
+:{{A|VO Side0 al asta 147.ogg}} '''Asta:''' That's... Dan Heng and the Security Department staff!
+:{{A|VO Side0 al asta 148.ogg}} '''Asta:''' There are still remnants of the Antimatter Legion in the space station. Let's go help them!
+;(Enter battle)
+:{{Enemy List|Frostspawn*1; Imaginary Weaver*2; Flamespawn*1}}
 {{Dialogue End}}
 
 ===Learn about Arlan's trial from Dan Heng{{subst:void|<!--200021116-->}}===
 {{Mission Description|type=companion|location=Base Zone|update|The last of the Legion have been cleared out, and it's now safe to ask about Arlan's situation.<br />Ask Dan Heng about Arlan's trial and his current whereabouts.}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Obtain {{Item|Arlan's ID Pass|20|x=1}})
+
+;(Talk to Dan Heng)
+:{{A|VO Side0 al danheng 101.ogg}} '''Dan Heng:''' ...What are you doing here?
+:{{DIcon|Arrow}} I'm here to protect a friend's secret.
+:{{DIcon|Arrow}} I'm here to find a lost friend.
+:{{A|VO Side0 al danheng 102.ogg}} '''Dan Heng:''' ...Then be careful. There are still Legion remnants in the area.
+:{{A|VO Side0 al danheng 103.ogg}} '''Dan Heng:''' Arlan isn't here right now, so we need to step up the space station's security. Spare no effort and stay focused.
+:{{A|VO Side0 al staffAE 101.ogg}} '''Member of the Security Department:''' Yes, brother Dan Heng!
+:{{DIcon|Arrow}} You saw Arlan?
+::{{A|VO Side0 al danheng 104.ogg}} '''Dan Heng:''' Yes, he's with March.
+:{{DIcon|Arrow}} Check you out, calling the shots...
+::{{A|VO Side0 al danheng 105.ogg}} '''Dan Heng:''' *sigh* I'm only helping Arlan. You're here to look for him, right? He's with March.
+:{{A|VO Side0 al danheng 106.ogg}} '''Dan Heng:''' But I suggest you don't bother him. He's given himself a personal trial.
+:{{A|VO Side0 al staffAE 102.ogg}} '''Thrilled Member of the Security Department:''' Brother Arlan's special trial? He's a man among men, a lion among tigers! He's already reached great heights, but still he wants to improve!
+:{{A|VO Side0 al staffAF 102.ogg}} '''Excited Member of the Security Department:''' That trial... I bet it's even more intense than physical training! And brother Arlan already challenges himself to the limit in that department &mdash; he runs 21,358 meters around the space station every day! An eagle among wolves! Always so hard on himself!
+:{{DIcon|Arrow}} What kind of trial is it?
+:{{A|VO Side0 al staffAE 103.ogg}} '''Thrilled Member of the Security Department:''' I think it must have something to do with the mind. He probably found a waterfall and asked Ms. March to lower the temperature to freezing point!
+:{{A|VO Side0 al staffAF 103.ogg}} '''Excited Member of the Security Department:''' No way! Brother Arlan's trial wouldn't be as simple as just standing under a waterfall! I think he wants to learn fighting skills from Ms. March.
+:{{A|VO Side0 al danheng 107.ogg}} '''Dan Heng:''' ...They're not correct, but not wrong either.
+:{{A|VO Side0 al danheng 108.ogg}} '''Dan Heng:''' Arlan came to me to learn how to manage pressure from his boss.
+:{{A|VO Side0 al danheng 109.ogg}} '''Dan Heng:''' ...So I sent him to March. If he can manage her, then he has nothing to fear.
+:{{DIcon|Arrow}} He's a bear among horses!
+::{{A|VO Side0 al staffAE 104.ogg}} '''Thrilled Member of the Security Department:''' That might be a metaphor too far.
+::{{A|VO Side0 al staffAF 104.ogg}} '''Excited Member of the Security Department:''' Brother Arlan runs like a horse and fights like a bear. I think that's a great metaphor!
+:{{DIcon|Arrow}} That's pretty sadistic, Dan Heng.
+::{{A|VO Side0 al staffAE 105.ogg}} '''Thrilled Member of the Security Department:''' I think brother Dan Heng is pretty smart.
+::{{A|VO Side0 al staffAF 105.ogg}} '''Excited Member of the Security Department:''' Brother Arlan only has that one weakness in his armor, but he won't ignore it! He's too awesome for that!
+:{{A|VO Side0 al danheng 110.ogg}} '''Dan Heng:''' ...Arlan and I decided to switch our assignments. He went with March to investigate a suspicious crystal, and I've taken up his patrol.
+:{{A|VO Side0 al danheng 111.ogg}} '''Dan Heng:''' That's all.
+:{{DIcon|Arrow}} Did Arlan leave anything with you?
+:{{A|VO Side0 al danheng 118.ogg}} '''Dan Heng:''' He gave me a pass for access across the space station while on patrol.
+:{{A|VO Side0 al staffAE 106.ogg}} '''Thrilled Member of the Security Department:''' I found a broken ceiling tile. This mark... it must be from where Brother Arlan smashed it down!
+:{{A|VO Side0 al staffAF 106.ogg}} '''Excited Member of the Security Department:''' Move aside. What kind of clue is that? This floor tile I found is way better! Look at the footprint &mdash; it's the right size, not to mention the angle of motion... This is proof of brother Arlan in combat!
+:{{DIcon|Talk}} "Of the mirror..." Did Arlan mention what that meant?
+::{{A|VO Side0 al danheng 112.ogg}} '''Dan Heng:''' He said he read an anonymous handwritten journal in the space station &mdash; it contained 36 different strategies to do with managing pressure from one's boss.
+::{{A|VO Side0 al danheng 113.ogg}} '''Dan Heng:''' It also contained some information on trials.
+::{{A|VO Side0 al danheng 114.ogg}} '''Dan Heng:''' Firstly, the trial of the heart. One needs to acknowledge the pressure in one's heart, and only then can one face it.
+::{{A|VO Side0 al danheng 115.ogg}} '''Dan Heng:''' Secondly, trial of the mirror. Like a mirror's reflection, one needs to personally experience the pressure others feel in a job in order to understand it.
+::{{A|VO Side0 al danheng 116.ogg}} '''Dan Heng:''' Lastly, trial of the self. One places oneself within that pressure to complete a transformation.
+::{{A|VO Side0 al danheng 117.ogg}} '''Dan Heng:''' I believe he came to me to complete the trial of the mirror.
+:;(Return to previous option selection)
+:{{DIcon|Talk}} Do you know why Arlan is undertaking this trial?
+::{{A|VO Side0 al danheng 119.ogg}} '''Dan Heng:''' No. He didn't say, and I didn't ask.
+::{{A|VO Side0 al staffAE 107.ogg}} '''Thrilled Member of the Security Department:''' Brother Arlan doesn't need a reason to improve himself! You don't understand him at all!
+::{{A|VO Side0 al staffAF 107.ogg}} '''Excited Member of the Security Department:''' Brother Arlan is a fierce fighter with an eye for detail. If you don't understand his reason for doing things, maybe that's because you're too zoomed in.
+::{{A|VO Side0 al staffAE 108.ogg}} '''Thrilled Member of the Security Department:''' He's just staying ahead of the game is all! He's the space station's coldhearted hawk, the Security Department's alpha wolf!
+:;(Return to previous option selection)
+:{{DIcon|Exit}} I don't have any other questions.
+::{{A|VO Side0 al danheng 120.ogg}} '''Dan Heng:''' If you want to find Arlan, just contact March.
 {{Dialogue End}}
 
 ===Pass on all the clues you learned to Asta{{subst:void|<!--200021117-->}}===
 {{Mission Description|type=companion|location=Base Zone|update|You learned quite a few things from Dan Heng and the Security Department staff.<br />Give everything to Asta and see if she has any more ideas.}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Asta)
+:{{A|VO Side0 al asta 149.ogg}} '''Asta:''' Job pressure... how to manage your boss...
+:{{A|VO Side0 al asta 150.ogg}} '''Asta:''' Arlan... I'm sorry. I never knew I was giving you so much pressure...
+:{{DIcon|Arrow}} Calm down. Let's look at the clues first.
+:{{DIcon|Arrow}} Maybe he doesn't mind...
+:{{A|VO Side0 al asta 151.ogg}} '''Asta:''' Mm... I need to feel the pressure he's feeling so I can understand what it's all about.
+:{{DIcon|Talk}} Arlan's ID Pass
+::{{A|VO Side0 al asta 152.ogg}} '''Asta:''' Ah, there's a photo of Peppy on the pass...
+::{{A|VO Side0 al asta 153.ogg}} '''Asta:''' I got Arlan to look after Peppy because I thought they got along... but was that giving him too much extra pressure?
+::{{A|VO Side0 al asta 154.ogg}} '''Asta:''' Maybe he printed out Peppy's picture as a way of forcing himself to remember his responsibility...
+:;(Return to previous option selection)
+:{{DIcon|Talk}} Broken Ceiling Tile
+::{{A|VO Side0 al asta 155.ogg}} '''Asta:''' Look how smashed up this ceiling tile is... Arlan must have bottled up his frustration and had no way of releasing it &mdash; so he took it out on the monsters!
+:;(Return to previous option selection)
+:{{DIcon|Talk}} Footprint
+::{{A|VO Side0 al asta 156.ogg}} '''Asta:''' It's Arlan's shoe size alright &mdash; and this actually came from a pair of shoes I bought for him.
+::{{A|VO Side0 al asta 157.ogg}} '''Asta:''' Maybe even these shoes are painful shackles for him...
+:;(Return to previous option selection)
+:{{DIcon|Exit}} Let's skip the clues for now.
+::{{A|VO Side0 al asta 158.ogg}} '''Asta:''' Yeah... We need to find Arlan quickly. I need to apologize to him in person!
+::{{A|VO Side0 al asta 159.ogg}} '''Asta:''' Peppy, let's get going.
 {{Dialogue End}}
 
 ===Keep following Peppy{{subst:void|<!--200021118-->}}===
 {{Mission Description|type=companion|location=Supply Zone|update|Sniff sniff, sniff sniff.<br />Just showing Peppy a photo of March 7th is enough for it to accurately locate her. Feels like it's using more than just smell to recognize people...}}
 {{Dialogue Start}}
-:{{tx}}
+;(Upon reaching the destination)
+----
+:{{A|VO Side0 al mar7th 101.ogg}} '''March 7th:''' *gasp* What a cute doggy! ...Oh, you're here too.
+:{{DIcon|Arrow}} Is Arlan not with you?
+::{{A|VO Side0 al mar7th 102.ogg}} '''March 7th:''' He was, but not anymore.
+::{{A|VO Side0 al mar7th 103.ogg}} '''March 7th:''' He wanted to go investigating on his own, so I let him~
+:{{DIcon|Arrow}} Nice of you to acknowledge the canine before me.
+::{{A|VO Side0 al mar7th 104.ogg}} '''March 7th:''' Hey! He's a new face, and you're not.
+::{{A|VO Side0 al mar7th 105.ogg}} '''March 7th:''' Huh, this little guy looks familiar... Ah! Are you Arlan's Peppy? Awwww I'm sowwie, your master isn't here. He's gone off to investigate~
+:{{DIcon|Arrow}} Did he mention anything about a trial?
+:{{A|VO Side0 al mar7th 106.ogg}} '''March 7th:''' He kept harping on about Dan Heng being a "true warrior" or something...
+:{{A|VO Side0 al mar7th 107.ogg}} '''March 7th:''' Oh, he did say that completing an assignment with me would help him "complete the final trial."
+:{{A|VO Side0 al mar7th 108.ogg}} '''March 7th:''' Hehe, it felt like he learned a lot from me. Then again, everyone has a lot to learn from me, hee-hee~
+:{{DIcon|Arrow}} Why did you split up?
+:{{A|VO Side0 al mar7th 109.ogg}} '''March 7th:''' We were investigating suspicious crystals together, but he said it was all pointless if he couldn't "transform" himself...
+:{{A|VO Side0 al mar7th 110.ogg}} '''March 7th:''' I could tell he was giving himself a lot of pressure, so I gave him a suggestion~
+:{{A|VO Side0 al mar7th 111.ogg}} '''March 7th:''' I told him actions speak louder than words when you wanna prove yourself... I was just thinking out loud really, I had no idea what kind of trial he was doing.
+:{{A|VO Side0 al mar7th 112.ogg}} '''March 7th:''' But when he heard that, he said "Mr. Dan Heng was right."
+:{{A|VO Side0 al mar7th 113.ogg}} '''March 7th:''' And then he just left. I took a photo of him &mdash; he was doing one of those tough guy walks!
+:{{A|VO Side0 al mar7th 114.ogg}} '''March 7th:''' Come to think of it, maybe I shouldn't have left him alone. Take me with you if you're going after him!
+----
+;(Obtain {{Item|Photo of Arlan's Back|20|x=1}})
 {{Dialogue End}}
 
 ===Track down the suspicious crystals and find Arlan{{subst:void|<!--200021120-->}}===
 {{Mission Description|type=companion|location=Supply Zone|update|Based on what March 7th said, Arlan should be investigating some suspicious crystals alone.<br />Go deeper amongst the suspicious crystals, and look for Arlan.}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{A|VO Side0 al asta 162.ogg}} '''Asta:''' The extent of the corrosion here is a lot worse than I imagined. Mrs. Hinkel did say the clean-up had been slow in places...
+:{{A|VO Side0 al mar7th 116.ogg}} '''March 7th:''' The Fragmentum has a big influence on the space around it. All this electronic equipment on the station must short-circuit pretty regularly, huh?
 {{Dialogue End}}
 
 ===Defeat the mutant creatures{{subst:void|<!--200021123-->}}===
 {{Mission Description|type=companion|location=Supply Zone|update|Somehow, these turned out to be a brand-new kind of monster that not even Arlan, the big brother of the Security Department, has seen before. They are not to be taken lightly at all!<br />As for the trials... just focus on killing these monsters first!}}
 {{Dialogue Start}}
-:{{tx}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{A|VO Side0 al arlan 101.ogg}} '''Arlan:''' Lady Asta, you... Why are you all here?
+:{{A|VO Side0 al arlan 102.ogg}} '''Arlan:''' I've never seen anything like this before. It looks like some kind of new entity &mdash; it must have mutated after being corroded.
+;(Enter battle)
+::{{tx|Enemy list missing}}
 {{Dialogue End}}
 
 ===Ask Arlan about the trial{{subst:void|<!--200021124-->}}===
 {{Mission Description|type=companion|location=Supply Zone|update|With the monsters finally dead, now is the time to ask Arlan about the purpose of this mysterious trial.<br />Despite all the clues you've gathered, it still doesn't feel like the truth has been revealed.}}
 {{Dialogue Start}}
+
+;(Talk to Arlan)
 :{{tx}}
 {{Dialogue End}}
 
 ===Keep interrogating Arlan to get to the truth behind the trials{{subst:void|<!--200021125-->}}===
 {{Mission Description|type=companion|location=Supply Zone|update|Looks like Arlan doesn't plan on spilling the beans in front of everyone.<br />Use the clues you've already gathered to help Asta prove her hypothesis is correct.}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Arlan)
+:{{A|VO Side0 al asta 173.ogg}} '''Asta:''' Firstly, your trial of the heart! You went to Professor Capote and asked him to simulate conversations with you so you could better understand your boss.
+:{{A|VO Side0 al asta 174.ogg}} '''Asta:''' And the evidence is...
+<pre>{
+	"$type": "RPG.GameCore.SelectMissionItem",
+	"ItemIDList": [
+		140132,
+		140133,
+		140134
+	],
+	"ItemHiddenIDList": [],
+	"ItemSelect": [
+		{
+			"Item1": 140132,
+			"TriggerCustomString": "TalkSentence_200031767"
+		},
+		{
+			"Item1": 140133,
+			"TriggerCustomString": "TalkSentence_200031776"
+		},
+		{
+			"Item1": 140134,
+			"TriggerCustomString": "TalkSentence_200031783"
+		}
+	],
+	"SlotNum": 1,
+	"InfoText": {
+		"Hash": 18096028862919064994
+	},
+	"SimpleTalk": {
+		"TalkSentenceID": 200031765
+	},
+	"OnSubmitSucceed": [],
+	"OnSubmitFail": [
+		{
+			"$type": "RPG.GameCore.EndPerformance"
+		}
+	],
+	"OnSubmitCancel": [
+		{
+			"$type": "RPG.GameCore.EndPerformance"
+		}
+	]
+}</pre>
+;(Unused &mdash; TalkSentence_200031767)
+:{{A|VO Side0 al asta 175.ogg}} '''Asta:''' This handwritten fan reply card!
+::{{A|VO Side0 al asta 176.ogg}} '''Asta:''' This is your handwriting, Arlan!
+::{{A|VO Side0 al arlan 109.ogg}} '''Arlan:''' I...
+::{{A|VO Side0 al asta 177.ogg}} '''Asta:''' No need to explain! This is Professor Capote's autograph alright, but you can't hide your handwriting. The way you join your letters is no different to your childhood diary entries.
+::{{A|VO Side0 al arlan 110.ogg}} '''Arlan:''' ...I&mdash;I did write this for Professor Capote.
+::{{A|VO Side0 al asta 178.ogg}} '''Asta:''' You're head of the Security Department &mdash; you don't have anything to do with Professor Capote. Why did you suddenly start writing his reply cards for him, huh?
+::{{A|VO Side0 al asta 179.ogg}} '''Asta:''' Hmph, d&mdash;don't go spilling the beans just yet!
+::{{A|VO Side0 al asta 180 m.ogg}} {{A|VO Side0 al asta 180 f.ogg}} '''Asta:''' (Trailblazer), this evidence is a bit of a stretch... Do we have anything better?
+:<pre>{
+	"$type": "RPG.GameCore.SelectMissionItem",
+	"ItemIDList": [
+		140132,
+		140133,
+		140134
+	],
+	"ItemHiddenIDList": [],
+	"ItemSelect": [
+		{
+			"Item1": 140132,
+			"TriggerCustomString": "TalkSentence_200031767"
+		},
+		{
+			"Item1": 140133,
+			"TriggerCustomString": "TalkSentence_200031776"
+		},
+		{
+			"Item1": 140134,
+			"TriggerCustomString": "TalkSentence_200031783"
+		}
+	],
+	"SlotNum": 1,
+	"InfoText": {
+		"Hash": 18096028862919064994
+	},
+	"SimpleTalk": {
+		"TalkSentenceID": 200031765
+	},
+	"OnSubmitSucceed": [],
+	"OnSubmitFail": [
+		{
+			"$type": "RPG.GameCore.EndPerformance"
+		}
+	],
+	"OnSubmitCancel": [
+		{
+			"$type": "RPG.GameCore.EndPerformance"
+		}
+	]
+}</pre>
+
+;(Unused &mdash; TalkSentence_200031776)
+:{{A|VO Side0 al asta 181.ogg}} '''Asta:''' This limited-edition snapshot!
+::{{A|VO Side0 al asta 182.ogg}} '''Asta:''' This was taken by a member of the Master Capote Fan Club less than 24 hours ago. In other words, you went to find Professor Capote today...
+::{{A|VO Side0 al asta 183.ogg}} '''Asta:''' ...and stopped responding to messages in the same time window!
+::{{A|VO Side0 al arlan 111.ogg}} '''Arlan:''' I... This is just...
+::{{A|VO Side0 al asta 184.ogg}} '''Asta:''' N&mdash;No need to launch your defense, we haven't got to the core yet!
+::{{A|VO Side0 al asta 185 m.ogg}} {{A|VO Side0 al asta 185 f.ogg}} '''Asta:''' (Trailblazer), this evidence is a bit of a stretch... Do we have anything better?
+:<pre>{
+	"$type": "RPG.GameCore.SelectMissionItem",
+	"ItemIDList": [
+		140132,
+		140133,
+		140134
+	],
+	"ItemHiddenIDList": [],
+	"ItemSelect": [
+		{
+			"Item1": 140132,
+			"TriggerCustomString": "TalkSentence_200031767"
+		},
+		{
+			"Item1": 140133,
+			"TriggerCustomString": "TalkSentence_200031776"
+		},
+		{
+			"Item1": 140134,
+			"TriggerCustomString": "TalkSentence_200031783"
+		}
+	],
+	"SlotNum": 1,
+	"InfoText": {
+		"Hash": 18096028862919064994
+	},
+	"SimpleTalk": {
+		"TalkSentenceID": 200031765
+	},
+	"OnSubmitSucceed": [],
+	"OnSubmitFail": [
+		{
+			"$type": "RPG.GameCore.EndPerformance"
+		}
+	],
+	"OnSubmitCancel": [
+		{
+			"$type": "RPG.GameCore.EndPerformance"
+		}
+	]
+}</pre>
+
+;(Unused &mdash; TalkSentence_200031783)
+:{{A|VO Side0 al asta 186.ogg}} '''Asta:''' Master Capote's Life Wiki version 12.0!
+::{{A|VO Side0 al asta 187.ogg}} '''Asta:''' This transcript records what you asked Capote to help you with. Here we can see a bossy manager and you being asked to do things outside of your job description.
+::{{A|VO Side0 al asta 188.ogg}} '''Asta:''' Clearly, Professor Capote is unlikely to master my speech or mannerisms any time soon... But the content is the key here!
+::{{A|VO Side0 al asta 189.ogg}} '''Asta:''' I am the source of your pressure!
+::{{A|VO Side0 al arlan 112.ogg}} '''Arlan:''' My lady, I did speak to Professor Capote, and I did ask him some things.
+::{{A|VO Side0 al arlan 113.ogg}} '''Arlan:''' But they had nothing to do with you! I've never experienced any pressure with you...
+::{{A|VO Side0 al asta 190.ogg}} '''Asta:''' Oh Arlan, won't you accept my apology?
+::{{A|VO Side0 al asta 191.ogg}} '''Asta:''' *sigh* I'll just have to show you more evidence.
+::{{A|VO Side0 al asta 192.ogg}} '''Asta:''' We know the essence of your trial of the heart, and we also know that you asked Dan Heng to help you complete the trial of the mirror.
+::{{A|VO Side0 al asta 193.ogg}} '''Asta:''' I'm so sorry, Arlan. Until I spoke with Dan Heng, I never realized how much pressure was on your shoulders.
+::{{A|VO Side0 al arlan 114.ogg}} '''Arlan:''' Miss, I really don't...
+::{{A|VO Side0 al asta 194.ogg}} '''Asta:''' Hold it! I have evidence...
+:<pre>{
+	"$type": "RPG.GameCore.SelectMissionItem",
+	"ItemIDList": [
+		140135,
+		140136,
+		140137
+	],
+	"ItemHiddenIDList": [],
+	"ItemSelect": [
+		{
+			"Item1": 140135,
+			"TriggerCustomString": "TalkSentence_200031821"
+		},
+		{
+			"Item1": 140136,
+			"TriggerCustomString": "TalkSentence_200031810"
+		},
+		{
+			"Item1": 140137,
+			"TriggerCustomString": "TalkSentence_200031816"
+		}
+	],
+	"SlotNum": 1,
+	"InfoText": {
+		"Hash": 18096028862919064994
+	},
+	"SimpleTalk": {
+		"TalkSentenceID": 200031765
+	},
+	"OnSubmitSucceed": [],
+	"OnSubmitFail": [
+		{
+			"$type": "RPG.GameCore.EndPerformance"
+		}
+	],
+	"OnSubmitCancel": [
+		{
+			"$type": "RPG.GameCore.EndPerformance"
+		}
+	]
+}</pre>
+
+;(Unused &mdash; TalkSentence_200031810)
+:{{A|VO Side0 al asta 195.ogg}} '''Asta:''' This ceiling tile!
+::{{A|VO Side0 al asta 196.ogg}} '''Asta:''' This... um... ceiling tile! You... you broke it!
+::{{A|VO Side0 al arlan 115.ogg}} '''Arlan:''' Sorry... I'll get it fixed later.
+::{{A|VO Side0 al asta 197.ogg}} '''Asta:''' I know you can be tough, but you're not violent by nature, Arlan &mdash; quite the opposite! Breaking a ceiling tile like this shows how much pressure and anger you were carrying around!
+::{{A|VO Side0 al mar7th 119.ogg}} '''March 7th:''' Uh, eh-he... This interpretation is sounding a little odd... Do we have any other evidence?
+:<pre>{
+	"$type": "RPG.GameCore.SelectMissionItem",
+	"ItemIDList": [
+		140135,
+		140136,
+		140137
+	],
+	"ItemHiddenIDList": [],
+	"ItemSelect": [
+		{
+			"Item1": 140135,
+			"TriggerCustomString": "TalkSentence_200031821"
+		},
+		{
+			"Item1": 140136,
+			"TriggerCustomString": "TalkSentence_200031810"
+		},
+		{
+			"Item1": 140137,
+			"TriggerCustomString": "TalkSentence_200031816"
+		}
+	],
+	"SlotNum": 1,
+	"InfoText": {
+		"Hash": 18096028862919064994
+	},
+	"SimpleTalk": {
+		"TalkSentenceID": 200031765
+	},
+	"OnSubmitSucceed": [],
+	"OnSubmitFail": [
+		{
+			"$type": "RPG.GameCore.EndPerformance"
+		}
+	],
+	"OnSubmitCancel": [
+		{
+			"$type": "RPG.GameCore.EndPerformance"
+		}
+	]
+}</pre>
+
+;(Unused &mdash; TalkSentence_200031816)
+:{{A|VO Side0 al asta 198.ogg}} '''Asta:''' This footprint!
+::{{A|VO Side0 al asta 199.ogg}} '''Asta:''' I bought these shoes for you &mdash; I remember the size and the design. This is undoubtedly your footprint.
+::{{A|VO Side0 al asta 200.ogg}} '''Asta:''' But I can tell a lot from the details, such as... umm... y&mdash;you used a lot of force! You had a lot of pressure, so you stomped really hard!
+::{{A|VO Side0 al mar7th 120.ogg}} '''March 7th:''' She can't even make things up anymore. You have more evidence, right?
+:<pre>{
+	"$type": "RPG.GameCore.SelectMissionItem",
+	"ItemIDList": [
+		140135,
+		140136,
+		140137
+	],
+	"ItemHiddenIDList": [],
+	"ItemSelect": [
+		{
+			"Item1": 140135,
+			"TriggerCustomString": "TalkSentence_200031821"
+		},
+		{
+			"Item1": 140136,
+			"TriggerCustomString": "TalkSentence_200031810"
+		},
+		{
+			"Item1": 140137,
+			"TriggerCustomString": "TalkSentence_200031816"
+		}
+	],
+	"SlotNum": 1,
+	"InfoText": {
+		"Hash": 18096028862919064994
+	},
+	"SimpleTalk": {
+		"TalkSentenceID": 200031765
+	},
+	"OnSubmitSucceed": [],
+	"OnSubmitFail": [
+		{
+			"$type": "RPG.GameCore.EndPerformance"
+		}
+	],
+	"OnSubmitCancel": [
+		{
+			"$type": "RPG.GameCore.EndPerformance"
+		}
+	]
+}</pre>
+
+;(Unused &mdash; TalkSentence_200031821)
+:{{A|VO Side0 al asta 201.ogg}} '''Asta:''' Your ID pass!
+::{{A|VO Side0 al asta 202.ogg}} '''Asta:''' This isn't just any old station pass, is it? There's a very important photo on it!
+::{{A|VO Side0 al asta 203.ogg}} '''Asta:''' A photo of Peppy!
+::{{A|VO Side0 al arlan 116.ogg}} '''Arlan:''' Lady Asta, I like Peppy a lot, so I...
+::{{A|VO Side0 al asta 204.ogg}} '''Asta:''' No, no, Arlan. You don't need to find excuses for your actions. *sigh* Maybe you've actually convinced yourself...
+::{{A|VO Side0 al asta 205.ogg}} '''Asta:''' The combination of your simulated conversations with Capote and the entry in your work log about playing holodisc with Peppy...
+::{{A|VO Side0 al asta 206.ogg}} '''Asta:''' It points to one thing: Me getting you to look after Peppy is the greatest source of your stress!
+::{{A|VO Side0 al asta 207.ogg}} '''Asta:''' Y&mdash;You even printed out a photo of Peppy to constantly remind yourself to look after him! *sniff*
+::{{A|VO Side0 al asta 208.ogg}} '''Asta:''' I know exactly what message you're trying to drill into yourself by sticking this photo onto your pass: "Arlan, taking Peppy out to play is an assignment from Lead Researcher Asta &mdash; you better throw that holodisc like it's a full-on discus! If you spare any effort... Lady Asta will find out and punish you terribly for all eternity!" *sniff*
+::{{A|VO Side0 al arlan 117.ogg}} '''Arlan:''' M&mdash;My lady, don't you think that's a long thought to think...?
+::{{A|VO Side0 al arlan 118.ogg}} '''Arlan:''' Lady Asta, please, I didn't do any of these trials because of you.
+::{{A|VO Side0 al arlan 119.ogg}} '''Arlan:''' I always try to complete every assignment you give me, regardless of whether it's within my job description.
+::{{A|VO Side0 al arlan 120.ogg}} '''Arlan:''' I... really like taking Peppy out to play.
+::{{A|VO Side0 al mar7th 121.ogg}} '''March 7th:''' Asta, I don't think Arlan is upset with you.
+::{{A|VO Side0 al asta 209.ogg}} '''Asta:''' But Arlan doesn't have any other bosses &mdash; who else would it be? March, he asked to accompany you so he could learn how to manage his stress, right?
+::{{A|VO Side0 al mar7th 122.ogg}} '''March 7th:''' Huh? Arlan wanted to go on assignments just to experience stress!?
+::{{A|VO Side0 al mar7th 123.ogg}} '''March 7th:''' Phew... Good thing I let him go alone &mdash; my calming influence would've ruined his training.
+::{{A|VO Side0 al mar7th 124.ogg}} '''March 7th:''' Hehe, guess I made the right decision after all.
+::{{DIcon|Arrow}} Dan Heng was right.
+::{{A|VO Side0 al mar7th 125.ogg}} '''March 7th:''' What did he say? That I'm good at solving people's problems?
+::{{A|VO Side0 al asta 210.ogg}} '''Asta:''' Ugh, Arlan, all I want you to understand is how sincerely I'm reflecting on my actions. Please accept my apology!
+::{{A|VO Side0 al arlan 121.ogg}} '''Arlan:''' But, my lady...
+::{{A|VO Side0 al asta 211.ogg}} '''Asta:''' Stop!
+::{{A|VO Side0 al asta 212.ogg}} '''Asta:''' Arlan, I understood the level of stress you're dealing with as soon as I saw this photo.
+:<pre>{
+	"$type": "RPG.GameCore.SelectMissionItem",
+	"ItemIDList": [
+		140138
+	],
+	"ItemHiddenIDList": [],
+	"ItemSelect": [
+		{
+			"Item1": 140138,
+			"TriggerCustomString": "TalkSentence_200031856"
+		}
+	],
+	"SlotNum": 1,
+	"InfoText": {
+		"Hash": 18096028862919064994
+	},
+	"SimpleTalk": {
+		"TalkSentenceID": 200031765
+	},
+	"OnSubmitSucceed": [],
+	"OnSubmitFail": [
+		{
+			"$type": "RPG.GameCore.EndPerformance"
+		}
+	],
+	"OnSubmitCancel": [
+		{
+			"$type": "RPG.GameCore.EndPerformance"
+		}
+	]
+}</pre>
+
+;(Unused &mdash; TalkSentence_200031856)
+:{{A|VO Side0 al mar7th 126.ogg}} '''March 7th:''' Didn't I take that photo?
+::{{A|VO Side0 al asta 213.ogg}} '''Asta:''' I'm always giving you tasks and assignments, but I never actually see how you take to the battlefield...
+::{{A|VO Side0 al asta 214.ogg}} '''Asta:''' ...when I saw this photo, when I saw you fighting alone just now...
+::{{A|VO Side0 al asta 215.ogg}} '''Asta:''' I'm just sorry that I gave you the stress of all my private affairs on top of an already stressful job.
+::{{A|VO Side0 al asta 216.ogg}} '''Asta:''' Please forgive me, Arlan.
+::{{A|VO Side0 al arlan 122.ogg}} '''Arlan:''' ...
+::{{A|VO Side0 al arlan 123.ogg}} '''Arlan:''' My Lady, I... I'm very touched, but...
+::{{A|VO Side0 al arlan 124.ogg}} '''Arlan:''' I started this trial because of Madam Herta.
+::{{A|VO Side0 al mar7th 127.ogg}} '''March 7th and Asta:''' What!?
+::{{A|VO Side0 al arlan 125.ogg}} '''Arlan:''' Whenever she's back on the space station, Madam Herta assigns me things outside the Security Department remit.
+::{{A|VO Side0 al arlan 126.ogg}} '''Arlan:''' Even if I dared to refuse, I wouldn't know how. She's just... too overbearing.
+::{{A|VO Side0 al arlan 127.ogg}} '''Arlan:''' Whether it's helping her test some new specimen, or looking for ancient documents I've never even heard of...
+::{{A|VO Side0 al arlan 128.ogg}} '''Arlan:''' ...Assignments like those were okay before the invasion, but now I need to focus on clearing out any last traces of the Legion.
+::{{A|VO Side0 al mar7th 128.ogg}} '''March 7th:''' Aha! So, you're trying to learn how to reject Herta, and then put it into practice!
+::{{A|VO Side0 al arlan 129.ogg}} '''Arlan:''' Yes. I found an anonymous handwritten journal while I was cleaning up &mdash; it mentioned 36 different strategies for relieving pressure. That's where I read about the trials.
+::{{DIcon|Arrow}} Of the heart, of the mirror, of the self...?
+::{{A|VO Side0 al arlan 130.ogg}} '''Arlan:''' Yes. There were detailed notes, so... I wanted to give them a try.
+::{{DIcon|Arrow}} Those trials really made Asta worry.
+::{{DIcon|Arrow}} Don't just read any anonymous journal!
+::{{DIcon|Arrow}} Did you really think it would help...?
+::{{A|VO Side0 al arlan 131.ogg}} '''Arlan:''' I'm sorry, my lady... I didn't want to bother anyone, so I didn't mention it.
+::{{A|VO Side0 al asta 218.ogg}} '''Asta:''' So... you don't feel pressured around me?
+::{{A|VO Side0 al arlan 132.ogg}} '''Arlan:''' I've never felt pressured around you, my lady.
+::{{A|VO Side0 al mar7th 129.ogg}} '''March 7th:''' Alright, alright &mdash; it's all a misunderstanding. You two should reflect on your actions!
+::{{A|VO Side0 al mar7th 130 m.ogg}} {{A|VO Side0 al mar7th 130 f.ogg}} '''March 7th:''' Right, (Trailblazer)?
+::{{DIcon|Arrow}} You need to talk to each other more.
+:::{{A|VO Side0 al mar7th 131.ogg}} '''March 7th:''' Yeah! See, the two of us would never have misunderstandings like this.
+::{{DIcon|Arrow}} You both need to start saying what you're thinking.
+:::{{A|VO Side0 al mar7th 132.ogg}} '''March 7th:''' Yup! I always say what I'm thinking.
+::{{DIcon|Arrow}} You both need to use your brains more.
+:::{{A|VO Side0 al mar7th 133.ogg}} '''March 7th:''' That's righ&mdash; Hey! This is supposed to be a happy moment!
+::{{DIcon|Arrow}} Anyways, Dan Heng was right...
+::{{A|VO Side0 al mar7th 134.ogg}} '''March 7th:''' You keep saying that &mdash; what did Dan Heng even say...
+::{{A|VO Side0 al arlan 133.ogg}} '''Arlan:''' ...Thank you for helping Lady Asta... and for coming to find me.
+::{{A|VO Side0 al mar7th 135.ogg}} '''March 7th:''' You're welcome! Although if you really wanna thank me... let me play holodisc with Peppy &mdash; pleaaaase~?
+::----
 {{Dialogue End}}
 
 ===Help Dan Heng defeat the enemies{{subst:void|<!--200021115-->}}===
 {{Mission Description|type=companion|location=Base Zone|update|Dan Heng is cleaning up the remnants of the Legion with other Security Department staff.<br />Go and offer a helping hand!}}
 {{Dialogue Start}}
-:{{tx}}
 {{Dialogue End}}
 
 ===Ask March 7th, who is sitting near the railway platform, for more details{{subst:void|<!--200021119-->}}===
 {{Mission Description|type=companion|location=Supply Zone|update|According to Dan Heng, March 7th should be with Arlan.<br />Asta is very worried about Arlan. Go there and ask what's going on.}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to March 7th)
+----
+:{{A|VO Side0 al mar7th 101.ogg}} '''March 7th:''' *gasp* What a cute doggy! ...Oh, you're here too.
+:{{DIcon|Arrow}} Is Arlan not with you?
+::{{A|VO Side0 al mar7th 102.ogg}} '''March 7th:''' He was, but not anymore.
+::{{A|VO Side0 al mar7th 103.ogg}} '''March 7th:''' He wanted to go investigating on his own, so I let him~
+:{{DIcon|Arrow}} Nice of you to acknowledge the canine before me.
+::{{A|VO Side0 al mar7th 104.ogg}} '''March 7th:''' Hey! He's a new face, and you're not.
+::{{A|VO Side0 al mar7th 105.ogg}} '''March 7th:''' Huh, this little guy looks familiar... Ah! Are you Arlan's Peppy? Awwww I'm sowwie, your master isn't here. He's gone off to investigate~
+:{{DIcon|Arrow}} Did he mention anything about a trial?
+:{{A|VO Side0 al mar7th 106.ogg}} '''March 7th:''' He kept harping on about Dan Heng being a "true warrior" or something...
+:{{A|VO Side0 al mar7th 107.ogg}} '''March 7th:''' Oh, he did say that completing an assignment with me would help him "complete the final trial."
+:{{A|VO Side0 al mar7th 108.ogg}} '''March 7th:''' Hehe, it felt like he learned a lot from me. Then again, everyone has a lot to learn from me, hee-hee~
+:{{DIcon|Arrow}} Why did you split up?
+:{{A|VO Side0 al mar7th 109.ogg}} '''March 7th:''' We were investigating suspicious crystals together, but he said it was all pointless if he couldn't "transform" himself...
+:{{A|VO Side0 al mar7th 110.ogg}} '''March 7th:''' I could tell he was giving himself a lot of pressure, so I gave him a suggestion~
+:{{A|VO Side0 al mar7th 111.ogg}} '''March 7th:''' I told him actions speak louder than words when you wanna prove yourself... I was just thinking out loud really, I had no idea what kind of trial he was doing.
+:{{A|VO Side0 al mar7th 112.ogg}} '''March 7th:''' But when he heard that, he said "Mr. Dan Heng was right."
+:{{A|VO Side0 al mar7th 113.ogg}} '''March 7th:''' And then he just left. I took a photo of him &mdash; he was doing one of those tough guy walks!
+:{{A|VO Side0 al mar7th 114.ogg}} '''March 7th:''' Come to think of it, maybe I shouldn't have left him alone. Take me with you if you're going after him!
+----
 {{Dialogue End}}
 
 ===Track down the suspicious crystals and find Arlan{{subst:void|<!--200021121-->}}===
 {{Mission Description|type=companion|location=Supply Zone|update|Based on what March 7th said, Arlan should be investigating some suspicious crystals alone.<br />Go deeper amongst the suspicious crystals, and look for Arlan.}}
 {{Dialogue Start}}
-:{{tx}}
+
 {{Dialogue End}}
 
 ==Other Languages==

@@ -36,7 +36,58 @@ PageTitle=#Ghost of the Past#
 ===Solve the Fragmentum echoes' predicaments and release them from their problems.{{subst:void|<!--301160901-->}}===
 {{Mission Description|type=daily|location=Corridor of Fading Echoes|Some Silvermane Guard patrols spotted illusory echoes in the Fragmentum who are stuck inside due to unfinished businesses. Help them.<br />The nervous Silvermane Guard wants to repair the Barrier Generator...}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Nervous Silvermane Guard)
+:'''Nervous Silvermane Guard:''' Ahh... Excuse me, could you help me fix this Barrier Generator?
+:'''Nervous Silvermane Guard:''' I can't turn it on... There seems to be a problem with the wiring... But I don't know how to fix it...
+:'''Nervous Silvermane Guard:''' I... only came to the front lines yesterday. I still don't know much about the Barrier Launcher... Can you please take a look at it?
+:'''Nervous Silvermane Guard:''' I heard that a large number of monsters are approaching here... If we can't fix it, we're all going to die!
+:{{DIcon|Arrow}} Let me have a look.
+:'''Nervous Silvermane Guard:''' Th&mdash;Thank you!
+<pre>{
+	"$type": "RPG.GameCore.RandomConfig",
+	"OddsList": [
+		{
+			"FixedValue": {
+				"Value": 0.33
+			}
+		},
+		{
+			"FixedValue": {
+				"Value": 0.33
+			}
+		},
+		{
+			"FixedValue": {
+				"Value": 0.34
+			}
+		}
+	],
+	"TaskList": [
+		{
+			"$type": "RPG.GameCore.TriggerCustomStringOnDialogEnd",
+			"CustomString": {
+				"Value": "CablePuzzle_Mission_30116_04"
+			}
+		},
+		{
+			"$type": "RPG.GameCore.TriggerCustomStringOnDialogEnd",
+			"CustomString": {
+				"Value": "CablePuzzle_Mission_30116_05"
+			}
+		},
+		{
+			"$type": "RPG.GameCore.TriggerCustomStringOnDialogEnd",
+			"CustomString": {
+				"Value": "CablePuzzle_Mission_30116_06"
+			}
+		}
+	]
+}</pre>
+:'''Nervous Silvermane Guard:''' Ahh... It's fixed! Thank you so much!
+:'''Nervous Silvermane Guard:''' The Barrier is activated... It can at least fend off those monsters for a while! I have to evacuate the civilians... You look after yourself. We can't have good folks like you die!
+:'''Nervous Silvermane Guard:''' May Belobog stand forever! May the Supreme Guardian live forever!
+:The ill-at-ease recruit gives you a bow of thanks despite his shaking body, then rushes towards the depths of the fort. You watch from a distance as his skinny form dissolves into broken light in the freezing Fragmentum.
 {{Dialogue End}}
 
 ==Other Languages==

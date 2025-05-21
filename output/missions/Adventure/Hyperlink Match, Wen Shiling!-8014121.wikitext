@@ -36,7 +36,22 @@ PageTitle=#Hyperlink Match, Wen Shiling!#
 ===Have a Hyperlink Match with Wen Shiling{{subst:void|<!--801412101-->}}===
 {{Mission Description|type=adventure|location=Supply Zone|The core gameplay loop behind Aetherium Wars is "dueling." Challenge different players and show your true strength!}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Wen Shiling)
+:'''Wen Shiling:''' Something doesn't look right about the data from that last battle...
+<pre>{
+	"$type": "RPG.GameCore.ShowMenu",
+	"DisplaySingleMenuItem": true
+}</pre>
+:'''Wen Shiling:''' Ahh! How can I use horrible data like this in my report...
+<pre>{
+	"$type": "RPG.GameCore.ShowUI",
+	"Name": "Ui.AetherDivide.AetherDivideEntryPage",
+	"Param": {
+		"Value": "2"
+	},
+	"OnUIEnter": []
+}</pre>
 {{Dialogue End}}
 
 ==Other Languages==

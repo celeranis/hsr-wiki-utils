@@ -47,67 +47,291 @@ PageTitle=#Silent yet Shining#
 ===Talk to Scott and ask about the whereabouts of the armor{{subst:void|<!--201090401-->}}===
 {{Mission Description|type=adventure|location=Boulder Town|After finding the monster armor for Scott, you finally receive the rest of the reward. But something about that strange armor makes you worry. Although you've mentioned this to him, you know well that he might not take it seriously. So you decide to check on it again...}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Scott)
+:'''Scott:''' He's alright, he's off the peak now but that's nothing to worry about.
+:'''Scott:''' I'll get him to fight a robot a few times next, just to heat things up again.
+:{{DIcon|Arrow}} I'm worried about contamination by the armor...
+:'''Scott:''' Contamination? Don't be ridiculous, what kind of contamination can the armor have? I think that guy is ridiculously strong. He can smash the robot with his bare hands.
+:{{DIcon|Arrow}} I'll go and check on him.
+::'''Scott:''' I sign boxers to make money, not to treat them like babies! He's not that delicate!
+::'''Scott:''' Instead of pitying that guy, you should feel sorry for me, who wasted all that money!
+:{{DIcon|Arrow}} Oh yeah? I don't believe you.
+::'''Scott:''' Believe it or not, these boxer scums know nothing about being grateful. He's not worth your time.
+:'''Scott:''' You know what, he's actually got a match today, and he's in there. Go and talk to him, just leave me alone.
 {{Dialogue End}}
 
 ===Talk to Kluzer and ask about his health status{{subst:void|<!--201090402-->}}===
 {{Mission Description|type=adventure|location=Fight Club|update|The armor is soaked with the air of Fragmentum. Using it for a long time might impact the health of the user. Scott doesn't take your advice and arranges for Kluzer the boxer to wear it whenever he competes. You're worried about Kluzer's physical condition.}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Kluzer)
+----
+:'''Kluzer:''' ...Can I help you?
+:{{DIcon|Arrow}} How are you feeling?
+::'''Kluzer:''' Same old, nothing much.
+::'''Kluzer:''' Thank you for your kindness, but I... *cough*... I'm fine... *cough*... It's no biggie.
+:{{DIcon|Arrow}} I came here to see you.
+::'''Kluzer:''' ...I'm fine, no need to worry.
+::'''Kluzer:''' Thank you for your kindness, but I... *cough*... I'm fine... *cough*... It's no biggie.
+:{{DIcon|Arrow}} I just came to see the armor.
+::'''Kluzer:''' This monster armor scared a lot of people and made a lot of money.
+::'''Kluzer:''' *cough*... Forget I said anything if I misunderstood you... I'm alright... *cough*... Nothing wrong.
+:{{DIcon|Arrow}} You are very weak. You should see a doctor.
+::'''Kluzer:''' No, I'm fine, thanks.
+:{{DIcon|Arrow}} The armor may have adverse effects on people...
+::'''Kluzer:''' There are no adverse effects. As I said, I'm in good health, and good shape... *cough* I can continue to fight.
+:'''Kluzer:''' Ahem... I have a few matches with robots in a bit, I need to prepare...
+:'''Kluzer:''' Cough! Cough cough&mdash;
+<pre>{
+	"$type": "RPG.GameCore.DestroyNPC",
+	"GroupID": 7,
+	"GroupNpcID": 400001,
+	"DestroyList": []
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.TriggerSound",
+	"SoundName": {
+		"Value": "Ev_sfx_belobog_bodyfall_armour"
+	},
+	"EmitterType": "LocalPlayer"
+}</pre>
+:<!--1-second delay-->
+:'''Onlooking Boxer:''' Hey, Monster Armor! Wake up, wake up!
+:'''Onlooking Boxer:''' Why did he fall? Is something wrong?
+:'''(Trailblazer):''' (I have to take him to the clinic for a checkup...)
 {{Dialogue End}}
 
 ===Talk to Natasha and arrange a health examination for Kluzer{{subst:void|<!--201090424-->}}===
 {{Mission Description|type=adventure|location=Fight Club|update|Kluzer insists that he is fine, but you can tell from his weak look that the armor might have negatively affected him. You decide to ask Natasha, the health professional, to examine Kluzer.}}
 {{Dialogue Start}}
-:{{tx}}
+:{{Black Screen|You bring Kluzer to Natasha's clinic. His frail appearance really bothers you.}}
+:'''Natasha:''' Oh? (Trailblazer), what happened to this friend of yours?
+:{{DIcon|Arrow}} (You tell Natasha what happened)
+:'''Natasha:''' Armor from Fragmentum monsters? He's really got some guts to walk around wearing such a dangerous thing...
+:'''Kluzer:''' Mr. Scott told me that if I wear this armor to matches, I will get a raise... *cough*
+:'''Natasha:''' Is the money worth your life?
+:'''Kluzer:''' ...There's a lot of holes I need to fill... *cough* with money...
+:'''Kluzer:''' *cough* *cough* Are we done now, doc? Can I go back now?
+:{{DIcon|Arrow}} Wait, let's read the diagnosis first.
+::'''Natasha:''' Well, the report is out, but the situation... is really not good.
+:{{DIcon|Arrow}} You can't go back yet.
+::'''Natasha:''' The doc hasn't spoken yet... and you really can't go back like this.
+:'''Natasha:''' Look here, these are all old wounds which should have healed long ago, but not only did the wounds not heal, there are crystal-like things on the surface.
+:'''Natasha:''' I have checked, and these crystals are very similar in composition to the detritus in the Fragmentum. I've seen some patients affected by Fragmentum corrosion and your current symptoms are similar to theirs.
+:'''Natasha:''' Corrosion is like a kind of chronic toxin. It constantly interferes with the normal healing process of wounds, which in turn increases the burden on the organs, and can lead to organ failure in severe cases.
+:'''Natasha:''' In short, you can no longer touch this armor, and you must cease all fighting activities for the time being. Get some good rest, recover from your injuries, and come back to me for follow up.
+:'''Kluzer:''' ...So I can't fight anymore?
+:'''Natasha:''' I'm not being alarmist. If you go on like this, sooner or later you'll fall in the ring &mdash; the kind of fall you'll never recover from. Do you understand?
+:'''Kluzer:''' ...Yes doc.
+:'''Kluzer:''' I'll leave now then... Thank you, stranger.
+:{{Black Screen|Kluzer left the clinic dragging his injured body...}}
+:'''Natasha:''' You know, I've seen too many patients like this, and most of them won't follow the doctor's orders...
+:'''Natasha:''' (Trailblazer), don't go yet. I need to ask you a favor.
+:{{DIcon|Arrow}} What is it?
+:{{DIcon|Arrow}} Wow, how convenient... for you.
+::'''Natasha:''' Well, it's my lucky day. Now listen to me.
+:'''Natasha:''' A while ago, someone began sending a package full of supplies to the clinic every few days.
+:'''Natasha:''' The contents are always roughly the same: Food, toys, and simple clothes for children.
+:'''Natasha:''' Strangely, it's never the same guy who delivers the package, and none of them would tell me who the generous donor is...
+:'''Natasha:''' Thanks to this anonymous kind-hearted donor, the children here have more than enough things for the time being.
+:'''Natasha:''' ...which is why now we have some extra stuff. Let me see... a few tins of milk powder, a few sets of clothes for toddlers, and two sets of storybooks.
+:'''Natasha:''' I'd hate to see these go to waste. Could you help me give them to someone who needs them more?
+:{{DIcon|Arrow}} Leave it to me.
+:{{DIcon|Arrow}} You're treating me like a delivery man.
+:'''Natasha:''' Alright, let's go.
+----
+;(Obtain {{Item|Milk Powder Package|20|x=1}})
+
+;(Talk to Natasha)
+:'''Natasha:''' I hope your exploration will make progress, (Trailblazer), and your journey will be free of pain.
+:'''Natasha:''' Of course, even if you get injured by accident, no need to panic. Just leave it to the doctor.
 {{Dialogue End}}
 
 ===Gift the anonymous packages{{subst:void|<!--201090406-->}}===
 {{Mission Description|type=adventure|location=Boulder Town|update|Natasha tells you that the clinic keeps receiving anonymous care packages. She doesn't know who is doing this, but you two decide to spread their love and care to those in need.}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Scraggy Miner)
+:'''Scraggy Miner:''' Where can I get some Moo-Moo baby formula? *sigh*... The little guy is crying nonstop...
+:{{DIcon|Arrow}} Are you worried about baby formula?
+::'''Scraggy Miner:''' I want to buy baby formula. I have been to the market several times, but the milk is expensive and always in short supply, and after the rent is paid, there's not much left...
+:{{DIcon|Arrow}} Why would the little guy keep crying?
+::'''Scraggy Miner:''' His mother left him and I don't have what it takes to look after him. If only I could get some baby formula, then perhaps...
+:{{DIcon|Arrow}} I happen to have some baby formula. Take these.
+:'''Scraggy Miner:''' Wait what? That's... thank you, I mean... really, thank you so very much.
+
+;(Talk to Courteous Woman)
+:'''Courteous Woman:''' What should I do? Must I really go to Rivet Town in person?
+:{{DIcon|Arrow}} Why go to Rivet Town?
+::'''Courteous Woman:''' Eh? Excuse me, are you talking to me?
+::'''Courteous Woman:''' If I don't make a trip to Rivet Town, my sister will suffer... ugh.
+:{{DIcon|Arrow}} It's dangerous to go alone...
+::'''Courteous Woman:''' But if I don't, then my sister will be in trouble... *sigh*
+:{{DIcon|Arrow}} Tell me what happened.
+:{{DIcon|Arrow}} You must need toddler clothes then.
+::'''Courteous Woman:''' Eh? How do you know? I haven't even said anything yet.
+:'''Courteous Woman:''' My sister... she has a strange skin disease and can't wear ordinary coarse linen clothes, or else a red rash will break out all over her body, which can be unbearably painful and itchy.
+:'''Courteous Woman:''' Before we moved out of Rivet Town, we always went to a local tailor to convert the soft fabrics of toddler clothes into bodysuits that she could wear.
+:'''Courteous Woman:''' After the town fell, we lost contact with the tailor, and it became increasingly difficult to find clothes with delicate fabrics...
+:'''Courteous Woman:''' As the eldest sister in the family, I have to take good care of my younger sister... If necessary, I will go back to the tailor's shop in Rivet Town by myself to find some.
+:{{DIcon|Arrow}} I do have some toddler clothes. Wanna see?
+:'''Courteous Woman:''' ...really? Please show me...
+
+;(Talk to Wandering Little Girl)
+:'''Wandering Little Girl:''' Why hasn't mummy finished work yet... *sniff* *sniff*
+:{{DIcon|Arrow}} Why are you here alone?
+::'''Wandering Little Girl:''' I&mdash;I'm not alone... I'm waiting for mummy to finish work.
+:{{DIcon|Arrow}} Why isn't she off work yet?
+::'''Wandering Little Girl:''' ...Stranger danger! Mummy said, "Never talk to strangers!"
+:{{DIcon|Arrow}} It's dangerous for you to be here alone.
+::'''Wandering Little Girl:''' Ugh... bu&mdash;but daddy is sleeping in the mines... and mummy said he'll need to sleep a few more years before he comes back...
+::'''Wandering Little Girl:''' Mummy's gotta work, she works hard... So I wait here. Everyone here knows me.
+:{{DIcon|Arrow}} Does your dad take care of you?
+::'''Wandering Little Girl:''' ...daddy is sleeping in the mines... and mummy said he'll need to sleep a few more years before he comes back...
+:'''Wandering Little Girl:''' Mummy said, she's saving money to buy me my favorite story books for my birthday. Not sure if she forgot...
+:{{DIcon|Arrow}} Your mom asked me to give you this gift.
+:'''Wandering Little Girl:''' Wow! For real!? Now I finally have a fairy tale book of my own too!
+----
+:'''Courteous Woman:''' Oh the fabric... I really miss it, I haven't touched a fabric this delicate for such a long time.
+:'''Courteous Woman:''' So how do you plan to sell these outfits? I don't have much money on me, but if it's for my sister...
+:{{DIcon|Arrow}} Have it for free.
+:'''Courteous Woman:''' ...For real? Thank you so much. I'll go home and tailor the clothes now! When the chance comes, I'd like to treat you to my home-baked moss bread. It's super yummy when fresh out of the oven.
+:'''Courteous Woman:''' Hey, look at this... It looks like a letter that fell out of your clothes. Is it yours?
+<pre>{
+	"$type": "RPG.GameCore.ShowReading",
+	"BookID": {
+		"FixedValue": {
+			"Value": 190195
+		}
+	}
+}</pre>
+;(Obtain {{Item|Kluzer's Letter|20|x=1}})
+:'''Wandering Little Girl:''' Are you... are you mum's work friend? I don't think I've met you before...
+:'''Wandering Little Girl:''' Thank you! I'll just stay here and read while I wait for my mom to get off work...
+:'''(Trailblazer):''' (So Kluzer is the anonymous donor who sent supplies to the clinic?)
+:'''(Trailblazer):''' (The symptoms are still worsening... he is well aware of his condition.)
+:'''(Trailblazer):''' (I should just check with him in person.)
 {{Dialogue End}}
 
 ===Ask Scott about Kluzer's whereabouts{{subst:void|<!--201090409-->}}===
 {{Mission Description|type=adventure|location=Boulder Town|update|The cold words of the boxing audience make you even more worried for Kluzer. Having done a long hard search without success, you decide to ask Scott about Kluzer's whereabouts. As the owner of the club, he must know something.}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Scott)
+:'''Scott:''' Of course he is. He's still under contract. Where else can he go?
+:'''Scott:''' He's just another has-been who can't adapt to the audience's tastes... Hmph. He's now just in it for the base wage that I charitably trickle down to him!
+:{{DIcon|Arrow}} What do you mean by "has-been"?
+::'''Scott:''' Ha! You obviously don't pay much attention to our boxing matches, do you? He was beaten so badly by the five-time champ. It was such a one-sided fiasco.
+:{{DIcon|Arrow}} So boxing is all about winning?
+::'''Scott:''' Ha, winning won't be enough! Making money for me is more important than winning games.
+::'''Scott:''' Besides, he can't even win anymore. He was beaten so badly by the five-time champ. It was such a one-sided fiasco.
+:'''Scott:''' I know the audience too well. They quickly tire of the old and are constantly chasing after the new. Whoever beats the latest crowd favorite gets to be the next super star.
+:{{DIcon|Arrow}} Then why is he still fighting?
+::'''Scott:''' What else can he do to put food on the table? It's not like you are gonna pay for his living.
+:{{DIcon|Arrow}} He should just take a break.
+::'''Scott:''' A break!? He should first try to take a break from being such a loser!
+:'''Scott:''' If I had known you were coming, I wouldn't have sent him to the Fragmentum to find a new set of armor. Should always leave things like this to pros like you.
+:{{DIcon|Arrow}} New armor?
+:'''Scott:''' Yeah, didn't I just say, he was badly injured not long ago and even got his armor broken.
+:'''Scott:''' He should've tried to be a gracious loser and recognized the massive gap in strength between himself and his opponent.
+:'''Scott:''' But that guy doesn't seem to know when to quit. Ever since he woke up from his concussion, he has been pestering me nonstop, begging me to give him another chance in the ring.
+:'''Scott:''' Luckily for him, I was in a particularly merciful mood today. So I told him that the audience has been long sick of his old shtick. If he wants to win back the audience, he simply needs to find himself a much more powerful monster for a different set of armor.
+:{{DIcon|Arrow}} Is he still fit to fight in his condition?
+::'''Scott:''' Who knows? All I saw was the guy limping away with a broken leg. He probably went looking for new armor, as he should.
+::'''Scott:''' But who cares! Monster Armor has already made me quite some money. He can go wherever he wants. After all, it's a free town here.
+:{{DIcon|Arrow}} There're no different kinds of monster armor!
+::'''Scott:''' You think I know nothing about Fragmentum monsters, huh? I've seen some bigger and scarier ones, and if he can get his hands on one of those, then I'm willing to pay more to rehire him.
+::'''Scott:''' I saw the guy limping away with a broken leg. He probably went looking for new armor, as he should. And he'd better find one, or else he shouldn't even bother coming back.
+:{{DIcon|Arrow}} It's too dangerous. I'll go find him!
+::'''Scott:''' He probably headed to Rivet Town. That's where the monsters are, after all. If you leave now, you may still catch him.
+:{{DIcon|Arrow}} You are so cruel.
+::'''Scott:''' Hmph. If you don't like this, you can just bring him back. He went looking for monsters, so he must have gone to Rivet Town.
 {{Dialogue End}}
 
 ===Look for Kluzer{{subst:void|<!--201090411-->}}===
 {{Mission Description|type=adventure|location=Rivet Town|update|You know Scott is nothing but a mercenary, but you didn't expect that he would send Kluzer to Rivet Town alone in order to extract the last drip of monetary value... You hope that Kluzer is fine even with his injuries.}}
 {{Dialogue Start}}
-:{{tx}}
+;(Upon reaching the destination)
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:'''(Trailblazer):''' (This is... Kluzer? What happened to him?)
+:'''(Trailblazer):''' (Wait, the one next to him is...)
+:'''(Trailblazer):''' (Kluzer is seriously injured? Oh no... I have a bad feeling...)
 {{Dialogue End}}
 
 ===Defeat the monster that hurt Kluzer{{subst:void|<!--201090412-->}}===
 {{Mission Description|type=adventure|location=Rivet Town|update|You arrive at Rivet Town as fast as possible and finally find Kluzer. You're in a hurry to check his status, but the monster that hurt him notices you...}}
 {{Dialogue Start}}
-:{{tx}}
 {{Dialogue End}}
 
 ===Check Kluzer's injuries{{subst:void|<!--201090413-->}}===
 {{Mission Description|type=adventure|location=Rivet Town|update|After defeating the Fragmentum monster, you hurry to check on Kluzer, but he is too badly injured to be saved. As you collect his belongings scattered around his body, you accidentally find his secret...}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Obtain {{Item|Anonymous Package|20|x=1}})
+
+:{{DIcon|Talk}} Investigate
+:'''Kluzer:''' In the end... the parcel... went to...
+:'''Kluzer:''' ...
+:{{Black Screen|Kluzer fell to the ground and vanished without a trace, just like a Fragmentum Monster.}}
+:His personal belongings are scattered around where he has just disappeared. "To Natasha's Clinic, Boulder Town" was written clearly on the unsent parcel.
 {{Dialogue End}}
 
 ===Tell Natasha about Kluzer and his packages{{subst:void|<!--201090414-->}}===
 {{Mission Description|type=adventure|location=Natasha's Clinic|update|It turns out that Kluzer was the one who kept sending anonymous care packages to the clinic. You decide to share the news with Natasha, and ask her if she knows about Kluzer's wife and children. This is all you can do for him.}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Natasha)
+:'''Natasha:''' So the anonymous donor was Kluzer...
+:'''Natasha:''' Oh, I remember helping him with the diagnosis when he was so weakened by that suit of armor.
+:'''Natasha:''' I never approved of how he risked his life like that. I can't imagine how strong-willed he must be to manage to do all this in his condition.
+:'''Natasha:''' But why would he risk his life this much and be this generous? All this for what, exactly?
+:{{DIcon|Arrow}} To provide a better life for his wife and children?
+::'''Natasha:''' His financials didn't seem that good, and yet he donated so much to us at the clinic, which just doesn't make sense...
+:{{DIcon|Arrow}} I don't know...
+::'''Natasha:''' Hmm... let me think about this...
+:'''Natasha:''' Did he leave any other clues?
+:{{DIcon|Arrow}} (you hand over Kluzer's letter and anonymous package)
+:'''(Trailblazer):''' (Looks like Kluzer is the kind-hearted donor after all, who's been sending supplies to the clinic all this time...)
+:'''(Trailblazer):''' (He shouldn't have come to this miserable end... I have to tell Natasha about this.)
+:'''Natasha:''' The letter was postmarked and returned a long time ago.
+:'''Natasha:''' Why would this letter be returned? Maybe... maybe his wife and children are no longer there.
+:'''Natasha:''' It must have been really hard for him to accept this reality. He went through all that trouble to secure a job that could finally provide for his family, only to find himself no longer having a family to provide for.
+:'''Natasha:''' ...So, what probably happened was that he redirected all his care and love to the children in this clinic, showering us with batches after batches of supplies.
+:'''Natasha:''' Of course, this is just my guess. This might not be the case.
+:{{DIcon|Arrow}} Have you met his wife and children?
+::'''Natasha:''' Unfortunately, no. They might already be...
+:{{DIcon|Arrow}} We have to do something for him...
+::'''Natasha:''' Agreed. His story should not be forgotten.
+:'''Natasha:''' I'll tell the kids about Mr. Kluzer. I hope they can grow up to be adults as strong and kind as he was.
+:'''Natasha:''' Of course, the details of the story might just need some... proper embellishment.
+:'''Natasha:''' But I do hope the kindness left by Mr. Kluzer will live long and prosper...
 {{Dialogue End}}
 
 ===Check Kluzer's condition{{subst:void|<!--201090420-->}}===
 {{Mission Description|type=adventure|location=Fight Club|update|Natasha has confirmed that the monster armor had a negative effect on Kluzer's body and suggested he not wear it again and have some rest. But judging from his hesitant look, you doubt if he would. You decide to return to the Fight Club and check Kluzer's physical condition.}}
 {{Dialogue Start}}
-:{{tx}}
+;(Upon reaching the destination)
 {{Dialogue End}}
 
 ===Ask the audience members about Kluzer's whereabouts{{subst:void|<!--201090425-->}}===
 {{Mission Description|type=adventure|location=Fight Club|update|Despite being a popular boxer, Kluzer doesn't show up in the Fight Club. You're anxious to find him, so you turn to the audience to ask if they know of Kluzer's whereabouts.}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Miner)
+:'''Boxing Match Fan:''' Hey, I don't understand, how could Monster Armor be beaten so easily...
+:'''Excited Spectator:''' Haha, I told you so. Fighting against a five-time champ is no joke. You hear me?
+:{{DIcon|Arrow}} Is Monster Armor still in the boxing gym?
+:'''Excited Spectator:''' He just finished a match, and he was utterly destroyed! As soon as the match was over, he ran away, hahaha!
+:'''Boxing Match Fan:''' Uh... I saw him being scolded by the owner just then. Not sure where he went after.
+:'''Excited Spectator:''' Monster Armor got beaten up so badly. You are not thinking about getting an autograph from him, are you? I mean, all eyes are on the five-time champ now, and no one cares about that Monster Armor clown anymore!
+:'''Boxing Match Fan:''' But Monster Armor wasn't bad at all before. It's a shame he lost his edge...
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:'''(Trailblazer):''' (Kluzer doesn't seem to be here. I'll ask the people around here about his whereabouts.)
 {{Dialogue End}}
 
 ==Other Languages==

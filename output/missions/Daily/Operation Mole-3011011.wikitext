@@ -40,25 +40,83 @@ PageTitle=#Operation Mole#
 ===Talk to Julian{{subst:void|<!--301101101-->}}===
 {{Mission Description|type=daily|location=Boulder Town|Julian of the Moles is looking around here, as if planning something... Should you talk to him?}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Julian)
+:'''Julian:''' Hey, (Trailblazer)! Come over here &mdash; don't make any sound!
+:{{DIcon|Arrow}} Are we playing hide-and-seek again?
+::'''Julian:''' Nah, this time we are going to do something much more fun than hide-and-seek!
+:{{DIcon|Arrow}} How come you are always sneaking around...
+::'''Julian:''' What do you mean by sneaking around! I'm the cadre in charge of making plans for The Moles. Covert operations are what I do.
+:'''Julian:''' Let me tell you, today we have a top-secret mission! As an honorary member of The Moles, you are now being commandeered by me!
+:{{DIcon|Arrow}} Can I say no?
+::'''Julian:''' Of course not!
+:{{DIcon|Arrow}} It's all up to you, boss.
+::'''Julian:''' Wh&mdash;what boss? Don't talk nonsense! I will be in trouble if Boss Hook heard it.
+:'''Julian:''' Enough chitchat. We're losing the daylight. We can't mess this up.
+:'''Julian:''' Let's go! To the secret gathering place of Wildfire!
 {{Dialogue End}}
 
 ===Go to the secret gathering place{{subst:void|<!--301101102-->}}===
 {{Mission Description|type=daily|location=Boulder Town|update|The sneaky Julian makes you join him. Go to the "Wildfire" gathering place to see what happened.}}
 {{Dialogue Start}}
-:{{tx}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+----
+:'''Joshua:''' Wh&mdash;What should I do... There are two crates of emergency medicine here. Which box should I deliver first?
+:'''Joshua:''' N&mdash;Never mind! I'm gonna deliver this box first, and then, the other one after I come back...
+----
+<pre>{
+	"$type": "RPG.GameCore.RemoveLevelAreas",
+	"AreaName": {
+		"Value": "Act301101101"
+	}
+}</pre>
+:'''Julian:''' Quick, honorary member! The guy from Wildfire left, let's go have a look!
+:{{DIcon|Arrow}} So the secret mission is to steal from others?
+::'''Julian:''' N&mdash;Nonsense! The Moles wouldn't do that!
+:{{DIcon|Arrow}} Tell me what you're up to first...
+::'''Julian:''' Ugh, do you have to ask questions right now?
+:'''Julian:''' Here's the deal. The Moles is going to deliver the medicine to those in need before Wildfire finds out.
+:'''Julian:''' As for the reason... well, now is not the time to explain! We should hurry.
+:'''Julian:''' Come on, let's take a look at that box!
+----
 {{Dialogue End}}
 
 ===Pick up the supplies{{subst:void|<!--301101103-->}}===
 {{Mission Description|type=daily|location=Boulder Town|update|Pick up the supplies and don't ask why.}}
 {{Dialogue Start}}
-:{{tx}}
+
+:{{DIcon|!}} Operation Mole
+----
+:'''Julian:''' Look, the shipping address is written on the box! (Trailblazer), let's send it to those in need now.
+:'''Julian:''' We have to deliver it before the Wildfire realizes, hee-hee!
+----
 {{Dialogue End}}
 
 ===Deliver the supplies for Wildfire{{subst:void|<!--301101104-->}}===
 {{Mission Description|type=daily|location=Boulder Town|update|Julian asks you to deliver the remaining orders of "Wildfire." You don't know why, but it's good to help those in need... right?}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Waiting Elderly)
+:'''Waiting Elderly:''' Who are you? You don't dress like a Wildfire member...
+:'''Julian:''' Lady, we are couriers from The Moles! If you need help in the future, remember to call us!
+:'''Waiting Elderly:''' ..."The Moles"? Isn't that a bunch of kids...
+:'''Waiting Elderly:''' Oh... hehe, I get it. Thank you, I have been waiting for this package all day.
+:'''Waiting Elderly:''' I should go home now. My husband is waiting for this box of medicine. Keep up the good work, you kids from The Moles...
+----
+:<!--0.25-second delay-->
+:'''Julian:''' Great job, honorary member! This secret mission was executed perfectly! You deserve some kudos!
+:{{DIcon|Arrow}} I think Wildfire can handle this too...
+:{{DIcon|Arrow}} I still don't quite get it...
+:'''Julian:''' Well, grown-ups are so silly. You still don't get it?
+:'''Julian:''' It's a secret, but I'll tell you. This is the first step of The Moles Reinvigoration Plan &mdash; find the work that Wildfire has neglected and take it up right away!
+:'''Julian:''' If we keep doing this, The Moles will soon build up a reputation in the Underworld... Maybe one day it will replace Wildfire and become the most popular super organization!
+:{{DIcon|Arrow}} Good luck to you then...
+:{{DIcon|Arrow}} Ooh, that's a great ambition!
+:'''Julian:''' You did a pretty good job this time and deserve some credit! I will tell Boss Hook about it. Don't worry.
+:'''Julian:''' Next time I call on you for something, don't forget to show up right away &mdash; so that's it, The Moles, dismiss!
+----
 {{Dialogue End}}
 
 ==Other Languages==

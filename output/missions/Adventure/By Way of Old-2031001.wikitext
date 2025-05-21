@@ -51,82 +51,301 @@ PageTitle=#By Way of Old#
 ===Go to Starskiff Haven and speak with Yanqing{{subst:void|<!--203100102-->}}===
 {{Mission Description|type=adventure|location=Central Starskiff Haven|update|Though there were some bumps in the road, the Wardance has successfully concluded.<br />Yanqing wants to personally express his gratitude to the Express Crew. It would be best to go and meet with him.<br />Saying that, he has offered to teach March swordplay, so it would only be right for the Astral Express to thank him in return.}}
 {{Dialogue Start}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+<pre>{
+	"$type": "RPG.GameCore.PerformanceExtendEndBlack",
+	"ExtendTime": 1
+}</pre>
+:{{tx}}
+:'''March 7th:''' You're finally here. I've been waiting for ages! I started to think you might not make it...
+:{{DIcon|Arrow}} Sorry, I'm late. I'll pay the bill...
+::'''March 7th:''' We're not going out for dinner. There are no bills to pay today!
+::March, I feel like you're putting a lot of pressure on me...
+::'''March 7th:''' Really? Sorry. I brought some mung bean soda with me. Why not have a can to take the edge off?
+::It's only right that the hero is last to board!
+:{{DIcon|Arrow}} March, I feel like you're putting a lot of pressure on me...
+::'''March 7th:''' Really? Sorry. I brought some mung bean soda with me. Why not have a can to take the edge off?
+::It's only right that the hero is last to board!
+:{{DIcon|Arrow}} It's only right that the hero is last to board!
+:'''March 7th:''' Well, that's a convenient excuse for bad time-keeping!
+:'''Yanqing:''' There is no rush. You're here just in time, (Trailblazer).
+:'''Dan Heng:''' The crew have run to and from the Luofu many times, so there's no need to go to all the effort of a formal send-off, surely? March said you were late because you had something else &mdash;
+:'''March 7th:''' Didn't you know? The Xianzhou Yaoqing and the Xianzhou Zhuming messengers are heading back home!
+:{{DIcon|Arrow}} I hadn't heard that!
+::'''Yanqing:''' Sorry, I didn't explain properly in my message.
+::I had no idea that was today.
+::'''Yanqing:''' ...That was why I hoped that the crew would be here.
+::Can't they just stay on the Luofu forever?
+:{{DIcon|Arrow}} I had no idea that was today.
+::'''Yanqing:''' ...That was why I hoped that the crew would be here.
+::Can't they just stay on the Luofu forever?
+:{{DIcon|Arrow}} Can't they just stay on the Luofu forever?
+:'''March 7th:''' The pink-haired fox, the crow-feather weirdo, and Master Yunli staying... That's still not bad, I suppose.
+:'''March 7th:''' But the two generals cannot possibly stay on the Luofu forever!
+:'''March 7th:''' That's why I suggested that we save the Crew's farewell until the very end! Let's go and see off our guests from afar on their way with Yanqing.
+:{{DIcon|Arrow}} You make it sound like we're the hosts here!
+::'''March 7th:''' This is Dan Heng's home. Of course we count as hosts as well!
+::'''March 7th:''' I studied swordsmanship here. Plus, think about how many friends you've made here... The Luofu is basically our home too.
+::I want to... say goodbye, too.
+:{{DIcon|Arrow}} I want to... say goodbye, too.
+:'''March 7th:''' Right! We knew you'd feel this way, so we went ahead and decided for you!
+:'''Dan Heng:''' That's why March was scared. She thought you'd miss getting to say goodbye.
+:'''March 7th:''' I knew you'd regret it!
+:{{DIcon|Arrow}} I get it now!
+:{{DIcon|Arrow}} Thank you, March!
+::'''March 7th:''' No worries!
+:'''Yanqing:''' The Merlin's Claw and the Flaming Heart have already said their farewells to General Jing Yuan at the Seat of Divine Foresight. They wanted to travel light without the Cloud Knights' escort so as not to attract too much attention. I originally thought it may be a little rude to come to bid them farewell on my own, but...
 :{{tx}}
 {{Dialogue End}}
 
 ===Speak with Yanqing and wait for the guests from the Xianzhou Yaoqing{{subst:void|<!--203100103-->}}===
 {{Mission Description|type=adventure|location=Central Starskiff Haven|update|Though there were some bumps in the road, the Wardance has successfully concluded.<br />As March suggests going with Yanqing to bid guests from the other Xianzhou ships farewell, Yanqing expresses similar wishes. For now, why don't you await your soon-departing guests with Yanqing?}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to March 7th)
+:'''March 7th:''' I didn't have much time, so the only souvenir I managed to buy was the Luofu people's favorite drink.
+:'''March 7th:''' If they're visitors from afar, then I imagine returning to their Xianzhou will take a long time. If they get thirsty, they can drink this and get a taste of authentic Luofu flavor...
+:{{DIcon|Arrow}} It's not mung bean soda, is it?
+::'''March 7th:''' That's right!
+:{{DIcon|Arrow}} It's not Immortal's Delight, is it?
+::'''March 7th:''' Do you not know the people of the Luofu by now? Of course it's mung bean soda!
+:{{DIcon|Arrow}} I'm worried they'll be sick if they drink that on the journey...
+::'''March 7th:''' Is it really that disgusting? This is a gift from the kindness of my heart!
+:{{DIcon|Arrow}} The taste of the Luofu, a must-have anywhere.
+::'''March 7th:''' Hehehe, I saw that advert, too!
+:'''March 7th:''' We can't send our guests off empty-handed!
+
+;(Talk to Dan Heng)
+:'''Dan Heng:''' Miss Himeko and Mr. Yang have already begun their return from the Calenga Abyss as well, and they'll be arriving at the Luofu today.
+:'''Dan Heng:''' If the timing is right, we should be able to meet them at the Starskiff Haven port.
+:{{DIcon|Arrow}} Let's line up to welcome them!
+::'''Dan Heng:''' I don't think we need all this fuss... Ah...
+:{{DIcon|Arrow}} This is a great opportunity!
+::'''Dan Heng:''' I don't know if I'd call it that...
+:'''Dan Heng:''' We still have some time before they arrive. Let's focus on sending off our Xianzhou guests for now.
+
+;(Talk to Yanqing)
+:'''Yanqing:''' Judging by the standard vessel transfer time, the Yaoqing guests should be arriving at any moment.
+:{{DIcon|Arrow}} Okay, I'll wait here.
+:{{DIcon|Exit}} Wait a moment. There's something I need to do.
+<pre>{
+	"$type": "RPG.GameCore.SetMissionCustomValue",
+	"SubmissionID": 203100103,
+	"MissionCustomValue": {
+		"Name": "OldValue_0",
+		"isLocal": true,
+		"ValidValueParamList": [
+			1,
+			2
+		]
+	},
+	"CustomValue": 1
+}</pre>
+
 {{Dialogue End}}
 
 ===(Optional) Talk with Dan Heng{{subst:void|<!--203100104-->}}===
 {{Dialogue Start}}
-:{{tx}}
 {{Dialogue End}}
 
 ===(Optional) Talk with March 7th{{subst:void|<!--203100105-->}}===
 {{Dialogue Start}}
-:{{tx}}
 {{Dialogue End}}
 
 ===Speak with the guests from the Xianzhou Yaoqing{{subst:void|<!--203100106-->}}===
 {{Mission Description|type=adventure|location=Central Starskiff Haven|update|March suggests going with Yanqing to bid farewell to all of the guests from the other Xianzhou ships.<br />General Feixiao, Jiaoqiu the healer, and the crow-feather weirdo... Ahem, I mean, the shadow guard Moze... they are all present and correct. They are about to return to the Xianzhou Yaoqing. Fortunately, you get a chance to see them one more time before they do.<br />Don't even think about your mung bean soda, March!}}
 {{Dialogue Start}}
+:After a few moments, the Yaoqing guests arrived at the port...
+:'''Feixiao:''' If it isn't Yanqing, the Xianzhou Luofu reigning champion! Oh, and our Astral Express friends are here, too!
+:'''Yanqing & Dan Heng:''' Farewell, General Feixiao.
+:'''March 7th:''' Farewell, General Feixiao.
+:{{DIcon|Arrow}} Farewell, General Feixiao.
+:{{DIcon|Arrow}} It is a shame that we never got that duel.
+::'''Feixiao:''' The Marshal warned me repeatedly that I was not permitted to take to the stage and show off my skills. Although, I also think it's a shame not being able to spar with my talented allies.
+::'''Feixiao:''' How about I have someone send an invitation to battle to the Astral Express when I get back?
+::{{DIcon|Arrow}} Ah, I was just joking...
+:::'''Feixiao:''' ...I wasn't.
+:::Alright, I'll do my best to learn from you.
+::{{DIcon|Arrow}} Alright, I'll do my best to learn from you.
+::'''Feixiao:''' ...Although, the recent alliance turmoil is yet to settle and there are lots of preparations to take care of. I imagine we will have to wait some time for our battle.
+::{{DIcon|Arrow}} Make it ten thousand years.
+:::'''Feixiao:''' There are no winners in the face of time.
+:::Don't keep me waiting too long.
+::{{DIcon|Arrow}} Don't keep me waiting too long.
+::'''Feixiao:''' Alright! I hope we will all do our best.
+:'''Feixiao:''' I am truly honored that I was able to meet with you all one more time before I left the Luofu.
 :{{tx}}
 {{Dialogue End}}
 
 ===Take your place and let the cycrane snap a group photo{{subst:void|<!--203100107-->}}===
 {{Mission Description|type=adventure|location=Central Starskiff Haven|update|March suggests going with Yanqing to bid farewell to all of the guests from the other Xianzhou ships.<br />When taking a commemorative picture, if you don't know what pose to do, then you can put one hand in your pocket... Scratch that. There's no need to be so formal.}}
 {{Dialogue Start}}
-:{{tx}}
+
 {{Dialogue End}}
 
 ===Bid farewell to the guests from the Xianzhou Yaoqing{{subst:void|<!--203100108-->}}===
 {{Mission Description|type=adventure|location=Central Starskiff Haven|update|March suggests going with Yanqing to bid farewell to all of the guests from the other Xianzhou ships.<br />General Feixiao, Jiaoqiu the healer, and the crow-feather weirdo... Ahem, I mean, the shadow guard Moze... they are all present and correct. They are about to return to the Xianzhou Yaoqing. Fortunately, you get a chance to see them one more time before they do.<br />Even if you are separated by the vast starry skies, you firmly believe that everyone will meet again.}}
 {{Dialogue Start}}
-:{{tx}}
+
 {{Dialogue End}}
 
 ===Speak with Yanqing and wait for the guests from the Xianzhou Zhuming{{subst:void|<!--203100109-->}}===
 {{Mission Description|type=adventure|location=Central Starskiff Haven|update|March suggests going with Yanqing to bid farewell to all of the guests from the other Xianzhou ships.<br />Next, it's time to bid farewell to the guests from the Xianzhou Zhuming.}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to March 7th)
+:'''March 7th:''' Don't worry. I still have lots of Luofu's specialty mung bean soda left!
+
+;(Talk to Dan Heng)
+:'''Dan Heng:''' I am not good at expressing my feelings at times like this. I'll leave the talking to you, March.
+
+;(Talk to Yanqing)
+:'''Yanqing:''' Judging by the standard vessel transfer time, the Zhuming guests should be arriving at any moment.
+:{{DIcon|Arrow}} Okay, I'll wait here.
+:{{DIcon|Exit}} Wait a moment. There's something I need to do.
+<pre>{
+	"$type": "RPG.GameCore.SetMissionCustomValue",
+	"SubmissionID": 203100109,
+	"MissionCustomValue": {
+		"Index": 1,
+		"Name": "OldValue_1",
+		"isLocal": true,
+		"ValidValueParamList": [
+			1,
+			2
+		]
+	},
+	"CustomValue": 1
+}</pre>
+
 {{Dialogue End}}
 
 ===Speak with the guests from the Xianzhou Zhuming.{{subst:void|<!--203100112-->}}===
 {{Mission Description|type=adventure|location=Central Starskiff Haven|update|March suggests going with Yanqing to bid farewell to all of the guests from the other Xianzhou ships.<br />General Huaiyan and Miss Yunli of the Xianzhou Zhuming have arrived at the port. It seems that Master Lingsha is here, too... This is the excitement you'd expect from a proper farewell.<br />Don't forget your sword, Yanqing!}}
 {{Dialogue Start}}
+:After a few moments, the Zhuming guests arrived at the port...
+:'''Huaiyan:''' It's Yanqing and the Astral Express crew! Thank you all for waiting.
+:'''Yanqing & Dan Heng:''' I bid you farewell, General Huaiyan.
+:'''March 7th:''' I bid you farewell, General Huaiyan.
+:{{DIcon|Arrow}} I bid you farewell, General Huaiyan.
+:{{DIcon|Arrow}} It is a shame that we never got that duel.
+::'''Huaiyan:''' Oh? You wish to see my skills?
+::'''Huaiyan:''' Hahaha! It is rare to find a youngster that has such little fear of death. Just being asked to battle takes me back to those years when my blood burned like fire. How refreshing.
+::{{DIcon|Arrow}} I was just joking.
+:::'''Huaiyan:''' Oh good, me too.
+:::I am very curious about your true strength, General.
+::{{DIcon|Arrow}} I am very curious about your true strength, General.
+::'''Huaiyan:''' Ah, please don't allow Feixiao to mislead you about me.
+::'''Huaiyan:''' I am but an old man that has grown to love craftsmanship. My interest in competitions and fighting beasts faded long ago.
+:'''Huaiyan:''' But I want to hear more from the youngsters! Yunli, did you not have lots prepared that you wanted to say before you left?
+:'''Yunli:''' Ahem, as a master, I should pass on some words of advice to March before I leave.
+:'''March 7th:''' Hehe, Master Yunli!
+:'''Yunli:''' Come to think of it, you never took part in the Wardance in the end, did you?
+:'''March 7th:''' Ah, well, no... I didn't.
+:'''Yanqing:''' Weren't you and March both being treated in the Alchemy Commission at the time?
+:'''Yunli:''' You think I don't know that? What I mean is, as she has not yet completed the initial target for her training, March has still not completed her tuition. I don't want you slacking on your training while I'm back on the Xianzhou Zhuming!
+:{{DIcon|Arrow}} Don't worry. I'll keep an eye on her.
+::'''Yunli:''' Good, no spoiling her like you normally do!
+::Even if she had, she would still need to train.
+:{{DIcon|Arrow}} Even if she had, she would still need to train.
+:'''Yunli:''' Quite right! Swordsmanship practice cannot be neglected!
+:'''March 7th:''' Come to think of it, Master Yunli, weren't you originally after the reward that General Huaiyan was offering? Aren't you sad you weren't able to take part in the Wardance?
+:'''Yunli:''' I'm not that sad! I heard Yanqing took victory as the ringmaster. So the sword still rests in worthy hands.
+:'''Yunli:''' Plus, my grandfather has brought the prize all the way here. So does it not seem a little unceremonious for me to just win it and take it straight back? I will not steal Yanqing's thunder this time, as I don't want to embarrass him.
+:'''Yanqing:''' Hmph, such gracious generosity, Yunli. You really helped me save face as the Luofu swordmaster.
+:{{DIcon|Arrow}} Woah, Yanqing loves that sword more than his life, and yet...
+:{{DIcon|Arrow}} Gift-giving is quite an art...
+:'''March 7th:''' Woah! Are you really thinking about giving your sword to Yunli, Master Yanqing?
+:'''Yunli:''' Really? This sword is your proof of victory in the Wardance... Now I feel bad about taking your sword before.
+:'''Huaiyan:''' What generosity! I knew I was right about you.
+:'''Yanqing:''' You're such the humorist, Yunli. This was the sword I won as the ringmaster. I was just thinking that as you were leaving, you would not see it for a while. I brought it so you could touch it one last time and ease your regrets.
+:{{DIcon|Arrow}} Wow, Yanqing really does love that sword more than his life!
+:{{DIcon|Arrow}} Communication is quite an art...
+:'''March 7th:''' Let me translate for you, Master Yunli: "Nuh-uh, this is my sword, and you can't have it."
 :{{tx}}
 {{Dialogue End}}
 
 ===Take your place and let the cycrane snap a group photo{{subst:void|<!--203100113-->}}===
 {{Mission Description|type=adventure|location=Central Starskiff Haven|update|March suggests going with Yanqing to bid farewell to all of the guests from the other Xianzhou ships.<br />When taking a commemorative picture, if you don't know what pose to do, then you can put one hand in your pocket... Scratch that. There's no need to be so formal.}}
 {{Dialogue Start}}
-:{{tx}}
+
 {{Dialogue End}}
 
 ===Bid farewell to the guests from the Xianzhou Zhuming{{subst:void|<!--203100114-->}}===
 {{Mission Description|type=adventure|location=Central Starskiff Haven|update|March suggests going with Yanqing to bid farewell to all of the guests from the other Xianzhou ships.<br />General Huaiyan and Miss Yunli of the Xianzhou Zhuming have arrived at the port. It seems that Master Lingsha is here, too...<br />Even if you are separated by the vast starry skies, you firmly believe that everyone will meet again.}}
 {{Dialogue Start}}
-:{{tx}}
+
 {{Dialogue End}}
 
 ===Welcome Lady Fu Xuan home{{subst:void|<!--203100115-->}}===
 {{Mission Description|type=adventure|location=Central Starskiff Haven|update|Guess who's back? Turns out it's Master Diviner Fu Xuan!<br />Seriously though, did anyone actually remember that Lady Fu Xuan was on a business trip?<br />Well, it looks like your timing worked out perfectly. Make sure you welcome Lady Fu Xuan on her triumphant return.}}
 {{Dialogue Start}}
 :{{tx}}
+:'''Fu Xuan:''' I have been devoted to divining the cause and effect outcomes of so many things, yet I never divined that there would be so many people here to meet me on my return to the Xianzhou. I see the Xianzhou Luofu really just can't go on without me.
+:{{DIcon|Arrow}} Diviner Fu, we have been waiting a long time.
+::'''Fu Xuan:''' Hmm, thank you for the warm welcome. I have returned.
+::Diviner Fu, what brings you back here?
+::'''Fu Xuan:''' Huh? So, you all standing here has... absolutely nothing to do with me?
+::Who's this sassy, lost, short pink-haired girl?
+:{{DIcon|Arrow}} Diviner Fu, what brings you back here?
+::'''Fu Xuan:''' Huh? So, you all standing here has... absolutely nothing to do with me?
+::Who's this sassy, lost, short pink-haired girl?
+:{{DIcon|Arrow}} Who's this sassy, lost, short pink-haired girl?
+:'''Fu Xuan:''' Huh? I cannot pretend I didn't hear that.
+:'''Yanqing:''' ...Let me explain.
+:Yanqing explained about seeing off the Xianzhou guests and the "reality" that they had no idea that Fu Xuan was returning.
+:'''Fu Xuan:''' I understand what has happened. Although this was merely a coincidence, it is still a fact that you are all here now. How about you meet me halfway... "Meet me halfway" is a strange expression for this, but why don't we pretend you were awaiting my triumphant return?
+:'''Fu Xuan:''' Actually, Yanqing, forget it. You have all been on the Luofu for all this time, and you didn't even notice that I wasn't here?
+:{{DIcon|Arrow}} I noticed, the Divination Commission has been so empty and lonely.
+::'''Fu Xuan:''' Very good. I see you truly care about the Luofu.
+::If you were here, we would never have had so many issues!
+::'''Fu Xuan:''' Precisely. There's no way so many things would go wrong with me around!
+::I didn't notice at all. I thought you were still here...
+:{{DIcon|Arrow}} If you were here, we would never have had so many issues!
+::'''Fu Xuan:''' Precisely. There's no way so many things would go wrong with me around!
+::I didn't notice at all. I thought you were still here...
+:{{DIcon|Arrow}} I didn't notice at all. I thought you were still here...
+:'''Fu Xuan:''' Did you hear that? It's a sound of something smashing to pieces... That was my heart thinking about working on the Xianzhou Luofu again.
+:'''Fu Xuan:''' If I didn't have so many inquiries to deal with on the Xianzhou Yuque, then Jing Yuan would... Forget it, it's not important.
+:'''March 7th:''' You must be tired, Master Diviner Fu. I have some mung bean soda. Please take one cup as a welcome back gift!
+:{{tx}}
+:{{DIcon|Talk}} What did you learn about the Yuque?
+::'''Fu Xuan:''' I was mainly supporting General Yaoguang with providing details about the Ambrosial Arbor disaster and discerning the truth from the lies in Jingliu's confession... Honestly, I had no time to rest or learn anything new.
+::{{tx}}
+:{{DIcon|Talk}} Did you hear about Hoolay's escape from prison, Master Diviner?
+::'''Fu Xuan:''' News about his escape has spread like wildfire. Of course, I am aware. Although, much like the citizens of the Xianzhou, I had nothing but joy when I learned that the entire matter was under the control of the Seat of Divine Foresight and the Ten-Lords Commission.
+::{{tx}}
+:{{DIcon|Arrow}} You should have told us you were coming back!
+::'''Fu Xuan:''' I do not like fusses. This was simply a work trip, and there was no need for a welcome party.
+::'''Fu Xuan:''' Although, I did contact Qingque in advance and tell her to come and meet me at Starskiff Haven... Hmph, I see she's nowhere to be seen. Looks like it's time to head back to the Divination Commission and see exactly what excuse she has this time.
+::{{DIcon|Arrow}} Qingque, run!
+::{{DIcon|Arrow}} You brought this on yourself, Qingque.
+::'''March 7th:''' It's okay! Yanqing was planning to say their farewells to the Crew, so he could be your welcoming party, too! We have to take a group picture together first though!
+::{{tx}}
 {{Dialogue End}}
 
 ===Take your place and let the cycrane snap a group photo{{subst:void|<!--203100116-->}}===
 {{Mission Description|type=adventure|location=Central Starskiff Haven|update|Guess who's back? Turns out it's Master Diviner Fu Xuan!<br />When taking a commemorative picture, if you don't know what pose to do, then you can put one hand in your pocket... Scratch that. There's no need to be so formal.}}
 {{Dialogue Start}}
-:{{tx}}
+
 {{Dialogue End}}
 
 ===Talk with Fu Xuan{{subst:void|<!--203100117-->}}===
 {{Mission Description|type=adventure|location=Central Starskiff Haven|update|Guess who's back? Turns out it's Master Diviner Fu Xuan!<br />Qingque was going to welcome Lady Fu Xuan? Where is she then?}}
 {{Dialogue Start}}
+:'''Dan Heng:''' The Crew visits the Luofu all the time. Even if we are guests of the Seat of Divine Foresight, there's no need to go to all the effort of a formal send off. We'll say a goodbye for now, but if the Xianzhou alliance has anything further to discuss in the future, please don't hesitate to contact our conductor.
+:'''Fu Xuan:''' After all, the Astral Express is now in alliance with the Xianzhou Alliance.
+:'''Yanqing:''' That's right. Though you may be our guests from far across the starry skies, it will not be difficult for us to meet again should you wish to return to the Xianzhou Luofu. I am certain that we will have a chance to meet again, and I can learn from you all once more.
+:'''Yanqing:''' ...Honestly, I also intend to board the Express and set off on my own adventure of self-improvement. I wonder what you would all say to that?
+:'''March 7th:''' You're more than welcome, of course! Oh yeah, weren't Himeko and Mr. Yang saying that they wanted to come along today, too? We could find them to discuss it further...
+:'''Yanqing:''' I am still recovering from my wounds, so I am not yet ready to depart. This matter can wait for now.
+:'''March 7th:''' Hmm...
+:{{DIcon|Arrow}} Looks like our Express family aren't going to make it in time?
+:{{DIcon|Arrow}} Well, we don't want to keep you waiting around. Let's head out!
+:'''Dan Heng:''' Indeed. Let's leave the farewell party here for today. On behalf of the Crew, I would like to thank the Xianzhou Luofu for your kind hospitality.
+:{{tx}}
 :{{tx}}
 {{Dialogue End}}
 

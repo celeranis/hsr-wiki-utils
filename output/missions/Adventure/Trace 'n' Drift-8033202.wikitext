@@ -1,0 +1,312 @@
+<%-- [PAGE_INFO]
+PageTitle=#Trace 'n' Drift#
+[END_PAGE_INFO] --%>
+{{Stub|Dialogue.}}
+{{Mission Infobox
+|id            = 8033202
+|title         = 
+|image         = <!--Mission Trace 'n' Drift.png-->
+|type          = Adventure
+|event_name    = Trace 'n' Drift
+|chapter       = 
+|requirements  = [[Adventure Mission]] ''[[Trace 'n' Drift]]'' completed
+|summary       = <!--official mission summary from Fate's Atlas-->
+|characters    = Asta; Competition Organizer; Excited Spectator; Passionate Reporter; Peppy; Qingque; Silver Wolf; Trailblazer; Uma
+|startLocation = [[Penacony]] - [[SoulGlad™ Scorchsand Audition Venue]]
+|world         = Penacony
+|area          = SoulGlad™ Scorchsand Audition Venue
+|prev          = 
+|next          = 
+|rewards       = Traveler's Guide*2; Refined Aether*2; Credit*20,000
+}}
+'''''Trace 'n' Drift''''' is an Event [[Adventure Mission]] from the [[Trace 'n' Drift]] event.
+
+==Steps==
+# Use Sea Hunter Shark to advance through the first round of qualifiers
+# Use your exclusive race car to advance through the second round of qualifiers
+# Use "The Hertadore" to advance through the third round of qualifiers
+# Use Thirteen Orphans to advance through the semifinals
+# Join the finals and show your true strength!
+# Defeat Professional Substitute and claim the championship
+# Defeat the Professional Substitute and claim the championship
+
+<!--
+==Gameplay Notes==
+
+--><!--
+==Trial Character==
+
+-->
+==Dialogue==
+{{Stub Dialogue}}
+===Use Sea Hunter Shark to advance through the first round of qualifiers{{subst:void|<!--803320201-->}}===
+{{Mission Description|type=adventure|location=SoulGlad™ Scorchsand Audition Venue|Boothill's car has great performance and a strong offense, I suppose this can somewhat soothe the unsettling feeling of having been strangely signed up for this competition... You decide to participate in the first round of qualifiers with it, and hope that the Galaxy Ranger's notorious reputation can scare off your opponents.}}
+{{Dialogue Start}}
+
+;(Talk to Competition Organizer)
+----
+:'''Competition Organizer:''' The race will start as soon as you strap in! How do you like it? Ready to sit down? We're about to start.
+:{{DIcon|Travel Log}} Enough about the chit-chat, just start the race already!
+::'''Competition Organizer:''' We're ready to go as soon as you are.
+:<pre>{
+	"$type": "RPG.GameCore.EnterGameFlow",
+	"Type": "ParkourBall",
+	"Parameters": {}
+}</pre>
+:{{DIcon|Exit}} Hold on, let me catch my breath...
+::'''Competition Organizer:''' No one's winning this race by tapping the brakes. If you're ready, just call out to me.
+
+
+;(Unused &mdash; EnterDistrict_G{GroupID})
+----
+::{{tx}}
+::{{DIcon|Talk}} ...Opponents? Who am I facing next?
+:::'''Competition Organizer:''' Your opponents are a special team. They passed the IPC's screening and were announced on the roster. They're very wealthy and spent a lot to have their Spheroid racer custom-made.
+:::{{tx}}
+::;(Return to previous option selection)
+::{{DIcon|Talk}} My exclusive Spheroid racer, who arranged that?
+:::'''Competition Organizer:''' It was designed based on your trial data and personal style. Very easy to drive!
+:::'''Competition Organizer:''' Besides, this is the racer you registered for... Oh, wait, you said you didn't register.
+:::'''Competition Organizer:''' Maybe that kind-hearted hacker placed the order? So nice. I bet that hacker is a close friend of yours!
+:::{{DIcon|Arrow}} Not just a friend, but more like a family.
+:::{{DIcon|Arrow}} We're so close that I wish to see her again...
+:::'''Competition Organizer:''' Haha, I see. I won't pry any further.
+:::{{tx}}
+::;(Return to previous option selection)
+::{{DIcon|Arrow}} Get the pedal to the metal and start the race already.
+:::'''Competition Organizer:''' Let's see some real fast and furious, shall we? Wishing you a great start!
+:::{{tx}}
+:<pre>{
+	"$type": "RPG.GameCore.EnterGameFlow",
+	"Type": "ParkourBall",
+	"Parameters": {}
+}</pre>
+{{Dialogue End}}
+
+===Use your exclusive race car to advance through the second round of qualifiers{{subst:void|<!--803320203-->}}===
+{{Mission Description|type=adventure|location=SoulGlad™ Scorchsand Audition Venue|update|The Family is quite understanding, they know that you don't have a car of your own, so they swiftly made you an exclusive one. Who would have thought that you'll go against a familiar face from the space station in this round? Thankfully, they've never hidden their skills at racing, and you advanced with ease.}}
+{{Dialogue Start}}
+
+;(Unused &mdash; EnterDistrict_G{GroupID})
+----
+::'''Peppy:''' Woof Woof!
+::'''Asta:''' As expected of (Trailblazer), even Peppy couldn't catch up with you after giving it all!
+::{{DIcon|Arrow}} ...Was that Peppy driving just now?
+:::'''Asta:''' Yep, the "Hertadore" was specially customized for Peppy.
+:::Isn't this reckless driving?
+::{{DIcon|Arrow}} Isn't this reckless driving?
+::'''Asta:''' Of course not! I'm very careful about Peppy's safety.
+::Peppy gestures for you to press a certain spot on his backpack, and you push the button &mdash; "Synesthesia Beacon Activated."
+::{{tx}}
+::{{DIcon|Talk}} ...Didn't expect to run into you two here!
+:::'''Asta:''' Peppy's been wanting to race for a while. As for me... I'm just here to advertise for Herta Space Station. Work–life balance, you know?
+:::{{tx}}
+::{{DIcon|Talk}} A famous hacker strong-armed me into joining the tournament.
+:::'''Asta:''' The one who hacked the space station before?
+:::'''Peppy:''' (Woof! Something feels off about this... (Trailblazer), you better watch your back!)
+:::{{DIcon|Arrow}} We're cool. Don't sweat it.
+::::'''Peppy:''' (Even if you're cool, signing someone up without asking is shady.)
+::::Seems she's kinda casual about this...
+::::'''Peppy:''' (Exactly. Like when she hacked the space station on a whim. Not cool.)
+::::'''Asta:''' Look... Just stay sharp out there. If things go south, bail and come back to the space station with us.
+::::{{tx}}
+:::{{DIcon|Arrow}} Seems she's kinda casual about this...
+::::'''Peppy:''' (Exactly. Like when she hacked the space station on a whim. Not cool.)
+::::'''Asta:''' Look... Just stay sharp out there. If things go south, bail and come back to the space station with us.
+::::{{tx}}
+::{{DIcon|Talk}} Any intel on the next race?
+:::'''Asta:''' A top-tier racer just made it to the next round. Rumor says she's from the Xianzhou &mdash; her car's called Thirteen Orphans. Luck follows her like a stalker.
+:::{{tx}}
+::{{DIcon|Arrow}} No more chitchat, my race is starting.
+:::'''(Trailblazer):''' Later. I've got a race to win.
+:::'''Peppy:''' (We'll be cheering you on from the stands! Woof!)
+:::'''Asta:''' Peppy, keep your eyes on the race. Don't get hyped &mdash; we've got the loser's bracket later!
+:::'''Peppy:''' (Woof? Something's fishy. (Trailblazer), stay alert out there.)
+:::{{tx}}
+{{Dialogue End}}
+
+===Use "The Hertadore" to advance through the third round of qualifiers{{subst:void|<!--803320205-->}}===
+{{Mission Description|type=adventure|location=SoulGlad™ Scorchsand Audition Venue|update|As expected of Asta, she gave you a car in such a luxurious manner to ensure your safety, I guess she has already heard about the upcoming competition. However, you vaguely remember her promise, she gave you a car today, and hopefully she won't forget what to give you tomorrow.}}
+{{Dialogue Start}}
+
+;(Unused &mdash; EnterDistrict_G{GroupID})
+----
+::'''Qingque:''' Phew... You beat me fair and square, (Trailblazer). I have to say, I'm really impressed by your skill.
+::'''Qingque:''' Master diviner keeps blowing up my phone by asking me to return to work. Totally threw me off my game... Ugh...
+::{{DIcon|Arrow}} You've been hanging around Penacony a lot lately, haven't you?
+:::'''Qingque:''' Hey, I won a free trip here! It's not like I picked this place myself.
+:::If master diviner comes after you personally, you'd move even faster...
+::{{DIcon|Arrow}} If master diviner comes after you personally, you'd move even faster...
+::'''Qingque:''' In that case, I'd forfeit before the race even started.
+::'''Qingque:''' No time to file exit papers for Thirteen Orphans. Better you take it than let it grow mold here.
+::{{tx}}
+::{{DIcon|Talk}} ...Since when does Qingque race instead of playing tiles?
+:::'''Qingque:''' C'mon, you get it. Jade tiles and racing share one thing in common: Risk is the price of living.
+:::{{tx}}
+::{{DIcon|Talk}} Nice ride. But it's mine now.
+:::'''Qingque:''' Saying goodbye to this car hurts more than returning to work.
+:::'''Qingque:''' The day it rolled out, the entire Artisanship Commission whispered its name: Thirteen Orphans.
+:::'''Qingque:''' Since then, every time I sat in that cockpit, I felt like I was walking on air.
+:::'''Qingque:''' You're like me &mdash; a pro at living life. That's what Thirteen Orphans loves most.
+:::{{DIcon|Arrow}} Just hand it over. No need for the drama.
+::::'''Qingque:''' What's mine is yours. Partners in games, yes?
+::::Can I borrow your luck too?
+::::'''Qingque:''' Sure... but leave me enough for tiles.
+::::'''Qingque:''' Carry on my legacy, will ya?
+::::{{tx}}
+:::{{DIcon|Arrow}} Can I borrow your luck too?
+::::'''Qingque:''' Sure... but leave me enough for tiles.
+::::'''Qingque:''' Carry on my legacy, will ya?
+::::{{tx}}
+::{{DIcon|Arrow}} No more chitchat, my race is starting.
+:::'''Qingque:''' Oh, and with skills like yours, you'll crush the finals. Do it for both of us!
+:::{{tx}}
+{{Dialogue End}}
+
+===Use Thirteen Orphans to advance through the semifinals{{subst:void|<!--803320207-->}}===
+{{Mission Description|type=adventure|location=SoulGlad™ Scorchsand Audition Venue|update|Carrying Qingque's regrets, ambitions, and grudge of having to return and work overtime, you are determined to fulfill her dream &mdash; advance through the semifinals with the Thirteen Orphans and aim to be the champion!}}
+{{Dialogue Start}}
+
+;(Unused &mdash; EnterDistrict_G{GroupID})
+----
+::'''Competition Organizer:''' Congratulations! You've made it past the qualifiers, now it's time for the finals.
+::'''Competition Organizer:''' By the way, all your previous cars are tuned and ready. You can now pick your favorite one!
+::'''Competition Organizer:''' When it comes to the finals, choosing the right Spheroid racer can make or break the entire game.
+::{{DIcon|Arrow}} Any car works, as long as the driver's got skills.
+:::'''Competition Organizer:''' Ha, I knew you'd say that. If it were me, though, I'd be in trouble. Some of those Spheroid racers have such low chassis that I wouldn't be able to handle it...
+:::Got the prize money ready?
+::{{DIcon|Arrow}} Got the prize money ready?
+::'''Competition Organizer:''' Of course, aside from the IPC's share, The Family sent me to pass along a few gifts &mdash; credits and some shiny gems. Hope you like them.
+::'''Competition Organizer:''' By the way, your appearance on the show boosted the viewership ratings to an all-time high.
+::'''Competition Organizer:''' The folks at the TV station were acting as if they'd just won the lottery... I heard they're planning to get you to endorse the Spheroid racers&mdash;
+::{{DIcon|Arrow}} Am I that famous?
+:::'''Competition Organizer:''' Oh, come on. You're a member of the Astral Express &mdash; you're a big deal! Plus, your amazing driving skills at the qualifiers drew quite a crowd.
+:::What can I say? Guess good looks determine your popularity.
+:::'''Competition Organizer:''' Exactly! Being good-looking sometimes does give you privileges. You've got it!
+:::...Are you sure you're not just flattering me?
+::{{DIcon|Arrow}} What can I say? Guess good looks determine your popularity.
+:::'''Competition Organizer:''' Exactly! Being good-looking sometimes does give you privileges. You've got it!
+:::...Are you sure you're not just flattering me?
+::{{DIcon|Arrow}} ...Are you sure you're not just flattering me?
+::'''Competition Organizer:''' Uh, sorry, I just heard it through the grapevine. This whole endorsement thing is still in its early stages. Back to business, this event at hand is more important right now. But I gotta say, someone like you doing ads would be a real waste...
+::'''Competition Organizer:''' Ah, looks like it's almost time. The finals are about to start and the committee's been rushing me.
+::{{tx}}
+{{Dialogue End}}
+
+===Join the finals and show your true strength!{{subst:void|<!--803320209-->}}===
+{{Mission Description|type=adventure|location=SoulGlad™ Scorchsand Audition Venue|update|You've successfully made it to the finals. The audience from Penacony and the entire Cosmos will witness your ultimate victory!}}
+{{Dialogue Start}}
+
+;(Unused &mdash; EnterDistrict_G{GroupID})
+----
+::'''Competition Organizer:''' (Trailblazer), please hold on. I have an urgent matter for you.
+::'''Competition Organizer:''' I've confirmed the hacker you know just hacked into the event system and adjusted the groupings. You and your friend will face off directly in the finals.
+::'''Competition Organizer:''' This person's racing car is called "Professional Substitute," but during the pre-race inspection, we discovered that there was no driver in the Spheroid racing car.
+::{{DIcon|Arrow}} She is a hacker, and that is a remote control system...
+::{{DIcon|Arrow}} Don't worry, it's just an ordinary case of haunting!
+::'''Competition Organizer:''' We wanted to disqualify it from the race, but the hacker locked the system. If you feel there are safety concerns...
+::{{DIcon|Arrow}} Let her start the engine and take a lap with me.
+:::'''Competition Organizer:''' Since you're so confident, I feel reassured.
+:::I know her too well... No rush, let's play along with her.
+::{{DIcon|Arrow}} I know her too well... No rush, let's play along with her.
+::'''Competition Organizer:''' Since you said so, I feel reassured.
+::'''Competition Organizer:''' Then the race will continue. Wishing you smooth sailing on the track.
+::{{tx}}
+{{Dialogue End}}
+
+===Defeat Professional Substitute and claim the championship{{subst:void|<!--803320211-->}}===
+{{Mission Description|type=adventure|location=SoulGlad™ Scorchsand Audition Venue|update|The hacker who hacked your terminal and signed you up for this competition is waiting to ambush you here. Whoever they may be, the championship will be yours!}}
+{{Dialogue Start}}
+
+;(Unused &mdash; EnterDistrict_G{GroupID})
+----
+::The "Professional Substitute" didn't stop but instead drove off into the distance &mdash; as if accepting her invitation, you followed closely behind.
+::'''Silver Wolf:''' Let's stop here. There's no one else around anyway. I originally planned to meet you in person, but this way works just fine too.
+::{{DIcon|Arrow}} I knew it was you causing trouble from the very beginning.
+:::'''Silver Wolf:''' Don't say that. You've already received the mission rewards you were supposed to get. Don't be so picky.
+:::So, you're the one who signed me up for the competition?
+::{{DIcon|Arrow}} So, you're the one who signed me up for the competition?
+::'''Silver Wolf:''' It was actually an accident. It's a long story.
+::'''Silver Wolf:''' I recently assembled an awesome set of racing game peripherals, integrating modules from "Spheroid Racing" and "Simulated Spheroid Racing: 26."
+::'''Silver Wolf:''' I originally planned to remotely access a real Spheroid racing competition to test the feel of an actual car... Besides, aren't you guys from the Astral Express still wandering around? I just borrowed a fake identity to have some fun myself, but I didn't expect you to show up in person.
+::'''Silver Wolf:''' I remember your gaming skills are pretty good. Having encountered such a strong opponent like me, did you have fun?
+::{{DIcon|Arrow}} I had a great time, you're quite a decent opponent.
+:::'''Silver Wolf:''' Ha! I knew your taste in games couldn't be that bad.
+:::Don't change the subject, you're not allowed to borrow my account!
+::{{DIcon|Arrow}} Don't change the subject, you're not allowed to borrow my account!
+::'''Silver Wolf:''' Oops, I originally thought that if I won the championship, I'd give the prize to you.
+::'''Silver Wolf:''' Since you managed to win the championship reward on your own, I'll just give you this custom Spheroid racing car as an apology.
+::'''Silver Wolf:''' At first, I wanted to help you as a substitute, but when I signed up, I realized the racing module could be completely DIY.
+::'''Silver Wolf:''' Once you start modifying, you'll get hooked, and end up spending quite a bit of money... so I promise you this Spheroid race car is the best you've ever seen, so go ahead and drive it well.
+::'''Silver Wolf:''' ...This race car is also equipped with the same remote control module as Prometheus, featuring an online connection function. I've set it to a local network, so only you and I can connect.
+::'''Silver Wolf:''' Take the car key, don't lose it.
+::{{DIcon|Arrow}} Aren't you afraid the IPC will find out?
+::{{DIcon|Arrow}} So I just drive it back like this?
+::'''Silver Wolf:''' What is there to be afraid of? They can't even locate me. With their layers of outsourcing and inefficiency, they might find me... in their next life!
+::'''Silver Wolf:''' Just drive the car back, but don't say it was from me. I don't really care, but if people find out you're that close with me... it'll only have negative consequences for you.
+::{{DIcon|Arrow}} It's okay, I don't mind.
+:::'''Silver Wolf:''' Alright, just take care of yourself.
+:::...You stay safe.
+::{{DIcon|Arrow}} ...You stay safe.
+::'''Silver Wolf:''' Don't worry, once I've had my fun, I'll log off.
+::'''Silver Wolf:''' I had a lot of fun playing with you just now. Your driving skills are really impressive. Want to drive together again sometime? Uh, I mean in a racing game.
+::'''Silver Wolf:''' But I have to go now. It wouldn't be fun if some annoying people managed to track the signal. Let's play online again when we have time.
+::'''Silver Wolf:''' Logging off, bye!
+::'''Competition Organizer:''' Are you alright? I saw your race car follow that Professional Substitute out, so I... I rushed over!
+::'''Competition Organizer:''' Huh? This is... that Spheroid race car? What's going on?
+::{{DIcon|Arrow}} (Conceal the origin of this car.)
+:::'''(Trailblazer):''' I don't know where this car came from. How did you think it got here?
+:::This is the car that hacker gave me...
+::{{DIcon|Arrow}} This is the car that hacker gave me...
+::'''Competition Organizer:''' A wanted criminal gave you... this car? Well, there's no need to make a big deal out of it. Let me think...
+::'''Competition Organizer:''' How about this, your opponent forfeited the race, you seized the opportunity, and we'll register the car as part of the official inventory, labeling it as a champion's reward?
+::'''Competition Organizer:''' This way, you "haven't seen" it and "never encountered" it, so the IPC won't come looking for you, saving you from unnecessary trouble.
+::{{DIcon|Arrow}} Let's do it your way.
+::{{DIcon|Arrow}} You're pretty sharp about these things.
+::'''Competition Organizer:''' Your registration's being fast-tracked. Almost forgot to mention the important stuff &mdash; congrats on making it to the championship!
+::{{tx}}
+{{Dialogue End}}
+
+===Defeat the Professional Substitute and claim the championship{{subst:void|<!--803320213-->}}===
+{{Dialogue Start}}
+
+;(Unused &mdash; EnterDistrict_G{GroupID})
+----
+::'''Passionate Reporter:''' Look at the camera, please!
+::'''Excited Spectator:''' Can I please have your autograph?
+::'''Uma:''' They're here! Our new champion is finally here! My dear audience, let us welcome the champion of the Speed Cup &mdash; (Trailblazer)!
+::'''Uma:''' Your performance was simply marvelous. The commentator almost blew their voice out with how hard they were cheering! Everyone was praising your driving skills!
+::'''Uma:''' Here, please look at the camera &mdash; congratulations on winning the championship! I imagine you must be so excited right now! Do you have anything to say to the audience at the venue and at home?
+::{{DIcon|Arrow}} One small step for me, a giant leap for the Nameless!
+:::'''Uma:''' Woah! That line sounds so epic! It's like you're defining a whole era! Is this the trailblazing spirit that the Nameless lives by?
+:::(Remain silent)
+:::'''Uma:''' *cough* Well, powerful figures often prefer to save their words. Looks like our champion would rather speak their actions! Alright then. Let's just put our hands together for (Trailblazer) once more!
+:::Um. Happy championship?
+::{{DIcon|Arrow}} (Remain silent)
+:::'''Uma:''' *cough* Well, powerful figures often prefer to save their words. Looks like our champion would rather speak their actions! Alright then. Let's just put our hands together for (Trailblazer) once more!
+:::Um. Happy championship?
+::{{DIcon|Arrow}} Um. Happy championship?
+::'''Uma:''' Ahahaha! Our champion is young, and a bit too excited, but I think you can all get what {{MC|f=she|m=he}} meant &mdash; Did we hear that? Remember the joy you feel on the racetrack and win happiness for yourselves! You need to enjoy the challenge!
+::'''Uma:''' Alright. Thank you (Trailblazer) for coming to this interview! Now we'll let you rest up, dear champion!
+::{{tx}}
+{{Dialogue End}}
+
+==Other Languages==
+{{Other Languages
+|en   = Trace 'n' Drift
+|zhs  = 极速追影
+|zht  = 極速追影
+|ja   = シャドウチェイサー
+|ko   = 트레이스 앤 드리프트
+|es   = Rápido y asombroso
+|fr   = Formule S
+|ru   = Погоня за тенью
+|th   = แรงแซงทะลุเงา
+|vi   = Thần Tốc Truy Ảnh
+|de   = Spur & Drift
+|id   = Perburuan Bayangan Cepat
+|pt   = Rápido e Assombroso
+}}
+
+==Change History==
+{{Change History|3.3}}

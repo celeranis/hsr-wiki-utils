@@ -41,31 +41,547 @@ PageTitle=#Out of Thin Air Guide#
 ===Talk to Wallace in the Overworld{{subst:void|<!--301020201-->}}===
 {{Mission Description|type=daily|location=Administrative District|Wallace in the Administrative District seems to be worried about something...<br />As one helpful Trailblazer, you plan to ask how he has been lately.}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Agnes)
+;(If {{cx}}<!--during performance 501023801-->)
+::'''Agnes:''' "This sweet taste is like the first drop of water from the cracks of the ice when the river unfreezes after the Solwarm Festival, a bit of warmth amidst the bitter cold..."
+::'''Agnes:''' What do you think? Doesn't this description give you an appetite?
+::{{DIcon|Arrow}} ...Are you asking me?
+:::'''Agnes:''' Yeah, do you see anyone else?
+::{{DIcon|Arrow}} ...Maybe?
+:::'''Agnes:''' You don't sound so convinced. I understand, you are saying "No."
+::{{DIcon|Arrow}} Not a chance.
+:::'''Agnes:''' Well, I can't blame you &mdash; it's my own problem. My writing is not good enough.
+::'''Agnes:''' Darn it. What's the point of being a food journalist if I can't use words to construct a sense of taste and utilize synesthesia? By the way, while I'm talking with you, I have another paragraph here. Let me read it to you.
+::'''Agnes:''' "The rich sauces are like an invading army, completely overwhelming the crisp and fresh taste of the salmon. The gentle aroma of fish has no choice but to surrender in defeat..."
+::'''Agnes:''' How's that feel? A little too wordy?
+::{{DIcon|Arrow}} You should write a novel.
+::{{DIcon|Arrow}} Yes, a lot of unnecessary details.
+::'''Agnes:''' I can't help myself, I used to be a literary journalist. Every day I was trying to add more adjectives to the sentence anywhere I could fit them. I wouldn't get my bonus if readers can easily deduce the subject, predicate, and object within three lines.
+::'''Agnes:''' But then a new girl came and was better at filling in words than I was, so I made a career change. Have you read the cuisine section of the ''Crystal Daily''? I am the author of that section.
+::'''Agnes:''' Honestly, I don't want to include all that garish garbage in my writing anyway...
+::'''Agnes:''' I'm gonna put more work into honing my rhetorical skills. Well, enough about me &mdash; how can I help you?
+;(If {{cx}}<!--not during performance 501023801-->)
+:<pre>{
+	"$type": "RPG.GameCore.PlayMultiVoiceTalk",
+	"TalkSentenceID": 501023871
+}</pre>
+::'''Agnes:''' Sorry, still scrambling to finish my article. Did one paragraph today, but I want to bin the whole thing already...
+::'''Agnes:''' Need to put more work into honing my rhetorical skills. How may I help?
+
+;(Talk to Chavez)
+;(If {{cx}}<!--during performance 501027101-->)
+::'''Chavez:''' Young person, look over here! Just two minutes of your time can save you from future losses!
+::'''Chavez:''' Has a sneaky kid with dark blue hair ever come up to talk to you?
+::{{DIcon|Arrow}} ...It rings a bell.
+:::'''Chavez:''' You are likely a victim of the "Dark-Blue Scam"!
+::{{DIcon|Arrow}} Isn't that Sampo?
+:::'''Chavez:''' ... Sampo? You've been scammed! That's just an alias. That means... you're a victim of the Dark-Blue Scam!
+::{{DIcon|Arrow}} I've never seen someone like that.
+:::'''Chavez:''' You are likely a potential victim of the Dark-Blue Scam!
+::'''Chavez:''' Take my advice, that guy is a serial scammer. Don't believe anything he says!
+::'''Chavez:''' Here, take this. This is a tutorial on preventing scams written by the Dark-Blue Scam Victims Association. Read it carefully and if you have any questions, come to me!
+;(If {{cx}}<!--not during performance 501027101-->)
+:<pre>{
+	"$type": "RPG.GameCore.PlayMultiVoiceTalk",
+	"TalkSentenceID": 501027142
+}</pre>
+;(Unused &mdash; Wait_Option_5010271_18)
+:{{DIcon|Arrow}} Can I ask a question...?
+::'''Chavez:''' Go ahead! It's our responsibility to help prevent the public from being scammed.
+::{{DIcon|Talk}} ...the Dark-Blue Scam Victims Association?
+:::'''Chavez:''' That's right! The members of the Association are all former victims. We are united to share what we have learned and help the public by raising awareness!
+:::'''Chavez:''' The guide goes over case studies of those who were scammed by the blue-haired swindler. It is evidence of his evil crimes, a painful lesson that we predecessors suffered.
+::;(Return to previous option selection)
+::{{DIcon|Talk}} ...How were you scammed?
+:::'''Chavez:''' The first time I met that guy, he asked if I wanted a "parallel universe printer."
+:::'''Chavez:''' Well, I asked him how the printer works... and he immediately started rambling on a bunch of smorgasbord about science stuff. I was almost caught up in it.
+:::'''Chavez:''' Terms like parallel universe, Aeons, and parity anomaly... Swindlers love to use these words related to the universe and Aeons to scam people!
+:::'''Chavez:''' I didn't believe him until he used it to print money. He made two bills with the exact same serial number...
+:::{{DIcon|Arrow}} How much did you pay?
+::::'''Chavez:''' Uh... the price isn't important. What's important is that you need to be careful, so the same scam doesn't happen to you.
+:::{{DIcon|Arrow}} Did the printer work?
+::::'''Chavez:''' Of course not, otherwise why do you think I would have joined the association?
+:::'''Chavez:''' Ahem, sometime later, after the counterfeiting scam, I bumped into that same blue-haired guy again in an alley in the Commercial District.
+:::'''Chavez:''' I should have had the Silvermane Guards arrest him, but I was so angry and I needed an explanation...
+:::'''Chavez:''' Instead, he asked me with a straight face, "Were you staring at the printer?"
+:::'''Chavez:''' He accused me of not reading the manual and wasting such a genius invention. He even offered to refund the full payment so that he could find another buyer for the parallel universe printer.
+:::'''Chavez:''' He also said, "If the operator keeps staring at the printer, the parallel universe transmission can't happen. The only way to avoid interfering with the transmission process is to observe it with the help of an aether lens."
+:::{{DIcon|Arrow}} ...So you bought an aether lens?
+:::'''Chavez:''' Doesn't that sound reasonable? So I was tricked again by his apparent sincerity...
+:::'''Chavez:''' Now I know that nine out of ten people who try to associate their products with any kind of parallel universe theory are scammers!
+:::{{DIcon|Arrow}} Parallel universes actually exist.
+::::'''Chavez:''' Haha, are you kidding me? Do you really expect me to believe that?
+::::'''Chavez:''' Or... are you working with the blue-haired guy?
+::::'''Chavez:''' Get out! If you don't leave, I'll have Silvermane Guards come and arrest you!
+:::;(Return to previous option selection)
+:::{{DIcon|Arrow}} Wow, I am soo scared.
+::::'''Chavez:''' Laugh at me if you want, just remember what I told you... Be careful with anything related to parallel universes!
+:::;(Return to previous option selection)
+::{{DIcon|Exit}} That's all.
+
+;(Talk to Dominic)
+:'''Dominic:''' Normal it is, for you to have doubts in your hearts &mdash; because you look around yourselves, and you can't SEE Preservation anywhere; you cast your eyes hither and thither, and nary do you see ANY evidence of the very existence of Preservation.
+:'''Dominic:''' ...And yet comes this very day, I shall resolve your doubts and let you feel the true grace of Preservation, let you marvel at the almighty will of the Architects...
+:{{DIcon|Talk}} Keep listening...
+::'''Dominic:''' ...Preservation is the embodiment of Qlipoth, and is with us all the time. It's the secret force that imperceptibly shapes our personalities, impacting all the important decisions that we make during our lives...
+::'''Dominic:''' ...The reason why you struggle so to find it, is because Preservation's grace is integrated with the world we know, diffused throughout the air we breathe, refracted through the light we see. It has gently embraced us in its bosom since the very dawn of our existence.
+::'''Dominic:''' The Admonishments of the Supreme Guardian remind us to never take Preservation's grace for granted! We must inherit the spirit of our Architect ancestors: To persevere and survive in this world of ours, and to bravely defy any calamities we face!
+::'''Dominic:''' The Fragmentum and the Eternal Freeze &mdash; These are just bumps in the road on the path to carrying out the will of Preservation! O brothers and sisters, stand together with thine Architects and our Supreme Guardian! Follow in her footsteps &mdash; for victory is our destiny!
+:;(Return to previous option selection)
+:{{DIcon|Talk}} Listen to what the crowd is saying.
+::'''Male Onlooker:''' Hear that? What an impassioned speech! Praise the Architects, as his words have reinvigorated my lust for life...
+::'''Female Onlooker:''' ...Is it really as great as you say? If you ask me, these Architects just say the same empty rhetoric day in day out &mdash; and if you've got time for all this bluster, you've got time to help improve everyone's living conditions around here...
+::'''Child Onlooker:''' Preservation! O praise!
+::'''Senior Onlooker:''' I've been off for a big walk, and come back. It's still going!? Kids these days, they never shut up.
+:;(Return to previous option selection)
+:{{DIcon|Exit}} That's enough for me.
+
+;(Talk to Furdo)
+:{{DIcon|Talk}} You seem upset.
+::'''Furdo:''' Huh? Is it that obvious?
+::'''Furdo:''' Dealing with a bunch of ignorant old people, every day &mdash; you would be annoyed too if you were me.
+::{{DIcon|Arrow}} What kind of legal issues do you help them with?
+::'''Furdo:''' Legal issues? You think too highly of the people of Belobog. What they come to me for has nothing to do with the law. It's all complaints about daily life.
+::'''Furdo:''' It's always the same thing. The complainant tells me they have been altruistic and taken the big picture into consideration and the offending party has taken advantage of them and is being ungrateful.
+::'''Furdo:''' You can hear thousands of stories like this at Solwarm Festival family gatherings. Those stories are, in the end, moral blackmail, which I'm not interested in at all.
+::'''Furdo:''' But I am a legal practitioner after all, so it is my duty to help the public get to know the law. Every time it gets to this part, they start to pretend like they don't understand me.
+::'''Furdo:''' But who's to blame? After all, the law is always fair and impartial, showing favor to no one?
+::{{DIcon|Arrow}} Wow. You have a hard job.
+:::'''Furdo:''' I know, right!? I can't go on being a Roaming Judge for a second longer.
+::;(Return to previous option selection)
+::{{DIcon|Arrow}} Just hearing about it makes my head spin.
+:::'''Furdo:''' I know, right!? I can't go on being a Roaming Judge for a second longer.
+::;(Return to previous option selection)
+:{{DIcon|Talk}} What kind of cases do you consider important?
+::'''Furdo:''' Corruption-related, with evil organizations or personnel involved. Or at least arms smuggling... or scams...
+::'''Furdo:''' Forget it. Just pretend like I'm talking nonsense. Belobog is too safe to have cases like that. Even if there is a big case, it's out of my reach...
+:;(Return to previous option selection)
+:{{DIcon|Exit}} That's all.
+
+;(Talk to Wallace)
+:'''Wallace:''' Yes. I, Wallace Cambridge Limestein, wish to continue to seek true friends.
+:'''Wallace:''' I've studied my failures and come to one conclusion: It's not my fault.
+:'''Wallace:''' I have no other intentions. I just want to make true friends. It was the people I came into contact with... They were too cautious. Some of them had suspicions about my family background, and some held prejudices against me for no reason.
+:'''Wallace:''' I believe that I will one day make friends all over the world as long as I continue to treat people with sincerity like all the Limesteins.
+:{{DIcon|Arrow}} I admire your confidence.
+:{{DIcon|Arrow}} Your understanding of "sincerity" is pretty unusual...
+:'''Wallace:''' Meaningless discussion can never be compared to real action. Come on, I've found a photo spot for today.
+:'''Wallace:''' A photo needs a story to attract attention, and you're looking at a man full of stories. All you have to do is capture the moment when I exude charm.
+:'''Wallace:''' Come and meet me at the fountain in the Administrative District Plaza. It's time to show you a different side of me.
+----
+
+;(Talk to Lavonne)
+;(If {{cx}}<!--during performance 501023901-->)
+::'''Lavonne:''' Great location in the outskirt of the city, energy and water already sorted out. For this fully furnished property with fabulous interior design, you need to bring nothing but yourself! High demand, limited supply! I'd want to take one for myself! Hey, you there! What are you waiting for?
+::{{DIcon|Arrow}} I'm waiting for you to finish.
+:::'''Lavonne:''' What else can be said? The price is unbeatable! I have friends in high places. You get my drift? My sources have told me that the price of this property will only go up in the next two years.
+:::'''Lavonne:''' An increase of thirty percent... no, forty! To be honest with you, I'm being conservative here.
+:::'''Lavonne:''' The actual number is at least this much. Don't look so scared. See what I mean here? I'm trying to keep it on the down low, because...
+::{{DIcon|Arrow}} I'm not looking to buy a property.
+:::'''Lavonne:''' Sure, sure, young people are not in a hurry. I get it. Let's put it this way: From the perspective of an investor, we are not talking about a house to live in. It's an asset!
+:::'''Lavonne:''' If I were you, I wouldn't miss out on this opportunity. Buy it now, wait for the price to go up and sell it. Easy money!
+:::'''Lavonne:''' Tell you this, if you buy the property and decide to sell it at some point, no matter if you find a potential buyer, I'll list it for you 13% higher than the current price. You have my word.
+::'''Lavonne:''' Trust me, I am the best local property agent. There hasn't been a house that I couldn't sell!
+::'''Lavonne:''' I've probably said enough. Anyway, think about my proposal. Don't make a decision that you will someday regret.
+;(If {{cx}}<!--not during performance 501023901-->)
+:<pre>{
+	"$type": "RPG.GameCore.PlayMultiVoiceTalk",
+	"TalkSentenceID": 501023980
+}</pre>
+::'''Lavonne:''' Or is there anything else you want to talk about?
+
+;(Talk to Lila)
+:<!--0.3-second delay-->
+:{{DIcon|Talk}} What creatures are there in Belobog?
+::'''Lila:''' Cats and dogs. There are wolves and birds in the wild... That's about it. You'll have to check out the museum's specimens to see what other kinds of animals there were in the past.
+::'''Lila:''' I heard that hundreds of years ago, Belobog had domesticated bears, and direwolves roamed the wild. They're no longer around though.
+::'''Lila:''' But I believe there are other animals out there that survived the Eternal Freeze. I just have no way to prove it. Now, I have no choice but to study humans...
+::'''Lila:''' Did you know that humans in Belobog have at least three different origins? But you don't seem to belong to any one of them. That's why I was so surprised back then.
+::{{DIcon|Arrow}} You must be mistaken.
+::{{DIcon|Arrow}} You're right, I'm an alien.
+::'''Lila:''' Haha, I must've been researching too much... Ever since I got my hands on that book, my head's been in the clouds.
+::{{DIcon|Arrow}} What book?
+:::'''Lila:''' This ''Underground Encyclopedia of Zoology'' was apparently brought back from the underground by a Silvermane Guard. It talks about a lot of strange creatures.
+:::'''Lila:''' Ever since I finished the book, I couldn't stop thinking about how these animals must look like.
+:::'''Lila:''' I really want to know more about these crystalline lizards, geomarrow olms, funeral worms... I want to know what they eat, how they reproduce... everything.
+::;(Return to previous option selection)
+::{{DIcon|Arrow}} In the clouds?
+:::'''Lila:''' This ''Underground Encyclopedia of Zoology'' was apparently brought back from the underground by a Silvermane Guard. It talks about a lot of strange creatures.
+:::'''Lila:''' Ever since I finished the book, I couldn't stop thinking about how these animals must look like.
+:::'''Lila:''' I really want to know more about these crystalline lizards, geomarrow olms, funeral worms... I want to know what they eat, how they reproduce... everything.
+::;(Return to previous option selection)
+:{{DIcon|Talk}} Why don't you go look for them?
+::'''Lila:''' I've been outside the city a few times for journalism, but there wasn't enough spare time to do ecological research then.
+::'''Lila:''' But recently, I met a benefactor who is willing to finance my expedition as long as his requirements are met. He's even willing to take care of the expedition permits and formalities as well.
+::'''Lila:''' I'm already making preparations for the expedition.
+:;(Return to previous option selection)
+:{{DIcon|Exit}} That's all questions I have.
+::'''Lila:''' If you see any rare species in the future, remember to tell me about them!
+
+;(Talk to Manya)
+:'''Manya:''' I just said I'm on break... Fine, if you insist.
+:{{DIcon|Talk}} What kind of work do you do exactly?
+::'''Manya:''' Excellent question! My job involves a little bit of everything, but vital to keeping things running smoothly in Belobog! You could say I'm the unsung hero of the city.
+::'''Manya:''' I'm responsible for grassroots affairs in the Administrative District, listening to basic requests from people, and solving day-to-day issues.
+::{{DIcon|Talk}} In that case, can you hear out my request?
+::'''Manya:''' Of course! But you will need to reserve a slot. My work hours are from 9:00 AM to 12:00 PM, and 2:00 PM to 5:00 PM. I handle administrative and civil affairs during these times.
+::'''Manya:''' I'm currently on break. As a public official, separating professional and private time is of basic importance.
+:;(Return to previous option selection)
+:{{DIcon|Talk}} How do I make an official appointment?
+::'''Manya:''' Please fill out a form at counter 236 on the second floor of Qlipoth Fort. Then have a staff member stamp it at window 35 on the third floor.
+::'''Manya:''' After stamping, please head to window 155 on the first floor and wait in line for the proof of appointment. The formal processing usually takes one month after the appointment has been made.
+::'''Manya:''' To inquire about the specific processes, please consult the window staff when making the appointment.
+:;(Return to previous option selection)
+:{{DIcon|Talk}} You're just trying to slack off, aren't you?
+::'''Manya:''' What would make you think that? But I don't blame you. Many have the same misunderstanding, thinking this is just a job where you can kick your feet up.
+::'''Manya:''' A job where I just "Clock in, drink tea, read the newspaper, chit-chat with colleagues, and stare at the time, waiting to get off." But that's all nonsense.
+::'''Manya:''' Please lose these false impressions of grassroots public officials. Our days are busy ones indeed.
+:;(Return to previous option selection)
+:{{DIcon|Exit}} Nothing else.
+
+;(Talk to Nika)
+;(If {{cx}}<!--during performance 501024001-->)
+::'''Nika:''' Excuse me! Sorry&mdash;Yeah, sorry to bother you. Can I take a moment of your time?
+::'''Nika:''' Can I ask you a question, about literature?
+::{{DIcon|Arrow}} Of course.
+:::'''Nika:''' Just one of those general questions. I'd like to hear your take on it.
+::{{DIcon|Arrow}} Literature?
+:::'''Nika:''' Just one of those general questions. I'd like to hear your take on it.
+::{{DIcon|Arrow}} (Pretend you didn't notice her)
+:::'''Nika:''' Wait a minute! It won't take long.
+::'''Nika:''' I'll get straight to it. How would you rate these two books, ''Snow Plains'' and ''The Three Trebles''?
+::{{DIcon|Arrow}} I haven't read either.
+:::'''Nika:''' What? That's a pity. These are must-reads on the list of "Books You Should Read in Belobog."
+:::'''Nika:''' Well, don't mind me... I guess I can't expect everyone to be as educated...
+::{{DIcon|Arrow}} (Make up a generic literary critique)
+:::'''(Trailblazer):''' Powerful, stylish, and full of unexpected twists and turns, these two books demonstrated with their refined language the strengths of both authors.
+:::'''(Trailblazer):''' Their attempt to question and explore the spiritual side of mankind is commendable but unfortunately falls short compared with some of the greatest works of literature.
+:::'''Nika:''' Amazing! Words of wisdom from a true master.
+::'''Nika:''' Let me introduce myself. I am Nika with the ''Crystal Daily''. Sorry to bother you but we are collecting petitions from readers to lift the ban on the ''Tale of the Winterlands''.
+::'''Nika:''' It would be wonderful if you could sign here. Of course, feel free to raise any concerns...
+::'''Nika:''' Ah yes, as a gesture of goodwill, I'll give you ''The Seven Wonders of Belobog'' as a gift!
+;(If {{cx}}<!--not during performance 501024001-->)
+:<pre>{
+	"$type": "RPG.GameCore.PlayMultiVoiceTalk",
+	"TalkSentenceID": 501024077
+}</pre>
+
+;(Talk to Celine)
+;(If {{cx}}<!--SubMission Finish: 200120106-->)
+:<pre>{
+	"$type": "RPG.GameCore.PlayMultiVoiceTalk",
+	"TalkSentenceID": 501026845
+}</pre>
+::'''Celine:''' I can feel something deep in the harmony... I know I'm still young, but I'm sure he's the one... la la la...
+::'''Celine:''' Hey, are you here to hear this young lady sing again, or is there something else?
+::{{DIcon|Arrow}} I want to ask...
+:::{{DIcon|Talk}} Are you about to go on stage?
+::::'''Celine:''' Oh, I have Miss Tamila to thank for this. I once starred as the lead in a new play, but the critics brushed it off as being too cliché.
+::::'''Celine:''' Thankfully, Miss Tamila and I are close friends now. She introduced me to an up-and-coming director, and, lucky me, he cast me as the lead in his next production.
+::::{{DIcon|Talk}} Are you still in touch with Tamila?
+:::::'''Celine:''' Absolutely, I'll always be grateful to Miss Tamila for her kindness.
+:::::'''Celine:''' I message her every day to keep in touch, but Miss Tamila has been swamped lately, spending most of her time in the recording studio. Sometimes it takes her a while to reply.
+:::::'''Celine:''' The music company holds her in high regard, calling her deep voice a "smoky tone" that's perfect for jazz. I haven't experienced that style of music myself, but I'm genuinely thrilled for her success.
+::::;(Return to previous option selection)
+::::{{DIcon|Talk}} Why isn't Tamila here?
+:::::'''Celine:''' Oh, didn't I tell you? Miss Tamila was discovered by an agent from the IPC and has left Belobog to further her career.
+:::::'''Celine:''' I've long believed that the Golden Theater isn't worthy of Miss Tamila. She's meant for a future that's far more expansive and dazzling.
+::::;(Return to previous option selection)
+::::{{DIcon|Talk}} Are you close with Tamila?
+:::::'''Celine:''' That's a weird question to ask. Miss Tamila has done so much for me &mdash; she helped me step out of her shadow and showed me the way to the spotlight.
+:::::'''Celine:''' I'd gladly stick by her side for life if it meant showing her how grateful I am. Honestly, the way you put it makes it sound like I have something against her, which is just ridiculous.
+::::;(Return to previous option selection)
+::::{{DIcon|Exit}} I don't have any more questions.
+:::::'''Celine:''' No worries, I was just about to continue practicing my singing.
+:::{{DIcon|Talk}} Are you still in touch with Tamila?
+::::'''Celine:''' Absolutely, I'll always be grateful to Miss Tamila for her kindness.
+::::'''Celine:''' I message her every day to keep in touch, but Miss Tamila has been swamped lately, spending most of her time in the recording studio. Sometimes it takes her a while to reply.
+::::'''Celine:''' The music company holds her in high regard, calling her deep voice a "smoky tone" that's perfect for jazz. I haven't experienced that style of music myself, but I'm genuinely thrilled for her success.
+::::{{DIcon|Talk}} Are you about to go on stage?
+:::::'''Celine:''' Oh, I have Miss Tamila to thank for this. I once starred as the lead in a new play, but the critics brushed it off as being too cliché.
+:::::'''Celine:''' Thankfully, Miss Tamila and I are close friends now. She introduced me to an up-and-coming director, and, lucky me, he cast me as the lead in his next production.
+::::;(Return to previous option selection)
+::::{{DIcon|Talk}} Why isn't Tamila here?
+:::::'''Celine:''' Oh, didn't I tell you? Miss Tamila was discovered by an agent from the IPC and has left Belobog to further her career.
+:::::'''Celine:''' I've long believed that the Golden Theater isn't worthy of Miss Tamila. She's meant for a future that's far more expansive and dazzling.
+::::;(Return to previous option selection)
+::::{{DIcon|Talk}} Are you close with Tamila?
+:::::'''Celine:''' That's a weird question to ask. Miss Tamila has done so much for me &mdash; she helped me step out of her shadow and showed me the way to the spotlight.
+:::::'''Celine:''' I'd gladly stick by her side for life if it meant showing her how grateful I am. Honestly, the way you put it makes it sound like I have something against her, which is just ridiculous.
+::::;(Return to previous option selection)
+::::{{DIcon|Exit}} I don't have any more questions.
+:::::'''Celine:''' No worries, I was just about to continue practicing my singing.
+:::{{DIcon|Talk}} Why isn't Tamila here?
+::::'''Celine:''' Oh, didn't I tell you? Miss Tamila was discovered by an agent from the IPC and has left Belobog to further her career.
+::::'''Celine:''' I've long believed that the Golden Theater isn't worthy of Miss Tamila. She's meant for a future that's far more expansive and dazzling.
+::::{{DIcon|Talk}} Are you about to go on stage?
+:::::'''Celine:''' Oh, I have Miss Tamila to thank for this. I once starred as the lead in a new play, but the critics brushed it off as being too cliché.
+:::::'''Celine:''' Thankfully, Miss Tamila and I are close friends now. She introduced me to an up-and-coming director, and, lucky me, he cast me as the lead in his next production.
+::::;(Return to previous option selection)
+::::{{DIcon|Talk}} Are you still in touch with Tamila?
+:::::'''Celine:''' Absolutely, I'll always be grateful to Miss Tamila for her kindness.
+:::::'''Celine:''' I message her every day to keep in touch, but Miss Tamila has been swamped lately, spending most of her time in the recording studio. Sometimes it takes her a while to reply.
+:::::'''Celine:''' The music company holds her in high regard, calling her deep voice a "smoky tone" that's perfect for jazz. I haven't experienced that style of music myself, but I'm genuinely thrilled for her success.
+::::;(Return to previous option selection)
+::::{{DIcon|Talk}} Are you close with Tamila?
+:::::'''Celine:''' That's a weird question to ask. Miss Tamila has done so much for me &mdash; she helped me step out of her shadow and showed me the way to the spotlight.
+:::::'''Celine:''' I'd gladly stick by her side for life if it meant showing her how grateful I am. Honestly, the way you put it makes it sound like I have something against her, which is just ridiculous.
+::::;(Return to previous option selection)
+::::{{DIcon|Exit}} I don't have any more questions.
+:::::'''Celine:''' No worries, I was just about to continue practicing my singing.
+:::{{DIcon|Talk}} Are you close with Tamila?
+::::'''Celine:''' That's a weird question to ask. Miss Tamila has done so much for me &mdash; she helped me step out of her shadow and showed me the way to the spotlight.
+::::'''Celine:''' I'd gladly stick by her side for life if it meant showing her how grateful I am. Honestly, the way you put it makes it sound like I have something against her, which is just ridiculous.
+::::{{DIcon|Talk}} Are you about to go on stage?
+:::::'''Celine:''' Oh, I have Miss Tamila to thank for this. I once starred as the lead in a new play, but the critics brushed it off as being too cliché.
+:::::'''Celine:''' Thankfully, Miss Tamila and I are close friends now. She introduced me to an up-and-coming director, and, lucky me, he cast me as the lead in his next production.
+::::;(Return to previous option selection)
+::::{{DIcon|Talk}} Are you still in touch with Tamila?
+:::::'''Celine:''' Absolutely, I'll always be grateful to Miss Tamila for her kindness.
+:::::'''Celine:''' I message her every day to keep in touch, but Miss Tamila has been swamped lately, spending most of her time in the recording studio. Sometimes it takes her a while to reply.
+:::::'''Celine:''' The music company holds her in high regard, calling her deep voice a "smoky tone" that's perfect for jazz. I haven't experienced that style of music myself, but I'm genuinely thrilled for her success.
+::::;(Return to previous option selection)
+::::{{DIcon|Talk}} Why isn't Tamila here?
+:::::'''Celine:''' Oh, didn't I tell you? Miss Tamila was discovered by an agent from the IPC and has left Belobog to further her career.
+:::::'''Celine:''' I've long believed that the Golden Theater isn't worthy of Miss Tamila. She's meant for a future that's far more expansive and dazzling.
+::::;(Return to previous option selection)
+::::{{DIcon|Exit}} I don't have any more questions.
+:::::'''Celine:''' No worries, I was just about to continue practicing my singing.
+:::{{DIcon|Exit}} I don't have any more questions.
+::::'''Celine:''' No worries, I was just about to continue practicing my singing.
+::{{DIcon|Arrow}} I've got to go. Bye.
+:::'''Celine:''' Bye bye. I'll go back to practicing my singing now.
+:::'''Celine:''' La la la. "Chasing a mirage, I lose sight of the path in the fog. I only wish for a steady journey through life."
+;(If {{cx}}<!--SubMission not Finish: 200120106-->)
+:;(If {{cx}}<!--during performance 501026801-->)
+:::'''Celine:''' Ah, ah, ah, ah! La, la, la, la!
+:::'''Celine:''' Sorry, I didn't notice there were people around. I'm not disturbing you, am I?
+:::{{DIcon|Arrow}} You have a great voice.
+:::{{DIcon|Arrow}} I wasn't bothered at all.
+:::'''Celine:''' Okay, I shall continue warming up my voice... Oh, no! The play isn't open to the public yet. I'd better not spoil it. I am so forgetful!
+:::'''Celine:''' Anyway, the play is still in rehearsal. I'm the leading.... actress' voice. If you like the song, we can meet again in the theater.
+:;(If {{cx}}<!--not during performance 501026801-->)
+::<pre>{
+	"$type": "RPG.GameCore.PlayMultiVoiceTalk",
+	"TalkSentenceID": 501026845
+}</pre>
+:::'''Celine:''' I can feel something deep in the harmony... I know I'm still young, but I'm sure he's the one... la la la...
+:::'''Celine:''' Huh. Are you here for my singing again? That won't do. You need to enjoy the performance in the theater... Or are you here for something else?
+
+;(Talk to Tamila)
+:<!--0.3-second delay-->
+:'''Tamila:''' As you can probably tell, my voice is rather low-pitched. The director is not very happy about that, so the theater hired a voice actress to "assist" me.
+:'''Tamila:''' She is impeccable indeed... but I too was professionally trained. Never missed a day of practice.
+:'''Tamila:''' Now I have to lip sync and act as if in a silent film. I can't help but think that maybe one day they'll get rid of me altogether...
+:'''Tamila:''' What do you think I should do?
+:{{DIcon|Talk}} Work on your acting.
+::'''Tamila:''' *sigh* That won't do. People come to musicals for the songs.
+::'''Tamila:''' How embarrassing would it be if a musical performer can't sing with her own voice? It's ridiculous! I'll be like thespians who can't remember their lines and need others to read out the script for them.
+::{{DIcon|Arrow}} Why not try acting in a play?
+::'''Tamila:''' Both are theatrical arts, true. But the skills they require are hardly transferable.
+::'''Tamila:''' Plus, musicals have always been my passion... I don't want to simply give up like this. I still want to give it a go.
+:;(Return to previous option selection)
+:{{DIcon|Talk}} Maybe find a project that suits your voice better.
+::'''Tamila:''' I'm afraid it's not that easy.
+::'''Tamila:''' You might not know this, but musical artists only look good on stage for a very limited period of time.
+::'''Tamila:''' Once their physiques change or their voice becomes coarse, they have to bid the stage farewell. They'll call it "spending more time with the family," but everyone knows that's the end of their career.
+::{{DIcon|Arrow}} You'll have to challenge that.
+:::'''Tamila:''' Even if the theater agreed with me, the audience would not buy it. They have been quite honest in likes and dislikes.
+:::'''Tamila:''' But you do have a point... people should be less judgmental.
+::;(Return to previous option selection)
+::{{DIcon|Arrow}} There are other types of musicals you can try.
+:::'''Tamila:''' The theater manager is convinced that the audience is only interested in love songs aimed at teens. But it's possible that people's taste has changed and the management failed to grasp it.
+:::'''Tamila:''' You know what? I'll see if I can bring some artists together and try some new things. How does that sound?
+::;(Return to previous option selection)
+:{{DIcon|Talk}} Need to find a way to get your voice assist fired.
+::'''Tamila:''' No, I want to keep my job fair and square. I have no interest in theater politics.
+::'''Tamila:''' She is one of us after all. I hope she will see her dream come true on stage one day.
+:;(Return to previous option selection)
+:{{DIcon|Exit}} I can't think of a better way to help.
+::'''Tamila:''' No worries. Thanks for listening to me. I feel much better already. Please keep this conversation a secret.
+
+;(Talk to Amo)
+;(If {{cx}}<!--during performance 501024201-->)
+::'''Amo:''' ...
+::{{DIcon|Arrow}} What are you looking at?
+:::'''Amo:''' Things that were, things that are, and things that are yet to happen.
+::{{DIcon|Arrow}} What's so special about the trashcan?
+:::'''Amo:''' Nothing. It is plain and lacks character, just like me.
+::'''Amo:''' Ah, I am good for nothing. I am destined to end up in a trashcan.
+::{{DIcon|Arrow}} Don't be so harsh on yourself.
+:::'''Amo:''' You misunderstood me. I am pondering about life, value, and eternity.
+::{{DIcon|Arrow}} You're quite a poet.
+:::'''Amo:''' Thank you. That was indeed my occupation.
+::'''Amo:''' I forgot to introduce myself. My name is Amo. I write things for a living. Sorry for blocking your way... Hm? Can I help you with anything?
+;(If {{cx}}<!--not during performance 501024201-->)
+:<pre>{
+	"$type": "RPG.GameCore.PlayMultiVoiceTalk",
+	"TalkSentenceID": 501024272
+}</pre>
+::'''Amo:''' Oh, don't mind me. I was completely lost in that sense of belonging. I remember you, friend. What brings you here?
 {{Dialogue End}}
 
 ===Take a photo of Wallace and the kids{{subst:void|<!--301020210-->}}===
 {{Mission Description|type=daily|location=Administrative District|update|Wallace is worried because he does not have many good friends.<br />He has a plan to make more friends, and the first step is to have a photo taken.}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Unused &mdash; 301020210_fail)
+<pre>{
+	"$type": "RPG.GameCore.ToastPile",
+	"ImgPath": "SpriteOutput/UI/MobilePhone/TextPanel.png",
+	"DescTextID": {
+		"Hash": 10364261400690773299
+	}
+}</pre>
+
+;(Unused &mdash; Mission_301020210)
+
 {{Dialogue End}}
 
 ===Show Wallace the photo you took{{subst:void|<!--301020202-->}}===
 {{Mission Description|type=daily|location=Administrative District|update|Wallace is worried because he does not have many good friends.<br />You helped Wallace take a photo &mdash; It looks good. Show it to him.}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Wallace)
+:'''Wallace:''' Done? Let's have a look...
+:'''Wallace:''' Good... This is a great photo. My purpose is to show people that I am not just some ignorant rich man. On the contrary, I am very friendly and popular with children.
+:'''Wallace:''' All right, it's time to help me make friends. Just like before, I will decide who I want to make friends with.
+:'''Wallace:''' I heard that Rossy, son of Minister Bova, is a young man with a bold personality. Maybe we are on the same wavelength. Could you show the photo to him and ask him if he's willing to be my friend?
+----
 {{Dialogue End}}
 
 ===Convince Rossy to be Wallace's friend{{subst:void|<!--301020203-->}}===
 {{Mission Description|type=daily|location=Hotel Lobby|update|Wallace is worried because he does not have many good friends.<br />He wants to be friends with the rich heir, Rossy, and would like you to talk to him &mdash; You decide to help him the whole way through.}}
 {{Dialogue Start}}
-:{{tx}}
+
+
+;(Talk to Old Goethe)
+;(If {{cx}}<!--during performance 501028701-->)
+::'''Old Goethe:''' Hello! Welcome to the Goethe Hotel!
+::'''Old Goethe:''' Are you staying with us? Or would you like to try our special afternoon tea?
+::{{DIcon|Arrow}} I'm here as I was attracted by the hotel's fame.
+:::'''Old Goethe:''' The hotel has just been here for a long time and it became a bit famous in Belobog.
+:::'''Old Goethe:''' Make yourself at home. Feel free to take a tour, as long as you are not interrupting the other guests.
+::{{DIcon|Arrow}} I am only passing by. I'll have a look around.
+:::'''Old Goethe:''' I happen to have some free time. If you don't mind, you can chat with me.
+::{{DIcon|Arrow}} I would like to reserve a room.
+:::'''Old Goethe:''' Sure, please register at the reception.
+::{{DIcon|Arrow}} I would like to try your afternoon tea.
+:::'''Old Goethe:''' Oh, it's on the sides of the lobby. Find yourself a sofa and take a seat. I'll arrange it.
+::'''Old Goethe:''' This is where I grew up. I wouldn't say that I know all about the Administrative District. But I do know the history and goings-on around these parts fairly well.
+::'''Old Goethe:''' Just let me know if you are interested.
+;(If {{cx}}<!--not during performance 501028701-->)
+:<pre>{
+	"$type": "RPG.GameCore.PlayMultiVoiceTalk",
+	"TalkSentenceID": 501028736
+}</pre>
+::'''Old Goethe:''' It's you. You're not here for sightseeing, are you? Are you here to stay or for our afternoon tea? Or did you come here to chat with me?
+::{{DIcon|Arrow}} I would like to reserve a room.
+:::'''Old Goethe:''' Sure, please register at the reception.
+:::'''Old Goethe:''' This is where I grew up. I wouldn't say that I know all about the Administrative District. But I do know the history and goings-on around these parts fairly well.
+:::'''Old Goethe:''' Just let me know if you are interested.
+::{{DIcon|Arrow}} I would like to try your afternoon tea.
+:::'''Old Goethe:''' Oh, it's on the sides of the lobby. Find yourself a sofa and take a seat. I'll arrange it.
+:::'''Old Goethe:''' This is where I grew up. I wouldn't say that I know all about the Administrative District. But I do know the history and goings-on around these parts fairly well.
+:::'''Old Goethe:''' Just let me know if you are interested.
+::{{DIcon|Arrow}} I'd like to chat with you.
+:::'''Old Goethe:''' Sure. I'm usually quite free. I'd love to have a chat with someone.
+:::'''Old Goethe:''' What do you want to chat about?
+;(Unused &mdash; Wait_Option_5010287_21)
+:{{DIcon|Arrow}} I want to ask...
+::'''Old Goethe:''' Sure! Answering the guests' questions is a way to show your hospitality.
+::{{DIcon|Talk}} About Old Goethe and Goethe Hotel...
+:::'''Old Goethe:''' Oh, that's what you're interested in? Goethe is my family name and Goethe Hotel is my family business. Well, it all began a long, long time ago.
+:::'''Old Goethe:''' The Goethe family used to be prosperous. My ancestors invested in many industries. Unfortunately, due to poor economics, our family declined. Frustrated, my ancestors sold all of their properties and moved to the Underworld.
+:::'''Old Goethe:''' Luckily later on another ancestor from my family started empty-handed and revived our family business. Once again, Goethe Hotel was moved back to the Overworld.
+::;(Return to previous option selection)
+::{{DIcon|Talk}} Have you received any special guests?
+:::'''Old Goethe:''' Well, it depends on how you define special guest. Many guests have stayed with us. Indeed there are a lot of stories.
+:::'''Old Goethe:''' For example, a lady from a rich family escaped her wedding and jumped out of the window on the second floor in her pajamas. No one ever heard from her since...
+:::'''Old Goethe:''' There was a couple who were theater celebrities. They appeared as though they were in love but they stayed in different rooms when they were here for their honeymoon...
+:::'''Old Goethe:''' And there was a lady who would always stay in a single room when her family was at work. She was always drawing in her room. And she would cry every time she finished drawing. I wonder what she's been through...
+:::'''Old Goethe:''' It happens a lot in our industry. We always encounter weird things, especially when we've been in the industry for a long enough time.
+::;(Return to previous option selection)
+::{{DIcon|Talk}} Any recommendations on food around here?
+:::'''Old Goethe:''' Haha, I'm not trying to brag, but our afternoon tea is a specialty of Belobog.
+:::'''Old Goethe:''' There are a few desserts that only we can make. You can't eat them anywhere else in the Administrative District. Many young people visit us during holidays. Sometimes people have to line up.
+::;(Return to previous option selection)
+::{{DIcon|Talk}} Any recommendation on sightseeing around here?
+:::'''Old Goethe:''' I'd recommend the Western District, which is known for its artistic atmosphere. The Golden Theater is right there. You'll find everything from celebrities to merchandise.
+:::'''Old Goethe:''' But be careful, don't go on their premiere day. For example, shows with many fans like ''Beneath the White Cloak'' and ''Stardust Rose'' will make the area totally over-crowded...
+:::'''Old Goethe:''' It's best to drive there. If you don't have a car... Alisa Avenue is right outside the hotel. You can take a tram or walk there along the track.
+::{{DIcon|Arrow}} I don't have any other questions.
+
+;(Talk to Regin)
+:{{DIcon|Talk}} What is the subject of your research?
+::'''Regin:''' Fine, I'll show you some basics: Do you know that light is a particle?
+::{{DIcon|Arrow}} I do.
+:::'''Regin:''' Good. So you are not completely ignorant.
+::{{DIcon|Arrow}} I don't know.
+:::'''Regin:''' Hardly a surprise. I knew I had to dumb things down for you people to understand.
+::{{DIcon|Arrow}} Is that so?
+:::'''Regin:''' Of course. Now let's not get ahead of ourselves.
+::'''Regin:''' All you need to know is that light is a particle. Terms like wave theory or duality might be too complicated for you. My point is: Particles carry information. Are you with me?
+::{{DIcon|Arrow}} Go on.
+::{{DIcon|Arrow}} Really?
+:::'''Regin:''' Why would I fool you?
+::'''Regin:''' Light as a particle carries information. Building on that, if I am exposed to light, I am exposed to information. My big universe time tunnel theory holds that the universe consists of multiple interconnected entities that are running in parallel.
+::'''Regin:''' Say if in one universe I came up with ways to send messages and my "doppelganger" in another universe knew how to interpret those messages, it means, according to my theory...
+::{{DIcon|Arrow}} That you can interpret messages sent from another universe!
+:::'''Regin:''' Yes, yes, well I'm trying to explain things in layman's terms. The real mechanism behind this is far more complicated...
+::;(Return to previous option selection)
+::{{DIcon|Arrow}} That you can get research funding!
+:::'''Regin:''' Yes, yes, well I'm trying to explain things in layman's terms. The real mechanism behind this is far more complicated...
+::;(Return to previous option selection)
+:{{DIcon|Talk}} How did you come up with that stuff?
+::'''Regin:''' Let me remind you: The theory I'm proposing is called big universe time tunnel!
+::'''Regin:''' Ah yes, big universe... my life work, my child! It all started two years ago when I was struck by this wonderful idea while having a meal. I knew from the very beginning that this is going to be the biggest discovery of our time!
+::'''Regin:''' The world will be left in awe when my time tunnel is completed!
+:;(Return to previous option selection)
+:{{DIcon|Talk}} Are you really a scientist?
+::'''Regin:''' Of course I am! What kind of question is that! Those jealous old nerds and hags in Belobog's academic circle refuse to recognize me only because my revolutionary findings will make them look useless.
+::'''Regin:''' Geomarrow always rises to the top, it is just a matter of time before a talented scientist such as myself receives proper funding for my research. Alas, I have always been waiting for a patron to come along. It is painful to see my talent go unnoticed...
+::{{DIcon|Arrow}} Did you not receive academic training?
+::'''Regin:''' That just goes to show how ill-informed you are about the science community today. What can you learn from a bunch of self-righteous nerds who fight tooth and nail for money and power?
+::{{DIcon|Arrow}} So you are self-taught?
+::'''Regin:''' Find it hard to believe? One day, the world will tremble before my big universe time tunnel! You'll see.
+::'''Regin:''' And my name, Regin, will go down history as the greatest civilian scientist!
+:;(Return to previous option selection)
+:{{DIcon|Exit}} Let's call it a day.
+
+;(Talk to Rossy)
+;(If {{cx}}<!--during performance 501027001-->)
+::'''Rossy:''' *sigh* Have you read today's ''Crystal Daily''? What kind of news is that!? If the media keeps going on like this, Belobog will eventually be doomed!
+::{{DIcon|Arrow}} Are you talking to me?
+:::'''Rossy:''' Of course. Who else would I be talking to? Do I look like someone who talks to himself in the street? It's not like I'm old man Dominic.
+::{{DIcon|Arrow}} What does that have to do with me?
+:::'''Rossy:''' We share a home. It's called Belobog. How can you call yourself a citizen of Belobog if you don't even care about the news in our city?
+::'''Rossy:''' Look at the front page of the ''Crystal Daily''. The content that the newspaper puts out is just junk, tabloid-level stuff. What's going on in their heads? Can you really put this stuff on the front page? I'm about to blow a gasket here!
+::{{DIcon|Arrow}} You don't have to make it sound so extreme.
+:::'''Rossy:''' I bet you're not someone who follows the news. Anyone who is ambitious should pay attention to the world and think more, like I do. That way they can contribute to the development of Belobog!
+::{{DIcon|Arrow}} You sure seem to have plenty of time on your hands.
+:::'''Rossy:''' Hey, I'm making a reasonable suggestion, alright? Belobog is getting better because of people like me &mdash; people who keep offering their insight!
+::'''Rossy:''' Hmm, you really don't know anything. How about I give you a lecture right now!
+;(If {{cx}}<!--not during performance 501027001-->)
+:<pre>{
+	"$type": "RPG.GameCore.PlayMultiVoiceTalk",
+	"TalkSentenceID": 501027048
+}</pre>
 {{Dialogue End}}
 
 ===Tell Wallace the bad news{{subst:void|<!--301020204-->}}===
 {{Mission Description|type=daily|location=Administrative District|update|Rossy does not want to be Wallace's friend due to reasons.<br />What a piece of bad news... Go back to Wallace to explain the situation.}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Wallace)
+:'''Wallace:''' What...? Has he seen the photo? Did he say anything?
+:{{DIcon|Arrow}} He said...
+:{{Black Screen|You convey what Rossy said to Wallace...}}
+:'''Wallace:''' I see. It turns out that Rossy hates children.
+:'''Wallace:''' I thought since we are both from notable households, we would have a lot in common, but I didn't expect him to have such a nasty prejudice against my family. I don't need friends like him.
+:'''Wallace:''' But we Limesteins are not quitters. Sooner or later, I will find a "true" friend, and those who rejected me will regret it.
+:'''Wallace:''' Thank you for your help. This is the payment I promised. I hope you can still help me the next time I need your help.
 {{Dialogue End}}
 
 ==Other Languages==

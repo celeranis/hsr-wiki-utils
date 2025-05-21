@@ -11,7 +11,7 @@ PageTitle=#Sound Hunt: Culmination#
 |chapter       = Sound Hunt Ninjutsu Inscription
 |requirements  = [[Adventure Mission]] ''[[Sound Hunt: Continuation]]'' completed
 |summary       = The academy representative has disqualified you from the performance and ordered you to disband, but through Mr. Reca, you have uncovered the true reason for the guitarist's disappearance... With your collective efforts, The Dazzling manages to grace the stage and deliver a spectacular closing show.
-|characters    = ??; Academy Representatives; Band Members; Campus Broadcast; Charmony Academy Rep; Czipo; Dafanchy; Dan Heng; Defensive Spectator; Dreamweaver Academy Rep; Enraged Spectator; Fervent Spectator; Fortune Academy Rep; March 7th; Montana; Mr. Reca; Obsessed Spectator; Passionate Student; Rappa; Siobhan; Trailblazer
+|characters    = Czipo; Dafanchy; Mr. Reca; Rappa; Trailblazer
 |startLocation = [[Penacony]] - [[Penacony Paperfold University College]]
 |world         = Penacony
 |area          = Penacony Paperfold University College
@@ -22,18 +22,11 @@ PageTitle=#Sound Hunt: Culmination#
 '''''Sound Hunt: Culmination''''' is an Event [[Adventure Mission]] from the [[Sound Hunt Ninjutsu Inscription]] event.
 
 ==Steps==
-# Meet up with the band members
-# Return to the rehearsal room
 # Help Rappa collect inspiration for composing a song
-# Discuss your future plans with the band members
-# Head to the stage in the middle of the campus
-# Cheer for the band members on the stage
-# Tell Dan Heng and March 7th about what happened to the band
-# Stop the Fortune Academy representative
-# Ask the live audience for help and wait for Rappa's return
+# Return to the rehearsal room
 # Investigate the ruckus near the stage
-# Ask the live audience for their reviews of the band's performance
 # Wait for the performance to finish
+# Investigate the ruckus near the stage
 
 <!--
 ==Gameplay Notes==
@@ -44,76 +37,159 @@ PageTitle=#Sound Hunt: Culmination#
 -->
 ==Dialogue==
 {{Stub Dialogue}}
-===Meet up with the band members{{subst:void|<!--802610401-->}}===
-{{Mission Description|type=adventure|location=Penacony Paperfold University College|You've become the manager of the music party's performing band, and now your band needs to complete 3 performances on the stage in the middle of the campus.<br />Arfey's absence has a serious impact on the performance. Discuss the current situation with your band members.}}
+===Help Rappa collect inspiration for composing a song{{subst:void|<!--802610422-->}}===
+{{Mission Description|type=adventure|location=Penacony Paperfold University College|You've become the manager of the music party's performing band, and now your band needs to complete 3 performances on the stage in the middle of the campus.<br />The academy rep kicks the band out of the practice room and declares they want to cancel your eligibility to perform. You decided to forcibly perform on the closing ceremony stage in order to fight against the academy, and you still need to prioritize collecting enough inspiration to help Rappa with composing.}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Montana)
+
+
+;(Unused &mdash; OpenUI_MusicRhythm)
+<pre>{
+	"$type": "RPG.GameCore.ShowTransitionLoadingUI",
+	"Name": "Ui.MusicRhythm.MusicRhythmTransitionDialog"
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.ShowUI",
+	"Name": "Ui.MusicRhythm.MusicRhythmMainEntrancePage",
+	"WaitForExit": true,
+	"OnUIEnter": [
+		{
+			"$type": "RPG.GameCore.ExitTransitionLoadingUI"
+		},
+		{
+			"$type": "RPG.GameCore.SetLocalPlayerDitherAlpha"
+		},
+		{
+			"$type": "RPG.GameCore.LockPlayerControl"
+		}
+	],
+	"OnUIExitImmediately": [
+		{
+			"$type": "RPG.GameCore.SetLocalPlayerDitherAlpha",
+			"DitherAlpha": 1
+		},
+		{
+			"$type": "RPG.GameCore.UnLockPlayerControl"
+		}
+	]
+}</pre>
+
+;(Unused &mdash; OpenUI_1)
+<pre>{
+	"$type": "RPG.GameCore.ShowUI",
+	"Name": "Ui.MusicRhythm.Composition.MusicRhythmCompositionPresetPage",
+	"WaitForExit": true,
+	"Param": {
+		"Value": "1"
+	},
+	"OnUIExitImmediately": [
+		{
+			"$type": "RPG.GameCore.EndDialogueEntityInteract"
+		}
+	]
+}</pre>
+
+;(Unused &mdash; OpenUI_2)
+<pre>{
+	"$type": "RPG.GameCore.ShowUI",
+	"Name": "Ui.MusicRhythm.Composition.MusicRhythmCompositionPresetPage",
+	"WaitForExit": true,
+	"Param": {
+		"Value": "2"
+	},
+	"OnUIExitImmediately": [
+		{
+			"$type": "RPG.GameCore.EndDialogueEntityInteract"
+		}
+	]
+}</pre>
+
+;(Unused &mdash; OpenUI_3)
+<pre>{
+	"$type": "RPG.GameCore.ShowUI",
+	"Name": "Ui.MusicRhythm.Composition.MusicRhythmCompositionPresetPage",
+	"WaitForExit": true,
+	"Param": {
+		"Value": "3"
+	},
+	"OnUIExitImmediately": [
+		{
+			"$type": "RPG.GameCore.EndDialogueEntityInteract"
+		}
+	]
+}</pre>
 {{Dialogue End}}
 
-===Return to the rehearsal room{{subst:void|<!--802610402-->}}===
+===Return to the rehearsal room{{subst:void|<!--802610403-->}}===
 {{Mission Description|type=adventure|location=Penacony Paperfold University College|update|You've become the manager of the music party's performing band, and now your band needs to complete 3 performances on the stage in the middle of the campus.<br />Return to the practice room and discuss your future plans further.}}
 {{Dialogue Start}}
-:{{tx}}
-{{Dialogue End}}
 
-===Help Rappa collect inspiration for composing a song{{subst:void|<!--802610422-->}}===
-{{Mission Description|type=adventure|location=Penacony Paperfold University College|update|You've become the manager of the music party's performing band, and now your band needs to complete 3 performances on the stage in the middle of the campus.<br />The academy rep kicks the band out of the practice room and declares they want to cancel your eligibility to perform. You decided to forcibly perform on the closing ceremony stage in order to fight against the academy, and you still need to prioritize collecting enough inspiration to help Rappa with composing.}}
-{{Dialogue Start}}
-:{{tx}}
-{{Dialogue End}}
+;(Unused &mdash; 111)
+:'''(Trailblazer):''' (The closing show is about to start. Time is definitely running short.)
+::'''(Trailblazer):''' (Huh? That person standing beside Rappa... Isn't that Mr. Reca?)
 
-===Discuss your future plans with the band members{{subst:void|<!--802610404-->}}===
-{{Mission Description|type=adventure|location=Penacony Paperfold University College|update|You've become the manager of the music party's performing band, and now your band needs to complete 3 performances on the stage in the middle of the campus.<br />Meet up with the band members, discuss what you have so far, and figure out what to do from here.}}
-{{Dialogue Start}}
-:{{tx}}
-{{Dialogue End}}
-
-===Head to the stage in the middle of the campus{{subst:void|<!--802610406-->}}===
-{{Mission Description|type=adventure|location=Penacony Paperfold University College|update|You've become the manager of the music party's performing band, and now your band needs to complete 3 performances on the stage in the middle of the campus.<br />Rappa plans to go save Arfey, who is currently detained somewhere. Meanwhile, the closing performance is about to begin. You and the other two members need to buy her more time.}}
-{{Dialogue Start}}
-:{{tx}}
-{{Dialogue End}}
-
-===Cheer for the band members on the stage{{subst:void|<!--802610407-->}}===
-{{Mission Description|type=adventure|location=Penacony Paperfold University College|update|You've become the manager of the music party's performing band, and now your band needs to complete 3 performances on the stage in the middle of the campus.<br />Czipo and Dafanchy are forced to take to the stage to buy some time... Go and see how they are doing.}}
-{{Dialogue Start}}
-:{{tx}}
-{{Dialogue End}}
-
-===Tell Dan Heng and March 7th about what happened to the band{{subst:void|<!--802610408-->}}===
-{{Mission Description|type=adventure|location=Penacony Paperfold University College|update|You've become the manager of the music party's performing band, and now your band needs to complete 3 performances on the stage in the middle of the campus.<br />Rappa still hasn't gotten back. In the crowd, you discover Dan Heng and March 7th. Ask them whether they have any ideas.}}
-{{Dialogue Start}}
-:{{tx}}
-{{Dialogue End}}
-
-===Stop the Fortune Academy representative{{subst:void|<!--802610409-->}}===
-{{Mission Description|type=adventure|location=Penacony Paperfold University College|update|You've become the manager of the music party's performing band, and now your band needs to complete 3 performances on the stage in the middle of the campus.<br />The Fortune Academy representative discovered how you've secretly started performing and plans to kick the band off the stage. Go stop him!}}
-{{Dialogue Start}}
-:{{tx}}
-{{Dialogue End}}
-
-===Ask the live audience for help and wait for Rappa's return{{subst:void|<!--802610410-->}}===
-{{Mission Description|type=adventure|location=Penacony Paperfold University College|update|You've become the manager of the music party's performing band, and now your band needs to complete 3 performances on the stage in the middle of the campus.<br />You and the Fortune Academy representative made a wager: If the band cannot start their performance before he reaches the stage, then all members will be expelled. As you wait for Rappa to turn, chat with the audience. Perhaps... things might take a turn for the better.}}
-{{Dialogue Start}}
-:{{tx}}
+;(Unused &mdash; EnterDistrict_G179)
+:'''Mr. Reca:''' Mm... there's enough of your behind-the-scenes footage to be edited into a whole new film. It's a real pity I wasn't able to follow you guys to film.
+::'''Mr. Reca:''' Let me guess... Your plot is near approaching its climax, but you've suddenly run into a few speed bumps?
+::'''Mr. Reca:''' Such a plot structure is so yesterday's news. I wouldn't mind giving a little nudge if you need it and see if I can help you all breathe new life into this uninspiring script.
+::'''Rappa:''' Thank you, Ninja Gama, for your help... An initiate of our sound ninja school has gone missing. We're trying to find her whereabouts.
+::'''Mr. Reca:''' A missing cast member... I don't know who you're looking for, but I've noticed a strange set that popped up in the academy &mdash; or rather, a miniature dreamscape.
+::'''Mr. Reca:''' The method to unlock the entrance is recorded in this memory bubble. However, the exact structure of this dreamscape is unknown, as is its origin. It could even have been left behind by one of Dr. Primitive's people.
+::{{DIcon|Arrow}} Even so, we have to go!
+::{{DIcon|Arrow}} For (Dazzling Band/Dazzling Collective/Dazzling Airship/Dazzling Initiate Hotel/Dazzling School Party)!
+::{{DIcon|Arrow}} Worst case, we'll just be turned into monkeys!
+::'''Mr. Reca:''' Heh-heh, let me be a spectator this time. I hope you all can weave an exciting tale.
+::{{tx}}
+:----
+::'''Dafanchy:''' Head Ninja Rappa!
+::'''Czipo:''' I've heard some news about the new band. They were also assembled on short notice and are still scrambling to prepare for their performance.
+::'''Czipo:''' If the negotiation goes well, there's a high chance that they'll give us the opportunity to perform!
+::'''Dafanchy:''' Dreamweaver Academy won't interfere with our actions, but what's more troubling are... those two representatives of the academy.
+::'''Rappa:''' Thank you, everyone, for all your help! Now that Sound Master has returned, and our time on stage is about to end, the Dazzling Ninja must split into groups and beat our rivals in the contest.
+::'''Rappa:''' ...Ninja Initiate Keyboard, Ninja Initiate Bass &mdash; will you keep studying Sound Ninjutsu, and organize full preparations for subsequent contests?
+::'''Czipo:''' No problem! If we can't find a place to practice, you can all use my house's basement &mdash; it's all top-notch equipment!
+::'''Dafanchy:''' Yes, if there's not enough time for composition, I can help out too.
+::'''Rappa:''' Also, now that we've learned Ninja Initiate Guitar has been imprisoned by scoundrels, I cannot stand idle as Head Ninja.
+::'''Rappa:''' No one member of the Dazzling Ninja will be left behind. I will set off now &mdash; I swear to rescue Ninja Initiate Guitar from the clutches of evil, and return to partake in the final stage!
+::{{DIcon|Arrow}} Will you be able to make it back in time?
+::{{DIcon|Arrow}} What about my task?
+::'''Rappa:''' The path of dreams is meandering. I know not when I shall return on my journey, but this ninja hero shall forge forth undaunted, unwavering &mdash; if for nothing more than the fact that my companion has been entrapped in danger. If I do not return...
+::{{tx}}
 {{Dialogue End}}
 
 ===Investigate the ruckus near the stage{{subst:void|<!--802610414-->}}===
 {{Mission Description|type=adventure|location=Penacony Paperfold University College|update|You've become the manager of the music party's performing band, and now your band needs to complete 3 performances on the stage in the middle of the campus.<br />A ruckus suddenly starts near the stage. Go check it out.}}
 {{Dialogue Start}}
-:{{tx}}
-{{Dialogue End}}
 
-===Ask the live audience for their reviews of the band's performance{{subst:void|<!--802610417-->}}===
-{{Mission Description|type=adventure|location=Penacony Paperfold University College|update|You've become the manager of the music party's performing band, and now your band needs to complete 3 performances on the stage in the middle of the campus.<br />Rappa arrives in the nick of time! The closing act has begun! Per convention, go ask the live audience what they think about your band.}}
-{{Dialogue Start}}
-:{{tx}}
+;(Talk to Montana)
+<pre>{
+	"$type": "RPG.GameCore.PerformanceEndSeq",
+	"Cases": [
+		{
+			"Case": 1,
+			"OnSuccess": [
+				{
+					"$type": "RPG.GameCore.TriggerGroupEventOnDialogEnd",
+					"EventName": {
+						"Value": "OpenUI_3"
+					}
+				}
+			]
+		}
+	]
+}</pre>
 {{Dialogue End}}
 
 ===Wait for the performance to finish{{subst:void|<!--802610423-->}}===
 {{Mission Description|type=adventure|location=Penacony Paperfold University College|update|You've become the manager of the music party's performing band, and now your band needs to complete 3 performances on the stage in the middle of the campus.<br />The band's performance received high accolades, and your job is finally about to end...}}
 {{Dialogue Start}}
-:{{tx}}
+
+{{Dialogue End}}
+
+===Investigate the ruckus near the stage{{subst:void|<!--802610416-->}}===
+{{Mission Description|type=adventure|location=Penacony Paperfold University College|update|You've become the manager of the music party's performing band, and now your band needs to complete 3 performances on the stage in the middle of the campus.<br />A ruckus suddenly starts near the stage. Go check it out.}}
+{{Dialogue Start}}
 {{Dialogue End}}
 
 ==Other Languages==

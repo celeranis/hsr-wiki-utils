@@ -36,7 +36,20 @@ PageTitle=#Exhibition Match, Hook!#
 ===Have a duel with Hook{{subst:void|<!--801414901-->}}===
 {{Mission Description|type=adventure|location=Old Weapon Testing Ground|The core gameplay loop behind Aetherium Wars is "dueling." Challenge different players and show your true strength!}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Hook)
+:'''Hook:''' Honorary member... Though I am happy to see you return, Hook will not accept defeat by you!
+:'''Hook:''' Bring it on, let's battle! Don't expect any mercy from Hook this time!
+<pre>{
+	"$type": "RPG.GameCore.ShowUI",
+	"Name": "Ui.AetherDivide.AetherChallenge.AetherChallengePage",
+	"WaitForExit": true,
+	"Param": {
+		"Value": "209"
+	},
+	"OnUIEnter": []
+}</pre>
+:'''Hook:''' Gah... Hook still went easy on you to not embarrass the Champion in front of all these people... Well, aren't you going to thank Hook!? Don't expect the same mercy next time!
 {{Dialogue End}}
 
 ==Other Languages==

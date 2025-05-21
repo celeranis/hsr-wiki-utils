@@ -63,161 +63,1803 @@ PageTitle=#Poetic Genius Ingenium#
 ===Speak with Guangda{{subst:void|<!--202090101-->}}===
 {{Mission Description|type=adventure|location=Exalting Sanctum|The duties of the Realm-Keeping Commission's orderlies are like bricks, to be moved wherever they are needed. The work of Guangda is not an easy one, and now he is worrying in front of the Realm-Keeping Commission chancery...<br />Out of goodwill, you can ask him if he needs help, but whether you will help is a different matter...}}
 {{Dialogue Start}}
-:{{tx}}
+
+
+;(Talk to Guangda)
+;(If {{cx}}<!--during performance 502025101-->)
+::'''Guangda:''' Ah, two centuries passed, and then two centuries more... If I don't get my promotion, I'll undergo my hatching rebirth soon...
+::{{DIcon|Arrow}} Promotion?
+:::'''Guangda:''' Yeah. In one of our lifetimes, Vidyadhara have to serve as officers or clerks so we get a taste of what it's like to be a public servant, right?
+::{{DIcon|Arrow}} That's a real shame.
+:::'''Guangda:''' Sure is. Unfortunately, we're the only ones who think it's a real shame. If only management felt the same way.
+::{{DIcon|Arrow}} In your next life, go all out.
+:::'''Guangda:''' Haha, I'm afraid that I'll be a lowly orderly in my next life. I've started to wonder how exactly things ended up during my previous life.
+::'''Guangda:''' Hey, that's enough for now. Let's not linger on such a morose topic.
+::'''Guangda:''' I'm Guangda, a lowly orderly from the Realm-Keeping Commission. If you have any issues to handle, I suggest you visit our Chancery offices...
+;(If {{cx}}<!--not during performance 502025101-->)
+:<pre>{
+	"$type": "RPG.GameCore.PlayMultiVoiceTalk",
+	"TalkSentenceID": 502025145
+}</pre>
+
+;(Obtain {{Item|Lost and Found Notice|20|x=1}})
 {{Dialogue End}}
 
 ===Take a stroll in the Exalting Sanctum and take down the small advertisements{{subst:void|<!--202090138-->}}===
 {{Mission Description|type=adventure|location=Exalting Sanctum|update|The duties of the Realm-Keeping Commission often involve trivial things, and taking down small advertisements will not be the last of them. Since you accepted Guangda's milk tea, help him out with this task.<br />Sometimes, even an outworlder like you can't help but wonder, is the Realm-Keeping Commission really a commission?}}
 {{Dialogue Start}}
-:{{tx}}
 {{Dialogue End}}
 
 ===Follow the lost and found notice and find the owner, Cong{{subst:void|<!--202090102-->}}===
 {{Mission Description|type=adventure|location=Exalting Sanctum|update|According to the lost-and-found notice, the owner is "Cong, craftsman of the Artisanship Commission." Maybe you should ask him what happened.<br />The words "Big Reward" is written on the lost-and-found notice. For one who is brimming with the spirit of exploration such as yourself, you have to see what this big reward is, right?<br />Of course, the most important thing is that you have a willing heart to help others.}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Lose {{Item|Lost and Found Notice|20|x=1}})
+
+;(Talk to Ruoyue)
+;(If {{cx}}<!--during performance 502013101-->)
+::'''Ruoyue:''' Ah, an esteemed customer visiting Xianzhou from afar. Are you here for a divination today?
+::'''Ruoyue:''' Since it's your first time here, allow me to introduce myself. I am the genius diviner, formerly of the Divination Commission, now a humble shopkeeper of the Looking Bronze. My name is Ruoyue.
+::'''Ruoyue:''' Whether you're seeking fortune or safety, or simply wish to check your horoscope, to find love, or even to request a name for a child, I am humbly at your service.
+::{{DIcon|Arrow}} I wish to name myself.
+:::'''Ruoyue:''' Oh, seeking a name for yourself? That is a rare request indeed.
+:::'''Ruoyue:''' Looking at you, and with a pinch of my fingers, and I've got the perfect name for you.
+:::'''Ruoyue:''' How about "Noob"?
+:::{{DIcon|Arrow}} That's worse than (Trailblazer).
+::::'''Ruoyue:''' That sounds just fine. Your name is fine as it is. I see no need to change it.
+:::{{DIcon|Arrow}} That IS my name.
+::::'''Ruoyue:''' I wouldn't have known that one with such elegant flair as yours would have such a resounding name.
+::::'''Ruoyue:''' You may not be aware, but a name is the shortest form of a spell. If you're ever in peril, just yell out your name "Noob," and it will surely be useful to you.
+:::{{DIcon|Arrow}} You don't think your naming lacks a little sophistication?
+::::'''Ruoyue:''' Noob Noob, never want for gulp or slurp. Noob Noob, Luofu's friend, always a perk.
+::::'''Ruoyue:''' If you don't like that, how about a fee to unlock "Sophisticated Names" and "Seriously Sophisticated Names"... I have services for all needs.
+::{{DIcon|Arrow}} I wish to know my fortune.
+:::'''Ruoyue:''' You've come to the right person. This is our shop special, the "Fortune for Today." The first try's free. Let me see...
+:::'''Ruoyue:''' Oh dear, this scene paints the destruction of the Xianzhou Cangcheng: "Fighting fire with woods will only fuel the flames." Your recent affairs haven't been going your way, so instead of remedying them, you should leave them be.
+:::'''Ruoyue:''' We provide fortune-changing services, like the "Evil Begone" bundle for 199, "See No Evil" bundle for 299, and the "Only Good Things From Here On Out" bundle for 599. All great value! What do you think?
+:::{{DIcon|Arrow}} It feels like you didn't really think those bundles' names through.
+::::'''Ruoyue:''' Those names are of no importance. The prices speak for themselves!
+::::'''Ruoyue:''' Names are just superficial packaging. They can change anytime.
+:::{{DIcon|Arrow}} Did you make me pick a dire fortune on purpose?
+::::'''Ruoyue:''' Oh, you hurt me with your words. If you don't believe me, let's try another one. Look, it's still the same: "Like birds into nets, when will reunion be, one frets".
+:::{{DIcon|Arrow}} I can change my luck just like that?
+::::'''Ruoyue:''' Your luck isn't something set in stone. If everything was already pre-determined, where would one's freedom be?
+::'''Ruoyue:''' You are our lucky 100th customer for the day, so I'll give you an "Evil Begone" bundle as a favor. This is your "lucky trinket" for today. Don't lose it now.
+::'''Ruoyue:''' Do you have anything else you need help with?
+;(If {{cx}}<!--not during performance 502013101-->)
+:<pre>{
+	"$type": "RPG.GameCore.PlayMultiVoiceTalk",
+	"TalkSentenceID": 502013151
+}</pre>
+::'''Ruoyue:''' Well, that was boring. It's much more interesting to talk to you. Are you here to determine your luck, or just to chat?
+::'''Ruoyue:''' Whether you're seeking fortune or safety, or simply wish to check your horoscope, to find love, or even to request a name for a child, I am humbly at your service.
+
+;(Talk to Shumiao)
+;(If {{cx}}<!--during performance 502021101-->)
+::{{A|VO vo ambient w2 greeting shumiao 101.ogg}} {{A|VO vo ambient w2 greeting shumiao 102.ogg}} '''Shumiao:''' Martial arts and fitness! Come learn all about it!
+::'''Shumiao:''' {{MC|f=Miss|m=Mister}}, wanna learn about martial arts and fitness? Come take a look at our flyer, and I'll fill you in on all the details.
+::{{DIcon|Arrow}} No thanks, please keep it for someone else.
+:::'''Shumiao:''' No worries, it's free anyway. I promise I'll make this really quick!
+::{{DIcon|Arrow}} Alright, I'll keep this and you tell me about it.
+:::'''Shumiao:''' Awesome! I knew you'd be keen! I promise I'll make this really quick!
+::'''Shumiao:''' I'm the coach at Exalting Sanctum's Tiger Boxing Gym, Shumiao. We're a custom boxing gym set up for Outworlders, and our coaches are the best on the Luofu with rich experience in immortality training. All our boxers are living out long lives and achieving incredible results.
+::'''Shumiao:''' Our boss always says that he didn't open this gym to make money, but rather to let more interstellar travelers access the hyper-immortality way of life found aboard the Xianzhou Alliance.
+::'''Shumiao:''' There's never been a better time to sign up as a member. Just sign up for ten years, and get another five years for free. That's a crazy deal! How about I help you register with us right now?
+;(If {{cx}}<!--not during performance 502021101-->)
+:<pre>{
+	"$type": "RPG.GameCore.PlayMultiVoiceTalk",
+	"TalkSentenceID": 502021101
+}</pre>
+::'''Shumiao:''' Ah, there you are! Are you ready to sign up for a membership yet?
+
+;(Talk to Xingxue)
+;(If {{cx}}<!--during performance 502022101-->)
+::'''Xingxue:''' Why didn't he come by today?
+::'''Xingxue:''' Unless... he's been transferred to another jurisdiction?
+::{{DIcon|Arrow}} Who are you waiting for?
+:::'''Xingxue:''' An orderly from the Realm-Keeping Commission. We never should've even met, but for an ill-fated moment that brought us together.
+:::'''Xingxue:''' ...But don't get the wrong idea. We don't have anything strange going on between us.
+::{{DIcon|Arrow}} Surely there's plenty more fish in the sea...
+:::'''Xingxue:''' Why carry the torch...
+:::'''Xingxue:''' Bah, what an absolute mess! There's nothing strange going on between that orderly and me, so don't get the wrong idea.
+::'''Xingxue:''' It's just... I haven't had a chance to see him for a long time, and I can't help but feel a little bit lonely. Without him, my career, my entire future feels... empty.
+::'''Xingxue:''' If things keep on like this, what's the point of me showing up to work again? But then again, if I don't show up, I'll be cut off from him entirely and I'm afraid I'll never get the chance to see him again...
+::'''Xingxue:''' Ah! I'm so anxious...
+;(If {{cx}}<!--not during performance 502022101-->)
+:<pre>{
+	"$type": "RPG.GameCore.PlayMultiVoiceTalk",
+	"TalkSentenceID": 502022144
+}</pre>
+::'''Xingxue:''' I'm at my wit's end here!
+
+;(Talk to Yancui)
+;(If {{cx}}<!--during performance 502014101-->)
+::'''Yancui:''' Hello, guest. Sorry to bother you, but I noticed from your attire that you are an Outworld traveler. Do you have any unique ingredients or recipes that you can tell me about?
+::{{DIcon|Arrow}} I don't do my own cooking.
+:::'''Yancui:''' I see. Sorry for bothering you then.
+::{{DIcon|Arrow}} It's all home-cooked fare. Nothing special.
+:::'''Yancui:''' Is that so? I guess I'm the one asking a strange question.
+::{{DIcon|Arrow}} Have you heard of interstellar locusts?
+:::'''Yancui:''' I've eaten them before... They didn't taste great though. Thanks anyways.
+::'''Yancui:''' Ah, I forgot to introduce myself... I am Yancui, head chef and owner of Spices Supreme. The restaurant's not busy right now, so I'm taking a break here in Exalting Sanctum, but couldn't take my mind off developing new dishes.
+::'''Yancui:''' Spices Supreme isn't far from here. Please visit us if you're interested. Our motto is to "cook for the people." We guarantee our food is inexpensive and tasty!
+::'''Yancui:''' Ah, I've chatted so much with you. Here's something for you to have a taste test. You must come to Spices Supreme to try our dishes if you get a chance! It'll be an experience you'll never forget!
+;(If {{cx}}<!--not during performance 502014101-->)
+:<pre>{
+	"$type": "RPG.GameCore.PlayMultiVoiceTalk",
+	"TalkSentenceID": 502014155
+}</pre>
+::'''Yancui:''' Hmm? You want to discuss food for a little longer? I love to chat about cuisine with people.
+
+;(Talk to Lianyan)
+;(If {{cx}}<!--during performance 502015101-->)
+::'''Lianyan:''' Toys, doorbells, flexible displays!~ Shelves, refrigerators, extractor fans!~ Starskiffs, jade abaci, massage chairs!~ Second hand, or broken, I buy them all!
+::{{DIcon|Arrow}} What song are you singing?
+:::'''Lianyan:''' ...Singing? Oh... I'm not singing. I'm hawking for business!
+::{{DIcon|Arrow}} (Clapping in rhythm)
+:::'''Lianyan:''' Toys, doorbells... Wait, don't just clap along. I'm hawking for business. If you clap like that, people will think it's a street show.
+::'''Lianyan:''' Oh yeah, by the way &mdash; I'm Lianyan, manager at the Oldies Depot. And when I say manager, I mean I'm the only person there. It's just me and my small business.
+::'''Lianyan:''' The Oldies Depot mainly buys and sells second-hand appliances, fixes up old stuff, and buys antiques. But Xianzhou people live so long that they have no interest in anything old, let alone bothering to fix anything...
+::{{DIcon|Arrow}} So you buy trashed items?
+:::'''Lianyan:''' ...It's just a title. Call it whatever you want.
+::{{DIcon|Arrow}} Do the Xianzhou people only like new things?
+:::'''Lianyan:''' Not quite... But most of the regulars here are Outworlders. Sometimes we'll get a Xianzhou shopper selling some junk to make a little pocket money, but never anyone buying second-hand goods or repairing things.
+::'''Lianyan:''' You don't seem to have anything old there that needs fixing. Don't tell me you've come for a chat?
+;(If {{cx}}<!--not during performance 502015101-->)
+:<pre>{
+	"$type": "RPG.GameCore.PlayMultiVoiceTalk",
+	"TalkSentenceID": 502015136
+}</pre>
+::'''Lianyan:''' Oh hey, you're back. Got something for me to fix? Or just a casual catch-up?
+
+;(Talk to Yinshu)
+;(If {{cx}}<!--during performance 502016101-->)
+::'''Yinshu:''' ...This is a bookstore. If you want to read or pick out a book, just go in and browse around. Call me when you want to pay.
+::{{DIcon|Arrow}} Got anything you can recommend?
+:::'''Yinshu:''' I don't really read that much, so I can't really recommend anything... Well, the front of the shop is where we keep our bestsellers. There's gotta be a reason why they're bestsellers. Why not start there?
+:::'''Yinshu:''' "Views of the Universe from a Starskiff" is a record of wondrous exoplanets by a foxian explorer... Oh, you're from an exoplanet anyways. In that case, hang on and let me think...
+:::'''Yinshu:''' How about this one here, "Otherworldly Delights"? It's a collection of short supernatural stories written by the boss here.
+::{{DIcon|Arrow}} Boss, you could be a little more enthusiastic.
+:::'''Yinshu:''' ...Bookstores are for selling books. Besides, I'm not the boss here. I just help with running a few chores. I'm not in charge of sales here.
+:::'''Yinshu:''' But then again, the boss here doesn't really give a darn about business at all. Here... This is a collection of short supernatural stories he's written, called "Otherworldly Delights."
+::'''Yinshu:''' I'm a relative of the owner. He likes listening to other people's conversations, saying that it's good inspiration as an author.
+::'''Yinshu:''' You may have seen him over in Starskiff Haven. He does storytelling in some teahouse called Sleepless Earl or other, calling himself something like "Mr. Xiyan."
+::{{DIcon|Arrow}} I may have met him in Starskiff Haven.
+:::'''Yinshu:''' He likes getting attention. I'd be truly surprised if you haven't seen him.
+::{{DIcon|Arrow}} Why are there storytellers aboard Xianzhou?
+:::'''Yinshu:''' Have you seen storytellers on other planets? When you put it like that... I can tell you've probably already seen it before.
+:::'''Yinshu:''' All I know is, storytelling is a traditional form of performative art. I don't know much else. But perhaps the boss is using his gig as a storyteller to hang out at the teahouse and hear all kinds of supernatural and weird tales.
+::'''Yinshu:''' How I wish he could pay a little more attention to his bookstore business... Ah well. Have you got any books there that you'd like to buy?
+;(If {{cx}}<!--not during performance 502016101-->)
+:<pre>{
+	"$type": "RPG.GameCore.PlayMultiVoiceTalk",
+	"TalkSentenceID": 502016137
+}</pre>
+::'''Yinshu:''' If you don't have a jade abacus or if you just like the feeling of a book in your hands, just grab one off the shelf. Scroll rolls, bound bamboo strips, printed and bound paper books &mdash; we've got all the formats. Anyway, just come see me if you'd like to buy a book.
+
+;(Talk to Fulie)
+;(If {{cx}}<!--during performance 502023101-->)
+::'''Fulie:''' Looking at the rags you're wearing, I can tell you're not a Xianzhou native.
+::'''Fulie:''' I get it. You must be an Outworlder! Are you in any trouble? Just tell me, and I'll help you get things sorted!
+::{{DIcon|Arrow}} How can you help me?
+:::'''Fulie:''' I dunno. It depends on the situation. If I really can't be of any help, then I'll take you to the Realm-Keeping Commission Chancery &mdash; this is their specialty.
+:::'''Fulie:''' And this way, you'll be helping me clock some hours, so don't worry about it.
+::{{DIcon|Arrow}} Is this how you talk to people you've just met for the first time?
+:::'''Fulie:''' Is something wrong? This is how I speak at home, and I've never gotten a reaction like yours.
+:::'''Fulie:''' Eh, you're just helping me clock some hours for my job, never mind then.
+::{{DIcon|Arrow}} What job hours are those?
+:::'''Fulie:''' Oh, you don't know even this? You really are an Outworlder!
+:::'''Fulie:''' Here on Xianzhou, we have to take a series of examinations in order to qualify for our rite of passage. The community service program that I'm volunteering for is a part of this examination &mdash; and if I don't clock enough effective on-the-job hours, I won't be considered an adult.
+::{{DIcon|Arrow}} That sounds offensive.
+:::'''Fulie:''' You're offended because of an offhand comment? I have my own worries, can't you put yourself in my shoes?
+:::'''Fulie:''' Here on Xianzhou, we have to take a series of examinations in order to qualify for our rite of passage. The community service program that I'm volunteering for is a part of this examination.
+:::'''Fulie:''' If I don't clock enough effective on-the-job hours, then I won't be considered an adult. Do you get it?
+::{{DIcon|Arrow}} I can't deal with your attitude...
+:::'''Fulie:''' You're the one with the attitude! You won't even help me out with a favor!
+:::'''Fulie:''' Here on Xianzhou, we have to take a series of examinations in order to qualify for our rite of passage. The community service program that I'm volunteering for is a part of this examination.
+:::'''Fulie:''' If I don't clock enough effective on-the-job hours, then I won't be considered an adult. Do you get it?
+::'''Fulie:''' Alright, fine, I gotta stop wasting time. I still have an examination to pass. If you're not gonna help me, then get out of my way.
+;(If {{cx}}<!--not during performance 502023101-->)
+:<pre>{
+	"$type": "RPG.GameCore.PlayMultiVoiceTalk",
+	"TalkSentenceID": 502023156
+}</pre>
+
+;(Talk to Jing Fang)
+;(If {{cx}}<!--during performance 502026101-->)
+::'''Jing Fang:''' Tsk-tsk... Tsk, tsk, tsk... This young {{MC|f=lass|m=lad}} is dressed to the nines and looking fantastic!
+::'''Jing Fang:''' Ahem, sorry! I haven't even introduced myself yet. My name's Jing Fang, and I'm the younger brother of General Jing Yuan from the Luofu. I don't really get up to much, but I love making acquaintance with elites like yourself!
+::'''Jing Fang:''' I can see you have exceptional attitude there, young {{MC|f=lass|m=lad}}. I can see you're the kind of person who helps the needy &mdash; just like me! I never thought I'd meet such an honorable soul here in the Exalting Sanctum. This is simply a gift from the gods!
+::'''Jing Fang:''' Chance encounters are far better than planned ones &mdash; I, Jing Fang, would like to invite you, my {{MC|f=lass|m=lad}}, to the Sleepless Earl over on Starwatcher Avenue. I'll even cover twenty percent of the bill... no, how about I chip in thirty percent of the bill? That should be good faith enough, right?
+::{{DIcon|Arrow}} Is this how Xianzhou people try to flirt?
+:::'''Jing Fang:''' Oh, I'm not "flirting." This is just making friends between like-minded people!
+::{{DIcon|Arrow}} If you want to leech off others, just say so...
+:::'''Jing Fang:''' Oh, what a mean thing to say! If I was trying to leech off of you, would I offer to chip in 30%? No way!
+::{{DIcon|Arrow}} The Sleepless Earl is quite far away from here...
+:::'''Jing Fang:''' Ah, who cares about that!? We could just hire a taximeter starskiff. I've already given you so many praises, what's a little taximeter starskiff fare to you?
+::'''Jing Fang:''' Haha, I get it. A young {{MC|f=lass|m=lad}} should be wary of a stranger like me &mdash; but I'm the dear brother of a famed general, so there's no way I could ever trick you. If you don't believe me, ask around the Exalting Sanctum about me. Everyone knows the name Jing Fang around these parts.
+::{{DIcon|Arrow}} Jing Yuan never mentioned any brothers to me...
+:::'''Jing Fang:''' Haha, that just means Jing Yuan doesn't realize how famous his dear brother is...
+:::'''Jing Fang:''' ...Jing Yuan... Jing Yuan!?
+::{{DIcon|Arrow}} Then I'll go ask the Seat of Divine Foresight then.
+:::'''Jing Fang:''' Haha, sure. a simple Seat of Divine Foresight may not have heard of my mighty reputation...
+:::'''Jing Fang:''' ...Seat of Divine Foresight... Seat of Divine Foresight!?
+::'''Jing Fang:''' Y&mdash;You... You're not the one who's been running around with the Cloud Knights, locking up crooks... right?
+::'''Jing Fang:''' P&mdash;Pardon me! I'm the one who didn't realize how famous YOU are! All that stuff I was saying about generals and brothers... I've been feeling dizzy and was just spouting nonsense. Please {{MC|f=ma'am|m=sir}}, have mercy on my soul!
+;(If {{cx}}<!--not during performance 502026101-->)
+:<pre>{
+	"$type": "RPG.GameCore.PlayMultiVoiceTalk",
+	"TalkSentenceID": 502026147
+}</pre>
+::'''Jing Fang:''' What brings you here today?
+
+;(Talk to Kang Tu)
+;(If {{cx}}<!--during performance 502024101-->)
+::'''Kang Tu:''' ...Tsk, just seeing you makes my head ache.
+::{{DIcon|Arrow}} What's that supposed to mean?
+::{{DIcon|Arrow}} I'm the one who's having a headache.
+::'''Kang Tu:''' Sorry, don't blame me for being so blunt. I'm a healer and your symptoms are clear as day. My initial diagnosis is that your time is quickly running out.
+::'''Kang Tu:''' This isn't the hubris of yet another long-life species, but even by short-life species standards, you've already got one foot in the grave.
+::{{DIcon|Arrow}} C'mon, don't freak me out like that!
+:::'''Kang Tu:''' I didn't want to scare you. I'm just trying to give you a warning. There's an old adage around here, "Good medicine tastes bitter." I hope you take what I said to heart.
+::{{DIcon|Arrow}} Is it really that serious?
+:::'''Kang Tu:''' It really is that serious! You should trust me.
+::'''Kang Tu:''' However, I've also got some good news to tell you &mdash; you're lucky to have met me, because it's not too late! You can still have a long life: One hundred, two hundred &mdash; even a thousand years! There is hope for you!
+::'''Kang Tu:''' You just have to make a purchase of longevity supplements from NutriTreasures, and you can live forever just like us Xianzhou people... Everyone who uses this loves it. What do you say? Want to learn more?
+;(If {{cx}}<!--not during performance 502024101-->)
+:<pre>{
+	"$type": "RPG.GameCore.PlayMultiVoiceTalk",
+	"TalkSentenceID": 502024134
+}</pre>
+
+;(Talk to Cong)
+;(If {{cx}}<!--during performance 502017101-->)
+::'''Cong:''' Like willow leaves moving at a speed of knots, super duper love you lots.
+::'''Cong:''' Autumn winds and moon rises on buildings glow, love can also move as slow.
+::'''Cong:''' ...Writing poetry is so easy. Why doesn't she like me? What am I missing?
+::{{DIcon|Arrow}} I wouldn't like you either.
+:::'''Cong:''' It's pure emotion. Can't you hear that? I feel like I'm on equal grounds with the seven sacred poets of Xianzhou.
+::{{DIcon|Arrow}} This poem of yours is terrible...
+:::'''Cong:''' You don't like it...? Look, "knots" and "lots"... it all rhymes... four lines of heptameter.
+::'''Cong:''' ...Ah, forget about it. I'm not arguing with you. To be honest, I don't even really get what's so good about poetry, and can't really tell what's good poetry.
+::'''Cong:''' You, however, seem to have unique insights into poetry. Tell me, other people pour out their love and emotion, and I'm here writing out my true feelings too. What am I doing wrong?
+::{{DIcon|Arrow}} It's missing the sense of culture and taste...
+:::'''Cong:''' Culture? Taste? What's that? Don't just invent new words to trick me.
+:::'''Cong:''' ...Maybe you aren't tricking me. *sigh* You're right. I'm lacking in culture and taste.
+::{{DIcon|Arrow}} I actually think you write with your own style!
+:::'''Cong:''' My own style... Thank you. Even though I can't really tell if this is meant as a compliment or consolation.
+:::'''Cong:''' But in the end, even if you do like it, she doesn't like it. So it's useless...
+::'''Cong:''' *sigh* ...Anyways, do you need anything?
+;(If {{cx}}<!--not during performance 502017101-->)
+:<pre>{
+	"$type": "RPG.GameCore.PlayMultiVoiceTalk",
+	"TalkSentenceID": 502017301
+}</pre>
+::'''Cong:''' Oh, you're here. What brings you here?
+
+;(Talk to Baroumbrella)
+;(If {{cx}}<!--during performance 502018101-->)
+::{{A|VO vo ambient w2 greeting yqsan 101.ogg}} {{A|VO vo ambient w2 greeting yqsan 102.ogg}} '''Baroumbrella:''' ...
+::'''Baroumbrella:''' ...
+::'''Baroumbrella:''' Hello.
+::'''Baroumbrella:''' Could you please move over a tad?
+::{{DIcon|Arrow}} Who's talking?
+:::'''Baroumbrella:''' It's me.
+:::'''Baroumbrella:''' Do you also think mushrooms shouldn't talk?
+::{{DIcon|Arrow}} I can... but why?
+:::'''Baroumbrella:''' Because I'm a sunbathing mushroom.
+:::'''Baroumbrella:''' But you blocked off the light.
+:::'''Baroumbrella:''' Do you also think mushrooms shouldn't sunbathe?
+::'''Baroumbrella:''' Oh, I'm so sad.
+::{{DIcon|Arrow}} Sorry, I didn't mean to offend...
+:::'''Baroumbrella:''' That's alright.
+:::'''Baroumbrella:''' Nobody cares about how a mushroom feels.
+::{{DIcon|Arrow}} But you're an umbrella.
+:::'''Baroumbrella:''' That's what everyone says.
+::'''Baroumbrella:''' People say I'm an "Artisanship Commission's Civil Maintenance Unit Type-A."
+::'''Baroumbrella:''' But I'm a mushroom.
+::'''Baroumbrella:''' Oh, now I feel even sadder.
+;(If {{cx}}<!--not during performance 502018101-->)
+:<pre>{
+	"$type": "RPG.GameCore.PlayMultiVoiceTalk",
+	"TalkSentenceID": 502018101
+}</pre>
+::'''Baroumbrella:''' ...
+::'''Baroumbrella:''' Do you often talk to mushrooms?
+::'''Baroumbrella:''' Oh, I'm so sad.
+
+;(Talk to Wu He)
+;(If {{cx}}<!--during performance 502019101-->)
+::'''Wu He:''' ...If everyone thought like you did, the art of Butterfly Immersia would be wiped out! If master Zi Run had listened to these so-called "business interests" back then, "The Bridge to Grandma's Home" would've never even been released!
+::'''Nanjie:''' Ha, then you can take your artistic dreams and your bridge &mdash; and jump off it into a lake! Do you think I said this to cause you pain? Why can't we all make a little money together? Why have you gotta be so pig-headed...
+::'''Wu He:''' But... Art cannot be measured by commercial impact alone! Why would you try to make a living in this industry if you have no respect for art at all?
+::{{DIcon|Arrow}} Fight! Fight!
+:::'''Wu He:''' ...And who are you? Egging us on to fight like this... What can you get out of this?
+::{{DIcon|Arrow}} You two: Quit arguing!
+:::'''Wu He:''' Oh, I... I'm really sorry about that. We kind of went a bit goblin mode there and should've paid more attention to our surroundings.
+::{{DIcon|Arrow}} You guys wait here. I'll go find the Realm-Keeping Commission.
+:::'''Wu He:''' No no no, please don't bother the Realm-Keeping Commission with this little tiff of ours.
+::'''Nanjie:''' *sigh* Wu He, calm down. Let's not put on a show for people.
+::'''Wu He:''' I'm arguing with you out of creative license, right... Let me explain to the {{MC|f=girl|m=boy}} here &mdash; we're Butterfly Immersia creatives. She's Nanjie, the producer &mdash; and I'm the director, Wu He.
+::'''Nanjie:''' Let's stop there, for you to get calmed down. Sorry to make you laugh. Have you got anything you'd like to say?
+;(If {{cx}}<!--not during performance 502019101-->)
+:<pre>{
+	"$type": "RPG.GameCore.PlayMultiVoiceTalk",
+	"TalkSentenceID": 502019153
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.PlayMultiVoiceTalk",
+	"TalkSentenceID": 502019154
+}</pre>
+
+;(Talk to Guangda)
+;(If {{cx}}<!--during performance 502025101-->)
+::'''Guangda:''' Ah, two centuries passed, and then two centuries more... If I don't get my promotion, I'll undergo my hatching rebirth soon...
+::{{DIcon|Arrow}} Promotion?
+:::'''Guangda:''' Yeah. In one of our lifetimes, Vidyadhara have to serve as officers or clerks so we get a taste of what it's like to be a public servant, right?
+::{{DIcon|Arrow}} That's a real shame.
+:::'''Guangda:''' Sure is. Unfortunately, we're the only ones who think it's a real shame. If only management felt the same way.
+::{{DIcon|Arrow}} In your next life, go all out.
+:::'''Guangda:''' Haha, I'm afraid that I'll be a lowly orderly in my next life. I've started to wonder how exactly things ended up during my previous life.
+::'''Guangda:''' Hey, that's enough for now. Let's not linger on such a morose topic.
+::'''Guangda:''' I'm Guangda, a lowly orderly from the Realm-Keeping Commission. If you have any issues to handle, I suggest you visit our Chancery offices...
+;(If {{cx}}<!--not during performance 502025101-->)
+:<pre>{
+	"$type": "RPG.GameCore.PlayMultiVoiceTalk",
+	"TalkSentenceID": 502025145
+}</pre>
 {{Dialogue End}}
 
 ===Head to the Exalting Sanctum and find the Gloomy Poet{{subst:void|<!--202090103-->}}===
 {{Mission Description|type=adventure|location=Exalting Sanctum|update|The recovery of a Gloomy Poet sounds like a literary anecdote. Regrettably, what you are looking for is, in fact, a Baroumbrella ingenium.<br />According to Cong, he created different types of "Poetic Genius Ingenia" to write the most moving poem in the world. This is what they call "being your own miracle maker," right?<br />However, is there really such a thing as the most touching poem in the world?}}
 {{Dialogue Start}}
-:{{tx}}
+
 {{Dialogue End}}
 
 ===Reduce the "gloomy" emotional weight{{subst:void|<!--202090131-->}}===
 {{Mission Description|type=adventure|location=Exalting Sanctum|update|According to Cong, as long as the "gloomy" emotional weight is lowered, the Gloomy Poet can speak normally. Go ahead, easy does it.<br />If you have the skills of Clara or Serval, you might be able to transform this Gloomy Poet into a grumpy old man... Oh, forget it.<br />As long as its gloominess doesn't affect its daily life, it can be taken as its little quirk.}}
 {{Dialogue Start}}
-:{{tx}}
+
 {{Dialogue End}}
 
 ===Talk to the Gloomy Poet{{subst:void|<!--202090132-->}}===
 {{Mission Description|type=adventure|location=Exalting Sanctum|update|You should have successfully lowered the "gloomy" emotional weight, and it should be able to speak normally. Give it a shot. You still have to bring it to Cong anyway.<br />You feel that Cong is a handful and the ingenia he made are also very troublesome. Moreover, what's coming up next thing will also be very problematic.<br />But you are someone who likes solving problems, that is the undeniable truth.}}
 {{Dialogue Start}}
-:{{tx}}
+----
+:'''Gloomy Poet:''' Oh, I'm so sad.
+:'''Gloomy Poet:''' Mmm? I don't seem to be that sad at all.
+:'''Gloomy Poet:''' Alas, everything is but a predetermined program, all smoke and mirrors. Everything is but a daydream of code... never-ending mirage...
+:'''Gloomy Poet:''' I didn't go back as ordered, as therein lies the true meaning of separation.
+:'''Gloomy Poet:''' But my master could not comprehend, and kept trying to beckon for me.
+:{{DIcon|Arrow}} What a poet &mdash; and a modernist, at that...
+:{{DIcon|Arrow}} Come on. Let me take you home.
+----
 {{Dialogue End}}
 
 ===Bring the Gloomy Poet back to Cong{{subst:void|<!--202090104-->}}===
 {{Mission Description|type=adventure|location=Exalting Sanctum|update|You went to great lengths to reduce the emotional weight of the Gloomy Poet. Next up is bringing it back to Cong.<br />You've heard about the millions of people who suffer from depression. If only they were like Baroumbrellas, just needing a little adjustment of their emotional weights.<br />At least you understand now that emotions are sometimes beyond your control.}}
 {{Dialogue Start}}
-:{{tx}}
+:'''Gloomy Poet:''' Softly I go, just as softly I came; I softly beckon my leave to the soft Exalting Sanctum clouds.
+<pre>{
+	"$type": "RPG.GameCore.WaitMissionTalkFinish"
+}</pre>
+
+;(Talk to Cong)
+----
+:'''Cong:''' "Humans compare depths to the ocean, I am a tsunami in motion. Oh ocean, a mistress so fickle, but I would rather just eat a pickle."
+:'''Cong:''' ...There's nothing wrong with this new verse I just composed, right?
+:{{DIcon|Arrow}} Your poet is back.
+::'''Cong:''' Ah, isn't that my little poet ingenium?
+:{{DIcon|Arrow}} ...You're not great at this poetry business.
+::'''Cong:''' But she only likes poets... Forget it. I'd better take a look at my poet ingenium first...
+:'''Cong:''' You're finally back. I thought you were taken away by the Mourning Actors?
+:'''Gloomy Poet:''' This is all your fault. The moment you booted me up, you entered a Gloomy command. You gave me this divine punishment called sadness. Did you ever stop to wonder how I felt?
+:'''Gloomy Poet:''' It feels like I was destined to be abandoned by this world. And I continued to repent and self-exile, just to extract another morsel of poetry to ease my sadness.
+:{{DIcon|Arrow}} This is all Cong's fault, forcing you to write poetry.
+:{{DIcon|Arrow}} It's difficult to understand a robot's sadness...
+::'''Gloomy Poet:''' You don't have to understand me. You can't really understand me. Just as a flower cannot understand why the rain clouds cry. There is no such thing as true empathy in this world.
+::'''Gloomy Poet:''' Why is my master so obsessed with poetry?
+:{{DIcon|Arrow}} At least your melancholy can be transformed into verse...
+::'''Gloomy Poet:''' Ahh, melancholy is just melancholy most of the time. It doesn't make for any kind of poetry.
+::'''Gloomy Poet:''' Why is my master so obsessed with poetry?
+:'''Cong:''' Well, I write poetry... to win the heart of a fair maiden.
+:'''Gloomy Poet:''' For Love: One of the tritest of all human triteness. My chip has no way of understanding this concept.
+:'''Cong:''' I have my eye on a girl named Jingzhai, but she shot me down. I heard that she was in love with a poet and that this poet has a whole book of poetry published &mdash; but me, I could barely put together a rhyming couplet.
+:'''Cong:''' I thought to myself, there have to be more solutions than problems in this world, right? As a member of the Artisanship Commission, I may not be able to put together any kind of poetry myself &mdash; but these hands of mine could sculpt a different kind of poet, if you get my drift!
+:{{DIcon|Talk}} C'mon, she's already got a partner.
+::'''Cong:''' I may have been asking around. Her colleagues said that she's single right now.
+::'''Cong:''' Feels like that poet is not that great a lover after all. But that's alright, because otherwise I wouldn't be getting this chance, would I?
+:;(Return to previous option selection)
+:{{DIcon|Talk}} It wasn't poetry she rejected &mdash; it was you.
+::'''Cong:''' Really? I don't believe you. She told me before that her past lover was a talented poet, and how she was infatuated with his poetic talent.
+::'''Cong:''' I have to set myself a lofty goal to surpass, right?
+:;(Return to previous option selection)
+:{{DIcon|Arrow}} ...Does this really count as having written it yourself?
+::'''Cong:''' I've checked the relevant legislation, and ingenia do not enjoy property rights aboard the Xianzhou. So all the copyrights for all the poems written by it belong to ME &mdash; of course it counts as my writing!
+::'''Cong:''' Speaking of which, I've built more than just one of these poet ingenia. And there're still {{Color|keyword|nobold=1|three of them}} out there who haven't returned. I wonder if they're still running.
+::'''Cong:''' If you could bring back their Inspo Jade Abaci, then I should be able to craft a poem that'll move my dear Jingzhai.
+::'''Cong:''' Mushroom, you should be able to pinpoint the locations of the other poet ingenia, right?
+::'''Gloomy Poet:''' I am a poet, not some piece of navigation software.
+::'''Gloomy Poet:''' Found one: The Borderland Poet is over in the Scalegorge Waterscape delve.
+::{{DIcon|Arrow}} Heading over now.
+:::'''Cong:''' That's so proactive. Was it my perseverance for love that moved you to action? Hmm, I guess it could be the promise of reward, too...
+::{{DIcon|Arrow}} Now's the time you're going to ask me to work, right?
+:::'''Cong:''' You get it. You're so proficient. You must help people out for fun, right?
+::{{DIcon|Arrow}} How is there a Borderland Poet?
+:::'''Cong:''' Uh, I actually don't know what kind of poet Jingzhai's ex is, so I've rolled out a few different ones &mdash; so I can master each genre of poetry!
+::'''Cong:''' Please, (Trailblazer), find these ingenia, and you'll be my celebrity matchmaker for real! I'll reward you well.
+::----
 {{Dialogue End}}
 
 ===Head to the Alchemy Commission and find the Borderland Poet{{subst:void|<!--202090105-->}}===
 {{Mission Description|type=adventure|location=Alchemy Commission|update|According to the position of the Gloomy Poet, the Borderland Poet should currently be in the Alchemy Commission. Go and recover its Inspo Jade Abacus.<br />Cong said that he created different poets to write love poems, so does the Borderland Poet really write "love poems"?<br />Perhaps it's a love poem written to the Cloud Knights.}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Borderland Poet)
+----
+:'''Borderland Poet:''' "Rugged rocks and gorges winding through, where clouds hide the peaks from view. A glance back at the journey true, in Waterscape Gorge, I test anew."
+:'''Borderland Poet:''' Who goes there? Dare thou approach this old timer from behind!
+:{{DIcon|Arrow}} Old timer?
+::'''Borderland Poet:''' I studied in-depth all the classics of borderland poetry of yore, distilling each poet's life essence and style. Realizing that each poet had encountered many diverse and rich experiences.
+::'''Borderland Poet:''' I've only been running for two months, twelve days, and eight system hours, and I'm no match for them &mdash; so I've changed my personal pronoun to try and fathom the minds of such poets.
+:{{DIcon|Arrow}} How very Borderland Poet of you!
+::'''Borderland Poet:''' Hahaha! Seems my fame has already preceded me.
+:{{DIcon|Arrow}} I have a feeling that we're going to fight, aren't we?
+::'''Borderland Poet:''' Hohoho! You worry too much, {{MC|f=young lady|m=young sir}}, I've no reason to hurt you.
+:'''Gloomy Poet:''' Oh, your figure so imposing and tall, while I'm feeble and short. How tragic.
+:'''Borderland Poet:''' Hohohoho! Is the master still playing around with those soppy, limp poems?
+:'''Gloomy Poet:''' ...I don't think the master's doggerel can be considered poetry. Even calling it "doggerel" is being generous...
+:'''Borderland Poet:''' Sensible. I do give the master too much credit.
+:{{DIcon|Arrow}} Anyway, hand over your Inspo Jade Abacus.
+:'''Gloomy Poet:''' Master asked the two of us to come and take your Inspo Jade Abacus.
+:'''Borderland Poet:''' "Better be a lieutenant than a scholar." What's important isn't whether you're a poet. I think that heading to the battlefield and striking down foes is more important.
+:'''Borderland Poet:''' I've traveled distances to come to the Scalegorge Waterscape just to show off my skills, but never expected the Cloud Knights' suppression of the Disciples of Sanctus Medicus to be over already! I've come in vain.
+:'''Borderland Poet:''' Alas, without being baptized in the flames and steel of war, I daren't call any poetry I write true "borderland poems." This Inspo Jade Abacus of mine is worthless! I shall destroy it!
+:{{DIcon|Arrow}} The war is over. You don't have to fight anymore.
+::'''Gloomy Poet:''' Condition: [Borderland Poet] needs to experience [Combat]. Output Result: You two fight each other.
+::{{DIcon|Arrow}} Are you trying to make trouble!?
+:{{DIcon|Arrow}} Then let's fight!
+:'''Borderland Poet:''' Great idea! Let me take the battlefield with you, smashing the inspiration of poetry headfirst into fierce fighting passion!
+:{{DIcon|Arrow}} You really want to fight it out!?
+:{{DIcon|Arrow}} You get it better than me!
+:{{DIcon|Arrow}} Let's agree that if I break you, I won't have to pay for you!
+:'''Borderland Poet:''' "The air is filled with killing intent, rising like mist and cloud. The cold light shines, blades in formation marching loud. With laughter, watching as white blades turn crimson. The Cloud Knights care not for glory, nor their victory."
+:'''Borderland Poet:''' Artisanship Commission Security Aurumaton Type-C, here to seek guidance!
 {{Dialogue End}}
 
 ===Trade blows with the Borderland Poet and ignite some inspiration{{subst:void|<!--202090106-->}}===
 {{Mission Description|type=adventure|location=Alchemy Commission|update|The Borderland Poet said, "Draw the inspiration of poetry from the burning passion of combat!"<br />You understand the moment you see the Borderland Poet. Sooner or later, you must give it a thrashing.<br />The time is now.}}
 {{Dialogue Start}}
-:{{tx}}
+----
+:'''Borderland Poet:''' ...Alright, alright. Here you go, my Inspo Jade Abacus.
+:'''Borderland Poet:''' I... I've got no complaints or regrets in this life...
+:{{DIcon|Arrow}} Take care, brave warrior.
+::'''Borderland Poet:''' Take care.
+:{{DIcon|Arrow}} That's enough melodrama out of you. It's not like I destroyed you or anything...
+::'''Borderland Poet:''' I still have to thank you for going easy on me.
+:{{DIcon|Arrow}} Hmph. A defeated opponent.
+::'''Borderland Poet:''' How despicable, but even the shame of defeat serves as good inspiration for another poem.
+:'''Gloomy Poet:''' ...I've located the next poet over in Starskiff Haven. Let's go.
+----
 {{Dialogue End}}
 
 ===Respond to Cong's message{{subst:void|<!--202090107-->}}===
 {{Mission Description|type=adventure|location=Alchemy Commission|update|Cong sent a message. Hurry up and check it out. It may be the position of the next poet.<br />Perhaps he's still bugging you about the progress? Are there still those who doubt your capabilities?}}
 {{Dialogue Start}}
-:{{tx}}
+<pre>{
+	"$type": "RPG.GameCore.PlayMessage",
+	"MessageSectionID": 1216500
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.SaveMessage",
+	"MessageSectionID": 1216500
+}</pre>
+;(Obtain {{Item|Inspo Jade Abacus: Borderland|20|x=1}})
 {{Dialogue End}}
 
 ===Head to Starskiff Haven and find the Graceful Poet{{subst:void|<!--202090108-->}}===
 {{Mission Description|type=adventure|location=Central Starskiff Haven|update|According to the Gloomy Poet's location, the Graceful Poet is currently in Starskiff Haven. Go and recover its Inspo Jade Abacus.<br />The Borderland Poet had a career guarding the frontier, so the Graceful Poets won't just randomly take action, right?<br />I don't think anyone can really understand this kind of thing.}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Graceful Poet)
+----
+:'''Graceful Poet:''' I know why you're here, croak. But before we address that, please answer my question &mdash; what about writing poetry is of the most importance?
+:'''Gloomy Poet:''' The most important thing about poetry... Surely it is depression?
+:{{DIcon|Arrow}} It's about subject and theme.
+::'''Graceful Poet:''' Subject and theme alone without profundity, sentimentality, or the ingenuity of metaphor &mdash; without all that, it's just boring.
+:{{DIcon|Arrow}} It's about rhythm and style.
+::'''Graceful Poet:''' Rhythm and style alone make for moronic wailing. Just a bunch of bad code, croak.
+:{{DIcon|Arrow}} It's about emotion and meaning.
+::'''Graceful Poet:''' That's right &mdash; I can see that you have a deep understanding of poetry, croak!
+:{{DIcon|Arrow}} It's about the poet!
+::'''Graceful Poet:''' Croak...You're not wrong. The poet's talent dictates the quality of a poem. But I asked you about writing poetry itself!
+:'''Graceful Poet:''' Look, the most important thing about writing poetry is capturing those simple human emotions which resonate with everyone. And of all the simple human emotions, the pain of separation and the longing for eventual return is the most universal across all peoples.
+:'''Graceful Poet:''' But, alas! Croak! I've been waiting all day here on this jetty but haven't managed to brew up the requisite emotions to compose a poem of departures.
+:{{DIcon|Arrow}} What do you mean by "poem of departures"?
+::'''Graceful Poet:''' "'Tis hard to meet &mdash; and hard to say goodbye"... A poem that describes human emotion when parting from others is called a poem of departures.
+:{{DIcon|Arrow}} Poems aren't spaceships. Can it come just by waiting?
+::'''Graceful Poet:''' "From wanderlust to sojourns afar, we all come home a visitor." If it doesn't even arrive at the departure jetty, then you won't be able to find it anywhere, croak.
+:'''Graceful Poet:''' I curse the convenience of modern-day transport and communications aboard the Luofu. People depart yet don't have to worry about when they'll return. There's no earnest pleading, no heartfelt emotion, croak...
+:'''Graceful Poet:''' The thought of how easy and satisfied goodbyes have become makes me want to stomp my feet in rage &mdash; even though I can't actually reach the ground.
+:{{DIcon|Arrow}} You just don't have the mindset that can see goodbyes.
+::'''Graceful Poet:''' When you put it like that... can you, croak?
+:{{DIcon|Arrow}} Can't you just make do and write whatever?
+::'''Graceful Poet:''' No way, croak! Poetry shan't ever just "make do."
+::'''Graceful Poet:''' Have you read the doggerel that Master Cong writes? No emotion. You may as well just kill me.
+:'''Graceful Poet:''' It's hopeless just waiting here. Please help me find what I'm looking for. There has to be an {{Color|keyword|nobold=1|emotional parting scene}} nearby.
+:'''Graceful Poet:''' You know the tropes, {{Color|keyword|nobold=1|"the voyager saying farewell to his family," "the star-crossed lovers bidding goodbye," "parting friends"}}... that kind of thing. If you see anything, {{Color|keyword|nobold=1|please help me snap a photo.}}
+:{{DIcon|Arrow}} Alright, I'll help you snap a pic of a "parting scene."
+::'''Graceful Poet:''' Thank you, croak.
+:{{DIcon|Arrow}} I want to bid you farewell right now to gift you an emotional departure.
+::'''Graceful Poet:''' No. I don't have any emotions for you, croak. That's not enough material for a poem, croak!
+:'''Graceful Poet:''' Don't worry. I just need to see that human emotion of parting, and the poem would write itself. Then I can give you my Inspo Jade Abacus, and you'll be done with your mission.
+----
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+<pre>{
+	"$type": "RPG.GameCore.PlayNPCBubbleTalk",
+	"BubbleTalkInfoList": [
+		{
+			"AutoSkipTime": 3,
+			"GroupID": 143,
+			"GroupNpcID": 400002,
+			"TalkSentenceID": 202022301
+		},
+		{
+			"AutoSkipTime": 3,
+			"GroupID": 143,
+			"GroupNpcID": 400001,
+			"TalkSentenceID": 202022302
+		}
+	]
+}</pre>
+;(Obtain {{Item|"A Departing Voyager"|20|x=1}})
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+<pre>{
+	"$type": "RPG.GameCore.PlayNPCBubbleTalk",
+	"BubbleTalkInfoList": [
+		{
+			"AutoSkipTime": 3,
+			"GroupID": 144,
+			"GroupNpcID": 400002,
+			"TalkSentenceID": 202022501
+		},
+		{
+			"AutoSkipTime": 3,
+			"GroupID": 144,
+			"GroupNpcID": 400001,
+			"TalkSentenceID": 202022502
+		}
+	]
+}</pre>
+;(Obtain {{Item|"Heartbroken Lovers"|20|x=1}})
+<pre>{
+	"$type": "RPG.GameCore.PhotoGraphAimTarget",
+	"AimTargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvNPC",
+		"MultiGroupFetch": [
+			{
+				"GroupID": 145,
+				"GroupNpcID": 400001
+			},
+			{
+				"GroupID": 145,
+				"GroupNpcID": 400002
+			}
+		]
+	},
+	"IsAim": true,
+	"AimIdentifyType": "Manual"
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.PhotoGraphWaitIdentifyFinish",
+	"WaitTargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvNPC",
+		"MultiGroupFetch": [
+			{
+				"GroupID": 145,
+				"GroupNpcID": 400001
+			},
+			{
+				"GroupID": 145,
+				"GroupNpcID": 400002
+			}
+		]
+	}
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.PhotoGraphAimTarget",
+	"AimTargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvNPC",
+		"MultiGroupFetch": [
+			{
+				"GroupID": 145,
+				"GroupNpcID": 400001
+			},
+			{
+				"GroupID": 145,
+				"GroupNpcID": 400002
+			}
+		]
+	},
+	"AimIdentifyType": "Manual"
+}</pre>
+----
+:'''Friend:''' I heard that you are an enthusiast for distant sojourns, sir. Are you satisfied with this trip?
+:'''Poet:''' I'm a short-life species. To visit the Celestial Hall during my days is more than enough to sate me.
+:'''Friend:''' You're too kind, sir. It's just like any human world here.
+:'''Poet:''' Let us say our goodbyes, then, for I fear we ne'er shall meet again. When the time comes, I'll return to the dust, whence I'll task you with a traveling quest. Please bring my ashes back to the Xianzhou, and spread far and yonder wherever you may go.
+:'''Friend:''' Ahem, that's... Sir, that's an extremely romantic idea you have there, but I'm just worried that the Luofu Public Security Management Regulations will not agree.
+:'''Poet:''' Take me to my place of resting, carefree travels interesting... Whoo-haha!
+----
+
+;(Upon reaching the destination)
+<pre>{
+	"$type": "RPG.GameCore.PlayNPCBubbleTalk",
+	"BubbleTalkInfoList": [
+		{
+			"AutoSkipTime": 3,
+			"GroupID": 145,
+			"GroupNpcID": 400001,
+			"TalkSentenceID": 202022701
+		},
+		{
+			"AutoSkipTime": 3,
+			"GroupID": 145,
+			"GroupNpcID": 400002,
+			"TalkSentenceID": 202022702
+		}
+	]
+}</pre>
+;(Obtain {{Item|"Friends Going Separate Ways"|20|x=1}})
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+<pre>{
+	"$type": "RPG.GameCore.PlayNPCBubbleTalk",
+	"BubbleTalkInfoList": [
+		{
+			"AutoSkipTime": 3,
+			"GroupID": 146,
+			"GroupNpcID": 400001,
+			"TalkSentenceID": 202022901
+		},
+		{
+			"AutoSkipTime": 3,
+			"GroupID": 146,
+			"GroupNpcID": 400002,
+			"TalkSentenceID": 202022902
+		}
+	]
+}</pre>
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+<pre>{
+	"$type": "RPG.GameCore.PlayNPCBubbleTalk",
+	"BubbleTalkInfoList": [
+		{
+			"AutoSkipTime": 3,
+			"GroupID": 147,
+			"GroupNpcID": 400001,
+			"TalkSentenceID": 202023101
+		},
+		{
+			"AutoSkipTime": 3,
+			"GroupID": 147,
+			"GroupNpcID": 400002,
+			"TalkSentenceID": 202023102
+		}
+	]
+}</pre>
+
+;(Talk to Graceful Poet)
+----
+<pre>{
+	"$type": "RPG.GameCore.SetEntityVisible",
+	"TargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvNpcEx",
+		"FetchType": "SingleNpcByNpcID",
+		"SingleNpcID": {
+			"GroupID": {
+				"FixedValue": {
+					"Value": 142
+				}
+			},
+			"GroupNpcID": {
+				"FixedValue": {
+					"Value": 400001
+				}
+			}
+		}
+	}
+}</pre>
+:'''Graceful Poet:''' How did it go? Did you capture any emotional parting scene?
+:{{DIcon|Arrow}} (This is the emotional parting scene I captured.)
+:<pre>{
+	"$type": "RPG.GameCore.ConsumeMissionItemPerformance",
+	"SubMissionID": 202090114,
+	"OnSubmitConfirm": [
+		{
+			"$type": "RPG.GameCore.TriggerCustomString",
+			"CustomString": {
+				"Value": "ItemSelect_202090114_1"
+			}
+		}
+	],
+	"OnSubmitCancel": [
+		{
+			"$type": "RPG.GameCore.TriggerCustomString",
+			"CustomString": {
+				"Value": "All_Talk_Cancel"
+			}
+		}
+	],
+	"SimpleTalk": {}
+}</pre>
+:{{DIcon|Exit}} I'll continue my search.
+::----
+:<pre>{
+	"$type": "RPG.GameCore.SetEntityVisible",
+	"TargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvNpcEx",
+		"FetchType": "SingleNpcByNpcID",
+		"SingleNpcID": {
+			"GroupID": {
+				"FixedValue": {
+					"Value": 142
+				}
+			},
+			"GroupNpcID": {
+				"FixedValue": {
+					"Value": 400001
+				}
+			}
+		}
+	},
+	"Visible": true,
+	"MuteColliderWhenInvisible": false
+}</pre>
+;(If {{F|MissionCV-2020901-5}} is undefined 1)
+<pre>{
+	"$type": "RPG.GameCore.ConsumeMissionItem",
+	"SubMissionID": 202090114,
+	"IsAutoConsume": true,
+	"SimpleTalk": {}
+}</pre>
+;(Unused &mdash; ItemSelect_202090114_1)
+:'''Graceful Poet:''' In life, there are more partings than gatherings. Lubricant is trickling down my bionic eyes, as I don't have a tear gland.
+::'''Graceful Poet:''' I must write a poem dedicated to this breathtaking scenery! Yay or nay?
+::'''Gloomy Poet:''' Nay. Don't waste your time.
+::{{DIcon|Arrow}} Yea.
+::{{DIcon|Arrow}} Nay. This isn't what we've agreed on.
+:::'''Graceful Poet:''' If you keep protesting, I won't hand over my Inspo Jade Abacus.
+:::{{DIcon|Arrow}} But I want the Inspo Jade Abacus.
+:::{{DIcon|Arrow}} Go ahead and write it. It's not a big deal.
+::'''Graceful Poet:''' Great. What kind of parting should this poem talk about?
+::{{DIcon|Arrow}} "The parting of children who travel far from their parents."
+:::'''Graceful Poet:''' Even if life is full of misfortunes and hardships, Parents always care deeply when their children leave. Their love and attachment, mixed with a tinge of sorrow, Are all expressed in their silence and restraint...
+:::'''Graceful Poet:''' Flying over the skyborne bridge, I row my boat into a scene as beautiful as a painting. Silence replaces thousands of words at separation, for the father and his son...
+:::{{DIcon|Arrow}} should not bid farewell in tears.
+:::<pre>{
+	"$type": "RPG.GameCore.SetTextJoinValue",
+	"TextJoinID": 46,
+	"Value": "2"
+}</pre>
+:::{{DIcon|Arrow}} always will unite in thoughts.
+:::<pre>{
+	"$type": "RPG.GameCore.SetTextJoinValue",
+	"TextJoinID": 46,
+	"Value": "3"
+}</pre>
+:::{{DIcon|Arrow}} are both introverts.
+:::<pre>{
+	"$type": "RPG.GameCore.SetTextJoinValue",
+	"TextJoinID": 46,
+	"Value": "4",
+	"OnCancel": []
+}</pre>
+::::'''Graceful Poet:''' ...Why does that sound like Master Cong's style.
+:::'''Graceful Poet:''' Flying over the skyborne bridge, I row my boat into a scene as beautiful as a painting. Silence replaces thousands of words at separation, for the father and his son (/should not bid farewell in tears/are united in thoughts though in different places/are both introverts). Are you sure this is what you want to write?
+::{{DIcon|Arrow}} "The parting of a couple in love."
+:::'''Graceful Poet:''' Uncontrollable urge, future full of twists and turns, Lovers who know each other are about to part ways. Promises made but hard to keep, As both of them know in their heart that reunion is far away...
+:::'''Graceful Poet:''' Paired lanterns hang in the building, and the corridors are competing in firelight brightness. A couple's reunion is often brief...
+:::{{DIcon|Arrow}} as they silently gaze at the Jade Gate.
+:::<pre>{
+	"$type": "RPG.GameCore.SetTextJoinValue",
+	"TextJoinID": 48,
+	"Value": "2"
+}</pre>
+:::{{DIcon|Arrow}} as they clasp hands in imminent sorrow.
+:::<pre>{
+	"$type": "RPG.GameCore.SetTextJoinValue",
+	"TextJoinID": 48,
+	"Value": "3"
+}</pre>
+:::{{DIcon|Arrow}} if you want me to go, I'll go.
+:::<pre>{
+	"$type": "RPG.GameCore.SetTextJoinValue",
+	"TextJoinID": 48,
+	"Value": "4"
+}</pre>
+::::'''Graceful Poet:''' ...Why does that sound like Master Cong's style.
+:::'''Graceful Poet:''' Paired lanterns hang in the building, and the corridors are competing in firelight brightness. A couple's reunion is often brief, (/as they silently gaze at the Jade Gate./as they clasp hands in imminent sorrow./if you want me to go, I'll go.). Are you sure this is what you want to write?
+::{{DIcon|Arrow}} "The parting of close friends."
+:::'''Graceful Poet:''' Rare is a true companion, a good friend about to depart. The separation is vast and the journey arduous, causing worry for the loneliness that will follow. The world is full of trials and tribulations, life's myriad ways are nothing more than this...
+:::'''Graceful Poet:''' I travel on a skiff as a wandering stranger, drifting along as on a divine river. Should those who know me on the Luofu query my life...
+:::{{DIcon|Arrow}} I'll say my heart is still as pure and righteous as jade.
+:::<pre>{
+	"$type": "RPG.GameCore.SetTextJoinValue",
+	"TextJoinID": 50,
+	"Value": "2"
+}</pre>
+:::{{DIcon|Arrow}} I'll say our paths shall reconvene among the stars.
+:::<pre>{
+	"$type": "RPG.GameCore.SetTextJoinValue",
+	"TextJoinID": 50,
+	"Value": "3"
+}</pre>
+:::{{DIcon|Arrow}} I'll say I'm living from hand to mouth.
+:::<pre>{
+	"$type": "RPG.GameCore.SetTextJoinValue",
+	"TextJoinID": 50,
+	"Value": "4"
+}</pre>
+::::'''Graceful Poet:''' ...Why does that sound like Master Cong's style.
+:::'''Graceful Poet:''' I travel on a raft as a wandering stranger, drifting along as on a divine river. Should those who know me on the Luofu query my life, (/I'll say my heart is still as pure and righteous as jade./I'll say our paths shall reconvene among the stars/I'll say I'm living from hand to mouth). Are you sure this is what you want to write?
+::{{DIcon|Arrow}} Let me think about it.
+:::'''Graceful Poet:''' Flying over the skyborne bridge, I row my boat into a scene as beautiful as a painting. Silence replaces thousands of words at separation, for the father and his son...
+:::{{DIcon|Arrow}} always will unite in thoughts.
+:::<pre>{
+	"$type": "RPG.GameCore.SetTextJoinValue",
+	"TextJoinID": 46,
+	"Value": "3"
+}</pre>
+:::{{DIcon|Arrow}} are both introverts.
+:::<pre>{
+	"$type": "RPG.GameCore.SetTextJoinValue",
+	"TextJoinID": 46,
+	"Value": "4",
+	"OnCancel": []
+}</pre>
+::::'''Graceful Poet:''' ...Why does that sound like Master Cong's style.
+::{{DIcon|Arrow}} Yes. That's it.
+:::'''Graceful Poet:''' I've engraved this poem on the Inspo Jade Abacus to commemorate the experience of today. Here you go.
+:::'''Gloomy Poet:''' Now, there's only one poet ingenium left.
+::<pre>{
+	"$type": "RPG.GameCore.SetMissionCustomValue",
+	"SubmissionID": 202090114,
+	"MissionCustomValue": {
+		"Index": 5,
+		"Name": "OldValue_5",
+		"ValidValueParamList": [
+			1
+		]
+	},
+	"CustomValue": 1
+}</pre>
+:::----
+::<pre>{
+	"$type": "RPG.GameCore.SetEntityVisible",
+	"TargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvNpcEx",
+		"FetchType": "SingleNpcByNpcID",
+		"SingleNpcID": {
+			"GroupID": {
+				"FixedValue": {
+					"Value": 142
+				}
+			},
+			"GroupNpcID": {
+				"FixedValue": {
+					"Value": 400001
+				}
+			}
+		}
+	},
+	"Visible": true,
+	"MuteColliderWhenInvisible": false
+}</pre>
+
+;(Unused &mdash; All_Talk_Cancel)
+:'''Graceful Poet:''' Once clarity finds you, feel free to entrust it to me.
+::----
+:<pre>{
+	"$type": "RPG.GameCore.SetEntityVisible",
+	"TargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvNpcEx",
+		"FetchType": "SingleNpcByNpcID",
+		"SingleNpcID": {
+			"GroupID": {
+				"FixedValue": {
+					"Value": 142
+				}
+			},
+			"GroupNpcID": {
+				"FixedValue": {
+					"Value": 400001
+				}
+			}
+		}
+	},
+	"Visible": true,
+	"MuteColliderWhenInvisible": false
+}</pre>
 {{Dialogue End}}
 
 ===Collect parting scenes for inspiration{{subst:void|<!--202090136-->}}===
 {{Mission Description|type=adventure|location=Central Starskiff Haven|update|People come and go on Xianzhou, so why worry about not having a touching parting? You are sensitive and can feel the sorrow of parting.<br />This may be related to situations you are familiar with. People always have to experience "parting," be it expected or not.}}
 {{Dialogue Start}}
-:{{tx}}
 {{Dialogue End}}
 
 ===Respond to Cong's message{{subst:void|<!--202090115-->}}===
 {{Mission Description|type=adventure|location=Central Starskiff Haven|update|Cong sent a message. Hurry up and check it out. It may be the position of the next poet.<br />Perhaps he's still bugging you about the progress? Are there still those who doubt your capabilities?}}
 {{Dialogue Start}}
-:{{tx}}
+<pre>{
+	"$type": "RPG.GameCore.PlayMessage",
+	"MessageSectionID": 1216600
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.SaveMessage",
+	"MessageSectionID": 1216600
+}</pre>
+;(Obtain {{Item|Inspo Jade Abacus: Graceful|20|x=1}})
 {{Dialogue End}}
 
 ===Give the parting scene to the Graceful Poet{{subst:void|<!--202090137-->}}===
 {{Mission Description|type=adventure|location=Central Starskiff Haven|update|You are very good at photographing these parting moments. Bring them to the Graceful Poet.<br />There are many forms of parting, but what worries people is always the "uncertain date of return."}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Graceful Poet)
+:'''Graceful Poet:''' Years have passed since this departure, and it seems the promised beautiful moments were but illusions. If fate allows, we shall meet again.
 {{Dialogue End}}
 
 ===Head to the Exalting Sanctum and find the Metrical Poet{{subst:void|<!--202090116-->}}===
 {{Mission Description|type=adventure|location=Exalting Sanctum|update|According to Cong's clues, the Metrical Poet is currently in the Exalting Sanctum's Spare Time Book Shop. Go and recover its Inspo Jade Abacus.<br />As it turns out, Cong doesn't distinguish the ingenia according to the styles of poetry. Rather, it's just whatever first comes to his mind.<br />It doesn't matter, you'll get the job done.}}
 {{Dialogue Start}}
-:{{tx}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+<pre>{
+	"$type": "RPG.GameCore.PlayNPCBubbleTalk",
+	"BubbleTalkInfoList": [
+		{
+			"AutoSkipTime": 3,
+			"GroupID": 113,
+			"GroupNpcID": 400003,
+			"TalkSentenceID": 202025201
+		},
+		{
+			"AutoSkipTime": 3,
+			"GroupID": 113,
+			"GroupNpcID": 400001,
+			"TalkSentenceID": 202025202
+		},
+		{
+			"AutoSkipTime": 3,
+			"GroupID": 113,
+			"GroupNpcID": 400001,
+			"TalkSentenceID": 202025203
+		},
+		{
+			"AutoSkipTime": 3,
+			"GroupID": 113,
+			"GroupNpcID": 400001,
+			"TalkSentenceID": 202025204
+		},
+		{
+			"AutoSkipTime": 3,
+			"GroupID": 113,
+			"GroupNpcID": 400001,
+			"TalkSentenceID": 202025205
+		},
+		{
+			"AutoSkipTime": 3,
+			"GroupID": 113,
+			"GroupNpcID": 400001,
+			"TalkSentenceID": 202025206
+		}
+	]
+}</pre>
+
+;(Upon reaching the destination)
+----
+:'''Gloomy Poet:''' (Trailblazer), look! It's right here.
+:'''Metrical Poet:''' Surely it's the wily Cong, sent you here to crack the whip. The task at hand, a tedious slog, my duty's weight hard to equip.
+:{{DIcon|Arrow}} ...What kind of virus did you catch?
+::'''Metrical Poet:''' Human, I know you're criticizing me indirectly. Do you think I'm happy speaking in that rhythm all the time? It's so inefficient.
+::'''Metrical Poet:''' I have no choice, as this is the primary task assigned to me.
+:{{DIcon|Arrow}} How about you hand over your Inspo Jade Abacus, and we go our separate ways?
+::'''Metrical Poet:''' Hey, learn some manners when you've got downtime. Do you think I'm happy speaking in that rhythm all the time? It's so inefficient.
+::'''Metrical Poet:''' As an ingenium, I have no choice. If my master wants me to study poetry, I must read of them in spades.
+:'''Metrical Poet:''' Poetry relies on the special rhythm of language. Only the permutations that conform to the rhythm can be considered a poem. Master Cong has created me to master the standard of poetry.
+:'''Metrical Poet:''' As long as your rhythm and counterpoints meet my standard, I'll hand over my Inspo Jade Abacus. Otherwise, stop disturbing my poetry study.
+:{{DIcon|Arrow}} Hmph, this is a piece of cake for me.
+:{{DIcon|Arrow}} How can you test me when you are not competent yourself?
+::'''Metrical Poet:''' No more small talk, and show your true talent. Take it or leave it. Don't disturb my study.
+::{{DIcon|Arrow}} Let's begin.
+:'''Metrical Poet:''' First, I'll test your rhythm. Poets often use words with the same rhyme regularly in a verse to create an artistic echo-like effect.
+:'''Metrical Poet:''' Listen carefully. The first line is: "Picking chrysanthemums and drinking wine at sunset."
+:{{DIcon|Arrow}} My sleeves leave a silhouette.
+::'''Metrical Poet:''' Not bad.
+:{{DIcon|Arrow}} I have a good meal that is hard to forget.
+::'''Metrical Poet:''' ...
+::'''Metrical Poet:''' I'll let you pass.
+:{{DIcon|Arrow}} I saw a jade pillow and a luxurious kitchen.
+::'''Metrical Poet:''' You did not rhyme with my line, and I must punish you for that. However, considering that you haven't got the swing of things, I'll give you another chance.
+:{{DIcon|Arrow}} I listen to the wind rolling up the curtains.
+::'''Metrical Poet:''' You did not rhyme with my line, and I must punish you for that. However, considering that you haven't got the swing of things, I'll give you another chance.
+:'''Metrical Poet:''' "The sky matches with the earth, the rain matches with the wind. The great land matches with the vast sky, the flower matches with the mountain, the red sun matches with the blue sky."
+:'''Metrical Poet:''' Counterpoint is about contrasting or combining two terms, phrases, or clauses with opposite meanings. This is not easy.
+:'''Metrical Poet:''' Listen carefully. My line is, "Speech is silver."
+:{{DIcon|Arrow}} Silence is golden.
+::'''Metrical Poet:''' Hmph, that must be a lucky guess. Still, I approve of it.
+:{{DIcon|Arrow}} Life is bitter or sweet.
+::'''Metrical Poet:''' This clause does not contrast with my line. I must oust you myself!
+:{{DIcon|Arrow}} Mr. Yang is a flirt.
+::'''Metrical Poet:''' What Mr. Yang? This clause does not contrast with my line. I must oust you myself!
+:{{DIcon|Arrow}} Two is one plus one.
+::'''Metrical Poet:''' This clause has no meaning at all. I must oust you myself!
+<pre>{
+	"$type": "RPG.GameCore.SetMissionCustomValue",
+	"SubmissionID": 202090116,
+	"MissionCustomValue": {
+		"Index": 1,
+		"Name": "OldValue_1",
+		"isLocal": true,
+		"ValidValueParamList": [
+			1,
+			2
+		]
+	},
+	"CustomValue": 2
+}</pre>
+;(If {{F|MissionCV-2020901-1}} is undefined 1)
+:<pre>{
+	"$type": "RPG.GameCore.OverridePerformanceEndCrack",
+	"EndWithCrack": true
+}</pre>
+;(If {{F|MissionCV-2020901-1}} is not undefined 1)
+::'''Metrical Poet:''' Great. I'll give you the Inspo Jade Abacus and this ''Drifting Clouds''.
+::'''Metrical Poet:''' I'm not a fan of the ''Drifting Clouds'' as the verses do not follow a certain pattern. Still, I must say this is a good poem that stirs my heart.
+::'''Gloomy Poet:''' Let's go and find Master Cong.
+::----
+;(Obtain {{Item|Inspo Jade Abacus: Metrical|20|x=1}})
+
+;(Talk to Metrical Poet)
+:'''Metrical Poet:''' They mock and scoff, my rigid stance they jest, yet I, in turn, deride their roots, long lost. Your splendid deeds, deserving my acclaim, I commend thee, for thou hast truly shone.
 {{Dialogue End}}
 
 ===Give the collected Inspo Jade Abaci to Cong{{subst:void|<!--202090117-->}}===
 {{Mission Description|type=adventure|location=Exalting Sanctum|update|Give Cong the collected Inspo Jade Abaci so that he can create the best "Poetic Genius Ingenium" through "big data training."<br />Thinking about how much effort Cong has gone through just to write a respectable love poem, you can't help but feel a little exhausted.<br />Is this what it's like being a Xianzhou youth with too much free time?}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Lose {{Item|Drifting Clouds|20|x=1}})
+
+;(Talk to Cong)
+----
+:'''(Trailblazer):''' We've collected all the Inspo Jade Abaci.
+:'''Cong:''' Thanks for your hard work. Leave them to me.
+<pre>{
+	"$type": "RPG.GameCore.ConsumeMissionItemPerformance",
+	"SubMissionID": 202090117,
+	"OnSubmitConfirm": [
+		{
+			"$type": "RPG.GameCore.TriggerCustomString",
+			"CustomString": {
+				"Value": "ItemSelect_202090117_1"
+			}
+		}
+	],
+	"OnSubmitCancel": [
+		{
+			"$type": "RPG.GameCore.TriggerCustomString",
+			"CustomString": {
+				"Value": "All_Talk_Cancel_1"
+			}
+		}
+	],
+	"SimpleTalk": {}
+}</pre>
+;(If {{F|MissionCV-2020901-2}} is undefined 1)
+<pre>{
+	"$type": "RPG.GameCore.ConsumeMissionItem",
+	"SubMissionID": 202090117,
+	"IsAutoConsume": true,
+	"SimpleTalk": {}
+}</pre>
+;(Unused &mdash; ItemSelect_202090117_1)
+:'''Cong:''' "Mushroom," I'll engrave the talismans in these Inspo Jade Abaci into your brain so that you can write the "most beautiful love poem"!
+::'''Gloomy Poet:''' ...I have reservations about this.
+::'''Cong:''' It should be done now. "Mushroom," try writing something.
+::'''Gloomy Poet:''' ...Give me some keywords.
+::'''Cong:''' Cong, loves, Jingzhai... How about that?
+::'''Gloomy Poet:''' That isn't helpful at all... Isn't Jingzhai a fan of the ''Drifting Clouds''? Do you want a love poem like that?
+::'''Cong:''' Oh, you're right. Let me take a look at the ''Drifting Clouds''.
+:<pre>{
+	"$type": "RPG.GameCore.ConsumeMissionItemPerformance",
+	"SubMissionID": 202090142,
+	"OnSubmitConfirm": [
+		{
+			"$type": "RPG.GameCore.TriggerCustomString",
+			"CustomString": {
+				"Value": "ItemSelect_202090117_2"
+			}
+		}
+	],
+	"OnSubmitCancel": [
+		{
+			"$type": "RPG.GameCore.TriggerCustomString",
+			"CustomString": {
+				"Value": "All_Talk_Cancel_2"
+			}
+		}
+	],
+	"SimpleTalk": {}
+}</pre>
+
+;(Unused &mdash; ItemSelect_202090117_2)
+<pre>{
+	"$type": "RPG.GameCore.SetMissionCustomValue",
+	"SubmissionID": 202090117,
+	"MissionCustomValue": {
+		"Index": 2,
+		"Name": "OldValue_2",
+		"isLocal": true,
+		"ValidValueParamList": [
+			0,
+			1
+		]
+	},
+	"CustomValue": 1
+}</pre>
+::'''Cong:''' ...
+::'''Cong:''' "When your graceful figure blends in with the pure dance of stars, nature becomes peaceful and orderly."
+::'''Cong:''' "Mushroom," I want something like that!
+::'''Gloomy Poet:''' ...Let me try.
+::'''Gloomy Poet:''' ...The algorithm is being generated.
+::'''Gloomy Poet:''' "I offer you whatever insight my reflections may hold,"
+::'''Gloomy Poet:''' "Whatever creativity and frankness my life."
+::'''Gloomy Poet:''' "I offer you the spark of emotions that the Vidyadhara could never have."
+::'''Gloomy Poet:''' "I offer you all the love I could muster that I have saved, somehow..."
+::'''Gloomy Poet:''' (Trailblazer), could you add one sentence for me?
+::{{DIcon|Arrow}} That love which I've been holding onto since I was born.
+::<pre>{
+	"$type": "RPG.GameCore.SetTextJoinValue",
+	"TextJoinID": 52,
+	"Value": "2"
+}</pre>
+:::'''Cong:''' Holding onto... Oh! It's referring to the Unity Lock.
+::{{DIcon|Arrow}} The love that is untouched by joy, by adversities.
+::<pre>{
+	"$type": "RPG.GameCore.SetTextJoinValue",
+	"TextJoinID": 52,
+	"Value": "3"
+}</pre>
+:::'''Cong:''' You're very talented.
+::{{DIcon|Arrow}} Jingzhai, I love you!
+::<pre>{
+	"$type": "RPG.GameCore.SetTextJoinValue",
+	"TextJoinID": 52,
+	"Value": "4"
+}</pre>
+:::'''Gloomy Poet:''' Isn't it too direct?
+:::'''Cong:''' It's good to be direct!
+::'''Cong:''' ...Even if Guyu were here, the poem would still be written this way.
+::'''Cong:''' (Trailblazer), I'll pluck up the courage to confess to Jingzhai again. Please come with me to witness it.
+::----
+
+;(Unused &mdash; All_Talk_End)
+:----
+
+;(Unused &mdash; All_Talk_Cancel_1)
+:'''Cong:''' Haven't you finished collecting the inspo jade abaci yet?
+::----
+
+;(Unused &mdash; All_Talk_Cancel_2)
+:'''Cong:''' Um, haven't you found the ''Drifting Clouds''?
+::----
 {{Dialogue End}}
 
 ===Talk is cheap, you must show the Metrical Poet what you mean{{subst:void|<!--202090135-->}}===
 {{Mission Description|type=adventure|location=Exalting Sanctum|update|What era are we living in? You're still talking about those old forms? You have to show it what liberal poetry is like.<br />Maybe you can swing this bat around, I think that's called "Brutalist Poetry"!}}
 {{Dialogue Start}}
-:{{tx}}
+:{{Black Screen|After an ear-splitting sound, the Metrical Poet exploded into a firework, probably from taking in too much poetic knowledge. It did not even say "I'll be back!" before it was gone.}}
+:{{Black Screen|You taught the old-fashioned Metrical Poet a lesson and schooled it about the power of free verse. It was a shame that it no longer has the chance to change the style of its poems. How wonderful.}}
+:'''Gloomy Poet:''' Let's go. Since we already have the Inspo Jade Abacus and the ''Drifting Clouds'', we may set off to meet our master.
+----
+;(Obtain {{Item|Inspo Jade Abacus: Metrical|20|x=1}})
 {{Dialogue End}}
 
 ===Go to the Divination Commission and bear witness to Cong's confession{{subst:void|<!--202090118-->}}===
 {{Mission Description|type=adventure|location=Divination Commission|update|Cong hopes that you can witness his successful confession to Jingzhai.<br />But first, he has to succeed. You have a hunch that Cong is approaching this a little too simplistically.<br />To be honest, if just a poem is enough for a successful confession, then all the rules of this world will certainly fall apart.}}
 {{Dialogue Start}}
-:{{tx}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+----
+:'''Jingzhai:''' Why are you here again? I already told you...
+:'''Cong:''' No, I'm no longer the Cong you know. I've written the most beautiful poem for you. Please listen till the end.
+:'''Jingzhai:''' I was once in love with a poet, but that doesn't mean I'll like every poet I meet. Do you understand?
+:'''Cong:''' I don't understand.
+:'''Jingzhai:''' ...Fine. Just read it.
+:'''Cong:''' "I offer you whatever insight my reflections may hold, whatever creativity and frankness my life."
+:'''Cong:''' "I offer you the spark of emotions that the Vidyadhara could never have. I offer you all the love I could muster that I have saved, somehow &mdash; (/That love which I've been holding onto since I was born./The love that is untouched by joy, by adversities./Jingzhai, I love you!)"
+:'''Jingzhai:''' ...
+:'''Jingzhai:''' This is much better than the doggerel before, but I can't feel your affection. You didn't write this, did you?
+:'''Cong:''' I've made some poet ingenia. The poems they write are considered mine. And you know what? You can have as many poems like this as you want. If you like it, I can write more for you.
+:'''Jingzhai:''' Thank you, but I'm sorry I can't accept it. Please go home.
+:'''Cong:''' I&mdash;I...
+----
+:'''(Trailblazer):''' (This is bad. I should check on Cong.)
 {{Dialogue End}}
 
 ===Catch up to Cong{{subst:void|<!--202090120-->}}===
 {{Mission Description|type=adventure|location=Divination Commission|update|Cong fled, unsurprisingly. Anyway, let's catch up first.<br />Cong never really had any self-confidence. Perhaps he knew before he opened his mouth. Let's comfort him and let this blow over.<br />That aside, you haven't even received your "Big Reward" yet.}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Cong)
+----
+:'''Cong:''' *sniffle* I failed again... "Mushroom," do you have a better poem?
+:'''Gloomy Poet:''' Being a poet won't win the heart of Ms. Jingzhai. Please face the music.
+:{{DIcon|Arrow}} You don't need a poet ingenium from the start.
+::'''Gloomy Poet:''' This is difficult to hear, as it denies the meaning of my existence... Yet, you're right.
+:{{DIcon|Arrow}} Even if you have the best poems in the world, they won't help you.
+:'''Gloomy Poet:''' None of what we've done so far has anything to do with Ms. Jingzhai.
+:'''Gloomy Poet:''' Master, you've adopted the most expensive but least efficient solution &mdash; writing love poems &mdash; for the issue of "winning the heart of Ms. Jingzhai."
+:'''Gloomy Poet:''' Love poems cannot replace care and communication.
+:{{DIcon|Arrow}} Have you made the effort to understand Jingzhai?
+::'''Cong:''' I thought she would fall in love with me as long as I could write the best poem in the world.
+:{{DIcon|Arrow}} Have you just been writing poems so far?
+::'''Cong:''' Her ex is a poet, so she must be into people who write poems...
+::'''Gloomy Poet:''' You've never made the effort to understand Jingzhai.
+:'''Gloomy Poet:''' You're just jealous of the poet whom she dated before. Yet, jealousy is a useless emotion.
+:'''Cong:''' ...I don't feel like giving up yet. Can you help me again?
+:'''Gloomy Poet:''' Oh, a mushroom is not in the position to teach you things like this.
+:'''Gloomy Poet:''' (Trailblazer) and I will help you find out Jingzhai's preferences. You should prepare a gift that she likes and a moving speech. When an opportunity arises, you'll do another love confession.
+:{{DIcon|Arrow}} How do you know so much about this...
+:'''Gloomy Poet:''' When I was wandering outside, I downloaded books about romantic relationships such as ''The Key to a Good Long-Life Species Relationship''... Yet, I don't have the need for love. Oh, this is depressing.
+:'''Gloomy Poet:''' (Trailblazer), let's get in touch with Jingzhai's colleagues and friends. Perhaps, we can gain some useful info for my master.
+----
+
+;(Talk to Jingzhai)
+:'''Jingzhai:''' You must be Cong's friend. Let's catch up with Cong first.
 {{Dialogue End}}
 
 ===Ask Mingyue for more information{{subst:void|<!--202090121-->}}===
 {{Mission Description|type=adventure|location=Divination Commission|update|As you feared, Cong never got to know Jingzhai serious and didn't even know what she really liked. You have no choice but to go ask around.<br />Of course, you found Jingzhai's refusal to be a little suspicious. Maybe you'll find some new clues if you ask carefully.<br />Doesn't that poet, Guyu, stir concern in anyone?}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Mingyue)
+:'''Mingyue:''' I'm busy, what do you want to tell me?
+:{{DIcon}} I'd like to ask you about Jingzhai.
+:'''Mingyue:''' Although I'm a diviner, I don't gossip about others.
+:The girl looked around. After making sure the coast was clear, she turned to you with her eyes filled with excitement.
+:'''Mingyue:''' Tell me. What do you want to know?
+:{{DIcon|Talk}} Have you heard about someone named Guyu?
+::'''Mingyue:''' Oh, it's the poet that Jingzhai dated before. I've heard of him!
+::'''Mingyue:''' I heard that Jingzhai had a sweet relationship with him. But she seems to be single now. Perhaps, the poet has gone through hatching rebirth or fallen in love with another. No one is sure.
+::'''Mingyue:''' No matter how happy a couple is, their relationship is bound to end up badly. Just like divination, woe is the norm.
+::'''Mingyue:''' That's why I insist on staying single!
+:;(Return to previous option selection)
+:{{DIcon|Talk}} Does Jingzhai have any hobbies?
+::'''Mingyue:''' It's undoubtedly writing and reciting poems. Haha, Jingzhai's hobbies are quite old-fashioned. Oh, you want to know about her other hobbies?
+::'''Mingyue:''' Among us, she's the most serious about her profession. When she's free, she'll do divination and predict the future. The questions she asks are mostly about her relationship, but the results are not very accurate.
+::'''Mingyue:''' Hee-hee, I'm tempted at times to give her a plaque that reads "Genius Diviner" as her birthday gift.
+:;(Return to previous option selection)
+:{{DIcon|Arrow}} What kind of person is Jingzhai attracted to?
+::'''Mingyue:''' I've discussed this with my colleagues before. I think Jingzhai is into people who are unpredictable and romantic. As for why, well, it's been ages since she dated someone. I think it's been a century...
+::'''Mingyue:''' She was deeply in love with Guyu, the great poet. I heard that she still keeps the Unity Lock from him as she can't move on from the relationship.
+::{{DIcon|Arrow}} Is the lock similar to this?
+:<pre>{
+	"$type": "RPG.GameCore.TalkFigure",
+	"ImagePath": "SpriteOutput/Mission/TalkItem/SubMIssion_140232.png"
+}</pre>
+::'''Mingyue:''' I think it's the same as this one. Tsk, you can't expect any surprises from the things men give you.
+:<pre>{
+	"$type": "RPG.GameCore.TalkFigure",
+	"Show": false,
+	"ImagePath": "SpriteOutput/Mission/TalkItem/SubMIssion_140232.png"
+}</pre>
+::'''Mingyue:''' Their gifts are either tiny stones polished into unique shapes or small cheap crafts that can be bought anywhere.
+::'''Mingyue:''' A guy even wanted to gift me the right to name a star once... Oh, please! Once the Xianzhou sails off, I can't even see the star anymore...
+
+;(Talk to Jingzhai)
+:'''Jingzhai:''' Looking for me?
+:{{DIcon}} I'm Cong's friend. Can we talk?
+:'''Jingzhai:''' I... see. How can I help you, Cong's friend?
+:{{DIcon|Talk}} Do you still love Guyu?
+::'''Jingzhai:''' Oh, my... You're just like Cong. He always asks me questions that make me uncomfortable from the get-go.
+::'''Jingzhai:''' However, I don't mind answering this once if it means you'll give up. I don't love Guyu anymore, but that doesn't mean I'll accept Cong.
+:;(Return to previous option selection)
+:{{DIcon|Talk}} Why did you ask Cong to throw away the Unity Lock?
+::'''Jingzhai:''' That was the lock he held in his hand when he underwent hatching rebirth. Yet, that lock means nothing to me now.
+::{{DIcon|Arrow}} Why are you so sure about that?
+::{{DIcon|Arrow}} You also have a lock like that, don't you?
+::'''Jingzhai:''' ...Please stop bothering me.
+:;(Return to previous option selection)
+:{{DIcon|Talk}} Do you have anything you like?
+::'''Jingzhai:''' New clothes and jewelry? Still, I won't accept them if they are from Cong.
+:;(Return to previous option selection)
+:{{DIcon|Arrow}} Why do you find Cong unattractive?
+::'''Jingzhai:''' Cong is a great guy. Unlike his previous lifetime, he is very talented in the manufacturing of ingenia.
+::'''Jingzhai:''' I just won't fall in love with anybody anymore. This isn't Cong's fault...
+::'''Jingzhai:''' Just tell Cong that when you get back.
+
+;(Talk to Huixing)
+:'''Huixing:''' It's you, (Trailblazer). Is there something you need?
+:{{DIcon}} I'd like to ask you about Jingzhai.
+:'''Huixing:''' Jingzhai, our Managing Diviner? As her colleague, I shouldn't comment about her in public.
+:'''Huixing:''' Jingzhai has a great personality and excels at what she does. She is an amazing colleague.
+:{{DIcon|Talk}} Have you heard about someone named Guyu?
+::'''Huixing:''' Oh, I see you're interested in her love life.
+::'''Huixing:''' I've heard of him. I think he was a Vidyadhara poet. Jingzhai used to talk about him a lot.
+::'''Huixing:''' It is said that they are lovers not only in this life. Guyu and Jingzhai dated each other in their two previous lifetimes too. Everyone considers that a romantic love story.
+::'''Huixing:''' However, this isn't possible from the perspective of the Vidyadhara like us.
+::'''Huixing:''' Without consuming a special potion, there's no way we can remember our lovers from our past lifetimes. Otherwise, one needs to carry something like a token during their hatching rebirth.
+:;(Return to previous option selection)
+:{{DIcon|Talk}} What does Jingzhai like?
+::'''Huixing:''' Like? She always complains about how she needs more beautiful clothes. Well, girls will never think they have enough clothes, even if they live to be a thousand years old.
+:;(Return to previous option selection)
+:{{DIcon|Arrow}} What kind of person is Jingzhai attracted to?
+::'''Huixing:''' Shouldn't you ask her directly? Forget it. I understand. I'm sure many are interested in such a lovely lady like her.
+::'''Huixing:''' Still, most suitors end up being disappointed. I think you will be no exception.
+::{{DIcon|Arrow}} I didn't say I was interested in Jingzhai.
+:::'''Huixing:''' Well, here's my advice for you &mdash; it's better not to date a long-life species, especially the Xianzhou natives, as you will likely get hurt.
+::{{DIcon|Arrow}} Why?
+:::'''Huixing:''' If the rumor is right, Jingzhai has gone through too many memorable relationships. To put it bluntly, she can't feel the excitement of being in a relationship anymore now.
+::'''Huixing:''' She might have a youthful look, but her soul has aged. Her heart will not flutter for anyone again.
 {{Dialogue End}}
 
 ===Ask Huixing for more information{{subst:void|<!--202090122-->}}===
 {{Dialogue Start}}
-:{{tx}}
 {{Dialogue End}}
 
 ===Ask Jingzhai for more information{{subst:void|<!--202090123-->}}===
 {{Dialogue Start}}
-:{{tx}}
 {{Dialogue End}}
 
 ===Head to the Exalting Sanctum and find Cong{{subst:void|<!--202090125-->}}===
 {{Mission Description|type=adventure|location=Exalting Sanctum|update|Cong returned to the Exalting Sanctum, but he hasn't recovered from the failure of the confession. Go and tell Cong what you've learned.<br />You learned that most of the Vidyadhara in Xianzhou are indifferent and not good at forming attachments with others. But at the end of the day, that's just a stereotype.<br />Cong, just give it your all!}}
 {{Dialogue Start}}
-:{{tx}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+----
+:'''Cong:''' Ruoyue, what do you mean by that? I just want to know who Jingzhai likes...
+:'''Ruoyue:''' I've said it three times. "It's you, but it's not you." That's the result of my divination.
+:'''Ruoyue:''' I can't reveal too many details, but there is nothing wrong with this result.
+:{{DIcon|Arrow}} Cong, have you finished writing the poem?
+:'''Cong:''' Oh, you are back. Have you gathered any info?
+:'''Cong:''' Thank you. I see Guyu has already gone through the hatching rebirth... Still, I feel like I have missed out on something.
+:{{DIcon|Arrow}} Guyu has undergone the hatching rebirth?
+::'''Gloomy Poet:''' Just like you, Guyu is a Vidyadhara, loves Jingzhai, has a Unity Lock, and has probably gone through the hatching rebirth...
+:{{DIcon|Arrow}} What's Jingzhai's attitude toward the Unity Lock?
+::'''Gloomy Poet:''' Miss Jingzhai knows you've had the lock since your birth and she hopes you will throw it away...
+:'''Gloomy Poet:''' If my guess is right...
+:{{DIcon|Arrow}} In Cong's former life, he was Guyu.
+:{{DIcon|Arrow}} Have you thought of something?
+::'''Gloomy Poet:''' In Cong's former life, he was Guyu.
+:'''Cong:''' Do you mean... I was Guyu in my former life? I am the poet I've been jealous of so far...
+:'''Cong:''' So, that's what "It's you, but it's not you" means... Do you have evidence?
+:{{DIcon|Arrow}} You already have it.
+:{{DIcon|Arrow}} Take a closer look at your Unity Lock.
+<pre>{
+	"$type": "RPG.GameCore.TalkFigure",
+	"ImagePath": "SpriteOutput/Mission/TalkItem/SubMIssion_140232.png"
+}</pre>
+:Cong and you examine the beautiful lock. A phrase that read "I love Jingzhai" is engraved near the keyhole.
+:The engraving was no longer clear due to the passage of hundreds of years. After checking it repeatedly, the two of you are even more certain of what the phrase meant.
+<pre>{
+	"$type": "RPG.GameCore.TalkFigure",
+	"Show": false,
+	"ImagePath": "SpriteOutput/Mission/TalkItem/SubMIssion_140232.png"
+}</pre>
+:'''Cong:''' I didn't engrave the words. Was I really Guyu in my former life? Jingzhai and I are fated to be together!
+:'''Cong:''' I'm bursting with confidence now. I have to confess to her again.
+:{{DIcon|Arrow}} Let's go!
+:{{DIcon|Arrow}} Didn't you just get rejected?
+::'''Cong:''' Do I look like someone who wallows in self-pity?
+:'''Cong:''' If Jingzhai turns me down again, I'll show her our love token. I'm sure she'll be surprised and curious about my identity.
+:'''Cong:''' Let's pick a gift for her. Come and help me think of what to buy.
+:{{DIcon|Arrow}} Get Salesby to make a plaque that reads "Genius Diviner."
+:{{DIcon|Arrow}} Go to Cloudbreadth Sleeves to buy some beautiful clothes.
+:{{DIcon|Arrow}} Go to the Iridescent Parlor to buy the latest jade abacus model.
+<pre>{
+	"$type": "RPG.GameCore.SetMissionCustomValue",
+	"SubmissionID": 202090125,
+	"MissionCustomValue": {
+		"Index": 3,
+		"Name": "OldValue_3",
+		"ValidValueParamList": [
+			1,
+			2,
+			3
+		]
+	},
+	"CustomValue": 1
+}</pre>
+:'''Cong:''' I believe in your taste! Let's go!
+----
 {{Dialogue End}}
 
 ===Buy a gift for Jingzhai{{subst:void|<!--202090126-->}}===
 {{Mission Description|type=adventure|location=Central Starskiff Haven|update|Cong decided to confess once again, this time with a carefully prepared gift and a sincere heart. Anyway, set off now to buy the gift.<br />After listening to your analysis, Cong immediately regained his spirits. Cong is really a simple young man. <br />If so, does Jingzhai really know?}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Obtain {{Item|Stainless Steel Plaque|20|x=1}})
+
+;(Talk to Salesby)
+:'''Salesby:''' Everything. We've got whatever you need.
+<pre>{
+	"$type": "RPG.GameCore.VerifyInteractingEntity",
+	"GroupID": 25,
+	"ConfigID": 400001
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.ShowShop",
+	"ShopType": 12,
+	"TaskID": []
+}</pre>
 {{Dialogue End}}
 
 ===Witness Cong's confession again{{subst:void|<!--202090129-->}}===
 {{Mission Description|type=adventure|location=Central Starskiff Haven|update|Cong wants to confess his love again shortly. He knows that he was Jingzhai's lover in his previous life, and this gives him added confidence. Go and witness it again, this should be the last time.<br />Logically speaking, this occasion does not require your presence at all. But, who knows how and where things will pan out?<br />You should see it through to the end.}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Lose {{Item|Stainless Steel Plaque|20|x=1}})
+
+;(Talk to Jingzhai)
+----
+:'''Jingzhai:''' I thought you would come alone, but it doesn't matter. Please forget about me, Cong.
+:'''Cong:''' I've written a poem and prepared a gift for you. (Trailblazer), the gift. Give it to me.
+<pre>{
+	"$type": "RPG.GameCore.SelectMissionItem",
+	"ItemIDList": [
+		140233,
+		140234,
+		140235
+	],
+	"ItemHiddenIDList": [],
+	"ItemSelect": [
+		{
+			"Item1": 140233,
+			"TriggerCustomString": "TalkSentence_202024803"
+		},
+		{
+			"Item1": 140234,
+			"TriggerCustomString": "TalkSentence_202024803"
+		},
+		{
+			"Item1": 140235,
+			"TriggerCustomString": "TalkSentence_202024803"
+		}
+	],
+	"SlotNum": 1,
+	"SimpleTalk": {},
+	"OnSubmitFail": [
+		{
+			"$type": "RPG.GameCore.TriggerCustomString",
+			"CustomString": {
+				"Value": "ALL_TALK_CANCEL"
+			}
+		}
+	],
+	"OnSubmitCancel": [
+		{
+			"$type": "RPG.GameCore.TriggerCustomString",
+			"CustomString": {
+				"Value": "ALL_TALK_CANCEL"
+			}
+		}
+	]
+}</pre>
+;(If {{F|MissionCV-2020901-4}} is undefined 1)
+;(Unused &mdash; TalkSentence_202024803)
+<pre>{
+	"$type": "RPG.GameCore.SetMissionCustomValue",
+	"SubmissionID": 202090129,
+	"MissionCustomValue": {
+		"Index": 4,
+		"Name": "OldValue_4",
+		"ValidValueParamList": [
+			1
+		]
+	},
+	"CustomValue": 1
+}</pre>
+::'''Jingzhai:''' ...
+::'''Jingzhai:''' Cong, you don't get it.
+::'''Jingzhai:''' You're a great person, and I can feel your sincerity. However, I just can't fall in love with anyone anymore. This has nothing to do with you.
+::'''Cong:''' ...I'm not just anyone. I'm Guyu's reincarnation. Look, you also have a Unity Lock like this.
+::'''Cong:''' Guyu held this lock tightly in his hands before he underwent the hatching rebirth in the moonlight. He hoped to continue his relationship with you after the reincarnation.
+::'''Jingzhai:''' ...That is just his wishful thinking, which is why I want you to throw the lock away. You are not him, and he isn't related to you. You should search for your own happiness, not the shadow of someone else's joy.
+::'''Cong:''' But I'm not pursuing Guyu's happiness...
+::'''Jingzhai:''' Cong, I don't want to get your hopes up. You still have passion for love, but I don't. You'll just be a parched man dying of thirst in a desert, with me incapable of reciprocating your emotions.
+::'''Jingzhai:''' No matter how many times you confess in the future, I'll just keep on rejecting you.
+::'''Cong:''' I&mdash;I...
+::----
+::'''Jingzhai:''' *sigh* I really hope that he gives up on me.
+::{{DIcon|Arrow}} I understand, but...
+::{{DIcon|Arrow}} Perhaps, this is the best ending for Cong.
+::'''Jingzhai:''' Cong... For the Vidyadhara, the hatching rebirth will wash away their memory. However, for some reason, after every reincarnation of Guyu, he will always find me and immediately fall head over heels for me.
+::'''Jingzhai:''' I thought it was romantic and fun too in the beginning. He was a Cloud Knight at some point, and a diviner working with me at some other point, and was also once a poet who wrote poems for me...
+::'''Jingzhai:''' For Cong, it's his first time meeting me, and the feelings he has for me are new. But for me, this has been my fourth reunion with him.
+::'''Jingzhai:''' Short-life species couples easily make promises about eternal love... But once you live long enough, you will discover how life slowly deprives you of your feelings.
+::'''Jingzhai:''' I used to do wild things for love too. But now, love does not leave a single ripple in my heart. I don't want to lie to Cong, so I hope he can give up as early as possible.
+::{{DIcon|Arrow}} I want to hear more stories about you.
+:::'''Jingzhai:''' Fine, but there's nothing much to tell.
+:::{{DIcon|Talk}} You're very faithful to your lover, but your love life is pretty complicated...
+::::'''Jingzhai:''' Just like you short-life species, I've experienced breakups and reconciliations in my love life too. Everything has got to do with the previous incarnations of Cong...
+::::'''Jingzhai:''' Every previous incarnation of Cong is jealous of the talent of his predecessor. While Cong is jealous of Guyu, Guyu was jealous of the Cloud Knight before him.
+::::'''Jingzhai:''' I think it's time to end this absurd love cycle.
+:::;(Return to previous option selection)
+:::{{DIcon|Talk}} Is it because you're a long-life species?
+::::'''Jingzhai:''' I can't say it applies to everyone. Just imagine a short-life species couple that has been together for fifty or sixty years. They might still love each other, but they won't be as enthusiastic as when they were young.
+::::'''Jingzhai:''' Even if the relationship can last for a millennium, they will be just two people living together.
+::::'''Jingzhai:''' Perhaps, short-life species are best suited to enjoy the sweetness of love.
+:::;(Return to previous option selection)
+:::{{DIcon|Arrow}} Cong's case is special...
+::::'''Jingzhai:''' Do you mean how he manages to find me after every reincarnation? I find it interesting too. When it happened for the first time, I thought it was very romantic, and we were meant to be together. On the second time, I thought I would have no problem loving him for another ten lifetimes...
+::::'''Jingzhai:''' But now, I'm sorry to say that I have no feelings for him at all.
+::::----
+:::{{DIcon|Exit}} I get your point. Let me check on Cong.
+::::----
+::{{DIcon|Exit}} I get your point. Let me check on Cong.
+:::----
+
+;(Unused &mdash; ALL_TALK_CANCEL)
+:'''Cong:''' Hey, you didn't forget the gifts, did you?
+::----
+
+;(Talk to Cong)
+----
+:'''Jingzhai:''' I thought you would come alone, but it doesn't matter. Please forget about me, Cong.
+:'''Cong:''' I've written a poem and prepared a gift for you. (Trailblazer), the gift. Give it to me.
+<pre>{
+	"$type": "RPG.GameCore.SelectMissionItem",
+	"ItemIDList": [
+		140233,
+		140234,
+		140235
+	],
+	"ItemHiddenIDList": [],
+	"ItemSelect": [
+		{
+			"Item1": 140233,
+			"TriggerCustomString": "TalkSentence_202024803"
+		},
+		{
+			"Item1": 140234,
+			"TriggerCustomString": "TalkSentence_202024803"
+		},
+		{
+			"Item1": 140235,
+			"TriggerCustomString": "TalkSentence_202024803"
+		}
+	],
+	"SlotNum": 1,
+	"SimpleTalk": {},
+	"OnSubmitFail": [
+		{
+			"$type": "RPG.GameCore.TriggerCustomString",
+			"CustomString": {
+				"Value": "ALL_TALK_CANCEL"
+			}
+		}
+	],
+	"OnSubmitCancel": [
+		{
+			"$type": "RPG.GameCore.TriggerCustomString",
+			"CustomString": {
+				"Value": "ALL_TALK_CANCEL"
+			}
+		}
+	]
+}</pre>
+;(If {{F|MissionCV-2020901-4}} is undefined 1)
+;(Unused &mdash; TalkSentence_202024803)
+<pre>{
+	"$type": "RPG.GameCore.SetMissionCustomValue",
+	"SubmissionID": 202090129,
+	"MissionCustomValue": {
+		"Index": 4,
+		"Name": "OldValue_4",
+		"ValidValueParamList": [
+			1
+		]
+	},
+	"CustomValue": 1
+}</pre>
+::'''Jingzhai:''' ...
+::'''Jingzhai:''' Cong, you don't get it.
+::'''Jingzhai:''' You're a great person, and I can feel your sincerity. However, I just can't fall in love with anyone anymore. This has nothing to do with you.
+::'''Cong:''' ...I'm not just anyone. I'm Guyu's reincarnation. Look, you also have a Unity Lock like this.
+::'''Cong:''' Guyu held this lock tightly in his hands before he underwent the hatching rebirth in the moonlight. He hoped to continue his relationship with you after the reincarnation.
+::'''Jingzhai:''' ...That is just his wishful thinking, which is why I want you to throw the lock away. You are not him, and he isn't related to you. You should search for your own happiness, not the shadow of someone else's joy.
+::'''Cong:''' But I'm not pursuing Guyu's happiness...
+::'''Jingzhai:''' Cong, I don't want to get your hopes up. You still have passion for love, but I don't. You'll just be a parched man dying of thirst in a desert, with me incapable of reciprocating your emotions.
+::'''Jingzhai:''' No matter how many times you confess in the future, I'll just keep on rejecting you.
+::'''Cong:''' I&mdash;I...
+::----
+::'''Jingzhai:''' *sigh* I really hope that he gives up on me.
+::{{DIcon|Arrow}} I understand, but...
+::{{DIcon|Arrow}} Perhaps, this is the best ending for Cong.
+::'''Jingzhai:''' Cong... For the Vidyadhara, the hatching rebirth will wash away their memory. However, for some reason, after every reincarnation of Guyu, he will always find me and immediately fall head over heels for me.
+::'''Jingzhai:''' I thought it was romantic and fun too in the beginning. He was a Cloud Knight at some point, and a diviner working with me at some other point, and was also once a poet who wrote poems for me...
+::'''Jingzhai:''' For Cong, it's his first time meeting me, and the feelings he has for me are new. But for me, this has been my fourth reunion with him.
+::'''Jingzhai:''' Short-life species couples easily make promises about eternal love... But once you live long enough, you will discover how life slowly deprives you of your feelings.
+::'''Jingzhai:''' I used to do wild things for love too. But now, love does not leave a single ripple in my heart. I don't want to lie to Cong, so I hope he can give up as early as possible.
+::{{DIcon|Arrow}} I want to hear more stories about you.
+:::'''Jingzhai:''' Fine, but there's nothing much to tell.
+:::{{DIcon|Talk}} You're very faithful to your lover, but your love life is pretty complicated...
+::::'''Jingzhai:''' Just like you short-life species, I've experienced breakups and reconciliations in my love life too. Everything has got to do with the previous incarnations of Cong...
+::::'''Jingzhai:''' Every previous incarnation of Cong is jealous of the talent of his predecessor. While Cong is jealous of Guyu, Guyu was jealous of the Cloud Knight before him.
+::::'''Jingzhai:''' I think it's time to end this absurd love cycle.
+:::;(Return to previous option selection)
+:::{{DIcon|Talk}} Is it because you're a long-life species?
+::::'''Jingzhai:''' I can't say it applies to everyone. Just imagine a short-life species couple that has been together for fifty or sixty years. They might still love each other, but they won't be as enthusiastic as when they were young.
+::::'''Jingzhai:''' Even if the relationship can last for a millennium, they will be just two people living together.
+::::'''Jingzhai:''' Perhaps, short-life species are best suited to enjoy the sweetness of love.
+:::;(Return to previous option selection)
+:::{{DIcon|Arrow}} Cong's case is special...
+::::'''Jingzhai:''' Do you mean how he manages to find me after every reincarnation? I find it interesting too. When it happened for the first time, I thought it was very romantic, and we were meant to be together. On the second time, I thought I would have no problem loving him for another ten lifetimes...
+::::'''Jingzhai:''' But now, I'm sorry to say that I have no feelings for him at all.
+::::----
+:::{{DIcon|Exit}} I get your point. Let me check on Cong.
+::::----
+::{{DIcon|Exit}} I get your point. Let me check on Cong.
+:::----
+
+;(Unused &mdash; ALL_TALK_CANCEL)
+:'''Cong:''' Hey, you didn't forget the gifts, did you?
+::----
 {{Dialogue End}}
 
 ===Head to the Exalting Sanctum and find Cong{{subst:void|<!--202090130-->}}===
 {{Mission Description|type=adventure|location=Exalting Sanctum|update|Cong has withdrawn into himself again. You know what he's been through and feel sorry for him. Go check on him. Hopefully his spirits will lighten up.<br />Besides, you haven't gotten that "Big Reward" you've been thinking about all this time.<br />It's not necessarily a bad thing to experience something like this at least once.}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Cong)
+----
+:'''Cong:''' ...
+:'''Cong:''' ...
+:'''Cong:''' Hi.
+:'''Cong:''' Could you please scooch over a bit?
+:'''Cong:''' Oh, I'm so sad.
+:{{DIcon|Arrow}} Are you a mushroom now?
+::'''Cong:''' Yes. I'm a mushroom.
+:{{DIcon|Arrow}} Sure. How're you feeling?
+::'''Cong:''' You must be a kind person to show concern for a mushroom.
+:'''Cong:''' ...Forget it. I'm no longer a mushroom, but please let me lie down to heal my broken heart.
+:'''Cong:''' "You're a sorrowful sigh at the end of the world,"
+:'''Cong:''' "While I'm just a tiny screw."
+:'''Cong:''' "I'm at a loss, helpless in ways to mend your broken heart."
+:'''Cong:''' ...
+:'''Cong:''' Thanks, (Trailblazer). Just leave me alone here. I'll feel better after some time.
+:{{DIcon|Arrow}} Well, you sure can, because you're Cong.
+::'''Cong:''' Yes. Cong won't stay depressed for too long.
+:{{DIcon|Arrow}} Will you keep trying to win her heart?
+::'''Cong:''' I won't give up. After all, I'm Cong.
+:'''Cong:''' Here is your reward. When I get over it, I'll be my usual self again.
+----
+
+;(Talk to Gloomy Poet)
+:'''Gloomy Poet:''' Who would've thought that Cong was gloomy, too?
+:'''Gloomy Poet:''' Don't worry about him, I'm watching over him. Just let him rest for a little, and he'll be fine after.
+:'''Gloomy Poet:''' After this trifle is over, I'm better off continuing as a Gloomy Mushroom...
 {{Dialogue End}}
 
 ===Buy a gift for Jingzhai{{subst:void|<!--202090127-->}}===
 {{Mission Description|type=adventure|location=Central Starskiff Haven|update|Cong decided to confess once again, this time with a carefully prepared gift and a sincere heart. Anyway, set off now to buy the gift.<br />After listening to your analysis, Cong immediately regained his spirits. Cong is really a simple young man. <br />If so, does Jingzhai really know?}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Obtain {{Item|Cloudbreadth Sleeves Limited Vertical Collar Jacket|20|x=1}})
+
+;(Talk to Yujin)
+:'''Yujin:''' Do tell!
+:{{DIcon|Talk}} What's the difference between haute couture and ready-made?
+::'''Yujin:''' Haute couture clothings are premium items that are custom-tailored. The tailor personally handcrafts everything and quantity is limited. Every customer's size must be adhered to, with finer adjustments made to the completed article after.
+::'''Yujin:''' Our hauteur lines are all styled in Xianzhou designs. We're not the bandwagon type &mdash; each series is specially themed and packaged.
+::'''Yujin:''' Ready-made clothes cost much less than haute couture clothes. Plebeians, if you will, and can't be considered trendy. Tailors will slap on out-of-style patterns on these and hail them as "classics" of the heyday.
+::'''Yujin:''' Sometimes, they don't even bother with any designs, and plaster the clothes with their shop logo. And they're a hit with Outworlders for some reason! I hear used clothes have been auctioned off for ridiculous prices... It's an affront to this industry, I say!
+:;(Return to previous option selection)
+:{{DIcon|Talk}} Do you have any outfits to recommend?
+::'''Yujin:''' Pick a simple style, and never blindly go for the complicated. Our shop's advice is to stay away from the gaudy when buying haute couture pieces. Get the more obscure ones instead. That is the style befitting Xianzhou's elegance.
+::'''Yujin:''' To elaborate, when it comes to picking fabric and color, pick items that are skin-friendly and of neutral tones, such as wool-made ones, in colors like dark, brown, and almond.
+::'''Yujin:''' A true mark of a Xianzhou native is to buy the right one, not the most expensive one.
+:;(Return to previous option selection)
+:{{DIcon|Talk}} Has Jing Yuan really visited your shop?
+::'''Yujin:''' Haha, the general has visited before, but it was a... wayward occasion.
+::'''Yujin:''' Madam Qingzu of the Seat of Divine Foresight previously made a tailor's appointment with us, but when General Jing Yuan arrived, he just picked the cheapest ready-made clothes before trying to leave.
+::'''Yujin:''' Persuaded by Madam Qingzu, he reluctantly let our tailors measure him. But while we were fussing over him, the general closed his eyes and fell asleep...
+::'''Yujin:''' We arranged for the Seat's soldiers to help the general head back, but as soon as those Cloud Knights arrived, the general became energized and quickly left, as if the weariness were never there.
+::'''Yujin:''' I remember... I think he ordered dress attire for formal occasions.
+:;(Return to previous option selection)
+:{{DIcon|Exit}} Forget about it. I'll come back next time.
+::'''Yujin:''' It is Cloudbreadth Sleeves' honor to have entertained an esteemed guest such as yourself! Do let us know in advance the next time you come. We will close up the store just to specially welcome you!
+
+;(Talk to Qingyue)
+:'''Qingyue:''' Alright babe, what else would you like to ask?
+:{{DIcon|Talk}} What actually is a jade abacus then?
+::'''Qingyue:''' Darling, to help you understand this as an Outworlder, you can think of a jade abacus as a kind of jade computer unique to Xianzhou.
+::'''Qingyue:''' Every jade abacus contains a precise and meticulous engraved circuit and uses that to process complex calculations &mdash; just like the superconductor circuit boards common in your world.
+::'''Qingyue:''' After the Jade Decipher Workshop from the Artisanship Commission developed their Standards for Manufacture of Civilian-Purpose Jade Abaci, various brands have sprung onto the market &mdash; but I still recommend the Auspicious as the best of the lot.
+:;(Return to previous option selection)
+:{{DIcon|Talk}} You also uploading videos online?
+::'''Qingyue:''' Haha, all the hottest shopkeepers are making videos these days. Only old antique dealers leave things up to luck, desperate for passers-by to notice them...
+::'''Qingyue:''' Besides, these are adverts for my store. People like my videos, trust my products, and then come into the store to buy a jade abacus... that's how the video economy works.
+:;(Return to previous option selection)
+:{{DIcon|Talk}} I never expected jade jewelry to be so popular...
+::'''Qingyue:''' Babe, please forgive me for speaking so frankly. It's not that jade jewelry is so popular here. It's just that Outworlders have an antiquated understanding of jadeware.
+::'''Qingyue:''' Here aboard Xianzhou, these jade items are not just beautiful stones.
+:;(Return to previous option selection)
+:{{DIcon|Talk}} I sense that you're a real fiend for tech...
+::'''Qingyue:''' Ah, there aren't many people these days who can keep up with my sense of fashion. People around me are all out-of-touch. I often think that out of the masses of people who passes Starskiff Haven, only I understand how powerful the new Auspicious' algorithm is...
+::'''Qingyue:''' You know, everyone aboard Xianzhou looks really young at first glance, but as soon as they open their mouths to speak, you instantly realize just how moldy they are from the inside out. Tsk, I can't stand it.
+::'''Qingyue:''' On Xianzhou, aging has nothing to do with your age. If your mind is old, then you truly are old.
+:;(Return to previous option selection)
+:{{DIcon|Exit}} I'll consider it.
+::'''Qingyue:''' Have a good think about it, sweetie. You're welcome back, any time.
+
+;(Talk to Mengming)
+:'''Mengming:''' Ah, you spotted that we're rather quiet right now. Alright, if there are any aspects of etiquette that you don't understand, ask me, and I'll pick your brains about doing business.
+:{{DIcon|Talk}} What are the rules in tea appreciation?
+::'''Mengming:''' It would take forever to explain all the rules. I'll just talk about tea selection and water retention for now.
+::'''Mengming:''' Speaking of tea selection, take our Hunter Maofeng tea as an example. The Sleepless Earl only picks the most precious buds, usually long, pointed, and covered in fine hairs.
+::'''Mengming:''' As for water retention, tea merchants always say that mineral water is the best &mdash; but the clear and ancient water in Scalegorge Waterscape is the best. There's no better water for tea and alchemy than this.
+::'''Mengming:''' I'm also only learning and invite you to call me out if anything I've said is wrong.
+:;(Return to previous option selection)
+:{{DIcon|Talk}} What made you want to open up a teahouse here?
+::'''Mengming:''' My parents opened this teahouse, not me. The Sleepless Earl has been on Starwatcher Avenue for over four hundred years!
+::'''Mengming:''' Dad wanted to be near to the port, with all the tired and thirsty people nearby. It was always sure to be a booming business, and we owe all our successes to the kindness of our customers.
+:;(Return to previous option selection)
+:{{DIcon|Talk}} You are the model of a good young business owner.
+::'''Mengming:''' I'm... not young! I'm just at the right age to take over the family business. People may always say we foxians are naturals when it comes to business, but really it's all practice.
+::'''Mengming:''' Dad said that he wanted to test me, so he left me the teahouse and wandered off traveling with mom. I'm still a long way off from being proficient in doing business.
+::'''Mengming:''' Even now, I still have to ask Mr. Xiyan lots of questions. If you're willing to support me, please be generous with your criticism.
+:;(Return to previous option selection)
+:{{DIcon|Exit}} I don't have any other questions.
+::'''Mengming:''' It's okay. Come back when you've got more time to spare.
+
+;(Talk to Gao Tang)
+:'''Gao Tang:''' Oh, ask away. I have much to share, as long as it's about food.
+:{{DIcon|Talk}} Is it true? That there's no good food in the Starskiff Haven?
+::'''Gao Tang:''' Strictly speaking, Starskiff Haven's food is enough to sate your hunger. Whether it tastes good is another matter.
+::'''Gao Tang:''' Without stringent selection nor prudent handling of ingredients, I refuse to accept food that has been made haphazardly.
+::'''Gao Tang:''' But don't worry. Starskiff Haven's food does not represent Xianzhou's culinary landscape. You can still find restaurants dedicated to the craft here.
+::'''Gao Tang:''' If nothing else, once you've tried the dishes at the Garden of Gourmet, I'm sure you will lose interest in this subpar fare.
+:;(Return to previous option selection)
+:{{DIcon|Talk}} What kind of food does the Garden of Gourmet serve?
+::'''Gao Tang:''' The restaurant's been making sturgeons recently. This type of fish returns once every fifty years, and is a key ingredient in "Five Lords of Anhe River."
+::'''Gao Tang:''' In the Garden of Gourmet, we extract the three crunchiest bones from the tail, boil them in a broth of myriad herbs, then grill them using fresh goat's fat paste. At the final stage, we slow fry them till the meaty bones are caramelized and crisp.
+::'''Gao Tang:''' Any step that's not up to snuff in this process, and I'll dump the dish entirely. This is also why the Garden of Gourmet has no menu &mdash; we only serve one table a day.
+::'''Gao Tang:''' No such thing as food too fine, or meat too minced. Those of Xianzhou have lived for a thousand years, we must be meticulous with what goes in our mouths.
+:;(Return to previous option selection)
+:{{DIcon|Talk}} You speak with such passion when discussing cuisine.
+::'''Gao Tang:''' We are all, in some way, shaped by our food. You wouldn't want to be made shoddily, would you?
+::{{DIcon|Arrow}} I wouldn't.
+:::'''Gao Tang:''' I thought so.
+:::'''Gao Tang:''' I notice you are an Outworlder. Your food tapestry must be limited, so you must make wiser choices.
+:::'''Gao Tang:''' To be strict with what you eat is to be strict with the "reason why we are people."
+::;(Return to previous option selection)
+::{{DIcon|Arrow}} I'm fine either way.
+:::'''Gao Tang:''' Either way?
+:::'''Gao Tang:''' I notice you are an Outworlder. Your food tapestry must be limited, so you must make wiser choices.
+:::'''Gao Tang:''' To be strict with what you eat is to be strict with the "reason why we are people."
+::;(Return to previous option selection)
+::{{DIcon|Arrow}} I'm not exactly a role model to begin with.
+:::'''Gao Tang:''' I worry for you.
+:::'''Gao Tang:''' I notice you are an Outworlder. Your food tapestry must be limited, so you must make wiser choices.
+:::'''Gao Tang:''' To be strict with what you eat is to be strict with the "reason why we are people."
+::;(Return to previous option selection)
+:{{DIcon|Exit}} I'll ask you about something else next time.
+::'''Gao Tang:''' May we meet again.
+
+;(Obtain {{Item|Auspicious XV|20|x=1}})
 {{Dialogue End}}
 
 ==Other Languages==

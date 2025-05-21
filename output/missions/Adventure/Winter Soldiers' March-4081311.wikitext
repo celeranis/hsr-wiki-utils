@@ -39,13 +39,82 @@ PageTitle=#Winter Soldiers' March#
 ===Head to the Silvermane Guard Restricted Zone and discuss the military exercise details with Dunn{{subst:void|<!--408131101-->}}===
 {{Mission Description|type=adventure|location=Silvermane Guard Restricted Zone|update|Dunn sent you a message, hoping you will be the main drillmaster for the military exercise in the Silvermane Guard Restricted Zone.<br />With the commanding officer's approval, you feel you should attend this exercise.}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Dunn)
+:'''Dunn:''' Ah, so you're keeping this appointment, then. That's great. I knew I could count on you.
+:'''Dunn:''' I've mobilized all the young Silvermane Guards in the restricted zone, and they're all beyond pumped to be fighting against a legend like yourself.
+:'''Dunn:''' Trust me, you'll find it several times tougher this time if you want to break through the defensive line!
+:'''Dunn:''' Speak with my aide when you're ready &mdash; we can start the drill any time. It just takes a moment to set everything up in the restricted zone.
+;(Unused &mdash; M301_ChallengePoint01_BattleLV1_Succ)
+;(Enter battle)
+:::Wave 1: {{Enemy List|Silvermane Soldier*2; Silvermane Gunner*1}}
+:::Wave 2: {{Enemy List|Silvermane Soldier*1; Silvermane Gunner*2}}
+:::Wave 3: {{Enemy List|Silvermane Soldier*1; Silvermane Lieutenant*1; Silvermane Gunner*1}}
 {{Dialogue End}}
 
 ===Talk to the aide and complete the military training exercise once{{subst:void|<!--408131102-->}}===
 {{Mission Description|type=adventure|location=Silvermane Guard Restricted Zone|update|Dunn sent you a message, hoping you will be the main drillmaster for the military exercise in the Silvermane Guard Restricted Zone.<br />Talk to the aide and begin the first round of the military exercise, and complete the challenge meticulously designed by the Guards.}}
 {{Dialogue Start}}
-:{{tx}}
+
+
+;(Talk to Aide)
+;(If {{cx}}<!--Hidden Mission ID 4081313--> has been completed)
+::'''Aide:''' Beep-boop.
+::'''Aide:''' Well done, Drillmaster (Trailblazer). I hope I can one day be as strong as you.
+::'''Aide:''' I'm off to make a training plan with the major. My next goal is to make it to captain.
+::'''Aide:''' Thank you for enlightening me, Drillmaster (Trailblazer). Beep-boop.
+::{{DIcon|Arrow}} Can we put together another round of restricted zone drills?
+:::'''Aide:''' Sure. However, we have a limited military budget, so no rewards will be given for repeating drills.
+:::'''Aide:''' Are you sure you want to do another round of drills, Drillmaster (Trailblazer)?
+:::{{DIcon|Arrow}} Let's begin.
+::::'''Aide:''' Beep-boop. Instructions received. Setting up the drill venue...
+:::<pre>{
+	"$type": "RPG.GameCore.SetLocalPlayerDitherAlpha"
+}</pre>
+:::<pre>{
+	"$type": "RPG.GameCore.OpenTreasureChallenge",
+	"RaidID": 4013101,
+	"OnCancel": [
+		{
+			"$type": "RPG.GameCore.EndDialogueEntityInteract"
+		},
+		{
+			"$type": "RPG.GameCore.TriggerCustomString",
+			"CustomString": {
+				"Value": "ALL_TALK_END"
+			}
+		}
+	]
+}</pre>
+:::{{DIcon|Exit}} Forget it.
+::::'''Aide:''' Beep-boop. Goodbye, Drillmaster (Trailblazer).
+::{{DIcon|Exit}} Good luck.
+:::'''Aide:''' Beep-boop. Goodbye, Drillmaster (Trailblazer).
+;(Otherwise)
+::'''Aide:''' Beep &mdash; boop.
+::'''Aide:''' Hats off to you, drillmaster.
+::{{DIcon|Arrow}} Are you Dunn's aide?
+::{{DIcon|Arrow}} Hats off to you too, my guy.
+::'''Aide:''' Aide, deputy head of division 3 of the Silvermane Guards' logistics and security department, reporting for duty. Beep &mdash; boop.
+::'''Aide:''' Silvermane drills are ready to go. Everything is waiting on your command, drillmaster.
+:<pre>{
+	"$type": "RPG.GameCore.SetLocalPlayerDitherAlpha"
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.OpenTreasureChallenge",
+	"RaidID": 4013101,
+	"OnCancel": [
+		{
+			"$type": "RPG.GameCore.EndDialogueEntityInteract"
+		},
+		{
+			"$type": "RPG.GameCore.TriggerCustomString",
+			"CustomString": {
+				"Value": "ALL_TALK_END"
+			}
+		}
+	]
+}</pre>
 {{Dialogue End}}
 
 ==Other Languages==

@@ -46,90 +46,555 @@ PageTitle=#Evanesce Like the Morning Dew#
 -->
 ==Dialogue==
 {{Stub Dialogue}}
+;(Upon reaching the destination)
 {{Dialogue End}}
 
 ===Go to the first meet-up point{{subst:void|<!--202030602-->}}===
 {{Mission Description|type=companion|location=Cloudford|update|One is an obsessed nurse, and the other a patient seeking medicine. She bumped into him too many times to say that it isn't destiny. Help Banxia treat her sweetheart and put this saga to rest.<br />Find the Outworlder wanted by the Disciples of Sanctus Medicus. Hopefully he's hanging on.}}
 {{Dialogue Start}}
-:{{tx}}
+:<!--1-second delay-->
+:{{A|VO side2 bl1 banxia 154.ogg}} '''Banxia:''' I can't... I can't forget him... I must get there.
+:{{A|VO side2 bl1 bailu 148.ogg}} '''Bailu:''' This is bad. She's starting to lose touch with reality.
+:{{A|VO side2 bl1 bailu 149.ogg}} '''Bailu:''' The soothing tonic might not work anymore. This calls for... shock treatment!
+
+;(Upon reaching the destination)
+----
+:{{A|VO side2 bl1 banxia 155.ogg}} '''Banxia:''' How can that be? Where is he? We agreed to meet here...
+:{{A|VO side2 bl1 banxia 156.ogg}} '''Banxia:''' M&mdash;My head... How can that be?
+:{{A|VO side2 bl1 bailu 150 m.ogg}} {{A|VO side2 bl1 bailu 150 f.ogg}} '''Bailu:''' (Trailblazer), let her rest here for a while. I'll think of something.
+:{{A|VO side2 bl1 bailu 151.ogg}} '''Bailu:''' ...Try not to move, Banxia.
+:{{A|VO side2 bl1 banxia 157.ogg}} '''Banxia:''' B&mdash;But he's not here. We still need to find him...
+:{{A|VO side2 bl1 bailu 152.ogg}} '''Bailu:''' Nurse! Get a hold of yourself!
+:{{A|VO side2 bl1 banxia 158.ogg}} '''Banxia:''' ...!
+:{{A|VO side2 bl1 bailu 153.ogg}} '''Bailu:''' Doctor's orders!
+:{{A|VO side2 bl1 bailu 154 m.ogg}} {{A|VO side2 bl1 bailu 154 f.ogg}} '''Bailu:''' (Trailblazer), can you see if there are any clues nearby? I don't think Banxia's sweetheart would leave for no reason.
+:{{DIcon|Arrow}} Leave it to me.
+:{{DIcon|Arrow}} Maybe something bad happened to him...
+::{{A|VO side2 bl1 bailu 155.ogg}} '''Bailu:''' Hey, we've got company, remember!?
+:{{DIcon|Arrow}} dO yOu GuYs NoT hAvE pHoNeS?
+::{{A|VO side2 bl1 bailu 156.ogg}} '''Bailu:''' ...Are you talking about jade abacuses? We escaped the Alchemy Commission in a hurry &mdash; didn't have time to bring them.
+:{{A|VO side2 bl1 bailu 157.ogg}} '''Bailu:''' Leave the patient to me &mdash; I'm the Healer Lady of the Alchemy Commission, after all!
+----
 {{Dialogue End}}
 
 ===Search for clues left by the patient within the area{{subst:void|<!--202030603-->}}===
 {{Mission Description|type=companion|location=Cloudford|update|As the journey goes on, Banxia's Mara-struck symptoms begin to emerge. Her sweetheart is nowhere to be seen, maybe clues can be found nearby.<br />Maybe that person got into some trouble, both the Cloud Knights and Disciples of Sanctus Medicus would never let him off the hook.}}
 {{Dialogue Start}}
-:{{tx}}
+:{{A|VO side2 bl1 player 120 m.ogg}} {{A|VO side2 bl1 player 120 f.ogg}} '''(Trailblazer):''' (Let's start with this area and see if we can find any clues nearby.)
+<pre>{
+	"$type": "RPG.GameCore.CreateProp",
+	"GroupID": {
+		"FixedValue": {
+			"Value": 78
+		}
+	},
+	"GroupPropID": {
+		"FixedValue": {
+			"Value": 300004
+		}
+	},
+	"CreateList": []
+}</pre>
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+<pre>{
+	"$type": "RPG.GameCore.PlayNPCBubbleTalk",
+	"BubbleTalkInfoList": [
+		{
+			"AutoSkipTime": 2,
+			"GroupID": 78,
+			"GroupNpcID": 400002,
+			"TalkSentenceID": 202060117
+		},
+		{
+			"AutoSkipTime": 3,
+			"GroupID": 78,
+			"GroupNpcID": 400001,
+			"TalkSentenceID": 202060118
+		},
+		{
+			"AutoSkipTime": 3,
+			"GroupID": 78,
+			"GroupNpcID": 400002,
+			"TalkSentenceID": 202060119
+		}
+	],
+	"InstantFinish": false
+}</pre>
 {{Dialogue End}}
 
 ===Give Bailu the clues you found{{subst:void|<!--202030634-->}}===
 {{Mission Description|type=companion|location=Cloudford|update|You found a notebook. Give it to Bailu, then formulate a plan.<br />It looks like Banxia's sweetheart was tracked by the Disciples of Sanctus Medicus and had to switch location.}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Bailu)
+:{{A|VO side2 bl1 bailu 166.ogg}} '''Bailu:''' What happened? Did you find any clues?
+:{{DIcon|Arrow}} (Hand over the note you picked up.)
+:{{A|VO side2 bl1 banxia 169.ogg}} '''Banxia:''' *coughing* ...The Disciples of Sanctus Medicus already had their eye on this place?
+:{{A|VO side2 bl1 banxia 170.ogg}} '''Banxia:''' *sigh* I just hope he's okay. Let's... keep walking...
+:{{A|VO side2 bl1 bailu 167 m.ogg}} {{A|VO side2 bl1 bailu 167 f.ogg}} '''Bailu:''' No way. Do you know how bad your condition is? Don't worry, I'll find Liangmu and treat him. (Trailblazer), send Banxia back to the apothecary in Starskiff Haven.
+:{{A|VO side2 bl1 banxia 171.ogg}} '''Banxia:''' No, I know exactly how bad my condition is. That's why I've changed my mind... I want to see him one last time.
+:{{A|VO side2 bl1 banxia 172.ogg}} '''Banxia:''' You'll help me, right?
+:{{A|VO side2 bl1 bailu 168.ogg}} '''Bailu:''' ...
+:{{A|VO side2 bl1 banxia 173 m.ogg}} {{A|VO side2 bl1 banxia 173 f.ogg}} '''Banxia:''' (Trailblazer), I have a favor to ask you. You've seen for yourself how dangerous the mara-struck can be. If the time comes... please protect the Dragon Lady.
+:{{DIcon|Arrow}} I'll do what I must.
+:{{A|VO side2 bl1 banxia 174.ogg}} '''Banxia:''' ...Thank you, I'm glad to hear you say that.
+----
 {{Dialogue End}}
 
 ===Follow the clues and go to the next meet-up point{{subst:void|<!--202030604-->}}===
 {{Mission Description|type=companion|location=Cloudford|update|One is an obsessed nurse, and the other a patient seeking medicine. She bumped into him too many times to say that it isn't destiny. Meet up with him at the next location.<br />There are more and more Disciples of Sanctus Medicus around, be careful.}}
 {{Dialogue Start}}
-:{{tx}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{A|VO side2 bl1 bailu 169.ogg}} '''Bailu:''' I caught sight of a lot of disciples in the area just now.
+:{{A|VO side2 bl1 banxia 175.ogg}} '''Banxia:''' I'm a traitor to them... They won't stand idly by if they lay eyes on me.
+:{{A|VO side2 bl1 banxia 176.ogg}} '''Banxia:''' If you can't fend them off... Just let me go with them...
+:{{A|VO side2 bl1 bailu 170.ogg}} '''Bailu:''' ...Does one traitor require so many people?
+----
+:{{A|VO side2 bl1 bailu 173.ogg}} '''Bailu:''' (This Ten-Lords Commission judge packs a punch! But Banxia, you&mdash;)
+:{{A|VO side2 bl1 banxia 179.ogg}} '''Banxia:''' (Shh, if she notices my symptoms, she won't hesitate.)
+:{{A|VO side2 bl1 xueyi 103.ogg}} '''Xueyi:''' Why are the Disciples of Sanctus Medicus pursuing you?
+----
+:{{DIcon|Arrow}} We're just passing tourists.
+::{{A|VO side2 bl1 xueyi 104.ogg}} '''Xueyi:''' Tourists?
+:{{DIcon|Arrow}} We're an Alchemy Commission rescue squad.
+::{{A|VO side2 bl1 xueyi 105.ogg}} '''Xueyi:''' I only see two of you in Alchemy Commission attire.
+:{{A|VO side2 bl1 xueyi 106.ogg}} '''Xueyi:''' You, girl &mdash; raise your head. You have a wandering look in your eyes... A mara-struck look, perhaps?
+:{{A|VO side2 bl1 bailu 174.ogg}} '''Bailu:''' H&mdash;Help us, Miss Judge! We only just managed to escape before the delves were locked down... Those evil men have been chasing us &mdash; this nurse is so scared she can barely stand!
+:{{A|VO side2 bl1 xueyi 107.ogg}} '''Xueyi:''' ...
+:{{A|VO side2 bl1 cknightF 101.ogg}} '''Cloud Knights Soldier:''' Madam Xueyi, the remnants of the Disciples of Sanctus Medicus have been found in the southwest of Cloudford!
+:{{A|VO side2 bl1 xueyi 108.ogg}} '''Xueyi:''' This place isn't secure. You should leave immediately.
+:{{A|VO side2 bl1 xueyi 109.ogg}} '''Xueyi:''' Soldiers! See them on their way!
+:{{Black Screen|Under escort of the Cloud Knights, you were taken to a safer place in Cloudford.}}
+:{{A|VO side2 bl1 bailu 175.ogg}} '''Bailu:''' That's the strangest judge I've ever come across... Banxia, are you alright?
+:{{A|VO side2 bl1 banxia 180.ogg}} '''Banxia:''' Ha... phew... I made it this far... I won't go back without seeing him one last time.
+:{{A|VO side2 bl1 bailu 176.ogg}} '''Bailu:''' ...Let's go this way and see if we can avoid those Cloud Knights.
+----
 {{Dialogue End}}
 
 ===Bypass the Cloud Knights and go to the next meet-up point{{subst:void|<!--202030607-->}}===
 {{Mission Description|type=companion|location=Cloudford|update|You got misidentified as a lost citizen by the Ten-Lords Commission, fortunately Banxia's Mara-struck symptoms were not exposed. Move on.<br />Banxia is on her last straw, but she should still have a chance to see her loved one a final time.}}
 {{Dialogue Start}}
-:{{tx}}
+<pre>{
+	"$type": "RPG.GameCore.CreateProp",
+	"GroupID": {
+		"FixedValue": {
+			"Value": 81
+		}
+	},
+	"GroupPropID": {
+		"FixedValue": {
+			"Value": 300001
+		}
+	}
+}</pre>
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{A|VO side2 bl1 bailu 177.ogg}} '''Bailu:''' There are Cloud Knights and Disciples of Sanctus Medicus over there.
+:{{A|VO side2 bl1 banxia 181.ogg}} '''Banxia:''' ...We don't have time for them.
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{A|VO side2 bl1 cknightF 102.ogg}} '''Cloud Knights Soldier:''' There are armed villains up ahead. If you're not on duty here, return to the city for your own safety.
+----
+:{{A|VO side2 bl1 banxia 182.ogg}} '''Banxia:''' *groaning*
+:{{A|VO side2 bl1 banxia 183.ogg}} '''Banxia:''' He's right behind that door... We're almost there.
+:{{A|VO side2 bl1 bailu 178.ogg}} '''Bailu:''' But there are Cloud Knights stationed there... Wait, I have an idea.
+:{{DIcon|Arrow}} About time we taught some roadblocks a lesson.
+::{{A|VO side2 bl1 bailu 179.ogg}} '''Bailu:''' Hey! Don't cause a commotion or the judge will be on our case again for sure!
+:{{DIcon|Arrow}} Can't we just bribe them?
+::{{A|VO side2 bl1 bailu 180.ogg}} '''Bailu:''' Cloud Knights are well-disciplined &mdash; you'll just get yourself arrested.
+:{{DIcon|Arrow}} Anyone got a good tear-jerker?
+::{{A|VO side2 bl1 bailu 181.ogg}} '''Bailu:''' We don't have time for storytelling...
+:{{A|VO side2 bl1 bailu 182.ogg}} '''Bailu:''' ...Didn't we pass some soldiers resting on the way over here? Y'know, the place where the Cloud Knights and Disciples of Sanctus Medicus fought...
+:{{DIcon|Arrow}} Can we wear the Cloud Knights' armor?
+:{{A|VO side2 bl1 bailu 183.ogg}} '''Bailu:''' You said it, not me!
+:{{A|VO side2 bl1 bailu 184.ogg}} '''Bailu:''' Hmm, a spot of emergency treatment in exchange for some armor. Sounds fair to me!
+:{{A|VO side2 bl1 banxia 184.ogg}} '''Banxia:''' ...Let's do what Lady Bailu suggested.
+----
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{A|VO side2 bl1 cknightF 102.ogg}} '''Cloud Knights Soldier:''' There are armed villains up ahead. If you're not on duty here, return to the city for your own safety.
+----
 {{Dialogue End}}
 
 ===Look around for and change into Cloud Knights' armor{{subst:void|<!--202030611-->}}===
 {{Mission Description|type=companion|location=Cloudford|update|It's not the greatest idea, but it's an idea. Go look for Cloud Knights' equipment.<br />The armor is tightly sealed, no one would be able to tell the species and gender expression of an individual wearing them, what a find.}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{A|VO side2 bl1 bailu 186.ogg}} '''Banxia:''' Where are you going? We need to get through that sentry post pronto!
+----
+
+;(Upon reaching the destination)
+:{{A|VO side2 bl1 bailu 186.ogg}} '''Banxia:''' Where are you going? We need to get through that sentry post pronto!
+----
+----
+:{{A|VO side2 bl1 bailu 190.ogg}} '''Bailu:''' How was that? Wasn't my acting amazing? Let me tell you, a performance like that requires a lot of temper-tantrum practice!
+:{{DIcon|Arrow}} That was incredible.
+::{{A|VO side2 bl1 bailu 191.ogg}} '''Bailu:''' Uh-huh!
+:{{DIcon|Arrow}} That was embarrassing.
+::{{A|VO side2 bl1 bailu 192.ogg}} '''Bailu:''' Hey!
+::{{A|VO side2 bl1 bailu 193.ogg}} '''Bailu:''' If I hadn't pretended to cry, you wouldn't have got through the sentry post.
+:{{A|VO side2 bl1 bailu 194.ogg}} '''Bailu:''' By the way, what's taking Banxia so long...?
+:{{A|VO side2 bl1 banxia 191.ogg}} '''Banxia:''' *coughing* Why can't I... take off... my helmet...?
+:{{A|VO side2 bl1 banxia 192.ogg}} '''Banxia:''' Why is my voice... like this...?
+:{{Black Screen|Banxia is trying to take the armor off but failed. It sticks to her so tight as if it's part of her body.}}
+:{{A|VO side2 bl1 banxia 193.ogg}} '''Banxia:''' Can you help me check...? It feels like something's caught...
+:{{DIcon|Arrow}} Mara-struck...
+::{{A|VO side2 bl1 bailu 195.ogg}} '''Bailu:''' But she still has her senses.
+:{{DIcon|Arrow}} What's wrong?
+::{{A|VO side2 bl1 banxia 194.ogg}} '''Banxia:''' ...Has the mara taken hold? That was quite... sudden.
+::{{A|VO side2 bl1 banxia 195.ogg}} '''Banxia:''' But I still remember him... and I remember both of you...
+:{{A|VO side2 bl1 banxia 196.ogg}} '''Banxia:''' Lady Bailu, is this a result of your healing? Thank you. If it weren't for you...
+:{{A|VO side2 bl1 bailu 196.ogg}} '''Bailu:''' Don't thank me! It's my fault... I couldn't preserve you the way you were.
+:{{A|VO side2 bl1 banxia 197.ogg}} '''Banxia:''' You can't cure someone stricken with mara. It's already a miracle that I still have my senses... that I can talk to you.
+:{{A|VO side2 bl1 banxia 198 m.ogg}} {{A|VO side2 bl1 banxia 198 f.ogg}} '''Banxia:''' Hey, do you still remember what I said earlier? If the time comes...
+:{{DIcon|Arrow}} Yes, I remember.
+:{{DIcon|Arrow}} Is now a good time for this?
+:{{A|VO side2 bl1 banxia 199.ogg}} '''Banxia:''' ...Let's go while I still have my senses.
+----
 {{Dialogue End}}
 
 ===Banxia's mara symptoms are acting up, help her get there slowly{{subst:void|<!--202030617-->}}===
 {{Mission Description|type=companion|location=Cloudford|update|Banxia seems to be at her limits, but you understand clearly that she shouldn't stop now. Hopefully her sweetheart is there waiting for her.<br />Based on your limited experience, not many can keep their sanity intact like Banxia at this stage.}}
 {{Dialogue Start}}
+:<!--2-second delay-->
+
+;(Upon reaching the destination)
+<pre>{
+	"$type": "RPG.GameCore.ClearNpcDistanceTrigger",
+	"GroupID": 85,
+	"GroupNpcID": 400003
+}</pre>
+:{{A|VO side2 bl1 banxia 200.ogg}} '''Banxia:''' ...Wait, I feel a bit dizzy.
+:{{A|VO side2 bl1 bailu 197.ogg}} '''Bailu:''' What should I do? Serious imbalances of yin and yang, cold and heat...
+:{{A|VO side2 bl1 banxia 201.ogg}} '''Banxia:''' ...I just need a rest. Lady Bailu, don't forget our deal...
+:{{A|VO side2 bl1 bailu 198.ogg}} '''Bailu:''' Stop calling it a deal! I made a promise &mdash; I'll heal him. Don't worry...
+:{{A|VO side2 bl1 banxia 202.ogg}} '''Banxia:''' I'm so sorry... it's because of me that all of you are in danger.
+:{{A|VO side2 bl1 bailu 199.ogg}} '''Bailu:''' Enough talk. Here, I'll pour the medicine through the helmet.
+:{{A|VO side2 bl1 banxia 203.ogg}} '''Banxia:''' ...Thank you, Lady Bailu... but I can't feel the gap between my skin and the helmet anymore.
+:{{A|VO side2 bl1 bailu 200.ogg}} '''Bailu:''' We've arrived. Is he not here either?
+:{{A|VO side2 bl1 banxia 204.ogg}} '''Banxia:''' ...He's cautious by nature. Do you remember his note? He told me to "come alone."
+:{{A|VO side2 bl1 bailu 201.ogg}} '''Bailu:''' But you already...
+:{{A|VO side2 bl1 banxia 205.ogg}} '''Banxia:''' ...He won't show himself if you're here... *coughing* I'll call out to him. Please, you two, find somewhere to hide. Remember our promise...
+:{{A|VO side2 bl1 bailu 202.ogg}} '''Bailu:''' I remember.
+:{{DIcon|Arrow}} Let's go.
+:{{DIcon|Arrow}} She wants to see him for the last time.
+:{{A|VO side2 bl1 bailu 203 m.ogg}} {{A|VO side2 bl1 bailu 203 f.ogg}} '''Bailu:''' (Trailblazer), let's go.
 :{{tx}}
+----
 {{Dialogue End}}
 
 ===Step aside, let Banxia "come alone"{{subst:void|<!--202030622-->}}===
 {{Mission Description|type=companion|location=Cloudford|update|You reach the destination, but the cautious Liangmu insists to have Banxia "come alone," so you should step aside for a while.<br />There's no time to argue about it, so just trust Banxia for this.}}
 {{Dialogue Start}}
-:{{tx}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+----
+:{{A|VO side2 bl1 banxia 206.ogg}} '''Banxia:''' Liangmu...!
+:{{A|VO side2 bl1 liangmu 101.ogg}} '''Man:''' M&mdash;Monster...!
+:{{A|VO side2 bl1 banxia 207.ogg}} '''Banxia:''' Liang... mu...
+:{{A|VO side2 bl1 liangmu 102.ogg}} '''Man:''' H&mdash;Help...!
+:{{A|VO side2 bl1 bailu 204.ogg}} '''Bailu:''' Oh no! Let's hurry over.
+----
 {{Dialogue End}}
 
 ===Check out what happened to Banxia{{subst:void|<!--202030623-->}}===
 {{Mission Description|type=companion|location=Cloudford|update|You hear cries for help, it was a man's voice. Go and help him out.<br />Is that man Banxia's lover, Liangmu?}}
 {{Dialogue Start}}
-:{{tx}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{A|VO side2 bl1 banxia 208.ogg}} '''Banxia:''' I... can't hold on any longer...
+:{{A|VO side2 bl1 banxia 209.ogg}} '''Banxia:''' Do it... don't forget... the promise!
+;(Enter battle)
+::{{tx|Enemy list missing}}
+;(Unused &mdash; TalkSentence_202061707)
+
+
+;(Unused &mdash; ALL_TALK_END)
+
+----
+:{{A|VO side2 bl1 bailu 205.ogg}} '''Bailu:''' ...
+:{{A|VO side2 bl1 bailu 206.ogg}} '''Bailu:''' Do you think she saw him one last time?
+:{{DIcon|Arrow}} Seems likely.
+::{{A|VO side2 bl1 bailu 207.ogg}} '''Bailu:''' I hope so...
+:{{DIcon|Arrow}} Yes, but I doubt he recognized her.
+::{{A|VO side2 bl1 bailu 208.ogg}} '''Bailu:''' Grownups are complicated, huh...
+:{{A|VO side2 bl1 bailu 209.ogg}} '''Bailu:''' Let's keep heading in this direction until we find him.
+----
 {{Dialogue End}}
 
 ===Continue and look for Banxia's sweetheart{{subst:void|<!--202030626-->}}===
 {{Mission Description|type=companion|location=Cloudford|update|No matter what, the goal of your trip is to complete your deal with Banxia &mdash; having Bailu cure Banxia's lover. Go look for him.<br />He might have left because he was scared of the Mara-struck monsters, but this will cause him lifelong regret.}}
 {{Dialogue Start}}
-:{{tx}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+----
+:{{A|VO side2 bl1 liangmu 103.ogg}} '''Liangmu:''' Are you from the Disciples of Sanctus Medicus or the Ten-Lords Commission? Don't touch me! I didn't do anything!
+:{{DIcon|Arrow}} Banxia sent us.
+::{{A|VO side2 bl1 bailu 210.ogg}} '''Bailu:''' That's right. I'm here to heal you.
+:{{DIcon|Arrow}} You don't get to decide that!
+::{{A|VO side2 bl1 bailu 211.ogg}} '''Bailu:''' Stop trying to scare him! It won't help the situation.
+::{{A|VO side2 bl1 bailu 212.ogg}} '''Bailu:''' I'm Bailu. Banxia sent me to heal you.
+:{{A|VO side2 bl1 liangmu 104.ogg}} '''Liangmu:''' *sigh* You're finally here... First I was being chased by the Disciples of Sanctus Medicus, then I ran into the Cloud Knights. Then, I thought I heard Banxia's voice, but I ran straight into a monster. What a day!
+:{{A|VO side2 bl1 liangmu 105.ogg}} '''Liangmu:''' But if Banxia sent you, then... where is she? Isn't she with you?
+:{{A|VO side2 bl1 bailu 213 m.ogg}} {{A|VO side2 bl1 bailu 213 f.ogg}} '''Bailu:''' ((Trailblazer), what do you think? Should we tell him the truth?)
+:{{DIcon|Arrow}} That mara-struck monster just now was Banxia.
+::{{A|VO side2 bl1 liangmu 106.ogg}} '''Liangmu:''' What!? That monster armed to the teeth? That was Banxia? You're lying.
+::{{A|VO side2 bl1 bailu 214.ogg}} '''Bailu:''' It's true. She had to disguise herself in order to meet you.
+::{{A|VO side2 bl1 liangmu 107.ogg}} '''Liangmu:''' How is that possible...?
+::{{A|VO side2 bl1 liangmu 108.ogg}} '''Liangmu:''' Could you take me there? ...Just to confirm?
+::----
+:{{DIcon|Arrow}} Banxia was busy &mdash; she couldn't make time to come.
+::{{A|VO side2 bl1 liangmu 109.ogg}} '''Liangmu:''' Is that so? *sigh* She's always so busy in the Alchemy Commission.
+::{{A|VO side2 bl1 bailu 215.ogg}} '''Bailu:''' Miss Banxia... she...
+::{{A|VO side2 bl1 liangmu 110.ogg}} '''Liangmu:''' Hey, little girl, no need for tears. It's no big deal.
+::{{A|VO side2 bl1 liangmu 111.ogg}} '''Liangmu:''' I did want to meet Banxia, but I know how busy she is. She must have had a good reason for sending you.
+::{{A|VO side2 bl1 bailu 216.ogg}} '''Bailu:''' I promised Banxia... that I'd heal you for her.
+::{{A|VO side2 bl1 liangmu 112.ogg}} '''Liangmu:''' It's alright, it's alright... take a breath. You must've been through a lot to get here.
+::{{Black Screen|Liangmu narrates how he thought he heard Banxia shouting, but then ran into a monster.}}
+::{{A|VO side2 bl1 bailu 241.ogg}} '''Bailu:''' ...Strange things are happening on the Luofu these days... What happened to you isn't so surprising.
+::{{A|VO side2 bl1 liangmu 130.ogg}} '''Liangmu:''' What a shame &mdash; I've been waiting for her for so long... I can't believe she couldn't make it. Did she ask you to bring me anything?
+::{{DIcon|Arrow}} I'm afraid not.
+::{{DIcon|Arrow}} She just asked Bailu to heal you.
+::{{A|VO side2 bl1 liangmu 131.ogg}} '''Liangmu:''' I see. Well, it's good that you're here in person &mdash; this is no simple matter.
+::{{A|VO side2 bl1 liangmu 132.ogg}} '''Liangmu:''' Your reputation precedes you, Healer Lady... Sorry to trouble you, please begin the healing whenever you're ready.
+::{{Black Screen|Bailu healed the Outworlder. Compared to being Mara-struck, his illness is but a common disease.}}
+::{{Black Screen|After finishing the treatment, you left Cloudford and asked the Cloud Knights to take care of the remains of the Mara-struck soldier.}}
+
+;(Obtain {{Item|A Nameless Specialty|20|x=1}})
 {{Dialogue End}}
 
 ===Lead the man to find Banxia's body{{subst:void|<!--202030627-->}}===
 {{Mission Description|type=companion|location=Cloudford|update|Evidently, Liangmu didn't know the Mara-struck soldier was Banxia, but he was still eager to return to her side.<br />You don't know the story between them, but at least this tells you he was a loyal person...}}
 {{Dialogue Start}}
-:{{tx}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+----
+:{{A|VO side2 bl1 liangmu 113.ogg}} '''Liangmu:''' ...This is Banxia? This hideous creature?
+:{{A|VO side2 bl1 bailu 217.ogg}} '''Bailu:''' Hey! I know you're probably in shock, but&mdash;
+:{{Black Screen|You tell Liangmu everything about what happened on the way over.}}
+:{{Black Screen|In order to see Liangmu for the very last time, she donned the armor that could never be taken off.}}
+:{{A|VO side2 bl1 liangmu 114.ogg}} '''Liangmu:''' She changed out of her original clothes, right? *sigh* There's no point in searching the body, then.
+:{{A|VO side2 bl1 liangmu 115.ogg}} '''Liangmu:''' Did she give you any secret boxes or letters?
+:{{A|VO side2 bl1 bailu 218.ogg}} '''Bailu:''' S&mdash;Search for what?
+:{{A|VO side2 bl1 liangmu 116.ogg}} '''Liangmu:''' You don't know? Ugh, she left me with nothing. Was she playing me this whole time!?
+:{{DIcon|Talk}} What did she say she'd bring you?
+::{{A|VO side2 bl1 liangmu 117.ogg}} '''Liangmu:''' A list of the names of the Disciples of Sanctus Medicus.
+::{{A|VO side2 bl1 liangmu 118.ogg}} '''Liangmu:''' With that list I'd be able to blackmail the Disciples into giving me the elixir of immortality... or I could submit the list to the Cloud Knights to avoid banishment from the Xianzhou.
+::{{A|VO side2 bl1 liangmu 119.ogg}} '''Liangmu:''' That woman promised me countless times... In the end, I finally trusted her &mdash; I genuinely thought she'd offer me change.
+::{{A|VO side2 bl1 liangmu 120.ogg}} '''Liangmu:''' But in the end, she failed at the most important hurdle... or maybe she failed from the very beginning. She probably lied to you too.
+::{{DIcon|Arrow}} She succeeded.
+:::{{A|VO side2 bl1 liangmu 121.ogg}} '''Liangmu:''' Are you the type of people that help someone who tricked you? I don't think so.
+:::{{A|VO side2 bl1 bailu 219.ogg}} '''Bailu:''' ...
+::;(Return to previous option selection)
+::{{DIcon|Arrow}} Is being immortal the most important thing for you?
+:::{{A|VO side2 bl1 liangmu 122.ogg}} '''Liangmu:''' Of course not. I have more important matters in places other than the Xianzhou. Elixirs and immortality are just a means to an end. I won't stay on the Luofu.
+:::{{A|VO side2 bl1 bailu 220.ogg}} '''Bailu:''' ...
+::;(Return to previous option selection)
+:{{DIcon|Arrow}} Isn't she your sweetheart?
+::{{A|VO side2 bl1 liangmu 123.ogg}} '''Liangmu:''' Sweetheart?
+::{{A|VO side2 bl1 liangmu 124.ogg}} '''Liangmu:''' That was her wishful thinking &mdash; I wasn't interested in the slightest. No way, you thought so too?
+::{{A|VO side2 bl1 bailu 221.ogg}} '''Bailu:''' Heal...
+::{{A|VO side2 bl1 liangmu 125.ogg}} '''Liangmu:''' What?
+::{{A|VO side2 bl1 bailu 222.ogg}} '''Bailu:''' Let me heal you so I never have to lay eyes on you again!
+::{{A|VO side2 bl1 liangmu 126.ogg}} '''Liangmu:''' Huh?
+::{{DIcon|Arrow}} Really? Do we still have to heal this guy?
+:::{{A|VO side2 bl1 bailu 223.ogg}} '''Bailu:''' ...I promised Banxia.
+:::{{A|VO side2 bl1 liangmu 128.ogg}} '''Liangmu:''' Ridiculous! That woman tricked all of us. You should've told her to take a&mdash;
+:::{{A|VO side2 bl1 bailu 224.ogg}} '''Bailu:''' SHUT! YOUR! MOUTH!
+:::{{Black Screen|Bailu healed the Outworlder begrudgingly. Compared to being Mara-struck, his illness is but a common disease.}}
+::{{DIcon|Arrow}} Just shut up and let Lady Bailu heal you!
+:::{{A|VO side2 bl1 bailu 225.ogg}} '''Bailu:''' And move away from Banxia, now!
+:::{{A|VO side2 bl1 liangmu 128.ogg}} '''Liangmu:''' Ridiculous! That woman tricked all of us. You should've told her to take a&mdash;
+:::{{A|VO side2 bl1 bailu 224.ogg}} '''Bailu:''' SHUT! YOUR! MOUTH!
+:::{{Black Screen|Bailu healed the Outworlder begrudgingly. Compared to being Mara-struck, his illness is but a common disease.}}
+::{{DIcon|Arrow}} Wait, can I beat him up first?
+:::{{A|VO side2 bl1 bailu 227.ogg}} '''Bailu:''' Great idea! Seeing as I'm due to heal him anyway... Do your worst!
+:::{{DIcon|Arrow}} Well said!
+:::{{A|VO side2 bl1 liangmu 129.ogg}} '''Liangmu:''' Wait... wh&mdash;what are you doing?
+::<pre>{
+	"$type": "RPG.GameCore.TriggerSound",
+	"SoundName": {
+		"Value": "Ev_sfx_xianzhou_beat_up"
+	},
+	"EmitterType": "LocalPlayer"
+}</pre>
+:::{{Black Screen|You and Bailu taught this deceitful Outworlder a harsh but well-deserved lesson.}}
+::<pre>{
+	"$type": "RPG.GameCore.TriggerSound",
+	"SoundName": {
+		"Value": "Ev_sfx_xianzhou_heal_up"
+	},
+	"EmitterType": "NPC",
+	"GroupID": 92,
+	"ID": 400001
+}</pre>
+:::{{Black Screen|Then, Bailu healed the Outworlder begrudgingly again. Compared to being Mara-struck, his illness is but a common disease.}}
+::{{Black Screen|After finishing the treatment, you left Cloudford and asked the Cloud Knights to take care of the remains of the Mara-struck soldier.}}
+;(Obtain {{Item|A Scribbled Prescription|20|x=1}})
 {{Dialogue End}}
 
 ===Follow the clues and go to the next meet-up point{{subst:void|<!--202030605-->}}===
 {{Mission Description|type=companion|location=Cloudford|update|One is an obsessed nurse, and the other a patient seeking medicine. She bumped into him too many times to say that it isn't destiny. Meet up with him at the next location.<br />There are more and more Disciples of Sanctus Medicus around, be careful.}}
 {{Dialogue Start}}
-:{{tx}}
+;(Upon reaching the destination)
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{A|VO side2 bl1 bailu 169.ogg}} '''Bailu:''' I caught sight of a lot of disciples in the area just now.
 {{Dialogue End}}
 
 ===Impersonate a Cloud Knight and go pass the checkpoint{{subst:void|<!--202030613-->}}===
 {{Mission Description|type=companion|location=Cloudford|update|It's not the greatest idea, but it's an idea. Go look for Cloud Knights' equipment.<br />The armor is tightly sealed, no one would be able to tell the species and gender expression of an individual wearing them, what a find.}}
 {{Dialogue Start}}
-:{{tx}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+----
+:{{A|VO side2 bl1 cknightG 101.ogg}} '''Cloud Knights Soldier:''' Halt! What's with the kid?
+:{{A|VO side2 bl1 banxia 186.ogg}} '''Banxia:''' ...S&mdash;Surely you know the Healer Lady of Alchemy Commission?
+:{{A|VO side2 bl1 cknightG 102.ogg}} '''Cloud Knights Soldier:''' Hmm... she does have horns and a tail...
+:{{DIcon|Arrow}} We need to escort her back to the Alchemy Commission.
+::{{A|VO side2 bl1 cknightG 103.ogg}} '''Cloud Knights Soldier:''' I heard the Dragon Lady liked to sneak away from the commission, but I never thought I'd have the honor of seeing her in person.
+:{{DIcon|Arrow}} She's a dragon child.
+::{{A|VO side2 bl1 cknightG 104.ogg}} '''Cloud Knights Soldier:''' I knew that! You're escorting her back to the Alchemy Commission, right?
+::{{A|VO side2 bl1 banxia 187.ogg}} '''Banxia:''' ...Affirmative.
+:{{A|VO side2 bl1 bailu 187.ogg}} '''Bailu:''' No, no! I haven't finished playing yet! I don't wanna go back to the Alchemy Commission!
+:{{A|VO side2 bl1 cknightG 105.ogg}} '''Cloud Knights Soldier:''' Uh...
+:{{A|VO side2 bl1 banxia 188.ogg}} '''Banxia:''' *coughing* Is the nearest harbor up ahead?
+:{{A|VO side2 bl1 cknightG 106.ogg}} '''Cloud Knights Soldier:''' That's right. You don't seem very well, soldier. We have a military doctor up ahead...
+:{{A|VO side2 bl1 banxia 189.ogg}} '''Banxia:''' Don't worry! I have the Dragon Lady with me.
+:{{A|VO side2 bl1 bailu 188.ogg}} '''Bailu:''' I still wanna play! I'm hungry! Don't take me back &mdash; I don't wanna go back! I'm not going back!
+:{{A|VO side2 bl1 cknightG 107.ogg}} '''Cloud Knights Soldier:''' Access granted!
+<pre>{
+	"$type": "RPG.GameCore.PropTriggerAnimState",
+	"AnimStateName": "Open",
+	"TargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvPropEx",
+		"FetchType": "SinglePropByPropID",
+		"SinglePropID": {
+			"GroupID": {
+				"FixedValue": {
+					"Value": 35
+				}
+			},
+			"ID": {
+				"FixedValue": {
+					"Value": 300001
+				}
+			}
+		}
+	}
+}</pre>
+:{{A|VO side2 bl1 cknightG 108.ogg}} '''Cloud Knights Soldier:''' Good work, soldiers.
+:{{A|VO side2 bl1 banxia 190.ogg}} '''Banxia:''' Thank you.
+----
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{A|VO side2 bl1 bailu 189.ogg}} '''Bailu:''' Quick, we've passed through the sentry post, let's change back into our clothes.
+<pre>{
+	"$type": "RPG.GameCore.PropTriggerAnimState",
+	"AnimStateName": "Close",
+	"TargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvPropEx",
+		"FetchType": "SinglePropByPropID",
+		"SinglePropID": {
+			"GroupID": {
+				"FixedValue": {
+					"Value": 35
+				}
+			},
+			"ID": {
+				"FixedValue": {
+					"Value": 300001
+				}
+			}
+		}
+	}
+}</pre>
 {{Dialogue End}}
 
 ===Banxia's mara symptoms are acting up, help her get there slowly{{subst:void|<!--202030619-->}}===
 {{Mission Description|type=companion|location=Cloudford|update|Banxia seems to be at her limits, but you understand clearly that she shouldn't stop now. Hopefully her sweetheart is there waiting for her.<br />Based on your limited experience, not many can keep their sanity intact like Banxia at this stage.}}
 {{Dialogue Start}}
-:{{tx}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+<pre>{
+	"$type": "RPG.GameCore.ClearNpcDistanceTrigger",
+	"GroupID": 89,
+	"GroupNpcID": 400001
+}</pre>
+----
+<!--Unknown TalkSentence: 202061501-->
+<!--Unknown TalkSentence: 202061502-->
+<!--Unknown TalkSentence: 202061503-->
+<!--Unknown TalkSentence: 202061504-->
+----
+<!--Unknown TalkSentence: 202061506-->
+<!--Unknown TalkSentence: 202061507-->
+<!--Unknown TalkSentence: 202061508-->
+<!--Unknown TalkSentence: 202061509-->
+<!--Unknown TalkSentence: 202061510-->
+:{{DIcon|Arrow}} undefined
+:{{DIcon|Arrow}} undefined
+:{{DIcon|Arrow}} undefined
+:<!--1-second delay-->
+----
+:{{A|VO side2 bl1 bailu 228.ogg}} '''Bailu:''' Ugh! I'm so furious!
+:{{DIcon|Arrow}} We wouldn't have helped him if we'd known.
+::{{A|VO side2 bl1 bailu 229.ogg}} '''Bailu:''' That wouldn't do &mdash; I made a promise to Banxia.
+:{{DIcon|Arrow}} We were too gentle with him.
+:{{A|VO side2 bl1 bailu 230.ogg}} '''Bailu:''' I healed him... but for the next thirty years he'll hiccup uncontrollably every day.
+:{{A|VO side2 bl1 bailu 231.ogg}} '''Bailu:''' ...What? He deserved it!
+:{{DIcon|Arrow}} It's perfect!
+:{{DIcon|Arrow}} That's way too light a punishment!
+::{{A|VO side2 bl1 bailu 232.ogg}} '''Bailu:''' Hmph, that's the price he paid for my lenience. And it still wasn't enough!
+:{{A|VO side2 bl1 bailu 233.ogg}} '''Bailu:''' *sigh* Anyway, do you know any good hiding places? I'm still on the run...
+:{{DIcon|Arrow}} How about Petrichor Inn?
+::{{A|VO side2 bl1 bailu 234.ogg}} '''Bailu:''' I think I still owe the owner about 600 strales in unpaid food bills...
+:{{DIcon|Arrow}} Let's get some food in the Realm-Keeping Commission.
+::{{A|VO side2 bl1 bailu 235.ogg}} '''Bailu:''' No! The Realm-Keeping Commission people are polite, but they're always lecturing me.
+:{{DIcon|Arrow}} Have you heard of the Astral Express?
+::{{A|VO side2 bl1 bailu 249.ogg}} '''Bailu:''' Express... What's that?
+:{{A|VO side2 bl1 bailu 237.ogg}} '''Bailu:''' Hmm, the Xianzhou is still in a mess. I better stay in Starskiff Haven for the time being &mdash; I'm sure there'll be fevers and headaches to take care of before long.
+:{{A|VO side2 bl1 bailu 238.ogg}} '''Bailu:''' Banxia asked me if I liked treating people... Like I said, it's as easy as eating and drinking for me &mdash; I don't like or dislike it...
+:{{A|VO side2 bl1 bailu 239.ogg}} '''Bailu:''' ...but this whole incident has made me wish I knew more about the mara-struck...
+:{{A|VO side2 bl1 bailu 240 m.ogg}} {{A|VO side2 bl1 bailu 240 f.ogg}} '''Bailu:''' Thank you, (Trailblazer). May we meet again at the food stalls of Starskiff Haven! Bye!
+----
+----
+:{{A|VO side2 bl1 bailu 242.ogg}} '''Bailu:''' We didn't tell him the truth. Was that really the right thing to do?
+:{{DIcon|Arrow}} I have no idea.
+::{{A|VO side2 bl1 bailu 243.ogg}} '''Bailu:''' It's hard to decide sometimes.
+:{{DIcon|Arrow}} What's done is done, no need for regrets.
+::{{A|VO side2 bl1 bailu 244.ogg}} '''Bailu:''' Really? A great person once told me that a person's life is made up of regrets.
+::{{A|VO side2 bl1 bailu 245.ogg}} '''Bailu:''' I regret that I didn't set off with Banxia earlier... She begged me for a long time.
+:{{A|VO side2 bl1 bailu 246.ogg}} '''Bailu:''' *sigh* Anyway, do you know any good hiding places? I'm still on the run...
+:{{DIcon|Arrow}} How about Petrichor Inn?
+::{{A|VO side2 bl1 bailu 234.ogg}} '''Bailu:''' I think I still owe the owner about 600 strales in unpaid food bills...
+:{{DIcon|Arrow}} Let's get some food in the Realm-Keeping Commission.
+::{{A|VO side2 bl1 bailu 235.ogg}} '''Bailu:''' No! The Realm-Keeping Commission people are polite, but they're always lecturing me.
+:{{DIcon|Arrow}} Have you heard of the Astral Express?
+::{{A|VO side2 bl1 bailu 249.ogg}} '''Bailu:''' Express... What's that?
+:{{A|VO side2 bl1 bailu 250.ogg}} '''Bailu:''' Hmm, the Xianzhou is still in a mess. I better stay in Starskiff Haven for the time being &mdash; I'm sure there'll be fevers and headaches to take care of before long.
+:{{A|VO side2 bl1 bailu 251.ogg}} '''Bailu:''' Banxia asked me if I liked treating people... Like I said, it's as easy as eating and drinking for me &mdash; I don't like or dislike it...
+:{{A|VO side2 bl1 bailu 252.ogg}} '''Bailu:''' ...but this whole incident has made me wish I knew more about the mara-struck...
+:{{A|VO side2 bl1 bailu 253 m.ogg}} {{A|VO side2 bl1 bailu 253 f.ogg}} '''Bailu:''' Thank you, (Trailblazer). May we meet again at the food stalls of Starskiff Haven! Bye!
+----
 {{Dialogue End}}
 
 ==Other Languages==

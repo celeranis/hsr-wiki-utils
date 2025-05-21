@@ -36,7 +36,20 @@ PageTitle=#Exhibition Match, Giovanni!#
 ===Have a duel with Giovanni{{subst:void|<!--801414401-->}}===
 {{Mission Description|type=adventure|location=Old Weapon Testing Ground|The core gameplay loop behind Aetherium Wars is "dueling." Challenge different players and show your true strength!}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Giovanni)
+:'''Giovanni:''' Hahaha, we meet again, Champion! I am so happy to see that you still enjoy this game even after the festival has ended.
+:'''Giovanni:''' Well... I hope that this battle will also bring you "Elation"!
+<pre>{
+	"$type": "RPG.GameCore.ShowUI",
+	"Name": "Ui.AetherDivide.AetherChallenge.AetherChallengePage",
+	"WaitForExit": true,
+	"Param": {
+		"Value": "204"
+	},
+	"OnUIEnter": []
+}</pre>
+:'''Giovanni:''' The power of a Champion truly is something else! I already cannot wait to battle you again!
 {{Dialogue End}}
 
 ==Other Languages==

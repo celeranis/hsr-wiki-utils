@@ -62,142 +62,713 @@ PageTitle=#Masquerade Duet#
 ===Investigate the crime scene{{subst:void|<!--202180201-->}}===
 {{Mission Description|type=companion|location=Black Swan's Memory Bubble|This dreamscape that Black Swan has prepared is way too exciting, throwing you into a "crime scene" As soon as you enter. Here you see Black Swan, a Bloodhound Family Law Enforcer, and... Sampo!? What is that guy doing here!?}}
 {{Dialogue Start}}
+:{{A|VO side3 huahuo blackswan 102.ogg}} '''Black Swan:''' ...In my estimation, there's no question about it. This is murder.
+:{{A|VO side3 huahuo memberA 101.ogg}} '''Bloodhound Family Member:''' Murder... Such a foreign word to us. The people of Penacony could never come to any harm while under the watchful protection of The Family.
+:{{A|VO side3 huahuo memberA 102.ogg}} '''Bloodhound Family Member:''' In a dream, even if you're bashed a thousand times with a hammer, at worst you'll still wake up in reality in a hotel.
+:{{A|VO side3 huahuo sampo 101.ogg}} '''Sampo:''' Not necessarily. Even if the result does not constitute harm, the criminal intent is... clear enough? You specifically came here to cordon off the scene because of the unsavory nature of this case, right?
+:{{A|VO side3 huahuo memberA 103.ogg}} '''Bloodhound Family Member:''' You're not wrong. Even if there are no casualties, being smashed over the head with a hammer in the middle of the street for no reason at all... this is not the kind of thing that happens on Penacony.
+:{{A|VO side3 huahuo memberA 104.ogg}} '''Bloodhound Family Member:''' You are guests of the Oak Family, so you may investigate the crime scene. I'll be on standby over here.
+:{{A|VO side3 huahuo sampo 102.ogg}} '''Sampo:''' Are you a witch!? Just how did you manage to convince them in the blink of an eye that we're some kind of detectives...
+:{{DIcon|Arrow}} (Tell the truth.)
+::{{A|VO side3 huahuo blackswan 103.ogg}} '''Black Swan:''' Just some suggestions at the memory level. If something happens in everybody's memory... then that something becomes a fact.
+:{{DIcon|Arrow}} (Offer no explanation.)
+::{{A|VO side3 huahuo blackswan 105.ogg}} '''Black Swan:''' Just some suggestions at the memory level. If something happens in everybody's memory... then that something becomes a fact.
 :{{tx}}
+<pre>{
+	"$type": "RPG.GameCore.PerformanceExtendEndBlack",
+	"ExtendTime": 1
+}</pre>
+:{{tx}}
+<pre>{
+	"$type": "RPG.GameCore.AdvCreateGroupEntity",
+	"InstanceIDList": [
+		300003
+	]
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.AdvCreateGroupEntity",
+	"InstanceIDList": [
+		300003
+	]
+}</pre>
 {{Dialogue End}}
 
 ===Ask the Bloodhound Family member about the case{{subst:void|<!--202180203-->}}===
 {{Mission Description|type=companion|location=Black Swan's Memory Bubble|update|It seems that there was a "murder case" (fortunately, in Penacony, it is almost impossible for people to actually be "murdered"), and the murderer is without question the enigmatic Sparkle. It seems that Black Swan has no intention of telling the Bloodhound Family about the murderer's identity. She is instead planning on playing with Sparkle. You cannot grasp what either Sparkle or Black Swan is thinking.}}
 {{Dialogue Start}}
-:{{tx}}
+
 {{Dialogue End}}
 
 ===Speak with the constable and the bailiff{{subst:void|<!--202180204-->}}===
 {{Mission Description|type=companion|location=Black Swan's Memory Bubble|update|Sparkle left a lot of items behind at the crime scene and used them to construct a bizarre stage play. It seems that this "murder" was simply a bait to attract the attention of her audience, and this "puzzle" was actually the challenge that she had left for Black Swan.}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+;(If {{F|MissionCV-2021802-1}} is undefined 0)
+:<pre>{
+	"$type": "RPG.GameCore.PerformanceExtendEndBlack",
+	"ExtendTime": 1
+}</pre>
+::{{tx}}
+:<pre>{
+	"$type": "RPG.GameCore.SetMissionCustomValue",
+	"SubmissionID": 202180206,
+	"MissionCustomValue": {
+		"Index": 1,
+		"Name": "OldValue_1",
+		"isLocal": true,
+		"ValidValueParamList": [
+			0,
+			1
+		]
+	},
+	"CustomValue": 1
+}</pre>
+;(If {{F|MissionCV-2021802-1}} is not undefined 0)
+:<pre>{
+	"$type": "RPG.GameCore.PerformanceExtendEndBlack",
+	"ExtendTime": 1
+}</pre>
+::{{tx}}
 {{Dialogue End}}
 
 ===Ask the bailiff about suspects{{subst:void|<!--202180205-->}}===
 {{Mission Description|type=companion|location=Black Swan's Memory Bubble|update|Black Swan begins collecting clues, trying to solve the puzzle that Sparkle left behind. You can't help but wonder why Sparkle would go through all this effort. However, when it comes to people like Sparkle, asking "why" normally means you are on the wrong track. Why not play with Black Swan the logic game that Sparkle left behind... Perhaps Sparkle's true motive is concealed within.}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Obtain {{Item|Case Review (I)|20|x=1}})
 {{Dialogue End}}
 
 ===Investigate the evidence at the crime scene{{subst:void|<!--202180206-->}}===
 {{Dialogue Start}}
-:{{tx}}
+
+;(Obtain {{Item|Evidence: Shamari's ID|20|x=1}})
+
+;(Obtain {{Item|Evidence: Giant Wooden Hammer|20|x=1}})
 {{Dialogue End}}
 
 ===Sort through the clues that you have collected so far{{subst:void|<!--202180236-->}}===
 {{Dialogue Start}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+<pre>{
+	"$type": "RPG.GameCore.PerformanceExtendEndBlack",
+	"ExtendTime": 1
+}</pre>
 :{{tx}}
+<pre>{
+	"$type": "RPG.GameCore.AdvDestroyGroupEntity",
+	"InstanceIDList": [
+		300001
+	]
+}</pre>
 {{Dialogue End}}
 
 ===Enter the room where Sparkle hid the clues to the puzzle{{subst:void|<!--202180234-->}}===
 {{Dialogue Start}}
-:{{tx}}
+
+
+;(Upon reaching the destination)
+
+;(Obtain {{Item|Evidence: Goldhammer Residence Security Regulations|20|x=1}})
+
+
+;(Obtain {{Item|Evidence: "Mutually Assured Destruction" Button|20|x=1|text=Evidence: "Mutually Assured Destruction" Button}})
+
+<pre>{
+	"$type": "RPG.GameCore.AdvSetupButtonListTrigger",
+	"TargetType": {
+		"$type": "RPG.GameCore.GroupFetchLocalTarget",
+		"TargetType": "Prop",
+		"Targets": [
+			300001
+		]
+	},
+	"TriggerName": "MissionTrigger",
+	"ButtonsByName": [],
+	"ButtonConfigs": [
+		{
+			"ID": "Button01",
+			"IconType": "CheckIcon",
+			"ButtonText": {
+				"Value": "PropInteractTitle_1"
+			}
+		}
+	],
+	"DisableAfterTriggered": true,
+	"IsOverrideValidGuestConfig": true,
+	"OverridedValidGuestConfig": {
+		"FakePlayer": true
+	}
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.WaitEntityServerEvent"
+}</pre>
+;(If {{cx}}{{subst:void|<!--{"$type":"RPG.GameCore.ByComparePropState","TargetType":{"$type":"RPG.GameCore.GroupFetchLocalTarget","TargetType":"Prop","Targets":[300002]}}-->}}, {{cx}}{{subst:void|<!--{"$type":"RPG.GameCore.ByComparePropState","TargetType":{"$type":"RPG.GameCore.GroupFetchLocalTarget","TargetType":"Prop","Targets":[300003]}}-->}}, {{cx}}{{subst:void|<!--{"$type":"RPG.GameCore.ByComparePropState","TargetType":{"$type":"RPG.GameCore.GroupFetchLocalTarget","TargetType":"Prop","Targets":[300004]}}-->}}, and {{cx}}{{subst:void|<!--{"$type":"RPG.GameCore.ByComparePropState","TargetType":{"$type":"RPG.GameCore.GroupFetchLocalTarget","TargetType":"Prop","Targets":[300001]},"State":"Open"}-->}})
+<pre>{
+	"$type": "RPG.GameCore.ChangePropState"
+}</pre>
 {{Dialogue End}}
 
 ===Investigate the "evidence" that Sparkle left{{subst:void|<!--202180235-->}}===
 {{Dialogue Start}}
-:{{tx}}
+
+;(Obtain {{Item|Evidence: Pom-Pom Toy|20|x=1}})
 {{Dialogue End}}
 
 ===Sort through the clues with Sampo{{subst:void|<!--202180256-->}}===
 {{Dialogue Start}}
-:{{tx}}
+:{{A|VO side3 huahuo blackswan 141.ogg}} '''Black Swan:''' Doesn't look like there are any more clues. Let's head back to the crime scene.
+
+:{{DIcon|Talk}} Exclude "Lefton"
+:{{A|VO side3 huahuo sampo 132.ogg}} '''Sampo:''' So who exactly is the murderer?
+:{{A|VO side3 huahuo sampo 133.ogg}} '''Sampo:''' Lefton. That guy {{Color|keyword|nobold=1|lost his hand}}...
+<pre>{
+	"$type": "RPG.GameCore.SelectMissionItem",
+	"SubMissionID": 202180238,
+	"ItemIDList": [
+		140341,
+		140342,
+		140343,
+		140344,
+		140345
+	],
+	"ItemHiddenIDList": [],
+	"ItemInvisibleIDList": [],
+	"ItemSelect": [
+		{
+			"Item1": 140342,
+			"TriggerCustomString": "SubmitSucceed_202180238"
+		}
+	],
+	"SlotNum": 1,
+	"SimpleTalk": {
+		"TalkSentenceID": 202204044
+	},
+	"MaskErrorItem": true,
+	"OnSubmitSucceed": [],
+	"OnSubmitFail": [
+		{
+			"$type": "RPG.GameCore.TriggerCustomString",
+			"CustomString": {
+				"Value": "SubmitFail_202180238"
+			}
+		}
+	],
+	"OnSubmitCancel": [
+		{
+			"$type": "RPG.GameCore.SetMissionCustomValue",
+			"SubmissionID": 202180238,
+			"MissionCustomValue": {
+				"Index": 2,
+				"Name": "OldValue_2",
+				"isLocal": true,
+				"ValidValueParamList": [
+					0,
+					1
+				]
+			}
+		},
+		{
+			"$type": "RPG.GameCore.EndPerformance"
+		}
+	]
+}</pre>
+;(If {{F|MissionCV-2021802-2}} is undefined 1)
+;(Unused &mdash; SubmitSucceed_202180238)
+:;(If {{cx}}<!--SubMission Finish: 202180239-->)
+:::{{A|VO side3 huahuo blackswan 143.ogg}} '''Black Swan:''' Based on the bailiff's statement, Lefton's dominant hand was seriously injured to the point where he had to learn how to live using only his left hand. Swinging that giant sledgehammer to murder someone... that must be hard for him. Probably impossible.
+:::{{A|VO side3 huahuo blackswan 144.ogg}} '''Black Swan:''' Lefton's suspicion level can be downgraded.
+:::{{A|VO side3 huahuo sampo 141.ogg}} '''Sampo:''' By process of elimination, it seems that only Wright could be the murderer. That was easy. Let's tell the constable our answer and see what he thinks.
+:;(If {{cx}}<!--SubMission not Finish: 202180239-->)
+:::{{A|VO side3 huahuo blackswan 143.ogg}} '''Black Swan:''' Based on the bailiff's statement, Lefton's dominant hand was seriously injured to the point where he had to learn how to live using only his left hand. Swinging that giant sledgehammer to murder someone... that must be hard for him. Probably impossible.
+:::{{A|VO side3 huahuo blackswan 144.ogg}} '''Black Swan:''' Lefton's suspicion level can be downgraded.
+<pre>{
+	"$type": "RPG.GameCore.SetMissionCustomValue",
+	"SubmissionID": 202180238,
+	"MissionCustomValue": {
+		"Index": 2,
+		"Name": "OldValue_2",
+		"isLocal": true,
+		"ValidValueParamList": [
+			0,
+			1
+		]
+	},
+	"CustomValue": 1
+}</pre>
+
+;(Unused &mdash; SubmitFail_202180238)
+:{{A|VO side3 huahuo sampo 134.ogg}} '''Sampo:''' Er... is that so? I feel like the evidence doesn't really match? How about you think it over again?
+:<pre>{
+	"$type": "RPG.GameCore.SelectMissionItem",
+	"SubMissionID": 202180238,
+	"ItemIDList": [
+		140341,
+		140342,
+		140343,
+		140344,
+		140345
+	],
+	"ItemHiddenIDList": [],
+	"ItemInvisibleIDList": [],
+	"ItemSelect": [
+		{
+			"Item1": 140342,
+			"TriggerCustomString": "SubmitSucceed_202180238"
+		}
+	],
+	"SlotNum": 1,
+	"SimpleTalk": {
+		"TalkSentenceID": 202204044
+	},
+	"MaskErrorItem": true,
+	"OnSubmitSucceed": [],
+	"OnSubmitFail": [
+		{
+			"$type": "RPG.GameCore.TriggerCustomString",
+			"CustomString": {
+				"Value": "SubmitFail_202180238"
+			}
+		}
+	],
+	"OnSubmitCancel": [
+		{
+			"$type": "RPG.GameCore.SetMissionCustomValue",
+			"SubmissionID": 202180238,
+			"MissionCustomValue": {
+				"Index": 2,
+				"Name": "OldValue_2",
+				"isLocal": true,
+				"ValidValueParamList": [
+					0,
+					1
+				]
+			}
+		},
+		{
+			"$type": "RPG.GameCore.EndPerformance"
+		}
+	]
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.AdvCreateGroupEntity",
+	"InstanceIDList": [
+		300001,
+		400001
+	]
+}</pre>
 {{Dialogue End}}
 
 ===Figure out the answer to the puzzle{{subst:void|<!--202180213-->}}===
 {{Dialogue Start}}
-:{{tx}}
+;(If {{cx}}<!--SubMission not Finish: 202180240-->)
+<pre>{
+	"$type": "RPG.GameCore.PPFilterStackEffect",
+	"Duration": 1.5,
+	"AssetPath": "EnviroSystem/PostProcessFilterAsset/TimeStopFilter.asset",
+	"MuteAudioEvent": true
+}</pre>
+;(Lose {{Item|Evidence: Shamari's ID|20|x=1}})
 {{Dialogue End}}
 
 ===Identify the "murderer" to the constable{{subst:void|<!--202180214-->}}===
 {{Dialogue Start}}
-:{{tx}}
+
+;(Lose {{Item|Case Review (I)|20|x=1}})
 {{Dialogue End}}
 
 ===Hurry to the scene of Sparkle's upcoming crime{{subst:void|<!--202180215-->}}===
 {{Mission Description|type=companion|location=Black Swan's Memory Bubble|update|You have solved the puzzle, but the game is not over. The "constable" has told Black Swan that Sparkle is about to commit another murder, and Black Swan definitely would not have enough time to stop her. You feel a brief but intense surge of emotion flash across the Dreamscape, likely because Black Swan dislikes this feeling of being led on a wild goose chase by others.}}
 {{Dialogue Start}}
+
+<pre>{
+	"$type": "RPG.GameCore.AdvCreateEntityAsync",
+	"InstanceIDList": [
+		300002
+	],
+	"AdvancedSpawnList": []
+}</pre>
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+<pre>{
+	"$type": "RPG.GameCore.AdvDestroyGroupEntity",
+	"InstanceIDList": [
+		300002
+	]
+}</pre>
+:{{A|VO side3 huahuo sampo 144.ogg}} '''Sampo:''' So, why are you so focused on Sparkle's challenge? Or should I ask... are you more focused on Sparkle herself?
+
+;(Upon reaching the destination)
+<pre>{
+	"$type": "RPG.GameCore.AdvDestroyGroupEntity",
+	"InstanceIDList": [
+		300004
+	]
+}</pre>
+:{{A|VO side3 huahuo blackswan 151.ogg}} '''Black Swan:''' I told you, it's purely out of a spirit of competitiveness.
+:{{A|VO side3 huahuo blackswan 152.ogg}} '''Black Swan:''' And, as a Memokeeper, I also have to fulfill my responsibilities and harvest some interesting memories.
+
+;(Upon reaching the destination)
+<pre>{
+	"$type": "RPG.GameCore.AdvDestroyGroupEntity",
+	"InstanceIDList": [
+		300005
+	]
+}</pre>
+
+;(Upon reaching the destination)
+<pre>{
+	"$type": "RPG.GameCore.AdvDestroyGroupEntity",
+	"InstanceIDList": [
+		300007
+	]
+}</pre>
+:{{A|VO side3 huahuo sampo 145.ogg}} '''Sampo:''' Wow... This place is a complete mess. And those two weirdos are probably here, too.
+:{{A|VO side3 huahuo blackswan 153.ogg}} '''Black Swan:''' There's nobody else at the scene. Seems like Miss Sparkle used the same method to "send" dreamers back to reality... Let's talk to those two there then.
 :{{tx}}
+<pre>{
+	"$type": "RPG.GameCore.AdvCreateGroupEntity",
+	"InstanceIDList": [
+		300003
+	]
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.AdvCreateGroupEntity",
+	"InstanceIDList": [
+		300003
+	]
+}</pre>
+
+:{{DIcon|Talk}} Investigate
+:At this moment, the constable and his bailiff lay lifelessly, mere husks of their former selves. It seems they have already completed their mission.
 {{Dialogue End}}
 
 ===Speak with the sheriff and the deputy sheriff{{subst:void|<!--202180216-->}}===
 {{Mission Description|type=companion|location=Black Swan's Memory Bubble|update|Another murder, another play, and another puzzle. Sampo seems extremely distressed and ready to escape back into his secluded and quiet Winterland. Black Swan, on the other hand, seems calm and contented, thoroughly enjoying the detective game that Sparkle prepared. However, they are not the type to have their emotions displayed across their faces, so you are uncertain whether they are really distressed or calm.<br />However, the Dreamscape Sales Store is still a place of entertainment, so perhaps it would be better to focus on investigating the puzzle Sparkle left behind than trying to assess the true thoughts of these "characters." Let's enjoy a game of logic and deduction.}}
 {{Dialogue Start}}
-:{{tx}}
+
 {{Dialogue End}}
 
 ===Ask the deputy sheriff about the suspects{{subst:void|<!--202180217-->}}===
 {{Dialogue Start}}
-:{{tx}}
+
+;(Obtain {{Item|Case Review (II)|20|x=1}})
 {{Dialogue End}}
 
 ===Investigate the evidence at the crime scene{{subst:void|<!--202180218-->}}===
 {{Dialogue Start}}
-:{{tx}}
+
+;(Obtain {{Item|Evidence: Qian Ketong's Account Book|20|x=1}})
+
+;(Obtain {{Item|Evidence: Lefton's Tie|20|x=1}})
 {{Dialogue End}}
 
 ===Sort through the clues that you have collected so far{{subst:void|<!--202180244-->}}===
 {{Dialogue Start}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+<pre>{
+	"$type": "RPG.GameCore.PerformanceExtendEndBlack",
+	"ExtendTime": 1
+}</pre>
 :{{tx}}
+<pre>{
+	"$type": "RPG.GameCore.AdvDestroyGroupEntity",
+	"InstanceIDList": [
+		300001
+	]
+}</pre>
 {{Dialogue End}}
 
 ===Enter the room where Sparkle hid the clues to the puzzle{{subst:void|<!--202180245-->}}===
 {{Dialogue Start}}
-:{{tx}}
+
+
+;(Upon reaching the destination)
+
+;(Obtain {{Item|Evidence: Wright's Stool|20|x=1}})
+
+
+;(Obtain {{Item|Evidence: Smoked Red Herring|20|x=1}})
+;(If {{cx}}{{subst:void|<!--{"$type":"RPG.GameCore.ByComparePropState","TargetType":{"$type":"RPG.GameCore.TargetFetchAdvPropEx","FetchType":"SinglePropByPropID","SinglePropID":{"GroupID":{"FixedValue":{"Value":24}},"ID":{"FixedValue":{"Value":300001}}},"MultiPropID":[]}}-->}} or {{cx}}{{subst:void|<!--{"$type":"RPG.GameCore.ByComparePropState","TargetType":{"$type":"RPG.GameCore.TargetFetchAdvPropEx","FetchType":"SinglePropByPropID","SinglePropID":{"GroupID":{"FixedValue":{"Value":24}},"ID":{"FixedValue":{"Value":300001}}},"MultiPropID":[]},"State":"Open"}-->}})
 {{Dialogue End}}
 
 ===Investigate the "evidence" that Sparkle left{{subst:void|<!--202180246-->}}===
 {{Dialogue Start}}
-:{{tx}}
+;(If {{cx}}{{subst:void|<!--{"$type":"RPG.GameCore.ByComparePropState","TargetType":{"$type":"RPG.GameCore.TargetFetchAdvPropEx","FetchType":"SinglePropByPropID","SinglePropID":{"GroupID":{"FixedValue":{"Value":24}},"ID":{"FixedValue":{"Value":300001}}},"MultiPropID":[]},"State":"Open"}-->}})
+;(Obtain {{Item|Evidence: Zhongshan's Ring|20|x=1}})
 {{Dialogue End}}
 
 ===Sort through the clues with Sampo{{subst:void|<!--202180257-->}}===
 {{Dialogue Start}}
-:{{tx}}
+:{{A|VO side3 huahuo sampo 162.ogg}} '''Sampo:''' That should be it. Let's head out.
 {{Dialogue End}}
 
 ===Figure out the answer to the puzzle{{subst:void|<!--202180225-->}}===
 {{Dialogue Start}}
-:{{tx}}
+
 {{Dialogue End}}
 
 ===Hurry to the scene of Sparkle's upcoming crime{{subst:void|<!--202180227-->}}===
 {{Mission Description|type=companion|location=Black Swan's Memory Bubble|update|Black Swan has solved the puzzle that isn't a puzzle... Clearly, the game is still not over. Once again, Black Swan follows Sparkle's instructions and rushes to the next crime scene. You feel as if you sense another brief burst of emotion... Black Swan is getting a little tired of these games.}}
 {{Dialogue Start}}
+
+<pre>{
+	"$type": "RPG.GameCore.AdvCreateEntityAsync",
+	"InstanceIDList": [
+		300001
+	],
+	"AdvancedSpawnList": []
+}</pre>
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{A|VO side3 huahuo sampo 171.ogg}} '''Sampo:''' Just as you said, solving puzzles is all just a cover for something else. That girl is toying with us. What should we do now? Just keep getting led around by her?
+:{{A|VO side3 huahuo blackswan 193.ogg}} '''Black Swan:''' Truly, Miss Sparkle is a fascinating person. She seems chaotic inside, but easy enough to understand &mdash; like a performer on the stage, or a child hungering for attention.
+:{{A|VO side3 huahuo blackswan 194.ogg}} '''Black Swan:''' This game will be over soon... This time, we're going to catch her.
+<pre>{
+	"$type": "RPG.GameCore.AdvDestroyGroupEntity",
+	"InstanceIDList": [
+		300001
+	]
+}</pre>
+
+;(Upon reaching the destination)
+<pre>{
+	"$type": "RPG.GameCore.AdvDestroyGroupEntity",
+	"InstanceIDList": [
+		300002
+	]
+}</pre>
+
+;(Upon reaching the destination)
+<pre>{
+	"$type": "RPG.GameCore.AdvDestroyGroupEntity",
+	"InstanceIDList": [
+		300004
+	]
+}</pre>
 :{{tx}}
+----
+;([[#Gallery|Cutscene]] plays)
+::Ding-a-ling~ Now comes the most exciting and romantic moment in any drama: The audience challenge!
+::Everyone knows that the mighty Masked Fool Sparkle can change her appearance to look like others.
+And in this drama, the villain, Sparkle, has disguised herself as another character.
+::So then, I put to you: Which character is it!
+::Also, if you're interested in the locked-room case that the Memokeeper ignored, you can try out your powers of deduction.
+I put lots into coming up with the puzzle, so don't let it go to waste!
+::Thus the Masked Genius Miss Sparkle has thrown down the gauntlet! All the clues are in motion &mdash; happy hunting!
+;(Cutscene ends)
+----
+
+
+:{{DIcon|Talk}} Investigate
+:The detective and the assistant detective have become two lifeless bodies. It seems they can no longer complete their mission.
+
+;(Lose {{Item|Evidence: Qian Ketong's Account Book|20|x=1}})
 {{Dialogue End}}
 
 ===Hurry to Sparkle's hiding spot{{subst:void|<!--202180229-->}}===
 {{Mission Description|type=companion|location=Black Swan's Memory Bubble|update|"Challenge the audience"... You have read a lot of detective novels that March 7th shoved into your hands and are no stranger to this kind of plot. Although, normally it's the job of the author or the detective to challenge the reader (or audience), is it not? How is it that in Sparkle's game, it's the murderer who's throwing down the gauntlet? Surely this is closer to "threatening the audience" than challenging...? It's just what you've come to expect from Sparkle.<br />Either way, happy hunting.}}
 {{Dialogue Start}}
+<pre>{
+	"$type": "RPG.GameCore.AdvCreateEntityAsync",
+	"InstanceIDList": [
+		300001
+	],
+	"AdvancedSpawnList": []
+}</pre>
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{A|VO side3 huahuo sampo 175.ogg}} '''Sampo:''' Miss, Why didn't you just do this earlier?
+:{{A|VO side3 huahuo blackswan 200.ogg}} '''Black Swan:''' Such a crude approach violates my aesthetics of memory, but as a means to an end... I need to put this aside for a more indifferent process.
+<pre>{
+	"$type": "RPG.GameCore.AdvDestroyGroupEntity",
+	"InstanceIDList": [
+		300001
+	]
+}</pre>
+
+;(Upon reaching the destination)
+<pre>{
+	"$type": "RPG.GameCore.AdvDestroyGroupEntity",
+	"InstanceIDList": [
+		300002
+	]
+}</pre>
+
+;(Upon reaching the destination)
+<pre>{
+	"$type": "RPG.GameCore.AdvDestroyGroupEntity",
+	"InstanceIDList": [
+		300003
+	]
+}</pre>
+:{{tx}}
+----
+;([[#Gallery|Cutscene]] plays)
+::Ah... Ahhh! Miss, you... you killed Sparkle!
+;(Cutscene ends)
+----
 :{{tx}}
 {{Dialogue End}}
 
 ===Inspect the unusual trashcan{{subst:void|<!--202180230-->}}===
 {{Mission Description|type=companion|location=Black Swan's Memory Bubble|update|What stands before Black Swan in this moment is undoubtedly a trashcan. A Belobogian-style trashcan. This sight is supposed to shock you, but it does not. You have seen many strange things on your journeys. This sense of being unfazed by the bizarre makes you feel like you have really gained some life experience.}}
 {{Dialogue Start}}
-:{{tx}}
+
 {{Dialogue End}}
 
 ===Figure out the answer to the puzzle{{subst:void|<!--202180247-->}}===
 {{Mission Description|type=companion|location=Black Swan's Memory Bubble|update|Another murder, another play, and another puzzle. Sampo seems extremely distressed and ready to escape back into his secluded and quiet Winterland. Black Swan, on the other hand, seems calm and contented, thoroughly enjoying the detective game that Sparkle prepared. However, they are not the type to have their emotions displayed across their faces, so you are uncertain whether they are really distressed or calm.<br />However, the Dreamscape Sales Store is still a place of entertainment, so perhaps it would be better to focus on investigating the puzzle Sparkle left behind than trying to assess the true thoughts of these "characters." Let's enjoy a game of logic and deduction.}}
 {{Dialogue Start}}
-:{{tx}}
 {{Dialogue End}}
 
 ===Identify the "murderer" to the sheriff{{subst:void|<!--202180248-->}}===
 {{Dialogue Start}}
-:{{tx}}
+
+:{{DIcon|Talk}} Denounce "Lefton"
+:{{A|VO side3 huahuo sheriffA 133.ogg}} '''Sheriff:''' Hmm... Have you solved the case?
+:{{A|VO side3 huahuo sheriffA 134.ogg}} '''Sheriff:''' Lefton is a wealthy merchant who has been competing with Miss Sparkle for decades &mdash; they're always at each other's throats!
+<pre>{
+	"$type": "RPG.GameCore.SelectMissionItem",
+	"ItemIDList": [
+		140346,
+		140347,
+		140348,
+		140349,
+		140350
+	],
+	"ItemHiddenIDList": [],
+	"ItemInvisibleIDList": [],
+	"ItemSelect": [
+		{
+			"Item1": 140347,
+			"TriggerCustomString": "TalkSentence_202204081"
+		}
+	],
+	"SlotNum": 1,
+	"SimpleTalk": {
+		"TalkSentenceID": 202204080
+	},
+	"MaskErrorItem": true,
+	"OnSubmitFail": [
+		{
+			"$type": "RPG.GameCore.TriggerCustomString",
+			"CustomString": {
+				"Value": "TalkSentence_202204086"
+			}
+		}
+	],
+	"OnSubmitCancel": [
+		{
+			"$type": "RPG.GameCore.TriggerCustomString",
+			"CustomString": {
+				"Value": "SelectCancel_202180277"
+			}
+		}
+	]
+}</pre>
+;(If {{F|MissionCV-2021802-5}} is undefined 1)
+<pre>{
+	"$type": "RPG.GameCore.TriggerSound",
+	"SoundName": {
+		"Value": "Ev_sfx_storyd_blackswan_reasoningfilter_loop_stop"
+	},
+	"EmitterType": "LocalPlayer"
+}</pre>
+;(Unused &mdash; TalkSentence_202204081)
+:{{A|VO side3 huahuo blackswan 177.ogg}} '''Black Swan:''' This tie is a piece of evidence, right?
+::{{A|VO side3 huahuo sheriffA 135.ogg}} '''Sheriff:''' ...That's right. That's the one!
+::{{A|VO side3 huahuo sheriffA 136.ogg}} '''Sheriff:''' This tie belongs to Lefton, and it just so happens to be the murder weapon in this case. Could the evidence be any more solid than this?
+::{{A|VO side3 huahuo sheriffA 137.ogg}} '''Sheriff:''' Lefton snuck into the changing room and waited for poor Miss Sparkle to enter, before using this very tie to brutally kill her! And then he stuffed Zhongshan's ring into her mouth as a way to try and frame him.
+::{{A|VO side3 huahuo sheriffA 138.ogg}} '''Sheriff:''' What a tragedy. If it weren't for your incisive detective work, the murderer would still be at large!
+:<pre>{
+	"$type": "RPG.GameCore.SetMissionCustomValue",
+	"SubmissionID": 202180248,
+	"MissionCustomValue": {
+		"Index": 5,
+		"Name": "OldValue_5",
+		"isLocal": true,
+		"ValidValueParamList": [
+			0,
+			1
+		]
+	},
+	"CustomValue": 1
+}</pre>
+::----
+
+;(Unused &mdash; TalkSentence_202204086)
+:{{A|VO side3 huahuo sheriffA 139.ogg}} '''Sheriff:''' Hmm? This evidence doesn't really prove that he is the murderer...
+::{{A|VO side3 huahuo blackswan 178.ogg}} '''Black Swan:''' It doesn't? Looks like Miss Sparkle is more careful than I thought.
+:<pre>{
+	"$type": "RPG.GameCore.SelectMissionItem",
+	"ItemIDList": [
+		140346,
+		140347,
+		140348,
+		140349,
+		140350
+	],
+	"ItemHiddenIDList": [],
+	"ItemInvisibleIDList": [],
+	"ItemSelect": [
+		{
+			"Item1": 140347,
+			"TriggerCustomString": "TalkSentence_202204081"
+		}
+	],
+	"SlotNum": 1,
+	"SimpleTalk": {
+		"TalkSentenceID": 202204080
+	},
+	"MaskErrorItem": true,
+	"OnSubmitFail": [
+		{
+			"$type": "RPG.GameCore.TriggerCustomString",
+			"CustomString": {
+				"Value": "TalkSentence_202204086"
+			}
+		}
+	],
+	"OnSubmitCancel": [
+		{
+			"$type": "RPG.GameCore.TriggerCustomString",
+			"CustomString": {
+				"Value": "SelectCancel_202180277"
+			}
+		}
+	]
+}</pre>
+
+;(Unused &mdash; SelectCancel_202180277)
+<pre>{
+	"$type": "RPG.GameCore.SetMissionCustomValue",
+	"SubmissionID": 202180248,
+	"MissionCustomValue": {
+		"Index": 5,
+		"Name": "OldValue_5",
+		"isLocal": true,
+		"ValidValueParamList": [
+			0,
+			1
+		]
+	}
+}</pre>
 {{Dialogue End}}
 
 ===Hurry to the scene of Sparkle's upcoming crime{{subst:void|<!--202180251-->}}===
 {{Mission Description|type=companion|location=Black Swan's Memory Bubble|update|Black Swan has solved the puzzle that isn't a puzzle... Clearly, the game is still not over. Once again, Black Swan follows Sparkle's instructions and rushes to the next crime scene. You feel as if you sense another brief burst of emotion... Black Swan is getting a little tired of these games.}}
 {{Dialogue Start}}
-:{{tx}}
+
 {{Dialogue End}}
 
 ==Other Languages==

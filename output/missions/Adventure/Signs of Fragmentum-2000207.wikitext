@@ -49,79 +49,532 @@ PageTitle=#Signs of Fragmentum#
 ===Enter the storage zone and investigate the site conditions{{subst:void|<!--200020700-->}}===
 {{Mission Description|type=adventure|location=Storage Zone|Receive remote assistance from Asta and learn about the condition of the storage zone}}
 {{Dialogue Start}}
-:{{tx}}
 {{Dialogue End}}
 
 ===Find out about the situation from the investigators{{subst:void|<!--200020701-->}}===
 {{Mission Description|type=adventure|location=Storage Zone|update|According to Asta's plans, the investigator first reached floor two and seemed to have found some clues about the zone's current situation.}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Security Department Member)
+:'''Security Department Member:''' (Trailblazer), is that you? Lead Researcher Asta ordered us to wait for you here. The damage to the equipment in this place is so severe that we have to stay put and rig a new terminal. I'll leave it to you to gather the beacon data.
+:'''Security Department Member:''' There's a mysterious "big guy" up ahead. Please be careful while gathering data.
+
+;(Talk to Maintenance Staff)
+:'''Maintenance Staff Member:''' We're so lucky to have you, (Trailblazer). The remote connection is up. Leave the rest to us. Go back and have a good rest.
+<pre>{
+	"$type": "RPG.GameCore.ConsumeMissionItem",
+	"SubMissionID": 200020750,
+	"Desc": {
+		"Hash": 11529178870856797684
+	},
+	"SimpleTalk": {}
+}</pre>
 {{Dialogue End}}
 
 ===Collect beacon data{{subst:void|<!--200020740-->}}===
 {{Mission Description|type=adventure|location=Storage Zone|update|The current zone shows signs of the Fragmentum, but the device that monitors this area was accidentally destroyed in the chaos. Asta had asked you to collect the remaining beacon data in the area.<br />Collect the beacon data saved by the Wubbaboos.}}
 {{Dialogue Start}}
-:{{tx}}
+<pre>{
+	"$type": "RPG.GameCore.PhotoGraphWaitIdentifyFinish",
+	"WaitTargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvProp",
+		"MultiGroupFetch": [
+			{
+				"GroupID": {
+					"FixedValue": {
+						"Value": 18
+					}
+				},
+				"ID": {
+					"FixedValue": {
+						"Value": 300001
+					}
+				}
+			}
+		]
+	},
+	"OnIdentifyFinish": [
+		{
+			"$type": "RPG.GameCore.TriggerCustomString",
+			"CustomString": {
+				"Value": "200020541_Success"
+			}
+		}
+	],
+	"OnPreviewFinish": []
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.PhotoGraphAimTarget",
+	"AimTargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvProp",
+		"MultiGroupFetch": [
+			{
+				"GroupID": {
+					"FixedValue": {
+						"Value": 18
+					}
+				},
+				"ID": {
+					"FixedValue": {
+						"Value": 300001
+					}
+				}
+			}
+		]
+	},
+	"AimIdentifyType": "Manual"
+}</pre>
+:<!--1.5-second delay-->
+<pre>{
+	"$type": "RPG.GameCore.SwitchPhotoGraphMode",
+	"IdentifyRadiusOverride": {
+		"FixedValue": {
+			"Value": 0
+		}
+	}
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.PropSetVisibility",
+	"SpecifiedRelativePaths": [],
+	"TargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvPropEx",
+		"FetchType": "SinglePropByPropID",
+		"SinglePropID": {
+			"GroupID": {
+				"FixedValue": {
+					"Value": 18
+				}
+			},
+			"ID": {
+				"FixedValue": {
+					"Value": 300001
+				}
+			}
+		}
+	}
+}</pre>
+:You succeed in extracting the beacon data from the Wubbaboo. It thanks you with a "woo" then leaves.
+<pre>{
+	"$type": "RPG.GameCore.UpdateTreasureChallengeProgress",
+	"RaidTargetID": 400020231,
+	"IsIncrease": true,
+	"DeltaValue": 1
+}</pre>
+;(Unused &mdash; PhotoGraphGOGOGO)
+<pre>{
+	"$type": "RPG.GameCore.SwitchPhotoGraphMode",
+	"PhotoGraphMode": "Identify",
+	"SkipPhotoPreviewDialog": true,
+	"IdentifyRadiusOverride": {
+		"FixedValue": {
+			"Value": 0
+		}
+	}
+}</pre>
+
+;(Unused &mdash; 200020541_Break)
+
+
+;(Unused &mdash; 200020541_Success)
+<pre>{
+	"$type": "RPG.GameCore.PhotoGraphShowIdentifyResult",
+	"IsIdentifySuccess": true,
+	"IsShowToast": true,
+	"ToastText": {
+		"Hash": 6247561509245999753
+	},
+	"IsShowAim": true
+}</pre>
+
+;(Unused &mdash; 200020541_Fail)
+<pre>{
+	"$type": "RPG.GameCore.PhotoGraphShowIdentifyResult",
+	"IsShowToast": true,
+	"ToastText": {
+		"Hash": 13547527406387288485
+	},
+	"IsShowAim": true
+}</pre>
+
+;(Obtain {{Item|Beacon Data|20|x=1}})
+<pre>{
+	"$type": "RPG.GameCore.PhotoGraphWaitIdentifyFinish",
+	"WaitTargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvNPC",
+		"MultiGroupFetch": [
+			{
+				"GroupID": 15,
+				"GroupNpcID": 200001
+			}
+		]
+	},
+	"OnIdentifyFinish": [],
+	"OnPreviewFinish": []
+}</pre>
+;(Unused &mdash; 200020546_Break)
+
+
+;(Unused &mdash; 200020546_Success)
+<pre>{
+	"$type": "RPG.GameCore.PhotoGraphShowIdentifyResult",
+	"IsIdentifySuccess": true,
+	"IsShowToast": true,
+	"ToastText": {
+		"Hash": 6247561509245999753
+	},
+	"IsShowAim": true
+}</pre>
+
+;(Unused &mdash; 200020546_Fail)
+<pre>{
+	"$type": "RPG.GameCore.PhotoGraphShowIdentifyResult",
+	"IsShowToast": true,
+	"ToastText": {
+		"Hash": 13547527406387288485
+	},
+	"IsShowAim": true
+}</pre>
+
+;(Obtain {{Item|Beacon Data|20|x=1}})
+
+;(Obtain {{Item|Beacon Data|20|x=1}})
+
+;(Obtain {{Item|Beacon Data|20|x=1}})
+
+;(Obtain {{Item|Beacon Data|20|x=1}})
+
+;(Obtain {{Item|Beacon Data|20|x=1}})
 {{Dialogue End}}
 
 ===Continue in-depth investigation{{subst:void|<!--200020702-->}}===
 {{Mission Description|type=adventure|location=Storage Zone|update|Go to other rooms to investigate more deeply}}
 {{Dialogue Start}}
-:{{tx}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:'''Asta:''' It seems that the gates on both sides were locked during the evacuation.
+:'''Asta:''' Due to interference from the Fragmentum, I can't unlock them. You'll have to find the encryption key in order to get through.
+
+;(Upon reaching the destination)
+----
+:'''Asta:''' Wait, the coating on the encryption key is made of a special photosensitive material. The camera's scanning function might be of some use here.
+:'''Asta:''' There are multiple enemies ahead. Assuming the key is in their hands, it may be possible to identify and target the key holder in order to avoid fighting more enemies than necessary.
 {{Dialogue End}}
 
 ===Retrieve beacon data{{subst:void|<!--200020748-->}}===
 {{Mission Description|type=adventure|location=Storage Zone|update|Defeat enemies marked by the recognition system and collect beacon data.}}
 {{Dialogue Start}}
-:{{tx}}
+
+:That should be enough data from the beacons. Take it back to the investigators.
+<pre>{
+	"$type": "RPG.GameCore.PhotoGraphWaitIdentifyFinish",
+	"WaitTargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvNPC",
+		"MultiGroupFetch": [
+			{
+				"GroupID": 11,
+				"GroupNpcID": 200001
+			}
+		]
+	},
+	"OnIdentifyFinish": [
+		{
+			"$type": "RPG.GameCore.SwitchPhotoGraphMode"
+		},
+		{
+			"$type": "RPG.GameCore.ToastPile",
+			"ImgPath": "SpriteOutput/UI/MobilePhone/TextPanel.png",
+			"DescTextID": {
+				"Hash": 2383539025790612579
+			}
+		},
+		{
+			"$type": "RPG.GameCore.TriggerCustomString",
+			"CustomString": {
+				"Value": "200020503_Success"
+			}
+		}
+	],
+	"OnPreviewFinish": []
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.PhotoGraphAimTarget",
+	"AimTargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvNPC",
+		"MultiGroupFetch": [
+			{
+				"GroupID": 11,
+				"GroupNpcID": 200001
+			},
+			{
+				"GroupID": 4,
+				"GroupNpcID": 200002
+			},
+			{
+				"GroupID": 4,
+				"GroupNpcID": 200003
+			}
+		]
+	},
+	"AimIdentifyType": "Manual"
+}</pre>
+;(Unused &mdash; PhotoGraphGOGOGO)
+<pre>{
+	"$type": "RPG.GameCore.SwitchPhotoGraphMode",
+	"PhotoGraphMode": "Identify",
+	"SkipPhotoPreviewDialog": true
+}</pre>
+
+;(Unused &mdash; 200020503_Break)
+
+
+;(Unused &mdash; 200020503_Fail)
+<pre>{
+	"$type": "RPG.GameCore.PhotoGraphShowIdentifyResult",
+	"IsShowToast": true,
+	"ToastText": {
+		"Hash": 1160619948626037702
+	},
+	"IsShowAim": true
+}</pre>
+
+;(Unused &mdash; 200020503_Success)
+<pre>{
+	"$type": "RPG.GameCore.PhotoGraphShowIdentifyResult",
+	"IsIdentifySuccess": true,
+	"IsShowToast": true,
+	"ToastText": {
+		"Hash": 2383539025790612579
+	},
+	"IsShowAim": true
+}</pre>
 {{Dialogue End}}
 
 ===Get the encryption key for the current room from the monster{{subst:void|<!--200020704-->}}===
 {{Mission Description|type=adventure|location=Storage Zone|update|Use the camera to scan for monsters and defeat the monster that is carrying the encryption key to the room on the left}}
 {{Dialogue Start}}
-:{{tx}}
+<pre>{
+	"$type": "RPG.GameCore.PhotoGraphWaitIdentifyFinish",
+	"WaitTargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvNPC",
+		"MultiGroupFetch": [
+			{
+				"GroupID": 12,
+				"GroupNpcID": 200001
+			}
+		]
+	},
+	"OnIdentifyFinish": [
+		{
+			"$type": "RPG.GameCore.SwitchPhotoGraphMode"
+		},
+		{
+			"$type": "RPG.GameCore.ToastPile",
+			"ImgPath": "SpriteOutput/UI/MobilePhone/TextPanel.png",
+			"DescTextID": {
+				"Hash": 2383539025790612579
+			}
+		},
+		{
+			"$type": "RPG.GameCore.TriggerCustomString",
+			"CustomString": {
+				"Value": "200020503_Success"
+			}
+		}
+	],
+	"OnPreviewFinish": []
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.PhotoGraphAimTarget",
+	"AimTargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvNPC",
+		"MultiGroupFetch": [
+			{
+				"GroupID": 12,
+				"GroupNpcID": 200001
+			},
+			{
+				"GroupID": 5,
+				"GroupNpcID": 200001
+			},
+			{
+				"GroupID": 5,
+				"GroupNpcID": 200002
+			}
+		]
+	},
+	"AimIdentifyType": "Manual"
+}</pre>
+;(Unused &mdash; PhotoGraphGOGOGO)
+<pre>{
+	"$type": "RPG.GameCore.SwitchPhotoGraphMode",
+	"PhotoGraphMode": "Identify",
+	"SkipPhotoPreviewDialog": true
+}</pre>
+
+;(Unused &mdash; 200020505_Break)
+
+
+;(Unused &mdash; 200020503_Success)
+<pre>{
+	"$type": "RPG.GameCore.PhotoGraphShowIdentifyResult",
+	"IsIdentifySuccess": true,
+	"IsShowToast": true,
+	"ToastText": {
+		"Hash": 2383539025790612579
+	},
+	"IsShowAim": true
+}</pre>
+
+;(Unused &mdash; 200020503_Fail)
+<pre>{
+	"$type": "RPG.GameCore.PhotoGraphShowIdentifyResult",
+	"IsShowToast": true,
+	"ToastText": {
+		"Hash": 1160619948626037702
+	},
+	"IsShowAim": true
+}</pre>
 {{Dialogue End}}
 
 ===On the balcony, defeat the monster that is carrying the encryption key{{subst:void|<!--200020706-->}}===
 {{Mission Description|type=adventure|location=Storage Zone|update|Use the camera to scan for monsters. Find and defeat the monster that is carrying the encryption key}}
 {{Dialogue Start}}
-:{{tx}}
+<pre>{
+	"$type": "RPG.GameCore.PhotoGraphWaitIdentifyFinish",
+	"WaitTargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvNPC",
+		"MultiGroupFetch": [
+			{
+				"GroupID": 10,
+				"GroupNpcID": 200001
+			}
+		]
+	},
+	"OnIdentifyFinish": [
+		{
+			"$type": "RPG.GameCore.SwitchPhotoGraphMode"
+		},
+		{
+			"$type": "RPG.GameCore.ToastPile",
+			"ImgPath": "SpriteOutput/UI/MobilePhone/TextPanel.png",
+			"DescTextID": {
+				"Hash": 2383539025790612579
+			}
+		},
+		{
+			"$type": "RPG.GameCore.TriggerCustomString",
+			"CustomString": {
+				"Value": "200020503_Success"
+			}
+		}
+	],
+	"OnPreviewFinish": []
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.PhotoGraphAimTarget",
+	"AimTargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvNPC",
+		"MultiGroupFetch": [
+			{
+				"GroupID": 10,
+				"GroupNpcID": 200001
+			},
+			{
+				"GroupID": 3,
+				"GroupNpcID": 200002
+			},
+			{
+				"GroupID": 3,
+				"GroupNpcID": 200003
+			}
+		]
+	},
+	"AimIdentifyType": "Manual"
+}</pre>
+;(Unused &mdash; PhotoGraphGOGOGO)
+<pre>{
+	"$type": "RPG.GameCore.SwitchPhotoGraphMode",
+	"PhotoGraphMode": "Identify",
+	"SkipPhotoPreviewDialog": true
+}</pre>
+
+;(Unused &mdash; 200020507_Break)
+
+
+;(Unused &mdash; 200020503_Success)
+<pre>{
+	"$type": "RPG.GameCore.PhotoGraphShowIdentifyResult",
+	"IsIdentifySuccess": true,
+	"IsShowToast": true,
+	"ToastText": {
+		"Hash": 2383539025790612579
+	},
+	"IsShowAim": true
+}</pre>
+
+;(Unused &mdash; 200020503_Fail)
+<pre>{
+	"$type": "RPG.GameCore.PhotoGraphShowIdentifyResult",
+	"IsShowToast": true,
+	"ToastText": {
+		"Hash": 1160619948626037702
+	},
+	"IsShowAim": true
+}</pre>
 {{Dialogue End}}
 
 ===Obtain the encryption key from the monster's body{{subst:void|<!--200020708-->}}===
 {{Mission Description|type=adventure|location=Storage Zone|update|Use the camera to scan for monsters and defeat the monster that is carrying the encryption key to the room on the right}}
 {{Dialogue Start}}
-:{{tx}}
+:'''Asta:''' The only door still locked is the one in the central room. This should be the key.
+<pre>{
+	"$type": "RPG.GameCore.WaitMissionTalkFinish"
+}</pre>
 {{Dialogue End}}
 
 ===Head to the central room{{subst:void|<!--200020710-->}}===
 {{Mission Description|type=adventure|location=Storage Zone|update|Head to the central room}}
 {{Dialogue Start}}
-:{{tx}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+----
+:'''Asta:''' Be careful, unusual energy fluctuations were detected in this guy.
+:'''Asta:''' It seems that the accelerated Fragmentum corrosion in this area can hardly be unrelated to it. Let's take a look.
 {{Dialogue End}}
 
 ===Eliminate monsters that are emitting energy fluctuations{{subst:void|<!--200020711-->}}===
 {{Mission Description|type=adventure|location=Storage Zone|update|Communicate with Asta remotely and defeat monsters causing the energy fluctuations}}
 {{Dialogue Start}}
-:{{tx}}
 {{Dialogue End}}
 
 ===Report to Asta remotely{{subst:void|<!--200020713-->}}===
 {{Mission Description|type=adventure|location=Storage Zone|update|Monster elimination complete, report to Asta remotely}}
 {{Dialogue Start}}
-:{{tx}}
+:'''Asta:''' Did you take care of it? The energy fluctuations have leveled off... and the accelerated Fragmentum corrosion has effectively halted in this area.
+:'''Asta:''' It's as I expected. Good work, (Trailblazer).
+<pre>{
+	"$type": "RPG.GameCore.WaitMissionTalkFinish"
+}</pre>
+:'''Asta:''' This is the encryption key for the room on the right side of the path, so it looks like you'll have to make a trip back the way you came.
+:<!--1-second delay-->
+:'''Asta:''' There doesn't seem to be much here.
+:'''Asta:''' Let's go check up ahead. Enemies reaction is very dense, and you may be able to find the remaining keys.
+:<!--1-second delay-->
 {{Dialogue End}}
 
 ===Submit beacon data{{subst:void|<!--200020750-->}}===
 {{Mission Description|type=adventure|location=Storage Zone|update|You've collected enough data from the beacons. Hurry and hand them over to the investigators.}}
 {{Dialogue Start}}
-:{{tx}}
 {{Dialogue End}}
 
 ===Report to Asta remotely{{subst:void|<!--200020714-->}}===
 {{Mission Description|type=adventure|location=Storage Zone|update|Monster elimination complete, report to Asta remotely}}
 {{Dialogue Start}}
-:{{tx}}
+:'''Asta:''' Mission complete! We'll take care of the follow-up investigation.
+:<!--5-second delay-->
+:<!--1-second delay-->
 {{Dialogue End}}
 
 ==Other Languages==

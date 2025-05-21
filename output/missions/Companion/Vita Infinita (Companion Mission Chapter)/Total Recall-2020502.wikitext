@@ -35,24 +35,353 @@ PageTitle=#Total Recall#
 -->
 ==Dialogue==
 {{Stub Dialogue}}
+<pre>{
+	"$type": "RPG.GameCore.HideTopPage",
+	"Hide": true
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.SetLocalPlayerDitherAlpha"
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.TriggerSound",
+	"SoundName": {
+		"Value": "Ev_sfx_xianzhou_specialvision_reverse"
+	},
+	"EmitterType": "LocalPlayer"
+}</pre>
+:<!--1-second delay-->
+:<!--0.5-second delay-->
+<pre>{
+	"$type": "RPG.GameCore.SetEffectAnimatorTrigger",
+	"UniqueEffectName": "Mission2020502_SpecialVision",
+	"TriggerName": "TriggerVisionClose"
+}</pre>
+:<!--1-second delay-->
+<pre>{
+	"$type": "RPG.GameCore.HideTopPage"
+}</pre>
+:{{A|VO side2 fx1 fuxuan 135.ogg}} '''Fu Xuan:''' The Matrix of Prescience has reconstructed your past. Before you is a space generated from the memories and items you've provided as raw materials.
+:{{A|VO side2 fx1 fuxuan 136.ogg}} '''Fu Xuan:''' Are you okay, Miss March?
+:{{DIcon|Arrow}} I'm all good.
+::{{A|VO side2 fx1 fuxuan 137.ogg}} '''Fu Xuan:''' You have a strong constitution. Most individuals feel nauseous after being presented with the dizzying excess of information provided by the Matrix.
+::I'm feeling a little dizzy.
+:{{DIcon|Arrow}} I'm feeling a little dizzy.
+:{{A|VO side2 fx1 fuxuan 138.ogg}} '''Fu Xuan:''' As expected. Most individuals feel nauseous after being presented with the dizzying excess of information provided by the Matrix.
+:{{A|VO side2 fx1 mar7th 128.ogg}} '''March 7th:''' I must be seeing things. Why are there two Fu Xuans here?
+:{{tx}}
 {{Dialogue End}}
 
 ===Point out the fake Fu Xuan{{subst:void|<!--202050202-->}}===
 {{Mission Description|type=companion|location=Memory-Alchemy Commission|update|As the Matrix of Prescience Ultima starts its calculations, March 7th returns to the not-too-distant past.<br />For her own safety, she should first complete the homework Fu Xuan assigned.<br />Thankfully, the task isn't too hard. She just has to figure out who is the real master diviner out of the two before her.}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Fu Xuan With Hand on Hip)
+:{{A|VO side2 fx1 mar7th 132.ogg}} '''March 7th:''' Miss Fu Xuan? Is that you?
+:{{A|VO side2 fx1 mfuxuan 101.ogg}} '''Memory-Fu Xuan:''' If we want to resolve the Stellaron crisis, we must refine the question: What is the crux of the problem? Generally, it is believed that when one seizes on the crux of a problem, the problem will split open like bamboo on the edge of a knife.
+:{{A|VO side2 fx1 mfuxuan 102.ogg}} '''Memory-Fu Xuan:''' Nobody could have foreseen the catalyzing effect of the Stellaron on the Ambrosial Arbor. As the ancients said, blessings bring about misfortune, and vice versa. Nature has its own algorithm, and it is precisely when fate wends betwixt blessing and misfortune that I, a master diviner of masterful proportions, am called on to save the people of the Luofu!
+:{{A|VO side2 fx1 mar7th 133.ogg}} '''March 7th:''' What the heck is she talking about? Master Diviner, did you actually say that at the time? I can't remember.
+:{{A|VO side2 fx1 fuxuan 144.ogg}} '''Fu Xuan:''' It would appear that in Miss March's estimation, I'm somewhat of a... blabbermouth.
+:{{A|VO side2 fx1 mar7th 134.ogg}} '''March 7th:''' N&mdash;No! Uh &mdash; I've always seen you as a... m&mdash;masterful master diviner! Hehe...
+:{{A|VO side2 fx1 fuxuan 145.ogg}} '''Fu Xuan:''' Despite the obvious distortions in this experience, the base materials from which it is composed are taken from your actual memory &mdash; there is no falsehood here. In other words, your subconscious mind thinks that I... talk in tongue-twisters.
+:{{A|VO side2 fx1 mar7th 135.ogg}} '''March 7th:''' Hahaha... Uh, &mdash; it's mainly just that I, uh... can't always comprehend the... lofty ideals and, uh... principles you discuss...
+:{{A|VO side2 fx1 fuxuan 146.ogg}} '''Fu Xuan:''' Forget it, now is not the time for losing one's temper.
+:{{A|VO side2 fx1 fuxuan 147.ogg}} '''Fu Xuan:''' If the inferred experience is distorted, we should focus on filtering out each distortion one by one &mdash; otherwise we won't be able to trace your memories back any further.
+:{{A|VO side2 fx1 mar7th 136.ogg}} '''March 7th:''' Umm, this is getting a little complicated... Is there a... simpler explanation?
+:{{A|VO side2 fx1 fuxuan 148.ogg}} '''Fu Xuan:''' *sigh* Draw your bow and fire an arrow at that Fu Xuan.
+;(Enter battle)
+::{{tx|Enemy list missing}}
+
+;(Talk to Welt Yang)
+:{{A|VO side2 fx1 mar7th 150.ogg}} '''March 7th:''' Mr. Yang! Hi there!
+:{{A|VO side2 fx1 mwelt 101.ogg}} '''Memory-Welt:''' March, get ready. The next fight is going to be very dangerous.
+:{{A|VO side2 fx1 mar7th 151.ogg}} '''March 7th:''' Huh? Which next fight?
+:{{A|VO side2 fx1 mwelt 102.ogg}} '''Memory-Welt:''' Stay focused. Phantylia is headed for the Ambrosial Arbor &mdash; if we don't stop the Lord Ravager, it'll be a catastrophe.
+:{{A|VO side2 fx1 mar7th 152.ogg}} '''March 7th:''' Okay, alright. Got it.
+:{{A|VO side2 fx1 mwelt 103.ogg}} '''Memory-Welt:''' Another thing... The future is what's most important for us. Don't you agree, March?
+:{{A|VO side2 fx1 mar7th 153.ogg}} '''March 7th:''' What?
+:{{A|VO side2 fx1 mwelt 104.ogg}} '''Memory-Welt:''' Dwelling on memories can numb your sense of the present, and inhibit future ambitions.
+:{{A|VO side2 fx1 mar7th 154.ogg}} '''March 7th:''' Miss Fu Xuan, do people in memories always say weird stuff like this?
+:{{A|VO side2 fx1 fuxuan 160.ogg}} '''Fu Xuan:''' The distortions we're experiencing are... unorthodox.
+:{{DIcon|Arrow}} (Clear distortion)
+:<pre>{
+	"$type": "RPG.GameCore.SetEntityTalkEnable",
+	"Target": {
+		"$type": "RPG.GameCore.TargetFetchAdvNpcEx",
+		"FetchType": "SingleNpcByNpcID",
+		"SingleNpcID": {
+			"GroupID": {
+				"FixedValue": {
+					"Value": 4
+				}
+			},
+			"GroupNpcID": {
+				"FixedValue": {
+					"Value": 400001
+				}
+			}
+		}
+	}
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.DestroyNPC",
+	"DestroyList": [
+		{
+			"$type": "RPG.GameCore.GroupEntityInfo",
+			"GroupID": {
+				"FixedValue": {
+					"Value": 4
+				}
+			},
+			"GroupInstanceID": {
+				"FixedValue": {
+					"Value": 400001
+				}
+			}
+		}
+	]
+}</pre>
+:{{DIcon|Exit}} (Wait)
+
+;(Talk to (Trailblazer))
+:{{A|VO side2 fx1 mar7th 146 m.ogg}} {{A|VO side2 fx1 mar7th 146 f.ogg}} '''March 7th:''' Hey, (Trailblazer)! Fancy seeing you here.
+:{{A|VO side2 fx1 player 101.ogg}} '''Memory-(Trailblazer):''' ...
+:{{A|VO side2 fx1 mar7th 147.ogg}} '''March 7th:''' Hey, it's fine if you don't want to talk in real life, but this is MY memory, so it's MY rules! Come on, say something!
+:{{A|VO side2 fx1 player 102 m.ogg}} {{A|VO side2 fx1 player 102 f.ogg}} '''Memory-(Trailblazer):''' Something.
+:{{A|VO side2 fx1 mar7th 148.ogg}} '''March 7th:''' ...Seriously?
+:{{A|VO side2 fx1 fuxuan 159 m.ogg}} {{A|VO side2 fx1 fuxuan 159 f.ogg}} '''Fu Xuan:''' We have similar recollections of (Trailblazer).
+:{{A|VO side2 fx1 player 103 m.ogg}} {{A|VO side2 fx1 player 103 f.ogg}} '''Memory-(Trailblazer):''' Leave your memories in the past &mdash; they have no place in the present.
+:{{A|VO side2 fx1 mar7th 149 m.ogg}} {{A|VO side2 fx1 mar7th 149 f.ogg}} '''March 7th:''' Did you hear that, Master Diviner? Now {{MC|f=she's|m=he's}} talking weird...
+:{{DIcon|Arrow}} (Clear distortion)
+:<pre>{
+	"$type": "RPG.GameCore.SetEntityTalkEnable",
+	"Target": {
+		"$type": "RPG.GameCore.TargetFetchAdvNpcEx",
+		"FetchType": "SingleNpcByNpcID",
+		"SingleNpcID": {
+			"GroupID": {
+				"FixedValue": {
+					"Value": 4
+				}
+			},
+			"GroupNpcID": {
+				"FixedValue": {
+					"Value": 400002
+				}
+			}
+		}
+	}
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.DestroyNPC",
+	"DestroyList": [
+		{
+			"$type": "RPG.GameCore.GroupEntityInfo",
+			"GroupID": {
+				"FixedValue": {
+					"Value": 4
+				}
+			},
+			"GroupInstanceID": {
+				"FixedValue": {
+					"Value": 400002
+				}
+			}
+		}
+	]
+}</pre>
+:{{DIcon|Exit}} (Wait)
+
+;(Talk to Tingyun)
+:{{A|VO side2 fx1 mtingyun 101.ogg}} '''Memory-Tingyun:''' Roll up, roll up! Miss March, would you like to take a look at the latest edition of the Xianzhou Beauty Index? The chance of drawing a Luofu Playboy card is suuuuper high right now~
+:{{A|VO side2 fx1 mar7th 145.ogg}} '''March 7th:''' Miss Tingyun... It's great to see you so happy... but I can't help feeling a little sad.
+:{{A|VO side2 fx1 mtingyun 102.ogg}} '''Memory-Tingyun:''' The past is in the past! What is there to feel sad about? Live every day as if it were your last. Don't be sad~
+:{{DIcon|Arrow}} (Clear distortion)
+:<pre>{
+	"$type": "RPG.GameCore.SetEntityTalkEnable",
+	"Target": {
+		"$type": "RPG.GameCore.TargetFetchAdvNpcEx",
+		"FetchType": "SingleNpcByNpcID",
+		"SingleNpcID": {
+			"GroupID": {
+				"FixedValue": {
+					"Value": 4
+				}
+			},
+			"GroupNpcID": {
+				"FixedValue": {
+					"Value": 400003
+				}
+			}
+		}
+	}
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.DestroyNPC",
+	"GroupID": 4,
+	"GroupNpcID": 400003,
+	"DestroyList": []
+}</pre>
+:{{DIcon|Exit}} (Wait)
+----
+:{{A|VO side2 fx1 mar7th 140 m.ogg}} {{A|VO side2 fx1 mar7th 140 f.ogg}} '''March 7th:''' That freaked me out &mdash; I don't like people suddenly deciding to fight me... Now, let's see who's here. Tingyun, Welt, General Jing Yuan... and also (Trailblazer)...
+:{{A|VO side2 fx1 mar7th 141.ogg}} '''March 7th:''' I don't have to fight all of them... right? The Master Diviner was easy-peasy, but I don't think I could take General Jing Yuan...
+:{{A|VO side2 fx1 fuxuan 154.ogg}} '''Fu Xuan:''' "Easy-peasy"!?
+:{{A|VO side2 fx1 fuxuan 155.ogg}} '''Fu Xuan:''' Hmph... The interference factor creating the distortion here should only have one source. That is, the person present who shouldn't be.
+:{{A|VO side2 fx1 mar7th 142.ogg}} '''March 7th:''' So, I have to pick someone and clear them of "interference"?
+:{{A|VO side2 fx1 fuxuan 156.ogg}} '''Fu Xuan:''' Exactly.
+:{{A|VO side2 fx1 fuxuan 157.ogg}} '''Fu Xuan:''' My projection will disappear for the moment so as not to cloud your judgment... If you can hear my voice, then it means I'm watching over you.
+:{{A|VO side2 fx1 mar7th 143.ogg}} '''March 7th:''' You're the best, Master Diviner!
+:{{A|VO side2 fx1 fuxuan 158.ogg}} '''Fu Xuan:''' Hmph, I hope the "best" version of me can overwrite the gloriously absurd version that lives in your subconsciousness.
+----
+:{{A|VO side2 fx1 mar7th 144.ogg}} '''March 7th:''' "The person present who shouldn't be..." Who could that be?
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+<pre>{
+	"$type": "RPG.GameCore.PlayNPCBubbleTalk",
+	"BubbleTalkInfoList": [
+		{
+			"AutoSkipTime": 3,
+			"GroupID": 4,
+			"GroupNpcID": 400001,
+			"TalkSentenceID": 202180563
+		}
+	],
+	"LoopInterval": 5,
+	"UniqueID": 202050204
+}</pre>
 {{Dialogue End}}
 
 ===Find the "surreal" part of this memory{{subst:void|<!--202050206-->}}===
 {{Mission Description|type=companion|location=Memory-Alchemy Commission|update|Memories of the Xianzhou Luofu are very recent and are still fresh in her mind. However, March 7th still feels rather sad as she gazes upon the people and events in her memory.<br />"It hasn't been that long, but many things won't ever be the same again," she thinks to herself.}}
 {{Dialogue Start}}
-:{{tx}}
+----
+
+;(Upon reaching the destination)
+<pre>{
+	"$type": "RPG.GameCore.PlayNPCBubbleTalk",
+	"BubbleTalkInfoList": [
+		{
+			"AutoSkipTime": 3,
+			"GroupID": 5,
+			"GroupNpcID": 400001,
+			"TalkSentenceID": 202180564
+		}
+	],
+	"LoopInterval": 5,
+	"UniqueID": 202050206
+}</pre>
+
+;(Talk to Jing Yuan)
+:{{A|VO side2 fx1 mar7th 156.ogg}} '''March 7th:''' General, hello!
+:'''Memory-Jing Yuan:''' ...
+:{{A|VO side2 fx1 mar7th 157.ogg}} '''March 7th:''' General?
+:'''Memory-Jing Yuan:''' ...
+:{{A|VO side2 fx1 mar7th 158.ogg}} '''March 7th:''' General Jing Yuan?
+:'''Memory-Jing Yuan:''' ...
+:{{A|VO side2 fx1 mar7th 159.ogg}} '''March 7th:''' Jing Yuan!!!
+:{{A|VO side2 fx1 mjingyuan 104.ogg}} '''Memory-Jing Yuan:''' ...
+:{{A|VO side2 fx1 mar7th 160.ogg}} '''March 7th:''' Ugh, what's his deal? Who falls asleep standing up anyway!?
+:{{A|VO side2 fx1 fuxuan 162.ogg}} '''Fu Xuan:''' This is clearly your subconscious projecting onto the general...
+:{{A|VO side2 fx1 mar7th 161.ogg}} '''March 7th:''' Ah! I remember now! The general wasn't there when we broke into the Alchemy Commission. Looks like we've found the source of our distortion.
+:{{DIcon|Arrow}} (Clear distortion)
+::{{A|VO side2 fx1 mjingyuan 105.ogg}} '''Memory-Jing Yuan:''' March 7th.
+::{{A|VO side2 fx1 mar7th 162.ogg}} '''March 7th:''' Ah!!! You scared me... Why'd you wake up so suddenly?
+::{{A|VO side2 fx1 mjingyuan 106.ogg}} '''Memory-Jing Yuan:''' Are you not satisfied with your life as it is?
+::{{A|VO side2 fx1 mar7th 163.ogg}} '''March 7th:''' I... I'm satisfied...
+::{{A|VO side2 fx1 mjingyuan 107.ogg}} '''Memory-Jing Yuan:''' Then why are you obsessing over the past?
+:<pre>{
+	"$type": "RPG.GameCore.PlayScreenCrack",
+	"EffectPath": "Effects/Eff_Prefab/Eff_Common/Eff_ScreenCrack.prefab",
+	"UniqueEffectName": "ScreenCrack",
+	"ExecuteOnSkip": true
+}</pre>
+:;(Enter battle)
+:::{{tx|Enemy list missing}}
+:{{DIcon|Exit}} (Wait)
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+<pre>{
+	"$type": "RPG.GameCore.PlayNPCBubbleTalk",
+	"BubbleTalkInfoList": [
+		{
+			"AutoSkipTime": 3,
+			"GroupID": 4,
+			"GroupNpcID": 400002,
+			"TalkSentenceID": 202180562
+		}
+	],
+	"LoopInterval": 5,
+	"UniqueID": 202050209
+}</pre>
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+<pre>{
+	"$type": "RPG.GameCore.PlayNPCBubbleTalk",
+	"BubbleTalkInfoList": [
+		{
+			"AutoSkipTime": 3,
+			"GroupID": 4,
+			"GroupNpcID": 400003,
+			"TalkSentenceID": 202180560
+		},
+		{
+			"AutoSkipTime": 3,
+			"GroupID": 4,
+			"GroupNpcID": 400003,
+			"TalkSentenceID": 202180561
+		}
+	],
+	"LoopInterval": 5,
+	"UniqueID": 202050210
+}</pre>
+----
+:{{A|VO side2 fx1 fuxuan 163.ogg}} '''Fu Xuan:''' Hm? What is that?
+:{{A|VO side2 fx1 mar7th 164.ogg}} '''March 7th:''' I know what this is! It's a Belobog heater! Umm... Wait a minute, what's a Belobog heater doing at the Healer's Market?
+:{{A|VO side2 fx1 fuxuan 164.ogg}} '''Fu Xuan:''' Looks like part of one experience has infiltrated another. A foreign object, so to speak.
+:{{A|VO side2 fx1 mar7th 165.ogg}} '''March 7th:''' "Foreign object"? ...That sounds like a medical issue. Will it require surgery?
+:{{A|VO side2 fx1 fuxuan 165.ogg}} '''Fu Xuan:''' No. I believe the object is a sign of the Matrix purging distortion. It has managed to trace back to another one of your experiences.
+:{{A|VO side2 fx1 fuxuan 166.ogg}} '''Fu Xuan:''' Make contact with the object &mdash; let's see if we can jump over into that experience.
+<pre>{
+	"$type": "RPG.GameCore.ActiveVirtualCamera",
+	"AreaName": "LevelArea_P43201_F43201001_G6",
+	"AnchorName": "Anchor6",
+	"IsActive": false,
+	"WaitBlendFinish": true,
+	"BlendConfig": {
+		"ExportToJson": true,
+		"BlendType": "Custom",
+		"CustomCurveName": "BlendCut11",
+		"BlendTime": 2.5
+	},
+	"DynamicParams": {}
+}</pre>
+
+:{{DIcon|Loupe}} Investigate
+----
+:{{A|VO side2 fx1 fuxuan 167.ogg}} '''Fu Xuan:''' Belobog... I've seen that name somewhere in the astral charts.
+:{{A|VO side2 fx1 fuxuan 168.ogg}} '''Fu Xuan:''' There are many similar star systems on the Xianzhou trade routes... Unfortunately, all of them lost contact after the appearance of the Antimatter Legion.
+:{{A|VO side2 fx1 mar7th 166.ogg}} '''March 7th:''' Yeah, Belobog is a kind of snowy doomsday city... There are heaters like this all over the place, otherwise people wouldn't survive.
+:{{A|VO side2 fx1 mar7th 167.ogg}} '''March 7th:''' Come on, Master Diviner &mdash; I'll give you a whirlwind tour of Belobog.
+:{{DIcon|Arrow}} (Touch the "foreign object")
+::{{A|VO side2 fx1 mar7th 168.ogg}} '''March 7th:''' ...Uhh, is touching a heater a good idea? This thing is red-hot &mdash; what if my hand turns extra crispy...
+::{{A|VO side2 fx1 fuxuan 169.ogg}} '''Fu Xuan:''' It's okay, this is a memory space. If something hasn't injured you in reality, then it cannot injure you in memory...
+::{{A|VO side2 fx1 mar7th 169.ogg}} '''March 7th:''' Well, I was never beaten up by Jing Yuan in reality, either...
+::{{A|VO side2 fx1 fuxuan 170.ogg}} '''Fu Xuan:''' Enough of that &mdash; touch it.
+:;(Screen fades to black)
+::{{A|VO side2 fx1 mar7th 170.ogg}} '''March 7th:''' Hey! Don't pull on my hand, I &mdash; ow, ow, ow, hot, hot, hot!
+::----
+:{{DIcon|Exit}} (Wait)
+::----
 {{Dialogue End}}
 
 ===Interact with the "abnormality" and rewind to an older memory{{subst:void|<!--202050208-->}}===
 {{Mission Description|type=companion|location=Memory-Alchemy Commission|update|"Touch the heater" sounds like a terrible idea. However, this isn't reality, and real-life common sense doesn't apply here.<br />March 7th trusts that Fu Xuan will not hurt her... but she still instinctively doesn't want to touch something as hot as this.}}
 {{Dialogue Start}}
-:{{tx}}
+:{{A|VO side2 fx1 fuxuan 161.ogg}} '''Fu Xuan:''' Must we clear ALL the wrong options...?
+:{{A|VO side2 fx1 mar7th 155.ogg}} '''March 7th:''' It's called perfectionism!
 {{Dialogue End}}
 
 ==Other Languages==

@@ -5,7 +5,6 @@ export class WeirdKey {
 	static data = {
 		// from RogueBuffGroup
 		BlessingGroupID: {
-			'3.2': 'IDLBMIHBAPB', // didnt change(?)
 			'3.1': 'IDLBMIHBAPB',
 			'3.0': 'IKOLKLEFCGO',
 			'2.7': 'BHOJPHAJLMI',
@@ -19,7 +18,6 @@ export class WeirdKey {
 			'1.6': 'JHOKDPADHFM',
 		},
 		BlessingGroupMembers: {
-			'3.2': 'GNGDPDOMDFH', // didnt change(?)
 			'3.1': 'GNGDPDOMDFH',
 			'3.0': 'DKLEHCPFLFJ',
 			'2.7': 'NDFFCMBIOAG',
@@ -34,7 +32,6 @@ export class WeirdKey {
 		},
 		// from RogueTournWeeklyDisplay
 		DescParamType: {
-			'3.2': 'PICHIHHCOCB', // didnt change(?)
 			'3.1': 'PICHIHHCOCB',
 			'3.0': 'PGCFPBGPDGG',
 			'2.7': 'MPNJPFDCBDG',
@@ -44,7 +41,6 @@ export class WeirdKey {
 			'2.3': 'IAGLGKPDLOE',
 		},
 		DescParamValue: {
-			'3.2': 'HMCDHMFHABF', // didnt change(?)
 			'3.1': 'HMCDHMFHABF',
 			'3.0': 'CPPHDJHHGGN',
 			'2.7': 'ODPKJEJKOIH',
@@ -55,7 +51,6 @@ export class WeirdKey {
 		},
 		// from RogueMagicTalent
 		TalentDescParamValue: {
-			'3.2': 'HMCDHMFHABF', // didnt change(?)
 			'3.1': 'HMCDHMFHABF',
 			'3.0': 'INNKEBMHLNF',
 			'2.7': 'DOJFLNAILGJ',
@@ -63,7 +58,6 @@ export class WeirdKey {
 		},
 		// from RogueHandBookEvent
 		UnlockProgress: {
-			'3.2': 'NNDEOKKKKPE', // didnt change(?)
 			'3.1': 'NNDEOKKKKPE',
 			'3.0': 'AFMKGEHANLM',
 			'2.7': 'FINLPBFNLHP',
@@ -71,7 +65,6 @@ export class WeirdKey {
 			'2.5': 'EEMMLHDLGKP'
 		},
 		UnlockNPCID: {
-			'3.2': 'MBNKLBEBOHB', // didnt change(?)
 			'3.1': 'MBNKLBEBOHB',
 			'3.0': 'HLNMOFDGLAA',
 			'2.7': 'KOPDNGGIFKN',
@@ -80,7 +73,6 @@ export class WeirdKey {
 		},
 		// from StageConfig
 		StageConfigKey: {
-			'3.2': 'HEIKKHLKMOA', // didnt change(?)
 			'3.1': 'HEIKKHLKMOA',
 			'3.0': 'EGIHHBKIHAK',
 			'2.7': 'BNCHHJCHKON',
@@ -100,7 +92,6 @@ export class WeirdKey {
 			'1.0': 'JOAHDHLLMDK',
 		},
 		StageConfigValue: {
-			'3.2': 'MBMDOCJIMEJ', // didnt change(?)
 			'3.1': 'MBMDOCJIMEJ',
 			'3.0': 'MBMDOCJIMEJ',
 			'2.7': 'ODPKJEJKOIH',
@@ -121,14 +112,12 @@ export class WeirdKey {
 		},
 		// from RogueMagicScepter
 		LockMagicUnitId: {
-			'3.2': 'KAMGFNJJJDE', // didnt change(?)
 			'3.1': 'KAMGFNJJJDE',
 			'3.0': 'MMBMHEHDIBF',
 			'2.7': 'OBLJDNJKECG',
 			'2.6': 'GHFHMJLCIEC'
 		},
 		LockMagicUnitLevel: {
-			'3.2': 'OMAMNKOLIOE', // didnt change(?)
 			'3.1': 'OMAMNKOLIOE',
 			'3.0': 'PKHCKBELLKE',
 			'2.7': 'KFDGMFMJMIA',
@@ -137,6 +126,6 @@ export class WeirdKey {
 	}
 	
 	static get(key: keyof typeof WeirdKey.data, version: Version = config.target_version as Version): string {
-		return this.data[key][version]
+		return this.data[key][version] ?? (version > '3.1' && this.data[key]['3.1'])
 	}
 }

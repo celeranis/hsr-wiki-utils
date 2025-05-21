@@ -39,13 +39,26 @@ PageTitle=#Searching for You: Onset#
 ===Return to the Astral Express and speak with Himeko{{subst:void|<!--200110102-->}}===
 {{Mission Description|type=adventure|location=Parlor Car|update|Himeko needs to see you and has asked you to return to the Astral Express for a talk. It seems to be something about the Nameless...}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Unused &mdash; Des_200110102)
+<pre>{
+	"$type": "RPG.GameCore.AdvDestroyGroupEntity",
+	"InstanceIDList": [
+		400003
+	]
+}</pre>
 {{Dialogue End}}
 
 ===Speak with the little robot and plan a route{{subst:void|<!--200110103-->}}===
 {{Mission Description|type=adventure|location=Parlor Car|update|The good name of the Nameless has spread far and wide throughout the Cosmos, but where should be your first stop on this journey? Maybe you should ask the little robot? They claim to be equipped with a navigation system, after all.}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Little Robot)
+:'''Little Robot:''' System activated. User identity confirmed.
+:'''Little Robot:''' Loading itinerary data... Loading... Loading complete.
+:{{DIcon|Arrow}} Where am I going now?
+:{{DIcon|Arrow}} Let's take a look at the navigation system.
+:'''Little Robot:''' Synchronization with Astral Express navigation data complete. Locked on to first target destination: Belobog Administrative District &mdash; Central Plaza.
 {{Dialogue End}}
 
 ==Other Languages==

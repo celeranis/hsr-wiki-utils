@@ -33,7 +33,87 @@ PageTitle=##
 -->
 ==Dialogue==
 {{Stub Dialogue}}
+:(I wonder what's in the package... I'd better go sign for it. It'll be so awkward if I only pick it up after the hold period.)
+:(The first mate collected the package for me. I'll ask for it in the Captain's Quarters.)
 
+;(Talk to Rosa)
+;(If {{F|MissionCV-2030501-undefined}} is undefined 1)
+::'''Rosa:''' Ah, Captain! A package arrived for you at the collection point. I've brought it over.
+::'''Rosa:''' I didn't see you, so I was wondering if it'd be okay to leave it inside... Haha, but you came at the right time.
+::{{DIcon|Arrow}} Accept the package.
+::'''Rosa:''' I'll leave you to it now. Call for me if you need anything!
+;(If {{F|MissionCV-2030501-undefined}} is not undefined 1)
+:;(Return to previous option selection)
+;(Unused &mdash; TalkSentence_434029008_2)
+:'''Caldwick:''' I'll leave you to it now. Call for me if you need anything!
+
+;(Unused &mdash; TalkSentence_434029008_3)
+:'''Pedro:''' I'll leave you to it now. Call for me if you need anything!
+
+;(Talk to Caldwick)
+;(If {{F|MissionCV-2030501-undefined}} is undefined 1)
+::'''Rosa:''' Ah, Captain! A package arrived for you at the collection point. I've brought it over.
+::'''Rosa:''' I didn't see you, so I was wondering if it'd be okay to leave it inside... Haha, but you came at the right time.
+::{{DIcon|Arrow}} Accept the package.
+::'''Rosa:''' I'll leave you to it now. Call for me if you need anything!
+;(If {{F|MissionCV-2030501-undefined}} is not undefined 1)
+:;(Return to previous option selection)
+;(Unused &mdash; TalkSentence_434029008_2)
+:'''Caldwick:''' I'll leave you to it now. Call for me if you need anything!
+
+;(Unused &mdash; TalkSentence_434029008_3)
+:'''Pedro:''' I'll leave you to it now. Call for me if you need anything!
+
+;(Talk to Pedro)
+;(If {{F|MissionCV-2030501-undefined}} is undefined 1)
+::'''Rosa:''' Ah, Captain! A package arrived for you at the collection point. I've brought it over.
+::'''Rosa:''' I didn't see you, so I was wondering if it'd be okay to leave it inside... Haha, but you came at the right time.
+::{{DIcon|Arrow}} Accept the package.
+::'''Rosa:''' I'll leave you to it now. Call for me if you need anything!
+;(If {{F|MissionCV-2030501-undefined}} is not undefined 1)
+:;(Return to previous option selection)
+;(Unused &mdash; TalkSentence_434029008_2)
+:'''Caldwick:''' I'll leave you to it now. Call for me if you need anything!
+
+;(Unused &mdash; TalkSentence_434029008_3)
+:'''Pedro:''' I'll leave you to it now. Call for me if you need anything!
+;(If {{F|MissionCV-2030501-undefined}} is undefined 1)
+:<pre>{
+	"$type": "RPG.GameCore.AdvCreateGroupEntity",
+	"InstanceIDList": [
+		400001
+	]
+}</pre>
+;(If {{F|MissionCV-2030501-undefined}} is not undefined 1)
+:;(Return to previous option selection)
+:The package is neither damaged nor dirty, and has its seal intact. Your name is printed clearly in the recipient field on the waybill, with Aventurine listed as the sender. The Interastral Peace Corporation's mark of authenticity has also been carefully made visible on the package.
+:You subconsciously let out a sigh of relief, now knowing that this is not a prank by one of those Masked Fools... Though you cannot be absolutely certain either, at least not until the contents of the package are revealed.
+:...Oh, whatever. It is what it is. Just open the package.
+:{{DIcon|Arrow}} Open the package.
+:The package is stuffed full of Penacony specialties. After thinking about it for a while, you are certain that the natives of some planets call the unprompted act of delivering gifts "feeding." According to local customs, such behavior is viewed as a symbol of friendship.
+:After a brief search, you discover a note sitting beneath the layers of exquisite gifts. It seems that a... coin has been taped onto it?
+:Turns out the coin is merely an Aideen Token and not some other valuable metal trinket. A pity, but at least there's no need for you to bite into the coin now.
+:You pick up the note, upon which the following has been written: "Using this coin, I won the capsule machine's grand prize seven times in a row. Hopefully, you'll be blessed with its good luck as well."
+:This note was clearly signed by the IPC representative Aventurine himself, without a shadow of a doubt.
+:{{DIcon|Arrow}} Play with the coin and try to increase your luck value.
+::Unfortunately, miraculous quantitative attributes such as a "luck value" do not actually exist in the world that you're currently in. Nevertheless, you grip the coin tightly, almost as though you are holding the entire cosmos's fate in the palm of your hand. Doing so fills you with confidence.
+::You are innately aware of just how powerful and talented you are. However, if you really have to name a weakness of yours, it would be that you are just a little bit '''unlucky'''. You start to imagine a day in the future when you'll use this single coin to win the whole of Penacony for yourself...
+::You wish to thank Aventurine in some way, but due to your consistent noble upbringing &mdash; otherwise known as social anxiety &mdash; you ultimately decide not to bother him at all.
+::Given that people say that there is an unspoken bond between true pals... you believe that Aventurine will understand your thoughtfulness without you expressing it.
+::{{DIcon|Arrow}} Search the package for more goodies.
+:{{DIcon|Arrow}} Perfect! What other goodies will you be able to find?
+:You continue to rummage through the package, checking to see if there's anything you missed. Sure enough, at the bottom of the package, you find another elegantly wrapped gift box. Ooh, like nesting dolls! All that's left to do is to find out what's inside.
+:Gold bars, perhaps? That sounds like something Aventurine would give others. Your intuition tells you that he's like another rich person that you met aboard the space station, since both of them share their wealth with their friends...
+:{{DIcon|Arrow}} Gold bars, here I come!
+:{{DIcon|Arrow}} Find out exactly what his surprise is.
+:'''(Trailblazer):''' (This is... the Astral Express? No, it's actually a miniature model of the Astral Express!?)
+:{{tx}}
+<pre>{
+	"$type": "RPG.GameCore.AddFinishMissionData_PlayMessage",
+	"SubmissionID": 434012104,
+	"MessageSectionID": 1223500,
+	"ShowNotice": false
+}</pre>
 {{Dialogue End}}
 
 ==Other Languages==

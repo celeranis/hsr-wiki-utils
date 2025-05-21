@@ -34,6 +34,692 @@ PageTitle=##
 ==Dialogue==
 {{Stub Dialogue}}
 
+:{{DIcon|?}} Janus' Steed
+:There is no doubt about it. The giant wooden prop before you is one you recognize from an old story. Its head raised high in the sky and room in its stomach for several people &mdash; it has all the familiar characteristics you expect.
+:You survey the surrounding area to make sure no one is watching. Well, why not use this opportunity to test your theory?
+:{{DIcon|Arrow}} (Climb inside the wooden horse's stomach)
+:<pre>{
+	"$type": "RPG.GameCore.SetMissionCustomValue",
+	"SubmissionID": 434014501,
+	"MissionCustomValue": {
+		"Index": 1,
+		"Name": "OldValue_1",
+		"ValidValueParamList": [
+			0,
+			1
+		]
+	},
+	"CustomValue": 1
+}</pre>
+::{{tx}}
+::{{DIcon|Talk}} (Charge out)
+:::Safety first. You try to push open the hidden door in the horse's stomach, only to find... It's shut fast.
+:::{{tx}}
+::;(Return to previous option selection)
+::{{DIcon|Talk}} (Think of a way to get their attention)
+:::'''(Trailblazer):''' {{Size|28|Hey! Wait! I'm inside here. Where are you taking me?}}
+:::{{tx}}
+::;(Return to previous option selection)
+::{{DIcon|Arrow}} (Keep quiet)
+:::When in an unfamiliar environment, it is always best to keep calm. You decide to take no action and see how things unfold.
+:::You have no idea how long you've been bumping around in the dark. But, just as you feel like you can't hold the contents of your stomach back any longer, the wooden horse comes suddenly crashing to the ground, followed by the sound of soldiers in neat formation.
+:::'''Imposing Voice:''' ...Leave it there for now. Let's go. There's more where that came from.
+:::After confirming that all sound outside has disappeared, you use all your strength to burst through the wooden trap door and return to the outside world.
+:::Then... You find yourself face-to-face with a powerful-looking man in Kremnos guard uniform.
+:::'''Kremnos Guard (?):''' What city do you fight for, soldier!? Why are you here!?
+:::'''Kremnos Guard (?):''' Explain yourself! If I sense a hint of hesitation, the long spear of Nikador will pierce your chest!
+:::{{DIcon|Arrow}} I am from Castrum Kremnos!
+::::'''Kremnos Guard (?):''' Hahaha, praise Talanton! Your teachings guide my path, and your fair orders always yield reward.
+::::'''Kremnos Guard (?):''' &mdash; The Mad King's followers, you're the one I seek! You had no idea, did you? I am not from Castrum Kremnos at all!
+::::{{DIcon|Arrow}} ...Oh?
+::::{{DIcon|Arrow}} Another twist?
+::::{{DIcon|Arrow}} Well played!
+::::'''Kremnos Guard (?):''' I have been undercover in the city for a number of days. I came to seek out information on the Mad King and send a few unlucky fools to meet Thanatos along the way. Though, I had no idea that the routes around here would be as maddening as the Mad King's mind itself. I've made no progress this whole time.
+::::'''Kremnos Guard (?):''' Fortunately, you delivered yourself to me on a platter. I shall use your blood as the first weight placed onto the scales!
+::::{{DIcon|Arrow}} Wait! I was lying!
+:::::'''Kremnos Guard (?):''' Trying to excuse yourself will only make your situation worse. Although, praise Talanton, I just had a new idea.
+:::::'''Kremnos Guard (?):''' The life of a mere soldier is expendable in a battle like this. It is those of the power-wielding generals that can really tip the scales.
+:::::Please stay calm. I can be your guide!
+::::{{DIcon|Arrow}} Please stay calm. I can be your guide!
+::::'''Kremnos Guard (?):''' A wise decision. The life of a mere soldier is expendable in a battle like this. It is those of the power-wielding generals that can really tip the scales.
+::::'''Kremnos Guard (?):''' Tell me. What is the highest-ranking general of Castrum Kremnos like?
+::::{{DIcon|Arrow}} (Describe the appearance of the Kremnos registration officer)
+:::::'''(Trailblazer):''' She... She is a young woman. She has red hair and wears red clothing... She speaks with a ferocious attitude...
+:::::{{tx}}
+::::<pre>{
+	"$type": "RPG.GameCore.SetMissionCustomValue",
+	"SubmissionID": 434014501,
+	"MissionCustomValue": {
+		"Name": "OldValue_0",
+		"ValidValueParamList": [
+			0,
+			1,
+			2,
+			3,
+			4,
+			5
+		]
+	},
+	"CustomValue": 1
+}</pre>
+:::::'''Kremnos Guard (?):''' Not bad. Your description matches that of an officer I have collected information on. Be gone. Talanton bears no personal grudges. You have given enough weight to win your freedom.
+:::::{{tx}}
+::::{{DIcon|Arrow}} (Describe the appearance of the food provisions officer)
+:::::'''(Trailblazer):''' He... He is a man with gray hair and a gray beard... He's quite old, and he doesn't look like someone fit for battle...
+:::::{{tx}}
+::::<pre>{
+	"$type": "RPG.GameCore.SetMissionCustomValue",
+	"SubmissionID": 434014501,
+	"MissionCustomValue": {
+		"Name": "OldValue_0",
+		"ValidValueParamList": [
+			0,
+			1,
+			2,
+			3,
+			4,
+			5
+		]
+	},
+	"CustomValue": 2
+}</pre>
+:::::'''Kremnos Guard (?):''' Not bad. Your description matches that of an officer I have collected information on. Be gone. Talanton bears no personal grudges. You have given enough weight to win your freedom.
+:::::{{tx}}
+::::{{DIcon|Arrow}} (Describe the appearance of the Kremnos drillmaster)
+:::::'''(Trailblazer):''' He... He is a man with black hair and a black beard. He's middle-aged, and he wears a red outfit...
+:::::{{tx}}
+::::<pre>{
+	"$type": "RPG.GameCore.SetMissionCustomValue",
+	"SubmissionID": 434014501,
+	"MissionCustomValue": {
+		"Name": "OldValue_0",
+		"ValidValueParamList": [
+			0,
+			1,
+			2,
+			3,
+			4,
+			5
+		]
+	},
+	"CustomValue": 3
+}</pre>
+:::::'''Kremnos Guard (?):''' Not bad. Your description matches that of an officer I have collected information on. Be gone. Talanton bears no personal grudges. You have given enough weight to win your freedom.
+:::::{{tx}}
+::::{{DIcon|Arrow}} (Describe your own appearance)
+:::::'''(Trailblazer):''' {{MC|f=She|m=He}} has gray hair, wears a long jacket and looks extremely strong. {{MC|f=She|m=He}} has never lost to anyone and is often seen with a baseball bat in {{MC|f=her|m=his}} hands...
+:::::{{tx}}
+::::<pre>{
+	"$type": "RPG.GameCore.SetMissionCustomValue",
+	"SubmissionID": 434014501,
+	"MissionCustomValue": {
+		"Name": "OldValue_0",
+		"ValidValueParamList": [
+			0,
+			1,
+			2,
+			3,
+			4,
+			5
+		]
+	},
+	"CustomValue": 5
+}</pre>
+:::{{DIcon|Arrow}} Wait! I am from Okhema!
+::::'''Kremnos Guard (?):''' ...A disciple of Kephale? Judging by your proper appearance, I guess I can believe that you were not one for the battlefield.
+::::'''Kremnos Guard (?):''' Though it matters not which Titan you follow. Talanton judges the value of all things. You appearing before me may present me with a new path.
+::::{{DIcon|Arrow}} So, you're not a follower of Nikador?
+::::{{DIcon|Arrow}} ...Why are you wearing the armor of Castrum Kremnos?
+::::'''Kremnos Guard (?):''' It is no more than a necessary disguise. Much like you, I took advantage of the chaos of battle to make my way into the city. I came to seek out information on the Mad King and send a few unlucky fools to meet Thanatos along the way.
+::::{{tx}}
+::::{{DIcon|Arrow}} (Point in the direction of Okhema)
+:::::'''Kremnos Guard (?):''' Lies. That is the path out of the city. Perhaps you are hoping that I would lay down my weapons and seek asylum in Okhema?
+:::::'''Kremnos Guard (?):''' But I bear the final hope of my people. If I were to desert, what right would I have to uphold their memory? What name would I live under in this world?
+:::::'''Kremnos Guard (?):''' ...
+:::::'''Kremnos Guard (?):''' Do you really think that I should just leave like this?
+:::::{{DIcon|Arrow}} I am certain that there is nothing that you can do to end this war.
+:::::<pre>{
+	"$type": "RPG.GameCore.SetMissionCustomValue",
+	"SubmissionID": 434014501,
+	"MissionCustomValue": {
+		"Name": "OldValue_0",
+		"ValidValueParamList": [
+			0,
+			1,
+			2,
+			3,
+			4,
+			5
+		]
+	},
+	"CustomValue": 4
+}</pre>
+::::::{{tx}}
+:::::{{DIcon|Return}} I'm just kidding.
+::::::{{DIcon|Arrow}} (Ask who his enemy is)
+:::::::'''Kremnos Guard (?):''' The life of a mere soldier is expendable in a battle like this. It is those of the power-wielding generals that can really tip the scales. I seek the highest-ranking general in Castrum Kremnos.
+:::::::'''Kremnos Guard (?):''' Can you describe him to me?
+:::::::{{DIcon|Arrow}} (Describe the appearance of the Kremnos registration officer)
+::::::::'''(Trailblazer):''' She... She is a young woman. She has red hair and wears red clothing... She speaks with a ferocious attitude...
+::::::::{{tx}}
+:::::::<pre>{
+	"$type": "RPG.GameCore.SetMissionCustomValue",
+	"SubmissionID": 434014501,
+	"MissionCustomValue": {
+		"Name": "OldValue_0",
+		"ValidValueParamList": [
+			0,
+			1,
+			2,
+			3,
+			4,
+			5
+		]
+	},
+	"CustomValue": 1
+}</pre>
+::::::::'''Kremnos Guard (?):''' Not bad. Your description matches that of an officer I have collected information on. Go quickly. May Talanton protect you and ensure your safe return.
+::::::::{{tx}}
+:::::::{{DIcon|Arrow}} (Describe the appearance of the food provisions officer)
+::::::::'''(Trailblazer):''' He... He is a man with gray hair and a gray beard... He's quite old, and he doesn't look like someone fit for battle...
+::::::::{{tx}}
+:::::::<pre>{
+	"$type": "RPG.GameCore.SetMissionCustomValue",
+	"SubmissionID": 434014501,
+	"MissionCustomValue": {
+		"Name": "OldValue_0",
+		"ValidValueParamList": [
+			0,
+			1,
+			2,
+			3,
+			4,
+			5
+		]
+	},
+	"CustomValue": 2
+}</pre>
+::::::::'''Kremnos Guard (?):''' Not bad. Your description matches that of an officer I have collected information on. Go quickly. May Talanton protect you and ensure your safe return.
+::::::::{{tx}}
+:::::::{{DIcon|Arrow}} (Describe the appearance of the Kremnos drillmaster)
+::::::::'''(Trailblazer):''' He... He is a man with black hair and a black beard. He's middle-aged, and he wears a red outfit...
+::::::::{{tx}}
+:::::::<pre>{
+	"$type": "RPG.GameCore.SetMissionCustomValue",
+	"SubmissionID": 434014501,
+	"MissionCustomValue": {
+		"Name": "OldValue_0",
+		"ValidValueParamList": [
+			0,
+			1,
+			2,
+			3,
+			4,
+			5
+		]
+	},
+	"CustomValue": 3
+}</pre>
+::::::::'''Kremnos Guard (?):''' Not bad. Your description matches that of an officer I have collected information on. Go quickly. May Talanton protect you and ensure your safe return.
+::::::::{{tx}}
+:::::::{{DIcon|Arrow}} (Describe your own appearance)
+::::::::'''(Trailblazer):''' {{MC|f=She|m=He}} has gray hair, wears a long jacket and looks extremely strong. {{MC|f=She|m=He}} has never lost to anyone and is often seen with a baseball bat in {{MC|f=her|m=his}} hands...
+::::::::{{tx}}
+:::::::<pre>{
+	"$type": "RPG.GameCore.SetMissionCustomValue",
+	"SubmissionID": 434014501,
+	"MissionCustomValue": {
+		"Name": "OldValue_0",
+		"ValidValueParamList": [
+			0,
+			1,
+			2,
+			3,
+			4,
+			5
+		]
+	},
+	"CustomValue": 5
+}</pre>
+::::{{DIcon|Arrow}} (Ask who his enemy is)
+:::::'''Kremnos Guard (?):''' The life of a mere soldier is expendable in a battle like this. It is those of the power-wielding generals that can really tip the scales. I seek the highest-ranking general in Castrum Kremnos.
+:::::'''Kremnos Guard (?):''' Can you describe him to me?
+:::::{{DIcon|Arrow}} (Describe the appearance of the Kremnos registration officer)
+::::::'''(Trailblazer):''' She... She is a young woman. She has red hair and wears red clothing... She speaks with a ferocious attitude...
+::::::{{tx}}
+:::::<pre>{
+	"$type": "RPG.GameCore.SetMissionCustomValue",
+	"SubmissionID": 434014501,
+	"MissionCustomValue": {
+		"Name": "OldValue_0",
+		"ValidValueParamList": [
+			0,
+			1,
+			2,
+			3,
+			4,
+			5
+		]
+	},
+	"CustomValue": 1
+}</pre>
+::::::'''Kremnos Guard (?):''' Not bad. Your description matches that of an officer I have collected information on. Go quickly. May Talanton protect you and ensure your safe return.
+::::::{{tx}}
+:::::{{DIcon|Arrow}} (Describe the appearance of the food provisions officer)
+::::::'''(Trailblazer):''' He... He is a man with gray hair and a gray beard... He's quite old, and he doesn't look like someone fit for battle...
+::::::{{tx}}
+:::::<pre>{
+	"$type": "RPG.GameCore.SetMissionCustomValue",
+	"SubmissionID": 434014501,
+	"MissionCustomValue": {
+		"Name": "OldValue_0",
+		"ValidValueParamList": [
+			0,
+			1,
+			2,
+			3,
+			4,
+			5
+		]
+	},
+	"CustomValue": 2
+}</pre>
+::::::'''Kremnos Guard (?):''' Not bad. Your description matches that of an officer I have collected information on. Go quickly. May Talanton protect you and ensure your safe return.
+::::::{{tx}}
+:::::{{DIcon|Arrow}} (Describe the appearance of the Kremnos drillmaster)
+::::::'''(Trailblazer):''' He... He is a man with black hair and a black beard. He's middle-aged, and he wears a red outfit...
+::::::{{tx}}
+:::::<pre>{
+	"$type": "RPG.GameCore.SetMissionCustomValue",
+	"SubmissionID": 434014501,
+	"MissionCustomValue": {
+		"Name": "OldValue_0",
+		"ValidValueParamList": [
+			0,
+			1,
+			2,
+			3,
+			4,
+			5
+		]
+	},
+	"CustomValue": 3
+}</pre>
+::::::'''Kremnos Guard (?):''' Not bad. Your description matches that of an officer I have collected information on. Go quickly. May Talanton protect you and ensure your safe return.
+::::::{{tx}}
+:::::{{DIcon|Arrow}} (Describe your own appearance)
+::::::'''(Trailblazer):''' {{MC|f=She|m=He}} has gray hair, wears a long jacket and looks extremely strong. {{MC|f=She|m=He}} has never lost to anyone and is often seen with a baseball bat in {{MC|f=her|m=his}} hands...
+::::::{{tx}}
+:::::<pre>{
+	"$type": "RPG.GameCore.SetMissionCustomValue",
+	"SubmissionID": 434014501,
+	"MissionCustomValue": {
+		"Name": "OldValue_0",
+		"ValidValueParamList": [
+			0,
+			1,
+			2,
+			3,
+			4,
+			5
+		]
+	},
+	"CustomValue": 5
+}</pre>
+:{{DIcon|Arrow}} This is not something a Nameless should be doing!
+::That's right. It is only proper to maintain one's professional responsibilities. However, if you think about it, isn't exploring the unknown a form of "Trailblazing" in itself?
+::{{DIcon|Arrow}} (Climb inside the wooden horse's stomach)
+::<pre>{
+	"$type": "RPG.GameCore.SetMissionCustomValue",
+	"SubmissionID": 434014501,
+	"MissionCustomValue": {
+		"Index": 1,
+		"Name": "OldValue_1",
+		"ValidValueParamList": [
+			0,
+			1
+		]
+	},
+	"CustomValue": 1
+}</pre>
+:::{{tx}}
+:::{{DIcon|Talk}} (Charge out)
+::::Safety first. You try to push open the hidden door in the horse's stomach, only to find... It's shut fast.
+::::{{tx}}
+:::;(Return to previous option selection)
+:::{{DIcon|Talk}} (Think of a way to get their attention)
+::::'''(Trailblazer):''' {{Size|28|Hey! Wait! I'm inside here. Where are you taking me?}}
+::::{{tx}}
+:::;(Return to previous option selection)
+:::{{DIcon|Arrow}} (Keep quiet)
+::::When in an unfamiliar environment, it is always best to keep calm. You decide to take no action and see how things unfold.
+::::You have no idea how long you've been bumping around in the dark. But, just as you feel like you can't hold the contents of your stomach back any longer, the wooden horse comes suddenly crashing to the ground, followed by the sound of soldiers in neat formation.
+::::'''Imposing Voice:''' ...Leave it there for now. Let's go. There's more where that came from.
+::::After confirming that all sound outside has disappeared, you use all your strength to burst through the wooden trap door and return to the outside world.
+::::Then... You find yourself face-to-face with a powerful-looking man in Kremnos guard uniform.
+::::'''Kremnos Guard (?):''' What city do you fight for, soldier!? Why are you here!?
+::::'''Kremnos Guard (?):''' Explain yourself! If I sense a hint of hesitation, the long spear of Nikador will pierce your chest!
+::::{{DIcon|Arrow}} I am from Castrum Kremnos!
+:::::'''Kremnos Guard (?):''' Hahaha, praise Talanton! Your teachings guide my path, and your fair orders always yield reward.
+:::::'''Kremnos Guard (?):''' &mdash; The Mad King's followers, you're the one I seek! You had no idea, did you? I am not from Castrum Kremnos at all!
+:::::{{DIcon|Arrow}} ...Oh?
+:::::{{DIcon|Arrow}} Another twist?
+:::::{{DIcon|Arrow}} Well played!
+:::::'''Kremnos Guard (?):''' I have been undercover in the city for a number of days. I came to seek out information on the Mad King and send a few unlucky fools to meet Thanatos along the way. Though, I had no idea that the routes around here would be as maddening as the Mad King's mind itself. I've made no progress this whole time.
+:::::'''Kremnos Guard (?):''' Fortunately, you delivered yourself to me on a platter. I shall use your blood as the first weight placed onto the scales!
+:::::{{DIcon|Arrow}} Wait! I was lying!
+::::::'''Kremnos Guard (?):''' Trying to excuse yourself will only make your situation worse. Although, praise Talanton, I just had a new idea.
+::::::'''Kremnos Guard (?):''' The life of a mere soldier is expendable in a battle like this. It is those of the power-wielding generals that can really tip the scales.
+::::::Please stay calm. I can be your guide!
+:::::{{DIcon|Arrow}} Please stay calm. I can be your guide!
+:::::'''Kremnos Guard (?):''' A wise decision. The life of a mere soldier is expendable in a battle like this. It is those of the power-wielding generals that can really tip the scales.
+:::::'''Kremnos Guard (?):''' Tell me. What is the highest-ranking general of Castrum Kremnos like?
+:::::{{DIcon|Arrow}} (Describe the appearance of the Kremnos registration officer)
+::::::'''(Trailblazer):''' She... She is a young woman. She has red hair and wears red clothing... She speaks with a ferocious attitude...
+::::::{{tx}}
+:::::<pre>{
+	"$type": "RPG.GameCore.SetMissionCustomValue",
+	"SubmissionID": 434014501,
+	"MissionCustomValue": {
+		"Name": "OldValue_0",
+		"ValidValueParamList": [
+			0,
+			1,
+			2,
+			3,
+			4,
+			5
+		]
+	},
+	"CustomValue": 1
+}</pre>
+::::::'''Kremnos Guard (?):''' Not bad. Your description matches that of an officer I have collected information on. Be gone. Talanton bears no personal grudges. You have given enough weight to win your freedom.
+::::::{{tx}}
+:::::{{DIcon|Arrow}} (Describe the appearance of the food provisions officer)
+::::::'''(Trailblazer):''' He... He is a man with gray hair and a gray beard... He's quite old, and he doesn't look like someone fit for battle...
+::::::{{tx}}
+:::::<pre>{
+	"$type": "RPG.GameCore.SetMissionCustomValue",
+	"SubmissionID": 434014501,
+	"MissionCustomValue": {
+		"Name": "OldValue_0",
+		"ValidValueParamList": [
+			0,
+			1,
+			2,
+			3,
+			4,
+			5
+		]
+	},
+	"CustomValue": 2
+}</pre>
+::::::'''Kremnos Guard (?):''' Not bad. Your description matches that of an officer I have collected information on. Be gone. Talanton bears no personal grudges. You have given enough weight to win your freedom.
+::::::{{tx}}
+:::::{{DIcon|Arrow}} (Describe the appearance of the Kremnos drillmaster)
+::::::'''(Trailblazer):''' He... He is a man with black hair and a black beard. He's middle-aged, and he wears a red outfit...
+::::::{{tx}}
+:::::<pre>{
+	"$type": "RPG.GameCore.SetMissionCustomValue",
+	"SubmissionID": 434014501,
+	"MissionCustomValue": {
+		"Name": "OldValue_0",
+		"ValidValueParamList": [
+			0,
+			1,
+			2,
+			3,
+			4,
+			5
+		]
+	},
+	"CustomValue": 3
+}</pre>
+::::::'''Kremnos Guard (?):''' Not bad. Your description matches that of an officer I have collected information on. Be gone. Talanton bears no personal grudges. You have given enough weight to win your freedom.
+::::::{{tx}}
+:::::{{DIcon|Arrow}} (Describe your own appearance)
+::::::'''(Trailblazer):''' {{MC|f=She|m=He}} has gray hair, wears a long jacket and looks extremely strong. {{MC|f=She|m=He}} has never lost to anyone and is often seen with a baseball bat in {{MC|f=her|m=his}} hands...
+::::::{{tx}}
+:::::<pre>{
+	"$type": "RPG.GameCore.SetMissionCustomValue",
+	"SubmissionID": 434014501,
+	"MissionCustomValue": {
+		"Name": "OldValue_0",
+		"ValidValueParamList": [
+			0,
+			1,
+			2,
+			3,
+			4,
+			5
+		]
+	},
+	"CustomValue": 5
+}</pre>
+::::{{DIcon|Arrow}} Wait! I am from Okhema!
+:::::'''Kremnos Guard (?):''' ...A disciple of Kephale? Judging by your proper appearance, I guess I can believe that you were not one for the battlefield.
+:::::'''Kremnos Guard (?):''' Though it matters not which Titan you follow. Talanton judges the value of all things. You appearing before me may present me with a new path.
+:::::{{DIcon|Arrow}} So, you're not a follower of Nikador?
+:::::{{DIcon|Arrow}} ...Why are you wearing the armor of Castrum Kremnos?
+:::::'''Kremnos Guard (?):''' It is no more than a necessary disguise. Much like you, I took advantage of the chaos of battle to make my way into the city. I came to seek out information on the Mad King and send a few unlucky fools to meet Thanatos along the way.
+:::::{{tx}}
+:::::{{DIcon|Arrow}} (Point in the direction of Okhema)
+::::::'''Kremnos Guard (?):''' Lies. That is the path out of the city. Perhaps you are hoping that I would lay down my weapons and seek asylum in Okhema?
+::::::'''Kremnos Guard (?):''' But I bear the final hope of my people. If I were to desert, what right would I have to uphold their memory? What name would I live under in this world?
+::::::'''Kremnos Guard (?):''' ...
+::::::'''Kremnos Guard (?):''' Do you really think that I should just leave like this?
+::::::{{DIcon|Arrow}} I am certain that there is nothing that you can do to end this war.
+::::::<pre>{
+	"$type": "RPG.GameCore.SetMissionCustomValue",
+	"SubmissionID": 434014501,
+	"MissionCustomValue": {
+		"Name": "OldValue_0",
+		"ValidValueParamList": [
+			0,
+			1,
+			2,
+			3,
+			4,
+			5
+		]
+	},
+	"CustomValue": 4
+}</pre>
+:::::::{{tx}}
+::::::{{DIcon|Return}} I'm just kidding.
+:::::::{{DIcon|Arrow}} (Ask who his enemy is)
+::::::::'''Kremnos Guard (?):''' The life of a mere soldier is expendable in a battle like this. It is those of the power-wielding generals that can really tip the scales. I seek the highest-ranking general in Castrum Kremnos.
+::::::::'''Kremnos Guard (?):''' Can you describe him to me?
+::::::::{{DIcon|Arrow}} (Describe the appearance of the Kremnos registration officer)
+:::::::::'''(Trailblazer):''' She... She is a young woman. She has red hair and wears red clothing... She speaks with a ferocious attitude...
+:::::::::{{tx}}
+::::::::<pre>{
+	"$type": "RPG.GameCore.SetMissionCustomValue",
+	"SubmissionID": 434014501,
+	"MissionCustomValue": {
+		"Name": "OldValue_0",
+		"ValidValueParamList": [
+			0,
+			1,
+			2,
+			3,
+			4,
+			5
+		]
+	},
+	"CustomValue": 1
+}</pre>
+:::::::::'''Kremnos Guard (?):''' Not bad. Your description matches that of an officer I have collected information on. Go quickly. May Talanton protect you and ensure your safe return.
+:::::::::{{tx}}
+::::::::{{DIcon|Arrow}} (Describe the appearance of the food provisions officer)
+:::::::::'''(Trailblazer):''' He... He is a man with gray hair and a gray beard... He's quite old, and he doesn't look like someone fit for battle...
+:::::::::{{tx}}
+::::::::<pre>{
+	"$type": "RPG.GameCore.SetMissionCustomValue",
+	"SubmissionID": 434014501,
+	"MissionCustomValue": {
+		"Name": "OldValue_0",
+		"ValidValueParamList": [
+			0,
+			1,
+			2,
+			3,
+			4,
+			5
+		]
+	},
+	"CustomValue": 2
+}</pre>
+:::::::::'''Kremnos Guard (?):''' Not bad. Your description matches that of an officer I have collected information on. Go quickly. May Talanton protect you and ensure your safe return.
+:::::::::{{tx}}
+::::::::{{DIcon|Arrow}} (Describe the appearance of the Kremnos drillmaster)
+:::::::::'''(Trailblazer):''' He... He is a man with black hair and a black beard. He's middle-aged, and he wears a red outfit...
+:::::::::{{tx}}
+::::::::<pre>{
+	"$type": "RPG.GameCore.SetMissionCustomValue",
+	"SubmissionID": 434014501,
+	"MissionCustomValue": {
+		"Name": "OldValue_0",
+		"ValidValueParamList": [
+			0,
+			1,
+			2,
+			3,
+			4,
+			5
+		]
+	},
+	"CustomValue": 3
+}</pre>
+:::::::::'''Kremnos Guard (?):''' Not bad. Your description matches that of an officer I have collected information on. Go quickly. May Talanton protect you and ensure your safe return.
+:::::::::{{tx}}
+::::::::{{DIcon|Arrow}} (Describe your own appearance)
+:::::::::'''(Trailblazer):''' {{MC|f=She|m=He}} has gray hair, wears a long jacket and looks extremely strong. {{MC|f=She|m=He}} has never lost to anyone and is often seen with a baseball bat in {{MC|f=her|m=his}} hands...
+:::::::::{{tx}}
+::::::::<pre>{
+	"$type": "RPG.GameCore.SetMissionCustomValue",
+	"SubmissionID": 434014501,
+	"MissionCustomValue": {
+		"Name": "OldValue_0",
+		"ValidValueParamList": [
+			0,
+			1,
+			2,
+			3,
+			4,
+			5
+		]
+	},
+	"CustomValue": 5
+}</pre>
+:::::{{DIcon|Arrow}} (Ask who his enemy is)
+::::::'''Kremnos Guard (?):''' The life of a mere soldier is expendable in a battle like this. It is those of the power-wielding generals that can really tip the scales. I seek the highest-ranking general in Castrum Kremnos.
+::::::'''Kremnos Guard (?):''' Can you describe him to me?
+::::::{{DIcon|Arrow}} (Describe the appearance of the Kremnos registration officer)
+:::::::'''(Trailblazer):''' She... She is a young woman. She has red hair and wears red clothing... She speaks with a ferocious attitude...
+:::::::{{tx}}
+::::::<pre>{
+	"$type": "RPG.GameCore.SetMissionCustomValue",
+	"SubmissionID": 434014501,
+	"MissionCustomValue": {
+		"Name": "OldValue_0",
+		"ValidValueParamList": [
+			0,
+			1,
+			2,
+			3,
+			4,
+			5
+		]
+	},
+	"CustomValue": 1
+}</pre>
+:::::::'''Kremnos Guard (?):''' Not bad. Your description matches that of an officer I have collected information on. Go quickly. May Talanton protect you and ensure your safe return.
+:::::::{{tx}}
+::::::{{DIcon|Arrow}} (Describe the appearance of the food provisions officer)
+:::::::'''(Trailblazer):''' He... He is a man with gray hair and a gray beard... He's quite old, and he doesn't look like someone fit for battle...
+:::::::{{tx}}
+::::::<pre>{
+	"$type": "RPG.GameCore.SetMissionCustomValue",
+	"SubmissionID": 434014501,
+	"MissionCustomValue": {
+		"Name": "OldValue_0",
+		"ValidValueParamList": [
+			0,
+			1,
+			2,
+			3,
+			4,
+			5
+		]
+	},
+	"CustomValue": 2
+}</pre>
+:::::::'''Kremnos Guard (?):''' Not bad. Your description matches that of an officer I have collected information on. Go quickly. May Talanton protect you and ensure your safe return.
+:::::::{{tx}}
+::::::{{DIcon|Arrow}} (Describe the appearance of the Kremnos drillmaster)
+:::::::'''(Trailblazer):''' He... He is a man with black hair and a black beard. He's middle-aged, and he wears a red outfit...
+:::::::{{tx}}
+::::::<pre>{
+	"$type": "RPG.GameCore.SetMissionCustomValue",
+	"SubmissionID": 434014501,
+	"MissionCustomValue": {
+		"Name": "OldValue_0",
+		"ValidValueParamList": [
+			0,
+			1,
+			2,
+			3,
+			4,
+			5
+		]
+	},
+	"CustomValue": 3
+}</pre>
+:::::::'''Kremnos Guard (?):''' Not bad. Your description matches that of an officer I have collected information on. Go quickly. May Talanton protect you and ensure your safe return.
+:::::::{{tx}}
+::::::{{DIcon|Arrow}} (Describe your own appearance)
+:::::::'''(Trailblazer):''' {{MC|f=She|m=He}} has gray hair, wears a long jacket and looks extremely strong. {{MC|f=She|m=He}} has never lost to anyone and is often seen with a baseball bat in {{MC|f=her|m=his}} hands...
+:::::::{{tx}}
+::::::<pre>{
+	"$type": "RPG.GameCore.SetMissionCustomValue",
+	"SubmissionID": 434014501,
+	"MissionCustomValue": {
+		"Name": "OldValue_0",
+		"ValidValueParamList": [
+			0,
+			1,
+			2,
+			3,
+			4,
+			5
+		]
+	},
+	"CustomValue": 5
+}</pre>
+::{{DIcon|Exit}} Never mind.
+:::Alright, your rationality wins out in the end. It's fine. It doesn't look like this wooden horse is going to go running off on its own. You have some time to consider the best course of action.
+:::{{tx}}
+;(If {{F|MissionCV-4340145-1}} is not undefined 1)
+
+:{{DIcon|?}} Investigate
+:A suit of armor that is covered in blood stains. It is clear to see that its owner experienced a long and brutal struggle. However, you recognize the insignia in the center of the helmet of a set of scales and recall the soldier that remained true to their faith.
+:The sacrifices to Nikador continue. The mad Titan and the insane city are far from done.
+:...May Talanton reward him with a gift fitting of his sacrifice. May his soul rest in peace.
+
+:{{DIcon|?}} Investigate
+:You notice that the armor shows signs of being burnt, as well as an insignia of a set of scales carved into the center of the helmet. The soldier who remained true to his faith may have attempted to start a fire here, only to end up being engulfed in the flames himself.
+:...May Talanton reward him with a gift fitting of his sacrifice. May his soul rest in peace.
+
+:{{DIcon|?}} Investigate
+:The damaged suit of armor has been carelessly cast aside, covered in sword slashes. However, you recognize the insignia in the center of the helmet of a set of scales and recall the soldier who remained true to his faith.
+:You have no idea what it was that happened to him, but the ending he met is clear to see. Perhaps he happened to bump into a troupe of wandering guards or a merciless Titankin... Whatever it may have been, Castrum Kremnos will tolerate no outcome but victory.
+:...May Talanton reward him with a gift fitting of his sacrifice. May his soul rest in peace.
+
+:{{DIcon|?}} Investigate
+:A brand-new set of armor has been carefully stored in a box by the path. It seems that its owner no longer had any business in Castrum Kremnos. However, you recognize the insignia in the center of the helmet of a set of scales and recall the soldier who remained true to their faith.
+:You firmly believe that the Eternal City will take in anyone willing to live under the light of Kephale, even those from cities of other faiths... Even those with blood on their hands.
+:...In your heart, you pray that he arrives safely.
 {{Dialogue End}}
 
 ==Other Languages==

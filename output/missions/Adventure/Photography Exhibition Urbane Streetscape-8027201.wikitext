@@ -42,43 +42,417 @@ PageTitle=#Photography Exhibition: Urbane Streetscape#
 ===Discuss the theme of the day with March 7th{{subst:void|<!--802720108-->}}===
 {{Mission Description|type=adventure|location=Golden Hour|March 7th seems to have a new inspiration. Discuss the Photography Task of the day with her.}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Unused &mdash; PhotoGraphStartCustomString)
+:<!--0.5-second delay-->
+
+;(Unused &mdash; PhotoGraphFinishCustomString)
+<pre>{
+	"$type": "RPG.GameCore.StopNPCBubbleTalk",
+	"UniqueIDList": [
+		2
+	]
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.PlayNPCBubbleTalk",
+	"BubbleTalkInfoList": [
+		{
+			"AutoSkipTime": 1,
+			"GroupID": 594,
+			"GroupNpcID": 400002,
+			"TalkSentenceID": 802722203
+		},
+		{
+			"AutoSkipTime": 1,
+			"GroupID": 594,
+			"GroupNpcID": 400003,
+			"TalkSentenceID": 802722204
+		},
+		{
+			"AutoSkipTime": 1,
+			"GroupID": 594,
+			"GroupNpcID": 400008,
+			"TalkSentenceID": 802722205
+		},
+		{
+			"AutoSkipTime": 1,
+			"GroupID": 594,
+			"GroupNpcID": 400009,
+			"TalkSentenceID": 802722206
+		},
+		{
+			"AutoSkipTime": 1,
+			"GroupID": 594,
+			"GroupNpcID": 400006,
+			"TalkSentenceID": 802722207
+		}
+	],
+	"InstantFinish": false,
+	"UniqueID": 3
+}</pre>
+
+;(Unused &mdash; EnterDistrict_G603)
+----
+::{{tx}}
+:<pre>{
+	"$type": "RPG.GameCore.SwitchCharacterAnchorV2",
+	"SwitchCharacterAnchorConfig": {
+		"IsLocalPlayer": true,
+		"CharacterUniqueName": "LocalPlayer",
+		"AreaName": {
+			"Value": "LevelArea_P10301_F10301001_G603"
+		},
+		"AnchorName": {
+			"Value": "Anchor1"
+		}
+	}
+}</pre>
 {{Dialogue End}}
 
 ===Take a photo of the billboard{{subst:void|<!--802720101-->}}===
 {{Mission Description|type=adventure|location=Golden Hour|update|To complete the daily tasks and compete for the final prize, you, as a photography assistant, accompanied March 7th on a photography journey.<br />Take a photo based on the photography inspiration.}}
 {{Dialogue Start}}
-:{{tx}}
 {{Dialogue End}}
 
 ===Discuss the photo with March 7th{{subst:void|<!--802720102-->}}===
 {{Mission Description|type=adventure|location=Golden Hour|update|With the photography session wrapped up, have a chat with March 7th about the work}}
 {{Dialogue Start}}
+:'''Trendy Doll Billboard:''' Not bad at all. You guys sure are good at taking billboard photos.
+:'''Mr. Herring Billboard:''' Yeah, the quality of our lemon tarts really shines through!
+:'''Trendy Doll Billboard:''' What quality? Your owner embezzled the Alfalfa credits and fled!
+:'''Mr. Herring Billboard:''' Say that again? I'll sock you right on the board!
+:'''March 7th:''' Fighting again... Let's name our photo first.
+:{{DIcon|Arrow}} "Real-life Trade War."
+:{{DIcon|Arrow}} "Penacony's Wardance."
+:{{DIcon|Arrow}} "Rise Up, Billboard Buddies."
+<pre>{
+	"$type": "RPG.GameCore.SetTextJoinValue",
+	"TextJoinID": 192,
+	"Value": "1"
+}</pre>
+:'''March 7th:''' Hee-hee, surprisingly apt. Where to next for our shoot?
 :{{tx}}
 {{Dialogue End}}
 
 ===Go look at the car dealership{{subst:void|<!--802720103-->}}===
 {{Mission Description|type=adventure|location=Golden Hour|update|The billboards reveal to you the news about the car exhibition, so you decide to check it out with March 7th.}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Unused &mdash; EnterDistrict_G596)
+:'''Perceptively Challenged Dreamchaser:''' I hear that the ambassadors invited for this car expo has massive clout. Don't freak out, but it's the car lovers renowned across the universe: The Arstral Express!
+::You and March 7th give each other a dumbfounded stare. Out of curiosity, you wait for the entrance of these heavy-duty guests, the Arstral Express...
+::'''Arstral Express:''' The Leybent Supercar Rainbow Edition, beloved by the Nameless &mdash; the only choice for those who know! Roam the cosmos, and reach the stars!
+::'''Perceptively Challenged Dreamchaser:''' Ahhh! The Nameless in the flesh! I would've bought it in a heartbeat, if I could afford it!
+::'''March 7th:''' I can't take this anymore... (Trailblazer), we have to clarify the situation.
+::You and March 7th interrupt the fraud's hawking.
+::'''March 7th:''' It's you lot again... I get all inexplicably irate when I see trashcans now. Does the world really need so many trashcans?
+::'''Arstral Express:''' *sigh* ...We are the Debut Trashcans bearing with us dreams of showbiz. To pursue this chance of debuting, we eventually wound up on the wrong path. Now that we have ended up in your clutches, it's at least a fitting end...
+::'''March 7th:''' Hmph, as long as you get it.
+::{{DIcon|Arrow}} Our endorsement fee, cough it up!
+::{{DIcon|Arrow}} Collectibles, give 'em!
+:<pre>{
+	"$type": "RPG.GameCore.SetMissionCustomValue",
+	"SubmissionID": 802720103,
+	"MissionCustomValue": {
+		"Name": "OldValue_0",
+		"ValidValueParamList": [
+			1,
+			2,
+			3
+		]
+	},
+	"CustomValue": 1
+}</pre>
+::'''Arstral Express:''' We will do as we're told... Do you have any other requests?
+::{{DIcon|Arrow}} Come and {{Color|keyword|nobold=1|volunteer to be a model}}
+::<pre>{
+	"$type": "RPG.GameCore.SetPerformanceResult"
+}</pre>
+::{{DIcon|Arrow}} {{Color|keyword|nobold=1|Get out}} of my viewfinder!
+::<pre>{
+	"$type": "RPG.GameCore.SetPerformanceResult",
+	"Value": 1
+}</pre>
+:::'''March 7th:''' And with that, this photography exhibition comes to a close.
+:::'''March 7th:''' In these seven days, we photographed Penacony's streets and stage, then we got Sparkle's lens and returned to the Xianzhou to take all sorts of bizarre photos... Now that I've calmed down, I really do feel a bit out of sorts.
+:::The voyage continues...
+:::The road to becoming a master photographer never ends, either!
+:::'''March 7th:''' Yeah! You're totally right, (Trailblazer)!
+:::'''March 7th:''' It's not just the instant that the photos captured, but the many things that happened between photos... As the photos stack up, the portion of my life when I had no memories seems to get smaller and smaller...
+:::'''March 7th:''' Ahem, the Express is about to depart! Next stop, we're gonna keep snapping even more, even better photographs!
+:::'''March 7th:''' Here's a copy of the group photo, (Trailblazer). You'd better not lose it!
+:::We'll take it.
+:::{{DIcon|Arrow}} It seems like we need to step in!
+:::It seems like we need to step in!
+::{{tx}}
+:<pre>{
+	"$type": "RPG.GameCore.SwitchCharacterAnchorV2",
+	"SwitchCharacterAnchorConfig": {
+		"IsLocalPlayer": true,
+		"CharacterUniqueName": "LocalPlayer",
+		"AreaName": {
+			"Value": "LevelArea_P10301_F10301001_G596"
+		},
+		"AnchorName": {
+			"Value": "Anchor1"
+		}
+	}
+}</pre>
+:'''March 7th:''' This is where the car dealership is.
 {{Dialogue End}}
 
 ===Take a photo of the limousine car show{{subst:void|<!--802720105-->}}===
 {{Mission Description|type=adventure|location=Golden Hour|update|To complete the daily tasks and compete for the final prize, you, as a photography assistant, accompanied March 7th on a photography journey.<br />Take a photo based on the photography inspiration.}}
 {{Dialogue Start}}
-:{{tx}}
+;(Unused &mdash; PhotoGraphStartCustomString)
+<pre>{
+	"$type": "RPG.GameCore.PlayNPCBubbleTalk",
+	"BubbleTalkInfoList": [
+		{
+			"AutoSkipTime": 2,
+			"GroupID": 597,
+			"GroupNpcID": 400002,
+			"TalkSentenceID": 802720904
+		},
+		{
+			"AutoSkipTime": 2,
+			"GroupID": 597,
+			"GroupNpcID": 400002,
+			"TalkSentenceID": 802720905
+		}
+	],
+	"InstantFinish": false,
+	"UniqueID": 1
+}</pre>
+
+;(Unused &mdash; PhotoGraphFinishCustomString)
+<pre>{
+	"$type": "RPG.GameCore.StopNPCBubbleTalk",
+	"UniqueIDList": [
+		1
+	]
+}</pre>
 {{Dialogue End}}
 
 ===Discuss the photo with March 7th{{subst:void|<!--802720106-->}}===
 {{Mission Description|type=adventure|location=Golden Hour|update|With the photography session wrapped up, have a chat with March 7th about the work}}
 {{Dialogue Start}}
+;(If {{F|MissionCV-8027201-1}} is undefined 1)
+::'''Arstral Express:''' Ah, very nice shots... I'm reminded of the day I decided to become an actor. Like today, it was a bright sunny day. Thank you all for reminding us of our aspirations, so clear as crystal tears... Farewell for now!
+::The Arstral Express expresses their deepest apologies and leaves the site.
+::'''March 7th:''' Err... Can this photo really invoke such strong emotions? (Trailblazer), you should give it a name.
+::{{DIcon|Arrow}} "Dreamchaser Circle."
+:::'''March 7th:''' It's not like anyone can just get a foot into these circles.
+::{{DIcon|Arrow}} "Arstral Express."
+:::'''March 7th:''' I can't believe even WE have someone impersonating us... It seems it's time to register a trademark!
+::{{DIcon|Arrow}} "Penacony Does Not Believe in Tears."
+:::'''March 7th:''' They should probably get more experience and shape up their acting before re-debuting!
+::{{tx}}
+:<pre>{
+	"$type": "RPG.GameCore.SetTextJoinValue",
+	"TextJoinID": 193,
+	"Value": "1"
+}</pre>
+;(If {{F|MissionCV-8027201-1}} is not undefined 1)
+::'''March 7th:''' Not bad! I sneaked a peek at the price... We'd better name the photo and keep our distance from it.
+::'''March 7th:''' If we scratch its paint, I reckon we'd be washing dishes on Penacony for at least an Amber Era.
+::{{DIcon|Arrow}} How about "This Car's Like a Rainbow"?
+::{{DIcon|Arrow}} How about "Nameless' Beloved"?
+::{{DIcon|Arrow}} How about "Express Limousine"?
+:<pre>{
+	"$type": "RPG.GameCore.SetTextJoinValue",
+	"TextJoinID": 193,
+	"Value": "4"
+}</pre>
+:'''March 7th:''' Photos uploaded, and that's the end of today's shoot. I wonder what Mr. Reca and the viewers will say?
 :{{tx}}
 {{Dialogue End}}
 
 ===Take a photo of the limousine car show{{subst:void|<!--802720107-->}}===
 {{Mission Description|type=adventure|location=Golden Hour|update|To complete the daily tasks and compete for the final prize, you, as a photography assistant, accompanied March 7th on a photography journey.<br />Take a photo based on the photography inspiration.}}
 {{Dialogue Start}}
-:{{tx}}
+;(Unused &mdash; G599_PropTrigger)
+<pre>{
+	"$type": "RPG.GameCore.BindSwitchPhotoGraphFuncBtn",
+	"SimpleMode": false,
+	"UseType": "StartPhotoInTriggerRange",
+	"MissionID": {
+		"FixedValue": {
+			"Value": 8027201
+		}
+	},
+	"RangeTriggerProp": {
+		"FetchType": "SinglePropByPropID",
+		"SinglePropID": {
+			"GroupID": {
+				"FixedValue": {
+					"Value": 599
+				}
+			},
+			"ID": {
+				"FixedValue": {
+					"Value": 300001
+				}
+			}
+		}
+	},
+	"ColliderRelativePathList": [],
+	"PhotoGraphMode": "MultiTakePhoto",
+	"IdentifyDisplayType": "PhotoExhibition",
+	"AimTargetContainerConfig": [
+		{
+			"AimTargetConfig": {
+				"$type": "RPG.GameCore.PhotoGraphAimContaierTarget",
+				"AimTargetType": {
+					"$type": "RPG.GameCore.TargetFetchAdvPropEx",
+					"FetchType": "SinglePropByPropID",
+					"SinglePropID": {
+						"GroupID": {
+							"FixedValue": {
+								"Value": 599
+							}
+						},
+						"ID": {
+							"FixedValue": {
+								"Value": 300002
+							}
+						}
+					}
+				},
+				"GameObjectNode": {
+					"Value": "Root"
+				}
+			},
+			"OverrideCameraTip": true,
+			"TipPriority": 1,
+			"TipConfigs": [
+				{
+					"MinDistance": 12,
+					"MaxDistance": 99,
+					"TipText": {
+						"Hash": 4021565249410092732
+					}
+				}
+			],
+			"ContainerFlagName": "Target_802720105",
+			"IsTopContainer": true,
+			"IsAimTargetConfig": true
+		},
+		{
+			"AimTargetConfig": {
+				"$type": "RPG.GameCore.PhotoGraphAimContaierTarget",
+				"AimTargetType": {
+					"$type": "RPG.GameCore.TargetFetchAdvNpcEx",
+					"FetchType": "SingleNpcByNpcID",
+					"SingleNpcID": {
+						"GroupID": {
+							"FixedValue": {
+								"Value": 599
+							}
+						},
+						"GroupNpcID": {
+							"FixedValue": {
+								"Value": 400006
+							}
+						}
+					}
+				},
+				"GameObjectNode": {
+					"Value": "Chest_M"
+				}
+			},
+			"OverrideCameraTip": true,
+			"TipPriority": 1,
+			"TipConfigs": [
+				{
+					"MinDistance": 12,
+					"MaxDistance": 99,
+					"TipText": {
+						"Hash": 4021565249410092732
+					}
+				}
+			],
+			"ContainerFlagName": "Target_802720105",
+			"IsTopContainer": true,
+			"IsAimTargetConfig": true
+		}
+	],
+	"OverrideConfig": {
+		"IdentifyRadiusOverride": {
+			"FixedValue": {
+				"Value": 12
+			}
+		},
+		"IdentifyLookAt": {
+			"$type": "RPG.GameCore.TargetFetchAdvPropEx",
+			"FetchType": "SinglePropByPropID",
+			"SinglePropID": {
+				"GroupID": {
+					"FixedValue": {
+						"Value": 599
+					}
+				},
+				"ID": {
+					"FixedValue": {
+						"Value": 300001
+					}
+				}
+			}
+		},
+		"InitFov": 1
+	},
+	"ExtraSettings": {
+		"HideEntityConfig": {
+			"HideEntity": {
+				"$type": "RPG.GameCore.TargetFetchAdvPropEx",
+				"FetchType": "SinglePropByPropID",
+				"SinglePropID": {
+					"GroupID": {
+						"FixedValue": {
+							"Value": 599
+						}
+					},
+					"ID": {
+						"FixedValue": {
+							"Value": 300003
+						}
+					}
+				}
+			},
+			"HideProp": true
+		},
+		"ShowBubbleTalk": true
+	}
+}</pre>
+
+;(Unused &mdash; PhotoGraphStartCustomString)
+<pre>{
+	"$type": "RPG.GameCore.PlayNPCBubbleTalk",
+	"BubbleTalkInfoList": [
+		{
+			"AutoSkipTime": 2,
+			"GroupID": 599,
+			"GroupNpcID": 400006,
+			"TalkSentenceID": 802720904
+		},
+		{
+			"AutoSkipTime": 2,
+			"GroupID": 599,
+			"GroupNpcID": 400006,
+			"TalkSentenceID": 802720905
+		}
+	],
+	"InstantFinish": false,
+	"UniqueID": 1
+}</pre>
+
+;(Unused &mdash; PhotoGraphFinishCustomString)
+<pre>{
+	"$type": "RPG.GameCore.StopNPCBubbleTalk",
+	"UniqueIDList": [
+		1
+	]
+}</pre>
 {{Dialogue End}}
 
 ==Other Languages==

@@ -34,6 +34,868 @@ PageTitle=##
 ==Dialogue==
 {{Stub Dialogue}}
 
+;(Talk to Living Flame of Georios)
+;(If {{cx}}<!--during performance 434049001-->)
+::'''Living Flame of Georios:''' *crackle* Look at the bubbling vapor... Everything is damp. How did I end up in this deserted place?
+::'''Living Flame of Georios:''' It took a long time for me to kindle this tiny spark of inspiration, and I'm afraid it will be extinguished! Kind stranger, will you give me some firewood so that I may burn a little longer?
+::{{DIcon|Talk}} Tell me your story.
+:::'''Living Flame of Georios:''' I... I was once a fragment of {{Rubi|Georios's|Earth Titan}} divine body, watching the land transform over the years, and I remembered where every boulder was. *crackle*
+:::'''Living Flame of Georios:''' Then the mountains collapsed and the debris scattered everywhere. A long time passed, and I found myself here when I came to.
+::;(Return to previous option selection)
+::{{DIcon|Arrow}} What do I get from this?
+:::'''Living Flame of Georios:''' Hard work will always be rewarded. *crackle* Don't worry. I'll have something good for you.
+::<pre>{
+	"$type": "RPG.GameCore.AddFinishMissionData_SelectConsumeItem",
+	"SubmissionID": 434014901,
+	"OnlyPerformance": false,
+	"ItemIDList": [
+		180009,
+		181015
+	],
+	"ItemHiddenIDList": [],
+	"ItemInvisibleIDList": [],
+	"ItemSelect": [
+		{
+			"Item1": 180009,
+			"TriggerCustomString": "MissionOn_434014901"
+		},
+		{
+			"Item1": 181015,
+			"TriggerCustomString": "MissionNo_434014901"
+		}
+	],
+	"SlotNum": 1,
+	"SimpleTalk": {
+		"TalkSentenceID": 434049007
+	},
+	"OnSubmitFail": [
+		{
+			"$type": "RPG.GameCore.EndPerformance"
+		}
+	],
+	"OnSubmitCancel": [
+		{
+			"$type": "RPG.GameCore.EndPerformance"
+		}
+	]
+}</pre>
+;(If {{cx}}<!--not during performance 434049001-->)
+::'''Living Flame of Georios:''' Hard work will always be rewarded. *crackle* Don't worry. I'll have something good for you.
+:<pre>{
+	"$type": "RPG.GameCore.AddFinishMissionData_SelectConsumeItem",
+	"SubmissionID": 434014901,
+	"OnlyPerformance": false,
+	"ItemIDList": [
+		180009,
+		181015
+	],
+	"ItemHiddenIDList": [],
+	"ItemInvisibleIDList": [],
+	"ItemSelect": [
+		{
+			"Item1": 180009,
+			"TriggerCustomString": "MissionOn_434014901"
+		},
+		{
+			"Item1": 181015,
+			"TriggerCustomString": "MissionNo_434014901"
+		}
+	],
+	"SlotNum": 1,
+	"SimpleTalk": {
+		"TalkSentenceID": 434049051
+	},
+	"OnSubmitFail": [
+		{
+			"$type": "RPG.GameCore.EndPerformance"
+		}
+	],
+	"OnSubmitCancel": [
+		{
+			"$type": "RPG.GameCore.EndPerformance"
+		}
+	]
+}</pre>
+;(Unused &mdash; MissionOn_434014901)
+<pre>{
+	"$type": "RPG.GameCore.SetFloorCustomFloat",
+	"Name": {
+		"Value": "FCV_TheafFlame_01_FlameState"
+	},
+	"Value": {
+		"FixedValue": {
+			"Value": 1
+		}
+	}
+}</pre>
+::'''Living Flame of Georios:''' *crackle* This is no primordial Coreflame, but it will last me for a while. Thank you, kind soul.
+
+;(Unused &mdash; MissionNo_434014901)
+:'''Living Flame of Georios:''' *crackle* ...Hungry. I'm starving! What did you give the poor little dim flame that made it feel so empty inside?
+;(If {{F|FSV_TheafFlameInteractState_01}} is undefined 1)
+<pre>{
+	"$type": "RPG.GameCore.AdvCreateGroupEntity",
+	"InstanceIDList": [
+		300001,
+		300002,
+		400001
+	]
+}</pre>
+
+;(Talk to Living Flame of Georios)
+;(If {{cx}}<!--during performance 434049004-->)
+::'''Living Flame of Georios:''' *crackle* I'm very thankful to have met you. I was down on the ground for a long time, but no one stopped and paid me any mind! What has this world come to...
+::{{DIcon|Talk}} Tell me your story.
+:::'''Living Flame of Georios:''' Me? Huh, you mean you can't tell? *crackle* I'm the everlasting spiritual flame!
+:::'''Living Flame of Georios:''' I'm no ordinary rock. I am a rock with divinity, because I fell from the body of {{Rubi|Georios|Earth Titan}}. *crackle* Since you helped me, I'll let this one slide.
+::;(Return to previous option selection)
+::{{DIcon|Arrow}} What do I get from this?
+:::'''Living Flame of Georios:''' *crackle* The earth always rewards those who sow. How about this? Make a satisfactory offering, and I will repay you abundantly.
+::<pre>{
+	"$type": "RPG.GameCore.AddFinishMissionData_SelectConsumeItem",
+	"SubmissionID": 434014902,
+	"OnlyPerformance": false,
+	"ItemIDList": [
+		408001,
+		140000
+	],
+	"ItemHiddenIDList": [],
+	"ItemInvisibleIDList": [],
+	"ItemSelect": [
+		{
+			"Item1": 408001,
+			"TriggerCustomString": "MissionNo_434014902"
+		},
+		{
+			"Item1": 140000,
+			"TriggerCustomString": "MissionOn_434014902"
+		}
+	],
+	"SlotNum": 1,
+	"SimpleTalk": {
+		"TalkSentenceID": 434049106
+	},
+	"OnSubmitFail": [
+		{
+			"$type": "RPG.GameCore.EndPerformance"
+		}
+	],
+	"OnSubmitCancel": [
+		{
+			"$type": "RPG.GameCore.EndPerformance"
+		}
+	]
+}</pre>
+;(If {{cx}}<!--not during performance 434049004-->)
+::'''Living Flame of Georios:''' *crackle* The earth always rewards those who sow. How about this? Make a satisfactory offering, and I will repay you abundantly.
+:<pre>{
+	"$type": "RPG.GameCore.AddFinishMissionData_SelectConsumeItem",
+	"SubmissionID": 434014902,
+	"OnlyPerformance": false,
+	"ItemIDList": [
+		408001,
+		140000
+	],
+	"ItemHiddenIDList": [],
+	"ItemInvisibleIDList": [],
+	"ItemSelect": [
+		{
+			"Item1": 408001,
+			"TriggerCustomString": "MissionNo_434014902"
+		},
+		{
+			"Item1": 140000,
+			"TriggerCustomString": "MissionOn_434014902"
+		}
+	],
+	"SlotNum": 1,
+	"SimpleTalk": {
+		"TalkSentenceID": 434049106
+	},
+	"OnSubmitFail": [
+		{
+			"$type": "RPG.GameCore.EndPerformance"
+		}
+	],
+	"OnSubmitCancel": [
+		{
+			"$type": "RPG.GameCore.EndPerformance"
+		}
+	]
+}</pre>
+;(Unused &mdash; MissionOn_434014902)
+<pre>{
+	"$type": "RPG.GameCore.SetFloorCustomFloat",
+	"Name": {
+		"Value": "FCV_TheafFlame_02_FlameState"
+	},
+	"Value": {
+		"FixedValue": {
+			"Value": 1
+		}
+	}
+}</pre>
+::'''Living Flame of Georios:''' I've received your offering. Very nice. *crackle* Take my gift for your hard work, kind soul!
+
+;(Unused &mdash; MissionNo_434014902)
+:'''Living Flame of Georios:''' ...Is this flammable? If it doesn't burn, it's useless! *crackle*
+;(If {{F|FSV_TheafFlameInteractState_02}} is undefined 1)
+<pre>{
+	"$type": "RPG.GameCore.AdvCreateGroupEntity",
+	"InstanceIDList": [
+		300001,
+		300002,
+		400001
+	]
+}</pre>
+
+;(Talk to Living Flame of Georios)
+;(If {{cx}}<!--during performance 434049007-->)
+::'''Living Flame of Georios:''' *crackle* That was close. The dim flame was almost extinguished in this dark place.
+::'''Living Flame of Georios:''' Did you save me? *crackle* You have my gratitude. All the stones by the road shall chant your name, and every boulder on the cliffs shall feature your visage. You are the highest mountain and the longest slope.
+::{{DIcon|Talk}} Tell me your story.
+:::'''Living Flame of Georios:''' I once traveled everywhere with {{Rubi|Georios|Earth Titan}}. I left my footprints among the gravel, I sowed countless seeds in fertile soil, I built majestic cliffs, and I dug bottomless ravines.
+:::'''Living Flame of Georios:''' But now the divine powers have vanished, and I am nothing but a dim flame.
+::;(Return to previous option selection)
+::{{DIcon|Arrow}} What do I get from this?
+:::'''Living Flame of Georios:''' *crackle* Look at this dancing flame. Pure, mysterious, warm, and everlasting. Beholding such a feat, do you want to draw a sliver and take it along? Make an offering and you shall have it.
+::<pre>{
+	"$type": "RPG.GameCore.AddFinishMissionData_SelectConsumeItem",
+	"SubmissionID": 434014903,
+	"OnlyPerformance": false,
+	"ItemIDList": [
+		180004,
+		180001
+	],
+	"ItemHiddenIDList": [],
+	"ItemInvisibleIDList": [],
+	"ItemSelect": [
+		{
+			"Item1": 180004,
+			"TriggerCustomString": "MissionOn_434014903"
+		},
+		{
+			"Item1": 180001,
+			"TriggerCustomString": "MissionNo_434014903"
+		}
+	],
+	"SlotNum": 1,
+	"SimpleTalk": {
+		"TalkSentenceID": 434049207
+	},
+	"OnSubmitFail": [
+		{
+			"$type": "RPG.GameCore.EndPerformance"
+		}
+	],
+	"OnSubmitCancel": [
+		{
+			"$type": "RPG.GameCore.EndPerformance"
+		}
+	]
+}</pre>
+;(If {{cx}}<!--not during performance 434049007-->)
+::'''Living Flame of Georios:''' *crackle* Look at this dancing flame. Pure, mysterious, warm, and everlasting. Beholding such a feat, do you want to draw a sliver and take it along? Make an offering and you shall have it.
+:<pre>{
+	"$type": "RPG.GameCore.AddFinishMissionData_SelectConsumeItem",
+	"SubmissionID": 434014903,
+	"OnlyPerformance": false,
+	"ItemIDList": [
+		180004,
+		180001
+	],
+	"ItemHiddenIDList": [],
+	"ItemInvisibleIDList": [],
+	"ItemSelect": [
+		{
+			"Item1": 180004,
+			"TriggerCustomString": "MissionOn_434014903"
+		},
+		{
+			"Item1": 180001,
+			"TriggerCustomString": "MissionNo_434014903"
+		}
+	],
+	"SlotNum": 1,
+	"SimpleTalk": {
+		"TalkSentenceID": 434049207
+	},
+	"OnSubmitFail": [
+		{
+			"$type": "RPG.GameCore.EndPerformance"
+		}
+	],
+	"OnSubmitCancel": [
+		{
+			"$type": "RPG.GameCore.EndPerformance"
+		}
+	]
+}</pre>
+;(Unused &mdash; MissionOn_434014903)
+<pre>{
+	"$type": "RPG.GameCore.SetFloorCustomFloat",
+	"Name": {
+		"Value": "FCV_TheafFlame_03_FlameState"
+	},
+	"Value": {
+		"FixedValue": {
+			"Value": 1
+		}
+	}
+}</pre>
+::'''Living Flame of Georios:''' Take it. *crackle* You will understand how to use it when the endless night descends and everything is shrouded in darkness.
+
+;(Unused &mdash; MissionNo_434014903)
+:'''Living Flame of Georios:''' The moisture! The dim flame hates things that are damp! Take it away!
+;(If {{F|FSV_TheafFlameInteractState_03}} is undefined 1)
+<pre>{
+	"$type": "RPG.GameCore.AdvCreateGroupEntity",
+	"InstanceIDList": [
+		300001,
+		300002,
+		400001
+	]
+}</pre>
+
+;(Talk to Living Flame of Georios)
+;(If {{cx}}<!--during performance 434049010-->)
+::'''Living Flame of Georios:''' *crackle* Greetings. The scenery here is beautiful, and the air is refreshing. I love it here.
+::'''Living Flame of Georios:''' Do you want to live here forever? Or do you want to keep journeying? The spiritual flame burns quietly and does not answer, but if you offer substance to the fire, you might have a glimpse of the future.
+::{{DIcon|Talk}} Tell me your story.
+:::'''Living Flame of Georios:''' {{Rubi|Georios|Earth Titan}} created this land, and placed tiny little me among it. What was the purpose? Will I be a part of the magnificent prophecy?
+:::'''Living Flame of Georios:''' The land does not answer, and it only repays with harvest.
+::;(Return to previous option selection)
+::{{DIcon|Arrow}} What do I get from this?
+:::'''Living Flame of Georios:''' *crackle* You must sow the seed if you want to taste the fruit.
+::<pre>{
+	"$type": "RPG.GameCore.AddFinishMissionData_SelectConsumeItem",
+	"SubmissionID": 434014904,
+	"OnlyPerformance": false,
+	"ItemIDList": [
+		181003,
+		180007
+	],
+	"ItemHiddenIDList": [],
+	"ItemInvisibleIDList": [],
+	"ItemSelect": [
+		{
+			"Item1": 180007,
+			"TriggerCustomString": "MissionOn_434014904"
+		},
+		{
+			"Item1": 181003,
+			"TriggerCustomString": "MissionNo_434014904"
+		}
+	],
+	"SlotNum": 1,
+	"SimpleTalk": {
+		"TalkSentenceID": 434049307
+	},
+	"OnSubmitFail": [
+		{
+			"$type": "RPG.GameCore.EndPerformance"
+		}
+	],
+	"OnSubmitCancel": [
+		{
+			"$type": "RPG.GameCore.EndPerformance"
+		}
+	]
+}</pre>
+;(If {{cx}}<!--not during performance 434049010-->)
+::'''Living Flame of Georios:''' *crackle* You must sow the seed if you want to taste the fruit.
+:<pre>{
+	"$type": "RPG.GameCore.AddFinishMissionData_SelectConsumeItem",
+	"SubmissionID": 434014904,
+	"OnlyPerformance": false,
+	"ItemIDList": [
+		181003,
+		180007
+	],
+	"ItemHiddenIDList": [],
+	"ItemInvisibleIDList": [],
+	"ItemSelect": [
+		{
+			"Item1": 180007,
+			"TriggerCustomString": "MissionOn_434014904"
+		},
+		{
+			"Item1": 181003,
+			"TriggerCustomString": "MissionNo_434014904"
+		}
+	],
+	"SlotNum": 1,
+	"SimpleTalk": {
+		"TalkSentenceID": 434049307
+	},
+	"OnSubmitFail": [
+		{
+			"$type": "RPG.GameCore.EndPerformance"
+		}
+	],
+	"OnSubmitCancel": [
+		{
+			"$type": "RPG.GameCore.EndPerformance"
+		}
+	]
+}</pre>
+;(Unused &mdash; MissionOn_434014904)
+<pre>{
+	"$type": "RPG.GameCore.SetFloorCustomFloat",
+	"Name": {
+		"Value": "FCV_TheafFlame_04_FlameState"
+	},
+	"Value": {
+		"FixedValue": {
+			"Value": 1
+		}
+	}
+}</pre>
+::'''Living Flame of Georios:''' A good seed. *crackle* Take it. This is the fruit you deserve.
+
+;(Unused &mdash; MissionNo_434014904)
+:'''Living Flame of Georios:''' Can this really be planted? *crackle* Can you even tell if you're eating a fruit or a seed!?
+;(If {{F|FSV_TheafFlameInteractState_04}} is undefined 1)
+<pre>{
+	"$type": "RPG.GameCore.AdvCreateGroupEntity",
+	"InstanceIDList": [
+		300001,
+		300002,
+		400001
+	]
+}</pre>
+
+;(Talk to Living Flame of Georios)
+;(If {{cx}}<!--during performance 434049013-->)
+::'''Living Flame of Georios:''' *crackle* It's alive. My fire is burning again! Look at the brilliant vitality within!
+::'''Living Flame of Georios:''' It's all thanks to you. Let me think. *crackle* In the past, before the mountains collapsed into countless pebbles, how would I have rewarded and praised you for your deeds?
+::{{DIcon|Talk}} Tell me your story.
+:::'''Living Flame of Georios:''' In the very beginning, there was no sky and land in the empty world. {{Rubi|Georios|Earth Titan}} rose from the void and created a place where life can sustain.
+:::'''Living Flame of Georios:''' *crackle* This is how I came to be. Countless of me laid the foundation, built mountains, and became the land.
+::;(Return to previous option selection)
+::{{DIcon|Arrow}} What do I get from this?
+:::'''Living Flame of Georios:''' Of course. *crackle* Show your reverence and sincerity, and the land will reciprocate.
+::<pre>{
+	"$type": "RPG.GameCore.AddFinishMissionData_SelectConsumeItem",
+	"SubmissionID": 434014905,
+	"OnlyPerformance": false,
+	"ItemIDList": [
+		2,
+		140004
+	],
+	"ItemHiddenIDList": [],
+	"ItemInvisibleIDList": [],
+	"ItemSelect": [
+		{
+			"Item1": 2,
+			"TriggerCustomString": "MissionOn_434014905"
+		},
+		{
+			"Item1": 140004,
+			"TriggerCustomString": "MissionNo_434014905"
+		}
+	],
+	"SlotNum": 1,
+	"SimpleTalk": {
+		"TalkSentenceID": 434049407
+	},
+	"OnSubmitFail": [
+		{
+			"$type": "RPG.GameCore.EndPerformance"
+		}
+	],
+	"OnSubmitCancel": [
+		{
+			"$type": "RPG.GameCore.EndPerformance"
+		}
+	]
+}</pre>
+;(If {{cx}}<!--not during performance 434049013-->)
+::'''Living Flame of Georios:''' Of course. *crackle* Show your reverence and sincerity, and the land will reciprocate.
+:<pre>{
+	"$type": "RPG.GameCore.AddFinishMissionData_SelectConsumeItem",
+	"SubmissionID": 434014905,
+	"OnlyPerformance": false,
+	"ItemIDList": [
+		2,
+		140004
+	],
+	"ItemHiddenIDList": [],
+	"ItemInvisibleIDList": [],
+	"ItemSelect": [
+		{
+			"Item1": 2,
+			"TriggerCustomString": "MissionOn_434014905"
+		},
+		{
+			"Item1": 140004,
+			"TriggerCustomString": "MissionNo_434014905"
+		}
+	],
+	"SlotNum": 1,
+	"SimpleTalk": {
+		"TalkSentenceID": 434049407
+	},
+	"OnSubmitFail": [
+		{
+			"$type": "RPG.GameCore.EndPerformance"
+		}
+	],
+	"OnSubmitCancel": [
+		{
+			"$type": "RPG.GameCore.EndPerformance"
+		}
+	]
+}</pre>
+;(Unused &mdash; MissionOn_434014905)
+<pre>{
+	"$type": "RPG.GameCore.SetFloorCustomFloat",
+	"Name": {
+		"Value": "FCV_TheafFlame_05_FlameState"
+	},
+	"Value": {
+		"FixedValue": {
+			"Value": 1
+		}
+	}
+}</pre>
+::'''Living Flame of Georios:''' Yes, that's it! *crackle* Take some of my flame. You'll need it later.
+
+;(Unused &mdash; MissionNo_434014905)
+:'''Living Flame of Georios:''' *crackle* Your so-called sincerity can't even strike a spark in the flame!
+;(If {{F|FSV_TheafFlameInteractState_05}} is undefined 1)
+<pre>{
+	"$type": "RPG.GameCore.AdvCreateGroupEntity",
+	"InstanceIDList": [
+		300001,
+		300002,
+		400001
+	]
+}</pre>
+
+;(Talk to Living Flame of Georios)
+;(If {{cx}}<!--during performance 434049016-->)
+::'''Living Flame of Georios:''' *crackle* You found me. This dim flame wants to find somewhere pure to call home and it doesn't like this place because of the strange smell. Don't stop and don't turn back, or the spiritual flame will be extinguished.
+::'''Living Flame of Georios:''' You by the side of the road. You who have found me. I want something good. Give me something good.
+::{{DIcon|Talk}} Tell me your story.
+:::'''Living Flame of Georios:''' *crackle* I, {{Rubi|Georios'|Earth Titan}} Kin, have been the witness to plenty and been burning forever. I fear darkness, fret over dampness, and dread being extinguished.
+:::'''Living Flame of Georios:''' I like stones, I like fire, I like good things. *crackle* Give me. Give me. Give me.
+::;(Return to previous option selection)
+::{{DIcon|Arrow}} What do I get from this?
+:::'''Living Flame of Georios:''' *crackle* Yes, worry not. The dim flame does not lie. The dim flame will protect you at night.
+::<pre>{
+	"$type": "RPG.GameCore.AddFinishMissionData_SelectConsumeItem",
+	"SubmissionID": 434014906,
+	"OnlyPerformance": false,
+	"ItemIDList": [
+		180011,
+		180010
+	],
+	"ItemHiddenIDList": [],
+	"ItemInvisibleIDList": [],
+	"ItemSelect": [
+		{
+			"Item1": 180010,
+			"TriggerCustomString": "MissionOn_434014906"
+		},
+		{
+			"Item1": 180011,
+			"TriggerCustomString": "MissionNo_434014906"
+		}
+	],
+	"SlotNum": 1,
+	"SimpleTalk": {
+		"TalkSentenceID": 434049507
+	},
+	"OnSubmitFail": [
+		{
+			"$type": "RPG.GameCore.EndPerformance"
+		}
+	],
+	"OnSubmitCancel": [
+		{
+			"$type": "RPG.GameCore.EndPerformance"
+		}
+	]
+}</pre>
+;(If {{cx}}<!--not during performance 434049016-->)
+::'''Living Flame of Georios:''' *crackle* Yes, worry not. The dim flame does not lie. The dim flame will protect you at night.
+:<pre>{
+	"$type": "RPG.GameCore.AddFinishMissionData_SelectConsumeItem",
+	"SubmissionID": 434014906,
+	"OnlyPerformance": false,
+	"ItemIDList": [
+		180011,
+		180010
+	],
+	"ItemHiddenIDList": [],
+	"ItemInvisibleIDList": [],
+	"ItemSelect": [
+		{
+			"Item1": 180010,
+			"TriggerCustomString": "MissionOn_434014906"
+		},
+		{
+			"Item1": 180011,
+			"TriggerCustomString": "MissionNo_434014906"
+		}
+	],
+	"SlotNum": 1,
+	"SimpleTalk": {
+		"TalkSentenceID": 434049507
+	},
+	"OnSubmitFail": [
+		{
+			"$type": "RPG.GameCore.EndPerformance"
+		}
+	],
+	"OnSubmitCancel": [
+		{
+			"$type": "RPG.GameCore.EndPerformance"
+		}
+	]
+}</pre>
+;(Unused &mdash; MissionOn_434014906)
+<pre>{
+	"$type": "RPG.GameCore.SetFloorCustomFloat",
+	"Name": {
+		"Value": "FCV_TheafFlame_06_FlameState"
+	},
+	"Value": {
+		"FixedValue": {
+			"Value": 1
+		}
+	}
+}</pre>
+::'''Living Flame of Georios:''' Good. Excellent and desired. The dim flame is stronger. Here, for you.
+
+;(Unused &mdash; MissionNo_434014906)
+:'''Living Flame of Georios:''' No, no. This gives the dim flame nightmares. Something softer, please.
+;(If {{F|FSV_TheafFlameInteractState_06}} is undefined 1)
+<pre>{
+	"$type": "RPG.GameCore.AdvCreateGroupEntity",
+	"InstanceIDList": [
+		300001,
+		300002,
+		400001
+	]
+}</pre>
+
+;(Talk to Living Flame of Georios)
+;(If {{cx}}<!--during performance 434049019-->)
+::'''Living Flame of Georios:''' *crackle* Who are you? My spiritual flame is dwindling. Sharing is off the table!
+::'''Living Flame of Georios:''' Unless... Unless you can add firewood to the dying fire, and make it burn ferociously. *crackle* Then you can take your share. Otherwise, stay away!
+::{{DIcon|Talk}} Tell me your story.
+:::'''Living Flame of Georios:''' It was {{Rubi|Georios|Earth Titan}} that sculpted me, and used a Coreflame to give me sentience. *crackle* I have guarded the small flame all these years.
+:::'''Living Flame of Georios:''' But even the hardest boulder will weather. As you can see, this is what little I have left.
+::;(Return to previous option selection)
+::{{DIcon|Arrow}} What do I get from this?
+:::'''Living Flame of Georios:''' *crackle* The flame is ever-changing, but the land remains constant. Your work will be rewarded.
+::<pre>{
+	"$type": "RPG.GameCore.AddFinishMissionData_SelectConsumeItem",
+	"SubmissionID": 434014907,
+	"OnlyPerformance": false,
+	"ItemIDList": [
+		180005,
+		181012
+	],
+	"ItemHiddenIDList": [],
+	"ItemInvisibleIDList": [],
+	"ItemSelect": [
+		{
+			"Item1": 181012,
+			"TriggerCustomString": "MissionOn_434014907"
+		},
+		{
+			"Item1": 180005,
+			"TriggerCustomString": "MissionNo_434014907"
+		}
+	],
+	"SlotNum": 1,
+	"SimpleTalk": {
+		"TalkSentenceID": 434049607
+	},
+	"OnSubmitFail": [
+		{
+			"$type": "RPG.GameCore.EndPerformance"
+		}
+	],
+	"OnSubmitCancel": [
+		{
+			"$type": "RPG.GameCore.EndPerformance"
+		}
+	]
+}</pre>
+;(If {{cx}}<!--not during performance 434049019-->)
+::'''Living Flame of Georios:''' *crackle* The flame is ever-changing, but the land remains constant. Your work will be rewarded.
+:<pre>{
+	"$type": "RPG.GameCore.AddFinishMissionData_SelectConsumeItem",
+	"SubmissionID": 434014907,
+	"OnlyPerformance": false,
+	"ItemIDList": [
+		180005,
+		181012
+	],
+	"ItemHiddenIDList": [],
+	"ItemInvisibleIDList": [],
+	"ItemSelect": [
+		{
+			"Item1": 181012,
+			"TriggerCustomString": "MissionOn_434014907"
+		},
+		{
+			"Item1": 180005,
+			"TriggerCustomString": "MissionNo_434014907"
+		}
+	],
+	"SlotNum": 1,
+	"SimpleTalk": {
+		"TalkSentenceID": 434049607
+	},
+	"OnSubmitFail": [
+		{
+			"$type": "RPG.GameCore.EndPerformance"
+		}
+	],
+	"OnSubmitCancel": [
+		{
+			"$type": "RPG.GameCore.EndPerformance"
+		}
+	]
+}</pre>
+;(Unused &mdash; MissionOn_434014907)
+<pre>{
+	"$type": "RPG.GameCore.SetFloorCustomFloat",
+	"Name": {
+		"Value": "FCV_TheafFlame_07_FlameState"
+	},
+	"Value": {
+		"FixedValue": {
+			"Value": 1
+		}
+	}
+}</pre>
+::'''Living Flame of Georios:''' I can feel the power. *crackle* Well done. Take this sliver of spiritual flame with you. It is yours now.
+
+;(Unused &mdash; MissionNo_434014907)
+:'''Living Flame of Georios:''' This is not the firewood I need! *crackle* The spiritual flame contains everything, but it will take too much effort to melt this.
+;(If {{F|FSV_TheafFlameInteractState_07}} is undefined 1)
+<pre>{
+	"$type": "RPG.GameCore.AdvCreateGroupEntity",
+	"InstanceIDList": [
+		300001,
+		300002,
+		400001
+	]
+}</pre>
+
+;(Talk to Living Flame of Georios)
+;(If {{cx}}<!--during performance 434049022-->)
+::'''Living Flame of Georios:''' *crackle* I am not afraid of heights, but it is windy here, and I am a little dizzy.
+::'''Living Flame of Georios:''' Thank you for saving me. But if you're not too busy, can I have some more firewood? Not a lot of people come through here, and I might really have been extinguished if you didn't find me.
+::{{DIcon|Talk}} Tell me your story.
+:::'''Living Flame of Georios:''' I am a rolling stone, and I go where the wind takes me. *crackle* After leaving {{Rubi|Georios'|Earth Titan}} divine body, I thought my adventure was finally going to start.
+:::'''Living Flame of Georios:''' But there's nothing interesting up here, other than the occasional bug and the clouds in the sky.
+::;(Return to previous option selection)
+::{{DIcon|Arrow}} What do I get from this?
+:::'''Living Flame of Georios:''' *crackle* A good question. I don't have anything, but if you don't mind this little flame, you may have it.
+::<pre>{
+	"$type": "RPG.GameCore.AddFinishMissionData_SelectConsumeItem",
+	"SubmissionID": 434014908,
+	"OnlyPerformance": false,
+	"ItemIDList": [
+		181005,
+		181004
+	],
+	"ItemHiddenIDList": [],
+	"ItemInvisibleIDList": [],
+	"ItemSelect": [
+		{
+			"Item1": 181004,
+			"TriggerCustomString": "MissionOn_434014908"
+		},
+		{
+			"Item1": 181005,
+			"TriggerCustomString": "MissionNo_434014908"
+		}
+	],
+	"SlotNum": 1,
+	"SimpleTalk": {
+		"TalkSentenceID": 434049707
+	},
+	"OnSubmitFail": [
+		{
+			"$type": "RPG.GameCore.EndPerformance"
+		}
+	],
+	"OnSubmitCancel": [
+		{
+			"$type": "RPG.GameCore.EndPerformance"
+		}
+	]
+}</pre>
+;(If {{cx}}<!--not during performance 434049022-->)
+::'''Living Flame of Georios:''' *crackle* A good question. I don't have anything, but if you don't mind this little flame, you may have it.
+:<pre>{
+	"$type": "RPG.GameCore.AddFinishMissionData_SelectConsumeItem",
+	"SubmissionID": 434014908,
+	"OnlyPerformance": false,
+	"ItemIDList": [
+		181005,
+		181004
+	],
+	"ItemHiddenIDList": [],
+	"ItemInvisibleIDList": [],
+	"ItemSelect": [
+		{
+			"Item1": 181004,
+			"TriggerCustomString": "MissionOn_434014908"
+		},
+		{
+			"Item1": 181005,
+			"TriggerCustomString": "MissionNo_434014908"
+		}
+	],
+	"SlotNum": 1,
+	"SimpleTalk": {
+		"TalkSentenceID": 434049707
+	},
+	"OnSubmitFail": [
+		{
+			"$type": "RPG.GameCore.EndPerformance"
+		}
+	],
+	"OnSubmitCancel": [
+		{
+			"$type": "RPG.GameCore.EndPerformance"
+		}
+	]
+}</pre>
+;(Unused &mdash; MissionOn_434014908)
+<pre>{
+	"$type": "RPG.GameCore.SetFloorCustomFloat",
+	"Name": {
+		"Value": "FCV_TheafFlame_08_FlameState"
+	},
+	"Value": {
+		"FixedValue": {
+			"Value": 1
+		}
+	}
+}</pre>
+::'''Living Flame of Georios:''' Not bad, I can't really complain about anything since I'm out here. *crackle* This is what we agreed on, take it!
+
+;(Unused &mdash; MissionNo_434014908)
+:'''Living Flame of Georios:''' It's cold... *crackle* Please take that away from me. Hu...ff... I'm freezing.
+;(If {{F|FSV_TheafFlameInteractState_08}} is undefined 1)
+<pre>{
+	"$type": "RPG.GameCore.AdvCreateGroupEntity",
+	"InstanceIDList": [
+		300001,
+		300002,
+		400001
+	]
+}</pre>
 {{Dialogue End}}
 
 ==Other Languages==

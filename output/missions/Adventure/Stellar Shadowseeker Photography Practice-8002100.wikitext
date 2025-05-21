@@ -41,31 +41,57 @@ PageTitle=#Stellar Shadowseeker: Photography Practice#
 ===Go to the Astral Express and talk with March 7th{{subst:void|<!--800210003-->}}===
 {{Mission Description|type=adventure|location=Passenger Cabin|March 7th seems like she needs help. Go ask what happened.}}
 {{Dialogue Start}}
-:{{tx}}
+
 {{Dialogue End}}
 
 ===Give the photos to March 7th{{subst:void|<!--800210004-->}}===
 {{Mission Description|type=adventure|location=Passenger Cabin|update|The photos are all done. Show them to March 7th.}}
 {{Dialogue Start}}
-:{{tx}}
+
 {{Dialogue End}}
 
 ===Go to the Astral Express and talk with March 7th{{subst:void|<!--800210002-->}}===
 {{Mission Description|type=adventure|location=Passenger Cabin|update|March 7th seems like she needs help. Go ask what happened.}}
 {{Dialogue Start}}
-:{{tx}}
+
 {{Dialogue End}}
 
 ===Go to the Parlor Car and take a photo of the subject{{subst:void|<!--800210006-->}}===
 {{Mission Description|type=adventure|location=Parlor Car|update|The shadowy object in the photo looks somewhat familiar. It must be something aboard the Express...}}
 {{Dialogue Start}}
-:{{tx}}
+<pre>{
+	"$type": "RPG.GameCore.ShowTutorialUI",
+	"ForceShowDialog": true
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.WaitUINodeOpen",
+	"NodeID": "MazeMainPage.MazeEventBtn",
+	"SkipCheck": true
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.ShowGuideText",
+	"ID": 1,
+	"GuideResID": 5,
+	"Show": true,
+	"Text": "TutorialTextmap_503801",
+	"PCGuide": {}
+}</pre>
+:<!--3-second delay-->
+<pre>{
+	"$type": "RPG.GameCore.ShowGuideText",
+	"ID": 1,
+	"GuideResID": 5,
+	"Text": "TutorialTextmap_503802",
+	"PCGuide": {}
+}</pre>
+
+:'''(Trailblazer):''' (The shadow in the photo should be something commonly seen on the Express...)
 {{Dialogue End}}
 
 ===Give the photos to March 7th{{subst:void|<!--800210005-->}}===
 {{Mission Description|type=adventure|location=Passenger Cabin|update|The photos are all done. Show them to March 7th.}}
 {{Dialogue Start}}
-:{{tx}}
+
 {{Dialogue End}}
 
 ==Other Languages==

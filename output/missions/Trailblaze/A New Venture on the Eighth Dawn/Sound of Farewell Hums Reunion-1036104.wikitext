@@ -44,46 +44,116 @@ PageTitle=#Sound of Farewell Hums Reunion#
 ===Express your wishes to Welt{{subst:void|<!--103610401-->}}===
 {{Mission Description|type=trailblaze|location=Dream's Edge|This journey of reflection has finally led to this moment. Looking at the silhouette up ahead, no one can imagine what he is thinking.}}
 {{Dialogue Start}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
 :{{tx}}
 {{Dialogue End}}
 
 ===Meet with Robin{{subst:void|<!--103610402-->}}===
 {{Mission Description|type=trailblaze|location=Dream's Edge|update|Farewells are truly a miraculous thing... No matter how much you've experienced it in your life, it's not something you ever get used to. But that is okay. Without farewells, we would never have reunions to look forward to.<br />Say farewell to your little sister. Take your time... A long and valuable... farewell.}}
 {{Dialogue Start}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
 :{{tx}}
+:{{tx}}
+
+;(Talk to Welt Yang)
+:{{A|VO chapter3 45 welt 104.ogg}} '''Welt:''' I don't think you need a bystander in this scenario. Go on ahead.
 {{Dialogue End}}
 
 ===Help Robin find the jigsaw piece{{subst:void|<!--103610403-->}}===
 {{Dialogue Start}}
+:{{A|VO chapter3 45 sunday 133.ogg}} '''Sunday:''' I'm still inexperienced, so let's just hope we get lucky.
+:{{A|VO chapter3 45 robin 127.ogg}} '''Robin:''' Thank you anyway. I expect the first jigsaw piece will be a part of the starry sky.
+:{{A|VO chapter3 45 robin 128.ogg}} '''Robin:''' As for the other piece, I hope it will symbolize wings.
+
+:{{DIcon|Loupe}} Investigate
 :{{tx}}
+<pre>{
+	"$type": "RPG.GameCore.WaitEntityServerEvent"
+}</pre>
+;(If {{cx}}{{subst:void|<!--{"$type":"RPG.GameCore.ByComparePropState","TargetType":{"$type":"RPG.GameCore.GroupFetchLocalTarget","TargetType":"Prop","Targets":[300002]}}-->}} and {{cx}}{{subst:void|<!--{"$type":"RPG.GameCore.ByComparePropState","TargetType":{"$type":"RPG.GameCore.GroupFetchLocalTarget","TargetType":"Prop","Targets":[300003]}}-->}})
+<pre>{
+	"$type": "RPG.GameCore.ChangePropState"
+}</pre>
+
+;(Talk to Wonweek)
+:{{A|VO chapter3 45 oneweek 103.ogg}} '''Wonweek:''' Oh, Miss Robin! I'm a big fan!
+:{{A|VO chapter3 45 oneweek 104.ogg}} '''Wonweek:''' I don't get to attend every single one of your concerts, but I watch the recordings of each of them at least once. I love all of your songs! Gosh, I wish I could tell the whole world about this!
+:{{A|VO chapter3 45 robin 131.ogg}} '''Robin:''' Thank you for your support. I'll keep doing my best.
+:{{A|VO chapter3 45 sunday 136.ogg}} '''Sunday:''' ...
 {{Dialogue End}}
 
 ===Complete the Dream Jigsaw with Robin{{subst:void|<!--103610405-->}}===
 {{Dialogue Start}}
-:{{tx}}
+:{{A|VO chapter3 45 robin 134.ogg}} '''Robin:''' We have enough. Let's go back.
 {{Dialogue End}}
 
 ===Bid farewell to Robin{{subst:void|<!--103610408-->}}===
 {{Dialogue Start}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
 :{{tx}}
+----
+:{{tx}}
+----
+:{{tx}}
+:{{tx}}
+<pre>{
+	"$type": "RPG.GameCore.PerformanceEndSeq",
+	"BeforeCases": [
+		{
+			"$type": "RPG.GameCore.SwitchCharacterAnchorV2",
+			"SwitchCharacterAnchorConfig": {
+				"IsLocalPlayer": true,
+				"CharacterUniqueName": "LocalPlayer",
+				"AreaName": {
+					"Value": "LevelArea_P20313_F20313001_G267"
+				},
+				"AnchorName": {
+					"Value": "Anchor1"
+				}
+			}
+		}
+	]
+}</pre>
 {{Dialogue End}}
 
 ===Head to Penacony Grand Theater{{subst:void|<!--103610410-->}}===
 {{Mission Description|type=trailblaze|location=Dream's Edge|update|Only when one has fallen to the ground can they learn how to fly. If one wants to take a curtain call, they must stand on the stage once more.<br />Go to Penacony Grand Theater and complete the final step of this farewell.}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Wonweek)
+<pre>{
+	"$type": "RPG.GameCore.OpenTreasureChallenge",
+	"RaidID": 40302,
+	"OnCancel": [
+		{
+			"$type": "RPG.GameCore.EndDialogueEntityInteract"
+		}
+	],
+	"OnEnter": []
+}</pre>
 {{Dialogue End}}
 
 ===Help Robin find the jigsaw piece{{subst:void|<!--103610404-->}}===
 {{Mission Description|type=trailblaze|location=Dream's Edge|update|Farewells are truly a miraculous thing... No matter how much you've experienced it in your life, it's not something you ever get used to. But that is okay. Without farewells, we would never have reunions to look forward to.<br />Say farewell to your little sister. Take your time... A long and valuable... farewell.}}
 {{Dialogue Start}}
+
+:{{DIcon|Loupe}} Investigate
 :{{tx}}
+
+:{{DIcon|Loupe}} Investigate
+
+:{{DIcon|Loupe}} Investigate
 {{Dialogue End}}
 
 ===Head to Penacony Grand Theater{{subst:void|<!--103610411-->}}===
 {{Mission Description|type=trailblaze|location=Dream's Edge|update|Only when one has fallen to the ground can they learn how to fly. If one wants to take a curtain call, they must stand on the stage once more.<br />Go to Penacony Grand Theater and complete the final step of this farewell.}}
 {{Dialogue Start}}
-:{{tx}}
 {{Dialogue End}}
 
 ==Other Languages==

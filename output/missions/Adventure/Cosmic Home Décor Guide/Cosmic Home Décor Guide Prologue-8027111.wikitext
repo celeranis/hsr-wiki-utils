@@ -15,10 +15,10 @@ Mission Cosmic Home Décor Guide Prologue Caelus.png|Caelus
 |chapter       = Cosmic Home Décor Guide
 |requirements  = Reach [[Trailblaze Level]] 21
 |summary       = Even a lone sail on the open sea longs for a safe harbor.<br />Each Nameless deserves their own room, but with limited space on the Express, you'll have to make do with a spare storage room.<br />Here on this blank canvas, you can freely express your vision of "home."
-|characters    = "Shush"; Astral Express Crew; Dan Heng; Himeko; March 7th; Pom-Pom; Trailblazer; Welt
-|startLocation = [[Astral Express]] - [[Parlor Car]]
+|characters    = Trailblazer
+|startLocation = [[Astral Express]] - [[Party Car]]
 |world         = Astral Express
-|area          = Parlor Car
+|area          = Party Car
 |prev          = 
 |next          = Cosmic Home Décor Guide: Introduction
 |rewards       = Credit*5,000
@@ -26,14 +26,13 @@ Mission Cosmic Home Décor Guide Prologue Caelus.png|Caelus
 '''''Cosmic Home Décor Guide: Prologue''''' is an Event [[Adventure Mission]] from the [[Cosmic Home Décor Guide]] event.
 
 ==Steps==
+# Go upstairs and look at your room
+# Set up a bed for yourself
+# Place March 7th's pillow on the bed
 # Go to the Parlor Car
 # Head to the Party Car
 # Head to the room upstairs
 # Take an oath to be a Nameless
-# Head to the Party Car
-# Go upstairs and look at your room
-# Set up a bed for yourself
-# Place March 7th's pillow on the bed
 # Sleepy time!
 
 <!--
@@ -45,57 +44,66 @@ Mission Cosmic Home Décor Guide Prologue Caelus.png|Caelus
 -->
 ==Dialogue==
 {{Stub Dialogue}}
-===Go to the Parlor Car{{subst:void|<!--802711101-->}}===
-{{Mission Description|type=adventure|location=Parlor Car|Another day of peace and quiet aboard the Astral Express. You are bored on the Express and are preparing to find something to do.}}
-{{Dialogue Start}}
-:{{tx}}
-{{Dialogue End}}
-
-===Head to the Party Car{{subst:void|<!--802711102-->}}===
-{{Mission Description|type=adventure|location=Party Car|update|It's been so long since you explored the Party Car. It's rare to have free time like today, so let's go take a look.<br />What? You say you don't remember a car like this on the Express? Ahahah... You must have misremembered it!}}
-{{Dialogue Start}}
-:{{tx}}
-{{Dialogue End}}
-
-===Head to the room upstairs{{subst:void|<!--802711103-->}}===
-{{Mission Description|type=adventure|location=Party Car|update|Shush said that Pom-Pom and March 7th went to the room upstairs to find you. Strange... why did they decide that was the place to go looking for you?}}
-{{Dialogue Start}}
-:{{tx}}
-{{Dialogue End}}
-
-===Take an oath to be a Nameless{{subst:void|<!--802711105-->}}===
-{{Mission Description|type=adventure|location=Parlor Car|update|Dear Nameless,<br /><br />Thank you for boarding the Astral Express and setting off on this journey among the stars and across the cosmic ocean with us. The Cosmos used to be silent and stagnant until your presence helped us illuminate the stars and cause beautiful things to occur.<br /><br />In this time and space, please look up at the starry sky and see those faint, flickering lights in the deep darkness. We are born on the ground, yet we know deep down that the vast and endless starry sky is our true home.<br /><br />May this journey lead us starward.<br /><br /><div align="right">Yours Faithfully, Shush</div>}}
-{{Dialogue Start}}
-:{{tx}}
-{{Dialogue End}}
-
-===Head to the Party Car{{subst:void|<!--802711106-->}}===
-{{Mission Description|type=adventure|location=Party Car|update|So much time has passed before we knew it... Thinking back, it's really quite nostalgic.<br />What? You say you don't even remember experiencing this part of the story when you first boarded? Haha... You sure have a way of forgetting important things!}}
-{{Dialogue Start}}
-:{{tx}}
-{{Dialogue End}}
-
 ===Go upstairs and look at your room{{subst:void|<!--802711107-->}}===
+{{Mission Description|type=adventure|location=Party Car|So much time has passed before we knew it... Thinking back, it's really quite nostalgic.<br />What? You say you don't even remember experiencing this part of the story when you first boarded? Haha... You sure have a way of forgetting important things!}}
 {{Dialogue Start}}
-:{{tx}}
+;(Upon reaching the destination)
 {{Dialogue End}}
 
 ===Set up a bed for yourself{{subst:void|<!--802711108-->}}===
 {{Mission Description|type=adventure|location=Party Car|update|One need not a bed for sleeping, but a bed would make it better. Even if you don't sleep in it, you can use it as a stage for pillow fights.}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Pom-Pom)
+----
+
+;(Unused &mdash; OpenUI)
+<pre>{
+	"$type": "RPG.GameCore.OpenTrainPartyBuildUI",
+	"OpenTaskPage": true,
+	"AreaID": 12
+}</pre>
 {{Dialogue End}}
 
 ===Place March 7th's pillow on the bed{{subst:void|<!--802711110-->}}===
 {{Mission Description|type=adventure|location=Party Car|update|The saying "If you want to sleep, just find a pillow" has been so vividly brought to life! March 7th, you're so gentle.}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Pom-Pom)
+----
+
+;(Unused &mdash; OpenUI)
+<pre>{
+	"$type": "RPG.GameCore.OpenTrainPartyBuildUI",
+	"OpenTaskPage": true,
+	"AreaID": 12
+}</pre>
+{{Dialogue End}}
+
+===Go to the Parlor Car{{subst:void|<!--802711101-->}}===
+{{Mission Description|type=adventure|location=Parlor Car|update|Another day of peace and quiet aboard the Astral Express. You are bored on the Express and are preparing to find something to do.}}
+{{Dialogue Start}}
+{{Dialogue End}}
+
+===Head to the Party Car{{subst:void|<!--802711106-->}}===
+{{Mission Description|type=adventure|location=Party Car|update|So much time has passed before we knew it... Thinking back, it's really quite nostalgic.<br />What? You say you don't even remember experiencing this part of the story when you first boarded? Haha... You sure have a way of forgetting important things!}}
+{{Dialogue Start}}
+{{Mission Description|type=adventure|location=Party Car|update|It's been so long since you explored the Party Car. It's rare to have free time like today, so let's go take a look.<br />What? You say you don't remember a car like this on the Express? Ahahah... You must have misremembered it!}}
+{{Dialogue End}}
+
+===Head to the room upstairs{{subst:void|<!--802711103-->}}===
+{{Mission Description|type=adventure|location=Party Car|update|Shush said that Pom-Pom and March 7th went to the room upstairs to find you. Strange... why did they decide that was the place to go looking for you?}}
+{{Dialogue Start}}
+{{Dialogue End}}
+
+===Take an oath to be a Nameless{{subst:void|<!--802711105-->}}===
+{{Mission Description|type=adventure|location=Parlor Car|update|Dear Nameless,<br /><br />Thank you for boarding the Astral Express and setting off on this journey among the stars and across the cosmic ocean with us. The Cosmos used to be silent and stagnant until your presence helped us illuminate the stars and cause beautiful things to occur.<br /><br />In this time and space, please look up at the starry sky and see those faint, flickering lights in the deep darkness. We are born on the ground, yet we know deep down that the vast and endless starry sky is our true home.<br /><br />May this journey lead us starward.<br /><br /><div align="right">Yours Faithfully, Shush</div>}}
+{{Dialogue Start}}
 {{Dialogue End}}
 
 ===Sleepy time!{{subst:void|<!--802711112-->}}===
 {{Mission Description|type=adventure|location=Party Car|update|So tired. Can't be bothered to write a description. Night night!}}
 {{Dialogue Start}}
-:{{tx}}
 {{Dialogue End}}
 
 ==Other Languages==

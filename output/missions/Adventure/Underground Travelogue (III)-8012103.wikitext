@@ -36,7 +36,34 @@ PageTitle=#Underground Travelogue (Part 3)#
 ===Clear ruin 3 in Underground Treasure Hunt{{subst:void|<!--801210301-->}}===
 {{Mission Description|type=adventure|location=Great Mine|Aksay has excavated a new ancient ruin. Continue your treasure hunting journey!}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Aksay)
+:'''Aksay:''' Ah, it's you again. Ready to go treasure hunting down in the ancient ruins?
+<pre>{
+	"$type": "RPG.GameCore.ShowMenu"
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.WaitUIControllerClose",
+	"UIControllerName": "TreasureDungeonResultDialog"
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.ClosePage",
+	"PageNames": [
+		"TreasureDungeonEntrancePage"
+	],
+	"PageRootNames": []
+}</pre>
+:<!--0.5-second delay-->
+----
+:'''Aksay:''' It's getting more and more dangerous the deeper we go... Lucky you're here, otherwise these relics would end up being our graves...
+:'''Aksay:''' As predicted, we're seeing more valuable relics the deeper we go. Now's no time to give up. Let's drill on down to the depths!
+----
+
+;(Talk to Aksay)
+:'''Aksay:''' Ah, it's you again. Ready to go treasure hunting down in the ancient ruins?
+<pre>{
+	"$type": "RPG.GameCore.ShowMenu"
+}</pre>
 {{Dialogue End}}
 
 ==Other Languages==

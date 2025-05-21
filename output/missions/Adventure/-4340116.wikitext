@@ -34,6 +34,365 @@ PageTitle=##
 ==Dialogue==
 {{Stub Dialogue}}
 
+;(Unused &mdash; TriggerMissionAct_4340116)
+::'''City Vagrant:''' Hey, gray hair {{MC|f=chick|m=brat}}, stop right there!
+:::Before you have a chance to react, a group of people jump out from around the corner and surround you.
+:::'''City Vagrant:''' We'd pluck the Torment Eagles bald if they cross here, and skin the Redfeather Wolves if they dare to pass... We are the Dreamflux Gang!
+:::'''City Vagrant:''' You're on our turf. To stay or go ain't your call no more... You gotta pay the toll. Hand over 2,000 Alfalfa credits.
+:::{{DIcon|Arrow}} Do you have that ownership in writing?
+::::'''City Vagrant:''' Of course. The graffiti on these walls is our property deed.
+::::Can I buy a monthly subscription?
+:::{{DIcon|Arrow}} Can I buy a monthly subscription?
+:::'''City Vagrant:''' Huh? You think this is some kinda amusement park run by the Alfalfa? This is a robbery, {{MC|f=girl|m=boy}}!
+:::'''City Vagrant:''' Remember, Dreamflux Reef is the Primordial Dreamscape... If ya get into trouble here, don't think ya'll be gettin' out without a scratch like in a dream.
+:::{{tx}}
+:::{{DIcon|Arrow}} Spare my life, sir! Here is your money!
+:::<pre>{
+	"$type": "RPG.GameCore.AddFinishMissionData_ConsumeItem",
+	"SubmissionID": 434011602,
+	"SimpleTalk": {},
+	"OnSubmitConfirm": [
+		{
+			"$type": "RPG.GameCore.SetMissionCustomValue",
+			"SubmissionID": 434011601,
+			"MissionCustomValue": {
+				"Name": "OldValue_0",
+				"ValidValueParamList": [
+					1,
+					2,
+					3
+				]
+			},
+			"CustomValue": 1
+		},
+		{
+			"$type": "RPG.GameCore.PlayTimeline",
+			"TimelineName": "Story/Discussion/Mission/4340116/DS43401160105.playable",
+			"Type": "Discussion"
+		},
+		{
+			"$type": "RPG.GameCore.TriggerCustomString",
+			"CustomString": {
+				"Value": "ALL_TALK_END"
+			}
+		}
+	],
+	"OnSubmitCancel": [
+		{
+			"$type": "RPG.GameCore.TriggerCustomString",
+			"CustomString": {
+				"Value": "PlayerChoice_434011601"
+			}
+		}
+	]
+}</pre>
+:::{{DIcon|Arrow}} I can fight back? Why didn't you say so earlier?
+:::<pre>{
+	"$type": "RPG.GameCore.SetMissionCustomValue",
+	"SubmissionID": 434011601,
+	"MissionCustomValue": {
+		"Name": "OldValue_0",
+		"ValidValueParamList": [
+			1,
+			2,
+			3
+		]
+	},
+	"CustomValue": 2
+}</pre>
+::::{{tx}}
+:::<pre>{
+	"$type": "RPG.GameCore.OverridePerformanceEndCrack",
+	"EndWithCrack": true
+}</pre>
+:::{{DIcon|Arrow}} I came to join this family!
+:::<pre>{
+	"$type": "RPG.GameCore.SetMissionCustomValue",
+	"SubmissionID": 434011601,
+	"MissionCustomValue": {
+		"Name": "OldValue_0",
+		"ValidValueParamList": [
+			1,
+			2,
+			3
+		]
+	},
+	"CustomValue": 3
+}</pre>
+::::{{tx}}
+:;(Return to previous option selection)
+:'''City Vagrant:''' Stop, stop! Beat us any harder n' we'll be beaten awake!
+:'''City Vagrant:''' O hero, this beatin' ya gave us has made me realize why the Dreamflux Gang's business ain't able to get bigger n' stronger... It's 'cos we're missin' a powerful n' intelligent backer like you!
+:'''City Vagrant:''' I'd like to sincerely invite ya to join us n' help the Dreamflux Gang's business reach the next level.
+:{{DIcon|Arrow}} I'm very busy.
+::'''City Vagrant:''' It won't take up much of ya time! All ya gotta do is say ya associate with us n' give us some street cred!
+:{{DIcon|Arrow}} Not bad.
+::'''City Vagrant:''' Right? Plus we ain't robbin' people every day. Sometimes we play cards or Aetherium Wars together or just watch Clockie n' stuff...
+:{{DIcon|Arrow}} If you can't beat them, recruit them?
+::'''City Vagrant:''' No, no, it's not that! We are simply just bowled over by ya strength n' charm!
+:'''City Vagrant:''' Although, if ya wanna join the gang, ya still gotta learn our secret signal. This rule can't be skipped, even if ya were invited.
+
+;(Talk to City Vagrant)
+<pre>{
+	"$type": "RPG.GameCore.PerformanceExtendEndBlack",
+	"ExtendTime": 1
+}</pre>
+:'''City Vagrant:''' Hey, gray hair {{MC|f=chick|m=brat}}, stop right there!
+:Before you have a chance to react, a group of people jump out from around the corner and surround you.
+:'''City Vagrant:''' We'd pluck the Torment Eagles bald if they cross here, and skin the Redfeather Wolves if they dare to pass... We are the Dreamflux Gang!
+:'''City Vagrant:''' You're on our turf. To stay or go ain't your call no more... You gotta pay the toll. Hand over 2,000 Alfalfa credits.
+:Do you have that ownership in writing?
+:'''City Vagrant:''' Of course. The graffiti on these walls is our property deed.
+:Can I buy a monthly subscription?
+:'''City Vagrant:''' Huh? You think this is some kinda amusement park run by the Alfalfa? This is a robbery, {{MC|f=girl|m=boy}}!
+:'''City Vagrant:''' Remember, Dreamflux Reef is the Primordial Dreamscape... If ya get into trouble here, don't think ya'll be gettin' out without a scratch like in a dream.
+:'''City Vagrant:''' I know you intrudin' travelers. Two thousand ain't nothin' to you! A little bit of petty change for safety ain't a bad deal if you ask me.
+:'''City Vagrant:''' Or you could fight back. But, if you do... then ya won't have money or a life!
+:Spare my life, sir! Here is your money!
+:'''City Vagrant:''' A wise decision... If Alfalfa credits ain't no good for ya, we can take IPC credit payments, too.
+:'''City Vagrant:''' We look forward to your next visit, smart {{MC|f=girl|m=boy}}.
+:I can fight back? Why didn't you say so earlier?
+:'''City Vagrant:''' You've been watchin' too many dream bubble movies! Ya really think one person can beat the Dreamflux Gang?
+:'''City Vagrant:''' Get' em you guys! Looks like we need to teach {{MC|f=her|m=him}} how things work 'round here!
+:I came to join this family!
+:'''City Vagrant:''' You're a homeless vagrant, too? Uhh... The gang's rules say we gotta give you a chance.
+:'''City Vagrant:''' If ya wanna join the Dreamflux Gang, ya have to learn our secret signal... Our assessments are super strict y'know, don't go runnin' off now!
+:'''City Vagrant:''' We look forward to your next visit, smart {{MC|f=girl|m=boy}}.
+:'''City Vagrant:''' This is a robbery... Fixed price, 3,000 Alfalfa credits, no barterin'.
+:Wait, even robbers trick their friends?
+:'''City Vagrant:''' We uphold the principle of fair robbery and never give any passerby special treatment.
+:I paid the last time.
+:'''City Vagrant:''' That was before, this is now. If ya booked a room at The Reverie yesterday, ya think ya can stay there again today?
+:How come the price has gone up?
+:'''City Vagrant:''' After the last robbery, we learned from the experience of our peers n' increased our quota by a set value.
+:'''City Vagrant:''' We know each other by now, I ain't gonna keep explainin'. Pay the money n' scram n' we can all relax.
+:Alright, 3,000. If I've got anything, it's money!
+:'''City Vagrant:''' Return customers are the best. Are you okay with a credit payment this time?
+:'''City Vagrant:''' Thank you for your custom.
+:Enough is enough. Bring it on!
+:'''City Vagrant:''' You've been watchin' too many dream bubble movies! Ya really think ya can beat us alone?
+:'''City Vagrant:''' Get' em you guys! Looks like we need to teach {{MC|f=her|m=him}} how things work 'round here!
+:I came to join this family!
+:'''City Vagrant:''' Oh? So you're a homeless vagrant, too? Then... we'll give ya a chance.
+:'''City Vagrant:''' If you wanna join the Dreamflux Gang, ya have to learn our secret signal... Our assessments are super strict y'know, don't go runnin' off now!
+:'''City Vagrant:''' Thank you for your custom.
+:'''City Vagrant:''' This is a robbery... Fixed price, 10,000 Alfalfa credits, no barterin'.
+:Enough is enough. Bring it on!
+:'''City Vagrant:''' You've been watchin' too many dream bubble movies! Ya really think ya can beat us alone?
+:'''City Vagrant:''' Get' em you guys! Looks like we need to teach {{MC|f=her|m=him}} how things work 'round here!
+:'''City Vagrant:''' Stop, stop! Beat us any harder n' we'll be beaten awake!
+:'''City Vagrant:''' O hero, this beatin' ya gave us has made me realize why the Dreamflux Gang's business ain't able to get bigger n' stronger... It's 'cos we're missin' a powerful n' intelligent backer like you!
+:'''City Vagrant:''' I'd like to sincerely invite ya to join us n' help the Dreamflux Gang's business reach the next level.
+:I'm very busy.
+:'''City Vagrant:''' It won't take up much of ya time! All ya gotta do is say ya associate with us n' give us some street cred!
+:Not bad.
+:'''City Vagrant:''' Right? Plus we ain't robbin' people every day. Sometimes we play cards or Aetherium Wars together or just watch Clockie n' stuff...
+:If you can't beat them, recruit them?
+:'''City Vagrant:''' No, no, it's not that! We are simply just bowled over by ya strength n' charm!
+:'''City Vagrant:''' Although, if ya wanna join the gang, ya still gotta learn our secret signal. This rule can't be skipped, even if ya were invited.
+:'''City Vagrant:''' I'll demonstrate it for ya. It's real hard, so make sure ya memorize it.
+:'''City Vagrant:''' Cross yer arms.
+:'''City Vagrant:''' Spread 'em out.
+:'''City Vagrant:''' Put your hands on your hips.
+:{{DIcon|Arrow}} That's it?
+::'''City Vagrant:''' Heh, pretty unique, right? Took me half a day to come up with that!
+::Did you make it easy on purpose?
+::'''City Vagrant:''' Ughh... Ya must be mistaken. Our test is real hard.
+::Is this gang also a kindergarten?
+:{{DIcon|Arrow}} Did you make it easy on purpose?
+::'''City Vagrant:''' Ughh... Ya must be mistaken. Our test is real hard.
+::Is this gang also a kindergarten?
+:{{DIcon|Arrow}} Is this gang also a kindergarten?
+:'''City Vagrant:''' Well, I did use to be a teacher here... Hey, come back when ya manage to learn it.
+:'''City Vagrant:''' Take a moment to memorize, then we'll start when you're ready.
+:{{tx}}
+
+;(Talk to City Vagrant)
+:{{tx}}
+::{{DIcon}} Put your hands on your hips.
+:::'''City Vagrant:''' Ya need brains for our line of work too, ya know. Ya wanna have another think 'bout the order?
+:::{{tx}}
+::;(Return to previous option selection)
+::{{DIcon}} Do nothing.
+:::'''City Vagrant:''' That face ya got might give us street cred, but now it's time to do the secret signal!
+:::{{tx}}
+::;(Return to previous option selection)
+::{{DIcon}} Cross your arms over your chest.
+:::'''City Vagrant:''' Yeah, not bad! It really conveys our rage toward The Family!
+:::{{tx}}
+:::{{tx}}
+:::{{DIcon}} Put your hands on your hips.
+::::'''City Vagrant:''' That's the one after. What're ya rushin' for?
+::::{{tx}}
+:::;(Return to previous option selection)
+:::{{DIcon}} Play with your phone.
+::::'''City Vagrant:''' Students should know there ain't no playin' with phones durin' an exam!
+::::{{tx}}
+:::;(Return to previous option selection)
+:::{{DIcon}} Spread 'em out.
+::::'''City Vagrant:''' Real nice. That short, simple gesture expresses our helplessness at the current state of Dreamflux Reef...
+::::{{tx}}
+::::{{tx}}
+::::{{DIcon}} Sleep.
+:::::'''City Vagrant:''' Aren't we in a dream? How're ya gonna sleep?
+:::::{{tx}}
+::::;(Return to previous option selection)
+::::{{DIcon}} Stay quiet and act cool.
+:::::'''City Vagrant:''' Is this really the time to try to be cool?
+:::::{{tx}}
+::::;(Return to previous option selection)
+::::{{DIcon}} Put your hands on your hips.
+:::::'''City Vagrant:''' Hands on hips expresses our confidence while also encouraging ourselves &mdash; regardless of what tomorrow brings, we'll meet it head-on.
+:::::{{tx}}
+:'''City Vagrant:''' I'm not sure if I should say congratulations, but yer now a member of the Dreamflux Gang. If ya need anythin', come find us. We gang members gotta help each other out!
+
+;(Talk to City Vagrant)
+:'''City Vagrant:''' Hey, gray hair {{MC|f=chick|m=brat}}, stop right there!
+::Before you have a chance to react, a group of people jump out from around the corner and surround you.
+::'''City Vagrant:''' We'd pluck the Torment Eagles bald if they cross here, and skin the Redfeather Wolves if they dare to pass... We are the Dreamflux Gang!
+::'''City Vagrant:''' You're on our turf. To stay or go ain't your call no more... You gotta pay the toll. Hand over 2,000 Alfalfa credits.
+::Do you have that ownership in writing?
+::'''City Vagrant:''' Of course. The graffiti on these walls is our property deed.
+::Can I buy a monthly subscription?
+::'''City Vagrant:''' Huh? You think this is some kinda amusement park run by the Alfalfa? This is a robbery, {{MC|f=girl|m=boy}}!
+::'''City Vagrant:''' Remember, Dreamflux Reef is the Primordial Dreamscape... If ya get into trouble here, don't think ya'll be gettin' out without a scratch like in a dream.
+::'''City Vagrant:''' I know you intrudin' travelers. Two thousand ain't nothin' to you! A little bit of petty change for safety ain't a bad deal if you ask me.
+::'''City Vagrant:''' Or you could fight back. But, if you do... then ya won't have money or a life!
+::Spare my life, sir! Here is your money!
+::'''City Vagrant:''' A wise decision... If Alfalfa credits ain't no good for ya, we can take IPC credit payments, too.
+::'''City Vagrant:''' We look forward to your next visit, smart {{MC|f=girl|m=boy}}.
+::I can fight back? Why didn't you say so earlier?
+::'''City Vagrant:''' You've been watchin' too many dream bubble movies! Ya really think one person can beat the Dreamflux Gang?
+::'''City Vagrant:''' Get' em you guys! Looks like we need to teach {{MC|f=her|m=him}} how things work 'round here!
+::I came to join this family!
+::'''City Vagrant:''' You're a homeless vagrant, too? Uhh... The gang's rules say we gotta give you a chance.
+::'''City Vagrant:''' If ya wanna join the Dreamflux Gang, ya have to learn our secret signal... Our assessments are super strict y'know, don't go runnin' off now!
+::'''City Vagrant:''' We look forward to your next visit, smart {{MC|f=girl|m=boy}}.
+::'''City Vagrant:''' This is a robbery... Fixed price, 3,000 Alfalfa credits, no barterin'.
+::Wait, even robbers trick their friends?
+::'''City Vagrant:''' We uphold the principle of fair robbery and never give any passerby special treatment.
+::I paid the last time.
+::'''City Vagrant:''' That was before, this is now. If ya booked a room at The Reverie yesterday, ya think ya can stay there again today?
+::How come the price has gone up?
+::'''City Vagrant:''' After the last robbery, we learned from the experience of our peers n' increased our quota by a set value.
+::'''City Vagrant:''' We know each other by now, I ain't gonna keep explainin'. Pay the money n' scram n' we can all relax.
+::Alright, 3,000. If I've got anything, it's money!
+::'''City Vagrant:''' Return customers are the best. Are you okay with a credit payment this time?
+::'''City Vagrant:''' Thank you for your custom.
+::Enough is enough. Bring it on!
+::'''City Vagrant:''' You've been watchin' too many dream bubble movies! Ya really think ya can beat us alone?
+::'''City Vagrant:''' Get' em you guys! Looks like we need to teach {{MC|f=her|m=him}} how things work 'round here!
+::I came to join this family!
+::'''City Vagrant:''' Oh? So you're a homeless vagrant, too? Then... we'll give ya a chance.
+::'''City Vagrant:''' If you wanna join the Dreamflux Gang, ya have to learn our secret signal... Our assessments are super strict y'know, don't go runnin' off now!
+::'''City Vagrant:''' Thank you for your custom.
+::'''City Vagrant:''' This is a robbery... Fixed price, 10,000 Alfalfa credits, no barterin'.
+::Enough is enough. Bring it on!
+::'''City Vagrant:''' You've been watchin' too many dream bubble movies! Ya really think ya can beat us alone?
+::'''City Vagrant:''' Get' em you guys! Looks like we need to teach {{MC|f=her|m=him}} how things work 'round here!
+::'''City Vagrant:''' Stop, stop! Beat us any harder n' we'll be beaten awake!
+::'''City Vagrant:''' O hero, this beatin' ya gave us has made me realize why the Dreamflux Gang's business ain't able to get bigger n' stronger... It's 'cos we're missin' a powerful n' intelligent backer like you!
+::'''City Vagrant:''' I'd like to sincerely invite ya to join us n' help the Dreamflux Gang's business reach the next level.
+::I'm very busy.
+::'''City Vagrant:''' It won't take up much of ya time! All ya gotta do is say ya associate with us n' give us some street cred!
+::Not bad.
+::'''City Vagrant:''' Right? Plus we ain't robbin' people every day. Sometimes we play cards or Aetherium Wars together or just watch Clockie n' stuff...
+::If you can't beat them, recruit them?
+::'''City Vagrant:''' No, no, it's not that! We are simply just bowled over by ya strength n' charm!
+::'''City Vagrant:''' Although, if ya wanna join the gang, ya still gotta learn our secret signal. This rule can't be skipped, even if ya were invited.
+::'''City Vagrant:''' I'll demonstrate it for ya. It's real hard, so make sure ya memorize it.
+::'''City Vagrant:''' Cross yer arms.
+::'''City Vagrant:''' Spread 'em out.
+::'''City Vagrant:''' Put your hands on your hips.
+::That's it?
+::'''City Vagrant:''' Heh, pretty unique, right? Took me half a day to come up with that!
+::Did you make it easy on purpose?
+::'''City Vagrant:''' Ughh... Ya must be mistaken. Our test is real hard.
+::Is this gang also a kindergarten?
+::'''City Vagrant:''' Well, I did use to be a teacher here... Hey, come back when ya manage to learn it.
+::'''City Vagrant:''' Take a moment to memorize, then we'll start when you're ready.
+::'''City Vagrant:''' Cross yer arms, spread 'em out, hands on your hips &mdash; you got that? Let's start the exam now.
+::Put your hands on your hips.
+::'''City Vagrant:''' Ya need brains for our line of work too, ya know. Ya wanna have another think 'bout the order?
+::Do nothing.
+::'''City Vagrant:''' That face ya got might give us street cred, but now it's time to do the secret signal!
+::Cross your arms over your chest.
+::'''City Vagrant:''' Yeah, not bad! It really conveys our rage toward The Family!
+::'''City Vagrant:''' Next move. Ya got this!
+::Put your hands on your hips.
+::'''City Vagrant:''' That's the one after. What're ya rushin' for?
+::Play with your phone.
+::'''City Vagrant:''' Students should know there ain't no playin' with phones durin' an exam!
+::Spread 'em out.
+::'''City Vagrant:''' Real nice. That short, simple gesture expresses our helplessness at the current state of Dreamflux Reef...
+::'''City Vagrant:''' You're the best student I've ever taught! Last one. Ya got this!
+::Sleep.
+::'''City Vagrant:''' Aren't we in a dream? How're ya gonna sleep?
+::Stay quiet and act cool.
+::'''City Vagrant:''' Is this really the time to try to be cool?
+::Put your hands on your hips.
+::'''City Vagrant:''' Hands on hips expresses our confidence while also encouraging ourselves &mdash; regardless of what tomorrow brings, we'll meet it head-on.
+::'''City Vagrant:''' I'm not sure if I should say congratulations, but yer now a member of the Dreamflux Gang. If ya need anythin', come find us. We gang members gotta help each other out!
+::'''City Vagrant:''' I'm not sure if I should say congratulations, but yer now a member of the Dreamflux Gang. If ya need anythin', come find us. We gang members gotta help each other out!
+::'''City Vagrant:''' You here?
+::{{DIcon|Arrow}} Cross arms, arms spread, hands on hips.
+:::'''City Vagrant:''' Looks like you're now real familiar with the secret signal.
+:::Hands on hips, arms spread, cross arms.
+:::'''City Vagrant:''' That ain't right. Ya gotta study a bit more!
+:::Stare silently.
+::{{DIcon|Arrow}} Hands on hips, arms spread, cross arms.
+:::'''City Vagrant:''' That ain't right. Ya gotta study a bit more!
+:::Stare silently.
+::{{DIcon|Arrow}} Stare silently.
+::'''City Vagrant:''' We may be pretty down'n'out, but we still need to have a sense of ceremony, y'know.
+::'''City Vagrant:''' Don't judge us by what we look like now. The Dreamflux Gang used to be the guardians of this street... There were loads of citizens in Dreamflux Reef back then, so we responded to the call of the Watchmaker n' formed a gang on our own to protect the freedom of Dreamflux Reef.
+::'''City Vagrant:''' Our gang was made up of convicts who had been exiled by the dream world. But the Watchmaker accepted us and helped us find jobs to make a living...
+::'''City Vagrant:''' Thanks to him, some people opened bakeries, some became waiters, and I became a self-defense teacher... Hah, but look at me now, I ain't worthy to call myself a teacher no more.
+::'''City Vagrant:''' But the dream's corrosion of Dreamflux Reef got worse by the day... Our short-lived happiness gradually transformed into empty bubbles. Then, the Watchmaker... Well, everyone started leavin' as Dreamflux Reef started to fall apart.
+::'''City Vagrant:''' No customers, no work, no homes... We became a nest of rats relyin' on extortion to survive. Vagrants like us are all over the place in Dreamflux Reef.
+::'''City Vagrant:''' Do you think there's anythin' we can do to save Dreamflux Reef now?
+::{{DIcon|Arrow}} You should unify the people first.
+:::'''City Vagrant:''' You're right... If we can gather all the residents roamin' the city, maybe we can change things 'round here.
+:::You should gather your resources first.
+::{{DIcon|Arrow}} You should gather your resources first.
+::'''City Vagrant:''' You're right. If we gather our scattered resources, we can effectively lower the cost of life.
+::'''City Vagrant:''' You've got a point. We could also use our graffiti to spread our ideals. But how're we gonna get the funds to kick the whole thing off?
+::{{tx}}
+::{{DIcon|Arrow}} Make dream bubbles to earn money!
+:::'''City Vagrant:''' Compete with other gangs on the dream bubble market? We've all been to school... If the conditions are right, the stuff we make can probably meet the legal safety standards for sale.
+:::Go to the real world to earn money.
+:::'''City Vagrant:''' You're right. Why are we puttin' all our focus only on the dream world? Going back to the real world to earn cash might be a bit more work, but it's better than robbin'!
+:::Ask the residents for donations.
+:::'''City Vagrant:''' That's...
+:::Steal from the rich to give to the poor!
+:::'''City Vagrant:''' The rich... Buddy, everyone in this area is dirt poor. Ya could add up the money of everyone on one street n' they ain't even gonna match a VIP's wallet... We might need another approach...
+:::'''City Vagrant:''' After talkin' to ya, I finally know what to do. I'm so grateful!
+:::{{tx}}
+::{{DIcon|Arrow}} Go to the real world to earn money.
+:::'''City Vagrant:''' You're right. Why are we puttin' all our focus only on the dream world? Going back to the real world to earn cash might be a bit more work, but it's better than robbin'!
+:::Ask the residents for donations.
+:::'''City Vagrant:''' That's...
+:::Steal from the rich to give to the poor!
+:::'''City Vagrant:''' The rich... Buddy, everyone in this area is dirt poor. Ya could add up the money of everyone on one street n' they ain't even gonna match a VIP's wallet... We might need another approach...
+:::'''City Vagrant:''' After talkin' to ya, I finally know what to do. I'm so grateful!
+:::{{tx}}
+::{{DIcon|Talk}} Ask the residents for donations.
+:::'''City Vagrant:''' That's...
+:::{{tx}}
+::;(Return to previous option selection)
+::{{DIcon|Talk}} Steal from the rich to give to the poor!
+:::'''City Vagrant:''' The rich... Buddy, everyone in this area is dirt poor. Ya could add up the money of everyone on one street n' they ain't even gonna match a VIP's wallet... We might need another approach...
+:::{{tx}}
+::;(Return to previous option selection)
+:'''City Vagrant:''' Boss, we've been discussin' our future plans, n' we're almost ready to put'em into practice.
+
+;(Talk to City Vagrant)
+:{{tx}}
+:'''City Vagrant:''' Boss, make sure ya come back n' see us when ya get time! We're all gonna miss ya!
+
+;(Talk to City Vagrant)
+:'''City Vagrant:''' We look forward to your next visit, smart {{MC|f=girl|m=boy}}.
+;(Return to previous option selection)
 {{Dialogue End}}
 
 ==Other Languages==

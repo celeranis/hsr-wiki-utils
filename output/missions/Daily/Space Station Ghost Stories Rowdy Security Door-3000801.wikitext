@@ -41,30 +41,173 @@ PageTitle=#Space Station Ghost Stories: Rowdy Security Door#
 ===Listen to Adler's "ghost stories"{{subst:void|<!--300080101-->}}===
 {{Mission Description|type=daily|location=Storage Zone|After preparing yourself mentally, go to the special spot to meet up with Adler and ask about the "ghost story."}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Adler)
+:'''Adler:''' Okay. So, the first story is the "Rowdy Security Door"! My extraordinary powers of deduction have yielded the following facts.
+:'''Adler:''' Some time during the Amber Era, when the space station was not very organized and there were no set rules regarding Curio research...
+:'''Adler:''' A genius researcher, full of anticipation and hope towards making scientific discoveries, embarked on the first Curio research project that he was personally responsible for.
+:'''Adler:''' Like many young researchers, he was passionate, proactive, but also proud and arrogant. He dreamed of being the founder of a new school of thought, and wanted books to record his great deeds.
+:'''Adler:''' But the researcher had an accident during an experiment, and his psyche was distorted and projected onto a Curio...
+:{{DIcon|Arrow}} Do you have an abridged version?
+:{{DIcon|Arrow}} Can we fast forward to the conclusion?
+:'''Adler:''' You are being so lame! Fine. Here it goes: He died, but his consciousness lived on in the Curio.
+:'''Adler:''' Then I think the storage rooms got changed, and his consciousness dissipated. Unfortunately, very few items can store a human consciousness, and the only thing that did not reject him was a security door.
+:'''Adler:''' Therefore, among the many security doors on this space station, there's one that can talk! That about sums it up.
+:{{DIcon|Arrow}} That's it?
+:{{DIcon|Arrow}} So you've already found your conclusion?
+:'''Adler:''' Yes... But this is just a hypothesis! I only heard about it from some researchers.
+:'''Adler:''' But I think there's a grain of truth in such stories. I'm guessing someone must have seen or heard it themselves.
+:'''Adler:''' Can you please ask around and see if you can find that witness, and then... discover the truth behind this ghost story? Please?
 {{Dialogue End}}
 
 ===Find the door making weird noises{{subst:void|<!--300080105-->}}===
 {{Mission Description|type=daily|location=Storage Zone|update|Follow the coordinates provided by the person who witnessed the Security Door Anecdote, find the security door in question, and unveil the truth about the "ghost story."}}
 {{Dialogue Start}}
-:{{tx}}
+
+
+:{{DIcon|!}} Investigate
+:You reach the door, but it makes no sound.
+:{{Black Screen|As you are about to leave, you hear a strange sound from beside the door.}}
+<pre>{
+	"$type": "RPG.GameCore.CreateProp",
+	"GroupID": {
+		"FixedValue": {
+			"Value": 94
+		}
+	},
+	"GroupPropID": {
+		"FixedValue": {
+			"Value": 300002
+		}
+	}
+}</pre>
+:'''Lone Wubbaboo:''' Woooo...
+:The Wubbaboo looks like it's gonna run away. And the sound it made was the same as that described by the researcher.
+:'''(Trailblazer):''' (Looks like it's all a misunderstanding. Time to let Adler know about it.)
+:{{Black Screen|As you are about to leave, you hear a strange sound from beside the door.}}
 {{Dialogue End}}
 
 ===Ask around and find the truth behind the "ghost story"{{subst:void|<!--300080112-->}}===
 {{Mission Description|type=daily|location=Base Zone|update|Track down the one who experienced the Security Door Anecdote and find out the truth from them. Alternatively, find the security door in question based on your knowledge of the space station.}}
 {{Dialogue Start}}
-:{{tx}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+<pre>{
+	"$type": "RPG.GameCore.PlayNPCBubbleTalk",
+	"BubbleTalkInfoList": [
+		{
+			"AutoSkipTime": 3,
+			"GroupID": 95,
+			"GroupNpcID": 400004,
+			"TalkSentenceID": 300080175
+		}
+	]
+}</pre>
+
+:{{DIcon|Talk}} Listen
+:'''Sleepy Researcher:''' Did I... really hear it wrong? *big yawn*
+:{{DIcon|Arrow}} Do you want to get some sleep?
+::'''Sleepy Researcher:''' No no no. The experiment isn't done yet. How can I possibly sleep?
+:{{DIcon|Arrow}} Why are you so sleepy?
+::'''Sleepy Researcher:''' Oh, it's been so hard to sleep these days.
+:'''Sleepy Researcher:''' I don't know who you are, but since you're here, I wanna ask you something&mdash;
+:'''Sleepy Researcher:''' I... No, I have a friend who's sleepy all day because of insomnia, but he's definitely conscious and sane.
+:'''Sleepy Researcher:''' One night, this friend of mine heard the department's security door make this weird sound...
+:'''Sleepy Researcher:''' It was a brief sound of "woo woo" but if you listen closely, it's actually the sound of someone sobbing!
+:'''Sleepy Researcher:''' My friend doesn't believe it's his imagination. Definitely not! But... How can a security door...
+:{{DIcon|Arrow}} You sure you're not talking about yourself here?
+::'''Sleepy Researcher:''' Hey, don't point it out like that...
+:{{DIcon|Arrow}} Sounds odd.
+::'''Sleepy Researcher:''' Yes, yes, I think so too!
+:'''Sleepy Researcher:''' I want to get to the bottom of it myself, but I'm scared stiff. I dare not head back to check.
+:'''Sleepy Researcher:''' You seem pretty interested in this... Here, I'll send the door's coordinates to you, and you can check it out... *yawn*
 {{Dialogue End}}
 
 ===(Optional) Find the door making weird noises on your own{{subst:void|<!--300080113-->}}===
 {{Dialogue Start}}
-:{{tx}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+<pre>{
+	"$type": "RPG.GameCore.PlayNPCBubbleTalk",
+	"BubbleTalkInfoList": [
+		{
+			"AutoSkipTime": 3,
+			"GroupID": 95,
+			"GroupNpcID": 400001,
+			"TalkSentenceID": 300080172
+		},
+		{
+			"AutoSkipTime": 3,
+			"GroupID": 95,
+			"GroupNpcID": 400002,
+			"TalkSentenceID": 300080173
+		}
+	]
+}</pre>
+
+:{{DIcon|Talk}} Listen
+:'''Scornful Researcher:''' I've thought for a while that he's being weird. Who else do you see constantly working overtime in the lab?
+:'''Skeptical Researcher:''' You are right... but that was just too bizarre.
+:{{DIcon|Arrow}} Doing overtime is definitely weird.
+:{{DIcon|Arrow}} It definitely sounds bizarre!
+:'''Skeptical Researcher:''' Woah! Where did you come from? You scared me! Who are you? What are you here for?
+:{{DIcon|Arrow}} I want to ask about...
+:'''Scornful Researcher:''' It's about that security door, right? I knew it. Someone leaked that info. Hmph.
+:{{DIcon|Talk}} So, who reported it?
+::'''Scornful Researcher:''' That silly man from our department! He keeps telling everyone that the main doors of the department are talking!
+:;(Return to previous option selection)
+:{{DIcon|Talk}} Can a security door really talk?
+::'''Scornful Researcher:''' We've already said that we don't believe in that.
+::'''Skeptical Researcher:''' He was probably too sleepy and hallucinated.
+:;(Return to previous option selection)
+:{{DIcon|Talk}} So, what do you think?
+::'''Scornful Researcher:''' That fellow's body clock hasn't been working well lately and his mental state is pretty bad. I think it's all a figment of his imagination!
+::'''Skeptical Researcher:''' His previous experiment failed, and I think he's been blaming himself ever since. Maybe he got rather traumatized and got delusional.
+:;(Return to previous option selection)
+:{{DIcon|Exit}} I don't have any more questions.
+::'''Scornful Researcher:''' Save your breath. There's no point in asking around. Trust me, this is most likely just a rumor!
+::'''(Trailblazer):''' (Seems like the person involved in this case is their close colleague. He should be close by.)
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+<pre>{
+	"$type": "RPG.GameCore.PlayNPCBubbleTalk",
+	"BubbleTalkInfoList": [
+		{
+			"AutoSkipTime": 3,
+			"GroupID": 95,
+			"GroupNpcID": 400003,
+			"TalkSentenceID": 300080174
+		}
+	]
+}</pre>
+
+:{{DIcon|Talk}} Listen
+:'''Nervous Researcher:''' Just what kind of alloy... Or maybe, even air might work? Ahhh... What is that thing's receptacle!?
+:{{DIcon|Arrow}} What is "that thing"?
+:{{DIcon|Arrow}} I'm a receptacle, too.
+::'''Nervous Researcher:''' Biological receptacles are not possible. I've already tested that out.
+:'''Nervous Researcher:''' You've heard about it too, right? The security door that talks... Everyone has an opinion on it, but no one had grasped the heart of the issue!
+:'''Nervous Researcher:''' And the issue is... What kind of receptacle can that person's incorporeal consciousness get attached to?
+:'''Nervous Researcher:''' If it can go anywhere, then could the entire space station be its receptacle!?
+:'''Nervous Researcher:''' Aaah!!! I can't think! I don't dare to think anymore!
+:'''(Trailblazer):''' (This person is just scaring themselves. I can't communicate with them at all. Better hurry and find the witness.)
 {{Dialogue End}}
 
 ===Tell Adler the truth{{subst:void|<!--300080106-->}}===
 {{Mission Description|type=daily|location=Storage Zone|update|The "ghost story" was just a rumor. Tell Adler about this discovery!}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Adler)
+:'''Adler:''' I knew you could figure this out! Quick! Tell me what you've found!
+:{{DIcon|Arrow}} (Tell Adler about the Wubbaboo.)
+:'''Adler:''' Huh? That's it? Nothing more?
+:'''Adler:''' So... it's all a big misunderstanding? No one actually heard the security door talk...
+:'''Adler:''' But if I think about it, it does make sense. After all... few people on the space station can understand the Wubbaboos.
+:'''Adler:''' But this is actually pretty fun for a story. I've got to note down the whole thing!
+----
 {{Dialogue End}}
 
 ==Other Languages==

@@ -41,25 +41,192 @@ PageTitle=#A Web of Pasts Rewoven#
 {{Mission Description|type=continuance|location=The Shackling Prison|On the other side, Jing Yuan, Dan Heng, and Lingsha arrive at The Shackling Prison, where all are busy picking up the pieces of the breakout. The trio examine the aftermath of the borisin's surprise attack, in search of clues that may help them catch the mastermind stirring up trouble from behind the scenes. Along the way, past events are revisited...}}
 {{Dialogue Start}}
 :{{tx}}
+:{{tx}}
 {{Dialogue End}}
 
 ===Investigate the borisin corpse in the hall{{subst:void|<!--202220202-->}}===
 {{Dialogue Start}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{A|VO chapter2 11 lingsha 103.ogg}} '''Lingsha:''' According to Lieutenant Yanqing's report, he stumbled upon a few suspicious foxians at Stargazer Navalia. After following them, he discovered that they were actually borisin in disguise. This is one of the bodies.
+:{{A|VO chapter2 11 danheng 101.ogg}} '''Dan Heng:''' Looking at him now, it's hard to imagine how he transformed into a foxian.
+:{{A|VO chapter2 11 lingsha 104.ogg}} '''Lingsha:''' My alchemists detected some... complex ingredients in his remains, which might explain how these borisin were able to disguise themselves as foxians.
+:{{A|VO chapter2 11 lingsha 105.ogg}} '''Lingsha:''' Simply put, foxians and borisin share a common ancestry. Although they look completely different now, there isn't much genetic difference between them. This medicine allows borisin to temporarily change their shape into that of foxians.
+:{{A|VO chapter2 11 danheng 102.ogg}} '''Dan Heng:''' So, in other words, if they stop taking the medicine, their true form will soon be revealed?
+:{{DIcon|Arrow}} Borisin have fast metabolisms, so the effects of medicines don't last long...
+::{{A|VO chapter2 11 lingsha 106.ogg}} '''Lingsha:''' Indeed. This means that these borisin have a steady supply of the medicine within the Luofu.
+::An infiltration technique the general is familiar with...
+:{{DIcon|Arrow}} An infiltration technique the general is familiar with...
+:{{A|VO chapter2 11 jingyuan 111.ogg}} '''Jing Yuan:''' The formula and technique seem oddly familiar.
+:{{A|VO chapter2 11 lingsha 107.ogg}} '''Lingsha:''' The Disciples of Sanctus Medicus. Looks like the Alchemy Commission is involved once again.
 :{{tx}}
+<pre>{
+	"$type": "RPG.GameCore.WaitStreamingJobFinished"
+}</pre>
+:{{A|VO chapter2 11 lingsha 111.ogg}} '''Lingsha:''' Here we are. According to the judge, this area is not yet under control, so we should proceed cautiously.
+:{{A|VO chapter2 11 lingsha 112.ogg}} '''Lingsha:''' I've captured the nature of the medicine in my censer.
+:{{A|VO chapter2 11 lingsha 113.ogg}} '''Lingsha:''' By following the medicinal fumes, we should be able to retrace the steps of the disguised borisin.
+
+:{{DIcon|Loupe}} Investigate
+:{{tx}}
+<pre>{
+	"$type": "RPG.GameCore.PerformanceEndSeq",
+	"Cases": [
+		{
+			"OnSuccess": [
+				{
+					"$type": "RPG.GameCore.SwitchCharacterAnchorV2",
+					"SwitchCharacterAnchorConfig": {
+						"IsLocalPlayer": true,
+						"CharacterUniqueName": "LocalPlayer",
+						"AreaName": {
+							"Value": "LevelArea_P20241_F20241001_G144"
+						},
+						"AnchorName": {
+							"Value": "Anchor1"
+						}
+					}
+				}
+			]
+		}
+	]
+}</pre>
+
+:{{DIcon|Loupe}} Investigate
+:{{tx}}
+:A prison guard is collapsed on the ground, her body twisted unnaturally.
+:{{DIcon|Arrow}} (Examine the remains of the warden)
+:{{A|VO chapter2 11 lingsha 115.ogg}} '''Lingsha:''' Incredible strength... The attacker shattered this warden's bones with a single blow.
+:{{tx}}
+<pre>{
+	"$type": "RPG.GameCore.PerformanceEndSeq",
+	"Cases": [
+		{
+			"OnSuccess": [
+				{
+					"$type": "RPG.GameCore.SwitchCharacterAnchorV2",
+					"SwitchCharacterAnchorConfig": {
+						"IsLocalPlayer": true,
+						"CharacterUniqueName": "LocalPlayer",
+						"AreaName": {
+							"Value": "LevelArea_P20241_F20241001_G145"
+						},
+						"AnchorName": {
+							"Value": "Anchor1"
+						}
+					}
+				}
+			]
+		}
+	]
+}</pre>
+
+:{{DIcon|Loupe}} Investigate
+:{{tx}}
+<pre>{
+	"$type": "RPG.GameCore.PerformanceEndSeq",
+	"Cases": [
+		{
+			"OnSuccess": [
+				{
+					"$type": "RPG.GameCore.SwitchCharacterAnchorV2",
+					"SwitchCharacterAnchorConfig": {
+						"IsLocalPlayer": true,
+						"CharacterUniqueName": "LocalPlayer",
+						"AreaName": {
+							"Value": "LevelArea_P20241_F20241001_G146"
+						},
+						"AnchorName": {
+							"Value": "Anchor1"
+						}
+					}
+				}
+			]
+		}
+	]
+}</pre>
 {{Dialogue End}}
 
 ===Follow the smoke from Lingsha's censer and keep moving{{subst:void|<!--202220210-->}}===
 {{Dialogue Start}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:The wolf-shaped mech disintegrates into a pile of metal.
+:{{A|VO chapter2 11 jingyuan 129.ogg}} '''Jing Yuan:''' Yanqing told me that an IPC ship was attacked by borisin. Is this what they were transporting on the ship?
+:{{DIcon|Arrow}} A biomimetic weapon that will auto-restart even after being turned off...
+:{{DIcon|Arrow}} The Intelligentsia Guild's research on the traits of longevity...
+:{{A|VO chapter2 11 lingsha 126.ogg}} '''Lingsha:''' Yes, the Artisanship Commission and Alchemy Commission conducted a joint examination and found that... the parts of this machine are made from specially refined borisin bio-tissue.
 :{{tx}}
+;(Enter battle)
+::{{tx|Enemy list missing}}
+
+:{{DIcon|undefined}} 
+
+
+;(Upon reaching the destination)
 {{Dialogue End}}
 
 ===(Optional) Investigate suspicious clues along the escape route{{subst:void|<!--202220215-->}}===
 {{Dialogue Start}}
-:{{tx}}
 {{Dialogue End}}
 
 ===Follow the smoke from Lingsha's censer and keep moving{{subst:void|<!--202220211-->}}===
 {{Dialogue Start}}
+;(Upon reaching the destination)
+;(Upon reaching the destination)
+;(If {{F|Fly}} is undefined 2)
+:<pre>{
+	"$type": "RPG.GameCore.TriggerEntityServerEvent"
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.TriggerEntityServerEvent"
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.TriggerEntityServerEvent"
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.TriggerEntityServerEvent"
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.TriggerEntityServerEvent"
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.TriggerEntityServerEvent"
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.TriggerEntityServerEvent"
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.TriggerEntityServerEvent"
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.TriggerEntityServerEvent"
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.TriggerEntityServerEvent"
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.TriggerEntityServerEvent"
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.TriggerEntityServerEvent"
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.TriggerEntityServerEvent"
+}</pre>
+;(If {{F|Fly}} is not undefined 2)
+:;(Return to previous option selection)
+;(Upon reaching the destination)
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{tx}}
+:A mess of bodies, a fierce battle must have been fought here.
+:{{DIcon|Arrow}} (Examine the mara-struck remains)
+:{{A|VO chapter2 11 lingsha 144.ogg}} '''Lingsha:''' These mara-struck soldiers... don't appear to be escaped prisoners.
+:{{tx}}
 :{{tx}}
 {{Dialogue End}}
 

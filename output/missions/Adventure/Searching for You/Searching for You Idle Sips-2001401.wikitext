@@ -40,30 +40,82 @@ PageTitle=#Searching for You: Idle Sips#
 ===Speak with the little robot and plan your route from here{{subst:void|<!--200140101-->}}===
 {{Mission Description|type=adventure|location=Silvermane Guard Restricted Zone|According to the little robot's navigation route, the next stop is Aurum Alley on the Luofu.}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Little Robot)
+:'''Little Robot:''' According to the data provided by Miss Himeko, the Astral Express has stopped in the Luofu's Aurum Alley previously, and served to revitalize the local industries.
+:{{DIcon|Arrow}} That's right. I chased out the IPC dogs myself.
+::'''Little Robot:''' Strictly speaking, I am a product developed by the IPC. Though I do not resemble a dog on the exterior, I would ask you not to chase me away.
+:{{DIcon|Arrow}} Then what are we waiting for? Let's get going!
+::'''Little Robot:''' One moment. My database is showing that there is a second destination.
+:'''Little Robot:''' We must visit the Alchemy Commission as well as Aurum Alley. The Nameless had assisted Yueyuan of the Vidyadhara in the past, though I am currently unable to contact her.
+:'''Little Robot:''' So, our next journey will be &mdash; To Du's Teahouse in Aurum Alley to meet with Boss Du.
+:'''Little Robot:''' As for the Alchemy Commission, I have left a word with Yueyuan. Please wait for her to reply.
 {{Dialogue End}}
 
 ===Find Boss Du in Aurum Alley{{subst:void|<!--200140102-->}}===
 {{Mission Description|type=adventure|location=Aurum Alley|update|Boss Du is truly a tea-brewing master. You simply cannot imagine how he creates brews with such miraculous effects...}}
 {{Dialogue Start}}
-:{{tx}}
+;(If {{Mission|Merchant Event: Du's Teahouse|showChapter=0}} has been completed)
+<pre>{
+	"$type": "RPG.GameCore.AdvDestroyGroupEntity",
+	"InstanceIDList": [
+		300001
+	]
+}</pre>
 {{Dialogue End}}
 
 ===Taste Boss Du's new tea{{subst:void|<!--200140103-->}}===
 {{Mission Description|type=adventure|location=Aurum Alley|update|It would be rude to refuse Boss Du's generosity. You have no choice but to taste his newest brew... I wonder if there will be any side effects this time? If there are... Does your little robot not have a quick cure function? You may be in dire need of that...}}
 {{Dialogue Start}}
-:{{tx}}
+;(If {{Mission|Merchant Event: Du's Teahouse|showChapter=0}} has been completed)
+<pre>{
+	"$type": "RPG.GameCore.AdvDestroyGroupEntity",
+	"InstanceIDList": [
+		300003
+	]
+}</pre>
+;(Unused &mdash; DES200140103)
+<pre>{
+	"$type": "RPG.GameCore.AdvDestroyGroupEntity",
+	"InstanceIDList": [
+		300002,
+		400001
+	]
+}</pre>
 {{Dialogue End}}
 
 ===Respond to Yueyuan's message{{subst:void|<!--200140104-->}}===
 {{Mission Description|type=adventure|location=Aurum Alley|update|You received a message from Yueyuan about the recent goings-on with the ancient sea and the Drift Bottles. As expected of the Luofu, everything is in order and the good deeds of the Nameless have been duly rewarded.}}
 {{Dialogue Start}}
-:{{tx}}
 {{Dialogue End}}
 
 ===Go to the Alchemy Commission and speak with Yueyuan{{subst:void|<!--200140105-->}}===
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Yueyuan)
+:'''Yueyuan:''' Here's what is written in the letter if you'd like to read it. I don't know if the writer's imagination has run away with them, or if they just have too much time on their hands.
+:It looks like the previous story of being lost at sea has come to an end. It seems the author has taken a new artistic direction.
+<pre>{
+	"$type": "RPG.GameCore.ShowReading",
+	"BookID": {
+		"FixedValue": {
+			"Value": 190764
+		}
+	}
+}</pre>
+:{{DIcon|Arrow}} I imagine that's the end of the Drift Bottles.
+::'''Yueyuan:''' I hope so. I've had enough of these twists and turns.
+:{{DIcon|Arrow}} He's moved on to science-fiction.
+::'''Yueyuan:''' A stellar winds balloon... Just how many ludicrous ideas can one person have in their head?
+::'''Yueyuan:''' It wasn't enough for him to pollute the oceans, now he's throwing his trash into the Cosmos?
+:'''Yueyuan:''' Whatever the case, it looks like this whole thing has finally come to an end. Thank you for your hard work back then.
+:{{DIcon|Arrow}} You won't need me to go on patrols anymore?
+:{{DIcon|Arrow}} Huh? That's it? Just "Thank you for your hard work"?
+:'''Yueyuan:''' I don't need to trouble you with all this anymore. I have bought a batch of cycranes that will do daily patrols and other missions like this.
+:'''Yueyuan:''' Naturally, in recognition of your outstanding contributions to the environmental protection of the Lunarescent Depths, I have applied for you to receive a special reward from the Realm-Keeping Commission. The application should be approved soon.
+:'''Little Robot:''' All to-do items have been completed. You can prepare for your return when you are ready.
+:'''Little Robot:''' Beep beep beep &mdash; it is time to return and charge my batteries.
+:'''Yueyuan:''' Oh? You're leaving? Alright, if you wish to come and visit me at the seaside, you are welcome any time.
 {{Dialogue End}}
 
 ==Other Languages==

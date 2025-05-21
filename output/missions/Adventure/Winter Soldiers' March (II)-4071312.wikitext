@@ -42,36 +42,187 @@ PageTitle=#Winter Soldiers' March (II)#
 ===Talk to the aide to understand the objective of the training{{subst:void|<!--407131201-->}}===
 {{Mission Description|type=adventure|location=Silvermane Guard Restricted Zone|Once again, you join a joint training in the Silvermane Guard Restricted Zone.<br />Talk to the aide and get a sense of the objective of this training.}}
 {{Dialogue Start}}
-:{{tx}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+<pre>{
+	"$type": "RPG.GameCore.ActiveVirtualCamera",
+	"AreaName": "LevelArea_P40131_F40131002_G6",
+	"AnchorName": "Anchor9"
+}</pre>
+:'''Aide:''' Beep &mdash; boop.
+:'''Aide:''' Thanks for being our sparring partner, Drillmaster (Trailblazer).
+:'''Aide:''' The Silvermane Guards have set up position in the restricted zone and are prepared to meet your challenge.
+:'''Aide:''' The goal of this drill is to defeat the Major.
+:{{DIcon}} The Major?
+:{{DIcon}} Don't tell me that's...
+<pre>{
+	"$type": "RPG.GameCore.ActiveVirtualCamera",
+	"AreaName": "LevelArea_P40131_F40131002_G6",
+	"AnchorName": "Anchor6"
+}</pre>
+:'''Aide:''' That's right. It's the big guy over there.
+:'''Aide:''' Joke time: The Major wants to lose some weight. What should he do?
+<pre>{
+	"$type": "RPG.GameCore.ActiveVirtualCamera",
+	"AreaName": "LevelArea_P40131_F40131002_G6",
+	"AnchorName": "Anchor9"
+}</pre>
+:'''Aide:''' Drink less oil! ...Geddit?
+:{{DIcon}} ...
+:{{DIcon}} Let's cut to the chase...
+:'''Aide:''' You'll need to {{Color|keyword|nobold=1|configure the gear bridge to make a path}} before you challenge the Major.
+:'''Aide:''' The terminal that controls the gear bridge is somewhere in the restricted zone. I look forward to your performance, Drillmaster (Trailblazer).
+<pre>{
+	"$type": "RPG.GameCore.ActiveVirtualCamera",
+	"AreaName": "LevelArea_P40131_F40131002_G6",
+	"AnchorName": "Anchor9",
+	"IsActive": false
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.ShowEnvBuffDialog",
+	"RaidID": 4013101,
+	"IsAutoGetParam": true
+}</pre>
+
+;(Obtain {{Item|Terminal Encryption Key|20|x=1}})
 {{Dialogue End}}
 
 ===Find a way to get past the gear bridge{{subst:void|<!--407131202-->}}===
 {{Mission Description|type=adventure|location=Silvermane Guard Restricted Zone|update|Once again, you join a joint training in the Silvermane Guard Restricted Zone.<br />The objective this time is to defeat a robot called Major. Find a way to get past the gear bridge in the restricted zone and locate Major.}}
 {{Dialogue Start}}
-:{{tx}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:'''(Trailblazer):''' (This whatchamacallit...)
+:'''(Trailblazer):''' (Seems locked. What's going on with it?)
+:'''Aide:''' Beep &mdash; boop. It seems that the bridge terminal is locked. Only a special {{Color|keyword|nobold=1|terminal encryption key}} can unlock it.
+<pre>{
+	"$type": "RPG.GameCore.ActiveVirtualCamera",
+	"AreaName": "LevelArea_P40131_F40131002_G6",
+	"AnchorName": "Anchor5"
+}</pre>
+:'''Aide:''' The {{Color|keyword|nobold=1|Silvermane officers}} here should have the key. Looks like you'll have to fight them if you want to operate the bridge.
+<pre>{
+	"$type": "RPG.GameCore.ActiveVirtualCamera",
+	"AreaName": "LevelArea_P40131_F40131002_G6",
+	"AnchorName": "Anchor5",
+	"IsActive": false
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.ActiveVirtualCamera",
+	"AreaName": "LevelArea_P40131_F40131002_G12",
+	"AnchorName": "Camera_3"
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.ShowTalkUI",
+	"Show": true
+}</pre>
+:'''Guard Captain:''' Enemy spotted! Drillmaster (Trailblazer) is here!
+:'''Guard Captain:''' Troops, assemble!
+:'''(Trailblazer):''' (Guess I gotta bite the bullet and smash through them directly... Bring it on.)
+<pre>{
+	"$type": "RPG.GameCore.CharacterNavigateTo",
+	"CharacterUniqueName": "NPC1",
+	"AreaName": "LevelArea_P40131_F40131002_G14",
+	"AnchorName": "Anchor1",
+	"MotionFlag": "Run",
+	"WaitUntilFinish": false
+}</pre>
+:<!--0.5-second delay-->
+<pre>{
+	"$type": "RPG.GameCore.CharacterNavigateTo",
+	"CharacterUniqueName": "NPC2",
+	"AreaName": "LevelArea_P40131_F40131002_G14",
+	"AnchorName": "Anchor2",
+	"MotionFlag": "Run",
+	"WaitUntilFinish": false
+}</pre>
+:<!--0.5-second delay-->
+<pre>{
+	"$type": "RPG.GameCore.CharacterNavigateTo",
+	"CharacterUniqueName": "NPC3",
+	"AreaName": "LevelArea_P40131_F40131002_G14",
+	"AnchorName": "Anchor4",
+	"MotionFlag": "Run",
+	"WaitUntilFinish": false
+}</pre>
+:<!--0.7-second delay-->
+<pre>{
+	"$type": "RPG.GameCore.CharacterNavigateTo",
+	"CharacterUniqueName": "NPC4",
+	"AreaName": "LevelArea_P40131_F40131002_G14",
+	"AnchorName": "Anchor3",
+	"MotionFlag": "Run",
+	"WaitUntilFinish": false
+}</pre>
+:<!--0.7-second delay-->
+<pre>{
+	"$type": "RPG.GameCore.CharacterNavigateTo",
+	"CharacterUniqueName": "NPC5",
+	"AreaName": "LevelArea_P40131_F40131002_G14",
+	"AnchorName": "Anchor4",
+	"MotionFlag": "Run",
+	"WaitUntilFinish": false
+}</pre>
+:<!--4-second delay-->
+<pre>{
+	"$type": "RPG.GameCore.ActiveVirtualCamera",
+	"AreaName": "LevelArea_P40131_F40131002_G12",
+	"AnchorName": "Camera_2",
+	"IsActive": false
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.ShowTalkUI"
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.AdventureForbidAttackTriggerBattle"
+}</pre>
 {{Dialogue End}}
 
 ===Pass Major's trial{{subst:void|<!--407131204-->}}===
 {{Mission Description|type=adventure|location=Silvermane Guard Restricted Zone|update|Once again, you join a joint training in the Silvermane Guard Restricted Zone.<br />The road to get past Major is already clear. Defeat Major to conclude the training.}}
 {{Dialogue Start}}
-:{{tx}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:'''Major:''' Drillmaster (Trailblazer), bwahaha!
+:'''Major:''' We finally meet! It's an honor to see you today. Bwahaha!
+:{{DIcon}} Are you the Major?
+::'''Major:''' That's right! That's me!
+:{{DIcon}} This robot gets straight to the point.
+::'''Major:''' This is how I welcome people!
+:'''Major:''' I've heard Commander Dunn mention your strength. To tell the truth, I've been itching to test my might against yours for a long time now!
+:'''Major:''' &mdash; Just kidding. I'm a robot, and can't itch! Bwahahaha!
+:{{DIcon}} ...
+:{{DIcon}} Let's begin.
+:'''Major:''' Let's begin, Drillmaster (Trailblazer)! Combat really gets the blood flowing!
+:'''Major:''' &mdash; Even though I don't have any blood! Bwahaha!
+;(Obtain [Unknown Item undefined ×undefined])
 {{Dialogue End}}
 
 ===Talk to the aide and complete the restricted zone training{{subst:void|<!--407131207-->}}===
 {{Mission Description|type=adventure|location=Silvermane Guard Restricted Zone|update|You passed the restricted zone training once again.<br />Talk to the aide and collect your reward.}}
 {{Dialogue Start}}
-:{{tx}}
+:'''Major:''' ...Amazing. Truly amazing! Dunn was right. You really do live up to your reputation!
+:'''Major:''' Looks like I've still got plenty of room for improvement! Bwahaha!
+:{{DIcon}} How do you improve yourself?
+::'''Major:''' Simple!
+:{{DIcon}} Do you modify yourself?
+::'''Major:''' No no, mods are for wimps!
+:'''Major:''' Starting today, I'm going to do fifty more pull-ups and one hundred push-ups, every day! Bwahaha!
+:'''Major:''' Congrats once more for completing the drill, Drillmaster (Trailblazer)! Chat with the aide, and it should have a prize for you!
+:'''Aide:''' Please accept this sparring reward. If you want to participate in drills again, come register with me in the restricted zone.
+;(Obtain [Unknown Item undefined ×undefined])
 {{Dialogue End}}
 
 ===Activate the first gear bridge control panel{{subst:void|<!--407131208-->}}===
 {{Mission Description|type=adventure|location=Silvermane Guard Restricted Zone|update|Once again, you join a joint training in the Silvermane Guard Restricted Zone.<br />You find an encryption key. Use it to activate the control panel and control the gear bridge.}}
 {{Dialogue Start}}
-:{{tx}}
 {{Dialogue End}}
 
 ===Activate the second gear bridge control panel{{subst:void|<!--407131209-->}}===
 {{Dialogue Start}}
-:{{tx}}
 {{Dialogue End}}
 
 ==Other Languages==

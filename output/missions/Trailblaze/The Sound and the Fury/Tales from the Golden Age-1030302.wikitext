@@ -52,72 +52,606 @@ Mission Tales from the Golden Age Caelus.png|Caelus
 ===Follow Firefly and explore Penacony{{subst:void|<!--103030201-->}}===
 {{Mission Description|type=trailblaze|location=Golden Hour|The Bloodhound Family Security Officer explains that the young girl you just rescued was Firefly, an artist of the Iris Family.<br />To thank you saving her, she has decided to be your tour guide for the day. Why not follow her and take a deep-dive into this beautiful dream?}}
 {{Dialogue Start}}
+:{{A|VO chapter3 2 firefly 124.ogg}} '''Firefly:''' Over here!
+:{{A|VO chapter3 2 player 119 m.ogg}} {{A|VO chapter3 2 player 119 f.ogg}} '''(Trailblazer):''' (It's not a bad idea to get to know about this place.)
+<pre>{
+	"$type": "RPG.GameCore.AdvSetAILeadWay",
+	"EntityInstanceID": {
+		"FixedValue": {
+			"Value": 400001
+		}
+	},
+	"PathwayGroupID": 72,
+	"PathwayID": 1,
+	"MotionFlag": "Run",
+	"WaitForPlayer": true,
+	"OnReach": [
+		{
+			"$type": "RPG.GameCore.TriggerGroupEvent",
+			"EventName": {
+				"Value": "Event_103030201_steer"
+			}
+		}
+	]
+}</pre>
+
+;(Upon reaching the destination)
+:{{tx}}
+;(Unused &mdash; Event_103030201_steer)
+
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{A|VO chapter3 2 firefly 124.ogg}} '''Firefly:''' Over here!
+:{{A|VO chapter3 2 player 119 m.ogg}} {{A|VO chapter3 2 player 119 f.ogg}} '''(Trailblazer):''' (It's not a bad idea to get to know about this place.)
+:{{A|VO chapter3 2 firefly 129.ogg}} '''Firefly:''' We're here. Hey, have you ever heard of this saying that goes, "In a dream, hunger is the most precious spice?"
+:{{A|VO chapter3 2 firefly 130.ogg}} '''Firefly:''' Well, you can find all kinds of local delicacies here &mdash; Clockie Pizza, Oak Cake Rolls, Alfalfa Salad, and the classic SoulGlad! Feel free to pick anything you like! Today it's my treat!
+:{{DIcon|Arrow}} Thanks. That's very nice of you!
+::{{A|VO chapter3 2 firefly 131.ogg}} '''Firefly:''' Hee-hee, you're welcome.
+:{{DIcon|Arrow}} You shouldn't have!
+::{{A|VO chapter3 2 firefly 132.ogg}} '''Firefly:''' No worries. You can buy me a meal next time!
+:{{DIcon|Arrow}} I should warn you, I do have very expensive tastes...
+::{{A|VO chapter3 2 firefly 133.ogg}} '''Firefly:''' Th&mdash;That shouldn't be a problem. I have some savings left...
 :{{tx}}
 {{Dialogue End}}
 
 ===Pick your favorite food{{subst:void|<!--103030225-->}}===
 {{Mission Description|type=trailblaze|location=Golden Hour|update|As the Security Officer of the Bloodhound Family comes to your aid, you realize that the person you saved is Firefly, an artist from the Iris Family.<br />To repay your kindness, she offers to be your guide for the day and treats you to delicious food. Take your time to consider your options, as it is not often that you get a free lunch.}}
 {{Dialogue Start}}
-:{{tx}}
+
 {{Dialogue End}}
 
 ===Speak with Firefly{{subst:void|<!--103030203-->}}===
 {{Mission Description|type=trailblaze|location=Golden Hour|update|As the Security Officer of the Bloodhound Family comes to your aid, you realize that the person you saved is Firefly, an artist from the Iris Family.<br />To repay your kindness, she offers to be your guide for the day and treats you to delicious food. You have ordered your food, and now it is time for her to settle the bill and pay for her recklessness.}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Lose {{Item|Firefly's Budget|20|x=20000}})
 {{Dialogue End}}
 
 ===Continue following Firefly and exploring Penacony{{subst:void|<!--103030204-->}}===
 {{Mission Description|type=trailblaze|location=Golden Hour|update|As agreed, Firefly pays the bill, and she will now take you to other tourist attractions. It may feel rushed and superficial, but that is the nature of playing tourist.}}
 {{Dialogue Start}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{A|VO chapter3 2 firefly 147.ogg}} '''Firefly:''' Look! That's the statue of Clockie, Penacony's famous cartoon character!
+:{{A|VO chapter3 2 firefly 148.ogg}} '''Firefly:''' It's the oldest and most famous animation from Penacony. It follows the adventurous life of Clockie and his friends in the town of Dreamville. To date, over 10,000 episodes have aired!
+:{{DIcon|Arrow}} He looks cute.
+::{{A|VO chapter3 2 firefly 149.ogg}} '''Firefly:''' I know, right? Isn't he adorable?
+::His character design is a little... surrealist.
+::{{A|VO chapter3 2 firefly 150.ogg}} '''Firefly:''' Um... I guess it's because the animation has a retro style.
+::Isn't having a clock as a character a bit... ominous?
+:{{DIcon|Arrow}} His character design is a little... surrealist.
+::{{A|VO chapter3 2 firefly 150.ogg}} '''Firefly:''' Um... I guess it's because the animation has a retro style.
+::Isn't having a clock as a character a bit... ominous?
+:{{DIcon|Arrow}} Isn't having a clock as a character a bit... ominous?
+:{{A|VO chapter3 2 firefly 151.ogg}} '''Firefly:''' Ominous? Clockie is a household name here. There would never be anything ominous about him... right?
+:{{A|VO chapter3 2 firefly 152.ogg}} '''Firefly:''' By the way, do you know that Clockie's design is said to be inspired by none other than the legendary Watchmaker?
+:{{DIcon|Arrow}} Watchmaker?
+:{{DIcon|Arrow}} Is he famous?
+:{{A|VO chapter3 2 firefly 153.ogg}} '''Firefly:''' I can't believe you haven't heard of him. He was a legendary tycoon in the history of Penacony &mdash; the founder of the Dreamscape, the man who turned dreams into reality!
+:{{A|VO chapter3 2 firefly 154.ogg}} '''Firefly:''' There are different stories out there about the Watchmaker's origin. Some said he was a traveling merchant from beyond the sky, some claimed that he was exiled to Penacony as a prisoner... Some speculate that he wasn't even a real person, just a symbol...
+:{{A|VO chapter3 2 firefly 155.ogg}} '''Firefly:''' The true story is anyone's guess, but everyone aspires to emulate his success and be the next Watchmaker!
+:{{A|VO chapter3 2 firefly 156.ogg}} '''Firefly:''' As his inspiring story became known across the cosmos, those with a dream flocked to Penacony in droves. They held feast after feast, eventually building the Planet of Festivities we have today. Everyone in Penacony knows this name.
+:{{A|VO chapter3 2 firefly 157.ogg}} '''Firefly:''' The cartoon character Clockie is portrayed as reckless and full of hot air, but I believe the real Watchmaker was a Nameless! After all, creating the Dreamscape sounds like just the kind of thing a Trailblazer would do.
+:{{A|VO chapter3 2 firefly 158.ogg}} '''Firefly:''' ...Hold on... If the Watchmaker really was a Nameless, wouldn't that make him your predecessor? Would you like to take a picture with him?
+:{{DIcon|Arrow}} Thanks.
+::{{A|VO chapter3 2 firefly 159.ogg}} '''Firefly:''' My pleasure! Here, give me your phone.
+::I think I'll pass. I'm allergic to camera lenses...
+::{{A|VO chapter3 2 firefly 160.ogg}} '''Firefly:''' I see... Let's go somewhere else then.
+::Aha, I know how this goes. You're gonna charge me a lot just for taking the pic, aren't you?
+:{{DIcon|Arrow}} I think I'll pass. I'm allergic to camera lenses...
+::{{A|VO chapter3 2 firefly 160.ogg}} '''Firefly:''' I see... Let's go somewhere else then.
+::Aha, I know how this goes. You're gonna charge me a lot just for taking the pic, aren't you?
+:{{DIcon|Arrow}} Aha, I know how this goes. You're gonna charge me a lot just for taking the pic, aren't you?
+:{{A|VO chapter3 2 firefly 161.ogg}} '''Firefly:''' Of course not! What were you thinking?
+:{{A|VO chapter3 2 birdA 101.ogg}} '''???:''' Hey! Hey, hey, hey!
 :{{tx}}
+;(Unused &mdash; Event_103030204_run_2)
+:{{A|VO chapter3 2 firefly 145.ogg}} '''Firefly:''' Over here! Follow me.
+:<pre>{
+	"$type": "RPG.GameCore.AdvSetAILeadWay",
+	"EntityInstanceID": {
+		"FixedValue": {
+			"Value": 400001
+		}
+	},
+	"PathwayGroupID": 75,
+	"PathwayID": 4,
+	"MotionFlag": "Run",
+	"WaitForPlayer": true,
+	"OnReach": [
+		{
+			"$type": "RPG.GameCore.TriggerGroupEvent",
+			"EventName": {
+				"Value": "Event_103030204_run_3"
+			}
+		}
+	]
+}</pre>
+
+;(Unused &mdash; Event_103030204_run_3)
+:{{A|VO chapter3 2 firefly 146.ogg}} '''Firefly:''' Please come this way. Let me show you something interesting.
+:<pre>{
+	"$type": "RPG.GameCore.AdvSetAILeadWay",
+	"EntityInstanceID": {
+		"FixedValue": {
+			"Value": 400001
+		}
+	},
+	"PathwayGroupID": 75,
+	"PathwayID": 5,
+	"MotionFlag": "Run",
+	"WaitForPlayer": true,
+	"ForcePlayerWalk": true,
+	"OnReach": []
+}</pre>
+
+;(Unused &mdash; Event_103030204_steer)
+:{{A|VO chapter3 2 firefly 143.ogg}} '''Firefly:''' This is the luxury store I told about you earlier.
+::{{A|VO chapter3 2 firefly 144.ogg}} '''Firefly:''' If we keep going, we'll reach Glaux Avenue, which is the road to Golden Hour.
+::<!--4-second delay-->
+:<pre>{
+	"$type": "RPG.GameCore.AdvSetAILeadWay",
+	"EntityInstanceID": {
+		"FixedValue": {
+			"Value": 400001
+		}
+	},
+	"PathwayGroupID": 75,
+	"PathwayID": 3,
+	"MotionFlag": "Run",
+	"WaitForPlayer": true,
+	"OnReach": [
+		{
+			"$type": "RPG.GameCore.TriggerGroupEvent",
+			"EventName": {
+				"Value": "Event_103030204_run_2"
+			}
+		}
+	]
+}</pre>
 {{Dialogue End}}
 
 ===(Optional) Ask Firefly for a commemorative picture{{subst:void|<!--103030205-->}}===
 {{Mission Description|type=trailblaze|location=Golden Hour|update|Firefly leads you through some of the famous sightseeing spots in the area. As you arrive in the central Glaux Avenue, you visit a statue of a mascot located here known as "Clockie." As you linger in this place, you notice that the eyelashes on Clockie are a little too lifelike for a statue.<br />Honestly, anyone who lays eyes on those trembling lashes would feel the urge to pull on them. Before you do, why not ask Firefly to take a classic tourist-style commemorative picture?}}
 {{Dialogue Start}}
-:{{tx}}
+
+
+;(Unused &mdash; 103030205_StartPhoto)
+<pre>{
+	"$type": "RPG.GameCore.BindSwitchPhotoGraphFuncBtn",
+	"SimpleMode": false,
+	"UseType": "StartPhotoInTriggerRange",
+	"RangeTriggerProp": {
+		"FetchType": "SinglePropByPropID",
+		"SinglePropID": {
+			"GroupID": {
+				"FixedValue": {
+					"Value": 76
+				}
+			},
+			"ID": {
+				"FixedValue": {
+					"Value": 300001
+				}
+			}
+		}
+	},
+	"ColliderRelativePathList": [],
+	"PhotoGraphMode": "SingleTakePhoto",
+	"AimTargetContainerConfig": [
+		{
+			"InnerContainers": [],
+			"AimTargetConfig": {
+				"$type": "RPG.GameCore.PhotoGraphAimContaierTarget",
+				"AimTargetType": {
+					"$type": "RPG.GameCore.GroupFetchLocalTarget",
+					"Targets": [
+						400002
+					]
+				},
+				"GameObjectNode": {
+					"Value": "Chest_M"
+				}
+			},
+			"TipConfigs": [],
+			"ContainerFlagName": "103030205_Two",
+			"IsTopContainer": true,
+			"IsAimTargetConfig": true
+		}
+	],
+	"OverrideConfig": {
+		"ToastTemplate": "拍照",
+		"SuccessToastText": {
+			"Hash": 3718320075519758869
+		},
+		"FailToastText": {
+			"Hash": 17892350840487220106
+		}
+	},
+	"ExtraSettings": {
+		"ShowNpc": {
+			"NpcInfos": [
+				{
+					"$type": "RPG.GameCore.PhotoGraphFindNpc",
+					"GroupID": {
+						"FixedValue": {
+							"Value": 76
+						}
+					},
+					"GroupNpcID": {
+						"FixedValue": {
+							"Value": 400002
+						}
+					}
+				}
+			]
+		},
+		"SetEntityUniqueName": {
+			"NpcUniqueNameInfo": [
+				{
+					"UniqueName": {
+						"Value": "103030205_Local"
+					},
+					"GroupID": {
+						"FixedValue": {
+							"Value": 76
+						}
+					},
+					"GroupNpcID": {
+						"FixedValue": {
+							"Value": 400002
+						}
+					}
+				}
+			]
+		},
+		"HideEntityConfig": {
+			"HideEntity": {
+				"$type": "RPG.GameCore.TargetFetchAdvNpcEx",
+				"FetchType": "SingleNpcByNpcID",
+				"SingleNpcID": {
+					"GroupID": {
+						"FixedValue": {
+							"Value": 76
+						}
+					},
+					"GroupNpcID": {
+						"FixedValue": {
+							"Value": 400001
+						}
+					}
+				}
+			}
+		},
+		"FreeStyleConfig": [
+			{
+				"CharacterUniqueName": "103030205_Local",
+				"LocalPlayer": true,
+				"StoryAvatarID": "NPC_Avatar_Maid_Mar_7th_00"
+			}
+		],
+		"LookAtCameraTarget": {
+			"$type": "RPG.GameCore.GroupFetchLocalTarget",
+			"Targets": [
+				400002
+			]
+		},
+		"PlayerControlSetting": {
+			"ResetPlayerPosition": true,
+			"AnchorConfig": {
+				"AreaName": {
+					"Value": "LevelArea_P10301_F10301001_G76"
+				},
+				"AnchorName": {
+					"Value": "Anchor1"
+				}
+			},
+			"OverrideCameraHeightByBodySize": "Maid"
+		}
+	}
+}</pre>
 {{Dialogue End}}
 
 ===Investigate the statue's strange eyelashes{{subst:void|<!--103030217-->}}===
 {{Dialogue Start}}
-:{{tx}}
+
 {{Dialogue End}}
 
 ===(Optional) Speak with Firefly and check the photo{{subst:void|<!--103030206-->}}===
 {{Mission Description|type=trailblaze|location=Golden Hour|update|Firefly leads you through some of the famous sightseeing spots in the area. As you arrive in the central Glaux Avenue, you visit a statue of a mascot located here known as "Clockie." As you linger in this place, you notice that the eyelashes on Clockie are a little too lifelike for a statue.<br />Honestly, anyone that lays eyes on those trembling lashes would feel the urge to pull on them. Also, you asked Firefly to take a classic tourist picture. Why not ask her to see it?}}
 {{Dialogue Start}}
 :{{tx}}
+:{{A|VO chapter3 2 birdA 105.ogg}} '''???:''' Hey! Hey, hey, hey! Thank... you, beautiful person!
+:{{A|VO chapter3 2 birdA 106.ogg}} '''???:''' I'll... repay your kindness! Go to... the tree! Please go... there! There! I'll show... you something... nice!
+:{{A|VO chapter3 2 birdA 107.ogg}} '''???:''' *Tweet*
+:After letting out an adorable chirp, the bird flies away.
+:Before it left, it seems to have offered some kind of "reward." The main thing is that you need to go to "the tree" first.
+:Perhaps... you can meet with it again there. See just what exactly the "nice" thing is.
+:{{A|VO chapter3 2 firefly 165.ogg}} '''Firefly:''' Is there something wrong with Clockie's statue? Why did you suddenly jump just now?
+:{{DIcon|Arrow}} I rescued a bird &mdash; a bird with sharp edges and points.
+::{{A|VO chapter3 2 firefly 166.ogg}} '''Firefly:''' A bird with sharp edges and points... Umm, I don't think I saw it.
+::I pulled out his eyelashes.
+::{{A|VO chapter3 2 firefly 167.ogg}} '''Firefly:''' Eyelashes? Clockie doesn't have those...
+::I can actually jump in this world!? Color me surprised!
+:{{DIcon|Arrow}} I pulled out his eyelashes.
+::{{A|VO chapter3 2 firefly 167.ogg}} '''Firefly:''' Eyelashes? Clockie doesn't have those...
+::I can actually jump in this world!? Color me surprised!
+:{{DIcon|Arrow}} I can actually jump in this world!? Color me surprised!
+:{{A|VO chapter3 2 firefly 168.ogg}} '''Firefly:''' Really? You jumped just now &mdash; it was really sudden, too.
+:{{A|VO chapter3 2 firefly 169.ogg}} '''Firefly:''' Well... If you're okay, let's move on to the next stop, which is just a stone's throw away from here. Please follow me...
+:{{tx}}
+:{{tx}}
 {{Dialogue End}}
 
 ===Continue following Firefly and exploring Penacony{{subst:void|<!--103030207-->}}===
 {{Mission Description|type=trailblaze|location=Golden Hour|update|Firefly continues to lead you through the various tourist hotspots in the area &mdash; the next stop is the Penacony Theater front stands. Follow her!}}
 {{Dialogue Start}}
+;(Unused &mdash; Performance_103030207)
 :{{tx}}
 {{Mission Description|type=trailblaze|location=Golden Hour|update|Firefly continues to lead you through the various tourist hotspots in the area &mdash; Penacony's SoulGlad-themed rest area Aideen Park is just ahead. Follow her!}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{A|VO chapter3 2 firefly 176.ogg}} '''Firefly:''' That place up ahead is Aideen Park &mdash; everything here is themed around SoulGlad. It's a little crowded, so make sure you stay close to me.
+
+;(Upon reaching the destination)
+:{{A|VO chapter3 2 firefly 175.ogg}} '''Firefly:''' Next, I'll bring you somewhere you can really have fun.
+:{{A|VO chapter3 2 firefly 176.ogg}} '''Firefly:''' That place up ahead is Aideen Park &mdash; everything here is themed around SoulGlad. It's a little crowded, so make sure you stay close to me.
+:{{A|VO chapter3 2 firefly 177.ogg}} '''Firefly:''' This is the largest park in Golden Hour &mdash; it represents the soda culture of Penacony. That gigantic soda bottle houses the headquarters of the SoulGlad Enterprise!
+:{{A|VO chapter3 2 firefly 178.ogg}} '''Firefly:''' SoulGlad is said to have originated from a sweet medicinal syrup popular during the Prison Era. Invented by a man named Sousa, it was thus called the Sousa Juice. Aideen, an interstellar traveling merchant, saw the potential in the beverage and purchased the formula.
+:{{A|VO chapter3 2 firefly 179.ogg}} '''Firefly:''' Aideen then carbonated the beverage and renamed it "SoulGlad." He also pioneered the school of thought known as "Syrupism," in which he promoted the consumption of SoulGlad as a new kind of lifestyle. And just like that, he created a commercial miracle.
+:{{A|VO chapter3 2 firefly 180.ogg}} '''Firefly:''' Did you know? One of the ingredients in the original recipe for Sousa Juice, known as Dreamleaf, has gone extinct. That means the only place you can get a taste of Epochal SoulGlad is in Penacony's Dreamscape.
+:{{A|VO chapter3 2 firefly 181.ogg}} '''Firefly:''' This is also the only place where one can fully experience the core values of Syrupism...
+:She abruptly freezes. In that fleeting moment, you notice a cautious shift in the girl's gaze, piercing directly into your brow, or perhaps somewhere behind you...
+:{{DIcon|Arrow}} What's up?
+:{{DIcon|Arrow}} What are you looking at?
+:Firefly returns to her warm and gentle disposition.
+:{{tx}}
+;(Unused &mdash; Event_103030208_run)
+:{{A|VO chapter3 2 firefly 175.ogg}} '''Firefly:''' Next, I'll bring you somewhere you can really have fun.
+:<pre>{
+	"$type": "RPG.GameCore.AdvSetAILeadWay",
+	"EntityInstanceID": {
+		"FixedValue": {
+			"Value": 400001
+		}
+	},
+	"PathwayGroupID": 79,
+	"PathwayID": 2,
+	"MotionFlag": "Run",
+	"WaitForPlayer": true,
+	"OnReach": []
+}</pre>
 {{Mission Description|type=trailblaze|location=Golden Hour|update|Firefly continues to lead you through the various tourist hotspots in the area &mdash; You have arrived at Aideen Park. Take a wander around with her.}}
+;(Upon reaching the destination)
+;(Unused &mdash; Event_103030209_run)
+:{{A|VO chapter3 2 firefly 184.ogg}} '''Firefly:''' In Penacony, many objects and facilities have gained self-awareness due to the influence of the memoria. After being tamed by The Family, some of them formed the Sweet Dreams Troupe to provide entertainment for guests.
+::{{A|VO chapter3 2 firefly 185.ogg}} '''Firefly:''' Be careful, though &mdash; sometimes these animated objects can be affected by dangerous emotions or memories and transform into the destructive Dreamjolt Troupe... If you ever run into them, go ask the security guards nearby for help.
+:<pre>{
+	"$type": "RPG.GameCore.WaitMissionTalkFinish"
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.AdvSetAILeadWay",
+	"EntityInstanceID": {
+		"FixedValue": {
+			"Value": 400001
+		}
+	},
+	"PathwayGroupID": 80,
+	"PathwayID": 3,
+	"MotionFlag": "Run",
+	"OnReach": [
+		{
+			"$type": "RPG.GameCore.TriggerGroupEvent",
+			"EventName": {
+				"Value": "Event_103030209_run_2"
+			}
+		}
+	]
+}</pre>
+
+;(Unused &mdash; Event_103030209_run_2)
+:{{A|VO chapter3 2 firefly 186.ogg}} '''Firefly:''' Hey, there's a ride attendant over there!
+::{{A|VO chapter3 2 firefly 187.ogg}} '''Firefly:''' Let me get some Aideen Tokens for you. With those, you'll be able to try any of the attractions here that you fancy.
+:<pre>{
+	"$type": "RPG.GameCore.AdvSetAILeadWay",
+	"EntityInstanceID": {
+		"FixedValue": {
+			"Value": 400001
+		}
+	},
+	"PathwayGroupID": 80,
+	"PathwayID": 4,
+	"MotionFlag": "Run",
+	"OnReach": []
+}</pre>
+
+;(Unused &mdash; Event_103030209_run_0)
+:{{A|VO chapter3 2 firefly 183.ogg}} '''Firefly:''' See these musical instruments playing themselves with no human performers? That's the Sweet Dreams Troupe.
+:<pre>{
+	"$type": "RPG.GameCore.AdvSetAILeadWay",
+	"EntityInstanceID": {
+		"FixedValue": {
+			"Value": 400001
+		}
+	},
+	"PathwayGroupID": 80,
+	"PathwayID": 2,
+	"MotionFlag": "Walk",
+	"WaitForPlayer": true,
+	"ForcePlayerWalk": true,
+	"OnReach": [
+		{
+			"$type": "RPG.GameCore.TriggerGroupEvent",
+			"EventName": {
+				"Value": "Event_103030209_run"
+			}
+		}
+	]
+}</pre>
 {{Dialogue End}}
 
 ===Speak with the administrator and collect Aideen Tokens{{subst:void|<!--103030210-->}}===
 {{Mission Description|type=trailblaze|location=Golden Hour|update|Firefly continues to lead you through the various tourist hotspots in the area &mdash; She suggests you try out the various amusement facilities in Aideen Park. In order to do this, you will need to collect Aideen Tokens from the administrator here.}}
 {{Dialogue Start}}
 :{{tx}}
+:{{A|VO chapter3 2 firefly 188 m.ogg}} {{A|VO chapter3 2 firefly 188 f.ogg}} '''Firefly:''' Hi, there. This is my friend's first visit to Penacony. May I get some Aideen Tokens for {{MC|m=him|f=her}}?
+:{{A|VO chapter3 2 administratorA 101.ogg}} '''Admin:''' Of course. Please show me your Dreamscape Pass.
+:{{A|VO chapter3 2 administratorA 102 m.ogg}} {{A|VO chapter3 2 administratorA 102 f.ogg}} '''Admin:''' Name&mdash; (Trailblazer)... Here's your Dreamscape Pass and tokens &mdash; be sure to keep a good hold of them! Have a good time!
+:{{A|VO chapter3 2 firefly 189.ogg}} '''Firefly:''' How many tokens are there?
+:{{A|VO chapter3 2 administratorA 103.ogg}} '''Admin:''' Ten. You may now enjoy the attractions in Penacony to the fullest.
+:{{A|VO chapter3 2 firefly 190 m.ogg}} {{A|VO chapter3 2 firefly 190 f.ogg}} '''Firefly:''' Thanks! (Trailblazer), let's try out some of the games nearby. Our goal is to use all the tokens!
+:{{DIcon|Arrow}} Let's live it to the fullest!
+::{{A|VO chapter3 2 firefly 191.ogg}} '''Firefly:''' Let's do it!
+:{{DIcon|Arrow}} That's a lot of pressure...
+::{{A|VO chapter3 2 firefly 192.ogg}} '''Firefly:''' Not at all! You're going to lose &mdash; I mean &mdash; spend all of them in no time once you start playing! Just try it and you'll see!
+:{{tx}}
 {{Dialogue End}}
 
 ===Spend all of your tokens{{subst:void|<!--103030211-->}}===
 {{Mission Description|type=trailblaze|location=Golden Hour|update|Firefly continues to lead you through the various tourist hotspots in the area &mdash; She suggests you try out the various amusement facilities in Aideen Park. You have collected plenty of tokens, so it's time to play to your heart's content!<br />Of course, if you get bored with the games, you can find Firefly and rest with her for a while.}}
 {{Dialogue Start}}
-:{{tx}}
+
+:{{A|VO chapter3 2 firefly 193.ogg}} '''Firefly:''' Let me see which one we should try first...
+:{{A|VO chapter3 2 firefly 194.ogg}} '''Firefly:''' Since this is your first time here, I say we start with the easiest games. The Dreamy Slots and Lucky Wheel are pretty straightforward.
+
+<pre>{
+	"$type": "RPG.GameCore.PlayVoice",
+	"VoiceIDs": [
+		103031803
+	],
+	"IntervalTime": 0
+}</pre>
+:<!--2-second delay-->
+<pre>{
+	"$type": "RPG.GameCore.AdvSetAIMoveTo",
+	"EntityInstanceID": {
+		"FixedValue": {
+			"Value": 400001
+		}
+	},
+	"GroupId": 100,
+	"PointID": 1,
+	"MotionFlag": "Run",
+	"AlignRotation": true,
+	"OnReach": [
+		{
+			"$type": "RPG.GameCore.TriggerCustomString",
+			"CustomString": {
+				"Value": "Talk_103030212"
+			}
+		}
+	]
+}</pre>
 {{Dialogue End}}
 
 ===Speak with Firefly and bring the sightseeing to an end{{subst:void|<!--103030216-->}}===
 {{Dialogue Start}}
+
+;(Talk to Firefly)
+:{{A|VO chapter3 2 firefly 200 m.ogg}} {{A|VO chapter3 2 firefly 200 f.ogg}} '''Firefly:''' Did you have fun, (Trailblazer)?
+:{{A|VO chapter3 2 firefly 201.ogg}} '''Firefly:''' Penacony's Golden Hour is pretty amazing, isn't it?
+:{{DIcon|Arrow}} It's nice. Everywhere is just magical.
+::{{A|VO chapter3 2 firefly 202.ogg}} '''Firefly:''' I know, right? It's a dream that's loving and forgiving to everyone, just like The Family.
+::You sound a bit sad...?
+::{{A|VO chapter3 2 firefly 203.ogg}} '''Firefly:''' I'm not sad. It's just that... this dream is so loving and forgiving.
+::It's alright. I've seen better places on other worlds.
+:{{DIcon|Arrow}} You sound a bit sad...?
+::{{A|VO chapter3 2 firefly 203.ogg}} '''Firefly:''' I'm not sad. It's just that... this dream is so loving and forgiving.
+::It's alright. I've seen better places on other worlds.
+:{{DIcon|Arrow}} It's alright. I've seen better places on other worlds.
+:{{A|VO chapter3 2 firefly 204.ogg}} '''Firefly:''' I'm not surprised to hear that from a Nameless. If you ask me, I'd say it was the unity of The Family that brought this dream into existence &mdash; and the dream has become just as loving and forgiving as The Family.
+:{{A|VO chapter3 2 firefly 205.ogg}} '''Firefly:''' It's vast and deep like an ocean. Even the humblest people can find solace here.
+:{{A|VO chapter3 2 firefly 206.ogg}} '''Firefly:''' ...I really appreciate your help earlier today &mdash; that's why I took the chance to introduce this beautiful place to you. It was willing to accept me, even though I didn't belong here. I've grown very fond of this place, and that makes me want to... share it with others.
+:{{DIcon|Arrow}} Aren't you a local?
+::{{A|VO chapter3 2 firefly 207.ogg}} '''Firefly:''' I am... At least for now...
+::You shouldn't attach your feelings to stuff like this.
+::{{A|VO chapter3 2 firefly 208.ogg}} '''Firefly:''' You're right... But when people have nothing to rely on, they always seek out things to find comfort in.
+::Are you... really a stowaway?
+:{{DIcon|Arrow}} You shouldn't attach your feelings to stuff like this.
+::{{A|VO chapter3 2 firefly 208.ogg}} '''Firefly:''' You're right... But when people have nothing to rely on, they always seek out things to find comfort in.
+::Are you... really a stowaway?
+:{{DIcon|Arrow}} Are you... really a stowaway?
+:{{A|VO chapter3 2 firefly 209.ogg}} '''Firefly:''' I... I'm a lawful resident... at least now I am...
+:{{A|VO chapter3 2 firefly 210 m.ogg}} {{A|VO chapter3 2 firefly 210 f.ogg}} '''Firefly:''' (Trailblazer), could you come closer? Closer, please. I have a question for you...
+:{{tx}}
+<pre>{
+	"$type": "RPG.GameCore.PlayVoice",
+	"VoiceIDs": [
+		103031805
+	]
+}</pre>
+
+
+;(Talk to Firefly)
+:{{A|VO chapter3 2 firefly 198.ogg}} '''Firefly:''' What do you say? Ready to call it a day?
+:{{A|VO chapter3 2 firefly 199.ogg}} '''Firefly:''' I'm a bit tired too. Let's sit down at the snack bar for a while.
+:{{A|VO chapter3 2 firefly 200 m.ogg}} {{A|VO chapter3 2 firefly 200 f.ogg}} '''Firefly:''' Did you have fun, (Trailblazer)?
+:{{A|VO chapter3 2 firefly 201.ogg}} '''Firefly:''' Penacony's Golden Hour is pretty amazing, isn't it?
+:{{DIcon|Arrow}} It's nice. Everywhere is just magical.
+::{{A|VO chapter3 2 firefly 202.ogg}} '''Firefly:''' I know, right? It's a dream that's loving and forgiving to everyone, just like The Family.
+::You sound a bit sad...?
+::{{A|VO chapter3 2 firefly 203.ogg}} '''Firefly:''' I'm not sad. It's just that... this dream is so loving and forgiving.
+::It's alright. I've seen better places on other worlds.
+:{{DIcon|Arrow}} You sound a bit sad...?
+::{{A|VO chapter3 2 firefly 203.ogg}} '''Firefly:''' I'm not sad. It's just that... this dream is so loving and forgiving.
+::It's alright. I've seen better places on other worlds.
+:{{DIcon|Arrow}} It's alright. I've seen better places on other worlds.
+:{{A|VO chapter3 2 firefly 204.ogg}} '''Firefly:''' I'm not surprised to hear that from a Nameless. If you ask me, I'd say it was the unity of The Family that brought this dream into existence &mdash; and the dream has become just as loving and forgiving as The Family.
+:{{A|VO chapter3 2 firefly 205.ogg}} '''Firefly:''' It's vast and deep like an ocean. Even the humblest people can find solace here.
+:{{A|VO chapter3 2 firefly 206.ogg}} '''Firefly:''' ...I really appreciate your help earlier today &mdash; that's why I took the chance to introduce this beautiful place to you. It was willing to accept me, even though I didn't belong here. I've grown very fond of this place, and that makes me want to... share it with others.
+:{{DIcon|Arrow}} Aren't you a local?
+::{{A|VO chapter3 2 firefly 207.ogg}} '''Firefly:''' I am... At least for now...
+::You shouldn't attach your feelings to stuff like this.
+::{{A|VO chapter3 2 firefly 208.ogg}} '''Firefly:''' You're right... But when people have nothing to rely on, they always seek out things to find comfort in.
+::Are you... really a stowaway?
+:{{DIcon|Arrow}} You shouldn't attach your feelings to stuff like this.
+::{{A|VO chapter3 2 firefly 208.ogg}} '''Firefly:''' You're right... But when people have nothing to rely on, they always seek out things to find comfort in.
+::Are you... really a stowaway?
+:{{DIcon|Arrow}} Are you... really a stowaway?
+:{{A|VO chapter3 2 firefly 209.ogg}} '''Firefly:''' I... I'm a lawful resident... at least now I am...
+:{{A|VO chapter3 2 firefly 210 m.ogg}} {{A|VO chapter3 2 firefly 210 f.ogg}} '''Firefly:''' (Trailblazer), could you come closer? Closer, please. I have a question for you...
 :{{tx}}
 {{Dialogue End}}
 
 ===(Optional) Find Firefly and bring the sightseeing to an end{{subst:void|<!--103030215-->}}===
 {{Dialogue Start}}
+
+;(Talk to Firefly)
+:{{A|VO chapter3 2 firefly 198.ogg}} '''Firefly:''' What do you say? Ready to call it a day?
+:{{A|VO chapter3 2 firefly 199.ogg}} '''Firefly:''' I'm a bit tired too. Let's sit down at the snack bar for a while.
+:{{A|VO chapter3 2 firefly 200 m.ogg}} {{A|VO chapter3 2 firefly 200 f.ogg}} '''Firefly:''' Did you have fun, (Trailblazer)?
+:{{A|VO chapter3 2 firefly 201.ogg}} '''Firefly:''' Penacony's Golden Hour is pretty amazing, isn't it?
+:{{DIcon|Arrow}} It's nice. Everywhere is just magical.
+::{{A|VO chapter3 2 firefly 202.ogg}} '''Firefly:''' I know, right? It's a dream that's loving and forgiving to everyone, just like The Family.
+::You sound a bit sad...?
+::{{A|VO chapter3 2 firefly 203.ogg}} '''Firefly:''' I'm not sad. It's just that... this dream is so loving and forgiving.
+::It's alright. I've seen better places on other worlds.
+:{{DIcon|Arrow}} You sound a bit sad...?
+::{{A|VO chapter3 2 firefly 203.ogg}} '''Firefly:''' I'm not sad. It's just that... this dream is so loving and forgiving.
+::It's alright. I've seen better places on other worlds.
+:{{DIcon|Arrow}} It's alright. I've seen better places on other worlds.
+:{{A|VO chapter3 2 firefly 204.ogg}} '''Firefly:''' I'm not surprised to hear that from a Nameless. If you ask me, I'd say it was the unity of The Family that brought this dream into existence &mdash; and the dream has become just as loving and forgiving as The Family.
+:{{A|VO chapter3 2 firefly 205.ogg}} '''Firefly:''' It's vast and deep like an ocean. Even the humblest people can find solace here.
+:{{A|VO chapter3 2 firefly 206.ogg}} '''Firefly:''' ...I really appreciate your help earlier today &mdash; that's why I took the chance to introduce this beautiful place to you. It was willing to accept me, even though I didn't belong here. I've grown very fond of this place, and that makes me want to... share it with others.
+:{{DIcon|Arrow}} Aren't you a local?
+::{{A|VO chapter3 2 firefly 207.ogg}} '''Firefly:''' I am... At least for now...
+::You shouldn't attach your feelings to stuff like this.
+::{{A|VO chapter3 2 firefly 208.ogg}} '''Firefly:''' You're right... But when people have nothing to rely on, they always seek out things to find comfort in.
+::Are you... really a stowaway?
+:{{DIcon|Arrow}} You shouldn't attach your feelings to stuff like this.
+::{{A|VO chapter3 2 firefly 208.ogg}} '''Firefly:''' You're right... But when people have nothing to rely on, they always seek out things to find comfort in.
+::Are you... really a stowaway?
+:{{DIcon|Arrow}} Are you... really a stowaway?
+:{{A|VO chapter3 2 firefly 209.ogg}} '''Firefly:''' I... I'm a lawful resident... at least now I am...
+:{{A|VO chapter3 2 firefly 210 m.ogg}} {{A|VO chapter3 2 firefly 210 f.ogg}} '''Firefly:''' (Trailblazer), could you come closer? Closer, please. I have a question for you...
 :{{tx}}
+
+;(Obtain {{Item||20|x=2}})
+:{{A|VO chapter3 2 firefly 195.ogg}} '''Firefly:''' Wow! You won something on your first attempt! Impressive!
+;(Obtain {{Item||20|x=2}})
 {{Dialogue End}}
 
 ==Other Languages==

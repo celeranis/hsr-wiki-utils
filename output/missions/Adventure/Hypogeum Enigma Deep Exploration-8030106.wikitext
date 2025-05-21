@@ -38,18 +38,79 @@ PageTitle=#Hypogeum Enigma: Deep Exploration#
 ===Explore the remaining rooms{{subst:void|<!--803010601-->}}===
 {{Mission Description|type=adventure|location="Eternal Holy City" Okhema|Opening the door, you are greeted by the sight of countless other rooms... If you want to reach the vault at the very depths, you will have to dispel every single seal.}}
 {{Dialogue Start}}
+
+;(Talk to Damionis)
+;(If {{cx}}<!--during performance 504033001-->)
+::'''Damionis:''' Hello, esteemed outlander. Was that photo of Castrum Kremnos helpful to you?
+::{{DIcon|Arrow}} Immensely helpful!
+:::'''Damionis:''' That's good to hear. I've always felt somewhat guilty toward you, so knowing I've been able to help eases my mind.
+::{{DIcon|Arrow}} It's not a big deal.
+:::'''Damionis:''' In that case, I've always felt a certain guilt toward you. If there's anything you need help with, please don't hesitate to ask.
+::'''Damionis:''' Though Lady Aglaea has forbidden me from further exploring the world beyond the sky, my curiosity remains unabated. If you're interested, feel free to chat with me anytime.
+::'''Damionis:''' I'd be delighted to share my latest discoveries with you, esteemed outlander.
+;(If {{cx}}<!--not during performance 504033001-->)
+:<pre>{
+	"$type": "RPG.GameCore.PlayMultiVoiceTalk",
+	"TalkSentenceID": 504038101
+}</pre>
+
+;(Unused &mdash; OpenActivityUI)
+<pre>{
+	"$type": "RPG.GameCore.ShowUI",
+	"Name": "Ui.RaidCollection.FourthWorld.FourthWorldRaidCollectionMainPage"
+}</pre>
+----
 :{{tx}}
+<pre>{
+	"$type": "RPG.GameCore.OpenTreasureChallenge",
+	"RaidID": 41402,
+	"OnEnter": []
+}</pre>
 {{Dialogue End}}
 
 ===Share your progress with Damionis{{subst:void|<!--803010607-->}}===
 {{Mission Description|type=adventure|location="Eternal Holy City" Okhema|update|Opening the door, you are greeted by the sight of countless other rooms... If you want to reach the vault at the very depths, you will have to dispel every single seal...<br />You did it, you achieved the task that could rival counting every grain of sand in an hourglass! Now, it's time to show off your skills and take that treasure for yourself!}}
 {{Dialogue Start}}
+
+;(Talk to Damionis)
 :{{tx}}
+<pre>{
+	"$type": "RPG.GameCore.OpenTreasureChallenge",
+	"RaidID": 41402,
+	"OnEnter": []
+}</pre>
 {{Dialogue End}}
 
 ===Show your spoils to Damionis{{subst:void|<!--803010608-->}}===
 {{Mission Description|type=adventure|location="Eternal Holy City" Okhema|update|You did it, you achieved the task that could rival counting every grain of sand in an hourglass! Now, it's time to show off your skills and take that treasure for yourself!}}
 {{Dialogue Start}}
+----
+:You leave the hypogeum and reunite with Damionis again at a safe location.
+:'''Damionis:''' Well? Found anything?
+:{{DIcon|Arrow}} I discovered some artifacts in the hypogeum...
+:'''Damionis:''' Wait, really? C&mdash;Can I take a look at them...?
+:You show the Sabanians' legacy to him.
+:'''Damionis:''' ...How extraordinary. These are genuine pieces of ancient heritage, and this slab has been preserved surprisingly well. An exquisite relic indeed!
+:'''Damionis:''' I won't ask you to elaborate on what you have experienced. Keep these priceless treasures safe, for they're yours now.
+:'''Damionis:''' ...
+:'''Damionis:''' *sigh* I suddenly feel quite emotional when I look at these artifacts. After all, they are proof that good times never last.
+:'''Damionis:''' The optimistic and prosperous Golden Age cannot flourish endlessly, just as progress and advancement are never a guarantee... Even the holy city, once viewed by the masses as a beacon of hope, will also eventually succumb to the ravages of time.
+:'''Damionis:''' If the people of that time were to witness the state that we're in right now, they would probably gripe about how we're a bunch of "unworthy descendants," haha...
+:{{DIcon|Arrow}} At least you're still resisting the black tide.
+::'''Damionis:''' Indeed, the warriors fighting on the front lines, as well as all the citizens living in the city... Their hard work is plain to see.
+::'''Damionis:''' I hope that before the black tide descends upon us, there is still an opportunity for me to journey to the world beyond the sky, heh.
+::There's no need to put so much pressure on yourself... It might sour your ability to soar.
+::'''Damionis:''' Was that your attempt at a joke...? Heh, the way you choose to liven up the atmosphere is middling at best.
+::'''Damionis:''' And yet... I actually feel better now. Seeing as how there are more important things to accomplish, now's not the time to feel sad over grandiose dreams.
+::Living is the best! Long live life!
+:{{DIcon|Arrow}} There's no need to put so much pressure on yourself... It might sour your ability to soar.
+::'''Damionis:''' Was that your attempt at a joke...? Heh, the way you choose to liven up the atmosphere is middling at best.
+::'''Damionis:''' And yet... I actually feel better now. Seeing as how there are more important things to accomplish, now's not the time to feel sad over grandiose dreams.
+::Living is the best! Long live life!
+:{{DIcon|Arrow}} Living is the best! Long live life!
+:'''Damionis:''' Yes, at least we're still alive... That is an accomplishment in itself.
+:'''Damionis:''' I hope that before the black tide descends upon us, there is still an opportunity for me to journey to the world beyond the sky, heh.
+:'''Damionis:''' Anyway, you should take good care of these things. Perhaps they'll be even more valuable a century from now.
 :{{tx}}
 {{Dialogue End}}
 

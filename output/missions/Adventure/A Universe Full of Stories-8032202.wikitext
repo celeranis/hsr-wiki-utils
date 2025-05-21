@@ -33,12 +33,98 @@ PageTitle=#A Universe Full of Stories#
 -->
 ==Dialogue==
 {{Stub Dialogue}}
+<pre>{
+	"$type": "RPG.GameCore.SetFloorCustomFloatV2",
+	"Name": {
+		"Value": "FCV_AnniversaryCase"
+	},
+	"Value": {
+		"FixedValue": {
+			"Value": 2
+		}
+	}
+}</pre>
+;(Unused &mdash; ShowUI_G177)
+<pre>{
+	"$type": "RPG.GameCore.ShowUI",
+	"Name": "Ui.Activity.PlanetFes.GamePlay.Entrance.PlanetFesEntrancePage"
+}</pre>
+
+;(Unused &mdash; EnterDistrict_G180)
+----
+::{{tx}}
+::{{DIcon|Talk}} So all I have to do is play the game?
+:::{{tx}}
+::;(Return to previous option selection)
+::{{DIcon|Talk}} Why do you want to make this game?
+:::Why do you want to make this game?
+:::{{tx}}
+::;(Return to previous option selection)
+::{{DIcon|Arrow}} So how do I clear this game?
+:::'''Danksi:''' Um... in this version, you just need to {{Color|keyword|nobold=1|earn money and level up the venue}} to make the exhibition bustling. Should be easy for you~
+:::{{DIcon|Arrow}} Game on, again!
+:<pre>{
+	"$type": "RPG.GameCore.PerformanceEndSeq",
+	"BeforeCases": [
+		{
+			"$type": "RPG.GameCore.SwitchCharacterAnchorV2",
+			"SwitchCharacterAnchorConfig": {
+				"IsLocalPlayer": true,
+				"CharacterUniqueName": "LocalPlayer",
+				"AreaName": {
+					"Value": "LevelArea_P10000_F10000003_G177"
+				},
+				"AnchorName": {
+					"Value": "Anchor1"
+				}
+			}
+		}
+	]
+}</pre>
+
+;(Talk to Himeko)
+:'''Himeko:''' If we can take this opportunity to restart the Trailblaze Ceremony, that'll be wonderful.
+
+;(Talk to Welt Yang)
+:'''Welt:''' It's been a while since I played this type of niche indie game. I hope it's not too difficult.
+
+;(Talk to Dan Heng)
+:'''Dan Heng:''' I don't dislike video games. Of course, I'm not exactly good at them either.
+
+;(Talk to Pom-Pom)
+:'''Pom-Pom:''' It's rare to receive such an interesting present in the Express, Pom-Pom thinks that it's unique.
 {{Dialogue End}}
 
 ===Share the news of clearing the stage with Danksi{{subst:void|<!--803220202-->}}===
 {{Mission Description|type=adventure|location=Party Car|update|''"For truth! For beauty! For art! Charge!"'' &mdash; C.C., an indie game developer, speaking at the Interstellar Game Expo.}}
 {{Dialogue Start}}
+
+;(Unused &mdash; EnterDistrict_G181)
 :{{tx}}
+:<pre>{
+	"$type": "RPG.GameCore.PerformanceEndSeq",
+	"BeforeCases": [
+		{
+			"$type": "RPG.GameCore.SwitchCharacterAnchorV2",
+			"SwitchCharacterAnchorConfig": {
+				"IsLocalPlayer": true,
+				"CharacterUniqueName": "LocalPlayer",
+				"AreaName": {
+					"Value": "LevelArea_P10000_F10000003_G177"
+				},
+				"AnchorName": {
+					"Value": "Anchor1"
+				}
+			}
+		}
+	]
+}</pre>
+:----
+:<pre>{
+	"$type": "RPG.GameCore.AddFinishMissionData_PlayMessage",
+	"SubmissionID": 803220202,
+	"MessageSectionID": 1312500
+}</pre>
 {{Dialogue End}}
 
 ==Other Languages==

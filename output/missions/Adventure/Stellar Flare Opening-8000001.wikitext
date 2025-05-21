@@ -35,24 +35,114 @@ PageTitle=#Stellar Flare: Opening#
 -->
 ==Dialogue==
 {{Stub Dialogue}}
+
+;(Talk to Grumpy)
+;(If {{cx}}<!--SubMission Finish: 800000205--> and {{cx}}<!--SubMission Finish: 800000104-->)
+::'''Grumpy:''' Are you still in the space station, (Trailblazer)?
+::'''Grumpy:''' Thanks to the test data from you, I can finally submit my report to Miss Shiling... You might not realize this, but it's really important to me... I don't want to get kicked out of the Department of Implement Arts before my probation ends.
+::'''Grumpy:''' Oh yeah, that's right &mdash; there's more than one stage in Stellar Flare, and each stage has three difficulty levels. If you want, you can keep playing it.
+::'''Grumpy:''' I saved the installation package onto your mobile device &mdash; or you can just keep using this testing terminal next to me. Hope you have lots of fun playing...
+;(Otherwise, if {{cx}}<!--SubMission Finish: 800000104--> and {{cx}}<!--SubMission Finish: 800000204-->)
+::'''Grumpy:''' Are you still in the space station, (Trailblazer)?
+::'''Grumpy:''' Thanks to the test data from you, I can finally submit my report to Miss Shiling... You might not realize this, but it's really important to me... I don't want to get kicked out of the Department of Implement Arts before my probation ends.
+::'''Grumpy:''' Oh yeah, that's right &mdash; there's more than one stage in Stellar Flare, and each stage has three difficulty levels. If you want, you can keep playing it.
+::'''Grumpy:''' I saved the installation package onto your mobile device &mdash; or you can just keep using this testing terminal next to me. Hope you have lots of fun playing...
+;(Otherwise, if {{cx}}<!--SubMission Finish: 800000104-->)
+::'''Grumpy:''' Are you still in the space station, (Trailblazer)?
+::'''Grumpy:''' Thanks to the test data from you, I can finally submit my report to Miss Shiling... You might not realize this, but it's really important to me... I don't want to get kicked out of the Department of Implement Arts before my probation ends.
+::'''Grumpy:''' Oh yeah, that's right &mdash; there's more than one stage in Stellar Flare, and each stage has three difficulty levels. If you want, you can keep playing it.
+::'''Grumpy:''' I saved the installation package onto your mobile device &mdash; or you can just keep using this testing terminal next to me. Hope you have lots of fun playing...
+;(Otherwise, if {{cx}}<!--SubMission Finish: 800000203-->)
+::'''Grumpy:''' What's up, (Trailblazer)? Have you had a go at Stellar Flare?
+;(Otherwise)
+::'''Grumpy:''' What's up, (Trailblazer)? Have you had a go at Stellar Flare?
+::{{DIcon|Arrow}} Not yet...
+::'''Grumpy:''' I see... Okay, take your time.
+::'''Grumpy:''' So long as I can meet the deadline for my report... Ah, it's no big deal. Please don't feel pressured...
+;(If {{cx}}<!--SubMission Finish: 800000102-->)
+<pre>{
+	"$type": "RPG.GameCore.ShowMenu",
+	"DisplaySingleMenuItem": true
+}</pre>
 {{Dialogue End}}
 
 ===Head to the space station and find Researcher Grumpy{{subst:void|<!--800000102-->}}===
 {{Mission Description|type=adventure|location=Master Control Zone|update|You receive a message from a researcher named Grumpy hoping to talk with you in the Herta Space Station.<br />According to past experiences, similar requests usually come with pretty considerable rewards... Go find her the next time you pass by the space station.}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Grumpy)
+----
+:{{DIcon|Arrow}} Grumpy?
+:'''Grumpy:''' ...Who are you?
+:'''Grumpy:''' Oh, if it isn't the famous (Trailblazer)? I'm sorry. I was immersed in my research and lost track of everything...
+:'''Grumpy:''' I didn't expect you to respond to my humble request... I'm incredibly grateful!
+:{{DIcon|Arrow}} I'll never miss a patch update.
+::'''Grumpy:''' Patch... update? No wonder you're the savior of the space station. You are speaking in jargon that I can only dream of understanding...
+:{{DIcon|Arrow}} Helping people is in my nature.
+::'''Grumpy:''' Thank you so much... Don't worry, I'll have a few small tokens of appreciation for you.
+:'''Grumpy:''' First, allow me to introduce myself &mdash; my name is Grumpy, and I'm a Level 1 researcher at the Department of Implement Arts.
+:'''Grumpy:''' I just moved aboard the space station, so I'm still getting used to this place... I don't suppose you know Miss Wen Shiling, my tutor?
+:'''Grumpy:''' Miss Shiling... How should I put this? She's a great person. It's just... she's not the best at mentoring. You basically have to rely on your own wits to get some direction if you're working under her...
+:{{DIcon|Arrow}} Office politics? That's my forte.
+:{{DIcon|Arrow}} I'd like to hear the main point...
+:'''Grumpy:''' ...Ahem, sorry about that. I shouldn't have told you all that. In a nutshell, Miss Shiling threw me a set of weird simulation software and asked me to test them.
+:'''Grumpy:''' At first, I thought she gave me some junk software that can be found all over the place &mdash; the kind where you've got no idea who's developed it. It's probably riddled with bugs and keeps crashing every few seconds. But actually...
+:'''Grumpy:''' ...It was a complete and logically-consistent battle simulator, and the developer even gave it an official name: Stellar Flare.
+:'''Grumpy:''' That makes things a bit hard for me... If it was some tacky half-baked software, then I'd only need to spend an afternoon running some simple tests for a two-page report before handing it over.
+:'''Grumpy:''' But this is a genuine combat simulator... I can't master it on my own. My report is due next week, but I've made no progress at all... So I'm really hoping you can help in any way at all.
+:{{DIcon|Arrow}} Have you asked Herta for help?
+::'''Grumpy:''' ...Miss Herta? No no no, how could a small fry like me go to her with something like this...
+:{{DIcon|Arrow}} Have you asked Asta for help?
+::'''Grumpy:''' ...The lead researcher? No no no, how could a small fry like me go to her with something like this...
+:{{DIcon|Arrow}} Have you asked that guard over there for help?
+::'''Grumpy:''' ...No way. He has his own job, and he can't skip his work just to help me with something personal...
+:'''Grumpy:''' Anyway, since you're here... Can I trouble you to take a moment and have a look at this "Stellar Flare" for me?
+:'''Grumpy:''' This simulator has lots of stages, and the developer even split each stage into three difficulty levels. But even the easiest mode... is far too much for me.
+:'''Grumpy:''' But for an experienced Trailblazer like yourself, this kind of simulation should be a walk in the park, right? I installed Stellar Flare in the terminal right over there... It should be on the desk.
+:'''Grumpy:''' My performance appraisal is all on you, (Trailblazer)...
+
+:{{DIcon|Fight Club}} Initiate Stellar Flare
+;(If {{cx}}<!--SubMission Finish: 800000208-->)
+::<!--0.5-second delay-->
+:<pre>{
+	"$type": "RPG.GameCore.ShowUI",
+	"Name": "Ui.Activity.FightActivity.FightActivityPage"
+}</pre>
+;(Otherwise)
 {{Dialogue End}}
 
 ===Attempt to clear the Stellar Flare challenge{{subst:void|<!--800000103-->}}===
 {{Mission Description|type=adventure|location=Master Control Zone|update|Researcher Grumpy wants your help in testing the battle simulation program called Stellar Flare.<br />Activate Stellar Flare and attempt the challenges within.}}
 {{Dialogue Start}}
-:{{tx}}
+
+
+:{{DIcon|Fight Club}} Initiate Stellar Flare
+;(If {{cx}}<!--SubMission Finish: 800000208-->)
+::<!--0.5-second delay-->
+:<pre>{
+	"$type": "RPG.GameCore.ShowUI",
+	"Name": "Ui.Activity.FightActivity.FightActivityPage"
+}</pre>
+;(Otherwise)
 {{Dialogue End}}
 
 ===Report the test result of Stellar Flare to Grumpy{{subst:void|<!--800000104-->}}===
 {{Mission Description|type=adventure|location=Master Control Zone|update|You complete the Stellar Flare testing at Grumpy's request without a hitch.<br />Talk to the researcher and soothe her anxiety.}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Grumpy)
+;(If {{cx}}<!--SubMission Finish: 800000203-->)
+::'''Grumpy:''' What's up, (Trailblazer)? Have you had a go at Stellar Flare?
+;(Otherwise)
+::'''Grumpy:''' What's up, (Trailblazer)? Have you had a go at Stellar Flare?
+::{{DIcon|Arrow}} Not yet...
+::'''Grumpy:''' I see... Okay, take your time.
+::'''Grumpy:''' So long as I can meet the deadline for my report... Ah, it's no big deal. Please don't feel pressured...
+;(If {{cx}}<!--SubMission Finish: 800000102-->)
+<pre>{
+	"$type": "RPG.GameCore.ShowMenu",
+	"DisplaySingleMenuItem": true
+}</pre>
 {{Dialogue End}}
 
 ==Other Languages==

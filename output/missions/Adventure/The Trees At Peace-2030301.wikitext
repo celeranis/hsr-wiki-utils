@@ -57,112 +57,377 @@ PageTitle=#The Trees At Peace#
 ===Talk to the old man at the Dream's Edge{{subst:void|<!--203030101-->}}===
 {{Mission Description|type=adventure|location=Dream's Edge|You encounter an old man with a profound gaze at the Dream's Edge.<br />Talk with him and learn about his experiences.}}
 {{Dialogue Start}}
-:{{tx}}
+
 {{Dialogue End}}
 
 ===Listen to what Clockie has to share{{subst:void|<!--203030102-->}}===
 {{Mission Description|type=adventure|location=Dream's Edge|update|You encounter an old man with a profound gaze at the Dream's Edge, but your discussion is harshly interrupted by the Bloodhound Family.<br />Clockie seems to have sensed something from the old man. Talk with him.}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Clockie)
+:'''Clockie:''' Tick tock! There's something fishy about that old man!
+:'''Clockie:''' Why is he alone here, and why is he being supervised... It's bothering me, tick tock!
+:{{DIcon|Arrow}} I think he's no ordinary guy.
+::'''Clockie:''' I feel the same way, too! No wonder you're my friend.
+:{{DIcon|Arrow}} Do you think I can beat that woman?
+::'''Clockie:''' Violence isn't always the best solution!
+:'''Clockie:''' I can sense that the old man is missing something! Tick tock, what a poor guy!
+:'''Clockie:''' How about we hide and wait for The Family people to leave so that we can help him? It's time for my Clockwork to do its trick!
+----
+<pre>{
+	"$type": "RPG.GameCore.TriggerSound"
+}</pre>
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:'''Moira:''' ...Stay away from Dr. Chadwick.
+:'''Moira:''' You shouldn't have been here in the first place. I advise you to behave yourself.
+----
 {{Dialogue End}}
 
 ===Complete Chadwick's Emo Dial{{subst:void|<!--203030104-->}}===
 {{Mission Description|type=adventure|location=Dream's Edge|update|You encounter an old man with a profound gaze at the Dream's Edge, but your discussion is harshly interrupted by the Bloodhound Family.<br />Clockie believes that the old man is lacking a certain mood. Help fix his lost emotions after the Bloodhound Family members leave.}}
 {{Dialogue Start}}
-:{{tx}}
 {{Dialogue End}}
 
 ===Talk to Chadwick{{subst:void|<!--203030105-->}}===
 {{Mission Description|type=adventure|location=Dream's Edge|update|You have helped the old man named Chadwick fix his missing mood pieces.<br />Now, you can have an uninterrupted talk with him.}}
 {{Dialogue Start}}
-:{{tx}}
 {{Dialogue End}}
 
 ===Send a message to Herta, telling her about Chadwick{{subst:void|<!--203030106-->}}===
 {{Mission Description|type=adventure|location=Dream's Edge|update|Surprisingly, the old man named Chadwick was once a member of the Genius Society. Why is he stranded at the Dream's Edge?<br />You decide to inform other members of the Society &mdash; the ones you know, that is &mdash; about Chadwick's situation.}}
 {{Dialogue Start}}
-:{{tx}}
+
+:'''(Trailblazer):''' (Chadwick from the Genius Society... I haven't heard of him before.)
+:'''(Trailblazer):''' (Let me text Herta and ask her about him.)
+<pre>{
+	"$type": "RPG.GameCore.PlayMessage",
+	"MessageSectionID": 1303500
+}</pre>
 {{Dialogue End}}
 
 ===Travel to the space station and talk to Herta{{subst:void|<!--203030107-->}}===
 {{Mission Description|type=adventure|location=Herta's Office|update|Surprisingly, the old man named Chadwick was once a member of the Genius Society. Why is he stranded at the Dream's Edge?<br />Herta is shocked by the news of his presence in Penacony and requests that you immediately head to the space station to discuss further information.}}
 {{Dialogue Start}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{tx}}
+:'''Herta:''' That was fast.
+:{{DIcon|Arrow}} How come Screwllum is here too?
+:{{DIcon|Arrow}} You've got a lot going on here...
+:'''Screwllum:''' It's been a while, {{MC|f=Madam|m=Sir}} (Trailblazer). I hope life is treating you well.
+:'''Herta:''' There's no time for pleasantries now, Screwy. Let's cut to the chase.
+:'''Screwllum:''' There's no rush, Herta. Assumption: If Chadwick has been stuck in Penacony for tens of thousands of system hours, I think we can afford a couple of minutes to discuss the issue.
+:'''Herta:''' You can act all righteous as you want, but I can no longer wait! The *things* he is keeping are too valuable.
+:{{DIcon|Arrow}} I don't get it.
+::'''Herta:''' You wouldn't understand even if I explained it to you, but it isn't your fault. Not even many Genius Society members can comprehend this matter.
+::'''Herta:''' Oh, I've forgotten to tell you... Chadwick was indeed a member of the Genius Society back then.
+::So, are you saying that Chadwick was...
+:{{DIcon|Arrow}} So, are you saying that Chadwick was...
+:'''Herta:''' Right... He was indeed a member of the Genius Society back then.
+:'''Herta:''' That man is the real deal... Ahem, I mean, his research is very valuable.
+:'''Screwllum:''' Calderon Chadwick, Genius Society #79. His expertise includes solid-state physics, applied theory of imaginary numbers, and ballistics.
+:{{DIcon|Arrow}} His seat is higher than yours.
+::'''Herta:''' ...Our seats do not influence our statuses. You're not going to be able to rile me up with that.
+::Sounds impressive.
+:{{DIcon|Arrow}} Sounds impressive.
+:'''Screwllum:''' He is, for his groundbreaking achievements in his areas of specialization.
+:'''Screwllum:''' I've been traveling across the universe since the flame of life was ignited in my core. Throughout the long journey, I rarely met souls that truly deserved to be called a "genius."
+:'''Screwllum:''' Madam Herta is one of them, and so is Calderon Chadwick.
+:'''Herta:''' Thanks for throwing in a compliment for me.
+:'''Screwllum:''' I met Dr. Chadwick twice. Our first encounter happened when he was still young and ambitious, and the second was decades later. His situations in both meetings were starkly different.
+:'''Screwllum:''' Recollection: Dr. Chadwick once {{Color|keyword|nobold=1|asked for my help}}. He was about fifty at that time.
+:'''Screwllum:''' I agreed to help him at that time. Ever since then, I have never heard from him again. It was as if he had never existed in the universe at all.
+:'''Screwllum:''' Until Madam Herta received your text.
+:{{DIcon|Arrow}} He's alive, but his memory has been stripped away.
+:{{DIcon|Arrow}} He's being confined in Penacony.
+:'''Herta:''' The Family... Who knows what kind of scheme they are brewing? Screwy, what do you think we should do?
+:'''Screwllum:''' There are too many uncertainties surrounding this matter. For now, I'm unable to come up with a convincing solution based on the limited information.
+:'''Screwllum:''' Hypothesis: Dr. Chadwick offended The Family for some reason and was confined in the dreamscape as a result. Things still don't quite add up in this scenario.
+:'''Screwllum:''' As far as I know, Calderon Chadwick is not a long-life species. It has been decades since I was last in touch with him.
+:{{DIcon|Arrow}} Something is keeping him alive until now...
+:{{DIcon|Arrow}} This is getting more and more puzzling.
+:'''Screwllum:''' I'm afraid there's only one way to unravel the mystery.
+:'''Screwllum:''' I'd like to travel to Penacony myself and find a chance to visit Dr. Chadwick. {{MC|f=Madam|m=Sir}} (Trailblazer), would you like to join me?
+:{{DIcon|Arrow}} Let's set off right away. I can't wait to find out the truth.
+::'''Screwllum:''' I admire your excitement in the face of uncertainties.
+::It's my honor to travel with you!
+:{{DIcon|Arrow}} It's my honor to travel with you!
+:'''Screwllum:''' Likewise.
+:'''Screwllum:''' There is something I have to tell you before we go, {{MC|f=Madam|m=Sir}} (Trailblazer).
 :{{tx}}
 {{Dialogue End}}
 
 ===Go to the lobby of the hotel in reality and meet up with Screwllum{{subst:void|<!--203030108-->}}===
 {{Mission Description|type=adventure|location=The Reverie (Reality)|update|Surprisingly, the old man named Chadwick was once a member of the Genius Society. Why is he stranded at the Dream's Edge?<br />Screwllum decides to personally travel to Penacony to uncover the truth and invites you to meet at The Reverie.}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Screwllum)
+:'''Screwllum:''' You're finally here again, {{MC|f=Madam|m=Sir}} (Trailblazer).
+:{{DIcon|Arrow}} It's good to see you in person.
+::'''Screwllum:''' Each of our encounters bore an extraordinary significance, and for that I am grateful.
+:{{DIcon|Arrow}} You're so efficient.
+::'''Screwllum:''' Haha, I must praise the miracles brought to this universe by the Trailblaze!
+:'''Screwllum:''' It's been quite some time since I last came here. The lobby of The Reverie is still as extravagant as I remember.
+:'''Screwllum:''' Let's head to the reception and ask about Chadwick's whereabouts.
 {{Dialogue End}}
 
 ===Confront the Bloodhound Family{{subst:void|<!--203030109-->}}===
 {{Mission Description|type=adventure|location=The Reverie (Reality)|update|Screwllum joins you in the investigation of Chadwick's past.<br />However, the Bloodhound Family once again poses a hindrance. Find a way to convince them.}}
 {{Dialogue Start}}
+:<!--1-second delay-->
+:'''Screwllum:''' I've always regarded dreams with awe, hence I rarely frequent Penacony, that Planet of Festivities.
+:'''Screwllum:''' To me, the so-called sweet dreams are often saccharine and insincere, a stark contrast to the true shape of a dream.
+:'''Screwllum:''' I wonder, after immersing himself in the dreamscape for so long, is Dr. Chadwick doing well in the realm of reality?
+;(Unused &mdash; onreach)
 :{{tx}}
+::<!--1-second delay-->
+::'''Alley:''' Welcome to Penacony, {{MC|f=Miss|m=Mr.}} (Trailblazer). How can I help you?
+::'''Alley:''' I see you've brought a friend today...
+::'''Screwllum:''' My name is Screwllum, Madam. Please forgive me for coming here uninvited and without checking in. You should be able to see my name on the "Permanent VIP List" of The Family.
+::Alley's face twitches slightly upon hearing the name of Screwllum, but she is quick to compose herself. You really admire her professionalism.
+::'''Alley:''' Just a moment, Mr. Screwllum.
+::'''Alley:''' ...
+::'''Alley:''' Your name is indeed on the Permanent VIP List. Welcome back to Penacony, Mr. Screwllum! What can I do for you?
+::'''Screwllum:''' (Trailblazer) and I are here to visit a hotel guest here.
+::'''Screwllum:''' Dr. Calderon Chadwick. Could you arrange for us to meet? From what I know, he's been staying here for quite some time.
+::'''Alley:''' Calderon Chadwick... The name doesn't ring a bell to me, which is strange. Please bear with me while I check the system data...
+::'''???:''' That won't be necessary, Alley.
+::'''Moira:''' ...I'm sorry, gentlemen. Dr. Chadwick can't meet with visitors at the moment.
+::{{DIcon|Arrow}} It's you!
+:::'''Moira:''' I was lenient to you last time at the Dream's Edge. The same thing won't happen again.
+::{{DIcon|Arrow}} What if we insist on seeing him?
+::'''Moira:''' Count yourself lucky that Mr. Screwllum is with you, Dreamchaser. Otherwise...
+::'''Screwllum:''' Let's not escalate the situation. The Family wouldn't want to disturb the guests in the lobby, right?
+::'''Screwllum:''' To the best of my knowledge, Calderon Chadwick isn't a long-life species. And the last time I talked to him...
+::'''Screwllum:''' ...Was {{Color|keyword|nobold=1|two Amber Eras}} ago.
+::'''Screwllum:''' Question: By what means did The Family extend the lifespan of Calderon Chadwick? Has that means been approved by the Interastral Health Organization? Does it comply with the regulations of Penacony?
+::'''Moira:''' ...
+::'''Moira:''' I don't have the authority to answer your questions or allow unauthorized visits to Dr. Chadwick, sir... Please leave. There is no room for negotiation here.
+::'''Screwllum:''' Understood. Your action speaks of your loyalty to The Family.
+::'''Screwllum:''' Well, can I assume that you'd rather turn The Family against {{Rubi|Planet Screwllum|Intellitron PlanetIX}} just to uphold your principles, am I correct? Are you prepared to bear the consequences of being the enemy of the Genius Society?
+::{{DIcon|Arrow}} (Screwy... I've never seen this side of him.)
+::{{DIcon|Arrow}} (He's so intimidating all of a sudden...)
+::'''Moira:''' ...
+::{{tx}}
+::{{tx}}
 {{Dialogue End}}
 
 ===Head to Chadwick's room{{subst:void|<!--203030110-->}}===
 {{Mission Description|type=adventure|location=The Reverie (Reality)|update|Screwllum joins you in the investigation of Chadwick's past.<br />Thanks to Screwllum's negotiation, The Family has accepted your request to check Chadwick's room.}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Moira)
+<pre>{
+	"$type": "RPG.GameCore.PerformanceExtendEndBlack"
+}</pre>
+----
+:'''Moira:''' This is Dr. Chadwick's room.
+:'''Moira:''' The regulations prohibit the Bloodhounds from entering the hotel rooms without the guests' permission. So, I'll stay outside.
+:{{DIcon|Arrow}} Should I knock?
+::'''Moira:''' I don't think it's necessary.
+:{{DIcon|Arrow}} You guys have stringent regulations here.
+::'''Moira:''' The regulations are set by the head of our family.
+:'''Moira:''' I'm afraid Dr. Chadwick can't answer the door in his current state. Let me open it.
+:'''Moira:''' ...Come in.
+:'''Screwllum:''' Dr. Calderon Chadwick, sorry for showing up here all of a sudden. We hope you don't mind our unexpected visit.
+:'''Screwllum:''' After you, {{MC|f=Madam|m=Sir}} (Trailblazer).
+----
 {{Dialogue End}}
 
 ===Search for evidence of Chadwick's stay in the room{{subst:void|<!--203030103-->}}===
 {{Mission Description|type=adventure|location=The Reverie (Reality)|update|Screwllum joins you in the investigation of Chadwick's past.<br />Chadwick's room seems empty. Explore the area for any potential clues.}}
 {{Dialogue Start}}
-:{{tx}}
+
+
+;(Talk to Moira)
+:Moira stares daggers at you, and you can infer both angst and resignation in her eyes.
+:If Screwllum wasn't around, you guess she might just try to tear you apart right here and now.
 {{Dialogue End}}
 
 ===Discuss Screwllum's findings with him{{subst:void|<!--203030114-->}}===
 {{Mission Description|type=adventure|location=The Reverie (Reality)|update|Screwllum joins you in the investigation of Chadwick's past.<br />Screwllum has found something in the empty room. Talk to him to learn more.}}
 {{Dialogue Start}}
+
+;(Obtain {{Item|Medicine of Unknown Use|20|x=1}})
+
+;(Talk to Screwllum)
 :{{tx}}
+::'''Screwllum:''' If my assumptions hold...
+::{{DIcon|Arrow}} Where else can he hide?
+:::'''Screwllum:''' The secret is right in front of us.
+::{{DIcon|Arrow}} Has The Family taken us for a ride?
+:::'''Screwllum:''' No, that Bloodhound didn't lie. The secret is right in front of us.
+::{{tx}}
+::'''Screwllum:''' If my assumptions hold...
+::Where else can he hide?
+::'''Screwllum:''' The secret is right in front of us.
+::Has The Family taken us for a ride?
+::'''Screwllum:''' No, that Bloodhound didn't lie. The secret is right in front of us.
+::Screwllum reaches his hand slowly into the Dreampool...
+::...Gently, he scoops up a translucent bubble from the liquid. The moment the bubble leaves the surface of the liquid, it starts floating upward... until it is hovering in midair.
+::'''Screwllum:''' At last, we meet again, Dr. Calderon Chadwick.
+::{{DIcon|Arrow}} What do you mean?
+::{{DIcon|Arrow}} Is this bubble... Chadwick?
+::'''Screwllum:''' Deduction: The likelihood of Calderon Chadwick, as a short-life species, remaining alive to this day in a corporeal state is close to zero. As of now, no longevity technology has been able to extend the natural lifespan of a normal human by two Amber Eras.
+::'''Screwllum:''' On the other hand, The Family in Penacony has a deep understanding of memoria and its related technologies. Even though they can't sustain Chadwick's body, they could still extract the substance from the depths of his brain, allowing his consciousness to "survive."
+::{{DIcon|Arrow}} Can he even be considered to be alive?
+:::'''Screwllum:''' It depends on how you define "alive." Many in the galaxy opine that machines, which are made of cold, metallic chassis and veined by electric circuits, cannot be seen as lifeforms.
+:::It's immortality in a sense...
+::{{DIcon|Arrow}} It's immortality in a sense...
+::'''Screwllum:''' For sure, many wouldn't think this counts as being alive. It depends on each person's beliefs, religion, and way of thinking.
+::'''Screwllum:''' One question remains: Why would The Family go to such lengths to store Chadwick's memory here? What significance does his memory hold for them?
+::{{DIcon|Arrow}} Perhaps, they're concerned about that weapon you mentioned.
+::{{DIcon|Arrow}} Imaginary Pulse... That's the name, right?
+::'''Screwllum:''' I don't think The Family is capable of extracting any useful information from Chadwick's mind, {{MC|f=Madam|m=Sir}} (Trailblazer). It's because...
+::Screwllum hesitates and trails off after the sentence.
+::'''Screwllum:''' ...Let's talk about this elsewhere in case someone is listening to our conversation. The Bloodhounds have excellent hearing.
+::'''Screwllum:''' You have the right to learn the story in its entirety, {{MC|f=Madam|m=Sir}} (Trailblazer). If you hadn't informed Madam Herta of your discovery out of kindness, it cannot be said how long Chadwick would have been confined here.
+::'''Screwllum:''' So, I need a favor from you, {{MC|f=Madam|m=Sir}} (Trailblazer). I'd like you to pass something over to Dr. Calderon Chadwick for me in the dream.
+::'''Screwllum:''' I believe that thing will help him... come to his senses.
+::{{DIcon|Arrow}} What about you?
+::'''Screwllum:''' I'll negotiate with the upper echelons of The Family toward the aim of taking Chadwick's Memory Bubble with me.
+::{{tx}}
+:'''Screwllum:''' I'll negotiate with the upper echelons of The Family toward the aim of taking Chadwick's Memory Bubble with me.
+::'''Screwllum:''' Until then, I hope you'll learn the full story from Chadwick, including matters that happened before he went missing.
+::'''Screwllum:''' May you have a nice dream, {{MC|f=Madam|m=Sir}} (Trailblazer).
+:'''Screwllum:''' {{MC|f=Madam|m=Sir}} (Trailblazer), I think... I might know where Chadwick is.
+:'''Screwllum:''' Please come and take a look.
 {{Dialogue End}}
 
 ===Enter Chadwick's Emoscape{{subst:void|<!--203030116-->}}===
 {{Mission Description|type=adventure|location=Dream's Edge|update|Screwllum's keepsake seems to have awakened Chadwick's memories.<br />Use the Clockwork to enter his Emoscape and relive his experiences.}}
 {{Dialogue Start}}
-:{{tx}}
+
 {{Dialogue End}}
 
 ===Return to the Dream's Edge and awaken Chadwick's lost memories{{subst:void|<!--203030115-->}}===
 {{Mission Description|type=adventure|location=Dream's Edge|update|Chadwick's physical body has already vanished, leaving behind a cluster of Memory Bubbles.<br />Return to the Dream's Edge with Screwllum's keepsake to help Chadwick recall his forgotten past.}}
 {{Dialogue Start}}
-:{{tx}}
 {{Dialogue End}}
 
 ===Accept Screwllum's invitation and head to the space station{{subst:void|<!--203030117-->}}===
 {{Mission Description|type=adventure|location=Dream's Edge|update|Screwllum has convinced The Family and retrieved Chadwick's memories.<br />Return to the space station and bid farewell to Dr. Chadwick, accompanied by Screwllum and Herta.}}
 {{Dialogue Start}}
-:{{tx}}
+<pre>{
+	"$type": "RPG.GameCore.PlayMessage",
+	"MessageSectionID": 1303600
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.SaveMessage",
+	"MessageSectionID": 1303600
+}</pre>
 {{Dialogue End}}
 
 ===Talk to Screwllum and Herta{{subst:void|<!--203030118-->}}===
 {{Dialogue Start}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:'''Screwllum:''' Welcome back, {{MC|f=Madam|m=Sir}} (Trailblazer).
+:'''Screwllum:''' Two Amber Eras later, Dr. Chadwick is finally freed. He is now with us.
+:{{DIcon|Arrow}} Why is he in the dream?
+:{{DIcon|Arrow}} How did he end up like this?
+:'''Screwllum:''' What Dr. Chadwick dreaded the most became reality. After his demise, the IPC extracted the memoria in his brain with the advanced technology provided by the Garden of Recollection and sealed it in a Memory Bubble.
+:'''Screwllum:''' They must have prepared for it in advance, as the process took place right after his death, so fast that even his consciousness in his final moments was preserved...
+:'''Herta:''' ...That step alone wasn't enough, as the memoria preserved that way was, in essence, a stagnant pool. If it remained inactive for too long a time, what was in the water would eventually die out.
+:'''Screwllum:''' Therefore, the IPC came up with a solution &mdash; sending Chadwick to Penacony to maintain the activity of the memoria. Speculation: The Technology Department must have struck some sort of a deal with The Family.
+:'''Screwllum:''' Under The Family's supervision, Dr. Chadwick wandered in the dreamscape for two Amber Eras. If it weren't for you, {{MC|f=Madam|m=Sir}} (Trailblazer), their supervision would continue.
+:{{DIcon|Arrow}} What about now?
+::'''Screwllum:''' I think it's time for Dr. Chadwick to rest.
+::Now, he can rest.
+:{{DIcon|Arrow}} Now, he can rest.
+:'''Screwllum:''' I agree, {{MC|f=Madam|m=Sir}} (Trailblazer).
+:'''Herta:''' This is such a miracle. It's hard to believe he has managed to resist the IPC until now with what little consciousness remaining in his memoria... I was right about him back then.
 :{{tx}}
 {{Dialogue End}}
 
 ===Deactivate the first life support device{{subst:void|<!--203030119-->}}===
 {{Mission Description|type=adventure|location=Seclusion Zone|update|Under the watchful eyes of you, Screwllum, and Herta &mdash; Dr. Chadwick, who has endured external and mental struggles throughout his life, finally reaches a peaceful end.<br />Deactivate all the life support devices and send him on to his final journey.}}
 {{Dialogue Start}}
-:{{tx}}
+
+<pre>{
+	"$type": "RPG.GameCore.AdvSetupButtonListTrigger",
+	"TargetType": {
+		"$type": "RPG.GameCore.GroupFetchLocalTarget",
+		"TargetType": "Prop",
+		"Targets": [
+			300001
+		]
+	},
+	"TriggerName": "MissionTrigger",
+	"ButtonsByName": [],
+	"ButtonConfigs": [
+		{
+			"ID": "chufa1",
+			"IconType": "CheckIcon",
+			"ButtonText": {
+				"Value": "PropInteractTitle_1 "
+			}
+		}
+	]
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.AdvSetupButtonListTrigger",
+	"TargetType": {
+		"$type": "RPG.GameCore.GroupFetchLocalTarget",
+		"TargetType": "Prop",
+		"Targets": [
+			300001
+		]
+	},
+	"TriggerName": "MissionTrigger",
+	"ButtonsByName": [],
+	"ButtonConfigs": [
+		{
+			"ID": "chufa2",
+			"IconType": "CheckIcon",
+			"ButtonText": {
+				"Value": "PropInteractTitle_1 "
+			}
+		}
+	]
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.AdvSetupButtonListTrigger",
+	"TargetType": {
+		"$type": "RPG.GameCore.GroupFetchLocalTarget",
+		"TargetType": "Prop",
+		"Targets": [
+			300001
+		]
+	},
+	"TriggerName": "MissionTrigger",
+	"ButtonsByName": [],
+	"ButtonConfigs": [
+		{
+			"ID": "chufa3",
+			"IconType": "CheckIcon",
+			"ButtonText": {
+				"Value": "PropInteractTitle_1 "
+			}
+		}
+	]
+}</pre>
 {{Dialogue End}}
 
 ===Deactivate the second life support device{{subst:void|<!--203030120-->}}===
 {{Dialogue Start}}
-:{{tx}}
+
 {{Dialogue End}}
 
 ===Deactivate the third life support device{{subst:void|<!--203030121-->}}===
 {{Dialogue Start}}
-:{{tx}}
+
 {{Dialogue End}}
 
 ===Listen to Calderon Chadwick's last wish{{subst:void|<!--203030122-->}}===
 {{Mission Description|type=adventure|location=Seclusion Zone|update|Under the watchful eyes of you, Screwllum, and Herta &mdash; Dr. Chadwick, who has endured external and mental struggles throughout his life, finally reaches a peaceful end.<br />However, before the Ocean of Trees returns to complete tranquility, the genius still has something to say...}}
 {{Dialogue Start}}
-:{{tx}}
+
+
 {{Dialogue End}}
 
 ==Other Languages==

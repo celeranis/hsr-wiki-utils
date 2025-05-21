@@ -39,19 +39,77 @@ PageTitle=#Eye of the Storm#
 ===Leave and see what's going on outside{{subst:void|<!--100020104-->}}===
 {{Mission Description|type=trailblaze|location=Storage Zone|You move your gaze away from the unfamiliar ceiling and look at the variety of Curios around you. A woman's voice echoes in your head but you're in no position to confirm whether you can clearly remember it.<br />"When you have a chance to make a choice, make one that you know you won't regret..."<br />You decide to first listen to March 7th and Dan Heng, who had just left. At least they don't look like bad people.<br />Alright, now that there are companions, it's time to leave this place.}}
 {{Dialogue Start}}
-:{{tx}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{A|VO chapter0 2 mar7th 116.ogg}} '''March 7th:''' This place is full of fancy little gadgets &mdash; Herta's collection. I really don't get why she'd go out of her way to collect them and then leave them here to gather dust...
+:<!--25-second delay-->
+:{{A|VO chapter0 2 mar7th 118.ogg}} '''March 7th:''' Enough dilly-dallying, we gotta go.
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{A|VO chapter0 2 mar7th 119.ogg}} '''March 7th:''' Ah, it's the Antimatter Legion! So these crazy jerks made it all the way here... Watch this!
 {{Dialogue End}}
 
 ===Listen to March 7th and protect yourself{{subst:void|<!--100020106-->}}===
 {{Mission Description|type=trailblaze|location=Storage Zone|update|You keep thinking about what March 7th said: "The Legion are rampaging through the space station like a pack of wolves..." It seems like the road ahead is going to be a hard one.<br />You look at March 7th beside you and she nods at you with confidence.<br />You then look at the baseball bat in your hand, which is glowing as if also full of confidence.<br />You can do it too, give it a try!}}
 {{Dialogue Start}}
+:<!--1-second delay-->
+:{{A|VO chapter0 2 mar7th 120.ogg}} '''March 7th:''' You're stronger than you look... Seem to be quite the fighter.
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
 :{{tx}}
+----
+:{{A|VO chapter0 2 mar7th 121.ogg}} '''March 7th:''' So we'll take that elevator on the central platform to go down to the master control zone. Do you know the way?
+:{{A|VO chapter0 2 mar7th 122.ogg}} '''March 7th:''' Um, I notice that you're not wearing the space station staff uniform. Do you really work here?
+:{{DIcon|Arrow}} Yes.
+::{{A|VO chapter0 2 mar7th 123.ogg}} '''March 7th:''' ...Really? Feels like you're tricking me...
+:{{DIcon|Arrow}} I don't remember.
+::{{A|VO chapter0 2 mar7th 124.ogg}} '''March 7th:''' ...Memory loss, huh. You must've been injured.
+:{{DIcon|Arrow}} ...
+:{{A|VO chapter0 2 mar7th 125.ogg}} '''March 7th:''' ...Never mind. I won't ask if you don't wanna talk about it.
+:{{A|VO chapter0 2 mar7th 126.ogg}} '''March 7th:''' Let's go, I'll take you to the safe zone~
+----
 {{Dialogue End}}
 
 ===Go to the elevator in the central area{{subst:void|<!--100020131-->}}===
 {{Mission Description|type=trailblaze|location=Storage Zone|update|It would seem that the only way to the space station's master control zone is through the elevator &mdash; it doesn't seem to be too far.}}
 {{Dialogue Start}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+<pre>{
+	"$type": "RPG.GameCore.SetAudioEmotionState",
+	"StateName": "State_Bgm_E4",
+	"SubMissionID": 100020109
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.SetAudioEmotionState",
+	"StateName": "State_Esilence"
+}</pre>
 :{{tx}}
+:{{A|VO chapter0 2 mar7th 127.ogg}} '''March 7th:''' Ah. I knew it...
+:{{DIcon|Arrow}} It worked?
+::It worked?
+::{{A|VO chapter0 2 mar7th 128.ogg}} '''March 7th:''' Nah, I think the elevator's broken. I pressed all the buttons but nothing happened.
+:{{DIcon|Arrow}} It's broken?
+::It's broken?
+::{{A|VO chapter0 2 mar7th 129.ogg}} '''March 7th:''' &mdash;But it wasn't me! The Antimatter Legion must've broken it!
+::{{A|VO chapter0 2 mar7th 130.ogg}} '''March 7th:''' Too bad Dan Heng's not here. He's like a walking encyclopedia... He knows a ton of complicated stuff &mdash; maybe even elevator repair...
+::{{tx}}
+:<pre>{
+	"$type": "RPG.GameCore.SetAudioEmotionState",
+	"ResetToFloorDefault": true
+}</pre>
+:It's broken?
+:{{A|VO chapter0 2 mar7th 129.ogg}} '''March 7th:''' &mdash;But it wasn't me! The Antimatter Legion must've broken it!
+:{{A|VO chapter0 2 mar7th 130.ogg}} '''March 7th:''' Too bad Dan Heng's not here. He's like a walking encyclopedia... He knows a ton of complicated stuff &mdash; maybe even elevator repair...
+:{{tx}}
+<pre>{
+	"$type": "RPG.GameCore.SetAudioEmotionState",
+	"ResetToFloorDefault": true
+}</pre>
 {{Dialogue End}}
 
 ==Other Languages==

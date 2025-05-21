@@ -49,50 +49,270 @@ Mission Stranger in a Strange Land Caelus.png|Caelus
 ===Speak with Acheron{{subst:void|<!--103410901-->}}===
 {{Mission Description|type=trailblaze|location=Dreamflux Reef|Finally, the trailblazing expedition on Penacony has come to a preferable conclusion. It's time for a new adventure &mdash; but before that, the Crew would like to wish say a formal farewell to certain people.<br />Drawing a firm line under the stories of those who passed is the best form of comfort. Go on, then &mdash; they're all at the Dreamflux Reef... right here.}}
 {{Dialogue Start}}
+:{{A|VO chapter3 31 acheron 101.ogg}} '''Acheron:''' When I arrived, I happened to see a child holding it. He said the flowers were prepared by Aunt Jessie, for the Watchmaker, and the war comrade he'd missed his whole life.
+:{{A|VO chapter3 31 acheron 102.ogg}} '''Acheron:''' Mikhail would place two bunches of flowers here year after year. And, after he left, it became three.
+:{{A|VO chapter3 31 acheron 103.ogg}} '''Acheron:''' Your wishes will always be remembered by someone.
+:{{A|VO chapter3 31 acheron 104.ogg}} '''Acheron:''' Now, Penacony as you hoped, has welcomed the dawn after a long, dark night. The path forward may not be a bed of roses, but at least people are prepared to step forth towards freedom.
+:{{A|VO chapter3 31 acheron 105.ogg}} '''Acheron:''' Tiernan, you can go home now.
+:{{A|VO chapter3 31 acheron 106.ogg}} '''Acheron:''' While the Nameless are also preparing for the next stop of their voyage.
+:{{A|VO chapter3 31 himeko 101.ogg}} '''Himeko:''' But before leaving, we still have one last thing to do.
+:{{DIcon|Arrow}} To say goodbye to you.
+:{{DIcon|Arrow}} We've come to say goodbye to Gallagher.
+:{{DIcon|Arrow}} We've come to say goodbye to the old Nameless.
 :{{tx}}
+:{{tx}}
+
+;(Talk to Acheron)
+:{{A|VO chapter3 31 acheron 111.ogg}} '''Acheron:''' A fitting end to the tale of the departed &mdash; one could not ask for a better farewell. Go on, they're all here.
 {{Dialogue End}}
 
 ===Say goodbye to Tiernan and Razalina{{subst:void|<!--103410902-->}}===
 {{Dialogue Start}}
-:{{tx}}
+
+
 {{Dialogue End}}
 
 ===Say goodbye to Micah{{subst:void|<!--103410903-->}}===
 {{Dialogue Start}}
+
+
+;(Talk to Micah)
+:{{A|VO chapter3 31 micah 101.ogg}} '''Micah:''' Is the Astral Express ready to depart Penacony?
+:{{A|VO chapter3 31 welt 101.ogg}} '''Welt:''' Apologies, Mr. Micah, that we are only now bidding you farewell.
+:{{A|VO chapter3 31 micah 102.ogg}} '''Micah:''' Oh, that's alright. You've all done so much for the Watchmaker, and we are forever indebted. Allow me, as the representative of Dreamflux Reef, to make another toast to all the Nameless.
+:{{A|VO chapter3 31 welt 102.ogg}} '''Welt:''' What will the people of Dreamflux Reef do now?
+:{{A|VO chapter3 31 micah 103.ogg}} '''Micah:''' Many will continue to live here. Those accustomed to being awake will mostly have a hard time getting used to a life of darkness with their eyes closed. Though the Order has faded, there must be someone to watch over this primal Memory Zone.
+:{{A|VO chapter3 31 micah 104.ogg}} '''Micah:''' Penacony's nights are long, and there are many who are still far from a good night's sleep. As for the sweet dream over there...
+:{{A|VO chapter3 31 micah 105.ogg}} '''Micah:''' We're still managing without it, aren't we?
+:{{DIcon|Arrow}} A toast.
+<pre>{
+	"$type": "RPG.GameCore.TalkFigure",
+	"ImagePath": "SpriteOutput/Mission/TalkItem/SubMission_140490.png"
+}</pre>
+:<!--2-second delay-->
+<pre>{
+	"$type": "RPG.GameCore.TalkFigure",
+	"Show": false,
+	"ImagePath": "SpriteOutput/Mission/TalkItem/SubMission_140490.png"
+}</pre>
 :{{tx}}
+<pre>{
+	"$type": "RPG.GameCore.SetPerformanceResult",
+	"Value": 2
+}</pre>
 {{Dialogue End}}
 
 ===Say goodbye to Gallagher{{subst:void|<!--103410904-->}}===
 {{Dialogue Start}}
-:{{tx}}
+
+
 {{Dialogue End}}
 
 ===Say goodbye to Mikhail{{subst:void|<!--103410905-->}}===
 {{Dialogue Start}}
+
+
+
+:{{DIcon|Loupe}} Investigate
+:{{A|VO chapter3 31 mar7th 110.ogg}} '''March 7th:''' ...If we ever meet again, please don't talk in riddles.
+:{{A|VO chapter3 31 mar7th 111.ogg}} '''March 7th:''' With that, our duty as Nameless should be complete... right?
+:{{A|VO chapter3 31 danheng 106.ogg}} '''Dan Heng:''' The Trailblaze can illuminate the way, but ultimately, the future of a world belongs to those who live in it.
+:{{A|VO chapter3 31 mar7th 112.ogg}} '''March 7th:''' ...
+:{{A|VO chapter3 31 mar7th 113.ogg}} '''March 7th:''' ...I still feel that Mr. Mikhail must have really wanted to witness this day himself.
+:{{A|VO chapter3 31 himeko 111.ogg}} '''Himeko:''' What's on your mind, March?
+:{{A|VO chapter3 31 mar7th 114.ogg}} '''March 7th:''' Just a strange feeling. I had it a few stops ago, but it's super strong this time.
+:{{A|VO chapter3 31 welt 105.ogg}} '''Welt:''' Why not talk about it? Maybe everyone's thinking the same thing?
+:{{A|VO chapter3 31 mar7th 115.ogg}} '''March 7th:''' ...I can't help but think that whether it's Mr. Mikhail, Mr. Tiernan, or Madam Razalina, their lives must have been long, and they must have experienced plenty of stories...
+:{{A|VO chapter3 31 mar7th 116.ogg}} '''March 7th:''' They were also young once, stumbling and bumbling around just like us, getting into scraps and mischief, that sort of stuff. Companions, enemies, journeys, adventures, all the sad and happy memories... The "every day" that we're used to, they've lived through them too.
+:{{A|VO chapter3 31 mar7th 117.ogg}} '''March 7th:''' But those things... are all in the past.
+:{{DIcon|Arrow}} Time will wash everything away, so treasure the present.
+::{{A|VO chapter3 31 mar7th 118.ogg}} '''March 7th:''' I know, but the thing that I can't get out of my mind... is the present.
+::One day, our stories will also be a part of the past.
+::{{A|VO chapter3 31 mar7th 119.ogg}} '''March 7th:''' Yeah, maybe that's the precise thing I can't let go of...
+::You're awfully sentimental today...
+:{{DIcon|Arrow}} One day, our stories will also be a part of the past.
+::{{A|VO chapter3 31 mar7th 119.ogg}} '''March 7th:''' Yeah, maybe that's the precise thing I can't let go of...
+::You're awfully sentimental today...
+:{{DIcon|Arrow}} You're awfully sentimental today...
+:{{A|VO chapter3 31 mar7th 120.ogg}} '''March 7th:''' It's rare that I'm this serious, can't you just humor me for once? Sheesh!
+:{{A|VO chapter3 31 mar7th 121.ogg}} '''March 7th:''' It'll be easier to understand if I use an analogy: Like when you're reading a book, if one of its characters keeps running into obstacles, and experiences an ending full of regrets, we're bound to feel a bit mixed about it, right?
+:{{DIcon|Arrow}} I could understand, but I'd feel mixed too.
+::{{A|VO chapter3 31 mar7th 122.ogg}} '''March 7th:''' Because we've seen every nook and cranny of their lives, we see these people as special.
+::No matter what, that's very hard to accept.
+::{{A|VO chapter3 31 mar7th 123.ogg}} '''March 7th:''' Because we've seen every nook and cranny of their lives, we see these people as special.
+::You won't be affected as long as you don't live vicariously through them.
+:{{DIcon|Arrow}} No matter what, that's very hard to accept.
+::{{A|VO chapter3 31 mar7th 123.ogg}} '''March 7th:''' Because we've seen every nook and cranny of their lives, we see these people as special.
+::You won't be affected as long as you don't live vicariously through them.
+:{{DIcon|Arrow}} You won't be affected as long as you don't live vicariously through them.
+:{{A|VO chapter3 31 mar7th 124.ogg}} '''March 7th:''' To me, it's because we've seen every nook and cranny of their lives, we see these people as special.
+:{{A|VO chapter3 31 mar7th 125.ogg}} '''March 7th:''' So even if there are parts of it that aren't really realistic nor logical, we still hope that their story gets a good ending when it comes.
 :{{tx}}
 {{Dialogue End}}
 
 ===(Optional) Say goodbye to Acheron{{subst:void|<!--103410906-->}}===
 {{Dialogue Start}}
+
+
+;(Talk to Acheron)
 :{{tx}}
+:{{DIcon|Talk}} Who exactly are you?
+::{{A|VO chapter3 31 acheron 113.ogg}} '''Acheron:''' Come to think of it, I didn't even get a chance to formally introduce myself...
+::{{tx}}
+:;(Return to previous option selection)
+:{{DIcon|Talk}} Will we meet again?
+::{{A|VO chapter3 31 acheron 117.ogg}} '''Acheron:''' The ocean of stars is vast, and given our destinations, I'm afraid our paths may not cross again.
+::{{tx}}
+:;(Return to previous option selection)
+:{{DIcon|Talk}} Have we ever met before?
+::{{A|VO chapter3 31 acheron 119.ogg}} '''Acheron:''' Ah... In that case, I must apologize for my rudeness. Do you remember when we first met? I once said you reminded me of an acquaintance.
+::{{A|VO chapter3 31 acheron 120.ogg}} '''Acheron:''' Because of the Self-Annihilator's curse, my memories are stripped away, blurring my past. And after our journey together, what I originally thought were familiar feelings were merely illusions... I believe this was truly our first meeting.
+::With this as our first meeting, we can consider our next meeting to be a reunion.
+::{{A|VO chapter3 31 acheron 121.ogg}} '''Acheron:''' That's right. What matters more is not who I am but what we have done together. This story... will be forever etched in my heart.
+::{{DIcon|Arrow}} What if... that wasn't an illusion?
+:::{{A|VO chapter3 31 acheron 122.ogg}} '''Acheron:''' What do you mean? It's improbable that you've crossed paths with my past self... What I mean is, there is nothing left to retrace there &mdash; only Nihility.
+:::Regardless of the significance, we live in the present
+:::{{A|VO chapter3 31 acheron 123.ogg}} '''Acheron:''' That is true. Our memories make us who we are, and all memories originate from the "now." As for the future... it's already taking root in the now, isn't it?
+:::{{DIcon|Arrow}} I think I might've seen... someone like you.
+::::{{A|VO chapter3 31 acheron 124.ogg}} '''Acheron:''' I see... You've also had a similar experience? Then you should know that this me and your memory of me are not the same person.
+::::{{DIcon|Arrow}} {{Color|#ff3a|But some things will never change.}}
+:::::{{A|VO chapter3 31 acheron 125.ogg}} '''Acheron:''' ...Haha.
+:::::{{tx}}
+::::<pre>{
+	"$type": "RPG.GameCore.SetPerformanceResult",
+	"Value": 1
+}</pre>
+::::{{DIcon|Return}} I understand. It's a feeling of longing.
+:::::{{A|VO chapter3 31 acheron 128.ogg}} '''Acheron:''' Yes, I understand. Cherish this moment, for it can help you remember the path you've traveled.
+:::::{{tx}}
+::::;(Return to previous option selection)
+:::{{DIcon|Return}} Regardless of the significance, we live in the present
+::::{{A|VO chapter3 31 acheron 123.ogg}} '''Acheron:''' That is true. Our memories make us who we are, and all memories originate from the "now." As for the future... it's already taking root in the now, isn't it?
+::::{{tx}}
+:::;(Return to previous option selection)
+::{{DIcon|Return}} With this as our first meeting, we can consider our next meeting to be a reunion.
+:::{{A|VO chapter3 31 acheron 121.ogg}} '''Acheron:''' That's right. What matters more is not who I am but what we have done together. This story... will be forever etched in my heart.
+:::{{tx}}
+::;(Return to previous option selection)
+:{{DIcon|Exit}} I should be on my way.
+::{{A|VO chapter3 31 acheron 129.ogg}} '''Acheron:''' We both still have our own paths to walk. So let's forge ahead. Hopefully, if we meet again... it'll be beneath clear skies.
+::{{tx}}
+:<pre>{
+	"$type": "RPG.GameCore.SetPerformanceResult",
+	"Value": 2
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.PerformanceEndSeq",
+	"Cases": [
+		{
+			"Case": 1,
+			"OnSuccess": [
+				{
+					"$type": "RPG.GameCore.SetMissionAudioState",
+					"SetBGMEmotionState": true,
+					"BGMEmotionStateName": "State_Bgm_E4"
+				},
+				{
+					"$type": "RPG.GameCore.TriggerPerformance",
+					"ValueSource": {},
+					"PerformanceType": "C",
+					"PerformanceID": 103410916
+				},
+				{
+					"$type": "RPG.GameCore.TriggerPerformance",
+					"ValueSource": {},
+					"PerformanceType": "D",
+					"PerformanceID": 103410917
+				},
+				{
+					"$type": "RPG.GameCore.TriggerCustomString",
+					"CustomString": {
+						"Value": "Talk_103410906"
+					}
+				},
+				{
+					"$type": "RPG.GameCore.TriggerCustomString",
+					"CustomString": {
+						"Value": "Talk_103410912"
+					}
+				}
+			]
+		},
+		{
+			"Case": 2,
+			"OnSuccess": [
+				{
+					"$type": "RPG.GameCore.TriggerCustomString",
+					"CustomString": {
+						"Value": "Talk_103410912"
+					}
+				}
+			]
+		}
+	]
+}</pre>
 {{Dialogue End}}
 
 ===Return to the Astral Express{{subst:void|<!--103410907-->}}===
 {{Mission Description|type=trailblaze|location=Parlor Car|update|Now that the dust has finally settled, a new trailblazing expedition is about to begin.<br />Go back to the Astral Express, collect your thoughts, and prepare yourself &mdash; for a new adventure.}}
 {{Dialogue Start}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{A|VO chapter3 31 pompom 101.ogg}} '''Pom-Pom:''' *sob*... *sniff*...
+:{{A|VO chapter3 31 mar7th 132.ogg}} '''March 7th:''' There there... Chin up, Pom-Pom! Don't be sad. Don't cry...
+:{{A|VO chapter3 31 danheng 108.ogg}} '''Dan Heng:''' Wow, your method of consolation is truly unsophisticated.
+:{{A|VO chapter3 31 mar7th 133.ogg}} '''March 7th:''' ...Still better than just standing there like a scarecrow!
+:{{DIcon|Arrow}} What happened?
+::{{A|VO chapter3 31 mar7th 134.ogg}} '''March 7th:''' Hey, you're finally back!
+::{{A|VO chapter3 31 mar7th 135.ogg}} '''March 7th:''' We told Pom-Pom all about our adventure, and... they suddenly started crying... I've never seen Pom-Pom so sad before...
+::Is March picking on Pom-Pom again?
+:{{DIcon|Arrow}} Is March picking on Pom-Pom again?
+:{{A|VO chapter3 31 mar7th 136.ogg}} '''March 7th:''' How could you say that! Don't be so mean. And while you're here, why don't you help me comfort Pom-Pom!
+:{{A|VO chapter3 31 mar7th 137.ogg}} '''March 7th:''' We told Pom-Pom all about our adventure, and... they suddenly started crying... I've never seen Pom-Pom so sad before...
+:{{A|VO chapter3 31 pompom 102.ogg}} '''Pom-Pom:''' *sob*... The con... conductor never cries! Pom-Pom... is never sad!
 :{{tx}}
 {{Dialogue End}}
 
 ===(Optional) Say goodbye to Acheron{{subst:void|<!--103410912-->}}===
 {{Mission Description|type=trailblaze|location=Dreamflux Reef|update|Finally, the trailblazing expedition on Penacony has come to a preferable conclusion. It's time for a new adventure &mdash; but before that, the Crew would like to wish say a formal farewell to certain people.<br />Drawing a firm line under the stories of those who passed is the best form of comfort. Go on, then &mdash; they're all at the Dreamflux Reef... right here.}}
 {{Dialogue Start}}
-:{{tx}}
+:{{A|VO chapter3 31 player 101 m.ogg}} {{A|VO chapter3 31 player 101 f.ogg}} '''(Trailblazer):''' (I should get back to the Express... Or, maybe I could say my final goodbye to Acheron.)
+
+;(Talk to Acheron)
+
 {{Dialogue End}}
 
 ===Talk to the whole Crew{{subst:void|<!--103410908-->}}===
 {{Mission Description|type=trailblaze|location=Passenger Cabin|update|Now that the dust has finally settled, a new trailblazing expedition is about to begin.<br />Go back to the Astral Express, collect your thoughts, and prepare yourself &mdash; for a new adventure.}}
 {{Dialogue Start}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{A|VO chapter3 31 mar7th 139.ogg}} '''March 7th:''' I never expected Pom-Pom would be so distraught...
+:{{A|VO chapter3 31 danheng 110.ogg}} '''Dan Heng:''' Those three Nameless must have meant a lot to Pom-Pom.
+:{{A|VO chapter3 31 welt 107.ogg}} '''Welt:''' No one knows exactly when Pom-Pom boarded the Express, but one can surmise that their journey has been filled with many hellos and goodbyes, probably more than we can imagine.
+:{{A|VO chapter3 31 welt 108.ogg}} '''Welt:''' The fact that they're crying so hard is probably a good sign. It proves that Pom-Pom's emotions haven't become dulled by the grind of time &mdash; they still deeply cherish every Nameless who has boarded the Express and value every journey shared with them.
+:{{A|VO chapter3 31 welt 109.ogg}} '''Welt:''' Leave it to Himeko. When it comes to comforting, there's no one better on the Express.
+:{{DIcon|Arrow}} Pom-Pom said we might run out of fuel...
+:{{A|VO chapter3 31 welt 110.ogg}} '''Welt:''' Well, they were a little emotional at the time, but... I'm afraid that's not out of the question.
+:{{A|VO chapter3 31 welt 111 m.ogg}} {{A|VO chapter3 31 welt 111 f.ogg}} '''Welt:''' Since (Trailblazer) joined us, the Express has stayed longer than anticipated at every stop along the way. And to ensure that everyone always makes it back on board, Pom-Pom has had no choice but to delay the warp jump schedule.
+:{{A|VO chapter3 31 danheng 111.ogg}} '''Dan Heng:''' I see... No wonder I can regularly hear Pom-Pom pacing anxiously up and down the corridor.
+:{{A|VO chapter3 31 mar7th 140.ogg}} '''March 7th:''' Turns out, Pom-Pom's been silently putting in a lot of work for us, wow...
+:{{A|VO chapter3 31 welt 112.ogg}} '''Welt:''' Different from typical vehicles, the Astral Express converts every "Trailblaze" into the energy it needs to run. Ideally, as long as trailblazing expeditions continue without interruption, the Express will receive a constant flow of energy, much like a perpetual motion machine.
+:{{A|VO chapter3 31 welt 113.ogg}} '''Welt:''' But because of our previous encounters... fuel is being used up much faster than expected. We can probably only pull off two more warp jumps at most.
+:{{A|VO chapter3 31 mar7th 141.ogg}} '''March 7th:''' Only two more... Isn't that super risky? Ahh! I don't wanna become an ice cube floating around in space again!
+:{{DIcon|Arrow}} At least you'll be an adorable ice cube.
+::{{A|VO chapter3 31 mar7th 142.ogg}} '''March 7th:''' When you put it like that, it doesn't actually sound too bad.
+::{{A|VO chapter3 31 mar7th 143.ogg}} '''March 7th:''' But I don't even wanna become an adorable ice cube floating around in space again!
+::Falling leaves must return to their roots.
+:{{DIcon|Arrow}} Falling leaves must return to their roots.
+:{{A|VO chapter3 31 mar7th 144.ogg}} '''March 7th:''' ...How about we shove you back in the space station's computer, then?
+:{{A|VO chapter3 31 danheng 112.ogg}} '''Dan Heng:''' Which also means that we must prudently consider our next destination.
 :{{tx}}
+
+;(Talk to Himeko)
+:{{A|VO chapter3 31 himeko 121.ogg}} '''Himeko:''' It's okay. Pom-Pom, just let it all out.
 {{Dialogue End}}
 
 ==Other Languages==

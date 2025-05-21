@@ -1,11 +1,11 @@
 <%-- [PAGE_INFO]
-PageTitle=#Morning Starlight#
+PageTitle=#Morning Starlight (Adventure Mission)#
 [END_PAGE_INFO] --%>
 {{Stub|Dialogue.}}
 {{Mission Infobox
 |id            = 8032301
-|title         = 
-|image         = <!--Mission Morning Starlight.png-->
+|title         = Morning Starlight
+|image         = <!--Mission Morning Starlight (Adventure Mission).png-->
 |type          = Adventure
 |event_name    = Morning Starlight
 |chapter       = 
@@ -37,13 +37,59 @@ PageTitle=#Morning Starlight#
 ===Head to the master control zone and talk with Grumpy the researcher{{subst:void|<!--803230101-->}}===
 {{Mission Description|type=adventure|location=Master Control Zone|The space station researcher, Grumpy, has something urgent for you. Apparently, she ran into a research bottleneck and needs your aid.<br />Can a Nameless also moonlight as a researcher? You're a bit at a loss, but you discovered all this has something to do with the Herta, and now things seem like they make more sense...}}
 {{Dialogue Start}}
+
+;(Talk to Grumpy)
+:'''Metauna:''' You're here, what a relief! Our project might just be saved!
+:'''Grumpy:''' We've been expecting you!
+:{{DIcon|Arrow}} What's going on?
+:'''Grumpy:''' So, here's the thing: the space station has a self-developed combat simulation tool, and right now, it's just the two of us handling it &mdash;
+:'''Metauna:''' Oh, not really, Grumpy is taking the lead. I'm just learning on the side and helping out where I can.
+:'''Grumpy:''' Ahem, save the speech in front of (Trailblazer). The two of us combined don't even measure up to an ounce of (Trailblazer)'s ability.
+:'''Metauna:''' Agreed. (Trailblazer) is the legend who single-handedly took down the Doomsday Beast!
+:'''Grumpy:''' Plus, (Trailblazer) has helped our space station a lot, so we really owe you a big thanks.
+:'''Grumpy:''' Thanks to the data from previous trials and the help of an awesome person, our research has made great progress. Lead Researcher Asta said Madam Herta stayed for a whole 0.3 seconds before our data!
+:{{DIcon|Arrow}} Talking about some "awesome person"? That would be me!
+::'''Metauna:''' Right, so I gave you the second author spot. Without you, our project would've been doomed...
+::...It was just a quick glance, wasn't it?
+:{{DIcon|Arrow}} ...It was just a quick glance, wasn't it?
+:'''Grumpy:''' For regular researchers like us, simply getting something that catches Madam Herta's eye is worth bragging about.
+:'''Grumpy:''' Lead Researcher Asta said she thinks this project still has room to grow, so she got some top-tier experimental data from Madam Herta, hoping we can simulate it in our project.
+:'''Metauna:''' But, we've cross-checked this data, and no one at the space station could match it. Then, Lead Researcher Asta pointed something out to us &mdash;
+:'''Grumpy:''' This batch of data is a perfect 100% match for you. It looks like... it was made just for you.
+:{{DIcon|Arrow}} It's gotta be Herta's work.
+:{{DIcon|Arrow}} ...So that's why you came to me?
+:'''Metauna:''' Madam Herta really wants you to be the tester.
+:'''Metauna:''' Honestly, we're not entirely sure what's inside... we just optimized and tweaked it based on your combat style and routines.
+:'''Grumpy:''' The Lead Researcher only mentioned that this batch of data belongs to Madam Herta and is highly confidential, something we've never had access to before. So, we're not entirely sure which civilization's data is actually contained within.
+:'''Metauna:''' Plus, the data is huge, it took us forever to integrate it.
+:'''Grumpy:''' Since it's Madam Herta's collection, and we've got (Trailblazer) as the special guest tester, I'm sure that if we put in the work, we'll get solid results.
+:'''Grumpy:''' So, we've named this version "Morning Starlight," hoping Madam Herta's wisdom will inspire everyone at the space station.
+:'''Metauna:''' The data's all loaded into the terminal. Wanna give it a try?
+:{{DIcon|Arrow}} Any chance we could get more rewards?
+::'''Grumpy:''' Don't worry, Lead Researcher Asta specifically set aside some funds for this. We wouldn't dare take a penny!
+::Hope it won't be too tricky.
+:{{DIcon|Arrow}} Hope it won't be too tricky.
+:'''Grumpy:''' With you helping, it won't be a problem!
+:'''Metauna:''' Awesome! I knew you'd say yes!
 :{{tx}}
+
 {{Dialogue End}}
 
 ===Activate the terminal and complete one Morning Starlight test{{subst:void|<!--803230102-->}}===
 {{Mission Description|type=adventure|location=Master Control Zone|update|The testing data that Grumpy and Metauna have all seem to be penned by Herta's hand. Now you understand why they had to have you come to do the testing.<br />This is all Herta's doing.}}
 {{Dialogue Start}}
-:{{tx}}
+
+:{{DIcon|Fight Club}} Launch simulation program.
+<pre>{
+	"$type": "RPG.GameCore.ShowUI",
+	"Name": "Ui.Activity.ActivityStarFight.ActivityStarFightMainPage"
+}</pre>
+
+
+;(Talk to Grumpy)
+:'''Grumpy:''' About the test... It seems the data hasn't been fully verified yet. Did you run into any issues? Don't worry, we'll adjust it based on your body data in real time.
+:'''Metauna:''' No danger at all, if anything goes wrong, I'll pull the plug right away!
+:'''Grumpy:''' Well then... we're counting on you for the test!
 {{Dialogue End}}
 
 ==Other Languages==

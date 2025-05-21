@@ -44,48 +44,955 @@ PageTitle=#Future Market (II)#
 ===Follow along the town's roads to find Topaz{{subst:void|<!--201020401-->}}===
 {{Mission Description|type=continuance|location=Old Weapon Testing Ground|(Trailblazer)'s Trailblaze Daily Report:<br />Himeko is here. Didn't sign the contract. Bronya has a plan. Must find Topaz.}}
 {{Dialogue Start}}
+:{{Black Screen|Meanwhile, with Topaz and Svarog...}}
 :{{tx}}
 {{Dialogue End}}
 
 ===Follow along the town's roads and head to Topaz's location{{subst:void|<!--201020411-->}}===
 {{Dialogue Start}}
-:{{tx}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+;(If {{cx}}<!--SubMission Finish: 801410104-->)
+::{{A|VO side1 tp mar7th 324.ogg}} '''March 7th:''' Is this really the right place...? It's so quiet all of a sudden.
+::{{A|VO side1 tp mar7th 325.ogg}} '''March 7th:''' This atmosphere really feels strange... Are you sure Topaz is here?
+;(If {{cx}}<!--SubMission not Finish: 801410104-->)
+::{{A|VO side1 tp mar7th 326.ogg}} '''March 7th:''' Wow... I didn't expect to find a place like this in the Underworld!
+::{{A|VO side1 tp mar7th 327.ogg}} '''March 7th:''' I wonder why Topaz would come to a place like this...
 {{Dialogue End}}
 
 ===Find and confront Topaz{{subst:void|<!--201020320-->}}===
 {{Mission Description|type=continuance|location=Old Weapon Testing Ground|update|(Trailblazer)'s Trailblaze Daily Report:<br />Found a weird place, never been here before. Topaz is here.<br />Need to stop her no matter what she is planning.<br />Pom-Pom's Notes: What kinda place is "weird place"? At least describe it!}}
 {{Dialogue Start}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+----
+:{{A|VO side1 tp mar7th 328.ogg}} '''March 7th:''' Mr Svarog! Are you alright? I hope Topaz and her IPC henchmen didn't hurt you.
+:{{A|VO side1 tp svarog 125.ogg}} '''Svarog:''' Greetings, outsiders. System functions are normal &mdash; I have had no conflict with the IPC's representatives.
+:{{DIcon|Arrow}} I thought we might be facing off against each other for a moment.
+:{{A|VO side1 tp svarog 127.ogg}} '''Svarog:''' Such a result would be highly undesirable.
+:{{A|VO side1 tp svarog 128.ogg}} '''Svarog:''' Topaz is ahead. She had the means to force me to comply with her orders, but chose not to.
+:{{A|VO side1 tp svarog 129.ogg}} '''Svarog:''' From her perspective, the only way to "preserve" Belobog is by incorporating it into the IPC. While I do not agree with her viewpoint, I lack the computational power to provide evidence to the contrary.
+:{{A|VO side1 tp svarog 130.ogg}} '''Svarog:''' While it is unlikely, I still encourage the avoidance of any potential conflicts.
+:{{A|VO side1 tp mar7th 329.ogg}} '''March 7th:''' "Unlikely, potential..." meaning there could still be conflicts...
+:{{A|VO side1 tp himeko 122.ogg}} '''Himeko:''' Don't worry, March. The Express never pursues conflict as a first means... but if it comes down to it, we won't back down either. That's how it's always been.
+:{{A|VO side1 tp mar7th 330.ogg}} '''March 7th:''' Himeko's right. As long as we can look at ourselves in the mirror and know we did the right thing, that's all that matters.
+----
+;(Upon reaching the destination)
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+<pre>{
+	"$type": "RPG.GameCore.SetAudioEmotionState",
+	"StateName": "State_Tense",
+	"SubMissionID": 201020321
+}</pre>
+:{{A|VO side1 tp topaz 208.ogg}} '''Topaz:''' Oh, hey there slowpokes! I was starting to think you weren't gonna show up.
+:{{A|VO side1 tp topaz 209.ogg}} '''Topaz:''' Hmm... This lady next to Miss March looks oddly familiar.
+:{{A|VO side1 tp himeko 124.ogg}} '''Himeko:''' Pleasure to meet you, Miss Topaz. I'm Himeko, the Astral Express' navigator.
+:{{A|VO side1 tp topaz 210.ogg}} '''Topaz:''' Oh wow, I remember now, the illustrious Miss Himeko! Some of my colleagues dream about meeting you!
+:{{DIcon|Arrow}} Himeko is that famous?
+::{{A|VO side1 tp topaz 211.ogg}} '''Topaz:''' Of course! The Nameless have quite the reputation &mdash; you're following in the footsteps of the great Akivili, after all!
+::Do I have any fans?
+:{{DIcon|Arrow}} Do I have any fans?
+:{{A|VO side1 tp topaz 212.ogg}} '''Topaz:''' I'd be surprised if you didn't! Don't underestimate the reputation of the Nameless out among the stars &mdash; you're following in the footsteps of the great Akivili, after all!
+:{{A|VO side1 tp himeko 125.ogg}} '''Himeko:''' I'm pleased to see how well everyone's been getting along. Topaz, based on your greeting I presume you have a good grasp of the current situation?
+:{{A|VO side1 tp topaz 213.ogg}} '''Topaz:''' Of course! The deadline has already passed, but Bronya still hasn't signed the contract. I think I can guess what's holding her back...
+:{{A|VO side1 tp himeko 126.ogg}} '''Himeko:''' Please don't misunderstand us, Miss Topaz. We have no intention of opposing the IPC or its board of directors... but we have very dear friends on Jarilo-VI.
+:{{A|VO side1 tp himeko 127.ogg}} '''Himeko:''' Standing idly by and watching them sign an unfair contract... goes against everything the Nameless are about.
+:{{A|VO side1 tp mar7th 332.ogg}} '''March 7th:''' Um... Miss Himeko, sorry for interrupting, but this doesn't sound like a negotiation...
+:{{A|VO side1 tp himeko 128.ogg}} '''Himeko:''' We needn't waste our time, March. She made her decision ten minutes ago.
+:{{A|VO side1 tp topaz 214.ogg}} '''Topaz:''' Haha, there's no fooling the Astral Express!
+:{{A|VO side1 tp topaz 215.ogg}} '''Topaz:''' You're absolutely right. Differing views don't necessarily mean one person is right and the other is wrong. However, to keep things moving forward, there's usually only one solution...
+:{{A|VO side1 tp mar7th 333.ogg}} '''March 7th:''' Huh? Wh&mdash;What do you mean?
+:{{A|VO side1 tp topaz 216.ogg}} '''Topaz:''' My superiors have granted me the approval I need.
+:{{DIcon|Arrow}} Approval for what?
+::{{A|VO side1 tp topaz 217.ogg}} '''Topaz:''' You're very curious about my work, aren't you?
+::Your vacation time has been approved?
+:{{DIcon|Arrow}} Your vacation time has been approved?
+:{{A|VO side1 tp topaz 218.ogg}} '''Topaz:''' Haha, I wish!
+:{{A|VO side1 tp topaz 219.ogg}} '''Topaz:''' So many eager faces &mdash; I won't keep you in the dark any longer.
+:{{tx}}
 :{{tx}}
 {{Dialogue End}}
 
 ===Follow along the town's roads to find Topaz{{subst:void|<!--201020402-->}}===
 {{Mission Description|type=continuance|location=Old Weapon Testing Ground|update|(Trailblazer)'s Trailblaze Daily Report:<br />Himeko is here. Didn't sign the contract. Bronya has a plan. Must find Topaz.}}
 {{Dialogue Start}}
-:{{tx}}
+----
+:{{A|VO side1 tp2 gepard 101.ogg}} '''Gepard:''' Topaz disappeared after leaving Rivet Town. In her absence, her subordinates flooded in and took over.
+:{{A|VO side1 tp2 himeko 101.ogg}} '''Himeko:''' The IPC soldiers are well-equipped &mdash; it wouldn't be wise to fight them head-on. Captain, what do you have in mind?
+:{{A|VO side1 tp2 gepard 102.ogg}} '''Gepard:''' You're right, Miss Himeko. We'll be using the Automaton Stealth Bomb to cover our tracks.
+:{{A|VO side1 tp2 mar7th 113.ogg}} '''March 7th:''' Automaton... Stealth Bomb?
+:{{A|VO side1 tp2 gepard 103.ogg}} '''Gepard:''' I'll explain later. Let's get moving.
+----
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+----
+:{{A|VO side1 tp2 mar7th 114.ogg}} '''March 7th:''' Look &mdash; down there! It's the IPC!
+<pre>{
+	"$type": "RPG.GameCore.ActiveVirtualCamera",
+	"AreaName": "LevelArea_P43102_F43102001_G5",
+	"AnchorName": "Anchor2",
+	"BlendConfig": {
+		"ExportToJson": true,
+		"BlendType": "Custom",
+		"CustomCurveName": "BlendCut11",
+		"BlendTime": 1
+	}
+}</pre>
+:{{A|VO side1 tp2 gepard 104.ogg}} '''Gepard:''' Keep noise to a minimum &mdash; everyone. We don't want to alert the enemy to our presence.
+:{{A|VO side1 tp2 gepard 105.ogg}} '''Gepard:''' It's time to deploy the Automaton Stealth Bomb.
+----
 {{Dialogue End}}
 
 ===Use the Automaton Stealth Bomb and clear the obstruction{{subst:void|<!--201020406-->}}===
 {{Mission Description|type=continuance|location=Rivet Town|update|(Trailblazer)'s Trailblaze Daily Report:<br />Can't go head to head with the IPC's peons. Gepard has a plan. Time to activate the Automaton Stealth Bomb.}}
 {{Dialogue Start}}
-:{{tx}}
+
+<pre>{
+	"$type": "RPG.GameCore.ByCompareGroupState",
+	"Value": 1
+}</pre>
+:<!--1-second delay-->
+;(Unused &mdash; BoomRobot_StartPerformance)
+<pre>{
+	"$type": "RPG.GameCore.AdvEntityStopLookAt",
+	"SourceType": {
+		"$type": "RPG.GameCore.TargetFetchAdvNpcEx",
+		"FetchType": "SingleNpcByNpcKey",
+		"SingleNpcKey": {
+			"Custom": true,
+			"Key": "StopLookAtNPC"
+		}
+	}
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.DestroyNPC",
+	"GroupID": 6,
+	"GroupNpcID": 400002,
+	"DestroyList": []
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.PlayerRemoteControlOtherEntity",
+	"SpecialNPCID": 12113,
+	"RecoverControlEntityPosition": true,
+	"LeavePlayerStubInplace": true,
+	"PlayerStubAnimation": {
+		"Value": "LookatPhoneBS"
+	},
+	"ForcePositionAndRotation": true,
+	"LevelAreaKey": {
+		"Custom": true,
+		"Key": "StartPoint"
+	}
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.PropStateExecute",
+	"TargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvPropEx",
+		"FetchType": "SinglePropByPropKey",
+		"SinglePropKey": {
+			"Custom": true,
+			"Key": "WayPointProp"
+		}
+	},
+	"Execute": [
+		{
+			"$type": "RPG.GameCore.PropReqInteract",
+			"TargetType": {
+				"$type": "RPG.GameCore.TargetFetchAdvPropEx",
+				"FetchType": "SinglePropByPropKey",
+				"SinglePropKey": {
+					"Custom": true,
+					"Key": "WayPointProp"
+				}
+			},
+			"InteractID": {
+				"FixedValue": {
+					"Value": 1010
+				}
+			},
+			"OnUICancel": []
+		}
+	]
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.SetNPCPlatformMove",
+	"TargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvLocalPlayer",
+		"IncludeStoryPlayer": false
+	},
+	"EnableMove": true
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.NpcSetupTrigger",
+	"TargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvFakeAvatar"
+	},
+	"TriggerID": "Trigger_102050117_06",
+	"Range": 4,
+	"OnTriggerEnter": [
+		{
+			"$type": "RPG.GameCore.AdvLockSpecialTarget",
+			"IsLock": true,
+			"TargetType": {
+				"$type": "RPG.GameCore.TargetAlias",
+				"Alias": "TaskActionTarget"
+			}
+		}
+	],
+	"OnTriggerExit": [
+		{
+			"$type": "RPG.GameCore.AdvLockSpecialTarget",
+			"TargetType": {
+				"$type": "RPG.GameCore.TargetAlias",
+				"Alias": "TaskActionTarget"
+			}
+		}
+	],
+	"TargetTypes": [
+		"NPCMonster"
+	]
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.CreatePhoneOnCharacter",
+	"TargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvFakeAvatarPlayerStub"
+	}
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.SetHudTemplate",
+	"TemplateID": 1005,
+	"EnableTemplate": true
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.TutorialTaskUnlock",
+	"TriggerParam": {
+		"Value": "8062"
+	}
+}</pre>
+
+;(Unused &mdash; BoomRobot_BoomPerformance)
+:<!--1.5-second delay-->
+
+;(Unused &mdash; BoomRobot_OnFoundFailPerformance)
+:<!--1-second delay-->
+:<pre>{
+	"$type": "RPG.GameCore.PPFilterStackEffect",
+	"Duration": 0.5,
+	"AssetPath": "EnviroSystem/PostProcessFilterAsset/NoiseGlitch.asset"
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.TriggerSound",
+	"SoundName": {
+		"Value": "Ev_sfx_chaptrain_filter_fuzzy"
+	},
+	"EmitterType": "LocalPlayer"
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.PlayerRemoteControlOtherEntity",
+	"SpecialNPCID": 12113,
+	"IsCancel": true,
+	"RecoverControlEntityPosition": true,
+	"LeavePlayerStubInplace": true,
+	"ForcePositionAndRotation": true,
+	"LevelAreaKey": {
+		"Custom": true,
+		"Key": "EndPoint"
+	}
+}</pre>
+::<!--0.5-second delay-->
+:<pre>{
+	"$type": "RPG.GameCore.ActiveVirtualCamera",
+	"LevelAreaCameraKey": {
+		"Custom": true,
+		"Key": "BoomCamAnchor"
+	},
+	"IsActive": false,
+	"WaitBlendFinish": true,
+	"BlendConfig": {
+		"ExportToJson": true,
+		"BlendType": "Cut",
+		"BlendTime": 1
+	}
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.PropStateExecute",
+	"TargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvPropEx",
+		"FetchType": "SinglePropByPropKey",
+		"SinglePropKey": {
+			"Custom": true,
+			"Key": "WayPointProp"
+		}
+	},
+	"State": "Open",
+	"Execute": [
+		{
+			"$type": "RPG.GameCore.PropReqInteract",
+			"TargetType": {
+				"$type": "RPG.GameCore.TargetFetchAdvPropEx",
+				"FetchType": "SinglePropByPropKey",
+				"SinglePropKey": {
+					"Custom": true,
+					"Key": "WayPointProp"
+				}
+			},
+			"InteractID": {
+				"FixedValue": {
+					"Value": 1100
+				}
+			},
+			"OnUICancel": []
+		}
+	]
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.SetHudTemplate",
+	"TemplateID": 1005
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.PPFilterStackEffect",
+	"Active": false,
+	"Rate": 0,
+	"Duration": 0.5,
+	"AssetPath": "EnviroSystem/PostProcessFilterAsset/NoiseGlitch.asset"
+}</pre>
+::<!--0.5-second delay-->
+::{{A|VO side1 tp2 mar7th 115.ogg}} '''March 7th:''' Oh no, they saw right through it...
+::{{A|VO side1 tp2 gepard 108.ogg}} '''Gepard:''' It's alright &mdash; we prepared many backups. Try again.
+
+;(Unused &mdash; BoomRobot_OnPartialFailPerformance)
+:<!--2.5-second delay-->
+:<pre>{
+	"$type": "RPG.GameCore.PPFilterStackEffect",
+	"Duration": 0.5,
+	"AssetPath": "EnviroSystem/PostProcessFilterAsset/NoiseGlitch.asset"
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.PlayerRemoteControlOtherEntity",
+	"SpecialNPCID": 12113,
+	"IsCancel": true,
+	"RecoverControlEntityPosition": true,
+	"LeavePlayerStubInplace": true,
+	"ForcePositionAndRotation": true,
+	"LevelAreaKey": {
+		"Custom": true,
+		"Key": "EndPoint"
+	}
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.TriggerSound",
+	"SoundName": {
+		"Value": "Ev_sfx_chaptrain_filter_fuzzy"
+	},
+	"EmitterType": "LocalPlayer"
+}</pre>
+::<!--0.5-second delay-->
+:<pre>{
+	"$type": "RPG.GameCore.ActiveVirtualCamera",
+	"LevelAreaCameraKey": {
+		"Custom": true,
+		"Key": "BoomCamAnchor"
+	},
+	"IsActive": false,
+	"WaitBlendFinish": true,
+	"BlendConfig": {
+		"ExportToJson": true,
+		"BlendType": "Cut",
+		"BlendTime": 1
+	}
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.PropStateExecute",
+	"TargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvPropEx",
+		"FetchType": "SinglePropByPropKey",
+		"SinglePropKey": {
+			"Custom": true,
+			"Key": "WayPointProp"
+		}
+	},
+	"State": "Open",
+	"Execute": [
+		{
+			"$type": "RPG.GameCore.PropReqInteract",
+			"TargetType": {
+				"$type": "RPG.GameCore.TargetFetchAdvPropEx",
+				"FetchType": "SinglePropByPropKey",
+				"SinglePropKey": {
+					"Custom": true,
+					"Key": "WayPointProp"
+				}
+			},
+			"InteractID": {
+				"FixedValue": {
+					"Value": 1100
+				}
+			},
+			"OnUICancel": []
+		}
+	]
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.SetHudTemplate",
+	"TemplateID": 1005
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.PPFilterStackEffect",
+	"Active": false,
+	"Rate": 0,
+	"Duration": 0.5,
+	"AssetPath": "EnviroSystem/PostProcessFilterAsset/NoiseGlitch.asset"
+}</pre>
+::<!--0.5-second delay-->
+::'''Confident Youth:''' Do you think... my dad was trying to discourage me from playing Aetherium Wars?
+
+;(Unused &mdash; BoomRobot_OnSuccessPerformance)
+<pre>{
+	"$type": "RPG.GameCore.ToastPage",
+	"MessageOne": {
+		"Hash": 10370186140942766706
+	},
+	"MessageTwo": {
+		"Hash": 2012001348524219443
+	}
+}</pre>
+::<!--2.5-second delay-->
+:<pre>{
+	"$type": "RPG.GameCore.PlayerRemoteControlOtherEntity",
+	"SpecialNPCID": 12113,
+	"IsCancel": true,
+	"RecoverControlEntityPosition": true,
+	"LeavePlayerStubInplace": true,
+	"ForcePositionAndRotation": true,
+	"LevelAreaKey": {
+		"Custom": true,
+		"Key": "EndPoint"
+	}
+}</pre>
+::<!--1-second delay-->
+:<pre>{
+	"$type": "RPG.GameCore.ActiveVirtualCamera",
+	"LevelAreaCameraKey": {
+		"Custom": true,
+		"Key": "BoomCamAnchor"
+	},
+	"IsActive": false,
+	"WaitBlendFinish": true,
+	"BlendConfig": {
+		"ExportToJson": true,
+		"BlendType": "Cut",
+		"BlendTime": 1
+	}
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.PropStateExecute",
+	"TargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvPropEx",
+		"FetchType": "SinglePropByPropKey",
+		"SinglePropKey": {
+			"Custom": true,
+			"Key": "WayPointProp"
+		}
+	},
+	"State": "Open",
+	"Execute": [
+		{
+			"$type": "RPG.GameCore.PropReqInteract",
+			"TargetType": {
+				"$type": "RPG.GameCore.TargetFetchAdvPropEx",
+				"FetchType": "SinglePropByPropKey",
+				"SinglePropKey": {
+					"Custom": true,
+					"Key": "WayPointProp"
+				}
+			},
+			"InteractID": {
+				"FixedValue": {
+					"Value": 1100
+				}
+			},
+			"OnUICancel": []
+		}
+	]
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.SetHudTemplate",
+	"TemplateID": 1005
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.RequestGroupStateChange",
+	"TargetState": 1
+}</pre>
+::<!--3-second delay-->
+
+;(Unused &mdash; BoomRobot_EnterBoomCam)
+<pre>{
+	"$type": "RPG.GameCore.ActiveVirtualCamera",
+	"LevelAreaCameraKey": {
+		"Custom": true,
+		"Key": "BoomCamAnchor"
+	},
+	"WaitBlendFinish": true,
+	"BlendConfig": {
+		"ExportToJson": true,
+		"BlendType": "Cut",
+		"BlendTime": 1
+	}
+}</pre>
 {{Dialogue End}}
 
 ===Continue following along the town's roads to find Topaz{{subst:void|<!--201020408-->}}===
 {{Mission Description|type=continuance|location=Rivet Town|update|(Trailblazer)'s Trailblaze Daily Report:<br />Himeko is here. Didn't sign the contract. Bronya has a plan. Must find Topaz.}}
 {{Dialogue Start}}
-:{{tx}}
+:{{A|VO side1 tp2 mar7th 117.ogg}} '''March 7th:''' Wow! We wiped them all out in a single explosion! That's what you call efficiency!
+:{{A|VO side1 tp2 gepard 110.ogg}} '''Gepard:''' It's a shame we had to resort to this method, but we had no choice.
+:{{A|VO side1 tp2 mar7th 118.ogg}} '''March 7th:''' You Silvermane Guards sure are a righteous bunch...
+
+;(Upon reaching the destination)
+----
+:{{A|VO side1 tp2 himeko 102.ogg}} '''Himeko:''' I've seen standard-issue robots like these before. It's an IPC field Team Leader.
+<pre>{
+	"$type": "RPG.GameCore.ActiveVirtualCamera",
+	"AreaName": "LevelArea_P43102_F43102001_G7",
+	"AnchorName": "Anchor3",
+	"BlendConfig": {
+		"ExportToJson": true,
+		"BlendType": "Custom",
+		"CustomCurveName": "BlendCut11",
+		"BlendTime": 1
+	},
+	"DynamicParams": {}
+}</pre>
+:{{A|VO side1 tp2 gepard 111.ogg}} '''Gepard:''' Correct &mdash; the exterior is similar to the Grizzly, but its weapons and armor are more advanced.
+:{{A|VO side1 tp2 gepard 112 m.ogg}} {{A|VO side1 tp2 gepard 112 f.ogg}} '''Gepard:''' Hopefully, the Automaton Stealth Bomb will still be effective. (Trailblazer), let me know when you're ready.
+----
 {{Dialogue End}}
 
 ===Use the Automaton Stealth Bomb and clear the obstruction{{subst:void|<!--201020409-->}}===
 {{Mission Description|type=continuance|location=Rivet Town|update|(Trailblazer)'s Trailblaze Daily Report:<br />Can't go head to head with the IPC's peons. Gepard has a plan. Time to activate the Automaton Stealth Bomb.}}
 {{Dialogue Start}}
-:{{tx}}
+
+<pre>{
+	"$type": "RPG.GameCore.ByCompareGroupState",
+	"Value": 1
+}</pre>
+:<!--1-second delay-->
+;(Unused &mdash; BoomRobot_StartPerformance)
+<pre>{
+	"$type": "RPG.GameCore.AdvEntityStopLookAt",
+	"SourceType": {
+		"$type": "RPG.GameCore.TargetFetchAdvNpcEx",
+		"FetchType": "SingleNpcByNpcKey",
+		"SingleNpcKey": {
+			"Custom": true,
+			"Key": "StopLookAtNPC"
+		}
+	}
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.DestroyNPC",
+	"GroupID": 6,
+	"GroupNpcID": 400002,
+	"DestroyList": []
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.PlayerRemoteControlOtherEntity",
+	"SpecialNPCID": 12113,
+	"RecoverControlEntityPosition": true,
+	"LeavePlayerStubInplace": true,
+	"PlayerStubAnimation": {
+		"Value": "LookatPhoneBS"
+	},
+	"ForcePositionAndRotation": true,
+	"LevelAreaKey": {
+		"Custom": true,
+		"Key": "StartPoint"
+	}
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.PropStateExecute",
+	"TargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvPropEx",
+		"FetchType": "SinglePropByPropKey",
+		"SinglePropKey": {
+			"Custom": true,
+			"Key": "WayPointProp"
+		}
+	},
+	"Execute": [
+		{
+			"$type": "RPG.GameCore.PropReqInteract",
+			"TargetType": {
+				"$type": "RPG.GameCore.TargetFetchAdvPropEx",
+				"FetchType": "SinglePropByPropKey",
+				"SinglePropKey": {
+					"Custom": true,
+					"Key": "WayPointProp"
+				}
+			},
+			"InteractID": {
+				"FixedValue": {
+					"Value": 1010
+				}
+			},
+			"OnUICancel": []
+		}
+	]
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.SetNPCPlatformMove",
+	"TargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvLocalPlayer",
+		"IncludeStoryPlayer": false
+	},
+	"EnableMove": true
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.NpcSetupTrigger",
+	"TargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvFakeAvatar"
+	},
+	"TriggerID": "Trigger_102050117_06",
+	"Range": 4,
+	"OnTriggerEnter": [
+		{
+			"$type": "RPG.GameCore.AdvLockSpecialTarget",
+			"IsLock": true,
+			"TargetType": {
+				"$type": "RPG.GameCore.TargetAlias",
+				"Alias": "TaskActionTarget"
+			}
+		}
+	],
+	"OnTriggerExit": [
+		{
+			"$type": "RPG.GameCore.AdvLockSpecialTarget",
+			"TargetType": {
+				"$type": "RPG.GameCore.TargetAlias",
+				"Alias": "TaskActionTarget"
+			}
+		}
+	],
+	"TargetTypes": [
+		"NPCMonster"
+	]
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.CreatePhoneOnCharacter",
+	"TargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvFakeAvatarPlayerStub"
+	}
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.SetHudTemplate",
+	"TemplateID": 1005,
+	"EnableTemplate": true
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.TutorialTaskUnlock",
+	"TriggerParam": {
+		"Value": "8062"
+	}
+}</pre>
+
+;(Unused &mdash; BoomRobot_BoomPerformance)
+:<!--1.5-second delay-->
+
+;(Unused &mdash; BoomRobot_OnFoundFailPerformance)
+:<!--1-second delay-->
+:<pre>{
+	"$type": "RPG.GameCore.PPFilterStackEffect",
+	"Duration": 0.5,
+	"AssetPath": "EnviroSystem/PostProcessFilterAsset/NoiseGlitch.asset"
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.TriggerSound",
+	"SoundName": {
+		"Value": "Ev_sfx_chaptrain_filter_fuzzy"
+	},
+	"EmitterType": "LocalPlayer"
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.PlayerRemoteControlOtherEntity",
+	"SpecialNPCID": 12113,
+	"IsCancel": true,
+	"RecoverControlEntityPosition": true,
+	"LeavePlayerStubInplace": true,
+	"ForcePositionAndRotation": true,
+	"LevelAreaKey": {
+		"Custom": true,
+		"Key": "EndPoint"
+	}
+}</pre>
+::<!--0.5-second delay-->
+:<pre>{
+	"$type": "RPG.GameCore.ActiveVirtualCamera",
+	"LevelAreaCameraKey": {
+		"Custom": true,
+		"Key": "BoomCamAnchor"
+	},
+	"IsActive": false,
+	"WaitBlendFinish": true,
+	"BlendConfig": {
+		"ExportToJson": true,
+		"BlendType": "Cut",
+		"BlendTime": 1
+	}
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.PropStateExecute",
+	"TargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvPropEx",
+		"FetchType": "SinglePropByPropKey",
+		"SinglePropKey": {
+			"Custom": true,
+			"Key": "WayPointProp"
+		}
+	},
+	"State": "Open",
+	"Execute": [
+		{
+			"$type": "RPG.GameCore.PropReqInteract",
+			"TargetType": {
+				"$type": "RPG.GameCore.TargetFetchAdvPropEx",
+				"FetchType": "SinglePropByPropKey",
+				"SinglePropKey": {
+					"Custom": true,
+					"Key": "WayPointProp"
+				}
+			},
+			"InteractID": {
+				"FixedValue": {
+					"Value": 1100
+				}
+			},
+			"OnUICancel": []
+		}
+	]
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.SetHudTemplate",
+	"TemplateID": 1005
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.PPFilterStackEffect",
+	"Active": false,
+	"Rate": 0,
+	"Duration": 0.5,
+	"AssetPath": "EnviroSystem/PostProcessFilterAsset/NoiseGlitch.asset"
+}</pre>
+::<!--0.5-second delay-->
+::{{A|VO side1 tp2 mar7th 115.ogg}} '''March 7th:''' Oh no, they saw right through it...
+::{{A|VO side1 tp2 gepard 108.ogg}} '''Gepard:''' It's alright &mdash; we prepared many backups. Try again.
+
+;(Unused &mdash; BoomRobot_OnPartialFailPerformance)
+:<!--2.5-second delay-->
+:<pre>{
+	"$type": "RPG.GameCore.PPFilterStackEffect",
+	"Duration": 0.5,
+	"AssetPath": "EnviroSystem/PostProcessFilterAsset/NoiseGlitch.asset"
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.PlayerRemoteControlOtherEntity",
+	"SpecialNPCID": 12113,
+	"IsCancel": true,
+	"RecoverControlEntityPosition": true,
+	"LeavePlayerStubInplace": true,
+	"ForcePositionAndRotation": true,
+	"LevelAreaKey": {
+		"Custom": true,
+		"Key": "EndPoint"
+	}
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.TriggerSound",
+	"SoundName": {
+		"Value": "Ev_sfx_chaptrain_filter_fuzzy"
+	},
+	"EmitterType": "LocalPlayer"
+}</pre>
+::<!--0.5-second delay-->
+:<pre>{
+	"$type": "RPG.GameCore.ActiveVirtualCamera",
+	"LevelAreaCameraKey": {
+		"Custom": true,
+		"Key": "BoomCamAnchor"
+	},
+	"IsActive": false,
+	"WaitBlendFinish": true,
+	"BlendConfig": {
+		"ExportToJson": true,
+		"BlendType": "Cut",
+		"BlendTime": 1
+	}
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.PropStateExecute",
+	"TargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvPropEx",
+		"FetchType": "SinglePropByPropKey",
+		"SinglePropKey": {
+			"Custom": true,
+			"Key": "WayPointProp"
+		}
+	},
+	"State": "Open",
+	"Execute": [
+		{
+			"$type": "RPG.GameCore.PropReqInteract",
+			"TargetType": {
+				"$type": "RPG.GameCore.TargetFetchAdvPropEx",
+				"FetchType": "SinglePropByPropKey",
+				"SinglePropKey": {
+					"Custom": true,
+					"Key": "WayPointProp"
+				}
+			},
+			"InteractID": {
+				"FixedValue": {
+					"Value": 1100
+				}
+			},
+			"OnUICancel": []
+		}
+	]
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.SetHudTemplate",
+	"TemplateID": 1005
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.PPFilterStackEffect",
+	"Active": false,
+	"Rate": 0,
+	"Duration": 0.5,
+	"AssetPath": "EnviroSystem/PostProcessFilterAsset/NoiseGlitch.asset"
+}</pre>
+::<!--0.5-second delay-->
+::'''Confident Youth:''' Do you think... my dad was trying to discourage me from playing Aetherium Wars?
+
+;(Unused &mdash; BoomRobot_OnSuccessPerformance)
+<pre>{
+	"$type": "RPG.GameCore.ToastPage",
+	"MessageOne": {
+		"Hash": 10370186140942766706
+	},
+	"MessageTwo": {
+		"Hash": 2012001348524219443
+	}
+}</pre>
+::<!--2.5-second delay-->
+:<pre>{
+	"$type": "RPG.GameCore.PlayerRemoteControlOtherEntity",
+	"SpecialNPCID": 12113,
+	"IsCancel": true,
+	"RecoverControlEntityPosition": true,
+	"LeavePlayerStubInplace": true,
+	"ForcePositionAndRotation": true,
+	"LevelAreaKey": {
+		"Custom": true,
+		"Key": "EndPoint"
+	}
+}</pre>
+::<!--1-second delay-->
+:<pre>{
+	"$type": "RPG.GameCore.ActiveVirtualCamera",
+	"LevelAreaCameraKey": {
+		"Custom": true,
+		"Key": "BoomCamAnchor"
+	},
+	"IsActive": false,
+	"WaitBlendFinish": true,
+	"BlendConfig": {
+		"ExportToJson": true,
+		"BlendType": "Cut",
+		"BlendTime": 1
+	}
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.PropStateExecute",
+	"TargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvPropEx",
+		"FetchType": "SinglePropByPropKey",
+		"SinglePropKey": {
+			"Custom": true,
+			"Key": "WayPointProp"
+		}
+	},
+	"State": "Open",
+	"Execute": [
+		{
+			"$type": "RPG.GameCore.PropReqInteract",
+			"TargetType": {
+				"$type": "RPG.GameCore.TargetFetchAdvPropEx",
+				"FetchType": "SinglePropByPropKey",
+				"SinglePropKey": {
+					"Custom": true,
+					"Key": "WayPointProp"
+				}
+			},
+			"InteractID": {
+				"FixedValue": {
+					"Value": 1100
+				}
+			},
+			"OnUICancel": []
+		}
+	]
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.SetHudTemplate",
+	"TemplateID": 1005
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.RequestGroupStateChange",
+	"TargetState": 1
+}</pre>
+::<!--3-second delay-->
+
+;(Unused &mdash; BoomRobot_EnterBoomCam)
+<pre>{
+	"$type": "RPG.GameCore.ActiveVirtualCamera",
+	"LevelAreaCameraKey": {
+		"Custom": true,
+		"Key": "BoomCamAnchor"
+	},
+	"WaitBlendFinish": true,
+	"BlendConfig": {
+		"ExportToJson": true,
+		"BlendType": "Cut",
+		"BlendTime": 1
+	}
+}</pre>
+;(Unused &mdash; BombSuccess_2010204)
+:----
+
+;(Unused &mdash; DestroyNPC_201020406)
+<pre>{
+	"$type": "RPG.GameCore.DestroyNPC",
+	"GroupID": 8,
+	"GroupNpcID": 400002,
+	"DestroyList": []
+}</pre>
 {{Dialogue End}}
 
 ===Follow along the town's roads and head to Topaz's location{{subst:void|<!--201020410-->}}===
 {{Mission Description|type=continuance|location=Rivet Town|update|(Trailblazer)'s Trailblaze Daily Report:<br />Himeko is here. Didn't sign the contract. Bronya has a plan. Must find Topaz.}}
 {{Dialogue Start}}
-:{{tx}}
+:{{A|VO side1 tp2 mar7th 121.ogg}} '''March 7th:''' Woohoo! The coast is clear!
+:{{A|VO side1 tp2 gepard 117.ogg}} '''Gepard:''' To be honest, I didn't think it would be so powerful... Good thing everything went according to plan.
+
+;(Upon reaching the destination)
+----
+:{{A|VO side1 tp2 gepard 118.ogg}} '''Gepard:''' This is the road that Topaz took when she left Rivet Town.
+:{{A|VO side1 tp2 himeko 103.ogg}} '''Himeko:''' Let's find her and tell her about Bronya's decision.
+:{{A|VO side1 tp2 mar7th 122.ogg}} '''March 7th:''' This time, the gloves are off!
+----
 {{Dialogue End}}
 
 ==Other Languages==

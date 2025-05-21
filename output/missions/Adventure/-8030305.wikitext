@@ -9,7 +9,7 @@ PageTitle=##
 |type          = Adventure
 |event_name    = Enscrolled Crepusculum
 |chapter       = 
-|requirements  = [[Adventure Mission]] ''[[Enscrolled Crepusculum (Adventure Mission)|Enscrolled Crepusculum]]'' completed
+|requirements  = [[Adventure Mission]] ''[[Enscrolled Crepusculum]]'' completed
 |summary       = <!--official mission summary from Fate's Atlas-->
 |characters    = Trailblazer; Urania
 |startLocation = [[Amphoreus]] - [["Strife Ruins" Castrum Kremnos]]
@@ -33,7 +33,56 @@ PageTitle=##
 -->
 ==Dialogue==
 {{Stub Dialogue}}
-
+<pre>{
+	"$type": "RPG.GameCore.TriggerEntityServerEvent"
+}</pre>
+;(Unused &mdash; EnterDistrict_G214)
+:{{tx}}
+:<pre>{
+	"$type": "RPG.GameCore.PerformanceEndSeq",
+	"BeforeCases": [
+		{
+			"$type": "RPG.GameCore.SwitchCharacterAnchorV2",
+			"SwitchCharacterAnchorConfig": {
+				"IsLocalPlayer": true,
+				"CharacterUniqueName": "LocalPlayer",
+				"AreaName": {
+					"Value": "LevelArea_P20411_F20411001_G214"
+				},
+				"AnchorName": {
+					"Value": "Anchor1"
+				},
+				"ResetTurnInPlace": true
+			}
+		}
+	]
+}</pre>
+:{{tx}}
+:The child who disappeared into the bustling market earlier on suddenly appears before you again.
+:{{DIcon|Arrow}} Where have you been?
+:{{DIcon|Arrow}} Here comes the loot ninja.
+:{{DIcon|Arrow}} Your SPD is pretty maxed out.
+:'''Urania:''' Sorry, {{MC|f=big sis|m=big bro}}, please hear me out...
+:'''Urania:''' The gods' eyes are ever lonely. Our years in the flux of time are but a speck of dust, floating about in Oronyx's billows.
+:'''Urania:''' We were blown to a mortal's grave yesterday, and drift to a godly palace today. We see justice, hysteria, glory, betrayal, madness... but we have no right to judge.
+:'''Urania:''' Because eyes have no stance nor purpose, only the duty of observance.
+:{{DIcon|Arrow}} What eyes? What duty?
+::'''Urania:''' "...The Eye of Twilight is all-seeing, its vision as far-reaching as the sky dome..."
+:{{DIcon|Arrow}} I'm mad bright. How can I be dust?
+::'''Urania:''' ...True.
+::So some weird kid is dishing out riddles now?
+::'''Urania:''' Ah, they're just warnings from elders at home.
+::'''Urania:''' "...The Eye of Twilight is all-seeing, its vision as far-reaching as the sky dome..."
+:{{DIcon|Arrow}} So some weird kid is dishing out riddles now?
+::'''Urania:''' Ah, they're just warnings from elders at home.
+::'''Urania:''' "...The Eye of Twilight is all-seeing, its vision as far-reaching as the sky dome..."
+:'''Urania:''' My clan is the eye of Aquila in the mortal realm. Even though they have closed their hundred eyes, we still persist in our duties.
+:'''Urania:''' I wanted to impart this sacred duty to {{MC|f=big sis|m=big bro}}, but it looks like I've picked the wrong person &mdash; you are not a silent "spectator."
+:{{DIcon|Arrow}} Obviously not. I'm the main character.
+:{{DIcon|Arrow}} Of course not. I'm not mute.
+:{{DIcon|Arrow}} A narrative without interaction is so passé!
+:'''Urania:''' Heh heh, if we do meet again, I hope you will let {{Rubi|my master|Eye of Twilight}} see even greater things.
+:{{tx}}
 {{Dialogue End}}
 
 ==Other Languages==

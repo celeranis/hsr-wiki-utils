@@ -34,6 +34,119 @@ PageTitle=##
 ==Dialogue==
 {{Stub Dialogue}}
 
+:{{DIcon|Loupe}} Investigate
+<pre>{
+	"$type": "RPG.GameCore.HideWaypointByProp",
+	"TargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvPropEx",
+		"FetchType": "SinglePropByPropID",
+		"SinglePropID": {
+			"GroupID": {
+				"FixedValue": {
+					"Value": 172
+				}
+			},
+			"ID": {
+				"FixedValue": {
+					"Value": 300008
+				}
+			}
+		}
+	}
+}</pre>
+:*IOU document*
+:Apologies, the payment is actually ready, but I couldn't find a chest that can hold the payment. So, I'll send this time's payment along with your next one. Don't worry, I won't leave you dry!
+<pre>{
+	"$type": "RPG.GameCore.PropReqInteract",
+	"TargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvPropEx",
+		"FetchType": "SinglePropByPropID",
+		"SinglePropID": {
+			"GroupID": {
+				"FixedValue": {
+					"Value": 172
+				}
+			},
+			"ID": {
+				"FixedValue": {
+					"Value": 300008
+				}
+			}
+		}
+	},
+	"InteractID": {
+		"FixedValue": {
+			"Value": 1010
+		}
+	}
+}</pre>
+
+
+:{{DIcon|Loupe}} Investigate
+:*IOU document*
+:Apologies, the payment is actually ready, but I couldn't find a chest that can hold the payment. So, I'll send this time's payment along with your next one. Don't worry, I won't leave you dry!
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:'''(Trailblazer):''' (Huh? That's weird. The hatch won't open? Is it stuck somewhere?)
+
+;(Obtain {{Item|Clothes for "That Teacher"|20|x=1}})
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:'''(Trailblazer):''' (The last freight starskiff hasn't left the port yet... Probably because "that teacher" is still stuck inside. Go find Yujin and help get his clothes.)
+:<!--5-second delay-->
+
+;(Lose {{Item|Clothes for "That Teacher"|20|x=1}})
+;(Unused &mdash; TalkSentence_412270302)
+<pre>{
+	"$type": "RPG.GameCore.SetMissionCustomValue",
+	"SubmissionID": 401510211,
+	"MissionCustomValue": {
+		"Name": "OldValue_0",
+		"ValidValueParamList": []
+	},
+	"CustomValue": 1
+}</pre>
+
+;(Unused &mdash; ButtonClick_300009_401510211)
+:'''That Teacher:''' Excellent, you're back! I almost thought you weren't going to come back for me! Quickly, pass me the clothes through the courier package. It's starting to feel a little chilly...
+:<pre>{
+	"$type": "RPG.GameCore.SelectMissionItem",
+	"ItemIDList": [
+		140189
+	],
+	"ItemHiddenIDList": [],
+	"ItemSelect": [
+		{
+			"Item1": 140189,
+			"TriggerCustomString": "TalkSentence_412270302"
+		}
+	],
+	"SlotNum": 1,
+	"SimpleTalk": {},
+	"OnSubmitFail": [
+		{
+			"$type": "RPG.GameCore.EndPerformance"
+		}
+	],
+	"OnSubmitCancel": [
+		{
+			"$type": "RPG.GameCore.EndPerformance"
+		}
+	]
+}</pre>
+:;(If {{F|MissionCV-4015102-undefined}} is undefined 1)
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:<!--0.5-second delay-->
+:'''That Teacher:''' Thank you so much for your inestimable kindness! These things in the container here are the most valuable possessions I own. You've earned them.
+:{{DIcon|Arrow}} Where'd you hide the chest?
+:{{DIcon|Arrow}} I'm guessing you're naked again?
+:'''That Teacher:''' You're mistaken. This entire freight starskiff is all mine. Even given how panicked I was, there's still no way I could sneak into someone else's freight starskiff, right? I'm a conservative guy!
+:'''That Teacher:''' Well, I'll be going then... Such an embarrassment for me, there's no way I can show my face at the markets again...
+----
 {{Dialogue End}}
 
 ==Other Languages==

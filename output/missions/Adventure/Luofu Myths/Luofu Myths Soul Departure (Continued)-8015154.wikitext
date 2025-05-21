@@ -36,17 +36,77 @@ PageTitle=#Luofu Myths: Soul Departure (Continued)#
 -->
 ==Dialogue==
 {{Stub Dialogue}}
+;(If {{F|MissionCV-8015153-undefined}} is undefined 2)
+<pre>{
+	"$type": "RPG.GameCore.WaitUIControllerClose",
+	"UIControllerName": "ToastMissionGapDialog"
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.WaitUIControllerClose",
+	"UIControllerName": "HeliobusActionDayResultPerformanceDialog"
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.WaitUIControllerClose",
+	"UIControllerName": "HeliobusActionDayResultPage"
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.WaitUIControllerClose",
+	"UIControllerName": "MissionTrainVisitorDialog"
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.PlayMessage",
+	"MessageSectionID": 1219600
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.SaveMessage",
+	"MessageSectionID": 1219600
+}</pre>
+;(If {{F|MissionCV-8015153-undefined}} is undefined 1)
 {{Dialogue End}}
 
 ===Cast the heliobus into the suppression tower{{subst:void|<!--801515403-->}}===
 {{Mission Description|type=adventure|location=Fyxestroll Garden|update|At the request of the "wife," you accompany it to the suppression tower in Fyxestroll Garden.}}
 {{Dialogue Start}}
-:{{tx}}
 {{Dialogue End}}
 
 ===Head to Foxsomn Tomb and meet up with Ruoxi{{subst:void|<!--801515402-->}}===
 {{Mission Description|type=adventure|location=Fyxestroll Garden|update|You are not a staff of the Ten-Lords Commission, therefore you can certainly manage this incident according to the inclinations of your own heart. You let go of the "wife," hoping that they will enjoy the rest of their brief life together in happiness.<br />After some time, the "wife" finds you again, perhaps in gratitude for your benevolence.}}
 {{Dialogue Start}}
+;(Unused &mdash; TalkSentence_815153245)
+:'''Ruoxi:''' How could I? How could I go back on my word like that and bite the hand that feeds, after you'd been willing to let me go?
+::{{tx}}
+
+;(Unused &mdash; TalkSentence_815153247)
+:'''Ruoxi:''' Don't say that. I don't deserve it. It's just my job, and doesn't deserve your thanks.
+::'''Ruoxi:''' If I'm honest with you, heliobi have a free nature, and I've thought about running off before. But I've changed my mind, and I want to stay here.
+::'''Ruoxi:''' Because of Wenyuan, I've got to experience the feeling of love, and being loved... It's both sweet, but also mixed with a hint of bitter and sour. Like wine that's steeped for years and years, is this how it feels to love after so much pain and waiting?
+::'''Ruoxi:''' ...I've never experienced such complex emotions in any other human before. After losing him, other people's emotions just seem too bland to me. I... I lost all feeling of being a heliobus for a moment, and fell into this illusion called "being human."
+::'''Ruoxi:''' Please, send me back to the Ten Lords' prison. Please.
+::{{DIcon|Arrow}} (Pull them inside the Lunaumbra Gourd)
+
+;(Unused &mdash; PropTrigger_801515402)
+<pre>{
+	"$type": "RPG.GameCore.SetAudioEmotionState",
+	"StateName": "State_Relaxing",
+	"SubMissionID": 801515402
+}</pre>
+::'''Ruoxi:''' If I'm honest with you, heliobi have a free nature, and I've thought about running off before. But I've changed my mind, and I want to stay here.
+::'''Ruoxi:''' Because of Wenyuan, I've got to experience the feeling of love, and being loved... It's both sweet, but also mixed with a hint of bitter and sour. Like wine that's steeped for years and years, is this how it feels to love after so much pain and waiting?
+::'''Ruoxi:''' ...I've never experienced such complex emotions in any other human before. After losing him, other people's emotions just seem too bland to me. I... I lost all feeling of being a heliobus for a moment, and fell into this illusion called "being human."
+::'''Ruoxi:''' Please, send me back to the Ten Lords' prison. Please.
+::{{DIcon|Arrow}} (Pull them inside the Lunaumbra Gourd)
+:<pre>{
+	"$type": "RPG.GameCore.PlayTimelinePrefab",
+	"PrefabPath": "CutSceneSpecial/CS_ActivityHeliobus_Gourd/CS_ActivityHeliobus_Gourd.prefab",
+	"AreaName": {
+		"Custom": true,
+		"Key": "AreaName"
+	},
+	"AnchorName": {
+		"Custom": true,
+		"Key": "AnchorName"
+	}
+}</pre>
 :{{tx}}
 {{Dialogue End}}
 

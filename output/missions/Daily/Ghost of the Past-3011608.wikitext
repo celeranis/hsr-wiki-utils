@@ -37,7 +37,112 @@ PageTitle=#Ghost of the Past#
 ===Solve the Fragmentum echoes' predicaments and release them from their problems.{{subst:void|<!--301160801-->}}===
 {{Mission Description|type=daily|location=Corridor of Fading Echoes|Some Silvermane Guard patrols spotted illusory echoes in the Fragmentum who are stuck inside due to unfinished businesses. Help them.<br />The cheerful Silvermane Guard seems to be concerned about his duties...}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Cheerful Silvermane Guard)
+:'''Cheerful Silvermane Guard:''' The casualty figures are discouraging. If only we could invent something to reduce the casualty rate...
+:'''Cheerful Silvermane Guard:''' Hello, soldier! I'm looking for inspiration for a new invention. I'm sorry I didn't notice you earlier.
+:'''Cheerful Silvermane Guard:''' So... What's the matter? If it is not too urgent, please submit a written report to my deputy and say it's for Richard Balakin.
+<pre>{
+	"$type": "RPG.GameCore.SetNPCMonstersVisible"
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.SelectMissionItem",
+	"SubMissionID": 301160801,
+	"OnlyPerformance": false,
+	"ItemIDList": [
+		401007,
+		401009,
+		401011,
+		402001,
+		402005
+	],
+	"ItemHiddenIDList": [],
+	"ItemSelect": [
+		{
+			"Item1": 401007,
+			"TriggerCustomString": "CMI_401007"
+		},
+		{
+			"Item1": 401009,
+			"TriggerCustomString": "CMI_401009"
+		},
+		{
+			"Item1": 401011,
+			"TriggerCustomString": "CMI_401011"
+		},
+		{
+			"Item1": 402001,
+			"TriggerCustomString": "CMI_402001"
+		},
+		{
+			"Item1": 402005,
+			"TriggerCustomString": "CMI_402005"
+		}
+	],
+	"SlotNum": 1,
+	"SimpleTalk": {}
+}</pre>
+;(If {{cx}}<!--SubMission Finish: 301160801-->)
+;(Unused &mdash; CMI_401007)
+:'''Cheerful Silvermane Guard:''' Oh, are these your design blueprints? Mind if I have a look, soldier?
+::'''Cheerful Silvermane Guard:''' ...
+::'''Cheerful Silvermane Guard:''' Is this thing called... Life Transmitter? What an amazing invention...
+::'''Cheerful Silvermane Guard:''' With this, the survival rate for emergency treatments on the battlefield could be doubled. And it would also be used in field hospitals...
+::'''Cheerful Silvermane Guard:''' Nice! Soldier, you have done us a great service!
+::'''Cheerful Silvermane Guard:''' It shouldn't be difficult to build it from your blueprints. If we succeed, you will be a hero to the Guards! Hahaha...
+::The guard standing in front of you laughs heartily as if he has found a treasure. You can almost see his excited expression through his tightly secured iron helmet.
+::As he thinks about how to materialize the plans in the blueprints, he paces towards the depths of the Corridor of Fading Echoes until the traces of his appearance completely dissipate &mdash; as if he had never been here.
+:<pre>{
+	"$type": "RPG.GameCore.SetNPCMonstersVisible"
+}</pre>
+
+;(Unused &mdash; CMI_401009)
+:'''Cheerful Silvermane Guard:''' Oh, are these your design blueprints? Mind if I have a look, soldier?
+::'''Cheerful Silvermane Guard:''' ...
+::'''Cheerful Silvermane Guard:''' Is this thing called... Simple Protective Gear? Hmm, not bad...
+::'''Cheerful Silvermane Guard:''' Your idea is good, but... this gear doesn't seem to be as protective as our current uniform. And if we wear it outside the uniform, it may restrict our movement.
+::'''Cheerful Silvermane Guard:''' Hmm... Anyway, I'll keep thinking along these lines. Thank you for your valuable advice, soldier.
+::The guard in front of you puts his hand on his head in thought. You fancy you can see his deep frown even under his full-face helmet.
+::As he thinks about how to materialize the plans in the blueprints, he paces towards the depths of the Corridor of Fading Echoes until the traces of his appearance completely dissipate &mdash; as if he had never been here.
+:<pre>{
+	"$type": "RPG.GameCore.SetNPCMonstersVisible"
+}</pre>
+
+;(Unused &mdash; CMI_401011)
+:'''Cheerful Silvermane Guard:''' Oh, are these your design blueprints? Mind if I have a look, soldier?
+::'''Cheerful Silvermane Guard:''' ...
+::'''Cheerful Silvermane Guard:''' Is this thing called... Camo Paint? Haha, interesting...
+::'''Cheerful Silvermane Guard:''' So, you're saying that if we are covered with this stuff, the monsters won't be able to see us, right? Interesting stuff, but we don't know for sure if the monsters are using their sight to locate enemies...
+::'''Cheerful Silvermane Guard:''' But I personally think it's a very interesting invention, and I will follow your line of thinking and see if it can be made... Thank you for your valuable advice, soldier!
+::The guard in front of you puts his hand on his head in thought. You fancy you can see his deep frown even under his full-face helmet.
+::As he thinks about how to materialize the plans in the blueprints, he paces towards the depths of the Corridor of Fading Echoes until the traces of his appearance completely dissipate &mdash; as if he had never been here.
+:<pre>{
+	"$type": "RPG.GameCore.SetNPCMonstersVisible"
+}</pre>
+
+;(Unused &mdash; CMI_402001)
+:'''Cheerful Silvermane Guard:''' Oh, are these your design blueprints? Mind if I have a look, soldier?
+::'''Cheerful Silvermane Guard:''' ...
+::'''Cheerful Silvermane Guard:''' Is this thing called... Healing Spray? What an incredible idea...
+::'''Cheerful Silvermane Guard:''' With this, our wounds can be quickly taken care of on the battlefield, and it's also safer than our previous methods...
+::'''Cheerful Silvermane Guard:''' It's just... the materials mentioned in your blueprints seem to be hard to come by. But if you do manage to make it, then all of the Guards will remember your name! Ahahaha...
+::The guard standing in front of you laughs heartily as if he has found a treasure. You can almost see his excited expression through his tightly secured iron helmet.
+::As he thinks about how to materialize the plans in the blueprints, he paces towards the depths of the Corridor of Fading Echoes until the traces of his appearance completely dissipate &mdash; as if he had never been here.
+:<pre>{
+	"$type": "RPG.GameCore.SetNPCMonstersVisible"
+}</pre>
+
+;(Unused &mdash; CMI_402005)
+:'''Cheerful Silvermane Guard:''' Oh, are these your design blueprints? Mind if I have a look, soldier?
+::'''Cheerful Silvermane Guard:''' ...
+::'''Cheerful Silvermane Guard:''' Is this thing called... High-Tech Protective Gear? What an astounding idea...
+::'''Cheerful Silvermane Guard:''' As far as I can tell, the protection offered by this gear is much higher than our current uniform... Maybe twice as much!
+::'''Cheerful Silvermane Guard:''' It's just... the materials mentioned in your blueprints seem to be hard to come by. But if you do manage to make it, then all of the Guards will remember your name! Ahahaha...
+::The guard standing in front of you laughs heartily as if he has found a treasure. You can almost see his excited expression through his tightly secured iron helmet.
+::As he thinks about how to materialize the plans in the blueprints, he paces towards the depths of the Corridor of Fading Echoes until the traces of his appearance completely dissipate &mdash; as if he had never been here.
+:<pre>{
+	"$type": "RPG.GameCore.SetNPCMonstersVisible"
+}</pre>
 {{Dialogue End}}
 
 ==Other Languages==

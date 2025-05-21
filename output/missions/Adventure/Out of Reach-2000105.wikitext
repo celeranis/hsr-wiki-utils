@@ -43,39 +43,372 @@ PageTitle=#Out of Reach#
 ===Find the source of the cry for help by following the decibel changes{{subst:void|<!--200010402-->}}===
 {{Mission Description|type=adventure|location=Supply Zone|After stepping into the familiar Supply Zone, a cry for help could be heard from somewhere out of sight. Rescue the mysterious researcher who was trapped, and maybe he'll tell you something you don't know about the Comet Hunter.}}
 {{Dialogue Start}}
-:{{tx}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{A|VO chapter0 6 staffM 107.ogg}} '''???:''' Aaaah.
+:<!--1-second delay-->
+----
+:'''???:''' The {{MC|f=lass|m=lad}} over there, hello!
+:{{DIcon|Arrow}} What's the matter?
+::'''???:''' What's the matter? Don't you see I'm stuck here? Young people these days. Your brain's fried, and your eyes ain't no good either.
+:{{DIcon|Arrow}} I &mdash; can't &mdash; hear &mdash; you!
+::'''???:''' Oh my gosh, the kids these days. Have you lost your hearing? At such a young age? Then take a look with your eyes. I'm stuck!
+:'''???:''' If you ask me, I'd say this shouldn't have happened. There should always be two people dealing with bearing blockages, one up top and one at the bottom, in case of repulsion bridge failures. But who could've guessed that none of the kids these days are willing to do this job now?
+:'''???:''' {{MC|f=Lass|m=Lad}}, the control device of the repulsion bridge is right opposite me. Take the elevator and reset it to let me come over, and then you can get out of here.
+:{{DIcon|Arrow}} I'll be right there.
+::'''???:''' Hurry up. I won't let you go empty-handed.
+:{{DIcon|Arrow}} How much will you pay me?
+::'''???:''' Gee, kids these days, all you know is money.
+:{{DIcon|Arrow}} I don't want your money.
+::'''???:''' So it's not enough then. Fine, use your imagination, I will pay you whatever you want.
+::{{DIcon|Arrow}} One hundred!
+::{{DIcon|Arrow}} Ten thousand!
+::{{DIcon|Arrow}} A hundred million!
+:'''???:''' Agreed!
+----
 {{Dialogue End}}
 
 ===Operate the control device and connect the repulsion bridge to save the old man{{subst:void|<!--200010403-->}}===
 {{Mission Description|type=adventure|location=Supply Zone|update|Wen Tianweng describes his past with the Comet Hunter Hosea and hands you a developed treasure map. Head to the marked location in the image to find Hosea's hidden possessions.}}
 {{Dialogue Start}}
-:{{tx}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:'''???:''' Good {{MC|f=lass|m=boy}}! If you operate on the control device over there, you can come to me... Cough, cough.
+:'''???:''' I've been trapped here all day. I'm hungry, thirsty, and running out of oxygen. I don't have the strength to speak. I have to reserve energy.
 {{Dialogue End}}
 
 ===Ask about the old man's condition and investigate the stored items at the end of the repulsion bridge{{subst:void|<!--200010404-->}}===
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Grumpy Senior)
+:'''???:''' You move pretty quick, {{MC|f=lass|m=lad}}. There are lots of nice things in these boxes here. Help yourself.
+:'''???:''' I am in a hurry. Bye!
+:{{DIcon|Arrow}} Why didn't you just turn on the switch yourself?
+::'''???:''' Why didn't I turn it on myself... Hoho, I suppose I didn't notice.
+:{{DIcon|Arrow}} What about the big reward you promised me?
+::'''???:''' What a big reward... I don't remember making such a promise.
+:{{DIcon|Arrow}} Such terrible acting...
+:'''???:''' What? I can't hear you clearly, {{MC|f=lass|m=lad}}. Speak up!
+:{{DIcon|Arrow}} ... Forget it, as long as you're fine.
+::'''???:''' Of course I'm fine! Every muscle and bone, everything is fine.
+:{{DIcon|Arrow}} So you just wanted to get my attention.
+::'''???:''' No. I did not. Don't be ridiculous, {{MC|f=lass|m=lad}}.
+:{{DIcon|Arrow}} You're not trying to blackmail me... are you?
+::'''???:''' I didn't ask for anything! How can you call this blackmail? At most I just took up a little of your time.
+:'''???:''' Come on, get out of the way, I can't hold it anymore. Come get me in the maintenance room if you need anything!
+<pre>{
+	"$type": "RPG.GameCore.DestroyNPC",
+	"GroupID": 14,
+	"GroupNpcID": 400001
+}</pre>
 {{Dialogue End}}
 
 ===Go to the maintenance room! Maybe the old man will give you a reward{{subst:void|<!--200010405-->}}===
 {{Dialogue Start}}
-:{{tx}}
+
+;(Obtain {{Item|Special Autoradiograph|20|x=1}})
+
+;(Talk to Wen Tianweng)
+:'''???:''' Look, I don't know for how long this bottle-opener has been in the toolbox. I finally found it!
+:'''???:''' This bottle of soda is from four Amber Eras ago, {{Color|keyword|nobold=1|Kapo-Kali}}, so fragrant. Ho... so refreshing!
+:'''???:''' Would you like a sip?
+:{{DIcon|Arrow}} Just one sip!
+::'''???:''' Good one, kid! You have no idea how frustrated I was just now. I had this tasty treat in my hand, but I couldn't drink it! I almost tried to pry it open with my teeth!
+::'''???:''' It's my own fault for bringing it with me when I went down to unblock those bearings. Why did I forget the bottle opener?
+:{{DIcon|Arrow}} Must've gone flat ages ago, right?
+::'''???:''' I haven't gone flat! When I was your age, I could light Gunn's beard on fire and set up Bernard with that chick in the Department of Insight, all in one go!
+::'''???:''' Sadly, I really was a bit flat in the "Station Breakout" incident.
+::'''???:''' Time flies, though. Now, I even forget to bring a bottle opener. I can't deny I am old.
+:{{DIcon|Arrow}} So this is why you were in a hurry...
+::'''???:''' Ha, what did you expect? Can't I reward myself with a bottle of soda after working so hard dealing with that blockage?
+::'''???:''' I just forgot to bring the opener. Sigh... I must admit I am old.
+:'''???:''' Let me tell you, the patent for this {{Color|keyword|nobold=1|Kapo-Kali}} used to belong to the space station. This anti-gravity drink was once all the rage across the cosmos. I only have a few bottles left.
+:'''???:''' I'd better enjoy every last sip while I still can.
+:'''???:''' Oh, right! I haven't introduced myself yet, have I?
+:'''Wen Tianweng:''' I am Wen Tianweng, the mechanic. I am number one around here in terms of age, experience, and skills.
+:'''Wen Tianweng:''' Unfortunately, it doesn't mean jack, because I'm the only one in the maintenance room.
+:'''Wen Tianweng:''' I had a partner once, but he was a scoundrel. Not only did he blow a big hole in the space station, but he also kept sending back these strange letters. He always blocked the bearings and made me go repair them.
+:'''Wen Tianweng:''' I never got along with that troublemaker. It's as if we were fated to be at odds with each other... Ah, Akivili must've turned their back on me, that's why I got stuck in there.
+:'''Wen Tianweng:''' I was stuck for so long it was starting to ache. Ouch!
+:{{DIcon|Arrow}} You promised to pay me...
+:'''Wen Tianweng:''' Pay? Do I look rich to you?
+:'''Wen Tianweng:''' I'm just a poor mechanic. I've been charged with dereliction of duty ever since that scoundrel made that giant hole in the station.
+:'''Wen Tianweng:''' If you want a reward, I don't have any, hehe...
+:'''Wen Tianweng:''' However! Since we've been talking this whole time and you seem agreeable enough, it's worth making an exception.
+:'''Wen Tianweng:''' Listen carefully now. What I am going to give you is...
+:{{DIcon|Arrow}} A hundred treasure chests?
+:{{DIcon|Arrow}} Ten Star Rail Special Passes?
+:'''Wen Tianweng:''' Huh... what are you on about? I am only going to show you the way to make money. You are guaranteed to make a fortune.
+:'''Wen Tianweng:''' As for the origin of this fortune... well, it all started with this person.
+:'''Wen Tianweng:''' Remember the scoundrel I was just talking about? His real name is {{Color|keyword|nobold=1|Hosea Lazaro}}.
+:'''Wen Tianweng:''' That old fart has a bunch of grand titles, like {{Color|keyword|nobold=1|former researcher in the Department of Cosmic Geography, former member of the Nameless, and member of the Armed Archaeologists}}.
+:'''Wen Tianweng:''' When he was still in the space station, he would boast about his inventions all day. {{Color|keyword|nobold=1|Astro Rod, Cosmos Guide chart, the Special Autoradiograph, various soft drink patents.}} He was so arrogant and refused to obey anyone.
+:'''Wen Tianweng:''' What's more, he would get very upset whenever he saw his colleagues from the Department of Cosmic Geography being bullied by others. He would often stand up for his colleagues and start fights.
+:{{DIcon|Arrow}} What a scoundrel...
+::'''Wen Tianweng:''' Humph, that's right. I am glad you can see the truth.
+:{{DIcon|Arrow}} Sounds like a decent guy.
+::'''Wen Tianweng:''' Yeah, right. Only impressionable young kids like you would get intimidated by those pretentious titles and inventions.
+:{{DIcon|Arrow}} Could you get to the point?
+::'''Wen Tianweng:''' Kids these days are always so impatient. The key to having good conversations is to let things sink in. Besides, which one of my words is not on point?
+::'''Wen Tianweng:''' If you want the treasure, you have to listen to me talk first.
+:'''Wen Tianweng:''' Long story short, Hosea is famous for his craftsmanship.
+:'''Wen Tianweng:''' On one hand, it's because he likes to tinker with things in his spare time. On the other hand, it's because he would come to the maintenance room to learn from me almost every day.
+:'''Wen Tianweng:''' He was responsible for clearing blockages. He invented Ultra Nickel Parts, and he brewed {{Color|keyword|nobold=1|Kapo-Kali}}. As for me... I was responsible for supervising his work... By the way, we also wrote a book together, ''The Art of Soda and Space Station Maintenance''.
+:'''Wen Tianweng:''' We did have a good time... yes... it really was quite good.
+:'''Wen Tianweng:''' Until one day, I was suddenly woken up from my sleep by a terribly loud noise &mdash;
+:'''Wen Tianweng:''' That scoundrel blew a giant hole in the maintenance room and flew away in an aircraft! Leaving me with all the mess.
+:'''Wen Tianweng:''' Afterward, I learned from the others that the fuel in the spacecraft that he used for his adventure was stolen bit by bit from my maintenance room!
+:'''Wen Tianweng:''' And this is the "Station Breakout" incident that he boasts about all over the place. It's been so many years, but whenever I think about it, I'm still so mad at him.
+:{{DIcon|Arrow}} He endured hardship to accomplish his ambition. That's so cool.
+::'''Wen Tianweng:''' Oh come on. You think the "Station Breakout" is something to be proud of?
+::'''Wen Tianweng:''' And that was the first time Hosea Lazaro exploited us. After that, whenever there is a tiny spark, the whole station would go up in alarm.
+::'''Wen Tianweng:''' If you try to copy him, I guarantee that those kids from the Security Department will mop the floor with you before you even lift a foot off the ground.
+:{{DIcon|Arrow}} That's destruction of public property. It's unforgivable.
+::'''Wen Tianweng:''' That's right. He just wanted to cause trouble on my turf.
+::'''Wen Tianweng:''' He just walked away, but to this very day, I am still paying the huge debt from all the damage he's done.
+:{{DIcon|Arrow}} He betrayed his teacher and friend.
+::'''Wen Tianweng:''' I am glad to hear you have a conscience after all! Never be like that Hosea Lazaro.
+::'''Wen Tianweng:''' I've been told there are many young people in the Department of Cosmic Geography who worship that old scoundrel like a spiritual idol. What a bunch of buffoons.
+:{{DIcon|Arrow}} Such a long speech. I am falling asleep...
+:'''Wen Tianweng:''' ...I went off-topic. Eh... that's what happens when you get old.
+:'''Wen Tianweng:''' Usually, I have no one to talk to, but now that I got to let it all out, I feel much better. So, what I really want to give you is the {{Color|keyword|nobold=1|Treasure Map}} that Hosea Lazaro left behind.
+:{{DIcon|Arrow}} Awesome. You should have shown me earlier.
+:{{DIcon|Arrow}} You just wanted someone to chat with, didn't you...
+::'''Wen Tianweng:''' Of course not. Stop talking nonsense.
+:The treasure map revealed by a special autoradiograph is in black and white. Only the location of the target room is marked with a red circle.
+:'''Wen Tianweng:''' This thing was hidden in a corner somewhere in the space station. Someone found it and thought it was trash.
+:'''Wen Tianweng:''' But it ended up here with me, I tried using that old scoundrel's special technique to reveal the text, and lo and behold! It revealed the coordinates of a room.
+:'''Wen Tianweng:''' I've been told that the old scoundrel left many personal treasures in the space station. They must be hidden there.
+:'''Wen Tianweng:''' You can look for them according to the location on the map. If you can find them, then everything belongs to you!
+:'''Wen Tianweng:''' I have to go take a couple of sips of {{Color|keyword|nobold=1|Kapo-Kali}} and tinker around with my blazing welding gun. I wouldn't give up on that even if Akivili were to come pay me a visit!
 {{Dialogue End}}
 
 ===Go to the room marked on the developed treasure map{{subst:void|<!--200010411-->}}===
 {{Dialogue Start}}
-:{{tx}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:'''(Trailblazer):''' This should be the room shown on the treasure map.
 {{Dialogue End}}
 
 ===Search for Comet Hunter's Treasure in the inner parts of the cabin{{subst:void|<!--200010406-->}}===
 {{Dialogue Start}}
-:{{tx}}
+
+:{{DIcon|Talk}} Investigate
+<pre>{
+	"$type": "RPG.GameCore.ActiveVirtualCamera",
+	"AreaName": "MainMission_2000201",
+	"AnchorName": "Camera_2000104_01",
+	"WaitBlendFinish": true,
+	"BlendConfig": {
+		"ExportToJson": true,
+		"BlendType": "Cut",
+		"BlendTime": 2
+	}
+}</pre>
+:'''Letter:''' To Treasure Hunters: (I)
+:'''Letter:''' Ah hoo! You've been fooled!
+:'''Letter:''' Actually, there is no treasure at all.
+:'''Letter:''' The only big gifts are my four graffiti drafts hidden in this room. And yes, there is also a nice picture of our respected Madam Herta. You didn't expect this, did you?
+:'''Letter:''' If you are a devout little researcher, take a deep breath! Don't get a heart attack!
+:'''Letter:''' If you are a fun-loving young person, I suggest you collect them all. Take them out when life is bad, and have some fun while studying in the dark tower.
+:'''Letter:''' Laughing Hosea Lazaro
+<pre>{
+	"$type": "RPG.GameCore.ActiveVirtualCamera",
+	"AreaName": "MainMission_2000201",
+	"AnchorName": "Camera_2000104_01",
+	"IsActive": false,
+	"WaitBlendFinish": true,
+	"BlendConfig": {
+		"ExportToJson": true,
+		"BlendType": "Cut",
+		"BlendTime": 2
+	}
+}</pre>
+
+:{{DIcon|Talk}} Investigate
+<pre>{
+	"$type": "RPG.GameCore.ActiveVirtualCamera",
+	"AreaName": "MainMission_2000201",
+	"AnchorName": "Camera_2000104_02",
+	"WaitBlendFinish": true,
+	"BlendConfig": {
+		"ExportToJson": true,
+		"BlendType": "Cut",
+		"BlendTime": 2
+	}
+}</pre>
+:'''Letter:''' To Treasure Hunters: (II)
+:'''Letter:''' Alright, if you can see this, it means you have followed my advice and that you possess the precious virtue of perseverance.
+:'''Letter:''' I must admit, you've gone such a long way. If I don't give you something, it'll be a little mean.
+:'''Letter:''' After all, I don't know who'd be looking for my treasure after so many Amber Eras.
+:'''Letter:''' There is a slim chance that maybe you are my future champion, my spiritual successor.
+:'''Letter:''' Wouldn't it be a pity if I accidentally hurt my friends?
+:'''Letter:''' Seems like there's no other way. I have to show you the real treasure now.
+:'''Letter:''' Your Respected Hosea Lazaro
+<pre>{
+	"$type": "RPG.GameCore.ActiveVirtualCamera",
+	"AreaName": "MainMission_2000201",
+	"AnchorName": "Camera_2000104_02",
+	"IsActive": false,
+	"WaitBlendFinish": true,
+	"BlendConfig": {
+		"ExportToJson": true,
+		"BlendType": "Cut",
+		"BlendTime": 2
+	}
+}</pre>
+
+:{{DIcon|Talk}} Investigate
+<pre>{
+	"$type": "RPG.GameCore.ActiveVirtualCamera",
+	"AreaName": "MainMission_2000201",
+	"AnchorName": "Camera_2000104_03",
+	"WaitBlendFinish": true,
+	"BlendConfig": {
+		"ExportToJson": true,
+		"BlendType": "Cut",
+		"BlendTime": 2
+	}
+}</pre>
+:'''Letter:''' To Treasure Hunters: (III)
+:'''Letter:''' Have you ever had a soda called Kapo-Kali?
+:'''Letter:''' It was once the signature of the space station, an anti-gravity drink extremely popular in the Southern Orion system.
+:'''Letter:''' Oh, sorry! Besides my other famous inventions, like the Astro Rod and Cosmos Guide, this is another one of my masterpieces.
+:'''Letter:''' The Interastral Peace Corporation once wanted to spend five million credits to buy its recipe, and I refused.
+:'''Letter:''' Wen Huairen of the Herta Department of Implement Arts has tried to steal the secret from me 33 times &mdash; for which he was beaten to a pulp like he deserved.
+:'''Letter:''' Now, I'll make it public once and for all.
+<pre>{
+	"$type": "RPG.GameCore.ActiveVirtualCamera",
+	"AreaName": "MainMission_2000201",
+	"AnchorName": "Camera_2000104_03",
+	"IsActive": false,
+	"WaitBlendFinish": true,
+	"BlendConfig": {
+		"ExportToJson": true,
+		"BlendType": "Cut",
+		"BlendTime": 2
+	}
+}</pre>
+
+:{{DIcon|Talk}} Investigate
+<pre>{
+	"$type": "RPG.GameCore.ActiveVirtualCamera",
+	"AreaName": "MainMission_2000201",
+	"AnchorName": "Camera_2000104_04",
+	"WaitBlendFinish": true,
+	"BlendConfig": {
+		"ExportToJson": true,
+		"BlendType": "Cut",
+		"BlendTime": 2
+	}
+}</pre>
+:'''Letter:''' To Treasure Hunters: (IV)
+:'''Letter:''' Do not doubt your eyes. Above is the precious secret recipe of Kapo-Kali.
+:'''Letter:''' I swear on my mother's grave.
+:'''Letter:''' If you are one of us, you will know where to decode the password above.
+:'''Letter:''' Tip: A special method is required to reveal the text.
+:'''Letter:''' Hosea Lazaro the Terrific
+<pre>{
+	"$type": "RPG.GameCore.ActiveVirtualCamera",
+	"AreaName": "MainMission_2000201",
+	"AnchorName": "Camera_2000104_04",
+	"IsActive": false,
+	"WaitBlendFinish": true,
+	"BlendConfig": {
+		"ExportToJson": true,
+		"BlendType": "Cut",
+		"BlendTime": 2
+	}
+}</pre>
 {{Dialogue End}}
 
 ===Give Wen Tianweng the so-called treasure{{subst:void|<!--200010410-->}}===
 {{Mission Description|type=adventure|location=Supply Zone|update|You are now in possession of the renowned Comet Hunter's Treasure and just a step away from deciphering the mysteries within. Bring the treasure to Wen Tianweng and the real prize will finally surface.}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Wen Tianweng)
+:'''Wen Tianweng:''' Did you find them? What are these?
+:'''Wen Tianweng:''' Don't get me wrong. I'm just curious. I don't believe that old scoundrel would leave us anything good.
+:'''Wen Tianweng:''' What's the paper you are holding...? Oh! That's Madam Herta... Disrespectful, really disrespectful! Give it to me and don't let others see it.
+:{{DIcon|Arrow}} I want to keep it...
+::'''Wen Tianweng:''' Don't be fooled! A tiger never changes its stripes. You can't trust that scoundrel Hosea.
+::'''Wen Tianweng:''' Quick! Give it to me. If someone finds out, we are done for.
+:{{DIcon|Arrow}} Try the Autoradiograph?
+::'''Wen Tianweng:''' What? This treasure is also marked with the location of another treasure? What game is he playing?
+::'''Wen Tianweng:''' Let me have a look.
+:'''Wen Tianweng:''' What? This is an encrypted letter... the secret recipe of... {{Color|keyword|nobold=1|Kapo-Kali}}!?
+:'''Wen Tianweng:''' Why you little! Just you wait. There's enough Autoradiograph reagent&mdash;
+<pre>{
+	"$type": "RPG.GameCore.ShowReading",
+	"BookID": {
+		"FixedValue": {
+			"Value": 190157
+		}
+	}
+}</pre>
+:'''Wen Tianweng:''' ...
+:'''Wen Tianweng:''' What's he playing at, that old scoundrel.
+:{{DIcon|Arrow}} As long as we can find the treasure.
+::'''Wen Tianweng:''' ...
+::'''Wen Tianweng:''' Caramel, carbon dioxide, sounds familiar. Ambergris... Does it mean saliva!?
+::'''Wen Tianweng:''' At least he has a shred of loyalty left. At my age, a sip of {{Color|keyword|nobold=1|Kapo-Kali}} is the only thing I want...
+:{{DIcon|Arrow}} Just forgive him already.
+::'''Wen Tianweng:''' Enough. This is between us two old farts. Young people shouldn't get involved.
+::'''Wen Tianweng:''' And besides, when I said I hated him, I said it in the heat of the moment.
+:{{DIcon|Arrow}} It wasn't easy to deliver this letter.
+::'''Wen Tianweng:''' Sorry, {{MC|f=lass|m=lad}}. I didn't expect that from him.
+::'''Wen Tianweng:''' When I said I hated him, I said it in the heat of the moment! Argh!
+:'''Wen Tianweng:''' Of course, I never cared about all the mess he left me with.
+:'''Wen Tianweng:''' Ever since I was young, I have never liked academic research and dealing with the Department of Implement Arts.
+:'''Wen Tianweng:''' My biggest wish was to hide in this maintenance room and play with the tools. Work when I wake up and sleep when I get tired. In my opinion, dealing with machines is much more fun than dealing with people...
+:'''Wen Tianweng:''' But so many people have come and gone through this space station over the years, with the exception of Hosea.
+:'''Wen Tianweng:''' So, I was angry that the old scoundrel didn't share his breakout plan with me. Not even a little bit.
+:'''Wen Tianweng:''' Aren't we brothers? Shouldn't brothers be able to talk about anything?
+:'''Wen Tianweng:''' ...Nevertheless, it's been so many years. I have long since learned to let it go.
+:'''Wen Tianweng:''' On the contrary, whenever I hear about what kind of trouble he's making outside, I really do feel happy for him.
+:'''Wen Tianweng:''' He was born to run amok all over the cosmos.
+:{{DIcon|Arrow}} You are very enlightened.
+::'''Wen Tianweng:''' One has got to learn to let it go eventually.
+:{{DIcon|Arrow}} He also thinks of you as a brother.
+::'''Wen Tianweng:''' Maybe. But if he had really invited me to make a breakout from the space station, I may not have had the guts for it.
+:{{DIcon|Arrow}} I like to run amok too.
+::'''Wen Tianweng:''' You are still young. There will be plenty of opportunities in the future. Either you run amok all over the world or it runs all over you.
+:'''Wen Tianweng:''' So, after all that... The {{Color|keyword|nobold=1|Treasure}} is just this recipe, {{MC|f=lass|m=lad}}. What do you think?
+:{{DIcon|Arrow}} I want to exchange it for money.
+::'''Wen Tianweng:''' As good as the idea may sound, this manuscript is soaked in Autoradiopraph reagent, which makes it very fragile. You'll break it with the slightest touch. I'm afraid it won't last until you find a buyer.
+::'''Wen Tianweng:''' Let me see. I guess I can give you a few treasures you won't find anywhere else. And I may have some of these ingredients in the warehouse.
+:{{DIcon|Arrow}} You keep it, as a memento.
+::'''Wen Tianweng:''' I do NOT want it! Unless you insist, then maybe I'll consider taking it home.
+::{{DIcon|Arrow}} It is very important to you.
+:::'''Wen Tianweng:''' Well, in that case, let me show you something.
+:::'''Wen Tianweng:''' Let me see, these ingredients... I suppose I can find some in the warehouse if I look hard enough...
+::{{DIcon|Arrow}} I will keep it then.
+:::'''Wen Tianweng:''' Hold on! I was just being polite. What were you thinking...?
+:::'''Wen Tianweng:''' How about this. I'll keep the manuscript, and I'll show you something else.
+:{{DIcon|Arrow}} I want something else.
+::'''Wen Tianweng:''' Well... then I suppose there's no other choice. That old scoundrel... after all these years, I am still paying off his debt.
+::'''Wen Tianweng:''' Well, in that case, let me show you something.
+::'''Wen Tianweng:''' Let me see, these ingredients... I suppose I can find some in the warehouse if I look hard enough...
+:'''Wen Tianweng:''' Come on, a big bucket of fresh {{Color|keyword|nobold=1|Kapo-Kali}}... That's the taste!
+:'''Wen Tianweng:''' Just take these sodas with you. They can refresh your mind and strengthen your body.
+:'''Wen Tianweng:''' {{MC|f=Lass|m=Lad}}, you're the only one who would talk to me ever since Hosea left.
+:'''Wen Tianweng:''' If you are interested in that old scoundrel, you can look around the space station again and see if you can find some of those letters he sent back. Those letters are filled with his bragging.
+:'''Wen Tianweng:''' That guy... just wants more people to hear his nonsense.
+:{{DIcon|Arrow}} Old people are like that.
+:{{DIcon|Arrow}} Nonsense can be very interesting to listen to.
+:'''Wen Tianweng:''' Haha! You little {{MC|f=brat|m=brat}}...
+:'''Wen Tianweng:''' Alright, enough chitchat. From now on, whenever you are free...
+:'''Wen Tianweng:''' Ha! Just remember to come more often to chat with me.
+:'''Wen Tianweng:''' Although I don't have much of anything here, you and I have an agreement. Whenever you pop in, there will always be enough {{Color|keyword|nobold=1|Kapo-Kali}} for you.
+<pre>{
+	"$type": "RPG.GameCore.DestroyNPC",
+	"GroupID": 22,
+	"GroupNpcID": 400001,
+	"DestroyList": []
+}</pre>
 {{Dialogue End}}
 
 ==Other Languages==

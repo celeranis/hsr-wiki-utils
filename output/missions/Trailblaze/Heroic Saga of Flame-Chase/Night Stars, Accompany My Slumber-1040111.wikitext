@@ -39,22 +39,198 @@ PageTitle=#Night Stars, Accompany My Slumber#
 ===Calm your mood and rest up{{subst:void|<!--104011101-->}}===
 {{Mission Description|type=trailblaze|location="Eternal Holy City" Okhema|Calm your mood and rest up}}
 {{Dialogue Start}}
+<pre>{
+	"$type": "RPG.GameCore.SwitchCharacterAnchorV2",
+	"SwitchCharacterAnchorConfig": {
+		"IsLocalPlayer": true,
+		"CharacterUniqueName": "LocalPlayer",
+		"AreaName": {
+			"Value": "LevelArea_P10401_F10401001_G6"
+		},
+		"AnchorName": {
+			"Value": "CheckPoint05"
+		}
+	}
+}</pre>
+----
+:{{tx}}
+<pre>{
+	"$type": "RPG.GameCore.SwitchCharacterAnchorV2",
+	"SwitchCharacterAnchorConfig": {
+		"IsLocalPlayer": true,
+		"CharacterUniqueName": "LocalPlayer",
+		"AreaName": {
+			"Value": "LevelArea_P10401_F10401001_G154"
+		},
+		"AnchorName": {
+			"Value": "Anchor1"
+		}
+	}
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.TriggerSound",
+	"SoundName": {
+		"Value": "Ev_sfx_cg_104010416_1497_loop"
+	},
+	"EmitterType": "LocalPlayer"
+}</pre>
+----
+:{{A|VO chapter4 5 mem 101.ogg}} '''???:''' ...
+:{{A|VO chapter4 5 player 101 m.ogg}} {{A|VO chapter4 5 player 101 f.ogg}} '''(Trailblazer):''' Mmm... What's that sound?
+:{{A|VO chapter4 5 mem 102.ogg}} '''???:''' ...Sound? Who? That? Which?
+:{{A|VO chapter4 5 player 102 m.ogg}} {{A|VO chapter4 5 player 102 f.ogg}} '''(Trailblazer):''' Who's talking...
+:{{A|VO chapter4 5 mem 103.ogg}} '''???:''' ...Calm down. Calm down. This time. Next time?
+:{{DIcon|Arrow}} Tell me who you are.
+::{{A|VO chapter4 5 mem 104.ogg}} '''???:''' ...Who? Who is? You... I... Who am I?
+::Is that you, Stellaron?
+::{{A|VO chapter4 5 mem 105.ogg}} '''???:''' ...Ron? Stella? Who? You... I... Who am I?
+::Oh, shut it! Someone's trying to sleep here!
+:{{DIcon|Arrow}} Is that you, Stellaron?
+::{{A|VO chapter4 5 mem 105.ogg}} '''???:''' ...Ron? Stella? Who? You... I... Who am I?
+::Oh, shut it! Someone's trying to sleep here!
+:{{DIcon|Arrow}} Oh, shut it! Someone's trying to sleep here!
+:{{A|VO chapter4 5 mem 106.ogg}} '''???:''' ...Sleep? Here? There? You... I... Who am I?
+:{{A|VO chapter4 5 mem 107.ogg}} '''???:''' ...Broken. Lost. Want... complete.
 :{{tx}}
 {{Dialogue End}}
 
 ===Tell Dan Heng about the voice you heard in your dream{{subst:void|<!--104011102-->}}===
 {{Mission Description|type=trailblaze|location="Eternal Holy City" Okhema|update|After understanding from Phainon the Chrysos Heirs' arduous journey to save the world, we ultimately decided to remain in Amphoreus. After a period of rest and recovery, the Chrysos Heirs reconvened, readying themselves for an attack against Castrum Kremnos, where Nikador was, with the goal of seizing the Coreflame of the Lance of Fury.}}
 {{Dialogue Start}}
+
+;(Talk to Dan Heng)
 :{{tx}}
+:{{A|VO chapter4 5 danheng 143.ogg}} '''Dan Heng:''' You're finally awake. About time.
+:{{DIcon|Arrow}} I slept in pretty late. It's so bright outside!
+::{{A|VO chapter4 5 danheng 144.ogg}} '''Dan Heng:''' Did you already forget? The sky has been this bright since we arrived at the holy city.
+::Have you been up for a while?
+:{{DIcon|Arrow}} Have you been up for a while?
+:{{A|VO chapter4 5 danheng 145.ogg}} '''Dan Heng:''' Yeah, I wake up easily when it's too bright outside... The sky has been like this since we arrived at the holy city.
+:{{A|VO chapter4 5 danheng 146.ogg}} '''Dan Heng:''' Did you sleep well?
+:{{DIcon|Arrow}} There was this voice in my dream...
+:{{A|VO chapter4 5 danheng 147.ogg}} '''Dan Heng:''' A voice? The Voice of the Stellaron again or...
+:{{DIcon|Arrow}} It sounded like an animal, but somehow, I could understand it.
+::{{A|VO chapter4 5 danheng 148.ogg}} '''Dan Heng:''' That sounds a bit contradictory.
+::I couldn't really make it out. It was like it was speaking in riddles.
+::{{A|VO chapter4 5 danheng 149.ogg}} '''Dan Heng:''' In a way, chaos is the nature of dreams.
+::It was... pretty cute, unlike the Stellaron.
+:{{DIcon|Arrow}} I couldn't really make it out. It was like it was speaking in riddles.
+::{{A|VO chapter4 5 danheng 149.ogg}} '''Dan Heng:''' In a way, chaos is the nature of dreams.
+::It was... pretty cute, unlike the Stellaron.
+:{{DIcon|Arrow}} It was... pretty cute, unlike the Stellaron.
+:{{A|VO chapter4 5 danheng 150.ogg}} '''Dan Heng:''' So, it wasn't a nightmare. But be careful, that might be its means of luring you in.
+:{{A|VO chapter4 5 danheng 151.ogg}} '''Dan Heng:''' Keep a note of whatever you can remember. This strange dream might be connected to the rules of this world.
+:{{A|VO chapter4 5 danheng 152.ogg}} '''Dan Heng:''' While you were asleep, I did some thinking. I believe the most pressing concern is still how the people of Amphoreus view what's beyond the sky. Unfortunately, contacting the Express might not be feasible for a while.
+:{{DIcon|Arrow}} If we try to fly out of Amphoreus...
+:{{DIcon|Arrow}} ...Will we also incur the wrath of the gods?
+:{{A|VO chapter4 5 danheng 153.ogg}} '''Dan Heng:''' Yes. In the worst case, the entrance to Amphoreus is a one-way door, letting people in but not out.
+:{{tx}}
+<pre>{
+	"$type": "RPG.GameCore.AddFinishMissionData_PlayMessage",
+	"SubmissionID": 104011103,
+	"MessageSectionID": 1400100
+}</pre>
 {{Dialogue End}}
 
 ===Go to the Chrysos Heir baths and meet with everyone{{subst:void|<!--104011104-->}}===
 {{Dialogue Start}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{A|VO chapter4 5 phainon 169.ogg}} '''Phainon:''' Great to see you here!
+:{{A|VO chapter4 5 mydeimos 101.ogg}} '''Mydei:''' Hmph... Entrusting our fates to two strangers, is this madness or folly?
+:{{A|VO chapter4 5 phainon 170.ogg}} '''Phainon:''' Maybe both. You should really make more friends, Mydei.
+:{{A|VO chapter4 5 aglaea 182.ogg}} '''Aglaea:''' Heroes, your attention please.
+:{{A|VO chapter4 5 aglaea 183.ogg}} '''Aglaea:''' Trianne has returned with news: For the first time in many years, we have dispersed the fog around Castrum Kremnos and verified its location.
+:{{A|VO chapter4 5 aglaea 184.ogg}} '''Aglaea:''' The awaited moment has finally arrived for the Chrysos Heirs. Our path forward is now clear: Vanquish {{Rubi|Nikador|Strife Titan}}, the violent Lance of Fury, and bring the Coreflame of Strife back to Okhema to fuel the prophesized miracle.
+:{{A|VO chapter4 5 aglaea 185.ogg}} '''Aglaea:''' This is an arduous mission, and I must heed the voices of all to determine the best candidates for this campaign.
+:{{A|VO chapter4 5 aglaea 186.ogg}} '''Aglaea:''' Should you harbor any thoughts, this is the moment to bring them forth.
+:{{A|VO chapter4 5 phainon 171.ogg}} '''Phainon:''' I, Phainon of Aedes Elysiae, wish to join the crusade against {{Rubi|Nikador|Strife Titan}}.
+:{{A|VO chapter4 5 phainon 172.ogg}} '''Phainon:''' Furthermore, I recommend the two warriors from foreign lands. They have fought alongside me against {{Rubi|Nikador|Strife Titan}}'s double, and I have full faith in their bravery.
+:{{DIcon|Arrow}} That sounds really dangerous. Is it too late to back out?
+::{{A|VO chapter4 5 danheng 157.ogg}} '''Dan Heng:''' Lounging in a bath chamber isn't exactly trailblazing.
+::Guess we have no choice but to give it our all.
+:{{DIcon|Arrow}} Guess we have no choice but to give it our all.
+:{{A|VO chapter4 5 danheng 158.ogg}} '''Dan Heng:''' Are you still not used to it? This is the destiny of a Trailblazer.
+:{{A|VO chapter4 5 mydeimos 102.ogg}} '''Mydei:''' I, Mydei from Castrum Kremnos, volunteer to join.
+:{{A|VO chapter4 5 mydeimos 103.ogg}} '''Mydei:''' {{Rubi|Nikador|Strife Titan}} has become corrupted over the years, their pride waning, but their might endures. Victory only lies in assembling a full-fledged army.
+:{{A|VO chapter4 5 castorice 131.ogg}} '''Castorice:''' ...I'm willing to join as well, to help guide departing souls and ease everyone's burdens...
+:{{A|VO chapter4 5 aglaea 187.ogg}} '''Aglaea:''' I concur with your opinion. Though their divinity has faded, {{Rubi|Nikador|Strife Titan}} remains a formidable adversary.
+:{{A|VO chapter4 5 aglaea 188.ogg}} '''Aglaea:''' Yet, I cannot jeopardize all of your lives in one single battle.
+:{{A|VO chapter4 5 aglaea 189.ogg}} '''Aglaea:''' As we speak, the {{Rubi|Hand of Shadow|Death Titan}} remains missing, the {{Rubi|Eye of Twilight|Sky Titan}} is still coveting our land, and {{Rubi|Cerces|Reason Titan}} and {{Rubi|Oronyx|Time Titan}} present significant threats, despite their lack of overt hostility toward humanity.
+:{{A|VO chapter4 5 aglaea 190.ogg}} '''Aglaea:''' Even with two demigods protecting the holy city, the risk is too great. Hence...
+:{{A|VO chapter4 5 aglaea 191.ogg}} '''Aglaea:''' Castorice, you must remain here. Your place is not on the front lines, and the battlefield is best left to the warriors.
+:{{A|VO chapter4 5 castorice 132.ogg}} '''Castorice:''' ...I understand.
+:{{A|VO chapter4 5 aglaea 192.ogg}} '''Aglaea:''' As for the two foreign warriors... Select one to accompany you, Phainon. Placing both esteemed guests on the front line would not be proper.
+:{{A|VO chapter4 5 phainon 173 m.ogg}} {{A|VO chapter4 5 phainon 173 f.ogg}} '''Phainon:''' (Trailblazer) excels in wielding a range of weapons, and {{MC|m=his|f=her}} flaming lance has quelled the enemy's advances multiple times. Mydei and I are both better at offense, so from a tactical standpoint...
+:{{A|VO chapter4 5 phainon 174 m.ogg}} {{A|VO chapter4 5 phainon 174 f.ogg}} '''Phainon:''' (Trailblazer), would you be willing to fight alongside us?
+:{{DIcon|Arrow}} Sure, let's do this!
+:{{DIcon|Arrow}} I might not be tanky enough, though.
+::{{A|VO chapter4 5 danheng 159.ogg}} '''Dan Heng:''' With those two, the battle should end quickly.
+::We could try letting Dan Heng tank...
+::{{A|VO chapter4 5 danheng 160.ogg}} '''Dan Heng:''' What are you talking about? Now's not the time for jokes.
+:{{DIcon|Arrow}} We could try letting Dan Heng tank...
+::{{A|VO chapter4 5 danheng 160.ogg}} '''Dan Heng:''' What are you talking about? Now's not the time for jokes.
+:{{A|VO chapter4 5 phainon 175 m.ogg}} {{A|VO chapter4 5 phainon 175 f.ogg}} '''Phainon:''' If (Trailblazer) has no objections... Aglaea, the three of us will take on the mission to hunt down the Titan.
 :{{tx}}
+:{{A|VO chapter4 5 danheng 155.ogg}} '''Dan Heng:''' I wasn't expecting the expedition to set off after only a night of rest.
+:{{A|VO chapter4 5 danheng 156.ogg}} '''Dan Heng:''' Let's set the questions aside for now. The Chrysos Heirs are getting ready to mobilize.
+
+;(Talk to Dan Heng)
+----
+:{{A|VO chapter4 5 danheng 164.ogg}} '''Dan Heng:''' I plan to stay here for a while and learn more about Amphoreus from Lady Tribbie. You'll handle the action, and I'll deal with the research. We each have a role to play.
+:{{DIcon|Arrow}} Shall we have a goodbye hug?
+:{{A|VO chapter4 5 danheng 165.ogg}} '''Dan Heng:''' ...
+:Dan Heng refuses your proposal with silence.
+
+;(Talk to Castorice)
+----
+:{{A|VO chapter4 5 castorice 133.ogg}} '''Castorice:''' Please, come back victorious.
+:{{A|VO chapter4 5 castorice 134.ogg}} '''Castorice:''' I'll pray for you. May your steps be ever quicker than death's relentless pursuit.
+
+;(Talk to Aglaea)
+----
+:{{A|VO chapter4 5 aglaea 198.ogg}} '''Aglaea:''' It is by the will of the gods that you stood on Okhema's side in the end.
+:{{DIcon|Arrow}} I thought you didn't trust me.
+:{{DIcon|Arrow}} No thanks to you.
+:{{A|VO chapter4 5 aglaea 199.ogg}} '''Aglaea:''' You are Phainon and Mydei's companion. So long as they're willing to entrust you with their lives, my trust in you doesn't matter.
+:{{A|VO chapter4 5 aglaea 200.ogg}} '''Aglaea:''' Go. Stand with the two Chrysos Heirs. Okhema has need of a true god of war. It's time for the mad god {{Rubi|Nikador's|Strife Titan}} reign to end.
 {{Dialogue End}}
 
 ===Speak with Trianne and get ready to go to Castrum Kremnos{{subst:void|<!--104011107-->}}===
 {{Dialogue Start}}
+
+;(Talk to Trianne)
+:{{A|VO chapter4 5 trianne 101.ogg}} '''Trianne:''' Blow, wind, blow~! All the way to Castrum Kremnos!
+:{{A|VO chapter4 5 trianne 102.ogg}} '''Trianne:''' Woohoo! Snowy, De, let's fly together! All the way across!
+:{{A|VO chapter4 5 phainon 177.ogg}} '''Phainon:''' We don't have wings on our backs, Trianne. Can you open a gate for us?
+:{{A|VO chapter4 5 trianne 103.ogg}} '''Trianne:''' Oh... A gate. How boring. Alright, let's open a gate! Century Gate! Woo!!
+:{{DIcon|Arrow}} Why does she act like a child?
+:{{DIcon|Arrow}} Oh, it's not an actual gate?
+::{{A|VO chapter4 5 phainon 178.ogg}} '''Phainon:''' Hahaha, were you expecting actual city gates?
+:{{A|VO chapter4 5 phainon 179.ogg}} '''Phainon:''' It's true Trianne is very playful, but she's the best gatekeeper in Amphoreus. Her Century Gate never fails.
+:{{DIcon|Arrow}} There's a chance of failure?
+:{{DIcon|Arrow}} ...Is there another way to travel?
+:{{A|VO chapter4 5 mydeimos 107.ogg}} '''Mydei:''' Instead of worrying about gates, why don't you take the time to think about how the three of us are supposed to fend off an entire army.
+:{{A|VO chapter4 5 phainon 180.ogg}} '''Phainon:''' That's not like you at all, Mydei. Don't tell me you're scared?
+:{{A|VO chapter4 5 trianne 104.ogg}} '''Trianne:''' Alright! Century Gate... is opening... soon! Right now!
+:{{A|VO chapter4 5 trianne 105.ogg}} '''Trianne:''' Snowy, De, and newbie Little Gray, are you all ready?
+:{{DIcon|Arrow}} Let's go slay a god!
+::{{A|VO chapter4 5 trianne 106.ogg}} '''Trianne:''' Slay, slay!
+::{{A|VO chapter4 5 danheng 161 m.ogg}} {{A|VO chapter4 5 danheng 161 f.ogg}} '''Dan Heng:''' (Trailblazer), take this with you.
+::Dan Heng gives March 7th's camera to you...
+::{{A|VO chapter4 5 danheng 162.ogg}} '''Dan Heng:''' Record the sights you see on your adventure for March.
+::{{DIcon|Arrow}} Wait for my triumphant return!
+::{{DIcon|Arrow}} I'll capture all the decisive moments!
+:<pre>{
+	"$type": "RPG.GameCore.SetPerformanceResult",
+	"Value": 1
+}</pre>
+:{{DIcon|Exit}} I still need a moment to mentally prepare...
+:<pre>{
+	"$type": "RPG.GameCore.SetPerformanceResult",
+	"Value": 2
+}</pre>
 :{{tx}}
 {{Dialogue End}}
 
@@ -70,7 +246,7 @@ PageTitle=#Night Stars, Accompany My Slumber#
 |ru   = О ночные звёзды, не оставьте меня во время долгой ночи
 |th   = ดาวราตรีเอ๋ย โปรดอยู่เคียงข้าในคืนยาวไกล
 |vi   = Hỡi Sao Đêm, Đừng Để Tôi Ngủ Một Mình Trong Đêm Dài
-|de   = Sterne der Nacht, begleitet meinen Schlummer
+|de   = O Sterne der Nacht, begleitet meinen Schlummer
 |id   = Bintang Malam, Temani Tidurku
 |pt   = Estrelas Noturnas, Acompanhem o meu Sonhar
 }}

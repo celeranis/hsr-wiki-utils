@@ -43,43 +43,238 @@ PageTitle=#Morose Monsters (IV)#
 ===Head to the Dreamjolt Hostelry{{subst:void|<!--802110413-->}}===
 {{Mission Description|type=adventure|location=The Reverie (Dreamscape)|Siobhan, the manager of Dreamjolt Hostelry, offered you an assignment to temporarily take over the job of drinksmith.<br />Time to get back in business.}}
 {{Dialogue Start}}
-:{{tx}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+<pre>{
+	"$type": "RPG.GameCore.AdvDestroyGroupEntity",
+	"InstanceIDList": [
+		300001
+	]
+}</pre>
+:'''(Trailblazer):''' (...That alarm clock was a pain, but now he seems quite prudent when he is calmed down.)
+:'''(Trailblazer):''' (Almost ready. Time to open for business.)
 {{Dialogue End}}
 
 ===Continue serving the customers{{subst:void|<!--802110401-->}}===
 {{Mission Description|type=adventure|location=The Reverie (Dreamscape)|update|Siobhan, the manager of Dreamjolt Hostelry, offered you an assignment to temporarily take over the job of drinksmith.<br />Let's continue serving the customers.}}
 {{Dialogue Start}}
-:{{tx}}
+<pre>{
+	"$type": "RPG.GameCore.WaitUIControllerClose",
+	"UIControllerName": "DrinkMakerMainEntrancePage"
+}</pre>
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:'''(Trailblazer):''' (Being a drinksmith is actually exhausting. How did Siobhan manage to keep at it for so long?)
+:'''(Trailblazer):''' (Huh? They're still at the lounge...)
+;(Unused &mdash; DrinkMakerBartendResultDialogClose)
+;(Upon reaching the destination)
 {{Dialogue End}}
 
 ===Check on Lady and Melancholy{{subst:void|<!--802110403-->}}===
 {{Mission Description|type=adventure|location=The Reverie (Dreamscape)|update|Siobhan, the manager of Dreamjolt Hostelry, offered you an assignment to temporarily take over the job of drinksmith.<br />It's time to close for business, but Lady and Melancholy are still lingering in the lounge. Go and find out what they're up to.}}
 {{Dialogue Start}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+----
 :{{tx}}
+:'''Lady:''' Well, hey there. It's a bit awkward, but... I need to ask you a favor.
+:{{DIcon|Arrow}} Shoot. I don't have all day.
+::'''Lady:''' Well... it's really embarrassing to just say it outright. Please, be more patient.
+::I'm the most caring drinksmith here.
+:{{DIcon|Arrow}} I'm the most caring drinksmith here.
+:'''Lady:''' Oh, I'm really fond of your gentle type! Alas, if only *he* could be as caring as you are.
+:'''Lady:''' It's... well... it's...
+:{{tx}}
+----
 {{Dialogue End}}
 
 ===Help Lady and Melancholy with their troubles{{subst:void|<!--802110404-->}}===
 {{Mission Description|type=adventure|location=The Reverie (Dreamscape)|update|Siobhan, the manager of Dreamjolt Hostelry, offered you an assignment to temporarily take over the job of drinksmith.<br />It turns out that Lady intends to confess its feelings to Melancholy, but it struggles to articulate its words, and Melancholy remains pessimistic... Perhaps you can help.}}
 {{Dialogue Start}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+----
+:'''Lady:''' Then I'll take my leave, alright?
+:'''Melancholy:''' Thank you! You've been so kind!
+:{{DIcon|Arrow}} Go ahead.
+:{{DIcon|Arrow}} Alright, enough with the public display of affection.
+:'''Lady:''' Hee-hee, a gentle person like you will be popular wherever you go. If you ever feel lonely, I'll ask you out next time.
 :{{tx}}
+----
 {{Dialogue End}}
 
 ===Take a look outside the lounge{{subst:void|<!--802110409-->}}===
 {{Mission Description|type=adventure|location=The Reverie (Dreamscape)|update|Siobhan, the manager of Dreamjolt Hostelry, offered you an assignment to temporarily take over the job of drinksmith.<br />The monsters are calling for help. Get out there and find out what's going on!}}
 {{Dialogue Start}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+----
 :{{tx}}
+;(Enter battle)
+:{{Enemy List|Dreamjolt Troupe's Spring Loader*2; Dreamjolt Troupe's Sweet Gorilla*1}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+----
+:'''Mr. Bigwig:''' Woof! Wake up! What happened?
+:'''Melancholy:''' How could this be? How!? Even the wisest thinker among us has lost his sanity!
+:'''Melancholy:''' As I thought, it is indeed that happiness is transient while sorrow seems everlasting... Who can tell me... if we are doomed for ruin, why were we brought into this illusory "sweet dream" in the first place...?
+:'''(Trailblazer):''' (He was fine the last time we met. Why did he suddenly become frenzied?)
+:'''(Trailblazer):''' (I should inform Siobhan as soon as possible...)
+:'''Mr. Bigwig:''' What should we do? You're a smart one, new drinksmith! So there must be something you can do!
+:{{DIcon|Arrow}} Let's bring him back to the lounge first.
+:'''Mr. Bigwig:''' Woof! I'll lend a paw!
+:{{tx}}
+----
 {{Dialogue End}}
 
 ===Return to the lounge{{subst:void|<!--802110405-->}}===
 {{Mission Description|type=adventure|location=The Reverie (Dreamscape)|update|Siobhan, the manager of Dreamjolt Hostelry, offered you an assignment to temporarily take over the job of drinksmith.<br />After suppressing the berserk Starlet, bring it back to the hostelry to check out the situation.}}
 {{Dialogue Start}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+<pre>{
+	"$type": "RPG.GameCore.AdvDestroyGroupEntity",
+	"InstanceIDList": [
+		300001
+	]
+}</pre>
+----
+:'''Mr. Bigwig:''' Woof! Looks like he's okay. He's a regular at the lounge, but why did he lose his mind all of a sudden?
+:'''Lady:''' Will I end up like that someday? That's scary.
+:'''Melancholy:''' *sigh* We all meet our destined end someday.
+:'''Mr. Bigwig:''' Woof... why isn't Siobhan here at a time like this?
+:'''Mr. Bigwig:''' What is she doing, woof...?
+:{{DIcon|Arrow}} I've told her about it.
+:{{DIcon|Arrow}} I'll stay with you guys.
+:'''Mr. Bigwig:''' *sob*... *sob*...
 :{{tx}}
+----
+----
+:{{tx}}
+:The monsters all left the lounge one after another, and not long after that...
+:'''Siobhan:''' ...I've received your message. How are the monsters doing?
+:You tell Siobhan about what happened in the hotel in the Dreamscape. When you mention the frenzied monsters, you notice that she doesn't seem all that surprised. Instead, a touch of fatigue appears on her calm face, as if she has been expecting it.
+:'''Siobhan:''' I just checked on him, nothing serious. He'll regain his senses soon.
+:'''Siobhan:''' ...I'm sorry. I didn't see it coming. Thank you for your help.
+:{{DIcon|Arrow}} Are you... hiding something from me?
+:'''Siobhan:''' Chill out. I just came back, and I'm a bit tired. You're a skilled drinksmith, so how about whipping up a drink for me?
+:{{tx}}
+----
+----
+:{{tx}}
+:'''Siobhan:''' Let's start with you. What would you like to know?
+:{{DIcon|Arrow}} ...Your true identity?
+:{{DIcon|Arrow}} ...The true nature of those monsters?
+:{{DIcon|Arrow}} ...The true purpose of this lounge?
+:{{tx}}
+:{{DIcon|Arrow}} (Start preparing the drink)
+----
+<pre>{
+	"$type": "RPG.GameCore.TriggerDrinkMakerBartendInMission",
+	"RequestID": 1004,
+	"OnBartendSuccess": [
+		{
+			"$type": "RPG.GameCore.TriggerPerformance",
+			"ValueSource": {},
+			"PerformanceType": "D",
+			"PerformanceID": 802110421
+		},
+		{
+			"$type": "RPG.GameCore.TriggerPerformance",
+			"ValueSource": {},
+			"PerformanceType": "D",
+			"PerformanceID": 802110422
+		},
+		{
+			"$type": "RPG.GameCore.TriggerPerformance",
+			"ValueSource": {},
+			"PerformanceType": "D",
+			"PerformanceID": 802110418
+		},
+		{
+			"$type": "RPG.GameCore.FinishPerformanceMission",
+			"Key": "Mission_802110405",
+			"KeepScreenTransferUntilGroupRefresh": true
+		}
+	],
+	"OnBartendFail": [
+		{
+			"$type": "RPG.GameCore.TriggerPerformance",
+			"ValueSource": {},
+			"PerformanceType": "D",
+			"PerformanceID": 802110421
+		},
+		{
+			"$type": "RPG.GameCore.TriggerPerformance",
+			"ValueSource": {},
+			"PerformanceType": "D",
+			"PerformanceID": 802110422
+		},
+		{
+			"$type": "RPG.GameCore.TriggerPerformance",
+			"ValueSource": {},
+			"PerformanceType": "D",
+			"PerformanceID": 802110418
+		},
+		{
+			"$type": "RPG.GameCore.FinishPerformanceMission",
+			"Key": "Mission_802110405",
+			"KeepScreenTransferUntilGroupRefresh": true
+		}
+	]
+}</pre>
 {{Dialogue End}}
 
 ===Talk to Mr. Bigwig{{subst:void|<!--802110412-->}}===
 {{Mission Description|type=adventure|location=The Reverie (Dreamscape)|update|Siobhan, the manager of Dreamjolt Hostelry, offered you an assignment to temporarily take over the job of drinksmith.<br />Siobhan has left the lounge, but it seems like Mr. Bigwig wishes to speak with you. Go and chat with it.}}
 {{Dialogue Start}}
+:'''Mr. Bigwig:''' Woof! ...This way, come this way. I've got something to talk to you about!
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+----
+:'''Mr. Bigwig:''' Woof! ...This way, come this way. I've got something to talk to you about!
+:'''Mr. Bigwig:''' Woof! Don't you think Siobhan has been acting suspiciously lately? She's never around the lounge these days. Where has she gone?
+:{{DIcon|Arrow}} Suspicious indeed.
+:{{DIcon|Arrow}} I'm curious, too.
+:'''Mr. Bigwig:''' I knew you'd feel the same way!
+:'''Mr. Bigwig:''' As you know, Siobhan is an amazing woman, so we've been wondering...
+:'''Mr. Bigwig:''' Since she's been away a lot lately, could it be that... she doesn't want us anymore?
+:'''Mr. Bigwig:''' We've been a pain in the neck lately and have caused a lot of trouble. Maybe... she's not into us anymore?
+:'''Mr. Bigwig:''' She always says she's busy with something, but never spills the beans...
+:'''(Trailblazer):''' (Come to think of it, Siobhan never mentioned what she's been busy with.)
+:'''Mr. Bigwig:''' Hey, new drinksmith! Let's go outside and find Siobhan! It'd be great if we could help her out! Woof!
+:{{DIcon|Arrow}} Where should we start?
+::'''Mr. Bigwig:''' Woof! Let me make some preparations and figure out where Siobhan might be!
+::I need to finish my work at the lounge first.
+:{{DIcon|Arrow}} I need to finish my work at the lounge first.
+:'''Mr. Bigwig:''' Woof! No problem! Let me make some preparations and figure out where Siobhan might be!
+:'''Mr. Bigwig:''' It's a deal! Woof!
 :{{tx}}
+----
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+----
+:{{tx}}
+:'''Siobhan:''' Let's start with you. What would you like to know?
+:{{DIcon|Arrow}} ...Your true identity?
+:{{DIcon|Arrow}} ...The true nature of those monsters?
+:{{DIcon|Arrow}} ...The true purpose of this lounge?
+:{{tx}}
+:{{DIcon|Arrow}} (Start preparing the drink)
+----
+<pre>{
+	"$type": "RPG.GameCore.SaveMessage",
+	"MessageSectionID": 1305900
+}</pre>
 {{Dialogue End}}
 
 ==Other Languages==

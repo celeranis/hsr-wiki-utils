@@ -40,19 +40,168 @@ PageTitle=#Total Recall#
 ===Head to the Divination Commission and ask for help from Fu Xuan{{subst:void|<!--202050112-->}}===
 {{Mission Description|type=companion|location=Divination Commission|update|After witnessing the wonders of the Matrix of Prescience Ultima, March 7th couldn't get the idea of using it to re-discover her past out of her head. She decides to ask for the master diviner's help with fulfilling this wish of hers.}}
 {{Dialogue Start}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{A|VO side2 fx1 mar7th 101.ogg}} '''March 7th:''' Good morning! Is work going well today, master diviner?
+:{{A|VO side2 fx1 fuxuan 101.ogg}} '''Fu Xuan:''' I am extremely busy of late. If you have something to ask of me, do not delay.
+:{{A|VO side2 fx1 mar7th 102.ogg}} '''March 7th:''' ...
+:{{A|VO side2 fx1 fuxuan 102.ogg}} '''Fu Xuan:''' You were about to say something along the lines of: "How did you know I wanted to ask something?" &mdash; but then you remembered who you were talking to and decided not to bother, correct?
+:{{DIcon|Arrow}} You really do live up to your title.
+::{{A|VO side2 fx1 fuxuan 103.ogg}} '''Fu Xuan:''' Of course &mdash; I run a dozen hexagrams before I even get around to breakfast. The results are never far wrong.
+::Well, the look on her face says it all, doesn't it?
+:{{DIcon|Arrow}} Well, the look on her face says it all, doesn't it?
+:{{A|VO side2 fx1 fuxuan 104.ogg}} '''Fu Xuan:''' A face is not a reliable instrument of divination. On the contrary, I run a dozen hexagrams before I even get around to breakfast. The results are never far wrong.
+:{{A|VO side2 fx1 fuxuan 105.ogg}} '''Fu Xuan:''' Today's divinations threw up some unexpected complications &mdash; the hexagrammatic position was vacillating between the water and heaven trigrams. The Matrix of Prescience gave the following interpretation: "You will have three uninvited guests. This is ultimately auspicious."
 :{{tx}}
 {{Dialogue End}}
 
 ===Chat with Fu Xuan about how to search for lost memories{{subst:void|<!--202050104-->}}===
 {{Mission Description|type=companion|location=Divination Commission|update|Fu Xuan is not opposed to the request to use the Matrix of Prescience Ultima to deduce the past. Seems like this isn't her first time helping someone with something like this.<br />As long as enough data is provided to support its calculations, deducing the past is the same as predicting the future for the Matrix of Prescience.}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Fu Xuan)
+----
+:{{A|VO side2 fx1 fuxuan 117.ogg}} '''Fu Xuan:''' So, have you acquired something from your past? As a Nameless, surely you must have souvenirs from your journeys that could evoke memories?
+:{{A|VO side2 fx1 mar7th 110.ogg}} '''March 7th:''' I've got lots! It's just, I don't know what to choose.
+:{{DIcon|Talk}} A ticket stub from the Express...
+:<pre>{
+	"$type": "RPG.GameCore.TalkFigure",
+	"ImagePath": "SpriteOutput/Mission/TalkItem/SubMIssion_2020501_01.png"
+}</pre>
+::{{A|VO side2 fx1 mar7th 111.ogg}} '''March 7th:''' Ah, proof that I boarded the Express. The conductor gave me this.
+::{{A|VO side2 fx1 fuxuan 118.ogg}} '''Fu Xuan:''' Memories from the Astral Express? That should do the trick.
+:<pre>{
+	"$type": "RPG.GameCore.TalkFigure",
+	"Show": false,
+	"ImagePath": "SpriteOutput/Mission/TalkItem/SubMIssion_2020501_01.png"
+}</pre>
+:;(Return to previous option selection)
+:{{DIcon|Talk}} Your work permit for the space station...
+:<pre>{
+	"$type": "RPG.GameCore.TalkFigure",
+	"ImagePath": "SpriteOutput/Mission/TalkItem/SubMIssion_2020501_02.png"
+}</pre>
+::March's unapologetic smile is displayed on the permit. The note below reads "March 7th, Lv. 1 Researcher".
+::You vaguely recall that researcher levels start with two. The only career path this permit opens is one that leads to the bathroom.
+::{{A|VO side2 fx1 fuxuan 119.ogg}} '''Fu Xuan:''' Something related to your work. Good.
+::Actually, this won't do. She never really worked there.
+:<pre>{
+	"$type": "RPG.GameCore.TalkFigure",
+	"Show": false,
+	"ImagePath": "SpriteOutput/Mission/TalkItem/SubMIssion_2020501_01.png"
+}</pre>
+:;(Return to previous option selection)
+:{{DIcon|Talk}} Geomarrow ore...
+:<pre>{
+	"$type": "RPG.GameCore.TalkFigure",
+	"ImagePath": "SpriteOutput/Mission/TalkItem/SubMIssion_2020501_03.png"
+}</pre>
+::{{A|VO side2 fx1 mar7th 112.ogg}} '''March 7th:''' *sigh* So shiny and pretty. I picked up this little guy in Belobog's Underworld.
+:<pre>{
+	"$type": "RPG.GameCore.TalkFigure",
+	"Show": false,
+	"ImagePath": "SpriteOutput/Mission/TalkItem/SubMIssion_2020501_01.png"
+}</pre>
+::{{DIcon|Arrow}} Are you sure it's not radioactive?
+:::{{A|VO side2 fx1 mar7th 113.ogg}} '''March 7th:''' How could something so beautiful be unsafe?
+:::{{A|VO side2 fx1 fuxuan 120.ogg}} '''Fu Xuan:''' I can understand a young girl's fondness for glittering gemstones...
+::;(Return to previous option selection)
+::{{DIcon|Arrow}} We can't just keep lost items... Should we return it to Wildfire?
+:::{{A|VO side2 fx1 mar7th 114.ogg}} '''March 7th:''' They've got loads of it down there. I just chipped off a tiny piece.
+:::{{A|VO side2 fx1 fuxuan 120.ogg}} '''Fu Xuan:''' I can understand a young girl's fondness for glittering gemstones...
+::;(Return to previous option selection)
+:{{DIcon|Talk}} A cup of Immortal's Delight...
+:<pre>{
+	"$type": "RPG.GameCore.TalkFigure",
+	"ImagePath": "SpriteOutput/Mission/TalkItem/SubMIssion_2020501_04.png"
+}</pre>
+::'''Fu Xuan:''' ...
+::'''March 7th:''' ...
+::{{A|VO side2 fx1 mar7th 115.ogg}} '''March 7th:''' One of my fondest memories on the Xianzhou!
+::{{A|VO side2 fx1 fuxuan 121.ogg}} '''Fu Xuan:''' Hmph, no comment... I happen to prefer startaro bubble tea.
+:<pre>{
+	"$type": "RPG.GameCore.TalkFigure",
+	"Show": false,
+	"ImagePath": "SpriteOutput/Mission/TalkItem/SubMIssion_2020501_01.png"
+}</pre>
+:;(Return to previous option selection)
+:{{DIcon|Arrow}} That should be enough...
+::{{A|VO side2 fx1 fuxuan 122.ogg}} '''Fu Xuan:''' Is that it? Miss March, are you not able to provide possessions from before you lost your memory?
+::{{A|VO side2 fx1 mar7th 116.ogg}} '''March 7th:''' Before I lost my memory... So, something I don't remember getting? Even then, I couldn't be sure it was from before I lost my memory, right?
+::{{A|VO side2 fx1 fuxuan 123.ogg}} '''Fu Xuan:''' It may be strange to you, but to infer the past, I need materials that were pertinent at that time. Could you try recalling some memories again?
+::{{A|VO side2 fx1 mar7th 117.ogg}} '''March 7th:''' From before the memory loss, before the Express...
+::{{A|VO side2 fx1 mar7th 118.ogg}} '''March 7th:''' I'm sorry, Master Diviner! When Himeko found me in the ice, I was stark naked &mdash; like a newborn baby. I didn't have any items with me...
+::{{A|VO side2 fx1 mar7th 119.ogg}} '''March 7th:''' ...and before you ask, no, I don't have any of that ice lying around.
+::{{A|VO side2 fx1 mar7th 120.ogg}} '''March 7th:''' It melted away not long after I was rescued.
+::{{DIcon|Arrow}} ...You sure about that, March?
+::{{DIcon|Arrow}} ...What about your Six-Phased Ice?
+::{{A|VO side2 fx1 mar7th 121 m.ogg}} {{A|VO side2 fx1 mar7th 121 f.ogg}} '''March 7th:''' Oh yeah! (Trailblazer), you sure are a smart cookie. My Six-Phased Ice ability must date from before the memory loss. Master Diviner, any ice I create should do, right?
+::{{A|VO side2 fx1 fuxuan 124.ogg}} '''Fu Xuan:''' It should indeed, I'll have someone place the material in the base terminal of the Matrix. Miss March, please position yourself in the Matrix core &mdash; we may begin our inference whenever you are ready.
+::{{Black Screen|Moments later, the apparatuses of the Matrix come to life with clicks and whirrs. It is time.}}
+
+;(Talk to Fu Xuan)
+;(If {{cx}}<!--SubMission Finish: 202050110-->)
+::{{A|VO side2 fx1 fuxuan 225.ogg}} '''Fu Xuan:''' I must organize an inspection of the Matrix... Ugh, fingers crossed there's no damage done.
+;(If {{cx}}<!--SubMission not Finish: 202050110-->)
+:;(If {{cx}}<!--during performance 202050105-->)
+:::{{A|VO side2 fx1 fuxuan 125.ogg}} '''Fu Xuan:''' The Matrix has cleared diagnostics. Miss March, are you ready yet?
+:::{{A|VO side2 fx1 mar7th 122.ogg}} '''March 7th:''' Uhh, I'm pretty sure I should be, almost k&mdash;kinda ready to go...
+:::{{A|VO side2 fx1 fuxuan 126.ogg}} '''Fu Xuan:''' Please be prepared. Not all memories are suitable for reawakening. People carry with them much pain and suffering.
+:::{{A|VO side2 fx1 fuxuan 127.ogg}} '''Fu Xuan:''' If you're not ready, we can pause the inference process. I would never wish for good intentions to result in harm.
+:::{{A|VO side2 fx1 mar7th 123.ogg}} '''March 7th:''' I&mdash;I'm okay! Let's do it! Only way to find out is to give it a go!
+:::{{A|VO side2 fx1 fuxuan 128.ogg}} '''Fu Xuan:''' Very well. I will soon connect you to the Matrix of Prescience Ultima, where the Matrix will read your memories and guide you back into your past.
+:::{{A|VO side2 fx1 fuxuan 129.ogg}} '''Fu Xuan:''' If you reach a block in your memory, the Matrix will use the data gathered to derive a scenario, and construct a possible past for you.
+:::{{A|VO side2 fx1 mar7th 124 m.ogg}} {{A|VO side2 fx1 mar7th 124 f.ogg}} '''March 7th:''' Got it... Oh, uh, can (Trailblazer) join me, too?
+:::{{A|VO side2 fx1 fuxuan 130 m.ogg}} {{A|VO side2 fx1 fuxuan 130 f.ogg}} '''Fu Xuan:''' I'm sorry, that would be highly inadvisable. You form the nexus of the Matrix's inference &mdash; (Trailblazer) would only introduce redundant data to the system.
+:::{{A|VO side2 fx1 fuxuan 131.ogg}} '''Fu Xuan:''' In other words, inside the memory palace that the Matrix constructs, the only person you'll be able to count on is yourself.
+:::{{DIcon|Arrow}} You can do it, March!
+:::{{DIcon|Arrow}} ...Can't say I'm filled with confidence.
+::::{{A|VO side2 fx1 mar7th 125.ogg}} '''March 7th:''' It's cool, I'll be fine! I'm not a little kid anymore!
+:::{{A|VO side2 fx1 fuxuan 132.ogg}} '''Fu Xuan:''' Don't worry. I can communicate with you from outside the Matrix and manipulate the recollection process to a certain extent.
+:::{{A|VO side2 fx1 fuxuan 133.ogg}} '''Fu Xuan:''' Let's begin.
+::<pre>{
+	"$type": "RPG.GameCore.OpenTreasureChallenge",
+	"RaidID": 43201,
+	"OnCancel": []
+}</pre>
+:;(If {{cx}}<!--not during performance 202050105-->)
+:::{{A|VO side2 fx1 fuxuan 134.ogg}} '''Fu Xuan:''' May we proceed?
+:::{{DIcon|Arrow}} Yes.
+:::<pre>{
+	"$type": "RPG.GameCore.OpenTreasureChallenge",
+	"RaidID": 43201,
+	"OnCancel": []
+}</pre>
+:::{{DIcon|Exit}} Wait.
 {{Dialogue End}}
 
 ===Ask Fu Xuan to place March 7th into the Matrix of Prescience to recall her memories{{subst:void|<!--202050105-->}}===
 {{Mission Description|type=companion|location=Divination Commission|update|The preparations are complete. All that is left is for March 7th to connect with the Matrix of Prescience Ultima. Then, you will be able to use the Matrix of Prescience's outstanding calculation capacity to explore her past.<br />March 7th seems to be a little anxious, and you are rather worried, too. However, you are unable to go with her on this journey. You have to put your faith in Fu Xuan's skills...}}
 {{Dialogue Start}}
-:{{tx}}
+----
+----
+:{{A|VO side2 fx1 mar7th 236.ogg}} '''March 7th:''' Ugh... Miss Fu Xuan, why did the simulation just cut off like that?
+:{{DIcon|Arrow}} Are you okay?
+::{{A|VO side2 fx1 mar7th 237.ogg}} '''March 7th:''' I'm fine... Just a little light-headed is all...
+:{{DIcon|Arrow}} What happened?
+::{{A|VO side2 fx1 mar7th 238.ogg}} '''March 7th:''' I don't know. Before I could figure out what was going on, it spat me out...
+:{{A|VO side2 fx1 fuxuan 218.ogg}} '''Fu Xuan:''' ...And the Matrix of Prescience stopped at precisely the same moment!
+:{{A|VO side2 fx1 fuxuan 219.ogg}} '''Fu Xuan:''' March, I lost sight of you once you touched that block of ice. What happened?
+:{{A|VO side2 fx1 mar7th 239.ogg}} '''March 7th:''' It's kinda hard to explain...
+:{{Black Screen|March and Fu Xuan try their best to recount everything that just happened. You also tell them about the Messenger.}}
+:{{A|VO side2 fx1 fuxuan 220.ogg}} '''Fu Xuan:''' So... That mysterious girl was really a messenger of the Glowswather?
+:{{A|VO side2 fx1 mar7th 240.ogg}} '''March 7th:''' Glowswather... you mean Fuli the Remembrance? Are they the Aeon connected to my past?
+:{{A|VO side2 fx1 fuxuan 221.ogg}} '''Fu Xuan:''' No, it's too early to draw such a conclusion... All I can say is that it was very likely an Aeon that sealed away your memories... but not necessarily Fuli.
+:{{A|VO side2 fx1 fuxuan 222.ogg}} '''Fu Xuan:''' When the messenger spoke of "protection," perhaps she meant the following: The Glowswather wasn't the one who sealed away your memories. THEY are interfering to shield you from these very memories.
+:{{DIcon|Arrow}} Looks like we came away empty-handed...
+:{{DIcon|Arrow}} Sounds like we're still none the wiser...
+:{{A|VO side2 fx1 mar7th 241.ogg}} '''March 7th:''' It's not so bad... At least I know it has to do with the Garden of Recollection, right?
+:{{A|VO side2 fx1 fuxuan 223.ogg}} '''Fu Xuan:''' It seems like retrieving memories is beyond the operational spectrum of the Matrix of Prescience Ultima.
+:{{A|VO side2 fx1 mar7th 242.ogg}} '''March 7th:''' That's alright! You've helped me so much already, Master Diviner. I owe you a big one.
+:{{A|VO side2 fx1 fuxuan 224.ogg}} '''Fu Xuan:''' Mm... If you'll excuse me, I must organize an inspection of the Matrix... Ugh, fingers crossed there's no damage done.
+:{{A|VO side2 fx1 mar7th 243 m.ogg}} {{A|VO side2 fx1 mar7th 243 f.ogg}} '''March 7th:''' We'll leave you to it then! (Trailblazer), run &mdash; if we broke something there'll be a huge bill to pay!
+----
 {{Dialogue End}}
 
 ==Other Languages==

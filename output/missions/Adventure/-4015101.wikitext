@@ -33,7 +33,172 @@ PageTitle=##
 -->
 ==Dialogue==
 {{Stub Dialogue}}
+;(Upon reaching the destination)
 
+;(Upon reaching the destination)
+----
+:'''Distressed Worker:''' The Cloudford pile of goods is too much. How can I keep up with this...
+:{{DIcon|Arrow}} What's happened?
+:'''Distressed Worker:''' Hey, well if it isn't (Trailblazer)? Your achievements are spreading. My colleagues said you saved the Amicassador in Cloudford! Nice to meet you, my name is Kai!
+:'''Kai:''' But now, Cloudford is in chaos. The scheduling system is a mess, the jetty is filled with an exceptionally large number of freight starskiffs, I simply can not handle everything alone...
+:'''Kai:''' That's right! Since you are here, do you want to help me with these things? With someone reliable like you, I can rest assured.
+:{{DIcon|Arrow}} Sure!
+:{{DIcon|Arrow}} What do you mean by "since I'm here"?
+::'''Kai:''' There is a Xianzhou proverb that says "we've already come this far," which means since you've already come all this way, we can dispense with all other unnecessary explanations.
+:{{DIcon|Arrow}} Let me think things over.
+::'''Kai:''' The freight starskiff is usually filled with tips for the workers. After unloading, these tips will all be yours. Come on, you will not lose out.
+:'''Kai:''' It's simple, you go ahead and operate the navigation compasses, and the freight starskiffs will be guided to the jetty to unload their cargo.
+:'''Kai:''' The daily shipping schedule will be displayed on this notice board in front of me, so remember to check it.
+:'''Kai:''' Well then, I'll leave this jetty to you! I'm off to look after the other jetties. See you later.
+<pre>{
+	"$type": "RPG.GameCore.ActiveVirtualCamera",
+	"AreaName": "LevelArea_P20211_F20211001_G129",
+	"AnchorName": "LookAtCam",
+	"IsActive": false
+}</pre>
+
+;(Upon reaching the destination)
+<pre>{
+	"$type": "RPG.GameCore.PropEnableCollider",
+	"TargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvPropEx",
+		"FetchType": "SinglePropByPropID",
+		"SinglePropID": {
+			"GroupID": {
+				"FixedValue": {
+					"Value": 162
+				}
+			},
+			"ID": {
+				"FixedValue": {
+					"Value": 300001
+				}
+			}
+		}
+	}
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.PlayNPCBubbleTalk",
+	"BubbleTalkInfoList": [
+		{
+			"AutoSkipTime": 3,
+			"GroupID": 162,
+			"GroupNpcID": 400001,
+			"TalkSentenceID": 401510102
+		},
+		{
+			"AutoSkipTime": 3,
+			"GroupID": 162,
+			"GroupNpcID": 400001,
+			"TalkSentenceID": 401510103
+		}
+	],
+	"InstantFinish": false
+}</pre>
+:<!--5-second delay-->
+<pre>{
+	"$type": "RPG.GameCore.PropEnableCollider",
+	"Enabled": true,
+	"TargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvPropEx",
+		"FetchType": "SinglePropByPropID",
+		"SinglePropID": {
+			"GroupID": {
+				"FixedValue": {
+					"Value": 162
+				}
+			},
+			"ID": {
+				"FixedValue": {
+					"Value": 300001
+				}
+			}
+		}
+	}
+}</pre>
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+----
+:'''Kai:''' Oh dear, what happened? I heard the sound and rushed over...
+:{{DIcon|Arrow}} What's with the monsters?
+::'''Kai:''' I didn't necessarily say there wouldn't be any.
+:{{DIcon|Arrow}} This job's dangerous!
+::'''Kai:''' That's why I was only confident in entrusting the job to someone as hardcore as you!
+:'''Kai:''' I forgot to tell you, Cloudford is in chaos now. Some people take advantage of the opportunity to transport dangerous goods with freight starskiffs, and there are also criminals who try to use freight starskiffs to smuggle people...
+:'''Kai:''' So when a freight starskiff enters the port, it's not certain what might pop out of it!
+:'''Kai:''' Because of this, Cloudford is now understaffed. Only people with excellent martial arts skills like you and I can survive in this cruel freight jetty...
+:'''Kai:''' Alright, enough chit-chat. I'm going back to my work. You take care!
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+<pre>{
+	"$type": "RPG.GameCore.PropStateExecute",
+	"TargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvPropEx",
+		"FetchType": "SinglePropByPropID",
+		"SinglePropID": {
+			"GroupID": {
+				"FixedValue": {
+					"Value": 169
+				}
+			},
+			"ID": {
+				"FixedValue": {
+					"Value": 300001
+				}
+			}
+		}
+	},
+	"State": "Open",
+	"Execute": [
+		{
+			"$type": "RPG.GameCore.TriggerPerformance",
+			"ValueSource": {},
+			"PerformanceType": "E",
+			"PerformanceID": 404022501
+		},
+		{
+			"$type": "RPG.GameCore.FinishPerformanceMission",
+			"Key": "Mission_401510108"
+		}
+	]
+}</pre>
+
+;(Upon reaching the destination)
+<pre>{
+	"$type": "RPG.GameCore.PropStateExecute",
+	"TargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvPropEx",
+		"FetchType": "SinglePropByPropID",
+		"SinglePropID": {
+			"GroupID": {
+				"FixedValue": {
+					"Value": 169
+				}
+			},
+			"ID": {
+				"FixedValue": {
+					"Value": 300004
+				}
+			}
+		}
+	},
+	"State": "ChestUsed",
+	"Execute": [
+		{
+			"$type": "RPG.GameCore.TriggerPerformance",
+			"ValueSource": {},
+			"PerformanceType": "E",
+			"PerformanceID": 404022502
+		}
+	]
+}</pre>
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:'''Com:''' So long, stranger. May you and your loved ones remain safe and happy until the universe ends.
+:<!--0.5-second delay-->
 {{Dialogue End}}
 
 ==Other Languages==

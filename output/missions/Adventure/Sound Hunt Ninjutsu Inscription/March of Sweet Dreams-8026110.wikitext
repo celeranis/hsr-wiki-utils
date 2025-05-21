@@ -11,7 +11,7 @@ PageTitle=#March of Sweet Dreams#
 |chapter       = Sound Hunt Ninjutsu Inscription
 |requirements  = {{subst:void|<!--Unknown: {"Type":"Manual"}-->}}
 |summary       = <!--official mission summary from Fate's Atlas-->
-|characters    = Lead Bird; Montana; Professor Owl; Trailblazer
+|characters    = Lead Bird; Trailblazer
 |startLocation = [[Penacony]] - [[Penacony Paperfold University College]]
 |world         = Penacony
 |area          = Penacony Paperfold University College
@@ -22,9 +22,9 @@ PageTitle=#March of Sweet Dreams#
 '''''March of Sweet Dreams''''' is an Event [[Adventure Mission]] from the [[Sound Hunt Ninjutsu Inscription]] event.
 
 ==Steps==
-# Collect inspiration for composing a song by wandering around the campus
 # Join the Origami Birds' ensemble
 # Return to the stage and tell Montana what you saw
+# Collect inspiration for composing a song by wandering around the campus
 
 <!--
 ==Gameplay Notes==
@@ -35,22 +35,123 @@ PageTitle=#March of Sweet Dreams#
 -->
 ==Dialogue==
 {{Stub Dialogue}}
-===Collect inspiration for composing a song by wandering around the campus{{subst:void|<!--802611007-->}}===
-{{Mission Description|type=adventure|location=Penacony Paperfold University College|You've become the manager of the music party's performing band, and now your band needs to complete 3 performances on the stage in the middle of the campus.<br />Wander around the campus to help Rappa collect inspiration for composing.}}
-{{Dialogue Start}}
-:{{tx}}
 {{Dialogue End}}
 
-===Join the Origami Birds' ensemble{{subst:void|<!--802611003-->}}===
+===Join the Origami Birds' ensemble{{subst:void|<!--802611005-->}}===
 {{Mission Description|type=adventure|location=Penacony Paperfold University College|update|You've become the manager of the music party's performing band, and now your band needs to complete 3 performances on the stage in the middle of the campus.<br />Obtain a record of the origami birds' beats to help Rappa collect inspiration for composing.}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Lead Bird)
+:'''Lead Bird:''' The band's playing the Dreamville's marching song &mdash; Good Dreams Come, tweet! Do your best to keep up with us, tweet!
+:{{DIcon|Travel Log}} (Join the Origami Birds' ensemble)
+:<pre>{
+	"$type": "RPG.GameCore.WaitFrame"
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.ShowUI",
+	"Name": "Ui.MusicRhythm.MusicRhythmChooseLevelPage",
+	"WaitForExit": true,
+	"Param": {
+		"Value": "2"
+	},
+	"OnUICustomEvent": [],
+	"OnUIExitImmediately": [
+		{
+			"$type": "RPG.GameCore.EndDialogueEntityInteract"
+		}
+	]
+}</pre>
+:{{DIcon|Exit}} I've got something else to do.
+
 {{Dialogue End}}
 
 ===Return to the stage and tell Montana what you saw{{subst:void|<!--802611006-->}}===
 {{Mission Description|type=adventure|location=Penacony Paperfold University College|update|You've become the manager of the music party's performing band, and now your band needs to complete 3 performances on the stage in the middle of the campus.<br />Return to the central stage and tell Montana the wonders you just saw.}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Montana)
+
+
+;(Unused &mdash; OpenUI_MusicRhythm)
+<pre>{
+	"$type": "RPG.GameCore.ShowTransitionLoadingUI",
+	"Name": "Ui.MusicRhythm.MusicRhythmTransitionDialog"
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.ShowUI",
+	"Name": "Ui.MusicRhythm.MusicRhythmMainEntrancePage",
+	"WaitForExit": true,
+	"OnUIEnter": [
+		{
+			"$type": "RPG.GameCore.ExitTransitionLoadingUI"
+		},
+		{
+			"$type": "RPG.GameCore.SetLocalPlayerDitherAlpha"
+		},
+		{
+			"$type": "RPG.GameCore.LockPlayerControl"
+		}
+	],
+	"OnUIExitImmediately": [
+		{
+			"$type": "RPG.GameCore.SetLocalPlayerDitherAlpha",
+			"DitherAlpha": 1
+		},
+		{
+			"$type": "RPG.GameCore.UnLockPlayerControl"
+		}
+	]
+}</pre>
+
+;(Unused &mdash; OpenUI_1)
+<pre>{
+	"$type": "RPG.GameCore.ShowUI",
+	"Name": "Ui.MusicRhythm.Composition.MusicRhythmCompositionPresetPage",
+	"WaitForExit": true,
+	"Param": {
+		"Value": "1"
+	},
+	"OnUIExitImmediately": [
+		{
+			"$type": "RPG.GameCore.EndDialogueEntityInteract"
+		}
+	]
+}</pre>
+
+;(Unused &mdash; OpenUI_2)
+<pre>{
+	"$type": "RPG.GameCore.ShowUI",
+	"Name": "Ui.MusicRhythm.Composition.MusicRhythmCompositionPresetPage",
+	"WaitForExit": true,
+	"Param": {
+		"Value": "2"
+	},
+	"OnUIExitImmediately": [
+		{
+			"$type": "RPG.GameCore.EndDialogueEntityInteract"
+		}
+	]
+}</pre>
+
+;(Unused &mdash; OpenUI_3)
+<pre>{
+	"$type": "RPG.GameCore.ShowUI",
+	"Name": "Ui.MusicRhythm.Composition.MusicRhythmCompositionPresetPage",
+	"WaitForExit": true,
+	"Param": {
+		"Value": "3"
+	},
+	"OnUIExitImmediately": [
+		{
+			"$type": "RPG.GameCore.EndDialogueEntityInteract"
+		}
+	]
+}</pre>
+{{Dialogue End}}
+
+===Collect inspiration for composing a song by wandering around the campus{{subst:void|<!--802611001-->}}===
+{{Mission Description|type=adventure|location=Penacony Paperfold University College|update|You've become the manager of the music party's performing band, and now your band needs to complete 3 performances on the stage in the middle of the campus.<br />Wander around the campus to help Rappa collect inspiration for composing.}}
+{{Dialogue Start}}
 {{Dialogue End}}
 
 ==Other Languages==

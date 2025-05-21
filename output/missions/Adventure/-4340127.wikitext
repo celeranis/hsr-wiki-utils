@@ -34,6 +34,169 @@ PageTitle=##
 ==Dialogue==
 {{Stub Dialogue}}
 
+;(Talk to Sneaky Cycrane)
+:'''Sneaky Cycrane:''' You're alone, right? Did anyone follow you?
+::{{DIcon|Arrow}} ...No idea. I only see myself here.
+:::'''Sneaky Cycrane:''' That's good. What I'm about to say next is meant for you and you alone.
+:::'''Shiratori:''' First, let me introduce myself. You can call me Shiratori.
+::{{DIcon|Arrow}} Are you breaking the law? I'll go get a prison guard right now!
+:::'''Sneaky Cycrane:''' Hold on! Calm down. You don't have to be such a "law-abiding citizen"! Let me explain. I'm the Chief Logistics Officer of the Arma Correctional Group and my actual body is currently locked up in jail. You don't have to worry!
+:::'''Sneaky Cycrane:''' First, let me introduce myself. You can call me Shiratori.
+::{{DIcon|Arrow}} Shiratori? Have we met somewhere?
+:::'''Shiratori:''' Oh, I recognize you now! Thanks for helping me out the other time. Well, it all makes sense now. Nobody else would be sauntering around the Shackling Prison so casually.
+::'''Shiratori:''' You must have a lot of questions. Ask me whatever you want, but listen, when you're done, I... I hope you can lend me your assistance.
+::{{DIcon|Talk}} What is this place?
+:::'''Shiratori:''' You see all these freight containers around us? This warehouse is where the Shackling Prison stores all the articles that were used as evidence in their cases.
+:::'''Shiratori:''' I heard that this place was badly hit by the riot that broke out in the Shackling Prison a while ago. There are even stories about evidence in custody coming back to life, though nobody knows how much truth there is to those claims...
+:::'''Shiratori:''' Still, given the sort of place the Shackling Prison is, I won't be surprised if they turned out to be true.
+::;(Return to previous option selection)
+::{{DIcon|Talk}} What are you looking for in here?
+:::'''Shiratori:''' This place has plenty of resources, including mutant creations and even cultural relics from ancient civilizations... You can say everything in here is a treasure. I even heard from other inmates that within these containers lie things like monsters, turbulent spaces, and even calamities.
+:::'''Shiratori:''' Myself, I'm just looking for a certain safe inside this warehouse. As for its contents... Sorry, but it's private.
+::;(Return to previous option selection)
+::{{DIcon|Talk}} Why do you need me to come along with you?
+:::'''Shiratori:''' Any prisoner who's been in the Shackling Prison long enough knows a certain rule: "Never enter the freight containers in the evidence storage warehouse... At least, not alone."
+:::'''Shiratori:''' Anyone planning to venture within must ensure that they're as well-prepared as possible and enlist the aid of strong, dependable allies in advance. Most importantly, they must also engage a "pathfinder," someone who can guide them out of those maze-like containers.
+:::{{DIcon|Arrow}} You're grabbing just anyone for something so important?
+::::'''Shiratori:''' There are no other fugitives here, and it's not like I can approach the prison guards for this... You're the only option I have.
+::::'''Shiratori:''' ...You're the only one who can help me now.
+:::;(Return to previous option selection)
+:::{{DIcon|Arrow}} So, you think I'm a pathfinder?
+::::'''Shiratori:''' I think you are... And I hope you are.
+::::'''Shiratori:''' ...You're the only one who can help me now.
+:::;(Return to previous option selection)
+::{{DIcon|Arrow}} Alright. What do you need me to do?
+:::'''Shiratori:''' In a while, I'm going to enter this freight container to look for a security safe, but as I mentioned, the space inside these containers is in chaos. Nobody that enters can orient themselves without help...
+:::'''Shiratori:''' ...Which is why the '''directions left behind by past explorers''' are so important. Please, you're my only hope now. The directions have been written on a piece of paper, but someone &mdash; a meddling spiritfarer, I reckon &mdash; has taken it to the Scriptorium. Can you retrieve it for me?
+:::{{DIcon|Arrow}} Will the spiritfarers really give me the memo?
+:::'''Shiratori:''' The directions are written in a cipher, so all they'll see is a mess of mm's and hm's. The spiritfarers won't understand a word. All you have to do is retrieve it and bring it back to me.
+:'''Shiratori:''' Those '''directions left behind by past explorers''' are extremely important! They have been written down on a piece of paper, but the memo has been taken to the Scriptorium by a spiritfarer. Can you retrieve it for me? Please, I beg of you!
+
+
+:{{DIcon|?}} Investigate
+:From what you can see, this crummy piece of paper is exactly what Shiratori is looking for.
+:"Ehn-nah-nah, Nah-ehn-ehn, Ehn-nah-nah, Ehn-nah-nah"?
+:You now understand why the spiritfarers of the Ten-Lords Commission pay no attention to this memo.
+:{{Color|keyword|nobold=1|Go to the evidence storage warehouse}} with it and look for Shiratori nearby.
+
+
+;(Talk to Shiratori)
+:'''Shiratori:''' You're back! How did it go? Did you find the memo I wanted?
+:{{DIcon|Arrow}} (Hand the memo covered in letters to Shiratori)
+<pre>{
+	"$type": "RPG.GameCore.AddFinishMissionData_ConsumeItem",
+	"SubmissionID": 434012703,
+	"SimpleTalk": {},
+	"OnSubmitConfirm": [
+		{
+			"$type": "RPG.GameCore.PlayAndWaitSimpleTalk",
+			"SimpleTalkList": [
+				{
+					"TextSpeed": 0,
+					"TalkSentenceID": 434035303,
+					"ProtectTime": 0
+				},
+				{
+					"TextSpeed": 0,
+					"TalkSentenceID": 434035304,
+					"ProtectTime": 0
+				}
+			]
+		},
+		{
+			"$type": "RPG.GameCore.CharacterTriggerFreeStyle",
+			"CharacterUniqueName": "LocalPlayer",
+			"StoryAvatarID": "NPC_Player",
+			"StoryMotionID": 230
+		},
+		{
+			"$type": "RPG.GameCore.PlayOptionTalk",
+			"OptionList": [
+				{
+					"$type": "RPG.GameCore.OptionTalkInfo",
+					"TalkSentenceID": 434035305,
+					"OptionIconType": "ChatContinueIcon",
+					"TriggerCustomString": "TalkSentence_434035307"
+				},
+				{
+					"$type": "RPG.GameCore.OptionTalkInfo",
+					"TalkSentenceID": 434035306,
+					"OptionIconType": "ChatContinueIcon",
+					"TriggerCustomString": "TalkSentence_434035307"
+				}
+			]
+		}
+	],
+	"OnSubmitCancel": [
+		{
+			"$type": "RPG.GameCore.TriggerCustomString",
+			"CustomString": {
+				"Value": "ALL_TALK_END_NOTFINISH"
+			}
+		}
+	]
+}</pre>
+;(Unused &mdash; TalkSentence_434035307)
+:'''Shiratori:''' The code is "Ehn-nah-nah, Nah-ehn-ehn, Ehn-nah-nah, Ehn-nah-nah."
+::{{DIcon|Arrow}} Stop grunting!
+::{{DIcon|Arrow}} Hm? Hmmm?
+::{{DIcon|Arrow}} Mm-hmm.
+::'''Shiratori:''' Here's the encryption key: "A" corresponds to "Ehn-nah," "B" corresponds to "Nah-ehn-ehn-ehn," "C" corresponds to "Nah-ehn-nah-ehn," "D" corresponds to "Nah-ehn-ehn"... "S" corresponds to "Ehn-ehn-ehn"... "W" corresponds to "Ehn-nah-nah," ...
+:;(Return to previous option selection)
+
+;(Unused &mdash; ALL_TALK_END_NOTFINISH)
+<pre>{
+	"$type": "RPG.GameCore.SetMissionCustomValue",
+	"SubmissionID": 434012703,
+	"MissionCustomValue": {
+		"Name": "OldValue_0",
+		"isLocal": true,
+		"ValidValueParamList": [
+			1,
+			2
+		]
+	},
+	"CustomValue": 2
+}</pre>
+
+;(Talk to Shiratori)
+:'''Shiratori:''' Don't worry, you can check the cipher and encryption key again anytime you want. Well, it's time for me to set off, my "pathfinding" friend.
+:{{DIcon|Arrow}} Let's get cracking. Take care of yourself in there.
+::'''Shiratori:''' I'm counting on you to tell me where to go. Stay in touch!
+:{{DIcon|Exit}} Hold on, I have other things to do.
+<pre>{
+	"$type": "RPG.GameCore.SetMissionCustomValue",
+	"SubmissionID": 434012703,
+	"MissionCustomValue": {
+		"Index": 3,
+		"Name": "OldValue_3",
+		"isLocal": true,
+		"ValidValueParamList": [
+			1,
+			2
+		]
+	},
+	"CustomValue": 1
+}</pre>
+:'''Shiratori:''' I see a hidden door... Yes, this is it! This is the correct route!
+:'''Shiratori:''' Aha, the security safe, there you are! My pathfinding friend, why don't you retrace my steps and join me?
+:Trying your best to recall the directions you just decoded, you make your way through the gigantic maze of freight containers.
+:'''Shiratori:''' This security safe really made me work for it, but all that effort has paid off. It's finally in my hands!
+:'''Shiratori:''' And it's all thanks to you, my friend! I owe you big-time!
+:{{DIcon|Arrow}} Couldn't you have flown here with the cycrane?
+::'''Shiratori:''' And take the romanticism out of the process? Of course not!
+::Why are there so many pathways in the containers?
+:{{DIcon|Arrow}} Why are there so many pathways in the containers?
+:'''Shiratori:''' Because that's where the path lies.
+:'''Shiratori:''' Ah, this sense of achievement welling up within me!
+:{{DIcon|Arrow}} So, what is this thing that you worked so hard to look for?
+::'''Shiratori:''' I suppose I can be honest with you: It's a microchip containing navigation data on the spaces within the freight containers. After I install this baby on the cycrane, the spoils in the evidence storage warehouse will all be ripe for the picking!
+::'''Shiratori:''' Before you say anything, don't worry, I know what I can do and what I can't. I won't make any trouble for the Ten-Lords Commission.
+::I won't say anymore, then. Now give me my reward!
+:{{DIcon|Arrow}} I won't say anymore, then. Now give me my reward!
+:'''Shiratori:''' Easy, buddy.
+:'''Shiratori:''' I must say, the way you guided me from crate to crate in the dark, it's like you were leading me around with a rope. I've never known a more dependable ally!
+:{{tx}}
 {{Dialogue End}}
 
 ==Other Languages==

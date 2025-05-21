@@ -40,26 +40,121 @@ PageTitle=#A Cleansing of Gold#
 ===Gather the collected information from the Garmentmaker{{subst:void|<!--104011201-->}}===
 {{Mission Description|type=trailblaze|location="Eternal Holy City" Okhema|Meanwhile, in the city of Okhema, Aglaea has begun addressing Nikador's infiltration. However, the political situation in Okhema appears far less stable than we had anticipated.}}
 {{Dialogue Start}}
+
+;(Talk to Tribbie)
+:{{A|VO chapter4 8 tribbie 114.ogg}} '''Tribbie:''' Don't exhaust yourself, Agy.
+----
 :{{tx}}
+:{{A|VO chapter4 8 aglaea 112.ogg}} '''Aglaea:''' (The nymphs have located the source of the disruption... I should check with the "Garmentmaker" for intel.)
 {{Dialogue End}}
 
 ===Go to Marmoreal Market, then find and clear three anomalies{{subst:void|<!--104011203-->}}===
 {{Dialogue Start}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{tx}}
+;(Enter battle)
+:{{Enemy List|Furiae Archer*2; Furiae Philosopher*2}}
+
+;(Upon reaching the destination)
+<pre>{
+	"$type": "RPG.GameCore.PlayNPCBubbleTalk",
+	"BubbleTalkInfoList": [
+		{
+			"AutoSkipTime": 2,
+			"GroupID": 199,
+			"GroupNpcID": 400001,
+			"TalkSentenceID": 140186313
+		},
+		{
+			"AutoSkipTime": 2,
+			"GroupID": 199,
+			"GroupNpcID": 400001,
+			"TalkSentenceID": 140186314
+		}
+	],
+	"IsLoop": true,
+	"LoopInterval": 2
+}</pre>
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{A|VO chapter4 8 aglaea 129.ogg}} '''Aglaea:''' Good day, child.
+:'''Silent Girl:''' ...
+:{{A|VO chapter4 8 aglaea 130.ogg}} '''Aglaea:''' ...Child?
+:The girl beside you remains unresponsive.
+:(Oh... She's a child who can't hear.)
+:{{DIcon|Arrow}} (Gently touch the girl's shoulder.)
+:{{DIcon|Arrow}} (Run your fingertips through the girl's hair.)
+:{{A|VO chapter4 8 chenmonvhai 102.ogg}} '''Silent Girl:''' ...
+:{{DIcon|Arrow}} (Hold out your arms.)
+:Aglaea extends her arm, signaling the girl to do the same.
+:{{tx}}
+;(Enter battle)
+:{{Enemy List|Furiae Archer*2; Furiae Philosopher*2}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{tx}}
+;(If {{F|group state}} is undefined 4)
+:<pre>{
+	"$type": "RPG.GameCore.SetFloorSavedValue"
+}</pre>
+;(If {{F|group state}} is not undefined 4)
+:;(Return to previous option selection)
+----
 :{{tx}}
 {{Dialogue End}}
 
 ===Recapture Spirithief Bartholos{{subst:void|<!--104011208-->}}===
 {{Dialogue Start}}
+----
 :{{tx}}
+<pre>{
+	"$type": "RPG.GameCore.PerformanceEndSeq",
+	"BeforeCases": [
+		{
+			"$type": "RPG.GameCore.AdvCreateGroupEntity",
+			"InstanceIDList": [
+				300001
+			]
+		}
+	]
+}</pre>
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{A|VO chapter4 8 aglaea 159.ogg}} '''Aglaea:''' How predictable... Did you truly think you could outrun me?
+:{{A|VO chapter4 8 zeiling 112.ogg}} '''"Spirithief" Bartholos:''' Teehee! It was worth a try, wasn't it?
+:{{A|VO chapter4 8 aglaea 145.ogg}} '''Aglaea:''' (There's one more threat marked by the nymphs.)
+:{{A|VO chapter4 8 aglaea 146.ogg}} '''Aglaea:''' ({{Rubi|Kephale|Worldbearing Titan}}, sky father, I seek your guidance... May your hand keep all things in order.)
+:{{A|VO chapter4 8 aglaea 127.ogg}} '''Aglaea:''' (I need to ensure I leave no trace behind, so that no one suspects anything.)
+:{{A|VO chapter4 8 aglaea 128.ogg}} '''Aglaea:''' (Time to move on to the next nymph.)
+----
+:{{A|VO chapter4 8 aglaea 163.ogg}} '''Aglaea:''' (All the filth marked by the nymphs has been cleansed.)
+:{{A|VO chapter4 8 aglaea 164.ogg}} '''Aglaea:''' (I should go find teacher.)
+<pre>{
+	"$type": "RPG.GameCore.OverrideFinishActionAutoTransfer",
+	"SubmissionID": 104011216
+}</pre>
 {{Dialogue End}}
 
 ===Return to the Garden of Life{{subst:void|<!--104011209-->}}===
 {{Dialogue Start}}
+----
 :{{tx}}
 {{Dialogue End}}
 
 ===Return to the Garden of Life and tell Tribbie and the rest the situation{{subst:void|<!--104011210-->}}===
 {{Dialogue Start}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{A|VO chapter4 8 aglaea 173.ogg}} '''Aglaea:''' ...Trinnon? It seems she has begun to make arrangements for defending Okhema.
+
+;(Upon reaching the destination)
+:{{tx}}
 :{{tx}}
 {{Dialogue End}}
 

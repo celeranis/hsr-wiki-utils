@@ -39,12 +39,49 @@ PageTitle=#Clockwork: Quinn#
 ===Go to the hotel reception and talk to Alley.{{subst:void|<!--424030503-->}}===
 {{Mission Description|type=adventure|location=The Reverie (Reality)|update|Tick... tock! Quick, adjust the hands... Tick, tock!<br />People's minds await your exploration. Help them regain their true selves!}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Alley)
+:'''Alley:''' Greetings. Is there something you need?
+::{{DIcon|Arrow}} I'm here about your little sister...
+::'''Alley:''' *sigh* Did that kid cause any trouble for you?
+::'''Alley:''' I'm really sorry. My sister can be blunt and isn't always the most mature. If she has accidentally offended you, then please allow me &mdash; as her sister &mdash; to make it up to on her behalf...
+::{{DIcon|Arrow}} She hasn't offended me.
+::'''Alley:''' Really? That's great... *sigh* You have no idea how many people Quinn has offended because she doesn't know how to keep her mouth shut.
+::'''Alley:''' At her age, she's still behaving as though she's still a little kid... Always making me worry about her all day long.
+::{{DIcon|Arrow}} I heard your relationship isn't the best?
+::'''Alley:''' Is that what Quinn said? I'm not surprised, as she's had this kind of personality since she was small... She likes causing trouble for me every now and again.
+::'''Alley:''' But even so, we also love each other... Our sisterly bond is unbreakable. She will {{Color|h|nobold=1|always be my sister and the most important person to me}}.
+::'''Alley:''' Sounds like you and Quinn are getting along like a house on fire. So, if I may be so bold as to ask you a favor?
+::'''Alley:''' That kid has no real friends due to her personality issues, and I'm too busy with my work, so I never get a chance to see her.
+::'''Alley:''' If you don't mind and if you have any free time, would you please keep her company for me?
+:'''Alley:''' Sounds like you and Quinn are getting along like a house on fire. So, if I may be so bold as to ask you a favor?
+::'''Alley:''' That kid has no real friends due to her personality issues, and I'm too busy with my work, so I never get a chance to see her.
+::'''Alley:''' If you don't mind and if you have any free time, would you please keep her company for me?
 {{Dialogue End}}
 
 ===Discuss Alley with Quinn.{{subst:void|<!--424030504-->}}===
 {{Dialogue Start}}
-:{{tx}}
+;(Unused &mdash; showtoast126)
+<pre>{
+	"$type": "RPG.GameCore.ShowHeartDialToast",
+	"StepType": "Normal",
+	"TargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvNpcEx",
+		"FetchType": "SingleNpcByNpcID",
+		"SingleNpcID": {
+			"GroupID": {
+				"FixedValue": {
+					"Value": 126
+				}
+			},
+			"GroupNpcID": {
+				"FixedValue": {
+					"Value": 400001
+				}
+			}
+		}
+	}
+}</pre>
 {{Dialogue End}}
 
 ==Other Languages==

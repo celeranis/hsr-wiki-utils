@@ -39,22 +39,431 @@ PageTitle=#Elsewhere#
 ===Speak with the two rhetoric teachers and take part in their dispute{{subst:void|<!--500040401-->}}===
 {{Mission Description|type=adventure|location="Eternal Holy City" Okhema|The culture of debate has been popular in Okhema for a long time, and you just so happen to have met with two teachers that are proficient in the art of rhetoric. Go and see what kinds of interesting perspectives they put forward.}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Zeno)
+----
+<pre>{
+	"$type": "RPG.GameCore.RandomConfig",
+	"OddsList": [
+		{
+			"FixedValue": {
+				"Value": 1
+			}
+		},
+		{
+			"FixedValue": {
+				"Value": 1
+			}
+		}
+	],
+	"TaskList": [
+		{
+			"$type": "RPG.GameCore.PlayVoice",
+			"VoiceIDs": [
+				504000265,
+				504000266
+			]
+		},
+		{
+			"$type": "RPG.GameCore.PlayVoice",
+			"VoiceIDs": [
+				504000267,
+				504000268
+			]
+		}
+	],
+	"RandomMaskTarget": {
+		"$type": "RPG.GameCore.TargetAlias",
+		"Alias": "Caster"
+	}
+}</pre>
+:'''Zeno:''' My dear Parmenides. Please, tell me: Who are you? Where have you come from? Where are you going?
+:'''Parmenides:''' I am Parmenides of Icatus. My faith in the earth is as firm as the divine body of Georios. I have come from Marmoreal Palace. Now that I have washed my mind and body, I shall head for the city gates.
+:'''Zeno:''' Very good. Such detailed answers. Then allow me to ask you one more thing: This city of Icatus that you speak of... Is it the same as the city that I know of? Do not rush to refute me. Think carefully about what it is that I am asking.
+:'''Zeno:''' As all who can read in Okhema know that Icatus was long since destroyed by the black tide. How could you have come from a city that does not exist?
+:{{DIcon|Arrow}} (Keep listening)
+::'''Parmenides:''' I made a mistake in my last remark. I originally came from Icatus, and that is my home. Before the black tide descended, I took all of my worldly belongings and fled to Okhema. I come from an Icatus that has not yet been destroyed. This point is absolutely true.
+::'''Zeno:''' Are the Icatus that existed before its destruction and the Icatus that has now been devoured by the black tide the same thing?
+::'''Parmenides:''' Of course. No matter what time we speak of, Icatus is my hometown.
+::'''Zeno:''' The Icatus that existed before its destruction remains in your memory, yet you can go to the Icatus that has been devoured by the black tide at any time. How could something long since gone be the same as something that exists currently?
+::'''Parmenides:''' Are you saying that if I can neither see it with my eyes nor feel it with my hands, then it does not exist? If that were the case, nothing would exist in this world, as everything is in a constant state of flux. There would be nothing for us to discuss.
+::'''Zeno:''' Hah, of course! Are you trying to claim that the Icatus in your mind will exist forever, whereas a visible and tangible city is not as much a certainty as the one in your imagination?
+::'''Parmenides:''' A meaningless argument. Your line of questioning is conflating different concepts with each other.
+::'''Zeno:''' To think that such an argument lacks meaning is no more than mental laziness. In fact, this relates to everything we see in Amphoreus.
+::'''Zeno:''' We have never seen the true form of Kephale, yet we are certain that they support the world for Okhema. We do not understand the words of Oronyx, yet we stubbornly believe their prophecy. We have never experienced death, yet we assume the existence of Thanatos.
+::'''Zeno:''' People are always drawn to these grand and fantastic ideals, yet they are unwilling to reflect on their implications.
+::'''Parmenides:''' It is not that I am unwilling to reflect. I am unwilling to shake the very foundation of thought itself.
+::'''Zeno:''' My friend. You have overheard this dispute for some time. You must be a fellow scholar and lover of wisdom. If you are interested, why not join our discussion? We would all be interested in hearing your view.
+::{{DIcon|Talk}} How about you introduce yourselves first?
+:::'''Zeno:''' I am Zeno of Okhema. I make a living by instructing people on the art of debate.
+:::'''Parmenides:''' Parmenides of Icatus. As you can see, I am a teacher in the study of rhetoric.
+:::'''Zeno:''' I find the title of "teacher" overly flashy. I do not enjoy it, personally. People always think that I can teach them something, but all I can teach them are the skills of reflection and debate. Does this really count as anything?
+:::'''Parmenides:''' If that is true, logic classes would be completely worthless. Let us not forget that this was your major.
+:::'''Zeno:''' Is it that rare for a student to surpass their teacher? If we follow your view, surely the world would only ever be regressing?
+:::Alright, now you know what their main jobs are.
+::;(Return to previous option selection)
+::{{DIcon|Arrow}} Let me join the debate!
+:::'''Zeno:''' As this wise one has seen fit to join us in debate, let us select a topic that is both intuitive and profound. Parmenides of Icatus, I shall step back and pass the rights of topic selection to you.
+:::'''Parmenides:''' Very well. I think that we may as well continue the debate that we were having before: Ideals or reality, which is more reliable?
+:::'''Parmenides:''' If we were to convert it into a more direct topic, it would be: {{Color|keyword|nobold=1|Does a pure "Icatus" truly exist?}}
+:::'''Zeno:''' A very fine topic. I must say, this question has troubled me for a long time. Having been devoured by the black tide, one can no longer see nor touch Icatus. Even if you go to its location, all you will see is a pile of ruined remains.
+:::'''Zeno:''' Even before its destruction, the area and population of the city were undergoing constant change. The city that you saw as a child was undoubtedly different to the one you saw as a youth. If that is the case, how can you conclude that it was indeed Icatus?
+:::'''Zeno:''' Based on the principle of simplicity, I think that... {{Color|keyword|nobold=1|"Icatus" does not in fact exist}}, and all we can be certain of is that there is '''a city'''.
+:::'''Parmenides:''' I believe precisely the opposite. Icatus does not simply stop existing because it was destroyed. We can still discuss it and reminisce on it as if it were a city that still truly exists.
+:::'''Parmenides:''' When I mention "Icatus," everyone knows what that is. When you send a parcel to "Icatus," there is no way that the messenger would go to the wrong location. It is my hometown. That will never change.
+:::'''Parmenides:''' {{Color|keyword|nobold=1|"Icatus" must exist}}. Otherwise, when we discuss "Icatus," how could we possibly understand what each other is referring to?
+:::'''Zeno:''' We have both stated our view points. So, wise one, which side would you like to debate for?
+::<pre>{
+	"$type": "RPG.GameCore.SetMissionCustomValue",
+	"SubmissionID": 500040401,
+	"MissionCustomValue": {
+		"Name": "OldValue_0",
+		"ValidValueParamList": [
+			0,
+			1,
+			2,
+			3
+		]
+	},
+	"CustomValue": 3
+}</pre>
+::{{DIcon|Exit}} I'm just passing by.
+:::'''Parmenides:''' These debates of rhetorical wordplay are best avoided. Putting aside the matter of blasphemy for now, if you end up damaging your brain trying to refute your opposition's argument, the victory is still not worth the loss.
+:::'''Zeno:''' Ah, but debate is the only method to obtain the truth. Is there any difference between knowledge that has not undergone discussion and blind faith?
+:::Seeing that both of the men before you are hurtling towards another argument about the definition of "truth," you rush away from the scene as quickly as possible.
+::<pre>{
+	"$type": "RPG.GameCore.SetMissionCustomValue",
+	"SubmissionID": 500040401,
+	"MissionCustomValue": {
+		"Name": "OldValue_0",
+		"ValidValueParamList": [
+			0,
+			1,
+			2,
+			3
+		]
+	},
+	"CustomValue": 2
+}</pre>
+:{{DIcon|Exit}} I have no interest in this kind of debates.
+::You're right. Amphoreus has many interesting things awaiting trailblazing. Why must you waste time reflecting on such pointless conversations? This topic is clearly of no value to you.
+:<pre>{
+	"$type": "RPG.GameCore.SetMissionCustomValue",
+	"SubmissionID": 500040401,
+	"MissionCustomValue": {
+		"Name": "OldValue_0",
+		"ValidValueParamList": [
+			0,
+			1,
+			2,
+			3
+		]
+	},
+	"CustomValue": 1
+}</pre>
+
+;(Talk to Zeno)
+----
+:'''Zeno:''' Parmenides of Icatus, I wish to continue my questioning from before.
+:'''Zeno:''' As all who can read in Okhema know that Icatus was long since destroyed by the black tide. How could you have come from a city that does not exist?
+:'''Parmenides:''' I made a mistake in my last remark. I originally come from Icatus, and that is my home. Before the black tide descended, I took all of my worldly belongings and fled to Okhema. I come from an Icatus that has not yet been destroyed. This point is absolutely true.
+:'''Zeno:''' Are the Icatus that existed before its destruction and the Icatus that has now been devoured by the black tide the same thing?
+:'''Parmenides:''' Of course. No matter what time we speak of, Icatus is my hometown.
+:'''Zeno:''' The Icatus that existed before its destruction remains in your memory, yet you can go to the Icatus that has been devoured by the black tide at any time. How could something long since gone be the same as something that exists currently?
+:'''Parmenides:''' Are you saying that if I can neither see it with my eyes nor feel it with my hands, then it does not exist? If that were the case, nothing would exist in this world, as everything is in a constant state of flux. There would be nothing for us to discuss.
+:'''Zeno:''' Hah, of course! Are you trying to claim that the Icatus in your mind will exist forever, whereas a visible and tangible city is not as much a certainty as the one in your imagination?
+:'''Parmenides:''' A meaningless argument. Your line of questioning is conflating different concepts with each other.
+:'''Zeno:''' To think that such an argument lacks meaning is no more than mental laziness. In fact, this relates to everything we see in Amphoreus.
+:'''Zeno:''' We have never seen the true form of Kephale, yet we are certain that they support the world for Okhema. We do not understand the words of Oronyx, yet we stubbornly believe their prophecy. We have never experienced death, yet we assume the existence of Thanatos.
+:'''Zeno:''' People are always drawn to these grand and fantastic ideals, yet they are unwilling to reflect on their implications.
+:'''Parmenides:''' It is not that I am unwilling to reflect. I am unwilling to shake the very foundation of thought itself.
+:'''Zeno:''' My friend. You have overheard this dispute for some time. You must be a fellow scholar and lover of wisdom. If you are interested, why not join our discussion? We would all be interested in hearing your view.
+:{{DIcon|Talk}} How about you introduce yourselves first?
+::'''Zeno:''' I am Zeno of Okhema. I make a living by instructing people on the art of debate.
+::'''Parmenides:''' Parmenides of Icatus. As you can see, I am a teacher in the study of rhetoric.
+::'''Zeno:''' I find the title of "teacher" overly flashy. I do not enjoy it, personally. People always think that I can teach them something, but all I can teach them are the skills of reflection and debate. Does this really count as anything?
+::'''Parmenides:''' If that is true, logic classes would be completely worthless. Let us not forget that this was your major.
+::'''Zeno:''' Is it that rare for a student to surpass their teacher? If we follow your view, surely the world would only ever be regressing?
+::Alright, now you know what their main jobs are.
+:;(Return to previous option selection)
+:{{DIcon|Arrow}} Let me join the debate!
+::'''Zeno:''' As this wise one has seen fit to join us in debate, let us select a topic that is both intuitive and profound. Parmenides of Icatus, I shall step back and pass the rights of topic selection to you.
+::'''Parmenides:''' Very well. I think that we may as well continue the debate that we were having before: Ideals or reality, which is more reliable?
+::'''Parmenides:''' If we were to convert it into a more direct topic, it would be: {{Color|keyword|nobold=1|Does a pure "Icatus" truly exist?}}
+::'''Zeno:''' A very fine topic. I must say, this question has troubled me for a long time. Having been devoured by the black tide, one can no longer see nor touch Icatus. Even if you go to its location, all you will see is a pile of ruined remains.
+::'''Zeno:''' Even before its destruction, the area and population of the city were undergoing constant change. The city that you saw as a child was undoubtedly different to the one you saw as a youth. If that is the case, how can you conclude that it was indeed Icatus?
+::'''Zeno:''' Based on the principle of simplicity, I think that... {{Color|keyword|nobold=1|"Icatus" does not in fact exist}}, and all we can be certain of is that there is '''a city'''.
+::'''Parmenides:''' I believe precisely the opposite. Icatus does not simply stop existing because it was destroyed. We can still discuss it and reminisce on it as if it were a city that still truly exists.
+::'''Parmenides:''' When I mention "Icatus," everyone knows what that is. When you send a parcel to "Icatus," there is no way that the messenger would go to the wrong location. It is my hometown. That will never change.
+::'''Parmenides:''' {{Color|keyword|nobold=1|"Icatus" must exist}}. Otherwise, when we discuss "Icatus," how could we possibly understand what each other is referring to?
+::'''Zeno:''' We have both stated our view points. So, wise one, which side would you like to debate for?
+:<pre>{
+	"$type": "RPG.GameCore.SetMissionCustomValue",
+	"SubmissionID": 500040402,
+	"MissionCustomValue": {
+		"Name": "OldValue_0",
+		"ValidValueParamList": [
+			0,
+			1,
+			2,
+			3
+		]
+	},
+	"CustomValue": 3
+}</pre>
+:{{DIcon|Exit}} I'm just passing by.
+::'''Parmenides:''' These debates of rhetorical wordplay are best avoided. Putting aside the matter of blasphemy for now, if you end up damaging your brain trying to refute your opposition's argument, the victory is still not worth the loss.
+::'''Zeno:''' Ah, but debate is the only method to obtain the truth. Is there any difference between knowledge that has not undergone discussion and blind faith?
+::Seeing that both of the men before you are hurtling towards another argument about the definition of "truth," you rush away from the scene as quickly as possible.
+:<pre>{
+	"$type": "RPG.GameCore.SetMissionCustomValue",
+	"SubmissionID": 500040402,
+	"MissionCustomValue": {
+		"Name": "OldValue_0",
+		"ValidValueParamList": [
+			0,
+			1,
+			2,
+			3
+		]
+	},
+	"CustomValue": 2
+}</pre>
+
+;(Talk to Zeno)
+----
+:'''Zeno:''' My friend. You have overheard this dispute for some time. You must be a fellow scholar and lover of wisdom. If you are interested, why not join our discussion? We would all be interested in hearing your view.
+:{{DIcon|Talk}} How about you introduce yourselves first?
+::'''Zeno:''' I am Zeno of Okhema. I make a living by instructing people on the art of debate.
+::'''Parmenides:''' Parmenides of Icatus. As you can see, I am a teacher in the study of rhetoric.
+::'''Zeno:''' I find the title of "teacher" overly flashy. I do not enjoy it, personally. People always think that I can teach them something, but all I can teach them are the skills of reflection and debate. Does this really count as anything?
+::'''Parmenides:''' If that is true, logic classes would be completely worthless. Let us not forget that this was your major.
+::'''Zeno:''' Is it that rare for a student to surpass their teacher? If we follow your view, surely the world would only ever be regressing?
+::Alright, now you know what their main jobs are.
+:;(Return to previous option selection)
+:{{DIcon|Arrow}} Let me join the debate!
+::'''Zeno:''' As this wise one has seen fit to join us in debate, let us select a topic that is both intuitive and profound. Parmenides of Icatus, I shall step back and pass the rights of topic selection to you.
+::'''Parmenides:''' Very well. I think that we may as well continue the debate that we were having before: Ideals or reality, which is more reliable?
+::'''Parmenides:''' If we were to convert it into a more direct topic, it would be: {{Color|keyword|nobold=1|Does a pure "Icatus" truly exist?}}
+::'''Zeno:''' A very fine topic. I must say, this question has troubled me for a long time. Having been devoured by the black tide, one can no longer see nor touch Icatus. Even if you go to its location, all you will see is a pile of ruined remains.
+::'''Zeno:''' Even before its destruction, the area and population of the city were undergoing constant change. The city that you saw as a child was undoubtedly different to the one you saw as a youth. If that is the case, how can you conclude that it was indeed Icatus?
+::'''Zeno:''' Based on the principle of simplicity, I think that... {{Color|keyword|nobold=1|"Icatus" does not in fact exist}}, and all we can be certain of is that there is '''a city'''.
+::'''Parmenides:''' I believe precisely the opposite. Icatus does not simply stop existing because it was destroyed. We can still discuss it and reminisce on it as if it were a city that still truly exists.
+::'''Parmenides:''' When I mention "Icatus," everyone knows what that is. When you send a parcel to "Icatus," there is no way that the messenger would go to the wrong location. It is my hometown. That will never change.
+::'''Parmenides:''' {{Color|keyword|nobold=1|"Icatus" must exist}}. Otherwise, when we discuss "Icatus," how could we possibly understand what each other is referring to?
+::'''Zeno:''' We have both stated our view points. So, wise one, which side would you like to debate for?
+:<pre>{
+	"$type": "RPG.GameCore.SetMissionCustomValue",
+	"SubmissionID": 500040403,
+	"MissionCustomValue": {
+		"Name": "OldValue_0",
+		"ValidValueParamList": [
+			0,
+			1,
+			2,
+			3
+		]
+	},
+	"CustomValue": 3
+}</pre>
+:{{DIcon|Exit}} I'm just passing by.
+::'''Parmenides:''' These debates of rhetorical wordplay are best avoided. Putting aside the matter of blasphemy for now, if you end up damaging your brain trying to refute your opposition's argument, the victory is still not worth the loss.
+::'''Zeno:''' Ah, but debate is the only method to obtain the truth. Is there any difference between knowledge that has not undergone discussion and blind faith?
+::Seeing that both of the men before you are hurtling towards another argument about the definition of "truth," you rush away from the scene as quickly as possible.
+:<pre>{
+	"$type": "RPG.GameCore.SetMissionCustomValue",
+	"SubmissionID": 500040403,
+	"MissionCustomValue": {
+		"Name": "OldValue_0",
+		"ValidValueParamList": [
+			0,
+			1,
+			2,
+			3
+		]
+	},
+	"CustomValue": 2
+}</pre>
+
+;(Talk to Zeno)
+:'''(Trailblazer):''' I agree with Zeno's view.
+:'''Parmenides:''' Wise one from elsewhere, do not allow your mind to be clouded by sophistry. Though it is easy to follow one's senses, do not forget that reason is the master of the soul. Allow me to explain my understanding.
+:'''Parmenides:''' Listen. All of our knowledge comes from objects in existence. When a general sees Icatus, they will think of how to post defenses along the city walls. When a farmer sees Icatus, they will assess what kind of crops are suited to the earth at that locale.
+:'''Parmenides:''' When a scholar sees Icatus, they will think of its long and glorious history. However, we understand clearly that the Icatus in their minds cannot be "Icatus." It is always different depending on which aspect they are looking at.
+:'''Parmenides:''' So, if we did not already have knowledge of "Icatus," how could we realize that their views are not comprehensive enough? If "Icatus" does not exist, from where did we gain our knowledge of it?
+:'''Zeno:''' Not bad. Textbook syllogism. Knowledge must come from things that exist. We have knowledge of "Icatus," therefore, we can deduce that "Icatus" must exist.
+:{{DIcon|Arrow}} (Question: The main premise is flawed.)
+::'''(Trailblazer):''' Knowledge does not have to come from things that exist. Only knowledge that comes from the senses is obtained this way. You already mentioned an example that disproves this in your previous argument.
+::'''(Trailblazer):''' Mathematics is undeniably a recognized school, yet there is no self-evident truth of mathematics that can be found within objects that exist. You will never see a true circle, yet that does not stop us from discussing knowledge regarding "circles."
+::'''(Trailblazer):''' The study of logic is much the same. As you have used syllogism to prove your point, surely you will not deny that the rules of logic are not true knowledge?
+::'''Zeno:''' Hah! What a merciless rebuttal, wise one! You will have to think about this carefully, Parmenides.
+::(Question: Your minor premise is flawed.)
+::'''(Trailblazer):''' Do we truly have knowledge of "Icatus"? A child that has never been educated in mathematics can easily identify a circle, and accurately explain that the "Dawn Device" is larger than a vehicle cover.
+::'''(Trailblazer):''' Are you saying that the knowledge of a mathematician is equal to the knowledge of such children? If that is in fact the case, then the study of rhetoric also does not exist. People can learn everything they need with regard to debate at their local market.
+::'''Zeno:''' Hah! Your words go right for the throat, wise one! Parmenides, you are in danger of destroying your own profession!
+::(Question: The conclusion is flawed.)
+::'''(Trailblazer):''' Of course "Icatus" does not exist. Your very conclusion is incorrect.
+::'''Parmenides:''' And for what reason? I fear that circumventing the process of deduction and directly refuting my conclusion do not, in fact, constitute a rebuttal.
+::'''Parmenides:''' I knew that it would not be so simple as just presenting my deduction without justification. However, your rebuttal just now has presented me with a new line of thought, wise one from beyond.
+::'''Parmenides:''' Mathematics is the most simple and beautiful of studies. Its innate truths will never change. Even if there comes a day when there is no such thing as a circular object in existence, the concept of a "circle" will still exist.
+::'''Parmenides:''' "Icatus" is much the same. It cannot be seen nor touched. It is only recognized through our rational cognition, which regulates all the cities of Icatus that we find. However, it does in fact exist somewhere, and it will never disappear.
+::'''Parmenides:''' If we deny the existence of "Icatus," we overturn all knowledge of mathematics. This is something that you must consider carefully, wise one.
+::{{DIcon|Arrow}} (Rebuttal: You are confusing separate concepts.)
+:::'''(Trailblazer):''' You cannot equate these two concepts so simply. The truths of mathematics would still stand to reason in a world where humans never existed, but what of Icatus? If it weren't for its original builders, the city would never have existed in the first place.
+:::'''(Trailblazer):''' Mathematics explains absolute and certain truth. If all the warriors of Castrum Kremnos were to suddenly follow Mnestia, a circle would still be a circle. It would not change shape. However, the existence of "Icatus" absolutely relies on real history.
+:::'''(Trailblazer):''' If your ancestors had received divine inspiration and changed the name of the city, "Icatus" would not exist. How can you say that this concept is comparable to the truths of mathematics?
+:::'''Zeno:''' Even if we take a step back and accept that we do in fact have knowledge of "Icatus," how can we say that this knowledge is similar to the absolute knowledge of mathematics? Parmenides, this example is not a fitting comparison.
+:::(Rebuttal: You are creating a fictional entity.)
+:::'''(Trailblazer):''' If "Icatus" truly exists, do "Okhema" and "Castrum Kremnos" also truly exist as well? What about "Grove of Epiphany" and "Aedes Elysiae"?
+:::'''(Trailblazer):''' What if there were a great bard that created a fictional city in their songs and used their fame to convince everyone that it really existed, and it was just destroyed long ago?
+:::'''(Trailblazer):''' Does this fictional city then become the same kind of "concept"? After all, according to your argument, it is not whether one can locate Icatus that matters. To you, it is the concept of the city that you have in your mind that is more credible and true.
+:::'''(Trailblazer):''' But who can ensure that our thoughts and beliefs are not simply just a trick played on us by Zagreus?
+:::'''Zeno:''' Oronyx holds power over our memories and is completely capable of fabricating our past. Parmenides, you must not place too much weight on such things.
+:::(Rebuttal: You are making a circular argument.)
+:::'''(Trailblazer):''' I have to see a circular object to obtain the concept of a "circle." "Icatus" is the same. However, you are now saying that "Icatus" itself defines the cities of Icatus that we discover for ourselves.
+:::'''(Trailblazer):''' Are you not confusing cause and effect and creating an endless loop of inference?
+:::'''Parmenides:''' Wise one, it seems that you still have not grasped my point. The concept of a "circle" was in our minds from the very beginning. Otherwise, how do we explain our ability to imagine a perfect circle despite never having seen one?
+:::'''Parmenides:''' Knowledge of "circles" existed before real objects that are round. "Icatus" is the same.
+:::'''Parmenides:''' Let us leave the argument here for now. You have successfully rebuked my arguments twice in a row now, wise one. I have no choice but to admit that you are a great debater. I hope that you will continue to share your perspectives with us in the future.
+:::{{tx}}
+::{{DIcon|Arrow}} (Rebuttal: You are creating a fictional entity.)
+:::'''(Trailblazer):''' If "Icatus" truly exists, do "Okhema" and "Castrum Kremnos" also truly exist as well? What about "Grove of Epiphany" and "Aedes Elysiae"?
+:::'''(Trailblazer):''' What if there were a great bard that created a fictional city in their songs and used their fame to convince everyone that it really existed, and it was just destroyed long ago?
+:::'''(Trailblazer):''' Does this fictional city then become the same kind of "concept"? After all, according to your argument, it is not whether one can locate Icatus that matters. To you, it is the concept of the city that you have in your mind that is more credible and true.
+:::'''(Trailblazer):''' But who can ensure that our thoughts and beliefs are not simply just a trick played on us by Zagreus?
+:::'''Zeno:''' Oronyx holds power over our memories and is completely capable of fabricating our past. Parmenides, you must not place too much weight on such things.
+:::(Rebuttal: You are making a circular argument.)
+:::'''(Trailblazer):''' I have to see a circular object to obtain the concept of a "circle." "Icatus" is the same. However, you are now saying that "Icatus" itself defines the cities of Icatus that we discover for ourselves.
+:::'''(Trailblazer):''' Are you not confusing cause and effect and creating an endless loop of inference?
+:::'''Parmenides:''' Wise one, it seems that you still have not grasped my point. The concept of a "circle" was in our minds from the very beginning. Otherwise, how do we explain our ability to imagine a perfect circle despite never having seen one?
+:::'''Parmenides:''' Knowledge of "circles" existed before real objects that are round. "Icatus" is the same.
+:::'''Parmenides:''' Let us leave the argument here for now. You have successfully rebuked my arguments twice in a row now, wise one. I have no choice but to admit that you are a great debater. I hope that you will continue to share your perspectives with us in the future.
+:::{{tx}}
+::{{DIcon|Arrow}} (Rebuttal: You are making a circular argument.)
+::;(Return to previous option selection)
+:{{DIcon|Arrow}} (Question: Your minor premise is flawed.)
+::'''(Trailblazer):''' Do we truly have knowledge of "Icatus"? A child that has never been educated in mathematics can easily identify a circle, and accurately explain that the "Dawn Device" is larger than a vehicle cover.
+::'''(Trailblazer):''' Are you saying that the knowledge of a mathematician is equal to the knowledge of such children? If that is in fact the case, then the study of rhetoric also does not exist. People can learn everything they need with regard to debate at their local market.
+::'''Zeno:''' Hah! Your words go right for the throat, wise one! Parmenides, you are in danger of destroying your own profession!
+::(Question: The conclusion is flawed.)
+::'''(Trailblazer):''' Of course "Icatus" does not exist. Your very conclusion is incorrect.
+::'''Parmenides:''' And for what reason? I fear that circumventing the process of deduction and directly refuting my conclusion do not, in fact, constitute a rebuttal.
+::'''Parmenides:''' I knew that it would not be so simple as just presenting my deduction without justification. However, your rebuttal just now has presented me with a new line of thought, wise one from beyond.
+::'''Parmenides:''' Mathematics is the most simple and beautiful of studies. Its innate truths will never change. Even if there comes a day when there is no such thing as a circular object in existence, the concept of a "circle" will still exist.
+::'''Parmenides:''' "Icatus" is much the same. It cannot be seen nor touched. It is only recognized through our rational cognition, which regulates all the cities of Icatus that we find. However, it does in fact exist somewhere, and it will never disappear.
+::'''Parmenides:''' If we deny the existence of "Icatus," we overturn all knowledge of mathematics. This is something that you must consider carefully, wise one.
+::{{DIcon|Arrow}} (Rebuttal: You are confusing separate concepts.)
+:::'''(Trailblazer):''' You cannot equate these two concepts so simply. The truths of mathematics would still stand to reason in a world where humans never existed, but what of Icatus? If it weren't for its original builders, the city would never have existed in the first place.
+:::'''(Trailblazer):''' Mathematics explains absolute and certain truth. If all the warriors of Castrum Kremnos were to suddenly follow Mnestia, a circle would still be a circle. It would not change shape. However, the existence of "Icatus" absolutely relies on real history.
+:::'''(Trailblazer):''' If your ancestors had received divine inspiration and changed the name of the city, "Icatus" would not exist. How can you say that this concept is comparable to the truths of mathematics?
+:::'''Zeno:''' Even if we take a step back and accept that we do in fact have knowledge of "Icatus," how can we say that this knowledge is similar to the absolute knowledge of mathematics? Parmenides, this example is not a fitting comparison.
+:::(Rebuttal: You are creating a fictional entity.)
+:::'''(Trailblazer):''' If "Icatus" truly exists, do "Okhema" and "Castrum Kremnos" also truly exist as well? What about "Grove of Epiphany" and "Aedes Elysiae"?
+:::'''(Trailblazer):''' What if there were a great bard that created a fictional city in their songs and used their fame to convince everyone that it really existed, and it was just destroyed long ago?
+:::'''(Trailblazer):''' Does this fictional city then become the same kind of "concept"? After all, according to your argument, it is not whether one can locate Icatus that matters. To you, it is the concept of the city that you have in your mind that is more credible and true.
+:::'''(Trailblazer):''' But who can ensure that our thoughts and beliefs are not simply just a trick played on us by Zagreus?
+:::'''Zeno:''' Oronyx holds power over our memories and is completely capable of fabricating our past. Parmenides, you must not place too much weight on such things.
+:::(Rebuttal: You are making a circular argument.)
+:::'''(Trailblazer):''' I have to see a circular object to obtain the concept of a "circle." "Icatus" is the same. However, you are now saying that "Icatus" itself defines the cities of Icatus that we discover for ourselves.
+:::'''(Trailblazer):''' Are you not confusing cause and effect and creating an endless loop of inference?
+:::'''Parmenides:''' Wise one, it seems that you still have not grasped my point. The concept of a "circle" was in our minds from the very beginning. Otherwise, how do we explain our ability to imagine a perfect circle despite never having seen one?
+:::'''Parmenides:''' Knowledge of "circles" existed before real objects that are round. "Icatus" is the same.
+:::'''Parmenides:''' Let us leave the argument here for now. You have successfully rebuked my arguments twice in a row now, wise one. I have no choice but to admit that you are a great debater. I hope that you will continue to share your perspectives with us in the future.
+:::{{tx}}
+::{{DIcon|Arrow}} (Rebuttal: You are creating a fictional entity.)
+:::'''(Trailblazer):''' If "Icatus" truly exists, do "Okhema" and "Castrum Kremnos" also truly exist as well? What about "Grove of Epiphany" and "Aedes Elysiae"?
+:::'''(Trailblazer):''' What if there were a great bard that created a fictional city in their songs and used their fame to convince everyone that it really existed, and it was just destroyed long ago?
+:::'''(Trailblazer):''' Does this fictional city then become the same kind of "concept"? After all, according to your argument, it is not whether one can locate Icatus that matters. To you, it is the concept of the city that you have in your mind that is more credible and true.
+:::'''(Trailblazer):''' But who can ensure that our thoughts and beliefs are not simply just a trick played on us by Zagreus?
+:::'''Zeno:''' Oronyx holds power over our memories and is completely capable of fabricating our past. Parmenides, you must not place too much weight on such things.
+:::(Rebuttal: You are making a circular argument.)
+:::'''(Trailblazer):''' I have to see a circular object to obtain the concept of a "circle." "Icatus" is the same. However, you are now saying that "Icatus" itself defines the cities of Icatus that we discover for ourselves.
+:::'''(Trailblazer):''' Are you not confusing cause and effect and creating an endless loop of inference?
+:::'''Parmenides:''' Wise one, it seems that you still have not grasped my point. The concept of a "circle" was in our minds from the very beginning. Otherwise, how do we explain our ability to imagine a perfect circle despite never having seen one?
+:::'''Parmenides:''' Knowledge of "circles" existed before real objects that are round. "Icatus" is the same.
+:::'''Parmenides:''' Let us leave the argument here for now. You have successfully rebuked my arguments twice in a row now, wise one. I have no choice but to admit that you are a great debater. I hope that you will continue to share your perspectives with us in the future.
+:::{{tx}}
+::{{DIcon|Arrow}} (Rebuttal: You are making a circular argument.)
+::;(Return to previous option selection)
+:{{DIcon|Arrow}} (Question: The conclusion is flawed.)
+:;(Return to previous option selection)
+
+;(Talk to Parmenides)
+:'''(Trailblazer):''' I agree with Parmenides.
+:'''Zeno:''' Hah, I knew that you would favor his argument. If Okhema were to publicly doubt the truth of Icatus' existence, it would be certain to incite outrage. I do not mind, however. I am willing to defend my theory.
+:'''Zeno:''' Listen. Icatus cannot be known through our senses, and we lack any method of observing it. It is no more than a lie created by the imagination of mankind. If there is no real existing evidence, how can you prove its existence?
+:{{DIcon|Arrow}} (Question: Your theory is flawed.)
+::'''(Trailblazer):''' If we cannot detect something through our senses, does that absolutely deny its existence? If a blind person cannot see your face and a deaf person cannot hear your words, can we then infer that you do not actually exist?
+::'''(Trailblazer):''' If there were another city on the other side of Amphoreus that had never had contact with Okhema, then according to your logic, the people of this city would disappear without a trace.
+::'''Parmenides:''' Sophistry is the enemy of both curiosity and the spirit of exploration. If we limited knowledge to what we can sense, we would never have been able to set foot outside Okhema.
+::(Question: Your means of refutation is flawed.)
+::'''(Trailblazer):''' Putting the facts aside, your method of proof itself is flawed. If you wish to prove the existence of something, you only need a single piece of evidence. Even if that evidence is not presently available, you cannot deny that it could appear at some point in the future.
+::'''(Trailblazer):''' However, if you wish to prove that something does not exist, you have to fundamentally deny the possibility &mdash; Indicate that there is no possible way for us to ever find evidence of its existence, whether in the present or the future. Therefore, this does not equate to non-existence on a factual level. It equates to conceptual impossibility.
+::'''(Trailblazer):''' Conceptual impossibility cannot be deduced through reality.
+::'''Parmenides:''' If there is a lack of evidence, the only possible deduction is that the proposition cannot be verified, but it also cannot be falsified. You should head back for more logic classes with your teacher.
+::(Theory: "Icatus" does actually exist.)
+::'''(Trailblazer):''' Of course "Icatus" exists. The city's location being marked on maps, bards singing of stories from the city, and countless refugees coming to Okhema all prove its existence.
+::'''Parmenides:''' That's right. I am one of those refugees myself.
+::'''Zeno:''' Hah. So a philosophical conclusion is proven simply by the number of people that believe it? If that were the case, then the citizens' assembly would be the most intelligent organization on earth... They would always be correct.
+::'''Zeno:''' These remarks of yours require further reflection. Why not think about this a little more?
+::'''Zeno:''' Not bad. You excel in the art of debate &mdash; as expected, wise one from outlands. You have successfully grasped the weaknesses within my assertions. However, you have not completely refuted my argument. Allow me to continue my point.
+::'''Zeno:''' If "Icatus" truly exists, then allow me to ask you... In what form does it exist?
+::'''Zeno:''' If it exists in time, then it is in a state of flow. Even the Titans will descend into madness and Nikador will fall with time. How can anything in time exist forever?
+::'''Zeno:''' If it exists in space, then it must have a physical form. Is it circular? Square? Is it the same shape as Icatus is in currently? Or is it another obscure shape that cannot be measured?
+::'''Zeno:''' If it exists outside of space-time, then I truly cannot think of what method I can use to gain knowledge of it. Observation relies on light, sound requires time, and words make use of shape... How can that which exists outside of space-time ever be known?
+::'''Zeno:''' Wise one from beyond, please enlighten me...
+::{{DIcon|Arrow}} (Theory: We learn through our cognition.)
+::;(Return to previous option selection)
+::{{DIcon|Arrow}} (Theory: We learn through thinking.)
+::;(Return to previous option selection)
+::{{DIcon|Arrow}} (Question: Your premise is flawed.)
+:::'''(Trailblazer):''' Of course some objects exist outside of time. When we measure time, we can count from one to ten precisely because the earlier numbers still exist by the time I have reached the later numbers. I must count the earlier numbers to reach the latter.
+:::'''(Trailblazer):''' There are also objects that exist outside of space. When we measure space, we have to measure the distance between objects and compare their locations in space. We can only say that something is close to something else, or that something is beside something else.
+:::'''(Trailblazer):''' Time cannot be measured without numbers preceding it. Space cannot be measured without an object to serve as a reference. So, does that mean that space-time is a giant box that encapsulates all things, or is it something that only has meaning by attaching itself to something else?
+:::'''(Trailblazer):''' No matter which explanation you choose, space-time cannot serve as a reason to deny the existence of something.
+:::'''Zeno:''' Wonderful! Your ability to debate is truly brilliant! If you were to join the citizens' assembly, I am certain that you could become an ambassador of justice!
+:::{{tx}}
+:{{DIcon|Arrow}} (Question: Your means of refutation is flawed.)
+::'''(Trailblazer):''' Putting the facts aside, your method of proof itself is flawed. If you wish to prove the existence of something, you only need a single piece of evidence. Even if that evidence is not presently available, you cannot deny that it could appear at some point in the future.
+::'''(Trailblazer):''' However, if you wish to prove that something does not exist, you have to fundamentally deny the possibility &mdash; Indicate that there is no possible way for us to ever find evidence of its existence, whether in the present or the future. Therefore, this does not equate to non-existence on a factual level. It equates to conceptual impossibility.
+::'''(Trailblazer):''' Conceptual impossibility cannot be deduced through reality.
+::'''Parmenides:''' If there is a lack of evidence, the only possible deduction is that the proposition cannot be verified, but it also cannot be falsified. You should head back for more logic classes with your teacher.
+::(Theory: "Icatus" does actually exist.)
+::'''(Trailblazer):''' Of course "Icatus" exists. The city's location being marked on maps, bards singing of stories from the city, and countless refugees coming to Okhema all prove its existence.
+::'''Parmenides:''' That's right. I am one of those refugees myself.
+::'''Zeno:''' Hah. So a philosophical conclusion is proven simply by the number of people that believe it? If that were the case, then the citizens' assembly would be the most intelligent organization on earth... They would always be correct.
+::'''Zeno:''' These remarks of yours require further reflection. Why not think about this a little more?
+::'''Zeno:''' Not bad. You excel in the art of debate &mdash; as expected, wise one from outlands. You have successfully grasped the weaknesses within my assertions. However, you have not completely refuted my argument. Allow me to continue my point.
+::'''Zeno:''' If "Icatus" truly exists, then allow me to ask you... In what form does it exist?
+::'''Zeno:''' If it exists in time, then it is in a state of flow. Even the Titans will descend into madness and Nikador will fall with time. How can anything in time exist forever?
+::'''Zeno:''' If it exists in space, then it must have a physical form. Is it circular? Square? Is it the same shape as Icatus is in currently? Or is it another obscure shape that cannot be measured?
+::'''Zeno:''' If it exists outside of space-time, then I truly cannot think of what method I can use to gain knowledge of it. Observation relies on light, sound requires time, and words make use of shape... How can that which exists outside of space-time ever be known?
+::'''Zeno:''' Wise one from beyond, please enlighten me...
+::{{DIcon|Arrow}} (Theory: We learn through our cognition.)
+::;(Return to previous option selection)
+::{{DIcon|Arrow}} (Theory: We learn through thinking.)
+::;(Return to previous option selection)
+::{{DIcon|Arrow}} (Question: Your premise is flawed.)
+:::'''(Trailblazer):''' Of course some objects exist outside of time. When we measure time, we can count from one to ten precisely because the earlier numbers still exist by the time I have reached the later numbers. I must count the earlier numbers to reach the latter.
+:::'''(Trailblazer):''' There are also objects that exist outside of space. When we measure space, we have to measure the distance between objects and compare their locations in space. We can only say that something is close to something else, or that something is beside something else.
+:::'''(Trailblazer):''' Time cannot be measured without numbers preceding it. Space cannot be measured without an object to serve as a reference. So, does that mean that space-time is a giant box that encapsulates all things, or is it something that only has meaning by attaching itself to something else?
+:::'''(Trailblazer):''' No matter which explanation you choose, space-time cannot serve as a reason to deny the existence of something.
+:::'''Zeno:''' Wonderful! Your ability to debate is truly brilliant! If you were to join the citizens' assembly, I am certain that you could become an ambassador of justice!
+:::{{tx}}
+:{{DIcon|Arrow}} (Theory: "Icatus" does actually exist.)
+:;(Return to previous option selection)
 {{Dialogue End}}
 
 ===(Decision) Zeno: "Icatus" does not exist{{subst:void|<!--500040405-->}}===
 {{Dialogue Start}}
-:{{tx}}
 {{Dialogue End}}
 
 ===(Decision) Parmenides: "Icatus" does exist{{subst:void|<!--500040406-->}}===
 {{Dialogue Start}}
-:{{tx}}
 {{Dialogue End}}
 
 ===Debate on the side of one perspective{{subst:void|<!--500040407-->}}===
 {{Dialogue Start}}
-:{{tx}}
 {{Dialogue End}}
 
 ==Other Languages==

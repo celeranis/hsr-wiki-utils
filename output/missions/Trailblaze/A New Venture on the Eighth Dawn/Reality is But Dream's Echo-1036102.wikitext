@@ -43,35 +43,162 @@ PageTitle=#Reality is But Dream's Echo#
 {{Mission Description|type=trailblaze|location=Golden Hour|Survivors are often called "unfortunate." It was because she lost her life due to the Lord Ravager that the genius was able to reverse her death... The past is in the past. Perhaps it is best to look towards the future.<br />Take a rest and discuss the plan from here with the others.}}
 {{Dialogue Start}}
 :{{tx}}
+<pre>{
+	"$type": "RPG.GameCore.PerformanceEndSeq",
+	"BeforeCases": [
+		{
+			"$type": "RPG.GameCore.SwitchCharacterAnchorV2",
+			"SwitchCharacterAnchorConfig": {
+				"IsLocalPlayer": true,
+				"CharacterUniqueName": "LocalPlayer",
+				"AreaName": {
+					"Value": "LevelArea_P10301_F10301001_G573"
+				},
+				"AnchorName": {
+					"Value": "Anchor1"
+				}
+			}
+		}
+	]
+}</pre>
 {{Dialogue End}}
 
 ===Discuss the next steps with the others{{subst:void|<!--103610202-->}}===
 {{Mission Description|type=trailblaze|location=Golden Hour|update|You are about to return to the Xianzhou, but you still haven't decided on a souvenir for your old friends. You have decided to give it your all and get something that will make Miss Tingyun shine in the eyes of others.<br />Go to Oti Mall with Tingyun to buy gifts.}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Tingyun)
+:{{A|VO chapter3 44 mar7th 104.ogg}} '''March 7th:''' Shall we keep going, then?
+:{{DIcon|Arrow}} Where are we going?
+:{{DIcon|Arrow}} What are we doing here again?
+:{{A|VO chapter3 44 mar7th 105.ogg}} '''March 7th:''' Did you forget already? Miss Tingyun is going back to the Alliance, so we're here to help her pick out souvenirs.
+:{{A|VO chapter3 44 tingyun 102.ogg}} '''Tingyun:''' I'm not too familiar with this planet. I'm worried an unscrupulous cutthroat merchant will try to take advantage of me. Luckily, the people I want to buy these gifts for are friends you already know on the Xianzhou, so I'll be counting on both your stakeholder intuitions for recommendations!
+:{{A|VO chapter3 44 mar7th 106.ogg}} '''March 7th:''' As if a merchant could seriously take advantage of you...
+
+;(Talk to Sunday)
+:{{A|VO chapter3 44 welt 110.ogg}} '''Welt:''' Where are you planning to go next?
+:{{A|VO chapter3 44 sunday 105.ogg}} '''Sunday:''' Could you give me some time to think about it?
 {{Dialogue End}}
 
 ===Go to Oti Mall{{subst:void|<!--103610204-->}}===
 {{Dialogue Start}}
-:{{tx}}
+:{{A|VO chapter3 44 tingyun 103.ogg}} '''Tingyun:''' I already picked up a few gifts earlier, so that means there's only three more left to go. But we've already lost a lot of time, so we'd better not drag our feet...
 {{Dialogue End}}
 
 ===Head somewhere quiet{{subst:void|<!--103610205-->}}===
 {{Mission Description|type=trailblaze|location=Golden Hour|update|Though you have spent a great time together, it seems Tingyun has something to discuss with you as farewell creeps near.<br />Go for a good old walk-and-talk.}}
 {{Dialogue Start}}
+
+;(Talk to Tingyun)
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{A|VO chapter3 44 mar7th 114.ogg}} '''March 7th:''' Miss Tingyun, what's this about?
+:{{A|VO chapter3 44 tingyun 121.ogg}} '''Tingyun:''' You've looked out for me during our travels together these past few days. I'm truly grateful and can't thank you enough.
+:{{A|VO chapter3 44 tingyun 122.ogg}} '''Tingyun:''' But there are some things I find difficult to forget. I feel it's only right that I tell you what's on my mind before we part ways.
+:{{A|VO chapter3 44 tingyun 123.ogg}} '''Tingyun:''' Do you two still remember what it was like when you first saw me?
+:{{A|VO chapter3 44 mar7th 115 m.ogg}} {{A|VO chapter3 44 mar7th 115 f.ogg}} '''March 7th:''' How could we forget? (Trailblazer) was so shocked, {{MC|m=he|f=she}} was frozen in place when {{MC|m=he|f=she}} shouted...
+:{{DIcon|Arrow}} Tingyun? How?
+:{{DIcon|Arrow}} Phantylia? How...
+:{{DIcon|Arrow}} Sparkle? How!
+:{{A|VO chapter3 44 tingyun 124.ogg}} '''Tingyun:''' Exactly.
+:{{A|VO chapter3 44 tingyun 125.ogg}} '''Tingyun:''' And that's precisely why I haven't been able to shake off this strange feeling in the days since I started traveling with you.
+:{{A|VO chapter3 44 tingyun 126.ogg}} '''Tingyun:''' When I asked for your names, I couldn't help but think that this "first encounter" was actually a "long-awaited reunion" for you.
+:{{A|VO chapter3 44 tingyun 127.ogg}} '''Tingyun:''' I've heard about what happened to you on the Xianzhou, and I've got to admit, that Phantylia's disguise was so perfect, it was like another me tricking everyone.
+:{{A|VO chapter3 44 mar7th 116.ogg}} '''March 7th:''' Yeah, we couldn't even tell when you were replaced by Phantylia.
+:{{A|VO chapter3 44 mar7th 117.ogg}} '''March 7th:''' I figured it happened when we were after Kafka. You vanished for a while, I thought you must have come back as a double.
+:{{A|VO chapter3 44 tingyun 128.ogg}} '''Tingyun:''' But it was much earlier than that.
+:{{A|VO chapter3 44 tingyun 130.ogg}} '''Tingyun:''' That thought has filled me with sorrow, as if a piece of my life had been stolen away, and I had no part in it.
+:{{A|VO chapter3 44 tingyun 131.ogg}} '''Tingyun:''' That's what I've been puzzled about too. I never actually saw how Phantylia managed to disguise herself as me.
+:{{A|VO chapter3 44 tingyun 132.ogg}} '''Tingyun:''' What was your impression of that "Tingyun," if you recall?
+:{{DIcon|Arrow}} A bit mysterious.
+::{{A|VO chapter3 44 tingyun 133.ogg}} '''Tingyun:''' That's just the nature of the foxians. It's widely known that mystery is the key to our allure.
+::A bit dangerous.
+::{{A|VO chapter3 44 tingyun 134.ogg}} '''Tingyun:''' But I'm not very strong physically. Are you referring to my quick wits?
+::A bit calculating.
+:{{DIcon|Arrow}} A bit dangerous.
+::{{A|VO chapter3 44 tingyun 134.ogg}} '''Tingyun:''' But I'm not very strong physically. Are you referring to my quick wits?
+::A bit calculating.
+:{{DIcon|Arrow}} A bit calculating.
+:{{A|VO chapter3 44 tingyun 135.ogg}} '''Tingyun:''' That part is true. I'm always calculating when it comes to business, but never with people.
+:{{A|VO chapter3 44 tingyun 136.ogg}} '''Tingyun:''' So, what did she seem like to you?
+:{{DIcon|Arrow}} A shrewd merchant.
+::{{A|VO chapter3 44 tingyun 137.ogg}} '''Tingyun:''' I'll just assume that's a compliment! Maybe next time, you could just say "silver-tongued."
+::A potential Emanator of the Destruction.
+:{{DIcon|Arrow}} A potential Emanator of the Destruction.
+:{{A|VO chapter3 44 tingyun 138.ogg}} '''Tingyun:''' Is that... a compliment? I'm not sure if I'm deserving of that title.
+:{{A|VO chapter3 44 tingyun 139.ogg}} '''Tingyun:''' Was there anything particularly memorable?
+:{{DIcon|Arrow}} High EQ.
+::{{A|VO chapter3 44 mar7th 118.ogg}} '''March 7th:''' That's true! I'd love to learn how you do it!
+::Extremely flexible.
+::{{A|VO chapter3 44 mar7th 119.ogg}} '''March 7th:''' Now's not the time for those kinds of jokes...
+::March 7th said you were bossy.
+:{{DIcon|Arrow}} Extremely flexible.
+::{{A|VO chapter3 44 mar7th 119.ogg}} '''March 7th:''' Now's not the time for those kinds of jokes...
+::March 7th said you were bossy.
+:{{DIcon|Arrow}} March 7th said you were bossy.
+:{{A|VO chapter3 44 mar7th 120.ogg}} '''March 7th:''' Hey! No tattling!
+:{{A|VO chapter3 44 tingyun 140.ogg}} '''Tingyun:''' Now, the final question.
+:{{A|VO chapter3 44 tingyun 141.ogg}} '''Tingyun:''' In your eyes, am I just like the Tingyun you remember?
+:{{DIcon|Arrow}} Yes.
+:{{DIcon|Arrow}} No.
+:{{DIcon|Arrow}} That's not important.
+:{{A|VO chapter3 44 mar7th 121.ogg}} '''March 7th:''' Wait &mdash; don't you find that question a bit weird? You're the real Tingyun. Why compare yourself to an imposter?
+:{{A|VO chapter3 44 tingyun 142.ogg}} '''Tingyun:''' Miss March, you might have the wrong idea. I'm just feeling a mix of regret and relief.
+:{{A|VO chapter3 44 mar7th 122.ogg}} '''March 7th:''' ...Huh?
+:{{A|VO chapter3 44 tingyun 143.ogg}} '''Tingyun:''' As a merchant, staying well-informed is crucial. It's only natural for me to stay updated on the events of the Luofu before I return.
+:{{A|VO chapter3 44 tingyun 144.ogg}} '''Tingyun:''' If I had rushed in and out back then, I wouldn't have been much help. Instead, I would've postponed the trip and sought assistance from allies, but in that case...
+:{{A|VO chapter3 44 mar7th 123.ogg}} '''March 7th:''' We wouldn't have crossed paths.
+:{{A|VO chapter3 44 tingyun 145.ogg}} '''Tingyun:''' Exactly.
+:{{A|VO chapter3 44 tingyun 146.ogg}} '''Tingyun:''' Based on your description, that Lord Ravager was indeed cunning. Her demeanor mirrored mine so closely that it felt like she was living my life for a few days rather than merely disguising herself.
+:{{A|VO chapter3 44 tingyun 147.ogg}} '''Tingyun:''' I regret missing out on your Xianzhou journey, but everything that unfolded afterward, aside from the scheming, played out exactly as if I'd been there. This leads me to consider another possibility...
+:{{A|VO chapter3 44 tingyun 148.ogg}} '''Tingyun:''' Phantylia had stolen a piece of my life, and a foxian always gets even. I will not be taken advantage of. I must take something back from her as well.
+:{{A|VO chapter3 44 tingyun 149.ogg}} '''Tingyun:''' But after thinking it over, the only thing that could be considered equal value... is the bond I have with all of you.
+:{{A|VO chapter3 44 tingyun 150.ogg}} '''Tingyun:''' That thought has brought me great comfort, and now I know how to speak to you properly.
+:{{A|VO chapter3 44 tingyun 151.ogg}} '''Tingyun:''' We've never even met before, yet here you are, offering your help, just as before. I should've treated you with respect, but fear of Phantylia made me act like somebody else.
+:{{A|VO chapter3 44 tingyun 152.ogg}} '''Tingyun:''' And now, I will reclaim everything I have lost. And it should begin with a proper acknowledgment&mdash;
+:{{A|VO chapter3 44 tingyun 153.ogg}} '''Tingyun:''' Dear benefactors, I extend my heartfelt gratitude to you.
+:{{A|VO chapter3 44 mar7th 124.ogg}} '''March 7th:''' ...
+:{{DIcon|Arrow}} You're welcome.
+:{{DIcon|Arrow}} I'm still a bit confused.
+:{{DIcon|Arrow}} It's time to rethink how you see yourself.
+:{{A|VO chapter3 44 tingyun 154.ogg}} '''Tingyun:''' Looks like we're off to a good start! Moving forward, I'll definitely be trying more things like this from now on.
 :{{tx}}
+
+;(Upon reaching the destination)
+:{{A|VO chapter3 44 tingyun 120.ogg}} '''Tingyun:''' This is a good spot.
 {{Dialogue End}}
 
 ===Investigate the dream bubble at Dr. Edward's{{subst:void|<!--103610206-->}}===
 {{Mission Description|type=trailblaze|location=Golden Hour|update|How can a dream be a gift? To some people, those are the most precious things they have.<br />Go to Dr. Edward's and take a look at the dream bubble that Tingyun gifted you.}}
 {{Dialogue Start}}
+
+;(Obtain {{Item|Tingyun's Dream Bubble|20|x=1}})
+
+;(Talk to Dr. Edward)
 :{{tx}}
 {{Dialogue End}}
 
 ===Go to the Radiant Feldspar{{subst:void|<!--103610208-->}}===
 {{Mission Description|type=trailblaze|location=(The Radiant Feldspar/The Trailblaze's Stern/The Tatalov/The Soaring Clock Hand)|update|Though you wish it wasn't true, the time has come to bid farewell to Miss Tingyun... This is not a reunion, but maybe that is not such a bad thing. When a reunion is so perfect, it gives you something to look forward to in the future.<br />Go to Radiant Feldspar and meet up with Himeko.}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Dr. Edward)
+<pre>{
+	"$type": "RPG.GameCore.PerformanceEndSeq",
+	"Cases": [
+		{
+			"Case": 1,
+			"OnSuccess": [
+				{
+					"$type": "RPG.GameCore.ClientFinishMission",
+					"SubmissionID": 103610207
+				}
+			]
+		}
+	]
+}</pre>
+:{{A|VO chapter3 44 mar7th 131.ogg}} '''March 7th:''' I can't believe it's time for Miss Tingyun to leave. I'm not ready to say goodbye just yet.
 {{Dialogue End}}
 
 ==Other Languages==

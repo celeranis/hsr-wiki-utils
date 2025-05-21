@@ -73,169 +73,1578 @@ Mission Kremnos, Cleanse Thy Rusted Blood (II) Caelus.png|Caelus
 ===Go to the place in Castrum Kremnos that serves as the link to the past{{subst:void|<!--104010982-->}}===
 {{Mission Description|type=trailblaze|location="Strife Ruins" Castrum Kremnos|update|After returning from the Abyss, we split into two groups. Phainon and I headed to assist the battle-worn Mydei, while (Trailblazer) planned to harness Oronyx's power to gather the memory fragments. Once this was done, we would devise a plan to journey into Castrum Kremnos' past, where we would join forces with Castorice to destroy Nikador's immortal body.}}
 {{Dialogue Start}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
 :{{tx}}
+:{{A|VO chapter4 8 castorice 130.ogg}} '''Castorice:''' The battle is still raging... I can feel the intensity even from here.
+:{{DIcon|Arrow}} I wish I could go and help them...
+::{{A|VO chapter4 8 castorice 131 m.ogg}} {{A|VO chapter4 8 castorice 131 f.ogg}} '''Castorice:''' I understand how you feel, {{MC|m=Mr.|f=Miss}} (Trailblazer). But right now, we must head to another battlefield.
+::We have our own battle to face.
+::{{A|VO chapter4 8 castorice 132.ogg}} '''Castorice:''' Exactly. We'll only be able to help them once we've seen our own mission through.
+::At least we know they're still alive.
+:{{DIcon|Arrow}} We have our own battle to face.
+::{{A|VO chapter4 8 castorice 132.ogg}} '''Castorice:''' Exactly. We'll only be able to help them once we've seen our own mission through.
+::At least we know they're still alive.
+:{{DIcon|Arrow}} At least we know they're still alive.
+:{{A|VO chapter4 8 castorice 133.ogg}} '''Castorice:''' We'll only be able to help them once we've seen our own mission through.
+:{{A|VO chapter4 8 mem 127.ogg}} '''Mem:''' Here, memory, complete. Give me, fragments.
+:{{tx}}
+
+;(Upon reaching the destination)
+:{{A|VO chapter4 8 castorice 127.ogg}} '''Castorice:''' ...How can we go back to the past?
+:{{A|VO chapter4 8 mem 125.ogg}} '''Mem:''' Come, follow!
+:{{A|VO chapter4 8 mem 126.ogg}} '''Mem:''' Memory... Scent, strong!
+
+;(Upon reaching the destination)
+<pre>{
+	"$type": "RPG.GameCore.TriggerSound",
+	"SoundName": {
+		"Value": "Ev_sfx_storyd_300dev_farbossfight"
+	},
+	"EmitterType": "LocalPlayer"
+}</pre>
+:{{A|VO chapter4 8 castorice 128.ogg}} '''Castorice:''' That battle cry... Is that Lord Mydei?
+
+;(Upon reaching the destination)
+<pre>{
+	"$type": "RPG.GameCore.TriggerSound",
+	"SoundName": {
+		"Value": "Ev_sfx_storyd_300dev_farbossfight"
+	},
+	"EmitterType": "LocalPlayer"
+}</pre>
+:{{A|VO chapter4 8 castorice 129.ogg}} '''Castorice:''' {{Rubi|Nikador|Strife Titan}}... They're still locked in battle.
 {{Dialogue End}}
 
 ===Hand over the memory fragments to Mem{{subst:void|<!--104010965-->}}===
 {{Dialogue Start}}
+
+;(Talk to Mem)
 :{{tx}}
+<pre>{
+	"$type": "RPG.GameCore.AddFinishMissionData_ConsumeItem",
+	"SubmissionID": 104010965,
+	"SimpleTalk": {},
+	"OnSubmitConfirm": [
+		{
+			"$type": "RPG.GameCore.PlayTimeline",
+			"TimelineName": "Story/Discussion/Mission/1040108/DS10401081102.playable",
+			"Type": "Discussion",
+			"Parameters": []
+		},
+		{
+			"$type": "RPG.GameCore.SetPerformanceResult",
+			"Value": 1
+		},
+		{
+			"$type": "RPG.GameCore.EndPerformance"
+		}
+	],
+	"OnSubmitCancel": [
+		{
+			"$type": "RPG.GameCore.SetPerformanceResult"
+		},
+		{
+			"$type": "RPG.GameCore.EndPerformance"
+		}
+	]
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.PerformanceEndSeq",
+	"Cases": [
+		{
+			"Case": 1,
+			"OnSuccess": [
+				{
+					"$type": "RPG.GameCore.ClientFinishMission",
+					"SubmissionID": 104010965
+				}
+			]
+		}
+	]
+}</pre>
 {{Dialogue End}}
 
 ===Walk through the door to the past in Castrum Kremnos{{subst:void|<!--104010966-->}}===
 {{Dialogue Start}}
-:{{tx}}
+
 {{Dialogue End}}
 
 ===Head to Castrum Kremnos of yesteryear{{subst:void|<!--104010901-->}}===
 {{Mission Description|type=trailblaze|location="Bloodbathed Battlefront" Castrum Kremnos|update|(Trailblazer) unlocked the door to the past in Castrum Kremnos, stepping into the city's former days. It was the time of the Kremnos Festival, and Nikador had just begun to lose their mind. Castrum Kremnos was still prosperous and vibrant with life.}}
 {{Dialogue Start}}
+----
+:{{A|VO chapter4 8 castorice 136.ogg}} '''Castorice:''' Castrum Kremnos...
+:{{A|VO chapter4 8 castorice 137.ogg}} '''Castorice:''' So this is how it looked like before {{Rubi|Aquila|Sky Titan}} closed their eyes.
+:{{DIcon|Arrow}} Where should we start searching?
+::Where should we start searching?
+::What a magnificent sight.
+:{{DIcon|Arrow}} What a magnificent sight.
+:{{A|VO chapter4 8 castorice 138.ogg}} '''Castorice:''' The City of Warriors, its magnificence certainly lives up to its name.
+:{{A|VO chapter4 8 castorice 139.ogg}} '''Castorice:''' We should first figure out which era we've traveled back to.
+:{{A|VO chapter4 8 castorice 140.ogg}} '''Castorice:''' The memory fragments we gathered for Mem all point toward the final stage of the Chrysos War... We might be able to use that as a starting point for our deductions.
+:{{DIcon|Arrow}} But we can just ask around!
+::{{A|VO chapter4 8 castorice 141.ogg}} '''Castorice:''' ...We may draw suspicion this way. Castrum Kremnos is no leisure spot for tourists. We shouldn't draw unnecessary attention to ourselves.
+::Ooh, so this is what it feels like to be a time traveler?
+:{{DIcon|Arrow}} Ooh, so this is what it feels like to be a time traveler?
+:{{A|VO chapter4 8 castorice 142.ogg}} '''Castorice:''' It's... quite intriguing, indeed. But Castrum Kremnos is no leisure spot for tourists. We shouldn't draw unnecessary attention to ourselves.
+:{{A|VO chapter4 8 castorice 143.ogg}} '''Castorice:''' Let's start with the city's surroundings. We might be able to gather some clues by listening and observing.
+:{{tx}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:'''Silent Gladiator:''' ...
+:{{A|VO chapter4 8 castorice 146.ogg}} '''Castorice:''' ...Hello?
+:'''Silent Gladiator:''' ...
+:{{DIcon|Arrow}} Anyone home?
+:{{DIcon|Arrow}} Heellooo!
+:{{DIcon|Arrow}} Is he hard of hearing?
+:{{A|VO chapter4 8 genaiwusi 103.ogg}} '''Silent Gladiator:''' ...What is it?
+:{{tx}}
+:<!--1-second delay-->
+:'''Silent Gladiator:''' ...
+:{{A|VO chapter4 8 castorice 146.ogg}} '''Castorice:''' ...Hello?
+:'''Silent Gladiator:''' ...
+:Anyone home?
+:Heellooo!
+:Is he hard of hearing?
+:{{A|VO chapter4 8 genaiwusi 103.ogg}} '''Silent Gladiator:''' ...What is it?
+:{{A|VO chapter4 8 castorice 147.ogg}} '''Castorice:''' ...May I ask if you're here to join the competition?
+:{{A|VO chapter4 8 genaiwusi 104.ogg}} '''Silent Gladiator:''' Competition...?
+:{{A|VO chapter4 8 genaiwusi 105.ogg}} '''Silent Gladiator:''' No... I have no interest in meaningless sports.
+:{{A|VO chapter4 8 castorice 148.ogg}} '''Castorice:''' So... you're here for {{Rubi|Nikador|Strife Titan}}'s festival?
+:{{A|VO chapter4 8 genaiwusi 106.ogg}} '''Silent Gladiator:''' ...
+:{{A|VO chapter4 8 genaiwusi 107.ogg}} '''Silent Gladiator:''' Utterly foolish...
+:{{A|VO chapter4 8 castorice 149.ogg}} '''Castorice:''' ...
+:{{DIcon|Arrow}} What a cranky guy...
+:{{A|VO chapter4 8 castorice 150.ogg}} '''Castorice:''' War has left its mark on many from this period, so please don't take it personally...
 :{{tx}}
 {{Dialogue End}}
 
 ===Time for a decisive battle with Nikador!{{subst:void|<!--104010920-->}}===
 {{Mission Description|type=trailblaze|location="Bloodbathed Battlefront" Castrum Kremnos|update|Gnaeus turns out to be a part of Nikador. Now aware of the agony of this world, he calmly merges with Nikador's long-decayed divine soul, fully completing Nikador. While that destroyed the god's immortality, it also means we're now face-to-face with a Titan at the peak of their power.}}
 {{Dialogue Start}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{tx}}
+:{{A|VO chapter4 8 castorice 290.ogg}} '''Castorice:''' Lord Gnaeus, are we almost there?
+:{{A|VO chapter4 8 genaiwusi 228.ogg}} '''Gnaeus:''' Yes... There is just one last thing to do.
+:{{A|VO chapter4 8 genaiwusi 229.ogg}} '''Gnaeus:''' No one knows when the black tide first appeared beyond the distant horizon, but when it slowly encroached upon Amphoreus' borders, {{Rubi|Nikador|Strife Titan}} was the first Titan to venture forth.
+:{{A|VO chapter4 8 genaiwusi 230.ogg}} '''Gnaeus:''' During the battle against the black tide, their sanity began to slip away... In their prime, the Titan could obliterate an entire archipelago with a single slash, yet they could not sever the root of this corruption.
+:{{A|VO chapter4 8 genaiwusi 231.ogg}} '''Gnaeus:''' They battled the black tide by sheer will alone, but ultimately succumbed to it. Before their divinity could be completely corrupted, they removed a part of it...
+:{{A|VO chapter4 8 castorice 291.ogg}} '''Castorice:''' Could it be...
+:{{A|VO chapter4 8 genaiwusi 232.ogg}} '''Gnaeus:''' The fragment of divinity that they stripped away &mdash; the fragment they wanted to preserve the most &mdash; was Reason.
+:{{A|VO chapter4 8 genaiwusi 233.ogg}} '''Gnaeus:''' The Titan believed that their Reason would someday respond to their calling, to return to their body... and fulfill their sacred mission.
+:{{DIcon|Arrow}} Are all these... versions of you from the past?
+:{{DIcon|Arrow}} You're... a part of Nikador?
+:{{A|VO chapter4 8 castorice 292.ogg}} '''Castorice:''' All of these... They're&mdash;
+:{{A|VO chapter4 8 genaiwusi 234.ogg}} '''Gnaeus:''' They represent countless failed endeavors. With your help, I can finally put an end to everything.
+:{{A|VO chapter4 8 castorice 293.ogg}} '''Castorice:''' Lord Gnaeus... What do you intend to do?
+:{{A|VO chapter4 8 genaiwusi 235.ogg}} '''Gnaeus:''' Courage, Honor, Tenacity, and Sacrifice... they're all versions of me. Hearing the murmurs of these soul fragments has led me to a conclusion.
+:{{A|VO chapter4 8 genaiwusi 236.ogg}} '''Gnaeus:''' {{Rubi|{{Color|keyword|nobold=1|Nikador's}}|{{Color|keyword|nobold=1|Strife Titan}}}} {{Color|keyword|nobold=1|soul is corrupted beyond the point of salvation.}}
+:{{DIcon|Arrow}} What can we do then?
+::{{A|VO chapter4 8 genaiwusi 237.ogg}} '''Gnaeus:''' There is only one option.
+::How do we stop them then?
+:{{DIcon|Arrow}} How do we stop them then?
+:{{A|VO chapter4 8 genaiwusi 238.ogg}} '''Gnaeus:''' There is only one way to do so.
+:{{A|VO chapter4 8 genaiwusi 239.ogg}} '''Gnaeus:''' The seal that binds their divinity is already broken. As long as we complete the soul-forging here, {{Rubi|Nikador|Strife Titan}} will be whole once more.
+:{{A|VO chapter4 8 genaiwusi 240.ogg}} '''Gnaeus:''' {{Color|keyword|nobold=1|You will go into battle with a Titan nearly at the zenith of their powers. And when that happens, the glory of slaying a god will also be presented before you.}}
+:{{A|VO chapter4 8 castorice 294.ogg}} '''Castorice:''' ...What about you, Lord Gnaeus?
+:{{A|VO chapter4 8 genaiwusi 241.ogg}} '''Gnaeus:''' I will return to where I came from and become a part of {{Rubi|Nikador|Strife Titan}}'s divinity once more.
+:{{A|VO chapter4 8 genaiwusi 242.ogg}} '''Gnaeus:''' In all likelihood, I will also be consumed by corruption. An inevitable course of action if we hope to end this madness.
+:{{A|VO chapter4 8 castorice 295.ogg}} '''Castorice:''' You are willing to... sacrifice yourself for a future you won't get to witness?
+:{{A|VO chapter4 8 genaiwusi 243.ogg}} '''Gnaeus:''' This is my purpose, my origin. I am no mortal and I do not fear death... Even so, will you still weep for me?
+:{{A|VO chapter4 8 castorice 296.ogg}} '''Castorice:''' All farewells in this world are sorrowful, Lord Gnaeus.
+:{{A|VO chapter4 8 genaiwusi 244.ogg}} '''Gnaeus:''' While we haven't known each other for long, I have learned much from you. In return, I'll teach you a lesson of mine before I go...
+:{{A|VO chapter4 8 genaiwusi 245.ogg}} '''Gnaeus:''' Do not detest your talent and do not abhor death. {{Color|keyword|nobold=1|Journeys and epics are only glorious and magnificent because all things eventually fade to dust.}}
+:{{A|VO chapter4 8 castorice 297.ogg}} '''Castorice:''' ...
+:{{A|VO chapter4 8 castorice 298.ogg}} '''Castorice:''' ...The embodiment of Strife telling me about the majesty of the world...? What an irony...
+:{{A|VO chapter4 8 genaiwusi 246.ogg}} '''Gnaeus:''' Civilizations only grow under strife. Humans instinctively loathe suffering, yet suffering is the only thing that teaches them to stand unyielding and tall...
+:{{DIcon|Arrow}} We can't put this off any longer.
+:{{DIcon|Arrow}} I will do as you wish.
+:{{DIcon|Arrow}} If this is meant to be... then I will fight you.
+:{{A|VO chapter4 8 genaiwusi 247 m.ogg}} {{A|VO chapter4 8 genaiwusi 247 f.ogg}} '''Gnaeus:''' {{MC|f=She|m=He}} knows what it truly means to go to battle. Perhaps {{MC|f=she|m=he}} can be your inspiration.
 :{{tx}}
 {{Dialogue End}}
 
 ===Examine the area surrounding the arena to confirm the era you're in{{subst:void|<!--104010903-->}}===
 {{Mission Description|type=trailblaze|location="Bloodbathed Battlefront" Castrum Kremnos|update|(Trailblazer) unlocked the door to the past in Castrum Kremnos, stepping into the city's former days. It was the time of the Kremnos Festival, and Nikador had just begun to lose their mind. Castrum Kremnos was still prosperous and vibrant with life.}}
 {{Dialogue Start}}
-:{{tx}}
+
+:{{DIcon|Loupe}} A Scroll Dropped by an Unknown Person
+----
+:{{A|VO chapter4 8 castorice 158.ogg}} '''Castorice:''' It's a scroll written in the common tongue. We should see what it's about.
+<pre>{
+	"$type": "RPG.GameCore.ShowReading",
+	"BookID": {
+		"FixedValue": {
+			"Value": 190747
+		}
+	}
+}</pre>
+:{{A|VO chapter4 8 castorice 159.ogg}} '''Castorice:''' Courage, Honor, Reason, Tenacity, Sacrifice...
+:{{A|VO chapter4 8 castorice 160.ogg}} '''Castorice:''' {{Rubi|Nikador|Strife Titan}} did live up to these values in their prime, but now...
+:{{A|VO chapter4 8 castorice 161.ogg}} '''Castorice:''' Kremnos seems to be hosting a festival, where its victor can go on to have an audience with the ruler and be bestowed with honor. It's just as Mr. Damionis described.
+:{{A|VO chapter4 8 castorice 162.ogg}} '''Castorice:''' If we can pose as participants, we might be able to get into the city...
+
+;(Talk to Weapon Merchant)
+:{{A|VO chapter4 8 wuqishangren 101.ogg}} '''Weapon Merchant:''' Finest weapons for sale! Come take a look! The sharpest blades in all of Kremnos!
+:{{A|VO chapter4 8 wuqishangren 102.ogg}} '''Weapon Merchant:''' Gladiator swords, maces, and bucklers crafted by the Grand Craftsman Chartonus himself!
+:{{A|VO chapter4 8 wuqishangren 103.ogg}} '''Weapon Merchant:''' Looking to breeze through your foes at the Kremnos Festival? I've got the best weapons right here for you!
+:{{DIcon|Arrow}} Not getting much business, huh?
+::{{A|VO chapter4 8 wuqishangren 104.ogg}} '''Weapon Merchant:''' Hmph... Those boorish warriors know nothing about quality gear!
+:{{DIcon|Arrow}} Are these really crafted by Chartonus?
+::{{A|VO chapter4 8 wuqishangren 105.ogg}} '''Weapon Merchant:''' I'm as honest a merchant as they come! Those boorish warriors know nothing about quality gear!
+:{{A|VO chapter4 8 wuqishangren 106.ogg}} '''Weapon Merchant:''' Ah, but you're not like them! With your air of sophistication, you must be a noble from one of the grand city-states, right? Here, let me show you what I have in stock...
+:{{DIcon|Arrow}} (Look at Castorice.)
+:{{DIcon|Arrow}} Could this be a scam?
+:{{A|VO chapter4 8 castorice 163.ogg}} '''Castorice:''' The craftsmanship of a weapon reveals the time period it's made... We can afford to take a quick look.
+<pre>{
+	"$type": "RPG.GameCore.VerifyInteractingEntity",
+	"GroupID": 18,
+	"ConfigID": 400001
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.ShowShop",
+	"ShopType": 103,
+	"TaskID": []
+}</pre>
+
+;(Talk to Weapon Merchant)
+:'''Weapon Merchant:''' Finest weapons for sale! Come take a look! The sharpest blades in all of Kremnos!
+;(If the player has undefined {{Item|Steel Claw Dagger with Faded Patterns|20|x=0}})
+;(If the player does not have undefined {{Item|Steel Claw Dagger with Faded Patterns|20|x=0}})
+::{{A|VO chapter4 8 castorice 164 m.ogg}} {{A|VO chapter4 8 castorice 164 f.ogg}} '''Castorice:''' {{MC|m=Mr.|f=Miss}} (Trailblazer)... Much as we're in a memory of the past, impulse buying is still an undesirable behavior.
+::{{A|VO chapter4 8 wuqishangren 107.ogg}} '''Weapon Merchant:''' Wahaha, you're quite the high-roller! Thank you, and please come again!
+::{{A|VO chapter4 8 castorice 165 m.ogg}} {{A|VO chapter4 8 castorice 165 f.ogg}} '''Castorice:''' May I take a look at that weapon, {{MC|m=Mr.|f=Miss}} (Trailblazer)?
+::Castorice carefully takes the weapon in her hand and examines it closely for a moment...
+::{{A|VO chapter4 8 castorice 168.ogg}} '''Castorice:''' ...
+::{{A|VO chapter4 8 castorice 169 m.ogg}} {{A|VO chapter4 8 castorice 169 f.ogg}} '''Castorice:''' ...I've seen enough. Let's go, {{MC|m=Mr.|f=Miss.}} (Trailblazer).
+::{{A|VO chapter4 8 wuqishangren 110.ogg}} '''Weapon Merchant:''' Leaving already? Don't you want to browse through my other wares?
+::{{A|VO chapter4 8 wuqishangren 111.ogg}} '''Weapon Merchant:''' Well then, come back anytime... if you make it through the festival today.
+::{{DIcon|Arrow}} What's wrong with that weapon?
+::{{DIcon|Arrow}} What was that just now?
+::{{A|VO chapter4 8 castorice 170.ogg}} '''Castorice:''' Those weapons reek of blood. He made an effort to conceal it, but traces of death aren't something you can easily erase... I shudder to even consider where he got his goods from.
+::{{tx}}
 {{Mission Description|type=trailblaze|location="Bloodbathed Battlefront" Castrum Kremnos|update|To execute their plan as safely as possible, Castorice and (Trailblazer) decided to blend into the festival celebration, forming a trio with a silent warrior and venturing deeper into Castrum Kremnos.}}
+:{{A|VO chapter4 8 castorice 174 m.ogg}} {{A|VO chapter4 8 castorice 174 f.ogg}} '''Castorice:''' Let's run through everything we know so far, {{MC|m=Mr.|f=Miss}} (Trailblazer).
+:{{A|VO chapter4 8 castorice 175.ogg}} '''Castorice:''' Lord Mydei has gone to seek refuge in Okhema with some of his people. Old King Eurypon still reigns, though {{Rubi|Nikador|Strife Titan}} has fallen into a slumber. And Castrum Kremnos is now gathering warriors from all over in preparation for their festival...
+:{{A|VO chapter4 8 castorice 176.ogg}} '''Castorice:''' It seems that we've traveled back to the last years of the Chrysos War, a time when Castrum Kremnos grappled with both internal strife and the Titan's waning divinity.
+:{{DIcon|Arrow}} Do you have a plan in mind?
+:{{DIcon|Arrow}} Talk is cheap. Let's charge in!
+::{{A|VO chapter4 8 castorice 177.ogg}} '''Castorice:''' That's too risky of a plan. And I might even become a burden to you.
+::It's about time you used your powers.
+::{{A|VO chapter4 8 castorice 178.ogg}} '''Castorice:''' I... can't control my strength with that much precision, the risk is too great.
+:{{DIcon|Arrow}} It's about time you used your powers.
+::{{A|VO chapter4 8 castorice 178.ogg}} '''Castorice:''' I... can't control my strength with that much precision, the risk is too great.
+:{{A|VO chapter4 8 castorice 179.ogg}} '''Castorice:''' The safest bet is to play by the rules. They happen to be hosting a festival in the city... We can try entering as participants?
+:{{tx}}
 {{Dialogue End}}
 
 ===Go to the registration area to join the competition{{subst:void|<!--104010908-->}}===
 {{Dialogue Start}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{A|VO chapter4 8 baomingguan 101.ogg}} '''Kremnos Registration Officer:''' ...Such a pity! Those three warriors were so close to completing the trial, to emerging as victorious Kremnoan warriors, and to earning an audience with our glorious King Eurypon!
+:{{A|VO chapter4 8 baomingguan 102.ogg}} '''Kremnos Registration Officer:''' And yet, they collapsed at the final hurdle! The Furiae Praetor swiftly hacked them down, reducing them to mere mincemeat... May {{Rubi|Nikador|Strife Titan}} recognize their valor and embrace their heroic spirits.
+:{{A|VO chapter4 8 baomingguan 103.ogg}} '''Kremnos Registration Officer:''' ...Next! Do we have any more warriors ready for the challenge? King Eurypon awaits, longing for the first brave soul to survive and stand before him!
+:{{DIcon|Arrow}} This competition sounds pretty brutal...
+:{{DIcon|Arrow}} Is this competition really that hardcore?
+:{{A|VO chapter4 8 castorice 182.ogg}} '''Castorice:''' This was a time when life was valued far less than bread. People hardly bat their eyelids at the savagery and death that had become commonplace.
+:{{A|VO chapter4 8 baomingguan 104.ogg}} '''Kremnos Registration Officer:''' Does no one have the courage to take up the challenge? Are you not prepared to wager your glory and set your lives ablaze under the splendor of Kremnos?
+:{{A|VO chapter4 8 genaiwusi 108.ogg}} '''Silent Gladiator:''' ...Let me through.
+:{{A|VO chapter4 8 baomingguan 105.ogg}} '''Kremnos Registration Officer:''' Why, it's you again, inarticulate fool! Pfft, unarmed, and yet you dare to think you can join the Kremnos Festival? That's an insult to the {{Rubi|Lance of Fury|Strife Titan}}!
+:{{A|VO chapter4 8 baomingguan 106.ogg}} '''Kremnos Registration Officer:''' I've told you before &mdash; this is a trial for three! This is a trial that requires three people! If you can't even gather enough comrades to stand by you in life and death, it's time you went home and took up herding!
+:{{A|VO chapter4 8 genaiwusi 109.ogg}} '''Silent Gladiator:''' ...
+:{{A|VO chapter4 8 genaiwusi 110.ogg}} '''Silent Gladiator:''' ...Let me through.
+:{{A|VO chapter4 8 baomingguan 107.ogg}} '''Kremnos Registration Officer:''' Hmph, so you're not just inarticulate, but also hard of hearing... Keep up this act of nuisance, and I'll be sure to show you how uncivil we can get!
+:{{A|VO chapter4 8 castorice 183.ogg}} '''Castorice:''' Teams of three...
+:{{A|VO chapter4 8 castorice 184 m.ogg}} {{A|VO chapter4 8 castorice 184 f.ogg}} '''Castorice:''' {{MC|m=Mr.|f=Miss}} (Trailblazer), this might be our chance...! We can enter the city with him.
+:{{DIcon|Arrow}} Sign me up!
+:{{DIcon|Arrow}} We'll be his teammates!
+:{{A|VO chapter4 8 baomingguan 108.ogg}} '''Kremnos Registration Officer:''' Hm? Who are...
+:{{A|VO chapter4 8 genaiwusi 111.ogg}} '''Silent Gladiator:''' ...You two.
+:{{A|VO chapter4 8 baomingguan 109.ogg}} '''Kremnos Registration Officer:''' Pfft... I see what this is.
+:{{A|VO chapter4 8 baomingguan 110.ogg}} '''Kremnos Registration Officer:''' As you wish! Good for you, you now have allies to court death with. Come on up here, fool!
+:{{A|VO chapter4 8 baomingguan 111.ogg}} '''Kremnos Registration Officer:''' The adrenaline-pumping scenes are becoming a bit tiresome, so adding a wildly mismatched "interlude" would make for a refreshing change and spice things up.
+:{{A|VO chapter4 8 baomingguan 112.ogg}} '''Kremnos Registration Officer:''' Let the trial begin, then! Your only goal is to survive! As long as you still hold the breath of life, you'll either triumph over every trial and claim worldly glory &mdash; or leave your soul in Kremnos to become fuel for Strife!
+:{{DIcon|Arrow}} The stakes are high...
+:{{DIcon|Arrow}} I'm not sure about this...
+:{{A|VO chapter4 8 castorice 185 m.ogg}} {{A|VO chapter4 8 castorice 185 f.ogg}} '''Castorice:''' Have faith, {{MC|m=Mr.|f=Miss}} (Trailblazer)... Lord Phainon and Lord Mydei are still fighting. We must match their unwavering resolve.
+:{{A|VO chapter4 8 genaiwusi 112.ogg}} '''Silent Gladiator:''' ...Can we enter now?
+:{{A|VO chapter4 8 baomingguan 113.ogg}} '''Kremnos Registration Officer:''' Eager to meet your demise? Very well then, let the trial begin!
+:{{A|VO chapter4 8 baomingguan 114.ogg}} '''Kremnos Registration Officer:''' Give me your names, warriors.
+:{{DIcon|Arrow}} (Trailblazer).
+::{{A|VO chapter4 8 castorice 186.ogg}} '''Castorice:''' Castorice.
+::{{A|VO chapter4 8 genaiwusi 113.ogg}} '''Gnaeus:''' ...Gnaeus.
+::{{A|VO chapter4 8 baomingguan 115 m.ogg}} {{A|VO chapter4 8 baomingguan 115 f.ogg}} '''Kremnos Registration Officer:''' Castorice, Gnaeus, and (Trailblazer)...
+::I am the Galactic Baseballer!
+:{{DIcon|Arrow}} I am the Galactic Baseballer!
+:{{A|VO chapter4 8 castorice 187.ogg}} '''Castorice:''' Castorice.
+:{{A|VO chapter4 8 genaiwusi 114.ogg}} '''Gnaeus:''' ...Gnaeus.
+:{{A|VO chapter4 8 baomingguan 116.ogg}} '''Kremnos Registration Officer:''' Galactic Baseballer, Castorice, and Gnaeus...
+:{{A|VO chapter4 8 baomingguan 118.ogg}} '''Kremnos Registration Officer:''' It is an honor to see your true faces revealed by the radiant glow of The Blade of Fury.
 :{{tx}}
 {{Dialogue End}}
 
 ===Enter Castrum Kremnos{{subst:void|<!--104010910-->}}===
 {{Dialogue Start}}
+
+;(Talk to Erinys)
+:{{A|VO chapter4 8 baomingguan 121.ogg}} '''Kremnos Registration Officer:''' In the name of the five virtues of {{Rubi|Nikador|Strife Titan}}, stride through the holy city's gate and embrace your fate.
+:{{A|VO chapter4 8 baomingguan 122.ogg}} '''Kremnos Registration Officer:''' May your courageous souls satisfy {{Rubi|Nikador|Strife Titan}} and fuel the conquests of Kremnos.
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
 :{{tx}}
+:{{A|VO chapter4 8 castorice 190.ogg}} '''Castorice:''' They have fewer guards than I expected. I thought we'd be greeted with something more... intense.
+:{{DIcon|Arrow}} Observing formalities before aggression, now that's a thoughtful approach.
+:{{DIcon|Arrow}} Do these battle-hardened people also have a taste for puzzles?
+:{{A|VO chapter4 8 genaiwusi 117.ogg}} '''Gnaeus:''' Meaningless...
+:{{tx}}
+<pre>{
+	"$type": "RPG.GameCore.TutorialTaskUnlock",
+	"TriggerParam": {
+		"Value": "6310"
+	}
+}</pre>
+
+;(Upon reaching the destination)
+:{{A|VO chapter4 8 castorice 189.ogg}} '''Castorice:''' Lord Gnaeus, may I ask what is it you are fighting for?
+:{{A|VO chapter4 8 genaiwusi 116.ogg}} '''Gnaeus:''' Fighting needs no reason. I seek only to crush foolishness.
 {{Dialogue End}}
 
 ===Ignite the fire pit and complete the trial{{subst:void|<!--104010911-->}}===
 {{Dialogue Start}}
-:{{tx}}
+
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{A|VO chapter4 8 castorice 196.ogg}} '''Castorice:''' Is this the exit? Oh, it's locked.
+:{{A|VO chapter4 8 castorice 197.ogg}} '''Castorice:''' Let's focus on igniting the braziers first.
 {{Dialogue End}}
 
 ===(Optional) Discuss other ways to pass with Gnaeus{{subst:void|<!--104010970-->}}===
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Gnaeus)
+:{{A|VO chapter4 8 genaiwusi 122.ogg}} '''Gnaeus:''' A meaningless challenge to erode the patience of warriors.
+:{{DIcon|Apocalyptic Shadow}} Progress forward in the way of Kremnos! {{Color|keyword|nobold=1|(Skip puzzle)}}
+::{{A|VO chapter4 8 genaiwusi 251.ogg}} '''Gnaeus:''' Let's see what you can do.
+:;(Enter battle)
+:::Wave 1: {{Enemy List|Furiae Archer*2; Furiae Troupe*1; Furiae Warrior*1}}
+:::Wave 2: {{Enemy List|Furiae Warrior*2; Furiae Archer*2; Furiae Philosopher*1}}
+:<pre>{
+	"$type": "RPG.GameCore.OverridePerformanceEndCrack",
+	"EndWithCrack": true
+}</pre>
+:{{DIcon|Exit}} No worries, let me ponder on it a bit more...
+::{{A|VO chapter4 8 genaiwusi 177.ogg}} '''Gnaeus:''' ...Don't push yourself.
+
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{A|VO chapter4 8 genaiwusi 120.ogg}} '''Gnaeus:''' {{Rubi|Oronyx|Time Titan}}...
+:{{A|VO chapter4 8 castorice 200.ogg}} '''Castorice:''' What's wrong, Lord Gnaeus?
+:{{A|VO chapter4 8 genaiwusi 121.ogg}} '''Gnaeus:''' Weak. Reduced to a servant of humans.
 {{Dialogue End}}
 
 ===Proceed deeper into Castrum Kremnos and search for clues about Nikador{{subst:void|<!--104010912-->}}===
 {{Dialogue Start}}
-:{{tx}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+<pre>{
+	"$type": "RPG.GameCore.ActiveVirtualCamera",
+	"AreaName": "LevelArea_P20413_F20413001_G25",
+	"AnchorName": "Anchor1",
+	"BlendConfig": {
+		"ExportToJson": true,
+		"BlendType": "Cut"
+	}
+}</pre>
+:{{A|VO chapter4 8 castorice 203.ogg}} '''Castorice:''' Barricades... We must find a way to remove them.
+:{{A|VO chapter4 8 castorice 204.ogg}} '''Castorice:''' Could it be a challenge that requires us to use the Hand of Zagreus? Let's get closer and find out.
+<pre>{
+	"$type": "RPG.GameCore.ActiveVirtualCamera",
+	"AreaName": "LevelArea_P20413_F20413001_G25",
+	"AnchorName": "Anchor1",
+	"IsActive": false,
+	"BlendConfig": {
+		"ExportToJson": true,
+		"BlendType": "Custom",
+		"CustomCurveName": "BlendCut11",
+		"BlendTime": 3
+	}
+}</pre>
+:<!--1-second delay-->
+;(If {{F|undefined}} is undefined 1)
+;(If {{F|undefined}} is undefined 1)
+;(If {{cx}}{{subst:void|<!--{"$type":"RPG.GameCore.ByComparePropState","TargetType":{"$type":"RPG.GameCore.TargetFetchAdvPropEx","FetchType":"SinglePropByPropID","SinglePropID":{"GroupID":{"FixedValue":{"Value":54}},"ID":{"FixedValue":{"Value":300001}}}}}-->}})
+<pre>{
+	"$type": "RPG.GameCore.TriggerEntityEventV2",
+	"EventName": {
+		"Value": "Clt_TriggerUnlock"
+	},
+	"TargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvPropEx",
+		"FetchType": "SinglePropByPropID",
+		"SinglePropID": {
+			"GroupID": {
+				"FixedValue": {
+					"Value": 54
+				}
+			},
+			"ID": {
+				"FixedValue": {
+					"Value": 300001
+				}
+			}
+		}
+	}
+}</pre>
 {{Dialogue End}}
 
 ===Ignite the fire pit and complete the trial{{subst:void|<!--104010923-->}}===
 {{Dialogue Start}}
-:{{tx}}
+:{{A|VO chapter4 8 genaiwusi 123.ogg}} '''Gnaeus:''' Crumble, weakling.
 {{Dialogue End}}
 
 ===Clear the obstacles using the Hand of Zagreus{{subst:void|<!--104010930-->}}===
 {{Dialogue Start}}
-:{{tx}}
+
+;(Unused &mdash; SwitchHandGesture_Lift_Exit)
+<pre>{
+	"$type": "RPG.GameCore.TriggerEntityEventV2",
+	"EventName": {
+		"Value": "SwitchHandGesture_Lift_Exit"
+	},
+	"TargetType": {
+		"$type": "RPG.GameCore.GroupFetchLocalTarget",
+		"TargetType": "Prop",
+		"Targets": [
+			300003
+		]
+	}
+}</pre>
+
+;(Unused &mdash; SwitchHand_ShowChest)
+<pre>{
+	"$type": "RPG.GameCore.TriggerEntityEventV2",
+	"EventName": {
+		"Value": "SwitchHand_LockInput"
+	},
+	"TargetType": {
+		"$type": "RPG.GameCore.GroupFetchLocalTarget",
+		"TargetType": "Prop",
+		"Targets": [
+			300001
+		]
+	}
+}</pre>
+::<!--0.7-second delay-->
+:<pre>{
+	"$type": "RPG.GameCore.ActiveVirtualCamera",
+	"LevelAreaCameraKey": {
+		"Custom": true,
+		"Key": "ChestCam"
+	},
+	"WaitBlendFinish": true,
+	"BlendConfig": {
+		"ExportToJson": true,
+		"BlendType": "Custom",
+		"CustomCurveName": "BlendCut01"
+	}
+}</pre>
+::<!--0.5-second delay-->
+:<pre>{
+	"$type": "RPG.GameCore.SwitchHandShowPuzzleFinishToast"
+}</pre>
+::<!--1.5-second delay-->
+:<pre>{
+	"$type": "RPG.GameCore.TriggerEffect",
+	"Flags": [],
+	"EffectPath": "Effects/Eff_Prefab/Eff_Scene/InteractiveProp/Eff_Chap04_Prop_SwitchHand_01_Catchable01_Lod0.prefab",
+	"AttachPoint": "Root",
+	"TowardTarget": {
+		"$type": "RPG.GameCore.GroupFetchLocalTarget",
+		"TargetType": "Prop",
+		"Targets": [
+			300004
+		]
+	},
+	"SubObjectModifyDataList": [],
+	"SyncPropState": true
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.PropReqInteract",
+	"TargetType": {
+		"$type": "RPG.GameCore.GroupFetchLocalTarget",
+		"TargetType": "Prop",
+		"Targets": [
+			300004
+		]
+	},
+	"InteractID": {
+		"FixedValue": {
+			"Value": 120120
+		}
+	}
+}</pre>
+
+;(Unused &mdash; SwitchHand_PuzzleStart)
+<pre>{
+	"$type": "RPG.GameCore.SetFloorCustomFloatV2",
+	"Name": {
+		"Value": "FCV_Catchable_isHand"
+	},
+	"Value": {
+		"FixedValue": {
+			"Value": 1
+		}
+	}
+}</pre>
+
+;(Unused &mdash; SwitchHand_PuzzleClose)
+<pre>{
+	"$type": "RPG.GameCore.SetFloorCustomFloatV2",
+	"Name": {
+		"Value": "FCV_Catchable_isHand"
+	},
+	"Value": {
+		"FixedValue": {
+			"Value": 0
+		}
+	}
+}</pre>
+
+;(Unused &mdash; SwitchHand_TriggerPullBack)
+:;(If {{cx}}{{subst:void|<!--{"$type":"RPG.GameCore.ByCompareFloorCustomFloatV2","Name":{"Value":"FCV_SwitchHand_P06"},"CompareValue":{"FixedValue":{"Value":1}}}-->}})
+::<pre>{
+	"$type": "RPG.GameCore.SwitchCharacterAnchorV2",
+	"SwitchCharacterAnchorConfig": {
+		"IsLocalPlayer": true,
+		"CharacterUniqueName": "LocalPlayer",
+		"AreaName": {
+			"Custom": true,
+			"Key": "PullBackArea"
+		},
+		"LevelAreaKey": {
+			"Custom": true,
+			"Key": "PullBackAnchor"
+		}
+	}
+}</pre>
+::<pre>{
+	"$type": "RPG.GameCore.TriggerEntityEventV2",
+	"EventName": {
+		"Value": "SwitchHand_ClosePuzzle"
+	},
+	"TargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvPropEx",
+		"FetchType": "SinglePropByPropKey",
+		"SinglePropKey": {
+			"Custom": true,
+			"Key": "SwitchHandConsole"
+		}
+	}
+}</pre>
+:<!--0.2-second delay-->
+
+;(Unused &mdash; SwitchHand_Group_ResetTransform)
+<pre>{
+	"$type": "RPG.GameCore.DebugLog",
+	"Message": "###机械手Prop位置重置###"
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.SwitchHandResetTransform",
+	"ID": {
+		"FixedValue": {
+			"Value": 6
+		}
+	},
+	"AnchorID": {
+		"Custom": true,
+		"Key": "PullBackAnchor"
+	}
+}</pre>
+::<!--0.2-second delay-->
+
+;(Unused &mdash; SwitchHand_ResetPlayerPosition)
+<pre>{
+	"$type": "RPG.GameCore.DebugLog",
+	"Message": "###机械手Player位置重置###"
+}</pre>
+::<!--0.2-second delay-->
+:{{A|VO chapter4 8 genaiwusi 126.ogg}} '''Gnaeus:''' {{Rubi|Zagreus|Trickery Titan}}, the embodiment of all things despicable.
+:{{A|VO chapter4 8 genaiwusi 127.ogg}} '''Gnaeus:''' Their legacy reduced to mere playthings for humans...
+:{{A|VO chapter4 8 castorice 205.ogg}} '''Castorice:''' This is a lot more destructive than I expected...
+:{{A|VO chapter4 8 castorice 206.ogg}} '''Castorice:''' Was this giant hand really used for thievery in the past?
+:{{A|VO chapter4 8 genaiwusi 128.ogg}} '''Gnaeus:''' ...Crumble to dust.
 {{Dialogue End}}
 
 ===Use the Hand of Zagreus to clear the obstacles{{subst:void|<!--104010913-->}}===
 {{Dialogue Start}}
+<pre>{
+	"$type": "RPG.GameCore.SetFloorCustomFloat",
+	"Name": {
+		"Value": "FCV_QuitSwitchHand"
+	},
+	"Value": {
+		"FixedValue": {
+			"Value": 1
+		}
+	}
+}</pre>
+:{{A|VO chapter4 8 castorice 207.ogg}} '''Castorice:''' The way ahead is now clear.
+:{{A|VO chapter4 8 castorice 208.ogg}} '''Castorice:''' Lord Gnaeus, before we move on... there is something we must explain to you.
+:{{A|VO chapter4 8 genaiwusi 129.ogg}} '''Gnaeus:''' ...Hm. You're not here for this foolish competition.
+:{{A|VO chapter4 8 castorice 209.ogg}} '''Castorice:''' How did you...?
+:{{A|VO chapter4 8 genaiwusi 130.ogg}} '''Gnaeus:''' You've been fighting to suppress your true thoughts within you all this while... You cannot deceive me.
+:{{A|VO chapter4 8 genaiwusi 131.ogg}} '''Gnaeus:''' I know you have no care for that fatuous king's contrived glory. You can keep your motive to yourselves, so long as you stay out of my way...
+:{{DIcon|Arrow}} So, what is your motive?
+:{{A|VO chapter4 8 genaiwusi 132.ogg}} '''Gnaeus:''' I've said it before: To obliterate the deeply entrenched roots of foolishness within Castrum Kremnos.
 :{{tx}}
+:{{A|VO chapter4 8 genaiwusi 124.ogg}} '''Gnaeus:''' The Titan's creations? When did they become so weak...?
 {{Dialogue End}}
 
 ===Proceed deeper into Castrum Kremnos and search for clues about Nikador{{subst:void|<!--104010914-->}}===
 {{Dialogue Start}}
-:{{tx}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+<pre>{
+	"$type": "RPG.GameCore.HideEntityV2",
+	"Target": {
+		"$type": "RPG.GameCore.GroupFetchLocalTarget",
+		"TargetType": "Prop",
+		"Targets": [
+			300001
+		]
+	},
+	"IsHide": true
+}</pre>
+:{{A|VO chapter4 8 genaiwusi 134.ogg}} '''Gnaeus:''' ...Wait.
+:{{DIcon|Arrow}} Got a crick in your back?
+:{{DIcon|Arrow}} No can do, I'm already itching to fight!
+::{{A|VO chapter4 8 castorice 212 m.ogg}} {{A|VO chapter4 8 castorice 212 f.ogg}} '''Castorice:''' Please keep it together, {{MC|m=Mr.|f=Miss}} (Trailblazer).
+:{{A|VO chapter4 8 genaiwusi 135.ogg}} '''Gnaeus:''' Hush... Listen.
+:{{A|VO chapter4 8 wuqishangren 112.ogg}} '''???:''' Heh heheh...
+:{{A|VO chapter4 8 wuqishangren 113.ogg}} '''???:''' Looks like I've hit the jackpot this time...
+:{{A|VO chapter4 8 castorice 213.ogg}} '''Castorice:''' I hear it now. That's...
+:{{A|VO chapter4 8 genaiwusi 136.ogg}} '''Gnaeus:''' Pretend you did not hear anything. Act oblivious.
+:{{A|VO chapter4 8 genaiwusi 137.ogg}} '''Gnaeus:''' We'll find a way to make him come out of hiding.
+:{{A|VO chapter4 8 castorice 202.ogg}} '''Castorice:''' Rest in peace...
+:{{A|VO chapter4 8 genaiwusi 125.ogg}} '''Gnaeus:''' A dreamless sleep is nothing but deathly silence.
+:{{A|VO chapter4 8 wuqishangren 114.ogg}} '''???:''' Hmph, these goons are much tougher than they seem...
+:{{A|VO chapter4 8 wuqishangren 115.ogg}} '''???:''' Wahaha, it's my lucky day...
 {{Dialogue End}}
 
 ===Investigate the strange human voice{{subst:void|<!--104010943-->}}===
 {{Dialogue Start}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
 :{{tx}}
+:<!--1-second delay-->
+:{{A|VO chapter4 8 genaiwusi 140.ogg}} '''Gnaeus:''' Keep quiet...
+:{{A|VO chapter4 8 wuqishangren 118.ogg}} '''???:''' *pant* They sure are quick on their feet. One bag won't be enough to hold everything...
+:{{A|VO chapter4 8 wuqishangren 119.ogg}} '''???:''' After this haul, I shouldn't have to scrounge for leftovers for the next few days. If only this festival could go on longer...
+:{{A|VO chapter4 8 genaiwusi 141.ogg}} '''Gnaeus:''' ...Now.
+:{{A|VO chapter4 8 castorice 214.ogg}} '''Castorice:''' ...Oh.
+:{{A|VO chapter4 8 wuqishangren 120.ogg}} '''Weapon Merchant:''' Huh!?
+:{{DIcon|Arrow}} Gah!
+:{{DIcon|Arrow}} Huh?
+:{{DIcon|Arrow}} It's you!
+:{{A|VO chapter4 8 castorice 215.ogg}} '''Castorice:''' ...That's why all of your weapons reek of blood.
+:{{tx}}
+
+;(Upon reaching the destination)
+:{{A|VO chapter4 8 genaiwusi 138.ogg}} '''Gnaeus:''' Stop at the next turn.
+:{{A|VO chapter4 8 genaiwusi 139.ogg}} '''Gnaeus:''' If there's an assassin... we'll take care of him right there.
 {{Dialogue End}}
 
 ===Proceed deeper into Castrum Kremnos and search for clues about Nikador{{subst:void|<!--104010915-->}}===
 {{Dialogue Start}}
-:{{tx}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+<pre>{
+	"$type": "RPG.GameCore.HideEntityV2",
+	"Target": {
+		"$type": "RPG.GameCore.GroupFetchLocalTarget",
+		"TargetType": "Prop",
+		"Targets": [
+			300001
+		]
+	},
+	"IsHide": true
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.ActiveVirtualCamera",
+	"AreaName": "LevelArea_P20413_F20413001_G28",
+	"AnchorName": "Anchor1",
+	"BlendConfig": {
+		"ExportToJson": true,
+		"BlendType": "Cut"
+	}
+}</pre>
+:{{A|VO chapter4 8 castorice 222.ogg}} '''Castorice:''' It's the same mechanism... We need to ignite the two braziers to unlock the way forward.
+:{{A|VO chapter4 8 castorice 223 m.ogg}} {{A|VO chapter4 8 castorice 223 f.ogg}} '''Castorice:''' Let's clear this trial together, {{MC|m=Mr.|f=Miss}} (Trailblazer).
+<pre>{
+	"$type": "RPG.GameCore.ActiveVirtualCamera",
+	"AreaName": "LevelArea_P20413_F20413001_G28",
+	"AnchorName": "Anchor1",
+	"IsActive": false,
+	"BlendConfig": {
+		"ExportToJson": true,
+		"BlendType": "Cut"
+	}
+}</pre>
+:{{A|VO chapter4 8 wuqishangren 116.ogg}} '''???:''' What a fine weapon! It's a real beauty...
+:{{A|VO chapter4 8 wuqishangren 117.ogg}} '''???:''' With a bit of sprucing up, no one will guess it's second-hand, heh...
 {{Dialogue End}}
 
 ===Ignite the fire pit and complete the trial{{subst:void|<!--104010962-->}}===
 {{Dialogue Start}}
-:{{tx}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{A|VO chapter4 8 castorice 224.ogg}} '''Castorice:''' The platform on the right is missing an iron ball...
+:{{A|VO chapter4 8 castorice 225.ogg}} '''Castorice:''' Do we have to summon a miracle for it to appear?
+
+:{{DIcon|Loupe}} Investigate
+:{{A|VO chapter4 8 genaiwusi 152.ogg}} '''Gnaeus:''' An exquisite stone... It's a shame it appeared somewhere it doesn't belong.
+:{{A|VO chapter4 8 castorice 227.ogg}} '''Castorice:''' We may be able to temporarily remove it with the orb?
+;(If {{F|FCV_StoneTalk02}} is undefined 0)
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+;(If {{cx}}{{subst:void|<!--{"$type":"RPG.GameCore.ByIsInEraFlipperSpotArea"}-->}})
+::{{A|VO chapter4 8 genaiwusi 151.ogg}} '''Gnaeus:''' The bridge ahead is broken. How do we get across?
+::{{A|VO chapter4 8 castorice 226.ogg}} '''Castorice:''' Let's try illuminating it with the Oronyx Orb.
 {{Dialogue End}}
 
 ===(Optional) Discuss other ways to pass with Gnaeus{{subst:void|<!--104010988-->}}===
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Gnaeus)
+:{{A|VO chapter4 8 genaiwusi 122.ogg}} '''Gnaeus:''' A meaningless challenge to erode the patience of warriors.
+:{{DIcon|Apocalyptic Shadow}} Progress forward in the way of Kremnos! {{Color|keyword|nobold=1|(Skip puzzle)}}
+::{{A|VO chapter4 8 genaiwusi 251.ogg}} '''Gnaeus:''' Let's see what you can do.
+:;(Enter battle)
+:::{{tx|Enemy list missing}}
+:<pre>{
+	"$type": "RPG.GameCore.OverridePerformanceEndCrack",
+	"EndWithCrack": true
+}</pre>
+:{{DIcon|Exit}} No worries, let me ponder on it a bit more...
+::{{A|VO chapter4 8 genaiwusi 177.ogg}} '''Gnaeus:''' ...Don't push yourself.
+
 {{Dialogue End}}
 
 ===Proceed deeper into Castrum Kremnos and search for clues about Nikador{{subst:void|<!--104010944-->}}===
 {{Dialogue Start}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{A|VO chapter4 8 castorice 232.ogg}} '''Castorice:''' Are there others who made it this far...?
+:{{A|VO chapter4 8 genaiwusi 153.ogg}} '''Gnaeus:''' Never underestimate those who step into this arena. They are skilled and courageous beyond measure.
+;(If {{F|undefined}} is undefined 1)
+<pre>{
+	"$type": "RPG.GameCore.SetGraphDynamicFloat",
+	"Name": "LeftNotDone",
+	"TargetIDs": [],
+	"Value": {
+		"FixedValue": {
+			"Value": 1
+		}
+	}
+}</pre>
+
+:{{DIcon|Loupe}} Investigate
+:{{A|VO chapter4 8 castorice 231.ogg}} '''Castorice:''' The gate won't budge in this time dimension... How about recovering the "miracle" from the tome?
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{A|VO chapter4 8 huangjinshi 104.ogg}} '''Chryseus Leo:''' Brave one... O Brave one! Come closer... Let me get a good look at you...
+:{{A|VO chapter4 8 genaiwusi 154.ogg}} '''Gnaeus:''' ...
+:{{A|VO chapter4 8 genaiwusi 155.ogg}} '''Gnaeus:''' Are you calling out to me, lion?
+:{{A|VO chapter4 8 huangjinshi 105.ogg}} '''Chryseus Leo:''' That's right... I am. You have an unusual aura about you... I have not seen such a blazing soul in a very long time.
+:{{A|VO chapter4 8 huangjinshi 106.ogg}} '''Chryseus Leo:''' The blazing star of Castrum Kremnos has drifted far from us... all that remains is a dim candle, on the verge of being extinguished.
+:{{DIcon|Arrow}} Blazing star...
+:{{DIcon|Arrow}} ...Is that Mydei?
+:{{A|VO chapter4 8 castorice 234.ogg}} '''Castorice:''' I think... you're right.
 :{{tx}}
+
+;(Upon reaching the destination)
+:{{A|VO chapter4 8 huangjinshi 101.ogg}} '''Chryseus Leo:''' Brave one... Step forth...
+:{{A|VO chapter4 8 huangjinshi 103.ogg}} '''Chryseus Leo:''' You could well be... Castrum Kremnos' salvation...
+:{{A|VO chapter4 8 castorice 233.ogg}} '''Castorice:''' Is that statue... beckoning to us?
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{A|VO chapter4 8 castorice 236.ogg}} '''Castorice:''' Such carnage... whose desires does this festival truly serve?
+:{{A|VO chapter4 8 genaiwusi 158.ogg}} '''Gnaeus:''' A beast that has lost sight of its target and is now guided only by its innate bloodlust.
+:{{A|VO chapter4 8 castorice 237.ogg}} '''Castorice:''' Lord Gnaeus, now that we're at the very heart of Castrum Kremnos... it's time to let you in on our goal here.
+:{{A|VO chapter4 8 castorice 238.ogg}} '''Castorice:''' While we do not expect you to work with us, we do not wish for conflict either.
+:{{A|VO chapter4 8 genaiwusi 159.ogg}} '''Gnaeus:''' ...Speak.
+:{{A|VO chapter4 8 castorice 239.ogg}} '''Castorice:''' We came here to find a way to destroy {{Rubi|Nikador|Strife Titan}}. We received... intel that the Titan of Strife had lost their reason and is now trying to create an immortal vessel for themself.
+:{{A|VO chapter4 8 castorice 240.ogg}} '''Castorice:''' If we do not stop them now, they will pose a grave danger to the future generations of Amphoreus.
+:{{A|VO chapter4 8 genaiwusi 160.ogg}} '''Gnaeus:''' Hmph, grave danger, you say...
+:{{A|VO chapter4 8 genaiwusi 161.ogg}} '''Gnaeus:''' Our goals are not in conflict, girl. Find the Titan and we can both get what we came for.
+:{{DIcon|Arrow}} What about the festival?
+::{{A|VO chapter4 8 genaiwusi 162.ogg}} '''Gnaeus:''' Better off forgotten.
+::Will we have to battle them...?
+:{{DIcon|Arrow}} Will we have to battle them...?
+:{{A|VO chapter4 8 genaiwusi 163.ogg}} '''Gnaeus:''' I smell fear... You're scared?
+:{{A|VO chapter4 8 castorice 241.ogg}} '''Castorice:''' The souls of the sacrificed are still wandering this hall... I hear their endless bemoaning, their senseless deaths have left them wronged, their mournful wails echo endlessly.
+:{{tx}}
+
+;(Upon reaching the destination)
+:{{A|VO chapter4 8 castorice 235.ogg}} '''Castorice:''' Lord Gnaeus, the calling you're heeding...
+:{{A|VO chapter4 8 genaiwusi 157.ogg}} '''Gnaeus:''' Comes from the depths of this city. We're close... so close, in fact, that I can hear the whispers in my ears.
 {{Dialogue End}}
 
 ===Speak with the wandering spirit with the help of Castorice{{subst:void|<!--104010946-->}}===
 {{Mission Description|type=trailblaze|location="Bloodbathed Battlefront" Castrum Kremnos|update|Castorice reveals the true purpose of our mission to Gnaeus, the silent gladiator. The party presses on, gathering information on the way, vowing to return Nikador's five soul fragments to their rightful place to prevent the creation of their immortal divine body, and to reforge the glory of the Strife Titan.}}
 {{Dialogue Start}}
-:{{tx}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{A|VO chapter4 8 castorice 243.ogg}} '''Castorice:''' Reveal yourself, O warrior spirit... I know that you have yet to rest.
+:{{A|VO chapter4 8 castorice 244.ogg}} '''Castorice:''' I ask for you to guide us. Let us see what you once gazed upon, let us hear what your ears once heard...
+<pre>{
+	"$type": "RPG.GameCore.TriggerSound",
+	"SoundName": {
+		"Value": "Ev_sfx_storyd_300dev_ghostappear"
+	},
+	"EmitterType": "LocalPlayer"
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.AdvCreateGroupEntity",
+	"InstanceIDList": [
+		400001
+	]
+}</pre>
+:<!--2-second delay-->
+<pre>{
+	"$type": "RPG.GameCore.AdvSetAIMoveTo",
+	"TargetType": {
+		"$type": "RPG.GameCore.GroupFetchLocalTarget",
+		"Targets": [
+			400001
+		]
+	},
+	"GroupId": 122,
+	"PointID": 1,
+	"MotionFlag": "Walk",
+	"OnReach": [
+		{
+			"$type": "RPG.GameCore.AdvDestroyGroupEntity",
+			"InstanceIDList": [
+				400001
+			]
+		}
+	]
+}</pre>
+:{{A|VO chapter4 8 genaiwusi 164.ogg}} '''Gnaeus:''' You can rouse the dead?
+:{{A|VO chapter4 8 castorice 245.ogg}} '''Castorice:''' No... I can only summon souls that haven't fully passed on.
 {{Mission Description|type=trailblaze|location="Bloodbathed Battlefront" Castrum Kremnos|update|To execute their plan as safely as possible, Castorice and (Trailblazer) decided to blend into the festival celebration, forming a trio with a silent warrior and venturing deeper into Castrum Kremnos.}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{A|VO chapter4 8 castorice 272.ogg}} '''Castorice:''' O, restless soul...
+:{{A|VO chapter4 8 castorice 273.ogg}} '''Castorice:''' ...
+:{{DIcon|Arrow}} Castorice...
+:{{DIcon|Arrow}} Why don't you take a break...?
+:{{A|VO chapter4 8 castorice 274 m.ogg}} {{A|VO chapter4 8 castorice 274 f.ogg}} '''Castorice:''' I'm fine... {{MC|m=Mr.|f=Miss}} (Trailblazer).
+:{{tx}}
 {{Dialogue End}}
 
 ===Proceed deeper into Castrum Kremnos and search for clues about Nikador{{subst:void|<!--104010918-->}}===
 {{Dialogue Start}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
 :{{tx}}
+;(Enter battle)
+::{{tx|Enemy list missing}}
+
+;(Upon reaching the destination)
+:{{A|VO chapter4 8 genaiwusi 182.ogg}} '''Gnaeus:''' We are nearing the place where they cast and cut the souls.
+:{{A|VO chapter4 8 genaiwusi 183.ogg}} '''Gnaeus:''' It is likely no one survived this far in the festival. Stay alert.
+:{{A|VO chapter4 8 castorice 283.ogg}} '''Castorice:''' I am sorry... that you had to witness my earlier outburst.
+:{{A|VO chapter4 8 genaiwusi 181.ogg}} '''Gnaeus:''' I understand your pain, child. But you need to set it aside for now.
+----
+:{{A|VO chapter4 8 castorice 285.ogg}} '''Castorice:''' ...Is it dealt with?
+:{{A|VO chapter4 8 genaiwusi 185.ogg}} '''Gnaeus:''' No... I doubt it'll be that simple.
+:{{A|VO chapter4 8 juanshuB 105.ogg}} '''Furiae Praetor:''' Split... soul...
+:{{A|VO chapter4 8 genaiwusi 186.ogg}} '''Gnaeus:''' An experiment...
+:{{DIcon|Arrow}} What do you mean?
+:{{DIcon|Arrow}} An experiment?
+:{{A|VO chapter4 8 genaiwusi 187.ogg}} '''Gnaeus:''' King Eurypon wanted to strip {{Rubi|Nikador|Strife Titan}} of their divinity and seal it within an intricate vessel for all eternity.
+:{{A|VO chapter4 8 genaiwusi 188.ogg}} '''Gnaeus:''' That's how he would immortalize {{Rubi|Nikador|Strife Titan}}'s divine body... Of course, he had to test it out on a Titankin before going on to remold the Titan.
+:{{DIcon|Arrow}} How are you so sure about it?
+:{{A|VO chapter4 8 genaiwusi 189.ogg}} '''Gnaeus:''' The answer's very simple...
+:{{A|VO chapter4 8 genaiwusi 190.ogg}} '''Gnaeus:''' ...Because the fragments of {{Rubi|Nikador|Strife Titan}}'s soul are sealed in these statues. The calls that I've been hearing... are coming from them.
+:{{A|VO chapter4 8 genaiwusi 191.ogg}} '''Gnaeus:''' As long as we reassemble their soul and unite their divine core, they will recover their dignity as a Titan. You will then have a chance to triumph over them in battle.
+:{{A|VO chapter4 8 juanshuB 106.ogg}} '''Furiae Praetor:''' Indestructible... body...
+:{{A|VO chapter4 8 castorice 286.ogg}} '''Castorice:''' We've finally found the root of everything...
+:{{A|VO chapter4 8 castorice 287.ogg}} '''Castorice:''' I'll find a way to stall it. To Titankin that have lost all reason, death is as intoxicating as nectar is to bees.
+:{{A|VO chapter4 8 castorice 288.ogg}} '''Castorice:''' Please, you must find a way to make {{Rubi|Nikador|Strife Titan}}'s soul whole again. It is only by fixing this point in history... that we can salvage the future of Amphoreus.
+:{{DIcon|Arrow}} We can tap into the power of time again.
+:{{DIcon|Arrow}} Ready to travel through time, gladiator?
+:{{A|VO chapter4 8 genaiwusi 192.ogg}} '''Gnaeus:''' Let's see what you can do, delver of memories.
+:{{tx}}
+
+;(Talk to Castorice)
+:{{A|VO chapter4 8 castorice 289.ogg}} '''Castorice:''' Stay here, warrior... Do not leave your Goddess of Death. The enticing scent of blood here is meant for you, and only you...
+:{{A|VO chapter4 8 juanshuB 107.ogg}} '''Furiae Praetor:''' Sweet... death.
+:{{A|VO chapter4 8 juanshuB 108.ogg}} '''Furiae Praetor:''' Inner... peace.
+<pre>{
+	"$type": "RPG.GameCore.PPFilterStackEffect",
+	"Active": false,
+	"PriorityGroup": "MazeGroupHigh",
+	"Priority": "High",
+	"StartRate": 0.5,
+	"AssetPath": "EnviroSystem/PostProcessFilterAsset/CastoriceFilter.asset",
+	"MuteAudioEvent": true,
+	"IsDistanceAttenuationOn": true,
+	"TargetType": {
+		"$type": "RPG.GameCore.GroupFetchLocalTarget",
+		"Targets": [
+			400001
+		]
+	},
+	"MaxAttenuationDistance": 15
+}</pre>
 {{Dialogue End}}
 
 ===Use Oronyx's Miracle to switch space-time{{subst:void|<!--104010950-->}}===
 {{Mission Description|type=trailblaze|location="Bloodbathed Battlefront" Castrum Kremnos|update|Castorice reveals the true purpose of our mission to Gnaeus, the silent gladiator. The party presses on, gathering information on the way, vowing to return Nikador's five soul fragments to their rightful place to prevent the creation of their immortal divine body, and to reforge the glory of the Strife Titan.}}
 {{Dialogue Start}}
+;(If {{F|undefined}} is undefined 1)
+;(If {{cx}}{{subst:void|<!--{"$type":"RPG.GameCore.ByComparePropState","TargetType":{"$type":"RPG.GameCore.GroupFetchLocalTarget","TargetType":"Prop","Targets":[300001]}}-->}})
+<pre>{
+	"$type": "RPG.GameCore.AdvClientChangePropState",
+	"TargetType": {
+		"$type": "RPG.GameCore.GroupFetchLocalTarget",
+		"TargetType": "Prop",
+		"Targets": [
+			300001
+		]
+	},
+	"ToState": "Open",
+	"CanChangeServerProp": true
+}</pre>
+
+:{{A|VO chapter4 8 genaiwusi 193.ogg}} '''Gnaeus:''' ...Unbelievable.
+:{{A|VO chapter4 8 genaiwusi 194.ogg}} '''Gnaeus:''' This dark and derelict place... is this the future of Kremnos?
+:{{DIcon|Arrow}} I can barely believe it myself.
+::{{A|VO chapter4 8 genaiwusi 195.ogg}} '''Gnaeus:''' The resonance between you and {{Rubi|Oronyx|Time Titan}} must be strong.
+::Kremnos must have been through a lot since then...
+:{{DIcon|Arrow}} Kremnos must have been through a lot since then...
+:{{A|VO chapter4 8 genaiwusi 196.ogg}} '''Gnaeus:''' History has taken a wrong turn... and must be set on the right course once more.
+:{{A|VO chapter4 8 genaiwusi 197.ogg}} '''Gnaeus:''' Much time has passed, yet the Titan's soul remains fragmented. That covetous king and his servants would have turned to dust by now... Their scheme that once unfolded here has likewise been buried with them.
 :{{tx}}
 {{Dialogue End}}
 
 ===Head to the Soul-Forging Platform{{subst:void|<!--104010952-->}}===
 {{Dialogue Start}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
 :{{tx}}
+:{{A|VO chapter4 8 genaiwusi 199.ogg}} '''Gnaeus:''' The sounds of battle. That's...
+:{{DIcon|Arrow}} From a time dimension very close to ours...
+:{{DIcon|Arrow}} ...My companions fighting against Nikador.
+:{{A|VO chapter4 8 genaiwusi 200.ogg}} '''Gnaeus:''' So, there are mortals who fight against fate even in this hopelessly bleak era. I am impressed.
+:{{A|VO chapter4 8 genaiwusi 201.ogg}} '''Gnaeus:''' But strength alone will not help them destroy an immortal body... That's why you and that girl went back in time seeking answers.
+:{{A|VO chapter4 8 genaiwusi 202 1.ogg}} '''Gnaeus:''' "Courage."
+:{{A|VO chapter4 8 genaiwusi 203.ogg}} '''Gnaeus:''' There are only four soul-forged statues here. If they did split {{Rubi|Nikador|Strife Titan}}'s divinity into five parts, there is still one fragment of the soul that is missing.
+:{{DIcon|Arrow}} Let's just start with these first.
+:{{A|VO chapter4 8 genaiwusi 204.ogg}} '''Gnaeus:''' Agreed.
+:Wanna brainstorm a little?
+:{{A|VO chapter4 8 genaiwusi 205.ogg}} '''Gnaeus:''' There's no trace... Let's just start with these first.
+:{{A|VO chapter4 8 genaiwusi 206.ogg}} '''Gnaeus:''' Come, help me piece together Strife's divinity.
+:{{tx}}
+<pre>{
+	"$type": "RPG.GameCore.TutorialTaskUnlock",
+	"TriggerParam": {
+		"Value": "6340"
+	}
+}</pre>
 {{Dialogue End}}
 
 ===Return the Soul-Forging Statue to its rightful place{{subst:void|<!--104010953-->}}===
 {{Dialogue Start}}
-:{{tx}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+<pre>{
+	"$type": "RPG.GameCore.ActiveVirtualCamera",
+	"AreaName": "LevelArea_P20413_F20413001_G129",
+	"AnchorName": "Anchor1",
+	"BlendConfig": {
+		"ExportToJson": true,
+		"BlendType": "Cut"
+	}
+}</pre>
+:{{A|VO chapter4 8 genaiwusi 207.ogg}} '''Gnaeus:''' I can hear... I hear it.
+:{{A|VO chapter4 8 genaiwusi 208.ogg}} '''Gnaeus:''' A part of {{Rubi|Nikador|Strife Titan}}'s divinity is sealed within this...
+<pre>{
+	"$type": "RPG.GameCore.ActiveVirtualCamera",
+	"AreaName": "LevelArea_P20413_F20413001_G129",
+	"AnchorName": "Anchor1",
+	"IsActive": false,
+	"BlendConfig": {
+		"ExportToJson": true,
+		"BlendType": "Cut",
+		"CustomCurveName": "BlendCut11"
+	}
+}</pre>
+
+;(Talk to Gnaeus)
+:{{A|VO chapter4 8 genaiwusi 206.ogg}} '''Gnaeus:''' Come, help me piece together Strife's divinity.
+:{{DIcon|Apocalyptic Shadow}} I have no clue, what can I do? {{Color|keyword|nobold=1|(Skip puzzle)}}
+::{{A|VO chapter4 8 genaiwusi 252.ogg}} '''Gnaeus:''' There's no trace... Let's just start with these first.
+:{{DIcon|Exit}} No worries, let me ponder on it a bit more...
+<pre>{
+	"$type": "RPG.GameCore.SetPerformanceResult",
+	"Value": 1
+}</pre>
 {{Dialogue End}}
 
 ===(Optional) Seek Gnaeus's help{{subst:void|<!--104010974-->}}===
 {{Dialogue Start}}
-:{{tx}}
+;(If {{F|undefined}} is undefined 1)
+;(If {{cx}}{{subst:void|<!--{"$type":"RPG.GameCore.ByComparePropState","TargetType":{"$type":"RPG.GameCore.GroupFetchLocalTarget","TargetType":"Prop","Targets":[300002]},"State":"CustomState04"}-->}})
+<pre>{
+	"$type": "RPG.GameCore.SwitchHandResetGame",
+	"ID": {
+		"FixedValue": {
+			"Value": 12
+		}
+	},
+	"AnchorID": {
+		"Custom": true,
+		"Key": "PullBackAnchor"
+	}
+}</pre>
+;(Unused &mdash; SwitchHandGesture_Lift_Exit)
+<pre>{
+	"$type": "RPG.GameCore.TriggerEntityEventV2",
+	"EventName": {
+		"Value": "SwitchHandGesture_Lift_Exit"
+	},
+	"TargetType": {
+		"$type": "RPG.GameCore.GroupFetchLocalTarget",
+		"TargetType": "Prop",
+		"Targets": [
+			300004,
+			300005,
+			300006
+		]
+	}
+}</pre>
+
+;(Unused &mdash; SwitchHand_ShowChest)
+<pre>{
+	"$type": "RPG.GameCore.TriggerEntityEventV2",
+	"EventName": {
+		"Value": "SwitchHand_LockInput"
+	},
+	"TargetType": {
+		"$type": "RPG.GameCore.GroupFetchLocalTarget",
+		"TargetType": "Prop",
+		"Targets": [
+			300001
+		]
+	}
+}</pre>
+::<!--0.7-second delay-->
+:<pre>{
+	"$type": "RPG.GameCore.ActiveVirtualCamera",
+	"LevelAreaCameraKey": {
+		"Custom": true,
+		"Key": "CameraAnchor"
+	},
+	"WaitBlendFinish": true,
+	"BlendConfig": {
+		"ExportToJson": true,
+		"BlendType": "Custom",
+		"CustomCurveName": "BlendCut01"
+	}
+}</pre>
+::<!--0.5-second delay-->
+:<pre>{
+	"$type": "RPG.GameCore.SwitchHandShowPuzzleFinishToast"
+}</pre>
+::<!--1.5-second delay-->
+:<pre>{
+	"$type": "RPG.GameCore.TriggerEffect",
+	"Flags": [],
+	"EffectPath": "Effects/Eff_Prefab/Eff_Scene/InteractiveProp/Eff_Chap04_Prop_SwitchHand_01_Catchable01_Lod0.prefab",
+	"AttachPoint": "Root",
+	"TowardTarget": {
+		"$type": "RPG.GameCore.GroupFetchLocalTarget",
+		"TargetType": "Prop",
+		"Targets": [
+			300007
+		]
+	},
+	"SubObjectModifyDataList": [],
+	"SyncPropState": true
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.PropReqInteract",
+	"TargetType": {
+		"$type": "RPG.GameCore.GroupFetchLocalTarget",
+		"TargetType": "Prop",
+		"Targets": [
+			300007
+		]
+	},
+	"InteractID": {
+		"FixedValue": {
+			"Value": 120120
+		}
+	}
+}</pre>
+
+;(Unused &mdash; SwitchHand_PuzzleStart)
+<pre>{
+	"$type": "RPG.GameCore.SetFloorCustomFloatV2",
+	"Name": {
+		"Value": "FCV_Catchable_isHand"
+	},
+	"Value": {
+		"FixedValue": {
+			"Value": 1
+		}
+	}
+}</pre>
+
+;(Unused &mdash; SwitchHand_PuzzleClose)
+<pre>{
+	"$type": "RPG.GameCore.SetFloorCustomFloatV2",
+	"Name": {
+		"Value": "FCV_Catchable_isHand"
+	},
+	"Value": {
+		"FixedValue": {
+			"Value": 0
+		}
+	}
+}</pre>
+
+;(Unused &mdash; SwitchHand_TriggerPullBack)
+:;(If {{cx}}{{subst:void|<!--{"$type":"RPG.GameCore.ByCompareFloorCustomFloatV2","Name":{"Value":"FCV_SwitchHand_P12"},"CompareValue":{"FixedValue":{"Value":1}}}-->}})
+::<pre>{
+	"$type": "RPG.GameCore.SwitchCharacterAnchorV2",
+	"SwitchCharacterAnchorConfig": {
+		"IsLocalPlayer": true,
+		"CharacterUniqueName": "LocalPlayer",
+		"AreaName": {
+			"Custom": true,
+			"Key": "PullBackArea"
+		},
+		"LevelAreaKey": {
+			"Custom": true,
+			"Key": "PullBackAnchor"
+		}
+	}
+}</pre>
+::<pre>{
+	"$type": "RPG.GameCore.TriggerEntityEventV2",
+	"EventName": {
+		"Value": "SwitchHand_ClosePuzzle"
+	},
+	"TargetType": {
+		"$type": "RPG.GameCore.GroupFetchLocalTarget",
+		"TargetType": "Prop",
+		"Targets": [
+			300001,
+			300003
+		]
+	}
+}</pre>
+:<!--0.2-second delay-->
+
+;(Unused &mdash; SwitchHand_Group_ResetTransform)
+<pre>{
+	"$type": "RPG.GameCore.DebugLog",
+	"Message": "###机械手Prop位置重置###"
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.SwitchHandResetTransform",
+	"ID": {
+		"FixedValue": {
+			"Value": 12
+		}
+	},
+	"AnchorID": {
+		"Custom": true,
+		"Key": "PullBackAnchor"
+	}
+}</pre>
+::<!--0.2-second delay-->
+
+;(Unused &mdash; SwitchHand_ResetPlayerPosition)
+<pre>{
+	"$type": "RPG.GameCore.DebugLog",
+	"Message": "###机械手Player位置重置###"
+}</pre>
+::<!--0.2-second delay-->
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{A|VO chapter4 8 genaiwusi 211.ogg}} '''Gnaeus:''' The voices... are starting to pour in.
+:{{A|VO chapter4 8 genaiwusi 212.ogg}} '''Gnaeus:''' Here lies another fragment of {{Rubi|Nikador|Strife Titan}}'s divinity...
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{A|VO chapter4 8 genaiwusi 215.ogg}} '''Gnaeus:''' I am listening...
+:{{A|VO chapter4 8 genaiwusi 216.ogg}} '''Gnaeus:''' Go on... Tell me your tale.
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{A|VO chapter4 8 genaiwusi 219.ogg}} '''Gnaeus:''' Divinity exists within this statue.
+:{{A|VO chapter4 8 genaiwusi 220.ogg}} '''Gnaeus:''' Tell me everything that happened here...
 {{Dialogue End}}
 
 ===Return the Soul-Forging Statue to its rightful place{{subst:void|<!--104010955-->}}===
 {{Dialogue Start}}
-:{{tx}}
+<pre>{
+	"$type": "RPG.GameCore.ActiveVirtualCamera",
+	"AreaName": "LevelArea_P20413_F20413001_G131",
+	"AnchorName": "Anchor1",
+	"BlendConfig": {
+		"ExportToJson": true,
+		"BlendType": "Cut"
+	}
+}</pre>
+:The Sword of the Soul-Forging Statue failed to return to its original place. Something is still missing here.
+<pre>{
+	"$type": "RPG.GameCore.ActiveVirtualCamera",
+	"AreaName": "LevelArea_P20413_F20413001_G131",
+	"AnchorName": "Anchor1",
+	"IsActive": false,
+	"BlendConfig": {
+		"ExportToJson": true,
+		"BlendType": "Cut"
+	}
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.ActiveVirtualCamera",
+	"AreaName": "LevelArea_P20413_F20413001_G132",
+	"AnchorName": "Anchor2",
+	"BlendConfig": {
+		"ExportToJson": true,
+		"BlendType": "Cut"
+	}
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.SwitchCharacterAnchorV2",
+	"SwitchCharacterAnchorConfig": {
+		"IsLocalPlayer": true,
+		"CharacterUniqueName": "LocalPlayer",
+		"AreaName": {
+			"Value": "LevelArea_P20413_F20413001_G132"
+		},
+		"AnchorName": {
+			"Value": "Anchor1"
+		}
+	}
+}</pre>
+:Perhaps you should try using the Hand of Zagreus to {{Color|keyword|nobold=1|restore the statue's base.}}
+<pre>{
+	"$type": "RPG.GameCore.ActiveVirtualCamera",
+	"AreaName": "LevelArea_P20413_F20413001_G132",
+	"AnchorName": "Anchor2",
+	"IsActive": false,
+	"BlendConfig": {
+		"ExportToJson": true,
+		"BlendType": "Custom",
+		"CustomCurveName": "BlendCut11",
+		"BlendTime": 3
+	}
+}</pre>
 {{Dialogue End}}
 
 ===Use the Hand of Zagreus to return the sword to its place{{subst:void|<!--104010960-->}}===
 {{Dialogue Start}}
-:{{tx}}
+<pre>{
+	"$type": "RPG.GameCore.OverrideTimeRewindSpecularMatStyle",
+	"Target": {
+		"$type": "RPG.GameCore.GroupFetchLocalTarget",
+		"TargetType": "Prop",
+		"Targets": [
+			300009
+		]
+	}
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.TriggerEntityEventV2",
+	"EventName": {
+		"Value": "SwitchHand_DisableCatchable"
+	},
+	"TargetType": {
+		"$type": "RPG.GameCore.GroupFetchLocalTarget",
+		"TargetType": "Prop",
+		"Targets": [
+			300004
+		]
+	}
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.ActiveVirtualCamera",
+	"AreaName": "LevelArea_P20413_F20413001_G133",
+	"AnchorName": "Anchor1",
+	"BlendConfig": {
+		"ExportToJson": true,
+		"BlendType": "Cut"
+	}
+}</pre>
+:The Sword of the Soul-Forging Statue failed to return to its original place. Something is still missing here. Upon close inspection, you notice the body of the statue is incomplete.
+<pre>{
+	"$type": "RPG.GameCore.ActiveVirtualCamera",
+	"AreaName": "LevelArea_P20413_F20413001_G133",
+	"AnchorName": "Anchor1",
+	"IsActive": false,
+	"BlendConfig": {
+		"ExportToJson": true,
+		"BlendType": "Cut"
+	}
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.ActiveVirtualCamera",
+	"AreaName": "LevelArea_P20413_F20413001_G130",
+	"AnchorName": "Anchor2",
+	"BlendConfig": {
+		"ExportToJson": true,
+		"BlendType": "Cut"
+	}
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.SwitchCharacterAnchorV2",
+	"SwitchCharacterAnchorConfig": {
+		"IsLocalPlayer": true,
+		"CharacterUniqueName": "LocalPlayer",
+		"AreaName": {
+			"Value": "LevelArea_P20413_F20413001_G130"
+		},
+		"AnchorName": {
+			"Value": "Anchor1"
+		}
+	}
+}</pre>
+:Perhaps you should try {{Color|keyword|nobold=1|using the Oronyx Orb to reflect its whole body.}}
+<pre>{
+	"$type": "RPG.GameCore.ActiveVirtualCamera",
+	"AreaName": "LevelArea_P20413_F20413001_G130",
+	"AnchorName": "Anchor2",
+	"IsActive": false,
+	"BlendConfig": {
+		"ExportToJson": true,
+		"BlendType": "Custom",
+		"CustomCurveName": "BlendCut11",
+		"BlendTime": 3
+	}
+}</pre>
 {{Dialogue End}}
 
 ===Return the Soul-Forging Statue to its rightful place{{subst:void|<!--104010956-->}}===
 {{Dialogue Start}}
-:{{tx}}
 {{Dialogue End}}
 
 ===Use the Oronyx Orb to restore the statue{{subst:void|<!--104010958-->}}===
 {{Dialogue Start}}
-:{{tx}}
+;(If {{F|undefined}} is undefined 1)
+:<pre>{
+	"$type": "RPG.GameCore.TriggerEntityEventV2",
+	"EventName": {
+		"Value": "Clt_TriggerClose "
+	},
+	"TargetType": {
+		"$type": "RPG.GameCore.GroupFetchLocalTarget",
+		"TargetType": "Prop",
+		"Targets": [
+			300002
+		]
+	}
+}</pre>
+::<!--0.5-second delay-->
+:<pre>{
+	"$type": "RPG.GameCore.TriggerEntityEventV2",
+	"EventName": {
+		"Value": "Clt_TriggerLock"
+	},
+	"TargetType": {
+		"$type": "RPG.GameCore.GroupFetchLocalTarget",
+		"TargetType": "Prop",
+		"Targets": [
+			300002
+		]
+	}
+}</pre>
+;(If {{F|undefined}} is not undefined 1)
+:;(Return to previous option selection)
 {{Dialogue End}}
 
 ===Return the Soul-Forging Statue to its rightful place{{subst:void|<!--104010954-->}}===
 {{Dialogue Start}}
-:{{tx}}
 {{Dialogue End}}
 
 ===Speak with the wandering spirit with the help of Castorice{{subst:void|<!--104010947-->}}===
 {{Dialogue Start}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+<pre>{
+	"$type": "RPG.GameCore.AdvDestroyGroupEntity",
+	"InstanceIDList": [
+		400003
+	]
+}</pre>
 :{{tx}}
+
+;(Upon reaching the destination)
+<pre>{
+	"$type": "RPG.GameCore.AdvDestroyGroupEntity",
+	"InstanceIDList": [
+		400001
+	]
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.AdvSetAIMoveTo",
+	"TargetType": {
+		"$type": "RPG.GameCore.GroupFetchLocalTarget",
+		"Targets": [
+			400003
+		]
+	},
+	"GroupId": 123,
+	"PointID": 1,
+	"MotionFlag": "Walk"
+}</pre>
+
+;(Talk to )
+:{{A|VO chapter4 8 castorice 252.ogg}} '''Castorice:''' O, restless soul... *cough* Tell us, what have you heard?
+:{{A|VO chapter4 8 guizu 101.ogg}} '''Aristocrat's Echo:''' "How much longer is this festival going to last? What is King Eurypon waiting for?"
+:{{A|VO chapter4 8 mouchen 101.ogg}} '''Advisor's Echo:''' "Be patient, for our plan is still underway... {{Color|keyword|nobold=1|Sealing a Titan's soul is no easy endeavor}}. The priests are already working as fast as they can..."
+:{{A|VO chapter4 8 guizu 102.ogg}} '''Aristocrat's Echo:''' "Priests captured from other city-states &mdash; who can guarantee their loyalty? Hmph, I say we punish one of them so they know to behave..."
+:{{A|VO chapter4 8 castorice 253.ogg}} '''Castorice:''' Sealing a Titan's soul...
+:{{A|VO chapter4 8 castorice 254.ogg}} '''Castorice:''' Could it be the Sword Vessel in Lipos' ballad? The one that Chartonus crafted himself...
+:{{A|VO chapter4 8 genaiwusi 167.ogg}} '''Gnaeus:''' Foolishness... Perhaps now you begin to understand the weight of that term.
+:{{DIcon|Arrow}} Why are they doing this?
+::{{A|VO chapter4 8 genaiwusi 168.ogg}} '''Gnaeus:''' Out of cowardice. They are afraid of losing their faith and guidance.
+::{{A|VO chapter4 8 genaiwusi 169.ogg}} '''Gnaeus:''' {{Rubi|Nikador|Strife Titan}} fights against the unseen, they have no time for the folly of mortals.
+::So Nikador is at their mercy?
+:{{DIcon|Arrow}} So Nikador is at their mercy?
+:{{A|VO chapter4 8 genaiwusi 170.ogg}} '''Gnaeus:''' They are fighting against the unseen, they have no time for the folly of mortals.
+:{{A|VO chapter4 8 genaiwusi 171.ogg}} '''Gnaeus:''' Cowards... They are afraid of losing their faith and guidance.
+:{{A|VO chapter4 8 castorice 255.ogg}} '''Castorice:''' Lord Gnaeus, you seem to know a lot about that Titan.
+:{{tx}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{A|VO chapter4 8 castorice 252.ogg}} '''Castorice:''' O, restless soul... *cough* Tell us, what have you heard?
+:{{A|VO chapter4 8 guizu 101.ogg}} '''Aristocrat's Echo:''' "How much longer is this festival going to last? What is King Eurypon waiting for?"
+:{{A|VO chapter4 8 mouchen 101.ogg}} '''Advisor's Echo:''' "Be patient, for our plan is still underway... {{Color|keyword|nobold=1|Sealing a Titan's soul is no easy endeavor}}. The priests are already working as fast as they can..."
+:{{A|VO chapter4 8 guizu 102.ogg}} '''Aristocrat's Echo:''' "Priests captured from other city-states &mdash; who can guarantee their loyalty? Hmph, I say we punish one of them so they know to behave..."
+:{{A|VO chapter4 8 castorice 253.ogg}} '''Castorice:''' Sealing a Titan's soul...
+:{{A|VO chapter4 8 castorice 254.ogg}} '''Castorice:''' Could it be the Sword Vessel in Lipos' ballad? The one that Chartonus crafted himself...
+:{{A|VO chapter4 8 genaiwusi 167.ogg}} '''Gnaeus:''' Foolishness... Perhaps now you begin to understand the weight of that term.
+:{{DIcon|Arrow}} Why are they doing this?
+::{{A|VO chapter4 8 genaiwusi 168.ogg}} '''Gnaeus:''' Out of cowardice. They are afraid of losing their faith and guidance.
+::{{A|VO chapter4 8 genaiwusi 169.ogg}} '''Gnaeus:''' {{Rubi|Nikador|Strife Titan}} fights against the unseen, they have no time for the folly of mortals.
+::So Nikador is at their mercy?
+:{{DIcon|Arrow}} So Nikador is at their mercy?
+:{{A|VO chapter4 8 genaiwusi 170.ogg}} '''Gnaeus:''' They are fighting against the unseen, they have no time for the folly of mortals.
+:{{A|VO chapter4 8 genaiwusi 171.ogg}} '''Gnaeus:''' Cowards... They are afraid of losing their faith and guidance.
+:{{A|VO chapter4 8 castorice 255.ogg}} '''Castorice:''' Lord Gnaeus, you seem to know a lot about that Titan.
+:{{tx}}
+:{{A|VO chapter4 8 castorice 250.ogg}} '''Castorice:''' *cough* *cough*
+:{{A|VO chapter4 8 genaiwusi 166.ogg}} '''Gnaeus:''' What's wrong, girl?
+:{{A|VO chapter4 8 castorice 251.ogg}} '''Castorice:''' Guiding souls takes a lot of energy... but I'm fine, Lord Gnaeus.
+:{{A|VO chapter4 8 castorice 257.ogg}} '''Castorice:''' *cough* *cough*
+:{{A|VO chapter4 8 castorice 258.ogg}} '''Castorice:''' The next one... I need to last till... the next one.
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{A|VO chapter4 8 castorice 259.ogg}} '''Castorice:''' Lost souls... Tell us...
+:{{A|VO chapter4 8 castorice 260.ogg}} '''Castorice:''' *cough* *cough* *cough*
+:{{DIcon|Arrow}} Is this one taking more out of you?
+:{{DIcon|Arrow}} Do you need a break, Castorice?
+:{{A|VO chapter4 8 castorice 261 m.ogg}} {{A|VO chapter4 8 castorice 261 f.ogg}} '''Castorice:''' I... I'm fine, {{MC|m=Mr.|f=Miss}} (Trailblazer). There's no need to worry.
+:{{A|VO chapter4 8 castorice 262.ogg}} '''Castorice:''' Lost souls... Tell us, what have you heard?
+:{{A|VO chapter4 8 shibing 103.ogg}} '''Soldier's Echo:''' "Have you heard? King Eurypon's advisors are coming up with a plan to launch an all-out attack on Okhema."
+:{{A|VO chapter4 8 gongjiang 101.ogg}} '''Craftsman's Echo:''' "With just the handful of soldiers we have? They're absolutely out of their minds..."
+:{{A|VO chapter4 8 shibing 104.ogg}} '''Soldier's Echo:''' "That's the long-term plan. Our priority for now is still to complete the god-king's... 'project'."
+:{{A|VO chapter4 8 castorice 263.ogg}} '''Castorice:''' ...
+:{{A|VO chapter4 8 castorice 264.ogg}} '''Castorice:''' So their plan to attack Okhema was conceived that long ago?
+:{{DIcon|Arrow}} Looks like it wasn't Nikador's idea...
+:{{DIcon|Arrow}} Whoever hatched that plan must've long since turned to ash.
+:{{A|VO chapter4 8 genaiwusi 173.ogg}} '''Gnaeus:''' I knew it.
+:{{A|VO chapter4 8 castorice 265.ogg}} '''Castorice:''' ...Lord Gnaeus?
+:{{A|VO chapter4 8 genaiwusi 174.ogg}} '''Gnaeus:''' I've long suspected that you two are not from here... No, not just that. You're not from this era.
+:{{A|VO chapter4 8 genaiwusi 175.ogg}} '''Gnaeus:''' Is it {{Rubi|Oronyx|Time Titan}}? No... they would not be capable of such power.
+:{{DIcon|Arrow}} Yikes, our cover's blown...!
+:{{DIcon|Arrow}} Looks like we'll have to silence him for good!
+:{{A|VO chapter4 8 castorice 266 m.ogg}} {{A|VO chapter4 8 castorice 266 f.ogg}} '''Castorice:''' Calm yourself, {{MC|m=Mr.|f=Miss}} (Trailblazer)... I believe he has no ill intent toward us.
+:{{tx}}
+
+;(Upon reaching the destination)
+<pre>{
+	"$type": "RPG.GameCore.AdvCreateGroupEntity",
+	"InstanceIDList": [
+		400002
+	]
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.AdvSetAIMoveTo",
+	"TargetType": {
+		"$type": "RPG.GameCore.GroupFetchLocalTarget",
+		"Targets": [
+			400002
+		]
+	},
+	"EntityInstanceID": {
+		"FixedValue": {
+			"Value": 400002
+		}
+	},
+	"GroupId": 189,
+	"PointID": 1,
+	"MotionFlag": "Walk",
+	"AlignRotation": true,
+	"AccurateStop": true,
+	"FinishAfterStop": true,
+	"OnReach": [
+		{
+			"$type": "RPG.GameCore.TriggerGroupEvent",
+			"EventName": {
+				"Value": "EnterArea_G189_3"
+			}
+		}
+	]
+}</pre>
+;(Unused &mdash; EnterArea_G189_3)
+:<!--2-second delay-->
+:<pre>{
+	"$type": "RPG.GameCore.AdvDestroyGroupEntity",
+	"InstanceIDList": [
+		400002
+	]
+}</pre>
+:{{A|VO chapter4 8 castorice 270.ogg}} '''Castorice:''' *cough* *cough* *cough*
+:{{A|VO chapter4 8 genaiwusi 177.ogg}} '''Gnaeus:''' ...Don't push yourself.
+:{{A|VO chapter4 8 castorice 271.ogg}} '''Castorice:''' We're almost at the end... I can sense it...
 {{Dialogue End}}
 
 ==Other Languages==
@@ -250,7 +1659,7 @@ Mission Kremnos, Cleanse Thy Rusted Blood (II) Caelus.png|Caelus
 |ru   = О Кремнос, смой ржавчину крови II
 |th   = Kremnos เอ๋ย จงชะล้างโลหิตสนิมของตน (II)
 |vi   = Kremnos, Xin Hãy Gột Rửa Gỉ Máu Của Ngươi (II)
-|de   = Kremnos, bereinige dein rostiges Blut (II)
+|de   = O Kremnos, bereinige dein rostiges Blut (Teil 2)
 |id   = Kremnos, Bersihkan Darahmu yang Berkarat 2
 |pt   = Kremnos, Purifica Teu Sangue Enferrujado (II)
 }}

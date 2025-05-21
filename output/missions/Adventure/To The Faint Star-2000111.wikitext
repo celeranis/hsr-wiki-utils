@@ -43,40 +43,383 @@ PageTitle=#To: The Faint Star#
 ===Find the repeater in the storage zone{{subst:void|<!--200011002-->}}===
 {{Mission Description|type=adventure|location=Storage Zone|The station has been sending and receiving cosmic signals through an airwave repeater located in the lost territory guarded by monsters. It's been recently known as the signature cabin of the Disposal Site. With communications cut off, the most important task is naturally to ensure that the repeater is functional.}}
 {{Dialogue Start}}
-:{{tx}}
+:<!--0.5-second delay-->
+<pre>{
+	"$type": "RPG.GameCore.PropSetupUITrigger",
+	"DestroyAfterTriggered": true,
+	"ButtonIcon": "SpriteOutput/TalkIcon/ChatIcon.png",
+	"IconType": "ChatLoopIcon",
+	"ButtonText": {
+		"Hash": 16304550243505668348
+	},
+	"ButtonCallback": [
+		{
+			"$type": "RPG.GameCore.TriggerCustomString",
+			"CustomString": {
+				"Value": "Mission_200011002_Prop_23_300001_BtnClick"
+			}
+		}
+	],
+	"TargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvPropEx",
+		"FetchType": "SinglePropByPropID",
+		"SinglePropID": {
+			"GroupID": {
+				"FixedValue": {
+					"Value": 23
+				}
+			},
+			"ID": {
+				"FixedValue": {
+					"Value": 300001
+				}
+			}
+		}
+	}
+}</pre>
 {{Dialogue End}}
 
 ===Collect the old parts in the crevices of the repulsion bridge{{subst:void|<!--200011003-->}}===
 {{Dialogue Start}}
-:{{tx}}
+
+;(Obtain {{Item|Ultra Nickel Part|20|x=1}})
+
+;(Obtain {{Item|Ultra Nickel Part|20|x=1}})
+:<!--0.5-second delay-->
+<pre>{
+	"$type": "RPG.GameCore.ShowReading",
+	"BookID": {
+		"FixedValue": {
+			"Value": 190172
+		}
+	}
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.ShowReading",
+	"BookID": {
+		"FixedValue": {
+			"Value": 190173
+		}
+	}
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.ShowReading",
+	"BookID": {
+		"FixedValue": {
+			"Value": 190174
+		}
+	}
+}</pre>
+:'''Rocky:''' You've read the poems I sent Lesley. What do you think?
+:'''Bernard:''' They are pretty cringy.
+:'''Bernard:''' They stink.
+:'''Rocky:''' Don't mind my master. These poems speak my mind. You don't look like those dull researchers around the space station. I'm sure you'd understand how I feel.
+:{{DIcon|Arrow}} I haven't looked...
+::'''Rocky:''' Oh, that's unfortunate. Take a look when you have time. Give me some suggestions if you know a thing or two.
+:{{DIcon|Arrow}} They are just cringy.
+::'''Rocky:''' What? You share the same view as my master? Looks like writing poems is too hard for a rough fellow like me...
+:{{DIcon|Arrow}} They are pretty interesting.
+::'''Rocky:''' I know! They all say I am wasting my time. You are the only one who understands the fun of it. So tell me, which is your favorite?
+::{{DIcon|Arrow}} Ley, oh, my Ley...
+:::'''Rocky:''' Heheh, you also prefer to be direct.
+:::'''Rocky:''' But I am worried this may be too direct. If I send this to her, it will reveal my burning desire and put her under tremendous pressure.
+::{{DIcon|Arrow}} You were as light as a swallow when leaving the station...
+:::'''Rocky:''' Ha, you like this one too! They all say my choice of words is too rough. It turns out you know me best!
+:::'''Rocky:''' They don't understand that the soul of poetry lies in real emotions, rather than beautiful words. It only took me 10 minutes to write this!
+::{{DIcon|Arrow}} Other than the halo and starlight...
+:::'''Rocky:''' Oh, so you're into that style. But I only wrote this in case she rejects me...
+:::'''Rocky:''' I hope I don't have to use it in the end.
+:'''Rocky:''' But just like what I said, it doesn't matter how these poems are. First I need to be able to send them out...
+:'''Rocky:''' So, please help me fix the repeater.
 {{Dialogue End}}
 
 ===Use the parts to fix the damaged repeater{{subst:void|<!--200011005-->}}===
 {{Mission Description|type=adventure|location=Storage Zone|update|Now that you have the parts, it is only a matter of time before the repeater is fixed. You carefully read through the heartfelt communication records only to unexpectedly find an accident hidden in the shadows...}}
 {{Dialogue Start}}
-:{{tx}}
+:<!--0.5-second delay-->
+<pre>{
+	"$type": "RPG.GameCore.PropSetupUITrigger",
+	"ButtonIcon": "SpriteOutput/TalkIcon/ChatIcon.png",
+	"IconType": "ChatLoopIcon",
+	"ButtonText": {
+		"Hash": 12844513610891405722
+	},
+	"ButtonCallback": [
+		{
+			"$type": "RPG.GameCore.ConsumeMissionItem",
+			"SubMissionID": 200011005,
+			"Desc": {
+				"Hash": 12046088725424227177
+			}
+		}
+	],
+	"TargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvPropEx",
+		"FetchType": "SinglePropByPropID",
+		"SinglePropID": {
+			"GroupID": {
+				"FixedValue": {
+					"Value": 23
+				}
+			},
+			"ID": {
+				"FixedValue": {
+					"Value": 300004
+				}
+			}
+		}
+	}
+}</pre>
 {{Dialogue End}}
 
 ===Investigate the communication history of the repeater{{subst:void|<!--200011006-->}}===
 {{Dialogue Start}}
-:{{tx}}
+:<!--0.5-second delay-->
+<pre>{
+	"$type": "RPG.GameCore.PropSetupUITrigger",
+	"ButtonIcon": "SpriteOutput/TalkIcon/ChatIcon.png",
+	"IconType": "ChatLoopIcon",
+	"ButtonText": {
+		"Hash": 16304550243505668348
+	},
+	"ButtonCallback": [
+		{
+			"$type": "RPG.GameCore.TriggerCustomString",
+			"CustomString": {
+				"Value": "Mission_200011006_Prop_23_300005_BtnClick"
+			}
+		}
+	],
+	"TargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvPropEx",
+		"FetchType": "SinglePropByPropID",
+		"SinglePropID": {
+			"GroupID": {
+				"FixedValue": {
+					"Value": 23
+				}
+			},
+			"ID": {
+				"FixedValue": {
+					"Value": 300005
+				}
+			}
+		}
+	}
+}</pre>
 {{Dialogue End}}
 
 ===Go to the monitoring room to take a look at everything that took place{{subst:void|<!--200011007-->}}===
 {{Mission Description|type=adventure|location=Base Zone|update|Go to the Monitoring Room and pull up videos of the hand behind it all. You will go and question his motives once a target is confirmed.}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Obtain {{Item|Surveillance Footage|20|x=1}})
 {{Dialogue End}}
 
 ===Identify the mastermind according to the surveillance footage{{subst:void|<!--200011018-->}}===
 {{Dialogue Start}}
-:{{tx}}
+
+:'''Bernard:''' ...
+:'''Bernard:''' Hmph! Thanks to you kids, I am worried to death!
+:'''Bernard:''' I damaged the record for Rocky's own good! He's forgone his research because of that Lesley... Not to mention...
+:'''Bernard:''' Not to mention you have no idea what's happening right now. Lesley...
+:'''Bernard:''' Lesley...
+:{{DIcon|Arrow}} Did she say yes?
+::'''Bernard:''' Yes, she said yes.
+:{{DIcon|Arrow}} Did she say no?
+::'''Bernard:''' No, she said yes.
+:{{DIcon|Arrow}} Did something happen to her?
+::'''Bernard:''' No, she is safe and sound. And she said yes to Rocky's confession.
+:'''Bernard:''' But they can't be together.
+:'''Bernard:''' If you think I am the one being difficult here, you are wrong! Don't get ahead of yourself!
+:'''Bernard:''' They can't be together... they will never be together.
+:'''Bernard:''' Do you know why? No, you don't. People rarely understand what a starquake means...
+:'''Bernard:''' With proper protection, a starquake will not cause physical damage to humans.
+:'''Bernard:''' However, the gravitational collapse caused by a starquake will severely change the space-time curvature of the segmentum.
+:'''Bernard:''' For example, the time in Lesley's segmentum was once a straight line like ours. But now, it has been pressed into a huge canyon by gravity.
+:'''Bernard:''' Clearly, a curve is always longer than a straight line. Therefore, the time curve of her segmentum is going to cover several times the length when converted to our timeline.
+:'''Bernard:''' Do you even know what that means?
+:{{DIcon|Arrow}} The flow of time will be different.
+:{{DIcon|Arrow}} I don't get it...
+:{{DIcon|Arrow}} Has she become a god?
+:'''Bernard:''' It means the velocity of our time is different from hers.
+:'''Bernard:''' Since the starquake, the temporal difference between Lesley's and ours will gradually increase. It is possible that the time it takes for her reply to arrive will change from one month to a year, and maybe even ten years.
+:'''Bernard:''' This isn't just about her message, but everything she does. Until she leaves that abnormal gravity environment, every month she spends among the cosmos will equal decades for us.
+:'''Bernard:''' Let's say, if Rocky, including us, is living at a point called "the present."
+:'''Bernard:''' Then in comparison, Lesley...
+:'''Bernard:''' She is living in "the future."
+:'''Bernard:''' ...I used to be a young man once.
+:'''Bernard:''' In my opinion, not being able to be with someone you love is even more cruel than being rejected.
+:{{DIcon|Arrow}} Maybe there are other ways...
+::'''Bernard:''' There aren't any.
+:{{DIcon|Arrow}} At least tell him.
+::'''Bernard:''' And then what?
+:{{DIcon|Arrow}} It's not up to you to decide!
+::'''Bernard:''' If you want to tell him the truth, then tell me &mdash; what can he do?
+:'''Bernard:''' After knowing the truth, Rocky will have to wait ten times longer for a message that should have arrived right away.
+:'''Bernard:''' He would have to live in this lonely "presence" and wait for the "future" containing Lesley to finally come to him.
+:'''Bernard:''' But how much time can he spend waiting?
+:'''Bernard:''' Maybe Lesley will finally return to the space station when he is old and decrepit like me.
+:'''Bernard:''' But the flow of time for her is so slow. Maybe, at that time, she will still be as young as she is today.
+:'''Bernard:''' When that time comes, how are they going to be together?
+:'''Bernard:''' We may transcend space, but time is beyond our reach!
+:'''Bernard:''' You are way too young... you don't understand. Things that require a lot of waiting don't usually end up well.
+:{{DIcon|Arrow}} He will never give up if he doesn't know the truth.
+::'''Bernard:''' Hmph, naive kids.
+:{{DIcon|Arrow}} We better not tell him.
+::'''Bernard:''' Hmph, that's also my plan.
+:{{DIcon|Arrow}} ...
+:'''Bernard:''' At first I thought if I damage the record, take away the parts, and blame everything on the monsters, I could keep Rocky in the hope that, one day the repeater will be repaired.
+:'''Bernard:''' Now, since you have found out, the decision is up to you.
+:'''Bernard:''' I have two signal logs I copied from the repeater, red and blue.
+:'''Bernard:''' The red log contains Lesley's real reply, including the truth about the starquake. To be honest, even I can't imagine what Rocky will do after finding out the truth, given how impulsive he is.
+:'''Bernard:''' The blue log is forged &mdash; in which Lesley refuses Rocky. Don't think about this as cruel. This way, Rocky won't have to wait for her reply in the future. He can just move on with his life.
+:'''Bernard:''' Let's call these "the red truth" and "the blue lie." It's up to you to decide which one you want to give to him.
+:'''Bernard:''' Take them and give it some thought. Rocky is waiting for your news.
+;(Obtain {{Item|Red Signal Log|20|x=1}})
 {{Dialogue End}}
 
 ===Tell the young man the truth or a lie{{subst:void|<!--200011009-->}}===
 {{Mission Description|type=adventure|location=Master Control Zone|update|So everything Bernard did was to cover up the brutal truth: That gravitational effects have caused a change in the spacetime curvature near the planet the research team was on. The two lovers are now separated into two different space-time coordinates.<br />To him, she has become a ghost that wanders in the future. And to her, he has long grown old and perished. He may have to wait an entire lifetime for them to speak to one another just once.<br />In the end, it is your choice whether to tell him the truth or not.}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Bernard)
+:{{DIcon|Talk}} Do you think Lesley likes Rocky?
+::'''Bernard:''' If you ask me, that can only be his wishful thinking! That can only happen in his dreams!
+::'''Bernard:''' Maybe there are so many rumors about that girl that everyone has forgotten one important fact &mdash; her individual capacities are simply extraordinary.
+::'''Bernard:''' Lesley is more than a celebrity. She is a gifted scholar. She's the combined result of her genes and her own efforts. Even her sister Emily won't be able to achieve anything like that.
+::'''Bernard:''' Lesley is a once-in-a-century genius while Rocky is only an ordinary researcher.
+::'''Bernard:''' Tell me, do you think she'll like him?
+:;(Return to previous option selection)
+:{{DIcon|Talk}} Will you support them being together?
+::'''Bernard:''' How am I supposed to comment on something like that? Would you prepare for an opening speech for the Genius Society? You won't!
+::'''Bernard:''' It's just something impossible!
+::'''Bernard:''' If Lesley really says yes to Rocky, he'll have to work hard. Otherwise, the gap between them will be too big and their lifestyles will be too different. Even if they are together, they will fight a lot.
+::'''Bernard:''' I'm old. I can't bear to see people break up. If they want to be together in the long run, Rocky will have to toughen up himself!
+::'''Bernard:''' Ehem... Look what I said! Nonsense! Nonsense!
+:;(Return to previous option selection)
+:{{DIcon|Talk}} How do you evaluate the invasion?
+::'''Bernard:''' Expected, both for the invasion itself and the survival of the space station.
+::'''Bernard:''' I had no doubt that any external attack will be unable to destroy the space station.
+::'''Bernard:''' Because I know the worse issue lies in internal distortion instead of external disturbance.
+::'''Bernard:''' If conflicts and contempts continue to exist among different departments, I'm afraid the space station will collapse before I die. Its own issue leads to its internal disintegration!
+:;(Return to previous option selection)
+:{{DIcon|Exit}} I don't have any other questions.
+::'''Bernard:''' You are a youngster too. Your words are more influential than mine. When you have time, please talk to my student.
+::'''Bernard:''' Sigh. It's my misfortune as well as the Department of Cosmic Geography's misfortune!
+
+;(Talk to Rocky)
+:'''Rocky:''' Bro, you're back! While you were away, I wrote another poem called "Praise Lesley."
+:'''Rocky:''' Did you fix the repeater? I see you are holding decoded backups... Hehe, which one is for me?
+:{{DIcon|Arrow}} The Red truth.
+::'''Rocky:''' You seem hesitant. Are you sure the red one is for me?
+:{{DIcon|Arrow}} The Blue lie.
+::'''Rocky:''' You seem hesitant. Are you sure the blue one is for me?
+:{{DIcon|Arrow}} Yes, I am.
+:<pre>{
+	"$type": "RPG.GameCore.ConsumeMissionItemPerformance",
+	"SubMissionID": 200011010,
+	"Desc": {
+		"Hash": 1336016129373125522
+	},
+	"OnSubmitConfirm": [
+		{
+			"$type": "RPG.GameCore.TriggerCustomStringOnDialogEnd",
+			"CustomString": {
+				"Value": "Mission_200011010"
+			}
+		},
+		{
+			"$type": "RPG.GameCore.EndPerformance"
+		}
+	],
+	"OnSubmitCancel": [
+		{
+			"$type": "RPG.GameCore.EndPerformance"
+		}
+	],
+	"SimpleTalk": {}
+}</pre>
+:{{DIcon|Exit}} Let me think...
+::'''Rocky:''' Sure, take your time.
+:'''Rocky:''' Okay. I'll read it now. Thank you, bro!
+:'''Rocky:''' I can't believe it... Lesley said yes, but the starquake...
+:'''Rocky:''' I... I can't get my head around this...
+:'''Rocky:''' So... Because of the gravitational effect of the starquake, every month she spends in her time will be decades for me. Am I going to be as old as my master when she's back?
+:'''Rocky:''' Is my interpretation correct? (Trailblazer), help me take a look. I'm a bit slow. Is that what she means?
+:{{DIcon|Arrow}} I think so.
+:{{DIcon|Arrow}} This is not up to you.
+:'''Rocky:''' She has gone to the future, and I am left in the present... Is this what happened?
+:'''Rocky:''' The decades I spend thinking about her will only be a fleeting moment for her, right?
+:'''Rocky:''' Who would've thought that even time can be so unfair.
+:'''Rocky:''' ...
+:'''Rocky:''' I guess it's unrealistic to hope that she will come back. Even if she travels for months and crosses light-years, I will have become an old man in my time.
+:'''Rocky:''' Spending my whole life waiting for someone and enduring endless longing and loneliness...
+:'''Rocky:''' Come on, bro, do you really think I'm that naive?
+:'''Rocky:''' Haha! Of course I'm not going to wait for her! I won't!
+:{{DIcon|Arrow}} That was unexpected...
+:{{DIcon|Arrow}} Smart choice.
+:{{DIcon|Arrow}} ...
+:'''Rocky:''' I am not going to wait for her...
+:'''Rocky:''' But I can go after her. I am going to chase after time!
+:'''Rocky:''' Since her time-space curve has become a canyon, wouldn't it be better for me to travel past this canyon instead of waiting for her to come back?
+:'''Rocky:''' Maybe it will take me ten years to find her, who has only spent a month. But once I do that, our time will be synchronized. It's better than sitting here and doing nothing.
+:'''Rocky:''' Don't you agree?
+:'''Rocky:''' No, no matter what you think, (Trailblazer), I've decided! I should inform my master as soon as possible, pack my things, and set off on my journey to find Lesley.
+:'''Rocky:''' I'm already tired of this place... As a member of the Herta Department of Cosmic Geography, I haven't even seen the real cosmos. Isn't it embarrassing?
+:'''Rocky:''' I'm sure you are just as curious as I am about the scenery in deep space.
+:{{DIcon|Arrow}} What resides in the deep space?
+::'''Rocky:''' Spectacular wonders, enigmatic dangers, and the woman I am chasing after...
+:{{DIcon|Arrow}} It may be full of dangers.
+::'''Rocky:''' Maybe... It may be full of spectacular wonders, enigmatic dangers, but it will also have the woman I am chasing after...
+:{{DIcon|Arrow}} That never crossed my mind...
+::'''Rocky:''' At least for me, there are lonely wonders, the mysterious charm of danger, and the person I am chasing after...
+:'''Rocky:''' When I find Lesley one day, I will come back and tell you everything I witnessed on my journey...
+:'''Rocky:''' By then, I will invite you to be our {{MC|f=bridesmaid|m=best man}}. Don't you forget it.
+:'''Rocky:''' Well, this poem is for you. Goodbye, my friend.
+;(Screen fades to black)
+:Darkness is gathering in the distance, using cruel methods...
+:To dissect time. Petals inquiring for love are falling,
+:Like the ticking chimes in an infinite time and space. We have no choice,
+:But to slide into the shivering calamities of the universe as if sliding down a slope into dusk.
+:And with that, the stars continue their enjoyment above as their elegant smiles fill the way forward.
+----
+:'''Rocky:''' Okay. I'll read it now. Thank you, bro!
+:'''Rocky:''' I can't believe it... Lesley rejected me?
+:'''Rocky:''' I tried so hard... I answered all the questions she asked. I laughed at every joke she made...
+:'''Rocky:''' You've seen our messages, right? She cares about me and she comforts me... is that how colleagues behave?
+:{{DIcon|Arrow}} Maybe she has her own reason...
+::'''Rocky:''' Reason? What kind of reason... She's bathing in divine blessings, she receives first-hand information and gets to work with top researchers...
+::'''Rocky:''' If she really has a reason, I am the only one to blame... I've been hassling her without knowing the boundaries...
+:{{DIcon|Arrow}} It's not your fault...
+::'''Rocky:''' Whose fault is it then? Lesley's?
+:{{DIcon|Arrow}} There's plenty of fish in the sea.
+::'''Rocky:''' I don't care about other women. I only want Lesley.
+:'''Rocky:''' ...I can't believe this is what I've been waiting for.
+:'''Rocky:''' ...
+:'''Rocky:''' I shouldn't have asked you to fix this. It's so embarrassing.
+:'''Rocky:''' I shouldn't have been so confident. I am only a small potato in the Department of Cosmic Geography, the bottom of the space station's food chain. I must be stupid to think that I'm good enough for a prominent researcher from the Department of Insight.
+:'''Rocky:''' Come to think about it, who is she surrounded with? The aggregated wisdom of the entire cosmos, or even the universe. And who am I? I'm not even in the same league.
+:'''Rocky:''' Heheh... Master's going to lecture me when he sees me being pathetic again.
+:'''Rocky:''' ...
+:{{DIcon|Arrow}} Get some rest.
+::'''Rocky:''' Yeah, you are right.
+::'''Rocky:''' It's just a rejection. It's no big deal to me. If anyone dares to challenge the Department of Cosmic Geography right now, I'm gonna teach them a lesson.
+::'''Rocky:''' A good, violent lesson...
+::'''Rocky:''' I better hide these poems. I can't let anyone see them.
+::'''Rocky:''' They are ridiculous, aren't they?
+::'''Rocky:''' Bro, if you want to laugh, laugh. There's no need to hold back.
+::'''Rocky:''' What the heck? Why is there talcum powder in my eyes... Ridiculous, just like my poems.
+:{{DIcon|Arrow}} Your research is more important!
+::'''Rocky:''' Yeah, you are right.
+::'''Rocky:''' It's just a rejection. It's no big deal to me. But what am I going to do with these rocks? Ridiculous carvings...
+::'''Rocky:''' I even gave away my Astro Rod... I better go and apologize to my master. There should be another one in the space station. It's not anything expensive anyway...
+::'''Rocky:''' I should shift my focus back to my research. After all, some people's recognition... doesn't matter. Recognition from my colleagues is what matters.
+::'''Rocky:''' One day, one day someone will see my advantages.
+::'''Rocky:''' ... Am I right?
+::'''Rocky:''' ... Well, some talcum powder got into my eyes. Who would've thought it could get into my eyes...
+:'''Rocky:''' I should go fix it. See you, bro.
+----
 {{Dialogue End}}
 
 ==Other Languages==

@@ -38,12 +38,40 @@ PageTitle=#New Teas Coming Up#
 ===Speak to Boss Du at Aurum Alley{{subst:void|<!--302020501-->}}===
 {{Mission Description|type=daily|location=Aurum Alley|As Aurum Alley's clientele continues to grow, so too do those visiting Du's Teahouse. Boss Du is specially proud of his tea shop's signature Flaming Potent Tea, but in recent days, he keeps getting negative feedback from his customers...<br />Boss Du is determined to meet the customer's tastes and develop some new teas for his business. However, before he can release these new drinks to the public, he still wants to hear your opinion...}}
 {{Dialogue Start}}
-:{{tx}}
+
+
+;(Talk to Boss Du)
+;(If {{cx}}<!--during performance 502058101-->)
+::'''Boss Du:''' Welcome, customer. Would you like a mug of ninety-percent strong Flaming Potent Tea?
+::{{DIcon|Arrow}} You need to explain what is Flaming Potent Tea first.
+:::'''Boss Du:''' Flaming Potent Tea is a tea that is combustible. I guess I don't have to explain what "tea" and "combustible" mean, right?
+::{{DIcon|Arrow}} Sure! I'm a tea-lover.
+:::'''Boss Du:''' Please allow me to remind you that my tea is different from that made by the Sleepless Earl. In case you didn't catch it the first time, I want to emphasize this again &mdash; my Flaming Potent Tea is combustible.
+::{{DIcon|Arrow}} Please elaborate what "tea" and "combustible" mean.
+:::Boss Du lets out a deep sigh.
+:::'''Boss Du:''' ...All right. "Combustion" refers to the chemical reaction that occurs between a combustible material and an oxidizer when the former reaches its ignition point.
+:::'''Boss Du:''' As for "tea"... it usually refers to drinks made from plants. Different teas vary in taste. Flaming Potent Tea is characterized by its pungent and burning taste, and a unique process of production that includes fermentation and distillation. Therefore, drinking too much Flaming Potent Tea may be harmful to your health.
+:::{{DIcon|Arrow}} Alright. Stop muddling. This is alcohol, isn't it?
+::::'''Boss Du:''' No, this is tea.
+::::'''Boss Du:''' According to the regulations issued by the Realm-Keeping Commission, we can only sell TEA to customers. I hope you can understand, dear customer.
+:::{{DIcon|Arrow}} Wonderful! This is exactly what I need.
+:::{{DIcon|Arrow}} If you say so.
+::::'''Boss Du:''' Good, I can tell that you've understood the essence of Flaming Potent Tea. Why bother with its name, or its true composition? Just enjoy your life and drink away all your sorrows... with tea, of course.
+::{{DIcon|Arrow}} Alright. Stop muddling. This is alcohol, isn't it?
+:::'''Boss Du:''' No, this is tea.
+:::'''Boss Du:''' According to the regulations issued by the Realm-Keeping Commission, we can only sell TEA to customers. I hope you can understand, dear customer.
+::'''Boss Du:''' Since you're a new face here, please accept this cup of Flaming Potent Tea as a token of my goodwill. It's on the house.
+::'''Boss Du:''' My tea house may be inconspicuous, but the most influential persons in Exalting Sanctum would come here for tea. Of course, you are free to take a seat here and share your stories.
+;(If {{cx}}<!--not during performance 502058101-->)
+:<pre>{
+	"$type": "RPG.GameCore.PlayMultiVoiceTalk",
+	"TalkSentenceID": 502058301
+}</pre>
 {{Dialogue End}}
 
 ===Taste the new Flaming Potent Tea{{subst:void|<!--302020502-->}}===
 {{Dialogue Start}}
-:{{tx}}
+
 {{Dialogue End}}
 
 ==Other Languages==

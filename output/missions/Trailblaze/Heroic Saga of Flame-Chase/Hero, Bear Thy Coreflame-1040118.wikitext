@@ -39,41 +39,522 @@ PageTitle=#Hero, Bear Thy Coreflame#
 -->
 ==Dialogue==
 {{Stub Dialogue}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+----
+:Within Amphoreus, at (Trailblazer)'s private bath chamber...
+:{{A|VO chapter4 9 mem 123.ogg}} '''Mem:''' Good thing you're finally up! Or that Giant's light is going to give you a sunburn!
+:{{A|VO chapter4 9 danheng 116.ogg}} '''Dan Heng:''' They've been this excited for a while now... What did you feed them?
+:{{DIcon|Arrow}} More like they snuck food themself.
+::{{A|VO chapter4 9 mem 124.ogg}} '''Mem:''' Hmph, really now? I wouldn't do something like that!
+::{{A|VO chapter4 9 mem 125.ogg}} '''Mem:''' Hmm... but come to think of it, I don't remember when the last time I ate something was...
+::They don't seem to need food.
+:{{DIcon|Arrow}} They don't seem to need food.
+:{{A|VO chapter4 9 mem 126.ogg}} '''Mem:''' Says who! I'm still a... a cute and tiny animal, alright!
+:{{A|VO chapter4 9 mem 127.ogg}} '''Mem:''' Hmm? But come to think of it... I don't remember when the last time I ate something was...
+:{{A|VO chapter4 9 danheng 117.ogg}} '''Dan Heng:''' ...Forget it. You can skip the translation. I can somehow tell that none of that chatter's meaningful.
+:{{tx}}
 {{Dialogue End}}
 
 ===Head to the Vortex of Genesis{{subst:void|<!--104011002-->}}===
 {{Mission Description|type=trailblaze|location="Eternal Holy City" Okhema|update|The battle with Nikador ends with the Chrysos Heirs' victory. We return to Okhema to rest and recover. Together, we will witness the return of the Titan's Coreflame and the start of the Coreflame's trial.}}
 {{Dialogue Start}}
-:{{tx}}
 {{Dialogue End}}
 
 ===Wait for Phainon to start the Coreflame's trial{{subst:void|<!--104011003-->}}===
 {{Dialogue Start}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
 :{{tx}}
+;(Unused &mdash; TriggerStellaPerformance)
+----
+::{{tx}}
+:<pre>{
+	"$type": "RPG.GameCore.EnablePlayerPlayIdleShow"
+}</pre>
+::{{A|VO chapter4 9 danheng 120.ogg}} '''Dan Heng:''' What a... mysterious ritual. Is there really nothing we can do but wait?
+::{{A|VO chapter4 9 danheng 121.ogg}} '''Dan Heng:''' I don't know about the rest of them, but I don't like to just sit by and wait for my fate to be decided.
+
+;(Talk to Tides of the Basin)
+<pre>{
+	"$type": "RPG.GameCore.TutorialTaskUnlock",
+	"TriggerParam": {
+		"Value": "TitanAtlas"
+	}
+}</pre>
+::...The day is silent, and darkness has taken the stage...
+::...Flames rise higher, and drums fall like rain...
+::...Warriors soaked in golden blood, their cloaks tattered...
+::...Bronze shields you, and brass echoes my sorrow...
+::...
+::{{DIcon|Shop}} Enter Tidal Bounty
+::<pre>{
+	"$type": "RPG.GameCore.SetPerformanceResult",
+	"Value": 2
+}</pre>
+::{{DIcon|Loupe}} Listen to the Voice of Constellation
+::<pre>{
+	"$type": "RPG.GameCore.SetPerformanceResult",
+	"Value": 1
+}</pre>
+::{{DIcon|Exit}} Leave
+;(Return to previous option selection)
+
+;(Unused &mdash; Ui.KraterSubmit.WorldShop.KraterWorldShopPage)
+<pre>{
+	"$type": "RPG.GameCore.HideAllEntity",
+	"IsHide": true,
+	"HideNPC": true,
+	"NotHideEntity": []
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.HideAllEntity",
+	"IsHide": true,
+	"HideNPC": true,
+	"HideProp": true,
+	"NotHideEntity": [
+		{
+			"GroupID": 22,
+			"GroupNpcID": 300001
+		},
+		{
+			"GroupID": 22,
+			"GroupNpcID": 300002
+		},
+		{
+			"GroupID": 22,
+			"GroupNpcID": 300003
+		},
+		{
+			"GroupID": 9,
+			"GroupNpcID": 300001
+		},
+		{
+			"GroupID": 9,
+			"GroupNpcID": 300002
+		},
+		{
+			"GroupID": 9,
+			"GroupNpcID": 300003
+		},
+		{
+			"GroupID": 9,
+			"GroupNpcID": 300004
+		},
+		{
+			"GroupID": 9,
+			"GroupNpcID": 300005
+		},
+		{
+			"GroupID": 9,
+			"GroupNpcID": 300006
+		},
+		{
+			"GroupID": 9,
+			"GroupNpcID": 300007
+		},
+		{
+			"GroupID": 9,
+			"GroupNpcID": 300008
+		},
+		{
+			"GroupID": 9,
+			"GroupNpcID": 300009
+		},
+		{
+			"GroupID": 9,
+			"GroupNpcID": 300010
+		},
+		{
+			"GroupID": 9,
+			"GroupNpcID": 300011
+		},
+		{
+			"GroupID": 9,
+			"GroupNpcID": 300012
+		},
+		{
+			"GroupID": 9,
+			"GroupNpcID": 300013
+		}
+	]
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.ShowUI",
+	"Name": "Ui.KraterSubmit.WorldShop.KraterWorldShopPage",
+	"WaitForExit": true,
+	"OnUIEnter": [],
+	"OnUIExitImmediately": [
+		{
+			"$type": "RPG.GameCore.HideAllEntity",
+			"HideNPC": true,
+			"HideProp": true,
+			"NotHideEntity": []
+		},
+		{
+			"$type": "RPG.GameCore.EndDialogueEntityInteract"
+		}
+	]
+}</pre>
+
+;(Unused &mdash; Ui.KraterSubmit.TitanAtlas.TitanAtlasHandbookPage)
+<pre>{
+	"$type": "RPG.GameCore.ShowUI",
+	"Name": "Ui.KraterSubmit.TitanAtlas.TitanAtlasHandbookPage",
+	"WaitForExit": true,
+	"OnUIEnter": [],
+	"OnUIExitImmediately": [
+		{
+			"$type": "RPG.GameCore.TriggerCustomString",
+			"CustomString": {
+				"Value": "WorldShopMission"
+			}
+		}
+	]
+}</pre>
+
+;(Unused &mdash; WorldShopMission)
+<pre>{
+	"$type": "RPG.GameCore.TutorialTaskUnlock",
+	"TriggerParam": {
+		"Value": "KraterOfferingWorldShop"
+	}
+}</pre>
+::As the echoes of the constellations fall silent, the next sound to meet your ears is... waves?
+::{{A|VO vo ambient w4 v300 greeting taitanyiyu 001.ogg}} (Titan's murmurs)
+::The unfamiliar call carries a longing to take your soul's essence into the pool...
+::{{DIcon|Shop}} Enter Tidal Bounty
+::{{DIcon|Loupe}} Listen to the Voice of Constellation
+::{{DIcon|Exit}} Leave
+:<pre>{
+	"$type": "RPG.GameCore.HideAllEntity",
+	"IsHide": true,
+	"HideNPC": true,
+	"NotHideEntity": []
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.HideAllEntity",
+	"IsHide": true,
+	"HideNPC": true,
+	"HideProp": true,
+	"NotHideEntity": [
+		{
+			"GroupID": 22,
+			"GroupNpcID": 300001
+		},
+		{
+			"GroupID": 22,
+			"GroupNpcID": 300002
+		},
+		{
+			"GroupID": 22,
+			"GroupNpcID": 300003
+		},
+		{
+			"GroupID": 9,
+			"GroupNpcID": 300001
+		},
+		{
+			"GroupID": 9,
+			"GroupNpcID": 300002
+		},
+		{
+			"GroupID": 9,
+			"GroupNpcID": 300003
+		},
+		{
+			"GroupID": 9,
+			"GroupNpcID": 300004
+		},
+		{
+			"GroupID": 9,
+			"GroupNpcID": 300005
+		},
+		{
+			"GroupID": 9,
+			"GroupNpcID": 300006
+		},
+		{
+			"GroupID": 9,
+			"GroupNpcID": 300007
+		},
+		{
+			"GroupID": 9,
+			"GroupNpcID": 300008
+		},
+		{
+			"GroupID": 9,
+			"GroupNpcID": 300009
+		},
+		{
+			"GroupID": 9,
+			"GroupNpcID": 300010
+		},
+		{
+			"GroupID": 9,
+			"GroupNpcID": 300011
+		},
+		{
+			"GroupID": 9,
+			"GroupNpcID": 300012
+		},
+		{
+			"GroupID": 9,
+			"GroupNpcID": 300013
+		}
+	]
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.ShowUI",
+	"Name": "Ui.KraterSubmit.WorldShop.KraterWorldShopPage",
+	"WaitForExit": true,
+	"OnUIEnter": [],
+	"OnUIExitImmediately": [
+		{
+			"$type": "RPG.GameCore.HideAllEntity",
+			"HideNPC": true,
+			"HideProp": true,
+			"NotHideEntity": []
+		},
+		{
+			"$type": "RPG.GameCore.EndDialogueEntityInteract"
+		},
+		{
+			"$type": "RPG.GameCore.TriggerPerformance",
+			"ValueSource": {},
+			"PerformanceType": "E",
+			"PerformanceID": 504045003,
+			"MaskConfig": {}
+		}
+	]
+}</pre>
+
+;(Unused &mdash; TriggerKrater_Levelup)
+;(If {{cx}}<!--not during performance 504045001-->)
+:<pre>{
+	"$type": "RPG.GameCore.RandomConfig",
+	"OddsList": [
+		{
+			"FixedValue": {
+				"Value": 1
+			}
+		},
+		{
+			"FixedValue": {
+				"Value": 1
+			}
+		},
+		{
+			"FixedValue": {
+				"Value": 1
+			}
+		}
+	],
+	"TaskList": [
+		{
+			"$type": "RPG.GameCore.PlayVoice",
+			"VoiceIDs": [
+				504045004
+			]
+		},
+		{
+			"$type": "RPG.GameCore.PlayVoice",
+			"VoiceIDs": [
+				504045005
+			]
+		},
+		{
+			"$type": "RPG.GameCore.PlayVoice",
+			"VoiceIDs": [
+				504045006
+			]
+		}
+	],
+	"RandomMaskTarget": {
+		"$type": "RPG.GameCore.TargetAlias",
+		"Alias": "Caster"
+	}
+}</pre>
+
+;(Unused &mdash; TriggerKrater_Put)
+;(If {{cx}}<!--not during performance 504045001-->)
+:<pre>{
+	"$type": "RPG.GameCore.RandomConfig",
+	"OddsList": [
+		{
+			"FixedValue": {
+				"Value": 1
+			}
+		},
+		{
+			"FixedValue": {
+				"Value": 1
+			}
+		},
+		{
+			"FixedValue": {
+				"Value": 1
+			}
+		}
+	],
+	"TaskList": [
+		{
+			"$type": "RPG.GameCore.PlayVoice",
+			"VoiceIDs": [
+				504045007
+			]
+		},
+		{
+			"$type": "RPG.GameCore.PlayVoice",
+			"VoiceIDs": [
+				504045008
+			]
+		},
+		{
+			"$type": "RPG.GameCore.PlayVoice",
+			"VoiceIDs": [
+				504045009
+			]
+		}
+	],
+	"RandomMaskTarget": {
+		"$type": "RPG.GameCore.TargetAlias",
+		"Alias": "Caster"
+	}
+}</pre>
+
+;(Unused &mdash; TriggerKrater_Out)
+;(If {{cx}}<!--not during performance 504045001-->)
+:<pre>{
+	"$type": "RPG.GameCore.RandomConfig",
+	"OddsList": [
+		{
+			"FixedValue": {
+				"Value": 1
+			}
+		},
+		{
+			"FixedValue": {
+				"Value": 1
+			}
+		}
+	],
+	"TaskList": [
+		{
+			"$type": "RPG.GameCore.PlayVoice",
+			"VoiceIDs": [
+				504045010
+			]
+		},
+		{
+			"$type": "RPG.GameCore.PlayVoice",
+			"VoiceIDs": [
+				504045011
+			]
+		}
+	],
+	"RandomMaskTarget": {
+		"$type": "RPG.GameCore.TargetAlias",
+		"Alias": "Caster"
+	}
+}</pre>
 {{Dialogue End}}
 
 ===Chat with the Chrysos Heirs{{subst:void|<!--104011004-->}}===
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Aglaea)
+:{{A|VO chapter4 9 aglaea 123.ogg}} '''Aglaea:''' Phainon steers his own fate.
+:{{A|VO chapter4 9 aglaea 124.ogg}} '''Aglaea:''' There will come a day when he leads everyone &mdash; everyone we have left &mdash; through the gates of the miracle.
+
+;(Talk to Trinnon)
+:{{A|VO chapter4 9 trinnon 128.ogg}} '''Trinnon:''' Zzz... Zzz...
+:{{A|VO chapter4 9 trinnon 129.ogg}} '''Trinnon:''' Snowy... zzz... will succeed...
+
+;(Talk to Castorice)
+:{{A|VO chapter4 9 castorice 144.ogg}} '''Castorice:''' Wherever he is, whatever he is fighting, I pray he makes it through this test.
 {{Dialogue End}}
 
 ===Speak with Aglaea{{subst:void|<!--104011006-->}}===
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Aglaea)
+:{{A|VO chapter4 9 aglaea 117.ogg}} '''Aglaea:''' Phainon steers his own fate.
+:{{A|VO chapter4 9 aglaea 118.ogg}} '''Aglaea:''' If he can conquer his fear and return as a demigod, we will be one step closer to the miracle that the prophecy promised.
+:{{DIcon|Arrow}} You have a lot of faith in him.
+:{{DIcon|Arrow}} What if he fails?
+::{{A|VO chapter4 9 aglaea 119.ogg}} '''Aglaea:''' ...That would mean his time hasn't come yet. And that there is a more arduous mission for him to see through.
+:{{A|VO chapter4 9 aglaea 120.ogg}} '''Aglaea:''' You must have noticed by now. Every Chrysos Heir here bears... a flaw of sorts. Be it the curse of immortality, or the constant erosion of their humanity, or...
+:{{A|VO chapter4 9 aglaea 121.ogg}} '''Aglaea:''' But not Phainon. He is a Chrysos Heir without flaw, a perfect vessel for divinity.
+:{{A|VO chapter4 9 aglaea 122.ogg}} '''Aglaea:''' There will come a day when he leads everyone &mdash; everyone we have left &mdash; through the gates of the miracle.
+
+;(Talk to Trinnon)
+:{{A|VO chapter4 9 trinnon 128.ogg}} '''Trinnon:''' Zzz... Zzz...
+:{{A|VO chapter4 9 trinnon 129.ogg}} '''Trinnon:''' Snowy... zzz... will succeed...
+
+;(Talk to Castorice)
+:{{A|VO chapter4 9 castorice 144.ogg}} '''Castorice:''' Wherever he is, whatever he is fighting, I pray he makes it through this test.
 {{Dialogue End}}
 
 ===(Optional) Speak with Trinnon{{subst:void|<!--104011007-->}}===
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Aglaea)
+:{{A|VO chapter4 9 aglaea 123.ogg}} '''Aglaea:''' Phainon steers his own fate.
+:{{A|VO chapter4 9 aglaea 124.ogg}} '''Aglaea:''' There will come a day when he leads everyone &mdash; everyone we have left &mdash; through the gates of the miracle.
+
+;(Talk to Trinnon)
+:{{A|VO chapter4 9 trinnon 126.ogg}} '''Trinnon:''' Zzz... Zzz...
+:{{A|VO chapter4 9 danheng 122.ogg}} '''Dan Heng:''' Looks like she fell asleep. Presiding over this ritual must take quite a toll.
+:{{A|VO chapter4 9 trinnon 127.ogg}} '''Trinnon:''' Snowy... zzz... will succeed...
+
+;(Talk to Castorice)
+:{{A|VO chapter4 9 castorice 144.ogg}} '''Castorice:''' Wherever he is, whatever he is fighting, I pray he makes it through this test.
 {{Dialogue End}}
 
 ===(Optional) Speak with Castorice{{subst:void|<!--104011009-->}}===
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Aglaea)
+:{{A|VO chapter4 9 aglaea 123.ogg}} '''Aglaea:''' Phainon steers his own fate.
+:{{A|VO chapter4 9 aglaea 124.ogg}} '''Aglaea:''' There will come a day when he leads everyone &mdash; everyone we have left &mdash; through the gates of the miracle.
+
+;(Talk to Trinnon)
+:{{A|VO chapter4 9 trinnon 128.ogg}} '''Trinnon:''' Zzz... Zzz...
+:{{A|VO chapter4 9 trinnon 129.ogg}} '''Trinnon:''' Snowy... zzz... will succeed...
+
+;(Talk to Castorice)
+:{{A|VO chapter4 9 castorice 139.ogg}} '''Castorice:''' I pray you truly are prepared, Lord Phainon.
+:{{DIcon|Arrow}} You seem worried.
+::{{A|VO chapter4 9 castorice 140.ogg}} '''Castorice:''' I spoke at length with Lord Phainon before. There was hesitation in his words.
+:{{DIcon|Arrow}} You spoke to him?
+::{{A|VO chapter4 9 castorice 141.ogg}} '''Castorice:''' Yes, there was hesitation in his words.
+:{{A|VO chapter4 9 castorice 142.ogg}} '''Castorice:''' The manifestation of the prophecy must have seen this. It saw Lord Phainon's heart wavering.
+:{{A|VO chapter4 9 castorice 143.ogg}} '''Castorice:''' Wherever he is, whatever he is fighting, I pray he makes it through this test.
 {{Dialogue End}}
 
 ===Chat with the Chrysos Heirs{{subst:void|<!--104011010-->}}===
 {{Dialogue Start}}
+----
+:{{tx}}
+:{{A|VO chapter4 9 mydeimos 111.ogg}} '''Mydei:''' Still too late, huh...
+:{{DIcon|Arrow}} Oops, missed the party...
+:{{DIcon|Arrow}} Phainon said you weren't coming.
+:{{A|VO chapter4 9 mydeimos 112.ogg}} '''Mydei:''' The constellation of the {{Rubi|Lance of Fury|Strife Titan}} is already illuminated. That must mean...
+:{{A|VO chapter4 9 castorice 145.ogg}} '''Castorice:''' The Coreflame has been surrendered, but Lord Phainon's test isn't over yet.
+:{{A|VO chapter4 9 castorice 146.ogg}} '''Castorice:''' The prophecy sent an ambassador. They acknowledged Lord Phainon's strength and character, but had doubts about his strength of will.
+:{{A|VO chapter4 9 castorice 147.ogg}} '''Castorice:''' He must conquer his fear and prove himself to the prophecy.
+:{{A|VO chapter4 9 mydeimos 113.ogg}} '''Mydei:''' ...I was right to be worried.
+:{{A|VO chapter4 9 mydeimos 114.ogg}} '''Mydei:''' I want to formally thank you, outsiders. Were it not for your aid, our campaign against {{Rubi|Nikador|Strife Titan}} would have been a hundred times more arduous.
+:{{DIcon|Arrow}} Isn't it nice to be polite?
+::{{A|VO chapter4 9 mydeimos 115.ogg}} '''Mydei:''' Kremnoans revere strength and military might, but that does not mean we lack etiquette.
+::Talk is cheap.
+:{{DIcon|Arrow}} Talk is cheap.
+:{{A|VO chapter4 9 mydeimos 116.ogg}} '''Mydei:''' You are asking for a reward? Not a problem.
+:{{A|VO chapter4 9 mydeimos 117.ogg}} '''Mydei:''' Kremnoans revere strength and military might, but that does not mean we lack etiquette.
+:{{A|VO chapter4 9 danheng 123.ogg}} '''Dan Heng:''' Mydei, what do you mean when you said you were "worried"?
 :{{tx}}
 {{Dialogue End}}
 
@@ -89,7 +570,7 @@ PageTitle=#Hero, Bear Thy Coreflame#
 |ru   = О герой, прими ядро пламени
 |th   = วีรชนเอ๋ย จงไขว่คว้าเชื้อไฟ
 |vi   = Hỡi Anh Hùng, Hãy Nắm Lấy Ngọn Lửa Đó
-|de   = Held, trage die Kernflamme
+|de   = O Held, trage die Kernflamme
 |id   = Wahai Pahlawan, Pertahankan Api Itu
 |pt   = Herói, Carrega Tua Chama Primordial
 }}

@@ -44,32 +44,88 @@ PageTitle=#Stellar Shadowseeker: 7th Stop, Astral Express#
 ===Go to the Parlor Car and take a photo of the subject{{subst:void|<!--800210701-->}}===
 {{Mission Description|type=adventure|location=Parlor Car|The shadowy object in the photo looks somewhat familiar. It must be something aboard the Express...}}
 {{Dialogue Start}}
-:{{tx}}
+:<!--3-second delay-->
+:'''(Trailblazer):''' (Think I saw this when I looked up on the Express...)
 {{Dialogue End}}
 
 ===Ask March 7th for a situation update{{subst:void|<!--800210705-->}}===
 {{Dialogue Start}}
-:{{tx}}
+:<!--1-second delay-->
+:'''(Trailblazer):''' (Just one more pic. This person seems familiar to me...)
+
+;(Unused &mdash; Create_30_300001)
+<pre>{
+	"$type": "RPG.GameCore.AdvCreateGroupEntity",
+	"InstanceIDList": [
+		300001
+	]
+}</pre>
 {{Dialogue End}}
 
 ===Find and capture the subjects based on the photos{{subst:void|<!--800210702-->}}===
 {{Dialogue Start}}
-:{{tx}}
+
 {{Dialogue End}}
 
 ===Take a selfie with March 7th{{subst:void|<!--800210703-->}}===
 {{Dialogue Start}}
-:{{tx}}
+
+
+;(Unused &mdash; Reset_31_300001)
+:;(If {{F|MissionCV-8002107-undefined}} is undefined 0)
+::<pre>{
+	"$type": "RPG.GameCore.AdvDestroyGroupEntity",
+	"InstanceIDList": [
+		300001
+	]
+}</pre>
+::<pre>{
+	"$type": "RPG.GameCore.AdvCreateGroupEntity",
+	"InstanceIDList": [
+		300005
+	]
+}</pre>
+::<pre>{
+	"$type": "RPG.GameCore.SetMissionCustomValue",
+	"SubmissionID": 800210703,
+	"MissionCustomValue": {
+		"Name": "OldValue_0",
+		"isLocal": true,
+		"ValidValueParamList": [
+			0,
+			1
+		]
+	},
+	"CustomValue": 1
+}</pre>
+:;(If {{F|MissionCV-8002107-undefined}} is not undefined 0)
+::<pre>{
+	"$type": "RPG.GameCore.AdvDestroyGroupEntity",
+	"InstanceIDList": [
+		300005
+	]
+}</pre>
+::<pre>{
+	"$type": "RPG.GameCore.AdvCreateGroupEntity",
+	"InstanceIDList": [
+		300005
+	]
+}</pre>
 {{Dialogue End}}
 
 ===Talk to March 7th{{subst:void|<!--800210704-->}}===
 {{Dialogue Start}}
-:{{tx}}
+:<!--2.5-second delay-->
+<pre>{
+	"$type": "RPG.GameCore.ShowUI",
+	"Name": "Ui.Activity.ActivityGuessTheSilhouette.ActivityGuessTheSilhouetteMainPage"
+}</pre>
 {{Dialogue End}}
 
 ===Ask March 7th for a situation update{{subst:void|<!--800210706-->}}===
 {{Dialogue Start}}
-:{{tx}}
+:<!--1-second delay-->
+:'''(Trailblazer):''' (Just one more pic. This person seems familiar to me...)
 {{Dialogue End}}
 
 ==Other Languages==

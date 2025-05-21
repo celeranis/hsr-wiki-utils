@@ -35,12 +35,152 @@ PageTitle=#Eye of the Cosmos#
 -->
 ==Dialogue==
 {{Stub Dialogue}}
+
+
+;(Talk to Wenwen)
+;(If {{cx}}<!--during performance 202080102--> and {{cx}}<!--Hidden Mission ID 2020802--> has been started)
+::'''Wenwen:''' You must be (Trailblazer), right? I've heard a lot about you! I'm Wenwen, a specialist from Heron Express.
+::{{DIcon|Arrow}} That's me.
+::{{DIcon|Arrow}} You've got the wrong person.
+:::'''Wenwen:''' But Xikui gave me a picture of you.
+:::'''Wenwen:''' Don't worry. We're legit.
+::'''Wenwen:''' I believe Xikui has told you that many Heron Express cargo have been lost in transit.
+::'''Wenwen:''' Heron Express wants to commission you to go to the place where these goods were lost and search for them with cycranes from a high vantage point. That would be much more efficient than getting people to manually look for it with just eyes.
+::'''Wenwen:''' Those places are complicated in topography and not very safe... You might encounter some dangers along the way.
+::'''Wenwen:''' If you're ready, we'll go ahead and move out.
+::{{DIcon|Talk}} What am I here to do again?
+:::'''Wenwen:''' Allow me to repeat... Heron Express hopes to entrust you to go to places where the goods went missing and find them by controlling cycranes.
+:::'''Wenwen:''' Side note, these places are not entirely safe, so there might be some dangers along the way. Please be prepared.
+::;(Return to previous option selection)
+::{{DIcon|Arrow}} Let's go.
+:::'''Wenwen:''' What an honor to be able to work alongside {{MC|m=Mr.|f=Ms.}} (Trailblazer)!
+::<pre>{
+	"$type": "RPG.GameCore.SetLocalPlayerDitherAlpha"
+}</pre>
+::<pre>{
+	"$type": "RPG.GameCore.OpenTreasureChallenge",
+	"RaidID": 4122101,
+	"OnCancel": [
+		{
+			"$type": "RPG.GameCore.EndDialogueEntityInteract"
+		},
+		{
+			"$type": "RPG.GameCore.TriggerCustomString",
+			"CustomString": {
+				"Value": "ALL_TALK_END"
+			}
+		}
+	]
+}</pre>
+::{{DIcon|Exit}} Maybe later.
+:::'''Wenwen:''' Sure. Lemme know when you're ready. We'll head out straight away.
+;(Otherwise, if {{cx}}<!--not during performance 202080102--> and {{cx}}<!--Hidden Mission ID 2020802--> has been started)
+::'''Wenwen:''' You're here, (Trailblazer)?
+::'''Wenwen:''' We still have some missing cargo to search for with cycranes... If you have the time, can you come over and lend a helping hand?
+::{{DIcon|Talk}} What am I here to do again?
+:::'''Wenwen:''' Heron Express hopes to entrust you to go to places where the goods went missing and find them by controlling cycranes.
+:::'''Wenwen:''' Side note, these places are not entirely safe, so there might be some dangers along the way. Please be prepared.
+::;(Return to previous option selection)
+::{{DIcon|Arrow}} No problem. Let's go.
+:::'''Wenwen:''' Thank you so much! Let's go. I'll send you there~
+::<pre>{
+	"$type": "RPG.GameCore.SetLocalPlayerDitherAlpha"
+}</pre>
+::<pre>{
+	"$type": "RPG.GameCore.OpenTreasureChallenge",
+	"RaidID": 4122101,
+	"OnCancel": [
+		{
+			"$type": "RPG.GameCore.EndDialogueEntityInteract"
+		},
+		{
+			"$type": "RPG.GameCore.TriggerCustomString",
+			"CustomString": {
+				"Value": "ALL_TALK_END"
+			}
+		}
+	]
+}</pre>
+::{{DIcon|Exit}} I have other things to do...
+:::'''Wenwen:''' No worries... After all, we were the one requesting help. We'll work around your time.
+;(Otherwise)
+:;(If {{cx}}<!--Hidden Mission ID 2020802--> has been completed and {{cx}}<!--during performance 202080104-->)
+:::'''Wenwen:''' (Trailblazer), we meet again.
+:::{{DIcon|Arrow}} You don't need my help again, do you?
+::::'''Wenwen:''' Did I leave such a bad impression on you last time? Hahahaha
+::::'''Wenwen:''' But anyway, if you have time to spare and nothing to do... You catch my drift?
+:::{{DIcon|Arrow}} No items have gone missing recently, right?
+::::'''Wenwen:''' Hahaha. It shouldn't be a regular thing for a logistics company.
+::::'''Wenwen:''' ...Well, Heron Express has indeed lost some items recently. You know what I'm saying?
+:::'''Wenwen:''' Don't get all worked up first. I come bearing good news!
+:::'''Wenwen:''' I have activated permanent access authentication for you. As you already have access to the roost you managed before, {{Color|keyword|nobold=1|you can go back anytime and use the cycranes}} to... uhm... maybe, take photos?
+:::'''Wenwen:''' I'd be even happier if you could help me and Heron Express...
+:;(If {{cx}}<!--Hidden Mission ID 2020802--> has not been completed and {{cx}}<!--not during performance 202080104-->)
+:::'''Wenwen:''' (Trailblazer), we meet again. ...Well, Heron Express has indeed lost some items recently. You know what I'm saying?
+:::'''Wenwen:''' Without your experience and expertise, the retrieval efficiency would simply be disastrous. I have no choice but to ask you to help me and Heron Express...
+::{{DIcon|Talk}} What do I have to do?
+:::'''Wenwen:''' Heron Express hopes to entrust you to go to places where goods have gone missing and find them by controlling cycranes.
+:::'''Wenwen:''' Side note, these places are not entirely safe, so there might be some dangers along the way. Please be prepared.
+::;(Return to previous option selection)
+::{{DIcon|Arrow}} No problem.
+:::'''Wenwen:''' But... our retrieval budget for this has been cut, so we won't able to pay you for your help. Are you still fine with it?
+:::{{DIcon|Arrow}} Say no more. Show me the way.
+::::'''Wenwen:''' ...You're so nice! Let's hit the road right away.
+:::<pre>{
+	"$type": "RPG.GameCore.SetLocalPlayerDitherAlpha"
+}</pre>
+:::<pre>{
+	"$type": "RPG.GameCore.OpenTreasureChallenge",
+	"RaidID": 4122101,
+	"OnCancel": [
+		{
+			"$type": "RPG.GameCore.EndDialogueEntityInteract"
+		},
+		{
+			"$type": "RPG.GameCore.TriggerCustomString",
+			"CustomString": {
+				"Value": "ALL_TALK_END"
+			}
+		}
+	]
+}</pre>
+:::{{DIcon|Exit}} Next time for sure.
+::::'''Wenwen:''' I understand this might be a little too much. Just leave the rest to us.
+::::'''Wenwen:''' ...Still, you are welcome to come find me anytime if you are free!
+::{{DIcon|Exit}} I have other things to do...
+:::'''Wenwen:''' No worries... After all, we were the one requesting help. We'll work around your time.
+;(Unused &mdash; OpenSkyRaid)
+
 {{Dialogue End}}
 
 ===Meet up with Wenwen the Heron Express Specialist and retrieve the package{{subst:void|<!--202080102-->}}===
 {{Mission Description|type=adventure|location=Central Starskiff Haven|update|Heron Express needs an expert cycrane controller to find and retrieve the lost package. Speak with the Heron Express Specialist, Wenwen. She will tell you what to do.}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Unused &mdash; OpenSkyRaid)
+<pre>{
+	"$type": "RPG.GameCore.BlockInputController",
+	"ActionNameList": []
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.OpenTreasureChallenge",
+	"RaidID": 4122101,
+	"OnCancel": [
+		{
+			"$type": "RPG.GameCore.BlockInputController",
+			"Enable": true,
+			"ActionNameList": []
+		}
+	]
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.BlockInputController",
+	"Enable": true,
+	"ActionNameList": []
+}</pre>
+
+;(Unused &mdash; Talk_202080102)
+
 {{Dialogue End}}
 
 ==Other Languages==

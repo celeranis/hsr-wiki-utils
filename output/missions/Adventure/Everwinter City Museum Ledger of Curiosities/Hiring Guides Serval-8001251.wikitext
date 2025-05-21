@@ -39,17 +39,477 @@ PageTitle=#Hiring Guides: Serval#
 ===Go to the Neverwinter workshop to find Serval{{subst:void|<!--800125101-->}}===
 {{Mission Description|type=adventure|location=Neverwinter Workshop|The Belobog History and Culture Museum is about to open, but there is a great lack of guides. To rapidly fill up these positions and improve the visitor experience, Pela and Eris are inviting all Belobog citizens to apply for these positions.<br />This time they have their eye on the talented Serval. Head to the Neverwinter Workshop in their stead, and see whether Serval is interested in the position.}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Serval)
+----
+:'''Serval:''' Hey, isn't this (Trailblazer)? How can I help you?
+:{{DIcon|Arrow}} Are you interested in volunteering at the museum?
+:'''Serval:''' What a coincidence! You came asking about this right after Pela left.
+:'''Serval:''' She passed me an application form and asked me to fill it out, submit it to the museum reception desk, and wait for the call for an interview. I'm still on the fence now.
+:{{DIcon|Arrow}} Apply now! You'll get paid daily and three square meals on the house.
+::'''Serval:''' Well then, the application doesn't sound like too much trouble now.
+:{{DIcon|Arrow}} Seems like you are not interested.
+::'''Serval:''' That's not really the case. I just find the application too troublesome.
+:{{DIcon|Arrow}} My goodness, is it that much of a hassle?
+::'''Serval:''' Haha, exactly... It's typical of the Architects.
+:'''Serval:''' Still, Pela's right. Everyone in this city knows we are friends. We'll get flak if we don't go through the normal process.
+:'''Serval:''' You're here at the right time. Could you take a look at my resume to see if it needs any modifications?
+:{{DIcon|Arrow}} Sure. Leave it to me.
+::'''Serval:''' I know I can always count on you. I'll entrust my resume to you then!
+:{{DIcon|Arrow}} I charge extra for resume writing tips...
+::'''Serval:''' Hey, you're getting better at doing business! How about you help me manage this workshop after you get the museum thing over with?
+::'''Serval:''' Just kidding. Well, I'll entrust my resume to you then.
+<pre>{
+	"$type": "RPG.GameCore.ShowReading",
+	"BookID": {
+		"FixedValue": {
+			"Value": 190452
+		}
+	}
+}</pre>
+:'''Serval:''' Which part of the resume do you think can be improved?
+:{{DIcon|Arrow}} It looks surprisingly formal...
+::'''Serval:''' Haha, it's not like something I would write, isn't it?
+::'''Serval:''' To be honest, back when I was doing research in the Technology Division, I spent 60% of my time dealing with all the messy forms coming from Qlipoth Fort...
+::'''Serval:''' ...to the point where now, whenever I see a form header that says "Belobog," "Silvermane Guards," or "Qlipoth Fort," my hand just starts moving on its own and I can't write anything else.
+::'''Serval:''' But then again, this is the preferred style in the Qlipoth Fort, so it should be fine. Or... do you think I should let loose a little?
+::{{DIcon|Arrow}} You should let loose!
+:::'''Serval:''' Well, what do you think I should write?
+:::{{DIcon|Talk}} You may make changes to the "Name"...
+::::'''Serval:''' Change my name? Seriously?
+::::'''Serval:''' But give it another thought... since you want me to be myself, I'll do it!
+::::'''Serval:''' Write this: "Belobog's one and only rock'n'roll superstar and mechanics genius, Serval Landau." How does that sound?
+::::{{DIcon|Return}} Sounds cool to me! Let's use it.
+:::::'''Serval:''' I knew it! Let's do it!
+::::<pre>{
+	"$type": "RPG.GameCore.SetTextJoinValue",
+	"TextJoinID": 30,
+	"Value": "2"
+}</pre>
+::::;(Return to previous option selection)
+::::{{DIcon|Return}} Forget it. Let's keep it as is.
+:::::'''Serval:''' Sure, it's your decision. Anything else?
+::::;(Return to previous option selection)
+:::{{DIcon|Talk}} You may make changes to the "Personal Experience"...
+::::'''Serval:''' My personal experience... Actually, I can't think of anything else I can include in this column.
+::::'''Serval:''' I have an idea! I'll write about how I helped you guys solve the Stellaron Crisis!
+::::'''Serval:''' Write this: "Assisted wanted outsiders in escaping the pursuit of Silvermane Guards multiple times, and successfully defeated the Silvermane officers and captain in the Stellaron Crisis." What do you think?
+::::{{DIcon|Return}} Sounds cool! Let's put it in.
+:::::'''Serval:''' Great! Let's do it!
+::::<pre>{
+	"$type": "RPG.GameCore.SetTextJoinValue",
+	"TextJoinID": 31,
+	"Value": "2"
+}</pre>
+::::;(Return to previous option selection)
+::::{{DIcon|Return}} Forget it. Let's keep it as is.
+:::::'''Serval:''' Sure, it's your decision. Anything else?
+::::;(Return to previous option selection)
+:::{{DIcon|Talk}} You may make changes to the "Skills & Expertise"...
+::::'''Serval:''' Skills and expertise... I think my list looks too much like a long-winded menu that it can't catch the eye of the reviewer quickly.
+::::'''Serval:''' Let's shorten it: "I'm good at everything other than making money." What do you think?
+::::{{DIcon|Return}} Haha, concise and to the point! Let's use this one.
+:::::'''Serval:''' I deserve a pat on the back! Let's do it!
+::::<pre>{
+	"$type": "RPG.GameCore.SetTextJoinValue",
+	"TextJoinID": 32,
+	"Value": "2"
+}</pre>
+::::;(Return to previous option selection)
+::::{{DIcon|Return}} Forget it. Let's keep it as is.
+:::::'''Serval:''' Sure, it's your decision. Anything else?
+::::;(Return to previous option selection)
+:::{{DIcon|Arrow}} There, it's perfect.
+::::'''Serval:''' Hee-hee, glad to hear that, your words give me confidence.
+::::'''Serval:''' I'll submit this resume in a bit. Come on! Let's go to the museum!
+::::----
+::{{DIcon|Arrow}} This is it. It's already great.
+:::'''Serval:''' Hee-hee, glad to hear that, your words give me confidence.
+:::'''Serval:''' I'll submit this resume in a bit. Come on! Let's go to the museum!
+:::----
+:{{DIcon|Arrow}} I don't think it needs to be modified.
+::'''Serval:''' Hee-hee, glad to hear that, your words give me confidence.
+::'''Serval:''' I'll submit this resume in a bit. Come on! Let's go to the museum!
+::----
 {{Dialogue End}}
 
 ===Head to the Belobog History and Culture Museum to find Eris{{subst:void|<!--800125103-->}}===
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Eris)
+;(If {{cx}}{{subst:void|<!--{"$type":"RPG.GameCore.ByIfGroupIsOccupied","GroupID":38,"Inverse":true}-->}})
+::----
+::'''Serval:''' Hello there, may I hand in the volunteer guide application form to you?
+::'''Eris:''' Hello, Miss Serval! I'll pass your resume on to Miss Pela right away!
+::'''Serval:''' ...So soon!?
+:<pre>{
+	"$type": "RPG.GameCore.TriggerSound",
+	"SoundName": {
+		"Value": "Ev_sfx_belobog_pela_walk_near"
+	},
+	"EmitterType": "LocalPlayer"
+}</pre>
+::----
+::'''Pela:''' ...
+::'''Pela:''' ...*sigh*
+::'''Serval:''' What's with the sighing...
+::'''Pela:''' Nothing. Please follow me to the Rest Area.
+::{{DIcon|Arrow}} Can I take a break now?
+:::'''Pela:''' What are you thinking? Of course not! Surely we need you to be an assistant assessor for the interview. Don't even think about running off.
+::{{DIcon|Arrow}} Seems like time for me to go...
+:::'''Pela:''' Not so fast... You're coming with us. We need you to be an assistant assessor for the interview.
+::'''Serval:''' Ha, there's no escaping it after all..
+::'''Pela:''' But of course, we still have to go through the necessary steps... Besides, I'm really interested in what's on your resume.
+::'''Pela:''' Please get ready for the interview, Serval. As for (Trailblazer), you may get on with your things first. We'll be waiting for you.
+::----
+;(Otherwise)
+:<pre>{
+	"$type": "RPG.GameCore.PlayMultiVoiceTalk",
+	"TalkSentenceID": 501190301
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.ShowMenu"
+}</pre>
+
+;(Talk to Pela)
+----
+<pre>{
+	"$type": "RPG.GameCore.SetMissionCustomValue",
+	"SubmissionID": 800125104,
+	"MissionCustomValue": {
+		"Name": "OldValue_0",
+		"ValidValueParamList": [
+			0,
+			1,
+			2,
+			3,
+			4
+		]
+	}
+}</pre>
+:'''Pela:''' And now you're back, (Trailblazer). Can we begin the interview now?
+:{{DIcon|Arrow}} Let's begin.
+::'''Pela:''' ...Ahem, very well. Please get ready, Miss Serval. The interview is about to begin...
+::'''Serval:''' This is... so formal...
+::'''Pela:''' Well, Miss Serval...
+::'''Pela:''' Wait, let me ask (Trailblazer) something first. Did you provide any help to Miss Serval in completing this resume?
+::{{DIcon|Arrow}} I always like to help other people!
+::<pre>{
+	"$type": "RPG.GameCore.CalculateMissionCustomValue",
+	"TargetSubmissionID": 800125104,
+	"TargetMissionCustomValue": {
+		"Name": "OldValue_0",
+		"ValidValueParamList": [
+			0,
+			1,
+			2,
+			3,
+			4
+		]
+	},
+	"ValueA": {
+		"Type": "CustomValue",
+		"MainMissionID": 8001251,
+		"MissionCustomValue": {
+			"Name": "OldValue_0",
+			"ValidValueParamList": [
+				0,
+				1,
+				2,
+				3,
+				4
+			]
+		}
+	},
+	"ValueB": {
+		"DirectValue": 1,
+		"MissionCustomValue": {
+			"Name": "OldValue_0"
+		}
+	}
+}</pre>
+:::'''Pela:''' ...Hehe, this is getting interesting.
+::{{DIcon|Arrow}} Absolutely not!
+:::'''Pela:''' ...Hehe, I see this is Serval's style. How interesting.
+::'''Serval:''' I'm surprised to see Pela get this serious...
+::'''Pela:''' Ahem, please be quiet.
+::'''Serval:''' You aren't just putting your serious face on, are you?
+::'''Pela:''' Alright Miss Serval, let's go to the next question...
+:<pre>{
+	"$type": "RPG.GameCore.SetMissionCustomValue",
+	"SubmissionID": 800125104,
+	"MissionCustomValue": {
+		"Index": 1,
+		"Name": "OldValue_1",
+		"ValidValueParamList": [
+			1,
+			2,
+			3,
+			4
+		]
+	},
+	"CustomValue": 1
+}</pre>
+:;(If {{cx}}{{subst:void|<!--{"$type":"RPG.GameCore.ByCompareTextJoinValue","TextJoinID":30,"Value":2}-->}})
+:::'''Pela:''' Could you tell me more about your complicated name, "Belobog's one and only rock'n'roll superstar and mechanics genius, Serval Landau"? As far as I know, that's not your real name...
+:::'''Serval:''' Um... About that...
+:::'''Serval:''' (I'm sure Pela asks this on purpose... How should I reply, (Trailblazer)?)
+::<pre>{
+	"$type": "RPG.GameCore.CalculateMissionCustomValue",
+	"TargetSubmissionID": 800125104,
+	"TargetMissionCustomValue": {
+		"Index": 1,
+		"Name": "OldValue_1",
+		"ValidValueParamList": [
+			1,
+			2,
+			3,
+			4
+		]
+	},
+	"ValueA": {
+		"Type": "CustomValue",
+		"MainMissionID": 8001251,
+		"MissionCustomValue": {
+			"Index": 1,
+			"Name": "OldValue_1",
+			"ValidValueParamList": [
+				1,
+				2,
+				3,
+				4
+			]
+		}
+	},
+	"ValueB": {
+		"DirectValue": 1
+	}
+}</pre>
+:::{{DIcon|Arrow}} Just say whatever is on your mind!
+:::<pre>{
+	"$type": "RPG.GameCore.CalculateMissionCustomValue",
+	"TargetSubmissionID": 800125104,
+	"TargetMissionCustomValue": {
+		"Name": "OldValue_0",
+		"ValidValueParamList": [
+			0,
+			1,
+			2,
+			3,
+			4
+		]
+	},
+	"ValueA": {
+		"Type": "CustomValue",
+		"MainMissionID": 8001251,
+		"MissionCustomValue": {
+			"Name": "OldValue_0",
+			"ValidValueParamList": [
+				0,
+				1,
+				2,
+				3,
+				4
+			]
+		}
+	},
+	"ValueB": {
+		"DirectValue": 1,
+		"MissionCustomValue": {
+			"Name": "OldValue_0"
+		}
+	}
+}</pre>
+::::'''Serval:''' You...
+::::'''Serval:''' Ahem! This name... no, this title...
+::::'''Serval:''' {{Size|36|Don't you think it's very rock 'n' roll?}}
+:::{{DIcon|Arrow}} Just say it's my idea...
+::::'''Serval:''' (Trailblazer), that's so you... very bold indeed!
+::::'''Serval:''' Ahem! This name... no, this title...
+::::'''Serval:''' In fact, it's (Trailblazer)'s idea. {{MC|f=She|m=He}} thinks it's a good way to express my personality...
+:::'''Pela:''' ...
+:::'''Pela:''' ...I see. Well, let's move on to the next question...
+:::'''Serval:''' I've never seen Pela looking so intimidating...
+:;(If {{cx}}{{subst:void|<!--{"$type":"RPG.GameCore.ByCompareTextJoinValue","TextJoinID":30,"Value":2}-->}})
+:::'''Pela:''' Name... There's nothing to talk about. Let's check out the next column...
+:;(If {{cx}}{{subst:void|<!--{"$type":"RPG.GameCore.ByCompareTextJoinValue","TextJoinID":31,"Value":2}-->}})
+:::'''Pela:''' About your personal experience, I see that you have "assisted wanted outsiders in escaping the pursuit of Silvermane Guards multiple times, and successfully defeated the Silvermane officers and captain in the Stellaron Crisis"...
+:::'''Pela:''' That's a remarkable achievement! Do you mind describing this story in detail?
+:::'''Serval:''' Ahem...
+::<pre>{
+	"$type": "RPG.GameCore.CalculateMissionCustomValue",
+	"TargetSubmissionID": 800125104,
+	"TargetMissionCustomValue": {
+		"Index": 1,
+		"Name": "OldValue_1",
+		"ValidValueParamList": [
+			1,
+			2,
+			3,
+			4
+		]
+	},
+	"ValueA": {
+		"Type": "CustomValue",
+		"MainMissionID": 8001251,
+		"MissionCustomValue": {
+			"Index": 1,
+			"Name": "OldValue_1",
+			"ValidValueParamList": [
+				1,
+				2,
+				3,
+				4
+			]
+		}
+	},
+	"ValueB": {
+		"DirectValue": 1
+	}
+}</pre>
+:::{{DIcon|Arrow}} Since she's so interested, just tell her!
+:::<pre>{
+	"$type": "RPG.GameCore.CalculateMissionCustomValue",
+	"TargetSubmissionID": 800125104,
+	"TargetMissionCustomValue": {
+		"Name": "OldValue_0",
+		"ValidValueParamList": [
+			0,
+			1,
+			2,
+			3,
+			4
+		]
+	},
+	"ValueA": {
+		"Type": "CustomValue",
+		"MainMissionID": 8001251,
+		"MissionCustomValue": {
+			"Name": "OldValue_0",
+			"ValidValueParamList": [
+				0,
+				1,
+				2,
+				3,
+				4
+			]
+		}
+	},
+	"ValueB": {
+		"DirectValue": 1,
+		"MissionCustomValue": {
+			"Name": "OldValue_0"
+		}
+	}
+}</pre>
+::::'''Serval:''' You have a point...
+::::'''Serval:''' So, this is what happened at that time...
+::::'''Pela:''' ...
+::::'''Pela:''' Wow, I didn't actually expect you to recount the whole story...
+:::{{DIcon|Arrow}} It's not too late to apologize to Pela now...
+::::'''Serval:''' You're right... Sincerity is the best policy!
+::::'''Serval:''' {{Size|36|I'm sorry, the great Intelligence Officer of the Silvermane Guards!}}
+::::'''Serval:''' I shouldn't have included this in my resume...
+::::'''Pela:''' ...
+::::'''Pela:''' ...Hehe, how interesting.
+:;(If {{cx}}{{subst:void|<!--{"$type":"RPG.GameCore.ByCompareTextJoinValue","TextJoinID":31,"Value":2}-->}})
+:::'''Pela:''' You certainly have an impressive personal experience. Now, let's check out the next column...
+:;(If {{cx}}{{subst:void|<!--{"$type":"RPG.GameCore.ByCompareTextJoinValue","TextJoinID":32,"Value":2}-->}})
+:::'''Pela:''' For skills and expertise, you say you are "good at everything except making money." How concise and to the point!
+:::'''Pela:''' For your information, Miss Serval, we're running the museum like a business... What should we do if your inability leads to the mismanagement of the museum?
+:::'''Serval:''' Well...
+:::'''Serval:''' ((Trailblazer), did you see that!? She laughed, didn't she?)
+::<pre>{
+	"$type": "RPG.GameCore.CalculateMissionCustomValue",
+	"TargetSubmissionID": 800125104,
+	"TargetMissionCustomValue": {
+		"Index": 1,
+		"Name": "OldValue_1",
+		"ValidValueParamList": [
+			1,
+			2,
+			3,
+			4
+		]
+	},
+	"ValueA": {
+		"Type": "CustomValue",
+		"MainMissionID": 8001251,
+		"MissionCustomValue": {
+			"Index": 1,
+			"Name": "OldValue_1",
+			"ValidValueParamList": [
+				1,
+				2,
+				3,
+				4
+			]
+		}
+	},
+	"ValueB": {
+		"DirectValue": 1
+	}
+}</pre>
+:::{{DIcon|Arrow}} Just say you will compensate for the loss! What else can you do?
+:::<pre>{
+	"$type": "RPG.GameCore.CalculateMissionCustomValue",
+	"TargetSubmissionID": 800125104,
+	"TargetMissionCustomValue": {
+		"Name": "OldValue_0",
+		"ValidValueParamList": [
+			0,
+			1,
+			2,
+			3,
+			4
+		]
+	},
+	"ValueA": {
+		"Type": "CustomValue",
+		"MainMissionID": 8001251,
+		"MissionCustomValue": {
+			"Name": "OldValue_0",
+			"ValidValueParamList": [
+				0,
+				1,
+				2,
+				3,
+				4
+			]
+		}
+	},
+	"ValueB": {
+		"DirectValue": 1,
+		"MissionCustomValue": {
+			"Name": "OldValue_0"
+		}
+	}
+}</pre>
+::::'''Serval:''' ...You only say that because it isn't your money.
+::::'''Serval:''' Miss Pela, this is what I think about this issue...
+::::'''Serval:''' If the mismanagement is the result of my individual mistake, I'll bear the loss and even pay compensation!
+::::'''Pela:''' ...That's quite admirable.
+:::{{DIcon|Arrow}} Maybe this job isn't for you after all...
+::::'''Serval:''' I'm aware of this problem too...
+::::'''Serval:''' Miss Pela, this is what I think about this issue...
+::::'''Serval:''' ...You're right! As someone who finds it hard to make money, I'm not suitable for a job like this!
+::::'''Pela:''' ...Are you really the Serval I know!?
+:;(If {{cx}}{{subst:void|<!--{"$type":"RPG.GameCore.ByCompareTextJoinValue","TextJoinID":32,"Value":2}-->}})
+:::'''Pela:''' You have a long list of skills and expertise. You're indeed very capable. Everyone can see that.
+::'''Pela:''' Well, let's call it a day. I'll announce the result now...
+:;(If {{F|MissionCV-8001251-1}} is less than or equal to 2)
+:;(If {{F|MissionCV-8001251-1}} is not less than or equal to 2)
+::;(Return to previous option selection)
+:{{DIcon|Exit}} Please give me a moment.
+::'''Pela:''' Go ahead. It doesn't bother me, but Serval would need to deal with the anxiety for a bit longer.
+::'''Serval:''' Hurry up, (Trailblazer)! Let's get this done and over with quickly!
+::----
+;(Unused &mdash; 800125104_Success)
+:----
 {{Dialogue End}}
 
 ===Start the interviews in the museum's rest area{{subst:void|<!--800125104-->}}===
 {{Dialogue Start}}
-:{{tx}}
 {{Dialogue End}}
 
 ==Other Languages==

@@ -57,96 +57,133 @@ PageTitle=#There Lies Not Void#
 {{Mission Description|type=adventure|location=Cocona's Inner World|Cocona seems to be running towards a particular location. Catch up with her and see what has happened.}}
 {{Dialogue Start}}
 :{{tx}}
+;(Unused &mdash; OnReach)
+:<!--0.6-second delay-->
 {{Dialogue End}}
 
 ===Relive Cocona's first memory{{subst:void|<!--203010203-->}}===
 {{Mission Description|type=adventure|location=Cocona's Inner World|update|Cocona has disappeared. By touching the memories she left behind, you may be able to catch up to her again.}}
 {{Dialogue Start}}
-:{{tx}}
+
+
 {{Dialogue End}}
 
 ===Continue to witness Cocona's memories{{subst:void|<!--203010204-->}}===
 {{Mission Description|type=adventure|location=Cocona's Inner World|update|You lower your head and look at yourself. It's as if you are experiencing her memories in her form. The piano she used to play stands there. Try to play it, and you may witness something miraculous.}}
 {{Dialogue Start}}
-:{{tx}}
+
+
 {{Dialogue End}}
 
 ===Touch the gift box and unveil the future{{subst:void|<!--203010209-->}}===
 {{Mission Description|type=adventure|location=Cocona's Inner World|update|The luxurious gift box seems to contain Cocona's future. What kind of "gift" awaits her?}}
 {{Dialogue Start}}
-:{{tx}}
+
+
+
 {{Dialogue End}}
 
 ===Pursue Cocona{{subst:void|<!--203010234-->}}===
 {{Mission Description|type=adventure|location=Cocona's Inner World|update|Cocona is still running towards a particular location. Once again, you must experience the events in her memories to catch up with her.}}
 {{Dialogue Start}}
 :{{tx}}
+;(Unused &mdash; OnReach)
+:<!--0.6-second delay-->
 {{Dialogue End}}
 
 ===Relive Cocona's second memory{{subst:void|<!--203010211-->}}===
 {{Mission Description|type=adventure|location=Cocona's Inner World|update|Cocona has disappeared. By touching the memories she left behind, you may be able to catch up to her again.}}
 {{Dialogue Start}}
-:{{tx}}
+
+
 {{Dialogue End}}
 
 ===Chat to the colleague{{subst:void|<!--203010212-->}}===
 {{Mission Description|type=adventure|location=Cocona's Inner World|update|As Cocona starts her career, her colleague seems to have something to say to her.}}
 {{Dialogue Start}}
-:{{tx}}
+
+
 {{Dialogue End}}
 
 ===Touch the ice cream and enter the memory{{subst:void|<!--203010217-->}}===
 {{Mission Description|type=adventure|location=Cocona's Inner World|update|You see a delectable ice cream. Will Cocona's life get better? You decide to see it for yourself.}}
 {{Dialogue Start}}
-:{{tx}}
+
+
+
 {{Dialogue End}}
 
 ===Relive Cocona's third memory{{subst:void|<!--203010218-->}}===
 {{Mission Description|type=adventure|location=Cocona's Inner World|update|Touch the memory left behind by Cocona. You have a feeling that you're already very close to her.}}
 {{Dialogue Start}}
-:{{tx}}
+:<!--2-second delay-->
+:'''(Trailblazer):''' (What will the final memory have in store?)
 {{Dialogue End}}
 
 ===Meet up with the person who has been waiting{{subst:void|<!--203010227-->}}===
 {{Mission Description|type=adventure|location=Cocona's Inner World|update|A man has appeared at the place you've arranged to meet. It is time to meet him.}}
 {{Dialogue Start}}
-:{{tx}}
+:'''(Trailblazer):''' (This place, it should be the destination of Cocona's memories, right?)
+:'''(Trailblazer):''' (Cocona... Where are you?)
 {{Dialogue End}}
 
 ===Catch up with Cocona{{subst:void|<!--203010229-->}}===
 {{Mission Description|type=adventure|location=Cocona's Inner World|update|Finally, you have reached the depths of Cocona's mind. Find her and talk to her.}}
 {{Dialogue Start}}
-:{{tx}}
 {{Dialogue End}}
 
 ===Make the final preparations before departure{{subst:void|<!--203010235-->}}===
 {{Mission Description|type=adventure|location=Cocona's Inner World|update|As you await the departure day, Pound has prepared something for Cocona.}}
 {{Dialogue Start}}
-:{{tx}}
+<pre>{
+	"$type": "RPG.GameCore.WaitEntityServerEvent"
+}</pre>
+;(If {{cx}}{{subst:void|<!--{"$type":"RPG.GameCore.ByComparePropState","TargetType":{"$type":"RPG.GameCore.GroupFetchLocalTarget","TargetType":"Prop","Targets":[300002]}}-->}}, {{cx}}{{subst:void|<!--{"$type":"RPG.GameCore.ByComparePropState","TargetType":{"$type":"RPG.GameCore.GroupFetchLocalTarget","TargetType":"Prop","Targets":[300003]}}-->}}, {{cx}}{{subst:void|<!--{"$type":"RPG.GameCore.ByComparePropState","TargetType":{"$type":"RPG.GameCore.GroupFetchLocalTarget","TargetType":"Prop","Targets":[300004]}}-->}}, and {{cx}}{{subst:void|<!--{"$type":"RPG.GameCore.ByComparePropState","TargetType":{"$type":"RPG.GameCore.GroupFetchLocalTarget","TargetType":"Prop","Targets":[300001]},"State":"Open"}-->}})
+<pre>{
+	"$type": "RPG.GameCore.ChangePropState"
+}</pre>
+:Before leaving Penacony, there are still some things to collect...
 {{Dialogue End}}
 
 ===Retrieve what Pound wants to give to her{{subst:void|<!--203010239-->}}===
 {{Mission Description|type=adventure|location=Cocona's Inner World|update|Go find Pound and retrieve what he wishes to give to Cocona. Once you have it, you can leave this place together.}}
 {{Dialogue Start}}
+:'''Lover:''' Cocona, close your eyes...
+:You feel something made from a soft, smooth, and solid material sliding into your palm, the warmth of another person lingering on its surface.
+:'''Lover:''' Guess what this is.
+:{{DIcon|Arrow}} A record?
+:{{DIcon|Arrow}} A concert ticket?
+:{{DIcon|Arrow}} A harmonica?
+:'''Lover:''' Woah, such a simple question, and you still didn't get it right!
+:{{tx}}
+:'''Lover:''' Cocona, I'm going to Taikiyan and joining the competition. I'll come back and look for you when it's over &mdash; we'll meet at our old haunt.
+:'''Lover:''' In case I forget, I'm leaving my file and papers with you.
+:{{DIcon|Arrow}} You can count on me to keep them safe.
+:{{DIcon|Arrow}} Don't get too stressed out.
+:'''Lover:''' Me, stressed? Don't worry. I'm the only one who can beat me!
 :{{tx}}
 {{Dialogue End}}
 
 ===Meet with Pound as promised{{subst:void|<!--203010225-->}}===
 {{Mission Description|type=adventure|location=Cocona's Inner World|update|With the ship ticket and identification documents all prepared, go and meet with Pound as promised.}}
 {{Dialogue Start}}
-:{{tx}}
 {{Dialogue End}}
 
 ===Meet up with the person who has been waiting{{subst:void|<!--203010226-->}}===
 {{Mission Description|type=adventure|location=Cocona's Inner World|update|A man has appeared at the place you've arranged to meet. It is time to meet him.}}
 {{Dialogue Start}}
-:{{tx}}
+
+
 {{Dialogue End}}
 
 ===Discard the things that induce heartbreak{{subst:void|<!--203010236-->}}===
 {{Mission Description|type=adventure|location=Cocona's Inner World|update|Cocona is walking towards the flower beds. See what she is up to.}}
 {{Dialogue Start}}
-:{{tx}}
+
+
+:<!--1.3-second delay-->
+:'''Cocona:''' Tickets, music...
+:'''Cocona:''' I don't need them &mdash; I don't need any of them anymore.
 {{Dialogue End}}
 
 ===Handle the occupational crisis{{subst:void|<!--203010215-->}}===
@@ -158,21 +195,28 @@ PageTitle=#There Lies Not Void#
 ===Talk to the supervisor{{subst:void|<!--203010213-->}}===
 {{Mission Description|type=adventure|location=Cocona's Inner World|update|After having spent some time at this job, Cocona's supervisor seems to have something to say to her.}}
 {{Dialogue Start}}
-:{{tx}}
+
+
 {{Dialogue End}}
 
 ===Handle the occupational crisis{{subst:void|<!--203010214-->}}===
 {{Mission Description|type=adventure|location=Cocona's Inner World|update|Unable to change the external world, Cocona has to... change herself.}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Unused &mdash; 203010214_TriggerBattle)
+;(Enter battle)
+:::{{tx|Enemy list missing}}
 {{Dialogue End}}
 
 ===Continue to witness Cocona's memories{{subst:void|<!--203010207-->}}===
 {{Mission Description|type=adventure|location=Cocona's Inner World|update|Cocona seems to have made a decision. It is time to discuss with her parents.}}
 {{Dialogue Start}}
-:{{tx}}
 {{Mission Description|type=adventure|location=Cocona's Inner World|update|Cocona's good friend is right ahead. Talk to her.}}
+
+
 {{Mission Description|type=adventure|location=Cocona's Inner World|update|Cocona seems to have made a decision. It is time to discuss with her parents.}}
+
+
 {{Dialogue End}}
 
 ==Other Languages==

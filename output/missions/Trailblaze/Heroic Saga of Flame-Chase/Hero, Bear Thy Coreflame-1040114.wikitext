@@ -36,7 +36,23 @@ PageTitle=#Hero, Bear Thy Coreflame#
 ===Visit March 7th{{subst:void|<!--104011401-->}}===
 {{Mission Description|type=trailblaze|location=Parlor Car|Himeko, on watch at the Express, has prepared a specially made meal for the bedridden March 7th and plans to check up on her.}}
 {{Dialogue Start}}
+----
 :{{tx}}
+<pre>{
+	"$type": "RPG.GameCore.SetLoadingStratageType",
+	"StratageType": "Plain"
+}</pre>
+----
+;(If {{cx}}{{subst:void|<!--{"$type":"RPG.GameCore.ByCompareVersionFinalMainMission","MainMissionID":1040114}-->}})
+<pre>{
+	"$type": "RPG.GameCore.PerformanceEndBlackText",
+	"TalkSentenceID": 100000005
+}</pre>
+:{{tx}}
+
+:{{DIcon|Loupe}} Investigate
+
+
 {{Dialogue End}}
 
 ==Other Languages==
@@ -51,7 +67,7 @@ PageTitle=#Hero, Bear Thy Coreflame#
 |ru   = О герой, прими ядро пламени
 |th   = วีรชนเอ๋ย จงไขว่คว้าเชื้อไฟ
 |vi   = Hỡi Anh Hùng, Hãy Nắm Lấy Ngọn Lửa Đó
-|de   = Held, trage die Kernflamme
+|de   = O Held, trage die Kernflamme
 |id   = Wahai Pahlawan, Pertahankan Api Itu
 |pt   = Herói, Carrega Tua Chama Primordial
 }}

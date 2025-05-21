@@ -47,72 +47,432 @@ PageTitle=#Mundane Troubles#
 ===Tell Asta about Ruan Mei's departure{{subst:void|<!--200090101-->}}===
 {{Mission Description|type=continuance|location=Master Control Zone|Ruan Mei has left the space station. You feel you should mention that to Asta.}}
 {{Dialogue Start}}
-:{{tx}}
+
 {{Dialogue End}}
 
 ===Screwllum seems to have something to tell{{subst:void|<!--200090129-->}}===
 {{Mission Description|type=continuance|location=Seclusion Zone|update|Asta was swallowed up by infernal fire before your eyes. Listen to Screwllum's deductions before you act on anything.}}
 {{Dialogue Start}}
 :{{tx}}
+:{{A|VO side0 rto screwllum 131.ogg}} '''Screwllum:''' Good work. You did very well.
+:{{DIcon|Arrow}} How is Asta?
+:{{A|VO side0 rto screwllum 132.ogg}} '''Screwllum:''' Rest assured, Asta only had a fright. She is recovering in the Clinic.
+:{{tx}}
+:{{A|VO side0 rto screwllum 131.ogg}} '''Screwllum:''' Good work. You did very well.
+:How is Asta?
+:{{A|VO side0 rto screwllum 132.ogg}} '''Screwllum:''' Rest assured, Asta only had a fright. She is recovering in the Clinic.
+:{{A|VO side0 rto screwllum 133.ogg}} '''Screwllum:''' While you were chasing the enemy, the Security Department also found the missing researchers. Affirmation: They are all safe and sound.
+:{{DIcon|Arrow}} How did you find them?
+:{{A|VO side0 rto screwllum 134.ogg}} '''Screwllum:''' It was all thanks to Adler.
+:{{A|VO side0 rto screwllum 135.ogg}} '''Screwllum:''' They fell into a spatial Curio and could not leave until the Department of Ecology's most knowledgeable Curio expert solved it from within.
+:{{A|VO side0 rto screwllum 136.ogg}} '''Screwllum:''' Many of them were shaken by their experience when Arlan found them, but they are otherwise fine.
+:{{DIcon|Arrow}} Is it over?
+:{{A|VO side0 rto screwllum 137.ogg}} '''Screwllum:''' Yes. It is over.
+:{{DIcon|Arrow}} Why do I feel like you didn't do much...?
+:{{A|VO side0 rto screwllum 138 m.ogg}} {{A|VO side0 rto screwllum 138 f.ogg}} '''Screwllum:''' This business is over, and I believe the space station will be able to deal with any internal aftershocks. In Herta's stead, I thank for your efforts, {{MC|f=Madam|m=Sir}}.
+:{{tx}}
+<pre>{
+	"$type": "RPG.GameCore.PlayMessage",
+	"MessageSectionID": 1222300
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.SaveMessage",
+	"MessageSectionID": 1222300
+}</pre>
+----
+;([[#Gallery|Cutscene]] plays)
+::I've been waiting.
+;(Cutscene ends)
+----
+:{{tx}}
+----
+;([[#Gallery|Cutscene]] plays)
+::A farce, full of trivial concerns.
+::Ultimately, they're just...
+::...mediocre minds.
+;(Cutscene ends)
+----
 {{Dialogue End}}
 
 ===Go to Herta's office to find out what's up{{subst:void|<!--200090102-->}}===
 {{Mission Description|type=continuance|location=Herta's Office|update|Asta is not in the base zone, and Herta seems to have been attacked yet again. You decide to head back to Herta's office to find out what's up}}
 {{Dialogue Start}}
+
+
+
+;(Talk to Screwllum)
+:{{A|VO side0 rto screwllum 103.ogg}} '''Screwllum:''' Reuniting under such conditions... Affirmation: Unpleasant.
+
+;(Talk to Asta)
+:{{A|VO side0 rto asta 107.ogg}} '''Asta:''' Don't worry. We're just ticking the boxes to understand what happened. You don't really think we suspect you, right?
+
+;(Talk to Dr. Ratio)
+:{{A|VO side0 rto ratio 110.ogg}} '''Dr. Ratio:''' A portrait of internal turmoil. You look troubled. Do you need help?
+:{{A|VO side0 rto ratio 111.ogg}} '''Dr. Ratio:''' Do try to think for yourself.
+
+:'''(Trailblazer):''' (Herta... was attacked?)
+:'''(Trailblazer):''' (Anyways, let's go to her office to see what's going on.)
+----
+;([[#Gallery|Cutscene]] plays)
+::Mr. Screwllum, this was a premeditated attack...
+::Conclusion: Their target was the space station. But their strategies... are still unknown to us.
+::That's right.
+::Which is precisely why we need {{MC|m=him|f=her}}.
+::The last one to lay eyes on Herta's puppet before the attack...
+::...was {{MC|m=him|f=her}}.
+::And you are...?
+::This is Dr. Ratio of the Intelligentsia Guild &mdash; a delegate from the IPC.
+::{{MC|f=She's|m=He's}} only just woken up &mdash; dazed. {{MC|f=She|m=He}} may need...
+::...a few pointers.
+;(Cutscene ends)
+----
+:{{A|VO side0 rto ratio 101.ogg}} '''Dr. Ratio:''' Ah, we cross paths again. Do you remember me? Of course, why would you? Memory is such a fickle thing, after all.
+:{{A|VO side0 rto screwllum 101 m.ogg}} {{A|VO side0 rto screwllum 101 f.ogg}} '''Screwllum:''' {{MC|f=Miss|m=Mr.}} (Trailblazer), you must have many questions. Please be patient, Asta will explain it all to you.
+:{{A|VO side0 rto asta 101.ogg}} '''Asta:''' You probably know the gist of things already. A few system hours ago, one of Madam Herta's puppets was attacked by an unknown perpetrator. We don't know the location of the puppet, and we can't pinpoint its signal.
+:{{DIcon|Arrow}} There was no surveillance?
+::{{A|VO side0 rto asta 102.ogg}} '''Asta:''' No. The attack happened on a base outside the station &mdash; beyond the surveillance cameras' range.
+::Where is Herta right now?
+:{{DIcon|Arrow}} Where is Herta right now?
+::{{tx}}
+:{{A|VO side0 rto asta 103.ogg}} '''Asta:''' She's away on a visit. This issue didn't seem to trouble her much.
+:{{A|VO side0 rto screwllum 102.ogg}} '''Screwllum:''' She received an invitation from the IPC before the attack occurred.
+:{{A|VO side0 rto ratio 102.ogg}} '''Dr. Ratio:''' Ah, the Technology Department. Charming little place, isn't it? Madam Yabuli does possess some semblance of competence, but her subordinates? Oh, they're a riot &mdash; brimming with enthusiasm yet utterly devoid of intellect. It's as if evolution halted prematurely for them.
+:{{A|VO side0 rto ratio 103.ogg}} '''Dr. Ratio:''' They want to start some new collaborations with Herta and have graciously extended an invite for me to play the role of science consultant. It's delightfully amusing. I can't wait to witness firsthand how these geniuses from the so-called "Super Smart Club" squander the IPC's vast resources.
+:{{A|VO side0 rto ratio 104.ogg}} '''Dr. Ratio:''' However... this attack was timed a little too well. I can't help but wonder if someone leaked this information, and the attackers seized the opportunity. Herta's aloof response to these juvenile provocations? Almost as intriguing. What a delightful little puzzle.
+:{{A|VO side0 rto asta 104.ogg}} '''Asta:''' I've long heard that you're one of the best researchers in the Guild, Dr. Ratio. We are honored to have your assistance.
+:{{A|VO side0 rto ratio 105.ogg}} '''Dr. Ratio:''' Save your flattery. Time is hardly a luxury we can squander. To debate the merits of mere mortals in the company of an actual genius? Quite the paradox, if you ask me.
+:{{A|VO side0 rto ratio 106 m.ogg}} {{A|VO side0 rto ratio 106 f.ogg}} '''Dr. Ratio:''' Excuse me, (Trailblazer), tell me &mdash; what were you doing the last time you saw that puppet?
+:{{DIcon|Arrow}} ...Probably running errands for Herta?
+::{{A|VO side0 rto ratio 107.ogg}} '''Dr. Ratio:''' Don't play the fool. Think.
+::...Listening to Asta complain?
+::{{A|VO side0 rto asta 105.ogg}} '''Asta:''' Huh? I&mdash;I do remember that happening... I think?
+::{{A|VO side0 rto ratio 108.ogg}} '''Dr. Ratio:''' Don't play the fool. Think.
+::...Walking the dog with Arlan?
+:{{DIcon|Arrow}} ...Listening to Asta complain?
+::{{A|VO side0 rto asta 105.ogg}} '''Asta:''' Huh? I&mdash;I do remember that happening... I think?
+::{{A|VO side0 rto ratio 108.ogg}} '''Dr. Ratio:''' Don't play the fool. Think.
+::...Walking the dog with Arlan?
+:{{DIcon|Arrow}} ...Walking the dog with Arlan?
+:{{A|VO side0 rto asta 106.ogg}} '''Asta:''' Huh? Invite me next time!
+:{{A|VO side0 rto ratio 109.ogg}} '''Dr. Ratio:''' Don't play the fool. Think.
+:{{A|VO side0 rto player 103 m.ogg}} {{A|VO side0 rto player 103 f.ogg}} '''(Trailblazer):''' (I think I was...)
 :{{tx}}
+
+;(Obtain {{Item|Cognition Chasm: Confidence Crisis|20|x=1}})
 {{Dialogue End}}
 
 ===Sit on the chair and start to backtrack your memories{{subst:void|<!--200090106-->}}===
 {{Mission Description|type=continuance|location=Seclusion Zone|update|Sit on the chair and backtrack your memories. You need to find the Cognition Chasms that have escaped notice in order to clear yourself of suspicion.}}
 {{Dialogue Start}}
-:{{tx}}
 {{Dialogue End}}
 
 ===Face Dr. Ratio's interrogation{{subst:void|<!--200090107-->}}===
 {{Mission Description|type=continuance|location=Seclusion Zone|update|You have finished collecting the Cognition Chasms. Now, it's time to face the interrogation and defend yourself.}}
 {{Dialogue Start}}
+:{{A|VO side0 rto ratio 112.ogg}} '''Dr. Ratio:''' I commend your stamina for recounting that interminable tale &mdash; you must be exhausted. My ears certainly are.
+:{{A|VO side0 rto ratio 113.ogg}} '''Dr. Ratio:''' So, to sum it up, the last time you laid eyes on Herta was in her office. She sent you on a wild goose chase for some trinket, the Curio, after which you knew nothing else until Lady Asta contacted you.
+:{{A|VO side0 rto ratio 114.ogg}} '''Dr. Ratio:''' If that's the narrative you're sticking to, then indulge me: Who, pray tell, can substantiate this captivating drama?
+:{{DIcon|Arrow}} Herta?
+::{{tx}}
+:{{DIcon|Arrow}} Asta?
+::{{A|VO side0 rto ratio 115.ogg}} '''Dr. Ratio:''' A second-hand account, she wasn't at the scene. Hearsay hardly counts as compelling evidence, now, does it?
+::Screwllum?
+::{{A|VO side0 rto screwllum 104.ogg}} '''Screwllum:''' Apologies. Herta did not mention this to me.
+:{{DIcon|Arrow}} Screwllum?
+::{{A|VO side0 rto screwllum 104.ogg}} '''Screwllum:''' Apologies. Herta did not mention this to me.
+:{{A|VO side0 rto screwllum 105.ogg}} '''Screwllum:''' Affirmation: We can ask Herta herself.
+:{{tx}}
+
+;(Lose {{Item|Cognition Chasm: Confidence Crisis|20|x=1}})
+
+;(Talk to Screwllum)
+:{{A|VO side0 rto screwllum 103.ogg}} '''Screwllum:''' Reuniting under such conditions... Affirmation: Unpleasant.
+
+;(Talk to Asta)
+:{{A|VO side0 rto asta 107.ogg}} '''Asta:''' Don't worry. We're just ticking the boxes to understand what happened. You don't really think we suspect you, right?
+
+;(Talk to Dr. Ratio)
+:{{A|VO side0 rto ratio 152.ogg}} '''Dr. Ratio:''' Please, begin your statement &mdash; and try to think before you speak.
+;(Unused &mdash; Ask0)
+:{{tx}}
+:<pre>{
+	"$type": "RPG.GameCore.DebateReturnTestimony"
+}</pre>
+
+;(Unused &mdash; Ask1)
+:{{tx}}
+:<pre>{
+	"$type": "RPG.GameCore.DebateReturnTestimony"
+}</pre>
+
+;(Unused &mdash; Ask2)
+:{{tx}}
+:<pre>{
+	"$type": "RPG.GameCore.DebateReturnTestimony"
+}</pre>
+
+;(Unused &mdash; Show2)
+:{{tx}}
+
+;(Unused &mdash; ShowFail)
+:{{tx}}
+:<pre>{
+	"$type": "RPG.GameCore.DebateReturnTestimony"
+}</pre>
+
+;(Unused &mdash; Fail)
+<pre>{
+	"$type": "RPG.GameCore.DebateShowToast",
+	"ToastType": "Failure"
+}</pre>
+
+;(Unused &mdash; Show1)
+:{{tx}}
+:{{tx}}
+<pre>{
+	"$type": "RPG.GameCore.PlayMessage",
+	"MessageSectionID": 1219100
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.SaveMessage",
+	"MessageSectionID": 1219100
+}</pre>
+:{{A|VO side0 rto asta 138.ogg}} '''Asta:''' This is...
+:{{A|VO side0 rto ratio 154.ogg}} '''Dr. Ratio:''' A declaration of war and an announcement of what's to come &mdash; they have set their sights on you. The Legion's impact remains, and the Annihilation Gang is already paying a visit. It almost seems like this space station is more suited for the Path of Destruction than Erudition.
+:{{A|VO side0 rto screwllum 112.ogg}} '''Screwllum:''' This "Duke Inferno," Ifrit, is a lifeform that hails from Fetora &mdash; a world long since destroyed. His race, the ever-burning fire demons, regard Nanook as their emperor and savior, but the Aeon has never cast their gaze upon them.
+:{{A|VO side0 rto ratio 155.ogg}} '''Dr. Ratio:''' A group of pitiful lunatics. I like Dr. Primitive's assessment of them: "The value Nanook sees in the Annihilation Gang is perhaps far less than what one might see in a child who deliberately broke a vase."
+:{{A|VO side0 rto ratio 156.ogg}} '''Dr. Ratio:''' The fire demons have a cruel temper and instinctively ignite and destroy items. Ifrit is particularly evil and cruel, even among his kin. The Ever-Flame Mansion he heads is even the archenemy of the Jepella Brotherhood, despite both groups belonging to the Annihilation Gang.
+:{{A|VO side0 rto asta 139.ogg}} '''Asta:''' Jepella Brotherhood... I've heard that name somewhere...
+:{{A|VO side0 rto screwllum 113.ogg}} '''Screwllum:''' On the Stellaron Hunters' wanted posters, they stand accused of inciting the Jepella Rebellion &mdash; the uprising that caused the downfall of the Brotherhood.
+:{{A|VO side0 rto ratio 157.ogg}} '''Dr. Ratio:''' The Jepella Palace crumbled in the scorching flames, and Ifrit's power has grown by the day ever since. Would you believe it to be merely a coincidence?
+:{{A|VO side0 rto ratio 158.ogg}} '''Dr. Ratio:''' Something similar is about to happen here. Spontaneous combustion? For him, it's as routine as me finding fault in everything. The disappearance of researchers and the puppet were all part of the plan. And after that...
+:{{A|VO side0 rto ratio 159.ogg}} '''Dr. Ratio:''' That video will soon circulate, and this station's fate? Flames, nothing but flames.
+:{{A|VO side0 rto screwllum 114.ogg}} '''Screwllum:''' The destruction of "trust."
+:{{A|VO side0 rto ratio 160.ogg}} '''Dr. Ratio:''' I'm afraid more than trust will be destroyed here.
+:{{A|VO side0 rto ratio 161.ogg}} '''Dr. Ratio:''' We need to start acting now if you want to survive. You &mdash; come with me.
+:{{DIcon|Arrow}} Me?
+:{{DIcon|Arrow}} Just me?
+:{{A|VO side0 rto ratio 162.ogg}} '''Dr. Ratio:''' You have a superior strategy? Pray tell. Do we set the two of them loose, turning whispered fears into full-blown pandemonium?
 :{{tx}}
 {{Dialogue End}}
 
 ===Get Arlan's assistance{{subst:void|<!--200090113-->}}===
 {{Mission Description|type=continuance|location=Master Control Zone|update|You have temporarily exculpated yourself by the end of the interrogation, but Dr. Ratio specifically asked for you to go with him to Arlan to ask for help.}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Arlan)
+:{{A|VO side0 rto arlan 127.ogg}} '''Arlan:''' Not good... this is serious. The Security Department will do whatever we can to help you.
+::{{A|VO side0 rto ratio 163.ogg}} '''Dr. Ratio:''' A list of the missing researchers and their details.
+::{{A|VO side0 rto arlan 128.ogg}} '''Arlan:''' ...Sure, but the Security Department already combed through their backgrounds and personal relationships &mdash; we didn't find anything odd. The Annihilation Gang are a group of diehard thugs &mdash; they might be attacking indiscriminately...
+::{{A|VO side0 rto ratio 164.ogg}} '''Dr. Ratio:''' A list of the missing researchers and their details.
+::{{A|VO side0 rto arlan 129.ogg}} '''Arlan:''' O&mdash;Okay...
+::{{A|VO side0 rto ratio 165.ogg}} '''Dr. Ratio:''' Take it. Remember these names &mdash; find a friend who's tuned in to the gossip around here and tell them you want to know the relationship between these people.
+::{{DIcon|Arrow}} What do you have in mind?
+::{{A|VO side0 rto ratio 166.ogg}} '''Dr. Ratio:''' I don't know. That depends on your friend.
+::{{tx}}
+:{{A|VO side0 rto arlan 132.ogg}} '''Arlan:''' I didn't really notice at first &mdash; Adler's difficult to get a hold of at the best of times...
+::{{A|VO side0 rto arlan 133.ogg}} '''Arlan:''' ...but it's been a few system hours, and I still can't reach him. Even the surveillance cameras can't find any trace...
+::{{A|VO side0 rto arlan 134.ogg}} '''Arlan:''' The last time I saw him was in the master control zone. He was with Wen Shiling from the Department of Implement Arts.
+
+;(Talk to Asta)
+:{{A|VO side0 rto asta 140.ogg}} '''Asta:''' If we did that, we'd be at a disadvantage... I'll stay here and try to contain the news as best I can. Please investigate the issue quickly.
+
+;(Talk to Screwllum)
+:{{A|VO side0 rto screwllum 112.ogg}} '''Screwllum:''' This "Duke Inferno," Ifrit, is a lifeform that hails from Fetora &mdash; a world long since destroyed. His race, the ever-burning fire demons, regard Nanook as their emperor and savior, but the Aeon has never cast their gaze upon them.
 {{Dialogue End}}
 
 ===Try to get some evidence out of Wen Shiling{{subst:void|<!--200090119-->}}===
 {{Mission Description|type=continuance|location=Master Control Zone|update|Adler's disappearance made the case even more enigmatic, but Wen Shiling seems to still remember his odd behavior before his disappearance.}}
 {{Dialogue Start}}
-:{{tx}}
+<pre>{
+	"$type": "RPG.GameCore.PlayMessage",
+	"MessageSectionID": 1219400
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.SaveMessage",
+	"MessageSectionID": 1219400
+}</pre>
+;(Obtain {{Item|Clue: Dimension-Phasing Flame|20|x=1}})
+
+;(Talk to Wen Shiling)
+:{{A|VO side0 rto staffK 101.ogg}} '''Wen Shiling:''' That jerk! Jerk, jerk, jerk!
+::{{A|VO side0 rto staffK 102.ogg}} '''Wen Shiling:''' Fine &mdash; disappear! I don't ever wanna see your face again!
+::{{DIcon|Arrow}} Who got you so upset?
+:::{{A|VO side0 rto staffK 103.ogg}} '''Wen Shiling:''' Oh, it's you! It's Adler... Adler disappeared! *sob*
+:::What did Adler do to you?
+::{{DIcon|Arrow}} What did Adler do to you?
+::{{A|VO side0 rto staffK 104.ogg}} '''Wen Shiling:''' Adler, he... he disappeared... *sob*
+::{{A|VO side0 rto staffK 105.ogg}} '''Wen Shiling:''' H&mdash;He's been acting really weird recently &mdash; always researching stuff like spontaneous combustion, supernatural activities...
+::{{A|VO side0 rto staffK 106.ogg}} '''Wen Shiling:''' He doesn't even answer me when I speak to him. H&mdash;He was talking to himself...
+::{{A|VO side0 rto ratio 170.ogg}} '''Dr. Ratio:''' What did he talk about?
+::{{A|VO side0 rto staffK 107.ogg}} '''Wen Shiling:''' He kept saying the word "phrase."
+::{{A|VO side0 rto ratio 171.ogg}} '''Dr. Ratio:''' Phrase...
+::{{DIcon|Arrow}} We'll get him back.
+::{{A|VO side0 rto staffK 108.ogg}} '''Wen Shiling:''' Who said I want him back!?
+::{{tx}}
+:{{A|VO side0 rto staffK 104.ogg}} '''Wen Shiling:''' Adler, he... he disappeared... *sob*
 {{Dialogue End}}
 
 ===Return to the seclusion zone and collate your findings{{subst:void|<!--200090120-->}}===
 {{Mission Description|type=continuance|location=Seclusion Zone|update|Dr. Ratio seems to already have discovered the answer from what little evidence you have. It's time to return the seclusion zone and reconstruct the entire incident.}}
 {{Dialogue Start}}
+;(Unused &mdash; 200090120_TriggerPerformance)
 :{{tx}}
+
+;(Lose {{Item|Clue: Missing Researcher List|20|x=1}})
+
+;(Talk to Asta)
+:{{A|VO side0 rto asta 141.ogg}} '''Asta:''' You're back.
+:{{A|VO side0 rto asta 142.ogg}} '''Asta:''' I've been monitoring the Dark Web &mdash; I barely managed to stop the video from spreading. The incident hasn't grown any bigger &mdash; for now. How are things with you?
+
+;(Talk to Screwllum)
+:{{A|VO side0 rto screwllum 115.ogg}} '''Screwllum:''' The link between the three is...
+
+;(Talk to Dr. Ratio)
+:{{A|VO side0 rto ratio 206.ogg}} '''Dr. Ratio:''' Please, begin your statement &mdash; and try to think before you speak.
+<pre>{
+	"$type": "RPG.GameCore.AdvDestroyGroupEntity",
+	"InstanceIDList": [
+		400001
+	]
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.AdvDestroyGroupEntity",
+	"InstanceIDList": [
+		400003
+	]
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.AdvDestroyGroupEntity",
+	"InstanceIDList": [
+		400002
+	]
+}</pre>
+;(Unused &mdash; Ask0)
+:{{tx}}
+:<pre>{
+	"$type": "RPG.GameCore.DebateReturnTestimony"
+}</pre>
+
+;(Unused &mdash; Ask1)
+:{{tx}}
+:<pre>{
+	"$type": "RPG.GameCore.DebateReturnTestimony"
+}</pre>
+
+;(Unused &mdash; Ask2)
+:{{tx}}
+:<pre>{
+	"$type": "RPG.GameCore.DebateReturnTestimony"
+}</pre>
+
+;(Unused &mdash; Show_2)
+:{{tx}}
+
+;(Unused &mdash; ShowFail)
+:{{tx}}
+:<pre>{
+	"$type": "RPG.GameCore.DebateReturnTestimony"
+}</pre>
+
+;(Unused &mdash; Fail)
+<pre>{
+	"$type": "RPG.GameCore.DebateShowToast",
+	"ToastType": "Failure"
+}</pre>
+
+;(Unused &mdash; Talk_200090116)
+
 {{Dialogue End}}
 
 ===Listen to Dr. Ratio collate the findings{{subst:void|<!--200090121-->}}===
 {{Mission Description|type=continuance|location=Seclusion Zone|update|Dr. Ratio seems to already have discovered the answer from what little evidence you have. Let's see what exactly he had discovered.}}
 {{Dialogue Start}}
 :{{tx}}
+<pre>{
+	"$type": "RPG.GameCore.PlayMessage",
+	"MessageSectionID": 1221000
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.SaveMessage",
+	"MessageSectionID": 1221000
+}</pre>
+:{{tx}}
+----
+;([[#Gallery|Cutscene]] plays)
+::Could it be...?
+::What is it?
+::Huh?
+::F&mdash;F&mdash;Fiiiiiiiire!
+::Asta!
+;(Cutscene ends)
+----
 {{Dialogue End}}
 
 ===Screwllum seems to have something to tell{{subst:void|<!--200090125-->}}===
 {{Mission Description|type=continuance|location=Seclusion Zone|update|Asta was swallowed up by infernal fire before your eyes. Listen to Screwllum's deductions before you act on anything.}}
 {{Dialogue Start}}
+:{{A|VO side0 rto screwllum 123.ogg}} '''Screwllum:''' Stay calm. Asta was merely teleported &mdash; her life was not in danger.
+:{{A|VO side0 rto screwllum 124.ogg}} '''Screwllum:''' Based on firsthand experience, I have ascertained that Ifrit's flame is simply a splinter of the primordial Phase Flame &mdash; lacking any phase-shift ability. Logic: Asta is still within the confines of the space station.
+:{{DIcon|Arrow}} What do we do now?
+:{{A|VO side0 rto ratio 215.ogg}} '''Dr. Ratio:''' That flame must still be somewhere inside the station. Find it, and we'll find a way to bring her back.
 :{{tx}}
+:{{tx}}
+
+
+;(Talk to Screwllum)
+:{{A|VO side0 rto screwllum 127.ogg}} '''Screwllum:''' I will head to Herta's office and activate the folded space in the Curio storage room. With some changes to its parameters, I can use it to block the fire's teleportation routes and seal it inside the station.
+:{{A|VO side0 rto screwllum 128 m.ogg}} {{A|VO side0 rto screwllum 128 f.ogg}} '''Screwllum:''' Mr. Ratio, please go with {{MC|f=Miss|m=Mr.}} (Trailblazer) and contain the fire.
+
+;(Talk to Dr. Ratio)
+:{{A|VO side0 rto ratio 216.ogg}} '''Dr. Ratio:''' It seems that Duke Inferno didn't deign to personally grace the space station. He merely cast infernal fire into our midst to wreak havoc among the researchers. When the fire fizzles out, his malevolent plans will vanish without a trace.
 {{Dialogue End}}
 
 ===Get Arlan's assistance{{subst:void|<!--200090114-->}}===
 {{Mission Description|type=continuance|location=Master Control Zone|update|You have temporarily exculpated yourself by the end of the interrogation, but Dr. Ratio specifically asked for you to go with him to Arlan to ask for help.}}
 {{Dialogue Start}}
+<pre>{
+	"$type": "RPG.GameCore.PlayMessage",
+	"MessageSectionID": 1219200,
+	"ShowNotice": false
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.SaveMessage",
+	"MessageSectionID": 1219200
+}</pre>
+:{{A|VO side0 rto arlan 130.ogg}} '''Arlan:''' What else do you need me to do?
+:{{A|VO side0 rto ratio 167.ogg}} '''Dr. Ratio:''' Take me to the one who knows the most about Curios within the Department of Ecology, if you would be so kind.
+:{{A|VO side0 rto arlan 131.ogg}} '''Arlan:''' H&mdash;He disappeared too...
+:{{DIcon|Arrow}} What happened?
+:{{A|VO side0 rto arlan 132.ogg}} '''Arlan:''' I didn't really notice at first &mdash; Adler's difficult to get a hold of at the best of times...
 :{{tx}}
+:{{tx}}
+<pre>{
+	"$type": "RPG.GameCore.PlayMessage",
+	"MessageSectionID": 1220000,
+	"ShowNotice": false
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.SaveMessage",
+	"MessageSectionID": 1220000
+}</pre>
 {{Dialogue End}}
 
 ===Try to get some evidence out of Wen Shiling{{subst:void|<!--200090115-->}}===
 {{Mission Description|type=continuance|location=Master Control Zone|update|Adler's disappearance made the case even more enigmatic, but Wen Shiling seems to still remember his odd behavior before his disappearance.}}
 {{Dialogue Start}}
+<pre>{
+	"$type": "RPG.GameCore.PlayMessage",
+	"MessageSectionID": 1219300
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.SaveMessage",
+	"MessageSectionID": 1219300
+}</pre>
+:{{tx}}
+:{{A|VO side0 rto ratio 172.ogg}} '''Dr. Ratio:''' Your countenance suggests tragedy.
+:{{DIcon|Arrow}} (Recount Pamela's findings.)
+:{{A|VO side0 rto ratio 173.ogg}} '''Dr. Ratio:''' So the researchers who disappeared were at the forefront of challenging management. Isn't that a curious puzzle piece?
 :{{tx}}
 {{Dialogue End}}
 

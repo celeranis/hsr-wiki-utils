@@ -45,51 +45,289 @@ PageTitle=#Memories, Veiled in Blazing Mist#
 ===Speak with Aglaea{{subst:void|<!--104020501-->}}===
 {{Mission Description|type=trailblaze|location="Eternal Holy City" Okhema|'''We''' sense that Trianne used her divine power again. '''We're''' worried about her... Agy noticed our concern and agreed to go to the baths together to unwind.}}
 {{Dialogue Start}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+----
+<pre>{
+	"$type": "RPG.GameCore.SetCharacterShadowFactor",
+	"EnableFactor": true,
+	"OnlyEnableWhenUseShadowProbe": true
+}</pre>
 :{{tx}}
 {{Dialogue End}}
 
 ===Head to the baths with Aglaea{{subst:void|<!--104020502-->}}===
 {{Dialogue Start}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{A|VO chapter4 14 tribbie 112.ogg}} '''Tribbie:''' ...The air's really hot and heavy. Has it always been like this?
+
+;(Upon reaching the destination)
+:{{A|VO chapter4 14 tribbie 113.ogg}} '''Tribbie:''' Is someone... injured over there?
+
+;(Upon reaching the destination)
 :{{tx}}
 {{Dialogue End}}
 
 ===Try to understand what happened{{subst:void|<!--104020503-->}}===
 {{Mission Description|type=trailblaze|location="Eternal Holy City" Okhema|update|Multiple visitors suddenly pass out in the baths. Hyacine's examination shows an unexpected reason: overheated water. But who is the culprit...?}}
 {{Dialogue Start}}
+
+;(Talk to Mydei)
 :{{tx}}
+:Some time ago...
+:'''Phainon:''' ...
+:'''Mydei:''' ...
+:{{DIcon|Arrow}} (How's your recovery coming along, my friend?)
+:{{DIcon|Arrow}} (Winning and losing are all part of a warrior's life. Don't let it get to you.)
+:{{DIcon|Arrow}} (Why don't you take a bath to recharge, buddy?)
+:'''Mydei:''' ...
+:{{A|VO chapter4 14 mydei 105.ogg}} '''Mydei:''' (No. None of those sound right.)
+:{{DIcon|Arrow}} (Keep your chin up. You have greater things to achieve.)
+:{{DIcon|Arrow}} (Want to grab a drink with me, pal?)
+:{{DIcon|Arrow}} (If you're up for it, let's have a talk.)
+:{{A|VO chapter4 14 mydei 106.ogg}} '''Mydei:''' (...Forget it.)
+:{{DIcon|Arrow}} I see you're still alive and kicking, Deliverer.
+:{{A|VO chapter4 14 mydei 107.ogg}} '''Mydei:''' ...Am I seeing things? Is the magnificent Deliverer finally deigning to step outside?
+:{{tx}}
+:{{tx}}
+
+;(Unused &mdash; EnterDistrict_G300-2)
+:{{A|VO chapter4 14 tribbie 118.ogg}} '''Tribbie:''' Oh! This many people...!?
+::{{A|VO chapter4 14 hyacine 106.ogg}} '''Hyacine:''' Who in the world did this...?
+
+;(Unused &mdash; EnterDistrict_G300-1)
+:{{A|VO chapter4 14 mydei 101.ogg}} '''Mydei:''' This is all you can do, huh? Pitiable "Deliverer."
+::{{A|VO chapter4 14 tribbie 119.ogg}} '''Tribbie:''' D-De!
+
+;(Unused &mdash; EnterDistrict_G300-3)
+:{{tx}}
+:----
+::Some time ago...
+::'''Phainon:''' ...
+::'''Mydei:''' ...
+::{{DIcon|Arrow}} (How's your recovery coming along, my friend?)
+::{{DIcon|Arrow}} (Winning and losing are all part of a warrior's life. Don't let it get to you.)
+::{{DIcon|Arrow}} (Why don't you take a bath to recharge, buddy?)
+::'''Mydei:''' ...
+::{{A|VO chapter4 14 mydei 105.ogg}} '''Mydei:''' (No. None of those sound right.)
+::{{DIcon|Arrow}} (Keep your chin up. You have greater things to achieve.)
+::{{DIcon|Arrow}} (Want to grab a drink with me, pal?)
+::{{DIcon|Arrow}} (If you're up for it, let's have a talk.)
+::{{A|VO chapter4 14 mydei 106.ogg}} '''Mydei:''' (...Forget it.)
+::{{DIcon|Arrow}} I see you're still alive and kicking, Deliverer.
+::{{A|VO chapter4 14 mydei 107.ogg}} '''Mydei:''' ...Am I seeing things? Is the magnificent Deliverer finally deigning to step outside?
+::{{tx}}
+:----
+::{{tx}}
 {{Dialogue End}}
 
 ===Take a bath{{subst:void|<!--104020504-->}}===
 {{Dialogue Start}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
 :{{tx}}
+<pre>{
+	"$type": "RPG.GameCore.PerformanceEndSeq",
+	"BeforeCases": [
+		{
+			"$type": "RPG.GameCore.SwitchCharacterAnchorV2",
+			"SwitchCharacterAnchorConfig": {
+				"IsLocalPlayer": true,
+				"CharacterUniqueName": "LocalPlayer",
+				"AreaName": {
+					"Value": "LevelArea_P10401_F10401001_G401"
+				},
+				"AnchorName": {
+					"Value": "Anchor2"
+				}
+			}
+		}
+	]
+}</pre>
 {{Dialogue End}}
 
 ===Observe Phainon conversing with Mydei{{subst:void|<!--104020505-->}}===
 {{Mission Description|type=trailblaze|location="Eternal Holy City" Okhema|update|Following a ridiculous contest, Phainon and Mydei stop to rest. The two warriors discuss the Coreflame trial, revealing untold stories from their pasts...}}
 {{Dialogue Start}}
-:{{tx}}
+;(Unused &mdash; EnterDistrict_G{GroupID})
+----
+::{{tx}}
+:----
+::{{tx}}
 {{Dialogue End}}
 
 ===Observe Tribbie interrupting Phainon and Mydei's conversation{{subst:void|<!--104020506-->}}===
 {{Dialogue Start}}
+----
 :{{tx}}
+:<!--1-second delay-->
+:{{tx}}
+
+;(Talk to Merchant)
+;(Unused &mdash; EnterDistrict_G239)
+:{{A|VO chapter4 12 shangrenB 103.ogg}} '''Merchant:''' It's so hard to understand what they're thinking sometimes...
 {{Dialogue End}}
 
 ===Speak with Krateros{{subst:void|<!--104020512-->}}===
 {{Mission Description|type=trailblaze|location=Vortex of Genesis|update|Krateros' stubborn persistence once again brings the fate and future of the Kremnoan people before you...}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Unused &mdash; EnterDistrict_G{GroupID})
+----
+::{{tx}}
+:----
+::{{tx}}
+:<pre>{
+	"$type": "RPG.GameCore.SetLoadingStratageType",
+	"StratageType": "Plain"
+}</pre>
 {{Dialogue End}}
 
 ===Seek advice from Grand Craftsman Chartonus{{subst:void|<!--104020513-->}}===
 {{Dialogue Start}}
-:{{tx}}
+
+;(Unused &mdash; EnterDistrict_G{GroupID})
+----
+::{{tx}}
+:----
+::{{tx}}
+:----
+::{{tx}}
+::<!--1-second delay-->
+::{{tx}}
+:<pre>{
+	"$type": "RPG.GameCore.SetLoadingStratageType",
+	"StratageType": "StoryLine"
+}</pre>
+
+;(Unused &mdash; EnterDistrict_G243)
+:{{A|VO chapter4 12 castorice 108.ogg}} '''Castorice:''' Is that... Lady Tribbie and Lady Trianne?
+
+;(Unused &mdash; EnterDistrict_G478)
+<pre>{
+	"$type": "RPG.GameCore.PlayNPCBubbleTalk",
+	"BubbleTalkInfoList": [
+		{
+			"GroupID": 478,
+			"GroupNpcID": 400039,
+			"TalkSentenceID": 104027606,
+			"EnableVoice": true
+		},
+		{
+			"GroupID": 478,
+			"GroupNpcID": 400041,
+			"TalkSentenceID": 104027604,
+			"EnableVoice": true
+		}
+	],
+	"IsLoop": true,
+	"LoopInterval": 10,
+	"InstantFinish": false,
+	"UniqueID": 1040205889
+}</pre>
+
+;(Unused &mdash; ExitDistrict_G478)
+<pre>{
+	"$type": "RPG.GameCore.StopNPCBubbleTalk",
+	"UniqueIDList": [
+		1040205889
+	]
+}</pre>
+
+;(Unused &mdash; EnterDistrict_G478-2)
+<pre>{
+	"$type": "RPG.GameCore.PlayNPCBubbleTalk",
+	"BubbleTalkInfoList": [
+		{
+			"GroupID": 478,
+			"GroupNpcID": 400008,
+			"TalkSentenceID": 104027605,
+			"EnableVoice": true
+		},
+		{
+			"GroupID": 478,
+			"GroupNpcID": 400009,
+			"TalkSentenceID": 104027604,
+			"EnableVoice": true
+		},
+		{
+			"GroupID": 478,
+			"GroupNpcID": 400007,
+			"TalkSentenceID": 104027607,
+			"EnableVoice": true
+		},
+		{
+			"GroupID": 478,
+			"GroupNpcID": 400043,
+			"TalkSentenceID": 104027606,
+			"EnableVoice": true
+		}
+	],
+	"IsLoop": true,
+	"LoopInterval": 10,
+	"InstantFinish": false,
+	"UniqueID": 1040205890
+}</pre>
+
+;(Unused &mdash; ExitDistrict_G478-2)
+<pre>{
+	"$type": "RPG.GameCore.StopNPCBubbleTalk",
+	"UniqueIDList": [
+		1040205890
+	]
+}</pre>
+
+;(Unused &mdash; EnterDistrict_G478-3)
+<pre>{
+	"$type": "RPG.GameCore.PlayNPCBubbleTalk",
+	"BubbleTalkInfoList": [
+		{
+			"GroupID": 478,
+			"GroupNpcID": 400002,
+			"TalkSentenceID": 104027607,
+			"EnableVoice": true
+		},
+		{
+			"GroupID": 478,
+			"GroupNpcID": 400044,
+			"TalkSentenceID": 104027605,
+			"EnableVoice": true
+		},
+		{
+			"GroupID": 478,
+			"GroupNpcID": 400046,
+			"TalkSentenceID": 104027605,
+			"EnableVoice": true
+		}
+	],
+	"IsLoop": true,
+	"LoopInterval": 10,
+	"InstantFinish": false,
+	"UniqueID": 1040205891
+}</pre>
+
+;(Unused &mdash; ExitDistrict_G478-3)
+<pre>{
+	"$type": "RPG.GameCore.StopNPCBubbleTalk",
+	"UniqueIDList": [
+		1040205891
+	]
+}</pre>
+:{{A|VO chapter4 14 tribbie 111.ogg}} '''Tribbie:''' It's time to head out with the west wind!
+:{{A|VO chapter4 14 aglaea 106.ogg}} '''Aglaea:''' Alright.
 {{Dialogue End}}
 
 ===Try to understand what happened{{subst:void|<!--104020510-->}}===
 {{Mission Description|type=trailblaze|location="Eternal Holy City" Okhema|update|Multiple visitors suddenly pass out in the baths. Hyacine's examination shows an unexpected reason: overheated water. But who is the culprit...?}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Mydei)
+
+;(Upon reaching the destination)
 {{Dialogue End}}
 
 ==Other Languages==
@@ -104,7 +342,7 @@ PageTitle=#Memories, Veiled in Blazing Mist#
 |ru   = О воспоминания, окутанные жарким туманом
 |th   = ความทรงจำเอ๋ย จงเร้นแฝงกลางหมอกระอุ
 |vi   = Hỡi Ký Ức, Mơ Hồ Sau Màn Sương Nóng
-|de   = Erinnerungen, gehüllt in brennenden Nebel
+|de   = O Erinnerungen, gehüllt in brennenden Nebel
 |id   = Memori, Samar-Samar di Balik Kabut Panas
 |pt   = Memórias, Veladas na Névoa Ardente
 }}

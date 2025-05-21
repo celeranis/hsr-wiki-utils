@@ -34,6 +34,32 @@ PageTitle=##
 ==Dialogue==
 {{Stub Dialogue}}
 
+;(Unused &mdash; EVT_DialogueEnd)
+;(If {{F|NeedFight}} is undefined 1)
+::<!--0.8-second delay-->
+:<pre>{
+	"$type": "RPG.GameCore.AdvTriggerAIEvent",
+	"TargetType": {
+		"$type": "RPG.GameCore.GroupFetchLocalTarget",
+		"TargetType": "Monster",
+		"Targets": [
+			200001
+		]
+	},
+	"UserDefineEvent": "EVT_Fight"
+}</pre>
+
+;(Unused &mdash; EVT_WrongAnswer)
+<pre>{
+	"$type": "RPG.GameCore.SetGraphDynamicFloat",
+	"Name": "NeedFight",
+	"TargetIDs": [],
+	"Value": {
+		"FixedValue": {
+			"Value": 1
+		}
+	}
+}</pre>
 {{Dialogue End}}
 
 ==Other Languages==

@@ -36,7 +36,20 @@ PageTitle=#Exhibition Match, Herta!#
 ===Have a duel with Herta{{subst:void|<!--801414301-->}}===
 {{Mission Description|type=adventure|location=Old Weapon Testing Ground|The core gameplay loop behind Aetherium Wars is "dueling." Challenge different players and show your true strength!}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Herta)
+:'''Herta:''' The festival is clearly over, now I have to fight some exhibition match? What a pain...
+:'''Herta:''' Hey, let's get to it, don't waste my time.
+<pre>{
+	"$type": "RPG.GameCore.ShowUI",
+	"Name": "Ui.AetherDivide.AetherChallenge.AetherChallengePage",
+	"WaitForExit": true,
+	"Param": {
+		"Value": "203"
+	},
+	"OnUIEnter": []
+}</pre>
+:'''Herta:''' You won. Good job. Bye.
 {{Dialogue End}}
 
 ==Other Languages==

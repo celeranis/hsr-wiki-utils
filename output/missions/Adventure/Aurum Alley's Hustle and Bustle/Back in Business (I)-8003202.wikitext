@@ -46,60 +46,442 @@ PageTitle=#Back in Business (I)#
 ===Enter Aurum Alley under Bailu's guidance{{subst:void|<!--800320201-->}}===
 {{Mission Description|type=adventure|location=Aurum Alley|Bailu has plans to show you around the food establishments at Aurum Alley over in Exalting Sanctum. It's a rare and fine thing to have someone willing to serve as a free guide!<br />Since Bailu already made up her mind, you should make an effort to follow her and browse the stores in Aurum Alley...}}
 {{Dialogue Start}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+<pre>{
+	"$type": "RPG.GameCore.SetMissionCustomValue",
+	"SubmissionID": 800320201,
+	"MissionCustomValue": {
+		"Index": 1,
+		"Name": "OldValue_1",
+		"ValidValueParamList": [
+			0,
+			1
+		]
+	},
+	"CustomValue": 1
+}</pre>
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{A|VO side2 jrx bailu 125.ogg}} '''Bailu:''' Hurry up! Do you want the snacks to sell out!?
+<pre>{
+	"$type": "RPG.GameCore.WaitMissionTalkFinish"
+}</pre>
 :{{tx}}
+----
+----
+:{{A|VO side2 jrx bailu 126 m.ogg}} {{A|VO side2 jrx bailu 126 f.ogg}} '''Bailu:''' (Trailblazer), we've reached our destination &mdash; Aurum Alley! Of course, the main feature of this tour is the endless selection of tasty delicacies.
+:{{A|VO side2 jrx bailu 127.ogg}} '''Bailu:''' The folk dishes at Spices Supreme are a must-try. This is the only place on the Luofu you can find them.
+:{{A|VO side2 jrx bailu 128.ogg}} '''Bailu:''' So, now that we're here...
+:{{DIcon|Arrow}} You're the tour guide. What do you recommend?
+::<!--0.8-second delay-->
+::{{A|VO side2 jrx bailu 129.ogg}} '''Bailu:''' ...Recommend? I think you mean: "I'd like to treat you to some Xianzhou delicacies."
+:{{DIcon|Arrow}} *sigh* Which Xianzhou delicacies would you like?
+::<!--0.8-second delay-->
+::{{A|VO side2 jrx bailu 130.ogg}} '''Bailu:''' Ooh! Garlic-infused Pork, Crisped Melon and Diced Chicken, Star Taro Braised Pork, Chili Oil Beef Offal Stew, Granny Chen's Tofu... Ugh, I'm getting tired saying them all! Reciting medicine ingredients is easier than this!
+:{{A|VO side2 jrx bailu 131.ogg}} '''Bailu:''' Let's start with the snack stands. You can browse around for bit &mdash; I'll go find us a seat while you make up your mind.
+----
 {{Dialogue End}}
 
 ===Speak with and buy snacks from Tall Auntie{{subst:void|<!--800320205-->}}===
 {{Mission Description|type=adventure|location=Aurum Alley|update|Theoretically, Luofu's night market shouldn't be so deserted. Only the food stalls have some semblance of life around them.<br />Bailu wants you to buy some snacks. You can take this opportunity to ask around and see what's tasty, or you can directly get some snacks from Tall Auntie.}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Tall Auntie)
+:{{A|VO side2 jrx gaoayi 101.ogg}} '''Tall Auntie:''' Oh, a visitor from afar? May I ask you a question &mdash; do you like Aurum Alley?
+:{{DIcon|Arrow}} It's my first visit here, I can't say yet.
+::{{A|VO side2 jrx gaoayi 102.ogg}} '''Tall Auntie:''' Then I'll have to make sure your first visit here is a good one.
+:{{DIcon|Arrow}} Yes, the people here are very friendly.
+::{{A|VO side2 jrx gaoayi 103.ogg}} '''Tall Auntie:''' Glad to hear. We always try to treat visitors from outside well.
+:{{DIcon|Arrow}} ...To be honest, not really.
+::{{A|VO side2 jrx gaoayi 104.ogg}} '''Tall Auntie:''' Oh, well, that's regrettable.
+:{{A|VO side2 jrx gaoayi 105.ogg}} '''Tall Auntie:''' ...I hope you don't mind me prattling on, but since you're an Outworlder, are you familiar with the IPC? Do you know if it has a good reputation?
+:{{DIcon|Arrow}} It's been a great help to pan-cosmic business.
+::{{A|VO side2 jrx gaoayi 106.ogg}} '''Tall Auntie:''' That's true, and they made it much more convenient to exchange strale and credits.
+:{{DIcon|Arrow}} They're a cabal of predatory sharks.
+::{{A|VO side2 jrx gaoayi 107.ogg}} '''Tall Auntie:''' I was a little worried when I heard the president say that the IPC is going to destroy Aurum Alley.
+:{{DIcon|Arrow}} ...All I know is its Findie ads are really annoying.
+::{{A|VO side2 jrx gaoayi 108.ogg}} '''Tall Auntie:''' Findie? I've never heard of that before.
+::{{A|VO side2 jrx gaoayi 109.ogg}} '''Tall Auntie:''' Anyway, sounds like you know as much about them as I do...
+:{{A|VO side2 jrx gaoayi 110.ogg}} '''Tall Auntie:''' Well, I can't just leave you here empty handed &mdash; take a look at the menu. Order whatever you want &mdash; it's on the house.
+:{{DIcon|Arrow}} I'll have a tuskpir wrap.
+:{{DIcon|Arrow}} I'll have a songlotus cake.
+:{{DIcon|Arrow}} I'll have a berrypheasant skewer.
+:{{DIcon|Arrow}} I'll have some steamed puffergoat milk.
+:{{DIcon|Arrow}} I'll have some mung bean soda.
+<pre>{
+	"$type": "RPG.GameCore.SetMissionCustomValue",
+	"SubmissionID": 800320205,
+	"MissionCustomValue": {
+		"Name": "OldValue_0"
+	},
+	"CustomValue": 1
+}</pre>
+:{{A|VO side2 jrx gaoayi 111.ogg}} '''Tall Auntie:''' Alrighty.
+----
+
+;(Talk to Bailu)
+:;(If {{F|MissionCV-8003202-undefined}} is not undefined 5)
+:::----
+:::{{A|VO side2 jrx bailu 133.ogg}} '''Bailu:''' So, is there anything good?
+:::{{DIcon|Arrow}} (Take out the snack)
+::;(If {{F|MissionCV-8003202-undefined}} is undefined 1)
+:::<pre>{
+	"$type": "RPG.GameCore.ConsumeMissionItemPerformance",
+	"SubMissionID": 800320231,
+	"OnSubmitConfirm": [
+		{
+			"$type": "RPG.GameCore.TriggerCustomString",
+			"CustomString": {
+				"Value": "800320207_GiveFood"
+			}
+		}
+	],
+	"OnSubmitCancel": [
+		{
+			"$type": "RPG.GameCore.EndPerformance"
+		}
+	],
+	"SimpleTalk": {}
+}</pre>
+::;(If {{F|MissionCV-8003202-undefined}} is not undefined 1)
+:::;(Return to previous option selection)
+:;(If {{F|MissionCV-8003202-undefined}} is undefined 5)
+:::----
+:::{{A|VO side2 jrx bailu 140.ogg}} '''Bailu:''' Is there anything good?
+:::{{DIcon|Arrow}} (Take out the snack)
+::<pre>{
+	"$type": "RPG.GameCore.ConsumeMissionItemPerformance",
+	"SubMissionID": 800320235,
+	"OnSubmitConfirm": [
+		{
+			"$type": "RPG.GameCore.CharacterTriggerFreeStyle",
+			"TargetAlias": {
+				"$type": "RPG.GameCore.TargetFetchAdvNpcEx",
+				"FetchType": "SingleNpcByNpcID",
+				"SingleNpcID": {
+					"GroupID": {
+						"FixedValue": {
+							"Value": 35
+						}
+					},
+					"GroupNpcID": {
+						"FixedValue": {
+							"Value": 400001
+						}
+					}
+				}
+			},
+			"StoryAvatarID": "NPC_Avatar_Kid_Bailu_00",
+			"StoryMotionID": 312110201
+		},
+		{
+			"$type": "RPG.GameCore.PlayAndWaitSimpleTalk",
+			"SimpleTalkList": [
+				{
+					"TalkSentenceID": 800320353,
+					"ProtectTime": 0.3
+				}
+			]
+		},
+		{
+			"$type": "RPG.GameCore.PlayOptionTalk",
+			"OptionList": [
+				{
+					"$type": "RPG.GameCore.OptionTalkInfo",
+					"TalkSentenceID": 800320354,
+					"OptionIconType": "ChatContinueIcon",
+					"TriggerCustomString": "TalkSentence_800320356"
+				},
+				{
+					"$type": "RPG.GameCore.OptionTalkInfo",
+					"TalkSentenceID": 800320355,
+					"OptionIconType": "ChatContinueIcon",
+					"TriggerCustomString": "TalkSentence_800320356"
+				}
+			]
+		}
+	],
+	"OnSubmitCancel": [
+		{
+			"$type": "RPG.GameCore.EndPerformance"
+		}
+	],
+	"SimpleTalk": {}
+}</pre>
+:{{A|VO side2 jrx bailu 132 m.ogg}} {{A|VO side2 jrx bailu 132 f.ogg}} '''Bailu:''' (Trailblazer), I'm counting on you to go buy all the snacks &mdash; don't keep me waiting too long!
+;(Unused &mdash; 800320207_GiveFood)
+:{{A|VO side2 jrx bailu 134.ogg}} '''Bailu:''' Fantastic! Hey, how did you know my favorite food?
+::{{DIcon|Arrow}} I just know you that well.
+::{{DIcon|Arrow}} Lucky guess.
+::{{DIcon|Arrow}} I'm pretty sure you'll eat anything.
+::<!--0.8-second delay-->
+::{{A|VO side2 jrx bailu 135.ogg}} '''Bailu:''' Great... but it looks like you only brought enough for one person... what am I supposed to do?
+::{{DIcon|Arrow}} You can have it &mdash; I'm not really hungry.
+:::{{A|VO side2 jrx bailu 136.ogg}} '''Bailu:''' Alright, if you say so!
+::{{DIcon|Arrow}} The stallholder gave me this for free, and I'd feel embarrassed asking for more.
+:::{{A|VO side2 jrx bailu 137.ogg}} '''Bailu:''' Yeah, I would feel bad asking for more, too.
+::{{DIcon|Arrow}} This one's mine. Now you can go buy your own.
+:::<!--0.8-second delay-->
+:::{{A|VO side2 jrx bailu 138.ogg}} '''Bailu:''' ...Hmph!
+::----
+::----
+::{{A|VO side2 jrx gaoayi 112.ogg}} '''Tall Auntie:''' Ah! It's the Dragon Lady... Here, I'll get you another serving &mdash; no need to be shy.
+::{{A|VO side2 jrx bailu 139.ogg}} '''Bailu:''' Thank you, Auntie!
+::{{Black Screen|Amidst the bustling of the diners, time flies by before you even notice.}}
+::{{Black Screen|When you return to your senses again, you find yourself immersed in the atmosphere of Aurum Alley's bustling night market.}}
+:;(If {{F|MissionCV-8003202-undefined}} is undefined 1)
+::<pre>{
+	"$type": "RPG.GameCore.ConsumeMissionItem",
+	"SubMissionID": 800320231,
+	"IsAutoConsume": true,
+	"SimpleTalk": {}
+}</pre>
+:;(If {{F|MissionCV-8003202-undefined}} is not undefined 1)
+::;(Return to previous option selection)
+
+;(Unused &mdash; TalkSentence_800320356)
+:<!--0.8-second delay-->
+::{{A|VO side2 jrx bailu 142.ogg}} '''Bailu:''' Okay &mdash; you drink it then.
+::{{DIcon|Arrow}} No, thanks, I'm not really thirsty.
+:::<!--0.8-second delay-->
+:::{{A|VO side2 jrx bailu 143.ogg}} '''Bailu:''' No, no, no, you're our honored guest &mdash; you can drink it.
+::{{DIcon|Arrow}} Fine. How bad can it be, anyway?
+:::<!--0.8-second delay-->
+:::{{A|VO side2 jrx bailu 144.ogg}} '''Bailu:''' It's just like drinking medicine &mdash; close your eyes and cross your heart.
+::----
+::----
+::{{A|VO side2 jrx gaoayi 113.ogg}} '''Tall Auntie:''' Ah! It's the Dragon Lady... Here, I'll get you another serving &mdash; no need to be shy.
+::{{A|VO side2 jrx bailu 145.ogg}} '''Bailu:''' Huh!? W&mdash;Wait, Auntie, I&mdash;I'm not thirsty, please... *sigh* Thank you, Auntie...
+::{{Black Screen|Amidst the bustling of the diners, time flies by before you even notice.}}
+::{{Black Screen|When you return to your senses again, you find yourself immersed in the atmosphere of Aurum Alley's bustling night market.}}
+:;(If {{F|MissionCV-8003202-undefined}} is undefined 1)
+::<pre>{
+	"$type": "RPG.GameCore.ConsumeMissionItem",
+	"SubMissionID": 800320231,
+	"IsAutoConsume": true,
+	"SimpleTalk": {}
+}</pre>
+:;(If {{F|MissionCV-8003202-undefined}} is not undefined 1)
+::;(Return to previous option selection)
+:{{A|VO side2 jrx player 101 m.ogg}} {{A|VO side2 jrx player 101 f.ogg}} '''(Trailblazer):''' (I should see what the other customers have to say about the food here...)
+<pre>{
+	"$type": "RPG.GameCore.WaitMissionTalkFinish"
+}</pre>
 {{Dialogue End}}
 
 ===(Optional) Speak with the customers and get their recommendations{{subst:void|<!--800320207-->}}===
 {{Dialogue Start}}
-:{{tx}}
 {{Dialogue End}}
 
 ===Give the snack you bought to Bailu{{subst:void|<!--800320215-->}}===
 {{Mission Description|type=adventure|location=Aurum Alley|update|Theoretically, Luofu's night market shouldn't be so deserted. Only the food stalls have some semblance of life around them.<br />You got the snacks that Bailu wanted. Go bring it over to her.}}
 {{Dialogue Start}}
-:{{tx}}
+----
+:{{A|VO side2 jrx bailu 146.ogg}} '''Bailu:''' *sigh* I'm so full of snacks I can hardly move. I haven't even gotten around to business yet.
+:{{A|VO side2 jrx bailu 147.ogg}} '''Bailu:''' I wanted to stop by Elegance Pagoda to buy some medicine jars while I'm out. Come on, let's go.
+----
 {{Dialogue End}}
 
 ===Go to Elegance Pagoda{{subst:void|<!--800320217-->}}===
 {{Mission Description|type=adventure|location=Aurum Alley|update|As it turns out, filling your stomachs at the food stalls isn't what you've come here for. Bailu intends to go to Elegance Pagoda to buy some medicine jars.<br />You should keep on following your little guide.}}
 {{Dialogue Start}}
-:{{tx}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+----
+:{{A|VO side2 jrx crowdB 101.ogg}} '''Heckler:''' Hey, what's going on at the dock?
+:{{A|VO side2 jrx crowdC 101.ogg}} '''Concurring Voice:''' Some of the dock workers got into an argument with the IPC folks.
+----
+----
+:{{A|VO side2 jrx sushang 101.ogg}} '''Vigorous Female Voice:''' Watch your words, no need to be aggressive here...
+:{{A|VO side2 jrx bailu 148.ogg}} '''Bailu:''' ...How about we go see what's happening at the dock?
+:{{DIcon|Arrow}} Sounds exciting.
+:{{DIcon|Arrow}} Sounds like trouble...
+::{{A|VO side2 jrx bailu 149.ogg}} '''Bailu:''' What if someone gets hurt and needs medical attention? Come on.
+----
+----
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+<pre>{
+	"$type": "RPG.GameCore.TriggerSound",
+	"SoundName": {
+		"Value": "Ev_sfx_amb_jinrenxiang_oneshot_03"
+	},
+	"EmitterType": "DefaultEmitter"
+}</pre>
 {{Dialogue End}}
 
 ===Go to the docks and see what's happening{{subst:void|<!--800320219-->}}===
 {{Mission Description|type=adventure|location=Aurum Alley|update|As expected, you run into something unexpected. There seems to be some kind of dispute happening on the docks. Head over and see what's going on.<br />From the sound of things, it seems like a courageous girl is taking a principled stance for something.}}
 {{Dialogue Start}}
+<pre>{
+	"$type": "RPG.GameCore.CreateProp",
+	"GroupID": {
+		"FixedValue": {
+			"Value": 37
+		}
+	},
+	"GroupPropID": {
+		"FixedValue": {
+			"Value": 300002
+		}
+	},
+	"CreateList": []
+}</pre>
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+----
+:{{A|VO side2 jrx mingxi 101.ogg}} '''Person Appearing as Merchant Guild Secretary:''' Please, miss, allow Aurum Alley Merchant Guild to take care of this matter.
+:{{A|VO side2 jrx sushang 103.ogg}} '''Sushang:''' You're from... the Merchant Guild?
+:{{A|VO side2 jrx scott 102.ogg}} '''IPC Sales Rep:''' What a joke! You people can't "take care" of anything!
+:{{A|VO side2 jrx scott 103.ogg}} '''IPC Sales Rep:''' Everyone here knows that the Aurum Alley Merchant Guild is as incompetent as it is dysfunctional. The lease for the docks isn't even paid yet &mdash; anyone care to guess whose fault that is...?
+:{{A|VO side2 jrx scott 104.ogg}} '''IPC Sales Rep:''' I'll tell you &mdash;the Merchant Guild's!
+:{{A|VO side2 jrx mingxi 102.ogg}} '''Person Appearing as Merchant Guild Secretary:''' ...I'm not denying that.
+:{{A|VO side2 jrx scott 105.ogg}} '''IPC Sales Rep:''' Then say it out loud so everyone can hear: Aurum Alley Merchant Guild apologizes to every vendor here for defaulting on the lease and leaving us to pick up the mess!
+:{{A|VO side2 jrx scott 106.ogg}} '''IPC Sales Rep:''' Better yet &mdash; get down on your knees and beg for forgiveness!
+:{{DIcon|Arrow}} This guy sucks!!!
+::<!--0.8-second delay-->
+::{{A|VO side2 jrx bailu 150.ogg}} '''Bailu:''' I agree.
+:{{DIcon|Arrow}} (Keep watching the drama)
+:{{DIcon|Arrow}} (Prepare to beat this guy up.)
+::<!--0.8-second delay-->
+::{{A|VO side2 jrx bailu 151.ogg}} '''Bailu:''' Wait &mdash; easy! We just came to watch!
+----
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{A|VO side2 jrx scott 101.ogg}} '''Sarcastic Voice:''' When did you decide to show up, little miss feisty? How is this any of your business?
+:{{A|VO side2 jrx sushang 102.ogg}} '''Sushang:''' As a Cloud Knight, I can't just sit back and do nothing when I see civil unrest. And for your information, my name isn't "little miss feisty" &mdash; it's Sushang!
+<pre>{
+	"$type": "RPG.GameCore.WaitMissionTalkFinish"
+}</pre>
+:{{A|VO side2 jrx sushang 104.ogg}} '''Sushang:''' Ugh, you're being completely unreasonable. Why can't we talk this over?
+:{{A|VO side2 jrx scott 107.ogg}} '''IPC Sales Rep:''' I'm not being unreasonable, I'm making a friendly inquiry &mdash; when will the IPC receive its lease payments?
+:{{A|VO side2 jrx mingxi 103.ogg}} '''Person Appearing as Merchant Guild Secretary:''' ...I'm afraid we can't pay at the moment.
+:{{A|VO side2 jrx scott 108.ogg}} '''IPC Sales Rep:''' We leased this whole dock to your Merchant Guild hoping that it would rejuvenate Aurum Alley, and look at it now &mdash; a perfectly good freight dock has gone to waste!
+:{{A|VO side2 jrx sushang 105.ogg}} '''Sushang:''' They said "at the moment." That doesn't mean they'll never make the payments... right?
+:{{A|VO side2 jrx scott 109.ogg}} '''IPC Sales Rep:''' Haha, don't be so gullible.
+:{{A|VO side2 jrx scott 110.ogg}} '''IPC Sales Rep:''' How about we make a little bet &mdash; if the Merchant Guild can pay back the money it owes, I'll get down on my knees and apologize to all the people of Aurum Alley...
+:{{A|VO side2 jrx scott 111.ogg}} '''IPC Sales Rep:''' I'll shout it loud and clear &mdash; "I'm a raving idiot howling into the wind!" And then I'll bark like a dog. How does that sound?
+:{{A|VO side2 jrx sushang 106.ogg}} '''Sushang:''' Okay... and if they can't?
+:{{A|VO side2 jrx scott 112.ogg}} '''IPC Sales Rep:''' Oh, that's simple. You apologize to me in front of all the people of Aurum Alley, and you bark like a dog.
+:{{DIcon|Arrow}} This is so childish. Don't accept.
+::{{A|VO side2 jrx bailu 152.ogg}} '''Bailu:''' I agree.
+::(Keep watching the drama)
+::{{A|VO side2 jrx bailu 153.ogg}} '''Bailu:''' Psst, what should she do?
+::Take the bet!
+:{{DIcon|Arrow}} (Keep watching the drama)
+::{{A|VO side2 jrx bailu 153.ogg}} '''Bailu:''' Psst, what should she do?
+::Take the bet!
+:{{DIcon|Arrow}} Take the bet!
+:{{A|VO side2 jrx bailu 154.ogg}} '''Bailu:''' ...You're not being very helpful, are you?
+:{{A|VO side2 jrx sushang 107.ogg}} '''Sushang:''' Hmph! Deal!
 :{{tx}}
 {{Dialogue End}}
 
 ===Learn about the rough details by talking to Sushang{{subst:void|<!--800320223-->}}===
 {{Mission Description|type=adventure|location=Aurum Alley|update|Sushang is trying to uphold justice for the people working at the docks, but instead found herself locked into a wager against the IPC representative. Has this kind girl calmed down yet?<br />Ask around about what happened on the docks. If you're going to engage in gossip, might as well see it through to the end.}}
 {{Dialogue Start}}
-:{{tx}}
+
+----
+:{{A|VO side2 jrx mingxi 115.ogg}} '''Mingxi:''' Hahaha, this will certainly save us on shipping costs.
+:{{A|VO side2 jrx sushang 116.ogg}} '''Sushang:''' Isn't this... a little unsafe?
+:{{A|VO side2 jrx workerB 103.ogg}} '''Friendly Worker:''' Don't worry, our motto is "safety first."
+:{{DIcon|Arrow}} I'm so awesome. I've done such an amazing job!
+::<!--0.8-second delay-->
+::{{A|VO side2 jrx bailu 158.ogg}} '''Bailu:''' Geez, don't get too full of yourself...
+:{{DIcon|Arrow}} So, you've never thought of this before? *shaking my head*
+::<!--0.8-second delay-->
+::{{A|VO side2 jrx bailu 159.ogg}} '''Bailu:''' Hey! What's gotten into you?
+:<!--0.3-second delay-->
+:{{A|VO side2 jrx workerA 104.ogg}} '''Sulking Worker:''' Impressive... but if you ask me, inventory efficiency isn't enough to save us. If Heron Express doesn't deliver the goods, then they're just gonna sit around collecting dust.
+:{{A|VO side2 jrx mingxi 116.ogg}} '''Mingxi:''' I see your point. If you have the time, could you accompany me to Heron Express' Aurum Alley branch office?
+:{{A|VO side2 jrx sushang 117.ogg}} '''Sushang:''' Of course! It's just... I'm better with brawn than brains...
+:{{DIcon|Arrow}} Looks like Aurum Alley is counting on me again.
+:{{DIcon|Arrow}} Seems like I could make a career out of this.
+----
 {{Dialogue End}}
 
 ===Find out about recent logistical developments at Heron Express{{subst:void|<!--800320225-->}}===
 {{Mission Description|type=adventure|location=Aurum Alley|update|With matters on the docks temporarily resolved, the workers also mentioned that their logistical costs can be reduced as well.<br />Since you're seeing the gossip through to the end, you should continue following Mingxi the secretary and head to Heron Express.}}
 {{Dialogue Start}}
-:{{tx}}
+
+----
+----
+:{{A|VO side2 jrx yuanfeng 108.ogg}} '''Yuanfeng:''' With these routes in place, logistics costs will be reduced significantly.
+:{{A|VO side2 jrx mingxi 129.ogg}} '''Mingxi:''' I knew it! You're the heroes who can help us revitalize Aurum Alley.
+:{{A|VO side2 jrx sushang 124.ogg}} '''Sushang:''' Now can you tell us what really happened to Aurum Alley?
+:{{A|VO side2 jrx mingxi 130.ogg}} '''Mingxi:''' ...Well, Aurum Alley was originally the busiest night market in Exalting Sanctum. In days past, this alley, famed for its food and commerce, was brimming with aurumatons collecting goods for their masters... but that prosperity has long since passed.
+:{{A|VO side2 jrx mingxi 131.ogg}} '''Mingxi:''' Restrictions were placed on civilian aurumatons, and new commercial centers began to spring up. It was like being on a gentle downhill slope &mdash; everyone knew things were changing, but no one thought it was serious.
+:{{A|VO side2 jrx mingxi 132.ogg}} '''Mingxi:''' When the Luofu was moored for maintenance and trade with the IPC increased, a new threat emerged for the Merchant Guild &mdash; the IPC's announcement of a bid for the development of Aurum Alley. Their promises were visible, tangible, and extremely aggressive.
+:{{A|VO side2 jrx mingxi 133.ogg}} '''Mingxi:''' When the "gentle downhill slope" suddenly became the edge of a cliff, no one could pretend to ignore it anymore. Both the Merchant Guild and Aurum Alley itself were in jeopardy.
+:{{DIcon|Talk}} Can you fill us in on the details?
+::{{A|VO side2 jrx mingxi 134.ogg}} '''Mingxi:''' The contract for operating Aurum Alley's business district is about to expire, and the IPC's regional director has seen an opportunity. They orchestrated the dock debt crisis, and that's just the beginning.
+::{{A|VO side2 jrx mingxi 135.ogg}} '''Mingxi:''' Meanwhile, vendors in Aurum Alley have expressed mixed feelings about the IPC &mdash; some see it as a crouching tiger with malicious intentions, while others see the IPC's promise of high profits as a chance to turn things around...
+::{{A|VO side2 jrx mingxi 136.ogg}} '''Mingxi:''' But now the chill is setting in &mdash; everyone is worried that Aurum Alley is going to disappear. The Merchant Guild has to do something to help the merchants here.
+:;(Return to previous option selection)
+:{{DIcon|Arrow}} I get the gist of it.
+::{{A|VO side2 jrx mingxi 137.ogg}} '''Mingxi:''' Therefore, on behalf of the Merchant Guild, I would like to formally extend an invitation to you all to serve as {{Color|keyword|nobold=1|"business advisors"}} in the plan to save Aurum Alley.
+::{{DIcon|Arrow}} Leave it to me. I'm sure I can be of some use.
+:::<!--0.8-second delay-->
+:::{{A|VO side2 jrx mingxi 138.ogg}} '''Mingxi:''' Excellent.
+::{{DIcon|Arrow}} How favorable is the compensation for this position?
+:::<!--0.8-second delay-->
+:::{{A|VO side2 jrx mingxi 139.ogg}} '''Mingxi:''' The Merchant Guild is tight on funds, but we'll be sure to make it worth your time.
+::{{DIcon|Arrow}} Sorry, but I'm not a business strategist.
+:::<!--0.8-second delay-->
+:::{{A|VO side2 jrx mingxi 140.ogg}} '''Mingxi:''' ...Is that how you feel? Well, don't turn down the offer just yet.
+::{{A|VO side2 jrx mingxi 141.ogg}} '''Mingxi:''' Why don't you talk it over with everyone first?
+::{{Black Screen|undefined}}
 {{Dialogue End}}
 
 ===Discuss the next steps with your companions{{subst:void|<!--800320227-->}}===
 {{Mission Description|type=adventure|location=Aurum Alley|update|Miss Secretary clearly doesn't want you to feel forced by "social pressures" to assist her, but she very much wants your help at the same time. Hence, she put forward her proposal and hopes you and your companions can talk about it.<br />Talk it over with the "Victim of the Wager" Sushang and the "Steadfast Gossiper" Bailu and get their opinions.}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Sushang)
+:{{A|VO side2 jrx sushang 125.ogg}} '''Sushang:''' I really hope you can help out.
+::{{DIcon|Arrow}} Of course. You'd be in big trouble if I don't.
+:::{{A|VO side2 jrx sushang 126.ogg}} '''Sushang:''' I'm not worried about that, I just want to help save Aurum Alley.
+::{{DIcon|Arrow}} What if I refuse?
+:::{{A|VO side2 jrx sushang 127.ogg}} '''Sushang:''' ...You don't want me to have to bark like a dog in front of all those people, do you? Besides, I'd really like to help the people in Aurum Alley.
+::{{A|VO side2 jrx sushang 128.ogg}} '''Sushang:''' My home, the Xianzhou Yaoqing, had much closer ties with the IPC. Initially, people thought they were just engaging in a little interstellar investment... but over time, things changed.
+::{{A|VO side2 jrx sushang 129.ogg}} '''Sushang:''' Gradually, the Yaoqing's younger generations began to enjoy the immersia produced by the IPC's Entertainment Division. Once they started wearing IPC clothing lines, you could hardly tell if they were Xianzhou locals or IPC employees.
+::{{A|VO side2 jrx sushang 130.ogg}} '''Sushang:''' After their Coming of Age Ceremonies, a lot of them aspired to join the IPC to make it big.
+::{{A|VO side2 jrx sushang 131.ogg}} '''Sushang:''' The architecture across the whole delve began to change. The graceful flying eaves I saw as a child became fewer and fewer, and the glazed tiles and Fallow Earth bricks gradually disappeared. Sleek, monolithic IPC buildings started sprouting up everywhere.
+::{{A|VO side2 jrx sushang 132.ogg}} '''Sushang:''' Any of the Yaoqing locals older than 500 &mdash; like my mother &mdash; will say the Yaoqing has changed. But they're not sure whether this change is leading to a better future, or if it's allowing short-life species to dictate their way of life... It's making everyone anxious.
+::{{A|VO side2 jrx sushang 133.ogg}} '''Sushang:''' When I saw Mingxi being confronted by the IPC, I felt the same uneasiness. She's been around several life-spans longer than that stooge, but somehow she was still at a loss for how to deal with him.
+::{{A|VO side2 jrx sushang 134.ogg}} '''Sushang:''' If our opponents were martial arts types, I could hold my own against them... but Aurum Alley's problems aren't something we can fight off with a sword.
+::{{A|VO side2 jrx sushang 135.ogg}} '''Sushang:''' I want to help the Merchant Guild, I want to help everyone at Aurum Alley... please help me help them!
+:{{A|VO side2 jrx sushang 135.ogg}} '''Sushang:''' I want to help the Merchant Guild, I want to help everyone at Aurum Alley... please help me help them!
+
+;(Talk to Bailu)
+:{{A|VO side2 jrx bailu 162.ogg}} '''Bailu:''' *sigh* I only came here for the food... I didn't expect to get tangled up in all this dock leasing stuff.
+::{{A|VO side2 jrx bailu 163.ogg}} '''Bailu:''' Still, if you're willing to give it a shot, maybe Aurum Alley doesn't have to disappear.
+::{{DIcon|Arrow}} Wait a sec... You haven't contributed anything so far.
+:::{{A|VO side2 jrx bailu 164.ogg}} '''Bailu:''' That's not true, I'm doing something right now &mdash; persuading you to help us! An admirable contribution.
+::{{DIcon|Arrow}} You're just worried all your favorite food stands are gonna disappear.
+:::{{A|VO side2 jrx bailu 165.ogg}} '''Bailu:''' So what!? Hmph, the food's the best bit... Aurum Alley without food would be like a pill without medicine... meaningless!
+::{{DIcon|Arrow}} You can count on me.
+:::{{A|VO side2 jrx bailu 166.ogg}} '''Bailu:''' I knew you'd help us! A truly reliable friend!
+:::{{DIcon|Arrow}} By "friend" you mean "free meal ticket," right?
+:::{{A|VO side2 jrx bailu 167.ogg}} '''Bailu:''' Hey!
+:{{A|VO side2 jrx bailu 162.ogg}} '''Bailu:''' *sigh* I only came here for the food... I didn't expect to get tangled up in all this dock leasing stuff.
+::{{A|VO side2 jrx bailu 163.ogg}} '''Bailu:''' Still, if you're willing to give it a shot, maybe Aurum Alley doesn't have to disappear.
+
+;(Talk to Yuanfeng)
+:Yuanfeng gazes at Aurum Alley anxiously. Seems like he's actually more meticulous than he appears.
 {{Dialogue End}}
 
 ===Speak with Miss Secretary and inform her about your decision{{subst:void|<!--800320230-->}}===
 {{Mission Description|type=adventure|location=Aurum Alley|update|Miss Secretary clearly doesn't want you to feel forced by "social pressures" to assist her, but she very much wants your help at the same time. Hence, she put forward her proposal and hopes you and your companions can talk about it.<br />By the end of the discussion, both Sushang and Bailu hope that you can offer aid to Aurum Alley. You should tell Miss Secretary about your decision.}}
 {{Dialogue Start}}
-:{{tx}}
+
 {{Dialogue End}}
 
 ==Other Languages==

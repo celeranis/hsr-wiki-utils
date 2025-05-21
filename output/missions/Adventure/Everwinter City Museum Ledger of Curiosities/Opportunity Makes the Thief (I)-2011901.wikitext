@@ -49,55 +49,253 @@ Mission Opportunity Makes the Thief (I) Caelus.png|Caelus
 ===Meet up with an old friend at the Administrative District Plaza{{subst:void|<!--201190101-->}}===
 {{Mission Description|type=adventure|location=Administrative District|With curiosity and excitement, you step into Belobog's domain once again.<br />Perhaps some wondrous adventure would happen this time as well? Who knows...}}
 {{Dialogue Start}}
+
+;(Talk to Pela)
+:{{A|VO side1 bwg pela 101 m.ogg}} {{A|VO side1 bwg pela 101 f.ogg}} '''Pela:''' Hey, it's you, (Trailblazer)! I didn't expect to see you here in the Administrative District. How have you been lately?
+:{{DIcon|Arrow}} Pretty good. How about you?
+::{{A|VO side1 bwg pela 102.ogg}} '''Pela:''' Great to hear! Since the Stellaron crisis subsided, Belobog's been feeling a little more cheerful. We're really grateful for your assistance...
+::{{A|VO side1 bwg pela 103.ogg}} '''Pela:''' ...and yes, things are going well for me too &mdash; thanks for asking!
+:{{DIcon|Arrow}} Things could be better.
+::{{A|VO side1 bwg pela 104.ogg}} '''Pela:''' Oh... Don't worry, things will get better &mdash; I'm sure of it.
+::{{A|VO side1 bwg pela 105.ogg}} '''Pela:''' Speaking of things getting better, Belobog's been feeling a little more cheerful since the Stellaron crisis subsided. We couldn't have done it without you.
+:{{A|VO side1 bwg pela 106.ogg}} '''Pela:''' You spent so much time in Belobog on your last visit &mdash; you must have passed by here before, right?
+:{{A|VO side1 bwg pela 107.ogg}} '''Pela:''' This is Belobog's History and Culture Museum &mdash; built more than six hundred years ago.
+:{{A|VO side1 bwg pela 108.ogg}} '''Pela:''' Last time you visited, it was closed for its ten-year renovation.
+:{{A|VO side1 bwg pela 109.ogg}} '''Pela:''' Now that the Stellaron crisis is over, we've been able to allocate more manpower to the renovation works. The museum should be open to the public again soon.
+:{{A|VO side1 bwg pela 110.ogg}} '''Pela:''' It's just...
+:{{DIcon|Arrow}} Just what?
+:{{DIcon|Arrow}} ...You ran into trouble?
+:{{A|VO side1 bwg pela 111.ogg}} '''Pela:''' ...We encountered a problem during the renovation process. The Silvermane Guards are doing all they can to figure it out.
+:{{A|VO side1 bwg pela 112 m.ogg}} {{A|VO side1 bwg pela 112 f.ogg}} '''Pela:''' I... *sigh* Sorry, (Trailblazer), I shouldn't talk about it in the open like this. Hey – why don't I give you a tour of the museum? We can talk inside while I show you around...
+:{{A|VO side1 bwg pela 113.ogg}} '''Pela:''' ...if you have time, that is.
+:{{DIcon|Arrow}} That sounds nice.
+:{{A|VO side1 bwg pela 114.ogg}} '''Pela:''' Great! What are we waiting for?
+----
 :{{tx}}
 {{Dialogue End}}
 
 ===Follow Pela{{subst:void|<!--201190104-->}}===
 {{Mission Description|type=adventure|location=History and Culture Museum|update|Pela mentioned that the Belobog History and Culture Museum, currently being renovated, is facing some problems.<br />Visit the museum with her to understand the issues at hand.}}
 {{Dialogue Start}}
-:{{tx}}
+:{{A|VO side1 bwg pela 120.ogg}} '''Pela:''' Past the Reception Hall, you'll find the General Hall &mdash; the museum's largest exhibition room.
+:{{A|VO side1 bwg pela 121.ogg}} '''Pela:''' There are all sorts of exhibits on display – paintings by famous artists, samples of the planet's crust... Visitors can experience the essence of Belobog's culture in just a few minutes' time.
+:{{A|VO side1 bwg pela 122.ogg}} '''Pela:''' I really hope the museum can open up soon... The children here need a culturally-enriching environment &mdash; especially those from the Underworld...
+:{{A|VO side1 bwg pela 123.ogg}} '''Pela:''' ...but like I mentioned earlier, we're in a bit of a bind &mdash; we could really use a helping hand.
+
+;(Upon reaching the destination)
+<pre>{
+	"$type": "RPG.GameCore.ClearNpcDistanceTrigger",
+	"GroupID": 9,
+	"GroupNpcID": 400002
+}</pre>
+----
+:{{A|VO side1 bwg pela 124.ogg}} '''Pela:''' Here – this is the issue we're trying to deal with.
+:{{DIcon|Arrow}} The exhibit disappeared?
+::{{A|VO side1 bwg pela 125.ogg}} '''Pela:''' It was stolen.
+:{{DIcon|Arrow}} There's a thief on the prowl?
+::{{A|VO side1 bwg pela 126.ogg}} '''Pela:''' ...Wow, you're quick! Yes, this exhibit was stolen just recently.
+:{{DIcon|Arrow}} So you need help opening this cabinet...
+::{{A|VO side1 bwg pela 127.ogg}} '''Pela:''' Wait! What are you doing!?
+::{{A|VO side1 bwg pela 128.ogg}} '''Pela:''' *sigh* You're in a museum, remember!? Here, let me explain – this exhibit was recently stolen.
+:{{A|VO side1 bwg pela 129.ogg}} '''Pela:''' It was one of the oldest and most precious items in the General Hall collection &mdash; the {{Color|keyword|nobold=1|Meteor Fragment}}.
+:{{A|VO side1 bwg pela 130.ogg}} '''Pela:''' It is said that seven hundred years ago, the invaders from beyond the sky descended upon the surface of Jarilo-VI with a meteor shower. The Meteor Fragment is solid evidence that those invaders once tainted our land...
+:{{A|VO side1 bwg pela 131.ogg}} '''Pela:''' ...Ahem, sorry, the tour guide in me gets a little carried away &mdash; I'm not here to give you a history lesson. Still, it's no exaggeration to say that if the Meteor Fragment isn't recovered, the museum will lose half of its significance.
+:{{DIcon|Arrow}} Do you know who the thief is?
+::{{A|VO side1 bwg pela 132.ogg}} '''Pela:''' ...Not yet. That's why this case is such a conundrum for the Silvermane Guards.
+:{{DIcon|Arrow}} Can't we just use a replica?
+::{{A|VO side1 bwg pela 133.ogg}} '''Pela:''' ...Out of the question! As the curator of the exhibits here, I would never resort to deceiving the public like that...
+::{{A|VO side1 bwg pela 134.ogg}} '''Pela:''' Our first priority is finding the thief and recovering the stolen item, but we don't even have a suspect yet... That's why this case is such a conundrum for the Silvermane Guards.
+:{{A|VO side1 bwg pela 135.ogg}} '''Pela:''' Truth be told, the Meteor Fragment isn't the only item that was stolen... but we want the museum to open as soon as possible. We can worry about the other missing items later.
+:{{DIcon|Arrow}} Any leads?
+::{{A|VO side1 bwg pela 136.ogg}} '''Pela:''' Of course &mdash; I wouldn't ask you to start a whole investigation from scratch.
+:{{DIcon|Arrow}} I think I know who the culprit is.
+::{{A|VO side1 bwg pela 137.ogg}} '''Pela:''' Ah, you must be thinking of Sampo, right? I don't think so, our people have been keeping a close eye on him these days. The reports say he's been on his best behavior – not the slightest hint of trouble-making.
+:{{A|VO side1 bwg pela 138.ogg}} '''Pela:''' The guards stationed in the Underworld reported that some suspicious characters have been meeting at {{Color|keyword|nobold=1|a hideout in the Great Mine}} late at night.
+:{{A|VO side1 bwg pela 139.ogg}} '''Pela:''' Since the Silvermane Guards are still getting situated in the Underworld and we don't have any direct evidence, we haven't been able to apprehend any suspects.
+:{{A|VO side1 bwg pela 140.ogg}} '''Pela:''' But if you were to go there yourself and ask around... I think we could gather a lot of useful intel.
+:{{A|VO side1 bwg pela 141 m.ogg}} {{A|VO side1 bwg pela 141 f.ogg}} '''Pela:''' So, (Trailblazer), would you like to help solve this case?
+:{{DIcon|Arrow}} I'd love to.
+::{{A|VO side1 bwg pela 142.ogg}} '''Pela:''' Excellent! Just as I expected &mdash; short, sweet, and decisive. To the Underworld it is, then.
+:{{DIcon|Arrow}} Let's meet at the Great Mine and go from there...
+::{{A|VO side1 bwg pela 143.ogg}} '''Pela:''' ...Sound promising! I'll meet you in the Underworld, then.
+<pre>{
+	"$type": "RPG.GameCore.SetMissionCustomValue",
+	"SubmissionID": 201190105,
+	"MissionCustomValue": {
+		"Name": "OldValue_0",
+		"ValidValueParamList": []
+	},
+	"CustomValue": 1
+}</pre>
+----
 {{Dialogue End}}
 
 ===Go to the Great Mine and meet up with Pela{{subst:void|<!--201190110-->}}===
 {{Mission Description|type=adventure|location=Great Mine|update|It turns out there has been a series of thefts in the Belobog History and Culture Museum.<br />To find the lost exhibits, Pela and you decide to head to the Great Mine to investigate the matter.}}
 {{Dialogue Start}}
-:{{tx}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{A|VO side1 bwg pela 144.ogg}} '''Pela:''' The conditions here are so... rudimentary. I wonder how long those people have been living here...
+:{{A|VO side1 bwg pela 145.ogg}} '''Pela:''' ...Back to the investigation. We contacted an agent from Wildfire &mdash; apparently she has some first-hand intel.
+:{{A|VO side1 bwg pela 146.ogg}} '''Pela:''' I think her name was... Swetta? Yes, that's right. Let's go pay her a visit.
+----
 {{Dialogue End}}
 
 ===Chat with Swetta about the situation{{subst:void|<!--201190111-->}}===
 {{Mission Description|type=adventure|location=Great Mine|update|There has been a series of thefts in the Belobog History and Culture Museum.<br />To find the lost exhibits, Pela and you decide to head to the Great Mine to investigate the matter.<br />Miss Swetta from Wildfire seems to know something. Chat with her about the situation.}}
 {{Dialogue Start}}
-:{{tx}}
+
+
+;(Talk to Pela)
+:{{A|VO side1 bwg pela 155 m.ogg}} {{A|VO side1 bwg pela 155 f.ogg}} '''Pela:''' Oh good, you're back, (Trailblazer)! Did you find out any critical intel?
+::{{DIcon|Arrow}} All three of the rumors Swetta mentioned are true.
+::{{A|VO side1 bwg pela 156.ogg}} '''Pela:''' ...I see. Looks like someone is getting the miners involved in the stealing after all.
+::{{A|VO side1 bwg pela 157.ogg}} '''Pela:''' I made some progress too. The miners here say they've noticed some people acting strangely recently – a few vagrants who almost never leave the Great Mine have suddenly started making trips to Boulder Town.
+::{{A|VO side1 bwg pela 158.ogg}} '''Pela:''' I asked the Silvermane Guards stationed there to go investigate some places of interest. I hope they find something...
+::{{A|VO side1 bwg pela 159.ogg}} '''Pela:''' ...Hey, we've got some news!
+:<pre>{
+	"$type": "RPG.GameCore.PlayMessage",
+	"MessageSectionID": 1113800
+}</pre>
+::{{A|VO side1 bwg pela 160.ogg}} '''Pela:''' What a stroke of luck! I didn't expect to get a break in the investigation so quickly!
+::{{A|VO side1 bwg pela 161 m.ogg}} {{A|VO side1 bwg pela 161 f.ogg}} '''Pela:''' Come on, (Trailblazer), let's go to the Goethe Grand Hotel. I hope this isn't some sort of cover-up operation.
+::----
+:{{A|VO side1 bwg pela 153 m.ogg}} {{A|VO side1 bwg pela 153 f.ogg}} '''Pela:''' Well (Trailblazer), I'm going to head for the settlement and see if I can get more intel from the locals.
+::{{A|VO side1 bwg pela 154.ogg}} '''Pela:''' In the meantime, do you think you could head out and look for more clues? We can compare notes when you're done – I'm counting on you!
+
+;(Talk to Female Protagonist)
+:{{A|VO side1 bwg pela 155 m.ogg}} {{A|VO side1 bwg pela 155 f.ogg}} '''Pela:''' Oh good, you're back, (Trailblazer)! Did you find out any critical intel?
+::{{DIcon|Arrow}} All three of the rumors Swetta mentioned are true.
+::{{A|VO side1 bwg pela 156.ogg}} '''Pela:''' ...I see. Looks like someone is getting the miners involved in the stealing after all.
+::{{A|VO side1 bwg pela 157.ogg}} '''Pela:''' I made some progress too. The miners here say they've noticed some people acting strangely recently – a few vagrants who almost never leave the Great Mine have suddenly started making trips to Boulder Town.
+::{{A|VO side1 bwg pela 158.ogg}} '''Pela:''' I asked the Silvermane Guards stationed there to go investigate some places of interest. I hope they find something...
+::{{A|VO side1 bwg pela 159.ogg}} '''Pela:''' ...Hey, we've got some news!
+:<pre>{
+	"$type": "RPG.GameCore.PlayMessage",
+	"MessageSectionID": 1113800
+}</pre>
+::{{A|VO side1 bwg pela 160.ogg}} '''Pela:''' What a stroke of luck! I didn't expect to get a break in the investigation so quickly!
+::{{A|VO side1 bwg pela 161 m.ogg}} {{A|VO side1 bwg pela 161 f.ogg}} '''Pela:''' Come on, (Trailblazer), let's go to the Goethe Grand Hotel. I hope this isn't some sort of cover-up operation.
+::----
+:{{A|VO side1 bwg pela 153 m.ogg}} {{A|VO side1 bwg pela 153 f.ogg}} '''Pela:''' Well (Trailblazer), I'm going to head for the settlement and see if I can get more intel from the locals.
+::{{A|VO side1 bwg pela 154.ogg}} '''Pela:''' In the meantime, do you think you could head out and look for more clues? We can compare notes when you're done – I'm counting on you!
 {{Dialogue End}}
 
 ===Find clues based on the information provided by Swetta{{subst:void|<!--201190112-->}}===
 {{Mission Description|type=adventure|location=Great Mine|update|There has been a series of thefts in the Belobog History and Culture Museum.<br />To find the lost exhibits, Pela and you decide to head to the Great Mine to investigate the matter.<br />Miss Swetta from Wildfire told you what she knew. Now, go find some appropriate clues around here.}}
 {{Dialogue Start}}
-:{{tx}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+<pre>{
+	"$type": "RPG.GameCore.PlayNPCBubbleTalk",
+	"BubbleTalkInfoList": [
+		{
+			"AutoSkipTime": 3,
+			"GroupID": 111,
+			"GroupNpcID": 400002,
+			"TalkSentenceID": 201190871
+		},
+		{
+			"AutoSkipTime": 3,
+			"GroupID": 111,
+			"GroupNpcID": 400001,
+			"TalkSentenceID": 201190872
+		},
+		{
+			"AutoSkipTime": 3,
+			"GroupID": 111,
+			"GroupNpcID": 400002,
+			"TalkSentenceID": 201190873
+		},
+		{
+			"AutoSkipTime": 3,
+			"GroupID": 111,
+			"GroupNpcID": 400001,
+			"TalkSentenceID": 201190874
+		}
+	]
+}</pre>
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+----
+:{{A|VO side1 bwg robotN 101.ogg}} '''Robot Guard:''' Beep! Beep!
+:{{A|VO side1 bwg player 101 m.ogg}} {{A|VO side1 bwg player 101 f.ogg}} '''(Trailblazer):''' (What are these two doing sneaking around...?)
+:{{A|VO side1 bwg robotN 102.ogg}} '''Robot Guard:''' Beep! Beep! Alert! Alert! Nosy person spotted! Nosy person spotted!
+:{{A|VO side1 bwg robotN 103.ogg}} '''Robot Guard:''' Beep! Beep! Protect the goods! Protect the goods!
+;(Enter battle)
+:{{Enemy List|Automaton Beetle*3; Automaton Hound*1}}
 {{Dialogue End}}
 
 ===Report back to Pela with the clues you've gathered{{subst:void|<!--201190117-->}}===
 {{Mission Description|type=adventure|location=Great Mine|update|There has been a series of thefts in the Belobog History and Culture Museum.<br />To find the lost exhibits, Pela and you decide to head to the Great Mine to investigate the matter.<br />All of Miss Swetta's information was true. You found some circumstantial evidence indicating the thefts had happened here. Report this back to Pela.}}
 {{Dialogue Start}}
-:{{tx}}
+:{{A|VO side1 bwg player 107 m.ogg}} {{A|VO side1 bwg player 107 f.ogg}} '''(Trailblazer):''' (The three rumors Swetta talked about all check out. Time to meet back up with Pela.)
 {{Dialogue End}}
 
 ===Go the Goethe Grand Hotel to look for the Meteor Fragment{{subst:void|<!--201190118-->}}===
 {{Mission Description|type=adventure|location=Cheap Room|update|There has been a series of thefts in the Belobog History and Culture Museum.<br />To find the lost exhibits, Pela and you decide to head to the Great Mine to investigate the matter.<br />The Silvermane Guards from the Underworld sent news that they discovered the stolen Meteor Fragment in the Goethe Grand Hotel. Go check it out.}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+<pre>{
+	"$type": "RPG.GameCore.PlayNPCBubbleTalk",
+	"BubbleTalkInfoList": [
+		{
+			"AutoSkipTime": 3,
+			"GroupID": 145,
+			"GroupNpcID": 400001,
+			"TalkSentenceID": 201191001
+		},
+		{
+			"AutoSkipTime": 3,
+			"GroupID": 3,
+			"GroupNpcID": 400007,
+			"TalkSentenceID": 201191002
+		},
+		{
+			"AutoSkipTime": 3,
+			"GroupID": 145,
+			"GroupNpcID": 400001,
+			"TalkSentenceID": 201191003
+		},
+		{
+			"AutoSkipTime": 3,
+			"GroupID": 3,
+			"GroupNpcID": 400007,
+			"TalkSentenceID": 201191004
+		}
+	]
+}</pre>
+
+;(Talk to Silvermane Guard Investigator)
+:{{A|VO side1 bwg soldierinv 103 m.ogg}} {{A|VO side1 bwg soldierinv 103 f.ogg}} '''Silvermane Guard Investigator:''' (Trailblazer), I'm glad to see you here!
+:{{A|VO side1 bwg soldierinv 104.ogg}} '''Silvermane Guard Investigator:''' The box containing the Meteor Fragment is in one of the hotel rooms. You and Miss Pela can go investigate the scene when you're ready.
 {{Dialogue End}}
 
 ===Return the Meteor Fragment{{subst:void|<!--201190120-->}}===
 {{Mission Description|type=adventure|location=History and Culture Museum|update|There has been a series of thefts in the Belobog History and Culture Museum.<br />To find the lost exhibits, Pela and you decide to head to the Great Mine to investigate the matter.<br />Pela confirmed that the Meteor Fragment you found in the Goethe Grand Hotel is the genuine article that was stolen. It's time to return it to where it came from.}}
 {{Dialogue Start}}
-:{{tx}}
+
 {{Dialogue End}}
 
 ===Speak with Eris, the lobby secretary{{subst:void|<!--201190121-->}}===
 {{Mission Description|type=adventure|location=History and Culture Museum|update|You helped the Belobog History and Culture Museum recover a valuable stolen artifact.<br />You learn from Pela that, as the museum is about to open to the public, they need a part-time operation manager.<br />This after-hours activity piques your curiosity. Go and say hello to Eris, the museum's lobby secretary.}}
 {{Dialogue Start}}
-:{{tx}}
+;(Upon reaching the destination)
+
+;(Talk to Eris)
+<pre>{
+	"$type": "RPG.GameCore.PlayMultiVoiceTalk",
+	"TalkSentenceID": 501190301
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.ShowMenu"
+}</pre>
 {{Dialogue End}}
 
 ==Other Languages==

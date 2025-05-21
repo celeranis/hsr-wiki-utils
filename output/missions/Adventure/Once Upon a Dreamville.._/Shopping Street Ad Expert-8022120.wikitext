@@ -39,18 +39,42 @@ PageTitle=#Shopping Street Ad Expert#
 ===Find the commercial district rep to film ''Brother Hanu's Great Heist''{{subst:void|<!--802212001-->}}===
 {{Mission Description|type=adventure|location=Clock Studios Theme Park|The ''Dreamjoy Memoir'' crew accepted the collaboration from Penacony merchants and planned a commercial named ''Brother Hanu's Great Heist''. Go help them!}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Business Street Rep)
+:'''Business Street Rep:''' Item wear and tear, manpower costs, filming expenses... Oh right, also gotta factor in the duration...
+::'''Business Street Rep:''' So the sum of expenses is... No no, we've exceeded our budget. Where can I shift things around...
+::{{DIcon|Arrow}} Pisce asked me to film some adverts here.
+::'''Business Street Rep:''' Hold on a sec. I'm calculating the total expenses for this filming collab.
+::'''Business Street Rep:''' Sorry to make you wait. I'm the agent for the Twelve Hours' business street. I've come to speak to you about working on a commercial together.
+::'''Business Street Rep:''' You're the director of ''Dreamjoy Memoir''? Just in time. Please take a look at the script for this commercial...
+::'''Business Street Rep:''' {{Color|keyword|nobold=1|''Brother Hanu's Great Heist''}}. The story is set in Dreamville, and the main thing is to have our brand's imagery and Brother Hanu from ''Dreamjoy Memoir'' be in the same shot. It's a win-win for both sides.
+:'''Business Street Rep:''' Everyone's at their marks now. You can start filming whenever you're ready.
+:{{DIcon|Arrow}} No problem. Action!
+:<pre>{
+	"$type": "RPG.GameCore.OpenTreasureChallenge",
+	"RaidID": 44305001,
+	"OnCancel": [
+		{
+			"$type": "RPG.GameCore.EndDialogueEntityInteract"
+		}
+	]
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.EndDialogueEntityInteract"
+}</pre>
+:{{DIcon|Exit}} Allow me to ponder it a bit more...
 {{Dialogue End}}
 
 ===Find the commercial district rep to keep filming ''Brother Hanu's Great Heist''{{subst:void|<!--802212002-->}}===
 {{Dialogue Start}}
-:{{tx}}
 {{Dialogue End}}
 
 ===Finish filming ''Brother Hanu's Great Heist''{{subst:void|<!--802212004-->}}===
 {{Mission Description|type=adventure|location=Clock Studios Theme Park|update|Filming for the advertisement ''Brother Hanu's Great Heist'' is finished. Go show it to the client!}}
 {{Dialogue Start}}
 :{{tx}}
+:<!--0.5-second delay-->
+:'''(Trailblazer):''' (The commercial shoot has ended swimmingly. Time to find Pisce and continue {{Color|h|nobold=1|editing the film}}...)
 {{Dialogue End}}
 
 ==Other Languages==

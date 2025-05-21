@@ -41,12 +41,224 @@ PageTitle=#Photography Exhibition: Brand Focus#
 ===Take a photo of the SoulGlad fountain{{subst:void|<!--802720701-->}}===
 {{Mission Description|type=adventure|location=Penacony Paperfold University College|To complete the daily tasks and compete for the final prize, you, as a photography assistant, accompanied March 7th on a photography journey.<br />Take a photo based on the photography inspiration.}}
 {{Dialogue Start}}
-:{{tx}}
+;(Unused &mdash; PhotoGraphStartCustomString)
+<pre>{
+	"$type": "RPG.GameCore.HideEntityV2",
+	"Target": {
+		"$type": "RPG.GameCore.TargetConcat",
+		"Targets": [
+			{
+				"$type": "RPG.GameCore.TargetFetchAdvNpcEx",
+				"FetchType": "SingleNpcByNpcID",
+				"SingleNpcID": {
+					"GroupID": {
+						"FixedValue": {
+							"Value": 377
+						}
+					},
+					"GroupNpcID": {
+						"FixedValue": {
+							"Value": 400001
+						}
+					}
+				}
+			},
+			{
+				"$type": "RPG.GameCore.TargetFetchAdvNpcEx",
+				"FetchType": "SingleNpcByNpcID",
+				"SingleNpcID": {
+					"GroupID": {
+						"FixedValue": {
+							"Value": 377
+						}
+					},
+					"GroupNpcID": {
+						"FixedValue": {
+							"Value": 400002
+						}
+					}
+				}
+			},
+			{
+				"$type": "RPG.GameCore.TargetFetchAdvNpcEx",
+				"FetchType": "SingleNpcByNpcID",
+				"SingleNpcID": {
+					"GroupID": {
+						"FixedValue": {
+							"Value": 377
+						}
+					},
+					"GroupNpcID": {
+						"FixedValue": {
+							"Value": 400003
+						}
+					}
+				}
+			}
+		]
+	}
+}</pre>
+
+;(Unused &mdash; 802720701_1)
+
+
+;(Unused &mdash; 802720701_2)
+<pre>{
+	"$type": "RPG.GameCore.HideEntityV2",
+	"Target": {
+		"$type": "RPG.GameCore.TargetConcat",
+		"Targets": [
+			{
+				"$type": "RPG.GameCore.TargetFetchAdvNpcEx",
+				"FetchType": "SingleNpcByNpcID",
+				"SingleNpcID": {
+					"GroupID": {
+						"FixedValue": {
+							"Value": 377
+						}
+					},
+					"GroupNpcID": {
+						"FixedValue": {
+							"Value": 400001
+						}
+					}
+				}
+			}
+		]
+	}
+}</pre>
+
+;(Unused &mdash; 802720701_3)
+<pre>{
+	"$type": "RPG.GameCore.HideEntityV2",
+	"Target": {
+		"$type": "RPG.GameCore.TargetConcat",
+		"Targets": [
+			{
+				"$type": "RPG.GameCore.TargetFetchAdvNpcEx",
+				"FetchType": "SingleNpcByNpcID",
+				"SingleNpcID": {
+					"GroupID": {
+						"FixedValue": {
+							"Value": 377
+						}
+					},
+					"GroupNpcID": {
+						"FixedValue": {
+							"Value": 400003
+						}
+					}
+				}
+			}
+		]
+	}
+}</pre>
+
+;(Unused &mdash; 802720701_4)
+<pre>{
+	"$type": "RPG.GameCore.HideEntityV2",
+	"Target": {
+		"$type": "RPG.GameCore.TargetConcat",
+		"Targets": [
+			{
+				"$type": "RPG.GameCore.TargetFetchAdvNpcEx",
+				"FetchType": "SingleNpcByNpcID",
+				"SingleNpcID": {
+					"GroupID": {
+						"FixedValue": {
+							"Value": 377
+						}
+					},
+					"GroupNpcID": {
+						"FixedValue": {
+							"Value": 400002
+						}
+					}
+				}
+			}
+		]
+	}
+}</pre>
+
+;(Unused &mdash; PhotoGraphFinishCustomString)
+<pre>{
+	"$type": "RPG.GameCore.HideEntityV2",
+	"Target": {
+		"$type": "RPG.GameCore.TargetConcat",
+		"Targets": [
+			{
+				"$type": "RPG.GameCore.TargetFetchAdvNpcEx",
+				"FetchType": "SingleNpcByNpcID",
+				"SingleNpcID": {
+					"GroupID": {
+						"FixedValue": {
+							"Value": 377
+						}
+					},
+					"GroupNpcID": {
+						"FixedValue": {
+							"Value": 400001
+						}
+					}
+				}
+			},
+			{
+				"$type": "RPG.GameCore.TargetFetchAdvNpcEx",
+				"FetchType": "SingleNpcByNpcID",
+				"SingleNpcID": {
+					"GroupID": {
+						"FixedValue": {
+							"Value": 377
+						}
+					},
+					"GroupNpcID": {
+						"FixedValue": {
+							"Value": 400002
+						}
+					}
+				}
+			},
+			{
+				"$type": "RPG.GameCore.TargetFetchAdvNpcEx",
+				"FetchType": "SingleNpcByNpcID",
+				"SingleNpcID": {
+					"GroupID": {
+						"FixedValue": {
+							"Value": 377
+						}
+					},
+					"GroupNpcID": {
+						"FixedValue": {
+							"Value": 400003
+						}
+					}
+				}
+			}
+		]
+	},
+	"IsHide": true
+}</pre>
+
+;(Unused &mdash; EnterDistrict_G377)
+
 {{Dialogue End}}
 
 ===Discuss the photo with March 7th{{subst:void|<!--802720702-->}}===
 {{Mission Description|type=adventure|location=Penacony Paperfold University College|update|With the photography session wrapped up, have a chat with March 7th about the work}}
 {{Dialogue Start}}
+:'''March 7th:''' Doesn't look too shabby. A giant glass bottle fountain that showcases the sheer dominance of a business empire!
+:'''March 7th:''' (Trailblazer), let's name this photo.
+:{{DIcon|Arrow}} "Fountain."
+:{{DIcon|Arrow}} "Speedy Sweet Dreams to Be Had with SoulGlad."
+:{{DIcon|Arrow}} "All the Monkeys Say It's Good."
+::'''March 7th:''' Err... The Slumbernana Monkey can't talk, and it can only say "nana."
+::{{tx}}
+<pre>{
+	"$type": "RPG.GameCore.SetTextJoinValue",
+	"TextJoinID": 204,
+	"Value": "1"
+}</pre>
+:'''March 7th:''' According to the process, we can upload it once we've named it. I wonder what comments we'll get... I'm so nervous.
 :{{tx}}
 {{Dialogue End}}
 
@@ -54,18 +266,158 @@ PageTitle=#Photography Exhibition: Brand Focus#
 {{Mission Description|type=adventure|location=Penacony Paperfold University College|update|Why are there still stray Slumbernana Monkeys when they should have been eliminated long ago? You decide to catch one and find out.}}
 {{Dialogue Start}}
 :{{tx}}
+:'''March 7th:''' Hee-hee, that's a good start. According to Mr. Reca's suggestion, next up we can try shooting... a Slumbernana Monkey?
+:{{DIcon|Arrow}} Slumbernana Monkey...
+:{{DIcon|Arrow}} What's it doing here?
+:{{tx}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+----
+:'''Slumbernana Monkey:''' Nanananana!
+:'''March 7th:''' Let's see where you can run to now! Give it up! (Trailblazer), use Mighty Grapple!
+:{{DIcon|Arrow}} Mighty Grapple!
+:{{DIcon|Arrow}} You think I'm an Aether Spirit!?
+::'''March 7th:''' Argh, there's no time to bicker over such trivialities. Just catch it now!
+::{{DIcon|Arrow}} Mighty Grapple!
+::{{DIcon|Arrow}} Lunge!
+:Humanity obtained intelligence through the long process of evolution, but they also lost much. Such as their tails, fur, and dexterous reflexes.
+:{{tx}}
+<pre>{
+	"$type": "RPG.GameCore.LensDistortionCurveEffect",
+	"XMultiplier": 2,
+	"YMultiplier": 2,
+	"Intensity": 2,
+	"Scale": 2.5,
+	"XCurvePath": "Camera/BlendCurve/Blend_SlowToFast.asset",
+	"YCurvePath": "Camera/BlendCurve/Blend_SlowToFast.asset",
+	"IntensityCurvePath": "Camera/BlendCurve/Blend_SlowToFast.asset",
+	"ScaleCurvePath": "Camera/BlendCurve/Blend_SlowToFast.asset",
+	"Duration": 1.8
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.TriggerSound",
+	"SoundName": {
+		"Value": "Ev_sfx_penocony_frameportal_open"
+	},
+	"TargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvPropEx",
+		"FetchType": "SinglePropByPropID",
+		"SinglePropID": {
+			"GroupID": {
+				"FixedValue": {
+					"Value": 357
+				}
+			},
+			"ID": {
+				"FixedValue": {
+					"Value": 300001
+				}
+			}
+		}
+	}
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.TriggerEffect",
+	"TargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvPropEx",
+		"FetchType": "SinglePropByPropID",
+		"SinglePropID": {
+			"GroupID": {
+				"FixedValue": {
+					"Value": 357
+				}
+			},
+			"ID": {
+				"FixedValue": {
+					"Value": 300001
+				}
+			}
+		}
+	},
+	"IsAttachToTargetEntity": true,
+	"Flags": [],
+	"EffectPath": "Effects/Eff_Prefab/Eff_Scene/InteractiveProp/Eff_Chap03_Prop_SandBoardGate_01_TeleportIn_Lod0.prefab",
+	"Scale": {
+		"X": 1,
+		"Y": 1,
+		"Z": 1
+	},
+	"SubObjectModifyDataList": []
+}</pre>
+:<!--1.2-second delay-->
+<pre>{
+	"$type": "RPG.GameCore.TriggerEffect",
+	"TargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvPropEx",
+		"FetchType": "SinglePropByPropID",
+		"SinglePropID": {
+			"GroupID": {
+				"FixedValue": {
+					"Value": 357
+				}
+			},
+			"ID": {
+				"FixedValue": {
+					"Value": 300001
+				}
+			}
+		}
+	},
+	"IsAttachToTargetEntity": true,
+	"Flags": [],
+	"EffectPath": "Effects/Eff_Prefab/Eff_Scene/InteractiveProp/Eff_Chap03_Prop_SandBoardGate_01_TeleportOut_Lod0.prefab",
+	"Scale": {
+		"X": 1,
+		"Y": 1,
+		"Z": 1
+	},
+	"SubObjectModifyDataList": []
+}</pre>
+:{{tx}}
 {{Dialogue End}}
 
 ===Take a photo of the Slumbernana Monkey{{subst:void|<!--802720705-->}}===
 {{Mission Description|type=adventure|location=Dewlight Pavilion|update|During the chase, you were pulled into the City Sandpit, and by a stroke of luck, it sparked new inspiration.<br />Take a photo based on the photography inspiration.}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to March 7th)
+----
+:'''March 7th:''' Phew... You vanished into thin air for a second, and I was so scared.
+:'''March 7th:''' You found a new angle to take photos? I won't make any sudden moves then. Just remember to make it quick!
+:'''(Trailblazer):''' (What a huge Slumbernana Monkey... let's get closer and take a look.)
 {{Dialogue End}}
 
 ===Discuss the photo with March 7th{{subst:void|<!--802720707-->}}===
 {{Mission Description|type=adventure|location=Dewlight Pavilion|update|With the photography session wrapped up, have a chat with March 7th about the work}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Unused &mdash; EnterDistrict_G359)
+:You two tumble around for a long while before finally subduing the Slumbernana Monkey...
+::'''Slumbernana Monkey:''' Nanananana!
+::'''March 7th:''' Why do this monkey's eyes look oddly intelligent...
+::{{DIcon|Arrow}} Jostle it.
+::{{DIcon|Arrow}} Kick it.
+::{{DIcon|Arrow}} Shake it.
+:<pre>{
+	"$type": "RPG.GameCore.SetPerformanceResult"
+}</pre>
+::'''March 7th:''' It's just a toy... The Assistanana made a whole batch of monkey merch during the Slumbernana Monkey craze. This one's probably from that time.
+::'''March 7th:''' But we got some great photos out of our accidental chaos. (Trailblazer), give it a name.
+::{{DIcon|Arrow}} "Slumbernana Ape."
+:::'''March 7th:''' If the Slumbernana Monkey was this big, we'd be in for a rough time... Though Miss Rappa did say that she could defeat a monkey the size of a star.
+::{{DIcon|Arrow}} "Beauty and the Golden Monkey."
+:::'''March 7th:''' Sounds like the title of a Clock Studios cartoon... Why'd you include me in the title though?
+::{{DIcon|Arrow}} "Attack on Giant Monkey."
+:::'''March 7th:''' Woah, I just recalled the horrific frenzy the Slumbernana Monkey craze created...
+::{{tx}}
+:<pre>{
+	"$type": "RPG.GameCore.SetTextJoinValue",
+	"TextJoinID": 205,
+	"Value": "1"
+}</pre>
+::'''March 7th:''' The two photos for today are all done. Photography is so tiring... Good work from you too, (Trailblazer)!
+::{{tx}}
 {{Dialogue End}}
 
 ==Other Languages==

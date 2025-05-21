@@ -39,42 +39,238 @@ PageTitle=#Frequent Partings#
 -->
 ==Dialogue==
 {{Stub Dialogue}}
+
+;(Talk to Hyacine)
+:{{tx}}
+:'''Hyacine:''' Oh, Grayie! Good to see you!
+:{{DIcon|Arrow}} What is it?
+:{{DIcon|Arrow}} You need something?
+:'''Hyacine:''' Well, you see. During my treatment of a wounded from the Grove, I found a letter that appeared to be from a scholar to his wife.
+:{{tx}}
 {{Dialogue End}}
 
 ===Find Old Fabio and talk with him{{subst:void|<!--500041102-->}}===
 {{Mission Description|type=adventure|location="Eternal Holy City" Okhema|update|You promised to visit the families of those who lost their lives at the Grove and find out about how they're doing at Hyacine's request.<br />Aside from this, however, you might be able to do something more...}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Old Fabio)
+:'''Old Fabio:''' Thank you for all this...
 {{Dialogue End}}
 
 ===Let Titus know about the results of your investigation{{subst:void|<!--500041108-->}}===
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Titus)
+----
+::You tell the man everything you saw in the memory, describing each moment in precise detail.
+::'''Titus:''' Nowhere to go? What nonsense! Has he truly lost his mind? Can't even make up a decent excuse...
+::'''Titus:''' And those legs he complains about? Last time I accidentally broke his favorite pipe, he chased me through half the Grove!
+::'''Titus:''' Now suddenly he's a burden? Ha! When he should be stubborn, he gives in... That old fool, where was all this consideration during our arguments?
+::'''Titus:''' ...
+::'''Titus:''' Gods, I should've just dragged him back home with me... I got him this perfect house, right between the marketplace and the baths. Premium location, didn't spare any expense. Even built him a private library in the courtyard...
+::'''Titus:''' All that care... all that money... Do you know how much money I wasted for that, old fool? Gods! It hurts just talking about it...
+::'''Titus:''' Why didn't you... *sniff* try staying in that house for once...
+::The anger in his voice shatters like glass, grief pouring through as his shoulders shake with silent sobs.
+::You suddenly feel a pressure on your chest &mdash; like your clothes suddenly all became drenched in water and are sticking suffocatingly to your skin...
+::{{DIcon|Arrow}} I'm sorry for your loss...
+::'''Titus:''' *bitter, choked laugh* Thanks, really... but I'll be fine. Could you... could you just give me a moment?
+::{{tx}}
+----
+::'''Titus:''' You stubborn old man... Do you even know how much that house cost? Why didn't you... *sniff* try staying in there for once...
+::'''Titus:''' *sniffles*...
 {{Dialogue End}}
 
 ===Return Artakama's sword back to Old Fabio{{subst:void|<!--500041109-->}}===
 {{Dialogue Start}}
+
+;(Talk to Old Fabio)
+<pre>{
+	"$type": "RPG.GameCore.PerformanceExtendEndBlack"
+}</pre>
+:'''Old Fabio:''' Oh thank goodness &mdash; you're back, young one! Miss Hyacine was just here, worried sick about you going to the Grove alone.
+:'''Old Fabio:''' Are you hurt? Tell me you're alright!
+:{{DIcon|Arrow}} Not a scratch.
+:{{DIcon|Arrow}} It was no challenge at all!
+:'''Old Fabio:''' Oh, that's good to hear. You've done well... So... were you able to find anything?
 :{{tx}}
+<pre>{
+	"$type": "RPG.GameCore.AddFinishMissionData_ConsumeItem",
+	"SubmissionID": 500041109,
+	"SimpleTalk": {},
+	"OnSubmitConfirm": [
+		{
+			"$type": "RPG.GameCore.SetMissionCustomValue",
+			"SubmissionID": 500041109,
+			"MissionCustomValue": {
+				"Index": 5,
+				"Name": "OldValue_5",
+				"ValidValueParamList": []
+			},
+			"CustomValue": 1
+		},
+		{
+			"$type": "RPG.GameCore.PlayTimeline",
+			"TimelineName": "Story/Discussion/Mission/5000411/DS50004111203.playable",
+			"Type": "Discussion",
+			"Parameters": []
+		},
+		{
+			"$type": "RPG.GameCore.EndPerformance"
+		}
+	],
+	"OnSubmitCancel": [
+		{
+			"$type": "RPG.GameCore.SetMissionCustomValue",
+			"SubmissionID": 500041109,
+			"MissionCustomValue": {
+				"Index": 5,
+				"Name": "OldValue_5",
+				"ValidValueParamList": []
+			},
+			"CustomValue": 2
+		},
+		{
+			"$type": "RPG.GameCore.EndPerformance"
+		}
+	]
+}</pre>
+
 {{Dialogue End}}
 
 ===Investigate the traces left by the sisters near the Dome of Devotion{{subst:void|<!--500041103-->}}===
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Young Female Scholar)
+----
+;(If {{cx}}<!--not during performance 304003018-->)
+::{{tx}}
+::{{DIcon|Arrow}} Yes, please.
+:::'''Young Female Scholar:''' ...
+:::{{tx}}
+::{{DIcon|Arrow}} I'll pass.
+;(If {{cx}}<!--during performance 304003018-->)
+::'''Young Female Scholar:''' ...
+::{{tx}}
+
+;(Unused &mdash; Puzzle2LG_OnMemoryVisionOpen)
+<pre>{
+	"$type": "RPG.GameCore.AdvCreateEntityAsync",
+	"InstanceIDList": [],
+	"AdvancedSpawnList": [
+		{
+			"IsCreateAllEntityType": true
+		}
+	]
+}</pre>
+
+;(Unused &mdash; Puzzle2LG_OnMemoryVisionClose)
+<pre>{
+	"$type": "RPG.GameCore.AdvDestroyEntityAsync",
+	"NeedDisappear": true,
+	"InstanceIDList": [],
+	"AdvancedSpawnList": [
+		{
+			"IsDestroyAllEntityType": true
+		}
+	]
+}</pre>
+
+;(Unused &mdash; MissionFinish)
+<pre>{
+	"$type": "RPG.GameCore.TriggerEntityEvent",
+	"EventName": {
+		"Value": "Clt_TriggerClose"
+	},
+	"InstanceID": {
+		"FixedValue": {
+			"Value": 300001
+		}
+	}
+}</pre>
 {{Dialogue End}}
 
 ===Continue investigating the traces left by the sisters{{subst:void|<!--500041104-->}}===
 {{Dialogue Start}}
-:{{tx}}
 {{Dialogue End}}
 
 ===Find Titus and see if he needs help{{subst:void|<!--500041106-->}}===
 {{Dialogue Start}}
+
+;(Talk to Titus)
 :{{tx}}
+::'''Titus:''' Eh? Who's... oh, it's you. What brings you to this place? It's not safe here &mdash; best not linger.
+::{{DIcon|Arrow}} Then why are you hanging around?
+:::'''Titus:''' You think I want to be in this forsaken place? That old coot may have gone, but he left plenty of loose ends for me to tie up.
+:::I'm here to find you.
+::{{DIcon|Arrow}} I'm here to find you.
+::'''Titus:''' Huh...? You... *sigh* I appreciate it, my friend, but I'm okay &mdash; got an expedition team with me. They cost an arm and a leg, but they'll keep me safe.
+::'''Titus:''' ...
+::'''Titus:''' That stubborn old fool, always clinging to the Grove, treating Okhema like it's poison to him.
+::'''Titus:''' Now thanks to this little trip, I've burned through three years of saved vacation time, and my poor piggy bank's almost empty...
+::'''Titus:''' Say, my friend &mdash; they say you can wield Oronyx's divine power, is that true?
+::'''Titus:''' If so, could you help me out? Check if the old man left anything behind &mdash; I'll owe you one, and we can discuss payment...
+::'''Titus:''' S&mdash;Sorry... it's not much, but once I'm back in Okhema, just name your price!
+::{{DIcon|Arrow}} No need to pay me...
+:::'''Titus:''' Please, I insist. I won't feel right if you don't take it, really.
+:::You can count on it!
+::{{DIcon|Arrow}} You can count on it!
+::'''Titus:''' Thank you, my friend! Looking forward to hearing from you!
+::{{tx}}
+----
+::'''Titus:''' ...Any luck? Did you discover something?
+
 {{Dialogue End}}
 
 ===Investigate the traces left by Old Titus near the Library of Philia{{subst:void|<!--500041107-->}}===
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Old Titus)
+----
+;(If {{cx}}<!--not during performance 304003016-->)
+::{{tx}}
+::{{DIcon|Arrow}} Yes, please.
+:::'''Anaxa:''' ...Old Titus, you must get moving. The Courtyard of Storge has been lost. You must leave now before it's too late.
+:::{{tx}}
+::{{DIcon|Arrow}} I'll pass.
+;(If {{cx}}<!--during performance 304003016-->)
+::'''Anaxa:''' ...Old Titus, you must get moving. The Courtyard of Storge has been lost. You must leave now before it's too late.
+::{{tx}}
+
+;(Unused &mdash; Puzzle2LG_OnMemoryVisionOpen)
+<pre>{
+	"$type": "RPG.GameCore.AdvCreateEntityAsync",
+	"InstanceIDList": [],
+	"AdvancedSpawnList": [
+		{
+			"IsCreateAllEntityType": true
+		}
+	]
+}</pre>
+
+;(Unused &mdash; Puzzle2LG_OnMemoryVisionClose)
+<pre>{
+	"$type": "RPG.GameCore.AdvDestroyEntityAsync",
+	"NeedDisappear": true,
+	"InstanceIDList": [],
+	"AdvancedSpawnList": [
+		{
+			"IsDestroyAllEntityType": true
+		}
+	]
+}</pre>
+
+;(Unused &mdash; MissionFinish)
+<pre>{
+	"$type": "RPG.GameCore.TriggerEntityEvent",
+	"EventName": {
+		"Value": "Clt_TriggerClose"
+	},
+	"InstanceID": {
+		"FixedValue": {
+			"Value": 300001
+		}
+	}
+}</pre>
 {{Dialogue End}}
 
 ==Other Languages==

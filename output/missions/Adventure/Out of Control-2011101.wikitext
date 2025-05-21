@@ -43,37 +43,244 @@ PageTitle=#Out of Control#
 ===Find Molly and ask about the malfunctioning robots{{subst:void|<!--201110101-->}}===
 {{Mission Description|type=adventure|location=Silvermane Guard Restricted Zone|update|You receive a notification from the Belobog Silvermane Guard Restricted Zone: There are malfunctioning robots roaming around the zone, which might be dangerous.<br />This is not your business... But as someone helpful, you should find Molly and ask about the details.}}
 {{Dialogue Start}}
-:{{tx}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+<pre>{
+	"$type": "RPG.GameCore.PlayNPCBubbleTalk",
+	"BubbleTalkInfoList": [
+		{
+			"AutoSkipTime": 3,
+			"GroupID": 24,
+			"GroupNpcID": 400002,
+			"TalkSentenceID": 201312536
+		}
+	]
+}</pre>
 {{Dialogue End}}
 
 ===Retrieve the Core Modules{{subst:void|<!--201110102-->}}===
 {{Mission Description|type=adventure|location=Silvermane Guard Restricted Zone|update|Molly from the Technology Division is angry with her colleagues. You learn from her that a group of dangerous malfunctioning robots is wandering around in the restricted zone, which are prone to harming people.<br />You agree to help Molly retrieve these robots' "Core Modules." There are three robots that have this problem. Search carefully around the Silvermane Guard Restricted Zone.}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Obtain {{Item|Core Module|20|x=1}})
 {{Dialogue End}}
 
 ===Report to Molly{{subst:void|<!--201110106-->}}===
 {{Mission Description|type=adventure|location=Silvermane Guard Restricted Zone|update|Molly from the Technology Division is angry with her colleagues. You learn from her that a group of dangerous malfunctioning robots is wandering around in the restricted zone, which are prone to harming people.<br />You have retrieved all the "Core Modules." Bring them back to Molly.}}
 {{Dialogue Start}}
-:{{tx}}
+
+----
+:'''Pela:''' Alright, Mr. Researcher... Do you want to comment on this? Your statement seems to be a little bit different from this {{MC|m=gentleman|f=lady}}'s.
+:'''Researcher:''' Well... I was just afraid you'd make Molly a suspect. She can be a bit impatient at times, but I assure you that this incident has nothing to do with her! Please just spare me, Captain...
+:'''Pela:''' Don't worry, you and Molly will be fine. Just don't play silly games with me when it happens again in the future. Remember what I said? Don't waste my time!
+:'''Researcher:''' Oh... Thank you... thank you so much Captain Sergekevna!
+:{{DIcon|Arrow}} Her name is Pelageya Sergey...
+::'''Pela:''' ...Well, whatever. I've gotten used to it.
+:{{DIcon|Arrow}} So what are you going to do next?
+:'''Pela:''' Even though I really want to hold you responsible for your trespassing into the military zone, I will however let it slide this time, since Serval vouched for your ability and character. I would also like to ask you to help me deal with the incident, which is a chance for you to make up for your mistakes.
+:'''Pela:''' Long story short, this robot incident is just one chapter in my ongoing investigation. The stakes here are very high, and Miss Molly may have ruffled some feathers.
+:'''Pela:''' So... she might be in danger now...
+:'''Pela:''' I am going to ask you one last question: Do you know where Molly is?
+:'''Researcher:''' Well... There seemed to be a family emergency, so she ran back to check on them. It was a Silvermane Guard from the Garrison who came to send her the message. I don't know what they talked about, but she looked dreadful afterwards.
+:'''Researcher:''' I think... you can go to the Administrative District. There is an apartment building next to the abandoned business street. I think Molly is there.
+:'''Pela:''' ...I guess I was right. She's in trouble.
+:'''Pela:''' I'll go first. Please follow me as soon as possible.
+----
 {{Dialogue End}}
 
 ===Look for Molly in Belobog Administrative District{{subst:void|<!--201110108-->}}===
 {{Mission Description|type=adventure|location=Administrative District|update|When you return, you find Pela taking Molly's place. After talking to her, you learn that Pela is investigating a corruption case related to those defective robots, and Molly is likely to be in danger.<br />Molly's colleagues tell you her address, where you might find her.}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Molly)
+----
+:'''Molly:''' *sigh*
+:'''Pela:''' You must be Molly from the Technology Division. How are things going?
+:'''Molly:''' Leave me alone! So annoying!
+:'''Molly:''' Huh? Oh, you're Officer Pela... I'm sorry, I&mdash;I'm in the middle of an emergency... I am very sorry!
+:'''Molly:''' Ah, you're here as well, I see... Have those defective robots been dealt with?
+:{{DIcon|Arrow}} All done. No one was hurt.
+::'''Molly:''' That's good...
+::'''Molly:''' No, wait. Why should it have anything to do with me? All I ended up doing was just cleaning up the mess left behind by those guys... Why should I worry so much for them? It's not like it's my fault!
+:{{DIcon|Arrow}} Did anyone in your family get hurt?
+::'''Molly:''' ... Forget it. Why do I care whether they live or die?
+::'''Molly:''' Family? Oh, is this what you two are here for? Fortunately, I live alone, and no one else got hurt.
+::'''Molly:''' I was waiting for your update at the arsenal just now, and those people came to me. They said that I went too far this time, so they gave me a warning... I realized something was wrong, so I ran home as fast as I could &mdash;
+::'''Molly:''' By the time I got home, the whole house had been turned upside down by them! All the valuables, and even the worthless stuff are gone... Everything. Gone. They took everything!
+::'''Molly:''' They even wrote insults all over the doors, windows, and walls &mdash;
+::'''Molly:''' But I can't do anything about it! Am I supposed to just let them get away with it... Can't anyone hold them accountable for their actions?
+::'''Molly:''' Why... I was just doing my job! Why do I have to be humiliated? What did I do wrong!?
+::{{DIcon|Arrow}} (Let her cry and vent.)
+:::'''Molly:''' Darn it! Is there no justice in this world? *sobbing*...
+::{{DIcon|Arrow}} We'll help you take back what is rightfully yours.
+:::'''Molly:''' This happened all because of me. You don't have to do that... I just need to blow off some steam...
+:::'''Pela:''' Don't be afraid, Miss Molly... This isn't your fault. Just let us handle this from now on. We the Silvermane Guards are now officially on this case. For now, it's best for you not to directly confront those thugs since they've just shown they are not shy about using violence.
+:::'''Pela:''' Oh, another thing, you can rest assured that we the Silvermane Guards will never let you go homeless. You can... um... seek temporary shelter in the Neverwinter workshop for now.
+:::'''Pela:''' The owner of the workshop can ensure your safety. Just say my name when you meet her.
+:::'''Molly:''' ... But I want to go with you! I want to see those gang of thugs brought to justice with my own eyes...
+:::'''Pela:''' ...It's just too risky. Your security must be our top priority. I'll arrange to have your house fixed later. For the time being, please just focus on protecting yourself in case of further reprisals.
+:::'''Molly:''' *sobbing*
+:::'''(Trailblazer):''' (She still seems very upset...)
+:::<!--0.3-second delay-->
+:::'''Pela:''' (Trailblazer), I already know the people responsible for this... their names are all in my records. They won't get away.
+:::'''Pela:''' Now, let's go back to the Restricted Zone and give those filthy thugs a proper "greeting."
+:::----
+::{{DIcon|Arrow}} We'll help you take back what is rightfully yours.
+::'''Molly:''' This happened all because of me. You don't have to do that... I just need to blow off some steam...
+::'''Pela:''' Don't be afraid, Miss Molly... This isn't your fault. Just let us handle this from now on. We the Silvermane Guards are now officially on this case. For now, it's best for you not to directly confront those thugs since they've just shown they are not shy about using violence.
+::'''Pela:''' Oh, another thing, you can rest assured that we the Silvermane Guards will never let you go homeless. You can... um... seek temporary shelter in the Neverwinter workshop for now.
+::'''Pela:''' The owner of the workshop can ensure your safety. Just say my name when you meet her.
+::'''Molly:''' ... But I want to go with you! I want to see those gang of thugs brought to justice with my own eyes...
+::'''Pela:''' ...It's just too risky. Your security must be our top priority. I'll arrange to have your house fixed later. For the time being, please just focus on protecting yourself in case of further reprisals.
+::'''Molly:''' *sobbing*
+::'''(Trailblazer):''' (She still seems very upset...)
+::<!--0.3-second delay-->
+::'''Pela:''' (Trailblazer), I already know the people responsible for this... their names are all in my records. They won't get away.
+::'''Pela:''' Now, let's go back to the Restricted Zone and give those filthy thugs a proper "greeting."
+::----
+:{{DIcon|Arrow}} Did anyone in your family get hurt?
+:'''Molly:''' ... Forget it. Why do I care whether they live or die?
+:'''Molly:''' Family? Oh, is this what you two are here for? Fortunately, I live alone, and no one else got hurt.
+:'''Molly:''' I was waiting for your update at the arsenal just now, and those people came to me. They said that I went too far this time, so they gave me a warning... I realized something was wrong, so I ran home as fast as I could &mdash;
+:'''Molly:''' By the time I got home, the whole house had been turned upside down by them! All the valuables, and even the worthless stuff are gone... Everything. Gone. They took everything!
+:'''Molly:''' They even wrote insults all over the doors, windows, and walls &mdash;
+:'''Molly:''' But I can't do anything about it! Am I supposed to just let them get away with it... Can't anyone hold them accountable for their actions?
+:'''Molly:''' Why... I was just doing my job! Why do I have to be humiliated? What did I do wrong!?
+:{{DIcon|Arrow}} (Let her cry and vent.)
+::'''Molly:''' Darn it! Is there no justice in this world? *sobbing*...
+:{{DIcon|Arrow}} We'll help you take back what is rightfully yours.
+::'''Molly:''' This happened all because of me. You don't have to do that... I just need to blow off some steam...
+::'''Pela:''' Don't be afraid, Miss Molly... This isn't your fault. Just let us handle this from now on. We the Silvermane Guards are now officially on this case. For now, it's best for you not to directly confront those thugs since they've just shown they are not shy about using violence.
+::'''Pela:''' Oh, another thing, you can rest assured that we the Silvermane Guards will never let you go homeless. You can... um... seek temporary shelter in the Neverwinter workshop for now.
+::'''Pela:''' The owner of the workshop can ensure your safety. Just say my name when you meet her.
+::'''Molly:''' ... But I want to go with you! I want to see those gang of thugs brought to justice with my own eyes...
+::'''Pela:''' ...It's just too risky. Your security must be our top priority. I'll arrange to have your house fixed later. For the time being, please just focus on protecting yourself in case of further reprisals.
+::'''Molly:''' *sobbing*
+::'''(Trailblazer):''' (She still seems very upset...)
+::<!--0.3-second delay-->
+::'''Pela:''' (Trailblazer), I already know the people responsible for this... their names are all in my records. They won't get away.
+::'''Pela:''' Now, let's go back to the Restricted Zone and give those filthy thugs a proper "greeting."
+::----
+:{{DIcon|Arrow}} We'll help you take back what is rightfully yours.
+:'''Molly:''' This happened all because of me. You don't have to do that... I just need to blow off some steam...
+:'''Pela:''' Don't be afraid, Miss Molly... This isn't your fault. Just let us handle this from now on. We the Silvermane Guards are now officially on this case. For now, it's best for you not to directly confront those thugs since they've just shown they are not shy about using violence.
+:'''Pela:''' Oh, another thing, you can rest assured that we the Silvermane Guards will never let you go homeless. You can... um... seek temporary shelter in the Neverwinter workshop for now.
+:'''Pela:''' The owner of the workshop can ensure your safety. Just say my name when you meet her.
+:'''Molly:''' ... But I want to go with you! I want to see those gang of thugs brought to justice with my own eyes...
+:'''Pela:''' ...It's just too risky. Your security must be our top priority. I'll arrange to have your house fixed later. For the time being, please just focus on protecting yourself in case of further reprisals.
+:'''Molly:''' *sobbing*
+:'''(Trailblazer):''' (She still seems very upset...)
+:<!--0.3-second delay-->
+:'''Pela:''' (Trailblazer), I already know the people responsible for this... their names are all in my records. They won't get away.
+:'''Pela:''' Now, let's go back to the Restricted Zone and give those filthy thugs a proper "greeting."
+----
 {{Dialogue End}}
 
 ===Return to the Silvermane Guard Restricted Zone and find the criminal mastermind behind this case{{subst:void|<!--201110111-->}}===
 {{Mission Description|type=adventure|location=Silvermane Guard Restricted Zone|update|After comforting Molly, you tell her to hide in Neverwinter Workshop, and get her testimony that corruption is happening in the army.<br />Pela speculates that the one behind this case is still in the Silvermane Guard Restricted Zone. It's time to let them pay!}}
 {{Dialogue Start}}
-:{{tx}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+<pre>{
+	"$type": "RPG.GameCore.ActiveVirtualCamera",
+	"AreaName": "Mission_2011101_temp",
+	"AnchorName": "Camera_201110111",
+	"BlendConfig": {
+		"ExportToJson": true,
+		"BlendType": "Cut"
+	}
+}</pre>
+:<!--0.3-second delay-->
+:'''Pela:''' Huh? Why is Molly here? And she got here before us?
+<pre>{
+	"$type": "RPG.GameCore.ActiveVirtualCamera",
+	"AreaName": "Mission_2011101_temp",
+	"AnchorName": "Camera_201110109",
+	"BlendConfig": {
+		"ExportToJson": true,
+		"BlendType": "Cut"
+	}
+}</pre>
+:'''Molly:''' ...I knew it was you guys who did it! Have you all ever thought about what happens if people die from those defective robots?
+:'''Corrupt Silvermane Guard:''' What happens? Hmph, I'll tell you... even if something really happens, your Technology Division will take the blame!
+:'''Molly:''' You...
+:'''Corrupt Silvermane Guard:''' Come on, Molly! I have warned you many times to keep your mouth shut about the things in the restricted zone. You know how it goes, you scratch our backs and we will scratch yours...
+:'''Molly:''' ...
+:'''Pela:''' ...Looks like she's in trouble. Quick! Let's check it out!
+<pre>{
+	"$type": "RPG.GameCore.ActiveVirtualCamera",
+	"AreaName": "Mission_2011101_temp",
+	"AnchorName": "Camera_201110109",
+	"IsActive": false,
+	"BlendConfig": {
+		"ExportToJson": true,
+		"BlendType": "Cut"
+	}
+}</pre>
 {{Dialogue End}}
 
 ===Help Molly defeat the corrupt Guards{{subst:void|<!--201110109-->}}===
 {{Mission Description|type=adventure|location=Silvermane Guard Restricted Zone|update|After comforting Molly, you tell her to hide in Neverwinter Workshop, and get her testimony that corruption is happening in the army.<br />When you return to the restricted zone, you find that Molly has come here to confront the criminal. Her life is at risk, she needs your help!}}
 {{Dialogue Start}}
-:{{tx}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+----
+:'''Corrupt Silvermane Guard:''' Give it up, little girl... You think you alone can put an end to all of Belobog's shady dealings between its military and its merchants? This is so much bigger than you could possibly imagine.
+:'''Corrupt Silvermane Guard:''' All we've done so far is just a little "do-over" of your house, but if you ever provoke the ire of those higher-ups... You won't even dare to think about the consequences!
+:'''Molly:''' ...
+:{{DIcon|Arrow}} Shut up, scum!
+:{{DIcon|Arrow}} Calm down...
+:{{DIcon|Arrow}} For the sake of Miss Sergeyevna...
+::'''Pela:''' You... *sigh*... Never mind...
+:'''Pela:''' That's enough! Put your weapons down and put your hands up! Quick!
+:<!--0.3-second delay-->
+:<!--0.3-second delay-->
+:'''Corrupt Silvermane Guard:''' Wh... what happened!?
+:'''Corrupt Silvermane Guard:''' Oh... I get it! Good one, little girl... you found someone to help, did you?
+:'''Corrupt Silvermane Guard:''' Hmph... Unfortunately, they are only two weaklings! Let me tell you, even if the captain himself were here, I wouldn't be scared off!
+:'''Pela:''' Wow... It seems you aren't taking me seriously at all. I am an intelligence officer! This is a major case, and I just might have to put it on my agenda!
+:'''Pela:''' Let's kick their butt, (Trailblazer)! No need to hold back! As you know, the Silvermane Guards have first-class medical support.
+:{{Black Screen|The Silvermane Guards rushed to the scene, and under Pela's command, they led the criminals to the confinement room, where they'll be awaiting their punishment...}}
+:'''Molly:''' ...Is it over?
+:{{DIcon|Arrow}} You are safe now.
+:{{DIcon|Arrow}} I thought they'd be tougher....
+::'''Molly:''' I wish you wouldn't make light of the matter.
+:'''Molly:''' They were not bluffing, you know. If it weren't for you guys helping me out in time, I'm afraid I would have been...
+:'''Molly:''' I... um... I don't know what to say... Thank you so much!
+:'''Pela:''' Thank goodness you weren't hurt. Also, I've found hard evidence of all their illicit dealings with those shady merchants. I believe you were looking for something as well. Is that right, Miss Molly?
+:'''Molly:''' Indeed, and I found it! And luckily it's still in good condition...
+:{{DIcon|Arrow}} Good to hear!
+:{{DIcon|Arrow}} What's this?
+::'''Molly:''' Oh... This is a family heirloom. Even though I don't know exactly what's inside, it's still very important to me.
+:'''Pela:''' Miss Molly, I do have another very serious question to ask you... How did you manage to show up before we did? If anything, you should be at the workshop now.
+:'''Molly:''' Well... I...
+:'''Molly:''' I was thinking about how all this only happened because of me, so... I thought I should...
+:'''Pela:''' That is not a good excuse, Miss Molly. No offense, but you were simply too reckless.
+:'''Pela:''' I do admire your bravery and sense of duty... but you're still lacking in situational judgment and thus often end up putting yourself in harm's way.
+:'''Pela:''' Have you really given much thought to how you could win the fight against those thugs all on your own? Let's be charitable here and assume you could beat them. What then? Are you really equipped to take on the criminal mastermind behind the scenes?
+:'''Molly:''' ...
+:'''Molly:''' *sigh* You are right, Officer Pela. I didn't think carefully enough about the consequences of my action. And those goons weren't entirely off the mark when they said I couldn't take on the whole world just on my own.
+:'''Molly:''' I thought I could make Belobog a better place... Well, I can't even manage my own life...
+:'''Molly:''' I've been working so hard... but what's the point?
+:{{DIcon|Arrow}} It's indeed all for naught.
+::'''Pela:''' Hey! Cut it out.
+:{{DIcon|Arrow}} You can't change everyone.
+:'''Molly:''' Is my dream really a joke? A city that stands for justice and equality... it's impossible in this world!
+:'''Pela:''' Well... Molly, please don't get nihilistic... Maybe I was being a bit too harsh just now. I didn't mean to upset you...
+:'''Molly:''' ...Sorry, I'm fine. I just couldn't help myself. I'd better listen to Officer Pela and head back to the workshop...
+:'''Molly:''' Perhaps this job is not for me after all. *sigh*...
+----
+
+;(Talk to Molly)
+:'''Molly:''' ...Sorry, I'm fine. I just couldn't help myself. I'd better listen to Officer Pela and head back to the workshop...
+:'''Molly:''' Perhaps this job is not for me after all. *sigh*...
+
+;(Talk to Pela)
+:'''Pela:''' Take her back to the workshop. I have to follow up on this incident...
+:'''Pela:''' Let's meet at the workshop later if you are free. Looks like Molly needs someone to talk to...
 {{Dialogue End}}
 
 ==Other Languages==

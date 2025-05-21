@@ -39,19 +39,125 @@ PageTitle=#Space Station Ghost Stories: Fortune Leaf#
 ===Listen to Adler's "ghost stories"{{subst:void|<!--300080301-->}}===
 {{Mission Description|type=daily|location=Storage Zone|Sounds like Adler has gotten hold of a new "ghost story." Meet up with Adler at the special spot and ask about the story this time.}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Adler)
+:'''Adler:''' Although I have a pile of reports to write, I have not stopped in my journey of searching for new ghost stories!
+:'''Adler:''' But this is probably the last ghost story I can investigate. *sigh* Wen Shiling has really been on my tail...
+:'''Adler:''' The ghost story this time is pretty wholesome. I think you'll like it. Before that, let me ask: Have you ever picked up mysterious paper slips in the space station?
+:{{DIcon|Arrow}} I think so...
+::'''Adler:''' Really? Then you need to listen carefully, and see if you've picked up the fortune leaf mentioned in the ghost story!
+:{{DIcon|Arrow}} Never!
+::'''Adler:''' Really? But I heard from the Wubbaboos that you like to pick stuff up from everywhere...
+:'''Adler:''' There's been a rumor lately that mysterious pieces of paper appear on the ground sometimes. These are called fortune leaves, and people who pick them up are said to receive extremely good luck.
+:'''Adler:''' It's easy to determine whether a piece of paper is a fortune leaf &mdash; you will hear a round of applause when you pick one up. It is said to be the way Aeons express their admiration and encouragement for you...
+:'''Adler:''' Someone had claimed to have heard it, and soon got promoted to technical leader in their department!
+:'''Adler:''' But I haven't found out which department this story is from... Could you please find this promoted person and see what useful information you can get out of them?
 {{Dialogue End}}
 
 ===Ask around and find the truth behind the "ghost story"{{subst:void|<!--300080312-->}}===
 {{Mission Description|type=daily|location=Base Zone|update|Ask around the space station, find the researcher rumored to have been promoted to the backbone of the department, and investigate the truth behind the Legend of the Fortune Leaf.}}
 {{Dialogue Start}}
-:{{tx}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+<pre>{
+	"$type": "RPG.GameCore.PlayNPCBubbleTalk",
+	"BubbleTalkInfoList": [
+		{
+			"AutoSkipTime": 3,
+			"GroupID": 97,
+			"GroupNpcID": 400003,
+			"TalkSentenceID": 300080359
+		}
+	]
+}</pre>
+
+:{{DIcon|Talk}} Listen
+:'''Weird Researcher:''' I don't know. I don't have it. Don't ask me.
+:{{DIcon|Arrow}} You're pretty suspicious.
+:{{DIcon|Arrow}} I haven't asked anything.
+:'''Weird Researcher:''' Not me. I didn't do it. I don't know!
+:{{DIcon|Arrow}} So, you're the one with the fortune leaf.
+:{{DIcon|Arrow}} I heard you got a big break in your career.
+:'''Weird Researcher:''' ...So what if I did? And what if I didn't? Youngsters need to be grounded and stop thinking about taking shortcuts.
+:'''Weird Researcher:''' Fortune leaf... Heh, even Peppy won't believe that!
+:{{DIcon|Arrow}} Youth is all about working hard!
+:{{DIcon|Arrow}} I detest those who take shortcuts!
+:'''Weird Researcher:''' Hah, I didn't take you to be so spirited!
+:'''Weird Researcher:''' A lot people have been asking me about the fortune leaf recently. They all think that just picking up a piece of paper would take their career to places.
+:'''Weird Researcher:''' But they have no idea of the prices they must pay! Just look at my old body... Ahhh, never mind. Never mind!
+:'''Weird Researcher:''' I will tell you, youngster, that the good fortunes brought by the fortune leaf are nothing like what you are expecting! Just stick to taking one step at a time!
+:'''(Trailblazer):''' (I feel there's something deeper here, but I can't get any more answers. Let's return to Adler.)
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+<pre>{
+	"$type": "RPG.GameCore.PlayNPCBubbleTalk",
+	"BubbleTalkInfoList": [
+		{
+			"AutoSkipTime": 3,
+			"GroupID": 97,
+			"GroupNpcID": 400001,
+			"TalkSentenceID": 300080357
+		}
+	]
+}</pre>
+
+:{{DIcon|Talk}} Listen
+:'''Sad Researcher:''' How did my research career end up like this... Am I the only one in the space station having such a bad time?
+:{{DIcon|Arrow}} Have you ever picked up a fortune leaf?
+::'''Sad Researcher:''' Do I look like I have anything to do with being lucky?
+:{{DIcon|Arrow}} Are you okay?
+::'''Sad Researcher:''' Oh, just look at me. I've got "unlucky" written all over me.
+:'''Sad Researcher:''' *sigh* Why am I so unlucky? My career isn't going well, and my family is having arguments...
+:'''Sad Researcher:''' I heard someone picked something up around here? Something that can bring good luck? They got some big breaks after picking it up.
+:'''Sad Researcher:''' I wanted to ask where they got that thing from, and if they can give even a bit of the luck to me... Haha, seems like you're also looking for this thing.
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+<pre>{
+	"$type": "RPG.GameCore.PlayNPCBubbleTalk",
+	"BubbleTalkInfoList": [
+		{
+			"AutoSkipTime": 3,
+			"GroupID": 97,
+			"GroupNpcID": 400002,
+			"TalkSentenceID": 300080358
+		}
+	]
+}</pre>
+
+:{{DIcon|Talk}} Listen
+:'''Researcher at A Loss:''' Weird. Where are they? Why are they still not here?
+:{{DIcon|Arrow}} Are you also looking for the fortune leaf?
+::'''Researcher at A Loss:''' What is the fortune leaf?
+:{{DIcon|Arrow}} Are you waiting for someone?
+::'''Researcher at A Loss:''' Yes. I've been waiting forever.
+:'''Researcher at A Loss:''' Huh? I'm waiting for people from my department to turn up for a meeting. But you... You don't look like you're from my department. Did you find the wrong person?
+:'''(Trailblazer):''' (Doesn't seem to be the right person. Let's keep looking.)
 {{Dialogue End}}
 
 ===Tell Adler the truth{{subst:void|<!--300080305-->}}===
 {{Mission Description|type=daily|location=Storage Zone|update|It feels like there's something deeper behind the Legend of the Fortune Leaf, but there's no way to find out more information currently. Inform Adler of the current situation.}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Adler)
+:'''Adler:''' You're back! I was planning to have a break... Did you find anything?
+:{{DIcon|Arrow}} (Tell Adler what you found.)
+:'''Adler:''' Huh? That's it? Nothing more?
+:'''Adler:''' *sigh* If this is the only information, then I can't manage to produce the report. Then I'm gonna lose all the fans I've worked so hard for...
+:{{DIcon|Arrow}} Weren't you doing this as cross-disciplinary research?
+:{{DIcon|Arrow}} So, it was all about getting fans...
+:'''Adler:''' Okay, fine, I admit! Yes, initially this was about science! But then I realized so many people loved reading my ghost story compilation, and I yielded to my desire for attention...
+:{{DIcon|Arrow}} You've lost the purpose behind your research!
+::'''Adler:''' I will reflect on my actions...
+:{{DIcon|Arrow}} So, am I included as a co-author?
+::'''Adler:''' I'll add you in as an assistant!
+:'''Adler:''' *sigh* Now I feel ghost stories only get attention when they have a click-bait title.
+:'''Adler:''' No matter how interesting a ghost story is, they stop being interesting once you've investigated them... I might as well stop writing this report!
+:'''Adler:''' ...Well, it'd be a pity not to write anymore. Anyway, thanks for having helped me for so long!
+:'''Adler:''' Come back to find me in a few days. Since you've contributed to the investigation, you should get a copy of the investigation report as a memento of your effort.
+----
 {{Dialogue End}}
 
 ==Other Languages==

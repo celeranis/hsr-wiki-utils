@@ -46,67 +46,825 @@ PageTitle=#The Departed Will Return First#
 ===Find out what's going on{{subst:void|<!--103600201-->}}===
 {{Mission Description|type=trailblaze|location=Golden Hour|However, it's not just the guests who return to this beautiful dream... People discuss him without concern, for home is now no more than a deathtrap for this man returning to familiar lands.<br />Though the place remains as it was, people have changed. Take great care as you investigate the situation.}}
 {{Dialogue Start}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
 :{{tx}}
+<pre>{
+	"$type": "RPG.GameCore.PerformanceEndSeq",
+	"Cases": [],
+	"BeforeCases": [
+		{
+			"$type": "RPG.GameCore.SwitchCharacterAnchorV2",
+			"SwitchCharacterAnchorConfig": {
+				"IsLocalPlayer": true,
+				"CharacterUniqueName": "LocalPlayer",
+				"AreaName": {
+					"Value": "LevelArea_P10301_F10301001_G529"
+				},
+				"AnchorName": {
+					"Value": "Anchor2"
+				}
+			}
+		}
+	]
+}</pre>
 {{Dialogue End}}
 
 ===Speak with Wonweek{{subst:void|<!--103600202-->}}===
 {{Dialogue Start}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
 :{{tx}}
 {{Dialogue End}}
 
 ===Head to Aideen Park{{subst:void|<!--103600203-->}}===
 {{Dialogue Start}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
 :{{tx}}
+----
+:{{tx}}
+----
+:{{tx}}
+<pre>{
+	"$type": "RPG.GameCore.PerformanceEndSeq",
+	"BeforeCases": [
+		{
+			"$type": "RPG.GameCore.SwitchCharacterAnchorV2",
+			"SwitchCharacterAnchorConfig": {
+				"IsLocalPlayer": true,
+				"CharacterUniqueName": "LocalPlayer",
+				"AreaName": {
+					"Value": "LevelArea_P10301_F10301001_G531"
+				},
+				"AnchorName": {
+					"Value": "Anchor1"
+				}
+			}
+		}
+	]
+}</pre>
+
+
+:{{A|VO chapter3 40 oneweek 111.ogg}} '''Wonweek:''' Alright, then let's keep going. Helping a fugitive return to their home... So exciting.
 {{Mission Description|type=trailblaze|location=Golden Hour|update|Sunday has lost his wings and fallen into the state you now see. He has come to realize that miracles are not to be carried out in the skies but on the ground. And, at the beginning of this precious freedom he had found, he hopes to make his farewells quick and orderly.<br />Bid farewell to this beautiful dream with the help of Wonweek. Make as many unreasonable requests as you need, and you can just owe him a favor for later.}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{tx}}
+:<!--1-second delay-->
+:{{tx}}
+<pre>{
+	"$type": "RPG.GameCore.PerformanceEndSeq",
+	"BeforeCases": [
+		{
+			"$type": "RPG.GameCore.SwitchCharacterAnchorV2",
+			"SwitchCharacterAnchorConfig": {
+				"IsLocalPlayer": true,
+				"CharacterUniqueName": "LocalPlayer",
+				"AreaName": {
+					"Value": "LevelArea_P10301_F10301001_G532"
+				},
+				"AnchorName": {
+					"Value": "Anchor1"
+				}
+			}
+		}
+	]
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.ShowReading",
+	"BookID": {
+		"FixedValue": {
+			"Value": 190726
+		}
+	}
+}</pre>
+:{{A|VO chapter3 41 oneweek 101.ogg}} '''Wonweek:''' But what has Aideen Park got to do with you? Don't tell me that the founder's one of your disguises?
+:{{A|VO chapter3 41 sunday 101.ogg}} '''Sunday:''' I'm not that old.
+:{{A|VO chapter3 41 oneweek 102.ogg}} '''Wonweek:''' Oh, come on. Take a joke, will you?
 {{Mission Description|type=trailblaze|location=Golden Hour|update|No farewell ever goes smoothly... According to the Bloodhound Family members, something unusual has occurred here. What's more, it is likely connected to some kind of distorted Afterechoes...<br />Let's have Wonweek pull some strings and head to Aideen Park to investigate.}}
+:{{A|VO chapter3 41 oneweek 114.ogg}} '''Wonweek:''' "No consumption of food except for burgers." ...What?
 {{Dialogue End}}
 
 ===Based on the rules, investigate the unusual occurrence{{subst:void|<!--103600206-->}}===
 {{Dialogue Start}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
 :{{tx}}
+:{{tx}}
+
+:{{DIcon|Loupe}} Investigate
+:{{tx}}
+
+
+;(Unused &mdash; DestroyIceCream1036002)
+<pre>{
+	"$type": "RPG.GameCore.AdvDestroyGroupEntity",
+	"InstanceIDList": [
+		300002
+	]
+}</pre>
+
+;(Unused &mdash; ShowReading_190726)
+<pre>{
+	"$type": "RPG.GameCore.ShowReading",
+	"BookID": {
+		"FixedValue": {
+			"Value": 190726
+		}
+	}
+}</pre>
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{A|VO chapter3 41 oneweek 152.ogg}} '''Wonweek:''' {{Color|fire|nobold=1|"Handstand walks around flowerbeds are prohibited."}}
+:{{A|VO chapter3 41 oneweek 153.ogg}} '''Wonweek:''' Let's not worry about how the Bloodhounds figured this one out. Hm, I reckon the worst that can happen for this one is that they'll flip you back onto your feet. Say, why don't you test it out this time? I'd love to see you do a handstand!
+:{{A|VO chapter3 41 sunday 137.ogg}} '''Sunday:''' No, thank you.
+<pre>{
+	"$type": "RPG.GameCore.PerformanceEndSeq",
+	"Cases": [],
+	"BeforeCases": [
+		{
+			"$type": "RPG.GameCore.SwitchCharacterAnchorV2",
+			"SwitchCharacterAnchorConfig": {
+				"IsLocalPlayer": true,
+				"CharacterUniqueName": "LocalPlayer",
+				"AreaName": {
+					"Value": "LevelArea_P10301_F10301001_G552"
+				},
+				"AnchorName": {
+					"Value": "Anchor1"
+				}
+			}
+		}
+	]
+}</pre>
+
+;(Upon reaching the destination)
+:{{A|VO chapter3 41 oneweek 152.ogg}} '''Wonweek:''' {{Color|fire|nobold=1|"Handstand walks around flowerbeds are prohibited."}}
+:{{A|VO chapter3 41 oneweek 153.ogg}} '''Wonweek:''' Let's not worry about how the Bloodhounds figured this one out. Hm, I reckon the worst that can happen for this one is that they'll flip you back onto your feet. Say, why don't you test it out this time? I'd love to see you do a handstand!
+:{{A|VO chapter3 41 sunday 137.ogg}} '''Sunday:''' No, thank you.
+<pre>{
+	"$type": "RPG.GameCore.PerformanceEndSeq",
+	"BeforeCases": [
+		{
+			"$type": "RPG.GameCore.SwitchCharacterAnchorV2",
+			"SwitchCharacterAnchorConfig": {
+				"IsLocalPlayer": true,
+				"CharacterUniqueName": "LocalPlayer",
+				"AreaName": {
+					"Value": "LevelArea_P10301_F10301001_G552"
+				},
+				"AnchorName": {
+					"Value": "Anchor2"
+				}
+			}
+		}
+	]
+}</pre>
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{tx}}
+
+;(Upon reaching the destination)
+<pre>{
+	"$type": "RPG.GameCore.PPFilterStackEffect",
+	"Duration": 0.5,
+	"AssetPath": "EnviroSystem/PostProcessFilterAsset/Dizziness.asset"
+}</pre>
+:<!--0.4-second delay-->
+<pre>{
+	"$type": "RPG.GameCore.TriggerSound",
+	"SoundName": {
+		"Value": "Ev_sfx_storyd_270dev_dizzycheer"
+	},
+	"EmitterType": "LocalPlayer",
+	"TargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvLocalPlayer"
+	}
+}</pre>
+:<!--0.1-second delay-->
+<pre>{
+	"$type": "RPG.GameCore.SwitchCharacterAnchorV2",
+	"SwitchCharacterAnchorConfig": {
+		"IsLocalPlayer": true,
+		"CharacterUniqueName": "LocalPlayer",
+		"AreaName": {
+			"Value": "LevelArea_P10301_F10301001_G536"
+		},
+		"AnchorName": {
+			"Value": "Anchor3"
+		},
+		"ResetTurnInPlace": true
+	}
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.PPFilterStackEffect",
+	"Rate": 0,
+	"Duration": 0.5,
+	"AssetPath": "EnviroSystem/PostProcessFilterAsset/Dizziness.asset"
+}</pre>
+----
+:<!--0.6-second delay-->
+:{{A|VO chapter3 41 oneweek 122.ogg}} '''Wonweek:''' ...Huh?
+:{{A|VO chapter3 41 sunday 117.ogg}} '''Sunday:''' Let's try that again.
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{A|VO chapter3 41 oneweek 152.ogg}} '''Wonweek:''' {{Color|fire|nobold=1|"Handstand walks around flowerbeds are prohibited."}}
+:{{A|VO chapter3 41 oneweek 153.ogg}} '''Wonweek:''' Let's not worry about how the Bloodhounds figured this one out. Hm, I reckon the worst that can happen for this one is that they'll flip you back onto your feet. Say, why don't you test it out this time? I'd love to see you do a handstand!
+:{{A|VO chapter3 41 sunday 137.ogg}} '''Sunday:''' No, thank you.
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+<pre>{
+	"$type": "RPG.GameCore.PPFilterStackEffect",
+	"Duration": 0.5,
+	"AssetPath": "EnviroSystem/PostProcessFilterAsset/Dizziness.asset"
+}</pre>
+:<!--0.4-second delay-->
+<pre>{
+	"$type": "RPG.GameCore.TriggerSound",
+	"SoundName": {
+		"Value": "Ev_sfx_storyd_270dev_dizzycheer"
+	},
+	"EmitterType": "LocalPlayer",
+	"TargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvLocalPlayer"
+	}
+}</pre>
+:<!--0.1-second delay-->
+<pre>{
+	"$type": "RPG.GameCore.SwitchCharacterAnchorV2",
+	"SwitchCharacterAnchorConfig": {
+		"IsLocalPlayer": true,
+		"CharacterUniqueName": "LocalPlayer",
+		"AreaName": {
+			"Value": "LevelArea_P10301_F10301001_G537"
+		},
+		"AnchorName": {
+			"Value": "Anchor1"
+		}
+	}
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.PPFilterStackEffect",
+	"Rate": 0,
+	"Duration": 0.5,
+	"AssetPath": "EnviroSystem/PostProcessFilterAsset/Dizziness.asset"
+}</pre>
+----
+:<!--0.6-second delay-->
+:{{A|VO chapter3 41 oneweek 123.ogg}} '''Wonweek:''' What's going on?
+:{{tx}}
+:{{tx}}
+<pre>{
+	"$type": "RPG.GameCore.PerformanceEndSeq",
+	"BeforeCases": [
+		{
+			"$type": "RPG.GameCore.SwitchCharacterAnchorV2",
+			"SwitchCharacterAnchorConfig": {
+				"IsLocalPlayer": true,
+				"CharacterUniqueName": "LocalPlayer",
+				"AreaName": {
+					"Value": "LevelArea_P10301_F10301001_G537"
+				},
+				"AnchorName": {
+					"Value": "Anchor2"
+				}
+			}
+		}
+	]
+}</pre>
+
+;(Unused &mdash; GroupEvent_G539)
+
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+----
+:{{tx}}
+:{{tx}}
+
+
+;(Talk to Trashcan)
+
+
+;(Unused &mdash; EnterArea_G613A)
+
+
+
+;(Talk to Trashcan)
+
+
+;(Unused &mdash; EnterArea_G614A)
+
 {{Mission Description|type=trailblaze|location=Golden Hour|update|This is very reminiscent of the real world... The Dreamscape is starting to make completely unreasonable requests of people.<br />Try breaking some more rules to find the source of the Afterechoes.}}
+
+:{{DIcon|Loupe}} Investigate
+:{{A|VO chapter3 41 oneweek 154.ogg}} '''Wonweek:''' Uh, I say we pass on this. Thanks to you, I never want to eat ice cream again.
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+<pre>{
+	"$type": "RPG.GameCore.PPFilterStackEffect",
+	"AssetPath": "EnviroSystem/PostProcessFilterAsset/Dizziness.asset"
+}</pre>
+:<!--0.5-second delay-->
+<pre>{
+	"$type": "RPG.GameCore.SwitchCharacterAnchorV2",
+	"SwitchCharacterAnchorConfig": {
+		"IsLocalPlayer": true,
+		"CharacterUniqueName": "LocalPlayer",
+		"AreaName": {
+			"Value": "LevelArea_P10301_F10301001_G617"
+		},
+		"AnchorName": {
+			"Value": "Anchor1"
+		}
+	}
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.PPFilterStackEffect",
+	"Active": false,
+	"Rate": 0,
+	"Duration": 0.5,
+	"AssetPath": "EnviroSystem/PostProcessFilterAsset/Dizziness.asset"
+}</pre>
+:{{A|VO chapter3 41 sunday 118.ogg}} '''Sunday:''' "Guide those who have lost their way back onto the right path." Looks like this is an example of the "corrective measures" that the Bloodhound mentioned. It's exactly what I would've done back then.
+
+;(Talk to Trashcan)
+<pre>{
+	"$type": "RPG.GameCore.SetMissionCustomValue",
+	"SubmissionID": 103600216,
+	"MissionCustomValue": {
+		"Name": "OldValue_0",
+		"isLocal": true,
+		"ValidValueParamList": [
+			0,
+			1
+		]
+	}
+}</pre>
+:{{A|VO chapter3 41 oneweek 133.ogg}} '''Wonweek:''' {{Color|fire|nobold=1|"Do not discard trash in trashcans."}}
+:{{A|VO chapter3 41 oneweek 134.ogg}} '''Wonweek:''' This is absurd! Did you make this rule too?
+:{{A|VO chapter3 41 sunday 128.ogg}} '''Sunday:''' ...
+:{{A|VO chapter3 41 sunday 129.ogg}} '''Sunday:''' Children tend to be fascinated by such paradoxes. I was no exception.
+:{{A|VO chapter3 41 oneweek 135.ogg}} '''Wonweek:''' Forget it, I don't even know how to joke about this. Well, what do you suggest we throw in?
+:{{DIcon|Arrow}} Anything will do.
+:<pre>{
+	"$type": "RPG.GameCore.AddFinishMissionData_SelectConsumeItem",
+	"SubmissionID": 103600216,
+	"OnlyPerformance": false,
+	"ItemIDList": [
+		2,
+		401025,
+		408610,
+		408001
+	],
+	"ItemHiddenIDList": [],
+	"ItemInvisibleIDList": [],
+	"ItemSelect": [
+		{
+			"Item1": 401025,
+			"TriggerCustomString": "EnterArea_G5423"
+		},
+		{
+			"Item1": 408610,
+			"TriggerCustomString": "EnterArea_G5423"
+		},
+		{
+			"Item1": 408001,
+			"TriggerCustomString": "EnterArea_G5423"
+		},
+		{
+			"Item1": 2,
+			"TriggerCustomString": "EnterArea_G5423"
+		}
+	],
+	"SlotNum": 1,
+	"SimpleTalk": {
+		"TalkSentenceID": 136003401
+	},
+	"OnSubmitFail": [
+		{
+			"$type": "RPG.GameCore.EndPerformance"
+		}
+	],
+	"OnSubmitCancel": [
+		{
+			"$type": "RPG.GameCore.EndPerformance"
+		}
+	]
+}</pre>
+:{{DIcon|Exit}} I don't have anything we can use for now.
+:<pre>{
+	"$type": "RPG.GameCore.SetPerformanceResult"
+}</pre>
+;(Unused &mdash; EnterArea_G5423)
+<pre>{
+	"$type": "RPG.GameCore.SetMissionCustomValue",
+	"SubmissionID": 103600216,
+	"MissionCustomValue": {
+		"Name": "OldValue_0",
+		"isLocal": true,
+		"ValidValueParamList": [
+			0,
+			1
+		]
+	},
+	"CustomValue": 1
+}</pre>
+
+:{{A|VO chapter3 41 oneweek 130.ogg}} '''Wonweek:''' So... Can I take it that rules are meant to be broken now?
+
+;(Talk to Bubble Hound)
+:{{tx}}
+:<!--1-second delay-->
+
 {{Dialogue End}}
 
 ===Find the distorted Afterecho{{subst:void|<!--103600215-->}}===
 {{Mission Description|type=trailblaze|location=Golden Hour|update|This is very reminiscent of the real world... The Dreamscape is starting to make completely unreasonable requests of people.<br />Tune the Dreamscape and eliminate the distorted Afterechoes of Aideen Park.}}
 {{Dialogue Start}}
-:{{tx}}
+:{{A|VO chapter3 45 sunday 100.ogg}} '''Sunday:''' Enough. The location of the distortion is nearby.
+:{{A|VO chapter3 41 sunday 131.ogg}} '''Sunday:''' We're not breaking enough rules. We should look elsewhere too.
+
+;(Unused &mdash; SetSpecialVisionOn_G600)
+<pre>{
+	"$type": "RPG.GameCore.SetSpecialVisionOn",
+	"IsOn": true,
+	"VisionType": "SmellPath",
+	"VisionEffectType": "OrdeEcho",
+	"CameraEffectType": "OrdeEcho",
+	"SmellProp": {
+		"GroupID": {
+			"FixedValue": {
+				"Value": 600
+			}
+		},
+		"GroupPropID": {
+			"FixedValue": {
+				"Value": 300001
+			}
+		}
+	}
+}</pre>
+::<!--8-second delay-->
+:<pre>{
+	"$type": "RPG.GameCore.SetSpecialVisionOn",
+	"VisionType": "SmellPath",
+	"VisionEffectType": "OrdeEcho",
+	"CameraEffectType": "OrdeEcho",
+	"SmellProp": {
+		"GroupID": {
+			"FixedValue": {
+				"Value": 600
+			}
+		},
+		"GroupPropID": {
+			"FixedValue": {
+				"Value": 300001
+			}
+		}
+	}
+}</pre>
 {{Dialogue End}}
 
 ===Investigate the Capsule Machine{{subst:void|<!--103600218-->}}===
 {{Mission Description|type=trailblaze|location=Golden Hour|update|This is very reminiscent of the real world... The Dreamscape is starting to make completely unreasonable requests of people.<br />Try breaking some more rules to find the source of the Afterechoes.}}
 {{Dialogue Start}}
-:{{tx}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{A|VO chapter3 41 oneweek 146.ogg}} '''Wonweek:''' Shall we give this capsule machine a try and see what happens?
+;(Unused &mdash; GroupEvent_G541B)
+<pre>{
+	"$type": "RPG.GameCore.AdvEnableButtons",
+	"TargetType": {
+		"$type": "RPG.GameCore.GroupFetchLocalTarget",
+		"TargetType": "Prop",
+		"Targets": [
+			300001
+		]
+	},
+	"TriggerName": "MissionTrigger",
+	"ButtonsByName": [
+		"InteractButton"
+	]
+}</pre>
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{A|VO chapter3 41 oneweek 147.ogg}} '''Wonweek:''' Nothing's off so far. Maybe we should open the capsule?
 {{Dialogue End}}
 
 ===Tune the Dreamscape{{subst:void|<!--103600227-->}}===
 {{Mission Description|type=trailblaze|location=Golden Hour|update|You've reflected on the past and eliminated the lurking danger. It's time to leave Aideen Park... Look back, then continue onwards. Perhaps these are the only two things a person can ever do in life.}}
 {{Dialogue Start}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+<pre>{
+	"$type": "RPG.GameCore.ClearAllEffect"
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.SetSpecialVisionOn",
+	"VisionType": "SmellPath",
+	"VisionEffectType": "OrdeEcho",
+	"CameraEffectType": "OrdeEcho",
+	"SmellProp": {
+		"GroupID": {
+			"FixedValue": {
+				"Value": 607
+			}
+		},
+		"GroupPropID": {
+			"FixedValue": {
+				"Value": 300001
+			}
+		}
+	}
+}</pre>
 :{{tx}}
+
+
+;(Unused &mdash; SetSpecialVisionOn_G608)
+<pre>{
+	"$type": "RPG.GameCore.SetSpecialVisionOn",
+	"IsOn": true,
+	"VisionType": "SmellPath",
+	"VisionEffectType": "OrdeEcho",
+	"CameraEffectType": "OrdeEcho",
+	"SmellProp": {
+		"GroupID": {
+			"FixedValue": {
+				"Value": 607
+			}
+		},
+		"GroupPropID": {
+			"FixedValue": {
+				"Value": 300001
+			}
+		}
+	}
+}</pre>
+::<!--8-second delay-->
+:<pre>{
+	"$type": "RPG.GameCore.SetSpecialVisionOn",
+	"VisionType": "SmellPath",
+	"VisionEffectType": "OrdeEcho",
+	"CameraEffectType": "OrdeEcho",
+	"SmellProp": {
+		"GroupID": {
+			"FixedValue": {
+				"Value": 607
+			}
+		},
+		"GroupPropID": {
+			"FixedValue": {
+				"Value": 300001
+			}
+		}
+	}
+}</pre>
 {{Dialogue End}}
 
 ===Investigate the Capsule Machine{{subst:void|<!--103600222-->}}===
 {{Mission Description|type=trailblaze|location=Golden Hour|update|This is very reminiscent of the real world... The Dreamscape is starting to make completely unreasonable requests of people.<br />Try breaking some more rules to find the source of the Afterechoes.}}
 {{Dialogue Start}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+<pre>{
+	"$type": "RPG.GameCore.ShowReading",
+	"BookID": {
+		"FixedValue": {
+			"Value": 190725
+		}
+	}
+}</pre>
 :{{tx}}
+;(Enter battle)
+::{{tx|Enemy list missing}}
 {{Dialogue End}}
 
 ===Tune the Dreamscape{{subst:void|<!--103600223-->}}===
 {{Mission Description|type=trailblaze|location=Golden Hour|update|You've reflected on the past and eliminated the lurking danger. It's time to leave Aideen Park... Look back, then continue onwards. Perhaps these are the only two things a person can ever do in life.}}
 {{Dialogue Start}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+<pre>{
+	"$type": "RPG.GameCore.ClearAllEffect"
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.SetSpecialVisionOn",
+	"VisionType": "SmellPath",
+	"VisionEffectType": "OrdeEcho",
+	"CameraEffectType": "OrdeEcho",
+	"SmellProp": {
+		"GroupID": {
+			"FixedValue": {
+				"Value": 607
+			}
+		},
+		"GroupPropID": {
+			"FixedValue": {
+				"Value": 300001
+			}
+		}
+	}
+}</pre>
 :{{tx}}
+<pre>{
+	"$type": "RPG.GameCore.PerformanceEndSeq",
+	"BeforeCases": [
+		{
+			"$type": "RPG.GameCore.SwitchCharacterAnchorV2",
+			"SwitchCharacterAnchorConfig": {
+				"IsLocalPlayer": true,
+				"CharacterUniqueName": "LocalPlayer",
+				"AreaName": {
+					"Value": "LevelArea_P10301_F10301001_G547"
+				},
+				"AnchorName": {
+					"Value": "Anchor2"
+				}
+			}
+		}
+	]
+}</pre>
+
+;(Unused &mdash; SetSpecialVisionOn_G609)
+<pre>{
+	"$type": "RPG.GameCore.SetSpecialVisionOn",
+	"IsOn": true,
+	"VisionType": "SmellPath",
+	"VisionEffectType": "OrdeEcho",
+	"CameraEffectType": "OrdeEcho",
+	"SmellProp": {
+		"GroupID": {
+			"FixedValue": {
+				"Value": 607
+			}
+		},
+		"GroupPropID": {
+			"FixedValue": {
+				"Value": 300001
+			}
+		}
+	}
+}</pre>
+::<!--8-second delay-->
+:<pre>{
+	"$type": "RPG.GameCore.SetSpecialVisionOn",
+	"VisionType": "SmellPath",
+	"VisionEffectType": "OrdeEcho",
+	"CameraEffectType": "OrdeEcho",
+	"SmellProp": {
+		"GroupID": {
+			"FixedValue": {
+				"Value": 607
+			}
+		},
+		"GroupPropID": {
+			"FixedValue": {
+				"Value": 300001
+			}
+		}
+	}
+}</pre>
 {{Dialogue End}}
 
 ===Continue your journey of reflection{{subst:void|<!--103600224-->}}===
 {{Mission Description|type=trailblaze|location=Golden Hour|update|Perhaps Welt has spent too much time travelling with people, and they are starting to forget how it feels to face him as a foe... It's truly terrifying to have Welt as your "enemy."<br />Find a way to get away from him and continue your journey of reflection.}}
 {{Dialogue Start}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
 :{{tx}}
+:{{tx}}
+
+;(Unused &mdash; SetSpecialVisionOn_G610)
+<pre>{
+	"$type": "RPG.GameCore.SetSpecialVisionOn",
+	"IsOn": true,
+	"VisionType": "SmellPath",
+	"VisionEffectType": "OrdeEcho",
+	"CameraEffectType": "OrdeEcho",
+	"SmellProp": {
+		"GroupID": {
+			"FixedValue": {
+				"Value": 607
+			}
+		},
+		"GroupPropID": {
+			"FixedValue": {
+				"Value": 300001
+			}
+		}
+	}
+}</pre>
+::<!--8-second delay-->
+:<pre>{
+	"$type": "RPG.GameCore.SetSpecialVisionOn",
+	"VisionType": "SmellPath",
+	"VisionEffectType": "OrdeEcho",
+	"CameraEffectType": "OrdeEcho",
+	"SmellProp": {
+		"GroupID": {
+			"FixedValue": {
+				"Value": 607
+			}
+		},
+		"GroupPropID": {
+			"FixedValue": {
+				"Value": 300001
+			}
+		}
+	}
+}</pre>
+:{{A|VO chapter3 41 sunday 156.ogg}} '''Sunday:''' Come now, it's time we set off. Let's not stick too close to each other, just in case. A few feet or so between us will do.
 {{Dialogue End}}
 
 ===Go with Welt to see his companions{{subst:void|<!--103600225-->}}===
 {{Mission Description|type=trailblaze|location=Golden Hour|update|Unfortunately, there is no way to escape from Welt. Go with him to meet his Express companions and find a way to get some time to yourself.}}
 {{Dialogue Start}}
+
+;(Talk to )
+
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+<pre>{
+	"$type": "RPG.GameCore.ClearAllEffect"
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.SetSpecialVisionOn",
+	"VisionType": "SmellPath",
+	"VisionEffectType": "OrdeEcho",
+	"CameraEffectType": "OrdeEcho",
+	"SmellProp": {
+		"GroupID": {
+			"FixedValue": {
+				"Value": 607
+			}
+		},
+		"GroupPropID": {
+			"FixedValue": {
+				"Value": 300001
+			}
+		}
+	}
+}</pre>
 :{{tx}}
+
+;(Unused &mdash; SetSpecialVisionOn_G611)
+<pre>{
+	"$type": "RPG.GameCore.SetSpecialVisionOn",
+	"IsOn": true,
+	"VisionType": "SmellPath",
+	"VisionEffectType": "OrdeEcho",
+	"CameraEffectType": "OrdeEcho",
+	"SmellProp": {
+		"GroupID": {
+			"FixedValue": {
+				"Value": 607
+			}
+		},
+		"GroupPropID": {
+			"FixedValue": {
+				"Value": 300001
+			}
+		}
+	}
+}</pre>
+::<!--8-second delay-->
+:<pre>{
+	"$type": "RPG.GameCore.SetSpecialVisionOn",
+	"VisionType": "SmellPath",
+	"VisionEffectType": "OrdeEcho",
+	"CameraEffectType": "OrdeEcho",
+	"SmellProp": {
+		"GroupID": {
+			"FixedValue": {
+				"Value": 607
+			}
+		},
+		"GroupPropID": {
+			"FixedValue": {
+				"Value": 300001
+			}
+		}
+	}
+}</pre>
 {{Dialogue End}}
 
 ==Other Languages==

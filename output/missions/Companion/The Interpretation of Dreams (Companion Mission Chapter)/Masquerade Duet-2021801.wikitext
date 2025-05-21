@@ -38,6 +38,48 @@ PageTitle=#Masquerade Duet#
 ===Speak with Dr. Edward{{subst:void|<!--202180102-->}}===
 {{Mission Description|type=companion|location=Golden Hour|update|You receive a message from Dr. Edward. Dr. Edward has invited you to the Dreamscape Sales Store to experience a dream left for you by a lady named "Black Swan." Of course, you know who Black Swan is, but cannot think why she would have left a dream for you. Go to the Dreamscape Sales Store to see. Perhaps you will only receive your answer once you experience it for yourself.}}
 {{Dialogue Start}}
+
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{tx}}
+:{{A|VO side3 huahuo edward 101.ogg}} '''Dr. Edward:''' Trailblazers from the Astral Express &mdash; Welcome to Dreamscape Sales Store!
+:{{DIcon|Arrow}} Is that usually how you welcome customers?
+::{{A|VO side3 huahuo edward 102.ogg}} '''Dr. Edward:''' Please excuse me. I struggle to think of an appropriate way of addressing such esteemed guests as yourselves.
+::Long time no see, ol' big eye.
+:{{DIcon|Arrow}} Long time no see, ol' big eye.
+:{{A|VO side3 huahuo edward 103.ogg}} '''Dr. Edward:''' Long time no see, diamond in the rough.
+:{{A|VO side3 huahuo edward 104.ogg}} '''Dr. Edward:''' You must be here to experience those dream bubbles. I've already made the necessary preparations. Be careful, though &mdash; we did pass the safety inspections stipulated by "Article 027-Damaged Faris" and "Article 076-Real Wasteland..."
+:{{A|VO side3 huahuo edward 105.ogg}} '''Dr. Edward:''' ...However, this dreamscape will feature unfiltered and unpolished fresh memories. It will make for a very vivid experience.
+:{{A|VO side3 huahuo edward 106.ogg}} '''Dr. Edward:''' Veteran gamers call this type of dream a "thrill-dream" &mdash; I don't know if you're into that kind of thing? If you feel any discomfort, please leave the dreamscape immediately and seek professional medical help.
+:{{A|VO side3 huahuo edward 107.ogg}} '''Dr. Edward:''' ...Luckily, I just so happen to be an excellent doctor, albeit a psychiatric one, haha! Let us begin. Please close your eyes, and rest your forehead on the dream bubble.
+:{{DIcon|Arrow}} (Touch the dream bubble)
+:<pre>{
+	"$type": "RPG.GameCore.SetMissionCustomValue",
+	"SubmissionID": 202180103,
+	"MissionCustomValue": {
+		"Name": "OldValue_0",
+		"isLocal": true,
+		"ValidValueParamList": [
+			0,
+			1
+		]
+	},
+	"CustomValue": 1
+}</pre>
+:{{DIcon|Exit}} I'm not so sure about this...
+:<pre>{
+	"$type": "RPG.GameCore.SetMissionCustomValue",
+	"SubmissionID": 202180103,
+	"MissionCustomValue": {
+		"Name": "OldValue_0",
+		"isLocal": true,
+		"ValidValueParamList": [
+			0,
+			1
+		]
+	}
+}</pre>
 :{{tx}}
 {{Dialogue End}}
 

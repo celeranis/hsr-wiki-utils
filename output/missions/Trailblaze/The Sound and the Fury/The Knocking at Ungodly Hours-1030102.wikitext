@@ -37,38 +37,1768 @@ PageTitle=#The Knocking at Ungodly Hours#
 -->
 ==Dialogue==
 {{Stub Dialogue}}
+:{{A|VO chapter3 0 acheron 101.ogg}} '''???:''' Not another one...
+:{{A|VO chapter3 0 acheron 102.ogg}} '''???:''' ...Come with me.
+:{{DIcon|Arrow}} Who are you?
+:{{DIcon|Arrow}} What is this place?
+:{{DIcon|Arrow}} Where are we going?
+:{{A|VO chapter3 0 acheron 103.ogg}} '''???:''' These questions... have no meaning. But, I will answer you as best as I can: This is the border between reality and the Memory Zone, a... dreamscape.
+:{{tx}}
 {{Dialogue End}}
 
 ===Leave the strange room{{subst:void|<!--103010208-->}}===
 {{Mission Description|type=trailblaze|location=A Strange Dream|update|This warp jump is quite unusual. In the blink of an eye, you transition from the comfortable couch of the Parlor Car to an unfamiliar location. A stranger awakens you, claiming that both of you coincidentally share the same dream, and offers to guide you to an exit. <br />Follow her guidance and leave this area.}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Upon reaching the destination)
 {{Dialogue End}}
 
 ===Continue down the unfamiliar corridor{{subst:void|<!--103010202-->}}===
 {{Mission Description|type=trailblaze|location=A Strange Dream|update|The warrior calls herself "Acheron," a Galaxy Ranger.<br />Continue to follow in her footsteps and leave this strange dream.}}
 {{Dialogue Start}}
-:{{tx}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{A|VO chapter3 0 acheron 109.ogg}} '''Acheron:''' Galaxy Ranger, Acheron... This is what they call me. You can call me whatever you want.
+:<!--3-second delay-->
+:<!--1-second delay-->
+
+;(Upon reaching the destination)
+:{{A|VO chapter3 0 acheron 110.ogg}} '''Acheron:''' I'm not there. Turn back.
 {{Mission Description|type=trailblaze|location=A Strange Dream|update|Acheron leads you to a door. Is this the dreamscape exit?}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{A|VO chapter3 0 acheron 111.ogg}} '''Acheron:''' Open this door... Take a look at the mesmerizing dreamscape, while you can still remember.
+:<!--2-second delay-->
+:<!--1-second delay-->
 {{Mission Description|type=trailblaze|location=A Strange Dream|update|The warrior calls herself "Acheron," a Galaxy Ranger.<br />Continue to follow in her footsteps and leave this strange dream.}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{A|VO chapter3 0 acheron 113.ogg}} '''Acheron:''' After you.
+:<!--1-second delay-->
+
+;(Upon reaching the destination)
+:{{A|VO chapter3 0 player 104 m.ogg}} {{A|VO chapter3 0 player 104 f.ogg}} '''(Trailblazer):''' (This is, no way...)
+
+;(Upon reaching the destination)
+:{{A|VO chapter3 0 acheron 112.ogg}} '''Acheron:''' This way.
 {{Dialogue End}}
 
 ===Search for an exit in the unfamiliar lobby{{subst:void|<!--103010204-->}}===
 {{Mission Description|type=trailblaze|location=A Strange Dream|update|Acheron leads you to a lobby. She points out a path for you, but you see no clear path through this room.<br />Search around to find the true path.}}
 {{Dialogue Start}}
-:{{tx}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{A|VO chapter3 0 player 106 m.ogg}} {{A|VO chapter3 0 player 106 f.ogg}} '''(Trailblazer):''' (How is this even possible!?)
+:{{A|VO chapter3 0 acheron 114.ogg}} '''Acheron:''' (Why not?)
+:{{A|VO chapter3 0 player 107 m.ogg}} {{A|VO chapter3 0 player 107 f.ogg}} '''(Trailblazer):''' (She can hear the thoughts in my head?)
+:{{A|VO chapter3 0 acheron 115.ogg}} '''Acheron:''' (Why not?)
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{A|VO chapter3 0 player 105 m.ogg}} {{A|VO chapter3 0 player 105 f.ogg}} '''(Trailblazer):''' (Am I supposed to walk up the wall...?)
 {{Dialogue End}}
 
 ===Speak with Acheron{{subst:void|<!--103010205-->}}===
 {{Mission Description|type=trailblaze|location=A Strange Dream|update|After a disorienting exploration, you realize that you have somehow ended up on the lobby ceiling.<br />Acheron seems to be long accustomed to this and simply points out the dreamscape exit just ahead.}}
 {{Dialogue Start}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{tx}}
+:{{A|VO chapter3 0 acheron 116.ogg}} '''Acheron:''' We're almost there. Can you still walk?
+:{{DIcon|Arrow}} Now I Am Become Trailblaze, the Perambulator of Walls.
+::{{A|VO chapter3 0 acheron 117.ogg}} '''Acheron:''' You're funny. If you can crack jokes, you're probably fine.
+::I feel a bit faint...
+:{{DIcon|Arrow}} I feel a bit faint...
+:{{A|VO chapter3 0 acheron 118.ogg}} '''Acheron:''' Don't panic, this is normal.
+:{{A|VO chapter3 0 acheron 119.ogg}} '''Acheron:''' Don't stop, don't turn back, don't look down. Or up, for that matter.
 :{{tx}}
 {{Dialogue End}}
 
 ===Advance with Acheron{{subst:void|<!--103010206-->}}===
 {{Mission Description|type=trailblaze|location=A Strange Dream|update|Acheron guides you through a magnificent dreamscape. It seems that the exit is just ahead.}}
 {{Dialogue Start}}
-:{{tx}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+<pre>{
+	"$type": "RPG.GameCore.SetMissionWayPoint",
+	"SubMissionID": 103010206,
+	"OverideMissionWayPointType": true,
+	"MissionWayPointType": "Prop",
+	"OverideWayPointFloorID": true,
+	"WayPointFloorID": 43301001,
+	"OverideWayPointGroupID": true,
+	"WayPointGroupID": 9,
+	"OverideWayPointEntityID": true,
+	"WayPointEntityID": 300003
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.AdvCreateGroupEntity",
+	"InstanceIDList": [
+		400002
+	]
+}</pre>
+;(If {{cx}}{{subst:void|<!--{"$type":"RPG.GameCore.ByCheckFloorCustomBool","Name":{"Value":"Mission_103010207_OpenDoor"}}-->}})
+::{{A|VO chapter3 0 misha 101.ogg}} '''???:''' Welcome to the Reverie! May you experience an unforgettable holiday! If you need help checking in, please head straight to the concierge...
+::<!--1-second delay-->
+::{{A|VO chapter3 0 misha 101.ogg}} '''???:''' Welcome to the Reverie! May you experience an unforgettable holiday! If you need help checking in, please head straight to the concierge...
+::{{A|VO chapter3 0 acheron 121.ogg}} '''Acheron:''' ...We're here.
+::{{A|VO chapter3 0 acheron 122.ogg}} '''Acheron:''' Leave this realm, and rise as you would on any other day. Forget this fortuitous encounter, and return whence you came.
+::{{A|VO chapter3 0 acheron 123.ogg}} '''Acheron:''' But before you do, I would make a request of you.
+::{{A|VO chapter3 0 acheron 124.ogg}} '''Acheron:''' You may think it somewhat strange, perhaps even rude, but I wish to know...
+::{{A|VO chapter3 0 acheron 125.ogg}} '''Acheron:''' {{Color|fire|nobold=1|...Have we met somewhere before?}}
+::{{DIcon|Arrow}} Perhaps we have.
+:::{{A|VO chapter3 0 acheron 126 m.ogg}} {{A|VO chapter3 0 acheron 126 f.ogg}} '''Acheron:''' {{MC|m={{Color|#ff3a|You evoke memories of an old friend. In the haze of my recollections, he crossed blades with me, much like this surreal dreamscape where we stood close, yet forever out of reach.}}|f={{Color|#ff3a|You evoke memories of an old friend. In the haze of my recollections, she stood shoulder to shoulder with me, much like this surreal dreamscape where we stood close, yet forever out of reach.}}}}
+:::{{A|VO chapter3 0 acheron 127.ogg}} '''Acheron:''' May I ask you a few more questions? I... tend to forget things &mdash; which is why, rather than memories, I'm accustomed to using my emotions to capture what I normally wouldn't otherwise. The answer is inconsequential. Your spontaneous reaction is what matters.
+:::{{A|VO chapter3 0 acheron 128.ogg}} '''Acheron:''' For instance, when you awaken in your room, your lips speak several names. Are they your companions? Family? Enemies? You seem to have forged unbreakable bonds with many people and many incidents...
+:::{{A|VO chapter3 0 acheron 129.ogg}} '''Acheron:''' {{Color|fire|nobold=1|Might I ask if you fear losing these bonds?}}
+:::{{DIcon|Arrow}} I cannot bear such a fear.
+:::{{DIcon|Arrow}} If it means losing them, I would.
+:::{{DIcon|Arrow}} If it means that I will disappear, I would.
+:::{{DIcon|Arrow}} I feel no fear.
+:::{{DIcon|Arrow}} I don't know.
+:::{{A|VO chapter3 0 acheron 130.ogg}} '''Acheron:''' Mm... Then, if there was a vast dreamscape, so lifelike it's indistinguishable from reality. There, no one faces life's separations or deaths. Everyone attains their deserved happiness and lives joyfully ever after.
+:::{{A|VO chapter3 0 acheron 131.ogg}} '''Acheron:''' {{Color|fire|nobold=1|I would ask: Would you wish to stay?}}
+:::{{DIcon|Arrow}} I would, no matter the cost.
+::::{{A|VO chapter3 0 acheron 132.ogg}} '''Acheron:''' Now... imagine if this splendid dream were fated to fall apart: Friends, family, strangers, followed by the gentle breeze, soaring birds, the stars... and ultimately, yourself.
+::::{{A|VO chapter3 0 acheron 133.ogg}} '''Acheron:''' Everyone, and every face they remember, the joy and the heartaches, the vows sealed and those left hanging... all will inevitably march towards a predetermined ending. If you had grasped the journey's finale right from its inception...
+::::{{A|VO chapter3 0 acheron 134.ogg}} '''Acheron:''' {{Color|fire|nobold=1|I would ask: Would you still embark on this journey?}}
+::::{{DIcon|Arrow}} I would abandon it &mdash; the price is too dear.
+::::{{DIcon|Arrow}} I would abandon it &mdash; I have already tasted the beauty of dreams.
+::::{{DIcon|Arrow}} I would abandon it &mdash; Trailblazing was never my intent.
+::::{{DIcon|Arrow}} I would blaze a trail without hesitation.
+::::{{DIcon|Arrow}} I don't know.
+::::{{A|VO chapter3 0 acheron 135.ogg}} '''Acheron:''' I know this is hard, you don't have to be hard-pressed to make a decision. As I have said... the answer is inconsequential.
+::::{{A|VO chapter3 0 acheron 136.ogg}} '''Acheron:''' Hearing, touch, thought &mdash; through these, you gain emotions &mdash; cherish them. With emotions, we make choices. And so we return to the original question...
+::::{{A|VO chapter3 0 acheron 137.ogg}} '''Acheron:''' {{Color|fire|nobold=1|I would ask... Do you still remember me?}}
+::::{{DIcon|Arrow}} I seem to remember you from somewhere...
+::::{{DIcon|Arrow}} No, this is the first time we've met.
+::::{{A|VO chapter3 0 acheron 138.ogg}} '''Acheron:''' ...I understand.
+::::{{A|VO chapter3 0 acheron 139.ogg}} '''Acheron:''' How interesting. For a split second, it felt like countless versions of you, alike yet distinct, gave entirely different responses.
+::::{{A|VO chapter3 0 acheron 140.ogg}} '''Acheron:''' That was my final question, thank you. We all have our paths to walk, so we shall bid our farewells.
+::::{{DIcon|Arrow}} Will we meet again?
+::::{{DIcon|Arrow}} You haven't told me how to leave this place...
+::::{{A|VO chapter3 0 acheron 141.ogg}} '''Acheron:''' The golden dream is getting restless. In the coming long night, I'm afraid you will face many tribulations and witness many tragedies. And finally... your sight will only see black and white.
+::::{{tx}}
+:::{{DIcon|Arrow}} If I didn't have to pay any price, I would.
+::::{{A|VO chapter3 0 acheron 132.ogg}} '''Acheron:''' Now... imagine if this splendid dream were fated to fall apart: Friends, family, strangers, followed by the gentle breeze, soaring birds, the stars... and ultimately, yourself.
+::::{{A|VO chapter3 0 acheron 133.ogg}} '''Acheron:''' Everyone, and every face they remember, the joy and the heartaches, the vows sealed and those left hanging... all will inevitably march towards a predetermined ending. If you had grasped the journey's finale right from its inception...
+::::{{A|VO chapter3 0 acheron 134.ogg}} '''Acheron:''' {{Color|fire|nobold=1|I would ask: Would you still embark on this journey?}}
+::::{{DIcon|Arrow}} I would abandon it &mdash; the price is too dear.
+::::{{DIcon|Arrow}} I would abandon it &mdash; I have already tasted the beauty of dreams.
+::::{{DIcon|Arrow}} I would abandon it &mdash; Trailblazing was never my intent.
+::::{{DIcon|Arrow}} I would blaze a trail without hesitation.
+::::{{DIcon|Arrow}} I don't know.
+::::{{A|VO chapter3 0 acheron 135.ogg}} '''Acheron:''' I know this is hard, you don't have to be hard-pressed to make a decision. As I have said... the answer is inconsequential.
+::::{{A|VO chapter3 0 acheron 136.ogg}} '''Acheron:''' Hearing, touch, thought &mdash; through these, you gain emotions &mdash; cherish them. With emotions, we make choices. And so we return to the original question...
+::::{{A|VO chapter3 0 acheron 137.ogg}} '''Acheron:''' {{Color|fire|nobold=1|I would ask... Do you still remember me?}}
+::::{{DIcon|Arrow}} I seem to remember you from somewhere...
+::::{{DIcon|Arrow}} No, this is the first time we've met.
+::::{{A|VO chapter3 0 acheron 138.ogg}} '''Acheron:''' ...I understand.
+::::{{A|VO chapter3 0 acheron 139.ogg}} '''Acheron:''' How interesting. For a split second, it felt like countless versions of you, alike yet distinct, gave entirely different responses.
+::::{{A|VO chapter3 0 acheron 140.ogg}} '''Acheron:''' That was my final question, thank you. We all have our paths to walk, so we shall bid our farewells.
+::::{{DIcon|Arrow}} Will we meet again?
+::::{{DIcon|Arrow}} You haven't told me how to leave this place...
+::::{{A|VO chapter3 0 acheron 141.ogg}} '''Acheron:''' The golden dream is getting restless. In the coming long night, I'm afraid you will face many tribulations and witness many tragedies. And finally... your sight will only see black and white.
+::::{{tx}}
+:::{{DIcon|Arrow}} That depends on the price I'd have to pay.
+::::{{A|VO chapter3 0 acheron 132.ogg}} '''Acheron:''' Now... imagine if this splendid dream were fated to fall apart: Friends, family, strangers, followed by the gentle breeze, soaring birds, the stars... and ultimately, yourself.
+::::{{A|VO chapter3 0 acheron 133.ogg}} '''Acheron:''' Everyone, and every face they remember, the joy and the heartaches, the vows sealed and those left hanging... all will inevitably march towards a predetermined ending. If you had grasped the journey's finale right from its inception...
+::::{{A|VO chapter3 0 acheron 134.ogg}} '''Acheron:''' {{Color|fire|nobold=1|I would ask: Would you still embark on this journey?}}
+::::{{DIcon|Arrow}} I would abandon it &mdash; the price is too dear.
+::::{{DIcon|Arrow}} I would abandon it &mdash; I have already tasted the beauty of dreams.
+::::{{DIcon|Arrow}} I would abandon it &mdash; Trailblazing was never my intent.
+::::{{DIcon|Arrow}} I would blaze a trail without hesitation.
+::::{{DIcon|Arrow}} I don't know.
+::::{{A|VO chapter3 0 acheron 135.ogg}} '''Acheron:''' I know this is hard, you don't have to be hard-pressed to make a decision. As I have said... the answer is inconsequential.
+::::{{A|VO chapter3 0 acheron 136.ogg}} '''Acheron:''' Hearing, touch, thought &mdash; through these, you gain emotions &mdash; cherish them. With emotions, we make choices. And so we return to the original question...
+::::{{A|VO chapter3 0 acheron 137.ogg}} '''Acheron:''' {{Color|fire|nobold=1|I would ask... Do you still remember me?}}
+::::{{DIcon|Arrow}} I seem to remember you from somewhere...
+::::{{DIcon|Arrow}} No, this is the first time we've met.
+::::{{A|VO chapter3 0 acheron 138.ogg}} '''Acheron:''' ...I understand.
+::::{{A|VO chapter3 0 acheron 139.ogg}} '''Acheron:''' How interesting. For a split second, it felt like countless versions of you, alike yet distinct, gave entirely different responses.
+::::{{A|VO chapter3 0 acheron 140.ogg}} '''Acheron:''' That was my final question, thank you. We all have our paths to walk, so we shall bid our farewells.
+::::{{DIcon|Arrow}} Will we meet again?
+::::{{DIcon|Arrow}} You haven't told me how to leave this place...
+::::{{A|VO chapter3 0 acheron 141.ogg}} '''Acheron:''' The golden dream is getting restless. In the coming long night, I'm afraid you will face many tribulations and witness many tragedies. And finally... your sight will only see black and white.
+::::{{tx}}
+:::{{DIcon|Arrow}} I would never want to live in a dream.
+::::{{A|VO chapter3 0 acheron 132.ogg}} '''Acheron:''' Now... imagine if this splendid dream were fated to fall apart: Friends, family, strangers, followed by the gentle breeze, soaring birds, the stars... and ultimately, yourself.
+::::{{A|VO chapter3 0 acheron 133.ogg}} '''Acheron:''' Everyone, and every face they remember, the joy and the heartaches, the vows sealed and those left hanging... all will inevitably march towards a predetermined ending. If you had grasped the journey's finale right from its inception...
+::::{{A|VO chapter3 0 acheron 134.ogg}} '''Acheron:''' {{Color|fire|nobold=1|I would ask: Would you still embark on this journey?}}
+::::{{DIcon|Arrow}} I would abandon it &mdash; the price is too dear.
+::::{{DIcon|Arrow}} I would abandon it &mdash; I have already tasted the beauty of dreams.
+::::{{DIcon|Arrow}} I would abandon it &mdash; Trailblazing was never my intent.
+::::{{DIcon|Arrow}} I would blaze a trail without hesitation.
+::::{{DIcon|Arrow}} I don't know.
+::::{{A|VO chapter3 0 acheron 135.ogg}} '''Acheron:''' I know this is hard, you don't have to be hard-pressed to make a decision. As I have said... the answer is inconsequential.
+::::{{A|VO chapter3 0 acheron 136.ogg}} '''Acheron:''' Hearing, touch, thought &mdash; through these, you gain emotions &mdash; cherish them. With emotions, we make choices. And so we return to the original question...
+::::{{A|VO chapter3 0 acheron 137.ogg}} '''Acheron:''' {{Color|fire|nobold=1|I would ask... Do you still remember me?}}
+::::{{DIcon|Arrow}} I seem to remember you from somewhere...
+::::{{DIcon|Arrow}} No, this is the first time we've met.
+::::{{A|VO chapter3 0 acheron 138.ogg}} '''Acheron:''' ...I understand.
+::::{{A|VO chapter3 0 acheron 139.ogg}} '''Acheron:''' How interesting. For a split second, it felt like countless versions of you, alike yet distinct, gave entirely different responses.
+::::{{A|VO chapter3 0 acheron 140.ogg}} '''Acheron:''' That was my final question, thank you. We all have our paths to walk, so we shall bid our farewells.
+::::{{DIcon|Arrow}} Will we meet again?
+::::{{DIcon|Arrow}} You haven't told me how to leave this place...
+::::{{A|VO chapter3 0 acheron 141.ogg}} '''Acheron:''' The golden dream is getting restless. In the coming long night, I'm afraid you will face many tribulations and witness many tragedies. And finally... your sight will only see black and white.
+::::{{tx}}
+:::{{DIcon|Arrow}} I don't know.
+::::{{A|VO chapter3 0 acheron 132.ogg}} '''Acheron:''' Now... imagine if this splendid dream were fated to fall apart: Friends, family, strangers, followed by the gentle breeze, soaring birds, the stars... and ultimately, yourself.
+::::{{A|VO chapter3 0 acheron 133.ogg}} '''Acheron:''' Everyone, and every face they remember, the joy and the heartaches, the vows sealed and those left hanging... all will inevitably march towards a predetermined ending. If you had grasped the journey's finale right from its inception...
+::::{{A|VO chapter3 0 acheron 134.ogg}} '''Acheron:''' {{Color|fire|nobold=1|I would ask: Would you still embark on this journey?}}
+::::{{DIcon|Arrow}} I would abandon it &mdash; the price is too dear.
+:::::{{A|VO chapter3 0 acheron 135.ogg}} '''Acheron:''' I know this is hard, you don't have to be hard-pressed to make a decision. As I have said... the answer is inconsequential.
+:::::{{A|VO chapter3 0 acheron 136.ogg}} '''Acheron:''' Hearing, touch, thought &mdash; through these, you gain emotions &mdash; cherish them. With emotions, we make choices. And so we return to the original question...
+:::::{{A|VO chapter3 0 acheron 137.ogg}} '''Acheron:''' {{Color|fire|nobold=1|I would ask... Do you still remember me?}}
+:::::{{DIcon|Arrow}} I seem to remember you from somewhere...
+:::::{{DIcon|Arrow}} No, this is the first time we've met.
+:::::{{A|VO chapter3 0 acheron 138.ogg}} '''Acheron:''' ...I understand.
+:::::{{A|VO chapter3 0 acheron 139.ogg}} '''Acheron:''' How interesting. For a split second, it felt like countless versions of you, alike yet distinct, gave entirely different responses.
+:::::{{A|VO chapter3 0 acheron 140.ogg}} '''Acheron:''' That was my final question, thank you. We all have our paths to walk, so we shall bid our farewells.
+:::::{{DIcon|Arrow}} Will we meet again?
+:::::{{DIcon|Arrow}} You haven't told me how to leave this place...
+:::::{{A|VO chapter3 0 acheron 141.ogg}} '''Acheron:''' The golden dream is getting restless. In the coming long night, I'm afraid you will face many tribulations and witness many tragedies. And finally... your sight will only see black and white.
+:::::{{tx}}
+::::{{DIcon|Arrow}} I would abandon it &mdash; I have already tasted the beauty of dreams.
+:::::{{A|VO chapter3 0 acheron 135.ogg}} '''Acheron:''' I know this is hard, you don't have to be hard-pressed to make a decision. As I have said... the answer is inconsequential.
+:::::{{A|VO chapter3 0 acheron 136.ogg}} '''Acheron:''' Hearing, touch, thought &mdash; through these, you gain emotions &mdash; cherish them. With emotions, we make choices. And so we return to the original question...
+:::::{{A|VO chapter3 0 acheron 137.ogg}} '''Acheron:''' {{Color|fire|nobold=1|I would ask... Do you still remember me?}}
+:::::{{DIcon|Arrow}} I seem to remember you from somewhere...
+:::::{{DIcon|Arrow}} No, this is the first time we've met.
+:::::{{A|VO chapter3 0 acheron 138.ogg}} '''Acheron:''' ...I understand.
+:::::{{A|VO chapter3 0 acheron 139.ogg}} '''Acheron:''' How interesting. For a split second, it felt like countless versions of you, alike yet distinct, gave entirely different responses.
+:::::{{A|VO chapter3 0 acheron 140.ogg}} '''Acheron:''' That was my final question, thank you. We all have our paths to walk, so we shall bid our farewells.
+:::::{{DIcon|Arrow}} Will we meet again?
+:::::{{DIcon|Arrow}} You haven't told me how to leave this place...
+:::::{{A|VO chapter3 0 acheron 141.ogg}} '''Acheron:''' The golden dream is getting restless. In the coming long night, I'm afraid you will face many tribulations and witness many tragedies. And finally... your sight will only see black and white.
+:::::{{tx}}
+::::{{DIcon|Arrow}} I would abandon it &mdash; Trailblazing was never my intent.
+:::::{{A|VO chapter3 0 acheron 135.ogg}} '''Acheron:''' I know this is hard, you don't have to be hard-pressed to make a decision. As I have said... the answer is inconsequential.
+:::::{{A|VO chapter3 0 acheron 136.ogg}} '''Acheron:''' Hearing, touch, thought &mdash; through these, you gain emotions &mdash; cherish them. With emotions, we make choices. And so we return to the original question...
+:::::{{A|VO chapter3 0 acheron 137.ogg}} '''Acheron:''' {{Color|fire|nobold=1|I would ask... Do you still remember me?}}
+:::::{{DIcon|Arrow}} I seem to remember you from somewhere...
+:::::{{DIcon|Arrow}} No, this is the first time we've met.
+:::::{{A|VO chapter3 0 acheron 138.ogg}} '''Acheron:''' ...I understand.
+:::::{{A|VO chapter3 0 acheron 139.ogg}} '''Acheron:''' How interesting. For a split second, it felt like countless versions of you, alike yet distinct, gave entirely different responses.
+:::::{{A|VO chapter3 0 acheron 140.ogg}} '''Acheron:''' That was my final question, thank you. We all have our paths to walk, so we shall bid our farewells.
+:::::{{DIcon|Arrow}} Will we meet again?
+:::::{{DIcon|Arrow}} You haven't told me how to leave this place...
+:::::{{A|VO chapter3 0 acheron 141.ogg}} '''Acheron:''' The golden dream is getting restless. In the coming long night, I'm afraid you will face many tribulations and witness many tragedies. And finally... your sight will only see black and white.
+:::::{{tx}}
+::::{{DIcon|Arrow}} I would blaze a trail without hesitation.
+:::::{{A|VO chapter3 0 acheron 135.ogg}} '''Acheron:''' I know this is hard, you don't have to be hard-pressed to make a decision. As I have said... the answer is inconsequential.
+:::::{{A|VO chapter3 0 acheron 136.ogg}} '''Acheron:''' Hearing, touch, thought &mdash; through these, you gain emotions &mdash; cherish them. With emotions, we make choices. And so we return to the original question...
+:::::{{A|VO chapter3 0 acheron 137.ogg}} '''Acheron:''' {{Color|fire|nobold=1|I would ask... Do you still remember me?}}
+:::::{{DIcon|Arrow}} I seem to remember you from somewhere...
+:::::{{DIcon|Arrow}} No, this is the first time we've met.
+:::::{{A|VO chapter3 0 acheron 138.ogg}} '''Acheron:''' ...I understand.
+:::::{{A|VO chapter3 0 acheron 139.ogg}} '''Acheron:''' How interesting. For a split second, it felt like countless versions of you, alike yet distinct, gave entirely different responses.
+:::::{{A|VO chapter3 0 acheron 140.ogg}} '''Acheron:''' That was my final question, thank you. We all have our paths to walk, so we shall bid our farewells.
+:::::{{DIcon|Arrow}} Will we meet again?
+:::::{{DIcon|Arrow}} You haven't told me how to leave this place...
+:::::{{A|VO chapter3 0 acheron 141.ogg}} '''Acheron:''' The golden dream is getting restless. In the coming long night, I'm afraid you will face many tribulations and witness many tragedies. And finally... your sight will only see black and white.
+:::::{{tx}}
+::{{DIcon|Arrow}} Probably not.
+:::{{A|VO chapter3 0 acheron 126 m.ogg}} {{A|VO chapter3 0 acheron 126 f.ogg}} '''Acheron:''' {{MC|m={{Color|#ff3a|You evoke memories of an old friend. In the haze of my recollections, he crossed blades with me, much like this surreal dreamscape where we stood close, yet forever out of reach.}}|f={{Color|#ff3a|You evoke memories of an old friend. In the haze of my recollections, she stood shoulder to shoulder with me, much like this surreal dreamscape where we stood close, yet forever out of reach.}}}}
+:::{{A|VO chapter3 0 acheron 127.ogg}} '''Acheron:''' May I ask you a few more questions? I... tend to forget things &mdash; which is why, rather than memories, I'm accustomed to using my emotions to capture what I normally wouldn't otherwise. The answer is inconsequential. Your spontaneous reaction is what matters.
+:::{{A|VO chapter3 0 acheron 128.ogg}} '''Acheron:''' For instance, when you awaken in your room, your lips speak several names. Are they your companions? Family? Enemies? You seem to have forged unbreakable bonds with many people and many incidents...
+:::{{A|VO chapter3 0 acheron 129.ogg}} '''Acheron:''' {{Color|fire|nobold=1|Might I ask if you fear losing these bonds?}}
+:::{{DIcon|Arrow}} I cannot bear such a fear.
+:::{{DIcon|Arrow}} If it means losing them, I would.
+:::{{DIcon|Arrow}} If it means that I will disappear, I would.
+:::{{DIcon|Arrow}} I feel no fear.
+:::{{DIcon|Arrow}} I don't know.
+:::{{A|VO chapter3 0 acheron 130.ogg}} '''Acheron:''' Mm... Then, if there was a vast dreamscape, so lifelike it's indistinguishable from reality. There, no one faces life's separations or deaths. Everyone attains their deserved happiness and lives joyfully ever after.
+:::{{A|VO chapter3 0 acheron 131.ogg}} '''Acheron:''' {{Color|fire|nobold=1|I would ask: Would you wish to stay?}}
+:::{{DIcon|Arrow}} I would, no matter the cost.
+::::{{A|VO chapter3 0 acheron 132.ogg}} '''Acheron:''' Now... imagine if this splendid dream were fated to fall apart: Friends, family, strangers, followed by the gentle breeze, soaring birds, the stars... and ultimately, yourself.
+::::{{A|VO chapter3 0 acheron 133.ogg}} '''Acheron:''' Everyone, and every face they remember, the joy and the heartaches, the vows sealed and those left hanging... all will inevitably march towards a predetermined ending. If you had grasped the journey's finale right from its inception...
+::::{{A|VO chapter3 0 acheron 134.ogg}} '''Acheron:''' {{Color|fire|nobold=1|I would ask: Would you still embark on this journey?}}
+::::{{DIcon|Arrow}} I would abandon it &mdash; the price is too dear.
+::::{{DIcon|Arrow}} I would abandon it &mdash; I have already tasted the beauty of dreams.
+::::{{DIcon|Arrow}} I would abandon it &mdash; Trailblazing was never my intent.
+::::{{DIcon|Arrow}} I would blaze a trail without hesitation.
+::::{{DIcon|Arrow}} I don't know.
+::::{{A|VO chapter3 0 acheron 135.ogg}} '''Acheron:''' I know this is hard, you don't have to be hard-pressed to make a decision. As I have said... the answer is inconsequential.
+::::{{A|VO chapter3 0 acheron 136.ogg}} '''Acheron:''' Hearing, touch, thought &mdash; through these, you gain emotions &mdash; cherish them. With emotions, we make choices. And so we return to the original question...
+::::{{A|VO chapter3 0 acheron 137.ogg}} '''Acheron:''' {{Color|fire|nobold=1|I would ask... Do you still remember me?}}
+::::{{DIcon|Arrow}} I seem to remember you from somewhere...
+::::{{DIcon|Arrow}} No, this is the first time we've met.
+::::{{A|VO chapter3 0 acheron 138.ogg}} '''Acheron:''' ...I understand.
+::::{{A|VO chapter3 0 acheron 139.ogg}} '''Acheron:''' How interesting. For a split second, it felt like countless versions of you, alike yet distinct, gave entirely different responses.
+::::{{A|VO chapter3 0 acheron 140.ogg}} '''Acheron:''' That was my final question, thank you. We all have our paths to walk, so we shall bid our farewells.
+::::{{DIcon|Arrow}} Will we meet again?
+::::{{DIcon|Arrow}} You haven't told me how to leave this place...
+::::{{A|VO chapter3 0 acheron 141.ogg}} '''Acheron:''' The golden dream is getting restless. In the coming long night, I'm afraid you will face many tribulations and witness many tragedies. And finally... your sight will only see black and white.
+::::{{tx}}
+:::{{DIcon|Arrow}} If I didn't have to pay any price, I would.
+::::{{A|VO chapter3 0 acheron 132.ogg}} '''Acheron:''' Now... imagine if this splendid dream were fated to fall apart: Friends, family, strangers, followed by the gentle breeze, soaring birds, the stars... and ultimately, yourself.
+::::{{A|VO chapter3 0 acheron 133.ogg}} '''Acheron:''' Everyone, and every face they remember, the joy and the heartaches, the vows sealed and those left hanging... all will inevitably march towards a predetermined ending. If you had grasped the journey's finale right from its inception...
+::::{{A|VO chapter3 0 acheron 134.ogg}} '''Acheron:''' {{Color|fire|nobold=1|I would ask: Would you still embark on this journey?}}
+::::{{DIcon|Arrow}} I would abandon it &mdash; the price is too dear.
+::::{{DIcon|Arrow}} I would abandon it &mdash; I have already tasted the beauty of dreams.
+::::{{DIcon|Arrow}} I would abandon it &mdash; Trailblazing was never my intent.
+::::{{DIcon|Arrow}} I would blaze a trail without hesitation.
+::::{{DIcon|Arrow}} I don't know.
+::::{{A|VO chapter3 0 acheron 135.ogg}} '''Acheron:''' I know this is hard, you don't have to be hard-pressed to make a decision. As I have said... the answer is inconsequential.
+::::{{A|VO chapter3 0 acheron 136.ogg}} '''Acheron:''' Hearing, touch, thought &mdash; through these, you gain emotions &mdash; cherish them. With emotions, we make choices. And so we return to the original question...
+::::{{A|VO chapter3 0 acheron 137.ogg}} '''Acheron:''' {{Color|fire|nobold=1|I would ask... Do you still remember me?}}
+::::{{DIcon|Arrow}} I seem to remember you from somewhere...
+::::{{DIcon|Arrow}} No, this is the first time we've met.
+::::{{A|VO chapter3 0 acheron 138.ogg}} '''Acheron:''' ...I understand.
+::::{{A|VO chapter3 0 acheron 139.ogg}} '''Acheron:''' How interesting. For a split second, it felt like countless versions of you, alike yet distinct, gave entirely different responses.
+::::{{A|VO chapter3 0 acheron 140.ogg}} '''Acheron:''' That was my final question, thank you. We all have our paths to walk, so we shall bid our farewells.
+::::{{DIcon|Arrow}} Will we meet again?
+::::{{DIcon|Arrow}} You haven't told me how to leave this place...
+::::{{A|VO chapter3 0 acheron 141.ogg}} '''Acheron:''' The golden dream is getting restless. In the coming long night, I'm afraid you will face many tribulations and witness many tragedies. And finally... your sight will only see black and white.
+::::{{tx}}
+:::{{DIcon|Arrow}} That depends on the price I'd have to pay.
+::::{{A|VO chapter3 0 acheron 132.ogg}} '''Acheron:''' Now... imagine if this splendid dream were fated to fall apart: Friends, family, strangers, followed by the gentle breeze, soaring birds, the stars... and ultimately, yourself.
+::::{{A|VO chapter3 0 acheron 133.ogg}} '''Acheron:''' Everyone, and every face they remember, the joy and the heartaches, the vows sealed and those left hanging... all will inevitably march towards a predetermined ending. If you had grasped the journey's finale right from its inception...
+::::{{A|VO chapter3 0 acheron 134.ogg}} '''Acheron:''' {{Color|fire|nobold=1|I would ask: Would you still embark on this journey?}}
+::::{{DIcon|Arrow}} I would abandon it &mdash; the price is too dear.
+::::{{DIcon|Arrow}} I would abandon it &mdash; I have already tasted the beauty of dreams.
+::::{{DIcon|Arrow}} I would abandon it &mdash; Trailblazing was never my intent.
+::::{{DIcon|Arrow}} I would blaze a trail without hesitation.
+::::{{DIcon|Arrow}} I don't know.
+::::{{A|VO chapter3 0 acheron 135.ogg}} '''Acheron:''' I know this is hard, you don't have to be hard-pressed to make a decision. As I have said... the answer is inconsequential.
+::::{{A|VO chapter3 0 acheron 136.ogg}} '''Acheron:''' Hearing, touch, thought &mdash; through these, you gain emotions &mdash; cherish them. With emotions, we make choices. And so we return to the original question...
+::::{{A|VO chapter3 0 acheron 137.ogg}} '''Acheron:''' {{Color|fire|nobold=1|I would ask... Do you still remember me?}}
+::::{{DIcon|Arrow}} I seem to remember you from somewhere...
+::::{{DIcon|Arrow}} No, this is the first time we've met.
+::::{{A|VO chapter3 0 acheron 138.ogg}} '''Acheron:''' ...I understand.
+::::{{A|VO chapter3 0 acheron 139.ogg}} '''Acheron:''' How interesting. For a split second, it felt like countless versions of you, alike yet distinct, gave entirely different responses.
+::::{{A|VO chapter3 0 acheron 140.ogg}} '''Acheron:''' That was my final question, thank you. We all have our paths to walk, so we shall bid our farewells.
+::::{{DIcon|Arrow}} Will we meet again?
+::::{{DIcon|Arrow}} You haven't told me how to leave this place...
+::::{{A|VO chapter3 0 acheron 141.ogg}} '''Acheron:''' The golden dream is getting restless. In the coming long night, I'm afraid you will face many tribulations and witness many tragedies. And finally... your sight will only see black and white.
+::::{{tx}}
+:::{{DIcon|Arrow}} I would never want to live in a dream.
+::::{{A|VO chapter3 0 acheron 132.ogg}} '''Acheron:''' Now... imagine if this splendid dream were fated to fall apart: Friends, family, strangers, followed by the gentle breeze, soaring birds, the stars... and ultimately, yourself.
+::::{{A|VO chapter3 0 acheron 133.ogg}} '''Acheron:''' Everyone, and every face they remember, the joy and the heartaches, the vows sealed and those left hanging... all will inevitably march towards a predetermined ending. If you had grasped the journey's finale right from its inception...
+::::{{A|VO chapter3 0 acheron 134.ogg}} '''Acheron:''' {{Color|fire|nobold=1|I would ask: Would you still embark on this journey?}}
+::::{{DIcon|Arrow}} I would abandon it &mdash; the price is too dear.
+::::{{DIcon|Arrow}} I would abandon it &mdash; I have already tasted the beauty of dreams.
+::::{{DIcon|Arrow}} I would abandon it &mdash; Trailblazing was never my intent.
+::::{{DIcon|Arrow}} I would blaze a trail without hesitation.
+::::{{DIcon|Arrow}} I don't know.
+::::{{A|VO chapter3 0 acheron 135.ogg}} '''Acheron:''' I know this is hard, you don't have to be hard-pressed to make a decision. As I have said... the answer is inconsequential.
+::::{{A|VO chapter3 0 acheron 136.ogg}} '''Acheron:''' Hearing, touch, thought &mdash; through these, you gain emotions &mdash; cherish them. With emotions, we make choices. And so we return to the original question...
+::::{{A|VO chapter3 0 acheron 137.ogg}} '''Acheron:''' {{Color|fire|nobold=1|I would ask... Do you still remember me?}}
+::::{{DIcon|Arrow}} I seem to remember you from somewhere...
+::::{{DIcon|Arrow}} No, this is the first time we've met.
+::::{{A|VO chapter3 0 acheron 138.ogg}} '''Acheron:''' ...I understand.
+::::{{A|VO chapter3 0 acheron 139.ogg}} '''Acheron:''' How interesting. For a split second, it felt like countless versions of you, alike yet distinct, gave entirely different responses.
+::::{{A|VO chapter3 0 acheron 140.ogg}} '''Acheron:''' That was my final question, thank you. We all have our paths to walk, so we shall bid our farewells.
+::::{{DIcon|Arrow}} Will we meet again?
+::::{{DIcon|Arrow}} You haven't told me how to leave this place...
+::::{{A|VO chapter3 0 acheron 141.ogg}} '''Acheron:''' The golden dream is getting restless. In the coming long night, I'm afraid you will face many tribulations and witness many tragedies. And finally... your sight will only see black and white.
+::::{{tx}}
+:::{{DIcon|Arrow}} I don't know.
+::::{{A|VO chapter3 0 acheron 132.ogg}} '''Acheron:''' Now... imagine if this splendid dream were fated to fall apart: Friends, family, strangers, followed by the gentle breeze, soaring birds, the stars... and ultimately, yourself.
+::::{{A|VO chapter3 0 acheron 133.ogg}} '''Acheron:''' Everyone, and every face they remember, the joy and the heartaches, the vows sealed and those left hanging... all will inevitably march towards a predetermined ending. If you had grasped the journey's finale right from its inception...
+::::{{A|VO chapter3 0 acheron 134.ogg}} '''Acheron:''' {{Color|fire|nobold=1|I would ask: Would you still embark on this journey?}}
+::::{{DIcon|Arrow}} I would abandon it &mdash; the price is too dear.
+:::::{{A|VO chapter3 0 acheron 135.ogg}} '''Acheron:''' I know this is hard, you don't have to be hard-pressed to make a decision. As I have said... the answer is inconsequential.
+:::::{{A|VO chapter3 0 acheron 136.ogg}} '''Acheron:''' Hearing, touch, thought &mdash; through these, you gain emotions &mdash; cherish them. With emotions, we make choices. And so we return to the original question...
+:::::{{A|VO chapter3 0 acheron 137.ogg}} '''Acheron:''' {{Color|fire|nobold=1|I would ask... Do you still remember me?}}
+:::::{{DIcon|Arrow}} I seem to remember you from somewhere...
+:::::{{DIcon|Arrow}} No, this is the first time we've met.
+:::::{{A|VO chapter3 0 acheron 138.ogg}} '''Acheron:''' ...I understand.
+:::::{{A|VO chapter3 0 acheron 139.ogg}} '''Acheron:''' How interesting. For a split second, it felt like countless versions of you, alike yet distinct, gave entirely different responses.
+:::::{{A|VO chapter3 0 acheron 140.ogg}} '''Acheron:''' That was my final question, thank you. We all have our paths to walk, so we shall bid our farewells.
+:::::{{DIcon|Arrow}} Will we meet again?
+:::::{{DIcon|Arrow}} You haven't told me how to leave this place...
+:::::{{A|VO chapter3 0 acheron 141.ogg}} '''Acheron:''' The golden dream is getting restless. In the coming long night, I'm afraid you will face many tribulations and witness many tragedies. And finally... your sight will only see black and white.
+:::::{{tx}}
+::::{{DIcon|Arrow}} I would abandon it &mdash; I have already tasted the beauty of dreams.
+:::::{{A|VO chapter3 0 acheron 135.ogg}} '''Acheron:''' I know this is hard, you don't have to be hard-pressed to make a decision. As I have said... the answer is inconsequential.
+:::::{{A|VO chapter3 0 acheron 136.ogg}} '''Acheron:''' Hearing, touch, thought &mdash; through these, you gain emotions &mdash; cherish them. With emotions, we make choices. And so we return to the original question...
+:::::{{A|VO chapter3 0 acheron 137.ogg}} '''Acheron:''' {{Color|fire|nobold=1|I would ask... Do you still remember me?}}
+:::::{{DIcon|Arrow}} I seem to remember you from somewhere...
+:::::{{DIcon|Arrow}} No, this is the first time we've met.
+:::::{{A|VO chapter3 0 acheron 138.ogg}} '''Acheron:''' ...I understand.
+:::::{{A|VO chapter3 0 acheron 139.ogg}} '''Acheron:''' How interesting. For a split second, it felt like countless versions of you, alike yet distinct, gave entirely different responses.
+:::::{{A|VO chapter3 0 acheron 140.ogg}} '''Acheron:''' That was my final question, thank you. We all have our paths to walk, so we shall bid our farewells.
+:::::{{DIcon|Arrow}} Will we meet again?
+:::::{{DIcon|Arrow}} You haven't told me how to leave this place...
+:::::{{A|VO chapter3 0 acheron 141.ogg}} '''Acheron:''' The golden dream is getting restless. In the coming long night, I'm afraid you will face many tribulations and witness many tragedies. And finally... your sight will only see black and white.
+:::::{{tx}}
+::::{{DIcon|Arrow}} I would abandon it &mdash; Trailblazing was never my intent.
+:::::{{A|VO chapter3 0 acheron 135.ogg}} '''Acheron:''' I know this is hard, you don't have to be hard-pressed to make a decision. As I have said... the answer is inconsequential.
+:::::{{A|VO chapter3 0 acheron 136.ogg}} '''Acheron:''' Hearing, touch, thought &mdash; through these, you gain emotions &mdash; cherish them. With emotions, we make choices. And so we return to the original question...
+:::::{{A|VO chapter3 0 acheron 137.ogg}} '''Acheron:''' {{Color|fire|nobold=1|I would ask... Do you still remember me?}}
+:::::{{DIcon|Arrow}} I seem to remember you from somewhere...
+:::::{{DIcon|Arrow}} No, this is the first time we've met.
+:::::{{A|VO chapter3 0 acheron 138.ogg}} '''Acheron:''' ...I understand.
+:::::{{A|VO chapter3 0 acheron 139.ogg}} '''Acheron:''' How interesting. For a split second, it felt like countless versions of you, alike yet distinct, gave entirely different responses.
+:::::{{A|VO chapter3 0 acheron 140.ogg}} '''Acheron:''' That was my final question, thank you. We all have our paths to walk, so we shall bid our farewells.
+:::::{{DIcon|Arrow}} Will we meet again?
+:::::{{DIcon|Arrow}} You haven't told me how to leave this place...
+:::::{{A|VO chapter3 0 acheron 141.ogg}} '''Acheron:''' The golden dream is getting restless. In the coming long night, I'm afraid you will face many tribulations and witness many tragedies. And finally... your sight will only see black and white.
+:::::{{tx}}
+::::{{DIcon|Arrow}} I would blaze a trail without hesitation.
+:::::{{A|VO chapter3 0 acheron 135.ogg}} '''Acheron:''' I know this is hard, you don't have to be hard-pressed to make a decision. As I have said... the answer is inconsequential.
+:::::{{A|VO chapter3 0 acheron 136.ogg}} '''Acheron:''' Hearing, touch, thought &mdash; through these, you gain emotions &mdash; cherish them. With emotions, we make choices. And so we return to the original question...
+:::::{{A|VO chapter3 0 acheron 137.ogg}} '''Acheron:''' {{Color|fire|nobold=1|I would ask... Do you still remember me?}}
+:::::{{DIcon|Arrow}} I seem to remember you from somewhere...
+:::::{{DIcon|Arrow}} No, this is the first time we've met.
+:::::{{A|VO chapter3 0 acheron 138.ogg}} '''Acheron:''' ...I understand.
+:::::{{A|VO chapter3 0 acheron 139.ogg}} '''Acheron:''' How interesting. For a split second, it felt like countless versions of you, alike yet distinct, gave entirely different responses.
+:::::{{A|VO chapter3 0 acheron 140.ogg}} '''Acheron:''' That was my final question, thank you. We all have our paths to walk, so we shall bid our farewells.
+:::::{{DIcon|Arrow}} Will we meet again?
+:::::{{DIcon|Arrow}} You haven't told me how to leave this place...
+:::::{{A|VO chapter3 0 acheron 141.ogg}} '''Acheron:''' The golden dream is getting restless. In the coming long night, I'm afraid you will face many tribulations and witness many tragedies. And finally... your sight will only see black and white.
+:::::{{tx}}
+::{{DIcon|Arrow}} I don't know.
+:::{{A|VO chapter3 0 acheron 126 m.ogg}} {{A|VO chapter3 0 acheron 126 f.ogg}} '''Acheron:''' {{MC|m={{Color|#ff3a|You evoke memories of an old friend. In the haze of my recollections, he crossed blades with me, much like this surreal dreamscape where we stood close, yet forever out of reach.}}|f={{Color|#ff3a|You evoke memories of an old friend. In the haze of my recollections, she stood shoulder to shoulder with me, much like this surreal dreamscape where we stood close, yet forever out of reach.}}}}
+:::{{A|VO chapter3 0 acheron 127.ogg}} '''Acheron:''' May I ask you a few more questions? I... tend to forget things &mdash; which is why, rather than memories, I'm accustomed to using my emotions to capture what I normally wouldn't otherwise. The answer is inconsequential. Your spontaneous reaction is what matters.
+:::{{A|VO chapter3 0 acheron 128.ogg}} '''Acheron:''' For instance, when you awaken in your room, your lips speak several names. Are they your companions? Family? Enemies? You seem to have forged unbreakable bonds with many people and many incidents...
+:::{{A|VO chapter3 0 acheron 129.ogg}} '''Acheron:''' {{Color|fire|nobold=1|Might I ask if you fear losing these bonds?}}
+:::{{DIcon|Arrow}} I cannot bear such a fear.
+::::{{A|VO chapter3 0 acheron 130.ogg}} '''Acheron:''' Mm... Then, if there was a vast dreamscape, so lifelike it's indistinguishable from reality. There, no one faces life's separations or deaths. Everyone attains their deserved happiness and lives joyfully ever after.
+::::{{A|VO chapter3 0 acheron 131.ogg}} '''Acheron:''' {{Color|fire|nobold=1|I would ask: Would you wish to stay?}}
+::::{{DIcon|Arrow}} I would, no matter the cost.
+:::::{{A|VO chapter3 0 acheron 132.ogg}} '''Acheron:''' Now... imagine if this splendid dream were fated to fall apart: Friends, family, strangers, followed by the gentle breeze, soaring birds, the stars... and ultimately, yourself.
+:::::{{A|VO chapter3 0 acheron 133.ogg}} '''Acheron:''' Everyone, and every face they remember, the joy and the heartaches, the vows sealed and those left hanging... all will inevitably march towards a predetermined ending. If you had grasped the journey's finale right from its inception...
+:::::{{A|VO chapter3 0 acheron 134.ogg}} '''Acheron:''' {{Color|fire|nobold=1|I would ask: Would you still embark on this journey?}}
+:::::{{DIcon|Arrow}} I would abandon it &mdash; the price is too dear.
+::::::{{A|VO chapter3 0 acheron 135.ogg}} '''Acheron:''' I know this is hard, you don't have to be hard-pressed to make a decision. As I have said... the answer is inconsequential.
+::::::{{A|VO chapter3 0 acheron 136.ogg}} '''Acheron:''' Hearing, touch, thought &mdash; through these, you gain emotions &mdash; cherish them. With emotions, we make choices. And so we return to the original question...
+::::::{{A|VO chapter3 0 acheron 137.ogg}} '''Acheron:''' {{Color|fire|nobold=1|I would ask... Do you still remember me?}}
+::::::{{DIcon|Arrow}} I seem to remember you from somewhere...
+::::::{{DIcon|Arrow}} No, this is the first time we've met.
+::::::{{A|VO chapter3 0 acheron 138.ogg}} '''Acheron:''' ...I understand.
+::::::{{A|VO chapter3 0 acheron 139.ogg}} '''Acheron:''' How interesting. For a split second, it felt like countless versions of you, alike yet distinct, gave entirely different responses.
+::::::{{A|VO chapter3 0 acheron 140.ogg}} '''Acheron:''' That was my final question, thank you. We all have our paths to walk, so we shall bid our farewells.
+::::::{{DIcon|Arrow}} Will we meet again?
+::::::{{DIcon|Arrow}} You haven't told me how to leave this place...
+::::::{{A|VO chapter3 0 acheron 141.ogg}} '''Acheron:''' The golden dream is getting restless. In the coming long night, I'm afraid you will face many tribulations and witness many tragedies. And finally... your sight will only see black and white.
+::::::{{tx}}
+:::::{{DIcon|Arrow}} I would abandon it &mdash; I have already tasted the beauty of dreams.
+::::::{{A|VO chapter3 0 acheron 135.ogg}} '''Acheron:''' I know this is hard, you don't have to be hard-pressed to make a decision. As I have said... the answer is inconsequential.
+::::::{{A|VO chapter3 0 acheron 136.ogg}} '''Acheron:''' Hearing, touch, thought &mdash; through these, you gain emotions &mdash; cherish them. With emotions, we make choices. And so we return to the original question...
+::::::{{A|VO chapter3 0 acheron 137.ogg}} '''Acheron:''' {{Color|fire|nobold=1|I would ask... Do you still remember me?}}
+::::::{{DIcon|Arrow}} I seem to remember you from somewhere...
+::::::{{DIcon|Arrow}} No, this is the first time we've met.
+::::::{{A|VO chapter3 0 acheron 138.ogg}} '''Acheron:''' ...I understand.
+::::::{{A|VO chapter3 0 acheron 139.ogg}} '''Acheron:''' How interesting. For a split second, it felt like countless versions of you, alike yet distinct, gave entirely different responses.
+::::::{{A|VO chapter3 0 acheron 140.ogg}} '''Acheron:''' That was my final question, thank you. We all have our paths to walk, so we shall bid our farewells.
+::::::{{DIcon|Arrow}} Will we meet again?
+::::::{{DIcon|Arrow}} You haven't told me how to leave this place...
+::::::{{A|VO chapter3 0 acheron 141.ogg}} '''Acheron:''' The golden dream is getting restless. In the coming long night, I'm afraid you will face many tribulations and witness many tragedies. And finally... your sight will only see black and white.
+::::::{{tx}}
+:::::{{DIcon|Arrow}} I would abandon it &mdash; Trailblazing was never my intent.
+::::::{{A|VO chapter3 0 acheron 135.ogg}} '''Acheron:''' I know this is hard, you don't have to be hard-pressed to make a decision. As I have said... the answer is inconsequential.
+::::::{{A|VO chapter3 0 acheron 136.ogg}} '''Acheron:''' Hearing, touch, thought &mdash; through these, you gain emotions &mdash; cherish them. With emotions, we make choices. And so we return to the original question...
+::::::{{A|VO chapter3 0 acheron 137.ogg}} '''Acheron:''' {{Color|fire|nobold=1|I would ask... Do you still remember me?}}
+::::::{{DIcon|Arrow}} I seem to remember you from somewhere...
+::::::{{DIcon|Arrow}} No, this is the first time we've met.
+::::::{{A|VO chapter3 0 acheron 138.ogg}} '''Acheron:''' ...I understand.
+::::::{{A|VO chapter3 0 acheron 139.ogg}} '''Acheron:''' How interesting. For a split second, it felt like countless versions of you, alike yet distinct, gave entirely different responses.
+::::::{{A|VO chapter3 0 acheron 140.ogg}} '''Acheron:''' That was my final question, thank you. We all have our paths to walk, so we shall bid our farewells.
+::::::{{DIcon|Arrow}} Will we meet again?
+::::::{{DIcon|Arrow}} You haven't told me how to leave this place...
+::::::{{A|VO chapter3 0 acheron 141.ogg}} '''Acheron:''' The golden dream is getting restless. In the coming long night, I'm afraid you will face many tribulations and witness many tragedies. And finally... your sight will only see black and white.
+::::::{{tx}}
+:::::{{DIcon|Arrow}} I would blaze a trail without hesitation.
+::::::{{A|VO chapter3 0 acheron 135.ogg}} '''Acheron:''' I know this is hard, you don't have to be hard-pressed to make a decision. As I have said... the answer is inconsequential.
+::::::{{A|VO chapter3 0 acheron 136.ogg}} '''Acheron:''' Hearing, touch, thought &mdash; through these, you gain emotions &mdash; cherish them. With emotions, we make choices. And so we return to the original question...
+::::::{{A|VO chapter3 0 acheron 137.ogg}} '''Acheron:''' {{Color|fire|nobold=1|I would ask... Do you still remember me?}}
+::::::{{DIcon|Arrow}} I seem to remember you from somewhere...
+::::::{{DIcon|Arrow}} No, this is the first time we've met.
+::::::{{A|VO chapter3 0 acheron 138.ogg}} '''Acheron:''' ...I understand.
+::::::{{A|VO chapter3 0 acheron 139.ogg}} '''Acheron:''' How interesting. For a split second, it felt like countless versions of you, alike yet distinct, gave entirely different responses.
+::::::{{A|VO chapter3 0 acheron 140.ogg}} '''Acheron:''' That was my final question, thank you. We all have our paths to walk, so we shall bid our farewells.
+::::::{{DIcon|Arrow}} Will we meet again?
+::::::{{DIcon|Arrow}} You haven't told me how to leave this place...
+::::::{{A|VO chapter3 0 acheron 141.ogg}} '''Acheron:''' The golden dream is getting restless. In the coming long night, I'm afraid you will face many tribulations and witness many tragedies. And finally... your sight will only see black and white.
+::::::{{tx}}
+::::;(Return to previous option selection)
+::::{{DIcon|Arrow}} If I didn't have to pay any price, I would.
+:::::{{A|VO chapter3 0 acheron 132.ogg}} '''Acheron:''' Now... imagine if this splendid dream were fated to fall apart: Friends, family, strangers, followed by the gentle breeze, soaring birds, the stars... and ultimately, yourself.
+:::::{{A|VO chapter3 0 acheron 133.ogg}} '''Acheron:''' Everyone, and every face they remember, the joy and the heartaches, the vows sealed and those left hanging... all will inevitably march towards a predetermined ending. If you had grasped the journey's finale right from its inception...
+:::::{{A|VO chapter3 0 acheron 134.ogg}} '''Acheron:''' {{Color|fire|nobold=1|I would ask: Would you still embark on this journey?}}
+:::::{{DIcon|Arrow}} I would abandon it &mdash; the price is too dear.
+::::::{{A|VO chapter3 0 acheron 135.ogg}} '''Acheron:''' I know this is hard, you don't have to be hard-pressed to make a decision. As I have said... the answer is inconsequential.
+::::::{{A|VO chapter3 0 acheron 136.ogg}} '''Acheron:''' Hearing, touch, thought &mdash; through these, you gain emotions &mdash; cherish them. With emotions, we make choices. And so we return to the original question...
+::::::{{A|VO chapter3 0 acheron 137.ogg}} '''Acheron:''' {{Color|fire|nobold=1|I would ask... Do you still remember me?}}
+::::::{{DIcon|Arrow}} I seem to remember you from somewhere...
+::::::{{DIcon|Arrow}} No, this is the first time we've met.
+::::::{{A|VO chapter3 0 acheron 138.ogg}} '''Acheron:''' ...I understand.
+::::::{{A|VO chapter3 0 acheron 139.ogg}} '''Acheron:''' How interesting. For a split second, it felt like countless versions of you, alike yet distinct, gave entirely different responses.
+::::::{{A|VO chapter3 0 acheron 140.ogg}} '''Acheron:''' That was my final question, thank you. We all have our paths to walk, so we shall bid our farewells.
+::::::{{DIcon|Arrow}} Will we meet again?
+::::::{{DIcon|Arrow}} You haven't told me how to leave this place...
+::::::{{A|VO chapter3 0 acheron 141.ogg}} '''Acheron:''' The golden dream is getting restless. In the coming long night, I'm afraid you will face many tribulations and witness many tragedies. And finally... your sight will only see black and white.
+::::::{{tx}}
+:::::{{DIcon|Arrow}} I would abandon it &mdash; I have already tasted the beauty of dreams.
+::::::{{A|VO chapter3 0 acheron 135.ogg}} '''Acheron:''' I know this is hard, you don't have to be hard-pressed to make a decision. As I have said... the answer is inconsequential.
+::::::{{A|VO chapter3 0 acheron 136.ogg}} '''Acheron:''' Hearing, touch, thought &mdash; through these, you gain emotions &mdash; cherish them. With emotions, we make choices. And so we return to the original question...
+::::::{{A|VO chapter3 0 acheron 137.ogg}} '''Acheron:''' {{Color|fire|nobold=1|I would ask... Do you still remember me?}}
+::::::{{DIcon|Arrow}} I seem to remember you from somewhere...
+::::::{{DIcon|Arrow}} No, this is the first time we've met.
+::::::{{A|VO chapter3 0 acheron 138.ogg}} '''Acheron:''' ...I understand.
+::::::{{A|VO chapter3 0 acheron 139.ogg}} '''Acheron:''' How interesting. For a split second, it felt like countless versions of you, alike yet distinct, gave entirely different responses.
+::::::{{A|VO chapter3 0 acheron 140.ogg}} '''Acheron:''' That was my final question, thank you. We all have our paths to walk, so we shall bid our farewells.
+::::::{{DIcon|Arrow}} Will we meet again?
+::::::{{DIcon|Arrow}} You haven't told me how to leave this place...
+::::::{{A|VO chapter3 0 acheron 141.ogg}} '''Acheron:''' The golden dream is getting restless. In the coming long night, I'm afraid you will face many tribulations and witness many tragedies. And finally... your sight will only see black and white.
+::::::{{tx}}
+:::::{{DIcon|Arrow}} I would abandon it &mdash; Trailblazing was never my intent.
+::::::{{A|VO chapter3 0 acheron 135.ogg}} '''Acheron:''' I know this is hard, you don't have to be hard-pressed to make a decision. As I have said... the answer is inconsequential.
+::::::{{A|VO chapter3 0 acheron 136.ogg}} '''Acheron:''' Hearing, touch, thought &mdash; through these, you gain emotions &mdash; cherish them. With emotions, we make choices. And so we return to the original question...
+::::::{{A|VO chapter3 0 acheron 137.ogg}} '''Acheron:''' {{Color|fire|nobold=1|I would ask... Do you still remember me?}}
+::::::{{DIcon|Arrow}} I seem to remember you from somewhere...
+::::::{{DIcon|Arrow}} No, this is the first time we've met.
+::::::{{A|VO chapter3 0 acheron 138.ogg}} '''Acheron:''' ...I understand.
+::::::{{A|VO chapter3 0 acheron 139.ogg}} '''Acheron:''' How interesting. For a split second, it felt like countless versions of you, alike yet distinct, gave entirely different responses.
+::::::{{A|VO chapter3 0 acheron 140.ogg}} '''Acheron:''' That was my final question, thank you. We all have our paths to walk, so we shall bid our farewells.
+::::::{{DIcon|Arrow}} Will we meet again?
+::::::{{DIcon|Arrow}} You haven't told me how to leave this place...
+::::::{{A|VO chapter3 0 acheron 141.ogg}} '''Acheron:''' The golden dream is getting restless. In the coming long night, I'm afraid you will face many tribulations and witness many tragedies. And finally... your sight will only see black and white.
+::::::{{tx}}
+:::::{{DIcon|Arrow}} I would blaze a trail without hesitation.
+::::::{{A|VO chapter3 0 acheron 135.ogg}} '''Acheron:''' I know this is hard, you don't have to be hard-pressed to make a decision. As I have said... the answer is inconsequential.
+::::::{{A|VO chapter3 0 acheron 136.ogg}} '''Acheron:''' Hearing, touch, thought &mdash; through these, you gain emotions &mdash; cherish them. With emotions, we make choices. And so we return to the original question...
+::::::{{A|VO chapter3 0 acheron 137.ogg}} '''Acheron:''' {{Color|fire|nobold=1|I would ask... Do you still remember me?}}
+::::::{{DIcon|Arrow}} I seem to remember you from somewhere...
+::::::{{DIcon|Arrow}} No, this is the first time we've met.
+::::::{{A|VO chapter3 0 acheron 138.ogg}} '''Acheron:''' ...I understand.
+::::::{{A|VO chapter3 0 acheron 139.ogg}} '''Acheron:''' How interesting. For a split second, it felt like countless versions of you, alike yet distinct, gave entirely different responses.
+::::::{{A|VO chapter3 0 acheron 140.ogg}} '''Acheron:''' That was my final question, thank you. We all have our paths to walk, so we shall bid our farewells.
+::::::{{DIcon|Arrow}} Will we meet again?
+::::::{{DIcon|Arrow}} You haven't told me how to leave this place...
+::::::{{A|VO chapter3 0 acheron 141.ogg}} '''Acheron:''' The golden dream is getting restless. In the coming long night, I'm afraid you will face many tribulations and witness many tragedies. And finally... your sight will only see black and white.
+::::::{{tx}}
+::::;(Return to previous option selection)
+::::{{DIcon|Arrow}} That depends on the price I'd have to pay.
+:::::{{A|VO chapter3 0 acheron 132.ogg}} '''Acheron:''' Now... imagine if this splendid dream were fated to fall apart: Friends, family, strangers, followed by the gentle breeze, soaring birds, the stars... and ultimately, yourself.
+:::::{{A|VO chapter3 0 acheron 133.ogg}} '''Acheron:''' Everyone, and every face they remember, the joy and the heartaches, the vows sealed and those left hanging... all will inevitably march towards a predetermined ending. If you had grasped the journey's finale right from its inception...
+:::::{{A|VO chapter3 0 acheron 134.ogg}} '''Acheron:''' {{Color|fire|nobold=1|I would ask: Would you still embark on this journey?}}
+:::::{{DIcon|Arrow}} I would abandon it &mdash; the price is too dear.
+::::::{{A|VO chapter3 0 acheron 135.ogg}} '''Acheron:''' I know this is hard, you don't have to be hard-pressed to make a decision. As I have said... the answer is inconsequential.
+::::::{{A|VO chapter3 0 acheron 136.ogg}} '''Acheron:''' Hearing, touch, thought &mdash; through these, you gain emotions &mdash; cherish them. With emotions, we make choices. And so we return to the original question...
+::::::{{A|VO chapter3 0 acheron 137.ogg}} '''Acheron:''' {{Color|fire|nobold=1|I would ask... Do you still remember me?}}
+::::::{{DIcon|Arrow}} I seem to remember you from somewhere...
+::::::{{DIcon|Arrow}} No, this is the first time we've met.
+::::::{{A|VO chapter3 0 acheron 138.ogg}} '''Acheron:''' ...I understand.
+::::::{{A|VO chapter3 0 acheron 139.ogg}} '''Acheron:''' How interesting. For a split second, it felt like countless versions of you, alike yet distinct, gave entirely different responses.
+::::::{{A|VO chapter3 0 acheron 140.ogg}} '''Acheron:''' That was my final question, thank you. We all have our paths to walk, so we shall bid our farewells.
+::::::{{DIcon|Arrow}} Will we meet again?
+::::::{{DIcon|Arrow}} You haven't told me how to leave this place...
+::::::{{A|VO chapter3 0 acheron 141.ogg}} '''Acheron:''' The golden dream is getting restless. In the coming long night, I'm afraid you will face many tribulations and witness many tragedies. And finally... your sight will only see black and white.
+::::::{{tx}}
+:::::{{DIcon|Arrow}} I would abandon it &mdash; I have already tasted the beauty of dreams.
+::::::{{A|VO chapter3 0 acheron 135.ogg}} '''Acheron:''' I know this is hard, you don't have to be hard-pressed to make a decision. As I have said... the answer is inconsequential.
+::::::{{A|VO chapter3 0 acheron 136.ogg}} '''Acheron:''' Hearing, touch, thought &mdash; through these, you gain emotions &mdash; cherish them. With emotions, we make choices. And so we return to the original question...
+::::::{{A|VO chapter3 0 acheron 137.ogg}} '''Acheron:''' {{Color|fire|nobold=1|I would ask... Do you still remember me?}}
+::::::{{DIcon|Arrow}} I seem to remember you from somewhere...
+::::::{{DIcon|Arrow}} No, this is the first time we've met.
+::::::{{A|VO chapter3 0 acheron 138.ogg}} '''Acheron:''' ...I understand.
+::::::{{A|VO chapter3 0 acheron 139.ogg}} '''Acheron:''' How interesting. For a split second, it felt like countless versions of you, alike yet distinct, gave entirely different responses.
+::::::{{A|VO chapter3 0 acheron 140.ogg}} '''Acheron:''' That was my final question, thank you. We all have our paths to walk, so we shall bid our farewells.
+::::::{{DIcon|Arrow}} Will we meet again?
+::::::{{DIcon|Arrow}} You haven't told me how to leave this place...
+::::::{{A|VO chapter3 0 acheron 141.ogg}} '''Acheron:''' The golden dream is getting restless. In the coming long night, I'm afraid you will face many tribulations and witness many tragedies. And finally... your sight will only see black and white.
+::::::{{tx}}
+:::::{{DIcon|Arrow}} I would abandon it &mdash; Trailblazing was never my intent.
+::::::{{A|VO chapter3 0 acheron 135.ogg}} '''Acheron:''' I know this is hard, you don't have to be hard-pressed to make a decision. As I have said... the answer is inconsequential.
+::::::{{A|VO chapter3 0 acheron 136.ogg}} '''Acheron:''' Hearing, touch, thought &mdash; through these, you gain emotions &mdash; cherish them. With emotions, we make choices. And so we return to the original question...
+::::::{{A|VO chapter3 0 acheron 137.ogg}} '''Acheron:''' {{Color|fire|nobold=1|I would ask... Do you still remember me?}}
+::::::{{DIcon|Arrow}} I seem to remember you from somewhere...
+::::::{{DIcon|Arrow}} No, this is the first time we've met.
+::::::{{A|VO chapter3 0 acheron 138.ogg}} '''Acheron:''' ...I understand.
+::::::{{A|VO chapter3 0 acheron 139.ogg}} '''Acheron:''' How interesting. For a split second, it felt like countless versions of you, alike yet distinct, gave entirely different responses.
+::::::{{A|VO chapter3 0 acheron 140.ogg}} '''Acheron:''' That was my final question, thank you. We all have our paths to walk, so we shall bid our farewells.
+::::::{{DIcon|Arrow}} Will we meet again?
+::::::{{DIcon|Arrow}} You haven't told me how to leave this place...
+::::::{{A|VO chapter3 0 acheron 141.ogg}} '''Acheron:''' The golden dream is getting restless. In the coming long night, I'm afraid you will face many tribulations and witness many tragedies. And finally... your sight will only see black and white.
+::::::{{tx}}
+:::::{{DIcon|Arrow}} I would blaze a trail without hesitation.
+::::::{{A|VO chapter3 0 acheron 135.ogg}} '''Acheron:''' I know this is hard, you don't have to be hard-pressed to make a decision. As I have said... the answer is inconsequential.
+::::::{{A|VO chapter3 0 acheron 136.ogg}} '''Acheron:''' Hearing, touch, thought &mdash; through these, you gain emotions &mdash; cherish them. With emotions, we make choices. And so we return to the original question...
+::::::{{A|VO chapter3 0 acheron 137.ogg}} '''Acheron:''' {{Color|fire|nobold=1|I would ask... Do you still remember me?}}
+::::::{{DIcon|Arrow}} I seem to remember you from somewhere...
+::::::{{DIcon|Arrow}} No, this is the first time we've met.
+::::::{{A|VO chapter3 0 acheron 138.ogg}} '''Acheron:''' ...I understand.
+::::::{{A|VO chapter3 0 acheron 139.ogg}} '''Acheron:''' How interesting. For a split second, it felt like countless versions of you, alike yet distinct, gave entirely different responses.
+::::::{{A|VO chapter3 0 acheron 140.ogg}} '''Acheron:''' That was my final question, thank you. We all have our paths to walk, so we shall bid our farewells.
+::::::{{DIcon|Arrow}} Will we meet again?
+::::::{{DIcon|Arrow}} You haven't told me how to leave this place...
+::::::{{A|VO chapter3 0 acheron 141.ogg}} '''Acheron:''' The golden dream is getting restless. In the coming long night, I'm afraid you will face many tribulations and witness many tragedies. And finally... your sight will only see black and white.
+::::::{{tx}}
+::::;(Return to previous option selection)
+::::{{DIcon|Arrow}} I would never want to live in a dream.
+:::::{{A|VO chapter3 0 acheron 132.ogg}} '''Acheron:''' Now... imagine if this splendid dream were fated to fall apart: Friends, family, strangers, followed by the gentle breeze, soaring birds, the stars... and ultimately, yourself.
+:::::{{A|VO chapter3 0 acheron 133.ogg}} '''Acheron:''' Everyone, and every face they remember, the joy and the heartaches, the vows sealed and those left hanging... all will inevitably march towards a predetermined ending. If you had grasped the journey's finale right from its inception...
+:::::{{A|VO chapter3 0 acheron 134.ogg}} '''Acheron:''' {{Color|fire|nobold=1|I would ask: Would you still embark on this journey?}}
+:::::{{DIcon|Arrow}} I would abandon it &mdash; the price is too dear.
+::::::{{A|VO chapter3 0 acheron 135.ogg}} '''Acheron:''' I know this is hard, you don't have to be hard-pressed to make a decision. As I have said... the answer is inconsequential.
+::::::{{A|VO chapter3 0 acheron 136.ogg}} '''Acheron:''' Hearing, touch, thought &mdash; through these, you gain emotions &mdash; cherish them. With emotions, we make choices. And so we return to the original question...
+::::::{{A|VO chapter3 0 acheron 137.ogg}} '''Acheron:''' {{Color|fire|nobold=1|I would ask... Do you still remember me?}}
+::::::{{DIcon|Arrow}} I seem to remember you from somewhere...
+::::::{{DIcon|Arrow}} No, this is the first time we've met.
+::::::{{A|VO chapter3 0 acheron 138.ogg}} '''Acheron:''' ...I understand.
+::::::{{A|VO chapter3 0 acheron 139.ogg}} '''Acheron:''' How interesting. For a split second, it felt like countless versions of you, alike yet distinct, gave entirely different responses.
+::::::{{A|VO chapter3 0 acheron 140.ogg}} '''Acheron:''' That was my final question, thank you. We all have our paths to walk, so we shall bid our farewells.
+::::::{{DIcon|Arrow}} Will we meet again?
+::::::{{DIcon|Arrow}} You haven't told me how to leave this place...
+::::::{{A|VO chapter3 0 acheron 141.ogg}} '''Acheron:''' The golden dream is getting restless. In the coming long night, I'm afraid you will face many tribulations and witness many tragedies. And finally... your sight will only see black and white.
+::::::{{tx}}
+:::::{{DIcon|Arrow}} I would abandon it &mdash; I have already tasted the beauty of dreams.
+::::::{{A|VO chapter3 0 acheron 135.ogg}} '''Acheron:''' I know this is hard, you don't have to be hard-pressed to make a decision. As I have said... the answer is inconsequential.
+::::::{{A|VO chapter3 0 acheron 136.ogg}} '''Acheron:''' Hearing, touch, thought &mdash; through these, you gain emotions &mdash; cherish them. With emotions, we make choices. And so we return to the original question...
+::::::{{A|VO chapter3 0 acheron 137.ogg}} '''Acheron:''' {{Color|fire|nobold=1|I would ask... Do you still remember me?}}
+::::::{{DIcon|Arrow}} I seem to remember you from somewhere...
+::::::{{DIcon|Arrow}} No, this is the first time we've met.
+::::::{{A|VO chapter3 0 acheron 138.ogg}} '''Acheron:''' ...I understand.
+::::::{{A|VO chapter3 0 acheron 139.ogg}} '''Acheron:''' How interesting. For a split second, it felt like countless versions of you, alike yet distinct, gave entirely different responses.
+::::::{{A|VO chapter3 0 acheron 140.ogg}} '''Acheron:''' That was my final question, thank you. We all have our paths to walk, so we shall bid our farewells.
+::::::{{DIcon|Arrow}} Will we meet again?
+::::::{{DIcon|Arrow}} You haven't told me how to leave this place...
+::::::{{A|VO chapter3 0 acheron 141.ogg}} '''Acheron:''' The golden dream is getting restless. In the coming long night, I'm afraid you will face many tribulations and witness many tragedies. And finally... your sight will only see black and white.
+::::::{{tx}}
+:::::{{DIcon|Arrow}} I would abandon it &mdash; Trailblazing was never my intent.
+::::::{{A|VO chapter3 0 acheron 135.ogg}} '''Acheron:''' I know this is hard, you don't have to be hard-pressed to make a decision. As I have said... the answer is inconsequential.
+::::::{{A|VO chapter3 0 acheron 136.ogg}} '''Acheron:''' Hearing, touch, thought &mdash; through these, you gain emotions &mdash; cherish them. With emotions, we make choices. And so we return to the original question...
+::::::{{A|VO chapter3 0 acheron 137.ogg}} '''Acheron:''' {{Color|fire|nobold=1|I would ask... Do you still remember me?}}
+::::::{{DIcon|Arrow}} I seem to remember you from somewhere...
+::::::{{DIcon|Arrow}} No, this is the first time we've met.
+::::::{{A|VO chapter3 0 acheron 138.ogg}} '''Acheron:''' ...I understand.
+::::::{{A|VO chapter3 0 acheron 139.ogg}} '''Acheron:''' How interesting. For a split second, it felt like countless versions of you, alike yet distinct, gave entirely different responses.
+::::::{{A|VO chapter3 0 acheron 140.ogg}} '''Acheron:''' That was my final question, thank you. We all have our paths to walk, so we shall bid our farewells.
+::::::{{DIcon|Arrow}} Will we meet again?
+::::::{{DIcon|Arrow}} You haven't told me how to leave this place...
+::::::{{A|VO chapter3 0 acheron 141.ogg}} '''Acheron:''' The golden dream is getting restless. In the coming long night, I'm afraid you will face many tribulations and witness many tragedies. And finally... your sight will only see black and white.
+::::::{{tx}}
+:::::{{DIcon|Arrow}} I would blaze a trail without hesitation.
+::::::{{A|VO chapter3 0 acheron 135.ogg}} '''Acheron:''' I know this is hard, you don't have to be hard-pressed to make a decision. As I have said... the answer is inconsequential.
+::::::{{A|VO chapter3 0 acheron 136.ogg}} '''Acheron:''' Hearing, touch, thought &mdash; through these, you gain emotions &mdash; cherish them. With emotions, we make choices. And so we return to the original question...
+::::::{{A|VO chapter3 0 acheron 137.ogg}} '''Acheron:''' {{Color|fire|nobold=1|I would ask... Do you still remember me?}}
+::::::{{DIcon|Arrow}} I seem to remember you from somewhere...
+::::::{{DIcon|Arrow}} No, this is the first time we've met.
+::::::{{A|VO chapter3 0 acheron 138.ogg}} '''Acheron:''' ...I understand.
+::::::{{A|VO chapter3 0 acheron 139.ogg}} '''Acheron:''' How interesting. For a split second, it felt like countless versions of you, alike yet distinct, gave entirely different responses.
+::::::{{A|VO chapter3 0 acheron 140.ogg}} '''Acheron:''' That was my final question, thank you. We all have our paths to walk, so we shall bid our farewells.
+::::::{{DIcon|Arrow}} Will we meet again?
+::::::{{DIcon|Arrow}} You haven't told me how to leave this place...
+::::::{{A|VO chapter3 0 acheron 141.ogg}} '''Acheron:''' The golden dream is getting restless. In the coming long night, I'm afraid you will face many tribulations and witness many tragedies. And finally... your sight will only see black and white.
+::::::{{tx}}
+::::;(Return to previous option selection)
+:::;(Return to previous option selection)
+:::{{DIcon|Arrow}} If it means losing them, I would.
+::::{{A|VO chapter3 0 acheron 130.ogg}} '''Acheron:''' Mm... Then, if there was a vast dreamscape, so lifelike it's indistinguishable from reality. There, no one faces life's separations or deaths. Everyone attains their deserved happiness and lives joyfully ever after.
+::::{{A|VO chapter3 0 acheron 131.ogg}} '''Acheron:''' {{Color|fire|nobold=1|I would ask: Would you wish to stay?}}
+::::{{DIcon|Arrow}} I would, no matter the cost.
+:::::{{A|VO chapter3 0 acheron 132.ogg}} '''Acheron:''' Now... imagine if this splendid dream were fated to fall apart: Friends, family, strangers, followed by the gentle breeze, soaring birds, the stars... and ultimately, yourself.
+:::::{{A|VO chapter3 0 acheron 133.ogg}} '''Acheron:''' Everyone, and every face they remember, the joy and the heartaches, the vows sealed and those left hanging... all will inevitably march towards a predetermined ending. If you had grasped the journey's finale right from its inception...
+:::::{{A|VO chapter3 0 acheron 134.ogg}} '''Acheron:''' {{Color|fire|nobold=1|I would ask: Would you still embark on this journey?}}
+:::::{{DIcon|Arrow}} I would abandon it &mdash; the price is too dear.
+::::::{{A|VO chapter3 0 acheron 135.ogg}} '''Acheron:''' I know this is hard, you don't have to be hard-pressed to make a decision. As I have said... the answer is inconsequential.
+::::::{{A|VO chapter3 0 acheron 136.ogg}} '''Acheron:''' Hearing, touch, thought &mdash; through these, you gain emotions &mdash; cherish them. With emotions, we make choices. And so we return to the original question...
+::::::{{A|VO chapter3 0 acheron 137.ogg}} '''Acheron:''' {{Color|fire|nobold=1|I would ask... Do you still remember me?}}
+::::::{{DIcon|Arrow}} I seem to remember you from somewhere...
+::::::{{DIcon|Arrow}} No, this is the first time we've met.
+::::::{{A|VO chapter3 0 acheron 138.ogg}} '''Acheron:''' ...I understand.
+::::::{{A|VO chapter3 0 acheron 139.ogg}} '''Acheron:''' How interesting. For a split second, it felt like countless versions of you, alike yet distinct, gave entirely different responses.
+::::::{{A|VO chapter3 0 acheron 140.ogg}} '''Acheron:''' That was my final question, thank you. We all have our paths to walk, so we shall bid our farewells.
+::::::{{DIcon|Arrow}} Will we meet again?
+::::::{{DIcon|Arrow}} You haven't told me how to leave this place...
+::::::{{A|VO chapter3 0 acheron 141.ogg}} '''Acheron:''' The golden dream is getting restless. In the coming long night, I'm afraid you will face many tribulations and witness many tragedies. And finally... your sight will only see black and white.
+::::::{{tx}}
+:::::{{DIcon|Arrow}} I would abandon it &mdash; I have already tasted the beauty of dreams.
+::::::{{A|VO chapter3 0 acheron 135.ogg}} '''Acheron:''' I know this is hard, you don't have to be hard-pressed to make a decision. As I have said... the answer is inconsequential.
+::::::{{A|VO chapter3 0 acheron 136.ogg}} '''Acheron:''' Hearing, touch, thought &mdash; through these, you gain emotions &mdash; cherish them. With emotions, we make choices. And so we return to the original question...
+::::::{{A|VO chapter3 0 acheron 137.ogg}} '''Acheron:''' {{Color|fire|nobold=1|I would ask... Do you still remember me?}}
+::::::{{DIcon|Arrow}} I seem to remember you from somewhere...
+::::::{{DIcon|Arrow}} No, this is the first time we've met.
+::::::{{A|VO chapter3 0 acheron 138.ogg}} '''Acheron:''' ...I understand.
+::::::{{A|VO chapter3 0 acheron 139.ogg}} '''Acheron:''' How interesting. For a split second, it felt like countless versions of you, alike yet distinct, gave entirely different responses.
+::::::{{A|VO chapter3 0 acheron 140.ogg}} '''Acheron:''' That was my final question, thank you. We all have our paths to walk, so we shall bid our farewells.
+::::::{{DIcon|Arrow}} Will we meet again?
+::::::{{DIcon|Arrow}} You haven't told me how to leave this place...
+::::::{{A|VO chapter3 0 acheron 141.ogg}} '''Acheron:''' The golden dream is getting restless. In the coming long night, I'm afraid you will face many tribulations and witness many tragedies. And finally... your sight will only see black and white.
+::::::{{tx}}
+:::::{{DIcon|Arrow}} I would abandon it &mdash; Trailblazing was never my intent.
+::::::{{A|VO chapter3 0 acheron 135.ogg}} '''Acheron:''' I know this is hard, you don't have to be hard-pressed to make a decision. As I have said... the answer is inconsequential.
+::::::{{A|VO chapter3 0 acheron 136.ogg}} '''Acheron:''' Hearing, touch, thought &mdash; through these, you gain emotions &mdash; cherish them. With emotions, we make choices. And so we return to the original question...
+::::::{{A|VO chapter3 0 acheron 137.ogg}} '''Acheron:''' {{Color|fire|nobold=1|I would ask... Do you still remember me?}}
+::::::{{DIcon|Arrow}} I seem to remember you from somewhere...
+::::::{{DIcon|Arrow}} No, this is the first time we've met.
+::::::{{A|VO chapter3 0 acheron 138.ogg}} '''Acheron:''' ...I understand.
+::::::{{A|VO chapter3 0 acheron 139.ogg}} '''Acheron:''' How interesting. For a split second, it felt like countless versions of you, alike yet distinct, gave entirely different responses.
+::::::{{A|VO chapter3 0 acheron 140.ogg}} '''Acheron:''' That was my final question, thank you. We all have our paths to walk, so we shall bid our farewells.
+::::::{{DIcon|Arrow}} Will we meet again?
+::::::{{DIcon|Arrow}} You haven't told me how to leave this place...
+::::::{{A|VO chapter3 0 acheron 141.ogg}} '''Acheron:''' The golden dream is getting restless. In the coming long night, I'm afraid you will face many tribulations and witness many tragedies. And finally... your sight will only see black and white.
+::::::{{tx}}
+:::::{{DIcon|Arrow}} I would blaze a trail without hesitation.
+::::::{{A|VO chapter3 0 acheron 135.ogg}} '''Acheron:''' I know this is hard, you don't have to be hard-pressed to make a decision. As I have said... the answer is inconsequential.
+::::::{{A|VO chapter3 0 acheron 136.ogg}} '''Acheron:''' Hearing, touch, thought &mdash; through these, you gain emotions &mdash; cherish them. With emotions, we make choices. And so we return to the original question...
+::::::{{A|VO chapter3 0 acheron 137.ogg}} '''Acheron:''' {{Color|fire|nobold=1|I would ask... Do you still remember me?}}
+::::::{{DIcon|Arrow}} I seem to remember you from somewhere...
+::::::{{DIcon|Arrow}} No, this is the first time we've met.
+::::::{{A|VO chapter3 0 acheron 138.ogg}} '''Acheron:''' ...I understand.
+::::::{{A|VO chapter3 0 acheron 139.ogg}} '''Acheron:''' How interesting. For a split second, it felt like countless versions of you, alike yet distinct, gave entirely different responses.
+::::::{{A|VO chapter3 0 acheron 140.ogg}} '''Acheron:''' That was my final question, thank you. We all have our paths to walk, so we shall bid our farewells.
+::::::{{DIcon|Arrow}} Will we meet again?
+::::::{{DIcon|Arrow}} You haven't told me how to leave this place...
+::::::{{A|VO chapter3 0 acheron 141.ogg}} '''Acheron:''' The golden dream is getting restless. In the coming long night, I'm afraid you will face many tribulations and witness many tragedies. And finally... your sight will only see black and white.
+::::::{{tx}}
+::::;(Return to previous option selection)
+::::{{DIcon|Arrow}} If I didn't have to pay any price, I would.
+:::::{{A|VO chapter3 0 acheron 132.ogg}} '''Acheron:''' Now... imagine if this splendid dream were fated to fall apart: Friends, family, strangers, followed by the gentle breeze, soaring birds, the stars... and ultimately, yourself.
+:::::{{A|VO chapter3 0 acheron 133.ogg}} '''Acheron:''' Everyone, and every face they remember, the joy and the heartaches, the vows sealed and those left hanging... all will inevitably march towards a predetermined ending. If you had grasped the journey's finale right from its inception...
+:::::{{A|VO chapter3 0 acheron 134.ogg}} '''Acheron:''' {{Color|fire|nobold=1|I would ask: Would you still embark on this journey?}}
+:::::{{DIcon|Arrow}} I would abandon it &mdash; the price is too dear.
+::::::{{A|VO chapter3 0 acheron 135.ogg}} '''Acheron:''' I know this is hard, you don't have to be hard-pressed to make a decision. As I have said... the answer is inconsequential.
+::::::{{A|VO chapter3 0 acheron 136.ogg}} '''Acheron:''' Hearing, touch, thought &mdash; through these, you gain emotions &mdash; cherish them. With emotions, we make choices. And so we return to the original question...
+::::::{{A|VO chapter3 0 acheron 137.ogg}} '''Acheron:''' {{Color|fire|nobold=1|I would ask... Do you still remember me?}}
+::::::{{DIcon|Arrow}} I seem to remember you from somewhere...
+::::::{{DIcon|Arrow}} No, this is the first time we've met.
+::::::{{A|VO chapter3 0 acheron 138.ogg}} '''Acheron:''' ...I understand.
+::::::{{A|VO chapter3 0 acheron 139.ogg}} '''Acheron:''' How interesting. For a split second, it felt like countless versions of you, alike yet distinct, gave entirely different responses.
+::::::{{A|VO chapter3 0 acheron 140.ogg}} '''Acheron:''' That was my final question, thank you. We all have our paths to walk, so we shall bid our farewells.
+::::::{{DIcon|Arrow}} Will we meet again?
+::::::{{DIcon|Arrow}} You haven't told me how to leave this place...
+::::::{{A|VO chapter3 0 acheron 141.ogg}} '''Acheron:''' The golden dream is getting restless. In the coming long night, I'm afraid you will face many tribulations and witness many tragedies. And finally... your sight will only see black and white.
+::::::{{tx}}
+:::::{{DIcon|Arrow}} I would abandon it &mdash; I have already tasted the beauty of dreams.
+::::::{{A|VO chapter3 0 acheron 135.ogg}} '''Acheron:''' I know this is hard, you don't have to be hard-pressed to make a decision. As I have said... the answer is inconsequential.
+::::::{{A|VO chapter3 0 acheron 136.ogg}} '''Acheron:''' Hearing, touch, thought &mdash; through these, you gain emotions &mdash; cherish them. With emotions, we make choices. And so we return to the original question...
+::::::{{A|VO chapter3 0 acheron 137.ogg}} '''Acheron:''' {{Color|fire|nobold=1|I would ask... Do you still remember me?}}
+::::::{{DIcon|Arrow}} I seem to remember you from somewhere...
+::::::{{DIcon|Arrow}} No, this is the first time we've met.
+::::::{{A|VO chapter3 0 acheron 138.ogg}} '''Acheron:''' ...I understand.
+::::::{{A|VO chapter3 0 acheron 139.ogg}} '''Acheron:''' How interesting. For a split second, it felt like countless versions of you, alike yet distinct, gave entirely different responses.
+::::::{{A|VO chapter3 0 acheron 140.ogg}} '''Acheron:''' That was my final question, thank you. We all have our paths to walk, so we shall bid our farewells.
+::::::{{DIcon|Arrow}} Will we meet again?
+::::::{{DIcon|Arrow}} You haven't told me how to leave this place...
+::::::{{A|VO chapter3 0 acheron 141.ogg}} '''Acheron:''' The golden dream is getting restless. In the coming long night, I'm afraid you will face many tribulations and witness many tragedies. And finally... your sight will only see black and white.
+::::::{{tx}}
+:::::{{DIcon|Arrow}} I would abandon it &mdash; Trailblazing was never my intent.
+::::::{{A|VO chapter3 0 acheron 135.ogg}} '''Acheron:''' I know this is hard, you don't have to be hard-pressed to make a decision. As I have said... the answer is inconsequential.
+::::::{{A|VO chapter3 0 acheron 136.ogg}} '''Acheron:''' Hearing, touch, thought &mdash; through these, you gain emotions &mdash; cherish them. With emotions, we make choices. And so we return to the original question...
+::::::{{A|VO chapter3 0 acheron 137.ogg}} '''Acheron:''' {{Color|fire|nobold=1|I would ask... Do you still remember me?}}
+::::::{{DIcon|Arrow}} I seem to remember you from somewhere...
+::::::{{DIcon|Arrow}} No, this is the first time we've met.
+::::::{{A|VO chapter3 0 acheron 138.ogg}} '''Acheron:''' ...I understand.
+::::::{{A|VO chapter3 0 acheron 139.ogg}} '''Acheron:''' How interesting. For a split second, it felt like countless versions of you, alike yet distinct, gave entirely different responses.
+::::::{{A|VO chapter3 0 acheron 140.ogg}} '''Acheron:''' That was my final question, thank you. We all have our paths to walk, so we shall bid our farewells.
+::::::{{DIcon|Arrow}} Will we meet again?
+::::::{{DIcon|Arrow}} You haven't told me how to leave this place...
+::::::{{A|VO chapter3 0 acheron 141.ogg}} '''Acheron:''' The golden dream is getting restless. In the coming long night, I'm afraid you will face many tribulations and witness many tragedies. And finally... your sight will only see black and white.
+::::::{{tx}}
+:::::{{DIcon|Arrow}} I would blaze a trail without hesitation.
+::::::{{A|VO chapter3 0 acheron 135.ogg}} '''Acheron:''' I know this is hard, you don't have to be hard-pressed to make a decision. As I have said... the answer is inconsequential.
+::::::{{A|VO chapter3 0 acheron 136.ogg}} '''Acheron:''' Hearing, touch, thought &mdash; through these, you gain emotions &mdash; cherish them. With emotions, we make choices. And so we return to the original question...
+::::::{{A|VO chapter3 0 acheron 137.ogg}} '''Acheron:''' {{Color|fire|nobold=1|I would ask... Do you still remember me?}}
+::::::{{DIcon|Arrow}} I seem to remember you from somewhere...
+::::::{{DIcon|Arrow}} No, this is the first time we've met.
+::::::{{A|VO chapter3 0 acheron 138.ogg}} '''Acheron:''' ...I understand.
+::::::{{A|VO chapter3 0 acheron 139.ogg}} '''Acheron:''' How interesting. For a split second, it felt like countless versions of you, alike yet distinct, gave entirely different responses.
+::::::{{A|VO chapter3 0 acheron 140.ogg}} '''Acheron:''' That was my final question, thank you. We all have our paths to walk, so we shall bid our farewells.
+::::::{{DIcon|Arrow}} Will we meet again?
+::::::{{DIcon|Arrow}} You haven't told me how to leave this place...
+::::::{{A|VO chapter3 0 acheron 141.ogg}} '''Acheron:''' The golden dream is getting restless. In the coming long night, I'm afraid you will face many tribulations and witness many tragedies. And finally... your sight will only see black and white.
+::::::{{tx}}
+::::;(Return to previous option selection)
+::::{{DIcon|Arrow}} That depends on the price I'd have to pay.
+:::::{{A|VO chapter3 0 acheron 132.ogg}} '''Acheron:''' Now... imagine if this splendid dream were fated to fall apart: Friends, family, strangers, followed by the gentle breeze, soaring birds, the stars... and ultimately, yourself.
+:::::{{A|VO chapter3 0 acheron 133.ogg}} '''Acheron:''' Everyone, and every face they remember, the joy and the heartaches, the vows sealed and those left hanging... all will inevitably march towards a predetermined ending. If you had grasped the journey's finale right from its inception...
+:::::{{A|VO chapter3 0 acheron 134.ogg}} '''Acheron:''' {{Color|fire|nobold=1|I would ask: Would you still embark on this journey?}}
+:::::{{DIcon|Arrow}} I would abandon it &mdash; the price is too dear.
+::::::{{A|VO chapter3 0 acheron 135.ogg}} '''Acheron:''' I know this is hard, you don't have to be hard-pressed to make a decision. As I have said... the answer is inconsequential.
+::::::{{A|VO chapter3 0 acheron 136.ogg}} '''Acheron:''' Hearing, touch, thought &mdash; through these, you gain emotions &mdash; cherish them. With emotions, we make choices. And so we return to the original question...
+::::::{{A|VO chapter3 0 acheron 137.ogg}} '''Acheron:''' {{Color|fire|nobold=1|I would ask... Do you still remember me?}}
+::::::{{DIcon|Arrow}} I seem to remember you from somewhere...
+::::::{{DIcon|Arrow}} No, this is the first time we've met.
+::::::{{A|VO chapter3 0 acheron 138.ogg}} '''Acheron:''' ...I understand.
+::::::{{A|VO chapter3 0 acheron 139.ogg}} '''Acheron:''' How interesting. For a split second, it felt like countless versions of you, alike yet distinct, gave entirely different responses.
+::::::{{A|VO chapter3 0 acheron 140.ogg}} '''Acheron:''' That was my final question, thank you. We all have our paths to walk, so we shall bid our farewells.
+::::::{{DIcon|Arrow}} Will we meet again?
+::::::{{DIcon|Arrow}} You haven't told me how to leave this place...
+::::::{{A|VO chapter3 0 acheron 141.ogg}} '''Acheron:''' The golden dream is getting restless. In the coming long night, I'm afraid you will face many tribulations and witness many tragedies. And finally... your sight will only see black and white.
+::::::{{tx}}
+:::::{{DIcon|Arrow}} I would abandon it &mdash; I have already tasted the beauty of dreams.
+::::::{{A|VO chapter3 0 acheron 135.ogg}} '''Acheron:''' I know this is hard, you don't have to be hard-pressed to make a decision. As I have said... the answer is inconsequential.
+::::::{{A|VO chapter3 0 acheron 136.ogg}} '''Acheron:''' Hearing, touch, thought &mdash; through these, you gain emotions &mdash; cherish them. With emotions, we make choices. And so we return to the original question...
+::::::{{A|VO chapter3 0 acheron 137.ogg}} '''Acheron:''' {{Color|fire|nobold=1|I would ask... Do you still remember me?}}
+::::::{{DIcon|Arrow}} I seem to remember you from somewhere...
+::::::{{DIcon|Arrow}} No, this is the first time we've met.
+::::::{{A|VO chapter3 0 acheron 138.ogg}} '''Acheron:''' ...I understand.
+::::::{{A|VO chapter3 0 acheron 139.ogg}} '''Acheron:''' How interesting. For a split second, it felt like countless versions of you, alike yet distinct, gave entirely different responses.
+::::::{{A|VO chapter3 0 acheron 140.ogg}} '''Acheron:''' That was my final question, thank you. We all have our paths to walk, so we shall bid our farewells.
+::::::{{DIcon|Arrow}} Will we meet again?
+::::::{{DIcon|Arrow}} You haven't told me how to leave this place...
+::::::{{A|VO chapter3 0 acheron 141.ogg}} '''Acheron:''' The golden dream is getting restless. In the coming long night, I'm afraid you will face many tribulations and witness many tragedies. And finally... your sight will only see black and white.
+::::::{{tx}}
+:::::{{DIcon|Arrow}} I would abandon it &mdash; Trailblazing was never my intent.
+::::::{{A|VO chapter3 0 acheron 135.ogg}} '''Acheron:''' I know this is hard, you don't have to be hard-pressed to make a decision. As I have said... the answer is inconsequential.
+::::::{{A|VO chapter3 0 acheron 136.ogg}} '''Acheron:''' Hearing, touch, thought &mdash; through these, you gain emotions &mdash; cherish them. With emotions, we make choices. And so we return to the original question...
+::::::{{A|VO chapter3 0 acheron 137.ogg}} '''Acheron:''' {{Color|fire|nobold=1|I would ask... Do you still remember me?}}
+::::::{{DIcon|Arrow}} I seem to remember you from somewhere...
+::::::{{DIcon|Arrow}} No, this is the first time we've met.
+::::::{{A|VO chapter3 0 acheron 138.ogg}} '''Acheron:''' ...I understand.
+::::::{{A|VO chapter3 0 acheron 139.ogg}} '''Acheron:''' How interesting. For a split second, it felt like countless versions of you, alike yet distinct, gave entirely different responses.
+::::::{{A|VO chapter3 0 acheron 140.ogg}} '''Acheron:''' That was my final question, thank you. We all have our paths to walk, so we shall bid our farewells.
+::::::{{DIcon|Arrow}} Will we meet again?
+::::::{{DIcon|Arrow}} You haven't told me how to leave this place...
+::::::{{A|VO chapter3 0 acheron 141.ogg}} '''Acheron:''' The golden dream is getting restless. In the coming long night, I'm afraid you will face many tribulations and witness many tragedies. And finally... your sight will only see black and white.
+::::::{{tx}}
+:::::{{DIcon|Arrow}} I would blaze a trail without hesitation.
+::::::{{A|VO chapter3 0 acheron 135.ogg}} '''Acheron:''' I know this is hard, you don't have to be hard-pressed to make a decision. As I have said... the answer is inconsequential.
+::::::{{A|VO chapter3 0 acheron 136.ogg}} '''Acheron:''' Hearing, touch, thought &mdash; through these, you gain emotions &mdash; cherish them. With emotions, we make choices. And so we return to the original question...
+::::::{{A|VO chapter3 0 acheron 137.ogg}} '''Acheron:''' {{Color|fire|nobold=1|I would ask... Do you still remember me?}}
+::::::{{DIcon|Arrow}} I seem to remember you from somewhere...
+::::::{{DIcon|Arrow}} No, this is the first time we've met.
+::::::{{A|VO chapter3 0 acheron 138.ogg}} '''Acheron:''' ...I understand.
+::::::{{A|VO chapter3 0 acheron 139.ogg}} '''Acheron:''' How interesting. For a split second, it felt like countless versions of you, alike yet distinct, gave entirely different responses.
+::::::{{A|VO chapter3 0 acheron 140.ogg}} '''Acheron:''' That was my final question, thank you. We all have our paths to walk, so we shall bid our farewells.
+::::::{{DIcon|Arrow}} Will we meet again?
+::::::{{DIcon|Arrow}} You haven't told me how to leave this place...
+::::::{{A|VO chapter3 0 acheron 141.ogg}} '''Acheron:''' The golden dream is getting restless. In the coming long night, I'm afraid you will face many tribulations and witness many tragedies. And finally... your sight will only see black and white.
+::::::{{tx}}
+::::;(Return to previous option selection)
+::::{{DIcon|Arrow}} I would never want to live in a dream.
+:::::{{A|VO chapter3 0 acheron 132.ogg}} '''Acheron:''' Now... imagine if this splendid dream were fated to fall apart: Friends, family, strangers, followed by the gentle breeze, soaring birds, the stars... and ultimately, yourself.
+:::::{{A|VO chapter3 0 acheron 133.ogg}} '''Acheron:''' Everyone, and every face they remember, the joy and the heartaches, the vows sealed and those left hanging... all will inevitably march towards a predetermined ending. If you had grasped the journey's finale right from its inception...
+:::::{{A|VO chapter3 0 acheron 134.ogg}} '''Acheron:''' {{Color|fire|nobold=1|I would ask: Would you still embark on this journey?}}
+:::::{{DIcon|Arrow}} I would abandon it &mdash; the price is too dear.
+::::::{{A|VO chapter3 0 acheron 135.ogg}} '''Acheron:''' I know this is hard, you don't have to be hard-pressed to make a decision. As I have said... the answer is inconsequential.
+::::::{{A|VO chapter3 0 acheron 136.ogg}} '''Acheron:''' Hearing, touch, thought &mdash; through these, you gain emotions &mdash; cherish them. With emotions, we make choices. And so we return to the original question...
+::::::{{A|VO chapter3 0 acheron 137.ogg}} '''Acheron:''' {{Color|fire|nobold=1|I would ask... Do you still remember me?}}
+::::::{{DIcon|Arrow}} I seem to remember you from somewhere...
+::::::{{DIcon|Arrow}} No, this is the first time we've met.
+::::::{{A|VO chapter3 0 acheron 138.ogg}} '''Acheron:''' ...I understand.
+::::::{{A|VO chapter3 0 acheron 139.ogg}} '''Acheron:''' How interesting. For a split second, it felt like countless versions of you, alike yet distinct, gave entirely different responses.
+::::::{{A|VO chapter3 0 acheron 140.ogg}} '''Acheron:''' That was my final question, thank you. We all have our paths to walk, so we shall bid our farewells.
+::::::{{DIcon|Arrow}} Will we meet again?
+::::::{{DIcon|Arrow}} You haven't told me how to leave this place...
+::::::{{A|VO chapter3 0 acheron 141.ogg}} '''Acheron:''' The golden dream is getting restless. In the coming long night, I'm afraid you will face many tribulations and witness many tragedies. And finally... your sight will only see black and white.
+::::::{{tx}}
+:::::{{DIcon|Arrow}} I would abandon it &mdash; I have already tasted the beauty of dreams.
+::::::{{A|VO chapter3 0 acheron 135.ogg}} '''Acheron:''' I know this is hard, you don't have to be hard-pressed to make a decision. As I have said... the answer is inconsequential.
+::::::{{A|VO chapter3 0 acheron 136.ogg}} '''Acheron:''' Hearing, touch, thought &mdash; through these, you gain emotions &mdash; cherish them. With emotions, we make choices. And so we return to the original question...
+::::::{{A|VO chapter3 0 acheron 137.ogg}} '''Acheron:''' {{Color|fire|nobold=1|I would ask... Do you still remember me?}}
+::::::{{DIcon|Arrow}} I seem to remember you from somewhere...
+::::::{{DIcon|Arrow}} No, this is the first time we've met.
+::::::{{A|VO chapter3 0 acheron 138.ogg}} '''Acheron:''' ...I understand.
+::::::{{A|VO chapter3 0 acheron 139.ogg}} '''Acheron:''' How interesting. For a split second, it felt like countless versions of you, alike yet distinct, gave entirely different responses.
+::::::{{A|VO chapter3 0 acheron 140.ogg}} '''Acheron:''' That was my final question, thank you. We all have our paths to walk, so we shall bid our farewells.
+::::::{{DIcon|Arrow}} Will we meet again?
+::::::{{DIcon|Arrow}} You haven't told me how to leave this place...
+::::::{{A|VO chapter3 0 acheron 141.ogg}} '''Acheron:''' The golden dream is getting restless. In the coming long night, I'm afraid you will face many tribulations and witness many tragedies. And finally... your sight will only see black and white.
+::::::{{tx}}
+:::::{{DIcon|Arrow}} I would abandon it &mdash; Trailblazing was never my intent.
+::::::{{A|VO chapter3 0 acheron 135.ogg}} '''Acheron:''' I know this is hard, you don't have to be hard-pressed to make a decision. As I have said... the answer is inconsequential.
+::::::{{A|VO chapter3 0 acheron 136.ogg}} '''Acheron:''' Hearing, touch, thought &mdash; through these, you gain emotions &mdash; cherish them. With emotions, we make choices. And so we return to the original question...
+::::::{{A|VO chapter3 0 acheron 137.ogg}} '''Acheron:''' {{Color|fire|nobold=1|I would ask... Do you still remember me?}}
+::::::{{DIcon|Arrow}} I seem to remember you from somewhere...
+::::::{{DIcon|Arrow}} No, this is the first time we've met.
+::::::{{A|VO chapter3 0 acheron 138.ogg}} '''Acheron:''' ...I understand.
+::::::{{A|VO chapter3 0 acheron 139.ogg}} '''Acheron:''' How interesting. For a split second, it felt like countless versions of you, alike yet distinct, gave entirely different responses.
+::::::{{A|VO chapter3 0 acheron 140.ogg}} '''Acheron:''' That was my final question, thank you. We all have our paths to walk, so we shall bid our farewells.
+::::::{{DIcon|Arrow}} Will we meet again?
+::::::{{DIcon|Arrow}} You haven't told me how to leave this place...
+::::::{{A|VO chapter3 0 acheron 141.ogg}} '''Acheron:''' The golden dream is getting restless. In the coming long night, I'm afraid you will face many tribulations and witness many tragedies. And finally... your sight will only see black and white.
+::::::{{tx}}
+:::::{{DIcon|Arrow}} I would blaze a trail without hesitation.
+::::::{{A|VO chapter3 0 acheron 135.ogg}} '''Acheron:''' I know this is hard, you don't have to be hard-pressed to make a decision. As I have said... the answer is inconsequential.
+::::::{{A|VO chapter3 0 acheron 136.ogg}} '''Acheron:''' Hearing, touch, thought &mdash; through these, you gain emotions &mdash; cherish them. With emotions, we make choices. And so we return to the original question...
+::::::{{A|VO chapter3 0 acheron 137.ogg}} '''Acheron:''' {{Color|fire|nobold=1|I would ask... Do you still remember me?}}
+::::::{{DIcon|Arrow}} I seem to remember you from somewhere...
+::::::{{DIcon|Arrow}} No, this is the first time we've met.
+::::::{{A|VO chapter3 0 acheron 138.ogg}} '''Acheron:''' ...I understand.
+::::::{{A|VO chapter3 0 acheron 139.ogg}} '''Acheron:''' How interesting. For a split second, it felt like countless versions of you, alike yet distinct, gave entirely different responses.
+::::::{{A|VO chapter3 0 acheron 140.ogg}} '''Acheron:''' That was my final question, thank you. We all have our paths to walk, so we shall bid our farewells.
+::::::{{DIcon|Arrow}} Will we meet again?
+::::::{{DIcon|Arrow}} You haven't told me how to leave this place...
+::::::{{A|VO chapter3 0 acheron 141.ogg}} '''Acheron:''' The golden dream is getting restless. In the coming long night, I'm afraid you will face many tribulations and witness many tragedies. And finally... your sight will only see black and white.
+::::::{{tx}}
+::::;(Return to previous option selection)
+:::;(Return to previous option selection)
+:::{{DIcon|Arrow}} If it means that I will disappear, I would.
+::::{{A|VO chapter3 0 acheron 130.ogg}} '''Acheron:''' Mm... Then, if there was a vast dreamscape, so lifelike it's indistinguishable from reality. There, no one faces life's separations or deaths. Everyone attains their deserved happiness and lives joyfully ever after.
+::::{{A|VO chapter3 0 acheron 131.ogg}} '''Acheron:''' {{Color|fire|nobold=1|I would ask: Would you wish to stay?}}
+::::{{DIcon|Arrow}} I would, no matter the cost.
+:::::{{A|VO chapter3 0 acheron 132.ogg}} '''Acheron:''' Now... imagine if this splendid dream were fated to fall apart: Friends, family, strangers, followed by the gentle breeze, soaring birds, the stars... and ultimately, yourself.
+:::::{{A|VO chapter3 0 acheron 133.ogg}} '''Acheron:''' Everyone, and every face they remember, the joy and the heartaches, the vows sealed and those left hanging... all will inevitably march towards a predetermined ending. If you had grasped the journey's finale right from its inception...
+:::::{{A|VO chapter3 0 acheron 134.ogg}} '''Acheron:''' {{Color|fire|nobold=1|I would ask: Would you still embark on this journey?}}
+:::::{{DIcon|Arrow}} I would abandon it &mdash; the price is too dear.
+::::::{{A|VO chapter3 0 acheron 135.ogg}} '''Acheron:''' I know this is hard, you don't have to be hard-pressed to make a decision. As I have said... the answer is inconsequential.
+::::::{{A|VO chapter3 0 acheron 136.ogg}} '''Acheron:''' Hearing, touch, thought &mdash; through these, you gain emotions &mdash; cherish them. With emotions, we make choices. And so we return to the original question...
+::::::{{A|VO chapter3 0 acheron 137.ogg}} '''Acheron:''' {{Color|fire|nobold=1|I would ask... Do you still remember me?}}
+::::::{{DIcon|Arrow}} I seem to remember you from somewhere...
+::::::{{DIcon|Arrow}} No, this is the first time we've met.
+::::::{{A|VO chapter3 0 acheron 138.ogg}} '''Acheron:''' ...I understand.
+::::::{{A|VO chapter3 0 acheron 139.ogg}} '''Acheron:''' How interesting. For a split second, it felt like countless versions of you, alike yet distinct, gave entirely different responses.
+::::::{{A|VO chapter3 0 acheron 140.ogg}} '''Acheron:''' That was my final question, thank you. We all have our paths to walk, so we shall bid our farewells.
+::::::{{DIcon|Arrow}} Will we meet again?
+::::::{{DIcon|Arrow}} You haven't told me how to leave this place...
+::::::{{A|VO chapter3 0 acheron 141.ogg}} '''Acheron:''' The golden dream is getting restless. In the coming long night, I'm afraid you will face many tribulations and witness many tragedies. And finally... your sight will only see black and white.
+::::::{{tx}}
+:::::{{DIcon|Arrow}} I would abandon it &mdash; I have already tasted the beauty of dreams.
+::::::{{A|VO chapter3 0 acheron 135.ogg}} '''Acheron:''' I know this is hard, you don't have to be hard-pressed to make a decision. As I have said... the answer is inconsequential.
+::::::{{A|VO chapter3 0 acheron 136.ogg}} '''Acheron:''' Hearing, touch, thought &mdash; through these, you gain emotions &mdash; cherish them. With emotions, we make choices. And so we return to the original question...
+::::::{{A|VO chapter3 0 acheron 137.ogg}} '''Acheron:''' {{Color|fire|nobold=1|I would ask... Do you still remember me?}}
+::::::{{DIcon|Arrow}} I seem to remember you from somewhere...
+::::::{{DIcon|Arrow}} No, this is the first time we've met.
+::::::{{A|VO chapter3 0 acheron 138.ogg}} '''Acheron:''' ...I understand.
+::::::{{A|VO chapter3 0 acheron 139.ogg}} '''Acheron:''' How interesting. For a split second, it felt like countless versions of you, alike yet distinct, gave entirely different responses.
+::::::{{A|VO chapter3 0 acheron 140.ogg}} '''Acheron:''' That was my final question, thank you. We all have our paths to walk, so we shall bid our farewells.
+::::::{{DIcon|Arrow}} Will we meet again?
+::::::{{DIcon|Arrow}} You haven't told me how to leave this place...
+::::::{{A|VO chapter3 0 acheron 141.ogg}} '''Acheron:''' The golden dream is getting restless. In the coming long night, I'm afraid you will face many tribulations and witness many tragedies. And finally... your sight will only see black and white.
+::::::{{tx}}
+:::::{{DIcon|Arrow}} I would abandon it &mdash; Trailblazing was never my intent.
+::::::{{A|VO chapter3 0 acheron 135.ogg}} '''Acheron:''' I know this is hard, you don't have to be hard-pressed to make a decision. As I have said... the answer is inconsequential.
+::::::{{A|VO chapter3 0 acheron 136.ogg}} '''Acheron:''' Hearing, touch, thought &mdash; through these, you gain emotions &mdash; cherish them. With emotions, we make choices. And so we return to the original question...
+::::::{{A|VO chapter3 0 acheron 137.ogg}} '''Acheron:''' {{Color|fire|nobold=1|I would ask... Do you still remember me?}}
+::::::{{DIcon|Arrow}} I seem to remember you from somewhere...
+::::::{{DIcon|Arrow}} No, this is the first time we've met.
+::::::{{A|VO chapter3 0 acheron 138.ogg}} '''Acheron:''' ...I understand.
+::::::{{A|VO chapter3 0 acheron 139.ogg}} '''Acheron:''' How interesting. For a split second, it felt like countless versions of you, alike yet distinct, gave entirely different responses.
+::::::{{A|VO chapter3 0 acheron 140.ogg}} '''Acheron:''' That was my final question, thank you. We all have our paths to walk, so we shall bid our farewells.
+::::::{{DIcon|Arrow}} Will we meet again?
+::::::{{DIcon|Arrow}} You haven't told me how to leave this place...
+::::::{{A|VO chapter3 0 acheron 141.ogg}} '''Acheron:''' The golden dream is getting restless. In the coming long night, I'm afraid you will face many tribulations and witness many tragedies. And finally... your sight will only see black and white.
+::::::{{tx}}
+:::::{{DIcon|Arrow}} I would blaze a trail without hesitation.
+::::::{{A|VO chapter3 0 acheron 135.ogg}} '''Acheron:''' I know this is hard, you don't have to be hard-pressed to make a decision. As I have said... the answer is inconsequential.
+::::::{{A|VO chapter3 0 acheron 136.ogg}} '''Acheron:''' Hearing, touch, thought &mdash; through these, you gain emotions &mdash; cherish them. With emotions, we make choices. And so we return to the original question...
+::::::{{A|VO chapter3 0 acheron 137.ogg}} '''Acheron:''' {{Color|fire|nobold=1|I would ask... Do you still remember me?}}
+::::::{{DIcon|Arrow}} I seem to remember you from somewhere...
+::::::{{DIcon|Arrow}} No, this is the first time we've met.
+::::::{{A|VO chapter3 0 acheron 138.ogg}} '''Acheron:''' ...I understand.
+::::::{{A|VO chapter3 0 acheron 139.ogg}} '''Acheron:''' How interesting. For a split second, it felt like countless versions of you, alike yet distinct, gave entirely different responses.
+::::::{{A|VO chapter3 0 acheron 140.ogg}} '''Acheron:''' That was my final question, thank you. We all have our paths to walk, so we shall bid our farewells.
+::::::{{DIcon|Arrow}} Will we meet again?
+::::::{{DIcon|Arrow}} You haven't told me how to leave this place...
+::::::{{A|VO chapter3 0 acheron 141.ogg}} '''Acheron:''' The golden dream is getting restless. In the coming long night, I'm afraid you will face many tribulations and witness many tragedies. And finally... your sight will only see black and white.
+::::::{{tx}}
+::::;(Return to previous option selection)
+::::{{DIcon|Arrow}} If I didn't have to pay any price, I would.
+:::::{{A|VO chapter3 0 acheron 132.ogg}} '''Acheron:''' Now... imagine if this splendid dream were fated to fall apart: Friends, family, strangers, followed by the gentle breeze, soaring birds, the stars... and ultimately, yourself.
+:::::{{A|VO chapter3 0 acheron 133.ogg}} '''Acheron:''' Everyone, and every face they remember, the joy and the heartaches, the vows sealed and those left hanging... all will inevitably march towards a predetermined ending. If you had grasped the journey's finale right from its inception...
+:::::{{A|VO chapter3 0 acheron 134.ogg}} '''Acheron:''' {{Color|fire|nobold=1|I would ask: Would you still embark on this journey?}}
+:::::{{DIcon|Arrow}} I would abandon it &mdash; the price is too dear.
+::::::{{A|VO chapter3 0 acheron 135.ogg}} '''Acheron:''' I know this is hard, you don't have to be hard-pressed to make a decision. As I have said... the answer is inconsequential.
+::::::{{A|VO chapter3 0 acheron 136.ogg}} '''Acheron:''' Hearing, touch, thought &mdash; through these, you gain emotions &mdash; cherish them. With emotions, we make choices. And so we return to the original question...
+::::::{{A|VO chapter3 0 acheron 137.ogg}} '''Acheron:''' {{Color|fire|nobold=1|I would ask... Do you still remember me?}}
+::::::{{DIcon|Arrow}} I seem to remember you from somewhere...
+::::::{{DIcon|Arrow}} No, this is the first time we've met.
+::::::{{A|VO chapter3 0 acheron 138.ogg}} '''Acheron:''' ...I understand.
+::::::{{A|VO chapter3 0 acheron 139.ogg}} '''Acheron:''' How interesting. For a split second, it felt like countless versions of you, alike yet distinct, gave entirely different responses.
+::::::{{A|VO chapter3 0 acheron 140.ogg}} '''Acheron:''' That was my final question, thank you. We all have our paths to walk, so we shall bid our farewells.
+::::::{{DIcon|Arrow}} Will we meet again?
+::::::{{DIcon|Arrow}} You haven't told me how to leave this place...
+::::::{{A|VO chapter3 0 acheron 141.ogg}} '''Acheron:''' The golden dream is getting restless. In the coming long night, I'm afraid you will face many tribulations and witness many tragedies. And finally... your sight will only see black and white.
+::::::{{tx}}
+:::::{{DIcon|Arrow}} I would abandon it &mdash; I have already tasted the beauty of dreams.
+::::::{{A|VO chapter3 0 acheron 135.ogg}} '''Acheron:''' I know this is hard, you don't have to be hard-pressed to make a decision. As I have said... the answer is inconsequential.
+::::::{{A|VO chapter3 0 acheron 136.ogg}} '''Acheron:''' Hearing, touch, thought &mdash; through these, you gain emotions &mdash; cherish them. With emotions, we make choices. And so we return to the original question...
+::::::{{A|VO chapter3 0 acheron 137.ogg}} '''Acheron:''' {{Color|fire|nobold=1|I would ask... Do you still remember me?}}
+::::::{{DIcon|Arrow}} I seem to remember you from somewhere...
+::::::{{DIcon|Arrow}} No, this is the first time we've met.
+::::::{{A|VO chapter3 0 acheron 138.ogg}} '''Acheron:''' ...I understand.
+::::::{{A|VO chapter3 0 acheron 139.ogg}} '''Acheron:''' How interesting. For a split second, it felt like countless versions of you, alike yet distinct, gave entirely different responses.
+::::::{{A|VO chapter3 0 acheron 140.ogg}} '''Acheron:''' That was my final question, thank you. We all have our paths to walk, so we shall bid our farewells.
+::::::{{DIcon|Arrow}} Will we meet again?
+::::::{{DIcon|Arrow}} You haven't told me how to leave this place...
+::::::{{A|VO chapter3 0 acheron 141.ogg}} '''Acheron:''' The golden dream is getting restless. In the coming long night, I'm afraid you will face many tribulations and witness many tragedies. And finally... your sight will only see black and white.
+::::::{{tx}}
+:::::{{DIcon|Arrow}} I would abandon it &mdash; Trailblazing was never my intent.
+::::::{{A|VO chapter3 0 acheron 135.ogg}} '''Acheron:''' I know this is hard, you don't have to be hard-pressed to make a decision. As I have said... the answer is inconsequential.
+::::::{{A|VO chapter3 0 acheron 136.ogg}} '''Acheron:''' Hearing, touch, thought &mdash; through these, you gain emotions &mdash; cherish them. With emotions, we make choices. And so we return to the original question...
+::::::{{A|VO chapter3 0 acheron 137.ogg}} '''Acheron:''' {{Color|fire|nobold=1|I would ask... Do you still remember me?}}
+::::::{{DIcon|Arrow}} I seem to remember you from somewhere...
+::::::{{DIcon|Arrow}} No, this is the first time we've met.
+::::::{{A|VO chapter3 0 acheron 138.ogg}} '''Acheron:''' ...I understand.
+::::::{{A|VO chapter3 0 acheron 139.ogg}} '''Acheron:''' How interesting. For a split second, it felt like countless versions of you, alike yet distinct, gave entirely different responses.
+::::::{{A|VO chapter3 0 acheron 140.ogg}} '''Acheron:''' That was my final question, thank you. We all have our paths to walk, so we shall bid our farewells.
+::::::{{DIcon|Arrow}} Will we meet again?
+::::::{{DIcon|Arrow}} You haven't told me how to leave this place...
+::::::{{A|VO chapter3 0 acheron 141.ogg}} '''Acheron:''' The golden dream is getting restless. In the coming long night, I'm afraid you will face many tribulations and witness many tragedies. And finally... your sight will only see black and white.
+::::::{{tx}}
+:::::{{DIcon|Arrow}} I would blaze a trail without hesitation.
+::::::{{A|VO chapter3 0 acheron 135.ogg}} '''Acheron:''' I know this is hard, you don't have to be hard-pressed to make a decision. As I have said... the answer is inconsequential.
+::::::{{A|VO chapter3 0 acheron 136.ogg}} '''Acheron:''' Hearing, touch, thought &mdash; through these, you gain emotions &mdash; cherish them. With emotions, we make choices. And so we return to the original question...
+::::::{{A|VO chapter3 0 acheron 137.ogg}} '''Acheron:''' {{Color|fire|nobold=1|I would ask... Do you still remember me?}}
+::::::{{DIcon|Arrow}} I seem to remember you from somewhere...
+::::::{{DIcon|Arrow}} No, this is the first time we've met.
+::::::{{A|VO chapter3 0 acheron 138.ogg}} '''Acheron:''' ...I understand.
+::::::{{A|VO chapter3 0 acheron 139.ogg}} '''Acheron:''' How interesting. For a split second, it felt like countless versions of you, alike yet distinct, gave entirely different responses.
+::::::{{A|VO chapter3 0 acheron 140.ogg}} '''Acheron:''' That was my final question, thank you. We all have our paths to walk, so we shall bid our farewells.
+::::::{{DIcon|Arrow}} Will we meet again?
+::::::{{DIcon|Arrow}} You haven't told me how to leave this place...
+::::::{{A|VO chapter3 0 acheron 141.ogg}} '''Acheron:''' The golden dream is getting restless. In the coming long night, I'm afraid you will face many tribulations and witness many tragedies. And finally... your sight will only see black and white.
+::::::{{tx}}
+::::;(Return to previous option selection)
+::::{{DIcon|Arrow}} That depends on the price I'd have to pay.
+:::::{{A|VO chapter3 0 acheron 132.ogg}} '''Acheron:''' Now... imagine if this splendid dream were fated to fall apart: Friends, family, strangers, followed by the gentle breeze, soaring birds, the stars... and ultimately, yourself.
+:::::{{A|VO chapter3 0 acheron 133.ogg}} '''Acheron:''' Everyone, and every face they remember, the joy and the heartaches, the vows sealed and those left hanging... all will inevitably march towards a predetermined ending. If you had grasped the journey's finale right from its inception...
+:::::{{A|VO chapter3 0 acheron 134.ogg}} '''Acheron:''' {{Color|fire|nobold=1|I would ask: Would you still embark on this journey?}}
+:::::{{DIcon|Arrow}} I would abandon it &mdash; the price is too dear.
+::::::{{A|VO chapter3 0 acheron 135.ogg}} '''Acheron:''' I know this is hard, you don't have to be hard-pressed to make a decision. As I have said... the answer is inconsequential.
+::::::{{A|VO chapter3 0 acheron 136.ogg}} '''Acheron:''' Hearing, touch, thought &mdash; through these, you gain emotions &mdash; cherish them. With emotions, we make choices. And so we return to the original question...
+::::::{{A|VO chapter3 0 acheron 137.ogg}} '''Acheron:''' {{Color|fire|nobold=1|I would ask... Do you still remember me?}}
+::::::{{DIcon|Arrow}} I seem to remember you from somewhere...
+::::::{{DIcon|Arrow}} No, this is the first time we've met.
+::::::{{A|VO chapter3 0 acheron 138.ogg}} '''Acheron:''' ...I understand.
+::::::{{A|VO chapter3 0 acheron 139.ogg}} '''Acheron:''' How interesting. For a split second, it felt like countless versions of you, alike yet distinct, gave entirely different responses.
+::::::{{A|VO chapter3 0 acheron 140.ogg}} '''Acheron:''' That was my final question, thank you. We all have our paths to walk, so we shall bid our farewells.
+::::::{{DIcon|Arrow}} Will we meet again?
+::::::{{DIcon|Arrow}} You haven't told me how to leave this place...
+::::::{{A|VO chapter3 0 acheron 141.ogg}} '''Acheron:''' The golden dream is getting restless. In the coming long night, I'm afraid you will face many tribulations and witness many tragedies. And finally... your sight will only see black and white.
+::::::{{tx}}
+:::::{{DIcon|Arrow}} I would abandon it &mdash; I have already tasted the beauty of dreams.
+::::::{{A|VO chapter3 0 acheron 135.ogg}} '''Acheron:''' I know this is hard, you don't have to be hard-pressed to make a decision. As I have said... the answer is inconsequential.
+::::::{{A|VO chapter3 0 acheron 136.ogg}} '''Acheron:''' Hearing, touch, thought &mdash; through these, you gain emotions &mdash; cherish them. With emotions, we make choices. And so we return to the original question...
+::::::{{A|VO chapter3 0 acheron 137.ogg}} '''Acheron:''' {{Color|fire|nobold=1|I would ask... Do you still remember me?}}
+::::::{{DIcon|Arrow}} I seem to remember you from somewhere...
+::::::{{DIcon|Arrow}} No, this is the first time we've met.
+::::::{{A|VO chapter3 0 acheron 138.ogg}} '''Acheron:''' ...I understand.
+::::::{{A|VO chapter3 0 acheron 139.ogg}} '''Acheron:''' How interesting. For a split second, it felt like countless versions of you, alike yet distinct, gave entirely different responses.
+::::::{{A|VO chapter3 0 acheron 140.ogg}} '''Acheron:''' That was my final question, thank you. We all have our paths to walk, so we shall bid our farewells.
+::::::{{DIcon|Arrow}} Will we meet again?
+::::::{{DIcon|Arrow}} You haven't told me how to leave this place...
+::::::{{A|VO chapter3 0 acheron 141.ogg}} '''Acheron:''' The golden dream is getting restless. In the coming long night, I'm afraid you will face many tribulations and witness many tragedies. And finally... your sight will only see black and white.
+::::::{{tx}}
+:::::{{DIcon|Arrow}} I would abandon it &mdash; Trailblazing was never my intent.
+::::::{{A|VO chapter3 0 acheron 135.ogg}} '''Acheron:''' I know this is hard, you don't have to be hard-pressed to make a decision. As I have said... the answer is inconsequential.
+::::::{{A|VO chapter3 0 acheron 136.ogg}} '''Acheron:''' Hearing, touch, thought &mdash; through these, you gain emotions &mdash; cherish them. With emotions, we make choices. And so we return to the original question...
+::::::{{A|VO chapter3 0 acheron 137.ogg}} '''Acheron:''' {{Color|fire|nobold=1|I would ask... Do you still remember me?}}
+::::::{{DIcon|Arrow}} I seem to remember you from somewhere...
+::::::{{DIcon|Arrow}} No, this is the first time we've met.
+::::::{{A|VO chapter3 0 acheron 138.ogg}} '''Acheron:''' ...I understand.
+::::::{{A|VO chapter3 0 acheron 139.ogg}} '''Acheron:''' How interesting. For a split second, it felt like countless versions of you, alike yet distinct, gave entirely different responses.
+::::::{{A|VO chapter3 0 acheron 140.ogg}} '''Acheron:''' That was my final question, thank you. We all have our paths to walk, so we shall bid our farewells.
+::::::{{DIcon|Arrow}} Will we meet again?
+::::::{{DIcon|Arrow}} You haven't told me how to leave this place...
+::::::{{A|VO chapter3 0 acheron 141.ogg}} '''Acheron:''' The golden dream is getting restless. In the coming long night, I'm afraid you will face many tribulations and witness many tragedies. And finally... your sight will only see black and white.
+::::::{{tx}}
+:::::{{DIcon|Arrow}} I would blaze a trail without hesitation.
+::::::{{A|VO chapter3 0 acheron 135.ogg}} '''Acheron:''' I know this is hard, you don't have to be hard-pressed to make a decision. As I have said... the answer is inconsequential.
+::::::{{A|VO chapter3 0 acheron 136.ogg}} '''Acheron:''' Hearing, touch, thought &mdash; through these, you gain emotions &mdash; cherish them. With emotions, we make choices. And so we return to the original question...
+::::::{{A|VO chapter3 0 acheron 137.ogg}} '''Acheron:''' {{Color|fire|nobold=1|I would ask... Do you still remember me?}}
+::::::{{DIcon|Arrow}} I seem to remember you from somewhere...
+::::::{{DIcon|Arrow}} No, this is the first time we've met.
+::::::{{A|VO chapter3 0 acheron 138.ogg}} '''Acheron:''' ...I understand.
+::::::{{A|VO chapter3 0 acheron 139.ogg}} '''Acheron:''' How interesting. For a split second, it felt like countless versions of you, alike yet distinct, gave entirely different responses.
+::::::{{A|VO chapter3 0 acheron 140.ogg}} '''Acheron:''' That was my final question, thank you. We all have our paths to walk, so we shall bid our farewells.
+::::::{{DIcon|Arrow}} Will we meet again?
+::::::{{DIcon|Arrow}} You haven't told me how to leave this place...
+::::::{{A|VO chapter3 0 acheron 141.ogg}} '''Acheron:''' The golden dream is getting restless. In the coming long night, I'm afraid you will face many tribulations and witness many tragedies. And finally... your sight will only see black and white.
+::::::{{tx}}
+::::;(Return to previous option selection)
+::::{{DIcon|Arrow}} I would never want to live in a dream.
+:::::{{A|VO chapter3 0 acheron 132.ogg}} '''Acheron:''' Now... imagine if this splendid dream were fated to fall apart: Friends, family, strangers, followed by the gentle breeze, soaring birds, the stars... and ultimately, yourself.
+:::::{{A|VO chapter3 0 acheron 133.ogg}} '''Acheron:''' Everyone, and every face they remember, the joy and the heartaches, the vows sealed and those left hanging... all will inevitably march towards a predetermined ending. If you had grasped the journey's finale right from its inception...
+:::::{{A|VO chapter3 0 acheron 134.ogg}} '''Acheron:''' {{Color|fire|nobold=1|I would ask: Would you still embark on this journey?}}
+:::::{{DIcon|Arrow}} I would abandon it &mdash; the price is too dear.
+::::::{{A|VO chapter3 0 acheron 135.ogg}} '''Acheron:''' I know this is hard, you don't have to be hard-pressed to make a decision. As I have said... the answer is inconsequential.
+::::::{{A|VO chapter3 0 acheron 136.ogg}} '''Acheron:''' Hearing, touch, thought &mdash; through these, you gain emotions &mdash; cherish them. With emotions, we make choices. And so we return to the original question...
+::::::{{A|VO chapter3 0 acheron 137.ogg}} '''Acheron:''' {{Color|fire|nobold=1|I would ask... Do you still remember me?}}
+::::::{{DIcon|Arrow}} I seem to remember you from somewhere...
+::::::{{DIcon|Arrow}} No, this is the first time we've met.
+::::::{{A|VO chapter3 0 acheron 138.ogg}} '''Acheron:''' ...I understand.
+::::::{{A|VO chapter3 0 acheron 139.ogg}} '''Acheron:''' How interesting. For a split second, it felt like countless versions of you, alike yet distinct, gave entirely different responses.
+::::::{{A|VO chapter3 0 acheron 140.ogg}} '''Acheron:''' That was my final question, thank you. We all have our paths to walk, so we shall bid our farewells.
+::::::{{DIcon|Arrow}} Will we meet again?
+::::::{{DIcon|Arrow}} You haven't told me how to leave this place...
+::::::{{A|VO chapter3 0 acheron 141.ogg}} '''Acheron:''' The golden dream is getting restless. In the coming long night, I'm afraid you will face many tribulations and witness many tragedies. And finally... your sight will only see black and white.
+::::::{{tx}}
+:::::{{DIcon|Arrow}} I would abandon it &mdash; I have already tasted the beauty of dreams.
+::::::{{A|VO chapter3 0 acheron 135.ogg}} '''Acheron:''' I know this is hard, you don't have to be hard-pressed to make a decision. As I have said... the answer is inconsequential.
+::::::{{A|VO chapter3 0 acheron 136.ogg}} '''Acheron:''' Hearing, touch, thought &mdash; through these, you gain emotions &mdash; cherish them. With emotions, we make choices. And so we return to the original question...
+::::::{{A|VO chapter3 0 acheron 137.ogg}} '''Acheron:''' {{Color|fire|nobold=1|I would ask... Do you still remember me?}}
+::::::{{DIcon|Arrow}} I seem to remember you from somewhere...
+::::::{{DIcon|Arrow}} No, this is the first time we've met.
+::::::{{A|VO chapter3 0 acheron 138.ogg}} '''Acheron:''' ...I understand.
+::::::{{A|VO chapter3 0 acheron 139.ogg}} '''Acheron:''' How interesting. For a split second, it felt like countless versions of you, alike yet distinct, gave entirely different responses.
+::::::{{A|VO chapter3 0 acheron 140.ogg}} '''Acheron:''' That was my final question, thank you. We all have our paths to walk, so we shall bid our farewells.
+::::::{{DIcon|Arrow}} Will we meet again?
+::::::{{DIcon|Arrow}} You haven't told me how to leave this place...
+::::::{{A|VO chapter3 0 acheron 141.ogg}} '''Acheron:''' The golden dream is getting restless. In the coming long night, I'm afraid you will face many tribulations and witness many tragedies. And finally... your sight will only see black and white.
+::::::{{tx}}
+:::::{{DIcon|Arrow}} I would abandon it &mdash; Trailblazing was never my intent.
+::::::{{A|VO chapter3 0 acheron 135.ogg}} '''Acheron:''' I know this is hard, you don't have to be hard-pressed to make a decision. As I have said... the answer is inconsequential.
+::::::{{A|VO chapter3 0 acheron 136.ogg}} '''Acheron:''' Hearing, touch, thought &mdash; through these, you gain emotions &mdash; cherish them. With emotions, we make choices. And so we return to the original question...
+::::::{{A|VO chapter3 0 acheron 137.ogg}} '''Acheron:''' {{Color|fire|nobold=1|I would ask... Do you still remember me?}}
+::::::{{DIcon|Arrow}} I seem to remember you from somewhere...
+::::::{{DIcon|Arrow}} No, this is the first time we've met.
+::::::{{A|VO chapter3 0 acheron 138.ogg}} '''Acheron:''' ...I understand.
+::::::{{A|VO chapter3 0 acheron 139.ogg}} '''Acheron:''' How interesting. For a split second, it felt like countless versions of you, alike yet distinct, gave entirely different responses.
+::::::{{A|VO chapter3 0 acheron 140.ogg}} '''Acheron:''' That was my final question, thank you. We all have our paths to walk, so we shall bid our farewells.
+::::::{{DIcon|Arrow}} Will we meet again?
+::::::{{DIcon|Arrow}} You haven't told me how to leave this place...
+::::::{{A|VO chapter3 0 acheron 141.ogg}} '''Acheron:''' The golden dream is getting restless. In the coming long night, I'm afraid you will face many tribulations and witness many tragedies. And finally... your sight will only see black and white.
+::::::{{tx}}
+:::::{{DIcon|Arrow}} I would blaze a trail without hesitation.
+::::::{{A|VO chapter3 0 acheron 135.ogg}} '''Acheron:''' I know this is hard, you don't have to be hard-pressed to make a decision. As I have said... the answer is inconsequential.
+::::::{{A|VO chapter3 0 acheron 136.ogg}} '''Acheron:''' Hearing, touch, thought &mdash; through these, you gain emotions &mdash; cherish them. With emotions, we make choices. And so we return to the original question...
+::::::{{A|VO chapter3 0 acheron 137.ogg}} '''Acheron:''' {{Color|fire|nobold=1|I would ask... Do you still remember me?}}
+::::::{{DIcon|Arrow}} I seem to remember you from somewhere...
+::::::{{DIcon|Arrow}} No, this is the first time we've met.
+::::::{{A|VO chapter3 0 acheron 138.ogg}} '''Acheron:''' ...I understand.
+::::::{{A|VO chapter3 0 acheron 139.ogg}} '''Acheron:''' How interesting. For a split second, it felt like countless versions of you, alike yet distinct, gave entirely different responses.
+::::::{{A|VO chapter3 0 acheron 140.ogg}} '''Acheron:''' That was my final question, thank you. We all have our paths to walk, so we shall bid our farewells.
+::::::{{DIcon|Arrow}} Will we meet again?
+::::::{{DIcon|Arrow}} You haven't told me how to leave this place...
+::::::{{A|VO chapter3 0 acheron 141.ogg}} '''Acheron:''' The golden dream is getting restless. In the coming long night, I'm afraid you will face many tribulations and witness many tragedies. And finally... your sight will only see black and white.
+::::::{{tx}}
+::::;(Return to previous option selection)
+:::;(Return to previous option selection)
+:::{{DIcon|Arrow}} I feel no fear.
+::::{{A|VO chapter3 0 acheron 130.ogg}} '''Acheron:''' Mm... Then, if there was a vast dreamscape, so lifelike it's indistinguishable from reality. There, no one faces life's separations or deaths. Everyone attains their deserved happiness and lives joyfully ever after.
+::::{{A|VO chapter3 0 acheron 131.ogg}} '''Acheron:''' {{Color|fire|nobold=1|I would ask: Would you wish to stay?}}
+::::{{DIcon|Arrow}} I would, no matter the cost.
+:::::{{A|VO chapter3 0 acheron 132.ogg}} '''Acheron:''' Now... imagine if this splendid dream were fated to fall apart: Friends, family, strangers, followed by the gentle breeze, soaring birds, the stars... and ultimately, yourself.
+:::::{{A|VO chapter3 0 acheron 133.ogg}} '''Acheron:''' Everyone, and every face they remember, the joy and the heartaches, the vows sealed and those left hanging... all will inevitably march towards a predetermined ending. If you had grasped the journey's finale right from its inception...
+:::::{{A|VO chapter3 0 acheron 134.ogg}} '''Acheron:''' {{Color|fire|nobold=1|I would ask: Would you still embark on this journey?}}
+:::::{{DIcon|Arrow}} I would abandon it &mdash; the price is too dear.
+::::::{{A|VO chapter3 0 acheron 135.ogg}} '''Acheron:''' I know this is hard, you don't have to be hard-pressed to make a decision. As I have said... the answer is inconsequential.
+::::::{{A|VO chapter3 0 acheron 136.ogg}} '''Acheron:''' Hearing, touch, thought &mdash; through these, you gain emotions &mdash; cherish them. With emotions, we make choices. And so we return to the original question...
+::::::{{A|VO chapter3 0 acheron 137.ogg}} '''Acheron:''' {{Color|fire|nobold=1|I would ask... Do you still remember me?}}
+::::::{{DIcon|Arrow}} I seem to remember you from somewhere...
+::::::{{DIcon|Arrow}} No, this is the first time we've met.
+::::::{{A|VO chapter3 0 acheron 138.ogg}} '''Acheron:''' ...I understand.
+::::::{{A|VO chapter3 0 acheron 139.ogg}} '''Acheron:''' How interesting. For a split second, it felt like countless versions of you, alike yet distinct, gave entirely different responses.
+::::::{{A|VO chapter3 0 acheron 140.ogg}} '''Acheron:''' That was my final question, thank you. We all have our paths to walk, so we shall bid our farewells.
+::::::{{DIcon|Arrow}} Will we meet again?
+::::::{{DIcon|Arrow}} You haven't told me how to leave this place...
+::::::{{A|VO chapter3 0 acheron 141.ogg}} '''Acheron:''' The golden dream is getting restless. In the coming long night, I'm afraid you will face many tribulations and witness many tragedies. And finally... your sight will only see black and white.
+::::::{{tx}}
+:::::{{DIcon|Arrow}} I would abandon it &mdash; I have already tasted the beauty of dreams.
+::::::{{A|VO chapter3 0 acheron 135.ogg}} '''Acheron:''' I know this is hard, you don't have to be hard-pressed to make a decision. As I have said... the answer is inconsequential.
+::::::{{A|VO chapter3 0 acheron 136.ogg}} '''Acheron:''' Hearing, touch, thought &mdash; through these, you gain emotions &mdash; cherish them. With emotions, we make choices. And so we return to the original question...
+::::::{{A|VO chapter3 0 acheron 137.ogg}} '''Acheron:''' {{Color|fire|nobold=1|I would ask... Do you still remember me?}}
+::::::{{DIcon|Arrow}} I seem to remember you from somewhere...
+::::::{{DIcon|Arrow}} No, this is the first time we've met.
+::::::{{A|VO chapter3 0 acheron 138.ogg}} '''Acheron:''' ...I understand.
+::::::{{A|VO chapter3 0 acheron 139.ogg}} '''Acheron:''' How interesting. For a split second, it felt like countless versions of you, alike yet distinct, gave entirely different responses.
+::::::{{A|VO chapter3 0 acheron 140.ogg}} '''Acheron:''' That was my final question, thank you. We all have our paths to walk, so we shall bid our farewells.
+::::::{{DIcon|Arrow}} Will we meet again?
+::::::{{DIcon|Arrow}} You haven't told me how to leave this place...
+::::::{{A|VO chapter3 0 acheron 141.ogg}} '''Acheron:''' The golden dream is getting restless. In the coming long night, I'm afraid you will face many tribulations and witness many tragedies. And finally... your sight will only see black and white.
+::::::{{tx}}
+:::::{{DIcon|Arrow}} I would abandon it &mdash; Trailblazing was never my intent.
+::::::{{A|VO chapter3 0 acheron 135.ogg}} '''Acheron:''' I know this is hard, you don't have to be hard-pressed to make a decision. As I have said... the answer is inconsequential.
+::::::{{A|VO chapter3 0 acheron 136.ogg}} '''Acheron:''' Hearing, touch, thought &mdash; through these, you gain emotions &mdash; cherish them. With emotions, we make choices. And so we return to the original question...
+::::::{{A|VO chapter3 0 acheron 137.ogg}} '''Acheron:''' {{Color|fire|nobold=1|I would ask... Do you still remember me?}}
+::::::{{DIcon|Arrow}} I seem to remember you from somewhere...
+::::::{{DIcon|Arrow}} No, this is the first time we've met.
+::::::{{A|VO chapter3 0 acheron 138.ogg}} '''Acheron:''' ...I understand.
+::::::{{A|VO chapter3 0 acheron 139.ogg}} '''Acheron:''' How interesting. For a split second, it felt like countless versions of you, alike yet distinct, gave entirely different responses.
+::::::{{A|VO chapter3 0 acheron 140.ogg}} '''Acheron:''' That was my final question, thank you. We all have our paths to walk, so we shall bid our farewells.
+::::::{{DIcon|Arrow}} Will we meet again?
+::::::{{DIcon|Arrow}} You haven't told me how to leave this place...
+::::::{{A|VO chapter3 0 acheron 141.ogg}} '''Acheron:''' The golden dream is getting restless. In the coming long night, I'm afraid you will face many tribulations and witness many tragedies. And finally... your sight will only see black and white.
+::::::{{tx}}
+:::::{{DIcon|Arrow}} I would blaze a trail without hesitation.
+::::::{{A|VO chapter3 0 acheron 135.ogg}} '''Acheron:''' I know this is hard, you don't have to be hard-pressed to make a decision. As I have said... the answer is inconsequential.
+::::::{{A|VO chapter3 0 acheron 136.ogg}} '''Acheron:''' Hearing, touch, thought &mdash; through these, you gain emotions &mdash; cherish them. With emotions, we make choices. And so we return to the original question...
+::::::{{A|VO chapter3 0 acheron 137.ogg}} '''Acheron:''' {{Color|fire|nobold=1|I would ask... Do you still remember me?}}
+::::::{{DIcon|Arrow}} I seem to remember you from somewhere...
+::::::{{DIcon|Arrow}} No, this is the first time we've met.
+::::::{{A|VO chapter3 0 acheron 138.ogg}} '''Acheron:''' ...I understand.
+::::::{{A|VO chapter3 0 acheron 139.ogg}} '''Acheron:''' How interesting. For a split second, it felt like countless versions of you, alike yet distinct, gave entirely different responses.
+::::::{{A|VO chapter3 0 acheron 140.ogg}} '''Acheron:''' That was my final question, thank you. We all have our paths to walk, so we shall bid our farewells.
+::::::{{DIcon|Arrow}} Will we meet again?
+::::::{{DIcon|Arrow}} You haven't told me how to leave this place...
+::::::{{A|VO chapter3 0 acheron 141.ogg}} '''Acheron:''' The golden dream is getting restless. In the coming long night, I'm afraid you will face many tribulations and witness many tragedies. And finally... your sight will only see black and white.
+::::::{{tx}}
+::::;(Return to previous option selection)
+::::{{DIcon|Arrow}} If I didn't have to pay any price, I would.
+:::::{{A|VO chapter3 0 acheron 132.ogg}} '''Acheron:''' Now... imagine if this splendid dream were fated to fall apart: Friends, family, strangers, followed by the gentle breeze, soaring birds, the stars... and ultimately, yourself.
+:::::{{A|VO chapter3 0 acheron 133.ogg}} '''Acheron:''' Everyone, and every face they remember, the joy and the heartaches, the vows sealed and those left hanging... all will inevitably march towards a predetermined ending. If you had grasped the journey's finale right from its inception...
+:::::{{A|VO chapter3 0 acheron 134.ogg}} '''Acheron:''' {{Color|fire|nobold=1|I would ask: Would you still embark on this journey?}}
+:::::{{DIcon|Arrow}} I would abandon it &mdash; the price is too dear.
+::::::{{A|VO chapter3 0 acheron 135.ogg}} '''Acheron:''' I know this is hard, you don't have to be hard-pressed to make a decision. As I have said... the answer is inconsequential.
+::::::{{A|VO chapter3 0 acheron 136.ogg}} '''Acheron:''' Hearing, touch, thought &mdash; through these, you gain emotions &mdash; cherish them. With emotions, we make choices. And so we return to the original question...
+::::::{{A|VO chapter3 0 acheron 137.ogg}} '''Acheron:''' {{Color|fire|nobold=1|I would ask... Do you still remember me?}}
+::::::{{DIcon|Arrow}} I seem to remember you from somewhere...
+::::::{{DIcon|Arrow}} No, this is the first time we've met.
+::::::{{A|VO chapter3 0 acheron 138.ogg}} '''Acheron:''' ...I understand.
+::::::{{A|VO chapter3 0 acheron 139.ogg}} '''Acheron:''' How interesting. For a split second, it felt like countless versions of you, alike yet distinct, gave entirely different responses.
+::::::{{A|VO chapter3 0 acheron 140.ogg}} '''Acheron:''' That was my final question, thank you. We all have our paths to walk, so we shall bid our farewells.
+::::::{{DIcon|Arrow}} Will we meet again?
+::::::{{DIcon|Arrow}} You haven't told me how to leave this place...
+::::::{{A|VO chapter3 0 acheron 141.ogg}} '''Acheron:''' The golden dream is getting restless. In the coming long night, I'm afraid you will face many tribulations and witness many tragedies. And finally... your sight will only see black and white.
+::::::{{tx}}
+:::::{{DIcon|Arrow}} I would abandon it &mdash; I have already tasted the beauty of dreams.
+::::::{{A|VO chapter3 0 acheron 135.ogg}} '''Acheron:''' I know this is hard, you don't have to be hard-pressed to make a decision. As I have said... the answer is inconsequential.
+::::::{{A|VO chapter3 0 acheron 136.ogg}} '''Acheron:''' Hearing, touch, thought &mdash; through these, you gain emotions &mdash; cherish them. With emotions, we make choices. And so we return to the original question...
+::::::{{A|VO chapter3 0 acheron 137.ogg}} '''Acheron:''' {{Color|fire|nobold=1|I would ask... Do you still remember me?}}
+::::::{{DIcon|Arrow}} I seem to remember you from somewhere...
+::::::{{DIcon|Arrow}} No, this is the first time we've met.
+::::::{{A|VO chapter3 0 acheron 138.ogg}} '''Acheron:''' ...I understand.
+::::::{{A|VO chapter3 0 acheron 139.ogg}} '''Acheron:''' How interesting. For a split second, it felt like countless versions of you, alike yet distinct, gave entirely different responses.
+::::::{{A|VO chapter3 0 acheron 140.ogg}} '''Acheron:''' That was my final question, thank you. We all have our paths to walk, so we shall bid our farewells.
+::::::{{DIcon|Arrow}} Will we meet again?
+::::::{{DIcon|Arrow}} You haven't told me how to leave this place...
+::::::{{A|VO chapter3 0 acheron 141.ogg}} '''Acheron:''' The golden dream is getting restless. In the coming long night, I'm afraid you will face many tribulations and witness many tragedies. And finally... your sight will only see black and white.
+::::::{{tx}}
+:::::{{DIcon|Arrow}} I would abandon it &mdash; Trailblazing was never my intent.
+::::::{{A|VO chapter3 0 acheron 135.ogg}} '''Acheron:''' I know this is hard, you don't have to be hard-pressed to make a decision. As I have said... the answer is inconsequential.
+::::::{{A|VO chapter3 0 acheron 136.ogg}} '''Acheron:''' Hearing, touch, thought &mdash; through these, you gain emotions &mdash; cherish them. With emotions, we make choices. And so we return to the original question...
+::::::{{A|VO chapter3 0 acheron 137.ogg}} '''Acheron:''' {{Color|fire|nobold=1|I would ask... Do you still remember me?}}
+::::::{{DIcon|Arrow}} I seem to remember you from somewhere...
+::::::{{DIcon|Arrow}} No, this is the first time we've met.
+::::::{{A|VO chapter3 0 acheron 138.ogg}} '''Acheron:''' ...I understand.
+::::::{{A|VO chapter3 0 acheron 139.ogg}} '''Acheron:''' How interesting. For a split second, it felt like countless versions of you, alike yet distinct, gave entirely different responses.
+::::::{{A|VO chapter3 0 acheron 140.ogg}} '''Acheron:''' That was my final question, thank you. We all have our paths to walk, so we shall bid our farewells.
+::::::{{DIcon|Arrow}} Will we meet again?
+::::::{{DIcon|Arrow}} You haven't told me how to leave this place...
+::::::{{A|VO chapter3 0 acheron 141.ogg}} '''Acheron:''' The golden dream is getting restless. In the coming long night, I'm afraid you will face many tribulations and witness many tragedies. And finally... your sight will only see black and white.
+::::::{{tx}}
+:::::{{DIcon|Arrow}} I would blaze a trail without hesitation.
+::::::{{A|VO chapter3 0 acheron 135.ogg}} '''Acheron:''' I know this is hard, you don't have to be hard-pressed to make a decision. As I have said... the answer is inconsequential.
+::::::{{A|VO chapter3 0 acheron 136.ogg}} '''Acheron:''' Hearing, touch, thought &mdash; through these, you gain emotions &mdash; cherish them. With emotions, we make choices. And so we return to the original question...
+::::::{{A|VO chapter3 0 acheron 137.ogg}} '''Acheron:''' {{Color|fire|nobold=1|I would ask... Do you still remember me?}}
+::::::{{DIcon|Arrow}} I seem to remember you from somewhere...
+::::::{{DIcon|Arrow}} No, this is the first time we've met.
+::::::{{A|VO chapter3 0 acheron 138.ogg}} '''Acheron:''' ...I understand.
+::::::{{A|VO chapter3 0 acheron 139.ogg}} '''Acheron:''' How interesting. For a split second, it felt like countless versions of you, alike yet distinct, gave entirely different responses.
+::::::{{A|VO chapter3 0 acheron 140.ogg}} '''Acheron:''' That was my final question, thank you. We all have our paths to walk, so we shall bid our farewells.
+::::::{{DIcon|Arrow}} Will we meet again?
+::::::{{DIcon|Arrow}} You haven't told me how to leave this place...
+::::::{{A|VO chapter3 0 acheron 141.ogg}} '''Acheron:''' The golden dream is getting restless. In the coming long night, I'm afraid you will face many tribulations and witness many tragedies. And finally... your sight will only see black and white.
+::::::{{tx}}
+::::;(Return to previous option selection)
+::::{{DIcon|Arrow}} That depends on the price I'd have to pay.
+:::::{{A|VO chapter3 0 acheron 132.ogg}} '''Acheron:''' Now... imagine if this splendid dream were fated to fall apart: Friends, family, strangers, followed by the gentle breeze, soaring birds, the stars... and ultimately, yourself.
+:::::{{A|VO chapter3 0 acheron 133.ogg}} '''Acheron:''' Everyone, and every face they remember, the joy and the heartaches, the vows sealed and those left hanging... all will inevitably march towards a predetermined ending. If you had grasped the journey's finale right from its inception...
+:::::{{A|VO chapter3 0 acheron 134.ogg}} '''Acheron:''' {{Color|fire|nobold=1|I would ask: Would you still embark on this journey?}}
+:::::{{DIcon|Arrow}} I would abandon it &mdash; the price is too dear.
+::::::{{A|VO chapter3 0 acheron 135.ogg}} '''Acheron:''' I know this is hard, you don't have to be hard-pressed to make a decision. As I have said... the answer is inconsequential.
+::::::{{A|VO chapter3 0 acheron 136.ogg}} '''Acheron:''' Hearing, touch, thought &mdash; through these, you gain emotions &mdash; cherish them. With emotions, we make choices. And so we return to the original question...
+::::::{{A|VO chapter3 0 acheron 137.ogg}} '''Acheron:''' {{Color|fire|nobold=1|I would ask... Do you still remember me?}}
+::::::{{DIcon|Arrow}} I seem to remember you from somewhere...
+::::::{{DIcon|Arrow}} No, this is the first time we've met.
+::::::{{A|VO chapter3 0 acheron 138.ogg}} '''Acheron:''' ...I understand.
+::::::{{A|VO chapter3 0 acheron 139.ogg}} '''Acheron:''' How interesting. For a split second, it felt like countless versions of you, alike yet distinct, gave entirely different responses.
+::::::{{A|VO chapter3 0 acheron 140.ogg}} '''Acheron:''' That was my final question, thank you. We all have our paths to walk, so we shall bid our farewells.
+::::::{{DIcon|Arrow}} Will we meet again?
+::::::{{DIcon|Arrow}} You haven't told me how to leave this place...
+::::::{{A|VO chapter3 0 acheron 141.ogg}} '''Acheron:''' The golden dream is getting restless. In the coming long night, I'm afraid you will face many tribulations and witness many tragedies. And finally... your sight will only see black and white.
+::::::{{tx}}
+:::::{{DIcon|Arrow}} I would abandon it &mdash; I have already tasted the beauty of dreams.
+::::::{{A|VO chapter3 0 acheron 135.ogg}} '''Acheron:''' I know this is hard, you don't have to be hard-pressed to make a decision. As I have said... the answer is inconsequential.
+::::::{{A|VO chapter3 0 acheron 136.ogg}} '''Acheron:''' Hearing, touch, thought &mdash; through these, you gain emotions &mdash; cherish them. With emotions, we make choices. And so we return to the original question...
+::::::{{A|VO chapter3 0 acheron 137.ogg}} '''Acheron:''' {{Color|fire|nobold=1|I would ask... Do you still remember me?}}
+::::::{{DIcon|Arrow}} I seem to remember you from somewhere...
+::::::{{DIcon|Arrow}} No, this is the first time we've met.
+::::::{{A|VO chapter3 0 acheron 138.ogg}} '''Acheron:''' ...I understand.
+::::::{{A|VO chapter3 0 acheron 139.ogg}} '''Acheron:''' How interesting. For a split second, it felt like countless versions of you, alike yet distinct, gave entirely different responses.
+::::::{{A|VO chapter3 0 acheron 140.ogg}} '''Acheron:''' That was my final question, thank you. We all have our paths to walk, so we shall bid our farewells.
+::::::{{DIcon|Arrow}} Will we meet again?
+::::::{{DIcon|Arrow}} You haven't told me how to leave this place...
+::::::{{A|VO chapter3 0 acheron 141.ogg}} '''Acheron:''' The golden dream is getting restless. In the coming long night, I'm afraid you will face many tribulations and witness many tragedies. And finally... your sight will only see black and white.
+::::::{{tx}}
+:::::{{DIcon|Arrow}} I would abandon it &mdash; Trailblazing was never my intent.
+::::::{{A|VO chapter3 0 acheron 135.ogg}} '''Acheron:''' I know this is hard, you don't have to be hard-pressed to make a decision. As I have said... the answer is inconsequential.
+::::::{{A|VO chapter3 0 acheron 136.ogg}} '''Acheron:''' Hearing, touch, thought &mdash; through these, you gain emotions &mdash; cherish them. With emotions, we make choices. And so we return to the original question...
+::::::{{A|VO chapter3 0 acheron 137.ogg}} '''Acheron:''' {{Color|fire|nobold=1|I would ask... Do you still remember me?}}
+::::::{{DIcon|Arrow}} I seem to remember you from somewhere...
+::::::{{DIcon|Arrow}} No, this is the first time we've met.
+::::::{{A|VO chapter3 0 acheron 138.ogg}} '''Acheron:''' ...I understand.
+::::::{{A|VO chapter3 0 acheron 139.ogg}} '''Acheron:''' How interesting. For a split second, it felt like countless versions of you, alike yet distinct, gave entirely different responses.
+::::::{{A|VO chapter3 0 acheron 140.ogg}} '''Acheron:''' That was my final question, thank you. We all have our paths to walk, so we shall bid our farewells.
+::::::{{DIcon|Arrow}} Will we meet again?
+::::::{{DIcon|Arrow}} You haven't told me how to leave this place...
+::::::{{A|VO chapter3 0 acheron 141.ogg}} '''Acheron:''' The golden dream is getting restless. In the coming long night, I'm afraid you will face many tribulations and witness many tragedies. And finally... your sight will only see black and white.
+::::::{{tx}}
+:::::{{DIcon|Arrow}} I would blaze a trail without hesitation.
+::::::{{A|VO chapter3 0 acheron 135.ogg}} '''Acheron:''' I know this is hard, you don't have to be hard-pressed to make a decision. As I have said... the answer is inconsequential.
+::::::{{A|VO chapter3 0 acheron 136.ogg}} '''Acheron:''' Hearing, touch, thought &mdash; through these, you gain emotions &mdash; cherish them. With emotions, we make choices. And so we return to the original question...
+::::::{{A|VO chapter3 0 acheron 137.ogg}} '''Acheron:''' {{Color|fire|nobold=1|I would ask... Do you still remember me?}}
+::::::{{DIcon|Arrow}} I seem to remember you from somewhere...
+::::::{{DIcon|Arrow}} No, this is the first time we've met.
+::::::{{A|VO chapter3 0 acheron 138.ogg}} '''Acheron:''' ...I understand.
+::::::{{A|VO chapter3 0 acheron 139.ogg}} '''Acheron:''' How interesting. For a split second, it felt like countless versions of you, alike yet distinct, gave entirely different responses.
+::::::{{A|VO chapter3 0 acheron 140.ogg}} '''Acheron:''' That was my final question, thank you. We all have our paths to walk, so we shall bid our farewells.
+::::::{{DIcon|Arrow}} Will we meet again?
+::::::{{DIcon|Arrow}} You haven't told me how to leave this place...
+::::::{{A|VO chapter3 0 acheron 141.ogg}} '''Acheron:''' The golden dream is getting restless. In the coming long night, I'm afraid you will face many tribulations and witness many tragedies. And finally... your sight will only see black and white.
+::::::{{tx}}
+::::;(Return to previous option selection)
+::::{{DIcon|Arrow}} I would never want to live in a dream.
+:::::{{A|VO chapter3 0 acheron 132.ogg}} '''Acheron:''' Now... imagine if this splendid dream were fated to fall apart: Friends, family, strangers, followed by the gentle breeze, soaring birds, the stars... and ultimately, yourself.
+:::::{{A|VO chapter3 0 acheron 133.ogg}} '''Acheron:''' Everyone, and every face they remember, the joy and the heartaches, the vows sealed and those left hanging... all will inevitably march towards a predetermined ending. If you had grasped the journey's finale right from its inception...
+:::::{{A|VO chapter3 0 acheron 134.ogg}} '''Acheron:''' {{Color|fire|nobold=1|I would ask: Would you still embark on this journey?}}
+:::::{{DIcon|Arrow}} I would abandon it &mdash; the price is too dear.
+::::::{{A|VO chapter3 0 acheron 135.ogg}} '''Acheron:''' I know this is hard, you don't have to be hard-pressed to make a decision. As I have said... the answer is inconsequential.
+::::::{{A|VO chapter3 0 acheron 136.ogg}} '''Acheron:''' Hearing, touch, thought &mdash; through these, you gain emotions &mdash; cherish them. With emotions, we make choices. And so we return to the original question...
+::::::{{A|VO chapter3 0 acheron 137.ogg}} '''Acheron:''' {{Color|fire|nobold=1|I would ask... Do you still remember me?}}
+::::::{{DIcon|Arrow}} I seem to remember you from somewhere...
+::::::{{DIcon|Arrow}} No, this is the first time we've met.
+::::::{{A|VO chapter3 0 acheron 138.ogg}} '''Acheron:''' ...I understand.
+::::::{{A|VO chapter3 0 acheron 139.ogg}} '''Acheron:''' How interesting. For a split second, it felt like countless versions of you, alike yet distinct, gave entirely different responses.
+::::::{{A|VO chapter3 0 acheron 140.ogg}} '''Acheron:''' That was my final question, thank you. We all have our paths to walk, so we shall bid our farewells.
+::::::{{DIcon|Arrow}} Will we meet again?
+::::::{{DIcon|Arrow}} You haven't told me how to leave this place...
+::::::{{A|VO chapter3 0 acheron 141.ogg}} '''Acheron:''' The golden dream is getting restless. In the coming long night, I'm afraid you will face many tribulations and witness many tragedies. And finally... your sight will only see black and white.
+::::::{{tx}}
+:::::{{DIcon|Arrow}} I would abandon it &mdash; I have already tasted the beauty of dreams.
+::::::{{A|VO chapter3 0 acheron 135.ogg}} '''Acheron:''' I know this is hard, you don't have to be hard-pressed to make a decision. As I have said... the answer is inconsequential.
+::::::{{A|VO chapter3 0 acheron 136.ogg}} '''Acheron:''' Hearing, touch, thought &mdash; through these, you gain emotions &mdash; cherish them. With emotions, we make choices. And so we return to the original question...
+::::::{{A|VO chapter3 0 acheron 137.ogg}} '''Acheron:''' {{Color|fire|nobold=1|I would ask... Do you still remember me?}}
+::::::{{DIcon|Arrow}} I seem to remember you from somewhere...
+::::::{{DIcon|Arrow}} No, this is the first time we've met.
+::::::{{A|VO chapter3 0 acheron 138.ogg}} '''Acheron:''' ...I understand.
+::::::{{A|VO chapter3 0 acheron 139.ogg}} '''Acheron:''' How interesting. For a split second, it felt like countless versions of you, alike yet distinct, gave entirely different responses.
+::::::{{A|VO chapter3 0 acheron 140.ogg}} '''Acheron:''' That was my final question, thank you. We all have our paths to walk, so we shall bid our farewells.
+::::::{{DIcon|Arrow}} Will we meet again?
+::::::{{DIcon|Arrow}} You haven't told me how to leave this place...
+::::::{{A|VO chapter3 0 acheron 141.ogg}} '''Acheron:''' The golden dream is getting restless. In the coming long night, I'm afraid you will face many tribulations and witness many tragedies. And finally... your sight will only see black and white.
+::::::{{tx}}
+:::::{{DIcon|Arrow}} I would abandon it &mdash; Trailblazing was never my intent.
+::::::{{A|VO chapter3 0 acheron 135.ogg}} '''Acheron:''' I know this is hard, you don't have to be hard-pressed to make a decision. As I have said... the answer is inconsequential.
+::::::{{A|VO chapter3 0 acheron 136.ogg}} '''Acheron:''' Hearing, touch, thought &mdash; through these, you gain emotions &mdash; cherish them. With emotions, we make choices. And so we return to the original question...
+::::::{{A|VO chapter3 0 acheron 137.ogg}} '''Acheron:''' {{Color|fire|nobold=1|I would ask... Do you still remember me?}}
+::::::{{DIcon|Arrow}} I seem to remember you from somewhere...
+::::::{{DIcon|Arrow}} No, this is the first time we've met.
+::::::{{A|VO chapter3 0 acheron 138.ogg}} '''Acheron:''' ...I understand.
+::::::{{A|VO chapter3 0 acheron 139.ogg}} '''Acheron:''' How interesting. For a split second, it felt like countless versions of you, alike yet distinct, gave entirely different responses.
+::::::{{A|VO chapter3 0 acheron 140.ogg}} '''Acheron:''' That was my final question, thank you. We all have our paths to walk, so we shall bid our farewells.
+::::::{{DIcon|Arrow}} Will we meet again?
+::::::{{DIcon|Arrow}} You haven't told me how to leave this place...
+::::::{{A|VO chapter3 0 acheron 141.ogg}} '''Acheron:''' The golden dream is getting restless. In the coming long night, I'm afraid you will face many tribulations and witness many tragedies. And finally... your sight will only see black and white.
+::::::{{tx}}
+:::::{{DIcon|Arrow}} I would blaze a trail without hesitation.
+::::::{{A|VO chapter3 0 acheron 135.ogg}} '''Acheron:''' I know this is hard, you don't have to be hard-pressed to make a decision. As I have said... the answer is inconsequential.
+::::::{{A|VO chapter3 0 acheron 136.ogg}} '''Acheron:''' Hearing, touch, thought &mdash; through these, you gain emotions &mdash; cherish them. With emotions, we make choices. And so we return to the original question...
+::::::{{A|VO chapter3 0 acheron 137.ogg}} '''Acheron:''' {{Color|fire|nobold=1|I would ask... Do you still remember me?}}
+::::::{{DIcon|Arrow}} I seem to remember you from somewhere...
+::::::{{DIcon|Arrow}} No, this is the first time we've met.
+::::::{{A|VO chapter3 0 acheron 138.ogg}} '''Acheron:''' ...I understand.
+::::::{{A|VO chapter3 0 acheron 139.ogg}} '''Acheron:''' How interesting. For a split second, it felt like countless versions of you, alike yet distinct, gave entirely different responses.
+::::::{{A|VO chapter3 0 acheron 140.ogg}} '''Acheron:''' That was my final question, thank you. We all have our paths to walk, so we shall bid our farewells.
+::::::{{DIcon|Arrow}} Will we meet again?
+::::::{{DIcon|Arrow}} You haven't told me how to leave this place...
+::::::{{A|VO chapter3 0 acheron 141.ogg}} '''Acheron:''' The golden dream is getting restless. In the coming long night, I'm afraid you will face many tribulations and witness many tragedies. And finally... your sight will only see black and white.
+::::::{{tx}}
+::::;(Return to previous option selection)
+:::;(Return to previous option selection)
+::;(Return to previous option selection)
+::{{DIcon|Arrow}} What do you mean?
+:::{{A|VO chapter3 0 acheron 126 m.ogg}} {{A|VO chapter3 0 acheron 126 f.ogg}} '''Acheron:''' {{MC|m={{Color|#ff3a|You evoke memories of an old friend. In the haze of my recollections, he crossed blades with me, much like this surreal dreamscape where we stood close, yet forever out of reach.}}|f={{Color|#ff3a|You evoke memories of an old friend. In the haze of my recollections, she stood shoulder to shoulder with me, much like this surreal dreamscape where we stood close, yet forever out of reach.}}}}
+:::{{A|VO chapter3 0 acheron 127.ogg}} '''Acheron:''' May I ask you a few more questions? I... tend to forget things &mdash; which is why, rather than memories, I'm accustomed to using my emotions to capture what I normally wouldn't otherwise. The answer is inconsequential. Your spontaneous reaction is what matters.
+:::{{A|VO chapter3 0 acheron 128.ogg}} '''Acheron:''' For instance, when you awaken in your room, your lips speak several names. Are they your companions? Family? Enemies? You seem to have forged unbreakable bonds with many people and many incidents...
+:::{{A|VO chapter3 0 acheron 129.ogg}} '''Acheron:''' {{Color|fire|nobold=1|Might I ask if you fear losing these bonds?}}
+:::{{DIcon|Arrow}} I cannot bear such a fear.
+:::{{DIcon|Arrow}} If it means losing them, I would.
+:::{{DIcon|Arrow}} If it means that I will disappear, I would.
+:::{{DIcon|Arrow}} I feel no fear.
+:::{{DIcon|Arrow}} I don't know.
+:::{{A|VO chapter3 0 acheron 130.ogg}} '''Acheron:''' Mm... Then, if there was a vast dreamscape, so lifelike it's indistinguishable from reality. There, no one faces life's separations or deaths. Everyone attains their deserved happiness and lives joyfully ever after.
+:::{{A|VO chapter3 0 acheron 131.ogg}} '''Acheron:''' {{Color|fire|nobold=1|I would ask: Would you wish to stay?}}
+:::{{DIcon|Arrow}} I would, no matter the cost.
+::::{{A|VO chapter3 0 acheron 132.ogg}} '''Acheron:''' Now... imagine if this splendid dream were fated to fall apart: Friends, family, strangers, followed by the gentle breeze, soaring birds, the stars... and ultimately, yourself.
+::::{{A|VO chapter3 0 acheron 133.ogg}} '''Acheron:''' Everyone, and every face they remember, the joy and the heartaches, the vows sealed and those left hanging... all will inevitably march towards a predetermined ending. If you had grasped the journey's finale right from its inception...
+::::{{A|VO chapter3 0 acheron 134.ogg}} '''Acheron:''' {{Color|fire|nobold=1|I would ask: Would you still embark on this journey?}}
+::::{{DIcon|Arrow}} I would abandon it &mdash; the price is too dear.
+::::{{DIcon|Arrow}} I would abandon it &mdash; I have already tasted the beauty of dreams.
+::::{{DIcon|Arrow}} I would abandon it &mdash; Trailblazing was never my intent.
+::::{{DIcon|Arrow}} I would blaze a trail without hesitation.
+::::{{DIcon|Arrow}} I don't know.
+::::{{A|VO chapter3 0 acheron 135.ogg}} '''Acheron:''' I know this is hard, you don't have to be hard-pressed to make a decision. As I have said... the answer is inconsequential.
+::::{{A|VO chapter3 0 acheron 136.ogg}} '''Acheron:''' Hearing, touch, thought &mdash; through these, you gain emotions &mdash; cherish them. With emotions, we make choices. And so we return to the original question...
+::::{{A|VO chapter3 0 acheron 137.ogg}} '''Acheron:''' {{Color|fire|nobold=1|I would ask... Do you still remember me?}}
+::::{{DIcon|Arrow}} I seem to remember you from somewhere...
+::::{{DIcon|Arrow}} No, this is the first time we've met.
+::::{{A|VO chapter3 0 acheron 138.ogg}} '''Acheron:''' ...I understand.
+::::{{A|VO chapter3 0 acheron 139.ogg}} '''Acheron:''' How interesting. For a split second, it felt like countless versions of you, alike yet distinct, gave entirely different responses.
+::::{{A|VO chapter3 0 acheron 140.ogg}} '''Acheron:''' That was my final question, thank you. We all have our paths to walk, so we shall bid our farewells.
+::::{{DIcon|Arrow}} Will we meet again?
+::::{{DIcon|Arrow}} You haven't told me how to leave this place...
+::::{{A|VO chapter3 0 acheron 141.ogg}} '''Acheron:''' The golden dream is getting restless. In the coming long night, I'm afraid you will face many tribulations and witness many tragedies. And finally... your sight will only see black and white.
+::::{{tx}}
+:::{{DIcon|Arrow}} If I didn't have to pay any price, I would.
+::::{{A|VO chapter3 0 acheron 132.ogg}} '''Acheron:''' Now... imagine if this splendid dream were fated to fall apart: Friends, family, strangers, followed by the gentle breeze, soaring birds, the stars... and ultimately, yourself.
+::::{{A|VO chapter3 0 acheron 133.ogg}} '''Acheron:''' Everyone, and every face they remember, the joy and the heartaches, the vows sealed and those left hanging... all will inevitably march towards a predetermined ending. If you had grasped the journey's finale right from its inception...
+::::{{A|VO chapter3 0 acheron 134.ogg}} '''Acheron:''' {{Color|fire|nobold=1|I would ask: Would you still embark on this journey?}}
+::::{{DIcon|Arrow}} I would abandon it &mdash; the price is too dear.
+::::{{DIcon|Arrow}} I would abandon it &mdash; I have already tasted the beauty of dreams.
+::::{{DIcon|Arrow}} I would abandon it &mdash; Trailblazing was never my intent.
+::::{{DIcon|Arrow}} I would blaze a trail without hesitation.
+::::{{DIcon|Arrow}} I don't know.
+::::{{A|VO chapter3 0 acheron 135.ogg}} '''Acheron:''' I know this is hard, you don't have to be hard-pressed to make a decision. As I have said... the answer is inconsequential.
+::::{{A|VO chapter3 0 acheron 136.ogg}} '''Acheron:''' Hearing, touch, thought &mdash; through these, you gain emotions &mdash; cherish them. With emotions, we make choices. And so we return to the original question...
+::::{{A|VO chapter3 0 acheron 137.ogg}} '''Acheron:''' {{Color|fire|nobold=1|I would ask... Do you still remember me?}}
+::::{{DIcon|Arrow}} I seem to remember you from somewhere...
+::::{{DIcon|Arrow}} No, this is the first time we've met.
+::::{{A|VO chapter3 0 acheron 138.ogg}} '''Acheron:''' ...I understand.
+::::{{A|VO chapter3 0 acheron 139.ogg}} '''Acheron:''' How interesting. For a split second, it felt like countless versions of you, alike yet distinct, gave entirely different responses.
+::::{{A|VO chapter3 0 acheron 140.ogg}} '''Acheron:''' That was my final question, thank you. We all have our paths to walk, so we shall bid our farewells.
+::::{{DIcon|Arrow}} Will we meet again?
+::::{{DIcon|Arrow}} You haven't told me how to leave this place...
+::::{{A|VO chapter3 0 acheron 141.ogg}} '''Acheron:''' The golden dream is getting restless. In the coming long night, I'm afraid you will face many tribulations and witness many tragedies. And finally... your sight will only see black and white.
+::::{{tx}}
+:::{{DIcon|Arrow}} That depends on the price I'd have to pay.
+::::{{A|VO chapter3 0 acheron 132.ogg}} '''Acheron:''' Now... imagine if this splendid dream were fated to fall apart: Friends, family, strangers, followed by the gentle breeze, soaring birds, the stars... and ultimately, yourself.
+::::{{A|VO chapter3 0 acheron 133.ogg}} '''Acheron:''' Everyone, and every face they remember, the joy and the heartaches, the vows sealed and those left hanging... all will inevitably march towards a predetermined ending. If you had grasped the journey's finale right from its inception...
+::::{{A|VO chapter3 0 acheron 134.ogg}} '''Acheron:''' {{Color|fire|nobold=1|I would ask: Would you still embark on this journey?}}
+::::{{DIcon|Arrow}} I would abandon it &mdash; the price is too dear.
+::::{{DIcon|Arrow}} I would abandon it &mdash; I have already tasted the beauty of dreams.
+::::{{DIcon|Arrow}} I would abandon it &mdash; Trailblazing was never my intent.
+::::{{DIcon|Arrow}} I would blaze a trail without hesitation.
+::::{{DIcon|Arrow}} I don't know.
+::::{{A|VO chapter3 0 acheron 135.ogg}} '''Acheron:''' I know this is hard, you don't have to be hard-pressed to make a decision. As I have said... the answer is inconsequential.
+::::{{A|VO chapter3 0 acheron 136.ogg}} '''Acheron:''' Hearing, touch, thought &mdash; through these, you gain emotions &mdash; cherish them. With emotions, we make choices. And so we return to the original question...
+::::{{A|VO chapter3 0 acheron 137.ogg}} '''Acheron:''' {{Color|fire|nobold=1|I would ask... Do you still remember me?}}
+::::{{DIcon|Arrow}} I seem to remember you from somewhere...
+::::{{DIcon|Arrow}} No, this is the first time we've met.
+::::{{A|VO chapter3 0 acheron 138.ogg}} '''Acheron:''' ...I understand.
+::::{{A|VO chapter3 0 acheron 139.ogg}} '''Acheron:''' How interesting. For a split second, it felt like countless versions of you, alike yet distinct, gave entirely different responses.
+::::{{A|VO chapter3 0 acheron 140.ogg}} '''Acheron:''' That was my final question, thank you. We all have our paths to walk, so we shall bid our farewells.
+::::{{DIcon|Arrow}} Will we meet again?
+::::{{DIcon|Arrow}} You haven't told me how to leave this place...
+::::{{A|VO chapter3 0 acheron 141.ogg}} '''Acheron:''' The golden dream is getting restless. In the coming long night, I'm afraid you will face many tribulations and witness many tragedies. And finally... your sight will only see black and white.
+::::{{tx}}
+:::{{DIcon|Arrow}} I would never want to live in a dream.
+::::{{A|VO chapter3 0 acheron 132.ogg}} '''Acheron:''' Now... imagine if this splendid dream were fated to fall apart: Friends, family, strangers, followed by the gentle breeze, soaring birds, the stars... and ultimately, yourself.
+::::{{A|VO chapter3 0 acheron 133.ogg}} '''Acheron:''' Everyone, and every face they remember, the joy and the heartaches, the vows sealed and those left hanging... all will inevitably march towards a predetermined ending. If you had grasped the journey's finale right from its inception...
+::::{{A|VO chapter3 0 acheron 134.ogg}} '''Acheron:''' {{Color|fire|nobold=1|I would ask: Would you still embark on this journey?}}
+::::{{DIcon|Arrow}} I would abandon it &mdash; the price is too dear.
+::::{{DIcon|Arrow}} I would abandon it &mdash; I have already tasted the beauty of dreams.
+::::{{DIcon|Arrow}} I would abandon it &mdash; Trailblazing was never my intent.
+::::{{DIcon|Arrow}} I would blaze a trail without hesitation.
+::::{{DIcon|Arrow}} I don't know.
+::::{{A|VO chapter3 0 acheron 135.ogg}} '''Acheron:''' I know this is hard, you don't have to be hard-pressed to make a decision. As I have said... the answer is inconsequential.
+::::{{A|VO chapter3 0 acheron 136.ogg}} '''Acheron:''' Hearing, touch, thought &mdash; through these, you gain emotions &mdash; cherish them. With emotions, we make choices. And so we return to the original question...
+::::{{A|VO chapter3 0 acheron 137.ogg}} '''Acheron:''' {{Color|fire|nobold=1|I would ask... Do you still remember me?}}
+::::{{DIcon|Arrow}} I seem to remember you from somewhere...
+::::{{DIcon|Arrow}} No, this is the first time we've met.
+::::{{A|VO chapter3 0 acheron 138.ogg}} '''Acheron:''' ...I understand.
+::::{{A|VO chapter3 0 acheron 139.ogg}} '''Acheron:''' How interesting. For a split second, it felt like countless versions of you, alike yet distinct, gave entirely different responses.
+::::{{A|VO chapter3 0 acheron 140.ogg}} '''Acheron:''' That was my final question, thank you. We all have our paths to walk, so we shall bid our farewells.
+::::{{DIcon|Arrow}} Will we meet again?
+::::{{DIcon|Arrow}} You haven't told me how to leave this place...
+::::{{A|VO chapter3 0 acheron 141.ogg}} '''Acheron:''' The golden dream is getting restless. In the coming long night, I'm afraid you will face many tribulations and witness many tragedies. And finally... your sight will only see black and white.
+::::{{tx}}
+:::{{DIcon|Arrow}} I don't know.
+::::{{A|VO chapter3 0 acheron 132.ogg}} '''Acheron:''' Now... imagine if this splendid dream were fated to fall apart: Friends, family, strangers, followed by the gentle breeze, soaring birds, the stars... and ultimately, yourself.
+::::{{A|VO chapter3 0 acheron 133.ogg}} '''Acheron:''' Everyone, and every face they remember, the joy and the heartaches, the vows sealed and those left hanging... all will inevitably march towards a predetermined ending. If you had grasped the journey's finale right from its inception...
+::::{{A|VO chapter3 0 acheron 134.ogg}} '''Acheron:''' {{Color|fire|nobold=1|I would ask: Would you still embark on this journey?}}
+::::{{DIcon|Arrow}} I would abandon it &mdash; the price is too dear.
+:::::{{A|VO chapter3 0 acheron 135.ogg}} '''Acheron:''' I know this is hard, you don't have to be hard-pressed to make a decision. As I have said... the answer is inconsequential.
+:::::{{A|VO chapter3 0 acheron 136.ogg}} '''Acheron:''' Hearing, touch, thought &mdash; through these, you gain emotions &mdash; cherish them. With emotions, we make choices. And so we return to the original question...
+:::::{{A|VO chapter3 0 acheron 137.ogg}} '''Acheron:''' {{Color|fire|nobold=1|I would ask... Do you still remember me?}}
+:::::{{DIcon|Arrow}} I seem to remember you from somewhere...
+:::::{{DIcon|Arrow}} No, this is the first time we've met.
+:::::{{A|VO chapter3 0 acheron 138.ogg}} '''Acheron:''' ...I understand.
+:::::{{A|VO chapter3 0 acheron 139.ogg}} '''Acheron:''' How interesting. For a split second, it felt like countless versions of you, alike yet distinct, gave entirely different responses.
+:::::{{A|VO chapter3 0 acheron 140.ogg}} '''Acheron:''' That was my final question, thank you. We all have our paths to walk, so we shall bid our farewells.
+:::::{{DIcon|Arrow}} Will we meet again?
+:::::{{DIcon|Arrow}} You haven't told me how to leave this place...
+:::::{{A|VO chapter3 0 acheron 141.ogg}} '''Acheron:''' The golden dream is getting restless. In the coming long night, I'm afraid you will face many tribulations and witness many tragedies. And finally... your sight will only see black and white.
+:::::{{tx}}
+::::{{DIcon|Arrow}} I would abandon it &mdash; I have already tasted the beauty of dreams.
+:::::{{A|VO chapter3 0 acheron 135.ogg}} '''Acheron:''' I know this is hard, you don't have to be hard-pressed to make a decision. As I have said... the answer is inconsequential.
+:::::{{A|VO chapter3 0 acheron 136.ogg}} '''Acheron:''' Hearing, touch, thought &mdash; through these, you gain emotions &mdash; cherish them. With emotions, we make choices. And so we return to the original question...
+:::::{{A|VO chapter3 0 acheron 137.ogg}} '''Acheron:''' {{Color|fire|nobold=1|I would ask... Do you still remember me?}}
+:::::{{DIcon|Arrow}} I seem to remember you from somewhere...
+:::::{{DIcon|Arrow}} No, this is the first time we've met.
+:::::{{A|VO chapter3 0 acheron 138.ogg}} '''Acheron:''' ...I understand.
+:::::{{A|VO chapter3 0 acheron 139.ogg}} '''Acheron:''' How interesting. For a split second, it felt like countless versions of you, alike yet distinct, gave entirely different responses.
+:::::{{A|VO chapter3 0 acheron 140.ogg}} '''Acheron:''' That was my final question, thank you. We all have our paths to walk, so we shall bid our farewells.
+:::::{{DIcon|Arrow}} Will we meet again?
+:::::{{DIcon|Arrow}} You haven't told me how to leave this place...
+:::::{{A|VO chapter3 0 acheron 141.ogg}} '''Acheron:''' The golden dream is getting restless. In the coming long night, I'm afraid you will face many tribulations and witness many tragedies. And finally... your sight will only see black and white.
+:::::{{tx}}
+::::{{DIcon|Arrow}} I would abandon it &mdash; Trailblazing was never my intent.
+:::::{{A|VO chapter3 0 acheron 135.ogg}} '''Acheron:''' I know this is hard, you don't have to be hard-pressed to make a decision. As I have said... the answer is inconsequential.
+:::::{{A|VO chapter3 0 acheron 136.ogg}} '''Acheron:''' Hearing, touch, thought &mdash; through these, you gain emotions &mdash; cherish them. With emotions, we make choices. And so we return to the original question...
+:::::{{A|VO chapter3 0 acheron 137.ogg}} '''Acheron:''' {{Color|fire|nobold=1|I would ask... Do you still remember me?}}
+:::::{{DIcon|Arrow}} I seem to remember you from somewhere...
+:::::{{DIcon|Arrow}} No, this is the first time we've met.
+:::::{{A|VO chapter3 0 acheron 138.ogg}} '''Acheron:''' ...I understand.
+:::::{{A|VO chapter3 0 acheron 139.ogg}} '''Acheron:''' How interesting. For a split second, it felt like countless versions of you, alike yet distinct, gave entirely different responses.
+:::::{{A|VO chapter3 0 acheron 140.ogg}} '''Acheron:''' That was my final question, thank you. We all have our paths to walk, so we shall bid our farewells.
+:::::{{DIcon|Arrow}} Will we meet again?
+:::::{{DIcon|Arrow}} You haven't told me how to leave this place...
+:::::{{A|VO chapter3 0 acheron 141.ogg}} '''Acheron:''' The golden dream is getting restless. In the coming long night, I'm afraid you will face many tribulations and witness many tragedies. And finally... your sight will only see black and white.
+:::::{{tx}}
+::::{{DIcon|Arrow}} I would blaze a trail without hesitation.
+:::::{{A|VO chapter3 0 acheron 135.ogg}} '''Acheron:''' I know this is hard, you don't have to be hard-pressed to make a decision. As I have said... the answer is inconsequential.
+:::::{{A|VO chapter3 0 acheron 136.ogg}} '''Acheron:''' Hearing, touch, thought &mdash; through these, you gain emotions &mdash; cherish them. With emotions, we make choices. And so we return to the original question...
+:::::{{A|VO chapter3 0 acheron 137.ogg}} '''Acheron:''' {{Color|fire|nobold=1|I would ask... Do you still remember me?}}
+:::::{{DIcon|Arrow}} I seem to remember you from somewhere...
+:::::{{DIcon|Arrow}} No, this is the first time we've met.
+:::::{{A|VO chapter3 0 acheron 138.ogg}} '''Acheron:''' ...I understand.
+:::::{{A|VO chapter3 0 acheron 139.ogg}} '''Acheron:''' How interesting. For a split second, it felt like countless versions of you, alike yet distinct, gave entirely different responses.
+:::::{{A|VO chapter3 0 acheron 140.ogg}} '''Acheron:''' That was my final question, thank you. We all have our paths to walk, so we shall bid our farewells.
+:::::{{DIcon|Arrow}} Will we meet again?
+:::::{{DIcon|Arrow}} You haven't told me how to leave this place...
+:::::{{A|VO chapter3 0 acheron 141.ogg}} '''Acheron:''' The golden dream is getting restless. In the coming long night, I'm afraid you will face many tribulations and witness many tragedies. And finally... your sight will only see black and white.
+:::::{{tx}}
+::{{DIcon|Arrow}} What's going on...
+:::{{A|VO chapter3 0 acheron 126 m.ogg}} {{A|VO chapter3 0 acheron 126 f.ogg}} '''Acheron:''' {{MC|m={{Color|#ff3a|You evoke memories of an old friend. In the haze of my recollections, he crossed blades with me, much like this surreal dreamscape where we stood close, yet forever out of reach.}}|f={{Color|#ff3a|You evoke memories of an old friend. In the haze of my recollections, she stood shoulder to shoulder with me, much like this surreal dreamscape where we stood close, yet forever out of reach.}}}}
+:::{{A|VO chapter3 0 acheron 127.ogg}} '''Acheron:''' May I ask you a few more questions? I... tend to forget things &mdash; which is why, rather than memories, I'm accustomed to using my emotions to capture what I normally wouldn't otherwise. The answer is inconsequential. Your spontaneous reaction is what matters.
+:::{{A|VO chapter3 0 acheron 128.ogg}} '''Acheron:''' For instance, when you awaken in your room, your lips speak several names. Are they your companions? Family? Enemies? You seem to have forged unbreakable bonds with many people and many incidents...
+:::{{A|VO chapter3 0 acheron 129.ogg}} '''Acheron:''' {{Color|fire|nobold=1|Might I ask if you fear losing these bonds?}}
+:::{{DIcon|Arrow}} I cannot bear such a fear.
+:::{{DIcon|Arrow}} If it means losing them, I would.
+:::{{DIcon|Arrow}} If it means that I will disappear, I would.
+:::{{DIcon|Arrow}} I feel no fear.
+:::{{DIcon|Arrow}} I don't know.
+:::{{A|VO chapter3 0 acheron 130.ogg}} '''Acheron:''' Mm... Then, if there was a vast dreamscape, so lifelike it's indistinguishable from reality. There, no one faces life's separations or deaths. Everyone attains their deserved happiness and lives joyfully ever after.
+:::{{A|VO chapter3 0 acheron 131.ogg}} '''Acheron:''' {{Color|fire|nobold=1|I would ask: Would you wish to stay?}}
+:::{{DIcon|Arrow}} I would, no matter the cost.
+::::{{A|VO chapter3 0 acheron 132.ogg}} '''Acheron:''' Now... imagine if this splendid dream were fated to fall apart: Friends, family, strangers, followed by the gentle breeze, soaring birds, the stars... and ultimately, yourself.
+::::{{A|VO chapter3 0 acheron 133.ogg}} '''Acheron:''' Everyone, and every face they remember, the joy and the heartaches, the vows sealed and those left hanging... all will inevitably march towards a predetermined ending. If you had grasped the journey's finale right from its inception...
+::::{{A|VO chapter3 0 acheron 134.ogg}} '''Acheron:''' {{Color|fire|nobold=1|I would ask: Would you still embark on this journey?}}
+::::{{DIcon|Arrow}} I would abandon it &mdash; the price is too dear.
+::::{{DIcon|Arrow}} I would abandon it &mdash; I have already tasted the beauty of dreams.
+::::{{DIcon|Arrow}} I would abandon it &mdash; Trailblazing was never my intent.
+::::{{DIcon|Arrow}} I would blaze a trail without hesitation.
+::::{{DIcon|Arrow}} I don't know.
+::::{{A|VO chapter3 0 acheron 135.ogg}} '''Acheron:''' I know this is hard, you don't have to be hard-pressed to make a decision. As I have said... the answer is inconsequential.
+::::{{A|VO chapter3 0 acheron 136.ogg}} '''Acheron:''' Hearing, touch, thought &mdash; through these, you gain emotions &mdash; cherish them. With emotions, we make choices. And so we return to the original question...
+::::{{A|VO chapter3 0 acheron 137.ogg}} '''Acheron:''' {{Color|fire|nobold=1|I would ask... Do you still remember me?}}
+::::{{DIcon|Arrow}} I seem to remember you from somewhere...
+::::{{DIcon|Arrow}} No, this is the first time we've met.
+::::{{A|VO chapter3 0 acheron 138.ogg}} '''Acheron:''' ...I understand.
+::::{{A|VO chapter3 0 acheron 139.ogg}} '''Acheron:''' How interesting. For a split second, it felt like countless versions of you, alike yet distinct, gave entirely different responses.
+::::{{A|VO chapter3 0 acheron 140.ogg}} '''Acheron:''' That was my final question, thank you. We all have our paths to walk, so we shall bid our farewells.
+::::{{DIcon|Arrow}} Will we meet again?
+::::{{DIcon|Arrow}} You haven't told me how to leave this place...
+::::{{A|VO chapter3 0 acheron 141.ogg}} '''Acheron:''' The golden dream is getting restless. In the coming long night, I'm afraid you will face many tribulations and witness many tragedies. And finally... your sight will only see black and white.
+::::{{tx}}
+:::{{DIcon|Arrow}} If I didn't have to pay any price, I would.
+::::{{A|VO chapter3 0 acheron 132.ogg}} '''Acheron:''' Now... imagine if this splendid dream were fated to fall apart: Friends, family, strangers, followed by the gentle breeze, soaring birds, the stars... and ultimately, yourself.
+::::{{A|VO chapter3 0 acheron 133.ogg}} '''Acheron:''' Everyone, and every face they remember, the joy and the heartaches, the vows sealed and those left hanging... all will inevitably march towards a predetermined ending. If you had grasped the journey's finale right from its inception...
+::::{{A|VO chapter3 0 acheron 134.ogg}} '''Acheron:''' {{Color|fire|nobold=1|I would ask: Would you still embark on this journey?}}
+::::{{DIcon|Arrow}} I would abandon it &mdash; the price is too dear.
+::::{{DIcon|Arrow}} I would abandon it &mdash; I have already tasted the beauty of dreams.
+::::{{DIcon|Arrow}} I would abandon it &mdash; Trailblazing was never my intent.
+::::{{DIcon|Arrow}} I would blaze a trail without hesitation.
+::::{{DIcon|Arrow}} I don't know.
+::::{{A|VO chapter3 0 acheron 135.ogg}} '''Acheron:''' I know this is hard, you don't have to be hard-pressed to make a decision. As I have said... the answer is inconsequential.
+::::{{A|VO chapter3 0 acheron 136.ogg}} '''Acheron:''' Hearing, touch, thought &mdash; through these, you gain emotions &mdash; cherish them. With emotions, we make choices. And so we return to the original question...
+::::{{A|VO chapter3 0 acheron 137.ogg}} '''Acheron:''' {{Color|fire|nobold=1|I would ask... Do you still remember me?}}
+::::{{DIcon|Arrow}} I seem to remember you from somewhere...
+::::{{DIcon|Arrow}} No, this is the first time we've met.
+::::{{A|VO chapter3 0 acheron 138.ogg}} '''Acheron:''' ...I understand.
+::::{{A|VO chapter3 0 acheron 139.ogg}} '''Acheron:''' How interesting. For a split second, it felt like countless versions of you, alike yet distinct, gave entirely different responses.
+::::{{A|VO chapter3 0 acheron 140.ogg}} '''Acheron:''' That was my final question, thank you. We all have our paths to walk, so we shall bid our farewells.
+::::{{DIcon|Arrow}} Will we meet again?
+::::{{DIcon|Arrow}} You haven't told me how to leave this place...
+::::{{A|VO chapter3 0 acheron 141.ogg}} '''Acheron:''' The golden dream is getting restless. In the coming long night, I'm afraid you will face many tribulations and witness many tragedies. And finally... your sight will only see black and white.
+::::{{tx}}
+:::{{DIcon|Arrow}} That depends on the price I'd have to pay.
+::::{{A|VO chapter3 0 acheron 132.ogg}} '''Acheron:''' Now... imagine if this splendid dream were fated to fall apart: Friends, family, strangers, followed by the gentle breeze, soaring birds, the stars... and ultimately, yourself.
+::::{{A|VO chapter3 0 acheron 133.ogg}} '''Acheron:''' Everyone, and every face they remember, the joy and the heartaches, the vows sealed and those left hanging... all will inevitably march towards a predetermined ending. If you had grasped the journey's finale right from its inception...
+::::{{A|VO chapter3 0 acheron 134.ogg}} '''Acheron:''' {{Color|fire|nobold=1|I would ask: Would you still embark on this journey?}}
+::::{{DIcon|Arrow}} I would abandon it &mdash; the price is too dear.
+::::{{DIcon|Arrow}} I would abandon it &mdash; I have already tasted the beauty of dreams.
+::::{{DIcon|Arrow}} I would abandon it &mdash; Trailblazing was never my intent.
+::::{{DIcon|Arrow}} I would blaze a trail without hesitation.
+::::{{DIcon|Arrow}} I don't know.
+::::{{A|VO chapter3 0 acheron 135.ogg}} '''Acheron:''' I know this is hard, you don't have to be hard-pressed to make a decision. As I have said... the answer is inconsequential.
+::::{{A|VO chapter3 0 acheron 136.ogg}} '''Acheron:''' Hearing, touch, thought &mdash; through these, you gain emotions &mdash; cherish them. With emotions, we make choices. And so we return to the original question...
+::::{{A|VO chapter3 0 acheron 137.ogg}} '''Acheron:''' {{Color|fire|nobold=1|I would ask... Do you still remember me?}}
+::::{{DIcon|Arrow}} I seem to remember you from somewhere...
+::::{{DIcon|Arrow}} No, this is the first time we've met.
+::::{{A|VO chapter3 0 acheron 138.ogg}} '''Acheron:''' ...I understand.
+::::{{A|VO chapter3 0 acheron 139.ogg}} '''Acheron:''' How interesting. For a split second, it felt like countless versions of you, alike yet distinct, gave entirely different responses.
+::::{{A|VO chapter3 0 acheron 140.ogg}} '''Acheron:''' That was my final question, thank you. We all have our paths to walk, so we shall bid our farewells.
+::::{{DIcon|Arrow}} Will we meet again?
+::::{{DIcon|Arrow}} You haven't told me how to leave this place...
+::::{{A|VO chapter3 0 acheron 141.ogg}} '''Acheron:''' The golden dream is getting restless. In the coming long night, I'm afraid you will face many tribulations and witness many tragedies. And finally... your sight will only see black and white.
+::::{{tx}}
+:::{{DIcon|Arrow}} I would never want to live in a dream.
+::::{{A|VO chapter3 0 acheron 132.ogg}} '''Acheron:''' Now... imagine if this splendid dream were fated to fall apart: Friends, family, strangers, followed by the gentle breeze, soaring birds, the stars... and ultimately, yourself.
+::::{{A|VO chapter3 0 acheron 133.ogg}} '''Acheron:''' Everyone, and every face they remember, the joy and the heartaches, the vows sealed and those left hanging... all will inevitably march towards a predetermined ending. If you had grasped the journey's finale right from its inception...
+::::{{A|VO chapter3 0 acheron 134.ogg}} '''Acheron:''' {{Color|fire|nobold=1|I would ask: Would you still embark on this journey?}}
+::::{{DIcon|Arrow}} I would abandon it &mdash; the price is too dear.
+::::{{DIcon|Arrow}} I would abandon it &mdash; I have already tasted the beauty of dreams.
+::::{{DIcon|Arrow}} I would abandon it &mdash; Trailblazing was never my intent.
+::::{{DIcon|Arrow}} I would blaze a trail without hesitation.
+::::{{DIcon|Arrow}} I don't know.
+::::{{A|VO chapter3 0 acheron 135.ogg}} '''Acheron:''' I know this is hard, you don't have to be hard-pressed to make a decision. As I have said... the answer is inconsequential.
+::::{{A|VO chapter3 0 acheron 136.ogg}} '''Acheron:''' Hearing, touch, thought &mdash; through these, you gain emotions &mdash; cherish them. With emotions, we make choices. And so we return to the original question...
+::::{{A|VO chapter3 0 acheron 137.ogg}} '''Acheron:''' {{Color|fire|nobold=1|I would ask... Do you still remember me?}}
+::::{{DIcon|Arrow}} I seem to remember you from somewhere...
+::::{{DIcon|Arrow}} No, this is the first time we've met.
+::::{{A|VO chapter3 0 acheron 138.ogg}} '''Acheron:''' ...I understand.
+::::{{A|VO chapter3 0 acheron 139.ogg}} '''Acheron:''' How interesting. For a split second, it felt like countless versions of you, alike yet distinct, gave entirely different responses.
+::::{{A|VO chapter3 0 acheron 140.ogg}} '''Acheron:''' That was my final question, thank you. We all have our paths to walk, so we shall bid our farewells.
+::::{{DIcon|Arrow}} Will we meet again?
+::::{{DIcon|Arrow}} You haven't told me how to leave this place...
+::::{{A|VO chapter3 0 acheron 141.ogg}} '''Acheron:''' The golden dream is getting restless. In the coming long night, I'm afraid you will face many tribulations and witness many tragedies. And finally... your sight will only see black and white.
+::::{{tx}}
+:::{{DIcon|Arrow}} I don't know.
+::::{{A|VO chapter3 0 acheron 132.ogg}} '''Acheron:''' Now... imagine if this splendid dream were fated to fall apart: Friends, family, strangers, followed by the gentle breeze, soaring birds, the stars... and ultimately, yourself.
+::::{{A|VO chapter3 0 acheron 133.ogg}} '''Acheron:''' Everyone, and every face they remember, the joy and the heartaches, the vows sealed and those left hanging... all will inevitably march towards a predetermined ending. If you had grasped the journey's finale right from its inception...
+::::{{A|VO chapter3 0 acheron 134.ogg}} '''Acheron:''' {{Color|fire|nobold=1|I would ask: Would you still embark on this journey?}}
+::::{{DIcon|Arrow}} I would abandon it &mdash; the price is too dear.
+:::::{{A|VO chapter3 0 acheron 135.ogg}} '''Acheron:''' I know this is hard, you don't have to be hard-pressed to make a decision. As I have said... the answer is inconsequential.
+:::::{{A|VO chapter3 0 acheron 136.ogg}} '''Acheron:''' Hearing, touch, thought &mdash; through these, you gain emotions &mdash; cherish them. With emotions, we make choices. And so we return to the original question...
+:::::{{A|VO chapter3 0 acheron 137.ogg}} '''Acheron:''' {{Color|fire|nobold=1|I would ask... Do you still remember me?}}
+:::::{{DIcon|Arrow}} I seem to remember you from somewhere...
+:::::{{DIcon|Arrow}} No, this is the first time we've met.
+:::::{{A|VO chapter3 0 acheron 138.ogg}} '''Acheron:''' ...I understand.
+:::::{{A|VO chapter3 0 acheron 139.ogg}} '''Acheron:''' How interesting. For a split second, it felt like countless versions of you, alike yet distinct, gave entirely different responses.
+:::::{{A|VO chapter3 0 acheron 140.ogg}} '''Acheron:''' That was my final question, thank you. We all have our paths to walk, so we shall bid our farewells.
+:::::{{DIcon|Arrow}} Will we meet again?
+:::::{{DIcon|Arrow}} You haven't told me how to leave this place...
+:::::{{A|VO chapter3 0 acheron 141.ogg}} '''Acheron:''' The golden dream is getting restless. In the coming long night, I'm afraid you will face many tribulations and witness many tragedies. And finally... your sight will only see black and white.
+:::::{{tx}}
+::::{{DIcon|Arrow}} I would abandon it &mdash; I have already tasted the beauty of dreams.
+:::::{{A|VO chapter3 0 acheron 135.ogg}} '''Acheron:''' I know this is hard, you don't have to be hard-pressed to make a decision. As I have said... the answer is inconsequential.
+:::::{{A|VO chapter3 0 acheron 136.ogg}} '''Acheron:''' Hearing, touch, thought &mdash; through these, you gain emotions &mdash; cherish them. With emotions, we make choices. And so we return to the original question...
+:::::{{A|VO chapter3 0 acheron 137.ogg}} '''Acheron:''' {{Color|fire|nobold=1|I would ask... Do you still remember me?}}
+:::::{{DIcon|Arrow}} I seem to remember you from somewhere...
+:::::{{DIcon|Arrow}} No, this is the first time we've met.
+:::::{{A|VO chapter3 0 acheron 138.ogg}} '''Acheron:''' ...I understand.
+:::::{{A|VO chapter3 0 acheron 139.ogg}} '''Acheron:''' How interesting. For a split second, it felt like countless versions of you, alike yet distinct, gave entirely different responses.
+:::::{{A|VO chapter3 0 acheron 140.ogg}} '''Acheron:''' That was my final question, thank you. We all have our paths to walk, so we shall bid our farewells.
+:::::{{DIcon|Arrow}} Will we meet again?
+:::::{{DIcon|Arrow}} You haven't told me how to leave this place...
+:::::{{A|VO chapter3 0 acheron 141.ogg}} '''Acheron:''' The golden dream is getting restless. In the coming long night, I'm afraid you will face many tribulations and witness many tragedies. And finally... your sight will only see black and white.
+:::::{{tx}}
+::::{{DIcon|Arrow}} I would abandon it &mdash; Trailblazing was never my intent.
+:::::{{A|VO chapter3 0 acheron 135.ogg}} '''Acheron:''' I know this is hard, you don't have to be hard-pressed to make a decision. As I have said... the answer is inconsequential.
+:::::{{A|VO chapter3 0 acheron 136.ogg}} '''Acheron:''' Hearing, touch, thought &mdash; through these, you gain emotions &mdash; cherish them. With emotions, we make choices. And so we return to the original question...
+:::::{{A|VO chapter3 0 acheron 137.ogg}} '''Acheron:''' {{Color|fire|nobold=1|I would ask... Do you still remember me?}}
+:::::{{DIcon|Arrow}} I seem to remember you from somewhere...
+:::::{{DIcon|Arrow}} No, this is the first time we've met.
+:::::{{A|VO chapter3 0 acheron 138.ogg}} '''Acheron:''' ...I understand.
+:::::{{A|VO chapter3 0 acheron 139.ogg}} '''Acheron:''' How interesting. For a split second, it felt like countless versions of you, alike yet distinct, gave entirely different responses.
+:::::{{A|VO chapter3 0 acheron 140.ogg}} '''Acheron:''' That was my final question, thank you. We all have our paths to walk, so we shall bid our farewells.
+:::::{{DIcon|Arrow}} Will we meet again?
+:::::{{DIcon|Arrow}} You haven't told me how to leave this place...
+:::::{{A|VO chapter3 0 acheron 141.ogg}} '''Acheron:''' The golden dream is getting restless. In the coming long night, I'm afraid you will face many tribulations and witness many tragedies. And finally... your sight will only see black and white.
+:::::{{tx}}
+::::{{DIcon|Arrow}} I would blaze a trail without hesitation.
+:::::{{A|VO chapter3 0 acheron 135.ogg}} '''Acheron:''' I know this is hard, you don't have to be hard-pressed to make a decision. As I have said... the answer is inconsequential.
+:::::{{A|VO chapter3 0 acheron 136.ogg}} '''Acheron:''' Hearing, touch, thought &mdash; through these, you gain emotions &mdash; cherish them. With emotions, we make choices. And so we return to the original question...
+:::::{{A|VO chapter3 0 acheron 137.ogg}} '''Acheron:''' {{Color|fire|nobold=1|I would ask... Do you still remember me?}}
+:::::{{DIcon|Arrow}} I seem to remember you from somewhere...
+:::::{{DIcon|Arrow}} No, this is the first time we've met.
+:::::{{A|VO chapter3 0 acheron 138.ogg}} '''Acheron:''' ...I understand.
+:::::{{A|VO chapter3 0 acheron 139.ogg}} '''Acheron:''' How interesting. For a split second, it felt like countless versions of you, alike yet distinct, gave entirely different responses.
+:::::{{A|VO chapter3 0 acheron 140.ogg}} '''Acheron:''' That was my final question, thank you. We all have our paths to walk, so we shall bid our farewells.
+:::::{{DIcon|Arrow}} Will we meet again?
+:::::{{DIcon|Arrow}} You haven't told me how to leave this place...
+:::::{{A|VO chapter3 0 acheron 141.ogg}} '''Acheron:''' The golden dream is getting restless. In the coming long night, I'm afraid you will face many tribulations and witness many tragedies. And finally... your sight will only see black and white.
+:::::{{tx}}
+:----
+:;([[#Gallery|Cutscene]] plays)
+:::What you must do now is ponder its significance.
+:::And then...
+:::You can return to the waking world.
+:::That's where we all find our answers.
+:;(Cutscene ends)
+:----
+;(If {{cx}}{{subst:void|<!--{"$type":"RPG.GameCore.ByCheckFloorCustomBool","Name":{"Value":"Mission_103010207_OpenDoor"}}-->}})
+:<pre>{
+	"$type": "RPG.GameCore.WaitFloorCustomValueChange",
+	"Name": {
+		"Value": "Mission_103010207_OpenDoor"
+	},
+	"OnChange": [
+		{
+			"$type": "RPG.GameCore.PredicateTaskList",
+			"Predicate": {
+				"$type": "RPG.GameCore.ByCheckFloorCustomBool",
+				"Name": {
+					"Value": "Mission_103010207_OpenDoor"
+				}
+			},
+			"SuccessTaskList": [
+				{
+					"$type": "RPG.GameCore.TriggerGroupEvent",
+					"EventName": {
+						"Value": "Event_103010206_DoorOpen"
+					}
+				}
+			],
+			"FailedTaskList": []
+		}
+	]
+}</pre>
+
+;(Upon reaching the destination)
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{A|VO chapter3 0 acheron 120.ogg}} '''Acheron:''' These voices... They are just shadows of the dreamscape. Pay no heed to them.
+
+;(Upon reaching the destination)
+<pre>{
+	"$type": "RPG.GameCore.PlayerSelectMotionMode",
+	"MotionMode": "ForbidFastRun"
+}</pre>
+;(Unused &mdash; Event_103010206_run_1)
+<pre>{
+	"$type": "RPG.GameCore.AdvSetAILeadWay",
+	"EntityInstanceID": {
+		"FixedValue": {
+			"Value": 400001
+		}
+	},
+	"PathwayGroupID": 9,
+	"PathwayID": 2,
+	"MotionFlag": "Run",
+	"WaitForPlayer": true,
+	"OnReach": [
+		{
+			"$type": "RPG.GameCore.TriggerGroupEvent",
+			"EventName": {
+				"Value": "Event_103010206_run_2"
+			}
+		}
+	]
+}</pre>
+
+;(Unused &mdash; Event_103010206_run_2)
+<pre>{
+	"$type": "RPG.GameCore.AdvSetAIMoveTo",
+	"EntityInstanceID": {
+		"FixedValue": {
+			"Value": 400001
+		}
+	},
+	"GroupId": 9,
+	"PointID": 2,
+	"MotionFlag": "Run",
+	"AlignRotation": true,
+	"FinishAfterStop": true,
+	"OnReach": [
+		{
+			"$type": "RPG.GameCore.PlayMissionTalk",
+			"SimpleTalkList": [
+				{
+					"TalkSentenceID": 103012302
+				}
+			]
+		}
+	]
+}</pre>
+;(If {{F|Mission_103010207_LeaveRaid}} is undefined 0)
+<pre>{
+	"$type": "RPG.GameCore.SetFloorCustomFloat",
+	"Name": {
+		"Value": "Mission_103010207_LeaveRaid"
+	},
+	"Value": {
+		"FixedValue": {
+			"Value": 1
+		}
+	}
+}</pre>
 {{Dialogue End}}
 
 ==Other Languages==

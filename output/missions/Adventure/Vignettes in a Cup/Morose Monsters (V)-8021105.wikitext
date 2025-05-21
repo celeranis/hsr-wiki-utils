@@ -39,19 +39,50 @@ PageTitle=#Morose Monsters (V)#
 ===Head to the Dreamjolt Hostelry{{subst:void|<!--802110502-->}}===
 {{Mission Description|type=adventure|location=The Reverie (Dreamscape)|Siobhan, the manager of Dreamjolt Hostelry, offered you an assignment to temporarily take over the job of drinksmith.<br />Time to get back in business.}}
 {{Dialogue Start}}
-:{{tx}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+<pre>{
+	"$type": "RPG.GameCore.AdvDestroyGroupEntity",
+	"InstanceIDList": [
+		300001
+	]
+}</pre>
+:'''(Trailblazer):''' (Lady and Melancholy are really close. Lots of people are fond of their performances.)
+:'''(Trailblazer):''' (I wonder how Starlet is doing. Will he show up today?)
+:'''(Trailblazer):''' (...As curious as I am, I should get the business started first.)
 {{Dialogue End}}
 
 ===Continue serving the customers{{subst:void|<!--802110506-->}}===
 {{Mission Description|type=adventure|location=The Reverie (Dreamscape)|update|Siobhan, the manager of Dreamjolt Hostelry, offered you an assignment to temporarily take over the job of drinksmith.<br />Let's continue serving the customers.}}
 {{Dialogue Start}}
-:{{tx}}
+<pre>{
+	"$type": "RPG.GameCore.WaitUIControllerClose",
+	"UIControllerName": "DrinkMakerMainEntrancePage"
+}</pre>
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:'''(Trailblazer):''' (I'll go see what Siobhan is up to when I'm done here.)
+:'''(Trailblazer):''' (Now, I need to have a chat with Starlet.)
+;(Unused &mdash; DrinkMakerBartendResultDialogClose)
+;(Upon reaching the destination)
 {{Dialogue End}}
 
 ===Go to the hotel in the Dreamscape and speak with Starlet{{subst:void|<!--802110501-->}}===
 {{Mission Description|type=adventure|location=The Reverie (Dreamscape)|update|Siobhan, the manager of Dreamjolt Hostelry, offers you an assignment to temporarily take over the job of drinksmith.<br />Starlet has prepared a space used for simulations, hoping to show you how the monsters are surviving. Go and hear what it has to say.}}
 {{Dialogue Start}}
+
+;(Obtain {{Item|Dreamjolt Hostelry Group Photo|20|x=1}})
+----
 :{{tx}}
+----
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+----
+:{{tx}}
+----
 {{Dialogue End}}
 
 ==Other Languages==

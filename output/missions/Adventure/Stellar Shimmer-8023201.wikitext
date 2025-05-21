@@ -37,13 +37,47 @@ PageTitle=#Stellar Shimmer (Adventure Mission)#
 ===Head to the master control zone and talk with Grumpy the researcher{{subst:void|<!--802320101-->}}===
 {{Mission Description|type=adventure|location=Master Control Zone|Grumpy, a researcher from the space station, is looking for you with her partner. Looks like she's met some sort of bottleneck during her research.<br />Though, you don't understand why all the researchers are coming to you for their research...}}
 {{Dialogue Start}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:'''Grumpy:''' You're here! Come, come. Let me introduce to you the latest addition to our department &mdash;
+:'''Metauna:''' Oh, you're the (Trailblazer) that everyone's been talking about. It's an honor! I'm Metauna. I only just arrived at the space station. It's nice to meet you.
+:{{DIcon|Arrow}} So... you were looking for me?
+:'''Grumpy:''' It's about a combat simulation tool that Shiling shoved in my hands. It's called the Stellar Flare...
+:{{DIcon|Arrow}} Sounds familiar. I think I've tested it before.
+::'''Grumpy:''' That's right. I was the one who called for you to help. Good thing you were around that time!
+::What's that?
+:{{DIcon|Arrow}} What's that?
+:'''Grumpy:''' This is a combat simulation software. It's supposed to boost its user's combat proficiency.
+:'''Grumpy:''' Early prototype test results were encouraging. The Security Department even expected that this program had the potential to be submitted to the IPC for business applications.
+:'''Metauna:''' At worst, it would be kept on the space station for training purposes.
+:'''Grumpy:''' Yes, yes. Metauna's right on the nose. We feel really good about this project.
+:'''Metauna:''' Which is why the department sent me to assist you, in the hopes that we can optimize this tool. As per the requirements, I gave this version of the program a new name &mdash; Stellar Shimmer... Haha, new version, new beginnings!
+:'''Metauna:''' But to be honest, I'm feeling really anxious about this. To be involved in such a huge project so soon after I arrived... I think the stress is a bit too much.
+:'''Grumpy:''' Keep calm. The source code's already been iterated once. We've also cross-checked with the Security Department's requirements and optimized the simulated combat's process...
+:'''Metauna:''' Enough of internal jargon, Grumpy. We should get down to business.
+:'''Grumpy:''' Ahem, sorry. Work habits... In any case, the program has been optimized, but it still lacks a combat master to complete its testing. That's why we sought you out. It's a bit sudden, but you were the first person I thought of when it comes to battle prowess superiority on this space station...
+:'''Grumpy:''' (Trailblazer), will you be so kind as to help us out?
+:{{DIcon|Arrow}} If that's the case... I'd be hard-pressed to refuse.
+:{{DIcon|Arrow}} Just part of the job. You've come to the right person.
+:'''Metauna:''' Fantastic! With an expert helping out, this'll surely be a success!
 :{{tx}}
 {{Dialogue End}}
 
 ===Activate the terminal next to them and try Stellar Shimmer 1 time{{subst:void|<!--802320102-->}}===
 {{Mission Description|type=adventure|location=Master Control Zone|update|Grumpy and Metauna are having quite a headache with testing their data, and you decide to help after their repeated entreaties.<br />You don't know much about scientific research, but you're a pro at physical exercise.}}
 {{Dialogue Start}}
-:{{tx}}
+
+:{{DIcon|Fight Club}} Launch simulation program.
+<pre>{
+	"$type": "RPG.GameCore.ShowUI",
+	"Name": "Ui.Activity.ActivityStarFight.ActivityStarFightMainPage",
+	"OnUIEnter": []
+}</pre>
+
+;(Talk to Grumpy)
+:'''Grumpy:''' We're counting on you for the test. If you run into any problems during its course, please feel free to contact me.
+:'''Metauna:''' We'll definitely change it for the better!
 {{Dialogue End}}
 
 ==Other Languages==

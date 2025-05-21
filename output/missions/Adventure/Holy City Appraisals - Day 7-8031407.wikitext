@@ -36,7 +36,125 @@ PageTitle=#Holy City Appraisals - Day 7#
 ===Head to the Treasure of Ages antique store{{subst:void|<!--803140701-->}}===
 {{Mission Description|type=adventure|location="Eternal Holy City" Okhema|The treasures up for appraisal today are ready. Time to talk to Theodoros.}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Theodoros)
+;(If {{cx}}<!--during performance 504002001-->)
+::'''Theodoros:''' The last Chrysos Heir dolium just got snatched up, dear customer. If that's what you came for, I'm sorry for the disappointment!
+::{{DIcon|Arrow}} What is a "Chrysos Heir dolium"?
+:::'''Theodoros:''' Haha, it looks like I misread your interest. Lately, it seems like everyone who stops by is on the hunt for that specific line of products.
+::{{DIcon|Arrow}} Does such a business exist?
+:::'''Theodoros:''' Haha, it looks like I misread your interest. Lately, it seems like everyone who stops by is on the hunt for that specific line of products.
+::{{DIcon|Arrow}} I placed an order for a dolium ten years ago! And it still hasn't arrived!
+:::'''Theodoros:''' My apologies once again! Even though my shop has been around for a decade, most recent visitors have been on the lookout for my Chrysos Heir Dolia, and I've never managed to keep enough in stock.
+::'''Theodoros:''' As for their origin, one day, while spotting Lord Phainon patrolling the city, I felt inspired and painted the epic tales of Okhema's Chrysos Heirs on a dolium.
+::'''Theodoros:''' Their courage and elegance must come from the fluttering wings of Mnestia, the Chrysalis of Gold! Their magical powder must have imbued them with such perfection!
+::'''Theodoros:''' Naturally, my dolia carry this same honor. Now, fans of the Chrysos Heirs flock to my humble shop on sale days.
+::'''Theodoros:''' Honestly, it's all a bit surreal to me. Not too long ago, I was still a struggling artist lost in my thoughts, setting up a booth on the plaza across the street, painting on dolia here and there to make ends meet.
+::'''Theodoros:''' After the frenzy over these Chrysos Heir Dolia, I opened this shop and gained some recognition. Tomorrow, I'm off to the Marmoreal Palace to paint a portrait for a distinguished elder's grand birthday bash!
+::'''Theodoros:''' However... something feels off...
+::{{DIcon|Arrow}} I get where that comes from!
+:::'''Theodoros:''' It's remarkable to see someone as young as a new crescent moon with such profound insights into life.
+::{{DIcon|Arrow}} Isn't it amazing to achieve both fame and fortune?
+:::'''Theodoros:''' Well, I'm nothing special.
+::'''Theodoros:''' ...Let's just bask in the bright light of the {{Rubi|Lucid Hour|Third of the Five Moments}} and forget the days of sorrow.
+::'''Theodoros:''' Apart from the Dolia, I also offer a range of ancient artifacts I've gathered from all over. If anything piques your interest, just let me know.
+;(If {{cx}}<!--not during performance 504002001-->)
+:<pre>{
+	"$type": "RPG.GameCore.PlayMultiVoiceTalk",
+	"TalkSentenceID": 504002091
+}</pre>
+
+;(Unused &mdash; OpenUI_Day1)
+;(Open item submission menu)
+:;(If the menu is closed without submitting the items)
+:----
+::'''Theodoros:''' You don't have the materials with you? I'm tied up at the moment, so you'll need to go get them. Sorry for the inconvenience.
+
+;(Unused &mdash; OpenUI_Day2)
+;(Open item submission menu)
+:;(If the menu is closed without submitting the items)
+:----
+::'''Theodoros:''' You don't have the materials with you? I'm tied up at the moment, so you'll need to go get them. Sorry for the inconvenience.
+
+;(Unused &mdash; OpenUI_Day3)
+;(Open item submission menu)
+:;(If the menu is closed without submitting the items)
+:----
+::'''Theodoros:''' You don't have the materials with you? I'm tied up at the moment, so you'll need to go get them. Sorry for the inconvenience.
+
+;(Unused &mdash; OpenUI_Day4)
+;(Open item submission menu)
+:;(If the menu is closed without submitting the items)
+:----
+::'''Theodoros:''' You don't have the materials with you? I'm tied up at the moment, so you'll need to go get them. Sorry for the inconvenience.
+
+;(Unused &mdash; OpenUI_Day5)
+;(Open item submission menu)
+:;(If the menu is closed without submitting the items)
+:----
+::'''Theodoros:''' You don't have the materials with you? I'm tied up at the moment, so you'll need to go get them. Sorry for the inconvenience.
+
+;(Unused &mdash; OpenUI_Day6)
+;(Open item submission menu)
+:;(If the menu is closed without submitting the items)
+:----
+::'''Theodoros:''' You don't have the materials with you? I'm tied up at the moment, so you'll need to go get them. Sorry for the inconvenience.
+
+;(Unused &mdash; OpenUI_Day7)
+;(Open item submission menu)
+:;(If the menu is closed without submitting the items)
+:----
+::'''Theodoros:''' You don't have the materials with you? I'm tied up at the moment, so you'll need to go get them. Sorry for the inconvenience.
+
+;(Unused &mdash; Day7After)
+<pre>{
+	"$type": "RPG.GameCore.ShowUI",
+	"Name": "Ui.Activity.MaterialSubmission.AmphoreusCurio.Main.AmphoreusCurioMainPage",
+	"WaitForExit": true,
+	"Param": {
+		"Value": "BanGoto"
+	}
+}</pre>
+
+;(Talk to Theodoros)
+;(If {{cx}}<!--during performance 504002001-->)
+::'''Theodoros:''' The last Chrysos Heir dolium just got snatched up, dear customer. If that's what you came for, I'm sorry for the disappointment!
+::{{DIcon|Arrow}} What is a "Chrysos Heir dolium"?
+:::'''Theodoros:''' Haha, it looks like I misread your interest. Lately, it seems like everyone who stops by is on the hunt for that specific line of products.
+::{{DIcon|Arrow}} Does such a business exist?
+:::'''Theodoros:''' Haha, it looks like I misread your interest. Lately, it seems like everyone who stops by is on the hunt for that specific line of products.
+::{{DIcon|Arrow}} I placed an order for a dolium ten years ago! And it still hasn't arrived!
+:::'''Theodoros:''' My apologies once again! Even though my shop has been around for a decade, most recent visitors have been on the lookout for my Chrysos Heir Dolia, and I've never managed to keep enough in stock.
+::'''Theodoros:''' As for their origin, one day, while spotting Lord Phainon patrolling the city, I felt inspired and painted the epic tales of Okhema's Chrysos Heirs on a dolium.
+::'''Theodoros:''' Their courage and elegance must come from the fluttering wings of Mnestia, the Chrysalis of Gold! Their magical powder must have imbued them with such perfection!
+::'''Theodoros:''' Naturally, my dolia carry this same honor. Now, fans of the Chrysos Heirs flock to my humble shop on sale days.
+::'''Theodoros:''' Honestly, it's all a bit surreal to me. Not too long ago, I was still a struggling artist lost in my thoughts, setting up a booth on the plaza across the street, painting on dolia here and there to make ends meet.
+::'''Theodoros:''' After the frenzy over these Chrysos Heir Dolia, I opened this shop and gained some recognition. Tomorrow, I'm off to the Marmoreal Palace to paint a portrait for a distinguished elder's grand birthday bash!
+::'''Theodoros:''' However... something feels off...
+::{{DIcon|Arrow}} I get where that comes from!
+:::'''Theodoros:''' It's remarkable to see someone as young as a new crescent moon with such profound insights into life.
+::{{DIcon|Arrow}} Isn't it amazing to achieve both fame and fortune?
+:::'''Theodoros:''' Well, I'm nothing special.
+::'''Theodoros:''' ...Let's just bask in the bright light of the {{Rubi|Lucid Hour|Third of the Five Moments}} and forget the days of sorrow.
+::'''Theodoros:''' Apart from the Dolia, I also offer a range of ancient artifacts I've gathered from all over. If anything piques your interest, just let me know.
+;(If {{cx}}<!--not during performance 504002001-->)
+:<pre>{
+	"$type": "RPG.GameCore.PlayMultiVoiceTalk",
+	"TalkSentenceID": 504002091
+}</pre>
+----
+:'''Theodoros:''' This treasure &mdash; I must inquire if Lord Phainon is willing to part with it. But first &mdash;
+:'''Theodoros:''' Congratulations, (Trailblazer), after a week of training, you're now a certified appraiser!
+:{{DIcon|Arrow}} I can forge items myself now.
+::'''Theodoros:''' Bring it on. Even if you made it, it won't escape my scrutiny, though I know you wouldn't do that.
+:{{DIcon|Arrow}} I'm doing my part in the fight against fraud.
+::'''Theodoros:''' Okhema's battle against counterfeiters is in your hands! Show those fraudsters who's the boss!
+:'''Theodoros:''' Here's a special gift for you &mdash; a Chrysos Heir Dolium. These jars are highly sought after in Okhema, and my waitlist extends three months out. But let's keep this between us, or they'll accuse me of playing favorites.
+:{{DIcon|Arrow}} I'll make sure to take good care of it.
+:{{DIcon|Arrow}} I'm going to sell this right away and cash in.
+:{{DIcon|Arrow}} Any recommendations?
+:'''Theodoros:''' Ha, just so you know, each dolium features a unique design. They'll all be priceless rarities years from now.
+:'''Theodoros:''' Well, I need to greet some other customers now. See you later.
 {{Dialogue End}}
 
 ==Other Languages==

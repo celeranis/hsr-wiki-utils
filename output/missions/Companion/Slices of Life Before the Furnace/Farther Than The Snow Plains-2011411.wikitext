@@ -48,67 +48,344 @@ PageTitle=#Farther Than The Snow Plains#
 ===Head to the Museum Finishing Room to find the Landau siblings{{subst:void|<!--201141102-->}}===
 {{Mission Description|type=companion|location=History and Culture Museum|update|You receive a message from the Landau siblings. As expected, they contacted you because they want to ask for your help, just like everyone else. Unlike the others, however, these two deliberately set up a mystery for you &mdash; They will only tell you what they need if you head to the Museum Finishing Room as they had requested.<br />Is this even the right attitude when you want to ask people for help? You don't quite know, since you were only born in the Herta Space Station a short while ago &mdash; but you must have gotten used to this random way of getting missions by now.<br />Head to the Belobog History and Culture Museum Finishing Room and listen to their request.}}
 {{Dialogue Start}}
-:{{tx}}
+<pre>{
+	"$type": "RPG.GameCore.CreateProp",
+	"GroupID": {
+		"FixedValue": {
+			"Value": 2
+		}
+	},
+	"GroupPropID": {
+		"FixedValue": {
+			"Value": 300001
+		}
+	},
+	"CreateList": []
+}</pre>
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+----
+:{{A|VO side1 pl1 serval 101.ogg}} '''Serval:''' Hah, there's plenty of precious stuff in here! You aren't looking for treasure in the museum while pretending to volunteer, right?
+:{{A|VO side1 pl1 gepard 101.ogg}} '''Gepard:''' No, I'm not...
+:{{A|VO side1 pl1 serval 102.ogg}} '''Serval:''' Oh! What's this gadget? This monitor, and this keyboard... is it an automaton remote control terminal?
+:{{A|VO side1 pl1 serval 103.ogg}} '''Serval:''' See, there's a piece of paper here! It says "Penya Sergeyevna"...
+:{{A|VO side1 pl1 serval 104.ogg}} '''Serval:''' Is that the owner's name? Sounds a bit familiar...
+:{{A|VO side1 pl1 gepard 102.ogg}} '''Gepard:''' These are all relics, sis. Please don't touch them. What if you break something?
+----
 {{Dialogue End}}
 
 ===Talk with the Landau siblings{{subst:void|<!--201141103-->}}===
 {{Mission Description|type=companion|location=History and Culture Museum|update|You arrive at the Museum Finishing Room as invited, and find the Landau siblings waiting for you here.<br />Go and listen to their request.}}
 {{Dialogue Start}}
-:{{tx}}
+<pre>{
+	"$type": "RPG.GameCore.CreateProp",
+	"GroupID": {
+		"FixedValue": {
+			"Value": 2
+		}
+	},
+	"GroupPropID": {
+		"FixedValue": {
+			"Value": 300002
+		}
+	},
+	"CreateList": []
+}</pre>
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+----
+:{{DIcon|Arrow}} Here I am.
+:<!--0.5-second delay-->
+:{{A|VO side1 pl1 serval 105 m.ogg}} {{A|VO side1 pl1 serval 105 f.ogg}} '''Serval:''' Oh, (Trailblazer)! We were just waiting for you.
+:{{A|VO side1 pl1 gepard 103 m.ogg}} {{A|VO side1 pl1 gepard 103 f.ogg}} '''Gepard:''' Long time no see, (Trailblazer). I wanted to talk about this in our chat group, but sis won't have it... I'm sorry you had to run all the way out here.
+:{{DIcon|Arrow}} More danger afoot?
+:{{DIcon|Arrow}} Why all the hush-hush?
+::{{A|VO side1 pl1 gepard 104.ogg}} '''Gepard:''' Um... That was Serval's idea. She said it needed a level of secrecy.
+::{{A|VO side1 pl1 gepard 105.ogg}} '''Gepard:''' I happened to be helping out at the museum, so we both ended up waiting for you here.
+:{{A|VO side1 pl1 serval 106.ogg}} '''Serval:''' Actually, I want to talk to you about our little Lynx.
+:{{DIcon|Arrow}} Lynx?
+::{{A|VO side1 pl1 gepard 106.ogg}} '''Gepard:''' She's our little sister, the youngest child of the Landau family.
+:{{DIcon|Arrow}} Oh, that Lynx.
+::{{A|VO side1 pl1 gepard 107.ogg}} '''Gepard:''' So you know her! Well, that makes this easy.
+:{{A|VO side1 pl1 gepard 108.ogg}} '''Gepard:''' She just came back from a scientific exploration on the Snow Plains, but she seems really out of it... almost like she's worried about something...
+:{{A|VO side1 pl1 gepard 109.ogg}} '''Gepard:''' And she won't tell us what happened. We're really worried and want to help, but we don't know where to start.
+:{{A|VO side1 pl1 serval 107.ogg}} '''Serval:''' The last time I saw her, she was preparing to meet someone on the Snow Plains. She even asked for a stove set from me...
+:{{A|VO side1 pl1 serval 108.ogg}} '''Serval:''' But no matter how Gepard and I asked and probed, Lynx simply refused to tell us who she was gonna meet... *sigh* I'm such a failure of a sister.
+:{{A|VO side1 pl1 serval 109.ogg}} '''Serval:''' So, that's why Gepard and I came up with this idea. We'd like you to help us find out what's going on!
+:{{A|VO side1 pl1 gepard 110.ogg}} '''Gepard:''' One more thing... don't let her discover you. Otherwise, she'll probably get upset with us.
+:{{DIcon|Arrow}} Leave it to me!
+::{{A|VO side1 pl1 serval 110 m.ogg}} {{A|VO side1 pl1 serval 110 f.ogg}} '''Serval:''' Thank you, (Trailblazer)! We're worried about her meeting strangers...
+::{{A|VO side1 pl1 gepard 111.ogg}} '''Gepard:''' She's used to doing research alone in the Snow Plains, and we've always believed she can protect herself, but this is different... I'm worried she could run into bad people.
+:{{DIcon|Arrow}} That might be difficult...
+::{{A|VO side1 pl1 serval 111.ogg}} '''Serval:''' I know she's used to going into the Snow Plains alone for research, and we've always believed she can protect herself...
+::{{A|VO side1 pl1 gepard 112.ogg}} '''Gepard:''' But this is different. We're worried about her running into strangers... She might get herself into trouble.
+:{{A|VO side1 pl1 serval 112.ogg}} '''Serval:''' Oh, right! If you're gonna go find Lynxy, you gotta know what she looks like!
+:{{A|VO side1 pl1 serval 113.ogg}} '''Serval:''' Don't worry. She stands out. She's blonde like us and, um... quite short. She's always wearing a white fur hat... If I'm right, she should be waiting for someone at the city exit closest to the Snow Plains.
+:{{A|VO side1 pl1 serval 114.ogg}} '''Serval:''' We are putting our dearest baby sister in your hands this time. Let us know immediately if anything happens.
+:{{A|VO side1 pl1 gepard 113 m.ogg}} {{A|VO side1 pl1 gepard 113 f.ogg}} '''Gepard:''' Thank you, (Trailblazer).
+----
 {{Dialogue End}}
 
 ===Head to the Administrative District exit near the Outlying Snow Plains and find Lynx{{subst:void|<!--201141104-->}}===
 {{Mission Description|type=companion|location=Administrative District|update|You arrive at the Museum Finishing Room as invited, and only then learn that "sense of ceremony" was just something Serval came up with on the spot.<br />The Landau siblings express their request to you &mdash; They hope you can protect Lynx, the youngest Landau sibling, in secret. They also insist she must not discover you during the process.<br />This sounds rather odd, but you have no choice except to accept at this stage. Head to the Belobog Administrative District exit close to the Outlying Snow Plains and see what is Lynx trying to do.}}
 {{Dialogue Start}}
+<pre>{
+	"$type": "RPG.GameCore.CreateProp",
+	"GroupID": {
+		"FixedValue": {
+			"Value": 184
+		}
+	},
+	"GroupPropID": {
+		"FixedValue": {
+			"Value": 300001
+		}
+	},
+	"CreateList": []
+}</pre>
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+----
+:{{A|VO side1 pl1 player 101 m.ogg}} {{A|VO side1 pl1 player 101 f.ogg}} '''(Trailblazer):''' (Huh? That girl over there... seems like she fits Serval's description.)
+:{{A|VO side1 pl1 player 102 m.ogg}} {{A|VO side1 pl1 player 102 f.ogg}} '''(Trailblazer):''' (That must be Lynx. Let's hide here and observe for now.)
 :{{tx}}
+<pre>{
+	"$type": "RPG.GameCore.OpenTreasureChallenge",
+	"RaidID": 4010106
+}</pre>
 {{Dialogue End}}
 
 ===Head to the Snow Plains and find Lynx{{subst:void|<!--201141105-->}}===
 {{Mission Description|type=companion|location=Administrative District|update|After some clandestine observation, you finally realize the "stranger" the Landau siblings are talking about is none other than everyone's friend, Miss Pela.<br />The other Landaus must have made a mistake, and the issue should be solved for now, but you don't particularly want these two girls to head out to the dangerous Outlying Snow Plains on their own. After all, you know better than anyone else just how many monsters are in the Snow Plains.<br />Help them till the end. Follow them and protect them from the shadows if needed.}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Silvermane Guard)
+:{{A|VO side1 pl1 soldierAE 101.ogg}} '''Guard on Duty:''' Intelligence Officer Pela just left for the Snow Plains with somebody...
+:{{A|VO side1 pl1 soldierAE 102.ogg}} '''Guard on Duty:''' ...are you headed there too?
+:{{DIcon|Arrow}} Enter the Snow Plains.
+:<pre>{
+	"$type": "RPG.GameCore.OpenTreasureChallenge",
+	"RaidID": 4010106
+}</pre>
+:{{DIcon|Exit}} Maybe later.
 {{Dialogue End}}
 
 ===Say goodbye to Pela and Lynx for now{{subst:void|<!--201141106-->}}===
 {{Mission Description|type=companion|location=Administrative District|update|The trip to observe the Snow Plains aurora is now over. You achieve a happy ending, but the two girls seem to want to make this trip even more special.<br />They booked you to have supper together later in the day. For now, find a way to spend your time and wait for them to get ready.}}
 {{Dialogue Start}}
-:{{tx}}
+----
+:{{A|VO side1 pl1 pela 226.ogg}} '''Pela:''' So awesome... I got to taste Lynxy's cooking and see the aurora... This Snow Plains adventure was the best!
+:{{A|VO side1 pl1 lynx 237.ogg}} '''Lynx:''' You look really happy.
+:{{A|VO side1 pl1 pela 227.ogg}} '''Pela:''' Huh? Me?
+:{{A|VO side1 pl1 pela 228.ogg}} '''Pela:''' Ahem! I&mdash;I'm not THAT happy. I, wh&mdash;what I mean is, uh...
+:{{DIcon|Arrow}} Say what's on your mind!
+::{{A|VO side1 pl1 lynx 238.ogg}} '''Lynx:''' Yeah, go for it, Pela.
+::{{A|VO side1 pl1 pela 229.ogg}} '''Pela:''' I...
+:{{DIcon|Arrow}} Lynx will be upset...
+::{{A|VO side1 pl1 pela 230.ogg}} '''Pela:''' Huh!? I... I hope not...
+::{{A|VO side1 pl1 lynx 239.ogg}} '''Lynx:''' It's okay. I won't be sad. I understand what Pela really feels.
+:{{DIcon|Arrow}} You weren't just here for the camping?
+::{{A|VO side1 pl1 pela 231.ogg}} '''Pela:''' I was going to say that... but now I suddenly don't want to.
+::{{A|VO side1 pl1 lynx 240.ogg}} '''Lynx:''' I understand what Pela really feels. You don't need to hide it.
+:{{A|VO side1 pl1 pela 232 m.ogg}} {{A|VO side1 pl1 pela 232 f.ogg}} '''Pela:''' *sigh* It was a great experience... thanks to you Lynxy... not to mention you, (Trailblazer).
+:{{A|VO side1 pl1 pela 233.ogg}} '''Pela:''' Anyway, what now? Back home? Wanna go out for a midnight snack later?
+:{{A|VO side1 pl1 lynx 241.ogg}} '''Lynx:''' We can! I heard a pretty good steak place opened up in the south of the Administrative District. We can go try it out together.
+:{{A|VO side1 pl1 pela 234.ogg}} '''Pela:''' Sounds good! That's settled then. Let's part ways for now and rendezvous later tonight.
+:{{A|VO side1 pl1 lynx 242.ogg}} '''Lynx:''' Ah, Pela! Hold on...
+:{{A|VO side1 pl1 pela 235.ogg}} '''Pela:''' Mm? What's up?
+<pre>{
+	"$type": "RPG.GameCore.TalkFigure",
+	"ImagePath": "SpriteOutput/Mission/TalkItem/SubMission_140210.png"
+}</pre>
+:{{A|VO side1 pl1 lynx 243.ogg}} '''Lynx:''' This... is for you.
+<pre>{
+	"$type": "RPG.GameCore.TalkFigure",
+	"Show": false,
+	"ImagePath": "SpriteOutput/Mission/TalkItem/SubMission_140210.png"
+}</pre>
+:{{A|VO side1 pl1 pela 236.ogg}} '''Pela:''' What... is this?
+:{{A|VO side1 pl1 lynx 244.ogg}} '''Lynx:''' I found this on the ground before I fixed the stove. I guess that Fragmentum creature dropped it.
+:{{A|VO side1 pl1 lynx 245.ogg}} '''Lynx:''' I think... it might be best if you check it out yourself.
+:{{A|VO side1 pl1 pela 237.ogg}} '''Pela:''' "Penya... Sergeyevna..."
+:{{A|VO side1 pl1 pela 238.ogg}} '''Pela:''' ...I see. Thank you, Lynxy.
+:{{A|VO side1 pl1 pela 239.ogg}} '''Pela:''' ...Let's meet up here later tonight... I better get going.
+:{{A|VO side1 pl1 lynx 246.ogg}} '''Lynx:''' Mm...
+----
 {{Dialogue End}}
 
 ===Reply to the messages from the Landau siblings{{subst:void|<!--201141107-->}}===
 {{Mission Description|type=companion|location=Administrative District|update|The trip to observe the Snow Plains aurora is now over. You achieve a happy ending, but the two girls seem to want to make this trip even more special.<br />They've both gone home to prepare for supper later, just as you receive a message from the Landau siblings.<br />You have free time anyways. Let's see what they want to ask you.}}
 {{Dialogue Start}}
-:{{tx}}
+<pre>{
+	"$type": "RPG.GameCore.PlayMessage",
+	"MessageSectionID": 1213800
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.SaveMessage",
+	"MessageSectionID": 1213800
+}</pre>
 {{Dialogue End}}
 
 ===Report your findings from the Snow Plains to the Landau siblings{{subst:void|<!--201141108-->}}===
 {{Mission Description|type=companion|location=Administrative District|update|The trip to observe the Snow Plains aurora is now over. You achieve a happy ending, but the two girls seem to want to make this trip even more special.<br />They've both gone home to prepare for supper later, just as you receive a message from the Landau siblings.<br />Now is the time to report to these two what you have seen out in the Snow Plains.}}
 {{Dialogue Start}}
-:{{tx}}
+:{{A|VO side1 pl1 player 103 m.ogg}} {{A|VO side1 pl1 player 103 f.ogg}} '''(Trailblazer):''' (I should go talk to Gepard and Serval at the workshop...)
+
+;(Upon reaching the destination)
+:{{A|VO side1 pl1 gepard 114.ogg}} '''Gepard:''' Between expeditions, it's always a challenge to make time with Lynx... but why doesn't she want to talk to us?
+:{{A|VO side1 pl1 serval 115 m.ogg}} {{A|VO side1 pl1 serval 115 f.ogg}} '''Serval:''' Calm down. We've got (Trailblazer) to help us.
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+----
+:{{A|VO side1 pl1 serval 116 m.ogg}} {{A|VO side1 pl1 serval 116 f.ogg}} '''Serval:''' Hey, (Trailblazer)! We were just talking about you.
+:{{A|VO side1 pl1 gepard 115.ogg}} '''Gepard:''' How was it... with Lynx?
+:{{A|VO side1 pl1 gepard 116.ogg}} '''Gepard:''' So, that "stranger" was Pela...
+:{{A|VO side1 pl1 serval 117.ogg}} '''Serval:''' What can I say... Sounds like a Lynxy expedition alright.
+:{{DIcon|Arrow}} You're not gonna get angry at her, right?
+::{{A|VO side1 pl1 serval 118.ogg}} '''Serval:''' No way. As long as Lynxy can protect herself, I'll be supportive in all her ventures!
+::{{A|VO side1 pl1 gepard 117.ogg}} '''Gepard:''' Serval is right this time... This was Lynx's own choice. We won't be upset with her.
+::{{A|VO side1 pl1 gepard 118.ogg}} '''Gepard:''' But... exploring the Snow Plains is still quite dangerous...
+::{{A|VO side1 pl1 serval 119.ogg}} '''Serval:''' Alright, alright, calm down. She'll be able to look after herself.
+:{{DIcon|Arrow}} So, mission accomplished?
+:{{A|VO side1 pl1 serval 120 m.ogg}} {{A|VO side1 pl1 serval 120 f.ogg}} '''Serval:''' Thank you, (Trailblazer), for being around for this. Gepard was too anxious to sleep.
+:{{A|VO side1 pl1 gepard 119.ogg}} '''Gepard:''' I... Sis, you're exaggerating.
+:{{A|VO side1 pl1 serval 121.ogg}} '''Serval:''' As for how we'll communicate with Lynxy in the future... We'll have to have a good think about it.
+:{{A|VO side1 pl1 serval 122 m.ogg}} {{A|VO side1 pl1 serval 122 f.ogg}} '''Serval:''' You really helped us a lot this time. Thank you so much, (Trailblazer)!
+----
 {{Dialogue End}}
 
 ===Reply to Lynx's message{{subst:void|<!--201141109-->}}===
 {{Mission Description|type=companion|location=Administrative District|update|The trip to observe the Snow Plains aurora is now over. You achieve a happy ending, but the two girls seem to want to make this trip even more special.<br />Lynx seems to have finished her preparations and sent you a message. See what she has to say to you.}}
 {{Dialogue Start}}
-:{{tx}}
+<pre>{
+	"$type": "RPG.GameCore.PlayMessage",
+	"MessageSectionID": 1213900
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.SaveMessage",
+	"MessageSectionID": 1213900
+}</pre>
 {{Dialogue End}}
 
 ===Head to the museum to find the two{{subst:void|<!--201141110-->}}===
 {{Mission Description|type=companion|location=History and Culture Museum|update|The trip to observe the Snow Plains aurora is now over. You achieve a happy ending, but the two girls seem to want to make this trip even more special.<br />Lynx seems to have finished her preparations and invites to you to go to the museum together to find Pela.<br />Go to the museum as per her request and meet up with the two of them.}}
 {{Dialogue Start}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+----
+:{{A|VO side1 pl1 lynx 247 m.ogg}} {{A|VO side1 pl1 lynx 247 f.ogg}} '''Lynx:''' Ah, you're here too.
+:{{DIcon|Arrow}} Yep.
+::{{A|VO side1 pl1 lynx 248.ogg}} '''Lynx:''' Then let's wait for Pela together. She's in the storage room.
+:{{DIcon|Arrow}} You're here early, Lynx.
+::{{A|VO side1 pl1 lynx 249.ogg}} '''Lynx:''' Mm-hmm. I went back, stored my supplies, and had a shower. It didn't take long.
+::{{A|VO side1 pl1 lynx 250.ogg}} '''Lynx:''' Let's wait for Pela together. She's in the storage room.
+:{{DIcon|Arrow}} Is Pela not here yet?
+::{{A|VO side1 pl1 lynx 251.ogg}} '''Lynx:''' She's in the storage room. Let's wait for her.
+:{{DIcon|Arrow}} What's she doing in there?
+:{{A|VO side1 pl1 lynx 252.ogg}} '''Lynx:''' I think she's looking over the contents of that floppy disk... Let's give her some time.
+:{{DIcon|Arrow}} What's in the floppy disk?
+::{{A|VO side1 pl1 lynx 253.ogg}} '''Lynx:''' I don't know the exact details, but...
+:{{DIcon|Arrow}} So, she might be a while...?
+:{{A|VO side1 pl1 lynx 254.ogg}} '''Lynx:''' ...
+:{{A|VO side1 pl1 lynx 255.ogg}} '''Lynx:''' I'm guessing you don't know about Pela's mother, right?
+:{{A|VO side1 pl1 lynx 256.ogg}} '''Lynx:''' Penya Sergeyevna was Belobog's greatest outdoor explorer &mdash; passed away sixteen years ago.
+:{{DIcon|Arrow}} That name sounds familiar.
+::{{A|VO side1 pl1 lynx 257.ogg}} '''Lynx:''' She's famous in Belobog. You might have heard other people mention her in passing.
+:{{DIcon|Arrow}} Pela never mentioned...
+::{{A|VO side1 pl1 lynx 258.ogg}} '''Lynx:''' Mm, she doesn't usually talk about it.
+::{{DIcon|Arrow}} You sure it's okay to tell me this?
+:::{{A|VO side1 pl1 lynx 259.ogg}} '''Lynx:''' I asked her already... and she said it was fine. She seems like she really trusts you.
+::{{DIcon|Arrow}} I can understand why...
+:::{{A|VO side1 pl1 lynx 260.ogg}} '''Lynx:''' Looks like Pela was right in trusting you.
+:{{DIcon|Arrow}} Cocolia allowed explorations outside of the city?
+::{{A|VO side1 pl1 lynx 261.ogg}} '''Lynx:''' The exploration team belonged to the Silvermane Guards at the time, so they had authorization.
+:{{A|VO side1 pl1 lynx 262.ogg}} '''Lynx:''' *sigh* Anyway, something else happened sixteen years ago...
+:{{A|VO side1 pl1 lynx 263.ogg}} '''Lynx:''' ...Pela was born.
+:{{DIcon|Arrow}} ...
+:{{DIcon|Arrow}} You mean...
+:{{A|VO side1 pl1 lynx 264.ogg}} '''Lynx:''' ...Yes.
+:{{A|VO side1 pl1 lynx 265.ogg}} '''Lynx:''' They say that despite her pregnancy, Madam Penya insisted on staying at the Snow Plains camp. She couldn't go to the front lines, but she was able to handle administrative duties.
+:{{A|VO side1 pl1 lynx 266.ogg}} '''Lynx:''' Then, finally... the day of Pela's birth arrived.
+:{{A|VO side1 pl1 lynx 267.ogg}} '''Lynx:''' Tragically, there were complications... Other serious incidents occurred that day &mdash; the exploration team ran into a blizzard and the camp lost contact with the outside world... No one knew what to do.
+:{{A|VO side1 pl1 lynx 268.ogg}} '''Lynx:''' The only good thing... was that Pela was born healthy.
+:{{DIcon|Arrow}} I never knew any of this...
+::{{A|VO side1 pl1 lynx 269.ogg}} '''Lynx:''' ...
+:{{DIcon|Arrow}} So what about the floppy disk?
+:{{A|VO side1 pl1 lynx 270.ogg}} '''Lynx:''' The floppy disk... If the old research team members were telling the truth...
+:{{A|VO side1 pl1 lynx 271.ogg}} '''Lynx:''' ...it was something Madam Penya left behind.
+----
+<pre>{
+	"$type": "RPG.GameCore.SetAudioEmotionState",
+	"StateName": "State_Sorrow",
+	"SubMissionID": 201141115
+}</pre>
 :{{tx}}
+----
+;([[#Gallery|Cutscene]] plays)
+::From the moment she knew she was pregnant...
+::...to the day of Pela's birth...
+::Never missing a day.
+::Mom...
+::Mom...
+::Mom...
+;(Cutscene ends)
+----
+<pre>{
+	"$type": "RPG.GameCore.SetAudioEmotionState",
+	"StateName": "State_Sorrow",
+	"ResetToFloorDefault": true,
+	"SubMissionID": 201141115
+}</pre>
 {{Dialogue End}}
 
 ===Return to the Neverwinter Workshop with Lynx{{subst:void|<!--201141113-->}}===
 {{Mission Description|type=companion|location=History and Culture Museum|update|Lynx seems to be emotionally affected because of Pela. She asks you to go back to the Neverwinter workshop with her, and seems to have something to say to her siblings.<br />Go back to the workshop with her. You've always found it hard to refuse other people's requests, don't you?}}
 {{Dialogue Start}}
-:{{tx}}
+----
+:{{A|VO side1 pl1 lynx 279.ogg}} '''Lynx:''' ...
+:{{DIcon|Arrow}} Lynx, are you okay?
+::{{A|VO side1 pl1 lynx 280.ogg}} '''Lynx:''' I'm fine...
+:{{DIcon|Arrow}} ...
+:{{A|VO side1 pl1 lynx 281.ogg}} '''Lynx:''' ...
+:{{A|VO side1 pl1 lynx 282 m.ogg}} {{A|VO side1 pl1 lynx 282 f.ogg}} '''Lynx:''' (Trailblazer), there's somewhere I want to go &mdash; will you come too?
+:{{DIcon|Arrow}} Absolutely.
+:{{DIcon|Arrow}} Where to?
+:{{A|VO side1 pl1 lynx 283.ogg}} '''Lynx:''' ...The workshop.
+:{{A|VO side1 pl1 lynx 284.ogg}} '''Lynx:''' I'll wait for you there.
+----
 {{Dialogue End}}
 
 ===Listen to all the Landau siblings talk to each other{{subst:void|<!--201141112-->}}===
 {{Mission Description|type=companion|location=Neverwinter Workshop|update|Lynx seems to be emotionally affected because of Pela. She asks you to go back to the Neverwinter workshop with her, and seems to have something to say to her siblings.<br />Listen to what Lynx has to say.}}
 {{Dialogue Start}}
-:{{tx}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+----
+:{{A|VO side1 pl1 lynx 285.ogg}} '''Lynx:''' ...
+:{{A|VO side1 pl1 lynx 286.ogg}} '''Lynx:''' Serval, Gepard...
+:{{A|VO side1 pl1 lynx 287.ogg}} '''Lynx:''' ...
+:{{A|VO side1 pl1 lynx 288.ogg}} '''Lynx:''' ...I'm back!
+:{{A|VO side1 pl1 gepard 120.ogg}} '''Gepard:''' Lynx! You're finally back...
+:{{A|VO side1 pl1 gepard 121.ogg}} '''Gepard:''' Uh, what's with the red eyes? Did something happen?
+:{{A|VO side1 pl1 serval 123.ogg}} '''Serval:''' ...Gepard! Way to make it obvious.
+:{{A|VO side1 pl1 serval 124.ogg}} '''Serval:''' Welcome home, Lynxy.
+:{{A|VO side1 pl1 lynx 289.ogg}} '''Lynx:''' Mm...
+:{{A|VO side1 pl1 serval 125.ogg}} '''Serval:''' Aww, it's okay. It's okay...
+:{{A|VO side1 pl1 serval 126 m.ogg}} {{A|VO side1 pl1 serval 126 f.ogg}} '''Serval:''' Seems like a lot went down in the Snow Plains. Thanks again for your help, (Trailblazer).
+:{{A|VO side1 pl1 serval 127.ogg}} '''Serval:''' I think we need a little private time. See you soon.
+:{{A|VO side1 pl1 player 105 m.ogg}} {{A|VO side1 pl1 player 105 f.ogg}} '''(Trailblazer):''' (I should give them some time together...)
+----
+:{{A|VO side1 pl1 lynx 290.ogg}} '''Lynx:''' I'm sorry... for always being so stubborn...
+:{{A|VO side1 pl1 serval 128.ogg}} '''Serval:''' That's okay. Gepard and I understand... right, Gepard?
+:{{A|VO side1 pl1 gepard 122.ogg}} '''Gepard:''' Huh? Ah... Yes, of course.
+:{{A|VO side1 pl1 gepard 123.ogg}} '''Gepard:''' But I have to say, Lynx... I think it's too dangerous for you to leave the city on your own...
+:{{A|VO side1 pl1 serval 129.ogg}} '''Serval:''' *sigh* Gepard! Are you quite finished?
 {{Dialogue End}}
 
 ==Other Languages==

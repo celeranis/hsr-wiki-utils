@@ -35,23 +35,273 @@ PageTitle=#Stars Spun, Prescience Sprung#
 -->
 ==Dialogue==
 {{Stub Dialogue}}
+;(Upon reaching the destination)
 {{Dialogue End}}
 
 ===Head to the Exalting Sanctum Plaza{{subst:void|<!--102070102-->}}===
 {{Mission Description|type=trailblaze|location=Exalting Sanctum|update|Fu Xuan, head of the Divination Commission, appears while you were engaged in combat with Kafka. She then takes Kafka back to the Divination Commission as per Jing Yuan's orders.<br />You are temporarily left in the Exalting Sanctum as Kafka's interrogation is being prepared and are told to wait for the guide from the Divination Commission.}}
 {{Dialogue Start}}
-:{{tx}}
+----
+
+;(Upon reaching the destination)
+<pre>{
+	"$type": "RPG.GameCore.AdventureCameraLookAt",
+	"LookAtTargetAreaName": {
+		"Value": "1020701_LookatArea"
+	},
+	"LookAtTargetAnchorName": {
+		"Value": "LookatPoint_1"
+	},
+	"PlayerTurnTo": true,
+	"AxisOffset": {
+		"X": -22,
+		"Y": -10
+	},
+	"LookAtTransitionDuration": 2,
+	"LookAtTransitionCurvePath": "Camera/BlendCurve/Blend_N1CameraTest.asset",
+	"LockCameraInput": true,
+	"LookAtDuration": 1,
+	"MaxAngle": 60,
+	"ExtraFreelook3rdConfig": {
+		"ExportToJson": true,
+		"BaseChangeParam": {
+			"ExportToJson": true,
+			"ZoomRatio": 1.2,
+			"CenterPos": {
+				"X": 0.5,
+				"Y": 0.5
+			},
+			"Time": 1,
+			"ChangeCurvePath": "Camera/BlendCurve/Blend_N1CameraTest.asset",
+			"RecoveryTime": 1,
+			"RecoveryCurvePath": "Camera/BlendCurve/Blend_N1CameraTest.asset"
+		}
+	}
+}</pre>
+:{{A|VO chapter2 3 mar7th 127.ogg}} '''March 7th:''' That's the plaza...
+:{{A|VO chapter2 3 mar7th 128.ogg}} '''March 7th:''' ...but I can't see anyone waiting for us. Should we look around?
+
+;(Talk to March 7th)
+:{{A|VO chapter2 3 mar7th 126.ogg}} '''March 7th:''' Should we wait here, or go find the messenger from the Divination Commission?
+
+;(Talk to Welt Yang)
+:{{A|VO chapter2 3 welt 119.ogg}} '''Welt:''' Sorry, I'm getting a little fixated. If you want to head out, we should go this way.
+
+;(Talk to Tingyun)
+:{{A|VO chapter2 3 tingyun 120.ogg}} '''Tingyun:''' If you're bored, you could go and find the messenger from the Divination Commission.
 {{Mission Description|type=trailblaze|location=Exalting Sanctum|update|Fu Xuan, head of the Divination Commission, appears while you are engaged in combat with Kafka. She then takes Kafka back to the Divination Commission as per Jing Yuan's orders.<br />You are temporarily left in the Exalting Sanctum as Kafka's interrogation is being prepared and are told to wait for the guide from the Divination Commission.}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+----
+;([[#Gallery|Cutscene]] plays)
+::Everybody stay back!
+::Give him this medicine and make him lie down!
+::I&mdash;I mean...
+::...make "them" lie down...
+;(Cutscene ends)
+----
+;(Enter battle)
+:{{Enemy List|Mara-Struck Soldier*2}}
 {{Dialogue End}}
 
 ===Stroll around the Exalting Sanctum Plaza and look for the messenger sent by Fu Xuan{{subst:void|<!--102070107-->}}===
 {{Dialogue Start}}
+:{{A|VO chapter2 3 bailu 101.ogg}} '''Bailu:''' ...That'll teach you a lesson. Ready to lie down now?
+:{{A|VO chapter2 3 bailu 102 m.ogg}} {{A|VO chapter2 3 bailu 102 f.ogg}} '''Bailu:''' Thanks for helping to stabilize the patients &mdash; your "assertive sedation" techniques are quite effective.
+:{{A|VO chapter2 3 mar7th 129.ogg}} '''March 7th:''' "Assertive sedation techniques..." Does she mean beating people up?
+:{{A|VO chapter2 3 bailu 103.ogg}} '''Bailu:''' However, these Cloud Knights were already sick, and now they're injured too. I've gotta bandage up their wounds, realign their bones... Ugh, as if I didn't have enough on my plate!
+:{{DIcon|Arrow}} Aren't you a little young to be realigning bones?
+::Aren't you a little young to be realigning bones?
+:{{DIcon|Arrow}} I'm gonna need to see some qualifications...
+::I'm gonna need to see some qualifications...
+::{{A|VO chapter2 3 bailu 106.ogg}} '''Bailu:''' I get it &mdash; you think because I'm small I must be a runaway child.
+::{{A|VO chapter2 3 bailu 107 m.ogg}} {{A|VO chapter2 3 bailu 107 f.ogg}} '''Bailu:''' Hmph, welcome to the Xianzhou my short-lived outsider friends &mdash; appearances can be deceiving here! The Vidyadhara race is self-reincarnating &mdash; no mum or dad required!
+::{{A|VO chapter2 3 bailu 108.ogg}} '''Bailu:''' I've been studying the art of healing ever since I cast off my old shell! You're looking at a recognized, practicing, dedicated doctor.
+::{{A|VO chapter2 3 mar7th 133.ogg}} '''March 7th:''' Belobog kids are making snowmen while children here are writing prescriptions...
+::'''Welt:''' In addition to humans and foxians, the Xianzhou Alliance is also home to the Vidyadhara people &mdash; also known as "Long's Scions." This child must be one of them.
+::{{A|VO chapter2 3 bailu 109.ogg}} '''Bailu:''' Things haven't been very peaceful on the Luofu recently. Make sure you don't&mdash;
+::{{A|VO chapter2 3 mar7th 134.ogg}} '''March 7th:''' Go running around, right? Well, your general gave us an errand, so I'm afraid we have to.
+::{{A|VO chapter2 3 bailu 110 m.ogg}} {{A|VO chapter2 3 bailu 110 f.ogg}} '''Bailu:''' Hm, well, seeing as you saved me just now, if you're unlucky enough to acquire any breaks or sprains... I'll treat you for free! As for medicine, I'll give you a twenty percent discount.
+::{{DIcon|Arrow}} That doesn't sound very "free."
+::{{DIcon|Arrow}} So you're still charging us!
+::{{A|VO chapter2 3 bailu 111.ogg}} '''Bailu:''' Ha, do you have any idea how many people on the Luofu are waiting for an appointment with me? You should count this as a blessing!
+::{{tx}}
+:I'm gonna need to see some qualifications...
+:{{A|VO chapter2 3 bailu 106.ogg}} '''Bailu:''' I get it &mdash; you think because I'm small I must be a runaway child.
+:{{A|VO chapter2 3 bailu 107 m.ogg}} {{A|VO chapter2 3 bailu 107 f.ogg}} '''Bailu:''' Hmph, welcome to the Xianzhou my short-lived outsider friends &mdash; appearances can be deceiving here! The Vidyadhara race is self-reincarnating &mdash; no mum or dad required!
+:{{A|VO chapter2 3 bailu 108.ogg}} '''Bailu:''' I've been studying the art of healing ever since I cast off my old shell! You're looking at a recognized, practicing, dedicated doctor.
+:{{A|VO chapter2 3 mar7th 133.ogg}} '''March 7th:''' Belobog kids are making snowmen while children here are writing prescriptions...
+:'''Welt:''' In addition to humans and foxians, the Xianzhou Alliance is also home to the Vidyadhara people &mdash; also known as "Long's Scions." This child must be one of them.
+:{{A|VO chapter2 3 bailu 109.ogg}} '''Bailu:''' Things haven't been very peaceful on the Luofu recently. Make sure you don't&mdash;
+:{{A|VO chapter2 3 mar7th 134.ogg}} '''March 7th:''' Go running around, right? Well, your general gave us an errand, so I'm afraid we have to.
+:{{A|VO chapter2 3 bailu 110 m.ogg}} {{A|VO chapter2 3 bailu 110 f.ogg}} '''Bailu:''' Hm, well, seeing as you saved me just now, if you're unlucky enough to acquire any breaks or sprains... I'll treat you for free! As for medicine, I'll give you a twenty percent discount.
+:{{DIcon|Arrow}} That doesn't sound very "free."
+:{{DIcon|Arrow}} So you're still charging us!
+:{{A|VO chapter2 3 bailu 111.ogg}} '''Bailu:''' Ha, do you have any idea how many people on the Luofu are waiting for an appointment with me? You should count this as a blessing!
 :{{tx}}
+
+
+;(Talk to Guangda)
+:{{A|VO chapter2 3 guangda 112.ogg}} '''Guangda:''' Ugh, they pay us next to nothing then order us straight to the front line when things go south... I must be crazy.
+
+;(Talk to Exalting Sanctum Resident)
+:{{A|VO chapter2 3 cltA 101.ogg}} '''Exalting Sanctum Resident:''' That was terrifying, thank goodness the Vidyadhara dragon lady was saved...
+:{{A|VO chapter2 3 cltB 101.ogg}} '''Exalting Sanctum Resident:''' Yes, that child's usually hidden away. What's she doing out here?
+
+;(Talk to Exalting Sanctum Resident)
+:{{A|VO chapter2 3 cltC 101.ogg}} '''Exalting Sanctum Resident:''' I heard the Knights affected by the evil are going berserk!
+:{{A|VO chapter2 3 cltD 101.ogg}} '''Exalting Sanctum Resident:''' Don't scare yourself &mdash; the Alchemy Commission's dragon lady can cure anything.
+:{{A|VO chapter2 3 mar7th 135.ogg}} '''March 7th:''' Our little miracle worker here seems very different from everyone else around &mdash; don't you think Mr. Yang?
+:{{A|VO chapter2 3 welt 120.ogg}} '''Welt:''' So this is the Vidyadhara, I've only ever read about them. They're known as the dragon race... not hard to see why.
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+<pre>{
+	"$type": "RPG.GameCore.PlayNPCBubbleTalk",
+	"BubbleTalkInfoList": [
+		{
+			"AutoSkipTime": 2,
+			"GroupID": 8,
+			"GroupNpcID": 400001,
+			"TalkSentenceID": 102021808
+		},
+		{
+			"AutoSkipTime": 2,
+			"GroupID": 8,
+			"GroupNpcID": 400001,
+			"TalkSentenceID": 102021809
+		}
+	],
+	"InstantFinish": false
+}</pre>
+
+;(Upon reaching the destination)
+<pre>{
+	"$type": "RPG.GameCore.PlayNPCBubbleTalk",
+	"BubbleTalkInfoList": [
+		{
+			"AutoSkipTime": 2,
+			"GroupID": 20,
+			"GroupNpcID": 400002,
+			"TalkSentenceID": 102021806
+		},
+		{
+			"AutoSkipTime": 2,
+			"GroupID": 20,
+			"GroupNpcID": 400003,
+			"TalkSentenceID": 102021807
+		}
+	],
+	"InstantFinish": false
+}</pre>
+
+;(Upon reaching the destination)
+<pre>{
+	"$type": "RPG.GameCore.PlayNPCBubbleTalk",
+	"BubbleTalkInfoList": [
+		{
+			"AutoSkipTime": 2,
+			"GroupID": 7,
+			"GroupNpcID": 400001,
+			"TalkSentenceID": 102021801
+		},
+		{
+			"AutoSkipTime": 2,
+			"GroupID": 7,
+			"GroupNpcID": 400001,
+			"TalkSentenceID": 102021802
+		}
+	],
+	"InstantFinish": false
+}</pre>
+
+;(Upon reaching the destination)
+<pre>{
+	"$type": "RPG.GameCore.PlayNPCBubbleTalk",
+	"BubbleTalkInfoList": [
+		{
+			"AutoSkipTime": 2,
+			"GroupID": 26,
+			"GroupNpcID": 400001,
+			"TalkSentenceID": 102021803
+		},
+		{
+			"AutoSkipTime": 2,
+			"GroupID": 17,
+			"GroupNpcID": 400005,
+			"TalkSentenceID": 102021804
+		},
+		{
+			"AutoSkipTime": 2,
+			"GroupID": 17,
+			"GroupNpcID": 400005,
+			"TalkSentenceID": 102021805
+		}
+	],
+	"InstantFinish": false
+}</pre>
+----
+:{{A|VO chapter2 3 dahao 103 m.ogg}} {{A|VO chapter2 3 dahao 103 f.ogg}} '''Dahao:''' Excuse me, {{MC|m=fella|f=miss}} &mdash; hold on a moment.
+:{{A|VO chapter2 3 dahao 104.ogg}} '''Dahao:''' It was only thanks to your help earlier that the dragon lady and those Exalting Sanctum residents got away unscathed.
+:{{DIcon|Arrow}} Dragon lady?
+::{{A|VO chapter2 3 dahao 105.ogg}} '''Dahao:''' The dragon lady of the Alchemy Commission &mdash; Lady Bailu.
+::{{A|VO chapter2 3 mar7th 136.ogg}} '''March 7th:''' You mean the child? She's starting to sound like a big shot.
+:{{DIcon|Arrow}} Our help?
+::{{A|VO chapter2 3 dahao 106.ogg}} '''Dahao:''' You don't remember? You dealt with those mara-struck knights in the nick of time &mdash; I saw it all.
+:{{A|VO chapter2 3 dahao 107.ogg}} '''Dahao:''' A friend in the Sky-Faring Commission told me the general commissioned guests to deal with the troubles on the Luofu. You must be the guests.
+:{{A|VO chapter2 3 dahao 108.ogg}} '''Dahao:''' If you don't mind, I hope you can take the time to come to the Realm-Keeping Commission. I'd like to talk to you about the issues Exalting Sanctum is currently facing.
+----
+
+;(Talk to Dahao)
+:{{A|VO chapter2 3 dahao 109.ogg}} '''Dahao:''' This isn't a good place to talk &mdash; too much activity. If you don't mind, I hope you can come to the Realm-Keeping Commission.
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{A|VO chapter2 3 qingque 121.ogg}} '''Qingque:''' We're almost there everyone, stay close.
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+<pre>{
+	"$type": "RPG.GameCore.PlayNPCBubbleTalk",
+	"BubbleTalkInfoList": [
+		{
+			"AutoSkipTime": 4,
+			"GroupID": 20,
+			"GroupNpcID": 400002,
+			"TalkSentenceID": 102021806
+		},
+		{
+			"AutoSkipTime": 4,
+			"GroupID": 20,
+			"GroupNpcID": 400003,
+			"TalkSentenceID": 102021807
+		}
+	]
+}</pre>
+
+;(Upon reaching the destination)
+<pre>{
+	"$type": "RPG.GameCore.PlayNPCBubbleTalk",
+	"BubbleTalkInfoList": [
+		{
+			"AutoSkipTime": 4,
+			"GroupID": 8,
+			"GroupNpcID": 400001,
+			"TalkSentenceID": 102021808
+		},
+		{
+			"AutoSkipTime": 4,
+			"GroupID": 8,
+			"GroupNpcID": 400001,
+			"TalkSentenceID": 102021809
+		}
+	]
+}</pre>
 {{Dialogue End}}
 
 ===Head to the Exalting Sanctum Plaza{{subst:void|<!--102070104-->}}===
 {{Dialogue Start}}
-:{{tx}}
 {{Dialogue End}}
 
 ==Other Languages==

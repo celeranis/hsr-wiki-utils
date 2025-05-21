@@ -40,7 +40,24 @@ PageTitle=#Hyperlink Match, Peppy!#
 ===Have a Hyperlink Match with Peppy{{subst:void|<!--801413401-->}}===
 {{Mission Description|type=adventure|location=Storage Zone|The core gameplay loop behind Aetherium Wars is "dueling." Challenge different players and show your true strength!}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Peppy)
+:'''Peppy:''' Woof woof woof! Woof woof!
+<pre>{
+	"$type": "RPG.GameCore.ShowMenu",
+	"DisplaySingleMenuItem": true
+}</pre>
+:'''Peppy:''' Arf... Arf...
+:After a ferocious battle, Peppy's face looks regretful.
+:'''(Trailblazer):''' (This game really is sweeping the universe...)
+<pre>{
+	"$type": "RPG.GameCore.ShowUI",
+	"Name": "Ui.AetherDivide.AetherDivideEntryPage",
+	"Param": {
+		"Value": "2"
+	},
+	"OnUIEnter": []
+}</pre>
 {{Dialogue End}}
 
 ==Other Languages==

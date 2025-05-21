@@ -43,44 +43,325 @@ PageTitle=#Death, Dripping Like Morning Dew#
 ===Speak with "Elder" Amunet{{subst:void|<!--104031601-->}}===
 {{Mission Description|type=trailblaze|location=Aidonia's Cloister|You remember "Elder" Amunet as well as Aidonia, this city-state that worshiped Thanatos. This is where your memory begins.<br />Of course, you also remember how you became an executioner and a Maiden of War.}}
 {{Dialogue Start}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
 :{{tx}}
+
 {{Dialogue End}}
 
 ===Execute the unknown death-row prisoner{{subst:void|<!--104031602-->}}===
 {{Dialogue Start}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+----
+:{{tx}}
+:{{A|VO chapter4 26 qiufanB 102.ogg}} '''Unknown Death-Row Prisoner:''' Please... Don't kill me... I don't want to die....
+:{{DIcon|Arrow}} {{Color|fire|nobold=1|A gentle touch.}}
+::{{A|VO chapter4 26 qiufanA 102.ogg}} '''Unknown Death-Row Prisoner:''' No... No...
+::{{tx}}
+:{{DIcon|Arrow}} No. I can't do it.
+::{{A|VO chapter4 26 amengneite 115.ogg}} '''"Elder" Amunet:''' This is your duty. Remember, consider the source of the dead's suffering, then give them the respect they deserve.
+::{{A|VO chapter4 26 qiufanB 103.ogg}} '''Unknown Death-Row Prisoner:''' Th&mdash;Thank you... I beg you... Don't listen to her...
+::{{DIcon|Arrow}} {{Color|fire|nobold=1|A gentle touch.}}
+:::{{A|VO chapter4 26 qiufanA 102.ogg}} '''Unknown Death-Row Prisoner:''' No... No...
+:::{{tx}}
+::{{DIcon|Arrow}} I&mdash;I can't...
+:::{{A|VO chapter4 26 amengneite 116.ogg}} '''"Elder" Amunet:''' If you cannot learn to accept death, then Aidonia has no place for you.
+:::{{A|VO chapter4 26 amengneite 117.ogg}} '''"Elder" Amunet:''' This is your last chance. Do it.
+:::{{A|VO chapter4 26 qiufanA 101.ogg}} '''Unknown Death-Row Prisoner:''' No, please... I don't want to die... Please, I'm begging you...
+:{{DIcon|Arrow}} {{Color|fire|nobold=1|A gentle touch.}}
+:{{A|VO chapter4 26 qiufanA 102.ogg}} '''Unknown Death-Row Prisoner:''' No... No...
 :{{tx}}
 {{Dialogue End}}
 
 ===Execute the courageous warrior{{subst:void|<!--104031603-->}}===
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Bestow Honor)
+----
+:<!--3-second delay-->
+<pre>{
+	"$type": "RPG.GameCore.SetTargetEntityFadeWithAnim",
+	"TargetType": {
+		"$type": "RPG.GameCore.GroupFetchLocalTarget",
+		"Targets": [
+			400001
+		]
+	},
+	"Duration": 1.5
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.TriggerEffect",
+	"TargetType": {
+		"$type": "RPG.GameCore.GroupFetchLocalTarget",
+		"Targets": [
+			400001
+		]
+	},
+	"Flags": [],
+	"EffectPath": "Effects/Eff_Prefab/Eff_NPC/Normal/Common/Eff_Normal_Common_BeHug01AS.prefab",
+	"SubObjectModifyDataList": []
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.TriggerSound",
+	"SoundName": {
+		"Value": "Ev_sfx_storyd_300dev_Missionfailed"
+	},
+	"EmitterType": "NPC",
+	"GroupID": 15,
+	"ID": 400001
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.SetTargetEntityFadeWithAnim",
+	"TargetType": {
+		"$type": "RPG.GameCore.GroupFetchLocalTarget",
+		"Targets": [
+			400002
+		]
+	},
+	"TargetValue": 1,
+	"Duration": 1.5
+}</pre>
+:<!--2-second delay-->
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{A|VO chapter4 26 zhanshi 101.ogg}} '''Courageous Warrior:''' H-Holy Maiden...
+:{{A|VO chapter4 26 amengneite 121.ogg}} '''"Elder" Amunet:''' Go. Grant her glorious death.
+;(Unused &mdash; G12_Fadeout)
+<pre>{
+	"$type": "RPG.GameCore.SetTargetEntityFadeWithAnim",
+	"TargetType": {
+		"$type": "RPG.GameCore.GroupFetchLocalTarget",
+		"Targets": [
+			400001
+		]
+	},
+	"Duration": 1
+}</pre>
+
 {{Dialogue End}}
 
 ===Execute the outlander war captive{{subst:void|<!--104031604-->}}===
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Impose Punishment)
+----
+:<!--3-second delay-->
+<pre>{
+	"$type": "RPG.GameCore.SetTargetEntityFadeWithAnim",
+	"TargetType": {
+		"$type": "RPG.GameCore.GroupFetchLocalTarget",
+		"Targets": [
+			400001
+		]
+	},
+	"Duration": 1.5
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.TriggerEffect",
+	"TargetType": {
+		"$type": "RPG.GameCore.GroupFetchLocalTarget",
+		"Targets": [
+			400001
+		]
+	},
+	"Flags": [],
+	"EffectPath": "Effects/Eff_Prefab/Eff_NPC/Normal/Common/Eff_Normal_Common_BeHug01AS.prefab",
+	"SubObjectModifyDataList": []
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.TriggerSound",
+	"SoundName": {
+		"Value": "Ev_sfx_storyd_300dev_Missionfailed"
+	},
+	"EmitterType": "NPC",
+	"GroupID": 16,
+	"ID": 400001
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.SetTargetEntityFadeWithAnim",
+	"TargetType": {
+		"$type": "RPG.GameCore.GroupFetchLocalTarget",
+		"Targets": [
+			400002
+		]
+	},
+	"TargetValue": 1,
+	"Duration": 1.5
+}</pre>
+:<!--2-second delay-->
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{A|VO chapter4 26 zhanfu 101.ogg}} '''Outlander War Captive:''' Do it then! Executioner...
+:{{A|VO chapter4 26 amengneite 122.ogg}} '''"Elder" Amunet:''' You heard him.
+
+:{{A|VO chapter4 26 zhanshi 102.ogg}} '''Courageous Warrior:''' Th&mdash;Thank... you...
 {{Dialogue End}}
 
 ===Execute the Ill Herder{{subst:void|<!--104031605-->}}===
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Gift Slumber)
+----
+:<!--3-second delay-->
+<pre>{
+	"$type": "RPG.GameCore.SetTargetEntityFadeWithAnim",
+	"TargetType": {
+		"$type": "RPG.GameCore.GroupFetchLocalTarget",
+		"Targets": [
+			400001
+		]
+	},
+	"Duration": 1.5
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.TriggerEffect",
+	"TargetType": {
+		"$type": "RPG.GameCore.GroupFetchLocalTarget",
+		"Targets": [
+			400001
+		]
+	},
+	"Flags": [],
+	"EffectPath": "Effects/Eff_Prefab/Eff_NPC/Normal/Common/Eff_Normal_Common_BeHug01AS.prefab",
+	"SubObjectModifyDataList": []
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.TriggerSound",
+	"SoundName": {
+		"Value": "Ev_sfx_storyd_300dev_Missionfailed"
+	},
+	"EmitterType": "NPC",
+	"GroupID": 17,
+	"ID": 400001
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.SetTargetEntityFadeWithAnim",
+	"TargetType": {
+		"$type": "RPG.GameCore.GroupFetchLocalTarget",
+		"Targets": [
+			400002
+		]
+	},
+	"TargetValue": 1,
+	"Duration": 1.5
+}</pre>
+:<!--2-second delay-->
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{A|VO chapter4 26 guren 101.ogg}} '''Ill Herder:''' Please... grant me release...
+:{{A|VO chapter4 26 amengneite 123.ogg}} '''"Elder" Amunet:''' You know what to do.
+
+:{{A|VO chapter4 26 zhanfu 102.ogg}} '''Outlander War Captive:''' I curse you... to live in eternal pain...!
 {{Dialogue End}}
 
 ===Speak with "Elder" Amunet and learn about the duties of an executioner{{subst:void|<!--104031609-->}}===
 {{Mission Description|type=trailblaze|location=Aidonia's Cloister|update|You remember "Elder" Amunet as well as Aidonia, the city-state that worshiped Thanatos. This is where your memory begins.<br />The "Elder" does not wish that you become a merciless executioner, but that you would fully understand the weight of life and death, then carry out with utmost respect the duty with which you were born.}}
 {{Dialogue Start}}
+
+;(Talk to "Elder" Amunet)
 :{{tx}}
+<pre>{
+	"$type": "RPG.GameCore.PerformanceEndSeq",
+	"BeforeCases": [
+		{
+			"$type": "RPG.GameCore.SwitchCharacterAnchorV2",
+			"SwitchCharacterAnchorConfig": {
+				"IsLocalPlayer": true,
+				"CharacterUniqueName": "LocalPlayer",
+				"AreaName": {
+					"Value": "LevelArea_P40424_F40424001_G18"
+				},
+				"AnchorName": {
+					"Value": "Anchor1"
+				}
+			}
+		}
+	]
+}</pre>
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{A|VO chapter4 26 amengneite 124.ogg}} '''"Elder" Amunet:''' Come. Fulfill your duty.
+:{{A|VO chapter4 26 castorice 166.ogg}} '''Castorice:''' ...What?
+:{{A|VO chapter4 26 castorice 165.ogg}} '''Castorice:''' When will this ever end...?
 {{Dialogue End}}
 
 ===Defeat Furiae Praetor{{subst:void|<!--104031608-->}}===
 {{Mission Description|type=trailblaze|location=Aidonia's Cloister|update|You remember "Elder" Amunet as well as Aidonia, this city-state that worshiped Thanatos. This is where your memory begins.<br />Actively use your natural-born talent and learn to accept it.<br />"Prove that you're a capable Holy Maiden, or that you have such resolve."}}
 {{Dialogue Start}}
-:{{tx}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{A|VO chapter4 26 amengneite 139.ogg}} '''"Elder" Amunet:''' Come now. It's time. I have already taught you all that I know...
+:{{A|VO chapter4 26 amengneite 140.ogg}} '''"Elder" Amunet:''' Show me that you are a fitting Holy Maiden... or at least, that you possess the resolve to become one.
+
+;(Upon reaching the destination)
+<pre>{
+	"$type": "RPG.GameCore.PlayMazeButtonEffect",
+	"Enable": true,
+	"BtnType": "MazeSkill"
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.ToastPile",
+	"DescTextID": {
+		"Hash": 4996247614040360955
+	}
+}</pre>
 {{Dialogue End}}
 
 ===Speak with "Elder" Amunet and learn about the duties of an executioner{{subst:void|<!--104031606-->}}===
 {{Mission Description|type=trailblaze|location=Aidonia's Cloister|update|You remember "Elder" Amunet as well as Aidonia, the city-state that worshiped Thanatos. This is where your memory begins.<br />The "Elder" does not wish that you become a merciless executioner, but that you would fully understand the weight of life and death, then carry out with utmost respect the duty with which you were born.}}
 {{Dialogue Start}}
+----
+:{{tx}}
+----
+----
+;([[#Gallery|Cutscene]] plays)
+::I don't want to die!
+::Please, I'm begging you.
+::Just let me go!
+::I don't want to die, please.
+::I don't want mercy like this!
+::Just... let me go... I need them...I don't...
+::I hate these icy hands.
+::Get it over with.
+::End its suffering.
+::The Reaper has blessed your hands.
+::Only you can grant them peace.
+::Embrace death.
+::Walk alongside it.
+::Is that you... Castorice?
+::All of them... have gone,
+::heeding Death's summon,
+::crossing into their domain.
+::I...
+::must go too.
+::I don't fear it,
+::Just... I have some regrets.
+::Watching people leave this world again and again...
+::it must be
+::lonely for you.
+::You must want to desperately embrace them
+::before they go.
+::I can't...
+::these hands...
+::they're too cold...
+::But big sister Castorice...
+::your hands are so warm.
+::Just like anyone else's.
+::So go on, don't hold back,
+::give me a warm hug.
+::Can hands like these...
+::really be warm?
+;(Cutscene ends)
+----
+----
 :{{tx}}
 {{Dialogue End}}
 

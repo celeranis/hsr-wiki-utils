@@ -46,61 +46,545 @@ PageTitle=#Eye of the Cosmos Part III#
 ===Speak with Ziqiao{{subst:void|<!--412210301-->}}===
 {{Mission Description|type=adventure|location=Alchemy Commission|The Ambrosial Arbor's growth made Luofu's logistic system malfunction. Now, Heron Express is asking you to control cycranes to find a starskiff of theirs, which had an accident.<br />Speak with Ziqiao and see what she actually needs from you.}}
 {{Dialogue Start}}
-:{{tx}}
+
 {{Dialogue End}}
 
 ===Control the cycrane to find the starskiff that had an accident{{subst:void|<!--412210302-->}}===
 {{Mission Description|type=adventure|location=Alchemy Commission|update|Control the cycrane and take off. Your job is important, but you also shouldn't ignore life's beautiful moments around you.}}
 {{Dialogue Start}}
-:{{tx}}
+
 {{Dialogue End}}
 
 ===Control the cycrane to find the starskiff that had an accident in Aureate Elixir Furnace{{subst:void|<!--412210303-->}}===
 {{Mission Description|type=adventure|location=Alchemy Commission|update|Ziqiao's records say this starskiff was lost near the Aureate Elixir Furnace. Go there to have a closer look.}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Unused &mdash; Talk_412210303)
+<pre>{
+	"$type": "RPG.GameCore.ResetMissionWayPoint",
+	"SubMissionID": 412210303
+}</pre>
+
+;(Unused &mdash; OnStart_X301_01)
+:'''Courier Cycrane:''' The signal monitoring system is now available and searching the target area.
+::'''Courier Cycrane:''' The signal monitoring system indicates that the goods were lost near the Aureate Elixir Furnace. Based on past data, the cycrane recommends that you search {{Color|keyword|nobold=1|near the Ambrosial Arbor's branches}}.
+
+;(Unused &mdash; OnStart_X301_02)
+<pre>{
+	"$type": "RPG.GameCore.SetMissionWayPoint",
+	"SubMissionID": 412210303,
+	"OverideMissionWayPointType": true,
+	"OverideWayPointGroupID": true,
+	"OverideWayPointEntityID": true,
+	"OverideWayPointShowRangeMin": true,
+	"OverideMapWaypointRange": true
+}</pre>
+
+;(Unused &mdash; OnClose_X301_01)
+<pre>{
+	"$type": "RPG.GameCore.ResetMissionWayPoint",
+	"SubMissionID": 412210303
+}</pre>
 {{Dialogue End}}
 
 ===Control the cycrane to find the starskiff that had an accident in Healer's Market{{subst:void|<!--412210304-->}}===
 {{Mission Description|type=adventure|location=Alchemy Commission|update|Ziqiao's records say this starskiff was lost in Healer's Market. Go there to have a closer look.}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Unused &mdash; OnStart_X301_02)
+:'''Courier Cycrane:''' The signal monitoring system is now available and searching the target area.
+::'''Courier Cycrane:''' The signal monitoring system indicates that the goods were lost near Healer's Market. Based on past data, the cycrane recommends that you search {{Color|keyword|nobold=1|above the store roofs}}.
+::'''Ziqiao:''' There seem to be some {{Color|keyword|nobold=1|interfering signals}} in this area... What's going on? I suppose they aren't related to the items we are looking for. Should we check them out anyway?
+
+;(Unused &mdash; Talk_412210304)
+<pre>{
+	"$type": "RPG.GameCore.ResetMissionWayPoint",
+	"SubMissionID": 412210304
+}</pre>
+
+;(Unused &mdash; OnClose_X301_02)
+<pre>{
+	"$type": "RPG.GameCore.ResetMissionWayPoint",
+	"SubMissionID": 412210304
+}</pre>
 {{Dialogue End}}
 
 ===(Optional) Control the cycrane to find the suspicious signal in Healer's Market{{subst:void|<!--412210305-->}}===
 {{Mission Description|type=adventure|location=Alchemy Commission|update|The cycrane seems to have detected an unknown signal near the Healer's Market... Go have a look and you might just find some surprise there.}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Unused &mdash; Talk_412210305)
+:<!--1-second delay-->
+:<pre>{
+	"$type": "RPG.GameCore.ShowTalkUI",
+	"Show": true
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.SelectorConfig",
+	"TaskList": [
+		{
+			"$type": "RPG.GameCore.PropStateExecute",
+			"TargetType": {
+				"$type": "RPG.GameCore.TargetFetchAdvPropEx",
+				"FetchType": "SinglePropByPropID",
+				"SinglePropID": {
+					"GroupID": {
+						"FixedValue": {
+							"Value": 34
+						}
+					},
+					"ID": {
+						"FixedValue": {
+							"Value": 300001
+						}
+					}
+				}
+			},
+			"Execute": [
+				{
+					"$type": "RPG.GameCore.PlayAndWaitSimpleTalk",
+					"Backgrounds": [],
+					"SimpleTalkList": [
+						{
+							"TalkSentenceID": 412210350
+						}
+					]
+				},
+				{
+					"$type": "RPG.GameCore.ShowTalkUI"
+				},
+				{
+					"$type": "RPG.GameCore.UnLockPlayerControl"
+				},
+				{
+					"$type": "RPG.GameCore.UpdateTreasureChallengeProgress",
+					"RaidTargetID": 412210101,
+					"IsIncrease": true,
+					"DeltaValue": 1
+				},
+				{
+					"$type": "RPG.GameCore.FinishPerformanceMission",
+					"Key": "Mission_412210305"
+				}
+			]
+		},
+		{
+			"$type": "RPG.GameCore.PropStateExecute",
+			"TargetType": {
+				"$type": "RPG.GameCore.TargetFetchAdvPropEx",
+				"FetchType": "SinglePropByPropID",
+				"SinglePropID": {
+					"GroupID": {
+						"FixedValue": {
+							"Value": 34
+						}
+					},
+					"ID": {
+						"FixedValue": {
+							"Value": 300001
+						}
+					}
+				}
+			},
+			"State": "Open",
+			"Execute": [
+				{
+					"$type": "RPG.GameCore.PlayAndWaitSimpleTalk",
+					"Backgrounds": [],
+					"SimpleTalkList": [
+						{
+							"TalkSentenceID": 412210350
+						},
+						{
+							"TalkSentenceID": 412210426
+						}
+					]
+				},
+				{
+					"$type": "RPG.GameCore.PlayOptionTalk",
+					"OptionList": [
+						{
+							"$type": "RPG.GameCore.OptionTalkInfo",
+							"TalkSentenceID": 412210405,
+							"OptionIconType": "ChatContinueIcon",
+							"TriggerCustomString": "TalkSentence_412210405"
+						}
+					]
+				}
+			]
+		}
+	]
+}</pre>
+
+;(Unused &mdash; TalkSentence_412210405)
+<pre>{
+	"$type": "RPG.GameCore.ShowTalkUI"
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.ResetMissionWayPoint",
+	"SubMissionID": 412210303
+}</pre>
+::<!--0.5-second delay-->
+:<pre>{
+	"$type": "RPG.GameCore.SetForceStreamingThisFrame",
+	"StartLoadingTick": true
+}</pre>
+::<!--0.1-second delay-->
+:<pre>{
+	"$type": "RPG.GameCore.WaitStreamingJobFinished",
+	"StopLoadingTick": true
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.BlockInputController",
+	"ActionNameList": []
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.UpdateTreasureChallengeProgress",
+	"RaidTargetID": 412210101,
+	"IsIncrease": true,
+	"DeltaValue": 1
+}</pre>
 {{Dialogue End}}
 
 ===Find out more about the situation from Xikui{{subst:void|<!--412210307-->}}===
 {{Mission Description|type=adventure|location=Alchemy Commission|update|Something big and unexpected must have happened for the Helm Master's Secretary to personally arrive at the scene.<br />Speak with Xikui to understand more about the situation.}}
 {{Dialogue Start}}
-:{{tx}}
+;(If {{cx}}{{subst:void|<!--{"$type":"RPG.GameCore.ByLocalPlayerIsFakeAvatar","Inverse":true}-->}})
+::'''Xikui:''' I was instructed by Madam Yukong to lead a team to investigate the culprit who vandalized the roost, and the clues bring me here... Those people seem to be the Disciples of Sanctus Medicus.
+::'''Xikui:''' I suppose they have modified the roost to emit a signal of a specific frequency to attract the Abominations of Abundance.
+::{{DIcon|Arrow}} Are they hiding here?
+::'''Xikui:''' That seems to be the case... However, the Alchemy Commission has a complex terrain, and we might alert them if we send everyone out to look for them. So...
+::'''Ziqiao:''' You've come to the right person, Lady Xikui. (Trailblazer) here is an expert in finding things with cycranes!
+::{{DIcon|Arrow}} You flatter me.
+::{{DIcon|Arrow}} You really know how to give me more work.
+:::'''Ziqiao:''' I just don't want to see your talent go to waste!
+::'''Xikui:''' That's why I'm here... (Trailblazer), I'm counting on you for this matter.
+::{{DIcon|Arrow}} Since you've said so...
+::{{DIcon|Arrow}} I have no reason to say no.
+::{{DIcon|Arrow}} I need extra pay for this!
+::'''Xikui:''' Oh, (Trailblazer). You're so reliable! I'll sing your praises in front of Madam Yukong!
 {{Dialogue End}}
 
 ===Control the cycrane to find the Disciples of Sanctus Medicus hiding in Elixir Research Terrace{{subst:void|<!--412210308-->}}===
 {{Mission Description|type=adventure|location=Alchemy Commission|update|Seems like these Disciples of Sanctus Medicus are the culprits who broke the roost.<br />These cunning foes went into hiding, but little did they know you were an expert at flying cycranes. Go find them.}}
 {{Dialogue Start}}
-:{{tx}}
+<pre>{
+	"$type": "RPG.GameCore.PhotoGraphWaitIdentifyFinish",
+	"WaitTargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvNpcEx",
+		"FetchType": "SingleNpcByNpcID",
+		"SingleNpcID": {
+			"GroupID": {
+				"FixedValue": {
+					"Value": 38
+				}
+			},
+			"GroupNpcID": {
+				"FixedValue": {
+					"Value": 400001
+				}
+			}
+		}
+	},
+	"OnPreviewFinish": []
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.PhotoGraphShowIdentifyResult",
+	"IsIdentifySuccess": true,
+	"IsShowToast": true,
+	"ToastText": {
+		"Hash": 845206858745524995
+	},
+	"IsShowAim": true,
+	"PhotoGraphMode": "IdentifyUAV"
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.PhotoGraphAimTarget",
+	"AimTargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvNpcEx",
+		"FetchType": "SingleNpcByNpcID",
+		"SingleNpcID": {
+			"GroupID": {
+				"FixedValue": {
+					"Value": 38
+				}
+			},
+			"GroupNpcID": {
+				"FixedValue": {
+					"Value": 400001
+				}
+			}
+		}
+	}
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.HideWaypointByProp",
+	"TargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvNpcEx",
+		"FetchType": "SingleNpcByNpcID",
+		"SingleNpcID": {
+			"GroupID": {
+				"FixedValue": {
+					"Value": 38
+				}
+			},
+			"GroupNpcID": {
+				"FixedValue": {
+					"Value": 400001
+				}
+			}
+		}
+	},
+	"OnNameBoard": true
+}</pre>
+:<!--1-second delay-->
+<pre>{
+	"$type": "RPG.GameCore.SwitchPhotoGraphMode",
+	"SkipPhotoPreviewDialog": true,
+	"IdentifyRadiusOverride": {
+		"FixedValue": {
+			"Value": 0
+		}
+	}
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.ResetMissionWayPoint",
+	"SubMissionID": 412210308
+}</pre>
+;(Unused &mdash; OnEnter)
+<pre>{
+	"$type": "RPG.GameCore.SetMissionWayPoint",
+	"SubMissionID": 412210308,
+	"OverideMissionWayPointType": true,
+	"OverideWayPointGroupID": true,
+	"OverideWayPointEntityID": true,
+	"OverideWayPointShowRangeMin": true,
+	"OverideMapWaypointRange": true
+}</pre>
+
+;(Unused &mdash; OnStart_X301_03)
+<pre>{
+	"$type": "RPG.GameCore.SetMissionWayPoint",
+	"SubMissionID": 412210308,
+	"OverideMissionWayPointType": true,
+	"MissionWayPointType": "Anchor",
+	"OverideWayPointGroupID": true,
+	"WayPointGroupID": 38,
+	"OverideWayPointEntityID": true,
+	"WayPointEntityID": 4,
+	"OverideWayPointShowRangeMin": true,
+	"WayPointShowRangeMin": -1,
+	"OverideMapWaypointRange": true,
+	"MapWaypointRange": 20
+}</pre>
+
+;(Unused &mdash; OnClose_X301_03)
+<pre>{
+	"$type": "RPG.GameCore.ResetMissionWayPoint",
+	"SubMissionID": 412210308
+}</pre>
+
+;(Unused &mdash; OnClose_X301_01)
+<pre>{
+	"$type": "RPG.GameCore.ResetMissionWayPoint",
+	"SubMissionID": 412210308
+}</pre>
+
+;(Unused &mdash; OnClose_X301_02)
+<pre>{
+	"$type": "RPG.GameCore.ResetMissionWayPoint",
+	"SubMissionID": 412210308
+}</pre>
 {{Dialogue End}}
 
 ===Control the cycrane to chase down Disciples of Sanctus Medicus and push them into a dead-end{{subst:void|<!--412210309-->}}===
 {{Mission Description|type=adventure|location=Alchemy Commission|update|These villains are scurrying everywhere, taking advantage of Alchemy Commission's layout. However, with the "eyes in the sky" offered by the cycrane, you will definitely be able to catch them.}}
 {{Dialogue Start}}
-:{{tx}}
+;(If {{cx}}{{subst:void|<!--{"$type":"RPG.GameCore.ByLocalPlayerIsFakeAvatar"}-->}})
+<pre>{
+	"$type": "RPG.GameCore.SetMissionWayPoint",
+	"SubMissionID": 412210309,
+	"OverideMissionWayPointType": true,
+	"MissionWayPointType": "NPC",
+	"OverideWayPointGroupID": true,
+	"WayPointGroupID": 38,
+	"OverideWayPointEntityID": true,
+	"WayPointEntityID": 400001,
+	"OverideWayPointShowRangeMin": true,
+	"OverideMapWaypointRange": true
+}</pre>
+;(Unused &mdash; Talk_412210309)
+<pre>{
+	"$type": "RPG.GameCore.ResetMissionWayPoint",
+	"SubMissionID": 412210309
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.ResetMissionWayPoint",
+	"SubMissionID": 412210309
+}</pre>
+::<!--0.1-second delay-->
+
+;(Unused &mdash; Re-search)
+<pre>{
+	"$type": "RPG.GameCore.ResetMissionWayPoint",
+	"SubMissionID": 412210308
+}</pre>
+
+;(Unused &mdash; OnClose_X301_01)
+<pre>{
+	"$type": "RPG.GameCore.ResetMissionWayPoint",
+	"SubMissionID": 412210309
+}</pre>
+
+;(Unused &mdash; OnEnter)
+<pre>{
+	"$type": "RPG.GameCore.SetMissionWayPoint",
+	"SubMissionID": 412210309,
+	"OverideMissionWayPointType": true,
+	"OverideWayPointGroupID": true,
+	"OverideWayPointEntityID": true,
+	"OverideWayPointShowRangeMin": true,
+	"OverideMapWaypointRange": true
+}</pre>
+
+;(Unused &mdash; OnStart_X301_03)
+<pre>{
+	"$type": "RPG.GameCore.SetMissionWayPoint",
+	"SubMissionID": 412210309,
+	"OverideMissionWayPointType": true,
+	"MissionWayPointType": "NPC",
+	"OverideWayPointGroupID": true,
+	"WayPointGroupID": 38,
+	"OverideWayPointEntityID": true,
+	"WayPointEntityID": 400001,
+	"OverideWayPointShowRangeMin": true,
+	"OverideMapWaypointRange": true
+}</pre>
 {{Dialogue End}}
 
 ===Disciples of Sanctus Medicus hiding in Alchemy Commission{{subst:void|<!--412210310-->}}===
 {{Mission Description|type=adventure|location=Alchemy Commission|update|These Disciples of Sanctus Medicus are very cunning, and we need to hit them hard!<br />Do it, brave Trailblazer.}}
 {{Dialogue Start}}
-:{{tx}}
+
+
+;(Talk to Ziqiao)
+:'''Ziqiao:''' Phew... that was close. Fortunately, you were there, (Trailblazer)...
+:'''Xikui:''' I'm sorry... I got you two involved in such a dangerous situation.
+:{{DIcon|Arrow}} Helping others is my pleasure.
+::'''Ziqiao:''' Indeed. We're just doing our job.
+:{{DIcon|Arrow}} I deal with this kind of thing all the time.
+::'''Xikui:''' That's impressive!
+:{{DIcon|Arrow}} How about you pay me a little more...
+::'''Xikui:''' Don't worry. The Sky-Faring Commission will definitely reward you handsomely.
+:'''Xikui:''' Please take this. It's my token of appreciation for you.
+:'''Ziqiao:''' And this is your pay. I hope I'll get to work with you again next time!
+:'''Xikui:''' I hope it will be something less dangerous next time...
+<pre>{
+	"$type": "RPG.GameCore.SelectorConfig",
+	"TaskList": [
+		{
+			"$type": "RPG.GameCore.PropStateExecute",
+			"TargetType": {
+				"$type": "RPG.GameCore.TargetFetchAdvPropEx",
+				"FetchType": "SinglePropByPropID",
+				"SinglePropKey": {
+					"Custom": true,
+					"Key": "Choice"
+				},
+				"SinglePropID": {
+					"GroupID": {
+						"FixedValue": {
+							"Value": 34
+						}
+					},
+					"ID": {
+						"FixedValue": {
+							"Value": 300006
+						}
+					}
+				}
+			},
+			"Execute": [
+				{
+					"$type": "RPG.GameCore.EndPerformance"
+				}
+			]
+		},
+		{
+			"$type": "RPG.GameCore.PropStateExecute",
+			"TargetType": {
+				"$type": "RPG.GameCore.TargetFetchAdvPropEx",
+				"FetchType": "SinglePropByPropID",
+				"SinglePropKey": {
+					"Custom": true,
+					"Key": "Choice"
+				},
+				"SinglePropID": {
+					"GroupID": {
+						"FixedValue": {
+							"Value": 34
+						}
+					},
+					"ID": {
+						"FixedValue": {
+							"Value": 300006
+						}
+					}
+				}
+			},
+			"State": "Open",
+			"Execute": [
+				{
+					"$type": "RPG.GameCore.PlayOptionTalk",
+					"OptionList": [
+						{
+							"$type": "RPG.GameCore.OptionTalkInfo",
+							"TalkSentenceID": 412210342,
+							"OptionIconType": "ChatContinueIcon",
+							"TriggerCustomString": "TalkSentence_412210343"
+						}
+					]
+				}
+			]
+		}
+	]
+}</pre>
+;(Unused &mdash; TalkSentence_412210343)
+:'''Ziqiao:''' Don't worry about that. I've already informed the Seat of Divine Foresight when you found them. By now, I believe they have been arrested by the Cloud Knights.
 {{Dialogue End}}
 
 ===Report back to Xikui and Ziqiao{{subst:void|<!--412210311-->}}===
 {{Mission Description|type=adventure|location=Alchemy Commission|update|The job is done, and you did even better than some senior employees that have been working for a few centuries.<br />Go back to Xikui and Ziqiao quickly to receive your payment.}}
 {{Dialogue Start}}
-:{{tx}}
+----
+;(Unused &mdash; OnEnter)
+<pre>{
+	"$type": "RPG.GameCore.SetMissionWayPoint",
+	"SubMissionID": 412210311,
+	"OverideMissionWayPointType": true,
+	"OverideWayPointGroupID": true,
+	"OverideWayPointEntityID": true,
+	"OverideWayPointShowRangeMin": true,
+	"OverideMapWaypointRange": true
+}</pre>
+
+;(Unused &mdash; OnClose_X301_01)
+<pre>{
+	"$type": "RPG.GameCore.ResetMissionWayPoint",
+	"SubMissionID": 412210311
+}</pre>
+
+;(Unused &mdash; OnClose_X301_02)
+<pre>{
+	"$type": "RPG.GameCore.ResetMissionWayPoint",
+	"SubMissionID": 412210311
+}</pre>
+
+;(Unused &mdash; OnClose_X301_03)
+<pre>{
+	"$type": "RPG.GameCore.ResetMissionWayPoint",
+	"SubMissionID": 412210311
+}</pre>
 {{Dialogue End}}
 
 ==Other Languages==

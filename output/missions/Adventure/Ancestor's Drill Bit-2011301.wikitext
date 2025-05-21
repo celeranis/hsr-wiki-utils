@@ -40,19 +40,246 @@ PageTitle=#Ancestor's Drill Bit#
 ===Go to the Workshop to check on Molly{{subst:void|<!--201130101-->}}===
 {{Mission Description|type=adventure|location=Neverwinter Workshop|update|Serval sends you a message to thank you for helping Molly and invites you to accompany Molly in the "Workshop."<br />According to Serval, Molly hasn't recovered from that accident. Go to the "Workshop" to check on Molly when you're free.}}
 {{Dialogue Start}}
-:{{tx}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+<pre>{
+	"$type": "RPG.GameCore.PlayNPCBubbleTalk",
+	"BubbleTalkInfoList": [
+		{
+			"AutoSkipTime": 5,
+			"GroupID": 5,
+			"GroupNpcID": 400002,
+			"TalkSentenceID": 101012647
+		},
+		{
+			"AutoSkipTime": 5,
+			"GroupID": 6,
+			"GroupNpcID": 400001,
+			"TalkSentenceID": 101012648
+		}
+	]
+}</pre>
+
+;(Talk to Molly)
+----
+:'''Serval:''' Well... I think there's still a way to non-destructively take it apart. You see the structure here...
+:'''Molly:''' ...Miss Serval!
+:{{DIcon|Arrow}} Are you guys in trouble?
+::'''Serval:''' Yo, (Trailblazer), to what do I owe the pleasure? If you have something that needs fixing, just leave it there. I'll have a look after I first figure out how to take apart Miss Molly's heirloom tin box...
+::'''Molly:''' {{Size|36|Do! Not! Take! It! Apart!}}
+::'''Molly:''' Oh! I&mdash;I'm just, a little anxious... I didn't mean to, Miss Serval! Sorry!
+::'''Serval:''' Hahaha, I'm just joking. Rest assured I won't damage it.
+::{{DIcon|Arrow}} Don't you have to go back to work, Molly?
+:::'''Molly:''' The thing is... after what happened last time, I took a long vacation. I feel like I need to switch my mind to something else...
+:::'''Molly:''' I mean, there's nothing but chores left for me in the military right now, and also, I messed with some big-wigs that I shouldn't have. I don't know if I should stay in the Technology Division anymore... ugh.
+:::'''Serval:''' Don't worry. Pela has sorted it all out. But I do understand your concerns. You can think this over in my workshop, and stay as long as you want.
+::{{DIcon|Arrow}} Is the shop not opening today, Serval?
+:::'''Serval:''' Of course it's open. But I haven't had much business recently, so I've been helping Miss Molly here with her family heirloom.
+:::'''Serval:''' I have to say, even by today's standards, the craftsmanship of this little box is highly advanced. I can't just ignore an item this interesting.
+::{{DIcon|Arrow}} Don't you two have work to do?
+:::'''Serval:''' Haha, the workshop is still open. It's just that there's been no business recently...
+:::'''Molly:''' After that incident last time, I took a long vacation. I feel like I need to switch my mind to something else.
+:::'''Molly:''' I mean, there's nothing but chores left for me in the military right now, and also, I messed with some big-wigs that I shouldn't have. I don't know if I should stay in the Technology Division anymore... ugh.
+:::'''Serval:''' Don't worry. Pela has sorted it all out. But I do understand your concerns. You can think this over in my workshop, and stay as long as you want.
+::'''Molly:''' Anyway, as you can see, Miss Serval and I are trying to figure out the mystery about my family heirloom together. The one we brought back from the last incident&mdash;
+::'''Molly:''' I remember my father telling me, "This is the 'insurance' left for us by our ancestors... When there is no other way, find a way to open this iron box."
+::'''Serval:''' But we haven't made any progress other than finding a puzzle engraved on the box. I wanted to just take it apart, but Molly wouldn't let me...
+::'''Molly:''' Ugh... What were my ancestors thinking? Why would anyone in dire need have the time to solve puzzles? Way to mess with their children!
+::{{DIcon|Arrow}} So what does the puzzle say?
+:::'''Serval:''' That's the problem. We can't even read the puzzle. To us, it's just a bunch of letters that we've never seen before.
+::{{DIcon|Arrow}} Don't they leave a key as well?
+::'''Molly:''' We thought about that. Logically speaking, a box like this can only be opened with the corresponding key.
+::'''Serval:''' But this box doesn't use a pin tumbler lock mechanism at all, and the shape of the keyhole is so odd. Seems like what it needs is not so much a key, but something like a screw or a drill...
+::'''Serval:''' Apparently, Miss Molly's ancestors didn't leave us any such oddly shaped key, so we have to bite the bullet and solve the puzzle. But in any case, we have to decipher what the puzzle is first.
+::'''Molly:''' Decipher... Oh, yes! Miss Serval, (Trailblazer), could this be the Silvermane Guards encryption technology? After all, our family has worked in the Technology Division for generations, so it won't be a stretch to presume that my ancestors used codes from the Guard, right?
+::'''Serval:''' Makes sense. But I was expelled from the Guard a long time ago. I have no idea about that kind of thing...
+::'''Molly:''' Oh, I only once heard my colleagues from the Intelligence Department talking about this. I don't know the specifics. After all, I am just an entry-level employee, and I don't usually encounter these things at work.
+::'''Molly:''' I'm out of ideas now... (Trailblazer), what do you think?
+::{{DIcon|Arrow}} Silvermane Guards... Should we ask Captain Gepard for help?
+:::'''Serval:''' Haha, you wanna ask my brother for help? It'd be much easier to steal the Silvermane Guards' master cipher codebook. My brother wouldn't know a thing about encryption. He usually just leaves this kind of work to Pela...
+::{{DIcon|Arrow}} Intelligence Department. Maybe ask Pela for help?
+::{{DIcon|Arrow}} So, Serval, please dismantle the tin box...
+:::'''Molly:''' No! I told you, we're not gonna take it apart...
+:::'''Serval:''' Haha, {{MC|m=he|f=she}} is only joking. If only Pela were here. She's always clever with these sorta things...
+::'''Serval:''' You are right, Pela! How could I forget. She's an intelligence expert!
+::'''Molly:''' Oh, I believe Miss Pela mentioned that she would get a new magazine just before she left this morning.
+::'''Serval:''' New magazine, huh? I see... She often spends her off days at the bookstore. Come on, let's go find her.
+:{{DIcon|Exit}} (Leave them alone for now.)
 {{Dialogue End}}
 
 ===Go to the Book Merchant and find Pela{{subst:void|<!--201130102-->}}===
 {{Mission Description|type=adventure|location=Administrative District|update|Molly, who is currently homeless, has become a friend of Serval. When you find them, they are working on Molly's family treasure, the mechanism box, as if they had been partners for years.<br />The two decide to ask for Pela's help because they find nothing. Go to the Book Merchant's place with them to find Pela.}}
 {{Dialogue Start}}
-:{{tx}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+----
+:'''Serval:''' Hi Fizz! How's business?
+:'''Fizz:''' Aha, if it isn't Serval. Business? Same old... But it's a nice way to earn a living. Every now and then, I can read leisurely like this.
+:'''Fizz:''' Ah, are you here to pick up that book? Sorry, there seems to be something wrong with the publisher. I haven't received it yet.
+:'''Serval:''' Well, no worries. It's not like I need the book right away. I actually came to see Pela. Was she here earlier today?
+:'''Fizz:''' Miss Pela? Ah! She just went back to get money. She should be back soon.
+:{{DIcon|Arrow}} Are books sold here that expensive?
+:{{DIcon|Arrow}} Can't believe that she didn't bring enough money...
+:'''Fizz:''' Here is what happened. Miss Pela wasn't aware that this new magazine has a venue-limited edition, and she only brought enough money for the regular edition...
+:'''Molly:''' So... what kind of magazine is this? What is the venue?
+:'''Serval:''' I am guessing it's fan fiction of that... ''Tale of the Winterlands''. They have both novels and comics. They write about the... relationship... between the characters from the original novels.
+:'''Serval:''' But they are all created by fans, and some of them are completely unrelated to the original works. I think they have meetings on a regular basis to share their ideas.
+:'''Serval:''' Pela is an important member of the ''Tale of the Winterlands'' fan club. They all call her... um, what was it...
+:{{DIcon|Arrow}} I never knew Pela was good at this kind of thing...
+::'''Molly:''' Well... Smart people are just good at everything.
+:{{DIcon|Arrow}} The Guards really live interesting lives
+::'''Molly:''' *sigh* Maybe I'm the only one in the Guards who spends all day sulking.
+:{{DIcon|Arrow}} Oh, Artem, you are so gentle...
+::'''Molly:''' Huh? What did you say?
+::'''Serval:''' Hey, looks like you and Pela have a lot in common, (Trailblazer).
+:'''Pela:''' Yo Fizz, I'm back!
+:'''Fizz:''' Ah, right on time, Miss Pela is back!
+;(Screen fades to black)
+:'''Pela:''' ... Why are you all here!?
+:'''Pela:''' So, Fizz... Um... This is kinda embarrassing, but could you do me a favor and reserve that limited edition for me... Seems like I'll have to buy it a bit later. Also... You didn't let them see the new edition, did you?
+:'''Fizz:''' Of course not, hehe.
+:'''Pela:''' Oh, good. Thank you, Fizz. My dignity as an intelligence officer has been saved...
+:'''Pela:''' So what are you guys doing here? Don't tell me you're here to buy books 'cuz I won't believe it.
+:{{DIcon|Arrow}} We need your help to decipher something.
+::'''Molly:''' Yep. You see, Miss Serval and I found a line of code on my heirloom tin box. Can you take a look, Miss Pela?
+:{{DIcon|Arrow}} I wanna read Miss Pela's masterpiece...
+::'''Pela:''' ...Serval.
+::'''Serval:''' Yes? How can I help, Miss Pela~
+::'''Pela:''' Serval, you big mouth! I'll sort you out once we get back to the workshop...
+::'''Molly:''' Um... Actually, Miss Serval and I found a line of code on my heirloom tin box. Miss Pela, can you please take a look?
+:'''Pela:''' I mean, I could... Let's go back to the workshop and talk about it in detail.
+<pre>{
+	"$type": "RPG.GameCore.DestroyNPC",
+	"GroupID": 74,
+	"GroupNpcID": 400001
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.DestroyNPC",
+	"GroupID": 74,
+	"GroupNpcID": 400002
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.DestroyNPC",
+	"GroupID": 74,
+	"GroupNpcID": 400003
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.ActiveVirtualCamera",
+	"AreaName": "Mission_2011101_temp",
+	"AnchorName": "Camera_201130102",
+	"IsActive": false,
+	"BlendConfig": {
+		"ExportToJson": true,
+		"BlendType": "Cut"
+	}
+}</pre>
+
+;(Upon reaching the destination)
+:'''Molly:''' Oh, Miss Pela isn't here?
+:'''Serval:''' Let's go and ask Fizz.
+
+;(Talk to Fizz)
+:'''Fizz:''' I'll be here reading. Let me know when you've made your selections.
+<pre>{
+	"$type": "RPG.GameCore.ShowShop",
+	"ShopType": 3,
+	"TaskID": []
+}</pre>
+;(Unused &mdash; ALL_TALK_END)
+
+
+;(Talk to Alexis)
+<pre>{
+	"$type": "RPG.GameCore.ShowShop",
+	"ShopType": 4,
+	"TaskID": []
+}</pre>
+
+;(Talk to Ronald)
+:'''Ronald:''' Welcome to the grocer's! What can I help you with?
+<pre>{
+	"$type": "RPG.GameCore.ShowMenu"
+}</pre>
 {{Dialogue End}}
 
 ===Talk to Pela and go to the Corridor of Fading Echoes{{subst:void|<!--201130103-->}}===
 {{Mission Description|type=adventure|location=Neverwinter Workshop|update|Pela's embarrassment piqued your curiosity, but now isn't the time to tease her...<br />You've discovered a clue written on the family heirloom that points you towards an old fort called the Corridor of Fading Echoes. Go with Pela to explore it.}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Pela)
+<pre>{
+	"$type": "RPG.GameCore.VerifyInteractingEntity",
+	"IsDialogueTarget": true
+}</pre>
+----
+:'''Serval:''' So, Pela, now that you had a look, what do you think?
+:'''Pela:''' Well, I think you guys are probably on the right track. These disorganized letters certainly resemble cryptography. However, given that this was created 600 or 700 years ago, it most likely uses a completely different encryption algorithm.
+:'''Molly:''' So, what encryption algorithm did they use then?
+:'''Pela:''' Let me think... I remember that in Chapter 2, Section 4 of the 7th Edition of the ''Silvermane Guards Cryptology'', it says, "In the early days of the Guards, Richard Balakin, the intelligence officer and chief of the Technology Division, popularized the earliest encryption method within the force."
+:'''Pela:''' "All the letters are shifted four places backward in the alphabet, and the ciphertext can be obtained this way; the reverse can also be used for decryption."
+:{{DIcon|Arrow}} So let's try it out.
+:{{DIcon|Arrow}} How do you remember that so clearly...
+::'''Pela:''' That's just one of the basic skills of an intelligence officer. So don't underestimate me.
+:'''Pela:''' So, according to this method...it should be... I got it! Here it is: "The key"... "At the mountain pass"... "Waiting," "That place is"... "The Supreme Guardian"... "The place of operation"? In addition, the inscription is "Richard Balakin."
+:'''Molly:''' Based on the surname, this Richard is indeed my ancestor. Wait, isn't this the guy Miss Pela just mentioned? And what on earth does this mean anyway?
+:{{DIcon|Arrow}} Could it be the location of the next clue?
+::'''Molly:''' You are right! There are two locations mentioned in this sentence...
+:{{DIcon|Arrow}} Get out of Belobog, Riddler!
+::'''Molly:''' ...What is a Riddler?
+:'''Serval:''' "The mountain pass," "the place of operation of The Supreme Guardian," I'm guessing it's referring to the fortress that was eroded by the Fragmentum?
+:'''Pela:''' And the "key" must be referring to the key that opens the box. In other words, this ancestor hid the key of the heirloom tin box in the Corridor of Fading Echoes.
+:'''Molly:''' Uh oh... Even for the Guards, it is difficult to set foot in the Fragmentum, let alone ordinary citizens like us, especially if you want to go searching around inside.
+:'''Molly:''' What do we do? We've finally found a clue. Do we have to give up after all?
+:{{DIcon|Arrow}} We can help you find it.
+::<!--0.5-second delay-->
+::'''Molly:''' Even for a seasoned traveler like you, the Fragmentum must be too perilous to go into, or so I've heard.
+:{{DIcon|Arrow}} I visit the Fragmentum like it's my home...
+::<!--0.5-second delay-->
+::'''Pela:''' Then your home must be quite the hell hole...
+:'''Molly:''' Are you really going to help me find the key? Thank you so much! But I don't wanna pressure you into this. Safety should always be the number one priority!
+:'''Pela:''' Don't worry. I'll look after {{MC|m=him|f=her}}. Miss Molly, just wait in the workshop with Serval.
+:'''Pela:''' Without further ado, let's go now. Are you ready, (Trailblazer)?
+:{{DIcon|Arrow}} Let's go.
+:<pre>{
+	"$type": "RPG.GameCore.OpenTreasureChallenge",
+	"RaidID": 40101,
+	"OnCancel": [
+		{
+			"$type": "RPG.GameCore.EndPerformance"
+		}
+	]
+}</pre>
+:{{DIcon|Exit}} Let me get prepared first...
+::'''Pela:''' Then let me know when you're ready. I'll wait for you right here.
+
+
+;(Talk to Pela)
+----
+:'''Pela:''' What's up, are you ready, (Trailblazer)?
+:{{DIcon|Arrow}} Let's go.
+:<pre>{
+	"$type": "RPG.GameCore.OpenTreasureChallenge",
+	"RaidID": 40101,
+	"OnCancel": [
+		{
+			"$type": "RPG.GameCore.EndPerformance"
+		}
+	]
+}</pre>
+:{{DIcon|Exit}} Let me get prepared first...
+::'''Pela:''' It's okay. I'll wait for you here when you're ready.
+:<pre>{
+	"$type": "RPG.GameCore.ActiveVirtualCamera",
+	"AreaName": "Mission_2011101_temp",
+	"AnchorName": "Camera_201130103",
+	"IsActive": false,
+	"BlendConfig": {
+		"ExportToJson": true,
+		"BlendType": "Cut"
+	}
+}</pre>
 {{Dialogue End}}
 
 ==Other Languages==

@@ -1,0 +1,142 @@
+<%-- [PAGE_INFO]
+PageTitle=#Trace 'n' Drift#
+[END_PAGE_INFO] --%>
+{{Stub|Dialogue.}}
+{{Mission Infobox
+|id            = 8033201
+|title         = 
+|image         = <!--Mission Trace 'n' Drift.png-->
+|type          = Adventure
+|event_name    = Trace 'n' Drift
+|chapter       = 
+|requirements  = [[Trailblaze Mission]] ''[[Seabiscuit]]'' completed
+|summary       = <!--official mission summary from Fate's Atlas-->
+|characters    = Competition Organizer; Tournament Broadcast; Trailblazer
+|startLocation = [[Penacony]] - [[SoulGlad™ Scorchsand Audition Venue]]
+|world         = Penacony
+|area          = SoulGlad™ Scorchsand Audition Venue
+|prev          = 
+|next          = ???
+|rewards       = Traveler's Guide*2; Refined Aether*2; Credit*20,000
+}}
+'''''Trace 'n' Drift''''' is an Event [[Adventure Mission]] from the [[Trace 'n' Drift]] event.
+
+==Steps==
+# Talk to the competition organizer
+# Use Sea Hunter Shark to complete the training challenge
+
+<!--
+==Gameplay Notes==
+
+--><!--
+==Trial Character==
+
+-->
+==Dialogue==
+{{Stub Dialogue}}
+===Talk to the competition organizer{{subst:void|<!--803320101-->}}===
+{{Mission Description|type=adventure|location=SoulGlad™ Scorchsand Audition Venue|The Spheroid Racing Competition hosted jointly by The Family and the IPC is about to begin. Wait... You're sure you didn't sign up for it, why are you suddenly eligible for participation? Never mind, head over and find out what's going on.}}
+{{Dialogue Start}}
+
+;(Talk to Competition Organizer)
+:'''Competition Organizer:''' Dear esteemed (Trailblazer), the "Speed Cup" Spheroid Racing tournament has been delayed for quite some time now. We were starting to wonder, "What would we do if you didn't show up for the race?"
+:'''Competition Organizer:''' Thankfully, you've showed up! I'll announce the official start of the race right away!
+:What, what's up with this event?
+:'''Competition Organizer:''' What what what? Didn't you sign up? Strange, I have your name on the roster right here?
+:{{DIcon|Travel Log}} Is there a prize? If so, let's get started!
+::'''Competition Organizer:''' You're quick to the point. Please, follow me!
+::{{tx}}
+:{{DIcon|Arrow}} What, what's up with this event?
+::'''Competition Organizer:''' What what what? Didn't you sign up? Strange, I have your name on the roster right here?
+::{{tx}}
+::{{tx}}
+::{{tx}}
+::'''Competition Organizer:''' Dear esteemed (Trailblazer), the "Speed Cup" Spheroid Racing tournament has been delayed for quite some time now. We were starting to wonder, "What would we do if you didn't show up for the race?"
+::'''Competition Organizer:''' Thankfully, you've showed up! I'll announce the official start of the race right away!
+::What, what's up with this event?
+::'''Competition Organizer:''' What what what? Didn't you sign up? Strange, I have your name on the roster right here?
+::Is there a prize? If so, let's get started!
+::'''Competition Organizer:''' You're quick to the point. Please, follow me!
+::'''Competition Organizer:''' The training grounds have been cleared for you. I'll take you for a test drive. By the way, I noticed that your registration form doesn't seem to list a race car. Strange, I couldn't find any record of you submitting one... Uh, did you bring your own car?
+::A deafening broadcast announcement suddenly echoed across the venue.
+::'''Tournament Broadcast:''' {{Color|keyword|nobold=1|The contestant of Sea Hunter Shark}} has been disqualified from the competition!
+::'''Competition Organizer:''' ...Wait, I just received new information. Do you know the contestant for Sea Hunter Shark? He wants to entrust his race car to you.
+::'''Competition Organizer:''' Well, that's quite a coincidence. I just noticed you didn't have a registered race car and was wondering what you'd be driving.
+::'''Competition Organizer:''' Why not use it for a test run? I can guide you from the side and help you get used to it. After all, it's a manual transmission, and you younger folks might not be accustomed to that.
+::'''Competition Organizer:''' The test track is ready. Shall we head out now?
+::{{DIcon|Arrow}} Go, go, go!
+
+{{Dialogue End}}
+
+===Use Sea Hunter Shark to complete the training challenge{{subst:void|<!--803320102-->}}===
+{{Mission Description|type=adventure|location=SoulGlad™ Scorchsand Audition Venue|update|It's rather abrupt, but Boothill is a pretty nice guy. He entrusted his own race car to you. Since we're already here, we might as well use his race car for training. Who knows, you might have a talent for racing!}}
+{{Dialogue Start}}
+
+;(Talk to Competition Organizer)
+----
+:'''Competition Organizer:''' The race will start as soon as you strap in! How do you like it? Ready to sit down? We're about to start.
+:{{DIcon|Travel Log}} Enough about the chit-chat, just start the race already!
+::'''Competition Organizer:''' We're ready to go as soon as you are.
+:<pre>{
+	"$type": "RPG.GameCore.EnterGameFlow",
+	"Type": "ParkourBall",
+	"Parameters": {
+		"StartLevel": {
+			"Value": "10001"
+		}
+	}
+}</pre>
+:{{DIcon|Exit}} Hold on, let me catch my breath...
+::'''Competition Organizer:''' No one's winning this race by tapping the brakes. If you're ready, just call out to me.
+
+;(Talk to Competition Organizer)
+
+
+;(Unused &mdash; EnterDistrict_G{GroupID})
+:{{tx}}
+::{{DIcon|Talk}} ...Sign up? When did I sign up?
+:::'''Competition Organizer:''' You didn't sign up? Let me check... Ah, it looks like your registration was done through an anonymous terminal.
+:::'''Competition Organizer:''' Oh! Looks like a hacker signed you up. Just so you know, "Speed Cup" takes no responsibility for that!
+:::{{DIcon|Arrow}} No need to say anything, we all know who did it.
+:::{{DIcon|Arrow}} Is there only one hacker in the entire Cosmos?
+:::'''Competition Organizer:''' On behalf of The Family, I beg you not to quit the race. Think about the prestige and status you have...
+:::{{tx}}
+::;(Return to previous option selection)
+::{{DIcon|Talk}} What happened to Sea Hunter Shark?
+:::'''Competition Organizer:''' You must know the Sea Hunter Shark racer, right? He's been disqualified, and before leaving, he entrusted his car to you.
+:::{{tx}}
+::;(Return to previous option selection)
+::{{DIcon|Talk}} This race doesn't seem... that popular, does it?
+:::'''Competition Organizer:''' Ah, you don't know the whole story.
+:::{{tx}}
+::;(Return to previous option selection)
+::{{DIcon|Arrow}} No more questions, let's just start the race.
+:::'''Competition Organizer:''' Great! Wishing you a good start!
+:::'''Competition Organizer:''' The next qualifier requires you to complete the course within a time limit while maintaining a high rank to move on to the next round.
+:::{{tx}}
+:<pre>{
+	"$type": "RPG.GameCore.EnterGameFlow",
+	"Type": "ParkourBall",
+	"Parameters": {}
+}</pre>
+{{Dialogue End}}
+
+==Other Languages==
+{{Other Languages
+|en   = Trace 'n' Drift
+|zhs  = 极速追影
+|zht  = 極速追影
+|ja   = シャドウチェイサー
+|ko   = 트레이스 앤 드리프트
+|es   = Rápido y asombroso
+|fr   = Formule S
+|ru   = Погоня за тенью
+|th   = แรงแซงทะลุเงา
+|vi   = Thần Tốc Truy Ảnh
+|de   = Spur & Drift
+|id   = Perburuan Bayangan Cepat
+|pt   = Rápido e Assombroso
+}}
+
+==Change History==
+{{Change History|3.3}}

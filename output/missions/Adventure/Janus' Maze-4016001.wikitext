@@ -1,11 +1,11 @@
 <%-- [PAGE_INFO]
-PageTitle=#Janus' Maze#
+PageTitle=#Janus' Maze (Adventure Mission)#
 [END_PAGE_INFO] --%>
 {{Stub|Dialogue.}}
 {{Mission Infobox
 |id            = 4016001
-|title         = 
-|image         = <!--Mission Janus' Maze.png-->
+|title         = Janus' Maze
+|image         = <!--Mission Janus' Maze (Adventure Mission).png-->
 |type          = Adventure
 |event_name    = 
 |chapter       = 
@@ -60,128 +60,699 @@ PageTitle=#Janus' Maze#
 ===Visit the site of Janus' Maze again{{subst:void|<!--401600101-->}}===
 {{Mission Description|type=adventure|location="Sanctum of Prophecy" Janusopolis|That Janus' Maze you fiddled in memory wasn't merely a door lock &mdash; it served other purposes for outsiders. Search the area. You might find something noteworthy...}}
 {{Dialogue Start}}
-:{{tx}}
 {{Dialogue End}}
 
 ===Pass the challenge of the Janus' Maze and complete the extrapolation{{subst:void|<!--401600102-->}}===
 {{Mission Description|type=adventure|location="Sanctum of Prophecy" Janusopolis|update|By a twist of fate, you're now an acolyte of the divination tool &mdash; Janus' Maze. Since you've started, might as well help the priests of the Temple of the Three Fates finish their backlog of "lost and found" assignments.}}
 {{Dialogue Start}}
-:{{tx}}
+;(If {{F|undefined}} is undefined 0)
+<pre>{
+	"$type": "RPG.GameCore.GenericSwitchCase",
+	"SwitchRef": {
+		"$type": "RPG.GameCore.SwitchRefFloorSavedValue",
+		"Name": {
+			"Value": "FSV_SwitchGravityBallCase"
+		}
+	},
+	"Cases": [
+		{
+			"$type": "RPG.GameCore.NumberCaseContainer",
+			"Case": {
+				"FixedValue": {
+					"Value": 2
+				}
+			},
+			"OnSuccess": [
+				{
+					"$type": "RPG.GameCore.GravityBallPuzzleSwitchBoard",
+					"PuzzleID": {
+						"FixedValue": {
+							"Value": 12
+						}
+					}
+				}
+			]
+		},
+		{
+			"$type": "RPG.GameCore.NumberCaseContainer",
+			"Case": {
+				"FixedValue": {
+					"Value": 3
+				}
+			},
+			"OnSuccess": [
+				{
+					"$type": "RPG.GameCore.GravityBallPuzzleSwitchBoard",
+					"PuzzleID": {
+						"FixedValue": {
+							"Value": 20
+						}
+					}
+				}
+			]
+		},
+		{
+			"$type": "RPG.GameCore.NumberCaseContainer",
+			"Case": {
+				"FixedValue": {
+					"Value": 4
+				}
+			},
+			"OnSuccess": [
+				{
+					"$type": "RPG.GameCore.GravityBallPuzzleSwitchBoard",
+					"PuzzleID": {
+						"FixedValue": {
+							"Value": 25
+						}
+					}
+				}
+			]
+		},
+		{
+			"$type": "RPG.GameCore.NumberCaseContainer",
+			"Case": {
+				"FixedValue": {
+					"Value": 5
+				}
+			},
+			"OnSuccess": [
+				{
+					"$type": "RPG.GameCore.GravityBallPuzzleSwitchBoard",
+					"PuzzleID": {
+						"FixedValue": {
+							"Value": 21
+						}
+					}
+				}
+			]
+		},
+		{
+			"$type": "RPG.GameCore.NumberCaseContainer",
+			"Case": {
+				"FixedValue": {
+					"Value": 6
+				}
+			},
+			"OnSuccess": [
+				{
+					"$type": "RPG.GameCore.GravityBallPuzzleSwitchBoard",
+					"PuzzleID": {
+						"FixedValue": {
+							"Value": 27
+						}
+					}
+				}
+			]
+		},
+		{
+			"$type": "RPG.GameCore.NumberCaseContainer",
+			"Case": {
+				"FixedValue": {
+					"Value": 7
+				}
+			},
+			"OnSuccess": [
+				{
+					"$type": "RPG.GameCore.GravityBallPuzzleSwitchBoard",
+					"PuzzleID": {
+						"FixedValue": {
+							"Value": 26
+						}
+					}
+				}
+			]
+		},
+		{
+			"$type": "RPG.GameCore.NumberCaseContainer",
+			"Case": {
+				"FixedValue": {
+					"Value": 8
+				}
+			},
+			"OnSuccess": [
+				{
+					"$type": "RPG.GameCore.GravityBallPuzzleSwitchBoard",
+					"PuzzleID": {
+						"FixedValue": {
+							"Value": 19
+						}
+					}
+				}
+			]
+		},
+		{
+			"$type": "RPG.GameCore.NumberCaseContainer",
+			"Case": {
+				"FixedValue": {
+					"Value": 9
+				}
+			},
+			"OnSuccess": [
+				{
+					"$type": "RPG.GameCore.GravityBallPuzzleSwitchBoard",
+					"PuzzleID": {
+						"FixedValue": {
+							"Value": 22
+						}
+					}
+				}
+			]
+		}
+	]
+}</pre>
+;(Unused &mdash; PuzzleSwitchPerformance)
+<pre>{
+	"$type": "RPG.GameCore.SetFloorCustomFloatV2",
+	"Name": {
+		"Value": "FCV_SwitchGravityBallCase"
+	},
+	"Value": {
+		"FixedValue": {
+			"Value": 0
+		}
+	}
+}</pre>
+
+;(Unused &mdash; PuzzleStartPerformance)
+:<!--0.3-second delay-->
+:<pre>{
+	"$type": "RPG.GameCore.TriggerSound",
+	"SoundName": {
+		"Value": "Ev_sfx_amphoreus_gravityball_platform"
+	},
+	"EmitterType": "Prop",
+	"TargetType": {
+		"$type": "RPG.GameCore.GroupFetchLocalTarget",
+		"TargetType": "Prop",
+		"Targets": [
+			300014
+		]
+	}
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.TriggerEffectList",
+	"TargetType": {
+		"$type": "RPG.GameCore.GroupFetchLocalTarget",
+		"TargetType": "Prop",
+		"Targets": [
+			300014
+		]
+	},
+	"EffectList": [
+		{
+			"EffectPath": "Effects/Eff_Prefab/Eff_Scene/InteractiveProp/Eff_Chap04_Prop_GravityBallPuzzleBoard_01_Start_Lod0.prefab"
+		}
+	]
+}</pre>
+::<!--2.5-second delay-->
+::<!--0.5-second delay-->
+:<pre>{
+	"$type": "RPG.GameCore.RemoveEffect",
+	"TargetType": {
+		"$type": "RPG.GameCore.GroupFetchLocalTarget",
+		"TargetType": "Prop",
+		"Targets": [
+			300014
+		]
+	},
+	"EffectPath": "Effects/Eff_Prefab/Eff_Scene/InteractiveProp/Eff_Chap04_Prop_GravityBallPuzzleBoard_01_Start_Lod0.prefab",
+	"Flags": []
+}</pre>
+
+;(Unused &mdash; PuzzleResetPerformance)
+
+
+;(Unused &mdash; PuzzleFinishPerformance)
+<pre>{
+	"$type": "RPG.GameCore.GravityBallPuzzleLastFinishCondition",
+	"DefaultGroupEvent": {
+		"Value": "default_finish"
+	},
+	"ConditionLogic": []
+}</pre>
+
+;(Unused &mdash; default_finish)
+<pre>{
+	"$type": "RPG.GameCore.TriggerEntityEventV2",
+	"EventName": {
+		"Value": "enter_pad"
+	},
+	"TargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvPropEx",
+		"FetchType": "SinglePropByPropID",
+		"SinglePropID": {
+			"GroupID": {
+				"FixedValue": {
+					"Value": 229
+				}
+			},
+			"ID": {
+				"FixedValue": {
+					"Value": 300003
+				}
+			}
+		}
+	}
+}</pre>
+::<!--1.5-second delay-->
+:<pre>{
+	"$type": "RPG.GameCore.TriggerEntityEventV2",
+	"EventName": {
+		"Value": "Clt_TriggerStopUsing"
+	},
+	"TargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvPropEx",
+		"FetchType": "SinglePropByPropID",
+		"SinglePropID": {
+			"GroupID": {
+				"FixedValue": {
+					"Value": 229
+				}
+			},
+			"ID": {
+				"FixedValue": {
+					"Value": 300004
+				}
+			}
+		}
+	}
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.ToastPage",
+	"MessageOne": {
+		"Hash": 2012001348524219443
+	},
+	"MessageTwo": {
+		"Hash": 3531031601469204543
+	}
+}</pre>
+
+;(Unused &mdash; PuzzleExitPerformance)
+<pre>{
+	"$type": "RPG.GameCore.TriggerEntityEventV2",
+	"EventName": {
+		"Value": "Clt_TriggerStopUsing"
+	},
+	"TargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvPropEx",
+		"FetchType": "SinglePropByPropID",
+		"SinglePropID": {
+			"GroupID": {
+				"FixedValue": {
+					"Value": 229
+				}
+			},
+			"ID": {
+				"FixedValue": {
+					"Value": 300004
+				}
+			}
+		}
+	}
+}</pre>
+
+;(Unused &mdash; PuzzleFinished)
+<pre>{
+	"$type": "RPG.GameCore.GenericSwitchCase",
+	"SwitchRef": {
+		"$type": "RPG.GameCore.SwitchRefFloorSavedValue",
+		"Name": {
+			"Value": "FSV_SwitchGravityBallCase"
+		}
+	},
+	"Cases": [
+		{
+			"$type": "RPG.GameCore.NumberCaseContainer",
+			"Case": {
+				"FixedValue": {
+					"Value": 0
+				}
+			},
+			"OnSuccess": [
+				{
+					"$type": "RPG.GameCore.PredicateTaskList",
+					"Predicate": {
+						"$type": "RPG.GameCore.ByCompareGroupProperty",
+						"DynamicName": {
+							"Value": "MissionState"
+						},
+						"CompareValue": 1
+					},
+					"SuccessTaskList": [],
+					"FailedTaskList": [
+						{
+							"$type": "RPG.GameCore.RequestSetServerGroupPropertyV2",
+							"DynamicName": {
+								"Value": "MissionState"
+							},
+							"Value": 1
+						}
+					]
+				}
+			]
+		},
+		{
+			"$type": "RPG.GameCore.NumberCaseContainer",
+			"Case": {
+				"FixedValue": {
+					"Value": 2
+				}
+			},
+			"OnSuccess": [
+				{
+					"$type": "RPG.GameCore.PredicateTaskList",
+					"Predicate": {
+						"$type": "RPG.GameCore.ByCompareGroupProperty",
+						"DynamicName": {
+							"Value": "MissionState"
+						},
+						"CompareValue": 2
+					},
+					"FailedTaskList": [
+						{
+							"$type": "RPG.GameCore.RequestSetServerGroupPropertyV2",
+							"DynamicName": {
+								"Value": "MissionState"
+							},
+							"Value": 2
+						}
+					]
+				}
+			]
+		},
+		{
+			"$type": "RPG.GameCore.NumberCaseContainer",
+			"Case": {
+				"FixedValue": {
+					"Value": 3
+				}
+			},
+			"OnSuccess": [
+				{
+					"$type": "RPG.GameCore.PredicateTaskList",
+					"Predicate": {
+						"$type": "RPG.GameCore.ByCompareGroupProperty",
+						"DynamicName": {
+							"Value": "MissionState"
+						},
+						"CompareValue": 3
+					},
+					"FailedTaskList": [
+						{
+							"$type": "RPG.GameCore.RequestSetServerGroupPropertyV2",
+							"DynamicName": {
+								"Value": "MissionState"
+							},
+							"Value": 3
+						}
+					]
+				}
+			]
+		},
+		{
+			"$type": "RPG.GameCore.NumberCaseContainer",
+			"Case": {
+				"FixedValue": {
+					"Value": 4
+				}
+			},
+			"OnSuccess": [
+				{
+					"$type": "RPG.GameCore.PredicateTaskList",
+					"Predicate": {
+						"$type": "RPG.GameCore.ByCompareGroupProperty",
+						"DynamicName": {
+							"Value": "MissionState"
+						},
+						"CompareValue": 4
+					},
+					"FailedTaskList": [
+						{
+							"$type": "RPG.GameCore.RequestSetServerGroupPropertyV2",
+							"DynamicName": {
+								"Value": "MissionState"
+							},
+							"Value": 4
+						}
+					]
+				}
+			]
+		},
+		{
+			"$type": "RPG.GameCore.NumberCaseContainer",
+			"Case": {
+				"FixedValue": {
+					"Value": 5
+				}
+			},
+			"OnSuccess": [
+				{
+					"$type": "RPG.GameCore.PredicateTaskList",
+					"Predicate": {
+						"$type": "RPG.GameCore.ByCompareGroupProperty",
+						"DynamicName": {
+							"Value": "MissionState"
+						},
+						"CompareValue": 5
+					},
+					"FailedTaskList": [
+						{
+							"$type": "RPG.GameCore.RequestSetServerGroupPropertyV2",
+							"DynamicName": {
+								"Value": "MissionState"
+							},
+							"Value": 5
+						}
+					]
+				}
+			]
+		},
+		{
+			"$type": "RPG.GameCore.NumberCaseContainer",
+			"Case": {
+				"FixedValue": {
+					"Value": 6
+				}
+			},
+			"OnSuccess": [
+				{
+					"$type": "RPG.GameCore.PredicateTaskList",
+					"Predicate": {
+						"$type": "RPG.GameCore.ByCompareGroupProperty",
+						"DynamicName": {
+							"Value": "MissionState"
+						},
+						"CompareValue": 6
+					},
+					"FailedTaskList": [
+						{
+							"$type": "RPG.GameCore.RequestSetServerGroupPropertyV2",
+							"DynamicName": {
+								"Value": "MissionState"
+							},
+							"Value": 6
+						}
+					]
+				}
+			]
+		},
+		{
+			"$type": "RPG.GameCore.NumberCaseContainer",
+			"Case": {
+				"FixedValue": {
+					"Value": 7
+				}
+			},
+			"OnSuccess": [
+				{
+					"$type": "RPG.GameCore.PredicateTaskList",
+					"Predicate": {
+						"$type": "RPG.GameCore.ByCompareGroupProperty",
+						"DynamicName": {
+							"Value": "MissionState"
+						},
+						"CompareValue": 7
+					},
+					"FailedTaskList": [
+						{
+							"$type": "RPG.GameCore.RequestSetServerGroupPropertyV2",
+							"DynamicName": {
+								"Value": "MissionState"
+							},
+							"Value": 7
+						}
+					]
+				}
+			]
+		},
+		{
+			"$type": "RPG.GameCore.NumberCaseContainer",
+			"Case": {
+				"FixedValue": {
+					"Value": 8
+				}
+			},
+			"OnSuccess": [
+				{
+					"$type": "RPG.GameCore.PredicateTaskList",
+					"Predicate": {
+						"$type": "RPG.GameCore.ByCompareGroupProperty",
+						"DynamicName": {
+							"Value": "MissionState"
+						},
+						"CompareValue": 8
+					},
+					"FailedTaskList": [
+						{
+							"$type": "RPG.GameCore.RequestSetServerGroupPropertyV2",
+							"DynamicName": {
+								"Value": "MissionState"
+							},
+							"Value": 8
+						}
+					]
+				}
+			]
+		},
+		{
+			"$type": "RPG.GameCore.NumberCaseContainer",
+			"Case": {
+				"FixedValue": {
+					"Value": 9
+				}
+			},
+			"OnSuccess": [
+				{
+					"$type": "RPG.GameCore.PredicateTaskList",
+					"Predicate": {
+						"$type": "RPG.GameCore.ByCompareGroupProperty",
+						"DynamicName": {
+							"Value": "MissionState"
+						},
+						"CompareValue": 9
+					},
+					"FailedTaskList": [
+						{
+							"$type": "RPG.GameCore.RequestSetServerGroupPropertyV2",
+							"DynamicName": {
+								"Value": "MissionState"
+							},
+							"Value": 9
+						}
+					]
+				}
+			]
+		}
+	]
+}</pre>
+
+;(Unused &mdash; PuzzleBallFall)
+<pre>{
+	"$type": "RPG.GameCore.ActiveVirtualCamera",
+	"LevelAreaCameraKey": {
+		"Custom": true,
+		"Key": "BlendCamera"
+	},
+	"BlendConfig": {
+		"ExportToJson": true,
+		"BlendType": "EaseInOut",
+		"UseDefaultBlendCurve": true,
+		"BlendTime": 3
+	}
+}</pre>
 {{Dialogue End}}
 
 ===Speak with Priest Monnta{{subst:void|<!--401600103-->}}===
 {{Dialogue Start}}
-:{{tx}}
 {{Dialogue End}}
 
 ===Pass the challenge of the Janus' Maze and complete the extrapolation{{subst:void|<!--401600104-->}}===
 {{Dialogue Start}}
-:{{tx}}
 {{Dialogue End}}
 
 ===Speak with Priest Monnta{{subst:void|<!--401600105-->}}===
 {{Dialogue Start}}
-:{{tx}}
 {{Dialogue End}}
 
 ===Pass the challenge of the Janus' Maze and complete the extrapolation{{subst:void|<!--401600106-->}}===
 {{Dialogue Start}}
-:{{tx}}
 {{Dialogue End}}
 
 ===Speak with Priest Monnta{{subst:void|<!--401600107-->}}===
 {{Dialogue Start}}
-:{{tx}}
 {{Dialogue End}}
 
 ===Pass the challenge of the Janus' Maze and complete the extrapolation{{subst:void|<!--401600108-->}}===
 {{Dialogue Start}}
-:{{tx}}
 {{Dialogue End}}
 
 ===Speak with Priest Monnta{{subst:void|<!--401600109-->}}===
 {{Dialogue Start}}
-:{{tx}}
 {{Dialogue End}}
 
 ===Take the extrapolation result to the client{{subst:void|<!--401600110-->}}===
 {{Dialogue Start}}
-:{{tx}}
 {{Dialogue End}}
 
 ===Speak with Priest Monnta{{subst:void|<!--401600111-->}}===
 {{Dialogue Start}}
-:{{tx}}
 {{Dialogue End}}
 
 ===Pass the challenge of the Janus' Maze and complete the extrapolation{{subst:void|<!--401600112-->}}===
 {{Dialogue Start}}
-:{{tx}}
 {{Dialogue End}}
 
 ===Speak with Priest Monnta{{subst:void|<!--401600113-->}}===
 {{Dialogue Start}}
-:{{tx}}
 {{Dialogue End}}
 
 ===Pass the challenge of the Janus' Maze and complete the extrapolation{{subst:void|<!--401600114-->}}===
 {{Dialogue Start}}
-:{{tx}}
 {{Dialogue End}}
 
 ===Speak with Priest Monnta{{subst:void|<!--401600115-->}}===
 {{Dialogue Start}}
-:{{tx}}
 {{Dialogue End}}
 
 ===Take the extrapolation result to the client{{subst:void|<!--401600116-->}}===
 {{Dialogue Start}}
-:{{tx}}
 {{Dialogue End}}
 
 ===Speak with Priest Monnta{{subst:void|<!--401600117-->}}===
 {{Dialogue Start}}
-:{{tx}}
 {{Dialogue End}}
 
 ===Pass the challenge of the Janus' Maze and complete the extrapolation{{subst:void|<!--401600118-->}}===
 {{Dialogue Start}}
-:{{tx}}
 {{Dialogue End}}
 
 ===Speak with Priest Monnta{{subst:void|<!--401600119-->}}===
 {{Dialogue Start}}
-:{{tx}}
 {{Dialogue End}}
 
 ===Pass the challenge of the Janus' Maze and complete the extrapolation{{subst:void|<!--401600120-->}}===
 {{Dialogue Start}}
-:{{tx}}
 {{Dialogue End}}
 
 ===Speak with Priest Monnta{{subst:void|<!--401600121-->}}===
 {{Dialogue Start}}
-:{{tx}}
 {{Dialogue End}}
 
 ===Pass the challenge of the Janus' Maze and complete the extrapolation{{subst:void|<!--401600122-->}}===
 {{Dialogue Start}}
-:{{tx}}
 {{Dialogue End}}
 
 ===Speak with Priest Monnta{{subst:void|<!--401600123-->}}===
 {{Dialogue Start}}
-:{{tx}}
 {{Dialogue End}}
 
 ===Take the extrapolation result to the client{{subst:void|<!--401600124-->}}===
 {{Dialogue Start}}
-:{{tx}}
 {{Dialogue End}}
 
 ===Return to Priest Monnta and report what happened{{subst:void|<!--401600125-->}}===
 {{Dialogue Start}}
-:{{tx}}
 {{Dialogue End}}
 
 ==Other Languages==

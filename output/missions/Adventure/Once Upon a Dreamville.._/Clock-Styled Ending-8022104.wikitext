@@ -40,25 +40,256 @@ PageTitle=#Clock-Styled Ending#
 ===Edit ''Dreamjoy Secrecy''{{subst:void|<!--802210401-->}}===
 {{Mission Description|type=adventure|location=Clock Studios Theme Park|Mimosa returned the ''Dreamjoy Secrecy'' film. Go and wrap up editing for this last film.}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Pisce)
+;(If {{cx}}<!--SubMission Finish: 802210102--> and {{cx}}<!--SubMission not Finish: 802210207-->)
+::'''Pisce:''' Director, can we start editing now?
+::{{DIcon|Travel Log}} Begin editing.
+::<pre>{
+	"$type": "RPG.GameCore.ShowUI",
+	"Name": "Ui.ActivityClockPark.Entrance.ActivityClockParkMainPage"
+}</pre>
+::{{DIcon|Talk}} I'd like to ask you something.
+:::'''Pisce:''' Sure! An in-depth understanding of the subject is essential in creating a masterpiece. Just ask away! I'll tell you everything I know.
+:::{{DIcon|Talk}} What is ''Dreamjoy Memoir'' about?
+::::'''Pisce:''' The series revolves around the story of Dreamville, where Clockie and his friends live &mdash; I bet you already know this.
+::::'''Pisce:''' The series will delve into Clockie's arrival in Dreamville, his experiences of sharing life's ups and downs with the townspeople, and his contributions to the town's growth and development... It can be seen as a comprehensive collection of Clockie's story from the very beginning.
+:::;(Return to previous option selection)
+:::{{DIcon|Talk}} How is animation production done in Penacony?
+::::'''Pisce:''' Producing animations in Penacony is pretty simple. Apart from the common techniques like smart illustration, mental projection, and algorithmic generation, there's also the Sweet Dreams Troupe which is skilled in drawing and capable of recreating the vintage hand-drawn graphic style...
+::::'''Pisce:''' But here at Clock Studios, our storyboards are all hand-drawn by Mr. Watchmaker. He insists that our animators create the content for each frame themselves by hand.
+::::'''Pisce:''' As animation technology in the universe continues to advance, the graphics of films nowadays become increasingly sophisticated. Still, none of those works can rival the hand-drawn ''Clockie'' in Penacony. We're proud of that!
+:::;(Return to previous option selection)
+:::{{DIcon|Talk}} About the destruction of the theme park.
+::::'''Pisce:''' Oh, the mere mention of it saddens me. The theme park has always been one of our most important sources of offline revenue, but it was unexpectedly shut down by the Bloodhound Family for what they called a safety inspection...
+::::'''Pisce:''' Guess what happened after their inspection? The screen in the theater was split in half, and the Sweet Dreams Troupe were all turned into Dreamjolt Troupe. They even tried talking their way out of it by saying the destruction was the doing of some outsiders. How ridiculous!
+::::'''Pisce:''' That's not all. Later, a bunch of Nightingale Family members showed up, asserting that the destruction was unusual and exhibited signs of some... power of Nihility? Anyway, they inundated us with a barrage of technical terms and demanded an exorbitant repair fee that we simply couldn't accept.
+::::'''Pisce:''' Shortly after, the Iris Family representative approached us and proposed to acquire our copyrights. If you ask me, those lineages are probably in cahoots with each other to take advantage of us when we're down and claim Clockie as their own!
+:::;(Return to previous option selection)
+:::{{DIcon|Talk}} About your impression of the Watchmaker.
+::::'''Pisce:''' Well... Although I've worked at Clock Studios for most of my life, I've only met the chairman once...
+::::'''Pisce:''' It was an interview for my promotion. He actually held the interview at a party on the cruise ship "The Sunset."
+::::'''Pisce:''' I already had a little too much to drink when I was dragged to a guest room deep in the corridor, inside of which was an immaculately dressed gentleman wearing a hat. He sat next to a window, staring into the distance at the colorful ocean of dream bubbles.
+::::'''Pisce:''' He asked, "In your opinion, what does ''Clockie'' bring to the people?" I replied, "Happiness, laughter, heartwarming moments, and a bit of reflection on the sweet dreams." Honestly, the last one was just me blabbering away in my state at the time.
+::::'''Pisce:''' He chuckled at my answer before dismissing me from the room. The following day, I received the appointment notice from the executive producer... What a mysterious guy.
+:::;(Return to previous option selection)
+:::{{DIcon|Return}} I don't have any other questions.
+::::{{DIcon|Travel Log}} Begin editing.
+::::<pre>{
+	"$type": "RPG.GameCore.ShowUI",
+	"Name": "Ui.ActivityClockPark.Entrance.ActivityClockParkMainPage"
+}</pre>
+::::{{DIcon|Exit}} Maybe next time.
+:::::'''Pisce:''' Well, time and tide wait for no man. It'd be best if you could complete the editing as soon as possible so that we can get through this rough patch sooner.
+::{{DIcon|Exit}} Maybe next time.
+:::'''Pisce:''' Well, time and tide wait for no man. It'd be best if you could complete the editing as soon as possible so that we can get through this rough patch sooner.
+;(Otherwise, if {{cx}}<!--SubMission Finish: 802210207--> and {{cx}}<!--SubMission not Finish: 802210311-->)
+::'''Pisce:''' Director, the Iris Family conducts the movie review at the {{Color|keyword|nobold=1|Penacony Grand Theater}}. The reels of banned movies are kept there.
+::'''Pisce:''' You're an important guest of The Family. If you have the time, I wonder whether you can ask The Family for a favor and return ''Dreamjoy Secrecy&ast;''s film reel &mdash; Of course, provided this doesn't interfere with your editing job.
+::{{DIcon|Travel Log}} Continue editing
+::<pre>{
+	"$type": "RPG.GameCore.ShowUI",
+	"Name": "Ui.ActivityClockPark.Entrance.ActivityClockParkMainPage"
+}</pre>
+::{{DIcon|Exit}} Let me go find a member of The Family.
+:::'''Pisce:''' Well, time and tide wait for no man. It'd be best if you could complete the editing as soon as possible so that we can get through this rough patch sooner.
+;(Otherwise, if {{cx}}<!--SubMission Finish: 802210312-->)
+::'''Pisce:''' Director, the last film reel is ready. You can now proceed with the final editing.
+::{{DIcon|Travel Log}} Begin editing.
+::<pre>{
+	"$type": "RPG.GameCore.ShowUI",
+	"Name": "Ui.ActivityClockPark.Entrance.ActivityClockParkMainPage"
+}</pre>
+::{{DIcon|Exit}} Give me a moment.
+:::'''Pisce:''' You need to hurry. The audience is getting antsy!
+;(Otherwise)
+::'''Pisce:''' Director, you're back! Do you want to do some film editing?
+::{{DIcon|Travel Log}} Begin editing.
+::<pre>{
+	"$type": "RPG.GameCore.ShowUI",
+	"Name": "Ui.ActivityClockPark.Entrance.ActivityClockParkMainPage"
+}</pre>
+::{{DIcon|Talk}} I'd like to ask you something.
+:::'''Pisce:''' Sure! An in-depth understanding of the subject is essential in creating a masterpiece. Just ask away! I'll tell you everything I know.
+:::{{DIcon|Talk}} What is ''Dreamjoy Memoir'' about?
+::::'''Pisce:''' The series revolves around the story of Dreamville, where Clockie and his friends live &mdash; I bet you already know this.
+::::'''Pisce:''' The series will delve into Clockie's arrival in Dreamville, his experiences of sharing life's ups and downs with the townspeople, and his contributions to the town's growth and development... It can be seen as a comprehensive collection of Clockie's story from the very beginning.
+:::;(Return to previous option selection)
+:::{{DIcon|Talk}} How is animation production done in Penacony?
+::::'''Pisce:''' Producing animations in Penacony is pretty simple. Apart from the common techniques like smart illustration, mental projection, and algorithmic generation, there's also the Sweet Dreams Troupe which is skilled in drawing and capable of recreating the vintage hand-drawn graphic style...
+::::'''Pisce:''' But here at Clock Studios, our storyboards are all hand-drawn by Mr. Watchmaker. He insists that our animators create the content for each frame themselves by hand.
+::::'''Pisce:''' As animation technology in the universe continues to advance, the graphics of films nowadays become increasingly sophisticated. Still, none of those works can rival the hand-drawn ''Clockie'' in Penacony. We're proud of that!
+:::;(Return to previous option selection)
+:::{{DIcon|Talk}} About the destruction of the theme park.
+::::'''Pisce:''' Oh, the mere mention of it saddens me. The theme park has always been one of our most important sources of offline revenue, but it was unexpectedly shut down by the Bloodhound Family for what they called a safety inspection...
+::::'''Pisce:''' Guess what happened after their inspection? The screen in the theater was split in half, and the Sweet Dreams Troupe were all turned into Dreamjolt Troupe. They even tried talking their way out of it by saying the destruction was the doing of some outsiders. How ridiculous!
+::::'''Pisce:''' That's not all. Later, a bunch of Nightingale Family members showed up, asserting that the destruction was unusual and exhibited signs of some... power of Nihility? Anyway, they inundated us with a barrage of technical terms and demanded an exorbitant repair fee that we simply couldn't accept.
+::::'''Pisce:''' Shortly after, the Iris Family representative approached us and proposed to acquire our copyrights. If you ask me, those lineages are probably in cahoots with each other to take advantage of us when we're down and claim Clockie as their own!
+:::;(Return to previous option selection)
+:::{{DIcon|Talk}} About your impression of the Watchmaker.
+::::'''Pisce:''' Well... Although I've worked at Clock Studios for most of my life, I've only met the chairman once...
+::::'''Pisce:''' It was an interview for my promotion. He actually held the interview at a party on the cruise ship "The Sunset."
+::::'''Pisce:''' I already had a little too much to drink when I was dragged to a guest room deep in the corridor, inside of which was an immaculately dressed gentleman wearing a hat. He sat next to a window, staring into the distance at the colorful ocean of dream bubbles.
+::::'''Pisce:''' He asked, "In your opinion, what does ''Clockie'' bring to the people?" I replied, "Happiness, laughter, heartwarming moments, and a bit of reflection on the sweet dreams." Honestly, the last one was just me blabbering away in my state at the time.
+::::'''Pisce:''' He chuckled at my answer before dismissing me from the room. The following day, I received the appointment notice from the executive producer... What a mysterious guy.
+:::;(Return to previous option selection)
+:::{{DIcon|Return}} I don't have any other questions.
+::::{{DIcon|Travel Log}} Begin editing.
+::::<pre>{
+	"$type": "RPG.GameCore.ShowUI",
+	"Name": "Ui.ActivityClockPark.Entrance.ActivityClockParkMainPage"
+}</pre>
+::::{{DIcon|Exit}} Maybe next time.
+:::::'''Pisce:''' No problem. You're always welcome to come back and be part of the production!
+::{{DIcon|Exit}} Maybe next time.
+:::'''Pisce:''' No problem. You're always welcome to come back and be part of the production!
+;(Unused &mdash; ActivitMovie_OpenTempUI)
+<pre>{
+	"$type": "RPG.GameCore.ClockParkUnlockScript",
+	"ScriptID": 1
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.ShowUI",
+	"Name": "Ui.ActivityClockPark.Entrance.ActivityClockParkScriptDetailPage",
+	"Param": {
+		"Value": "1"
+	}
+}</pre>
 {{Dialogue End}}
 
 ===Join the screening of ''Dreamjoy Memoir''{{subst:void|<!--802210402-->}}===
 {{Mission Description|type=adventure|location=Clock Studios Theme Park|update|Editing has ended for ''Dreamjoy Memoir''. Go and enjoy the film with the rest of the audience.}}
 {{Dialogue Start}}
 :{{tx}}
+:{{tx}}
 {{Dialogue End}}
 
 ===Find out what the audience members think about the movie{{subst:void|<!--802210403-->}}===
 {{Mission Description|type=adventure|location=Clock Studios Theme Park|update|''Dreamjoy Memoir'' has been released successfully. Go and help Pisce find out what the other audience members thought of it.}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Sparkle)
+:'''Sparkle:''' Hey, Gray Hair, is this your animation? Not bad!
+::{{DIcon|Arrow}} What do you think of this movie?
+::'''Sparkle:''' Well... I've got high aesthetic standards. This Dreamscape is always showing boring tragedies, typical comedies, mundane soap operas... and a bunch of sleep-inducing films.
+::'''Sparkle:''' But I've got to say, this movie is not bad at all. At least it contributes something less boring to this world, and it doesn't make me doze off even in the dream.
+::'''Sparkle:''' Then again, every "performance" has its own intention. I'm sure the story of this movie isn't that simple. Am I right, Gray Hair?
+::{{DIcon|Arrow}} Well...
+::{{DIcon|Arrow}} You're right...
+::{{DIcon|Arrow}} In fact, this movie is...
+::'''Sparkle:''' Shh, don't tell me. Let me make a guess... I believe there are going to be all sorts of interpretations for the movie in due time, and no one will know which is the truth. That'll make things more interesting!
+:'''Sparkle:''' Hmm... Perhaps the Old Man Wood and Boss Stone are actually the good ones, while the mastermind behind the Dreamville is Clockie...
+::Sparkle gives a malicious chuckle as she thinks of the different possible plots &mdash; you believe it won't take long for you to hear her marvelous analysis from the mouths of the other viewers.
+
+;(Talk to Black Swan)
+:'''Black Swan:''' (Trailblazer), this is a great movie. I like it very much.
+::{{DIcon|Arrow}} What are your thoughts?
+::'''Black Swan:''' Heheh, I normally don't watch animations. I prefer real life accounts over created stories.
+::'''Black Swan:''' But this movie is different. I can tell that there are secrets hidden behind these stories &mdash; a lengthy account of an untold story, perhaps?
+::'''Black Swan:''' To use such a method to document the past is interesting. It reminds me of a Memokeeper who also loves to record their memories on the camera...
+::'''Black Swan:''' (Trailblazer), memories are records of the past and prophecies of the future. I hope your and the Watchmaker's work can shift the future of this dream.
+:'''Black Swan:''' The coyote has fallen asleep, the heavy logs have fallen, the clocks have re-winded, startling the crocodiles in the lake awake... The stories of the past have ended. I'm looking forward to the future of this movie.
+::...Black Swan stares quietly at the screen and gives you a perplexing critique of the movie.
+
+;(Talk to Boothill)
+:'''Boothill:''' (Trailblazer)? Is that you? You cooked up this film? Hot diggity fudge, that's some mighty fine work... absolute cinema!
+::'''Boothill:''' Well I'll be hornswoggled, I reckoned them clock-heads were for young 'uns fresh off the teat. Turns out, they sure did a fine job with 'em.
+::{{DIcon|Arrow}} How would you rate this movie?
+::'''Boothill:''' Butter my fudge, it's so lit!
+::{{DIcon|Arrow}} Huh?
+::{{DIcon|Arrow}} What do you mean?
+::{{DIcon|Arrow}} I love fudge too.
+::'''Boothill:''' Hot fudge, what I mean is y'all did mighty fine! Especially that Captain Revolver, durn handsome as a wild stallion!
+::'''Boothill:''' Oh, my great director, I'm now a fan of yers. Please make more fudgin' awesome films like this one!
+:'''Boothill:''' Shame, ain't many heroes like Captain Revolver 'round these parts. Plenty of muddle-fudgers like Boss Stone wanderin' 'bout causin' trouble. For a nugget of rock, they'd ruin folks' homesteads. If it were me, I'd open his bean right in the first scene.
+::Boothill seems to appreciate your movie. Your story has given him some of the intended message and will, and you're certain that many viewers have felt it too.
+
 {{Dialogue End}}
 
 ===Speak with Pisce{{subst:void|<!--802210407-->}}===
 {{Mission Description|type=adventure|location=Clock Studios Theme Park|update|It seems that all the viewers have their own thoughts on ''Dreamjoy Memoir''. This should have also completed the Watchmaker's vision. Go and tell Pisce the good news.}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Pisce)
+;(If {{cx}}<!--SubMission Finish: 802210102--> and {{cx}}<!--SubMission not Finish: 802210207-->)
+::'''Pisce:''' Director, can we start editing now?
+::{{DIcon|Travel Log}} Begin editing.
+::<pre>{
+	"$type": "RPG.GameCore.ShowUI",
+	"Name": "Ui.ActivityClockPark.Entrance.ActivityClockParkMainPage"
+}</pre>
+::{{DIcon|Talk}} I'd like to ask you something.
+:::'''Pisce:''' Sure! An in-depth understanding of the subject is essential in creating a masterpiece. Just ask away! I'll tell you everything I know.
+:::{{DIcon|Talk}} What is ''Dreamjoy Memoir'' about?
+::::'''Pisce:''' The series revolves around the story of Dreamville, where Clockie and his friends live &mdash; I bet you already know this.
+::::'''Pisce:''' The series will delve into Clockie's arrival in Dreamville, his experiences of sharing life's ups and downs with the townspeople, and his contributions to the town's growth and development... It can be seen as a comprehensive collection of Clockie's story from the very beginning.
+:::;(Return to previous option selection)
+:::{{DIcon|Talk}} How is animation production done in Penacony?
+::::'''Pisce:''' Producing animations in Penacony is pretty simple. Apart from the common techniques like smart illustration, mental projection, and algorithmic generation, there's also the Sweet Dreams Troupe which is skilled in drawing and capable of recreating the vintage hand-drawn graphic style...
+::::'''Pisce:''' But here at Clock Studios, our storyboards are all hand-drawn by Mr. Watchmaker. He insists that our animators create the content for each frame themselves by hand.
+::::'''Pisce:''' As animation technology in the universe continues to advance, the graphics of films nowadays become increasingly sophisticated. Still, none of those works can rival the hand-drawn ''Clockie'' in Penacony. We're proud of that!
+:::;(Return to previous option selection)
+:::{{DIcon|Talk}} About the destruction of the theme park.
+::::'''Pisce:''' Oh, the mere mention of it saddens me. The theme park has always been one of our most important sources of offline revenue, but it was unexpectedly shut down by the Bloodhound Family for what they called a safety inspection...
+::::'''Pisce:''' Guess what happened after their inspection? The screen in the theater was split in half, and the Sweet Dreams Troupe were all turned into Dreamjolt Troupe. They even tried talking their way out of it by saying the destruction was the doing of some outsiders. How ridiculous!
+::::'''Pisce:''' That's not all. Later, a bunch of Nightingale Family members showed up, asserting that the destruction was unusual and exhibited signs of some... power of Nihility? Anyway, they inundated us with a barrage of technical terms and demanded an exorbitant repair fee that we simply couldn't accept.
+::::'''Pisce:''' Shortly after, the Iris Family representative approached us and proposed to acquire our copyrights. If you ask me, those lineages are probably in cahoots with each other to take advantage of us when we're down and claim Clockie as their own!
+:::;(Return to previous option selection)
+:::{{DIcon|Talk}} About your impression of the Watchmaker.
+::::'''Pisce:''' Well... Although I've worked at Clock Studios for most of my life, I've only met the chairman once...
+::::'''Pisce:''' It was an interview for my promotion. He actually held the interview at a party on the cruise ship "The Sunset."
+::::'''Pisce:''' I already had a little too much to drink when I was dragged to a guest room deep in the corridor, inside of which was an immaculately dressed gentleman wearing a hat. He sat next to a window, staring into the distance at the colorful ocean of dream bubbles.
+::::'''Pisce:''' He asked, "In your opinion, what does ''Clockie'' bring to the people?" I replied, "Happiness, laughter, heartwarming moments, and a bit of reflection on the sweet dreams." Honestly, the last one was just me blabbering away in my state at the time.
+::::'''Pisce:''' He chuckled at my answer before dismissing me from the room. The following day, I received the appointment notice from the executive producer... What a mysterious guy.
+:::;(Return to previous option selection)
+:::{{DIcon|Return}} I don't have any other questions.
+::::{{DIcon|Travel Log}} Begin editing.
+::::<pre>{
+	"$type": "RPG.GameCore.ShowUI",
+	"Name": "Ui.ActivityClockPark.Entrance.ActivityClockParkMainPage"
+}</pre>
+::::{{DIcon|Exit}} Maybe next time.
+:::::'''Pisce:''' Well, time and tide wait for no man. It'd be best if you could complete the editing as soon as possible so that we can get through this rough patch sooner.
+::{{DIcon|Exit}} Maybe next time.
+:::'''Pisce:''' Well, time and tide wait for no man. It'd be best if you could complete the editing as soon as possible so that we can get through this rough patch sooner.
+;(Otherwise, if {{cx}}<!--SubMission Finish: 802210207--> and {{cx}}<!--SubMission not Finish: 802210311-->)
+::'''Pisce:''' Director, the Iris Family conducts the movie review at the {{Color|keyword|nobold=1|Penacony Grand Theater}}. The reels of banned movies are kept there.
+::'''Pisce:''' You're an important guest of The Family. If you have the time, I wonder whether you can ask The Family for a favor and return ''Dreamjoy Secrecy&ast;''s film reel &mdash; Of course, provided this doesn't interfere with your editing job.
+::{{DIcon|Travel Log}} Continue editing
+::<pre>{
+	"$type": "RPG.GameCore.ShowUI",
+	"Name": "Ui.ActivityClockPark.Entrance.ActivityClockParkMainPage"
+}</pre>
+::{{DIcon|Exit}} Let me go find a member of The Family.
+:::'''Pisce:''' Well, time and tide wait for no man. It'd be best if you could complete the editing as soon as possible so that we can get through this rough patch sooner.
+;(Otherwise, if {{cx}}<!--SubMission Finish: 802210312--> and {{cx}}<!--SubMission not Finish: 802210401-->)
+::'''Pisce:''' Director, the last film reel is ready. You can now proceed with the final editing.
+::{{DIcon|Travel Log}} Begin editing.
+::<pre>{
+	"$type": "RPG.GameCore.ShowUI",
+	"Name": "Ui.ActivityClockPark.Entrance.ActivityClockParkMainPage"
+}</pre>
+::{{DIcon|Exit}} Give me a moment.
+:::'''Pisce:''' You need to hurry. The audience is getting antsy!
+;(Otherwise, if {{cx}}<!--SubMission Finish: 802210401--> and {{cx}}<!--SubMission not Finish: 802210403-->)
+::'''Pisce:''' Right. I wonder if the Watchmaker's message managed to get passed to the audience... Director, can you ask the viewers for their opinions?
+;(Otherwise)
+::{{tx}}
+::'''Pisce:''' Director (Trailblazer), what do the viewers think?
+::{{DIcon|Arrow}} They gave it a high rating.
+:::'''Pisce:''' Haha, that's for sure. This movie is arguably the best work of ''Clockie'' in the past 500 years.
+:::It seems like someone has noticed the hidden message.
+::{{DIcon|Arrow}} It seems like someone has noticed the hidden message.
+::'''Pisce:''' Is that so...? Perhaps the Watchmaker is hoping to see more of such viewers so that they can reap the benefits of the animation beyond the joy of it.
+::'''Pisce:''' Director, working with you is like returning to the golden age of Clock Studios, when I was still working with the Watchmaker and continuing the adventures of Clockie alongside him.
+::'''Pisce:''' Now that I think about it, we were actually engraving the history of Penacony... I understand why Mr. Watchmaker chose to hide it from everyone. After all, how could the creation of this work bring so much joy if everyone was under such pressure to create it?
+::'''Pisce:''' Clock Studios will continue to move forward with this mission. It will watch over the dream until everyone has the right to "wake up from the dream."
+::'''Pisce:''' So, with the release of the last movie, the story of ''Dreamjoy Memoir'' has also come to an end for now. Thank you for your hard work.
+::{{DIcon|Arrow}} That's it?
+::{{DIcon|Arrow}} It's finally over...
+::{{DIcon|Arrow}} Let's do a hundred more movies!
+::'''Pisce:''' Well... we're actually planning on combining the five stories from ''Dreamjoy Memoir'' to create a "super extended version" of the movie for our audience to watch for a long time.
+::{{tx}}
 {{Dialogue End}}
 
 ==Other Languages==

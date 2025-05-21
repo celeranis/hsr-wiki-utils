@@ -53,100 +53,862 @@ PageTitle=#Venom Brews, Immortality Looms#
 ===Go to the Realm-Keeping Commission Chancery{{subst:void|<!--202010301-->}}===
 {{Mission Description|type=adventure|location=Realm-Keeping Commission Chancery|Dahao seems to have something to say to you. Maybe he wants you to help with some issues after he witnessed your abilities.}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Lose {{Item|Undelivered Letter|20|x=1}})
+
+;(Talk to Dahao)
+;(If {{cx}}<!--during performance 502020101-->)
+::'''Dahao:''' I always feel like we're missing something here at the Realm-Keeping Commission Chancery, but I can never remember what. You've come at just the right time &mdash; help me rule out some possibilities. Say, tell me, what do you think our office is missing?
+::{{DIcon|Talk}} Promo materials showcasing the work of the Realm-Keeping Commission.
+:::'''Dahao:''' Not that...
+:::'''Dahao:''' I raised this with Jingyan before, whether we should be better at promoting how good the Realm-Keeping Commission Chancery is at what it does. But she gave me a list of all the things we've done recently, and there isn't really anything to be proud of.
+:::'''Dahao:''' Once we crack a major case that even the Ten-Lords Commission can't solve, then I'll let the whole Exalting Sanctum know about how great the Realm-Keeping Commission is... Until then, we'll keep things on the down-low.
+::;(Return to previous option selection)
+::{{DIcon|Talk}} Small ornaments that make this place feel alive.
+:::'''Dahao:''' Make the place feel alive... Actually, I've thought about that.
+:::'''Dahao:''' I'm a big fan of alcoholic nectar and once stashed two bottles of Nectar of Willow Woods at the Chancery, but Officer Jingyan threw them out. She said this is the workplace and it would be undignified if anyone found out.
+:::'''Dahao:''' I also like pretty foxian actresses, so I've put up a couple of their pictures on my desk to perk up my spirits. But Officer Jingyan confiscated those too. She said this is the workplace and those images are indecent.
+:::'''Dahao:''' *sigh* The only way the Realm-Keeping Commission feels alive is through all the courier parcels on the ground.
+::;(Return to previous option selection)
+::{{DIcon|Talk}} A Realm-Keeping Commission Officer who is actually productive at work.
+:::'''Dahao:''' {{MC|f=Young lady|m=Young man}}, that remark is uncalled for. At least Officer Jingyan is doing her work. As long as Officer Jingyan is here, then the Realm-Keeping Commission lives up to its name.
+:::'''Dahao:''' That Songyan kid may be lazy, but he's smart. I have high hopes for his future.
+:::'''Dahao:''' Naturally, if anything actually happens to Exalting Sanctum, you'll find me to be an extremely reliable officer.
+::;(Return to previous option selection)
+::{{DIcon|Arrow}} Is now really the time to be thinking about that?
+:::'''Dahao:''' Yeah, I can't figure it out even if I rack my brain. I think I'll play a few rounds of Celestial Jade after work and think it through then.
+:::'''Dahao:''' Alright, let's get down to business. {{MC|f=Young lady|m=Young man}}, what do you want?
+;(If {{cx}}<!--not during performance 502020101-->)
+:<pre>{
+	"$type": "RPG.GameCore.PlayMultiVoiceTalk",
+	"TalkSentenceID": 502020136
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.ShowMenu"
+}</pre>
+
+;(Talk to Jingyan)
+;(If {{cx}}<!--during performance 502032101-->)
+::'''Jingyan:''' One second.
+::'''Jingyan:''' Alright. I'm Jingyan from the Realm-Keeping Commission, and I'm in charge of general affairs here. Is there anything that I can help you with?
+::{{DIcon|Arrow}} What can you help me with?
+:::'''Jingyan:''' ...I was just asking you that, but you asked me the same thing. Okay.
+:::'''Jingyan:''' Household registrations, applications, and maintenance for local Xianzhou citizens. Handling of cases such as fighting, wounding with a weapon, theft, robbery. Processing census data, demographic statistics, resource allocation...
+:::{{DIcon|Arrow}} I get it. Please stop this monotonous chanting.
+::::'''Jingyan:''' Looks like you aren't really that interested in the work of Realm-Keeping Commission officers.
+:::{{DIcon|Arrow}} Yes, you've all done a great job.
+::::'''Jingyan:''' Ah, so you're here to inspect our work then? Thank you for taking the time to visit our humble Realm-Keeping Commission Chancery.
+::::'''Jingyan:''' But I'm afraid it's currently during business hours, so please do not interrupt our everyday consultations.
+::{{DIcon|Arrow}} I've been cyber-scammed!
+:::'''Jingyan:''' Cyber-scammed? We don't differentiate between scams happening online or offline here.
+:::'''Jingyan:''' Please register your contact details, how the scammer contacted you, how you were scammed, and how much you were scammed out of? Go fill this out, and I'll verify your account for you.
+:::{{DIcon|Arrow}} Actually, I wasn't scammed at all.
+::::'''Jingyan:''' Hmm. It's still currently during business hours, so please do not cause any trouble for our busy officers.
+::::'''Jingyan:''' Based on my experience, you don't really look like a victim of scamming.
+:::{{DIcon|Arrow}} Th&mdash;There's no transaction record on the account.
+::::'''Jingyan:''' This is a bit of a hassle. Not even the Realm-Keeping Commission can get back your "money that wasn't scammed."
+::::'''Jingyan:''' Seems like you'll have to sort that part out on your own. Our hands are tied here at the Realm-Keeping Commission.
+::{{DIcon|Arrow}} I don't think I have anything that's connected to general affairs.
+::'''Jingyan:''' Excuse me, do you have anything else?
+;(If {{cx}}<!--not during performance 502032101-->)
+:<pre>{
+	"$type": "RPG.GameCore.PlayMultiVoiceTalk",
+	"TalkSentenceID": 502032164
+}</pre>
+
+;(Talk to Songyan)
+;(If {{cx}}<!--during performance 502033101-->)
+::'''Songyan:''' Ah~ If the Realm-Keeping Commission could give me the cash directly and let me stay at home all day without doing this troublesome job, that'd be great.
+::'''Songyan:''' Anyway, it doesn't matter what I do or not do, the results are always gonna be the same. Why not cut out this middle part...
+::'''Songyan:''' Hm? Eavesdropping is rude, {{MC|f=lady|m=sir}}, you know. What's up? If it's something important, please go to Official Dahao, and for literally anything else, please approach Officer Jingyan.
+::{{DIcon|Arrow}} So... You just don't deal with anything?
+:::'''Songyan:''' I'm the Realm-Keeping Commission's Most Intelligent, and I only show up when those two get stuck. In other words, I'm the Ultimate Trump Card. Do you lead with your ace when you're playing tiles?
+:::{{DIcon|Arrow}} There's only three officers staffing this tiny Chancery...
+::::'''Songyan:''' What about it? There can be a trump card hidden among three people.
+:::{{DIcon|Arrow}} You're just spouting nonsense, aren't you?
+::::'''Songyan:''' There's a saying. "Of three people, one will be a slacker." If I call dibs on slacking off, then the other two can't.
+::{{DIcon|Arrow}} What issues would you be handling normally?
+:::'''Songyan:''' I'm the kind of person who hates inconvenience. If you have any kind of work that's not too tiring, not too troublesome &mdash; then I'm down for that.
+:::'''Songyan:''' I'm the Realm-Keeping Commission's Most Intelligent, and I only show up when those two get stuck. Just look at those two, and I'm mainly talking about the Officer Jingyan here &mdash; still going at it so hard, so I don't have to.
+:::{{DIcon|Arrow}} I just so happen to have a really thorny problem that I could use your help with...
+::::'''Songyan:''' No no no, any thorny problem should be handed over to Jingyan. She's the main backbone of the Realm-Keeping Commission.
+::::'''Songyan:''' Have you heard of this saying before? "With little power comes little responsibility." The little refers to me.
+:::{{DIcon|Arrow}} I'm going to tell Officer Jingyan right now.
+::::'''Songyan:''' Doesn't matter, mate. A person like her is born to work hard, and she never trusts what I do. Also, every time when there are "outstanding troubles" to deal with, she'll just complete it for me, personally.
+::::'''Songyan:''' So telling her anything would just be adding to her troubles. I urge you not to do this.
+::'''Songyan:''' *sigh* {{MC|f=Miss|m=My man}}, put aside your judgmental look. I've put in the hours working long and hard before, and I was, once upon a time, considered an elite officer of the General Affairs.
+::'''Songyan:''' Besides, why do I work at the Realm-Keeping Commission? If it weren't for my failed investments... With all the curves on the chart going down, and only the prices are going up. Working has become a necessary option.
+::'''Songyan:''' I hustled, and I failed. Now, this is the best effort I can put into work right now.
+::'''Songyan:''' Hey, don't leave just yet. As long as we're chatting here, there won't be any new tasks assigned to me. Let's chat a little longer, {{MC|f=miss|m=sir}}.
+;(If {{cx}}<!--not during performance 502033101-->)
+:<pre>{
+	"$type": "RPG.GameCore.PlayMultiVoiceTalk",
+	"TalkSentenceID": 502033151
+}</pre>
+::'''Songyan:''' How's it going, {{MC|f=miss|m=man}}? Got anything you'd like to talk about? Anything but work!
+
+;(Talk to Battuta)
+;(If {{cx}}<!--during performance 502034101-->)
+::'''Battuta:''' Oh, so there is someone still willing to chat with this old coffin dodger... Ahem... When people get older, they can catch pneumonia just by having a sip of water. My aching aging throat...
+::{{DIcon|Arrow}} Are you alright?
+:::'''Battuta:''' Haha, they've already given me meds, so I'll just rest and recover...
+::{{DIcon|Arrow}} Your body looks healthy. What's all this about...
+:::'''Battuta:''' Dear {{MC|f=girl|m=boy}}, you're far too optimistic. I may not even survive to see a complete recovery... *cough*...
+::{{DIcon|Arrow}} Who are you?
+:::'''Battuta:''' I'm Battuta. I used to be a judge in the Klimt Republic. My side job was a travel writer... But now, I'm just a criminal waiting around for the Sky-Faring Commission to repatriate me...
+::{{DIcon|Arrow}} What are you doing here?
+:::'''Battuta:''' Is it really strange for criminals waiting for repatriation by the Sky-Faring Commission to be waiting here? I'm Battuta. I used to be a judge in the Klimt Republic. My side hustle was a travel writer...
+;(If {{cx}}<!--not during performance 502034101-->)
+:<pre>{
+	"$type": "RPG.GameCore.PlayMultiVoiceTalk",
+	"TalkSentenceID": 502034149
+}</pre>
+
+;(Talk to Qingzu)
+:{{A|VO side2 ywmc1 qingzu 101 m.ogg}} {{A|VO side2 ywmc1 qingzu 101 f.ogg}} '''Qingzu:''' (Trailblazer), I read the letter you obtained from the mara-struck.
+::{{A|VO side2 ywmc1 qingzu 102.ogg}} '''Qingzu:''' While the Cloud Knights were searching for the Stellaron's whereabouts, I was carrying out the general's orders &mdash; tracking down clues on the mara-struck. Thanks to your efforts, we now have a lead.
+::{{A|VO side2 ywmc1 qingzu 103.ogg}} '''Qingzu:''' To an outsider, this letter appears to be nothing more than good news detailing a recovery from a chronic illness. However, what is actually being discussed is a violation of the Ten Unpardonable Sins. It's heresy.
+::{{DIcon|Arrow}} Are you talking about Merciful Medicus?
+:::{{A|VO side2 ywmc1 qingzu 104.ogg}} '''Qingzu:''' Correct. The term "Merciful Medicus" is one of respect &mdash; one that any law-abiding citizen of the Alliance would never dare utter.
+:::{{A|VO side2 ywmc1 qingzu 105.ogg}} '''Qingzu:''' It refers to none other than the enemy of the people of the Xianzhou &mdash; the one we now call the Plagues Author... The Aeon of Abundance &mdash; Yaoshi.
+::{{DIcon|Arrow}} Are you talking about the pharmacological experiment mentioned in the letter?
+:::{{A|VO side2 ywmc1 qingzu 106.ogg}} '''Qingzu:''' That's right. Since the Alliance was first established, all medical practices aboard the Xianzhou adhere to strict standards that prohibit long-life or mutant modifications under the guise of "curing."
+:::{{A|VO side2 ywmc1 qingzu 107.ogg}} '''Qingzu:''' I went through all our files to find information on the experiment in question, and found nothing. I started thinking about how the Alchemy Commission's delve was sealed off... There must be an unspeakable secret locked away there.
+::{{A|VO side2 ywmc1 qingzu 108.ogg}} '''Qingzu:''' The author of this letter was likely the mara-struck you defeated. My guess is he was led astray and poisoned while under the pretext of being cured. You saw how he ended up...
+::{{A|VO side2 ywmc1 qingzu 109.ogg}} '''Qingzu:''' Such actions remind me of an organization that was eradicated from the Xianzhou a thousand years ago... the Disciples of Sanctus Medicus.
+::{{A|VO side2 ywmc1 qingzu 110.ogg}} '''Qingzu:''' They were disciples of the Abundance that sought to restore the way of immortality by unearthing a forbidden remedial formula.
+::{{A|VO side2 ywmc1 qingzu 111.ogg}} '''Qingzu:''' It's hard to believe a group that was wiped out so long ago would suddenly rear its head and create chaos once more. The Seat of Divine Foresight needs to learn all it can about this organization's status before the situation reaches a point of no return.
+::{{A|VO side2 ywmc1 qingzu 113.ogg}} '''Qingzu:''' If you come across any similar clues about the Disciples of Sanctus Medicus, come and find me at the Seat of Divine Foresight &mdash; these kinds of firsthand accounts are exactly what we require.
+::{{DIcon|Arrow}} So, what do I get out of it?
+:::{{A|VO side2 ywmc1 qingzu 114.ogg}} '''Qingzu:''' Don't worry, the Seat of Divine Foresight always rewards those who contribute to our efforts.
+::{{DIcon|Arrow}} Sounds good to me.
+:::{{A|VO side2 ywmc1 qingzu 115.ogg}} '''Qingzu:''' Excellent. Your work will not be in vain. The Seat of Divine Foresight always rewards those who contribute to our efforts.
+::{{DIcon|Arrow}} Sounds like one big headache to me...
+:::{{A|VO side2 ywmc1 qingzu 116.ogg}} '''Qingzu:''' I understand, but all I'm asking is for you to keep an eye out when you have time. The Seat of Divine Foresight always rewards those who contribute to our efforts.
+::{{A|VO side2 ywmc1 qingzu 117.ogg}} '''Qingzu:''' I recently received some intel. It seems that certain individuals are taking advantage of the current chaos to lure in outworlders around Exalting Sanctum. Maybe you could start there?
+::{{A|VO side2 ywmc1 qingzu 118.ogg}} '''Qingzu:''' We sent an undercover investigator out a few months ago &mdash; they provided us with a rough idea of the situation.
+::{{A|VO side2 ywmc1 qingzu 119.ogg}} '''Qingzu:''' Unfortunately, it seems suspicions were aroused... We lost contact with the agent &mdash; I suspect he was discovered...
+::{{A|VO side2 ywmc1 qingzu 120.ogg}} '''Qingzu:''' You are a fresh face on the Luofu and an outworlder. I would feel more at ease if I could leave this matter with you.
+:{{A|VO side2 ywmc1 qingzu 122.ogg}} '''Qingzu:''' Danger is practically an inevitability, take care and try to stay out of harm's way.
 {{Dialogue End}}
 
 ===Listen to Qingzu's assignment{{subst:void|<!--202010302-->}}===
 {{Mission Description|type=adventure|location=Realm-Keeping Commission Chancery|update|It must be a major issue if the Seat of Divine Foresight's chief counselor is at this small chancery. Go talk with her. After all, the bigger the problem, the bigger the reward would be.}}
 {{Dialogue Start}}
-:{{tx}}
 {{Dialogue End}}
 
 ===Look for the suspicious people at Exalting Sanctum{{subst:void|<!--202010303-->}}===
 {{Mission Description|type=adventure|location=Exalting Sanctum|update|According to the Seat of Divine Foresight's intel, there are currently suspicious people at the Exalting Sanctum promoting heresies about the Plagues Author. Could they be the rumored Disciples of Sanctus Medicus?}}
 {{Dialogue Start}}
-:{{tx}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+<pre>{
+	"$type": "RPG.GameCore.PlayNPCBubbleTalk",
+	"BubbleTalkInfoList": [
+		{
+			"AutoSkipTime": 2,
+			"GroupID": 47,
+			"GroupNpcID": 400001,
+			"TalkSentenceID": 202160413
+		},
+		{
+			"AutoSkipTime": 2,
+			"GroupID": 47,
+			"GroupNpcID": 400001,
+			"TalkSentenceID": 202160414
+		},
+		{
+			"AutoSkipTime": 2,
+			"GroupID": 47,
+			"GroupNpcID": 400001,
+			"TalkSentenceID": 202160415
+		},
+		{
+			"AutoSkipTime": 2,
+			"GroupID": 47,
+			"GroupNpcID": 400001,
+			"TalkSentenceID": 202160416
+		}
+	]
+}</pre>
+
+:{{DIcon|Talk}} Transcribe
+
+
+;(Talk to Green Hibiscus)
+----
+:{{A|VO side2 ywmc1 ywmcF 144.ogg}} '''Green Hibiscus:''' Take your time, still your mind, and transcribe the text. Allow the beautiful enlightenment of Thousand-Handed Merciful Medicus' Salvation to permeate your being.
+:{{DIcon|Arrow}} I've finished it.
+::{{A|VO side2 ywmc1 ywmcF 145.ogg}} '''Green Hibiscus:''' You're finished? So soon? Let me see... Hmm... Hmm... Yes, it would appear you are finished &mdash; a fast and accurate transcription. It seems you are destined for immortality.
+::{{DIcon|Arrow}} So, can I join the Disciples of Sanctus Medicus now?
+::{{A|VO side2 ywmc1 ywmcF 146.ogg}} '''Green Hibiscus:''' Calm yourself... The initiation is divided into two steps &mdash; you and the Cloud Knight have completed the first. Now... only the second remains.
+::{{A|VO side2 ywmc1 cknightZ 122.ogg}} '''Strange Cloud Knight:''' Sure... but can it wait till tomorrow? I'm supposed to be on duty right now &mdash; they'll get suspicious if I don't head back soon.
+::{{A|VO side2 ywmc1 ywmcF 147.ogg}} '''Green Hibiscus:''' No need to worry, the second step is extraordinarily simple. It'll all be over soon enough.
+::{{A|VO side2 ywmc1 ywmcF 148.ogg}} '''Green Hibiscus:''' The Disciples' initiation is governed by the following principle &mdash; never accept who you suspect, and never suspect who you accept. So...
+::{{A|VO side2 ywmc1 ywmcF 149.ogg}} '''Green Hibiscus:''' ...it's time for you two to battle it out. Whoever survives will officially become a disciple.
+::{{DIcon|Arrow}} Why?
+:::{{A|VO side2 ywmc1 ywmcF 150.ogg}} '''Green Hibiscus:''' Transcribing scripture allows us to ascertain your devotion, but determining whether or not you'll be loyal to the organization requires a stronger guarantee... Sorry, there's nothing I can do about it, I didn't write the rules.
+::{{DIcon|Arrow}} I'll pass...
+:::{{A|VO side2 ywmc1 ywmcF 151.ogg}} '''Green Hibiscus:''' There is nothing that can be done. I didn't write the rules. If you are unwilling to complete the initiation process, then we will have to ask that you keep our secrets hidden... permanently...
+::{{DIcon|Arrow}} Okay. Let's fight!
+:::{{A|VO side2 ywmc1 ywmcF 152.ogg}} '''Green Hibiscus:''' Excellent! The Disciples of Sanctus Medicus loves enthusiastic new blood! Well then, show us what you're made of!
+::{{A|VO side2 ywmc1 cknightZ 123.ogg}} '''Strange Cloud Knight:''' Wh&mdash;Whoa, whoa &mdash; you're kidding, right? We came here to lengthen our lifespans, not shorten them! You can't just make us fight like this!
+::{{A|VO side2 ywmc1 ywmcF 153.ogg}} '''Green Hibiscus:''' We aren't forcing you to fight &mdash; by all means refuse if you wish... but we won't possibly be able to let either of you leave.
+::{{A|VO side2 ywmc1 cknightZ 124.ogg}} '''Strange Cloud Knight:''' I... Fine, fine &mdash; but at least let me prepare. I've never done anything like this before...
+::{{A|VO side2 ywmc1 ywmcF 154.ogg}} '''Green Hibiscus:''' Very well, but you'll need to ask your opponent, too...
+::{{DIcon|Arrow}} I don't mind either.
+::{{A|VO side2 ywmc1 ywmcF 155.ogg}} '''Green Hibiscus:''' Good. Then prepare yourselves. Time is precious &mdash; make it quick.
+::----
+:{{DIcon|Exit}} Okay. Just a moment.
+::----
+----
+:{{A|VO side2 ywmc1 ywmcF 123.ogg}} '''Green Hibiscus:''' Here we are. This is the place.
+:{{DIcon|Arrow}} How do I gain immortality?
+::{{A|VO side2 ywmc1 ywmcF 124.ogg}} '''Green Hibiscus:''' Ah, let's not get ahead of ourselves. If it were so easy, we'd be a far larger group, and there'd be no need for secrecy.
+:{{DIcon|Arrow}} What are you up to?
+::{{A|VO side2 ywmc1 ywmcF 125.ogg}} '''Green Hibiscus:''' Relax. By the mercy of Sanctus Medicus, I will not harm you.
+:{{A|VO side2 ywmc1 ywmcF 126.ogg}} '''Green Hibiscus:''' Allow me to reintroduce myself... I am a member of the Disciples of Sanctus Medicus. I was unable to expose my true identity in Exalting Sanctum, but now I can reveal everything.
+:{{A|VO side2 ywmc1 ywmcF 127.ogg}} '''Green Hibiscus:''' The Disciples of Sanctus Medicus is a devout group, holding firm in their belief that Merciful Medicus is the one, ultimate faith. As followers, we refer to ourselves as disciples, dedicated to our cause.
+:{{A|VO side2 ywmc1 ywmcF 128.ogg}} '''Green Hibiscus:''' If you wish to gain the means to immortality, then you must become a disciple... but to become a disciple, you must first pass several small trials.
+:{{A|VO side2 ywmc1 ywmcF 129.ogg}} '''Green Hibiscus:''' Please excuse me... Our expansion has unfortunately attracted the attention of those Devilish Archer followers. If we are not careful, the consequences could be unthinkable.
+:{{DIcon|Talk}} What is this Cloud Knight doing here...?
+::{{A|VO side2 ywmc1 ywmcF 130.ogg}} '''Green Hibiscus:''' No need to be concerned about him. Much like yourself, he is here to undergo the trials.
+:;(Return to previous option selection)
+:{{DIcon|Talk}} Don't the people of the Xianzhou abhor Abundance?
+::{{A|VO side2 ywmc1 ywmcF 131.ogg}} '''Green Hibiscus:''' Haha. Only those led astray by followers of the Devilish Archer could despise Merciful Medicus. Sadly, there are many such people... too many.
+:;(Return to previous option selection)
+:{{DIcon|Talk}} What can I get from Sanctus Medicus?
+::{{A|VO side2 ywmc1 ywmcF 132.ogg}} '''Green Hibiscus:''' Every species yearns for the favor and curing of Merciful Medicus, regardless of whether they have heard of the Abundance or not.
+::{{A|VO side2 ywmc1 ywmcF 133.ogg}} '''Green Hibiscus:''' Foxians yearn to cure themselves of their 300-year lifespan. The Vidyadhara yearn to cure themselves of the pain of reincarnation and lack of progeny...
+::{{A|VO side2 ywmc1 ywmcF 134.ogg}} '''Green Hibiscus:''' ...As for Xianzhou natives &mdash; they long to cure themselves of the torture of becoming mara-struck. Of course, we know that this "torture" is rather a kind of blessed evolution.
+::{{A|VO side2 ywmc1 ywmcF 135.ogg}} '''Green Hibiscus:''' To return to your question, Sanctus Medicus can cure the aging that short-life species face, along with disease and death. Sanctus Medicus can do for you what THEY did for the Xianzhou natives.
+:;(Return to previous option selection)
+:{{DIcon|Arrow}} What kind of trial do I have to pass?
+::{{A|VO side2 ywmc1 ywmcF 136.ogg}} '''Green Hibiscus:''' "What you seek, you will surely find." Merciful Medicus is magnanimous &mdash; they do not lightly refuse a prayer. As such, the initiation trials for the Disciples of Sanctus Medicus are nothing arduous.
+::{{A|VO side2 ywmc1 ywmcF 137.ogg}} '''Green Hibiscus:''' All you must do is transcribe this copy of "Thousand-Handed Merciful Medicus' Salvation" 500 times by hand. This will allow your brothers and sisters to trust your faith... and you to become a disciple.
+::{{A|VO side2 ywmc1 ywmcF 138.ogg}} '''Green Hibiscus:''' This scripture is central to the Disciples &mdash; you must maintain a pious heart during the transcription... It would be best if you could memorize the text.
+::{{A|VO side2 ywmc1 ywmcF 139.ogg}} '''Green Hibiscus:''' Of course, this is but the first trial. Once you have become a disciple, you will undergo numerous others.
+::{{DIcon|Arrow}} 500 times seems excessive...
+:::{{A|VO side2 ywmc1 ywmcF 140.ogg}} '''Green Hibiscus:''' Excessive? The old rules dictated that the text be copied 50,000 times &mdash; I myself undertook such a feat. Nowadays, the master takes greater pity on the common people, hence the number has been reduced to a mere 500.
+::{{DIcon|Arrow}} Can I get a pen?
+:::{{A|VO side2 ywmc1 ywmcF 141.ogg}} '''Green Hibiscus:''' Don't worry, a traditional Xianzhou brush and inkstone has been prepared for you &mdash; smooth action and an ergonomic design. I myself transcribed 50,000 copies with such instruments.
+::----
 {{Dialogue End}}
 
 ===Copy the ''Thousand-Handed Merciful Medicus' Salvation'' 0/500 times{{subst:void|<!--202010305-->}}===
 {{Mission Description|type=adventure|location=Exalting Sanctum|update|You have to copy the ''Thousand-Handed Merciful Medicus' Salvation'' according to Green Hibiscus's demands, but 500 times is just too much... Maybe there's another way?}}
 {{Dialogue Start}}
-:{{tx}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{A|VO side2 ywmc1 ywmcF 142.ogg}} '''Green Hibiscus:''' Where are you going? The trial isn't over, you can't just leave!
+:{{A|VO side2 ywmc1 ywmcF 142.ogg}} '''Green Hibiscus:''' Where are you going? The trial isn't over, you can't just leave!
+::----
+
+;(Upon reaching the destination)
+----
+:{{A|VO side2 ywmc1 ywmcF 143.ogg}} '''Green Hibiscus:''' Hm? Your mind might've wandered, but that doesn't mean you can. Come back and finish the trial!
+----
+
+:{{DIcon|Talk}} Transcribe
+----
+:You start copying the ''Thousand-Handed Merciful Medicus' Salvation''.
+<pre>{
+	"$type": "RPG.GameCore.TriggerSound",
+	"SoundName": {
+		"Value": "Ev_sfx_xianzhou_copy_writing"
+	},
+	"EmitterType": "LocalPlayer"
+}</pre>
+:"Once upon a time, the thousand-hand Sanctus Medicus traveled the world with their 99,999 disciples, living under Rahu and teaching their Way."
+:Your index finger has a slight cramp, and your shoulders feel a bit sore... But you've only made the first copy. There are still 499 copies waiting to be written.
+<pre>{
+	"$type": "RPG.GameCore.TriggerSound",
+	"SoundName": {
+		"Value": "Ev_sfx_xianzhou_copy_writing"
+	},
+	"EmitterType": "LocalPlayer"
+}</pre>
+:"As they spoke the words, the 99,999 disciples were liberated from youth, old age, sickness, and suffering."
+:After making the final stroke, you catch the Cloud Knight in your peripheral vision as he gestures at you.
+:{{A|VO side2 ywmc1 cknightZ 101.ogg}} '''Strange Cloud Knight:''' Psst, hey, stop writing &mdash; get over here!
+----
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{A|VO side2 ywmc1 ywmcF 142.ogg}} '''Green Hibiscus:''' Where are you going? The trial isn't over, you can't just leave!
+:{{A|VO side2 ywmc1 ywmcF 142.ogg}} '''Green Hibiscus:''' Where are you going? The trial isn't over, you can't just leave!
+::----
+
+;(Upon reaching the destination)
+----
+:{{A|VO side2 ywmc1 ywmcF 143.ogg}} '''Green Hibiscus:''' Hm? Your mind might've wandered, but that doesn't mean you can. Come back and finish the trial!
+----
 {{Dialogue End}}
 
 ===Copy the ''Thousand-Handed Merciful Medicus' Salvation'' 1/500 times{{subst:void|<!--202010306-->}}===
 {{Dialogue Start}}
-:{{tx}}
+
+:{{DIcon|Talk}} Transcribe
+----
+<pre>{
+	"$type": "RPG.GameCore.TriggerSound",
+	"SoundName": {
+		"Value": "Ev_sfx_xianzhou_copy_writing"
+	},
+	"EmitterType": "LocalPlayer"
+}</pre>
+:You lower your head. You become closed off to the world around you as you quietly copy the text.
+:Your hand and shoulder are experiencing more pain, but you've only produced two copies.
+----
 {{Dialogue End}}
 
 ===Copy the ''Thousand-Handed Merciful Medicus' Salvation'' 2/500 times{{subst:void|<!--202010307-->}}===
 {{Dialogue Start}}
-:{{tx}}
+
+:{{DIcon|Talk}} Transcribe
+----
+<pre>{
+	"$type": "RPG.GameCore.TriggerSound",
+	"SoundName": {
+		"Value": "Ev_sfx_xianzhou_copy_writing"
+	},
+	"EmitterType": "LocalPlayer"
+}</pre>
+:"Mercy of Sanctus Medicus, the Arbor's new growth. Unity of Discipuli Medicus, the Enlightenment's true path."
+:You finish the third copy. This sentence has started to reverberate within your being.
+----
+
+;(Obtain {{Item|Transcribed Scripture|20|x=1}})
 {{Dialogue End}}
 
 ===Copy the ''Thousand-Handed Merciful Medicus' Salvation'' 3/500 times{{subst:void|<!--202010308-->}}===
 {{Dialogue Start}}
-:{{tx}}
+
+:{{DIcon|Talk}} Transcribe
+----
+<pre>{
+	"$type": "RPG.GameCore.TriggerSound",
+	"SoundName": {
+		"Value": "Ev_sfx_xianzhou_copy_writing"
+	},
+	"EmitterType": "LocalPlayer"
+}</pre>
+:Your hand and shoulder no longer hurt. Maybe you've gotten used to the work, or perhaps they have grown numb.
+:You complete the fourth copy.
+----
 {{Dialogue End}}
 
 ===Give your transcribed scripture to Green Hibiscus{{subst:void|<!--202010310-->}}===
 {{Mission Description|type=adventure|location=Exalting Sanctum|update|Thanks to that Cloud Knight, you finished transcribing the ''Thousand-Handed Merciful Medicus' Salvation'' without a hitch. Once you give the transcribed scripture to Green Hibiscus, you'd be sure to infiltrate the Disciples of Sanctus Medicus... such is the hope.}}
 {{Dialogue Start}}
-:{{tx}}
+;(Upon reaching the destination)
+:{{A|VO side2 ywmc1 ywmcF 142.ogg}} '''Green Hibiscus:''' Where are you going? The trial isn't over, you can't just leave!
+
+;(Upon reaching the destination)
+----
+:{{A|VO side2 ywmc1 ywmcF 143.ogg}} '''Green Hibiscus:''' Hm? Your mind might've wandered, but that doesn't mean you can. Come back and finish the trial!
+;(Lose {{Item|Transcribed Scripture|20|x=1}})
+
+;(Talk to Strange Cloud Knight)
+:{{A|VO side2 ywmc1 cknightZ 125.ogg}} '''Strange Cloud Knight:''' Listen... I have an idea that will let you join the Disciples of Sanctus Medicus, and let me get the heck out of here in one piece.
+:{{A|VO side2 ywmc1 cknightZ 126.ogg}} '''Strange Cloud Knight:''' You and I fight, and I lose to you &mdash; I pretend that you finished me off. Then, you pretend to help them remove my body by dragging me out of here...
+:{{A|VO side2 ywmc1 cknightZ 127.ogg}} '''Strange Cloud Knight:''' That way we both accomplish our objectives.
+:{{A|VO side2 ywmc1 cknightZ 128.ogg}} '''Strange Cloud Knight:''' Oh, uh... I've seen your skills... Please don't mess up and actually kill me...
+:{{DIcon|Arrow}} I know what I'm doing.
+::{{A|VO side2 ywmc1 cknightZ 129.ogg}} '''Strange Cloud Knight:''' Good. I know I could trust you... My life is in your hands!
+:{{DIcon|Arrow}} I can't make any guarantees...
+::{{A|VO side2 ywmc1 cknightZ 130.ogg}} '''Strange Cloud Knight:''' Just... Ugh, whatever, I got myself into this &mdash; let fate decide. Just try and hold back a little, okay!?
+----
+:{{A|VO side2 ywmc1 ywmcF 156.ogg}} '''Green Hibiscus:''' So, have you prepared yourselves? Are you ready to fight?
+:{{DIcon|Arrow}} Let's do it.
+::{{A|VO side2 ywmc1 ywmcF 157.ogg}} '''Green Hibiscus:''' And you, Cloud Knight?
+::{{A|VO side2 ywmc1 cknightZ 131.ogg}} '''Strange Cloud Knight:''' I... I'm ready...
+::{{A|VO side2 ywmc1 ywmcF 158.ogg}} '''Green Hibiscus:''' Then let's begin.
+::{{A|VO side2 ywmc1 cknightZ 132.ogg}} '''Strange Cloud Knight:''' Well... then... take this!
+:{{DIcon|Exit}} Not yet.
+::----
 {{Dialogue End}}
 
 ===Copy the ''Thousand-Handed Merciful Medicus' Salvation'' 4/500 times{{subst:void|<!--202010309-->}}===
 {{Mission Description|type=adventure|location=Exalting Sanctum|update|You have to copy the ''Thousand-Handed Merciful Medicus' Salvation'' according to Green Hibiscus's demands, but 500 times is just too much... Maybe there's another way?}}
 {{Dialogue Start}}
-:{{tx}}
+
+:{{DIcon|Talk}} Transcribe
+;(If {{cx}}{{subst:void|<!--{"$type":"RPG.GameCore.ByHeroGender","Gender":"GENDER_MAN"}-->}})
+::----
+::As you write out the fifth copy, the Cloud Knight near you no longer can wait in silence. He quietly comes up next to you.
+::{{A|VO side2 ywmc1 cknightZ 102.ogg}} '''Strange Cloud Knight:''' Stop writing &mdash; you wanna fall under their spell? I'll finish it for you &mdash; go keep a lookout!
+::The Cloud Knight swiftly scribbles away and finishes copying the sacred text while the disciples watching over you aren't looking.
+::{{A|VO side2 ywmc1 cknightZ 103 m.ogg}} {{A|VO side2 ywmc1 cknightZ 103 f.ogg}} '''Strange Cloud Knight:''' Alright, finally... I know you &mdash; you're (Trailblazer), General Jing Yuan's honored guest!
+;(If {{cx}}{{subst:void|<!--{"$type":"RPG.GameCore.ByHeroGender","Gender":"GENDER_MAN"}-->}})
+::----
+::As you write out the fifth copy, the Cloud Knight near you no longer can wait in silence. He quietly comes up next to you.
+::{{A|VO side2 ywmc1 cknightZ 102.ogg}} '''Strange Cloud Knight:''' Stop writing &mdash; you wanna fall under their spell? I'll finish it for you &mdash; go keep a lookout!
+::The Cloud Knight swiftly scribbles away and finishes copying the sacred text while the disciples watching over you aren't looking.
+::{{A|VO side2 ywmc1 cknightZ 103 m.ogg}} {{A|VO side2 ywmc1 cknightZ 103 f.ogg}} '''Strange Cloud Knight:''' Alright, finally... I know you &mdash; you're (Trailblazer), General Jing Yuan's honored guest!
+::{{A|VO side2 ywmc1 cknightZ 116.ogg}} '''Strange Cloud Knight:''' I'm a Cloud Knight from the Exalting Sanctum garrison. That Green Hibiscus has been sneaking around spreading heretical lies for a while now. That's why I'm here &mdash; to spy on him!
+::{{A|VO side2 ywmc1 cknightZ 117.ogg}} '''Strange Cloud Knight:''' They were suspicious of me as soon as I arrived... It took a lot of effort to make them believe I wanted to become a disciple...
+::{{DIcon|Arrow}} Why did you come here in your uniform...?
+::{{DIcon|Arrow}} Of course, they're bound to have their doubts when you're dressed like that...
+::{{A|VO side2 ywmc1 cknightZ 118.ogg}} '''Strange Cloud Knight:''' Hmph, I have my reasoning. Cults like this want to recruit people with influence in law and order &mdash; I wanted them to know I was a Cloud Knight! Always know your enemy...
+::{{DIcon|Arrow}} You really are a genius...
+::{{DIcon|Arrow}} What's your next plan?
+::{{A|VO side2 ywmc1 cknightZ 119.ogg}} '''Strange Cloud Knight:''' Shh, keep your voice down &mdash; these disciples don't miss much. If they discover us, we won't make it out of here.
+::{{A|VO side2 ywmc1 cknightZ 120.ogg}} '''Strange Cloud Knight:''' Listen carefully &mdash; I help you copy the text, you cover for me, and I get word out to the Seat of Divine Foresight...
+::----
+;(All choices lead to the following options)
+:{{DIcon|Arrow}} I think you've got the wrong person...
+::{{A|VO side2 ywmc1 cknightZ 113.ogg}} '''Strange Cloud Knight:''' You're here undercover, right? So am I! You've got to believe me!
+:{{DIcon|Arrow}} Jim Yan? Never heard of him...
+::{{A|VO side2 ywmc1 cknightZ 114.ogg}} '''Strange Cloud Knight:''' *sigh* Is this really the time for jokes of that quality... You're here undercover, right? Well, so am I!
+:{{DIcon|Arrow}} Looks like I'll have to make sure no one finds out...
+::{{A|VO side2 ywmc1 cknightZ 115.ogg}} '''Strange Cloud Knight:''' W&mdash;Wait a second! You're here undercover, right? So am I!
+:{{A|VO side2 ywmc1 cknightZ 116.ogg}} '''Strange Cloud Knight:''' I'm a Cloud Knight from the Exalting Sanctum garrison. That Green Hibiscus has been sneaking around spreading heretical lies for a while now. That's why I'm here &mdash; to spy on him!
+:{{A|VO side2 ywmc1 cknightZ 117.ogg}} '''Strange Cloud Knight:''' They were suspicious of me as soon as I arrived... It took a lot of effort to make them believe I wanted to become a disciple...
+:{{DIcon|Arrow}} Why did you come here in your uniform...?
+:{{DIcon|Arrow}} Of course, they're bound to have their doubts when you're dressed like that...
+:{{A|VO side2 ywmc1 cknightZ 118.ogg}} '''Strange Cloud Knight:''' Hmph, I have my reasoning. Cults like this want to recruit people with influence in law and order &mdash; I wanted them to know I was a Cloud Knight! Always know your enemy...
+:{{DIcon|Arrow}} You really are a genius...
+:{{DIcon|Arrow}} What's your next plan?
+:{{A|VO side2 ywmc1 cknightZ 119.ogg}} '''Strange Cloud Knight:''' Shh, keep your voice down &mdash; these disciples don't miss much. If they discover us, we won't make it out of here.
+:{{A|VO side2 ywmc1 cknightZ 120.ogg}} '''Strange Cloud Knight:''' Listen carefully &mdash; I help you copy the text, you cover for me, and I get word out to the Seat of Divine Foresight...
+----
 {{Dialogue End}}
 
 ==="Battle" with the strange Cloud Knight{{subst:void|<!--202010311-->}}===
 {{Mission Description|type=adventure|location=Exalting Sanctum|update|Under Green Hibiscus's threat, you had no choice but to "battle" the unfortunate Cloud Knight. Luckily, with your wits, you can turn the crisis into an opportunity.}}
 {{Dialogue Start}}
-:{{tx}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{A|VO side2 ywmc1 ywmcF 142.ogg}} '''Green Hibiscus:''' Where are you going? The trial isn't over, you can't just leave!
+:{{A|VO side2 ywmc1 ywmcF 142.ogg}} '''Green Hibiscus:''' Where are you going? The trial isn't over, you can't just leave!
+::----
+
+;(Upon reaching the destination)
+----
+:{{A|VO side2 ywmc1 ywmcF 143.ogg}} '''Green Hibiscus:''' Hm? Your mind might've wandered, but that doesn't mean you can. Come back and finish the trial!
+----
+----
+:{{A|VO side2 ywmc1 ywmcF 159.ogg}} '''Green Hibiscus:''' What magnificent skill! He was fierce, but no match for you.
+:{{A|VO side2 ywmc1 ywmcF 160.ogg}} '''Green Hibiscus:''' I'm glad you prevailed &mdash; that Cloud Knight waltzed straight up to us in uniform and asked if he could join &mdash; hardly a convincing spectacle. I doubt I ever could've trusted him.
+:{{A|VO side2 ywmc1 ywmcF 161.ogg}} '''Green Hibiscus:''' Purple Chrysanthemum, Blue Peach, find somewhere to dispose of the body.
+:{{DIcon|Arrow}} Let me handle it.
+:{{A|VO side2 ywmc1 ywmcF 162.ogg}} '''Green Hibiscus:''' Oh, you've dealt with this kind of thing before?
+:{{DIcon|Arrow}} I have a long-term associate that handles problems like this.
+::{{A|VO side2 ywmc1 ywmcF 163.ogg}} '''Green Hibiscus:''' A long-time associate, eh? You're well-connected, I see...
+:{{DIcon|Arrow}} It's a side hustle.
+::{{A|VO side2 ywmc1 ywmcF 164.ogg}} '''Green Hibiscus:''' Side... hustle? Ahem, very well &mdash; these are hard times, I suppose.
+:{{DIcon|Arrow}} Do you doubt me?
+::{{A|VO side2 ywmc1 ywmcF 165.ogg}} '''Green Hibiscus:''' Not at all! As I said earlier &mdash; disciples never suspect who we accept.
+:{{A|VO side2 ywmc1 ywmcF 166.ogg}} '''Green Hibiscus:''' Hmm... this does have its advantages. Our brothers and sisters have been proselytizing in Exalting Sanctum over the last few days &mdash; we may have attracted the attention of the devils... Having you dispose of the Cloud Knight will be safer.
+:{{A|VO side2 ywmc1 ywmcF 167.ogg}} '''Green Hibiscus:''' As such, this can be your first mission as a disciple. You take an active approach to getting things done &mdash; I'll be sure to pass that on to my superiors.
+:{{A|VO side2 ywmc1 ywmcF 168.ogg}} '''Green Hibiscus:''' In any case... my hearty congratulations on your admission to the Disciples of Sanctus Medicus. From now on, you will be known by the code name... Gray Peony!
+:{{A|VO side2 ywmc1 ywmcF 169.ogg}} '''Green Hibiscus:''' Well, Gray Peony, let's depart separately to avoid attracting attention &mdash; we'll rendezvous at a different location later. Until then.
+:{{Black Screen|You take the Cloud Knight to a safe place.}}
+:{{A|VO side2 ywmc1 cknightZ 133.ogg}} '''Strange Cloud Knight:''' Whew. I did a good job playing dead, didn't I?
+:{{A|VO side2 ywmc1 cknightZ 134.ogg}} '''Strange Cloud Knight:''' Those people are out of their minds &mdash; watch your step next time you're around them...
+:{{DIcon|Arrow}} How... How are you still alive?
+::{{A|VO side2 ywmc1 cknightZ 135.ogg}} '''Strange Cloud Knight:''' Wait, y&mdash;you weren't holding back?
+::He stares at your face for a long time before he realizes that you're joking.
+::{{A|VO side2 ywmc1 cknightZ 136.ogg}} '''Strange Cloud Knight:''' Gah, enough with the jokes already &mdash; it's a miracle either of us is alive.
+:{{DIcon|Arrow}} I'll be careful.
+::{{A|VO side2 ywmc1 cknightZ 137.ogg}} '''Strange Cloud Knight:''' With your skills, you've got a better chance than most.
+:{{DIcon|Arrow}} They can't take me in a fight.
+::{{A|VO side2 ywmc1 cknightZ 138.ogg}} '''Strange Cloud Knight:''' With your skills, you've got a better chance than most.
+:{{A|VO side2 ywmc1 cknightZ 139.ogg}} '''Strange Cloud Knight:''' I should report back to the Seat of Divine Foresight. Stay safe, friend!
+:The Cloud Knight vigilantly monitors his surroundings. After he's certain no one is tracking them, he makes a swift getaway.
+----
+
+;(Talk to Ziqiao)
+----
+:{{A|VO side2 ywmc1 ziqiao 101 m.ogg}} {{A|VO side2 ywmc1 ziqiao 101 f.ogg}} '''Ziqiao:''' Is that the general's honored guest? I didn't expect to see you around Exalting Sanctum.
+:{{DIcon|Arrow}} What brings you here?
+:{{A|VO side2 ywmc1 ziqiao 103.ogg}} '''Ziqiao:''' The person in charge of the courier cycranes here is a Vidyadhara &mdash; just like me. Her day has arrived &mdash; she's already headed to Scalegorge Waterscape to self-reincarnate.
+:{{A|VO side2 ywmc1 ziqiao 104.ogg}} '''Ziqiao:''' I'll be handling her duties until her replacement arrives.
+:{{DIcon|Arrow}} What do you mean by "her day"?
+::{{A|VO side2 ywmc1 ziqiao 105.ogg}} '''Ziqiao:''' As a Vidyadhara, one's lifespan typically spans six or seven hundred years. At the end of that span, there comes a day when we journey to Scalegorge Waterscape and embark on a new phase through self-reincarnation. It marks a significant moment in our eternal life cycle.
+:{{DIcon|Arrow}} Sorry for your loss...
+::{{A|VO side2 ywmc1 ziqiao 106.ogg}} '''Ziqiao:''' Haha, don't be. The lifespan of a Vidyadhara typically spans six or seven hundred years. At the end of that span, there comes a day when we journey to Scalegorge Waterscape and embark on a new phase through self-reincarnation. It marks a significant moment in our eternal life cycle.
+:{{A|VO side2 ywmc1 ziqiao 107.ogg}} '''Ziqiao:''' So, what can I help you with?
+:{{DIcon|Arrow}} I'm looking for a package...
+::{{Black Screen|You hide the sensitive message and give Ziqiao a quick rundown on your mission.}}
+::{{Black Screen|Ziqiao listens to your explanation. After making a few calls and confirming the situation, she helps you find a parcel that has "For the Seat of Divine Foresight. Urgent," written on it.}}
+::{{A|VO side2 ywmc1 ziqiao 108.ogg}} '''Ziqiao:''' When it comes to classified matters concerning the Seat of Divine Foresight, it's best I keep my questions to myself. Here's the package.
+::{{A|VO side2 ywmc1 ziqiao 109.ogg}} '''Ziqiao:''' Well, I'll let you get back to your business &mdash; I've got things I need to do attend to. See you, and take care.
+::----
+:<pre>{
+	"$type": "RPG.GameCore.CreateProp",
+	"GroupID": {
+		"FixedValue": {
+			"Value": 52
+		}
+	},
+	"GroupPropID": {
+		"FixedValue": {
+			"Value": 300006
+		}
+	},
+	"CreateList": []
+}</pre>
+::----
+::{{A|VO side2 ywmc1 player 111 m.ogg}} {{A|VO side2 ywmc1 player 111 f.ogg}} '''(Trailblazer):''' (It's an internal order from the Disciples of Sanctus Medicus.)
+::{{A|VO side2 ywmc1 player 112 m.ogg}} {{A|VO side2 ywmc1 player 112 f.ogg}} '''(Trailblazer):''' (Judging from these "Urgent Instructions," the Disciples are aware of a Seat of Divine Foresight operation to infiltrate their ranks... No wonder Green Hibiscus was so eager to intercept this.)
+::{{A|VO side2 ywmc1 player 113 m.ogg}} {{A|VO side2 ywmc1 player 113 f.ogg}} '''(Trailblazer):''' (I'll use my phone to make a copy and then hand it over to Green Hibiscus.)
+:{{DIcon|Exit}} Nothing, I'm fine.
 {{Dialogue End}}
 
 ===Wait for further contact from Qingzu{{subst:void|<!--202010314-->}}===
 {{Mission Description|type=adventure|location=Exalting Sanctum|update|You have successfully infiltrated the Disciples of Sanctus Medicus. Wait for further contact from Qingzu.}}
 {{Dialogue Start}}
-:{{tx}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+<pre>{
+	"$type": "RPG.GameCore.PlayMessage",
+	"MessageSectionID": 1212601
+}</pre>
 {{Dialogue End}}
 
 ===Meet up with Green Hibiscus at the Exalting Sanctum{{subst:void|<!--202010315-->}}===
 {{Mission Description|type=adventure|location=Exalting Sanctum|update|In order to obtain the Disciples of Sanctus Medicus' trust, you have to help Green Hibiscus complete some tasks. Hopefully, their tasks won't put you in a difficult spot.}}
 {{Dialogue Start}}
-:{{tx}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{A|VO side2 ywmc1 player 101 m.ogg}} {{A|VO side2 ywmc1 player 101 f.ogg}} '''(Trailblazer):''' (Green Hibiscus agreed to meet me here, but there's no sight of him. What gives?)
 {{Mission Description|type=adventure|location=Exalting Sanctum|update|In order to obtain the Disciples of Sanctus Medicus' trust, you have to intercept an important missive to be delivered to the Seat of Divine Foresight. Let's hope nothing bad happens to the missive-bearing traitor escaping the Disciples of Sanctus Medicus.}}
+
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{A|VO side2 ywmc1 player 106 m.ogg}} {{A|VO side2 ywmc1 player 106 f.ogg}} '''(Trailblazer):''' (What's written on this package? "Seat of Divine Foresight, Urgent..." This is it &mdash; the mail the Disciples want to intercept.)
+:{{A|VO side2 ywmc1 player 107 m.ogg}} {{A|VO side2 ywmc1 player 107 f.ogg}} '''(Trailblazer):''' (Hmm, seems like it's encrypted somehow... Makes sense, this is critical intelligence after all... Let's see if I can crack the code.)
 {{Dialogue End}}
 
 ===Go to the Exalting Sanctum and intercept the parcel according to the instruction of the missive{{subst:void|<!--202010390-->}}===
 {{Dialogue Start}}
-:{{tx}}
+<pre>{
+	"$type": "RPG.GameCore.PlayMessage",
+	"MessageSectionID": 1212701
+}</pre>
+
+;(Talk to Green Hibiscus)
+----
+:{{A|VO side2 ywmc1 ywmcG 119.ogg}} '''Mauve Moon:''' Do you have any questions?
+:{{DIcon|Talk}} How many people are in our organization?
+::{{A|VO side2 ywmc1 ywmcG 120.ogg}} '''Mauve Moon:''' I don't know. I've heard our members are in the tens of thousands.
+::{{A|VO side2 ywmc1 ywmcG 121.ogg}} '''Mauve Moon:''' The Disciples of Sanctus Medicus has a flat organizational structure &mdash; the head of each area reports directly to the master. I know nothing about what goes on elsewhere.
+::{{A|VO side2 ywmc1 ywmcG 122.ogg}} '''Mauve Moon:''' The benefit is that even if our enemies were to wipe out the Exalting Sanctum branch, it wouldn't affect our brothers and sisters in other areas.
+:;(Return to previous option selection)
+:{{DIcon|Talk}} Who prepares the prescriptions?
+::{{A|VO side2 ywmc1 ywmcG 123.ogg}} '''Mauve Moon:''' That's sensitive information... I know who they are, but for their security, I can't reveal their identities...
+::{{A|VO side2 ywmc1 ywmcG 124.ogg}} '''Mauve Moon:''' It's not that I doubt your loyalty, Gray Peony. It's like I said &mdash; security.
+:;(Return to previous option selection)
+:{{DIcon|Talk}} Can I meet the boss?
+::{{A|VO side2 ywmc1 ywmcG 125.ogg}} '''Mauve Moon:''' The boss? You mean the master... You'll meet them, but for now there's no rush. All in good time.
+::{{A|VO side2 ywmc1 ywmcG 126.ogg}} '''Mauve Moon:''' Keep fulfilling your duties &mdash; as you have been. With your strength, you'll have an audience with the master in no time.
+:;(Return to previous option selection)
+:{{DIcon|Arrow}} Why did you join the organization?
+::{{A|VO side2 ywmc1 ywmcG 127.ogg}} '''Mauve Moon:''' I'm ashamed to admit it, but I once worked alongside those devils... I trained in spear techniques for almost a century &mdash; I nearly became a Cloud Knight instructor.
+::{{A|VO side2 ywmc1 ywmcG 128.ogg}} '''Mauve Moon:''' But I was trapped in a weak, mortal shell. I was never able to surpass the final barrier that separated me from the martial arts geniuses.
+::{{A|VO side2 ywmc1 ywmcG 130.ogg}} '''Mauve Moon:''' Fortunately, the Draught of Draconic Surge &mdash; the prescription you hold in your hand &mdash; rescued me. Once I took that medicine, I became more powerful than any mortal could ever dream of.
+::{{A|VO side2 ywmc1 ywmcG 131.ogg}} '''Mauve Moon:''' Now, everything has changed... Zhixin and his pitiful spearmanship are no more... All that remains is a loyal disciple of Merciful Medicus.
+::{{DIcon|Arrow}} Zhixin?
+::{{DIcon|Arrow}} What did you say your old name was?
+::{{DIcon|Arrow}} Were you an undercover agent for the Seat of Divine Foresight?
+::{{A|VO side2 ywmc1 ywmcG 133.ogg}} '''Mauve Moon:''' Wait... you recognize me? Where do you know me from? Your face changed when you heard my name...
+::{{A|VO side2 ywmc1 ywmcF 179.ogg}} '''Green Hibiscus:''' M&mdash;Mauve Moon, sir, we have a problem... I suspect this person may be the agent who's been looking for you...
+::{{A|VO side2 ywmc1 ywmcG 134.ogg}} '''Mauve Moon:''' ...Idiot! What kind of trials are you running? You let an agent infiltrate our ranks!?
+::{{A|VO side2 ywmc1 ywmcF 180.ogg}} '''Green Hibiscus:''' I&mdash;I couldn't have known, sir! I witnessed this person slay a Cloud Knight before my very eyes!
+::{{A|VO side2 ywmc1 ywmcG 135.ogg}} '''Mauve Moon:''' Detestable... The Devilish Archer Author allows these pitiful mortals to face death without fear &mdash; self-sacrifice is their way of fooling us into opening our doors.
+::{{DIcon|Arrow}} You've really got an active imagination...
+:::{{A|VO side2 ywmc1 ywmcG 136.ogg}} '''Mauve Moon:''' Merciful Medicus has sharpened my senses &mdash; nothing gets past me. A pathetic mortal like you could never understand.
+::{{DIcon|Arrow}} I don't think I said anything that revealed my identity...
+:::{{A|VO side2 ywmc1 ywmcG 137.ogg}} '''Mauve Moon:''' Merciful Medicus has sharpened my senses &mdash; nothing gets past me. A pathetic mortal like you could never understand.
+::{{DIcon|Arrow}} I'm done. Let's do this. You can come at me together.
+::{{A|VO side2 ywmc1 ywmcG 138.ogg}} '''Mauve Moon:''' In that case, Divine Foresight devil, it's time for you to meet your demise!
 {{Dialogue End}}
 
 ===Meet with the Disciples of Sanctus Medicus' person in charge of the Exalting Sanctum chapter{{subst:void|<!--202010320-->}}===
 {{Mission Description|type=adventure|location=Exalting Sanctum|update|Finally earning the trust of Disciples of Sanctus Medicus, you are escorted to see the person in charge in their Exalting Sanctum chapter. You know that this will be a dangerous rendezvous. The moment you walk the path of a double agent, you have no other choice.}}
 {{Dialogue Start}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{A|VO side2 ywmc1 cknightZ 125.ogg}} '''Strange Cloud Knight:''' Listen... I have an idea that will let you join the Disciples of Sanctus Medicus, and let me get the heck out of here in one piece.
+:{{A|VO side2 ywmc1 cknightZ 126.ogg}} '''Strange Cloud Knight:''' You and I fight, and I lose to you &mdash; I pretend that you finished me off. Then, you pretend to help them remove my body by dragging me out of here...
+:{{A|VO side2 ywmc1 cknightZ 127.ogg}} '''Strange Cloud Knight:''' That way we both accomplish our objectives.
+:{{A|VO side2 ywmc1 cknightZ 128.ogg}} '''Strange Cloud Knight:''' Oh, uh... I've seen your skills... Please don't mess up and actually kill me...
+:I know what I'm doing.
+:{{A|VO side2 ywmc1 cknightZ 129.ogg}} '''Strange Cloud Knight:''' Good. I know I could trust you... My life is in your hands!
+:I can't make any guarantees...
+:{{A|VO side2 ywmc1 cknightZ 130.ogg}} '''Strange Cloud Knight:''' Just... Ugh, whatever, I got myself into this &mdash; let fate decide. Just try and hold back a little, okay!?
+:{{A|VO side2 ywmc1 ywmcF 156.ogg}} '''Green Hibiscus:''' So, have you prepared yourselves? Are you ready to fight?
+:Let's do it.
+:Not yet.
+:{{A|VO side2 ywmc1 ywmcF 157.ogg}} '''Green Hibiscus:''' And you, Cloud Knight?
+:{{A|VO side2 ywmc1 cknightZ 131.ogg}} '''Strange Cloud Knight:''' I... I'm ready...
+:{{A|VO side2 ywmc1 ywmcF 158.ogg}} '''Green Hibiscus:''' Then let's begin.
+:{{A|VO side2 ywmc1 cknightZ 132.ogg}} '''Strange Cloud Knight:''' Well... then... take this!
+:{{A|VO side2 ywmc1 ywmcF 159.ogg}} '''Green Hibiscus:''' What magnificent skill! He was fierce, but no match for you.
+:{{A|VO side2 ywmc1 ywmcF 160.ogg}} '''Green Hibiscus:''' I'm glad you prevailed &mdash; that Cloud Knight waltzed straight up to us in uniform and asked if he could join &mdash; hardly a convincing spectacle. I doubt I ever could've trusted him.
+:{{A|VO side2 ywmc1 ywmcF 161.ogg}} '''Green Hibiscus:''' Purple Chrysanthemum, Blue Peach, find somewhere to dispose of the body.
+:Let me handle it.
+:{{A|VO side2 ywmc1 ywmcF 162.ogg}} '''Green Hibiscus:''' Oh, you've dealt with this kind of thing before?
+:I have a long-term associate that handles problems like this.
+:{{A|VO side2 ywmc1 ywmcF 163.ogg}} '''Green Hibiscus:''' A long-time associate, eh? You're well-connected, I see...
+:It's a side hustle.
+:{{A|VO side2 ywmc1 ywmcF 164.ogg}} '''Green Hibiscus:''' Side... hustle? Ahem, very well &mdash; these are hard times, I suppose.
+:Do you doubt me?
+:{{A|VO side2 ywmc1 ywmcF 165.ogg}} '''Green Hibiscus:''' Not at all! As I said earlier &mdash; disciples never suspect who we accept.
+:{{A|VO side2 ywmc1 ywmcF 166.ogg}} '''Green Hibiscus:''' Hmm... this does have its advantages. Our brothers and sisters have been proselytizing in Exalting Sanctum over the last few days &mdash; we may have attracted the attention of the devils... Having you dispose of the Cloud Knight will be safer.
+:{{A|VO side2 ywmc1 ywmcF 167.ogg}} '''Green Hibiscus:''' As such, this can be your first mission as a disciple. You take an active approach to getting things done &mdash; I'll be sure to pass that on to my superiors.
+:{{A|VO side2 ywmc1 ywmcF 168.ogg}} '''Green Hibiscus:''' In any case... my hearty congratulations on your admission to the Disciples of Sanctus Medicus. From now on, you will be known by the code name... Gray Peony!
+:{{A|VO side2 ywmc1 ywmcF 169.ogg}} '''Green Hibiscus:''' Well, Gray Peony, let's depart separately to avoid attracting attention &mdash; we'll rendezvous at a different location later. Until then.
+:You take the Cloud Knight to a safe place.
+:{{A|VO side2 ywmc1 cknightZ 133.ogg}} '''Strange Cloud Knight:''' Whew. I did a good job playing dead, didn't I?
+:{{A|VO side2 ywmc1 cknightZ 134.ogg}} '''Strange Cloud Knight:''' Those people are out of their minds &mdash; watch your step next time you're around them...
+:How... How are you still alive?
+:{{A|VO side2 ywmc1 cknightZ 135.ogg}} '''Strange Cloud Knight:''' Wait, y&mdash;you weren't holding back?
+:He stares at your face for a long time before he realizes that you're joking.
+:{{A|VO side2 ywmc1 cknightZ 136.ogg}} '''Strange Cloud Knight:''' Gah, enough with the jokes already &mdash; it's a miracle either of us is alive.
+:I'll be careful.
+:{{A|VO side2 ywmc1 cknightZ 137.ogg}} '''Strange Cloud Knight:''' With your skills, you've got a better chance than most.
+:They can't take me in a fight.
+:{{A|VO side2 ywmc1 cknightZ 138.ogg}} '''Strange Cloud Knight:''' With your skills, you've got a better chance than most.
+:{{A|VO side2 ywmc1 cknightZ 139.ogg}} '''Strange Cloud Knight:''' I should report back to the Seat of Divine Foresight. Stay safe, friend!
+:The Cloud Knight vigilantly monitors his surroundings. After he's certain no one is tracking them, he makes a swift getaway.
+:{{A|VO side2 ywmc1 player 101 m.ogg}} {{A|VO side2 ywmc1 player 101 f.ogg}} '''(Trailblazer):''' (Green Hibiscus agreed to meet me here, but there's no sight of him. What gives?)
+:{{A|VO side2 ywmc1 player 102 m.ogg}} {{A|VO side2 ywmc1 player 102 f.ogg}} '''(Trailblazer):''' (There's a letter here... What's this on the envelope? "Gray Peony..." This must be from Green Hibiscus.)
+:{{A|VO side2 ywmc1 player 103 m.ogg}} {{A|VO side2 ywmc1 player 103 f.ogg}} '''(Trailblazer):''' (The Disciples sure know how to keep a low profile... Looks like I'll need to help them complete this mission.)
+:{{A|VO side2 ywmc1 player 104 m.ogg}} {{A|VO side2 ywmc1 player 104 f.ogg}} '''(Trailblazer):''' (If they're looking to intercept a letter, then I should probably search around the Exalting Sanctum's Cycrane Stand.)
+:You rummage through the packages on this Cycrane Stand, but you don't find the letter you are looking for.
+:{{A|VO side2 ywmc1 player 105 m.ogg}} {{A|VO side2 ywmc1 player 105 f.ogg}} '''(Trailblazer):''' (It doesn't seem to be on this Cycrane Stand. Let's check out another one.)
+:{{A|VO side2 ywmc1 player 106 m.ogg}} {{A|VO side2 ywmc1 player 106 f.ogg}} '''(Trailblazer):''' (What's written on this package? "Seat of Divine Foresight, Urgent..." This is it &mdash; the mail the Disciples want to intercept.)
+:{{A|VO side2 ywmc1 player 107 m.ogg}} {{A|VO side2 ywmc1 player 107 f.ogg}} '''(Trailblazer):''' (Hmm, seems like it's encrypted somehow... Makes sense, this is critical intelligence after all... Let's see if I can crack the code.)
+:{{A|VO side2 ywmc1 player 108 m.ogg}} {{A|VO side2 ywmc1 player 108 f.ogg}} '''(Trailblazer):''' (Code cracked... Huh, it's an internal order from the Disciples of Sanctus Medicus.)
+:{{A|VO side2 ywmc1 player 109 m.ogg}} {{A|VO side2 ywmc1 player 109 f.ogg}} '''(Trailblazer):''' (Judging from these "Urgent Instructions," the Disciples are aware of a Seat of Divine Foresight operation to infiltrate their ranks... No wonder Green Hibiscus was so eager to intercept this.)
+:{{A|VO side2 ywmc1 player 110 m.ogg}} {{A|VO side2 ywmc1 player 110 f.ogg}} '''(Trailblazer):''' (I'll use my phone to make a copy and then hand it over to Green Hibiscus.)
+:{{A|VO side2 ywmc1 ziqiao 101 m.ogg}} {{A|VO side2 ywmc1 ziqiao 101 f.ogg}} '''Ziqiao:''' Is that the general's honored guest? I didn't expect to see you around Exalting Sanctum.
+:What brings you here?
+:{{A|VO side2 ywmc1 ziqiao 103.ogg}} '''Ziqiao:''' The person in charge of the courier cycranes here is a Vidyadhara &mdash; just like me. Her day has arrived &mdash; she's already headed to Scalegorge Waterscape to self-reincarnate.
+:{{A|VO side2 ywmc1 ziqiao 104.ogg}} '''Ziqiao:''' I'll be handling her duties until her replacement arrives.
+:What do you mean by "her day"?
+:{{A|VO side2 ywmc1 ziqiao 105.ogg}} '''Ziqiao:''' As a Vidyadhara, one's lifespan typically spans six or seven hundred years. At the end of that span, there comes a day when we journey to Scalegorge Waterscape and embark on a new phase through self-reincarnation. It marks a significant moment in our eternal life cycle.
+:Sorry for your loss...
+:{{A|VO side2 ywmc1 ziqiao 106.ogg}} '''Ziqiao:''' Haha, don't be. The lifespan of a Vidyadhara typically spans six or seven hundred years. At the end of that span, there comes a day when we journey to Scalegorge Waterscape and embark on a new phase through self-reincarnation. It marks a significant moment in our eternal life cycle.
+:{{A|VO side2 ywmc1 ziqiao 107.ogg}} '''Ziqiao:''' So, what can I help you with?
+:I'm looking for a package...
+:Nothing, I'm fine.
+:You hide the sensitive message and give Ziqiao a quick rundown on your mission.
+:Ziqiao listens to your explanation. After making a few calls and confirming the situation, she helps you find a parcel that has "For the Seat of Divine Foresight. Urgent," written on it.
+:{{A|VO side2 ywmc1 ziqiao 108.ogg}} '''Ziqiao:''' When it comes to classified matters concerning the Seat of Divine Foresight, it's best I keep my questions to myself. Here's the package.
+:{{A|VO side2 ywmc1 ziqiao 109.ogg}} '''Ziqiao:''' Well, I'll let you get back to your business &mdash; I've got things I need to do attend to. See you, and take care.
+:{{A|VO side2 ywmc1 player 111 m.ogg}} {{A|VO side2 ywmc1 player 111 f.ogg}} '''(Trailblazer):''' (It's an internal order from the Disciples of Sanctus Medicus.)
+:{{A|VO side2 ywmc1 player 112 m.ogg}} {{A|VO side2 ywmc1 player 112 f.ogg}} '''(Trailblazer):''' (Judging from these "Urgent Instructions," the Disciples are aware of a Seat of Divine Foresight operation to infiltrate their ranks... No wonder Green Hibiscus was so eager to intercept this.)
+:{{A|VO side2 ywmc1 player 113 m.ogg}} {{A|VO side2 ywmc1 player 113 f.ogg}} '''(Trailblazer):''' (I'll use my phone to make a copy and then hand it over to Green Hibiscus.)
+:{{A|VO side2 ywmc1 ywmcF 170.ogg}} '''Green Hibiscus:''' Gray Peony, did you intercept the secret letter?
+:I've intercepted it.
+:Did we find the spy?
+:{{A|VO side2 ywmc1 ywmcF 171.ogg}} '''Green Hibiscus:''' You read the contents? Ugh... this job is proving to be somewhat difficult. Those devils at the Seat of Divine Foresight are too cunning.
+:{{A|VO side2 ywmc1 ywmcF 172.ogg}} '''Green Hibiscus:''' Good work. Unfortunately, the traitor has already found refuge under their wing... It appears that even our interception couldn't prevent the intel on our mission from slipping through the cracks.
+:{{A|VO side2 ywmc1 ywmcF 173.ogg}} '''Green Hibiscus:''' *sigh* Your work here is done &mdash; we'll take it from here... Of course, as a fellow disciple, there will come a time when you too will be tasked with resolving such issues &mdash; one among many duties of the Disciples.
+:{{A|VO side2 ywmc1 ywmcF 174.ogg}} '''Green Hibiscus:''' You have already proven yourself to be a competent disciple. The head of our operations in Exalting Sanctum is coming to pay you a visit.
+:{{A|VO side2 ywmc1 ywmcF 175.ogg}} '''Green Hibiscus:''' Just a moment. He will be here shortly.
+:{{A|VO side2 ywmc1 ywmcF 176.ogg}} '''Green Hibiscus:''' Mauve Moon, this is the reliable disciple I mentioned to you &mdash; Gray Peony.
+:{{A|VO side2 ywmc1 ywmcF 177.ogg}} '''Green Hibiscus:''' Gray Peony, this is Mauve Moon &mdash; the head of our operations in Exalting Sanctum.
+:{{A|VO side2 ywmc1 ywmcG 101.ogg}} '''Mauve Moon:''' It seems you have some impressive skills in your arsenal.
+:{{DIcon|Arrow}} You're too kind.
+::{{A|VO side2 ywmc1 ywmcG 102.ogg}} '''Mauve Moon:''' No need for modesty. I've studied martial arts for years &mdash; I can tell how strong you are with just a glance.
+::How much can you bench?
+::{{A|VO side2 ywmc1 ywmcG 103.ogg}} '''Mauve Moon:''' Haha, I like this kid.
+::You look kind of weak.
+:{{DIcon|Arrow}} How much can you bench?
+::{{A|VO side2 ywmc1 ywmcG 103.ogg}} '''Mauve Moon:''' Haha, I like this kid.
+::You look kind of weak.
+:{{DIcon|Arrow}} You look kind of weak.
+:{{A|VO side2 ywmc1 ywmcF 178.ogg}} '''Green Hibiscus:''' ...How dare you!
+:{{A|VO side2 ywmc1 ywmcG 104.ogg}} '''Mauve Moon:''' Easy, Hibiscus... I like this kid.
+:{{A|VO side2 ywmc1 ywmcG 105.ogg}} '''Mauve Moon:''' You seem like you've got it all figured out... What brings you to the Disciples of Sanctus Medicus?
+:{{DIcon|Arrow}} I despise The Hunt.
+::{{A|VO side2 ywmc1 ywmcG 106.ogg}} '''Mauve Moon:''' I can appreciate that. The Devilish Archer Author's so-called salvation is no different from destruction.
+::{{A|VO side2 ywmc1 ywmcG 107.ogg}} '''Mauve Moon:''' THEY used deceit and power to mislead the people of the Xianzhou, instilling fear in THEM about the blessings of Merciful Medicus.
+::{{A|VO side2 ywmc1 ywmcG 108.ogg}} '''Mauve Moon:''' The mission of the Disciples is to strike down this groundless fear, so that the people of the Xianzhou can return to the warm embrace of Merciful Medicus.
+::I want to become even stronger.
+::{{A|VO side2 ywmc1 ywmcG 109.ogg}} '''Mauve Moon:''' Good, so do I. I used to think determination and hard work were enough to achieve that... But I've come to realize it's not that simple.
+::{{A|VO side2 ywmc1 ywmcG 110.ogg}} '''Mauve Moon:''' During my many years as a Cloud Knight, I realized something... An individual's strength is limited.
+::{{A|VO side2 ywmc1 ywmcG 111.ogg}} '''Mauve Moon:''' So, I abandoned my mortal body and became a faithful servant of Merciful Medicus.
+::I want to gain immortality.
+::{{A|VO side2 ywmc1 ywmcG 112.ogg}} '''Mauve Moon:''' Good. Life is a miracle and a blessing. Any futile attempt to forsake it is a disgraceful betrayal.
+::{{A|VO side2 ywmc1 ywmcG 113.ogg}} '''Mauve Moon:''' You have been enlightened to the significance of immortality. You have already surpassed those shameful mortals.
+::I'm not sure...
+:{{DIcon|Arrow}} I want to become even stronger.
+::{{A|VO side2 ywmc1 ywmcG 109.ogg}} '''Mauve Moon:''' Good, so do I. I used to think determination and hard work were enough to achieve that... But I've come to realize it's not that simple.
+::{{A|VO side2 ywmc1 ywmcG 110.ogg}} '''Mauve Moon:''' During my many years as a Cloud Knight, I realized something... An individual's strength is limited.
+::{{A|VO side2 ywmc1 ywmcG 111.ogg}} '''Mauve Moon:''' So, I abandoned my mortal body and became a faithful servant of Merciful Medicus.
+::I want to gain immortality.
+::{{A|VO side2 ywmc1 ywmcG 112.ogg}} '''Mauve Moon:''' Good. Life is a miracle and a blessing. Any futile attempt to forsake it is a disgraceful betrayal.
+::{{A|VO side2 ywmc1 ywmcG 113.ogg}} '''Mauve Moon:''' You have been enlightened to the significance of immortality. You have already surpassed those shameful mortals.
+::I'm not sure...
+:{{DIcon|Arrow}} I want to gain immortality.
+::{{A|VO side2 ywmc1 ywmcG 112.ogg}} '''Mauve Moon:''' Good. Life is a miracle and a blessing. Any futile attempt to forsake it is a disgraceful betrayal.
+::{{A|VO side2 ywmc1 ywmcG 113.ogg}} '''Mauve Moon:''' You have been enlightened to the significance of immortality. You have already surpassed those shameful mortals.
+::I'm not sure...
+:{{DIcon|Arrow}} I'm not sure...
+:{{A|VO side2 ywmc1 ywmcG 114.ogg}} '''Mauve Moon:''' Don't worry about it. The pursuit of power and immortality is ingrained in the fabric of human nature.
+:{{A|VO side2 ywmc1 ywmcG 115.ogg}} '''Mauve Moon:''' Any act that runs counter to that instinct is lamentable, shameful, and futile... You may not have found the path yet, but you've already chosen the right direction. Very good.
+:{{A|VO side2 ywmc1 ywmcG 116.ogg}} '''Mauve Moon:''' Here, take this prescription. Through this medicine, you will become like me. You will be able to break the shackles that the Devilish Archer Author has used to chain your soul. You will gain unbridled power and freedom.
 :{{tx}}
+:{{A|VO side2 ywmc1 player 114 m.ogg}} {{A|VO side2 ywmc1 player 114 f.ogg}} '''(Trailblazer):''' (So Mauve Moon was the agent that Qingzu lost contact with... he joined the Disciples of Sanctus Medicus.)
+:{{A|VO side2 ywmc1 player 115 m.ogg}} {{A|VO side2 ywmc1 player 115 f.ogg}} '''(Trailblazer):''' (I should go to the Seat of Divine Foresight and tell Qingzu... I don't know if this mission was a success or a failure.)
 {{Dialogue End}}
 
 ===Head to the Seat of Divine Foresight and report to Qingzu{{subst:void|<!--202010321-->}}===
 {{Mission Description|type=adventure|location=Seat of Divine Foresight|update|You defeated Zhixin... or Mauve Moon, since that's what he goes by now. The Disciples of Sanctus Medicus Exalting Sanctum chapter's efforts can now be considered nullified, and your mission has concluded. Report to Qingzu about the current situation.}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Qingzu)
+:{{A|VO side2 ywmc1 qingzu 123.ogg}} '''Qingzu:''' I'm glad to see you've returned in one piece.
+::{{A|VO side2 ywmc1 qingzu 124.ogg}} '''Qingzu:''' So, what happened? Did everything go as planned?
+::{{A|VO side2 ywmc1 qingzu 125.ogg}} '''Qingzu:''' Don't worry, your operation was a success &mdash; although your identity was ultimately exposed, you gained a wealth of invaluable intelligence. On top of that, you managed to get out without a scratch.
+::{{A|VO side2 ywmc1 qingzu 126.ogg}} '''Qingzu:''' *sigh* ...I never imagined that Zhixin would choose the path of evil.
+::{{A|VO side2 ywmc1 qingzu 128 m.ogg}} {{A|VO side2 ywmc1 qingzu 128 f.ogg}} '''Qingzu:''' (Trailblazer), you did the right thing. I'm afraid this is how the Plagues Author operates &mdash; using notions of power and life to draw countless people like Zhixin away from bright futures... down a path of no return.
+::{{A|VO side2 ywmc1 qingzu 129.ogg}} '''Qingzu:''' You've managed to shine a light on the darkness of the enemy. With this intelligence, the Seat of Divine Foresight will be able to improve its strategy...
+::{{A|VO side2 ywmc1 qingzu 130.ogg}} '''Qingzu:''' ...and for all your efforts, please accept this reward.
+::{{A|VO side2 ywmc1 qingzu 131.ogg}} '''Qingzu:''' Is there anything else you'd like to know about?
+::{{DIcon|Talk}} Tell me about the current state of the Disciples of Sanctus Medicus...
+:::{{A|VO side2 ywmc1 qingzu 132.ogg}} '''Qingzu:''' The current state... I'm afraid we know next to nothing. We dispatched agents, but they were only able to linger on the edges of the organization. Your operation is the furthest anyone's managed to infiltrate.
+:::{{A|VO side2 ywmc1 qingzu 133.ogg}} '''Qingzu:''' The Seat of Divine Foresight is still striving to answer one question: Is this but the resurgent shadow of an organization silenced a thousand years ago... or have they been lurking in the darkness all along?
+:::{{A|VO side2 ywmc1 qingzu 134.ogg}} '''Qingzu:''' Whatever the case, this sudden re-emergence hints at a hidden conspiracy...
+:::{{A|VO side2 ywmc1 qingzu 135.ogg}} '''Qingzu:''' It's troubled me deeply over recent few months... it's hard to tell what all of this is building towards.
+::;(Return to previous option selection)
+::{{DIcon|Talk}} Did you send a lot of people undercover?
+:::{{A|VO side2 ywmc1 qingzu 136.ogg}} '''Qingzu:''' Not at all. The Disciples' secret letter makes it sound as if we infiltrated their ranks in great numbers... The reality is that only a handful of agents have successfully slipped into the organization...
+:::{{A|VO side2 ywmc1 qingzu 137.ogg}} '''Qingzu:''' ...and the majority of them lacked the strength you had to make it back unscathed after their identity was exposed. They didn't have the wisdom and good fortune to gain the organization's trust quickly...
+:::{{A|VO side2 ywmc1 qingzu 138.ogg}} '''Qingzu:''' An agent can't actually consume those pellets of the Disciples... doing so would mean the end of their life as they knew it.
+:::{{A|VO side2 ywmc1 qingzu 139.ogg}} '''Qingzu:''' The point is, there hasn't been anyone like you who managed to delve into the group's core and obtain so much firsthand information.
+::;(Return to previous option selection)
+::{{DIcon|Talk}} Tell me about the beliefs of the Disciples of Sanctus Medicus...
+:::{{A|VO side2 ywmc1 qingzu 140.ogg}} '''Qingzu:''' Thousand-Handed Merciful Medicus' Salvation is a manuscript transcribed from a sacred text &mdash; I don't know where the Disciples obtained it. It likely consists of fragments of banned works from the {{Rubi|befall era|Theophany Era}}.
+:::{{A|VO side2 ywmc1 qingzu 141.ogg}} '''Qingzu:''' As I see it, there isn't anything particularly alarming about the text. It recalls the acts of the Plagues Author's warped creatures from an equally warped perspective...
+:::{{A|VO side2 ywmc1 qingzu 142.ogg}} '''Qingzu:''' The scripture doesn't have the power to lead people astray &mdash; they do that to themselves... but it does feed lies and false hope.
+::;(Return to previous option selection)
+::{{DIcon|Exit}} About the prescription that Zhixin gave me...
+:::{{A|VO side2 ywmc1 qingzu 143.ogg}} '''Qingzu:''' The prescription you acquired is... beyond my knowledge.
+:::{{A|VO side2 ywmc1 qingzu 144.ogg}} '''Qingzu:''' There are a few reliable alchemists that reside in Exalting Sanctum. I'd like to ask you to consult with them on the particulars of the prescription. This will allow the Seat of Divine Foresight to have a clear target for creating an antidote...
+:::{{A|VO side2 ywmc1 qingzu 145 m.ogg}} {{A|VO side2 ywmc1 qingzu 145 f.ogg}} '''Qingzu:''' (Trailblazer), given that the Disciples of Sanctus Medicus has become aware of our operation, it's about time the Seat of Divine Foresight reeled in its net.
+:::{{A|VO side2 ywmc1 qingzu 146.ogg}} '''Qingzu:''' If you turn up any details about the prescription, feel free to come back and find me any time.
+:{{A|VO side2 ywmc1 qingzu 147.ogg}} '''Qingzu:''' What's on your mind? Did you want to ask about something else?
+::{{DIcon|Arrow}} I have some questions about the Disciples of Sanctus Medicus...
+:::{{A|VO side2 ywmc1 qingzu 148.ogg}} '''Qingzu:''' Ask away, I'll tell you everything I know.
+:::{{DIcon|Talk}} Tell me about the current state of the Disciples of Sanctus Medicus...
+::::{{A|VO side2 ywmc1 qingzu 132.ogg}} '''Qingzu:''' The current state... I'm afraid we know next to nothing. We dispatched agents, but they were only able to linger on the edges of the organization. Your operation is the furthest anyone's managed to infiltrate.
+::::{{A|VO side2 ywmc1 qingzu 133.ogg}} '''Qingzu:''' The Seat of Divine Foresight is still striving to answer one question: Is this but the resurgent shadow of an organization silenced a thousand years ago... or have they been lurking in the darkness all along?
+::::{{A|VO side2 ywmc1 qingzu 134.ogg}} '''Qingzu:''' Whatever the case, this sudden re-emergence hints at a hidden conspiracy...
+::::{{A|VO side2 ywmc1 qingzu 135.ogg}} '''Qingzu:''' It's troubled me deeply over recent few months... it's hard to tell what all of this is building towards.
+:::;(Return to previous option selection)
+:::{{DIcon|Talk}} Did you send a lot of people undercover?
+::::{{A|VO side2 ywmc1 qingzu 136.ogg}} '''Qingzu:''' Not at all. The Disciples' secret letter makes it sound as if we infiltrated their ranks in great numbers... The reality is that only a handful of agents have successfully slipped into the organization...
+::::{{A|VO side2 ywmc1 qingzu 137.ogg}} '''Qingzu:''' ...and the majority of them lacked the strength you had to make it back unscathed after their identity was exposed. They didn't have the wisdom and good fortune to gain the organization's trust quickly...
+::::{{A|VO side2 ywmc1 qingzu 138.ogg}} '''Qingzu:''' An agent can't actually consume those pellets of the Disciples... doing so would mean the end of their life as they knew it.
+::::{{A|VO side2 ywmc1 qingzu 139.ogg}} '''Qingzu:''' The point is, there hasn't been anyone like you who managed to delve into the group's core and obtain so much firsthand information.
+:::;(Return to previous option selection)
+:::{{DIcon|Talk}} Tell me about the beliefs of the Disciples of Sanctus Medicus...
+::::{{A|VO side2 ywmc1 qingzu 140.ogg}} '''Qingzu:''' Thousand-Handed Merciful Medicus' Salvation is a manuscript transcribed from a sacred text &mdash; I don't know where the Disciples obtained it. It likely consists of fragments of banned works from the {{Rubi|befall era|Theophany Era}}.
+::::{{A|VO side2 ywmc1 qingzu 141.ogg}} '''Qingzu:''' As I see it, there isn't anything particularly alarming about the text. It recalls the acts of the Plagues Author's warped creatures from an equally warped perspective...
+::::{{A|VO side2 ywmc1 qingzu 142.ogg}} '''Qingzu:''' The scripture doesn't have the power to lead people astray &mdash; they do that to themselves... but it does feed lies and false hope.
+:::;(Return to previous option selection)
+:::{{DIcon|Exit}} About the prescription that Zhixin gave me...
+::::{{A|VO side2 ywmc1 qingzu 143.ogg}} '''Qingzu:''' The prescription you acquired is... beyond my knowledge.
+::::{{A|VO side2 ywmc1 qingzu 144.ogg}} '''Qingzu:''' There are a few reliable alchemists that reside in Exalting Sanctum. I'd like to ask you to consult with them on the particulars of the prescription. This will allow the Seat of Divine Foresight to have a clear target for creating an antidote...
+::::{{A|VO side2 ywmc1 qingzu 145 m.ogg}} {{A|VO side2 ywmc1 qingzu 145 f.ogg}} '''Qingzu:''' (Trailblazer), given that the Disciples of Sanctus Medicus has become aware of our operation, it's about time the Seat of Divine Foresight reeled in its net.
+::::{{A|VO side2 ywmc1 qingzu 146.ogg}} '''Qingzu:''' If you turn up any details about the prescription, feel free to come back and find me any time.
+::{{DIcon|Exit}} I don't have any more questions.
+:::{{A|VO side2 ywmc1 qingzu 161.ogg}} '''Qingzu:''' Very well, see you soon. Remember to look for those alchemists when you have time &mdash; ask them about the prescription. I can't leave my post right now.
+
+;(Talk to Timid Alchemist)
+;(If {{cx}}<!--during performance 202010322-->)
+::{{A|VO side2 ywmc1 danshiB 101.ogg}} '''Timid Alchemist:''' Uh... C&mdash;Can I help you with anything...?
+::{{DIcon|Arrow}} Qingzu asked me to find you...
+::{{A|VO side2 ywmc1 danshiB 102.ogg}} '''Timid Alchemist:''' Right... I see. Let me take a look at the prescription. I'm afraid I'm not the most talented alchemist &mdash; I probably won't be able to make much sense of it...
+::{{A|VO side2 ywmc1 danshiB 103.ogg}} '''Timid Alchemist:''' Huh? Th&mdash;This calls for... Vidyadhara bone marrow? Whoever wrote this prescription must be out of their mind...
+::{{A|VO side2 ywmc1 danshiB 104.ogg}} '''Timid Alchemist:''' Sorry... I can't make heads or tails of it. The ingredients listed are just too... strange.
+::{{A|VO side2 ywmc1 danshiB 105.ogg}} '''Timid Alchemist:''' Based on what little I do know, I doubt the other alchemists will be able to understand it either... I think there's only one person who could grasp this kind of pharmacology...
+::{{A|VO side2 ywmc1 danshiB 106.ogg}} '''Timid Alchemist:''' ...The chief alchemist, Lady Dan Shu.
+;(If {{cx}}<!--not during performance 202010322-->)
+:{{A|VO side2 ywmc1 danshiB 107.ogg}} '''Timid Alchemist:''' Lady Dan Shu is the Luofu's &mdash; no, the Xianzhou Alliance's most knowledgeable alchemist... She may be sightless, but she has sharper senses than most...
+:{{A|VO side2 ywmc1 danshiB 108.ogg}} '''Timid Alchemist:''' I'll wager she can wrap her head around this prescription.
+:{{A|VO side2 ywmc1 danshiB 109.ogg}} '''Timid Alchemist:''' When she's not working, she's usually enjoying the breeze over in Synwood Pavilion. Why don't you go and ask her about it?
+
+;(Talk to Warm-Hearted Alchemist)
+;(If {{cx}}<!--during performance 202010323-->)
+::{{A|VO side2 ywmc1 danshiC 101.ogg}} '''Warm-Hearted Alchemist:''' Ah, why hello there. Anything I can help you with?
+::{{DIcon|Arrow}} Qingzu asked me to find you...
+::{{A|VO side2 ywmc1 danshiC 102.ogg}} '''Warm-Hearted Alchemist:''' So this is official Seat of Divine Foresight business, eh? Then I'll do everything I can to assist you, haha. Let's take a look at this prescription you mentioned.
+::{{A|VO side2 ywmc1 danshiC 103.ogg}} '''Warm-Hearted Alchemist:''' ...
+::{{A|VO side2 ywmc1 danshiC 104.ogg}} '''Warm-Hearted Alchemist:''' ...
+::{{A|VO side2 ywmc1 danshiC 105.ogg}} '''Warm-Hearted Alchemist:''' If this request had come from anywhere else, it would've seemed like a joke... but the Seat of Divine Foresight only deals in the serious...
+::{{A|VO side2 ywmc1 danshiC 106.ogg}} '''Warm-Hearted Alchemist:''' I can't understand this prescription, and I imagine that other alchemists won't be able to make sense of it either. I recommend you go directly to the chief alchemist, Lady Dan Shu.
+::{{A|VO side2 ywmc1 danshiC 107.ogg}} '''Warm-Hearted Alchemist:''' Lady Dan Shu is renowned for her unique line of reasoning. She's proposed several prescriptions that would have been incomprehensible to us if she hadn't explained the pharmacology...
+::{{A|VO side2 ywmc1 danshiC 108.ogg}} '''Warm-Hearted Alchemist:''' ...still, those same prescriptions have always been able to produce miraculous effects. Lady Dan Shu is a truly gifted alchemist.
+::{{A|VO side2 ywmc1 danshiC 109.ogg}} '''Warm-Hearted Alchemist:''' All the more amazing given her sightlessness, wouldn't you say?
+;(If {{cx}}<!--not during performance 202010323-->)
+:{{A|VO side2 ywmc1 danshiC 110.ogg}} '''Warm-Hearted Alchemist:''' Lady Dan Shu likes to pass the time over at Synwood Pavilion &mdash; I'm sure you'll run into her if you head that way.
+
+;(Talk to Ineloquent Alchemist)
+;(If {{cx}}<!--during performance 202010324-->)
+::{{A|VO side2 ywmc1 danshiA 101.ogg}} '''Ineloquent Alchemist:''' Can I help you?
+::{{DIcon|Arrow}} Qingzu asked me to find you...
+::{{A|VO side2 ywmc1 danshiA 102.ogg}} '''Ineloquent Alchemist:''' The Seat of Divine Foresight? Let me see the prescription.
+::{{A|VO side2 ywmc1 danshiA 103.ogg}} '''Ineloquent Alchemist:''' ...Heavens above.
+::{{A|VO side2 ywmc1 danshiA 104.ogg}} '''Ineloquent Alchemist:''' It's a horrifying prescription... and I can't make any sense of it.
+::{{A|VO side2 ywmc1 danshiA 105.ogg}} '''Ineloquent Alchemist:''' Go and ask Lady Dan Shu. She's our chief alchemist.
+::{{A|VO side2 ywmc1 danshiA 106.ogg}} '''Ineloquent Alchemist:''' She may be sightless, but she's more qualified than all of us.
+::{{A|VO side2 ywmc1 danshiA 107.ogg}} '''Ineloquent Alchemist:''' She's no stranger to helping others, either &mdash; always prescribing medicine to those in need &mdash; and free of charge.
+::{{A|VO side2 ywmc1 danshiA 108.ogg}} '''Ineloquent Alchemist:''' She'll certainly be willing to help the Seat of Divine Foresight.
+;(If {{cx}}<!--not during performance 202010324-->)
+:{{A|VO side2 ywmc1 danshiA 109.ogg}} '''Ineloquent Alchemist:''' You can find her at Synwood Pavilion.
 {{Dialogue End}}
 
 ===Head to the Exalting Sanctum and ask around for Draught of Draconic Surge's recipe{{subst:void|<!--202010391-->}}===
 {{Mission Description|type=adventure|location=Exalting Sanctum|update|Draught of Draconic Surge is a wild prescription that causes shivers just from its requirements. However, neither Qingzu nor you have the pharmacological knowledge to decipher more information. Ask the professionals from the Alchemy Commission.}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Dan Shu)
+;(If {{cx}}<!--SubMission Finish: 202010402-->)
+::{{A|VO side2 ywmc2 danshu 109.ogg}} '''Dan Shu:''' Need something else? Isn't the Seat of Divine Foresight anxious to learn about the prescription?
+;(Otherwise, if {{cx}}<!--SubMission Finish: 202010325-->)
+::{{A|VO side2 ywmc1 danshu 121.ogg}} '''Dan Shu:''' The pharmacology of this Draught of Draconic Surge is peculiar. I'll need time to run a thorough analysis. When I have a conclusive answer, I'll contact you immediately.
+;(Otherwise)
+::{{A|VO side2 ywmc2 danshu 109.ogg}} '''Dan Shu:''' Need something else? Isn't the Seat of Divine Foresight anxious to learn about the prescription?
 {{Dialogue End}}
 
 ===Talk to Dan Shu{{subst:void|<!--202010325-->}}===
 {{Mission Description|type=adventure|location=Exalting Sanctum|update|Dan Shu is the alchemist extraordinaire in the Alchemy Commission. Maybe she could help you understand the prescription of this Draught of Draconic Surge.}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Dan Shu)
+;(If {{cx}}<!--SubMission Finish: 202010312-->)
+::{{A|VO side2 ywmc1 danshu 111 m.ogg}} {{A|VO side2 ywmc1 danshu 111 f.ogg}} '''Dan Shu:''' It has been a while, (Trailblazer).
+;(If {{cx}}<!--SubMission not Finish: 202010312-->)
+::{{A|VO side2 ywmc1 danshu 101 m.ogg}} {{A|VO side2 ywmc1 danshu 101 f.ogg}} '''Dan Shu:''' I've been looking forward to meeting you... (Trailblazer).
+:{{DIcon|Arrow}} How do you know it's me?
+::{{A|VO side2 ywmc1 danshu 102.ogg}} '''Dan Shu:''' You have a very distinct scent. Losing one sense forces the other senses to become sharper.
+:{{DIcon|Arrow}} You know me?
+::{{A|VO side2 ywmc1 danshu 103.ogg}} '''Dan Shu:''' Everyone does &mdash; you're the hero who rescued the Vidyadhara Healer Lady in Exalting Sanctum.
+:{{A|VO side2 ywmc1 danshu 104.ogg}} '''Dan Shu:''' I heard from other alchemists you have a prescription you wish me to assess... can you read it to me?
+:{{DIcon|Arrow}} Sure.
+::{{A|VO side2 ywmc1 danshu 105.ogg}} '''Dan Shu:''' Thank you.
+:{{DIcon|Arrow}} Will you be able to remember it all?
+::{{A|VO side2 ywmc1 danshu 106.ogg}} '''Dan Shu:''' Don't worry, I've trained myself to remember everything I hear.
+:{{A|VO side2 ywmc1 danshu 107.ogg}} '''Dan Shu:''' Hmm... A strange and dangerous prescription, but I believe I understand the pharmacology... It involves drawing upon the strength of Long's Scions to attain the power of... ascension.
+:{{A|VO side2 ywmc1 danshu 108.ogg}} '''Dan Shu:''' The specifics, however, will require further investigation. This will take some time...
+:{{A|VO side2 ywmc1 danshu 109.ogg}} '''Dan Shu:''' ...I could hardly happen upon Vidyadhara bone marrow and test the prescription myself, could I?
+:{{A|VO side2 ywmc1 danshu 110.ogg}} '''Dan Shu:''' Leave your contact details with me. When I've completed my assessment of the pharmacology, I'll get in touch with you.
+----
 {{Dialogue End}}
 
 ==Other Languages==

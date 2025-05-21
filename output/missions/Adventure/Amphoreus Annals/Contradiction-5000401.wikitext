@@ -48,73 +48,256 @@ PageTitle=#Contradiction#
 ===Head to the busiest part of the marketplace and immerse yourself in the lively atmosphere{{subst:void|<!--500040102-->}}===
 {{Mission Description|type=adventure|location="Eternal Holy City" Okhema|The marketplace is definitely the liveliest spot around. If you have some time, stop by and see what interesting finds await.}}
 {{Dialogue Start}}
-:{{tx}}
+
 {{Dialogue End}}
 
 ===Try to smash the shield{{subst:void|<!--500040103-->}}===
 {{Mission Description|type=adventure|location="Eternal Holy City" Okhema|update|The merchant claims this is the most robust shield. Is that for real? Try smashing it!}}
 {{Dialogue Start}}
-:{{tx}}
+<pre>{
+	"$type": "RPG.GameCore.AdvDestroyGroupEntity",
+	"InstanceIDList": [
+		300003
+	]
+}</pre>
+;(Unused &mdash; MissionFinish_500040103)
+:<!--0.6-second delay-->
 {{Dialogue End}}
 
 ===Listen to the merchant's explanation{{subst:void|<!--500040104-->}}===
 {{Dialogue Start}}
+<pre>{
+	"$type": "RPG.GameCore.PerformanceExtendEndBlack"
+}</pre>
+:{{tx}}
+:'''Kelok:''' Haha, it's a minor setback. Look, you can still use it if you piece it back together. It's very durable.
+:{{DIcon|Arrow}} I can already see cracks...
+:{{DIcon|Arrow}} Didn't you say it was indestructible?
+:'''Kelok:''' Th&mdash;The... shield was converting incoming force into its own!
+:'''Kelok:''' Its structural design is as such: This shield will break in appropriate instances in order to absorb the greatest amount of force. If it were totally unbreakable, it would be the wielder's arm that breaks instead. The benevolent Georios would never wish such a plight on anyone.
+:'''Kilik:''' Heh-heh, my friend, Georios is called the Pillar of Stone because its spine faces upward, to meet the barrage of harsh storms and blizzards. Even if it had nails, they would be buried deep within the earth &mdash; how would mortals even acquire them?
+:'''Kelok:''' Groundless accusations bordering on blasphemy! ...Why would you malign a compatriot in the same field of work?
+:'''Kilik:''' I'm just speaking truth. No one has seen Georios' divine figure before, after all. So then... what is truly worth believing?
+:'''Kilik:''' Seeing is believing! Everyone knows that during the Era Bellica, {{Rubi|Nikador|Strife Titan}} once threw their lance into the land &mdash; this incident has been recorded in the ballads of bards.
+:'''Kilik:''' These lances of mine are forged from the shards of that very lance all those years ago! They're as good as the real artifact!
+:{{DIcon|Arrow}} Another wild flimflammer has appeared?
+:{{DIcon|Arrow}} You made that up all by yourself too?
+:'''Kilik:''' Nikador was ever-victorious. Brandishing a lance forged from the lance shard that the god once wielded, you will be unstoppable and unrelenting! If anyone here is in disbelief, feel free to test it for yourself.
+:To have two divine relics surface in the space of a day, Okhema certainly is a mecca of wonderment. The Eternal City certainly lives up to its name to harbor such an impressive arsenal.
+:But when you take out your purse and are about to purchase these two legendary masterpieces, a lingering question persists in your mind...
+:{{DIcon|Arrow}} If you used your lance to attack his shield...
+:{{DIcon|Arrow}} If you used his shield to block your lance...
+:'''Kelok:''' I...
 :{{tx}}
 {{Dialogue End}}
 
 ===Find the arbitrator{{subst:void|<!--500040105-->}}===
 {{Mission Description|type=adventure|location="Eternal Holy City" Okhema|update|Both merchants insist they aren't selling fakes. It seems you'll need to find a credible arbitrator to settle the dispute.}}
 {{Dialogue Start}}
+
+;(Talk to Male In A Blue Outfit)
+:'''Curious Child:''' Who do you think will win this?
+:'''Male In A Blue Outfit:''' I will bet money that the Strongest Lance can smash that shield to pieces!
+:'''Curious Child:''' And you're an expert?
+
+;(Talk to Female Bystander)
+:'''Blond Male:''' I like the design of this spear, but I'm not sure about the quality...
+:'''Female Bystander:''' I'm not being picky. It's just neither of their wares seems particularly good.
+
+;(Talk to Kelok)
+:'''Kilik:''' It's hard to find a qualified arbitrator, but don't worry, I will give you a discount!
+:'''Kelok:''' That's right. Talanton will never approve the outcome of the contest without an arbitrator as a witness!
+
+;(Talk to Chartonus)
 :{{tx}}
+:'''Curious Child:''' The unstoppable lance versus the immovable shield... That's a cliffhanger right there! You want to make a bet?
+:'''Male In A Blue Outfit:''' Zagreus came to me in a dream yesterday, saying that my fortune will be delivered today. If I don't nab this chance, it will surely pelt my head with coins, and demand to know what's stored inside!
+:'''Blond Male:''' With the current situation, the supporters on both sides are about even right now. You could consider it!
+:{{DIcon|Arrow}} Bet on the Strongest Shield.
+:<pre>{
+	"$type": "RPG.GameCore.SetMissionCustomValue",
+	"SubmissionID": 500040105,
+	"MissionCustomValue": {
+		"Name": "OldValue_0",
+		"ValidValueParamList": [
+			0,
+			1
+		]
+	},
+	"CustomValue": 1
+}</pre>
+:{{DIcon|Arrow}} Bet on the Strongest Lance.
+:<pre>{
+	"$type": "RPG.GameCore.SetMissionCustomValue",
+	"SubmissionID": 500040105,
+	"MissionCustomValue": {
+		"Name": "OldValue_0",
+		"ValidValueParamList": [
+			0,
+			1
+		]
+	},
+	"CustomValue": 1
+}</pre>
+:{{DIcon|Arrow}} I'd better not get involved.
+:<pre>{
+	"$type": "RPG.GameCore.SetMissionCustomValue",
+	"SubmissionID": 500040105,
+	"MissionCustomValue": {
+		"Name": "OldValue_0",
+		"ValidValueParamList": [
+			0,
+			1
+		]
+	}
+}</pre>
+:'''Curious Child:''' The unstoppable lance versus the immovable shield... That's a cliffhanger right there! You want to make a bet?
+:'''Male In A Blue Outfit:''' Zagreus came to me in a dream yesterday, saying that my fortune will be delivered today. If I don't nab this chance, it will surely pelt my head with coins, and demand to know what's stored inside!
+:'''Blond Male:''' With the current situation, the supporters on both sides are about even right now. You could consider it!
+:Bet on the Strongest Shield.
+:You know that baseball bat's power, and the feel of the shield's impact also told you &mdash; it can withstand a hit from that lance.
+:'''Curious Child:''' All right! You must've noticed something if you're that certain. May Zagreus favor you!
+:Bet on the Strongest Lance.
+:An item's value lies in its provenance. Compared to Georios' Nail, Nikador's Lance sounds much more plausible. You're sure that this extraordinary lance will shatter the shield's defenses.
+:'''Curious Child:''' All right! You must've noticed something if you're that certain. May Zagreus favor you!
+:I'd better not get involved.
+:You've been suspicious of these two merchants' claims from the start, and decide not to get involved.
 {{Dialogue End}}
 
 ===Take the Strongest Lance and attack the Strongest Shield with it{{subst:void|<!--500040106-->}}===
 {{Mission Description|type=adventure|location="Eternal Holy City" Okhema|update|Chartonus has agreed to act as the arbitrator &mdash; what an exciting turn of events! Now, take up the Strongest Lance and attack the Strongest Shield!}}
 {{Dialogue Start}}
+
+;(Talk to Kilik)
+<pre>{
+	"$type": "RPG.GameCore.PerformanceExtendEndBlack"
+}</pre>
+:'''Kilik:''' ...You really found one?
+:'''Kelok:''' A paltry matter like this doesn't deserve the attention of the Grand Craftsman!
+:'''Chartonus:''' Interested, I am, in this matter. Polite refusal, no need.
+:'''Kilik:''' For the Grand Craftsman to personally preside over this, we are at a loss for words...
+:'''Female Bystander:''' Stop stalling! Thrust the Strongest Lance at the Strongest Shield!
+:A crisp clang, and the lance and shield... both shatter the instant they touch each other.
+:'''Male In A Blue Outfit:''' Both have been broken? Could these be counterfeit?
+:'''Blond Male:''' Someone, call the guards! Have these two charlatans arrested!
+:'''Kilik:''' Uhh...
+:'''Kelok:''' Ahem... Some customers may ask, why did the lance and shield break at the same time?
+:'''Kelok:''' The answer appears complicated, but is quite simple: The powers of both Titans are equal, so the outcome is naturally a stalemate!
+:'''Kilik:''' Hey! Even Zagreus' disciples will blush at your ability to lie through your teeth!
+:'''Kilik:''' That's right. When the lance met the shield, did you feel like your eyes were shrouded, perhaps not even able to see the actual clash? That's the explosive remnant power of the Titans.
+:'''Kelok:''' Haha, you're pretty good too!
+:{{DIcon|Arrow}} I understand now...
+:{{DIcon|Arrow}} So far-fetched. I want my money back!
+::'''Kilik:''' You didn't even buy anything! Stop trying to make things up!
+::You all could see the black screen too?
+::'''Kelok:''' ...Black screen? Life isn't some theater play, and you can't just decide when to draw or pull the curtains!
+:{{DIcon|Arrow}} You all could see the black screen too?
+::'''Kelok:''' ...Black screen? Life isn't some theater play, and you can't just decide when to draw or pull the curtains!
+:'''Chartonus:''' Not accurate, the duel was.
+:'''Chartonus:''' Strike an ordinary shield, with the strongest spear one will. Strike the strongest shield, with an ordinary weapon one shall.
+:{{DIcon|Arrow}} Understood. The method of control variables.
+:{{DIcon|Arrow}} Let me try again!
+:'''Chartonus:''' Act in haste, do not, before truth you see.
 :{{tx}}
 {{Mission Description|type=adventure|location="Eternal Holy City" Okhema|update|The merchants still refuse to acknowledge that the lance and shield are both fakes. Left with no other option, you decide to test the shield's quality using a regular weapon.}}
+;(If {{cx}}<!--SubMission Finish: 500040107-->)
+<pre>{
+	"$type": "RPG.GameCore.PerformanceExtendEndBlack"
+}</pre>
+:{{tx}}
+;(Unused &mdash; MissionFinish_500040107)
+:<!--1-second delay-->
+
+;(Unused &mdash; FinishLookAt_500040116)
+
 {{Dialogue End}}
 
 ===Inspect the quality of the shield{{subst:void|<!--500040107-->}}===
 {{Dialogue Start}}
-:{{tx}}
 {{Dialogue End}}
 
 ===Listen to the merchant's explanation{{subst:void|<!--500040108-->}}===
 {{Dialogue Start}}
+;(If {{cx}}<!--SubMission Finish: 500040109-->)
+<pre>{
+	"$type": "RPG.GameCore.PerformanceExtendEndBlack"
+}</pre>
 :{{tx}}
+;(Unused &mdash; FinishLookAt_500040115)
+
 {{Dialogue End}}
 
 ===Inspect the quality of the shield for the second time{{subst:void|<!--500040109-->}}===
 {{Dialogue Start}}
-:{{tx}}
 {{Dialogue End}}
 
 ===Listen to the merchant's explanation{{subst:void|<!--500040110-->}}===
 {{Dialogue Start}}
+;(If {{cx}}<!--SubMission Finish: 500040111-->)
+<pre>{
+	"$type": "RPG.GameCore.PerformanceExtendEndBlack"
+}</pre>
 :{{tx}}
+:'''Kelok:''' Agaaain!
+:{{DIcon|Arrow}} All the shields have been shattered...
+:{{DIcon|Arrow}} How about you ring up Georios for more inventory?
+:'''Chartonus:''' On this shield, conclusion can one make.
+:{{tx}}
+;(Unused &mdash; FinishLookAt_500040117)
+
 {{Dialogue End}}
 
 ===Inspect the quality of the shield for the third time{{subst:void|<!--500040111-->}}===
 {{Dialogue Start}}
-:{{tx}}
 {{Dialogue End}}
 
 ===Listen to the merchant's explanation{{subst:void|<!--500040112-->}}===
 {{Dialogue Start}}
+;(If {{cx}}<!--SubMission Finish: 500040113-->)
+<pre>{
+	"$type": "RPG.GameCore.AdvDestroyGroupEntity",
+	"InstanceIDList": [
+		300001,
+		300002,
+		300003,
+		300004
+	]
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.AdvCreateGroupEntity",
+	"InstanceIDList": [
+		300006,
+		300007,
+		300008,
+		300009
+	]
+}</pre>
+----
+:All other lances have been defeated, yet the shield remains steadfast and unshaken.
+:'''Chartonus:''' Such flimsy material, I've never seen.
+:{{DIcon|Arrow}} This isn't my full power.
+:{{DIcon|Arrow}} This is for scratching backs or something?
+:'''Curious Child:''' How dare you swindle others using Georios' name &mdash; a most blasphemous act!
+:'''Female Bystander:''' May Nikador drop their lance over your head! The guards are already on their way. Prepare for judgment!
+:'''Kelok:''' *sigh* If you play with fire, you're bound to get burned. Let's just admit our defeat this time.
+:'''Kilik:''' No fear of firewood as long as you stay in the mountains. A moment's mistake isn't the end of the world, and there'll always be another time to rise again.
+:{{DIcon|Arrow}} Come clean and you'll receive lighter punishment.
+:{{DIcon|Arrow}} I hope your licenses get suspended.
+;(If {{F|MissionCV-5000401-undefined}} is undefined 1)
+;(If {{F|MissionCV-5000401-undefined}} is not undefined 1)
 :{{tx}}
+;(Unused &mdash; FinishLookAt_500040118)
+
 {{Dialogue End}}
 
 ===Inspect the quality of the lance{{subst:void|<!--500040113-->}}===
 {{Mission Description|type=adventure|location="Eternal Holy City" Okhema|update|The merchants still refuse to acknowledge that the lance and shield are both fakes. Now, it's time to assess the lance's quality.}}
 {{Dialogue Start}}
-:{{tx}}
 {{Dialogue End}}
 
 ===Use the result obtained to question the two merchants{{subst:void|<!--500040114-->}}===
 {{Mission Description|type=adventure|location="Eternal Holy City" Okhema|update|The results are in: The Strongest Lance and the Strongest Shield have both been proven to be fakes. Now, it's time to question the two merchants.}}
 {{Dialogue Start}}
-:{{tx}}
 {{Dialogue End}}
 
 ==Other Languages==

@@ -40,53 +40,284 @@ PageTitle=#Sword Essence#
 -->
 ==Dialogue==
 {{Stub Dialogue}}
+<pre>{
+	"$type": "RPG.GameCore.WaitUIControllerClose",
+	"UIControllerName": "HeliobusSNSDetailDialog"
+}</pre>
+:{{A|VO side2 hzzy guinaifen 218.ogg}} '''Guinaifen:''' Is this... something Tail would do?
+:{{A|VO side2 hzzy huohuo 221.ogg}} '''Huohuo:''' Tail or no Tail &mdash; it's definitely the work of a heliobus!
+:{{A|VO side2 hzzy sushang 189.ogg}} '''Sushang:''' Let's hurry up and get to the scene &mdash; there'll be trouble to pay if we're too late.
+:{{DIcon|Arrow}} Let's go.
+:{{DIcon|Arrow}} Shouldn't we talk to Cirrus first?
+::{{A|VO side2 hzzy guinaifen 219.ogg}} '''Guinaifen:''' We don't have time for that. Even if Cirrus does know something, by the time we've finished asking questions, it'll be too late!
+:{{A|VO side2 hzzy huohuo 222.ogg}} '''Huohuo:''' Be careful everyone &mdash; this sounds like a very aggressive heliobus.
+:{{tx}}
 {{Dialogue End}}
 
 ===Head to the Alchemy Commission and locate the delirious Cloud Knight{{subst:void|<!--801510303-->}}===
 {{Mission Description|type=continuance|location=Alchemy Commission|update|A Cloud Knight out of control... if it isn't a case of mara-struck, then it would be the work of a heliobus. Following the description in the post, you make your way to the Alchemy Commission to investigate.}}
 {{Dialogue Start}}
+<pre>{
+	"$type": "RPG.GameCore.CreateProp",
+	"GroupID": {
+		"FixedValue": {
+			"Value": 141
+		}
+	},
+	"GroupPropID": {
+		"FixedValue": {
+			"Value": 300007
+		}
+	},
+	"CreateList": []
+}</pre>
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{A|VO side2 hzzy cknightAB 102.ogg}} '''Vigilant Cloud Knight:''' Hey, calm down!
+:{{A|VO side2 hzzy cknightAA 102.ogg}} '''Delirious Cloud Knight:''' I just learned a new technique &mdash; I'll use it to end your life!
+:{{DIcon|Arrow}} What's with this guy?
+:{{A|VO side2 hzzy cknightAB 103.ogg}} '''Vigilant Cloud Knight:''' Unauthorized personnel should keep their distance &mdash; it's dangerous here!
 :{{tx}}
+;(Enter battle)
+:{{Enemy List|Cloud Knights Patroller*3/+60% HP{ text = Delirious Cloud Knight }; Wraith Warden*1/+220% HP{ text = Delirious Wraith Warden }}}
+
+;(Talk to Yanzhuo)
+:{{A|VO side2 hzzy huohuo 233 m.ogg}} {{A|VO side2 hzzy huohuo 233 f.ogg}} '''Huohuo:''' Yanqing is at Dragonprayer Terrace. (Trailblazer), let's go.
+:{{DIcon|Arrow}} Let's catch a ferry and head for Dragonprayer Terrace.
+::<!--1-second delay-->
+:<pre>{
+	"$type": "RPG.GameCore.OpenTreasureChallenge",
+	"RaidID": 43214,
+	"OnCancel": [
+		{
+			"$type": "RPG.GameCore.TriggerCustomString",
+			"CustomString": {
+				"Value": "ALL_TALK_END"
+			}
+		}
+	]
+}</pre>
+:{{DIcon|Exit}} Let me get ready first...
+:{{A|VO side2 hzzy cknightAA 103.ogg}} '''Delirious Cloud Knight:''' See how you like this!
+:After a struggle, you subdue the crazed Cloud Knight.
+:{{A|VO side2 hzzy cknightAB 106.ogg}} '''Vigilant Cloud Knight:''' Judge Huohuo, is he... alright?
+:{{A|VO side2 hzzy huohuo 225.ogg}} '''Huohuo:''' His life isn't in danger, but his hands and feet are spasming... and his speech is incoherent. I think he's experiencing a delusion that he can't snap out of.
+:{{A|VO side2 hzzy cknightAA 104.ogg}} '''Delirious Cloud Knight:''' I feel... like I've been drained of my strength...
+:{{A|VO side2 hzzy huohuo 226.ogg}} '''Huohuo:''' Mr. Cloud Knight sir, are you okay? Can you answer a few questions for me? Do you remember what happened to you?
+:{{A|VO side2 hzzy cknightAA 105.ogg}} '''Delirious Cloud Knight:''' I... I think so... Let me think for a moment...
+:{{A|VO side2 hzzy cknightAA 106.ogg}} '''Delirious Cloud Knight:''' I received a report today about an infestation of abominations here at the Alchemy Commission &mdash; the captain sent me to clear it out. What happened after that was like a dream... I can't explain it.
+:{{A|VO side2 hzzy cknightAA 107.ogg}} '''Delirious Cloud Knight:''' My weapon suddenly started talking to me... it taught me fighting techniques &mdash; which moves to avoid, which moves to use, which stances to adopt to retain balance... then it told me to relax and let it take control against the enemy.
+:{{A|VO side2 hzzy sushang 192.ogg}} '''Sushang:''' That sounds just like... a heliobus!
+:{{A|VO side2 hzzy cknightAA 108.ogg}} '''Delirious Cloud Knight:''' I followed its instructions... To my surprise, it felt like my combat skills had greatly improved. Still, it told me I was incompetent, like a piece of rotten wood. It wanted to find a new apprentice to carry forward the art.
+:{{A|VO side2 hzzy cknightAA 109.ogg}} '''Delirious Cloud Knight:''' It was only then that I realized &mdash; there was a sword-wielding child beside me, staring right at me.
+:{{DIcon|Arrow}} A child?
+:{{DIcon|Arrow}} A sword-wielding child?
+:{{DIcon|Arrow}} Your weapon wanted to take the child as your apprentice?
+:{{A|VO side2 hzzy sushang 193.ogg}} '''Sushang:''' Lots of children grow up learning to use a sword on the Luofu, but for a child to be walking around with one...
+:{{A|VO side2 hzzy guinaifen 220.ogg}} '''Guinaifen:''' ...I sure hope we're not thinking of the same person.
+:{{A|VO side2 hzzy cknightAA 110.ogg}} '''Delirious Cloud Knight:''' I realized the boy was the General's retainer, Yanqing.
+:{{A|VO side2 hzzy sushang 194.ogg}} '''Sushang:''' I knew it...
+:{{A|VO side2 hzzy cknightAA 111.ogg}} '''Delirious Cloud Knight:''' When I heard my sword say the name, I was in disbelief... and then, for some reason, I just... attacked Yanqing.
+:{{DIcon|Arrow}} Was Yanqing alright?
+::{{A|VO side2 hzzy sushang 195.ogg}} '''Sushang:''' Are YOU alright? You should be asking the Cloud Knight.
+::Are you okay?
+::{{A|VO side2 hzzy cknightAA 112.ogg}} '''Delirious Cloud Knight:''' Yes, I'm fine. The funny thing is that I didn't even see him move &mdash; I just fell straight to the ground.
+::Seems like you both came out unscathed...
+:{{DIcon|Arrow}} Are you okay?
+::{{A|VO side2 hzzy cknightAA 112.ogg}} '''Delirious Cloud Knight:''' Yes, I'm fine. The funny thing is that I didn't even see him move &mdash; I just fell straight to the ground.
+::Seems like you both came out unscathed...
+:{{DIcon|Arrow}} Seems like you both came out unscathed...
+:{{A|VO side2 hzzy cknightAA 113.ogg}} '''Delirious Cloud Knight:''' He must have spared me. The funny thing is that I didn't even see him move &mdash; I just fell straight to the ground.
+:{{A|VO side2 hzzy cknightAA 114.ogg}} '''Delirious Cloud Knight:''' What happened next was even more outlandish &mdash; Yanqing looked like he was talking to the sword in his hand. He turned around and left without looking back. And my weapon... my weapon never spoke again.
+:{{tx}}
+----
 {{Dialogue End}}
 
 ===Track down Yanqing's whereabouts{{subst:void|<!--801510305-->}}===
 {{Mission Description|type=continuance|location=Alchemy Commission|update|A Cloud Knight out of control... if it isn't a case of mara-struck, then it would be the work of a heliobus. Following the description in the post, you make your way to the Alchemy Commission to investigate, only to accidentally run into an even more distressing piece of news. The general's retainer, Yanqing, had arrived here and crossed swords with the frenzied Cloud Knight, then left. According to the knight's testimony, a mysterious voice emanated from his own sword and spoke to him.<br />Heliobi are known masters of manipulating others' minds. If they ensnare Yanqing, the consequences would be dire!}}
 {{Dialogue Start}}
+<pre>{
+	"$type": "RPG.GameCore.CreateProp",
+	"GroupID": {
+		"FixedValue": {
+			"Value": 141
+		}
+	},
+	"GroupPropID": {
+		"FixedValue": {
+			"Value": 300001
+		}
+	},
+	"CreateList": []
+}</pre>
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:A blue sword swishes by.
+:Upon detecting your presence, it approaches and starts flying in circles around you.
+:{{DIcon|Arrow}} Is that a new cycrane model!?
+::{{A|VO side2 hzzy sushang 197.ogg}} '''Sushang:''' It's Yanqing's sword &mdash; I saw him wield it one time when I was doing drills with the Cloud Knights.
+::It seems to be calling us...
+:{{DIcon|Arrow}} It seems to be calling us...
+:{{A|VO side2 hzzy sushang 198.ogg}} '''Sushang:''' I heard that Yanqing's sword is a famous weapon crafted by the Artisanship Commission. It resonates with its master &mdash; reacting to his movements in battle like it has a mind of its own.
+:{{A|VO side2 hzzy sushang 199.ogg}} '''Sushang:''' He must have encountered some kind of danger... and his sword flew away to find someone to help, right?
+:{{A|VO side2 hzzy huohuo 227.ogg}} '''Huohuo:''' D&mdash;Danger...? Miss Sushang, don't scare me like that &mdash; what kind of evil would be strong enough to pose a threat to Yanqing?
+:{{A|VO side2 hzzy sushang 200.ogg}} '''Sushang:''' I'm not sure, but the heliobi are strange creatures &mdash; even the sharpest sword can't cut them.
+:{{A|VO side2 hzzy guinaifen 221.ogg}} '''Guinaifen:''' Uh-oh. I just had a thought...
+:{{A|VO side2 hzzy sushang 201.ogg}} '''Sushang:''' If it's not auspicious, you'd best not say it out loud!
+:{{A|VO side2 hzzy guinaifen 222.ogg}} '''Guinaifen:''' Based on what that Cloud Knight said, it isn't that Yanqing's in danger...
+:{{DIcon|Arrow}} It's that we're in danger?
+:{{DIcon|Arrow}} It's that Yanqing has become the danger?
+:{{A|VO side2 hzzy guinaifen 223.ogg}} '''Guinaifen:''' Exactly.
 :{{tx}}
+----
+
+;(Talk to Yanzhuo)
+:{{A|VO side2 hzzy huohuo 233 m.ogg}} {{A|VO side2 hzzy huohuo 233 f.ogg}} '''Huohuo:''' Yanqing is at Dragonprayer Terrace. (Trailblazer), let's go.
+:{{DIcon|Arrow}} Let's catch a ferry and head for Dragonprayer Terrace.
+::<!--1-second delay-->
+:<pre>{
+	"$type": "RPG.GameCore.OpenTreasureChallenge",
+	"RaidID": 43214,
+	"OnCancel": [
+		{
+			"$type": "RPG.GameCore.TriggerCustomString",
+			"CustomString": {
+				"Value": "ALL_TALK_END"
+			}
+		}
+	]
+}</pre>
+:{{DIcon|Exit}} Let me get ready first...
 {{Dialogue End}}
 
 ===Follow the flying sword left behind by Yanqing{{subst:void|<!--801510306-->}}===
 {{Dialogue Start}}
-:{{tx}}
+
 {{Dialogue End}}
 
 ===Follow Yanqing's flying sword to find its master{{subst:void|<!--801510309-->}}===
 {{Mission Description|type=continuance|location=Alchemy Commission|update|Heliobi are known masters of manipulating others' minds. If they ensnare Yanqing, the consequences would be dire! You follow the trail of flying swords left behind by Yanqing, determined to contain the threat before it can get worse.}}
 {{Dialogue Start}}
+
+;(Talk to Yanzhuo)
+:{{A|VO side2 hzzy huohuo 233 m.ogg}} {{A|VO side2 hzzy huohuo 233 f.ogg}} '''Huohuo:''' Yanqing is at Dragonprayer Terrace. (Trailblazer), let's go.
+:{{DIcon|Arrow}} Let's catch a ferry and head for Dragonprayer Terrace.
+::<!--1-second delay-->
+:<pre>{
+	"$type": "RPG.GameCore.OpenTreasureChallenge",
+	"RaidID": 43214,
+	"OnCancel": [
+		{
+			"$type": "RPG.GameCore.TriggerCustomString",
+			"CustomString": {
+				"Value": "ALL_TALK_END"
+			}
+		}
+	]
+}</pre>
+:{{DIcon|Exit}} Let me get ready first...
 :{{tx}}
+----
+
+;(Talk to Yanzhuo)
+:{{tx}}
+----
+:{{tx}}
+----
 {{Dialogue End}}
 
 ===Seek Jing Yuan's assistance{{subst:void|<!--801510313-->}}===
 {{Mission Description|type=continuance|location=Fyxestroll Garden|update|The best way to awake Yanqing from his hallucination is to involve the general. Sushang volunteers to hold off Yanqing until the general arrives. Hang in there, Sushang!}}
 {{Dialogue Start}}
+<pre>{
+	"$type": "RPG.GameCore.CreateProp",
+	"GroupID": {
+		"FixedValue": {
+			"Value": 46
+		}
+	},
+	"GroupPropID": {
+		"FixedValue": {
+			"Value": 300002
+		}
+	},
+	"CreateList": []
+}</pre>
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
 :{{tx}}
+----
+
+;(Talk to Jing Yuan)
+:{{A|VO side2 hzzy jingyuan 145 m.ogg}} {{A|VO side2 hzzy jingyuan 145 f.ogg}} '''Jing Yuan:''' Sushang is awaiting our timely arrival at Dragonprayer Terrace. (Trailblazer), let's go.
+:{{DIcon|Arrow}} Dragonprayer Terrace it is...
+::<!--1-second delay-->
+:<pre>{
+	"$type": "RPG.GameCore.OpenTreasureChallenge",
+	"RaidID": 4321402,
+	"OnCancel": [
+		{
+			"$type": "RPG.GameCore.TriggerCustomString",
+			"CustomString": {
+				"Value": "ALL_TALK_END"
+			}
+		}
+	]
+}</pre>
+:{{DIcon|Exit}} Let me get ready first...
+
+;(Talk to Cirrus)
+:{{A|VO side2 hzzy mingchaiA 217.ogg}} '''Cirrus:''' Come to laugh at me again, have you, little brat?
+:{{A|VO side2 hzzy mingchaiA 218.ogg}} '''Cirrus:''' I'm not in the mood for your chatter &mdash; go away!
 {{Dialogue End}}
 
 ===Accompany Jing Yuan to meet Yanqing{{subst:void|<!--801510314-->}}===
 {{Mission Description|type=continuance|location=Fyxestroll Garden|update|You inform Jing Yuan about everything and request his assistance in heading to Dragonprayer Terrace and reasoning with Yanqing.}}
 {{Dialogue Start}}
+:{{A|VO side2 hzzy yanqing 129.ogg}} '''Yanqing:''' General...
+:{{A|VO side2 hzzy jingyuan 152.ogg}} '''Jing Yuan:''' I know what you wish to say Yanqing. We can move past the melodrama.
+:{{A|VO side2 hzzy yanqing 130.ogg}} '''Yanqing:''' Then... to the rest of you, thank you &mdash; for bringing me out of that daze... Especially you, Miss Sushang.
+:{{A|VO side2 hzzy sushang 218.ogg}} '''Sushang:''' Why does everyone that gets "heliobused" love to apologize for it? You're the victim here. They're the ones stirring up chaos.
+:{{A|VO side2 hzzy sushang 219.ogg}} '''Sushang:''' It should be me thanking you for holding back during our battle...
+:{{A|VO side2 hzzy sushang 220 m.ogg}} {{A|VO side2 hzzy sushang 220 f.ogg}} '''Sushang:''' Or maybe, just maybe, it's due to a sudden skill improvement? Don't you think?
+:{{DIcon|Arrow}} When you're not passed out in fear, you're pretty good.
+::{{A|VO side2 hzzy guinaifen 229.ogg}} '''Guinaifen:''' Haha, right &mdash; conscious Sushang is pretty badass.
+::A little pleased with yourself, aren't you...?
+:{{DIcon|Arrow}} A little pleased with yourself, aren't you...?
+:{{A|VO side2 hzzy guinaifen 230.ogg}} '''Guinaifen:''' She went toe-to-toe with the general's star pupil! I'd be pretty pleased with myself, too.
+:{{A|VO side2 hzzy guinaifen 231.ogg}} '''Guinaifen:''' We're gonna need to get you a front page news story for this one. Heck, let's get some billboards!
 :{{tx}}
+----
 {{Dialogue End}}
 
 ===Talk to Guinaifen and post on Ghostly Grove about the anomaly having been resolved{{subst:void|<!--801510317-->}}===
 {{Mission Description|type=continuance|location=Dragonprayer Terrace|update|After successfully exorcising the heliobus in Yanqing, your next task is to publicize this victory on Ghostly Grove. However, you must minimize the public's perception of how dangerous the incident was to prevent panic, while also trying to stand out online to showcase the ghost-hunting squad's triumph. The task of writing a social media post is not any less challenging than exorcising the heliobus!}}
 {{Dialogue Start}}
+
+;(Unused &mdash; Mission_801510317_PropUITrigger)
+
+
+;(Unused &mdash; Talk_801510317)
+
 :{{tx}}
+----
 {{Dialogue End}}
 
 ===Cast the heliobus into the suppression tower{{subst:void|<!--801510315-->}}===
 {{Mission Description|type=continuance|location=Fyxestroll Garden|update|The only good heliobus is a captured heliobus. The only place they should go is the Suppression Towers in Fyxestroll Garden.}}
 {{Dialogue Start}}
-:{{tx}}
+
+<pre>{
+	"$type": "RPG.GameCore.PlayMessage",
+	"MessageSectionID": 1220700
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.SaveMessage",
+	"MessageSectionID": 1220700
+}</pre>
 {{Dialogue End}}
 
 ==Other Languages==

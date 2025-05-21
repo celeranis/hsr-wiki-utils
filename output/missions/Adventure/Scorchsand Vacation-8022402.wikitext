@@ -55,115 +55,538 @@ PageTitle=#Scorchsand Vacation#
 ===Prepare to face the final challenge{{subst:void|<!--802240201-->}}===
 {{Mission Description|type=adventure|location=SoulGlad™ Scorchsand Audition Venue|The final showdown is just ahead. But strange things are happening around you.}}
 {{Dialogue Start}}
+<pre>{
+	"$type": "RPG.GameCore.SetMissionCustomValue",
+	"SubmissionID": 802240201,
+	"MissionCustomValue": {
+		"Name": "OldValue_0",
+		"ValidValueParamList": [
+			5,
+			6
+		]
+	},
+	"CustomValue": 6
+}</pre>
+
+;(Unused &mdash; EnterArea_LocalGroup)
+
+
+;(Talk to "Dormancy")
+;(If {{cx}}<!--SubMission Finish: 802240221-->)
+::An invisible barrier parted you from "Dormancy."
+::It is much quieter than before, as if it has become used to the environment here. However, you can still hear a faint calling...
+::'''"Dormancy":''' Gal... lag... her...
+::'''"Dormancy":''' Gal... lag... her...
+
+;(Unused &mdash; EnterArea_G270)
 :{{tx}}
+:;(Enter battle)
+:::{{tx|Enemy list missing}}
+
+;(Talk to )
+;(If {{cx}}<!--SubMission Finish: 802240208-->)
+::An invisible barrier parted you from "Dormancy."
+::It is much quieter than before, as if it has become used to the environment here. However, you can still hear a faint calling...
+::'''"Dormancy":''' Gal... lag... her...
+::'''"Dormancy":''' Gal... lag... her...
+
+;(Unused &mdash; EnterArea_G280)
+:{{tx}}
+:;(Enter battle)
+:::{{tx|Enemy list missing}}
+
+;(Unused &mdash; EnterArea_G294)
+:You see two pale faced workers laying on the ground, sweat pouring down their foreheads.
+::You are certain that one of them is that missing package inspector, while the other should be the local guide.
+::'''Firefly:''' Aeons, what happened here...
+:'''Firefly:''' Huh? Why isn't there a guide here?
+:'''Firefly:''' Strange... (Trailblazer), let's go inside and take a look.
 {{Dialogue End}}
 
 ===Investigate the "Something Unto Death"{{subst:void|<!--802240206-->}}===
 {{Mission Description|type=adventure|location=SoulGlad™ Scorchsand Audition Venue|update|The missing "Dormancy" has appeared here... It seems to be trying to say something.}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Unused &mdash; EnterArea_G294)
+:'''Firefly:''' On the stage, it's that meme...
+::'''Firefly:''' What's this? Why would that thing be here?
 {{Dialogue End}}
 
 ===Prepare to face the final challenge{{subst:void|<!--802240229-->}}===
 {{Mission Description|type=adventure|location=SoulGlad™ Scorchsand Audition Venue|update|The final showdown is just ahead. But strange things are happening around you.}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Unused &mdash; EnterArea_G280)
+:'''Firefly:''' I think I hear something familiar...
+::'''Firefly:''' Aeons. Look! There!
 {{Dialogue End}}
 
 ===Talk with Firefly about what just happened{{subst:void|<!--802240208-->}}===
 {{Mission Description|type=adventure|location=SoulGlad™ Scorchsand Audition Venue|update|Both of you have questions about why the "Dormancy" might appear in such a place.}}
 {{Dialogue Start}}
+:'''Firefly:''' Whew. Finally, we can have a moment of peace.
+:'''Firefly:''' The Memory Zone Meme is very resilient. It didn't look that dangerous, though. Without the influence of the memes, the two workers should be able to wake up soon.
+:'''Firefly:''' But how did the meme get here? Mr. Gallagher probably wouldn't allow such a thing to happen.
+:{{DIcon|Arrow}} Was all this the result of being in the film?
+::'''Firefly:''' Film? You mean strange things like this can only happen in fiction, right?
+::Did something happen to Mr. Gallagher?
+::'''Firefly:''' He gave a lot in that last big fight... I'm a bit worried.
+::I don't know what happened either.
+:{{DIcon|Arrow}} Did something happen to Mr. Gallagher?
+::'''Firefly:''' He gave a lot in that last big fight... I'm a bit worried.
+::I don't know what happened either.
+:{{DIcon|Arrow}} I don't know what happened either.
+:'''Firefly:''' Well, we don't have that much time to think it over. Let's go.
+:'''Firefly:''' You are about to reach the end. The answers are just ahead of you.
 :{{tx}}
+
+;(Talk to "Dormancy")
+:An invisible barrier parted you from "Dormancy."
+::It is much quieter than before, as if it has become used to the environment here. However, you can still hear a faint calling...
+::'''"Dormancy":''' Gal... lag... her...
+::'''"Dormancy":''' Gal... lag... her...
 {{Dialogue End}}
 
 ===Head to the finish line{{subst:void|<!--802240238-->}}===
 {{Mission Description|type=adventure|location=SoulGlad™ Scorchsand Audition Venue|update|Head to the finish line. Answers may lie ahead.}}
 {{Dialogue Start}}
-:{{tx}}
+<pre>{
+	"$type": "RPG.GameCore.StartMissionCameraTemplate",
+	"CamDuration": {
+		"FixedValue": {
+			"Value": 2.5
+		}
+	},
+	"WaitSecondsBeforeCut": {
+		"FixedValue": {
+			"Value": 0
+		}
+	},
+	"CameraAnchor": {
+		"Custom": true,
+		"Key": "Camera"
+	},
+	"CameraTargetName": {
+		"Custom": true,
+		"Key": "LookAt"
+	},
+	"FirstTalkListStart": {
+		"FixedValue": {
+			"Value": 0
+		}
+	},
+	"FirstTalkListEnd": {
+		"FixedValue": {
+			"Value": 0
+		}
+	},
+	"SecondTalkListStart": {
+		"FixedValue": {
+			"Value": 0
+		}
+	},
+	"SecondTalkListEnd": {
+		"FixedValue": {
+			"Value": 0
+		}
+	},
+	"FaceToCameraTarget": {
+		"FixedValue": {
+			"Value": 0
+		}
+	},
+	"CallBackEventName": {
+		"Value": "FinishLookAtPerformance_802240204"
+	}
+}</pre>
+;(Unused &mdash; FinishLookAtPerformance_802240204)
+
+
+;(Unused &mdash; Group_F20331001_G359)
+
 {{Dialogue End}}
 
 ===Investigate the strange videotape{{subst:void|<!--802240209-->}}===
 {{Mission Description|type=adventure|location=SoulGlad™ Scorchsand Audition Venue|update|Investigate the videotape again and bring the film to a close.}}
 {{Dialogue Start}}
-:{{tx}}
+
+
+;(Unused &mdash; Group_F20331001_G384-1)
+:'''Announcement:''' Let's give a round of applause to our aspiring young guests!
+
+;(Unused &mdash; Group_F20331001_G384-2)
+:'''Announcement:''' Let's give a round of applause to our aspiring young guests!
 {{Dialogue End}}
 
 ===Head to the finish line{{subst:void|<!--802240211-->}}===
 {{Mission Description|type=adventure|location=SoulGlad™ Scorchsand Audition Venue|update|Head to the finish line. Answers may lie ahead.}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Unused &mdash; Group_F20331001_G283)
+:'''Firefly:''' What's wrong? Why is there no one at the finishing line... Look. It looks like there's a tape there?
 {{Dialogue End}}
 
 ===Discover the truth from Aideen{{subst:void|<!--802240212-->}}===
 {{Mission Description|type=adventure|location=SoulGlad™ Scorchsand Audition Venue|update|Head back and talk to Aideen. He must be hiding something.}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Aideen)
+:'''Aideen:''' Ah! Our Festive Superstar! You're back!
+::'''Aideen:''' The missing workers have returned. You have really done us a good deed. You have my thanks on behalf of SoulGlad™!
+::'''Aideen:''' After passing numerous challenges, you have proven yourself. You truly deserve the title of "Festive Superstar"!
+::{{DIcon|Arrow}} So, you're the final boss?
+:::'''Aideen:''' No no no. Of course not. Looks like you still got more in you, huh? But these old bones of mine won't last a second against you.
+::{{DIcon|Arrow}} So, you're the director?
+:::'''Aideen:''' Haha, I'm just this film's sponsor. As for the director... that's someone else.
+::{{DIcon|Arrow}} What on earth is going on?
+::'''Aideen:''' I'm ashamed to admit that we couldn't hold the award ceremony for you due to the technical issues. As such, I invited a cosmically-renewed artist to make a "Memory Film" just for you.
+::'''Aideen:''' Through this, I hope to reignite the glorious moments of victory for you... and capture your exhilarating journey as it unfolds, etching it within this film. In the future, we can share this joyful time with all our esteemed guests.
+::'''Aideen:''' Just as you've experienced, it's all about a thrilling blend of danger and excitement, the perilous memes of the Memory Zone, the delectable delight of SoulGlad, and an immersive journey through the Scorchsand Festival.
+::'''Aideen:''' In the not-too-distant future, the Dreamscape stores will all have a film like this one, to let everyone know what it's like to be a Festive Superstar. The SoulGlad corporation will also use this moment to create new opportunities upon the tides of commerce!
+::'''Aideen:''' Got any other questions, superstar?
+::{{DIcon|Talk}} About that Memory Zone Meme...
+:::'''Aideen:''' Oh! What a wild, magnificent, and powerful existence. It's like a living nightmare! I'm very much tempted to design a new SoulGlad flavor based on it. I shall call it "DeathGlad"!
+:::'''Aideen:''' The strange things is... This terrifying creature has somehow been rendered so fragile, and yet it managed to break into the Moment of Scorchsand. For the safety of everyone, we spared no effort to have it captured.
+:::'''Aideen:''' When shooting this film, we couldn't get the rights to that Knight of Beauty, so we had the director place this monster as the final obstacle. Isn't that a thrill?
+:::{{DIcon|Arrow}} You shouldn't have kept it here.
+::::'''Aideen:''' Oh my, did it bring you any inconveniences? Truly sorry!
+::::'''Aideen:''' That makes sense. I heard this one caused no shortage of trouble in the dreams. If the Hounds found out about it being here, it might bring no end of trouble to the SoulGlad corporation... Best to send it back to the edge of the Dreamscape.
+:::<pre>{
+	"$type": "RPG.GameCore.SetMissionCustomValue",
+	"SubmissionID": 802240212,
+	"MissionCustomValue": {
+		"Index": 1,
+		"Name": "OldValue_1",
+		"ValidValueParamList": [
+			1,
+			2
+		]
+	},
+	"CustomValue": 2
+}</pre>
+:::;(Return to previous option selection)
+:::{{DIcon|Arrow}} Letting it stay here is a perfect idea.
+::::'''Aideen:''' Haha, you're right. It'll definitely be the most popular mascot here!
+::::'''Aideen:''' But honestly, this guy just won't listen. Typical Memory Zone Memes are pretty easy to control, but this one just won't heed any warnings at all. I'm worried it might run off...
+:::<pre>{
+	"$type": "RPG.GameCore.SetMissionCustomValue",
+	"SubmissionID": 802240212,
+	"MissionCustomValue": {
+		"Index": 1,
+		"Name": "OldValue_1",
+		"ValidValueParamList": [
+			1,
+			2
+		]
+	},
+	"CustomValue": 1
+}</pre>
+:::;(Return to previous option selection)
+::{{DIcon|Talk}} About Firefly...
+:::'''Aideen:''' We once sent Ms. Firefly an invitation... A shame that her physical condition prevents her from participating in such an intense sporting event.
+:::'''Aideen:''' Thankfully, the director's skills were great, and he managed to simulate her likeness just from a few memory segments. It looks just like her!
+::;(Return to previous option selection)
+::{{DIcon|Talk}} About that artist...
+:::'''Aideen:''' Oh! That great director. People call him "Mr. Reca."
+:::'''Aideen:''' He has outstanding taste in aesthetics and almost supernatural skill. It's just that he can be a bit eccentric...
+::;(Return to previous option selection)
+::{{DIcon|Talk}} About Gallagher
+:::'''Aideen:''' Who? I don't think I've heard of him.
+:::{{DIcon|Arrow}} A nameless hero.
+::::'''Aideen:''' Well, if he's a nameless hero, then it seems perfectly normal that no one should remember his name.
+:::;(Return to previous option selection)
+:::{{DIcon|Arrow}} A friend.
+::::'''Aideen:''' Never heard of him... Probably no one important.
+:::;(Return to previous option selection)
+:::{{DIcon|Arrow}} Forget it if you've never heard of him.
+::::'''Aideen:''' Haha. Sorry. I only remember superstars like you.
+:::;(Return to previous option selection)
+::{{DIcon|Exit}} No other questions.
+:::'''Aideen:''' In any case, congrats on clinching the Scorchsand Festival trophy yet again.
+:::'''Aideen:''' May the sweetness of SoulGlad be with you, and your future be as sweet as SoulGlad!
+::;(If {{F|MissionCV-8022402-1}} is undefined 0)
+:::<pre>{
+	"$type": "RPG.GameCore.SetMissionCustomValue",
+	"SubmissionID": 802240212,
+	"MissionCustomValue": {
+		"Index": 1,
+		"Name": "OldValue_1",
+		"ValidValueParamList": [
+			1,
+			2
+		]
+	},
+	"CustomValue": 1
+}</pre>
+:'''Aideen:''' In any case, congrats on clinching the Scorchsand Festival trophy yet again.
+::'''Aideen:''' May the sweetness of SoulGlad be with you, and your future be as sweet as SoulGlad!
+:'''(Trailblazer):''' (What's going on here? Better go ask Aideen...)
 {{Dialogue End}}
 
 ===Investigate the "Something Unto Death"{{subst:void|<!--802240205-->}}===
 {{Mission Description|type=adventure|location=SoulGlad™ Scorchsand Audition Venue|update|The missing "Dormancy" has appeared here... It seems to be trying to say something.}}
 {{Dialogue Start}}
-:{{tx}}
 {{Dialogue End}}
 
 ===Prepare to face the final challenge{{subst:void|<!--802240215-->}}===
 {{Mission Description|type=adventure|location=SoulGlad™ Scorchsand Audition Venue|update|The final showdown is just ahead. But strange things are happening around you.}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Unused &mdash; EnterArea_LocalGroup)
+
+
+;(Unused &mdash; EnterArea_G294)
+:You see two pale faced workers laying on the ground, sweat pouring down their foreheads.
+::You are certain that one of them is that missing package inspector, while the other should be the local guide.
+::'''Firefly:''' Aeons, what happened here...
+:'''Firefly:''' Huh? Why isn't there a guide here?
+:'''Firefly:''' Strange... (Trailblazer), let's go inside and take a look.
 {{Dialogue End}}
 
 ===Investigate the "Something Unto Death"{{subst:void|<!--802240219-->}}===
 {{Mission Description|type=adventure|location=SoulGlad™ Scorchsand Audition Venue|update|The missing "Dormancy" has appeared here... It seems to be trying to say something.}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Unused &mdash; EnterArea_G294)
+:'''Firefly:''' On the stage, it's that meme...
+::'''Firefly:''' What's this? Why would that thing be here?
 {{Dialogue End}}
 
 ===Prepare to face the final challenge{{subst:void|<!--802240230-->}}===
 {{Mission Description|type=adventure|location=SoulGlad™ Scorchsand Audition Venue|update|The final showdown is just ahead. But strange things are happening around you.}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Unused &mdash; EnterArea_G287)
+:'''Firefly:''' I think I hear something familiar...
+::'''Firefly:''' Aeons. Look! There!
 {{Dialogue End}}
 
 ===Talk with Firefly about what just happened{{subst:void|<!--802240221-->}}===
 {{Mission Description|type=adventure|location=SoulGlad™ Scorchsand Audition Venue|update|Both of you have questions about why the "Dormancy" might appear in such a place.}}
 {{Dialogue Start}}
+:'''Firefly:''' Whew. Finally, we can have a moment of peace.
+:'''Firefly:''' The Memory Zone Meme is very resilient. It didn't look that dangerous, though. Without the influence of the memes, the two workers should be able to wake up soon.
+:'''Firefly:''' But how did the meme get here? Mr. Gallagher probably wouldn't allow such a thing to happen.
+:{{DIcon|Arrow}} Was all this the result of being in the film?
+::'''Firefly:''' Film? You mean strange things like this can only happen in fiction, right?
+::Did something happen to Mr. Gallagher?
+::'''Firefly:''' He gave a lot in that last big fight... I'm a bit worried.
+::I don't know what happened either.
+:{{DIcon|Arrow}} Did something happen to Mr. Gallagher?
+::'''Firefly:''' He gave a lot in that last big fight... I'm a bit worried.
+::I don't know what happened either.
+:{{DIcon|Arrow}} I don't know what happened either.
+:'''Firefly:''' Well, we don't have that much time to think it over. Let's go.
+:'''Firefly:''' You are about to reach the end. The answers are just ahead of you.
 :{{tx}}
+
+;(Talk to "Dormancy")
+:An invisible barrier parted you from "Dormancy."
+::It is much quieter than before, as if it has become used to the environment here. However, you can still hear a faint calling...
+::'''"Dormancy":''' Gal... lag... her...
+::'''"Dormancy":''' Gal... lag... her...
 {{Dialogue End}}
 
 ===Head to the finish line{{subst:void|<!--802240239-->}}===
 {{Mission Description|type=adventure|location=SoulGlad™ Scorchsand Audition Venue|update|Head to the finish line. Answers may lie ahead.}}
 {{Dialogue Start}}
-:{{tx}}
+:<!--0.5-second delay-->
+<pre>{
+	"$type": "RPG.GameCore.SetFloorCustomFloat",
+	"Name": {
+		"Value": "FCV_C1BrokenBridge"
+	},
+	"Value": {
+		"FixedValue": {
+			"Value": 1
+		}
+	}
+}</pre>
+;(Unused &mdash; FinishLookAtPerformance_802240203)
+
+
+;(Unused &mdash; Group_F20331001_G360)
+
 {{Dialogue End}}
 
 ===Investigate the strange videotape{{subst:void|<!--802240222-->}}===
 {{Mission Description|type=adventure|location=SoulGlad™ Scorchsand Audition Venue|update|Investigate the videotape again and bring the film to a close.}}
 {{Dialogue Start}}
-:{{tx}}
+
 {{Dialogue End}}
 
 ===Head to the finish line{{subst:void|<!--802240224-->}}===
 {{Mission Description|type=adventure|location=SoulGlad™ Scorchsand Audition Venue|update|Head to the finish line. Answers may lie ahead.}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Unused &mdash; Group_F20331001_G283)
+:'''Firefly:''' What's wrong? Why is there no one at the finishing line... Look. It looks like there's a tape there?
 {{Dialogue End}}
 
 ===Discover the truth from Aideen{{subst:void|<!--802240225-->}}===
 {{Mission Description|type=adventure|location=SoulGlad™ Scorchsand Audition Venue|update|Head back and talk to Aideen. He must be hiding something.}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Aideen)
+:'''Aideen:''' Ah! Our Festive Superstar! You're back!
+::'''Aideen:''' The missing workers have returned. You have really done us a good deed. You have my thanks on behalf of SoulGlad™!
+::'''Aideen:''' After passing numerous challenges, you have proven yourself. You truly deserve the title of "Festive Superstar"!
+::{{DIcon|Arrow}} So, you're the final boss?
+:::'''Aideen:''' No no no. Of course not. Looks like you still got more in you, huh? But these old bones of mine won't last a second against you.
+::{{DIcon|Arrow}} So, you're the director?
+:::'''Aideen:''' Haha, I'm just this film's sponsor. As for the director... that's someone else.
+::{{DIcon|Arrow}} What on earth is going on?
+::'''Aideen:''' I'm ashamed to admit that we couldn't hold the award ceremony for you due to the technical issues. As such, I invited a cosmically-renewed artist to make a "Memory Film" just for you.
+::'''Aideen:''' Through this, I hope to reignite the glorious moments of victory for you... and capture your exhilarating journey as it unfolds, etching it within this film. In the future, we can share this joyful time with all our esteemed guests.
+::'''Aideen:''' Just as you've experienced, it's all about a thrilling blend of danger and excitement, the perilous memes of the Memory Zone, the delectable delight of SoulGlad, and an immersive journey through the Scorchsand Festival.
+::'''Aideen:''' In the not-too-distant future, the Dreamscape stores will all have a film like this one, to let everyone know what it's like to be a Festive Superstar. The SoulGlad corporation will also use this moment to create new opportunities upon the tides of commerce!
+::'''Aideen:''' Got any other questions, superstar?
+::{{DIcon|Talk}} About that Memory Zone Meme...
+:::'''Aideen:''' Oh! What a wild, magnificent, and powerful existence. It's like a living nightmare! I'm very much tempted to design a new SoulGlad flavor based on it. I shall call it "DeathGlad"!
+:::'''Aideen:''' The strange things is... This terrifying creature has somehow been rendered so fragile, and yet it managed to break into the Moment of Scorchsand. For the safety of everyone, we spared no effort to have it captured.
+:::'''Aideen:''' When shooting this film, we couldn't get the rights to that Knight of Beauty, so we had the director place this monster as the final obstacle. Isn't that a thrill?
+:::{{DIcon|Arrow}} You shouldn't have kept it here.
+::::'''Aideen:''' Oh my, did it bring you any inconveniences? Truly sorry!
+::::'''Aideen:''' That makes sense. I heard this one caused no shortage of trouble in the dreams. If the Hounds found out about it being here, it might bring no end of trouble to the SoulGlad corporation... Best to send it back to the edge of the Dreamscape.
+:::<pre>{
+	"$type": "RPG.GameCore.SetMissionCustomValue",
+	"SubmissionID": 802240225,
+	"MissionCustomValue": {
+		"Index": 1,
+		"Name": "OldValue_1",
+		"ValidValueParamList": [
+			1,
+			2,
+			0
+		]
+	},
+	"CustomValue": 2
+}</pre>
+:::;(Return to previous option selection)
+:::{{DIcon|Arrow}} Letting it stay here is a perfect idea.
+::::'''Aideen:''' Haha, you're right. It'll definitely be the most popular mascot here!
+::::'''Aideen:''' But honestly, this guy just won't listen. Typical Memory Zone Memes are pretty easy to control, but this one just won't heed any warnings at all. I'm worried it might run off...
+:::<pre>{
+	"$type": "RPG.GameCore.SetMissionCustomValue",
+	"SubmissionID": 802240225,
+	"MissionCustomValue": {
+		"Index": 1,
+		"Name": "OldValue_1",
+		"ValidValueParamList": [
+			1,
+			2,
+			0
+		]
+	},
+	"CustomValue": 1
+}</pre>
+:::;(Return to previous option selection)
+::{{DIcon|Talk}} About Firefly...
+:::'''Aideen:''' We once sent Ms. Firefly an invitation... A shame that her physical condition prevents her from participating in such an intense sporting event.
+:::'''Aideen:''' Thankfully, the director's skills were great, and he managed to simulate her likeness just from a few memory segments. It looks just like her!
+::;(Return to previous option selection)
+::{{DIcon|Talk}} About that artist...
+:::'''Aideen:''' Oh! That great director. People call him "Mr. Reca."
+:::'''Aideen:''' He has outstanding taste in aesthetics and almost supernatural skill. It's just that he can be a bit eccentric...
+::;(Return to previous option selection)
+::{{DIcon|Talk}} About Gallagher
+:::'''Aideen:''' Who? I don't think I've heard of him.
+:::{{DIcon|Arrow}} A nameless hero.
+::::'''Aideen:''' Well, if he's a nameless hero, then it seems perfectly normal that no one should remember his name.
+:::;(Return to previous option selection)
+:::{{DIcon|Arrow}} A friend.
+::::'''Aideen:''' Never heard of him... Probably no one important.
+:::;(Return to previous option selection)
+:::{{DIcon|Arrow}} Forget it if you've never heard of him.
+::::'''Aideen:''' Haha. Sorry. I only remember superstars like you.
+:::;(Return to previous option selection)
+::{{DIcon|Exit}} No other questions.
+:::'''Aideen:''' In any case, congrats on clinching the Scorchsand Festival trophy yet again.
+:::'''Aideen:''' May the sweetness of SoulGlad be with you, and your future be as sweet as SoulGlad!
+::;(If {{F|MissionCV-8022402-1}} is undefined 0)
+:::<pre>{
+	"$type": "RPG.GameCore.SetMissionCustomValue",
+	"SubmissionID": 802240225,
+	"MissionCustomValue": {
+		"Index": 1,
+		"Name": "OldValue_1",
+		"ValidValueParamList": [
+			1,
+			2,
+			0
+		]
+	},
+	"CustomValue": 1
+}</pre>
+:'''Aideen:''' In any case, congrats on clinching the Scorchsand Festival trophy yet again.
+::'''Aideen:''' May the sweetness of SoulGlad be with you, and your future be as sweet as SoulGlad!
+:'''(Trailblazer):''' (What's going on here? Better go ask Aideen...)
 {{Dialogue End}}
 
 ===Investigate the "Something Unto Death"{{subst:void|<!--802240218-->}}===
 {{Mission Description|type=adventure|location=SoulGlad™ Scorchsand Audition Venue|update|The missing "Dormancy" has appeared here... It seems to be trying to say something.}}
 {{Dialogue Start}}
-:{{tx}}
 {{Dialogue End}}
 
 ===Prepare to face the final challenge{{subst:void|<!--802240227-->}}===
 {{Mission Description|type=adventure|location=SoulGlad™ Scorchsand Audition Venue|update|The final showdown is just ahead. But strange things are happening around you.}}
 {{Dialogue Start}}
-:{{tx}}
+;(If {{cx}}{{subst:void|<!--{"$type":"RPG.GameCore.ByCompareFloorCustomString","Name":{"Value":"PlanetInteractiveIndex"},"CompareValue":{"Value":"3"},"Inverse":true}-->}})
+:<pre>{
+	"$type": "RPG.GameCore.SetWaypointIgnoreLock"
+}</pre>
+;(If {{cx}}{{subst:void|<!--{"$type":"RPG.GameCore.ByCompareFloorCustomString","Name":{"Value":"PlanetInteractiveIndex"},"CompareValue":{"Value":"3"},"Inverse":true}-->}})
+:<pre>{
+	"$type": "RPG.GameCore.SetWaypointIgnoreLock",
+	"Reset": true
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.SetMissionCustomValue",
+	"SubmissionID": 802240227,
+	"MissionCustomValue": {
+		"Index": 2,
+		"Name": "OldValue_2",
+		"ValidValueParamList": [
+			0,
+			1,
+			2,
+			3,
+			11,
+			12,
+			21,
+			22
+		]
+	},
+	"CustomValue": 3
+}</pre>
+;(If {{cx}}{{subst:void|<!--{"$type":"RPG.GameCore.ByCompareFloorCustomString","Name":{"Value":"PlanetInteractiveIndex"},"CompareValue":{"Value":"3"},"Inverse":true}-->}})
+:<pre>{
+	"$type": "RPG.GameCore.SetWaypointIgnoreLock"
+}</pre>
+;(If {{cx}}{{subst:void|<!--{"$type":"RPG.GameCore.ByCompareFloorCustomString","Name":{"Value":"PlanetInteractiveIndex"},"CompareValue":{"Value":"3"},"Inverse":true}-->}})
+:<pre>{
+	"$type": "RPG.GameCore.SetWaypointIgnoreLock",
+	"Reset": true
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.SetMissionCustomValue",
+	"SubmissionID": 802240228,
+	"MissionCustomValue": {
+		"Index": 2,
+		"Name": "OldValue_2",
+		"ValidValueParamList": [
+			0,
+			1,
+			2,
+			3,
+			11,
+			12,
+			21,
+			22
+		]
+	},
+	"CustomValue": 3
+}</pre>
 {{Dialogue End}}
 
 ==Other Languages==

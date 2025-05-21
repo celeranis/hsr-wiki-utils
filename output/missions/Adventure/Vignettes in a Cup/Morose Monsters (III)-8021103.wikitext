@@ -39,19 +39,62 @@ PageTitle=#Morose Monsters (III)#
 ===Head to the Dreamjolt Hostelry{{subst:void|<!--802110301-->}}===
 {{Mission Description|type=adventure|location=The Reverie (Dreamscape)|Siobhan, the manager of Dreamjolt Hostelry, offered you an assignment to temporarily take over the job of drinksmith.<br />Time to get back in business.}}
 {{Dialogue Start}}
-:{{tx}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+<pre>{
+	"$type": "RPG.GameCore.AdvDestroyGroupEntity",
+	"InstanceIDList": [
+		300001
+	]
+}</pre>
+:'''(Trailblazer):''' (Some customers who are into monsters come in, and the lounge livens up.)
+:'''(Trailblazer):''' (Siobhan hasn't shown up yet... Well, let's start serving customers anyway.)
 {{Dialogue End}}
 
 ===Continue serving the customers{{subst:void|<!--802110303-->}}===
 {{Mission Description|type=adventure|location=The Reverie (Dreamscape)|update|Siobhan, the manager of Dreamjolt Hostelry, offered you an assignment to temporarily take over the job of drinksmith.<br />Let's continue serving the customers.}}
 {{Dialogue Start}}
-:{{tx}}
+<pre>{
+	"$type": "RPG.GameCore.WaitUIControllerClose",
+	"UIControllerName": "DrinkMakerMainEntrancePage"
+}</pre>
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:'''(Trailblazer):''' (I have a meeting to attend... Is that alarm clock waiting for me at the lounge?)
+;(Unused &mdash; DrinkMakerBartendResultDialogClose)
+;(Upon reaching the destination)
 {{Dialogue End}}
 
 ===Talk to Tin Man{{subst:void|<!--802110304-->}}===
 {{Mission Description|type=adventure|location=The Reverie (Dreamscape)|update|Siobhan, the manager of Dreamjolt Hostelry, offered you an assignment to temporarily take over the job of drinksmith.<br />Tin Man wants to show you its dream lounge. Go ahead and listen to its ideas.}}
 {{Dialogue Start}}
+
+;(Talk to Tin Man)
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+----
 :{{tx}}
+:'''Tin Man:''' ...Phew! ...Phew!
+:{{DIcon|Arrow}} ...How's it going, Lord Tik-Tok?
+:{{DIcon|Arrow}} Your dream is seriously wild.
+:'''Tin Man:''' ...
+:{{tx}}
+----
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+<pre>{
+	"$type": "RPG.GameCore.AdvDestroyGroupEntity",
+	"InstanceIDList": [
+		300001
+	]
+}</pre>
+----
+:{{tx}}
+----
 {{Dialogue End}}
 
 ==Other Languages==

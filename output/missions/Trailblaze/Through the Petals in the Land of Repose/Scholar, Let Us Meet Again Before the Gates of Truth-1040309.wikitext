@@ -44,29 +44,524 @@ Mission Scholar, Let Us Meet Again Before the Gates of Truth Caelus.png|Caelus
 ===Leave the nether realm and return to the mortal realm{{subst:void|<!--104030901-->}}===
 {{Mission Description|type=trailblaze|location="Dragonbone City" Styxia|Castorice, who became a demigod, successfully pushes (Trailblazer) gently out of the nether realm and welcomes the end of her fate.<br />(Trailblazer) still remembers the promise they made with Castorice to meet her once more.}}
 {{Dialogue Start}}
-:{{tx}}
 {{Dialogue End}}
 
 ===Go to the moonlight. Castorice is beckoning for you{{subst:void|<!--104030902-->}}===
 {{Dialogue Start}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+----
 :{{tx}}
+----
+;([[#Gallery|Cutscene]] plays)
+::The other shore... is very cold.
+::May I borrow your warmth... one last time?
+::Thank you for fulfilling this wish of mine.
+::The place I'll be going to is what humans call the land of sorrows.
+::But with this heartbeat, and the residual heat of this embrace...
+::I shall turn the nether realm into a gentle place of rest.
+::This embrace may be brief, but it's the proof that I once "lived."
+;(Cutscene ends)
+----
 {{Dialogue End}}
 
 ===Listen to the conversation between Aglaea and Anaxa{{subst:void|<!--104030903-->}}===
 {{Mission Description|type=trailblaze|location=Vortex of Genesis|update|The events in the citizens' assembly come to a temporary halt, and the Flame-Chase Journey will continue. The Council of Elders has suffered a heavy blow &mdash; and the one behind it all, Anaxagoras, is about to face the final judgment.<br />Only at the very last moment can Aglaea and Anaxa finally break down the barriers between them.}}
 {{Dialogue Start}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
 :{{tx}}
+<pre>{
+	"$type": "RPG.GameCore.PerformanceEndSeq",
+	"BeforeCases": [
+		{
+			"$type": "RPG.GameCore.SwitchCharacterAnchorV2",
+			"SwitchCharacterAnchorConfig": {
+				"IsLocalPlayer": true,
+				"CharacterUniqueName": "LocalPlayer",
+				"AreaName": {
+					"Value": "LevelArea_P10402_F10402001_G46"
+				},
+				"AnchorName": {
+					"Value": "Anchor1"
+				}
+			}
+		}
+	]
+}</pre>
 {{Dialogue End}}
 
 ===Submit Coreflame{{subst:void|<!--104030904-->}}===
 {{Dialogue Start}}
+
+;(Talk to Tides of the Basin)
+<pre>{
+	"$type": "RPG.GameCore.TutorialTaskUnlock",
+	"TriggerParam": {
+		"Value": "TitanAtlas"
+	}
+}</pre>
+::...The day is silent, and darkness has taken the stage...
+::...Flames rise higher, and drums fall like rain...
+::...Warriors soaked in golden blood, their cloaks tattered...
+::...Bronze shields you, and brass echoes my sorrow...
+::...
+::{{DIcon|Shop}} Enter Tidal Bounty
+::<pre>{
+	"$type": "RPG.GameCore.SetPerformanceResult",
+	"Value": 2
+}</pre>
+::{{DIcon|Loupe}} Listen to the Voice of Constellation
+::<pre>{
+	"$type": "RPG.GameCore.SetPerformanceResult",
+	"Value": 1
+}</pre>
+::{{DIcon|Exit}} Leave
+;(Return to previous option selection)
+
+;(Unused &mdash; Ui.KraterSubmit.WorldShop.KraterWorldShopPage)
+<pre>{
+	"$type": "RPG.GameCore.HideAllEntity",
+	"IsHide": true,
+	"HideNPC": true,
+	"NotHideEntity": []
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.HideAllEntity",
+	"IsHide": true,
+	"HideNPC": true,
+	"HideProp": true,
+	"NotHideEntity": [
+		{
+			"GroupID": 22,
+			"GroupNpcID": 300001
+		},
+		{
+			"GroupID": 22,
+			"GroupNpcID": 300002
+		},
+		{
+			"GroupID": 22,
+			"GroupNpcID": 300003
+		},
+		{
+			"GroupID": 9,
+			"GroupNpcID": 300001
+		},
+		{
+			"GroupID": 9,
+			"GroupNpcID": 300002
+		},
+		{
+			"GroupID": 9,
+			"GroupNpcID": 300003
+		},
+		{
+			"GroupID": 9,
+			"GroupNpcID": 300004
+		},
+		{
+			"GroupID": 9,
+			"GroupNpcID": 300005
+		},
+		{
+			"GroupID": 9,
+			"GroupNpcID": 300006
+		},
+		{
+			"GroupID": 9,
+			"GroupNpcID": 300007
+		},
+		{
+			"GroupID": 9,
+			"GroupNpcID": 300008
+		},
+		{
+			"GroupID": 9,
+			"GroupNpcID": 300009
+		},
+		{
+			"GroupID": 9,
+			"GroupNpcID": 300010
+		},
+		{
+			"GroupID": 9,
+			"GroupNpcID": 300011
+		},
+		{
+			"GroupID": 9,
+			"GroupNpcID": 300012
+		},
+		{
+			"GroupID": 9,
+			"GroupNpcID": 300013
+		}
+	]
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.ShowUI",
+	"Name": "Ui.KraterSubmit.WorldShop.KraterWorldShopPage",
+	"WaitForExit": true,
+	"OnUIEnter": [],
+	"OnUIExitImmediately": [
+		{
+			"$type": "RPG.GameCore.HideAllEntity",
+			"HideNPC": true,
+			"HideProp": true,
+			"NotHideEntity": []
+		},
+		{
+			"$type": "RPG.GameCore.EndDialogueEntityInteract"
+		}
+	]
+}</pre>
+
+;(Unused &mdash; Ui.KraterSubmit.TitanAtlas.TitanAtlasHandbookPage)
+<pre>{
+	"$type": "RPG.GameCore.ShowUI",
+	"Name": "Ui.KraterSubmit.TitanAtlas.TitanAtlasHandbookPage",
+	"WaitForExit": true,
+	"OnUIEnter": [],
+	"OnUIExitImmediately": [
+		{
+			"$type": "RPG.GameCore.TriggerCustomString",
+			"CustomString": {
+				"Value": "WorldShopMission"
+			}
+		}
+	]
+}</pre>
+
+;(Unused &mdash; WorldShopMission)
+<pre>{
+	"$type": "RPG.GameCore.TutorialTaskUnlock",
+	"TriggerParam": {
+		"Value": "KraterOfferingWorldShop"
+	}
+}</pre>
+::As the echoes of the constellations fall silent, the next sound to meet your ears is... waves?
+::{{A|VO vo ambient w4 v300 greeting taitanyiyu 001.ogg}} (Titan's murmurs)
+::The unfamiliar call carries a longing to take your soul's essence into the pool...
+::{{DIcon|Shop}} Enter Tidal Bounty
+::{{DIcon|Loupe}} Listen to the Voice of Constellation
+::{{DIcon|Exit}} Leave
+:<pre>{
+	"$type": "RPG.GameCore.HideAllEntity",
+	"IsHide": true,
+	"HideNPC": true,
+	"NotHideEntity": []
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.HideAllEntity",
+	"IsHide": true,
+	"HideNPC": true,
+	"HideProp": true,
+	"NotHideEntity": [
+		{
+			"GroupID": 22,
+			"GroupNpcID": 300001
+		},
+		{
+			"GroupID": 22,
+			"GroupNpcID": 300002
+		},
+		{
+			"GroupID": 22,
+			"GroupNpcID": 300003
+		},
+		{
+			"GroupID": 9,
+			"GroupNpcID": 300001
+		},
+		{
+			"GroupID": 9,
+			"GroupNpcID": 300002
+		},
+		{
+			"GroupID": 9,
+			"GroupNpcID": 300003
+		},
+		{
+			"GroupID": 9,
+			"GroupNpcID": 300004
+		},
+		{
+			"GroupID": 9,
+			"GroupNpcID": 300005
+		},
+		{
+			"GroupID": 9,
+			"GroupNpcID": 300006
+		},
+		{
+			"GroupID": 9,
+			"GroupNpcID": 300007
+		},
+		{
+			"GroupID": 9,
+			"GroupNpcID": 300008
+		},
+		{
+			"GroupID": 9,
+			"GroupNpcID": 300009
+		},
+		{
+			"GroupID": 9,
+			"GroupNpcID": 300010
+		},
+		{
+			"GroupID": 9,
+			"GroupNpcID": 300011
+		},
+		{
+			"GroupID": 9,
+			"GroupNpcID": 300012
+		},
+		{
+			"GroupID": 9,
+			"GroupNpcID": 300013
+		}
+	]
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.ShowUI",
+	"Name": "Ui.KraterSubmit.WorldShop.KraterWorldShopPage",
+	"WaitForExit": true,
+	"OnUIEnter": [],
+	"OnUIExitImmediately": [
+		{
+			"$type": "RPG.GameCore.HideAllEntity",
+			"HideNPC": true,
+			"HideProp": true,
+			"NotHideEntity": []
+		},
+		{
+			"$type": "RPG.GameCore.EndDialogueEntityInteract"
+		},
+		{
+			"$type": "RPG.GameCore.TriggerPerformance",
+			"ValueSource": {},
+			"PerformanceType": "E",
+			"PerformanceID": 504045003,
+			"MaskConfig": {}
+		}
+	]
+}</pre>
+
+;(Unused &mdash; TriggerKrater_Levelup)
+;(If {{cx}}<!--not during performance 504045001-->)
+:<pre>{
+	"$type": "RPG.GameCore.RandomConfig",
+	"OddsList": [
+		{
+			"FixedValue": {
+				"Value": 1
+			}
+		},
+		{
+			"FixedValue": {
+				"Value": 1
+			}
+		},
+		{
+			"FixedValue": {
+				"Value": 1
+			}
+		}
+	],
+	"TaskList": [
+		{
+			"$type": "RPG.GameCore.PlayVoice",
+			"VoiceIDs": [
+				504045004
+			]
+		},
+		{
+			"$type": "RPG.GameCore.PlayVoice",
+			"VoiceIDs": [
+				504045005
+			]
+		},
+		{
+			"$type": "RPG.GameCore.PlayVoice",
+			"VoiceIDs": [
+				504045006
+			]
+		}
+	],
+	"RandomMaskTarget": {
+		"$type": "RPG.GameCore.TargetAlias",
+		"Alias": "Caster"
+	}
+}</pre>
+
+;(Unused &mdash; TriggerKrater_Put)
+;(If {{cx}}<!--not during performance 504045001-->)
+:<pre>{
+	"$type": "RPG.GameCore.RandomConfig",
+	"OddsList": [
+		{
+			"FixedValue": {
+				"Value": 1
+			}
+		},
+		{
+			"FixedValue": {
+				"Value": 1
+			}
+		},
+		{
+			"FixedValue": {
+				"Value": 1
+			}
+		}
+	],
+	"TaskList": [
+		{
+			"$type": "RPG.GameCore.PlayVoice",
+			"VoiceIDs": [
+				504045007
+			]
+		},
+		{
+			"$type": "RPG.GameCore.PlayVoice",
+			"VoiceIDs": [
+				504045008
+			]
+		},
+		{
+			"$type": "RPG.GameCore.PlayVoice",
+			"VoiceIDs": [
+				504045009
+			]
+		}
+	],
+	"RandomMaskTarget": {
+		"$type": "RPG.GameCore.TargetAlias",
+		"Alias": "Caster"
+	}
+}</pre>
+
+;(Unused &mdash; TriggerKrater_Out)
+;(If {{cx}}<!--not during performance 504045001-->)
+:<pre>{
+	"$type": "RPG.GameCore.RandomConfig",
+	"OddsList": [
+		{
+			"FixedValue": {
+				"Value": 1
+			}
+		},
+		{
+			"FixedValue": {
+				"Value": 1
+			}
+		}
+	],
+	"TaskList": [
+		{
+			"$type": "RPG.GameCore.PlayVoice",
+			"VoiceIDs": [
+				504045010
+			]
+		},
+		{
+			"$type": "RPG.GameCore.PlayVoice",
+			"VoiceIDs": [
+				504045011
+			]
+		}
+	],
+	"RandomMaskTarget": {
+		"$type": "RPG.GameCore.TargetAlias",
+		"Alias": "Caster"
+	}
+}</pre>
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{A|VO chapter4 29 aglaea 114.ogg}} '''Aglaea:''' But... I don't see Castorice among your number.
+:{{A|VO chapter4 29 anaxa 116.ogg}} '''Anaxa:''' It looks like she not only helped me prove my theory, but helped you fulfill your mission as well.
+:{{DIcon|Arrow}} She finally understood her origins and completed her trial.
+:{{DIcon|Arrow}} I believe she'll always be at our side.
+:{{A|VO chapter4 29 phainon 105.ogg}} '''Phainon:''' ...I agree.
+:{{A|VO chapter4 29 aglaea 115.ogg}} '''Aglaea:''' She might not have been able to change her fate, but she still wrote the final verse of her epic herself.
+:{{A|VO chapter4 29 aglaea 116 m.ogg}} {{A|VO chapter4 29 aglaea 116 f.ogg}} '''Aglaea:''' Trinnon, please recite the prophecy for us. (Trailblazer), please surrender that scalding Coreflame for us as well.
+:{{A|VO chapter4 29 aglaea 117.ogg}} '''Aglaea:''' You are the only life she ever saved by her own hand in her one thousand years on this earth. I believe no one is more qualified for this noble task.
+:{{DIcon|Arrow}} Let the ceremony begin.
+:{{A|VO chapter4 29 trinnon 101.ogg}} '''Trinnon:''' O! Gods who have returned, and gods who are still watching! Today, we bring you a soul laid bare.
+:{{A|VO chapter4 29 trinnon 102.ogg}} '''Trinnon:''' The Hand of Shadow, Thanatos, remembered their name from the past! From daylight they came and to their fragrant dwelling they return, to walk now among your ranks.
+:{{A|VO chapter4 29 trinnon 103 m.ogg}} {{A|VO chapter4 29 trinnon 103 f.ogg}} '''Trinnon:''' And there was one who joined hands with the Titan. A traveler risen from the dead and reborn among mortal kind. {{MC|m=He|f=She}} is the everlasting night and shall now proclaim in {{MC|m=his|f=her}} good name:
+:{{A|VO chapter4 29 trinnon 104.ogg}} '''Trinnon:''' "O majesty of the Twelve Titans, pillars of the world&mdash;"
+:{{A|VO chapter4 29 trinnon 105.ogg}} '''Trinnon:''' "We seek your divinity, to mend the rifts of the world &mdash;"
+:{{A|VO chapter4 29 trinnon 106.ogg}} '''Trinnon:''' "Fill our bodies with blood of gold, till we wither in willing service to the prophecy..."
+:{{A|VO chapter4 29 trinnon 107.ogg}} '''Trinnon:''' Step forward, Trailblazer from beyond the sky. And together with '''us'''...
+:{{A|VO chapter4 29 trinnon 108.ogg}} '''Trinnon:''' Surrender the Coreflame and carve their star into the sky.
+:{{DIcon|Arrow}} Surrender the Coreflame.
+:{{DIcon|Arrow}} Goodbye, Castorice.
 :{{tx}}
+
+;(Upon reaching the destination)
+:{{A|VO chapter4 29 aglaea 113.ogg}} '''Aglaea:''' I'm gladdened by your triumphant return...
+;(Unused &mdash; TriggerStellaPerformance)
+----
+::{{tx}}
+:----
+::{{A|VO chapter4 29 anaxa 119.ogg}} '''Anaxa:''' Heh, she made quite a scene. I suppose it's my turn now.
+::{{A|VO chapter4 29 aglaea 118.ogg}} '''Aglaea:''' I won't stop you...
+::{{A|VO chapter4 29 phainon 109.ogg}} '''Phainon:''' Professor, you...
+::{{A|VO chapter4 29 anaxa 120.ogg}} '''Anaxa:''' What's with that look? You were present.
+::{{A|VO chapter4 29 anaxa 121.ogg}} '''Anaxa:''' So, let's get this execution over with. We wouldn't want to bring shame to Okhema's divine laws or keep me from creating a new world.
+::{{A|VO chapter4 29 phainon 110.ogg}} '''Phainon:''' You never change, do you, Professor?
+::{{A|VO chapter4 29 phainon 111.ogg}} '''Phainon:''' I don't understand. If your theory is correct, you'll lose all memories of your past life once you become a Titan, so what's the point of becoming a god?
+::{{A|VO chapter4 29 anaxa 122.ogg}} '''Anaxa:''' Of course there's a point. Even if I forget who I am, I'll still have my brilliant mind.
+::{{A|VO chapter4 29 anaxa 123.ogg}} '''Anaxa:''' It goes without saying I'll find a way to retrieve memories of my past life. Besides, I still have you, don't I?
+::{{A|VO chapter4 29 phainon 112.ogg}} '''Phainon:''' I still don't really understand what you said during the assembly. Even if it were true, things reforged from memory could never be the same as the original anyway.
+::{{A|VO chapter4 29 anaxa 124.ogg}} '''Anaxa:''' Then allow me to tell you right now that you're wrong.
+::{{A|VO chapter4 29 anaxa 125.ogg}} '''Anaxa:''' What exactly are we? My answer is that the Chrysos Heirs are the future Titans, and vice versa. Of course, this answer only applies to us.
+::{{A|VO chapter4 29 anaxa 126.ogg}} '''Anaxa:''' So, what are "we" when it comes to regular mortals?
+::{{A|VO chapter4 29 anaxa 127.ogg}} '''Anaxa:''' {{Color|keyword|nobold=1|The very essence of the world &mdash; our souls &mdash; are tiny invisible seeds that hold records of each person's memories of the world, and "we" are the buds that sprout from these seeds to grow into great trees.}}
+::{{A|VO chapter4 29 phainon 113.ogg}} '''Phainon:''' Is that what Nousporism means?
+::{{A|VO chapter4 29 anaxa 128.ogg}} '''Anaxa:''' Correct. Once our physical bodies are born, we become new extensions of the world. From there, we plant our seeds into someone's memories and then scatter them into the hearts of countless people in the future.
+::{{A|VO chapter4 29 anaxa 129.ogg}} '''Anaxa:''' Just as seeds are affected by their environment, so too will our appearances differ across memories. But the partial memories we carry will always be the same, because that is just how the world is.
+::{{A|VO chapter4 29 anaxa 130.ogg}} '''Anaxa:''' To destroy our very existence, one must destroy the world itself. But we have someone who will still live on with his perfect memory...
+::{{A|VO chapter4 29 anaxa 131.ogg}} '''Anaxa:''' That person is you, child of Kephale. This is what it means to be the Worldbearing Titan.
+::{{A|VO chapter4 29 anaxa 132.ogg}} '''Anaxa:''' So, carry everything of this world and live on. Don't disappoint those most precious to you. Don't disappoint Lady Goldweaver.
+::{{A|VO chapter4 29 anaxa 133.ogg}} '''Anaxa:''' And especially don't bring dishonor to my theory.
+::{{A|VO chapter4 29 phainon 114.ogg}} '''Phainon:''' ...
+::{{A|VO chapter4 29 phainon 115.ogg}} '''Phainon:''' Anaxa, I swear to you. I'll lead everyone to our reunion in the new world.
+::{{A|VO chapter4 29 anaxa 134.ogg}} '''Anaxa:''' Hmph, good.
+::{{A|VO chapter4 29 anaxa 135.ogg}} '''Anaxa:''' That's all I have to say. Farewell, everyone. May we meet again in the next life.
+::{{A|VO chapter4 29 aglaea 119.ogg}} '''Aglaea:''' Farewell, Great Performer. May Cerces safeguard your thoughts.
+::{{DIcon|Arrow}} Salute him in the same way.
+::{{A|VO chapter4 29 player 117 m.ogg}} {{A|VO chapter4 29 player 117 f.ogg}} '''(Trailblazer):''' May Cerces safeguard your thoughts.
+::{{tx}}
+:----
+:----
+:;([[#Gallery|Cutscene]] plays)
+:::Rejoice, Cerces...
+:::I will sow the seeds of "Suspicion" in the new world with your soul &mdash;
+:::"...And now, the objective is complete. That is all."
+:;(Cutscene ends)
+:----
+:<pre>{
+	"$type": "RPG.GameCore.EnablePlayerPlayIdleShow"
+}</pre>
 {{Dialogue End}}
 
 ===Listen to the discussion between Black Swan and Himeko{{subst:void|<!--104030906-->}}===
 {{Mission Description|type=trailblaze|location=Passenger Cabin|update|March 7th's condition seems to be getting worse.<br />Black Swan still seems to be hiding something... What does Amphoreus mean to the Garden of Recollection? And why is it so important?}}
 {{Dialogue Start}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
 :{{tx}}
+
+:{{DIcon|Loupe}} Investigate
+
+
 {{Dialogue End}}
 
 ==Other Languages==

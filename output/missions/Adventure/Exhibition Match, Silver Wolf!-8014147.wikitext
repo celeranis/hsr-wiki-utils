@@ -36,7 +36,20 @@ PageTitle=#Exhibition Match, Silver Wolf!#
 ===Have a duel with Silver Wolf{{subst:void|<!--801414701-->}}===
 {{Mission Description|type=adventure|location=Old Weapon Testing Ground|The core gameplay loop behind Aetherium Wars is "dueling." Challenge different players and show your true strength!}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Silver Wolf)
+:'''Venue Broadcast:''' Ahem... Hey hey! I have to hack my way in every time, it's getting annoying! Can the IPC just allow online battling?
+:'''Venue Broadcast:''' Hey, I'm not letting you win without a fight this time.
+<pre>{
+	"$type": "RPG.GameCore.ShowUI",
+	"Name": "Ui.AetherDivide.AetherChallenge.AetherChallengePage",
+	"WaitForExit": true,
+	"Param": {
+		"Value": "207"
+	},
+	"OnUIEnter": []
+}</pre>
+:'''Venue Broadcast:''' Ahem... I guess you can say whatever you want, you've beaten me too many times.
 {{Dialogue End}}
 
 ==Other Languages==

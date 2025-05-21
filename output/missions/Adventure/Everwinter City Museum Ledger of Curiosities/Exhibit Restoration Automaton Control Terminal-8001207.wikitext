@@ -41,27 +41,116 @@ PageTitle=#Exhibit Restoration: Automaton Control Terminal#
 ===Find out more about the situation from Uldan{{subst:void|<!--800120701-->}}===
 {{Mission Description|type=adventure|location=History and Culture Museum|Belobog's History and Culture Museum will be opening soon. Uldan is collecting appropriate exhibits to ensure a successful opening.<br />Boris, the restorer of the museum, seems to be troubled. Go and find him at the restoration room.}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Uldan)
+:'''Uldan:''' You again, (Trailblazer). You're just in time: The {{Color|keyword|nobold=1|museum workshop}} has just received a batch of artifacts that need restoring.
+::'''Uldan:''' Give them a hand if you're free. Head over and talk to {{Color|keyword|nobold=1|Boris}} &mdash; it's his area of expertise, and he'll fill you in with exactly what needs to be done.
+::----
+:<pre>{
+	"$type": "RPG.GameCore.PlayMultiVoiceTalk",
+	"TalkSentenceID": 501190111
+}</pre>
+:::{{DIcon|?}} About the portrait of Cyrille the Fool...
+::::'''Uldan:''' (Trailblazer)... Did you say that the description of {{Color|keyword|nobold=1|Cyrille the Fool's}} portrait deviated from the truth?
+::::'''Uldan:''' But... how's that possible? The description is taken from the history textbooks of the Belobog Academy. Everything is in black and white.
+::::{{DIcon|Talk}} I met Cyrille before.
+:::::'''Uldan:''' Well... Stop pulling my leg.
+:::::'''Uldan:''' Still, I can tell you have at least heard of Cyrille from your tone.
+::::;(Return to previous option selection)
+::::{{DIcon|Arrow}} I have evidence that supports Cyrille.
+:::::'''Uldan:''' Since you sound so sure of yourself, I'll take a look at your evidence.
+::::<pre>{
+	"$type": "RPG.GameCore.ConsumeMissionItemPerformance",
+	"SubMissionID": 800122503,
+	"Desc": {
+		"Hash": 18096028862919064994
+	},
+	"OnSubmitConfirm": [
+		{
+			"$type": "RPG.GameCore.PlayAndWaitSimpleTalk",
+			"SimpleTalkList": [
+				{
+					"TalkSentenceID": 800122739
+				},
+				{
+					"TalkSentenceID": 800122740
+				},
+				{
+					"TalkSentenceID": 800122741
+				},
+				{
+					"TalkSentenceID": 800122742
+				}
+			]
+		},
+		{
+			"$type": "RPG.GameCore.TriggerCustomString",
+			"CustomString": {
+				"Value": "Talk_800122502"
+			}
+		},
+		{
+			"$type": "RPG.GameCore.TriggerCustomString",
+			"CustomString": {
+				"Value": "TalkSentence_501190151"
+			}
+		}
+	],
+	"OnSubmitCancel": [
+		{
+			"$type": "RPG.GameCore.TriggerCustomString",
+			"CustomString": {
+				"Value": "TalkSentence_501190151"
+			}
+		}
+	],
+	"SimpleTalk": {}
+}</pre>
+:::{{DIcon|Exit}} I'll go ahead and tour now.
+:<pre>{
+	"$type": "RPG.GameCore.PlayMultiVoiceTalk",
+	"TalkSentenceID": 501190111
+}</pre>
 {{Dialogue End}}
 
 ===Help Boris with restoring exhibits{{subst:void|<!--800120702-->}}===
 {{Dialogue Start}}
-:{{tx}}
+
+
+;(Talk to Boris)
+;(If {{cx}}<!--during performance 501190201-->)
+::'''Boris:''' Hey, who are you? This is the restoration room of the museum, nothing here is on display...
+::{{DIcon|Arrow}} Pela sent me to help.
+:::'''Boris:''' Miss Pela sent you to help...
+::{{DIcon|Arrow}} I'm the hero of Belobog.
+:::'''Boris:''' The hero of Belobog...
+::{{DIcon|Arrow}} I'm (Trailblazer).
+:::'''Boris:''' (Trailblazer)...
+::'''Boris:''' Oh, now I remember! Haha, my forgetfulness!
+::'''Boris:''' Pleased to meet you, I'm the museum's artifact restorer, Boris! So sorry for not recognizing you earlier.
+;(If {{cx}}<!--not during performance 501190201-->)
+:<pre>{
+	"$type": "RPG.GameCore.PlayMultiVoiceTalk",
+	"TalkSentenceID": 501190211
+}</pre>
+::'''Boris:''' Are you... looking to have a chat with me?
 {{Dialogue End}}
 
 ===Restore exhibits{{subst:void|<!--800120703-->}}===
 {{Dialogue Start}}
-:{{tx}}
+
 {{Dialogue End}}
 
 ===Report to Boris{{subst:void|<!--800120704-->}}===
 {{Dialogue Start}}
-:{{tx}}
 {{Dialogue End}}
 
 ===Place the exhibit at the specified spot{{subst:void|<!--800120705-->}}===
 {{Dialogue Start}}
-:{{tx}}
+
+:{{DIcon|Loupe}} Investigate
+:An oil painting depicting the Administrative District in its full majesty.
+:The Administrative District depicted in the painting is much larger than you remember. Maybe it's because there are many places off-limits to you.
 {{Dialogue End}}
 
 ==Other Languages==

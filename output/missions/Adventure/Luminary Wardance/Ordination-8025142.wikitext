@@ -40,30 +40,112 @@ PageTitle=#Ordination#
 ===Review Sugata's historical records{{subst:void|<!--802514201-->}}===
 {{Mission Description|type=adventure|location=Primordial Memory|Review Sugata's historical records. Would an Intellitron infected with the Anti-Organic Equation still have "emotions" remaining within?}}
 {{Dialogue Start}}
+
+;(Unused &mdash; TriggerPerformance)
 :{{tx}}
+:;(Enter battle)
+:::Wave 1: {{Enemy List|Automaton Spider*2; Automaton Beetle*1}}
+:::Wave 2: {{Enemy List|Automaton Beetle*1; Automaton Spider*2; Automaton Hound*1}}
+:'''Dharmic Monk Virya:''' Phew... That sure was a strong suit of steel! It could even control the surrounding machines to attack us! But these trash heaps of metal were no match for our sharp talons in the end, haha.
+:'''Dhyana:''' How could you find joy in conflict as a Dharmic monk?
+:'''Dharmic Monk Virya:''' Ahem, your words ring true. Ah, that metalhead is awake.
+:'''0089:''' Question: Organic life, why did you not destroy me? The annihilation has failed. According to logic, you will destroy me. That is the most optimal solution.
+:'''Dhyana:''' Samatha, you answer that question.
+:'''Samatha:''' Yes. O steel patron, the universe is fraught with wanton bloodshed, and so are our hearts. It is this impulse that drove us to ruin, devastating worlds and forging the unbreakable cycle of war and bloodshed. And that is why we Claretwheel Temple monks continue to hone our minds and spirits in order to resist its claim.
+:'''Samatha:''' For it is past the scarlet curtain of blood and beyond slaughter that we sought and found an even greater power.
+:'''0089:''' A weapon of even greater power? Negative: I have not detected any other type of weaponry amongst your equipment, besides biological weaponry.
+:'''Dhyana:''' This "power" that Samatha refers to isn't something that an ordinary device can detect.
+:'''0089:''' Affirmation: "Greater power" can be implemented to iterate upgrades of the Anti-Organic Equation. It can be suggested to be incorporated into database. We can learn from organic life. We will be victorious at the end.
+:'''0089:''' Question: How can one obtain this "power" of which you speak?
+:'''Dharmic Monk Virya:''' This question is much too profound. Master Dhyana can talk your ear off for decades on this subject alone.
+:'''Dhyana:''' The claret wheel hangs overhead, illuminating mortal hearts. To understand this power, countless years of cultivation is required.
+:'''Samatha:''' We're in a rush to reach the Xianzhou, steel patron. If you wish to learn more about Claretwheel Temple, let us become travel companions and Master Dhyana can preach the mantra to you along the way. Would that be appropriate, Master Dhyana?
+:'''Dhyana:''' It is by fortuitous fate that we met this day. But if this steel patron wishes to travel with us, I must first adjust its nature to avoid it lashing out yet again towards innocents.
+:Conclusion: I have accepted the invitation from these Claretwheel Temple monks to share this journey. The Revered Master Dhyana has locked my weapons system to prevent me from unleashing violence during the trip.
+:They originate from a frontier star quadrant, swearing to journey to the Xianzhou Luofu to petition to the Xianzhou natives for the protection of over ten thousand monks and thirteen thousand civilian children.
+:Question: I cannot understand &mdash; if they possess powers beyond slaughter, why are they unable to protect themselves in the universe and still seek refuge?
+:Interrogation: A power beyond slaughter... does it exist?
+:{{DIcon|Arrow}} It must.
+:{{DIcon|Arrow}} Impossible.
+:{{DIcon|Arrow}} I cannot answer.
+:Relevant information does not exist within the database. To obtain the answer, I can only record the monks' verbal exchanges as references for extrapolation.
+:{{tx}}
+<pre>{
+	"$type": "RPG.GameCore.WaitEntityServerEvent"
+}</pre>
+;(If {{cx}}{{subst:void|<!--{"$type":"RPG.GameCore.ByComparePropState","TargetType":{"$type":"RPG.GameCore.GroupFetchLocalTarget","TargetType":"Prop","Targets":[300002]}}-->}}, {{cx}}{{subst:void|<!--{"$type":"RPG.GameCore.ByComparePropState","TargetType":{"$type":"RPG.GameCore.GroupFetchLocalTarget","TargetType":"Prop","Targets":[300003]}}-->}}, {{cx}}{{subst:void|<!--{"$type":"RPG.GameCore.ByComparePropState","TargetType":{"$type":"RPG.GameCore.GroupFetchLocalTarget","TargetType":"Prop","Targets":[300004]}}-->}}, and {{cx}}{{subst:void|<!--{"$type":"RPG.GameCore.ByComparePropState","TargetType":{"$type":"RPG.GameCore.GroupFetchLocalTarget","TargetType":"Prop","Targets":[300001]},"State":"Open"}-->}})
+<pre>{
+	"$type": "RPG.GameCore.ChangePropState"
+}</pre>
 {{Dialogue End}}
 
 ===Review the past memories{{subst:void|<!--802514205-->}}===
 {{Mission Description|type=adventure|location=Iteration Log|update|Review the past memories, a story known only by two people, and the daily lives of the monks on this journey.}}
 {{Dialogue Start}}
+
+;(Unused &mdash; EnterDistrict_G22)
+:Rubert the Emperor has died, but the remaining offspring of the Anti-Organic Equation still lurk in all corners of the universe.
+::Against these individuals, the IPC has issued an order to all bounty hunters &mdash; eliminate them at all costs.
+::What was Dhyana thinking when she pushed me away?
+::'''Bounty Hunter:''' Am I watching some low-production comedy show? The bloodthirsty borisin are willingly protecting Rubert's murder machine at the cost of their lives. Hahaha. So even ruthless beasts are capable of huddling together for comfort.
+::'''Bounty Hunter:''' Come at me. I lost. You can kill me, just like how you metallic maniacs killed my brothers back then...
+::'''Bounty Hunter:''' Remember this, and etch it into that metallic head of yours that's only fit to be my chamber pot. The bounty hunters that are still alive will hunt you down to the end of the cosmos and melt you down into a pool of molten metal.
+::Regarding Dhyana's death, I feel something that's infinitely close to a concept that organic life holds &mdash; rage. There was activity in the Anti-Organic Equation, and it captured my negative feedback, amplified it, and arrived at a conclusion...
+::Affirmation: Even if Dhyana locked my weapon system, with the remaining annihilation protocols in my system, even using a single pebble...
+::I can easily wipe away his existence.
+::{{DIcon|Arrow}} Stop here.
+::{{DIcon|Arrow}} Kill him!
+:::'''0089:''' Annihilate, annihilate, annihilate, annihilate, annihilate...
+::'''0089:''' Anti-Organic Equation command terminated.
+::{{tx}}
+:<pre>{
+	"$type": "RPG.GameCore.PerformanceExtendEndBlack"
+}</pre>
 :{{tx}}
+
+;(Unused &mdash; EnterDistrict_G20)
+:{{tx}}
+:;(Enter battle)
+:::Wave 1: {{Enemy List|Automaton Spider*2; Automaton Beetle*1}}
+:::Wave 2: {{Enemy List|Automaton Beetle*1; Automaton Spider*2; Automaton Hound*1}}
 {{Dialogue End}}
 
 ===Return and construct the complete data{{subst:void|<!--802514209-->}}===
 {{Mission Description|type=adventure|location=Iteration Log|update|Return to the initial position and complete self-iteration in the memory}}
 {{Dialogue Start}}
-:{{tx}}
+:<!--3-second delay-->
+:From then on, no bounty hunters appeared again.
+:I once checked through the bounty hunters' warrants. Conclusion: Elite Soldier 0089 status became marked as... deceased.
 {{Dialogue End}}
 
 ===Review the complete memory{{subst:void|<!--802514210-->}}===
 {{Mission Description|type=adventure|location=Iteration Log|update|Review the final memory, when the killer became "human."}}
 {{Dialogue Start}}
+
+;(Unused &mdash; EnterDistrict_G23)
 :{{tx}}
 {{Dialogue End}}
 
 ===Witness the end of the journey{{subst:void|<!--802514212-->}}===
 {{Mission Description|type=adventure|location=Annihilation Record|update|This world is transient. As an observer, you can only move forward and witness the end of the journey.}}
 {{Dialogue Start}}
+
+;(Unused &mdash; EnterDistrict_G9)
+:'''Hysteric Annihilation Gang:''' Tsk, these two are boring. They're not even putting up any resistance. How am I gonna get hyped up now?
+::'''Hysteric Annihilation Gang:''' You two better not let my bros down.
+::'''Sugata:''' Honored patrons, we do not carry any possessions of value on us. Your attack has also destroyed the only spaceship we own. Logic: Killing us will not deliver any benefits.
+::'''Samatha:''' May you all turn back from evil before you are tainted by further sin.
+::'''Uncivil Annihilation Gang:''' Sin? As if you've seen actual sin. How much does it weigh? What does it look like? Take it out and enlighten us then!
+::'''Uncivil Annihilation Gang:''' Listen up, you two! The only truths in this universe are stuff like meteors that fell from the sky, the flames of the Antimatter Legion, and the gun in my hand.
+::'''Sugata:''' Note: Please add the Anti-Organic Equation to that.
+::'''Samatha:''' Sugata...
+::Samatha is shaking her head. I have identified her facial topography &mdash; it is one of "pleading." She does not wish me to break my commandment for this.
+::'''Samatha:''' Do you remember our objective? One of us must reach the Xianzhou with the petition &mdash; but it does not have to be me.
+::Record: After spending 0.0019 seconds of extrapolation, I have understood Samatha's plan. She wants to sacrifice herself to create an opportunity for me to escape.
+::{{DIcon|Arrow}} But you're both still alive...
+::{{DIcon|Arrow}} This means...
+::I declined to execute that specific command.
+::{{tx}}
 :{{tx}}
 {{Dialogue End}}
 

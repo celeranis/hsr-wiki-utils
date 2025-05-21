@@ -38,12 +38,37 @@ PageTitle=#Hiring Guides: Gepard#
 ===Head to the Silvermane Guard Restricted Zone to find Gepard{{subst:void|<!--800125401-->}}===
 {{Mission Description|type=adventure|location=Silvermane Guard Restricted Zone|The Belobog History and Culture Museum is about to open, but there is a great lack of guides. To rapidly fill up these positions and improve the visitor experience, Pela and Eris are inviting all Belobog citizens to apply for these positions.<br />This time they have their eye on Gepard, captain of the Silvermane Guards. Head to the Silvermane Guard Restricted Zone in their stead, and see whether Gepard is interested in the position.}}
 {{Dialogue Start}}
-:{{tx}}
+
+
+;(Talk to Gepard)
+;(If {{cx}}<!--during performance 501030001-->)
+::'''Gepard:''' Welcome to the Silvermane Guard Restricted Zone, (Trailblazer).
+::'''Gepard:''' I've instructed the soldiers to treat you hospitably, but I do have to remind you to be considerate of your actions.
+::'''Gepard:''' Rules are rules &mdash; once any such acts are discovered, even I, the Captain, can't guarantee your safety.
+::{{DIcon|Arrow}} Duly noted.
+:::'''Gepard:''' I would be deeply grateful. I hope you will enjoy this trip to Belobog...
+:::'''Gepard:''' Or, as you all call this world &mdash; I hope you will enjoy this trip to Jarilo-VI.
+::{{DIcon|Arrow}} The Captain's so uptight.
+:::'''Gepard:''' The Supreme Guardian and her laws are akin to an iron wall around Belobog. Nothing in this place is above them.
+:::'''Gepard:''' As a comrade who once fought by your side, I do not wish to see harm befall you. Which is why I hope you will reconsider my suggestion.
+::'''Gepard:''' But enough of this stuffy topic. I'm about to go on a break. Do you have something else you wish to talk about?
+;(If {{cx}}<!--not during performance 501030001-->)
+:<pre>{
+	"$type": "RPG.GameCore.PlayMultiVoiceTalk",
+	"TalkSentenceID": 501030034
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.PlayMessage",
+	"MessageSectionID": 1114800
+}</pre>
 {{Dialogue End}}
 
 ===Speak with Gepard again{{subst:void|<!--800125403-->}}===
 {{Dialogue Start}}
-:{{tx}}
+
+----
+:'''Eris:''' Hello, (Trailblazer)! Pela and I have been screening prospective volunteer guides for the museum recently, and we've finally found the right candidate...
+:'''Eris:''' Could you help us contact the captain of the Silvermane Guards, {{Color|keyword|nobold=1|Gepard}} &mdash; thanks, (Trailblazer)!
 {{Dialogue End}}
 
 ==Other Languages==

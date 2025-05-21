@@ -41,27 +41,455 @@ PageTitle=#Exhibit Collection: Oil Painting Part 1#
 ===Find out more about the situation from Uldan{{subst:void|<!--800120101-->}}===
 {{Mission Description|type=adventure|location=History and Culture Museum|Belobog's History and Culture Museum will be opening soon. Uldan is collecting appropriate exhibits to ensure a successful opening.<br />This time, Uldan wishes you to collect a commissioned piece from Belobog's famed painter, Rebini.}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Uldan)
+:'''Uldan:''' Oh? Hi there. You're here to collect {{Color|keyword|nobold=1|Belobog Landscape Paintings}}, right?
+::'''Uldan:''' As you can see, three exhibits of the same category are still missing in the General Hall. They are all made by the great painter {{Color|keyword|nobold=1|Rebini}}.
+::'''Uldan:''' A graduate of the Belobog College of Art, he is currently the icon of the nomadist school and the pinnacle of this city's art scene.
+::'''Uldan:''' Although he has promised to submit his commissions on time, I know him too well... He must have procrastinated till the last minute. I bet he is working flat out somewhere right now to complete his work.
+::{{DIcon|Arrow}} So I gotta pay him a visit in his studio to chase him up?
+:::'''Uldan:''' No, I'm sure he won't be there. He hates doing his work in isolation. If possible, he will definitely paint outdoors.
+::{{DIcon|Arrow}} No clue where he's at? Did he just bail out on you to avoid trouble?
+:::'''Uldan:''' Haha. Unlikely. He hates doing his work in isolation. If possible, he will definitely paint outdoors.
+::'''Uldan:''' Let me check which paintings are still missing...
+::'''Uldan:''' ...Got it. Looks like I'll have to task you with a trip to the {{Color|keyword|nobold=1|Outlying Snow Plains}}. If everything goes as planned, he should be over there.
+::{{DIcon|Arrow}} I'm on it and I'll be back in a jiffy.
+:::'''Uldan:''' Great, off you go then...
+::{{DIcon|Arrow}} What if things don't go as planned?
+:::'''Uldan:''' Then I'll go visit his studio myself. If nobody's there, all we can do is pray that he's safe and well...
+::'''Uldan:''' ...Oh yeah, take this. We've agreed to settle things in cash, and here's the money. If he's done painting, then you can hand this over to him immediately.
+::'''Uldan:''' But this dude's got a quirky temper. If he insists on not taking the payment, don't waste your time. Just keep it as a delivery fee for yourself.
+:<pre>{
+	"$type": "RPG.GameCore.PlayMultiVoiceTalk",
+	"TalkSentenceID": 501190111
+}</pre>
+:::{{DIcon|?}} About the portrait of Cyrille the Fool...
+::::'''Uldan:''' (Trailblazer)... Did you say that the description of {{Color|keyword|nobold=1|Cyrille the Fool's}} portrait deviated from the truth?
+::::'''Uldan:''' But... how's that possible? The description is taken from the history textbooks of the Belobog Academy. Everything is in black and white.
+::::{{DIcon|Talk}} I met Cyrille before.
+:::::'''Uldan:''' Well... Stop pulling my leg.
+:::::'''Uldan:''' Still, I can tell you have at least heard of Cyrille from your tone.
+::::;(Return to previous option selection)
+::::{{DIcon|Arrow}} I have evidence that supports Cyrille.
+:::::'''Uldan:''' Since you sound so sure of yourself, I'll take a look at your evidence.
+::::<pre>{
+	"$type": "RPG.GameCore.ConsumeMissionItemPerformance",
+	"SubMissionID": 800122503,
+	"Desc": {
+		"Hash": 18096028862919064994
+	},
+	"OnSubmitConfirm": [
+		{
+			"$type": "RPG.GameCore.PlayAndWaitSimpleTalk",
+			"SimpleTalkList": [
+				{
+					"TalkSentenceID": 800122739
+				},
+				{
+					"TalkSentenceID": 800122740
+				},
+				{
+					"TalkSentenceID": 800122741
+				},
+				{
+					"TalkSentenceID": 800122742
+				}
+			]
+		},
+		{
+			"$type": "RPG.GameCore.TriggerCustomString",
+			"CustomString": {
+				"Value": "Talk_800122502"
+			}
+		},
+		{
+			"$type": "RPG.GameCore.TriggerCustomString",
+			"CustomString": {
+				"Value": "TalkSentence_501190151"
+			}
+		}
+	],
+	"OnSubmitCancel": [
+		{
+			"$type": "RPG.GameCore.TriggerCustomString",
+			"CustomString": {
+				"Value": "TalkSentence_501190151"
+			}
+		}
+	],
+	"SimpleTalk": {}
+}</pre>
+:::{{DIcon|Exit}} I'll go ahead and tour now.
+:<pre>{
+	"$type": "RPG.GameCore.PlayMultiVoiceTalk",
+	"TalkSentenceID": 501190111
+}</pre>
 {{Dialogue End}}
 
 ===Find Rebini in the Outlying Snow Plains{{subst:void|<!--800120102-->}}===
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Rebini)
+:'''Rebini:''' The melody of your footsteps echoes in the silent snowdrift...
+:'''Rebini:''' Just like a drifting snow phantom &mdash; you've come in the dead of winter!
+:'''Rebini:''' And so, you are...?
+:{{DIcon|Arrow}} I'm (Trailblazer).
+::'''Rebini:''' (Trailblazer)! What a delightful name! Nice to meet you.
+::'''Rebini:''' Hmm, have we met somewhere before...
+::'''Rebini:''' ...Ah, forget it. That's not important! My name's Rebini, and I'm currently absorbed in creating an exhibit for the Belobog History and Culture Museum!
+::'''Rebini:''' So then, {{MC|m=Sir|f=Ma'am}} (Trailblazer), what can I humbly do for you?
+::{{DIcon|Arrow}} I've come to talk art with you.
+:::'''Rebini:''' Heavens, that's unbelievable... Someone is coming all the way out to this icy frostscape just to talk art with me...
+:::'''Rebini:''' What great timing. I've just finished with this landscape piece &mdash; a vista overlooking Belobog &mdash; and I'm gonna call it ''Ray of Dawn''!
+:::'''Rebini:''' It's finished, but... I can't help but feel like it's missing something, somewhere. Seeing as you're someone who understands art, could you give this a once over? What do you think of this painting?
+::{{DIcon|Arrow}} Uldan sent me with a message...
+:::'''Rebini:''' Stop! Stop that! That wretched old man again!? I told him, soon, soon &mdash; I'll finish it soon! Quit bugging me!
+:::'''Rebini:''' But you've got great timing. I've just finished with this landscape &mdash; a vista overlooking Belobog &mdash; and I'm gonna call it ''Ray of Dawn''!
+:::'''Rebini:''' It's finished, but... I can't help but feel like it's missing something, somewhere. What do you think of this painting?
+:{{DIcon|Arrow}} Uldan sent me to chase up this painting.
+::'''Rebini:''' Uldan! What a delightful name! Nice to meet you!
+::'''Rebini:''' ...Pah! That wretched old man again!? I told him, soon, soon &mdash; I'll finish it soon! Quit bugging me!
+::'''Rebini:''' But you've got great timing. I've just finished with this landscape &mdash; a vista overlooking Belobog &mdash; and I'm gonna call it ''Ray of Dawn''!
+::'''Rebini:''' It's finished, but... I can't help but feel like it's missing something, somewhere. What do you think of this painting?
+:{{DIcon|Arrow}} Rational analysis.
+::From the composition to the color palette and the communication of motifs, you pull out all the stops to offer up all the insight you can give.
+::'''Rebini:''' ...
+::'''Rebini:''' ...
+::'''Rebini:''' {{Size|36|That's perfect! That's exactly what I wanted to hear!}}
+::'''Rebini:''' You're really insightful about art! With this kind of suggestion, this painting will be more dazzling than the geomarrow ores in the museum!
+::Rebini hastily makes revisions to the painting based on your feedback.
+::'''Rebini:''' Oh... Oh my... You're right! Now this version of ''Ray of Dawn'' is the finished item!
+::'''Rebini:''' Thank you so much, my friend! I'm sending it in to that old man Uldan right now &mdash; I want him to know that every delay of mine was worth it!
+::{{Black Screen|Rebini runs off on his own.}}
+::'''(Trailblazer):''' (Then... I get to keep his fee, I suppose?)
+:<pre>{
+	"$type": "RPG.GameCore.PropEnableCollider",
+	"OPType": "ColliderOnly",
+	"SpecifiedRelativePaths": [],
+	"TargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvPropEx",
+		"FetchType": "SinglePropByPropID",
+		"SinglePropID": {
+			"GroupID": {
+				"FixedValue": {
+					"Value": 37
+				}
+			},
+			"ID": {
+				"FixedValue": {
+					"Value": 300024
+				}
+			}
+		}
+	}
+}</pre>
+:{{DIcon|Arrow}} Flatter the painting.
+::You compare this perfect picture to celestial motion, filling every sentence with gushing praise for the great painter &mdash; despite your doubt that he even understands what "celestial motion" in fact means.
+::'''Rebini:''' ...
+::'''Rebini:''' ...
+::'''Rebini:''' Thanks for the compliment... But that wasn't the answer I was looking for.
+::'''Rebini:''' Let's finish this. I can tell already... That old man Uldan got you to chase up his commission &mdash; he's also the one who taught you to talk like this, right?
+::'''Rebini:''' In that case, I will keep things transactional. He didn't forget the fee, did he?
+:<pre>{
+	"$type": "RPG.GameCore.ConsumeMissionItemPerformance",
+	"SubMissionID": 800120104,
+	"Desc": {
+		"Hash": 18096028862919064994
+	},
+	"OnSubmitConfirm": [
+		{
+			"$type": "RPG.GameCore.PlayAndWaitSimpleTalk",
+			"SimpleTalkList": [
+				{
+					"TalkSentenceID": 800120160,
+					"ProtectTime": 0.3
+				},
+				{
+					"TalkSentenceID": 800120161,
+					"ProtectTime": 0.3
+				}
+			]
+		},
+		{
+			"$type": "RPG.GameCore.PerformanceTransition",
+			"SwitchKeepTime": 4,
+			"TextEnabled": true,
+			"TalkSentenceID": 800120162,
+			"CreateNpcList": [],
+			"CaptureNpcList": [],
+			"DestroyNpcList": [
+				{
+					"GroupID": 71,
+					"GroupNpcID": 400001,
+					"DestroyList": []
+				}
+			],
+			"CreateProp": {
+				"GroupID": {
+					"FixedValue": {
+						"Value": 0
+					}
+				},
+				"GroupPropID": {
+					"FixedValue": {
+						"Value": 0
+					}
+				}
+			},
+			"DestroyProp": {
+				"TargetType": {
+					"$type": "RPG.GameCore.TargetFetchAdvPropEx"
+				},
+				"ID": {
+					"FixedValue": {
+						"Value": 0
+					}
+				},
+				"GroupID": {
+					"FixedValue": {
+						"Value": 0
+					}
+				}
+			},
+			"ActiveVirtualCamera": {},
+			"ActiveTemplateVirtualCamera": {},
+			"SwitchCharacterAnchor": {},
+			"AdvNpcFaceToPlayer": {}
+		},
+		{
+			"$type": "RPG.GameCore.PlayAndWaitSimpleTalk",
+			"SimpleTalkList": [
+				{
+					"TalkSentenceID": 800120163,
+					"ProtectTime": 0.3
+				}
+			]
+		},
+		{
+			"$type": "RPG.GameCore.TriggerCustomString",
+			"CustomString": {
+				"Value": "ALL_TALK_END2"
+			}
+		}
+	],
+	"OnSubmitCancel": [
+		{
+			"$type": "RPG.GameCore.EndPerformance"
+		}
+	],
+	"SimpleTalk": {}
+}</pre>
+:{{DIcon|Arrow}} I don't know.
+::Your answer is that you don't know &mdash; and you don't know what reaction this answer will invoke within the master painter. But you firmly believe that sincerity is your best weapon.
+::'''Rebini:''' ...
+::'''Rebini:''' ...
+::'''Rebini:''' That might not be the answer I wanted to hear, but your sincerity left me touched!
+::'''Rebini:''' I can tell that you've been sent up by Uldan to hurry me up. But you haven't spun the same old tricks he taught you...
+::'''Rebini:''' If that's the case, then we'll keep things transactional. You've been sincere with me, so I'll give you a twenty percent discount &mdash; keep it as your tip!
+:<pre>{
+	"$type": "RPG.GameCore.ConsumeMissionItemPerformance",
+	"SubMissionID": 800120110,
+	"Desc": {
+		"Hash": 18096028862919064994
+	},
+	"OnSubmitConfirm": [
+		{
+			"$type": "RPG.GameCore.PlayAndWaitSimpleTalk",
+			"SimpleTalkList": [
+				{
+					"TalkSentenceID": 800120171,
+					"ProtectTime": 0.3
+				},
+				{
+					"TalkSentenceID": 800120172,
+					"ProtectTime": 0.3
+				},
+				{
+					"TalkSentenceID": 800120173,
+					"ProtectTime": 0.3
+				}
+			]
+		},
+		{
+			"$type": "RPG.GameCore.PerformanceTransition",
+			"SwitchKeepTime": 4,
+			"TextEnabled": true,
+			"TalkSentenceID": 800120174,
+			"CreateNpcList": [],
+			"CaptureNpcList": [],
+			"DestroyNpcList": [
+				{
+					"GroupID": 71,
+					"GroupNpcID": 400001,
+					"DestroyList": []
+				}
+			],
+			"CreateProp": {
+				"GroupID": {
+					"FixedValue": {
+						"Value": 0
+					}
+				},
+				"GroupPropID": {
+					"FixedValue": {
+						"Value": 0
+					}
+				}
+			},
+			"DestroyProp": {
+				"TargetType": {
+					"$type": "RPG.GameCore.TargetFetchAdvPropEx"
+				},
+				"ID": {
+					"FixedValue": {
+						"Value": 0
+					}
+				},
+				"GroupID": {
+					"FixedValue": {
+						"Value": 0
+					}
+				}
+			},
+			"ActiveVirtualCamera": {},
+			"ActiveTemplateVirtualCamera": {},
+			"SwitchCharacterAnchor": {},
+			"AdvNpcFaceToPlayer": {}
+		},
+		{
+			"$type": "RPG.GameCore.PlayAndWaitSimpleTalk",
+			"SimpleTalkList": [
+				{
+					"TalkSentenceID": 800120175,
+					"ProtectTime": 0.3
+				}
+			]
+		},
+		{
+			"$type": "RPG.GameCore.TriggerCustomString",
+			"CustomString": {
+				"Value": "ALL_TALK_END2"
+			}
+		}
+	],
+	"OnSubmitCancel": [
+		{
+			"$type": "RPG.GameCore.EndPerformance"
+		}
+	],
+	"SimpleTalk": {}
+}</pre>
+;(Unused &mdash; ALL_TALK_END)
+
 {{Dialogue End}}
 
 ===Report to Uldan{{subst:void|<!--800120103-->}}===
 {{Dialogue Start}}
-:{{tx}}
+
+
+;(Talk to Uldan)
+;(If {{cx}}<!--during performance 501190101-->)
+::'''Uldan:''' Welcome to the Belobog History and Culture Museum, {{MC|f=young miss|m=young man}}. Is there anything an old man like me can help you with?
+::{{DIcon|Arrow}} I'm just here to visit the museum.
+:::'''Uldan:''' Oh hoho, you're at the wrong place. This is the museum's warehouse. Head out then turn right, the exhibition hall is past the reception counter.
+::{{DIcon|Arrow}} I'm here solely to talk with older people.
+:::'''Uldan:''' Hah, what a unique hobby. However, this is a museum after all. Since you're here, might as well have a tour. Head out then turn right, the exhibition hall is past the reception counter.
+::'''Uldan:''' If you have any questions along your tour, or if you have any feedback or opinions, welcome to come talk to me...
+::'''Uldan:''' ...I am Uldan, former dean of the Belobog College of Art, and now the curator of this museum. Pleased to meet you.
+;(If {{cx}}<!--not during performance 501190101-->)
+::<pre>{
+	"$type": "RPG.GameCore.PlayMultiVoiceTalk",
+	"TalkSentenceID": 501190111
+}</pre>
+::::{{DIcon|?}} About the portrait of Cyrille the Fool...
+:::::'''Uldan:''' (Trailblazer)... Did you say that the description of {{Color|keyword|nobold=1|Cyrille the Fool's}} portrait deviated from the truth?
+:::::'''Uldan:''' But... how's that possible? The description is taken from the history textbooks of the Belobog Academy. Everything is in black and white.
+:::::{{DIcon|Talk}} I met Cyrille before.
+::::::'''Uldan:''' Well... Stop pulling my leg.
+::::::'''Uldan:''' Still, I can tell you have at least heard of Cyrille from your tone.
+:::::;(Return to previous option selection)
+:::::{{DIcon|Arrow}} I have evidence that supports Cyrille.
+::::::'''Uldan:''' Since you sound so sure of yourself, I'll take a look at your evidence.
+:::::<pre>{
+	"$type": "RPG.GameCore.ConsumeMissionItemPerformance",
+	"SubMissionID": 800122503,
+	"Desc": {
+		"Hash": 18096028862919064994
+	},
+	"OnSubmitConfirm": [
+		{
+			"$type": "RPG.GameCore.PlayAndWaitSimpleTalk",
+			"SimpleTalkList": [
+				{
+					"TalkSentenceID": 800122739
+				},
+				{
+					"TalkSentenceID": 800122740
+				},
+				{
+					"TalkSentenceID": 800122741
+				},
+				{
+					"TalkSentenceID": 800122742
+				}
+			]
+		},
+		{
+			"$type": "RPG.GameCore.TriggerCustomString",
+			"CustomString": {
+				"Value": "Talk_800122502"
+			}
+		},
+		{
+			"$type": "RPG.GameCore.TriggerCustomString",
+			"CustomString": {
+				"Value": "TalkSentence_501190151"
+			}
+		}
+	],
+	"OnSubmitCancel": [
+		{
+			"$type": "RPG.GameCore.TriggerCustomString",
+			"CustomString": {
+				"Value": "TalkSentence_501190151"
+			}
+		}
+	],
+	"SimpleTalk": {}
+}</pre>
+::::{{DIcon|Exit}} I'll go ahead and tour now.
+::<pre>{
+	"$type": "RPG.GameCore.PlayMultiVoiceTalk",
+	"TalkSentenceID": 501190111
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.PlayMultiVoiceTalk",
+	"TalkSentenceID": 501190111
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.ShowMenu"
+}</pre>
 {{Dialogue End}}
 
 ===Place the exhibit at the specified spot{{subst:void|<!--800120105-->}}===
 {{Dialogue Start}}
-:{{tx}}
+
+:{{DIcon|Loupe}} Investigate
+:An oil painting depicting the Administrative District in its full majesty.
+:The Administrative District depicted in the painting is much larger than you remember. Maybe it's because there are many places off-limits to you.
 {{Dialogue End}}
 
 ===Talk to Eris and continue the management of the museum{{subst:void|<!--800120106-->}}===
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Eris)
+<pre>{
+	"$type": "RPG.GameCore.PlayMultiVoiceTalk",
+	"TalkSentenceID": 501190301
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.ShowMenu"
+}</pre>
 {{Dialogue End}}
 
 ==Other Languages==

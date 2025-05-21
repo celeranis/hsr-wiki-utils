@@ -38,19 +38,226 @@ PageTitle=#Prophecy Tablet: Room I#
 ===Enter the Hypogeum{{subst:void|<!--803010201-->}}===
 {{Mission Description|type=adventure|location=Prophecy Tablet: Room I|Damionis says he has plenty of experience, and you just need to follow him.}}
 {{Dialogue Start}}
+----
+:With Damionis' guidance, you have come to a vassal city outside of Okhema and stopped before an underground door...
+:'''Damionis:''' We're here. Based on my previous scouting of the area, this should be the way into the hypogeum.
+:'''Damionis:''' {{Rubi|Janus|Passage Titan}}'s power supposedly protected this place. It used to be a shelter used to resist the black tide, but years later...
+:{{DIcon|Arrow}} This place looks so similar to Okhema.
+::'''Damionis:''' That's to be expected. They were built around the same period, after all.
+::'''Damionis:''' It's a pity that people back then ended up abandoning this hypogeum before it could serve its purpose.
+::Sounds like a safe place.
+::'''Damionis:''' Don't even begin. This place was abandoned even before it could serve as a shelter.
+::We're not going to find anyone in here, right...?
+:{{DIcon|Arrow}} Sounds like a safe place.
+::'''Damionis:''' Don't even begin. This place was abandoned even before it could serve as a shelter.
+::We're not going to find anyone in here, right...?
+:{{DIcon|Arrow}} We're not going to find anyone in here, right...?
+:'''Damionis:''' Why would we? This place was abandoned even before it could serve as a shelter.
+:'''Damionis:''' People later realized that the black tide does not retreat once it takes over a location, so even the most robust of shelters would not hold out for long.
+:'''Damionis:''' Rather than making themselves comfortable somewhere safe while waiting for death to claim them, they decided they should prevent this disaster from even occurring...
+:'''Damionis:''' So, it only stands that there's a high chance of finding valuable treasures in there... provided we can break its seal.
+:{{DIcon|Arrow}} Seal?
+:'''Damionis:''' See that thing over there? That's a Prophecy Tablet, a creation of {{Rubi|Oronyx|Time Titan}}. Its containment mechanism is the very thing keeping this gate locked.
 :{{tx}}
 {{Dialogue End}}
 
 ===Open the seal and progress onward{{subst:void|<!--803010202-->}}===
 {{Mission Description|type=adventure|location=Prophecy Tablet: Room I|update|Damionis says he has plenty of experience, and you just need to follow him...<br />The first gate has him stumped... I feel like you should have negotiated a 90/10 split.}}
 {{Dialogue Start}}
-:{{tx}}
+;(If {{cx}}{{subst:void|<!--{"$type":"RPG.GameCore.ByCompareGroupProperty","DynamicName":{"Value":"SGP_PuzzleState"}}-->}})
+:<pre>{
+	"$type": "RPG.GameCore.AdvCreateGroupEntityV2",
+	"InstanceIDList": [
+		300001,
+		300002,
+		300004
+	]
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.BindPropsCablelines",
+	"StartPropInstanceID": 300001,
+	"EndPropInstanceID": 300002,
+	"LinePropInstanceID": 300004,
+	"LineEffectPath": {
+		"Custom": true,
+		"Key": "LineEffect"
+	},
+	"MoveEffectPath": {
+		"Value": "Effects/Eff_Prefab/Eff_Scene/InteractiveProp/Eff_Chap04_Prop_OracleMachine_01_Ball_Lod0.prefab"
+	},
+	"MoveEffectSpeedOverride": {
+		"IsDynamic": true,
+		"PostfixExpr": {
+			"OpCodes": "AQAR",
+			"FixedValues": [],
+			"DynamicHashes": [
+				584429333
+			]
+		}
+	}
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.SetPropCablelineVisible",
+	"LinePropInstanceID": 300004
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.TriggerEffect",
+	"TargetType": {
+		"$type": "RPG.GameCore.GroupFetchLocalTarget",
+		"TargetType": "Prop",
+		"Targets": [
+			300002
+		]
+	},
+	"Flags": [],
+	"EffectPath": "Effects/Eff_Prefab/Eff_Scene/InteractiveProp/Eff_Chap04_Prop_OracleMachine_01_Hint_Lod0.prefab",
+	"AttachPoint": "Root",
+	"Scale": {
+		"X": 1,
+		"Y": 1,
+		"Z": 1
+	},
+	"SubObjectModifyDataList": []
+}</pre>
+:;(Upon reaching the destination)
+:;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+;(If {{cx}}{{subst:void|<!--{"$type":"RPG.GameCore.ByCompareTarget","TargetType":{"$type":"RPG.GameCore.TargetFetchAdvLocalPlayer"},"CompareType":{"$type":"RPG.GameCore.TargetFetchTaskActionTarget"}}-->}})
+<pre>{
+	"$type": "RPG.GameCore.SetPropCablelineVisible",
+	"LinePropInstanceID": 300004,
+	"IsVisible": true
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.TriggerSound",
+	"SoundName": {
+		"Value": "Ev_sfx_amphoreus_oraclepuzzle_idle"
+	},
+	"EmitterType": "TargetEvaluator",
+	"TargetType": {
+		"$type": "RPG.GameCore.GroupFetchLocalTarget",
+		"TargetType": "Prop",
+		"Targets": [
+			300001
+		]
+	}
+}</pre>
+
+;(Upon reaching the destination)
+;(If {{cx}}{{subst:void|<!--{"$type":"RPG.GameCore.ByCompareTarget","TargetType":{"$type":"RPG.GameCore.TargetFetchAdvLocalPlayer"},"CompareType":{"$type":"RPG.GameCore.TargetFetchTaskActionTarget"}}-->}})
+<pre>{
+	"$type": "RPG.GameCore.SetPropCablelineVisible",
+	"LinePropInstanceID": 300004,
+	"IsVisible": true
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.TriggerSound",
+	"SoundName": {
+		"Value": "Ev_sfx_amphoreus_oraclepuzzle_idle"
+	},
+	"EmitterType": "TargetEvaluator",
+	"TargetType": {
+		"$type": "RPG.GameCore.GroupFetchLocalTarget",
+		"TargetType": "Prop",
+		"Targets": [
+			300001
+		]
+	}
+}</pre>
+;(Unused &mdash; OraclePuzzleEndLinePerform)
+<pre>{
+	"$type": "RPG.GameCore.ToastPage",
+	"MessageOne_DS": {
+		"Custom": true,
+		"Key": "Toast1"
+	},
+	"MessageTwo": {
+		"Hash": 2012001348524219443
+	}
+}</pre>
+::<!--0.4-second delay-->
+:<pre>{
+	"$type": "RPG.GameCore.SetFloorCustomFloat",
+	"Name": {
+		"Custom": true,
+		"Key": "FCV"
+	},
+	"Value": {
+		"FixedValue": {
+			"Value": 1
+		}
+	}
+}</pre>
+::<!--0.5-second delay-->
+:<pre>{
+	"$type": "RPG.GameCore.UnBindPropsCablelines",
+	"LinePropInstanceID": 300004
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.TriggerSound",
+	"SoundName": {
+		"Value": "Ev_sfx_amphoreus_oraclepuzzle_idle_stop"
+	},
+	"EmitterType": "TargetEvaluator",
+	"TargetType": {
+		"$type": "RPG.GameCore.GroupFetchLocalTarget",
+		"TargetType": "Prop",
+		"Targets": [
+			300001
+		]
+	}
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.RemoveEffect",
+	"TargetType": {
+		"$type": "RPG.GameCore.GroupFetchLocalTarget",
+		"TargetType": "Prop",
+		"Targets": [
+			300002
+		]
+	},
+	"EffectPath": "Effects/Eff_Prefab/Eff_Scene/InteractiveProp/Eff_Chap04_Prop_OracleMachine_01_Hint_Lod0.prefab",
+	"Flags": []
+}</pre>
+
+;(Unused &mdash; OraclePuzzleStartLinePerform)
+<pre>{
+	"$type": "RPG.GameCore.PropEnableCollider",
+	"SpecifiedRelativePaths": [],
+	"TargetType": {
+		"$type": "RPG.GameCore.GroupFetchLocalTarget",
+		"TargetType": "Prop",
+		"Targets": [
+			300005
+		]
+	}
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.RequestSetServerGroupProperty",
+	"DynamicName": {
+		"Value": "SGP_PuzzleState"
+	},
+	"Value": 1
+}</pre>
 {{Dialogue End}}
 
 ===Continue delving deeper{{subst:void|<!--803010203-->}}===
 {{Mission Description|type=adventure|location=Prophecy Tablet: Room I|update|Damionis says he has plenty of experience, and you just need to follow him.}}
 {{Dialogue Start}}
-:{{tx}}
+----
+:'''Damionis:''' Ooh, it's open! I knew I had to bring you along. I wouldn't have been able to open it on my own.
+:'''Damionis:''' Alright, I have no idea what we're going to encounter once we walk through here. But that's the spirit of adventuring! Just the thought of it excites me!
+:{{DIcon|Arrow}} Didn't you already draw a map of the place?
+::'''Damionis:''' I asked help from {{Rubi|Aquila|Sky Titan}}'s priest, and I was able to use his prophecy and my personal expertise to briefly survey the area. However, if we want to know what's actually in each room... We will have to find out ourselves.
+::'''Damionis:''' In any case, we had better press on.
+::Woooh, an adventure!
+::'''Damionis:''' Looks like you're even more excited by this prospect than me... You are indeed a true "explorer"!
+::Let's continue onward.
+:{{DIcon|Arrow}} Woooh, an adventure!
+::'''Damionis:''' Looks like you're even more excited by this prospect than me... You are indeed a true "explorer"!
+::Let's continue onward.
+:{{DIcon|Arrow}} Let's continue onward.
 {{Dialogue End}}
 
 ==Other Languages==

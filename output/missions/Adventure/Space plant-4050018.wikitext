@@ -33,7 +33,39 @@ PageTitle=#Space Plant#
 -->
 ==Dialogue==
 {{Stub Dialogue}}
+<pre>{
+	"$type": "RPG.GameCore.CreateProp",
+	"GroupID": {
+		"FixedValue": {
+			"Value": 112
+		}
+	},
+	"GroupPropID": {
+		"FixedValue": {
+			"Value": 300005
+		}
+	}
+}</pre>
+;(Upon reaching the destination)
 
+;(Upon reaching the destination)
+<pre>{
+	"$type": "RPG.GameCore.PlayNPCBubbleTalk",
+	"BubbleTalkInfoList": [
+		{
+			"AutoSkipTime": 1,
+			"GroupID": 56,
+			"GroupNpcID": 400001,
+			"TalkSentenceID": 405180100
+		}
+	]
+}</pre>
+
+;(Talk to Pom-Pom)
+:'''Pom-Pom:''' (Trailblazer)...
+<pre>{
+	"$type": "RPG.GameCore.ShowMenu"
+}</pre>
 {{Dialogue End}}
 
 ==Other Languages==

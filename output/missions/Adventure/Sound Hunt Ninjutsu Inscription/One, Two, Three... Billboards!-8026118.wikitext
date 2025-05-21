@@ -22,7 +22,6 @@ PageTitle=#One, Two, Three... Billboards!#
 '''''One, Two, Three... Billboards!''''' is an Event [[Adventure Mission]] from the [[Sound Hunt Ninjutsu Inscription]] event.
 
 ==Steps==
-# Collect inspiration for composing a song by wandering around the Golden Hour
 # Play the new arcade game developed by the Intellitron merchant
 
 <!--
@@ -34,16 +33,65 @@ PageTitle=#One, Two, Three... Billboards!#
 -->
 ==Dialogue==
 {{Stub Dialogue}}
-===Collect inspiration for composing a song by wandering around the Golden Hour{{subst:void|<!--802611801-->}}===
-{{Mission Description|type=adventure|location=Golden Hour|You've become the manager of the music party's performing band, and now your band needs to complete 3 performances on the stage in the middle of the campus.<br />Wander around the Golden Hour to help Rappa collect inspiration for composing.}}
+===Play the new arcade game developed by the Intellitron merchant{{subst:void|<!--802611803-->}}===
+{{Mission Description|type=adventure|location=Golden Hour|You've become the manager of the music party's performing band, and now your band needs to complete 3 performances on the stage in the middle of the campus.<br />Obtain a record of the billboard's beats. Help Rappa collect inspiration to help with composing.}}
 {{Dialogue Start}}
-:{{tx}}
-{{Dialogue End}}
 
-===Play the new arcade game developed by the Intellitron merchant{{subst:void|<!--802611804-->}}===
-{{Mission Description|type=adventure|location=Golden Hour|update|You've become the manager of the music party's performing band, and now your band needs to complete 3 performances on the stage in the middle of the campus.<br />Obtain a record of the billboard's beats. Help Rappa collect inspiration to help with composing.}}
-{{Dialogue Start}}
-:{{tx}}
+;(Talk to Intellitron Merchant)
+:'''Intellitron Merchant:''' It won't cost anything to playtest this new game. Immerse yourself in a perfect game experience at no cost. It's guaranteed high-octane, 100% assured fun!
+:{{DIcon|Travel Log}} Let me play it.
+:<pre>{
+	"$type": "RPG.GameCore.ShowUI",
+	"Name": "Ui.MusicRhythm.MusicRhythmChooseLevelPage",
+	"WaitForExit": true,
+	"Param": {
+		"Value": "9"
+	},
+	"OnUIExitImmediately": [
+		{
+			"$type": "RPG.GameCore.EndDialogueEntityInteract"
+		}
+	]
+}</pre>
+:{{DIcon|Exit}} I've got something else to do.
+
+;(Unused &mdash; MusicRhythm_ShowUI)
+<pre>{
+	"$type": "RPG.GameCore.WaitFrame"
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.ShowUI",
+	"Name": "Ui.MusicRhythm.MusicRhythmChooseLevelPage",
+	"WaitForExit": true,
+	"Param": {
+		"Value": "9"
+	},
+	"OnUICustomEvent": [],
+	"OnUIExitImmediately": [
+		{
+			"$type": "RPG.GameCore.EndDialogueEntityInteract"
+		}
+	]
+}</pre>
+
+;(Talk to Intellitron Merchant)
+:'''Intellitron Merchant:''' It won't cost anything to playtest this new game. Immerse yourself in a perfect game experience at no cost. It's guaranteed high-octane, 100% assured fun!
+:{{DIcon|Travel Log}} Let me play it.
+:<pre>{
+	"$type": "RPG.GameCore.ShowUI",
+	"Name": "Ui.MusicRhythm.MusicRhythmChooseLevelPage",
+	"WaitForExit": true,
+	"Param": {
+		"Value": "9"
+	},
+	"OnUIExitImmediately": [
+		{
+			"$type": "RPG.GameCore.EndDialogueEntityInteract"
+		}
+	]
+}</pre>
+:{{DIcon|Exit}} I've got something else to do.
+
 {{Dialogue End}}
 
 ==Other Languages==

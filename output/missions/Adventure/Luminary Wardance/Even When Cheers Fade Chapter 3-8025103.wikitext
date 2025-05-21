@@ -11,7 +11,7 @@ PageTitle=#Even When Cheers Fade: Chapter 3#
 |chapter       = Luminary Wardance
 |requirements  = [[Adventure Mission]] ''[[The Barren Land Birthed a Brave Soul]]'' completed
 |summary       = Luka wins Argenti's approval in the repechage and returns to the Luminary Wardance's arena.<br />As you gradually approach the "Ringmaster's Challenge" fight, you also draw closer to Igor's regret-filled career.
-|characters    = Awkward Freelance Journalist; Carmella; Guinaifen; Luka; Press Officer; Tabloid Journalist; Trailblazer
+|characters    = Trailblazer
 |startLocation = [[The Xianzhou Luofu]] - [[Skysplitter]]
 |world         = The Xianzhou Luofu
 |area          = Skysplitter
@@ -38,18 +38,74 @@ PageTitle=#Even When Cheers Fade: Chapter 3#
 ===Return to the lounge and prepare for the Popularity Repechage{{subst:void|<!--802510301-->}}===
 {{Mission Description|type=adventure|location=Skysplitter|The Luofu made a great call to invite the Knights of Beauty as guests.<br />Firstly, they all look good, so the tickets sell like hotcakes. Secondly, they have both outstanding martial prowess and peerless morals, so they would never accidentally hurt their opponent. Thirdly, they're basically monastic monks and do not care much for the invitation fee, making them very cost-effective.<br />Now that you think about it, Argenti really does take a liking to Luka. Maybe it's because they look similar.}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Luka)
+
 {{Dialogue End}}
 
 ===Start the Popularity Repechage and accept Argenti's trial{{subst:void|<!--802510307-->}}===
 {{Dialogue Start}}
-:{{tx}}
+
+;(Unused &mdash; FightFest_MainRace_802510302)
+<pre>{
+	"$type": "RPG.GameCore.PerformanceEndSeq",
+	"Cases": [
+		{
+			"Case": 1,
+			"OnSuccess": [
+				{
+					"$type": "RPG.GameCore.TriggerFightFestLineupInMission",
+					"RaceID": 1003,
+					"OnConfirm": [
+						{
+							"$type": "RPG.GameCore.TriggerPerformance",
+							"ValueSource": {},
+							"PerformanceType": "E",
+							"PerformanceID": 1802510103,
+							"MaskConfig": {}
+						},
+						{
+							"$type": "RPG.GameCore.TriggerFightFestBattleInMission"
+						}
+					]
+				}
+			]
+		}
+	]
+}</pre>
+
+;(Unused &mdash; G62_TriggerBattle)
+<pre>{
+	"$type": "RPG.GameCore.PerformanceEndSeq",
+	"Cases": [
+		{
+			"Case": 1,
+			"OnSuccess": [
+				{
+					"$type": "RPG.GameCore.TriggerFightFestLineupInMission",
+					"RaceID": 1003,
+					"OnConfirm": [
+						{
+							"$type": "RPG.GameCore.TriggerPerformance",
+							"ValueSource": {},
+							"PerformanceType": "E",
+							"PerformanceID": 1802510103,
+							"MaskConfig": {}
+						},
+						{
+							"$type": "RPG.GameCore.TriggerFightFestBattleInMission"
+						}
+					]
+				}
+			]
+		}
+	]
+}</pre>
 {{Dialogue End}}
 
 ===Hold the press conference{{subst:void|<!--802510309-->}}===
 {{Mission Description|type=adventure|location=Skysplitter|update|Press conferences are a specialty of sporting events. You've gotta experience it.<br />Are you prepared to face the cunning, plotting, devious, and conniving friends working in the media industry?<br />It's time to have a battle of wits against them.}}
 {{Dialogue Start}}
-:{{tx}}
 {{Dialogue End}}
 
 ==Other Languages==

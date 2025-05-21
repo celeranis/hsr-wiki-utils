@@ -40,25 +40,100 @@ PageTitle=#The Youths Who Chase Dreams#
 ===Investigate the unfamiliar room{{subst:void|<!--103020201-->}}===
 {{Mission Description|type=trailblaze|location=Gallery of Thoughts|Under the guidance of a sweet voice, your thoughts grow clouded and flowing, transcending reality along with the smoke that fills your room, as you arrive in a Dreamscape created from a "Memory Zone." However, the scene you find before you is not a beautiful dream. It seems more like a nightmare. Not only that, but this room has a faint air of déjà vu about it.<br />Have you actually entered Penacony? It seems that you must find a way to make sense of your situation.}}
 {{Dialogue Start}}
-:{{tx}}
+
+
+:{{DIcon|Loupe}} Investigate
+:{{A|VO chapter3 1 player 110 m.ogg}} {{A|VO chapter3 1 player 110 f.ogg}} '''(Trailblazer):''' (A... note?)
+<pre>{
+	"$type": "RPG.GameCore.ShowReading",
+	"BookID": {
+		"FixedValue": {
+			"Value": 190555
+		}
+	}
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.AdvDestroyGroupEntity",
+	"InstanceIDList": [
+		300001
+	]
+}</pre>
+:{{A|VO chapter3 1 player 108 m.ogg}} {{A|VO chapter3 1 player 108 f.ogg}} '''(Trailblazer):''' (So this is... the Dreamscape?)
+:{{A|VO chapter3 1 player 109 m.ogg}} {{A|VO chapter3 1 player 109 f.ogg}} '''(Trailblazer):''' (The atmosphere here creeps me out, and... what was that weird noise just now?)
+
+:{{DIcon|Loupe}} Investigate
+:{{A|VO chapter3 1 tishi 108.ogg}} '''Broadcaster:''' The dreamscape ██ █ ██ hotel █ ██ under construction. Please ██ █ receive instructions from ho█ service ██ █aff and enter the ███ █ through the designated █ █ ██...
+
+:{{DIcon|Loupe}} Investigate
+:This door appears unopenable from this side.
 {{Dialogue End}}
 
 ===Investigate the source of the sound{{subst:void|<!--103020202-->}}===
 {{Mission Description|type=trailblaze|location=Gallery of Thoughts|update|Under the guidance of a sweet voice, your thoughts grow clouded and flowing, transcending reality along with the smoke that fills your room, as you arrive in a Dreamscape created from a "Memory Zone." However, the scene you find before you is not a beautiful dream. It seems more like a nightmare. Not only that, but this room has a faint air of déjà vu about it.<br />As you investigate, you hear a panicked shout coming from a certain spot in the room... Perhaps you should go and check just who this voice belongs to.}}
 {{Dialogue Start}}
-:{{tx}}
+
+:{{A|VO chapter3 1 misha 115.ogg}} '''Misha:''' This way! Can you see me? Over here!
+:{{A|VO chapter3 1 misha 116.ogg}} '''Misha:''' Please come this way!
+<pre>{
+	"$type": "RPG.GameCore.WaitMissionTalkFinish"
+}</pre>
+:{{A|VO chapter3 1 player 111 m.ogg}} {{A|VO chapter3 1 player 111 f.ogg}} '''(Trailblazer):''' (I thought I heard a familiar voice... Is it coming from the painting?)
 {{Dialogue End}}
 
 ===Speak with the hotel bellboy{{subst:void|<!--103020203-->}}===
 {{Mission Description|type=trailblaze|location=Gallery of Thoughts|update|As you touch the frame, you are pulled in by an irresistible force, coming to a "World Within the Painting"... No, this is actually just another area of the Dreamscape, a very long corridor.<br />The hotel bellboy Misha is awaiting you here. It seems he wishes to speak with you.}}
 {{Dialogue Start}}
-:{{tx}}
+:<!--1-second delay-->
+:{{A|VO chapter3 1 misha 117.ogg}} '''Misha:''' Ah, you're here! Wonderful!
+:{{A|VO chapter3 1 misha 118.ogg}} '''Misha:''' Oh, I... I thought you wouldn't notice me...
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+----
+:{{A|VO chapter3 1 misha 119.ogg}} '''Misha:''' Welcome to the Gallery of Thoughts! You can think of this as the entrance to the Golden Hour. I'm here to provide guidance to our guests.
+:{{DIcon|Arrow}} We meet again.
+::{{A|VO chapter3 1 misha 120.ogg}} '''Misha:''' Huh, you remember me? I'm so glad.
+:{{DIcon|Arrow}} This whole place looks weird.
+:{{A|VO chapter3 1 misha 121.ogg}} '''Misha:''' This is a temporary interchange, so it looks a little rundown... The Reverie in the dreamscape is currently undergoing a revamp.
+:{{A|VO chapter3 1 misha 122.ogg}} '''Misha:''' I apologize for any unpleasantness in your stay... but if you enter the Golden Hour, I'm sure all your troubles will dissipate in an instant!
+:{{DIcon|Talk}} What happened to The Reverie?
+::{{A|VO chapter3 1 misha 123.ogg}} '''Misha:''' You're asking about The Reverie in the dreamscape, right? I'm not sure exactly either, I'm sorry...
+:;(Return to previous option selection)
+:{{DIcon|Talk}} What is "Golden Hour?"
+::{{A|VO chapter3 1 misha 124.ogg}} '''Misha:''' You've perhaps read about it in your Dreamscape Pass, but I can explain one more time!
+::{{A|VO chapter3 1 misha 125.ogg}} '''Misha:''' Golden Hour is one of the twelve dreamscapes in Penacony, and its time coincides with midnight. Here, the dream's time is forever stuck in the moment before midnight. Tomorrow will not come, and this night of revelry will never end...
+::{{A|VO chapter3 1 misha 126.ogg}} '''Misha:''' ...Ah, but that doesn't mean that time has stopped in the dream. To avoid any physical or mental burden on guests, time in the dream has been synced with reality's, so don't worry!
+:;(Return to previous option selection)
+:{{DIcon|Talk}} I just picked up a note...
+::{{A|VO chapter3 1 misha 127.ogg}} '''Misha:''' Note? Did you find it in the room?
+::{{A|VO chapter3 1 misha 128.ogg}} '''Misha:''' Ah... It wasn't trash left behind by the previous guest, was it...?
+::{{A|VO chapter3 1 misha 129.ogg}} '''Misha:''' It was my mistake &mdash; I failed to tidy up properly, and caused an inconvenience for you... I'm truly sorry!
+:;(Return to previous option selection)
+:{{DIcon|Arrow}} How do I get to Golden Hour?
+::{{A|VO chapter3 1 misha 130.ogg}} '''Misha:''' You just go right through that door to reach Golden Hour. I wish you an unforgettable dream!
 {{Dialogue End}}
 
 ===Go to Penacony: The Golden Hour{{subst:void|<!--103020204-->}}===
 {{Mission Description|type=trailblaze|location=Gallery of Thoughts|update|Having heard Misha's explanation, you come to understand that the Reverie hotel within the dream is under maintenance and all guests must therefore pass through a temporary transfer station in order to reach Golden Hour. This is the true nature of the room you were just in.<br />Now, you need only touch the other picture frame to finally enter Penacony.}}
 {{Dialogue Start}}
-:{{tx}}
+
+
+;(Talk to Misha)
+:{{A|VO chapter3 1 misha 131.ogg}} '''Misha:''' Right through that doorway is Golden Hour. If you've any other questions, I'm more than happy to answer them!
+:{{DIcon|Talk}} What happened to The Reverie?
+::{{A|VO chapter3 1 misha 132.ogg}} '''Misha:''' You're asking about The Reverie in the dreamscape, right? I'm not sure exactly either, I'm sorry...
+:;(Return to previous option selection)
+:{{DIcon|Talk}} What is "Golden Hour?"
+::{{A|VO chapter3 1 misha 133.ogg}} '''Misha:''' You've perhaps read about it in your Dreamscape Pass, but I can explain one more time!
+::{{A|VO chapter3 1 misha 134.ogg}} '''Misha:''' Golden Hour is one of the twelve dreamscapes in Penacony, and its time coincides with midnight. Here, the dream's time is forever stuck in the moment before midnight. Tomorrow will not come, and this night of revelry will never end...
+::{{A|VO chapter3 1 misha 135.ogg}} '''Misha:''' ...Ah, but that doesn't mean that time has stopped in the dream. To avoid any physical or mental burden on guests, time in the dream has been synced with reality's, so don't worry!
+:;(Return to previous option selection)
+:{{DIcon|Arrow}} I've nothing else to ask, thank you.
+::{{A|VO chapter3 1 misha 136.ogg}} '''Misha:''' I wish you unforgettable dreams in Penacony!
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{A|VO chapter3 1 player 112 m.ogg}} {{A|VO chapter3 1 player 112 f.ogg}} '''(Trailblazer):''' (Behind this door is the real Penacony... I'm looking forward to it.)
 {{Dialogue End}}
 
 ==Other Languages==

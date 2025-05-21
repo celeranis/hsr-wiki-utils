@@ -33,7 +33,151 @@ PageTitle=##
 -->
 ==Dialogue==
 {{Stub Dialogue}}
+<pre>{
+	"$type": "RPG.GameCore.CreateProp",
+	"GroupID": {
+		"FixedValue": {
+			"Value": 93
+		}
+	},
+	"GroupPropID": {
+		"FixedValue": {
+			"Value": 300002
+		}
+	}
+}</pre>
+:<!--1-second delay-->
+:'''???:''' M&mdash;My blade!
+:A man appears behind you, wearing a pained expression, but something in his expression betrays a sense of practice.
+:'''Unfamiliar Man:''' My heirloom sword! How could you damage it like this!? P&mdash;Pay me back!
+:Oh, there it comes! Every time I go off-world, I'll feel like it's a waste of time if I can't find any street cheats and experience a little about the dark side of humanity.
+:The man grows serious, as if angered by your indifferent expression.
+:'''Unfamiliar Man:''' {{MC|f=Girl|m=Boy}}, do you realize how much effort goes into crafting one of these Devastator Glaives for the Cloud Knights?
+:Then he spouted industrial jargon such as "propulsion weapon" and "monomolecular blade," filling the surrounding street with a hint of academia.
+:'''Unfamiliar Man:''' So how are you gonna pay me back, then?
+;(If {{cx}}{{subst:void|<!--{"$type":"RPG.GameCore.ByCompareItemNum","ItemPair":[{"ItemID":2,"ItemNum":500}]}-->}})
+::{{DIcon|Arrow}} Your blade? Call it, and see if it answers you.
+::<pre>{
+	"$type": "RPG.GameCore.SetMissionCustomValue",
+	"SubmissionID": 404020902,
+	"MissionCustomValue": {
+		"Name": "OldValue_0",
+		"ValidValueParamList": []
+	},
+	"CustomValue": 1
+}</pre>
+:::'''Unfamiliar Man:''' You rascal! This sword is engraved with my ancestor's name on it &mdash; the character Quan, meaning wellspring. This should prove that it is beyond a doubt, my family heirloom!
+:::{{DIcon|Arrow}} Why have you engraved a character on my sword?
+:::{{DIcon|Arrow}} That's right, I myself engraved the character Quan on it.
+:::'''Unfamiliar Man:''' ...
+:::Dumbstruck by your righteous statement, the man remains speechless for a moment.
+:::'''Unfamiliar Man:''' Don't get smart with me, {{MC|f=missy|m=scoundrel}}! Seems like I'll have to teach you a little lesson here that you won't soon forget.
+:::You just stand there in silence, looking on. The man's face turns blue and then white, as if sizing you up.
+:::Finally, the stranger backs off and disappears into the streets.
+::{{DIcon|Arrow}} What is this blade made of, anyway? Ceramic? It's so fragile.
+::<pre>{
+	"$type": "RPG.GameCore.SetMissionCustomValue",
+	"SubmissionID": 404020902,
+	"MissionCustomValue": {
+		"Name": "OldValue_0"
+	},
+	"CustomValue": 1
+}</pre>
+:::'''Unfamiliar Man:''' I can see you must be new around here, Outworlder, so a little history lesson. A long-life species possession like this has a history of at least eight hundred years!
+:::'''Unfamiliar Man:''' To you, it may look like any ordinary blade. But in our eyes, it's a cultural relic that's broken enemy lines. It fought through centuries of vicissitudes, slain the Abominations of Abundance, as well as many a valiant enemy. Who could ever imagine its noble fate being in the hands of such an ignorant little pipsqueak!
+:::'''Unfamiliar Man:''' C'mon, I'm in a hurry... How much can you pay in damages?
+:::{{DIcon|Arrow}} Let's ask the Cloud Knights...
+:::{{DIcon|Arrow}} How can such a precious relic just be left on the street like this?
+:::'''Unfamiliar Man:''' ...
+:::Your straight-to-the-point remarks shocked the man, rendering him speechless for a moment.
+:::'''Unfamiliar Man:''' Don't get smart with me, {{MC|f=missy|m=scoundrel}}! Seems like I'll have to teach you a little lesson here that you won't soon forget.
+:::You just stand there in silence, looking on. The man's face turns blue and then white, as if realizing the mistake in what he'd just said.
+:::Finally, the stranger backs off and disappears into the streets.
+::{{DIcon|Arrow}} Enough, how much do you want?
+:::'''Unfamiliar Man:''' ...Aren't you even going to fight me a couple of times? Here I am, expecting you to come back at me with something.
+:::{{DIcon|Arrow}} Nothing, really &mdash; it's just money.
+:::{{DIcon|Arrow}} Quit dawdling! I'm in a hurry.
+:::The man didn't expect everything to have gone so smoothly. He frowns and spreads open his palms.
+:::'''Unfamiliar Man:''' 500 credits!
+:::{{DIcon|Arrow}} Take it. Just quit doing this.
+:::<pre>{
+	"$type": "RPG.GameCore.SetMissionCustomValue",
+	"SubmissionID": 404020902,
+	"MissionCustomValue": {
+		"Name": "OldValue_0"
+	},
+	"CustomValue": 2
+}</pre>
+::::'''Unfamiliar Man:''' Th&mdash;Thank you, {{MC|f=milady|m=milord}}!
+:::{{DIcon|Arrow}} No, 250! That's my price!
+:::<pre>{
+	"$type": "RPG.GameCore.SetMissionCustomValue",
+	"SubmissionID": 404020902,
+	"MissionCustomValue": {
+		"Name": "OldValue_0"
+	},
+	"CustomValue": 3
+}</pre>
+::::'''Unfamiliar Man:''' *clench teeth* 250 it is!
+:::He looks at you incredulously, before taking the money and scarpering off around the corner.
+;(If {{cx}}{{subst:void|<!--{"$type":"RPG.GameCore.ByCompareItemNum","ItemPair":[{"ItemID":2,"ItemNum":500}]}-->}})
+::{{DIcon|Arrow}} Your blade? Call it, and see if it answers you.
+::<pre>{
+	"$type": "RPG.GameCore.SetMissionCustomValue",
+	"SubmissionID": 404020902,
+	"MissionCustomValue": {
+		"Name": "OldValue_0",
+		"ValidValueParamList": []
+	},
+	"CustomValue": 1
+}</pre>
+:::'''Unfamiliar Man:''' You rascal! This sword is engraved with my ancestor's name on it &mdash; the character Quan, meaning wellspring. This should prove that it is beyond a doubt, my family heirloom!
+:::{{DIcon|Arrow}} Why have you engraved a character on my sword?
+:::{{DIcon|Arrow}} That's right, I myself engraved the character Quan on it.
+:::'''Unfamiliar Man:''' ...
+:::Dumbstruck by your righteous statement, the man remains speechless for a moment.
+:::'''Unfamiliar Man:''' Don't get smart with me, {{MC|f=missy|m=scoundrel}}! Seems like I'll have to teach you a little lesson here that you won't soon forget.
+:::You just stand there in silence, looking on. The man's face turns blue and then white, as if sizing you up.
+::{{DIcon|Arrow}} What is this blade made of, anyway? Ceramic? It's so fragile.
+::<pre>{
+	"$type": "RPG.GameCore.SetMissionCustomValue",
+	"SubmissionID": 404020902,
+	"MissionCustomValue": {
+		"Name": "OldValue_0"
+	},
+	"CustomValue": 1
+}</pre>
+:::'''Unfamiliar Man:''' I can see you must be new around here, Outworlder, so a little history lesson. A long-life species possession like this has a history of at least eight hundred years!
+:::'''Unfamiliar Man:''' To you, it may look like any ordinary blade. But in our eyes, it's a cultural relic that's broken enemy lines. It fought through centuries of vicissitudes, slain the Abominations of Abundance, as well as many a valiant enemy. Who could ever imagine its noble fate being in the hands of such an ignorant little pipsqueak!
+:::'''Unfamiliar Man:''' C'mon, I'm in a hurry... How much can you pay in damages?
+:::{{DIcon|Arrow}} Let's ask the Cloud Knights...
+:::{{DIcon|Arrow}} How can such a precious relic just be left on the street like this?
+:::'''Unfamiliar Man:''' ...
+:::Your straight-to-the-point remarks shocked the man, rendering him speechless for a moment.
+:::'''Unfamiliar Man:''' Don't get smart with me, {{MC|f=missy|m=scoundrel}}! Seems like I'll have to teach you a little lesson here that you won't soon forget.
+:::You just stand there in silence, looking on. The man's face turns blue and then white, as if realizing the mistake in what he'd just said.
+::Finally, the stranger backs off and disappears into the streets.
+----
+;(Upon reaching the destination)
 
+;(Upon reaching the destination)
+:This man's voice seems very familiar to you. Where have you heard it before?
+:{{DIcon|Arrow}} There you are, punk!
+::'''Man Looking for Trouble:''' H&mdash;Have we met before?
+::He tried his best to recall, as though he were a beggar scraping out the last coins from his empty wallet.
+::'''Man Looking for Trouble:''' Every action must be held accountable, yes, but I'm afraid I've lost count of the number of people I've run this scam on...
+:;(If {{F|MissionCV-4040209-undefined}} is greater than or equal to 2)
+:::{{DIcon|Arrow}} Didn't I give you some money so you could turn over a new leaf?
+:::'''Man Looking for Trouble:''' Wuh?
+:::He racks his brains once again, and eventually comes up with a solution after what seems like ages.
+:::'''Man Looking for Trouble:''' You know what they say, every farewell is just an eventual reunion. At the time I was thinking, I've never met anyone in my whole career, who's given up money to me so easily. Surely this young {{MC|f=lady|m=man}} must be either wealthy or foolish...
+:::'''Man Looking for Trouble:''' Turn over a new leaf... Is that what that means? All I've got is a couple of hundred measly credits. What's that good for? You should've at least given me some ten-grand start-up fund, no?
+:::'''Man Looking for Trouble:''' How about this, then &mdash; I got caught by the Realm-Keeping Commission. If you help post my bail and help me out a little, you can be my boss.
+:::'''Man Looking for Trouble:''' Don't look at me like that. I can do anything! Pickpocketing, runnin' scams, backing up the boss... I'm the best flunky around.
+:::'''Man Looking for Trouble:''' No, don't go...
+:;(If {{F|MissionCV-4040209-undefined}} is not greater than or equal to 2)
+:::{{DIcon|Exit}} That's okay, I didn't get scammed anyway.
+:{{DIcon|Exit}} (Forget it. I can't remember)
 {{Dialogue End}}
 
 ==Other Languages==

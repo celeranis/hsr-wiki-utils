@@ -39,50 +39,105 @@ PageTitle=#The Escaped Infernal Fire#
 -->
 ==Dialogue==
 {{Stub Dialogue}}
+:{{A|VO side0 rto ratio 217.ogg}} '''Dr. Ratio:''' The infernal fire is also a form of energy lifeform. The imaging device will pick up its trace. Follow it.
+<pre>{
+	"$type": "RPG.GameCore.WaitMissionTalkFinish"
+}</pre>
 {{Dialogue End}}
 
 ===Track the escaped infernal fire{{subst:void|<!--200090304-->}}===
 {{Mission Description|type=continuance|location=Seclusion Zone|update|Asta was swallowed up by infernal fire before your eyes. You must find traces of the escaped infernal fire first.}}
 {{Dialogue Start}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
 :{{tx}}
+
+;(Talk to Screwllum)
+:{{A|VO side0 rto screwllum 125.ogg}} '''Screwllum:''' I will head to Herta's office and activate the folded space in the Curio storage room. With some changes to its parameters, I can use it to block the fire's teleportation routes and seal it inside the station.
+:{{A|VO side0 rto screwllum 126 m.ogg}} {{A|VO side0 rto screwllum 126 f.ogg}} '''Screwllum:''' Mr. Ratio, please go with {{MC|f=Miss|m=Mr.}} (Trailblazer) and contain the fire.
+:{{A|VO side0 rto ratio 217.ogg}} '''Dr. Ratio:''' The infernal fire is also a form of energy lifeform. The imaging device will pick up its trace. Follow it.
 {{Dialogue End}}
 
 ===Capture the escaped infernal fire{{subst:void|<!--200090313-->}}===
 {{Mission Description|type=continuance|location=Seclusion Zone|update|The power of the infernal fire is visibly declining. This is a great chance to capture it.}}
 {{Dialogue Start}}
-:{{tx}}
+;([[#Gallery|Cutscene]] plays)
+
+
+
+;(Unused &mdash; Talk_200090307)
+<pre>{
+	"$type": "RPG.GameCore.TriggerEntityEvent",
+	"EventName": {
+		"Value": "CltSrv_TriggerOpenLock"
+	},
+	"InstanceID": {
+		"FixedValue": {
+			"Value": 300004
+		}
+	}
+}</pre>
 {{Dialogue End}}
 
 ===Track the escaped infernal fire{{subst:void|<!--200090311-->}}===
 {{Mission Description|type=continuance|location=Seclusion Zone|update|The infernal fire's power is gradually being reduced. Seems like this is a battle of attrition.}}
 {{Dialogue Start}}
-:{{tx}}
 {{Dialogue End}}
 
 ===Capture the escaped infernal fire{{subst:void|<!--200090312-->}}===
 {{Mission Description|type=continuance|location=Seclusion Zone|update|The power of the infernal fire is visibly declining. This is a great chance to capture it.}}
 {{Dialogue Start}}
+
+;(Unused &mdash; Performance_200090312)
 :{{tx}}
+:;([[#Gallery|Cutscene]] plays)
+:;(Enter battle)
+:::{{tx|Enemy list missing}}
+
+;(Unused &mdash; Performance_200090306)
+:{{tx}}
+:<pre>{
+	"$type": "RPG.GameCore.PerformanceExtendEndBlack"
+}</pre>
 {{Dialogue End}}
 
 ===Track the escaped infernal fire{{subst:void|<!--200090307-->}}===
 {{Mission Description|type=continuance|location=Seclusion Zone|update|Despite catching up to the infernal fire, its ability to shuttle through space allows it to escape again.}}
 {{Dialogue Start}}
-:{{tx}}
 {{Mission Description|type=continuance|location=Seclusion Zone|update|The infernal fire has once again escaped from before you. Its ability allowing it to warp between locations is certainly difficult to deal with}}
+
+
 {{Mission Description|type=continuance|location=Seclusion Zone|update|The infernal fire's power is gradually being reduced. Seems like this is a battle of attrition.}}
+;(Unused &mdash; Performance_200090307)
+:{{tx}}
+:<pre>{
+	"$type": "RPG.GameCore.PerformanceExtendEndBlack"
+}</pre>
 {{Dialogue End}}
 
 ===Try to touch the fire wall{{subst:void|<!--200090305-->}}===
 {{Mission Description|type=continuance|location=Seclusion Zone|update|The infernal fire made bizarre walls of flame as it ran away. Passing through these walls of flame will cause deviations in your three-dimensional coordinates.}}
 {{Dialogue Start}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
 :{{tx}}
+<pre>{
+	"$type": "RPG.GameCore.PerformanceExtendEndBlack",
+	"ExtendTime": 1
+}</pre>
 {{Dialogue End}}
 
 ===Track the escaped infernal fire{{subst:void|<!--200090302-->}}===
 {{Mission Description|type=continuance|location=Seclusion Zone|update|Despite catching up to the infernal fire, its ability to shuttle through space allows it to escape again.}}
 {{Dialogue Start}}
+
+;(Unused &mdash; Performance_200090305)
 :{{tx}}
+:<pre>{
+	"$type": "RPG.GameCore.PerformanceExtendEndBlack"
+}</pre>
 {{Dialogue End}}
 
 ==Other Languages==

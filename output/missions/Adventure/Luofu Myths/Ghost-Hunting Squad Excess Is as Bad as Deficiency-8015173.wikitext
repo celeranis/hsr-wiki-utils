@@ -44,49 +44,268 @@ PageTitle=#Ghost-Hunting Squad: Excess Is as Bad as Deficiency#
 ===Discuss with the ghost-hunting squad{{subst:void|<!--801517301-->}}===
 {{Mission Description|type=adventure|location=Fyxestroll Garden|Guinaifen seems to have something she wants to discuss with the ghost-hunting squad...<br />Listen to her and find out what new incident has gone down.}}
 {{Dialogue Start}}
+;(Unused &mdash; test123)
 :{{tx}}
+::<!--1-second delay-->
+:<pre>{
+	"$type": "RPG.GameCore.ShowTransitionLoadingUI",
+	"Name": "Ui.Heliobus.Transition.HeliobusTransitionDialog"
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.ShowUI",
+	"Name": "Ui.Heliobus.SNS.SNSMain.SNSDetail.HeliobusSNSDetailDialog",
+	"WaitForExit": true,
+	"Param": {
+		"Value": "703"
+	},
+	"OnUIEnter": [
+		{
+			"$type": "RPG.GameCore.ExitTransitionLoadingUI"
+		}
+	]
+}</pre>
+::'''Guinaifen:''' Hey fam, even though my intuitions tell me this is fake, I'm still a little worried about it. Wanna go check it out?
+::'''Huohuo:''' Yeah, let's go. I wanna know, too.
+::{{DIcon|Arrow}} Let's go!
+::'''Guinaifen:''' Thanks loads, fam.
+::{{tx}}
+::----
+::'''Guinaifen:''' Hey fam, even though my intuitions tell me this is fake, I'm still a little worried about it. Wanna go check it out?
+::'''Huohuo:''' Yeah, let's go. I wanna know, too.
+::{{DIcon|Arrow}} Let's go!
+::'''Guinaifen:''' Thanks loads, fam.
+::{{tx}}
+::----
 {{Dialogue End}}
 
 ===Head to Cloudford and investigate{{subst:void|<!--801517302-->}}===
 {{Mission Description|type=adventure|location=Cloudford|update|Since the post points to Locker No. 13 in Cloudford, go investigate it.<br />However, you keep feeling things aren't as simple.}}
 {{Dialogue Start}}
-:{{tx}}
+;(Unused &mdash; P_801517303)
+<pre>{
+	"$type": "RPG.GameCore.AdvDestroyGroupEntity",
+	"InstanceIDList": [
+		300001
+	]
+}</pre>
+::{{tx}}
+::'''Guinaifen:''' This is the right place, based on the location mentioned in the post.
+::{{DIcon|Arrow}} Looks pretty normal around here.
+:::'''Sushang:''' Where's this "creaky old empty warehouse" then? There's not a soul around.
+:::You guys find anything yet?
+::{{DIcon|Arrow}} You guys find anything yet?
+::'''Huohuo:''' Nothing special around here. It all seems pretty normal. It's just that everywhere around here just seems kinda... empty?
+::----
+::{{tx}}
+
+;(Unused &mdash; CreateEntity_801517303)
+<pre>{
+	"$type": "RPG.GameCore.AdvCreateGroupEntity",
+	"InstanceIDList": [
+		400001
+	]
+}</pre>
 {{Dialogue End}}
 
 ===Speak with the suspicious person{{subst:void|<!--801517303-->}}===
 {{Mission Description|type=adventure|location=Cloudford|update|Someone has been quietly following you ever since you arrived at Cloudford.<br />Locker No. 13 is suspicious, but this person is even more so. Hurry and question them.}}
 {{Dialogue Start}}
+;(Unused &mdash; P_801517304)
+:{{tx}}
+:<pre>{
+	"$type": "RPG.GameCore.AdvDestroyEntityAsync",
+	"InstanceIDList": [
+		400001
+	]
+}</pre>
+::{{DIcon|Arrow}} Were you just staring at us?
+::'''Curious Passerby:''' One of you girls looks like someone I know... You, you there. Are you that famous vlogger who went viral recently? Little Gui, right?
+::{{tx}}
+::{{Black Screen|Everything seemed normal enough, so the squad decided to stay and watch a while longer.}}
+:{{tx}}
+<pre>{
+	"$type": "RPG.GameCore.ShowTransitionLoadingUI",
+	"Name": "Ui.Heliobus.Transition.HeliobusTransitionDialog"
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.ShowUI",
+	"Name": "Ui.Heliobus.SNS.SNSMain.SNSDetail.HeliobusSNSDetailDialog",
+	"WaitForExit": true,
+	"Param": {
+		"Value": "504"
+	},
+	"OnUIEnter": [
+		{
+			"$type": "RPG.GameCore.ExitTransitionLoadingUI"
+		}
+	],
+	"OnUICustomEvent": []
+}</pre>
+:'''Guinaifen:''' My internal radar is tingling and giving me a special feeling.
+:'''Sushang:''' Well, we trust your instincts. Let's go.
+:{{DIcon|Arrow}} Let's go!
+:'''Huohuo:''' Let's go.
 :{{tx}}
 {{Dialogue End}}
 
 ===Head to Aurum Alley and investigate{{subst:void|<!--801517305-->}}===
 {{Mission Description|type=adventure|location=Aurum Alley|update|Since the post points to a mysterious pawnshop in Aurum Alley, go investigate it.<br />However, you keep feeling things aren't as simple.<br />Isn't it the same as before?}}
 {{Dialogue Start}}
+
+;(Talk to Guinaifen)
+:{{tx}}
+<pre>{
+	"$type": "RPG.GameCore.AdvDestroyGroupEntity",
+	"InstanceIDList": [
+		400001
+	]
+}</pre>
+:{{DIcon|Arrow}} Sushang and Huohuo are still on their way?
+::'''Guinaifen:''' I sent them ahead to go find some other people and ask around about it.
+::I don't think I've seen any billboards around.
+:{{DIcon|Arrow}} I don't think I've seen any billboards around.
+:'''Guinaifen:''' That's normal.
+:'''Guinaifen:''' In all my time of hanging out around the Aurum Alley, I've never seen any "pawnshop" here.
+:'''Guinaifen:''' No wonder why I've been walking around all day but still haven't found anything weird. That so-called "scandal" from the post has got to be made up.
+:{{DIcon|Arrow}} Bad luck. I missed out this time, too...
+::'''Guinaifen:''' No, it's not "bad luck." In my estimation, this is someone causing trouble behind the scenes.
+::They must be bored. You know what? You should write novels.
+:{{DIcon|Arrow}} They must be bored. You know what? You should write novels.
+:'''Guinaifen:''' It's just tilting at windmills, nothing more.
+:'''Guinaifen:''' We missed out last time at Cloudford, and this time we were hustled again at the Aurum Alley.
+:'''Guinaifen:''' I find this all really weird. The user who posted up last time was GuiguiSpicySourJuice, and this post is by SweetBoba_4_SweetGui.
+:{{DIcon|Arrow}} I guess they like juice?
+::'''Guinaifen:''' Hardly any fans call me that, plus... the usernames are all weird juicy names.
+::Do you think it's the same person?
+:{{DIcon|Arrow}} Do you think it's the same person?
+----
+:'''Guinaifen:''' ...This is different from that post...
+:Sushang and Huohuo are still on their way?
+:'''Guinaifen:''' I sent them ahead to go find some other people and ask around about it.
+:I don't think I've seen any billboards around.
+:'''Guinaifen:''' That's normal.
+:'''Guinaifen:''' In all my time of hanging out around the Aurum Alley, I've never seen any "pawnshop" here.
+:'''Guinaifen:''' No wonder why I've been walking around all day but still haven't found anything weird. That so-called "scandal" from the post has got to be made up.
+:Bad luck. I missed out this time, too...
+:'''Guinaifen:''' No, it's not "bad luck." In my estimation, this is someone causing trouble behind the scenes.
+:They must be bored. You know what? You should write novels.
+:'''Guinaifen:''' It's just tilting at windmills, nothing more.
+:'''Guinaifen:''' We missed out last time at Cloudford, and this time we were hustled again at the Aurum Alley.
+:'''Guinaifen:''' I find this all really weird. The user who posted up last time was GuiguiSpicySourJuice, and this post is by SweetBoba_4_SweetGui.
+:I guess they like juice?
+:'''Guinaifen:''' Hardly any fans call me that, plus... the usernames are all weird juicy names.
+:Do you think it's the same person?
+:'''Guinaifen:''' I suspect they're from the same person. We've confirmed now that both posts are totally fake news. That means: This person is deliberately spreading disinformation.
+:'''Guinaifen:''' As for their goal? Hmm... I don't know who they are, so the motives for doing this are all going to be strange. But I'm thinking, the kind of person who'd do this has to be one of my haters...
+:You listen carefully to Guinaifen's analysis when you feel sight lines locking on to you from not too far away. Instantly, you realize something is wrong.
+:{{DIcon|Arrow}} Little Gui, someone's watching us.
+:'''Guinaifen:''' Huh? That's sus. Don't show our hand. You lead the way. Let's just rush over and ask what's going on.
 :{{tx}}
 {{Dialogue End}}
 
 ===Speak with the suspicious person{{subst:void|<!--801517306-->}}===
 {{Mission Description|type=adventure|location=Aurum Alley|update|Someone has been quietly following you ever since you arrived at Aurum Alley.<br />The mysterious pawnshop is suspicious, but this person is even more so. Hurry and question them.<br />You are experienced enough to know these things shouldn't keep happening.}}
 {{Dialogue Start}}
+;(Unused &mdash; P_801517308)
 :{{tx}}
+::'''Guinaifen:''' ...Hang on. You seem really familiar. Have we met?
+::{{DIcon|Arrow}} The girl in the Cloudford last time &mdash; it's her!
+::'''Guinaifen:''' Why are you stalking us? Go on, tell us &mdash; otherwise I'll have to report you to the Realm-Keeping Commission.
+::'''Manman:''' Guigui, please don't be mad. I'm Manman and I'm sorry for scaring you just now. I didn't mean to hurt you or to do anything bad to you. I just...
+::'''Guinaifen:''' "Guigui"!? I knew it. You're the one who made those posts! What are you doing making posts like that?
+::'''Manman:''' I... actually I... am one of your fans. I saw you were soliciting contributions and that you were making real life trips around, so I wondered if I might get a chance to try and meet you.
+::'''Manman:''' And so I tried, but... I have to say, you're so cute in-person even when you're angry~ Your face is much smaller than on the screen. Just too cute.
+::'''Manman:''' I just wanted to see you with my own eyes and really didn't mean anything else by it... During the hundred thousand fans event, I even submitted a question about whether you'd be doing any fan meet-and-greets &mdash; but sadly my question never got picked.
+::'''Guinaifen:''' I have no words. This is the first time I've ever met a "fan" like this. Back in my hometown, even little kids know there's a proper set of rules to follow when conducting oneself &mdash; hang on, based on the Xianzhou standards... are you a minor?
+::'''Manman:''' Oh, yeah... I'm still in school. But in terms of age, I'm far older than you are.
+::{{DIcon|Arrow}} Minors shouldn't be following streamers!
+:::'''Guinaifen:''' Right? You're not yet an adult. Why are you watching streams when you should be studying?
+:::Looks like I'll have to pay your teacher a visit...
+::{{DIcon|Arrow}} Looks like I'll have to pay your teacher a visit...
+::'''Guinaifen:''' Mmm-hmm, good idea (Trailblazer).
+::'''Guinaifen:''' Ahem, minors watching my stream is what scares me the most. Every few days, I'll get their parents requesting a refund and I'll get stung with the processing fee, meaning all my hard work streaming amounts to nothing.
+::'''Manman:''' My family, they've never cared about me spending money... They won't ask for any refund. You can count on that.
+::'''Guinaifen:''' Ahem, y&mdash;you think it's just about a refund?
+::'''Guinaifen:''' Do you know how much effort we put into proving whether these supernatural stories of yours were true or not?
+::{{DIcon|Arrow}} We were so busy that we couldn't even accept any ads!
+::{{DIcon|Arrow}} Yeah, our squad trip was all messed up by you!
+::'''Manman:''' I didn't expect to put you out like this... I&mdash;I just wanted to see you, that's all. I shouldn't have tricked you. All I can do is use this money of mine to make up for all your wasted efforts. I'm really sorry...
+::{{tx}}
+:<pre>{
+	"$type": "RPG.GameCore.AdvDestroyGroupEntity",
+	"InstanceIDList": [
+		400001
+	]
+}</pre>
+::{{Black Screen|Manman wipes her face before vanishing like a puff of smoke.}}
 {{Dialogue End}}
 
 ===Speak to Guinaifen{{subst:void|<!--801517309-->}}===
 {{Mission Description|type=adventure|location=Aurum Alley|update|The fanatical fan used fake information to trick Guinaifen to investigate on-site many times, just so they can meet her...<br />Seriously, just let Guinaifen know if you want to meet her. With her personality, there's no need to jump through so many hoops.<br />Listen to what Guinaifen has to say.}}
 {{Dialogue Start}}
+
+;(Talk to Guinaifen)
+:{{tx}}
+<pre>{
+	"$type": "RPG.GameCore.AdvDestroyGroupEntity",
+	"InstanceIDList": [
+		400001
+	]
+}</pre>
+:{{DIcon|Arrow}} Is it really wise to be so tough on your fans?
+:{{DIcon|Arrow}} Do you really want to provoke your fanbase?
+:'''Guinaifen:''' If I just placate her, I'm afraid she won't understand that "Little Gui" is actually just a job for me. She'll think that I'm actually this amazing ghost-hunter and donate all of her parents' hard-earned money to me without a care.
 :{{tx}}
 {{Dialogue End}}
 
 ===Head to Fyxestroll Garden{{subst:void|<!--801517307-->}}===
 {{Mission Description|type=adventure|location=Fyxestroll Garden|update|After telling off the fans, even the big-name streamer Guinaifen know what is right or wrong.<br />Go back to Fyxestroll Garden first and keep doing what you should be doing.}}
 {{Dialogue Start}}
+
+
+;(Unused &mdash; P_801517310)
 :{{tx}}
+:<pre>{
+	"$type": "RPG.GameCore.AdvDestroyGroupEntity",
+	"InstanceIDList": [
+		400002
+	]
+}</pre>
+::{{DIcon|Arrow}} Yeah, I remember. The one who made up those stories to trick you &mdash; what about her?
+:::'''Guinaifen:''' Yup yup yup.
+:::...No impression whatsoever.
+::{{DIcon|Arrow}} ...No impression whatsoever.
+::'''Guinaifen:''' You've already forgotten so soon!?
+::'''Guinaifen:''' I put out this special announcement before to act as a warning &mdash; both overt and covert &mdash; to her.
+::'''Guinaifen:''' And what happens? Today I got a package delivery from a cycrane... She wasn't mad at all. She even got me a small gift.
+::{{DIcon|Arrow}} I never expected things to wrap up so nice and neat...
+::{{DIcon|Arrow}} If it were me, I'd turn into a hater.
+::'''Guinaifen:''' There's nothing valuable inside, just some snacks and this letter. In it, she said that I seemed to really care about my work when we met last time, and that I was pretty intense.
+::{{tx}}
+;(Unused &mdash; EmotionState_801517307)
+<pre>{
+	"$type": "RPG.GameCore.SetAudioEmotionState",
+	"StateName": "State_Relaxing",
+	"SubMissionID": 801517307
+}</pre>
+
+;(Unused &mdash; Talk_801517307)
+
 {{Dialogue End}}
 
 ===Speak with the cycrane and sign the package{{subst:void|<!--801517308-->}}===
 {{Mission Description|type=adventure|location=Fyxestroll Garden|update|A present mailed by a fan? That's surprising.<br />Looks like Guinaifen didn't do anything wrong. Go accept the fan's gift. That's something you deserve.}}
 {{Dialogue Start}}
+
+;(Talk to Courier Cycrane)
 :{{tx}}
+:'''Courier Cycrane:''' Ms. LilGuiGuinevere, could you please sign for this?
+:{{DIcon|Arrow}} Thank you.
+:{{DIcon|Arrow}} ...Actually, I'm not Little Gui.
+::'''Courier Cycrane:''' The recipient asked for you to sign it on behalf of her.
+:'''Courier Cycrane:''' There you go. Thank you for using Heron Express services. Heron Express &mdash; We Ship Whatever You Want.
+:{{tx}}
+----
 {{Dialogue End}}
 
 ==Other Languages==

@@ -40,7 +40,22 @@ PageTitle=#Hyperlink Match, Lynx!#
 ===Have a Hyperlink Match with Lynx{{subst:void|<!--801412801-->}}===
 {{Mission Description|type=adventure|location=Outlying Snow Plains|The core gameplay loop behind Aetherium Wars is "dueling." Challenge different players and show your true strength!}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Lynx)
+:'''Lynx:''' You're not going to try and get me to play that game too, are you...?
+<pre>{
+	"$type": "RPG.GameCore.ShowMenu",
+	"DisplaySingleMenuItem": true
+}</pre>
+:'''Lynx:''' Alright, you defeated me.
+<pre>{
+	"$type": "RPG.GameCore.ShowUI",
+	"Name": "Ui.AetherDivide.AetherDivideEntryPage",
+	"Param": {
+		"Value": "2"
+	},
+	"OnUIEnter": []
+}</pre>
 {{Dialogue End}}
 
 ==Other Languages==

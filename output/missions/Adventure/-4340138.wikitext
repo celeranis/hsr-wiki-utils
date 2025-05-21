@@ -33,7 +33,109 @@ PageTitle=##
 -->
 ==Dialogue==
 {{Stub Dialogue}}
-
+----
+:'''Workshop Employee:''' {{MC|f=Girl|m=Boy}}, I thought the commotion I felt in the workshop just now was something happening with the beasts down there, so I came rushing over... and I didn't realize you actually reignited Georios' holy candle.
+:{{DIcon|Arrow}} What's the issue?
+:{{DIcon|Arrow}} Georios' holy candle?
+:Through the old man's excited explanations, you realize that this holy candle is an offering from Georios' followers, but was eventually abandoned for unknown reasons.
+:But the chest next to it...
+:{{DIcon|Arrow}} Can I touch your treasure chest?
+:{{DIcon|Arrow}} What's up with this chest?
+:'''Workshop Employee:''' Since you rekindled the holy candle, then this must be Georios' reward... From the dust on its surface, this must be a treasure that has been buried deep...
+:'''Workshop Employee:''' Georios once used divine powers to command the land to offer its bounty forcibly &mdash; Such events have also been recorded.
+<pre>{
+	"$type": "RPG.GameCore.AdvClientChangePropState",
+	"TargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvPropEx",
+		"FetchType": "SinglePropByPropID",
+		"SinglePropID": {
+			"GroupID": {
+				"FixedValue": {
+					"Value": 382
+				}
+			},
+			"ID": {
+				"FixedValue": {
+					"Value": 300002
+				}
+			}
+		}
+	},
+	"FromState": "ChestClosed",
+	"ToState": "ChestUsed"
+}</pre>
+:'''Workshop Employee:''' I just didn't expect to witness the legends with my own eyes... I am truly fortunate.
+:'''Workshop Employee:''' Alright, {{MC|f=little girl|m=little boy}}. This old one's gotta get back and handle his flock. May Georios bless your path.
+----
+:'''Kind Little Girl:''' {{MC|f=Ma'am|m=Sir}}? Are you okay? I saw how tired you looked. If you're sleeping out in the open like this, it's easy to catch a cold.
+:{{DIcon|Arrow}} It's {{MC|f=Miss|m=Mister}}!
+::The little girl makes a funny face at you.
+:{{DIcon|Arrow}} I... fell asleep here?
+::'''Kind Little Girl:''' Yeah. But don't worry, you slept really well. You didn't kick off the blankets. Mom says that kids that don't kick off their blankets are sweethearts.
+:'''Kind Little Girl:''' Fufu. The holy candle of Oronyx is different from other holy candles. When it's extinguished, the "eternal night" will soon rise.
+:'''Kind Little Girl:''' So... Don't do that next time. This is Okhema, after all. Mom says that the Titans can see everything we do here.
+:'''Kind Little Girl:''' If you insist on sleeping in the open, remember to pray to Oronyx. After all... I can't ensure you'll be this lucky every time and run into me under the curtains of the eternal night.
+<pre>{
+	"$type": "RPG.GameCore.SetFloorCustomFloat",
+	"Name": {
+		"Value": "FCV_GoldenLiquidDev_03"
+	},
+	"Value": {
+		"FixedValue": {
+			"Value": 0
+		}
+	}
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.SetFloorCustomFloat",
+	"Name": {
+		"Value": "FCV_GoldenLiquidDev_04"
+	},
+	"Value": {
+		"FixedValue": {
+			"Value": 0
+		}
+	}
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.SetFloorCustomFloat",
+	"Name": {
+		"Value": "FCV_GoldenLiquidDev_05"
+	},
+	"Value": {
+		"FixedValue": {
+			"Value": 0
+		}
+	}
+}</pre>
+----
+:{{tx}}
+<pre>{
+	"$type": "RPG.GameCore.SetFloorCustomFloat",
+	"Name": {
+		"Value": "FCV_GoldenLiquidDev_07"
+	},
+	"Value": {
+		"FixedValue": {
+			"Value": 1
+		}
+	}
+}</pre>
+----
+<pre>{
+	"$type": "RPG.GameCore.PerformanceExtendEndBlack"
+}</pre>
+:'''Emotional Scholar:''' My word! I've been neglecting my research for so long, and now my thoughts are clear... I... I knew it!
+:'''Calm Scholar:''' Cerces above, I offer my unworthy research topic before your brightness in dedication to your radiant enlightenment.
+:'''Friendly Scholar:''' Everyone calm down. I'm not forbidding your worship of Cerces, but I'm telling you to take back these slates. How are people supposed to walk around here!?
+:'''Friendly Scholar:''' Hey, you alright, {{MC|f=miss|m=mister}}? I saw you grinning like a loon and thought something went wrong for you... you alright now?
+:{{DIcon|Arrow}} Who was grinning like a loon!?
+::'''Friendly Scholar:''' Alright... Let's put it another way. When I saw you just now, you seemed so smart that it gave me the shivers.
+::What... happened here?
+:{{DIcon|Arrow}} What... happened here?
+:'''Friendly Scholar:''' Huh? Don't you know? I watched you light the holy candle of Cerces.
+:'''Friendly Scholar:''' Oh. Is this Cerces' power...? It's like my mind suddenly opened up...
+:{{tx}}
 {{Dialogue End}}
 
 ==Other Languages==

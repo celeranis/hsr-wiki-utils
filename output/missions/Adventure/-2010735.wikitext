@@ -33,7 +33,32 @@ PageTitle=##
 -->
 ==Dialogue==
 {{Stub Dialogue}}
-
+<pre>{
+	"$type": "RPG.GameCore.WaitUIControllerClose",
+	"UIControllerName": "BoxingClubWinDialog"
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.ClosePage",
+	"PageNames": [
+		"BoxingClubEntranceMainPage"
+	],
+	"PageRootNames": []
+}</pre>
+:<!--0.2-second delay-->
+----
+:'''Dr. Dig:''' Dear Lord, you've conquered all five of the leagues! Outsiders are such frightening forces of nature!
+:'''Dr. Dig:''' (Trailblazer), as you charge your way through the current season's matches and clear all obstacles from your path to greatness, the super league has come to a close...
+:'''Dr. Dig:''' I hereby announce: The season has come to a successful conclusion, congratulations on becoming the champion! Scott Business Alliance has prepared a large number of luxurious rewards for you, please be sure to collect them!
+:'''Dr. Dig:''' And finally, remember our motto...
+:'''Dr. Dig:''' {{Size|36|Scott Business Alliance, made for the champions!}}
+:<!--0.5-second delay-->
+<pre>{
+	"$type": "RPG.GameCore.ShowUI",
+	"Name": "Ui.BoxingClub.BoxingClubEntranceMainPage",
+	"WaitForExit": true,
+	"OnUIEnter": [],
+	"OnUIExitImmediately": []
+}</pre>
 {{Dialogue End}}
 
 ==Other Languages==

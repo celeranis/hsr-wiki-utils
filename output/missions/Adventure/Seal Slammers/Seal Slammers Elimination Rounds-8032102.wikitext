@@ -11,7 +11,7 @@ PageTitle=#Seal Slammers: Elimination Rounds#
 |chapter       = Seal Slammers
 |requirements  = [[Adventure Mission]] ''[[Seal Slammers: Group Stage]]'' completed
 |summary       = You defeated your opponents in the elimination round, but the prophecy of the "giant beast rests in the abyss" also came true... To prevent the prophecy of the shattered golden trophy from coming true, everyone decided to switch out the trophy, and "Bubbles" left your team for this purpose.<br />But then! The trophy fell into the hands of a thief &mdash; it turned out that the prophetic dream was a lie orchestrated by Cipher from the very beginning.<br />Regroup and prepare, for Aglaea has bestowed a new prophecy upon you. Charge forward for the championship!
-|characters    = "Spirithief" Bartholos; "Yourdei"; Aglaea; Amorphis; Apophis; Aquafis; Bubbles; Chattering Spectators; Cipher; Dark Seal; Dorian; Dromas; Foe Defeated by Yourdei; Red Hot Seal; Trailblazer; Tribbie; Trinnon
+|characters    = "Spirithief" Bartholos; Apophis; Aquafis; Dorian; Trailblazer
 |startLocation = [[Amphoreus]] - [["Eternal Holy City" Okhema]]
 |world         = Amphoreus
 |area          = "Eternal Holy City" Okhema
@@ -22,21 +22,16 @@ PageTitle=#Seal Slammers: Elimination Rounds#
 '''''Seal Slammers: Elimination Rounds''''' is an Event [[Adventure Mission]] from the [[Seal Slammers]] event.
 
 ==Steps==
-# Get ready for the knockout stage
 # Participate in the first knockout match
 # Win the first knockout match
-# Prepare to participate in the second knockout match
-# Capture the Spirithief and retrieve the Silver Chalice Badge
-# (Optional) Speak with Apophis to pinpoint the Spirithief
-# Capture the Spirithief and retrieve the Silver Chalice Badge
 # Participate in the second knockout match
 # Win the second knockout match
 # Participate in the third knockout match
 # Win the third knockout match
-# Discuss with everyone
-# (Optional) Investigate the dromas
-# Host an interview with Bubbles
-# Meet up with everyone
+# Get ready for the knockout stage
+# Prepare to participate in the second knockout match
+# Capture the Spirithief and retrieve the Silver Chalice Badge
+# (Optional) Speak with Apophis to pinpoint the Spirithief
 
 <!--
 ==Gameplay Notes==
@@ -47,32 +42,367 @@ PageTitle=#Seal Slammers: Elimination Rounds#
 -->
 ==Dialogue==
 {{Stub Dialogue}}
-===Get ready for the knockout stage{{subst:void|<!--803210203-->}}===
-{{Mission Description|type=adventure|location="Eternal Holy City" Okhema|After the fierce matches in the group stage, you finally advance to the knockout stage. Now, the short recess is over, and the knockout matches are about to start.}}
-{{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Aquafis)
+:'''Aquafis:''' Oh? You want to challenge me? You'll need to have {{Color|keyword|nobold=1|at least 20}} baby seals!
+:{{DIcon}} How many do YOU have?
+::'''Aquafis:''' What arrogance! Standing before you is the Seal Master with over a thousand seals. With your current level, go train and come back later!
+:{{DIcon}} Only 20? I'll show you!
+::'''Aquafis:''' You don't have 20! Don't lie to me. Come back when you have enough!
+:{{DIcon}} You don't even have that many in the shop!
+::'''Aquafis:''' I don't care. If you don't have 20, you can't become my opponent.
+
+;(Unused &mdash; G748_lv5_fail)
+:;(If {{cx}}<!--during performance 803210030-->)
+:::'''Aquafis:''' This is expected. The reason I set up the Super Insane Stage is to let everyone find their own insanity limit. Try it again!
+:;(If {{cx}}<!--not during performance 803210030-->)
+:::'''Aquafis:''' Don't worry, youngsters shouldn't be afraid of failures. Another round?
+:'''Aquafis:''' I'm right here. If you want more practice, come find me.
+
+;(Unused &mdash; G748_lv4_fail)
+:;(If {{cx}}<!--during performance 803210029-->)
+:::'''Aquafis:''' Oh? Is the difficulty level too high? Let's try again.
+:;(If {{cx}}<!--not during performance 803210029-->)
+:::'''Aquafis:''' Don't worry, youngsters shouldn't be afraid of failures. Another round?
+:'''Aquafis:''' I'm right here. If you want more practice, come find me.
+
+;(Unused &mdash; G748_lv2_fail)
+:;(If {{cx}}<!--during performance 803210008-->)
+:::'''Aquafis:''' Hey hey, bring out your big guns. Don't look down on me.
+:;(If {{cx}}<!--not during performance 803210008-->)
+:::'''Aquafis:''' Don't worry, youngsters shouldn't be afraid of failures. Another round?
+:'''Aquafis:''' I'm right here. If you want more practice, come find me.
+
+;(Unused &mdash; G748_lv5_success)
+:;(If {{cx}}<!--not during performance 803210012-->)
+:::'''Aquafis:''' Absolutely marvelous. You're a natural at seal slamming!
+:::'''Aquafis:''' I'm right here. If you want more practice, come find me.
+
+;(Unused &mdash; G748_lv4_success)
+:;(If {{cx}}<!--during performance 803210011-->)
+:::'''Aquafis:''' Awesome! Now, congratulations on unlocking the hidden stage set by me, the Super Insane Stage! You can now challenge my top-secret elite seal lineup!
+:;(If {{cx}}<!--not during performance 803210011-->)
+:::'''Aquafis:''' Absolutely marvelous. You're a natural at seal slamming!
+:'''Aquafis:''' I'm right here. If you want more practice, come find me.
+
+;(Unused &mdash; G748_lv2_success)
+:;(If {{cx}}<!--during performance 803210010-->)
+:::'''Aquafis:''' That's not bad. Isn't it fun to bounce seals?
+:;(If {{cx}}<!--not during performance 803210010-->)
+:::'''Aquafis:''' Absolutely marvelous. You're a natural at seal slamming!
+:'''Aquafis:''' I'm right here. If you want more practice, come find me.
+
+;(Unused &mdash; TriggerPerformance_G748_lv5)
+<pre>{
+	"$type": "RPG.GameCore.StartMarblePVEChallengeMatch",
+	"MatchID": 102,
+	"OnSuccImmediately": [
+		{
+			"$type": "RPG.GameCore.TriggerGroupEvent",
+			"EventName": {
+				"Value": "G748_lv5_success"
+			}
+		}
+	],
+	"OnFailImmediately": [
+		{
+			"$type": "RPG.GameCore.TriggerGroupEvent",
+			"EventName": {
+				"Value": "G748_lv5_fail"
+			}
+		}
+	]
+}</pre>
+
+;(Unused &mdash; TriggerPerformance_G748_lv4)
+<pre>{
+	"$type": "RPG.GameCore.StartMarblePVEChallengeMatch",
+	"MatchID": 101,
+	"OnSuccImmediately": [
+		{
+			"$type": "RPG.GameCore.TriggerGroupEvent",
+			"EventName": {
+				"Value": "G748_lv4_success"
+			}
+		}
+	],
+	"OnFailImmediately": [
+		{
+			"$type": "RPG.GameCore.TriggerGroupEvent",
+			"EventName": {
+				"Value": "G748_lv4_fail"
+			}
+		}
+	]
+}</pre>
+
+;(Unused &mdash; TriggerPerformance_G748_lv2)
+<pre>{
+	"$type": "RPG.GameCore.StartMarblePVEChallengeMatch",
+	"MatchID": 100,
+	"OnSuccImmediately": [
+		{
+			"$type": "RPG.GameCore.TriggerGroupEvent",
+			"EventName": {
+				"Value": "G748_lv2_success"
+			}
+		}
+	],
+	"OnFailImmediately": [
+		{
+			"$type": "RPG.GameCore.TriggerGroupEvent",
+			"EventName": {
+				"Value": "G748_lv2_fail"
+			}
+		}
+	]
+}</pre>
 {{Dialogue End}}
 
 ===Participate in the first knockout match{{subst:void|<!--803210204-->}}===
 {{Mission Description|type=adventure|location="Eternal Holy City" Okhema|update|In the first match of the knockout stage, you'll face a formidable opponent &mdash; Yourdei and his Red Hot Seal.<br />Teach him the meaning of the word "defeat."}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Apophis)
+----
+;(If {{Mission|Seal Slammers: Championship|showChapter=0}} has been completed)
+::'''Apophis:''' The annual Phagousa celebration, a once-in-a-lifetime water carnival! Welcome back to the baths, Champion. Even though the tournament is over, passion lives on. One more match of Seal Slammers?
+;(If {{Mission|Seal Slammers: Championship|showChapter=0}} has not been completed)
+::'''Apophis:''' The annual Phagousa celebration, a once-in-a-lifetime water carnival! Contestant (Trailblazer), the Seal Slammers is in full swing. Are you ready for the next match?
+:{{DIcon|Travel Log}} I love slamming stuff. I wanna slam stuff now!
+::'''Apophis:''' There we have it. Seal Slammers &mdash; begins!
+:{{DIcon|Exit}} I'm not ready yet.
+::'''Apophis:''' We'll wait for both parties to get ready. Give it your all!
+<pre>{
+	"$type": "RPG.GameCore.SetPerformanceResult",
+	"Value": 1
+}</pre>
 {{Dialogue End}}
 
 ===Win the first knockout match{{subst:void|<!--803210205-->}}===
 {{Dialogue Start}}
+
+;(Talk to Apophis)
+----
+;(If {{Mission|Seal Slammers: Championship|showChapter=0}} has been completed)
+::'''Apophis:''' The annual Phagousa celebration, a once-in-a-lifetime water carnival! Welcome back to the baths, Champion. Even though the tournament is over, passion lives on. One more match of Seal Slammers?
+;(If {{Mission|Seal Slammers: Championship|showChapter=0}} has not been completed)
+::'''Apophis:''' The annual Phagousa celebration, a once-in-a-lifetime water carnival! Contestant (Trailblazer), the Seal Slammers is in full swing. Are you ready for the next match?
+:{{DIcon|Travel Log}} I love slamming stuff. I wanna slam stuff now!
+::'''Apophis:''' There we have it. Seal Slammers &mdash; begins!
+:{{DIcon|Exit}} I'm not ready yet.
+::'''Apophis:''' We'll wait for both parties to get ready. Give it your all!
+<pre>{
+	"$type": "RPG.GameCore.SetPerformanceResult",
+	"Value": 1
+}</pre>
+
+;(Unused &mdash; EnterDistrict_G835)
+
+{{Dialogue End}}
+
+===Participate in the second knockout match{{subst:void|<!--803210209-->}}===
+{{Mission Description|type=adventure|location="Eternal Holy City" Okhema|update|Spirithief Bartholos will replace the Mountain Dweller Dorian against you. Show it the true strength of a veteran baby seal squad!}}
+{{Dialogue Start}}
+
+;(Talk to Apophis)
+----
+;(If {{Mission|Seal Slammers: Championship|showChapter=0}} has been completed)
+::'''Apophis:''' The annual Phagousa celebration, a once-in-a-lifetime water carnival! Welcome back to the baths, Champion. Even though the tournament is over, passion lives on. One more match of Seal Slammers?
+;(If {{Mission|Seal Slammers: Championship|showChapter=0}} has not been completed)
+::'''Apophis:''' The annual Phagousa celebration, a once-in-a-lifetime water carnival! Contestant (Trailblazer), the Seal Slammers is in full swing. Are you ready for the next match?
+:{{DIcon|Travel Log}} I love slamming stuff. I wanna slam stuff now!
+::'''Apophis:''' There we have it. Seal Slammers &mdash; begins!
+:{{DIcon|Exit}} I'm not ready yet.
+::'''Apophis:''' We'll wait for both parties to get ready. Give it your all!
+<pre>{
+	"$type": "RPG.GameCore.SetPerformanceResult",
+	"Value": 1
+}</pre>
+{{Dialogue End}}
+
+===Win the second knockout match{{subst:void|<!--803210210-->}}===
+{{Dialogue Start}}
+
+;(Talk to Apophis)
+----
+;(If {{Mission|Seal Slammers: Championship|showChapter=0}} has been completed)
+::'''Apophis:''' The annual Phagousa celebration, a once-in-a-lifetime water carnival! Welcome back to the baths, Champion. Even though the tournament is over, passion lives on. One more match of Seal Slammers?
+;(If {{Mission|Seal Slammers: Championship|showChapter=0}} has not been completed)
+::'''Apophis:''' The annual Phagousa celebration, a once-in-a-lifetime water carnival! Contestant (Trailblazer), the Seal Slammers is in full swing. Are you ready for the next match?
+:{{DIcon|Travel Log}} I love slamming stuff. I wanna slam stuff now!
+::'''Apophis:''' There we have it. Seal Slammers &mdash; begins!
+:{{DIcon|Exit}} I'm not ready yet.
+::'''Apophis:''' We'll wait for both parties to get ready. Give it your all!
+<pre>{
+	"$type": "RPG.GameCore.SetPerformanceResult",
+	"Value": 1
+}</pre>
+
+;(Unused &mdash; EnterDistrict_G836)
+
+{{Dialogue End}}
+
+===Participate in the third knockout match{{subst:void|<!--803210212-->}}===
+{{Mission Description|type=adventure|location="Eternal Holy City" Okhema|update|Only one victory left before you win the Golden Chalice Badge and qualify for the championship! But you know... the opponent is formidable.}}
+{{Dialogue Start}}
+
+;(Talk to Apophis)
+----
+;(If {{Mission|Seal Slammers: Championship|showChapter=0}} has been completed)
+::'''Apophis:''' The annual Phagousa celebration, a once-in-a-lifetime water carnival! Welcome back to the baths, Champion. Even though the tournament is over, passion lives on. One more match of Seal Slammers?
+;(If {{Mission|Seal Slammers: Championship|showChapter=0}} has not been completed)
+::'''Apophis:''' The annual Phagousa celebration, a once-in-a-lifetime water carnival! Contestant (Trailblazer), the Seal Slammers is in full swing. Are you ready for the next match?
+:{{DIcon|Travel Log}} I love slamming stuff. I wanna slam stuff now!
+::'''Apophis:''' There we have it. Seal Slammers &mdash; begins!
+:{{DIcon|Exit}} I'm not ready yet.
+::'''Apophis:''' We'll wait for both parties to get ready. Give it your all!
+<pre>{
+	"$type": "RPG.GameCore.SetPerformanceResult",
+	"Value": 1
+}</pre>
+{{Dialogue End}}
+
+===Win the third knockout match{{subst:void|<!--803210213-->}}===
+{{Dialogue Start}}
+
+;(Talk to Apophis)
+----
+;(If {{Mission|Seal Slammers: Championship|showChapter=0}} has been completed)
+::'''Apophis:''' The annual Phagousa celebration, a once-in-a-lifetime water carnival! Welcome back to the baths, Champion. Even though the tournament is over, passion lives on. One more match of Seal Slammers?
+;(If {{Mission|Seal Slammers: Championship|showChapter=0}} has not been completed)
+::'''Apophis:''' The annual Phagousa celebration, a once-in-a-lifetime water carnival! Contestant (Trailblazer), the Seal Slammers is in full swing. Are you ready for the next match?
+:{{DIcon|Travel Log}} I love slamming stuff. I wanna slam stuff now!
+::'''Apophis:''' There we have it. Seal Slammers &mdash; begins!
+:{{DIcon|Exit}} I'm not ready yet.
+::'''Apophis:''' We'll wait for both parties to get ready. Give it your all!
+<pre>{
+	"$type": "RPG.GameCore.SetPerformanceResult",
+	"Value": 1
+}</pre>
+
+;(Unused &mdash; EnterDistrict_G837)
+
+
+:{{DIcon|undefined}} Continue the dream
+:{{tx}}
+:{{DIcon|Talk}} undefined
+::{{tx}}
+:;(Return to previous option selection)
+:{{DIcon|Talk}} undefined
+::{{tx}}
+:;(Return to previous option selection)
+:{{DIcon|Arrow}} undefined
+::{{tx}}
+::{{DIcon|Arrow}} undefined
+::{{tx}}
+:;(Return to previous option selection)
+:{{DIcon|Arrow}} undefined
+::{{tx}}
+::{{tx}}
+::{{DIcon|Arrow}} undefined
+::{{tx}}
+:;(Return to previous option selection)
+
+{{Dialogue End}}
+
+===Get ready for the knockout stage{{subst:void|<!--803210203-->}}===
+{{Mission Description|type=adventure|location="Eternal Holy City" Okhema|update|After the fierce matches in the group stage, you finally advance to the knockout stage. Now, the short recess is over, and the knockout matches are about to start.}}
+{{Dialogue Start}}
+
+;(Talk to Apophis)
+:{{tx}}
 :{{tx}}
 {{Dialogue End}}
 
 ===Prepare to participate in the second knockout match{{subst:void|<!--803210206-->}}===
 {{Mission Description|type=adventure|location="Eternal Holy City" Okhema|update|You claimed victory in the first match with unstoppable momentum, but it seems a little incident has occurred on the other side of the knockout stage...}}
 {{Dialogue Start}}
+:'''"Spirithief" Bartholos:''' Dorian the Mountain Dweller gave me his spot &mdash; now I am Dorian.
+:'''"Spirithief" Bartholos:''' Look, I have his Silver Chalice Badge right here.
+:{{DIcon|Arrow}} This "Bartholos" guy isn't even a contestant!
+::'''"Spirithief" Bartholos:''' Hold up, at least let me explain myself!
+::Like I'd trust anything coming out of your mouth.
+:{{DIcon|Arrow}} Like I'd trust anything coming out of your mouth.
+:'''"Spirithief" Bartholos:''' Is there really so little love between us?
+:'''"Spirithief" Bartholos:''' I just have a quick question for the organizers&mdash;
+:{{tx}}
+:{{tx}}
+:'''"Spirithief" Bartholos:''' Hehehe, you want the badge back? Come get it yourself!
+:{{DIcon|Arrow}} Stop right there, you sneaky thief!
+:{{DIcon|Arrow}} No way am I doing map traversal during an event!
+:'''"Spirithief" Bartholos:''' Hehehe&mdash; Later!
 :{{tx}}
 {{Dialogue End}}
 
 ===Capture the Spirithief and retrieve the Silver Chalice Badge{{subst:void|<!--803210207-->}}===
 {{Mission Description|type=adventure|location="Eternal Holy City" Okhema|update|The Silver Chalice Badge is a testament to a contestant's honor and hard work &mdash; how could a mere thief lay their hands on it? Hunt down the Spirithief and take it back!}}
 {{Dialogue Start}}
+
+:{{DIcon|undefined}} Ask Apophis
+<pre>{
+	"$type": "RPG.GameCore.StartMissionCameraTemplate",
+	"CamDuration": {
+		"FixedValue": {
+			"Value": 2
+		}
+	},
+	"WaitSecondsBeforeCut": {
+		"FixedValue": {
+			"Value": 0
+		}
+	},
+	"CameraAnchor": {
+		"Custom": true,
+		"Key": "Camera"
+	},
+	"CameraTargetName": {
+		"Custom": true,
+		"Key": "LookAt"
+	},
+	"FirstTalkListStart": {
+		"FixedValue": {
+			"Value": 803217100
+		}
+	},
+	"FaceToCameraTarget": {
+		"FixedValue": {
+			"Value": 1
+		}
+	},
+	"CallBackEventName": {
+		"Value": "FinishLookAt_G752"
+	}
+}</pre>
+
+;(Unused &mdash; FinishLookAt_G752)
+<pre>{
+	"$type": "RPG.GameCore.ToastPile",
+	"DescTextKey": {
+		"Value": "UIText_Gameplay_Tips_Mascot"
+	}
+}</pre>
+----
+:'''"Spirithief" Bartholos:''' Oh no, oh no, it hurts, slow down. Fine, you win, you're amazing!
+:'''"Spirithief" Bartholos:''' Unfortunately, I've swallowed the badge. If I try hard enough, I should be able to get it out.
+:'''"Spirithief" Bartholos:''' But I'll need some time &mdash; at least five business days!
+:'''Apophis:''' Don't say that, it's downright disgusting...
+:{{DIcon|Arrow}} Forget the badge, let's just get to the competition.
+:'''Apophis:''' Well, we're not the type of competition to stick strictly to the rules. Contestant Dorian, are you ready to begin?
+:'''Dorian:''' ...Dorian doesn't want to compete anymore.
+:{{DIcon|Arrow}} So if you forfeit, does that mean I win?
+:{{DIcon|Arrow}} You can't escape, you can't escape...
+:'''Dorian:''' I'd like to substitute the contestant, {{Color|keyword|nobold=1|replace with Bartholos}}.
+:'''Apophis:''' Dorian! Isn't this just what they were hoping for?
+:'''Dorian:''' I ran into (Trailblazer), as strong as a beast. I know even if I tried my best, I can't win.
+:'''Dorian:''' Bartholos, take the victory for me, as my compensation.
+:'''"Spirithief" Bartholos:''' Hehehe, you're just afraid of losing face and want me to win it for you, huh?
+:'''"Spirithief" Bartholos:''' Well, since you've made it so clear, then I'll &mdash; just enter the competition.
+:{{DIcon|Arrow}} Let's fight then. After all, you'll all lose to me.
+:{{DIcon|Arrow}} Darn, it's the new baby seal commander.
+:{{DIcon|Arrow}} I disagree. I'm not invincible!
+::'''Apophis:''' ...Don't be humble, (Trailblazer). Even Bartholos might not be able to bring out your full power.
+:'''Apophis:''' Since both sides agree, we'll make an exception this time and temporarily swap the contestants, so everyone can have a good time!
 :{{tx}}
 {{Dialogue End}}
 
@@ -80,57 +410,42 @@ PageTitle=#Seal Slammers: Elimination Rounds#
 {{Mission Description|type=adventure|location="Eternal Holy City" Okhema|update|Spirithief Bartholos will replace the Mountain Dweller Dorian against you. Show it the true strength of a veteran baby seal squad!}}
 {{Dialogue Start}}
 :{{tx}}
-{{Dialogue End}}
-
-===Capture the Spirithief and retrieve the Silver Chalice Badge{{subst:void|<!--803210208-->}}===
-{{Mission Description|type=adventure|location="Eternal Holy City" Okhema|update|The Silver Chalice Badge is a testament to a contestant's honor and hard work &mdash; how could a mere thief lay their hands on it? Hunt down the Spirithief and take it back!}}
-{{Dialogue Start}}
-:{{tx}}
-{{Dialogue End}}
-
-===Participate in the second knockout match{{subst:void|<!--803210209-->}}===
-{{Mission Description|type=adventure|location="Eternal Holy City" Okhema|update|Spirithief Bartholos will replace the Mountain Dweller Dorian against you. Show it the true strength of a veteran baby seal squad!}}
-{{Dialogue Start}}
-:{{tx}}
-{{Dialogue End}}
-
-===Win the second knockout match{{subst:void|<!--803210210-->}}===
-{{Dialogue Start}}
-:{{tx}}
-{{Dialogue End}}
-
-===Participate in the third knockout match{{subst:void|<!--803210212-->}}===
-{{Mission Description|type=adventure|location="Eternal Holy City" Okhema|update|Only one victory left before you win the Golden Chalice Badge and qualify for the championship! But you know... the opponent is formidable.}}
-{{Dialogue Start}}
-:{{tx}}
-{{Dialogue End}}
-
-===Win the third knockout match{{subst:void|<!--803210213-->}}===
-{{Dialogue Start}}
-:{{tx}}
-{{Dialogue End}}
-
-===Discuss with everyone{{subst:void|<!--803210214-->}}===
-{{Mission Description|type=adventure|location="Eternal Holy City" Okhema|update|"The giant beast rests in the abyss." A dromas has taken over the competition area as the second disaster foretold in the prophecy comes to pass.<br />At the same time, the discussion about the prophetic dream is getting heated...}}
-{{Dialogue Start}}
-:{{tx}}
-{{Dialogue End}}
-
-===(Optional) Investigate the dromas{{subst:void|<!--803210215-->}}===
-{{Dialogue Start}}
-:{{tx}}
-{{Dialogue End}}
-
-===Host an interview with Bubbles{{subst:void|<!--803210216-->}}===
-{{Mission Description|type=adventure|location="Eternal Holy City" Okhema|update|Bubbles, o my Bubbles. If this is your choice...}}
-{{Dialogue Start}}
-:{{tx}}
-{{Dialogue End}}
-
-===Meet up with everyone{{subst:void|<!--803210217-->}}===
-{{Mission Description|type=adventure|location="Eternal Holy City" Okhema|update|"The golden trophy shatters." Wh&mdash;Where's the golden trophy?<br />The plan to swap the trophy and avoid the prophecy seems to have gone awry &mdash; the trophy that was supposed to be replaced with a replica has vanished without a trace. What is going on?}}
-{{Dialogue Start}}
-:{{tx}}
+:{{DIcon|Arrow}} undefined
+::{{tx}}
+::{{tx}}
+:;(Return to previous option selection)
+:{{DIcon|Arrow}} undefined
+::{{tx}}
+::{{tx}}
+:;(Return to previous option selection)
+<pre>{
+	"$type": "RPG.GameCore.PerformanceEndSeq",
+	"Cases": [
+		{
+			"OnSuccess": [
+				{
+					"$type": "RPG.GameCore.ClientFinishMission",
+					"SubmissionID": 803210211
+				},
+				{
+					"$type": "RPG.GameCore.TriggerCustomString",
+					"CustomString": {
+						"Value": "ShowUI_ActivityMarbleMainPage"
+					}
+				}
+			]
+		},
+		{
+			"Case": 1,
+			"OnSuccess": [
+				{
+					"$type": "RPG.GameCore.ClientFinishMission",
+					"SubmissionID": 803210211
+				}
+			]
+		}
+	]
+}</pre>
 {{Dialogue End}}
 
 ==Other Languages==

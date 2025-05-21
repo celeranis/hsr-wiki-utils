@@ -60,96 +60,354 @@ PageTitle=#Dream Song#
 ===Interact with the Origami Birds before you{{subst:void|<!--203040204-->}}===
 {{Mission Description|type=adventure|location=Dr. Blues' Emoscape|This is Dr. Blues's Emoscape, but... why are you seeing those other Origami Birds? Go ask them.}}
 {{Dialogue Start}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:'''Lady Vermilion:''' Kind guest, might I ask if you've seen an origami bird?
+:'''Lady Vermilion:''' A rotund, ruffled, origami bird that looks just like us? Tweet tweet?
+:{{DIcon|Arrow}} I see four standing before me.
+:'''Boss Red:''' They're not the same! That child has blue feathers, tweet.
 :{{tx}}
+<pre>{
+	"$type": "RPG.GameCore.PerformanceEndSeq",
+	"BeforeCases": [
+		{
+			"$type": "RPG.GameCore.SwitchCharacterAnchorV2",
+			"SwitchCharacterAnchorConfig": {
+				"IsLocalPlayer": true,
+				"CharacterUniqueName": "LocalPlayer",
+				"AreaName": {
+					"Value": "LevelArea_P43322_F43322001_G18"
+				},
+				"AnchorName": {
+					"Value": "Anchor1"
+				}
+			}
+		}
+	]
+}</pre>
+
+;(Upon reaching the destination)
+<pre>{
+	"$type": "RPG.GameCore.PlayNPCBubbleTalk",
+	"BubbleTalkInfoList": [
+		{
+			"AutoSkipTime": 3,
+			"GroupID": 18,
+			"GroupNpcID": 400001,
+			"TalkSentenceID": 230413330
+		},
+		{
+			"AutoSkipTime": 3,
+			"GroupID": 18,
+			"GroupNpcID": 400003,
+			"TalkSentenceID": 230413331
+		}
+	],
+	"IsLoop": true,
+	"LoopInterval": 3
+}</pre>
+;(Unused &mdash; ExitArea_G18_Bubble)
+<pre>{
+	"$type": "RPG.GameCore.StopNPCBubbleTalk",
+	"UniqueIDList": [
+		0
+	]
+}</pre>
+;(If {{F|MissionCV-2030402-2}} is undefined 1)
+:<pre>{
+	"$type": "RPG.GameCore.PPFilterStackEffect",
+	"AssetPath": "EnviroSystem/PostProcessFilterAsset/oldfilmFilter.asset"
+}</pre>
+;(Otherwise, if {{F|MissionCV-2030402-2}} is undefined 2)
+:<pre>{
+	"$type": "RPG.GameCore.PPFilterStackEffect",
+	"Active": false,
+	"AssetPath": "EnviroSystem/PostProcessFilterAsset/oldfilmFilter.asset"
+}</pre>
+;(If {{F|MissionCV-2030402-2}} is undefined 1)
+<pre>{
+	"$type": "RPG.GameCore.PPFilterStackEffect",
+	"AssetPath": "EnviroSystem/PostProcessFilterAsset/oldfilmFilter.asset"
+}</pre>
 {{Dialogue End}}
 
 ===Look for Dr. Blues{{subst:void|<!--203040229-->}}===
 {{Mission Description|type=adventure|location=Dr. Blues' Emoscape|update|You've received the commission from the Origami Birds. It's time to find Dr. Blues.}}
 {{Dialogue Start}}
-:{{tx}}
+
+
+;(Talk to Lady Vermilion)
+;(If {{cx}}<!--SubMission Finish: 203040204-->)
+:'''Lady Vermilion:''' That blue-feathered child... it already got lost playing hide-and-seek before it learned how to find the way back home...
+:'''Lady Vermilion:''' Please, guest! Help look for that child, tweet!
+
+
+:{{DIcon|Talk}} Investigate
+:A glossy new ''Dreamchaser Bulletin'' is placed on the desk, with the following header printed in huge letters.
+:"2151 AE: The long-prepared Dreamweaving Project has officially launched. The Twelve Dreamscapes are slated to be completed within this Amber Era. Currently, phase one of the Reverie Hotel's construction has commenced."
+:"The Nightingale Family is fully responsible for this project. According to negotiations, their head, Glaux, has expressed no intention to join The Family, but is willing to support the Dreamscape development plan that The Family has suggested..."
+:"Concurrently, the Nightingales have also extended an invitation to the universe &mdash; to welcome the architects and memoria scholars of the cosmos to build this world of Dreamjoy together..."
+
 {{Dialogue End}}
 
 ===Explore the area nearby{{subst:void|<!--203040227-->}}===
 {{Mission Description|type=adventure|location=Dr. Blues' Emoscape|update|This place seems to be Dr. Blues' memories. Let's see if there are any clues nearby.}}
 {{Dialogue Start}}
-:{{tx}}
 {{Dialogue End}}
 
 ===Go out of the door to have a look{{subst:void|<!--203040205-->}}===
 {{Mission Description|type=adventure|location=Dr. Blues' Emoscape|update|There are footsteps outside the door. Go see who it is.}}
 {{Dialogue Start}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:'''Vaughn:''' ...I've never heard of anyone who brings their kids to the construction site!
+:'''Vaughn:''' Designing a structure, studying how to work with this finicky memoria, and being hunted by in-dream monsters... Work on the Reverie has finally started, only to have this child impeding our progress once again!
+:'''Vaughn:''' Tell the professor I'm done, I'm gone!
+:'''Joey:''' Oh Mr. Vaughn, please be realistic. Your name is still blacklisted by the IPC. Apart from the professor, no one in the universe will hire you.
+:'''Joey:''' Furthermore... it's not like that child wants to be in this Dreamscape of his own accord, so please be more understanding. Also, isn't he super cute?
+:'''Vaughn:''' Just because he's young? How's that fair? I'm a child too!
+:'''Joey:''' Just because you're in a dream, doesn't mean you can spit delusions, Mr. Vaughn. You're the oldest among us.
+:'''Joey:''' From what I know, that child was a wandering interstellar refugee before he came to the Nightingale Family.
+:'''Joey:''' He had no kin, no family, and was never raised properly, much less how to interact with people.
+:'''Joey:''' Perhaps... he saw Mr. Vaughn as someone of his age, and was expressing affection, albeit inappropriately?
+:'''Vaughn:''' Hmph...
+:'''Vaughn:''' For me to forgive him, he'd have to personally apologize to my Vaughn III Gourmet Refinement Machine. Shouldn't a "sorry" at least be in order when a mistake is made?
+:'''Vaughn:''' Little Dreamweaver, you be the judge. Is that fair or not?
+:{{DIcon|Arrow}} You're right!
+::'''Vaughn:''' See? Even a junior who's just joined the industry knows etiquette.
+::Maybe there's something he can't tell us...
+:{{DIcon|Arrow}} Maybe there's something he can't tell us...
+:'''Vaughn:''' Bah! Why're you all taking his side!
+:'''Joey:''' Heh-heh, Mr. Vaughn certainly acts like he's of the same age as the child...
 :{{tx}}
+
+;(Upon reaching the destination)
+:'''(Trailblazer):''' (This memory should be from long ago, the time when that Dreamscape was first being built...)
+:'''(Trailblazer):''' (Footsteps from outside the door. Is someone coming in?)
 {{Dialogue End}}
 
 ===Find that child's hiding spot{{subst:void|<!--203040221-->}}===
 {{Mission Description|type=adventure|location=Dr. Blues' Emoscape|update|Follow Joey and Vaughn to find where that child is hiding. Maybe he is related to Dr. Blues.}}
 {{Dialogue Start}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{tx}}
+<pre>{
+	"$type": "RPG.GameCore.PerformanceEndSeq",
+	"BeforeCases": [
+		{
+			"$type": "RPG.GameCore.SwitchCharacterAnchorV2",
+			"SwitchCharacterAnchorConfig": {
+				"IsLocalPlayer": true,
+				"CharacterUniqueName": "LocalPlayer",
+				"AreaName": {
+					"Value": "LevelArea_P43322_F43322001_G25"
+				},
+				"AnchorName": {
+					"Value": "Anchor1"
+				}
+			}
+		}
+	]
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.WaitEntityServerEvent"
+}</pre>
+;(If {{cx}}{{subst:void|<!--{"$type":"RPG.GameCore.ByComparePropState","TargetType":{"$type":"RPG.GameCore.GroupFetchLocalTarget","TargetType":"Prop","Targets":[300002]}}-->}}, {{cx}}{{subst:void|<!--{"$type":"RPG.GameCore.ByComparePropState","TargetType":{"$type":"RPG.GameCore.GroupFetchLocalTarget","TargetType":"Prop","Targets":[300003]}}-->}}, {{cx}}{{subst:void|<!--{"$type":"RPG.GameCore.ByComparePropState","TargetType":{"$type":"RPG.GameCore.GroupFetchLocalTarget","TargetType":"Prop","Targets":[300004]}}-->}}, and {{cx}}{{subst:void|<!--{"$type":"RPG.GameCore.ByComparePropState","TargetType":{"$type":"RPG.GameCore.GroupFetchLocalTarget","TargetType":"Prop","Targets":[300001]},"State":"Open"}-->}})
+<pre>{
+	"$type": "RPG.GameCore.ChangePropState"
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.SetFloorSavedValue"
+}</pre>
+:'''(Trailblazer):''' (Joey and Vaughn &mdash; they seem to be the inspirations for Lady Vermilion and Young Master Gold. Compared to the brief descriptions in the files, the people they are in the memory are obviously far more lively...)
+:'''(Trailblazer):''' (Let's follow them to figure out more about Dr. Blues' past.)
+
+:{{DIcon|Talk}} Investigate
+:The table is strewn with many architectural concept drawings. Their lines are simple, but you can clearly see the many grandiose and fantastical buildings in the drawings.
+:Someone has written something beside the building: Twelve Hours Blueprint.
+
+:{{DIcon|Talk}} Investigate
+:On the bookshelf is a handbook named ''Dreamscape Construction Guide''. The scribbling on it is haphazard, like many people were perusing it at the same time.
+:A line stands out on the title page: "There are countless guidelines to dreamweaving, but making it interesting is the top priority!"
+
+:{{DIcon|Loupe}} Investigate
+:{{tx}}
+;(If {{F|Jigsaw_Piece1Get}} is undefined 1)
 :{{tx}}
 {{Dialogue End}}
 
 ===Find pieces of the Dream Jigsaw{{subst:void|<!--203040208-->}}===
 {{Mission Description|type=adventure|location=Dr. Blues' Emoscape|update|Collect pieces of the Dream Jigsaw and find that child's hiding spot.}}
 {{Dialogue Start}}
+
+:{{DIcon|Loupe}} Investigate
+:{{tx}}
+;(If {{F|Jigsaw_Piece2Get}} is undefined 1)
+:{{tx}}
+
+:{{DIcon|Loupe}} Investigate
+:{{tx}}
+;(If {{F|Jigsaw_Piece3Get}} is undefined 1)
 :{{tx}}
 {{Dialogue End}}
 
 ===Complete the Dream Jigsaw{{subst:void|<!--203040234-->}}===
 {{Mission Description|type=adventure|location=Dr. Blues' Emoscape|update|All Dream Jigsaw pieces have been collected. Go back and complete the jigsaw.}}
 {{Dialogue Start}}
-:{{tx}}
 {{Dialogue End}}
 
 ===Witness Orla's past{{subst:void|<!--203040206-->}}===
 {{Mission Description|type=adventure|location=Dr. Blues' Emoscape|update|You found Orla, who's in hiding. Listen to what they are talking about.}}
 {{Dialogue Start}}
 :{{tx}}
+:{{tx}}
+<pre>{
+	"$type": "RPG.GameCore.SetTextJoinValue",
+	"TextJoinID": 98,
+	"Value": "2"
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.SetTextJoinValue",
+	"TextJoinID": 99,
+	"Value": "2"
+}</pre>
 {{Dialogue End}}
 
 ===Interact with the picture frame{{subst:void|<!--203040213-->}}===
 {{Mission Description|type=adventure|location=Dr. Blues' Emoscape|update|Follow the scenes of this memory and keep exploring Orla's past.}}
 {{Dialogue Start}}
-:{{tx}}
 {{Dialogue End}}
 
 ===Collect your thoughts{{subst:void|<!--203040236-->}}===
 {{Mission Description|type=adventure|location=Dr. Blues' Emoscape|update|You learned Joey and Vaughn's true history. Maybe you should note all this down.}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Dr. Blues)
+:'''Dr. Blues:''' ...
+:{{DIcon|Arrow}} I've finally found you.
+:'''Dr. Blues:''' I remember now... Orla is my real name.
+:'''Dr. Blues:''' Later, I went to the Nightingales, and the Dreamweavers took me in, taught me everything, and brought me along with them to build the Dreamscape...
+:'''Dr. Blues:''' And I had the world's best family. The gentle Joey, the eccentric Vaughn, and Barlow and Fischer... They taught me everything about dreamweaving...
+:{{DIcon|Arrow}} I saw that too.
+:{{DIcon|Arrow}} They are quite different from how they were recorded in history.
+:'''Dr. Blues:''' History only wrote their names, but not their true selves... Why?
+:'''Dr. Blues:''' I recall that we had another promise among us. I waited for them at Dreamflux Reef to fulfill that promise, but no one ever came...
+:'''Dr. Blues:''' I must take a look. What exactly happened in the past...?
+;(If {{F|MissionCV-2030402-2}} is undefined 1)
+:<pre>{
+	"$type": "RPG.GameCore.PPFilterStackEffect",
+	"AssetPath": "EnviroSystem/PostProcessFilterAsset/oldfilmFilter.asset"
+}</pre>
+;(Otherwise, if {{F|MissionCV-2030402-2}} is undefined 2)
+:<pre>{
+	"$type": "RPG.GameCore.PPFilterStackEffect",
+	"Active": false,
+	"AssetPath": "EnviroSystem/PostProcessFilterAsset/oldfilmFilter.asset"
+}</pre>
+;(If {{F|MissionCV-2030402-2}} is undefined 1)
+<pre>{
+	"$type": "RPG.GameCore.PPFilterStackEffect",
+	"AssetPath": "EnviroSystem/PostProcessFilterAsset/oldfilmFilter.asset"
+}</pre>
 {{Dialogue End}}
 
 ===Speak with Dr. Blues{{subst:void|<!--203040212-->}}===
 {{Mission Description|type=adventure|location=Dr. Blues' Emoscape|update|Dr. Blues has appeared ahead. It might have remembered something.}}
 {{Dialogue Start}}
-:{{tx}}
 {{Dialogue End}}
 
 ===Interact with the picture frame{{subst:void|<!--203040240-->}}===
 {{Mission Description|type=adventure|location=Dr. Blues' Emoscape|update|Dr. Blues' real name is Orla. Go and see what else had happened in the past.}}
 {{Dialogue Start}}
-:{{tx}}
 {{Dialogue End}}
 
 ===Examine the newspapers on the desk{{subst:void|<!--203040237-->}}===
 {{Mission Description|type=adventure|location=Dr. Blues' Emoscape|update|Go through the newspapers on the desk. Maybe you can learn something new.}}
 {{Dialogue Start}}
-:{{tx}}
+
+:{{DIcon|Loupe}} Investigate
+:A mildly worn ''Dreamchaser Bulletin'' rests on the table, with a news headline printed in its middle.
+:"The completed Reverie Hotel has opened. The inaugural Charmony Festival was successfully held, and all Family members witnessed the descent of the avatar of the Harmony..."
+:"Construction of the Twelve Hours of the Dreamscapes is almost near its end. The Oak Family Head Gopher Wood declares the "unity of the five major lineages." Will the Nightingale join The Family?"
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:'''Bloodhound Family Member:''' ...Over there! Don't let him get away!
+:'''Bloodhound Family Member:''' Sinner, your actions have long tested the limits of The Family!
+:'''Bloodhound Family Member:''' Do not resist! Or you'll be sorry!
 {{Dialogue End}}
 
 ===Go see what exactly is happening{{subst:void|<!--203040215-->}}===
 {{Mission Description|type=adventure|location=Dr. Blues' Emoscape|update|There seem to be sounds of someone talking. Move ahead and have a look.}}
 {{Dialogue Start}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
 :{{tx}}
+;(Enter battle)
+::{{tx|Enemy list missing}}
 {{Dialogue End}}
 
 ===Talk to Barlow{{subst:void|<!--203040220-->}}===
 {{Mission Description|type=adventure|location=Dr. Blues' Emoscape|update|You've helped Barlow defeat the Bloodhound Family members. It's time to find out what is happening.}}
 {{Dialogue Start}}
+:'''Barlow:''' *cough* ...Thanks, you got rid of them...
+:'''Barlow:''' Thank you for your help, you are...?
+:{{DIcon|Arrow}} I'm Orla's friend.
+:{{DIcon|Arrow}} Just someone who happened to be passing by.
+:{{DIcon|Arrow}} A close associate of Boss Red.
+::'''Barlow:''' ...Boss Red? What a strange name.
+:'''Barlow:''' Anyway, thank you very much for your help. *cough*
+:'''Barlow:''' The Nightingales have always been an eyesore to them, but I never thought they'd actually try anything here.
+:'''Barlow:''' Fischer being summoned to Dewlight Pavilion probably also spells misfortune...
+:'''Barlow:''' Orla and I are the only Dreamweavers in this dream domain. But Orla's still young, and shouldn't be confronted with such danger... I will distract those memes, will you lend a hand?
+:{{DIcon|Arrow}} No problem.
+:{{DIcon|Arrow}} That's what I'm here for.
+:'''Barlow:''' Thank you, kind stranger. We must hurry.
 :{{tx}}
 {{Dialogue End}}
 
 ===Help Barlow escape{{subst:void|<!--203040230-->}}===
 {{Mission Description|type=adventure|location=Dr. Blues' Emoscape|update|According to Barlow, the Bloodhound Family is arresting Dreamweavers. Help Barlow to distract them.}}
 {{Dialogue Start}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{tx}}
+:The man is trying his best to withstand the pain from the wound, but his pace is obviously slowing down.
+:{{DIcon|Arrow}} Do you need help?
+:'''Barlow:''' I'm fine, we have to step up at crucial moments.
+:'''Barlow:''' Orla... I hope he's all right.
+:{{DIcon|Arrow}} I ran over as soon as I heard you were in danger.
+::'''Barlow:''' Haha, he's always been the rash sort...
+::I couldn't find him either.
+:{{DIcon|Arrow}} I couldn't find him either.
+:'''Barlow:''' Orla is the youngest among us, but the sharpest. The shelter he's crafted gets better with time. So long as he remains hidden, no one can break his creations...
+:{{tx}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{tx}}
+;(Enter battle)
+::{{tx|Enemy list missing}}
+:{{tx}}
+:'''Barlow:''' *cough* The memes' numbers are increasing. Their reinforcements should be here any minute...
+:{{DIcon|Arrow}} We have to run!
+:'''Barlow:''' Ha... Sorry, I might... have to stop here.
+:You look down &mdash; at some point, the man's body got covered in wounds. He can no longer move his legs.
+:'''Barlow:''' I'll stay behind and keep them busy, run.
+:'''Barlow:''' Orla's hiding spot should be nearby, I know the shortcut to get there. No reason to sacrifice two lives here.
+:'''Barlow:''' If you get a chance to see Orla... tell him I'm sorry I couldn't keep the promise to keep training with him.
+:{{DIcon|Arrow}} ...I will deliver the message.
+::'''Barlow:''' The child's family is being whittled down. We can't keep him safe anymore... If you could, please help him out whenever possible in the future.
+::...I won't deliver the message for you.
+:{{DIcon|Arrow}} ...I won't deliver the message for you.
+:'''Barlow:''' Haha, then just make up some lie about how Barlow has already gone off-world. Although he might not believe in it... But as long as there's hope, it should be a good thing.
+:'''Barlow:''' Thank you, and &mdash; goodbye, nameless well-wisher.
 :{{tx}}
 {{Dialogue End}}
 
@@ -157,48 +415,434 @@ PageTitle=#Dream Song#
 {{Mission Description|type=adventure|location=Dr. Blues' Emoscape|update|You learned Barlow's true history. Maybe you should note all this down.}}
 {{Dialogue Start}}
 :{{tx}}
+<pre>{
+	"$type": "RPG.GameCore.ShowReading",
+	"BookID": {
+		"FixedValue": {
+			"Value": 190623
+		}
+	}
+}</pre>
+:{{tx}}
 {{Dialogue End}}
 
 ===Interact with the picture frame{{subst:void|<!--203040231-->}}===
 {{Mission Description|type=adventure|location=Dr. Blues' Emoscape|update|Follow the scenes of this memory and keep exploring Orla's past.}}
 {{Dialogue Start}}
-:{{tx}}
 {{Dialogue End}}
 
 ===Walk around Dreamflux Reef a bit{{subst:void|<!--203040217-->}}===
 {{Mission Description|type=adventure|location=Dr. Blues' Emoscape|update|You've arrived at Dreamflux Reef. Look around to see if you can find something.}}
 {{Dialogue Start}}
+
+;(Talk to Fischer)
+:{{tx}}
+:'''Fischer:''' Excuse me, {{MC|f=miss|m=sir}} &mdash; do you know the Dreamweaver that built this place?
+:{{DIcon|Arrow}} I do...
+:{{DIcon|Arrow}} But you are?
+:'''Fischer:''' My name is Fischer, I'm the current head of the Nightingale Family. I'm looking for a family member named Orla. I've heard he's been about this area lately, perhaps the Dreamweaver who built this place may know his whereabouts.
+:{{DIcon|Arrow}} Orla is the creator of this place.
+:'''Fischer:''' This is... shocking.
 :{{tx}}
 {{Dialogue End}}
 
 ===(Optional) Examine the newspapers on the chair{{subst:void|<!--203040239-->}}===
 {{Mission Description|type=adventure|location=Dr. Blues' Emoscape|update|Go through the newspapers on the chair. Maybe you can learn something new.}}
 {{Dialogue Start}}
-:{{tx}}
+
+:{{DIcon|Loupe}} Investigate
+:A stack of torn ''Dreamchaser Bulletins'' is lying by the roadside, with reports from different times mixed in it.
+:"Nightingale Family head Glaux retires. Will the unity of the five major lineages be inevitable?"
+:"Penacony Paperfold University has officially completed construction. Former Nightingale Family head Glaux becomes first dean, then opens Dreamweaver Academy to create more outstanding Dreamweavers."
+:"Construction of the Twelve Hours in the Dreamscape is almost complete, and the prolonged Dreamweaver Project is a success. The author believes that this will be Penacony's finest age, the grand Age of Dreaming..."
+;(If {{F|MissionCV-2030402-2}} is undefined 1)
+:<pre>{
+	"$type": "RPG.GameCore.PPFilterStackEffect",
+	"AssetPath": "EnviroSystem/PostProcessFilterAsset/oldfilmFilter.asset"
+}</pre>
+;(Otherwise, if {{F|MissionCV-2030402-2}} is undefined 2)
+:<pre>{
+	"$type": "RPG.GameCore.PPFilterStackEffect",
+	"Active": false,
+	"AssetPath": "EnviroSystem/PostProcessFilterAsset/oldfilmFilter.asset"
+}</pre>
+;(If {{F|MissionCV-2030402-2}} is undefined 1)
+<pre>{
+	"$type": "RPG.GameCore.PPFilterStackEffect",
+	"AssetPath": "EnviroSystem/PostProcessFilterAsset/oldfilmFilter.asset"
+}</pre>
 {{Dialogue End}}
 
 ===Talk to Fischer{{subst:void|<!--203040218-->}}===
 {{Mission Description|type=adventure|location=Dr. Blues' Emoscape|update|Go chat with Fischer to see whether that can help.}}
 {{Dialogue Start}}
-:{{tx}}
 {{Dialogue End}}
 
 ===Take Fischer to see Orla{{subst:void|<!--203040222-->}}===
 {{Mission Description|type=adventure|location=Dr. Blues' Emoscape|update|Fischer is currently the head of the Nightgales. He arrived at Dreamflux Reef to look for Orla.}}
 {{Dialogue Start}}
-:{{tx}}
 {{Dialogue End}}
 
 ===Talk to Fischer{{subst:void|<!--203040233-->}}===
 {{Mission Description|type=adventure|location=Dr. Blues' Emoscape|update|Orla doesn't wish to speak with Fischer. Go see whether Fischer has any other ideas.}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Fischer)
+:'''Fischer:''' Orla doesn't wish to speak to me anymore... Can you help me convince him?
+:'''Fischer:''' Please pass this photo to him &mdash; as long as he's willing to return, the Nightingales will always be his home.
+<pre>{
+	"$type": "RPG.GameCore.TalkFigure",
+	"ImagePath": "SpriteOutput/Mission/TalkItem/SubMission_2030401_2.png"
+}</pre>
+:It's a familiar photo &mdash; it once opened Dr. Blues' heart, maybe it can open Orla's too.
+<pre>{
+	"$type": "RPG.GameCore.TalkFigure",
+	"Show": false,
+	"ImagePath": "SpriteOutput/Mission/TalkItem/SubMission_2030401_2.png"
+}</pre>
+
+;(Talk to Dr. Blues)
+:The blue origami bird is as quiet as a doll, it refuses to speak again.
 {{Dialogue End}}
 
 ===Talk to Orla{{subst:void|<!--203040223-->}}===
 {{Mission Description|type=adventure|location=Dr. Blues' Emoscape|update|Take the photo Fischer gave you and talk to Orla}}
 {{Dialogue Start}}
+
+;(Talk to Dr. Blues)
 :{{tx}}
+:The blue origami bird is as quiet as a doll, it refuses to speak again.
+:{{DIcon|Arrow}} Fischer asked me to pass you this photo.
+:The bird's feathers ruffle slightly, but ultimately, it does not accept the photo.
+:'''Dr. Blues:''' ...I remember now.
+:'''Dr. Blues:''' The Dreamweaver lost the last of his family, so he built a shelter at the bottom of Penacony and is hiding there.
+:'''Dr. Blues:''' He hides at the bottom of the Dreamscape, yet his gaze is fixed upon the heavens above &mdash; he scorns Fischer's proclamations, yet he yearns for the day when Fischer's words come to fruition.
+:'''Dr. Blues:''' A long time passed... His body was unable to withstand the test of time, so that compulsive liar of a Hound made a new body for him &mdash; a sky-blue origami bird that the Watchmaker painted as a portrait for the Dreamweaver.
+:{{DIcon|Arrow}} That is Dr. Blues...
+:{{DIcon|Arrow}} Formerly, Orla...
+:'''Orla:''' However, the prolonged wait has taken its toll. His mind and memories can no longer endure the wait...
+:'''Orla:''' Ah, Fischer is just a huge liar. He has never been back, and neither has anyone else. The Watchmaker and Gallagher both waited for their own "perfect ending."
+:'''Orla:''' Look at Penacony now, bustling, beautiful, bright, exactly what Joey promised me.
+:'''Orla:''' For those who don't agree with this beauty, I offer the Dreamflux Reef as their sanctuary &mdash; no one will ever feel deserted in dreams.
+:'''Orla:''' The Origami Dreamweavers have fulfilled their promise, but... I cannot accept a Dreamscape without them.
+:'''Orla:''' There's no reason for me to hold on, it's time for me to embrace my imperfect end...
+:{{DIcon|Arrow}} You still have a future.
+::'''Orla:''' Hehe, are you telling me to merely exist as a cartoon bird, devoid of the ability to weave dreams, to make friends, and to remain invisible to the eyes of others? Is this the solitary existence I am to endure within the realm of dreams?
+::'''Orla:''' Nameless, I have no future, I am the past.
+::You still have the other origami birds.
+:{{DIcon|Arrow}} You still have the other origami birds.
+:'''Orla:''' Those birds are just the unintentional creations of the Watchmaker... That guy's always doing weird stuff like this.
+:'''Orla:''' But I understand him &mdash; Penacony has forgotten its past. But even if just a little, this world ought to preserve a fragment of its past. I fear for the day... when I, too, shall begin to forget those cherished moments...
+:'''Orla:''' ...In the end, I'm still the most timid and naive one. Everyone has a dream to build, but I... only want a nest for the birds.
+:'''Orla:''' If Penacony is a land of dreams... Then, even if it's just once, I yearn for this land of dreams to heed my plea &mdash; let me return to the nest.
+:'''Joey:''' ...Orla?
+:'''Joey:''' What are you doing here? I've been waiting for you.
+:'''Vaughn:''' Heh-heh, are you shocked? Come try my new Vaughn IV, fully improved and upgraded &mdash; you're the only one who hasn't tried it!
+:'''Orla:''' You guys... are here to pick me up?
+:'''Barlow:''' Haha, didn't we agree to meet up there? I waited so long and didn't see anyone, so I decided to come straight down.
+:'''Fischer:''' I'm not leaving again, and in this Dreamscape, we shall never be separated again.
+:'''Orla:''' Yes... my friends, here I come!
+:The bird flaps its wings, its body slowly becoming transparent, its memetic body gradually drifting away.
+:'''(Trailblazer):''' (Orla's will is fading... If this continues, he will be {{Color|keyword|nobold=1|consumed by his own Dreamscape}}!)
+:{{DIcon|Arrow}} (Wake Orla)
+::{{DIcon|Arrow}} Don't be controlled by the Dreamscape!
+::{{DIcon|Arrow}} That's just a shadow of the past...
+:<pre>{
+	"$type": "RPG.GameCore.PPFilterStackEffect",
+	"Duration": 2,
+	"AssetPath": "EnviroSystem/PostProcessFilterAsset/Blank.asset"
+}</pre>
+::The blue origami bird is as quiet as a doll, it refuses to speak again.
+::Fischer asked me to pass you this photo.
+::The bird's feathers ruffle slightly, but ultimately, it does not accept the photo.
+::'''Dr. Blues:''' ...I remember now.
+::'''Dr. Blues:''' The Dreamweaver lost the last of his family, so he built a shelter at the bottom of Penacony and is hiding there.
+::'''Dr. Blues:''' He hides at the bottom of the Dreamscape, yet his gaze is fixed upon the heavens above &mdash; he scorns Fischer's proclamations, yet he yearns for the day when Fischer's words come to fruition.
+::'''Dr. Blues:''' A long time passed... His body was unable to withstand the test of time, so that compulsive liar of a Hound made a new body for him &mdash; a sky-blue origami bird that the Watchmaker painted as a portrait for the Dreamweaver.
+::That is Dr. Blues...
+::Formerly, Orla...
+::'''Orla:''' However, the prolonged wait has taken its toll. His mind and memories can no longer endure the wait...
+::'''Orla:''' Ah, Fischer is just a huge liar. He has never been back, and neither has anyone else. The Watchmaker and Gallagher both waited for their own "perfect ending."
+::'''Orla:''' Look at Penacony now, bustling, beautiful, bright, exactly what Joey promised me.
+::'''Orla:''' For those who don't agree with this beauty, I offer the Dreamflux Reef as their sanctuary &mdash; no one will ever feel deserted in dreams.
+::'''Orla:''' The Origami Dreamweavers have fulfilled their promise, but... I cannot accept a Dreamscape without them.
+::'''Orla:''' There's no reason for me to hold on, it's time for me to embrace my imperfect end...
+::You still have a future.
+::'''Orla:''' Hehe, are you telling me to merely exist as a cartoon bird, devoid of the ability to weave dreams, to make friends, and to remain invisible to the eyes of others? Is this the solitary existence I am to endure within the realm of dreams?
+::'''Orla:''' Nameless, I have no future, I am the past.
+::You still have the other origami birds.
+::'''Orla:''' Those birds are just the unintentional creations of the Watchmaker... That guy's always doing weird stuff like this.
+::'''Orla:''' But I understand him &mdash; Penacony has forgotten its past. But even if just a little, this world ought to preserve a fragment of its past. I fear for the day... when I, too, shall begin to forget those cherished moments...
+::'''Orla:''' ...In the end, I'm still the most timid and naive one. Everyone has a dream to build, but I... only want a nest for the birds.
+::'''Orla:''' If Penacony is a land of dreams... Then, even if it's just once, I yearn for this land of dreams to heed my plea &mdash; let me return to the nest.
+::'''Joey:''' ...Orla?
+::'''Joey:''' What are you doing here? I've been waiting for you.
+::'''Vaughn:''' Heh-heh, are you shocked? Come try my new Vaughn IV, fully improved and upgraded &mdash; you're the only one who hasn't tried it!
+::'''Orla:''' You guys... are here to pick me up?
+::'''Barlow:''' Haha, didn't we agree to meet up there? I waited so long and didn't see anyone, so I decided to come straight down.
+::'''Fischer:''' I'm not leaving again, and in this Dreamscape, we shall never be separated again.
+::'''Orla:''' Yes... my friends, here I come!
+::The bird flaps its wings, its body slowly becoming transparent, its memetic body gradually drifting away.
+::'''(Trailblazer):''' (Orla's will is fading... If this continues, he will be {{Color|keyword|nobold=1|consumed by his own Dreamscape}}!)
+::(Wake Orla)
+::(Let Orla leave)
+::Memories are too heavy for a birdie's illusory body. He hopes you can let him go.
+::The bird's body is being devoured by the Dreamscape. If you want to bring Orla back... this would be your last chance.
+::(I must wake Orla!)
+::(Let Orla leave)
+::You didn't intervene. The bird flies gracefully toward the light, joining the other birds in flight. Within the radiance, you witness the bird's transformation into a young man, who turns his head and offers you a gentle smile.
+::'''Orla:''' Thank you, Nameless.
+::'''Orla:''' I'm finally home.
+::Don't be controlled by the Dreamscape!
+::That's just a shadow of the past...
+::'''Orla:''' ...Yes, I know.
+::{{DIcon|Arrow}} You knew...?
+::'''Orla:''' Thoughts and emotions can materialize in the Memory Zone &mdash; That's the foundation of dreamweaving.
+::'''Orla:''' Even though I know this is just a dream, I don't want to wake up...
+::'''Orla:''' I haven't seen their faces for so long. Dreamers are unable to enter dreams again. I've almost forgotten their faces... Perhaps being trapped deep in a dream is the perfect ending for me.
+::A few legendary Dreamweavers of the past stand in the distance, guiding Orla toward Dreamjoy.
+::{{DIcon|Arrow}} That's all the more reason for you to wake up.
+::<pre>{
+	"$type": "RPG.GameCore.SetPerformanceResult",
+	"Value": 1
+}</pre>
+:::The blue origami bird is as quiet as a doll, it refuses to speak again.
+:::Fischer asked me to pass you this photo.
+:::The bird's feathers ruffle slightly, but ultimately, it does not accept the photo.
+:::'''Dr. Blues:''' ...I remember now.
+:::'''Dr. Blues:''' The Dreamweaver lost the last of his family, so he built a shelter at the bottom of Penacony and is hiding there.
+:::'''Dr. Blues:''' He hides at the bottom of the Dreamscape, yet his gaze is fixed upon the heavens above &mdash; he scorns Fischer's proclamations, yet he yearns for the day when Fischer's words come to fruition.
+:::'''Dr. Blues:''' A long time passed... His body was unable to withstand the test of time, so that compulsive liar of a Hound made a new body for him &mdash; a sky-blue origami bird that the Watchmaker painted as a portrait for the Dreamweaver.
+:::That is Dr. Blues...
+:::Formerly, Orla...
+:::'''Orla:''' However, the prolonged wait has taken its toll. His mind and memories can no longer endure the wait...
+:::'''Orla:''' Ah, Fischer is just a huge liar. He has never been back, and neither has anyone else. The Watchmaker and Gallagher both waited for their own "perfect ending."
+:::'''Orla:''' Look at Penacony now, bustling, beautiful, bright, exactly what Joey promised me.
+:::'''Orla:''' For those who don't agree with this beauty, I offer the Dreamflux Reef as their sanctuary &mdash; no one will ever feel deserted in dreams.
+:::'''Orla:''' The Origami Dreamweavers have fulfilled their promise, but... I cannot accept a Dreamscape without them.
+:::'''Orla:''' There's no reason for me to hold on, it's time for me to embrace my imperfect end...
+:::You still have a future.
+:::'''Orla:''' Hehe, are you telling me to merely exist as a cartoon bird, devoid of the ability to weave dreams, to make friends, and to remain invisible to the eyes of others? Is this the solitary existence I am to endure within the realm of dreams?
+:::'''Orla:''' Nameless, I have no future, I am the past.
+:::You still have the other origami birds.
+:::'''Orla:''' Those birds are just the unintentional creations of the Watchmaker... That guy's always doing weird stuff like this.
+:::'''Orla:''' But I understand him &mdash; Penacony has forgotten its past. But even if just a little, this world ought to preserve a fragment of its past. I fear for the day... when I, too, shall begin to forget those cherished moments...
+:::'''Orla:''' ...In the end, I'm still the most timid and naive one. Everyone has a dream to build, but I... only want a nest for the birds.
+:::'''Orla:''' If Penacony is a land of dreams... Then, even if it's just once, I yearn for this land of dreams to heed my plea &mdash; let me return to the nest.
+:::'''Joey:''' ...Orla?
+:::'''Joey:''' What are you doing here? I've been waiting for you.
+:::'''Vaughn:''' Heh-heh, are you shocked? Come try my new Vaughn IV, fully improved and upgraded &mdash; you're the only one who hasn't tried it!
+:::'''Orla:''' You guys... are here to pick me up?
+:::'''Barlow:''' Haha, didn't we agree to meet up there? I waited so long and didn't see anyone, so I decided to come straight down.
+:::'''Fischer:''' I'm not leaving again, and in this Dreamscape, we shall never be separated again.
+:::'''Orla:''' Yes... my friends, here I come!
+:::The bird flaps its wings, its body slowly becoming transparent, its memetic body gradually drifting away.
+:::'''(Trailblazer):''' (Orla's will is fading... If this continues, he will be {{Color|keyword|nobold=1|consumed by his own Dreamscape}}!)
+:::(Wake Orla)
+:::(Let Orla leave)
+:::Memories are too heavy for a birdie's illusory body. He hopes you can let him go.
+:::The bird's body is being devoured by the Dreamscape. If you want to bring Orla back... this would be your last chance.
+:::(I must wake Orla!)
+:::(Let Orla leave)
+:::You didn't intervene. The bird flies gracefully toward the light, joining the other birds in flight. Within the radiance, you witness the bird's transformation into a young man, who turns his head and offers you a gentle smile.
+:::'''Orla:''' Thank you, Nameless.
+:::'''Orla:''' I'm finally home.
+:::Don't be controlled by the Dreamscape!
+:::That's just a shadow of the past...
+:::'''Orla:''' ...Yes, I know.
+:::You knew...?
+:::'''Orla:''' Thoughts and emotions can materialize in the Memory Zone &mdash; That's the foundation of dreamweaving.
+:::'''Orla:''' Even though I know this is just a dream, I don't want to wake up...
+:::'''Orla:''' I haven't seen their faces for so long. Dreamers are unable to enter dreams again. I've almost forgotten their faces... Perhaps being trapped deep in a dream is the perfect ending for me.
+:::A few legendary Dreamweavers of the past stand in the distance, guiding Orla toward Dreamjoy.
+:::That's all the more reason for you to wake up.
+:::(Let him go)
+:::The bird's silhouette grows increasingly translucent as it runs towards its companions and the embrace of its own yearning.
+:::...But to it, is this really the {{Color|keyword|nobold=1|best ending}}?
+:::(I must wake Orla!)
+:::(Let Orla go)
+:::You didn't intervene. The bird flies gracefully toward the light, joining the other birds in flight. Within the radiance, you witness the bird's transformation into a young man, who turns his head and offers you a gentle smile.
+:::'''Orla:''' Thank you, Nameless.
+:::'''Orla:''' I'm finally home.
+:::'''(Trailblazer):''' Because it's precious &mdash; It should not be replaced by something false.
+:::'''(Trailblazer):''' You need to bring their stories back, recount these stories to Penacony, and let everyone know exactly who built this Dreamjoy.
+:::'''Orla:''' ...
+:::'''Orla:''' I know you've already recorded their stories.
+:::'''Orla:''' It's enough to have you bring back the truth that time did not manage to preserve.
+:::{{DIcon|Arrow}} But there still needs to be an overseer.
+::::'''(Trailblazer):''' An overseer is required to prevent their story from being altered yet again.
+::::'''(Trailblazer):''' I think... a Dreamweaver that has witnessed history would be the best choice.
+::::If you're not there, then I'm gonna start spewing nonsense.
+:::{{DIcon|Arrow}} If you're not there, then I'm gonna start spewing nonsense.
+:::'''(Trailblazer):''' Don't blame me for spreading nonsense &mdash; Dreamweaver Orla cries because he's afraid of getting punched! And he did it more than once!
+:::'''Orla:''' You!
+:::'''Orla:''' ...Smooth-talking Nameless. You're exactly like the Watchmaker.
+:::{{DIcon|Arrow}} Do you want me to keep going?
+:::'''Orla:''' ...Fine, you win.
+:::{{tx}}
+:::{{tx}}
+::<pre>{
+	"$type": "RPG.GameCore.SetPerformanceResult",
+	"Value": 1
+}</pre>
+::{{DIcon|Arrow}} (Let him go)
+:::The bird's silhouette grows increasingly translucent as it runs towards its companions and the embrace of its own yearning.
+:::...But to it, is this really the {{Color|keyword|nobold=1|best ending}}?
+:{{DIcon|Arrow}} (Let Orla leave)
+::Memories are too heavy for a birdie's illusory body. He hopes you can let him go.
+::The bird's body is being devoured by the Dreamscape. If you want to bring Orla back... this would be your last chance.
+::{{DIcon|Arrow}} (I must wake Orla!)
+:::{{DIcon|Arrow}} Don't be controlled by the Dreamscape!
+:::{{DIcon|Arrow}} That's just a shadow of the past...
+::<pre>{
+	"$type": "RPG.GameCore.PPFilterStackEffect",
+	"Duration": 2,
+	"AssetPath": "EnviroSystem/PostProcessFilterAsset/Blank.asset"
+}</pre>
+:::The blue origami bird is as quiet as a doll, it refuses to speak again.
+:::Fischer asked me to pass you this photo.
+:::The bird's feathers ruffle slightly, but ultimately, it does not accept the photo.
+:::'''Dr. Blues:''' ...I remember now.
+:::'''Dr. Blues:''' The Dreamweaver lost the last of his family, so he built a shelter at the bottom of Penacony and is hiding there.
+:::'''Dr. Blues:''' He hides at the bottom of the Dreamscape, yet his gaze is fixed upon the heavens above &mdash; he scorns Fischer's proclamations, yet he yearns for the day when Fischer's words come to fruition.
+:::'''Dr. Blues:''' A long time passed... His body was unable to withstand the test of time, so that compulsive liar of a Hound made a new body for him &mdash; a sky-blue origami bird that the Watchmaker painted as a portrait for the Dreamweaver.
+:::That is Dr. Blues...
+:::Formerly, Orla...
+:::'''Orla:''' However, the prolonged wait has taken its toll. His mind and memories can no longer endure the wait...
+:::'''Orla:''' Ah, Fischer is just a huge liar. He has never been back, and neither has anyone else. The Watchmaker and Gallagher both waited for their own "perfect ending."
+:::'''Orla:''' Look at Penacony now, bustling, beautiful, bright, exactly what Joey promised me.
+:::'''Orla:''' For those who don't agree with this beauty, I offer the Dreamflux Reef as their sanctuary &mdash; no one will ever feel deserted in dreams.
+:::'''Orla:''' The Origami Dreamweavers have fulfilled their promise, but... I cannot accept a Dreamscape without them.
+:::'''Orla:''' There's no reason for me to hold on, it's time for me to embrace my imperfect end...
+:::You still have a future.
+:::'''Orla:''' Hehe, are you telling me to merely exist as a cartoon bird, devoid of the ability to weave dreams, to make friends, and to remain invisible to the eyes of others? Is this the solitary existence I am to endure within the realm of dreams?
+:::'''Orla:''' Nameless, I have no future, I am the past.
+:::You still have the other origami birds.
+:::'''Orla:''' Those birds are just the unintentional creations of the Watchmaker... That guy's always doing weird stuff like this.
+:::'''Orla:''' But I understand him &mdash; Penacony has forgotten its past. But even if just a little, this world ought to preserve a fragment of its past. I fear for the day... when I, too, shall begin to forget those cherished moments...
+:::'''Orla:''' ...In the end, I'm still the most timid and naive one. Everyone has a dream to build, but I... only want a nest for the birds.
+:::'''Orla:''' If Penacony is a land of dreams... Then, even if it's just once, I yearn for this land of dreams to heed my plea &mdash; let me return to the nest.
+:::'''Joey:''' ...Orla?
+:::'''Joey:''' What are you doing here? I've been waiting for you.
+:::'''Vaughn:''' Heh-heh, are you shocked? Come try my new Vaughn IV, fully improved and upgraded &mdash; you're the only one who hasn't tried it!
+:::'''Orla:''' You guys... are here to pick me up?
+:::'''Barlow:''' Haha, didn't we agree to meet up there? I waited so long and didn't see anyone, so I decided to come straight down.
+:::'''Fischer:''' I'm not leaving again, and in this Dreamscape, we shall never be separated again.
+:::'''Orla:''' Yes... my friends, here I come!
+:::The bird flaps its wings, its body slowly becoming transparent, its memetic body gradually drifting away.
+:::'''(Trailblazer):''' (Orla's will is fading... If this continues, he will be {{Color|keyword|nobold=1|consumed by his own Dreamscape}}!)
+:::(Wake Orla)
+:::(Let Orla leave)
+:::Memories are too heavy for a birdie's illusory body. He hopes you can let him go.
+:::The bird's body is being devoured by the Dreamscape. If you want to bring Orla back... this would be your last chance.
+:::(I must wake Orla!)
+:::(Let Orla leave)
+:::You didn't intervene. The bird flies gracefully toward the light, joining the other birds in flight. Within the radiance, you witness the bird's transformation into a young man, who turns his head and offers you a gentle smile.
+:::'''Orla:''' Thank you, Nameless.
+:::'''Orla:''' I'm finally home.
+:::Don't be controlled by the Dreamscape!
+:::That's just a shadow of the past...
+:::'''Orla:''' ...Yes, I know.
+:::{{DIcon|Arrow}} You knew...?
+:::'''Orla:''' Thoughts and emotions can materialize in the Memory Zone &mdash; That's the foundation of dreamweaving.
+:::'''Orla:''' Even though I know this is just a dream, I don't want to wake up...
+:::'''Orla:''' I haven't seen their faces for so long. Dreamers are unable to enter dreams again. I've almost forgotten their faces... Perhaps being trapped deep in a dream is the perfect ending for me.
+:::A few legendary Dreamweavers of the past stand in the distance, guiding Orla toward Dreamjoy.
+:::{{DIcon|Arrow}} That's all the more reason for you to wake up.
+:::<pre>{
+	"$type": "RPG.GameCore.SetPerformanceResult",
+	"Value": 1
+}</pre>
+::::The blue origami bird is as quiet as a doll, it refuses to speak again.
+::::Fischer asked me to pass you this photo.
+::::The bird's feathers ruffle slightly, but ultimately, it does not accept the photo.
+::::'''Dr. Blues:''' ...I remember now.
+::::'''Dr. Blues:''' The Dreamweaver lost the last of his family, so he built a shelter at the bottom of Penacony and is hiding there.
+::::'''Dr. Blues:''' He hides at the bottom of the Dreamscape, yet his gaze is fixed upon the heavens above &mdash; he scorns Fischer's proclamations, yet he yearns for the day when Fischer's words come to fruition.
+::::'''Dr. Blues:''' A long time passed... His body was unable to withstand the test of time, so that compulsive liar of a Hound made a new body for him &mdash; a sky-blue origami bird that the Watchmaker painted as a portrait for the Dreamweaver.
+::::That is Dr. Blues...
+::::Formerly, Orla...
+::::'''Orla:''' However, the prolonged wait has taken its toll. His mind and memories can no longer endure the wait...
+::::'''Orla:''' Ah, Fischer is just a huge liar. He has never been back, and neither has anyone else. The Watchmaker and Gallagher both waited for their own "perfect ending."
+::::'''Orla:''' Look at Penacony now, bustling, beautiful, bright, exactly what Joey promised me.
+::::'''Orla:''' For those who don't agree with this beauty, I offer the Dreamflux Reef as their sanctuary &mdash; no one will ever feel deserted in dreams.
+::::'''Orla:''' The Origami Dreamweavers have fulfilled their promise, but... I cannot accept a Dreamscape without them.
+::::'''Orla:''' There's no reason for me to hold on, it's time for me to embrace my imperfect end...
+::::You still have a future.
+::::'''Orla:''' Hehe, are you telling me to merely exist as a cartoon bird, devoid of the ability to weave dreams, to make friends, and to remain invisible to the eyes of others? Is this the solitary existence I am to endure within the realm of dreams?
+::::'''Orla:''' Nameless, I have no future, I am the past.
+::::You still have the other origami birds.
+::::'''Orla:''' Those birds are just the unintentional creations of the Watchmaker... That guy's always doing weird stuff like this.
+::::'''Orla:''' But I understand him &mdash; Penacony has forgotten its past. But even if just a little, this world ought to preserve a fragment of its past. I fear for the day... when I, too, shall begin to forget those cherished moments...
+::::'''Orla:''' ...In the end, I'm still the most timid and naive one. Everyone has a dream to build, but I... only want a nest for the birds.
+::::'''Orla:''' If Penacony is a land of dreams... Then, even if it's just once, I yearn for this land of dreams to heed my plea &mdash; let me return to the nest.
+::::'''Joey:''' ...Orla?
+::::'''Joey:''' What are you doing here? I've been waiting for you.
+::::'''Vaughn:''' Heh-heh, are you shocked? Come try my new Vaughn IV, fully improved and upgraded &mdash; you're the only one who hasn't tried it!
+::::'''Orla:''' You guys... are here to pick me up?
+::::'''Barlow:''' Haha, didn't we agree to meet up there? I waited so long and didn't see anyone, so I decided to come straight down.
+::::'''Fischer:''' I'm not leaving again, and in this Dreamscape, we shall never be separated again.
+::::'''Orla:''' Yes... my friends, here I come!
+::::The bird flaps its wings, its body slowly becoming transparent, its memetic body gradually drifting away.
+::::'''(Trailblazer):''' (Orla's will is fading... If this continues, he will be {{Color|keyword|nobold=1|consumed by his own Dreamscape}}!)
+::::(Wake Orla)
+::::(Let Orla leave)
+::::Memories are too heavy for a birdie's illusory body. He hopes you can let him go.
+::::The bird's body is being devoured by the Dreamscape. If you want to bring Orla back... this would be your last chance.
+::::(I must wake Orla!)
+::::(Let Orla leave)
+::::You didn't intervene. The bird flies gracefully toward the light, joining the other birds in flight. Within the radiance, you witness the bird's transformation into a young man, who turns his head and offers you a gentle smile.
+::::'''Orla:''' Thank you, Nameless.
+::::'''Orla:''' I'm finally home.
+::::Don't be controlled by the Dreamscape!
+::::That's just a shadow of the past...
+::::'''Orla:''' ...Yes, I know.
+::::You knew...?
+::::'''Orla:''' Thoughts and emotions can materialize in the Memory Zone &mdash; That's the foundation of dreamweaving.
+::::'''Orla:''' Even though I know this is just a dream, I don't want to wake up...
+::::'''Orla:''' I haven't seen their faces for so long. Dreamers are unable to enter dreams again. I've almost forgotten their faces... Perhaps being trapped deep in a dream is the perfect ending for me.
+::::A few legendary Dreamweavers of the past stand in the distance, guiding Orla toward Dreamjoy.
+::::That's all the more reason for you to wake up.
+::::(Let him go)
+::::The bird's silhouette grows increasingly translucent as it runs towards its companions and the embrace of its own yearning.
+::::...But to it, is this really the {{Color|keyword|nobold=1|best ending}}?
+::::(I must wake Orla!)
+::::(Let Orla go)
+::::You didn't intervene. The bird flies gracefully toward the light, joining the other birds in flight. Within the radiance, you witness the bird's transformation into a young man, who turns his head and offers you a gentle smile.
+::::'''Orla:''' Thank you, Nameless.
+::::'''Orla:''' I'm finally home.
+::::'''(Trailblazer):''' Because it's precious &mdash; It should not be replaced by something false.
+::::'''(Trailblazer):''' You need to bring their stories back, recount these stories to Penacony, and let everyone know exactly who built this Dreamjoy.
+::::'''Orla:''' ...
+::::'''Orla:''' I know you've already recorded their stories.
+::::'''Orla:''' It's enough to have you bring back the truth that time did not manage to preserve.
+::::{{DIcon|Arrow}} But there still needs to be an overseer.
+:::::'''(Trailblazer):''' An overseer is required to prevent their story from being altered yet again.
+:::::'''(Trailblazer):''' I think... a Dreamweaver that has witnessed history would be the best choice.
+:::::If you're not there, then I'm gonna start spewing nonsense.
+::::{{DIcon|Arrow}} If you're not there, then I'm gonna start spewing nonsense.
+::::'''(Trailblazer):''' Don't blame me for spreading nonsense &mdash; Dreamweaver Orla cries because he's afraid of getting punched! And he did it more than once!
+::::'''Orla:''' You!
+::::'''Orla:''' ...Smooth-talking Nameless. You're exactly like the Watchmaker.
+::::{{DIcon|Arrow}} Do you want me to keep going?
+::::'''Orla:''' ...Fine, you win.
+::::{{tx}}
+::::{{tx}}
+:::<pre>{
+	"$type": "RPG.GameCore.SetPerformanceResult",
+	"Value": 1
+}</pre>
+:::{{DIcon|Arrow}} (Let him go)
+::::The bird's silhouette grows increasingly translucent as it runs towards its companions and the embrace of its own yearning.
+::::...But to it, is this really the {{Color|keyword|nobold=1|best ending}}?
+::{{DIcon|Exit}} (Let Orla go)
+:::You didn't intervene. The bird flies gracefully toward the light, joining the other birds in flight. Within the radiance, you witness the bird's transformation into a young man, who turns his head and offers you a gentle smile.
+:::{{tx}}
+:::{{tx}}
+::<pre>{
+	"$type": "RPG.GameCore.SetPerformanceResult",
+	"Value": 2
+}</pre>
 {{Dialogue End}}
 
 ==Other Languages==

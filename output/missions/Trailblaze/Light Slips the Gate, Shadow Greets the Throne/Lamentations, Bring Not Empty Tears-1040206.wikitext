@@ -21,7 +21,7 @@ Mission Lamentations, Bring Not Empty Tears Caelus.png|Caelus
 |area          = "Eternal Holy City" Okhema
 |prev          = Grove, Wherefore Are the Wise Silent
 |next          = Memories, Veiled in Blazing Mist
-|rewards       = Trailblaze EXP*600; Stellar Jade*80; Refined Aether*6; Lost Crystal*6; Celestial Ambrosia*240; Dusk of Rationality*1 { text = ''Dusk of Rationality'' }; Credit*80,000
+|rewards       = Trailblaze EXP*600; Stellar Jade*80; Refined Aether*6; Lost Crystal*6; Celestial Ambrosia*240; Dusk of Rationality (Disk)*1 { text = ''Dusk of Rationality'' }; Credit*80,000
 }}
 '''''Lamentations, Bring Not Empty Tears''''' is a [[Trailblaze Mission]] in the chapter [[Light Slips the Gate, Shadow Greets the Throne]].
 
@@ -44,29 +44,244 @@ Mission Lamentations, Bring Not Empty Tears Caelus.png|Caelus
 ===Report back to Aglaea{{subst:void|<!--104020610-->}}===
 {{Mission Description|type=trailblaze|location="Eternal Holy City" Okhema|Following intense combat, (Trailblazer)'s group escorts Anaxa back to Okhema to report to Aglaea.}}
 {{Dialogue Start}}
+
+;(Unused &mdash; EnterDistrict_G{GroupID})
+----
+::Shortly after, in Okhema
+::{{A|VO chapter4 14 castorice 101.ogg}} '''Castorice:''' Phew... That was a close call. Thank goodness that we returned to Okhema unharmed.
+::{{DIcon|Arrow}} Okhema, your baseballer is back!
+::{{DIcon|Arrow}} I never want to leave the holy city again.
+::{{A|VO chapter4 14 trianne 101.ogg}} '''Trianne:''' Ugh... Little Cas, my head... It still hurts.
+::{{A|VO chapter4 14 trianne 102.ogg}} '''Trianne:''' Sorry... I know you... told me... not to open the gate...
+::{{A|VO chapter4 14 castorice 102.ogg}} '''Castorice:''' Please don't blame yourself, Lady Trianne. If it weren't for you, we would've already met our end at the Grove.
+::{{A|VO chapter4 14 trianne 103.ogg}} '''Trianne:''' I feel awful... I need to go back... to get some rest...
+::{{A|VO chapter4 14 castorice 103.ogg}} '''Castorice:''' Lady Trianne, you haven't been well since you woke up... Are you sure you can make it back on your own?
+::{{A|VO chapter4 14 anaxa 101.ogg}} '''Anaxa:''' All this noise and commotion... Okhema hasn't changed a bit, has it?
+::{{A|VO chapter4 14 castorice 104.ogg}} '''Castorice:''' Are you... Professor Anaxa?
+::{{A|VO chapter4 14 anaxa 102.ogg}} '''Anaxa:''' There's no need for doubt. The Titan no longer speaks. It is I, Anaxagoras of the Nousporists.
+::{{A|VO chapter4 14 castorice 105.ogg}} '''Castorice:''' ...Indeed. You are the only one who would refer to yourself like that.
+::{{A|VO chapter4 14 anaxa 103.ogg}} '''Anaxa:''' ...
+::{{A|VO chapter4 14 castorice 106.ogg}} '''Castorice:''' ...Professor, let me be frank: The mission Lady Aglaea entrusted us is to search for survivors, uncover the truth about the disaster at the Grove, and... retrieve the Coreflame of {{Rubi|Cerces|Reason Titan}}.
+::{{A|VO chapter4 14 anaxa 104.ogg}} '''Anaxa:''' That does not surprise me. And now, I'm a survivor who witnessed the entirety of the disaster, as well as the defenseless bearer of a Coreflame.
+::{{A|VO chapter4 14 anaxa 105.ogg}} '''Anaxa:''' Are you going to bring me to Aglaea to fulfill your duty?
+::{{A|VO chapter4 14 castorice 107.ogg}} '''Castorice:''' That is indeed my duty, but I prefer not to present you to her as a captive or spoil of battle.
+::{{A|VO chapter4 14 anaxa 106.ogg}} '''Anaxa:''' Fine. There's no need to make your life difficult. I'm not against meeting that woman.
+::{{A|VO chapter4 14 anaxa 107.ogg}} '''Anaxa:''' But I have some things to take care of first. The families of some of my fellow Grove scholars live in the holy city. Before we meet Aglaea... I want to visit them.
+::{{DIcon|Arrow}} Why do you have to do it before meeting Aglaea?
+::{{A|VO chapter4 14 castorice 108.ogg}} '''Castorice:''' Because Lady Aglaea... will probably be against it.
+::{{tx}}
+
+;(Talk to Old Man With Slender Frame)
+:{{A|VO chapter4 14 feibeier 101.ogg}} '''Old Man With Slender Frame:''' Hello, young ones. Is there anything I can help you with?
+:{{A|VO chapter4 14 anaxa 119.ogg}} '''Anaxa:''' Are you the father of Cynane and Artakama?
+:{{A|VO chapter4 14 feibeier 102.ogg}} '''Old Fabio:''' Ah, yes. Did my daughters cause trouble at school again...?
+:{{A|VO chapter4 14 feibeier 103.ogg}} '''Old Fabio:''' Alas, forgive this old brain of mine. Both of my daughters graduated long ago, and they are now scholars at the Grove. As I get older, memories from years past tend to blend together.
+:{{A|VO chapter4 14 anaxa 120.ogg}} '''Anaxa:''' ...
+:{{A|VO chapter4 14 feibeier 104.ogg}} '''Old Fabio:''' What's the matter, young one? Why so quiet? Did my daughters really get into some trouble?
+:{{A|VO chapter4 14 feibeier 105.ogg}} '''Old Fabio:''' If they refuse to apologize, just let me know. Their old dad can still talk some sense into them...
+:{{A|VO chapter4 14 castorice 114.ogg}} '''Castorice:''' ...What should we do? I really can't tell him...
+:{{DIcon|Arrow}} Don't ask me. I'm getting all teary-eyed as well...
+:{{A|VO chapter4 14 anaxa 121.ogg}} '''Anaxa:''' ...Mr. Fabio, the black tide... took Cynane and Artakama.
 :{{tx}}
+<pre>{
+	"$type": "RPG.GameCore.PerformanceEndSeq",
+	"BeforeCases": [
+		{
+			"$type": "RPG.GameCore.CharacterTriggerFreeStyle",
+			"TargetAlias": {
+				"$type": "RPG.GameCore.GroupFetchLocalTarget",
+				"Targets": [
+					400001
+				]
+			},
+			"StoryAvatarID": "NPC_Old",
+			"NormalizedTransitionDuration": 0,
+			"StoryMotionID": 100030289
+		}
+	]
+}</pre>
+
+;(Talk to Woman With Gentle Expression)
+:{{A|VO chapter4 14 woman 101.ogg}} '''Woman With Gentle Expression:''' Hello... and you are...?
+:{{A|VO chapter4 14 anaxa 115.ogg}} '''Anaxa:''' Hello. If I'm not mistaken, you are Callinicus' wife, right?
+:{{A|VO chapter4 14 woman 102.ogg}} '''Woman With Gentle Expression:''' Yes. Oh, are you a messenger? No wonder I haven't heard any news for so long. There's been a change in personnel, hasn't there?
+:{{A|VO chapter4 14 anaxa 116.ogg}} '''Anaxa:''' Ma'am, Callinicus passed away a few days ago defending the Grove against the black tide.
+:{{A|VO chapter4 14 woman 103.ogg}} '''Woman With Gentle Expression:''' ...
+:{{A|VO chapter4 14 woman 104.ogg}} '''Woman With Gentle Expression:''' So... did he manage to defend the Grove?
+:{{A|VO chapter4 14 castorice 112.ogg}} '''Castorice:''' ...Huh?
+:{{DIcon|Arrow}} This is the first thing you ask after hearing of his passing...?
+:{{A|VO chapter4 14 anaxa 117.ogg}} '''Anaxa:''' Yes. He managed to protect {{Rubi|Cerces'|Reason Titan}} Coreflame at the cost of his life.
+:{{tx}}
+<pre>{
+	"$type": "RPG.GameCore.PerformanceEndSeq",
+	"BeforeCases": [
+		{
+			"$type": "RPG.GameCore.CharacterTriggerFreeStyle",
+			"TargetAlias": {
+				"$type": "RPG.GameCore.GroupFetchLocalTarget",
+				"Targets": [
+					400001
+				]
+			},
+			"StoryAvatarID": "NPC_Lady",
+			"NormalizedTransitionDuration": 0,
+			"StoryMotionID": 100020000
+		}
+	]
+}</pre>
 {{Dialogue End}}
 
 ===Send condolences to the victims' families{{subst:void|<!--104020609-->}}===
 {{Mission Description|type=trailblaze|location="Eternal Holy City" Okhema|update|Prior to seeing Aglaea, Anaxa asks to visit the families of those lost to the black tide.}}
 {{Dialogue Start}}
+
+;(Talk to Young Man)
+:{{A|VO chapter4 14 titusi 101.ogg}} '''Young Man:''' What's wrong? I'm busy. There's a lot going on in the city, and I've got my hands full...
+:{{A|VO chapter4 14 castorice 115.ogg}} '''Castorice:''' Mister, we're sorry to bother you, but...
+:{{A|VO chapter4 14 titusi 102.ogg}} '''Young Man:''' ...Wait, Lady Castorice? Did Lady Aglaea send you because of some mistake I made at work?
+:{{A|VO chapter4 14 anaxa 124.ogg}} '''Anaxa:''' Keep your cool, Titus. I'm Anaxagoras from the Grove of Epiphany and a colleague of your father, Old Titus.
+:{{A|VO chapter4 14 anaxa 125.ogg}} '''Anaxa:''' A few days ago... your father passed away.
+:{{A|VO chapter4 14 titusi 103.ogg}} '''Titus:''' Wait, what? My old man died?
+:{{A|VO chapter4 14 titusi 104.ogg}} '''Titus:''' ...
+:{{A|VO chapter4 14 titusi 105.ogg}} '''Titus:''' Heh... That's no shocker. At his age, he was due for the River of Souls any time.
+:{{DIcon|Arrow}} How can you say that!? He's your...
+:{{A|VO chapter4 14 titusi 106.ogg}} '''Titus:''' Heh... Just up and left me behind, that old man...
 :{{tx}}
+<pre>{
+	"$type": "RPG.GameCore.PerformanceEndSeq",
+	"BeforeCases": [
+		{
+			"$type": "RPG.GameCore.CharacterTriggerFreeStyle",
+			"TargetAlias": {
+				"$type": "RPG.GameCore.GroupFetchLocalTarget",
+				"Targets": [
+					400001
+				]
+			},
+			"StoryAvatarID": "NPC_Male",
+			"NormalizedTransitionDuration": 0,
+			"StoryMotionID": 100010237
+		}
+	]
+}</pre>
+:{{A|VO chapter4 14 castorice 111.ogg}} '''Castorice:''' So, after all these years, you and Lady Aglaea are still...
+:{{A|VO chapter4 14 anaxa 114.ogg}} '''Anaxa:''' Neither of us is narrow-minded. You should know the root cause of our conflict.
+;(Unused &mdash; EnterDistrict_G{GroupID})
+----
+::{{tx}}
+:----
+::{{tx}}
+:----
+::{{tx}}
+::<!--1-second delay-->
+::{{tx}}
+:<pre>{
+	"$type": "RPG.GameCore.SetLoadingStratageType",
+	"StratageType": "StoryLine"
+}</pre>
 {{Dialogue End}}
 
 ===Report back to Aglaea{{subst:void|<!--104020612-->}}===
 {{Dialogue Start}}
+----
 :{{tx}}
+:{{A|VO chapter4 14 anaxa 126.ogg}} '''Anaxa:''' That is it. That's all the colleagues' families that I remember.
+:{{DIcon|Arrow}} Those who sacrificed their lives and their families are truly admirable.
+:{{A|VO chapter4 14 castorice 116 m.ogg}} {{A|VO chapter4 14 castorice 116 f.ogg}} '''Castorice:''' Good work, {{MC|m=Mr.|f=Miss}} (Trailblazer) and... Professor Anaxa.
+:{{tx}}
+<pre>{
+	"$type": "RPG.GameCore.PerformanceEndSeq",
+	"BeforeCases": []
+}</pre>
 {{Mission Description|type=trailblaze|location="Eternal Holy City" Okhema|update|With many matters demanding her attention, Aglaea cannot yet receive those back from the Grove. (Trailblazer)'s travel-weary group decides to rest first.}}
+
+;(Unused &mdash; EnterDistrict_G264_01)
+:{{tx}}
+:----
+:<pre>{
+	"$type": "RPG.GameCore.AddFinishMissionData_PlayMessage",
+	"SubmissionID": 104020601,
+	"MessageSectionID": 1451500
+}</pre>
 {{Dialogue End}}
 
 ===Speak with Castorice and Anaxa{{subst:void|<!--104020602-->}}===
 {{Dialogue Start}}
+
+;(Talk to )
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+----
+:{{A|VO chapter4 14 anaxa 130.ogg}} '''Anaxa:''' It's fortunate we don't have to confront that woman while I'm hauling around this sick body. Castorice, and this friend I haven't gotten the chance to know &mdash; I'll take my leave for today.
+:{{A|VO chapter4 14 anaxa 131.ogg}} '''Anaxa:''' That Titan made a myriad of adjustments on their own... My head still aches from that. I don't want to stay a second longer in this noisy city if I can.
+:{{A|VO chapter4 14 castorice 120.ogg}} '''Castorice:''' Please be careful. Okhema isn't the Grove. This place...
+:{{A|VO chapter4 14 anaxa 132.ogg}} '''Anaxa:''' ...Is covered by her golden threads, I know. That woman is extremely confident I won't escape her grasp.
+:{{A|VO chapter4 14 anaxa 133.ogg}} '''Anaxa:''' Don't worry. As I said before, I'll mind my behavior.
+:{{A|VO chapter4 14 castorice 121 m.ogg}} {{A|VO chapter4 14 castorice 121 f.ogg}} '''Castorice:''' {{MC|m=Mr.|f=Miss}} (Trailblazer), so many unexpected things happened on our journey to the Grove... We truly had no intention of putting you in danger, let alone face the black tide head on...
+:{{DIcon|Arrow}} Trouble is my old friend by now.
+:{{DIcon|Arrow}} We made it back alive. So much for the black tide.
+::{{A|VO chapter4 14 castorice 122.ogg}} '''Castorice:''' Please do not underestimate the threat the black tide poses.
+:{{A|VO chapter4 14 castorice 123.ogg}} '''Castorice:''' The black tide is not just an enemy of Okhema, but all of Amphoreus. Even back when the forces of Strife coveted the holy city, their warriors still undeniably halted the black tide outside Castrum Kremnos.
+:{{A|VO chapter4 14 castorice 124.ogg}} '''Castorice:''' {{Rubi|Nikador's|Strife Titan}} Coreflame now sits vacant and the black tide has returned... The Grove is an academic city with the best understanding of the black tide. It shouldn't have fallen so easily, and yet it was taken overnight, leaving the city in blood and tears, haunted by the spirits of departed heroes...
+:{{A|VO chapter4 14 castorice 125.ogg}} '''Castorice:''' The trial of Strife is imminent. I pray Mydei will be able to steel his resolve soon...
+:{{DIcon|Arrow}} And that black-robed swordmaster...
+:{{DIcon|Arrow}} The dreadful enemies of the Grove are also creations of the black tide?
+:{{A|VO chapter4 14 castorice 126.ogg}} '''Castorice:''' Lady Tribbie once traveled across thousands of cities in Amphoreus to repel the black tide, but even they have no recollection of this powerful enemy in all their journeys. Perhaps the fall of Strife has triggered even more terrifying events in unseen places...
+:{{A|VO chapter4 14 castorice 126.ogg}} '''Castorice:''' Lady Tribbie once traveled across thousands of cities in Amphoreus to repel the black tide, but even they have no recollection of this powerful enemy in all their journeys. Perhaps the fall of Strife has triggered even more terrifying events in unseen places...
+:{{A|VO chapter4 14 castorice 127.ogg}} '''Castorice:''' As for me... I detected a strong stench of death from that entity, but it wasn't because he had a connection with {{Rubi|Thanatos|Death Titan}}... I'm afraid it's purely because he has sent countless others to their deaths.
+:{{A|VO chapter4 14 castorice 128 m.ogg}} {{A|VO chapter4 14 castorice 128 f.ogg}} '''Castorice:''' Speaking of {{Rubi|Thanatos|Death Titan}}... {{MC|m=Mr.|f=Miss}} (Trailblazer), there is something else I wish to verify with you.
+:{{A|VO chapter4 14 castorice 129.ogg}} '''Castorice:''' You must have an idea of the... curse I bear by now. I was born as the Shadow of Death, a poison shunned by all living beings...
+:{{A|VO chapter4 14 castorice 130.ogg}} '''Castorice:''' Yet when you caught me in the Grove...
+:{{A|VO chapter4 14 castorice 131 m.ogg}} {{A|VO chapter4 14 castorice 131 f.ogg}} '''Castorice:''' ...I'm curious why you weren't affected by my power, {{MC|m=Mr.|f=Miss}} (Trailblazer)?
+:{{DIcon|Arrow}} I had totally forgotten about this until you brought it up.
+:{{DIcon|Arrow}} Maybe it just hasn't taken effect yet?
+::{{A|VO chapter4 14 castorice 132.ogg}} '''Castorice:''' That might be the case if we only brushed the very tips of our fingers, but back then...
+::I'm used to it. I'm just special like that.
+::Now that you mention it, I think the same thing happened in the Vortex...
+:{{DIcon|Arrow}} I'm used to it. I'm just special like that.
+:{{DIcon|Arrow}} Now that you mention it, I think the same thing happened in the Vortex...
+:{{A|VO chapter4 14 castorice 133.ogg}} '''Castorice:''' My apologies for the abrupt question. For all my life, I've always wondered: What is my connection to death? And why am I inextricably linked to {{Rubi|Thanatos|Death Titan}}?
 :{{tx}}
 {{Dialogue End}}
 
 ===Return to your private bath chamber and end this day{{subst:void|<!--104020603-->}}===
 {{Dialogue Start}}
+
+;(Talk to Dan Heng)
 :{{tx}}
+:{{A|VO chapter4 14 danheng 101.ogg}} '''Dan Heng:''' Long time no see. I've heard about what happened from Phainon... You've been through a lot.
+:{{DIcon|Arrow}} Not at all. It's all in service to Trailblaze.
+::{{A|VO chapter4 14 danheng 102.ogg}} '''Dan Heng:''' Heh... I wasn't expecting Amphoreus to temper the will of the Nameless.
+:{{DIcon|Arrow}} Life is a struggle.
+::{{A|VO chapter4 14 danheng 103.ogg}} '''Dan Heng:''' ...May you never succumb to the dark side of Trailblaze.
+:{{DIcon|Arrow}} I missed you so much, my dearest friend!
+::{{A|VO chapter4 14 danheng 104.ogg}} '''Dan Heng:''' ...It seems you took things pretty hard.
+:{{tx}}
+:{{DIcon|Arrow}} What were you doing while I was gone?
+:{{A|VO chapter4 14 danheng 105.ogg}} '''Dan Heng:''' I was organizing logs. I also asked Hyacine for some research material from the Grove.
+:{{A|VO chapter4 14 danheng 106.ogg}} '''Dan Heng:''' I discovered something interesting. Do you remember that Amphoreus's sky was sealed away by a Titan? {{Rubi|Aquila's|Sky Titan}} presence keeps this world isolated from the rest of the world beyond the sky.
+:{{A|VO chapter4 14 danheng 107.ogg}} '''Dan Heng:''' It seems Hyacine's ancestors were the Sky Priests who worshipped {{Rubi|Aquila|Sky Titan}}. Perhaps she can give us more clues to find a way back to the Astral Express.
+:{{A|VO chapter4 14 danheng 108.ogg}} '''Dan Heng:''' Nothing out of the ordinary happened in the holy city in the past few days. I didn't have to talk to anyone either. It was kind of nice spending time alone.
+:{{DIcon|Arrow}} Just you wait. Your good times are coming to an end!
+::{{A|VO chapter4 14 danheng 109.ogg}} '''Dan Heng:''' After what happened at the Grove, there's sure to be unrest in the coming days. We should rest for now.
+::Awful! I should have stayed and organized documents with you.
+:{{DIcon|Arrow}} Awful! I should have stayed and organized documents with you.
+:{{A|VO chapter4 14 danheng 110.ogg}} '''Dan Heng:''' ...I'm afraid you'd probably find the task of organizing just as awful.
+:{{A|VO chapter4 14 danheng 111.ogg}} '''Dan Heng:''' You look tired. You should get some sleep before we set off tomorrow...
+:{{tx}}
+
+;(Unused &mdash; EnterDistrict_G302_02)
+:{{A|VO chapter4 14 player 103 m.ogg}} {{A|VO chapter4 14 player 103 f.ogg}} '''(Trailblazer):''' (Oh, he looks like he's been well.)
+
+;(Talk to Guard)
+:{{A|VO chapter4 14 weibing 102.ogg}} '''Guard:''' My apologies, Miss Castorice... Lady Aglaea has just informed me that she has no time to receive anyone at the moment.
+
+;(Talk to Castorice)
+:{{A|VO chapter4 14 castorice 134 m.ogg}} {{A|VO chapter4 14 castorice 134 f.ogg}} '''Castorice:''' {{MC|m=Mr.|f=Miss}} (Trailblazer), you must be tired after being on the move these past few days. Please set aside the tragedy at the Grove for now and rest for the day.
+:<!--1-second delay-->
+:{{A|VO chapter4 14 player 101 m.ogg}} {{A|VO chapter4 14 player 101 f.ogg}} '''(Trailblazer):''' (Castorice is right. I should get some rest. Mem is probably exhausted too. She hasn't made a peep.)
+:{{A|VO chapter4 14 player 102 m.ogg}} {{A|VO chapter4 14 player 102 f.ogg}} '''(Trailblazer):''' (I wonder how Dan Heng has been holding up these past few days.)
 {{Dialogue End}}
 
 ==Other Languages==
@@ -81,7 +296,7 @@ Mission Lamentations, Bring Not Empty Tears Caelus.png|Caelus
 |ru   = О рыдания, пусть не льются попусту слёзы
 |th   = เสียงโศกเอ๋ย อย่าให้คนเป็นต้องร่ำไห้
 |vi   = Hỡi Âm Thanh Buồn, Đừng Để Người Sống Rơi Nước Mắt Vô Ích
-|de   = Kummer, bring keine leeren Tränen
+|de   = O Kummer, bring keine leeren Tränen
 |id   = Ratapan, Jangan Biarkan Tangisan Sia-sia
 |pt   = Lamentações, Não Tragam Lágrimas Vazias
 }}

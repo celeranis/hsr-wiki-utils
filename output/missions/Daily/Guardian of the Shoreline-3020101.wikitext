@@ -39,17 +39,38 @@ PageTitle=#Guardian of the Shoreline#
 ===Speak with Yueyuan at the Alchemy Commission{{subst:void|<!--302010101-->}}===
 {{Mission Description|type=daily|location=Alchemy Commission|After the Alchemy Commission delve reopened, people honest and crooked walked betwixt each other. As such, the Pearlkeepers alone are no longer enough to patrol the beach. They have offered invitations to brave and noble volunteers for the task at hand.<br />Yueyuan the Pearlkeeper hopes that you can help patrol the beach... Seriously, though, who's the one that actually protects this place?}}
 {{Dialogue Start}}
-:{{tx}}
+
+
+;(Talk to Yueyuan)
+;(If {{cx}}<!--during performance 502046101-->)
+::'''Yueyuan:''' *sigh* My team and I have guarded Scalegorge Waterscape for over two hundred years, but we still have to witness it crumble to pieces in the end...
+::'''Yueyuan:''' When will the Cloud Knights withdraw from this place and restore its sanctity!?
+::{{DIcon|Arrow}} You don't seem to be in the best mood?
+:::'''Yueyuan:''' That's putting it lightly. But then again, which Vidyadhara would be in good spirits after witnessing the desecration of our holy site?
+::{{DIcon|Arrow}} What are you muttering about?
+:::'''Yueyuan:''' You are... an Outworlder seeking medicine from the Alchemy Commission? You're too late. There's no cure to be found at all anymore, only those Cloud Knights sticking out like a sore thumb.
+::'''Yueyuan:''' Hmph, first there was the bloody conflict against the Denizens of Abundance. Then the Sedition of Imbibitor Lunae almost shook the Ambrosial Arbor to its core... And now those clowns from the Disciples of Sanctus Medicus have turned everything into a steaming hot mess!
+::'''Yueyuan:''' When I signed up with the armed forces, I took an oath to defend the Alliance. After retiring I became a Pearlkeeper, vowing to protect my compatriots during their hatching rebirth. But looking back, what did I actually protect? Truly... longevity is a curse.
+::'''Yueyuan:''' Hey, look at me &mdash; once I start complaining, I can't stop. I've grown far too talkative in my old age, so please forgive me. Do you have anything that you'd like to ask me about?
+;(If {{cx}}<!--not during performance 502046101-->)
+:<pre>{
+	"$type": "RPG.GameCore.PlayMultiVoiceTalk",
+	"TalkSentenceID": 502046202
+}</pre>
+::'''Yueyuan:''' Mmmm, (Trailblazer)? How'd you find the time to come hang out at this wasteland? Anything going on?
 {{Dialogue End}}
 
 ===Patrol the Scalegorge Waterscape's beach{{subst:void|<!--302010102-->}}===
 {{Dialogue Start}}
-:{{tx}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:'''(Trailblazer):''' (This is Yueyuan's patrol area. {{Color|keyword|nobold=1|Drive away The Unshackled and take care of the things they release}}... Honestly, who is protecting this beach?)
 {{Dialogue End}}
 
 ===Give the Drift Bottle you picked up to Yueyuan{{subst:void|<!--302010103-->}}===
 {{Dialogue Start}}
-:{{tx}}
+
 {{Dialogue End}}
 
 ==Other Languages==

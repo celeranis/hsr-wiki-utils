@@ -40,22 +40,446 @@ PageTitle=#Exhibit Collection: Oil Painting Part 2#
 ===Find out more about the situation from Uldan{{subst:void|<!--800120201-->}}===
 {{Mission Description|type=adventure|location=History and Culture Museum|Belobog's History and Culture Museum will be opening soon. Uldan is collecting appropriate exhibits to ensure a successful opening.<br />This time, Uldan wishes you to collect a commissioned piece from Belobog's famed painter, Rebini.}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Uldan)
+:'''Uldan:''' Hi there, (Trailblazer). You're here to collect {{Color|keyword|nobold=1|Belobog Landscape Paintings}} again, right?
+::'''Uldan:''' Let me check which paintings are still missing...
+::'''Uldan:''' ...Got it. This time, I'll have to task you with a trip to the {{Color|keyword|nobold=1|Great Mine}} &mdash; unless I'm mistaken, that's where {{Color|keyword|nobold=1|Rebini}} should be.
+::'''Uldan:''' Also, here's the fee we settled on. Please pass it on for me.
+:<pre>{
+	"$type": "RPG.GameCore.PlayMultiVoiceTalk",
+	"TalkSentenceID": 501190111
+}</pre>
+:::{{DIcon|?}} About the portrait of Cyrille the Fool...
+::::'''Uldan:''' (Trailblazer)... Did you say that the description of {{Color|keyword|nobold=1|Cyrille the Fool's}} portrait deviated from the truth?
+::::'''Uldan:''' But... how's that possible? The description is taken from the history textbooks of the Belobog Academy. Everything is in black and white.
+::::{{DIcon|Talk}} I met Cyrille before.
+:::::'''Uldan:''' Well... Stop pulling my leg.
+:::::'''Uldan:''' Still, I can tell you have at least heard of Cyrille from your tone.
+::::;(Return to previous option selection)
+::::{{DIcon|Arrow}} I have evidence that supports Cyrille.
+:::::'''Uldan:''' Since you sound so sure of yourself, I'll take a look at your evidence.
+::::<pre>{
+	"$type": "RPG.GameCore.ConsumeMissionItemPerformance",
+	"SubMissionID": 800122503,
+	"Desc": {
+		"Hash": 18096028862919064994
+	},
+	"OnSubmitConfirm": [
+		{
+			"$type": "RPG.GameCore.PlayAndWaitSimpleTalk",
+			"SimpleTalkList": [
+				{
+					"TalkSentenceID": 800122739
+				},
+				{
+					"TalkSentenceID": 800122740
+				},
+				{
+					"TalkSentenceID": 800122741
+				},
+				{
+					"TalkSentenceID": 800122742
+				}
+			]
+		},
+		{
+			"$type": "RPG.GameCore.TriggerCustomString",
+			"CustomString": {
+				"Value": "Talk_800122502"
+			}
+		},
+		{
+			"$type": "RPG.GameCore.TriggerCustomString",
+			"CustomString": {
+				"Value": "TalkSentence_501190151"
+			}
+		}
+	],
+	"OnSubmitCancel": [
+		{
+			"$type": "RPG.GameCore.TriggerCustomString",
+			"CustomString": {
+				"Value": "TalkSentence_501190151"
+			}
+		}
+	],
+	"SimpleTalk": {}
+}</pre>
+:::{{DIcon|Exit}} I'll go ahead and tour now.
+:<pre>{
+	"$type": "RPG.GameCore.PlayMultiVoiceTalk",
+	"TalkSentenceID": 501190111
+}</pre>
 {{Dialogue End}}
 
 ===Find Rebini in the Great Mine{{subst:void|<!--800120202-->}}===
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Rebini)
+:'''Rebini:''' Behold! The impoverished laborer, smashing open a solid rock &mdash;
+:'''Rebini:''' Beneath his mighty hammer &mdash; natural sparks spurt forth &mdash;!
+:'''Rebini:''' Oh &mdash; I'm so hungry... I can't paint anymore...
+:'''Rebini:''' I wish I had some {{Color|keyword|nobold=1|stone-grilled olms}}...
+:{{DIcon|Arrow}} Here you go then, some stone-grilled olms.
+:<pre>{
+	"$type": "RPG.GameCore.ConsumeMissionItemPerformance",
+	"SubMissionID": 800120204,
+	"Desc": {
+		"Hash": 18096028862919064994
+	},
+	"OnSubmitConfirm": [
+		{
+			"$type": "RPG.GameCore.PlayAndWaitSimpleTalk",
+			"SimpleTalkList": [
+				{
+					"TalkSentenceID": 800120226,
+					"ProtectTime": 0.3
+				},
+				{
+					"TalkSentenceID": 800120227,
+					"ProtectTime": 0.3
+				},
+				{
+					"TalkSentenceID": 800120228,
+					"ProtectTime": 0.3
+				},
+				{
+					"TalkSentenceID": 800120229,
+					"ProtectTime": 0.3
+				},
+				{
+					"TalkSentenceID": 800120230,
+					"ProtectTime": 0.3
+				},
+				{
+					"TalkSentenceID": 800120231,
+					"ProtectTime": 0.3
+				},
+				{
+					"TalkSentenceID": 800120232,
+					"ProtectTime": 0.3
+				},
+				{
+					"TalkSentenceID": 800120233,
+					"ProtectTime": 0.3
+				},
+				{
+					"TalkSentenceID": 800120234,
+					"ProtectTime": 0.3
+				}
+			]
+		},
+		{
+			"$type": "RPG.GameCore.PlayOptionTalk",
+			"OptionList": [
+				{
+					"$type": "RPG.GameCore.OptionTalkInfo",
+					"TalkSentenceID": 800120235,
+					"OptionIconType": "ChatContinueIcon",
+					"TriggerCustomString": "TalkSentence_800120236"
+				},
+				{
+					"$type": "RPG.GameCore.OptionTalkInfo",
+					"TalkSentenceID": 800120237,
+					"OptionIconType": "ChatContinueIcon",
+					"TriggerCustomString": "TalkSentence_800120238"
+				}
+			]
+		}
+	],
+	"OnSubmitCancel": [
+		{
+			"$type": "RPG.GameCore.TriggerCustomString",
+			"CustomString": {
+				"Value": "TalkSentence_800120245"
+			}
+		}
+	],
+	"SimpleTalk": {}
+}</pre>
+:{{DIcon|Arrow}} Hello, I'm here to chase up the commission.
+::'''Rebini:''' I'm sooo hungry...
+::'''Rebini:''' If I can't eat some {{Color|keyword|nobold=1|stone-grilled olms}}, why on earth did I even come to the Underworld? Is my soul even complete in that case...
+::'''(Trailblazer):''' (Looks like he's about to lose his mind with hunger... Let's figure out what to do.)
+:{{DIcon|Arrow}} Here's some money. Get some for yourself.
+:<pre>{
+	"$type": "RPG.GameCore.ConsumeMissionItemPerformance",
+	"SubMissionID": 800120206,
+	"Desc": {
+		"Hash": 18096028862919064994
+	},
+	"OnSubmitConfirm": [
+		{
+			"$type": "RPG.GameCore.PlayAndWaitSimpleTalk",
+			"SimpleTalkList": [
+				{
+					"TalkSentenceID": 800120252,
+					"ProtectTime": 0.3
+				}
+			]
+		},
+		{
+			"$type": "RPG.GameCore.PerformanceTransition",
+			"SwitchKeepTime": 3,
+			"TextEnabled": true,
+			"TalkSentenceID": 800120253,
+			"CreateNpcList": [],
+			"CaptureNpcList": [],
+			"DestroyNpcList": [],
+			"CreateProp": {
+				"GroupID": {
+					"FixedValue": {
+						"Value": 0
+					}
+				},
+				"GroupPropID": {
+					"FixedValue": {
+						"Value": 0
+					}
+				}
+			},
+			"DestroyProp": {
+				"TargetType": {
+					"$type": "RPG.GameCore.TargetFetchAdvPropEx"
+				},
+				"ID": {
+					"FixedValue": {
+						"Value": 0
+					}
+				},
+				"GroupID": {
+					"FixedValue": {
+						"Value": 0
+					}
+				}
+			},
+			"ActiveVirtualCamera": {},
+			"ActiveTemplateVirtualCamera": {},
+			"SwitchCharacterAnchor": {},
+			"AdvNpcFaceToPlayer": {}
+		},
+		{
+			"$type": "RPG.GameCore.PlayAndWaitSimpleTalk",
+			"SimpleTalkList": [
+				{
+					"TalkSentenceID": 800120254,
+					"ProtectTime": 0.3
+				},
+				{
+					"TalkSentenceID": 800120255,
+					"ProtectTime": 0.3
+				},
+				{
+					"TalkSentenceID": 800120231,
+					"ProtectTime": 0.3
+				},
+				{
+					"TalkSentenceID": 800120232,
+					"ProtectTime": 0.3
+				},
+				{
+					"TalkSentenceID": 800120233,
+					"ProtectTime": 0.3
+				},
+				{
+					"TalkSentenceID": 800120234
+				}
+			]
+		},
+		{
+			"$type": "RPG.GameCore.PlayOptionTalk",
+			"OptionList": [
+				{
+					"$type": "RPG.GameCore.OptionTalkInfo",
+					"TalkSentenceID": 800120235,
+					"OptionIconType": "ChatContinueIcon",
+					"TriggerCustomString": "TalkSentenceT_800120236"
+				},
+				{
+					"$type": "RPG.GameCore.OptionTalkInfo",
+					"TalkSentenceID": 800120237,
+					"OptionIconType": "ChatContinueIcon",
+					"TriggerCustomString": "TalkSentenceT_800120238"
+				}
+			]
+		}
+	],
+	"OnSubmitCancel": [
+		{
+			"$type": "RPG.GameCore.TriggerCustomString",
+			"CustomString": {
+				"Value": "TalkSentence_800120245"
+			}
+		}
+	],
+	"SimpleTalk": {}
+}</pre>
+;(Unused &mdash; TalkSentence_800120236)
+:'''Rebini:''' Haha, great minds think alike.
+::'''Rebini:''' I'm going to personally send this painting to the museum &mdash; it's time for all the people of Belobog to enjoy this powerful artwork!
+::'''Rebini:''' Until next time, kind one! If you're still interested in the painting, go check it out in the museum!
+::{{Black Screen|Rebini leaves, laughing.}}
+::'''(Trailblazer):''' (Looks like I can pick up another tip from this...)
+::<!--0.5-second delay-->
+:<pre>{
+	"$type": "RPG.GameCore.ConsumeMissionItem",
+	"SubMissionID": 800120204,
+	"IsAutoConsume": true,
+	"Desc": {
+		"Hash": 18096028862919064994
+	},
+	"SimpleTalk": {}
+}</pre>
+
+;(Unused &mdash; TalkSentence_800120238)
+:'''Rebini:''' No no, that's not right! I surmise that you're not an aficionado of art...
+::'''Rebini:''' Sometimes, when a piece of art cannot be perfected, all that's needed is just this stroke of inspiration!
+::'''Rebini:''' I'm going to personally send this painting to the museum &mdash; it's time for all the people of Belobog to enjoy this powerful artwork!
+::'''Rebini:''' Until next time, kind one! If you're still interested in the painting, go check it out in the museum!
+::{{Black Screen|Rebini leaves, laughing.}}
+::'''(Trailblazer):''' (Looks like I can pick up another tip from this...)
+::<!--0.5-second delay-->
+:<pre>{
+	"$type": "RPG.GameCore.ConsumeMissionItem",
+	"SubMissionID": 800120204,
+	"IsAutoConsume": true,
+	"Desc": {
+		"Hash": 18096028862919064994
+	},
+	"SimpleTalk": {}
+}</pre>
+
+;(Unused &mdash; TalkSentenceT_800120236)
+:'''Rebini:''' Haha, great minds think alike.
+::'''Rebini:''' I'm going to personally send this painting to the museum &mdash; it's time for all the people of Belobog to enjoy this powerful artwork!
+::'''Rebini:''' Until next time, kind one! If you're still interested in the painting, go check it out in the museum!
+::{{Black Screen|Rebini leaves, laughing.}}
+::'''(Trailblazer):''' (Looks like I can pick up another tip from this...)
+::<!--0.5-second delay-->
+:<pre>{
+	"$type": "RPG.GameCore.ConsumeMissionItem",
+	"SubMissionID": 800120206,
+	"IsAutoConsume": true,
+	"Desc": {
+		"Hash": 18096028862919064994
+	},
+	"SimpleTalk": {}
+}</pre>
+
+;(Unused &mdash; TalkSentenceT_800120238)
+:'''Rebini:''' No no, that's not right! I surmise that you're not an aficionado of art...
+::'''Rebini:''' Sometimes, when a piece of art cannot be perfected, all that's needed is just this stroke of inspiration!
+::'''Rebini:''' I'm going to personally send this painting to the museum &mdash; it's time for all the people of Belobog to enjoy this powerful artwork!
+::'''Rebini:''' Until next time, kind one! If you're still interested in the painting, go check it out in the museum!
+::{{Black Screen|Rebini leaves, laughing.}}
+::'''(Trailblazer):''' (Looks like I can pick up another tip from this...)
+::<!--0.5-second delay-->
+:<pre>{
+	"$type": "RPG.GameCore.ConsumeMissionItem",
+	"SubMissionID": 800120206,
+	"IsAutoConsume": true,
+	"Desc": {
+		"Hash": 18096028862919064994
+	},
+	"SimpleTalk": {}
+}</pre>
 {{Dialogue End}}
 
 ===Report to Uldan{{subst:void|<!--800120203-->}}===
 {{Dialogue Start}}
-:{{tx}}
+
+
+;(Talk to Uldan)
+;(If {{cx}}<!--during performance 501190101-->)
+::'''Uldan:''' Welcome to the Belobog History and Culture Museum, {{MC|f=young miss|m=young man}}. Is there anything an old man like me can help you with?
+::{{DIcon|Arrow}} I'm just here to visit the museum.
+:::'''Uldan:''' Oh hoho, you're at the wrong place. This is the museum's warehouse. Head out then turn right, the exhibition hall is past the reception counter.
+::{{DIcon|Arrow}} I'm here solely to talk with older people.
+:::'''Uldan:''' Hah, what a unique hobby. However, this is a museum after all. Since you're here, might as well have a tour. Head out then turn right, the exhibition hall is past the reception counter.
+::'''Uldan:''' If you have any questions along your tour, or if you have any feedback or opinions, welcome to come talk to me...
+::'''Uldan:''' ...I am Uldan, former dean of the Belobog College of Art, and now the curator of this museum. Pleased to meet you.
+;(If {{cx}}<!--not during performance 501190101-->)
+::<pre>{
+	"$type": "RPG.GameCore.PlayMultiVoiceTalk",
+	"TalkSentenceID": 501190111
+}</pre>
+::::{{DIcon|?}} About the portrait of Cyrille the Fool...
+:::::'''Uldan:''' (Trailblazer)... Did you say that the description of {{Color|keyword|nobold=1|Cyrille the Fool's}} portrait deviated from the truth?
+:::::'''Uldan:''' But... how's that possible? The description is taken from the history textbooks of the Belobog Academy. Everything is in black and white.
+:::::{{DIcon|Talk}} I met Cyrille before.
+::::::'''Uldan:''' Well... Stop pulling my leg.
+::::::'''Uldan:''' Still, I can tell you have at least heard of Cyrille from your tone.
+:::::;(Return to previous option selection)
+:::::{{DIcon|Arrow}} I have evidence that supports Cyrille.
+::::::'''Uldan:''' Since you sound so sure of yourself, I'll take a look at your evidence.
+:::::<pre>{
+	"$type": "RPG.GameCore.ConsumeMissionItemPerformance",
+	"SubMissionID": 800122503,
+	"Desc": {
+		"Hash": 18096028862919064994
+	},
+	"OnSubmitConfirm": [
+		{
+			"$type": "RPG.GameCore.PlayAndWaitSimpleTalk",
+			"SimpleTalkList": [
+				{
+					"TalkSentenceID": 800122739
+				},
+				{
+					"TalkSentenceID": 800122740
+				},
+				{
+					"TalkSentenceID": 800122741
+				},
+				{
+					"TalkSentenceID": 800122742
+				}
+			]
+		},
+		{
+			"$type": "RPG.GameCore.TriggerCustomString",
+			"CustomString": {
+				"Value": "Talk_800122502"
+			}
+		},
+		{
+			"$type": "RPG.GameCore.TriggerCustomString",
+			"CustomString": {
+				"Value": "TalkSentence_501190151"
+			}
+		}
+	],
+	"OnSubmitCancel": [
+		{
+			"$type": "RPG.GameCore.TriggerCustomString",
+			"CustomString": {
+				"Value": "TalkSentence_501190151"
+			}
+		}
+	],
+	"SimpleTalk": {}
+}</pre>
+::::{{DIcon|Exit}} I'll go ahead and tour now.
+::<pre>{
+	"$type": "RPG.GameCore.PlayMultiVoiceTalk",
+	"TalkSentenceID": 501190111
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.PlayMultiVoiceTalk",
+	"TalkSentenceID": 501190111
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.ShowMenu"
+}</pre>
 {{Dialogue End}}
 
 ===Place the exhibit at the specified spot{{subst:void|<!--800120205-->}}===
 {{Dialogue Start}}
-:{{tx}}
+
+:{{DIcon|Loupe}} Investigate
+:An oil painting depicting the Administrative District in its full majesty.
+:The Administrative District depicted in the painting is much larger than you remember. Maybe it's because there are many places off-limits to you.
 {{Dialogue End}}
 
 ==Other Languages==

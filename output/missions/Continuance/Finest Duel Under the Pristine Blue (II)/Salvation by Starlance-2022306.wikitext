@@ -47,65 +47,206 @@ PageTitle=#Salvation by Starlance#
 ===Witness Hoolay's devious plans{{subst:void|<!--202230601-->}}===
 {{Mission Description|type=continuance|location=Skysplitter Arena|For the Father Wolf who leads the pack, the possibility of returning empty-handed must always be taken into consideration when planning each and every hunt...}}
 {{Dialogue Start}}
-:{{tx}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+;(Screen fades to black)
+:{{A|VO chapter2 15 hulei 105.ogg}} '''Hoolay:''' I have looked forward to this for so long. Our little hunting game has finally reached its climax... I told you before that I had a path prepared for you...
+----
+;([[#Gallery|Cutscene]] plays)
+::You've doomed yourselves...
+::As I meet my demise, so shall the entire Xianzhou Luofu!
+::The "crimson moon" in my chest will make this place shine with blood!
+::I will drive all foxians to madness in their fear... craving slaughter... without end!
+::What now, Feixiao...?
+::...What is this!?
+::This is the "heart" of the Borisin Warhead, a product of the plaguemark.
+::I'll leave the next part to you.
+::General, I don't understand...
+::We cannot allow this thing to spread. I will do all within my power to consume this "crimson moon."
+::Once the situation changes... Lieutenant Yanqing, you are to enforce the Cloud Knight's military rules. Understood?
+::General?
+;(Cutscene ends)
+----
+;(Enter battle)
+:{{Enemy List|Shadow of "Feixiao"*1}}
 {{Dialogue End}}
 
 ===Stall the Merlin's Claw who has sunk into madness{{subst:void|<!--202230603-->}}===
 {{Mission Description|type=continuance|location=Skysplitter Arena|update|In response to Hoolay's dying blow, the Merlin's Claw has no choice but to use everything in her power to confront the Crimson Moon hanging in the sky. As though she had returned to the battlefields of yore, she initiates a bloody massacre that has no end in sight. There is only one way to bring her out of madness: Stall for time.}}
 {{Dialogue Start}}
-:{{tx}}
 {{Dialogue End}}
 
 ===Even now, Feixiao is still struggling on the border between madness and sanity...{{subst:void|<!--202230604-->}}===
 {{Dialogue Start}}
 :{{tx}}
+<pre>{
+	"$type": "RPG.GameCore.ResetMissionAudioState",
+	"ResetBGMEmotionState": true
+}</pre>
+:{{tx}}
+<pre>{
+	"$type": "RPG.GameCore.PerformanceEndSeq",
+	"BeforeCases": [
+		{
+			"$type": "RPG.GameCore.SwitchCharacterAnchorV2",
+			"SwitchCharacterAnchorConfig": {
+				"IsLocalPlayer": true,
+				"CharacterUniqueName": "LocalPlayer",
+				"AreaName": {
+					"Value": "LevelArea_P40242_F40242001_G4"
+				},
+				"AnchorName": {
+					"Value": "Anchor1"
+				}
+			}
+		}
+	]
+}</pre>
+
+
+
+
 {{Dialogue End}}
 
 ===Chase after the apparition Hoolay left behind{{subst:void|<!--202230607-->}}===
 {{Mission Description|type=continuance|location=Inner Beast's Battlefield|update|On the empty battlefield, a tenacious and freshly-dead foe makes an appearance once more. The veteran hunter is primed to go on a special hunt... but this time, she is the prey.}}
 {{Dialogue Start}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
 :{{tx}}
+
+;(Upon reaching the destination)
+<pre>{
+	"$type": "RPG.GameCore.AdventureCameraLookAt",
+	"LookAtGroupID": {
+		"FixedValue": {
+			"Value": 5
+		}
+	},
+	"LookAtID": {
+		"FixedValue": {
+			"Value": 300011
+		}
+	},
+	"LookAtTransitionDuration": 3,
+	"LookAtTransitionCurvePath": "Camera/BlendCurve/Blend_N1CameraTest.asset",
+	"LockCameraInput": true,
+	"LookAtDuration": 5,
+	"MaxAngle": 60,
+	"ScreenRange": {}
+}</pre>
+:{{A|VO chapter2 15 hulei 119.ogg}} '''Hoolay:''' The familiar smell of death, like a vulture...
+
+;(Upon reaching the destination)
+<pre>{
+	"$type": "RPG.GameCore.PlayVoice",
+	"VoiceIDs": [
+		222351411,
+		222351412,
+		222350801,
+		222350802
+	]
+}</pre>
+;(Unused &mdash; OnDestuctThePhantom_G5)
+<pre>{
+	"$type": "RPG.GameCore.PlayMazeButtonEffect"
+}</pre>
+:----
+::{{A|VO chapter2 15 add feixiao 101.ogg}} '''Feixiao:''' Your so-called survival of the fittest is nothing but an excuse.
+::{{A|VO chapter2 15 add feixiao 102.ogg}} '''Feixiao:''' You cannot weaken my resolve, Hoolay.
 {{Dialogue End}}
 
 ===Destroy the wraith of suspicion{{subst:void|<!--202230612-->}}===
 {{Dialogue Start}}
-:{{tx}}
 {{Dialogue End}}
 
 ===Chase after the apparition Hoolay left behind{{subst:void|<!--202230608-->}}===
 {{Dialogue Start}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
 :{{tx}}
+;(Unused &mdash; OnDestuctThePhantom_G6)
+<pre>{
+	"$type": "RPG.GameCore.PlayMazeButtonEffect",
+	"Enable": true
+}</pre>
+:----
+::{{A|VO chapter2 15 add feixiao 103.ogg}} '''Feixiao:''' You aim to instill terror within me...
+::{{A|VO chapter2 15 add feixiao 104.ogg}} '''Feixiao:''' Yet, all of this is nothing but a... phantom.
 {{Dialogue End}}
 
 ===Destroy the wraith of fear{{subst:void|<!--202230613-->}}===
 {{Dialogue Start}}
-:{{tx}}
 {{Dialogue End}}
 
 ===Chase after the apparition Hoolay left behind{{subst:void|<!--202230611-->}}===
 {{Dialogue Start}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
 :{{tx}}
 {{Dialogue End}}
 
 ===Destroy the wraith of desire{{subst:void|<!--202230614-->}}===
 {{Dialogue Start}}
 :{{tx}}
+----
+:{{tx}}
+<pre>{
+	"$type": "RPG.GameCore.PerformanceEndSeq",
+	"BeforeCases": [
+		{
+			"$type": "RPG.GameCore.SwitchCharacterAnchorV2",
+			"SwitchCharacterAnchorConfig": {
+				"IsLocalPlayer": true,
+				"CharacterUniqueName": "LocalPlayer",
+				"AreaName": {
+					"Value": "LevelArea_P40242_F40242001_G3"
+				},
+				"AnchorName": {
+					"Value": "Anchor1"
+				}
+			}
+		}
+	]
+}</pre>
 {{Dialogue End}}
 
 ===Defeat... "Feixiao"{{subst:void|<!--202230609-->}}===
 {{Dialogue Start}}
-:{{tx}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+----
+;([[#Gallery|Cutscene]] plays)
+::Do you see me... "shooting star"?
+::"The Knights are sworn to protect the Xianzhou."
+::I will uphold this vow... until my very last day.
+;(Cutscene ends)
+----
+;(Enter battle)
+:{{Enemy List|Shadow of "Feixiao"*1}}
 {{Dialogue End}}
 
 ===Break free of the Crimson Moon's influence and wake from Moon Rage{{subst:void|<!--202230610-->}}===
 {{Dialogue Start}}
-:{{tx}}
+----
 {{Dialogue End}}
 
 ===Stall the Merlin's Claw who has sunk into madness{{subst:void|<!--202230602-->}}===
 {{Mission Description|type=continuance|location=Skysplitter Arena|update|In response to Hoolay's dying blow, the Merlin's Claw has no choice but to use everything in her power to confront the Crimson Moon hanging in the sky. As though she had returned to the battlefields of yore, she initiates a bloody massacre that has no end in sight. There is only one way to bring her out of madness: Stall for time.}}
 {{Dialogue Start}}
-:{{tx}}
+----
+;([[#Gallery|Cutscene]] plays)
+::We can't let her get away!
+::...But do we stand any chance at all?
+::She said "I'll leave the next part to you."
+::She put her faith in us!
+;(Cutscene ends)
+----
 {{Dialogue End}}
 
 ==Other Languages==

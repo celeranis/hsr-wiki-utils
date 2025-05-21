@@ -36,7 +36,27 @@ PageTitle=#Hypogeum Enigma#
 ===Speak with Damionis{{subst:void|<!--803010101-->}}===
 {{Mission Description|type=adventure|location="Eternal Holy City" Okhema|Damionis is always coming up with the wildest ideas, like flying beyond the sky or using a lens to observe changes in the Dawn Device... What will he come up with this time?}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Damionis)
+;(If {{cx}}<!--during performance 504033001-->)
+::'''Damionis:''' Hello, esteemed outlander. Was that photo of Castrum Kremnos helpful to you?
+::{{DIcon|Arrow}} Immensely helpful!
+:::'''Damionis:''' That's good to hear. I've always felt somewhat guilty toward you, so knowing I've been able to help eases my mind.
+::{{DIcon|Arrow}} It's not a big deal.
+:::'''Damionis:''' In that case, I've always felt a certain guilt toward you. If there's anything you need help with, please don't hesitate to ask.
+::'''Damionis:''' Though Lady Aglaea has forbidden me from further exploring the world beyond the sky, my curiosity remains unabated. If you're interested, feel free to chat with me anytime.
+::'''Damionis:''' I'd be delighted to share my latest discoveries with you, esteemed outlander.
+;(If {{cx}}<!--not during performance 504033001-->)
+:<pre>{
+	"$type": "RPG.GameCore.PlayMultiVoiceTalk",
+	"TalkSentenceID": 504038101
+}</pre>
+
+;(Unused &mdash; OpenActivityUI)
+<pre>{
+	"$type": "RPG.GameCore.ShowUI",
+	"Name": "Ui.RaidCollection.FourthWorld.FourthWorldRaidCollectionMainPage"
+}</pre>
 {{Dialogue End}}
 
 ==Other Languages==

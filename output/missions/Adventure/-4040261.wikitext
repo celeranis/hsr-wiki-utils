@@ -34,6 +34,175 @@ PageTitle=##
 ==Dialogue==
 {{Stub Dialogue}}
 
+
+:{{DIcon|?}} Investigate
+;(If {{F|MissionCV-4040261-1}} is undefined 1)
+:<pre>{
+	"$type": "RPG.GameCore.TriggerSound",
+	"SoundName": {
+		"Value": "Ev_sfx_suigarden_ghostopera_stop"
+	},
+	"EmitterType": "Prop",
+	"GroupID": 195,
+	"ID": 300001
+}</pre>
+::'''Ghost Actor:''' How about it? Do you want to learn one opera song with me?
+;(If {{F|MissionCV-4040261-1}} is not undefined 1)
+:<pre>{
+	"$type": "RPG.GameCore.TriggerSound",
+	"SoundName": {
+		"Value": "Ev_sfx_suigarden_ghostopera_stop"
+	},
+	"EmitterType": "Prop",
+	"GroupID": 195,
+	"ID": 300001
+}</pre>
+::----
+::'''Ghost Actor:''' Ahoy there, esteemed guest! How did you end up on the stage to watch the performance? Please get off quickly!
+::{{DIcon|Arrow}} Sorry, my bad.
+:::'''Ghost Actor:''' It's alright. Young folks these days care not for opera. It's forgivable if you're unfamiliar with the rules and norms.
+::{{DIcon|Arrow}} Nobody stopped me getting up though?
+:::'''Ghost Actor:''' Nobody stopped you... Alright, are you going to adopt the same attitude toward everything in life? When you eventually are trying to force your way into the Shackling Prison, tell the warden that "nobody's stopping you" &mdash; and see if you live to tell the tale.
+::{{DIcon|Arrow}} There's no other audience members though, so isn't it all the same?
+:::'''Ghost Actor:''' N&mdash;No other audience... Kid, you don't have to be so rude. I'm choking up here...
+::{{DIcon|Arrow}} Ghost!!!
+:::'''Ghost Actor:''' Hey! What are you yelling for! You freaked me out... Haven't you ever seen a heliobus before?
+::'''Ghost Actor:''' Whatever, I never get any listeners... so I won't hold a grudge at you.
+::'''Ghost Actor:''' The Ten Lords only let me go around Fyxestroll Garden like this. It took me a long time to find this theater square, and I've been singing my heart out for ages now &mdash; but you're the only one I've met. Is opera really in such decline?
+::{{DIcon|Arrow}} This opera is too freaky.
+:::'''Ghost Actor:''' Yes, it's quite freaky. ''Wedding Wine'' is the most famous of all the Zhuming flower-drum opera!
+:::'''Ghost Actor:''' The reason why it can be sung for thousands of years is because of how "freaky" it is. Before I was sealed within the Creation Furnace, it was known to everyone aboard the Zhuming.
+::{{DIcon|Arrow}} This place is too bleak for you.
+:::'''Ghost Actor:''' Oh, good point. Are you saying that I should go into town and find a more thriving theater?
+:::{{DIcon|Arrow}} No, please don't!
+:::'''Ghost Actor:''' Just kidding. Don't be scared. It's only in a forsaken place like this that the Ten-Lords Commission can turn a blind eye to me.
+::'''Ghost Actor:''' *sigh* To be honest, singing to nobody in here is really boring. Have you got any interest in learning Zhuming flower-drum opera with me?
+::{{DIcon|Arrow}} Sounds pretty difficult.
+:::'''Ghost Actor:''' It's difficult to seriously learn the posture. Just the basics of singing, reciting, acting, and fighting take a good fifty years to learn.
+:::'''Ghost Actor:''' But I'll just teach you how to sing this one, ''Wedding Wine'' &mdash; it's simple enough.
+::{{DIcon|Arrow}} Can I think it over?
+:::'''Ghost Actor:''' Alright, let's learn that song you just heard, ''Wedding Wine''.
+::{{DIcon|Arrow}} Too difficult. I don't wanna.
+:::'''Ghost Actor:''' It's not difficult. Let's just learn that one song you just heard then: ''Wedding Wine''.
+::'''Ghost Actor:''' How about it? Just think of it as a way for me to stave off boredom. If I'm in a good mood, I won't run around all over the place. And if I don't run around all over the place, everyone else is in a good mood &mdash; right?
+::----
+::----
+;(All choices lead to the following options)
+:{{DIcon|Arrow}} I'll learn from you.
+:<pre>{
+	"$type": "RPG.GameCore.SetMissionCustomValue",
+	"SubmissionID": 404026101,
+	"MissionCustomValue": {
+		"Index": 3,
+		"Name": "OldValue_3",
+		"isLocal": true,
+		"ValidValueParamList": [
+			0,
+			1
+		]
+	},
+	"CustomValue": 1
+}</pre>
+::'''Ghost Actor:''' Great! Now we become master and apprentice!
+::'''Ghost Actor:''' Once you're ready, let me know, and I'll teach you how to sing ''Wedding Wine''.
+:{{DIcon|Exit}} Ah, forget it.
+:<pre>{
+	"$type": "RPG.GameCore.SetMissionCustomValue",
+	"SubmissionID": 404026101,
+	"MissionCustomValue": {
+		"Index": 3,
+		"Name": "OldValue_3",
+		"isLocal": true,
+		"ValidValueParamList": [
+			0,
+			1
+		]
+	}
+}</pre>
+::'''Ghost Actor:''' Sigh... Fine. If you ever change your mind, come back and find me then.
+----
+
+
+:{{DIcon|?}} Start Learning How to Sing
+----
+:'''Ghost Actor:''' Okay~ Then let's start off with the background of the story. ''Wedding Wine'' tells the story of a man seduced by a heliobus and their love story.
+:'''Ghost Actor:''' The female lead is a charming but deadly heliobus, luring men into marrying her, before ravenously feasting on the groom's emotions on the wedding night.
+:{{DIcon|Arrow}} What a scary story...
+::'''Ghost Actor:''' The scariest thing about this story actually is the humans... There are several human characters in the story who knew that it is a heliobus but, despite this, still tried to use it as a tool to vanquish their own enemies.
+::'''Ghost Actor:''' Of course, these people are all overpowered by the female lead in the end. In one sense, it's a highly satisfying story.
+:{{DIcon|Arrow}} What a cliche...
+::'''Ghost Actor:''' It seems cliche from a modern perspective. And heliobi of course take no gender, but of course you humans have to wrap this archetype of a "femme fatale" around the whole thing.
+::'''Ghost Actor:''' But this opera dates back to the Three Sufferings Era, and you can't deny its artistic merit based on its restrictions at the time. Only stupid humans who love thinking but hate reading books do that.
+:'''Ghost Actor:''' But let's get back on track here... the part that we are learning is the scariest scene in the whole opera.
+:'''Ghost Actor:''' The female lead takes possession of her husband, so there's just the one body there alone, but it takes the form of two and they perform this graceful dance.
+:'''Ghost Actor:''' A human and a heliobus, singing until dawn breaks. When people come to visit the next day, all that remains is the withered husk of the husband's corpse.
+:'''Ghost Actor:''' Here is how it goes:
+<pre>{
+	"$type": "RPG.GameCore.PPFilterStackEffect",
+	"Duration": 1,
+	"AssetPath": "EnviroSystem/PostProcessFilterAsset/MovieMask.asset"
+}</pre>
+:'''Ghost Actor:''' In devotion, my heart does yearn. To be known by you, my love, in return.
+:'''Ghost Actor:''' Candles flicker, casting shadows on the wall. My bones the wick, my flesh the fragrance's call.
+:'''Ghost Actor:''' Robes fall away, revealing my desire. In hibiscus tent, our passions shall transpire.
+:'''Ghost Actor:''' At night, we'll embrace as one, so tight. Come tomorrow, you'll take your flight.
+<pre>{
+	"$type": "RPG.GameCore.PPFilterStackEffect",
+	"Active": false,
+	"Duration": 1,
+	"AssetPath": "EnviroSystem/PostProcessFilterAsset/MovieMask.asset"
+}</pre>
+:{{DIcon|Arrow}} It's beautiful!
+::'''Ghost Actor:''' Teehee, thank you kindly.
+:{{DIcon|Arrow}} It's terrible!
+::'''Ghost Actor:''' How could you say that! The youth of today, how could they fail to appreciate traditional opera?
+:{{DIcon|Arrow}} It's scary!
+::'''Ghost Actor:''' That is testimony to my singing.
+:'''Ghost Actor:''' That's all for today's class, then. Why don't you mull over what we covered today. Next time, we'll do our practical training.
+:'''Ghost Actor:''' That's all for today, class dismissed! Let's pick up again {{Color|keyword|nobold=1|another time}}~ Remember, I'll be quizzing you on this the next time we meet...
+----
+----
+
+:{{DIcon|?}} Ghost Actor
+<pre>{
+	"$type": "RPG.GameCore.TriggerSound",
+	"SoundName": {
+		"Value": "Ev_sfx_suigarden_ghostopera_pause"
+	},
+	"EmitterType": "Prop",
+	"GroupID": 195,
+	"ID": 300001
+}</pre>
+:'''Ghost Actor:''' That's enough for today! If you've any problems, we can chat about it next time.
+<pre>{
+	"$type": "RPG.GameCore.TriggerSound",
+	"SoundName": {
+		"Value": "Ev_sfx_suigarden_ghostopera_resume"
+	},
+	"EmitterType": "Prop",
+	"GroupID": 195,
+	"ID": 300001
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.AdvDestroyGroupEntity",
+	"InstanceIDList": [
+		300001
+	]
+}</pre>
+;(If {{F|MissionCV-4040261-2}} is undefined 1)
+<pre>{
+	"$type": "RPG.GameCore.ConsumeMissionItem",
+	"SubMissionID": 404026110,
+	"IsAutoConsume": true,
+	"SimpleTalk": {}
+}</pre>
+
+<pre>{
+	"$type": "RPG.GameCore.AdvCreateGroupEntity",
+	"InstanceIDList": [
+		300004
+	]
+}</pre>
 {{Dialogue End}}
 
 ==Other Languages==

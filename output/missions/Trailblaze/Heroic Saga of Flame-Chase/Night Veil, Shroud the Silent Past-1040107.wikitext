@@ -41,33 +41,236 @@ PageTitle=#Night Veil, Shroud the Silent Past#
 ===Investigate the first "Non-Existent Memory"{{subst:void|<!--104010701-->}}===
 {{Mission Description|type=trailblaze|location=Memorealm Express|According to (Trailblazer), Oronyx showed {{MC|f=her|m=him}} the Stellaron Hunters... It was a memory that should not exist, yet it seems so vivid and realistic.}}
 {{Dialogue Start}}
+----
 :{{tx}}
+
+:{{DIcon|Talk}} Listen
+:{{tx}}
+:{{A|VO chapter4 7 player 109 m.ogg}} {{A|VO chapter4 7 player 109 f.ogg}} '''(Trailblazer):''' Is that... me?
+:{{A|VO chapter4 7 player 110 m.ogg}} {{A|VO chapter4 7 player 110 f.ogg}} '''(Trailblazer):''' There's also Himeko and Dan Heng... What memory is this?
 {{Dialogue End}}
 
 ===Investigate the second "Non-Existent Memory"{{subst:void|<!--104010703-->}}===
 {{Dialogue Start}}
+
+;(Talk to Listen)
 :{{tx}}
+
+:{{DIcon|Talk}} Listen
+:{{A|VO chapter4 7 kafka 101 m.ogg}} {{A|VO chapter4 7 kafka 101 f.ogg}} '''Kafka:''' Do you have any dietary restrictions, (Trailblazer)?
+:{{A|VO chapter4 7 player 118 m.ogg}} {{A|VO chapter4 7 player 118 f.ogg}} '''(Trailblazer)?:''' I'll eat anything.
+:{{A|VO chapter4 7 kafka 102.ogg}} '''Kafka:''' You really aren't picky about food.
+<pre>{
+	"$type": "RPG.GameCore.SwitchCharacterAnchorV2",
+	"SwitchCharacterAnchorConfig": {
+		"IsLocalPlayer": true,
+		"CharacterUniqueName": "LocalPlayer",
+		"AreaName": {
+			"Value": "LevelArea_P40402_F40402002_G4"
+		},
+		"AnchorName": {
+			"Value": "Anchor2"
+		}
+	}
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.ActiveVirtualCamera",
+	"AreaName": "LevelArea_P40402_F40402002_G4",
+	"AnchorName": "Anchor1",
+	"BlendConfig": {
+		"ExportToJson": true,
+		"BlendType": "Cut",
+		"CustomCurveName": "BlendCut11"
+	}
+}</pre>
+:{{A|VO chapter4 7 player 119 m.ogg}} {{A|VO chapter4 7 player 119 f.ogg}} '''(Trailblazer):''' Another set of nonexistent memories... This time, Sam's also here.
+:{{A|VO chapter4 7 player 120 m.ogg}} {{A|VO chapter4 7 player 120 f.ogg}} '''(Trailblazer):''' Getting to know myself from a different perspective... feels a little strange.
+<pre>{
+	"$type": "RPG.GameCore.ActiveVirtualCamera",
+	"AreaName": "LevelArea_P40402_F40402002_G4",
+	"AnchorName": "Anchor1",
+	"IsActive": false,
+	"BlendConfig": {
+		"ExportToJson": true,
+		"BlendType": "Custom",
+		"CustomCurveName": "BlendCut11",
+		"BlendTime": 2
+	}
+}</pre>
 {{Dialogue End}}
 
 ===Head to the Parlor Car{{subst:void|<!--104010713-->}}===
 {{Dialogue Start}}
-:{{tx}}
+
+:{{DIcon|Talk}} Memorealm Express
+
+:{{A|VO chapter4 7 player 121 m.ogg}} {{A|VO chapter4 7 player 121 f.ogg}} '''(Trailblazer):''' (It's the first time that the Express has felt so unfamiliar...)
+:{{A|VO chapter4 7 player 122 m.ogg}} {{A|VO chapter4 7 player 122 f.ogg}} '''(Trailblazer):''' (I want to take a look in the Parlor Car...)
 {{Dialogue End}}
 
 ===Speak with the Stellaron Hunters in the Non-Existent Memory{{subst:void|<!--104010704-->}}===
 {{Dialogue Start}}
-:{{tx}}
 {{Dialogue End}}
 
 ===Assist the Stellaron Hunters{{subst:void|<!--104010709-->}}===
 {{Dialogue Start}}
+<pre>{
+	"$type": "RPG.GameCore.TransitEnvProfile",
+	"Path": {
+		"Value": "Stages/Outputs/Chapter00/EnviroProfile/Chap00_INT_Train_01.enviroProfile.asset"
+	}
+}</pre>
+:{{A|VO chapter4 7 player 125 m.ogg}} {{A|VO chapter4 7 player 125 f.ogg}} '''(Trailblazer):''' I don't understand... What's the point of all of this?
+:{{A|VO chapter4 7 olonyx 137.ogg}} '''???:''' Happiness... sealed away...
+:{{A|VO chapter4 7 olonyx 138.ogg}} '''???:''' Mother... Are you still there?
+:{{A|VO chapter4 7 olonyx 139.ogg}} '''???:''' Are you watching?
+:{{DIcon|Arrow}} ...Titan?
+:{{DIcon|Arrow}} ...Oronyx?
+:{{DIcon|Arrow}} ...I can understand what you're saying now?
+:{{A|VO chapter4 7 olonyx 140.ogg}} '''Oronyx:''' Memories flowing in reverse... Pounding.
+:{{tx}}
+----
+----
+;([[#Gallery|Cutscene]] plays)
+::Sky father... are you watching?
+::...Mem?
+;(Cutscene ends)
+----
+<pre>{
+	"$type": "RPG.GameCore.TransitEnvProfile",
+	"Path": {
+		"Value": "Stages/Outputs/Chapter00/EnviroProfile/Chap00_INT_Train_01_Varient1.enviroProfile.asset"
+	}
+}</pre>
+----
+:{{tx}}
+:{{A|VO chapter4 7 mem 110.ogg}} '''???:''' ...?
+:{{DIcon|Arrow}} Who are you!?
+:{{DIcon|Arrow}} What just happened!?
+:{{DIcon|Arrow}} Did I unlock a new Path just like that!?
+:{{A|VO chapter4 7 mem 111.ogg}} '''???:''' You are? I am... Who?
+:{{A|VO chapter4 7 mem 112.ogg}} '''???:''' Gaze, watching. Outside, cold.
+:{{A|VO chapter4 7 mem 113.ogg}} '''???:''' You... warm. Me like, warmth.
+:{{DIcon|Arrow}} All of this does not make sense...
+::All of this does not make sense...
+:{{DIcon|Arrow}} Can anyone explain this to me?
+::Can anyone explain this to me?
+::{{A|VO chapter4 7 mem 114.ogg}} '''???:''' Confusion... Same. Answer, unknown.
+::{{A|VO chapter4 7 olonyx 142.ogg}} '''Oronyx:''' I've finally found it... Precious memory. At long last... I've caught THEIR gaze.
+::{{A|VO chapter4 7 olonyx 143 m.ogg}} {{A|VO chapter4 7 olonyx 143 f.ogg}} '''Oronyx:''' Accompany {{MC|m=him,|f=her,}} {{Color|keyword|nobold=1|Mem}}...
+::{{A|VO chapter4 7 olonyx 144 m.ogg}} {{A|VO chapter4 7 olonyx 144 f.ogg}} '''Oronyx:''' {{MC|m=He|f=She}} will make the memories of this world complete once again... {{MC|m=He|f=She}} will find... Mother...
+::{{DIcon|Arrow}} Is your name "Mem"?
+:::{{A|VO chapter4 7 mem 115.ogg}} '''Mem:''' Name? Mine? Don't remember.
+:::{{A|VO chapter4 7 mem 116.ogg}} '''Mem:''' Mem... Address. Temporarily.
+:::Who is... Mother?
+:::{{A|VO chapter4 7 mem 117.ogg}} '''Mem:''' Mother? Who? Don't remember.
+:::Is your name "Mem"?
+::{{DIcon|Arrow}} Who is... Mother?
+:::{{A|VO chapter4 7 mem 117.ogg}} '''Mem:''' Mother? Who? Don't remember.
+:::{{DIcon|Arrow}} Is your name "Mem"?
+::{{A|VO chapter4 7 mem 118.ogg}} '''Mem:''' Name? Mine? Don't remember.
+::{{A|VO chapter4 7 mem 119.ogg}} '''Mem:''' Mem... Address. For now.
+::{{A|VO chapter4 7 mem 120.ogg}} '''Mem:''' Travel, like. With you, together?
+::{{A|VO chapter4 7 mem 121.ogg}} '''Mem:''' Memory... collected. Piece together, complete.
+::{{DIcon|Arrow}} Nikador's weakness...
+::{{DIcon|Arrow}} ...Can you help us find it?
+::{{A|VO chapter4 7 mem 122.ogg}} '''Mem:''' Ador... Nik? Titan?
+::{{A|VO chapter4 7 mem 123.ogg}} '''Mem:''' Need, memories. Help... I can.
+::{{DIcon|Arrow}} Then come with me.
+::{{DIcon|Arrow}} As long as you're able to help.
+::{{A|VO chapter4 7 olonyx 145.ogg}} '''Oronyx:''' Shadow in the memory...
+::{{A|VO chapter4 7 olonyx 146.ogg}} '''Oronyx:''' They... are your companions?
+::{{DIcon|Arrow}} Yes, they are my companions.
+:::Yes, they are my companions.
+:::I also can't say for sure...
+::{{DIcon|Arrow}} I also can't say for sure...
+:::I also can't say for sure...
+::{{DIcon|Arrow}} No, they are enemies.
+:::No, they are enemies.
+:::{{A|VO chapter4 7 mem 124.ogg}} '''Mem:''' Bad people. Troublesome. Help, needed.
+:::{{tx}}
+::No, they are enemies.
+::{{A|VO chapter4 7 mem 124.ogg}} '''Mem:''' Bad people. Troublesome. Help, needed.
+::{{tx}}
+:Can anyone explain this to me?
+:{{A|VO chapter4 7 mem 114.ogg}} '''???:''' Confusion... Same. Answer, unknown.
+:{{A|VO chapter4 7 olonyx 142.ogg}} '''Oronyx:''' I've finally found it... Precious memory. At long last... I've caught THEIR gaze.
+:{{A|VO chapter4 7 olonyx 143 m.ogg}} {{A|VO chapter4 7 olonyx 143 f.ogg}} '''Oronyx:''' Accompany {{MC|m=him,|f=her,}} {{Color|keyword|nobold=1|Mem}}...
+:{{A|VO chapter4 7 olonyx 144 m.ogg}} {{A|VO chapter4 7 olonyx 144 f.ogg}} '''Oronyx:''' {{MC|m=He|f=She}} will make the memories of this world complete once again... {{MC|m=He|f=She}} will find... Mother...
+:{{DIcon|Arrow}} Is your name "Mem"?
+::{{A|VO chapter4 7 mem 115.ogg}} '''Mem:''' Name? Mine? Don't remember.
+::{{A|VO chapter4 7 mem 116.ogg}} '''Mem:''' Mem... Address. Temporarily.
+::Who is... Mother?
+::{{A|VO chapter4 7 mem 117.ogg}} '''Mem:''' Mother? Who? Don't remember.
+::Is your name "Mem"?
+:{{DIcon|Arrow}} Who is... Mother?
+::{{A|VO chapter4 7 mem 117.ogg}} '''Mem:''' Mother? Who? Don't remember.
+::{{DIcon|Arrow}} Is your name "Mem"?
+:{{A|VO chapter4 7 mem 118.ogg}} '''Mem:''' Name? Mine? Don't remember.
+:{{A|VO chapter4 7 mem 119.ogg}} '''Mem:''' Mem... Address. For now.
+:{{A|VO chapter4 7 mem 120.ogg}} '''Mem:''' Travel, like. With you, together?
+:{{A|VO chapter4 7 mem 121.ogg}} '''Mem:''' Memory... collected. Piece together, complete.
+:{{DIcon|Arrow}} Nikador's weakness...
+:{{DIcon|Arrow}} ...Can you help us find it?
+:{{A|VO chapter4 7 mem 122.ogg}} '''Mem:''' Ador... Nik? Titan?
+:{{A|VO chapter4 7 mem 123.ogg}} '''Mem:''' Need, memories. Help... I can.
+:{{DIcon|Arrow}} Then come with me.
+:{{DIcon|Arrow}} As long as you're able to help.
+:{{A|VO chapter4 7 olonyx 145.ogg}} '''Oronyx:''' Shadow in the memory...
+:{{A|VO chapter4 7 olonyx 146.ogg}} '''Oronyx:''' They... are your companions?
+:{{DIcon|Arrow}} Yes, they are my companions.
+::Yes, they are my companions.
+::I also can't say for sure...
+:{{DIcon|Arrow}} I also can't say for sure...
+::I also can't say for sure...
+:{{DIcon|Arrow}} No, they are enemies.
+::No, they are enemies.
+::{{A|VO chapter4 7 mem 124.ogg}} '''Mem:''' Bad people. Troublesome. Help, needed.
+::{{tx}}
+:No, they are enemies.
+:{{A|VO chapter4 7 mem 124.ogg}} '''Mem:''' Bad people. Troublesome. Help, needed.
 :{{tx}}
 {{Mission Description|type=trailblaze|location=Memorealm Express|update|In this nonexistent memory, (Trailblazer) actually received a glance from Fuli, the Aeon of Remembrance. A marvelous creature appeared next to {{MC|f=her|m=him}}, perhaps a gift from Oronyx. (Trailblazer) seems a little... despondent, but thankfully {{MC|f=she|m=he}} quickly regained composure.}}
+:{{tx}}
+:<!--1-second delay-->
+;(Enter battle)
+::{{tx|Enemy list missing}}
+----
+:{{A|VO chapter4 7 mem 127.ogg}} '''Mem:''' Victory, victory!
+:{{A|VO chapter4 7 mem 128.ogg}} '''Mem:''' Mighty, companions!
+:{{DIcon|Arrow}} The Stellaron Hunters... disappeared.
+::{{A|VO chapter4 7 mem 129.ogg}} '''Mem:''' Disappear, temporarily.
+:{{DIcon|Arrow}} I want to leave this place.
+::{{A|VO chapter4 7 mem 131.ogg}} '''Mem:''' Leave... It's, time.
+:{{tx}}
+:{{DIcon|Arrow}} Firefly...
+:{{DIcon|Arrow}} Kafka...
+:{{DIcon|Arrow}} Wait...
+:{{A|VO chapter4 7 mem 133.ogg}} '''Mem:''' Farewell. Time, there is.
+:{{tx}}
 {{Dialogue End}}
 
 ===Choose a Stellaron Hunter in the memory to bid goodbye{{subst:void|<!--104010712-->}}===
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Firefly)
+:'''(Trailblazer):''' There is very little time left to stay in this memory... Do you want to leave the chance of bidding goodbye to Firefly?
+:{{DIcon|Arrow}} Bid Firefly goodbye.
+:{{DIcon|Exit}} Need time to think about it.
+<pre>{
+	"$type": "RPG.GameCore.SetPerformanceResult",
+	"Value": 22
+}</pre>
+
+;(Talk to Kafka)
+:'''(Trailblazer):''' There is very little time left to stay in this memory... Do you want to leave the chance of bidding goodbye to Kafka?
+:{{DIcon|Arrow}} Bid Kafka goodbye.
+:{{DIcon|Exit}} Need time to think about it.
+<pre>{
+	"$type": "RPG.GameCore.SetPerformanceResult",
+	"Value": 11
+}</pre>
+
 {{Dialogue End}}
 
 ==Other Languages==
@@ -82,7 +285,7 @@ PageTitle=#Night Veil, Shroud the Silent Past#
 |ru   = О занавес ночи, скрой безмолвное прошлое
 |th   = ม่านราตรีเอ๋ย จงปกคลุมอดีตแสนสงัด
 |vi   = Màn Đêm, Nhẹ Nhàng Che Đi Quá Khứ Tĩnh Lặng
-|de   = Vorhang der Nacht, verschleiere die stille Vergangenheit
+|de   = O Vorhang der Nacht, verschleiere die stille Vergangenheit
 |id   = Tirai Malam, Menyelubungi Masa Lalu yang Sunyi
 |pt   = Véu Noturno, Encubra o Passado Silencioso
 }}

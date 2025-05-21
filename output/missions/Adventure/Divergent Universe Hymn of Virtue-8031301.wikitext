@@ -40,23 +40,85 @@ PageTitle=#Divergent Universe: Hymn of Virtue#
 ===Listen to the conversation between geniuses{{subst:void|<!--803130101-->}}===
 {{Mission Description|type=adventure|location=(The Radiant Feldspar/The Trailblaze's Stern/The Tatalov/The Soaring Clock Hand)|While you and Dan Heng were trapped in Amphoreus, two geniuses were discussing about something.}}
 {{Dialogue Start}}
+
+:{{DIcon|undefined}} Listen
+;(If {{cx}}<!--Hidden Mission ID 8023801--> has not been completed)
+::{{tx}}
 :{{tx}}
+<pre>{
+	"$type": "RPG.GameCore.SetTrackingMission",
+	"MainMissionID": 8031301
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.OpenTreasureChallenge",
+	"RaidID": 40416
+}</pre>
 {{Dialogue End}}
 
 ===Follow the scholar's guidance and connect to the Grove's network{{subst:void|<!--803130103-->}}===
 {{Mission Description|type=adventure|location=(The Radiant Feldspar/The Trailblaze's Stern/The Tatalov/The Soaring Clock Hand)|update|Using the Titan Miracle from the Grove and remnant memories pertaining to the test, you successfully emulated a counterfeit Divergent Universe in the Sacred Tree's root system. According to Calidorthos, this is a most appropriate place for you to gain knowledge by using Path Equations to understand Amphoreus' myths and history. Come to think of it, isn't this a simulated version of the Simulated Universe?}}
 {{Dialogue Start}}
-:{{tx}}
+;(If {{F|CanOpenEntrance}} is undefined 1)
+;(If {{F|Rogue3.1Entrance}} is undefined 1)
+<pre>{
+	"$type": "RPG.GameCore.TriggerEntityServerEvent"
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.TriggerEntityServerEvent"
+}</pre>
 {{Dialogue End}}
 
 ===Talk to Calidorthos{{subst:void|<!--803130106-->}}===
 {{Dialogue Start}}
+
+;(Unused &mdash; EnterDistrict_G{GroupID})
 :{{tx}}
+::'''Calidorthos:''' It is much more rapid than I anticipated... but Paths, Blessings, Equations &mdash; how you interpret the Titans are indeed unconventional.
+::{{DIcon|Arrow}} Feels like you're trying to force a formula onto something that doesn't actually fit...
+::As long as the program works, it doesn't matter whether these three old variables can be formulaically used to unlock the Titans' secrets. We shouldn't get caught up in the details.
+::{{tx}}
+::{{tx}}
+::{{DIcon|Talk}} At the end of the day, we're still doing tests at this very place.
+:::Maybe like how a protagonist must have a baseball bat, the Divergent Universe is much more compatible with (The Radiant Feldspar/The Trailblaze's Stern/The Tatalov/The Soaring Clock Hand) even if it's a simulation.
+:::{{tx}}
+::;(Return to previous option selection)
+::{{DIcon|Talk}} Can Titan Miracles explain everything?
+:::It's Cerces's wisdom, my dear friend.
+:::{{tx}}
+::;(Return to previous option selection)
+::{{DIcon|Arrow}} Sorry Screwllum, I'm playing a pirated version here.
+:::It's fine. He'll be overjoyed when you bring the memories you made here to him.
+:::{{tx}}
+:::{{tx}}
+:<pre>{
+	"$type": "RPG.GameCore.RogueTournEntranceShowUI"
+}</pre>
+
+;(Unused &mdash; EnterDistrict_G{GroupID})
+----
+::{{tx}}
+::You open your eyes, barely able to believe the sight before you.
+::{{DIcon|Arrow}} Isn't this (The Radiant Feldspar/The Trailblaze's Stern/The Tatalov/The Soaring Clock Hand)?
+::{{DIcon|Arrow}} I wanted to test the Divergent Universe so much that I've started to hallucinate?
+::{{DIcon|Arrow}} I'm back?
+::'''Calidorthos:''' Indeed, I was not mistaken in my judgment. It is but a mere shard drawn from memory's depths, yet it bears the majesty of an astral vessel, akin to the Usurper's fabled skyship.
+::'''Calidorthos:''' As the saying goes, "virtue is knowledge" &mdash; virtue is wisdom's origin and finale.
+::'''Calidorthos:''' Gathered here are Amphoreus' collective myths and histories throughout its entire existence. We learn what virtue is from gods to heroes.
+::'''Calidorthos:''' At the same time, it draws from the past of scholars, allowing people to understand themselves, forging trials and tribulations unique only to them.
+::'''Calidorthos:''' Your heart has chosen the skyship, shaping this very scene as the gate to embark on a voyage of discovery.
+::{{DIcon|Arrow}} This is all too real.
+::{{DIcon|Arrow}} Titan Miracle? Titan technology!
+::{{DIcon|Arrow}} So this is the Grove Art Online.
+::You even find yourself doubting whether a simulated Screwllum or Herta might appear in the next moment.
+::{{tx}}
+:<pre>{
+	"$type": "RPG.GameCore.RogueTournEntranceShowUI"
+}</pre>
 {{Dialogue End}}
 
 ===Enter Divergent Universe (Counterfeit Version){{subst:void|<!--803130105-->}}===
 {{Dialogue Start}}
-:{{tx}}
+
 {{Dialogue End}}
 
 ==Other Languages==

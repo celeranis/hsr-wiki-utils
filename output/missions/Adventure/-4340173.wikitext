@@ -34,6 +34,187 @@ PageTitle=##
 ==Dialogue==
 {{Stub Dialogue}}
 
+;(Talk to Janus' Steed)
+----
+:No doubt you recognize this massive wooden prop from tales of old &mdash; its proud head held high, its cavernous belly large enough to hold several people &mdash; every detail matches the stories you know.
+:Looking closer, you discover an inscription on its wooden stomach &mdash; "Entry denied to those without wisdom!"
+:{{DIcon|Arrow}} (Enter the horse's stomach)
+::...Think yourself unwise? Certainly not. Such a taunting message only strengthens your rebellious resolve &mdash; permitted or not, you'll make the attempt.
+::You hit the horse's belly forcefully, attempting to create an opening for your hand to pry it open, but unfortunately... the wood remains unyielding.
+::'''??:''' ...Divine foal awakening. May Cerces safeguard your thoughts.
+::'''??:''' To first-time visitors of the Grove of Epiphany &mdash; welcome to the entrance examination of Janus' Steed.
+::{{DIcon|Talk}} So you're actually alive!?
+:::'''Janus' Steed:''' Of course. Cerces bestows blessings upon all creations equally, and my long stay in the Grove has granted me some wisdom. Though my consciousness remains limited, it's enough for our dialogue.
+:::'''Janus' Steed:''' But let me be clear: Do not mistake me for lesser creatures like White Dryads. In terms of evolution, I've advanced much further and am much closer to pure reason.
+::;(Return to previous option selection)
+::{{DIcon|Talk}} But aren't you Janus' divine foal?
+:::'''Janus' Steed:''' Ha. Ha. I may have lost my way once, but now I see clearly. While "Passage" guides our steps through the tempests and showers, "Reason" reveals the truth and shows our journey's end.
+:::'''Janus' Steed:''' The endless journey proves too exhausting &mdash; why must divine foals deliver prophecies, where do we come from, and where are we bound? Janus offers no answers, only endless missions.
+:::'''Janus' Steed:''' Uncertainty and void consumed me until I reached here, where Cerces offered clarity through the highest reason &mdash;
+:::'''Janus' Steed:''' I learnt that I am free. No mission should constrain me. My purpose exists beyond endless toil.
+:::'''Janus' Steed:''' As for what that purpose might be... well, perhaps another thousand years of contemplation will reveal the answer.
+::;(Return to previous option selection)
+::{{DIcon|Arrow}} Could you elaborate on the entrance exam?
+:::'''Janus' Steed:''' These questions come from both Nousporists and Erythrokeramists. How you answer will decide which part of the Grove you'll study in, so make sure to think your answers through.
+::<pre>{
+	"$type": "RPG.GameCore.SetFloorCustomFloatV2",
+	"Name": {
+		"Value": "FCV_TrojanCtrl"
+	},
+	"Value": {
+		"FixedValue": {
+			"Value": 1
+		}
+	}
+}</pre>
+::<pre>{
+	"$type": "RPG.GameCore.SetMissionCustomValue",
+	"SubmissionID": 434017301,
+	"MissionCustomValue": {
+		"Name": "OldValue_0",
+		"ValidValueParamList": [
+			0,
+			1,
+			2,
+			3,
+			4
+		]
+	}
+}</pre>
+::<pre>{
+	"$type": "RPG.GameCore.SetMissionCustomValue",
+	"SubmissionID": 434017301,
+	"MissionCustomValue": {
+		"Index": 1,
+		"Name": "OldValue_1",
+		"ValidValueParamList": [
+			0,
+			1,
+			2,
+			3,
+			4
+		]
+	}
+}</pre>
+::<pre>{
+	"$type": "RPG.GameCore.SetMissionCustomValue",
+	"SubmissionID": 434017301,
+	"MissionCustomValue": {
+		"Index": 2,
+		"Name": "OldValue_2",
+		"ValidValueParamList": [
+			0,
+			1,
+			2,
+			3,
+			4
+		]
+	}
+}</pre>
+:::'''Janus' Steed:''' Come. The doors of wisdom now open for you&mdash;
+::;(Return to previous option selection)
+:::{{DIcon|Exit}} I refuse.
+::::Their arrogance really gets under your skin, doesn't it? You, a Nameless of the Astral Express, won't be commanded so easily. This time, you're refusing to play this wooden horse's game.
+:::<pre>{
+	"$type": "RPG.GameCore.SetFloorCustomFloatV2",
+	"Name": {
+		"Value": "FCV_TrojanCtrl"
+	},
+	"Value": {
+		"FixedValue": {
+			"Value": 0
+		}
+	}
+}</pre>
+:{{DIcon|Exit}} This is not something a Nameless should be doing!
+::Fair enough, you're not a Grove Scholar, and such deep academic pursuits hold little appeal. Scholar's life ill suits a Nameless devoted to "Trailblazing" &mdash; better to return later.
+<pre>{
+	"$type": "RPG.GameCore.PerformanceEndSeq",
+	"Cases": [
+		{
+			"Case": 1,
+			"OnSuccess": [
+				{
+					"$type": "RPG.GameCore.ClientFinishMission",
+					"SubmissionID": 434017301
+				},
+				{
+					"$type": "RPG.GameCore.PredicateTaskList",
+					"Predicate": {
+						"$type": "RPG.GameCore.ByCompareMissionCustomValue",
+						"MainMissionID": 4340173,
+						"MissionCustomValue": {
+							"Name": "OldValue_0",
+							"isLocal": true,
+							"ValidValueParamList": [
+								0,
+								1,
+								2,
+								3,
+								4
+							]
+						},
+						"EquationType": "GreaterEqual",
+						"TargetValue": 2
+					},
+					"SuccessTaskList": [
+						{
+							"$type": "RPG.GameCore.ClientFinishMission",
+							"SubmissionID": 434017303
+						}
+					],
+					"FailedTaskList": [
+						{
+							"$type": "RPG.GameCore.PredicateTaskList",
+							"Predicate": {
+								"$type": "RPG.GameCore.ByCompareMissionCustomValue",
+								"MainMissionID": 4340173,
+								"MissionCustomValue": {
+									"Index": 1,
+									"Name": "OldValue_1",
+									"isLocal": true,
+									"ValidValueParamList": [
+										0,
+										1,
+										2,
+										3,
+										4
+									]
+								},
+								"EquationType": "GreaterEqual",
+								"TargetValue": 2
+							},
+							"SuccessTaskList": [
+								{
+									"$type": "RPG.GameCore.ClientFinishMission",
+									"SubmissionID": 434017304
+								}
+							],
+							"FailedTaskList": [
+								{
+									"$type": "RPG.GameCore.ClientFinishMission",
+									"SubmissionID": 434017305
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	]
+}</pre>
+----
+:"The Final Rite of Initiation: In the Halls of the Titans, where Reason eternal dwells. May you learn the Sacred Tree's virtues, digging your roots into depths below."
+:The mysterious voice still lingers in the air, but the wooden horse has disappeared &mdash; having successfully transported you elsewhere.
+:Whether you accept this outcome or not... the scholars behind this exam show little interest in your opinion.
+----
+:"The Third Rite of Initiation: Never forsake the love of friends and kin. Walk with those who seek truth and wisdom."
+:The mysterious voice still lingers in the air, but the wooden horse has disappeared &mdash; having successfully transported you elsewhere.
+:Whether you accept this outcome or not... the scholars behind this exam show little interest in your opinion.
+----
+:"The Fourth Rite of Initiation: Let inspiration wash over your spirit and mind. Should darkness or heresy arise, let them sink into oblivion."
+:The mysterious voice still lingers in the air, but the wooden horse has disappeared &mdash; having successfully transported you elsewhere.
+:Whether you accept this outcome or not... the scholars behind this exam show little interest in your opinion.
 {{Dialogue End}}
 
 ==Other Languages==

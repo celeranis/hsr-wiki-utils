@@ -57,100 +57,844 @@ Mission Should One Awaken at Midnight Caelus.png|Caelus
 ===Assemble with the Crew{{subst:void|<!--103060101-->}}===
 {{Mission Description|type=trailblaze|location=The Reverie (Reality)|At the critical moment, a Memokeeper named Black Swan pulls you back to reality. She knows that you are in a rush but hopes that you will calm down first and reassure your companions that you are safe... They have been waiting all this time for you to wake from your coma.<br />Although, you can't help but wonder &mdash; why does every visitor in Penacony look so strange?}}
 {{Dialogue Start}}
-:{{tx}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{A|VO chapter3 4 mar7th 101.ogg}} '''March 7th:''' Hmm, suspicious... Could it really just be a coincidence? I've got a funny feeling about that lady.
+:{{A|VO chapter3 4 himeko 101 m.ogg}} {{A|VO chapter3 4 himeko 101 f.ogg}} '''Himeko:''' But she did find (Trailblazer), and save {{MC|m=him|f=her}} too. The least we could do is to listen to the other party's request...
+:{{A|VO chapter3 4 welt 101.ogg}} '''Welt:''' That Memokeeper obviously came here with an agenda. We should remain vigilant.
+
+;(Upon reaching the destination)
+:{{A|VO chapter3 4 blackswan 110.ogg}} '''Black Swan:''' Look, Miss Himeko: I brought the kid back as promised.
+:{{A|VO chapter3 4 mar7th 102 m.ogg}} {{A|VO chapter3 4 mar7th 102 f.ogg}} '''March 7th:''' (Trailblazer), you're all right! We couldn't find you in either dream or reality, we were worried sick...
+:{{A|VO chapter3 4 himeko 102.ogg}} '''Himeko:''' It's good to see you're unharmed. Allow me to introduce you to Miss Black Swan, Memokeeper of the Garden of Recollection.
+:{{DIcon|Arrow}} You know each other?
+::{{A|VO chapter3 4 mar7th 103.ogg}} '''March 7th:''' Yeah. Miss Himeko said that they were investigating the incidents happening in the Dreamscape.
+::{{A|VO chapter3 4 blackswan 111.ogg}} '''Black Swan:''' We've only met once. But thanks to you, we might be able to use this opportunity to get to know each other a little bit better.
+::So you're Himeko's friend.
+:{{DIcon|Arrow}} So you're Himeko's friend.
+:{{A|VO chapter3 4 mar7th 104.ogg}} '''March 7th:''' Oh, not exactly. Miss Himeko said that they were investigating the incidents happening in the Dreamscape.
+:{{A|VO chapter3 4 blackswan 112.ogg}} '''Black Swan:''' Not quite yet. But thanks to you, we might be able to use this opportunity to get to know each other a little bit better.
+:{{A|VO chapter3 4 himeko 103 m.ogg}} {{A|VO chapter3 4 himeko 103 f.ogg}} '''Himeko:''' So, (Trailblazer), how did you end up there... and what the heck happened?
+:{{DIcon|Arrow}} (Elaborate on what you experienced...)
 {{Dialogue End}}
 
 ===Talk to Acheron{{subst:void|<!--103060133-->}}===
 {{Mission Description|type=trailblaze|location=The Reverie (Dreamscape)|update|Firefly has been taken by "death." She was a gentle and brave girl... Perhaps you should join the Ranger in mourning her.}}
 {{Dialogue Start}}
+
+;(Talk to Acheron)
 :{{tx}}
+<pre>{
+	"$type": "RPG.GameCore.AdvDestroyGroupEntity",
+	"InstanceIDList": [
+		400001
+	]
+}</pre>
+:{{A|VO chapter3 5 acheron 151.ogg}} '''Acheron:''' ...Let's go.
+:{{A|VO chapter3 5 blackswan 154.ogg}} '''Black Swan:''' This way, follow me.
+:{{tx}}
+<pre>{
+	"$type": "RPG.GameCore.SwitchCharacterAnchorV2",
+	"SwitchCharacterAnchorConfig": {
+		"IsLocalPlayer": true,
+		"CharacterUniqueName": "LocalPlayer",
+		"AreaName": {
+			"Value": "LevelArea_P20311_F20311001_G222"
+		},
+		"AnchorName": {
+			"Value": "Anchor1"
+		}
+	}
+}</pre>
+:{{A|VO chapter3 5 acheron 151.ogg}} '''Acheron:''' ...Let's go.
+:{{A|VO chapter3 5 blackswan 154.ogg}} '''Black Swan:''' This way, follow me.
 {{Dialogue End}}
 
 ===Speak with the Express Crew and discuss Black Swan's suggestion{{subst:void|<!--103060121-->}}===
 {{Mission Description|type=trailblaze|location=The Reverie (Reality)|update|The reunion with the Crew is indeed not as harmonious as you expected. She comes to you with a condition: She will save your life in return for the Crew's collaboration.<br />Everyone says that the Memokeepers of the Garden of Recollection are the most fearsome... You should discuss your decision carefully before giving her an answer.}}
 {{Dialogue Start}}
+
+;(Talk to Himeko)
+:{{A|VO chapter3 4 welt 108.ogg}} '''Welt:''' ...How do you see things, Himeko?
+:{{A|VO chapter3 4 himeko 110.ogg}} '''Himeko:''' It's best to be skeptical of her. There's a significant amount of intentional misdirection in her words.
+:{{A|VO chapter3 4 himeko 111.ogg}} '''Himeko:''' But I worry about the worst outcome: If the Dreamscape's anomaly really exists, and it isn't a natural occurrence, but instigated by someone behind the scenes...
+:{{A|VO chapter3 4 welt 109.ogg}} '''Welt:''' ...Then it likely has something to do with the Watchmaker's invite.
+:{{A|VO chapter3 4 mar7th 108.ogg}} '''March 7th:''' Huh, how'd you figure that one out?
+:{{A|VO chapter3 4 welt 110.ogg}} '''Welt:''' Well, excluding any extreme scenarios, the mastermind responsible for these shifts in the dreamscape undeniably stands against The Family, which narrows it down to two possibilities...
+:{{A|VO chapter3 4 welt 111.ogg}} '''Welt:''' Someone is drawing in external influences to distract and disrupt The Family's control over Penacony. Either that, or The Family has been forced to seek outside aid surreptitiously for self-preservation.
+:{{A|VO chapter3 4 welt 112.ogg}} '''Welt:''' But from the encrypted message on the invite, and The Family's reaction... The former is more likely.
+:{{A|VO chapter3 4 himeko 112.ogg}} '''Himeko:''' Which also means that, the one who sent out the encrypted Nameless message and the mastermind behind the anomaly are on the same side... Maybe even the same person.
+:{{A|VO chapter3 4 mar7th 109.ogg}} '''March 7th:''' Well... this doesn't necessarily mean a thing, right? In terms of methods, both the Fools and the Riddlers could pull it off. Hasn't the IPC cracked the message, too?
+:{{A|VO chapter3 4 himeko 113.ogg}} '''Himeko:''' March, calm down. It's just a possibility. But if this encrypted message isn't some harmless prank, but done so to invite the Trailblaze into the fray, we cannot remain uninvolved.
+:{{A|VO chapter3 4 welt 113.ogg}} '''Welt:''' Well, let me tell you what I discovered, and I'm sorry &mdash; it's bad news.
+:{{A|VO chapter3 4 welt 114.ogg}} '''Welt:''' According to reliable sources, some people spotted a tall silver-armored man on Penacony. I've reached out to the Bloodhound Family for news, and visited many of those guests who claimed to have seen this invader...
+:{{A|VO chapter3 4 welt 115 m.ogg}} {{A|VO chapter3 4 welt 115 f.ogg}} '''Welt:''' ...And this is what I received. (Trailblazer), I've sent it to you. Open it and take a look.
 :{{tx}}
+:{{A|VO chapter3 4 mar7th 111.ogg}} '''March 7th:''' Those Stellaron Hunters... They even factored Penacony into their plan! Nowhere's safe from them!
+:{{A|VO chapter3 4 welt 116.ogg}} '''Welt:''' The situation is clear &mdash; the Planet of Festivities isn't what it seems on the surface. Everyone's sights, including the factions in The Family, are set on the Watchmaker's Legacy. Every party has its own motives, and they're attempting to thwart each other.
+:{{A|VO chapter3 4 welt 117.ogg}} '''Welt:''' While we still don't know what this legacy entails, it's only a matter of time before the power struggle ensnares innocent bystanders.
+:{{A|VO chapter3 4 welt 118.ogg}} '''Welt:''' The Molten Knight, Sam, is reportedly a remnant of Glamoth's Iron Cavalry &mdash; a genetically engineered warrior. He possesses superhuman perception and acts decisively &mdash; he'll leave no margin for error. This individual is every bit as dangerous as Kafka and Blade.
+:{{A|VO chapter3 4 welt 119.ogg}} '''Welt:''' This message is a threat. The hidden map that Silver Wolf mentioned is probably the sealed dreamscape Hotel. For the sake of what's to come, a visit seems necessary.
+:{{DIcon|Arrow}} Should we inform The Family?
+::{{A|VO chapter3 4 welt 120.ogg}} '''Welt:''' We may be on amicable terms, but that doesn't mean they trust us... Let's act first and talk later.
+:{{DIcon|Arrow}} What if we get found out...
+:{{DIcon|Arrow}} It could be a Stellaron Hunter's trap...
+::{{A|VO chapter3 4 welt 121.ogg}} '''Welt:''' Which is why I didn't suggest it initially. But the way things are now, the Astral Express has a reason to join the fray.
+:{{A|VO chapter3 4 welt 122.ogg}} '''Welt:''' If The Family asks, just tell them that the Express is investigating the Stellaron Hunters &mdash; I'm sure they'll understand. We'll plan our next move according to how they react.
+:{{A|VO chapter3 4 himeko 114.ogg}} '''Himeko:''' Then we are in agreement. Let's return and inform Miss Black Swan.
+----
 {{Dialogue End}}
 
 ===Speak with Black Swan and give her an answer{{subst:void|<!--103060132-->}}===
 {{Mission Description|type=trailblaze|location=The Reverie (Reality)|update|After considering every factor, you have decided to cooperate with this Memokeeper.<br />Now, it is time to give her the conclusion that you have reached.}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Black Swan)
+:{{A|VO chapter3 4 himeko 115.ogg}} '''Himeko:''' Miss Black Swan, the Express is willing to cooperate with you &mdash; we need a proper guide to navigate the Memory Zone.
+:{{A|VO chapter3 4 blackswan 128.ogg}} '''Black Swan:''' I'm at your service. I will not disappoint.
+:{{A|VO chapter3 4 himeko 116 m.ogg}} {{A|VO chapter3 4 himeko 116 f.ogg}} '''Himeko:''' (Trailblazer) and March, return to your own rooms. Enter the dream, and if everything goes without a hitch... we'll see one another at the dreamscape Hotel's lobby.
+:{{A|VO chapter3 4 welt 123.ogg}} '''Welt:''' I'll stay in the real world to ensure everyone's safety. If needed, I will also parlay with The Family. I assume there's no problem, Miss Black Swan?
+:{{A|VO chapter3 4 blackswan 129.ogg}} '''Black Swan:''' It seems that I'll have a hard time gaining your trust even if I personally did rescue your friends... It's no problem, of course, other than the fact that my feelings are a little hurt.
+:{{A|VO chapter3 4 himeko 117.ogg}} '''Himeko:''' We're counting on you, Welt. As for us... Let's get ready to see the Dreamscape's true visage.
 {{Dialogue End}}
 
 ===Enter the Dreampool{{subst:void|<!--103060102-->}}===
 {{Mission Description|type=trailblaze|location=The Reverie (Reality)|update|Although the negotiation process was a little uncertain at times, at least everyone is happy with the results. With Black Swan's company, you should be able to avoid any danger in the "real Memory Zone."<br />Enter the code that Silver Wolf gave you into the Dreampool and prepare to witness the true nature of the Dreamscape.}}
 {{Dialogue Start}}
-:{{tx}}
+:{{A|VO chapter3 4 player 109 m.ogg}} {{A|VO chapter3 4 player 109 f.ogg}} '''(Trailblazer):''' (We'll be busy for a while. I wonder if Firefly's returned to reality yet...)
+:{{A|VO chapter3 4 player 110 m.ogg}} {{A|VO chapter3 4 player 110 f.ogg}} '''(Trailblazer):''' (...Hmm, I don't have her contact info, I'll ask Black Swan...)
+
+;(Talk to Black Swan)
+:{{A|VO chapter3 4 blackswan 130 m.ogg}} {{A|VO chapter3 4 blackswan 130 f.ogg}} '''Black Swan:''' You look anxious, (Trailblazer). Worried about that girl?
+:{{A|VO chapter3 4 blackswan 131.ogg}} '''Black Swan:''' You can talk to me if you've something on your mind. In this world, there's no one who heals the heart better than a Memokeeper.
+:{{DIcon|Talk}} Thank you for saving me.
+::{{A|VO chapter3 4 blackswan 132.ogg}} '''Black Swan:''' I just did what I had to do. You are special, after all... So special that many pairs of eyes are watching your every move.
+:;(Return to previous option selection)
+:{{DIcon|Talk}} Can you confirm Firefly is safe?
+::{{A|VO chapter3 4 blackswan 133.ogg}} '''Black Swan:''' Don't worry. That is a one-way door leading to awakened reality. Unless that girl is so stubborn that she refuses to wake up from the dream &mdash; which isn't possible &mdash; she must be holed up somewhere in the hotel massaging her eyes right now.
+:;(Return to previous option selection)
+:{{DIcon|Talk}} To be honest, I don't really trust Memokeepers.
+::{{A|VO chapter3 4 blackswan 134.ogg}} '''Black Swan:''' It appears you've had some unhappy memories... But it's obvious that this partnership makes the most sense to you, me, and the Express Crew, no? So you can take it easy and trust me.
+::{{A|VO chapter3 4 blackswan 135.ogg}} '''Black Swan:''' Of course, I'm not the only Memokeeper who has come &mdash; Penacony has opened its doors to factions beyond The Family for the first time, and the Garden must record this historic moment...
+::{{A|VO chapter3 4 blackswan 136.ogg}} '''Black Swan:''' So you can try working together with others as well... As long as you can see them, hehe.
+:;(Return to previous option selection)
+:{{DIcon|Talk}} You're not returning to your room?
+::{{A|VO chapter3 4 blackswan 137.ogg}} '''Black Swan:''' No. I will accompany you into the dream to prevent harm from befalling you all. Memokeepers don't need a Dreampool anyway.
+:;(Return to previous option selection)
+:{{DIcon|Exit}} That's all for now.
+::{{A|VO chapter3 4 blackswan 138.ogg}} '''Black Swan:''' All right. Drift peacefully off to sleep, and I'll be right with you.
+
+:{{DIcon|Talk}} Enter Silver Wolf's code.
+:{{A|VO chapter3 1 tishi 101.ogg}} Welcome to Penacony, honored guest...
+:{{DIcon|Arrow}} Lie down in the Dreampool.
+::----
+:{{DIcon|Exit}} Not yet.
+:{{A|VO chapter3 5 player 101 m.ogg}} {{A|VO chapter3 5 player 101 f.ogg}} '''(Trailblazer):''' (Back in this familiar room...)
+:{{A|VO chapter3 5 blackswan 101.ogg}} '''Black Swan:''' This way, darling.
 {{Dialogue End}}
 
 ===Speak with Black Swan{{subst:void|<!--103060104-->}}===
 {{Mission Description|type=trailblaze|location=The Reverie (Dreamscape)|update|With Silver Wolf's assistance, you successfully arrived at the true Dreamscape &mdash; This place seems almost identical to what you have already experienced in your dreams... Perhaps you've even grown tired of this. Not to worry. Black Swan will serve as your guide here and take you on a relaxing and enjoyable Memory Zone adventure &mdash;<br />&mdash;If only that is the case. Either way, you must meet with her.}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Black Swan)
+:{{A|VO chapter3 5 blackswan 103.ogg}} '''Black Swan:''' What's wrong? Are you not feeling well?
+:{{DIcon|Arrow}} I feel fine.
+::{{A|VO chapter3 5 blackswan 104.ogg}} '''Black Swan:''' That's good then.
+:{{DIcon|Arrow}} I don't feel so good...
+:{{A|VO chapter3 5 blackswan 105.ogg}} '''Black Swan:''' I know you're more sensitive to memoria, thus more easily affected by the Dreamscape than others. This is also why I have to accompany you.
+:{{A|VO chapter3 5 blackswan 106.ogg}} '''Black Swan:''' I shall use my methods to relieve you. Don't worry, as your companions are safe &mdash; I had both of them each give me a trinket before I entered the dream. This will allow me to feel their presence in the Memory Zone.
+:{{A|VO chapter3 5 blackswan 107.ogg}} '''Black Swan:''' They're already awake in their rooms. Will you be comfortable in following me now? Time waits for no one. We must hurry to the lobby.
+----
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{A|VO chapter3 5 blackswan 103.ogg}} '''Black Swan:''' What's wrong? Are you not feeling well?
+:{{DIcon|Arrow}} I feel fine.
+::{{A|VO chapter3 5 blackswan 104.ogg}} '''Black Swan:''' That's good then.
+:{{DIcon|Arrow}} I don't feel so good...
+:{{A|VO chapter3 5 blackswan 105.ogg}} '''Black Swan:''' I know you're more sensitive to memoria, thus more easily affected by the Dreamscape than others. This is also why I have to accompany you.
+:{{A|VO chapter3 5 blackswan 106.ogg}} '''Black Swan:''' I shall use my methods to relieve you. Don't worry, as your companions are safe &mdash; I had both of them each give me a trinket before I entered the dream. This will allow me to feel their presence in the Memory Zone.
+:{{A|VO chapter3 5 blackswan 107.ogg}} '''Black Swan:''' They're already awake in their rooms. Will you be comfortable in following me now? Time waits for no one. We must hurry to the lobby.
+----
 {{Dialogue End}}
 
 ===Try to wake up March 7th{{subst:void|<!--103060105-->}}===
 {{Mission Description|type=trailblaze|location=The Reverie (Dreamscape)|update|Black Swan leads you forward in the Memory Zone. For safety's sake, maybe you should consider waking up March 7th to travel with you.}}
 {{Dialogue Start}}
-:{{tx}}
+:{{A|VO chapter3 5 player 102 m.ogg}} {{A|VO chapter3 5 player 102 f.ogg}} '''(Trailblazer):''' (March's room is this way... I should go meet up with her.)
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{A|VO chapter3 5 blackswan 111.ogg}} '''Black Swan:''' These poor little things stumbling about...
+:{{A|VO chapter3 5 blackswan 112.ogg}} '''Black Swan:''' Strange, there appears to be someone else's presence here...
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+----
+:Your memories tell you this is March 7th's room. Unless fate intervenes, she will "awaken" here.
+:{{DIcon|Arrow}} March, are you there?
+<pre>{
+	"$type": "RPG.GameCore.TriggerSound",
+	"SoundName": {
+		"Value": "Ev_sfx_storyd_main_knock_01"
+	},
+	"EmitterType": "LocalPlayer"
+}</pre>
+:You knock, but there's no response...
+:{{DIcon|Arrow}} Are you in there? We are about to set off.
+<pre>{
+	"$type": "RPG.GameCore.TriggerSound",
+	"SoundName": {
+		"Value": "Ev_sfx_storyd_main_knock_01"
+	},
+	"EmitterType": "LocalPlayer"
+}</pre>
+:You knock again, but there's no response...
+:{{DIcon|Arrow}} March? It's me, (Trailblazer)...
+<pre>{
+	"$type": "RPG.GameCore.TriggerSound",
+	"SoundName": {
+		"Value": "Ev_sfx_storyd_main_knock_02"
+	},
+	"EmitterType": "LocalPlayer"
+}</pre>
+:You knock harder, and there's still no response.
+:{{A|VO chapter3 5 blackswan 108.ogg}} '''Black Swan:''' I know what you're thinking, but alas... That girl isn't in there, and neither is this her room.
+:{{A|VO chapter3 5 blackswan 109.ogg}} '''Black Swan:''' The moment you stepped into the Memory Zone, reality's building structures lost all meaning. I can sense that she is in a faraway place right now.
+:{{A|VO chapter3 5 blackswan 110.ogg}} '''Black Swan:''' In the meantime, if we want to find that lobby the Navigator mentioned... we'll have to try a little harder.
 {{Dialogue End}}
 
 ===Go to the Lobby in the Dreamscape{{subst:void|<!--103060106-->}}===
 {{Mission Description|type=trailblaze|location=The Reverie (Dreamscape)|update|Having learned of how your companions have become scattered, Black Swan continues to lead you forward in the Memory Zone. If everyone is able to protect themselves, then you should be able to meet up again in the dream hotel lobby.}}
 {{Dialogue Start}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{A|VO chapter3 5 blackswan 113.ogg}} '''Black Swan:''' Ah... Her? How is this possible?
+<pre>{
+	"$type": "RPG.GameCore.AdvSetAIMoveTo",
+	"EntityInstanceID": {
+		"FixedValue": {
+			"Value": 400001
+		}
+	},
+	"GroupId": 113,
+	"PointID": 2,
+	"MotionFlag": "Walk"
+}</pre>
+
+;(Upon reaching the destination)
+:{{A|VO chapter3 5 acheron 101.ogg}} '''Acheron:''' Are there... no staff members here at all?
+:{{A|VO chapter3 5 acheron 102.ogg}} '''Acheron:''' Huh? What're you doing here?
+:{{DIcon|Arrow}} You... lost your way again?
+::{{A|VO chapter3 5 acheron 103.ogg}} '''Acheron:''' Well, not really. I just don't know where I am.
+::You... know each other?
+:{{DIcon|Arrow}} You... know each other?
+:{{A|VO chapter3 5 acheron 104.ogg}} '''Acheron:''' Yes. She is the Memokeeper I mentioned.
+:{{A|VO chapter3 5 blackswan 114.ogg}} '''Black Swan:''' We'll have to cut the banter short... Let's first work together and remove these overly friendly children, shall we?
 :{{tx}}
+:{{tx}}
+<pre>{
+	"$type": "RPG.GameCore.RandomConfig",
+	"OddsList": [
+		{
+			"FixedValue": {
+				"Value": 1
+			}
+		},
+		{
+			"FixedValue": {
+				"Value": 1
+			}
+		},
+		{
+			"FixedValue": {
+				"Value": 1
+			}
+		}
+	],
+	"TaskList": [
+		{
+			"$type": "RPG.GameCore.TriggerCustomString",
+			"CustomString": {
+				"Value": "random_103060107_1"
+			}
+		},
+		{
+			"$type": "RPG.GameCore.TriggerCustomString",
+			"CustomString": {
+				"Value": "random_103060107_2"
+			}
+		},
+		{
+			"$type": "RPG.GameCore.TriggerCustomString",
+			"CustomString": {
+				"Value": "random_103060107_3"
+			}
+		}
+	]
+}</pre>
+;(Unused &mdash; random_103060107_1)
+:{{tx}}
+::{{A|VO chapter3 5 acheron 106.ogg}} '''Acheron:''' Finally, some peace and quiet. What are the two of you doing here?
+::{{A|VO chapter3 5 blackswan 115.ogg}} '''Black Swan:''' We could ask you the same thing.
+::{{A|VO chapter3 5 acheron 107 m.ogg}} {{A|VO chapter3 5 acheron 107 f.ogg}} '''Acheron:''' {{Color|#ff3a|It's a long story. I fortuitously &mdash; as {{MC|m=he|f=she}} should remember &mdash; became friends with some of the Bloodhounds, and was helping them track down a wanted criminal... Except I ended up here for some reason.}}
+::{{A|VO chapter3 5 acheron 108.ogg}} '''Acheron:''' {{Color|#ff3a|It's probably not as complicated as it sounds. It's all thanks to... a Masked Fool. Maybe I unwittingly hurt her... and then in a flash of kaleidoscopic light, I ended up here.}}
+::{{A|VO chapter3 5 acheron 109.ogg}} '''Acheron:''' {{Color|#ff3a|Penacony's rife with rumors now, about the Watchmaker, a legacy, nightmares and other mysterious tales. I was curious as to who was spreading them, and tested the method as described in the rumors... To think I actually ended up here...}}
+::{{A|VO chapter3 5 blackswan 116.ogg}} '''Black Swan:''' You... aren't hiding anything, are you?
+::{{A|VO chapter3 5 acheron 110.ogg}} '''Acheron:''' Hiding? I don't think I'd be capable of that in front of a Memokeeper.
+::{{DIcon|Arrow}} That's true.
+::{{DIcon|Arrow}} I can.
+:::{{A|VO chapter3 5 acheron 111.ogg}} '''Acheron:''' Is that so... You're good then. What sort of training did you have to undergo? Can you teach me?
+:::{{A|VO chapter3 5 blackswan 117 m.ogg}} {{A|VO chapter3 5 blackswan 117 f.ogg}} '''Black Swan:''' {{MC|m=He|f=She}}'s kidding. {{MC|m=He|f=She}} can't do it.
+:::How about in front of me?
+:::{{A|VO chapter3 5 acheron 112.ogg}} '''Acheron:''' That's not what I meant. It's just a... figure of speech.
+::{{DIcon|Arrow}} How about in front of me?
+:::{{A|VO chapter3 5 acheron 112.ogg}} '''Acheron:''' That's not what I meant. It's just a... figure of speech.
+::{{A|VO chapter3 5 acheron 113.ogg}} '''Acheron:''' Your arrival is timely &mdash; this Dreamscape is fraught with danger. Since our destination is the same, how about we join forces?
+::{{A|VO chapter3 5 acheron 114.ogg}} '''Acheron:''' I can protect you from harm, but in the Memory Zone, I'll need assistance from the Memokeeper as well. And... if we run into The Family, it wouldn't hurt to have one more person to explain the situation.
+::{{A|VO chapter3 5 blackswan 118 m.ogg}} {{A|VO chapter3 5 blackswan 118 f.ogg}} '''Black Swan:''' Hmm... What do you think, (Trailblazer)?
+::{{DIcon|Arrow}} Never hurts to have more people.
+::{{DIcon|Arrow}} We can trust Acheron.
+::{{DIcon|Arrow}} I think we should forget it...
+:::{{A|VO chapter3 5 acheron 115.ogg}} '''Acheron:''' Sorry. I couldn't hear you clearly. Could you repeat that?
+:::{{DIcon|Arrow}} I mean, no problem.
+:::{{DIcon|Arrow}} I mean, no can do...
+::::{{A|VO chapter3 5 acheron 116.ogg}} '''Acheron:''' Sorry. I couldn't hear you clearly. Could you repeat that?
+::::{{DIcon|Arrow}} I mean, no problem.
+::::{{DIcon|Arrow}} {{Color|#ff3a|I mean, no problem.}}
+:::::{{A|VO chapter3 5 player 103 m.ogg}} {{A|VO chapter3 5 player 103 f.ogg}} '''(Trailblazer):''' (What's going on? That weird feeling is back again...)
+:::::No, absolutely not.
+:::::{{A|VO chapter3 5 acheron 117.ogg}} '''Acheron:''' Sorry. I couldn't hear you clearly. Could you repeat that?
+:::::I mean, no problem.
+:::::I mean, no can do.
+:::::{{A|VO chapter3 5 acheron 118.ogg}} '''Acheron:''' Sorry. I couldn't hear you clearly. Could you repeat that?
+:::::I mean, no problem.
+:::::{{Color|#ff3a|I mean, no problem.}}
+:::::{{A|VO chapter3 5 player 104 m.ogg}} {{A|VO chapter3 5 player 104 f.ogg}} '''(Trailblazer):''' (What's going on? That weird feeling is back again...)
+::{{DIcon|Arrow}} No, absolutely not.
+:::{{A|VO chapter3 5 acheron 117.ogg}} '''Acheron:''' Sorry. I couldn't hear you clearly. Could you repeat that?
+:::{{DIcon|Arrow}} I mean, no problem.
+:::{{DIcon|Arrow}} I mean, no can do.
+::::{{A|VO chapter3 5 acheron 118.ogg}} '''Acheron:''' Sorry. I couldn't hear you clearly. Could you repeat that?
+::::{{DIcon|Arrow}} I mean, no problem.
+::::{{DIcon|Arrow}} {{Color|#ff3a|I mean, no problem.}}
+:::::{{A|VO chapter3 5 player 104 m.ogg}} {{A|VO chapter3 5 player 104 f.ogg}} '''(Trailblazer):''' (What's going on? That weird feeling is back again...)
+::{{A|VO chapter3 5 acheron 119 m.ogg}} {{A|VO chapter3 5 acheron 119 f.ogg}} '''Acheron:''' Thank you, (Trailblazer)... I'm truly grateful.
+::{{tx}}
+
+;(Unused &mdash; random_103060107_2)
+:{{tx}}
+::{{A|VO chapter3 5 acheron 106.ogg}} '''Acheron:''' Finally, some peace and quiet. What are the two of you doing here?
+::{{A|VO chapter3 5 blackswan 115.ogg}} '''Black Swan:''' We could ask you the same thing.
+::{{A|VO chapter3 5 acheron 107 m.ogg}} {{A|VO chapter3 5 acheron 107 f.ogg}} '''Acheron:''' {{Color|#ff3a|It's a long story. I fortuitously &mdash; as {{MC|m=he|f=she}} should remember &mdash; became friends with some of the Bloodhounds, and was helping them track down a wanted criminal... Except I ended up here for some reason.}}
+::{{A|VO chapter3 5 acheron 108.ogg}} '''Acheron:''' {{Color|#ff3a|It's probably not as complicated as it sounds. It's all thanks to... a Masked Fool. Maybe I unwittingly hurt her... and then in a flash of kaleidoscopic light, I ended up here.}}
+::{{A|VO chapter3 5 acheron 109.ogg}} '''Acheron:''' {{Color|#ff3a|Penacony's rife with rumors now, about the Watchmaker, a legacy, nightmares and other mysterious tales. I was curious as to who was spreading them, and tested the method as described in the rumors... To think I actually ended up here...}}
+::{{A|VO chapter3 5 blackswan 116.ogg}} '''Black Swan:''' You... aren't hiding anything, are you?
+::{{A|VO chapter3 5 acheron 110.ogg}} '''Acheron:''' Hiding? I don't think I'd be capable of that in front of a Memokeeper.
+::{{DIcon|Arrow}} That's true.
+::{{DIcon|Arrow}} I can.
+:::{{A|VO chapter3 5 acheron 111.ogg}} '''Acheron:''' Is that so... You're good then. What sort of training did you have to undergo? Can you teach me?
+:::{{A|VO chapter3 5 blackswan 117 m.ogg}} {{A|VO chapter3 5 blackswan 117 f.ogg}} '''Black Swan:''' {{MC|m=He|f=She}}'s kidding. {{MC|m=He|f=She}} can't do it.
+:::How about in front of me?
+:::{{A|VO chapter3 5 acheron 112.ogg}} '''Acheron:''' That's not what I meant. It's just a... figure of speech.
+::{{DIcon|Arrow}} How about in front of me?
+:::{{A|VO chapter3 5 acheron 112.ogg}} '''Acheron:''' That's not what I meant. It's just a... figure of speech.
+::{{A|VO chapter3 5 acheron 113.ogg}} '''Acheron:''' Your arrival is timely &mdash; this Dreamscape is fraught with danger. Since our destination is the same, how about we join forces?
+::{{A|VO chapter3 5 acheron 114.ogg}} '''Acheron:''' I can protect you from harm, but in the Memory Zone, I'll need assistance from the Memokeeper as well. And... if we run into The Family, it wouldn't hurt to have one more person to explain the situation.
+::{{A|VO chapter3 5 blackswan 118 m.ogg}} {{A|VO chapter3 5 blackswan 118 f.ogg}} '''Black Swan:''' Hmm... What do you think, (Trailblazer)?
+::{{DIcon|Arrow}} Never hurts to have more people.
+::{{DIcon|Arrow}} We can trust Acheron.
+::{{DIcon|Arrow}} I think we should forget it...
+:::{{A|VO chapter3 5 acheron 115.ogg}} '''Acheron:''' Sorry. I couldn't hear you clearly. Could you repeat that?
+:::{{DIcon|Arrow}} I mean, no problem.
+:::{{DIcon|Arrow}} I mean, no can do...
+::::{{A|VO chapter3 5 acheron 116.ogg}} '''Acheron:''' Sorry. I couldn't hear you clearly. Could you repeat that?
+::::{{DIcon|Arrow}} I mean, no problem.
+::::{{DIcon|Arrow}} {{Color|#ff3a|I mean, no problem.}}
+:::::{{A|VO chapter3 5 player 103 m.ogg}} {{A|VO chapter3 5 player 103 f.ogg}} '''(Trailblazer):''' (What's going on? That weird feeling is back again...)
+:::::No, absolutely not.
+:::::{{A|VO chapter3 5 acheron 117.ogg}} '''Acheron:''' Sorry. I couldn't hear you clearly. Could you repeat that?
+:::::I mean, no problem.
+:::::I mean, no can do.
+:::::{{A|VO chapter3 5 acheron 118.ogg}} '''Acheron:''' Sorry. I couldn't hear you clearly. Could you repeat that?
+:::::I mean, no problem.
+:::::{{Color|#ff3a|I mean, no problem.}}
+:::::{{A|VO chapter3 5 player 104 m.ogg}} {{A|VO chapter3 5 player 104 f.ogg}} '''(Trailblazer):''' (What's going on? That weird feeling is back again...)
+::{{DIcon|Arrow}} No, absolutely not.
+:::{{A|VO chapter3 5 acheron 117.ogg}} '''Acheron:''' Sorry. I couldn't hear you clearly. Could you repeat that?
+:::{{DIcon|Arrow}} I mean, no problem.
+:::{{DIcon|Arrow}} I mean, no can do.
+::::{{A|VO chapter3 5 acheron 118.ogg}} '''Acheron:''' Sorry. I couldn't hear you clearly. Could you repeat that?
+::::{{DIcon|Arrow}} I mean, no problem.
+::::{{DIcon|Arrow}} {{Color|#ff3a|I mean, no problem.}}
+:::::{{A|VO chapter3 5 player 104 m.ogg}} {{A|VO chapter3 5 player 104 f.ogg}} '''(Trailblazer):''' (What's going on? That weird feeling is back again...)
+::{{A|VO chapter3 5 acheron 119 m.ogg}} {{A|VO chapter3 5 acheron 119 f.ogg}} '''Acheron:''' Thank you, (Trailblazer)... I'm truly grateful.
+::{{tx}}
+
+;(Unused &mdash; random_103060107_3)
+:{{tx}}
+::{{A|VO chapter3 5 acheron 106.ogg}} '''Acheron:''' Finally, some peace and quiet. What are the two of you doing here?
+::{{A|VO chapter3 5 blackswan 115.ogg}} '''Black Swan:''' We could ask you the same thing.
+::{{A|VO chapter3 5 acheron 107 m.ogg}} {{A|VO chapter3 5 acheron 107 f.ogg}} '''Acheron:''' {{Color|#ff3a|It's a long story. I fortuitously &mdash; as {{MC|m=he|f=she}} should remember &mdash; became friends with some of the Bloodhounds, and was helping them track down a wanted criminal... Except I ended up here for some reason.}}
+::{{A|VO chapter3 5 acheron 108.ogg}} '''Acheron:''' {{Color|#ff3a|It's probably not as complicated as it sounds. It's all thanks to... a Masked Fool. Maybe I unwittingly hurt her... and then in a flash of kaleidoscopic light, I ended up here.}}
+::{{A|VO chapter3 5 acheron 109.ogg}} '''Acheron:''' {{Color|#ff3a|Penacony's rife with rumors now, about the Watchmaker, a legacy, nightmares and other mysterious tales. I was curious as to who was spreading them, and tested the method as described in the rumors... To think I actually ended up here...}}
+::{{A|VO chapter3 5 blackswan 116.ogg}} '''Black Swan:''' You... aren't hiding anything, are you?
+::{{A|VO chapter3 5 acheron 110.ogg}} '''Acheron:''' Hiding? I don't think I'd be capable of that in front of a Memokeeper.
+::{{DIcon|Arrow}} That's true.
+::{{DIcon|Arrow}} I can.
+:::{{A|VO chapter3 5 acheron 111.ogg}} '''Acheron:''' Is that so... You're good then. What sort of training did you have to undergo? Can you teach me?
+:::{{A|VO chapter3 5 blackswan 117 m.ogg}} {{A|VO chapter3 5 blackswan 117 f.ogg}} '''Black Swan:''' {{MC|m=He|f=She}}'s kidding. {{MC|m=He|f=She}} can't do it.
+:::How about in front of me?
+:::{{A|VO chapter3 5 acheron 112.ogg}} '''Acheron:''' That's not what I meant. It's just a... figure of speech.
+::{{DIcon|Arrow}} How about in front of me?
+:::{{A|VO chapter3 5 acheron 112.ogg}} '''Acheron:''' That's not what I meant. It's just a... figure of speech.
+::{{A|VO chapter3 5 acheron 113.ogg}} '''Acheron:''' Your arrival is timely &mdash; this Dreamscape is fraught with danger. Since our destination is the same, how about we join forces?
+::{{A|VO chapter3 5 acheron 114.ogg}} '''Acheron:''' I can protect you from harm, but in the Memory Zone, I'll need assistance from the Memokeeper as well. And... if we run into The Family, it wouldn't hurt to have one more person to explain the situation.
+::{{A|VO chapter3 5 blackswan 118 m.ogg}} {{A|VO chapter3 5 blackswan 118 f.ogg}} '''Black Swan:''' Hmm... What do you think, (Trailblazer)?
+::{{DIcon|Arrow}} Never hurts to have more people.
+::{{DIcon|Arrow}} We can trust Acheron.
+::{{DIcon|Arrow}} I think we should forget it...
+:::{{A|VO chapter3 5 acheron 115.ogg}} '''Acheron:''' Sorry. I couldn't hear you clearly. Could you repeat that?
+:::{{DIcon|Arrow}} I mean, no problem.
+:::{{DIcon|Arrow}} I mean, no can do...
+::::{{A|VO chapter3 5 acheron 116.ogg}} '''Acheron:''' Sorry. I couldn't hear you clearly. Could you repeat that?
+::::{{DIcon|Arrow}} I mean, no problem.
+::::{{DIcon|Arrow}} {{Color|#ff3a|I mean, no problem.}}
+:::::{{A|VO chapter3 5 player 103 m.ogg}} {{A|VO chapter3 5 player 103 f.ogg}} '''(Trailblazer):''' (What's going on? That weird feeling is back again...)
+:::::No, absolutely not.
+:::::{{A|VO chapter3 5 acheron 117.ogg}} '''Acheron:''' Sorry. I couldn't hear you clearly. Could you repeat that?
+:::::I mean, no problem.
+:::::I mean, no can do.
+:::::{{A|VO chapter3 5 acheron 118.ogg}} '''Acheron:''' Sorry. I couldn't hear you clearly. Could you repeat that?
+:::::I mean, no problem.
+:::::{{Color|#ff3a|I mean, no problem.}}
+:::::{{A|VO chapter3 5 player 104 m.ogg}} {{A|VO chapter3 5 player 104 f.ogg}} '''(Trailblazer):''' (What's going on? That weird feeling is back again...)
+::{{DIcon|Arrow}} No, absolutely not.
+:::{{A|VO chapter3 5 acheron 117.ogg}} '''Acheron:''' Sorry. I couldn't hear you clearly. Could you repeat that?
+:::{{DIcon|Arrow}} I mean, no problem.
+:::{{DIcon|Arrow}} I mean, no can do.
+::::{{A|VO chapter3 5 acheron 118.ogg}} '''Acheron:''' Sorry. I couldn't hear you clearly. Could you repeat that?
+::::{{DIcon|Arrow}} I mean, no problem.
+::::{{DIcon|Arrow}} {{Color|#ff3a|I mean, no problem.}}
+:::::{{A|VO chapter3 5 player 104 m.ogg}} {{A|VO chapter3 5 player 104 f.ogg}} '''(Trailblazer):''' (What's going on? That weird feeling is back again...)
+::{{A|VO chapter3 5 acheron 119 m.ogg}} {{A|VO chapter3 5 acheron 119 f.ogg}} '''Acheron:''' Thank you, (Trailblazer)... I'm truly grateful.
+::{{tx}}
 {{Dialogue End}}
 
 ===Find the path to the Lobby{{subst:void|<!--103060108-->}}===
 {{Mission Description|type=trailblaze|location=The Reverie (Dreamscape)|update|Having learned of how your companions have become scattered, Black Swan continues to lead you forward in the Memory Zone. Along the way, you unexpectedly encounter the Galaxy Ranger, who is here searching for secrets (though she gave sufficient reasons for her to be here, you have reasons to suspect that she just got lost again.)<br />Now, with the assistance of this Ranger, it should be no trouble for you all to make it to the hotel lobby &mdash; However, Black Swan seems a little apprehensive of her... Why could this be?}}
 {{Dialogue Start}}
+
+:{{DIcon|Talk}} Investigate
+:{{A|VO chapter3 5 acheron 121.ogg}} '''Acheron:''' This door... can't be opened?
+:{{A|VO chapter3 5 blackswan 120.ogg}} '''Black Swan:''' It's locked. I can travel through it freely, but you all...
+:{{A|VO chapter3 5 acheron 122.ogg}} '''Acheron:''' We'll just have to take the way I came. Follow me.
+:{{A|VO chapter3 5 blackswan 121.ogg}} '''Black Swan:''' Miss Acheron, I have a suggestion: Why not split up and look for a way out, and meet up again when we find something? That would speed things up.
+:{{A|VO chapter3 5 acheron 124.ogg}} '''Acheron:''' But it's dangerous around here. We'd better travel together.
+
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{A|VO chapter3 5 acheron 127.ogg}} '''Acheron:''' ...It worked. You really can walk up walls.
+:{{A|VO chapter3 5 blackswan 127.ogg}} '''Black Swan:''' A Memory Zone of this level is mere child's play to a Memokeeper. Come on. Let's head out through the front door.
+
+;(Upon reaching the destination)
+:{{A|VO chapter3 5 acheron 128.ogg}} '''Acheron:''' This is... a dead end.
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{A|VO chapter3 5 blackswan 128 m.ogg}} {{A|VO chapter3 5 blackswan 128 f.ogg}} '''Black Swan:''' You're a natural, aren't you? You're a prodigy at Remembrance, (Trailblazer).
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
 :{{tx}}
+----
+:{{A|VO chapter3 5 blackswan 125.ogg}} '''Black Swan:''' How about it? Can you feel the memoria flowing around you?
+:{{A|VO chapter3 5 blackswan 126.ogg}} '''Black Swan:''' Next, find a suitable spot... and try *walking up* the wall.
 {{Dialogue End}}
 
 ===Enter the suspicious elevator{{subst:void|<!--103060113-->}}===
 {{Mission Description|type=trailblaze|location=The Reverie (Dreamscape)|update|You are just a step away from the place you arranged to meet, but a suspicious elevator blocks your path.<br />Black Swan says that the road ahead "seems to have been heavily distorted" &mdash; But what could possibly have happened in there? It seems you may have no choice but to enter the elevator to find your answer.}}
 {{Dialogue Start}}
-:{{tx}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{A|VO chapter3 5 acheron 129.ogg}} '''Acheron:''' We've arrived. There's an elevator here, just like in the lobby. We should be able to reach our destination with it.
+:{{A|VO chapter3 5 blackswan 129.ogg}} '''Black Swan:''' But the Memory Zone up ahead... appears to be severely twisted. Be careful, everyone.
+<pre>{
+	"$type": "RPG.GameCore.TriggerEntityServerEvent"
+}</pre>
 {{Dialogue End}}
 
 ===Leave this place and continue towards the Lobby{{subst:void|<!--103060114-->}}===
 {{Mission Description|type=trailblaze|location=The Reverie (Dreamscape)|update|It seems that Black Swan's premonition was entirely correct. You've arrived in a severely distorted space &mdash;fortunately, there is a door here. If everything goes as expected, this door should be the exit from this space (though your adventure has been constantly plagued by the unexpected).<br />Perhaps you should open the door and leave this place immediately instead of continuing to run in circles in this tiny room.}}
 {{Dialogue Start}}
+
+:{{DIcon|Talk}} Investigate
+:{{A|VO chapter3 5 acheron 130.ogg}} '''Acheron:''' This door... is locked too?
+:{{A|VO chapter3 5 blackswan 131.ogg}} '''Black Swan:''' There's no end to this. Let me try.
+:You see the Memokeeper close her eyes. She is searching the room in an almost telepathic way, even every nook and cranny outside the room.
+:{{A|VO chapter3 5 blackswan 132.ogg}} '''Black Swan:''' This Memory Zone... is overly twisted. I have to use inelegant methods, so you two... please give me a little time...
+:{{A|VO chapter3 5 blackswan 133.ogg}} '''Black Swan:''' Mm... got it. I can see the core of this Dreamscape, and there are members of The Family... and some figures trying to find their way forward. It appears that your friends aren't faring too well... One, two, three...
+:{{A|VO chapter3 5 blackswan 134.ogg}} '''Black Swan:''' ...Wait, three? There is a third person seeking the way to the lobby? Wait... it's...
+:{{A|VO chapter3 5 blackswan 135.ogg}} '''Black Swan:''' ...The girl who was with you?
+:{{DIcon|Arrow}} Firefly? What's she doing here?
+:{{DIcon|Arrow}} Could you be mistaken?
+:{{DIcon|Arrow}} You said she already returned to reality.
+:{{A|VO chapter3 5 blackswan 136.ogg}} '''Black Swan:''' It eludes me, but there's a known semblance in the Memory Zone, mirroring the essence she radiates... What reason does she have to delve so deep into the Dreamscape?
 :{{tx}}
+----
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{A|VO chapter3 5 blackswan 130.ogg}} '''Black Swan:''' ...See, I told you it wasn't going to be that simple. Where is this?
 {{Dialogue End}}
 
 ===Investigate the Dream Jigsaw that had mysteriously appeared{{subst:void|<!--103060117-->}}===
 {{Mission Description|type=trailblaze|location=The Reverie (Dreamscape)|update|The Dreamweaver Gentleman can be seen all over Penacony, yet he has appeared before you precisely at this moment again to give you a completely unnecessary puzzle.<br />Complete this puzzle and leave this distorted Memory Zone.}}
 {{Dialogue Start}}
-:{{tx}}
+
+:{{DIcon|Loupe}} Investigate
+:{{A|VO chapter3 5 blackswan 139.ogg}} '''Black Swan:''' There's no time. I'll just have to break the rules and use some methods to help you phase through the Memory Zone.
+:{{A|VO chapter3 5 blackswan 140.ogg}} '''Black Swan:''' I picked up slivers of her thoughts in the Memory Zone. These will help you form an impression of her. Now, you must hang on to these thoughts with all your might, and shape them in your mind.
+:{{A|VO chapter3 5 blackswan 141.ogg}} '''Black Swan:''' I caught some very familiar memories just now &mdash; she's not the only *old friend* who has appeared here. There was also a third party at the scene when you ran into danger...
+:{{A|VO chapter3 5 blackswan 142.ogg}} '''Black Swan:''' ...That Memory Zone meme, it is here as well.
+<pre>{
+	"$type": "RPG.GameCore.WaitEntityServerEvent"
+}</pre>
+;(If {{cx}}{{subst:void|<!--{"$type":"RPG.GameCore.ByComparePropState","TargetType":{"$type":"RPG.GameCore.GroupFetchLocalTarget","TargetType":"Prop","Targets":[300002]}}-->}}, {{cx}}{{subst:void|<!--{"$type":"RPG.GameCore.ByComparePropState","TargetType":{"$type":"RPG.GameCore.GroupFetchLocalTarget","TargetType":"Prop","Targets":[300003]}}-->}}, {{cx}}{{subst:void|<!--{"$type":"RPG.GameCore.ByComparePropState","TargetType":{"$type":"RPG.GameCore.GroupFetchLocalTarget","TargetType":"Prop","Targets":[300004]}}-->}}, and {{cx}}{{subst:void|<!--{"$type":"RPG.GameCore.ByComparePropState","TargetType":{"$type":"RPG.GameCore.GroupFetchLocalTarget","TargetType":"Prop","Targets":[300001]},"State":"Open"}-->}})
+<pre>{
+	"$type": "RPG.GameCore.ChangePropState"
+}</pre>
 {{Dialogue End}}
 
 ===Find the lost pieces{{subst:void|<!--103060130-->}}===
 {{Dialogue Start}}
-:{{tx}}
+;(If {{cx}}<!--SubMission Finish: 103060118-->)
+:<pre>{
+	"$type": "RPG.GameCore.AdvDestroyGroupEntity",
+	"InstanceIDList": [
+		300008
+	]
+}</pre>
+;(If {{cx}}<!--SubMission not Finish: 103060118-->)
+:<pre>{
+	"$type": "RPG.GameCore.AdvCreateGroupEntity",
+	"InstanceIDList": [
+		300001,
+		300008
+	]
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.AdvDestroyGroupEntity",
+	"InstanceIDList": [
+		300001
+	]
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.ShowSDFText",
+	"TargetType": {
+		"$type": "RPG.GameCore.GroupFetchLocalTarget",
+		"TargetType": "Prop",
+		"Targets": [
+			300008
+		]
+	},
+	"IsFaceToCamera": {
+		"FixedValue": {
+			"Value": 0
+		}
+	},
+	"SDFTextID": {
+		"IsDynamic": true,
+		"PostfixExpr": {
+			"OpCodes": "EQ==",
+			"FixedValues": [],
+			"DynamicHashes": []
+		}
+	}
+}</pre>
+;(Unused &mdash; Talk_1030601181)
+<pre>{
+	"$type": "RPG.GameCore.AdvDestroyGroupEntity",
+	"InstanceIDList": [
+		300001
+	]
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.ShowSDFText",
+	"TargetType": {
+		"$type": "RPG.GameCore.GroupFetchLocalTarget",
+		"TargetType": "Prop",
+		"Targets": [
+			300008
+		]
+	},
+	"IsFaceToCamera": {
+		"FixedValue": {
+			"Value": 0
+		}
+	},
+	"SDFTextID": {
+		"IsDynamic": true,
+		"PostfixExpr": {
+			"OpCodes": "EQ==",
+			"FixedValues": [],
+			"DynamicHashes": []
+		}
+	}
+}</pre>
+
+;(Unused &mdash; Talk_1030601191)
+<pre>{
+	"$type": "RPG.GameCore.AdvDestroyGroupEntity",
+	"InstanceIDList": [
+		300002
+	]
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.ShowSDFText",
+	"TargetType": {
+		"$type": "RPG.GameCore.GroupFetchLocalTarget",
+		"TargetType": "Prop",
+		"Targets": [
+			300009
+		]
+	},
+	"IsFaceToCamera": {
+		"FixedValue": {
+			"Value": 0
+		}
+	},
+	"SDFTextID": {
+		"IsDynamic": true,
+		"PostfixExpr": {
+			"OpCodes": "EQ==",
+			"FixedValues": [],
+			"DynamicHashes": []
+		}
+	}
+}</pre>
+
+;(Unused &mdash; Talk_1030601201)
+<pre>{
+	"$type": "RPG.GameCore.AdvDestroyGroupEntity",
+	"InstanceIDList": [
+		300003
+	]
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.ShowSDFText",
+	"TargetType": {
+		"$type": "RPG.GameCore.GroupFetchLocalTarget",
+		"TargetType": "Prop",
+		"Targets": [
+			300010
+		]
+	},
+	"IsFaceToCamera": {
+		"FixedValue": {
+			"Value": 0
+		}
+	},
+	"SDFTextID": {
+		"IsDynamic": true,
+		"PostfixExpr": {
+			"OpCodes": "EQ==",
+			"FixedValues": [],
+			"DynamicHashes": []
+		}
+	}
+}</pre>
+
+;(Unused &mdash; PT_1030601_203_PPF_ON)
+<pre>{
+	"$type": "RPG.GameCore.PPFilterStackEffect",
+	"PriorityGroup": "PerformanceGroup",
+	"Rate": 0.3,
+	"Duration": 1,
+	"AssetPath": "EnviroSystem/PostProcessFilterAsset/DizzinessVarient.asset"
+}</pre>
+
+;(Unused &mdash; PT_1030601_203_PPF_OFF)
+<pre>{
+	"$type": "RPG.GameCore.PPFilterStackEffect",
+	"Active": false,
+	"PriorityGroup": "PerformanceGroup",
+	"Rate": 0.3,
+	"Duration": 1,
+	"AssetPath": "EnviroSystem/PostProcessFilterAsset/DizzinessVarient.asset"
+}</pre>
 {{Dialogue End}}
 
 ===Use the characteristics of the Dreamscape to open the door{{subst:void|<!--103060123-->}}===
 {{Dialogue Start}}
-:{{tx}}
+:<!--1-second delay-->
+<pre>{
+	"$type": "RPG.GameCore.PPFilterStackEffect",
+	"Active": false,
+	"PriorityGroup": "PerformanceGroup",
+	"Rate": 0.3,
+	"Duration": 1,
+	"AssetPath": "EnviroSystem/PostProcessFilterAsset/DizzinessVarient.asset"
+}</pre>
 {{Dialogue End}}
 
 ===Leave this place and continue towards the Lobby{{subst:void|<!--103060124-->}}===
 {{Mission Description|type=trailblaze|location=The Reverie (Dreamscape)|update|You successfully found the exit &mdash; It is time to continue on toward the hotel lobby.<br />Let's hope that Himeko and March 7th have already arrived there safely.}}
 {{Dialogue Start}}
-:{{tx}}
+:{{A|VO chapter3 5 blackswan 143.ogg}} '''Black Swan:''' Hurry, through here.
+
+:{{DIcon|Loupe}} Leave
+----
+<pre>{
+	"$type": "RPG.GameCore.TriggerSound",
+	"SoundName": {
+		"Value": "Ev_sfx_storyd_main_elevator"
+	},
+	"EmitterType": "LocalPlayer"
+}</pre>
+;(Screen fades to black)
+:...
+:The gate shuts. Your thoughts, stirred by the swirling current and pulled along, descend into a deep abyss, sinking. When the hatch opens again, what sights will you behold? Perhaps no one can provide an answer.
+:An indescribable fluid &mdash; darkness &mdash; flows from your chest to your throat. Suffocation engulfs you from within. Then, a voice emerges...
+:{{A|VO chapter3 5 firefly 104.ogg}} '''Firefly:''' In my dream, I saw a scorched earth, and a new sapling emerging from it. It bloomed against the morning sun, and whispered to me.
+:{{A|VO chapter3 5 firefly 105.ogg}} '''Firefly:''' Why do people choose to sleep? I think...
+:The final sigh escapes, its origin unknown.
+:{{A|VO chapter3 5 firefly 106.ogg}} '''Firefly:''' ...It is because they're afraid to awaken from the dream.
+<pre>{
+	"$type": "RPG.GameCore.SwitchCharacterAnchorV2",
+	"SwitchCharacterAnchorConfig": {
+		"IsLocalPlayer": true,
+		"CharacterUniqueName": "LocalPlayer",
+		"AreaName": {
+			"Value": "LevelArea_P20311_F20311001_G332"
+		},
+		"AnchorName": {
+			"Value": "Anchor9"
+		}
+	}
+}</pre>
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+<pre>{
+	"$type": "RPG.GameCore.TriggerSound",
+	"SoundName": {
+		"Value": "Ev_sfx_storyd_main_elevator_stop"
+	},
+	"EmitterType": "LocalPlayer"
+}</pre>
 {{Dialogue End}}
 
 ===Go to the Lobby{{subst:void|<!--103060126-->}}===
 {{Mission Description|type=trailblaze|location=The Reverie (Dreamscape)|update|The lobby is just ahead... Just what will you discover there?}}
 {{Dialogue Start}}
-:{{tx}}
+:{{A|VO chapter3 5 acheron 131.ogg}} '''Acheron:''' ...Watch out! A dangerous presence lurks nearby.
+:{{A|VO chapter3 5 blackswan 144.ogg}} '''Black Swan:''' ...Everyone, be on your guard.
+:{{A|VO chapter3 5 acheron 131.ogg}} '''Acheron:''' ...Watch out! A dangerous presence lurks nearby.
+:{{A|VO chapter3 5 blackswan 144.ogg}} '''Black Swan:''' ...Everyone, be on your guard.
+;(If {{cx}}{{subst:void|<!--{"$type":"RPG.GameCore.ByComparePropState","TargetType":{"$type":"RPG.GameCore.TargetFetchAdvPropEx","FetchType":"SinglePropByPropID","SinglePropID":{"GroupID":{"FixedValue":{"Value":51}},"ID":{"FixedValue":{"Value":300002}}}},"State":"CheckPointDisable"}-->}})
+<pre>{
+	"$type": "RPG.GameCore.SwitchCharacterAnchorV2",
+	"SwitchCharacterAnchorConfig": {
+		"IsLocalPlayer": true,
+		"CharacterUniqueName": "LocalPlayer",
+		"AreaName": {
+			"Value": "LevelArea_P20311_F20311001_G332"
+		},
+		"AnchorName": {
+			"Value": "Anchor9"
+		}
+	}
+}</pre>
+;(Upon reaching the destination)
 {{Dialogue End}}
 
 ===Investigate the Lobby{{subst:void|<!--103060128-->}}===
 {{Mission Description|type=trailblaze|location=The Reverie (Dreamscape)|update|You seem to see a blurred but familiar figure in the center of the lobby &mdash; Who is she? Why would she appear here?<br />And... Is this really a good thing?}}
 {{Dialogue Start}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+----
+;([[#Gallery|Cutscene]] plays)
+::S&mdash;Sorry...
+;(Cutscene ends)
+----
+<pre>{
+	"$type": "RPG.GameCore.AdvDestroyGroupEntity",
+	"InstanceIDList": [
+		400001
+	]
+}</pre>
+:{{tx}}
+:{{A|VO chapter3 5 acheron 132 m.ogg}} {{A|VO chapter3 5 acheron 132 f.ogg}} '''Acheron:''' (Trailblazer), you... you all right?
+:{{DIcon|Arrow}} What just happened?
+:{{DIcon|Arrow}} Is this... a dream...
+:{{A|VO chapter3 5 acheron 133 m.ogg}} {{A|VO chapter3 5 acheron 133 f.ogg}} '''Acheron:''' (Trailblazer), look at me... Calm down, deep breaths, all right?
+:{{A|VO chapter3 5 blackswan 145.ogg}} '''Black Swan:''' ...Allow me. Relax, you'll be fine.
+:{{DIcon|Arrow}} Don't worry. I'm fine.
+::Don't worry. I'm fine.
+:{{DIcon|Arrow}} That... that was too sudden...
+::That... that was too sudden...
+::{{A|VO chapter3 5 blackswan 146.ogg}} '''Black Swan:''' I'm really sorry, but I have to leave for a short while... Death still hovers about, and I must personally ensure Miss Himeko and Miss March 7th's safety, and warn them...
+::{{A|VO chapter3 5 blackswan 147 m.ogg}} {{A|VO chapter3 5 blackswan 147 f.ogg}} '''Black Swan:''' I'll leave (Trailblazer) to you... Miss Acheron.
+::{{A|VO chapter3 5 acheron 134.ogg}} '''Acheron:''' I'm sorry for what happened... I was too focused on that girl, and got sloppy...
+::{{A|VO chapter3 5 acheron 135 m.ogg}} {{A|VO chapter3 5 acheron 135 f.ogg}} '''Acheron:''' It was my hesitation that caused her to lose her life... I'm sorry, (Trailblazer).
+::{{DIcon|Arrow}} It's not your fault.
+:::{{A|VO chapter3 5 acheron 136.ogg}} '''Acheron:''' But if in that moment, I chose to draw my blade...
+::{{DIcon|Arrow}} You didn't even draw your blade... Why...
+:::You didn't even draw your blade... Why...
+:::{{A|VO chapter3 5 acheron 137.ogg}} '''Acheron:''' ...
+:::{{A|VO chapter3 5 acheron 138.ogg}} '''Acheron:''' Sorry, I... had no choice.
+:::{{DIcon|Arrow}} The priority is figuring out what happened.
+::::{{A|VO chapter3 5 acheron 139.ogg}} '''Acheron:''' Yes... Yes, we will. But not yet. Before The Hunt, we should keep our eyes peeled and consider where the true enemies are hiding, and how to fight them...
+::::She didn't have a choice either...
+:::{{DIcon|Arrow}} She didn't have a choice either...
+:::{{A|VO chapter3 5 acheron 140.ogg}} '''Acheron:''' I understand your anger, and I will accept it... but this isn't the time. We should keep our eyes peeled and consider where the true enemies are hiding, and how to fight them...
+:::{{A|VO chapter3 5 acheron 141 m.ogg}} {{A|VO chapter3 5 acheron 141 f.ogg}} '''Acheron:''' Do not let pain dictate your thoughts, (Trailblazer). Compose yourself, and you will walk the right path.
+:::{{tx}}
+::You didn't even draw your blade... Why...
+::{{A|VO chapter3 5 acheron 137.ogg}} '''Acheron:''' ...
+::{{A|VO chapter3 5 acheron 138.ogg}} '''Acheron:''' Sorry, I... had no choice.
+::{{DIcon|Arrow}} The priority is figuring out what happened.
+:::{{A|VO chapter3 5 acheron 139.ogg}} '''Acheron:''' Yes... Yes, we will. But not yet. Before The Hunt, we should keep our eyes peeled and consider where the true enemies are hiding, and how to fight them...
+:::She didn't have a choice either...
+::{{DIcon|Arrow}} She didn't have a choice either...
+::{{A|VO chapter3 5 acheron 140.ogg}} '''Acheron:''' I understand your anger, and I will accept it... but this isn't the time. We should keep our eyes peeled and consider where the true enemies are hiding, and how to fight them...
+::{{A|VO chapter3 5 acheron 141 m.ogg}} {{A|VO chapter3 5 acheron 141 f.ogg}} '''Acheron:''' Do not let pain dictate your thoughts, (Trailblazer). Compose yourself, and you will walk the right path.
+::{{tx}}
+:That... that was too sudden...
+:{{A|VO chapter3 5 blackswan 146.ogg}} '''Black Swan:''' I'm really sorry, but I have to leave for a short while... Death still hovers about, and I must personally ensure Miss Himeko and Miss March 7th's safety, and warn them...
+:{{A|VO chapter3 5 blackswan 147 m.ogg}} {{A|VO chapter3 5 blackswan 147 f.ogg}} '''Black Swan:''' I'll leave (Trailblazer) to you... Miss Acheron.
+:{{A|VO chapter3 5 acheron 134.ogg}} '''Acheron:''' I'm sorry for what happened... I was too focused on that girl, and got sloppy...
+:{{A|VO chapter3 5 acheron 135 m.ogg}} {{A|VO chapter3 5 acheron 135 f.ogg}} '''Acheron:''' It was my hesitation that caused her to lose her life... I'm sorry, (Trailblazer).
+:{{DIcon|Arrow}} It's not your fault.
+::{{A|VO chapter3 5 acheron 136.ogg}} '''Acheron:''' But if in that moment, I chose to draw my blade...
+:{{DIcon|Arrow}} You didn't even draw your blade... Why...
+::You didn't even draw your blade... Why...
+::{{A|VO chapter3 5 acheron 137.ogg}} '''Acheron:''' ...
+::{{A|VO chapter3 5 acheron 138.ogg}} '''Acheron:''' Sorry, I... had no choice.
+::{{DIcon|Arrow}} The priority is figuring out what happened.
+:::{{A|VO chapter3 5 acheron 139.ogg}} '''Acheron:''' Yes... Yes, we will. But not yet. Before The Hunt, we should keep our eyes peeled and consider where the true enemies are hiding, and how to fight them...
+:::She didn't have a choice either...
+::{{DIcon|Arrow}} She didn't have a choice either...
+::{{A|VO chapter3 5 acheron 140.ogg}} '''Acheron:''' I understand your anger, and I will accept it... but this isn't the time. We should keep our eyes peeled and consider where the true enemies are hiding, and how to fight them...
+::{{A|VO chapter3 5 acheron 141 m.ogg}} {{A|VO chapter3 5 acheron 141 f.ogg}} '''Acheron:''' Do not let pain dictate your thoughts, (Trailblazer). Compose yourself, and you will walk the right path.
+::{{tx}}
+:You didn't even draw your blade... Why...
+:{{A|VO chapter3 5 acheron 137.ogg}} '''Acheron:''' ...
+:{{A|VO chapter3 5 acheron 138.ogg}} '''Acheron:''' Sorry, I... had no choice.
+:{{DIcon|Arrow}} The priority is figuring out what happened.
+::{{A|VO chapter3 5 acheron 139.ogg}} '''Acheron:''' Yes... Yes, we will. But not yet. Before The Hunt, we should keep our eyes peeled and consider where the true enemies are hiding, and how to fight them...
+::She didn't have a choice either...
+:{{DIcon|Arrow}} She didn't have a choice either...
+:{{A|VO chapter3 5 acheron 140.ogg}} '''Acheron:''' I understand your anger, and I will accept it... but this isn't the time. We should keep our eyes peeled and consider where the true enemies are hiding, and how to fight them...
+:{{A|VO chapter3 5 acheron 141 m.ogg}} {{A|VO chapter3 5 acheron 141 f.ogg}} '''Acheron:''' Do not let pain dictate your thoughts, (Trailblazer). Compose yourself, and you will walk the right path.
 :{{tx}}
 {{Dialogue End}}
 

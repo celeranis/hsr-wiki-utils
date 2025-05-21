@@ -42,34 +42,154 @@ PageTitle=#Sealed Sector#
 ===Go to Herta's Office{{subst:void|<!--200070501-->}}===
 {{Mission Description|type=adventure|location=Herta's Office|The troubles caused by Silver Wolf have finally abated, but Leonard still looks concerned...}}
 {{Dialogue Start}}
-:{{tx}}
+<pre>{
+	"$type": "RPG.GameCore.WaitSilverWolfCompanionToastExit",
+	"MissionID": 2000704,
+	"AvatarID": 1006,
+	"MaxWaitTime": 9
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.PlayMessage",
+	"MessageSectionID": 1012201
+}</pre>
 {{Dialogue End}}
 
 ===Talk with Leonard{{subst:void|<!--200070502-->}}===
 {{Mission Description|type=adventure|location=Master Control Zone|update|The troubles caused by Silver Wolf have abated, but Leonard still looks concerned...}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Leonard)
+:'''Leonard:''' Hey friend, over here! You're finally here, I've been waiting for a long time.
+:{{DIcon|Arrow}} Sorry to keep you waiting.
+::'''Leonard:''' Hey, what's with the politeness? I looked for you for help, so I'm willing to wait.
+:{{DIcon|Arrow}} We just saw each other not that long ago.
+::'''Leonard:''' Is that so? Maybe I just wanted to see you, so I got impatient!
+:'''Leonard:''' Thing is, like I said in my message, even if the invasion is over, it still exposed many security issues the space station faces. In other words, gaps.
+:'''Leonard:''' Following Lead Researcher Asta's orders, the space station formed a special task force to tackle this problem.
+:'''Leonard:''' In my opinion, aside from technical upgrades, it is more important to increase staff members' awareness and precaution. Many of Silver Wolf's attacks honed in on individual bad habits, and those are too difficult to defend against.
+:{{DIcon|Arrow}} Fair enough.
+:{{DIcon|Arrow}} Like... you?
+::'''Leonard:''' Nonsense! What I did was... was... a demonstration! That's right. It's a demonstration to illustrate my point in a more direct manner!
+:'''Leonard:''' Herta Space Station is the turf of Genius Society members, so it's not inconceivable that other forces target us. Therefore, our safety and staff awareness should be at the top of the universe as well.
+:'''Leonard:''' In order to be able to quickly respond to such incidents in the future, I think that a safety drill for the entire space station should be arranged immediately: A select number of staff members will have their terminals sent a mail embedded with special programs...
+:{{DIcon|Arrow}} Phishing mail?
+::'''Leonard:''' No, no no no. Not as simple as that.
+:{{DIcon|Arrow}} Will I get it too?
+::'''Leonard:''' No no, I'm not done yet.
+:'''Leonard:''' What we're defending against are enemies on the level of Stellaron Hunters. They won't give you a choice.
+:'''Leonard:''' The moment the mail is successfully received, the program will attack automatically and immediately regardless of time, location, or whether it was opened. Within moments, the virus will spread throughout the entire space station!
+:'''Leonard:''' Be it personal terminals, public facilities, or the electric seat warmer on the toilet, everything might collapse within moments!
+:{{DIcon|Arrow}} Scary...
+:{{DIcon|Arrow}} Have you started looking for your next job?
+:{{DIcon|Arrow}} Not the toilet seat!
+:'''Leonard:''' Don't worry, these "viruses" are all imitations written by me. They are absolutely safe and harmless.
+:'''Leonard:''' Through the drill, I want to deepen everyone's understanding of network security. Of course, before we start, testing and repeating revision is compulsory.
+:'''Leonard:''' The requirements for test candidates will be very high. They will need to be bold, careful, and thoughtful. They must not only be familiar with the space station, but also understand Silver Wolf and the Stellaron Hunter. It would be helpful if they also have an altruistic heart...
+:'''Leonard:''' Who could satisfy all of those requirements? My friend, that's you!
+:{{DIcon|Arrow}} No problem, friend!
+::'''Leonard:''' I knew it, my good pal, you'll never let me down!
+:{{DIcon|Arrow}} Do you not have any other friends?
+::'''Leonard:''' You mean on the space station? Of course not. Colleagues are not friends.
+::{{DIcon|Arrow}} This sudden honesty!
+::{{DIcon|Arrow}} Did you switch personalities?
+::'''Leonard:''' Oh, I just had a moment of inspiration. I was at the IPC for a long time, so believe me, friend, when I say "Adversity shows sincerity."
+:'''Leonard:''' The simulation testing grounds is ready. Let's get to it.
+:{{DIcon|Arrow}} Then let's go.
+::'''Leonard:''' Come with me!
+:<pre>{
+	"$type": "RPG.GameCore.SetLocalPlayerDitherAlpha"
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.OpenTreasureChallenge",
+	"RaidID": 4000211,
+	"OnCancel": [
+		{
+			"$type": "RPG.GameCore.EndDialogueEntityInteract"
+		},
+		{
+			"$type": "RPG.GameCore.TriggerCustomString",
+			"CustomString": {
+				"Value": "ALL_TALK_END"
+			}
+		}
+	]
+}</pre>
+:{{DIcon|Exit}} I'm not ready yet.
+::'''Leonard:''' Oh... never mind then, it's not urgent. Come talk to me whenever you're ready.
 {{Dialogue End}}
 
 ===Complete Sealed Sector: Difficulty 1{{subst:void|<!--200070503-->}}===
 {{Mission Description|type=adventure|location=Master Control Zone|update|The troubles caused by Silver Wolf have abated, but Leonard still looks concerned.<br />He's asking for your help to complete a task that will improve the space station's cybersecurity and help him keep his job...}}
 {{Dialogue Start}}
-:{{tx}}
+
+
+;(Talk to Leonard)
+:'''Leonard:''' Through the drill, I can definitely help deepen everyone's understanding of network security. Of course, before we start, testing and repeating revision is compulsory.
+:'''Leonard:''' The simulation testing grounds is ready. Let's get to it.
+:{{DIcon|Arrow}} Then let's go.
+::'''Leonard:''' Come with me!
+:<pre>{
+	"$type": "RPG.GameCore.SetLocalPlayerDitherAlpha"
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.OpenTreasureChallenge",
+	"RaidID": 4000211,
+	"OnCancel": [
+		{
+			"$type": "RPG.GameCore.EndDialogueEntityInteract"
+		},
+		{
+			"$type": "RPG.GameCore.TriggerCustomString",
+			"CustomString": {
+				"Value": "ALL_TALK_END"
+			}
+		}
+	]
+}</pre>
+:{{DIcon|Exit}} I'm not ready yet.
+::'''Leonard:''' Oh... never mind then, it's not urgent. Come talk to me whenever you're ready.
 {{Dialogue End}}
 
 ===Complete Sealed Sector: Difficulty 2{{subst:void|<!--200070504-->}}===
 {{Dialogue Start}}
-:{{tx}}
+
+
+;(Talk to Leonard)
+<pre>{
+	"$type": "RPG.GameCore.PlayMultiVoiceTalk",
+	"TalkSentenceID": 200074301
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.ShowMenu"
+}</pre>
 {{Dialogue End}}
 
 ===Complete Sealed Sector: Difficulty 3{{subst:void|<!--200070505-->}}===
 {{Dialogue Start}}
-:{{tx}}
+
+
+;(Talk to Leonard)
+<pre>{
+	"$type": "RPG.GameCore.PlayMultiVoiceTalk",
+	"TalkSentenceID": 200074301
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.ShowMenu"
+}</pre>
 {{Dialogue End}}
 
 ===Complete Sealed Sector: Difficulty 4{{subst:void|<!--200070506-->}}===
 {{Dialogue Start}}
-:{{tx}}
+
+
+;(Talk to Leonard)
+<pre>{
+	"$type": "RPG.GameCore.PlayMultiVoiceTalk",
+	"TalkSentenceID": 200074301
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.ShowMenu"
+}</pre>
 {{Dialogue End}}
 
 ==Other Languages==

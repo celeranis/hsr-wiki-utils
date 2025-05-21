@@ -33,7 +33,104 @@ PageTitle=##
 -->
 ==Dialogue==
 {{Stub Dialogue}}
+;(If {{cx}}{{subst:void|<!--{"$type":"RPG.GameCore.ByComparePropState","TargetType":{"$type":"RPG.GameCore.TargetFetchAdvPropEx","FetchType":"SinglePropByPropID","SinglePropID":{"GroupID":{"FixedValue":{"Value":392}},"ID":{"FixedValue":{"Value":300001}}}},"State":"CustomState01"}-->}})
+<pre>{
+	"$type": "RPG.GameCore.PerformanceExtendEndBlack",
+	"ExtendTime": 1
+}</pre>
+:{{tx}}
+<pre>{
+	"$type": "RPG.GameCore.ShowReading",
+	"BookID": {
+		"FixedValue": {
+			"Value": 190543
+		}
+	}
+}</pre>
+:You put great effort and strength into repairing its heart &mdash; or, core may be more accurate &mdash; and you feel satisfied with your work. However...
+:As you look at it, it does not move; It does not look at you, but continues to just lie still.
+:{{Color|fire|nobold=1|Suddenly, an inexplicable rage overcomes you}} &mdash;
+:Look at it! Look at this useless thing! Lying around like a dying dog all weak and pathetic!
+:It deserves punishment! It wasted your precious time and your kindness!
+:You should give it a good kicking. Kick it until its busted shell is even more busted &mdash; that's right! Just like that, kick it... Hey, wait a second!
+:Look, what is that... Aha! Looks like you must quell your rage for a moment... Look! As your last kick landed, something came flying out from inside the clock face!
+:'''(Trailblazer):''' ...This is... a tape?
+:You see a sudden flash of color before your eyes as if you were being shown a glimpse of something, yet you see nothing...
+:A strange electric buzz reverberates through your mind as if you hear something, but you cannot make it out.
+:One thing is certain, a single emotion... {{Color|fire|nobold=1|You are even more enraged}}. You feel a presence that you cannot sense lurking all around you... Greedy, thick, and ready to strike.
+:You lower your head to look at the *tape* in your hands. The unsuspecting little object is emitting some kind of irresistible attraction, trying to pull you deeper into the mire. What will you do?
+:{{DIcon|Arrow}} Hand it in to The Family.
+:<pre>{
+	"$type": "RPG.GameCore.SetMissionCustomValue",
+	"SubmissionID": 434010402,
+	"MissionCustomValue": {
+		"Name": "OldValue_0",
+		"ValidValueParamList": [
+			1,
+			2
+		]
+	},
+	"CustomValue": 1
+}</pre>
+:{{DIcon|Arrow}} Stuff it in the pocket.
+:<pre>{
+	"$type": "RPG.GameCore.SetMissionCustomValue",
+	"SubmissionID": 434010402,
+	"MissionCustomValue": {
+		"Name": "OldValue_0",
+		"ValidValueParamList": [
+			1,
+			2
+		]
+	},
+	"CustomValue": 1
+}</pre>
+:{{DIcon|Arrow}} Leave it where it was found.
+:<pre>{
+	"$type": "RPG.GameCore.SetMissionCustomValue",
+	"SubmissionID": 434010402,
+	"MissionCustomValue": {
+		"Name": "OldValue_0",
+		"ValidValueParamList": [
+			1,
+			2
+		]
+	},
+	"CustomValue": 2
+}</pre>
+:{{tx}}
 
+;(If {{Mission|And on the Eighth Day|showChapter=0}} has not been started)
+<pre>{
+	"$type": "RPG.GameCore.AdvCreateGroupEntity",
+	"InstanceIDList": [
+		400001
+	]
+}</pre>
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+<pre>{
+	"$type": "RPG.GameCore.PlayMessage",
+	"MessageSectionID": 1303300
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.SaveMessage",
+	"MessageSectionID": 1303300
+}</pre>
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+<pre>{
+	"$type": "RPG.GameCore.PlayMessage",
+	"MessageSectionID": 1303200
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.SaveMessage",
+	"MessageSectionID": 1303200
+}</pre>
+
+;(Obtain {{Item|Bizarre Tape|20|x=1}})
 {{Dialogue End}}
 
 ==Other Languages==

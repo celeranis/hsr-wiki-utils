@@ -33,7 +33,39 @@ PageTitle=#Cavern of Corrosion#
 -->
 ==Dialogue==
 {{Stub Dialogue}}
+;(Upon reaching the destination)
 
+;(Upon reaching the destination)
+:<!--1-second delay-->
+----
+<pre>{
+	"$type": "RPG.GameCore.AdvEnablePropDialogMode",
+	"EnablePropCamera": false,
+	"LockPlayerControl": false,
+	"TargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvPropEx",
+		"FetchType": "SinglePropByPropID",
+		"SinglePropID": {
+			"GroupID": {
+				"FixedValue": {
+					"Value": 10
+				}
+			},
+			"ID": {
+				"FixedValue": {
+					"Value": 300001
+				}
+			}
+		}
+	}
+}</pre>
+:'''(Trailblazer):''' (Is this... a Fragmentum phenomenon that I haven't seen before?)
+:'''(Trailblazer):''' (Not wise to get too close. I'd better check in with Mr. Yang first.)
+<pre>{
+	"$type": "RPG.GameCore.PlayMessage",
+	"MessageSectionID": 1151200,
+	"ShowNotice": false
+}</pre>
 {{Dialogue End}}
 
 ==Other Languages==

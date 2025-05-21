@@ -41,6 +41,78 @@ Mission Soldiers Stay Silent Caelus.png|Caelus
 ===When you are ready, talk to Gepard to open the gate{{subst:void|<!--101120101-->}}===
 {{Mission Description|type=trailblaze|location=Silvermane Guard Restricted Zone|Thanks to your time on Jarilo-VI, you have mastered the art of persuasion. The Supreme Guardian's most loyal Captain is now on your side... It's a pity that he cannot go with you and witness what awaits Belobog.<br />Gepard is guarding the gate to the Fragmentum. He and his best guards will form up and clear the way for you once you are ready.}}
 {{Dialogue Start}}
+
+;(Talk to Gepard)
+:{{A|VO chapter1 8 gepard 201.ogg}} '''Gepard:''' As soon as the restricted zone gate is open, the monsters on the other side will turn out in full force. The Guards will do their best to stall them and buy you some time.
+:{{A|VO chapter1 8 gepard 202.ogg}} '''Gepard:''' Once you've broken through the front line... there's nothing more we can do for you. You'll have to find out for yourselves what lies within the northern Fragmentum.
+:{{A|VO chapter1 8 gepard 203.ogg}} '''Gepard:''' So... have you made up your minds?
+:{{DIcon|Arrow}} We're ready.
+::We're ready.
+::{{tx}}
+::<!--1-second delay-->
+:<pre>{
+	"$type": "RPG.GameCore.SetAudioEmotionState",
+	"StateName": "State_Bgm_E1",
+	"SubMissionID": 101120101
+}</pre>
+::{{A|VO chapter1 8 serval 201.ogg}} '''Serval:''' Are you dealing with attacks like this every day?
+::{{A|VO chapter1 8 gepard 206.ogg}} '''Gepard:''' It's a common occurrence.
+::{{A|VO chapter1 8 gepard 207.ogg}} '''Gepard:''' Guards, formation!
+::{{A|VO chapter1 8 seele 201.ogg}} '''Seele:''' Hmph, well I'm gonna make sure I don't owe the Guards any favors when this is done!
+::{{DIcon|Arrow}} For Bronya!
+::{{DIcon|Arrow}} For Belobog!
+::{{DIcon|Arrow}} For universal peace!
+::{{A|VO chapter1 8 serval 202.ogg}} '''Serval:''' Here they come!
+::{{tx}}
+:{{DIcon|Exit}} Give us a moment...
+<pre>{
+	"$type": "RPG.GameCore.PropSetVisibility",
+	"SpecifiedRelativePaths": [],
+	"TargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvPropEx",
+		"FetchType": "SinglePropByPropID",
+		"SinglePropID": {
+			"GroupID": {
+				"FixedValue": {
+					"Value": 6
+				}
+			},
+			"ID": {
+				"FixedValue": {
+					"Value": 300002
+				}
+			}
+		}
+	}
+}</pre>
+:{{A|VO chapter1 8 mar7th 201.ogg}} '''March 7th:''' ...How many of them are there!?
+:{{A|VO chapter1 8 seele 202.ogg}} '''Seele:''' The more the merrier, these guys are nothing! Hold the line!
+:{{A|VO chapter1 8 gepard 209.ogg}} '''Gepard:''' Argh...
+:{{A|VO chapter1 8 serval 203.ogg}} '''Serval:''' ...I told you, Gepard, the Barrier hasn't been fixed yet! Don't try and be a hero!
+:{{A|VO chapter1 8 gepard 210.ogg}} '''Gepard:''' This is... only the first wave. They'll have reassembled soon... I have to...
+:{{A|VO chapter1 8 seele 203.ogg}} '''Seele:''' Hey, Mr. Silvermane, listen to your sister! I can tell just by looking at you that you haven't fully recovered.
+:{{A|VO chapter1 8 serval 204.ogg}} '''Serval:''' ...
+:{{A|VO chapter1 8 serval 205.ogg}} '''Serval:''' Outsiders, Seele, the second wave hasn't started yet. Make the most of this opportunity and make a break for it!
+:{{A|VO chapter1 8 mar7th 202.ogg}} '''March 7th:''' Huh? Serval, aren't you gonna look for the Stellaron with us?
+:{{A|VO chapter1 8 serval 206.ogg}} '''Serval:''' My brother can't hold them back by himself. He wasted a lot of energy on us. He's my responsibility now. Besides...
+:{{A|VO chapter1 8 serval 207.ogg}} '''Serval:''' If I'm not here to help... I don't know what might happen in the next wave.
+:{{A|VO chapter1 8 serval 208.ogg}} '''Serval:''' I want to go with you, I do! I always wanted to catch a glimpse of the Stellaron with my own eyes, and now it's so close...
+:{{A|VO chapter1 8 serval 209.ogg}} '''Serval:''' But I can't abandon my brother and the other Guards &mdash; I'm a Landau! It's up to you now, I believe in you. You've given me new hope!
+:{{A|VO chapter1 8 serval 210.ogg}} '''Serval:''' Get hold of the Stellaron before Cocolia realizes what's happening!
+:{{DIcon|Arrow}} We can't abandon you either!
+::We can't abandon you either!
+::{{A|VO chapter1 8 seele 204 m.ogg}} {{A|VO chapter1 8 seele 204 f.ogg}} '''Seele:''' Serval's right, (Trailblazer). Let's go.
+::{{A|VO chapter1 8 danheng 201.ogg}} '''Dan Heng:''' The Guards have opened up a way through for us, we can't let them down.
+::We won't disappoint you.
+:{{DIcon|Arrow}} We won't disappoint you.
+::We won't disappoint you.
+:{{DIcon|Arrow}} Chaaaaarge!
+::Chaaaaarge!
+::{{A|VO chapter1 8 serval 211.ogg}} '''Serval:''' Hey March! Don't forget to take a picture of the Stellaron for me.
+::{{tx}}
+:Chaaaaarge!
+:{{A|VO chapter1 8 serval 211.ogg}} '''Serval:''' Hey March! Don't forget to take a picture of the Stellaron for me.
+:{{tx}}
 :{{tx}}
 {{Dialogue End}}
 

@@ -42,43 +42,290 @@ PageTitle=#Photography Exhibition: Wardance Live#
 ===Discuss the theme of the day with March 7th{{subst:void|<!--802720601-->}}===
 {{Mission Description|type=adventure|location=Skysplitter|March 7th seems to have a new inspiration. Discuss the Photography Task of the day with her.}}
 {{Dialogue Start}}
+
+;(Unused &mdash; EnterDistrict_G349)
 :{{tx}}
+::{{DIcon}} Draw a circle. A circle formation.
+::<pre>{
+	"$type": "RPG.GameCore.SetPerformanceResult"
+}</pre>
+:::'''Arrogant Cycrane:''' Got it. Watch closely!
+:::{{tx}}
+::{{DIcon}} Make a heart. A heart formation.
+::<pre>{
+	"$type": "RPG.GameCore.SetPerformanceResult",
+	"Value": 1
+}</pre>
+:::'''Arrogant Cycrane:''' Got it. Watch closely!
+:::{{tx}}
+::{{DIcon}} Make a divination. The Matrix of Prescience.
+:::'''Arrogant Cycrane:''' Err... How about something else? The Divination Commission will put me out of commission if we casually initiate that formation.
+:::{{tx}}
+::;(Return to previous option selection)
+:<pre>{
+	"$type": "RPG.GameCore.PerformanceEndSeq",
+	"Cases": [
+		{
+			"OnSuccess": [
+				{
+					"$type": "RPG.GameCore.SetMissionCustomValue",
+					"SubmissionID": 802720601,
+					"MissionCustomValue": {
+						"Name": "OldValue_0",
+						"ValidValueParamList": [
+							1,
+							2
+						]
+					},
+					"CustomValue": 1
+				}
+			]
+		},
+		{
+			"Case": 1,
+			"OnSuccess": [
+				{
+					"$type": "RPG.GameCore.SetMissionCustomValue",
+					"SubmissionID": 802720601,
+					"MissionCustomValue": {
+						"Name": "OldValue_0",
+						"ValidValueParamList": [
+							1,
+							2
+						]
+					},
+					"CustomValue": 2
+				}
+			]
+		}
+	]
+}</pre>
 {{Dialogue End}}
 
 ===Take a photo of the cycrane formation{{subst:void|<!--802720602-->}}===
 {{Mission Description|type=adventure|location=Skysplitter|update|To complete the daily tasks and compete for the final prize, you, as a photography assistant, accompanied March 7th on a photography journey.<br />Take a photo based on the photography inspiration.}}
 {{Dialogue Start}}
+;(Unused &mdash; G350_SetUpBird)
 :{{tx}}
+:<pre>{
+	"$type": "RPG.GameCore.AdvDestroyGroupEntity",
+	"InstanceIDList": [
+		400010,
+		400011,
+		400012,
+		400013,
+		400014,
+		400015,
+		400016
+	]
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.AdvCreateGroupEntity",
+	"InstanceIDList": [
+		400002,
+		400003,
+		400004,
+		400005,
+		400006,
+		400007,
+		400008
+	]
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.SwitchCharacterAnchorV2",
+	"SwitchCharacterAnchorConfig": {
+		"IsLocalPlayer": true,
+		"CharacterUniqueName": "LocalPlayer",
+		"AreaName": {
+			"Value": "LevelArea_P20242_F20242001_G350"
+		},
+		"AnchorName": {
+			"Value": "Anchor1"
+		},
+		"ResetCamera": false
+	}
+}</pre>
+::Form up!
+::'''Arrogant Cycrane:''' Command received! Watch closely!
+::The cycranes roosted on the ground flap their wings, shouting words of friendship and dreams, and together create the formation you requested...
+::'''March 7th:''' Nice pose! Quick, (Trailblazer), capture this moment!
+::{{DIcon|Arrow}} Command received!
+::{{DIcon|Arrow}} You're such a trickster, March!
+:::'''March 7th:''' Heehee, they were just too enthusiastic. Hurry up and take the shot. Don't squander their efforts.
+:::{{tx}}
 {{Dialogue End}}
 
 ===Discuss the photo with March 7th{{subst:void|<!--802720605-->}}===
 {{Mission Description|type=adventure|location=Skysplitter|update|With the photography session wrapped up, have a chat with March 7th about this work}}
 {{Dialogue Start}}
 :{{tx}}
+:'''Arrogant Cycrane:''' Hey, this photo isn't bad at all. Why not name it "Guardian of the Azure Sky"?
+:'''March 7th:''' (Trailblazer), what'd you think?
+:{{DIcon|Arrow}} "Guardian of the Azure Sky" it is then!
+:{{DIcon|Arrow}} Name it "Mobile Suit Cycrane"!
+::'''Arrogant Cycrane:''' Wh... What a cool name! I like it!
+::{{tx}}
+:<pre>{
+	"$type": "RPG.GameCore.SetTextJoinValue",
+	"TextJoinID": 202,
+	"Value": "2"
+}</pre>
+:{{DIcon|Arrow}} Name it "Firmament Frontline: Cycrane"!
+::'''Arrogant Cycrane:''' Wh... What a cool name! I like it!
+::{{tx}}
+:<pre>{
+	"$type": "RPG.GameCore.SetTextJoinValue",
+	"TextJoinID": 202,
+	"Value": "3"
+}</pre>
+:'''March 7th:''' All right! Upload complete! We can move on to the next photo.
+:'''March 7th:''' Yunli borrowed my sword to do some training some days ago. I just felt its presence on the Skysplitter. Let's go find it. Maybe we can capture some precious scenes of the Zhuming swordmaster at practice!
+:'''March 7th:''' I sense that... the sword is this way!
+:{{DIcon|Arrow}} You can actually sense it?
+::'''March 7th:''' Heh-heh, this is the state of unity between owner and sword!
+:{{DIcon|Arrow}} You're getting more assertive!
+::'''March 7th:''' Of course, my acumen is second to none!
+:{{DIcon|Arrow}} I sense that... it's in the other direction!
+::I sense that... it's in the other direction!
+:{{tx}}
+:'''March 7th:''' That feeling... It's getting closer... Over here!
 {{Dialogue End}}
 
 ===Search for March 7th's sword{{subst:void|<!--802720606-->}}===
 {{Mission Description|type=adventure|location=Skysplitter|update|Through intuition, March 7th detected her sword's location. Follow her and check it out.}}
 {{Dialogue Start}}
+
+;(Unused &mdash; EnterDistrict_G353)
 :{{tx}}
+:<pre>{
+	"$type": "RPG.GameCore.SwitchCharacterAnchorV2",
+	"SwitchCharacterAnchorConfig": {
+		"IsLocalPlayer": true,
+		"CharacterUniqueName": "LocalPlayer",
+		"AreaName": {
+			"Value": "LevelArea_P20242_F20242001_G354"
+		},
+		"AnchorName": {
+			"Value": "Anchor2"
+		}
+	}
+}</pre>
 {{Dialogue End}}
 
 ===Take a photo of Yunli{{subst:void|<!--802720607-->}}===
 {{Mission Description|type=adventure|location=Skysplitter|update|To complete the daily tasks and compete for the final prize, you, as a photography assistant, accompanied March 7th on a photography journey.<br />Take a photo based on the photography inspiration.}}
 {{Dialogue Start}}
-:{{tx}}
+;(Unused &mdash; PhotoGraphStartCustomString)
+:<!--1.5-second delay-->
+
+;(Unused &mdash; PhotoGraphFinishCustomString)
+<pre>{
+	"$type": "RPG.GameCore.TriggerPermanentEmotion",
+	"TargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvNpcEx",
+		"FetchType": "SingleNpcByNpcID",
+		"SingleNpcID": {
+			"GroupID": {
+				"FixedValue": {
+					"Value": 354
+				}
+			},
+			"GroupNpcID": {
+				"FixedValue": {
+					"Value": 400001
+				}
+			}
+		}
+	},
+	"EmotionName": "Proud02"
+}</pre>
 {{Dialogue End}}
 
 ===Discuss the photo with March 7th{{subst:void|<!--802720608-->}}===
 {{Mission Description|type=adventure|location=Skysplitter|update|With the photography session wrapped up, have a chat with March 7th about this work}}
 {{Dialogue Start}}
+
+;(Talk to March 7th)
 :{{tx}}
+:Yunli finds out what's going on...
+:'''Yunli:''' Mmmf, oor hidfing skillf ihf therrible, but my photo'f preffy deshent.
+:'''March 7th:''' ...How about swallowing before we talk?
+:'''Yanqing:''' Miss Yunli, this casually-strolling-with-stolen-swords-while-mouth-full picture is quite the mountain of evidence stacked against your favor. How will you explain this?
+:'''Yunli:''' Hmph, sword practice isn't just about training hard. You have to take them to see the sights and experience life &mdash; that's how you train their spirits.
+:'''March 7th:''' Don't fight, masters &mdash; why not call this photo "Swordbearer's Sightseeing on Study Tour"?
+:{{DIcon|Arrow}} Train my bat too.
+::'''Yanqing:''' (Trailblazer), please do not join in Miss Yunli's tomfoolery!
+::You sure are unbiased!
+:{{DIcon|Arrow}} You sure are unbiased!
+:'''March 7th:''' Heh-heh, I've always had a knack for squashing beef without fail!
+:'''March 7th:''' Look, look, we've completed the tasks for the whole week. Looking back at what we photographed, these few days sure have been tough!
+:{{tx}}
+<pre>{
+	"$type": "RPG.GameCore.SwitchCharacterAnchorV2",
+	"SwitchCharacterAnchorConfig": {
+		"IsLocalPlayer": true,
+		"CharacterUniqueName": "LocalPlayer",
+		"AreaName": {
+			"Value": "LevelArea_P20242_F20242001_G355"
+		},
+		"AnchorName": {
+			"Value": "Anchor1"
+		}
+	}
+}</pre>
 {{Dialogue End}}
 
 ===Take a photo of the cycrane formation{{subst:void|<!--802720603-->}}===
 {{Mission Description|type=adventure|location=Skysplitter|update|To complete the daily tasks and compete for the final prize, you, as a photography assistant, accompanied March 7th on a photography journey.<br />Take a photo based on the photography inspiration.}}
 {{Dialogue Start}}
+;(Unused &mdash; G351_SetUpBird)
 :{{tx}}
+:<pre>{
+	"$type": "RPG.GameCore.AdvDestroyGroupEntity",
+	"InstanceIDList": [
+		400010,
+		400011,
+		400012,
+		400013,
+		400014,
+		400015,
+		400016
+	]
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.AdvCreateGroupEntity",
+	"InstanceIDList": [
+		400002,
+		400003,
+		400004,
+		400005,
+		400006,
+		400007,
+		400008
+	]
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.SwitchCharacterAnchorV2",
+	"SwitchCharacterAnchorConfig": {
+		"IsLocalPlayer": true,
+		"CharacterUniqueName": "LocalPlayer",
+		"AreaName": {
+			"Value": "LevelArea_P20242_F20242001_G350"
+		},
+		"AnchorName": {
+			"Value": "Anchor1"
+		},
+		"ResetCamera": false
+	}
+}</pre>
+::Form up!
+::'''Arrogant Cycrane:''' Command received! Watch closely!
+::The cycranes roosted on the ground flap their wings, shouting words of friendship and dreams, and together create the formation you requested...
+::'''March 7th:''' Nice pose! Quick, (Trailblazer), capture this moment!
+::{{DIcon|Arrow}} Command received!
+::{{DIcon|Arrow}} You're such a trickster, March!
+:::'''March 7th:''' Heehee, they were just too enthusiastic. Hurry up and take the shot. Don't squander their efforts.
+:::{{tx}}
 {{Dialogue End}}
 
 ==Other Languages==

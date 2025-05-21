@@ -48,96 +48,1027 @@ PageTitle=#Night of Universal Hallucinations#
 -->
 ==Dialogue==
 {{Stub Dialogue}}
+<pre>{
+	"$type": "RPG.GameCore.TransitEnvProfile",
+	"Path": {
+		"Value": "Stages/Outputs/Chapter00/EnviroProfile/Chap00_INT_Train_01.enviroProfile.asset"
+	}
+}</pre>
+----
+:{{A|VO side3 yz pompom 109.ogg}} '''Pom-Pom:''' Hmm... something seems off. Pom-Pom already selected a route...
+:{{DIcon|Arrow}} Is something wrong?
+:{{A|VO side3 yz pompom 110.ogg}} '''Pom-Pom:''' We've seemingly gone off course... Strange, Pom-Pom's navigation is always precise.
+:{{A|VO side3 yz pompom 111 m.ogg}} {{A|VO side3 yz pompom 111 f.ogg}} '''Pom-Pom:''' Stay vigilant! There might be a magnetic field nearby interfering with the Express' navigation system. (Trailblazer), let's take a look in the control room.
+----
+----
+;([[#Gallery|Cutscene]] plays)
+::So...
+::What happened!?
+;(Cutscene ends)
+----
+<pre>{
+	"$type": "RPG.GameCore.TransitEnvProfile",
+	"Path": {
+		"Value": "Stages/Outputs/Chapter00/EnviroProfile/Chap00_INT_Train_01.enviroProfile.asset"
+	}
+}</pre>
+:<!--1-second delay-->
+<pre>{
+	"$type": "RPG.GameCore.TransitEnvProfile",
+	"Path": {
+		"Value": "Stages/Outputs/Chapter00/EnviroProfile/Chap00_INT_Train_01_Varient1.enviroProfile.asset"
+	}
+}</pre>
+----
+:{{A|VO side3 yz mar7th 102 m.ogg}} {{A|VO side3 yz mar7th 102 f.ogg}} '''March 7th:''' What's happening? (Trailblazer), did you see that huge shadow!?
+:<!--0.3-second delay-->
+:<!--0.3-second delay-->
+----
+:{{A|VO side3 yz mar7th 103.ogg}} '''March 7th:''' Everything outside is... red. What's going on?
+:{{DIcon|Arrow}} Have we fallen into... the red dimension!?
+::----
+::{{A|VO side3 yz mar7th 104.ogg}} '''March 7th:''' You really expect me to know the answer to that?
+:{{DIcon|Arrow}} We've been attacked by a giant space beast!
+::----
+::{{A|VO side3 yz mar7th 105.ogg}} '''March 7th:''' Then where did it go? And why is it so quiet all of a sudden?
+:{{DIcon|Arrow}} It's a space traffic jam.
+::----
+::{{A|VO side3 yz mar7th 106.ogg}} '''March 7th:''' ...Ugh, this is serious, y'know.
+:{{A|VO side3 yz mar7th 107.ogg}} '''March 7th:''' *sigh* Even Mr. Yang looks surprised &mdash; that's not something you see every day.
+----
+:<!--0.5-second delay-->
+:{{A|VO side3 yz danheng 103 m.ogg}} {{A|VO side3 yz danheng 103 f.ogg}} '''Dan Heng:''' (Trailblazer), March, the Express encountered an obstruction. The disturbance triggered a chain reaction.
+:{{A|VO side3 yz danheng 104.ogg}} '''Dan Heng:''' ...The Express was struck from behind by another vessel.
+:{{A|VO side3 yz mar7th 108.ogg}} '''March 7th:''' *sigh* How do you crash into someone in space...
+:{{A|VO side3 yz danheng 105.ogg}} '''Dan Heng:''' Another vessel in our vicinity encountered the same obstruction and was unable to control its velocity. After the collision, two individuals found their way onto the Express.
+----
+:{{DIcon|Arrow}} Are they trying to extract compensation?
+::{{A|VO side3 yz danheng 106.ogg}} '''Dan Heng:''' It doesn't seem like it.
+::{{A|VO side3 yz mar7th 109.ogg}} '''March 7th:''' Compensation? They hit US!
+:{{DIcon|Arrow}} We have guests?
+::{{A|VO side3 yz mar7th 110.ogg}} '''March 7th:''' Guests? I don't think they're here for tea...
+::{{A|VO side3 yz danheng 107.ogg}} '''Dan Heng:''' They appear to be friendly.
+:{{A|VO side3 yz mar7th 111 m.ogg}} {{A|VO side3 yz mar7th 111 f.ogg}} '''March 7th:''' Hmph, if they're here to stir up trouble, I'll teach them a lesson! (Trailblazer), let's go check it out.
+----
 {{Dialogue End}}
 
 ===Feel out the mysterious guests{{subst:void|<!--200080203-->}}===
 {{Mission Description|type=companion|location=Parlor Car|update|A spaceship... has somehow rear-ended the Astral Express!? And a couple of mysterious visitors seem to be approaching the cabin!<br />Send out some feelers to figure out what kind of people these visitors are...}}
 {{Dialogue Start}}
-:{{tx}}
+<pre>{
+	"$type": "RPG.GameCore.CreateProp",
+	"GroupID": {
+		"FixedValue": {
+			"Value": 3
+		}
+	},
+	"GroupPropID": {
+		"FixedValue": {
+			"Value": 300001
+		}
+	}
+}</pre>
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+----
+;([[#Gallery|Cutscene]] plays)
+::Another anomaly in the shining universe...
+::A blooming splash of colors,
+::you... are truly beautiful.
+::A lady?
+::I offer a sincere compliment&mdash;
+::You're akin to a flower in winter.
+::Oh!
+::Another beautiful soul.
+;(Cutscene ends)
+----
+<pre>{
+	"$type": "RPG.GameCore.SetAudioEmotionState",
+	"StateName": "State_Bgm_E2",
+	"SubMissionID": 200080203
+}</pre>
+----
+:{{A|VO side3 yz argenti 101.ogg}} '''Argenti:''' Allow me to introduce myself. I am Argenti &mdash; I belong to the Knights of Beauty. May I know your names?
+:{{DIcon|Arrow}} (Cautious silence)
+::{{A|VO side3 yz mar7th 113.ogg}} '''March 7th:''' Cat got your tongue? It's fine, he seems like a good guy. Hi, Argenti! I'm March 7th.
+:{{DIcon|Arrow}} I'm Galactic Baseballer.
+::{{A|VO side3 yz mar7th 114.ogg}} '''March 7th:''' ...Please don't do this. He seems like a good guy! Hi, Argenti! I'm March 7th.
+:{{DIcon|Arrow}} Did you crash into the train?
+::{{A|VO side3 yz argenti 102.ogg}} '''Argenti:''' Indeed, and I extend my deepest apologies for doing so. I wish to remedy the situation, hence my arrival on the Astral Express.
+::{{A|VO side3 yz mar7th 115.ogg}} '''March 7th:''' Now we know he didn't do it on purpose... Hi, Argenti! I'm March 7th.
+:{{A|VO side3 yz argenti 103.ogg}} '''Argenti:''' An honor! I was just explaining the significance of "beauty" to this foliage.
+:{{A|VO side3 yz argenti 104.ogg}} '''Argenti:''' Pardon my abruptness, but I have a habit of asking questions. As fellow beings of this universe, are you acquainted with Idrila the Beauty?
+:{{DIcon|Talk}} Idrila?
+::{{A|VO side3 yz argenti 105.ogg}} '''Argenti:''' The Knights of Beauty travel from planet to planet, spreading the Beauty's glorious reputation across the universe so that every being may know of THEIR existence. We strictly adhere to the commandments of our faith, tempering our physical forms and upholding our honor.
+:;(Return to previous option selection)
+:{{DIcon|Talk}} Wait, aren't you here to help?
+::{{A|VO side3 yz argenti 106.ogg}} '''Argenti:''' Yes, though not exclusively. Just as I extol the "beauty" in this foliage, what I anticipate is an encounter &mdash; a collision and exchange of minds and philosophies.
+:;(Return to previous option selection)
+:{{DIcon|Talk}} Are you saying we're also beautiful?
+::{{A|VO side3 yz argenti 107 m.ogg}} {{A|VO side3 yz argenti 107 f.ogg}} '''Argenti:''' Do you doubt such an assertion? You need not, (Trailblazer)!
+::{{DIcon|Return}} ...I am kinda good-looking.
+:::{{A|VO side3 yz argenti 108.ogg}} '''Argenti:''' Both my words and actions come from the bottom of my heart. You are indeed beautiful &mdash; like flowers blooming in the morning sun!
+::;(Return to previous option selection)
+::{{DIcon|Return}} You did just compliment a plant...
+:::{{A|VO side3 yz argenti 109.ogg}} '''Argenti:''' Both my words and actions come from the bottom of my heart. You are indeed beautiful &mdash; like flowers blooming in the morning sun!
+::;(Return to previous option selection)
+;(Return to previous option selection)
+
+;(Talk to March 7th)
+:{{A|VO side3 yz mar7th 112 m.ogg}} {{A|VO side3 yz mar7th 112 f.ogg}} '''March 7th:''' (Trailblazer), let's go chat with them.
+
+;(Talk to Himeko)
+:{{A|VO side3 yz himeko 103 m.ogg}} {{A|VO side3 yz himeko 103 f.ogg}} '''Himeko:''' What a fascinating encounter. There's nothing more captivating than an unpredictable future. (Trailblazer), let's see what unfolds next.
+
+;(Talk to Dan Heng)
+:{{A|VO side3 yz danheng 110.ogg}} '''Dan Heng:''' That visitor appears to be a knight... and it looks like he has a servant?
+
+;(Talk to Welt Yang)
+:{{A|VO side3 yz welt 103.ogg}} '''Welt:''' The Astral Express seems fine, but a collision like this in space is... a little unusual. Even for me, it's a first.
+
+;(Talk to Pom-Pom)
+:{{A|VO side3 yz pompom 113 m.ogg}} {{A|VO side3 yz pompom 113 f.ogg}} '''Pom-Pom:''' It seems like we're stuck, (Trailblazer). Washtopia will have to wait a little longer!
+----
+:{{A|VO side3 yz welt 104.ogg}} '''Welt:''' Sorry to interrupt... whatever's happening here.
+:{{A|VO side3 yz welt 105.ogg}} '''Welt:''' Forgive the interruption, but I just spoke with Himeko. The situation is more urgent than we imagined.
+----
+:{{DIcon|Arrow}} Thanks for tagging me out, Mr. Yang...
+::{{A|VO side3 yz welt 106 m.ogg}} {{A|VO side3 yz welt 106 f.ogg}} '''Welt:''' You're welcome, (Trailblazer). Just doing my job.
+:{{DIcon|Arrow}} I have to teach him a lesson!
+::{{A|VO side3 yz welt 107 m.ogg}} {{A|VO side3 yz welt 107 f.ogg}} '''Welt:''' Take it easy. (Trailblazer), There'll be plenty of time to fight later.
+:{{A|VO side3 yz argenti 123 m.ogg}} {{A|VO side3 yz argenti 123 f.ogg}} '''Argenti:''' My deepest apologies, Mr. Yang, my concentration has been solely centered on my conversation with (Trailblazer). Now, it is only fitting to disclose the main reason for my presence here: To work jointly in resolving the crisis before us.
+:{{A|VO side3 yz argenti 124.ogg}} '''Argenti:''' I was piloting the "One and Only" through the galaxy when I discovered Velite, an IPC worker who accidentally fell into a huge cave, from which I saved him.
+:{{A|VO side3 yz argenti 125.ogg}} '''Argenti:''' Upon saving Velite, I altered my flight course to accompany him to his original location. Consequently, I inadvertently ended up on the Express's navigational trajectory.
+:{{DIcon|Arrow}} Who's Velite?
+:{{A|VO side3 yz argenti 126.ogg}} '''Argenti:''' According to him, he is an IPC worker. I believe he's currently resting in the carriage &mdash; he is still in a state of shock.
+:{{A|VO side3 yz argenti 127.ogg}} '''Argenti:''' He swore to follow Idrila, the Goddess, after being impressed by what he saw during our adventure.
+:{{DIcon|Arrow}} Why did you rear-end the Express?
+:{{DIcon|Arrow}} Follow Idrila, the Goddess!
+::{{A|VO side3 yz argenti 128.ogg}} '''Argenti:''' There was a sudden jolt not long after we had departed &mdash; I was sure we must have collided with some unknown celestial object. When I looked outside, everything was different. That was when we collided with the Express...
+::{{A|VO side3 yz argenti 129.ogg}} '''Argenti:''' ...and that is why I boarded the Express with Velite. I am hoping to solve this crisis with you.
+:{{A|VO side3 yz welt 108.ogg}} '''Welt:''' Thank you for coming. It'll be a first for the Express to work alongside the Knights of Beauty.
+:{{DIcon|Arrow}} What do we do now?
+:{{A|VO side3 yz argenti 130.ogg}} '''Argenti:''' Enjoy the present moment.
+:{{DIcon|Arrow}} Huh? And then?
+:{{A|VO side3 yz argenti 131.ogg}} '''Argenti:''' Continue to enjoy the present moment.
+:{{DIcon|Arrow}} That's all you could come up with?
+:{{DIcon|Arrow}} Looks like you're really here to make friends...
+:{{A|VO side3 yz argenti 132.ogg}} '''Argenti:''' You misunderstand. I must first wholeheartedly enjoy the red night of the universe before I can discover an inharmonious pitch. These two things are correlated. Once I discover the cause, I shall destroy it.
+:{{A|VO side3 yz welt 109.ogg}} '''Welt:''' ...Well, try not to take too long. Things could deteriorate at any moment.
+:{{A|VO side3 yz welt 110 m.ogg}} {{A|VO side3 yz welt 110 f.ogg}} '''Welt:''' (Trailblazer), could you please go check on Velite? He looks uneasy. He is a guest of ours, after all.
+----
 {{Dialogue End}}
 
 ===Comfort the Knights of Beauty's "sidekick"{{subst:void|<!--200080206-->}}===
 {{Mission Description|type=companion|location=Parlor Car|update|A spaceship... has somehow rear-ended the Astral Express!?<br />You decide to go and encourage the IPC staff member whose attitude is wildly different from the Knight of Beauty and who looks just like another minor character... These two don't seem like they'd get along! Why are they appearing together?}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Argenti)
+:{{A|VO side3 yz argenti 133 m.ogg}} {{A|VO side3 yz argenti 133 f.ogg}} '''Argenti:''' (Trailblazer), may I help you? I am currently enjoying the present moment.
+
+;(Talk to Velite)
+----
+:{{A|VO side3 yz vylet 101.ogg}} '''Velite:''' What is it? Here to cheer me up? Save your breath! Your intentions might as well be written on your forehead.
+:{{A|VO side3 yz vylet 102.ogg}} '''Velite:''' I'm just a small-time IPC worker &mdash; that Argenti rescued me. I don't know anything... and I can't help you guys.
+:{{A|VO side3 yz vylet 103.ogg}} '''Velite:''' *sigh* I want to go home and have dinner... once we're out of this jam...
+:{{DIcon|Arrow}} I heard you became a follower of Aeon of Beauty. Is that true?
+:{{A|VO side3 yz vylet 104.ogg}} '''Velite:''' Did Argenti tell you that?
+:{{A|VO side3 yz vylet 105.ogg}} '''Velite:''' That guy is unbelievable. Before he rescued me, he said something like: "You must pledge to acknowledge Idrila, the Beauty, as the most peerless beauty of all!"
+:{{A|VO side3 yz vylet 106.ogg}} '''Velite:''' I told him I'd marry her if he liked, as long as he got me out of that stinking cave first... And he refused! I couldn't believe it!
+:{{A|VO side3 yz vylet 107.ogg}} '''Velite:''' My life was on the line, so I just repeated after him: Adrila the Beauty, et cetera... You get the picture.
+:{{A|VO side3 yz vylet 108.ogg}} '''Velite:''' Then, he corrected me, "It's Idrila, not Adrila."
+:{{A|VO side3 yz vylet 109.ogg}} '''Velite:''' Who came up with such an awkward-sounding name? I'm a pencil pusher, what the heck do I know about the Aeon of Beauty?
+:{{A|VO side3 yz vylet 110.ogg}} '''Velite:''' But, of course, I repeated it again in order to survive.
+:{{A|VO side3 yz vylet 111.ogg}} '''Velite:''' "Idrila, the Beauty, is the most peerless beauty of them all!"
+:{{A|VO side3 yz vylet 112.ogg}} '''Velite:''' Just like that.
+:{{DIcon|Arrow}} Can't you be more positive?
+:{{A|VO side3 yz vylet 113.ogg}} '''Velite:''' Tsk, do you think I like being negative? My friend, this is what's known as falling prey to the grim reality of life, understand?
+:{{A|VO side3 yz vylet 114.ogg}} '''Velite:''' When I was young, I assumed my life would be like a novel. I wanted to be a pilot, flying through outer space, exploring the universe in a grand spaceship. But then my parents told me I'd have to work for the IPC and make a bunch of money to fulfill my dreams.
+:{{DIcon|Arrow}} Did you manage to make a bunch of money in the end?
+::{{A|VO side3 yz vylet 115.ogg}} '''Velite:''' What do you think? Do rich people make forced vows in caves?
+:{{DIcon|Arrow}} Does working for the IPC stop you from pursuing your dreams?
+::{{A|VO side3 yz vylet 116.ogg}} '''Velite:''' Enough! This is a painful topic...
+:{{A|VO side3 yz vylet 117.ogg}} '''Velite:''' I gave up my unrealistic dream of becoming a pilot and worked for the IPC instead. I guess I'm living the life of a supporting character now.
+:{{A|VO side3 yz vylet 118.ogg}} '''Velite:''' But after running into Argenti, I had an idea... Perhaps I could make some money with him and turn my life around!
+:{{A|VO side3 yz vylet 119.ogg}} '''Velite:''' He's a tall, handsome, and a knight! Packaged and marketed the right way, I'm sure he'll pique a lot of interest!
+:{{A|VO side3 yz vylet 120.ogg}} '''Velite:''' I told him about my idea &mdash; that he could advocate for "the Beauty" while also incorporating currency as a notion of beauty. That would allow him to preach more efficiently. He was very impressed.
+:{{A|VO side3 yz vylet 121.ogg}} '''Velite:''' I'm planning to contact the Marketing Development Department as soon as I'm off the Express &mdash; he'll make a great IPC product spokesperson! And I can be his agent! Now, the question remains &mdash; will this guy shine brighter as an image-focused idol, or should we showcase his formidable talents and mold him into a powerful star?
+:{{DIcon|Arrow}} An idol.
+::{{A|VO side3 yz vylet 122.ogg}} '''Velite:''' You're right. It'd be a shame to waste such a handsome face. He just screams "idol!"
+:{{DIcon|Arrow}} A powerful star.
+::{{A|VO side3 yz vylet 123.ogg}} '''Velite:''' You're right. I don't know what his rank among the knights is, but he is quite powerful.
+:{{DIcon|Arrow}} What are you talking about?
+::{{A|VO side3 yz vylet 124.ogg}} '''Velite:''' Hmph, it's called facing reality, embracing it, and then conquering it!
+:{{A|VO side3 yz vylet 125.ogg}} '''Velite:''' So, when can I get off the Express? I need you guys to solve this traffic jam problem ASAP!
+:{{DIcon|Arrow}} That's enough of your weird ideas. Come help us.
+::{{A|VO side3 yz vylet 126.ogg}} '''Velite:''' Were you even listening to me?
+::{{A|VO side3 yz vylet 127.ogg}} '''Velite:''' *sigh* Alright, I have nowhere else to be. Let's go.
+:{{DIcon|Arrow}} Come help us... Pretty please?
+::{{A|VO side3 yz vylet 128.ogg}} '''Velite:''' Don't use that tone! You're trying to guilt-trip me, aren't you?
+::{{A|VO side3 yz vylet 129.ogg}} '''Velite:''' *sigh* Alright, I have nowhere else to be. Let's go.
+<pre>{
+	"$type": "RPG.GameCore.TriggerSound",
+	"SoundName": {
+		"Value": "Ev_sfx_spaceship_insideworm_twist"
+	},
+	"EmitterType": "NPC",
+	"GroupID": 2,
+	"ID": 400002
+}</pre>
+:<!--0.2-second delay-->
+<pre>{
+	"$type": "RPG.GameCore.SetAudioEmotionState",
+	"StateName": "State_Tense",
+	"SubMissionID": 200080206
+}</pre>
+:{{A|VO side3 yz pompom 115.ogg}} '''Pom-Pom:''' Ahhhh!
+:{{A|VO side3 yz vylet 130.ogg}} '''Velite:''' Huh? What was that sound? Did someone scream?
+----
+
+;(Talk to March 7th)
+:{{A|VO side3 yz mar7th 117.ogg}} '''March 7th:''' What was that all about!? *sigh* It does seem like you're on better terms after the fight.
+
+;(Talk to Welt Yang)
+:{{A|VO side3 yz welt 111 m.ogg}} {{A|VO side3 yz welt 111 f.ogg}} '''Welt:''' (Trailblazer), could you please go check on Velite? He looks uneasy. He is a guest of ours, after all.
+
+;(Talk to Himeko)
+:{{A|VO side3 yz himeko 104 m.ogg}} {{A|VO side3 yz himeko 104 f.ogg}} '''Himeko:''' What a fascinating encounter. There's nothing more captivating than an unpredictable future. (Trailblazer), let's see what unfolds next.
+
+;(Talk to Dan Heng)
+:{{A|VO side3 yz danheng 111.ogg}} '''Dan Heng:''' How do we stand? Is there a way to resolve this situation?
 {{Dialogue End}}
 
 ===Talk to Pom-Pom{{subst:void|<!--200080207-->}}===
 {{Mission Description|type=companion|location=Parlor Car|update|A spaceship... has somehow rear-ended the Astral Express!? And there are mysterious visitors approaching the cabin!<br />Looks like you'll have to figure out this latest Express "crisis" together...}}
 {{Dialogue Start}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+----
+:{{A|VO side3 yz pompom 116.ogg}} '''Pom-Pom:''' Th&mdash;There was a strange sound &mdash; it was terrifying! Did you hear it?
+:{{A|VO side3 yz pompom 117.ogg}} '''Pom-Pom:''' Pom-Pom knows the Express inside and out &mdash; it definitely wasn't the train!
+:{{A|VO side3 yz himeko 106.ogg}} '''Himeko:''' Is it possible that the jolt just now damaged the Express? ...Did something manage to sneak in?
+:{{A|VO side3 yz danheng 113.ogg}} '''Dan Heng:''' Do we know where the sound came from?
+:{{A|VO side3 yz pompom 118.ogg}} '''Pom-Pom:''' It sounded like it came from the passenger cabins... or the conductor's cabin!
+:{{A|VO side3 yz mar7th 119.ogg}} '''March 7th:''' ...But those are in opposite directions! How about... we go check our own rooms?
+:{{DIcon|Arrow}} I've got a bad feeling about this...
+::{{A|VO side3 yz mar7th 120.ogg}} '''March 7th:''' Hey! D&mdash;Don't scare me! I'm sure there's a scientific explanation for this, right?
+:{{DIcon|Arrow}} Remember to check under the bed.
+::{{A|VO side3 yz mar7th 121.ogg}} '''March 7th:''' Ugh, read the room! Enough with the mean jokes!
+:<!--0.3-second delay-->
+:{{A|VO side3 yz mar7th 122.ogg}} '''March 7th:''' Now's a time for action, I'm gonna go check my room. If there's a problem, I'll let you know...
+:{{A|VO side3 yz pompom 119.ogg}} '''Pom-Pom:''' March has a point. Pom-Pom will go check the conductor's cabin!
+----
+
+;(Talk to Argenti)
+:{{A|VO side3 yz argenti 133 m.ogg}} {{A|VO side3 yz argenti 133 f.ogg}} '''Argenti:''' (Trailblazer), may I help you? I am currently enjoying the present moment.
+
+;(Talk to Pom-Pom)
+:{{A|VO side3 yz pompom 114.ogg}} '''Pom-Pom:''' *sigh* Pom-Pom's still thinking, let me see if there are any clues nearby!
+
+;(Talk to March 7th)
+:{{A|VO side3 yz mar7th 118.ogg}} '''March 7th:''' Wh&mdash;What was that... Did something happen to Pom-Pom!?
+
+;(Talk to Welt Yang)
+:{{A|VO side3 yz welt 112 m.ogg}} {{A|VO side3 yz welt 112 f.ogg}} '''Welt:''' Any progress, (Trailblazer)?
+
+;(Talk to Himeko)
+:{{A|VO side3 yz himeko 105.ogg}} '''Himeko:''' What happened?
+
+;(Talk to Dan Heng)
+:{{A|VO side3 yz danheng 112.ogg}} '''Dan Heng:''' What happened?
 :{{tx}}
+----
+:{{A|VO side3 yz himeko 109.ogg}} '''Himeko:''' March... March? Please reply. Have you left the room?
+:{{A|VO side3 yz pompom 120.ogg}} '''Pom-Pom:''' D&mdash;Did something happen to March...?
+:{{A|VO side3 yz himeko 110 m.ogg}} {{A|VO side3 yz himeko 110 f.ogg}} '''Himeko:''' ...Not good. (Trailblazer), I need you and Dan Heng to check on March.
+:{{A|VO side3 yz argenti 134.ogg}} '''Argenti:''' I'll accompany you. Velite, you too.
+:{{A|VO side3 yz vylet 131.ogg}} '''Velite:''' Wh&mdash;What!? Alright, if things get dangerous, I'll hide behind you.
+----
 {{Dialogue End}}
 
 ===Support March 7th{{subst:void|<!--200080213-->}}===
 {{Dialogue Start}}
-:{{tx}}
+<pre>{
+	"$type": "RPG.GameCore.CreateProp",
+	"GroupID": {
+		"FixedValue": {
+			"Value": 2
+		}
+	},
+	"GroupPropID": {
+		"FixedValue": {
+			"Value": 300001
+		}
+	},
+	"CreateList": []
+}</pre>
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+----
+:<!--2-second delay-->
+:{{A|VO side3 yz danheng 114.ogg}} '''Dan Heng:''' It's... an "insect"?
+----
+:{{A|VO side3 yz argenti 135.ogg}} '''Argenti:''' Ugliness... The inharmonious pitch has surfaced.
+:{{A|VO side3 yz argenti 136 m.ogg}} {{A|VO side3 yz argenti 136 f.ogg}} '''Argenti:''' (Trailblazer), honor compels us to vanquish this dissonance.
+;(Enter battle)
+:{{Enemy List|Juvenile Sting*2; Lesser Sting*2}}
+----
+:{{A|VO side3 yz mar7th 130.ogg}} '''March 7th:''' Th&mdash;That was so scary! It was like a long-lost twin sister had suddenly... appeared out of nowhere! I can't believe it was only a bug!
+:{{A|VO side3 yz argenti 137.ogg}} '''Argenti:''' I did not envision seeing True Stings again.
+:<!--0.2-second delay-->
+:<!--0.2-second delay-->
+:<!--0.2-second delay-->
+:{{A|VO side3 yz mar7th 131.ogg}} '''March 7th:''' Huh?
+:{{A|VO side3 yz vylet 132.ogg}} '''Velite:''' Ugh... There was a whole bunch of those bugs chasing me when Argenti found me in the cave.
+:{{A|VO side3 yz argenti 138.ogg}} '''Argenti:''' I was under the impression that I had successfully routed all of them. However, it appears that the Stings continue to pursue us.
+:{{A|VO side3 yz argenti 139.ogg}} '''Argenti:''' Could it be...? Velite, perhaps you still bear Sting pheromones on your body.
+:{{A|VO side3 yz vylet 133.ogg}} '''Velite:''' Huh? Phero-who? What is that? Is it bad?
+:{{A|VO side3 yz danheng 115.ogg}} '''Dan Heng:''' Yes, I've read about True Stings in the data bank. They emit fibrous particles from their wings during flight &mdash; the inhalation of which can induce perceptual distortions and hallucinations.
+:<!--0.2-second delay-->
+:<!--0.2-second delay-->
+:<!--0.2-second delay-->
+:{{A|VO side3 yz danheng 116.ogg}} '''Dan Heng:''' I'm afraid March may have inhaled some of these particles. That's why she saw another version of herself in the room.
+:{{A|VO side3 yz mar7th 132.ogg}} '''March 7th:''' So that was just a hallucination? Huh, why do I feel kinda disappointed...
+:{{A|VO side3 yz mar7th 133.ogg}} '''March 7th:''' Wait. I thought hallucinations were supposed to be completely random? Why did I see an identical me?
+:{{A|VO side3 yz danheng 117.ogg}} '''Dan Heng:''' Did it do anything strange?
+:{{A|VO side3 yz mar7th 134.ogg}} '''March 7th:''' It said it knew about my past... and then it stopped talking.
+:{{A|VO side3 yz danheng 118.ogg}} '''Dan Heng:''' ...I'm afraid that's not enough information for us to draw a conclusion.
+:{{A|VO side3 yz danheng 119.ogg}} '''Dan Heng:''' My concern is that numerous Stings may have already infested the Express. Their elusive nature helps them to stay in the shadows, but they may also be roaming freely. We have to prevent them from propagating. If not...
+:{{A|VO side3 yz mar7th 135.ogg}} '''March 7th:''' Ugh... I don't wanna see a bunch of Marches roaming around the Express! One of me is enough!
+:{{A|VO side3 yz danheng 120.ogg}} '''Dan Heng:''' ...We're on the same page.
+----
 {{Dialogue End}}
 
 ===Go back to the Parlor Car and look around{{subst:void|<!--200080214-->}}===
 {{Mission Description|type=companion|location=Passenger Cabin|update|A spaceship... has somehow rear-ended the Astral Express!?<br />Things are starting to become trickier than you thought...}}
 {{Dialogue Start}}
-:{{tx}}
+
 {{Dialogue End}}
 
 ===Talk the clues over with Himeko{{subst:void|<!--200080231-->}}===
 {{Dialogue Start}}
-:{{tx}}
+
 {{Dialogue End}}
 
 ===Take photos with the camera and find some clues{{subst:void|<!--200080221-->}}===
 {{Dialogue Start}}
-:{{tx}}
+:{{A|VO side3 yz player 101 m.ogg}} {{A|VO side3 yz player 101 f.ogg}} '''(Trailblazer):''' (Check around the Express...)
+<pre>{
+	"$type": "RPG.GameCore.PhotoGraphAimTarget",
+	"AimTargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvPropEx",
+		"FetchType": "SinglePropByPropID",
+		"SinglePropID": {
+			"GroupID": {
+				"FixedValue": {
+					"Value": 4
+				}
+			},
+			"ID": {
+				"FixedValue": {
+					"Value": 300001
+				}
+			}
+		}
+	},
+	"IsAim": true
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.PhotoGraphWaitIdentifyFinish",
+	"WaitTargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvPropEx",
+		"FetchType": "SinglePropByPropID",
+		"SinglePropID": {
+			"GroupID": {
+				"FixedValue": {
+					"Value": 4
+				}
+			},
+			"ID": {
+				"FixedValue": {
+					"Value": 300001
+				}
+			}
+		}
+	}
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.PhotoGraphAimTarget",
+	"AimTargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvPropEx",
+		"FetchType": "SinglePropByPropID",
+		"SinglePropID": {
+			"GroupID": {
+				"FixedValue": {
+					"Value": 4
+				}
+			},
+			"ID": {
+				"FixedValue": {
+					"Value": 300001
+				}
+			}
+		}
+	}
+}</pre>
+:You discover an egg.
+:You find yourself wishing once in a while for this world to have less bewildering things.
+:But the moment you discovered there was a real chance of them being eaten, your sense of justice prompted you to take down the enemy.
+:All things considered, even if you have no use for it, you can't let it benefit another party.
+<pre>{
+	"$type": "RPG.GameCore.PhotoGraphAimTarget",
+	"AimTargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvNpcEx",
+		"FetchType": "SingleNpcByNpcID",
+		"SingleNpcID": {
+			"GroupID": {
+				"FixedValue": {
+					"Value": 4
+				}
+			},
+			"GroupNpcID": {
+				"FixedValue": {
+					"Value": 400001
+				}
+			}
+		}
+	},
+	"IsAim": true,
+	"AimTagExtraOffset": 0.35
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.PhotoGraphWaitIdentifyFinish",
+	"WaitTargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvNpcEx",
+		"FetchType": "SingleNpcByNpcID",
+		"SingleNpcID": {
+			"GroupID": {
+				"FixedValue": {
+					"Value": 4
+				}
+			},
+			"GroupNpcID": {
+				"FixedValue": {
+					"Value": 400001
+				}
+			}
+		}
+	}
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.PhotoGraphAimTarget",
+	"AimTargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvNpcEx",
+		"FetchType": "SingleNpcByNpcID",
+		"SingleNpcID": {
+			"GroupID": {
+				"FixedValue": {
+					"Value": 4
+				}
+			},
+			"GroupNpcID": {
+				"FixedValue": {
+					"Value": 400001
+				}
+			}
+		}
+	}
+}</pre>
+:All appears to be in order. Except for a small bunch of what is likely highlighted hair &mdash; although you can't be completely sure &mdash; there's nothing amiss with Mr. Yang's hair.
+:{{A|VO side3 yz welt 113 m.ogg}} {{A|VO side3 yz welt 113 f.ogg}} '''Welt:''' ...What are you up to, (Trailblazer)?
+:You're pretty convinced that the Welt standing in front of you is real... Best to back away before he gets grumpy; there are zero eggs here.
+<pre>{
+	"$type": "RPG.GameCore.PhotoGraphAimTarget",
+	"AimTargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvNpcEx",
+		"FetchType": "SingleNpcByNpcID",
+		"SingleNpcID": {
+			"GroupID": {
+				"FixedValue": {
+					"Value": 4
+				}
+			},
+			"GroupNpcID": {
+				"FixedValue": {
+					"Value": 400002
+				}
+			}
+		}
+	},
+	"IsAim": true
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.PhotoGraphWaitIdentifyFinish",
+	"WaitTargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvNpcEx",
+		"FetchType": "SingleNpcByNpcID",
+		"SingleNpcID": {
+			"GroupID": {
+				"FixedValue": {
+					"Value": 4
+				}
+			},
+			"GroupNpcID": {
+				"FixedValue": {
+					"Value": 400002
+				}
+			}
+		}
+	}
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.PhotoGraphAimTarget",
+	"AimTargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvNpcEx",
+		"FetchType": "SingleNpcByNpcID",
+		"SingleNpcID": {
+			"GroupID": {
+				"FixedValue": {
+					"Value": 4
+				}
+			},
+			"GroupNpcID": {
+				"FixedValue": {
+					"Value": 400002
+				}
+			}
+		}
+	}
+}</pre>
+:You observe that Pom-Pom's tail is impeccably groomed: Clean, fluffy, and smelling nice, with no signs of anything out of the ordinary.
+:You fight off the impulse to reach over and feel it.
+<pre>{
+	"$type": "RPG.GameCore.PhotoGraphAimTarget",
+	"AimTargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvPropEx",
+		"FetchType": "SinglePropByPropID",
+		"SinglePropID": {
+			"GroupID": {
+				"FixedValue": {
+					"Value": 4
+				}
+			},
+			"ID": {
+				"FixedValue": {
+					"Value": 300002
+				}
+			}
+		}
+	},
+	"IsAim": true,
+	"AimTagExtraOffset": 0.1
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.PhotoGraphWaitIdentifyFinish",
+	"WaitTargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvPropEx",
+		"FetchType": "SinglePropByPropID",
+		"SinglePropID": {
+			"GroupID": {
+				"FixedValue": {
+					"Value": 4
+				}
+			},
+			"ID": {
+				"FixedValue": {
+					"Value": 300002
+				}
+			}
+		}
+	}
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.PhotoGraphAimTarget",
+	"AimTargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvPropEx",
+		"FetchType": "SinglePropByPropID",
+		"SinglePropID": {
+			"GroupID": {
+				"FixedValue": {
+					"Value": 4
+				}
+			},
+			"ID": {
+				"FixedValue": {
+					"Value": 300002
+				}
+			}
+		}
+	}
+}</pre>
+:You realize that the eggs here have started humming, creating a symphony of sorts, and it captivates you...
+:You invariably notice that for some people, what they say sounds better than what they actually do.
+:Driven by your sense of justice, you eradicated the eggs.
 {{Dialogue End}}
 
 ===Find a faster way to search{{subst:void|<!--200080232-->}}===
 {{Mission Description|type=companion|location=Parlor Car|update|A spaceship... has somehow rear-ended the Astral Express!?<br />Pom-Pom has a portable train cleaning kit. Who knew it'd come in handy at a time like this...}}
 {{Dialogue Start}}
+
 :{{tx}}
 {{Dialogue End}}
 
 ===Go support Argenti in the illusion{{subst:void|<!--200080234-->}}===
 {{Mission Description|type=companion|location=Passenger Cabin|update|A spaceship... has somehow rear-ended the Astral Express!?<br />Each and every move this Knight of Beauty makes is more unpredictable than the last...}}
 {{Dialogue Start}}
-:{{tx}}
+<pre>{
+	"$type": "RPG.GameCore.CreateProp",
+	"GroupID": {
+		"FixedValue": {
+			"Value": 3
+		}
+	},
+	"GroupPropID": {
+		"FixedValue": {
+			"Value": 300001
+		}
+	},
+	"CreateList": []
+}</pre>
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+----
+:{{A|VO side3 yz argenti 143.ogg}} '''Argenti:''' Beautiful beings, are you disciples?
+:{{A|VO side3 yz mar7th 140.ogg}} '''March 7th:''' He looks beyond saving.
+:{{A|VO side3 yz danheng 126.ogg}} '''Dan Heng:''' He could be in considerable danger. Let's proceed.
+;(Enter battle)
+:{{Enemy List|Juvenile Sting*2; Lesser Sting*2}}
+----
+:<!--2-second delay-->
+:{{A|VO side3 yz argenti 144.ogg}} '''Argenti:''' I must apologize... I cannot believe that such a beautiful creature was merely a hallucination. Its deceptive and threatening nature is much uglier than its appearance would suggest.
+:{{A|VO side3 yz danheng 127 m.ogg}} {{A|VO side3 yz danheng 127 f.ogg}} '''Dan Heng:''' You mentioned the Sting transformed into an object of beauty, something that (Trailblazer) once spoke of, but that you never personally encountered.
+:{{A|VO side3 yz argenti 145 m.ogg}} {{A|VO side3 yz argenti 145 f.ogg}} '''Argenti:''' Yes, it was something (Trailblazer) mentioned that I wanted to see in person.
+:{{A|VO side3 yz danheng 128.ogg}} '''Dan Heng:''' I see... This, together with the fact that March's hallucination claimed to know her past, suggests that these visions feed on people's subjective experiences and long-term sentiments... in order to take the form of what they {{Color|keyword|nobold=1|personally desire}}.
+:{{A|VO side3 yz mar7th 141.ogg}} '''March 7th:''' So, in Argenti's eyes, Wubbaboos are a thing of beauty...
+:{{A|VO side3 yz mar7th 142.ogg}} '''March 7th:''' But... my past isn't something I'm constantly thinking about. I have plenty of other dreams...
+:{{A|VO side3 yz danheng 129.ogg}} '''Dan Heng:''' That's not how it works. The desire to know your past embodies purity itself &mdash; a thing of immense value.
+:{{A|VO side3 yz argenti 146.ogg}} '''Argenti:''' I wonder if the dying words of those ugly menaces can be trusted. As the saying goes: "Even an insect speaks kind words when death is near."
+:{{A|VO side3 yz danheng 130.ogg}} '''Dan Heng:''' Are you implying that the insect imparted you with a message prior to its demise?
+:{{A|VO side3 yz argenti 147.ogg}} '''Argenti:''' Correct. Its final words were: {{Color|keyword|nobold=1|"Celebrate this superficial victory, for you will never be able to acknowledge the existence of the overlord!"}}
+:<!--0.3-second delay-->
+:{{A|VO side3 yz danheng 131.ogg}} '''Dan Heng:''' Let's ignore the fact that you understand insect-speak for now. That sentence...
+:{{A|VO side3 yz danheng 132.ogg}} '''Dan Heng:''' ...Wait, I think I understand.
+----
+----
+:{{A|VO side3 yz danheng 133.ogg}} '''Dan Heng:''' When reading through the Chronicles of Interdimensional Insects in the data bank, I came across a species that had only been described in records. Due to the lack of research samples, the author gave it a tentative name: Giant Sting.
+:{{A|VO side3 yz danheng 134.ogg}} '''Dan Heng:''' This species can reach tremendous proportions and is big enough to swallow an entire starnought.
+:{{A|VO side3 yz danheng 135.ogg}} '''Dan Heng:''' I believe the {{Color|keyword|nobold=1|"overlord"}} Argenti mentioned could be referring to this colossal being, and we're...
+:{{A|VO side3 yz argenti 148.ogg}} '''Argenti:''' I think I understand. We are in the belly of the beast.
+:{{DIcon|Arrow}} It's swallowed the entire Express?
+::{{A|VO side3 yz danheng 136.ogg}} '''Dan Heng:''' Yes, that's my theory.
+:{{DIcon|Arrow}} Please spare me. I'm not even tasty!
+::{{A|VO side3 yz mar7th 143.ogg}} '''March 7th:''' M&mdash;Me neither!
+::{{A|VO side3 yz mar7th 144.ogg}} '''March 7th:''' Although, if what Dan Heng said is true, I doubt something that could swallow the Express would be a picky eater...
+:<!--0.3-second delay-->
+:{{A|VO side3 yz argenti 149.ogg}} '''Argenti:''' I see. That would explain what Velite and I experienced earlier.
+:{{A|VO side3 yz mar7th 145.ogg}} '''March 7th:''' ...What do you mean?
+:{{A|VO side3 yz argenti 150.ogg}} '''Argenti:''' Did Velite mention that he was trapped in a dark and enormous cave when we first met?
+:{{A|VO side3 yz argenti 151.ogg}} '''Argenti:''' Now that I think on it, we did hear sounds akin to swallowing and other movements from the "cave..."
+:{{A|VO side3 yz danheng 137.ogg}} '''Dan Heng:''' Yes, and your flight path happened to intersect with the Express's star rail, meaning we might have encountered the very same Giant Sting. Now, we need to see if we can prove the theory correct...
+<pre>{
+	"$type": "RPG.GameCore.TriggerSound",
+	"SoundName": {
+		"Value": "Ev_sfx_spaceship_insideworm_twist"
+	},
+	"EmitterType": "Prop",
+	"GroupID": 7,
+	"ID": 300001
+}</pre>
+:{{A|VO side3 yz mar7th 146.ogg}} '''March 7th:''' Ahhhh! Wh&mdash;What is that!?
+:{{A|VO side3 yz danheng 138.ogg}} '''Dan Heng:''' ...It looks like our theory has already been confirmed.
+:{{A|VO side3 yz danheng 139.ogg}} '''Dan Heng:''' Let's talk to Mr. Yang.
+----
 {{Dialogue End}}
 
 ===Go back to the Parlor Car{{subst:void|<!--200080282-->}}===
 {{Mission Description|type=companion|location=Passenger Cabin|update|Has the Express somehow... been swallowed up by a Giant Sting!?}}
 {{Dialogue Start}}
-:{{tx}}
+
 {{Dialogue End}}
 
 ===Talk strategy with Welt{{subst:void|<!--200080241-->}}===
 {{Dialogue Start}}
-:{{tx}}
+:{{A|VO side3 yz mar7th 147.ogg}} '''March 7th:''' It's so quiet... Someone say something.
+:{{A|VO side3 yz argenti 152.ogg}} '''Argenti:''' After meeting all of you, I, Argenti, can die without regrets.
+:{{A|VO side3 yz mar7th 148.ogg}} '''March 7th:''' ...Never mind. I'm fine with silence.
+:<!--3-second delay-->
+<pre>{
+	"$type": "RPG.GameCore.PlayNPCBubbleTalk",
+	"BubbleTalkInfoList": [
+		{
+			"AutoSkipTime": 3,
+			"GroupID": 21,
+			"GroupNpcID": 400005,
+			"TalkSentenceID": 200085801
+		}
+	],
+	"IsLoop": true,
+	"LoopInterval": 10,
+	"UniqueID": 2371
+}</pre>
 {{Dialogue End}}
 
 ===Talk to Himeko and Dan Heng{{subst:void|<!--200080253-->}}===
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to March 7th)
+:{{A|VO side3 yz mar7th 151.ogg}} '''March 7th:''' So... the train has been swallowed by a giant bug? And we're inside its stomach?
+
+;(Talk to Velite)
+:{{A|VO side3 yz vylet 138.ogg}} '''Velite:''' Desires? I don't have any desires!
+:{{A|VO side3 yz vylet 139.ogg}} '''Velite:''' I'm busy working every day. Even if I did have one, it's been long forgotten.
+:{{A|VO side3 yz vylet 140.ogg}} '''Velite:''' ...Come to think of it, maybe the IPC made me immune to hallucinations...
+
+;(Talk to Dan Heng)
+:{{A|VO side3 yz danheng 143.ogg}} '''Dan Heng:''' It's alright. We're in this together.
+
+;(Talk to Himeko)
+----
+:{{A|VO side3 yz danheng 144 m.ogg}} {{A|VO side3 yz danheng 144 f.ogg}} '''Dan Heng:''' It's rare to see March genuinely worried... but given the circumstances. (Trailblazer), maybe you could try reassuring some of the crew.
+:{{A|VO side3 yz himeko 115.ogg}} '''Himeko:''' The Express has faced all kinds of obstacles on its journey &mdash; today is just another one. It's no reason to stop trailblazing.
+:{{A|VO side3 yz himeko 116.ogg}} '''Himeko:''' Such is the very essence of trailblazing. It is through these trials that we find wisdom and maturity.
+----
 {{Dialogue End}}
 
 ===Comfort everyone's negative mood{{subst:void|<!--200080254-->}}===
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to March 7th)
+----
+:{{A|VO side3 yz mar7th 152.ogg}} '''March 7th:''' The Express is... melting?
+:{{A|VO side3 yz vylet 141.ogg}} '''Velite:''' How is this even possible!? I've been swallowed by a "cave" twice now. Is this my destiny?
+:{{A|VO side3 yz pompom 134.ogg}} '''Pom-Pom:''' We need to get out of the Sting's stomach as soon as possible! Pom-Pom doesn't want the Express to sustain damage...
+:{{A|VO side3 yz mar7th 153.ogg}} '''March 7th:''' Everyone, just calm down...
+:{{A|VO side3 yz argenti 158.ogg}} '''Argenti:''' Calm yourselves, all of you.
+:{{A|VO side3 yz argenti 159.ogg}} '''Argenti:''' I am bidding farewell to this flora. After having made friends with all the beings on the Express, and having discussed "the Beauty" with each of you, I can now depart this mortal coil without regret!
+:{{A|VO side3 yz mar7th 154.ogg}} '''March 7th:''' Ugh, can you and the fern get a room already? How can anyone establish a bond with a houseplant? ...Although I guess you could say the same about me and my teddy bears...
+:{{A|VO side3 yz pompom 135 m.ogg}} {{A|VO side3 yz pompom 135 f.ogg}} '''Pom-Pom:''' The Express is home to all of us &mdash; no matter what happens, we're in this together! Woo-hoo, you're back! Although I guess that doesn't change our odds...
+:{{A|VO side3 yz vylet 142.ogg}} '''Velite:''' Who knew our first meeting would be our last... *sigh* It's hopeless. I'll just spend the rest of my short life listening to your ramblings about the Express, I suppose...
+:{{A|VO side3 yz pompom 136.ogg}} '''Pom-Pom:''' Nonsense. This won't be our last meeting! But I'm happy the Express has started to grow on you. Now... where should Pom-Pom start the story?
+:{{A|VO side3 yz vylet 143.ogg}} '''Velite:''' Gah! Are you really about to tell a story? Look, it's been nice meeting you all and I'd love to shoot the breeze, but are you people really just gonna give up!?
+:{{A|VO side3 yz argenti 160.ogg}} '''Argenti:''' Velite, I will escort you to your destination. A knight always keeps his word.
+:{{A|VO side3 yz vylet 144.ogg}} '''Velite:''' *sniff* Don't assume you can reassure me that easily. I've got a heart of stone, you hear?
+:{{A|VO side3 yz mar7th 155.ogg}} '''March 7th:''' Okay, that's enough! In times like this, we should be trying to give each other hope!
+:{{DIcon|Arrow}} You're worried about the Express, just like everyone else, right?
+:{{A|VO side3 yz mar7th 156.ogg}} '''March 7th:''' N&mdash;No! The Express is strong &mdash; I'm sure we can think of something!
+----
+
+;(Talk to Himeko)
+:{{A|VO side3 yz himeko 114.ogg}} '''Himeko:''' The outer wall of the Express is probably melting in gastric acid. I can't even imagine what it must look like.
 {{Dialogue End}}
 
 ===Chat alone with Argenti{{subst:void|<!--200080242-->}}===
 {{Mission Description|type=companion|location=Parlor Car|update|The long, scarlet night of hallucinations forges endlessly on.<br />Argenti invites you to a "1-on-1 discussion." His behavior is truly impossible for normal people to parse...}}
 {{Dialogue Start}}
+
+;(Talk to Welt Yang)
+:{{A|VO side3 yz welt 122.ogg}} '''Welt:''' This is really a curveball... you couldn't make it up.
+
+;(Talk to March 7th)
+:{{A|VO side3 yz mar7th 151.ogg}} '''March 7th:''' So... the train has been swallowed by a giant bug? And we're inside its stomach?
+
+;(Talk to Velite)
+:{{A|VO side3 yz vylet 138.ogg}} '''Velite:''' Desires? I don't have any desires!
+:{{A|VO side3 yz vylet 139.ogg}} '''Velite:''' I'm busy working every day. Even if I did have one, it's been long forgotten.
+:{{A|VO side3 yz vylet 140.ogg}} '''Velite:''' ...Come to think of it, maybe the IPC made me immune to hallucinations...
+
+;(Talk to Dan Heng)
+:{{A|VO side3 yz danheng 143.ogg}} '''Dan Heng:''' It's alright. We're in this together.
+
+;(Talk to Himeko)
+:{{A|VO side3 yz himeko 114.ogg}} '''Himeko:''' The outer wall of the Express is probably melting in gastric acid. I can't even imagine what it must look like.
+
+;(Talk to Argenti)
+:{{A|VO side3 yz argenti 166 m.ogg}} {{A|VO side3 yz argenti 166 f.ogg}} '''Argenti:''' (Trailblazer), I apologize for being so abrupt. You must find me strange for wanting to speak with you alone.
+:{{A|VO side3 yz argenti 167.ogg}} '''Argenti:''' I will tell it to you straight. I have a strong sense that as a Knight of Beauty, I have a duty to fight this battle.
+:{{A|VO side3 yz argenti 168.ogg}} '''Argenti:''' I propose that I disembark from the Express to confront the Giant Sting directly... My strategy is to pierce its stomach with my lance, triggering spasms that may cause it to eject the Express.
+:{{DIcon|Arrow}} By yourself?
+:{{DIcon|Arrow}} I knew it...
+:{{A|VO side3 yz argenti 169.ogg}} '''Argenti:''' It is challenging for me to articulate this phenomenon... yet when I observe certain entities, an indistinct sensation of beauty arises from my core, discernible only by instinct.
+:{{A|VO side3 yz argenti 170.ogg}} '''Argenti:''' Perhaps my long solitude traversing the cosmos has made it difficult to discern where these sentiments originate. But as a knight, I realize my obligation is to safeguard the seed that embodies beauty, standing as a bulwark to defend it against all...
+:{{A|VO side3 yz argenti 171.ogg}} '''Argenti:''' The Astral Express is the seed. It feels warm &mdash; like a home to me. I am certain this is thanks to the strong friendship you have with one another.
+:{{A|VO side3 yz argenti 172.ogg}} '''Argenti:''' That is why I must swear to fight to protect this warmth, rather than be protected by it.
+:{{A|VO side3 yz argenti 173.ogg}} '''Argenti:''' I am willing, time and time again, to protect these seeds of beauty &mdash; to allow THEM to bloom into pure and radiant flowers, to demonstrate my devotion to THEM... It is an inherent part of the journey of Argenti...
+:{{DIcon|Arrow}} Who is "THEM?"
+:{{DIcon|Arrow}} Idrila?
+:{{A|VO side3 yz argenti 174.ogg}} '''Argenti:''' In the pursuit of defending beauty I have bled into unconsciousness... and in the ensuing stupor I have witnessed countless times THEIR traces spreading from beneath my feet &mdash; reaching into the unknown before me.
+:{{DIcon|Arrow}} Are they an "Aeon"?
+::{{A|VO side3 yz argenti 175.ogg}} '''Argenti:''' My rational mind tells me no, yet my heart tells me to believe.
+::Are they a "hallucination"?
+:{{DIcon|Arrow}} Are they a "hallucination"?
+:{{A|VO side3 yz argenti 176.ogg}} '''Argenti:''' My rational mind tells me yes, yet my heart tells me to believe.
+:{{A|VO side3 yz argenti 177.ogg}} '''Argenti:''' In those past hallucinations, I kept running. THEIR footprints on the mire-ridden path moved me to a sadness beyond tears. And every time, I was a breath away from catching a glimpse of THEIR figure.
+:{{DIcon|Arrow}} Are you fighting to protect "beauty?"
+::{{A|VO side3 yz argenti 178.ogg}} '''Argenti:''' Yes, this is my duty.
+::Are you fighting to see "THEM?"
+:{{DIcon|Arrow}} Are you fighting to see "THEM?"
+:{{A|VO side3 yz argenti 179.ogg}} '''Argenti:''' Yes... this is my wish.
+:{{A|VO side3 yz argenti 180.ogg}} '''Argenti:''' It is a never-ending cycle of falling... and standing up again. Each time I wander closer to death, it gets me closer to the path the Beauty once walked.
+:{{A|VO side3 yz argenti 181.ogg}} '''Argenti:''' This is my vow as a Knight of Beauty.
+:{{DIcon|Arrow}} What are your plans after that?
+::{{A|VO side3 yz argenti 182.ogg}} '''Argenti:''' I shall find a way to escape. It matters not if my flesh is pierced by the insect's horns. The closer I get to death, the closer I may get to the Path of the Beauty.
+::Can I do anything to help?
+::{{A|VO side3 yz argenti 183.ogg}} '''Argenti:''' Thank you, but that won't be necessary. It matters not if my flesh is pierced by the insect's horns. The closer I get to death, the closer I may get to the Path of the Beauty.
+::Why did you want to talk to me alone?
+:{{DIcon|Arrow}} Can I do anything to help?
+::{{A|VO side3 yz argenti 183.ogg}} '''Argenti:''' Thank you, but that won't be necessary. It matters not if my flesh is pierced by the insect's horns. The closer I get to death, the closer I may get to the Path of the Beauty.
+::Why did you want to talk to me alone?
+:{{DIcon|Arrow}} Why did you want to talk to me alone?
+:{{A|VO side3 yz argenti 184.ogg}} '''Argenti:''' We were interrupted halfway through our battle. As a warrior, articulation has never been my forte, yet I still needed to impart the remaining half to you.
+:{{A|VO side3 yz argenti 185.ogg}} '''Argenti:''' I apologize, I have been rambling. As I said, articulation has never been my forte. Let us return to the point at hand. Do I have your support?
+:{{DIcon|Arrow}} I support you.
+::{{A|VO side3 yz argenti 186.ogg}} '''Argenti:''' You do...? Thank you.
+::{{A|VO side3 yz argenti 187.ogg}} '''Argenti:''' Your understanding is more precious than any treasure. I have faced many a traveler, encountered flattery and provocation aplenty. It is rare to find a spirit as pure as yours.
+::{{A|VO side3 yz argenti 188.ogg}} '''Argenti:''' In that case...
+::I'm still against it.
+::{{A|VO side3 yz argenti 189 m.ogg}} {{A|VO side3 yz argenti 189 f.ogg}} '''Argenti:''' Why, (Trailblazer)?
+::I don't want you to put your life in danger.
+::{{A|VO side3 yz argenti 190.ogg}} '''Argenti:''' You worry for my safety? Thank you.
+::{{A|VO side3 yz argenti 191.ogg}} '''Argenti:''' Your understanding is more precious than any treasure. I have faced many a traveler, encountered flattery and provocation aplenty. It is rare to find a spirit as pure as yours.
+::{{A|VO side3 yz argenti 192 m.ogg}} {{A|VO side3 yz argenti 192 f.ogg}} '''Argenti:''' But... (Trailblazer), I have made up my mind. As a Knight of Beauty, this is my destiny.
+::You're just consoling yourself with those "hallucinations".
+:{{DIcon|Arrow}} I'm still against it.
+::{{A|VO side3 yz argenti 189 m.ogg}} {{A|VO side3 yz argenti 189 f.ogg}} '''Argenti:''' Why, (Trailblazer)?
+::{{DIcon|Arrow}} I don't want you to put your life in danger.
+:::{{A|VO side3 yz argenti 190.ogg}} '''Argenti:''' You worry for my safety? Thank you.
+:::{{A|VO side3 yz argenti 191.ogg}} '''Argenti:''' Your understanding is more precious than any treasure. I have faced many a traveler, encountered flattery and provocation aplenty. It is rare to find a spirit as pure as yours.
+:::{{A|VO side3 yz argenti 192 m.ogg}} {{A|VO side3 yz argenti 192 f.ogg}} '''Argenti:''' But... (Trailblazer), I have made up my mind. As a Knight of Beauty, this is my destiny.
+:::You're just consoling yourself with those "hallucinations".
+::{{DIcon|Arrow}} You're just consoling yourself with those "hallucinations".
+:{{A|VO side3 yz argenti 193.ogg}} '''Argenti:''' Is that so? Many others have said the same. Perhaps you're right.
+:{{A|VO side3 yz argenti 194 m.ogg}} {{A|VO side3 yz argenti 194 f.ogg}} '''Argenti:''' But... (Trailblazer), I have made up my mind. As a Knight of Beauty, this is my destiny.
+:{{A|VO side3 yz argenti 195.ogg}} '''Argenti:''' Please forgive my inappropriate manner. Our friendship is new, but was forged in the heat of battle, which I only wish we had been able to conclude. I hope now we may conclude it still, that I may leave without regret!
 :{{tx}}
+----
+:{{A|VO side3 yz argenti 198 m.ogg}} {{A|VO side3 yz argenti 198 f.ogg}} '''Argenti:''' (Trailblazer)... Your demeanor, strength, and the etiquette of your combat... I admit, you have won me over.
+:{{A|VO side3 yz argenti 199.ogg}} '''Argenti:''' Extraordinary and enjoyable in equal measure! Encountering an opponent of your caliber proves the existence of "the Beauty."
+:{{A|VO side3 yz argenti 200.ogg}} '''Argenti:''' The end of our battle signifies my departure... the moment has finally arrived for me to bid farewell to the Express.
+:{{DIcon|Talk}} You're confident you can get out alive?
+::{{A|VO side3 yz argenti 201 m.ogg}} {{A|VO side3 yz argenti 201 f.ogg}} '''Argenti:''' (Trailblazer), I assure you, I am not a reckless person. I will ready myself for the opportunity to escape.
+:;(Return to previous option selection)
+:{{DIcon|Talk}} Will we meet again?
+::{{A|VO side3 yz argenti 202.ogg}} '''Argenti:''' I came to the Express to help you find a solution to this crisis. When my mission is complete, I shall venture back into the cosmos... but the cosmos is boundless &mdash; we may yet have another encounter.
+:;(Return to previous option selection)
+:{{DIcon|Arrow}} I'm ready to say goodbye.
+::{{A|VO side3 yz argenti 203 m.ogg}} {{A|VO side3 yz argenti 203 f.ogg}} '''Argenti:''' Excellent, (Trailblazer). After completing my mission here, I shall find somewhere else that requires my protection.
+::{{A|VO side3 yz argenti 204.ogg}} '''Argenti:''' Worry not. As a knight, I bear the resolve and honor of assured victory &mdash; my body, tempered by countless battles, will not easily be broken.
+::{{A|VO side3 yz argenti 205.ogg}} '''Argenti:''' Such a brief, fortuitous encounter... It has been an honor knowing each and every one of you on the Express.
+::----
 {{Dialogue End}}
 
 ===Tell Welt{{subst:void|<!--200080263-->}}===
 {{Mission Description|type=companion|location=Parlor Car|update|The long, scarlet night of hallucinations forges endlessly on.<br />Despite blooming into the most majestic of merit awards, it's nothing more than an ode from the universe that will soon disappear back into nothingness.}}
 {{Dialogue Start}}
-:{{tx}}
+:{{A|VO side3 yz player 102 m.ogg}} {{A|VO side3 yz player 102 f.ogg}} '''(Trailblazer):''' *sigh*
+:{{A|VO side3 yz player 103 m.ogg}} {{A|VO side3 yz player 103 f.ogg}} '''(Trailblazer):''' Let's go talk with the others.
+
+;(Talk to Welt Yang)
+----
+:{{A|VO side3 yz welt 125 m.ogg}} {{A|VO side3 yz welt 125 f.ogg}} '''Welt:''' So, how did your talk with Argenti go, (Trailblazer)?
+:{{DIcon|Arrow}} He wants to fight the Giant Sting by himself.
+:{{A|VO side3 yz welt 126 m.ogg}} {{A|VO side3 yz welt 126 f.ogg}} '''Welt:''' I see... Based on our dealings with him so far, I can't say I'm overly surprised. Sounds like the kind of plan a younger me might have come up with... but that doesn't mean I approve of it. How do you see things, (Trailblazer)?
+:{{DIcon|Arrow}} I agree with Argenti.
+::{{A|VO side3 yz welt 127.ogg}} '''Welt:''' ...I suppose it all depends on how you see his understanding of and devotion to the Beauty.
+::{{A|VO side3 yz welt 128 m.ogg}} {{A|VO side3 yz welt 128 f.ogg}} '''Welt:''' (Trailblazer), if you're certain, I trust your judgment.
+::----
+::{{A|VO side3 yz vylet 145.ogg}} '''Velite:''' *yawn* I took a nap just now and dreamt there was another me piloting Argenti's One and Only...
+::{{A|VO side3 yz vylet 146.ogg}} '''Velite:''' What's wrong with me? I never dream. After stealing Argenti's spaceship, I said to myself: "Go find Argenti."
+::{{A|VO side3 yz vylet 147.ogg}} '''Velite:''' I&mdash;I'm not the type to start caring about people I've only just met, but the dream made me feel a little uneasy... So, what on earth is Argenti up to, anyway?
+:;(Return to previous option selection)
+:{{DIcon|Arrow}} I don't understand Argenti.
+::{{A|VO side3 yz welt 129.ogg}} '''Welt:''' ...I suppose it all depends on whether you support his understanding of and devotion to the Beauty.
+::{{A|VO side3 yz welt 130 m.ogg}} {{A|VO side3 yz welt 130 f.ogg}} '''Welt:''' (Trailblazer), we can't change what other people long for.
+::----
+::{{A|VO side3 yz vylet 145.ogg}} '''Velite:''' *yawn* I took a nap just now and dreamt there was another me piloting Argenti's One and Only...
+::{{A|VO side3 yz vylet 146.ogg}} '''Velite:''' What's wrong with me? I never dream. After stealing Argenti's spaceship, I said to myself: "Go find Argenti."
+::{{A|VO side3 yz vylet 147.ogg}} '''Velite:''' I&mdash;I'm not the type to start caring about people I've only just met, but the dream made me feel a little uneasy... So, what on earth is Argenti up to, anyway?
+:;(Return to previous option selection)
+<pre>{
+	"$type": "RPG.GameCore.DestroyNPC",
+	"GroupID": 23,
+	"GroupNpcID": 400003,
+	"DestroyList": []
+}</pre>
+
+;(Talk to March 7th)
+:{{A|VO side3 yz mar7th 159.ogg}} '''March 7th:''' What!? Argenti wants to leave the Express and fight the Giant Sting alone!?
+
+;(Talk to Pom-Pom)
+:{{A|VO side3 yz pompom 137.ogg}} '''Pom-Pom:''' Wh&mdash;What? Argenti wants to go by himself? No way! That's too dangerous!
+
+;(Talk to Dan Heng)
+:{{A|VO side3 yz danheng 145.ogg}} '''Dan Heng:''' ...He insisted on doing his duty.
+
+;(Talk to Himeko)
+:{{A|VO side3 yz himeko 117.ogg}} '''Himeko:''' The exterior of the Express might be melting in gastric acid... I can't even imagine what it must look like.
+
+;(Talk to Argenti)
+:{{A|VO side3 yz argenti 206.ogg}} '''Argenti:''' So brief... so unexpected. The chance to get to know all of you on the Express... to witness the beauty of your emotions... is something I'll never forget.
 {{Dialogue End}}
 
 ===Help Velite stop Argenti{{subst:void|<!--200080264-->}}===
 {{Mission Description|type=companion|location=Parlor Car|update|The long, scarlet night of hallucinations forges endlessly on.<br />It seems like even the minor characters harbor their own intentions. Velite, the self-proclaimed "extra," will have ideas of his own...}}
 {{Dialogue Start}}
+
+;(Talk to Welt Yang)
+:{{A|VO side3 yz welt 131.ogg}} '''Welt:''' It all depends on whether you support his dedication to that hallucination.
+
+;(Talk to March 7th)
+:{{A|VO side3 yz mar7th 159.ogg}} '''March 7th:''' What!? Argenti wants to leave the Express and fight the Giant Sting alone!?
+
+;(Talk to Dan Heng)
+:{{A|VO side3 yz danheng 145.ogg}} '''Dan Heng:''' ...He insisted on doing his duty.
+
+;(Talk to Himeko)
+:{{A|VO side3 yz himeko 117.ogg}} '''Himeko:''' The exterior of the Express might be melting in gastric acid... I can't even imagine what it must look like.
+
+;(Talk to Argenti)
+----
+:{{A|VO side3 yz argenti 207.ogg}} '''Argenti:''' After jumping from the Express, I shall pierce the wall of the Giant Sting's stomach. It should then violently convulse so the Express can escape the confines of its body.
+:{{A|VO side3 yz argenti 208.ogg}} '''Argenti:''' Velite, have you something to say?
+:{{A|VO side3 yz vylet 153.ogg}} '''Velite:''' ...I&mdash;It's reckless to put yourself in danger! Do you really have to fulfill your knightly duty? Isn't there another way? I just don't get it.
+:{{A|VO side3 yz argenti 209.ogg}} '''Argenti:''' You, too, are worried for my safety? You may not have realized, but you have a unique and noble soul. I hope I can keep my promise to escort you to your destination.
+:{{A|VO side3 yz vylet 154.ogg}} '''Velite:''' You...
+:{{A|VO side3 yz vylet 155.ogg}} '''Velite:''' Wh&mdash;What the heck. Fine, I can be brave too y'know. If you insist on doing this, then... I'm coming with you!
+:{{A|VO side3 yz vylet 156.ogg}} '''Velite:''' If it weren't for you, I wouldn't be alive right now. I may not be as strong as you, but I'll do whatever I can.
+:{{A|VO side3 yz argenti 210.ogg}} '''Argenti:''' I appreciate that, but it would be best for you to remain on the Express.
+:{{A|VO side3 yz vylet 157.ogg}} '''Velite:''' I... You... Hmph... You're impossible. Fine...
+:{{A|VO side3 yz vylet 158.ogg}} '''Velite:''' It suddenly struck me that if it weren't for this accident, we would never have met, let alone become friends. My life is a third-rate fiction next to your heroic saga, but at least they coincided...
+:{{A|VO side3 yz vylet 159.ogg}} '''Velite:''' So you still want to do it? Are we going to say goodbye here? Then...
+:{{A|VO side3 yz vylet 160.ogg}} '''Velite:''' Don't die! I'll be waiting for you! After we fix this mess, you've got some spokesperson duties at my company to attend to! Just make sure you come back in one piece...
+----
 :{{tx}}
+----
+;([[#Gallery|Cutscene]] plays)
+::Hey! We made it⁓!
+::What is that? Did the Express make...
+::...the universe explode!?
+::No, this is a hallucination caused by the Giant Sting.
+::The commotion must have led to a great shedding of wing particles.
+::Huh? Then... maybe the insect wasn't that big? Maybe it was all an illusion!
+::...I'm afraid not, March.
+;(Cutscene ends)
+----
+----
+:{{A|VO side3 yz welt 123.ogg}} '''Welt:''' I've completed the engine inspection. Though the warp device isn't immediately operational, I believe we can still manage brief spurts of acceleration. Unless there are any major objections, I'll begin preparations.
+:<!--0.2-second delay-->
+:<!--0.2-second delay-->
+:{{A|VO side3 yz argenti 162.ogg}} '''Argenti:''' Mr. Yang, one moment, please.
+:{{A|VO side3 yz argenti 163 m.ogg}} {{A|VO side3 yz argenti 163 f.ogg}} '''Argenti:''' I've suddenly happened upon an idea that might just help resolve our crisis. While the Express is being prepared, I would like to speak with (Trailblazer) in private.
+:{{A|VO side3 yz mar7th 157.ogg}} '''March 7th:''' Seriously? Can't you just tell all of us?
+:{{A|VO side3 yz argenti 164.ogg}} '''Argenti:''' Were I to air such a proposition among you, verily, it would be dismissed in an instant. Yet as a knight, it is my duty to aid the Express in resolving this issue.
+:{{A|VO side3 yz mar7th 158.ogg}} '''March 7th:''' Oh? So you're a mind reader now, too...?
+:{{A|VO side3 yz welt 124.ogg}} '''Welt:''' At this stage, any plan is a plan worth hearing. March &mdash; hang fire. Let's see where this leads us.
+:{{A|VO side3 yz argenti 165.ogg}} '''Argenti:''' Thank you.
+----
+:{{A|VO side3 yz mar7th 160.ogg}} '''March 7th:''' I bet Argenti would think these fireworks were really... beautiful.
+:{{A|VO side3 yz mar7th 161.ogg}} '''March 7th:''' We didn't know him very long, but he was a pretty nice guy.
+:{{A|VO side3 yz mar7th 162.ogg}} '''March 7th:''' ...
+:{{A|VO side3 yz mar7th 163.ogg}} '''March 7th:''' Tsk, I hope he made it...
+:{{A|VO side3 yz player 104 m.ogg}} {{A|VO side3 yz player 104 f.ogg}} So, it's all over...
+<pre>{
+	"$type": "RPG.GameCore.TransitEnvProfile",
+	"Path": {
+		"Value": "Stages/Outputs/Chapter00/EnviroProfile/Chap00_INT_Train_01.enviroProfile.asset"
+	}
+}</pre>
+:{{Black Screen|After some time...}}
+:{{A|VO side3 yz mar7th 160.ogg}} '''March 7th:''' I bet Argenti would think these fireworks were really... beautiful.
+:{{A|VO side3 yz mar7th 161.ogg}} '''March 7th:''' We didn't know him very long, but he was a pretty nice guy.
+:{{A|VO side3 yz mar7th 162.ogg}} '''March 7th:''' ...
+:{{A|VO side3 yz mar7th 163.ogg}} '''March 7th:''' Tsk, I hope he made it...
+:{{A|VO side3 yz pompom 138.ogg}} '''Pom-Pom:''' The Express managed to escape the crisis, but Pom-Pom still feels a little sad... Pom-Pom wonders what happened to Argenti.
+:<!--0.4-second delay-->
+:{{A|VO side3 yz mar7th 164.ogg}} '''March 7th:''' *sigh* Velite just left the Express too &mdash; he looked really upset. I guess he didn't know what Argenti was thinking, either...
+:{{A|VO side3 yz himeko 118.ogg}} '''Himeko:''' The Knights of Beauty are made up of individuals who are used to traveling through the cosmos alone... they are difficult to understand, and the starry sky is their home. Perhaps this firework show is a symbol of his honor.
+:{{A|VO side3 yz mar7th 165.ogg}} '''March 7th:''' But the fireworks...
+:{{A|VO side3 yz pompom 139.ogg}} '''Pom-Pom:''' ...And the starry sky...
+:{{A|VO side3 yz mar7th 166.ogg}} '''March 7th:''' ...He didn't see it...
+:{{A|VO side3 yz himeko 119.ogg}} '''Himeko:''' He has his own goals... and struggles. After all, the Aeon of Beauty has likely already fallen.
+:<!--0.3-second delay-->
+:{{A|VO side3 yz mar7th 167.ogg}} '''March 7th:''' Huh? You mean Idrila &mdash; the one he wouldn't stop talking about? But... he said he'd find them... and fulfill his duty to protect them.
+:{{A|VO side3 yz himeko 120.ogg}} '''Himeko:''' The fact that Idrila has fallen is tacitly acknowledged by some Knights of Beauty. Naturally, there are others who don't want to believe it... like the one you met. He probably thinks that Idrila is simply missing &mdash; hiding somewhere beyond the reach of mortals.
+:{{A|VO side3 yz himeko 121 m.ogg}} {{A|VO side3 yz himeko 121 f.ogg}} '''Himeko:''' (Trailblazer), the crisis is over, and our unexpected guest has left, but I think there's still something we should talk about.
+:{{A|VO side3 yz himeko 122.ogg}} '''Himeko:''' ...In your opinion, what is beauty?
+:{{DIcon|Arrow}} A lover's eyes.
+::{{A|VO side3 yz himeko 123.ogg}} '''Himeko:''' They must be beautiful eyes.
+:{{DIcon|Arrow}} All fun and no work!
+::{{A|VO side3 yz himeko 124.ogg}} '''Himeko:''' Sounds like a wonderful life &mdash; I'm sure many have dreams of that.
+:{{DIcon|Arrow}} Obsessively watching cats eat food.
+::{{A|VO side3 yz himeko 125.ogg}} '''Himeko:''' Haha, you have a wild imagination.
+:{{DIcon|Arrow}} That which exists between the Crew...
+::{{A|VO side3 yz himeko 126.ogg}} '''Himeko:''' Oh? That's a good answer.
+:{{A|VO side3 yz himeko 127.ogg}} '''Himeko:''' Beauty takes many forms, and different people have different answers... I wonder what exactly it is that the Knights of Beauty are pursuing through the cosmos.
+:{{A|VO side3 yz himeko 128.ogg}} '''Himeko:''' Let's assume that Argenti finds the "missing" Idrila. Will he be able to recognize THEM with his human eyes? Or, obsessed with his version of "THEM," will he turn a blind eye and not even see THEM for who THEY are?
+:{{A|VO side3 yz mar7th 168.ogg}} '''March 7th:''' Mm... It did seem like he had a kind of... tunnel vision. And it sounded like he was holding himself to unreachable standards to attain his dreams.
+:{{A|VO side3 yz mar7th 169.ogg}} '''March 7th:''' I didn't quite wrap my head around him... I guess if we're ever back in Belobog and see a red-headed knight shouting into trashcans &mdash; "Idrila, are you in there!? Idrilaaaa!" ...I won't be surprised.
+:{{A|VO side3 yz mar7th 170.ogg}} '''March 7th:''' But, so what? I still think he was a nice guy, even if he was a bit weird...
+:{{A|VO side3 yz pompom 140.ogg}} '''Pom-Pom:''' *sigh* Where were we supposed to be going again?
+----
 {{Dialogue End}}
 
 ==Other Languages==

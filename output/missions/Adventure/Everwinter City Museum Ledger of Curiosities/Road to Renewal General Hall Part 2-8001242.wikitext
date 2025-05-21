@@ -37,7 +37,133 @@ PageTitle=#Road to Renewal: General Hall Part 2#
 ===Chat with Uldan{{subst:void|<!--800124201-->}}===
 {{Mission Description|type=adventure|location=History and Culture Museum|All the exhibits in the General Hall seems to have been collected. Uldan the curator has something to tell you regarding that.}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Uldan)
+:'''Uldan:''' Thanks to your help, the General Hall is filled with exhibits. Now, visitors from all over Belobog will be able to understand the background of this city better.
+:<pre>{
+	"$type": "RPG.GameCore.CreateLevelAreas",
+	"AssetPath": {
+		"Value": "Level/Common_Adventure/MuseumShow.prefab"
+	}
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.CreateLevelAreas",
+	"AssetPath": {
+		"Value": "Level/Common_Adventure/ShowAreaAnchors.prefab"
+	}
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.ActiveVirtualCamera",
+	"AreaName": "MuseumShow",
+	"AnchorName": "ShowCamera",
+	"BlendConfig": {
+		"ExportToJson": true,
+		"BlendType": "Cut"
+	},
+	"DisableProtectWhenBlending": true
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.ChangeTrackVirtualCameraFollowAndAim",
+	"AreaName": "MuseumShow",
+	"TrackName": "MuseumShowTrack",
+	"CameraName": "ShowCamera",
+	"TargetAreaName": "ShowAreaAnchors",
+	"FollowTargetAnchorName": "ShowCase2",
+	"LookAtTargetAnchorName": "ShowCase2"
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.WaitFrame"
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.MoveVirtualCameraOnDollyPath",
+	"AreaName": "MuseumShow",
+	"AnchorName": "ShowCamera",
+	"StartPoint": 0.47,
+	"EndPoint": 0.46,
+	"CurveName": "C_Story_DollyCamCurve_Line",
+	"Duration": 3
+}</pre>
+::'''Happy Spectator:''' Is this thing real?
+::'''Stunned Spectator:''' This is awesome...
+::'''Uldan:''' Thanks for your hard work, (Trailblazer). Here is the reward for you.
+::----
+:<pre>{
+	"$type": "RPG.GameCore.RemoveLevelAreas",
+	"AreaName": {
+		"Value": "ShowAreaAnchors"
+	}
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.RemoveLevelAreas",
+	"AreaName": {
+		"Value": "MuseumShow"
+	}
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.PlayMultiVoiceTalk",
+	"TalkSentenceID": 501190111
+}</pre>
+:::{{DIcon|?}} About the portrait of Cyrille the Fool...
+::::'''Uldan:''' (Trailblazer)... Did you say that the description of {{Color|keyword|nobold=1|Cyrille the Fool's}} portrait deviated from the truth?
+::::'''Uldan:''' But... how's that possible? The description is taken from the history textbooks of the Belobog Academy. Everything is in black and white.
+::::{{DIcon|Talk}} I met Cyrille before.
+:::::'''Uldan:''' Well... Stop pulling my leg.
+:::::'''Uldan:''' Still, I can tell you have at least heard of Cyrille from your tone.
+::::;(Return to previous option selection)
+::::{{DIcon|Arrow}} I have evidence that supports Cyrille.
+:::::'''Uldan:''' Since you sound so sure of yourself, I'll take a look at your evidence.
+::::<pre>{
+	"$type": "RPG.GameCore.ConsumeMissionItemPerformance",
+	"SubMissionID": 800122503,
+	"Desc": {
+		"Hash": 18096028862919064994
+	},
+	"OnSubmitConfirm": [
+		{
+			"$type": "RPG.GameCore.PlayAndWaitSimpleTalk",
+			"SimpleTalkList": [
+				{
+					"TalkSentenceID": 800122739
+				},
+				{
+					"TalkSentenceID": 800122740
+				},
+				{
+					"TalkSentenceID": 800122741
+				},
+				{
+					"TalkSentenceID": 800122742
+				}
+			]
+		},
+		{
+			"$type": "RPG.GameCore.TriggerCustomString",
+			"CustomString": {
+				"Value": "Talk_800122502"
+			}
+		},
+		{
+			"$type": "RPG.GameCore.TriggerCustomString",
+			"CustomString": {
+				"Value": "TalkSentence_501190151"
+			}
+		}
+	],
+	"OnSubmitCancel": [
+		{
+			"$type": "RPG.GameCore.TriggerCustomString",
+			"CustomString": {
+				"Value": "TalkSentence_501190151"
+			}
+		}
+	],
+	"SimpleTalk": {}
+}</pre>
+:::{{DIcon|Exit}} I'll go ahead and tour now.
+:<pre>{
+	"$type": "RPG.GameCore.PlayMultiVoiceTalk",
+	"TalkSentenceID": 501190111
+}</pre>
 {{Dialogue End}}
 
 ==Other Languages==

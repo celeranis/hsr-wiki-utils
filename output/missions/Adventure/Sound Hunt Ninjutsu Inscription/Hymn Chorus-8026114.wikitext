@@ -11,10 +11,10 @@ PageTitle=#Hymn Chorus#
 |chapter       = Sound Hunt Ninjutsu Inscription
 |requirements  = {{subst:void|<!--Unknown: {"Type":"Manual"}-->}}
 |summary       = <!--official mission summary from Fate's Atlas-->
-|characters    = Dafanchy; Guardian of the Domain; Ruan Mei's Angry Creation; Ruan Mei's Arrogant Creation; Ruan Mei's Sad Creation; Trailblazer
-|startLocation = [[Penacony]] - [[Penacony Paperfold University College]]
-|world         = Penacony
-|area          = Penacony Paperfold University College
+|characters    = Ruan Mei's Sad Creation; Trailblazer
+|startLocation = [[Herta Space Station]] - [[Seclusion Zone]]
+|world         = Herta Space Station
+|area          = Seclusion Zone
 |prev          = 
 |next          = 
 |rewards       = Credit*5,000
@@ -22,10 +22,7 @@ PageTitle=#Hymn Chorus#
 '''''Hymn Chorus''''' is an Event [[Adventure Mission]] from the [[Sound Hunt Ninjutsu Inscription]] event.
 
 ==Steps==
-# Meet up with Dafanchy on campus
-# Collect inspiration for composing a song by heading to the space station
 # Help Ruan Mei's Sad Creation complete the chorus
-# Check on how Ruan Mei's creations are doing
 
 <!--
 ==Gameplay Notes==
@@ -36,28 +33,67 @@ PageTitle=#Hymn Chorus#
 -->
 ==Dialogue==
 {{Stub Dialogue}}
-===Meet up with Dafanchy on campus{{subst:void|<!--802611406-->}}===
-{{Mission Description|type=adventure|location=Penacony Paperfold University College|You've become the manager of the music party's performing band, and now your band needs to complete 3 performances on the stage in the middle of the campus.<br />Dafanchy seems to have something to talk with you about. Meet up with her on campus.}}
-{{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Ruan Mei's Sad Creation)
+:'''Ruan Mei's Sad Creation:''' Boohoo... I want to express my love to Madam Ruan Mei too. Please help me, {{MC|f=big sis|m=big bro}}!
+:{{DIcon|Travel Log}} Let me help you!
+:<pre>{
+	"$type": "RPG.GameCore.ShowUI",
+	"Name": "Ui.MusicRhythm.MusicRhythmChooseLevelPage",
+	"WaitForExit": true,
+	"Param": {
+		"Value": "5"
+	},
+	"OnUIExitImmediately": [
+		{
+			"$type": "RPG.GameCore.EndDialogueEntityInteract"
+		}
+	]
+}</pre>
+:{{DIcon|Exit}} I've got something else to do.
+
 {{Dialogue End}}
 
-===Collect inspiration for composing a song by heading to the space station{{subst:void|<!--802611401-->}}===
-{{Mission Description|type=adventure|location=Seclusion Zone|update|You've become the manager of the music party's performing band, and now your band needs to complete 3 performances on the stage in the middle of the campus.<br />Wander around the seclusion zone of the space station to help Rappa collect inspiration for composing.}}
-{{Dialogue Start}}
-:{{tx}}
-{{Dialogue End}}
-
-===Help Ruan Mei's Sad Creation complete the chorus{{subst:void|<!--802611404-->}}===
+===Help Ruan Mei's Sad Creation complete the chorus{{subst:void|<!--802611403-->}}===
 {{Mission Description|type=adventure|location=Seclusion Zone|update|You've become the manager of the music party's performing band, and now your band needs to complete 3 performances on the stage in the middle of the campus.<br />Obtain a record of Ruan Mei's creations' beats to help Rappa collect inspiration for composing.}}
 {{Dialogue Start}}
-:{{tx}}
-{{Dialogue End}}
 
-===Check on how Ruan Mei's creations are doing{{subst:void|<!--802611405-->}}===
-{{Mission Description|type=adventure|location=Seclusion Zone|update|You've become the manager of the music party's performing band, and now your band needs to complete 3 performances on the stage in the middle of the campus.<br />Carefully examine this creation of Ruan Mei.}}
-{{Dialogue Start}}
-:{{tx}}
+;(Talk to Ruan Mei's Sad Creation)
+:'''Ruan Mei's Sad Creation:''' Boohoo... I want to express my love to Madam Ruan Mei too. Please help me, {{MC|f=big sis|m=big bro}}!
+:{{DIcon|Travel Log}} Let me help you!
+:<pre>{
+	"$type": "RPG.GameCore.ShowUI",
+	"Name": "Ui.MusicRhythm.MusicRhythmChooseLevelPage",
+	"WaitForExit": true,
+	"Param": {
+		"Value": "5"
+	},
+	"OnUIExitImmediately": [
+		{
+			"$type": "RPG.GameCore.EndDialogueEntityInteract"
+		}
+	]
+}</pre>
+:{{DIcon|Exit}} I've got something else to do.
+
+;(Unused &mdash; MusicRhythm_ShowUI)
+<pre>{
+	"$type": "RPG.GameCore.WaitFrame"
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.ShowUI",
+	"Name": "Ui.MusicRhythm.MusicRhythmChooseLevelPage",
+	"WaitForExit": true,
+	"Param": {
+		"Value": "5"
+	},
+	"OnUICustomEvent": [],
+	"OnUIExitImmediately": [
+		{
+			"$type": "RPG.GameCore.EndDialogueEntityInteract"
+		}
+	]
+}</pre>
 {{Dialogue End}}
 
 ==Other Languages==

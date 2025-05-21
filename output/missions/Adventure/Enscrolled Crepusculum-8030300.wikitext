@@ -36,7 +36,50 @@ PageTitle=#Enscrolled Crepusculum (Adventure Mission)#
 ===Aid the lost child{{subst:void|<!--803030001-->}}===
 {{Mission Description|type=adventure|location="Eternal Holy City" Okhema|A lost child has appeared in the bustling market of Okhema. She glances around, seemingly trying to find something...}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Lost Child)
+----
+:'''(Trailblazer):''' (Why is there a child that I've never seen before here...)
+:'''(Trailblazer):''' (I heard she ignored every resident who offered a helping hand... Is she afraid of strangers?)
+:{{DIcon|Arrow}} Do you need help?
+:'''Lost Child:''' ...The Eye of Twilight is all-seeing, its vision as far-reaching as the sky dome...
+:'''Lost Child:''' Ah, good-hearted {{MC|f=big sis|m=big bro}}, you're finally here! Can you help me find Urania's "eyes"?
+:{{DIcon|Arrow}} Urania's eyes? What's that?
+:{{DIcon|Arrow}} What're you muttering about?
+::'''Urania:''' Curious {{MC|f=big sis|m=big bro}}, please don't mind me.
+:'''Urania:''' Urania's eyes aren't the eyes looking at you right now. Urania's eyes can see more...
+:'''Urania:''' They are holy scrolls bestowed by Aquila. Our clan once received their grace, and we have been using this relic to record all that happens in the world for generations, as an extension of the Eye of Twilight's gaze.
+:'''Urania:''' On this journey, I have been dispatched to record the recent incidents at Okhema. Unfortunately, I didn't get to record in the new scroll, and even lost the old one.
+:'''Urania:''' I'm a stranger in this place... Can you help? If I can't find it, I won't be allowed to go home.
+:{{DIcon|Arrow}} Do you have any clues?
+:{{DIcon|Arrow}} Come, I will escort you to the Child Protective Service.
+::'''Urania:''' *sobbing* ...I knew it. Deep down, you're also unwilling to travel with me and see me as some walking misfortune.
+::'''Urania:''' Everyone thinks this way. An orphan like me without parents... only bad luck will follow if you stay around me...
+::{{DIcon|Arrow}} Sorry!
+::{{DIcon|Arrow}} I'll do it myself!
+:{{DIcon|Arrow}} No problem at all. For an additional fee, though.
+::'''Urania:''' *sniffles* Looks like they're telling the truth...
+::'''Urania:''' They say I will never receive kindness and love from others, because I am an orphan with no parents...
+::{{DIcon|Arrow}} Sorry!
+::{{DIcon|Arrow}} I'll help you! No hidden fees involved!
+:'''Urania:''' Hee-hee, {{MC|f=big sis|m=big bro}}, I'll help you mark out some locations where the "Eyes" may be...
+:'''Urania:''' These scrolls are probably about as tall as you. When you retrieve them, you may hear some sounds, but don't be scared &mdash; those are whispers of the past, and they're not dangerous at all.
+:{{DIcon|Arrow}} Let's set off now!
+:{{DIcon|Arrow}} You're not coming with?
+:{{DIcon|Arrow}} Well, who went and put you in charge?
+<pre>{
+	"$type": "RPG.GameCore.SetTargetEntityFadeWithAnim",
+	"TargetType": {
+		"$type": "RPG.GameCore.GroupFetchLocalTarget",
+		"Targets": [
+			400001
+		]
+	},
+	"Duration": 1
+}</pre>
+:You haven't even gotten a chance to ask your question when, in the blink of an eye, the child before you disappears into the crowd...
+:'''(Trailblazer):''' (Bah, children in these parts are so rude. Let's just take a look at the clue she left behind.)
+
 {{Dialogue End}}
 
 ==Other Languages==

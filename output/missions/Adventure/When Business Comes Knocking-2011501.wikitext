@@ -41,42 +41,861 @@ PageTitle=#When Business Comes Knocking#
 -->
 ==Dialogue==
 {{Stub Dialogue}}
+:'''(Trailblazer):''' (This is the area that Mr. Yang had marked... Better take a look around.)
 {{Dialogue End}}
 
 ===Go to the designated spot at Everwinter Hill and investigate the unknown signal{{subst:void|<!--201150103-->}}===
 {{Mission Description|type=adventure|location=Everwinter Hill|update|According to Welt, Himeko and he had detected an unknown signal here after Jarilo-VI's blizzard had subsided.<br />To prevent this signal cluster from attracting people with ulterior motives and threatening this regenerating planet, you might as well accept Welt's request and head to the designated location to investigate.}}
 {{Dialogue Start}}
-:{{tx}}
+<pre>{
+	"$type": "RPG.GameCore.CreateProp",
+	"GroupID": {
+		"FixedValue": {
+			"Value": 20
+		}
+	},
+	"GroupPropID": {
+		"FixedValue": {
+			"Value": 300002
+		}
+	},
+	"CreateList": []
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.PropSetupUITrigger",
+	"DestroyAfterTriggered": true,
+	"ButtonIcon": "SpriteOutput/TalkIcon/CheckIcon.png",
+	"IconType": "CheckIcon",
+	"ButtonText": {
+		"Hash": 16304550243505668348
+	},
+	"ButtonCallback": [
+		{
+			"$type": "RPG.GameCore.TriggerCustomString",
+			"CustomString": {
+				"Value": "Mission_201150104_PropUITrigger"
+			}
+		}
+	],
+	"OverrideTargetTypes": [],
+	"TargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvPropEx",
+		"FetchType": "SinglePropByPropID",
+		"SinglePropID": {
+			"GroupID": {
+				"FixedValue": {
+					"Value": 20
+				}
+			},
+			"ID": {
+				"FixedValue": {
+					"Value": 300002
+				}
+			}
+		}
+	}
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.CreateProp",
+	"GroupID": {
+		"FixedValue": {
+			"Value": 20
+		}
+	},
+	"GroupPropID": {
+		"FixedValue": {
+			"Value": 300003
+		}
+	},
+	"CreateList": []
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.PropSetupUITrigger",
+	"DestroyAfterTriggered": true,
+	"ButtonIcon": "SpriteOutput/TalkIcon/CheckIcon.png",
+	"IconType": "CheckIcon",
+	"ButtonText": {
+		"Hash": 16304550243505668348
+	},
+	"ButtonCallback": [
+		{
+			"$type": "RPG.GameCore.TriggerCustomString",
+			"CustomString": {
+				"Value": "Mission_201150105_PropUITrigger"
+			}
+		}
+	],
+	"OverrideTargetTypes": [],
+	"TargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvPropEx",
+		"FetchType": "SinglePropByPropID",
+		"SinglePropID": {
+			"GroupID": {
+				"FixedValue": {
+					"Value": 20
+				}
+			},
+			"ID": {
+				"FixedValue": {
+					"Value": 300003
+				}
+			}
+		}
+	}
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.CreateProp",
+	"GroupID": {
+		"FixedValue": {
+			"Value": 20
+		}
+	},
+	"GroupPropID": {
+		"FixedValue": {
+			"Value": 300001
+		}
+	},
+	"CreateList": []
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.PropSetupUITrigger",
+	"DestroyAfterTriggered": true,
+	"ButtonIcon": "SpriteOutput/TalkIcon/CheckIcon.png",
+	"IconType": "CheckIcon",
+	"ButtonText": {
+		"Hash": 16304550243505668348
+	},
+	"ButtonCallback": [
+		{
+			"$type": "RPG.GameCore.TriggerCustomString",
+			"CustomString": {
+				"Value": "Mission_201150103_PropUITrigger"
+			}
+		}
+	],
+	"OverrideTargetTypes": [],
+	"TargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvPropEx",
+		"FetchType": "SinglePropByPropID",
+		"SinglePropID": {
+			"GroupID": {
+				"FixedValue": {
+					"Value": 20
+				}
+			},
+			"ID": {
+				"FixedValue": {
+					"Value": 300001
+				}
+			}
+		}
+	}
+}</pre>
+:'''(Trailblazer):''' (Huh? This is...)
+<pre>{
+	"$type": "RPG.GameCore.PlayMessage",
+	"MessageSectionID": 1112600
+}</pre>
+:'''(Trailblazer):''' (So, the unknown signal was actually an ad from the Interastral Peace Appliances... I'll let Mr. Yang know.)
+<pre>{
+	"$type": "RPG.GameCore.SaveMessage",
+	"MessageSectionID": 1112600
+}</pre>
 {{Dialogue End}}
 
 ===Report to the crew about the results of the investigation{{subst:void|<!--201150107-->}}===
 {{Mission Description|type=adventure|location=Parlor Car|update|Thank the stars &mdash; that unknown signal was only an ad from the Interastral Peace Appliance.<br />You can't help feeling like your trip was in vain... But at least you get to ensure Belobog remains safe and sound in the end.<br />Report the good news to the Crew back on the Express.}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Himeko)
+;(If {{cx}}<!--SubMission not Finish: 101150222--> and {{cx}}<!--SubMission Finish: 101100201-->)
+:;(If {{cx}}<!--during performance 599000103-->)
+:::'''Himeko:''' What's up, (Trailblazer)? Back on the Express slacking off, huh?
+:::{{DIcon|Arrow}} I'm here to listen to your stories...
+:::{{DIcon|Arrow}} I'm free for now and want to hear you talk about the past...
+:::'''Himeko:''' Oh, I almost forgot about that... Then, to make a long story short, where should I begin?
+:::{{DIcon|Arrow}} Himeko, when did you first board the Express?
+::::'''Himeko:''' Now that's got me stumped...
+::::'''Himeko:''' Seven years, eight years... No, that's not right. I'm sorry. I'm not Dan Heng &mdash; I've never kept a diary aboard the Express.
+::::'''Himeko:''' The Express traverses through different worlds, and the flow of time can become blurry...
+::::'''Himeko:''' But I'm clear about the beginning of my story with the Express. That day just so happened to be my birthday. Back then, I was hiking outdoors and looking for a place without any light pollution to observe the light and orbit of Heaven's Finger.
+::::'''Himeko:''' Then, using a telescope, I saw a bright spot streak across the sky. I thought it was a comet and thought nothing of it.
+::::'''Himeko:''' But it wasn't until the spot grew bigger and bigger that I realized there was something wrong... That thing pierced straight through the atmosphere without burning up, and flew straight at me.
+::::'''Himeko:''' So I drove as fast as I could to get out of there, until I heard a loud crash behind me as if the entire world had been flipped upside down...
+::::'''Himeko:''' I saw a train half-buried in a huge crater. When it happened, I said to myself that this cannot possibly be a thing of this world. It's too dangerous to get close to it...
+::::'''Himeko:''' But, out of basic human curiosity, I dared to take a closer look. I keep thinking to myself, just one look, just one look.
+::::'''Himeko:''' So, I figured out a way to go inside the Express. The internal structure was incredible, especially its engine...
+::::'''Himeko:''' By the time I came to my senses, I had already passionately finished fixing the Express and was already embarking on a journey aboard it.
+::::{{DIcon|Arrow}} What kind of wild plot is this?
+::::{{DIcon|Arrow}} This is mind-control, right?
+:::::'''Himeko:''' Many developments in life are inherently unexpected or uncontrollable, just like your experience with the Express.
+:::{{DIcon|Arrow}} When did you and Mr. Yang meet?
+::::'''Himeko:''' About that... Um... When did Welt get here?
+::::'''Himeko:''' Many years ago, Pom-Pom and I were tasked by Herta to go to the abandoned and ruined world of Salsotto, looking for a special material called Cadence Glass...
+::::'''Himeko:''' Just as the Express finished its warp jump, we picked up an unknown signal. It was coming from the wreckage of a huge starship.
+::::'''Himeko:''' Based on the ''Express Safety Manual'', such an obviously dangerous signal should be ignored. You have no idea whether the party sending the signal is a victim needing rescue, or a bandit lurking behind a trap...
+::::'''Himeko:''' But out of basic human curiosity, we decided to take a look and immediately set out for Salsotto to do our business.
+::::'''Himeko:''' Welt joined up with us after that.
+::::{{DIcon|Arrow}} Wait... You're missing lots of details, aren't you?
+::::{{DIcon|Arrow}} What exactly happened?
+::::'''Himeko:''' There was no torturous rescue process, just the normal procedures. In the end, there were two new passengers on the Express.
+::::'''Himeko:''' They chose to work for the Express as a way to say thanks for saving their lives and pay off their rescue-related expenses.
+::::'''Himeko:''' How about that? Is that good enough to satisfy your curiosities?
+::::'''Himeko:''' Well, satisfied or not, you can ask Welt if you have any more questions. If you'll excuse me, (Trailblazer), I have to get on my work now.
+:;(If {{cx}}<!--not during performance 599000103-->)
+:::'''Himeko:''' You can go and chat with Welt if he has the time...
+;(Otherwise, if {{cx}}<!--SubMission Finish: 101000205-->, {{cx}}<!--SubMission not Finish: 101100201-->, and {{cx}}<!--during performance 599000102-->)
+::'''Himeko:''' Oh, back so soon?
+::{{DIcon|Arrow}} We narrowly averted disaster, and now we're home.
+::{{DIcon|Arrow}} We almost didn't make it back...
+::'''Himeko:''' Hah, it seems this world is a dangerous place, too. Ever since the Astral Express embarked on this journey, every world contaminated by the Stellaron has been problematic.
+::'''Himeko:''' Before the three of you boarded the Express, Welt, I... and someone else were adventuring together. It was the same back then as well &mdash; we would slowly trailblaze new worlds, find the Stellaron, and clear a path...
+::'''Himeko:''' No matter what world we were on, some difficulties remain constant &mdash; misunderstandings caused by communication, enmity caused by cultural differences, and enemies with malicious intentions. But there is always something new.
+::'''Himeko:''' Keep up the good work, (Trailblazer).
+::{{DIcon|Arrow}} You've never mentioned these things before...
+::{{DIcon|Arrow}} I want to hear about your past...
+::'''Himeko:''' You've still got work to do. As for me, I've got to maintain the Express while it is parked.
+::'''Himeko:''' We can take a long break after we're done with this world. Come find me if you're still interested then.
+;(Otherwise, if {{cx}}<!--SubMission not Finish: 100050304--> and {{cx}}<!--SubMission Finish: 100050201-->)
+::{{A|VO chapter0 7 himeko 116.ogg}} '''Himeko:''' What's wrong? You look like you were about to say something.
+::{{A|VO chapter0 7 himeko 117.ogg}} '''Himeko:''' Oh, I think I know what you were going to ask. You've come to the right person.
+::{{DIcon|Talk}} About the Express...
+:::{{A|VO chapter0 7 himeko 118.ogg}} '''Himeko:''' Ohh, you want to know more about the Express? I'm glad. After all, it's an important companion of ours.
+:::{{DIcon|Talk}} About the history of the Express...
+::::{{A|VO chapter0 7 himeko 119.ogg}} '''Himeko:''' The Astral Express was a tool created by Akivili the Trailblaze, who used it to transport THEMSELF and the Nameless across the galaxy. It is rumored that there are other vehicles like it, but the Express has no such records.
+::::{{A|VO chapter0 7 himeko 120.ogg}} '''Himeko:''' When I found the Express, its memory had been severely damaged, with much of its valuable information lost. All I know is that the Express is an Aspect of Creation built by Akivili themself, and used to travel the cosmos.
+::::{{A|VO chapter0 7 himeko 121.ogg}} '''Himeko:''' As for how it was built and how it was damaged, I do not have an answer.
+:::;(Return to previous option selection)
+:::{{DIcon|Talk}} About where the Express is headed...
+::::{{A|VO chapter0 7 himeko 122.ogg}} '''Himeko:''' The Express is traveling on a route that the Trailblaze once embarked on. The names of some destinations have been lost, but the first and final stops were both at Pegana &mdash; Akivili's home world.
+::::{{A|VO chapter0 7 himeko 123.ogg}} '''Himeko:''' We speculate the Astral Express started its journey from Pegana, stopping at each destination along the way before returning there for its next journey. However, the appearance of the Stellarons has caused a delay at each stop.
+:::;(Return to previous option selection)
+:::{{DIcon|Talk}} About the Express' source of power...
+::::{{A|VO chapter0 7 himeko 124.ogg}} '''Himeko:''' There is a legend in the galaxy: The heart of Akivili themself lies in the core of the Astral Express, providing it with the power to travel between worlds. But I found no evidence of that aboard the Express.
+::::{{A|VO chapter0 7 himeko 125.ogg}} '''Himeko:''' Besides, the Express existed before the Trailblaze fell. There's no way they could have had two hearts, right? However, it is likely that the Express possesses some sort of mechanism to transfer power from the Trailblaze.
+::::{{A|VO chapter0 7 himeko 126.ogg}} '''Himeko:''' It wouldn't be possible with a normal Pathstrider.
+:::;(Return to previous option selection)
+:::{{DIcon|Talk}} About Akivili...
+::::{{A|VO chapter0 7 himeko 127.ogg}} '''Himeko:''' The fallen Aeon, deceased Trailblaze &mdash; THEIR passing is still a mystery, but of all the known Aeons, Akivili was the closest to mankind.
+::::{{A|VO chapter0 7 himeko 128.ogg}} '''Himeko:''' In the databank aboard the Express, it is recorded that THEY walked among the mortals &mdash; adventuring, fighting, and celebrating with THEM. Although THEY were an Aeon restrained by the "Primum Mobile," Akivili enjoyed a freedom similar to us mortals.
+::::{{A|VO chapter0 7 himeko 129.ogg}} '''Himeko:''' THEY were different from most... But THEIR passing came so suddenly that it was thought THEY were killed by another Aeon. I don't believe that to be the case.
+:::;(Return to previous option selection)
+:::{{DIcon|Return}} I have another question...
+::::{{DIcon|Talk}} About the galaxy...
+:::::{{A|VO chapter0 7 himeko 130.ogg}} '''Himeko:''' The galaxy is endlessly vast. I wouldn't know where to begin, especially if you ask me that so suddenly...
+:::::{{DIcon|Talk}} About its nature...
+::::::{{A|VO chapter0 7 himeko 131.ogg}} '''Himeko:''' I've been to many different worlds, yet I still know very little about the galaxy, simply because it's too vast. As for its nature, there are a few theories that I can share with you.
+::::::{{A|VO chapter0 7 himeko 132.ogg}} '''Himeko:''' The most popular is probably the Cosmos Tree theory, proposed by Zandar, Emanator of Erudition and the first member of the Genius Society. He compared the galaxy to an enormous imaginary tree, with its leaves being individual universes.
+::::::{{A|VO chapter0 7 himeko 133.ogg}} '''Himeko:''' Therefore, only Aeons, who draw their energy from the imaginary, and Emanators, who are blessed by Aeons, can travel through the spaces filled with imaginary energy. That's why planets where civilizations exist are so similar.
+::::::{{A|VO chapter0 7 himeko 134.ogg}} '''Himeko:''' However, the theory has its flaws. Elias Salas, the 56th member of the Genius Society, invented remote detection, disproving that the imaginary is unique. This shook the foundation of the "Cosmos Tree" theory.
+::::::{{A|VO chapter0 7 himeko 135.ogg}} '''Himeko:''' There are other theories as well: The "Stretching" theory, the "Heat Torch" theory, and the "Parallel Imaging" theory... The Riddlers claim the galaxy is just a dream and IX's followers seem to like that claim.
+:::::;(Return to previous option selection)
+:::::{{DIcon|Talk}} About the Aeons...
+::::::{{A|VO chapter0 7 himeko 136.ogg}} '''Himeko:''' Aeons are the most mysterious beings in the galaxy. All we know is that THEY ascended from the form of intelligent beings. As for the how and why, even the geniuses over at the Genius Society haven't the slightest clue.
+::::::{{A|VO chapter0 7 himeko 137.ogg}} '''Himeko:''' Upon ascending to Aeon-hood, that being gains power over the Paths, free to choose the allocation of imaginary energy however THEY wish, while suffering the restrictions of the "Primum Mobile."
+::::::{{A|VO chapter0 7 himeko 138.ogg}} '''Himeko:''' The Aeon of Destruction seeks only to destroy the universe, while the Aeon of Erudition wants to find the answer for all that exists. Meanwhile, the Aeon of Preservation continues to forge walls, and the Aeon of Enigmata devotes themself to obscuring all that is known...
+::::::{{A|VO chapter0 7 himeko 139.ogg}} '''Himeko:''' A cloud of mystery shrouds the Aeons. I heard Madam Herta recruited a team to try and solve the mysteries about THEM.
+:::::;(Return to previous option selection)
+:::::{{DIcon|Talk}} About the factions...
+::::::{{A|VO chapter0 7 himeko 140.ogg}} '''Himeko:''' Compared to the Aeons, the factions are much easier to understand. Mortals with the same objective gather together to practice their understanding of Aeons and the Paths.
+::::::{{A|VO chapter0 7 himeko 141.ogg}} '''Himeko:''' Many Aeons are unreachable, but the factions are close to us. After Akivili trailblazed across the galaxy, people became aware of the existence of other worlds. Gradually, more people started trying to use the power of the Aeons to travel between worlds.
+::::::{{A|VO chapter0 7 himeko 142.ogg}} '''Himeko:''' The Interastral Peace Corporation is a good example: They worship Qlipoth, the Aeon of Preservation, but somehow became the largest economic entity in the galaxy;
+::::::{{A|VO chapter0 7 himeko 143.ogg}} '''Himeko:''' Another example is the Genius Society: There is no shortage of eccentrics like Madam Herta who dedicate themselves to scientific research under the protection of the Erudition.
+::::::{{A|VO chapter0 7 himeko 144.ogg}} '''Himeko:''' These factions possess the same power as us to voyage between worlds. It would be hard to travel through the galaxy without them.
+:::::;(Return to previous option selection)
+:::::{{DIcon|Talk}} About the Paths...
+::::::{{A|VO chapter0 7 himeko 145.ogg}} '''Himeko:''' The birth of an Aeon gives rise to a Path. The nature of the Paths remains a mystery, leaving us to draw an analogy in a way that mortals can understand: It's a philosophical concept of sorts.
+::::::{{A|VO chapter0 7 himeko 146.ogg}} '''Himeko:''' A person is considered to be on a Path when their will overlaps with that Path. If the person has a strong enough will, they can draw power from that Path. Those who can do so are called Pathstriders.
+::::::{{A|VO chapter0 7 himeko 147.ogg}} '''Himeko:''' Pathstriders possess extraordinary power, but are still insignificant compared to the Aeons, like a drop of water in a vast ocean. Sometimes, Aeons will bestow a mortal with their power, making them an "Emanator" of that Aeon.
+::::::{{A|VO chapter0 7 himeko 149.ogg}} '''Himeko:''' I should mention that once a Path is open, it cannot be closed, even with the fall of its Aeon. That is how we are still able to travel across the stars, despite Akivili's passing.
+:::::;(Return to previous option selection)
+::::;(Return to previous option selection)
+::::{{DIcon|Talk}} About Trailblaze...
+:::::{{A|VO chapter0 7 himeko 150.ogg}} '''Himeko:''' "Trailblaze" is our mission and the source of strength that powers the Express to travel across the galaxy.
+:::::{{DIcon|Talk}} About Exploration...
+::::::{{A|VO chapter0 7 himeko 151.ogg}} '''Himeko:''' Explore the unknown world to continue our journey ahead.
+:::::;(Return to previous option selection)
+:::::{{DIcon|Talk}} About Understanding...
+::::::{{A|VO chapter0 7 himeko 152.ogg}} '''Himeko:''' Understand the local culture and immerse ourselves within it.
+:::::;(Return to previous option selection)
+:::::{{DIcon|Talk}} About Establishing...
+::::::{{A|VO chapter0 7 himeko 153.ogg}} '''Himeko:''' Establish a connection with the new world &mdash; rejoice with it and share in its fears.
+:::::;(Return to previous option selection)
+:::::{{DIcon|Talk}} About Connection...
+::::::{{A|VO chapter0 7 himeko 154.ogg}} '''Himeko:''' Connect worlds together, carving an endless path.
+:::::;(Return to previous option selection)
+::::;(Return to previous option selection)
+::::{{DIcon|Exit}} I don't have any more questions.
+::{{DIcon|Talk}} About the galaxy...
+:::{{A|VO chapter0 7 himeko 130.ogg}} '''Himeko:''' The galaxy is endlessly vast. I wouldn't know where to begin, especially if you ask me that so suddenly...
+:::{{DIcon|Talk}} About its nature...
+::::{{A|VO chapter0 7 himeko 131.ogg}} '''Himeko:''' I've been to many different worlds, yet I still know very little about the galaxy, simply because it's too vast. As for its nature, there are a few theories that I can share with you.
+::::{{A|VO chapter0 7 himeko 132.ogg}} '''Himeko:''' The most popular is probably the Cosmos Tree theory, proposed by Zandar, Emanator of Erudition and the first member of the Genius Society. He compared the galaxy to an enormous imaginary tree, with its leaves being individual universes.
+::::{{A|VO chapter0 7 himeko 133.ogg}} '''Himeko:''' Therefore, only Aeons, who draw their energy from the imaginary, and Emanators, who are blessed by Aeons, can travel through the spaces filled with imaginary energy. That's why planets where civilizations exist are so similar.
+::::{{A|VO chapter0 7 himeko 134.ogg}} '''Himeko:''' However, the theory has its flaws. Elias Salas, the 56th member of the Genius Society, invented remote detection, disproving that the imaginary is unique. This shook the foundation of the "Cosmos Tree" theory.
+::::{{A|VO chapter0 7 himeko 135.ogg}} '''Himeko:''' There are other theories as well: The "Stretching" theory, the "Heat Torch" theory, and the "Parallel Imaging" theory... The Riddlers claim the galaxy is just a dream and IX's followers seem to like that claim.
+:::;(Return to previous option selection)
+:::{{DIcon|Talk}} About the Aeons...
+::::{{A|VO chapter0 7 himeko 136.ogg}} '''Himeko:''' Aeons are the most mysterious beings in the galaxy. All we know is that THEY ascended from the form of intelligent beings. As for the how and why, even the geniuses over at the Genius Society haven't the slightest clue.
+::::{{A|VO chapter0 7 himeko 137.ogg}} '''Himeko:''' Upon ascending to Aeon-hood, that being gains power over the Paths, free to choose the allocation of imaginary energy however THEY wish, while suffering the restrictions of the "Primum Mobile."
+::::{{A|VO chapter0 7 himeko 138.ogg}} '''Himeko:''' The Aeon of Destruction seeks only to destroy the universe, while the Aeon of Erudition wants to find the answer for all that exists. Meanwhile, the Aeon of Preservation continues to forge walls, and the Aeon of Enigmata devotes themself to obscuring all that is known...
+::::{{A|VO chapter0 7 himeko 139.ogg}} '''Himeko:''' A cloud of mystery shrouds the Aeons. I heard Madam Herta recruited a team to try and solve the mysteries about THEM.
+:::;(Return to previous option selection)
+:::{{DIcon|Talk}} About the factions...
+::::{{A|VO chapter0 7 himeko 140.ogg}} '''Himeko:''' Compared to the Aeons, the factions are much easier to understand. Mortals with the same objective gather together to practice their understanding of Aeons and the Paths.
+::::{{A|VO chapter0 7 himeko 141.ogg}} '''Himeko:''' Many Aeons are unreachable, but the factions are close to us. After Akivili trailblazed across the galaxy, people became aware of the existence of other worlds. Gradually, more people started trying to use the power of the Aeons to travel between worlds.
+::::{{A|VO chapter0 7 himeko 142.ogg}} '''Himeko:''' The Interastral Peace Corporation is a good example: They worship Qlipoth, the Aeon of Preservation, but somehow became the largest economic entity in the galaxy;
+::::{{A|VO chapter0 7 himeko 143.ogg}} '''Himeko:''' Another example is the Genius Society: There is no shortage of eccentrics like Madam Herta who dedicate themselves to scientific research under the protection of the Erudition.
+::::{{A|VO chapter0 7 himeko 144.ogg}} '''Himeko:''' These factions possess the same power as us to voyage between worlds. It would be hard to travel through the galaxy without them.
+:::;(Return to previous option selection)
+:::{{DIcon|Talk}} About the Paths...
+::::{{A|VO chapter0 7 himeko 145.ogg}} '''Himeko:''' The birth of an Aeon gives rise to a Path. The nature of the Paths remains a mystery, leaving us to draw an analogy in a way that mortals can understand: It's a philosophical concept of sorts.
+::::{{A|VO chapter0 7 himeko 146.ogg}} '''Himeko:''' A person is considered to be on a Path when their will overlaps with that Path. If the person has a strong enough will, they can draw power from that Path. Those who can do so are called Pathstriders.
+::::{{A|VO chapter0 7 himeko 147.ogg}} '''Himeko:''' Pathstriders possess extraordinary power, but are still insignificant compared to the Aeons, like a drop of water in a vast ocean. Sometimes, Aeons will bestow a mortal with their power, making them an "Emanator" of that Aeon.
+::::{{A|VO chapter0 7 himeko 149.ogg}} '''Himeko:''' I should mention that once a Path is open, it cannot be closed, even with the fall of its Aeon. That is how we are still able to travel across the stars, despite Akivili's passing.
+:::;(Return to previous option selection)
+:::{{DIcon|Return}} I have another question...
+::::{{DIcon|Talk}} About the Express...
+:::::{{A|VO chapter0 7 himeko 118.ogg}} '''Himeko:''' Ohh, you want to know more about the Express? I'm glad. After all, it's an important companion of ours.
+:::::{{DIcon|Talk}} About the history of the Express...
+::::::{{A|VO chapter0 7 himeko 119.ogg}} '''Himeko:''' The Astral Express was a tool created by Akivili the Trailblaze, who used it to transport THEMSELF and the Nameless across the galaxy. It is rumored that there are other vehicles like it, but the Express has no such records.
+::::::{{A|VO chapter0 7 himeko 120.ogg}} '''Himeko:''' When I found the Express, its memory had been severely damaged, with much of its valuable information lost. All I know is that the Express is an Aspect of Creation built by Akivili themself, and used to travel the cosmos.
+::::::{{A|VO chapter0 7 himeko 121.ogg}} '''Himeko:''' As for how it was built and how it was damaged, I do not have an answer.
+:::::;(Return to previous option selection)
+:::::{{DIcon|Talk}} About where the Express is headed...
+::::::{{A|VO chapter0 7 himeko 122.ogg}} '''Himeko:''' The Express is traveling on a route that the Trailblaze once embarked on. The names of some destinations have been lost, but the first and final stops were both at Pegana &mdash; Akivili's home world.
+::::::{{A|VO chapter0 7 himeko 123.ogg}} '''Himeko:''' We speculate the Astral Express started its journey from Pegana, stopping at each destination along the way before returning there for its next journey. However, the appearance of the Stellarons has caused a delay at each stop.
+:::::;(Return to previous option selection)
+:::::{{DIcon|Talk}} About the Express' source of power...
+::::::{{A|VO chapter0 7 himeko 124.ogg}} '''Himeko:''' There is a legend in the galaxy: The heart of Akivili themself lies in the core of the Astral Express, providing it with the power to travel between worlds. But I found no evidence of that aboard the Express.
+::::::{{A|VO chapter0 7 himeko 125.ogg}} '''Himeko:''' Besides, the Express existed before the Trailblaze fell. There's no way they could have had two hearts, right? However, it is likely that the Express possesses some sort of mechanism to transfer power from the Trailblaze.
+::::::{{A|VO chapter0 7 himeko 126.ogg}} '''Himeko:''' It wouldn't be possible with a normal Pathstrider.
+:::::;(Return to previous option selection)
+:::::{{DIcon|Talk}} About Akivili...
+::::::{{A|VO chapter0 7 himeko 127.ogg}} '''Himeko:''' The fallen Aeon, deceased Trailblaze &mdash; THEIR passing is still a mystery, but of all the known Aeons, Akivili was the closest to mankind.
+::::::{{A|VO chapter0 7 himeko 128.ogg}} '''Himeko:''' In the databank aboard the Express, it is recorded that THEY walked among the mortals &mdash; adventuring, fighting, and celebrating with THEM. Although THEY were an Aeon restrained by the "Primum Mobile," Akivili enjoyed a freedom similar to us mortals.
+::::::{{A|VO chapter0 7 himeko 129.ogg}} '''Himeko:''' THEY were different from most... But THEIR passing came so suddenly that it was thought THEY were killed by another Aeon. I don't believe that to be the case.
+:::::;(Return to previous option selection)
+::::;(Return to previous option selection)
+::::{{DIcon|Talk}} About Trailblaze...
+:::::{{A|VO chapter0 7 himeko 150.ogg}} '''Himeko:''' "Trailblaze" is our mission and the source of strength that powers the Express to travel across the galaxy.
+:::::{{DIcon|Talk}} About Exploration...
+::::::{{A|VO chapter0 7 himeko 151.ogg}} '''Himeko:''' Explore the unknown world to continue our journey ahead.
+:::::;(Return to previous option selection)
+:::::{{DIcon|Talk}} About Understanding...
+::::::{{A|VO chapter0 7 himeko 152.ogg}} '''Himeko:''' Understand the local culture and immerse ourselves within it.
+:::::;(Return to previous option selection)
+:::::{{DIcon|Talk}} About Establishing...
+::::::{{A|VO chapter0 7 himeko 153.ogg}} '''Himeko:''' Establish a connection with the new world &mdash; rejoice with it and share in its fears.
+:::::;(Return to previous option selection)
+:::::{{DIcon|Talk}} About Connection...
+::::::{{A|VO chapter0 7 himeko 154.ogg}} '''Himeko:''' Connect worlds together, carving an endless path.
+:::::;(Return to previous option selection)
+::::;(Return to previous option selection)
+::::{{DIcon|Exit}} I don't have any more questions.
+::{{DIcon|Talk}} About Trailblaze...
+:::{{A|VO chapter0 7 himeko 150.ogg}} '''Himeko:''' "Trailblaze" is our mission and the source of strength that powers the Express to travel across the galaxy.
+:::{{DIcon|Talk}} About Exploration...
+::::{{A|VO chapter0 7 himeko 151.ogg}} '''Himeko:''' Explore the unknown world to continue our journey ahead.
+:::;(Return to previous option selection)
+:::{{DIcon|Talk}} About Understanding...
+::::{{A|VO chapter0 7 himeko 152.ogg}} '''Himeko:''' Understand the local culture and immerse ourselves within it.
+:::;(Return to previous option selection)
+:::{{DIcon|Talk}} About Establishing...
+::::{{A|VO chapter0 7 himeko 153.ogg}} '''Himeko:''' Establish a connection with the new world &mdash; rejoice with it and share in its fears.
+:::;(Return to previous option selection)
+:::{{DIcon|Talk}} About Connection...
+::::{{A|VO chapter0 7 himeko 154.ogg}} '''Himeko:''' Connect worlds together, carving an endless path.
+:::;(Return to previous option selection)
+:::{{DIcon|Return}} I have another question...
+::::{{DIcon|Talk}} About the Express...
+:::::{{A|VO chapter0 7 himeko 118.ogg}} '''Himeko:''' Ohh, you want to know more about the Express? I'm glad. After all, it's an important companion of ours.
+:::::{{DIcon|Talk}} About the history of the Express...
+::::::{{A|VO chapter0 7 himeko 119.ogg}} '''Himeko:''' The Astral Express was a tool created by Akivili the Trailblaze, who used it to transport THEMSELF and the Nameless across the galaxy. It is rumored that there are other vehicles like it, but the Express has no such records.
+::::::{{A|VO chapter0 7 himeko 120.ogg}} '''Himeko:''' When I found the Express, its memory had been severely damaged, with much of its valuable information lost. All I know is that the Express is an Aspect of Creation built by Akivili themself, and used to travel the cosmos.
+::::::{{A|VO chapter0 7 himeko 121.ogg}} '''Himeko:''' As for how it was built and how it was damaged, I do not have an answer.
+:::::;(Return to previous option selection)
+:::::{{DIcon|Talk}} About where the Express is headed...
+::::::{{A|VO chapter0 7 himeko 122.ogg}} '''Himeko:''' The Express is traveling on a route that the Trailblaze once embarked on. The names of some destinations have been lost, but the first and final stops were both at Pegana &mdash; Akivili's home world.
+::::::{{A|VO chapter0 7 himeko 123.ogg}} '''Himeko:''' We speculate the Astral Express started its journey from Pegana, stopping at each destination along the way before returning there for its next journey. However, the appearance of the Stellarons has caused a delay at each stop.
+:::::;(Return to previous option selection)
+:::::{{DIcon|Talk}} About the Express' source of power...
+::::::{{A|VO chapter0 7 himeko 124.ogg}} '''Himeko:''' There is a legend in the galaxy: The heart of Akivili themself lies in the core of the Astral Express, providing it with the power to travel between worlds. But I found no evidence of that aboard the Express.
+::::::{{A|VO chapter0 7 himeko 125.ogg}} '''Himeko:''' Besides, the Express existed before the Trailblaze fell. There's no way they could have had two hearts, right? However, it is likely that the Express possesses some sort of mechanism to transfer power from the Trailblaze.
+::::::{{A|VO chapter0 7 himeko 126.ogg}} '''Himeko:''' It wouldn't be possible with a normal Pathstrider.
+:::::;(Return to previous option selection)
+:::::{{DIcon|Talk}} About Akivili...
+::::::{{A|VO chapter0 7 himeko 127.ogg}} '''Himeko:''' The fallen Aeon, deceased Trailblaze &mdash; THEIR passing is still a mystery, but of all the known Aeons, Akivili was the closest to mankind.
+::::::{{A|VO chapter0 7 himeko 128.ogg}} '''Himeko:''' In the databank aboard the Express, it is recorded that THEY walked among the mortals &mdash; adventuring, fighting, and celebrating with THEM. Although THEY were an Aeon restrained by the "Primum Mobile," Akivili enjoyed a freedom similar to us mortals.
+::::::{{A|VO chapter0 7 himeko 129.ogg}} '''Himeko:''' THEY were different from most... But THEIR passing came so suddenly that it was thought THEY were killed by another Aeon. I don't believe that to be the case.
+:::::;(Return to previous option selection)
+::::;(Return to previous option selection)
+::::{{DIcon|Talk}} About the galaxy...
+:::::{{A|VO chapter0 7 himeko 130.ogg}} '''Himeko:''' The galaxy is endlessly vast. I wouldn't know where to begin, especially if you ask me that so suddenly...
+:::::{{DIcon|Talk}} About its nature...
+::::::{{A|VO chapter0 7 himeko 131.ogg}} '''Himeko:''' I've been to many different worlds, yet I still know very little about the galaxy, simply because it's too vast. As for its nature, there are a few theories that I can share with you.
+::::::{{A|VO chapter0 7 himeko 132.ogg}} '''Himeko:''' The most popular is probably the Cosmos Tree theory, proposed by Zandar, Emanator of Erudition and the first member of the Genius Society. He compared the galaxy to an enormous imaginary tree, with its leaves being individual universes.
+::::::{{A|VO chapter0 7 himeko 133.ogg}} '''Himeko:''' Therefore, only Aeons, who draw their energy from the imaginary, and Emanators, who are blessed by Aeons, can travel through the spaces filled with imaginary energy. That's why planets where civilizations exist are so similar.
+::::::{{A|VO chapter0 7 himeko 134.ogg}} '''Himeko:''' However, the theory has its flaws. Elias Salas, the 56th member of the Genius Society, invented remote detection, disproving that the imaginary is unique. This shook the foundation of the "Cosmos Tree" theory.
+::::::{{A|VO chapter0 7 himeko 135.ogg}} '''Himeko:''' There are other theories as well: The "Stretching" theory, the "Heat Torch" theory, and the "Parallel Imaging" theory... The Riddlers claim the galaxy is just a dream and IX's followers seem to like that claim.
+:::::;(Return to previous option selection)
+:::::{{DIcon|Talk}} About the Aeons...
+::::::{{A|VO chapter0 7 himeko 136.ogg}} '''Himeko:''' Aeons are the most mysterious beings in the galaxy. All we know is that THEY ascended from the form of intelligent beings. As for the how and why, even the geniuses over at the Genius Society haven't the slightest clue.
+::::::{{A|VO chapter0 7 himeko 137.ogg}} '''Himeko:''' Upon ascending to Aeon-hood, that being gains power over the Paths, free to choose the allocation of imaginary energy however THEY wish, while suffering the restrictions of the "Primum Mobile."
+::::::{{A|VO chapter0 7 himeko 138.ogg}} '''Himeko:''' The Aeon of Destruction seeks only to destroy the universe, while the Aeon of Erudition wants to find the answer for all that exists. Meanwhile, the Aeon of Preservation continues to forge walls, and the Aeon of Enigmata devotes themself to obscuring all that is known...
+::::::{{A|VO chapter0 7 himeko 139.ogg}} '''Himeko:''' A cloud of mystery shrouds the Aeons. I heard Madam Herta recruited a team to try and solve the mysteries about THEM.
+:::::;(Return to previous option selection)
+:::::{{DIcon|Talk}} About the factions...
+::::::{{A|VO chapter0 7 himeko 140.ogg}} '''Himeko:''' Compared to the Aeons, the factions are much easier to understand. Mortals with the same objective gather together to practice their understanding of Aeons and the Paths.
+::::::{{A|VO chapter0 7 himeko 141.ogg}} '''Himeko:''' Many Aeons are unreachable, but the factions are close to us. After Akivili trailblazed across the galaxy, people became aware of the existence of other worlds. Gradually, more people started trying to use the power of the Aeons to travel between worlds.
+::::::{{A|VO chapter0 7 himeko 142.ogg}} '''Himeko:''' The Interastral Peace Corporation is a good example: They worship Qlipoth, the Aeon of Preservation, but somehow became the largest economic entity in the galaxy;
+::::::{{A|VO chapter0 7 himeko 143.ogg}} '''Himeko:''' Another example is the Genius Society: There is no shortage of eccentrics like Madam Herta who dedicate themselves to scientific research under the protection of the Erudition.
+::::::{{A|VO chapter0 7 himeko 144.ogg}} '''Himeko:''' These factions possess the same power as us to voyage between worlds. It would be hard to travel through the galaxy without them.
+:::::;(Return to previous option selection)
+:::::{{DIcon|Talk}} About the Paths...
+::::::{{A|VO chapter0 7 himeko 145.ogg}} '''Himeko:''' The birth of an Aeon gives rise to a Path. The nature of the Paths remains a mystery, leaving us to draw an analogy in a way that mortals can understand: It's a philosophical concept of sorts.
+::::::{{A|VO chapter0 7 himeko 146.ogg}} '''Himeko:''' A person is considered to be on a Path when their will overlaps with that Path. If the person has a strong enough will, they can draw power from that Path. Those who can do so are called Pathstriders.
+::::::{{A|VO chapter0 7 himeko 147.ogg}} '''Himeko:''' Pathstriders possess extraordinary power, but are still insignificant compared to the Aeons, like a drop of water in a vast ocean. Sometimes, Aeons will bestow a mortal with their power, making them an "Emanator" of that Aeon.
+::::::{{A|VO chapter0 7 himeko 149.ogg}} '''Himeko:''' I should mention that once a Path is open, it cannot be closed, even with the fall of its Aeon. That is how we are still able to travel across the stars, despite Akivili's passing.
+:::::;(Return to previous option selection)
+::::;(Return to previous option selection)
+::::{{DIcon|Exit}} I don't have any more questions.
+::{{DIcon|Exit}} I don't have any more questions.
+;(Otherwise)
+:<pre>{
+	"$type": "RPG.GameCore.PlayMultiVoiceTalk",
+	"TalkSentenceID": 599000101
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.ShowMenu"
+}</pre>
+;(Unused &mdash; TalkSentence_599000514)
+:'''Himeko:''' It was the Express.
+
+;(Unused &mdash; TalkSentence_599000516)
+:'''Himeko:''' It was the Express.
+::'''Himeko:''' I saw a train half-buried in a huge crater. When it happened, I said to myself that this cannot possibly be a thing of this world. It's too dangerous to get close to it...
+::'''Himeko:''' But, out of basic human curiosity, I dared to take a closer look. I keep thinking to myself, just one look, just one look.
+::'''Himeko:''' So, I figured out a way to go inside the Express. The internal structure was incredible, especially its engine...
+::'''Himeko:''' By the time I came to my senses, I had already passionately finished fixing the Express and was already embarking on a journey aboard it.
+::{{DIcon|Arrow}} What kind of wild plot is this?
+::{{DIcon|Arrow}} This is mind-control, right?
+:::'''Himeko:''' Many developments in life are inherently unexpected or uncontrollable, just like your experience with the Express.
+
+;(Unused &mdash; TalkSentence_599000518)
+:'''Himeko:''' I thought so.
+::'''Himeko:''' I saw a train half-buried in a huge crater. When it happened, I said to myself that this cannot possibly be a thing of this world. It's too dangerous to get close to it...
+::'''Himeko:''' But, out of basic human curiosity, I dared to take a closer look. I keep thinking to myself, just one look, just one look.
+::'''Himeko:''' So, I figured out a way to go inside the Express. The internal structure was incredible, especially its engine...
+::'''Himeko:''' By the time I came to my senses, I had already passionately finished fixing the Express and was already embarking on a journey aboard it.
+::{{DIcon|Arrow}} What kind of wild plot is this?
+::{{DIcon|Arrow}} This is mind-control, right?
+:::'''Himeko:''' Many developments in life are inherently unexpected or uncontrollable, just like your experience with the Express.
+
+;(Talk to Welt Yang)
+:{{Black Screen|You explain the results of the investigation to Welt and Himeko...}}
+:'''Himeko:''' Heh... Interesting. What a surprising turn of events.
+:'''Himeko:''' I knew the IPC had been on this planet before the Eternal Freeze, but as far as I was aware, it had pulled everyone out before the Antimatter Legion officially landed on Jarilo-VI.
+:'''Himeko:''' I didn't think they would actually send someone to keep an eye on a planet engulfed in the Eternal Freeze... That however does sounds like their way of doing things.
+:'''Welt:''' Since it's just an ad message, it shouldn't pose a threat to Jarilo-VI. Thanks to your findings, we can all rest easy after all.
+:'''Welt:''' As promised, Himeko and I have prepared a reward for you.
+:'''Himeko:''' ...Huh? Whose phone is ringing?
+<pre>{
+	"$type": "RPG.GameCore.PlayMessage",
+	"MessageSectionID": 1112700
+}</pre>
+:'''Welt:''' History after the Eternal Freeze... Our data bank doesn't seem to have any relevant documents on this topic.
+:'''Himeko:''' Looks like the go-getter on our crew, (Trailblazer), has another new mission. Good luck!
+:{{DIcon|Arrow}} How can I learn about that history?
+::'''Himeko:''' Hehe. That's where our Trailblaze comes in.
+:{{DIcon|Arrow}} I really don't want to go...
+::'''Himeko:''' Hehe. I knew you would say that.
+::'''Welt:''' The way I see it, this is a good opportunity to enrich the Express' data bank... I assume you don't yet know everything about this planet, and you might as well take this chance to learn a bit about its history. What say you, (Trailblazer)?
+::'''Himeko:''' Welt is right. As for where you should go to learn about this history...
+:'''Himeko:''' If my memory still serves me well... You've connected with a young Supreme Guardian during this journey. Isn't that right?
+:'''Himeko:''' She is likely the person closest to the true history of the planet. Go and ask her. You might learn something.
+:{{DIcon|Arrow}} I'll be on my way then.
+:{{DIcon|Arrow}} How about giving me my rewards first?
+::'''Himeko:''' Hehe. Not so quick, (Trailblazer). This investigation is now being extended, so it's not quite the time to dole out rewards just yet.
+::'''Welt:''' ...Don't take advantage of (Trailblazer). But Himeko does have a point. We will give you your reward after this matter has been completely resolved.
+:'''Himeko:''' Have a safe trip, (Trailblazer). I hope your journey will prove fruitful.
+:{{Black Screen|You explain the results of the investigation to Welt and Himeko...}}
 {{Dialogue End}}
 
 ===Go learn about Belobog's history from Bronya{{subst:void|<!--201150108-->}}===
 {{Mission Description|type=adventure|location=Qlipoth Fort|update|The Interastral Peace Appliances salesperson hurriedly interrupts your conversation (via text message). Now, you have no choice but to accept their? ''Its?'' Request.<br />Despite your reluctance, you should listen to Himeko and head to Qlipoth Fort to ask Supreme Guardian Bronya's opinion.}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Bronya)
+:'''Bronya:''' Before the Eternal Freeze? I do know about it, but I can't recite it all by memory.
+:'''Bronya:''' If you are really interested, you should look on the shelf over there for a set of books called ''Belobog Chronicles''. They might be helpful references.
+:'''Bronya:''' What got you suddenly interested in researching that history anyway? Did something happen?
+:{{DIcon|Arrow}} Long story. It all started with an ad...
+:{{DIcon|Arrow}} I'm on a research mission for the Express' data bank.
+:'''Bronya:''' I see...
+:'''Bronya:''' ...Oh. What was that sound?
+<pre>{
+	"$type": "RPG.GameCore.PlayMessage",
+	"MessageSectionID": 1112800
+}</pre>
+:'''Bronya:''' Pfft... I totally get it now.
+:'''Bronya:''' That ''Chronicle'' is on the bookshelf. Feel free to have a look. If you can't find it, just let me know. I'll help you look.
+:'''Bronya:''' The name Interastral Peace Appliances... does seem to ring a bell.
+:'''Bronya:''' Interastral Peace Appliances... Interastral Peace...
+:'''Bronya:''' Interastral Peace Corporation... I've read about it before in the Guardians' history textbook. I think it's some kind of interstellar organization that has massive influences all over the cosmos. It has something to do with Preservation...
+:'''Bronya:''' Oh... never mind. They're all followers of the Amber Lord, but they probably have nothing to do with Belobog. So I need not worry about them for now.
+:{{DIcon|Arrow}} Not necessarily.
+::'''Bronya:''' Hmmm... maybe you're right. But I still believe they might be a net positive for Belobog if there comes a time when we do make contact with them in the future.
+::'''Bronya:''' Alright. Go and find the book you need. Just let me know if you need any help.
+:{{DIcon|Arrow}} I'll go look for the records then. Thank you.
+::'''Bronya:''' You're welcome. I hope Qlipoth Fort's book collection will be of use to you.
 {{Dialogue End}}
 
 ===Look for the ''Belobog Chronicles'' in the bookcase{{subst:void|<!--201150109-->}}===
 {{Mission Description|type=adventure|location=Qlipoth Fort|update|You've lost count of how many times this salesperson had interrupted you, but you eventually learn from Bronya where the information might be kept.<br />Investigate the hulking bookcase in Qlipoth Fort as per Bronya's tip.}}
 {{Dialogue Start}}
-:{{tx}}
+
 {{Dialogue End}}
 
 ===Report in once again to the crew about the results of the investigation{{subst:void|<!--201150111-->}}===
 {{Mission Description|type=adventure|location=Parlor Car|update|Text messages... endless darn messages &mdash; This salesperson doesn't sound like someone who's asking for help, but more like that boss they mentioned.<br />Anyways, you got the important historical records regarding Belobog's icebound years... Hopefully this'll get the salesperson off your back.<br />Oh, don't forget to fill the Crew in on all the relevant details.}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Himeko)
+;(If {{cx}}<!--SubMission not Finish: 101150222--> and {{cx}}<!--SubMission Finish: 101100201-->)
+:;(If {{cx}}<!--during performance 599000103-->)
+:::'''Himeko:''' What's up, (Trailblazer)? Back on the Express slacking off, huh?
+:::{{DIcon|Arrow}} I'm here to listen to your stories...
+:::{{DIcon|Arrow}} I'm free for now and want to hear you talk about the past...
+:::'''Himeko:''' Oh, I almost forgot about that... Then, to make a long story short, where should I begin?
+:::{{DIcon|Arrow}} Himeko, when did you first board the Express?
+::::'''Himeko:''' Now that's got me stumped...
+::::'''Himeko:''' Seven years, eight years... No, that's not right. I'm sorry. I'm not Dan Heng &mdash; I've never kept a diary aboard the Express.
+::::'''Himeko:''' The Express traverses through different worlds, and the flow of time can become blurry...
+::::'''Himeko:''' But I'm clear about the beginning of my story with the Express. That day just so happened to be my birthday. Back then, I was hiking outdoors and looking for a place without any light pollution to observe the light and orbit of Heaven's Finger.
+::::'''Himeko:''' Then, using a telescope, I saw a bright spot streak across the sky. I thought it was a comet and thought nothing of it.
+::::'''Himeko:''' But it wasn't until the spot grew bigger and bigger that I realized there was something wrong... That thing pierced straight through the atmosphere without burning up, and flew straight at me.
+::::'''Himeko:''' So I drove as fast as I could to get out of there, until I heard a loud crash behind me as if the entire world had been flipped upside down...
+::::'''Himeko:''' I saw a train half-buried in a huge crater. When it happened, I said to myself that this cannot possibly be a thing of this world. It's too dangerous to get close to it...
+::::'''Himeko:''' But, out of basic human curiosity, I dared to take a closer look. I keep thinking to myself, just one look, just one look.
+::::'''Himeko:''' So, I figured out a way to go inside the Express. The internal structure was incredible, especially its engine...
+::::'''Himeko:''' By the time I came to my senses, I had already passionately finished fixing the Express and was already embarking on a journey aboard it.
+::::{{DIcon|Arrow}} What kind of wild plot is this?
+::::{{DIcon|Arrow}} This is mind-control, right?
+:::::'''Himeko:''' Many developments in life are inherently unexpected or uncontrollable, just like your experience with the Express.
+:::{{DIcon|Arrow}} When did you and Mr. Yang meet?
+::::'''Himeko:''' About that... Um... When did Welt get here?
+::::'''Himeko:''' Many years ago, Pom-Pom and I were tasked by Herta to go to the abandoned and ruined world of Salsotto, looking for a special material called Cadence Glass...
+::::'''Himeko:''' Just as the Express finished its warp jump, we picked up an unknown signal. It was coming from the wreckage of a huge starship.
+::::'''Himeko:''' Based on the ''Express Safety Manual'', such an obviously dangerous signal should be ignored. You have no idea whether the party sending the signal is a victim needing rescue, or a bandit lurking behind a trap...
+::::'''Himeko:''' But out of basic human curiosity, we decided to take a look and immediately set out for Salsotto to do our business.
+::::'''Himeko:''' Welt joined up with us after that.
+::::{{DIcon|Arrow}} Wait... You're missing lots of details, aren't you?
+::::{{DIcon|Arrow}} What exactly happened?
+::::'''Himeko:''' There was no torturous rescue process, just the normal procedures. In the end, there were two new passengers on the Express.
+::::'''Himeko:''' They chose to work for the Express as a way to say thanks for saving their lives and pay off their rescue-related expenses.
+::::'''Himeko:''' How about that? Is that good enough to satisfy your curiosities?
+::::'''Himeko:''' Well, satisfied or not, you can ask Welt if you have any more questions. If you'll excuse me, (Trailblazer), I have to get on my work now.
+:;(If {{cx}}<!--not during performance 599000103-->)
+:::'''Himeko:''' You can go and chat with Welt if he has the time...
+;(Otherwise, if {{cx}}<!--SubMission Finish: 101000205-->, {{cx}}<!--SubMission not Finish: 101100201-->, and {{cx}}<!--during performance 599000102-->)
+::'''Himeko:''' Oh, back so soon?
+::{{DIcon|Arrow}} We narrowly averted disaster, and now we're home.
+::{{DIcon|Arrow}} We almost didn't make it back...
+::'''Himeko:''' Hah, it seems this world is a dangerous place, too. Ever since the Astral Express embarked on this journey, every world contaminated by the Stellaron has been problematic.
+::'''Himeko:''' Before the three of you boarded the Express, Welt, I... and someone else were adventuring together. It was the same back then as well &mdash; we would slowly trailblaze new worlds, find the Stellaron, and clear a path...
+::'''Himeko:''' No matter what world we were on, some difficulties remain constant &mdash; misunderstandings caused by communication, enmity caused by cultural differences, and enemies with malicious intentions. But there is always something new.
+::'''Himeko:''' Keep up the good work, (Trailblazer).
+::{{DIcon|Arrow}} You've never mentioned these things before...
+::{{DIcon|Arrow}} I want to hear about your past...
+::'''Himeko:''' You've still got work to do. As for me, I've got to maintain the Express while it is parked.
+::'''Himeko:''' We can take a long break after we're done with this world. Come find me if you're still interested then.
+;(Otherwise, if {{cx}}<!--SubMission not Finish: 100050304--> and {{cx}}<!--SubMission Finish: 100050201-->)
+::{{A|VO chapter0 7 himeko 116.ogg}} '''Himeko:''' What's wrong? You look like you were about to say something.
+::{{A|VO chapter0 7 himeko 117.ogg}} '''Himeko:''' Oh, I think I know what you were going to ask. You've come to the right person.
+::{{DIcon|Talk}} About the Express...
+:::{{A|VO chapter0 7 himeko 118.ogg}} '''Himeko:''' Ohh, you want to know more about the Express? I'm glad. After all, it's an important companion of ours.
+:::{{DIcon|Talk}} About the history of the Express...
+::::{{A|VO chapter0 7 himeko 119.ogg}} '''Himeko:''' The Astral Express was a tool created by Akivili the Trailblaze, who used it to transport THEMSELF and the Nameless across the galaxy. It is rumored that there are other vehicles like it, but the Express has no such records.
+::::{{A|VO chapter0 7 himeko 120.ogg}} '''Himeko:''' When I found the Express, its memory had been severely damaged, with much of its valuable information lost. All I know is that the Express is an Aspect of Creation built by Akivili themself, and used to travel the cosmos.
+::::{{A|VO chapter0 7 himeko 121.ogg}} '''Himeko:''' As for how it was built and how it was damaged, I do not have an answer.
+:::;(Return to previous option selection)
+:::{{DIcon|Talk}} About where the Express is headed...
+::::{{A|VO chapter0 7 himeko 122.ogg}} '''Himeko:''' The Express is traveling on a route that the Trailblaze once embarked on. The names of some destinations have been lost, but the first and final stops were both at Pegana &mdash; Akivili's home world.
+::::{{A|VO chapter0 7 himeko 123.ogg}} '''Himeko:''' We speculate the Astral Express started its journey from Pegana, stopping at each destination along the way before returning there for its next journey. However, the appearance of the Stellarons has caused a delay at each stop.
+:::;(Return to previous option selection)
+:::{{DIcon|Talk}} About the Express' source of power...
+::::{{A|VO chapter0 7 himeko 124.ogg}} '''Himeko:''' There is a legend in the galaxy: The heart of Akivili themself lies in the core of the Astral Express, providing it with the power to travel between worlds. But I found no evidence of that aboard the Express.
+::::{{A|VO chapter0 7 himeko 125.ogg}} '''Himeko:''' Besides, the Express existed before the Trailblaze fell. There's no way they could have had two hearts, right? However, it is likely that the Express possesses some sort of mechanism to transfer power from the Trailblaze.
+::::{{A|VO chapter0 7 himeko 126.ogg}} '''Himeko:''' It wouldn't be possible with a normal Pathstrider.
+:::;(Return to previous option selection)
+:::{{DIcon|Talk}} About Akivili...
+::::{{A|VO chapter0 7 himeko 127.ogg}} '''Himeko:''' The fallen Aeon, deceased Trailblaze &mdash; THEIR passing is still a mystery, but of all the known Aeons, Akivili was the closest to mankind.
+::::{{A|VO chapter0 7 himeko 128.ogg}} '''Himeko:''' In the databank aboard the Express, it is recorded that THEY walked among the mortals &mdash; adventuring, fighting, and celebrating with THEM. Although THEY were an Aeon restrained by the "Primum Mobile," Akivili enjoyed a freedom similar to us mortals.
+::::{{A|VO chapter0 7 himeko 129.ogg}} '''Himeko:''' THEY were different from most... But THEIR passing came so suddenly that it was thought THEY were killed by another Aeon. I don't believe that to be the case.
+:::;(Return to previous option selection)
+:::{{DIcon|Return}} I have another question...
+::::{{DIcon|Talk}} About the galaxy...
+:::::{{A|VO chapter0 7 himeko 130.ogg}} '''Himeko:''' The galaxy is endlessly vast. I wouldn't know where to begin, especially if you ask me that so suddenly...
+:::::{{DIcon|Talk}} About its nature...
+::::::{{A|VO chapter0 7 himeko 131.ogg}} '''Himeko:''' I've been to many different worlds, yet I still know very little about the galaxy, simply because it's too vast. As for its nature, there are a few theories that I can share with you.
+::::::{{A|VO chapter0 7 himeko 132.ogg}} '''Himeko:''' The most popular is probably the Cosmos Tree theory, proposed by Zandar, Emanator of Erudition and the first member of the Genius Society. He compared the galaxy to an enormous imaginary tree, with its leaves being individual universes.
+::::::{{A|VO chapter0 7 himeko 133.ogg}} '''Himeko:''' Therefore, only Aeons, who draw their energy from the imaginary, and Emanators, who are blessed by Aeons, can travel through the spaces filled with imaginary energy. That's why planets where civilizations exist are so similar.
+::::::{{A|VO chapter0 7 himeko 134.ogg}} '''Himeko:''' However, the theory has its flaws. Elias Salas, the 56th member of the Genius Society, invented remote detection, disproving that the imaginary is unique. This shook the foundation of the "Cosmos Tree" theory.
+::::::{{A|VO chapter0 7 himeko 135.ogg}} '''Himeko:''' There are other theories as well: The "Stretching" theory, the "Heat Torch" theory, and the "Parallel Imaging" theory... The Riddlers claim the galaxy is just a dream and IX's followers seem to like that claim.
+:::::;(Return to previous option selection)
+:::::{{DIcon|Talk}} About the Aeons...
+::::::{{A|VO chapter0 7 himeko 136.ogg}} '''Himeko:''' Aeons are the most mysterious beings in the galaxy. All we know is that THEY ascended from the form of intelligent beings. As for the how and why, even the geniuses over at the Genius Society haven't the slightest clue.
+::::::{{A|VO chapter0 7 himeko 137.ogg}} '''Himeko:''' Upon ascending to Aeon-hood, that being gains power over the Paths, free to choose the allocation of imaginary energy however THEY wish, while suffering the restrictions of the "Primum Mobile."
+::::::{{A|VO chapter0 7 himeko 138.ogg}} '''Himeko:''' The Aeon of Destruction seeks only to destroy the universe, while the Aeon of Erudition wants to find the answer for all that exists. Meanwhile, the Aeon of Preservation continues to forge walls, and the Aeon of Enigmata devotes themself to obscuring all that is known...
+::::::{{A|VO chapter0 7 himeko 139.ogg}} '''Himeko:''' A cloud of mystery shrouds the Aeons. I heard Madam Herta recruited a team to try and solve the mysteries about THEM.
+:::::;(Return to previous option selection)
+:::::{{DIcon|Talk}} About the factions...
+::::::{{A|VO chapter0 7 himeko 140.ogg}} '''Himeko:''' Compared to the Aeons, the factions are much easier to understand. Mortals with the same objective gather together to practice their understanding of Aeons and the Paths.
+::::::{{A|VO chapter0 7 himeko 141.ogg}} '''Himeko:''' Many Aeons are unreachable, but the factions are close to us. After Akivili trailblazed across the galaxy, people became aware of the existence of other worlds. Gradually, more people started trying to use the power of the Aeons to travel between worlds.
+::::::{{A|VO chapter0 7 himeko 142.ogg}} '''Himeko:''' The Interastral Peace Corporation is a good example: They worship Qlipoth, the Aeon of Preservation, but somehow became the largest economic entity in the galaxy;
+::::::{{A|VO chapter0 7 himeko 143.ogg}} '''Himeko:''' Another example is the Genius Society: There is no shortage of eccentrics like Madam Herta who dedicate themselves to scientific research under the protection of the Erudition.
+::::::{{A|VO chapter0 7 himeko 144.ogg}} '''Himeko:''' These factions possess the same power as us to voyage between worlds. It would be hard to travel through the galaxy without them.
+:::::;(Return to previous option selection)
+:::::{{DIcon|Talk}} About the Paths...
+::::::{{A|VO chapter0 7 himeko 145.ogg}} '''Himeko:''' The birth of an Aeon gives rise to a Path. The nature of the Paths remains a mystery, leaving us to draw an analogy in a way that mortals can understand: It's a philosophical concept of sorts.
+::::::{{A|VO chapter0 7 himeko 146.ogg}} '''Himeko:''' A person is considered to be on a Path when their will overlaps with that Path. If the person has a strong enough will, they can draw power from that Path. Those who can do so are called Pathstriders.
+::::::{{A|VO chapter0 7 himeko 147.ogg}} '''Himeko:''' Pathstriders possess extraordinary power, but are still insignificant compared to the Aeons, like a drop of water in a vast ocean. Sometimes, Aeons will bestow a mortal with their power, making them an "Emanator" of that Aeon.
+::::::{{A|VO chapter0 7 himeko 149.ogg}} '''Himeko:''' I should mention that once a Path is open, it cannot be closed, even with the fall of its Aeon. That is how we are still able to travel across the stars, despite Akivili's passing.
+:::::;(Return to previous option selection)
+::::;(Return to previous option selection)
+::::{{DIcon|Talk}} About Trailblaze...
+:::::{{A|VO chapter0 7 himeko 150.ogg}} '''Himeko:''' "Trailblaze" is our mission and the source of strength that powers the Express to travel across the galaxy.
+:::::{{DIcon|Talk}} About Exploration...
+::::::{{A|VO chapter0 7 himeko 151.ogg}} '''Himeko:''' Explore the unknown world to continue our journey ahead.
+:::::;(Return to previous option selection)
+:::::{{DIcon|Talk}} About Understanding...
+::::::{{A|VO chapter0 7 himeko 152.ogg}} '''Himeko:''' Understand the local culture and immerse ourselves within it.
+:::::;(Return to previous option selection)
+:::::{{DIcon|Talk}} About Establishing...
+::::::{{A|VO chapter0 7 himeko 153.ogg}} '''Himeko:''' Establish a connection with the new world &mdash; rejoice with it and share in its fears.
+:::::;(Return to previous option selection)
+:::::{{DIcon|Talk}} About Connection...
+::::::{{A|VO chapter0 7 himeko 154.ogg}} '''Himeko:''' Connect worlds together, carving an endless path.
+:::::;(Return to previous option selection)
+::::;(Return to previous option selection)
+::::{{DIcon|Exit}} I don't have any more questions.
+::{{DIcon|Talk}} About the galaxy...
+:::{{A|VO chapter0 7 himeko 130.ogg}} '''Himeko:''' The galaxy is endlessly vast. I wouldn't know where to begin, especially if you ask me that so suddenly...
+:::{{DIcon|Talk}} About its nature...
+::::{{A|VO chapter0 7 himeko 131.ogg}} '''Himeko:''' I've been to many different worlds, yet I still know very little about the galaxy, simply because it's too vast. As for its nature, there are a few theories that I can share with you.
+::::{{A|VO chapter0 7 himeko 132.ogg}} '''Himeko:''' The most popular is probably the Cosmos Tree theory, proposed by Zandar, Emanator of Erudition and the first member of the Genius Society. He compared the galaxy to an enormous imaginary tree, with its leaves being individual universes.
+::::{{A|VO chapter0 7 himeko 133.ogg}} '''Himeko:''' Therefore, only Aeons, who draw their energy from the imaginary, and Emanators, who are blessed by Aeons, can travel through the spaces filled with imaginary energy. That's why planets where civilizations exist are so similar.
+::::{{A|VO chapter0 7 himeko 134.ogg}} '''Himeko:''' However, the theory has its flaws. Elias Salas, the 56th member of the Genius Society, invented remote detection, disproving that the imaginary is unique. This shook the foundation of the "Cosmos Tree" theory.
+::::{{A|VO chapter0 7 himeko 135.ogg}} '''Himeko:''' There are other theories as well: The "Stretching" theory, the "Heat Torch" theory, and the "Parallel Imaging" theory... The Riddlers claim the galaxy is just a dream and IX's followers seem to like that claim.
+:::;(Return to previous option selection)
+:::{{DIcon|Talk}} About the Aeons...
+::::{{A|VO chapter0 7 himeko 136.ogg}} '''Himeko:''' Aeons are the most mysterious beings in the galaxy. All we know is that THEY ascended from the form of intelligent beings. As for the how and why, even the geniuses over at the Genius Society haven't the slightest clue.
+::::{{A|VO chapter0 7 himeko 137.ogg}} '''Himeko:''' Upon ascending to Aeon-hood, that being gains power over the Paths, free to choose the allocation of imaginary energy however THEY wish, while suffering the restrictions of the "Primum Mobile."
+::::{{A|VO chapter0 7 himeko 138.ogg}} '''Himeko:''' The Aeon of Destruction seeks only to destroy the universe, while the Aeon of Erudition wants to find the answer for all that exists. Meanwhile, the Aeon of Preservation continues to forge walls, and the Aeon of Enigmata devotes themself to obscuring all that is known...
+::::{{A|VO chapter0 7 himeko 139.ogg}} '''Himeko:''' A cloud of mystery shrouds the Aeons. I heard Madam Herta recruited a team to try and solve the mysteries about THEM.
+:::;(Return to previous option selection)
+:::{{DIcon|Talk}} About the factions...
+::::{{A|VO chapter0 7 himeko 140.ogg}} '''Himeko:''' Compared to the Aeons, the factions are much easier to understand. Mortals with the same objective gather together to practice their understanding of Aeons and the Paths.
+::::{{A|VO chapter0 7 himeko 141.ogg}} '''Himeko:''' Many Aeons are unreachable, but the factions are close to us. After Akivili trailblazed across the galaxy, people became aware of the existence of other worlds. Gradually, more people started trying to use the power of the Aeons to travel between worlds.
+::::{{A|VO chapter0 7 himeko 142.ogg}} '''Himeko:''' The Interastral Peace Corporation is a good example: They worship Qlipoth, the Aeon of Preservation, but somehow became the largest economic entity in the galaxy;
+::::{{A|VO chapter0 7 himeko 143.ogg}} '''Himeko:''' Another example is the Genius Society: There is no shortage of eccentrics like Madam Herta who dedicate themselves to scientific research under the protection of the Erudition.
+::::{{A|VO chapter0 7 himeko 144.ogg}} '''Himeko:''' These factions possess the same power as us to voyage between worlds. It would be hard to travel through the galaxy without them.
+:::;(Return to previous option selection)
+:::{{DIcon|Talk}} About the Paths...
+::::{{A|VO chapter0 7 himeko 145.ogg}} '''Himeko:''' The birth of an Aeon gives rise to a Path. The nature of the Paths remains a mystery, leaving us to draw an analogy in a way that mortals can understand: It's a philosophical concept of sorts.
+::::{{A|VO chapter0 7 himeko 146.ogg}} '''Himeko:''' A person is considered to be on a Path when their will overlaps with that Path. If the person has a strong enough will, they can draw power from that Path. Those who can do so are called Pathstriders.
+::::{{A|VO chapter0 7 himeko 147.ogg}} '''Himeko:''' Pathstriders possess extraordinary power, but are still insignificant compared to the Aeons, like a drop of water in a vast ocean. Sometimes, Aeons will bestow a mortal with their power, making them an "Emanator" of that Aeon.
+::::{{A|VO chapter0 7 himeko 149.ogg}} '''Himeko:''' I should mention that once a Path is open, it cannot be closed, even with the fall of its Aeon. That is how we are still able to travel across the stars, despite Akivili's passing.
+:::;(Return to previous option selection)
+:::{{DIcon|Return}} I have another question...
+::::{{DIcon|Talk}} About the Express...
+:::::{{A|VO chapter0 7 himeko 118.ogg}} '''Himeko:''' Ohh, you want to know more about the Express? I'm glad. After all, it's an important companion of ours.
+:::::{{DIcon|Talk}} About the history of the Express...
+::::::{{A|VO chapter0 7 himeko 119.ogg}} '''Himeko:''' The Astral Express was a tool created by Akivili the Trailblaze, who used it to transport THEMSELF and the Nameless across the galaxy. It is rumored that there are other vehicles like it, but the Express has no such records.
+::::::{{A|VO chapter0 7 himeko 120.ogg}} '''Himeko:''' When I found the Express, its memory had been severely damaged, with much of its valuable information lost. All I know is that the Express is an Aspect of Creation built by Akivili themself, and used to travel the cosmos.
+::::::{{A|VO chapter0 7 himeko 121.ogg}} '''Himeko:''' As for how it was built and how it was damaged, I do not have an answer.
+:::::;(Return to previous option selection)
+:::::{{DIcon|Talk}} About where the Express is headed...
+::::::{{A|VO chapter0 7 himeko 122.ogg}} '''Himeko:''' The Express is traveling on a route that the Trailblaze once embarked on. The names of some destinations have been lost, but the first and final stops were both at Pegana &mdash; Akivili's home world.
+::::::{{A|VO chapter0 7 himeko 123.ogg}} '''Himeko:''' We speculate the Astral Express started its journey from Pegana, stopping at each destination along the way before returning there for its next journey. However, the appearance of the Stellarons has caused a delay at each stop.
+:::::;(Return to previous option selection)
+:::::{{DIcon|Talk}} About the Express' source of power...
+::::::{{A|VO chapter0 7 himeko 124.ogg}} '''Himeko:''' There is a legend in the galaxy: The heart of Akivili themself lies in the core of the Astral Express, providing it with the power to travel between worlds. But I found no evidence of that aboard the Express.
+::::::{{A|VO chapter0 7 himeko 125.ogg}} '''Himeko:''' Besides, the Express existed before the Trailblaze fell. There's no way they could have had two hearts, right? However, it is likely that the Express possesses some sort of mechanism to transfer power from the Trailblaze.
+::::::{{A|VO chapter0 7 himeko 126.ogg}} '''Himeko:''' It wouldn't be possible with a normal Pathstrider.
+:::::;(Return to previous option selection)
+:::::{{DIcon|Talk}} About Akivili...
+::::::{{A|VO chapter0 7 himeko 127.ogg}} '''Himeko:''' The fallen Aeon, deceased Trailblaze &mdash; THEIR passing is still a mystery, but of all the known Aeons, Akivili was the closest to mankind.
+::::::{{A|VO chapter0 7 himeko 128.ogg}} '''Himeko:''' In the databank aboard the Express, it is recorded that THEY walked among the mortals &mdash; adventuring, fighting, and celebrating with THEM. Although THEY were an Aeon restrained by the "Primum Mobile," Akivili enjoyed a freedom similar to us mortals.
+::::::{{A|VO chapter0 7 himeko 129.ogg}} '''Himeko:''' THEY were different from most... But THEIR passing came so suddenly that it was thought THEY were killed by another Aeon. I don't believe that to be the case.
+:::::;(Return to previous option selection)
+::::;(Return to previous option selection)
+::::{{DIcon|Talk}} About Trailblaze...
+:::::{{A|VO chapter0 7 himeko 150.ogg}} '''Himeko:''' "Trailblaze" is our mission and the source of strength that powers the Express to travel across the galaxy.
+:::::{{DIcon|Talk}} About Exploration...
+::::::{{A|VO chapter0 7 himeko 151.ogg}} '''Himeko:''' Explore the unknown world to continue our journey ahead.
+:::::;(Return to previous option selection)
+:::::{{DIcon|Talk}} About Understanding...
+::::::{{A|VO chapter0 7 himeko 152.ogg}} '''Himeko:''' Understand the local culture and immerse ourselves within it.
+:::::;(Return to previous option selection)
+:::::{{DIcon|Talk}} About Establishing...
+::::::{{A|VO chapter0 7 himeko 153.ogg}} '''Himeko:''' Establish a connection with the new world &mdash; rejoice with it and share in its fears.
+:::::;(Return to previous option selection)
+:::::{{DIcon|Talk}} About Connection...
+::::::{{A|VO chapter0 7 himeko 154.ogg}} '''Himeko:''' Connect worlds together, carving an endless path.
+:::::;(Return to previous option selection)
+::::;(Return to previous option selection)
+::::{{DIcon|Exit}} I don't have any more questions.
+::{{DIcon|Talk}} About Trailblaze...
+:::{{A|VO chapter0 7 himeko 150.ogg}} '''Himeko:''' "Trailblaze" is our mission and the source of strength that powers the Express to travel across the galaxy.
+:::{{DIcon|Talk}} About Exploration...
+::::{{A|VO chapter0 7 himeko 151.ogg}} '''Himeko:''' Explore the unknown world to continue our journey ahead.
+:::;(Return to previous option selection)
+:::{{DIcon|Talk}} About Understanding...
+::::{{A|VO chapter0 7 himeko 152.ogg}} '''Himeko:''' Understand the local culture and immerse ourselves within it.
+:::;(Return to previous option selection)
+:::{{DIcon|Talk}} About Establishing...
+::::{{A|VO chapter0 7 himeko 153.ogg}} '''Himeko:''' Establish a connection with the new world &mdash; rejoice with it and share in its fears.
+:::;(Return to previous option selection)
+:::{{DIcon|Talk}} About Connection...
+::::{{A|VO chapter0 7 himeko 154.ogg}} '''Himeko:''' Connect worlds together, carving an endless path.
+:::;(Return to previous option selection)
+:::{{DIcon|Return}} I have another question...
+::::{{DIcon|Talk}} About the Express...
+:::::{{A|VO chapter0 7 himeko 118.ogg}} '''Himeko:''' Ohh, you want to know more about the Express? I'm glad. After all, it's an important companion of ours.
+:::::{{DIcon|Talk}} About the history of the Express...
+::::::{{A|VO chapter0 7 himeko 119.ogg}} '''Himeko:''' The Astral Express was a tool created by Akivili the Trailblaze, who used it to transport THEMSELF and the Nameless across the galaxy. It is rumored that there are other vehicles like it, but the Express has no such records.
+::::::{{A|VO chapter0 7 himeko 120.ogg}} '''Himeko:''' When I found the Express, its memory had been severely damaged, with much of its valuable information lost. All I know is that the Express is an Aspect of Creation built by Akivili themself, and used to travel the cosmos.
+::::::{{A|VO chapter0 7 himeko 121.ogg}} '''Himeko:''' As for how it was built and how it was damaged, I do not have an answer.
+:::::;(Return to previous option selection)
+:::::{{DIcon|Talk}} About where the Express is headed...
+::::::{{A|VO chapter0 7 himeko 122.ogg}} '''Himeko:''' The Express is traveling on a route that the Trailblaze once embarked on. The names of some destinations have been lost, but the first and final stops were both at Pegana &mdash; Akivili's home world.
+::::::{{A|VO chapter0 7 himeko 123.ogg}} '''Himeko:''' We speculate the Astral Express started its journey from Pegana, stopping at each destination along the way before returning there for its next journey. However, the appearance of the Stellarons has caused a delay at each stop.
+:::::;(Return to previous option selection)
+:::::{{DIcon|Talk}} About the Express' source of power...
+::::::{{A|VO chapter0 7 himeko 124.ogg}} '''Himeko:''' There is a legend in the galaxy: The heart of Akivili themself lies in the core of the Astral Express, providing it with the power to travel between worlds. But I found no evidence of that aboard the Express.
+::::::{{A|VO chapter0 7 himeko 125.ogg}} '''Himeko:''' Besides, the Express existed before the Trailblaze fell. There's no way they could have had two hearts, right? However, it is likely that the Express possesses some sort of mechanism to transfer power from the Trailblaze.
+::::::{{A|VO chapter0 7 himeko 126.ogg}} '''Himeko:''' It wouldn't be possible with a normal Pathstrider.
+:::::;(Return to previous option selection)
+:::::{{DIcon|Talk}} About Akivili...
+::::::{{A|VO chapter0 7 himeko 127.ogg}} '''Himeko:''' The fallen Aeon, deceased Trailblaze &mdash; THEIR passing is still a mystery, but of all the known Aeons, Akivili was the closest to mankind.
+::::::{{A|VO chapter0 7 himeko 128.ogg}} '''Himeko:''' In the databank aboard the Express, it is recorded that THEY walked among the mortals &mdash; adventuring, fighting, and celebrating with THEM. Although THEY were an Aeon restrained by the "Primum Mobile," Akivili enjoyed a freedom similar to us mortals.
+::::::{{A|VO chapter0 7 himeko 129.ogg}} '''Himeko:''' THEY were different from most... But THEIR passing came so suddenly that it was thought THEY were killed by another Aeon. I don't believe that to be the case.
+:::::;(Return to previous option selection)
+::::;(Return to previous option selection)
+::::{{DIcon|Talk}} About the galaxy...
+:::::{{A|VO chapter0 7 himeko 130.ogg}} '''Himeko:''' The galaxy is endlessly vast. I wouldn't know where to begin, especially if you ask me that so suddenly...
+:::::{{DIcon|Talk}} About its nature...
+::::::{{A|VO chapter0 7 himeko 131.ogg}} '''Himeko:''' I've been to many different worlds, yet I still know very little about the galaxy, simply because it's too vast. As for its nature, there are a few theories that I can share with you.
+::::::{{A|VO chapter0 7 himeko 132.ogg}} '''Himeko:''' The most popular is probably the Cosmos Tree theory, proposed by Zandar, Emanator of Erudition and the first member of the Genius Society. He compared the galaxy to an enormous imaginary tree, with its leaves being individual universes.
+::::::{{A|VO chapter0 7 himeko 133.ogg}} '''Himeko:''' Therefore, only Aeons, who draw their energy from the imaginary, and Emanators, who are blessed by Aeons, can travel through the spaces filled with imaginary energy. That's why planets where civilizations exist are so similar.
+::::::{{A|VO chapter0 7 himeko 134.ogg}} '''Himeko:''' However, the theory has its flaws. Elias Salas, the 56th member of the Genius Society, invented remote detection, disproving that the imaginary is unique. This shook the foundation of the "Cosmos Tree" theory.
+::::::{{A|VO chapter0 7 himeko 135.ogg}} '''Himeko:''' There are other theories as well: The "Stretching" theory, the "Heat Torch" theory, and the "Parallel Imaging" theory... The Riddlers claim the galaxy is just a dream and IX's followers seem to like that claim.
+:::::;(Return to previous option selection)
+:::::{{DIcon|Talk}} About the Aeons...
+::::::{{A|VO chapter0 7 himeko 136.ogg}} '''Himeko:''' Aeons are the most mysterious beings in the galaxy. All we know is that THEY ascended from the form of intelligent beings. As for the how and why, even the geniuses over at the Genius Society haven't the slightest clue.
+::::::{{A|VO chapter0 7 himeko 137.ogg}} '''Himeko:''' Upon ascending to Aeon-hood, that being gains power over the Paths, free to choose the allocation of imaginary energy however THEY wish, while suffering the restrictions of the "Primum Mobile."
+::::::{{A|VO chapter0 7 himeko 138.ogg}} '''Himeko:''' The Aeon of Destruction seeks only to destroy the universe, while the Aeon of Erudition wants to find the answer for all that exists. Meanwhile, the Aeon of Preservation continues to forge walls, and the Aeon of Enigmata devotes themself to obscuring all that is known...
+::::::{{A|VO chapter0 7 himeko 139.ogg}} '''Himeko:''' A cloud of mystery shrouds the Aeons. I heard Madam Herta recruited a team to try and solve the mysteries about THEM.
+:::::;(Return to previous option selection)
+:::::{{DIcon|Talk}} About the factions...
+::::::{{A|VO chapter0 7 himeko 140.ogg}} '''Himeko:''' Compared to the Aeons, the factions are much easier to understand. Mortals with the same objective gather together to practice their understanding of Aeons and the Paths.
+::::::{{A|VO chapter0 7 himeko 141.ogg}} '''Himeko:''' Many Aeons are unreachable, but the factions are close to us. After Akivili trailblazed across the galaxy, people became aware of the existence of other worlds. Gradually, more people started trying to use the power of the Aeons to travel between worlds.
+::::::{{A|VO chapter0 7 himeko 142.ogg}} '''Himeko:''' The Interastral Peace Corporation is a good example: They worship Qlipoth, the Aeon of Preservation, but somehow became the largest economic entity in the galaxy;
+::::::{{A|VO chapter0 7 himeko 143.ogg}} '''Himeko:''' Another example is the Genius Society: There is no shortage of eccentrics like Madam Herta who dedicate themselves to scientific research under the protection of the Erudition.
+::::::{{A|VO chapter0 7 himeko 144.ogg}} '''Himeko:''' These factions possess the same power as us to voyage between worlds. It would be hard to travel through the galaxy without them.
+:::::;(Return to previous option selection)
+:::::{{DIcon|Talk}} About the Paths...
+::::::{{A|VO chapter0 7 himeko 145.ogg}} '''Himeko:''' The birth of an Aeon gives rise to a Path. The nature of the Paths remains a mystery, leaving us to draw an analogy in a way that mortals can understand: It's a philosophical concept of sorts.
+::::::{{A|VO chapter0 7 himeko 146.ogg}} '''Himeko:''' A person is considered to be on a Path when their will overlaps with that Path. If the person has a strong enough will, they can draw power from that Path. Those who can do so are called Pathstriders.
+::::::{{A|VO chapter0 7 himeko 147.ogg}} '''Himeko:''' Pathstriders possess extraordinary power, but are still insignificant compared to the Aeons, like a drop of water in a vast ocean. Sometimes, Aeons will bestow a mortal with their power, making them an "Emanator" of that Aeon.
+::::::{{A|VO chapter0 7 himeko 149.ogg}} '''Himeko:''' I should mention that once a Path is open, it cannot be closed, even with the fall of its Aeon. That is how we are still able to travel across the stars, despite Akivili's passing.
+:::::;(Return to previous option selection)
+::::;(Return to previous option selection)
+::::{{DIcon|Exit}} I don't have any more questions.
+::{{DIcon|Exit}} I don't have any more questions.
+;(Otherwise)
+:<pre>{
+	"$type": "RPG.GameCore.PlayMultiVoiceTalk",
+	"TalkSentenceID": 599000101
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.ShowMenu"
+}</pre>
+;(Unused &mdash; TalkSentence_599000514)
+:'''Himeko:''' It was the Express.
+
+;(Unused &mdash; TalkSentence_599000516)
+:'''Himeko:''' It was the Express.
+::'''Himeko:''' I saw a train half-buried in a huge crater. When it happened, I said to myself that this cannot possibly be a thing of this world. It's too dangerous to get close to it...
+::'''Himeko:''' But, out of basic human curiosity, I dared to take a closer look. I keep thinking to myself, just one look, just one look.
+::'''Himeko:''' So, I figured out a way to go inside the Express. The internal structure was incredible, especially its engine...
+::'''Himeko:''' By the time I came to my senses, I had already passionately finished fixing the Express and was already embarking on a journey aboard it.
+::{{DIcon|Arrow}} What kind of wild plot is this?
+::{{DIcon|Arrow}} This is mind-control, right?
+:::'''Himeko:''' Many developments in life are inherently unexpected or uncontrollable, just like your experience with the Express.
+
+;(Unused &mdash; TalkSentence_599000518)
+:'''Himeko:''' I thought so.
+::'''Himeko:''' I saw a train half-buried in a huge crater. When it happened, I said to myself that this cannot possibly be a thing of this world. It's too dangerous to get close to it...
+::'''Himeko:''' But, out of basic human curiosity, I dared to take a closer look. I keep thinking to myself, just one look, just one look.
+::'''Himeko:''' So, I figured out a way to go inside the Express. The internal structure was incredible, especially its engine...
+::'''Himeko:''' By the time I came to my senses, I had already passionately finished fixing the Express and was already embarking on a journey aboard it.
+::{{DIcon|Arrow}} What kind of wild plot is this?
+::{{DIcon|Arrow}} This is mind-control, right?
+:::'''Himeko:''' Many developments in life are inherently unexpected or uncontrollable, just like your experience with the Express.
+
+;(Talk to Welt Yang)
+:{{Black Screen|You explain what you learned about the history prior to the Eternal Freeze to Welt and Himeko...}}
+:'''Himeko:''' Hmmm... So that was how Belobog was established. Didn't know that they had a calendar system like this...
+:'''Welt:''' Good work, (Trailblazer). And with that, we can finally have records on the time before and after the Eternal Freeze in our data bank.
+:'''Himeko:''' You never let us down, (Trailblazer). I suppose if we ever have a problem, we can just leave it in your capable hands. Now then, we can finally give that reward to...
+:'''Himeko & Welt:''' ...
+:'''Welt:''' ...(Trailblazer). I think your phone is ringing again. Don't you want to check it?
+<pre>{
+	"$type": "RPG.GameCore.PlayMessage",
+	"MessageSectionID": 1113000
+}</pre>
+:'''Himeko:''' ...You're truly the very definition of indomitable. This investigation must've been quite the chore for you, (Trailblazer).
+:'''Welt:''' Keep up the good work. Come, this is the reward that Himeko and I have prepared for you.
+:'''Himeko:''' I hope... these can make up for any mental damage you've endured during this investigation.
+:{{Black Screen|You explain the results of the investigation to Welt and Himeko...}}
+<pre>{
+	"$type": "RPG.GameCore.SaveMessage",
+	"MessageSectionID": 1113000
+}</pre>
+:'''(Trailblazer):''' (Didn't the salesperson say that Findie was supposed to be taken to the Herta Space Station...)
+:'''(Trailblazer):''' (I'll just go and ask Asta about it...)
 {{Dialogue End}}
 
 ===Ask Asta about Findie's origins{{subst:void|<!--201150112-->}}===
 {{Mission Description|type=adventure|location=Master Control Zone|update|You put an end to the salesperson's endless harassment in your own way, while also accidentally discovering where Findie belongs to.<br />It's time to go to the space station and ask Lead Researcher Asta for confirmation &mdash; if you feel today was a little too much for you, perhaps she can lend a sympathetic ear.}}
 {{Dialogue Start}}
-:{{tx}}
+
+
+;(Talk to Asta)
+<pre>{
+	"$type": "RPG.GameCore.PlayMultiVoiceTalk",
+	"TalkSentenceID": 500012201
+}</pre>
+:'''Asta:''' Did you encounter some problems?
+<pre>{
+	"$type": "RPG.GameCore.ShowMenu"
+}</pre>
+
+:{{DIcon|Talk}} Findie
+:'''Findie:''' Beep, beep, beep... This is not an Interastral Peace Appliances store.
+:'''Findie:''' Who am I? Where am I? What am I doing?
+:'''Asta:''' So this finder is able to talk.
+:'''Asta:''' The name is "Findie"... right? Your current location is the Herta space station, and I'll later arrange accommodation for you...
+:'''Findie:''' Beep beep... Must return to Interastral Peace Appliances! Must return to Interastral Peace Appliances!
+<pre>{
+	"$type": "RPG.GameCore.SaveMessage",
+	"MessageSectionID": 1113000
+}</pre>
+:'''(Trailblazer):''' (Didn't the salesperson say that Findie was supposed to be taken to the Herta Space Station...)
+:'''(Trailblazer):''' (I'll just go and ask Asta about it...)
 {{Dialogue End}}
 
 ==Other Languages==

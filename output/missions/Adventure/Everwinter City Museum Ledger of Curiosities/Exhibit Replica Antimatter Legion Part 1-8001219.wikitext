@@ -40,22 +40,192 @@ PageTitle=#Exhibit Replica: Antimatter Legion Part 1#
 ===Find out more about the situation from Uldan{{subst:void|<!--800121901-->}}===
 {{Mission Description|type=adventure|location=History and Culture Museum|Belobog's History and Culture Museum will be opening soon. Uldan is collecting appropriate exhibits to ensure a successful opening.<br />This time, Uldan needs your help to take a picture of a frozen Antimatter Legion Voidranger at the Outlying Snow Plains to help the museum make a replica.}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Uldan)
+:'''Uldan:''' (Trailblazer), there's something I need your help with.
+::'''Uldan:''' We're trying to get more visitors in, so the museum is after some photos from which to model replicas. Can you please go and snap a few pictures of the {{Color|keyword|nobold=1|Antimatter Legion's ice sculptures}}?
+::{{DIcon|Arrow}} Why the Antimatter Legion's ice sculptures?
+:::'''Uldan:''' Haha, compared with normal relics and artworks, those ice sculptures are far more of an attraction.
+::{{DIcon|Arrow}} Don't you need photos of any other exhibits?
+:::'''Uldan:''' No. Even if we put them out, everyone's focus would still be on the ice sculptures.
+::'''Uldan:''' Please show me the photo once you've taken it. {{Color|keyword|nobold=1|One photo}} should be enough.
+:<pre>{
+	"$type": "RPG.GameCore.PlayMultiVoiceTalk",
+	"TalkSentenceID": 501190111
+}</pre>
+:::{{DIcon|?}} About the portrait of Cyrille the Fool...
+::::'''Uldan:''' (Trailblazer)... Did you say that the description of {{Color|keyword|nobold=1|Cyrille the Fool's}} portrait deviated from the truth?
+::::'''Uldan:''' But... how's that possible? The description is taken from the history textbooks of the Belobog Academy. Everything is in black and white.
+::::{{DIcon|Talk}} I met Cyrille before.
+:::::'''Uldan:''' Well... Stop pulling my leg.
+:::::'''Uldan:''' Still, I can tell you have at least heard of Cyrille from your tone.
+::::;(Return to previous option selection)
+::::{{DIcon|Arrow}} I have evidence that supports Cyrille.
+:::::'''Uldan:''' Since you sound so sure of yourself, I'll take a look at your evidence.
+::::<pre>{
+	"$type": "RPG.GameCore.ConsumeMissionItemPerformance",
+	"SubMissionID": 800122503,
+	"Desc": {
+		"Hash": 18096028862919064994
+	},
+	"OnSubmitConfirm": [
+		{
+			"$type": "RPG.GameCore.PlayAndWaitSimpleTalk",
+			"SimpleTalkList": [
+				{
+					"TalkSentenceID": 800122739
+				},
+				{
+					"TalkSentenceID": 800122740
+				},
+				{
+					"TalkSentenceID": 800122741
+				},
+				{
+					"TalkSentenceID": 800122742
+				}
+			]
+		},
+		{
+			"$type": "RPG.GameCore.TriggerCustomString",
+			"CustomString": {
+				"Value": "Talk_800122502"
+			}
+		},
+		{
+			"$type": "RPG.GameCore.TriggerCustomString",
+			"CustomString": {
+				"Value": "TalkSentence_501190151"
+			}
+		}
+	],
+	"OnSubmitCancel": [
+		{
+			"$type": "RPG.GameCore.TriggerCustomString",
+			"CustomString": {
+				"Value": "TalkSentence_501190151"
+			}
+		}
+	],
+	"SimpleTalk": {}
+}</pre>
+:::{{DIcon|Exit}} I'll go ahead and tour now.
+:<pre>{
+	"$type": "RPG.GameCore.PlayMultiVoiceTalk",
+	"TalkSentenceID": 501190111
+}</pre>
 {{Dialogue End}}
 
 ===Go to the Outlying Snow Plains and take a picture of the frozen Antimatter Legion unit{{subst:void|<!--800121902-->}}===
 {{Dialogue Start}}
-:{{tx}}
+
+;(Unused &mdash; 8001219_fail)
+<pre>{
+	"$type": "RPG.GameCore.ToastPile",
+	"ImgPath": "SpriteOutput/UI/MobilePhone/TextPanel.png",
+	"DescTextID": {
+		"Hash": 10364261400690773299
+	}
+}</pre>
+
+;(Unused &mdash; Mission_8001219)
+:'''(Trailblazer):''' (This is one crisp photo... Should be enough.)
 {{Dialogue End}}
 
 ===Report to Uldan{{subst:void|<!--800121903-->}}===
 {{Dialogue Start}}
-:{{tx}}
+
+
+;(Talk to Uldan)
+;(If {{cx}}<!--during performance 501190101-->)
+::'''Uldan:''' Welcome to the Belobog History and Culture Museum, {{MC|f=young miss|m=young man}}. Is there anything an old man like me can help you with?
+::{{DIcon|Arrow}} I'm just here to visit the museum.
+:::'''Uldan:''' Oh hoho, you're at the wrong place. This is the museum's warehouse. Head out then turn right, the exhibition hall is past the reception counter.
+::{{DIcon|Arrow}} I'm here solely to talk with older people.
+:::'''Uldan:''' Hah, what a unique hobby. However, this is a museum after all. Since you're here, might as well have a tour. Head out then turn right, the exhibition hall is past the reception counter.
+::'''Uldan:''' If you have any questions along your tour, or if you have any feedback or opinions, welcome to come talk to me...
+::'''Uldan:''' ...I am Uldan, former dean of the Belobog College of Art, and now the curator of this museum. Pleased to meet you.
+;(If {{cx}}<!--not during performance 501190101-->)
+::<pre>{
+	"$type": "RPG.GameCore.PlayMultiVoiceTalk",
+	"TalkSentenceID": 501190111
+}</pre>
+::::{{DIcon|?}} About the portrait of Cyrille the Fool...
+:::::'''Uldan:''' (Trailblazer)... Did you say that the description of {{Color|keyword|nobold=1|Cyrille the Fool's}} portrait deviated from the truth?
+:::::'''Uldan:''' But... how's that possible? The description is taken from the history textbooks of the Belobog Academy. Everything is in black and white.
+:::::{{DIcon|Talk}} I met Cyrille before.
+::::::'''Uldan:''' Well... Stop pulling my leg.
+::::::'''Uldan:''' Still, I can tell you have at least heard of Cyrille from your tone.
+:::::;(Return to previous option selection)
+:::::{{DIcon|Arrow}} I have evidence that supports Cyrille.
+::::::'''Uldan:''' Since you sound so sure of yourself, I'll take a look at your evidence.
+:::::<pre>{
+	"$type": "RPG.GameCore.ConsumeMissionItemPerformance",
+	"SubMissionID": 800122503,
+	"Desc": {
+		"Hash": 18096028862919064994
+	},
+	"OnSubmitConfirm": [
+		{
+			"$type": "RPG.GameCore.PlayAndWaitSimpleTalk",
+			"SimpleTalkList": [
+				{
+					"TalkSentenceID": 800122739
+				},
+				{
+					"TalkSentenceID": 800122740
+				},
+				{
+					"TalkSentenceID": 800122741
+				},
+				{
+					"TalkSentenceID": 800122742
+				}
+			]
+		},
+		{
+			"$type": "RPG.GameCore.TriggerCustomString",
+			"CustomString": {
+				"Value": "Talk_800122502"
+			}
+		},
+		{
+			"$type": "RPG.GameCore.TriggerCustomString",
+			"CustomString": {
+				"Value": "TalkSentence_501190151"
+			}
+		}
+	],
+	"OnSubmitCancel": [
+		{
+			"$type": "RPG.GameCore.TriggerCustomString",
+			"CustomString": {
+				"Value": "TalkSentence_501190151"
+			}
+		}
+	],
+	"SimpleTalk": {}
+}</pre>
+::::{{DIcon|Exit}} I'll go ahead and tour now.
+::<pre>{
+	"$type": "RPG.GameCore.PlayMultiVoiceTalk",
+	"TalkSentenceID": 501190111
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.PlayMultiVoiceTalk",
+	"TalkSentenceID": 501190111
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.ShowMenu"
+}</pre>
 {{Dialogue End}}
 
 ===Place the exhibit at the specified spot{{subst:void|<!--800121904-->}}===
 {{Dialogue Start}}
-:{{tx}}
+
+:{{DIcon|Loupe}} Investigate
+:An oil painting depicting the Administrative District in its full majesty.
+:The Administrative District depicted in the painting is much larger than you remember. Maybe it's because there are many places off-limits to you.
 {{Dialogue End}}
 
 ==Other Languages==

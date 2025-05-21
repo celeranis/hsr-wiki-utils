@@ -44,78 +44,696 @@ PageTitle=#The Stars Are Cold Toys#
 -->
 ==Dialogue==
 {{Stub Dialogue}}
+<pre>{
+	"$type": "RPG.GameCore.PropSetVisibility",
+	"SpecifiedRelativePaths": [],
+	"TargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvPropEx",
+		"FetchType": "SinglePropByPropID",
+		"SinglePropID": {
+			"GroupID": {
+				"FixedValue": {
+					"Value": 29
+				}
+			},
+			"ID": {
+				"FixedValue": {
+					"Value": 300001
+				}
+			}
+		}
+	}
+}</pre>
+----
+:{{A|VO chapter1 8 seele 205.ogg}} '''Seele:''' Is this... the Fragmentum Gepard was talking about?
+:{{A|VO chapter1 8 danheng 202.ogg}} '''Dan Heng:''' Compared to this, the corrosion we saw in Backwater Pass pales into insignificance.
+:{{DIcon|Arrow}} How can we pinpoint the Stellaron?
+::{{A|VO chapter1 8 danheng 203.ogg}} '''Dan Heng:''' Serval said that the Stellaron was very likely hidden in the Snow Plains north of Belobog. If we want to get there, I'm afraid we'll have to find the exit to this Fragmentum maze first.
+::{{A|VO chapter1 8 mar7th 204.ogg}} '''March 7th:''' Guys... does this place feel weird to you? It feels like... like there are loads of eyes staring at us.
+:{{DIcon|Arrow}} There's a restless atmosphere here.
+::{{A|VO chapter1 8 mar7th 205 m.ogg}} {{A|VO chapter1 8 mar7th 205 f.ogg}} '''March 7th:''' Oh yeah, (Trailblazer). It feels like... like there are loads of eyes staring at us.
+::{{A|VO chapter1 8 danheng 203.ogg}} '''Dan Heng:''' Serval said that the Stellaron was very likely hidden in the Snow Plains north of Belobog. If we want to get there, I'm afraid we'll have to find the exit to this Fragmentum maze first.
+:{{A|VO chapter1 8 seele 206.ogg}} '''Seele:''' ...This place makes my flesh crawl... like there are insects under my skin.
+:{{A|VO chapter1 8 danheng 205.ogg}} '''Dan Heng:''' We have no guide and no way of detecting the Stellaron. We'll just have to advance gradually... and cautiously.
+:{{A|VO chapter1 8 danheng 206.ogg}} '''Dan Heng:''' Don't be disheartened. The stronger the Fragmentum contamination, the closer we are to the source.
+----
 {{Dialogue End}}
 
 ===Venture deeper into the Corridor of Fading Echoes{{subst:void|<!--101130101-->}}===
 {{Mission Description|type=trailblaze|location=Corridor of Fading Echoes|update|After witnessing the Landau siblings fighting side by side, you truly understand what perseverance and bravery really mean.<br />You just made your way through a fierce battlefield, and now you find yourself inside a Fragmentum maze deafened by silence &mdash; the deathly quiet of this place sends a chill down your spine.<br />Something dangerous seems to lurk in the suffocating air here... All you can do now is to carefully investigate the surroundings while trying to figure out a way to venture deeper into the Fragmentum.}}
 {{Dialogue Start}}
-:{{tx}}
+;(Upon reaching the destination)
+:{{A|VO chapter1 8 mar7th 206.ogg}} '''March 7th:''' Look, up ahead on the ground... What is that?
+:{{A|VO chapter1 8 danheng 207.ogg}} '''Dan Heng:''' Be careful, think twice before you interact with anything in the Fragmentum.
 {{Dialogue End}}
 
 ===Investigate items discarded on the side of the road{{subst:void|<!--101130103-->}}===
 {{Mission Description|type=trailblaze|location=Corridor of Fading Echoes|update|After witnessing the Landau siblings fighting side by side, you truly understand what perseverance and bravery really mean.<br />You just made your way through a fierce battlefield and now you find yourself inside a Fragmentum maze deafened by silence &mdash; the deathly quiet of this place sends a chill down your spine.<br />Here, March 7th is showing excellent dexterity never before seen: She notices the strange objects discarded on the roadside that don't seem to belong to this dimension.<br />Although Dan Heng has reminded everyone that the Fragmentum is filled with traps, your nature for adventure tells you that it's necessary to take a closer look.}}
 {{Dialogue Start}}
-:{{tx}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{A|VO chapter1 8 mar7th 211.ogg}} '''March 7th:''' We're deep inside the Fragmentum... There could be hidden dangers lying in wait.
+:{{A|VO chapter1 8 mar7th 212.ogg}} '''March 7th:''' Let's look for other clues first.
+<pre>{
+	"$type": "RPG.GameCore.CaptureLocalPlayer",
+	"CharacterUniqueName": "LocalPlayer"
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.CharacterTriggerAnimState",
+	"CharacterUniqueName": {
+		"Value": "LocalPlayer"
+	},
+	"AnimStateName": "RunStop_R",
+	"NormalizedTimeStart": 0.25,
+	"NormalizedTransitionDuration": 0.1,
+	"NormalizedTimeWait": 0.1
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.ActiveVirtualCamera",
+	"AreaName": "101130104_Temp",
+	"AnchorName": "101130104_Cam_2",
+	"FollowTargetUniqueName": "LocalPlayer",
+	"LookAtTargetAnchorName": "LookAt_101130104",
+	"WaitBlendFinish": true,
+	"BlendConfig": {
+		"ExportToJson": true,
+		"BlendType": "Cut",
+		"BlendTime": 1
+	}
+}</pre>
+:{{A|VO chapter1 8 mar7th 208.ogg}} '''March 7th:''' That's Bronya! H&mdash;Huh? Is that Cocolia too!?
+:{{A|VO chapter1 8 danheng 208.ogg}} '''Dan Heng:''' No, it isn't them.
+:{{A|VO chapter1 8 danheng 209.ogg}} '''Dan Heng:''' It must be... a kind of echo? Some type of residual energy replicated by the Fragmentum...
+:{{A|VO chapter1 8 mar7th 209.ogg}} '''March 7th:''' Which means they were definitely here, right?
+:{{A|VO chapter1 8 mar7th 210.ogg}} '''March 7th:''' And it looks like they went that way.
+:{{A|VO chapter1 8 seele 210.ogg}} '''Seele:''' Ha, just in time! We had no idea which direction to take. Let's go!
+;(Obtain {{Item|Delicate Snow Globe|20|x=1}})
+
+;(Talk to Cocolia's Echo)
+:{{A|VO chapter1 8 bronya 201.ogg}} '''Bronya:''' ...You still haven't told me what this place is, mother.
+:{{A|VO chapter1 8 cocolia 201.ogg}} '''Cocolia:''' Seven hundred years ago, this was Belobog's northern border and the site of an ancient battle. Here is where Alisa Rand led the first Silvermane Guards in resistance against the Legion.
+:{{A|VO chapter1 8 cocolia 202.ogg}} '''Cocolia:''' Now... it is nothing more than an abandoned corridor, filled with the sounds of Old World echoes.
+:{{A|VO chapter1 8 cocolia 203.ogg}} '''Cocolia:''' Don't let its fragmented appearance fool you, Bronya. On the day the promise is fulfilled... these ruins will become the breeding ground of a new world.
+:{{A|VO chapter1 8 bronya 202.ogg}} '''Bronya:''' ...Mother, do you truly believe the Stellaron's promise? It summoned the blizzard beyond our walls and opened the door of the Fragmentum. It destroyed our civilization, it...
+:{{A|VO chapter1 8 cocolia 204.ogg}} '''Cocolia:''' ...And yet, the crime of our ancestors was their inability to embrace that destruction sooner...
+:{{A|VO chapter1 8 bronya 203.ogg}} '''Bronya:''' ...
+:{{A|VO chapter1 8 cocolia 205.ogg}} '''Cocolia:''' From the moment those intruders descended from beyond the sky, this world was handed a death sentence. But the Stellaron... has reserved for us a thread of hope.
+:{{A|VO chapter1 8 cocolia 206.ogg}} '''Cocolia:''' There is a price to pay for new life. Wiping away every decaying vestige of the Old World, renouncing the meaningless and lingering struggle... This is the price the Stellaron demands.
+:{{A|VO chapter1 8 cocolia 207.ogg}} '''Cocolia:''' When the promise is fulfilled, Bronya... no longer will we have to squander our lives guarding this wasteland. You and I will witness the new world rise from the ruins.
+:{{A|VO chapter1 8 bronya 204.ogg}} '''Bronya:''' ...
 {{Dialogue End}}
 
 ===Catch up to Bronya and Cocolia{{subst:void|<!--101130105-->}}===
 {{Mission Description|type=trailblaze|location=Corridor of Fading Echoes|update|After witnessing the Landau siblings fighting side by side, you truly understand what perseverance and bravery really mean.<br />You just made your way through a fierce battlefield and now you find yourself inside a Fragmentum maze deafened by silence &mdash; the deathly quiet of this place sends a chill down your spine.<br />March 7th accomplished another feat after discovering the item left behind by Bronya. This time she discovered that the echoing mirages of the guardian mother and daughter have appeared just up ahead.<br />This is undoubtedly a manifestation of the Fragmentum's unique nature of imitating reality &mdash; the two might have been here not long ago. Catch up to them and take a look!}}
 {{Dialogue Start}}
-:{{tx}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{A|VO chapter1 8 seele 211.ogg}} '''Seele:''' This is a complex mechanism. How did they get past?
+:{{A|VO chapter1 8 mar7th 213.ogg}} '''March 7th:''' *sigh* I knew this wouldn't be simple...
+:{{A|VO chapter1 8 mar7th 214.ogg}} '''March 7th:''' Wait! Wasn't there some big energy hub-looking thing back in that empty area? Let's go back and take a look, maybe it's linked to this gate.
+
+;(Upon reaching the destination)
+:{{A|VO chapter1 8 mar7th 211.ogg}} '''March 7th:''' We're deep inside the Fragmentum... There could be hidden dangers lying in wait.
+:{{A|VO chapter1 8 mar7th 212.ogg}} '''March 7th:''' Let's look for other clues first.
 {{Dialogue End}}
 
 ===Try to find the switch and open the mechanism gate{{subst:void|<!--101130106-->}}===
 {{Mission Description|type=trailblaze|location=Corridor of Fading Echoes|update|A giant mechanism gate stops your advance once again.<br />Armed with the experience of dealing with the gear bridge in the Silvermane Guard Restricted Zone, you quickly realize that if you want to unlock the mechanism in front of you, you'll have to find the device linked to it.<br />These types of devices aren't usually set up very far... Try looking in the area!}}
 {{Dialogue Start}}
-:{{tx}}
+:{{A|VO chapter1 8 danheng 211.ogg}} '''Dan Heng:''' I can't say I like the idea of interacting with our surroundings &mdash; especially this deep into the Fragmentum. However...
+:{{A|VO chapter1 8 mar7th 215.ogg}} '''March 7th:''' However?
+:{{A|VO chapter1 8 danheng 212.ogg}} '''Dan Heng:''' ...There's no other way. Desperate times call for desperate measures.
+:{{A|VO chapter1 8 mar7th 216.ogg}} '''March 7th:''' Ha, even Dan Heng the sensible has his adventurous days!
+
+;(Upon reaching the destination)
+:{{A|VO chapter1 8 mar7th 211.ogg}} '''March 7th:''' We're deep inside the Fragmentum... There could be hidden dangers lying in wait.
+:{{A|VO chapter1 8 mar7th 212.ogg}} '''March 7th:''' Let's look for other clues first.
+
+;(Talk to Cocolia's Echo)
+:{{A|VO chapter1 8 bronya 205.ogg}} '''Bronya:''' I don't understand... Even if the truth is as you say, every generation of guardian has resisted the call of the Stellaron...
+:{{A|VO chapter1 8 bronya 206.ogg}} '''Bronya:''' Can all of them have been wrong, mother?
+:{{A|VO chapter1 8 cocolia 208.ogg}} '''Cocolia:''' Do you still not see, Bronya? There is no right or wrong here. Some of them acted out of human pride, others out of human shortsightedness.
+:{{A|VO chapter1 8 cocolia 209.ogg}} '''Cocolia:''' Our ancestors... including Alisa Rand... spent their whole lives trying to prolong this civilization. Then, after all fell still, their memories were scattered by the blizzard.
+:{{A|VO chapter1 8 cocolia 210.ogg}} '''Cocolia:''' They spent lifetimes writing songs of praise that lauded the bravery of humanity, but couldn't spare the time to gaze up into the stars.
+:{{A|VO chapter1 8 cocolia 211.ogg}} '''Cocolia:''' To those entities of greater magnificence in the heavens above, a thousand years is but a passing moment, the attainments of insignificant beings nothing more than a footnote.
+:{{A|VO chapter1 8 cocolia 212.ogg}} '''Cocolia:''' I shall not follow the guardians' misguided steps down that blind alley of narcissism. If persistence is futile, then one must choose a new beginning.
+:{{A|VO chapter1 8 bronya 207.ogg}} '''Bronya:''' But, Qlipoth the Preservation... Are THEY not one of the magnificent entities you speak of? Is it not THEIR strength... that has sheltered Belobog this entire time?
+:{{A|VO chapter1 8 cocolia 213.ogg}} '''Cocolia:''' The Preservation... Has the Preservation ever looked humanity in the eye? Nothing more than an arrogant delusion of the Architects.
+:{{A|VO chapter1 8 cocolia 214.ogg}} '''Cocolia:''' You will hear the real voice of magnificence, Bronya... Then, you will understand my choice.
 {{Dialogue End}}
 
 ===Set out to the end of this journey{{subst:void|<!--101130125-->}}===
 {{Mission Description|type=trailblaze|location=Corridor of Fading Echoes|update|Your first Trailblaze journey is nearing its end. At the top of these steps is the original of it all &mdash; it is where the Stellaron lay.<br />Remove the Stellaron and Belobog will be completely freed from the instability and fabricated peace, and the planet will welcome a new life.<br />However, an ending is but a new beginning &mdash; your Express will also return to its rails and head towards the next destination.<br />Once you are ready, mount the steps and witness the ending to this planet and journey.}}
 {{Dialogue Start}}
+:{{A|VO chapter1 8 mar7th 239.ogg}} '''March 7th:''' ...She disappeared.
+:{{A|VO chapter1 8 seele 224.ogg}} '''Seele:''' Those stairs... it's the only way forward.
+:{{A|VO chapter1 8 danheng 235.ogg}} '''Dan Heng:''' Wherever they lead, it must be the end of the journey.
+:{{A|VO chapter1 8 mar7th 240.ogg}} '''March 7th:''' I don't wanna get to the end so soon... I want my journey to go on forever.
+:{{A|VO chapter1 8 seele 225.ogg}} '''Seele:''' This means that Bronya is up ahead... and so is the fate of the Overworld and the Underworld... It's all in our hands.
+:{{A|VO chapter1 8 seele 226.ogg}} '''Seele:''' Strange, I thought I'd feel nervous or afraid... but I don't. The only feeling I have... is that none of this seems real.
+:{{DIcon|Arrow}} Is this how Trailblazing expeditions usually come to an end?
+::Is this how Trailblazing expeditions usually come to an end?
+::{{A|VO chapter1 8 mar7th 241.ogg}} '''March 7th:''' Not always, sometimes it's a happier conclusion.
+::These two have gotten used to these expeditions.
+::{{A|VO chapter1 8 mar7th 242.ogg}} '''March 7th:''' To be honest, you never really get used to them! We always used to rely on Himeko and Mr. Yang.
+:{{DIcon|Arrow}} These two have gotten used to these expeditions.
+::These two have gotten used to these expeditions.
+::{{A|VO chapter1 8 mar7th 242.ogg}} '''March 7th:''' To be honest, you never really get used to them! We always used to rely on Himeko and Mr. Yang.
+:{{DIcon|Arrow}} Resting forever in the Snow Plains... that wouldn't be so bad.
+::Resting forever in the Snow Plains... that wouldn't be so bad.
+::{{A|VO chapter1 8 mar7th 243.ogg}} '''March 7th:''' Hey, way to boost morale over there!
+::{{A|VO chapter1 8 danheng 236.ogg}} '''Dan Heng:''' The Express has traveled world after world. We are merely passing travellers &mdash; witnesses to part of a grander story.
+::{{A|VO chapter1 8 danheng 237.ogg}} '''Dan Heng:''' We invariably avoid getting drawn into turbulence that can decide the fate of a world... but there are always times when we have no choice but to act.
+::{{A|VO chapter1 8 mar7th 244 m.ogg}} {{A|VO chapter1 8 mar7th 244 f.ogg}} '''March 7th:''' Or to put it another way, (Trailblazer)... this is one heck of a first Trailblazing expedition! You hit the jackpot!
+::{{A|VO chapter1 8 seele 227.ogg}} '''Seele:''' I was about to bore you all with my gloomy reflections... but on second thought &mdash; not today. Adventuring with you guys by my side has made me feel like no obstacle is too big.
+::{{A|VO chapter1 8 mar7th 245.ogg}} '''March 7th:''' Right on! But you can say whatever you like &mdash; a good adventure shouldn't be full of rules and regulations!
+::{{A|VO chapter1 8 mar7th 246.ogg}} '''March 7th:''' Helping those in need, befriending those worth counting on, and saving the world a few times along the way...
+::{{DIcon|Arrow}} This is the spirit of trailblazing!
+::This is the spirit of trailblazing!
+::{{tx}}
+:Resting forever in the Snow Plains... that wouldn't be so bad.
+:{{A|VO chapter1 8 mar7th 243.ogg}} '''March 7th:''' Hey, way to boost morale over there!
+:{{A|VO chapter1 8 danheng 236.ogg}} '''Dan Heng:''' The Express has traveled world after world. We are merely passing travellers &mdash; witnesses to part of a grander story.
+:{{A|VO chapter1 8 danheng 237.ogg}} '''Dan Heng:''' We invariably avoid getting drawn into turbulence that can decide the fate of a world... but there are always times when we have no choice but to act.
+:{{A|VO chapter1 8 mar7th 244 m.ogg}} {{A|VO chapter1 8 mar7th 244 f.ogg}} '''March 7th:''' Or to put it another way, (Trailblazer)... this is one heck of a first Trailblazing expedition! You hit the jackpot!
+:{{A|VO chapter1 8 seele 227.ogg}} '''Seele:''' I was about to bore you all with my gloomy reflections... but on second thought &mdash; not today. Adventuring with you guys by my side has made me feel like no obstacle is too big.
+:{{A|VO chapter1 8 mar7th 245.ogg}} '''March 7th:''' Right on! But you can say whatever you like &mdash; a good adventure shouldn't be full of rules and regulations!
+:{{A|VO chapter1 8 mar7th 246.ogg}} '''March 7th:''' Helping those in need, befriending those worth counting on, and saving the world a few times along the way...
+:{{DIcon|Arrow}} This is the spirit of trailblazing!
+:This is the spirit of trailblazing!
 :{{tx}}
+----
+:{{A|VO chapter1 8 mar7th 228.ogg}} '''March 7th:''' *gasp* Are these echoes too?
+:{{A|VO chapter1 8 danheng 227.ogg}} '''Dan Heng:''' Yes. The Fragmentum here seems to have made a special connection with Cocolia. It's repeatedly generating forms in her image.
+----
 {{Dialogue End}}
 
 ===Try to find the switch and open the mechanism gate{{subst:void|<!--101130107-->}}===
 {{Mission Description|type=trailblaze|location=Corridor of Fading Echoes|update|A giant mechanism gate stops your advance once again.<br />Armed with the experience of dealing with the gear bridge in the Silvermane Guard Restricted Zone, you quickly realize that if you want to unlock the mechanism in front of you, you'll have to find the device linked to it.<br />These types of devices aren't usually set up very far... Try looking in the area!}}
 {{Dialogue Start}}
-:{{tx}}
+:{{A|VO chapter1 8 mar7th 217.ogg}} '''March 7th:''' It worked, right?
+:{{A|VO chapter1 8 mar7th 218.ogg}} '''March 7th:''' ...But, the gate didn't move an inch...
+:{{A|VO chapter1 8 seele 212.ogg}} '''Seele:''' *sigh* Are there other units around?
+:{{A|VO chapter1 8 danheng 213.ogg}} '''Dan Heng:''' Hmm. It's clear that whoever designed these mechanisms didn't want outsiders to get through too easily. Let's keep looking for the energy hub.
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+<pre>{
+	"$type": "RPG.GameCore.CaptureLocalPlayer",
+	"CharacterUniqueName": "LocalPlayer"
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.CharacterTriggerAnimState",
+	"CharacterUniqueName": {
+		"Value": "LocalPlayer"
+	},
+	"AnimStateName": "RunStop_R",
+	"NormalizedTimeStart": 0.25,
+	"NormalizedTransitionDuration": 0.1,
+	"NormalizedTimeWait": 0.1
+}</pre>
+----
+<pre>{
+	"$type": "RPG.GameCore.ActiveVirtualCamera",
+	"AreaName": "1011301_Temp",
+	"AnchorName": "101130108_Cam",
+	"WaitBlendFinish": true,
+	"BlendConfig": {
+		"ExportToJson": true,
+		"BlendType": "Cut",
+		"BlendTime": 2
+	}
+}</pre>
+:{{A|VO chapter1 8 mar7th 219.ogg}} '''March 7th:''' Look over there! I think I can see the next unit.
+:{{A|VO chapter1 8 seele 213.ogg}} '''Seele:''' ...I see it too &mdash; let's go.
+<pre>{
+	"$type": "RPG.GameCore.ActiveVirtualCamera",
+	"AreaName": "1011301_Temp",
+	"AnchorName": "101130108_Cam",
+	"IsActive": false,
+	"WaitBlendFinish": true,
+	"BlendConfig": {
+		"ExportToJson": true,
+		"BlendType": "Cut",
+		"BlendTime": 1
+	}
+}</pre>
 {{Dialogue End}}
 
 ===Activate all mechanisms{{subst:void|<!--101130109-->}}===
 {{Mission Description|type=trailblaze|location=Corridor of Fading Echoes|update|A giant mechanism gate stops your advance once again.<br />Armed with the experience of dealing with the gear bridge in the Silvermane Guard Restricted Zone, you quickly realize that if you want to unlock the mechanism in front of you, you'll have to find the device linked to it.<br />Apparently, there is more than just one device that controls the mechanism gate &mdash; you can't help but think that the sole purpose of this gate is to torture its user...<br />However, complaining won't do you any good. Keep searching for the remaining devices!}}
 {{Dialogue Start}}
-:{{tx}}
+
+
+;(Unused &mdash; Mission_101130114)
+:;(If {{cx}}<!--SubMission Finish: 101130110--> and {{cx}}<!--SubMission Finish: 101130111-->)
+:::{{A|VO chapter1 8 mar7th 227.ogg}} '''March 7th:''' Done! It took some effort, but we finally cracked these mechanisms...
+:::{{A|VO chapter1 8 seele 220.ogg}} '''Seele:''' We're one step closer to Bronya. Let's move!
+:;(If {{cx}}<!--SubMission not Finish: 101130110--> and {{cx}}<!--SubMission not Finish: 101130111-->)
+:::{{A|VO chapter1 8 mar7th 221.ogg}} '''March 7th:''' Did you hear that? This mechanism must be on now!
+:::{{A|VO chapter1 8 mar7th 222.ogg}} '''March 7th:''' Come on, let's find the next one!
+::<pre>{
+	"$type": "RPG.GameCore.SelectorConfig",
+	"TaskList": [
+		{
+			"$type": "RPG.GameCore.PropStateExecute",
+			"TargetType": {
+				"$type": "RPG.GameCore.TargetFetchAdvPropEx",
+				"FetchType": "SinglePropByPropID",
+				"SinglePropID": {
+					"GroupID": {
+						"FixedValue": {
+							"Value": 3
+						}
+					},
+					"ID": {
+						"FixedValue": {
+							"Value": 300011
+						}
+					}
+				}
+			},
+			"Execute": [
+				{
+					"$type": "RPG.GameCore.TriggerPerformance",
+					"ValueSource": {},
+					"PerformanceType": "D",
+					"PerformanceID": 101130112
+				},
+				{
+					"$type": "RPG.GameCore.TriggerCustomString",
+					"CustomString": {
+						"Value": "101130114_MissionTalk"
+					}
+				},
+				{
+					"$type": "RPG.GameCore.FinishPerformanceMission",
+					"Key": "Mission_101130114"
+				}
+			]
+		},
+		{
+			"$type": "RPG.GameCore.PropStateExecute",
+			"TargetType": {
+				"$type": "RPG.GameCore.TargetFetchAdvPropEx",
+				"FetchType": "SinglePropByPropID",
+				"SinglePropID": {
+					"GroupID": {
+						"FixedValue": {
+							"Value": 3
+						}
+					},
+					"ID": {
+						"FixedValue": {
+							"Value": 300011
+						}
+					}
+				}
+			},
+			"State": "Open",
+			"Execute": [
+				{
+					"$type": "RPG.GameCore.TriggerCustomString",
+					"CustomString": {
+						"Value": "101130114_MissionTalk"
+					}
+				},
+				{
+					"$type": "RPG.GameCore.FinishPerformanceMission",
+					"Key": "Mission_101130114"
+				}
+			]
+		}
+	]
+}</pre>
+
+;(Unused &mdash; 302Block_Act_Over)
+:;(If {{cx}}<!--SubMission Finish: 101130110--> and {{cx}}<!--SubMission Finish: 101130111-->)
+:::{{A|VO chapter1 8 mar7th 227.ogg}} '''March 7th:''' Done! It took some effort, but we finally cracked these mechanisms...
+:::{{A|VO chapter1 8 seele 220.ogg}} '''Seele:''' We're one step closer to Bronya. Let's move!
+:;(If {{cx}}<!--SubMission not Finish: 101130110--> and {{cx}}<!--SubMission not Finish: 101130111-->)
+:::{{A|VO chapter1 8 mar7th 221.ogg}} '''March 7th:''' Did you hear that? This mechanism must be on now!
+:::{{A|VO chapter1 8 mar7th 222.ogg}} '''March 7th:''' Come on, let's find the next one!
+::<pre>{
+	"$type": "RPG.GameCore.SelectorConfig",
+	"TaskList": [
+		{
+			"$type": "RPG.GameCore.PropStateExecute",
+			"TargetType": {
+				"$type": "RPG.GameCore.TargetFetchAdvPropEx",
+				"FetchType": "SinglePropByPropID",
+				"SinglePropID": {
+					"GroupID": {
+						"FixedValue": {
+							"Value": 3
+						}
+					},
+					"ID": {
+						"FixedValue": {
+							"Value": 300011
+						}
+					}
+				}
+			},
+			"Execute": [
+				{
+					"$type": "RPG.GameCore.TriggerPerformance",
+					"ValueSource": {},
+					"PerformanceType": "D",
+					"PerformanceID": 101130112
+				},
+				{
+					"$type": "RPG.GameCore.TriggerCustomString",
+					"CustomString": {
+						"Value": "101130114_MissionTalk"
+					}
+				},
+				{
+					"$type": "RPG.GameCore.FinishPerformanceMission",
+					"Key": "Mission_101130114"
+				}
+			]
+		},
+		{
+			"$type": "RPG.GameCore.PropStateExecute",
+			"TargetType": {
+				"$type": "RPG.GameCore.TargetFetchAdvPropEx",
+				"FetchType": "SinglePropByPropID",
+				"SinglePropID": {
+					"GroupID": {
+						"FixedValue": {
+							"Value": 3
+						}
+					},
+					"ID": {
+						"FixedValue": {
+							"Value": 300011
+						}
+					}
+				}
+			},
+			"State": "Open",
+			"Execute": [
+				{
+					"$type": "RPG.GameCore.TriggerCustomString",
+					"CustomString": {
+						"Value": "101130114_MissionTalk"
+					}
+				},
+				{
+					"$type": "RPG.GameCore.FinishPerformanceMission",
+					"Key": "Mission_101130114"
+				}
+			]
+		}
+	]
+}</pre>
+
+;(Unused &mdash; 101130114_MissionTalk)
+:{{A|VO chapter1 8 seele 216.ogg}} '''Seele:''' I've never seen such a desolate place... At least in Rivet Town, you could tell that people used to live there.
+::{{A|VO chapter1 8 danheng 216.ogg}} '''Dan Heng:''' Rivet Town is only at the outstretched fingertips of the corrosion... Now, we're deep in the Fragmentum's heart.
+
+;(Unused &mdash; Mission_101130115)
+:----
+:<pre>{
+	"$type": "RPG.GameCore.CaptureLocalPlayer",
+	"CharacterUniqueName": "LocalPlayer"
+}</pre>
+::{{A|VO chapter1 8 mar7th 223.ogg}} '''March 7th:''' Success! Another mechanism shut down.
+::{{A|VO chapter1 8 danheng 217.ogg}} '''Dan Heng:''' (Trailblazer), I want to ask you a question.
+::{{DIcon|Arrow}} Ask away.
+::{{DIcon|Arrow}} Is now a good time?
+:::{{A|VO chapter1 8 danheng 218.ogg}} '''Dan Heng:''' Yes, I think this could well be the best time.
+::{{A|VO chapter1 8 danheng 219.ogg}} '''Dan Heng:''' Do you still remember those dreams you mentioned to us?
+::{{A|VO chapter1 8 danheng 220.ogg}} '''Dan Heng:''' I know you're wide awake right now, but I need you to try. See if you can recall the "voice" you heard.
+::{{DIcon|Arrow}} (Close eyes and meditate)
+::<pre>{
+	"$type": "RPG.GameCore.TriggerSound",
+	"SoundName": {
+		"Value": "Ev_sfx_belobog_dream"
+	},
+	"EmitterType": "LocalPlayer"
+}</pre>
+::;(Screen fades to black)
+:::You try to recall the dreams. As your train of thought deepens, the voice comes to you...
+::{{DIcon|Arrow}} (Give it a halfhearted attempt)
+::<pre>{
+	"$type": "RPG.GameCore.TriggerSound",
+	"SoundName": {
+		"Value": "Ev_sfx_belobog_dream"
+	},
+	"EmitterType": "LocalPlayer"
+}</pre>
+::;(Screen fades to black)
+:::You close your eyes but don't expect to remember anything. And yet, the voice comes to you...
+:;(Screen fades to black)
+::{{A|VO chapter1 8 stellaron 201.ogg}} '''Voice of the Stellaron:''' Danger... approaches...
+::{{A|VO chapter1 8 stellaron 202.ogg}} '''Voice of the Stellaron:''' You must...eradicate... Once... and for all...
+::{{A|VO chapter1 8 danheng 221.ogg}} '''Dan Heng:''' Well?
+::{{DIcon|Arrow}} There was... a voice calling out to Cocolia...
+::{{DIcon|Arrow}} The voice... it knows we're getting close.
+::{{DIcon|Arrow}} (Try to repeat the whispers you heard)
+::{{A|VO chapter1 8 danheng 222.ogg}} '''Dan Heng:''' This is merely speculation... but perhaps the voice you heard is the Stellaron somehow conveying information to Cocolia...
+::{{A|VO chapter1 8 danheng 223.ogg}} '''Dan Heng:''' ...and the one in your body... is resonating with the Stellaron on this world.
+::{{A|VO chapter1 8 mar7th 224.ogg}} '''March 7th:''' Huh!? You mean that Stellarons can communicate? I've never heard that before...
+::{{A|VO chapter1 8 danheng 224.ogg}} '''Dan Heng:''' Well, there's never been a human that could accommodate a Stellaron in their body.
+::{{DIcon|Arrow}} The Stellaron knows we're here...
+::{{DIcon|Arrow}} The Stellaron has already warned Cocolia...
+::{{A|VO chapter1 8 seele 217.ogg}} '''Seele:''' ...Then, aren't we walking straight into a trap?
+::{{A|VO chapter1 8 danheng 225.ogg}} '''Dan Heng:''' ...Yes. And Bronya may well be the bait.
+::{{A|VO chapter1 8 mar7th 225.ogg}} '''March 7th:''' Dan Heng's speculations are usually right on the money. But even if we've guessed right, we can't go home now.
+::{{A|VO chapter1 8 seele 218.ogg}} '''Seele:''' Hmph... there's no way back anyway. At least Cocolia won't catch us off guard now. So what if it's an ambush!? We're not about to lose now!
+::{{A|VO chapter1 8 seele 219.ogg}} '''Seele:''' I have to save Bronya, beat Cocolia, and crush this Stellaron thing to dust!
+::----
+
+;(Unused &mdash; 302Block_Act_Over)
+:----
+:<pre>{
+	"$type": "RPG.GameCore.CaptureLocalPlayer",
+	"CharacterUniqueName": "LocalPlayer"
+}</pre>
+::{{A|VO chapter1 8 mar7th 223.ogg}} '''March 7th:''' Success! Another mechanism shut down.
+::{{A|VO chapter1 8 danheng 217.ogg}} '''Dan Heng:''' (Trailblazer), I want to ask you a question.
+::{{DIcon|Arrow}} Ask away.
+::{{DIcon|Arrow}} Is now a good time?
+:::{{A|VO chapter1 8 danheng 218.ogg}} '''Dan Heng:''' Yes, I think this could well be the best time.
+::{{A|VO chapter1 8 danheng 219.ogg}} '''Dan Heng:''' Do you still remember those dreams you mentioned to us?
+::{{A|VO chapter1 8 danheng 220.ogg}} '''Dan Heng:''' I know you're wide awake right now, but I need you to try. See if you can recall the "voice" you heard.
+::{{DIcon|Arrow}} (Close eyes and meditate)
+::<pre>{
+	"$type": "RPG.GameCore.TriggerSound",
+	"SoundName": {
+		"Value": "Ev_sfx_belobog_dream"
+	},
+	"EmitterType": "LocalPlayer"
+}</pre>
+::;(Screen fades to black)
+:::You try to recall the dreams. As your train of thought deepens, the voice comes to you...
+::{{DIcon|Arrow}} (Give it a halfhearted attempt)
+::<pre>{
+	"$type": "RPG.GameCore.TriggerSound",
+	"SoundName": {
+		"Value": "Ev_sfx_belobog_dream"
+	},
+	"EmitterType": "LocalPlayer"
+}</pre>
+::;(Screen fades to black)
+:::You close your eyes but don't expect to remember anything. And yet, the voice comes to you...
+:;(Screen fades to black)
+::{{A|VO chapter1 8 stellaron 201.ogg}} '''Voice of the Stellaron:''' Danger... approaches...
+::{{A|VO chapter1 8 stellaron 202.ogg}} '''Voice of the Stellaron:''' You must...eradicate... Once... and for all...
+::{{A|VO chapter1 8 danheng 221.ogg}} '''Dan Heng:''' Well?
+::{{DIcon|Arrow}} There was... a voice calling out to Cocolia...
+::{{DIcon|Arrow}} The voice... it knows we're getting close.
+::{{DIcon|Arrow}} (Try to repeat the whispers you heard)
+::{{A|VO chapter1 8 danheng 222.ogg}} '''Dan Heng:''' This is merely speculation... but perhaps the voice you heard is the Stellaron somehow conveying information to Cocolia...
+::{{A|VO chapter1 8 danheng 223.ogg}} '''Dan Heng:''' ...and the one in your body... is resonating with the Stellaron on this world.
+::{{A|VO chapter1 8 mar7th 224.ogg}} '''March 7th:''' Huh!? You mean that Stellarons can communicate? I've never heard that before...
+::{{A|VO chapter1 8 danheng 224.ogg}} '''Dan Heng:''' Well, there's never been a human that could accommodate a Stellaron in their body.
+::{{DIcon|Arrow}} The Stellaron knows we're here...
+::{{DIcon|Arrow}} The Stellaron has already warned Cocolia...
+::{{A|VO chapter1 8 seele 217.ogg}} '''Seele:''' ...Then, aren't we walking straight into a trap?
+::{{A|VO chapter1 8 danheng 225.ogg}} '''Dan Heng:''' ...Yes. And Bronya may well be the bait.
+::{{A|VO chapter1 8 mar7th 225.ogg}} '''March 7th:''' Dan Heng's speculations are usually right on the money. But even if we've guessed right, we can't go home now.
+::{{A|VO chapter1 8 seele 218.ogg}} '''Seele:''' Hmph... there's no way back anyway. At least Cocolia won't catch us off guard now. So what if it's an ambush!? We're not about to lose now!
+::{{A|VO chapter1 8 seele 219.ogg}} '''Seele:''' I have to save Bronya, beat Cocolia, and crush this Stellaron thing to dust!
+::----
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{A|VO chapter1 8 mar7th 226.ogg}} '''March 7th:''' Uh... Is this right?
+:{{A|VO chapter1 8 danheng 226.ogg}} '''Dan Heng:''' If we want to get to the other side, we'll need to rotate the gear bridge again and go around.
+;(If {{cx}}<!--SubMission Finish: 101130114-->)
+;(If {{cx}}<!--SubMission not Finish: 101130114-->)
+<pre>{
+	"$type": "RPG.GameCore.ChangePropState"
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.ChangePropState"
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.ChangePropState"
+}</pre>
 {{Dialogue End}}
 
 ===Continue further into the Corridor of Fading Echoes{{subst:void|<!--101130119-->}}===
 {{Mission Description|type=trailblaze|location=Corridor of Fading Echoes|update|After running around in the Fragmentum maze for a long time, you've finally found all the devices and successfully unlocked the mechanism gate.<br />The path to the depths of the maze is wide open once again &mdash; erm, at least you would like to think so.<br />Anyhow, there's no way to tell what obstacles remain in the path ahead. You'll find out when you venture deeper into the Fragmentum.}}
 {{Dialogue Start}}
-:{{tx}}
+:<!--13-second delay-->
+<pre>{
+	"$type": "RPG.GameCore.PropTriggerAnimState",
+	"AnimStateName": "Opened",
+	"WatiAnimFinish": true,
+	"TargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvPropEx",
+		"FetchType": "SinglePropByPropID",
+		"SinglePropID": {
+			"GroupID": {
+				"FixedValue": {
+					"Value": 5
+				}
+			},
+			"ID": {
+				"FixedValue": {
+					"Value": 300005
+				}
+			}
+		}
+	}
+}</pre>
+
+;(Upon reaching the destination)
+:{{A|VO chapter1 8 mar7th 229.ogg}} '''March 7th:''' Whoa, check this place out! Tables and sentry posts &mdash; there must have been Silvermane Guards stationed here once.
+:{{A|VO chapter1 8 danheng 228.ogg}} '''Dan Heng:''' If there were, they left a long time ago. There might be valuable information here... shame we don't have time to look for it.
+
+;(Upon reaching the destination)
+<pre>{
+	"$type": "RPG.GameCore.PropSetVisibility",
+	"SpecifiedRelativePaths": [],
+	"TargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvPropEx",
+		"FetchType": "SinglePropByPropID",
+		"SinglePropID": {
+			"GroupID": {
+				"FixedValue": {
+					"Value": 36
+				}
+			},
+			"ID": {
+				"FixedValue": {
+					"Value": 300001
+				}
+			}
+		}
+	}
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.CaptureLocalPlayer",
+	"CharacterUniqueName": "LocalPlayer"
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.CharacterTriggerAnimState",
+	"CharacterUniqueName": {
+		"Value": "LocalPlayer"
+	},
+	"AnimStateName": "RunStop_R",
+	"NormalizedTimeStart": 0.25,
+	"NormalizedTransitionDuration": 0.1,
+	"NormalizedTimeWait": 0.1
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.ActiveVirtualCamera",
+	"AreaName": "101130119_Temp",
+	"AnchorName": "Camera_101130119",
+	"WaitBlendFinish": true,
+	"BlendConfig": {
+		"ExportToJson": true,
+		"BlendType": "Cut",
+		"BlendTime": 2
+	}
+}</pre>
+:{{A|VO chapter1 8 mar7th 230.ogg}} '''March 7th:''' Looks like another completely new monster.
+:{{A|VO chapter1 8 danheng 229.ogg}} '''Dan Heng:''' Considering where we are, it would be surprising if we didn't run into strange enemies here.
+:{{A|VO chapter1 8 seele 221.ogg}} '''Seele:''' I don't care how strange it is, it's blocking our way... Let's get it!
+
+;(Upon reaching the destination)
+----
+:{{A|VO chapter1 8 mar7th 231.ogg}} '''March 7th:''' This enemy is completely different! If I didn't know it was a product of the Fragmentum, I'd think we were fighting a human!
+:{{A|VO chapter1 8 danheng 232.ogg}} '''Dan Heng:''' Unlike those random low-level Fragmentum creations, this one seems to have a mind of its own. It seems to be able to use complex tactics.
+:{{A|VO chapter1 8 mar7th 232.ogg}} '''March 7th:''' Look, Bronya and Cocolia's echoes... they must have come through here.
+:{{DIcon|Arrow}} The voice is getting clearer...
+::{{A|VO chapter1 8 mar7th 233.ogg}} '''March 7th:''' ...That means we must be really close, right?
+:{{DIcon|Arrow}} I'm starting to feel hazy...
+::{{A|VO chapter1 8 mar7th 234.ogg}} '''March 7th:''' Hey, stay with it! This is the final push!
+:{{A|VO chapter1 8 danheng 233.ogg}} '''Dan Heng:''' I sense that we're very near to the northern Snow Plains.
+----
 {{Dialogue End}}
 
 ===Defeat the Fragmentum monsters and make your way through the wreckage of the ancient fort{{subst:void|<!--101130120-->}}===
 {{Mission Description|type=trailblaze|location=Corridor of Fading Echoes|update|Based on the surrounding structures, it's likely that you've arrived in a core area of an ancient citadel that used to stand on the edge of civilization.<br />You can gather yourself here and investigate the trash piles you think may be of value until you lose interest in the history of this place.<br />Your enemies will sit and wait on the path you must take and allow any degree of destruction you may cause here. Then they will be defeated by you and end their meaningless lives.}}
 {{Dialogue Start}}
-:{{tx}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{A|VO chapter1 8 danheng 230.ogg}} '''Dan Heng:''' If we avoid the enemy, we might be ambushed further in.
+:{{A|VO chapter1 8 danheng 231.ogg}} '''Dan Heng:''' It'll be too late for regrets then... Let's defeat this one here.
+----
+:{{A|VO chapter1 8 mar7th 231.ogg}} '''March 7th:''' This enemy is completely different! If I didn't know it was a product of the Fragmentum, I'd think we were fighting a human!
+:{{A|VO chapter1 8 danheng 232.ogg}} '''Dan Heng:''' Unlike those random low-level Fragmentum creations, this one seems to have a mind of its own. It seems to be able to use complex tactics.
+:{{A|VO chapter1 8 mar7th 232.ogg}} '''March 7th:''' Look, Bronya and Cocolia's echoes... they must have come through here.
+:{{DIcon|Arrow}} The voice is getting clearer...
+::{{A|VO chapter1 8 mar7th 233.ogg}} '''March 7th:''' ...That means we must be really close, right?
+:{{DIcon|Arrow}} I'm starting to feel hazy...
+::{{A|VO chapter1 8 mar7th 234.ogg}} '''March 7th:''' Hey, stay with it! This is the final push!
+:{{A|VO chapter1 8 danheng 233.ogg}} '''Dan Heng:''' I sense that we're very near to the northern Snow Plains.
+----
+
+;(Talk to Cocolia's Echo)
+:{{A|VO chapter1 8 cocolia 215.ogg}} '''Cocolia:''' This is where the first guardian led the Silvermane Guards into battle. She made huge sacrifices for the sake of temporary respite.
+:{{A|VO chapter1 8 cocolia 216.ogg}} '''Cocolia:''' But the otherworldly Legion did not tire. She soon realized that flesh and blood could not contend with so ruthless an enemy.
+:{{A|VO chapter1 8 cocolia 217.ogg}} '''Cocolia:''' When all was nearly lost, she chose to set her sights on the Stellaron... and made the first wish.
+:{{A|VO chapter1 8 cocolia 218.ogg}} '''Cocolia:''' As for what came later... you know as well as I.
+:{{A|VO chapter1 8 bronya 208.ogg}} '''Bronya:''' So... the Eternal Freeze was a disaster brought about by a human wish...?
+:{{A|VO chapter1 8 cocolia 219.ogg}} '''Cocolia:''' Ironic, no? All the Stellaron did was answer humanity's call, and yet we kept its existence a closely guarded secret for centuries.
+:{{A|VO chapter1 8 cocolia 220.ogg}} '''Cocolia:''' Even going so far as to attempt to use "it" to control the Stellaron... Woeful... laughable.
+:{{A|VO chapter1 8 bronya 209.ogg}} '''Bronya:''' It?
+:{{A|VO chapter1 8 cocolia 221.ogg}} '''Cocolia:''' Something created using otherworldly technology... An inhibitor that the IPC from the Old World and the Architects attempted to use to house the Stellaron.
+:{{A|VO chapter1 8 cocolia 222.ogg}} '''Cocolia:''' ...I know you have many questions, my daughter. Be patient... soon you will have all the answers.
 {{Dialogue End}}
 
 ===Open the gate and make your way through the wreckage of the ancient fort{{subst:void|<!--101130122-->}}===
 {{Mission Description|type=trailblaze|location=Corridor of Fading Echoes|update|Based on the surrounding structures, it's likely that you've arrived in a core area of an ancient citadel that used to stand on the edge of civilization.<br />You can gather yourself here and investigate the trash piles you think may be of value until you lose interest in the history of this place.<br />The dangers that surround the exit of the old town wreckage have been cleared out. You can leave this place at any time.}}
 {{Dialogue Start}}
-:{{tx}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{A|VO chapter1 8 seele 222.ogg}} '''Seele:''' It's that "shadow" of hers again... but Bronya's isn't with her this time.
+:{{A|VO chapter1 8 mar7th 235 m.ogg}} {{A|VO chapter1 8 mar7th 235 f.ogg}} '''March 7th:''' It's only a Fragmentum illusion. (Trailblazer), let's get a closer look.
 {{Dialogue End}}
 
 ===Enter the innermost part of the Corridor of Fading Echoes{{subst:void|<!--101130150-->}}===
 {{Mission Description|type=trailblaze|location=Corridor of Fading Echoes|update|The air becomes less alive the deeper you go. An odor of gloom and rust fills your noses.<br />You feel the lingering murmured whistling become clearer in your head and become extremely dizzy.<br />Judging by what you've seen so far, you're very close to the exit of the Fragmentum maze. The question is &mdash; what lies beyond?<br />You'll only find out if you press onward.}}
 {{Dialogue Start}}
-:{{tx}}
+;(Upon reaching the destination)
 {{Dialogue End}}
 
 ===Get closer to Cocolia's echo{{subst:void|<!--101130124-->}}===
 {{Mission Description|type=trailblaze|location=Corridor of Fading Echoes|update|The echoing mirage of the Supreme Guardian has appeared in front of you once again &mdash; however, this time, the guardian's noble daughter is no longer by her side.<br />Although this place has been devoured by the Fragmentum to its core and nothing is behaving the way it should, this is something even more peculiar...<br />Is this a sign of misfortune? Or could it just be one error out of the tens of thousands taking place in the Fragmentum? The answer to this question lies in the echoing cadence of the humanoid.}}
 {{Dialogue Start}}
-:{{tx}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+----
+:{{A|VO chapter1 8 mar7th 236.ogg}} '''March 7th:''' It feels like this echo is different from the others before.
+:{{A|VO chapter1 8 cocolia 223.ogg}} '''Cocolia's Echo:''' Intruders...
+:{{A|VO chapter1 8 mar7th 237.ogg}} '''March 7th:''' Huh!? Did... Did she just speak!?
+:{{A|VO chapter1 8 cocolia 224.ogg}} '''Cocolia's Echo:''' You cannot... approach...
+:{{A|VO chapter1 8 seele 223.ogg}} '''Seele:''' Not good &mdash; March, out the way!
+:{{A|VO chapter1 8 cocolia 225.ogg}} '''Cocolia's Echo:''' ...the Stellaron!
+;(Enter battle)
+::{{tx|Enemy list missing}}
 {{Dialogue End}}
 
 ==Other Languages==

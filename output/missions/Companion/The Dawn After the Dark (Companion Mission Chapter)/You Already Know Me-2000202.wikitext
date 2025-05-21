@@ -41,31 +41,221 @@ PageTitle=#You Already Know Me#
 ===Speak with Himeko and obtain her consent to take her picture{{subst:void|<!--200020105-->}}===
 {{Mission Description|type=companion|location=Master Control Zone|Pamela's request sounds ridiculous, so you decide to directly approach the "victim." Surprisingly, Himeko doesn't seem to mind.}}
 {{Dialogue Start}}
-:{{tx}}
+<pre>{
+	"$type": "RPG.GameCore.PlayMessage",
+	"MessageSectionID": 1011600
+}</pre>
+
+;(Talk to Himeko)
+:{{A|VO Side0 ast1 himeko 116.ogg}} '''Himeko:''' Did you find Gossipmonger? What did she say?
+:{{DIcon|Arrow}} She wants your picture in exchange for information.
+:{{DIcon|Arrow}} She's made a very Himeko-centric proposal.
+:{{A|VO Side0 ast1 himeko 117.ogg}} '''Himeko:''' Ha, I knew she was weird...
+:{{DIcon|Arrow}} You said you were friends.
+:{{DIcon|Arrow}} You can't give in to her!
+:{{DIcon|Arrow}} What level of beauty filter do you want for the photo?
+:{{A|VO Side0 ast1 himeko 118.ogg}} '''Himeko:''' *sigh* There are many types of friend... She's the type you can only stay friends with if you never meet her.
+:{{A|VO Side0 ast1 himeko 119 m.ogg}} {{A|VO Side0 ast1 himeko 119 f.ogg}} '''Himeko:''' It's okay. It's just a picture. I don't mind. Go ahead, (Trailblazer).
 {{Dialogue End}}
 
 ===Take a picture of Himeko and send it to Pamela{{subst:void|<!--200020107-->}}===
 {{Mission Description|type=companion|location=Master Control Zone|update|Himeko struck a pose for you to take her picture, and you immediately sent it to Pamela for information about the rumor spreader.}}
 {{Dialogue Start}}
+:<!--3-second delay-->
+:<!--6-second delay-->
+:<!--5-second delay-->
+:<!--3-second delay-->
+:<!--3-second delay-->
+:{{A|VO Side0 ast1 himeko 116.ogg}} '''Himeko:''' Did you find Gossipmonger? What did she say?
+:She wants your picture in exchange for information.
+:{{A|VO Side0 ast1 himeko 117.ogg}} '''Himeko:''' Ha, I knew she was weird...
+:You said you were friends.
+:{{A|VO Side0 ast1 himeko 118.ogg}} '''Himeko:''' *sigh* There are many types of friend... She's the type you can only stay friends with if you never meet her.
+:{{A|VO Side0 ast1 himeko 119 m.ogg}} {{A|VO Side0 ast1 himeko 119 f.ogg}} '''Himeko:''' It's okay. It's just a picture. I don't mind. Go ahead, (Trailblazer).
+:{{A|VO Side0 ast1 himeko 120 m.ogg}} {{A|VO Side0 ast1 himeko 120 f.ogg}} '''Himeko:''' Let me see... Hey, you're pretty good, (Trailblazer).
+:{{A|VO Side0 ast1 asta 101.ogg}} '''Asta:''' Huh? What are you taking pictures of?
+:{{DIcon|Arrow}} Wh&mdash;What brings you here?
+::{{A|VO Side0 ast1 asta 102.ogg}} '''Asta:''' Why do you sound so nervous all of a sudden? Suspicious...
+:{{DIcon|Arrow}} March 7th may have rubbed off on me.
+:{{A|VO Side0 ast1 himeko 121.ogg}} '''Himeko:''' I didn't expect to see you here. Didn't you say you were really busy?
+:{{A|VO Side0 ast1 asta 103.ogg}} '''Asta:''' *sigh* I am. The Legion has only just retreated &mdash; the station is in absolute shambles.
+:{{A|VO Side0 ast1 asta 104.ogg}} '''Asta:''' And now any progress in rebuilding things has been ruined by the reappearance of the Fragmentum...
+:{{A|VO Side0 ast1 himeko 122.ogg}} '''Himeko:''' Oh, an active Stellaron is rarely a cause for celebration... What did Herta say about the Fragmentum's appearance?
+:{{A|VO Side0 ast1 asta 105.ogg}} '''Asta:''' You know what she's like. It's like nothing's happened &mdash; she's just sitting back and giving orders.
+:{{A|VO Side0 ast1 asta 106.ogg}} '''Asta:''' If there's time later, I want to talk to you both in more detail about this. You're the Fragmentum experts after all.
+:{{A|VO Side0 ast1 himeko 123.ogg}} '''Himeko:''' Anytime.
+:{{A|VO Side0 ast1 asta 107.ogg}} '''Asta:''' *sigh* I need to go &mdash; someone's taken my family encryption key. You know, the one I use to withdraw my allowance? I need to get to the bottom of it.
+:{{DIcon|Arrow}} Someone's withholding her encryption key...
+:{{A|VO Side0 ast1 himeko 124 m.ogg}} {{A|VO Side0 ast1 himeko 124 f.ogg}} '''Himeko:''' That might be the whistleblower's so-called "evidence." Looks like you don't have much time to lose, (Trailblazer).
 :{{tx}}
+<pre>{
+	"$type": "RPG.GameCore.PlayMessage",
+	"MessageSectionID": 1011000,
+	"ShowNotice": false
+}</pre>
 {{Dialogue End}}
 
 ===Find the researcher that fits Pamela's description{{subst:void|<!--200020111-->}}===
 {{Mission Description|type=companion|location=Base Zone|update|Pamela said that the rumor maker is "a guy with black-framed glasses and side-swept bangs."<br />Find the male researcher that fits the description.}}
 {{Dialogue Start}}
-:{{tx}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{A|VO Side0 ast1 staffX 101.ogg}} '''Richard:''' And you are?
+;(Unused &mdash; 200020111_fail)
+<pre>{
+	"$type": "RPG.GameCore.PhotoGraphShowIdentifyResult",
+	"IsShowToast": true,
+	"ToastText": {
+		"Hash": 7123181355810595772
+	},
+	"IsShowAim": true
+}</pre>
+::<!--1-second delay-->
+:<pre>{
+	"$type": "RPG.GameCore.SwitchPhotoGraphMode",
+	"IdentifyRadiusOverride": {
+		"FixedValue": {
+			"Value": 0
+		}
+	}
+}</pre>
+
+;(Unused &mdash; 200020111_success)
+<pre>{
+	"$type": "RPG.GameCore.PhotoGraphShowIdentifyResult",
+	"IsIdentifySuccess": true,
+	"IsShowToast": true,
+	"ToastText": {
+		"Hash": 845206858745524995
+	},
+	"IsShowAim": true
+}</pre>
+::<!--1-second delay-->
+:<pre>{
+	"$type": "RPG.GameCore.SwitchPhotoGraphMode",
+	"IdentifyRadiusOverride": {
+		"FixedValue": {
+			"Value": 0
+		}
+	}
+}</pre>
 {{Dialogue End}}
 
 ===Speak with Richard and inquire about the rumor and the encryption key{{subst:void|<!--200020112-->}}===
 {{Mission Description|type=companion|location=Base Zone|update|The real name of Richard_Knowitall &mdash; the rumor maker in the anonymous group &mdash; is Richard. You couldn't help but laugh when you consider the fact that he used his real name in an anonymous chat group.<br />Richard righteously recounts his deductions to you and insists that he is going to report Asta to Madam Herta.<br />Looking through the "evidence" he presented, you conclude that this is only a farce.}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Researcher)
+:{{A|VO Side0 ast1 staffX 101.ogg}} '''Richard:''' And you are?
+:{{DIcon|Arrow}} Are you Richard_Knowitall?
+::{{A|VO Side0 ast1 staffX 102.ogg}} '''Richard:''' Oho! Well done &mdash; you found me.
+:{{DIcon|Arrow}} Are you the one who started the rumor about Asta?
+::{{A|VO Side0 ast1 staffX 103.ogg}} '''Richard:''' Rumors? More like a formal complaint!
+:{{A|VO Side0 ast1 staffX 104.ogg}} '''Richard:''' So you're here about the lead researcher's corruption? Anything for a good story, huh?
+:{{A|VO Side0 ast1 staffX 105.ogg}} '''Richard:''' I don't get it &mdash; you people live your lives for gossip.
+:{{A|VO Side0 ast1 staffX 106.ogg}} '''Richard:''' Wouldn't it be better to apply that drive to your research? Madam Herta would be delighted to see everyone working so hard.
+:{{DIcon|Arrow}} I'm here to punish you.
+::{{A|VO Side0 ast1 staffX 107.ogg}} '''Richard:''' Haha, who do you think you are? The space station's next lead researcher?
+::{{A|VO Side0 ast1 staffX 108.ogg}} '''Richard:''' Please. Only upstanding and intelligent people like myself are worthy of such a position. You gossipers need to figure out your place in the hierarchy.
+:{{DIcon|Arrow}} Hand over Asta's encryption key.
+::{{A|VO Side0 ast1 staffX 109.ogg}} '''Richard:''' What encryption key...
+::{{A|VO Side0 ast1 staffX 110.ogg}} '''Richard:''' Have you been reading too many novels? You think there's some hidden heir on this space station with keys to the family coffers? Less fantasizing, more researching, got it?
+:{{A|VO Side0 ast1 staffX 111.ogg}} '''Richard:''' You want the scoop? Fine. I've backed it all up anyway. Here, take it. And let it be known that I, Richard_Knowitall, do not spread rumors.
+:{{A|VO Side0 ast1 staffX 112.ogg}} '''Richard:''' This is the receipt. See the title on this purchase order...?
+:{{A|VO Side0 ast1 staffX 113.ogg}} '''Richard:''' That's what I call substantive evidence! Hmph...
+:{{DIcon|Arrow}} Is the source of this document reliable?
+:{{A|VO Side0 ast1 staffX 114.ogg}} '''Richard:''' Of course it is! If I had any doubt, I'd have kept it quiet.
+:{{A|VO Side0 ast1 staffX 115.ogg}} '''Richard:''' ...I picked it up a few days ago when I was collecting a package. I saw a few receipts requiring the lead researcher's signature.
+:{{A|VO Side0 ast1 staffX 116.ogg}} '''Richard:''' The Security Department's head honcho, Arlan &mdash; he left pretty quickly when he saw them. We all know he's on her side anyway.
+:{{A|VO Side0 ast1 staffX 117.ogg}} '''Richard:''' So I had a peek, and woah! She's buying equipment for the space station under her own name! I've got her now!
+:{{DIcon|Arrow}} This is no evidence at all...
+:{{A|VO Side0 ast1 staffX 118.ogg}} '''Richard:''' Geez, do I really have to break it down for you?
+:{{A|VO Side0 ast1 staffX 119.ogg}} '''Richard:''' The space station has its own financial procedures. As long as the purchase is for the space station, no matter how big or small, it has to go through the organizational account using the station's allocated funds.
+:{{A|VO Side0 ast1 staffX 120.ogg}} '''Richard:''' The payer here is her private account. She's totally embezzling station funds for herself!
+:{{A|VO Side0 ast1 staffX 121.ogg}} '''Richard:''' I'm so disappointed &mdash; so hurt! She looks like a sweet enough girl, but not only did she fail to repay Madam Herta for promoting her, she even stooped to this.
+:{{A|VO Side0 ast1 staffX 122.ogg}} '''Richard:''' I was so angry that I was shaking. I broke out in a cold sweat!
+:{{DIcon|Arrow}} Have you ever considered that... maybe she paid for it herself?
+:{{A|VO Side0 ast1 staffX 123.ogg}} '''Richard:''' That amount of money? Herself!? Who do you think she is, Fleming's daughter?
+:{{A|VO Side0 ast1 staffX 124.ogg}} '''Richard:''' Anyway, now you know everything, so leave me alone. I still need to write a report about this for Madam Herta.
 {{Dialogue End}}
 
 ===Report to Asta{{subst:void|<!--200020123-->}}===
 {{Mission Description|type=companion|location=Master Control Zone|update|After understanding the rumor about Asta's alleged embezzlement, you decide to report everything to Asta.<br />What was surprising is not only Asta's wealth, but also the truth behind the anonymous chat group...}}
 {{Dialogue Start}}
+<pre>{
+	"$type": "RPG.GameCore.PlayMessage",
+	"MessageSectionID": 1011700,
+	"ShowNotice": false
+}</pre>
+
+;(Talk to Asta)
+<pre>{
+	"$type": "RPG.GameCore.PlayMultiVoiceTalk",
+	"TalkSentenceID": 500012201
+}</pre>
+:'''Asta:''' Did you encounter some problems?
+<pre>{
+	"$type": "RPG.GameCore.ShowMenu"
+}</pre>
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{A|VO Side0 ast1 arlan 101.ogg}} '''Arlan:''' You can't waste money like this...
+:{{A|VO Side0 ast1 asta 108.ogg}} '''Asta:''' This isn't wasting money! The IPC's budget is so stringent, and the process takes so long! By the time my application would've gone through too much time would've been wasted!
+:{{A|VO Side0 ast1 asta 109.ogg}} '''Asta:''' Do you know how much hardware was destroyed when the Legion attacked? And how many cables are currently out of order on the station?
+:{{A|VO Side0 ast1 asta 110.ogg}} '''Asta:''' How is it my fault when I'm spending my own money to solve everyone else's problems? Give my encryption key back!
+:{{A|VO Side0 ast1 arlan 102.ogg}} '''Arlan:''' I won't!
+:{{A|VO Side0 ast1 asta 111.ogg}} '''Asta:''' You &mdash; who gave you the right to tell me what to do with my money?
+:{{A|VO Side0 ast1 arlan 103.ogg}} '''Arlan:''' You did.
+:{{A|VO Side0 ast1 asta 112.ogg}} '''Asta:''' I... I might have done that, but this doesn't count as wasting money!
+:{{A|VO Side0 ast1 arlan 104.ogg}} '''Arlan:''' How is it not wasting money? We lost that Findie device you bought during the Legion's invasion.
+:{{A|VO Side0 ast1 arlan 105.ogg}} '''Arlan:''' All you had to do was check the inventory, and we could've replaced it &mdash; why did you make a new order?
+:{{A|VO Side0 ast1 arlan 106.ogg}} '''Arlan:''' And that starnought fleet from the last time...
+:{{DIcon|Arrow}} S&mdash;Starnought!?
+:{{A|VO Side0 ast1 asta 113.ogg}} '''Asta:''' I did make an order, but it didn't go through... I was just trying to improve security measures to make sure attacks like this don't happen again.
+:{{A|VO Side0 ast1 asta 114 m.ogg}} {{A|VO Side0 ast1 asta 114 f.ogg}} '''Asta:''' I&mdash;If the money wasn't spent, then it doesn't count! Anyway, (Trailblazer), are you here for something?
+:{{DIcon|Arrow}} Nothing as important as what you were just discussing.
+:{{DIcon|Arrow}} That's a very abrupt way to change the topic.
+:{{A|VO Side0 ast1 asta 115.ogg}} '''Asta:''' Ugh, please, tell me why you're here.
+:{{DIcon|Arrow}} (Tell her about Richard's actions)
+:{{A|VO Side0 ast1 asta 116.ogg}} '''Asta:''' So, you think Richard was the one who stole my encryption key?
 :{{tx}}
+----
+
+;(Talk to Asta)
+:{{A|VO Side0 ast1 arlan 101.ogg}} '''Arlan:''' You can't waste money like this...
+:{{A|VO Side0 ast1 asta 108.ogg}} '''Asta:''' This isn't wasting money! The IPC's budget is so stringent, and the process takes so long! By the time my application would've gone through too much time would've been wasted!
+:{{A|VO Side0 ast1 asta 109.ogg}} '''Asta:''' Do you know how much hardware was destroyed when the Legion attacked? And how many cables are currently out of order on the station?
+:{{A|VO Side0 ast1 asta 110.ogg}} '''Asta:''' How is it my fault when I'm spending my own money to solve everyone else's problems? Give my encryption key back!
+:{{A|VO Side0 ast1 arlan 102.ogg}} '''Arlan:''' I won't!
+:{{A|VO Side0 ast1 asta 111.ogg}} '''Asta:''' You &mdash; who gave you the right to tell me what to do with my money?
+:{{A|VO Side0 ast1 arlan 103.ogg}} '''Arlan:''' You did.
+:{{A|VO Side0 ast1 asta 112.ogg}} '''Asta:''' I... I might have done that, but this doesn't count as wasting money!
+:{{A|VO Side0 ast1 arlan 104.ogg}} '''Arlan:''' How is it not wasting money? We lost that Findie device you bought during the Legion's invasion.
+:{{A|VO Side0 ast1 arlan 105.ogg}} '''Arlan:''' All you had to do was check the inventory, and we could've replaced it &mdash; why did you make a new order?
+:{{A|VO Side0 ast1 arlan 106.ogg}} '''Arlan:''' And that starnought fleet from the last time...
+:{{DIcon|Arrow}} S&mdash;Starnought!?
+:{{A|VO Side0 ast1 asta 113.ogg}} '''Asta:''' I did make an order, but it didn't go through... I was just trying to improve security measures to make sure attacks like this don't happen again.
+:{{A|VO Side0 ast1 asta 114 m.ogg}} {{A|VO Side0 ast1 asta 114 f.ogg}} '''Asta:''' I&mdash;If the money wasn't spent, then it doesn't count! Anyway, (Trailblazer), are you here for something?
+:{{DIcon|Arrow}} Nothing as important as what you were just discussing.
+:{{DIcon|Arrow}} That's a very abrupt way to change the topic.
+:{{A|VO Side0 ast1 asta 115.ogg}} '''Asta:''' Ugh, please, tell me why you're here.
+:{{DIcon|Arrow}} (Tell her about Richard's actions)
+:{{A|VO Side0 ast1 asta 116.ogg}} '''Asta:''' So, you think Richard was the one who stole my encryption key?
+:{{tx}}
+:{{A|VO Side0 ast1 arlan 101.ogg}} '''Arlan:''' You can't waste money like this...
+:{{A|VO Side0 ast1 asta 108.ogg}} '''Asta:''' This isn't wasting money! The IPC's budget is so stringent, and the process takes so long! By the time my application would've gone through too much time would've been wasted!
+:{{A|VO Side0 ast1 asta 109.ogg}} '''Asta:''' Do you know how much hardware was destroyed when the Legion attacked? And how many cables are currently out of order on the station?
+:{{A|VO Side0 ast1 asta 110.ogg}} '''Asta:''' How is it my fault when I'm spending my own money to solve everyone else's problems? Give my encryption key back!
+:{{A|VO Side0 ast1 arlan 102.ogg}} '''Arlan:''' I won't!
+:{{A|VO Side0 ast1 asta 111.ogg}} '''Asta:''' You &mdash; who gave you the right to tell me what to do with my money?
+:{{A|VO Side0 ast1 arlan 103.ogg}} '''Arlan:''' You did.
+:{{A|VO Side0 ast1 asta 112.ogg}} '''Asta:''' I... I might have done that, but this doesn't count as wasting money!
+:{{A|VO Side0 ast1 arlan 104.ogg}} '''Arlan:''' How is it not wasting money? We lost that Findie device you bought during the Legion's invasion.
+:{{A|VO Side0 ast1 arlan 105.ogg}} '''Arlan:''' All you had to do was check the inventory, and we could've replaced it &mdash; why did you make a new order?
+:{{A|VO Side0 ast1 arlan 106.ogg}} '''Arlan:''' And that starnought fleet from the last time...
+;(Return to previous option selection)
 {{Dialogue End}}
 
 ==Other Languages==

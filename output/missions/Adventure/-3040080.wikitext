@@ -33,6 +33,237 @@ PageTitle=##
 -->
 ==Dialogue==
 {{Stub Dialogue}}
+;(If {{Mission|Passage, Reveal the Past Once More|showChapter=0}} has been completed)
+<pre>{
+	"$type": "RPG.GameCore.AdvCreateGroupEntity",
+	"InstanceIDList": [
+		300001
+	]
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.AdvSetupButtonListTrigger",
+	"TargetType": {
+		"$type": "RPG.GameCore.GroupFetchLocalTarget",
+		"TargetType": "Prop",
+		"Targets": [
+			300001
+		]
+	},
+	"TriggerName": "MissionTrigger",
+	"ButtonsByName": [],
+	"ButtonConfigs": [
+		{
+			"ID": "Photo_Titan",
+			"IconType": "ChatIcon",
+			"ButtonText": {
+				"Value": "PropInteractTitle_360"
+			}
+		}
+	]
+}</pre>
+;(Unused &mdash; Photo_Titan)
+----
+::The airborne pathways leading to the treetop are guarded by the Butterfly of Divine Mind. You recall how, on your last visit here, you hadn't had the time to capture this breathtaking scene for March 7th. Now seems like the perfect opportunity to make up for it.
+::{{DIcon|Arrow}} Take a photo of the Butterfly of Divine Mind.
+:<pre>{
+	"$type": "RPG.GameCore.BindSwitchPhotoGraphFuncBtn",
+	"SimpleMode": false,
+	"UseType": "StartPhotoInTriggerRange",
+	"RangeTriggerProp": {
+		"FetchType": "SinglePropByPropID",
+		"SinglePropID": {
+			"GroupID": {
+				"FixedValue": {
+					"Value": 280
+				}
+			},
+			"ID": {
+				"FixedValue": {
+					"Value": 300001
+				}
+			}
+		}
+	},
+	"ColliderRelativePathList": [],
+	"PhotoGraphMode": "LongRange",
+	"AimTargetContainerConfig": [
+		{
+			"AimTargetConfig": {
+				"$type": "RPG.GameCore.PhotoGraphAimContainerGiantTarget",
+				"AimTargetType": {
+					"$type": "RPG.GameCore.GroupFetchLocalTarget",
+					"TargetType": "Prop",
+					"Targets": [
+						300002
+					]
+				},
+				"Radius": 2,
+				"ShowAimTag": false,
+				"GameObjectNode": {
+					"Value": "Chest_M"
+				},
+				"IgnoreColliderTest": true
+			},
+			"ContainerFlagName": "GiantTarget_1",
+			"IsTopContainer": true,
+			"IsAimTargetConfig": true
+		}
+	],
+	"OnExitPhotoGraph": [],
+	"OverrideConfig": {
+		"IdentifyLookAt": {
+			"$type": "RPG.GameCore.GroupFetchLocalTarget",
+			"TargetType": "Prop",
+			"Targets": [
+				300002
+			]
+		},
+		"ShowFinishToastManually": true,
+		"OverrideMaxFov": 60,
+		"OverrideMinFov": 10
+	},
+	"BindName": {
+		"Value": "304008001_Titan"
+	},
+	"ShotResultCondition": {
+		"TargetConditionName": {
+			"Hash": 4239232322731573076
+		},
+		"ShotResultCondition": [
+			{
+				"PredicateName": {
+					"Hash": 6178273401421152293
+				},
+				"Predicate": {
+					"$type": "RPG.GameCore.ByTargetContainerRatioInRect",
+					"BindPhotographName": "304008001_Titan",
+					"ContainerFlagName": "GiantTarget_1",
+					"Size": {},
+					"Ratio": 0.65
+				},
+				"BindContainerFlagNames": [
+					"GiantTarget_1"
+				]
+			}
+		]
+	},
+	"HideTwoPointFourParam": false
+}</pre>
+
+;(If {{Mission|Passage, Reveal the Past Once More|showChapter=0}} has been completed)
+<pre>{
+	"$type": "RPG.GameCore.AdvCreateGroupEntity",
+	"InstanceIDList": [
+		300001
+	]
+}</pre>
+
+:{{DIcon|Talk}} Talk
+;(If {{cx}}<!--SubMission Finish: 304008016-->)
+::'''Serious Scholar:''' So? Did you retrieve the object defined as a "Tree Seed"? Please hand it over to me.
+::'''Earnest Scholar:''' Judging... by facial expressions, you have. Don't give it to him. Give it to me. Reward for you.
+::Now, here's the question &mdash; who will you give the Seed to?
+::{{DIcon|Talk}} Tell me, what's so great about the Seed?
+:::'''Serious Scholar:''' What's so great? How could academic work be called "great"? Within it lies the mystery of life, the metaphysical essence, the painstaking efforts of generations of scholars &mdash; a crystallization of pure reason!
+:::'''Earnest Scholar:''' Don't listen. Empty talk. Seed... plant in soil. Yield... 17,000 per acre. Solve... lighting crisis.
+::;(Return to previous option selection)
+::{{DIcon|Arrow}} I decide...
+:::'''Serious Scholar:''' Give it to me. I'll credit you as the second author in my final report and express sincere gratitude for your virtue in the acknowledgments. From then on, you'll have a publication in one of the Grove's core journals.
+:::'''Earnest Scholar:''' Give it to me. I offer you... Balance Coins. Degree. Cannot trade... for unpaid effort.
+:::{{DIcon|Arrow}} Give the Seed to the serious scholar.
+::::'''Serious Scholar:''' Good choice. This is the attitude every true seeker of knowledge should have. Watch for my paper's publication &mdash; you'll find your name in it, I promise!
+:::<pre>{
+	"$type": "RPG.GameCore.SetTargetEntityFadeWithAnim",
+	"TargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvNpcEx",
+		"FetchType": "SingleNpcByNpcID",
+		"SingleNpcID": {
+			"GroupID": {
+				"FixedValue": {
+					"Value": 284
+				}
+			},
+			"GroupNpcID": {
+				"FixedValue": {
+					"Value": 400001
+				}
+			}
+		}
+	},
+	"Duration": 0.5
+}</pre>
+::::<!--0.5-second delay-->
+:::<pre>{
+	"$type": "RPG.GameCore.AdvDestroyEntityAsync",
+	"NeedDisappear": true,
+	"InstanceIDList": [],
+	"AdvancedSpawnList": [
+		{
+			"InstanceID": 400001
+		}
+	]
+}</pre>
+::::It's only now you realize &mdash; the scholar never asked for your name...
+:::{{DIcon|Arrow}} Give the Seed to the earnest scholar.
+::::'''Earnest Scholar:''' Good. Amphoreus... poor lighting. We... must find solutions. Here... take these flowers.
+:::<pre>{
+	"$type": "RPG.GameCore.SetTargetEntityFadeWithAnim",
+	"TargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvNpcEx",
+		"FetchType": "SingleNpcByNpcID",
+		"SingleNpcID": {
+			"GroupID": {
+				"FixedValue": {
+					"Value": 284
+				}
+			},
+			"GroupNpcID": {
+				"FixedValue": {
+					"Value": 400001
+				}
+			}
+		}
+	},
+	"Duration": 0.5
+}</pre>
+::::<!--0.5-second delay-->
+:::<pre>{
+	"$type": "RPG.GameCore.AdvDestroyEntityAsync",
+	"NeedDisappear": true,
+	"InstanceIDList": [],
+	"AdvancedSpawnList": [
+		{
+			"InstanceID": 400001
+		}
+	]
+}</pre>
+::::<!--0.5-second delay-->
+;(If {{cx}}<!--SubMission not Finish: 304008016-->)
+:;(If {{cx}}<!--SubMission Finish: 304008015-->)
+:::'''Serious Scholar:''' Thank you. May Cerces safeguard your thoughts.
+:;(If {{cx}}<!--SubMission not Finish: 304008015-->)
+:::'''Serious Scholar:''' Greetings. Please retrieve for us an object that can be defined as a "Tree Seed." It is located in a place difficult to reach by foot, with a stone platform bearing the Hand of Zagreus within view.
+:::'''Earnest Scholar:''' We, lack control. God of Trickery, despised. Aid requested. Gratitude.
+:::{{DIcon|Talk}} Quickly now, this place is dangerous.
+::::'''Serious Scholar:''' We Grove scholars are not so fragile. To us, research is worth far more than life itself.
+::::'''Serious Scholar:''' This Tree Seed represents the culmination of years of effort by the Lotophagists &mdash; a long-anticipated project titled "Why Seeds Are a Precious Resource." It must be brought back safely.
+::::'''Earnest Scholar:''' Our... efforts, and Amphoreus'... future.
+:::;(Return to previous option selection)
+:::{{DIcon|Talk}} You all have a weird way of talking.
+::::'''Serious Scholar:''' I am a scholar of Nodism, dedicated to the pursuit of linguistic precision. The '''unfamiliarity''' you sense stems precisely from this, as expected. As for this one...
+::::'''Earnest Scholar:''' I, an Erythrokeramist, am a believer in natural language. Studied the ways of the Mountain Dwellers. The results are evident.
+::::'''Serious Scholar:''' As you can see. Pay no mind &mdash; it's just a tedious rivalry of schools.
+:::;(Return to previous option selection)
+:::{{DIcon|Exit}} Alright, I'll be back shortly.
+::::'''Serious Scholar:''' Thank you. May Cerces safeguard your thoughts.
+
+:<!--4-second delay-->
+:<!--4-second delay-->
+
+;(Unused &mdash; Mission_454050302)
+
+
+;(Unused &mdash; TalkSentence_504033124)
 
 {{Dialogue End}}
 

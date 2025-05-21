@@ -41,25 +41,171 @@ PageTitle=#Ordination#
 ===Prepare to face the upcoming match{{subst:void|<!--802513701-->}}===
 {{Mission Description|type=adventure|location=Skysplitter|What kind of opponent would the challenger named Samatha be? Hurry and start the next match.}}
 {{Dialogue Start}}
+
+;(Unused &mdash; EnterDistrict_G175)
+----
+::'''Samatha:''' Next, I'll be climbing onto the stage, competing to be the best against strangers we've never met before. It's been such a long and arduous road... Sugata, are you listening?
+::'''Sugata:''' I'm listening. I can help you achieve victory.
+::'''Samatha:''' No, no way! This is a martial arts tournament, and it's a duty that I've committed myself to. You be good and wait by the stage. Do not move and do not answer any questions without my call.
+::'''Sugata:''' Rule updated: Do not take action without orders.
+::'''Luka:''' Hello, Miss Foxy. Are you my opponent for this match? My name is Luka.
+::'''Samatha:''' Greetings to you, patrons. My humble name is Samatha. I am one of the ordained monks of Claretwheel Temple, here to participate in the Wardance.
+::'''Sugata:''' ...
+::'''Luka:''' Is this your partner next to you? As a fighter, he seems a little...
+::{{DIcon|Arrow}} Smol.
+::{{DIcon|Arrow}} Condensed.
+::'''Samatha:''' You are mistaken. Sugata is merely my travel companion and not a competing contestant. I am the only one humbly representing Claretwheel Temple on stage.
+::{{DIcon|Arrow}} Claretwheel Temple? Never heard of it.
+:::'''Samatha:''' Our temple was built less than three Amber Eras ago. It's but a small temple floating in space.
+:::'''Samatha:''' The ordained monks also all abstain from worldly matters. If not for seeking alms, they generally do not interact with the outside world. It's only natural that you have never heard of the name of Claretwheel Temple.
+:::Do monks also have the desire to win?
+::{{DIcon|Arrow}} Do monks also have the desire to win?
+::The foxian girl's face flashes with a hint of panic, as if she is ashamed that she is about to fight another.
+::'''Samatha:''' I... I've not been ordained for long, and I am still unable to abstain from the desire to compete. The Xianzhou should not have witnessed someone as inexperienced in cultivation as me step onto stage to compete. But...
+::She lowers her eyes, and takes a moment to find her courage.
+::{{tx}}
+:<pre>{
+	"$type": "RPG.GameCore.PerformanceExtendEndBlack"
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.SetFloorCustomFloat",
+	"Name": {
+		"Value": "FCV_2.5_Arena"
+	},
+	"Value": {
+		"FixedValue": {
+			"Value": 1
+		}
+	}
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.SetFloorCustomFloat",
+	"Name": {
+		"Value": "FCV_2.5_Throng"
+	},
+	"Value": {
+		"FixedValue": {
+			"Value": 1
+		}
+	}
+}</pre>
+:The chaos on site has finally subsided, and the competition has been temporarily halted.
+:'''Cloud Knight Captain:''' Thank you for your help, Contestant Luka. The borisin fugitive named Samatha and her Intellitron accomplice are now under our control. Who knows how big of a mess they would have caused otherwise?
+:'''Luka:''' What... Miss Samatha is a fugitive?
+:'''Cloud Knight Captain:''' That's right. She's suspected of committing multiple murders, of identity fraud, and of smuggling highly dangerous weapons into Xianzhou territory.
+:'''Luka:''' She says she's competing for the monks and children of Claretwheel Temple. Is she... really a fugitive?
+:'''Cloud Knight Captain:''' Hmph, it's all an act. For those of you in worlds that are untouched by the borisin's invasions, ignorance is bliss. But to us on the Xianzhou, the name of borisin strikes a fear that's ingrained into our blood.
+:'''Cloud Knight Captain:''' *sigh* Let's not talk about such depressing stuff. The competition committee asked me to pass on the results. Due to one contestant being disqualified, you have been automatically declared the winner of this duel. Congratulations.
+:'''Luka:''' ...I don't feel right about winning in a weird way like this.
+:'''Cloud Knight Captain:''' Your strength is witnessed by all, so the outcome of this match was never in doubt. Just a side note, even my daughter thinks you have a high chance to win!
+:'''Cloud Knight Captain:''' Oh, by the way, as witnesses of the case, the Ten-Lords Commission hopes you can head to the Shackling Prison to assist with the investigation. When you're giving your statement, just tell the truth &mdash; that you know nothing. Don't let this affect your future fights in the tournament.
+:'''Luka:''' Thank you, captain. I'll head there right now.
+:'''Luka:''' (Trailblazer)... Can you go with me? I can't help but feel that there's something odd about this.
+:{{DIcon|Arrow}} You want to find out the truth?
+::'''Luka:''' Just consider it as my unrelenting curiosity.
+:{{DIcon|Arrow}} Happy to oblige.
 :{{tx}}
 {{Dialogue End}}
 
 ===Head to The Shackling Prison to help with the investigation{{subst:void|<!--802513704-->}}===
 {{Mission Description|type=adventure|location=The Shackling Prison|update|A sudden accident happened at the competition. Is the borisin disguised as a foxian friend or foe? You need to go to The Shackling Prison to seek the truth.}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Unused &mdash; EnterDistrict_G216)
+:'''Yukong:''' ...According to records from the Sky-Faring Commission, this spaceship was originally registered under the Intelligentsia Guild.
+::'''Yukong:''' Now, it's docked at the port, carrying 102 unidentified corpses. The only two individuals who landed from this ship and entered the Xianzhou are a borisin disguised as a foxian and an Intellitron.
+::'''Sugata:''' ...
+::'''Spiritfarer:''' So, I'm asking once again, who killed them?
+::'''Samatha:''' I can only repeat my previous answer. I absolutely did not violate my vows against bloodshed. However, I cannot divulge the details of the situation.
+::'''Spiritfarer:''' Your denial is of no use, because the answer speaks for itself.
+::{{DIcon|Arrow}} Madam Yukong?
+::{{DIcon|Arrow}} Sorry, wrong door?
+::'''Spiritfarer:''' You two are at the right place. We are currently conducting an urgent interrogation of the suspect. Mr. Luka, please come here and leave a statement.
+::'''Yukong:''' This involves the Sky-Faring Commission, hence I have been summoned for the hearing as well. However, considering the severity of this case, even the General may have to come to oversee this personally.
+::'''Yukong:''' But these two suspects... one refuses to cooperate with the investigation, and the other refuses to even speak.
+::{{DIcon|Arrow}} Is she really a borisin?
+:::'''Yukong:''' Yes, the Ten-Lords Commission has already verified her identity. Fugitive Samatha is no doubt a borisin.
+:::Could this be a misunderstanding?
+::{{DIcon|Arrow}} Could this be a misunderstanding?
+::'''Yukong:''' The 102 corpses on the ship are no misunderstanding.
+::'''Luka:''' Miss Samatha, you said to me before the fight that you were fighting for the monks and children at Claretwheel Temple. Were you lying to me?
+::{{tx}}
 {{Dialogue End}}
 
 ===Synchronize with Sugata's data{{subst:void|<!--802513705-->}}===
 {{Mission Description|type=adventure|location=The Shackling Prison|update|Sugata synchronized his data with you all. What is the truth?}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Sugata)
+:'''Sugata:''' Human intervention in the process has been detected... Initiating data resynchronization.
+:{{DIcon|Arrow}} I'm ready.
+::'''Sugata:''' Wavelength adjustment complete. RAM access permissions altered. Synesthesia Beacon synchronization initiated.
+:<pre>{
+	"$type": "RPG.GameCore.SetPerformanceResult",
+	"Value": 1
+}</pre>
+:{{DIcon|Exit}} Please allow me to rest.
+
+;(Unused &mdash; OpenRaid_G217)
+<pre>{
+	"$type": "RPG.GameCore.OpenTreasureChallenge",
+	"RaidID": 40105
+}</pre>
 {{Dialogue End}}
 
 ===Prepare for the final fight{{subst:void|<!--802513707-->}}===
 {{Mission Description|type=adventure|location=The Shackling Prison|update|Speak with Yukong and enter the final fight. May the claret wheel hang overhead, illuminating mortal hearts.}}
 {{Dialogue Start}}
 :{{tx}}
+:'''Luka:''' Madam Yukong, I am not a Xianzhou native, and I don't know what happened here in the past, so I cannot point fingers at your decision.
+:'''Luka:''' But, as a contender, I cannot accept a victory that was not earned in battle.
+:'''Luka:''' Just like Mr. Sugata said, even if the petition is ultimately rejected, they should not be denied the right to express themselves.
+:'''Yukong:''' ...
+:'''Yukong:''' Sugata has already made his voice heard by all of us.
+:'''Yukong:''' However, I still wish to see the resolve of another person.
+:'''Samatha:''' ...As long as the petition is complete, I will offer everything I have.
+:'''Yukong:''' Samatha, I will arrange your rematch with Luka in the Skysplitter's lower-floor arena. It will be different from what you hoped &mdash; there will no bustling cheers of spectators, nor will there be raucous applause. No one on the Xianzhou Luofu will know the outcome of this match.
+:'''Yukong:''' If you can take victory, the Xianzhou Luofu will consider Claretwheel Temple's petition.
+:'''Samatha:''' I... thank you, Madam Yukong.
+:'''Yukong:''' You can start your match when you're ready.
+:{{DIcon|Arrow}} Ready.
+:{{DIcon|Exit}} Get a bit of rest.
+<pre>{
+	"$type": "RPG.GameCore.SetPerformanceResult",
+	"Value": 1
+}</pre>
+
+;(Talk to Yukong)
+:'''Yukong:''' You can start your match when you're ready.
+:{{DIcon|Arrow}} Ready.
+:<pre>{
+	"$type": "RPG.GameCore.SetPerformanceResult",
+	"Value": 1
+}</pre>
+:{{DIcon|Exit}} Get a bit of rest.
+
+;(Unused &mdash; EnterDistrict_G220)
+:{{tx}}
+:;(Enter battle)
+:::Wave 1: {{Enemy List|Eclipse Wolftrooper*1/-30% ATK, -30% HP; Sableclaw Wolftrooper*1/-30% ATK, -30% HP}}
+:::Wave 2: {{Enemy List|Aurumaton Gatekeeper*1/-30% ATK, -30% HP; Eclipse Wolftrooper*1/-30% ATK, -30% HP}}
+----
+:'''Yukong:''' Halt the duel!
+:'''Samatha:''' Wait... I have not won! I can still fight! Only with my victory will the Xianzhou be able to hear the voices of Claretwheel Temple...
+:'''Yukong:''' Samatha, you've already tried your best. The Xianzhou is not an arena for the Wardance ceremony. We do not only listen to the voices of victors. I represent all of the Xianzhou Luofu in recognizing your determination.
+:{{DIcon|Arrow}} Will the petition of Claretwheel Temple be successful?
+:'''Yukong:''' I will let General Jing Yuan have a conversation with Samatha. Also, I will try my best to give a full account and support the Claretwheel Temple during the Six Charioteers' meeting. Regarding Claretwheel Temple's petition, I cannot give a definite answer.
+:{{tx}}
+<pre>{
+	"$type": "RPG.GameCore.PerformanceExtendEndBlack"
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.ShowUI",
+	"Name": "Ui.FightFest.ScoreMatch.FightFestScoreMatchSpecialInviteResultDialog",
+	"Param": {
+		"Value": "2007"
+	}
+}</pre>
 {{Dialogue End}}
 
 ==Other Languages==

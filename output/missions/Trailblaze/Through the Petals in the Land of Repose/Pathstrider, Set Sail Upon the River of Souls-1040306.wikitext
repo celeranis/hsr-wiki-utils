@@ -52,99 +52,471 @@ PageTitle=#Pathstrider, Set Sail Upon the River of Souls#
 ===Speak with Aglaea and discuss countermeasures{{subst:void|<!--104030601-->}}===
 {{Mission Description|type=trailblaze|location="Eternal Holy City" Okhema|Castorice's explanation earned her the Chrysos Heirs' understanding. To find out where Thanatos went, she actively stood with the Council of Elders. This is an essential choice.<br />Someone needs to handle the conference about "pausing the Flame-Chase Journey" and someone needs to find a trace of Thanatos.}}
 {{Dialogue Start}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{A|VO chapter4 26 castorice 110.ogg}} '''Castorice:''' If fate dictates that my path must oppose yours, I will do all I can to resist it, and protect what I aspire to achieve.
+:{{A|VO chapter4 26 aglaea 106.ogg}} '''Aglaea:''' Heh...
+:{{A|VO chapter4 26 castorice 111.ogg}} '''Castorice:''' Lord Mydei showed me that without taking the first step, all talk of what follows is moot.
+:{{DIcon|Arrow}} Castorice... you've changed.
+::{{A|VO chapter4 26 castorice 112.ogg}} '''Castorice:''' I...
+::*unsure of what to say, but offers a smile*
+::{{A|VO chapter4 26 castorice 113.ogg}} '''Castorice:''' ...
+::Have mercy, Aglaea! Stay your threads!!!
+:{{DIcon|Arrow}} *unsure of what to say, but offers a smile*
+::{{A|VO chapter4 26 castorice 113.ogg}} '''Castorice:''' ...
+::Have mercy, Aglaea! Stay your threads!!!
+:{{DIcon|Arrow}} Have mercy, Aglaea! Stay your threads!!!
+:{{A|VO chapter4 26 aglaea 107.ogg}} '''Aglaea:''' ...I'm not going to punish her for that.
+:{{A|VO chapter4 26 aglaea 108.ogg}} '''Aglaea:''' I have always hoped to hear you speak your mind, Cas, and I am glad to have heard your true thoughts.
 :{{tx}}
 {{Dialogue End}}
 
 ===Head to the private bath chamber and speak with Mem{{subst:void|<!--104030602-->}}===
 {{Mission Description|type=trailblaze|location="Eternal Holy City" Okhema|update|At noon of the next day, Zagreus's demigod will become a guide to traverse the River of Souls. Today, stamina should be conserved for the long trip ahead.<br />Return to the private bath chamber and make a plan.}}
 {{Dialogue Start}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
 :{{tx}}
+:{{A|VO chapter4 26 mem 101.ogg}} '''Mem:''' Hey, friend! Is the debate finally over? Did you win?
+:{{DIcon|Arrow}} The upper hand is ours. We thrashed them.
+::{{A|VO chapter4 26 mem 102.ogg}} '''Mem:''' Really? But the look on your face says otherwise...
+::We're tied with the Council of Elders.
+::{{A|VO chapter4 26 mem 103.ogg}} '''Mem:''' Oh... that means victory is around the corner!
+::We managed to win ourselves a glorious defeat...
+:{{DIcon|Arrow}} We're tied with the Council of Elders.
+::{{A|VO chapter4 26 mem 103.ogg}} '''Mem:''' Oh... that means victory is around the corner!
+::We managed to win ourselves a glorious defeat...
+:{{DIcon|Arrow}} We managed to win ourselves a glorious defeat...
+:{{A|VO chapter4 26 mem 104.ogg}} '''Mem:''' Won a glorious defeat... You sure know how to look on the bright side.
+:{{A|VO chapter4 26 mem 105.ogg}} '''Mem:''' Well, moving on! Hehe, I was hard at work even while you were at the debate.
+:{{A|VO chapter4 26 mem 106.ogg}} '''Mem:''' I borrowed a mountain of books from Cas to see if I could find a way to solve your problem. Let's see... I still have...
+:{{A|VO chapter4 26 mem 107.ogg}} '''Mem:''' ...Only 32 books to go!
+:{{DIcon|Arrow}} It's okay, Mem. We've found a way.
+:{{A|VO chapter4 26 mem 108.ogg}} '''Mem:''' Really!? That's fantastic news! I knew it! Hard work always pays off! Especially if you're as diligent as Mem!
+:{{A|VO chapter4 26 mem 109.ogg}} '''Mem:''' Phew. I feel like a huge burden has finally been lifted off my shoulders...
+:{{A|VO chapter4 26 mem 110.ogg}} '''Mem:''' Why are my eyelids... so heavy... all of a sudden...?
+:{{DIcon|Arrow}} There's nothing more we can do for now. Let's get some rest.
+::{{A|VO chapter4 26 mem 111.ogg}} '''Mem:''' You're right... Then I'll... go back to...
+::{{tx}}
+:<pre>{
+	"$type": "RPG.GameCore.SetPerformanceResult",
+	"Value": 1
+}</pre>
+:{{DIcon|Exit}} Maybe I can go for another walk outside.
+::{{A|VO chapter4 26 mem 112.ogg}} '''Mem:''' Nah, I'm... going...
+::{{tx}}
 {{Dialogue End}}
 
 ===Rest well and gather strength for a long journey{{subst:void|<!--104030603-->}}===
 {{Mission Description|type=trailblaze|location="Eternal Holy City" Okhema|update|At noon of the next day, Zagreus's demigod will become a guide to traverse the River of Souls. Today, stamina should be conserved for the long trip ahead.<br />Lay down and rest in preparation for tomorrow's arrival.}}
 {{Dialogue Start}}
-:{{tx}}
 {{Dialogue End}}
 
 ===Speak with the Trianne Doll again before heading out{{subst:void|<!--104030605-->}}===
 {{Mission Description|type=trailblaze|location="Eternal Holy City" Okhema|update|You've spent far too long searching for Thanatos. Now, the closer you seem to get to them, the longer the night seems to last.<br />You still have some things to say to Trianne, and someone else seems to have noticed your thoughts.}}
 {{Dialogue Start}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
 :{{tx}}
+<pre>{
+	"$type": "RPG.GameCore.PerformanceEndSeq",
+	"BeforeCases": [
+		{
+			"$type": "RPG.GameCore.SwitchCharacterAnchorV2",
+			"SwitchCharacterAnchorConfig": {
+				"IsLocalPlayer": true,
+				"CharacterUniqueName": "LocalPlayer",
+				"AreaName": {
+					"Value": "LevelArea_P10401_F10401001_G608"
+				},
+				"AnchorName": {
+					"Value": "Anchor2"
+				}
+			}
+		}
+	]
+}</pre>
 {{Dialogue End}}
 
 ===Look at the distant Titan since you can't sleep{{subst:void|<!--104030606-->}}===
 {{Mission Description|type=trailblaze|location="Eternal Holy City" Okhema|update|At noon of the next day, Zagreus's demigod will become a guide to traverse the River of Souls. Today, stamina should be conserved for the long trip ahead.<br />(Trailblazer) is like a student preparing for a spring break trip... Even if lives are at stake {{MC|f=she|m=he}} is still so relaxed. That might be a good thing.}}
 {{Dialogue Start}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
 :{{tx}}
 {{Dialogue End}}
 
 ===See who's knocking at the door{{subst:void|<!--104030607-->}}===
 {{Dialogue Start}}
+
+;(Talk to Castorice)
+----
+:{{A|VO chapter4 26 castorice 127.ogg}} '''Castorice:''' I hope I didn't wake you.
+:Sleep is a luxury when you are at my age.
+:{{A|VO chapter4 26 castorice 128.ogg}} '''Castorice:''' I'm glad to see you're as full of life as ever.
+:{{DIcon|Arrow}} Is it another mission from Aglaea?
+:{{DIcon|Arrow}} Sleep is a luxury when you are at my age.
+::{{A|VO chapter4 26 castorice 128.ogg}} '''Castorice:''' I'm glad to see you're as full of life as ever.
+::Is it another mission from Aglaea?
+:{{A|VO chapter4 26 castorice 129.ogg}} '''Castorice:''' Huh? No. No...
+:{{A|VO chapter4 26 castorice 130.ogg}} '''Castorice:''' I'm here because of private matters, actually...
+:{{A|VO chapter4 26 castorice 131.ogg}} '''Castorice:''' If it isn't too much to ask, I'd really like it if you could come along with me to retrieve something.
+:{{DIcon|Arrow}} Sure. Let's go.
+::{{A|VO chapter4 26 castorice 132.ogg}} '''Castorice:''' ...Aren't you going to ask me what it is?
+::As expected. Manual labor...
+::{{A|VO chapter4 26 castorice 133.ogg}} '''Castorice:''' Not to worry &mdash; it's nothing heavy.
+::Wow, I feel so sleepy all of a sudden...
+::{{A|VO chapter4 26 castorice 134.ogg}} '''Castorice:''' Ah! Is your soul...
+::I was just kidding.
+::{{A|VO chapter4 26 castorice 135.ogg}} '''Castorice:''' Oh... then I'm glad you're feeling fine.
+::My will has become one with the universe. Goodbye.
+:{{DIcon|Arrow}} As expected. Manual labor...
+::{{A|VO chapter4 26 castorice 133.ogg}} '''Castorice:''' Not to worry &mdash; it's nothing heavy.
+::Wow, I feel so sleepy all of a sudden...
+::{{A|VO chapter4 26 castorice 134.ogg}} '''Castorice:''' Ah! Is your soul...
+::I was just kidding.
+::{{A|VO chapter4 26 castorice 135.ogg}} '''Castorice:''' Oh... then I'm glad you're feeling fine.
+::My will has become one with the universe. Goodbye.
+:{{DIcon|Arrow}} Wow, I feel so sleepy all of a sudden...
+::{{A|VO chapter4 26 castorice 134.ogg}} '''Castorice:''' Ah! Is your soul...
+::{{DIcon|Arrow}} I was just kidding.
+:::{{A|VO chapter4 26 castorice 135.ogg}} '''Castorice:''' Oh... then I'm glad you're feeling fine.
+:::My will has become one with the universe. Goodbye.
+::{{DIcon|Arrow}} My will has become one with the universe. Goodbye.
+:{{A|VO chapter4 26 castorice 136.ogg}} '''Castorice:''' Huh? But I can still sense your soul here...?
+:{{A|VO chapter4 26 castorice 137.ogg}} '''Castorice:''' ...Ah, sorry! I didn't realize it was a joke.
+:{{A|VO chapter4 26 castorice 138.ogg}} '''Castorice:''' It isn't a long way from here. Shall we?
 :{{tx}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{A|VO chapter4 26 castorice 126.ogg}} '''Castorice:''' ...It's me.
 {{Dialogue End}}
 
 ===Walk with Castorice and learn about what's happening at the citizens' assembly{{subst:void|<!--104030608-->}}===
 {{Mission Description|type=trailblaze|location="Eternal Holy City" Okhema|update|Castorice's visit isn't only for the purpose of relaxation, but also to have (Trailblazer) follow her to claim a certain item.<br />The vote to support pausing the Flame-Chase Journey or not has become the matter of prime importance among the citizenry of Okhema.}}
 {{Dialogue Start}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{A|VO chapter4 26 xintuA 101.ogg}} '''Enraged Oronyx Devotee:''' I want to vote! Tell me how I can vote!
+:{{A|VO chapter4 26 xintuB 101.ogg}} '''Rational Talanton Devotee:''' Take your ceramic shard engraved with the {{Rubi|Kephale|Worldbearing Titan}} rune, select the Council of Elders in your heart, and pray silently until the shard registers your choice. Then toss it into the dolium.
+:{{A|VO chapter4 26 xintuA 102.ogg}} '''Enraged Oronyx Devotee:''' The Council of Elders? More like the council of buffoons! The black tide took my hometown long ago! Who are they kidding with bringing back Era Chrysea? It's all a sham to create their own Era Chrysea in Okhema!
+:{{A|VO chapter4 26 xintuB 102.ogg}} '''Rational Talanton Devotee:''' The Titans are just... So long as we do not overstep our bounds again, we will not incur divine wrath.
+:{{A|VO chapter4 26 xintuA 103.ogg}} '''Enraged Oronyx Devotee:''' Oh, please. The time when these deranged Titans should have vacated their spot to the demigods is long overdue! You'll see soon enough, you old fogey!
+:{{A|VO chapter4 26 xintuB 103.ogg}} '''Rational Talanton Devotee:''' And I pray that {{Rubi|Talanton|Law Titan}} smacks some sense into you with their scales. We shall see how this turns out!
+:{{A|VO chapter4 26 castorice 140.ogg}} '''Castorice:''' That was... quite a spectacle.
+:{{DIcon|Arrow}} Just another peaceful day in Okhema.
+::{{A|VO chapter4 26 castorice 141.ogg}} '''Castorice:''' ...I suppose "peaceful" is technically correct if no actual violence happened...
+::Yeah, watching people squabble is kind of fun.
+:{{DIcon|Arrow}} Yeah, watching people squabble is kind of fun.
+:{{A|VO chapter4 26 castorice 142.ogg}} '''Castorice:''' Hm? You're interested in that? Well, you'll feel right at home in Okhema then.
+:{{A|VO chapter4 26 castorice 143.ogg}} '''Castorice:''' To this day, I still find it almost unreal that Okhema is the only place illuminated by light amidst the crumbling ruins of Amphoreus, and its people are even holding votes to reconcile differing opinions...
+:{{A|VO chapter4 26 castorice 144.ogg}} '''Castorice:''' This peaceful sight is making me forget that this is the end times.
+:{{DIcon|Arrow}} This is what the Flame-Chase Journey is all about.
+:{{DIcon|Arrow}} Shouldn't you have gotten used to it by now?
+:{{DIcon|Arrow}} ...You look very confused.
+:{{A|VO chapter4 26 castorice 145.ogg}} '''Castorice:''' ...
+:{{A|VO chapter4 26 castorice 146.ogg}} '''Castorice:''' Before coming here, I had lived for many years in Aidonia, a city of rime and frost. The people there were devotees of {{Rubi|Thanatos|Death Titan}}, and were well-known for their unique burial rites and traditions.
+:{{A|VO chapter4 26 castorice 147.ogg}} '''Castorice:''' ...Traditions that I played a major role in.
+:{{DIcon|Arrow}} Because of the curse on you?
+:{{A|VO chapter4 26 castorice 148.ogg}} '''Castorice:''' Yes. You now know me as the mortician of Okhema...
+:{{A|VO chapter4 26 castorice 149.ogg}} '''Castorice:''' But back in those days, I was Aidonia's Maiden of War.
+:{{A|VO chapter4 26 castorice 150.ogg}} '''Castorice:''' I was trudging across the frosty plains on my own when the Aidonians found me. They saw the curse in me as a blessing from {{Rubi|Thanatos|Death Titan}}, and believed that my hands could correct the Era Chrysea's mistake and lead them to meet the great god of death.
+:{{A|VO chapter4 26 castorice 151.ogg}} '''Castorice:''' They provided me shelter, but in return...
+:{{A|VO chapter4 26 castorice 152.ogg}} '''Castorice:''' I was expected to grant "merciful deaths" to war captives, prisoners bound for execution, and heroes alike.
+:{{DIcon|Arrow}} Is that some sort of end-of-life care?
+::{{A|VO chapter4 26 castorice 153.ogg}} '''Castorice:''' Is that how you see it too? But...
+::Isn't that just an executioner?
+:{{DIcon|Arrow}} Isn't that just an executioner?
+:{{A|VO chapter4 26 castorice 154.ogg}} '''Castorice:''' Yes...
+:{{A|VO chapter4 26 castorice 155.ogg}} '''Castorice:''' No matter how kind or cruel the means, nothing can change the essence of death...
 :{{tx}}
+
+;(Upon reaching the destination)
+:{{A|VO chapter4 26 castorice 139.ogg}} '''Castorice:''' The streets are packed... It seems the vote to pause the Flame-Chase Journey has begun.
 {{Dialogue End}}
 
 ===Speak with Castorice{{subst:void|<!--104030609-->}}===
 {{Mission Description|type=trailblaze|location="Eternal Holy City" Okhema|update|Castorice's visit isn't only for the purpose of relaxation, but also to have (Trailblazer) follow her to retrieve a certain item.<br />Castorice would like to illustrate a sequence of memories concerning Aidonia.}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Castorice)
+----
+:{{A|VO chapter4 26 castorice 155.ogg}} '''Castorice:''' No matter how kind or cruel the means, nothing can change the essence of death...
+:{{A|VO chapter4 26 castorice 156.ogg}} '''Castorice:''' Taking away someone's life is never worthy of religious worship.
+<pre>{
+	"$type": "RPG.GameCore.OpenTreasureChallenge",
+	"RaidID": 40424
+}</pre>
+
 {{Dialogue End}}
 
 ===Walk with Castorice and continue your talk{{subst:void|<!--104030616-->}}===
 {{Mission Description|type=trailblaze|location="Eternal Holy City" Okhema|update|Castorice's visit isn't only for the purpose of relaxation, but also to have (Trailblazer) follow her to retrieve a certain item.<br />Castorice prepared a gift for (Trailblazer).}}
 {{Dialogue Start}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+----
+:Castorice talks to you about the gifts she gave to other Chrysos Heirs, and before you know it, she arrives at "your gift."
+:{{A|VO chapter4 26 castorice 262.ogg}} '''Castorice:''' But now... perhaps I might have one last chance.
+:{{A|VO chapter4 26 castorice 263.ogg}} '''Castorice:''' Long ago, Trinnon read a prophecy to me: {{Color|keyword|nobold=1|"At the end of the sea of flowers, the souls of the living shall warm thy fingertips, and after an embrace... there shall be eternal separation."}}
+:{{DIcon|Arrow}} Thank you for telling me your thoughts.
+::{{A|VO chapter4 26 castorice 195.ogg}} '''Castorice:''' With that... I won't have any regrets.
+:{{DIcon|Arrow}} ...Should I pretend I didn't hear any of that?
+::{{A|VO chapter4 26 castorice 196.ogg}} '''Castorice:''' Ah! I...
 :{{tx}}
 {{Dialogue End}}
 
 ===Check Castorice's gift{{subst:void|<!--104030610-->}}===
 {{Dialogue Start}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+----
+:Castorice talks to you about the gifts she gave to other Chrysos Heirs, and before you know it, she arrives at "your gift."
+:{{A|VO chapter4 26 castorice 262.ogg}} '''Castorice:''' But now... perhaps I might have one last chance.
+:{{A|VO chapter4 26 castorice 263.ogg}} '''Castorice:''' Long ago, Trinnon read a prophecy to me: {{Color|keyword|nobold=1|"At the end of the sea of flowers, the souls of the living shall warm thy fingertips, and after an embrace... there shall be eternal separation."}}
+:Thank you for telling me your thoughts.
+:{{A|VO chapter4 26 castorice 195.ogg}} '''Castorice:''' With that... I won't have any regrets.
+:...Should I pretend I didn't hear any of that?
+:{{A|VO chapter4 26 castorice 196.ogg}} '''Castorice:''' Ah! I...
+:{{A|VO chapter4 26 castorice 197.ogg}} '''Castorice:''' I'm sorry. I probably said too much... I hope I didn't make you uncomfortable.
+:{{A|VO chapter4 26 castorice 198.ogg}} '''Castorice:''' Let's put that aside for the moment. We've arrived.
+:{{A|VO chapter4 26 castorice 199.ogg}} '''Castorice:''' I want to retrieve a small gift I specially prepared for you. I made it myself, like the trinket I gave Lady Trianne... I want to leave something for everyone, if possible.
+:{{A|VO chapter4 26 castorice 200.ogg}} '''Castorice:''' The journey to seek an audience with the Death Titan cannot be an easy one... I want to make full use of every moment I have before we depart, so that I don't have any regrets.
+:{{DIcon|Arrow}} Is it a brooch with my face on it?
+::{{A|VO chapter4 26 castorice 201.ogg}} '''Castorice:''' No, it isn't. You'll know when you see it.
+::That sounds kind of ominous...
+:{{DIcon|Arrow}} That sounds kind of ominous...
+:{{A|VO chapter4 26 castorice 202.ogg}} '''Castorice:''' Then... Perhaps you can have a look at it first? You don't have to take it if you don't like it.
+:{{A|VO chapter4 26 castorice 204.ogg}} '''Castorice:''' Look, it's right there&mdash;
 :{{tx}}
 {{Dialogue End}}
 
 ===Find the Golden Short Spear and discover Cipher's whereabouts{{subst:void|<!--104030617-->}}===
 {{Mission Description|type=trailblaze|location="Eternal Holy City" Okhema|update|Castorice's visit isn't only for the purpose of relaxation, but also to have (Trailblazer) follow her to retrieve a certain item.<br />The gift that Castorice prepared was stolen by the famous Amphorean Kitty Phantom Thief. What's more, the thief left clues.}}
 {{Dialogue Start}}
-:{{tx}}
+;(Upon reaching the destination)
+:{{A|VO chapter4 26 castorice 204.ogg}} '''Castorice:''' Look, it's right there&mdash;
+:This is the "Golden Short Spear" mentioned in the thief's letter.
 {{Dialogue End}}
 
 ===Follow the Golden Short Spear{{subst:void|<!--104030618-->}}===
 {{Dialogue Start}}
-:{{tx}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{A|VO chapter4 26 castorice 205.ogg}} '''Castorice:''' ...Huh?
+;(Unused &mdash; Fly_True)
+<pre>{
+	"$type": "RPG.GameCore.TriggerEntityEvent",
+	"EventName": {
+		"Value": "Clt_TriggerNext"
+	},
+	"InstanceID": {
+		"FixedValue": {
+			"Value": 300003
+		}
+	}
+}</pre>
+
+;(Unused &mdash; Fly_False)
+<pre>{
+	"$type": "RPG.GameCore.TriggerEntityEvent",
+	"EventName": {
+		"Value": "Clt_TriggerNext"
+	},
+	"InstanceID": {
+		"FixedValue": {
+			"Value": 300004
+		}
+	}
+}</pre>
 {{Dialogue End}}
 
 ===Follow the Golden Short Spear's direction and find Cipher{{subst:void|<!--104030611-->}}===
 {{Dialogue Start}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{A|VO chapter4 26 dadishou 101.ogg}} '''Cipher?:''' Grumph...
+:Cipher &mdash; if this dromas truly is her &mdash; appears to be quite content, her gaze filled with three parts sincerity, three parts approval, three parts triumph, and three parts "Hahah, Gray Mystery, you've lost if you take this seriously."
+:{{DIcon|Arrow}} Hi, Cipher.
+::{{A|VO chapter4 26 dadishou 102.ogg}} '''Cipher?:''' Grumph...
+::She seems to be saying, "Hello."
+::Seeing you treat the dromas with such seriousness, all twelve parts of her complex emotions immediately transformed into one of admiration.
+::I see. So a dromas is a cat.
+::{{A|VO chapter4 26 dadishou 103.ogg}} '''Cipher?:''' Grumph...
+::She seems to be saying, "Right. Oh, no, yeah yeah, yes."
+::After a moment of inner conflict, she reached a definitive conclusion: The dromas is indeed a cat.
+::What did you just call me!?
+:{{DIcon|Arrow}} I see. So a dromas is a cat.
+::{{A|VO chapter4 26 dadishou 103.ogg}} '''Cipher?:''' Grumph...
+::She seems to be saying, "Right. Oh, no, yeah yeah, yes."
+::After a moment of inner conflict, she reached a definitive conclusion: The dromas is indeed a cat.
+::What did you just call me!?
+:{{DIcon|Arrow}} What did you just call me!?
+:{{A|VO chapter4 26 dadishou 104.ogg}} '''Cipher?:''' Grumph...
+:She seems to be saying, "Ah hahah, Cipher does not know."
+:Hmm, so. She says she doesn't know.
+:{{A|VO chapter4 26 castorice 220.ogg}} '''Castorice:''' ...Lady Cipher, please come on out.
+:{{A|VO chapter4 26 cipher 101.ogg}} '''Cipher?:''' Tsk. You're still careless as ever. Shouldn't you keep such a precious gift near your bosom?
+:{{A|VO chapter4 26 castorice 221.ogg}} '''Castorice:''' Since you know it's a gift for someone else, please give it back to me. Stop hiding among the people and letting the wind carry your voice.
+:{{A|VO chapter4 26 cipher 102.ogg}} '''Cipher?:''' Now, now. Since I know it's a gift &mdash; That just means I need to milk its worth! The children of the wind never stay for long in one place, unless your offer is tempting enough to still the wind. What say you?
+:{{A|VO chapter4 26 castorice 222.ogg}} '''Castorice:''' Name your price. I'll give you however much you want.
+:{{DIcon|Arrow}} Huh?
+::{{A|VO chapter4 26 castorice 223.ogg}} '''Castorice:''' Hmm? What's wrong?
+::If you don't want the money, I'd gladly take it off your hands...
+:{{DIcon|Arrow}} If you don't want the money, I'd gladly take it off your hands...
+:{{A|VO chapter4 26 castorice 224.ogg}} '''Castorice:''' ...
+:{{A|VO chapter4 26 castorice 225.ogg}} '''Castorice:''' Ah... I'm sorry. Bargaining is really not my forte...
+:{{A|VO chapter4 26 cipher 103.ogg}} '''Cipher?:''' Pfft...
 :{{tx}}
 {{Dialogue End}}
 
 ===Head to Cipher's secret hideout{{subst:void|<!--104030612-->}}===
 {{Mission Description|type=trailblaze|location="Eternal Holy City" Okhema|update|Castorice's visit isn't only for the purpose of relaxation, but also to have (Trailblazer) follow her to retrieve a certain item.<br />Cipher's manufactured mysteriousness is at an end. It's time to see what hides behind the veil.}}
 {{Dialogue Start}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{A|VO chapter4 26 cipher 108.ogg}} '''Cipher:''' Over here, over here! ...No, not that way. This way!
+:{{A|VO chapter4 26 cipher 109.ogg}} '''Cipher:''' Come on. If I really wanted to hide, you'd never find me.
+:{{A|VO chapter4 26 cipher 110.ogg}} '''Cipher:''' So, relax, you two! No need to get your hackles up. I'm not that scary, am I? Meow!
+:{{DIcon|Arrow}} At last! A character that meows has appeared!
+::{{A|VO chapter4 26 cipher 111.ogg}} '''Cipher:''' Haha, no way! Some people might have been into that a millennium ago, but it's long since gone out of style.
+::Ew, what kind of quirk&mdash;
+:{{DIcon|Arrow}} Ew, what kind of quirk&mdash;
+:{{A|VO chapter4 26 cipher 112.ogg}} '''Cipher:''' Whoa! That upset? Calm down. I'm just putting on a show with the meowing. Some people might have been into that a millennium ago, but it's long since gone out of style.
+:{{A|VO chapter4 26 cipher 113.ogg}} '''Cipher:''' Loosen up, buddy! Shall we get down to business?
 :{{tx}}
+
+;(Upon reaching the destination)
+:{{A|VO chapter4 26 castorice 228.ogg}} '''Castorice:''' ...Here we are.
+<pre>{
+	"$type": "RPG.GameCore.AdvEnableTrigger",
+	"TargetType": {
+		"$type": "RPG.GameCore.GroupFetchLocalTarget",
+		"TargetType": "Prop",
+		"Targets": [
+			300004
+		]
+	},
+	"TriggerName": "MissionTrigger"
+}</pre>
+
+;(Upon reaching the destination)
+:{{A|VO chapter4 26 castorice 228.ogg}} '''Castorice:''' ...Here we are.
+<pre>{
+	"$type": "RPG.GameCore.AdvEnableTrigger",
+	"TargetType": {
+		"$type": "RPG.GameCore.GroupFetchLocalTarget",
+		"TargetType": "Prop",
+		"Targets": [
+			300002
+		]
+	},
+	"TriggerName": "MissionTrigger"
+}</pre>
 {{Dialogue End}}
 
 ===Wake up in the private bath chamber{{subst:void|<!--104030613-->}}===
 {{Mission Description|type=trailblaze|location="Eternal Holy City" Okhema|update|Plans have changed. Cipher hopes that (Trailblazer) can meet with Castorice outside Okhema.<br />(Trailblazer) awakens groggily in the private baths once more.}}
 {{Dialogue Start}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
 :{{tx}}
+:<!--1-second delay-->
+:{{tx}}
+<pre>{
+	"$type": "RPG.GameCore.AdventureShowReading",
+	"BookID": {
+		"FixedValue": {
+			"Value": 190840
+		}
+	}
+}</pre>
 {{Dialogue End}}
 
 ===Leave Okhema and meet with Cipher{{subst:void|<!--104030614-->}}===
 {{Mission Description|type=trailblaze|location="Eternal Holy City" Okhema|update|Plans have changed. Cipher hopes that (Trailblazer) can meet with Castorice outside Okhema.<br />Onward, to Styxia.}}
 {{Dialogue Start}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{A|VO chapter4 26 cipher 166.ogg}} '''Cipher:''' Mmm! Bright and sunny, just the weather for farewells.
+:{{A|VO chapter4 26 castorice 246.ogg}} '''Castorice:''' You're... here.
+:{{DIcon|Arrow}} Really? Just the three of us?
+::{{A|VO chapter4 26 cipher 167.ogg}} '''Cipher:''' Totally. The trio team is the best set up to reach the finals.
+::I'll go give Aglaea a heads-up...
+:{{DIcon|Arrow}} I'll go give Aglaea a heads-up...
+:{{A|VO chapter4 26 cipher 168.ogg}} '''Cipher:''' No need. I already told her. She's fine with it.
+:{{A|VO chapter4 26 cipher 169.ogg}} '''Cipher:''' Tsk tsk, you sure know how to put me in a spot, Castorice... I need to travel with you, but I can't touch you. What a bother.
+:{{A|VO chapter4 26 castorice 247.ogg}} '''Castorice:''' Sorry...
+:{{A|VO chapter4 26 cipher 170.ogg}} '''Cipher:''' Aw, I was just teasing. Don't take it to heart.
+:{{A|VO chapter4 26 cipher 171.ogg}} '''Cipher:''' Did you know that the legends say you have to put an {{Rubi|obol|little silver coin}} into the mouth of the dead or over their eyes if you want them to successfully cross the River of Souls and enter the nether realm?
+:{{A|VO chapter4 26 cipher 172.ogg}} '''Cipher:''' That's the ferry fare for entering the nether realm. However, I honestly won't ask you to pay this time. I'll pay. And then we'll just have to go through the motions...
+:{{A|VO chapter4 26 castorice 248.ogg}} '''Castorice:''' ...
+:{{DIcon|Arrow}} You sure are helpful when it doesn't cost you anything.
+::{{A|VO chapter4 26 cipher 173.ogg}} '''Cipher:''' Hey, I'm just trying to make this journey feel more special, okay? Don't read too much into it.
+::We already paid you so much!
+::{{A|VO chapter4 26 cipher 174.ogg}} '''Cipher:''' Hey, that was a different purchase. Look, I'm just trying to make this journey feel more special.
+::Just how much have you swindled Castorice of?
+:{{DIcon|Arrow}} We already paid you so much!
+::{{A|VO chapter4 26 cipher 174.ogg}} '''Cipher:''' Hey, that was a different purchase. Look, I'm just trying to make this journey feel more special.
+::Just how much have you swindled Castorice of?
+:{{DIcon|Arrow}} Just how much have you swindled Castorice of?
+:{{A|VO chapter4 26 castorice 249.ogg}} '''Castorice:''' Don't worry... it's not a lot...
+:{{A|VO chapter4 26 cipher 175.ogg}} '''Cipher:''' Alright! Pass me the coin &mdash; it's time to get the god's powers going! A fleet-footed trip to the nether realm, here we come!
 :{{tx}}
 {{Dialogue End}}
 
 ===Follow the Golden Short Spear{{subst:void|<!--104030619-->}}===
 {{Mission Description|type=trailblaze|location="Eternal Holy City" Okhema|update|Castorice's visit isn't only for the purpose of relaxation, but also to have (Trailblazer) follow her to retrieve a certain item.<br />The gift that Castorice prepared was stolen by the famous Amphorean Kitty Phantom Thief. What's more, the thief left clues.}}
 {{Dialogue Start}}
-:{{tx}}
+
+
+;(Unused &mdash; Fly_True843)
+<pre>{
+	"$type": "RPG.GameCore.TriggerEntityEvent",
+	"EventName": {
+		"Value": "Clt_TriggerNext"
+	},
+	"InstanceID": {
+		"FixedValue": {
+			"Value": 300003
+		}
+	}
+}</pre>
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+----
+:The short spear flew in a circle and returned to its original spot, nonchalantly pretending to be a new puzzle.
+:{{A|VO chapter4 26 castorice 273.ogg}} '''Castorice:''' ...Exactly the kind of thing she would do.
+:{{DIcon|Arrow}} Repair the left Golden Short Spear.
+::{{A|VO chapter4 26 castorice 272.ogg}} '''Castorice:''' This is how it should be.
+:{{DIcon|Arrow}} Repair the right Golden Short Spear.
+::{{A|VO chapter4 26 castorice 271.ogg}} '''Castorice:''' It isn't real.
+<pre>{
+	"$type": "RPG.GameCore.TriggerEntityEvent",
+	"EventName": {
+		"Value": "Clt_TriggerNext"
+	},
+	"InstanceID": {
+		"FixedValue": {
+			"Value": 300003
+		}
+	}
+}</pre>
+:{{A|VO chapter4 26 castorice 270.ogg}} '''Castorice:''' (Trailblazer), we must pursue her.
 {{Dialogue End}}
 
 ==Other Languages==

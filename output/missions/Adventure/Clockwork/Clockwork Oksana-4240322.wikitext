@@ -45,42 +45,287 @@ PageTitle=#Clockwork: Oksana#
 ===Go to the corner of the theme park and retrieve the toy.{{subst:void|<!--424032203-->}}===
 {{Mission Description|type=adventure|location=Clock Studios Theme Park|update|Tick... tock! Quick, Adjust the hands... Tick, tock!<br />People's minds await your exploration. Help them regain their true selves!}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Obtain {{Item|Oksana's "Toys"|20|x=1}})
+
+:{{DIcon|undefined}} Concealed Box
+:Taking a peek into the immaculate bag, you see it's filled with ordinary toys. You cannot understand how they're selling so well. Perhaps this is what Oksana might call a return of "goodwill."
 {{Dialogue End}}
 
 ===Give the toy to the buyer in the Golden Hour and complete the deal.{{subst:void|<!--424032204-->}}===
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Trader)
+:You confirm and re-confirm that this guy is indeed the buyer of the toys. He looks super-shady as he's standing there, as though he's planning to deal in something dodgy.
+:'''Trader:''' Did you bring the stuff?
+:{{DIcon|Arrow}} Why do you sound like a crook when we're just dealing toys?
+::'''Trader:''' Toys? ... Hey, I'm just trying to create a little atmosphere here, right?
+::The finest goods in all Penacony.
+:{{DIcon|Arrow}} The finest goods in all Penacony.
+:'''Trader:''' They sure are. High quality at a low price. There's none better in all the galaxy.
+<pre>{
+	"$type": "RPG.GameCore.ConsumeMissionItemPerformance",
+	"SubMissionID": 424032204,
+	"Desc": {
+		"Hash": 18096028862919064994
+	},
+	"OnSubmitConfirm": [
+		{
+			"$type": "RPG.GameCore.PlayTimeline",
+			"TimelineName": "Story/Discussion/Mission/4240322/DS42403220604.playable",
+			"Type": "Discussion",
+			"Parameters": []
+		},
+		{
+			"$type": "RPG.GameCore.PlayOptionTalk",
+			"OptionList": [
+				{
+					"$type": "RPG.GameCore.OptionTalkInfo",
+					"TalkSentenceID": 413220610,
+					"OptionIconType": "ChatContinueIcon",
+					"TriggerCustomString": "TalkSentence_413220611"
+				}
+			]
+		}
+	],
+	"OnSubmitCancel": [
+		{
+			"$type": "RPG.GameCore.EndPerformance"
+		}
+	],
+	"SimpleTalk": {}
+}</pre>
+;(Unused &mdash; TalkSentence_413220611)
+:'''Trader:''' My friend, if Miss Oksana entrusted you with the delivery, then she must place great faith in you. I won't keep you in the dark.
+::{{tx}}
+:<pre>{
+	"$type": "RPG.GameCore.ConsumeMissionItem",
+	"SubMissionID": 424032204,
+	"IsAutoConsume": true,
+	"Desc": {
+		"Hash": 18096028862919064994
+	},
+	"SimpleTalk": {}
+}</pre>
 {{Dialogue End}}
 
 ===Report back to Oksana about the transaction.{{subst:void|<!--424032205-->}}===
 {{Dialogue Start}}
+
+;(Talk to Oksana)
+:'''Oksana:''' That was quick. Those dithering schmucks at the foundation could really learn a thing or two from you, kid.
+:'''Oksana:''' How'd the deal go? Everything smooth?
+:{{DIcon|Arrow}} About you being this galactic activist...
+:{{DIcon|Arrow}} ... Why did you hide everything from me?
+:'''Oksana:''' It wasn't on purpose, as you know what kind of person I am. I just didn't want you to look at me with tinted glasses, even if they were tinted with positivity.
+:'''Oksana:''' Kid, the funding that the foundation invests isn't just coming from me. Champions of peace and life across the galaxy all deserve our gratitude for their kindness.
+:'''Oksana:''' And I'm not some great galactic activist &mdash; I'm just a guide who provides a platform for everyone to use.
+:'''Oksana:''' There are so many worlds out there in the universe under the yoke of tyranny and oppression where even mere survival has become a luxury. To their oppressors, the residents aren't even people, but simply fuel for their tyrants' money-printers.
+:'''Oksana:''' Anybody would sympathize with them when confronted with such tragedy, and that forms the basis for why our foundation was established.
+:'''Oksana:''' So I support them purely out of personal compassion. In my view, helping them fight against oppression isn't any kind of charity but rather my duty and responsibility as an individual of wealth.
+:{{DIcon|Arrow}} Out of kindness, right?
+::'''Oksana:''' Sure. So long as we have kind intentions, we can do things that not even the Aeons could dream of doing.
+::So who was that just then?
+:{{DIcon|Arrow}} So who was that just then?
+:'''Oksana:''' Just a regular of mine with a filthy temper. They make custom weapons to put down &mdash; uh, I mean to fight against the Antimatter Legion.
+:'''Oksana:''' You did great this time. Just think about it &mdash; thanks to your help, millions of oppressed people will be able to overthrow their tyrannical regime.
 :{{tx}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{tx}}
+<pre>{
+	"$type": "RPG.GameCore.PerformanceEndSeq",
+	"BeforeCases": [
+		{
+			"$type": "RPG.GameCore.AdvDestroyGroupEntity",
+			"InstanceIDList": [
+				400002
+			]
+		}
+	]
+}</pre>
 {{Dialogue End}}
 
 ===Catch up with the mystery lady and ask her what she knows.{{subst:void|<!--424032206-->}}===
 {{Dialogue Start}}
+
+;(Talk to Mysterious Stranger)
+:'''Mysterious Stranger:''' Are you the one who was coming to see Oksana before? What, don't tell me her conscience got the better of her, and she'd like to cut us a half-price deal now?
+:'''Mysterious Stranger:''' Ha! Knowing her, there's more chance of the IPC converting to Aha than there is of that ever happening.
+:{{DIcon|Arrow}} Isn't she a galactic activist though?
+:'''Mysterious Stranger:''' Activist? Oh, my! Hahaha... well that's the funniest thing I've ever heard in my life.
+:'''Mysterious Stranger:''' Let me guess what she told you: "Oh, since my childhood friend died in the name of charity, I've taken up her mantle and dedicated myself to relieving the torments of war. And that's why we decided to establish this foundation of ours."
+:'''Mysterious Stranger:''' Take a guess how many times she's given this spiel before? And how much investment she's swindled out of people?
+:{{DIcon|Arrow}} But, what about the foundation...
+:'''Mysterious Stranger:''' You wanna know the real reason why the foundation was established? Money laundering! They take that money and invest it into weapons manufacturers, then use the foundation to pull the wool over people's eyes. It's a shrewd hustle.
+:'''Mysterious Stranger:''' A bigshot philanthropist throughout the galaxy? Don't make me sick. Every time there's another ding-dong on that bank account, a new shipment of arms sets sail.
+:'''Mysterious Stranger:''' Wanna know which part of the story I like best? Whenever any conflict reaches a ceasefire, the foundation's "humanitarian relief supplies" will be dispatched to the planet alongside a small army of photographers.
+:'''Mysterious Stranger:''' And then they'll say: "Please, put down arms and let everybody negotiate peacefully." I'm telling you, the best job for her isn't being an arms trader but rather a stand-up comedian. Just a bunch of clowns.
+:'''Mysterious Stranger:''' What was that line she just pulled? "Keep on being kind, kid."
+:'''Mysterious Stranger:''' But there's no use telling you all this. I have to hurry back to deal with that president of ours. Once I finish putting down the uprising, my forces will be executing that two-faced maggot too.
+:{{DIcon|Arrow}} She was hedging her bets.
+:{{DIcon|Arrow}} She was selling to the other side, too.
+::'''(Trailblazer):''' She was selling weapons to both of you to try and provoke a war so she could milk both sides. Are you happy for her to get away with it?
+:'''Mysterious Stranger:''' Listen, buddy, to be honest with you, I've met a lot of crooks in my time, so I kind of like you. But let me remind you that this universe isn't as innocent as you think it is.
 :{{tx}}
+
+;(Talk to Oksana)
+:'''Oksana:''' You did great this time. Just think about it &mdash; thanks to your help, millions of oppressed people will be able to overthrow their tyrannical regime.
+:'''Oksana:''' You can be proud of that, kid.
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:Despite Oksana speaking words of righteousness... her suspicious conversation with the mysterious person and other forced interactions leaves you feeling paranoid.
+:'''(Trailblazer):''' (That mysterious person shouldn't have wandered off too far... maybe you can ask her a few questions?)
 {{Dialogue End}}
 
 ===Go back and confront Oksana.{{subst:void|<!--424032207-->}}===
 {{Dialogue Start}}
+
+;(Talk to Oksana)
 :{{tx}}
+:'''Oksana:''' Kid, what are you doing back here? Is it good news? It must be karma repaying your kindness.
+:{{DIcon|Arrow}} You lied to me.
+::'''Oksana:''' What happened? Something bad? There there, let me take care of your worries.
+::'''Oksana:''' That's just life. There'll always be something annoying happening, but we have to keep soldiering on. If even we can't endure such setbacks, what hope do those living in actual war zones have?
+::{{DIcon|Arrow}} I know that you're an arms dealer.
+::'''Oksana:''' Tsk... I should have sewn that general's lips shut before I let him go. That's why I hate having to deal with these guys who only have anti-matter mines for brains. Politicians are far smarter.
+::I know everything.
+::'''Oksana:''' Yikes. Don't tell me there's another rebel group who's sent me a thank you letter?
+::'''Oksana:''' To tell you the truth, we try to keep things as low profile as we can at the foundation. But every time there'll be some kind-hearted people who risk their necks out there on the battlefield taking photos of our aid.
+::They're not hired by you?
+::'''Oksana:''' Didn't I already say? Ours was a chance rendezvous, so why should we be at loggerheads?
+::'''Oksana:''' I pay the money, and you do the job. That's the underlying logic behind how the whole world works. They got the weapons they wanted. I got my money. And you got your payment, too. What's wrong with having it good for a change?
+::Games within games.
+::'''Oksana:''' Don't tell me you believe that slander against the foundation? That's just the way it is, these days &mdash; everyone loves to hold up the tall poppy before cutting it down.
+::'''Oksana:''' It's fine if you want to insult me. But I will never stand for people criticizing everyone else's hard work.
+::Is inciting war part of your charity?
+:{{DIcon|Arrow}} I know everything.
+::'''Oksana:''' Yikes. Don't tell me there's another rebel group who's sent me a thank you letter?
+::'''Oksana:''' To tell you the truth, we try to keep things as low profile as we can at the foundation. But every time there'll be some kind-hearted people who risk their necks out there on the battlefield taking photos of our aid.
+::{{DIcon|Arrow}} They're not hired by you?
+::'''Oksana:''' Didn't I already say? Ours was a chance rendezvous, so why should we be at loggerheads?
+::'''Oksana:''' I pay the money, and you do the job. That's the underlying logic behind how the whole world works. They got the weapons they wanted. I got my money. And you got your payment, too. What's wrong with having it good for a change?
+::Games within games.
+::'''Oksana:''' Don't tell me you believe that slander against the foundation? That's just the way it is, these days &mdash; everyone loves to hold up the tall poppy before cutting it down.
+::'''Oksana:''' It's fine if you want to insult me. But I will never stand for people criticizing everyone else's hard work.
+::Is inciting war part of your charity?
+:{{DIcon|Arrow}} Games within games.
+::'''Oksana:''' Don't tell me you believe that slander against the foundation? That's just the way it is, these days &mdash; everyone loves to hold up the tall poppy before cutting it down.
+::'''Oksana:''' It's fine if you want to insult me. But I will never stand for people criticizing everyone else's hard work.
+::{{DIcon|Arrow}} Is inciting war part of your charity?
+:'''Oksana:''' Tsk... Looks like you've figured everything out.
+:'''Oksana:''' If you ask me, kids shouldn't work themselves up about grown-up things... or they won't be able to sleep at night.
+:'''Oksana:''' And besides, I was never the instigator. They came to me with their request, and I just helped them light the fuse. All I'm doing is following basic business etiquette by giving customers the products they need.
+:'''Oksana:''' Kid, there's no such thing as right and wrong in the world outside the Dreamscape. Having money, and staying alive so you can spend the money &mdash; that's the only truth there is.
+:'''Oksana:''' If you were in my shoes, what would you do? That's cold hard cash we're talking about. If I pulled it all out of the bank, the stacks would cover up a mountain &mdash; no, make that a whole mountain range.
+:'''Oksana:''' As long as the rebels have enough steam to resist, then the junta's weapon orders represent a bottomless pit &mdash; funneling money stolen from the people directly to us.
+:'''Oksana:''' Therefore, the rebels cannot win &mdash; but they can't lose, either. It's just like that old fable about the frog carrying the scorpion across the river... Ah, no &mdash; it's "casting a long line to catch a bigger fish."
+:'''Oksana:''' Don't give me that snide look. I'll have you know that without my supplies, they wouldn't even get the chance to resist. The state's machine of oppression would just eradicate them before nightfall, roots and all.
+:'''Oksana:''' And what's more, I'm always asking the foundation to put this money back into aid to help war refugees. If you round everything up, am I not actually helping the people get their own money back?
+:{{DIcon|Arrow}} Didn't you say you want to eliminate war?
+:'''Oksana:''' The only lesson I learned from war is that nothing ever changes. Kid, if you can't stop it, then you might as well try and put it to work for you. Wherever there's warfare, there are profits to be made.
+:'''Oksana:''' I don't know what The Family dosed me with, spurning such a great line of business like this and recruiting people into the charity cause instead.
+:'''Oksana:''' This sum should make up for me deceiving you. From now on, we don't know each other. You've never seen me and I've never seen you.
+:{{DIcon|Arrow}} You can keep your filthy blood money.
+::'''Oksana:''' Care to reconsider? Even here in Penacony you can find countless people struggling day and night to try and make this kind of money.
+::'''Oksana:''' Ditch your naive ideas about justice always prevailing. One is an abstract number light-years away, and the other is profits right under your nose &mdash; the right answer couldn't be any clearer. If it helps, I can give you even more.
+::{{DIcon|Arrow}} I can't take it any more!
+::'''(Trailblazer):''' Listen up, warmonger! I'll give you a taste of some Trailblazer medicine!
+:{{DIcon|Arrow}} That's what I meant.
+::'''Oksana:''' That's right. What's it to us whether those people live or die? Making money is the be-all and end-all.
+:{{tx}}
+<pre>{
+	"$type": "RPG.GameCore.SetMissionCustomValue",
+	"SubmissionID": 424032207,
+	"MissionCustomValue": {
+		"Name": "OldValue_0",
+		"ValidValueParamList": [
+			0,
+			1,
+			2
+		]
+	},
+	"CustomValue": 1
+}</pre>
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{tx}}
+<pre>{
+	"$type": "RPG.GameCore.ShowHeartDialToast",
+	"StepType": "Normal",
+	"TargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvNpcEx",
+		"FetchType": "SingleNpcByNpcID",
+		"SingleNpcID": {
+			"GroupID": {
+				"FixedValue": {
+					"Value": 207
+				}
+			},
+			"GroupNpcID": {
+				"FixedValue": {
+					"Value": 400001
+				}
+			}
+		}
+	}
+}</pre>
 {{Dialogue End}}
 
 ===(Optional) Leave the theme park and wash your hands off it.{{subst:void|<!--424032211-->}}===
 {{Dialogue Start}}
-:{{tx}}
 {{Dialogue End}}
 
 ===Follow the Bloodhounds and capture Oksana.{{subst:void|<!--424032212-->}}===
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Woolsey)
+;(If {{Mission|Clockwork: Oksana|showChapter=0}} has been completed)
+::'''Woolsey:''' She's pretty fast, but if it were on any other planet, she really might just get away.
+::'''Woolsey:''' Don't worry, buddy. She can't escape from the nose of a Bloodhound.
+;(If {{Mission|Clockwork: Oksana|showChapter=0}} has not been completed)
+::{{tx}}
+:<pre>{
+	"$type": "RPG.GameCore.ShowHeartDialToast",
+	"StepType": "Normal",
+	"TargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvNpcEx",
+		"FetchType": "SingleNpcByNpcID",
+		"SingleNpcID": {
+			"GroupID": {
+				"FixedValue": {
+					"Value": 208
+				}
+			},
+			"GroupNpcID": {
+				"FixedValue": {
+					"Value": 400005
+				}
+			}
+		}
+	}
+}</pre>
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:'''(Trailblazer):''' (You take the hush money from Oksana, but no matter which way you think about it, you can't quite stomach it.)
+:'''(Trailblazer):''' (If by chance she were to leave here, who knows how many planets would be engulfed in the flames of war.)
+:Before war breaks out, perhaps you can {{Color|keyword|nobold=1|ask Woolsey for help}}.
+:If you leave now, then...
+----
 {{Dialogue End}}
 
 ===(Optional) Report the business to Woolsey from the Bloodhound Family.{{subst:void|<!--424032210-->}}===
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Woolsey)
+:'''Woolsey:''' Hello. Need any help?
+:{{DIcon|Arrow}} I'd like to make a report.
+:'''(Trailblazer):''' An arms dealer named Oksana is about to set off an intergalactic war.
+:'''Woolsey:''' What? How did that warmonger find her emotions again? This is an emergency. Take us to her now.
 {{Dialogue End}}
 
 ==Other Languages==

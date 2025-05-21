@@ -41,31 +41,317 @@ PageTitle=#Back in Business (II)#
 ===Find out about the merchant guild's recent happenings at Aurum Alley{{subst:void|<!--800320302-->}}===
 {{Mission Description|type=adventure|location=Aurum Alley|There should be new developments at Aurum Alley. Would you like to go back and check it out?<br />Visit Aurum Alley regularly}}
 {{Dialogue Start}}
-:{{tx}}
+<pre>{
+	"$type": "RPG.GameCore.PlayMessage",
+	"MessageSectionID": 1215501
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.SaveMessage",
+	"MessageSectionID": 1215501
+}</pre>
 {{Dialogue End}}
 
 ===Talk with Sushang at the docks{{subst:void|<!--800320303-->}}===
 {{Mission Description|type=adventure|location=Aurum Alley|update|You heard that Sushang has found evidence of the IPC representative damaging the docks' logistic pipeline. Head over and confirm the details for yourself.<br />A real trade war isn't just made up of high-end power plays and devious strategies, but simple little dirty tricks.}}
 {{Dialogue Start}}
-:{{tx}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+----
+:{{A|VO side2 jrx sushang 142.ogg}} '''Sushang:''' You're just in time &mdash; everyone is asking this IPC goon for an explanation!
+:{{A|VO side2 jrx scott 114.ogg}} '''IPC Sales Rep:''' Calling someone an "IPC goon" isn't very becoming of a Cloud Knight now, is it?
+:{{A|VO side2 jrx scott 115.ogg}} '''IPC Sales Rep:''' I'm not here today as a representative of the IPC, I'm just a tourist. You can just call me Skott.
+:{{DIcon|Arrow}} Hello, Skott.
+::<!--0.8-second delay-->
+::{{A|VO side2 jrx scott 116 m.ogg}} {{A|VO side2 jrx scott 116 f.ogg}} '''Skott:''' You see, this {{MC|f=young lady|m=gentleman}} understands etiquette.
+:{{DIcon|Arrow}} Hello, IPC goon.
+::<!--0.8-second delay-->
+::{{A|VO side2 jrx scott 117.ogg}} '''Skott:''' ...I have no quarrel with you.
+:{{A|VO side2 jrx scott 118.ogg}} '''Skott:''' Hmph, can't a man come here to deliver a package without being surrounded?
+:{{A|VO side2 jrx sushang 143.ogg}} '''Sushang:''' There's something wrong with the stuff this guy is shipping &mdash; it's causing damage to other people's goods, and our dock here is liable for the compensation...
+:{{DIcon|Arrow}} We want to check your courier package.
+:{{DIcon|Arrow}} Would you like to explain yourself?
+:{{A|VO side2 jrx scott 119.ogg}} '''Skott:''' Ha...? Speak louder, I can't quite hear you. Is this how you treat guests in Aurum Alley?
+:{{A|VO side2 jrx sushang 144.ogg}} '''Sushang:''' Let's open that package right here, right now &mdash; then we'll see what he's hiding!
+:{{A|VO side2 jrx scott 120.ogg}} '''Skott:''' I'd be careful if I were you &mdash; if you damage my goods, you'll have to pay for them.
+:{{DIcon|Arrow}} What if we discover a serious issue with your package?
+::<!--0.8-second delay-->
+::{{A|VO side2 jrx scott 121.ogg}} '''Skott:''' Ha...? A serious issue? I think you'll be the ones with the serious issue!
+:{{DIcon|Arrow}} We can compensate you for any damages. Open it.
+::<!--0.8-second delay-->
+::{{A|VO side2 jrx scott 122 m.ogg}} {{A|VO side2 jrx scott 122 f.ogg}} '''Skott:''' Ha...? Did I hear that right? {{MC|f=She|m=He}} said {{MC|f=She|m=he}} can afford to pay for it. What a surprise.
+:{{A|VO side2 jrx sushang 145.ogg}} '''Sushang:''' No need to make this difficult. Let's open it.
+:{{Black Screen|Sushang and workers place Skott's package on the floor.}}
+:{{A|VO side2 jrx player 102 m.ogg}} {{A|VO side2 jrx player 102 f.ogg}} '''(Trailblazer):''' Let's check and see if there's anything suspicious.
+<pre>{
+	"$type": "RPG.GameCore.WaitMissionTalkFinish"
+}</pre>
 {{Dialogue End}}
 
 ===Investigate Skott's goods{{subst:void|<!--800320305-->}}===
 {{Mission Description|type=adventure|location=Aurum Alley|update|An honest soul is a blameless one. If someone hasn't done anything wrong, then they have nothing to fear from an inspection.<br />Scrutinize Skott's goods and be vigilant for any tricks he might pull.}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Sushang)
+:{{A|VO side2 jrx sushang 144.ogg}} '''Sushang:''' Let's open that package right here, right now &mdash; then we'll see what he's hiding!
+
+;(Talk to Mingxi)
+:Mingxi is a bit nervous. She's not sure how to proceed.
+
+;(Talk to Skott)
+:{{A|VO side2 jrx scott 120.ogg}} '''Skott:''' I'd be careful if I were you &mdash; if you damage my goods, you'll have to pay for them.
+----
+:{{A|VO side2 jrx xikui 101.ogg}} '''Xikui:''' On behalf of the Sky-Faring Commission, I am here to preside over the leasing dispute between the IPC and Aurum Alley Merchant Guild.
+:{{A|VO side2 jrx scott 134.ogg}} '''Skott:''' Is there anything left to dispute? I'll cut to the chase &mdash; the Merchant Guild should have removed itself from Aurum Alley a long time ago.
+:{{A|VO side2 jrx sushang 162.ogg}} '''Sushang:''' Couldn't the IPC choose a sane person to represent them?
+:{{A|VO side2 jrx scott 135.ogg}} '''Skott:''' Ha...? Say that a little louder, I can't quite hear you.
+:{{A|VO side2 jrx sushang 163.ogg}} '''Sushang:''' {{Size|28|I said: The &mdash; IPC &mdash; should &mdash; send &mdash; someone &mdash; else!}}
+:{{A|VO side2 jrx scott 136.ogg}} '''Skott:''' Goodness! There's no need to shout, little miss feisty &mdash; my ears are ringing!
+:{{A|VO side2 jrx scott 137.ogg}} '''Skott:''' Hmph, you should be saving your voice for your public apology...
+:{{A|VO side2 jrx scott 138.ogg}} '''Skott:''' As the representative of the IPC, my presence in this negotiation is legal, reasonable and sensible! Who do you plan on sending to the battlefield? A random Cloud Knight? That cowardly president who's afraid to even show their face?
+:{{A|VO side2 jrx scott 139 m.ogg}} {{A|VO side2 jrx scott 139 f.ogg}} '''Skott:''' Or how about that kid who got dragged into this fiasco at the last minute, walking around like {{MC|f=she|m=he}} owes someone 50 credits?
+:{{A|VO side2 jrx xikui 102.ogg}} '''Xikui:''' ...That's enough, Representative Skott. Please state the IPC's side of the case.
+----
+----
+:{{A|VO side2 jrx sushang 146.ogg}} '''Sushang:''' You tampered with this ingenium so that it caused damage to other goods on the freight skiff.
+:{{A|VO side2 jrx scott 123.ogg}} '''Skott:''' Ha...? Speak louder, I can't quite hear you.
+:{{DIcon|Arrow}} You still deny it when faced with conclusive evidence?
+:<!--0.8-second delay-->
+:{{A|VO side2 jrx scott 124.ogg}} '''Skott:''' Conclusive evidence? Deny?
+:{{A|VO side2 jrx scott 125.ogg}} '''Skott:''' Here, look carefully &mdash; this old piece of junk doesn't even belong to me.
+:{{A|VO side2 jrx sushang 147.ogg}} '''Sushang:''' What!?
+:{{A|VO side2 jrx scott 126.ogg}} '''Skott:''' If you don't believe me, just ask the dock workers.
+:{{A|VO side2 jrx afeng 101.ogg}} '''Timid Dock Worker:''' I&mdash;If I may, h&mdash;he's telling the truth. This Golden Cloud Toad does not belong to Mr. Skott.
+:{{A|VO side2 jrx sushang 148.ogg}} '''Sushang:''' Then why was the toad here in the first place?
+:{{A|VO side2 jrx afeng 102.ogg}} '''Timid Dock Worker:''' ...
+:{{A|VO side2 jrx scott 127.ogg}} '''Skott:''' That's your problem, not mine!
+:{{A|VO side2 jrx scott 128.ogg}} '''Skott:''' Now let me ask you a question &mdash; my vase was almost smashed to pieces &mdash; what do you say about that?
+:{{DIcon|Arrow}} "Almost" being the operative word...
+::{{A|VO side2 jrx scott 129.ogg}} '''Skott:''' Oh? You wanted it to be broken?
+:{{DIcon|Arrow}} The inspection is over. We'll send the goods on their way.
+::{{A|VO side2 jrx scott 130.ogg}} '''Skott:''' Ha...? Did I hear that right?
+:{{A|VO side2 jrx scott 131.ogg}} '''Skott:''' After making a big scene like that, don't you owe me an apology?
+:{{A|VO side2 jrx sushang 149.ogg}} '''Sushang:''' I... I guess we do.
+:{{A|VO side2 jrx scott 132.ogg}} '''Skott:''' Well...? Are you going to apologize or not?
+:{{A|VO side2 jrx sushang 150.ogg}} '''Sushang:''' ...Sorry, sir.
+:{{A|VO side2 jrx scott 133.ogg}} '''Skott:''' For this kind of barbarity, a single apology won't ever be enough. Just think of this as a practice round for later, hahahaha.
+----
+----
+:{{A|VO side2 jrx sushang 151.ogg}} '''Sushang:''' Grrrr...
+:{{DIcon|Arrow}} If it were me, I wouldn't be apologizing for anything.
+::<!--0.8-second delay-->
+::{{A|VO side2 jrx sushang 152.ogg}} '''Sushang:''' If it were you, you wouldn't have fallen for his trap.
+:{{DIcon|Arrow}} He fooled us. That's all there is to it.
+::<!--0.8-second delay-->
+::{{A|VO side2 jrx sushang 153.ogg}} '''Sushang:''' He fooled us this once, but he won't fool us next time.
+:{{DIcon|Arrow}} Grrrrrrrr...
+::{{A|VO side2 jrx sushang 154.ogg}} '''Sushang:''' Grrrrrrrrrrrr...
+:{{A|VO side2 jrx mingxi 162.ogg}} '''Mingxi:''' Sorry, I should've stepped in.
+:{{A|VO side2 jrx sushang 155.ogg}} '''Sushang:''' My mother always told me that as long as I honed my skills, I'd be able to deal with any situation... Seems I've still got honing to do.
+:{{A|VO side2 jrx mingxi 163.ogg}} '''Mingxi:''' Before the payment due date arrives, I'm going to teach you two how to fight &mdash; with words! Follow me &mdash; we're going to see the president.
+----
 {{Dialogue End}}
 
 ===Learn how to negotiate at Oldies Depot{{subst:void|<!--800320314-->}}===
 {{Mission Description|type=adventure|location=Aurum Alley|update|It seems like Skott was already prepared when he started to act weird. Considering you'll need to negotiate with him down the line, he's clearly going to be a bit of a problem. Thankfully, Miss Secretary remembered that the mysterious Merchant Guild President is around. The president should be able to teach us all sorts of negotiation techniques!<br />Come to think about it, it might be Lianyan operating in place of the president again. You're already pretty used to the secrecy the president seems to maintain.}}
 {{Dialogue Start}}
+
+;(Unused &mdash; Ask0)
 :{{tx}}
+:<pre>{
+	"$type": "RPG.GameCore.DebateReturnTestimony"
+}</pre>
+
+;(Unused &mdash; Ask1)
+:{{tx}}
+:<pre>{
+	"$type": "RPG.GameCore.DebateReturnTestimony"
+}</pre>
+
+;(Unused &mdash; Show1)
+:{{tx}}
+:<pre>{
+	"$type": "RPG.GameCore.DebateShowToast",
+	"ToastType": "Success"
+}</pre>
+
+;(Unused &mdash; Ask2)
+:{{tx}}
+:<pre>{
+	"$type": "RPG.GameCore.DebateReturnTestimony"
+}</pre>
+
+;(Unused &mdash; Show2)
+:{{tx}}
+:<pre>{
+	"$type": "RPG.GameCore.DebateShowToast",
+	"ToastType": "Success"
+}</pre>
+
+;(Unused &mdash; ShowFail)
+:{{tx}}
+:<pre>{
+	"$type": "RPG.GameCore.DebateReturnTestimony"
+}</pre>
+
+;(Unused &mdash; Fail)
+<pre>{
+	"$type": "RPG.GameCore.DebateShowToast",
+	"ToastType": "Failure"
+}</pre>
+
+;(Unused &mdash; Talk_800320314)
+<pre>{
+	"$type": "RPG.GameCore.TutorialTaskUnlock",
+	"TriggerParam": {
+		"Value": "6042"
+	}
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.ShowTutorialGuide",
+	"GuideID": 6042,
+	"WaitForExit": true
+}</pre>
+
+;(Obtain {{Item|Courier Package|20|x=1}})
+----
+:{{A|VO side2 jrx afeng 116.ogg}} '''A-Feng:''' Alright, alright, enough already!
+:{{A|VO side2 jrx afeng 117.ogg}} '''A-Feng:''' The IPC was worried that the lease for the dock would be paid off, so they had me move some things around... is that so terrible?
+:{{A|VO side2 jrx afeng 118.ogg}} '''A-Feng:''' Is letting the IPC take over management of Aurum Alley such a bad thing? Besides, what's it to you if I make some extra money?
+:{{A|VO side2 jrx mingxi 164.ogg}} '''Mingxi:''' Mr. A-Feng... Our goal at the Merchant Guild is to help make Aurum Alley a better place for everyone. Why would you work against that?
+:{{A|VO side2 jrx afeng 119.ogg}} '''A-Feng:''' Keep your heads in the sand if you like, but it's only a matter of time before Aurum Alley becomes another warehouse for the IPC!
+:{{DIcon|Arrow}} Be a man! Do the right thing!
+::<!--0.8-second delay-->
+::{{A|VO side2 jrx sushang 159.ogg}} '''Sushang:''' That's right! You shouldn't be betraying your fellow workers for a quick profit.
+:{{DIcon|Arrow}} But the business on the dock is flourishing.
+::<!--0.8-second delay-->
+::{{A|VO side2 jrx afeng 120.ogg}} '''A-Feng:''' Hmph, even if you pay back the debt, where are you gonna get enough money to win the bid for Aurum Alley?
+:{{DIcon|Arrow}} Well, actually, I side with the IPC as well.
+::<!--0.8-second delay-->
+::{{A|VO side2 jrx afeng 121.ogg}} '''A-Feng:''' Hmph, what do you take me for? I'm not falling for that.
+:{{A|VO side2 jrx lianyan 119.ogg}} '''Lianyan:''' It seems that the truth has come out. Here is Mr. A-Feng's testimony &mdash; it may come in useful later.
+:{{A|VO side2 jrx mingxi 165.ogg}} '''Mingxi:''' The payment for the dock is ready now. If you're ready for the next round of negotiations, come and see me at the dock.
+:{{A|VO side2 jrx sushang 160.ogg}} '''Sushang:''' Right, that guy's gonna be sorry for everything he's done. Time we got a public apology!
+----
+;(Obtain {{Item|Dock Worker's Testimony|20|x=1}})
+;(Lose {{Item|Courier Package|20|x=1}})
 {{Dialogue End}}
 
 ===Confirm the negotiation materials and speak with Mingxi{{subst:void|<!--800320317-->}}===
 {{Mission Description|type=adventure|location=Aurum Alley|update|The time of negotiations is drawing near. You should go over your negotiation materials first.<br />Confirm your negotiation materials with Miss Secretary and strive to claim the advantage in the upcoming clash of words.}}
 {{Dialogue Start}}
+
+
+;(Talk to Mingxi)
+:{{A|VO side2 jrx mingxi 166.ogg}} '''Mingxi:''' The IPC representative has arrived, and I've called for Miss Xikui from the Sky-Faring Commission to act as a notary.
+:{{DIcon|Arrow}} I'm ready.
+::{{A|VO side2 jrx sushang 161.ogg}} '''Sushang:''' Remember, this is a war of words... over to you.
+::{{A|VO side2 jrx mingxi 167.ogg}} '''Mingxi:''' Before we start, let's review the documents we have.
+::{{DIcon|Talk}} The payment for the dock?
+:::{{A|VO side2 jrx mingxi 168.ogg}} '''Mingxi:''' We reached the required amount by the repayment date. This is the basis for our right to continue negotiations and is a testament to the business viability of Aurum Alley.
+::;(Return to previous option selection)
+::{{DIcon|Talk}} The leasing contract for the dock?
+:::{{A|VO side2 jrx mingxi 169.ogg}} '''Mingxi:''' When the Aurum Alley dock went up for public bid, the IPC won the bid using its interstellar trade resources and extensive capital. Then the IPC leased the dock out to the Aurum Alley Merchant Guild for management and operations.
+:::{{A|VO side2 jrx mingxi 170.ogg}} '''Mingxi:''' This contract can prove that the Merchant Guild has legitimate rights to operate the dock.
+::;(Return to previous option selection)
+::{{DIcon|Talk}} The dock worker's testimony?
+:::{{A|VO side2 jrx mingxi 171.ogg}} '''Mingxi:''' The testimony of dock worker A-Feng, who has admitted to disrupting the normal operations of the dock in exchange for payment from the IPC.
+::;(Return to previous option selection)
+::{{DIcon|Arrow}} I've looked over everything.
+:::{{A|VO side2 jrx mingxi 172.ogg}} '''Mingxi:''' Let's go. The notary from the Sky-Faring Commission is already waiting for us.
+:::----
+:::{{A|VO side2 jrx xikui 101.ogg}} '''Xikui:''' On behalf of the Sky-Faring Commission, I am here to preside over the leasing dispute between the IPC and Aurum Alley Merchant Guild.
+:::{{A|VO side2 jrx scott 134.ogg}} '''Skott:''' Is there anything left to dispute? I'll cut to the chase &mdash; the Merchant Guild should have removed itself from Aurum Alley a long time ago.
+:::{{A|VO side2 jrx sushang 162.ogg}} '''Sushang:''' Couldn't the IPC choose a sane person to represent them?
+:::{{A|VO side2 jrx scott 135.ogg}} '''Skott:''' Ha...? Say that a little louder, I can't quite hear you.
+:::{{A|VO side2 jrx sushang 163.ogg}} '''Sushang:''' {{Size|28|I said: The &mdash; IPC &mdash; should &mdash; send &mdash; someone &mdash; else!}}
+:::{{A|VO side2 jrx scott 136.ogg}} '''Skott:''' Goodness! There's no need to shout, little miss feisty &mdash; my ears are ringing!
+:::{{A|VO side2 jrx scott 137.ogg}} '''Skott:''' Hmph, you should be saving your voice for your public apology...
+:::{{A|VO side2 jrx scott 138.ogg}} '''Skott:''' As the representative of the IPC, my presence in this negotiation is legal, reasonable and sensible! Who do you plan on sending to the battlefield? A random Cloud Knight? That cowardly president who's afraid to even show their face?
+:::{{A|VO side2 jrx scott 139 m.ogg}} {{A|VO side2 jrx scott 139 f.ogg}} '''Skott:''' Or how about that kid who got dragged into this fiasco at the last minute, walking around like {{MC|f=she|m=he}} owes someone 50 credits?
+:::{{A|VO side2 jrx xikui 102.ogg}} '''Xikui:''' ...That's enough, Representative Skott. Please state the IPC's side of the case.
+:::----
+:{{DIcon|Exit}} I'm not ready yet.
+
+;(Talk to Skott)
+:Skott chooses to ignore your presence, and in return, you can choose to disdain him.
+
+;(Talk to Xikui)
+:You may have met Miss Xikui at the Sky-Faring Commission, but due to her commitment to impartiality, she refrains from engaging in private conversations with you at the moment.
+;(Unused &mdash; Ask0)
 :{{tx}}
+:<pre>{
+	"$type": "RPG.GameCore.DebateReturnTestimony"
+}</pre>
+
+;(Unused &mdash; Ask1)
+:{{tx}}
+:<pre>{
+	"$type": "RPG.GameCore.DebateReturnTestimony"
+}</pre>
+
+;(Unused &mdash; Ask2)
+:{{tx}}
+:<pre>{
+	"$type": "RPG.GameCore.DebateReturnTestimony"
+}</pre>
+
+;(Unused &mdash; Ask3)
+:{{tx}}
+:<pre>{
+	"$type": "RPG.GameCore.DebateReturnTestimony"
+}</pre>
+
+;(Unused &mdash; Correct)
+:{{tx}}
+
+;(Unused &mdash; Fail)
+:{{tx}}
+:<pre>{
+	"$type": "RPG.GameCore.DebateReturnTestimony"
+}</pre>
+
+;(Obtain {{Item|Rent for Aurum Alley Dock|20|x=1}})
+:{{A|VO side2 jrx xikui 106.ogg}} '''Xikui:''' If the evidence presented is true, Mr. Skott, then this constitutes improper business practices and the Sky-Faring Commission will conduct a follow-up investigation.
+:{{A|VO side2 jrx scott 165.ogg}} '''Skott:''' How did this happen? How did the plan go awry...?
+:{{A|VO side2 jrx sushang 170.ogg}} '''Sushang:''' Don't forget about our bet! You have to apologize in front of everyone!
+:{{A|VO side2 jrx scott 166.ogg}} '''Skott:''' What? Why should I apologize!?
+:{{A|VO side2 jrx sushang 171.ogg}} '''Sushang:''' Because you used dirty tricks to trample all over the honest work of others!
+:{{A|VO side2 jrx sushang 172.ogg}} '''Sushang:''' An apology alone won't be enough to fix the damage. If it were &mdash; I'd make you do it a thousand times over!
+:{{A|VO side2 jrx sushang 173.ogg}} '''Sushang:''' Consider yourself lucky it's just the once!
+:{{A|VO side2 jrx scott 167.ogg}} '''Skott:''' ...
+:{{A|VO side2 jrx scott 168.ogg}} '''Skott:''' I... hereby apologize to Aurum Alley...
+:{{DIcon|Arrow}} Ha...? Speak louder, I can't quite hear you.
+::Don't forget the other part of the bet.
+::Sushang is kicking your butt, dude.
+:{{DIcon|Arrow}} Don't forget the other part of the bet.
+::Don't forget the other part of the bet.
+::Sushang is kicking your butt, dude.
+:{{DIcon|Arrow}} Sushang is kicking your butt, dude.
+:{{A|VO side2 jrx sushang 174.ogg}} '''Sushang:''' Really? I was just speaking from the heart.
+:{{A|VO side2 jrx sushang 175.ogg}} '''Sushang:''' Hurry up!
+:{{A|VO side2 jrx scott 169.ogg}} '''Skott:''' I&mdash;I apologize to all the people of Aurum Alley...
+:{{A|VO side2 jrx scott 170.ogg}} '''Skott:''' I'm a raving idiot howling into the wind!
+:{{DIcon|Arrow}} I don't hear barking...
+::{{A|VO side2 jrx sushang 176.ogg}} '''Sushang:''' ...Is that really necessary?
+::(Appropriate silence)
+:{{DIcon|Arrow}} (Appropriate silence)
+:{{A|VO side2 jrx afeng 122.ogg}} '''A Dock Worker:''' Wasn't there something about barking like a dog?
+:{{A|VO side2 jrx crowdD 101.ogg}} '''Crowd Noises:''' Make him bark, make him bark!
+:{{tx}}
+;(Lose {{Item|Dock Worker's Testimony|20|x=1}})
+----
+:{{A|VO side2 jrx mingxi 174.ogg}} '''Mingxi:''' Thanks to all of you, we managed to pull through the dock's debt crisis.
+:{{DIcon|Arrow}} Yes, especially thanks to me.
+::<!--0.8-second delay-->
+::{{A|VO side2 jrx mingxi 175.ogg}} '''Mingxi:''' Undoubtedly, yes.
+:{{DIcon|Arrow}} It was a tough journey.
+::<!--0.8-second delay-->
+::{{A|VO side2 jrx mingxi 176.ogg}} '''Mingxi:''' Worth every step.
+:{{A|VO side2 jrx mingxi 177.ogg}} '''Mingxi:''' We should take advantage of the momentum to upgrade the Aurum Alley dock and increase its transaction volume.
+:{{A|VO side2 jrx mingxi 178.ogg}} '''Mingxi:''' I'm preparing to {{Color|keyword|nobold=1|upgrade inventory and logistics planning}}. The previously-idle dock is now ready for use, so come see me when you have time.
+:{{A|VO side2 jrx mingxi 179.ogg}} '''Mingxi:''' The dock crisis is over for now, but the rejuvenation of Aurum Alley has just begun!
+----
 {{Dialogue End}}
 
 ==Other Languages==

@@ -39,19 +39,147 @@ PageTitle=#Future Market (I)#
 ===Look for Topaz{{subst:void|<!--201020118-->}}===
 {{Mission Description|type=continuance|location=History and Culture Museum|(Trailblazer)'s Trailblaze Daily Report:<br />We're in trouble. Belobog owes a whole lot of money to the IPC. Need to negotiate with Topaz in the museum.}}
 {{Dialogue Start}}
-:{{tx}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+<pre>{
+	"$type": "RPG.GameCore.PlayNPCBubbleTalk",
+	"BubbleTalkInfoList": [
+		{
+			"AutoSkipTime": 2,
+			"GroupID": 30,
+			"GroupNpcID": 400001,
+			"TalkSentenceID": 201020353
+		},
+		{
+			"AutoSkipTime": 2,
+			"GroupID": 30,
+			"GroupNpcID": 400001,
+			"TalkSentenceID": 201020354
+		},
+		{
+			"AutoSkipTime": 2,
+			"GroupID": 30,
+			"GroupNpcID": 400001,
+			"TalkSentenceID": 201020355
+		},
+		{
+			"AutoSkipTime": 2,
+			"GroupID": 30,
+			"GroupNpcID": 400001,
+			"TalkSentenceID": 201020356
+		}
+	]
+}</pre>
+
+;(Talk to Topaz)
+----
+:{{A|VO side1 tp topaz 124.ogg}} '''Topaz:''' Oh! It's you two again. This is the third time today we've run into each other.
+:{{DIcon|Arrow}} Cherish the moment...
+::{{A|VO side1 tp topaz 125.ogg}} '''Topaz:''' Why, of course I will! Meeting friends from the Astral Express is always a moment worth cherishing!
+:{{DIcon|Arrow}} Actually, we sent you a message.
+::{{A|VO side1 tp topaz 126.ogg}} '''Topaz:''' Oh, did my Smart-Reply function tell you where I was? It's a system developed by the Technology Department. Pretty neat, right?
+:{{A|VO side1 tp topaz 127.ogg}} '''Topaz:''' What do you make of this painting? I'm no expert, but just from the artist's strokes I can tell it's no ordinary piece.
+<pre>{
+	"$type": "RPG.GameCore.ActiveVirtualCamera",
+	"AreaName": "LevelArea_P43104_F43104001_G30",
+	"AnchorName": "Anchor3",
+	"DynamicParams": {}
+}</pre>
+:{{A|VO side1 tp topaz 128.ogg}} '''Topaz:''' It portrays a certain kind of... sorrow, you know? Not your everyday kind of sadness &mdash; it runs much deeper than that.
+:{{A|VO side1 tp topaz 129.ogg}} '''Topaz:''' It's as if the artist has condensed history into one poignant, but sorrowful image. The artist's brushwork depicts a generation's &mdash; no, several generations' hardships...
+:{{DIcon|Arrow}} Seems like you know your art...
+:<pre>{
+	"$type": "RPG.GameCore.ActiveVirtualCamera",
+	"AreaName": "LevelArea_P43104_F43104001_G30",
+	"AnchorName": "Anchor2",
+	"DynamicParams": {}
+}</pre>
+::{{A|VO side1 tp topaz 130.ogg}} '''Topaz:''' Not at all, the analysis of an aficionado. I wouldn't take my word for it.
+::{{A|VO side1 tp topaz 131.ogg}} '''Topaz:''' The Express has visited many worlds. I'm sure the Nameless have a far greater knowledge of such things than myself.
+:{{DIcon|Arrow}} I was thinking the exact same thing.
+:<pre>{
+	"$type": "RPG.GameCore.ActiveVirtualCamera",
+	"AreaName": "LevelArea_P43104_F43104001_G30",
+	"AnchorName": "Anchor2",
+	"DynamicParams": {}
+}</pre>
+::{{A|VO side1 tp topaz 132.ogg}} '''Topaz:''' Haha, you flatter me! The Express has visited many worlds. I'm sure the Nameless have a far greater knowledge of such things than myself.
+:{{A|VO side1 tp topaz 133.ogg}} '''Topaz:''' I suppose what I'm trying to say is, what I'm drawn to isn't the style in which a piece is painted, but its overall value. Its intrinsic value may only be 50,000 credits, but its "added value" might push the total up to 200,000.
+:{{A|VO side1 tp mar7th 197.ogg}} '''March 7th:''' Ugh... Sorry for crashing your artist party, but we came to talk to you about something else...
+:{{A|VO side1 tp topaz 134.ogg}} '''Topaz:''' Oh? A collaboration between our two sides, perhaps?
+:{{A|VO side1 tp mar7th 198.ogg}} '''March 7th:''' Not exactly. Actually, we&mdash;
+:{{A|VO side1 tp topaz 135.ogg}} '''Topaz:''' Let's walk and talk &mdash; this way!
+----
 {{Dialogue End}}
 
 ===Attempt a dialogue with Topaz{{subst:void|<!--201020119-->}}===
 {{Mission Description|type=continuance|location=History and Culture Museum|update|(Trailblazer)'s Trailblaze Daily Report:<br />Found Topaz. Negotiations are starting. Hopefully we don't say the wrong things.}}
 {{Dialogue Start}}
-:{{tx}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{A|VO side1 tp topaz 136.ogg}} '''Topaz:''' Most exhibits in this museum are of little value.
+:{{A|VO side1 tp topaz 137.ogg}} '''Topaz:''' But with a keen eye, it's possible to find a diamond in the rough, so to speak.
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{A|VO side1 tp mar7th 203.ogg}} '''March 7th:''' So you're basically saying the Belobogians must pay off their ancestors' debts...
+:{{A|VO side1 tp topaz 150.ogg}} '''Topaz:''' When you think about it, it's just another part of the cycle of life.
+:{{A|VO side1 tp mar7th 204.ogg}} '''March 7th:''' ...Uh, I'm not sure it's as poetic as that...
+
+;(Upon reaching the destination)
+:{{A|VO side1 tp topaz 151.ogg}} '''Topaz:''' Wow, look! Is that little critter native to Jarilo-VI!?
+<pre>{
+	"$type": "RPG.GameCore.AdventureCameraLookAtSimple",
+	"LookAtGroupID": {
+		"FixedValue": {
+			"Value": 28
+		}
+	},
+	"LookAtID": {
+		"FixedValue": {
+			"Value": 300045
+		}
+	},
+	"LookAtTransitionDuration": 2,
+	"LockCameraInput": true,
+	"UnlockCameraAfterRecover": true,
+	"LookAtDuration": 3,
+	"LookAtRecoverDuration": 0.5,
+	"EnableOverrideLookAtOffset": true
+}</pre>
 {{Dialogue End}}
 
 ===Negotiations failed. Summarize the situation to March 7th{{subst:void|<!--201020121-->}}===
 {{Mission Description|type=continuance|location=History and Culture Museum|update|(Trailblazer)'s Trailblaze Daily Report:<br />Negotiations failed. Shoot. Next step: Is there a next step?}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to March 7th)
+:{{A|VO side1 tp mar7th 209.ogg}} '''March 7th:''' So... what now? We spent ages trying to convince her and she didn't move an inch!
+:{{DIcon|Arrow}} We didn't promise Bronya we'd succeed.
+::{{A|VO side1 tp mar7th 210.ogg}} '''March 7th:''' Well, yeah, but she'll be really disappointed...
+:{{DIcon|Arrow}} She sort of made sense...
+::{{A|VO side1 tp mar7th 211.ogg}} '''March 7th:''' I guess so, but that still doesn't fix Bronya's problem...
+:{{DIcon|Arrow}} We should keep pestering her.
+::{{A|VO side1 tp mar7th 212.ogg}} '''March 7th:''' You sure? I really don't think she'll change her mind.
+:{{A|VO side1 tp mar7th 213.ogg}} '''March 7th:''' I guess Miss Topaz is just doing her job. And as far as the Express is concerned, I think it'd be unwise to make the IPC our enemy.
+:{{A|VO side1 tp mar7th 214.ogg}} '''March 7th:''' All these vested interests &mdash; so hard to undo any of it... they don't teach this stuff in school. Wait... did I even go to school?
+:{{A|VO side1 tp mar7th 215.ogg}} '''March 7th:''' Did someone send you a message?
+<pre>{
+	"$type": "RPG.GameCore.PlayMessage",
+	"MessageSectionID": 1115200
+}</pre>
+:{{A|VO side1 tp mar7th 216.ogg}} '''March 7th:''' Huh? The IPC are causing trouble in the Underworld? Already?
+:{{A|VO side1 tp mar7th 217.ogg}} '''March 7th:''' Ugh, seriously? Topaz was just talking about "taking the welfare of the people of Belobog into consideration," and now they're pulling this stunt? You really can't trust these money-hungry IPC suits for a minute!
+:{{DIcon|Arrow}} Let's go save the day.
+::{{A|VO side1 tp mar7th 218.ogg}} '''March 7th:''' Again... I don't think I have it in me to play the hero today!
+:{{DIcon|Arrow}} Here we go again...
+::{{A|VO side1 tp mar7th 219.ogg}} '''March 7th:''' I really did jinx us! I don't think I have it in me to play the hero today!
+:{{DIcon|Arrow}} That's right! You can't believe a word they say!
+::{{A|VO side1 tp mar7th 220.ogg}} '''March 7th:''' I really did jinx us! I don't think I have it in me to play the hero today!
+:{{A|VO side1 tp mar7th 221.ogg}} '''March 7th:''' I guess complaining won't get us anywhere. Let's go lend them a hand.
+----
 {{Dialogue End}}
 
 ==Other Languages==

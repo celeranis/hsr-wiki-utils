@@ -41,27 +41,68 @@ PageTitle=#Swarm Disaster: Experimental Teaching (I)#
 ===Enter Simulated Universe: Swarm Disaster{{subst:void|<!--801310102-->}}===
 {{Mission Description|type=adventure|location=Herta's Office|Herta, Ruan Mei, Screwllum, and Stephen have joined forces to bring about the Simulated Universe's first major update! The geniuses added a substantial influx of fun content from all their various ideas. Stephen created some Audience Dice to add a bit more spice to this test. According to him, the dice hold "powers" connected to different Paths, and is conducive to ensuring that you meet with the Aeons. Honestly, though, it's hard to tell if he's actually investigating the Aeons... or just trying to make a game.}}
 {{Dialogue Start}}
-:{{tx}}
 {{Dialogue End}}
 
 ===Defeat the monsters{{subst:void|<!--801310103-->}}===
 {{Dialogue Start}}
-:{{tx}}
+<pre>{
+	"$type": "RPG.GameCore.WaitPredicateSucc"
+}</pre>
+;(If {{cx}}{{subst:void|<!--{"$type":"RPG.GameCore.ByCompareGroupMonsterNumByState"}-->}})
+:<pre>{
+	"$type": "RPG.GameCore.ChangePropState"
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.ChangePropState"
+}</pre>
+;(If {{cx}}{{subst:void|<!--{"$type":"RPG.GameCore.ByCompareGroupMonsterNumByState"}-->}})
+:<pre>{
+	"$type": "RPG.GameCore.SetRogueRoomFinish"
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.SetAllRogueDoorState"
+}</pre>
 {{Dialogue End}}
 
 ===Complete Swarm Disaster: First Plane{{subst:void|<!--801310104-->}}===
 {{Dialogue Start}}
-:{{tx}}
+----
+<pre>{
+	"$type": "RPG.GameCore.BlockInputController",
+	"Enable": true,
+	"ActionNameList": []
+}</pre>
+:'''Herta:''' Huh, hang on, what in the stars is this?
+<pre>{
+	"$type": "RPG.GameCore.WaitMissionTalkFinish"
+}</pre>
+:<!--1-second delay-->
+----
+<pre>{
+	"$type": "RPG.GameCore.BlockInputController",
+	"ActionNameList": []
+}</pre>
+----
+<pre>{
+	"$type": "RPG.GameCore.TriggerRogueDialogue",
+	"DialoguePath": "Config/Level/Mission/8013101/Act/Act403055020.json"
+}</pre>
 {{Dialogue End}}
 
 ===Complete Swarm Disaster: Second Plane{{subst:void|<!--801310105-->}}===
 {{Dialogue Start}}
-:{{tx}}
 {{Dialogue End}}
 
 ===Speak with Herta{{subst:void|<!--801310107-->}}===
 {{Dialogue Start}}
-:{{tx}}
+:'''Herta:''' How do you feel?
+:{{DIcon|Arrow}} This is pretty interesting.
+:{{DIcon|Arrow}} I don't feel anything different.
+:'''Herta:''' After Screwllum has finished gathering the planar data, I'll add in the previous Aeons' information.
+:'''Herta:''' Then, you can start exploring the Swarm Disaster.
+
+;(Talk to Herta)
+:{{A|VO SideX sys2 herta 132.ogg}} '''Herta:''' Don't forget to test my Simulated Universe!
 {{Dialogue End}}
 
 ==Other Languages==

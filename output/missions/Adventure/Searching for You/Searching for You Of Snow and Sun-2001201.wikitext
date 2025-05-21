@@ -42,42 +42,210 @@ PageTitle=#Searching for You: Of Snow and Sun#
 ===Go to the Belobog Administrative District{{subst:void|<!--200120101-->}}===
 {{Mission Description|type=adventure|location=Administrative District|The little robot has planned a route for you. First stop, Belobog!}}
 {{Dialogue Start}}
-:{{tx}}
+
 {{Dialogue End}}
 
 ===Speak with Wallace{{subst:void|<!--200120102-->}}===
 {{Mission Description|type=adventure|location=Administrative District|update|You encounter Wallace in the Administrative District as soon as you touch down. Who would have thought that Wallace would have found themselves amid a Belobog romance...}}
 {{Dialogue Start}}
-:{{tx}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:'''Wallace:''' Mr. Regin, though I still do not fully understand your "big universe time tunnel" theory, my intuition tells me that this is an era-defining discovery!
+:'''Regin:''' Fear not, Wallace. The very fact that you are able to sense the greatness of my theory already places you above 99.99% of people in the universe. Come, I will find an even simpler way to explain it to you...
+:{{DIcon|Arrow}} Wallace, don't fall for Regin's tricks.
+::'''Regin:''' Who said that!? Are you slandering my name?
+:{{DIcon|Arrow}} Of course not. What are you two doing?
+::'''Regin:''' What am I doing? Spreading scientific theory, of course!
+:'''Wallace:''' (Trailblazer), it's been a while. You came at just the right time! Please allow me to introduce my dear friend, great scientist, and explorer on the path of universal truth &mdash; Mr. Regin.
+:'''Regin:''' (Trailblazer) and I go way back. {{MC|f=She|m=He}} has helped me submit my papers to the Ministry of Education many times. Although, none of them were ever successful...
+:'''Regin:''' Although, it is thanks to {{MC|f=her|m=his}} screw-ups that I finally decided to make my own scientific publication. Without that, I would never have had the chance to meet Wallace.
+:{{DIcon|Arrow}} I didn't expect you two to be friends?
+::'''Wallace:''' I'll stop you there. We are not just friends, we are best friends.
+::'''Regin:''' That's right, no one knows me better than Wallace.
+:{{DIcon|Arrow}} Congratulations, you have both fulfilled your dreams.
+::'''Wallace:''' Thank you. My boring life has become so fulfilling since I met Mr. Regin. I get to learn all sorts of new things every day.
+::'''Regin:''' It was not me that made your life fulfilling. It was science.
+:'''Wallace:''' Perhaps this is what authors mean when they speak of lonely but noble souls finding their way to be together.
+:'''Wallace:''' What's even more worth celebrating is that our friendship has also produced something great &mdash; ''Citizen Science''. As the first privately owned scientific journal in Belobog, I am honored to become one of its sponsors.
+:'''Regin:''' Wallace, I will never forget how you came to save me in my moment of need. I assure you that I will finish this journal and have our names etched in the history of Belobog together!
+:{{DIcon|Arrow}} Perhaps I came at the wrong time.
+::'''Wallace:''' No, your timing is actually perfect.
+:{{DIcon|Arrow}} I'm just glad you're both doing well.
+::'''Wallace:''' Thank you. I also hope that you are able to find your own best friend. Oh, that's right &mdash; there was one more thing that I wanted to ask for your help with.
+:'''Wallace:''' I remember your photography skills are top-rate. Could you please take a picture of me and Regin together as a symbol of our friendship?
+:'''Regin:''' You're right. A great scientific team will require a photo to serve as a memento for future generations.
 {{Dialogue End}}
 
 ===Take a picture for Wallace and Regin{{subst:void|<!--200120103-->}}===
 {{Dialogue Start}}
-:{{tx}}
+
+;(Unused &mdash; takephoto_hualaoshi)
+:'''Wallace:''' Done? Let's have a look...
+::'''Wallace:''' ...Wow. The background, the composition, the lighting, the poses, the expressions... I would not change a thing, just like my perfect friendship with Mr. Regin.
+::'''Regin:''' We'll use this picture as the cover of the next issue of ''Citizen Science''.
+::'''Little Robot:''' To-do list item 1 is complete. Next, navigate to Goethe Hotel. The contact for this area is Old Goethe. The optimal route has already been plotted.
+:<pre>{
+	"$type": "RPG.GameCore.AdvDestroyGroupEntity",
+	"InstanceIDList": [
+		400003
+	]
+}</pre>
 {{Dialogue End}}
 
 ===Go to Goethe Hotel and speak with Old Goethe{{subst:void|<!--200120104-->}}===
 {{Mission Description|type=adventure|location=Hotel Lobby|update|Just what has happened in the lives of the ordinary people of Belobog since the Express Crew left? Perhaps the secretive Old Goethe has the knowledge you seek...}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Old Goethe)
+:{{DIcon|Arrow}} Old Goethe, who's looking to slack off today?
+::'''Old Goethe:''' Haha, you think I still have assignments for you at this age? If you were here a few days later, I think "The Rightful Rights Society" would have already been disbanded.
+::{{DIcon|Arrow}} How could such a great society disband?
+:::'''Old Goethe:''' Things are different now. People's attitudes towards work and life have changed.
+::{{DIcon|Arrow}} No way. Slacking off is human nature.
+:::'''Old Goethe:''' That was before. People are going all out nowadays.
+::'''Old Goethe:''' Ever since Belobog made contact with the outside world, everyone's attitude seems to have been affected. More people are working overtime and everyone rushes from place to place. I've even got less people coming in for afternoon tea.
+::'''Old Goethe:''' Maybe they all saw the possibility of getting a better life and decided to work harder.
+::'''Old Goethe:''' Ah... It's always good to push yourself, but... How do I put it? I feel like we've lost that relaxing vibe we had before.
+::'''Old Goethe:''' Naturally, "The Rightful Rights Society" that advocates for suitable relaxation has declined. Members are quitting one by one, and now I'm left here with the notifications board all alone.
+::{{DIcon|Arrow}} It's all over. The rat race now begins.
+:::'''Old Goethe:''' If I were 20 years younger, maybe I'd want to give it a go myself.
+::{{DIcon|Arrow}} Sounds like an invasion of IPC culture.
+:::'''Old Goethe:''' Being an IPC employee must be really tough then.
+::'''Old Goethe:''' Oh... Come to think of it, there was a girl named Celine who posted an assignment yesterday! She wanted someone to go to the florist and buy her a bouquet of flowers.
+::'''Old Goethe:''' But she didn't even state what kind of flowers she wanted. All she said was that they were for a famous and beautiful actress.
+::'''Old Goethe:''' Flowers all look the same to me. I'd have no idea how to pick a bouquet, so I put her assignment aside. Would you be willing to help her?
+::{{DIcon|Arrow}} I was actually just on my way to see her.
+:::'''Old Goethe:''' Then that could not be more perfect. Ah, I imagine this will be the Society's last ever assignment.
+::{{DIcon|Arrow}} I actually don't know much about flowers either.
+:::'''Old Goethe:''' You can't be worse than an old crone like me. Ah, I imagine that this will be the Society's last ever assignment.
+:'''Old Goethe:''' The florist isn't far from here. Go and find that girl as soon as you've got the flowers. Don't keep her waiting.
 {{Dialogue End}}
 
 ===Go to the florist{{subst:void|<!--200120105-->}}===
 {{Mission Description|type=adventure|location=Eversummer Florist|update|You received an assignment from Old Goethe &mdash; go to the florist and buy a bouquet of flowers.}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Gilbert)
+:'''Gilbert:''' These flowers are beautiful. I hope the person you are giving them to likes them.
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:'''Lila:''' Dad, look! It's (Trailblazer) who helped us before!
+:'''Gilbert:''' So it is! I never expected to bump into you in the florist's! You're here buying flowers, too?
+:{{DIcon|Arrow}} I need to pick a bouquet for someone.
+::'''Gilbert:''' Me too. There are more varieties of flowers here than I've seen military supplies! Trying to decide is making my head spin.
+:{{DIcon|Arrow}} I'm helping someone out.
+::'''Gilbert:''' I see you're as helpful as ever.
+:'''Gilbert:''' I will never forget how you helped my family. I wouldn't be here shopping with my daughter right now if it weren't for you.
+:{{DIcon|Arrow}} Have you retired now?
+::'''Gilbert:''' Not yet. These recruits are a real handful. I have to lead them for a little longer.
+:{{DIcon|Arrow}} Your wife isn't with you?
+::'''Gilbert:''' Hah, she's sulking at home alone.
+:'''Gilbert:''' I hurried home to see my wife and daughter as soon as I accumulated a few days of leave.
+:'''Lila:''' Hehe, silly Dad. He was in such a rush that he forgot to bring presents. Mummy said it was no problem, but her face told a different story, so I dragged Dad straight here to buy flowers to make up for it.
+:'''Gilbert:''' It's all my fault. I got so excited while on the way home that I completely forgot to bring a gift.
+:'''Lila:''' (Trailblazer), have you picked your bouquet? Let us buy it for you as a little token of our gratitude.
+:{{DIcon|Arrow}} I can't decide!
+:{{DIcon|Arrow}} They all look amazing.
+:'''Lila:''' I see. Why don't you tell me more about what you're looking for? Tell me who they're for and I'll come up with some suggestions.
+:{{DIcon|Arrow}} They're for a famous actress.
+::'''Lila:''' Then I would recommend a bouquet of "Marquise." They are the most beautiful flowers in Belobog, as well as the species most difficult to grow.
+::'''Lila:''' Only a flower like that would be suitable for a distinguished actress.
+::{{DIcon|Arrow}} I'll take a bouquet of "Marquise" then.
+:{{DIcon|Arrow}} The flowers will be given to a beautiful young lady.
+::'''Lila:''' Then I would recommend a bouquet of "Rainbow." This small flower is colorful and bright &mdash; ladies all love them!
+::{{DIcon|Arrow}} Then I'll take a bouquet of "Rainbow."
+:'''Lila:''' Alright! Let me help you pick a few...
+<pre>{
+	"$type": "RPG.GameCore.SetMissionCustomValue",
+	"SubmissionID": 200120105,
+	"MissionCustomValue": {
+		"Name": "OldValue_0",
+		"ValidValueParamList": [
+			2,
+			1
+		]
+	},
+	"CustomValue": 2
+}</pre>
+:'''Lila:''' Your flowers are all wrapped up. It's getting late. I should head home.
+:'''Gilbert:''' These flowers are beautiful. I hope the person you are giving them to likes them.
+
+;(Talk to Lila)
+:'''Lila:''' Your flowers are all wrapped up. It's getting late. I should head home.
 {{Dialogue End}}
 
 ===Find Celine in the Golden Theater{{subst:void|<!--200120106-->}}===
 {{Mission Description|type=adventure|location=Administrative District|update|Who would have thought that you'd witness the love between a father and daughter at the Florist? It brings your heart such warmth in this frozen land. Now it's time to take the bouquet to the client &mdash; she should be waiting at the Golden Theater entrance.}}
 {{Dialogue Start}}
+
+;(Talk to Celine)
+:'''Celine:''' Waaa... Miss Tamila! Make sure you come back to visit the theater when you have time!
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{tx}}
+:'''Celine:''' Huh. Are you here for my singing again? That won't do. You need to enjoy the proper performance in the theater... Or are you here for something else?
+:{{DIcon|Arrow}} I brought the flowers you asked for.
+:'''Celine:''' I never thought it would be you taking on the assignment. These flowers are beautiful. Thank you.
+:{{DIcon|Arrow}} Why didn't you go and buy them yourself?
+:{{DIcon|Arrow}} I was worried you wouldn't like them.
+::'''Celine:''' I trust your tastes.
+:'''Celine:''' I wanted to go and buy them myself. They're for a dear friend, after all. But I've had so many performances lately that I've been too busy with rehearsals to do anything else.
+:'''Celine:''' Actually, my friend will be here in a second. You know her as well. So, do you want to catch up with her as well?
+:{{DIcon|Arrow}} I've got nothing to do anyway.
+:{{DIcon|Arrow}} You've piqued my curiosity.
+:As you and Celine wait, a familiar figure soon appears.
+:'''Tamila:''' Hello, Celine! Ah, you're here too, (Trailblazer)!
+:'''Celine:''' Long time no see, Tamila. Your audition went well, I assume? I even bought you some flowers to celebrate!
+:'''Tamila:''' What beautiful flowers! Thank you so much.
+:'''Tamila:''' As for the audition, hehe, it went even better than I imagined. The IPC has already agreed to sign me up! I am going to be debuting as a new jazz singer very soon.
+:{{DIcon|Arrow}} The IPC...? An audition?
+:{{DIcon|Arrow}} I thought you did musicals?
+:'''Tamila:''' Did Celine not tell you? I'm not an actress anymore.
+:'''Tamila:''' It all started when I took part in a Belobog and IPC cultural exchange event, where I discovered jazz music. I fell in love with the genre immediately.
+:'''Tamila:''' As you know... My voice is not well suited to musicals. Fortunately, it turns out that it's perfect for jazz!
+:'''Celine:''' I always thought that you have such a unique voice, Miss Tamila. It has such a sultry and enchanting tone. Now that you've got a chance to step out on an even larger stage... I'm so happy for you.
+:'''Tamila:''' Celine, you should also go and find your own stage.
+:'''Tamila:''' Your voice is more suited to musicals than mine, and your appearance and acting skills are also remarkable. You could easily walk up to the stage and become a real musical performer.
+:'''Celine:''' But... Do you really think I can do that?
+:{{DIcon|Arrow}} I believe in you.
+:{{DIcon|Arrow}} Even Tamila has given you her approval.
+:'''Tamila:''' Of course you can! To be honest, I am about to go to the IPC to undergo training, and I will be away from Belobog for a long time.
+:'''Tamila:''' The theater's stage will need a prima donna, and you are the only person who can do it. So, Celine, please promise me that you won't allow our performances to end here.
+:'''Celine:''' Miss Tamila...
+:'''Celine:''' Becoming a musical performer has actually always been my dream. Miss Tamila, (Trailblazer)... As you both have so much faith in me, I will do everything I can to get there. I will not let you or myself down.
+:'''Tamila:''' That's more like it! You should aim to become the star of the entire theater!
+:{{DIcon|Arrow}} I will come and watch your performance.
+::'''Celine:''' Can... Can you come after I get a bit more used to the stage?
+::A new star is about to be born.
+:{{DIcon|Arrow}} A new star is about to be born.
+:'''Celine:''' Don't say that. Miss Tamila is the real star here.
+:'''Tamila:''' I have to leave behind a little memento before I leave Belobog. How about we take a picture together? All three of us? It will be a while before we are able to meet again.
 :{{tx}}
 {{Dialogue End}}
 
 ===Speak with the little robot and plan your route from here{{subst:void|<!--200120107-->}}===
 {{Mission Description|type=adventure|location=Administrative District|update|Your search in the Belobog Administrative District has come to an end. Now, let's leave the route planning to your little robot's navigation mode.}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Little Robot)
+:'''Little Robot:''' They have inspired me. I should have taken a picture with the researchers before I left the space station.
+:{{DIcon|Arrow}} Do you miss home, too?
+::'''Little Robot:''' I do not have the concept of home. If I had to have a home, I would say that it would be the Astral Express, as I currently serve you.
+:{{DIcon|Arrow}} You have people you miss as well?
+::'''Little Robot:''' I do not understand the meaning of "missing" someone. However, you are currently the person with the highest command priority in my system.
+:'''Little Robot:''' As my internal memory is limited, there may come a day when I automatically delete the records of my creators. Therefore, I thought I could use a picture as a way of preserving them.
+:'''Little Robot:''' However, I should keep my computational power focused on the current mission. We will now be navigating to "Belobog Underworld."
+:'''Little Robot:''' Hm? Why is the location marked as below us? Has my navigation system malfunctioned?
+:{{DIcon|Arrow}} That's just how the Underworld is over here.
+:{{DIcon|Arrow}} Did the space station send me a defective product?
+:'''Little Robot:''' My apologies. Target location is beyond my processing capabilities. Please find your own route.
+
+;(Talk to Celine)
+:'''Celine:''' Waaa... Miss Tamila! Make sure you come back to visit the theater when you have time!
+
 {{Dialogue End}}
 
 ==Other Languages==

@@ -390,7 +390,7 @@ export class Enemy extends EnemyTemplate {
 	}
 	
 	get scaling_map(): ScalingEntry[] {
-		return enemyScaling[this.scaling_type]
+		return enemyScaling[this.scaling_type ?? 1]
 	}
 	
 	listStatChanges(): string[] {

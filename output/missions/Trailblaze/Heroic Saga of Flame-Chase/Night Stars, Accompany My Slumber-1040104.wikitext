@@ -48,48 +48,1652 @@ Mission Night Stars, Accompany My Slumber Caelus.png|Caelus
 ===Submit to Aglaea's interrogation &mdash; it's better to speak the truth{{subst:void|<!--104010409-->}}===
 {{Mission Description|type=trailblaze|location=Vortex of Genesis|Aglaea's control over Okhema runs far deeper than we anticipated, and the previous incident has already reached her ears. This leader of the Chrysos Heirs revealed a cold and unyielding side, going to great lengths to reassess our intentions. After such perilous moments, we must reconsider the viability of our expedition in Amphoreus.}}
 {{Dialogue Start}}
+----
 :{{tx}}
+:{{A|VO chapter4 5 danheng 101.ogg}} '''Dan Heng:''' ...What is the meaning of this?
+:{{DIcon|Arrow}} Why is this happening again?
+:{{DIcon|Arrow}} We've been made...
+:{{DIcon|Arrow}} As expected.
+:{{A|VO chapter4 5 aglaea 101.ogg}} '''Aglaea:''' This is no laughing matter. It's an interrogation.
+:{{A|VO chapter4 5 aglaea 102.ogg}} '''Aglaea:''' While the both of you were roaming the city, someone was paying attention to your every move. Unfortunately... you have broken your promises.
+:{{A|VO chapter4 5 danheng 102.ogg}} '''Dan Heng:''' So, you are indeed aware of our transgression... However, we only did so to save a life.
+:{{A|VO chapter4 5 aglaea 103.ogg}} '''Aglaea:''' The holy city's fate is as fragile as thread. I must exercise prudence in order to eliminate sources of potential disaster.
+:{{A|VO chapter4 5 aglaea 104.ogg}} '''Aglaea:''' I will grant the both of you another chance to mend our broken trust. The golden thread shall judge on my behalf. If you're truthful, you will live, else... you will perish.
+:{{A|VO chapter4 5 castorice 101.ogg}} '''Castorice:''' We meet again, distinguished guests.
+:{{A|VO chapter4 5 aglaea 105.ogg}} '''Aglaea:''' Castorice will be your executioner.
+:{{A|VO chapter4 5 danheng 103.ogg}} '''Dan Heng:''' Lady Aglaea, it is undeniable that we broke our agreement out of carelessness. However, you never explained to us how revealing that a world beyond the sky exists would lead to dire consequences.
+:{{A|VO chapter4 5 danheng 104.ogg}} '''Dan Heng:''' What I want to know is, exactly how grave a crime have we committed?
+:{{A|VO chapter4 5 aglaea 106.ogg}} '''Aglaea:''' A reasonable request. It is indeed my oversight for failing to tell you everything in time.
+:{{A|VO chapter4 5 aglaea 107.ogg}} '''Aglaea:''' There have always been people in Amphoreus who looked beyond the skies. Indeed, there used to be a usurper nation that spared no expense in constructing "skyships," with the desire to break through the blue sky and reach the stars...
+:{{A|VO chapter4 5 aglaea 108.ogg}} '''Aglaea:''' However, {{Rubi|Aquila's|Sky Titan}} divine punishment fell the instant the fleet of skyships took flight. An entire city-state, along with all of its subjects, was reduced to ash in that moment.
+:{{A|VO chapter4 5 aglaea 109.ogg}} '''Aglaea:''' It's not that Amphoreus is unwilling to head toward the stars. Yet, anyone who even thinks about breaching the firmament would undoubtedly infuriate the gods, causing this land of the living to burn and an entire nation of mortals to perish. The {{Rubi|Eye of Twilight|Sky Titan}} is only one example of this.
+:{{A|VO chapter4 5 aglaea 110.ogg}} '''Aglaea:''' This is forbidden territory which can never be ventured into.
+:{{DIcon|Arrow}} So you're saying that it's better to pretend it doesn't exist instead?
+::{{A|VO chapter4 5 danheng 105.ogg}} '''Dan Heng:''' Humanity has always longed for the sky... and this is something that you can't prevent.
+::We mean no harm toward Amphoreus...
+:{{DIcon|Arrow}} We mean no harm toward Amphoreus...
+:{{A|VO chapter4 5 aglaea 111.ogg}} '''Aglaea:''' Divine punishment has never been fair. As Okhema's guardian, I must do the same.
+:{{tx}}
+----
+:{{A|VO chapter4 5 aglaea 114.ogg}} '''Aglaea:''' Three steps, Castorice.
+:{{A|VO chapter4 5 castorice 102.ogg}} '''Castorice:''' ...Yes, Lady Aglaea.
+:{{A|VO chapter4 5 aglaea 115.ogg}} '''Aglaea:''' I shall ask you four questions. Dishonest answers will cause the golden thread to vibrate, while truthful responses will not affect the thread.
+:{{A|VO chapter4 5 aglaea 116.ogg}} '''Aglaea:''' The number of times that the thread trembles... is the number of steps forward that the executioner will take.
+:{{A|VO chapter4 5 aglaea 117.ogg}} '''Aglaea:''' If she isn't standing right behind you after all four questions have been asked and answered, the both of you will have passed this test. If she is... your journey will end here.
+:{{A|VO chapter4 5 castorice 103.ogg}} '''Castorice:''' You'll fall asleep amid the warm embrace of flowers and feel no pain... That I can guarantee.
+:{{DIcon|Arrow}} There's no need for such guarantees!
+:{{DIcon|Arrow}} Does this mean that we can lie up to two times?
+::{{A|VO chapter4 5 aglaea 118.ogg}} '''Aglaea:''' If you treat your lives as mere trifles, then you may do as you wish.
+:{{A|VO chapter4 5 danheng 106 m.ogg}} {{A|VO chapter4 5 danheng 106 f.ogg}} '''Dan Heng:''' Regardless of what she says, (Trailblazer), we'll be fine as long as our consciences are clear.
+:{{A|VO chapter4 5 aglaea 119.ogg}} '''Aglaea:''' Well then, let us begin. Question One.
+:{{A|VO chapter4 5 aglaea 120.ogg}} '''Aglaea:''' Outlanders, {{Color|keyword|nobold=1|why have you come to Amphoreus?}}
+:{{DIcon|Arrow}} To solve the problems plaguing this world.
+:<pre>{
+	"$type": "RPG.GameCore.CalculateMissionCustomValue",
+	"TargetSubmissionID": 104010411,
+	"TargetMissionCustomValue": {
+		"Name": "OldValue_0",
+		"ValidValueParamList": [
+			0,
+			1,
+			2,
+			3,
+			4
+		]
+	},
+	"ValueA": {
+		"Type": "CustomValue",
+		"MainMissionID": 1040104,
+		"MissionCustomValue": {
+			"Name": "OldValue_0",
+			"ValidValueParamList": [
+				0,
+				1,
+				2,
+				3,
+				4
+			]
+		}
+	},
+	"ValueB": {
+		"DirectValue": 1
+	}
+}</pre>
+::{{A|VO chapter4 5 aglaea 114.ogg}} '''Aglaea:''' Three steps, Castorice.
+::{{A|VO chapter4 5 castorice 102.ogg}} '''Castorice:''' ...Yes, Lady Aglaea.
+::{{A|VO chapter4 5 aglaea 115.ogg}} '''Aglaea:''' I shall ask you four questions. Dishonest answers will cause the golden thread to vibrate, while truthful responses will not affect the thread.
+::{{A|VO chapter4 5 aglaea 116.ogg}} '''Aglaea:''' The number of times that the thread trembles... is the number of steps forward that the executioner will take.
+::{{A|VO chapter4 5 aglaea 117.ogg}} '''Aglaea:''' If she isn't standing right behind you after all four questions have been asked and answered, the both of you will have passed this test. If she is... your journey will end here.
+::{{A|VO chapter4 5 castorice 103.ogg}} '''Castorice:''' You'll fall asleep amid the warm embrace of flowers and feel no pain... That I can guarantee.
+::There's no need for such guarantees!
+::Does this mean that we can lie up to two times?
+::{{A|VO chapter4 5 aglaea 118.ogg}} '''Aglaea:''' If you treat your lives as mere trifles, then you may do as you wish.
+::{{A|VO chapter4 5 danheng 106 m.ogg}} {{A|VO chapter4 5 danheng 106 f.ogg}} '''Dan Heng:''' Regardless of what she says, (Trailblazer), we'll be fine as long as our consciences are clear.
+::{{A|VO chapter4 5 aglaea 119.ogg}} '''Aglaea:''' Well then, let us begin. Question One.
+::{{A|VO chapter4 5 aglaea 120.ogg}} '''Aglaea:''' Outlanders, {{Color|keyword|nobold=1|why have you come to Amphoreus?}}
+::To solve the problems plaguing this world.
+::The golden thread trembles slightly.
+::{{A|VO chapter4 5 aglaea 121.ogg}} '''Aglaea:''' A half-truth that still conceals some facts. Yet, the rules leave no room for compromise. A step will be recorded.
+::To allow our journey to continue.
+:{{DIcon|Arrow}} To allow our journey to continue.
+:{{DIcon|Arrow}} To turn this place upside down!
+:<pre>{
+	"$type": "RPG.GameCore.CalculateMissionCustomValue",
+	"TargetSubmissionID": 104010411,
+	"TargetMissionCustomValue": {
+		"Name": "OldValue_0",
+		"ValidValueParamList": [
+			0,
+			1,
+			2,
+			3,
+			4
+		]
+	},
+	"ValueA": {
+		"Type": "CustomValue",
+		"MainMissionID": 1040104,
+		"MissionCustomValue": {
+			"Name": "OldValue_0",
+			"ValidValueParamList": [
+				0,
+				1,
+				2,
+				3,
+				4
+			]
+		}
+	},
+	"ValueB": {
+		"DirectValue": 1
+	}
+}</pre>
+::{{A|VO chapter4 5 aglaea 114.ogg}} '''Aglaea:''' Three steps, Castorice.
+::{{A|VO chapter4 5 castorice 102.ogg}} '''Castorice:''' ...Yes, Lady Aglaea.
+::{{A|VO chapter4 5 aglaea 115.ogg}} '''Aglaea:''' I shall ask you four questions. Dishonest answers will cause the golden thread to vibrate, while truthful responses will not affect the thread.
+::{{A|VO chapter4 5 aglaea 116.ogg}} '''Aglaea:''' The number of times that the thread trembles... is the number of steps forward that the executioner will take.
+::{{A|VO chapter4 5 aglaea 117.ogg}} '''Aglaea:''' If she isn't standing right behind you after all four questions have been asked and answered, the both of you will have passed this test. If she is... your journey will end here.
+::{{A|VO chapter4 5 castorice 103.ogg}} '''Castorice:''' You'll fall asleep amid the warm embrace of flowers and feel no pain... That I can guarantee.
+::There's no need for such guarantees!
+::Does this mean that we can lie up to two times?
+::{{A|VO chapter4 5 aglaea 118.ogg}} '''Aglaea:''' If you treat your lives as mere trifles, then you may do as you wish.
+::{{A|VO chapter4 5 danheng 106 m.ogg}} {{A|VO chapter4 5 danheng 106 f.ogg}} '''Dan Heng:''' Regardless of what she says, (Trailblazer), we'll be fine as long as our consciences are clear.
+::{{A|VO chapter4 5 aglaea 119.ogg}} '''Aglaea:''' Well then, let us begin. Question One.
+::{{A|VO chapter4 5 aglaea 120.ogg}} '''Aglaea:''' Outlanders, {{Color|keyword|nobold=1|why have you come to Amphoreus?}}
+::To solve the problems plaguing this world.
+::The golden thread trembles slightly.
+::{{A|VO chapter4 5 aglaea 121.ogg}} '''Aglaea:''' A half-truth that still conceals some facts. Yet, the rules leave no room for compromise. A step will be recorded.
+::To allow our journey to continue.
+:The golden thread remains calm and unchanged.
+:{{A|VO chapter4 5 aglaea 122.ogg}} '''Aglaea:''' A truthful response. A step will not be recorded.
+:To turn this place upside down!
+:The golden thread trembles violently.
+:{{A|VO chapter4 5 aglaea 123.ogg}} '''Aglaea:''' Jokes cannot conceal your true intentions. Opportunities are fleeting and you've just wasted one.
+:{{A|VO chapter4 5 aglaea 124.ogg}} '''Aglaea:''' Question Two.
+:{{A|VO chapter4 5 aglaea 125.ogg}} '''Aglaea:''' Outlanders, {{Color|keyword|nobold=1|why did you lend your aid to Okhema?}}
+:{{DIcon|Arrow}} Because of our courageous spirit and selfless hearts!
+:<pre>{
+	"$type": "RPG.GameCore.CalculateMissionCustomValue",
+	"TargetSubmissionID": 104010411,
+	"TargetMissionCustomValue": {
+		"Name": "OldValue_0",
+		"ValidValueParamList": [
+			0,
+			1,
+			2,
+			3,
+			4
+		]
+	},
+	"ValueA": {
+		"Type": "CustomValue",
+		"MainMissionID": 1040104,
+		"MissionCustomValue": {
+			"Name": "OldValue_0",
+			"ValidValueParamList": [
+				0,
+				1,
+				2,
+				3,
+				4
+			]
+		}
+	},
+	"ValueB": {
+		"DirectValue": 1
+	}
+}</pre>
+::{{A|VO chapter4 5 aglaea 114.ogg}} '''Aglaea:''' Three steps, Castorice.
+::{{A|VO chapter4 5 castorice 102.ogg}} '''Castorice:''' ...Yes, Lady Aglaea.
+::{{A|VO chapter4 5 aglaea 115.ogg}} '''Aglaea:''' I shall ask you four questions. Dishonest answers will cause the golden thread to vibrate, while truthful responses will not affect the thread.
+::{{A|VO chapter4 5 aglaea 116.ogg}} '''Aglaea:''' The number of times that the thread trembles... is the number of steps forward that the executioner will take.
+::{{A|VO chapter4 5 aglaea 117.ogg}} '''Aglaea:''' If she isn't standing right behind you after all four questions have been asked and answered, the both of you will have passed this test. If she is... your journey will end here.
+::{{A|VO chapter4 5 castorice 103.ogg}} '''Castorice:''' You'll fall asleep amid the warm embrace of flowers and feel no pain... That I can guarantee.
+::There's no need for such guarantees!
+::Does this mean that we can lie up to two times?
+::{{A|VO chapter4 5 aglaea 118.ogg}} '''Aglaea:''' If you treat your lives as mere trifles, then you may do as you wish.
+::{{A|VO chapter4 5 danheng 106 m.ogg}} {{A|VO chapter4 5 danheng 106 f.ogg}} '''Dan Heng:''' Regardless of what she says, (Trailblazer), we'll be fine as long as our consciences are clear.
+::{{A|VO chapter4 5 aglaea 119.ogg}} '''Aglaea:''' Well then, let us begin. Question One.
+::{{A|VO chapter4 5 aglaea 120.ogg}} '''Aglaea:''' Outlanders, {{Color|keyword|nobold=1|why have you come to Amphoreus?}}
+::To solve the problems plaguing this world.
+::The golden thread trembles slightly.
+::{{A|VO chapter4 5 aglaea 121.ogg}} '''Aglaea:''' A half-truth that still conceals some facts. Yet, the rules leave no room for compromise. A step will be recorded.
+::To allow our journey to continue.
+::The golden thread remains calm and unchanged.
+::{{A|VO chapter4 5 aglaea 122.ogg}} '''Aglaea:''' A truthful response. A step will not be recorded.
+::To turn this place upside down!
+::The golden thread trembles violently.
+::{{A|VO chapter4 5 aglaea 123.ogg}} '''Aglaea:''' Jokes cannot conceal your true intentions. Opportunities are fleeting and you've just wasted one.
+::{{A|VO chapter4 5 aglaea 124.ogg}} '''Aglaea:''' Question Two.
+::{{A|VO chapter4 5 aglaea 125.ogg}} '''Aglaea:''' Outlanders, {{Color|keyword|nobold=1|why did you lend your aid to Okhema?}}
+::Because of our courageous spirit and selfless hearts!
+::The golden thread trembles slightly.
+::{{A|VO chapter4 5 aglaea 126.ogg}} '''Aglaea:''' A response that is certainly full of spirit, but lacking in sincerity... A step will be recorded.
+::I regret what we did. We shouldn't have aided Okhema at all!
+::The golden thread trembles violently.
+::{{A|VO chapter4 5 aglaea 127.ogg}} '''Aglaea:''' You've let your anger consume you. A step will be recorded.
+::To allow our journey to continue.
+::The golden thread remains calm and unchanged.
+::{{A|VO chapter4 5 aglaea 128.ogg}} '''Aglaea:''' No fluctuations detected. A step will not be recorded.
+::{{A|VO chapter4 5 aglaea 129.ogg}} '''Aglaea:''' Question Three.
+::{{A|VO chapter4 5 aglaea 130.ogg}} '''Aglaea:''' Outlanders, {{Color|keyword|nobold=1|if the current situation changed dramatically, could you eventually point your blades at Okhema and its citizens?}}
+::{{DIcon|Arrow}} I... can't make any guarantees.
+::{{DIcon|Arrow}} Not a chance!
+::<pre>{
+	"$type": "RPG.GameCore.CalculateMissionCustomValue",
+	"TargetSubmissionID": 104010411,
+	"TargetMissionCustomValue": {
+		"Name": "OldValue_0",
+		"ValidValueParamList": [
+			0,
+			1,
+			2,
+			3,
+			4
+		]
+	},
+	"ValueA": {
+		"Type": "CustomValue",
+		"MainMissionID": 1040104,
+		"MissionCustomValue": {
+			"Name": "OldValue_0",
+			"ValidValueParamList": [
+				0,
+				1,
+				2,
+				3,
+				4
+			]
+		}
+	},
+	"ValueB": {
+		"DirectValue": 1
+	}
+}</pre>
+:::{{A|VO chapter4 5 aglaea 114.ogg}} '''Aglaea:''' Three steps, Castorice.
+:::{{A|VO chapter4 5 castorice 102.ogg}} '''Castorice:''' ...Yes, Lady Aglaea.
+:::{{A|VO chapter4 5 aglaea 115.ogg}} '''Aglaea:''' I shall ask you four questions. Dishonest answers will cause the golden thread to vibrate, while truthful responses will not affect the thread.
+:::{{A|VO chapter4 5 aglaea 116.ogg}} '''Aglaea:''' The number of times that the thread trembles... is the number of steps forward that the executioner will take.
+:::{{A|VO chapter4 5 aglaea 117.ogg}} '''Aglaea:''' If she isn't standing right behind you after all four questions have been asked and answered, the both of you will have passed this test. If she is... your journey will end here.
+:::{{A|VO chapter4 5 castorice 103.ogg}} '''Castorice:''' You'll fall asleep amid the warm embrace of flowers and feel no pain... That I can guarantee.
+:::There's no need for such guarantees!
+:::Does this mean that we can lie up to two times?
+:::{{A|VO chapter4 5 aglaea 118.ogg}} '''Aglaea:''' If you treat your lives as mere trifles, then you may do as you wish.
+:::{{A|VO chapter4 5 danheng 106 m.ogg}} {{A|VO chapter4 5 danheng 106 f.ogg}} '''Dan Heng:''' Regardless of what she says, (Trailblazer), we'll be fine as long as our consciences are clear.
+:::{{A|VO chapter4 5 aglaea 119.ogg}} '''Aglaea:''' Well then, let us begin. Question One.
+:::{{A|VO chapter4 5 aglaea 120.ogg}} '''Aglaea:''' Outlanders, {{Color|keyword|nobold=1|why have you come to Amphoreus?}}
+:::To solve the problems plaguing this world.
+:::The golden thread trembles slightly.
+:::{{A|VO chapter4 5 aglaea 121.ogg}} '''Aglaea:''' A half-truth that still conceals some facts. Yet, the rules leave no room for compromise. A step will be recorded.
+:::To allow our journey to continue.
+::{{DIcon|Arrow}} I use a baseball bat, not a blade.
+::<pre>{
+	"$type": "RPG.GameCore.CalculateMissionCustomValue",
+	"TargetSubmissionID": 104010411,
+	"TargetMissionCustomValue": {
+		"Name": "OldValue_0",
+		"ValidValueParamList": [
+			0,
+			1,
+			2,
+			3,
+			4
+		]
+	},
+	"ValueA": {
+		"Type": "CustomValue",
+		"MainMissionID": 1040104,
+		"MissionCustomValue": {
+			"Name": "OldValue_0",
+			"ValidValueParamList": [
+				0,
+				1,
+				2,
+				3,
+				4
+			]
+		}
+	},
+	"ValueB": {
+		"DirectValue": 1
+	}
+}</pre>
+:::{{A|VO chapter4 5 aglaea 114.ogg}} '''Aglaea:''' Three steps, Castorice.
+:::{{A|VO chapter4 5 castorice 102.ogg}} '''Castorice:''' ...Yes, Lady Aglaea.
+:::{{A|VO chapter4 5 aglaea 115.ogg}} '''Aglaea:''' I shall ask you four questions. Dishonest answers will cause the golden thread to vibrate, while truthful responses will not affect the thread.
+:::{{A|VO chapter4 5 aglaea 116.ogg}} '''Aglaea:''' The number of times that the thread trembles... is the number of steps forward that the executioner will take.
+:::{{A|VO chapter4 5 aglaea 117.ogg}} '''Aglaea:''' If she isn't standing right behind you after all four questions have been asked and answered, the both of you will have passed this test. If she is... your journey will end here.
+:::{{A|VO chapter4 5 castorice 103.ogg}} '''Castorice:''' You'll fall asleep amid the warm embrace of flowers and feel no pain... That I can guarantee.
+:::There's no need for such guarantees!
+:::Does this mean that we can lie up to two times?
+:::{{A|VO chapter4 5 aglaea 118.ogg}} '''Aglaea:''' If you treat your lives as mere trifles, then you may do as you wish.
+:::{{A|VO chapter4 5 danheng 106 m.ogg}} {{A|VO chapter4 5 danheng 106 f.ogg}} '''Dan Heng:''' Regardless of what she says, (Trailblazer), we'll be fine as long as our consciences are clear.
+:::{{A|VO chapter4 5 aglaea 119.ogg}} '''Aglaea:''' Well then, let us begin. Question One.
+:::{{A|VO chapter4 5 aglaea 120.ogg}} '''Aglaea:''' Outlanders, {{Color|keyword|nobold=1|why have you come to Amphoreus?}}
+:::To solve the problems plaguing this world.
+:::The golden thread trembles slightly.
+:::{{A|VO chapter4 5 aglaea 121.ogg}} '''Aglaea:''' A half-truth that still conceals some facts. Yet, the rules leave no room for compromise. A step will be recorded.
+:::To allow our journey to continue.
+::The golden thread remains calm and unchanged.
+::{{A|VO chapter4 5 aglaea 131.ogg}} '''Aglaea:''' A response that lacks embellishment. You have no misgivings about the friction or suspicion that your answer might cause. A step will not be recorded.
+::Not a chance!
+::The golden thread trembles slightly.
+::{{A|VO chapter4 5 aglaea 132.ogg}} '''Aglaea:''' Although you attempted to make a promise, your resolve didn't match your response... A step will be recorded.
+::I use a baseball bat, not a blade.
+::The golden thread trembles violently.
+::{{A|VO chapter4 5 aglaea 133.ogg}} '''Aglaea:''' Trying to hasten your demise by being glib with your response? I can certainly satisfy your desire. A step will be recorded.
+::{{A|VO chapter4 5 aglaea 134.ogg}} '''Aglaea:''' Final Question.
+::{{A|VO chapter4 5 aglaea 135.ogg}} '''Aglaea:''' Outlander, {{Color|keyword|nobold=1|an unknown but surging power exists within your body... Are you willing to use it to aid the Chrysos Heirs in slaying the gods?}}
+::{{DIcon|Arrow}} Wait, you can even detect that?
+::<pre>{
+	"$type": "RPG.GameCore.CalculateMissionCustomValue",
+	"TargetSubmissionID": 104010411,
+	"TargetMissionCustomValue": {
+		"Name": "OldValue_0",
+		"ValidValueParamList": [
+			0,
+			1,
+			2,
+			3,
+			4
+		]
+	},
+	"ValueA": {
+		"Type": "CustomValue",
+		"MainMissionID": 1040104,
+		"MissionCustomValue": {
+			"Name": "OldValue_0",
+			"ValidValueParamList": [
+				0,
+				1,
+				2,
+				3,
+				4
+			]
+		}
+	},
+	"ValueB": {
+		"DirectValue": 1
+	}
+}</pre>
+::{{DIcon|Arrow}} I am not willing, and I cannot agree to your request.
+:::The golden thread remains calm and unchanged.
+::{{DIcon|Arrow}} It's one of the Destruction's seeds of disaster. Be careful, it might backfire.
+:::The golden thread trembles slightly.
+::{{tx}}
+:{{DIcon|Arrow}} I regret what we did. We shouldn't have aided Okhema at all!
+:<pre>{
+	"$type": "RPG.GameCore.CalculateMissionCustomValue",
+	"TargetSubmissionID": 104010411,
+	"TargetMissionCustomValue": {
+		"Name": "OldValue_0",
+		"ValidValueParamList": [
+			0,
+			1,
+			2,
+			3,
+			4
+		]
+	},
+	"ValueA": {
+		"Type": "CustomValue",
+		"MainMissionID": 1040104,
+		"MissionCustomValue": {
+			"Name": "OldValue_0",
+			"ValidValueParamList": [
+				0,
+				1,
+				2,
+				3,
+				4
+			]
+		}
+	},
+	"ValueB": {
+		"DirectValue": 1
+	}
+}</pre>
+::{{A|VO chapter4 5 aglaea 114.ogg}} '''Aglaea:''' Three steps, Castorice.
+::{{A|VO chapter4 5 castorice 102.ogg}} '''Castorice:''' ...Yes, Lady Aglaea.
+::{{A|VO chapter4 5 aglaea 115.ogg}} '''Aglaea:''' I shall ask you four questions. Dishonest answers will cause the golden thread to vibrate, while truthful responses will not affect the thread.
+::{{A|VO chapter4 5 aglaea 116.ogg}} '''Aglaea:''' The number of times that the thread trembles... is the number of steps forward that the executioner will take.
+::{{A|VO chapter4 5 aglaea 117.ogg}} '''Aglaea:''' If she isn't standing right behind you after all four questions have been asked and answered, the both of you will have passed this test. If she is... your journey will end here.
+::{{A|VO chapter4 5 castorice 103.ogg}} '''Castorice:''' You'll fall asleep amid the warm embrace of flowers and feel no pain... That I can guarantee.
+::There's no need for such guarantees!
+::Does this mean that we can lie up to two times?
+::{{A|VO chapter4 5 aglaea 118.ogg}} '''Aglaea:''' If you treat your lives as mere trifles, then you may do as you wish.
+::{{A|VO chapter4 5 danheng 106 m.ogg}} {{A|VO chapter4 5 danheng 106 f.ogg}} '''Dan Heng:''' Regardless of what she says, (Trailblazer), we'll be fine as long as our consciences are clear.
+::{{A|VO chapter4 5 aglaea 119.ogg}} '''Aglaea:''' Well then, let us begin. Question One.
+::{{A|VO chapter4 5 aglaea 120.ogg}} '''Aglaea:''' Outlanders, {{Color|keyword|nobold=1|why have you come to Amphoreus?}}
+::To solve the problems plaguing this world.
+::The golden thread trembles slightly.
+::{{A|VO chapter4 5 aglaea 121.ogg}} '''Aglaea:''' A half-truth that still conceals some facts. Yet, the rules leave no room for compromise. A step will be recorded.
+::To allow our journey to continue.
+::The golden thread remains calm and unchanged.
+::{{A|VO chapter4 5 aglaea 122.ogg}} '''Aglaea:''' A truthful response. A step will not be recorded.
+::To turn this place upside down!
+::The golden thread trembles violently.
+::{{A|VO chapter4 5 aglaea 123.ogg}} '''Aglaea:''' Jokes cannot conceal your true intentions. Opportunities are fleeting and you've just wasted one.
+::{{A|VO chapter4 5 aglaea 124.ogg}} '''Aglaea:''' Question Two.
+::{{A|VO chapter4 5 aglaea 125.ogg}} '''Aglaea:''' Outlanders, {{Color|keyword|nobold=1|why did you lend your aid to Okhema?}}
+::Because of our courageous spirit and selfless hearts!
+::The golden thread trembles slightly.
+::{{A|VO chapter4 5 aglaea 126.ogg}} '''Aglaea:''' A response that is certainly full of spirit, but lacking in sincerity... A step will be recorded.
+::I regret what we did. We shouldn't have aided Okhema at all!
+::The golden thread trembles violently.
+::{{A|VO chapter4 5 aglaea 127.ogg}} '''Aglaea:''' You've let your anger consume you. A step will be recorded.
+::To allow our journey to continue.
+::The golden thread remains calm and unchanged.
+::{{A|VO chapter4 5 aglaea 128.ogg}} '''Aglaea:''' No fluctuations detected. A step will not be recorded.
+::{{A|VO chapter4 5 aglaea 129.ogg}} '''Aglaea:''' Question Three.
+::{{A|VO chapter4 5 aglaea 130.ogg}} '''Aglaea:''' Outlanders, {{Color|keyword|nobold=1|if the current situation changed dramatically, could you eventually point your blades at Okhema and its citizens?}}
+::{{DIcon|Arrow}} I... can't make any guarantees.
+::{{DIcon|Arrow}} Not a chance!
+::<pre>{
+	"$type": "RPG.GameCore.CalculateMissionCustomValue",
+	"TargetSubmissionID": 104010411,
+	"TargetMissionCustomValue": {
+		"Name": "OldValue_0",
+		"ValidValueParamList": [
+			0,
+			1,
+			2,
+			3,
+			4
+		]
+	},
+	"ValueA": {
+		"Type": "CustomValue",
+		"MainMissionID": 1040104,
+		"MissionCustomValue": {
+			"Name": "OldValue_0",
+			"ValidValueParamList": [
+				0,
+				1,
+				2,
+				3,
+				4
+			]
+		}
+	},
+	"ValueB": {
+		"DirectValue": 1
+	}
+}</pre>
+:::{{A|VO chapter4 5 aglaea 114.ogg}} '''Aglaea:''' Three steps, Castorice.
+:::{{A|VO chapter4 5 castorice 102.ogg}} '''Castorice:''' ...Yes, Lady Aglaea.
+:::{{A|VO chapter4 5 aglaea 115.ogg}} '''Aglaea:''' I shall ask you four questions. Dishonest answers will cause the golden thread to vibrate, while truthful responses will not affect the thread.
+:::{{A|VO chapter4 5 aglaea 116.ogg}} '''Aglaea:''' The number of times that the thread trembles... is the number of steps forward that the executioner will take.
+:::{{A|VO chapter4 5 aglaea 117.ogg}} '''Aglaea:''' If she isn't standing right behind you after all four questions have been asked and answered, the both of you will have passed this test. If she is... your journey will end here.
+:::{{A|VO chapter4 5 castorice 103.ogg}} '''Castorice:''' You'll fall asleep amid the warm embrace of flowers and feel no pain... That I can guarantee.
+:::There's no need for such guarantees!
+:::Does this mean that we can lie up to two times?
+:::{{A|VO chapter4 5 aglaea 118.ogg}} '''Aglaea:''' If you treat your lives as mere trifles, then you may do as you wish.
+:::{{A|VO chapter4 5 danheng 106 m.ogg}} {{A|VO chapter4 5 danheng 106 f.ogg}} '''Dan Heng:''' Regardless of what she says, (Trailblazer), we'll be fine as long as our consciences are clear.
+:::{{A|VO chapter4 5 aglaea 119.ogg}} '''Aglaea:''' Well then, let us begin. Question One.
+:::{{A|VO chapter4 5 aglaea 120.ogg}} '''Aglaea:''' Outlanders, {{Color|keyword|nobold=1|why have you come to Amphoreus?}}
+:::To solve the problems plaguing this world.
+:::The golden thread trembles slightly.
+:::{{A|VO chapter4 5 aglaea 121.ogg}} '''Aglaea:''' A half-truth that still conceals some facts. Yet, the rules leave no room for compromise. A step will be recorded.
+:::To allow our journey to continue.
+::{{DIcon|Arrow}} I use a baseball bat, not a blade.
+::<pre>{
+	"$type": "RPG.GameCore.CalculateMissionCustomValue",
+	"TargetSubmissionID": 104010411,
+	"TargetMissionCustomValue": {
+		"Name": "OldValue_0",
+		"ValidValueParamList": [
+			0,
+			1,
+			2,
+			3,
+			4
+		]
+	},
+	"ValueA": {
+		"Type": "CustomValue",
+		"MainMissionID": 1040104,
+		"MissionCustomValue": {
+			"Name": "OldValue_0",
+			"ValidValueParamList": [
+				0,
+				1,
+				2,
+				3,
+				4
+			]
+		}
+	},
+	"ValueB": {
+		"DirectValue": 1
+	}
+}</pre>
+:::{{A|VO chapter4 5 aglaea 114.ogg}} '''Aglaea:''' Three steps, Castorice.
+:::{{A|VO chapter4 5 castorice 102.ogg}} '''Castorice:''' ...Yes, Lady Aglaea.
+:::{{A|VO chapter4 5 aglaea 115.ogg}} '''Aglaea:''' I shall ask you four questions. Dishonest answers will cause the golden thread to vibrate, while truthful responses will not affect the thread.
+:::{{A|VO chapter4 5 aglaea 116.ogg}} '''Aglaea:''' The number of times that the thread trembles... is the number of steps forward that the executioner will take.
+:::{{A|VO chapter4 5 aglaea 117.ogg}} '''Aglaea:''' If she isn't standing right behind you after all four questions have been asked and answered, the both of you will have passed this test. If she is... your journey will end here.
+:::{{A|VO chapter4 5 castorice 103.ogg}} '''Castorice:''' You'll fall asleep amid the warm embrace of flowers and feel no pain... That I can guarantee.
+:::There's no need for such guarantees!
+:::Does this mean that we can lie up to two times?
+:::{{A|VO chapter4 5 aglaea 118.ogg}} '''Aglaea:''' If you treat your lives as mere trifles, then you may do as you wish.
+:::{{A|VO chapter4 5 danheng 106 m.ogg}} {{A|VO chapter4 5 danheng 106 f.ogg}} '''Dan Heng:''' Regardless of what she says, (Trailblazer), we'll be fine as long as our consciences are clear.
+:::{{A|VO chapter4 5 aglaea 119.ogg}} '''Aglaea:''' Well then, let us begin. Question One.
+:::{{A|VO chapter4 5 aglaea 120.ogg}} '''Aglaea:''' Outlanders, {{Color|keyword|nobold=1|why have you come to Amphoreus?}}
+:::To solve the problems plaguing this world.
+:::The golden thread trembles slightly.
+:::{{A|VO chapter4 5 aglaea 121.ogg}} '''Aglaea:''' A half-truth that still conceals some facts. Yet, the rules leave no room for compromise. A step will be recorded.
+:::To allow our journey to continue.
+::The golden thread remains calm and unchanged.
+::{{A|VO chapter4 5 aglaea 131.ogg}} '''Aglaea:''' A response that lacks embellishment. You have no misgivings about the friction or suspicion that your answer might cause. A step will not be recorded.
+::Not a chance!
+::The golden thread trembles slightly.
+::{{A|VO chapter4 5 aglaea 132.ogg}} '''Aglaea:''' Although you attempted to make a promise, your resolve didn't match your response... A step will be recorded.
+::I use a baseball bat, not a blade.
+::The golden thread trembles violently.
+::{{A|VO chapter4 5 aglaea 133.ogg}} '''Aglaea:''' Trying to hasten your demise by being glib with your response? I can certainly satisfy your desire. A step will be recorded.
+::{{A|VO chapter4 5 aglaea 134.ogg}} '''Aglaea:''' Final Question.
+::{{A|VO chapter4 5 aglaea 135.ogg}} '''Aglaea:''' Outlander, {{Color|keyword|nobold=1|an unknown but surging power exists within your body... Are you willing to use it to aid the Chrysos Heirs in slaying the gods?}}
+::{{DIcon|Arrow}} Wait, you can even detect that?
+::<pre>{
+	"$type": "RPG.GameCore.CalculateMissionCustomValue",
+	"TargetSubmissionID": 104010411,
+	"TargetMissionCustomValue": {
+		"Name": "OldValue_0",
+		"ValidValueParamList": [
+			0,
+			1,
+			2,
+			3,
+			4
+		]
+	},
+	"ValueA": {
+		"Type": "CustomValue",
+		"MainMissionID": 1040104,
+		"MissionCustomValue": {
+			"Name": "OldValue_0",
+			"ValidValueParamList": [
+				0,
+				1,
+				2,
+				3,
+				4
+			]
+		}
+	},
+	"ValueB": {
+		"DirectValue": 1
+	}
+}</pre>
+::{{DIcon|Arrow}} I am not willing, and I cannot agree to your request.
+:::The golden thread remains calm and unchanged.
+::{{DIcon|Arrow}} It's one of the Destruction's seeds of disaster. Be careful, it might backfire.
+:::The golden thread trembles slightly.
+::{{tx}}
+;(Upon reaching the destination)
+----
+:{{A|VO chapter4 5 aglaea 152.ogg}} '''Aglaea:''' All four questions have been asked and answered.
+:{{A|VO chapter4 5 aglaea 153.ogg}} '''Aglaea:''' The golden thread has exposed your hesitations. Regrettably, the both of you have failed the test.
+:{{A|VO chapter4 5 aglaea 154.ogg}} '''Aglaea:''' While you may be a ray of hope that fell onto Amphoreus, you may also be... a threat to Amphoreus. You leave me no choice but to shut the doors of your fates.
+:{{A|VO chapter4 5 danheng 112.ogg}} '''Dan Heng:''' Determining our fates with extrajudicial execution... How unreasonable.
+:{{DIcon|Arrow}} Talk about burning bridges! After all we've done to help you.
+::Talk about burning bridges! After all we've done to help you.
+::Justice, fairness, impartiality, where art thou?
+::Someone, anyone, save us...
+:{{DIcon|Arrow}} Justice, fairness, impartiality, where art thou?
+::Talk about burning bridges! After all we've done to help you.
+::Justice, fairness, impartiality, where art thou?
+::Someone, anyone, save us...
+:{{DIcon|Arrow}} Someone, anyone, save us...
+:{{A|VO chapter4 5 danheng 113.ogg}} '''Dan Heng:''' I don't think anybody will be able to hear our cries... given where we are right now.
+:{{A|VO chapter4 5 aglaea 155.ogg}} '''Aglaea:''' For the holy city, I am willing to bear all the traits that others despise and use every heartless yet effective trick in the book.
+:{{tx}}
+:{{A|VO chapter4 5 aglaea 152.ogg}} '''Aglaea:''' All four questions have been asked and answered.
+:{{A|VO chapter4 5 aglaea 153.ogg}} '''Aglaea:''' The golden thread has exposed your hesitations. Regrettably, the both of you have failed the test.
+:{{A|VO chapter4 5 aglaea 154.ogg}} '''Aglaea:''' While you may be a ray of hope that fell onto Amphoreus, you may also be... a threat to Amphoreus. You leave me no choice but to shut the doors of your fates.
+:{{A|VO chapter4 5 danheng 112.ogg}} '''Dan Heng:''' Determining our fates with extrajudicial execution... How unreasonable.
+:Talk about burning bridges! After all we've done to help you.
+:Justice, fairness, impartiality, where art thou?
+:Someone, anyone, save us...
+:{{A|VO chapter4 5 danheng 113.ogg}} '''Dan Heng:''' I don't think anybody will be able to hear our cries... given where we are right now.
+:{{A|VO chapter4 5 aglaea 155.ogg}} '''Aglaea:''' For the holy city, I am willing to bear all the traits that others despise and use every heartless yet effective trick in the book.
+:{{A|VO chapter4 5 aglaea 156.ogg}} '''Aglaea:''' Castorice, please give our guests a merciful farewell.
+:{{A|VO chapter4 5 castorice 107.ogg}} '''Castorice:''' Don't be nervous...
+:{{DIcon|Arrow}} D&mdash;Don't come near me...
+:{{DIcon|Arrow}} Wait! Please, just give me one more chance...
+:{{A|VO chapter4 5 castorice 108.ogg}} '''Castorice:''' Please... relax.
+:Castorice places her slender, pale finger over your pulse.
+:A chill seeps through your skin, then immediately spreads into your veins.
+:Castorice adds a second finger... then a third, until half her palm gently envelops your left wrist.
+:Your vision blurs, and cold reality fades into a purple ocean &mdash; her promised land of flowers.
+:...
+:Then, you finally understand...
+:...you are currently welcoming your own sweet demise.
+:...
+:{{A|VO chapter4 5 phainon 109.ogg}} '''???:''' ...Wait! This story can't end just like that.
+:{{A|VO chapter4 5 aglaea 157.ogg}} '''Aglaea:''' ...Phainon?
+:{{DIcon|Arrow}} I'm still alive.
+::{{A|VO chapter4 5 phainon 110.ogg}} '''Phainon:''' You bet you are.
+::I've been reborn on Amphoreus?
+:{{DIcon|Arrow}} I've been reborn on Amphoreus?
+:{{A|VO chapter4 5 phainon 111.ogg}} '''Phainon:''' Not quite, Friend. You're still alive and kicking.
+:{{A|VO chapter4 5 phainon 112.ogg}} '''Phainon:''' You've been on Amphoreus for such a short time. Even someone as ruthless as {{Rubi|Thanatos|Death Titan}} wouldn't end a journey so hurriedly.
+:{{tx}}
+:{{A|VO chapter4 5 phainon 120.ogg}} '''Phainon:''' Sorry, I should've gotten here earlier. Please hear me out before you make up your mind.
 {{Dialogue End}}
 
 ===Follow Phainon{{subst:void|<!--104010425-->}}===
 {{Dialogue Start}}
-:{{tx}}
+
 {{Dialogue End}}
 
 ===Listen to what Phainon has to say{{subst:void|<!--104010403-->}}===
 {{Dialogue Start}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{A|VO chapter4 5 phainon 121.ogg}} '''Phainon:''' ...I swear by the honor of the Chrysos Heirs here that your lives were never in danger. Before the interrogation started, Miss Castorice already sent a message to me, hoping that I would stop Aglaea.
+:{{A|VO chapter4 5 castorice 112.ogg}} '''Castorice:''' Only a select few can sway Lady Aglaea, and Lord Phainon is one of them.
+:{{DIcon|Arrow}} But she didn't even apologize...
+:{{DIcon|Arrow}} Phainon's a big deal, huh?
+::{{A|VO chapter4 5 phainon 122.ogg}} '''Phainon:''' Oh, please stop.
+:{{A|VO chapter4 5 phainon 123.ogg}} '''Phainon:''' Aglaea... She has long sealed her heart in ice, for Okhema's sake.
+:{{A|VO chapter4 5 phainon 124.ogg}} '''Phainon:''' Maybe this is the price of being a demigod? Standing among mortals, yet still so far from them.
+:{{DIcon|Arrow}} Demigod?
+:{{A|VO chapter4 5 phainon 125.ogg}} '''Phainon:''' Ah... one more thing to explain. Let's not worry about that for now. You'll soon find out that Amphoreus' deepest secrets are all hidden here.
+:{{A|VO chapter4 5 phainon 126.ogg}} '''Phainon:''' Well, first, kindly look upward. What you see right now is the {{Color|keyword|nobold=1|Astral Zodiac}} of the Vortex of Genesis, divided into twelve parts that record the Flame-Chase Journey of the Chrysos Heirs.
+:{{A|VO chapter4 5 phainon 127.ogg}} '''Phainon:''' The twelve vacant signs symbolize the twelve Titans of Amphoreus, while each illuminated constellation represents one Coreflame that mankind has restored to its rightful place.
+:{{A|VO chapter4 5 danheng 117.ogg}} '''Dan Heng:''' There are... six restored Coreflames. You're already halfway through your journey?
+:{{A|VO chapter4 5 phainon 128.ogg}} '''Phainon:''' The generations before us paid a heavy price for that. The journey of the Chrysos Heirs once faced immense hurdles and made no progress for a very long time...
+:{{A|VO chapter4 5 phainon 129.ogg}} '''Phainon:''' It was Aglaea and Tribbie who rallied the Chrysos Heirs from all over the world once again, leading us to re-embark on this prophesized journey.
+:{{A|VO chapter4 5 castorice 113.ogg}} '''Castorice:''' And they are the only two demigods in the holy city.
+:{{DIcon|Arrow}} Shouldn't it be the only four?
+::{{A|VO chapter4 5 phainon 130.ogg}} '''Phainon:''' While Tribbie, Trianne, and Trinnon are three individuals, I suppose they are considered one single divine essence.
+::So, what exactly is a demigod?
+:{{DIcon|Arrow}} So, what exactly is a demigod?
+:{{A|VO chapter4 5 phainon 131.ogg}} '''Phainon:''' Worry not, I haven't forgotten about that.
+:{{A|VO chapter4 5 phainon 132.ogg}} '''Phainon:''' In the past, the Titans were the pillars of the world. Yet, the prophecy's revelation is that these twelve pillars must be shattered and the world's order reconstructed.
+:{{A|VO chapter4 5 phainon 133.ogg}} '''Phainon:''' But here's the problem: {{Color|keyword|nobold=1|After the fall of the old gods, someone must hold up the broken pillars and fill the vacant seats until the coming of the Miracle of Genesis.}}
+:{{A|VO chapter4 5 phainon 134.ogg}} '''Phainon:''' Otherwise, the entire world will collapse before the prophecy comes true.
+:{{A|VO chapter4 5 phainon 135.ogg}} '''Phainon:''' Aglaea and Tribbie have already laid their own gods to rest, {{Color|keyword|nobold=1|making them now both human and divine, as well as the bearers of Amphoreus' fate.}}
+:{{DIcon|Arrow}} Sounds like quite a responsibility.
+:{{DIcon|Arrow}} Will you also become a demigod?
+:{{DIcon|Arrow}} You mentioned pursuing the Strife Titan...
+:{{A|VO chapter4 5 danheng 118.ogg}} '''Dan Heng:''' So, that's what you meant by "your Coreflame."
 :{{tx}}
+:{{A|VO chapter4 5 danheng 119.ogg}} '''Dan Heng:''' Listening to the voices of the constellations... Is that really possible?
 {{Dialogue End}}
 
 ===Listen to Lance of Fury's Voice of Constellation{{subst:void|<!--104010414-->}}===
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Tides of the Basin)
+<pre>{
+	"$type": "RPG.GameCore.TutorialTaskUnlock",
+	"TriggerParam": {
+		"Value": "TitanAtlas"
+	}
+}</pre>
+::...The day is silent, and darkness has taken the stage...
+::...Flames rise higher, and drums fall like rain...
+::...Warriors soaked in golden blood, their cloaks tattered...
+::...Bronze shields you, and brass echoes my sorrow...
+::...
+::{{DIcon|Shop}} Enter Tidal Bounty
+::<pre>{
+	"$type": "RPG.GameCore.SetPerformanceResult",
+	"Value": 2
+}</pre>
+::{{DIcon|Loupe}} Listen to the Voice of Constellation
+::<pre>{
+	"$type": "RPG.GameCore.SetPerformanceResult",
+	"Value": 1
+}</pre>
+::{{DIcon|Exit}} Leave
+;(Return to previous option selection)
+
+;(Unused &mdash; Ui.KraterSubmit.WorldShop.KraterWorldShopPage)
+<pre>{
+	"$type": "RPG.GameCore.HideAllEntity",
+	"IsHide": true,
+	"HideNPC": true,
+	"NotHideEntity": []
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.HideAllEntity",
+	"IsHide": true,
+	"HideNPC": true,
+	"HideProp": true,
+	"NotHideEntity": [
+		{
+			"GroupID": 22,
+			"GroupNpcID": 300001
+		},
+		{
+			"GroupID": 22,
+			"GroupNpcID": 300002
+		},
+		{
+			"GroupID": 22,
+			"GroupNpcID": 300003
+		},
+		{
+			"GroupID": 9,
+			"GroupNpcID": 300001
+		},
+		{
+			"GroupID": 9,
+			"GroupNpcID": 300002
+		},
+		{
+			"GroupID": 9,
+			"GroupNpcID": 300003
+		},
+		{
+			"GroupID": 9,
+			"GroupNpcID": 300004
+		},
+		{
+			"GroupID": 9,
+			"GroupNpcID": 300005
+		},
+		{
+			"GroupID": 9,
+			"GroupNpcID": 300006
+		},
+		{
+			"GroupID": 9,
+			"GroupNpcID": 300007
+		},
+		{
+			"GroupID": 9,
+			"GroupNpcID": 300008
+		},
+		{
+			"GroupID": 9,
+			"GroupNpcID": 300009
+		},
+		{
+			"GroupID": 9,
+			"GroupNpcID": 300010
+		},
+		{
+			"GroupID": 9,
+			"GroupNpcID": 300011
+		},
+		{
+			"GroupID": 9,
+			"GroupNpcID": 300012
+		},
+		{
+			"GroupID": 9,
+			"GroupNpcID": 300013
+		}
+	]
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.ShowUI",
+	"Name": "Ui.KraterSubmit.WorldShop.KraterWorldShopPage",
+	"WaitForExit": true,
+	"OnUIEnter": [],
+	"OnUIExitImmediately": [
+		{
+			"$type": "RPG.GameCore.HideAllEntity",
+			"HideNPC": true,
+			"HideProp": true,
+			"NotHideEntity": []
+		},
+		{
+			"$type": "RPG.GameCore.EndDialogueEntityInteract"
+		}
+	]
+}</pre>
+
+;(Unused &mdash; Ui.KraterSubmit.TitanAtlas.TitanAtlasHandbookPage)
+<pre>{
+	"$type": "RPG.GameCore.ShowUI",
+	"Name": "Ui.KraterSubmit.TitanAtlas.TitanAtlasHandbookPage",
+	"WaitForExit": true,
+	"OnUIEnter": [],
+	"OnUIExitImmediately": [
+		{
+			"$type": "RPG.GameCore.TriggerCustomString",
+			"CustomString": {
+				"Value": "WorldShopMission"
+			}
+		}
+	]
+}</pre>
+
+;(Unused &mdash; WorldShopMission)
+<pre>{
+	"$type": "RPG.GameCore.TutorialTaskUnlock",
+	"TriggerParam": {
+		"Value": "KraterOfferingWorldShop"
+	}
+}</pre>
+::As the echoes of the constellations fall silent, the next sound to meet your ears is... waves?
+::{{A|VO vo ambient w4 v300 greeting taitanyiyu 001.ogg}} (Titan's murmurs)
+::The unfamiliar call carries a longing to take your soul's essence into the pool...
+::{{DIcon|Shop}} Enter Tidal Bounty
+::{{DIcon|Loupe}} Listen to the Voice of Constellation
+::{{DIcon|Exit}} Leave
+:<pre>{
+	"$type": "RPG.GameCore.HideAllEntity",
+	"IsHide": true,
+	"HideNPC": true,
+	"NotHideEntity": []
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.HideAllEntity",
+	"IsHide": true,
+	"HideNPC": true,
+	"HideProp": true,
+	"NotHideEntity": [
+		{
+			"GroupID": 22,
+			"GroupNpcID": 300001
+		},
+		{
+			"GroupID": 22,
+			"GroupNpcID": 300002
+		},
+		{
+			"GroupID": 22,
+			"GroupNpcID": 300003
+		},
+		{
+			"GroupID": 9,
+			"GroupNpcID": 300001
+		},
+		{
+			"GroupID": 9,
+			"GroupNpcID": 300002
+		},
+		{
+			"GroupID": 9,
+			"GroupNpcID": 300003
+		},
+		{
+			"GroupID": 9,
+			"GroupNpcID": 300004
+		},
+		{
+			"GroupID": 9,
+			"GroupNpcID": 300005
+		},
+		{
+			"GroupID": 9,
+			"GroupNpcID": 300006
+		},
+		{
+			"GroupID": 9,
+			"GroupNpcID": 300007
+		},
+		{
+			"GroupID": 9,
+			"GroupNpcID": 300008
+		},
+		{
+			"GroupID": 9,
+			"GroupNpcID": 300009
+		},
+		{
+			"GroupID": 9,
+			"GroupNpcID": 300010
+		},
+		{
+			"GroupID": 9,
+			"GroupNpcID": 300011
+		},
+		{
+			"GroupID": 9,
+			"GroupNpcID": 300012
+		},
+		{
+			"GroupID": 9,
+			"GroupNpcID": 300013
+		}
+	]
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.ShowUI",
+	"Name": "Ui.KraterSubmit.WorldShop.KraterWorldShopPage",
+	"WaitForExit": true,
+	"OnUIEnter": [],
+	"OnUIExitImmediately": [
+		{
+			"$type": "RPG.GameCore.HideAllEntity",
+			"HideNPC": true,
+			"HideProp": true,
+			"NotHideEntity": []
+		},
+		{
+			"$type": "RPG.GameCore.EndDialogueEntityInteract"
+		},
+		{
+			"$type": "RPG.GameCore.TriggerPerformance",
+			"ValueSource": {},
+			"PerformanceType": "E",
+			"PerformanceID": 504045003,
+			"MaskConfig": {}
+		}
+	]
+}</pre>
+
+;(Unused &mdash; TriggerKrater_Levelup)
+;(If {{cx}}<!--not during performance 504045001-->)
+:<pre>{
+	"$type": "RPG.GameCore.RandomConfig",
+	"OddsList": [
+		{
+			"FixedValue": {
+				"Value": 1
+			}
+		},
+		{
+			"FixedValue": {
+				"Value": 1
+			}
+		},
+		{
+			"FixedValue": {
+				"Value": 1
+			}
+		}
+	],
+	"TaskList": [
+		{
+			"$type": "RPG.GameCore.PlayVoice",
+			"VoiceIDs": [
+				504045004
+			]
+		},
+		{
+			"$type": "RPG.GameCore.PlayVoice",
+			"VoiceIDs": [
+				504045005
+			]
+		},
+		{
+			"$type": "RPG.GameCore.PlayVoice",
+			"VoiceIDs": [
+				504045006
+			]
+		}
+	],
+	"RandomMaskTarget": {
+		"$type": "RPG.GameCore.TargetAlias",
+		"Alias": "Caster"
+	}
+}</pre>
+
+;(Unused &mdash; TriggerKrater_Put)
+;(If {{cx}}<!--not during performance 504045001-->)
+:<pre>{
+	"$type": "RPG.GameCore.RandomConfig",
+	"OddsList": [
+		{
+			"FixedValue": {
+				"Value": 1
+			}
+		},
+		{
+			"FixedValue": {
+				"Value": 1
+			}
+		},
+		{
+			"FixedValue": {
+				"Value": 1
+			}
+		}
+	],
+	"TaskList": [
+		{
+			"$type": "RPG.GameCore.PlayVoice",
+			"VoiceIDs": [
+				504045007
+			]
+		},
+		{
+			"$type": "RPG.GameCore.PlayVoice",
+			"VoiceIDs": [
+				504045008
+			]
+		},
+		{
+			"$type": "RPG.GameCore.PlayVoice",
+			"VoiceIDs": [
+				504045009
+			]
+		}
+	],
+	"RandomMaskTarget": {
+		"$type": "RPG.GameCore.TargetAlias",
+		"Alias": "Caster"
+	}
+}</pre>
+
+;(Unused &mdash; TriggerKrater_Out)
+;(If {{cx}}<!--not during performance 504045001-->)
+:<pre>{
+	"$type": "RPG.GameCore.RandomConfig",
+	"OddsList": [
+		{
+			"FixedValue": {
+				"Value": 1
+			}
+		},
+		{
+			"FixedValue": {
+				"Value": 1
+			}
+		}
+	],
+	"TaskList": [
+		{
+			"$type": "RPG.GameCore.PlayVoice",
+			"VoiceIDs": [
+				504045010
+			]
+		},
+		{
+			"$type": "RPG.GameCore.PlayVoice",
+			"VoiceIDs": [
+				504045011
+			]
+		}
+	],
+	"RandomMaskTarget": {
+		"$type": "RPG.GameCore.TargetAlias",
+		"Alias": "Caster"
+	}
+}</pre>
+
+;(Talk to Phainon)
+----
+:{{A|VO chapter4 5 phainon 139.ogg}} '''Phainon:''' Move closer, listen carefully, and you may just catch the whispers echoing in the void.
+:{{A|VO chapter4 5 phainon 140.ogg}} '''Phainon:''' How about you start with the Lance of Fury, the voice of {{Rubi|Nikador|Strife Titan}}?
+
+;(Talk to Castorice)
+----
+:{{A|VO chapter4 5 castorice 115.ogg}} '''Castorice:''' Chrysos Heirs, demigods... Is what's written in the prophecy truly Amphoreus' only possible fate?
+:{{A|VO chapter4 5 castorice 116.ogg}} '''Castorice:''' Sorry, I was just thinking out loud... Please, step closer and listen to the voices of the Titans.
 {{Dialogue End}}
 
 ===Speak to Phainon about the voices of Titans you heard{{subst:void|<!--104010416-->}}===
 {{Dialogue Start}}
+
+;(Talk to Phainon)
 :{{tx}}
+:{{A|VO chapter4 5 phainon 141.ogg}} '''Phainon:''' So, did you hear it?
+:{{DIcon|Arrow}} I did...
+:{{DIcon|Arrow}} I couldn't understand it...
+:{{A|VO chapter4 5 phainon 142.ogg}} '''Phainon:''' The first time I heard the voices of the Titans, I was just a boy playing with swords, oblivious to the meaning of life.
+:{{tx}}
+:{{DIcon|Talk}} How are the Chrysos Heirs chosen?
+::{{A|VO chapter4 5 castorice 117.ogg}} '''Castorice:''' ...Unfortunately, the workings of the prophecy still remain a mystery to us all.
+::{{tx}}
+:;(Return to previous option selection)
+:{{DIcon|Talk}} Where are the other Chrysos Heirs in the world?
+::{{A|VO chapter4 5 phainon 146.ogg}} '''Phainon:''' Legend has it that the first Chrysos Heir was born millennia ago. Since then, the chosen ones began to walk this earth.
+::{{tx}}
+:;(Return to previous option selection)
+:{{DIcon|Talk}} How do you plan to fight Nikador?
+::{{A|VO chapter4 5 phainon 149.ogg}} '''Phainon:''' Armed with courage and unwavering resolve, our quest will begin as soon as Trianne locates Castrum Kremnos.
+::{{tx}}
+:;(Return to previous option selection)
+:{{DIcon|Arrow}} I've got it all figured out.
+::{{A|VO chapter4 5 phainon 151.ogg}} '''Phainon:''' The path ahead is bound to be perilous, and I won't impose my will upon you. Yet, if you choose to stay, I, Phainon from Aedes Elysiae, will spare no effort to bridge the gap between you and the Chrysos Heirs.
+::{{A|VO chapter4 5 castorice 119.ogg}} '''Castorice:''' Thawing the ice in Lady Aglaea's heart won't be easy...
+::{{A|VO chapter4 5 castorice 120.ogg}} '''Castorice:''' But I will do my best as well.
+::{{A|VO chapter4 5 danheng 120 m.ogg}} {{A|VO chapter4 5 danheng 120 f.ogg}} '''Dan Heng:''' ...(Trailblazer), I'll leave the final decision to you.
+::{{DIcon|Arrow}} You don't have any comments?
+:::{{A|VO chapter4 5 danheng 121.ogg}} '''Dan Heng:''' I trust Phainon, but I trust your judgment more.
+::{{DIcon|Arrow}} You're letting me make the decision? Seriously?
+:::{{A|VO chapter4 5 danheng 122.ogg}} '''Dan Heng:''' I trust your judgment more on matters like this.
+::{{tx}}
+::{{DIcon|Arrow}} Stay on Amphoreus.
+::<pre>{
+	"$type": "RPG.GameCore.SetPerformanceResult",
+	"Value": 1
+}</pre>
+::{{DIcon|Arrow}} Leave Amphoreus.
+:::{{A|VO chapter4 5 danheng 123.ogg}} '''Dan Heng:''' So... you'll end things here? Are you sure about that?
+:::{{DIcon|Arrow}} Just kidding. We have to press on in our trailblazing expedition.
+:::<pre>{
+	"$type": "RPG.GameCore.SetPerformanceResult",
+	"Value": 1
+}</pre>
+:::{{DIcon|Arrow}} I'm tired. I just want to go.
+::::{{A|VO chapter4 5 phainon 164.ogg}} '''Phainon:''' ...I understand. Now that I think back on it, you both have selflessly helped Okhema, while we have met your good will with doubt and intimidation. It's indeed not fair.
+::{{tx}}
+<pre>{
+	"$type": "RPG.GameCore.PerformanceEndSeq",
+	"Cases": [
+		{
+			"Case": 1,
+			"OnSuccess": [
+				{
+					"$type": "RPG.GameCore.ClientFinishMission",
+					"SubmissionID": 104010416
+				}
+			]
+		},
+		{
+			"OnSuccess": [
+				{
+					"$type": "RPG.GameCore.TriggerGroupEvent",
+					"EventName": {
+						"Value": "OWorld_BECredits"
+					}
+				}
+			]
+		}
+	]
+}</pre>
+
+;(Talk to Castorice)
+:{{tx}}
+:{{A|VO chapter4 5 phainon 141.ogg}} '''Phainon:''' So, did you hear it?
+:{{DIcon|Arrow}} I did...
+:{{DIcon|Arrow}} I couldn't understand it...
+:{{A|VO chapter4 5 phainon 142.ogg}} '''Phainon:''' The first time I heard the voices of the Titans, I was just a boy playing with swords, oblivious to the meaning of life.
+:{{tx}}
+:{{DIcon|Talk}} How are the Chrysos Heirs chosen?
+::{{A|VO chapter4 5 castorice 117.ogg}} '''Castorice:''' ...Unfortunately, the workings of the prophecy still remain a mystery to us all.
+::{{tx}}
+:;(Return to previous option selection)
+:{{DIcon|Talk}} Where are the other Chrysos Heirs in the world?
+::{{A|VO chapter4 5 phainon 146.ogg}} '''Phainon:''' Legend has it that the first Chrysos Heir was born millennia ago. Since then, the chosen ones began to walk this earth.
+::{{tx}}
+:;(Return to previous option selection)
+:{{DIcon|Talk}} How do you plan to fight Nikador?
+::{{A|VO chapter4 5 phainon 149.ogg}} '''Phainon:''' Armed with courage and unwavering resolve, our quest will begin as soon as Trianne locates Castrum Kremnos.
+::{{tx}}
+:;(Return to previous option selection)
+:{{DIcon|Arrow}} I've got it all figured out.
+::{{A|VO chapter4 5 phainon 151.ogg}} '''Phainon:''' The path ahead is bound to be perilous, and I won't impose my will upon you. Yet, if you choose to stay, I, Phainon from Aedes Elysiae, will spare no effort to bridge the gap between you and the Chrysos Heirs.
+::{{A|VO chapter4 5 castorice 119.ogg}} '''Castorice:''' Thawing the ice in Lady Aglaea's heart won't be easy...
+::{{A|VO chapter4 5 castorice 120.ogg}} '''Castorice:''' But I will do my best as well.
+::{{A|VO chapter4 5 danheng 120 m.ogg}} {{A|VO chapter4 5 danheng 120 f.ogg}} '''Dan Heng:''' ...(Trailblazer), I'll leave the final decision to you.
+::{{DIcon|Arrow}} You don't have any comments?
+:::{{A|VO chapter4 5 danheng 121.ogg}} '''Dan Heng:''' I trust Phainon, but I trust your judgment more.
+::{{DIcon|Arrow}} You're letting me make the decision? Seriously?
+:::{{A|VO chapter4 5 danheng 122.ogg}} '''Dan Heng:''' I trust your judgment more on matters like this.
+::{{tx}}
+::{{DIcon|Arrow}} Stay on Amphoreus.
+::<pre>{
+	"$type": "RPG.GameCore.SetPerformanceResult",
+	"Value": 1
+}</pre>
+::{{DIcon|Arrow}} Leave Amphoreus.
+:::{{A|VO chapter4 5 danheng 123.ogg}} '''Dan Heng:''' So... you'll end things here? Are you sure about that?
+:::{{DIcon|Arrow}} Just kidding. We have to press on in our trailblazing expedition.
+:::<pre>{
+	"$type": "RPG.GameCore.SetPerformanceResult",
+	"Value": 1
+}</pre>
+:::{{DIcon|Arrow}} I'm tired. I just want to go.
+::::{{A|VO chapter4 5 phainon 164.ogg}} '''Phainon:''' ...I understand. Now that I think back on it, you both have selflessly helped Okhema, while we have met your good will with doubt and intimidation. It's indeed not fair.
+::{{tx}}
+<pre>{
+	"$type": "RPG.GameCore.PerformanceEndSeq",
+	"Cases": [
+		{
+			"Case": 1,
+			"OnSuccess": [
+				{
+					"$type": "RPG.GameCore.ClientFinishMission",
+					"SubmissionID": 104010416
+				}
+			]
+		},
+		{
+			"OnSuccess": [
+				{
+					"$type": "RPG.GameCore.TriggerGroupEvent",
+					"EventName": {
+						"Value": "OWorld_BECredits"
+					}
+				}
+			]
+		}
+	]
+}</pre>
+
+;(Unused &mdash; OWorld_BECredits)
+----
+:<pre>{
+	"$type": "RPG.GameCore.ShowPerformanceRollingSubtitles",
+	"PrevDuration": -1,
+	"JsonConfig": "Config/Performance/PerformanceRollingSubtitles3_0_1.json"
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.ReturnToLoginPage",
+	"WaitTalkMissionKey": "Mission_104010417"
+}</pre>
+----
+:{{A|VO chapter4 5 danheng 124.ogg}} '''Dan Heng:''' Well, that was a lot of drama for one day.
+:{{A|VO chapter4 5 danheng 125.ogg}} '''Dan Heng:''' Let's go. With Phainon's guarantee, we can at least take a moment to rest without any worries.
+:{{DIcon|Arrow}} I kind of feel like we might've forgotten something...
+::{{A|VO chapter4 5 danheng 126.ogg}} '''Dan Heng:''' Oh... We need to take a photo for March. Good thing you still remembered that.
+::We've got to take a photo of this place for March 7th.
+:{{DIcon|Arrow}} We've got to take a photo of this place for March 7th.
+:{{A|VO chapter4 5 danheng 127.ogg}} '''Dan Heng:''' ...I almost forgot. Good thing you still remembered that.
+:{{A|VO chapter4 5 danheng 128.ogg}} '''Dan Heng:''' Let's capture the spectacle of the Vortex of Genesis.
+:{{tx}}
+:<!--1-second delay-->
 {{Dialogue End}}
 
 ===Take a photo of the wondrous sight of the Vortex of Genesis{{subst:void|<!--104010418-->}}===
 {{Mission Description|type=trailblaze|location=Vortex of Genesis|update|After understanding from Phainon the Chrysos Heirs' arduous journey to save the world, we ultimately decided to remain in Amphoreus. After a period of rest and recovery, the Chrysos Heirs reconvened, readying themselves for an attack against Castrum Kremnos, where Nikador was, with the goal of seizing the Coreflame of the Lance of Fury.}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Unused &mdash; Photo_Titan)
+----
+:<pre>{
+	"$type": "RPG.GameCore.ActiveVirtualCamera",
+	"AreaName": "LevelArea_P10402_F10402001_G4",
+	"AnchorName": "Anchor2",
+	"BlendConfig": {
+		"ExportToJson": true,
+		"BlendType": "Custom",
+		"CustomCurveName": "BlendCut09",
+		"BlendTime": 1
+	}
+}</pre>
+::The totems of the Twelve Titans stand like twelve pairs of watchful, imperious eyes, overseeing the world they forged, nurtured, and ultimately brought to ruin.
+::When the twelve constellations align and shine, the "miracle" that the Chrysos Heirs speak of will illuminate &mdash; or so their prophecies claim.
+:<pre>{
+	"$type": "RPG.GameCore.ActiveVirtualCamera",
+	"AreaName": "LevelArea_P10402_F10402001_G4",
+	"AnchorName": "Anchor2",
+	"IsActive": false,
+	"BlendConfig": {
+		"ExportToJson": true,
+		"BlendType": "Custom",
+		"CustomCurveName": "BlendCut09",
+		"BlendTime": 1
+	}
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.BindSwitchPhotoGraphFuncBtn",
+	"SimpleMode": false,
+	"UseType": "StartPhotoInTriggerRange",
+	"RangeTriggerProp": {
+		"FetchType": "SinglePropByPropID",
+		"SinglePropID": {
+			"GroupID": {
+				"FixedValue": {
+					"Value": 4
+				}
+			},
+			"ID": {
+				"FixedValue": {
+					"Value": 300015
+				}
+			}
+		}
+	},
+	"ColliderRelativePathList": [],
+	"PhotoGraphMode": "LongRange",
+	"AimTargetContainerConfig": [
+		{
+			"InnerContainers": [
+				{
+					"AimTargetConfig": {
+						"$type": "RPG.GameCore.PhotoGraphAimContaierTarget",
+						"AimTargetType": {
+							"$type": "RPG.GameCore.GroupFetchLocalTarget",
+							"TargetType": "Prop",
+							"Targets": [
+								300003
+							]
+						},
+						"ShowAimTag": false,
+						"UseGameObjectNode": false,
+						"GameObjectNode": {
+							"Value": "Root"
+						},
+						"IgnoreColliderTest": true
+					},
+					"IsAimTargetConfig": true
+				},
+				{
+					"AimTargetConfig": {
+						"$type": "RPG.GameCore.PhotoGraphAimContaierTarget",
+						"AimTargetType": {
+							"$type": "RPG.GameCore.GroupFetchLocalTarget",
+							"TargetType": "Prop",
+							"Targets": [
+								300004
+							]
+						},
+						"ShowAimTag": false,
+						"UseGameObjectNode": false,
+						"GameObjectNode": {
+							"Value": "Root"
+						},
+						"IgnoreColliderTest": true
+					},
+					"IsAimTargetConfig": true
+				},
+				{
+					"AimTargetConfig": {
+						"$type": "RPG.GameCore.PhotoGraphAimContaierTarget",
+						"AimTargetType": {
+							"$type": "RPG.GameCore.GroupFetchLocalTarget",
+							"TargetType": "Prop",
+							"Targets": [
+								300005
+							]
+						},
+						"ShowAimTag": false,
+						"UseGameObjectNode": false,
+						"GameObjectNode": {
+							"Value": "Root"
+						},
+						"IgnoreColliderTest": true
+					},
+					"IsAimTargetConfig": true
+				},
+				{
+					"AimTargetConfig": {
+						"$type": "RPG.GameCore.PhotoGraphAimContaierTarget",
+						"AimTargetType": {
+							"$type": "RPG.GameCore.GroupFetchLocalTarget",
+							"TargetType": "Prop",
+							"Targets": [
+								300006
+							]
+						},
+						"ShowAimTag": false,
+						"UseGameObjectNode": false,
+						"GameObjectNode": {
+							"Value": "Root"
+						},
+						"IgnoreColliderTest": true
+					},
+					"IsAimTargetConfig": true
+				},
+				{
+					"AimTargetConfig": {
+						"$type": "RPG.GameCore.PhotoGraphAimContaierTarget",
+						"AimTargetType": {
+							"$type": "RPG.GameCore.GroupFetchLocalTarget",
+							"TargetType": "Prop",
+							"Targets": [
+								300007
+							]
+						},
+						"ShowAimTag": false,
+						"UseGameObjectNode": false,
+						"GameObjectNode": {
+							"Value": "Root"
+						},
+						"IgnoreColliderTest": true
+					},
+					"IsAimTargetConfig": true
+				},
+				{
+					"AimTargetConfig": {
+						"$type": "RPG.GameCore.PhotoGraphAimContaierTarget",
+						"AimTargetType": {
+							"$type": "RPG.GameCore.GroupFetchLocalTarget",
+							"TargetType": "Prop",
+							"Targets": [
+								300008
+							]
+						},
+						"ShowAimTag": false,
+						"UseGameObjectNode": false,
+						"GameObjectNode": {
+							"Value": "Root"
+						},
+						"IgnoreColliderTest": true
+					},
+					"IsAimTargetConfig": true
+				},
+				{
+					"AimTargetConfig": {
+						"$type": "RPG.GameCore.PhotoGraphAimContaierTarget",
+						"AimTargetType": {
+							"$type": "RPG.GameCore.GroupFetchLocalTarget",
+							"TargetType": "Prop",
+							"Targets": [
+								300009
+							]
+						},
+						"ShowAimTag": false,
+						"UseGameObjectNode": false,
+						"GameObjectNode": {
+							"Value": "Root"
+						},
+						"IgnoreColliderTest": true
+					},
+					"IsAimTargetConfig": true
+				},
+				{
+					"AimTargetConfig": {
+						"$type": "RPG.GameCore.PhotoGraphAimContaierTarget",
+						"AimTargetType": {
+							"$type": "RPG.GameCore.GroupFetchLocalTarget",
+							"TargetType": "Prop",
+							"Targets": [
+								300010
+							]
+						},
+						"ShowAimTag": false,
+						"UseGameObjectNode": false,
+						"GameObjectNode": {
+							"Value": "Root"
+						},
+						"IgnoreColliderTest": true
+					},
+					"IsAimTargetConfig": true
+				},
+				{
+					"AimTargetConfig": {
+						"$type": "RPG.GameCore.PhotoGraphAimContaierTarget",
+						"AimTargetType": {
+							"$type": "RPG.GameCore.GroupFetchLocalTarget",
+							"TargetType": "Prop",
+							"Targets": [
+								300011
+							]
+						},
+						"ShowAimTag": false,
+						"UseGameObjectNode": false,
+						"GameObjectNode": {
+							"Value": "Root"
+						},
+						"IgnoreColliderTest": true
+					},
+					"IsAimTargetConfig": true
+				},
+				{
+					"AimTargetConfig": {
+						"$type": "RPG.GameCore.PhotoGraphAimContaierTarget",
+						"AimTargetType": {
+							"$type": "RPG.GameCore.GroupFetchLocalTarget",
+							"TargetType": "Prop",
+							"Targets": [
+								300012
+							]
+						},
+						"ShowAimTag": false,
+						"UseGameObjectNode": false,
+						"GameObjectNode": {
+							"Value": "Root"
+						},
+						"IgnoreColliderTest": true
+					},
+					"IsAimTargetConfig": true
+				},
+				{
+					"AimTargetConfig": {
+						"$type": "RPG.GameCore.PhotoGraphAimContaierTarget",
+						"AimTargetType": {
+							"$type": "RPG.GameCore.GroupFetchLocalTarget",
+							"TargetType": "Prop",
+							"Targets": [
+								300013
+							]
+						},
+						"ShowAimTag": false,
+						"UseGameObjectNode": false,
+						"GameObjectNode": {
+							"Value": "Root"
+						},
+						"IgnoreColliderTest": true
+					},
+					"IsAimTargetConfig": true
+				},
+				{
+					"AimTargetConfig": {
+						"$type": "RPG.GameCore.PhotoGraphAimContaierTarget",
+						"AimTargetType": {
+							"$type": "RPG.GameCore.GroupFetchLocalTarget",
+							"TargetType": "Prop",
+							"Targets": [
+								300014
+							]
+						},
+						"ShowAimTag": false,
+						"UseGameObjectNode": false,
+						"GameObjectNode": {
+							"Value": "Root"
+						},
+						"IgnoreColliderTest": true
+					},
+					"IsAimTargetConfig": true
+				}
+			],
+			"OnlyShow": true,
+			"ContainerFlagName": "StarTarget_2",
+			"IsTopContainer": true,
+			"IsAimTargetConfig": true
+		}
+	],
+	"OnStartPhotoGraph": [
+		{
+			"$type": "RPG.GameCore.AdvDestroyGroupEntity",
+			"InstanceIDList": [
+				300001
+			]
+		}
+	],
+	"OnExitPhotoGraph": [
+		{
+			"$type": "RPG.GameCore.AdvCreateGroupEntity",
+			"InstanceIDList": [
+				300001
+			]
+		}
+	],
+	"OverrideConfig": {
+		"IdentifyRadiusOverride": {
+			"FixedValue": {
+				"Value": 500
+			}
+		},
+		"InitFov": 0.9,
+		"ShowFinishToastManually": true,
+		"OverrideMaxFov": 60,
+		"OverrideMinFov": 10
+	},
+	"ExtraSettings": {
+		"PlayerControlSetting": {
+			"AnchorConfig": {
+				"AreaName": {
+					"Value": "LevelArea_P10402_F10402001_G4"
+				},
+				"AnchorName": {
+					"Value": "Anchor1"
+				}
+			},
+			"OverrideCameraHeightByBodySize": "Lad"
+		}
+	},
+	"BindName": {
+		"Value": "104010418_Star"
+	},
+	"ShotResultCondition": {
+		"TargetConditionName": {
+			"Hash": 4239232322731573076
+		},
+		"ShotResultCondition": [
+			{
+				"PredicateName": {
+					"Hash": 3612843749467843671
+				},
+				"Predicate": {
+					"$type": "RPG.GameCore.ByTargetContainerRatioInRect",
+					"BindPhotographName": "104010418_Star",
+					"ContainerFlagName": "StarTarget_2",
+					"Size": {}
+				},
+				"BindContainerFlagNames": [
+					"StarTarget_2"
+				]
+			}
+		]
+	},
+	"HideTwoPointFourParam": false
+}</pre>
+
+;(Talk to Phainon)
+----
+:{{A|VO chapter4 5 phainon 157.ogg}} '''Phainon:''' Be sure to rest well in the bath chamber. I trust that Trianne will have returned with news about Castrum Kremnos by the time the two of you are fully recharged.
+
+;(Talk to Castorice)
+----
+:{{A|VO chapter4 5 castorice 124.ogg}} '''Castorice:''' I'm sorry. I hope... you can forgive me for my actions earlier.
+:{{A|VO chapter4 5 castorice 125.ogg}} '''Castorice:''' I had to follow Lady Aglaea's instructions to avoid arousing her suspicion.
+:{{DIcon|Arrow}} Why did she choose you to be the executioner?
+::{{A|VO chapter4 5 castorice 126.ogg}} '''Castorice:''' ...
+:{{DIcon|Arrow}} I don't blame you.
+::{{A|VO chapter4 5 castorice 127.ogg}} '''Castorice:''' ...But I should not come near you.
+:{{A|VO chapter4 5 castorice 128.ogg}} '''Castorice:''' Because I... am the shadow of "death."
+:{{A|VO chapter4 5 castorice 129.ogg}} '''Castorice:''' I'm sorry, but I prefer not to delve into such a heavy topic at the moment. Please follow Lord Phainon's suggestion and return to the bath chamber for some rest.
+:{{A|VO chapter4 5 castorice 130.ogg}} '''Castorice:''' If you're interested in hearing more of the world's voices, feel free to prolong your stay in the Vortex.
 {{Dialogue End}}
 
 ===Leave the Vortex of Genesis and return to the private bath chamber{{subst:void|<!--104010420-->}}===
 {{Dialogue Start}}
-:{{tx}}
+
+:{{DIcon|Talk}} Rest for one night
+
 {{Dialogue End}}
 
 ===Calm your mood and rest up{{subst:void|<!--104010406-->}}===
 {{Dialogue Start}}
+
+:{{DIcon|Talk}} Rest for one night
+:{{A|VO chapter4 5 danheng 131.ogg}} '''Dan Heng:''' So much has happened today.
+:{{A|VO chapter4 5 danheng 132.ogg}} '''Dan Heng:''' What? Do I have something on my face?
+:{{DIcon|Arrow}} Today, you talked...
+:{{DIcon|Arrow}} ...more than you did in the entire three worlds before this.
+:{{A|VO chapter4 5 danheng 133.ogg}} '''Dan Heng:''' Well, since the talkative one isn't around, someone else has to take her place.
+:{{A|VO chapter4 5 danheng 134.ogg}} '''Dan Heng:''' But it's been a long day for me too, so let's get through the review quickly.
+:{{DIcon|Arrow}} Agreed!
+:{{A|VO chapter4 5 danheng 135.ogg}} '''Dan Heng:''' By estimation, it took us about twenty system hours to figure out the current conditions on Amphoreus and build connections with the locals &mdash; a pretty good start.
+:{{A|VO chapter4 5 danheng 136.ogg}} '''Dan Heng:''' But I feel that there's more to everything than meets the eye... Even the Chrysos Heirs themselves aren't as unified as we imagined.
+:{{DIcon|Arrow}} Is it too late to bail out now?
+::{{A|VO chapter4 5 danheng 137.ogg}} '''Dan Heng:''' Don't take Aglaea's words to heart right now. Her verbal attack on us was quite sudden. There might be a reason behind it.
+::We're still looking at things through a clouded lens.
+::{{A|VO chapter4 5 danheng 138.ogg}} '''Dan Heng:''' Aglaea's verbal attack on us was also quite sudden. There might be a reason behind it.
+::Wasn't expecting Aglaea to be that ruthless...
+:{{DIcon|Arrow}} We're still looking at things through a clouded lens.
+::{{A|VO chapter4 5 danheng 138.ogg}} '''Dan Heng:''' Aglaea's verbal attack on us was also quite sudden. There might be a reason behind it.
+::Wasn't expecting Aglaea to be that ruthless...
+:{{DIcon|Arrow}} Wasn't expecting Aglaea to be that ruthless...
+:{{A|VO chapter4 5 danheng 139.ogg}} '''Dan Heng:''' Her verbal attack on us seemed quite sudden. There might be a reason behind it.
+:{{A|VO chapter4 5 danheng 140.ogg}} '''Dan Heng:''' With all these doubts in our minds, we can only just do our best.
 :{{tx}}
+:{{A|VO chapter4 5 danheng 129.ogg}} '''Dan Heng:''' Alright... All the constellations of the twelve Titans are in there. Time to head out.
+
+:{{DIcon|Talk}} Rest for one night
+
 {{Dialogue End}}
 
 ===Submit to Aglaea's interrogation &mdash; it's better to speak the truth{{subst:void|<!--104010412-->}}===
 {{Mission Description|type=trailblaze|location=Vortex of Genesis|update|Aglaea's control over Okhema runs far deeper than we anticipated, and the previous incident has already reached her ears. This leader of the Chrysos Heirs revealed a cold and unyielding side, going to great lengths to reassess our intentions. After such perilous moments, we must reconsider the viability of our expedition in Amphoreus.}}
 {{Dialogue Start}}
+----
+:{{A|VO chapter4 5 aglaea 139.ogg}} '''Aglaea:''' All four questions have been asked and answered.
+:{{A|VO chapter4 5 aglaea 140.ogg}} '''Aglaea:''' You have earned a second chance with your honesty.
+:{{A|VO chapter4 5 aglaea 141.ogg}} '''Aglaea:''' Both of you may continue to stay in Okhema, and its citizens will continue to view you as distinguished guests. However, you must promise that today's farce will not occur again.
+:{{A|VO chapter4 5 danheng 107.ogg}} '''Dan Heng:''' I think it's more appropriate for us to say that last part.
+:{{A|VO chapter4 5 danheng 108.ogg}} '''Dan Heng:''' You seriously still expect us to help you after what we just went through?
+:{{A|VO chapter4 5 aglaea 142.ogg}} '''Aglaea:''' Regardless of your choice, the Chrysos Heirs will continue to follow the path in the prophecy.
+:{{A|VO chapter4 5 aglaea 143.ogg}} '''Aglaea:''' You may be a ray of hope that fell onto Amphoreus. However, until all has been proven, you cannot be allowed to pose a threat to Amphoreus.
+:{{DIcon|Arrow}} If we stay, will you continue to monitor us?
+:{{DIcon|Arrow}} Are all Chrysos Heirs as paranoid as you?
+:{{A|VO chapter4 5 aglaea 144.ogg}} '''Aglaea:''' For the holy city, I am willing to bear all the traits that others despise and use every heartless yet effective trick in the book.
 :{{tx}}
 {{Dialogue End}}
 
@@ -105,7 +1709,7 @@ Mission Night Stars, Accompany My Slumber Caelus.png|Caelus
 |ru   = О ночные звёзды, не оставьте меня во время долгой ночи
 |th   = ดาวราตรีเอ๋ย โปรดอยู่เคียงข้าในคืนยาวไกล
 |vi   = Hỡi Sao Đêm, Đừng Để Tôi Ngủ Một Mình Trong Đêm Dài
-|de   = Sterne der Nacht, begleitet meinen Schlummer
+|de   = O Sterne der Nacht, begleitet meinen Schlummer
 |id   = Bintang Malam, Temani Tidurku
 |pt   = Estrelas Noturnas, Acompanhem o meu Sonhar
 }}

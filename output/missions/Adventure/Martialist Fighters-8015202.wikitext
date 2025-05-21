@@ -40,7 +40,64 @@ PageTitle=#Martialist Fighters#
 ===Head to the Fight Club and talk with Dr. Dig{{subst:void|<!--801520204-->}}===
 {{Mission Description|type=adventure|location=Fight Club|update|You receive Dr. Dig's message, which informs you that Boulder Town's Fight Club is now hosting a new tournament. In this adrenaline-pumping and thrilling "martial exhibition," the participants must use various martial arts to defeat opponents. In order to hone your battle skills &mdash; and even more so for the tantalizing rewards &mdash; you decide to participate too.}}
 {{Dialogue Start}}
-:{{tx}}
+<pre>{
+	"$type": "RPG.GameCore.AdvDistrictSetupTrigger",
+	"GroupID": {
+		"FixedValue": {
+			"Value": 32
+		}
+	},
+	"DistrictID": {
+		"FixedValue": {
+			"Value": 1
+		}
+	},
+	"DisableAfterTrigger": true,
+	"OnEnter": [
+		{
+			"$type": "RPG.GameCore.TriggerGroupEvent",
+			"EventName": {
+				"Value": "801520204_Play"
+			}
+		}
+	],
+	"IsOverrideValidGuestConfig": true,
+	"OverridedValidGuestConfig": {
+		"FakePlayer": true
+	}
+}</pre>
+;(Unused &mdash; 801520204_Play)
+:'''Dr. Dig:''' An all-new season of the Fight Club has begun! If you want more information or to join the matches, feel free to ask me about it! I will do my best to provide you with all you need!
+::{{DIcon|Travel Log}} I want to join!
+:::'''Dr. Dig:''' No problem. I'll make arrangements immediately!
+::{{DIcon}} Can you please tell me about the tournament's rules?
+:::'''Dr. Dig:''' Of course. What would you like to know more about?
+:::{{DIcon|Talk}} What are the rules for the point-based tournament?
+::::'''Dr. Dig:''' Have you heard of the Ladder Leaderboard? It's a list recording every boxer's match points. The higher your points, the higher the rank. You will earn points for every battle you win.
+::::'''Dr. Dig:''' In other words, the higher the points, the stronger the boxer, for both you and your opponent. It also means that the more you win, the harder it gets. But I guess you're ready for that, right?
+::::'''Dr. Dig:''' Side note, we've also prepared different leagues for participants of different strengths, and they are, in order...
+::::'''Dr. Dig:''' Featherweight, lightweight, welterweight, middleweight, and heavyweight... And the score on each board is calculated individually!
+::::'''Dr. Dig:''' You can choose one of them and face off with opponents of different levels. You can even place first in all of the matches and take all the rewards of the season by yourself!
+::::'''Dr. Dig:''' However, each of the five leagues will begin during the subsequent days on an alternating schedule. If you want to experience a heart-racing battle, don't miss out!
+:::;(Return to previous option selection)
+:::{{DIcon|Talk}} What's the "Martial Exhibition" all about?
+::::'''Dr. Dig:''' "Martialism" is a term from classical Belobogian martial arts. It's a mixed martial arts form that focuses on technical skill rather than brute force.
+::::'''Dr. Dig:''' The boss found this ancient manual of ancient training techniques, so he came up with this idea of a Martial Exhibition to promote ancient culture.
+::::{{DIcon|Arrow}} I don't think he was being that noble...
+::::{{DIcon|Arrow}} Why does that sound completely made up?
+::::'''Dr. Dig:''' *sigh* Who cares if the story's real or not. I'll tell you what, the first prize sure is real.
+::::'''Dr. Dig:''' Anyway, the ancients split their Martialism up into seven different schools: "Solidity, Heat, Flow, Thunder, Firmness, Heart, and Gust."
+::::'''Dr. Dig:''' Each exhibition match is associated with a particular school of martialism. You can freely choose one to challenge.
+::::'''Dr. Dig:''' Any contestant who beats all the Martial Exhibition matches not only wins the tournament prize, but there's also a special secret prize from the Scott Business Alliance!
+::::'''Dr. Dig:''' But don't just listen to all these dull details from me! Get in the ring and experience the charm of "martialism" for yourself!
+:::;(Return to previous option selection)
+:::{{DIcon|Return}} That's all questions I have.
+::::{{DIcon|Travel Log}} I want to join!
+:::::'''Dr. Dig:''' No problem. I'll make arrangements immediately!
+::::{{DIcon|Exit}} There's nothing I would like to ask about.
+:::::'''Dr. Dig:''' No worries. If a question does arise, feel free to ask me anytime!
+::{{DIcon|Exit}} There's nothing I would like to ask about.
+:::'''Dr. Dig:''' No worries. If a question does arise, feel free to ask me anytime!
 {{Dialogue End}}
 
 ==Other Languages==

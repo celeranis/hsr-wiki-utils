@@ -41,31 +41,326 @@ PageTitle=#Mo Cuishle#
 ===Listen in on Oleg and Seele's conversation{{subst:void|<!--201160101-->}}===
 {{Mission Description|type=companion|location=Boulder Town|Belobog's reconstruction is progressing steadily, and the situation in the Underworld is gradually stabilizing. People are beginning to regain the lost joys of life. Oleg and Seele seem to be discussing something here when a great hero who saved the world happens to pass by...}}
 {{Dialogue Start}}
-:{{tx}}
+<pre>{
+	"$type": "RPG.GameCore.CreateProp",
+	"GroupID": {
+		"FixedValue": {
+			"Value": 142
+		}
+	},
+	"GroupPropID": {
+		"FixedValue": {
+			"Value": 300001
+		}
+	},
+	"CreateList": []
+}</pre>
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+----
+:{{A|VO side1 lk1 oleg 101.ogg}} '''Oleg:''' Aren't you going to go watch the fight, Seele? He's defending his championship title.
+:{{A|VO side1 lk1 seele 101.ogg}} '''Seele:''' ...Nah, I'll pass. It's not like anyone else has a chance with him around.
+:{{A|VO side1 lk1 oleg 102.ogg}} '''Oleg:''' Hahaha, you're right about that! I get it if you don't wanna join in the fun. It's all the same after a while.
+:{{A|VO side1 lk1 oleg 103.ogg}} '''Oleg:''' Ahh, what a rare moment of rest... Maybe I should find a spot to stretch my legs a bit, too.
+<pre>{
+	"$type": "RPG.GameCore.ActiveVirtualCamera",
+	"AreaName": "LevelArea_P10102_F10102001_G142",
+	"AnchorName": "Anchor4",
+	"BlendConfig": {
+		"ExportToJson": true,
+		"BlendType": "EaseInOut",
+		"CustomCurveName": "Blend_FastToSlow",
+		"BlendTime": 1
+	},
+	"DynamicParams": {}
+}</pre>
+:{{A|VO side1 lk1 player 101 m.ogg}} {{A|VO side1 lk1 player 101 f.ogg}} '''(Trailblazer):''' (Seele and Oleg... I wonder what they're talking about?)
+:{{A|VO side1 lk1 player 102 m.ogg}} {{A|VO side1 lk1 player 102 f.ogg}} '''(Trailblazer):''' (I'll go ask them.)
+----
+:{{A|VO side1 lk1 oleg 104 m.ogg}} {{A|VO side1 lk1 oleg 104 f.ogg}} '''Oleg:''' Hey, isn't that the trailblazer? It's been a while since I've seen you around. How you doing?
+:{{A|VO side1 lk1 seele 102.ogg}} '''Seele:''' Hey! How have your travels been? Thanks to you, things are pretty peaceful around here. The chief and I are getting restless!
+:{{A|VO side1 lk1 oleg 105.ogg}} '''Oleg:''' Hahaha, silly girl! Just a few days of hard-earned rest, and you're already making it sound like jail time!
+:{{DIcon|Arrow}} What were you two chatting about?
+::{{A|VO side1 lk1 oleg 106.ogg}} '''Oleg:''' Oh, you heard us?
+::{{A|VO side1 lk1 oleg 107.ogg}} '''Oleg:''' We were talking about my student, Luka.
+:{{DIcon|Arrow}} I'm kinda missing Boulder Town's homey feeling.
+::{{A|VO side1 lk1 seele 103.ogg}} '''Seele:''' ...Homey? Sheesh, you must've gone through a lot since leaving here...
+::{{A|VO side1 lk1 oleg 108.ogg}} '''Oleg:''' Sounds like our rustic and friendly community left a good impression on the visitors, hahaha.
+::{{DIcon|Arrow}} What were you two chatting about?
+::{{A|VO side1 lk1 oleg 109.ogg}} '''Oleg:''' Oh, you heard us?
+::{{A|VO side1 lk1 oleg 110.ogg}} '''Oleg:''' We were talking about my student, Luka.
+;(If {{cx}}<!--Hidden Mission ID 4040130--> has been completed)
+::{{A|VO side1 lk1 oleg 111.ogg}} '''Oleg:''' You've probably met him before, right? Yep, it's that boy with the mechanical arm. He was also doing work for Wildfire before, just not in this town.
+;(If {{cx}}<!--Hidden Mission ID 4040130--> has not been completed)
+::{{A|VO side1 lk1 oleg 112.ogg}} '''Oleg:''' Oh, you probably haven't met him yet. In short, he's a top-tier fighter in the Underworld. He was also doing work for Wildfire before, just not in this town.
+:{{A|VO side1 lk1 oleg 113 m.ogg}} {{A|VO side1 lk1 oleg 113 f.ogg}} '''Oleg:''' Oh, right &mdash; {{MC|f=she|m=he}} hasn't seen Luka defend his championship title before, right? Seele, why don't you take our hero and swing by the Fight Club to show {{MC|f=her|m=him}} the match?
+:{{A|VO side1 lk1 seele 104.ogg}} '''Seele:''' Uh...
+:{{A|VO side1 lk1 oleg 114.ogg}} '''Oleg:''' What? You don't want to?
+:{{A|VO side1 lk1 seele 105.ogg}} '''Seele:''' ...No, it's just... I'm worried Luka might do something stupid again.
+:{{DIcon|Arrow}} ...Again?
+:{{DIcon|Arrow}} Come on! Take me! I wanna go! Pleaaase~
+::{{A|VO side1 lk1 seele 106.ogg}} '''Seele:''' Ugh... How old are you again?
+:{{A|VO side1 lk1 oleg 115.ogg}} '''Oleg:''' Oh, I remember now... Luka was defending his title once, and Seele was watching in the audience.
+:{{A|VO side1 lk1 oleg 116.ogg}} '''Oleg:''' The opponent for that fight was too weak. They went down with just a few punches. I don't know what got into Luka after that, but he said out loud that he wanted Seele to come up and fight him right there and then...
+:{{A|VO side1 lk1 seele 107.ogg}} '''Seele:''' ...Why don't we stop there, chief. I'd rather not relive the moment.
+:{{A|VO side1 lk1 oleg 117.ogg}} '''Oleg:''' Hahaha, okay, I'll stop. Anyway, that's what Luka's like. He forgets about himself once he's in the mood.
+:{{A|VO side1 lk1 oleg 118 m.ogg}} {{A|VO side1 lk1 oleg 118 f.ogg}} '''Oleg:''' ...But I trust Luka not to make the same mistake again. So back to the original suggestion &mdash; are you good to take (Trailblazer) to the Fight Club, Seele?
+:{{A|VO side1 lk1 seele 108.ogg}} '''Seele:''' ...Fine. I'll take you there.
+:{{A|VO side1 lk1 oleg 119 m.ogg}} {{A|VO side1 lk1 oleg 119 f.ogg}} '''Oleg:''' That's more like it. The more friends the merrier! I hope you can get along with my favorite student.
+----
+
+;(Talk to Oleg)
+:{{A|VO side1 lk1 oleg 120.ogg}} '''Oleg:''' Huh? Hurry and run to the Club now. Otherwise, the fight'll be over when you get there.
+:{{A|VO side1 lk1 oleg 121.ogg}} '''Oleg:''' Luka's opponents usually don't last long, hahaha. Go!
+
+;(Talk to Luka)
+:{{A|VO side1 lk1 luka 126 m.ogg}} {{A|VO side1 lk1 luka 126 f.ogg}} '''Luka:''' How about it, (Trailblazer)? Are you ready to head out for the special training?
+:{{DIcon|Arrow}} Let's go.
+::{{A|VO side1 lk1 luka 127.ogg}} '''Luka:''' That was fast! Let's do it!
+::{{A|VO side1 lk1 luka 128.ogg}} '''Luka:''' Keep up, Seele! Don't fall behind!
+::{{A|VO side1 lk1 seele 131.ogg}} '''Seele:''' ...I don't need you to remind me. Let's go.
+:<pre>{
+	"$type": "RPG.GameCore.OpenTreasureChallenge",
+	"RaidID": 4012301,
+	"OnCancel": [
+		{
+			"$type": "RPG.GameCore.TriggerCustomString",
+			"CustomString": {
+				"Value": "ALL_TALK_END"
+			}
+		}
+	]
+}</pre>
+:{{DIcon|Exit}} I might need some more prep time...
+::{{A|VO side1 lk1 luka 129.ogg}} '''Luka:''' Ha, don't stress! I promise this trip will be relaxing and fun.
+::{{A|VO side1 lk1 luka 130.ogg}} '''Luka:''' Take your time. Come back when you're ready.
+
+;(Talk to Seele)
+:{{A|VO side1 lk1 seele 126.ogg}} '''Seele:''' I have a bad feeling about this... Luka always does things on the spur of the moment.
+:{{DIcon|Arrow}} He does seem very excited...
+::{{A|VO side1 lk1 seele 127.ogg}} '''Seele:''' ...Maybe he's on a victory high? Or maybe not. Either way, it's classic Luka.
+:{{DIcon|Arrow}} He does seem very passionate...
+::{{A|VO side1 lk1 seele 128.ogg}} '''Seele:''' ...Too passionate. Either way, it's classic Luka &mdash; I'm used to it by now.
+:{{A|VO side1 lk1 seele 129.ogg}} '''Seele:''' Still, when it comes to fighting on the front lines, you can put your life in his hands. There's a dozen of us in Wildfire who are still in his debt... not to mention ordinary Underworlders.
+:{{A|VO side1 lk1 seele 130.ogg}} '''Seele:''' ...That's a story for another day. I have no idea what he's up to this time, we'll just have to wait and see.
 {{Dialogue End}}
 
 ===Head to the Fight Club to watch Luka defend his title{{subst:void|<!--201160103-->}}===
 {{Mission Description|type=companion|location=Fight Club|update|You meet Oleg and Seele in the Underworld, who are your old Belobogian friends.<br />Oleg hopes you can go and support the match being fought by his student Luka, who is Boulder Town's fight club champion.<br />If you don't have anything urgent at the moment, it wouldn't be bad to go and enjoy the show.}}
 {{Dialogue Start}}
+<pre>{
+	"$type": "RPG.GameCore.CreateProp",
+	"GroupID": {
+		"FixedValue": {
+			"Value": 22
+		}
+	},
+	"GroupPropID": {
+		"FixedValue": {
+			"Value": 300001
+		}
+	},
+	"CreateList": []
+}</pre>
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
 :{{tx}}
+----
+<pre>{
+	"$type": "RPG.GameCore.TriggerSound",
+	"SoundName": {
+		"Value": "Ev_sfx_belobog_luca_crowd"
+	},
+	"EmitterType": "Prop",
+	"GroupID": 22,
+	"ID": 300003
+}</pre>
+;(If {{cx}}<!--Hidden Mission ID 4040130--> has been completed)
+::{{A|VO side1 lk1 seele 112.ogg}} '''Seele:''' Another title defended &mdash; congrats, Luka.
+::{{A|VO side1 lk1 luka 103 m.ogg}} {{A|VO side1 lk1 luka 103 f.ogg}} '''Luka:''' Thanks, Seele! And who might... Oh, it's (Trailblazer)! I remember you.
+;(If {{cx}}<!--Hidden Mission ID 4040130--> has not been completed)
+::{{A|VO side1 lk1 luka 104.ogg}} '''Luka:''' Hey! Seele! And, um, you are...?
+::{{DIcon|Arrow}} (Trailblazer). Pleasure to meet you.
+:::{{A|VO side1 lk1 seele 113 m.ogg}} {{A|VO side1 lk1 seele 113 f.ogg}} '''Seele:''' ...Oh, I forgot to introduce {{MC|f=her|m=him}}. This is the trailblazer. You must have heard of {{MC|f=her|m=him}} before.
+::{{DIcon|Arrow}} (Look at Seele)
+:::{{A|VO side1 lk1 seele 113 m.ogg}} {{A|VO side1 lk1 seele 113 f.ogg}} '''Seele:''' ...Oh, I forgot to introduce {{MC|f=her|m=him}}. This is the trailblazer. You must have heard of {{MC|f=her|m=him}} before.
+:::{{A|VO side1 lk1 luka 105.ogg}} '''Luka:''' ...So this is the trailblazer who helped reunite the Overworld with the Underworld? It's truly a pleasure to meet you!
+:{{A|VO side1 lk1 luka 106.ogg}} '''Luka:''' Were you here just to see my fight? Well, I'm flattered.
+:{{A|VO side1 lk1 luka 107.ogg}} '''Luka:''' I just won a little fight in the cage &mdash; what you did was much bigger than that. We...
+:{{A|VO side1 lk1 spectatorE 101.ogg}} '''Passionate Spectators:''' Luka &mdash; Luka &mdash; Luka &mdash;
+:{{A|VO side1 lk1 seele 114.ogg}} '''Seele:''' ...The crowd never gets tired, do they?
+:{{A|VO side1 lk1 luka 108.ogg}} '''Luka:''' Do you wanna head outside? It's a bit loud for talking in here.
+:{{A|VO side1 lk1 luka 109.ogg}} '''Luka:''' See you next time, everyone...
+:{{A|VO side1 lk1 luka 110.ogg}} '''Luka:''' ...there are sparks yet to fly!
+----
+
+;(Talk to Luka)
+----
+<pre>{
+	"$type": "RPG.GameCore.TriggerSound",
+	"SoundName": {
+		"Value": "Ev_sfx_belobog_luca_crowd"
+	},
+	"EmitterType": "Prop",
+	"GroupID": 22,
+	"ID": 300003
+}</pre>
+;(If {{cx}}<!--Hidden Mission ID 4040130--> has been completed)
+::{{A|VO side1 lk1 seele 112.ogg}} '''Seele:''' Another title defended &mdash; congrats, Luka.
+::{{A|VO side1 lk1 luka 103 m.ogg}} {{A|VO side1 lk1 luka 103 f.ogg}} '''Luka:''' Thanks, Seele! And who might... Oh, it's (Trailblazer)! I remember you.
+;(If {{cx}}<!--Hidden Mission ID 4040130--> has not been completed)
+::{{A|VO side1 lk1 luka 104.ogg}} '''Luka:''' Hey! Seele! And, um, you are...?
+::{{DIcon|Arrow}} (Trailblazer). Pleasure to meet you.
+:::{{A|VO side1 lk1 seele 113 m.ogg}} {{A|VO side1 lk1 seele 113 f.ogg}} '''Seele:''' ...Oh, I forgot to introduce {{MC|f=her|m=him}}. This is the trailblazer. You must have heard of {{MC|f=her|m=him}} before.
+::{{DIcon|Arrow}} (Look at Seele)
+:::{{A|VO side1 lk1 seele 113 m.ogg}} {{A|VO side1 lk1 seele 113 f.ogg}} '''Seele:''' ...Oh, I forgot to introduce {{MC|f=her|m=him}}. This is the trailblazer. You must have heard of {{MC|f=her|m=him}} before.
+:::{{A|VO side1 lk1 luka 105.ogg}} '''Luka:''' ...So this is the trailblazer who helped reunite the Overworld with the Underworld? It's truly a pleasure to meet you!
+:{{A|VO side1 lk1 luka 106.ogg}} '''Luka:''' Were you here just to see my fight? Well, I'm flattered.
+:{{A|VO side1 lk1 luka 107.ogg}} '''Luka:''' I just won a little fight in the cage &mdash; what you did was much bigger than that. We...
+:{{A|VO side1 lk1 spectatorE 101.ogg}} '''Passionate Spectators:''' Luka &mdash; Luka &mdash; Luka &mdash;
+:{{A|VO side1 lk1 seele 114.ogg}} '''Seele:''' ...The crowd never gets tired, do they?
+:{{A|VO side1 lk1 luka 108.ogg}} '''Luka:''' Do you wanna head outside? It's a bit loud for talking in here.
+:{{A|VO side1 lk1 luka 109.ogg}} '''Luka:''' See you next time, everyone...
+:{{A|VO side1 lk1 luka 110.ogg}} '''Luka:''' ...there are sparks yet to fly!
+----
+
+;(Talk to Seele)
+----
+<pre>{
+	"$type": "RPG.GameCore.TriggerSound",
+	"SoundName": {
+		"Value": "Ev_sfx_belobog_luca_crowd"
+	},
+	"EmitterType": "Prop",
+	"GroupID": 22,
+	"ID": 300003
+}</pre>
+;(If {{cx}}<!--Hidden Mission ID 4040130--> has been completed)
+::{{A|VO side1 lk1 seele 112.ogg}} '''Seele:''' Another title defended &mdash; congrats, Luka.
+::{{A|VO side1 lk1 luka 103 m.ogg}} {{A|VO side1 lk1 luka 103 f.ogg}} '''Luka:''' Thanks, Seele! And who might... Oh, it's (Trailblazer)! I remember you.
+;(If {{cx}}<!--Hidden Mission ID 4040130--> has not been completed)
+::{{A|VO side1 lk1 luka 104.ogg}} '''Luka:''' Hey! Seele! And, um, you are...?
+::{{DIcon|Arrow}} (Trailblazer). Pleasure to meet you.
+:::{{A|VO side1 lk1 seele 113 m.ogg}} {{A|VO side1 lk1 seele 113 f.ogg}} '''Seele:''' ...Oh, I forgot to introduce {{MC|f=her|m=him}}. This is the trailblazer. You must have heard of {{MC|f=her|m=him}} before.
+::{{DIcon|Arrow}} (Look at Seele)
+:::{{A|VO side1 lk1 seele 113 m.ogg}} {{A|VO side1 lk1 seele 113 f.ogg}} '''Seele:''' ...Oh, I forgot to introduce {{MC|f=her|m=him}}. This is the trailblazer. You must have heard of {{MC|f=her|m=him}} before.
+:::{{A|VO side1 lk1 luka 105.ogg}} '''Luka:''' ...So this is the trailblazer who helped reunite the Overworld with the Underworld? It's truly a pleasure to meet you!
+:{{A|VO side1 lk1 luka 106.ogg}} '''Luka:''' Were you here just to see my fight? Well, I'm flattered.
+:{{A|VO side1 lk1 luka 107.ogg}} '''Luka:''' I just won a little fight in the cage &mdash; what you did was much bigger than that. We...
+:{{A|VO side1 lk1 spectatorE 101.ogg}} '''Passionate Spectators:''' Luka &mdash; Luka &mdash; Luka &mdash;
+:{{A|VO side1 lk1 seele 114.ogg}} '''Seele:''' ...The crowd never gets tired, do they?
+:{{A|VO side1 lk1 luka 108.ogg}} '''Luka:''' Do you wanna head outside? It's a bit loud for talking in here.
+:{{A|VO side1 lk1 luka 109.ogg}} '''Luka:''' See you next time, everyone...
+:{{A|VO side1 lk1 luka 110.ogg}} '''Luka:''' ...there are sparks yet to fly!
+----
+----
+----
+:{{A|VO side1 lk1 luka 111.ogg}} '''Luka:''' Finally, I think we lost them... Let's chat here!
+:{{A|VO side1 lk1 seele 115.ogg}} '''Seele:''' You're popular as ever, "champion."
+:{{A|VO side1 lk1 luka 112.ogg}} '''Luka:''' ...Are you still angry at me over that one time, Seele? I just got a bit carried away...
+:{{DIcon|Arrow}} So, you two had a fight?
+::{{A|VO side1 lk1 seele 116.ogg}} '''Seele:''' Of course not. Two senior members of Wildfire duking it out in the Fight Club? That would be bad form.
+:{{DIcon|Arrow}} What are you two talking about...?
+::{{A|VO side1 lk1 seele 117.ogg}} '''Seele:''' ...Nothing. Just that thing Chief Oleg mentioned before.
+::{{A|VO side1 lk1 seele 118.ogg}} '''Seele:''' It's not like we actually fought. Two senior members of Wildfire duking it out in the Fight Club? That would be bad form.
+:{{A|VO side1 lk1 luka 113.ogg}} '''Luka:''' The mood was on fire that day, but the final match was over in just a few swings &mdash; everyone wanted more. So, in the heat of the moment, I just... Come on &mdash; don't hold that against me, Seele.
+:{{A|VO side1 lk1 luka 114.ogg}} '''Luka:''' I've always been impressed by you &mdash; I've wanted to spar with you for ages.
+:{{A|VO side1 lk1 seele 119.ogg}} '''Seele:''' ...I don't fight for fun. Stop getting your hopes up.
+:{{A|VO side1 lk1 seele 120.ogg}} '''Seele:''' Anyway, now that you've dragged us out here, what did you wanna talk about?
+:{{A|VO side1 lk1 luka 115.ogg}} '''Luka:''' Ah, yes! So, I'm trying to get a plan going...
+:{{DIcon|Arrow}} Plan?
+::{{A|VO side1 lk1 luka 116.ogg}} '''Luka:''' Yes &mdash; more accurately, my personal training plan.
+::{{A|VO side1 lk1 luka 118.ogg}} '''Luka:''' I want you to join me in witnessing the next steps in the development of Luka, the Boulder Town fighting champion!
+::{{A|VO side1 lk1 seele 121.ogg}} '''Seele:''' ...
+::{{A|VO side1 lk1 seele 122.ogg}} '''Seele:''' Whoa, whoa, hold your horses. Chief Oleg wanted us to come and cheer for you, he didn't say anything about becoming your sparring partners.
+::{{A|VO side1 lk1 seele 123.ogg}} '''Seele:''' We haven't got the time...
+::{{A|VO side1 lk1 luka 119.ogg}} '''Luka:''' Hahaha, you can't hide anything on that face of yours. Oleg already told me that things in the Underworld are pretty peaceful now, and even Wildfire is running out of things to do.
+::{{A|VO side1 lk1 luka 120 m.ogg}} {{A|VO side1 lk1 luka 120 f.ogg}} '''Luka:''' Besides, look at (Trailblazer)! You want in, right?
+:;(Return to previous option selection)
+:{{DIcon|Arrow}} Anything to do with me?
+::{{A|VO side1 lk1 luka 117.ogg}} '''Luka:''' Hm? Not really. It's my personal training plan.
+::{{A|VO side1 lk1 luka 118.ogg}} '''Luka:''' I want you to join me in witnessing the next steps in the development of Luka, the Boulder Town fighting champion!
+::{{A|VO side1 lk1 seele 121.ogg}} '''Seele:''' ...
+::{{A|VO side1 lk1 seele 122.ogg}} '''Seele:''' Whoa, whoa, hold your horses. Chief Oleg wanted us to come and cheer for you, he didn't say anything about becoming your sparring partners.
+::{{A|VO side1 lk1 seele 123.ogg}} '''Seele:''' We haven't got the time...
+::{{A|VO side1 lk1 luka 119.ogg}} '''Luka:''' Hahaha, you can't hide anything on that face of yours. Oleg already told me that things in the Underworld are pretty peaceful now, and even Wildfire is running out of things to do.
+::{{A|VO side1 lk1 luka 120 m.ogg}} {{A|VO side1 lk1 luka 120 f.ogg}} '''Luka:''' Besides, look at (Trailblazer)! You want in, right?
+:;(Return to previous option selection)
 {{Dialogue End}}
 
 ===Talk to Luka and start his "trial"{{subst:void|<!--201160107-->}}===
 {{Mission Description|type=companion|location=Boulder Town|update|It's still a new experience for you to watch Luka defend his title. However, it is just another ordinary day for Luka.<br />Luka tells you and Seele about his "trial plans" and wants you to accompany him the whole way to witness his improvement.<br />As someone who doesn't know how to say no, of course you agree to his request.}}
 {{Dialogue Start}}
-:{{tx}}
+----
+;(Screen fades to black)
+:{{A|VO side1 lk1 natasha 101.ogg}} '''Natasha:''' Luka... can you hear me?
+:{{A|VO side1 lk1 luka 231.ogg}} '''Luka:''' ...
+:{{A|VO side1 lk1 seele 208.ogg}} '''Seele:''' Hey... Hey! Luka, you're up!
+:{{A|VO side1 lk1 luka 232.ogg}} '''Luka:''' Ugh... I...
+----
+:{{A|VO side1 lk1 seele 209.ogg}} '''Seele:''' Ha, you're finally awake! You've been out for the whole day. We were really worried!
+:{{A|VO side1 lk1 natasha 102.ogg}} '''Natasha:''' Don't worry, Seele. Like I said, it was just the exhaustion. Svarog was deliberately holding back.
+:<!--1.5-second delay-->
+:{{A|VO side1 lk1 luka 233 m.ogg}} {{A|VO side1 lk1 luka 233 f.ogg}} '''Luka:''' Seele... (Trailblazer)... and... Nat? I'm in... the clinic?
+:{{A|VO side1 lk1 seele 210.ogg}} '''Seele:''' ...Where else? You think we'd leave you on Svarog's turf?
+;(Return to previous option selection)
+:{{A|VO side1 lk1 luka 234.ogg}} '''Luka:''' Ha... thank you all. I feel much better now. Sorry, Nat... I must have wasted your time.
+:{{A|VO side1 lk1 natasha 103.ogg}} '''Natasha:''' Don't be ridiculous, Luka. Still, whatever your motivation was, I hope you can find a different outlet for it.
+:{{A|VO side1 lk1 seele 211.ogg}} '''Seele:''' ...I'm not gonna let you off the hook that easy &mdash; there's more to this story. You need to explain what the heck got into you today.
+;(Return to previous option selection)
+:{{DIcon|Arrow}} Svarog hit pretty hard.
+::{{A|VO side1 lk1 seele 212.ogg}} '''Seele:''' Like I said, he's a robot... No matter how good his calculations are, he's not designed to pull punches.
+::{{A|VO side1 lk1 luka 235.ogg}} '''Luka:''' Hahaha... you're always so serious. I've said it before &mdash; this is my train&mdash; *coughing*
+::{{A|VO side1 lk1 natasha 104.ogg}} '''Natasha:''' ...Slow down &mdash; you haven't completely recovered. Seele, don't pressure him... let him rest.
+:;(Return to previous option selection)
+:{{DIcon|Arrow}} That victory slogan of yours...
+::{{A|VO side1 lk1 seele 213.ogg}} '''Seele:''' The one good thing about you losing is that we didn't have to hear it again.
+::{{A|VO side1 lk1 luka 235.ogg}} '''Luka:''' Hahaha... you're always so serious. I've said it before &mdash; this is my train&mdash; *coughing*
+::{{A|VO side1 lk1 natasha 104.ogg}} '''Natasha:''' ...Slow down &mdash; you haven't completely recovered. Seele, don't pressure him... let him rest.
+:;(Return to previous option selection)
+:{{DIcon|Arrow}} Why did you insist on fighting Svarog?
+::{{A|VO side1 lk1 seele 214.ogg}} '''Seele:''' That's on me too... I should've refused him straightaway. I had a bad feeling from the start.
+::{{A|VO side1 lk1 luka 235.ogg}} '''Luka:''' Hahaha... you're always so serious. I've said it before &mdash; this is my train&mdash; *coughing*
+::{{A|VO side1 lk1 natasha 104.ogg}} '''Natasha:''' ...Slow down &mdash; you haven't completely recovered. Seele, don't pressure him... let him rest.
+:;(Return to previous option selection)
+
+;(Talk to Natasha)
+:{{A|VO side1 lk1 natasha 111 m.ogg}} {{A|VO side1 lk1 natasha 111 f.ogg}} '''Natasha:''' Please go ask Oleg about this, (Trailblazer)
+:{{A|VO side1 lk1 natasha 112.ogg}} '''Natasha:''' Don't let small things get in the way of your friendship.
 {{Dialogue End}}
 
 ===Talk to Oleg and ask about Luka{{subst:void|<!--201160109-->}}===
 {{Mission Description|type=companion|location=Boulder Town|update|Luka fought until he passed out in his battle with Svarog. He still refuses to tell you and Seele the true purpose behind his "trial" even after he woke up.<br />You decide to ask Oleg, his trainer, whether Luka's been acting weird recently.}}
 {{Dialogue Start}}
-:{{tx}}
+
+
+;(Talk to Oleg)
+;(If {{cx}}<!--during performance 501030501-->)
+::'''Oleg:''' Yo, we meet again, (Trailblazer)! I thought you all left to save the world or something already.
+::'''Oleg:''' Good timing, I still owe you a thank you: Thanks for getting this city back on the right track, outsider.
+::'''Oleg:''' Before this place is completely handed over to the Silvermane Guards, Wildfire still has to oversee the Underworld's daily affairs. Feel free to speak up if you need anything.
+;(If {{cx}}<!--not during performance 501030501-->)
+:<pre>{
+	"$type": "RPG.GameCore.PlayMultiVoiceTalk",
+	"TalkSentenceID": 501030527
+}</pre>
+::'''Oleg:''' As long as you're in the Underworld, Wildfire will always treat you with utmost hospitality. Never hesitate to speak your needs.
+<pre>{
+	"$type": "RPG.GameCore.PlayMessage",
+	"MessageSectionID": 1113400
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.SaveMessage",
+	"MessageSectionID": 1113400
+}</pre>
 {{Dialogue End}}
 
 ===Find Seele and follow Luka with her{{subst:void|<!--201160111-->}}===
 {{Mission Description|type=companion|location=Boulder Town|update|Luka fought until he passed out in his battle with Svarog. He still refuses to tell you and Seele the true purpose behind his "trial" even after he woke up.<br />However, Seele is not planning to let Luka off the hook. She wants to understand the truth behind it all.<br />Seele had already found where Luka is. Go and meet up with her in town.}}
 {{Dialogue Start}}
-:{{tx}}
+:<!--1-second delay-->
 {{Dialogue End}}
 
 ==Other Languages==

@@ -41,37 +41,188 @@ PageTitle=#The Girl, the Coins, and Homeland#
 ===Stop the wandering little girl{{subst:void|<!--500040801-->}}===
 {{Mission Description|type=adventure|location="Eternal Holy City" Okhema|There is a young girl that is always running around the Okhema market selling made-up news... Could it be that she is in dire need of money?}}
 {{Dialogue Start}}
+
+;(Talk to Serena)
 :{{tx}}
+:'''Serena:''' What a great day, {{MC|f=miss|m=mister}}. How many breaking news alerts do you plan on listening to?
+:{{DIcon|Arrow}} Where did you hear about these wild rumors?
+::'''Serena:''' Wild rumors? So long as there's one person who hasn't heard of something, it's all news!
+::We all use teleslates nowadays. What are you talking about newspapers for?
+::'''Serena:''' Who said I'm talking about a newspaper? Paper's too expensive &mdash; every line of this news is personally delivered by my mouth~
+::I've got plenty of news myself, too. Name your price.
+:{{DIcon|Arrow}} We all use teleslates nowadays. What are you talking about newspapers for?
+::'''Serena:''' Who said I'm talking about a newspaper? Paper's too expensive &mdash; every line of this news is personally delivered by my mouth~
+::I've got plenty of news myself, too. Name your price.
+:{{DIcon|Arrow}} I've got plenty of news myself, too. Name your price.
+:'''Serena:''' Hey, don't get me wrong now &mdash; I only sell news. I'm not into recycling it.
+:'''Serena:''' We're having a sale to mark the grand opening: One line of news for just 5 Balance Coins. Want to hear one?
+:The girl looks at you with puppy dog eyes that seem to say "I'll starve if I don't sell any news stories today."
+:{{DIcon|Arrow}} Okay.
+:{{DIcon|Arrow}} Yes!
+:{{DIcon|Arrow}} Alright!
+:{{DIcon|Arrow}} Let's go!!!
+:{{DIcon|Arrow}} Don't tell me there's no option to refuse?
+::That's right, could anyone ever hope to refuse that girl with those puppy dog eyes? Besides, you're so rich now that you can afford the price of ten news items.
+:'''Serena:''' Tee-hee, thank you so much. Well then, I'll begin...
+:{{tx}}
+
+;(Unused &mdash; TriggerBubbleTalk_5000408)
+<pre>{
+	"$type": "RPG.GameCore.PlayNPCBubbleTalk",
+	"BubbleTalkInfoList": [
+		{
+			"AutoSkipTime": 3,
+			"GroupID": 632,
+			"GroupNpcID": 400001,
+			"TalkSentenceID": 500049301
+		},
+		{
+			"AutoSkipTime": 3,
+			"GroupID": 632,
+			"GroupNpcID": 400001,
+			"TalkSentenceID": 500049302
+		},
+		{
+			"AutoSkipTime": 3,
+			"GroupID": 632,
+			"GroupNpcID": 400001,
+			"TalkSentenceID": 500049303
+		}
+	],
+	"IsLoop": true,
+	"LoopInterval": 3
+}</pre>
 {{Dialogue End}}
 
 ===Interview witnesses{{subst:void|<!--500040802-->}}===
 {{Mission Description|type=adventure|location="Eternal Holy City" Okhema|update|Your money pouch has disappeared with the young girl. Someone must know where she is.}}
 {{Dialogue Start}}
-:{{tx}}
+:'''(Trailblazer):''' ...I have to find and interrogate that kid. Maybe someone around here saw where she ran off to?
 {{Dialogue End}}
 
 ===Find where the girl is hiding{{subst:void|<!--500040807-->}}===
 {{Mission Description|type=adventure|location="Eternal Holy City" Okhema|update|With the clues you've gathered from everyone, the girl should not be hard to find. Behaving like this at a young age... she needs to learn a good lesson.}}
 {{Dialogue Start}}
+
+;(Talk to Serena)
 :{{tx}}
+
+:{{DIcon|Loupe}} Investigate
+:Inside the bamboo basket lies a few cheap gemstones, a pieced-together porcelain vase, and various other loose items... So many things, all mixed together, like birds building up a nest.
+:Most things are worth at least a little money, but not much &mdash; barely enough to buy a shield and spear. Their owner seems only interested in collecting things &mdash; and has clearly been doing so for some time.
+:'''(Trailblazer):''' I hear that kid is hiding on the {{Color|keyword|nobold=1|platform opposite}}. I can go around the roof to get there.
+;(Unused &mdash; Puzzle2LG_OnMemoryVisionOpen)
+<pre>{
+	"$type": "RPG.GameCore.SetGraphDynamicFloat",
+	"Name": "Loc_EntityAsync",
+	"TargetIDs": [],
+	"Value": {
+		"FixedValue": {
+			"Value": 0
+		}
+	}
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.AdvCreateEntityAsync",
+	"InstanceIDList": [],
+	"AdvancedSpawnList": [
+		{
+			"IsCreateAllEntityType": true
+		}
+	]
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.SetGraphDynamicFloat",
+	"Name": "Loc_EntityAsync",
+	"TargetIDs": [],
+	"Value": {
+		"FixedValue": {
+			"Value": 1
+		}
+	}
+}</pre>
+
+;(Unused &mdash; Puzzle2LG_OnMemoryVisionClose)
+<pre>{
+	"$type": "RPG.GameCore.AdvDestroyEntityAsync",
+	"NeedDisappear": true,
+	"InstanceIDList": [],
+	"AdvancedSpawnList": [
+		{
+			"IsDestroyAllEntityType": true
+		}
+	]
+}</pre>
+
+;(Unused &mdash; MissionFinish)
+<pre>{
+	"$type": "RPG.GameCore.TriggerEntityEvent",
+	"EventName": {
+		"Value": "Clt_TriggerClose"
+	},
+	"InstanceID": {
+		"FixedValue": {
+			"Value": 300001
+		}
+	}
+}</pre>
 {{Dialogue End}}
 
 ===Investigate the Fragments of Recollection{{subst:void|<!--500040808-->}}===
 {{Mission Description|type=adventure|location="Eternal Holy City" Okhema|update|You found the girl's hiding place. The memories are extremely concentrated here as if there is a condensed memory that is not willing to be forgotten.}}
 {{Dialogue Start}}
+----
+:As you watch the memory fragments intently, the sound of footsteps rings out behind you...
+:'''Serena:''' ...
+:{{DIcon|Arrow}} ...Hello?
+:{{DIcon|Arrow}} I finally got you!
+:{{DIcon|Arrow}} The wind sure is noisy today.
+:'''Serena:''' ...Granddad Zagreus, I pray to you one last time: Please make my legs lightning fast!
 :{{tx}}
 {{Dialogue End}}
 
 ===Catch up to the running girl{{subst:void|<!--500040809-->}}===
 {{Mission Description|type=adventure|location="Eternal Holy City" Okhema|update|Catch up to her!}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Unused &mdash; FinishMission_500040809)
+
+
+;(Unused &mdash; TriggerBubble_500040809)
+<pre>{
+	"$type": "RPG.GameCore.PlayNPCBubbleTalk",
+	"BubbleTalkInfoList": [
+		{
+			"AutoSkipTime": 3,
+			"GroupID": 639,
+			"GroupNpcID": 400001,
+			"TalkSentenceID": 500049306
+		},
+		{
+			"AutoSkipTime": 3,
+			"GroupID": 639,
+			"GroupNpcID": 400001,
+			"TalkSentenceID": 500049307
+		},
+		{
+			"AutoSkipTime": 3,
+			"GroupID": 639,
+			"GroupNpcID": 400001,
+			"TalkSentenceID": 500049308
+		},
+		{
+			"AutoSkipTime": 3,
+			"GroupID": 639,
+			"GroupNpcID": 400001,
+			"TalkSentenceID": 500049309
+		}
+	]
+}</pre>
 {{Dialogue End}}
 
 ===Listen to the girl's "explanation"{{subst:void|<!--500040810-->}}===
 {{Mission Description|type=adventure|location="Eternal Holy City" Okhema|update|It turns out that she was not doing this for money, but to fulfill a wish... Nothing that can be done about it now, though.}}
 {{Dialogue Start}}
-:{{tx}}
 {{Dialogue End}}
 
 ==Other Languages==

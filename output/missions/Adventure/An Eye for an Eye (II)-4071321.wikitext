@@ -39,19 +39,40 @@ PageTitle=#An Eye for an Eye (Part 2)#
 ===Talk to Oleg{{subst:void|<!--407132101-->}}===
 {{Mission Description|type=adventure|location=Corridor of Fading Echoes|You receive Oleg's invitation to an operation to clear the Corridor of Fading Echoes of Fragmentum monsters.<br />Talk to Oleg to get a sense of the current situation of the battleground.}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Oleg)
+:'''Oleg:''' Here we are again, (Trailblazer)! I knew someone as kind as you wouldn't watch the trouble from the sidelines.
+:'''Oleg:''' As I expected, the Fragmentum would not be willing to back off so easily. There must be countless monsters lurking outside the northern wall, waiting to invade the corridor.
+:'''Oleg:''' Look at this horrible weather... The stinking smell of the Fragmentum permeates the air...
+:'''Oleg:''' (Trailblazer), I have a feeling we'll be up against even tougher enemies this time. Luckily, the Technology Division has made sure all the Snowshine Lamps are ready &mdash; it is a tremendous help to our action.
+:'''Oleg:''' {{Color|keyword|nobold=1|Find the energy core and activate the Snowshine Lamp. Then, get rid of the enemies with the help of the light.}} Remember to do a thorough job and spare none of the Fragmentum monsters!
+:'''Oleg:''' I'll stay to guard this pass. I'll count on you to finish up the task, (Trailblazer).
+<pre>{
+	"$type": "RPG.GameCore.EnableNPCMonsterAI",
+	"GroupID": 8,
+	"GroupMonsterIDs": [
+		200007
+	],
+	"UniqueNames": []
+}</pre>
 {{Dialogue End}}
 
 ===Defeat all enemies in the Corridor of Fading Echoes{{subst:void|<!--407132102-->}}===
 {{Mission Description|type=adventure|location=Corridor of Fading Echoes|update|Clear out the Corridor of Fading Echoes and defeat all of the Fragmentum monsters roaming in the area.}}
 {{Dialogue Start}}
-:{{tx}}
+
+
+;(Talk to Oleg)
+:'''Oleg:''' Awesome, (Trailblazer)! We've achieved another great victory with your help!
+:'''Oleg:''' There are no more traces of monsters in the surroundings. The corridor should be peaceful from now on.
+:'''Oleg:''' Even though we've carried out two raids, I don't think it's enough to send them home. Without a doubt, we're facing a protracted war, (Trailblazer).
+:'''Oleg:''' I hope you'll keep in touch with William. If anything happens here, William will be the first to know.
+:'''Oleg:''' These are for you. You can treat them as my rewards for you. Take care, (Trailblazer)!
 {{Dialogue End}}
 
 ===Talk to Oleg and conclude the operation{{subst:void|<!--407132103-->}}===
 {{Mission Description|type=adventure|location=Corridor of Fading Echoes|update|You cleared out all threats remaining in the Corridor of Fading Echoes.<br />Report the situation to Oleg.}}
 {{Dialogue Start}}
-:{{tx}}
 {{Dialogue End}}
 
 ==Other Languages==

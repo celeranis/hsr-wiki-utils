@@ -17,7 +17,7 @@ PageTitle=#Witch's Mirrored Reversal#
 |area          = Seclusion Zone
 |prev          = Scholar, Let Us Meet Again Before the Gates of Truth
 |next          = 
-|rewards       = Trailblaze EXP*200; Stellar Jade*20; Lost Crystal*3; Celestial Ambrosia*40; Elegy of Netherwing*1 { text = ''Elegy of Netherwing'' }; Credit*20,000
+|rewards       = Trailblaze EXP*200; Stellar Jade*20; Lost Crystal*3; Celestial Ambrosia*40; Elegy of Netherwing (Disk)*1 { text = ''Elegy of Netherwing'' }; Credit*20,000
 }}
 '''''Witch's Mirrored Reversal''''' is a [[Trailblaze Mission]] in the chapter [[Through the Petals in the Land of Repose]].
 
@@ -43,42 +43,315 @@ PageTitle=#Witch's Mirrored Reversal#
 ===Listen to Herta talking to herself{{subst:void|<!--104031002-->}}===
 {{Mission Description|type=trailblaze|location=Seclusion Zone|Be grateful, Astral Express. Fortunately, Madam Herta is quite interested in Amphoreus and plans to conduct an on-the-ground investigation there.<br />Madam Herta, could you speak with me, the Fourth Mirror, a little more?}}
 {{Dialogue Start}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
 :{{tx}}
+
+;(Talk to Welt Yang)
+----
+:{{A|VO chapter4 30 welt 105.ogg}} '''Welt:''' Thank you, Madam Herta. Companions are the lifeblood of the Astral Express. When things are settled, we will repay you for all your help.
+:{{A|VO chapter4 30 theherta 125.ogg}} '''Herta:''' (Welt... This young man sure is courteous.)
+
+;(Talk to Sunday)
+----
+:{{A|VO chapter4 30 sunday 103.ogg}} '''Sunday:''' Madam, watching you work has been an enlightening experience for me. It's hard to imagine that an outstanding scholar like you could maintain such a... relaxed manner most of the time.
+:{{A|VO chapter4 30 sunday 104.ogg}} '''Sunday:''' Your calm and collected nature is truly a trait that I should learn.
+:{{A|VO chapter4 30 theherta 126.ogg}} '''Herta:''' (This brat... Why does everything that comes out of his mouth sound so snarky?)
 {{Dialogue End}}
 
 ===Give an order to the First Mirror{{subst:void|<!--104031003-->}}===
 {{Dialogue Start}}
-:{{tx}}
+:{{A|VO chapter4 30 theherta 115.ogg}} '''Herta:''' Alright, now that everything is ready...
+:{{A|VO chapter4 30 theherta 116.ogg}} '''Herta:''' Mirrors, get to work.
 {{Dialogue End}}
 
 ===Give an order to the Second Mirror{{subst:void|<!--104031004-->}}===
 {{Dialogue Start}}
-:{{tx}}
+
 {{Dialogue End}}
 
 ===Give an order to the Third Mirror{{subst:void|<!--104031005-->}}===
 {{Dialogue Start}}
-:{{tx}}
+
 {{Dialogue End}}
 
 ===Return to the First Mirror and prepare for the warp jump{{subst:void|<!--104031006-->}}===
 {{Dialogue Start}}
-:{{tx}}
+
+
 {{Dialogue End}}
 
 ===Continue forward to locate Amphoreus's entrance{{subst:void|<!--104031007-->}}===
 {{Mission Description|type=trailblaze|location=Vortex of Genesis|update|Learn from this, Astral Express. Madam Herta doesn't need to traverse obstacles in the flesh to personally visit Amphoreus. She can immediately uncover the secrets of this unknown world with just a simple touch.<br />Don't ask me why I'm so sure &mdash; it's because I've been a Heritor for so long.}}
 {{Dialogue Start}}
-:{{tx}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{A|VO chapter4 30 theherta 133.ogg}} '''Herta:''' Agh... I didn't expect it to be so turbulent. I should have asked the Second Mirror to use slightly less power.
+:{{A|VO chapter4 30 theherta 134.ogg}} '''Herta:''' Oh... What a magnificent sight. Is this the entrance to Amphoreus?
+:{{A|VO chapter4 30 theherta 135.ogg}} '''Herta:''' Let's see. Perhaps I'll be able to find a way in?
+<pre>{
+	"$type": "RPG.GameCore.AdvCreateGroupEntity",
+	"InstanceIDList": [
+		400001
+	]
+}</pre>
 {{Dialogue End}}
 
 ===Check the surroundings for remnants of memories{{subst:void|<!--104031011-->}}===
 {{Dialogue Start}}
-:{{tx}}
 {{Dialogue End}}
 
 ===Investigate the strange basin{{subst:void|<!--104031012-->}}===
 {{Dialogue Start}}
+;(If {{F|FSV_CoreLevel}} is undefined 0)
+:<pre>{
+	"$type": "RPG.GameCore.TriggerEntityServerEvent"
+}</pre>
+;(If {{F|FSV_CoreLevel}} is not undefined 0)
+:;(Return to previous option selection)
+;(Unused &mdash; Clt_TriggerPerformance)
+<pre>{
+	"$type": "RPG.GameCore.TriggerSound",
+	"SoundName": {
+		"Value": "Ev_sfx_amphoreus_prop_genisiscore_fireseed_lightburst"
+	},
+	"TargetType": {
+		"$type": "RPG.GameCore.GroupFetchLocalTarget",
+		"TargetType": "Prop",
+		"Targets": [
+			300001
+		]
+	}
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.TriggerEntityEventV2",
+	"EventName": {
+		"Value": "Clt_TriggerUsing1Start"
+	},
+	"TargetType": {
+		"$type": "RPG.GameCore.GroupFetchLocalTarget",
+		"TargetType": "Prop",
+		"Targets": [
+			300001
+		]
+	}
+}</pre>
+::<!--2.5-second delay-->
+:<pre>{
+	"$type": "RPG.GameCore.TriggerEntityEventV2",
+	"EventName": {
+		"Value": "Clt_TriggerDissolve"
+	},
+	"TargetType": {
+		"$type": "RPG.GameCore.GroupFetchLocalTarget",
+		"TargetType": "Prop",
+		"Targets": [
+			300002
+		]
+	}
+}</pre>
+::<!--0.5-second delay-->
+:<pre>{
+	"$type": "RPG.GameCore.TriggerSound",
+	"SoundName": {
+		"Value": "Ev_sfx_amphoreus_prop_genisiscore_fireseed_drop"
+	},
+	"TargetType": {
+		"$type": "RPG.GameCore.GroupFetchLocalTarget",
+		"TargetType": "Prop",
+		"Targets": [
+			300001
+		]
+	}
+}</pre>
+::<!--2-second delay-->
+:<pre>{
+	"$type": "RPG.GameCore.ActiveVirtualCamera",
+	"LevelAreaCameraKey": {
+		"Custom": true,
+		"Key": "Cam02"
+	}
+}</pre>
+::<!--0.5-second delay-->
+:<pre>{
+	"$type": "RPG.GameCore.TriggerEntityEventV2",
+	"EventName": {
+		"Value": "Clt_TriggerUsing2Start"
+	},
+	"TargetType": {
+		"$type": "RPG.GameCore.GroupFetchLocalTarget",
+		"TargetType": "Prop",
+		"Targets": [
+			300001
+		]
+	}
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.TriggerSound",
+	"SoundName": {
+		"Value": "Ev_sfx_amphoreus_prop_genisiscore_powerburst"
+	},
+	"TargetType": {
+		"$type": "RPG.GameCore.GroupFetchLocalTarget",
+		"TargetType": "Prop",
+		"Targets": [
+			300001
+		]
+	}
+}</pre>
+::<!--3-second delay-->
+:<pre>{
+	"$type": "RPG.GameCore.ActiveVirtualCamera",
+	"LevelAreaCameraKey": {
+		"Custom": true,
+		"Key": "Cam03"
+	}
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.TriggerEffectList",
+	"TargetType": {
+		"$type": "RPG.GameCore.GroupFetchLocalTarget",
+		"TargetType": "Prop",
+		"Targets": [
+			300003
+		]
+	},
+	"EffectList": [
+		{
+			"EffectPath": "Effects/Eff_Prefab/Eff_Scene/InteractiveProp/Eff_Chap04_Prop_GensisSky_01_Star_Lod0.prefab",
+			"IsAttachToTargetEntity": true
+		}
+	]
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.TriggerSound",
+	"SoundName": {
+		"Value": "Ev_sfx_amphoreus_prop_genisiscore_startrail"
+	},
+	"TargetType": {
+		"$type": "RPG.GameCore.GroupFetchLocalTarget",
+		"TargetType": "Prop",
+		"Targets": [
+			300001
+		]
+	}
+}</pre>
+::<!--4-second delay-->
+:<pre>{
+	"$type": "RPG.GameCore.TriggerEntityEventV2",
+	"EventName": {
+		"Value": "Clt_TriggerEndSubmit"
+	},
+	"TargetType": {
+		"$type": "RPG.GameCore.GroupFetchLocalTarget",
+		"TargetType": "Prop",
+		"Targets": [
+			300001
+		]
+	}
+}</pre>
+::<!--1-second delay-->
+:<pre>{
+	"$type": "RPG.GameCore.SetFloorCustomFloat",
+	"Name": {
+		"Value": "FCV_GenesisKindlingType"
+	},
+	"Value": {
+		"FixedValue": {
+			"Value": 0
+		}
+	}
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.SetFloorCustomFloat",
+	"Name": {
+		"Value": "FCV_GenesisKindlingCtrl"
+	},
+	"Value": {
+		"FixedValue": {
+			"Value": 0
+		}
+	}
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.ActiveVirtualCamera",
+	"LevelAreaCameraKey": {
+		"Custom": true,
+		"Key": "Cam02"
+	},
+	"IsActive": false
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.BlockInputController",
+	"ActionNameList": []
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.SetPropInteractBtnSwitch",
+	"SwitchState": true
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.HideTopPageWithoutAnim",
+	"PlayAnim": true
+}</pre>
+:<pre>{
+	"$type": "RPG.Client.AdventureGameplayLock",
+	"LockSource": "InstantKill"
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.GlobalShowBillboard",
+	"IsShow": true
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.SetCharacterVisible",
+	"CharacterUniqueName": "LocalPlayer",
+	"Visible": true
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.ReleaseCharacter",
+	"CharacterUniqueName": "LocalPlayer"
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.PauseToastQueue"
+}</pre>
+
+;(Unused &mdash; Clt_TriggerExitBlackSq)
+<pre>{
+	"$type": "RPG.GameCore.CaptureLocalPlayer",
+	"CharacterUniqueName": "LocalPlayer"
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.SetCharacterVisible",
+	"CharacterUniqueName": "LocalPlayer"
+}</pre>
+
+;(Unused &mdash; Clt_TriggerForbCtrl)
+<pre>{
+	"$type": "RPG.GameCore.BlockInputController",
+	"Enable": true,
+	"ActionNameList": []
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.SetPropInteractBtnSwitch"
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.HideTopPageWithoutAnim",
+	"Hide": true
+}</pre>
+:<pre>{
+	"$type": "RPG.Client.AdventureGameplayLock",
+	"IsLock": true,
+	"LockSource": "InstantKill"
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.GlobalShowBillboard"
+}</pre>
+:{{A|VO chapter4 30 theherta 141.ogg}} '''Herta:''' It's either a projection or a fake. There doesn't seem to be much to take note of.
+:{{A|VO chapter4 30 theherta 142.ogg}} '''Herta:''' Now then... How am I going to get into Amphoreus?
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
 :{{tx}}
 {{Dialogue End}}
 

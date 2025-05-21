@@ -35,23 +35,240 @@ PageTitle=#Twin Bond#
 -->
 ==Dialogue==
 {{Stub Dialogue}}
+:{{tx}}
+<pre>{
+	"$type": "RPG.GameCore.PerformanceExtendEndBlack",
+	"ExtendTime": 1
+}</pre>
 {{Dialogue End}}
 
 ===Catch up with Bailu at all costs!{{subst:void|<!--801511102-->}}===
 {{Mission Description|type=continuance|location=Illusory Maze: Luxie|update|You only realize that you have fallen into the heliobus' illusions when you chased it into the residence. Now, just like how Fyxestroll Garden became a shifting haze, this place has also been transformed in a never-ending labyrinth with no sense of ordinary three-dimensional space. You have no choice but to press forward.}}
 {{Dialogue Start}}
+<pre>{
+	"$type": "RPG.GameCore.CreateProp",
+	"GroupID": {
+		"FixedValue": {
+			"Value": 2
+		}
+	},
+	"GroupPropID": {
+		"FixedValue": {
+			"Value": 300003
+		}
+	},
+	"CreateList": []
+}</pre>
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{A|VO side2 hzzy sushang 151.ogg}} '''Sushang:''' Whew... By the Arbiter... They sure know... how to run...
+:{{A|VO side2 hzzy huohuo 163.ogg}} '''Huohuo:''' That's... the power of a... heliobus!
+:{{A|VO side2 hzzy sushang 152.ogg}} '''Sushang:''' ...Catch your breath... before you pass out...
+:{{A|VO side2 hzzy sushang 153.ogg}} '''Sushang:''' Let's... let's try a new strategy... I don't think we can beat them like this. We need to use our heads...
+:{{A|VO side2 hzzy guinaifen 158.ogg}} '''Guinaifen:''' ...Sushang's... gonna use her head...? Now we're really done for...
+:{{DIcon|Arrow}} I barely broke a sweat.
+::{{A|VO side2 hzzy sushang 154.ogg}} '''Sushang:''' Then... good for you! But you should probably catch your breath first... I could hear you panting from a mile away.
+::I think I'm hyperventilating.
+::{{A|VO side2 hzzy guinaifen 159.ogg}} '''Guinaifen:''' Ha, you're fine! Just take a breather...
+::Anyone bring a hunting trap?
+:{{DIcon|Arrow}} I think I'm hyperventilating.
+::{{A|VO side2 hzzy guinaifen 159.ogg}} '''Guinaifen:''' Ha, you're fine! Just take a breather...
+::Anyone bring a hunting trap?
+:{{DIcon|Arrow}} Anyone bring a hunting trap?
+:{{A|VO side2 hzzy huohuo 164.ogg}} '''Huohuo:''' Huh? We can't hunt the Dragon Lady like a wild beast...
+:{{A|VO side2 hzzy guinaifen 160.ogg}} '''Guinaifen:''' Wait, I have an idea! How about we use a little reverse psychology? Instead of chasing Lady Bailu, we get her to come to us!
+:{{A|VO side2 hzzy sushang 155.ogg}} '''Sushang:''' Are you serious? Does that little dragon girl look like she's gonna come running over to us?
+:{{A|VO side2 hzzy guinaifen 161.ogg}} '''Guinaifen:''' Chasing Bailu around like this reminds me of something I saw back home when I was a child. On my home planet, resources were scarce, and if you wanted to eat meat you had to risk your life by going deep into the mines to hunt an animal called a sky mink.
+:{{A|VO side2 hzzy guinaifen 162.ogg}} '''Guinaifen:''' Sky minks fly so nimbly and are so alert that even the quickest of hands will have a hard time catching them.
+:{{DIcon|Arrow}} Why are we having story time all of a sudden?
+:{{DIcon|Arrow}} Did you get the meat? How does the story end?
+:{{A|VO side2 hzzy sushang 156.ogg}} '''Sushang:''' Gather round children!
+:{{A|VO side2 hzzy guinaifen 163.ogg}} '''Guinaifen:''' Ugh, don't interrupt! Hear me out. The sky mink's ecology is unique &mdash; it lives in symbiosis with a venomous creature called a shrieking lizard. When a sky mink goes out to feed, it lets the lizard protect its young.
+:{{A|VO side2 hzzy guinaifen 164.ogg}} '''Guinaifen:''' So we used to go to sky mink nests to catch shrieking lizards, instead. When a shrieking lizard gets caught, it calls to the sky mink with a loud shriek to warn it to return to the nest and protect its young... which of course, led the sky mink right to us.
+:{{DIcon|Arrow}} Sounds a little cruel...
+::{{A|VO side2 hzzy guinaifen 165.ogg}} '''Guinaifen:''' Well, the competition for survival went two ways &mdash; shrieking lizards spew out a potent venom, and failure to take proper precautions cost many a hunter their life.
+::Sounds pretty smart...
+:{{DIcon|Arrow}} Sounds pretty smart...
+:{{A|VO side2 hzzy guinaifen 166.ogg}} '''Guinaifen:''' I'd hesitate to call it that. Shrieking lizards spew out a potent venom &mdash; many people lost their lives trying to catch a tiny morsel of meat for dinner.
+:{{A|VO side2 hzzy sushang 157.ogg}} '''Sushang:''' Nice story. But what's it got to do with chasing Lady Bailu?
 :{{tx}}
+----
+
+;(Upon reaching the destination)
+:{{A|VO side2 hzzy bailuf 110.ogg}} '''Luxie:''' I just wanna play a little longer! What's so bad about that?
+:{{A|VO side2 hzzy bailu 108.ogg}} '''Bailu:''' Why do I have to live the way grown-ups do?
+:{{A|VO side2 hzzy bailu 109.ogg}} '''Bailu:''' Grown-ups are always saying "study now and have fun later..."
+:{{A|VO side2 hzzy bailu 110.ogg}} '''Bailu:''' ...but the grown-ups I see at the Alchemy Commission never have time for fun!
+:{{A|VO side2 hzzy bailuf 111.ogg}} '''Luxie:''' Stop chasing us!
+:{{A|VO side2 hzzy bailu 111.ogg}} '''Bailu:''' Can't you just let me have some fun!?
+
+;(Unused &mdash; ShowHint)
+:;(If {{F|IsDoorOpen}} is undefined 1 and {{F|TriggerID}} is undefined 0)
+:::{{A|VO side2 hzzy guinaifen 171.ogg}} '''Guinaifen:''' That door over there is the only way out... We'd better close it...
+::<pre>{
+	"$type": "RPG.GameCore.SetMissionCustomValue",
+	"SubmissionID": 801511106,
+	"MissionCustomValue": {
+		"Name": "OldValue_0",
+		"isLocal": true,
+		"isRange": true,
+		"ValidValueParamList": [
+			0,
+			1
+		]
+	},
+	"CustomValue": 1
+}</pre>
+::<pre>{
+	"$type": "RPG.GameCore.SetGraphDynamicFloat",
+	"Name": "TriggerID",
+	"TargetIDs": [],
+	"Value": {
+		"FixedValue": {
+			"Value": 1
+		}
+	}
+}</pre>
+
+;(Unused &mdash; ShowHint2)
+:;(If {{F|IsDoorOpen}} is undefined 0 and {{F|BailuReturn}} is undefined 0)
+:::Bailu anticipated your attempt to block her path, but as long as she runs fast enough, she can do whatever she wants.
+::<pre>{
+	"$type": "RPG.GameCore.SetGraphDynamicFloat",
+	"Name": "BailuReturn",
+	"TargetIDs": [],
+	"Value": {
+		"FixedValue": {
+			"Value": 1
+		}
+	}
+}</pre>
 {{Dialogue End}}
 
 ===Drive Lady Bailu into the matrix!{{subst:void|<!--801511103-->}}===
 {{Mission Description|type=continuance|location=Illusory Maze: Luxie|update|You only realize that you have fallen into the heliobus' illusions when you chased it into the residence. Now, just like how Fyxestroll Garden became a shifting haze, this place has also been transformed in a never-ending labyrinth with no sense of ordinary three-dimensional space. You have no choice but to press forward.<br />After some fruitless exertion, you finally come up with the good idea of waiting for your enemy to run into you.}}
 {{Dialogue Start}}
-:{{tx}}
+;(Upon reaching the destination)
+:{{A|VO side2 hzzy bailuf 112.ogg}} '''Luxie:''' Why do grown-ups always say that life is harder for them. So weird...
+:{{A|VO side2 hzzy bailuf 113.ogg}} '''Luxie:''' Weren't grown-ups kids once too?
+:{{A|VO side2 hzzy bailuf 114.ogg}} '''Luxie:''' Would you spoil the fun for younger you just because older you isn't happy?
+:{{A|VO side2 hzzy bailu 112.ogg}} '''Bailu:''' Exactly!
+:{{A|VO side2 hzzy bailu 113.ogg}} '''Bailu:''' Why do they always talk about things I don't understand!
+:{{A|VO side2 hzzy bailu 114.ogg}} '''Bailu:''' I just wanna have fun!
+
+;(Unused &mdash; BailuChase_CheckGameClear)
+<pre>{
+	"$type": "RPG.GameCore.SetFloorCustomBool",
+	"Name": {
+		"Value": "BailuChase_GameClear"
+	},
+	"Value": {
+		"Value": true
+	}
+}</pre>
+
+;(Unused &mdash; BailuChase_ShowHint)
+<pre>{
+	"$type": "RPG.GameCore.SetFloorCustomBool",
+	"Name": {
+		"Value": "BailuChase_ContactCD"
+	},
+	"Value": {}
+}</pre>
+::<!--15-second delay-->
+:<pre>{
+	"$type": "RPG.GameCore.SetFloorCustomBool",
+	"Name": {
+		"Value": "BailuChase_ContactCD"
+	},
+	"Value": {
+		"Value": true
+	}
+}</pre>
+;(Unused &mdash; MissionFinish_801511103)
+
+
+;(Unused &mdash; X203_TeleportFinish)
+<pre>{
+	"$type": "RPG.GameCore.CreateProp",
+	"GroupID": {
+		"FixedValue": {
+			"Value": 2
+		}
+	},
+	"GroupPropID": {
+		"FixedValue": {
+			"Value": 300004
+		}
+	},
+	"CreateList": []
+}</pre>
+:;(Upon reaching the destination)
 {{Dialogue End}}
 
 ===Talk to Bailu{{subst:void|<!--801511104-->}}===
 {{Dialogue Start}}
+<pre>{
+	"$type": "RPG.GameCore.CreateProp",
+	"GroupID": {
+		"FixedValue": {
+			"Value": 2
+		}
+	},
+	"GroupPropID": {
+		"FixedValue": {
+			"Value": 300002
+		}
+	},
+	"CreateList": []
+}</pre>
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{A|VO side2 hzzy bailu 115.ogg}} '''Bailu:''' Lemme go! I don't wanna be locked in here!
+:{{A|VO side2 hzzy huohuo 168.ogg}} '''Huohuo:''' Lady Bailu &mdash; please calm down. You're not yourself right now &mdash; you're being influenced by a heliobus.
+:{{A|VO side2 hzzy bailu 116.ogg}} '''Bailu:''' You're lying! I never had playmates. Today I finally found one, and you guys are trying to take them away...
+:{{A|VO side2 hzzy bailuf 115.ogg}} '''Luxie:''' Grown-ups are so mean! As soon as they see children having fun, they wanna ruin it!
+:{{DIcon|Arrow}} Hee-hee! I'm a big meany head!
+::Hee-hee! I'm a big meany head!
+::You're right. Sorr... Sowwie!
+::{{A|VO side2 hzzy huohuo 169.ogg}} '''Huohuo:''' Careful! Don't let them manipulate you.
+::Yo boss, maybe we should let her off with a warning this time?
+:{{DIcon|Arrow}} You're right. Sorr... Sowwie!
+::{{A|VO side2 hzzy huohuo 169.ogg}} '''Huohuo:''' Careful! Don't let them manipulate you.
+::Yo boss, maybe we should let her off with a warning this time?
+:{{DIcon|Arrow}} Yo boss, maybe we should let her off with a warning this time?
+:{{A|VO side2 hzzy huohuo 170.ogg}} '''Huohuo:''' Careful! Don't let them manipulate you.
+:{{A|VO side2 hzzy guinaifen 172.ogg}} '''Guinaifen:''' Phew, sure enough, they walked right into our trap.
 :{{tx}}
+
+;(Talk to Huohuo)
+:{{A|VO side2 hzzy huohuo 166.ogg}} '''Huohuo:''' The Lunaumbra Gourd is in place. If we can chase Lady Bailu to this spot, we should be able to catch her...
+:{{A|VO side2 hzzy huohuo 167.ogg}} '''Huohuo:''' Umm... b&mdash;be careful, okay?
+
+;(Talk to Guinaifen)
+:{{A|VO side2 hzzy huohuo 166.ogg}} '''Huohuo:''' The Lunaumbra Gourd is in place. If we can chase Lady Bailu to this spot, we should be able to catch her...
+:{{A|VO side2 hzzy huohuo 167.ogg}} '''Huohuo:''' Umm... b&mdash;be careful, okay?
+
+;(Talk to Sushang)
+:{{A|VO side2 hzzy huohuo 166.ogg}} '''Huohuo:''' The Lunaumbra Gourd is in place. If we can chase Lady Bailu to this spot, we should be able to catch her...
+:{{A|VO side2 hzzy huohuo 167.ogg}} '''Huohuo:''' Umm... b&mdash;be careful, okay?
+:{{tx}}
+<pre>{
+	"$type": "RPG.GameCore.PlayTimelinePrefab",
+	"PrefabPath": "CutSceneSpecial/CS_ActivityHeliobus_Gourd/CS_ActivityHeliobus_Gourd.prefab",
+	"AreaName": {
+		"Custom": true,
+		"Key": "AreaName"
+	},
+	"AnchorName": {
+		"Custom": true,
+		"Key": "AnchorName"
+	}
+}</pre>
+:{{tx}}
+----
 {{Dialogue End}}
 
 ==Other Languages==

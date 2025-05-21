@@ -60,113 +60,380 @@ Mission Through a Glass Darkly Caelus.png|Caelus
 ===Head to Golden Hour and meet with the Crew{{subst:void|<!--103050152-->}}===
 {{Mission Description|type=trailblaze|location=Golden Hour|Firefly has confessed her innermost thoughts to you. No matter how you feel about it, it is time for you to say farewell... However, you can still walk the last part of this journey together.<br />Head to Golden Hour and return to reality to reunite with everyone.}}
 {{Dialogue Start}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{A|VO chapter3 4 player 101 m.ogg}} {{A|VO chapter3 4 player 101 f.ogg}} '''(Trailblazer):''' (Come to think of it, I wonder if I have to go to the hotel to return to reality...)
+:{{A|VO chapter3 4 player 102 m.ogg}} {{A|VO chapter3 4 player 102 f.ogg}} '''(Trailblazer):''' (...Strange, where's everyone gone?)
+:<!--0.5-second delay-->
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{A|VO chapter3 4 player 103 m.ogg}} {{A|VO chapter3 4 player 103 f.ogg}} '''(Trailblazer):''' (Sampo? Is that guy up to no good again?)
+
+;(Upon reaching the destination)
 :{{tx}}
+----
+;([[#Gallery|Cutscene]] plays)
+::Umm, excuse me...
+::Why don't you rest for a little while...
+::...inside the real Dreamscape.
+;(Cutscene ends)
+----
+:{{tx}}
+----
+<pre>{
+	"$type": "RPG.GameCore.PlayMessage",
+	"MessageSectionID": 1303000
+}</pre>
+:{{A|VO chapter3 4 player 106 m.ogg}} {{A|VO chapter3 4 player 106 f.ogg}} '''(Trailblazer):''' (Can't get in touch with...)
+;(Unused &mdash; 103050103_3DtxtAppear)
+<pre>{
+	"$type": "RPG.GameCore.AdvCreateGroupEntity",
+	"InstanceIDList": [
+		300001
+	]
+}</pre>
+::<!--1-second delay-->
+:<pre>{
+	"$type": "RPG.GameCore.AdvCreateGroupEntity",
+	"InstanceIDList": [
+		300002
+	]
+}</pre>
+
+;(Unused &mdash; 103050103_3DtxtDestory)
+<pre>{
+	"$type": "RPG.GameCore.AdvDestroyGroupEntity",
+	"InstanceIDList": [
+		300001,
+		300002
+	]
+}</pre>
 {{Dialogue End}}
 
 ===Leave the suspicious room{{subst:void|<!--103050104-->}}===
 {{Mission Description|type=trailblaze|location=A Child's Dream|update|As expected, returning to reality isn't as simple as you expected &mdash; Firefly and you are attacked by Sampo as soon as you arrive at the Golden Hour. Before you lose consciousness, you see Sampo shift into what appears to be the figure of a woman... Either he's a habitual crossdresser, or your assailant is actually someone else.<br />Just who is she? Unfortunately, you don't have time to think about this right now &mdash; that girl has cast an illusion on you and sent you to a mysterious location. It would be best to find a way to escape from this place before anything.}}
 {{Dialogue Start}}
+
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{A|VO chapter3 4 player 107 m.ogg}} {{A|VO chapter3 4 player 107 f.ogg}} '''(Trailblazer):''' (This is too weird...)
+;(If {{F|ToyRoomState}} is undefined 0)
+:<pre>{
+	"$type": "RPG.GameCore.TriggerEntityServerEvent"
+}</pre>
+;(If {{F|ToyRoomState}} is not undefined 0)
+:;(Return to previous option selection)
+:{{A|VO chapter3 4 blackswan 103.ogg}} '''Black Swan:''' You're awake, lazy bug. Looks like you had a nice dream.
+:{{A|VO chapter3 4 blackswan 104.ogg}} '''Black Swan:''' How was it? Did you dream of me?
+:{{DIcon|Arrow}} Did you save us?
+:{{DIcon|Arrow}} Am I still alive...?
+:{{DIcon|Arrow}} Are we in Heaven... Or?
+:{{A|VO chapter3 4 blackswan 105.ogg}} '''Black Swan:''' I didn't do much, just helped you leave the Memory Zone.
+:Am I still alive...?
+:Are we in Heaven... Or?
+:{{A|VO chapter3 4 blackswan 106.ogg}} '''Black Swan:''' Welcome to reality. More specifically, The Reverie, the safest and most familiar place you can be.
+:{{A|VO chapter3 4 blackswan 107.ogg}} '''Black Swan:''' I'm happy to see that you've kept your wits, and that you haven't been affected by the *Primal Dreamscape*. How lucky.
+:{{DIcon|Arrow}} You're the Garden of Recollection's Memokeeper...?
+:{{DIcon|Arrow}} What is the Primal Dreamscape...?
+:{{DIcon|Arrow}} Firefly... Did she make it out?
+::{{A|VO chapter3 4 blackswan 108.ogg}} '''Black Swan:''' Heheh, you're quite concerned about that young lady. That's fair &mdash; she was hell-bent on assuring your safety even at the brink of death... Started to tug a little at my heartstrings, even.
+:{{A|VO chapter3 4 blackswan 109.ogg}} '''Black Swan:''' I know you've many questions, so please compose yourself. Before that, you should let your friends know you're safe.
 :{{tx}}
 {{Dialogue End}}
 
 ===Speak with Firefly{{subst:void|<!--103050105-->}}===
 {{Mission Description|type=trailblaze|location=A Child's Dream|update|As expected, returning to reality isn't as simple as you expected &mdash; Firefly and you are attacked by Sampo as soon as you arrive at the Golden Hour. Before you lose consciousness, you see Sampo shift into what appears to be the figure of a woman... Either he has always had a petite feminine build, or your assailant is actually someone else.<br />You find Firefly in the mysterious space &mdash; It seems the stranger didn't leave her alone, either. Now, you can look for the way out together.}}
 {{Dialogue Start}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{A|VO chapter3 4 player 108 m.ogg}} {{A|VO chapter3 4 player 108 f.ogg}} '''(Trailblazer):''' (...Firefly?)
+
+;(Upon reaching the destination)
+:{{tx}}
+:{{A|VO chapter3 4 firefly 103 m.ogg}} {{A|VO chapter3 4 firefly 103 f.ogg}} '''Firefly:''' Ah... (Trailblazer)! So you're really here too...
+:{{DIcon|Arrow}} What happened?
+:{{DIcon|Arrow}} Where is this?
+:{{DIcon|Arrow}} Don't tell me we're dead...
+:{{A|VO chapter3 4 firefly 104.ogg}} '''Firefly:''' I... don't know.
+:{{A|VO chapter3 4 firefly 105.ogg}} '''Firefly:''' In any case, we must still be in a dream. It can't be anywhere else, much less reality... I'm never wrong about the distinctive sense of memoria that's in the air.
+:{{A|VO chapter3 4 firefly 106.ogg}} '''Firefly:''' But this is very different from the "sweet dream" that I'm familiar with &mdash; suffocating... silent... uneasy... And these floating words. Can you see them too? This kind of place would never exist on Penacony under the provision of The Family. So, could this be a dream bubble...?
+:{{A|VO chapter3 4 firefly 107.ogg}} '''Firefly:''' No, that's not right. Do you remember, before we were unconscious, that friend of yours said: The real {{Rubi|Dreamscape|Penacony}}...
+:{{DIcon|Arrow}} This is the real Dreamscape...?
+::{{A|VO chapter3 4 firefly 108.ogg}} '''Firefly:''' I'm not sure. Everything happened so quickly. But regardless, The Family must be hiding something &mdash; something about the truth of the Dreamscape...
+::This is The Family's secret...?
+::{{A|VO chapter3 4 firefly 109.ogg}} '''Firefly:''' I'm not sure. Everything happened so quickly. But regardless, The Family must be hiding something &mdash; something about the truth of the Dreamscape...
+::He's not my friend.
+:{{DIcon|Arrow}} This is The Family's secret...?
+::{{A|VO chapter3 4 firefly 109.ogg}} '''Firefly:''' I'm not sure. Everything happened so quickly. But regardless, The Family must be hiding something &mdash; something about the truth of the Dreamscape...
+::He's not my friend.
+:{{DIcon|Arrow}} He's not my friend.
+:{{A|VO chapter3 4 firefly 110.ogg}} '''Firefly:''' I should've been wary of him sooner... Sorry. Regardless, The Family must be hiding something &mdash; something about the truth behind the Dreamscape...
+:{{A|VO chapter3 4 firefly 111.ogg}} '''Firefly:''' And, you probably noticed it when you woke up as well &mdash; the ticking of clocks all around us... My gut tells me that the secret hidden here is also linked to that mysterious Watchmaker.
 :{{tx}}
 {{Dialogue End}}
 
 ===Find an exit from the mysterious space{{subst:void|<!--103050107-->}}===
 {{Dialogue Start}}
-:{{tx}}
+
+
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{A|VO chapter3 4 firefly 115.ogg}} '''Firefly:''' Dead-end here too... Given the layout of the room, are they really suggesting we maneuver around using the walls?
 {{Dialogue End}}
 
 ===Search for an exit from the room{{subst:void|<!--103050102-->}}===
 {{Dialogue Start}}
-:{{tx}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{A|VO chapter3 4 firefly 116.ogg}} '''Firefly:''' Can't believe that worked. Tampering with the Dreamscape's gravity is clearly strictly forbidden...
+:{{A|VO chapter3 4 firefly 117.ogg}} '''Firefly:''' ...Careful, there are some strange things on the wall... And they don't look like they're from the Dreamjolt Troupe...
 {{Dialogue End}}
 
 ===Continue to search the room for an exit{{subst:void|<!--103050109-->}}===
 {{Dialogue Start}}
-:{{tx}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{A|VO chapter3 4 firefly 118.ogg}} '''Firefly:''' Mikhail...?
 {{Dialogue End}}
 
 ===Continue forward{{subst:void|<!--103050111-->}}===
 {{Dialogue Start}}
+;(Upon reaching the destination)
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
 :{{tx}}
 {{Dialogue End}}
 
 ===Head to the hall's exit{{subst:void|<!--103050115-->}}===
 {{Dialogue Start}}
+;(Upon reaching the destination)
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{A|VO chapter3 4 firefly 121.ogg}} '''Firefly:''' Incredible... This is really a sight that can only be witnessed in a dream...
+:{{A|VO chapter3 4 firefly 122.ogg}} '''Firefly:''' These words have been appearing and then vanishing persistently for awhile now. Whose thoughts are they? And who is this Mikhail...
+:{{DIcon|Arrow}} It's kinda scary...
+:{{DIcon|Arrow}} There is a sadness to this...
+:{{DIcon|Arrow}} Mikhail... Where have I heard this name...
+:{{A|VO chapter3 4 firefly 123.ogg}} '''Firefly:''' It's like I can feel... emotions contained within them. Confusion... fear... sadness... and others so faint I can barely feel them...
 :{{tx}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{A|VO chapter3 4 firefly 126.ogg}} '''Firefly:''' That was a close one... but we made it.
+:{{A|VO chapter3 4 firefly 127.ogg}} '''Firefly:''' So strange... The Family insist that the Dreamscape is absolutely safe.
 {{Dialogue End}}
 
 ===Continue forward{{subst:void|<!--103050118-->}}===
 {{Dialogue Start}}
-:{{tx}}
+
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{A|VO chapter3 4 firefly 128.ogg}} '''Firefly:''' There's nothing but... a jigsaw puzzle here.
+<pre>{
+	"$type": "RPG.GameCore.WaitEntityServerEvent"
+}</pre>
+;(If {{cx}}{{subst:void|<!--{"$type":"RPG.GameCore.ByComparePropState","TargetType":{"$type":"RPG.GameCore.GroupFetchLocalTarget","TargetType":"Prop","Targets":[300002]}}-->}}, {{cx}}{{subst:void|<!--{"$type":"RPG.GameCore.ByComparePropState","TargetType":{"$type":"RPG.GameCore.GroupFetchLocalTarget","TargetType":"Prop","Targets":[300003]}}-->}}, {{cx}}{{subst:void|<!--{"$type":"RPG.GameCore.ByComparePropState","TargetType":{"$type":"RPG.GameCore.GroupFetchLocalTarget","TargetType":"Prop","Targets":[300004]}}-->}}, and {{cx}}{{subst:void|<!--{"$type":"RPG.GameCore.ByComparePropState","TargetType":{"$type":"RPG.GameCore.GroupFetchLocalTarget","TargetType":"Prop","Targets":[300001]},"State":"Open"}-->}})
+<pre>{
+	"$type": "RPG.GameCore.ChangePropState"
+}</pre>
 {{Dialogue End}}
 
 ===Find the lost pieces{{subst:void|<!--103050119-->}}===
 {{Mission Description|type=trailblaze|location=A Child's Dream|update|As expected, returning to reality isn't as simple as you expected &mdash; Firefly and you are attacked by Sampo as soon as you arrive at the Golden Hour. Before you lose consciousness, you see Sampo shift into what appears to be the figure of a woman... Either he's a habitual crossdresser, or your assailant is actually someone else.<br />As you are about to reach the end of this space, you see a Dreamweaver Gentleman holding a puzzle, within which lies the key to your escape.}}
 {{Dialogue Start}}
-:{{tx}}
+;(Unused &mdash; 103050120_3DtxtAppear)
+<pre>{
+	"$type": "RPG.GameCore.AdvDestroyGroupEntity",
+	"InstanceIDList": [
+		300001
+	]
+}</pre>
 {{Dialogue End}}
 
 ===Use the characteristics of the Dreamscape to open the door{{subst:void|<!--103050124-->}}===
 {{Mission Description|type=trailblaze|location=A Child's Dream|update|As expected, returning to reality isn't as simple as you expected &mdash; Firefly and you are attacked by Sampo as soon as you arrive at the Golden Hour. Before you lose consciousness, you see Sampo shift into what appears to be the figure of a woman... Either he's a habitual crossdresser, or your assailant is actually someone else.<br />As you are about to reach the end of this space, you see a Dreamweaver Gentleman holding a puzzle and use him to open the door to the exit. Continue onwards.}}
 {{Dialogue Start}}
-:{{tx}}
+:<!--2-second delay-->
+:{{A|VO chapter3 4 firefly 130.ogg}} '''Firefly:''' This should fill in the empty spaces in the puzzle.
 {{Dialogue End}}
 
 ===Continue forward{{subst:void|<!--103050125-->}}===
 {{Dialogue Start}}
-:{{tx}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{A|VO chapter3 4 firefly 132.ogg}} '''Firefly:''' Er... Just one chest? I'm sure that's not a trap. Should we open it...?
+
+;(Upon reaching the destination)
+<pre>{
+	"$type": "RPG.GameCore.TransitEnvProfile",
+	"Path": {
+		"Value": "Stages/Outputs/Chapter03/EnviroProfile/Chap03_CloseView_MAZ_P102_Rota_night_02.enviroProfile.asset"
+	},
+	"Duration": 3
+}</pre>
+:<!--1-second delay-->
+:{{A|VO chapter3 4 firefly 131.ogg}} '''Firefly:''' Ah! The wall has vanished... Feels like we're reaching the end... right?
 {{Dialogue End}}
 
 ===Open the suspicious chest{{subst:void|<!--103050126-->}}===
 {{Mission Description|type=trailblaze|location=A Child's Dream|update|As expected, returning to reality isn't as simple as you expected &mdash; Firefly and you are attacked by Sampo as soon as you arrive at the Golden Hour. Before you lose consciousness, you see Sampo shift into what appears to be the figure of a woman... Either he's a habitual crossdresser, or your assailant is actually someone else.<br />You arrive in a room with a strange atmosphere. An unguarded treasure box lies in front of you, waiting for you to open it... Will you open it?}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Obtain {{Item|Unknown Jigsaw Fragment|20|x=1|text=Unknown Jigsaw Fragment}})
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+<pre>{
+	"$type": "RPG.GameCore.TransitEnvProfile",
+	"Path": {
+		"Value": "Stages/Outputs/Chapter03/EnviroProfile/Chap03_CloseView_MAZ_P102_Rota_night_01_Varient1.enviroProfile.asset"
+	},
+	"Duration": 4
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.TransitEnvProfileForStory",
+	"Path": {
+		"Value": "Stages/Outputs/Chapter03/EnviroProfile/Chap03_CloseView_MAZ_P102_Rota_night_01_Varient1.enviroProfile.asset"
+	},
+	"Duration": 1
+}</pre>
+:<!--2-second delay-->
+:{{A|VO chapter3 4 firefly 133.ogg}} '''Firefly:''' ...What's going on!? The lights have all turned on. So creepy...
+:{{A|VO chapter3 4 firefly 134.ogg}} '''Firefly:''' But, since there are so many doors here... we should be able to leave through one of them...
 {{Dialogue End}}
 
 ===Leave this place through any portal{{subst:void|<!--103050128-->}}===
 {{Mission Description|type=trailblaze|location=A Child's Dream|update|As expected, returning to reality isn't as simple as you expected &mdash; Firefly and you are attacked by Sampo as soon as you arrive at the Golden Hour. Before you lose consciousness, you see Sampo shift into what appears to be the figure of a woman... Either he's a habitual crossdresser, or your assailant is actually someone else.<br />Only after you have opened the chest do you discover several great doors surrounding you... Perhaps you can use one of these doors to leave this place.}}
 {{Dialogue Start}}
-:{{tx}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{A|VO chapter3 4 firefly 135.ogg}} '''Firefly:''' ...The exact same room?
+:{{A|VO chapter3 4 misha 169.ogg}} '''???:''' ██Help█ ███ █ help ██...
+;(Upon reaching the destination)
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{A|VO chapter3 4 firefly 136.ogg}} '''Firefly:''' This again... No wait, could it be...
+:{{A|VO chapter3 4 misha 170.ogg}} '''???:''' █said███do█not█ ██ █open the box██...
+;(Upon reaching the destination)
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{A|VO chapter3 4 firefly 138.ogg}} '''Firefly:''' Uh oh... Which one was the original door?
+:{{A|VO chapter3 4 misha 172.ogg}} '''???:''' █beg█you██ █I████ ███ █scared█...
+;(Upon reaching the destination)
+;(Upon reaching the destination)
+:{{A|VO chapter3 4 misha 174.ogg}} '''???:''' █ ███ █ ███ ██ ███ ███ █ █ ████ ██
+:{{A|VO chapter3 4 firefly 140.ogg}} '''Firefly:''' The TVs are so bright, it's hurting my eyes... Careful, something's up...
+<pre>{
+	"$type": "RPG.GameCore.WaitMissionTalkFinish"
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.PPFilterStackEffect",
+	"StartRate": 0.4,
+	"Duration": 0.25,
+	"AssetPath": "EnviroSystem/PostProcessFilterAsset/Flash.asset"
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.TriggerSound",
+	"SoundName": {
+		"Value": "Ev_sfx_task_feedback_childsDream_ghostCorridor_light"
+	}
+}</pre>
+:<!--0.26-second delay-->
+<pre>{
+	"$type": "RPG.GameCore.SwitchCharacterAnchorV2",
+	"SwitchCharacterAnchorConfig": {
+		"IsLocalPlayer": true,
+		"CharacterUniqueName": "LocalPlayer",
+		"AreaName": {
+			"Value": "LevelArea_P20312_F20312001_G284"
+		},
+		"AnchorName": {
+			"Value": "Anchor1"
+		}
+	}
+}</pre>
+;(Upon reaching the destination)
 {{Dialogue End}}
 
 ===Defeat the unknown creature{{subst:void|<!--103050140-->}}===
 {{Mission Description|type=trailblaze|location=A Child's Dream|update|As expected, returning to reality isn't as simple as you expected &mdash; Firefly and you are attacked by Sampo as soon as you arrive at the Golden Hour. Before you lose consciousness, you see Sampo shift into what appears to be the figure of a woman... Either he's a habitual crossdresser, or your assailant is actually someone else.<br />You are trapped in this suspicious room and encounter a terrifying memetic monster... Can you really defeat it?}}
 {{Dialogue Start}}
-:{{tx}}
+;(If {{cx}}{{subst:void|<!--{"$type":"RPG.GameCore.ByCompareMissionBattleWin","EventID":20312050}-->}})
+:----
+:;([[#Gallery|Cutscene]] plays)
+:::If you don't know the right technique...
+:::you might never return from the shadow of Death...
+:::Emerging without a scratch
+:;(Cutscene ends)
+:----
+:;(Enter battle)
+:::{{tx|Enemy list missing}}
+;(If {{cx}}{{subst:void|<!--{"$type":"RPG.GameCore.ByCompareMissionBattleWin","EventID":20312050}-->}})
+:;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+;([[#Gallery|Cutscene]] plays)
+;(Enter battle)
+:{{Enemy List|Memory Zone Meme "Something Unto Death"*1/-9.1% HP}}
+----
+;([[#Gallery|Cutscene]] plays)
+::See ya next time.
+::Hurry.
+;(Cutscene ends)
+----
+;(Upon reaching the destination)
 {{Dialogue End}}
 
 ===Leave this place through another portal{{subst:void|<!--103050149-->}}===
 {{Mission Description|type=trailblaze|location=A Child's Dream|update|As expected, returning to reality isn't as simple as you expected &mdash; Firefly and you are attacked by Sampo as soon as you arrive at the Golden Hour. Before you lose consciousness, you see Sampo shift into what appears to be the figure of a woman... Either he's a habitual crossdresser, or your assailant is actually someone else.<br />Only after you have opened the chest do you discover several great doors surrounding you... Perhaps you can use one of these doors to leave this place.}}
 {{Dialogue Start}}
-:{{tx}}
 {{Dialogue End}}
 
 ===Find a way to leave this suspicious space{{subst:void|<!--103050150-->}}===
 {{Mission Description|type=trailblaze|location=A Child's Dream|update|As expected, returning to reality isn't as simple as you expected &mdash; Firefly and you are attacked by Sampo as soon as you arrive at the Golden Hour. Before you lose consciousness, you see Sampo shift into what appears to be the figure of a woman... Either he's a habitual crossdresser, or your assailant is actually someone else.<br />It seems you have returned to a familiar place... What is going on?}}
 {{Dialogue Start}}
-:{{tx}}
 {{Dialogue End}}
 
 ===Continue your search for a way to leave this suspicious place{{subst:void|<!--103050151-->}}===
 {{Dialogue Start}}
-:{{tx}}
 {{Dialogue End}}
 
 ===Find an exit from the mysterious space{{subst:void|<!--103050106-->}}===
 {{Mission Description|type=trailblaze|location=A Child's Dream|update|As expected, returning to reality isn't as simple as you expected &mdash; Firefly and you are attacked by Sampo as soon as you arrive at the Golden Hour. Before you lose consciousness, you see Sampo shift into what appears to be the figure of a woman... Either he has always had a petite feminine build, or your assailant is actually someone else.<br />You find Firefly in the mysterious space &mdash; It seems the stranger didn't leave her alone, either. Now, you can look for the way out together.}}
 {{Dialogue Start}}
-:{{tx}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{A|VO chapter3 4 firefly 114.ogg}} '''Firefly:''' We can't get through here. Let's take the way around from the side.
+;(Upon reaching the destination)
 {{Dialogue End}}
 
 ===Defeat the unknown creature{{subst:void|<!--103050141-->}}===
 {{Mission Description|type=trailblaze|location=A Child's Dream|update|As expected, returning to reality isn't as simple as you expected &mdash; Firefly and you are attacked by Sampo as soon as you arrive at the Golden Hour. Before you lose consciousness, you see Sampo shift into what appears to be the figure of a woman... Either he's a habitual crossdresser, or your assailant is actually someone else.<br />You are trapped in this suspicious room and encounter a terrifying memetic monster... Can you really defeat it?}}
 {{Dialogue Start}}
-:{{tx}}
+----
+;([[#Gallery|Cutscene]] plays)
+::If you don't know the right technique...
+::you might never return from the shadow of Death...
+::Emerging without a scratch
+;(Cutscene ends)
+----
+;(Enter battle)
+::{{tx|Enemy list missing}}
 {{Dialogue End}}
 
 ==Other Languages==

@@ -48,72 +48,600 @@ PageTitle=#Silent Galaxy#
 ===Go to the Everwinter Monument and take pictures{{subst:void|<!--101150205-->}}===
 {{Mission Description|type=trailblaze|location=Qlipoth Fort|The story ended and Bronya succeeded as the Supreme Guardian. The Overworld and Underworld reunited to create a complete Belobog.<br />You bid farewell to Bronya, but March 7th still has some unfulfilled wishes before you leave Jarilo-VI...<br />Take another stroll in the city and record with your camera the people and things you want to commit to memory.}}
 {{Dialogue Start}}
-:{{tx}}
+
+:{{A|VO chapter1 10 mar7th 287.ogg}} '''March 7th:''' Bronya said she's willing to wait 700 years for us...
+:{{A|VO chapter1 10 mar7th 288.ogg}} '''March 7th:''' Hmm... Dan Heng, how long can humans live for?
+:{{A|VO chapter1 10 danheng 228.ogg}} '''Dan Heng:''' ...Forever. But in that scenario, they can't be considered human anymore.
+:{{A|VO chapter1 10 mar7th 289.ogg}} '''March 7th:''' Yikes! So serious! I was just curious.
+
+;(Upon reaching the destination)
+<pre>{
+	"$type": "RPG.GameCore.PropSetVisibility",
+	"SpecifiedRelativePaths": [],
+	"TargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvPropEx",
+		"FetchType": "SinglePropByPropID",
+		"SinglePropID": {
+			"GroupID": {
+				"FixedValue": {
+					"Value": 96
+				}
+			},
+			"ID": {
+				"FixedValue": {
+					"Value": 300001
+				}
+			}
+		}
+	}
+}</pre>
+:{{A|VO chapter1 10 mar7th 290.ogg}} '''March 7th:''' Here we are, Everwinter Monument! Photo time!
+:{{A|VO chapter1 10 mar7th 291.ogg}} '''March 7th:''' Oh, Pela and Hook are here too? Let's make sure we get them in the background!
+:{{DIcon|Arrow}} Maybe we could try for a cleaner composition for this one...
+:<pre>{
+	"$type": "RPG.GameCore.PhotoGraphAimTarget",
+	"AimTargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvProp",
+		"MultiGroupFetch": [
+			{
+				"GroupID": {
+					"FixedValue": {
+						"Value": 96
+					}
+				},
+				"ID": {
+					"FixedValue": {
+						"Value": 300002
+					}
+				}
+			}
+		]
+	},
+	"IsAim": true,
+	"AimIdentifyType": "Manual"
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.PhotoGraphWaitIdentifyFinish",
+	"WaitTargetType": {
+		"$type": "RPG.GameCore.TargetFetchAdvProp",
+		"MultiGroupFetch": [
+			{
+				"GroupID": {
+					"FixedValue": {
+						"Value": 96
+					}
+				},
+				"ID": {
+					"FixedValue": {
+						"Value": 300002
+					}
+				}
+			}
+		]
+	},
+	"WaitAll": true,
+	"OnIdentifyFinish": [],
+	"OnIdentifyFailed": [],
+	"OnPreviewFinish": []
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.PhotoGraphAimTarget",
+	"AimTargetType": {
+		"$type": "RPG.GameCore.TargetConcat",
+		"Targets": [
+			{
+				"$type": "RPG.GameCore.TargetFetchAdvProp",
+				"MultiGroupFetch": [
+					{
+						"GroupID": {
+							"FixedValue": {
+								"Value": 96
+							}
+						},
+						"ID": {
+							"FixedValue": {
+								"Value": 300002
+							}
+						}
+					}
+				]
+			}
+		]
+	},
+	"AimIdentifyType": "Manual"
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.SetMissionCustomValue",
+	"SubmissionID": 101150206,
+	"MissionCustomValue": {
+		"Name": "OldValue_0",
+		"ValidValueParamList": [
+			1,
+			2
+		]
+	},
+	"CustomValue": 1
+}</pre>
+:{{DIcon|Arrow}} Good idea. Let's show them the photos once we're done.
+:<pre>{
+	"$type": "RPG.GameCore.PhotoGraphAimTarget",
+	"AimTargetType": {
+		"$type": "RPG.GameCore.TargetConcat",
+		"Targets": [
+			{
+				"$type": "RPG.GameCore.TargetFetchAdvNPC",
+				"MultiGroupFetch": [
+					{
+						"GroupID": 96,
+						"GroupNpcID": 400001
+					},
+					{
+						"GroupID": 96,
+						"GroupNpcID": 400002
+					}
+				]
+			},
+			{
+				"$type": "RPG.GameCore.TargetFetchAdvProp",
+				"MultiGroupFetch": [
+					{
+						"GroupID": {
+							"FixedValue": {
+								"Value": 96
+							}
+						},
+						"ID": {
+							"FixedValue": {
+								"Value": 300002
+							}
+						}
+					}
+				]
+			}
+		]
+	},
+	"IsAim": true,
+	"AimIdentifyType": "Manual"
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.PhotoGraphWaitIdentifyFinish",
+	"WaitTargetType": {
+		"$type": "RPG.GameCore.TargetConcat",
+		"Targets": [
+			{
+				"$type": "RPG.GameCore.TargetFetchAdvNPC",
+				"MultiGroupFetch": [
+					{
+						"GroupID": 96,
+						"GroupNpcID": 400001
+					},
+					{
+						"GroupID": 96,
+						"GroupNpcID": 400002
+					}
+				]
+			},
+			{
+				"$type": "RPG.GameCore.TargetFetchAdvProp",
+				"MultiGroupFetch": [
+					{
+						"GroupID": {
+							"FixedValue": {
+								"Value": 96
+							}
+						},
+						"ID": {
+							"FixedValue": {
+								"Value": 300002
+							}
+						}
+					}
+				]
+			}
+		]
+	},
+	"WaitAll": true,
+	"OnIdentifyFinish": [],
+	"OnIdentifyFailed": [
+		{
+			"$type": "RPG.GameCore.TriggerCustomString",
+			"CustomString": {
+				"Value": "Mission_101150206_CameraSuccess02"
+			}
+		}
+	],
+	"OnPreviewFinish": []
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.PhotoGraphAimTarget",
+	"AimTargetType": {
+		"$type": "RPG.GameCore.TargetConcat",
+		"Targets": [
+			{
+				"$type": "RPG.GameCore.TargetFetchAdvNPC",
+				"MultiGroupFetch": [
+					{
+						"GroupID": 96,
+						"GroupNpcID": 400001
+					},
+					{
+						"GroupID": 96,
+						"GroupNpcID": 400002
+					}
+				]
+			},
+			{
+				"$type": "RPG.GameCore.TargetFetchAdvProp",
+				"MultiGroupFetch": [
+					{
+						"GroupID": {
+							"FixedValue": {
+								"Value": 96
+							}
+						},
+						"ID": {
+							"FixedValue": {
+								"Value": 300002
+							}
+						}
+					}
+				]
+			}
+		]
+	},
+	"AimIdentifyType": "Manual"
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.SetMissionCustomValue",
+	"SubmissionID": 101150206,
+	"MissionCustomValue": {
+		"Name": "OldValue_0",
+		"ValidValueParamList": [
+			1,
+			2
+		]
+	},
+	"CustomValue": 2
+}</pre>
+;(If {{F|MissionCV-1011503-undefined}} is undefined 1)
+;(If {{F|MissionCV-1011503-undefined}} is undefined 2)
 {{Dialogue End}}
 
 ===Show the photo to Pela and Hook{{subst:void|<!--101150209-->}}===
 {{Mission Description|type=trailblaze|location=Administrative District|update|You photographed the Everwinter Monument and included Pela and Hook.<br />March 7th seems to be happy with your photography skills... Go ask what the two people in your photo think.}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Pela)
+----
+:{{A|VO chapter1 10 hook 218.ogg}} '''Hook:''' Whoaaaa! So much ice! But it's warm here... aren't you Overworlders worried it'll melt?
+:{{A|VO chapter1 10 pela 201.ogg}} '''Pela:''' Not at all. It may look like ice, but it's actually a monument carved out of Geomarrow crystal.
+:{{A|VO chapter1 10 hook 219.ogg}} '''Hook:''' Ah, Geomarrow! It's a shame daddy isn't here &mdash; He'd find a buyer for it and sell it for big bucks!
+:{{A|VO chapter1 10 pela 202.ogg}} '''Pela:''' Uh... How do I explain... This particular piece of Geomarrow is definitely not for sale...
+:{{DIcon|Arrow}} Have a look! I took a photo of everyone.
+:{{A|VO chapter1 10 hook 220.ogg}} '''Hook:''' A "photo?" What's that? Hook wants to see it!
+:{{A|VO chapter1 10 pela 203.ogg}} '''Pela:''' I must remind you that taking photos of others without gaining their permission violates Belobog public security ordinance number...
+:{{A|VO chapter1 10 pela 204.ogg}} '''Pela:''' ...Wait, that's a nice picture! And... it's crystal clear.
+:{{A|VO chapter1 10 hook 221.ogg}} '''Hook:''' Wow! Photos are awesome! ...Can Hook have it?
+:{{A|VO chapter1 10 mar7th 292.ogg}} '''March 7th:''' Hee-hee, you like it? It's yours. A farewell gift from us.
+----
 {{Dialogue End}}
 
 ===Go to the Neverwinter Workshop and take pictures{{subst:void|<!--101150210-->}}===
 {{Mission Description|type=trailblaze|location=Neverwinter Workshop|update|The story ended and Bronya succeeded as the Supreme Guardian. The Overworld and Underworld reunited to create a complete Belobog.<br />You bid farewell to Bronya, but March 7th still has some unfulfilled wishes before you leave Jarilo-VI...<br />Take another stroll in the city and record with your camera the people and things you want to commit to memory.}}
 {{Dialogue Start}}
-:{{tx}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{A|VO chapter1 10 serval 201.ogg}} '''Serval:''' Who's there? Didn't your parents tell you to knock before&mdash;
+:{{A|VO chapter1 10 serval 202.ogg}} '''Serval:''' Ha, it's you three! Come on in! I was just talking to Clara about you.
+:{{A|VO chapter1 10 clara 209 m.ogg}} {{A|VO chapter1 10 clara 209 f.ogg}} '''Clara:''' How have you been, {{MC|f=big sister|m=big brother}}? Miss Serval's workshop is amazing &mdash; there are all kinds of things... I like it here a lot!
+:{{A|VO chapter1 10 serval 203.ogg}} '''Serval:''' "Miss Serval..." Clara is such a well-mannered kid! Meanwhile, the Architects' children are still calling me "auntie" and making me feel old...
+:{{DIcon|Arrow}} Let's take a photo together!
+:{{DIcon|Arrow}} Still looking to hire assistants for the workshop?
+::{{A|VO chapter1 10 mar7th 295.ogg}} '''March 7th:''' Hey, that's not your line! We're here to take a photo, remember?
+:{{A|VO chapter1 10 serval 204.ogg}} '''Serval:''' Photo? ...This feels like one of my fan meet-ups, haha. Anyway, for you guys, I'd do autographs for free.
+:{{A|VO chapter1 10 clara 210.ogg}} '''Clara:''' "Photo..." Oh! I remember. When I was little, Mr. Svarog took a photo for me...
+:{{A|VO chapter1 10 serval 205.ogg}} '''Serval:''' Over here, Clara! Wanna learn some cool poses?
+:{{A|VO chapter1 10 mar7th 293.ogg}} '''March 7th:''' Okay... Where to next?
+:{{A|VO chapter1 10 mar7th 294.ogg}} '''March 7th:''' Oh, we haven't seen Serval since we got back! Let's head to the workshop.
 {{Dialogue End}}
 
 ===Show the photo to Serval and Clara{{subst:void|<!--101150213-->}}===
 {{Mission Description|type=trailblaze|location=Neverwinter Workshop|update|You took a group photo of Serval and Clara in the workshop.<br />Um, "group photo" means the photo should at least contain the two of them... You do understand this, right?}}
 {{Dialogue Start}}
-:{{tx}}
+
+
+;(Talk to Clara)
+----
+:{{A|VO chapter1 10 serval 207.ogg}} '''Serval:''' Wow, that's pretty great! I wish the photographers at my shows had your skills!
+:{{A|VO chapter1 10 clara 211.ogg}} '''Clara:''' Huh...? Am I really that short? I thought...
+:{{A|VO chapter1 10 mar7th 296.ogg}} '''March 7th:''' Don't worry! If you eat like Dan Heng, you'll be as tall as him one day! *stifled laughter*
+:{{A|VO chapter1 10 danheng 229.ogg}} '''Dan Heng:''' ...I'll let that slip.
+:{{A|VO chapter1 10 mar7th 297.ogg}} '''March 7th:''' Here, keep it... a little farewell gift from the Astral Express.
+:{{A|VO chapter1 10 serval 209.ogg}} '''Serval:''' Huh...? You're leaving so soon?
+:{{A|VO chapter1 10 serval 210.ogg}} '''Serval:''' *sigh* I understand. Well, this photo will always be close to my heart. I'll make a copy for you too, Clara.
+:{{A|VO chapter1 10 clara 213 m.ogg}} {{A|VO chapter1 10 clara 213 f.ogg}} '''Clara:''' Th&mdash;Thanks Miss Serval! {{MC|f=Big sister|m=Big brother}} (Trailblazer), March, Dan Heng... Thanks for taking care of me. Safe travels.
+:{{A|VO chapter1 10 clara 214.ogg}} '''Clara:''' If you have time... please come back and visit me and Mr. Svarog.
+----
 {{Dialogue End}}
 
 ===(Optional) Speak with the Belobog residents{{subst:void|<!--101150215-->}}===
 {{Dialogue Start}}
-:{{tx}}
+
+----
+:{{A|VO chapter1 10 mar7th 300.ogg}} '''March 7th:''' *yawn* ... That's enough sightseeing and photo-taking to last me a while...
+:{{A|VO chapter1 10 mar7th 301.ogg}} '''March 7th:''' ...Time to head back to the Goethe Hotel for a good night's sleep!
+:{{A|VO chapter1 10 danheng 230.ogg}} '''Dan Heng:''' ...We can sleep when we're back on the Express.
+:{{A|VO chapter1 10 mar7th 302.ogg}} '''March 7th:''' Not so fast! Last time we were here, that evil Madam Guardian interrupted us before we'd gotten the most out of our luxury suites... Don't you think we should make up for it?
+:{{A|VO chapter1 10 mar7th 303.ogg}} '''March 7th:''' Come onnnn! Himeko and Mr. Yang are grown-ups &mdash; I'm sure they'll cope without us for one night.
+:{{A|VO chapter1 10 mar7th 304.ogg}} '''March 7th:''' Besides, don't you want to chit-chat with the locals now that Belobog is full of life again? I know I do!
+----
 {{Dialogue End}}
 
 ===Return to the hotel and rest... with no "surprises" this time!{{subst:void|<!--101150214-->}}===
 {{Mission Description|type=trailblaze|location=Hotel Room|update|The story ended and Bronya succeeded as the Supreme Guardian. The Overworld and Underworld reunited to create a complete Belobog.<br />You spent your final relaxing time in Belobog. Now is the time to&mdash;<br />&mdash;to return to the hotel and sleep! Um, don't look at me... It's March 7th's idea.}}
 {{Dialogue Start}}
+
 :{{tx}}
+:{{A|VO chapter1 10 player 201 m.ogg}} {{A|VO chapter1 10 player 201 f.ogg}} '''(Trailblazer):''' We should be getting back to the Express. Time to find March and Dan Heng.
 {{Dialogue End}}
 
 ===Meet up with your friends and prepare to leave{{subst:void|<!--101150220-->}}===
 {{Mission Description|type=trailblaze|location=Hotel Corridor|update|The story ended, and Bronya succeeded as the Supreme Guardian. The Overworld and Underworld reunited to create a complete Belobog.<br />You spent a calm night at the Goethe Hotel. Though you had an ominous dream, the overall quality of sleep was quite satisfactory.<br />Go meet up with March 7th and Dan Heng. Now you really should get back to the Express.}}
 {{Dialogue Start}}
-:{{tx}}
+----
+:{{A|VO chapter1 10 mar7th 305 m.ogg}} {{A|VO chapter1 10 mar7th 305 f.ogg}} '''March 7th:''' Morning, (Trailblazer)! How did you sleep? I'm full of energy myself!
+:{{DIcon|Arrow}} I'm full of energy myself!
+::{{A|VO chapter1 10 mar7th 306.ogg}} '''March 7th:''' ...Copycatitis still has no cure I see.
+:{{DIcon|Arrow}} I dreamed about Sampo...
+::{{A|VO chapter1 10 mar7th 307.ogg}} '''March 7th:''' You poor thing! I'll go check the lunar calendar &mdash; today might be unlucky.
+:{{DIcon|Arrow}} It's time we went home!
+::{{A|VO chapter1 10 mar7th 308.ogg}} '''March 7th:''' *sigh* But the beds here are so nice!
+:{{A|VO chapter1 10 danheng 231.ogg}} '''Dan Heng:''' Did you get Himeko's message? It's time to go. The conductor will nag us again if we put the Express behind schedule.
+:{{A|VO chapter1 10 mar7th 309.ogg}} '''March 7th:''' Yeah, yeah. Well, pack your souvenirs and stuff. Back home we go!
+----
 {{Dialogue End}}
 
 ===Bid farewell to Belobog{{subst:void|<!--101150221-->}}===
 {{Mission Description|type=trailblaze|location=Administrative District|update|The story ended and Bronya succeeded as the Supreme Guardian. The Overworld and Underworld reunited to create a complete Belobog.<br />Take one last look at this world and this city &mdash; perhaps it is not as cold and alone anymore.}}
 {{Dialogue Start}}
-:{{tx}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:{{A|VO chapter1 10 mar7th 310.ogg}} '''March 7th:''' Here we are at last... *sigh* It's sad to say goodbye.
+:{{A|VO chapter1 10 danheng 232.ogg}} '''Dan Heng:''' Nothing lasts forever. You'll stop feeling sad the moment you set foot on the Express.
+:{{A|VO chapter1 10 mar7th 311.ogg}} '''March 7th:''' Hey, I'm not that heartless y'know...
+:{{DIcon|Arrow}} Leave Jarilo-VI and return to the Express.
+:<pre>{
+	"$type": "RPG.GameCore.SetAudioEmotionState",
+	"StateName": "State_Esilence",
+	"SubMissionID": 101150221
+}</pre>
+:{{DIcon|Exit}} I want to have one last look at this world...
 {{Dialogue End}}
 
 ===Talk to Himeko and Welt{{subst:void|<!--101150223-->}}===
 {{Mission Description|type=trailblaze|location=Parlor Car|update|The trailblazing expedition on Jarilo-VI has finally reached a satisfying conclusion.<br />You bid farewell to your new friends and return to the Express.<br />It's time to check in with Himeko and Welt about the situation on the Express.}}
 {{Dialogue Start}}
+:{{A|VO chapter1 11 mar7th 201.ogg}} '''March 7th:''' Home, sweet home! Mr. Yang and Himeko must be bored given how long our train had to stay here.
+:{{A|VO chapter1 11 mar7th 202.ogg}} '''March 7th:''' Where's our next stop? I can't wait!
+:{{A|VO chapter1 11 himeko 201.ogg}} '''Himeko:''' Welcome home, you three.
+:{{A|VO chapter1 11 mar7th 203.ogg}} '''March 7th:''' Himeko, Mr. Yang! Team Trailblaze, back from duty! Mission one: Accomplished!
+:{{A|VO chapter1 11 himeko 202 m.ogg}} {{A|VO chapter1 11 himeko 202 f.ogg}} '''Himeko:''' *chuckles* Although Welt and I didn't get the chance to go with you, I can tell you worked hard to bring things back to normal. Well done, everybody. And especially you, (Trailblazer). I heard a lot of good things about you.
+:{{DIcon|Arrow}} How would you rate my performance?
+::{{A|VO chapter1 11 himeko 203.ogg}} '''Himeko:''' I'd say it's a solid five stars.
+::Piece of cake.
+::{{A|VO chapter1 11 himeko 204.ogg}} '''Himeko:''' Confidence goes a long way.
+::Can I skip the next mission and get some rest?
+:{{DIcon|Arrow}} Piece of cake.
+::{{A|VO chapter1 11 himeko 204.ogg}} '''Himeko:''' Confidence goes a long way.
+::Can I skip the next mission and get some rest?
+:{{DIcon|Arrow}} Can I skip the next mission and get some rest?
+:{{A|VO chapter1 11 himeko 205.ogg}} '''Himeko:''' *chuckles* And miss out on a great adventure? I don't think you'd like that.
+:{{A|VO chapter1 11 welt 201.ogg}} '''Welt:''' Get some rest on the Express. Jarilo-VI was not an easy ride.
 :{{tx}}
+
+;(Talk to Pom-Pom)
+<pre>{
+	"$type": "RPG.GameCore.ShowTalkUI"
+}</pre>
+<pre>{
+	"$type": "RPG.GameCore.ShowUI",
+	"Name": "Ui.LevelReward.LevelRewardPage",
+	"WaitForExit": true,
+	"OnUIExitImmediately": [
+		{
+			"$type": "RPG.GameCore.EndDialogueEntityInteract"
+		},
+		{
+			"$type": "RPG.GameCore.EndPerformance"
+		}
+	]
+}</pre>
+
+;(Talk to Himeko)
+;(Screen fades to black)
+:{{A|VO chapter1 11 himeko 201.ogg}} '''Himeko:''' Welcome home, you three.
+:{{A|VO chapter1 11 mar7th 203.ogg}} '''March 7th:''' Himeko, Mr. Yang! Team Trailblaze, back from duty! Mission one: Accomplished!
+:{{A|VO chapter1 11 himeko 202 m.ogg}} {{A|VO chapter1 11 himeko 202 f.ogg}} '''Himeko:''' *chuckles* Although Welt and I didn't get the chance to go with you, I can tell you worked hard to bring things back to normal. Well done, everybody. And especially you, (Trailblazer). I heard a lot of good things about you.
+:{{DIcon|Arrow}} How would you rate my performance?
+:;(Screen fades to black)
+::{{A|VO chapter1 11 himeko 203.ogg}} '''Himeko:''' I'd say it's a solid five stars.
+:{{DIcon|Arrow}} Piece of cake.
+:;(Screen fades to black)
+::{{A|VO chapter1 11 himeko 204.ogg}} '''Himeko:''' Confidence goes a long way.
+:{{DIcon|Arrow}} Can I skip the next mission and get some rest?
+:;(Screen fades to black)
+::{{A|VO chapter1 11 himeko 205.ogg}} '''Himeko:''' *chuckles* And miss out on a great adventure? I don't think you'd like that.
+;(Screen fades to black)
+:{{A|VO chapter1 11 welt 201.ogg}} '''Welt:''' Get some rest on the Express. Jarilo-VI was not an easy ride.
+:{{A|VO chapter1 11 welt 202.ogg}} '''Welt:''' Pom-Pom is of the opinion that we should leave as soon as possible to avoid potential resurgences of the anomalies we experienced earlier. Himeko and I agree.
+:{{A|VO chapter1 11 danheng 201.ogg}} '''Dan Heng:''' ...Which means we need to decide where our next destination is, soon.
+:{{A|VO chapter1 11 welt 203.ogg}} '''Welt:''' That's right.
+:{{A|VO chapter1 11 mar7th 204.ogg}} '''March 7th:''' That's the path of the Nameless, I presume? Always on the road, always trailblazing...
+:{{A|VO chapter1 11 mar7th 205.ogg}} '''March 7th:''' I&mdash;I'm not complaining by the way! One adventure after another, that's exactly what I signed up for!
+:{{A|VO chapter1 11 himeko 206.ogg}} '''Himeko:''' Looks like March has fallen in love with the way of the Nameless. That's good to hear.
+:{{A|VO chapter1 11 himeko 207.ogg}} '''Himeko:''' You can head back to your rooms for some rest, or stay here and make yourselves a cup of coffee, whichever you like.
+:{{A|VO chapter1 11 danheng 202.ogg}} '''Dan Heng:''' I'll head back to my room then.
+:{{A|VO chapter1 11 mar7th 206.ogg}} '''March 7th:''' *sigh* There I was thinking this guy would gradually open up...
+:{{A|VO chapter1 11 himeko 208.ogg}} '''Himeko:''' *chuckles* We need to give him some time, March. I think he treasures the time spent with you guys.
+:{{A|VO chapter1 11 himeko 209 m.ogg}} {{A|VO chapter1 11 himeko 209 f.ogg}} '''Himeko:''' (Trailblazer), about your battle against the Supreme Guardian and the whole Stellaron situation, you must have a lot of unanswered questions, I suppose?
+:{{A|VO chapter1 11 himeko 210.ogg}} '''Himeko:''' While you were away, Welt and I did some research and came to some interesting conclusions. Let me know if you want to ask about anything.
+
+;(Talk to Pom-Pom)
+:{{A|VO chapter1 11 mar7th 207.ogg}} '''March 7th:''' Pom-Pom, we're back!
+::{{A|VO chapter1 11 pompom 201.ogg}} '''Pom-Pom:''' ...Shhh! Checking star rail stability, Pom-Pom needs to focus!
+::{{A|VO chapter1 11 mar7th 208.ogg}} '''March 7th:''' Good to see you too...
+::{{A|VO chapter1 11 pompom 202.ogg}} '''Pom-Pom:''' Spatial readout... back to the normal bracket!
+::{{A|VO chapter1 11 pompom 203.ogg}} '''Pom-Pom:''' Star rail stability keeps rising... 56%, 57%...
+::{{A|VO chapter1 11 pompom 204.ogg}} '''Pom-Pom:''' The numbers have stabilized! Dispatch the Express!
+::{{A|VO chapter1 11 pompom 205 m.ogg}} {{A|VO chapter1 11 pompom 205 f.ogg}} '''Pom-Pom:''' ...Oh, welcome back to the Express. You've accomplished your Trailblaze Mission, the Express appreciates your help!
+::{{DIcon|Talk}} How's the Express doing?
+:::{{A|VO chapter1 11 pompom 206.ogg}} '''Pom-Pom:''' Thanks to you, the Space Fissure is healing up, and the star rail has become stable enough for us to dispatch the Express...
+:::{{A|VO chapter1 11 pompom 207.ogg}} '''Pom-Pom:''' As for the coaches, Pom-Pom's checked every nook and cranny and made sure everything is in good order!
+::;(Return to previous option selection)
+::{{DIcon|Talk}} Oops, I forgot to bring you souvenirs.
+:::{{A|VO chapter1 11 pompom 208.ogg}} '''Pom-Pom:''' ...Don't worry about it! Jarilo-VI probably doesn't have anything worth buying anyway. Plus, it's your first time on a Trailblaze Mission, so Pom-Pom will let it slide this time!
+:::{{A|VO chapter1 11 pompom 209.ogg}} '''Pom-Pom:''' But don't forget next time!
+::;(Return to previous option selection)
+::{{DIcon|Talk}} Where's our next stop?
+:::{{A|VO chapter1 11 pompom 210.ogg}} '''Pom-Pom:''' The destination will be announced at the navigation meeting.
+:::{{A|VO chapter1 11 pompom 211.ogg}} '''Pom-Pom:''' For now, get some rest and stay tuned!
+::;(Return to previous option selection)
+::{{DIcon|Talk}} Need to get some juice for March.
+:::{{A|VO chapter1 11 pompom 212.ogg}} '''Pom-Pom:''' Oh, Pom-Pom almost forgot!
+:::{{A|VO chapter1 11 pompom 213.ogg}} '''Pom-Pom:''' There you go, careful not to spill it!
+:::{{A|VO chapter1 11 mar7th 209.ogg}} '''March 7th:''' Thank you, conductor!
+::;(Return to previous option selection)
+::{{DIcon|Arrow}} When are we leaving, conductor?
+:::{{A|VO chapter1 11 pompom 214.ogg}} '''Pom-Pom:''' Right away!
+:::{{A|VO chapter1 11 pompom 215.ogg}} '''Pom-Pom:''' To avoid encountering the anomalies again, the Express will dispatch shortly and head to a more stable area.
+:::{{A|VO chapter1 11 pompom 216.ogg}} '''Pom-Pom:''' For your safety, please don't leave your seat until the Express has reached cruising speed!
+:::----
+:<pre>{
+	"$type": "RPG.GameCore.LockCurrentTeleportAction"
+}</pre>
+:{{A|VO chapter1 11 pompom 201.ogg}} '''Pom-Pom:''' ...Shhh! Checking star rail stability, Pom-Pom needs to focus!
+:<pre>{
+	"$type": "RPG.GameCore.ShowMenu"
+}</pre>
+:{{A|VO chapter1 11 mar7th 201.ogg}} '''March 7th:''' Home, sweet home! Mr. Yang and Himeko must be bored given how long our train had to stay here.
+:{{A|VO chapter1 11 mar7th 202.ogg}} '''March 7th:''' Where's our next stop? I can't wait!
 {{Dialogue End}}
 
 ===Chat with Himeko about what you've seen{{subst:void|<!--101150229-->}}===
 {{Mission Description|type=trailblaze|location=Parlor Car|update|The trailblazing expedition on Jarilo-VI has finally reached a satisfying conclusion.<br />Himeko and Welt both give high praises for your first mission.<br />You can keep chatting with Himeko and see if she can answer some of the questions lingering in your mind.}}
 {{Dialogue Start}}
-:{{tx}}
+
+
+;(Talk to Himeko)
+:{{A|VO chapter1 11 himeko 211.ogg}} '''Himeko:''' The Express crew tread upon the Trailblaze. We travel between worlds, like a thread weaved into the life stories of others.
+:{{A|VO chapter1 11 himeko 212.ogg}} '''Himeko:''' The universe is vast beyond our imagination. It's a miracle that our paths converge. The fact that we get to know and travel with each other can only be seen as the design of destiny.
+:{{A|VO chapter1 11 himeko 213 m.ogg}} {{A|VO chapter1 11 himeko 213 f.ogg}} '''Himeko:''' Thank you for becoming our companion, (Trailblazer). I'll do my best to answer any questions you may have.
+:{{DIcon|Talk}} I'd like to talk about the battle with Cocolia.
+::{{A|VO chapter1 11 himeko 214.ogg}} '''Himeko:''' Sure. Oftentimes those who are involved in historic events don't have the opportunity to see things from a wider perspective. I hope as an onlooker I may provide some help.
+::{{DIcon|Talk}} About the Path of Preservation...
+:::{{A|VO chapter1 11 himeko 215.ogg}} '''Himeko:''' Qlipoth the Preservation is known for THEIR... indifference. Unless you become a zealot like those with the Corporation, it's hard to share in the Aeon's power.
+:::{{A|VO chapter1 11 himeko 216.ogg}} '''Himeko:''' Determined to preserve the world they love, the Architects held on for hundreds of years. But as the Fragmentum continued to advance, their already wavering faith started to show some cracks.
+:::{{A|VO chapter1 11 himeko 217.ogg}} '''Himeko:''' And one particular guardian, Cocolia, abandoned the Path of Preservation altogether. In contrast, you stood your ground and proved your faith in the Amber Lord.
+:::{{A|VO chapter1 11 himeko 218.ogg}} '''Himeko:''' Judging by how the battle turned out, Qlipoth responded to your wish. THEIR gaze infused you with the power to wield the weapon of a supreme guardian and to take control of the Colossus.
+::;(Return to previous option selection)
+::{{DIcon|Talk}} I was meant to thank you for your support during the battle.
+:::{{A|VO chapter1 11 himeko 219.ogg}} '''Himeko:''' *chuckles* Don't mention it. Welt and I may have stayed on the Express this whole time, but we've been watching over you the moment you set foot on Jarilo-VI.
+:::{{A|VO chapter1 11 himeko 220.ogg}} '''Himeko:''' Friends look after each other, the same goes for us Nameless. Please remember, no matter where you are in the universe, the Express will always be behind you.
+::;(Return to previous option selection)
+::{{DIcon|Talk}} The source of Cocolia's power...
+:::{{A|VO chapter1 11 himeko 221.ogg}} '''Himeko:''' ...is a Stellaron, there's no doubt about that.
+:::{{A|VO chapter1 11 himeko 222.ogg}} '''Himeko:''' What I've gathered so far suggests it's likely that the supreme guardian was corrupted by the Stellaron at a very young age. All the tragedies that came after can be traced to that point...
+:::{{A|VO chapter1 11 himeko 223.ogg}} '''Himeko:''' On the flip side, we can't judge Cocolia too harshly. Imagine if it were you or me who had to sit on the throne and watch the city slowly being brought to its knees... Would we not question what we believed in?
+::;(Return to previous option selection)
+::{{DIcon|Return}} Let's talk about something else.
+:::{{A|VO chapter1 11 himeko 224.ogg}} '''Himeko:''' Sure, ask away. We've got plenty of time.
+::;(Return to previous option selection)
+:{{DIcon|Talk}} Can Jarilo-VI go back to what it was like before the Stellaron?
+::{{A|VO chapter1 11 himeko 225.ogg}} '''Himeko:''' Welt may be better equipped to answer that. But if you want my two cents...
+::{{A|VO chapter1 11 himeko 226.ogg}} '''Himeko:''' I'd say it's unlikely. I guess it's possible, but it would take a long time.
+::{{A|VO chapter1 11 himeko 227.ogg}} '''Himeko:''' I can tell from your report that the new Supreme Guardian of Belobog is a smart young lady with leadership qualities. What's more important is that she now understands her people after the journey with you.
+::{{A|VO chapter1 11 himeko 228.ogg}} '''Himeko:''' The firm and honest support she gets from people around her will also prove immensely useful. But fate likes to play tricks on people. Even if during their lifetime they managed to make Jarilo-VI prosper again to a certain degree...
+::{{A|VO chapter1 11 himeko 229.ogg}} '''Himeko:''' They will remain vulnerable and helpless to countless threats lurking in the recesses of the universe. We can only give them our best wishes from afar.
+:;(Return to previous option selection)
+:{{DIcon|Talk}} What happened to the Stellaron?
+::{{A|VO chapter1 11 himeko 230.ogg}} '''Himeko:''' It's virtually impossible to destroy a Stellaron. No one, not even Herta, has found a way to break its structure. The best we can do at this stage is to prevent its energy from overflowing.
+::{{A|VO chapter1 11 himeko 231.ogg}} '''Himeko:''' When the supreme guardian was defeated, the Stellaron that had been transmitting energy to her exposed its weakness to us for a brief period of time, allowing Welt and I to contain its power.
+::{{A|VO chapter1 11 himeko 232.ogg}} '''Himeko:''' That's about all we can do about a Stellaron. It may be suppressed for now, but it's only a matter of time before it regains power.
+::{{A|VO chapter1 11 himeko 233.ogg}} '''Himeko:''' But this brief window should allow the people on this planet to heal and rebuild.
+:;(Return to previous option selection)
+:{{DIcon|Arrow}} Thanks for your patience, Himeko.
+::{{A|VO chapter1 11 himeko 234 m.ogg}} {{A|VO chapter1 11 himeko 234 f.ogg}} '''Himeko:''' You're most welcome, (Trailblazer). Have some rest, you've earned it.
 {{Dialogue End}}
 
 ===Chat with Welt about what you've seen{{subst:void|<!--101150230-->}}===
 {{Mission Description|type=trailblaze|location=Parlor Car|update|The trailblazing expedition on Jarilo-VI has finally reached a satisfying conclusion.<br />Himeko and Welt both give high praises for your first mission.<br />You can keep chatting with Welt and see if he can answer some of the questions lingering in your mind.}}
 {{Dialogue Start}}
-:{{tx}}
+
+
+;(Talk to Welt Yang)
+:{{A|VO chapter1 11 welt 204 m.ogg}} {{A|VO chapter1 11 welt 204 f.ogg}} '''Welt:''' So, your first trailblazing expedition has concluded. How do you feel, (Trailblazer)?
+:{{A|VO chapter1 11 welt 205.ogg}} '''Welt:''' Be it joy or pain, success or regret, it's all part of the journey. Those feelings will accompany you as long as you tread on the Trailblaze, and one day you'll grow used to them.
+:{{A|VO chapter1 11 welt 206.ogg}} '''Welt:''' It seems you have something on your mind. Let's hear it. I'd like to hear a fresh perspective myself... Hehe, as talkative as Himeko is, we've pretty much run out of topics.
+:{{DIcon|Talk}} The Fragmentum and the Eternal Freeze... will they disappear?
+::{{A|VO chapter1 11 welt 207.ogg}} '''Welt:''' I'm afraid not.
+::{{A|VO chapter1 11 welt 208.ogg}} '''Welt:''' As I've mentioned before, the Stellaron's influence on Jarilo-VI is more profound than we might think. I don't think Belobog's fight against the lingering effects of the Stellaron will end any time soon.
+::{{A|VO chapter1 11 welt 209.ogg}} '''Welt:''' But, the balance of power is tilting ever so slightly towards humanity, the crucial factor being the hope you brought about.
+::{{A|VO chapter1 11 welt 210.ogg}} '''Welt:''' As intangible as it may sound, don't underestimate hope because the power it inspires has no limit. Like the Stellaron, it's a seed that may grow into something much bigger. But in my opinion, the fruit that hope bears will have a much bigger impact than that of the Stellaron.
+:;(Return to previous option selection)
+:{{DIcon|Talk}} I relayed your view of the Stellaron's effects to Bronya.
+::{{A|VO chapter1 11 welt 211.ogg}} '''Welt:''' Is that so? Well, I think you did the right thing. It's better to move forward with the burden of knowledge than to tread a perilous road with blind optimism.
+::{{A|VO chapter1 11 welt 212.ogg}} '''Welt:''' I remember a distant world where the people were faced with unimaginable danger every single day. But they saved their planet time after time with wisdom and courage.
+::{{A|VO chapter1 11 welt 213.ogg}} '''Welt:''' This goes to show how much of a difference ordinary people can make. I hope Jarilo-VI sees that too.
+:;(Return to previous option selection)
+:{{DIcon|Talk}} This mission would've been much easier if you were there.
+::{{A|VO chapter1 11 welt 214.ogg}} '''Welt:''' Hehe... I, too, wished to go with you. But Himeko insisted on letting you and your friends rise to the challenge.
+::{{A|VO chapter1 11 welt 215.ogg}} '''Welt:''' I'd been observing what's happening on the ground from the Express, and I have to admit that I got sweaty palms a couple of times. I was glad to see you three meet friends you could trust and overcome hardships. Well done.
+::{{A|VO chapter1 11 welt 216.ogg}} '''Welt:''' Himeko was calm from the very beginning. She kept telling me to trust you youngsters' decisions.
+::{{A|VO chapter1 11 welt 217.ogg}} '''Welt:''' Hehe... And she was right. I really need to stop worrying so much.
+:;(Return to previous option selection)
+:{{DIcon|Arrow}} It's been nice chatting with you, Mr. Yang.
+::{{A|VO chapter1 11 welt 218.ogg}} '''Welt:''' Likewise. Get some sleep, we'll be heading off again soon.
 {{Dialogue End}}
 
 ===Chat with Pom-Pom and get ready for the next stage of the journey{{subst:void|<!--101150231-->}}===
 {{Mission Description|type=trailblaze|location=Parlor Car|update|The trailblazing expedition on Jarilo-VI has finally reached a satisfying conclusion.<br />One journey ends just as another is about to begin.<br />Chat with the conductor and see when you'll be able to start the next chapter of your adventure.}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Pom-Pom)
+:{{A|VO chapter1 11 mar7th 207.ogg}} '''March 7th:''' Pom-Pom, we're back!
+:{{A|VO chapter1 11 pompom 201.ogg}} '''Pom-Pom:''' ...Shhh! Checking star rail stability, Pom-Pom needs to focus!
+:{{A|VO chapter1 11 mar7th 208.ogg}} '''March 7th:''' Good to see you too...
+:{{A|VO chapter1 11 pompom 202.ogg}} '''Pom-Pom:''' Spatial readout... back to the normal bracket!
+:{{A|VO chapter1 11 pompom 203.ogg}} '''Pom-Pom:''' Star rail stability keeps rising... 56%, 57%...
+:{{A|VO chapter1 11 pompom 204.ogg}} '''Pom-Pom:''' The numbers have stabilized! Dispatch the Express!
+:{{A|VO chapter1 11 pompom 205 m.ogg}} {{A|VO chapter1 11 pompom 205 f.ogg}} '''Pom-Pom:''' ...Oh, welcome back to the Express. You've accomplished your Trailblaze Mission, the Express appreciates your help!
+:{{DIcon|Talk}} How's the Express doing?
+::{{A|VO chapter1 11 pompom 206.ogg}} '''Pom-Pom:''' Thanks to you, the Space Fissure is healing up, and the star rail has become stable enough for us to dispatch the Express...
+::{{A|VO chapter1 11 pompom 207.ogg}} '''Pom-Pom:''' As for the coaches, Pom-Pom's checked every nook and cranny and made sure everything is in good order!
+:;(Return to previous option selection)
+:{{DIcon|Talk}} Oops, I forgot to bring you souvenirs.
+::{{A|VO chapter1 11 pompom 208.ogg}} '''Pom-Pom:''' ...Don't worry about it! Jarilo-VI probably doesn't have anything worth buying anyway. Plus, it's your first time on a Trailblaze Mission, so Pom-Pom will let it slide this time!
+::{{A|VO chapter1 11 pompom 209.ogg}} '''Pom-Pom:''' But don't forget next time!
+:;(Return to previous option selection)
+:{{DIcon|Talk}} Where's our next stop?
+::{{A|VO chapter1 11 pompom 210.ogg}} '''Pom-Pom:''' The destination will be announced at the navigation meeting.
+::{{A|VO chapter1 11 pompom 211.ogg}} '''Pom-Pom:''' For now, get some rest and stay tuned!
+:;(Return to previous option selection)
+:{{DIcon|Talk}} Need to get some juice for March.
+::{{A|VO chapter1 11 pompom 212.ogg}} '''Pom-Pom:''' Oh, Pom-Pom almost forgot!
+::{{A|VO chapter1 11 pompom 213.ogg}} '''Pom-Pom:''' There you go, careful not to spill it!
+::{{A|VO chapter1 11 mar7th 209.ogg}} '''March 7th:''' Thank you, conductor!
+:;(Return to previous option selection)
+:{{DIcon|Arrow}} When are we leaving, conductor?
+::{{A|VO chapter1 11 pompom 214.ogg}} '''Pom-Pom:''' Right away!
+::{{A|VO chapter1 11 pompom 215.ogg}} '''Pom-Pom:''' To avoid encountering the anomalies again, the Express will dispatch shortly and head to a more stable area.
+::{{A|VO chapter1 11 pompom 216.ogg}} '''Pom-Pom:''' For your safety, please don't leave your seat until the Express has reached cruising speed!
+::----
+<pre>{
+	"$type": "RPG.GameCore.LockCurrentTeleportAction"
+}</pre>
 {{Dialogue End}}
 
 ==Other Languages==

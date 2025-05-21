@@ -41,31 +41,125 @@ PageTitle=#Road to Revival#
 ===Chat with Wen Shiqi{{subst:void|<!--200013201-->}}===
 {{Mission Description|type=adventure|location=Master Control Zone|Renovations aboard the space station are proceeding everywhere at a measured pace, be it in the base zone or on the railway platform.<br />Several researchers seem to have encountered some issues. Go and find out what happened.}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Wen Shiqi)
+:'''Wen Shiqi:''' The majestic Legion, the chaos in Herta, the Curio Cabinet... We can never seem to get a break from it all~
+:'''Wen Shiqi:''' Time to bid farewell to research, and retire to a quiet, leisurely life~
+:{{DIcon|Arrow}} Ahem, excuse me.
+::'''Wen Shiqi:''' Who are you? Didn't you see I was singing? Where are your manners?
+:{{DIcon|Arrow}} Happy and free~
+::'''Wen Shiqi:''' Ah, I see you're a {{MC|f=lady|m=man}} of culture as well. You've also come out here to unwind, and even picked the same spot as me.
+:'''Wen Shiqi:''' It's not often you get the chance to waste time like this. Enjoy it while you can!
+:'''Wen Shiqi:''' If not for all the turmoil going on, I would still be locked up in the cabin doing their so-called research.
+:'''Wen Shiqi:''' I've already made it this far, and with a full head of hair at that. No need to worry about other people living better than you, the worst that can happen is we all perish together.
+:'''Wen Shiqi:''' Look at it this way. Even if there's a neutrino burst that heralds destruction, it's still worth it to see such a beautiful sight.
+:'''Wen Shiqi:''' I'm so happy now to be able to freely waste my own life, just... so... happy~
+:{{DIcon|Arrow}} Do you need help with anything?
+::'''Wen Shiqi:''' What do you say? You've already shared some of my joy, so you may as well share some of my chores!
+:{{DIcon|Arrow}} Well I'm off, then.
+::'''Wen Shiqi:''' Wait a second! You've already shared some of my joy, shouldn't you return the favor?
+::'''Wen Shiqi:''' I happen to have a job on my hands that you could help out with.
+:'''Wen Shiqi:''' We in the Department of Implement Arts have received orders to take stock of the various losses of the space station. That includes evaluating areas like the railway platform.
+:'''Wen Shiqi:''' All assets damaged by the Legion in the area, whether mobile or immobile, must be {{Color|keyword|nobold=1|photographed}} and reported to IPC.
+:'''Wen Shiqi:''' My hands are full already, so why don't you lend me one? Don't worry, there'll be something in it for you too.
+:{{DIcon|Arrow}} I'll be on my way then.
+::'''Wen Shiqi:''' Hmm. And I'll be waiting for you here, humming some tunes~
+:{{DIcon|Arrow}} Maybe you can do some stargazing in the meantime.
+::'''Wen Shiqi:''' Smart mouth you've got there! You just worry about getting those photos. I'll be waiting for you here, humming some tunes~
+:'''Wen Shiqi:''' The cosmos is indeed a sight to behold.
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+<pre>{
+	"$type": "RPG.GameCore.TutorialTaskUnlock",
+	"TriggerParam": {
+		"Value": "6015"
+	}
+}</pre>
 {{Dialogue End}}
 
 ===Snap a photo of the Astral Express{{subst:void|<!--200013205-->}}===
 {{Mission Description|type=adventure|location=Supply Zone|update|Wen Shiqi in the Department of Implement Arts has been tasked by the IPC with compiling a damage report of all the assets in the space station.<br />He asked you to snap some photos of assets around the railway platform. Try taking a photo of the Astral Express.}}
 {{Dialogue Start}}
-:{{tx}}
+
 {{Dialogue End}}
 
 ===Snap a photo of the broken robot{{subst:void|<!--200013206-->}}===
 {{Mission Description|type=adventure|location=Supply Zone|update|Wen Shiqi in the Department of Implement Arts has been tasked by the IPC with compiling a damage report of all the assets in the space station.<br />He asked you to snap some photos of assets around the railway platform. Try taking a photo of the broken robot.}}
 {{Dialogue Start}}
-:{{tx}}
+
 {{Dialogue End}}
 
 ===Hand the photo to Wen Shiqi{{subst:void|<!--200013203-->}}===
 {{Mission Description|type=adventure|location=Master Control Zone|update|You've completed Wen Shiqi's assignment, and it's time to hand him the photos capturing all the damaged assets on the railway platform.}}
 {{Dialogue Start}}
-:{{tx}}
+
+;(Talk to Wen Shiqi)
+:'''Wen Shiqi:''' Back already? You're fast! Here, I have plenty of blank space in this ledger. Let's see what you managed to capture.
+:{{DIcon|Talk}} The Astral Express.
+::'''Wen Shiqi:''' Well, strictly speaking, the Express isn't part of the space station.
+::'''Wen Shiqi:''' Hey, you're one of the Express folk, right? I'll do you a favor and add its damages to the books!
+:;(Return to previous option selection)
+:{{DIcon|Talk}} The broken robot.
+::'''Wen Shiqi:''' A streamlined body. A silver-white metallic luster...
+::'''Wen Shiqi:''' Is this the robot that Asta ordered? I have to admit... She has great taste!
+:;(Return to previous option selection)
+:{{DIcon|Arrow}} Are these enough?
+::'''Wen Shiqi:''' More or less. I've put it all in the ledger, you can take a look now.
+:<pre>{
+	"$type": "RPG.GameCore.ShowReading",
+	"BookID": {
+		"FixedValue": {
+			"Value": 190147
+		}
+	}
+}</pre>
+::'''Wen Shiqi:''' Are you done yet? Don't just nose around. There are only a few lines that concern you. And if there's nothing wrong, I'll take the photos.
+::{{DIcon|Arrow}} There are thousands of items on that list!
+:::'''Wen Shiqi:''' You don't say! And IPC will reimburse every one of them. There's no need to be coy about it.
+::{{DIcon|Arrow}} It seems like there's something odd about that list.
+:::'''Wen Shiqi:''' Odd? IPC will reimburse us for everything, there's no need to be coy about it with them.
+::{{DIcon|Arrow}} Shiqi Megascope?
+:::'''Wen Shiqi:''' Yes, even though it only got bumped slightly in the corner, it still counts as damage. In any case, IPC will reimburse us for everything, so there's no need to be coy about it.
+:::'''Wen Shiqi:''' With the thousands of things listed here, who's going to know the difference unless they check every one?
+::'''Wen Shiqi:''' Okay, I'll sort out the ledger for submission later. You should go get some rest.
+;(Unused &mdash; TalkSentence_200013253)
+:'''Wen Shiqi:''' That's some hefty damage...
+::'''Wen Shiqi:''' I've heard rumors of a horrific monster that sneaked in during the invasion. It is said to prey on the lowest-performing researchers.
+::'''Wen Shiqi:''' Just thinking about it gives me jitters. I hope I never cross paths with it.
+::{{DIcon|Talk}} The Astral Express.
+:::'''Wen Shiqi:''' Well, strictly speaking, the Express isn't part of the space station.
+:::'''Wen Shiqi:''' Hey, you're one of the Express folk, right? I'll do you a favor and add its damages to the books!
+::;(Return to previous option selection)
+::{{DIcon|Talk}} The broken robot.
+:::'''Wen Shiqi:''' A streamlined body. A silver-white metallic luster...
+:::'''Wen Shiqi:''' Is this the robot that Asta ordered? I have to admit... She has great taste!
+::;(Return to previous option selection)
+::{{DIcon|Arrow}} Are these enough?
+:::'''Wen Shiqi:''' More or less. I've put it all in the ledger, you can take a look now.
+::<pre>{
+	"$type": "RPG.GameCore.ShowReading",
+	"BookID": {
+		"FixedValue": {
+			"Value": 190147
+		}
+	}
+}</pre>
+:::'''Wen Shiqi:''' Are you done yet? Don't just nose around. There are only a few lines that concern you. And if there's nothing wrong, I'll take the photos.
+:::{{DIcon|Arrow}} There are thousands of items on that list!
+::::'''Wen Shiqi:''' You don't say! And IPC will reimburse every one of them. There's no need to be coy about it.
+:::{{DIcon|Arrow}} It seems like there's something odd about that list.
+::::'''Wen Shiqi:''' Odd? IPC will reimburse us for everything, there's no need to be coy about it with them.
+:::{{DIcon|Arrow}} Shiqi Megascope?
+::::'''Wen Shiqi:''' Yes, even though it only got bumped slightly in the corner, it still counts as damage. In any case, IPC will reimburse us for everything, so there's no need to be coy about it.
+::::'''Wen Shiqi:''' With the thousands of things listed here, who's going to know the difference unless they check every one?
+:::'''Wen Shiqi:''' Okay, I'll sort out the ledger for submission later. You should go get some rest.
 {{Dialogue End}}
 
 ===Snap a photo of the railway platform corroded by the Fragmentum{{subst:void|<!--200013204-->}}===
 {{Mission Description|type=adventure|location=Supply Zone|update|Wen Shiqi in the Department of Implement Arts has been tasked by the IPC with making a damage report of all the assets in the space station.<br />He asked you to snap some photos of assets around the railway platform. Take a picture of the platform corroded by Fragmentum.}}
 {{Dialogue Start}}
-:{{tx}}
+
 {{Dialogue End}}
 
 ==Other Languages==

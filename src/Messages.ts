@@ -294,7 +294,10 @@ export class MessageItem {
 				const raidData = MessageItemRaidEntrance[this.id]
 				return `{Domain Invite: ${textMap.getText(RaidConfig[raidData.RaidID].RaidName)}}` // TODO: proper DoE support
 			case 'Sticker':
-				const stickerData = EmojiConfig[this.content_id!]
+				const stickerData = EmojiConfig[this.content_id!] ?? Object.values(EmojiConfig).find(emoji => emoji.EmojiPath.includes(`/${this.content_id}.png`))
+				if (!stickerData) {
+					return `{{tx|Unknown sticker}}<!--ID: ${this.content_id}-->`
+				}
 				return stickerData.GenderLink 
 					? Object.values(EmojiConfig).filter(emoji => emoji.GenderLink == stickerData.GenderLink).map(sd => sticker(sd, this.text)).join(' ')
 					: sticker(stickerData, this.text)

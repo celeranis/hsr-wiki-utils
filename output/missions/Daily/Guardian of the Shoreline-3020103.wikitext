@@ -40,22 +40,356 @@ PageTitle=#Guardian of the Shoreline#
 ===Speak with Yueyuan at the Alchemy Commission{{subst:void|<!--302010301-->}}===
 {{Mission Description|type=daily|location=Alchemy Commission|After the Alchemy Commission delve reopened, people honest and crooked walked betwixt each other. As such, the Pearlkeepers alone are no longer enough to patrol the beach. They have offered invitations to brave and noble volunteers for the task at hand.<br />Yueyuan the Pearlkeeper hopes that you can help patrol the beach... Seriously, though, who's the one that actually protects this place?}}
 {{Dialogue Start}}
-:{{tx}}
+
+
+;(Talk to Yueyuan)
+;(If {{cx}}<!--during performance 502046101-->)
+::'''Yueyuan:''' *sigh* My team and I have guarded Scalegorge Waterscape for over two hundred years, but we still have to witness it crumble to pieces in the end...
+::'''Yueyuan:''' When will the Cloud Knights withdraw from this place and restore its sanctity!?
+::{{DIcon|Arrow}} You don't seem to be in the best mood?
+:::'''Yueyuan:''' That's putting it lightly. But then again, which Vidyadhara would be in good spirits after witnessing the desecration of our holy site?
+::{{DIcon|Arrow}} What are you muttering about?
+:::'''Yueyuan:''' You are... an Outworlder seeking medicine from the Alchemy Commission? You're too late. There's no cure to be found at all anymore, only those Cloud Knights sticking out like a sore thumb.
+::'''Yueyuan:''' Hmph, first there was the bloody conflict against the Denizens of Abundance. Then the Sedition of Imbibitor Lunae almost shook the Ambrosial Arbor to its core... And now those clowns from the Disciples of Sanctus Medicus have turned everything into a steaming hot mess!
+::'''Yueyuan:''' When I signed up with the armed forces, I took an oath to defend the Alliance. After retiring I became a Pearlkeeper, vowing to protect my compatriots during their hatching rebirth. But looking back, what did I actually protect? Truly... longevity is a curse.
+::'''Yueyuan:''' Hey, look at me &mdash; once I start complaining, I can't stop. I've grown far too talkative in my old age, so please forgive me. Do you have anything that you'd like to ask me about?
+;(If {{cx}}<!--not during performance 502046101-->)
+:<pre>{
+	"$type": "RPG.GameCore.PlayMultiVoiceTalk",
+	"TalkSentenceID": 502046202
+}</pre>
+::'''Yueyuan:''' Mmmm, (Trailblazer)? How'd you find the time to come hang out at this wasteland? Anything going on?
 {{Dialogue End}}
 
 ===Patrol the Scalegorge Waterscape's beach{{subst:void|<!--302010302-->}}===
 {{Dialogue Start}}
-:{{tx}}
+;(Upon reaching the destination)
+
+;(Upon reaching the destination)
+:'''(Trailblazer):''' (This is Yueyuan's patrol area. {{Color|keyword|nobold=1|Drive away The Unshackled and take care of the things they release}}... Honestly, who is protecting this beach?)
 {{Dialogue End}}
 
 ===(Optional) Give the letter you picked up to Fulie{{subst:void|<!--302010304-->}}===
 {{Dialogue Start}}
-:{{tx}}
+
+
+;(Talk to Ruoyue)
+;(If {{cx}}<!--during performance 502013101-->)
+::'''Ruoyue:''' Ah, an esteemed customer visiting Xianzhou from afar. Are you here for a divination today?
+::'''Ruoyue:''' Since it's your first time here, allow me to introduce myself. I am the genius diviner, formerly of the Divination Commission, now a humble shopkeeper of the Looking Bronze. My name is Ruoyue.
+::'''Ruoyue:''' Whether you're seeking fortune or safety, or simply wish to check your horoscope, to find love, or even to request a name for a child, I am humbly at your service.
+::{{DIcon|Arrow}} I wish to name myself.
+:::'''Ruoyue:''' Oh, seeking a name for yourself? That is a rare request indeed.
+:::'''Ruoyue:''' Looking at you, and with a pinch of my fingers, and I've got the perfect name for you.
+:::'''Ruoyue:''' How about "Noob"?
+:::{{DIcon|Arrow}} That's worse than (Trailblazer).
+::::'''Ruoyue:''' That sounds just fine. Your name is fine as it is. I see no need to change it.
+:::{{DIcon|Arrow}} That IS my name.
+::::'''Ruoyue:''' I wouldn't have known that one with such elegant flair as yours would have such a resounding name.
+::::'''Ruoyue:''' You may not be aware, but a name is the shortest form of a spell. If you're ever in peril, just yell out your name "Noob," and it will surely be useful to you.
+:::{{DIcon|Arrow}} You don't think your naming lacks a little sophistication?
+::::'''Ruoyue:''' Noob Noob, never want for gulp or slurp. Noob Noob, Luofu's friend, always a perk.
+::::'''Ruoyue:''' If you don't like that, how about a fee to unlock "Sophisticated Names" and "Seriously Sophisticated Names"... I have services for all needs.
+::{{DIcon|Arrow}} I wish to know my fortune.
+:::'''Ruoyue:''' You've come to the right person. This is our shop special, the "Fortune for Today." The first try's free. Let me see...
+:::'''Ruoyue:''' Oh dear, this scene paints the destruction of the Xianzhou Cangcheng: "Fighting fire with woods will only fuel the flames." Your recent affairs haven't been going your way, so instead of remedying them, you should leave them be.
+:::'''Ruoyue:''' We provide fortune-changing services, like the "Evil Begone" bundle for 199, "See No Evil" bundle for 299, and the "Only Good Things From Here On Out" bundle for 599. All great value! What do you think?
+:::{{DIcon|Arrow}} It feels like you didn't really think those bundles' names through.
+::::'''Ruoyue:''' Those names are of no importance. The prices speak for themselves!
+::::'''Ruoyue:''' Names are just superficial packaging. They can change anytime.
+:::{{DIcon|Arrow}} Did you make me pick a dire fortune on purpose?
+::::'''Ruoyue:''' Oh, you hurt me with your words. If you don't believe me, let's try another one. Look, it's still the same: "Like birds into nets, when will reunion be, one frets".
+:::{{DIcon|Arrow}} I can change my luck just like that?
+::::'''Ruoyue:''' Your luck isn't something set in stone. If everything was already pre-determined, where would one's freedom be?
+::'''Ruoyue:''' You are our lucky 100th customer for the day, so I'll give you an "Evil Begone" bundle as a favor. This is your "lucky trinket" for today. Don't lose it now.
+::'''Ruoyue:''' Do you have anything else you need help with?
+;(If {{cx}}<!--not during performance 502013101-->)
+:<pre>{
+	"$type": "RPG.GameCore.PlayMultiVoiceTalk",
+	"TalkSentenceID": 502013151
+}</pre>
+::'''Ruoyue:''' Well, that was boring. It's much more interesting to talk to you. Are you here to determine your luck, or just to chat?
+::'''Ruoyue:''' Whether you're seeking fortune or safety, or simply wish to check your horoscope, to find love, or even to request a name for a child, I am humbly at your service.
+
+;(Talk to Shumiao)
+;(If {{cx}}<!--during performance 502021101-->)
+::{{A|VO vo ambient w2 greeting shumiao 101.ogg}} {{A|VO vo ambient w2 greeting shumiao 102.ogg}} '''Shumiao:''' Martial arts and fitness! Come learn all about it!
+::'''Shumiao:''' {{MC|f=Miss|m=Mister}}, wanna learn about martial arts and fitness? Come take a look at our flyer, and I'll fill you in on all the details.
+::{{DIcon|Arrow}} No thanks, please keep it for someone else.
+:::'''Shumiao:''' No worries, it's free anyway. I promise I'll make this really quick!
+::{{DIcon|Arrow}} Alright, I'll keep this and you tell me about it.
+:::'''Shumiao:''' Awesome! I knew you'd be keen! I promise I'll make this really quick!
+::'''Shumiao:''' I'm the coach at Exalting Sanctum's Tiger Boxing Gym, Shumiao. We're a custom boxing gym set up for Outworlders, and our coaches are the best on the Luofu with rich experience in immortality training. All our boxers are living out long lives and achieving incredible results.
+::'''Shumiao:''' Our boss always says that he didn't open this gym to make money, but rather to let more interstellar travelers access the hyper-immortality way of life found aboard the Xianzhou Alliance.
+::'''Shumiao:''' There's never been a better time to sign up as a member. Just sign up for ten years, and get another five years for free. That's a crazy deal! How about I help you register with us right now?
+;(If {{cx}}<!--not during performance 502021101-->)
+:<pre>{
+	"$type": "RPG.GameCore.PlayMultiVoiceTalk",
+	"TalkSentenceID": 502021101
+}</pre>
+::'''Shumiao:''' Ah, there you are! Are you ready to sign up for a membership yet?
+
+;(Talk to Xingxue)
+;(If {{cx}}<!--during performance 502022101-->)
+::'''Xingxue:''' Why didn't he come by today?
+::'''Xingxue:''' Unless... he's been transferred to another jurisdiction?
+::{{DIcon|Arrow}} Who are you waiting for?
+:::'''Xingxue:''' An orderly from the Realm-Keeping Commission. We never should've even met, but for an ill-fated moment that brought us together.
+:::'''Xingxue:''' ...But don't get the wrong idea. We don't have anything strange going on between us.
+::{{DIcon|Arrow}} Surely there's plenty more fish in the sea...
+:::'''Xingxue:''' Why carry the torch...
+:::'''Xingxue:''' Bah, what an absolute mess! There's nothing strange going on between that orderly and me, so don't get the wrong idea.
+::'''Xingxue:''' It's just... I haven't had a chance to see him for a long time, and I can't help but feel a little bit lonely. Without him, my career, my entire future feels... empty.
+::'''Xingxue:''' If things keep on like this, what's the point of me showing up to work again? But then again, if I don't show up, I'll be cut off from him entirely and I'm afraid I'll never get the chance to see him again...
+::'''Xingxue:''' Ah! I'm so anxious...
+;(If {{cx}}<!--not during performance 502022101-->)
+:<pre>{
+	"$type": "RPG.GameCore.PlayMultiVoiceTalk",
+	"TalkSentenceID": 502022144
+}</pre>
+::'''Xingxue:''' I'm at my wit's end here!
+
+;(Talk to Yancui)
+;(If {{cx}}<!--during performance 502014101-->)
+::'''Yancui:''' Hello, guest. Sorry to bother you, but I noticed from your attire that you are an Outworld traveler. Do you have any unique ingredients or recipes that you can tell me about?
+::{{DIcon|Arrow}} I don't do my own cooking.
+:::'''Yancui:''' I see. Sorry for bothering you then.
+::{{DIcon|Arrow}} It's all home-cooked fare. Nothing special.
+:::'''Yancui:''' Is that so? I guess I'm the one asking a strange question.
+::{{DIcon|Arrow}} Have you heard of interstellar locusts?
+:::'''Yancui:''' I've eaten them before... They didn't taste great though. Thanks anyways.
+::'''Yancui:''' Ah, I forgot to introduce myself... I am Yancui, head chef and owner of Spices Supreme. The restaurant's not busy right now, so I'm taking a break here in Exalting Sanctum, but couldn't take my mind off developing new dishes.
+::'''Yancui:''' Spices Supreme isn't far from here. Please visit us if you're interested. Our motto is to "cook for the people." We guarantee our food is inexpensive and tasty!
+::'''Yancui:''' Ah, I've chatted so much with you. Here's something for you to have a taste test. You must come to Spices Supreme to try our dishes if you get a chance! It'll be an experience you'll never forget!
+;(If {{cx}}<!--not during performance 502014101-->)
+:<pre>{
+	"$type": "RPG.GameCore.PlayMultiVoiceTalk",
+	"TalkSentenceID": 502014155
+}</pre>
+::'''Yancui:''' Hmm? You want to discuss food for a little longer? I love to chat about cuisine with people.
+
+;(Talk to Lianyan)
+;(If {{cx}}<!--during performance 502015101-->)
+::'''Lianyan:''' Toys, doorbells, flexible displays!~ Shelves, refrigerators, extractor fans!~ Starskiffs, jade abaci, massage chairs!~ Second hand, or broken, I buy them all!
+::{{DIcon|Arrow}} What song are you singing?
+:::'''Lianyan:''' ...Singing? Oh... I'm not singing. I'm hawking for business!
+::{{DIcon|Arrow}} (Clapping in rhythm)
+:::'''Lianyan:''' Toys, doorbells... Wait, don't just clap along. I'm hawking for business. If you clap like that, people will think it's a street show.
+::'''Lianyan:''' Oh yeah, by the way &mdash; I'm Lianyan, manager at the Oldies Depot. And when I say manager, I mean I'm the only person there. It's just me and my small business.
+::'''Lianyan:''' The Oldies Depot mainly buys and sells second-hand appliances, fixes up old stuff, and buys antiques. But Xianzhou people live so long that they have no interest in anything old, let alone bothering to fix anything...
+::{{DIcon|Arrow}} So you buy trashed items?
+:::'''Lianyan:''' ...It's just a title. Call it whatever you want.
+::{{DIcon|Arrow}} Do the Xianzhou people only like new things?
+:::'''Lianyan:''' Not quite... But most of the regulars here are Outworlders. Sometimes we'll get a Xianzhou shopper selling some junk to make a little pocket money, but never anyone buying second-hand goods or repairing things.
+::'''Lianyan:''' You don't seem to have anything old there that needs fixing. Don't tell me you've come for a chat?
+;(If {{cx}}<!--not during performance 502015101-->)
+:<pre>{
+	"$type": "RPG.GameCore.PlayMultiVoiceTalk",
+	"TalkSentenceID": 502015136
+}</pre>
+::'''Lianyan:''' Oh hey, you're back. Got something for me to fix? Or just a casual catch-up?
+
+;(Talk to Yinshu)
+;(If {{cx}}<!--during performance 502016101-->)
+::'''Yinshu:''' ...This is a bookstore. If you want to read or pick out a book, just go in and browse around. Call me when you want to pay.
+::{{DIcon|Arrow}} Got anything you can recommend?
+:::'''Yinshu:''' I don't really read that much, so I can't really recommend anything... Well, the front of the shop is where we keep our bestsellers. There's gotta be a reason why they're bestsellers. Why not start there?
+:::'''Yinshu:''' "Views of the Universe from a Starskiff" is a record of wondrous exoplanets by a foxian explorer... Oh, you're from an exoplanet anyways. In that case, hang on and let me think...
+:::'''Yinshu:''' How about this one here, "Otherworldly Delights"? It's a collection of short supernatural stories written by the boss here.
+::{{DIcon|Arrow}} Boss, you could be a little more enthusiastic.
+:::'''Yinshu:''' ...Bookstores are for selling books. Besides, I'm not the boss here. I just help with running a few chores. I'm not in charge of sales here.
+:::'''Yinshu:''' But then again, the boss here doesn't really give a darn about business at all. Here... This is a collection of short supernatural stories he's written, called "Otherworldly Delights."
+::'''Yinshu:''' I'm a relative of the owner. He likes listening to other people's conversations, saying that it's good inspiration as an author.
+::'''Yinshu:''' You may have seen him over in Starskiff Haven. He does storytelling in some teahouse called Sleepless Earl or other, calling himself something like "Mr. Xiyan."
+::{{DIcon|Arrow}} I may have met him in Starskiff Haven.
+:::'''Yinshu:''' He likes getting attention. I'd be truly surprised if you haven't seen him.
+::{{DIcon|Arrow}} Why are there storytellers aboard Xianzhou?
+:::'''Yinshu:''' Have you seen storytellers on other planets? When you put it like that... I can tell you've probably already seen it before.
+:::'''Yinshu:''' All I know is, storytelling is a traditional form of performative art. I don't know much else. But perhaps the boss is using his gig as a storyteller to hang out at the teahouse and hear all kinds of supernatural and weird tales.
+::'''Yinshu:''' How I wish he could pay a little more attention to his bookstore business... Ah well. Have you got any books there that you'd like to buy?
+;(If {{cx}}<!--not during performance 502016101-->)
+:<pre>{
+	"$type": "RPG.GameCore.PlayMultiVoiceTalk",
+	"TalkSentenceID": 502016137
+}</pre>
+::'''Yinshu:''' If you don't have a jade abacus or if you just like the feeling of a book in your hands, just grab one off the shelf. Scroll rolls, bound bamboo strips, printed and bound paper books &mdash; we've got all the formats. Anyway, just come see me if you'd like to buy a book.
+
+;(Talk to Fulie)
+;(If {{cx}}<!--during performance 502023101-->)
+::'''Fulie:''' Looking at the rags you're wearing, I can tell you're not a Xianzhou native.
+::'''Fulie:''' I get it. You must be an Outworlder! Are you in any trouble? Just tell me, and I'll help you get things sorted!
+::{{DIcon|Arrow}} How can you help me?
+:::'''Fulie:''' I dunno. It depends on the situation. If I really can't be of any help, then I'll take you to the Realm-Keeping Commission Chancery &mdash; this is their specialty.
+:::'''Fulie:''' And this way, you'll be helping me clock some hours, so don't worry about it.
+::{{DIcon|Arrow}} Is this how you talk to people you've just met for the first time?
+:::'''Fulie:''' Is something wrong? This is how I speak at home, and I've never gotten a reaction like yours.
+:::'''Fulie:''' Eh, you're just helping me clock some hours for my job, never mind then.
+::{{DIcon|Arrow}} What job hours are those?
+:::'''Fulie:''' Oh, you don't know even this? You really are an Outworlder!
+:::'''Fulie:''' Here on Xianzhou, we have to take a series of examinations in order to qualify for our rite of passage. The community service program that I'm volunteering for is a part of this examination &mdash; and if I don't clock enough effective on-the-job hours, I won't be considered an adult.
+::{{DIcon|Arrow}} That sounds offensive.
+:::'''Fulie:''' You're offended because of an offhand comment? I have my own worries, can't you put yourself in my shoes?
+:::'''Fulie:''' Here on Xianzhou, we have to take a series of examinations in order to qualify for our rite of passage. The community service program that I'm volunteering for is a part of this examination.
+:::'''Fulie:''' If I don't clock enough effective on-the-job hours, then I won't be considered an adult. Do you get it?
+::{{DIcon|Arrow}} I can't deal with your attitude...
+:::'''Fulie:''' You're the one with the attitude! You won't even help me out with a favor!
+:::'''Fulie:''' Here on Xianzhou, we have to take a series of examinations in order to qualify for our rite of passage. The community service program that I'm volunteering for is a part of this examination.
+:::'''Fulie:''' If I don't clock enough effective on-the-job hours, then I won't be considered an adult. Do you get it?
+::'''Fulie:''' Alright, fine, I gotta stop wasting time. I still have an examination to pass. If you're not gonna help me, then get out of my way.
+;(If {{cx}}<!--not during performance 502023101-->)
+:<pre>{
+	"$type": "RPG.GameCore.PlayMultiVoiceTalk",
+	"TalkSentenceID": 502023156
+}</pre>
+
+;(Talk to Jing Fang)
+;(If {{cx}}<!--during performance 502026101-->)
+::'''Jing Fang:''' Tsk-tsk... Tsk, tsk, tsk... This young {{MC|f=lass|m=lad}} is dressed to the nines and looking fantastic!
+::'''Jing Fang:''' Ahem, sorry! I haven't even introduced myself yet. My name's Jing Fang, and I'm the younger brother of General Jing Yuan from the Luofu. I don't really get up to much, but I love making acquaintance with elites like yourself!
+::'''Jing Fang:''' I can see you have exceptional attitude there, young {{MC|f=lass|m=lad}}. I can see you're the kind of person who helps the needy &mdash; just like me! I never thought I'd meet such an honorable soul here in the Exalting Sanctum. This is simply a gift from the gods!
+::'''Jing Fang:''' Chance encounters are far better than planned ones &mdash; I, Jing Fang, would like to invite you, my {{MC|f=lass|m=lad}}, to the Sleepless Earl over on Starwatcher Avenue. I'll even cover twenty percent of the bill... no, how about I chip in thirty percent of the bill? That should be good faith enough, right?
+::{{DIcon|Arrow}} Is this how Xianzhou people try to flirt?
+:::'''Jing Fang:''' Oh, I'm not "flirting." This is just making friends between like-minded people!
+::{{DIcon|Arrow}} If you want to leech off others, just say so...
+:::'''Jing Fang:''' Oh, what a mean thing to say! If I was trying to leech off of you, would I offer to chip in 30%? No way!
+::{{DIcon|Arrow}} The Sleepless Earl is quite far away from here...
+:::'''Jing Fang:''' Ah, who cares about that!? We could just hire a taximeter starskiff. I've already given you so many praises, what's a little taximeter starskiff fare to you?
+::'''Jing Fang:''' Haha, I get it. A young {{MC|f=lass|m=lad}} should be wary of a stranger like me &mdash; but I'm the dear brother of a famed general, so there's no way I could ever trick you. If you don't believe me, ask around the Exalting Sanctum about me. Everyone knows the name Jing Fang around these parts.
+::{{DIcon|Arrow}} Jing Yuan never mentioned any brothers to me...
+:::'''Jing Fang:''' Haha, that just means Jing Yuan doesn't realize how famous his dear brother is...
+:::'''Jing Fang:''' ...Jing Yuan... Jing Yuan!?
+::{{DIcon|Arrow}} Then I'll go ask the Seat of Divine Foresight then.
+:::'''Jing Fang:''' Haha, sure. a simple Seat of Divine Foresight may not have heard of my mighty reputation...
+:::'''Jing Fang:''' ...Seat of Divine Foresight... Seat of Divine Foresight!?
+::'''Jing Fang:''' Y&mdash;You... You're not the one who's been running around with the Cloud Knights, locking up crooks... right?
+::'''Jing Fang:''' P&mdash;Pardon me! I'm the one who didn't realize how famous YOU are! All that stuff I was saying about generals and brothers... I've been feeling dizzy and was just spouting nonsense. Please {{MC|f=ma'am|m=sir}}, have mercy on my soul!
+;(If {{cx}}<!--not during performance 502026101-->)
+:<pre>{
+	"$type": "RPG.GameCore.PlayMultiVoiceTalk",
+	"TalkSentenceID": 502026147
+}</pre>
+::'''Jing Fang:''' What brings you here today?
+
+;(Talk to Kang Tu)
+;(If {{cx}}<!--during performance 502024101-->)
+::'''Kang Tu:''' ...Tsk, just seeing you makes my head ache.
+::{{DIcon|Arrow}} What's that supposed to mean?
+::{{DIcon|Arrow}} I'm the one who's having a headache.
+::'''Kang Tu:''' Sorry, don't blame me for being so blunt. I'm a healer and your symptoms are clear as day. My initial diagnosis is that your time is quickly running out.
+::'''Kang Tu:''' This isn't the hubris of yet another long-life species, but even by short-life species standards, you've already got one foot in the grave.
+::{{DIcon|Arrow}} C'mon, don't freak me out like that!
+:::'''Kang Tu:''' I didn't want to scare you. I'm just trying to give you a warning. There's an old adage around here, "Good medicine tastes bitter." I hope you take what I said to heart.
+::{{DIcon|Arrow}} Is it really that serious?
+:::'''Kang Tu:''' It really is that serious! You should trust me.
+::'''Kang Tu:''' However, I've also got some good news to tell you &mdash; you're lucky to have met me, because it's not too late! You can still have a long life: One hundred, two hundred &mdash; even a thousand years! There is hope for you!
+::'''Kang Tu:''' You just have to make a purchase of longevity supplements from NutriTreasures, and you can live forever just like us Xianzhou people... Everyone who uses this loves it. What do you say? Want to learn more?
+;(If {{cx}}<!--not during performance 502024101-->)
+:<pre>{
+	"$type": "RPG.GameCore.PlayMultiVoiceTalk",
+	"TalkSentenceID": 502024134
+}</pre>
+
+;(Talk to Cong)
+;(If {{cx}}<!--during performance 502017101-->)
+::'''Cong:''' Like willow leaves moving at a speed of knots, super duper love you lots.
+::'''Cong:''' Autumn winds and moon rises on buildings glow, love can also move as slow.
+::'''Cong:''' ...Writing poetry is so easy. Why doesn't she like me? What am I missing?
+::{{DIcon|Arrow}} I wouldn't like you either.
+:::'''Cong:''' It's pure emotion. Can't you hear that? I feel like I'm on equal grounds with the seven sacred poets of Xianzhou.
+::{{DIcon|Arrow}} This poem of yours is terrible...
+:::'''Cong:''' You don't like it...? Look, "knots" and "lots"... it all rhymes... four lines of heptameter.
+::'''Cong:''' ...Ah, forget about it. I'm not arguing with you. To be honest, I don't even really get what's so good about poetry, and can't really tell what's good poetry.
+::'''Cong:''' You, however, seem to have unique insights into poetry. Tell me, other people pour out their love and emotion, and I'm here writing out my true feelings too. What am I doing wrong?
+::{{DIcon|Arrow}} It's missing the sense of culture and taste...
+:::'''Cong:''' Culture? Taste? What's that? Don't just invent new words to trick me.
+:::'''Cong:''' ...Maybe you aren't tricking me. *sigh* You're right. I'm lacking in culture and taste.
+::{{DIcon|Arrow}} I actually think you write with your own style!
+:::'''Cong:''' My own style... Thank you. Even though I can't really tell if this is meant as a compliment or consolation.
+:::'''Cong:''' But in the end, even if you do like it, she doesn't like it. So it's useless...
+::'''Cong:''' *sigh* ...Anyways, do you need anything?
+;(If {{cx}}<!--not during performance 502017101-->)
+:<pre>{
+	"$type": "RPG.GameCore.PlayMultiVoiceTalk",
+	"TalkSentenceID": 502017301
+}</pre>
+::'''Cong:''' Oh, you're here. What brings you here?
+
+;(Talk to Baroumbrella)
+;(If {{cx}}<!--during performance 502018101-->)
+::{{A|VO vo ambient w2 greeting yqsan 101.ogg}} {{A|VO vo ambient w2 greeting yqsan 102.ogg}} '''Baroumbrella:''' ...
+::'''Baroumbrella:''' ...
+::'''Baroumbrella:''' Hello.
+::'''Baroumbrella:''' Could you please move over a tad?
+::{{DIcon|Arrow}} Who's talking?
+:::'''Baroumbrella:''' It's me.
+:::'''Baroumbrella:''' Do you also think mushrooms shouldn't talk?
+::{{DIcon|Arrow}} I can... but why?
+:::'''Baroumbrella:''' Because I'm a sunbathing mushroom.
+:::'''Baroumbrella:''' But you blocked off the light.
+:::'''Baroumbrella:''' Do you also think mushrooms shouldn't sunbathe?
+::'''Baroumbrella:''' Oh, I'm so sad.
+::{{DIcon|Arrow}} Sorry, I didn't mean to offend...
+:::'''Baroumbrella:''' That's alright.
+:::'''Baroumbrella:''' Nobody cares about how a mushroom feels.
+::{{DIcon|Arrow}} But you're an umbrella.
+:::'''Baroumbrella:''' That's what everyone says.
+::'''Baroumbrella:''' People say I'm an "Artisanship Commission's Civil Maintenance Unit Type-A."
+::'''Baroumbrella:''' But I'm a mushroom.
+::'''Baroumbrella:''' Oh, now I feel even sadder.
+;(If {{cx}}<!--not during performance 502018101-->)
+:<pre>{
+	"$type": "RPG.GameCore.PlayMultiVoiceTalk",
+	"TalkSentenceID": 502018101
+}</pre>
+::'''Baroumbrella:''' ...
+::'''Baroumbrella:''' Do you often talk to mushrooms?
+::'''Baroumbrella:''' Oh, I'm so sad.
+
+;(Talk to Wu He)
+;(If {{cx}}<!--during performance 502019101-->)
+::'''Wu He:''' ...If everyone thought like you did, the art of Butterfly Immersia would be wiped out! If master Zi Run had listened to these so-called "business interests" back then, "The Bridge to Grandma's Home" would've never even been released!
+::'''Nanjie:''' Ha, then you can take your artistic dreams and your bridge &mdash; and jump off it into a lake! Do you think I said this to cause you pain? Why can't we all make a little money together? Why have you gotta be so pig-headed...
+::'''Wu He:''' But... Art cannot be measured by commercial impact alone! Why would you try to make a living in this industry if you have no respect for art at all?
+::{{DIcon|Arrow}} Fight! Fight!
+:::'''Wu He:''' ...And who are you? Egging us on to fight like this... What can you get out of this?
+::{{DIcon|Arrow}} You two: Quit arguing!
+:::'''Wu He:''' Oh, I... I'm really sorry about that. We kind of went a bit goblin mode there and should've paid more attention to our surroundings.
+::{{DIcon|Arrow}} You guys wait here. I'll go find the Realm-Keeping Commission.
+:::'''Wu He:''' No no no, please don't bother the Realm-Keeping Commission with this little tiff of ours.
+::'''Nanjie:''' *sigh* Wu He, calm down. Let's not put on a show for people.
+::'''Wu He:''' I'm arguing with you out of creative license, right... Let me explain to the {{MC|f=girl|m=boy}} here &mdash; we're Butterfly Immersia creatives. She's Nanjie, the producer &mdash; and I'm the director, Wu He.
+::'''Nanjie:''' Let's stop there, for you to get calmed down. Sorry to make you laugh. Have you got anything you'd like to say?
+;(If {{cx}}<!--not during performance 502019101-->)
+:<pre>{
+	"$type": "RPG.GameCore.PlayMultiVoiceTalk",
+	"TalkSentenceID": 502019153
+}</pre>
+:<pre>{
+	"$type": "RPG.GameCore.PlayMultiVoiceTalk",
+	"TalkSentenceID": 502019154
+}</pre>
+
+;(Talk to Guangda)
+;(If {{cx}}<!--during performance 502025101-->)
+::'''Guangda:''' Ah, two centuries passed, and then two centuries more... If I don't get my promotion, I'll undergo my hatching rebirth soon...
+::{{DIcon|Arrow}} Promotion?
+:::'''Guangda:''' Yeah. In one of our lifetimes, Vidyadhara have to serve as officers or clerks so we get a taste of what it's like to be a public servant, right?
+::{{DIcon|Arrow}} That's a real shame.
+:::'''Guangda:''' Sure is. Unfortunately, we're the only ones who think it's a real shame. If only management felt the same way.
+::{{DIcon|Arrow}} In your next life, go all out.
+:::'''Guangda:''' Haha, I'm afraid that I'll be a lowly orderly in my next life. I've started to wonder how exactly things ended up during my previous life.
+::'''Guangda:''' Hey, that's enough for now. Let's not linger on such a morose topic.
+::'''Guangda:''' I'm Guangda, a lowly orderly from the Realm-Keeping Commission. If you have any issues to handle, I suggest you visit our Chancery offices...
+;(If {{cx}}<!--not during performance 502025101-->)
+:<pre>{
+	"$type": "RPG.GameCore.PlayMultiVoiceTalk",
+	"TalkSentenceID": 502025145
+}</pre>
 {{Dialogue End}}
 
 ===(Optional) Give the Drift Bottle you picked up to Yueyuan{{subst:void|<!--302010305-->}}===
 {{Dialogue Start}}
-:{{tx}}
+
 {{Dialogue End}}
 
 ==Other Languages==
