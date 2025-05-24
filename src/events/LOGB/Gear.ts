@@ -1,15 +1,20 @@
 import { AttackType, Dictionary, Value } from '../../Shared.js'
 import { HashReference, textMap, typeDisplayName } from '../../TextMap.js'
-import { getFile } from '../../files/GameFile.js'
+import { Unlock } from '../../Unlock.js'
+import { getExcelFile, getFile } from '../../files/GameFile.js'
+
+export type InternalGBBGearType = undefined | 'Plugin' | 'Forge' | 'DuelForge' | 'UltraForge'
 
 export interface InternalGBBGearCollection {
 	ID: number
 	Name: HashReference
-	Type?: undefined | 'Plugin' | 'Forge'
+	Type?: InternalGBBGearType
 	LvMax: number
+	UnlockQuest?: number
 	ItemIcon: string
 	ElementList: AttackType[]
 	TagList: number[]
+	Season: string
 	DamageTag: string
 }
 
@@ -47,47 +52,76 @@ export interface InternalGBBForge {
 	CostGearList: number[]
 }
 
-export type GBBTag = 'Summon' | 'AoE' | 'Focus' | 'Launch'
-
-const gearCollection = await getFile<Dictionary<InternalGBBGearCollection>>('ExcelOutput/EvolveBuildGearCollection.json')
-const gearConfig = await getFile<Dictionary<Dictionary<InternalGBBGearConfig>>>('ExcelOutput/EvolveBuildGearConfig.json')
-const mazeBuffs = await getFile<Dictionary<Dictionary<InternalGBBBuff>>>('ExcelOutput/EvolveBuildMazeBuff.json')
-const recipeData = await getFile<Dictionary<InternalGBBForge>>('ExcelOutput/EvolveBuildForgeMaterial.json')
-
-export const TAGS: Record<number, GBBTag> = {
-	1: 'Summon',
-	2: 'AoE',
-	3: 'Focus',
-	4: 'Launch',
+export interface InternalGBBTag {
+	ID: number
+	Season: 'SecondChapter'
+	Name: HashReference
+	ExtraEffectID: number
+	ShopSkillID: number
+	IconPath: string
 }
+
+export interface InternalGBBGearTypeData {
+	ID: InternalGBBGearType
+	Season: string
+	FontColor: string
+	WeaponToastEffectBg: string
+	MixDetailPropsInfoBg: string
+	TypeImg: string
+	TypeImgColor: string
+	Name: string | HashReference
+}
+
+const gearCollection = await getExcelFile<InternalGBBGearCollection>('EvoBdSCGearCollection.json', 'ID')
+const gearConfig = await getFile<InternalGBBGearConfig[]>('ExcelOutput/EvoBdSCGearConfig.json')
+const mazeBuffs = await getFile<InternalGBBBuff[]>('ExcelOutput/EvoBdSCMazeBuff.json')
+const recipeData = await getExcelFile<InternalGBBForge>('EvoBdSCForgeMaterial.json', 'ForgeGearID')
+const tagData = await getExcelFile<InternalGBBTag>('EvoBdSCTagConfig.json', 'ID')
+const gearTypeData = await getExcelFile<InternalGBBGearTypeData>('EvoBdSCGearTypeConfig.json', 'ID')
+
+export const TAGS: Record<number, string> = Object.fromEntries(Object.entries(tagData).map(([id, data]) => [id, textMap.getText(data.Name)]))
 
 export class GBBGear {
 	id: number
 	name: string
 	max_level: number
-	tags: GBBTag[]
+	tags: string[]
 	elements: string[]
-	type: 'Accessory' | 'Weapon' | 'Legendary Weapon'
+	type: InternalGBBGearType
+	type_display: string
 	overview_desc!: string
 	level_descs: string[]
 	
+	icon_path: string
+	
+	unlock_quest_id?: number
+	unlock_desc?: string
+	
 	constructor(id: number | string) {
 		const collectionData = gearCollection[id]
-		const configData = gearConfig[id]
+		const configData = gearConfig.filter(cfg => cfg.GearID == id)
 		
 		this.id = collectionData.ID
 		this.name = textMap.getText(collectionData.Name)
 		this.max_level = collectionData.LvMax
 		this.tags = collectionData.TagList.map(tag => TAGS[tag])
 		this.elements = collectionData.ElementList.map(type => typeDisplayName(type))
-		this.type = collectionData.Type == 'Forge' ? 'Legendary Weapon' : collectionData.Type == 'Plugin' ? 'Accessory' : 'Weapon'
+		this.icon_path = collectionData.ItemIcon
+		
+		this.unlock_quest_id = collectionData.UnlockQuest
+		if (this.unlock_quest_id) {
+			this.unlock_desc = Unlock.fromQuestId(this.unlock_quest_id)?.desc
+		}
+		
+		this.type = collectionData.Type
+		this.type_display = textMap.getText(gearTypeData[collectionData.Type ?? 'undefined'].Name)
 		
 		this.level_descs = []
 		let firstParams: number[] = []
 		let finalParams: number[] = []
 		let prevParams: number[] = []
 		for (const config of Object.values(configData)) {
-			const buff = mazeBuffs[config.MazeBuffID][config.Level]
+			const buff = mazeBuffs.find(buff => buff.ID == config.MazeBuffID && buff.Lv == config.Level)!
 			let params = buff.ParamList.map(param => param.Value)
 			for (let index of config.IndexList) {
 				params[index + 9] = prevParams[index - 1] ? (params[index - 1] - prevParams[index - 1]) : 0
@@ -100,7 +134,7 @@ export class GBBGear {
 			}
 			if (config.Level == this.max_level) {
 				finalParams = params
-				if (this.type != 'Legendary Weapon') {
+				if (this.type == undefined || this.type == 'Plugin') {
 					let mergedSummaryParams: ([number, number] | number)[] = firstParams.map((val, index) => index < 10 ? [val, finalParams[index]] : 0)
 					this.overview_desc = textMap.getText(buff.BuffDesc, mergedSummaryParams)
 				} else {
@@ -111,7 +145,7 @@ export class GBBGear {
 	}
 	
 	get icon_type() {
-		return this.type == 'Accessory' ? this.type : 'Weapon'
+		return this.type == 'Plugin' ? this.type_display : 'Weapon'
 	}
 	
 	get icon() {

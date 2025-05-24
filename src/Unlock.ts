@@ -1,15 +1,17 @@
 import { Mission } from './Mission.js';
 import { Dictionary } from './Shared.js';
 import { textMap } from './TextMap.js';
-import { getFile } from './files/GameFile.js';
-import type { FinishType, InternalFinishWay, InternalUnlockConfig } from './files/Unlock.js';
+import { getExcelFile } from './files/GameFile.js';
+import type { FinishType, InternalFinishWay, InternalQuestData, InternalUnlockConfig } from './files/Unlock.js';
 import { andList } from './util/General.js';
 
-export const mainUnlock: Dictionary<InternalUnlockConfig> = await getFile('ExcelOutput/RogueUnlockConfig.json')
-export const dlcUnlock: Dictionary<InternalUnlockConfig> = await getFile('ExcelOutput/RogueDLCUnlock.json')
-export const finishWays: Dictionary<InternalFinishWay> = await getFile('ExcelOutput/FinishWay.json')
-export const suFinishWays: Dictionary<InternalFinishWay> = await getFile('ExcelOutput/FinishWayRogue.json')
-export const suExpansionFinishWays: Dictionary<InternalFinishWay> = await getFile('ExcelOutput/RogueDLCFinishWay.json')
+export const mainUnlock: Dictionary<InternalUnlockConfig> = await getExcelFile('RogueUnlockConfig.json', 'RogueUnlockID')
+export const dlcUnlock: Dictionary<InternalUnlockConfig> = await getExcelFile('RogueDLCUnlock.json', 'RogueUnlockID')
+export const finishWays: Dictionary<InternalFinishWay> = await getExcelFile('FinishWay.json', 'ID')
+export const suFinishWays: Dictionary<InternalFinishWay> = await getExcelFile('FinishWayRogue.json', 'ID')
+export const suExpansionFinishWays: Dictionary<InternalFinishWay> = await getExcelFile('RogueDLCFinishWay.json', 'ID')
+
+export const QuestData: Dictionary<InternalQuestData> = await getExcelFile('QuestData.json', 'QuestID')
 
 const lazyDlcAreas = {
 	301: `{{Mission|Gold and Gears: Experimental Teaching}}`,
@@ -25,7 +27,8 @@ export const finishTypes: Partial<Record<FinishType, (data: InternalFinishWay) =
 	WorldLevel: data => `after reaching Equilibirium Level ${data.Progress}`,
 	RoguePassAreaProgress: data => `after clearing World ${data.ParamInt1 || '?'}.`,
 	RogueDLCSelectedAeonDimensionCnt: data => data.ParamInt1 == 7 && data.ParamInt2 == 2 ? `after unlocking the Cheat feature.` : 'after ???',
-	RogueDLCFinishCnt: data => `after completing ${lazyDlcAreas[data.ParamInt1!] || '???'}`
+	RogueDLCFinishCnt: data => `after completing ${lazyDlcAreas[data.ParamInt1!] || '???'}`,
+	
 }
 
 export class Unlock {
@@ -34,11 +37,13 @@ export class Unlock {
 	
 	constructor(public id: number, desc?: string) {
 		this.finish_way = finishWays[id] ?? suFinishWays[id] ?? suExpansionFinishWays[id]
-		this.desc = finishTypes[this.finish_way.FinishType]?.(this.finish_way) || desc?.replace(/^Unlock(?:ed)?\s+/i, '') || `Unlocked after ???<!--${this.finish_way.FinishType}-->`
-		if (!finishTypes[this.finish_way.FinishType]) {
-			console.warn(`Unknown FinishType ${this.finish_way.FinishType} in`, this.finish_way)
-			if (desc) console.warn(`Description: ${desc}`)
-		}
+		const params = [
+			this.finish_way.ParamInt1,
+			this.finish_way.ParamInt2,
+			this.finish_way.ParamInt3,
+			...this.finish_way.ParamIntList
+		]
+		this.desc = finishTypes[this.finish_way.FinishType]?.(this.finish_way) || textMap.replaceParams(desc?.replace(/^Unlock(?:ed)?\s+/i, '') || `Unlocked after ???<!--${this.finish_way.FinishType}-->`, params)
 	}
 	
 	toString() {
@@ -48,5 +53,10 @@ export class Unlock {
 	static fromUnlockId(id: number) {
 		const unlock = mainUnlock[id] || dlcUnlock[id]
 		return new this(unlock.UnlockFinishWay, textMap.getText(unlock.RogueUnlockDetail))
+	}
+	
+	static fromQuestId(id: number) {
+		const quest = QuestData[id]
+		return new this(quest.FinishWayID, textMap.getText(quest.QuestTitle))
 	}
 }

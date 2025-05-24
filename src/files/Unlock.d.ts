@@ -98,3 +98,14 @@ export interface InternalFinishWay {
 	MazePlaneID?: number
 	MazeFloorID?: number
 }
+
+export interface InternalQuestData {
+	QuestID: number
+	QuestType: number
+	QuestTitle: HashReference
+	ImagePath: string
+	UnlockType: string
+	UnlockParamList: unknown[]
+	RewardID: number
+	FinishWayID: number
+}
