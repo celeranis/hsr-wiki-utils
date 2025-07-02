@@ -20,7 +20,7 @@ const ALT_PATTERNS: string[] = [
 ]
 
 export async function getFile<T extends object>(path: string, version: string = config.target_version): Promise<T> {
-	console.log(path)
+	// console.log(path)
 	path = path.trim()
 	const useAlt = ALT_PATTERNS.find(pattern => path.toLowerCase().startsWith(pattern.toLowerCase())) != undefined
 	
