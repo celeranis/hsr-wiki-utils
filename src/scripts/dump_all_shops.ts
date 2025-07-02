@@ -7,6 +7,7 @@ import { sanitizeString, Version, VERSION_LIST, wikiTitle } from '../Shared.js';
 import { Shop, ShopGood } from '../Shop.js';
 import { TextMap } from '../TextMap.js';
 import { pageInfoHeader } from '../util/General.js';
+import { teardown } from '../util/JSONParser.js';
 import { Template } from '../util/Template.js';
 
 const iconMap = {
@@ -312,3 +313,5 @@ for (const shop of await Shop.loadAll()) {
 		await writeFile(`./output/shops/history/${sanitizeString(shop.name)}-${shop.id}.wikitext`, finalChOutput)
 	}
 }
+
+teardown()

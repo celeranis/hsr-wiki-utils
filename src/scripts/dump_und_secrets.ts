@@ -4,6 +4,7 @@ import { getFile } from '../files/GameFile.js';
 import type { Act } from '../files/graph/Dialog.js';
 import { HashReference, textMap } from '../TextMap.js';
 import { pageInfoHeader, uploadPrompt } from '../util/General.js';
+import { teardown } from '../util/JSONParser.js';
 
 export interface InternalRogueMagicStory {
 	StoryID: number
@@ -84,3 +85,5 @@ for (const common of RogueCommonDialogue) {
 	tree.optimize()
 	writeFile(`./output/roguecommon/${common.DialogueID}.wikitext`, await tree.wikitext())
 }
+
+teardown()

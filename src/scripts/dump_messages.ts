@@ -4,6 +4,7 @@ import { MessageItem, MessagesContact } from '../Messages.js';
 import { Mission } from '../Mission.js';
 import { sanitizeString } from '../Shared.js';
 import { pageInfoHeader } from '../util/General.js';
+import { teardown } from '../util/JSONParser.js';
 import { Template } from '../util/Template.js';
 
 for (const contact of MessagesContact.loadAll()) {
@@ -91,3 +92,5 @@ for (const contact of MessagesContact.loadAll()) {
 	if (daily.length == 0 && mission.length == 0) continue
 	await writeFile(`./output/messages/${contact.type}/${sanitizeString(contact.name)}-${contact.id}.wikitext`, output.join('\n'))
 }
+
+teardown()

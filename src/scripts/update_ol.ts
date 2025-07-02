@@ -1,5 +1,6 @@
 import { TextMap } from '../TextMap.js';
 import { AWB } from '../util/AWB.js';
+import { teardown } from '../util/JSONParser.js';
 import { Template } from '../util/Template.js';
 
 const fileContents = AWB.init()
@@ -47,3 +48,5 @@ if (ol) {
 		AWB.sendOutput(newContents)
 	}
 }
+
+teardown()

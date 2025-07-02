@@ -4,6 +4,7 @@ import { Item } from '../Item.js';
 import { ReadableSeries } from '../Readable.js';
 import { sanitizeString, wikiTitle, zeroPad } from '../Shared.js';
 import { TextMap } from '../TextMap.js';
+import { teardown } from '../util/JSONParser.js';
 import { getCharacterMentions, getFactionMentions } from '../util/Mentions.js';
 import { Template } from '../util/Template.js';
 
@@ -88,3 +89,5 @@ for (const series of ReadableSeries.loadAll()) {
 	await mkdir(`./output/readables/${series.getWorld()}/`, { recursive: true })
 	await writeFile(`./output/readables/${series.getWorld()}/${sanitizeString(series.name.replaceAll(',', ''))}-${series.id}.wikitext`, output.join('\n'))
 }
+
+teardown()

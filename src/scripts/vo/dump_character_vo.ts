@@ -3,6 +3,7 @@ import { rm } from 'fs/promises';
 import { getFile } from '../../files/GameFile.js';
 import { zeroPad } from '../../Shared.js';
 import { textMap } from '../../TextMap.js';
+import { teardown } from '../../util/JSONParser.js';
 import { dumpFile, getFilesByPrefix, langs } from './util.js';
 
 if (existsSync('./output/file/vo/character/')) {
@@ -126,3 +127,5 @@ for (const character of Object.values(characters)) {
 		}
 	}
 }
+
+teardown()

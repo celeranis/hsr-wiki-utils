@@ -1,5 +1,6 @@
 import { BaseDomain } from '../Domain.js';
 import { textMap } from '../TextMap.js';
+import { teardown } from '../util/JSONParser.js';
 import { DomainType, Template } from '../util/Template.js';
 
 for (const difficulties of await BaseDomain.getAll()) {
@@ -30,3 +31,5 @@ for (const difficulties of await BaseDomain.getAll()) {
 		.addParam('requiredEL', '')
 		
 }
+
+teardown()

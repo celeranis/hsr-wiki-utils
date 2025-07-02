@@ -3,6 +3,7 @@ import { GoldenBloodBoon } from '../Boon.js';
 import { Dictionary } from '../Shared.js';
 import { textMap, TextMap } from '../TextMap.js';
 import { pageInfoHeader, uploadPrompt } from '../util/General.js';
+import { teardown } from '../util/JSONParser.js';
 import { Table } from '../util/Table.js';
 
 const sets: Dictionary<Dictionary<boolean>> = {}
@@ -63,3 +64,5 @@ output.push(
 )
 
 writeFileSync('./output/du-boons.wikitext', output.join('\n'))
+
+teardown()

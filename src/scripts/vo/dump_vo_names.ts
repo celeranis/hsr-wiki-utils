@@ -2,6 +2,7 @@ import { writeFile } from 'fs/promises';
 import { Dictionary } from '../../Shared.js';
 import { HashReference } from '../../TextMap.js';
 import { getFile } from '../../files/GameFile.js';
+import { teardown } from '../../util/JSONParser.js';
 
 export interface VoiceData {
 	VoiceID: number
@@ -38,3 +39,5 @@ for (const line of Object.values(voice)) {
 }
 
 writeFile('./output/Voice.txt', output.join('\n'))
+
+teardown()

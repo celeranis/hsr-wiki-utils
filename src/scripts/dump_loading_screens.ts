@@ -2,6 +2,7 @@ import { writeFile } from 'fs/promises'
 import { Dictionary } from '../Shared.js'
 import { HashReference, textMap } from '../TextMap.js'
 import { getFile } from '../files/GameFile.js'
+import { teardown } from '../util/JSONParser.js'
 
 export interface InternalLoadingScreen {
 	ID: number
@@ -41,3 +42,5 @@ for (const load of list) {
 }
 
 await writeFile('./output/loading_screens.wikitext', output.join('\n'))
+
+teardown()

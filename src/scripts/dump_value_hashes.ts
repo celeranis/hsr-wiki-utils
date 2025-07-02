@@ -3,6 +3,7 @@ import { readdir } from 'fs/promises';
 import config from '../../config.json' with { "type": "json" };
 import { getAudioHash } from '../Shared.js';
 import { TextMap } from '../TextMap.js';
+import { teardown } from '../util/JSONParser.js';
 
 const root = config.local_roots[config.target_version]
 
@@ -50,3 +51,5 @@ for (const file of await readdir(root, { recursive: true, withFileTypes: true })
 
 writeFileSync(`./output/ValueHashMap.json`, JSON.stringify(results, null, '\t'))
 writeFileSync(`./output/AudioHashMap.json`, JSON.stringify(audioResults, null, '\t'))
+
+teardown()

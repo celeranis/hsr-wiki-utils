@@ -2,6 +2,7 @@ import { writeFile } from 'fs/promises';
 import { ScepterStyleType, ScepterUnitSlot } from '../files/Scepter.js';
 import { Component, DisplayTypeMap, Scepter } from '../Scepter.js';
 import { pageInfoHeader } from '../util/General.js';
+import { teardown } from '../util/JSONParser.js';
 
 // SCEPTERS //
 const scepterPage: string[] = [
@@ -61,3 +62,5 @@ addComponents('Passive')
 componentsPage.push('==Change History==', '{{Change History|2.6}}')
 
 await writeFile(`./output/und-components.wikitext`, componentsPage.join('\n'))
+
+teardown()

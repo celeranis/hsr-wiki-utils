@@ -2,6 +2,7 @@ import { writeFileSync } from 'fs';
 import { Dictionary } from '../Shared.js';
 import { HashReference, TextMap } from '../TextMap.js';
 import { getFile } from '../files/GameFile.js';
+import { teardown } from '../util/JSONParser.js';
 
 const data: Dictionary<InternalBossDecay> = await getFile('ExcelOutput/RogueDLCBossDecay.json')
 const buffData: Dictionary<Dictionary<InternalMazeBuff>> = await getFile('ExcelOutput/MazeBuff.json')
@@ -52,3 +53,5 @@ for (const decay of Object.values(data)) {
 }
 
 writeFileSync('./output/boss_decay.wikitext', output.join('\n'))
+
+teardown()

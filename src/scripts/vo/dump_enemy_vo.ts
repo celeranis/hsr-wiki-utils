@@ -7,6 +7,7 @@ import { sanitizeString, zeroPad } from '../../Shared.js';
 import { Enemy } from '../../Stage.js';
 import { textMap } from '../../TextMap.js';
 import { getFile } from '../../files/GameFile.js';
+import { teardown } from '../../util/JSONParser.js';
 import { files, langs } from './util.js';
 
 const loadFrom = config.asset_roots.TXTP
@@ -190,7 +191,7 @@ for (const animState of animEvents) {
 		STATE_MAP[animState.AnimatorStateName] 
 		|| STATE_MAP[animState.AnimatorStateName.replace(/_.+/, '')]
 		|| (
-			animState.AnimatorStateName.startsWith('Skill') 
+			animState.AnimatorStateName.startsWith('Skill')
 			&& sanitizeString(textMap.getText((await monster.getSkill(animState.AnimatorStateName))?.SkillName))
 		) 
 		|| animState.AnimatorStateName
@@ -322,3 +323,5 @@ if (!hasVoice) {
 
 await writeFile(`./output/file/vo/${folderName}/vo_table.wikitext`, VO_TABLE.join('\n'))
 await writeFile(`./output/file/vo/${folderName}/wikiup.txt`, `==Summary==\n{{File\n|categories = ${opts.name || monster.name} <%-2> Voice-Overs\n}}\n\n==Licensing==\n{{Fairuse}}`)
+
+teardown()

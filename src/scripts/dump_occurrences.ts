@@ -6,6 +6,7 @@ import { displaySUMode, OccurrenceDialogueTree, OccurrenceOptionTreeEntry, Occur
 import { sanitizeString, wikiTitle, zeroPad } from '../Shared.js';
 import { TextMap } from '../TextMap.js';
 import { pageInfoHeader } from '../util/General.js';
+import { teardown } from '../util/JSONParser.js';
 import { Template } from '../util/Template.js';
 
 await mkdir('./output/occurrences/', { recursive: true })
@@ -203,3 +204,5 @@ for (const occurrence of Object.values(await OccurrenceSeries.loadAllAbstract())
 		await writeFile(`${container}/${occurrenceVariant.mode}-${sanitizeString(occurrenceVariant.name)}${occurrenceVariant.progress ? '-' + occurrenceVariant.progress : ''}.wikitext`, voutput.join('\n'))
 	}
 }
+
+teardown()

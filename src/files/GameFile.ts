@@ -1,11 +1,7 @@
 import { readFile } from 'fs/promises';
-import JSONbig_package from 'json-bigint';
 import config from '../../config.json' with { "type": "json" };
 import { Dictionary, VERSION_COMMITS } from '../Shared.js';
-
-const JSONbig = JSONbig_package({
-	useNativeBigInt: true,
-})
+import { parseJson } from '../util/JSONParser.js';
 
 export class HttpError extends Error {
 	constructor(public path: string, public status: number, public statusText: string, public body: string) {
@@ -23,22 +19,8 @@ const ALT_PATTERNS: string[] = [
 	// 'ExcelOutput/Performance'
 ]
 
-export function preprocessFile(obj: any) {
-	for (const [key, value] of Object.entries(obj)) {
-		if (value && typeof value == 'object') {
-			preprocessFile(value)
-		} else if (key == 'Value' && typeof value == 'number') {
-			// round suspected floating point errors to integers
-			const decimal = value % 1
-			if (decimal != 0 && (decimal < 0.001 || decimal > 0.999)) {
-				obj[key] = Math.round(value)
-			}
-		}
-	}
-	return obj
-}
-
 export async function getFile<T extends object>(path: string, version: string = config.target_version): Promise<T> {
+	console.log(path)
 	path = path.trim()
 	const useAlt = ALT_PATTERNS.find(pattern => path.toLowerCase().startsWith(pattern.toLowerCase())) != undefined
 	
@@ -49,9 +31,8 @@ export async function getFile<T extends object>(path: string, version: string = 
 			// 	console.warn(`Error while fetching local data for ${path}`)
 			// 	throw err
 			// })
-			
 		
-		return preprocessFile(JSONbig.parse(altData.toString()))
+		return parseJson(altData, (path.startsWith('TextMap/') || path.includes('VoiceConfig.json')) ? 'nobig' : 'preprocess')
 	}
 	
 	const data = await fetch(`${config.repo_root}${VERSION_COMMITS[version] || version}/${path}`)
@@ -65,7 +46,7 @@ export async function getFile<T extends object>(path: string, version: string = 
 	}
 	
 	return data.text()
-		.then(data => preprocessFile(JSONbig.parse(data)))
+		.then(data => parseJson<T>(data, (path.startsWith('TextMap/') || path.includes('VoiceConfig.json')) ? 'nobig' : 'preprocess'))
 		.catch(err => {
 			console.error(`Error while parsing JSON from ${path}`)
 			throw err
@@ -97,6 +78,10 @@ export function getFileSafe<T extends object>(...args: Parameters<typeof getFile
 			}
 			throw err;
 		})
+}
+
+export function getFileBulk(paths: string[]) {
+	
 }
 
 export class LazyData<T extends object> {

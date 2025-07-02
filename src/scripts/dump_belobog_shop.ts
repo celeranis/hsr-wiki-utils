@@ -1,6 +1,7 @@
 import { writeFile } from 'fs/promises'
 import { BelobogShopExchange } from '../events/MaterialSubmitter/MaterialSubmitter.js'
 import { Item } from '../Item.js'
+import { teardown } from '../util/JSONParser.js'
 
 await Item.loadAll()
 
@@ -17,3 +18,5 @@ for (const entry of BelobogShopExchange.loadGroup('BelobogShop')) {
 }
 
 writeFile('./output/belobog-shop.wikitext', output.join('\n'))
+
+teardown()

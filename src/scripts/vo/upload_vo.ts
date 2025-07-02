@@ -2,6 +2,7 @@ import { program } from 'commander';
 import { existsSync } from 'fs';
 import { rm } from 'fs/promises';
 import { client, retryIfRatelimit } from '../../util/Bot.js';
+import { teardown } from '../../util/JSONParser.js';
 import { dumpFile, files } from './util.js';
 
 program
@@ -103,3 +104,5 @@ for (const pageTitle of opts.page.split(';;')) {
 		}
 	}
 }
+
+teardown()

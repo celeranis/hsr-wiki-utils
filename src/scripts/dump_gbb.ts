@@ -1,6 +1,7 @@
 import { writeFile } from 'fs/promises';
 import { GBBGear } from '../events/LOGB/Gear.js';
 import { uploadPrompt } from '../util/General.js';
+import { teardown } from '../util/JSONParser.js';
 import { Table } from '../util/Table.js';
 
 const allGear = GBBGear.getAll()
@@ -99,3 +100,5 @@ output.push(
 )
 
 await writeFile('./output/gbb2_index.wikitext', output.join('\n'))
+
+teardown()

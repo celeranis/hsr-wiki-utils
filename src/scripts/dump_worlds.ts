@@ -6,6 +6,7 @@ import { MonsterConfig } from '../Stage.js'
 import { TextMap, typeDisplayName } from '../TextMap.js'
 import { getFile } from '../files/GameFile.js'
 import type { InternalUnlockInfo, InternalWorldInfo, InternalWorldMap } from '../files/Worlds.js'
+import { teardown } from '../util/JSONParser.js'
 import { Tabber } from '../util/Tabber.js'
 import { Table } from '../util/Table.js'
 import { Template } from '../util/Template.js'
@@ -193,3 +194,5 @@ for (const difficulties of worldSet.values()) {
 	mkdirSync('./output/worlds', { recursive: true })
 	writeFileSync(`./output/worlds/${sanitizeString(worldName)}.wikitext`, output.join('\n'))
 }
+
+teardown()

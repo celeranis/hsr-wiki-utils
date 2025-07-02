@@ -2,6 +2,7 @@ import { writeFile } from 'fs/promises';
 import { VignetteCup } from '../events/Vignettes/Cup.js';
 import { VignetteDrink } from '../events/Vignettes/Drink.js';
 import { VignetteDecoration, VignetteIce, VignetteIngredient } from '../events/Vignettes/Ingredient.js';
+import { teardown } from '../util/JSONParser.js';
 import { Table } from '../util/Table.js';
 
 const page: string[] = [
@@ -91,3 +92,5 @@ for (const glass of VignetteDecoration.all()) {
 page.push(decoTable.wikitable(false))
 
 writeFile('./output/vignettesinacup.wikitext', page.join('\n'))
+
+teardown()

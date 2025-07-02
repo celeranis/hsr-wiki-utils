@@ -333,10 +333,17 @@ export class TextMap {
 		console.groupEnd()
 	}
 	
+	static async preloadOL(version?: Version) {
+		return Promise.all(Object.entries(OTHER_LANGUAGES).map(([, lang]) => this.load(version, lang)))
+	}
+	
 	static async generateOL(keys?: (string | number | bigint | HashReference) | (string | number | bigint | HashReference | undefined)[], params?: TextParams): Promise<string> {
 		const output = ['{{Other Languages']
 		if (!Array.isArray(keys)) keys = [keys]
 		const targetWsp = keys.length > 1 ? 9 : 5
+		
+		await this.preloadOL()
+		
 		for (const [i, key] of keys.entries()) {
 			if (i != 0) output.push('')
 			for (let [tkey, lang] of Object.entries(OTHER_LANGUAGES)) {

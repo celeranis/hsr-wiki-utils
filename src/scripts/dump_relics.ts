@@ -6,6 +6,7 @@ import { RelicSet } from '../Relics.js';
 import { sanitizeString, wikiTitle } from '../Shared.js';
 import { TextMap } from '../TextMap.js';
 import { pageInfoHeader, uploadPrompt } from '../util/General.js';
+import { teardown } from '../util/JSONParser.js';
 import { Template } from '../util/Template.js';
 
 const PARAM_KEYS = {
@@ -108,3 +109,5 @@ for (const relicSet of RelicSet.loadAll()) {
 	
 	await writeFile(`./output/relics/${setFolder}/${setFolder}.wikitext`, setOutput.join('\n'))
 }
+
+teardown()

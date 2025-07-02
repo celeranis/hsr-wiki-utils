@@ -6,6 +6,7 @@ import { textMap } from '../TextMap.js';
 import { getFile } from '../files/GameFile.js';
 import { InternalTalkSentence } from '../files/Occurrence.js';
 import { Act, InternalDialogTask } from '../files/graph/Dialog.js';
+import { teardown } from '../util/JSONParser.js';
 import type { VoiceData } from './vo/dump_vo_names.js';
 
 const TalkSentences = await getFile<InternalTalkSentence[]>('ExcelOutput/TalkSentenceConfig.json')
@@ -108,3 +109,5 @@ for (const sentence of Object.values(TalkSentences)/*.sort((a, b) => (a.TalkSent
 
 writeFileSync('./output/talksentences.wikitext', output.join('\n'))
 writeFileSync('./output/talksentences-voices.wikitext', outputVoices.join('\n'))
+
+teardown()

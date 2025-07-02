@@ -1,4 +1,5 @@
 import { rm } from 'node:fs/promises';
+import { teardown } from '../../util/JSONParser.js';
 import { dumpFile, files } from './util.js';
 
 await rm('./output/file/vo/mission/', { recursive: true })
@@ -22,3 +23,5 @@ for (let [event, txtp] of Object.entries(files)) {
 	const segments = event.split('_')
 	await dumpFile(`./output/file/vo/mission/${segments[0]}/${segments[1]}`, (!event.startsWith('VO_') ? 'VO_' : '') + event.replace(/[\(\{].+/, '').trim() + '.ogg', txtp)
 }
+
+teardown()

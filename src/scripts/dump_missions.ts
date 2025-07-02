@@ -6,6 +6,7 @@ import { Mission } from '../Mission.js'
 import { DICON_MAP, wikiTitle } from '../Shared.js'
 import { TextMap, textMap } from '../TextMap.js'
 import { uploadPrompt } from '../util/General.js'
+import { teardown } from '../util/JSONParser.js'
 
 const PAGE_FORMAT =
 `<%-- [PAGE_INFO]
@@ -248,3 +249,5 @@ for (const [i, missionData] of allMissionData.entries()) {
 }
 
 console.log(`Finished! Generated ${Object.keys(Mission.missionData).length} Mission pages in ${Math.floor((Date.now() - startTime) / 1000)}s`)
+
+teardown()

@@ -2,6 +2,7 @@ import { writeFile } from 'fs/promises';
 import { ChangeHistory } from '../ChangeHistory.js';
 import { Dictionary, VERSION_LIST } from '../Shared.js';
 import { PlaneEvent, Stage, StageConfig } from '../Stage.js';
+import { teardown } from '../util/JSONParser.js';
 
 const stageIds = Object.values(StageConfig)
 	.filter(stageData => stageData.StageType == 'VerseSimulation')
@@ -37,3 +38,5 @@ for (const version of VERSION_LIST) {
 }
 
 await writeFile('./output/su-stages.wikitext', output.join('\n'))
+
+teardown()

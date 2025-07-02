@@ -2,6 +2,7 @@ import { writeFile } from 'fs/promises';
 import { EE_ALIASES, EE_PRIORITY, ExtraEffectConfig } from '../ExtraEffect.js';
 import { textMap } from '../TextMap.js';
 import { pageInfoHeader } from '../util/General.js';
+import { teardown } from '../util/JSONParser.js';
 
 const output = [
 	pageInfoHeader('Template:Extra Effect'),
@@ -41,3 +42,5 @@ output.push(
 )
 
 await writeFile('./output/extra_effects.wikitext', output.join('\n'))
+
+teardown()

@@ -8,6 +8,7 @@ import { Dictionary, zeroPad } from '../Shared.js';
 import { HashReference, TextMap, textMap } from '../TextMap.js';
 import { WeirdKey } from '../WeirdKey.js';
 import { getFile } from '../files/GameFile.js';
+import { teardown } from '../util/JSONParser.js';
 
 interface InternalWeeklyChallenge {
 	ChallengeID: number
@@ -121,3 +122,5 @@ for (const data of Object.values(weeklyData)) {
 	
 	await writeFile(`./output/du_weekly/${data.ChallengeID}.wikitext`, output.join('\n'))
 }
+
+teardown()

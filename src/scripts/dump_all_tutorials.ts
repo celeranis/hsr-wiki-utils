@@ -3,6 +3,7 @@ import { mkdir, rm, writeFile } from 'fs/promises';
 import { sanitizeString } from '../Shared.js';
 import { Tutorial } from '../Tutorial.js';
 import { pageInfoHeader, uploadPrompt } from '../util/General.js';
+import { teardown } from '../util/JSONParser.js';
 import { Template, TemplateMap } from '../util/Template.js';
 
 if (existsSync('./output/tutorials/')) {
@@ -31,3 +32,5 @@ for (const tutorial of Tutorial.loadAll()) {
 	await mkdir(`./output/tutorials/${tutorial.type || 'Unknown'}/`, { recursive: true })
 	await writeFile(`./output/tutorials/${tutorial.type || 'Unknown'}/${fileTitle}-${tutorial.id}.wikitext`, output)
 }
+
+teardown()

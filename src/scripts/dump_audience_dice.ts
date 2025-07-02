@@ -3,6 +3,7 @@ import { AudienceDice, DiceSurface } from '../AudienceDice.js';
 import { Dictionary } from '../Shared.js';
 import { HashReference, TextMap } from '../TextMap.js';
 import { getFile } from '../files/GameFile.js';
+import { teardown } from '../util/JSONParser.js';
 
 interface BranchTag {
 	TagID: number
@@ -65,3 +66,5 @@ for (const surface of [...DiceSurface.map.values()].sort((f1, f2) => ((f2.rarity
 surfaces.push('|}')
 
 writeFileSync('./output/audience_dice.wikitext', branches.map(s=>s.join('\n')).join('\n\n') + '\n\n' + surfaces.join('\n'))
+
+teardown()

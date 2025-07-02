@@ -4,6 +4,7 @@ import { Item } from '../Item.js';
 import { sanitizeString, wikiTitle } from '../Shared.js';
 import { TextMap } from '../TextMap.js';
 import { uploadPrompt } from '../util/General.js';
+import { teardown } from '../util/JSONParser.js';
 import { Template } from '../util/Template.js';
 
 if (existsSync('./output/consumables')) {
@@ -121,3 +122,5 @@ for (const itemData of Object.values(await Item.itemData.main.get())) {
 	mkdirSync(`./output/consumables/`, { recursive: true })
 	writeFileSync(`./output/consumables/${sanitizeString(item.name)}-${item.id}.wikitext`, output.join('\n'))
 }
+
+teardown()

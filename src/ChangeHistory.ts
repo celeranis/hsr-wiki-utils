@@ -50,8 +50,11 @@ export class ChangeHistory<FileContents extends object, SearchReturn, FindArg> {
 		let lastFoundVersion: Version | undefined = undefined
 		let lastFound: SearchReturn | undefined = undefined
 		
-		for (const version of VERSION_LIST.toReversed()) {
-			const versionData = await this.readVersion(version)
+		const versionDataMap = await Promise.all(VERSION_LIST.toReversed()
+			.map(async version => [version, await this.readVersion(version)] as const)
+		)
+		
+		for (const [version, versionData] of versionDataMap) {
 			const searchReturn = versionData != null && this.search(versionData, target)
 			
 			if (!searchReturn) {

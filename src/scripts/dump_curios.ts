@@ -1,6 +1,7 @@
 import { writeFileSync } from 'fs';
 import { Curio } from '../Curio.js';
 import { uploadPrompt } from '../util/General.js';
+import { teardown } from '../util/JSONParser.js';
 
 const rarities = ['Weighted', '3', '2', '1', 'Negative', undefined]
 
@@ -49,3 +50,5 @@ for (const curio of curiosSU) {
 outputSU.push('{{Curio Information/Footer}}')
 
 writeFileSync('./output/curios.wikitext', outputSU.join('\n'))
+
+teardown()

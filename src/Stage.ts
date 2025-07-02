@@ -467,14 +467,18 @@ export class Enemy extends EnemyTemplate {
 			+ (this.hasCustomName() ? `{ text = ${this.name} }` : '')
 	}
 	
-	async getSkill(skillTag: string): Promise<InternalMonsterSkill | undefined> {
+	async getSkill(skillTag: string, removePart?: boolean): Promise<InternalMonsterSkill | undefined> {
 		const skillData = await Enemy.skillData.get()
 		for (const skillId of this.skill_list) {
 			const skill = Object.values(skillData).find(skill => skill.SkillID == skillId)!
-			if (skill.SkillTriggerKey == skillTag) {
+			let triggerKey = skill.SkillTriggerKey
+			if (removePart) triggerKey = triggerKey.replace(/P\d/, '')
+			if (triggerKey == skillTag) {
 				return skill
 			}
 		}
+		if (skillTag.match(/P\d/)) return this.getSkill(skillTag.replace(/P\d/, ''), true)
+		else if (!removePart) return this.getSkill(skillTag, true)
 		return undefined
 	}
 }

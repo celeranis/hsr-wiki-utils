@@ -1,5 +1,6 @@
 import { readFile, readdir, writeFile } from 'fs/promises';
 import config from '../../../config.json' with { "type": "json" };
+import { teardown } from '../../util/JSONParser.js';
 
 const loadFrom = config.asset_roots.TXTP + '\\english'
 
@@ -38,3 +39,5 @@ for (const file of dir) {
 }
 
 await writeFile('./output/VO_Map.json', JSON.stringify(ALL_DATA, null, '\t'))
+
+teardown()

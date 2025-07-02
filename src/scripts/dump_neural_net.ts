@@ -2,6 +2,7 @@ import { writeFileSync } from 'fs';
 import type { Dictionary, Value } from '../Shared.js';
 import { HashReference, TextMap } from '../TextMap.js';
 import { getFile } from '../files/GameFile.js';
+import { teardown } from '../util/JSONParser.js';
 
 const talentData: Dictionary<InternalTalentData> = await getFile('ExcelOutput/RogueNousTalent.json')
 
@@ -50,3 +51,5 @@ for (let [i, layer] of Object.entries(layers)) {
 output.push(`Total cost: ${totalCost}`)
 
 writeFileSync('./output/neural_net.wikitext', output.join('\n'))
+
+teardown()

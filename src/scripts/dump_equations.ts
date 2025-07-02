@@ -7,6 +7,7 @@ import { replaceUnderlinedEE } from '../ExtraEffect.js';
 import { sanitizeString } from '../Shared.js';
 import { pathDisplayName, TextMap, textMap } from '../TextMap.js';
 import { pageInfoHeader } from '../util/General.js';
+import { teardown } from '../util/JSONParser.js';
 import { Table } from '../util/Table.js';
 
 const equations = Equation.loadAll()
@@ -147,3 +148,5 @@ output2.push('==Change History==', '{{Change History|2.3}}')
 
 await writeFile('./output/du-paths.wikitext', output.join('\n'))
 await writeFile('./output/du-paths2.wikitext', output2.join('\n'))
+
+teardown()

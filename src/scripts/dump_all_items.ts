@@ -5,6 +5,7 @@ import { n, sanitizeString } from '../Shared.js';
 import { TextMap } from '../TextMap.js';
 import { ItemMainType, ItemSubType } from '../files/Item.js';
 import { uploadPrompt } from '../util/General.js';
+import { teardown } from '../util/JSONParser.js';
 import { Template } from '../util/Template.js';
 
 rmSync('./output/items/', { recursive: true })
@@ -191,3 +192,5 @@ for (const [source, data] of Object.entries(Item.itemData)) {
 		writeFileSync(`./output/items/${source}/${sanitizeString(types[0] || (SINGLE_TYPE[source] ? '' : 'Unknown'))}/${sanitizeString(item.name)}-${item.id}.wikitext`, output.join('\n'))
 	}
 }
+
+teardown()

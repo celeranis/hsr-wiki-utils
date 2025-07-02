@@ -3,6 +3,7 @@ import { Item, ItemList } from '../Item.js';
 import { TextMap } from '../TextMap.js';
 import { TitanOde } from '../TitanOde.js';
 import { pageInfoHeader } from '../util/General.js';
+import { teardown } from '../util/JSONParser.js';
 import { Table } from '../util/Table.js';
 
 const odes = TitanOde.loadAll()
@@ -86,3 +87,5 @@ output.push(
 )
 
 writeFileSync('./output/du-odes.wikitext', output.join('\n'))
+
+teardown()

@@ -5,6 +5,7 @@ import { ItemReference } from '../files/Item.js'
 import { Component } from '../Scepter.js'
 import { HashReference, textMap } from '../TextMap.js'
 import { pageInfoHeader, uploadPrompt } from '../util/General.js'
+import { teardown } from '../util/JSONParser.js'
 import { WeirdKey } from '../WeirdKey.js'
 
 export const RogueMagicMiscDisplay = await getExcelFile<InternalMiscDisplay>('RogueMagicMiscDisplay.json', 'DisplayID')
@@ -60,3 +61,5 @@ output.push(
 )
 
 await writeFile('./output/und-cogbound.wikitext', output.join('\n'))
+
+teardown()

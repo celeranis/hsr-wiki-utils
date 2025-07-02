@@ -2,6 +2,7 @@ import { readFileSync, writeFileSync } from 'fs';
 import { readdir } from 'fs/promises';
 import config from '../../../config.json' with { "type": "json" };
 import { getFile } from '../../files/GameFile.js';
+import { teardown } from '../../util/JSONParser.js';
 import { AvatarVOEntry } from './util.js';
 
 const root = config.local_roots[config.target_version]
@@ -67,3 +68,5 @@ for (const file of await readdir(root, { recursive: true, withFileTypes: true })
 }
 
 writeFileSync(`./output/SoundEvents.txt`, [...results.values()].join('\n'))
+
+teardown()
