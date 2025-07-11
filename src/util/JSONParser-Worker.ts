@@ -31,9 +31,9 @@ parentPort.on('message', msg => {
 			if (msg.mode == 'preprocess') {
 				parsedData = preprocessFile(parsedData)
 			}
-			parentPort!.postMessage({ type: 'data', data: parsedData });
+			parentPort!.postMessage({ type: 'data', data: parsedData, id: msg.id });
 		} catch (error) {
-			parentPort!.postMessage({ type: 'error', error });
+			parentPort!.postMessage({ type: 'error', error, id: msg.id });
 		}
 	}
 })
