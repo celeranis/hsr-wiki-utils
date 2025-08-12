@@ -212,7 +212,7 @@ for (const [i, missionData] of allMissionData.entries()) {
 		const area = await step.getFloor() || await step.getArea()
 		if (area && area.name) {
 			firstLocation = area.name
-			firstWorld = textMap.getText(area instanceof Area ? area.world.WorldName : (await area.getArea()).world.WorldName)
+			firstWorld = textMap.getText(area instanceof Area ? area.world.WorldName : (await area.getArea())?.world.WorldName)
 			break
 		}
 	}

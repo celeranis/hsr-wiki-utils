@@ -12,6 +12,9 @@ node --inspect --enable-source-maps src/scripts/dump_all_readables
 echo Running dump_all_shops...
 node --inspect --enable-source-maps src/scripts/dump_all_shops
 
+echo Running dump_extra_effects...
+node --inspect --enable-source-maps src/scripts/dump_extra_effects
+
 echo Running dump_all_tutorials...
 node --inspect --enable-source-maps src/scripts/dump_all_tutorials
 

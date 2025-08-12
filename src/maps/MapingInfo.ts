@@ -63,7 +63,7 @@ export class MappingInfo {
 	}
 	
 	async getArea(): Promise<Area | undefined> {
-		return this.plane_id ? await Area.fromId(this.plane_id) : undefined
+		return this.plane_id ? await Area.fromId(this.plane_id) || undefined : undefined
 	}
 	
 	getEnemies() {

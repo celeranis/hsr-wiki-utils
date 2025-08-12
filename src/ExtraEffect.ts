@@ -23,6 +23,7 @@ export const EE_ALIASES: Record<string, string[]> = {
 	'Crowd Control debuff': ['crowd control debuffs'],
 	'Counter': ['counters', 'counter(s)'],
 	'Enemy units that can enter Moon Rage': ['friendly units who can enter the moon rage effect', 'friendly units who can enter the moon rage state'],
+	"Khaslana's Extra Turn": ["khaslana's extra turns", "khaslana's extra turn(s)"],
 	
 	'Soul Chrysalis/Butterfly Soul': ['butterfly soul', 'soul chrysalis'],
 	

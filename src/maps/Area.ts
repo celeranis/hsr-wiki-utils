@@ -36,7 +36,10 @@ export class Area {
 		
 		this.floors = []
 		for (const id of this.floor_ids) {
-			this.floors.push(await AreaFloor.fromId(this, id))
+			let floor = await AreaFloor.fromId(this, id)
+			if (floor) {
+				this.floors.push(floor)
+			}
 		}
 		return this.floors
 	}
@@ -51,12 +54,13 @@ export class Area {
 	// }
 
 	static cache: Dictionary<Area> = {}
-	static async fromId(id: string | number): Promise<Area> {
+	static async fromId(id: string | number): Promise<Area | null> {
 		if (this.cache[id]) return this.cache[id]
 		
 		const data = (await this.plane_data.get())[id]
 		if (!data) {
-			throw new TypeError(`Unknown MazePlane ${id}`)
+			console.warn(`Unknown MazePlane ${id}`)
+			return null
 		}
 
 		return new this(data)
@@ -95,8 +99,9 @@ export class AreaFloor {
 		return Area.fromId(this.plane_id)
 	}
 	
-	static async fromId(areaOrId: Area | string | number, floor_id: number) {
+	static async fromId(areaOrId: Area | string | number, floor_id: number): Promise<AreaFloor | null> {
 		const area = typeof areaOrId == 'object' ? areaOrId : await Area.fromId(areaOrId)
+		if (!area) return null
 		const configData = await getFile<LevelFloor>(`Config/LevelOutput/RuntimeFloor/P${area.plane_id}_F${floor_id}.json`)
 		return new this((await Area.floor_data.get())[floor_id], configData, area.plane_id)
 	}
