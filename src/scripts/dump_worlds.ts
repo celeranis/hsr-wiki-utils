@@ -160,7 +160,7 @@ for (const difficulties of worldSet.values()) {
 		domainTabber.addTab(`Difficulty ${NUMERALS[diff.Difficulty - 1]}`, domainTable.wrapper())
 	}
 	
-	const relics = new ItemList(new ItemList(last.ChestDisplayItemList).data.filter(item => item.item.subtype.includes('Relic') && item.item.rarity == 5))
+	const relics = new ItemList(new ItemList(last.ChestDisplayItemList).data.filter(item => item.item.subtype.toString().includes('Relic') && item.item.rarity == 5))
 	
 	infobox
 		.addParam('requiredEL', requiredELs.join('/'))

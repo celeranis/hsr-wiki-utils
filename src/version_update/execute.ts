@@ -12,7 +12,7 @@ const MOVE: Record<string, string> = {
 }
 
 const REDIRECT: Record<string, string> = {
-	
+	'Theoros: Lygus': 'First Genius, Entelechy, Zandar'
 }
 
 for (const [key, val] of Object.entries(COMMON_ICON_MAP)) {

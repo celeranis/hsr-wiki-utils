@@ -192,6 +192,8 @@ export abstract class ActDialogueTree extends AbstractDialogueTree<DialogueTask 
 	}
 	
 	async processAct(act: Act, returnLast?: boolean) {
+		if (!act.OnStartSequece) return undefined
+		
 		const objSequences = act.OnStartSequece.map(sequence =>
 			sequence.TaskList
 				?.map((task, i) => ActDialogueTree.objectFromInternal(task, this.environment, sequence.TaskList[i - 1], sequence.TaskList[i + 1]))

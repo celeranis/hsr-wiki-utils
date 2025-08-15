@@ -133,3 +133,16 @@ export interface InternalCureInfo {
 	CureInfoDesc: HashReference
 	ImgPath: string
 }
+
+export interface InternalInventoryTabData {
+	ID: number
+	TabName: HashReference
+	IconImagePath: string
+	DisplayInventoryType: 'Normal' | 'Rogue'
+	DisplayItemSubType: (ItemMainType | ItemSubType | number)[]
+	InventoryDisplayTag: number
+	TabSortWeight: number
+	ItemSortTypeList: string[]
+	SellType: string
+	UnlockCondition: unknown
+}

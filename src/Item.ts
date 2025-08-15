@@ -1,14 +1,11 @@
 import { Dictionary, sanitizeString, titleCase, wikiTitle, wikiTitleLink } from './Shared.js';
 import { textMap } from './TextMap.js';
 import { LazyData, LazyExcelData, getExcelFile, getFile } from './files/GameFile.js';
-import { InternalCureInfo, type InternalItem, type InternalItemComefrom, type InternalItemPurpose, type InternalPassPage, type InternalPassSticker, type InternalRecipeConfig, type InternalRewardData, type ItemConfig, type ItemMainType, type ItemRarity, type ItemReference, type ItemSortData, type ItemSubType } from './files/Item.js';
+import { InternalCureInfo, InternalInventoryTabData, type InternalItem, type InternalItemComefrom, type InternalItemPurpose, type InternalPassPage, type InternalPassSticker, type InternalRecipeConfig, type InternalRewardData, type ItemConfig, type ItemMainType, type ItemRarity, type ItemReference, type ItemSortData, type ItemSubType } from './files/Item.js';
 import { GotoData } from './files/graph/MapData.js';
 import { MappingInfo } from './maps/MapingInfo.js';
 
 type ItemSourceData = Dictionary<InternalItemComefrom>
-
-export type InventoryTab = 'Upgrade Materials' | 'Light Cone' | 'Missions' 
-	| 'Consumables' | 'Valuables' | 'Relics' | 'Other Materials'
 
 const HAS_EFFECT: ItemSubType[] = ['Food']
 
@@ -69,6 +66,7 @@ export const COMMON_ICON_MAP = {
 
 const sortData = Object.fromEntries((await getFile<ItemSortData[]>('ExcelOutput/ItemDisplaySort.json')).map(sort => [sort.ID, sort]))
 const ItemCureInfoData = await getExcelFile<InternalCureInfo>('ItemCureInfoData.json', 'ID')
+const InventoryTabData = await getExcelFile<InternalInventoryTabData>('InventoryTabData.json', 'ID')
 
 export class Item {
 	static readonly itemData = {
@@ -102,7 +100,7 @@ export class Item {
 	
 	id: number
 	type: ItemMainType
-	subtype: ItemSubType
+	subtype: ItemSubType | number
 	name: string
 	name_hash: number | bigint
 	effect: string
@@ -113,7 +111,7 @@ export class Item {
 	icon_path: string
 	icon_path_small: string
 	purpose_id?: number
-	inventory_tab?: InventoryTab
+	inventory_tab?: string
 	inventory_tab_tag?: number
 	group_id?: number
 	
@@ -317,37 +315,10 @@ export class Item {
 		return COMMON_ICON_MAP[this.icon_path] ?? `Item ${sanitizeString(this.pagetitle)}.png`
 	}
 	
-	getInventoryTab(): InventoryTab | undefined {
+	getInventoryTab(): string | undefined {
 		if (!this.visible) return undefined
-		switch (this.subtype) {
-			case 'Material':
-				switch (this.inventory_tab_tag) {
-					case 1: return 'Upgrade Materials'
-					case 2: return 'Other Materials'
-					case 3: return 'Valuables'
-					default: return
-				}
-			
-			case 'Virtual':
-				return 'Upgrade Materials'
-
-			case 'Equipment':
-				return 'Light Cone'
-
-			case 'Mission':
-				return 'Missions'
-
-			case 'Food':
-			case 'Formula':
-				return 'Consumables'
-			
-			case 'Gift':
-			case 'MusicAlbum':
-				return 'Valuables'
-			
-			case 'Relic':
-				return 'Relics'
-		}
+		const tab = Object.values(InventoryTabData).find(tab => tab.DisplayItemSubType.includes(this.subtype) && tab.InventoryDisplayTag == this.inventory_tab_tag)
+		return textMap.getText(tab?.TabName) || undefined
 	}
 	
 	async getRecipe(): Promise<ItemList | null> {
@@ -409,7 +380,7 @@ export interface ItemListEntry {
 
 const MISSION_COMMON = [COMMON_ITEMS.STELLAR_JADE, COMMON_ITEMS.CREDIT, COMMON_ITEMS.TRAILBLAZE_EXP]
 const rewardData = await getFile<Dictionary<InternalRewardData>>('ExcelOutput/RewardData.json')
-const FULL_DISPLAY_TYPES: (ItemSubType | ItemMainType)[] = [
+const FULL_DISPLAY_TYPES: (ItemSubType | ItemMainType | number)[] = [
 	'HeadIcon', 'Book', 'ChatBubble', 'Equipment',
 	'AetherSkill', 'AetherSpirit', 'ChessRogueDiceSurface',
 	'Formula', 'PhoneTheme', 'MusicAlbum'
@@ -480,7 +451,7 @@ export class ItemList {
 
 		const delim = '; '//adding.some(entry => entry.item.name.includes(',')) ? ';' : ','
 		const addList = adding.map(entry => `${entry.item.pagetitle}*${entry.count.toLocaleString()}` + (
-			entry.item.subtype.includes('Relic') ? ` { rarity = ${entry.item.rarity} }`
+			(entry.item.type != 'Material' && entry.item.subtype.toString().includes('Relic')) ? ` { rarity = ${entry.item.rarity} }`
 			: (FULL_DISPLAY_TYPES.includes(entry.item.type) || FULL_DISPLAY_TYPES.includes(entry.item.subtype)) ? ` { text = ${entry.item.name} }`
 			: ''
 		)
