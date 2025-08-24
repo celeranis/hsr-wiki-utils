@@ -6,13 +6,14 @@ import { COMMON_ICON_MAP } from '../Item.js'
 import { sanitizeString, zeroPad } from '../Shared.js'
 import { AWB } from '../util/AWB.js'
 import { client, fileRedirectMap, redirectRetry, retryIfRatelimit, uploadRetry } from '../util/Bot.js'
+import { teardown } from '../util/JSONParser.js'
 
 const MOVE: Record<string, string> = {
 	
 }
 
 const REDIRECT: Record<string, string> = {
-	'Theoros: Lygus': 'First Genius, Entelechy, Zandar'
+	
 }
 
 for (const [key, val] of Object.entries(COMMON_ICON_MAP)) {
@@ -275,3 +276,5 @@ if (CHECK) {
 }
 
 await writeFile('./src/version_update/FileRedirectMap.json', JSON.stringify(fileRedirectMap, null, '\t'))
+
+teardown()
