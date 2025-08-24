@@ -7,7 +7,8 @@ import { Item, ItemList } from '../Item.js';
 import { Dictionary, zeroPad } from '../Shared.js';
 import { HashReference, TextMap, textMap } from '../TextMap.js';
 import { WeirdKey } from '../WeirdKey.js';
-import { getFile } from '../files/GameFile.js';
+import { InternalRogueBonus } from '../files/Blessing.js';
+import { getExcelFile, getFile } from '../files/GameFile.js';
 import { teardown } from '../util/JSONParser.js';
 
 interface InternalWeeklyChallenge {
@@ -39,10 +40,11 @@ interface InternalWeeklyDisplay {
 }
 
 const weeklyData = await getFile<Dictionary<InternalWeeklyChallenge>>('ExcelOutput/RogueTournWeeklyChallenge.json')
-const weeklyDisplay = await getFile<Dictionary<InternalWeeklyDisplay>>('ExcelOutput/RogueTournWeeklyDisplay.json')
+const weeklyDisplay = await getExcelFile<InternalWeeklyDisplay>('ExcelOutput/RogueTournWeeklyDisplay.json', 'WeeklyDisplayID')
 const rogueMonsterGroups = await getFile('ExcelOutput/RogueMonsterGroup.json')
 const rogueMonsters = await getFile('ExcelOutput/RogueMonster.json')
 const monsterNpcs = await getFile('ExcelOutput/NPCMonsterData.json')
+const rogueBonus = await getExcelFile<InternalRogueBonus>('RogueBonus.json', 'BonusID')
 
 await Item.loadAll()
 
@@ -60,6 +62,10 @@ export function getEnemyList(groupId: number) {
 		.map(npcmonter => textMap.getText(npcmonter.NPCName))
 }
 
+let trailblazeNumber = 504
+
+const IGNORE_RULES = [1001, 1003, 1004, 1005, 2001, 2003, 2004, 2005, 2006]
+
 for (const data of Object.values(weeklyData)) {
 	const periodStart = new Date(START_DATE + (DURATION * (data.ChallengeID - 1)))
 	const periodEnd = new Date(START_DATE + (DURATION * data.ChallengeID) - 1)
@@ -69,7 +75,7 @@ for (const data of Object.values(weeklyData)) {
 	const boons: GoldenBloodBoon[] = []
 	
 	for (const displayId of data.WeeklyContentList) {
-		const display = Object.values(weeklyDisplay).find(display => display.WeeklyDisplayID == displayId)!
+		const display = weeklyDisplay[displayId]!
 		for (const entry of display.DescParams) {
 			if (entry[WeirdKey.get('DescParamType')] == 'Formula') {
 				equations.push(new Equation(Number(entry[WeirdKey.get('DescParamValue')])))
@@ -82,6 +88,17 @@ for (const data of Object.values(weeklyData)) {
 				console.warn(`Unknown DescParam type`, entry)
 			}
 		}
+	}
+	
+	const alreadyIncludedRules = new Set<number>()
+	const rules = data.WeeklyContentDetailList.map(id => alreadyIncludedRules.add(id) && textMap.getText(weeklyDisplay[id]?.WeeklyDisplayContent)?.replace(/^● /, ''))
+	data.WeeklyContentList.filter(item => !IGNORE_RULES.includes(item) && !alreadyIncludedRules.has(item) && !weeklyDisplay[item]?.DescParams?.length).forEach(item => rules.push(textMap.getText(weeklyDisplay[item].WeeklyDisplayContent)?.replace(/^● /, '')))
+	
+	let trailblazeBlessing = ''
+	if (equations?.length > 0 && data.ChallengeID >= 38) {
+		const bonus = rogueBonus[trailblazeNumber]
+		trailblazeBlessing = `'''${textMap.getText(bonus.BonusTitle)}'''<br />${textMap.getText(bonus.BonusDesc)}`
+		trailblazeNumber += 1
 	}
 	
 	const [version] = await ChangeHistory.weeklyChallenge.findAdded(data.ChallengeID)
@@ -102,14 +119,14 @@ for (const data of Object.values(weeklyData)) {
 		`|boons      = ${boons.map(boon => boon.name).join('; ')}`,
 		`|curios     = ${curios.map(curio => curio.name).join('; ')}`,
 		`|equations  = ${equations.map(equation => equation.name).join(';; ')}`,
-		`|trailblaze = `,
+		`|trailblaze = ${trailblazeBlessing}`,
 		`|rewards    = ${ItemList.fromRewardId(data.RewardID).asCardListParams()}`,
 		`|boss_1_1   = ${getEnemyList(data.DisplayMonsterGroups1[0]).join('; ')}`,
 		`|boss_1_2   = ${getEnemyList(data.DisplayMonsterGroups1[3]).join('; ')}`,
 		`|boss_2_1   = ${getEnemyList(data.DisplayMonsterGroups2[0]).join('; ')}`,
 		`|boss_2_2   = ${getEnemyList(data.DisplayMonsterGroups2[3]).join('; ')}`,
 		`|boss_3     = ${getEnemyList(data.DisplayMonsterGroups3[0]).join('; ')}`,
-		`|rules      = ${data.WeeklyContentDetailList.map(id => textMap.getText(Object.values(weeklyDisplay).find(d => d.WeeklyDisplayID == id)?.WeeklyDisplayContent)?.replace(/^● /, '')).join('; ')}`,
+		`|rules      = ${rules.join('; ')}`,
 		`|root       = ${data.ChallengeID > 37 ? 'Divergent Universe: Protean Hero' : 'Divergent Universe: The Human Comedy'}`,
 		`}}`,
 		'',

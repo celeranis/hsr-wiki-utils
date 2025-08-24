@@ -61,3 +61,12 @@ export interface InternalBlessingType {
 	RogueBuffTypeSmallIcon: string
 	RogueBuffTypeLargeIcon: string
 }
+
+export interface InternalRogueBonus {
+	BonusID: number
+	BonusEvent: number
+	BonusTitle: HashReference
+	BonusDesc: HashReference
+	BonusTag: HashReference
+	BonusIcon: string
+}
