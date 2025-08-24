@@ -57,6 +57,9 @@ node --inspect --enable-source-maps src/scripts/dump_odes
 echo Running dump_boons...
 node --inspect --enable-source-maps src/scripts/dump_boons
 
+echo Running character_page_links...
+node --inspect --enable-source-maps src/scripts/character_page_links
+
 echo Running dump_occurrences...
 pause
 node --inspect --enable-source-maps src/scripts/dump_occurrences
