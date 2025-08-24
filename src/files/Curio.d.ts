@@ -1,6 +1,8 @@
 import { Value } from '../Shared.ts'
 import type { HashReference } from '../TextMap.ts'
 
+export type InternalCurioRarity = 'Common' | 'Rare' | 'Legendary' | 'Negative' | 'Hex'
+
 export interface InternalCurio {
 	MiracleID: number
 	MiracleDisplayID?: number
@@ -8,6 +10,7 @@ export interface InternalCurio {
 	HandbookMiracleID?: number
 	UnlockHandbookMiracleID?: number
 	MiracleEffectDisplayID: number
+	MiracleCategory?: InternalCurioRarity
 }
 
 export interface InternalCurioDisplay {
@@ -29,7 +32,7 @@ export interface InternalIndexCurio {
 	MiracleTypeList: number[]
 	MiracleDisplayID: number
 	Order: number
-	MiracleCategory: 'Common' | 'Rare' | 'Legendary' | 'Negative' | 'Hex'
+	MiracleCategory: InternalCurioRarity
 }
 
 export interface InternalUNDCurio {

@@ -170,8 +170,9 @@ export class Curio {
 		this.order = index?.Order ?? 1000
 		this.is_indexable = Boolean(curio.HandbookMiracleID ?? curio.UnlockHandbookMiracleID)
 		this.icon_path = display.MiracleFigureIconPath
-		if (index?.MiracleCategory) {
-			this.rarity = index.MiracleCategory == 'Common' ? '1' : index.MiracleCategory == 'Rare' ? '2' : index.MiracleCategory == 'Legendary' ? '3' : index.MiracleCategory == 'Hex' ? 'Weighted' : 'Negative'
+		const cat = index?.MiracleCategory ?? curio?.MiracleCategory
+		if (cat) {
+			this.rarity = cat == 'Common' ? '1' : cat == 'Rare' ? '2' : cat == 'Legendary' ? '3' : cat == 'Hex' ? 'Weighted' : 'Negative'
 		}
 		// this.unlock_list = curio.UnlockIDList.map(unlock => Unlock.fromUnlockId(unlock))
 		console.groupEnd()
@@ -180,7 +181,7 @@ export class Curio {
 	getNotes(): string[] {
 		const notes: string[] = []
 		if (!this.is_indexable) {
-			notes.push(`* This Curio is not included in the Simulated Universe Index.`)
+			notes.push(`* This Curio is not included in the ${this.is_du ? 'Gallery of Possibilities' : 'Simulated Universe Index'}.`)
 		}
 		// for (const unlock of this.unlock_list) {
 		// 	notes.push(`* This Curio is only obtainable ${unlock.desc.replace('Unlocked ', '')}`)
