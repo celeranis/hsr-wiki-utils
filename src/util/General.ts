@@ -10,8 +10,8 @@ export function andList(list: string[]) {
 	}
 }
 
-export function pageInfoHeader(title: string) {
-	return `<%-- [PAGE_INFO]\nPageTitle=#${title}#\n[END_PAGE_INFO] --%>`
+export function pageInfoHeader(title: string, lua?: boolean) {
+	return `${lua ? '--[=[' : ''}<%-- [PAGE_INFO]\nPageTitle=#${title}#\n[END_PAGE_INFO] --%>${lua ? '--]=]' : ''}`
 }
 
 export function uploadPrompt(filePath: string, destinationName: string, categories: string) {

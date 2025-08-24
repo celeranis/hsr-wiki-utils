@@ -1,3 +1,6 @@
+--[=[<%-- [PAGE_INFO]
+PageTitle=#Module:Card/curios#
+[END_PAGE_INFO] --%>--]=]
 return {
 	["Memory Cycle (Decrypted)"] = { rarity = "3" },
 	["Warping Compound Eye"] = { rarity = "1" },

@@ -1,3 +1,6 @@
+--[=[<%-- [PAGE_INFO]
+PageTitle=#Module:Character Page Link/data#
+[END_PAGE_INFO] --%>--]=]
 -- auto-generated based on data from the website
 return {
 	categories = {

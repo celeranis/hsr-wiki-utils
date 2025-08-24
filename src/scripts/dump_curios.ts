@@ -1,6 +1,6 @@
 import { writeFileSync } from 'fs';
 import { Curio } from '../Curio.js';
-import { uploadPrompt } from '../util/General.js';
+import { pageInfoHeader, uploadPrompt } from '../util/General.js';
 import { teardown } from '../util/JSONParser.js';
 
 const rarities = ['Weighted', '3', '2', '1', 'Negative']
@@ -24,7 +24,10 @@ for (const rarity of rarities) {
 writeFileSync('./output/curios-du.wikitext', outputDU.join('\n'))
 
 // CARD MODULE //
-const module_output: string[] = ['return {']
+const module_output: string[] = [
+	pageInfoHeader('Module:Card/curios', true),
+	'return {'
+]
 module_output.push(...curiosDU.filter(curio => curio.rarity && curio.period == 'Tourn2').map(curio => `\t["${curio.name.replaceAll('"', '\\"')}"] = { rarity = "${curio.rarity}" },`))
 
 module_output.push('}')

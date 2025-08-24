@@ -1,4 +1,5 @@
 import { writeFile } from 'fs/promises'
+import { pageInfoHeader } from '../util/General.js'
 
 const APP_ID = '113fe6d3b4514cdd'
 const worldsURL = `https://sg-public-api-static.hoyoverse.com/content_v2_user/app/${APP_ID}/getContentList?iPage=1&iPageSize=999&sLangKey=en-us&isPreview=0&iChanId=241`
@@ -33,7 +34,11 @@ interface ContentResponse {
 const worldsData: ContentResponse = await (await fetch(worldsURL)).json()
 const charData: ContentResponse = await (await fetch(charactersURL)).json()
 
-const output = ['-- auto-generated based on data from the website', 'return {']
+const output = [
+	pageInfoHeader('Module:Character Page Link/data', true),
+	'-- auto-generated based on data from the website',
+	'return {'
+]
 
 output.push('\tcategories = {')
 
